@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Corpus full-text storage — UNCOMMENT to keep documents out of git (Option A).
+# Licensed Westlaw/Lexis/Factiva pulls should NOT be committed to a shared remote.
+# corpus/
+
+# Keep the corpus/ folder tracked even if empty
+!corpus/.gitkeep
