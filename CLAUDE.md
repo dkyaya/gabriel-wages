@@ -71,6 +71,10 @@ CSVs hold structured fields and short verbatim spans only. Full contracts/awards
 - Full-text files are in `corpus/` and correctly pointed to.
 - Changes are git-committed with a message describing what was added (which city/occupation/source batch).
 
+## Session logging (PROGRESS.md)
+
+At the end of a working session, offer to append an entry to `PROGRESS.md` (newest on top). Record **decisions, surprises, and next steps** — not keystroke-level changes, which git already captures. Each entry: what we did, decisions made and why, surprises/breakage, a corpus snapshot from `python ingest/audit_coverage.py`, and next steps. Run the coverage audit to fill the snapshot line accurately rather than estimating. Keep entries concise; the log is for reconstructing intent months later, not a transcript.
+
 ## Ingestion layer (ingest/)
 
 Documents are turned into rows by the pipeline in `ingest/`, not hand-typed. Read `ingest/README.md` before touching it. Key rules:
