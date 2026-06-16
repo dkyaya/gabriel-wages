@@ -1,1 +1,4 @@
 city_id,city_name,state,occupation_class,safety_flag,cycle_window,have_contract,obs_id,notes
+ma_worcester,Worcester,MA,fire,1,2017-2020,1,ma_worcester_fire_2017,ingested via ocr
+ma_worcester,Worcester,MA,clerical_admin,0,2017-2020,1,ma_worcester_clerical_admin_2017,ingested via text_layer
+ma_worcester,Worcester,MA,public_works,0,2017-2020,1,ma_worcester_public_works_2017,ingested via text_layer
