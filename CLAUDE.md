@@ -85,3 +85,12 @@ Documents are turned into rows by the pipeline in `ingest/`, not hand-typed. Rea
 - **Before a real fetch run**, confirm each fetcher's `parse_listing()` selectors against the live page; they raise `NotImplementedError` until you do. Always `--dry-run` first.
 - After any ingestion batch, run `python ingest/audit_coverage.py` and report safety units lacking a matched comparison unit first.
 - Tests: `python ingest/test_pipeline.py` must stay green after pipeline changes.
+
+## CBA source verification standard
+
+Before a city's contracts are collected, its CBA sources must be "verified." A city is **verified** when all three hold, each recorded in the inventory:
+1. **Findable source** — a locatable CBA source (ideally a central index/portal; otherwise union-local sites or a public-records/FOIA route). Record the URL or the route.
+2. **Safety contract present** — the police and/or fire CBA is actually obtainable there, in the 2014–2024 window.
+3. **Matched non-safety present** — at least one non-safety CBA (teacher/clerical/public-works) from the same city, overlapping the same cycle window.
+
+Record per city in the inventory: `safety_cba_status` (verified_portal / union_site / foia_needed / not_found), the non-safety target unit, the source URL/route, and a note on quirks (e.g. multiple hosting domains, settled-vs-awarded). A city failing (3) — safety but no matched comparison in-window — is flagged dead weight, not collected. Observation window: 2014–2024. Do not download yet; verification only confirms sources exist.
