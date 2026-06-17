@@ -83,6 +83,24 @@ def check_dates(table, rows, fields):
                 err(table, i, f"'{fld}'='{v}' not a valid ISO calendar date (YYYY-MM-DD)")
 
 
+def check_numeric_range(table, rows, field, lo, hi, required=False, hint=""):
+    """Optional unless required: blank passes; otherwise value must parse as a
+    number and fall within [lo, hi]. Catches percent-vs-decimal unit slips."""
+    for i, r in enumerate(rows, start=2):
+        v = (r.get(field) or "").strip()
+        if not v:
+            if required:
+                err(table, i, f"missing required '{field}'")
+            continue
+        try:
+            x = float(v)
+        except ValueError:
+            err(table, i, f"'{field}'='{v}' is not numeric")
+            continue
+        if not (lo <= x <= hi):
+            err(table, i, f"'{field}'='{v}' out of range [{lo}, {hi}]{hint}")
+
+
 def check_unique(table, rows, key):
     seen = {}
     for i, r in enumerate(rows, start=2):
@@ -125,6 +143,8 @@ def main():
     check_enum("contracts.csv", contracts, "retrieval_method", RETRIEVAL)
     check_enum("contracts.csv", contracts, "text_quality", QUALITY)
     check_dates("contracts.csv", contracts, ["cycle_start", "cycle_end", "retrieval_date"])
+    check_numeric_range("contracts.csv", contracts, "pct_increase_annual", 0.0, 0.25,
+                        hint=" — decimal per schema (0.03 = 3%); a value like 2.0 means 200%")
     check_safety_flag("contracts.csv", contracts)
     obs_ids = check_unique("contracts.csv", contracts, "obs_id")
     # predecessor resolution

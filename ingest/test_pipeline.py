@@ -110,10 +110,29 @@ def test_quarantine():
     check("missing provenance caught", "source_url_or_cite" in missing_required(partial))
 
 
+def test_validator_pct_range():
+    print("test_validator_pct_range")
+    sys.path.insert(0, str(ROOT / "scripts"))
+    import validate
+
+    def run(value):
+        validate.errors.clear()
+        validate.check_numeric_range(
+            "contracts.csv", [{"pct_increase_annual": value}],
+            "pct_increase_annual", 0.0, 0.25)
+        return list(validate.errors)
+
+    check("0.02 accepted", run("0.02") == [])
+    check("2.0 rejected (200% unit slip)", len(run("2.0")) == 1)
+    check("blank passes (field optional)", run("") == [])
+    check("non-numeric rejected", len(run("abc")) == 1)
+
+
 if __name__ == "__main__":
     test_extraction_and_spans()
     test_heading_detection()
     test_verbatim_guard()
     test_quarantine()
+    test_validator_pct_range()
     print(f"\n{PASS} passed, {FAIL} failed")
     sys.exit(1 if FAIL else 0)

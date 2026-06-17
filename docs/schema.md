@@ -29,7 +29,7 @@ One row = one bargaining unit's contract for one cycle in one city.
 |---|---|---|---|
 | `base_wage_entry` | number | | bottom of step schedule (annual $) |
 | `base_wage_top` | number | | top of step schedule (annual $) |
-| `pct_increase_annual` | number | | negotiated annual raise, decimal (0.03 = 3%); cleanest comparable |
+| `pct_increase_annual` | number | | negotiated annual raise, decimal (0.03 = 3%), valid range 0–0.25 (validator rejects outside; catches percent-vs-decimal slips like 2.0); cleanest comparable |
 | `num_steps` | int | | steps in schedule |
 | `years_to_top` | number | | years to reach top step |
 | `longevity_pay_flag` | 0/1 | | longevity pay present |

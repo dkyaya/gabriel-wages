@@ -83,18 +83,3 @@ response **within 10 business days** of receipt. If the request cannot be fulfil
 period, I would appreciate a written estimate of the time and any fees required.
 
 Thank you for your assistance.
-
----
-
-### Internal notes (not part of the request — delete before sending)
-
-- **Why this request exists:** the matched Worcester set already ingested (fire / clerical / DPW,
-  2017–2020) consists of successor *wage MOAs* with no mechanism-clause text, so GABRIEL has no
-  interest-arbitration / comparability / no-strike spans to score for these units. The base CBAs
-  are needed to supply that causal-corpus text.
-- **Provenance once received:** drop PDFs in `inbox/foia/`, add manifest rows with
-  `source_type=cba`, `retrieval_method=foia`, `retrieval_date=<received>`, source cite =
-  "City of Worcester RAO, c. 66 request <date>"; then `python ingest/process_inbox.py`.
-- RAO verified 2026-06-16 from worcesterma.gov/public-records-requests.
-- Alternative recipient for retirement/pension records (not needed here): Lisa Poske,
-  Worcester Retirement, retirement@worcesterma.gov.
