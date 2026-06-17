@@ -2,3 +2,7 @@ city_id,city_name,state,occupation_class,safety_flag,cycle_window,have_contract,
 ma_worcester,Worcester,MA,fire,1,2017-2020,1,ma_worcester_fire_2017,ingested via ocr
 ma_worcester,Worcester,MA,clerical_admin,0,2017-2020,1,ma_worcester_clerical_admin_2017,ingested via text_layer
 ma_worcester,Worcester,MA,public_works,0,2017-2020,1,ma_worcester_public_works_2017,ingested via text_layer
+ma_boston,Boston,MA,police,1,2020-2025,1,ma_boston_police_2020,ingested via text_layer+ocr_partial
+ma_boston,Boston,MA,clerical_admin,0,2023-2027,1,ma_boston_clerical_admin_2023,ingested via text_layer
+ma_somerville,Somerville,MA,police,1,2012-2018,1,ma_somerville_police_spsoa_2012,ingested via text_layer
+ma_somerville,Somerville,MA,police,1,2012-2015,1,ma_somerville_police_spea_2012,ingested via text_layer

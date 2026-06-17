@@ -2,3 +2,110 @@ obs_id,city_id,city_name,state,bargaining_unit_name,occupation_class,safety_flag
 ma_worcester_fire_2017,ma_worcester,Worcester,MA,"Worcester Firefighters Union Local 1009, IAFF",fire,1,2017-07-01,2020-06-30,,,,0.02,,,,,"Signed successor MOA, 2017-2020 cycle. Scanned (no text layer) -> OCR at ingest. OCR-recovered wages: 2% eff. July 1 of 2017, 2018, 2019 (excludes Step 1).",0,,0,,,0,,0,,cba,causal,https://www.worcesterma.gov/human-resources/collective-bargaining-agreements/local-1009-moa-2017-2020.pdf,2026-06-16,public_download,corpus/ma_worcester/worcester_local1009_fire_cba_2017-2020.pdf,ocr_messy
 ma_worcester_clerical_admin_2017,ma_worcester,Worcester,MA,"NAGE Local 490, SEIU (Worcester Clerical Association)",clerical_admin,0,2017-07-01,2020-06-30,,,,0.02,,,,,"Successor MOA (states it is pending drafting of a new contract document; incorporates prior base CBA by reference). 2% base wage increase eff. Jan 1 2018, 2019, 2020; new top step +2% above prior max eff. 2017-07-01; health deductible $250/$750 -> $500/$1,000.",0,,0,,,0,,0,,cba,causal,https://www.worcesterma.gov/human-resources/collective-bargaining-agreements/local-490-moa-2017-2020.pdf,2026-06-16,public_download,corpus/ma_worcester/worcester_local490_clerical_cba_2017-2020.pdf,clean
 ma_worcester_public_works_2017,ma_worcester,Worcester,MA,Teamsters Local 170 (DPW Clerks),public_works,0,2017-07-01,2020-06-30,,,,0.02,,,,,"DPW unit (Teamsters Local 170, DPW Clerks). Successor MOA (states it is pending drafting of a new contract document; incorporates prior base CBA by reference). 2% base wage increase eff. Jan 1 2018, 2019, 2020; new top step +2% above prior max eff. 2017-07-01; health deductible $250/$750 -> $500/$1,000. MOA marked DRAFT #1 on portal.",0,,0,,,0,,0,,cba,causal,https://www.worcesterma.gov/human-resources/collective-bargaining-agreements/local-170-moa-2017-2020.pdf,2026-06-16,public_download,corpus/ma_worcester/worcester_local170_dpw_cba_2017-2020.pdf,clean
+ma_boston_police_2020,ma_boston,Boston,MA,Boston Police Patrolmen Association,police,1,2020-07-01,2025-06-30,,,,,,,,,WAGE MOA ONLY — all pages are scanned photographs; OCR requires pytesseract (not installed). Manual extraction needed. Cycle dates estimated from portal title (2020-2025).,0,,0,,,0,,0,MA G.L. c. 1078 (JLMC),cba,causal,https://www.boston.gov/sites/default/files/file/2023/12/BPPA%20MOA%202020-2025.pdf,2026-06-17,public_download,corpus/ma_boston/ma_boston_police_bppa_moa_2020_2025.pdf,partial
+ma_boston_clerical_admin_2023,ma_boston,Boston,MA,United Steelworkers AFL-CIO CLC on behalf of Salaried Employees of North America Local 9158,clerical_admin,0,2023-10-01,2027-09-30,,,,,,,,Full base CBA. City-wide administrative/clerical unit; merged units include SENA 9158E (Public Facilities/DND) and 9158F (BCYF). Has no-strike and binding arbitration clauses.,MA G.L. c. 1078 (JLMC),1,"A. INTRODUCTION
+         The City of Boston and the Union recognize that Chapter I SOE, Section 8 of the
+General Laws provides a mechanism for arbitration of disputes between the parties to a
+collective bargaining agreement and further provides that the parties to an agreement may
+establish an independent grievance procedure culminating in final and binding arbitration.
+It is the intent of the parties to this agreement to use their best efforts to encourage the
+informal and prompt settlement of grievances which may arise between the Union or a
+member or members of the bargaining unit and the City. Therefore the parties agree, for
+themselves and for all those whom they represent, that they shall use the procedures set
+forth in this Article, and no other procedures, for the resolution, strictly pursuant to the
+terms of this Agreement, of all disputes involving the application of this Agreement and of
+any other matter that is or may become the subject of a grievance as hereinafter defined.
+B. DEFINITION
+         1. Grievance Form - a grievance form is a written statement, which shall be
+expressly denominated ""Grievance Form"", setting forth a grievance as hereinafter
+defined. A grievance form shall cover all the known facts material to the alleged breach
+on which the grievance is based, including the date when such breach is alleged to have
+occurred and the specific contractual provisions alleged to have been breached, and shall
+set forth the remedy requested.
+        2. Grievant- grievant shall mean the union or any member or members of the
+bargaining unit, as the case may be, who pursuant to the terms of this Agreement, seek
+resolution of a grievance.
+        3. Grievance - a grievance of an allegation by the Union or by a member or
+members of the bargaining unit that an express provision of the Agreement has been
+breached in its application to it, him, or them, respectively. Any incident which occurred
+or failed to occur prior to the effective date of this Agreement shall not be the subject of
+any grievance hereunder.
+        4. Day - for the purposes of this Article, day shall mean a working day.
+C. PROCEDURES FOR FILING A GRIEVANCE
+        The Union or any member of members of the bargaining unit having a grievance,
+as defined above, shall seek its resolution only in accordance with the grievance procedure
+set forth in this Article.",0,,,0,,1,clean,cba,causal,https://www.boston.gov/sites/default/files/file/2025/12/SENA%2C%20Local%209158%20CBA%202023-2027.pdf,2026-06-17,public_download,corpus/ma_boston/ma_boston_clerical_sena9158_cba_2023_2027.pdf,clean
+ma_somerville_police_spsoa_2012,ma_somerville,Somerville,MA,Somerville Police Superior Officers Association,police,1,2012-07-01,2018-06-30,,,,0.0225,,,,Document is base CBA (1997-2000) + amendments through 2018. Terminal 6-year award (June 2018; neutral Gary D. Altman): FY13=2.5%; FY14-16=2%; FY17-18=2.5%. Retrieved from MuckRock public FOIA release. Integrated with JLMC arbitration decision.,MA G.L. c. 1078 (JLMC),1,"1
+Analysis and Issues
+    Under the Collective Bargaining Laws of Massachusetts,
+the Interest Arbitration process is utilized when ""there is
+an exhaustion of the process of collective bargaining which
+constitutes a potential threat to public welfare"". In
+reaching the conclusions in the present award, the
+Arbitration Panel has considered the criteria set forth in
+the statute including the municipality's ability to pay,
+wages and benefits of comparable towns, and the cost of
+living. It must also be noted that large gains or major
+concessions are not achieved in the format of arbitration.
+An arbitrator is reluctant to modify contract provisions
+where the parties, in past years, have already reached
+agreement, the contract article has been in the contract
+for a considerable period of time, and there has been no
+ascertainable problem with the contract language.
+Background
+    The City of Somerville is located in Middlesex County.
+It has a population of approximately 80,000 people in a
+land area of 4.2 square miles. The City is governed by a
+Mayor and has an eleven member Board of Aldermen. The
+bargaining unit is composed of thirty-one (31) Superior
+Officers, comprised of four Captains, eleven Lieutenants,
+and sixteen Sergeants.
+    The parties initially engaged in direct negotiations
+for an agreement covering the period from July 1, 2012
+through June 30, 2015. They were, however, unable to reach
+agreement for this three-year period of time. In the
+meantime, Interest Arbitration proceedings were completed
+for the Somerville Police Association and the City,
+covering the period of July 1, 2012 through June 30, 2015.
+The Superior Officers and the City have agreed that the",1,"B.      The reasonable suspicion standard for drug testing is based upon a specific
+     objective fact(s) and reasonable inferences drawn from that fact(s), reasonable in light of
+     experience that the individual may be involved in the use of any illegally used controlled
+     substance. Reasonable suspicion may be based upon the following or other, comparable
+     fact patterns:",,0,,1,ocr_messy,arbitration_award,causal,https://cdn.muckrock.com/foia_files/2020/08/27/SPSOA_1997_-_2018_reduced.pdf,2026-06-17,public_download,corpus/ma_somerville/ma_somerville_police_spsoa_cba_1997_2018.pdf,clean
+ma_somerville_police_spea_2012,ma_somerville,Somerville,MA,Somerville Police Employees Association,police,1,2012-07-01,2015-06-30,,,,0.022,,,,Document is base CBA (2004-2008) + amendments through 2015. Terminal award (December 22 2016; neutral Gary D. Altman): FY13=2.5%; FY14=2%; FY15=2%. Retrieved from MuckRock public FOIA release. Full mechanism clauses present.,MA G.L. c. 1078 (JLMC),1,"1
+Analysis and Issues
+    Under the Collective Bargaining Laws of Massachusetts,
+the Interest Arbitration process is utilized when ""there is
+an exhaustion of the process of collective bargaining which
+constitutes a potential threat to public welfare"". In
+reaching the conclusions in the present award, the
+Arbitration Panel has considered the criteria set forth in
+the statute including the municipality's ability to pay,
+wages and benefits of comparable towns, and the cost of
+living. It must also be noted that large gains or major
+concessions are not achieved in the format of arbitration.
+An arbitrator is reluctant to modify contract provisions
+where the parties, in past years, have already reached
+agreement, the contract article has been in the contract
+for a considerable period of time, and there has been no
+ascertainable problem with the contract language.
+Background
+    The City of Somerville is located in Middlesex County.
+It has a population of approximately 80,000 people in a
+land area of 4.2 square miles. The City is governed by a
+Mayor and has an eleven member Board of Aldermen. The
+bargaining unit is composed of approximately eighty-eight
+patrol officers. The most recent Collective Bargaining
+Agreement expired on June 30, 2012.
+    The JLMC conducted a Section 3A hearing on November
+12, 2015. At the outset of the hearing each party submitted
+a list of outstanding issues to the JLMC. On November 23,
+2015 the Committee determined that there was “an apparent
+exhaustion of the process of collective bargaining which
+constitutes a potential threat to public welfare.” The JLMC
+certified the following issues to be decided in the
+arbitration proceeding:",1,"B.     The reasonable suspicion standard for drug testing is based upon a specific
+objective fact(s) and reasonable inferences drawn from that fact(s), reasonable in light of
+experience that the individual may be involved in the use of any illegally used controlled
+substance. Reasonable suspicion may be based upon the following or other, comparable fact
+patterns:",,0,,1,clean,arbitration_award,causal,https://cdn.muckrock.com/foia_files/2020/08/27/SPEA_CBA_July_1_2004_-_June_30_2015.pdf,2026-06-17,public_download,corpus/ma_somerville/ma_somerville_police_spea_cba_2004_2015.pdf,clean

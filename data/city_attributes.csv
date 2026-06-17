@@ -1,1 +1,4 @@
 city_id,city_name,state,population,binding_arbitration_state,arbitration_statute_name,notes
+ma_worcester,Worcester,MA,206518,1,MA G.L. c. 1078 (JLMC),
+ma_boston,Boston,MA,675647,1,MA G.L. c. 1078 (JLMC),Template city; safety portal posts MOAs not full base CBAs
+ma_somerville,Somerville,MA,81360,1,MA G.L. c. 1078 (JLMC),
