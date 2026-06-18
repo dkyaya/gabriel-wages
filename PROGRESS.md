@@ -6,6 +6,58 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-06-18 (session 4) — OCR install, model fix, anchored attribute, GABRIEL v2
+
+**Did**
+- Installed `pytesseract` + `pdf2image` Python wrappers (Tesseract 5.5.2 and poppler were already present system-wide). All 3 previously-skipped rows now OCR successfully: Worcester fire (9,808 chars, ocr_messy), Boston police MOA (14,832 chars, ocr_messy), Newton police CBA (127,200 chars, ocr_messy). input.csv rebuilt with 12/12 rows having real text.
+- Corrected model: `gpt-5.4-nano` (released 2026-03-17) confirmed live via API. V1's substitution of `gpt-4o-mini` was wrong. Reasoning model differences: no `temperature` param, use `max_completion_tokens` not `max_tokens`, `reasoning_effort` is supported.
+- Replaced vague attribute prompt with explicit behavioral anchors (0–15 / 16–40 / 41–70 / 71–100), requiring the model to cite specific textual evidence rather than picking a default bucket. Updated `run_gabriel.py`; added `--output` flag to write `results_v2.csv` without overwriting v1.
+- Added `--results` / `--suffix` flags to `plot_results.py`; generated 3 v2 PNGs alongside v1 originals for side-by-side comparison.
+- Cost v2: $0.0050 (30,108 prompt + 836 completion tokens, includes reasoning tokens).
+
+**V1 vs V2 score comparison**
+
+| | V1 (gpt-4o-mini, vague prompt) | V2 (gpt-5.4-nano, anchored) |
+|---|---|---|
+| Rows scored | 9/12 (3 skipped — no text) | 12/12 (OCR recovered) |
+| Score range | 10–20 only | 0–10 only |
+| Non-safety mean | 13.3 | 2.5 |
+| Safety mean | 16.7 | 0.8 |
+| Notes quality | Near-identical boilerplate | Specific clause citations per doc |
+
+V2 is clearly reading more carefully — every note cites specific contract language. But scores collapsed toward zero rather than spreading across the 0–100 range. See "Surprises" below.
+
+**Surprises / results**
+- **Scores still near-floor in v2, but for a different and diagnosable reason.** V1's flat 10/20 scores were model laziness (vague prompt → default anchors). V2's near-zero scores are structurally correct: the first 12,000 chars of a CBA or arbitration award are invariably recognition clauses, management rights, grievance procedures — not the wage articles. The model correctly finds no comparability language because we're not feeding it the right section. This is a text-extraction problem, not a scoring problem.
+- **Safety mean LOWER than non-safety in v2 (0.8 vs 2.5).** Counterintuitive if the hypothesis is that safety wages are comparability-driven. But both are near-zero and the difference is noise at n=6. Not a finding; artifact of which sections land in the first 12K chars of each document.
+- **Arbitration awards scored the same as CBAs (2.5 vs 1.5).** The two Somerville SPEA/SPSOA awards are 230K+ chars; their comparability reasoning is deep in the body and not captured at 12K truncation. This is the strongest evidence that MAX_TEXT_CHARS is the binding constraint.
+
+**Root cause and fix needed**
+The 12,000-char truncation (`MAX_TEXT_CHARS`) cuts off before wage articles in long documents. Fix options in priority order:
+1. **Smarter section targeting** — extract the last N chars of the document (or a middle window), or use keyword search to locate "wage"/"salary"/"comparab" sections before sending to the model.
+2. **Raise MAX_TEXT_CHARS for awards** — the Somerville awards at 230K+ would be expensive at full length (~57K tokens each), but targeting 50K chars would land in the reasoning sections at reasonable cost.
+3. **Chunk and max-score** — split each doc into 12K windows, score each, take the max. Adds ~5-10x API calls per long document.
+Option 1 is the right next step before adding JLMC awards.
+
+**Corpus snapshot** (unchanged from session 3)
+```
+contracts: 12 | discourse: 0 | coverage: 12 | city_attributes: 3
+healthy matched pairs: 2
+  - Worcester, MA: fire 2017-2020  vs  [clerical_admin, public_works]
+  - Arlington, MA: fire 2021-2024  vs  [public_works]
+safety units unmatched: 4
+  - Boston police 2020-2025
+  - Somerville SPSOA 2012-2018 / SPEA 2012-2015
+  - Newton police 2015-2018 (est.)
+```
+
+**Next steps**
+1. **Fix text window in `run_gabriel.py`** — implement tail-window extraction (e.g., last 15K chars or a wage-section keyword scan) before re-running. This is the prerequisite before adding more documents.
+2. **Add JLMC awards via browser download** — all 11 mass.gov URLs blocked from CLI; manual browser download needed. Once in corpus, rebuild input.csv and run v3.
+3. **Newton + Arlington police** — manual downloads still needed (Akamai-blocked). 
+
+---
+
 ## 2026-06-18 (session 3) — GABRIEL pilot: end-to-end scoring run + graphs
 
 **Did**

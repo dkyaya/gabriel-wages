@@ -1,6 +1,7 @@
 """
-plot_results.py — generate graphs from results.csv for the GABRIEL pilot.
+plot_results.py — generate graphs from results.csv (or results_v2.csv) for the GABRIEL pilot.
 
+Usage: python plot_results.py [--results results_v2.csv] [--suffix _v2]
 Saves 3 PNGs to the same directory.
 """
 from __future__ import annotations
@@ -14,7 +15,17 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 HERE = Path(__file__).resolve().parent
-RESULTS = HERE / "results.csv"
+
+results_file = "results.csv"
+suffix = ""
+if "--results" in sys.argv:
+    idx = sys.argv.index("--results")
+    results_file = sys.argv[idx + 1]
+if "--suffix" in sys.argv:
+    idx = sys.argv.index("--suffix")
+    suffix = sys.argv[idx + 1]
+
+RESULTS = HERE / results_file
 
 csv.field_size_limit(10_000_000)
 with open(RESULTS, newline="", encoding="utf-8") as f:
@@ -52,7 +63,7 @@ n_labels = [f"n={sum(1 for r in scored if r['safety']==g)}" for g in groups]
 ax.set_xticks(range(len(groups)))
 ax.set_xticklabels([f"{g}\n({nl})" for g, nl in zip(groups, n_labels)])
 fig.tight_layout()
-out1 = HERE / "graph1_safety_vs_nonsafety.png"
+out1 = HERE / f"graph1_safety_vs_nonsafety{suffix}.png"
 fig.savefig(out1, dpi=150)
 print(f"Saved {out1}")
 plt.close()
@@ -79,7 +90,7 @@ n_labels2 = [f"n={sum(1 for r in scored if r['source_type']==st)}" for st in src
 ax.set_xticks(range(len(src_types)))
 ax.set_xticklabels([f"{st}\n({nl})" for st, nl in zip(src_types, n_labels2)])
 fig.tight_layout()
-out2 = HERE / "graph2_by_source_type.png"
+out2 = HERE / f"graph2_by_source_type{suffix}.png"
 fig.savefig(out2, dpi=150)
 print(f"Saved {out2}")
 plt.close()
@@ -114,7 +125,7 @@ ax.set_title("Graph 3: Comparability Score by Year\n(color = safety/non-safety, 
 ax.set_ylim(0, 35)
 ax.yaxis.grid(True, linestyle="--", alpha=0.5)
 fig.tight_layout()
-out3 = HERE / "graph3_by_year.png"
+out3 = HERE / f"graph3_by_year{suffix}.png"
 fig.savefig(out3, dpi=150)
 print(f"Saved {out3}")
 plt.close()
