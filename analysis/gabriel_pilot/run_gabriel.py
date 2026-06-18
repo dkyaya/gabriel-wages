@@ -4,6 +4,9 @@ run_gabriel.py — rate each document in input.csv for comparability_emphasis.
 Model: gpt-5.4-nano (released 2026-03-17), reasoning_effort=low
   - Reasoning model: no temperature param; use max_completion_tokens not max_tokens.
   - v1 used gpt-4o-mini (incorrect substitution); v2 uses the specified model.
+  - v3: switched to Harvard HUIT OpenAI proxy; full-text input (no truncation cap).
+  # NOTE: if gpt-5.4-nano is unavailable on the Harvard proxy, fall back to gpt-4o-mini
+  # and confirm with Jay before proceeding.
 
 Attribute: comparability_emphasis
   0–15   = no comparability language anywhere in the document
@@ -13,6 +16,11 @@ Attribute: comparability_emphasis
            with specific comparator examples cited in the text
 
 Output: results.csv or results_v2.csv depending on --output flag
+
+Auth: Harvard HUIT OpenAI proxy.
+  Required env var: HARVARD_SUBSCRIPTION_KEY
+  The subscription key is used as both the api_key and the Ocp-Apim-Subscription-Key
+  header, which is the standard HUIT authentication pattern (no separate OpenAI key needed).
 """
 
 from __future__ import annotations
@@ -22,7 +30,18 @@ import sys
 import time
 from pathlib import Path
 
+from dotenv import load_dotenv
 from openai import OpenAI
+
+# Walk up from this file's location to find the nearest .env
+def _load_env():
+    p = Path(__file__).resolve()
+    for parent in [p.parent, p.parent.parent, p.parent.parent.parent]:
+        candidate = parent / ".env"
+        if candidate.exists():
+            load_dotenv(candidate)
+            return
+_load_env()
 
 HERE = Path(__file__).resolve().parent
 INPUT = HERE / "input.csv"
@@ -30,7 +49,9 @@ OUTPUT = HERE / "results.csv"
 
 MODEL = "gpt-5.4-nano"
 REASONING_EFFORT = "low"
-MAX_TEXT_CHARS = 12_000   # truncate long docs; ~3k tokens, stays cheap
+# v3: no truncation cap — gpt-5.4-nano has a 400K-token context window;
+# longest doc is ~230K chars (~57K tokens, ~14% of capacity).
+MAX_TEXT_CHARS = 300_000
 
 SYSTEM = """\
 You are a labor-economics text analyst. You will be given text from a public-sector
@@ -105,9 +126,10 @@ def rate_document(client: OpenAI, row: dict) -> dict:
 
 
 def run():
-    api_key = os.environ.get("OPENAI_API_KEY")
-    if not api_key:
-        print("ERROR: OPENAI_API_KEY not set in environment.")
+    subscription_key = os.environ.get("HARVARD_SUBSCRIPTION_KEY")
+    if not subscription_key:
+        print("ERROR: HARVARD_SUBSCRIPTION_KEY not set in environment.")
+        print("       Set it or add it to a .env file in the repo root or parent directory.")
         sys.exit(1)
 
     output_path = OUTPUT
@@ -115,7 +137,13 @@ def run():
         idx = sys.argv.index("--output")
         output_path = HERE / sys.argv[idx + 1]
 
-    client = OpenAI(api_key=api_key)
+    client = OpenAI(
+        api_key=subscription_key,
+        base_url="https://go.apis.huit.harvard.edu/ais-openai-direct/v2",
+        default_headers={
+            "Ocp-Apim-Subscription-Key": subscription_key,
+        },
+    )
 
     csv.field_size_limit(10_000_000)
     with open(INPUT, newline="", encoding="utf-8") as f:

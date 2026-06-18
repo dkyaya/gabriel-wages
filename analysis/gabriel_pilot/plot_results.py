@@ -52,7 +52,7 @@ for g in groups:
 
 colors = ["#4C72B0", "#DD8452"]
 bars = ax.bar(groups, means, yerr=sems, capsize=5, color=colors, width=0.5, alpha=0.85)
-ax.set_ylim(0, 35)
+ax.set_ylim(0, max(35, max(means) * 1.25))
 ax.set_ylabel("Comparability Emphasis (0–100)")
 ax.set_title("Graph 1: Avg Comparability Emphasis\nSafety vs Non-Safety Units")
 ax.set_xlabel("")
@@ -80,7 +80,7 @@ for st in src_types:
 
 colors2 = ["#55A868", "#C44E52", "#8172B2", "#937860"][:len(src_types)]
 bars2 = ax.bar(src_types, means2, yerr=sems2, capsize=5, color=colors2, width=0.5, alpha=0.85)
-ax.set_ylim(0, 35)
+ax.set_ylim(0, max(35, max(means2) * 1.25))
 ax.set_ylabel("Comparability Emphasis (0–100)")
 ax.set_title("Graph 2: Avg Comparability Emphasis\nby Source Type")
 for bar, m in zip(bars2, means2):
@@ -122,7 +122,8 @@ ax.legend(handles=legend_elements, fontsize=8, loc="upper left")
 ax.set_xlabel("Year")
 ax.set_ylabel("Comparability Emphasis (0–100)")
 ax.set_title("Graph 3: Comparability Score by Year\n(color = safety/non-safety, shape = source type)")
-ax.set_ylim(0, 35)
+max_score = max((r["score"] for r in scored), default=35)
+ax.set_ylim(0, max(35, max_score * 1.15))
 ax.yaxis.grid(True, linestyle="--", alpha=0.5)
 fig.tight_layout()
 out3 = HERE / f"graph3_by_year{suffix}.png"
