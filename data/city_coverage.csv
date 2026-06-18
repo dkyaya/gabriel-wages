@@ -6,3 +6,8 @@ ma_boston,Boston,MA,police,1,2020-2025,1,ma_boston_police_2020,ingested via text
 ma_boston,Boston,MA,clerical_admin,0,2023-2027,1,ma_boston_clerical_admin_2023,ingested via text_layer
 ma_somerville,Somerville,MA,police,1,2012-2018,1,ma_somerville_police_spsoa_2012,ingested via text_layer
 ma_somerville,Somerville,MA,police,1,2012-2015,1,ma_somerville_police_spea_2012,ingested via text_layer
+ma_arlington,Arlington,MA,fire,1,2021-2024,1,ma_arlington_fire_2021,ingested via text_layer
+ma_arlington,Arlington,MA,public_works,0,2015-2018,1,ma_arlington_public_works_2015,ingested via text_layer
+ma_arlington,Arlington,MA,public_works,0,2018-2021,1,ma_arlington_public_works_2018,ingested via text_layer
+ma_arlington,Arlington,MA,public_works,0,2021-2024,1,ma_arlington_public_works_2021,ingested via text_layer
+ma_newton,Newton,MA,police,1,2015-2018,1,ma_newton_police_2015,ingested via text_layer+ocr_partial
