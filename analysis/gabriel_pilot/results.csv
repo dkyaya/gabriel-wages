@@ -1,0 +1,80 @@
+doc_id,city,occupation_class,safety_flag,source_type,year_or_cycle,text,comparability_emphasis,gabriel_notes,prompt_tokens,completion_tokens
+ma_worcester_fire_2017,Worcester,fire,1,cba,2017-2020,,-1,no text,0,0
+ma_worcester_clerical_admin_2017,Worcester,clerical_admin,0,cba,2017-2020,"MEMORANDUM OF AGREEMENT
+                                                      between
+                                            THE CITY OF WORCESTER
+                                                ",10,The document includes minimal references to comparability with other municipalities.,1653,26
+ma_worcester_public_works_2017,Worcester,public_works,0,cba,2017-2020,"MEMORANDUM OF AGREEMENT (DRAFT #1)
+                                                           between
+                                               THE CITY OF WORCESTER
+                             ",10,The document includes minimal references to comparability with other municipalities.,2227,26
+ma_boston_police_2020,Boston,police,1,cba,2020-2025,,-1,no text,0,0
+ma_boston_clerical_admin_2023,Boston,clerical_admin,0,cba,2023-2027,"COLLECTIVE
+   BARGAINING
+   AGREEMENT
+                  BETWEEN
+
+
+
+    CITY OF BOSTON
+                     AND
+
+UNITED STEELWORKERS, AFL-CIO,
+            CLC
+                ONBEHALFOF
+
+
+
+
+           ",10,The document includes minimal references to comparability with other municipalities.,2276,26
+ma_somerville_police_spsoa_2012,Somerville,police,1,arbitration_award,2012-2018,"j
+I
+l
+
+
+
+
+                   AGREEiVIENT BE1WEEN
+
+                             THE
+
+                   CITY OF SOi\'IERVILLE
+
+
+
+    SOJ\IERVILLE POLICE SUPERIOR OFFICERS ASSOCL\ TION
+
+
+
+
+             ",10,The document contains minimal references to comparability with other municipalities.,2639,26
+ma_somerville_police_spea_2012,Somerville,police,1,arbitration_award,2012-2015,"AGREEMENT BETWEEN
+
+           THE CITY OF SOMERVILLE
+
+                      AND
+
+THE SOMERVILLE POLICE EMPLOYEES ASSOCIATION
+
+
+
+           July I, 2004- June 30, 2008
+                                ",20,The document includes minimal references to comparability with other municipalities.,2290,26
+ma_arlington_fire_2021,Arlington,fire,1,cba,2021-2024,"Bargaining Agreement between the Town of Arlington
+                    and the International Association of Firefighters,
+                                   AFL-CIO, Local 1297
+
+                      ",20,The document includes minimal references to comparability with other municipalities.,2655,26
+ma_arlington_public_works_2015,Arlington,public_works,0,cba,2015-2018,"Bargaining Agreement between the Town of Arlington
+                                 and the
+      American Federation of State, County and Municipal Employees,
+                   Council 93, Local - 6",20,The document includes minimal references to comparability with other municipalities.,2539,26
+ma_arlington_public_works_2018,Arlington,public_works,0,cba,2018-2021,"Bargaining Agreement between the Town of Arlington
+                                   and the
+  American Federation of State, County and Municipal Employees, Council
+                        93, Local ",20,The document includes minimal references to comparability with other municipalities.,2540,26
+ma_arlington_public_works_2021,Arlington,public_works,0,cba,2021-2024,"Bargaining Agreement between the Town of Arlington
+                                and the
+ American Federation of State, County and Municipal Employees, Council
+                       93, Local - 680",10,The document includes minimal references to comparability with other municipalities.,1254,26
+ma_newton_police_2015,Newton,police,1,cba,2015-2018,,-1,no text,0,0

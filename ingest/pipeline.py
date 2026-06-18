@@ -134,9 +134,19 @@ def missing_required(meta: dict) -> list[str]:
     return [k for k in REQUIRED_META if not (meta.get(k) or "").strip()]
 
 
+def _existing_obs_ids(path: Path) -> set[str]:
+    if not path.exists() or path.stat().st_size == 0:
+        return set()
+    with open(path, newline="", encoding="utf-8") as f:
+        return {r["obs_id"] for r in csv.DictReader(f) if r.get("obs_id")}
+
+
 def ingest_one(pdf_path: Path, meta: dict, run_llm_fallback: bool = False) -> dict:
     miss = missing_required(meta)
     row = build_row(pdf_path, meta, run_llm_fallback=run_llm_fallback)
+
+    if row["obs_id"] in _existing_obs_ids(CONTRACTS):
+        return {"status": "duplicate", "obs_id": row["obs_id"]}
 
     if miss:
         row["_missing_meta"] = ",".join(miss)

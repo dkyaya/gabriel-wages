@@ -34,7 +34,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "ingest"))
-from pipeline import ingest_one, run_validator   # noqa: E402
+from pipeline import ingest_one, run_validator, _existing_obs_ids, CONTRACTS   # noqa: E402
 
 INBOX = ROOT / "inbox"
 MANIFEST = INBOX / "manifest.csv"
@@ -56,12 +56,24 @@ def process(dry_run: bool = False, use_llm: bool = False) -> dict:
         print(f"No manifest at {MANIFEST}. Nothing to process.")
         return {"processed": 0}
 
-    summary = {"ingested": 0, "quarantined": 0, "missing_file": 0, "rows": []}
+    summary = {"ingested": 0, "quarantined": 0, "missing_file": 0, "skipped_duplicate": 0, "rows": []}
+    existing = _existing_obs_ids(CONTRACTS)
     with open(MANIFEST, newline="", encoding="utf-8") as f:
         for r in csv.DictReader(f):
             fn = (r.get("filename") or "").strip()
             if not fn:
                 continue
+
+            # cheap early-exit before PDF extraction
+            city = (r.get("city_id") or "").strip()
+            occ = (r.get("occupation_class") or "").strip()
+            start = (r.get("cycle_start") or "")[:4]
+            candidate_id = r.get("obs_id") or f"{city}_{occ}_{start}"
+            if candidate_id in existing:
+                summary["skipped_duplicate"] += 1
+                summary["rows"].append({"filename": fn, "status": "duplicate", "obs_id": candidate_id})
+                continue
+
             src = _find_file(fn)
             if not src:
                 summary["missing_file"] += 1
@@ -94,7 +106,8 @@ def process(dry_run: bool = False, use_llm: bool = False) -> dict:
 
     if not dry_run:
         print(f"ingested={summary['ingested']} quarantined={summary['quarantined']} "
-              f"missing_file={summary['missing_file']}")
+              f"missing_file={summary['missing_file']} "
+              f"skipped_duplicate={summary['skipped_duplicate']}")
         run_validator()
     else:
         for row in summary["rows"]:
