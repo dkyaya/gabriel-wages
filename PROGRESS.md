@@ -6,6 +6,72 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-06-19 (session 7) — v5 run: contiguous quote constraint + COLA clarification; spend log backfill
+
+**Did**
+- Task 1: Tightened quote request in `run_gabriel.py` SYSTEM prompt from open-ended "sentence(s)" to "ONE to TWO consecutive sentences from a SINGLE CONTIGUOUS PASSAGE." Blocks the synthesis failure mode where the model stitches non-adjacent fragments.
+- Task 2: Added explicit COLA/CPI boundary to `PROMPT_TEMPLATE`: "cost-of-living index adjustments (CPI, BACPI, or similar) are NOT comparability language — they reference a price index, not other workers' wages." Also added the same clarification to `docs/hypotheses.md` under H1 as a permanent measurement boundary note.
+- Task 3: Backfilled v3 run to `logs/api_spend_log.csv` as a manually-flagged row (`run_gabriel.py[v3-backfill]`). Recomputed cost at correct pricing: $0.048180 (v3 PROGRESS.md had reported $0.036 using the old $0.15/$0.60 rate; correct rate is $0.20/$1.25).
+- Ran GABRIEL v5 on 12 documents. Output: `results_v5.csv`.
+
+**V4 vs V5 comparison**
+
+| doc_id | v4 score | v5 score | Δ | v4 quote | v5 quote | v5 page |
+|--------|---------|---------|---|---------|---------|---------|
+| worcester_fire_2017 | 0 | 0 | 0 | N | N | — |
+| worcester_clerical_2017 | 0 | 0 | 0 | N | N | — |
+| worcester_public_works_2017 | 0 | 0 | 0 | N | N | — |
+| boston_police_2020 | 10 | 5 | −5 | N | N | — |
+| boston_clerical_2023 | 0 | 5 | +5 | N | FAIL | — |
+| somerville_spsoa_2012 | 80 | 80 | 0 | FAIL | FAIL | — |
+| somerville_spea_2012 | 78 | 75 | −3 | Y | Y | p.60 |
+| arlington_fire_2021 | 10 | 25 | +15 | N | Y | p.20 |
+| arlington_dpw_2015 | 5 | **0** | **−5** | Y (BACPI) | N | — |
+| arlington_dpw_2018 | 12 | 10 | −2 | Y (BACPI) | N | — |
+| arlington_dpw_2021 | 0 | 0 | 0 | N | N | — |
+| newton_police_2015 | 10 | 12 | +2 | N | N | — |
+
+**COLA clarification effect (Task 2):**
+- Arlington DPW 2015: 5 → 0. The v4 quote was the BACPI sentence ("adjusted to reflect the change in this Boston Adjusted Consumer Price Index"); with the explicit CPI boundary, the model correctly scores it 0 and leaves the quote blank.
+- Arlington DPW 2018: 12 → 10 (minor). Notes now explicitly name BACPI as the reason for the low score. Quote dropped.
+- No other documents were affected. Nothing that was scoring high due to CPI language — confirming the model was largely already making this distinction, and the clarification only tightened the edge case.
+
+**Quote verification — did the contiguous constraint fix the SPSOA failure?**
+No. SPSOA (score=80) failed verification again in v5. The constraint helps in principle (blocks stitching from different parts of the text) but SPSOA's comparability reasoning is distributed across many pages of a 256K-char document; the model cannot find a single 1–2 sentence passage that is both verbatim AND representative. The score (80) is correct — the failure is that the model produces a synthesized summary rather than lifting a verbatim excerpt. Mitigation to consider: cap the quote to a single sentence only, or accept that long-form arbitration awards with multi-page reasoning sections will consistently fail quote verification and treat the score alone as authoritative for those documents.
+
+**New findings in v5:**
+- Arlington fire (arlington_fire_2021) scored 25 (+15 from v4) and yielded a verified quote at p.20: "Any outside detail assignment outside the borders of the Town of Arlington shall be paid at that city's or Town's outside detail rate consistent with current practice..." This is a real comparability reference (pay set by reference to another jurisdiction's rate), though for outside details only, not base wages. Score 25 (within the 16–40 "mentioned in passing" band) is plausible. This is the first document outside the Somerville awards to produce a verified non-trivial quote.
+- Two new quote failures: SPSOA (persistent) and Boston clerical (score went 0→5, a noise-level shift; the failure means the model tried but couldn't find a verbatim passage, consistent with genuinely low comparability language in that document).
+
+**Qualitative quote quality (v4 vs v5):**
+v4 had 3 verified quotes, but 2 were BACPI (CPI-index citations, now correctly excluded). v5 has 2 verified quotes, both genuine comparability language (SPEA's "wages and benefits of comparable towns" at p.60; Arlington fire's outside-detail-rate clause at p.20). Fewer verifications in v5, but higher-quality ones.
+
+**Spend log — corrected total (as of v5):**
+```
+v3 run (backfill, 2026-06-18): 235,995 prompt + 785 completion = $0.048180  [corrected from $0.036 in session 5 log — used old pricing]
+v4 run (live-logged):          236,859 prompt + 1,304 completion = $0.049001
+v5 run (live-logged):          237,891 prompt + 1,504 completion = $0.049458
+─────────────────────────────────────────────────────────────────────────────
+Total (v3–v5):                 710,745 prompt + 3,593 completion = $0.1466
+
+NOTE: All cost figures are ESTIMATES based on public OpenAI list pricing ($0.20/1M input,
+$1.25/1M output for gpt-5.4-nano). Harvard's actual billed rate may differ.
+```
+
+**Corpus snapshot** (unchanged from session 6)
+```
+contracts: 12 | discourse: 0 | coverage: 12 | city_attributes: 3
+healthy matched pairs: 2
+safety units unmatched: 4
+```
+
+**Next steps**
+1. Decide on SPSOA strategy: single-sentence cap, or accept score-only for dense award documents.
+2. Non-safety arbitration awards (JLMC, manual download) remain the primary corpus gap.
+3. Consider updating v3 cost note in PROGRESS.md session 5 with the corrected figure.
+
+---
+
 ## 2026-06-19 (session 6) — Verbatim quote + page extraction; local spend tracker
 
 **Did**

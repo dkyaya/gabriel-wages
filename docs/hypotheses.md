@@ -12,8 +12,7 @@ Status vocabulary: `untested` | `supported` | `contradicted` | `inconclusive`
 ## H1 — Comparability channel
 
 **Date added:** 2026-06-18
-**Status:** untested (preliminary signal, not yet isolated)
-
+**Status:** untested (preliminary signal, not yet isolate
 **Hypothesis:** Safety units' wage decisions (CBAs/awards) invoke peer-city/peer-unit
 wage comparisons more frequently and more centrally than non-safety units' decisions.
 This comparability emphasis functions as a ratcheting mechanism — each city's raise
@@ -29,6 +28,14 @@ subsequent wage increases at the city-cycle level.
 **What would contradict it:** No score gap between safety and non-safety once document
 type is controlled for, OR `comparability_emphasis` shows no correlation with actual
 wage growth (meaning the language is rhetorical but not causal).
+
+**Measurement boundary (added 2026-06-19):** Cost-of-living index adjustments (CPI,
+BACPI, or similar) are **not** comparability language under this attribute — they
+reference a price index, not other workers' wages. Only explicit comparisons to wages
+or compensation of other employees, bargaining units, or jurisdictions score above 0.
+This boundary was clarified after GABRIEL v4 revealed that Arlington DPW 2015/2018
+cited BACPI as their sole external benchmark; the model correctly scored them low
+(5/12) even before the clarification was explicit in the prompt.
 
 **Evidence so far:** GABRIEL pilot v3 (PROGRESS.md, 2026-06-18 session 5;
 `analysis/gabriel_pilot/report_v3.md`) found safety mean=28.8 vs. non-safety mean=3.3

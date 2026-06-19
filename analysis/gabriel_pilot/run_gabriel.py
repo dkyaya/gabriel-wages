@@ -6,6 +6,9 @@ Model: gpt-5.4-nano (released 2026-03-17), reasoning_effort=low
   - v1 used gpt-4o-mini (incorrect substitution); v2 uses the specified model.
   - v3: switched to Harvard HUIT OpenAI proxy; full-text input (no truncation cap).
   - v4: added verbatim-verified supporting quote + estimated page number per document.
+  - v5: tightened quote to ONE-TO-TWO CONTIGUOUS sentences (blocks synthesis failures);
+        added COLA/CPI clarification so price-index adjustments are not confused with
+        peer-wage comparability.
   # NOTE: if gpt-5.4-nano is unavailable on the Harvard proxy, fall back to gpt-4o-mini
   # and confirm with Jay before proceeding.
 
@@ -72,10 +75,11 @@ collective bargaining agreement or arbitration award. Rate the document on one a
 and return a JSON object with exactly three keys:
   "score": integer 0-100
   "notes": one sentence citing the specific textual evidence for your score (max 25 words)
-  "quote": the exact verbatim sentence(s) from the document that most directly support
-           your score -- copy character-for-character from the text, do NOT paraphrase,
-           summarize, or alter wording in any way. If the score is 0-15 (no comparability
-           language present), leave "quote" as an empty string.
+  "quote": ONE to TWO consecutive sentences copied EXACTLY character-for-character from
+           a SINGLE CONTIGUOUS PASSAGE in the document. Do NOT combine fragments from
+           different parts of the text, paraphrase, summarize, or alter wording in any
+           way. If one sentence fully captures the evidence, use just one. If the score
+           is 0-15 (no comparability language present), leave "quote" as an empty string.
 """
 
 PROMPT_TEMPLATE = """\
@@ -91,6 +95,11 @@ Scoring anchors -- you MUST assign a score consistent with these:
             or increase amount
   71-100 = comparability to named peer cities/units is the PRIMARY stated justification
             for the award/contract's terms, with specific comparator examples cited
+
+Note: cost-of-living index adjustments (CPI, BACPI, or similar) are NOT comparability
+language under this attribute -- they reference a price index, not other workers' wages.
+Only score based on explicit comparisons to wages/compensation of other employees,
+bargaining units, or jurisdictions.
 
 Score based on what is actually written, not what is typical for this document type.
 

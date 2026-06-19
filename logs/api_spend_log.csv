@@ -1,4 +1,5 @@
 timestamp,script_name,model,prompt_tokens,completion_tokens,estimated_cost_usd
+2026-06-18T00:00:00Z,run_gabriel.py[v3-backfill],gpt-5.4-nano,235995,785,0.048180
 2026-06-19T17:04:29Z,run_gabriel.py,gpt-5.4-nano,3023,46,0.000662
 2026-06-19T17:04:31Z,run_gabriel.py,gpt-5.4-nano,1846,71,0.000458
 2026-06-19T17:04:32Z,run_gabriel.py,gpt-5.4-nano,2420,59,0.000558
@@ -11,3 +12,15 @@ timestamp,script_name,model,prompt_tokens,completion_tokens,estimated_cost_usd
 2026-06-19T17:04:51Z,run_gabriel.py,gpt-5.4-nano,22141,138,0.004601
 2026-06-19T17:04:52Z,run_gabriel.py,gpt-5.4-nano,1447,82,0.000392
 2026-06-19T17:04:54Z,run_gabriel.py,gpt-5.4-nano,28154,72,0.005721
+2026-06-19T17:28:24Z,run_gabriel.py,gpt-5.4-nano,3109,45,0.000678
+2026-06-19T17:28:26Z,run_gabriel.py,gpt-5.4-nano,1932,49,0.000448
+2026-06-19T17:28:27Z,run_gabriel.py,gpt-5.4-nano,2506,86,0.000609
+2026-06-19T17:28:29Z,run_gabriel.py,gpt-5.4-nano,3665,90,0.000846
+2026-06-19T17:28:31Z,run_gabriel.py,gpt-5.4-nano,26989,191,0.005637
+2026-06-19T17:28:34Z,run_gabriel.py,gpt-5.4-nano,47723,173,0.009761
+2026-06-19T17:28:37Z,run_gabriel.py,gpt-5.4-nano,53469,189,0.010930
+2026-06-19T17:28:39Z,run_gabriel.py,gpt-5.4-nano,25479,181,0.005322
+2026-06-19T17:28:42Z,run_gabriel.py,gpt-5.4-nano,21019,133,0.004370
+2026-06-19T17:28:44Z,run_gabriel.py,gpt-5.4-nano,22227,111,0.004584
+2026-06-19T17:28:46Z,run_gabriel.py,gpt-5.4-nano,1533,97,0.000428
+2026-06-19T17:28:49Z,run_gabriel.py,gpt-5.4-nano,28240,159,0.005847
