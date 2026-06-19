@@ -1,0 +1,114 @@
+doc_id,city,occupation_class,safety_flag,source_type,year_or_cycle,text,comparability_emphasis,gabriel_notes,supporting_quotes,estimated_pages,excerpts_submitted,excerpts_verified,excerpts_failed,prompt_tokens,completion_tokens
+ma_worcester_fire_2017,Worcester,fire,1,cba,2017-2020,"MEMORANDUM OF AGREEMENT
+between
+CITY OF WORCESTER
+and
+LOCAL 1009, I.A.F.F.
+[FY 2018 — FY 2020]
+
+This Memorandum of Agreement sets forth the agreements of the parties for a new agreement, to
+supplement",0,"The document sets wages with fixed percentages and internal thresholds, but contains no textual wage/compensation comparisons to other jurisdictions or bargaining units.",[],[],0,0,0,3195,75
+ma_worcester_clerical_admin_2017,Worcester,clerical_admin,0,cba,2017-2020,"MEMORANDUM OF AGREEMENT
+                                                      between
+                                            THE CITY OF WORCESTER
+                                                ",0,The document sets internal wage/benefit amounts for Worcester without any explicit comparisons to other units or jurisdictions’ wages.,[],[],0,0,0,2018,75
+ma_worcester_public_works_2017,Worcester,public_works,0,cba,2017-2020,"MEMORANDUM OF AGREEMENT (DRAFT #1)
+                                                           between
+                                               THE CITY OF WORCESTER
+                             ",5,The text sets wage increases and overtime rates internally but contains no explicit comparisons of pay/benefits to other jurisdictions or bargaining units.,[],[],0,0,0,2592,81
+ma_boston_police_2020,Boston,police,1,cba,2020-2025,"MEMORANDA OF AGREEMENT
+CITY OF BOSTON
+AND
+BOSTON POLICE PATROLMENS’ ASSOCIATION
+
+MOA #1
+JULY 1, 2020 — JUNE 30, 2023
+
+This Memorandum of Agreement amends the Collective Bargaining Agreement effective ",0,The document contains no wage or compensation comparisons to other jurisdictions or bargaining units to justify its terms; it only states internal pay formulas and rates.,[],[],0,0,0,3751,45
+ma_boston_clerical_admin_2023,Boston,clerical_admin,0,cba,2023-2027,"COLLECTIVE
+   BARGAINING
+   AGREEMENT
+                  BETWEEN
+
+
+
+    CITY OF BOSTON
+                     AND
+
+UNITED STEELWORKERS, AFL-CIO,
+            CLC
+                ONBEHALFOF
+
+
+
+
+           ",8,The agreement sets pay increases via fixed percentages and dollar amounts but contains no explicit wage/compensation comparisons to other jurisdictions or units.,[],[],0,0,0,27075,75
+ma_somerville_police_spsoa_2012,Somerville,police,1,arbitration_award,2012-2018,"j
+I
+l
+
+
+
+
+                   AGREEiVIENT BE1WEEN
+
+                             THE
+
+                   CITY OF SOi\'IERVILLE
+
+
+
+    SOJ\IERVILLE POLICE SUPERIOR OFFICERS ASSOCL\ TION
+
+
+
+
+             ",88,Wage terms are repeatedly justified using detailed comparisons to wages/benefits and rank differentials across named comparable towns and internal settlements.,"[""In reaching the conclusions in the present award, the Arbitration Panel has considered the criteria set forth in the statute including the municipality's ability to pay, wages and benefits of comparable towns, and the cost of living."", ""The City argues that the wages and benefits of Somerville Superior Officers compare well with their counterparts in other comparable communities, and that Somerville Superior Officers rank at the top in terms of total compensation."", ""The facts show that the base wage rate for Somerville Police Superiors is well above the average rate for the group of comparable communities."", ""The Union’s wage proposal for the last three years of the six-year agreement of 3%, 3.5% and 4%, is well above the base wage increases that have been agreed to in comparable communities. There is, therefore, no justification for increases of this magnitude to the Somerville Superior Officers for this three-year period."", ""A review of the rank differentials in comparable communities shows the following differences:"", ""Moreover, as stated above, the base wage rates of Somerville Superior Officers is well above the average rates paid to superior officers in other communities.""]","[""51"", ""52"", ""56"", ""57"", ""60"", ""60""]",6,6,0,47809,307
+ma_somerville_police_spea_2012,Somerville,police,1,arbitration_award,2012-2015,"AGREEMENT BETWEEN
+
+           THE CITY OF SOMERVILLE
+
+                      AND
+
+THE SOMERVILLE POLICE EMPLOYEES ASSOCIATION
+
+
+
+           July I, 2004- June 30, 2008
+                                ",82,"The award repeatedly justifies wage and duration terms by comparing Somerville’s police pay, total compensation, and percent adjustments against named comparable municipalities and internal settlements.","[""In reaching the conclusions in the present award, the\nArbitration Panel has considered the criteria set forth in\nthe statute including the municipality's ability to pay,\nwages and benefits of comparable towns, and the cost of\nliving."", ""In general, arbitrators consider the cost\nof living, wages and benefits of comparable employees, the\nability of the employer (or citizens) to pay for an\nincrease in wages, the bargaining history of the parties\nand recent contract settlements."", ""Moreover, the\nevidence also demonstrates that the overall compensation\n(including wages and benefits) provided to Somerville\nPolice, although not the same, is comparable to what is\nprovided to police officers in these other communities.\nThere is, therefore, no justification for any large-scale\nequity adjustments to the Somerville Patrol Officer wage\nincreases."", ""The Panel Awards wage increases for the three-year\nperiod:\n              FY 2013 – 2.5%\n              FY 2014 – 2%\n              FY 2015 – 2%"", ""The evidence suggests that total compensation paid to\nSomerville officers is competitive with officers in\nsurrounding communities."", ""The Union further argues that the wage settlements\nprovided to other bargaining units in the City of\nSomerville should not be controlling in this proceeding.\nThe Union asserts that the proper benchmark as provided by\nthe arbitration law is wages and benefits paid to\ncomparable employees, which means it is more appropriate to\nlook at wages and benefits provided to other municipal\npolice officers."", ""Accordingly, based on totality of facts there is\ninsufficient justification to change the current longevity\npayments at this time.""]","[""53"", ""59"", ""60"", ""64"", ""77"", ""59"", ""77""]",9,7,2,53555,573
+ma_arlington_fire_2021,Arlington,fire,1,cba,2021-2024,"Bargaining Agreement between the Town of Arlington
+                    and the International Association of Firefighters,
+                                   AFL-CIO, Local 1297
+
+                      ",25,"Comparability appears only once via out-of-town outside-detail pay tied to “that city’s or Town’s” existing practice, not as a broader wage-justification framework.","[""Any outside detail assignment outside the borders of the Town of Arlington shall be paid at that city’s or Town’s outside detail rate consistent with current practice at the time this provision is agreed to. Any rules governing such outside details will be determined by the city or town in which the detail is performed.""]","[""20""]",1,1,0,25565,235
+ma_arlington_public_works_2015,Arlington,public_works,0,cba,2015-2018,"Bargaining Agreement between the Town of Arlington
+                                 and the
+      American Federation of State, County and Municipal Employees,
+                   Council 93, Local - 6",0,"The agreement sets pay as percentages, premiums, and indices (e.g., BACPI) but includes no explicit wage/compensation comparisons to other units or jurisdictions.",[],[],0,0,0,21105,94
+ma_arlington_public_works_2018,Arlington,public_works,0,cba,2018-2021,"Bargaining Agreement between the Town of Arlington
+                                   and the
+  American Federation of State, County and Municipal Employees, Council
+                        93, Local ",25,"The agreement largely sets pay amounts internally, with only limited references to outside pay-market benchmarks (AFSCME market adjustments) rather than explicit wage comparisons to other communities or units.","[""Effective July 1, 2018, amend the salary table in effect on June 30, 2018 to provide for\n        an across-the-board salary increase of 2% and effective the first full calendar pay period\n        of January 2019 a market adjustment of 35 cents to the top step of AFSCME: MC, Office\n        Administrative and Administrative Technical and Professional Pay Plans (the 2%\n        increase shall be implemented first and the market adjustment of 35 cents to the\n        impacted positions shall be implemented second)."", ""Effective July 1, 2019 amend the salary table which is then in effect to provide for an\n        across-the-board salary increase of 2% and effective the first full calendar pay period\n        of January 2020 a market adjustment of 20 cents to the top step of AFSCME: MC, Office\n        Administrative and Administrative Technical and Professional Pay Plans (the 2%\n        increase shall be implemented first and the market adjustment of 20 cents to the\n        impacted positions shall be implemented second).""]","[""10"", ""11""]",2,2,0,22313,457
+ma_arlington_public_works_2021,Arlington,public_works,0,cba,2021-2024,"Bargaining Agreement between the Town of Arlington
+                                and the
+ American Federation of State, County and Municipal Employees, Council
+                       93, Local - 680",0,The provided agreement text defines bargaining scope and management rights but contains no explicit wage or compensation comparisons to other units or jurisdictions.,[],[],0,0,0,1619,97
+ma_newton_police_2015,Newton,police,1,cba,2015-2018,"COLLECTIVE BARGAINING AGREEMENTS
+
+CITY OF NEWTON
+AND
+NEWTON POLICE ASSOCIATION
+
+EFFECTIVE
+
+JULY 1, 2014 — JUNE 30, 2015
+AND
+
+JULY 1, 2015 —- JUNE 30, 2018
+
+TABLE OF CONTENTS
+
+ARTICLE
+
+ARTICLE I
+RECOGN",0,"Text sets specific wage percentages, stipends, and schedules without any explicit comparisons to other jurisdictions or units’ wages for justification.",[],[],0,0,0,28326,93

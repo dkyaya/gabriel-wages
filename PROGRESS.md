@@ -6,6 +6,84 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-06-19 (session 8) — v6 run: multi-excerpt schema; SPSOA breakthrough; DPW 2018 flag
+
+**Did**
+- Rewrote `run_gabriel.py` SYSTEM prompt to request a list of up to 10 independent verbatim excerpts rather than a single quote. Each excerpt is 1-2 consecutive sentences from a single contiguous passage; excerpts may come from different parts of the document. Each verified separately via `_verify_verbatim`. Output columns changed from `supporting_quote`/`estimated_page` (strings) to `supporting_quotes`/`estimated_pages` (JSON-encoded lists) plus `excerpts_submitted`/`excerpts_verified`/`excerpts_failed` counts.
+- Added correction note to session 5 PROGRESS.md entry for v3 cost ($0.036 → $0.048180).
+- Ran GABRIEL v6 on 12 documents. Output: `results_v6.csv`.
+
+**V6 excerpt counts (submitted → verified)**
+| doc_id | v5 score | v6 score | Δ | submitted | verified | failed |
+|--------|---------|---------|---|-----------|----------|--------|
+| worcester_fire_2017 | 0 | 0 | 0 | 0 | 0 | 0 |
+| worcester_clerical_2017 | 0 | 0 | 0 | 0 | 0 | 0 |
+| worcester_public_works_2017 | 0 | 5 | +5 | 0 | 0 | 0 |
+| boston_police_2020 | 5 | 0 | −5 | 0 | 0 | 0 |
+| boston_clerical_2023 | 5 | 8 | +3 | 0 | 0 | 0 |
+| **somerville_spsoa_2012** | 80 | **88** | +8 | **6** | **6** | **0** |
+| somerville_spea_2012 | 75 | 82 | +7 | 9 | 7 | 2 |
+| arlington_fire_2021 | 25 | 25 | 0 | 1 | 1 | 0 |
+| arlington_dpw_2015 | 0 | 0 | 0 | 0 | 0 | 0 |
+| **arlington_dpw_2018** | 10 | **25** | **+15** | **2** | **2** | **0** | ← FLAG |
+| arlington_dpw_2021 | 0 | 0 | 0 | 0 | 0 | 0 |
+| newton_police_2015 | 12 | 0 | −12 | 0 | 0 | 0 |
+
+**SPSOA: breakthrough — 6 verified, all genuine**
+All 6 excerpts passed verification and are substantively distinct comparability passages. Pages 51, 52, 56, 57, 60 — spread across the comparability analysis section. Example:
+- p.52: *"The City argues that the wages and benefits of Somerville Superior Officers compare well with their counterparts in other comparable communities, and that Somerville Superior Officers rank at the top in terms of total compensation."*
+- p.57: *"The Union's wage proposal for the last three years... is well above the base wage increases that have been agreed to in comparable communities. There is, therefore, no justification for increases of this magnitude..."*
+
+No padding. Each excerpt covers a distinct analytical point (city argument vs. union argument vs. rank differential vs. award reasoning). Score increase 80→88 reflects the model now reading the full comparability section and registering how heavily it dominates the award's reasoning.
+
+**SPEA: 7 verified, 2 padding detected**
+7 of 9 submitted excerpts passed verification. Of the 7 verified, 5 are genuine comparability language. Two are padding:
+- p.64 excerpt: *"The Panel Awards wage increases for the three-year period: FY 2013 – 2.5%, FY 2014 – 2%, FY 2015 – 2%"* — This is the award outcome, not comparability reasoning. Verbatim and verifiable, but not evidence of comparability language.
+- p.77 excerpt: *"Accordingly, based on totality of facts there is insufficient justification to change the current longevity payments at this time."* — A ruling conclusion about longevity, not peer-wage comparison language.
+Score (82) is still supported by the 5 genuine excerpts. Padding doesn't change the score, but it dilutes excerpt quality if used for annotation.
+
+**Arlington DPW 2018: FLAG — score increase likely false positive**
+Score jumped 10→25 with 2 verified excerpts about "market adjustment of 35 cents / 20 cents to the top step of AFSCME: MC, Office Administrative." These passages are NOT peer-wage comparability:
+- "AFSCME: MC" is the bargaining unit abbreviation (AFSCME Municipal Council), not a reference to another municipality or peer wages.
+- "Market adjustment" here means an internal salary table correction, not a comparison to wages paid elsewhere.
+- The v5 score (10, BACPI-adjacent) and the v4 score (12) are more plausible than 25.
+**Do not treat the v6 score of 25 for Arlington DPW 2018 as validated.** The model correctly extracted verbatim text but misread "market adjustment" as peer-wage comparability. The excerpts should be reviewed before use.
+
+**Low-scoring documents — no padding problem**
+All 8 documents scoring 0–8 returned 0 excerpts. The anti-padding instruction held: worcester fire, clerical, dpw (5, 0 excerpts), boston police, boston clerical (8, 0 excerpts), arlington dpw 2021, newton police all returned empty excerpt lists. None of these showed the 3+ excerpt inflation the task specified as the failure mode.
+
+**v5 vs v6 cost**
+```
+v5: 237,891 prompt + 1,504 completion = $0.0495
+v6: 238,923 prompt + 2,207 completion = $0.0505  (+703 completion tokens, +47%)
+Difference: +$0.0010 for 12 documents
+```
+Completion tokens increased 47% (expected — model now writes multiple excerpts per document). Cost increase is negligible (~$0.001 per run). The 2,000-token `max_completion_tokens` cap was not hit.
+
+**Corrected cumulative spend (v3–v6, all scripts):**
+```
+v3 (backfill, corrected): $0.048180
+v4 (live):                $0.049001
+v5 (live):                $0.049458
+v6 (live):                $0.050543
+────────────────────────────────────
+Total:                    $0.1972  [ESTIMATE — public list pricing; Harvard billed rate may differ]
+```
+
+**Corpus snapshot** (unchanged)
+```
+contracts: 12 | discourse: 0 | coverage: 12 | city_attributes: 3
+healthy matched pairs: 2
+safety units unmatched: 4
+```
+
+**Next steps**
+1. Arlington DPW 2018 excerpt review: confirm whether "AFSCME market adjustment" language qualifies as comparability. If not, add "market adjustment" to the COLA/non-comparability note in the prompt.
+2. SPEA padding: consider adding a filter to strip excerpts that are purely award-outcome sentences (no comparability language in the text itself).
+3. Non-safety arbitration awards remain the primary corpus gap for the H1 test.
+
+---
+
 ## 2026-06-19 (session 7) — v5 run: contiguous quote constraint + COLA clarification; spend log backfill
 
 **Did**
@@ -130,7 +208,7 @@ safety units unmatched: 4
 - Wired Harvard HUIT OpenAI proxy into `run_gabriel.py`. Credential: `HARVARD_SUBSCRIPTION_KEY` (single env var, stored in `.env` at repo root — added to `.gitignore`). The subscription key serves as both the `api_key` and the `Ocp-Apim-Subscription-Key` header; no separate OpenAI key is needed. Added `python-dotenv` to handle `.env` loading. Added `.env.example` documenting required variables. Scanned repo for hardcoded `sk-` strings — none found.
 - Confirmed Harvard endpoint works: `gpt-5.4-nano` responded correctly (base_url and header confirmed in use).
 - Raised `MAX_TEXT_CHARS` from 12,000 to 300,000 to send full document text. All 12 docs fit within 300K chars (largest: Somerville SPEA at 256K chars / ~64K tokens, ~16% of model's 400K-token context window).
-- Ran GABRIEL v3 on 12 documents. Actual cost: $0.036 (235,995 prompt + 785 completion tokens).
+- Ran GABRIEL v3 on 12 documents. Actual cost: $0.036 (235,995 prompt + 785 completion tokens). *(Corrected in session 7: $0.036 used old pricing $0.15/$0.60; correct rate $0.20/$1.25 gives $0.048180 — spend log updated.)*
 - Generated v3 PNGs (`graph1_v3`, `graph2_v3`, `graph3_v3`). Fixed y-axis auto-scaling in `plot_results.py` so bars are not clipped when scores exceed 35.
 - Wrote `analysis/gabriel_pilot/report_v3.md` (attribute definition, comparison table, captioned figures, summary with honest read on results).
 

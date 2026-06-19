@@ -9,6 +9,8 @@ Model: gpt-5.4-nano (released 2026-03-17), reasoning_effort=low
   - v5: tightened quote to ONE-TO-TWO CONTIGUOUS sentences (blocks synthesis failures);
         added COLA/CPI clarification so price-index adjustments are not confused with
         peer-wage comparability.
+  - v6: replaced single-quote schema with a list of up to 10 independently-verified
+        excerpts; each excerpt verified separately; output columns are JSON-encoded lists.
   # NOTE: if gpt-5.4-nano is unavailable on the Harvard proxy, fall back to gpt-4o-mini
   # and confirm with Jay before proceeding.
 
@@ -20,6 +22,10 @@ Attribute: comparability_emphasis
            with specific comparator examples cited in the text
 
 Output: results.csv or versioned file via --output flag
+  supporting_quotes  — JSON-encoded list of verified verbatim excerpts
+  estimated_pages    — JSON-encoded list of page numbers (parallel to supporting_quotes)
+  excerpts_submitted — how many the model returned
+  excerpts_verified  — how many passed _verify_verbatim
 
 Auth: Harvard HUIT OpenAI proxy.
   Required env var: HARVARD_SUBSCRIPTION_KEY
@@ -56,6 +62,7 @@ REASONING_EFFORT = "low"
 # v3+: no truncation cap — gpt-5.4-nano has a 400K-token context window;
 # longest doc is ~256K chars (~64K tokens, ~16% of capacity).
 MAX_TEXT_CHARS = 300_000
+MAX_EXCERPTS = 10
 
 
 # Load .env by walking up from this file's location
@@ -74,12 +81,20 @@ You are a labor-economics text analyst. You will be given text from a public-sec
 collective bargaining agreement or arbitration award. Rate the document on one attribute
 and return a JSON object with exactly three keys:
   "score": integer 0-100
-  "notes": one sentence citing the specific textual evidence for your score (max 25 words)
-  "quote": ONE to TWO consecutive sentences copied EXACTLY character-for-character from
-           a SINGLE CONTIGUOUS PASSAGE in the document. Do NOT combine fragments from
-           different parts of the text, paraphrase, summarize, or alter wording in any
-           way. If one sentence fully captures the evidence, use just one. If the score
-           is 0-15 (no comparability language present), leave "quote" as an empty string.
+  "notes": one sentence citing the overall pattern of textual evidence (max 25 words)
+  "excerpts": a JSON array of verbatim supporting passages. Each element must be
+              1-2 consecutive sentences copied EXACTLY character-for-character from a
+              SINGLE CONTIGUOUS PASSAGE in the document. Excerpts do NOT need to be
+              near each other — if comparability language appears in multiple distinct
+              sections, provide one excerpt per section, up to 10 total.
+
+              CRITICAL rules for "excerpts":
+              - Only include an excerpt if it is independently strong evidence on its own.
+              - Do NOT pad the list. A document with no comparability language returns [].
+              - A document with one strong passage returns one excerpt, not variations.
+              - Do NOT combine or paraphrase; copy character-for-character.
+              - The count should reflect how many genuinely distinct, substantive
+                instances of comparability language exist — not a target number.
 """
 
 PROMPT_TEMPLATE = """\
@@ -127,6 +142,18 @@ def _verify_verbatim(quote: str, source: str) -> bool:
     return norm(quote) in norm(source)
 
 
+def _page_for_quote(quote: str, full_text: str) -> str:
+    """Return estimated page number string if form-feed markers are present, else ''."""
+    if "\x0c" not in full_text:
+        return ""
+    norm_text = re.sub(r"\s+", " ", full_text).lower()
+    norm_q = re.sub(r"\s+", " ", quote).lower().strip()
+    offset = norm_text.find(norm_q)
+    if offset < 0:
+        return ""
+    return str(page_number_at(full_text, offset))
+
+
 def rate_document(client: OpenAI, row: dict) -> dict:
     full_text = row["text"]
     text = full_text[:MAX_TEXT_CHARS]
@@ -141,7 +168,7 @@ def rate_document(client: OpenAI, row: dict) -> dict:
         model=MODEL,
         reasoning_effort=REASONING_EFFORT,
         response_format={"type": "json_object"},
-        max_completion_tokens=500,
+        max_completion_tokens=2000,
         messages=[
             {"role": "system", "content": SYSTEM},
             {"role": "user", "content": prompt},
@@ -154,30 +181,36 @@ def rate_document(client: OpenAI, row: dict) -> dict:
     parsed = json.loads(content)
     score = parsed.get("score", -1)
     notes = parsed.get("notes", "")
-    raw_quote = parsed.get("quote", "")
     usage = response.usage
 
-    # Verbatim verification — reject paraphrases
-    supporting_quote = ""
-    estimated_page = ""
-    if raw_quote:
-        if _verify_verbatim(raw_quote, text):
-            supporting_quote = raw_quote
-            # Compute page only if the text has form-feed markers (pdftotext extraction)
-            if "\x0c" in full_text:
-                norm_text = re.sub(r"\s+", " ", full_text).lower()
-                norm_quote = re.sub(r"\s+", " ", raw_quote).lower().strip()
-                offset = norm_text.find(norm_quote)
-                if offset >= 0:
-                    estimated_page = str(page_number_at(full_text, offset))
+    # Normalise excerpts — model may return a list, a single string, or nothing
+    raw_excerpts = parsed.get("excerpts", [])
+    if isinstance(raw_excerpts, str):
+        raw_excerpts = [raw_excerpts] if raw_excerpts.strip() else []
+    raw_excerpts = [e for e in raw_excerpts if isinstance(e, str) and e.strip()]
+    raw_excerpts = raw_excerpts[:MAX_EXCERPTS]
+
+    # Verify each excerpt independently
+    verified_quotes: list[str] = []
+    verified_pages: list[str] = []
+    n_submitted = len(raw_excerpts)
+    n_failed = 0
+
+    for excerpt in raw_excerpts:
+        if _verify_verbatim(excerpt, text):
+            verified_quotes.append(excerpt)
+            verified_pages.append(_page_for_quote(excerpt, full_text))
         else:
-            notes = f"{notes} [quote_verification_failed]".strip()
+            n_failed += 1
 
     return {
         "comparability_emphasis": int(score),
         "gabriel_notes": notes,
-        "supporting_quote": supporting_quote,
-        "estimated_page": estimated_page,
+        "supporting_quotes": json.dumps(verified_quotes, ensure_ascii=False),
+        "estimated_pages": json.dumps(verified_pages, ensure_ascii=False),
+        "excerpts_submitted": n_submitted,
+        "excerpts_verified": len(verified_quotes),
+        "excerpts_failed": n_failed,
         "prompt_tokens": usage.prompt_tokens if usage else 0,
         "completion_tokens": usage.completion_tokens if usage else 0,
     }
@@ -211,12 +244,13 @@ def run():
 
     out_cols = list(rows[0].keys()) + [
         "comparability_emphasis", "gabriel_notes",
-        "supporting_quote", "estimated_page",
+        "supporting_quotes", "estimated_pages",
+        "excerpts_submitted", "excerpts_verified", "excerpts_failed",
         "prompt_tokens", "completion_tokens",
     ]
     results = []
     total_prompt = total_completion = 0
-    quote_failures = 0
+    total_submitted = total_verified = total_failed = 0
 
     for i, row in enumerate(rows, 1):
         doc_id = row["doc_id"]
@@ -225,7 +259,8 @@ def run():
             r = dict(row)
             r.update({
                 "comparability_emphasis": -1, "gabriel_notes": "no text",
-                "supporting_quote": "", "estimated_page": "",
+                "supporting_quotes": "[]", "estimated_pages": "[]",
+                "excerpts_submitted": 0, "excerpts_verified": 0, "excerpts_failed": 0,
                 "prompt_tokens": 0, "completion_tokens": 0,
             })
             results.append(r)
@@ -235,14 +270,17 @@ def run():
             rating = rate_document(client, row)
             total_prompt += rating["prompt_tokens"]
             total_completion += rating["completion_tokens"]
-            if "[quote_verification_failed]" in rating.get("gabriel_notes", ""):
-                quote_failures += 1
-                print(f"  [{i}/{len(rows)}] {doc_id}: score={rating['comparability_emphasis']} "
-                      f"QUOTE_VERIFY_FAIL — {rating['gabriel_notes']}")
-            else:
-                page_note = f" p.{rating['estimated_page']}" if rating["estimated_page"] else ""
-                print(f"  [{i}/{len(rows)}] {doc_id}: score={rating['comparability_emphasis']}"
-                      f"{page_note} — {rating['gabriel_notes']}")
+            total_submitted += rating["excerpts_submitted"]
+            total_verified += rating["excerpts_verified"]
+            total_failed += rating["excerpts_failed"]
+
+            sub = rating["excerpts_submitted"]
+            ver = rating["excerpts_verified"]
+            fail = rating["excerpts_failed"]
+            excerpt_note = f"  excerpts={ver}/{sub}" + (f" ({fail} failed)" if fail else "")
+            print(f"  [{i}/{len(rows)}] {doc_id}: score={rating['comparability_emphasis']}"
+                  f"{excerpt_note} — {rating['gabriel_notes']}")
+
             r = dict(row)
             r.update(rating)
             results.append(r)
@@ -252,7 +290,8 @@ def run():
             r = dict(row)
             r.update({
                 "comparability_emphasis": -1, "gabriel_notes": f"error: {e}",
-                "supporting_quote": "", "estimated_page": "",
+                "supporting_quotes": "[]", "estimated_pages": "[]",
+                "excerpts_submitted": 0, "excerpts_verified": 0, "excerpts_failed": 0,
                 "prompt_tokens": 0, "completion_tokens": 0,
             })
             results.append(r)
@@ -265,11 +304,10 @@ def run():
             w.writerow({c: r.get(c, "") for c in out_cols})
 
     print(f"\nWrote {len(results)} rows to {output_path}")
-    if quote_failures:
-        print(f"Quote verification failures: {quote_failures} (score kept, quote discarded)")
     print(f"Total tokens: {total_prompt} prompt + {total_completion} completion = "
           f"{total_prompt + total_completion}")
-
+    print(f"Excerpts: {total_submitted} submitted, {total_verified} verified, "
+          f"{total_failed} failed verification")
     print_totals(SCRIPT_NAME)
 
 
