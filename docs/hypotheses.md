@@ -29,13 +29,26 @@ subsequent wage increases at the city-cycle level.
 type is controlled for, OR `comparability_emphasis` shows no correlation with actual
 wage growth (meaning the language is rhetorical but not causal).
 
-**Measurement boundary (added 2026-06-19):** Cost-of-living index adjustments (CPI,
-BACPI, or similar) are **not** comparability language under this attribute — they
-reference a price index, not other workers' wages. Only explicit comparisons to wages
-or compensation of other employees, bargaining units, or jurisdictions score above 0.
-This boundary was clarified after GABRIEL v4 revealed that Arlington DPW 2015/2018
-cited BACPI as their sole external benchmark; the model correctly scored them low
-(5/12) even before the clarification was explicit in the prompt.
+**Measurement boundaries (updated 2026-06-19):**
+
+*CPI/BACPI (added after v4):* Cost-of-living index adjustments (CPI, BACPI, or similar)
+are **not** comparability language — they reference a price index, not other workers'
+wages. Only explicit comparisons to wages or compensation of other employees, bargaining
+units, or jurisdictions score above 0. Arlington DPW 2015/2018 cited BACPI as their
+sole external benchmark and correctly score near-zero.
+
+*Verbatim ≠ Relevant (added after v6):* Verbatim verification confirms that a quote is
+**real** (the words appear in the document), but NOT that it is **relevant** (that it
+constitutes genuine wage comparability evidence). Two failure modes were found in v6:
+(1) "Market adjustment" language — e.g. "market adjustment of $0.35 to the top step of
+AFSCME: MC" — passes verbatim check but describes an internal salary table correction,
+not a comparison to peer employers' wages; (2) Award-outcome sentences — e.g. "The
+Panel awards FY2013 – 2.5%, FY2014 – 2%" — and ruling conclusions — e.g. "there is
+insufficient justification to change the current longevity payments" — pass verbatim
+check but state results rather than comparability reasoning. Relevance must be checked
+separately from verbatim-ness. Starting in v7, verified excerpts are additionally
+screened for relevance; those that pass verbatim but fail relevance are flagged
+`verbatim_but_irrelevant` in the output rather than silently discarded.
 
 **Evidence so far:** GABRIEL pilot v3 (PROGRESS.md, 2026-06-18 session 5;
 `analysis/gabriel_pilot/report_v3.md`) found safety mean=28.8 vs. non-safety mean=3.3

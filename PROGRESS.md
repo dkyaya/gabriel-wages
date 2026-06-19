@@ -6,6 +6,88 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-06-19 (session 9) — v7 run: prompt exclusions + relevance re-check; DPW 2018 fixed
+
+**Did**
+- Added three new exclusion rules to `run_gabriel.py` PROMPT_TEMPLATE, extending the COLA/CPI note:
+  1. "market adjustment" does not count as comparability unless text explicitly states the adjustment is based on wages paid by OTHER employers/jurisdictions.
+  2. Bargaining unit names/abbreviations (e.g. "AFSCME: MC", "Local 490") are NOT peer jurisdictions.
+  3. Award-outcome sentences (e.g. "the Panel awards X% for FY2014") are NOT comparability reasoning unless the same sentence also states the comparative justification.
+- Added two-stage relevance check on verbatim-verified excerpts:
+  - Stage 1 (rule-based): `_is_clearly_relevant` (keyword list) → pass; `_is_clearly_irrelevant` (award-outcome/market-adj/ruling-conclusion patterns) → flag; else ambiguous.
+  - Stage 2 (model): ambiguous excerpts sent to model for binary yes/no relevance judgment.
+  - Flagged excerpts (verbatim-pass, relevance-fail) go to `flagged_quotes`/`flagged_pages`; they are NOT silently discarded. New output columns: `excerpts_relevant`, `excerpts_flagged`.
+- Fixed `max_completion_tokens`: raised 2000 → 4000 after first run failed on SPEA (SPEA at 256K chars + longer prompt exhausted the 2000-token cap).
+- Fixed `_RELEVANCE_STRONG`: added curly-apostrophe variant of `"that city's or town's"` to catch the Arlington fire "outside detail rate" clause (PDF used curly apostrophes; the keyword was a straight apostrophe → match failed on first run).
+- Updated `docs/hypotheses.md` H1 measurement boundary: documented that verbatim verification confirms quotes are REAL but not RELEVANT; described both failure modes found in v6 (market-adjustment label + award-outcome sentence).
+- Ran GABRIEL v7 on 12 documents (second clean run after fixes). Output: `results_v7.csv`.
+
+**V6 → V7 comparison**
+| doc_id | v6 score | v7 score | Δ | sub | rel | flag | fail |
+|--------|---------|---------|---|-----|-----|------|------|
+| worcester_fire_2017 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| worcester_clerical_admin_2017 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| worcester_public_works_2017 | 5 | 10 | +5 | 2 | 0 | 1 | 1 |
+| boston_police_2020 | 0 | 6 | +6 | 0 | 0 | 0 | 0 |
+| boston_clerical_admin_2023 | 8 | 5 | −3 | 0 | 0 | 0 | 0 |
+| **somerville_police_spsoa_2012** | **88** | **92** | **+4** | **4** | **2** | **2** | **0** |
+| somerville_police_spea_2012 | 82 | 82 | 0 | 5 | 2 | 2 | 1 |
+| arlington_fire_2021 | 25 | 30 | +5 | 1 | 1 | 0 | 0 |
+| arlington_public_works_2015 | 0 | 8 | +8 | 0 | 0 | 0 | 0 |
+| **arlington_public_works_2018** | **25** | **10** | **−15** | **0** | **0** | **0** | **0** | ← FIXED |
+| arlington_public_works_2021 | 0 | 5 | +5 | 0 | 0 | 0 | 0 |
+| newton_police_2015 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+
+**Arlington DPW 2018 — false positive fixed**
+Score dropped 25 → 10. The model submitted 0 excerpts: the new exclusion rules ("market adjustment" without explicit external employer reference; bargaining unit abbreviations are not peer jurisdictions) caused the model not to treat the "AFSCME: MC market adjustment" passages as comparability evidence. Score 10 is in the 0–15 "no comparability" band — plausible; the document has internal salary schedule changes only. The v4 score (12) and v5 score (10) bracketed this same range; v6's 25 was the anomaly.
+
+**SPSOA — 2 confirmed relevant excerpts; 2 correctly flagged**
+Score increased 88 → 92 (still firmly in the 71–100 "primary justification" range). 4 submitted, 2 verbatim-pass + relevant, 2 verbatim-pass + flagged:
+- RELEVANT [1]: "In the Police Arbitration Award the Panel decided to review a listing of comparable communities that was utilized by the Collins Center..." (genuine comparability frame)
+- RELEVANT [2]: "The evidence further demonstrates that the overall compensation (including wages and benefits) provided to Somerville Police Superiors, although not the same, is comparable to what is provided to poli[ce in other communities]" (direct wage comparison)
+- FLAGGED [1]: "The parties' proposals on wages and duration are as follows: CITY'S POSITION..." (proposals table, not comparability reasoning) → escalated to model, flagged
+- FLAGGED [2]: "AWARD – DURATION & WAGE INCREASES... FY 2013 – 2.5%, FY 2014 – 2%..." → caught by `_is_award_outcome` rule (FY-year + percentage pattern with no comparability keywords)
+The v6 run had 6 verified excerpts; v7 has 2 relevant + 2 flagged from 4 submitted. The model selected different excerpts this run (expected variance). The primary finding — high score, genuine comparability justification — is unaffected.
+
+**SPEA — 2 confirmed relevant excerpts; 2 correctly flagged; 1 verbatim-fail**
+Score: 82 (unchanged from v6).
+- RELEVANT [1]: "wages and benefits of comparable towns" (criterion citation in panel reasoning)
+- RELEVANT [2]: "when reviewing longevity payments in other communities the longevity pay for Somerville Police is lower than that provided in other communities, such as Boston, and Lynn." (cross-community comparison, wages tangential but present)
+- FLAGGED [1]: "The chart demonstrates that longevity payments vary from community to community..." (cross-community comparison but about payment structure, not wage levels → model escalated, flagged)
+- FLAGGED [2]: "As the chart shows alcohol testing for public safety officers is not an unusual contract provision: Community / Alcohol Testing / Arlington / Yes..." (comparison of non-wage contract provisions → model escalated, flagged)
+The v6 padding excerpts (FY wage announcement; longevity ruling conclusion) were not submitted in v7 — the new prompt exclusions changed the model's excerpt selection.
+
+**Arlington fire 2021 — outside-detail rate excerpt fixed**
+Score: 25 → 30 (minor; still in 16–40 "mentioned in passing" band). The outside-detail rate excerpt ("paid at that city's or Town's outside detail rate") is now correctly classified as RELEVANT. In v7 run 1 it was incorrectly flagged because the PDF uses curly apostrophes (') while `_RELEVANCE_STRONG` only had a straight apostrophe ('). Fixed by adding both variants to the keyword list.
+
+**Relevance check — 4 model escalations (clean run)**
+4 excerpts across the 12 documents were ambiguous (not caught by rule-based positive or negative checks) and escalated to the model: 1 from SPSOA (proposals table → flagged), 1 from SPEA (longevity chart → flagged), 1 from SPEA (alcohol testing table → flagged), 1 from Worcester public works (new salary step → flagged). All 4 model escalations returned "no" (not peer-wage comparability). No escalations returned "yes" in this run — the ambiguous excerpts were genuinely borderline-to-irrelevant.
+
+**Spend (v7)**
+```
+v7 run 1 (failed, SPEA max_tokens): 16 calls, 241,076p + 2,326c = $0.0511
+v7 run 2 (clean):                   16 calls, 241,089p + 2,731c = $0.0516
+──────────────────────────────────────────────────────────────────────────
+v7 total (both runs):                           482,165p + 5,057c = $0.1028
+
+Cumulative (v3–v7, all runs): ~$0.2999  [ESTIMATE — public list pricing; Harvard billed rate may differ]
+```
+The doubled cost for v7 (two runs) reflects the debugging run needed when SPEA hit the 2000-token cap. The clean run alone ($0.0516) is the marginal cost per 12-document pass.
+
+**Corpus snapshot** (unchanged)
+```
+contracts: 12 | discourse: 0 | coverage: 12 | city_attributes: 3
+healthy matched pairs: 2
+safety units unmatched: 4
+```
+
+**Next steps**
+1. The verbatim-fail rate for SPSOA and SPEA is persistent (model submits paraphrases for some excerpts). Consider whether to add a "re-submit failed excerpts with stricter verbatim instruction" retry loop, or accept that long-form awards will have some verbatim-fail excerpts alongside genuine ones.
+2. SPEA's RELEVANT [2] (longevity pay in other communities) and FLAGGED [1] (longevity chart) are both legitimate cross-community observations but differ in whether they reference wages specifically. The current rule (model escalation) flagged the chart but passed the prose version — that distinction seems right but is model-dependent.
+3. Non-safety arbitration awards remain the primary corpus gap for the H1 test.
+
+---
+
 ## 2026-06-19 (session 8) — v6 run: multi-excerpt schema; SPSOA breakthrough; DPW 2018 flag
 
 **Did**

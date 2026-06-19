@@ -1,0 +1,114 @@
+doc_id,city,occupation_class,safety_flag,source_type,year_or_cycle,text,comparability_emphasis,gabriel_notes,supporting_quotes,estimated_pages,flagged_quotes,flagged_pages,excerpts_submitted,excerpts_verified,excerpts_relevant,excerpts_flagged,excerpts_failed,prompt_tokens,completion_tokens
+ma_worcester_fire_2017,Worcester,fire,1,cba,2017-2020,"MEMORANDUM OF AGREEMENT
+between
+CITY OF WORCESTER
+and
+LOCAL 1009, I.A.F.F.
+[FY 2018 — FY 2020]
+
+This Memorandum of Agreement sets forth the agreements of the parties for a new agreement, to
+supplement",0,"Wage terms are stated only as fixed percentage increases and eligibility rules, with no textual use of external jurisdiction/market wage comparisons to justify amounts.",[],[],[],[],0,0,0,0,0,3332,95
+ma_worcester_clerical_admin_2017,Worcester,clerical_admin,0,cba,2017-2020,"MEMORANDUM OF AGREEMENT
+                                                      between
+                                            THE CITY OF WORCESTER
+                                                ",0,"The document sets specific wage and benefit amounts (e.g., 2% increases) but contains no explicit wage/compensation comparisons to other jurisdictions.",[],[],[],[],0,0,0,0,0,2155,47
+ma_worcester_public_works_2017,Worcester,public_works,0,cba,2017-2020,"MEMORANDUM OF AGREEMENT (DRAFT #1)
+                                                           between
+                                               THE CITY OF WORCESTER
+                             ",10,"Wage terms are specified only as fixed City-provided percentages and schedule adjustments, with no textual reliance on comparisons to other jurisdictions or employers.",[],[],"[""The parties agree to add a new maximum step to the salary schedule at 2%\nabove the current maximum step, effective July 1, 2017.""]","[""2""]",2,1,0,1,1,2729,191
+ma_boston_police_2020,Boston,police,1,cba,2020-2025,"MEMORANDA OF AGREEMENT
+CITY OF BOSTON
+AND
+BOSTON POLICE PATROLMENS’ ASSOCIATION
+
+MOA #1
+JULY 1, 2020 — JUNE 30, 2023
+
+This Memorandum of Agreement amends the Collective Bargaining Agreement effective ",6,The text contains specific pay percentages and dollar benefits but no explicit wage/compensation comparisons to other employers or jurisdictions.,[],[],[],[],0,0,0,0,0,3888,84
+ma_boston_clerical_admin_2023,Boston,clerical_admin,0,cba,2023-2027,"COLLECTIVE
+   BARGAINING
+   AGREEMENT
+                  BETWEEN
+
+
+
+    CITY OF BOSTON
+                     AND
+
+UNITED STEELWORKERS, AFL-CIO,
+            CLC
+                ONBEHALFOF
+
+
+
+
+           ",5,The agreement sets fixed Boston pay increases and benefits amounts but contains no explicit wage/compensation comparisons to other jurisdictions or employers to justify rates.,[],[],[],[],0,0,0,0,0,27212,78
+ma_somerville_police_spsoa_2012,Somerville,police,1,arbitration_award,2012-2018,"j
+I
+l
+
+
+
+
+                   AGREEiVIENT BE1WEEN
+
+                             THE
+
+                   CITY OF SOi\'IERVILLE
+
+
+
+    SOJ\IERVILLE POLICE SUPERIOR OFFICERS ASSOCL\ TION
+
+
+
+
+             ",92,"The award repeatedly justifies wage and differential decisions using detailed comparisons to named comparable communities’ wages, benefits, and base-rate differentials.","[""In the Police Arbitration Award the Panel decided to\nreview a listing of comparable communities that was\nutilized by the Collins Center for Public Management at the\nUniversity of Massachusetts, when conducting a\nclassification and compensation study for the City’s non-\nunion positions. Those communities chosen in the Collins\nCenter classification study were Arlington, Brookline,\nCambridge, Lowell, Malden, Melrose, Newton, Quincy, and\nWaltham. The parties also agreed to consider the City of\nMedford as an appropriate comparable. These communities\nwere used in the Police Arbitration and will be reviewed in\nthis Decision."", ""The evidence further demonstrates that the overall\ncompensation (including wages and benefits) provided to\nSomerville Police Superiors, although not the same, is\ncomparable to what is provided to police superiors in these\nother communities. In fact the total compensation for\nSomerville Police Superiors is above the average provided\nin the comparable communities. The Union’s wage proposal\nfor the last three years of the six-year agreement of 3%,\n3.5% and 4%, is well above the base wage increases that\nhave been agreed to in comparable communities. There is,\ntherefore, no justification for increases of this magnitude\nto the Somerville Superior Officers for this three-year\nperiod.""]","[""55"", ""56""]","[""The parties’ proposals on wages and duration are as follows:\nCITY’S POSITION\n    The City proposes a six-year agreement from the period\nof July 1, 2015 through June 30, 2018 with the following\nwage increases:\n    July 1, 2012 – 2.5% across the board increase."", ""AWARD – DURATION & WAGE INCREASES\n    The Panel Awards wage increases for the six-year\nperiod as follows:\n\n                FY 2013 – 2.5%\n                FY 2014 – 2%\n                FY 2015 – 2%\n                FY 2016 – 2%\n                FY 2017 – 2.5%\n                FY 2018 – 2.5%""]","[""51"", ""58""]",4,4,2,2,0,47946,542
+ma_somerville_police_spea_2012,Somerville,police,1,arbitration_award,2012-2015,"AGREEMENT BETWEEN
+
+           THE CITY OF SOMERVILLE
+
+                      AND
+
+THE SOMERVILLE POLICE EMPLOYEES ASSOCIATION
+
+
+
+           July I, 2004- June 30, 2008
+                                ",82,"The award repeatedly justifies specific pay outcomes using comparisons to wages/benefits and contract practices in named comparable municipalities, including tables and explicit equity conclusions.","[""In reaching the conclusions in the present award, the\nArbitration Panel has considered the criteria set forth in\nthe statute including the municipality's ability to pay,\nwages and benefits of comparable towns, and the cost of\nliving."", ""The Union maintains that its proposal to convert from\nflat dollar longevity payments to percentage-based\nlongevity payments would provide a modest increase to the\nlongevity payments now paid to officers. The Union states\nthat there have not been increases in the longevity\npayments in more than a decade. The Union further argues\nthat when reviewing longevity payments in other communities\nthe longevity pay for Somerville Police is lower than that\nprovided in other communities, such as Boston, and Lynn.""]","[""53"", ""76""]","[""The chart demonstrates that longevity payments vary\nfrom community to community. There is no norm; some\ncommunities pay longevity on percentage basis and some on\nflat dollar basis. The payment of $3,200 for officers of\nthirty years in Somerville is within the norm of longevity\npayments."", ""As the chart shows alcohol testing for public safety\nofficers is not an unusual contract provision:\nCommunity\t\t\t\tAlcohol \t Testing\nArlington\t\t\t\tYes\nBrookline\t\t\t\tNo\nCambridge\t\t\t\tYes\nLowell\t\t\t\t\tNo\nMalden\t\t\t\t\tNo\nMedford\t\t\t\t\tYes\nMelrose\t\t\t\t\tNo\nNewton\t\t\t\t\tYes\nQuincy\t\t\t\t\tNo\nWaltham\t\t\t\t\tNo\n\n\tSomerville\tFire\t\tYes\n\n          A review of the Newton Police, Cambridge Police and\nMedford Police agreements, as well as the Somerville Fire\nagreement, show that a positive result is reached at .04\nBAC. Accordingly, the Panel concludes that .04 BAC is an\nappropriate level to trigger the applicable consequences\nset forth in the policy.""]","[""77"", ""94""]",5,4,2,2,1,53692,1042
+ma_arlington_fire_2021,Arlington,fire,1,cba,2021-2024,"Bargaining Agreement between the Town of Arlington
+                    and the International Association of Firefighters,
+                                   AFL-CIO, Local 1297
+
+                      ",30,"Text mostly sets internal pay rules and COLA, with limited explicit wage-rate linkage to other towns/cities only for out-of-town outside details.","[""Any outside detail assignment outside the borders of the Town of Arlington shall be paid at that city’s or Town’s outside detail rate consistent with current practice at the time this provision is agreed to.""]","[""20""]",[],[],1,1,1,0,0,25702,169
+ma_arlington_public_works_2015,Arlington,public_works,0,cba,2015-2018,"Bargaining Agreement between the Town of Arlington
+                                 and the
+      American Federation of State, County and Municipal Employees,
+                   Council 93, Local - 6",8,Text sets fixed wage and benefit amounts and schedules but does not use comparisons to other employers or jurisdictions to justify specific pay levels.,[],[],[],[],0,0,0,0,0,21242,68
+ma_arlington_public_works_2018,Arlington,public_works,0,cba,2018-2021,"Bargaining Agreement between the Town of Arlington
+                                   and the
+  American Federation of State, County and Municipal Employees, Council
+                        93, Local ",10,"Text sets wage/benefits via fixed percentages and a CPI-based adjustment, with no explicit peer-jurisdiction or other-employer wage comparisons used to justify amounts.",[],[],[],[],0,0,0,0,0,22450,137
+ma_arlington_public_works_2021,Arlington,public_works,0,cba,2021-2024,"Bargaining Agreement between the Town of Arlington
+                                and the
+ American Federation of State, County and Municipal Employees, Council
+                       93, Local - 680",5,The provided text states purpose and bargaining recognition but contains no explicit wage/compensation comparisons to other jurisdictions or employers.,[],[],[],[],0,0,0,0,0,1756,82
+ma_newton_police_2015,Newton,police,1,cba,2015-2018,"COLLECTIVE BARGAINING AGREEMENTS
+
+CITY OF NEWTON
+AND
+NEWTON POLICE ASSOCIATION
+
+EFFECTIVE
+
+JULY 1, 2014 — JUNE 30, 2015
+AND
+
+JULY 1, 2015 —- JUNE 30, 2018
+
+TABLE OF CONTENTS
+
+ARTICLE
+
+ARTICLE I
+RECOGN",0,The agreement sets specific wages and differentials but contains no textual wage comparisons to other jurisdictions or employers.,[],[],[],[],0,0,0,0,0,28463,66
