@@ -1,0 +1,114 @@
+doc_id,city,occupation_class,safety_flag,source_type,year_or_cycle,text,comparability_emphasis,gabriel_notes,supporting_quote,estimated_page,prompt_tokens,completion_tokens
+ma_worcester_fire_2017,Worcester,fire,1,cba,2017-2020,"MEMORANDUM OF AGREEMENT
+between
+CITY OF WORCESTER
+and
+LOCAL 1009, I.A.F.F.
+[FY 2018 — FY 2020]
+
+This Memorandum of Agreement sets forth the agreements of the parties for a new agreement, to
+supplement",0,The agreement sets fixed wage percentages (2% for 2017-2019) without any references to comparing wages to other units or communities.,,,3023,46
+ma_worcester_clerical_admin_2017,Worcester,clerical_admin,0,cba,2017-2020,"MEMORANDUM OF AGREEMENT
+                                                      between
+                                            THE CITY OF WORCESTER
+                                                ",0,"The agreement lists wage and benefit changes (e.g., “two percent (2%) base wage increase”) but contains no references to comparing wages to other communities or units.",,,1846,71
+ma_worcester_public_works_2017,Worcester,public_works,0,cba,2017-2020,"MEMORANDUM OF AGREEMENT (DRAFT #1)
+                                                           between
+                                               THE CITY OF WORCESTER
+                             ",0,The text contains wage percentage changes (2%) and step schedule changes but no references to comparisons with other communities or units.,,,2420,59
+ma_boston_police_2020,Boston,police,1,cba,2020-2025,"MEMORANDA OF AGREEMENT
+CITY OF BOSTON
+AND
+BOSTON POLICE PATROLMENS’ ASSOCIATION
+
+MOA #1
+JULY 1, 2020 — JUNE 30, 2023
+
+This Memorandum of Agreement amends the Collective Bargaining Agreement effective ",10,"The text sets specific pay percentages and dollar amounts (e.g., “Five (5) Years: $388.04”) but contains no references comparing those terms to other units or communities.",,,3579,85
+ma_boston_clerical_admin_2023,Boston,clerical_admin,0,cba,2023-2027,"COLLECTIVE
+   BARGAINING
+   AGREEMENT
+                  BETWEEN
+
+
+
+    CITY OF BOSTON
+                     AND
+
+UNITED STEELWORKERS, AFL-CIO,
+            CLC
+                ONBEHALFOF
+
+
+
+
+           ",0,"No wage comparisons to other communities or units appear; compensation is set via fixed percentages and dollar amounts (e.g., “October 7, 2023 = 2%”).",,,26903,54
+ma_somerville_police_spsoa_2012,Somerville,police,1,arbitration_award,2012-2018,"j
+I
+l
+
+
+
+
+                   AGREEiVIENT BE1WEEN
+
+                             THE
+
+                   CITY OF SOi\'IERVILLE
+
+
+
+    SOJ\IERVILLE POLICE SUPERIOR OFFICERS ASSOCL\ TION
+
+
+
+
+             ",80,"Comparability is repeatedly used to justify specific wage increases, citing named communities (e.g., Arlington, Cambridge, Lowell) and awarding 2%/2.5% based on those external comparisons. [quote_verification_failed]",,,47637,376
+ma_somerville_police_spea_2012,Somerville,police,1,arbitration_award,2012-2015,"AGREEMENT BETWEEN
+
+           THE CITY OF SOMERVILLE
+
+                      AND
+
+THE SOMERVILLE POLICE EMPLOYEES ASSOCIATION
+
+
+
+           July I, 2004- June 30, 2008
+                                ",78,"Arbitration award repeatedly uses “wages and benefits of comparable towns” and includes a comparables wage-adjustment chart (e.g., Arlington/Brookline/Cambridge).","In reaching the conclusions in the present award, the Arbitration Panel has considered the criteria set forth in the statute including the municipality's ability to pay, wages and benefits of comparable towns, and the cost of living.",53,53383,95
+ma_arlington_fire_2021,Arlington,fire,1,cba,2021-2024,"Bargaining Agreement between the Town of Arlington
+                    and the International Association of Firefighters,
+                                   AFL-CIO, Local 1297
+
+                      ",10,No text compares Arlington firefighter wages to other units/cities to justify contract terms; wages are set via internal step/percent formulas and COLA.,,,25393,95
+ma_arlington_public_works_2015,Arlington,public_works,0,cba,2015-2018,"Bargaining Agreement between the Town of Arlington
+                                 and the
+      American Federation of State, County and Municipal Employees,
+                   Council 93, Local - 6",5,"No clause compares wages to other municipalities/units to justify any specific pay terms; provisions rely on internal rates, percent increases, and indices (e.g., BACPI).","Hereafter the car allowance shall be adjusted to reflect the change in this Boston Adjusted Consumer Price Index (BACPI). July 1, 1984 increase of five point two seven percent (5.27) or $7.28.",9,20933,131
+ma_arlington_public_works_2018,Arlington,public_works,0,cba,2018-2021,"Bargaining Agreement between the Town of Arlington
+                                   and the
+  American Federation of State, County and Municipal Employees, Council
+                        93, Local ",12,"No wage comparisons to other communities/units are used to justify pay; the closest reference is to a consumer price index for allowances (""Boston Adjusted Consumer Price Index (BACPI)"").","Hereafter the car allowance shall be adjusted to reflect the change in this Boston Adjusted Consumer Price Index (BACPI). July 1, 1984 increase of five point two seven percent (5.27) or $7.28.",9,22141,138
+ma_arlington_public_works_2021,Arlington,public_works,0,cba,2021-2024,"Bargaining Agreement between the Town of Arlington
+                                and the
+ American Federation of State, County and Municipal Employees, Council
+                       93, Local - 680",0,"In the provided text, there is no language comparing wages to other communities or units to justify any pay terms.",,,1447,82
+ma_newton_police_2015,Newton,police,1,cba,2015-2018,"COLLECTIVE BARGAINING AGREEMENTS
+
+CITY OF NEWTON
+AND
+NEWTON POLICE ASSOCIATION
+
+EFFECTIVE
+
+JULY 1, 2014 — JUNE 30, 2015
+AND
+
+JULY 1, 2015 —- JUNE 30, 2018
+
+TABLE OF CONTENTS
+
+ARTICLE
+
+ARTICLE I
+RECOGN",10,"Wage provisions state fixed percentage increases and dollar amounts but never reference comparisons to other communities or units (e.g., Article XX, 20.01).",,,28154,72

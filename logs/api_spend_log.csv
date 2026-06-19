@@ -1,0 +1,13 @@
+timestamp,script_name,model,prompt_tokens,completion_tokens,estimated_cost_usd
+2026-06-19T17:04:29Z,run_gabriel.py,gpt-5.4-nano,3023,46,0.000662
+2026-06-19T17:04:31Z,run_gabriel.py,gpt-5.4-nano,1846,71,0.000458
+2026-06-19T17:04:32Z,run_gabriel.py,gpt-5.4-nano,2420,59,0.000558
+2026-06-19T17:04:34Z,run_gabriel.py,gpt-5.4-nano,3579,85,0.000822
+2026-06-19T17:04:37Z,run_gabriel.py,gpt-5.4-nano,26903,54,0.005448
+2026-06-19T17:04:42Z,run_gabriel.py,gpt-5.4-nano,47637,376,0.009997
+2026-06-19T17:04:44Z,run_gabriel.py,gpt-5.4-nano,53383,95,0.010795
+2026-06-19T17:04:46Z,run_gabriel.py,gpt-5.4-nano,25393,95,0.005197
+2026-06-19T17:04:48Z,run_gabriel.py,gpt-5.4-nano,20933,131,0.004350
+2026-06-19T17:04:51Z,run_gabriel.py,gpt-5.4-nano,22141,138,0.004601
+2026-06-19T17:04:52Z,run_gabriel.py,gpt-5.4-nano,1447,82,0.000392
+2026-06-19T17:04:54Z,run_gabriel.py,gpt-5.4-nano,28154,72,0.005721

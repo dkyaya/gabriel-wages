@@ -6,6 +6,58 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-06-19 (session 6) — Verbatim quote + page extraction; local spend tracker
+
+**Did**
+- Added `page_number_at(text, offset)` helper to `ingest/extract_text.py`. Counts form-feed characters (`\x0c`) before `offset` in pdftotext output and returns a 1-based page number. Only meaningful for text-layer extractions (OCR output has no page markers and always returns 1).
+- Added `test_page_number_at()` to `ingest/test_pipeline.py` using a 2-page synthetic PDF with forced `PageBreak()`. Confirmed page 1 and page 2 phrases return correct page numbers. Suite now 26/26 (was 22/22).
+- Modified `analysis/gabriel_pilot/run_gabriel.py` to request a verbatim supporting quote alongside the score. Quote is verified using `_verify_verbatim` (same whitespace-normalized substring check as `ingest/extract_spans.py`). On failure: score kept, quote discarded, `gabriel_notes` flagged `[quote_verification_failed]`.
+- Added `supporting_quote` and `estimated_page` columns to results output. Page number computed from quote's byte offset in the source text (only populated when `\x0c` page markers are present).
+- Created `scripts/log_api_spend.py`. Appends one row per API call to `logs/api_spend_log.csv` (timestamp, script, model, prompt tokens, completion tokens, estimated cost). Also exposes `print_totals()` for end-of-run summaries. Pricing hardcoded as `gpt-5.4-nano: $0.20/1M input, $1.25/1M output` (verified 2026-06-19 via OpenRouter). **All cost figures are estimates based on public list pricing — Harvard's actual billed rate may differ due to institutional terms.**
+- Ran GABRIEL v4 on 12 documents. Output: `results_v4.csv` (adds `supporting_quote`, `estimated_page` to v3 schema).
+
+**V4 results**
+- 3 documents returned verified quotes with page numbers.
+- 1 quote verification failure: `ma_somerville_police_spsoa_2012` (score=80, quote discarded — model paraphrased rather than quoting verbatim; score retained).
+- 8 documents scored 0–12 with empty or discarded quotes (correct: no comparability language → no meaningful quote to extract).
+
+**Example verified quote (Somerville SPEA, p.53, score=78):**
+> "In reaching the conclusions in the present award, the Arbitration Panel has considered the criteria set forth in the statute including the municipality's ability to pay, wages and benefits of comparable [communities]..."
+
+**Example low-score quote (Arlington DPW, p.9, score=5):**
+> "Hereafter the car allowance shall be adjusted to reflect the change in this Boston Adjusted Consumer Price Index (BACPI)." — Correctly low: a price index, not peer wage comparability.
+
+**Spend log (first session):**
+```
+run_gabriel.py: 12 API calls
+  prompt tokens:     236,859
+  completion tokens: 1,304
+  estimated cost:    $0.0490  [ESTIMATE — list pricing, not Harvard billed rate]
+```
+
+**Surprises**
+- Quote verification failure on SPSOA (the longer of the two Somerville awards). The document has extensive comparability language but the model synthesized rather than copied verbatim. This is expected for dense, multi-paragraph comparability sections — the model finds it easier to paraphrase a long passage than to select and copy a single sentence. A possible mitigation: ask for a single sentence (≤50 words) rather than "sentence(s)". Not fixed this session.
+- Both Arlington DPW 2015 and 2018 returned the exact same quote (the BACPI car-allowance sentence from p.9). This is verbatim and correctly verified — but it reveals that the model is anchoring on the same passage across documents, likely because it's the only quasi-external benchmark in both contracts. The `[quote_verification_failed]` flag is not tripped because the quote is real; it just isn't strong evidence of comparability.
+
+**Corpus snapshot** (unchanged from session 5)
+```
+contracts: 12 | discourse: 0 | coverage: 12 | city_attributes: 3
+healthy matched pairs: 2
+  - Worcester, MA: fire 2017-2020  vs  [clerical_admin, public_works]
+  - Arlington, MA: fire 2021-2024  vs  [public_works]
+safety units unmatched: 4
+  - Boston police 2020-2025
+  - Somerville SPSOA 2012-2018 / SPEA 2012-2015
+  - Newton police 2015-2018 (est.)
+```
+
+**Next steps**
+1. Tighten quote prompt to request a single sentence (≤50 words) to reduce paraphrase failures.
+2. Backfill v3 spend data into `api_spend_log.csv` (current log starts from v4 only — v3 cost was $0.036).
+3. Non-safety arbitration awards (JLMC, manual download) remain the primary corpus gap.
+
+---
+
 ## 2026-06-18 (session 5) — Harvard API wired; GABRIEL v3 full-text run; report_v3.md
 
 **Did**

@@ -30,6 +30,14 @@ class ExtractResult:
     note: str = ""
 
 
+def page_number_at(text: str, offset: int) -> int:
+    """Return 1-based page number for the character at `offset` in `text`.
+    Relies on form-feed characters (\\x0c) that pdftotext inserts between pages.
+    Only meaningful for text-layer extractions — OCR output has no page markers
+    and will always return 1."""
+    return text[:offset].count("\x0c") + 1
+
+
 def _page_count(pdf_path: Path) -> int:
     try:
         from pypdf import PdfReader

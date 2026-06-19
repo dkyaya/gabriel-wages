@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "ingest"))
 
 from extract_spans import extract_spans, _verify_verbatim, _looks_like_heading
-from extract_text import extract
+from extract_text import extract, page_number_at
 
 PASS, FAIL = 0, 0
 
@@ -54,6 +54,45 @@ CBA = [
     ("Heading2", "ARTICLE 31 — NO STRIKE"),
     ("Normal", "No employee shall engage in any strike or work stoppage during the term."),
 ]
+
+
+def test_page_number_at():
+    print("test_page_number_at")
+    from reportlab.platypus import SimpleDocTemplate, Paragraph, PageBreak
+    from reportlab.lib.styles import getSampleStyleSheet
+    from reportlab.lib.pagesizes import letter
+
+    # Each page needs >100 chars to stay on the text_layer path (MIN_CHARS_PER_PAGE=100).
+    # Pad with filler so pdftotext registers enough content per page.
+    filler = ("The parties agree that wages, hours, and working conditions shall be "
+              "governed by the terms of this agreement for the duration of the contract period. ")
+    with tempfile.TemporaryDirectory() as d:
+        pdf = Path(d) / "multipage.pdf"
+        doc = SimpleDocTemplate(str(pdf), pagesize=letter)
+        st = getSampleStyleSheet()
+        story = [
+            Paragraph(filler * 3 + "GABRIEL_PAGETEST_ONE: wages set at five percent annually.", st["Normal"]),
+            PageBreak(),
+            Paragraph(filler * 3 + "GABRIEL_PAGETEST_TWO: comparability to surrounding communities.", st["Normal"]),
+        ]
+        doc.build(story)
+
+        ex = extract(pdf)
+        if ex.method != "text_layer":
+            # pdftotext unavailable in this environment; page boundary test cannot run.
+            print(f"  SKIP (extraction method={ex.method!r}; need text_layer for form-feed test)")
+            return
+
+        text = ex.text
+        off1 = text.find("GABRIEL_PAGETEST_ONE")
+        off2 = text.find("GABRIEL_PAGETEST_TWO")
+
+        check("GABRIEL_PAGETEST_ONE found in text", off1 >= 0)
+        check("GABRIEL_PAGETEST_TWO found in text", off2 >= 0)
+        if off1 >= 0:
+            check("GABRIEL_PAGETEST_ONE is on page 1", page_number_at(text, off1) == 1)
+        if off2 >= 0:
+            check("GABRIEL_PAGETEST_TWO is on page 2", page_number_at(text, off2) == 2)
 
 
 def test_extraction_and_spans():
@@ -129,6 +168,7 @@ def test_validator_pct_range():
 
 
 if __name__ == "__main__":
+    test_page_number_at()
     test_extraction_and_spans()
     test_heading_detection()
     test_verbatim_guard()
