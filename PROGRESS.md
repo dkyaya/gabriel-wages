@@ -6,6 +6,36 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-06-22 — Port LLM fallback to OpenAI/Harvard; add AGENTS.md for Codex
+
+**Did**
+- Added `AGENTS.md` at repo root — identical copy of `CLAUDE.md`. Both files coexist so either Claude Code or Codex can read project instructions.
+- Rewrote `ingest/extract_spans.py` `llm_pass()` to use the Harvard HUIT OpenAI proxy instead of the Anthropic API. Changes: env var `ANTHROPIC_API_KEY` → `HARVARD_SUBSCRIPTION_KEY`; `import anthropic` → `from openai import OpenAI`; Harvard endpoint + header pattern (same as `run_gabriel.py`); `client.chat.completions.create()` + `resp.choices[0].message.content`; `max_completion_tokens` (required by gpt-5.4-nano as a reasoning model); default model `claude-sonnet-4-6` → `gpt-5.4-nano`. Prompt content and `_verify_verbatim` anti-paraphrase guard left exactly unchanged.
+- Updated `ingest/README.md` "LLM fallback setup" section: replaced `ANTHROPIC_API_KEY` / `claude-sonnet-4-6` with `HARVARD_SUBSCRIPTION_KEY` / `gpt-5.4-nano`; noted that the fallback now uses the same credential as the GABRIEL scripts.
+- Updated root `README.md` "Added dependencies" section: replaced `anthropic` package / `ANTHROPIC_API_KEY` with `openai` / `HARVARD_SUBSCRIPTION_KEY`.
+- Updated `requirements.txt`: removed `anthropic>=0.39`; added `openai>=1.0` (was already installed for GABRIEL scripts but not listed here).
+- Confirmed no remaining `anthropic` / `ANTHROPIC_API_KEY` references outside of the historical 2026-06-15 PROGRESS.md entry (correct — not edited).
+
+**Decisions (and why)**
+- Unified credential: the project previously needed two separate API keys (`ANTHROPIC_API_KEY` for ingest, `HARVARD_SUBSCRIPTION_KEY` for GABRIEL). The fallback was already optional and off-by-default; porting it to the same Harvard endpoint removes the only remaining Anthropic dependency, simplifying setup and keeping all LLM calls on the institutional proxy.
+- `gpt-5.4-nano` chosen for consistency with `run_gabriel.py` (same model in active use; same proxy; same pricing). The model is a reasoning model so `max_completion_tokens` replaces `max_tokens`.
+- AGENTS.md is a verbatim copy of CLAUDE.md — no content divergence between the two agent instruction files.
+
+**Surprises / breakage**
+- None. `reportlab` was not installed in the active environment (needed by `test_pipeline.py` to build synthetic PDFs); installed it and all 26 tests passed. `scripts/validate.py` passed clean (corpus unchanged).
+
+**Corpus snapshot** (unchanged)
+```
+contracts: 12 | discourse: 0 | coverage: 12 | city_attributes: 3
+healthy matched pairs: 2
+safety units unmatched: 4
+```
+
+**Next steps**
+- (Unchanged from session 9.)
+
+---
+
 ## 2026-06-19 (session 9) — v7 run: prompt exclusions + relevance re-check; DPW 2018 fixed
 
 **Did**

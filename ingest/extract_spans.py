@@ -186,21 +186,25 @@ def _verify_verbatim(span: str, source: str) -> bool:
     return norm(span) in norm(source)
 
 
-def llm_pass(text: str, missing: list[str], model: str = "claude-sonnet-4-6") -> dict:
+def llm_pass(text: str, missing: list[str], model: str = "gpt-5.4-nano") -> dict:
     """Ask the LLM to locate ONLY the missing clause types, returning exact
-    quotes. Returns {clause_type: SpanHit}. Requires ANTHROPIC_API_KEY; returns
-    {} if unavailable so the pipeline degrades gracefully."""
+    quotes. Returns {clause_type: SpanHit}. Requires HARVARD_SUBSCRIPTION_KEY;
+    returns {} if unavailable so the pipeline degrades gracefully."""
     if not missing:
         return {}
-    api_key = os.environ.get("ANTHROPIC_API_KEY")
+    api_key = os.environ.get("HARVARD_SUBSCRIPTION_KEY")
     if not api_key:
         return {}
     try:
-        import anthropic
+        from openai import OpenAI
     except Exception:
         return {}
 
-    client = anthropic.Anthropic(api_key=api_key)
+    client = OpenAI(
+        api_key=api_key,
+        base_url="https://go.apis.huit.harvard.edu/ais-openai-direct/v2",
+        default_headers={"Ocp-Apim-Subscription-Key": api_key},
+    )
     type_desc = {
         "interest_arbitration": "interest/binding arbitration of contract terms",
         "comparability": "comparability / prevailing-wage / parity to other jurisdictions",
@@ -221,11 +225,11 @@ def llm_pass(text: str, missing: list[str], model: str = "claude-sonnet-4-6") ->
         f"TEXT:\n{text[:50000]}"
     )
     try:
-        resp = client.messages.create(
-            model=model, max_tokens=1500,
+        resp = client.chat.completions.create(
+            model=model, max_completion_tokens=1500,
             messages=[{"role": "user", "content": prompt}],
         )
-        raw = "".join(b.text for b in resp.content if getattr(b, "type", "") == "text")
+        raw = resp.choices[0].message.content or ""
         raw = raw.strip().removeprefix("```json").removeprefix("```").removesuffix("```").strip()
         data = json.loads(raw)
     except Exception:

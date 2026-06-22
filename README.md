@@ -83,10 +83,10 @@ Health checks: `python ingest/audit_coverage.py`, `python ingest/test_pipeline.p
 Pure-stdlib core + validator. The ingestion layer needs:
 `pdfplumber`, `pypdf`, `pdf2image`, `pytesseract`, `reportlab` (Python) and the
 system tools `poppler-utils` (pdftotext, pdf2image) and `tesseract-ocr`.
-LLM fallback additionally needs the `anthropic` package and `ANTHROPIC_API_KEY`.
+LLM fallback uses the Harvard HUIT OpenAI proxy (`openai` package, `HARVARD_SUBSCRIPTION_KEY`) — the same credential as the GABRIEL scoring scripts.
 
 ```bash
-pip install pdfplumber pypdf pdf2image pytesseract reportlab anthropic
+pip install pdfplumber pypdf pdf2image pytesseract reportlab openai
 # Debian/Ubuntu system deps:
 sudo apt-get install poppler-utils tesseract-ocr
 ```

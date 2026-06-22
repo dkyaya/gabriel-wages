@@ -5,6 +5,6 @@ pypdf>=4.0
 pdf2image>=1.17
 pytesseract>=0.3.10
 reportlab>=4.0
-# Optional LLM span fallback:
-anthropic>=0.39
+# LLM span fallback + GABRIEL scoring (Harvard HUIT OpenAI proxy):
+openai>=1.0
 # System packages (not pip): poppler-utils, tesseract-ocr

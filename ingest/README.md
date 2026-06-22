@@ -48,7 +48,7 @@ python scripts/validate.py
 
 ## LLM fallback setup
 
-The LLM stage uses the Anthropic API and stays off unless `ANTHROPIC_API_KEY` is set in the environment. Model string is `claude-sonnet-4-6`. With no key, the pipeline runs regex-only and lists unresolved clause types in the ingest result so you can spot-check them manually.
+The LLM stage uses the same Harvard HUIT OpenAI proxy as the GABRIEL scoring scripts, and stays off unless `HARVARD_SUBSCRIPTION_KEY` is set in the environment. Model string is `gpt-5.4-nano`. With no key, the pipeline runs regex-only and lists unresolved clause types in the ingest result so you can spot-check them manually.
 
 ## What you must confirm before a real fetch run
 
