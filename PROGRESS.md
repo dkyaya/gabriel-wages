@@ -6,6 +6,399 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-06-24 - Coverage audit match-tier update
+
+**Did**
+- Updated `ingest/audit_coverage.py` so coverage health is tiered into exact-cycle, overlap-cycle, adjacent-cycle, and unmatched safety rows using `cycle_start` and `cycle_end` from `data/contracts.csv`.
+- Preserved exact-cycle reporting while adding overlap-cycle healthy matches and a separate exploratory adjacent section.
+- Added self-contained tests for exact, overlap, adjacent, unmatched, and Seekonk-like match cases in `ingest/test_pipeline.py`.
+- Added methodological notes to `docs/hypotheses.md` and `docs/hypotheses_public_source_strategy_2026-06-24.md`.
+
+**Decisions and why**
+- Counted exact-cycle and overlap-cycle safety/non-safety comparisons as healthy because both keep city and bargaining period sufficiently fixed for H1 text/mechanism comparison.
+- Kept adjacent-cycle matches out of healthy counts because they are useful for exploratory context but weaker for city x time identification.
+- Left schema fields, controlled vocabularies, data rows, corpus files, and GABRIEL code/output unchanged.
+
+**Surprises/breakage**
+- The updated logic also moves Boston police 2020-2025 into overlap-cycle matched status because the Boston clerical/admin 2023-2027 CBA overlaps by date.
+- No adjacent-only exploratory matches appear in the current corpus.
+
+**Validation/test results**
+```text
+python ingest/test_pipeline.py
+40 passed, 0 failed
+
+python scripts/validate.py
+VALIDATION PASSED - all rows conform to docs/schema.md
+contracts: 20 | discourse: 0 | coverage: 20 | city_attributes: 3
+```
+
+**Corpus snapshot**
+```text
+contracts: 20 | discourse: 0 | coverage: 20 | city_attributes: 3 | cities: 7
+healthy matched pairs: 6
+  exact-cycle: 3
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Next steps**
+1. Exact-cycle matched cities: Worcester, Arlington, and Georgetown.
+2. Overlap-cycle matched cities: Boston and Seekonk; Seekonk police and fire are now matched to overlapping administrative secretaries, teachers, public works, and library CBAs.
+3. Adjacent-only exploratory matches: none in the current corpus.
+4. Remaining unmatched safety units: Somerville police superior officers 2012-2018, Somerville police patrol 2012-2015, and Newton police 2015-2018.
+5. v9 GABRIEL remains premature until the overlap-tier framing and source-type caveats are reviewed.
+6. Discuss with the PI whether to add a historical-institutionalization caveat: low CBA/MOA comparability language may reflect settled-document opacity rather than absence of comparability in bargaining.
+
+## 2026-06-24 - Seekonk official contract archive ingestion
+
+**Did**
+- Used only the RA-verified official Seekonk Archive Center routes, with no broad search, no PRRs, and no GABRIEL run.
+- Downloaded and first-page/entity-checked six public CBA PDFs: police, fire, administrative secretaries, educators, public works, and library.
+- Added explicit `inbox/manifest.csv` rows and ingested six Seekonk rows through `python ingest/process_inbox.py`: `ma_seekonk_police_2022`, `ma_seekonk_fire_2022`, `ma_seekonk_clerical_admin_2021`, `ma_seekonk_teacher_2021`, `ma_seekonk_public_works_2023`, and `ma_seekonk_library_2023`.
+- Updated the school-committee recon and StateReference triage notes to treat Seekonk as an official public CBA/MOA matched-pair candidate rather than a meeting-agenda target.
+
+**Decisions and why**
+- Ingested all six listed clean documents because public works and library were easy official PDF downloads with clear unit, employer, and term metadata.
+- Left wage fields blank because wage increases were not needed for this pass and should not be manually judged during metadata ingestion.
+- Did not ingest Comms & Clerical, aides, custodians, maintenance, agendas, or minutes because those were outside the first-pass boundaries or classification decisions.
+
+**Surprises/breakage**
+- The administrative secretaries PDF was image-only, but local OCR succeeded well enough for entity and term verification; it was ingested with `text_quality=ocr_messy`.
+- `audit_coverage.py` still flags Seekonk police and fire as unmatched because the current audit requires exact cycle-window matches. Seekonk now has overlapping same-city safety and non-safety CBAs, but not a healthy exact-cycle pair under the audit.
+- No Seekonk document required manual browser download once the official archive item IDs were used.
+
+**Validation/test results**
+```text
+python ingest/process_inbox.py
+ingested=6 quarantined=0 missing_file=0 skipped_duplicate=11
+VALIDATION PASSED - all rows conform to docs/schema.md
+contracts: 20 | discourse: 0 | coverage: 20 | city_attributes: 3
+
+python scripts/validate.py
+VALIDATION PASSED - all rows conform to docs/schema.md
+contracts: 20 | discourse: 0 | coverage: 20 | city_attributes: 3
+
+python ingest/test_pipeline.py
+35 passed, 0 failed
+```
+
+**Corpus snapshot**
+```text
+contracts: 20 | cities: 7
+healthy matched pairs: 3
+safety units unmatched: 6
+```
+
+**Next steps**
+1. Seekonk became a clean overlapping public CBA batch, but not a healthy exact-cycle matched pair under the current coverage audit.
+2. No Seekonk documents from this pass need manual download; future manual review should only revisit skipped mixed or unreviewed units if the team wants them.
+3. School committee meeting packets remain lower priority for Seekonk because the contract archive was more valuable and the agenda route looked like ordinary agendas, not wage-comparison exhibits.
+4. StateReference/city-portal ingestion can resume with this lesson: prioritize official portals that expose both safety and clean non-safety CBAs before StateReference-only follow-ons.
+5. H1 remains viable without PRRs for one more public-only expansion pass, but the exact-cycle matching problem still matters.
+6. v9 GABRIEL remains premature and was not rerun.
+
+## 2026-06-24 - MA school committee materials recon pass
+
+**Did**
+- Reviewed the existing H1 strategy docs, schema, StateReference triage notes, and current corpus tables before doing any new work.
+- Ran a narrow public-only recon pass on official school committee and district materials routes for Somerville, Newton, Boston, Georgetown, and an optional quick Seekonk route check.
+- Created `docs/acquisition/ma_school_committee_meeting_materials_recon_2026-06-24.md` and added short follow-up notes to `docs/acquisition/ma_non_prr_public_source_expansion_2026-06-24.md` and `docs/hypotheses_public_source_strategy_2026-06-24.md`.
+
+**Decisions and why**
+- Treated school committee materials as proxy reasoning evidence rather than automatic contract evidence because packets, presentations, and minutes usually do not by themselves establish a causal contract row.
+- Recommended one tightly scoped Newton-first packet review because Newton exposed the cleanest public archive structure and an explicit `Negotiations 2023-2024` route.
+- Kept StateReference ingestion paused because this route looks more promising for the missing non-safety reasoning evidence than another immediate CBA/MOA-only ingestion pass.
+
+**Surprises/breakage**
+- Somerville’s official school committee route is stronger than expected: it exposes a public meeting-materials drive plus archived presentations, not just agendas and minutes.
+- Boston’s BTU negotiations page is public and substantively useful, but the checked material looked more like bargaining narrative than explicit peer-city comparability exhibits.
+- Georgetown’s school committee archives were reportedly lost during a town website change, which sharply limits its value as a packet route.
+- The optional Seekonk official route failed at the TLS handshake level, so it was marked for manual browser review rather than pursued further.
+
+**Corpus snapshot**
+```text
+contracts: 14 | discourse: 0 | coverage: 14 | city_attributes: 3
+healthy matched pairs: 3
+safety units unmatched: 4
+```
+
+**Next steps**
+1. School committee materials look promising enough for one targeted public packet review, but mainly as proxy/discourse evidence rather than immediate causal-corpus ingestion.
+2. The next municipality/source to test should be Newton school committee materials, especially the `Negotiations 2023-2024` archive.
+3. Expected evidence split: Newton/Somerville/Boston meeting materials are more likely discourse or proxy mechanism evidence; only a final adopted agreement with clear provenance would be a causal-corpus candidate.
+4. StateReference ingestion should remain paused until the Newton-first packet test shows whether public non-safety reasoning evidence is actually recoverable.
+5. H1 remains viable without PRRs for one more public-only pass, but still underidentified if this packet route yields no explicit comparability materials.
+6. v9 GABRIEL remains premature.
+
+## 2026-06-24 - MA non-PRR public-source strategy pass
+
+**Did**
+- Reviewed the current H1 status, the StateReference seed/queue/triage notes, the non-safety factfinding recon, and the existing source-inventory notes.
+- Ran a narrow live public-source check across StateReference, DLR Public Information Search, JLMC/DLR Mass.gov pages, Boston/Worcester/Newton public portals, Newton school committee materials, MuckRock, Internet Archive, and a public contract-archive route.
+- Created `docs/acquisition/ma_non_prr_public_source_expansion_2026-06-24.md` and `docs/hypotheses_public_source_strategy_2026-06-24.md`, and added a short non-PRR update near the top of the StateReference triage note.
+
+**Decisions and why**
+- Kept H1 alive for one more structured public-only pass because public sources can still scale matched CBA/MOA pairs and may yield proxy reasoning evidence through meeting packets/exhibits even if final non-safety factfinding reports remain scarce.
+- Did not recommend PRRs, per the PI preference and task boundary.
+- Treated school committee meeting-materials pages as the main alternate proxy route for non-safety wage-comparability reasoning if DLR factfinding reports remain absent from the public web.
+
+**Surprises/breakage**
+- The live Newton city HR union-contracts route returned a permission block, while the Newton school contract page and school committee meeting-materials page remained public. That reinforces the need to distinguish “public in principle” from “reliably reachable.”
+- The statewide MTA contracts route checked here did not expose a stable public contracts index, so local teacher-union pages remain a weaker fallback than district HR pages.
+- The labor-contract archive route is public, but it visibly leans toward police/public-safety content and is less disciplined than official portals or StateReference for Massachusetts matched-pair work.
+
+**Corpus snapshot**
+```text
+contracts: 14 | discourse: 0 | coverage: 14 | city_attributes: 3
+healthy matched pairs: 3
+safety units unmatched: 4
+```
+
+**Next steps**
+1. Next public-source families to investigate beyond StateReference: DLR Public Information Search exact-route checks, school committee meeting-materials archives, and large-city labor portals.
+2. Most promising family for non-safety reasoning documents: school committee meeting materials and bargaining exhibits; DLR factfinding remains conceptually ideal but publicly thin.
+3. More CBA/MOA pair ingestion is justified only after a short pre-download verification pass, with Seekonk still the best remaining candidate.
+4. H1 remains viable without PRRs, but only as a public-only structured pass rather than an immediate measurement run.
+5. Pivot hypotheses to keep alive: source-type/document-production, arbitration-backstop, wage-MOA opacity, and public-availability selection.
+6. v9 GABRIEL remains premature.
+
+## 2026-06-24 - MA StateReference triage pass
+
+**Did**
+- Paused live StateReference ingestion work and reviewed the saved seed memo, follow-on queue note, schema, current corpus tables, manifest, and staged `inbox/foia` PDFs.
+- Added a staged-file disposition section to `docs/acquisition/ma_phase1_statereference_ingestion_queue_2026-06-23.md` for the Hanover and Peabody follow-on PDFs that were downloaded but never ingested.
+- Created `docs/acquisition/ma_statereference_phase1_triage_2026-06-23.md` with a municipality-level classification table, a capped next-wave list, and a separate large-municipality queue.
+
+**Decisions and why**
+- Shifted from candidate-by-candidate ingestion attempts to classification-first triage because the last follow-on wave showed too many failure modes: wrong jurisdiction, no same-cycle counterpart, dispatcher ambiguity, and mixed units.
+- Kept Georgetown as the proof-of-concept clean pair but treated its `other` comparator as analytically secondary; the next wave should prioritize cleaner `clerical_admin`, `public_works`, or `teacher` targets where possible.
+- Left staged PDFs in place because the repo has no established StateReference scratch/review convention beyond a one-off `DISCARD_` prefix for confirmed rejects.
+
+**Surprises/breakage**
+- The Hanover school-side staged PDF was easy to rule out once re-read locally: the first page names the Dresden and Hanover School Districts, confirming the wrong-jurisdiction failure without any new web work.
+- The staged Peabody Local 365 OCR confirms a broad all-non-teaching school unit, which strengthens the case for classifying Peabody as mixed rather than merely incomplete.
+- No pipeline/test runs were needed because no ingestion logic or data rows changed.
+
+**Corpus snapshot**
+```text
+contracts: 14 | discourse: 0 | coverage: 14 | city_attributes: 3
+healthy matched pairs: 3
+safety units unmatched: 4
+```
+
+**Next steps**
+1. Top candidates for a future targeted ingestion prompt: Seekonk first; Woburn, Marlborough, Reading, and Great Barrington only after counterpart verification.
+2. Ambiguous or mixed-unit candidates: Peabody, Georgetown DPW/clerical, Boxford, Millis, Gloucester, and any dispatcher-adjacent Lexington/Danvers records.
+3. Large-city candidates needing separate handling: Springfield, Cambridge, Boston, Worcester, and Lynn.
+4. Staged PDFs needing manual disposition: Hanover fire keep-only-if-paired later; Hanover school files discard after confirmation; Peabody files retain only for manual class/entity review.
+5. PRRs still deferred.
+6. v9 GABRIEL still premature.
+
+## 2026-06-23 - MA StateReference follow-on batch
+
+**Did**
+- Continued the StateReference public-source pass after Georgetown and reviewed the current Georgetown rows in `data/contracts.csv` and `data/city_coverage.csv`.
+- Verified Hanover, Peabody, Reading, Marlborough, and Danvers using targeted StateReference item pages and search results.
+- Downloaded and locally staged Hanover and Peabody originals/OCRs for verification; no new rows were ingested.
+- Updated `docs/acquisition/ma_phase1_statereference_ingestion_queue_2026-06-23.md` with this wave’s attempted municipalities, statuses, and classification lessons.
+
+**Decisions and why**
+- Rejected Hanover because the school-side record is for the Dresden and Hanover School Districts in New Hampshire, so it is not a same-Massachusetts-municipality comparator.
+- Rejected Reading and Marlborough because clean safety or non-safety singles exist, but not a same-cycle matched pair.
+- Rejected Danvers because the targeted search surfaced only AFSCME units and dispatchers, not a police/fire contract; dispatchers remain outside the safety classes in this schema.
+- Treated Peabody as ambiguous rather than cleanly ingestable: the police contract is fine, but the available school comparator is a mixed school-unit record covering cafeteria, clerks, and transportation, which is public and relevant but not a preferred single occupation class.
+- Kept Georgetown's `other` comparator as acceptable but secondary. It is valid for coverage and pair formation, but the next batch should prefer cleaner `clerical_admin`, `public_works`, or `teacher` comparators when available.
+
+**Surprises/breakage**
+- The first Peabody/Reading search attempts hit sandbox DNS failures and had to be retried with approved public `curl` access.
+- No ingestion pipeline run was needed because nothing new passed the clean-pair threshold.
+
+**Corpus snapshot**
+```text
+contracts: 14 | discourse: 0 | coverage: 14 | city_attributes: 3
+healthy matched pairs: 3
+safety units unmatched: 4
+```
+
+**Next steps**
+1. Clean StateReference candidates still ready for targeted verification: none from the attempted top five; only later candidates if the team relaxes the stop rule.
+2. Ambiguous candidates needing manual review: Peabody.
+3. PRR-only targets remain deferred.
+4. v9 GABRIEL remains premature.
+
+## 2026-06-23 - MA StateReference Georgetown pilot
+
+**Did**
+- Read and preserved `docs/acquisition/ma_statereference_phase1_seed_2026-06-23.md`.
+- Verified three Georgetown StateReference DLR Contracts records and confirmed each had a visible public document attachment plus DLR Public Information Search original-source route.
+- Downloaded original plus StateReference OCR PDFs for police command staff, DPW/clerical, and school custodians:
+  - `inbox/foia/ma_georgetown_police_command_staff_2020_2023.pdf`
+  - `inbox/foia/ma_georgetown_police_command_staff_2020_2023_ocr.pdf`
+  - `inbox/foia/ma_georgetown_afscme_dpw_clerical_2020_2023.pdf`
+  - `inbox/foia/ma_georgetown_afscme_dpw_clerical_2020_2023_ocr.pdf`
+  - `inbox/foia/ma_georgetown_afscme_custodians_2020_2023.pdf`
+  - `inbox/foia/ma_georgetown_afscme_custodians_2020_2023_ocr.pdf`
+- Added explicit `obs_id` values to `inbox/manifest.csv` so `process_inbox.py` does not reprocess existing arbitration-award manifest rows under inferred duplicate IDs.
+- Ingested two Georgetown rows through `python ingest/process_inbox.py`: `ma_georgetown_police_2020` and `ma_georgetown_other_2020`.
+- Added processed OCR PDFs to:
+  - `corpus/ma_georgetown/ma_georgetown_police_command_staff_2020_2023_ocr.pdf`
+  - `corpus/ma_georgetown/ma_georgetown_afscme_custodians_2020_2023_ocr.pdf`
+- Created `docs/acquisition/ma_phase1_statereference_ingestion_queue_2026-06-23.md`.
+- Ran `python scripts/validate.py`, `python ingest/audit_coverage.py`, and `python ingest/test_pipeline.py`.
+
+**Decisions and why**
+- Coded Georgetown police command staff as `police` because the recognition clause covers Lieutenant, Sergeant, and Detective Sergeant and excludes patrolmen, dispatchers, chief, confidential, managerial, and other town employees.
+- Coded Georgetown school custodians as `other` because the current controlled vocabulary has no custodial or school maintenance class; the recognition clause cleanly identifies custodians, matrons, and maintenance employees.
+- Did not ingest Georgetown DPW/clerical because the recognition clause mixes Fire or Police Signal Operators, highway/DPW titles, and clerical/admin titles, so it is not a clean single occupation-class observation.
+- Did not attempt Seekonk in this pass because Georgetown produced a new healthy matched pair and the task was deliberately narrow.
+
+**Surprises/breakage**
+- The original StateReference Georgetown PDFs were image-only. StateReference OCR PDFs were downloaded and used for ingestion; originals remain staged locally for provenance review.
+- `process_inbox.py --dry-run` showed that old Somerville arbitration-award rows would be treated as new without explicit manifest `obs_id` values. The manifest metadata was tightened before the real run.
+- The final `git status --short` still includes unrelated pre-existing changes outside this StateReference pilot, including GABRIEL files, graph deletions, prior docs, and logs. The StateReference-scoped changes are the Georgetown data/coverage/manifest rows, Georgetown corpus and inbox PDFs, the new queue note, and this PROGRESS entry.
+
+**Validation**
+```text
+python ingest/process_inbox.py
+ingested=2 quarantined=0 missing_file=0 skipped_duplicate=9
+VALIDATION PASSED - all rows conform to docs/schema.md
+contracts: 14 | discourse: 0 | coverage: 14 | city_attributes: 3
+
+python scripts/validate.py
+VALIDATION PASSED - all rows conform to docs/schema.md
+contracts: 14 | discourse: 0 | coverage: 14 | city_attributes: 3
+
+python ingest/test_pipeline.py
+35 passed, 0 failed
+```
+
+**Corpus snapshot**
+```text
+contracts: 14 | discourse: 0 | coverage: 14 | city_attributes: 3
+healthy matched pairs: 3
+safety units unmatched: 4
+```
+
+**Next steps**
+1. More public StateReference candidates ready for targeted verification: Hanover, Peabody, Reading, Marlborough, Danvers, Lexington, Springfield, Woburn, Manchester, and Great Barrington.
+2. Candidates needing manual verification: Georgetown DPW/clerical mixed unit; any dispatcher or signal-operator record; any school committee comparator whose occupation class is not obvious from the recognition clause.
+3. PRR-only targets remain deferred; no PRRs were drafted or submitted.
+4. v9 GABRIEL remains premature unless the team explicitly wants a CBA-panel run after reviewing the new Georgetown pair.
+
+## 2026-06-23 — MA non-safety factfinding records-request packet
+
+**Did**
+- Confirmed `docs/acquisition/ma_non_safety_factfinding_recon_2026-06-23.md` exists and preserved it without substantive edits.
+- Added a concise "Targeted recon follow-up" section to `docs/acquisition/ma_non_safety_awards_2026-06-23.md`.
+- Created `docs/records_requests/ma_non_safety_factfinding_packet_2026-06-23.md` with DLR, Somerville, Boston, and Newton public-records request drafts; a manual DLR exact-search checklist; an intake checklist; and a request tracking table.
+- Ran `python scripts/validate.py` and `python ingest/audit_coverage.py`.
+
+**Decisions and why**
+- Kept this as documentation/request prep only. No PDFs were downloaded, no corpus files were staged, and no data rows were added because no final non-safety factfinding report or interest-arbitration award is ready for ingestion.
+- Put DLR first in the request sequence because the concrete docket leads and no-record confirmations are the cheapest way to distinguish final reports from petitions, strike rulings, ULP decisions, and representation decisions.
+- Put Somerville first among city/school RAO targets because its two high-scoring police awards remain the most important current document-type confound.
+
+**Surprises/breakage**
+- None. The recon memo was present, so no fallback search or reconstruction was needed.
+- `ingest/test_pipeline.py` was not run because no code or ingestion logic changed.
+
+**Corpus snapshot**
+```text
+contracts: 12 | discourse: 0 | coverage: 12 | city_attributes: 3
+healthy matched pairs: 2
+safety units unmatched: 4
+```
+
+**Next steps**
+1. Submit manually first: DLR master request, then Somerville city/school request, then Boston BTU `PS-17-5987` and Newton custodians/NTA verification requests.
+2. Process returned records only after full documents are local: save under `inbox/foia/`, complete manifest metadata, first-page/entity-check the source, verify `source_type`, then use the ingestion pipeline.
+3. v9 GABRIEL is still not justified until at least one genuine non-safety factfinding or interest-arbitration document is ingested and validated.
+
+---
+
+## 2026-06-23 — MA non-safety factfinding acquisition queue
+
+**Did**
+- Ran the required schema and coverage checks before editing: `scripts/validate.py` passed, and `ingest/audit_coverage.py` still reports 12 contracts, 5 cities, 2 healthy matched pairs, and 4 unmatched safety observations.
+- Audited the current Massachusetts gap: Somerville, Boston, and Newton are the highest-value non-safety factfinding targets because their current safety rows are award-heavy and not same-cycle matched to non-safety award-style documents.
+- Created `docs/acquisition/ma_non_safety_awards_2026-06-23.md` with a priority gap table, candidate/search-lead table, source-route notes, and manual-download/metadata instructions.
+- Checked targeted official/public routes: Mass.gov JLMC decisions, Mass.gov DLR search/API results, and FY2015/FY2016/FY2024 DLR annual reports.
+
+**Decisions and why**
+- Did not add `contracts.csv` rows. No genuine non-safety factfinding or arbitration PDF was locally present, source-type verified, and ready for ingestion.
+- Treated the Mass.gov JLMC page as safety-only. It is useful for future police/fire award targets, but it cannot provide non-safety comparators.
+- Prioritized Somerville first because two police observations remain unmatched and a teacher/clerical factfinding report would directly test whether high Gabriel language is driven by safety status or award-document form.
+- Treated the Newton Teachers Association 2023-2024 impasse trail as a future Newton-2025 pairing lead, not a comparator for the current 2015-2018 Newton police row.
+
+**Surprises/breakage**
+- Mass.gov search is a JavaScript app, but its official search API was usable with the public site referrer.
+- Official hits were mostly DLR hearing-officer, CERB, prohibited-practice, representation, or strike-petition records rather than wage factfinding reports.
+- DuckDuckGo HTML returned an anti-bot challenge during exact searches, so it was not used as an acquisition route.
+- Three DLR annual-report PDFs were downloaded to `/tmp` for audit only; no source PDFs were staged in the corpus or inbox.
+
+**Corpus snapshot**
+```text
+contracts: 12 | discourse: 0 | coverage: 12 | city_attributes: 3
+healthy matched pairs: 2
+safety units unmatched: 4
+```
+
+**Next steps**
+1. Manual downloads still needed: Somerville teacher/SMEA DLR factfinding if it exists; Newton NTA 2023-2024 factfinding or binding-arbitration output if produced; Boston SENA/BTU non-safety factfinding if available.
+2. Documents ready for ingestion: none.
+3. v9 rerun: not justified until at least one genuine non-safety factfinding/arbitration document is ingested and validated.
+
+---
+
+## 2026-06-23 — GABRIEL v8 quote-quality hardening for comparability
+
+**Did**
+- Updated `analysis/gabriel_pilot/run_gabriel.py` for v8: default output is now `results_v8.csv`; v7 outputs are untouched.
+- Added one bounded retry call per document for initially verbatim-failed excerpts. Retry replacements must pass the same `_verify_verbatim` guard before relevance classification.
+- Tightened relevance handling: only verbatim + relevant excerpts enter `supporting_quotes`/`estimated_pages`; verbatim-but-irrelevant excerpts remain in `flagged_quotes`/`flagged_pages` as audit trail.
+- Added v8 count columns: `excerpts_retry_attempted`, `excerpts_retry_recovered`. Existing v7 count columns are preserved; `excerpts_failed` now means final unrecovered verbatim failures after retry.
+- Codified the wage-specific boundary in prompt/rules/tests/docs: wage/salary/pay/total-comp/benefit/longevity-pay peer comparisons can count; generic non-wage provision charts and generic cross-community variation are flagged/ignored.
+- Added synthetic relevance-helper tests to `ingest/test_pipeline.py`.
+- Ran GABRIEL v8 on 12 documents. Output: `analysis/gabriel_pilot/results_v8.csv`.
+
+**V7 → V8 quote-count comparison (SPSOA/SPEA)**
+| doc_id | v7 score | v8 score | v7 sub/rel/flag/fail | v8 sub/rel/flag/fail | v8 retry attempted/recovered |
+|---|---:|---:|---:|---:|---:|
+| `ma_somerville_police_spsoa_2012` | 92 | 92 | 4 / 2 / 2 / 0 | 6 / 4 / 2 / 0 | 0 / 0 |
+| `ma_somerville_police_spea_2012` | 82 | 85 | 5 / 2 / 2 / 1 | 5 / 2 / 3 / 0 | 1 / 1 |
+
+**Decisions (and why)**
+- Retry does not change scores. It only repairs quote provenance, because scores should reflect the original document-level judgment, not whether a support quote was recovered.
+- Relevance failures are explicit audit records, not support. This keeps irrelevant-but-real text out of verified support counts while preserving traceability.
+- The longevity-pay boundary is wage-specific: prose comparing pay levels across communities can support H1; generic charts/tables that merely show variation are not support.
+
+**Surprises / breakage**
+- The first v8 command failed under sandboxed network access with connection errors and wrote an all-error `results_v8.csv`; reran with approved network access and overwrote it with the completed v8 run.
+- After final helper tightening, reran v8 again so `results_v8.csv` matches the final code.
+- Retry recovered 1 of 1 attempted Somerville failed excerpts in the final run, eliminating unrecovered verbatim failures there; this is useful but too small to prove retries solve persistent long-form award paraphrases.
+- SPEA produced one additional flagged/ignored excerpt under the stricter boundary while preserving 2 relevant support excerpts and a high score.
+
+**Tests / validation**
+- `python ingest/test_pipeline.py` — 35 passed, 0 failed.
+- `python scripts/validate.py` — passed.
+- `python ingest/audit_coverage.py` — passed and produced the snapshot below.
+
+**Corpus snapshot**
+```
+contracts: 12 | discourse: 0 | coverage: 12 | city_attributes: 3
+healthy matched pairs: 2
+safety units unmatched: 4
+```
+
+**Next steps**
+1. Acquire non-safety arbitration awards; this remains the primary H1 gap needed to separate occupation effects from document-type effects.
+2. Treat persistent Somerville long-form award paraphrase failures as a known quote-recovery limitation unless future runs show retries materially improve relevant support.
+3. If v8 outputs are used in downstream summaries, report `excerpts_relevant` as verified support and `excerpts_flagged`/`flagged_quotes` only as audit evidence.
+
+---
+
 ## 2026-06-22 — Port LLM fallback to OpenAI/Harvard; add AGENTS.md for Codex
 
 **Did**

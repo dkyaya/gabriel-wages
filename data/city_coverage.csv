@@ -11,3 +11,11 @@ ma_arlington,Arlington,MA,public_works,0,2015-2018,1,ma_arlington_public_works_2
 ma_arlington,Arlington,MA,public_works,0,2018-2021,1,ma_arlington_public_works_2018,ingested via text_layer
 ma_arlington,Arlington,MA,public_works,0,2021-2024,1,ma_arlington_public_works_2021,ingested via text_layer
 ma_newton,Newton,MA,police,1,2015-2018,1,ma_newton_police_2015,ingested via text_layer+ocr_partial
+ma_georgetown,Georgetown,MA,police,1,2020-2023,1,ma_georgetown_police_2020,ingested via text_layer
+ma_georgetown,Georgetown,MA,other,0,2020-2023,1,ma_georgetown_other_2020,ingested via text_layer
+ma_seekonk,Seekonk,MA,police,1,2022-2025,1,ma_seekonk_police_2022,ingested via text_layer
+ma_seekonk,Seekonk,MA,fire,1,2022-2025,1,ma_seekonk_fire_2022,ingested via text_layer
+ma_seekonk,Seekonk,MA,clerical_admin,0,2021-2024,1,ma_seekonk_clerical_admin_2021,ingested via ocr
+ma_seekonk,Seekonk,MA,teacher,0,2021-2024,1,ma_seekonk_teacher_2021,ingested via text_layer
+ma_seekonk,Seekonk,MA,public_works,0,2023-2026,1,ma_seekonk_public_works_2023,ingested via text_layer
+ma_seekonk,Seekonk,MA,library,0,2023-2026,1,ma_seekonk_library_2023,ingested via text_layer

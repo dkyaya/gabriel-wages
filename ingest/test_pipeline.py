@@ -16,6 +16,10 @@ sys.path.insert(0, str(ROOT / "ingest"))
 
 from extract_spans import extract_spans, _verify_verbatim, _looks_like_heading
 from extract_text import extract, page_number_at
+from audit_coverage import summarize_matches
+
+sys.path.insert(0, str(ROOT / "analysis" / "gabriel_pilot"))
+from run_gabriel import _is_clearly_irrelevant, _is_clearly_relevant
 
 PASS, FAIL = 0, 0
 
@@ -167,6 +171,89 @@ def test_validator_pct_range():
     check("non-numeric rejected", len(run("abc")) == 1)
 
 
+def test_gabriel_relevance_boundaries():
+    print("test_gabriel_relevance_boundaries")
+    positive_cases = [
+        ("peer wages",
+         "The City argues that wages paid by comparable communities are higher than the rates in this agreement."),
+        ("total compensation",
+         "The evidence shows total compensation provided to officers in other communities is below Somerville's package."),
+        ("longevity payments",
+         "When reviewing longevity payments in other communities, the longevity pay for these officers is lower than Boston and Lynn."),
+    ]
+    for name, text in positive_cases:
+        check(f"{name} relevant", _is_clearly_relevant(text) and not _is_clearly_irrelevant(text))
+
+    negative_cases = [
+        ("award outcome",
+         "The Panel awards FY 2014 – 2.5%, FY 2015 – 2.0%, and FY 2016 – 2.0%."),
+        ("CPI adjustment",
+         "Effective July 1, wages shall be adjusted to reflect the change in BACPI."),
+        ("generic market adjustment",
+         "The contract provides a market adjustment of $0.35 to the top step of AFSCME: MC."),
+        ("bargaining-unit abbreviation",
+         "AFSCME: MC Office Administrative employees shall move to the new salary schedule."),
+        ("non-wage provision chart",
+         "As the chart shows, alcohol testing for public safety officers is not unusual: Community / Alcohol Testing / Arlington / Yes."),
+        ("generic longevity chart",
+         "The chart demonstrates that longevity payments vary from community to community."),
+    ]
+    for name, text in negative_cases:
+        check(f"{name} irrelevant", _is_clearly_irrelevant(text) and not _is_clearly_relevant(text))
+
+
+def _coverage_row(city_id, city_name, occ, start, end, obs_id):
+    return {
+        "city_id": city_id,
+        "city_name": city_name,
+        "state": "MA",
+        "occupation_class": occ,
+        "cycle_start": start,
+        "cycle_end": end,
+        "obs_id": obs_id,
+    }
+
+
+def test_coverage_match_tiers():
+    print("test_coverage_match_tiers")
+
+    exact = summarize_matches([
+        _coverage_row("ma_exact", "Exact", "fire", "2020-07-01", "2023-06-30", "exact_fire"),
+        _coverage_row("ma_exact", "Exact", "clerical_admin", "2020-07-01", "2023-06-30", "exact_clerical"),
+    ])
+    check("exact-cycle match counted", len(exact["exact"]) == 1 and not exact["overlap"])
+
+    overlap = summarize_matches([
+        _coverage_row("ma_overlap", "Overlap", "police", "2022-07-01", "2025-06-30", "overlap_police"),
+        _coverage_row("ma_overlap", "Overlap", "teacher", "2021-09-01", "2024-08-31", "overlap_teacher"),
+    ])
+    check("overlap-cycle match counted when windows differ",
+          len(overlap["overlap"]) == 1 and not overlap["exact"])
+
+    adjacent = summarize_matches([
+        _coverage_row("ma_adjacent", "Adjacent", "fire", "2020-01-01", "2020-12-31", "adjacent_fire"),
+        _coverage_row("ma_adjacent", "Adjacent", "public_works", "2022-12-01", "2023-12-31", "adjacent_dpw"),
+    ])
+    check("adjacent-cycle match counted separately",
+          len(adjacent["adjacent"]) == 1 and not adjacent["exact"] and not adjacent["overlap"])
+
+    unmatched = summarize_matches([
+        _coverage_row("ma_unmatched", "Unmatched", "police", "2020-07-01", "2023-06-30", "unmatched_police"),
+    ])
+    check("truly unmatched safety row counted", len(unmatched["unmatched"]) == 1)
+
+    seekonk = summarize_matches([
+        _coverage_row("ma_seekonk_test", "Seekonk Test", "police", "2022-07-01", "2025-06-30", "seekonk_police"),
+        _coverage_row("ma_seekonk_test", "Seekonk Test", "fire", "2022-07-01", "2025-06-30", "seekonk_fire"),
+        _coverage_row("ma_seekonk_test", "Seekonk Test", "teacher", "2021-09-01", "2024-08-31", "seekonk_teacher"),
+        _coverage_row("ma_seekonk_test", "Seekonk Test", "clerical_admin", "2021-07-01", "2024-06-30", "seekonk_admin"),
+        _coverage_row("ma_seekonk_test", "Seekonk Test", "public_works", "2023-07-01", "2026-06-30", "seekonk_dpw"),
+        _coverage_row("ma_seekonk_test", "Seekonk Test", "library", "2023-07-01", "2026-06-30", "seekonk_library"),
+    ])
+    check("Seekonk-like safety rows overlap matched",
+          len(seekonk["overlap"]) == 2 and not seekonk["unmatched"] and not seekonk["exact"])
+
+
 if __name__ == "__main__":
     test_page_number_at()
     test_extraction_and_spans()
@@ -174,5 +261,7 @@ if __name__ == "__main__":
     test_verbatim_guard()
     test_quarantine()
     test_validator_pct_range()
+    test_gabriel_relevance_boundaries()
+    test_coverage_match_tiers()
     print(f"\n{PASS} passed, {FAIL} failed")
     sys.exit(1 if FAIL else 0)

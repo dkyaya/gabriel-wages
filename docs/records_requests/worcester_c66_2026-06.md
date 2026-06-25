@@ -17,11 +17,10 @@ Email: RAO@worcesterma.gov
 
 ## Requester
 
-- Name: _______________________________
-- Affiliation: Harvard Business School (research project, PI: Prof. Andrei Shleifer)
-- Email: _______________________________
-- Mailing address: _______________________________
-- Date of request: ____________
+- Name: Joachim "Yaya" Johnson
+- Affiliation: Harvard Business School (research project)
+- Email: yayajohnson@college.harvard.edu
+- Date of request: June 16, 2026
 
 ---
 

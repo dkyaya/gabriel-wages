@@ -50,6 +50,26 @@ separately from verbatim-ness. Starting in v7, verified excerpts are additionall
 screened for relevance; those that pass verbatim but fail relevance are flagged
 `verbatim_but_irrelevant` in the output rather than silently discarded.
 
+*Wage-specific quote boundary (added after v8, 2026-06-23):* Supporting excerpts for
+`comparability_emphasis` must be both verbatim and relevant to wage/compensation
+comparability. Peer wage, salary, pay, total compensation, benefits, and longevity-pay
+comparisons across other communities can count when the passage actually discusses
+compensation levels or economic packages. Generic charts/tables comparing non-wage
+contract provisions across communities, or charts that merely show cross-community
+variation without wage reasoning, are audit evidence only and are excluded from
+`supporting_quotes` and verified-support counts.
+
+*Cycle matching tiers (added 2026-06-24):* Exact-cycle matches remain the best design
+for wage-outcome comparisons because the bargaining periods are identical. Overlapping
+cycle matches are still valid for H1 text/mechanism comparison because city and period
+are approximately fixed even when contract windows differ. Adjacent-cycle matches
+within roughly one to two years are exploratory only and should be labeled as such.
+Low comparability language in CBAs/MOAs should not be interpreted as proof that
+comparability did not influence bargaining; these documents may record outcomes rather
+than the reasoning behind them. Arbitration awards and factfinding reports are better
+reasoning documents, while meeting packets and bargaining exhibits may provide proxy
+reasoning evidence when final reports are unavailable.
+
 **Evidence so far:** GABRIEL pilot v3 (PROGRESS.md, 2026-06-18 session 5;
 `analysis/gabriel_pilot/report_v3.md`) found safety mean=28.8 vs. non-safety mean=3.3
 on `comparability_emphasis`, but this is **confounded** — the only two arbitration

@@ -11,6 +11,8 @@ Model: gpt-5.4-nano (released 2026-03-17), reasoning_effort=low
   - v7: added prompt exclusions for market-adjustment/unit-name/award-outcome patterns;
         added two-stage relevance check (rule-based first, model escalation if ambiguous);
         flagged excerpts that pass verbatim check but fail relevance go to flagged_quotes.
+  - v8: bounded one-call retry for verbatim-failed excerpts; stricter wage-specific
+        relevance boundary for compensation vs. generic non-wage comparisons.
   # NOTE: if gpt-5.4-nano is unavailable on the Harvard proxy, fall back to gpt-4o-mini
   # and confirm with Jay before proceeding.
 
@@ -30,7 +32,11 @@ Output columns (v7+):
   excerpts_verified  — int: passed _verify_verbatim
   excerpts_relevant  — int: verified + relevant (= len(supporting_quotes))
   excerpts_flagged   — int: verified but irrelevant (= len(flagged_quotes))
-  excerpts_failed    — int: failed verbatim check (discarded)
+  excerpts_failed    — int: failed verbatim check after v8 retry (discarded)
+
+Additional output columns (v8+):
+  excerpts_retry_attempted — int: initially verbatim-failed excerpts sent to one retry call
+  excerpts_retry_recovered — int: retry excerpts accepted by _verify_verbatim
 
 Auth: Harvard HUIT OpenAI proxy.
   Required env var: HARVARD_SUBSCRIPTION_KEY
@@ -57,7 +63,7 @@ from extract_text import page_number_at  # noqa: E402
 from log_api_spend import log_usage, print_totals  # noqa: E402
 
 INPUT = HERE / "input.csv"
-OUTPUT = HERE / "results.csv"
+OUTPUT = HERE / "results_v8.csv"
 SCRIPT_NAME = "run_gabriel.py"
 
 MODEL = "gpt-5.4-nano"
@@ -98,6 +104,15 @@ and return a JSON object with exactly three keys:
                 of comparability language exist — not a target number.
 """
 
+RETRY_SYSTEM = """\
+You are repairing failed source quotations for a labor-economics text analysis task.
+Return a JSON object with exactly one key, "excerpts", whose value is an array.
+
+For each prior failed excerpt, include a replacement only if you can copy exact,
+contiguous text from the document. Do not paraphrase, synthesize, shorten with ellipses,
+or combine non-adjacent text. If no exact source passage can be copied, omit it.
+"""
+
 PROMPT_TEMPLATE = """\
 Attribute: comparability_emphasis
 Definition: Rate 0-100 how much this document's actual text relies on wage comparisons
@@ -125,6 +140,17 @@ standard or another entity:
 - A sentence stating the award's outcome or ruling (e.g. "the Panel awards X% for
   FY2014") is NOT comparability reasoning unless that same sentence also states the
   comparative justification for the number.
+- Generic charts/tables comparing non-wage contract provisions across communities
+  (for example testing, leave, assignment, or procedure provisions) are NOT wage
+  comparability evidence.
+
+Wage-specific boundary:
+- Peer wage, salary, pay, total compensation, benefits, or longevity-pay comparisons
+  across other communities/employers CAN count when the text is actually about
+  compensation levels or economic packages.
+- Longevity-pay comparisons count only when the passage discusses pay/compensation
+  levels in other communities; a generic chart showing variation across communities
+  without wage reasoning should be ignored.
 
 Score based on what is actually written, not what is typical for this document type.
 
@@ -140,6 +166,29 @@ Document text (may be truncated):
 ---
 
 Return only the JSON object.
+"""
+
+RETRY_PROMPT_TEMPLATE = """\
+Task: recover exact verbatim supporting excerpts for comparability_emphasis.
+
+The scoring model previously returned the excerpts below, but they failed the existing
+verbatim check. Retry ONLY these failed evidence attempts. Return replacements only if
+they are exact contiguous text copied from the document, with no paraphrase, no synthesis,
+and no ellipses. If no exact source passage can be copied, return an empty excerpts array.
+
+The retry must not rescore the document. It only attempts to recover valid supporting
+excerpts. Each replacement should independently support explicit wage/compensation
+comparison to other employers or jurisdictions.
+
+Failed excerpt attempts:
+{failed_excerpts}
+
+Document text (may be truncated):
+---
+{text}
+---
+
+Return only JSON: {{"excerpts": [...]}}
 """
 
 
@@ -168,33 +217,52 @@ def _page_for_quote(quote: str, full_text: str) -> str:
 # Relevance check — Task 2
 # ---------------------------------------------------------------------------
 
-# Keywords that are strong positive evidence of peer-wage comparability
-_RELEVANCE_STRONG = [
-    "comparable communit",
-    "comparable town",
-    "comparable cit",
-    "comparable jurisdict",
-    "comparable employee",
+_WAGE_TERMS = [
+    "wage", "salary", "salaries", "pay", "paid", "compensation", "benefit",
+    "economic package", "economic benefit", "rate of pay", "pay scale",
+    "base rate", "outside detail rate", "longevity payment", "longevity pay",
+]
+
+_COMPARATOR_TERMS = [
+    "comparable communit", "comparable town", "comparable cit",
+    "comparable jurisdict", "comparable employee", "other communit",
+    "other town", "other cit", "other jurisdict", "other employer",
+    "other bargaining unit", "surrounding communit", "peer communit",
+    "peer cit", "similarly situated", "counterpart",
+]
+
+_DIRECT_COMPENSATION_COMPARISONS = [
     "wages and benefits of comparable",
     "wages of comparable",
-    "other communit",
-    "other town",
-    "other cit",
-    "other jurisdict",
-    "other employer",
-    "other bargaining unit",
-    "surrounding communit",
-    "peer communit",
-    "peer cit",
-    "similarly situated",
-    "that city's or town's",      # straight apostrophe variant
-    "that city’s or town’s",   # curly apostrophe variant (common in PDFs)
+    "compensation of comparable",
+    "that city's or town's outside detail rate",
+    "that city’s or town’s outside detail rate",
+]
+
+_GENERIC_NONWAGE_PROVISIONS = [
+    "alcohol testing", "drug testing", "residency", "vacation", "sick leave",
+    "holiday", "holidays", "uniform", "detail assignment", "overtime procedure",
+    "management rights", "grievance", "discipline", "seniority",
+]
+
+_COMPARATIVE_LEVEL_TERMS = [
+    "lower than", "higher than", "less than", "more than", "above", "below",
+    "rank", "top", "bottom", "level", "amount", "provided to", "paid by",
+    "paid to", "compares well", "compare well",
 ]
 
 
 def _is_clearly_relevant(excerpt: str) -> bool:
     e = excerpt.lower()
-    return any(kw in e for kw in _RELEVANCE_STRONG)
+    if any(phrase in e for phrase in _DIRECT_COMPENSATION_COMPARISONS):
+        return True
+    has_wage_term = any(term in e for term in _WAGE_TERMS)
+    has_comparator = any(term in e for term in _COMPARATOR_TERMS)
+    if not (has_wage_term and has_comparator):
+        return False
+    if "longevity" in e and "communit" in e:
+        return any(term in e for term in _COMPARATIVE_LEVEL_TERMS)
+    return True
 
 
 def _is_clearly_irrelevant(excerpt: str) -> bool:
@@ -203,16 +271,31 @@ def _is_clearly_irrelevant(excerpt: str) -> bool:
     comp_kw = ["comparable", "comparison", "other communit", "other employ",
                "other jurisdict", "peer", "wages of", "wages paid"]
 
+    # CPI/BACPI clauses are price-index adjustments, not peer wage comparisons.
+    if re.search(r"\b(cpi|bacpi|consumer price index|cost[- ]of[- ]living)\b", e):
+        return True
+
     # Bare award-outcome sentence: "FY 20XX – X%" with no comparability context
     if re.search(r"\bfy\s*20\d{2}\b.{0,30}\d+\.?\d*\s*%", e) and not any(kw in e for kw in comp_kw):
         return True
 
-    # Market adjustment + bargaining unit abbreviation, no external comparison
-    if ("market adjustment" in e
-            and re.search(r"\bafscme\b|\blocal\s+\d+\b|\bseiu\b|\bibew\b", e)
+    # Generic market adjustment or bargaining unit abbreviation, no external comparison
+    if (("market adjustment" in e or re.search(r"\bafscme\b|\blocal\s+\d+\b|\bseiu\b|\bibew\b", e))
             and not any(kw in e for kw in ["other employer", "other communit",
                                             "other jurisdict", "other municipalit",
                                             "comparable", "peer"])):
+        return True
+
+    # Generic non-wage provision tables/charts comparing communities are audit-only.
+    if (any(term in e for term in ["chart", "table", "as shown", "demonstrates"])
+            and any(term in e for term in ["communit", "town", "city", "jurisdiction"])
+            and any(term in e for term in _GENERIC_NONWAGE_PROVISIONS)
+            and not any(term in e for term in _WAGE_TERMS)):
+        return True
+
+    # Longevity charts that merely show cross-community variation, not compensation levels.
+    if ("longevity" in e and "communit" in e and "var" in e
+            and not any(term in e for term in _COMPARATIVE_LEVEL_TERMS)):
         return True
 
     # Ruling conclusion about a specific benefit with no comparative reference
@@ -253,10 +336,10 @@ def _check_relevance(excerpt: str, client: OpenAI) -> tuple[str, str]:
     status: 'relevant' | 'verbatim_but_irrelevant' | 'ambiguous'
     method: 'strong_keyword' | 'rule_irrelevant' | 'model_yes' | 'model_no' | 'model_unclear'
     """
-    if _is_clearly_relevant(excerpt):
-        return "relevant", "strong_keyword"
     if _is_clearly_irrelevant(excerpt):
         return "verbatim_but_irrelevant", "rule_irrelevant"
+    if _is_clearly_relevant(excerpt):
+        return "relevant", "strong_keyword"
     # Ambiguous: escalate to model
     result = _relevance_check_model(excerpt, client)
     if result == "relevant":
@@ -269,6 +352,48 @@ def _check_relevance(excerpt: str, client: OpenAI) -> tuple[str, str]:
 # ---------------------------------------------------------------------------
 # Core rating function
 # ---------------------------------------------------------------------------
+
+def _normalize_for_dedupe(excerpt: str) -> str:
+    return re.sub(r"\s+", " ", excerpt).strip().lower()
+
+
+def _coerce_excerpts(raw_excerpts) -> list[str]:
+    if isinstance(raw_excerpts, str):
+        raw_excerpts = [raw_excerpts] if raw_excerpts.strip() else []
+    return [e for e in raw_excerpts if isinstance(e, str) and e.strip()][:MAX_EXCERPTS]
+
+
+def _retry_failed_excerpts(client: OpenAI, failed_excerpts: list[str], text: str) -> tuple[list[str], int, int]:
+    """Retry initially verbatim-failed excerpts once for the document.
+
+    Returns (verified_replacements, retry_attempted, retry_recovered). Replacements
+    are accepted only if they pass the same _verify_verbatim guard as initial excerpts.
+    """
+    if not failed_excerpts:
+        return [], 0, 0
+
+    prompt = RETRY_PROMPT_TEMPLATE.format(
+        failed_excerpts=json.dumps(failed_excerpts, ensure_ascii=False),
+        text=text,
+    )
+    response = client.chat.completions.create(
+        model=MODEL,
+        reasoning_effort=REASONING_EFFORT,
+        response_format={"type": "json_object"},
+        max_completion_tokens=2000,
+        messages=[
+            {"role": "system", "content": RETRY_SYSTEM},
+            {"role": "user", "content": prompt},
+        ],
+    )
+    log_usage(response, SCRIPT_NAME + "[retry]", MODEL)
+
+    content = response.choices[0].message.content or "{}"
+    parsed = json.loads(content)
+    replacements = _coerce_excerpts(parsed.get("excerpts", []))[:len(failed_excerpts)]
+    verified = [excerpt for excerpt in replacements if _verify_verbatim(excerpt, text)]
+    return verified, len(failed_excerpts), len(verified)
+
 
 def rate_document(client: OpenAI, row: dict) -> dict:
     full_text = row["text"]
@@ -299,24 +424,43 @@ def rate_document(client: OpenAI, row: dict) -> dict:
     notes = parsed.get("notes", "")
     usage = response.usage
 
-    raw_excerpts = parsed.get("excerpts", [])
-    if isinstance(raw_excerpts, str):
-        raw_excerpts = [raw_excerpts] if raw_excerpts.strip() else []
-    raw_excerpts = [e for e in raw_excerpts if isinstance(e, str) and e.strip()]
-    raw_excerpts = raw_excerpts[:MAX_EXCERPTS]
+    raw_excerpts = _coerce_excerpts(parsed.get("excerpts", []))
 
     n_submitted = len(raw_excerpts)
-    n_failed = 0
+    n_retry_attempted = 0
+    n_retry_recovered = 0
 
     supporting_quotes: list[str] = []
     supporting_pages: list[str] = []
     flagged_quotes: list[str] = []
     flagged_pages: list[str] = []
+    verified_excerpts: list[str] = []
+    failed_excerpts: list[str] = []
+    seen_verified: set[str] = set()
+    n_initial_verified = 0
 
     for excerpt in raw_excerpts:
         if not _verify_verbatim(excerpt, text):
-            n_failed += 1
+            failed_excerpts.append(excerpt)
             continue
+        n_initial_verified += 1
+        norm = _normalize_for_dedupe(excerpt)
+        if norm in seen_verified:
+            continue
+        seen_verified.add(norm)
+        verified_excerpts.append(excerpt)
+
+    retry_verified, n_retry_attempted, n_retry_recovered = _retry_failed_excerpts(
+        client, failed_excerpts, text
+    )
+    for excerpt in retry_verified:
+        norm = _normalize_for_dedupe(excerpt)
+        if norm in seen_verified:
+            continue
+        seen_verified.add(norm)
+        verified_excerpts.append(excerpt)
+
+    for excerpt in verified_excerpts:
         pg = _page_for_quote(excerpt, full_text)
         status, _ = _check_relevance(excerpt, client)
         if status == "relevant":
@@ -327,6 +471,8 @@ def rate_document(client: OpenAI, row: dict) -> dict:
             flagged_quotes.append(excerpt)
             flagged_pages.append(pg)
 
+    n_failed = len(failed_excerpts) - n_retry_recovered
+
     return {
         "comparability_emphasis": int(score),
         "gabriel_notes": notes,
@@ -335,10 +481,12 @@ def rate_document(client: OpenAI, row: dict) -> dict:
         "flagged_quotes": json.dumps(flagged_quotes, ensure_ascii=False),
         "flagged_pages": json.dumps(flagged_pages, ensure_ascii=False),
         "excerpts_submitted": n_submitted,
-        "excerpts_verified": n_submitted - n_failed,
+        "excerpts_verified": n_initial_verified + n_retry_recovered,
         "excerpts_relevant": len(supporting_quotes),
         "excerpts_flagged": len(flagged_quotes),
         "excerpts_failed": n_failed,
+        "excerpts_retry_attempted": n_retry_attempted,
+        "excerpts_retry_recovered": n_retry_recovered,
         "prompt_tokens": usage.prompt_tokens if usage else 0,
         "completion_tokens": usage.completion_tokens if usage else 0,
     }
@@ -378,11 +526,13 @@ def run():
         "flagged_quotes", "flagged_pages",
         "excerpts_submitted", "excerpts_verified",
         "excerpts_relevant", "excerpts_flagged", "excerpts_failed",
+        "excerpts_retry_attempted", "excerpts_retry_recovered",
         "prompt_tokens", "completion_tokens",
     ]
     results = []
     total_prompt = total_completion = 0
     total_sub = total_ver = total_rel = total_flag = total_fail = 0
+    total_retry_attempted = total_retry_recovered = 0
 
     for i, row in enumerate(rows, 1):
         doc_id = row["doc_id"]
@@ -395,6 +545,7 @@ def run():
                 "flagged_quotes": "[]", "flagged_pages": "[]",
                 "excerpts_submitted": 0, "excerpts_verified": 0,
                 "excerpts_relevant": 0, "excerpts_flagged": 0, "excerpts_failed": 0,
+                "excerpts_retry_attempted": 0, "excerpts_retry_recovered": 0,
                 "prompt_tokens": 0, "completion_tokens": 0,
             })
             results.append(r)
@@ -409,16 +560,21 @@ def run():
             total_rel  += rating["excerpts_relevant"]
             total_flag += rating["excerpts_flagged"]
             total_fail += rating["excerpts_failed"]
+            total_retry_attempted += rating["excerpts_retry_attempted"]
+            total_retry_recovered += rating["excerpts_retry_recovered"]
 
             rel  = rating["excerpts_relevant"]
             flag = rating["excerpts_flagged"]
             fail = rating["excerpts_failed"]
+            retry = rating["excerpts_retry_recovered"]
             sub  = rating["excerpts_submitted"]
             tag  = ""
             if flag:
                 tag = f"  [{flag} flagged]"
             if fail:
                 tag += f"  [{fail} verbatim-fail]"
+            if retry:
+                tag += f"  [{retry} retry-recovered]"
             print(f"  [{i}/{len(rows)}] {doc_id}: score={rating['comparability_emphasis']}"
                   f"  rel={rel}/{sub}{tag} — {rating['gabriel_notes']}")
 
@@ -435,6 +591,7 @@ def run():
                 "flagged_quotes": "[]", "flagged_pages": "[]",
                 "excerpts_submitted": 0, "excerpts_verified": 0,
                 "excerpts_relevant": 0, "excerpts_flagged": 0, "excerpts_failed": 0,
+                "excerpts_retry_attempted": 0, "excerpts_retry_recovered": 0,
                 "prompt_tokens": 0, "completion_tokens": 0,
             })
             results.append(r)
@@ -449,6 +606,7 @@ def run():
     print(f"\nWrote {len(results)} rows to {output_path}")
     print(f"Excerpts: {total_sub} submitted → {total_ver} verbatim-pass → "
           f"{total_rel} relevant + {total_flag} flagged; {total_fail} verbatim-fail")
+    print(f"Retry: {total_retry_attempted} attempted → {total_retry_recovered} recovered")
     print(f"Total tokens: {total_prompt} prompt + {total_completion} completion = "
           f"{total_prompt + total_completion}")
     print_totals(SCRIPT_NAME)
