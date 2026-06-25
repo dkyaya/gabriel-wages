@@ -1,0 +1,3 @@
+summary,source_type,n_rows,mean_score,median_score,max_score,rows_score_gt_0,rows_with_verified_relevant_excerpts
+by_source_type,arbitration_award,3,57.67,85.0,88.0,2,2
+by_source_type,cba,29,5.52,5.0,25.0,22,1

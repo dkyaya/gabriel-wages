@@ -6,6 +6,77 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-06-25 - GABRIEL v9 descriptive comparability run
+
+**Did**
+- Ran GABRIEL v9 as a comparability-only descriptive pass over all 32 causal-corpus rows.
+- Added v9-only scripts: `analysis/gabriel_pilot/build_input_v9.py`, `analysis/gabriel_pilot/run_gabriel_v9.py`, and `analysis/gabriel_pilot/summarize_v9.py`.
+- Created row-level results, quote audit, summary CSVs, matched-pair summary, figures, and the preliminary report scaffold at `docs/analysis/gabriel_v9_preliminary_report_2026-06-25.md`.
+- Updated `docs/analysis/gabriel_v9_readiness_2026-06-25.md` and `docs/hypotheses_public_source_strategy_2026-06-24.md` with short run/result notes.
+
+**Decisions and why**
+- Kept v9 to `comparability_emphasis` only because the first 32-row pass should establish a disciplined descriptive baseline before adding new attributes.
+- Wrapped the v8 runner instead of altering v8 outputs, preserving full-text input, verbatim quote verification, bounded retry, and relevance filtering.
+- Added a v9-specific exclusion for generic health-insurance "comparable plan" language because that wording is verbatim but not peer-wage comparability.
+- Reported source-type, CBA-only, excluding-award, city-level, and matched-set sensitivities because source-type imbalance remains the main identification risk.
+
+**Surprises/breakage**
+- The initial scoring attempt failed with sandboxed connection errors and logged zero API calls; the escalated run succeeded.
+- Building `input_v9.csv` required long OCR extraction for image-heavy rows, especially Newton and Wayland; the input builder was updated to write progressively and resume completed rows.
+- v9 found one CBA with a verified relevant excerpt (`ma_arlington_fire_2021`, outside-detail rate language), but the high scores remain concentrated in Somerville safety arbitration awards.
+
+**Validation/test results**
+```text
+python scripts/validate.py
+VALIDATION PASSED - all rows conform to docs/schema.md
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+
+python ingest/test_pipeline.py
+40 passed, 0 failed
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**GABRIEL v9 output snapshot**
+```text
+rows scored: 32
+overall mean score: 10.41 | median: 5.0 | max: 88
+safety mean: 16.80 | non-safety mean: 4.76
+cba mean: 5.52 | arbitration_award mean: 57.67
+cba-only mean: 5.52
+excluding Somerville police awards mean: 5.33
+excluding all arbitration_award rows mean: 5.52
+verified relevant supporting excerpts: 10
+flagged verbatim-but-irrelevant/ambiguous excerpts: 3
+retry: 2 attempted, 1 recovered
+API usage: 581,521 prompt tokens + 4,135 completion tokens
+```
+
+**Next steps**
+1. v9 descriptively shows high comparability language in safety-side arbitration awards, but ordinary CBAs mostly score low.
+2. H1 remains plausible but underidentified; v9 strengthens the source-type/document-production caveat more than an occupation-only claim.
+3. Source-type confounding dominates the pooled safety/non-safety split because award-style reasoning documents are safety-side only.
+4. Consider `arbitration_or_impasse_backstop` as a v10 attribute only after reviewing the v9 baseline.
+5. More official portal ingestion is useful for robustness, but the higher-value gap is now non-safety reasoning evidence.
+6. Mechanism-source search should prioritize Newton, Somerville, and Boston public materials.
+7. PRRs remain deferred unless the PI changes preference.
+
 ## 2026-06-25 - GABRIEL v9 readiness and reporting-plan audit
 
 **Did**

@@ -1,0 +1,56 @@
+obs_id,city_name,occupation_class,safety_flag,source_type,score,quote_type,quote_index,estimated_page,excerpt
+ma_somerville_police_spsoa_2012,Somerville,police,1,arbitration_award,88,supporting_relevant,1,52,"The City argues that the wages and benefits of
+Somerville Superior Officers compare well with their
+counterparts in other comparable communities, and that
+Somerville Superior Officers rank at the top in terms of
+total compensation. The City states that this is due, not
+only to a high base salary, but also the generous benefits
+that are provided to the Superior Officers."
+ma_somerville_police_spsoa_2012,Somerville,police,1,arbitration_award,88,supporting_relevant,2,55,"In the Police Arbitration Award the Panel decided to
+review a listing of comparable communities that was
+utilized by the Collins Center for Public Management at the
+University of Massachusetts, when conducting a
+classification and compensation study for the City’s non-
+union positions. Those communities chosen in the Collins
+Center classification study were Arlington, Brookline,
+Cambridge, Lowell, Malden, Melrose, Newton, Quincy, and
+Waltham."
+ma_somerville_police_spsoa_2012,Somerville,police,1,arbitration_award,88,supporting_relevant,3,56,"The evidence further demonstrates that the overall
+compensation (including wages and benefits) provided to
+Somerville Police Superiors, although not the same, is
+comparable to what is provided to police superiors in these
+other communities. In fact the total compensation for
+Somerville Police Superiors is above the average provided
+in the comparable communities."
+ma_somerville_police_spsoa_2012,Somerville,police,1,arbitration_award,88,supporting_relevant,4,62,"The chart below shows longevity payments for
+comparable communities.
+
+Community       5 YRS      10 YRS      15 YRS   20 YRS   25 YRS   30 YRS"
+ma_somerville_police_spsoa_2012,Somerville,police,1,arbitration_award,88,supporting_relevant,5,54,"Specifically, the Union asserts that the proper benchmark, as provided by
+the arbitration law, is wages and benefits paid to
+comparable employees, which means it is more appropriate to
+look at wages and benefits provided to other superior
+police officers not civilian employees working in the City."
+ma_somerville_police_spsoa_2012,Somerville,police,1,arbitration_award,88,verbatim_but_irrelevant_or_ambiguous,1,58,"The Panel Awards wage increases for the six-year
+period as follows:
+
+                FY 2013 – 2.5%
+                FY 2014 – 2%
+                FY 2015 – 2%
+                FY 2016 – 2%
+                FY 2017 – 2.5%
+                FY 2018 – 2.5%"
+ma_somerville_police_spsoa_2012,Somerville,police,1,arbitration_award,88,verbatim_but_irrelevant_or_ambiguous,2,71,"Discussion
+     Patrol Officers now receive a higher weekend
+differential rate than Superior Officers. It is appropriate
+and reasonable that Superior Officers receive the same
+weekend differential. Accordingly, the weekend differential
+rates for Superior Officers should be increased to $7.00
+for day differential and $6.50 for the weekend night
+differential. This increase shall be effective June 30, 2018."
+ma_somerville_police_spea_2012,Somerville,police,1,arbitration_award,85,supporting_relevant,1,58,"The Union argues that its list of comparables is smaller and more appropriate. Specifically, the Union contends that Boston should be considered as comparable due to its close proximity, its population density, and the fact that it is faced with similar urban policing concerns. The Union argues that a review of its comparable communities shows that wages and benefits of Somerville Patrol Officers lag behind what is provided in these other communities."
+ma_somerville_police_spea_2012,Somerville,police,1,arbitration_award,85,supporting_relevant,2,60,"The wage adjustments in surrounding communities for the relevant time period show that the wage increases proposed by the City are in line with the wage increases agreed to in these surrounding communities. Moreover, the evidence also demonstrates that the overall compensation (including wages and benefits) provided to Somerville Police, although not the same, is comparable to what is provided to police officers in these other communities."
+ma_somerville_police_spea_2012,Somerville,police,1,arbitration_award,85,supporting_relevant,3,76,The chart below shows longevity payments for comparable communities.
+ma_somerville_police_spea_2012,Somerville,police,1,arbitration_award,85,supporting_relevant,4,75,"There is insufficient justification to grant the Union’s proposal. It is true that other Police Departments in the list of comparable communities provide additional financial recognition for the hazards of being a police officer. This is also the current situation for Somerville Police Officers who receive an annual Weapons of Mass Destruction stipend, and also a separate payment for weapons qualification; both stipends pertain to the unique duties and responsibilities of being a police officer."
+ma_somerville_police_spea_2012,Somerville,police,1,arbitration_award,85,verbatim_but_irrelevant_or_ambiguous,1,53,"In reaching the conclusions in the present award, the Arbitration Panel has considered the criteria set forth in the statute including the municipality's ability to pay, wages and benefits of comparable towns, and the cost of living."
+ma_arlington_fire_2021,Arlington,fire,1,cba,25,supporting_relevant,1,20,f) Any outside detail assignment outside the borders of the Town of Arlington shall be paid at that city’s or Town’s outside detail rate consistent with current practice at the time this provision is agreed to. Any rules governing such outside details will be determined by the city or town in which the detail is performed.

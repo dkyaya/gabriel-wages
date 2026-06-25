@@ -1,0 +1,7 @@
+summary,group,n_rows,mean_score,median_score,max_score,rows_score_gt_0,rows_with_verified_relevant_excerpts
+exact_cycle_only,all,18,5.72,5.0,25.0,13,1
+exact_plus_overlap_healthy_matches,all,26,5.35,5.0,25.0,19,1
+cba_only_sample,all,29,5.52,5.0,25.0,22,1
+arbitration_award_sample,all,3,57.67,85.0,88.0,2,2
+excluding_somerville_police_awards,all,30,5.33,5.0,25.0,22,1
+excluding_all_arbitration_award_rows,all,29,5.52,5.0,25.0,22,1

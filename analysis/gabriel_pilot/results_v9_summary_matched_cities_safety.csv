@@ -1,0 +1,3 @@
+summary,safety_flag,n_rows,mean_score,median_score,max_score,rows_score_gt_0,rows_with_verified_relevant_excerpts
+safety_vs_non_safety_within_exact_or_overlap_matched_sets,0,14,4.71,5.0,10.0,10,0
+safety_vs_non_safety_within_exact_or_overlap_matched_sets,1,12,6.08,5.0,25.0,9,1

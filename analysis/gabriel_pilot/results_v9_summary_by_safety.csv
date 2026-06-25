@@ -1,0 +1,3 @@
+summary,safety_flag,n_rows,mean_score,median_score,max_score,rows_score_gt_0,rows_with_verified_relevant_excerpts
+by_safety_flag,0,17,4.76,5.0,10.0,12,0
+by_safety_flag,1,15,16.8,5.0,88.0,12,3

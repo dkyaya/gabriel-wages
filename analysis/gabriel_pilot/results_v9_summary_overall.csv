@@ -1,0 +1,2 @@
+summary,group,n_rows,mean_score,median_score,max_score,rows_score_gt_0,rows_with_verified_relevant_excerpts
+overall,all,32,10.41,5.0,88.0,24,3

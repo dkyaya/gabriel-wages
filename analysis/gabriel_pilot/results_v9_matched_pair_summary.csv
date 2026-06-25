@@ -1,0 +1,16 @@
+safety_obs_id,city_id,city_name,occupation_class,source_type,cycle_window,match_tier,safety_score,matched_non_safety_classes,matched_non_safety_obs_ids,n_matched_non_safety,matched_non_safety_mean_score,matched_non_safety_max_score
+ma_worcester_fire_2017,ma_worcester,Worcester,fire,cba,2017-2020,exact_cycle,8,clerical_admin;public_works,ma_worcester_clerical_admin_2017;ma_worcester_public_works_2017,2,5.0,5.0
+ma_boston_police_2020,ma_boston,Boston,police,cba,2020-2025,overlap_cycle,5,clerical_admin,ma_boston_clerical_admin_2023,1,8.0,8.0
+ma_somerville_police_spsoa_2012,ma_somerville,Somerville,police,arbitration_award,2012-2018,unmatched,88,,,0,,
+ma_somerville_police_spea_2012,ma_somerville,Somerville,police,arbitration_award,2012-2015,unmatched,85,,,0,,
+ma_arlington_fire_2021,ma_arlington,Arlington,fire,cba,2021-2024,exact_cycle,25,public_works,ma_arlington_public_works_2021,1,0.0,0.0
+ma_newton_police_2015,ma_newton,Newton,police,cba,2015-2018,unmatched,6,,,0,,
+ma_georgetown_police_2020,ma_georgetown,Georgetown,police,cba,2020-2023,exact_cycle,0,other,ma_georgetown_other_2020,1,5.0,5.0
+ma_seekonk_police_2022,ma_seekonk,Seekonk,police,cba,2022-2025,overlap_cycle,5,clerical_admin;library;public_works;teacher,ma_seekonk_clerical_admin_2021;ma_seekonk_teacher_2021;ma_seekonk_public_works_2023;ma_seekonk_library_2023,4,3.25,8.0
+ma_seekonk_fire_2022,ma_seekonk,Seekonk,fire,cba,2022-2025,overlap_cycle,5,clerical_admin;library;public_works;teacher,ma_seekonk_clerical_admin_2021;ma_seekonk_teacher_2021;ma_seekonk_public_works_2023;ma_seekonk_library_2023,4,3.25,8.0
+ma_franklin_fire_2022,ma_franklin,Franklin,fire,cba,2022-2025,exact_cycle,0,library;other;public_works,ma_franklin_public_works_2022;ma_franklin_library_2022;ma_franklin_other_2022,3,6.67,10.0
+ma_franklin_police_2022,ma_franklin,Franklin,police,cba,2022-2025,exact_cycle,5,library;other;public_works,ma_franklin_public_works_2022;ma_franklin_library_2022;ma_franklin_other_2022,3,6.67,10.0
+ma_franklin_police_sergeants_2022,ma_franklin,Franklin,police,cba,2022-2025,exact_cycle,5,library;other;public_works,ma_franklin_public_works_2022;ma_franklin_library_2022;ma_franklin_other_2022,3,6.67,10.0
+ma_wayland_police_2020,ma_wayland,Wayland,police,cba,2020-2023,exact_cycle,5,library;public_works,ma_wayland_public_works_2020;ma_wayland_library_2020,2,5.0,5.0
+ma_wayland_fire_2020,ma_wayland,Wayland,fire,cba,2020-2023,exact_cycle,10,library;public_works,ma_wayland_public_works_2020;ma_wayland_library_2020,2,5.0,5.0
+ma_wayland_fire_jlmc_2020,ma_wayland,Wayland,fire,arbitration_award,2020-2023,exact_cycle,0,library;public_works,ma_wayland_public_works_2020;ma_wayland_library_2020,2,5.0,5.0

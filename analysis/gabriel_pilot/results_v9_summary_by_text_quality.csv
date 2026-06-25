@@ -1,0 +1,4 @@
+summary,text_quality,n_rows,mean_score,median_score,max_score,rows_score_gt_0,rows_with_verified_relevant_excerpts
+by_text_quality,clean,21,12.1,5.0,88.0,15,2
+by_text_quality,ocr_messy,9,7.56,5.0,25.0,7,1
+by_text_quality,partial,2,5.5,5.5,6.0,2,0

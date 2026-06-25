@@ -182,3 +182,16 @@ If one low-cost pilot attribute is added after the first descriptive pass, `arbi
 ## Bottom line
 
 The corpus is now large enough for a first useful descriptive GABRIEL/reporting pass, but not for a clean occupation-level claim. v9 should be treated as a carefully stratified comparability audit of the 32-row public-source corpus, not as a decisive test of H1.
+
+## Run note
+
+GABRIEL v9 was run on 2026-06-25 as a comparability-only descriptive pass over all 32 causal rows. Outputs are:
+
+- `analysis/gabriel_pilot/results_v9.csv`
+- `analysis/gabriel_pilot/results_v9_quote_audit.csv`
+- `analysis/gabriel_pilot/results_v9_summary_*.csv`
+- `analysis/gabriel_pilot/results_v9_matched_pair_summary.csv`
+- `analysis/gabriel_pilot/figures_v9/`
+- `docs/analysis/gabriel_v9_preliminary_report_2026-06-25.md`
+
+Topline: the pooled safety/non-safety descriptive gap is driven mainly by safety-side arbitration awards. The CBA-only and excluding-award samples have low mean scores, so H1 remains plausible but underidentified rather than confirmed.

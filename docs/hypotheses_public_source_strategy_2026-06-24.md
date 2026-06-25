@@ -14,6 +14,8 @@ The 2026-06-25 Franklin/Wayland official-portal ingestion strengthens the public
 
 This leaves the project closer to a first descriptive GABRIEL/reporting pass, but not to a clean causal test. Non-safety reasoning evidence remains thin, so any v9 run should be stratified at minimum by `source_type` and match tier rather than presented as a pooled safety-versus-non-safety result.
 
+The 2026-06-25 GABRIEL v9 descriptive run confirms that caution. The overall safety mean exceeds the non-safety mean, but the high scores come from safety-side arbitration awards. The CBA-only and excluding-award samples have low comparability scores, so v9 strengthens the source-type/document-production caveat more than it strengthens an occupation-only H1 claim.
+
 ## What would count as support for H1 without PRRs
 
 - Public non-safety factfinding or arbitration-like reports that show wage-setting reasoning and can be compared directly to safety awards.
@@ -52,8 +54,8 @@ The public corpus may overrepresent certain document types, employers, or disput
 
 ## Recommendation
 
-Continue public-source H1 work for one more structured pass, with official municipal portals now promoted as the best near-term CBA/MOA scaling route.
+Use GABRIEL v9 as a descriptive baseline, not a causal test. Continue public-source H1 work for one more structured pass, with official municipal portals and mechanism-source searches as complementary routes.
 
-Do not run v9. Do not use PRRs unless the PI later reauthorizes them. Use the next pass to test whether public non-safety reasoning evidence can be found through DLR route checks, school-committee meeting materials, large-city labor portals, and capped official-portal candidates such as North Andover, Duxbury, Norwood, Ludlow, and Westwood.
+Do not use PRRs unless the PI later reauthorizes them. Use the next pass to test whether public non-safety reasoning evidence can be found through DLR route checks, school-committee meeting materials, large-city labor portals, and capped official-portal candidates such as North Andover, Duxbury, Norwood, Ludlow, and Westwood. A v10 attribute such as `arbitration_or_impasse_backstop` should wait until the team reviews the v9 baseline.
 
 If that pass still yields mostly CBA/MOA growth and no credible non-safety reasoning set, preserve H1 as suggestive and pivot the framing toward document type, arbitration backstops, and public-availability selection rather than forcing a clean occupation-only claim.

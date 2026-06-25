@@ -1,0 +1,342 @@
+doc_id,obs_id,city_id,city,city_name,occupation_class,safety_flag,source_type,source_corpus,cycle_start,cycle_end,cycle_window,text_quality,match_tier,matched_non_safety_classes,matched_non_safety_obs_ids,exact_or_overlap_healthy,year_or_cycle,text,comparability_emphasis,gabriel_notes,supporting_quotes,estimated_pages,flagged_quotes,flagged_pages,excerpts_submitted,excerpts_verified,excerpts_relevant,excerpts_flagged,excerpts_failed,excerpts_retry_attempted,excerpts_retry_recovered,prompt_tokens,completion_tokens
+ma_worcester_fire_2017,ma_worcester_fire_2017,ma_worcester,Worcester,Worcester,fire,1,cba,causal,2017-07-01,2020-06-30,2017-2020,ocr_messy,exact_cycle,clerical_admin;public_works,ma_worcester_clerical_admin_2017;ma_worcester_public_works_2017,1,2017-2020,"MEMORANDUM OF AGREEMENT
+between
+CITY OF WORCESTER
+and
+LOCAL 1009, I.A.F.F.
+[FY 2018 — FY 2020]
+
+This Memorandum of Agreement sets forth the agreements of the parties for a new agreement, to
+supplement",8,Text sets wages via fixed annual percentages and benefit buyback/cost changes without any explicit comparison to other employers or jurisdictions’ pay.,[],[],[],[],0,0,0,0,0,0,0,3533,92
+ma_worcester_clerical_admin_2017,ma_worcester_clerical_admin_2017,ma_worcester,Worcester,Worcester,clerical_admin,0,cba,causal,2017-07-01,2020-06-30,2017-2020,clean,,,,,2017-2020,"MEMORANDUM OF AGREEMENT
+                                                      between
+                                            THE CITY OF WORCESTER
+                                                ",5,"The document sets out internal wage percentage increases and step/schedule changes, but contains no explicit comparisons to other employers or jurisdictions.",[],[],[],[],0,0,0,0,0,0,0,2356,83
+ma_worcester_public_works_2017,ma_worcester_public_works_2017,ma_worcester,Worcester,Worcester,public_works,0,cba,causal,2017-07-01,2020-06-30,2017-2020,clean,,,,,2017-2020,"MEMORANDUM OF AGREEMENT (DRAFT #1)
+                                                           between
+                                               THE CITY OF WORCESTER
+                             ",5,Text specifies internal wage step rates and fixed percentage increases but contains no explicit wage/compensation comparisons to other jurisdictions or employers.,[],[],[],[],0,0,0,0,0,0,0,2930,77
+ma_boston_police_2020,ma_boston_police_2020,ma_boston,Boston,Boston,police,1,cba,causal,2020-07-01,2025-06-30,2020-2025,partial,overlap_cycle,clerical_admin,ma_boston_clerical_admin_2023,1,2020-2025,"MEMORANDA OF AGREEMENT
+CITY OF BOSTON
+AND
+BOSTON POLICE PATROLMENS’ ASSOCIATION
+
+MOA #1
+JULY 1, 2020 — JUNE 30, 2023
+
+This Memorandum of Agreement amends the Collective Bargaining Agreement effective ",5,"The document sets specific pay rates and benefits but relies on internal formulas and percentages, with no explicit peer-jurisdiction or employer wage-comparison justification.",[],[],[],[],0,0,0,0,0,0,0,4089,111
+ma_boston_clerical_admin_2023,ma_boston_clerical_admin_2023,ma_boston,Boston,Boston,clerical_admin,0,cba,causal,2023-10-01,2027-09-30,2023-2027,clean,,,,,2023-2027,"COLLECTIVE
+   BARGAINING
+   AGREEMENT
+                  BETWEEN
+
+
+
+    CITY OF BOSTON
+                     AND
+
+UNITED STEELWORKERS, AFL-CIO,
+            CLC
+                ONBEHALFOF
+
+
+
+
+           ",8,"Text sets specific pay schedules and dollar amounts but provides no wage/compensation comparisons to peer cities, employers, or jurisdictions.",[],[],[],[],0,0,0,0,0,0,0,27413,127
+ma_somerville_police_spsoa_2012,ma_somerville_police_spsoa_2012,ma_somerville,Somerville,Somerville,police,1,arbitration_award,causal,2012-07-01,2018-06-30,2012-2018,clean,unmatched,,,0,2012-2018,"j
+I
+l
+
+
+
+
+                   AGREEiVIENT BE1WEEN
+
+                             THE
+
+                   CITY OF SOi\'IERVILLE
+
+
+
+    SOJ\IERVILLE POLICE SUPERIOR OFFICERS ASSOCL\ TION
+
+
+
+
+             ",88,"The award repeatedly and quantitatively justifies wages, differentials, and stipends using detailed comparisons to named comparable communities’ wage and compensation levels.","[""The City argues that the wages and benefits of\nSomerville Superior Officers compare well with their\ncounterparts in other comparable communities, and that\nSomerville Superior Officers rank at the top in terms of\ntotal compensation. The City states that this is due, not\nonly to a high base salary, but also the generous benefits\nthat are provided to the Superior Officers."", ""In the Police Arbitration Award the Panel decided to\nreview a listing of comparable communities that was\nutilized by the Collins Center for Public Management at the\nUniversity of Massachusetts, when conducting a\nclassification and compensation study for the City’s non-\nunion positions. Those communities chosen in the Collins\nCenter classification study were Arlington, Brookline,\nCambridge, Lowell, Malden, Melrose, Newton, Quincy, and\nWaltham."", ""The evidence further demonstrates that the overall\ncompensation (including wages and benefits) provided to\nSomerville Police Superiors, although not the same, is\ncomparable to what is provided to police superiors in these\nother communities. In fact the total compensation for\nSomerville Police Superiors is above the average provided\nin the comparable communities."", ""The chart below shows longevity payments for\ncomparable communities.\n\nCommunity       5 YRS      10 YRS      15 YRS   20 YRS   25 YRS   30 YRS"", ""Specifically, the Union asserts that the proper benchmark, as provided by\nthe arbitration law, is wages and benefits paid to\ncomparable employees, which means it is more appropriate to\nlook at wages and benefits provided to other superior\npolice officers not civilian employees working in the City.""]","[""52"", ""55"", ""56"", ""62"", ""54""]","[""The Panel Awards wage increases for the six-year\nperiod as follows:\n\n                FY 2013 – 2.5%\n                FY 2014 – 2%\n                FY 2015 – 2%\n                FY 2016 – 2%\n                FY 2017 – 2.5%\n                FY 2018 – 2.5%"", ""Discussion\n     Patrol Officers now receive a higher weekend\ndifferential rate than Superior Officers. It is appropriate\nand reasonable that Superior Officers receive the same\nweekend differential. Accordingly, the weekend differential\nrates for Superior Officers should be increased to $7.00\nfor day differential and $6.50 for the weekend night\ndifferential. This increase shall be effective June 30, 2018.""]","[""58"", ""71""]",8,7,5,2,1,2,1,48147,754
+ma_somerville_police_spea_2012,ma_somerville_police_spea_2012,ma_somerville,Somerville,Somerville,police,1,arbitration_award,causal,2012-07-01,2015-06-30,2012-2015,clean,unmatched,,,0,2012-2015,"AGREEMENT BETWEEN
+
+           THE CITY OF SOMERVILLE
+
+                      AND
+
+THE SOMERVILLE POLICE EMPLOYEES ASSOCIATION
+
+
+
+           July I, 2004- June 30, 2008
+                                ",85,"The award repeatedly justifies wage/stipend decisions using explicit comparisons to wages/benefits in named comparable Massachusetts municipalities, with detailed tables.","[""The Union argues that its list of comparables is smaller and more appropriate. Specifically, the Union contends that Boston should be considered as comparable due to its close proximity, its population density, and the fact that it is faced with similar urban policing concerns. The Union argues that a review of its comparable communities shows that wages and benefits of Somerville Patrol Officers lag behind what is provided in these other communities."", ""The wage adjustments in surrounding communities for the relevant time period show that the wage increases proposed by the City are in line with the wage increases agreed to in these surrounding communities. Moreover, the evidence also demonstrates that the overall compensation (including wages and benefits) provided to Somerville Police, although not the same, is comparable to what is provided to police officers in these other communities."", ""The chart below shows longevity payments for comparable communities."", ""There is insufficient justification to grant the Union’s proposal. It is true that other Police Departments in the list of comparable communities provide additional financial recognition for the hazards of being a police officer. This is also the current situation for Somerville Police Officers who receive an annual Weapons of Mass Destruction stipend, and also a separate payment for weapons qualification; both stipends pertain to the unique duties and responsibilities of being a police officer.""]","[""58"", ""60"", ""76"", ""75""]","[""In reaching the conclusions in the present award, the Arbitration Panel has considered the criteria set forth in the statute including the municipality's ability to pay, wages and benefits of comparable towns, and the cost of living.""]","[""53""]",5,5,4,1,0,0,0,53893,410
+ma_arlington_fire_2021,ma_arlington_fire_2021,ma_arlington,Arlington,Arlington,fire,1,cba,causal,2021-07-01,2024-06-30,2021-2024,ocr_messy,exact_cycle,public_works,ma_arlington_public_works_2021,1,2021-2024,"Bargaining Agreement between the Town of Arlington
+                    and the International Association of Firefighters,
+                                   AFL-CIO, Local 1297
+
+                      ",25,Comparability language is limited to out-of-town outside-detail pay being set at the other city/town’s current practice; otherwise wages use internal steps/COLA only.,"[""f) Any outside detail assignment outside the borders of the Town of Arlington shall be paid at that city’s or Town’s outside detail rate consistent with current practice at the time this provision is agreed to. Any rules governing such outside details will be determined by the city or town in which the detail is performed.""]","[""20""]",[],[],1,1,1,0,0,0,0,25903,215
+ma_arlington_public_works_2015,ma_arlington_public_works_2015,ma_arlington,Arlington,Arlington,public_works,0,cba,causal,2015-07-01,2018-06-30,2015-2018,clean,,,,,2015-2018,"Bargaining Agreement between the Town of Arlington
+                                 and the
+      American Federation of State, County and Municipal Employees,
+                   Council 93, Local - 6",0,"The agreement sets specific pay, premiums, stipends, and increases internally, but contains no explicit wage/compensation comparisons to peer communities or other employers.",[],[],[],[],0,0,0,0,0,0,0,21443,113
+ma_arlington_public_works_2018,ma_arlington_public_works_2018,ma_arlington,Arlington,Arlington,public_works,0,cba,causal,2018-07-01,2021-06-30,2018-2021,clean,,,,,2018-2021,"Bargaining Agreement between the Town of Arlington
+                                   and the
+  American Federation of State, County and Municipal Employees, Council
+                        93, Local ",5,"Text sets specific wages, premiums, and stipends but relies on internal schedules and indices (e.g., BACPI) rather than peer-jurisdiction compensation comparisons.",[],[],[],[],0,0,0,0,0,0,0,22651,96
+ma_arlington_public_works_2021,ma_arlington_public_works_2021,ma_arlington,Arlington,Arlington,public_works,0,cba,causal,2021-07-01,2024-06-30,2021-2024,ocr_messy,,,,,2021-2024,"Bargaining Agreement between the Town of Arlington
+                                and the
+ American Federation of State, County and Municipal Employees, Council
+                       93, Local - 680",0,The provided text establishes bargaining purposes and enumerates covered positions but contains no explicit wage/compensation comparisons to peer employers or jurisdictions.,[],[],[],[],0,0,0,0,0,0,0,1957,101
+ma_newton_police_2015,ma_newton_police_2015,ma_newton,Newton,Newton,police,1,cba,causal,2015-07-01,2018-06-30,2015-2018,partial,unmatched,,,0,2015-2018,"COLLECTIVE BARGAINING AGREEMENTS
+
+CITY OF NEWTON
+AND
+NEWTON POLICE ASSOCIATION
+
+EFFECTIVE
+
+JULY 1, 2014 — JUNE 30, 2015
+AND
+
+JULY 1, 2015 —- JUNE 30, 2018
+
+TABLE OF CONTENTS
+
+ARTICLE
+
+ARTICLE I
+RECOGN",6,"Text provides detailed internal wage amounts, stipends, and differentials but contains no explicit comparisons to other employers or jurisdictions for justification.",[],[],[],[],0,0,0,0,0,0,0,28664,74
+ma_georgetown_police_2020,ma_georgetown_police_2020,ma_georgetown,Georgetown,Georgetown,police,1,cba,causal,2020-07-01,2023-06-30,2020-2023,clean,exact_cycle,other,ma_georgetown_other_2020,1,2020-2023,"TOWN OF GEORGETOWN
+
+            Municipal Contract
+
+             Between the Town
+
+                  and the
+
+AMERICAN FEDERATION OF STATE, COUNTY
+      AND MUNICIPAL EMPLOYEES
+
+          AFL-CIO COUN",0,"Text contains wage amounts and differentials, but no explicit comparisons to other employers or jurisdictions to justify rates.",[],[],[],[],0,0,0,0,0,0,0,8015,98
+ma_georgetown_other_2020,ma_georgetown_other_2020,ma_georgetown,Georgetown,Georgetown,other,0,cba,causal,2020-07-01,2023-06-30,2020-2023,clean,,,,,2020-2023,"AGREEMENT
+
+                  BETWEEN
+
+    GEORGETOWN     SCHOOL DEPARTMENT
+
+                     AND
+
+AMERICAN FEDERATION OF STATE, COUNTY AND
+
+           MUNICIPAL EMPLOYESS
+
+
+
+AFL-CIO, MASS. PUBLIC ",5,"Text sets internal pay rates, stipends, and overtime/benefits without explicit wage or compensation comparisons to other employers or jurisdictions.",[],[],[],[],0,0,0,0,0,0,0,10112,99
+ma_seekonk_police_2022,ma_seekonk_police_2022,ma_seekonk,Seekonk,Seekonk,police,1,cba,causal,2022-07-01,2025-06-30,2022-2025,clean,overlap_cycle,clerical_admin;library;public_works;teacher,ma_seekonk_clerical_admin_2021;ma_seekonk_teacher_2021;ma_seekonk_public_works_2023;ma_seekonk_library_2023,1,2022-2025,"COLLECTIVE BARGAINING AGREEMENT
+
+             BETWEEN
+
+        TOWN OF SEEKONK
+
+                AND
+
+ THE FRATERNAL ORDER OF POLICE
+      MASS C.O.P. LOCAL # 215
+
+
+
+
+     JULY 1, 2022 - JUNE 30, 2025
+",5,"The agreement sets detailed wages and benefits but contains no explicit comparisons to other employers, jurisdictions, or peer labor markets to justify pay levels.",[],[],[],[],0,0,0,0,0,0,0,18009,74
+ma_seekonk_fire_2022,ma_seekonk_fire_2022,ma_seekonk,Seekonk,Seekonk,fire,1,cba,causal,2022-07-01,2025-06-30,2022-2025,clean,overlap_cycle,clerical_admin;library;public_works;teacher,ma_seekonk_clerical_admin_2021;ma_seekonk_teacher_2021;ma_seekonk_public_works_2023;ma_seekonk_library_2023,1,2022-2025,"CONTRACT
+
+               BETWEEN THE
+
+    TOWN OF SEEKONK, MASSACHUSETTS
+
+                 AND THE
+
+INTERNATIONAL ASSOCIATION OF FIREFIGHTERS
+
+                LOCAL 1931
+
+
+              AGREEMENT OF:
+",5,"The agreement lists wage rates, stipends, and increases but contains no explicit comparisons of pay/benefits to other communities or employers.",[],[],[],[],0,0,0,0,0,0,0,20529,96
+ma_seekonk_clerical_admin_2021,ma_seekonk_clerical_admin_2021,ma_seekonk,Seekonk,Seekonk,clerical_admin,0,cba,causal,2021-07-01,2024-06-30,2021-2024,ocr_messy,,,,,2021-2024,"AGREEMENT BETWEEN THE
+SEEKONK SCHOOL COMMITTEE
+AND
+LOCAL 1701, STATE COUNCIL NO. 93,
+AMERICAN FEDERAL OF STATE, COUNTY AND
+MUNICIPAL EMPLOYEES, AFL-CIO
+
+ADMINISTRATIVE SECRETARIES
+
+JULY 1, 2021 THROUG",0,"Text sets wages, steps, and fixed dollar amounts without any explicit comparisons to peer communities or other employers’ compensation.",[],[],[],[],0,0,0,0,0,0,0,10030,119
+ma_seekonk_teacher_2021,ma_seekonk_teacher_2021,ma_seekonk,Seekonk,Seekonk,teacher,0,cba,causal,2021-09-01,2024-08-31,2021-2024,clean,,,,,2021-2024,"AGREEMENT BETWEEN SCHOOL
+ COMMITTEE OF THE TOWN OF SEEKONK
+AND SEEKONK EDUCATORS ASSOCIATION
+
+
+
+
+        SEPTEMBER 1, 2021 TO AUGUST 31, 2024
+                         TABLE OF CONTENTS
+ARTICLE SECTIO",5,The agreement specifies local salary schedules and monetary rates but contains no explicit wage/compensation comparisons to peer communities or employers.,[],[],[],[],0,0,0,0,0,0,0,30241,67
+ma_seekonk_public_works_2023,ma_seekonk_public_works_2023,ma_seekonk,Seekonk,Seekonk,public_works,0,cba,causal,2023-07-01,2026-06-30,2023-2026,clean,,,,,2023-2026,"C OLLECTIVE B ARGAINING
+A GREEMENT
+July 1, 2023 – June 30, 2026
+
+
+
+
+                     Between
+
+               The Town of Seekonk
+
+                       And
+
+               AFSCME Council 93
+
+    ",0,"The agreement sets wages, bonuses, and stipends via fixed percentages and internal schedules without any explicit peer-jurisdiction compensation comparisons.",[],[],[],[],0,0,0,0,0,0,0,9587,86
+ma_seekonk_library_2023,ma_seekonk_library_2023,ma_seekonk,Seekonk,Seekonk,library,0,cba,causal,2023-07-01,2026-06-30,2023-2026,clean,,,,,2023-2026,"C OLLECTIVE B ARGAINING
+   A GREEMENT
+   July 1, 2023 through June 30, 2026
+
+
+
+
+                    Between
+
+            The Town of Seekonk
+
+                       And
+
+Seekonk Public Library Employe",8,"The agreement sets wage schedules, increases, and benefit percentages internally, with no explicit peer-jurisdiction or comparator-employer compensation comparisons justifying terms.",[],[],[],[],0,0,0,0,0,0,0,9976,79
+ma_franklin_fire_2022,ma_franklin_fire_2022,ma_franklin,Franklin,Franklin,fire,1,cba,causal,2022-07-01,2025-06-30,2022-2025,clean,exact_cycle,library;other;public_works,ma_franklin_public_works_2022;ma_franklin_library_2022;ma_franklin_other_2022,1,2022-2025,"Collective Bargaining Agreement
+                 Between
+         The Town of Franklin
+                   And
+  Professional Firefighters of Franklin
+International Association of Firefighters
+        ",0,"The agreement sets wages, stipends, and differentials internally (salary schedules, COLA, percentages) without any explicit comparison to peer employers or jurisdictions.",[],[],[],[],0,0,0,0,0,0,0,20269,84
+ma_franklin_police_2022,ma_franklin_police_2022,ma_franklin,Franklin,Franklin,police,1,cba,causal,2022-07-01,2025-06-30,2022-2025,clean,exact_cycle,library;other;public_works,ma_franklin_public_works_2022;ma_franklin_library_2022;ma_franklin_other_2022,1,2022-2025,"Collective Bargaining Agreement
+              Between
+      The Town of Franklin
+                And
+ The Franklin Police Association
+July 1, 2022 through June 30, 2025
+                              ",5,Wage and stipend terms are set internally via appendices and fixed schedules without any explicit comparisons to other employers or jurisdictions.,[],[],[],[],0,0,0,0,0,0,0,27273,79
+ma_franklin_police_sergeants_2022,ma_franklin_police_sergeants_2022,ma_franklin,Franklin,Franklin,police,1,cba,causal,2022-07-01,2025-06-30,2022-2025,clean,exact_cycle,library;other;public_works,ma_franklin_public_works_2022;ma_franklin_library_2022;ma_franklin_other_2022,1,2022-2025,"Collective Bargaining Agreement
+               Between
+       The Town of Franklin
+                 And
+The Franklin Police Sergeants Union
+ July 1, 2022 through June 30, 2025
+                       ",5,"Text sets specific wages and stipends but contains no explicit comparisons to other employers, communities, or jurisdictions to justify compensation levels.",[],[],[],[],0,0,0,0,0,0,0,25906,77
+ma_franklin_public_works_2022,ma_franklin_public_works_2022,ma_franklin,Franklin,Franklin,public_works,0,cba,causal,2022-07-01,2025-06-30,2022-2025,clean,,,,,2022-2025,"Collective Bargaining Agreement
+               Between
+       The Town of Franklin
+                 And
+              AFSCME
+        AFL-CIO, Local 1298
+Department of Public Works (DPW)
+ July 1, 2022 ",10,"Text sets wages and differentials internally and references Massachusetts minimum wage, but contains no peer-jurisdiction pay comparison to justify specific wage terms.",[],[],[],[],0,0,0,0,0,0,0,19874,159
+ma_franklin_library_2022,ma_franklin_library_2022,ma_franklin,Franklin,Franklin,library,0,cba,causal,2022-07-01,2025-06-30,2022-2025,clean,,,,,2022-2025,"AGREEMENT
+
+                   between the
+
+             TOWN OF FRANKLIN
+                      and the
+
+FRANKLIN PUBLIC LIBRARY STAFF ASSOCIATION
+ MASSACHUSETTS LIBRARY STAFF ASSOCIATION (MLSA)
+      ",0,"Text sets wages via internal salary schedule, step increases, and COLA, without any explicit comparisons to peer jurisdictions or employers.",[],[],[],[],0,0,0,0,0,0,0,12301,69
+ma_franklin_other_2022,ma_franklin_other_2022,ma_franklin,Franklin,Franklin,other,0,cba,causal,2022-07-01,2025-06-30,2022-2025,clean,,,,,2022-2025,"Collective Bargaining Agreement
+              Between
+      The Town of Franklin
+                And
+             AFSCME
+AFL-CIO, Council 93, Local 1298
+            Custodians
+July 1, 2022 through Jun",10,"Text sets wages via internal schedules, COLAs, and Massachusetts minimum-wage compliance, with no explicit peer-jurisdiction wage/comp comparisons to justify rates.",[],[],[],[],0,0,0,0,0,0,0,12608,112
+ma_wayland_police_2020,ma_wayland_police_2020,ma_wayland,Wayland,Wayland,police,1,cba,causal,2020-07-01,2023-06-30,2020-2023,ocr_messy,exact_cycle,library;public_works,ma_wayland_public_works_2020;ma_wayland_library_2020,1,2020-2023,"COLLECTIVE BARGAINING AGREEMENT
+BETWEEN
+TOWN OF WAYLAND
+AND
+THE WAYLAND POLICE OFFICERS UNION
+IN AFFILIATION WITH
+
+THE NEW ENGLAND POLICE BENEVOLENT ASSOCIATION, INC.
+
+July 1, 2020 - June 30, 2023
+
+
+A",5,"Text contains wage/stipend amounts and internal schedules, but no explicit comparisons to other jurisdictions or peer employers for wage justification.",[],[],[],[],0,0,0,0,0,0,0,21103,96
+ma_wayland_fire_2020,ma_wayland_fire_2020,ma_wayland,Wayland,Wayland,fire,1,cba,causal,2020-07-01,2023-06-30,2020-2023,ocr_messy,exact_cycle,library;public_works,ma_wayland_public_works_2020;ma_wayland_library_2020,1,2020-2023,"COLLECTIVE BARGAINING AGREEMENT BETWEEN
+TOWN OF WAYLAND AND
+
+INTERNATIONAL ASSOCIATION OF FIREFIGHTERS,
+AFL-CIO LOCAL 1978
+
+Effective: July 1, 2020 through June 30, 2023
+
+Table of Contents
+
+ARTICLE 1 ",10,The text sets specific pay/stipend amounts but uses no explicit wage or compensation comparisons to other employers or jurisdictions for justification.,[],[],[],[],0,0,0,0,0,0,0,18373,120
+ma_wayland_other_2021,ma_wayland_other_2021,ma_wayland,Wayland,Wayland,other,0,cba,causal,2021-07-01,2023-06-30,2021-2023,ocr_messy,,,,,2021-2023,"COLLECTIVE BARGAINING AGREEMENT
+BETWEEN
+THE TOWN OF WAYLAND
+AND
+LOCAL 690 WAYLAND ~ 1 and LOCAL 690 WAYLAND - 2
+AMERICAN FEDERATION OF STATE,
+COUNTY, AND MUNICIPAL EMPLOYEES
+
+(AFSCME 690 Wayland — 1 a",10,"The agreement sets specific wages and stipends but relies almost entirely on internal schedules/studies, with no explicit peer-jurisdiction wage comparisons to justify terms.",[],[],[],[],0,0,0,0,0,0,0,27431,108
+ma_wayland_public_works_2020,ma_wayland_public_works_2020,ma_wayland,Wayland,Wayland,public_works,0,cba,causal,2020-07-01,2023-06-30,2020-2023,ocr_messy,,,,,2020-2023,"COLLECTIVE BARGAINING AGREEMENT
+
+BETWEEN
+
+TOWN OF WAYLAND
+AND
+WAYLAND DPW ASSOCIATION,
+
+TEAMSTERS LOCAL !70
+
+Effective: July 1, 2020 - June 30, 2023
+
+TABLE OF CONTENTS
+
+ARTICLE
+
+Oo OG +s DA A Rh Wwe P",5,The agreement sets wages and stipends via internal step/base-rate schedules without any explicit comparisons to other employers or jurisdictions.,[],[],[],[],0,0,0,0,0,0,0,20245,75
+ma_wayland_library_2020,ma_wayland_library_2020,ma_wayland,Wayland,Wayland,library,0,cba,causal,2020-07-01,2023-06-30,2020-2023,ocr_messy,,,,,2020-2023,"TOWN OF WAYLAND
+
+BETWEEN THE
+TOWN OF WAYLAND
+AND
+THE WAYLAND LIBRARY STAFF ASSOCIATION
+
+MET, AFT, AFL-CIO
+
+COLLECTIVE BARGANING
+CONTRACT
+
+July 1, 2020 — June 30, 2023
+
+Table of Contents
+
+Preamble ....",5,"Text sets wages and other compensation via fixed percentages, internal step ranges, and internal agreements, with no explicit peer/employer wage comparisons.",[],[],[],[],0,0,0,0,0,0,0,14890,97
+ma_wayland_fire_jlmc_2020,ma_wayland_fire_jlmc_2020,ma_wayland,Wayland,Wayland,fire,1,arbitration_award,causal,2020-07-01,2023-06-30,2020-2023,clean,exact_cycle,library;public_works,ma_wayland_public_works_2020;ma_wayland_library_2020,1,2020-2023,"COMMONWEALTH OF MASSACHUSETTS
+                                  BEFORE THE
+                      JOINT LABOR-MANAGEMENT COMMITTEE
+
+
+                                                           DOCKET NO",0,"The award specifies wage increases and specific pay rates but provides no explicit comparisons to other employers, communities, or jurisdictions.",[],[],[],[],0,0,0,0,0,0,0,1770,88

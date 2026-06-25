@@ -1,0 +1,17 @@
+city_id,city_name,safety_flag,n_rows,mean_score,max_score,rows_with_verified_relevant_excerpts
+ma_arlington,Arlington,0,3,1.67,5,0
+ma_arlington,Arlington,1,1,25.0,25,1
+ma_boston,Boston,0,1,8.0,8,0
+ma_boston,Boston,1,1,5.0,5,0
+ma_franklin,Franklin,0,3,6.67,10,0
+ma_franklin,Franklin,1,3,3.33,5,0
+ma_georgetown,Georgetown,0,1,5.0,5,0
+ma_georgetown,Georgetown,1,1,0.0,0,0
+ma_newton,Newton,1,1,6.0,6,0
+ma_seekonk,Seekonk,0,4,3.25,8,0
+ma_seekonk,Seekonk,1,2,5.0,5,0
+ma_somerville,Somerville,1,2,86.5,88,2
+ma_wayland,Wayland,0,3,6.67,10,0
+ma_wayland,Wayland,1,3,5.0,10,0
+ma_worcester,Worcester,0,2,5.0,5,0
+ma_worcester,Worcester,1,1,8.0,8,0

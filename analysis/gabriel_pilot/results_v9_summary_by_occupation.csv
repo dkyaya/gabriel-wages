@@ -1,0 +1,8 @@
+summary,occupation_class,n_rows,mean_score,median_score,max_score,rows_score_gt_0,rows_with_verified_relevant_excerpts
+by_occupation_class,clerical_admin,3,4.33,5.0,8.0,2,0
+by_occupation_class,fire,6,8.0,6.5,25.0,4,1
+by_occupation_class,library,3,4.33,5.0,8.0,2,0
+by_occupation_class,other,3,8.33,10.0,10.0,3,0
+by_occupation_class,police,9,22.67,5.0,88.0,8,2
+by_occupation_class,public_works,7,3.57,5.0,10.0,4,0
+by_occupation_class,teacher,1,5.0,5.0,5.0,1,0
