@@ -83,3 +83,7 @@ Continue the official-portal strategy before considering PRRs. Best next candida
 - Woburn or Marlborough only after a clean same-cycle counterpart is verified
 
 The next pass should keep the same stop rule: official municipal/school portals first, safety plus at least one clean same-cycle or overlap-cycle non-safety comparator, no broad crawling, and no PRRs.
+
+## Reporting implications
+
+Franklin and Wayland likely justify a first descriptive GABRIEL/reporting pass on the current corpus, but the reporting design needs guardrails. Franklin improves exact-cycle matched CBA structure without solving the non-safety reasoning gap. Wayland adds useful JLMC mechanism evidence, but that evidence is still safety-side and should be reported separately from ordinary CBA rows. Any v9 reporting pass should therefore stratify by `source_type`, `text_quality`, and match tier, and should avoid overcounting same-town cycles that now contain multiple safety rows.

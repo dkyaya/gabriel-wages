@@ -6,6 +6,56 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-06-25 - GABRIEL v9 readiness and reporting-plan audit
+
+**Did**
+- Read the repo instructions, current strategy docs, schema, corpus tables, coverage audit code, and the latest GABRIEL runner/results materials before editing.
+- Created `docs/analysis/gabriel_v9_readiness_2026-06-25.md` as a corpus-readiness, measurement-risk, and reporting-plan memo for the expanded 32-row corpus.
+- Added short strategy/reporting notes to `docs/hypotheses_public_source_strategy_2026-06-24.md` and `docs/acquisition/ma_official_portal_expansion_2026-06-25.md`.
+- Left `data/contracts.csv`, `data/city_coverage.csv`, `corpus/`, `inbox/`, GABRIEL outputs, and scoring code unchanged.
+
+**Decisions and why**
+- Treated the corpus as ready for a first useful descriptive v9/reporting pass because it now has 32 rows, 9 cities, and 12 healthy matched safety rows.
+- Recommended a comparability-only v9 rather than adding new attributes now, because the main current problem is source-type confounding and thin non-safety reasoning evidence, not lack of candidate attributes.
+- Recommended running all 32 causal rows at the row level, but separating reporting by `source_type`, `text_quality`, and match tier to avoid overstating pooled occupation comparisons.
+
+**Surprises/breakage**
+- The current 32-row corpus remains heavily CBA-weighted: 29 `cba` rows versus 3 `arbitration_award` rows.
+- Franklin and Wayland improve exact-cycle coverage materially, but they also increase the need for report-level aggregation discipline because some cities now contribute multiple safety rows in one cycle.
+- Wayland's health-insurance "comparable plan" hits remain a live measurement-risk reminder: verbatim capture is correct, but not all "comparable" language is peer-wage comparability.
+
+**Validation/test results**
+```text
+python scripts/validate.py
+VALIDATION PASSED - all rows conform to docs/schema.md
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Next steps**
+1. v9 now looks justified as a first descriptive reporting pass, provided the write-up is explicit that the output is descriptive and still source-type-confounded.
+2. Keep v9 comparability-only for the first pass; revisit `arbitration_or_impasse_backstop` only after the baseline report exists.
+3. Official portal expansion can still continue before or after v9, but it is no longer a prerequisite for a useful first reporting run.
+4. The main remaining evidence gap is still non-safety reasoning documents comparable to the Somerville and Wayland safety-side award material.
+5. The first report should prioritize row-level scores, quote-audit tables, city and matched-pair summaries, source-type splits, and exact-only versus exact+overlap sensitivities.
+
 ## 2026-06-25 - Franklin and Wayland official portal ingestion
 
 **Did**

@@ -12,6 +12,8 @@ The 2026-06-24 school-committee recon slightly improves the public-only outlook 
 
 The 2026-06-25 Franklin/Wayland official-portal ingestion strengthens the public-only CBA/MOA panel: the corpus reached 32 contracts across 9 cities, with 12 healthy matched safety rows in the coverage audit. Franklin adds a clean 2022-2025 exact-cycle portal batch. Wayland adds a 2020-2023 exact-cycle police/fire/DPW/library set plus a fire JLMC stipulated award, while also illustrating a source-type caveat: safety-side award evidence can still grow faster than comparable non-safety reasoning evidence.
 
+This leaves the project closer to a first descriptive GABRIEL/reporting pass, but not to a clean causal test. Non-safety reasoning evidence remains thin, so any v9 run should be stratified at minimum by `source_type` and match tier rather than presented as a pooled safety-versus-non-safety result.
+
 ## What would count as support for H1 without PRRs
 
 - Public non-safety factfinding or arbitration-like reports that show wage-setting reasoning and can be compared directly to safety awards.
