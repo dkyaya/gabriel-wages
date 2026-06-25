@@ -10,6 +10,7 @@
 - H1-specific mechanism evidence still requires either public non-safety factfinding/arbitration-like documents or an alternate public proxy such as meeting packets and bargaining exhibits.
 - The next pass should look beyond StateReference before more ingestion attempts.
 - Seekonk follow-up on 2026-06-24 found a clean official municipal/school contract portal outside StateReference. Six official public CBA rows were ingested: `ma_seekonk_police_2022`, `ma_seekonk_fire_2022`, `ma_seekonk_clerical_admin_2021`, `ma_seekonk_teacher_2021`, `ma_seekonk_public_works_2023`, and `ma_seekonk_library_2023`. No Seekonk links required manual browser download in that pass.
+- Franklin and Wayland follow-up on 2026-06-25 further confirmed the official-portal route. Twelve public official-portal rows were ingested, including clean Franklin 2022-2025 exact-cycle safety/non-safety CBAs and Wayland 2020-2023 police/fire/DPW/library CBAs plus a fire JLMC stipulated award. Details are in `docs/acquisition/ma_official_portal_expansion_2026-06-25.md`.
 
 ## Candidate table
 

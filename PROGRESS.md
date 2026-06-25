@@ -6,6 +6,59 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-06-25 - Franklin and Wayland official portal ingestion
+
+**Did**
+- Used only official Franklin and Wayland CBA portal routes; no PRRs, no licensed sources, no broad crawling, and no GABRIEL run.
+- Downloaded and verified six Franklin FY23-FY25 CBAs and six Wayland priority documents through `inbox/manifest.csv` and `python ingest/process_inbox.py`.
+- Ingested Franklin rows: `ma_franklin_fire_2022`, `ma_franklin_police_2022`, `ma_franklin_police_sergeants_2022`, `ma_franklin_public_works_2022`, `ma_franklin_library_2022`, and `ma_franklin_other_2022`.
+- Ingested Wayland rows: `ma_wayland_police_2020`, `ma_wayland_fire_2020`, `ma_wayland_other_2021`, `ma_wayland_public_works_2020`, `ma_wayland_library_2020`, and `ma_wayland_fire_jlmc_2020`.
+- Created `docs/acquisition/ma_official_portal_expansion_2026-06-25.md` and added short cross-references in the public-source strategy notes.
+
+**Decisions and why**
+- Classified Franklin custodians as `other` because custodians are not a controlled occupation class and the text does not justify forcing `public_works`.
+- Kept Franklin Police Association and Police Sergeants as separate `police` rows because they are distinct bargaining units in the same town/cycle.
+- Classified Wayland AFSCME 1 and 2 as `other` because recognition covers mixed town employees, and used `ma_wayland_other_2021` because the cover page gives July 1, 2021 through June 30, 2023.
+- Ingested Wayland Fire JLMC as `source_type=arbitration_award` because the document is a JLMC stipulated award modifying the 2020-2023 fire agreement.
+
+**Surprises/breakage**
+- Wayland CBAs were image-only and required OCR; all were ingested as `ocr_messy`.
+- Franklin's `30 Mile Radius - Police / Fire` item is a GIS radius map/list, not a CBA; it was documented as a possible mechanism/proxy lead and kept out of `corpus/`.
+- The regex span extractor flagged some generic health-insurance “comparable plan” language in Wayland rows; treat this as verbatim but not necessarily wage-comparability evidence under the existing relevance-boundary note.
+
+**Validation/test results**
+```text
+python ingest/process_inbox.py
+ingested=12 quarantined=0 missing_file=0 skipped_duplicate=17
+VALIDATION PASSED - all rows conform to docs/schema.md
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python scripts/validate.py
+VALIDATION PASSED - all rows conform to docs/schema.md
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/test_pipeline.py
+40 passed, 0 failed
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Next steps**
+1. Franklin added exact-cycle healthy matched pairs for fire, police association, and police sergeants against same-cycle DPW, library, and custodians/other.
+2. Wayland added exact-cycle healthy matched pairs for police and fire against same-cycle DPW and library; the JLMC award adds safety-side mechanism evidence and appears as an additional matched fire row.
+3. Franklin's 30-mile radius GIS artifact is worth later mechanism/proxy review, not contract ingestion.
+4. Continue official portal expansion to North Andover, Duxbury, Norwood, Ludlow, and Westwood before returning to weaker StateReference-only leads.
+5. H1 remains viable without PRRs for another capped public-only pass, but non-safety reasoning evidence is still thin.
+6. v9 GABRIEL remains premature, though the CBA/MOA panel is getting closer to a useful rerun once source-type caveats are reviewed.
+
 ## 2026-06-24 - Coverage audit match-tier update
 
 **Did**

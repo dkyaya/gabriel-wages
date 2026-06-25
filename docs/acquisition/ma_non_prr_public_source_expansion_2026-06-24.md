@@ -21,6 +21,14 @@ StateReference remains the cheapest route for CBA/MOA expansion, but it does not
 - Top municipality/source to test next: Newton school committee materials, specifically the public `Negotiations 2023-2024` route under `newton.k12.ma.us/school-committee/screports`.
 - No PRRs were used or recommended in that recon pass.
 
+## Official portal update
+
+- Follow-up ingestion memo: [ma_official_portal_expansion_2026-06-25.md](/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages/docs/acquisition/ma_official_portal_expansion_2026-06-25.md)
+- Franklin and Wayland confirmed the Seekonk lesson: official municipal CBA portals can add clean public-only matched CBA/MOA structure without PRRs.
+- Franklin is the cleanest model because safety, DPW, library, and custodial units share the same 2022-2025 cycle.
+- Wayland adds a useful exact-cycle 2020-2023 police/fire/DPW/library set and a fire JLMC stipulated award, but the AFSCME row is mixed and its actual document term is 2021-2023.
+- Next official-portal candidates should remain capped and pre-verified: North Andover, Duxbury, Norwood, Ludlow, and Westwood.
+
 ## Public-source universe
 
 | source_family | examples / URL route | public availability | likely document types | likely occupations | H1 usefulness | expected bottleneck | recommended use | priority |

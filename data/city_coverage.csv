@@ -19,3 +19,15 @@ ma_seekonk,Seekonk,MA,clerical_admin,0,2021-2024,1,ma_seekonk_clerical_admin_202
 ma_seekonk,Seekonk,MA,teacher,0,2021-2024,1,ma_seekonk_teacher_2021,ingested via text_layer
 ma_seekonk,Seekonk,MA,public_works,0,2023-2026,1,ma_seekonk_public_works_2023,ingested via text_layer
 ma_seekonk,Seekonk,MA,library,0,2023-2026,1,ma_seekonk_library_2023,ingested via text_layer
+ma_franklin,Franklin,MA,fire,1,2022-2025,1,ma_franklin_fire_2022,ingested via text_layer
+ma_franklin,Franklin,MA,police,1,2022-2025,1,ma_franklin_police_2022,ingested via text_layer
+ma_franklin,Franklin,MA,police,1,2022-2025,1,ma_franklin_police_sergeants_2022,ingested via text_layer
+ma_franklin,Franklin,MA,public_works,0,2022-2025,1,ma_franklin_public_works_2022,ingested via text_layer
+ma_franklin,Franklin,MA,library,0,2022-2025,1,ma_franklin_library_2022,ingested via text_layer
+ma_franklin,Franklin,MA,other,0,2022-2025,1,ma_franklin_other_2022,ingested via text_layer
+ma_wayland,Wayland,MA,police,1,2020-2023,1,ma_wayland_police_2020,ingested via ocr
+ma_wayland,Wayland,MA,fire,1,2020-2023,1,ma_wayland_fire_2020,ingested via ocr
+ma_wayland,Wayland,MA,other,0,2021-2023,1,ma_wayland_other_2021,ingested via ocr
+ma_wayland,Wayland,MA,public_works,0,2020-2023,1,ma_wayland_public_works_2020,ingested via ocr
+ma_wayland,Wayland,MA,library,0,2020-2023,1,ma_wayland_library_2020,ingested via ocr
+ma_wayland,Wayland,MA,fire,1,2020-2023,1,ma_wayland_fire_jlmc_2020,ingested via text_layer

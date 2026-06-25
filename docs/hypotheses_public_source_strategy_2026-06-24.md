@@ -6,9 +6,11 @@
 
 H1 remains plausible but underidentified.
 
-The strongest mechanism evidence still comes from the Somerville police arbitration awards, where comparability reasoning is explicit and central. Worcester, Arlington, and Georgetown now provide matched structure, but they do not yet provide the same kind of public non-safety reasoning text. StateReference helps scale public CBA/MOA pairs, but it may not solve the core non-safety reasoning-document gap.
+The strongest mechanism evidence still comes from the Somerville police arbitration awards, where comparability reasoning is explicit and central. Worcester, Arlington, Georgetown, Franklin, and Wayland now provide matched structure, but they do not yet provide the same kind of public non-safety reasoning text. StateReference and official municipal portals help scale public CBA/MOA pairs, but they may not solve the core non-safety reasoning-document gap.
 
 The 2026-06-24 school-committee recon slightly improves the public-only outlook because Newton, Somerville, and Boston all expose public meeting-materials routes that could contain bargaining or wage-setting proxy evidence. That does not change the pivot threshold yet, but it does justify one targeted packet-review pass before concluding that the non-safety reasoning-document gap is insurmountable in public sources.
+
+The 2026-06-25 Franklin/Wayland official-portal ingestion strengthens the public-only CBA/MOA panel: the corpus reached 32 contracts across 9 cities, with 12 healthy matched safety rows in the coverage audit. Franklin adds a clean 2022-2025 exact-cycle portal batch. Wayland adds a 2020-2023 exact-cycle police/fire/DPW/library set plus a fire JLMC stipulated award, while also illustrating a source-type caveat: safety-side award evidence can still grow faster than comparable non-safety reasoning evidence.
 
 ## What would count as support for H1 without PRRs
 
@@ -48,8 +50,8 @@ The public corpus may overrepresent certain document types, employers, or disput
 
 ## Recommendation
 
-Continue public-source H1 work for one more structured pass.
+Continue public-source H1 work for one more structured pass, with official municipal portals now promoted as the best near-term CBA/MOA scaling route.
 
-Do not run v9. Do not use PRRs unless the PI later reauthorizes them. Use the next pass to test whether public non-safety reasoning evidence can be found through DLR route checks, school-committee meeting materials, and large-city labor portals.
+Do not run v9. Do not use PRRs unless the PI later reauthorizes them. Use the next pass to test whether public non-safety reasoning evidence can be found through DLR route checks, school-committee meeting materials, large-city labor portals, and capped official-portal candidates such as North Andover, Duxbury, Norwood, Ludlow, and Westwood.
 
 If that pass still yields mostly CBA/MOA growth and no credible non-safety reasoning set, preserve H1 as suggestive and pivot the framing toward document type, arbitration backstops, and public-availability selection rather than forcing a clean occupation-only claim.
