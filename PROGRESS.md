@@ -6,6 +6,68 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-06-26 - Mechanism-source recon consolidation audit
+
+**Did**
+- Confirmed the Newton/Somerville/Boston mechanism-source planning file, three city recon memos, and combined queue all existed and were non-empty.
+- Audited the three city memos against the filled planning note and confirmed each memo covers purpose, research value, source routes, search terms, candidate evidence, evidence classification, corpus-handling, stop rules, and recommended next action.
+- Created `docs/analysis/mechanism_source_summary_2026-06-26.md` as a short PI-ready interpretation note and added a light cross-reference in `docs/hypotheses_public_source_strategy_2026-06-24.md`.
+- Made one minimal queue correction so an index-only Boston row is no longer tagged as a `causal_candidate`.
+
+**Decisions and why**
+- Treated this as a consolidation and note-cleanup pass, not a new search, because the 2026-06-26 recon already produced the relevant bounded public-source evidence.
+- Left the planning file untouched even though the earlier recon ran before it was filled in; the current task was to audit against it, not rewrite it.
+- Kept Boston as the headline lead because it still provides the only explicit public non-safety peer-wage comparison in the audited queue.
+
+**Surprises/breakage**
+- The filled planning file still lists expected output filenames dated `2026-06-25`, while the actual recon outputs are dated `2026-06-26`; the underlying content is still coherent, so this pass only noted the mismatch.
+- The queue was already structurally clean: 23 candidates, no duplicate `candidate_id` values, and no missing `city` or `source_url` fields.
+- The only substantive queue issue was one Boston index route that overstated `likely_corpus_destination`.
+
+**Validation/test results**
+```text
+python scripts/validate.py
+VALIDATION PASSED - all rows conform to docs/schema.md
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Mechanism-source audit snapshot**
+```text
+recon files checked: 5
+city memos complete against plan sections: Newton yes | Somerville yes | Boston yes
+queue candidates: 23
+queue correction made: 1
+Boston strongest explicit peer-wage lead: yes
+new ingestion recommended now: no
+```
+
+**Next steps**
+1. The 2026-06-26 recon files now look complete for audit and PI review.
+2. Boston remains the strongest public non-safety peer-wage lead.
+3. Newton and Somerville, if revisited later, should use narrow manual packet follow-up rather than another broad recon pass.
+4. No ingestion is recommended now from this mechanism-source set.
+5. H1 remains plausible but underidentified.
+6. Any v10 attribute design, especially `arbitration_or_impasse_backstop`, should wait for PI review of v9 plus this summary.
+7. PRRs remain deferred.
+
 ## 2026-06-26 - Newton/Somerville/Boston mechanism-source recon
 
 **Did**
