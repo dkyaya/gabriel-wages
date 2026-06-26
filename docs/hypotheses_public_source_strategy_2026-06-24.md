@@ -16,6 +16,8 @@ This leaves the project closer to a first descriptive GABRIEL/reporting pass, bu
 
 The 2026-06-25 GABRIEL v9 descriptive run confirms that caution. The overall safety mean exceeds the non-safety mean, but the high scores come from safety-side arbitration awards. The CBA-only and excluding-award samples have low comparability scores, so v9 strengthens the source-type/document-production caveat more than it strengthens an occupation-only H1 claim.
 
+The 2026-06-26 Newton/Somerville/Boston mechanism-source recon improves the public-only route but does not close the identification gap. Boston produced the clearest public non-safety peer-wage lead: the BPS BTU negotiations page includes surrounding-district teacher salary comparisons. Newton and Somerville produced useful public bargaining-process, settlement-summary, and wage-rationale materials, but the inspected documents were mostly proposals, presentations, summaries, CBA indexes, or final CBAs rather than non-safety awards/factfinding reports. No new causal rows were ingested, and PRRs remain deferred.
+
 ## What would count as support for H1 without PRRs
 
 - Public non-safety factfinding or arbitration-like reports that show wage-setting reasoning and can be compared directly to safety awards.

@@ -134,6 +134,10 @@ Low CBA scores should be interpreted cautiously. CBAs and MOAs may understate ba
 3. Prioritize Newton, Somerville, and Boston mechanism materials for public reasoning evidence.
 4. Keep PRRs deferred unless the PI changes preference.
 
+## Post-Report Acquisition Note
+
+The 2026-06-26 Newton/Somerville/Boston public mechanism-source recon found the strongest non-safety peer-wage lead in Boston: the public BPS BTU negotiations page includes surrounding-district salary comparisons. Newton and Somerville produced useful bargaining-process and settlement-summary materials, but mostly as mechanism proxies rather than clean causal-corpus rows. This reinforces the report's main caveat: H1 remains plausible, but source-type confounding and thin non-safety reasoning documents remain central.
+
 ## Output files
 
 - `analysis/gabriel_pilot/results_v9.csv`

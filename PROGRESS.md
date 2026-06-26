@@ -6,6 +6,71 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-06-26 - Newton/Somerville/Boston mechanism-source recon
+
+**Did**
+- Ran a bounded public-only mechanism-source recon for Newton, Somerville, and Boston, focused on non-safety wage-reasoning evidence rather than CBA expansion.
+- Created city memos for Newton, Somerville, and Boston plus a combined mechanism-source queue.
+- Updated the public-source H1 strategy note and the v9 preliminary report source markdown with the post-v9 acquisition implication.
+- Downloaded targeted public PDFs/HTML to `/tmp` for inspection only; no files were added to `corpus/`, `inbox/`, or `data/`.
+
+**Decisions and why**
+- Did not ingest any rows because the best new evidence is mechanism-proxy material: proposals, mediation materials, settlement summaries, public bargaining pages, presentations, CBA indexes, and ordinary CBAs.
+- Treated Boston as the strongest peer-wage lead because the public BPS BTU negotiations page includes surrounding-district teacher salary comparisons.
+- Treated Newton and Somerville as useful wage-rationale/proxy routes, but not as clean non-safety award/factfinding equivalents.
+- Kept PRRs deferred and did not recommend them.
+
+**Surprises/breakage**
+- `docs/acquisition/ma_newton_somerville_boston_mechanism_source_plan_2026-06-26.md` existed but was empty, so the recon followed the user-supplied source routes directly and left the plan file untouched.
+- BTU targeted bargaining-summary pages were public, but simple public HTML fetches exposed little clean body text; the BPS negotiations page and April 2025 presentation were more useful.
+- Newton had the richest proposal/mediation trail, but no inspected Newton document provided a clean peer-district wage-comparison exhibit.
+
+**Validation/test results**
+```text
+python scripts/validate.py
+VALIDATION PASSED - all rows conform to docs/schema.md
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+
+python ingest/test_pipeline.py
+40 passed, 0 failed
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Mechanism-source snapshot**
+```text
+queue candidates: 23
+by city: Newton 9 | Somerville 8 | Boston 6
+by priority: P1 8 | P2 5 | P3 9 | defer 1
+likely destinations: mechanism_proxy 9 | causal_candidate 7 | acquisition_lead_only 7
+comparability signals: peer_wage_comparison 1 | general_wage_rationale 9 | contract_cost_only 6 | unclear 5 | none 2
+```
+
+**Next steps**
+1. Boston produced the strongest mechanism evidence because its public BPS BTU negotiations page has an explicit surrounding-district salary comparison.
+2. Public non-safety peer-comparison evidence was found, but only as a mechanism proxy, not as a final causal-corpus document.
+3. No causal rows were ingested; Newton/Somerville/Boston materials were documented as mechanism proxies, causal candidates, or acquisition leads.
+4. H1 remains plausible but underidentified because the best non-safety evidence is not yet award/factfinding-equivalent.
+5. v10 should consider `arbitration_or_impasse_backstop`, but only after PI review of v9 and this mechanism-source queue.
+6. If more public-only acquisition is needed, prioritize Boston supplemental-appropriation materials and targeted Somerville/Newton packet review.
+7. PRRs remain deferred.
+
 ## 2026-06-25 - GABRIEL v9 descriptive comparability run
 
 **Did**
