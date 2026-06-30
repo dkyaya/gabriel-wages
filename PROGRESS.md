@@ -6,6 +6,52 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-06-29 - Boston BTU salary-comparison lead verification
+
+**Did**
+- Verified the existing Boston `peer_wage_comparison` queue lead against the official Boston Public Schools / School Committee BTU negotiations page.
+- Confirmed the page contains the table titled "Minimum and Maximum Teacher Salary with a Masters Comparisons to Surrounding Districts / School Year 24-25."
+- Created `docs/acquisition/ma_boston_btu_salary_comparison_deep_dive_2026-06-29.md` as a short verification memo and left `data/`, `corpus/`, and `inbox/` unchanged.
+
+**Decisions and why**
+- Kept the Boston lead classified as `mechanism_proxy` because the verified source is a public bargaining/communications page rather than a final CBA, arbitration award, or factfinding report.
+- Kept `comparability_signal = peer_wage_comparison` because the page directly compares Boston teacher salary levels with surrounding districts.
+- Left the queue unchanged because the verified page matched the existing Boston row's classification (`wage_reasoning_signal = high`, `document_type = bargaining_update`, `priority = P1`).
+
+**Surprises/breakage**
+- No queue correction was needed; the existing Boston classification was already accurate.
+- The strongest non-safety comparability evidence remains a public bargaining page rather than a causal-corpus reasoning document, so the source-type caveat for H1 remains central.
+
+**Validation/test results**
+```text
+python scripts/validate.py
+VALIDATION PASSED - all rows conform to docs/schema.md
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Next steps**
+1. Retain the Boston BTU negotiations page as the primary public non-safety peer-wage mechanism lead.
+2. Do not ingest the page into `contracts.csv`.
+3. If later Boston follow-up is authorized, treat nearby bargaining materials as mechanism-proxy support unless a true final reasoning document appears.
+
 ## 2026-06-26 - Mechanism-source recon consolidation audit
 
 **Did**
