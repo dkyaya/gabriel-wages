@@ -6,6 +6,88 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-06-30 - GABRIEL web-search extraction pilot seed
+
+**Did**
+- Inspected local GABRIEL and ingestion tooling for a callable web-search function.
+- Confirmed no local city/query GABRIEL web-search function is available in the repo.
+- Created `docs/acquisition/gabriel_websearch_mass_city_pilot_sources_2026-06-30.csv`.
+- Created `docs/acquisition/gabriel_websearch_mass_city_pilot_extractions_2026-06-30.csv`.
+- Created `docs/analysis/gabriel_websearch_mass_city_pilot_summary_2026-06-30.md`.
+- Created `docs/acquisition/gabriel_websearch_city_prompt_template_2026-06-30.md`.
+- Updated `docs/analysis/chatgpt_handoff_latest.md` with the Thursday pilot status and next-run recommendation.
+
+**Decisions and why**
+- Treated the output as design/seed only because the repo has local GABRIEL scoring runners and fetcher scaffolding, but no safe web-search function that can accept city/query input and return URLs, snippets, source classifications, or multi-attribute extractions.
+- Seeded the pilot from already known public leads and existing corpus metadata rather than doing broad web search or scraping.
+- Kept the lane distinction explicit: causal candidates, mechanism-proxy materials, discourse candidates, and lead-only index pages are not merged.
+- Used Boston BTU as a mechanism-proxy calibration source only; peer-wage comparison alone remains non-evidence for `arbitration_or_impasse_backstop`.
+- Used Wayland DPW and Seekonk DPW as ordinary grievance-arbitration exclusion examples.
+
+**Surprises/breakage**
+- No executable GABRIEL web-search function was present locally.
+- The only web-facing code found was `ingest/fetchers/`, whose live parsing is intentionally unimplemented until selectors are confirmed.
+- An optional one-line CSV parse/count check initially failed due shell quoting, then passed with 15 source rows and 34 extraction rows.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+**GABRIEL web-search pilot snapshot**
+```text
+status: design/seed only; web-search function not executed
+cities: Boston, Somerville, Newton, Wayland, Seekonk
+source candidates retained: 15
+sources per city: 3
+known calibration sources included: Boston BTU, Somerville police JLMC/arbitration packets, Wayland fire JLMC, Seekonk official CBA archive PDFs
+ingestion performed: no
+```
+
+**extraction snapshot**
+```text
+extraction rows: 34
+attributes covered: comparability_emphasis, arbitration_or_impasse_backstop, wage_reasoning_density, named_comparator_signal, source_ingestability
+Boston BTU: high comparability and named-comparator signal; no v10 impasse backstop from peer comparison alone
+Somerville police awards: high comparability and high arbitration/impasse calibration
+Newton materials: mechanism-proxy or manual-review leads
+Wayland/Seekonk ordinary CBAs: source-ingestability or grievance-arbitration exclusion checks
+```
+
+**Thursday presentation snapshot**
+```text
+usable artifact: docs/analysis/gabriel_websearch_mass_city_pilot_summary_2026-06-30.md
+message: the schema and calibration harness are ready, but the repo did not expose the web-search function
+ask for toolkit creator: provide invocation shape, credentials/env vars, rate limits, result schema, and extraction hook
+recommended live run: five-city bounded pilot only, then compare against seeded calibration rows
+```
+
+**Next steps**
+1. Use the summary memo as the Thursday discussion artifact.
+2. If the toolkit creator exposes a callable GABRIEL web-search function, run the same five-city pilot live and compare returned results against the seeded calibration rows.
+3. Keep ingestion paused until a separate task authorizes manual verification and pipeline processing.
+
 ## 2026-06-30 - repaired v10 gold set and bounded retry
 
 **Did**

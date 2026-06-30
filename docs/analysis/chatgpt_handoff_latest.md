@@ -2,7 +2,70 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-06-30T11:14:52-04:00`
+Last updated: `2026-06-30T18:55:45-04:00`
+
+---
+
+## 2026-06-30T18:55:45-04:00 - GABRIEL web-search extraction pilot seeded
+
+**Commit:** pending in current session
+
+### Current State After This Entry
+
+- The v10 all-32 causal pilot is paused.
+- The immediate priority shifted to a Thursday-facing GABRIEL web-search/source-extraction pilot.
+- No local GABRIEL web-search function was found or executed.
+- The repo contains GABRIEL scoring runners for local text inputs and ingestion fetcher scaffolding, but no safe city/query web-search interface that returns URLs, snippets, source classifications, or multi-attribute extractions.
+- The pilot outputs are therefore design/seed artifacts from already known public leads and existing corpus metadata, not autonomous search results.
+- No ingestion happened, and no production corpus files were modified.
+
+### Corpus Snapshot
+
+- Contracts: 32
+- Discourse rows: 0
+- Coverage rows: 32
+- City attributes rows: 3
+- Cities: 9
+- Healthy matched pairs: 12
+- Exact-cycle matched pairs: 9
+- Overlap-cycle matched pairs: 3
+- Exploratory adjacent matches: 0
+- Unmatched safety rows: 3
+- Unmatched safety obs_ids: `ma_somerville_police_spsoa_2012`, `ma_somerville_police_spea_2012`, `ma_newton_police_2015`
+
+### What Changed
+
+- Created source-discovery seed CSV: `docs/acquisition/gabriel_websearch_mass_city_pilot_sources_2026-06-30.csv`.
+- Created evidence-extraction seed CSV: `docs/acquisition/gabriel_websearch_mass_city_pilot_extractions_2026-06-30.csv`.
+- Created presentation-ready summary memo: `docs/analysis/gabriel_websearch_mass_city_pilot_summary_2026-06-30.md`.
+- Created reusable city-search prompt template: `docs/acquisition/gabriel_websearch_city_prompt_template_2026-06-30.md`.
+- Updated this handoff log and `PROGRESS.md`.
+
+### Pilot Snapshot
+
+- Pilot status: design/seed only; web-search function not executed.
+- Cities covered: Boston, Somerville, Newton, Wayland, Seekonk.
+- Source candidates retained: 15, with 3 per city.
+- Extraction rows created: 34.
+- Source families: BPS/BTU bargaining materials, Somerville police award packets, Newton teacher bargaining materials, Wayland JLMC/CBA sources, and Seekonk official archive CBAs.
+
+### Calibration Status
+
+- Boston BPS/BTU negotiations page was included as a seed calibration source, not rediscovered by local web search.
+- Somerville police JLMC/arbitration materials were included as seed calibration sources, not rediscovered by local web search.
+- Newton mechanism-proxy materials, Wayland fire JLMC, and Seekonk official CBA archive sources were included as seed checks for future live search.
+- Boston BTU remains mechanism-proxy/discourse-lane evidence only; peer-wage comparison alone should not trigger `arbitration_or_impasse_backstop`.
+- Ordinary grievance arbitration remains an exclusion boundary, illustrated with Wayland DPW and Seekonk DPW CBA rows.
+
+### Open Decisions
+
+- The toolkit creator needs to provide or expose the actual GABRIEL web-search invocation before this can become an executed acquisition assistant test.
+- Future live runs should keep a hard cap by city and query, return source candidates before extraction, and preserve causal versus mechanism-proxy versus discourse lanes.
+- Do not expand to ingestion until a separate ingestion task authorizes manual verification and pipeline processing.
+
+### Recommended Next Codex Run
+
+If the toolkit creator provides a callable GABRIEL web-search function, run the five-city pilot live using the template and compare returned sources against the seeded calibration rows. If no callable function is available, use the seed memo as the Thursday discussion artifact and ask for the missing web-search API shape: inputs, outputs, credentials, rate limits, and extraction schema.
 
 ---
 
