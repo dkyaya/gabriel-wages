@@ -218,3 +218,13 @@ The first small hand-coded gold set for this attribute now lives at:
 - `docs/analysis/gabriel_v10_gold_set_memo_2026-06-29.md`
 
 Those files should be used before any v10 model pass to pressure-test the grievance-arbitration false-positive boundary.
+
+## Gold dry-run note
+
+The first bounded dry-run on the 11-row gold set lives at:
+
+- `docs/analysis/gabriel_v10_gold_set_2026-06-29.csv`
+- `docs/analysis/gabriel_v10_gold_dryrun_report_2026-06-29.md`
+- `analysis/gabriel_pilot/results_v10_gold_dryrun_2026-06-29.csv`
+
+The candidate prompt passed the main grievance-arbitration boundary for Boston SENA, Seekonk DPW, and Seekonk teachers, and it kept Boston BTU low despite peer-wage comparison content. One formal failure occurred on Arlington DPW, but manual inspection found a separate duration/reopener clause referencing an impasse procedure with mediation/factfinding and money issues. Treat that row as a gold-set contamination or construct-boundary case before any all-32 causal pilot.

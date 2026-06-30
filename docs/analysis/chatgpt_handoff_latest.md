@@ -38,10 +38,41 @@
 
 ## Current next-step recommendation
 
-Do a prompt dry-run on the small v10 gold set before any broader `arbitration_or_impasse_backstop` pass. The main implementation risk is false positives from ordinary grievance-arbitration boilerplate in CBAs.
+Do not run the all-32 v10 causal pilot yet. The first 11-row gold dry-run suggests the candidate prompt handles ordinary grievance-arbitration boilerplate reasonably well, but the gold set needs repair around Arlington-style future reopener/impasse clauses before broader scoring.
+
+## Latest v10 gold dry-run result
+
+- Runner: `analysis/gabriel_pilot/run_gabriel_v10_gold_dryrun.py`
+- Input: `analysis/gabriel_pilot/input_v10_gold_2026-06-29.csv`
+- Results: `analysis/gabriel_pilot/results_v10_gold_dryrun_2026-06-29.csv`
+- Audit: `analysis/gabriel_pilot/results_v10_gold_dryrun_audit_2026-06-29.csv`
+- Report: `docs/analysis/gabriel_v10_gold_dryrun_report_2026-06-29.md`
+
+Score summary:
+
+- Clear positives: n=3, scores `96, 96, 88`, all above `51`.
+- Clear negatives: n=4, scores `0, 10, 0, 0`, all at or below `25`.
+- False-positive traps: n=4, scores `20, 70, 10, 15`; three of four passed.
+- Boston BTU mechanism-proxy negative: score `0`.
+
+Interpretation:
+
+- Formal audit result: 10 of 11 boundary tests passed.
+- The lone failure was `ma_arlington_public_works_2018`, scored `70`.
+- Manual inspection found the Arlington full text contains a duration/reopener clause referencing an impasse procedure with mediation/factfinding and money issues. That is not grievance-arbitration boilerplate, so the failure is likely a contaminated gold row or unresolved construct boundary.
+
+Readiness:
+
+- v10 is **not ready for a broader all-32 pilot** until the Arlington boundary is resolved.
+- The next recommended Codex run is to revise the gold set: recode or replace Arlington, add at least one clean grievance-only DPW trap, add one or two future-reopener/impasse edge cases, then run one bounded gold-set retry.
 
 ## Files changed in this run
 
+- `analysis/gabriel_pilot/run_gabriel_v10_gold_dryrun.py`
+- `analysis/gabriel_pilot/input_v10_gold_2026-06-29.csv`
+- `analysis/gabriel_pilot/results_v10_gold_dryrun_2026-06-29.csv`
+- `analysis/gabriel_pilot/results_v10_gold_dryrun_audit_2026-06-29.csv`
+- `docs/analysis/gabriel_v10_gold_dryrun_report_2026-06-29.md`
 - `docs/analysis/gabriel_v10_gold_set_2026-06-29.csv`
 - `docs/analysis/gabriel_v10_gold_set_memo_2026-06-29.md`
 - `docs/analysis/gabriel_v10_arbitration_impasse_design_2026-06-29.md`
@@ -57,4 +88,4 @@ Do a prompt dry-run on the small v10 gold set before any broader `arbitration_or
 
 ## Suggested next Codex run
 
-Use the gold set to draft and test exact v10 prompt language against the 11 hand-coded rows, with special attention to keeping grievance-arbitration boilerplate near `0` to `1_25` and keeping Boston BTU negative for this attribute despite its strong peer-wage content.
+Repair the v10 gold set before any all-32 causal pass. Specifically: inspect Arlington DPW Article XXX, decide whether future reopener/impasse clauses count for v10, recode or replace that row, add a clean grievance-only DPW trap plus one or two future-reopener edge cases, then run one bounded gold-set retry.

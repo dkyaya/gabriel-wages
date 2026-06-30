@@ -6,6 +6,80 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-06-30 - v10 gold prompt dry-run
+
+**Did**
+- Built `analysis/gabriel_pilot/run_gabriel_v10_gold_dryrun.py` as a bounded v10 runner for the 11-row hand-coded gold set only.
+- Created `analysis/gabriel_pilot/input_v10_gold_2026-06-29.csv` from the gold-set CSV, existing `contracts.csv` metadata, existing v9-extracted causal text, and memo-only Boston mechanism-proxy context.
+- Ran the candidate `arbitration_or_impasse_backstop` prompt once and wrote `analysis/gabriel_pilot/results_v10_gold_dryrun_2026-06-29.csv` plus `analysis/gabriel_pilot/results_v10_gold_dryrun_audit_2026-06-29.csv`.
+- Created `docs/analysis/gabriel_v10_gold_dryrun_report_2026-06-29.md`.
+- Updated the v10 design memo and latest ChatGPT handoff with the dry-run result and next-run recommendation.
+
+**Decisions and why**
+- Reused the existing v9 extracted full text for causal rows rather than re-extracting PDFs, because it is the same local source-text path and avoids touching corpus files.
+- Kept Boston BTU as mechanism-proxy dry-run context from existing notes only, because no staged full page text was needed for the boundary test and the instruction prohibited broad scraping.
+- Did not run a retry, because the lone failure was not grievance-arbitration boilerplate being over-scored; Arlington DPW contains a separate duration/reopener clause with impasse procedure, mediation/factfinding, and money-issue language.
+- Recommended repairing the gold set before an all-32 pilot, because the Arlington row is now a construct-boundary or gold-contamination case rather than a clean false-positive trap.
+
+**Surprises/breakage**
+- The first sandboxed model call failed on DNS/network resolution; rerunning the same bounded script with approved network access succeeded.
+- `ma_arlington_public_works_2018` was labeled as a grievance-arbitration trap, but the full text includes an Article XXX reopener/impasse clause: if agreement cannot be reached, parties may use mediation/factfinding under Chapter 1078 and present money issues to Town Meeting.
+- The local quote relevance screen was conservative: it kept scores and audit fields usable, but it over-filtered some JLMC/stipulated-award and impasse excerpts.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+
+python -m py_compile analysis/gabriel_pilot/run_gabriel_v10_gold_dryrun.py
+passed
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**v10 gold dry-run snapshot**
+```text
+gold-set rows scored: 11
+clear_positive: n=3 | scores 96, 96, 88 | all >= 51
+clear_negative: n=4 | scores 0, 10, 0, 0 | all <= 25
+false_positive_trap: n=4 | scores 20, 70, 10, 15 | 3 of 4 <= 25
+Boston BTU mechanism-proxy negative: score 0
+formal boundary failures: 1
+retry run: no
+```
+
+**Prompt-boundary results**
+```text
+grievance-only traps stayed low: mostly yes
+false-positive traps all <= 25: no
+clear positives all >= 51: yes
+Boston peer-wage-only mechanism proxy stayed low: yes
+main issue: Arlington is not a clean grievance-boilerplate trap because full text contains impasse/reopener language
+recommendation: needs more gold rows / gold-set repair before all-32 causal pilot
+```
+
+**Next steps**
+1. Decide whether future reopener clauses with mediation/factfinding and money-issue language count for `arbitration_or_impasse_backstop`.
+2. Recode or replace Arlington in the gold set based on that decision.
+3. Add at least one clean grievance-only DPW trap and one or two future-reopener edge cases, then run one bounded gold-set retry.
+
 ## 2026-06-29 - v10 gold set and ChatGPT handoff
 
 **Did**
