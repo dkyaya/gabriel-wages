@@ -33,6 +33,12 @@ Local inspection found:
 
 Because the callable web-search function was unavailable, the CSVs created here are manually seeded from already known public-source leads in repo notes and existing corpus metadata. They are labeled as design/seed outputs and should not be read as search results.
 
+Follow-up scaffold note:
+
+- the first seed run confirmed there is no local built-in web-search function in this repo;
+- the next integration step now uses a custom `get_all_responses_fn` scaffold via `analysis/gabriel_pilot/gabriel_websearch_custom_fn.py`;
+- live search still requires the toolkit creator to provide the callable `web_search` backend or exact invocation details.
+
 ## 4. Cities Searched
 
 The pilot scope is structured around five Massachusetts cities:

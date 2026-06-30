@@ -2,7 +2,59 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-06-30T18:55:45-04:00`
+Last updated: `2026-06-30T21:00:00-04:00`
+
+---
+
+## 2026-06-30T21:00:00-04:00 - custom GABRIEL web-search scaffold added
+
+**Commit:** pending in current session
+
+### Current State After This Entry
+
+- The repo still has no built-in local GABRIEL web-search function.
+- A custom `get_all_responses_fn` scaffold now exists for Thursday demonstration use.
+- The scaffold defaults to seed/dry-run mode using the existing five-city pilot CSVs.
+- No live web search was executed.
+- No ingestion happened, and no production corpus files were modified.
+
+### What Changed
+
+- Created custom hook scaffold: `analysis/gabriel_pilot/gabriel_websearch_custom_fn.py`.
+- Created seed demo runner: `analysis/gabriel_pilot/run_gabriel_websearch_seed_demo.py`.
+- Created design memo: `docs/analysis/gabriel_websearch_custom_function_design_2026-06-30.md`.
+- Updated the pilot summary note in `docs/analysis/gabriel_websearch_mass_city_pilot_summary_2026-06-30.md`.
+- Ran the seed demo and wrote:
+  - `analysis/gabriel_pilot/results_gabriel_websearch_seed_demo_2026-06-30.csv`
+  - `analysis/gabriel_pilot/results_gabriel_websearch_seed_demo_sources_2026-06-30.csv`
+  - `analysis/gabriel_pilot/results_gabriel_websearch_seed_demo_extractions_2026-06-30.csv`
+
+### Scaffold Status
+
+- `custom_get_all_responses` implemented: yes.
+- Required signature handled: `prompts`, `identifiers`, `json_mode`, `model`, `api_key`, `web_search`, `**kwargs`.
+- Return shape: pandas dataframe with `Identifier` and `Response`.
+- Default response mode: JSON payload string with `city`, `status`, `source_candidates`, `extractions`, and `notes`.
+- Optional live path: placeholder only, bounded, off by default, and depends on a future callable `web_search` backend.
+
+### Seed Demo Snapshot
+
+- Seed demo ran: yes.
+- City responses written: 5.
+- Parsed source rows written: 15.
+- Parsed extraction rows written: 34.
+- Status: dry-run only; no live acquisition or search execution.
+
+### Recommended Thursday Talking Points
+
+- The local repo exposes direct model runners on local text, not a reusable web-search hook.
+- The new scaffold shows the expected callback shape for city-by-city bounded source search plus extraction.
+- The calibration harness is already attached through the 15 seeded source rows and 34 extraction rows.
+- The toolkit creator still needs to specify the exact `web_search` callable contract, result schema, citation preservation behavior, and retry/rate-limit expectations.
+
+### Recommended Next Codex Run
+
+If the toolkit creator provides the real `web_search` backend shape, wire it into `custom_get_all_responses` and rerun only the same five-city pilot with strict result caps. If not, use the scaffold and memo as the Thursday integration discussion artifact and keep execution in seed mode only.
 
 ---
 

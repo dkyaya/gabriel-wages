@@ -6,6 +6,100 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-06-30 - GABRIEL custom web-search scaffold seed demo
+
+**Did**
+- Inspected the repo for GABRIEL extension hooks and confirmed there are no local matches for `response_fn`, `get_all_responses_fn`, `embedding_fn`, `get_all_embeddings_fn`, `json_mode`, or `web_search`.
+- Created `analysis/gabriel_pilot/gabriel_websearch_custom_fn.py` as a custom `get_all_responses_fn` scaffold with seed/dry-run default behavior and bounded optional live-mode placeholders.
+- Created `analysis/gabriel_pilot/run_gabriel_websearch_seed_demo.py`.
+- Ran the seed demo and wrote:
+  - `analysis/gabriel_pilot/results_gabriel_websearch_seed_demo_2026-06-30.csv`
+  - `analysis/gabriel_pilot/results_gabriel_websearch_seed_demo_sources_2026-06-30.csv`
+  - `analysis/gabriel_pilot/results_gabriel_websearch_seed_demo_extractions_2026-06-30.csv`
+- Created `docs/analysis/gabriel_websearch_custom_function_design_2026-06-30.md`.
+- Updated `docs/analysis/gabriel_websearch_mass_city_pilot_summary_2026-06-30.md` and `docs/analysis/chatgpt_handoff_latest.md`.
+
+**Decisions and why**
+- Kept the implementation in seed/dry-run mode because the repo still lacks a safe local live-search backend and the task explicitly forbids broad live search unless that backend already exists.
+- Used the existing 15-row source seed CSV and 34-row extraction seed CSV as the calibration harness so the scaffold demonstrates realistic output shape without inventing search results.
+- Returned JSON payload strings inside a dataframe with `Identifier` and `Response`, because that is the narrowest plausible shape for the GABRIEL tutorial hook while staying easy to flatten back into source and extraction tables.
+- Left optional live mode bounded and off by default, with explicit fallback to seeded payloads if a future backend callable fails.
+
+**Surprises/breakage**
+- The first demo run failed because the new scaffold resolved the repo root one directory too high; fixed by changing the root from `HERE.parent.parent.parent` to `HERE.parent.parent`.
+- Validation, coverage audit, and both `py_compile` checks passed after that fix.
+
+**Validation/audit results**
+```text
+python analysis/gabriel_pilot/run_gabriel_websearch_seed_demo.py
+wrote responses: analysis/gabriel_pilot/results_gabriel_websearch_seed_demo_2026-06-30.csv
+wrote sources: analysis/gabriel_pilot/results_gabriel_websearch_seed_demo_sources_2026-06-30.csv rows=15
+wrote extractions: analysis/gabriel_pilot/results_gabriel_websearch_seed_demo_extractions_2026-06-30.csv rows=34
+
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+
+python -m py_compile analysis/gabriel_pilot/gabriel_websearch_custom_fn.py
+passed
+
+python -m py_compile analysis/gabriel_pilot/run_gabriel_websearch_seed_demo.py
+passed
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+**custom GABRIEL web-search function snapshot**
+```text
+file: analysis/gabriel_pilot/gabriel_websearch_custom_fn.py
+hook implemented: custom_get_all_responses
+accepted args: prompts, identifiers, json_mode, model, api_key, web_search, **kwargs
+default execution mode: seed_dry_run
+live search executed: no
+live mode default: off
+live dependency still missing: real callable web_search backend contract from toolkit creator
+```
+
+**seed demo snapshot**
+```text
+pilot cities: Boston, Somerville, Newton, Wayland, Seekonk
+responses written: 5
+source rows written: 15
+extraction rows written: 34
+response payload fields: city, status, source_candidates, extractions, notes
+docs/acquisition seed files overwritten: no
+```
+
+**Thursday presentation snapshot**
+```text
+core artifact: docs/analysis/gabriel_websearch_custom_function_design_2026-06-30.md
+supporting artifact: analysis/gabriel_pilot/results_gabriel_websearch_seed_demo_2026-06-30.csv
+main message: the integration shape is now concrete, but live search still depends on the toolkit creator exposing the backend callable and return schema
+recommended discussion focus: backend signature, result object shape, citations/URLs, JSON mode, streaming, retries, and rate limits
+```
+
+**Next steps**
+1. Use the new design memo and seed demo outputs as the Thursday discussion artifact.
+2. Ask the toolkit creator for the exact `web_search` callable contract and expected return format.
+3. If that backend becomes available, rerun only the same five-city bounded pilot before considering any broader search work.
+
 ## 2026-06-30 - GABRIEL web-search extraction pilot seed
 
 **Did**
