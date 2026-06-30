@@ -6,6 +6,74 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-06-29 - v9 comparator-edge extraction memo
+
+**Did**
+- Reviewed the required v9 results, v9 quote audit, comparator-network design memo, Boston BTU deep-dive memo, and readable v9 preliminary PDF.
+- Created `docs/analysis/comparator_edges_from_v9_verified_excerpts_2026-06-29.md` as a memo-only edge extraction from quote-audited causal evidence.
+- Made a small cleanup to `docs/analysis/comparator_network_design_2026-06-29.md` so the proposed schema now separates `document_date` from `verification_date`, and the Boston illustrative rows no longer use the prior placeholder date as a document date.
+
+**Decisions and why**
+- Counted only quote-audit `supporting_relevant` excerpts as eligible starting material, because the task was to test extraction rules on already verified causal evidence.
+- Required explicit named comparator municipalities for final edges, because vague phrases like "surrounding communities" do not support city-to-city network rows.
+- Excluded the Arlington fire outside-detail excerpt from edge extraction even though it is verified and relevant, because it does not name a comparator city; "Town of Arlington" is the home municipality, not a comparator node.
+- Kept the output markdown-only because the extraction produced 10 edges, which is not above the threshold for creating a helper CSV.
+
+**Surprises/breakage**
+- The v9 quote-audit file contains 10 verified relevant causal excerpts, but only 2 of them actually name comparator municipalities.
+- All 10 extracted named-city edges come from Somerville police arbitration awards; no non-safety causal row contributes a named-city comparator edge yet.
+- The earlier design memo did in fact blur Boston's verification date with document date in the illustrative rows, so that was corrected.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Comparator-edge extraction snapshot**
+```text
+v9 rows reviewed: 32
+verified relevant causal excerpts: 10
+named-city verified excerpts: 2
+extracted edges: 10
+edge-contributing source_obs_id values: ma_somerville_police_spsoa_2012; ma_somerville_police_spea_2012
+non-edge verified comparability excerpts: 8
+production CSV created: no
+helper CSV created: no
+```
+
+**Date-field cleanup snapshot**
+```text
+design memo schema change: added verification_date
+Boston illustrative rows: document_date changed from 2025-06-29 to not_available
+Boston illustrative rows: verification_date set to 2026-06-29
+added note: production comparator file should separate source document date from project verification date
+```
+
+**Next steps**
+1. Manually extract comparator rows from the Boston BTU salary-comparison table using the cleaned date-field rules.
+2. Compare those mechanism-proxy Boston rows against the Somerville causal edge list before creating any stub CSV.
+3. Create a tiny machine-readable comparator stub only after causal and mechanism-proxy extraction conventions are both tested.
+
 ## 2026-06-29 - Comparator-network dataset design memo
 
 **Did**
