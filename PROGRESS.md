@@ -6,6 +6,65 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-06-29 - Boston BTU comparator-edge extraction memo
+
+**Did**
+- Re-read the comparator design memo, the v9 causal comparator-edge memo, the Boston BTU deep-dive memo, and the Boston row in the mechanism-source queue.
+- Re-verified the official Boston Public Schools / School Committee BTU negotiations page directly and confirmed the surrounding-district salary-comparison table title and visible district list.
+- Created `docs/analysis/comparator_edges_from_boston_btu_table_2026-06-29.md` as a memo-only Boston mechanism-proxy comparator-edge extraction.
+- Added a short cross-reference note in `docs/analysis/comparator_network_design_2026-06-29.md` pointing to the v9 causal memo and the new Boston memo.
+
+**Decisions and why**
+- Kept `source_corpus = discourse` for the Boston rows because the current design memo has settled on the repo's causal/discourse lane, while preserving in notes that the source is mechanism-proxy evidence.
+- Used `document_date = 2025-04-30` because the official page HTML visibly provides `page-published = 2025-04-30T18:47:54Z`, making that date more defensible than `not_available`.
+- Used `cycle_start` and `cycle_end = not_available` because the table is keyed to School Year 24-25 and the page discusses a 2024-2027 contract, but the table itself does not establish exact cycle boundary dates.
+- Did not create a CSV because the Boston extraction produced 8 edges, which is below the helper-CSV threshold.
+
+**Surprises/breakage**
+- The verified table contains two Boston home-city rows before the surrounding-district rows, which made it important to separate home-city reference rows from actual comparator edges.
+- The direct page fetch provided stronger provenance than the earlier memo alone because it exposed page metadata including `page-published`.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Boston mechanism-proxy comparator snapshot**
+```text
+table verified: yes
+home city: Boston
+comparator districts extracted: Cambridge; Wellesley; Brookline; Newton; Watertown; Milton; Dedham; Needham
+edges extracted: 8
+source type: bargaining_update
+source corpus lane: discourse with mechanism-proxy note
+CSV created: no
+```
+
+**Next steps**
+1. Compare the 10 Somerville causal edges and the 8 Boston mechanism-proxy edges side by side.
+2. Decide whether that is enough tested structure for a tiny comparator stub CSV.
+3. If not, stay memo-first and extract one more bounded comparator case before productionizing.
+
 ## 2026-06-29 - v9 comparator-edge extraction memo
 
 **Did**

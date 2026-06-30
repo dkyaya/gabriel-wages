@@ -209,3 +209,8 @@ Recommended sequencing after that:
 3. only then decide whether a tiny `comparator_mentions_stub` CSV is worth creating.
 
 Deferring until after v10 design is not necessary for this comparator-specific scaffold, but productionizing the CSV should wait until the quote-based extraction pass is complete.
+
+See also:
+
+- [Comparator Edges From v9 Verified Excerpts](/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages/docs/analysis/comparator_edges_from_v9_verified_excerpts_2026-06-29.md)
+- [Comparator Edges From Boston BTU Table](/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages/docs/analysis/comparator_edges_from_boston_btu_table_2026-06-29.md)
