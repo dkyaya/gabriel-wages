@@ -5,10 +5,10 @@ Status: Planning input for Codex acquisition/recon run
 This document is a planning note for the next bounded public-only mechanism-source pass. It should be read before creating the city-specific recon memos and combined mechanism-source queue.
 
 Expected Codex outputs:
-- docs/acquisition/ma_newton_mechanism_source_recon_2026-06-25.md
-- docs/acquisition/ma_somerville_mechanism_source_recon_2026-06-25.md
-- docs/acquisition/ma_boston_mechanism_source_recon_2026-06-25.md
-- docs/acquisition/ma_mechanism_source_queue_2026-06-25.csv
+- docs/acquisition/ma_newton_mechanism_source_recon_2026-06-26.md
+- docs/acquisition/ma_somerville_mechanism_source_recon_2026-06-26.md
+- docs/acquisition/ma_boston_mechanism_source_recon_2026-06-26.md
+- docs/acquisition/ma_mechanism_source_queue_2026-06-26.csv
 
 Newton Mechanism-Source Recon Plan
 

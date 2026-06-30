@@ -209,3 +209,12 @@ After the gold set:
 1. refine prompt boundaries;
 2. decide whether an all-32 causal run is justified;
 3. only then consider a broader pilot or a full v10 run.
+
+## Gold-set pointers
+
+The first small hand-coded gold set for this attribute now lives at:
+
+- `docs/analysis/gabriel_v10_gold_set_2026-06-29.csv`
+- `docs/analysis/gabriel_v10_gold_set_memo_2026-06-29.md`
+
+Those files should be used before any v10 model pass to pressure-test the grievance-arbitration false-positive boundary.

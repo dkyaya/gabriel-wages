@@ -6,6 +6,75 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-06-29 - v10 gold set and ChatGPT handoff
+
+**Did**
+- Re-read the v10 design memo, mechanism-source notes, comparator synthesis memo, v9 results files, and the current contracts and coverage tables.
+- Created `docs/analysis/gabriel_v10_gold_set_2026-06-29.csv` as a small hand-coded gold set for `arbitration_or_impasse_backstop`.
+- Created `docs/analysis/gabriel_v10_gold_set_memo_2026-06-29.md` documenting row selection, composition, and prompt-boundary use.
+- Created `docs/analysis/chatgpt_handoff_latest.md` as a reusable project-state handoff for future ChatGPT planning.
+- Added a short gold-set pointer to `docs/analysis/gabriel_v10_arbitration_impasse_design_2026-06-29.md`.
+- Made a tiny filename-date cleanup in `docs/acquisition/ma_newton_somerville_boston_mechanism_source_plan_2026-06-26.md`.
+
+**Decisions and why**
+- Built the first gold set around three clean positives, three clean causal negatives, four grievance-arbitration false-positive traps, and one separate-lane Boston mechanism-proxy row, because the immediate v10 need is boundary discipline rather than broad coverage.
+- Kept the Boston BTU page in the gold set only as a mechanism-proxy negative, because it is valuable for testing that peer-wage comparison content alone should not trigger `arbitration_or_impasse_backstop`.
+- Used short quotes where already verified and locators where fast quote verification was not worth forcing, because the task was a hand-coded design scaffold rather than a new extraction pass.
+- Kept ambiguous cases out of this first gold set, because the more urgent failure mode is over-scoring grievance boilerplate.
+
+**Surprises/breakage**
+- The current corpus supports cleaner trap design than expected: several ordinary CBAs contain arbitration-heavy grievance sections that are ideal anti-examples for v10.
+- Two useful clean negatives came from Wayland and one from Worcester, which helps avoid collapsing the attribute into a pure safety/non-safety proxy.
+- No code changes were needed, and the only small cleanup outside the gold-set files was a stale planning-note filename date.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**v10 gold-set snapshot**
+```text
+gold-set rows: 11
+clear positives: 3
+clear negatives: 4
+false-positive traps: 4
+ambiguous: 0
+mechanism-proxy rows included: 1
+main trap class: grievance-arbitration boilerplate in ordinary CBAs
+```
+
+**ChatGPT handoff snapshot**
+```text
+handoff file: docs/analysis/chatgpt_handoff_latest.md
+includes: corpus snapshot, current interpretation, key artifact paths, open decisions, and suggested next Codex run
+main recommendation carried forward: dry-run the v10 prompt on the gold set before any broader causal pass
+```
+
+**Next steps**
+1. Dry-run candidate v10 prompt language against the 11-row gold set.
+2. Review whether the prompt keeps grievance-arbitration boilerplate near `0` to `1_25` before considering any all-32 causal run.
+3. Only after that boundary check, decide whether to add ambiguous edge cases or proceed to a small v10 pilot.
+
 ## 2026-06-29 - v10 arbitration/impasse attribute design memo
 
 **Did**
