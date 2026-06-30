@@ -228,3 +228,14 @@ The first bounded dry-run on the 11-row gold set lives at:
 - `analysis/gabriel_pilot/results_v10_gold_dryrun_2026-06-29.csv`
 
 The candidate prompt passed the main grievance-arbitration boundary for Boston SENA, Seekonk DPW, and Seekonk teachers, and it kept Boston BTU low despite peer-wage comparison content. One formal failure occurred on Arlington DPW, but manual inspection found a separate duration/reopener clause referencing an impasse procedure with mediation/factfinding and money issues. Treat that row as a gold-set contamination or construct-boundary case before any all-32 causal pilot.
+
+## Repaired gold-set retry note
+
+The repaired gold set and one bounded retry live at:
+
+- `docs/analysis/gabriel_v10_gold_set_repaired_2026-06-30.csv`
+- `docs/analysis/gabriel_v10_gold_set_repair_memo_2026-06-30.md`
+- `docs/analysis/gabriel_v10_gold_repaired_dryrun_report_2026-06-30.md`
+- `analysis/gabriel_pilot/results_v10_gold_repaired_dryrun_2026-06-30.csv`
+
+The repaired retry produced zero formal boundary failures. Clean grievance-only traps stayed low, clear positives stayed high, and Boston BTU stayed at zero. Arlington DPW 2015 and 2018 were recoded as ambiguous future-reopener/impasse edge cases and both scored `60`, which should be treated as a construct-boundary result rather than a grievance-arbitration prompt failure. A small all-32 causal pilot is now reasonable if those reopener/impasse cases are flagged and results remain stratified by `source_type` and ordinary-CBA versus award-style documents.

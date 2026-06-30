@@ -6,6 +6,90 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-06-30 - repaired v10 gold set and bounded retry
+
+**Did**
+- Inspected Arlington DPW 2018 source text and confirmed the first-run failure was driven by Article XXX future reopener/impasse language, not grievance-arbitration boilerplate.
+- Created `docs/analysis/gabriel_v10_gold_set_repaired_2026-06-30.csv`.
+- Created `docs/analysis/gabriel_v10_gold_set_repair_memo_2026-06-30.md`.
+- Updated `analysis/gabriel_pilot/run_gabriel_v10_gold_dryrun.py` to accept explicit gold/input/output/audit paths so repaired retries do not overwrite first-run files.
+- Built `analysis/gabriel_pilot/input_v10_gold_repaired_2026-06-30.csv`.
+- Ran one bounded repaired retry and wrote `analysis/gabriel_pilot/results_v10_gold_repaired_dryrun_2026-06-30.csv` plus `analysis/gabriel_pilot/results_v10_gold_repaired_dryrun_audit_2026-06-30.csv`.
+- Created `docs/analysis/gabriel_v10_gold_repaired_dryrun_report_2026-06-30.md`.
+- Updated the v10 design memo and ChatGPT handoff with repaired retry results and the next-run recommendation.
+
+**Decisions and why**
+- Recoded `ma_arlington_public_works_2018` from `false_positive_trap` to `ambiguous`, expected band `26_50`, because Article XXX references future reopener negotiations, Chapter 1078, mediation/factfinding, and money issues.
+- Added `ma_arlington_public_works_2015` as a second ambiguous future-reopener/impasse edge case because it has the same structure.
+- Recoded `ma_wayland_public_works_2020` from `clear_negative` to `false_positive_trap`, because its Article 30 grievance-and-arbitration procedure is a clean DPW/public-works boilerplate trap.
+- Did not revise the prompt, because the repaired retry did not show a true prompt failure.
+- Recommended a small all-32 causal pilot next, with future reopener/impasse clauses flagged during review and results stratified by source type.
+
+**Surprises/breakage**
+- Arlington future-reopener edge cases scored `60`, above the repaired expected `26_50` band but below clean award/JLMC positives. This is an open construct-boundary issue rather than a grievance-boilerplate failure.
+- The local quote relevance screen still over-filters some process excerpts: both Arlington rows had verified-but-irrelevant-only quote status despite coherent model rationales.
+- The repaired retry had zero formal audit failures.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+
+python -m py_compile analysis/gabriel_pilot/run_gabriel_v10_gold_dryrun.py
+passed
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**repaired v10 gold-set snapshot**
+```text
+rows: 12
+clear_positive: 3
+clear_negative: 3
+false_positive_trap: 4
+ambiguous / future-reopener edge cases: 2
+mechanism-proxy rows included: 1
+Arlington 2018: false_positive_trap -> ambiguous
+Wayland DPW 2020: clear_negative -> false_positive_trap
+Arlington 2015: added as ambiguous future-reopener edge case
+```
+
+**retry prompt-boundary results**
+```text
+formal audit failures: 0
+clear_positive scores: 100, 92, 78
+clear_negative scores: 10, 0, 0
+false_positive_trap scores: 5, 15, 10, 5
+ambiguous scores: 60, 60
+Boston BTU mechanism-proxy negative: 0
+clean grievance-only traps stayed <=25: yes
+clear positives stayed >=51: yes
+future reopener/impasse cases behaved plausibly: yes, upper-middle with construct caveat
+prompt revision recommended: no
+```
+
+**Next steps**
+1. Run a small all-32 causal v10 pilot only, not a production dataset.
+2. Preserve `source_type`, `source_corpus`, and ordinary-CBA versus award-style stratification in any pilot report.
+3. Add a review flag for future reopener/impasse clauses so Arlington-style cases are not confused with grievance boilerplate or full award-style positives.
+
 ## 2026-06-30 - v10 gold prompt dry-run
 
 **Did**

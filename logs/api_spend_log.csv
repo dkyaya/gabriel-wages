@@ -150,3 +150,17 @@ timestamp,script_name,model,prompt_tokens,completion_tokens,estimated_cost_usd
 2026-06-30T14:53:10Z,run_gabriel_v10_gold_dryrun.py,gpt-5.4-nano,9382,142,0.002054
 2026-06-30T14:53:53Z,run_gabriel_v10_gold_dryrun.py,gpt-5.4-nano,30038,351,0.006446
 2026-06-30T14:53:56Z,run_gabriel_v10_gold_dryrun.py,gpt-5.4-nano,811,183,0.000391
+2026-06-30T15:13:03Z,run_gabriel_v10_gold_dryrun.py,gpt-5.4-nano,47942,312,0.009978
+2026-06-30T15:13:09Z,run_gabriel_v10_gold_dryrun.py,gpt-5.4-nano,53688,408,0.011248
+2026-06-30T15:13:20Z,run_gabriel_v10_gold_dryrun.py[retry],gpt-5.4-nano,53390,803,0.011682
+2026-06-30T15:13:24Z,run_gabriel_v10_gold_dryrun.py,gpt-5.4-nano,1565,279,0.000662
+2026-06-30T15:13:28Z,run_gabriel_v10_gold_dryrun.py,gpt-5.4-nano,20042,281,0.004360
+2026-06-30T15:13:31Z,run_gabriel_v10_gold_dryrun.py[retry],gpt-5.4-nano,19591,80,0.004018
+2026-06-30T15:13:35Z,run_gabriel_v10_gold_dryrun.py,gpt-5.4-nano,14683,272,0.003277
+2026-06-30T15:13:39Z,run_gabriel_v10_gold_dryrun.py,gpt-5.4-nano,3326,199,0.000914
+2026-06-30T15:13:43Z,run_gabriel_v10_gold_dryrun.py,gpt-5.4-nano,27210,287,0.005801
+2026-06-30T15:13:46Z,run_gabriel_v10_gold_dryrun.py,gpt-5.4-nano,22445,208,0.004749
+2026-06-30T15:13:50Z,run_gabriel_v10_gold_dryrun.py,gpt-5.4-nano,9382,266,0.002209
+2026-06-30T15:13:55Z,run_gabriel_v10_gold_dryrun.py,gpt-5.4-nano,30038,245,0.006314
+2026-06-30T15:13:58Z,run_gabriel_v10_gold_dryrun.py,gpt-5.4-nano,811,137,0.000333
+2026-06-30T15:14:01Z,run_gabriel_v10_gold_dryrun.py,gpt-5.4-nano,21237,266,0.004580

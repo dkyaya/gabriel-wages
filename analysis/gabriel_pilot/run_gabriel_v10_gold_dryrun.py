@@ -12,6 +12,7 @@ and writes a results CSV plus a gold-expectation audit CSV.
 from __future__ import annotations
 
 import csv
+import argparse
 import json
 import os
 import re
@@ -104,6 +105,38 @@ AUDIT_COLS = [
     "failure_type",
     "notes",
 ]
+
+
+def _resolve_path(raw: str, default_base: Path) -> Path:
+    path = Path(raw)
+    if path.is_absolute():
+        return path
+    if raw.startswith("docs/") or raw.startswith("analysis/") or raw.startswith("data/"):
+        return ROOT / path
+    return default_base / path
+
+
+def _parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="Run bounded GABRIEL v10 dry-runs on a gold-set CSV."
+    )
+    parser.add_argument("--gold-set", default=str(GOLD_SET))
+    parser.add_argument("--input", default=str(INPUT))
+    parser.add_argument("--output", default=str(OUTPUT))
+    parser.add_argument("--audit-output", default=str(AUDIT_OUTPUT))
+    parser.add_argument("--prompt-version", default=PROMPT_VERSION)
+    parser.add_argument("--build-input-only", action="store_true")
+    parser.add_argument("--rebuild-input", action="store_true")
+    return parser.parse_args()
+
+
+def _configure_from_args(args: argparse.Namespace) -> None:
+    global GOLD_SET, INPUT, OUTPUT, AUDIT_OUTPUT, PROMPT_VERSION
+    GOLD_SET = _resolve_path(args.gold_set, ROOT)
+    INPUT = _resolve_path(args.input, HERE)
+    OUTPUT = _resolve_path(args.output, HERE)
+    AUDIT_OUTPUT = _resolve_path(args.audit_output, HERE)
+    PROMPT_VERSION = args.prompt_version
 
 
 def _load_env() -> None:
@@ -596,10 +629,13 @@ def write_audit(results: list[dict]) -> list[dict]:
 
 
 def run() -> None:
-    if "--build-input-only" in sys.argv:
+    args = _parse_args()
+    _configure_from_args(args)
+
+    if args.build_input_only:
         build_input()
         return
-    if not INPUT.exists() or "--rebuild-input" in sys.argv:
+    if not INPUT.exists() or args.rebuild_input:
         build_input()
 
     subscription_key = os.environ.get("HARVARD_SUBSCRIPTION_KEY")
