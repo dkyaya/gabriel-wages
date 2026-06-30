@@ -214,3 +214,5 @@ See also:
 
 - [Comparator Edges From v9 Verified Excerpts](/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages/docs/analysis/comparator_edges_from_v9_verified_excerpts_2026-06-29.md)
 - [Comparator Edges From Boston BTU Table](/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages/docs/analysis/comparator_edges_from_boston_btu_table_2026-06-29.md)
+- [Comparator Stub CSV](/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages/docs/analysis/comparator_mentions_stub_2026-06-29.csv)
+- [Comparator Edge Synthesis](/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages/docs/analysis/comparator_edge_synthesis_2026-06-29.md)

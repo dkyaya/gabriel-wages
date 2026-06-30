@@ -6,6 +6,65 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-06-29 - Comparator stub and synthesis memo
+
+**Did**
+- Re-read the comparator design memo, the Somerville v9 causal edge memo, and the Boston BTU mechanism-proxy edge memo.
+- Created `docs/analysis/comparator_mentions_stub_2026-06-29.csv` as a non-production 18-row stub assembled only from the two existing extraction memos.
+- Created `docs/analysis/comparator_edge_synthesis_2026-06-29.md` as a short side-by-side synthesis note.
+- Added a small cross-reference update in `docs/analysis/comparator_network_design_2026-06-29.md` pointing to the stub CSV and the synthesis memo.
+
+**Decisions and why**
+- Kept the stub under `docs/analysis/` rather than `data/` so it is visibly non-production and cannot be confused with a real dataset.
+- Preserved `source_corpus = causal` for Somerville and `source_corpus = discourse` for Boston, with Boston’s mechanism-proxy status carried in `notes`, because the task was to preserve the tested extraction outputs rather than normalize them away.
+- Kept `not_available` exactly where the source memos already used it, especially for Boston cycle dates and Somerville document dates, to avoid backfilling unsupported values.
+- Did not add a validator script because the repo’s production validation pattern is centered on `data/` tables, and this stub is intentionally a memo-side scaffold.
+
+**Surprises/breakage**
+- No row-count mismatch surfaced: the stub cleanly resolves to 18 rows with the expected 10/8 split.
+- The combined stub contains 15 unique comparator cities, which is enough to support later lightweight visualization work without yet justifying a production file.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Comparator-stub snapshot**
+```text
+stub rows: 18
+source_corpus split: causal 10 | discourse 8
+safety_flag split: 1 -> 10 | 0 -> 8
+source_type split: arbitration_award 10 | bargaining_update 8
+home_city split: Somerville 10 | Boston 8
+unique comparator cities: 15
+production comparator CSV created: no
+```
+
+**Next steps**
+1. Use the stub for lightweight comparator-network validation or visualization work before creating any production file.
+2. Keep the main H1 interpretation disciplined: causal named-city comparator evidence is still safety/arbitration-heavy, while non-safety named-city evidence currently sits in the mechanism-proxy/discourse lane.
+3. Revisit a production `data/comparator_mentions.csv` only after additional same-lane evidence or validation work clarifies the right design.
+
 ## 2026-06-29 - Boston BTU comparator-edge extraction memo
 
 **Did**
