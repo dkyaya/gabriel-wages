@@ -6,6 +6,63 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-06-29 - v10 arbitration/impasse attribute design memo
+
+**Did**
+- Re-read the v9 results, quote audit, public-source strategy note, mechanism-source summary, comparator design memo, comparator extraction memos, comparator synthesis memo, and the readable v9 preliminary PDF.
+- Created `docs/analysis/gabriel_v10_arbitration_impasse_design_2026-06-29.md` as a conceptual and implementation-readiness memo for a possible v10 attribute named `arbitration_or_impasse_backstop`.
+- Added a short pointer in `docs/hypotheses_public_source_strategy_2026-06-24.md` to the new v10 design memo.
+
+**Decisions and why**
+- Defined the attribute around formal impasse-resolution pathways that shape wage-setting or successor-contract settlement, because the observed v9 pattern points to an institutional-pathway gap rather than only a comparability-language gap.
+- Made grievance-arbitration boilerplate the main exclusion rule, because it is the biggest false-positive risk for any arbitration-focused attribute.
+- Recommended `source_type`- and `source_corpus`-stratified analysis from the start, because the current evidence already shows strong document-production confounding.
+- Recommended first hand-coding a small gold set rather than running v10 immediately on all 32 causal rows, because the project needs prompt-boundary discipline before adding another source-type-sensitive score.
+
+**Surprises/breakage**
+- The existing project notes already point toward this attribute concept more directly than the earlier v9-only framing did: Wayland JLMC, Somerville awards, and the Boston proxy page all reinforce the same institutional-pathway caveat from different document lanes.
+- No repo code changes were needed; this was a pure design-note task.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**v10 design snapshot**
+```text
+proposed attribute: arbitration_or_impasse_backstop
+core focus: wage-setting or contract settlement under formal impasse-resolution pathways
+main exclusion: grievance-arbitration boilerplate
+recommended fields: v8/v9-style score, rationale, excerpts, ambiguity and boilerplate flags
+recommended next move: hand-code a small gold set before any v10 run
+run GABRIEL now: no
+```
+
+**Next steps**
+1. Hand-code a small gold set of clear positives, clear negatives, and grievance-boilerplate false-positive traps.
+2. Use that set to refine prompt boundaries before deciding whether a full 32-row causal pilot is justified.
+3. Keep any eventual v10 analysis stratified by `source_type`, `source_corpus`, and award-style versus ordinary-CBA subsets.
+
 ## 2026-06-29 - Comparator stub and synthesis memo
 
 **Did**

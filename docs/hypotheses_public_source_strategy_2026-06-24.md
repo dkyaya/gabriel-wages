@@ -20,6 +20,8 @@ The 2026-06-26 Newton/Somerville/Boston mechanism-source recon improves the publ
 
 For the consolidated audit output, see `docs/acquisition/ma_mechanism_source_queue_2026-06-26.csv` and `docs/analysis/mechanism_source_summary_2026-06-26.md`.
 
+For the current v10 concept note on whether to measure arbitration/impasse pathways directly, see `docs/analysis/gabriel_v10_arbitration_impasse_design_2026-06-29.md`.
+
 ## What would count as support for H1 without PRRs
 
 - Public non-safety factfinding or arbitration-like reports that show wage-setting reasoning and can be compared directly to safety awards.
