@@ -6,6 +6,63 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-06-29 - Comparator-network dataset design memo
+
+**Did**
+- Reviewed the required v9 outputs, quote audit, Boston BTU salary-comparison memo, mechanism-source summary, mechanism-source queue, and the readable v9 preliminary PDF.
+- Created `docs/analysis/comparator_network_design_2026-06-29.md` as a design memo for a future city-to-city comparator network dataset.
+- Kept `data/`, `corpus/`, and `inbox/` unchanged and did not create `data/comparator_mentions.csv`.
+
+**Decisions and why**
+- Defined the future comparator dataset at the mention level: one verified `home_city -> comparator_city` edge per row, because a single award or table can name many comparator municipalities.
+- Recommended a strict source hierarchy led by verified GABRIEL excerpts and direct manual review, because queue labels and regex hits are useful discovery tools but too weak for production evidence.
+- Recommended extracting from verified v9 excerpts next, rather than creating a stub CSV immediately, because the quote-audited causal excerpts are the cleanest current evidence base.
+- Kept the Boston BTU page in a mechanism-proxy lane rather than treating it as causal evidence, because it is a verified public bargaining page, not a final reasoning document.
+
+**Surprises/breakage**
+- Current high-confidence named-city comparator evidence is still narrow: Somerville police awards and the Boston BTU salary-comparison table carry most of it.
+- The reviewed Wayland JLMC material does not currently yield a verified named-city comparator example, so it was excluded from the memo's illustrative rows.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Comparator-network design snapshot**
+```text
+production CSV created: no
+proposed future path: data/comparator_mentions.csv
+recommended unit: one verified home_city -> comparator_city mention per row
+high-confidence example rows in memo: 5
+recommended next task: extract from v9 verified excerpts
+lead-only sources retained: mechanism-source queue, regex candidates
+```
+
+**Next steps**
+1. Extract a memo-only comparator edge list from the verified v9 excerpt set.
+2. Manually extract the Boston BTU salary-comparison table into the same review format.
+3. Decide on a tiny stub CSV only after the quote-based extraction rules are exercised on real examples.
+
 ## 2026-06-29 - Boston BTU salary-comparison lead verification
 
 **Did**
