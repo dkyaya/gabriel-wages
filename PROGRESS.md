@@ -6,6 +6,71 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-01 - All-repo declutter plan and manifest created
+
+**Did**
+- Read the core project instructions, status logs, schema, and hypothesis memos.
+- Inspected the repo tree broadly across `docs/`, `docs/analysis/`, `docs/acquisition/`, `analysis/gabriel_pilot/`, `reports/`, `logs/`, `ingest/`, `scripts/`, `data/`, `corpus/`, and `inbox/`.
+- Checked references where practical so active files were not mislabeled as disposable.
+- Created:
+  - `docs/analysis/repo_declutter_plan_2026-07-01.md`
+  - `docs/analysis/repo_declutter_candidate_manifest_2026-07-01.csv`
+- Updated:
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+
+**Decisions and why**
+- Treated the task as archive planning only, because the user explicitly prohibited deleting, moving, renaming, or archiving anything yet.
+- Kept `data/`, `corpus/`, `inbox/`, `ingest/`, validation scripts, and API spend logs in the do-not-touch or keep-active lanes, because they are either production inputs, production provenance, or active infrastructure.
+- Split `analysis/gabriel_pilot/` into active code, active v9 outputs, branch-specific v10/web-search artifacts, and legacy generated outputs, because that directory is the main mixed-risk clutter area.
+- Treated most `docs/acquisition/`, comparator memos, session snapshots, and old report exports as provenance to relocate later rather than clutter to discard.
+
+**Surprises/breakage**
+- `analysis/gabriel_pilot/` is much more mixed than the rest of the repo: active runners, active inputs, active v9 outputs, legacy v1-v8 outputs, web-search seed demos, and scratch/generated clutter all coexist in one directory.
+- `reports/6_25/` is still referenced by current analysis docs, so it is not a safe immediate archive target without user review.
+- No code changes were made, so no `py_compile` pass was required.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+**Declutter snapshot**
+```text
+all-repo declutter plan created: yes
+candidate manifest created: yes
+files deleted: no
+files moved: no
+files renamed: no
+recommended next step: user review before any actual archive operation
+```
+
+**Next steps**
+1. Review the archive categories with the user before moving anything.
+2. Do the first actual archive pass only after the Thursday package is finalized.
+3. Handle `analysis/gabriel_pilot/` and `docs/analysis/` as staged, family-by-family cleanups rather than bulk folder moves.
+
 ## 2026-07-01 - Tutorial clarified built-in web mode; framework corrected
 
 **Did**

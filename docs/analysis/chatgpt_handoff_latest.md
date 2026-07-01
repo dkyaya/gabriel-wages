@@ -2,7 +2,66 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-01T12:00:00-04:00`
+Last updated: `2026-07-01T13:20:00-04:00`
+
+---
+
+## 2026-07-01T13:20:00-04:00 - all-repo declutter plan and manifest created
+
+**Commit:** pending in current session
+
+### Current State After This Entry
+
+- An all-repo declutter audit was completed.
+- The scope was the full repo, not only the GABRIEL web-search area.
+- No files were moved, deleted, or renamed.
+- A narrative repo-wide declutter plan was created.
+- A candidate manifest CSV was created with path-level recommended actions, timing, risk, and dependency notes.
+
+### What Changed
+
+- Created:
+  - `docs/analysis/repo_declutter_plan_2026-07-01.md`
+  - `docs/analysis/repo_declutter_candidate_manifest_2026-07-01.csv`
+- Updated:
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+
+### Main Recommendation
+
+- Keep production data, corpus, inbox, ingestion code, validation scripts, and spend logs visible and untouched.
+- Keep active v9 analysis code/results and current Thursday report-facing files visible.
+- Archive Thursday-only support artifacts after the Thursday package is finalized.
+- Archive v10 dry-run branch artifacts and legacy generated pilot outputs only after the v10/web-search branch stabilizes.
+- Treat `docs/acquisition/`, comparator memos, session snapshots, and older report exports as provenance-preserving archive candidates rather than disposable clutter.
+
+### Recommended Next Step
+
+User review of the declutter categories and candidate archive layout before any actual archive operation.
+
+### Status Checks
+
+- Files deleted: no.
+- Files moved: no.
+- Files renamed: no.
+- Live web search executed: no.
+- Ingestion performed: no.
+
+### Validation/Audit Results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
 
 ---
 
