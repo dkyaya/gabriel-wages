@@ -5,13 +5,17 @@
 
 ## Important framing update
 
-After inspecting the tutorial guidance summarized for this project, built-in GABRIEL web mode should be tested first.
+After inspecting the tutorial guidance summarized for this project, built-in GABRIEL web mode is the primary live path and should be tested first.
+
+The primary path to confirm is `gabriel.whatever(..., web_search=True)` for a city report, followed by either `gabriel.extract(..., modality="web")` or light structured parsing if the report needs to be converted into project source/extraction rows.
 
 The custom callback scaffold documented here remains useful only if:
 
 - built-in web mode does not preserve the project's source/extraction schema well enough;
 - built-in web outputs are not structured enough for reliable downstream parsing; or
 - a nonstandard backend is required.
+
+In other words, this memo describes fallback/advanced infrastructure for schema control or nonstandard backends. It should not be presented as the project's primary built-in web-search route.
 
 ## 1. Purpose
 

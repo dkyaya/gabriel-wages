@@ -1,7 +1,7 @@
 # City-by-City Public-Source Discovery and Extraction with GABRIEL Web Mode
 
 **Date:** 2026-07-01  
-**Status:** Thursday-facing draft; framework corrected after tutorial clarification; seed/dry-run scaffold only
+**Status:** Thursday-facing draft; framework corrected after tutorial clarification; built-in web smoke test blocked locally by missing package
 
 ## 1. Executive summary
 
@@ -10,6 +10,7 @@
 - This repo had not yet wired built-in GABRIEL web mode into the project's city-by-city source and extraction schema.
 - We therefore built a custom `get_all_responses_fn` scaffold, `custom_get_all_responses`, as a fallback and advanced schema-control path.
 - The scaffold currently runs in seed/dry-run mode only; no live web search was executed and no ingestion was performed.
+- A Boston-only built-in web smoke test was attempted at the environment-check stage, but the `gabriel` Python package was not installed or vendored locally, so no live run was executed.
 - The intended use remains acquisition and extraction assistance for later manual review, not production measurement, not automated ingestion, and not causal inference.
 
 ### What we built
@@ -311,13 +312,30 @@ A one-city Boston live smoke test was considered for this report, but it was not
 
 The report therefore remains seed-mode only. The immediate need is to confirm exact invocation details and output structure for built-in web mode in this project environment. No ingestion was performed.
 
-## 18. Revised live path after reading the tutorial
+## 18. Built-in GABRIEL web smoke test
+
+The Boston-only built-in smoke test was stopped before any live call because built-in GABRIEL web mode was not available in this Python environment.
+
+- Scope checked: Boston, MA only; intended identifier `gabriel_builtin_web_boston_btu_2026_07_01`.
+- Intended target: public BPS/BTU salary-comparison and contract-negotiation sources.
+- Package check: `import gabriel` failed; `python -m pip show gabriel GABRIEL gabriel-toolkit gabriel-ai` found no installed package.
+- Local package/notebook check: no vendored GABRIEL package or uploaded tutorial notebook was found locally.
+- Functions unavailable here: `gabriel.whatever`, `gabriel.extract`, `gabriel.rate`, and `gabriel.classify`; related web arguments could not be tested.
+- Source rows created: 0.
+- Extraction rows created: 0.
+- Boston BTU rediscovered: no, because no live search ran.
+- URLs/citations preserved: none returned, because no live search ran.
+- Ingestion: no.
+
+This preserves the corrected framework: built-in GABRIEL web mode remains the primary path, but it has not yet been successfully run in this environment. The issue to resolve with Hemanth/toolkit creator is package/environment availability first, then the exact invocation shape.
+
+## 19. Revised live path after reading the tutorial
 
 - primary path: `gabriel.whatever(..., web_search=True)` to generate city web reports;
 - extraction path: `gabriel.extract` or structured parsing on those reports;
 - fallback path: custom `get_all_responses_fn` only if project-specific schema control is needed.
 
-## 19. Next live-test plan
+## 20. Next live-test plan
 
 If built-in web mode is callable in this environment, the first live test should remain tightly bounded:
 
@@ -335,13 +353,14 @@ If built-in web mode is callable in this environment, the first live test should
 
 That bounded plan is enough to test source recovery, lane classification, and attribute extraction without drifting into production collection.
 
-## 20. Bottom-line recommendation
+## 21. Bottom-line recommendation
 
 Built-in GABRIEL web mode should be treated as the primary live path. The current scaffold remains useful as a fallback and schema-control tool. The seeded harness is ready now, but the next live step should be a Boston-only built-in web smoke test after confirming invocation details and output structure in this environment.
 
-## 21. Thursday decision points
+## 22. Thursday decision points
 
 - Confirm the exact built-in web-mode invocation details in this project environment.
+- Confirm the installable/importable GABRIEL package or environment needed for built-in web mode.
 - Inspect the built-in report output structure and citation behavior.
 - Decide whether extraction should happen through `gabriel.extract` or light structured parsing.
 - Use the custom callback only if the built-in path is not structured enough.

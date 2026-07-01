@@ -6,6 +6,80 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-01 - Built-in GABRIEL web smoke test blocked locally
+
+**Did**
+- Confirmed the repo location and read the project instructions, handoff, Thursday report package, prompt template, seed outputs, and GABRIEL pilot runners requested for this task.
+- Checked for an installed or vendored GABRIEL package and local tutorial notebook.
+- Determined the Boston-only built-in GABRIEL web smoke test could not be executed in this environment because `gabriel` is not importable.
+- Created:
+  - `docs/analysis/gabriel_builtin_web_smoke_test_status_2026-07-01.md`
+- Updated:
+  - `docs/analysis/gabriel_websearch_thursday_report_draft_2026-07-01.md`
+  - `docs/analysis/gabriel_websearch_thursday_report_pdf_ready_2026-07-01.md`
+  - `docs/analysis/gabriel_websearch_thursday_presentation_outline_2026-07-01.md`
+  - `docs/analysis/gabriel_websearch_custom_function_design_2026-06-30.md`
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+
+**Decisions and why**
+- Stopped before any live search because the built-in package was unavailable; faking results or falling back to the custom callback would violate the task boundary.
+- Kept built-in GABRIEL web mode as the primary live path in the reports, because the tutorial correction still controls the framework.
+- Kept `get_all_responses_fn` framed as fallback/advanced infrastructure for schema control or nonstandard backends.
+- Did not create the Boston runner or result CSVs, because there was no callable built-in GABRIEL web API to run.
+
+**Surprises/breakage**
+- `import gabriel` failed.
+- `python -m pip show gabriel GABRIEL gabriel-toolkit gabriel-ai` found no installed package.
+- Repo search found no vendored GABRIEL package and no local uploaded tutorial notebook; `/mnt/data` was not present.
+- Because no code was added, no `py_compile` pass was required.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+**Built-in web smoke-test snapshot**
+```text
+built-in GABRIEL package importable: no
+Boston smoke test executed: no
+GABRIEL web path used: none
+source rows created: 0
+extraction rows created: 0
+Boston BTU rediscovered: no live test run
+URLs/citations preserved: none returned
+ingestion performed: no
+production corpus modified: no
+recommended next step: get installable/importable GABRIEL package or toolkit environment from Hemanth/toolkit creator
+```
+
+**Next steps**
+1. Ask Hemanth/toolkit creator for the installable/importable GABRIEL package version or exact environment where tutorial web-mode calls are available.
+2. Rerun only the Boston smoke test after package availability is fixed.
+3. Start with `gabriel.whatever(..., web_search=True, search_context_size="low")` if available; otherwise use the supported `gabriel.extract(..., modality="web")` route.
+4. Keep ingestion and any five-city pilot separate until the Boston built-in smoke test succeeds.
+
 ## 2026-07-01 - All-repo declutter plan and manifest created
 
 **Did**

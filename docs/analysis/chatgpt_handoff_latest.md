@@ -2,7 +2,84 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-01T13:20:00-04:00`
+Last updated: `2026-07-01T13:30:00-04:00`
+
+---
+
+## 2026-07-01T13:30:00-04:00 - built-in GABRIEL web smoke test blocked locally by missing package
+
+**Commit:** pending in current session
+
+### Current State After This Entry
+
+- A Boston-only built-in GABRIEL web smoke test was checked but not executed.
+- Built-in GABRIEL web mode remains the primary live path conceptually.
+- The local Python environment does not currently expose an importable `gabriel` package, so the built-in path could not be called here.
+- No live web search was run.
+- No ingestion happened.
+- No production data, corpus, inbox, or coverage files were modified.
+
+### What Was Checked
+
+- `import gabriel`: failed; no module found.
+- `python -m pip show gabriel GABRIEL gabriel-toolkit gabriel-ai`: no installed package found.
+- Repo search: no vendored GABRIEL package and no local tutorial notebook found.
+- `/mnt/data`: not present in this session, so no uploaded tutorial notebook was available there.
+- Existing pilot code: current runners use direct OpenAI calls over local text; no built-in GABRIEL web invocation exists in the repo.
+
+### Availability Result
+
+- `gabriel.whatever`: unavailable here.
+- `web_search=True`: could not be tested.
+- `web_search_filters`: could not be tested.
+- `search_context_size`: could not be tested.
+- `modality="web"`: could not be tested.
+- `gabriel.extract`: unavailable here.
+- `gabriel.rate`: unavailable here.
+- `gabriel.classify`: unavailable here.
+
+### What Changed
+
+- Created:
+  - `docs/analysis/gabriel_builtin_web_smoke_test_status_2026-07-01.md`
+- Updated:
+  - `docs/analysis/gabriel_websearch_thursday_report_draft_2026-07-01.md`
+  - `docs/analysis/gabriel_websearch_thursday_report_pdf_ready_2026-07-01.md`
+  - `docs/analysis/gabriel_websearch_thursday_presentation_outline_2026-07-01.md`
+  - `docs/analysis/gabriel_websearch_custom_function_design_2026-06-30.md`
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+
+### Status Counts
+
+- Boston smoke test ran: no.
+- GABRIEL web path used: none; package unavailable.
+- Source rows created: 0.
+- Extraction rows created: 0.
+- Boston BTU rediscovered: no live test ran.
+- URLs/citations preserved: none returned.
+- Ingestion performed: no.
+- Code added: no.
+
+### Recommended Next Step
+
+Ask Hemanth/toolkit creator for the installable/importable GABRIEL package version or the exact environment where the tutorial web-mode calls are available. Then rerun only the Boston smoke test, starting with `gabriel.whatever(..., web_search=True, search_context_size="low")` if available, otherwise the supported `gabriel.extract(..., modality="web")` route.
+
+### Validation/Audit Results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
 
 ---
 

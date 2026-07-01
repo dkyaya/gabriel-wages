@@ -1,7 +1,7 @@
 # City-by-City Public-Source Discovery and Extraction with GABRIEL Web Mode
 
 **Date:** 2026-07-01  
-**Status:** PDF-ready abbreviated draft; framework corrected after tutorial clarification; seed/dry-run scaffold only
+**Status:** PDF-ready abbreviated draft; framework corrected after tutorial clarification; built-in web smoke test blocked locally by missing package
 
 ## 1. Executive summary
 
@@ -12,6 +12,7 @@
 - A proposed fallback `web_search` contract is now concrete enough for adapter-fit discussion if the built-in path is not structured enough.
 - The five-city seed harness covers Boston, Somerville, Newton, Wayland, and Seekonk.
 - Current outputs are 5 city responses, 15 source rows, and 34 extraction rows.
+- A Boston-only built-in GABRIEL web smoke test was stopped before a live call because the local Python environment does not expose an importable `gabriel` package.
 - No live web search was executed and no ingestion was performed.
 
 ## 2. Problem and goal
@@ -176,7 +177,21 @@ The open questions are built-in web-mode fit questions, not blockers:
 
 A one-city Boston live smoke test was considered but not executed. The corrected next step is a Boston-only built-in GABRIEL web smoke test after confirming invocation details and output structure in this environment. The report remains seed-mode only, and no ingestion was performed.
 
-## 12. Next live-test plan
+## 12. Built-in GABRIEL web smoke test
+
+The Boston-only built-in smoke test did not run because `import gabriel` failed and no installed distribution was found under `gabriel`, `GABRIEL`, `gabriel-toolkit`, or `gabriel-ai`.
+
+- Intended scope: Boston BPS/BTU salary-comparison and contract-negotiation sources.
+- Built-in path not callable here: `gabriel.whatever(web_search=True)` and `gabriel.extract(modality="web")`.
+- Source rows created: 0.
+- Extraction rows created: 0.
+- Boston BTU rediscovered: no live test ran.
+- URLs/citations preserved: none returned.
+- Ingestion: no.
+
+The corrected framework still stands: built-in web mode is primary, but this environment needs the importable GABRIEL package or toolkit environment before it can be tested.
+
+## 13. Next live-test plan
 
 If a safe backend is available, the first live test should stay tightly bounded:
 

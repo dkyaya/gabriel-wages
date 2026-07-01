@@ -110,10 +110,22 @@ Suggested visual/table if any: guardrail checklist.
 
 ## Slide 11
 
-**Title:** Next test after the tutorial correction
+**Title:** Built-in smoke test status
 
-- Next test is a Boston-only built-in GABRIEL web smoke test.
-- Confirm exact invocation details and built-in output structure first.
+- A Boston-only built-in GABRIEL web smoke test was checked, but no live call ran.
+- The local Python environment does not currently expose an importable `gabriel` package.
+- Therefore `gabriel.whatever(web_search=True)` and `gabriel.extract(modality="web")` could not be tested here.
+- Source rows: 0; extraction rows: 0; Boston BTU was not rediscovered by live search.
+- No ingestion happened.
+
+Suggested visual/table if any: small status table with `intended path`, `local result`, `next dependency`.
+
+## Slide 12
+
+**Title:** Next test after package availability is fixed
+
+- Next test remains a Boston-only built-in GABRIEL web smoke test.
+- Confirm package/environment availability, exact invocation details, citation behavior, and output structure first.
 - Use the custom callback only if project-specific schema control is still required.
 - Keep ingestion separate.
 
