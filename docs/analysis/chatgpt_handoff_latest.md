@@ -2,7 +2,71 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-01T00:00:00-04:00`
+Last updated: `2026-07-01T00:35:00-04:00`
+
+---
+
+## 2026-07-01T00:35:00-04:00 - Thursday report polish completed
+
+**Commit:** pending in current session
+
+### Current State After This Entry
+
+- The main Thursday report draft has been polished for a toolkit-creator meeting.
+- A shorter PDF-ready markdown companion now exists.
+- The presentation outline now includes a worked JSON example and explicit Thursday decision points.
+- No live web search was executed.
+- No ingestion happened.
+
+### What Changed
+
+- Polished main report draft:
+  - `docs/analysis/gabriel_websearch_thursday_report_draft_2026-07-01.md`
+- Created PDF-ready abbreviated version:
+  - `docs/analysis/gabriel_websearch_thursday_report_pdf_ready_2026-07-01.md`
+- Updated presentation outline:
+  - `docs/analysis/gabriel_websearch_thursday_presentation_outline_2026-07-01.md`
+- Updated this handoff log and `PROGRESS.md`.
+
+### Main Polish Changes
+
+- Added a short `What we built` section near the top.
+- Added a `What this is / what this is not` subsection.
+- Added one short worked JSON payload example from the seed demo.
+- Reframed the open integration section as `Adapter-fit points for Thursday`.
+- Added a final `Thursday decision points` section.
+- Tightened wording to sound less like an internal repo log and more like a meeting document.
+
+### PDF-Ready Artifact
+
+- Created: `docs/analysis/gabriel_websearch_thursday_report_pdf_ready_2026-07-01.md`
+- Intended use: convert to PDF Wednesday night after final review.
+
+### Status Checks
+
+- Live web search executed: no.
+- Ingestion performed: no.
+- Seed counts unchanged: 5 city responses, 15 source rows, 34 extraction rows.
+
+### Recommended Next Step
+
+Convert the PDF-ready markdown to PDF Wednesday night after one final read for formatting and page length.
+
+### Validation/Audit Results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
 
 ---
 

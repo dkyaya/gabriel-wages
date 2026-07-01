@@ -12,6 +12,22 @@
 - Live mode only needs a backend adapter that matches the proposed `web_search` contract and returns a small set of standard source fields.
 - The intended use is acquisition and extraction assistance for later manual review, not production measurement, not automated ingestion, and not causal inference.
 
+### What we built
+
+- A custom GABRIEL callback scaffold through `custom_get_all_responses`.
+- A proposed live `web_search` backend contract with bounded, adapter-friendly inputs and outputs.
+- A five-city seed harness covering Boston, Somerville, Newton, Wayland, and Seekonk.
+- Two working output schemas: source discovery and evidence extraction.
+- No live search and no ingestion yet.
+
+### What this is / what this is not
+
+- This is an acquisition/extraction assistant scaffold.
+- This is not production measurement.
+- This is not automatic ingestion.
+- This is not causal evidence.
+- This is not broad scraping.
+
 ## 2. Motivation
 
 For the police/fire wage project, a central operational bottleneck is finding public, reasoning-rich municipal labor sources city by city. Final CBAs are often easy to locate relative to the documents that explain why wages moved: arbitration awards, JLMC materials, bargaining packets, mediation proposals, committee presentations, and union summaries.
@@ -36,7 +52,7 @@ In other words, the question was whether GABRIEL could act as a small acquisitio
 Local inspection pointed to a clear gap:
 
 - no built-in local GABRIEL web-search function was present;
-- the existing runners in `analysis/gabriel_pilot/` score local text inputs and write results;
+- the existing local runners score already assembled text inputs and write results;
 - the `ingest/fetchers/` layer is source-specific scaffolding for open portals, not a generic GABRIEL search interface;
 - no local function accepted city/query input and returned ranked URLs, snippets, or extraction-ready search results.
 
@@ -80,7 +96,38 @@ In seed/dry-run mode, the callback reads the existing five-city seed source and 
 - `search_config`
 - `notes`
 
-This makes the callback self-describing enough for a Thursday discussion without requiring anyone to read the implementation file first.
+This makes the callback self-describing enough for a Thursday discussion without requiring anyone to read the implementation first.
+
+### Worked example payload
+
+Below is the short form of one seeded Boston response. It shows the shape of the callback output without pasting the full payload.
+
+```json
+{
+  "Identifier": "gabriel_websearch_city_boston_2026_06_30",
+  "city": "Boston",
+  "status": "seed_dry_run",
+  "source_candidates_count": 3,
+  "extractions_count": 7,
+  "example_source_candidate": {
+    "source_title": "BTU contract negotiations page",
+    "source_url": "https://www.bostonpublicschools.org/school-committee/btu-contract-negotiations",
+    "document_type_guess": "bargaining_update",
+    "source_corpus_recommendation": "mechanism_proxy",
+    "comparability_signal": "high"
+  },
+  "example_extraction": {
+    "attribute": "comparability_emphasis",
+    "attribute_signal": "high",
+    "short_verbatim_excerpt": "Minimum and Maximum Teacher Salary with a Masters Comparisons to Surrounding Districts",
+    "ingestion_recommendation": "add_to_mechanism_queue"
+  },
+  "notes": [
+    "Seeded from existing calibration CSVs; live web search was not executed.",
+    "Response is always a parseable JSON string regardless of json_mode."
+  ]
+}
+```
 
 ## 6. Proposed live web-search backend contract
 
@@ -156,7 +203,7 @@ The scaffold is built around two compact outputs:
 | source-discovery CSV | Retain and classify public source candidates | one retained source candidate | `city`, `query`, `source_title`, `source_url`, `document_type_guess`, `source_corpus_recommendation`, `download_or_ingest_recommendation` | Acquisition triage, corpus-lane classification, later manual follow-up |
 | evidence-extraction CSV | Record short source-level evidence on mechanism attributes | one extracted attribute observation | `city`, `source_title`, `attribute`, `attribute_signal`, `short_verbatim_excerpt`, `ingestion_recommendation` | Calibration, attribute testing, manual evidence review before any ingestion task |
 
-The important design point is that these are not production corpus tables. They are search-and-extraction working tables.
+The important design point is that these are not production corpus tables. They are search-and-extraction working tables that sit upstream of manual ingestion decisions.
 
 ## 10. Five-city seed demo
 
@@ -210,9 +257,9 @@ The scaffold is intentionally constrained.
 
 Those guardrails matter because the acquisition layer should widen source visibility without collapsing the repo's provenance and corpus-separation discipline.
 
-## 14. What remains needed from toolkit creator
+## 14. Adapter-fit points for Thursday
 
-These are adapter-optimization questions rather than blockers:
+We chose conservative defaults so the scaffold is easy to explain and easy to adapt. If the toolkit backend differs, the likely outcome is contract adjustment, not redesign. The questions below are therefore about optimizing integration rather than proving feasibility.
 
 - Does the backend already match the proposed `web_search` signature?
 - What fields does it actually return?
@@ -223,7 +270,7 @@ These are adapter-optimization questions rather than blockers:
 - What are the rate limits?
 - Is there an official error-object format?
 
-The scaffold already demonstrates the shape of the integration. The remaining work is mostly contract confirmation and adapter fit.
+The scaffold already demonstrates a workable integration shape. Thursday should help determine how closely the current backend matches that shape and where a thin adapter would be useful.
 
 ## 15. Next live-test plan
 
@@ -243,3 +290,11 @@ That bounded plan is enough to test source recovery, lane classification, and at
 ## 16. Bottom-line recommendation
 
 The scaffold is useful as an acquisition-and-extraction assistant. The seeded harness is ready now. The next step is backend adapter confirmation followed by a bounded live five-city test. Production measurement should wait until live search outputs are manually reviewed and provenance-preserving.
+
+## 17. Thursday decision points
+
+- Confirm or revise the proposed backend contract.
+- Decide whether extraction should happen inside the callback or as a second GABRIEL pass.
+- Decide whether the live backend should return snippets only, page text, or both.
+- Agree on first live five-city test constraints and caps.
+- Agree that ingestion remains a separate manual step.

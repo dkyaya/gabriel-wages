@@ -6,6 +6,69 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-01 - Thursday report polish and PDF-ready markdown created
+
+**Did**
+- Polished the main Thursday report draft for a toolkit-creator meeting:
+  - `docs/analysis/gabriel_websearch_thursday_report_draft_2026-07-01.md`
+- Created a shorter PDF-ready markdown companion:
+  - `docs/analysis/gabriel_websearch_thursday_report_pdf_ready_2026-07-01.md`
+- Updated the presentation outline to include a worked JSON example and explicit Thursday decision points.
+- Updated `docs/analysis/chatgpt_handoff_latest.md` and this log.
+- Ran required checks.
+
+**Decisions and why**
+- Added a short `What we built` section and a `What this is / what this is not` section so the document reads cleanly at the top without requiring the reader to infer scope.
+- Added a short Boston worked JSON example to show the callback output shape without dumping a full payload.
+- Reframed open questions as adapter-fit points, because the likely Thursday outcome is contract adjustment rather than feasibility uncertainty.
+- Created a separate PDF-ready markdown so Wednesday-night conversion can happen without trimming the fuller draft in a hurry.
+
+**Surprises/breakage**
+- No new breakage.
+- No code changes were needed, so no `py_compile` pass was required.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+**Thursday package snapshot**
+```text
+main report polished: yes
+pdf-ready markdown created: yes
+presentation outline updated: yes
+live web search executed: no
+ingestion performed: no
+seed counts unchanged: 5 city responses | 15 source rows | 34 extraction rows
+recommended next step: convert PDF-ready markdown to PDF Wednesday night
+```
+
+**Next steps**
+1. Do one quick read focused on PDF page length and table breaks.
+2. Convert the PDF-ready markdown to PDF Wednesday night.
+3. Keep any later live test separate from ingestion and bounded to the same five-city scaffold.
+
 ## 2026-07-01 - Thursday report draft package created
 
 **Did**

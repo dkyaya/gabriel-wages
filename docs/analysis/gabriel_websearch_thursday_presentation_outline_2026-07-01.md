@@ -67,6 +67,16 @@ Suggested visual/table if any: compact city table with source and extraction cou
 
 ## Slide 7
 
+**Title:** Worked JSON example
+
+- Show one short seeded payload example, ideally Boston.
+- Highlight `Identifier`, `city`, `status`, source-candidate count, extraction count, one source example, and one extraction example.
+- Emphasize that the callback output is already shaped for flattening into working tables.
+
+Suggested visual/table if any: small JSON callout box or two-column `field` / `example value` table.
+
+## Slide 8
+
 **Title:** Example source classifications
 
 - Boston BTU: mechanism-proxy, high comparability, not impasse evidence.
@@ -76,7 +86,7 @@ Suggested visual/table if any: compact city table with source and extraction cou
 
 Suggested visual/table if any: 5-row example table with `city`, `source`, `lane`, `why it matters`.
 
-## Slide 8
+## Slide 9
 
 **Title:** Guardrails and corpus separation
 
@@ -87,13 +97,13 @@ Suggested visual/table if any: 5-row example table with `city`, `source`, `lane`
 
 Suggested visual/table if any: guardrail checklist.
 
-## Slide 9
+## Slide 10
 
-**Title:** Questions / next live pilot
+**Title:** Thursday decision points / next live pilot
 
-- Does the toolkit backend already match the proposed contract, or does it need an adapter?
-- What content comes back: snippets only, page text, or both?
-- First live test should stay bounded to the same five cities with strict result caps.
-- Production measurement should wait until live outputs are manually verified.
+- Confirm or revise the proposed backend contract.
+- Decide whether extraction happens inside the callback or as a second GABRIEL pass.
+- Decide whether the backend returns snippets only, page text, or both.
+- Agree on first five-city live-test caps and keep ingestion separate.
 
 Suggested visual/table if any: next-step box with `adapter confirmation -> five-city live pilot -> manual review`.
