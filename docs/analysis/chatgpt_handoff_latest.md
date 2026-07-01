@@ -2,7 +2,76 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-06-30T21:00:00-04:00`
+Last updated: `2026-06-30T22:05:00-04:00`
+
+---
+
+## 2026-06-30T22:05:00-04:00 - scaffold contract refined
+
+**Commit:** pending in current session
+
+### Current State After This Entry
+
+- No live web search was executed.
+- The scaffold still runs in seed/dry-run mode and now has a concrete proposed live backend contract.
+- `Response` is always a parseable JSON string, regardless of `json_mode`.
+- Streaming is explicitly unsupported for now.
+- Extraction is conceptually inside `custom_get_all_responses`, but the current live path remains a discovery-only placeholder because no safe backend exists locally.
+
+### What Changed
+
+- Refined `analysis/gabriel_pilot/gabriel_websearch_custom_fn.py` to assume:
+  - `web_search(query: str, *, max_results: int = 5, domains: list[str] | None = None, city: str | None = None, state: str | None = None) -> list[dict]`
+- Fixed the expected discovery result keys to:
+  - `title`
+  - `url`
+  - `snippet`
+  - `source_domain`
+  - `published_date`
+  - `retrieval_status`
+- Added structured error fields in the JSON response:
+  - `status`
+  - `error_type`
+  - `error_message`
+  - `source_candidates`
+  - `extractions`
+  - `notes`
+- Added evidence-origin helper fields to the JSON payload shape where feasible:
+  - `search_snippet`
+  - `page_text_excerpt`
+  - `evidence_origin`
+- Updated the prompt template and design memo to include domain filters and result caps.
+- Re-ran the seed demo successfully.
+
+### Seed Demo Snapshot
+
+- Seed demo ran: yes.
+- City responses written: 5.
+- Parsed source rows written: 15.
+- Parsed extraction rows written: 34.
+- Row counts changed: no.
+- Live web search executed: no.
+
+### Default Domain Filters
+
+- Boston: `bostonpublicschools.org`, `boston.gov`, `btu.org`, `mass.gov`
+- Somerville: `somervillema.gov`, `somerville.k12.ma.us`, `mass.gov`, `somervilleeducators.com`
+- Newton: `newton.k12.ma.us`, `newteach.org`, `mass.gov`
+- Wayland: `wayland.ma.us`, `mass.gov`
+- Seekonk: `seekonk-ma.gov`, `seekonkschools.org`
+
+### Recommended Thursday Talking Points
+
+- The contract is now concrete enough to discuss adapter fit with the toolkit creator.
+- The intended design is two-stage and token-efficient:
+  1. source discovery with URLs and snippets
+  2. GABRIEL extraction only on retained candidates
+- The hook returns a full dataframe only; no streaming or retry protocol is assumed.
+- If the toolkit creator already has a different discovery object shape, the main question is whether to adapt the backend into this contract or revise the scaffold.
+
+### Recommended Next Codex Run
+
+If the toolkit creator confirms a backend callable, adapt only the live path in `custom_get_all_responses` and rerun the same five-city bounded pilot with domain filters and capped results. Otherwise, keep the current scaffold as the Thursday demonstration artifact and do not attempt live search.
 
 ---
 

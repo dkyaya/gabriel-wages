@@ -9,12 +9,19 @@ Use this template for a bounded public-source search and extraction pass. Do not
 - Priority units: `{priority_units}`
 - Known sources or calibration targets: `{known_sources}`
 - Search terms: `{search_terms}`
-- Maximum retained sources: `{max_sources}`
+- Domain filters: `{domain_filters}`
+- Maximum search results per query: `{max_results_per_query}`
+- Maximum retained sources: `{max_sources_retained}`
+- Maximum extractions per retained source: `{max_extractions_per_source}`
 - Attributes: `{attributes}`
 
 ## Search Task
 
-Search for public municipal labor and wage-setting sources for `{city}, {state}`. Prioritize official municipal, school-district, union, and state-agency sources. Retain at most `{max_sources}` source candidates.
+Search for public municipal labor and wage-setting sources for `{city}, {state}`. Prioritize official municipal, school-district, union, and state-agency sources. Apply domain filters first, then retain at most `{max_sources_retained}` source candidates.
+
+Use domain filters as a hard preference toward official or otherwise high-value public domains:
+
+- `{domain_filters}`
 
 Use bounded query themes only:
 
@@ -28,12 +35,19 @@ Use bounded query themes only:
 
 Do not crawl broadly. Do not bypass access controls. If a result is an index page, classify it as index-only or lead-only unless a specific public source document is directly available.
 
+Operational caps:
+
+- return at most `{max_results_per_query}` search results per query;
+- retain at most `{max_sources_retained}` source candidates for extraction;
+- extract at most `{max_extractions_per_source}` short evidence spans per retained source.
+
 ## Source Classification
 
 For each retained source candidate, return:
 
 - source title;
 - source URL;
+- search snippet if returned by the backend;
 - source owner;
 - source owner type;
 - publication or document date if visible;
@@ -80,6 +94,7 @@ For each retained source, classify these attributes:
 ## Evidence Rules
 
 - Provide short verbatim excerpts only.
+- Preserve source URLs and search snippets explicitly.
 - Do not paste long passages.
 - Do not paraphrase excerpts.
 - Do not infer named comparator cities unless they are explicitly visible.
@@ -94,5 +109,11 @@ Return two tables matching:
 
 - `docs/acquisition/gabriel_websearch_mass_city_pilot_sources_2026-06-30.csv`
 - `docs/acquisition/gabriel_websearch_mass_city_pilot_extractions_2026-06-30.csv`
+
+If feasible, include evidence-origin fields in the working response object:
+
+- `search_snippet`
+- `page_text_excerpt`
+- `evidence_origin`
 
 Label any output that was generated from known seed sources rather than live web search as design/seed only.

@@ -61,7 +61,7 @@ custom_get_all_responses(
 - `model`: optional passthrough for future backend use
 - `api_key`: optional passthrough for future backend use
 - `web_search`: optional callable for a future live search backend
-- `**kwargs`: optional bounded live controls such as `enable_live_web_search`, `live_max_results`, and `live_query_limit`
+- `**kwargs`: optional bounded live controls such as `enable_live_web_search`, `max_results`, and `domain_filters`
 
 Current city resolution is pilot-scoped and expects either:
 
@@ -82,12 +82,17 @@ The function returns a pandas dataframe with exactly these columns:
   "city": "Boston",
   "identifier": "gabriel_websearch_city_boston_2026_06_30",
   "status": "seed_dry_run",
+  "error_type": null,
+  "error_message": null,
   "json_mode_requested": true,
+  "streaming_supported": false,
   "source_candidates": [...],
   "extractions": [...],
   "notes": [...]
 }
 ```
+
+`Response` is always serialized as a parseable JSON string regardless of `json_mode`.
 
 ## 7. Seed / Dry-Run Behavior
 
@@ -103,11 +108,59 @@ For each pilot city response, it returns:
 - all seed source rows for that city in `source_candidates`
 - all seed extraction rows for that city in `extractions`
 - a clear `status` of `seed_dry_run`
+- `search_config` with domain filters and result caps
+- `web_search_contract` describing the expected backend signature
 - notes explicitly stating that live web search was not executed
 
-If a city cannot be resolved from the prompt or identifier, the function returns empty arrays with status `no_seed_data_for_city`.
+If a city cannot be resolved from the prompt or identifier, the function returns empty arrays with status `error` and `error_type = city_resolution_error`.
 
-## 8. Optional Live `web_search` Behavior
+## 8. Proposed Live Backend Contract
+
+The scaffold now assumes this exact callable shape:
+
+```python
+web_search(
+    query: str,
+    *,
+    max_results: int = 5,
+    domains: list[str] | None = None,
+    city: str | None = None,
+    state: str | None = None,
+) -> list[dict]
+```
+
+Each returned result dict is expected to include:
+
+- `title`
+- `url`
+- `snippet`
+- `source_domain`
+- `published_date`
+- `retrieval_status`
+
+This is a source-discovery contract. The scaffold preserves URLs and snippets explicitly, then leaves extraction inside `custom_get_all_responses`.
+
+## 9. Domain Filters And Max Results
+
+Live mode is intentionally bounded and off by default.
+
+Domain filters mean limiting search to official or otherwise high-value public domains before broader public pages are considered. In the current pilot builder, those defaults are:
+
+- Boston: `bostonpublicschools.org`, `boston.gov`, `btu.org`, `mass.gov`
+- Somerville: `somervillema.gov`, `somerville.k12.ma.us`, `mass.gov`, `somervilleeducators.com`
+- Newton: `newton.k12.ma.us`, `newteach.org`, `mass.gov`
+- Wayland: `wayland.ma.us`, `mass.gov`
+- Seekonk: `seekonk-ma.gov`, `seekonkschools.org`
+
+The builder also exposes:
+
+- `max_results_per_query`
+- `max_sources_retained`
+- `max_extractions_per_source`
+
+These caps are intended to keep the Thursday workflow token-bounded and city-bounded.
+
+## 10. Optional Live `web_search` Behavior
 
 Live mode is intentionally bounded and off by default.
 
@@ -120,28 +173,73 @@ If enabled, the scaffold attempts to call:
 
 ```python
 web_search(
-    prompt=prompt,
-    identifier=identifier,
+    prompt,
+    max_results=max_results,
+    domains=domains,
     city=city,
-    json_mode=json_mode,
-    model=model,
-    api_key=api_key,
-    max_results=live_max_results,
-    query_limit=live_query_limit,
-    **kwargs,
+    state=state,
 )
 ```
 
 Current default bounds:
 
-- `live_max_results=5`
-- `live_query_limit=3`
+- `max_results=5`
+- city-specific default domain filters from the prompt builder
+
+The current live path does not stream and returns a complete dataframe only.
 
 If the backend fails, the function falls back to seeded output with status `live_backend_failed_fallback_to_seed`.
 
-Because the toolkit creator has not yet specified the callable shape or return object, this live path is a placeholder only.
+Because no safe backend is present locally, this live path remains unexecuted in this repo.
 
-## 9. Schema Mapping From Seed Files Into `Response`
+## 11. Error Format
+
+The scaffold does not retry. On errors, it returns structured fields inside the JSON response:
+
+- `status = error` or `live_backend_failed_fallback_to_seed`
+- `error_type`
+- `error_message`
+- `source_candidates`
+- `extractions`
+- `notes`
+
+Examples:
+
+- unresolved city: `status = error`, `error_type = city_resolution_error`
+- live backend shape mismatch: `status = error`, `error_type = live_backend_shape_error`
+- live backend exception with seed fallback: `status = live_backend_failed_fallback_to_seed`
+
+## 12. Citation And Source URL Preservation
+
+The scaffold explicitly preserves source URLs and snippets in the response payload.
+
+In seed mode, source candidates include:
+
+- `source_url`
+- `short_evidence_snippet`
+- `search_snippet`
+- `page_text_excerpt`
+- `evidence_origin`
+
+In a future live mode, source candidates are expected to preserve:
+
+- `url`
+- `snippet`
+- `source_domain`
+- `evidence_origin = live_search_snippet`
+
+This keeps source discovery provenance visible before any later extraction stage.
+
+## 13. Two-Stage Token-Efficient Design
+
+The intended design is:
+
+1. source discovery with URLs and snippets
+2. GABRIEL extraction only on retained candidates
+
+That is the token-efficient path because it avoids doing extraction on every raw search hit. The current seed mode emulates the final output shape by returning both `source_candidates` and `extractions` in one payload, but conceptually those represent two stages.
+
+## 14. Schema Mapping From Seed Files Into `Response`
 
 `source_candidates` preserves the schema from:
 
@@ -159,26 +257,31 @@ Columns preserved:
 
 - `extraction_id`, `search_id`, `city`, `state`, `source_title`, `source_url`, `source_owner`, `document_type_guess`, `source_corpus_recommendation`, `unit_or_occupation_guess`, `occupation_class_guess`, `safety_flag_guess`, `cycle_or_document_date`, `attribute`, `attribute_signal`, `score_or_level`, `short_verbatim_excerpt`, `named_comparator_cities`, `impasse_process_terms`, `wage_terms`, `evidence_relevance`, `extraction_confidence`, `ingestion_recommendation`, `notes`
 
-## 10. Thursday Toolkit Discussion Use
+## 15. Why No Streaming For Now
+
+Streaming is not supported because the immediate Thursday artifact is a complete dataframe-returning hook, not a UI transport layer. The integration point under discussion is batch-oriented: list of prompts in, dataframe out.
+
+Holding the response until the full payload is available also keeps the source-candidate and extraction payloads aligned per identifier and avoids partial-state handling while the backend contract is still unsettled.
+
+## 16. Thursday Toolkit Discussion Use
 
 Use this scaffold as a concrete interface proposal, not as proof that live search is already integrated.
 
 Recommended Thursday framing:
 
 - show the function signature and returned dataframe shape
+- show the proposed `web_search(query, *, max_results, domains, city, state)` contract
 - show one seed response payload for a pilot city
 - show that the response can be flattened back into source and extraction tables
-- emphasize that the current scaffold is compatible with city-by-city bounded execution
-- ask the toolkit creator how their actual `web_search` callable plugs into this shape
+- emphasize the two-stage design: source discovery first, extraction second
+- emphasize that the current scaffold is compatible with city-by-city bounded execution and no streaming
+- ask the toolkit creator whether their actual backend can satisfy this contract cleanly
 
-## 11. Questions For The Toolkit Creator
+## 17. Questions For The Toolkit Creator
 
-1. What exact object or function is passed as `web_search`?
-2. Does it return URLs, snippets, page text, or structured documents?
-3. Does it support domain filters or max results?
-4. How should rate limits be handled?
-5. Should extraction happen inside `custom_get_all_responses` or as a second GABRIEL call?
-6. Is JSON mode supported for web-search responses?
-7. Are citations and source URLs preserved automatically?
-8. Can the function stream, or must it return a full dataframe?
-9. What retry or error format is expected?
+1. Does the actual backend already accept `query`, `max_results`, `domains`, `city`, and `state`, or does the wrapper need to adapt to a different callable?
+2. Are URLs and snippets always preserved in the backend result, or are they sometimes omitted?
+3. If a page fetch happens after discovery, what object carries page text and citations into extraction?
+4. How should rate limits be handled at the query level and the retained-source extraction level?
+5. Is JSON mode relevant to the backend itself, or only to downstream model extraction calls?
+6. Is the expected production pattern really one hook that handles both discovery and extraction, or should discovery and extraction be split into separate GABRIEL calls later?

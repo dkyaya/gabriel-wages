@@ -6,6 +6,97 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-06-30 - GABRIEL web-search scaffold contract refined
+
+**Did**
+- Refined `analysis/gabriel_pilot/gabriel_websearch_custom_fn.py` around a concrete live backend contract:
+  - `web_search(query: str, *, max_results: int = 5, domains: list[str] | None = None, city: str | None = None, state: str | None = None) -> list[dict]`
+- Updated the scaffold to preserve URLs and snippets explicitly and to always return parseable JSON strings in `Response`.
+- Added structured error fields to the response payload: `status`, `error_type`, `error_message`, `source_candidates`, `extractions`, and `notes`.
+- Added prompt-builder support for city-specific domain filters plus bounded caps for max results, retained sources, and extractions per source.
+- Updated `analysis/gabriel_pilot/run_gabriel_websearch_seed_demo.py`, `docs/analysis/gabriel_websearch_custom_function_design_2026-06-30.md`, and `docs/acquisition/gabriel_websearch_city_prompt_template_2026-06-30.md`.
+- Re-ran the seed demo and checks.
+
+**Decisions and why**
+- Treated the live backend contract as source discovery only: URLs, snippets, domains, dates, and retrieval status come from `web_search`, while extraction belongs inside `custom_get_all_responses`.
+- Kept streaming unsupported because the Thursday integration point is a complete dataframe-returning hook, not a partial-update transport.
+- Kept error handling simple and explicit: no retries, no silent failures, and seeded fallback only when a live backend was attempted and failed.
+- Added evidence-origin fields (`search_snippet`, `page_text_excerpt`, `evidence_origin`) to the JSON payload shape so discovery-stage evidence can stay distinguishable from later page-text extraction.
+
+**Surprises/breakage**
+- No new breakage after the contract refinement.
+- The flattened seed demo outputs stayed at the same row counts despite the richer JSON payload shape.
+
+**Validation/audit results**
+```text
+python analysis/gabriel_pilot/run_gabriel_websearch_seed_demo.py
+wrote responses: analysis/gabriel_pilot/results_gabriel_websearch_seed_demo_2026-06-30.csv
+wrote sources: analysis/gabriel_pilot/results_gabriel_websearch_seed_demo_sources_2026-06-30.csv rows=15
+wrote extractions: analysis/gabriel_pilot/results_gabriel_websearch_seed_demo_extractions_2026-06-30.csv rows=34
+
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+
+python -m py_compile analysis/gabriel_pilot/gabriel_websearch_custom_fn.py
+passed
+
+python -m py_compile analysis/gabriel_pilot/run_gabriel_websearch_seed_demo.py
+passed
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+**custom GABRIEL web-search function snapshot**
+```text
+hook implemented: custom_get_all_responses
+response serialization: always JSON string
+streaming supported: no
+live backend contract fixed: yes
+domain filters exposed: yes
+max-results support exposed: yes
+error format: structured; no retries
+live search executed: no
+```
+
+**seed demo snapshot**
+```text
+responses written: 5
+source rows written: 15
+extraction rows written: 34
+seed row counts changed: no
+```
+
+**Thursday presentation snapshot**
+```text
+main contract to show: web_search(query, *, max_results, domains, city, state) -> list[dict]
+discovery result keys: title, url, snippet, source_domain, published_date, retrieval_status
+main design message: source discovery first, GABRIEL extraction second, all inside the custom hook boundary
+live execution status: still seed/dry-run only
+```
+
+**Next steps**
+1. Use the refined memo and current seed demo as the Thursday discussion artifact.
+2. Ask the toolkit creator whether their actual backend already matches the proposed `web_search` signature or needs an adapter.
+3. If a safe backend is later provided, test only the same five-city bounded pilot with domain filters and capped results.
+
 ## 2026-06-30 - GABRIEL custom web-search scaffold seed demo
 
 **Did**

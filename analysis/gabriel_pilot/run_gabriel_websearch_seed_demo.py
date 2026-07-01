@@ -32,6 +32,7 @@ def main() -> None:
         json_mode=True,
         model="seed_dry_run_demo",
         web_search=None,
+        max_results=5,
     )
     responses.to_csv(RESPONSES_OUTPUT, index=False)
 
