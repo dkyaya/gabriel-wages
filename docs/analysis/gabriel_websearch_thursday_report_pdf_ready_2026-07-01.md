@@ -1,7 +1,7 @@
 # City-by-City Public-Source Discovery and Extraction with GABRIEL Web Mode
 
 **Date:** 2026-07-01  
-**Status:** PDF-ready abbreviated draft; framework corrected after tutorial clarification; built-in web smoke test blocked locally by missing package
+**Status:** PDF-ready abbreviated draft; framework corrected after tutorial clarification; `openai-gabriel` installed, native web call attempted, no response returned
 
 ## 1. Executive summary
 
@@ -12,8 +12,8 @@
 - A proposed fallback `web_search` contract is now concrete enough for adapter-fit discussion if the built-in path is not structured enough.
 - The five-city seed harness covers Boston, Somerville, Newton, Wayland, and Seekonk.
 - Current outputs are 5 city responses, 15 source rows, and 34 extraction rows.
-- A Boston-only built-in GABRIEL web smoke test was stopped before a live call because the local Python environment does not expose an importable `gabriel` package.
-- No live web search was executed and no ingestion was performed.
+- A Boston-only built-in GABRIEL web smoke test was attempted after installing `openai-gabriel` 1.1.8. The native web path was callable, but the one live request returned no response and GABRIEL recorded connection errors.
+- No ingestion was performed.
 
 ## 2. Problem and goal
 
@@ -179,17 +179,20 @@ A one-city Boston live smoke test was considered but not executed. The corrected
 
 ## 12. Built-in GABRIEL web smoke test
 
-The Boston-only built-in smoke test did not run because `import gabriel` failed and no installed distribution was found under `gabriel`, `GABRIEL`, `gabriel-toolkit`, or `gabriel-ai`.
+The Boston-only built-in smoke test advanced past the earlier package blocker:
 
+- Package installed/imported: `openai-gabriel` 1.1.8.
+- Native path callable: `gabriel.whatever(web_search=True)`.
 - Intended scope: Boston BPS/BTU salary-comparison and contract-negotiation sources.
-- Built-in path not callable here: `gabriel.whatever(web_search=True)` and `gabriel.extract(modality="web")`.
+- Model/search context: `gpt-5.4-nano`, `search_context_size="low"`.
+- Live call result: failed API/web call; GABRIEL recorded three connection errors, empty response text, and no web-search sources.
 - Source rows created: 0.
 - Extraction rows created: 0.
-- Boston BTU rediscovered: no live test ran.
+- Boston BTU rediscovered: no response returned.
 - URLs/citations preserved: none returned.
 - Ingestion: no.
 
-The corrected framework still stands: built-in web mode is primary, but this environment needs the importable GABRIEL package or toolkit environment before it can be tested.
+The corrected framework still stands: built-in web mode is primary, and package availability is now resolved. The remaining question is whether the Harvard HUIT proxy supports built-in web-search tools through `openai-gabriel`, or whether the smoke test requires a standard OpenAI endpoint/key environment.
 
 ## 13. Next live-test plan
 

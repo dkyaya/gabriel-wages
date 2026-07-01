@@ -2,7 +2,108 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-01T13:30:00-04:00`
+Last updated: `2026-07-01T12:09:13-04:00`
+
+---
+
+## 2026-07-01T12:09:13-04:00 - openai-gabriel installed; Boston built-in web call failed with connection errors
+
+**Commit:** pending in current session
+
+### Current State After This Entry
+
+- `openai-gabriel` was installed into the active project virtual environment.
+- `import gabriel` now succeeds.
+- Built-in web mode is callable by signature through `gabriel.whatever(web_search=True, web_search_filters=..., search_context_size=...)`.
+- A Boston-only built-in web smoke test was attempted through the native `gabriel.whatever(web_search=True)` path.
+- The live call did not return a response: GABRIEL recorded `Successful=False` and three connection errors.
+- No source URLs, citations, snippets, page text, or model web summary were returned.
+- No ingestion happened.
+- No production data, corpus, inbox, or coverage files were modified.
+
+### Install/Import Result
+
+- Install command: `python -m pip install openai-gabriel`.
+- First sandboxed install attempt failed due DNS resolution for `pypi.org`.
+- Escalated install succeeded.
+- Installed package/version: `openai-gabriel` 1.1.8.
+- Imported module: `.venv/lib/python3.11/site-packages/gabriel/__init__.py`.
+- Exposed functions: `whatever`, `extract`, `rate`, and `classify`.
+
+### Signature Result
+
+- `gabriel.whatever`: explicit `web_search`, `web_search_filters`, `search_context_size`, `save_dir`, `column_name`, `identifier_column`, `model`, `n_parallels`, and `reset_files`.
+- `gabriel.extract`: explicit `modality`; `web_search`, `web_search_filters`, and `search_context_size` available via kwargs; `save_dir`, `column_name`, `model`, `n_parallels`, and `reset_files` explicit.
+- `gabriel.rate` and `gabriel.classify`: explicit `modality` and `search_context_size`; web controls available via kwargs.
+
+### Credential/Proxy Handling
+
+- Only credential presence was checked; no values were printed.
+- `HARVARD_SUBSCRIPTION_KEY` is present via `.env`.
+- `OPENAI_API_KEY` and `OPENAI_BASE_URL` were not present before runtime mapping.
+- The runner passed the Harvard key at runtime as GABRIEL `api_key`, the Harvard proxy base URL as `base_url`, and the Harvard subscription header through `extra_headers`.
+- No key was written into code or committed.
+
+### Boston Smoke-Test Result
+
+- Runner created: `analysis/gabriel_pilot/run_gabriel_builtin_web_smoke_boston.py`.
+- Path used: `gabriel.whatever(web_search=True)`.
+- Identifier: `gabriel_builtin_web_boston_btu_2026_07_01`.
+- Model/search context: `gpt-5.4-nano`, `search_context_size="low"`.
+- Scope: one Boston BPS/BTU public-source prompt.
+- Result: failed API/web call; empty response.
+- Raw GABRIEL result: `Successful=False`; `Error Log=["Connection error.", "Connection error.", "Connection error."]`; `Web Search Sources` empty.
+- Source rows: 0.
+- Extraction rows: 0.
+- Boston BTU/BPS salary-comparison material rediscovered: no.
+- URLs/citations preserved: no, none returned.
+
+### Artifacts
+
+- Created:
+  - `analysis/gabriel_pilot/run_gabriel_builtin_web_smoke_boston.py`
+  - `analysis/gabriel_pilot/builtin_web_smoke_boston_2026-07-01/raw_dataframe.csv`
+  - `analysis/gabriel_pilot/builtin_web_smoke_boston_2026-07-01/gabriel_whatever_raw.csv`
+  - `analysis/gabriel_pilot/builtin_web_smoke_boston_2026-07-01/gabriel_whatever_raw_run_metadata.json`
+  - `analysis/gabriel_pilot/builtin_web_smoke_boston_2026-07-01/raw_response.txt`
+  - `analysis/gabriel_pilot/results_gabriel_builtin_web_smoke_boston_2026-07-01.csv`
+  - `analysis/gabriel_pilot/results_gabriel_builtin_web_smoke_boston_sources_2026-07-01.csv`
+  - `analysis/gabriel_pilot/results_gabriel_builtin_web_smoke_boston_extractions_2026-07-01.csv`
+- Updated:
+  - `docs/analysis/gabriel_builtin_web_smoke_test_status_2026-07-01.md`
+  - `docs/analysis/gabriel_websearch_thursday_report_draft_2026-07-01.md`
+  - `docs/analysis/gabriel_websearch_thursday_report_pdf_ready_2026-07-01.md`
+  - `docs/analysis/gabriel_websearch_thursday_presentation_outline_2026-07-01.md`
+  - `docs/analysis/gabriel_websearch_custom_function_design_2026-06-30.md`
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+
+### Dependency Decision
+
+`requirements.txt` was not modified. The package installed and imported, but the built-in web call did not successfully return a response; pinning `openai-gabriel` should wait until the Harvard proxy/web-mode issue is resolved.
+
+### Recommended Next Step
+
+Ask Hemanth/toolkit creator whether `openai-gabriel` built-in web mode is expected to work through the Harvard HUIT proxy with Responses API web-search tools and `extra_headers`, or whether the smoke test needs a standard OpenAI endpoint/key environment. Then rerun only the same Boston prompt.
+
+### Validation/Audit Results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+
+python -m py_compile analysis/gabriel_pilot/run_gabriel_builtin_web_smoke_boston.py
+passed
+```
 
 ---
 

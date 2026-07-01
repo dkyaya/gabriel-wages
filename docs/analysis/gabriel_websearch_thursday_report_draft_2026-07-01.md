@@ -1,7 +1,7 @@
 # City-by-City Public-Source Discovery and Extraction with GABRIEL Web Mode
 
 **Date:** 2026-07-01  
-**Status:** Thursday-facing draft; framework corrected after tutorial clarification; built-in web smoke test blocked locally by missing package
+**Status:** Thursday-facing draft; framework corrected after tutorial clarification; `openai-gabriel` installed, native web call attempted, no response returned
 
 ## 1. Executive summary
 
@@ -9,8 +9,8 @@
 - In practice, that means starting with built-in web-researched city reports rather than starting with a custom callback.
 - This repo had not yet wired built-in GABRIEL web mode into the project's city-by-city source and extraction schema.
 - We therefore built a custom `get_all_responses_fn` scaffold, `custom_get_all_responses`, as a fallback and advanced schema-control path.
-- The scaffold currently runs in seed/dry-run mode only; no live web search was executed and no ingestion was performed.
-- A Boston-only built-in web smoke test was attempted at the environment-check stage, but the `gabriel` Python package was not installed or vendored locally, so no live run was executed.
+- The scaffold currently runs in seed/dry-run mode only; it remains fallback/advanced infrastructure.
+- A Boston-only built-in web smoke test was attempted after installing `openai-gabriel` 1.1.8. The package imported and the native web path was callable, but the one live request returned no response and GABRIEL recorded connection errors.
 - The intended use remains acquisition and extraction assistance for later manual review, not production measurement, not automated ingestion, and not causal inference.
 
 ### What we built
@@ -314,20 +314,21 @@ The report therefore remains seed-mode only. The immediate need is to confirm ex
 
 ## 18. Built-in GABRIEL web smoke test
 
-The Boston-only built-in smoke test was stopped before any live call because built-in GABRIEL web mode was not available in this Python environment.
+The Boston-only built-in smoke test advanced past the earlier package blocker.
 
-- Scope checked: Boston, MA only; intended identifier `gabriel_builtin_web_boston_btu_2026_07_01`.
+- Package installed/imported: `openai-gabriel` 1.1.8; `import gabriel` succeeded.
+- Native path callable: `gabriel.whatever(web_search=True, web_search_filters=..., search_context_size="low")`.
+- Scope: Boston, MA only; identifier `gabriel_builtin_web_boston_btu_2026_07_01`.
 - Intended target: public BPS/BTU salary-comparison and contract-negotiation sources.
-- Package check: `import gabriel` failed; `python -m pip show gabriel GABRIEL gabriel-toolkit gabriel-ai` found no installed package.
-- Local package/notebook check: no vendored GABRIEL package or uploaded tutorial notebook was found locally.
-- Functions unavailable here: `gabriel.whatever`, `gabriel.extract`, `gabriel.rate`, and `gabriel.classify`; related web arguments could not be tested.
+- Credential path: Harvard HUIT proxy key was passed at runtime as `api_key` plus `extra_headers`; no secret was printed or written into code.
+- Live call result: failed API/web call. GABRIEL raw output has `Successful=False`, three connection errors, empty response text, and no web-search sources.
 - Source rows created: 0.
 - Extraction rows created: 0.
-- Boston BTU rediscovered: no, because no live search ran.
-- URLs/citations preserved: none returned, because no live search ran.
+- Boston BTU rediscovered: no, because the live call returned no response.
+- URLs/citations preserved: none returned.
 - Ingestion: no.
 
-This preserves the corrected framework: built-in GABRIEL web mode remains the primary path, but it has not yet been successfully run in this environment. The issue to resolve with Hemanth/toolkit creator is package/environment availability first, then the exact invocation shape.
+This preserves the corrected framework: built-in GABRIEL web mode remains the primary path, and the local package/signature blocker is resolved. The issue to resolve with Hemanth/toolkit creator is now whether built-in web mode should work through the Harvard HUIT proxy with the current request-header wiring, or whether it requires a standard OpenAI endpoint/key environment.
 
 ## 19. Revised live path after reading the tutorial
 
@@ -359,8 +360,8 @@ Built-in GABRIEL web mode should be treated as the primary live path. The curren
 
 ## 22. Thursday decision points
 
-- Confirm the exact built-in web-mode invocation details in this project environment.
-- Confirm the installable/importable GABRIEL package or environment needed for built-in web mode.
+- Confirm whether the Harvard HUIT proxy supports Responses API web-search tools through `openai-gabriel`.
+- Confirm whether a standard OpenAI endpoint/key is required for this built-in web smoke test.
 - Inspect the built-in report output structure and citation behavior.
 - Decide whether extraction should happen through `gabriel.extract` or light structured parsing.
 - Use the custom callback only if the built-in path is not structured enough.

@@ -17,6 +17,8 @@ The custom callback scaffold documented here remains useful only if:
 
 In other words, this memo describes fallback/advanced infrastructure for schema control or nonstandard backends. It should not be presented as the project's primary built-in web-search route.
 
+Update after the Boston smoke-test attempt: `openai-gabriel` 1.1.8 installed and exposed the built-in web parameters, so the custom callback is not needed to make GABRIEL importable. The remaining blocker is that the native `gabriel.whatever(web_search=True)` call returned no response through the current Harvard HUIT proxy path. That should be resolved at the built-in/proxy layer before treating the custom callback as a substitute.
+
 ## 1. Purpose
 
 This memo documents a Thursday demonstration scaffold for routing bounded city-by-city public-source search and extraction through GABRIEL's custom full-prompt hook, without pretending that a live local search backend already exists.

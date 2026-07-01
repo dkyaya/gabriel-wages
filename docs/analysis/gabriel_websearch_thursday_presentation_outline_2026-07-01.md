@@ -112,20 +112,22 @@ Suggested visual/table if any: guardrail checklist.
 
 **Title:** Built-in smoke test status
 
-- A Boston-only built-in GABRIEL web smoke test was checked, but no live call ran.
-- The local Python environment does not currently expose an importable `gabriel` package.
-- Therefore `gabriel.whatever(web_search=True)` and `gabriel.extract(modality="web")` could not be tested here.
-- Source rows: 0; extraction rows: 0; Boston BTU was not rediscovered by live search.
+- `openai-gabriel` 1.1.8 installed and `import gabriel` succeeded.
+- `gabriel.whatever(web_search=True, search_context_size="low")` is callable.
+- One Boston-only live call was attempted through the Harvard HUIT proxy.
+- GABRIEL recorded connection errors and returned no response or web-search sources.
+- Source rows: 0; extraction rows: 0; Boston BTU was not rediscovered.
 - No ingestion happened.
 
 Suggested visual/table if any: small status table with `intended path`, `local result`, `next dependency`.
 
 ## Slide 12
 
-**Title:** Next test after package availability is fixed
+**Title:** Next test after proxy behavior is confirmed
 
 - Next test remains a Boston-only built-in GABRIEL web smoke test.
-- Confirm package/environment availability, exact invocation details, citation behavior, and output structure first.
+- Confirm whether Harvard HUIT proxy supports Responses API web-search tools through `openai-gabriel`, or whether a standard OpenAI endpoint/key is required.
+- Then inspect citation behavior and output structure.
 - Use the custom callback only if project-specific schema control is still required.
 - Keep ingestion separate.
 

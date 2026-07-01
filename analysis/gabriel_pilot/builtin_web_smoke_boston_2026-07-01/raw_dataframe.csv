@@ -1,0 +1,2 @@
+Identifier,Response,Time Taken,Input Tokens,Reasoning Tokens,Output Tokens,Reasoning Effort,Successful,Error Log,Web Search Sources,Cost
+gabriel_builtin_web_boston_btu_2026_07_01,,,285,,,low,False,"['Connection error.', 'Connection error.', 'Connection error.']",,5.7e-05

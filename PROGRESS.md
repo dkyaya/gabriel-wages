@@ -6,6 +6,98 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-01 - openai-gabriel installed; Boston built-in web call failed with connection errors
+
+**Did**
+- Installed `openai-gabriel` into the active project virtual environment after the first sandboxed attempt failed DNS resolution for `pypi.org`.
+- Verified `import gabriel` works and observed installed version `1.1.8`.
+- Inspected signatures for `gabriel.whatever`, `gabriel.extract`, `gabriel.rate`, and `gabriel.classify`.
+- Confirmed the native report-first path is callable by signature: `gabriel.whatever(..., web_search=True, web_search_filters=..., search_context_size=...)`.
+- Created and ran:
+  - `analysis/gabriel_pilot/run_gabriel_builtin_web_smoke_boston.py`
+- Created failed-run working artifacts:
+  - `analysis/gabriel_pilot/builtin_web_smoke_boston_2026-07-01/raw_dataframe.csv`
+  - `analysis/gabriel_pilot/builtin_web_smoke_boston_2026-07-01/gabriel_whatever_raw.csv`
+  - `analysis/gabriel_pilot/builtin_web_smoke_boston_2026-07-01/gabriel_whatever_raw_run_metadata.json`
+  - `analysis/gabriel_pilot/builtin_web_smoke_boston_2026-07-01/raw_response.txt`
+  - `analysis/gabriel_pilot/results_gabriel_builtin_web_smoke_boston_2026-07-01.csv`
+  - `analysis/gabriel_pilot/results_gabriel_builtin_web_smoke_boston_sources_2026-07-01.csv`
+  - `analysis/gabriel_pilot/results_gabriel_builtin_web_smoke_boston_extractions_2026-07-01.csv`
+- Updated:
+  - `docs/analysis/gabriel_builtin_web_smoke_test_status_2026-07-01.md`
+  - `docs/analysis/gabriel_websearch_thursday_report_draft_2026-07-01.md`
+  - `docs/analysis/gabriel_websearch_thursday_report_pdf_ready_2026-07-01.md`
+  - `docs/analysis/gabriel_websearch_thursday_presentation_outline_2026-07-01.md`
+  - `docs/analysis/gabriel_websearch_custom_function_design_2026-06-30.md`
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+
+**Decisions and why**
+- Used built-in `gabriel.whatever(web_search=True)` as the primary live path, because package inspection confirmed the tutorial-described route exists.
+- Passed the Harvard proxy credential at runtime as `api_key`, `base_url`, and `extra_headers`, matching existing project conventions without printing or committing secrets.
+- Kept the test to one Boston prompt and `n_parallels=1`.
+- Did not modify `requirements.txt`, because install/import succeeded but the built-in web call did not return a response; dependency pinning should wait until proxy/web-mode behavior is resolved.
+- Did not run `gabriel.extract(modality="web")`, because `whatever(web_search=True)` was available by signature and the failure was live call execution rather than missing report-first support.
+
+**Surprises/breakage**
+- GABRIEL's top-level functions are async in this package version; the runner needed to await the result.
+- GABRIEL attempted to install/upgrade `wheel` internally during runtime; the sandboxed attempt failed due DNS, but it did not change the final diagnosis.
+- The first sandboxed live run failed with connection errors; an escalated rerun retried the incomplete row but still produced an empty response.
+- Raw GABRIEL output shows `Successful=False`, `Error Log=["Connection error.", "Connection error.", "Connection error."]`, and no web-search sources.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+
+python -m py_compile analysis/gabriel_pilot/run_gabriel_builtin_web_smoke_boston.py
+passed
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+**Built-in web smoke-test snapshot**
+```text
+openai-gabriel installed/imported: yes
+installed version: 1.1.8
+built-in web mode callable by signature: yes
+Boston smoke test executed: attempted via native GABRIEL path
+GABRIEL web path used: gabriel.whatever(web_search=True)
+live response returned: no
+source rows created: 0
+extraction rows created: 0
+Boston BTU rediscovered: no
+URLs/citations preserved: no
+requirements.txt modified: no
+ingestion performed: no
+production corpus modified: no
+recommended next step: confirm whether Harvard HUIT proxy supports Responses API web-search tools through openai-gabriel, or rerun in a standard OpenAI endpoint/key environment
+```
+
+**Next steps**
+1. Ask Hemanth/toolkit creator whether built-in web mode should work through the Harvard HUIT proxy with the current `extra_headers` wiring.
+2. If the proxy supports web tools, rerun only the same Boston prompt after the connection/proxy issue is fixed.
+3. If the proxy does not support web tools, rerun the same Boston prompt only in an approved standard OpenAI endpoint/key environment.
+4. Keep ingestion and any five-city pilot separate until the Boston built-in smoke test returns source/citation-bearing output.
+
 ## 2026-07-01 - Built-in GABRIEL web smoke test blocked locally
 
 **Did**
