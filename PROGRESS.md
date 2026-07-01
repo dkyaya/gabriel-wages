@@ -6,6 +6,74 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-01 - Live smoke test skipped; no safe backend available
+
+**Did**
+- Considered the requested one-city Boston live web-search smoke test.
+- Inspected local dependencies, installed search-client packages, environment variable names, and repo references for a safe callable search backend.
+- Determined no safe repo-local backend was available, so no live search was executed.
+- Created:
+  - `docs/analysis/gabriel_websearch_live_smoke_test_status_2026-07-01.md`
+- Added concise `Optional live smoke test` notes to:
+  - `docs/analysis/gabriel_websearch_thursday_report_draft_2026-07-01.md`
+  - `docs/analysis/gabriel_websearch_thursday_report_pdf_ready_2026-07-01.md`
+- Updated `docs/analysis/chatgpt_handoff_latest.md` and this log.
+- Ran required checks.
+
+**Decisions and why**
+- Did not use general search-engine result scraping, because the task explicitly disallowed it.
+- Did not treat session-level browser/search tools as a repo-local `web_search` backend, because they cannot be passed through the Python `custom_get_all_responses` scaffold as an executable adapter.
+- Kept the Thursday package seed-mode only; the adapter contract remains ready for toolkit-creator confirmation.
+
+**Surprises/breakage**
+- No search API wrapper was present in `requirements.txt`.
+- Installed-package probes found no SerpAPI, Serper, Brave, Tavily, Exa, Google API client, DuckDuckGo wrapper, or equivalent search client.
+- The only local `.env` key advertised was the Harvard HUIT OpenAI proxy key already used for existing GABRIEL scoring and optional LLM span extraction.
+- No code changes were made, so no `py_compile` pass was required.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+**Live smoke-test snapshot**
+```text
+safe backend available: no
+live smoke test executed: no
+backend used: none
+source rows created: 0
+extraction rows created: 0
+Boston BTU rediscovered: no live test run
+ingestion performed: no
+production corpus modified: no
+```
+
+**Next steps**
+1. Ask the toolkit creator to confirm a callable backend or approved search API/client matching the proposed `web_search` contract.
+2. If confirmed, rerun only the one-city Boston smoke test before expanding to any five-city live pilot.
+3. Keep ingestion separate from any future live discovery test.
+
 ## 2026-07-01 - Thursday report polish and PDF-ready markdown created
 
 **Did**

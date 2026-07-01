@@ -272,7 +272,13 @@ We chose conservative defaults so the scaffold is easy to explain and easy to ad
 
 The scaffold already demonstrates a workable integration shape. Thursday should help determine how closely the current backend matches that shape and where a thin adapter would be useful.
 
-## 15. Next live-test plan
+## 15. Optional live smoke test
+
+A one-city Boston live smoke test was considered for this report, but it was not executed. Local inspection found no safe repo-local search backend or approved search API client that could be passed through `custom_get_all_responses` without scraping a general search results page or relying on a session-only browser/search tool.
+
+The report therefore remains seed-mode only. The adapter contract is ready for the toolkit creator to confirm or revise, and live execution should wait until a safe backend adapter is available. No ingestion was performed.
+
+## 16. Next live-test plan
 
 If a safe backend becomes available, the first live test should remain tightly bounded:
 
@@ -287,11 +293,11 @@ If a safe backend becomes available, the first live test should remain tightly b
 
 That bounded plan is enough to test source recovery, lane classification, and attribute extraction without drifting into production collection.
 
-## 16. Bottom-line recommendation
+## 17. Bottom-line recommendation
 
 The scaffold is useful as an acquisition-and-extraction assistant. The seeded harness is ready now. The next step is backend adapter confirmation followed by a bounded live five-city test. Production measurement should wait until live search outputs are manually reviewed and provenance-preserving.
 
-## 17. Thursday decision points
+## 18. Thursday decision points
 
 - Confirm or revise the proposed backend contract.
 - Decide whether extraction should happen inside the callback or as a second GABRIEL pass.

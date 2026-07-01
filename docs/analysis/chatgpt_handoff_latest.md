@@ -2,7 +2,67 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-01T00:35:00-04:00`
+Last updated: `2026-07-01T10:43:43-04:00`
+
+---
+
+## 2026-07-01T10:43:43-04:00 - live smoke test skipped; no safe backend available
+
+**Commit:** pending in current session
+
+### Current State After This Entry
+
+- A bounded one-city Boston live smoke test was considered.
+- The live smoke test was not executed because no safe repo-local search backend or approved search API client was available.
+- Seed mode remains the current executable demonstration.
+- No live result CSVs were created.
+- No ingestion happened, and no production corpus files were modified.
+
+### Backend Inspection Result
+
+- `requirements.txt` has no search API dependency.
+- Installed-package probes found no SerpAPI, Serper, Brave, Tavily, Exa, Google API client, DuckDuckGo wrapper, or similar search client.
+- The active shell exposed no search-backend environment variable.
+- The repo `.env` only advertised the Harvard HUIT OpenAI proxy key used by existing GABRIEL scoring and optional LLM span extraction.
+- Session-level browser/search tools were not treated as a local callable backend for `custom_get_all_responses`.
+
+### What Changed
+
+- Created status memo:
+  - `docs/analysis/gabriel_websearch_live_smoke_test_status_2026-07-01.md`
+- Added concise `Optional live smoke test` notes to:
+  - `docs/analysis/gabriel_websearch_thursday_report_draft_2026-07-01.md`
+  - `docs/analysis/gabriel_websearch_thursday_report_pdf_ready_2026-07-01.md`
+- Updated this handoff log and `PROGRESS.md`.
+
+### Status Checks
+
+- Live web search executed: no.
+- Backend used: none; no safe backend locally available.
+- Source rows created: 0.
+- Extraction rows created: 0.
+- Ingestion performed: no.
+- Code added: no.
+
+### Recommended Next Step
+
+Ask the toolkit creator to confirm the actual backend adapter or provide an approved search API/client matching the proposed `web_search` contract before any live smoke test or five-city live pilot.
+
+### Validation/Audit Results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
 
 ---
 

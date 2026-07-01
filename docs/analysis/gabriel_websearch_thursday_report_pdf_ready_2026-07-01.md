@@ -151,7 +151,11 @@ The open questions are adapter-fit questions, not blockers:
 - Is there an official error-object format?
 - What rate limits matter for a bounded five-city test?
 
-## 9. Next live-test plan
+## 9. Optional live smoke test
+
+A one-city Boston live smoke test was considered but not executed because no safe repo-local search backend or approved search API client was available. The report remains seed-mode only. The adapter contract is ready for toolkit-creator confirmation, and no ingestion was performed.
+
+## 10. Next live-test plan
 
 If a safe backend is available, the first live test should stay tightly bounded:
 
