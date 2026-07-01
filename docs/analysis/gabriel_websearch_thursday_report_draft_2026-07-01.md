@@ -1,28 +1,29 @@
-# City-by-City Public-Source Discovery and Extraction with a Custom GABRIEL Web-Search Callback
+# City-by-City Public-Source Discovery and Extraction with GABRIEL Web Mode
 
 **Date:** 2026-07-01  
-**Status:** Thursday-facing draft; seed/dry-run scaffold only
+**Status:** Thursday-facing draft; framework corrected after tutorial clarification; seed/dry-run scaffold only
 
 ## 1. Executive summary
 
-- No built-in local GABRIEL web-search function was found in this repo; the existing local runners operate on already assembled text inputs.
-- We implemented a custom `get_all_responses_fn` scaffold, `custom_get_all_responses`, as the narrowest integration point for city-by-city public-source discovery plus extraction.
+- The tutorial clarification indicates that built-in GABRIEL web mode should be the primary live path for this project.
+- In practice, that means starting with built-in web-researched city reports rather than starting with a custom callback.
+- This repo had not yet wired built-in GABRIEL web mode into the project's city-by-city source and extraction schema.
+- We therefore built a custom `get_all_responses_fn` scaffold, `custom_get_all_responses`, as a fallback and advanced schema-control path.
 - The scaffold currently runs in seed/dry-run mode only; no live web search was executed and no ingestion was performed.
-- The hook returns GABRIEL-compatible pandas output with `Identifier` and `Response`, where `Response` is always parseable JSON.
-- Live mode only needs a backend adapter that matches the proposed `web_search` contract and returns a small set of standard source fields.
-- The intended use is acquisition and extraction assistance for later manual review, not production measurement, not automated ingestion, and not causal inference.
+- The intended use remains acquisition and extraction assistance for later manual review, not production measurement, not automated ingestion, and not causal inference.
 
 ### What we built
 
-- A custom GABRIEL callback scaffold through `custom_get_all_responses`.
-- A proposed live `web_search` backend contract with bounded, adapter-friendly inputs and outputs.
+- A corrected framework that treats built-in GABRIEL web mode as the first live test path.
+- A custom GABRIEL callback scaffold through `custom_get_all_responses` as fallback/advanced infrastructure.
+- A proposed fallback live `web_search` backend contract with bounded, adapter-friendly inputs and outputs.
 - A five-city seed harness covering Boston, Somerville, Newton, Wayland, and Seekonk.
 - Two working output schemas: source discovery and evidence extraction.
 - No live search and no ingestion yet.
 
 ### What this is / what this is not
 
-- This is an acquisition/extraction assistant scaffold.
+- This is an acquisition/extraction assistant framework.
 - This is not production measurement.
 - This is not automatic ingestion.
 - This is not causal evidence.
@@ -30,13 +31,28 @@
 
 ## 2. Motivation
 
-For the police/fire wage project, a central operational bottleneck is finding public, reasoning-rich municipal labor sources city by city. Final CBAs are often easy to locate relative to the documents that explain why wages moved: arbitration awards, JLMC materials, bargaining packets, mediation proposals, committee presentations, and union summaries.
+For the police/fire wage project, a central operational bottleneck is finding public, reasoning-rich municipal labor sources city by city. Final CBAs are often easier to locate than the documents that explain why wages moved: arbitration awards, JLMC materials, bargaining packets, mediation proposals, committee presentations, and union summaries.
 
-That bottleneck matters because the project is trying to recover wage-setting mechanisms rather than simply stockpile contracts. A bounded GABRIEL web-search workflow could help discover candidate sources, classify them into the correct corpus lane, and extract short structured evidence before any later manual ingestion decision.
+That bottleneck matters because the project is trying to recover wage-setting mechanisms rather than simply stockpile contracts. A bounded GABRIEL web workflow could help discover candidate sources, classify them into the correct corpus lane, and extract short structured evidence before any later manual ingestion decision.
 
-The value proposition is therefore upstream of production measurement. The scaffold is meant to assist acquisition and evidence triage, not to substitute for provenance review or the existing ingestion pipeline.
+The value proposition is therefore upstream of production measurement. The framework is meant to assist acquisition and evidence triage, not to substitute for provenance review or the existing ingestion pipeline.
 
-## 3. What the toolkit creator asked us to test
+## 3. Revised framing after reading the tutorial
+
+The tutorial clarification changes the recommended live path:
+
+- built-in GABRIEL web mode should be treated as the first-choice live mechanism;
+- custom `get_all_responses_fn` should be treated as an advanced fallback, not the default route;
+- city-specific domain filters and schema targets still matter, but they should be tested first through built-in web mode;
+- the immediate technical question is not whether a custom callback can be written, but how built-in web mode should be invoked and what output structure it returns in this project environment.
+
+For this project, the most natural first live sequence is:
+
+1. generate city-level web reports with built-in GABRIEL web search;
+2. extract structured source/excerpt fields from those reports with `gabriel.extract` or a structured parser;
+3. fall back to a custom callback only if tighter schema control is required.
+
+## 4. What the toolkit creator asked us to test
 
 The Thursday task was not generic search. It was a specific test of whether GABRIEL could support a Massachusetts city-by-city workflow that does all of the following in one bounded pass:
 
@@ -47,22 +63,31 @@ The Thursday task was not generic search. It was a specific test of whether GABR
 
 In other words, the question was whether GABRIEL could act as a small acquisition-and-extraction assistant rather than only a scorer over already-local text.
 
-## 4. What we found locally
+## 5. What we found locally
 
-Local inspection pointed to a clear gap:
+Local inspection pointed to a practical gap in this repo setup:
 
-- no built-in local GABRIEL web-search function was present;
+- no project-specific invocation of built-in GABRIEL web mode was already wired into the city-by-city workflow;
 - the existing local runners score already assembled text inputs and write results;
 - the `ingest/fetchers/` layer is source-specific scaffolding for open portals, not a generic GABRIEL search interface;
-- no local function accepted city/query input and returned ranked URLs, snippets, or extraction-ready search results.
+- no local helper yet mapped built-in web outputs into the project's source and extraction working tables.
 
-That meant the relevant extension point was not an existing search utility. It was the tutorial-style custom callback boundary:
+That did **not** mean built-in web mode was unavailable in principle. It meant this repo had not yet connected the tutorial's built-in web path to the project's city-by-city schema. The custom callback scaffold was therefore useful as a fallback and as a way to preserve schema discipline while the built-in path remained unconfirmed in this environment.
 
-`get_all_responses_fn = custom_get_all_responses`
+## 6. Built-in live path to confirm in this environment
 
-We therefore implemented the scaffold at that boundary rather than trying to repurpose ingestion code or overstate what the local repo already supports.
+The tutorial suggests the live path should be tested in this order:
 
-## 5. Custom callback design
+- `gabriel.whatever(..., web_search=True)` to generate city web reports;
+- `web_search_filters` to constrain city/domain scope;
+- `search_context_size` to tune how much retrieved context is included;
+- `gabriel.extract` or structured parsing on report outputs to recover the project fields we care about.
+
+The open operational question is therefore:
+
+`we need to confirm exact invocation details and output structure for built-in web mode in this project environment.`
+
+## 7. Custom callback design as fallback/advanced path
 
 The implemented hook is:
 
@@ -78,7 +103,7 @@ custom_get_all_responses(
 )
 ```
 
-The design goal was narrow compatibility. The function accepts a batch of prompts and identifiers, resolves each city, and returns a pandas dataframe with exactly two columns:
+The design goal was narrow compatibility and schema control. The function accepts a batch of prompts and identifiers, resolves each city, and returns a pandas dataframe with exactly two columns:
 
 - `Identifier`
 - `Response`
@@ -97,6 +122,13 @@ In seed/dry-run mode, the callback reads the existing five-city seed source and 
 - `notes`
 
 This makes the callback self-describing enough for a Thursday discussion without requiring anyone to read the implementation first.
+
+The important reframing is that this scaffold is now best understood as:
+
+- a useful fallback if built-in web outputs are not structured enough;
+- a useful schema-enforcement layer if the project needs deterministic source/extraction rows;
+- a useful advanced hook if a nonstandard backend is required;
+- not the first-choice live search mechanism.
 
 ### Worked example payload
 
@@ -129,7 +161,7 @@ Below is the short form of one seeded Boston response. It shows the shape of the
 }
 ```
 
-## 6. Proposed live web-search backend contract
+## 8. Proposed fallback live web-search backend contract
 
 The scaffold assumes a deliberately small backend contract:
 
@@ -161,39 +193,41 @@ That minimalism is deliberate for three reasons:
 2. It preserves URLs and citation-bearing metadata from the start.
 3. It avoids coupling the callback to any one backend's richer but potentially unstable object shape.
 
-## 7. Pipeline diagram
+This contract should now be treated as a fallback adapter design, not as the primary interpretation of GABRIEL web search.
+
+## 9. Pipeline diagram
 
 ```mermaid
 flowchart LR
-  A[City prompt] --> B[custom_get_all_responses]
-  B --> C[Bounded web_search backend]
-  C --> D[Source candidates: URLs + snippets]
-  D --> E[Retain/classify candidates]
-  E --> F[GABRIEL extraction inside callback]
-  F --> G[Identifier / Response dataframe]
-  G --> H[Source CSV + Extraction CSV + Report]
+  A[City prompt] --> B[Built-in GABRIEL web report]
+  B --> C[Structured parsing or gabriel.extract]
+  C --> D[Source candidates + excerpts]
+  D --> E[Project working tables]
+  E --> F[Manual review]
+  A --> G[Fallback custom_get_all_responses]
+  G --> H[Fallback web_search backend]
 ```
 
-## 8. Design choices made independently
+## 10. Design choices made independently
 
 These choices were made conservatively to optimize for auditability, token efficiency, provenance, city-by-city scaling, and no accidental ingestion.
 
 | Design choice | Decision | Reason |
 | --- | --- | --- |
-| backend contract | Small `web_search(query, *, max_results, domains, city, state) -> list[dict]` contract | Keeps the adapter surface narrow and avoids hard-coding a vendor-specific response schema |
+| built-in path | Treat built-in GABRIEL web mode as the primary live path | Aligns with the tutorial and avoids replacing the full prompt-processing stack too early |
+| backend contract | Small `web_search(query, *, max_results, domains, city, state) -> list[dict]` fallback contract | Keeps the fallback adapter surface narrow and avoids hard-coding a vendor-specific response schema |
 | returned search fields | `title`, `url`, `snippet`, `source_domain`, `published_date`, `retrieval_status` | Preserves enough discovery metadata for ranking, provenance, and later review without over-assuming backend richness |
 | domain filters | Exposed per city and treated as hard preferences | Prioritizes official municipal, school, union, and state sources and reduces noisy search spread |
 | result caps | Bounded queries, results, retained sources, and extractions | Controls token use and makes city-by-city review feasible |
-| extraction inside callback | Conceptually yes | Keeps discovery and extraction within one GABRIEL-compatible hook boundary |
-| always JSON response | Yes | Ensures reliable flattening back into tables and avoids mixed response formats |
-| no streaming | Yes | The current hook boundary returns a complete dataframe; partial transport is unnecessary for the seed demo |
-| no retries | Yes | Makes failures explicit and auditable rather than silently mutating search behavior |
+| extraction path | Prefer built-in report output plus `gabriel.extract` or structured parsing | Uses the tutorial-default route before custom plumbing |
+| always JSON response | Yes in the fallback scaffold | Ensures reliable flattening back into tables and avoids mixed response formats |
+| no streaming | Yes in the fallback scaffold | The current hook boundary returns a complete dataframe; partial transport is unnecessary for the seed demo |
 | citation/source URL preservation | Preserve URLs and snippets in payloads | Prevents detached evidence and keeps source provenance inspectable |
 | corpus-lane separation | Keep causal, mechanism-proxy, discourse, and lead-only distinct | Avoids accidental ingestion logic and protects the repo's two-corpus discipline |
 
-## 9. Source and extraction schema
+## 11. Source and extraction schema
 
-The scaffold is built around two compact outputs:
+The framework is built around two compact outputs:
 
 - a source-discovery CSV for retained candidates;
 - an evidence-extraction CSV for short structured observations from those candidates.
@@ -205,7 +239,7 @@ The scaffold is built around two compact outputs:
 
 The important design point is that these are not production corpus tables. They are search-and-extraction working tables that sit upstream of manual ingestion decisions.
 
-## 10. Five-city seed demo
+## 12. Five-city seed demo
 
 The current seed demo uses existing materials only. It is a dry-run harness, not a live search pilot.
 
@@ -224,7 +258,7 @@ The current seed demo uses existing materials only. It is a dry-run harness, not
 | Wayland | 3 | 6 | JLMC positive plus grievance-arbitration exclusion |
 | Seekonk | 3 | 6 | Clean official archive ingestability check |
 
-## 11. Calibration examples
+## 13. Calibration examples
 
 - Boston BTU: useful non-safety peer-wage mechanism-proxy example with high comparability and named comparator signal; not v10 impasse evidence.
 - Somerville police awards: clear safety-side calibration positives for arbitration/JLMC and comparability.
@@ -234,7 +268,7 @@ The current seed demo uses existing materials only. It is a dry-run harness, not
 
 These examples are useful because they define both positive cases and exclusion boundaries before any live test.
 
-## 12. Multiple attributes extracted
+## 14. Multiple attributes extracted
 
 - `comparability_emphasis`: whether the source explicitly compares wages or compensation to peer jurisdictions; this matters because comparability is the main candidate ratchet mechanism.
 - `arbitration_or_impasse_backstop`: whether the source shows formal impasse-resolution institutions shaping settlement; this matters because safety wage-setting may depend on stronger backstop institutions.
@@ -242,9 +276,9 @@ These examples are useful because they define both positive cases and exclusion 
 - `named_comparator_signal`: whether the source names specific comparator cities or districts; this matters because named peers are stronger mechanism evidence than generic market language.
 - `source_ingestability`: whether the source is a clean public final document that could later enter the causal pipeline; this matters because many useful search leads are still not ingestion-ready.
 
-## 13. Guardrails
+## 15. Guardrails
 
-The scaffold is intentionally constrained.
+The framework is intentionally constrained.
 
 - No automatic ingestion.
 - No PRRs.
@@ -257,32 +291,40 @@ The scaffold is intentionally constrained.
 
 Those guardrails matter because the acquisition layer should widen source visibility without collapsing the repo's provenance and corpus-separation discipline.
 
-## 14. Adapter-fit points for Thursday
+## 16. Built-in web-mode fit questions for Thursday
 
-We chose conservative defaults so the scaffold is easy to explain and easy to adapt. If the toolkit backend differs, the likely outcome is contract adjustment, not redesign. The questions below are therefore about optimizing integration rather than proving feasibility.
+The main open questions are now about built-in web-mode invocation and output shape in this project environment. If the built-in path is close to what the project needs, the likely outcome is a thin report-to-schema adapter rather than a custom backend design.
 
-- Does the backend already match the proposed `web_search` signature?
-- What fields does it actually return?
-- Does it return page text, snippets, or both?
-- Can it preserve citations and source URLs cleanly?
-- Does JSON mode behave well when searched content is involved?
-- Should extraction run inside the callback or in a second GABRIEL pass?
-- What are the rate limits?
-- Is there an official error-object format?
+- What is the exact built-in invocation pattern for city-level web reports in this environment?
+- What output structure does built-in web mode actually return?
+- Can built-in outputs preserve citations and source URLs cleanly enough for the project's working tables?
+- Are `web_search_filters` sufficient for city/domain control?
+- How much does `search_context_size` affect report usefulness for later extraction?
+- Should the project use `gabriel.extract` directly on built-in reports or do lightweight structured parsing first?
+- At what point would schema-control needs justify falling back to `get_all_responses_fn`?
 
-The scaffold already demonstrates a workable integration shape. Thursday should help determine how closely the current backend matches that shape and where a thin adapter would be useful.
+The scaffold still demonstrates a workable fallback integration shape. Thursday should help determine whether the built-in path is already enough and where a thin adapter would be useful.
 
-## 15. Optional live smoke test
+## 17. Optional live smoke test
 
-A one-city Boston live smoke test was considered for this report, but it was not executed. Local inspection found no safe repo-local search backend or approved search API client that could be passed through `custom_get_all_responses` without scraping a general search results page or relying on a session-only browser/search tool.
+A one-city Boston live smoke test was considered for this report, but it was not executed. The corrected next step is to test built-in GABRIEL web mode first, not to start with the custom callback. No live search was run in this session.
 
-The report therefore remains seed-mode only. The adapter contract is ready for the toolkit creator to confirm or revise, and live execution should wait until a safe backend adapter is available. No ingestion was performed.
+The report therefore remains seed-mode only. The immediate need is to confirm exact invocation details and output structure for built-in web mode in this project environment. No ingestion was performed.
 
-## 16. Next live-test plan
+## 18. Revised live path after reading the tutorial
 
-If a safe backend becomes available, the first live test should remain tightly bounded:
+- primary path: `gabriel.whatever(..., web_search=True)` to generate city web reports;
+- extraction path: `gabriel.extract` or structured parsing on those reports;
+- fallback path: custom `get_all_responses_fn` only if project-specific schema control is needed.
 
-- use the same five cities;
+## 19. Next live-test plan
+
+If built-in web mode is callable in this environment, the first live test should remain tightly bounded:
+
+- start with Boston only;
+- keep city/domain filters on through the built-in control surface;
+- confirm report output structure before broadening scope;
+- if the built-in path is adequate, then reuse the same five cities;
 - keep domain filters on;
 - run at most six queries per city;
 - return at most five results per query;
@@ -293,14 +335,15 @@ If a safe backend becomes available, the first live test should remain tightly b
 
 That bounded plan is enough to test source recovery, lane classification, and attribute extraction without drifting into production collection.
 
-## 17. Bottom-line recommendation
+## 20. Bottom-line recommendation
 
-The scaffold is useful as an acquisition-and-extraction assistant. The seeded harness is ready now. The next step is backend adapter confirmation followed by a bounded live five-city test. Production measurement should wait until live search outputs are manually reviewed and provenance-preserving.
+Built-in GABRIEL web mode should be treated as the primary live path. The current scaffold remains useful as a fallback and schema-control tool. The seeded harness is ready now, but the next live step should be a Boston-only built-in web smoke test after confirming invocation details and output structure in this environment.
 
-## 18. Thursday decision points
+## 21. Thursday decision points
 
-- Confirm or revise the proposed backend contract.
-- Decide whether extraction should happen inside the callback or as a second GABRIEL pass.
-- Decide whether the live backend should return snippets only, page text, or both.
-- Agree on first live five-city test constraints and caps.
+- Confirm the exact built-in web-mode invocation details in this project environment.
+- Inspect the built-in report output structure and citation behavior.
+- Decide whether extraction should happen through `gabriel.extract` or light structured parsing.
+- Use the custom callback only if the built-in path is not structured enough.
+- Agree on a Boston-only built-in smoke test before any five-city live test.
 - Agree that ingestion remains a separate manual step.

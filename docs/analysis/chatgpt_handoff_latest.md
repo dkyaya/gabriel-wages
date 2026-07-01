@@ -2,7 +2,72 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-01T10:43:43-04:00`
+Last updated: `2026-07-01T12:00:00-04:00`
+
+---
+
+## 2026-07-01T12:00:00-04:00 - tutorial clarified built-in web mode; report framework corrected
+
+**Commit:** pending in current session
+
+### Current State After This Entry
+
+- The tutorial clarification changed the live-path framing materially.
+- Built-in GABRIEL web mode is now treated as the primary live path.
+- The custom `get_all_responses_fn` scaffold is now treated as a fallback and advanced schema-control path.
+- The Thursday report draft, PDF-ready report, presentation outline, and custom-function memo were updated to reflect that change.
+- A repo declutter/archive plan was created.
+- No live web search was executed.
+- No ingestion happened.
+
+### What Changed
+
+- Created:
+  - `docs/analysis/gabriel_tutorial_web_mode_note_2026-07-01.md`
+  - `docs/analysis/gabriel_websearch_repo_declutter_plan_2026-07-01.md`
+- Updated:
+  - `docs/analysis/gabriel_websearch_thursday_report_draft_2026-07-01.md`
+  - `docs/analysis/gabriel_websearch_thursday_report_pdf_ready_2026-07-01.md`
+  - `docs/analysis/gabriel_websearch_thursday_presentation_outline_2026-07-01.md`
+  - `docs/analysis/gabriel_websearch_custom_function_design_2026-06-30.md`
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+
+### Framework Correction
+
+- Primary live path: built-in GABRIEL web mode.
+- Report-first route: `gabriel.whatever(..., web_search=True)`.
+- Extraction route: `gabriel.extract` or structured parsing on built-in web reports.
+- Fallback route: custom `get_all_responses_fn` only if built-in outputs are not structured enough or if tighter schema control is needed.
+- Project gap: the repo had not yet wired built-in web mode into the city-by-city source/extraction schema.
+
+### Recommended Next Step
+
+Run a Boston-only built-in GABRIEL web smoke test after confirming the exact invocation details and output structure in this project environment.
+
+### Status Checks
+
+- Files deleted: no.
+- Files moved: no.
+- Live web search executed: no.
+- Ingestion performed: no.
+- Seed counts unchanged: 5 city responses, 15 source rows, 34 extraction rows.
+
+### Validation/Audit Results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
 
 ---
 

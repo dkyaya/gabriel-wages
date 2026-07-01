@@ -6,6 +6,74 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-01 - Tutorial clarified built-in web mode; framework corrected
+
+**Did**
+- Re-read the current Thursday-report package and corrected the framing after the tutorial clarification supplied for this task.
+- Created:
+  - `docs/analysis/gabriel_tutorial_web_mode_note_2026-07-01.md`
+  - `docs/analysis/gabriel_websearch_repo_declutter_plan_2026-07-01.md`
+- Updated:
+  - `docs/analysis/gabriel_websearch_thursday_report_draft_2026-07-01.md`
+  - `docs/analysis/gabriel_websearch_thursday_report_pdf_ready_2026-07-01.md`
+  - `docs/analysis/gabriel_websearch_thursday_presentation_outline_2026-07-01.md`
+  - `docs/analysis/gabriel_websearch_custom_function_design_2026-06-30.md`
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+
+**Decisions and why**
+- Reframed built-in GABRIEL web mode as the primary live path, because the tutorial clarification indicates `modality="web"` and `web_search=True` are the standard routes and `get_all_responses_fn` is the advanced route.
+- Kept the custom callback scaffold as fallback/advanced infrastructure, because it may still be useful for project-specific schema enforcement or nonstandard backend requirements.
+- Kept the five-city seed counts unchanged and preserved the no-live-search/no-ingestion boundary, because this session was about correcting framework interpretation rather than generating new findings.
+- Created a declutter/archive plan instead of moving files immediately, because the Thursday package is still active and should not be rearranged before report finalization.
+
+**Surprises/breakage**
+- The tutorial notebook itself was not accessible locally in this session at `/mnt/data` or under the repo, so the tutorial note records the tutorial correction used for this task and distinguishes it from repo-local inspection.
+- No code changes were made, so no `py_compile` pass was required.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+**Framework snapshot**
+```text
+built-in web mode treated as primary live path: yes
+custom callback treated as fallback/advanced path: yes
+declutter/archive plan created: yes
+files deleted: no
+files moved: no
+live web search executed: no
+ingestion performed: no
+recommended next step: Boston-only built-in GABRIEL web smoke test
+```
+
+**Next steps**
+1. Confirm exact built-in GABRIEL web-mode invocation details and output structure in this environment.
+2. Run a Boston-only built-in web smoke test before any five-city live test.
+3. Archive superseded support materials only after the Thursday report is finalized.
+
 ## 2026-07-01 - Live smoke test skipped; no safe backend available
 
 **Did**

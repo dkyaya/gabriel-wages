@@ -23,38 +23,49 @@ Suggested visual/table if any: small four-box diagram with `discover`, `classify
 
 ## Slide 3
 
-**Title:** What we found locally
+**Title:** Tutorial correction: primary live path vs fallback path
 
-- No built-in local GABRIEL web-search function was present in the repo.
-- Existing runners score already-local text inputs.
-- `ingest/fetchers/` is portal-specific scaffolding, not a generic search interface.
-- That pushed us to the tutorial callback boundary rather than an existing search utility.
+- The tutorial indicates built-in GABRIEL web mode should be the main live path.
+- `modality="web"` and `web_search=True` are standard routes; `get_all_responses_fn` is the advanced route.
+- That changes the framing: test built-in web mode first, use the custom callback only if schema control is needed.
+- The repo issue is not conceptual lack of web mode; it is lack of project wiring into the city-by-city source schema.
 
-Suggested visual/table if any: two-column table, `present locally` vs `missing locally`.
+Suggested visual/table if any: two-column table, `primary live path` vs `fallback path`.
 
 ## Slide 4
 
-**Title:** Custom callback design
+**Title:** What we found locally
 
-- Implemented `custom_get_all_responses(...)` as a custom `get_all_responses_fn` scaffold.
-- Input is prompt batch plus identifiers; output is a dataframe with `Identifier` and `Response`.
-- `Response` is always parseable JSON and includes source candidates, extractions, config, and notes.
-- Current default mode is seed/dry-run only.
+- Existing runners score already-local text inputs.
+- `ingest/fetchers/` is portal-specific scaffolding, not a generic city web-search workflow.
+- The repo had not yet wired built-in GABRIEL web mode into the project's source/extraction tables.
+- That made a fallback scaffold useful, but not primary.
 
-Suggested visual/table if any: short code signature plus one sample JSON field list.
+Suggested visual/table if any: two-column table, `present locally` vs `still to wire`.
 
 ## Slide 5
 
-**Title:** Proposed live `web_search` contract
+**Title:** Built-in live path to test first
 
-- Proposed contract is `web_search(query, *, max_results, domains, city, state) -> list[dict]`.
-- Expected fields are `title`, `url`, `snippet`, `source_domain`, `published_date`, and `retrieval_status`.
-- The contract is intentionally minimal so an existing backend can be adapted with low friction.
-- Extraction is intended to happen after retained candidate selection.
+- Primary path should be `gabriel.whatever(..., web_search=True)` for city web reports.
+- Use `web_search_filters` for city/domain control.
+- Use `search_context_size` to tune report richness.
+- Then run `gabriel.extract` or light structured parsing on those reports.
 
-Suggested visual/table if any: one-row API contract table with argument names and returned keys.
+Suggested visual/table if any: one short workflow strip or compact parameter table.
 
 ## Slide 6
+
+**Title:** Custom callback scaffold as fallback/advanced option
+
+- Implemented `custom_get_all_responses(...)` as a fallback `get_all_responses_fn` scaffold.
+- Input is prompt batch plus identifiers; output is a dataframe with `Identifier` and `Response`.
+- `Response` is always parseable JSON and includes source candidates, extractions, config, and notes.
+- This remains useful if built-in web outputs are not structured enough.
+
+Suggested visual/table if any: short code signature plus one sample JSON field list.
+
+## Slide 7
 
 **Title:** Five-city seed demo
 
@@ -65,7 +76,7 @@ Suggested visual/table if any: one-row API contract table with argument names an
 
 Suggested visual/table if any: compact city table with source and extraction counts.
 
-## Slide 7
+## Slide 8
 
 **Title:** Worked JSON example
 
@@ -75,7 +86,7 @@ Suggested visual/table if any: compact city table with source and extraction cou
 
 Suggested visual/table if any: small JSON callout box or two-column `field` / `example value` table.
 
-## Slide 8
+## Slide 9
 
 **Title:** Example source classifications
 
@@ -86,7 +97,7 @@ Suggested visual/table if any: small JSON callout box or two-column `field` / `e
 
 Suggested visual/table if any: 5-row example table with `city`, `source`, `lane`, `why it matters`.
 
-## Slide 9
+## Slide 10
 
 **Title:** Guardrails and corpus separation
 
@@ -97,13 +108,13 @@ Suggested visual/table if any: 5-row example table with `city`, `source`, `lane`
 
 Suggested visual/table if any: guardrail checklist.
 
-## Slide 10
+## Slide 11
 
-**Title:** Thursday decision points / next live pilot
+**Title:** Next test after the tutorial correction
 
-- Confirm or revise the proposed backend contract.
-- Decide whether extraction happens inside the callback or as a second GABRIEL pass.
-- Decide whether the backend returns snippets only, page text, or both.
-- Agree on first five-city live-test caps and keep ingestion separate.
+- Next test is a Boston-only built-in GABRIEL web smoke test.
+- Confirm exact invocation details and built-in output structure first.
+- Use the custom callback only if project-specific schema control is still required.
+- Keep ingestion separate.
 
-Suggested visual/table if any: next-step box with `adapter confirmation -> five-city live pilot -> manual review`.
+Suggested visual/table if any: next-step box with `Boston built-in smoke test -> assess output structure -> decide if fallback is needed`.

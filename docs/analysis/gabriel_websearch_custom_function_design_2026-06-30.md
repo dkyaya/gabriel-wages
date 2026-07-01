@@ -3,11 +3,21 @@
 **Date:** 2026-06-30  
 **Status:** scaffold implemented in seed/dry-run mode; no live web search executed
 
+## Important framing update
+
+After inspecting the tutorial guidance summarized for this project, built-in GABRIEL web mode should be tested first.
+
+The custom callback scaffold documented here remains useful only if:
+
+- built-in web mode does not preserve the project's source/extraction schema well enough;
+- built-in web outputs are not structured enough for reliable downstream parsing; or
+- a nonstandard backend is required.
+
 ## 1. Purpose
 
 This memo documents a Thursday demonstration scaffold for routing bounded city-by-city public-source search and extraction through GABRIEL's custom full-prompt hook, without pretending that a live local search backend already exists.
 
-The immediate goal is integration shape, not production acquisition, ingestion, or causal measurement.
+The immediate goal is fallback integration shape, not production acquisition, ingestion, or causal measurement.
 
 ## 2. GABRIEL Tutorial Hook Being Used
 
