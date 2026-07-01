@@ -1,0 +1,6 @@
+city,source_rows,extraction_rows,calibration_role,expected_live_test_value
+Boston,3,7,Non-safety peer-wage mechanism-proxy check,Should recover high-comparability non-safety public leads without misclassifying them as impasse evidence
+Somerville,3,8,Safety arbitration and JLMC positive calibration,Should recover strong safety-side award materials and preserve arbitration provenance
+Newton,3,7,Mediation and MOA edge-case review,Should distinguish mediation and MOA leads from final award-style causal evidence
+Wayland,3,6,JLMC positive plus grievance-arbitration exclusion,Should recover one clear impasse-pathway source and one ordinary-CBA exclusion source
+Seekonk,3,6,Clean official archive ingestability check,Should recover official portal PDFs and keep ordinary grievance language near-zero for impasse evidence

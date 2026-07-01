@@ -1,0 +1,6 @@
+attribute,definition,why_it_matters
+comparability_emphasis,"Whether the source explicitly compares wages or compensation to peer jurisdictions or peer units","This is the main candidate ratchet mechanism the project wants to measure"
+arbitration_or_impasse_backstop,"Whether the source shows formal impasse-resolution institutions such as JLMC, interest arbitration, mediation after impasse, or stipulated awards shaping settlement","Safety wage-setting may differ because stronger backstop institutions shape outcomes"
+wage_reasoning_density,"Whether the source explains why wages changed rather than only listing terms","Reasoning-rich documents are much more informative than bare agreements"
+named_comparator_signal,"Whether the source names specific comparator cities, towns, or districts","Named peers are stronger mechanism evidence than generic market language"
+source_ingestability,"Whether the source is a clean public final document that could later move into the causal pipeline","Useful leads are not always ingestion-ready, so this separates calibration value from corpus readiness"

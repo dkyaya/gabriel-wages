@@ -2,7 +2,88 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-06-30T22:05:00-04:00`
+Last updated: `2026-07-01T00:00:00-04:00`
+
+---
+
+## 2026-07-01T00:00:00-04:00 - Thursday report draft and presentation outline created
+
+**Commit:** pending in current session
+
+### Current State After This Entry
+
+- The Thursday-facing report draft now exists and is presentation-ready in markdown.
+- A short 9-slide presentation outline now exists as a separate markdown artifact.
+- Report asset tables now exist under `docs/analysis/gabriel_websearch_report_assets_2026-07-01/`.
+- No live web search was executed.
+- No ingestion happened.
+- No production corpus tables or folders were modified.
+
+### What Changed
+
+- Created report draft:
+  - `docs/analysis/gabriel_websearch_thursday_report_draft_2026-07-01.md`
+- Created presentation outline:
+  - `docs/analysis/gabriel_websearch_thursday_presentation_outline_2026-07-01.md`
+- Created report asset tables:
+  - `docs/analysis/gabriel_websearch_report_assets_2026-07-01/city_seed_demo_summary.csv`
+  - `docs/analysis/gabriel_websearch_report_assets_2026-07-01/design_choices_table.csv`
+  - `docs/analysis/gabriel_websearch_report_assets_2026-07-01/attribute_definitions_table.csv`
+- Updated this handoff log and `PROGRESS.md`.
+
+### Main Report Content
+
+- Explains why city-by-city public-source discovery matters for the safety-wage project.
+- States clearly that no built-in local GABRIEL web-search function was found.
+- Documents the custom `get_all_responses_fn` scaffold and its callback signature.
+- Explains the proposed live `web_search` backend contract and expected result keys.
+- Summarizes the five-city seed demo, calibration examples, attribute definitions, guardrails, and bounded next-live-test plan.
+- Frames the scaffold as acquisition/extraction assistance rather than production measurement.
+
+### Seed Demo Snapshot Used In The Report
+
+- Cities: Boston, Somerville, Newton, Wayland, Seekonk.
+- City responses: 5.
+- Source rows: 15.
+- Extraction rows: 34.
+- Live web search executed: no.
+- Ingestion performed: no.
+
+### Recommended Next Step
+
+Review the Thursday report draft first, then convert it to PDF Wednesday night if the framing and level of technical detail look right.
+
+### Validation/Audit Results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+### Corpus Snapshot
+
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+### Recommended Next Codex Run
+
+If the report framing is approved, do a presentation-polish pass only: tighten executive language, decide whether the callback section needs one worked JSON example, and prepare a PDF conversion artifact. Do not switch into live search or ingestion work unless separately authorized.
 
 ---
 

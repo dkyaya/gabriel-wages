@@ -1,0 +1,11 @@
+design_choice,decision,reason
+backend contract,"Use web_search(query, *, max_results, domains, city, state) -> list[dict]","Keeps the adapter surface narrow and backend-agnostic"
+returned search fields,"Return title, url, snippet, source_domain, published_date, retrieval_status","Preserves enough discovery metadata for provenance and retention without over-specifying the backend"
+domain filters,"Expose per-city domain filters and use them as hard preferences","Pushes discovery toward official municipal, school, union, and state sources"
+result caps,"Cap results per query, retained sources per city, and extractions per source","Improves token efficiency and keeps city-by-city review bounded"
+extraction inside callback,"Treat extraction as part of the custom callback boundary","Lets one hook own discovery, retention, and structured output shape"
+always JSON response,"Serialize Response as parseable JSON in all modes","Makes flattening and auditing deterministic"
+no streaming,"Return complete dataframe payloads only","Matches the hook shape and avoids unnecessary transport complexity"
+no retries,"Do not retry backend failures automatically","Makes failures explicit and audit-friendly"
+citation/source URL preservation,"Preserve URLs and snippets directly in payloads","Maintains provenance and supports manual verification"
+corpus-lane separation,"Keep causal, mechanism-proxy, discourse, and lead-only outputs separate","Prevents accidental ingestion logic and protects corpus discipline"

@@ -6,6 +6,70 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-01 - Thursday report draft package created
+
+**Did**
+- Created the Thursday-facing markdown report draft:
+  - `docs/analysis/gabriel_websearch_thursday_report_draft_2026-07-01.md`
+- Created the short presentation outline:
+  - `docs/analysis/gabriel_websearch_thursday_presentation_outline_2026-07-01.md`
+- Created report asset tables under:
+  - `docs/analysis/gabriel_websearch_report_assets_2026-07-01/`
+- Updated `docs/analysis/chatgpt_handoff_latest.md` and this log.
+- Ran required checks.
+
+**Decisions and why**
+- Kept the report code-adjacent but readable without forcing the toolkit creator to inspect Python files.
+- Reused the existing five-city seed outputs as the empirical backbone of the draft so all counts and examples stay auditably tied to real local artifacts.
+- Framed the scaffold as an acquisition/extraction assistant rather than a measurement engine, because no live backend is present locally and no live search was authorized.
+- Kept the design language conservative: bounded search contract, explicit corpus-lane separation, no ingestion, no PRRs, and no causal claims.
+
+**Surprises/breakage**
+- No new breakage.
+- No code changes were needed for this session, so no `py_compile` pass was required.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+**Thursday report package snapshot**
+```text
+main report created: yes
+presentation outline created: yes
+asset tables created: yes
+live web search executed: no
+ingestion performed: no
+seed counts used: 5 city responses | 15 source rows | 34 extraction rows
+recommended next step: review report draft, then convert to PDF Wednesday night
+```
+
+**Next steps**
+1. Review the report draft for whether it needs more executive polish or more callback-level technical detail.
+2. If the framing is accepted, convert the markdown report to PDF Wednesday night.
+3. Keep the next technical step bounded to backend-adapter confirmation and a five-city live test only if separately authorized.
+
 ## 2026-06-30 - GABRIEL web-search scaffold contract refined
 
 **Did**
