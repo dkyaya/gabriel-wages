@@ -330,6 +330,8 @@ The Boston-only built-in smoke test advanced past the earlier package blocker.
 
 This preserves the corrected framework: built-in GABRIEL web mode remains the primary path, and the local package/signature blocker is resolved. The issue to resolve with Hemanth/toolkit creator is now whether built-in web mode should work through the Harvard HUIT proxy with the current request-header wiring, or whether it requires a standard OpenAI endpoint/key environment.
 
+Follow-up proxy diagnostics were run with tiny prompts only. GABRIEL is installed/importable, the built-in web path exists, and the prior Boston smoke test reached runtime but failed with connection errors. The diagnostic split proxy/non-web behavior from web-tool behavior: raw proxy, GABRIEL non-web, GABRIEL web-search, and raw Responses web-search all succeeded in the final bounded run. No ingestion was performed. The remaining category is unknown, with the earlier Boston failure not reproduced by the minimal checks.
+
 ## 19. Revised live path after reading the tutorial
 
 - primary path: `gabriel.whatever(..., web_search=True)` to generate city web reports;

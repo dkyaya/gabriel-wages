@@ -1,0 +1,5 @@
+test_name,attempted,success,error_type,error_message_short,endpoint_or_path,notes
+raw_openai_proxy_no_web,yes,yes,,,/chat/completions via Harvard proxy,Raw chat-completions call returned non-empty text; response text not recorded.
+gabriel_non_web_proxy,yes,yes,,,gabriel.whatever(web_search=False) via Harvard proxy,GABRIEL non-web call returned non-empty text; response text not recorded.
+gabriel_web_search_proxy,yes,yes,,,"gabriel.whatever(web_search=True, search_context_size=""low"") via Harvard proxy",GABRIEL web-search call returned non-empty text; response text not recorded.
+raw_openai_responses_web_search_proxy,yes,yes,,,/responses tools=[web_search] via Harvard proxy,Raw Responses API web-search tool request returned status=completed; response text not recorded.

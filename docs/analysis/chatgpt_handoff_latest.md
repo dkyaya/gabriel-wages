@@ -2,7 +2,61 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-01T12:09:13-04:00`
+Last updated: `2026-07-01T18:27:47-04:00`
+
+---
+
+## 2026-07-01T18:27:47-04:00 - GABRIEL/OpenAI proxy web-connectivity diagnostic completed
+
+**Commit:** pending in current session
+
+### Current State After This Entry
+
+- Created a minimal diagnostic runner:
+  - `analysis/gabriel_pilot/diagnose_gabriel_proxy_web_connectivity.py`
+- Created diagnostic outputs:
+  - `analysis/gabriel_pilot/gabriel_proxy_web_connectivity_diagnostic_2026-07-01.csv`
+  - `docs/analysis/gabriel_proxy_web_connectivity_diagnostic_2026-07-01.md`
+- Updated Thursday-facing reports with a short diagnostic note.
+- No ingestion happened.
+- No production data, corpus, inbox, or coverage files were modified.
+- No full Boston web-search prompt, five-city live pilot, all-32 v10 run, production dataset creation, PRR recommendation, or causal claim was made.
+
+### Diagnostic Tests Run
+
+All tests used tiny prompts and sanitized result logging only.
+
+| Test | Result |
+| --- | --- |
+| Raw OpenAI proxy, no web tools | succeeded |
+| GABRIEL non-web call | succeeded |
+| GABRIEL `whatever(web_search=True, search_context_size="low")` | succeeded in final bounded diagnostic |
+| Raw OpenAI Responses API `tools=[web_search]` | succeeded with status `completed` |
+
+The final diagnostic result category is **unknown**. The earlier Boston smoke-test failure was not reproduced by the minimal proxy/non-web/web-tool checks, so the result no longer supports a persistent proxy wiring problem, ordinary `openai-gabriel` proxy compatibility problem, or raw hosted web-search-tool support problem.
+
+### Recommended Question For Hemanth / Harvard Proxy Support
+
+Can the Harvard HUIT OpenAI proxy support longer Responses API hosted web-search requests from `openai-gabriel`, including `include=["web_search_call.action.sources"]`, domain filters, and `extra_headers`, and are there proxy-side timeout/body-size/logging limits that could explain why the larger Boston `gabriel.whatever(web_search=True)` run produced repeated connection errors while the tiny diagnostic succeeds?
+
+### Validation/Audit Results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+
+python -m py_compile analysis/gabriel_pilot/diagnose_gabriel_proxy_web_connectivity.py
+passed
+```
 
 ---
 

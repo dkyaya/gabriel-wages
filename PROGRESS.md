@@ -6,6 +6,77 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-01 - GABRIEL/OpenAI proxy web-connectivity diagnostic completed
+
+**Did**
+- Created and ran a minimal diagnostic runner:
+  - `analysis/gabriel_pilot/diagnose_gabriel_proxy_web_connectivity.py`
+- Created diagnostic outputs:
+  - `analysis/gabriel_pilot/gabriel_proxy_web_connectivity_diagnostic_2026-07-01.csv`
+  - `docs/analysis/gabriel_proxy_web_connectivity_diagnostic_2026-07-01.md`
+- Updated:
+  - `docs/analysis/gabriel_websearch_thursday_report_draft_2026-07-01.md`
+  - `docs/analysis/gabriel_websearch_thursday_report_pdf_ready_2026-07-01.md`
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+
+**Decisions and why**
+- Kept prompts tiny and diagnostic-only: one raw non-web proxy call, one GABRIEL non-web call, one GABRIEL web-search call constrained to `openai.com`, and one raw Responses API web-search tool call.
+- Wrote only sanitized status fields: test name, attempted/success flags, error type, short error message, endpoint/path, and notes.
+- Did not rerun the full Boston web-search prompt, did not run a five-city pilot, and did not ingest or modify production data.
+- Treated the final result category as `unknown`, because all four minimal diagnostics succeeded and the earlier Boston connection-error failure was not reproduced.
+
+**Surprises/breakage**
+- The first sandboxed diagnostic showed connection failures, so the same bounded diagnostic was rerun with approved network access.
+- A too-low raw Responses web-search output cap produced an incomplete response; increasing only the diagnostic cap to 100 tokens allowed the raw web-tool check to complete.
+- Final result: raw OpenAI non-web, GABRIEL non-web, GABRIEL `web_search=True`, and raw Responses web-search all succeeded on tiny prompts.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+
+python -m py_compile analysis/gabriel_pilot/diagnose_gabriel_proxy_web_connectivity.py
+passed
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+**Connectivity diagnostic snapshot**
+```text
+raw OpenAI proxy no-web: succeeded
+GABRIEL non-web: succeeded
+GABRIEL web-search tiny diagnostic: succeeded
+raw Responses API web-search tiny diagnostic: succeeded
+result category: unknown
+web search run: only tiny diagnostics constrained to openai.com
+ingestion performed: no
+production corpus modified: no
+```
+
+**Next steps**
+1. Ask Hemanth/Harvard proxy support whether longer Responses API hosted web-search requests from `openai-gabriel` have proxy-side timeout, body-size, source-include, or logging constraints that could explain the larger Boston connection-error failure while tiny diagnostics succeed.
+2. Do not broaden to Boston retry or five-city live testing until that environment question is resolved.
+3. Keep ingestion separate from any future web-search smoke test.
+
 ## 2026-07-01 - openai-gabriel installed; Boston built-in web call failed with connection errors
 
 **Did**

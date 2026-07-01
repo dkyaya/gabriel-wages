@@ -194,6 +194,8 @@ The Boston-only built-in smoke test advanced past the earlier package blocker:
 
 The corrected framework still stands: built-in web mode is primary, and package availability is now resolved. The remaining question is whether the Harvard HUIT proxy supports built-in web-search tools through `openai-gabriel`, or whether the smoke test requires a standard OpenAI endpoint/key environment.
 
+Follow-up diagnostics used tiny prompts only. GABRIEL is installed/importable, the built-in web path exists, and the Boston smoke test reached runtime but failed with connection errors. The bounded diagnostic separated proxy/non-web behavior from web-tool behavior: raw proxy, GABRIEL non-web, GABRIEL web-search, and raw Responses web-search all succeeded in the final run. No ingestion was performed. The result category is unknown because the earlier Boston failure was not reproduced by minimal checks.
+
 ## 13. Next live-test plan
 
 If a safe backend is available, the first live test should stay tightly bounded:
