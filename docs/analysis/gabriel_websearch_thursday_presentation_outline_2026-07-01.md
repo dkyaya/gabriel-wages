@@ -114,21 +114,23 @@ Suggested visual/table if any: guardrail checklist.
 
 - `openai-gabriel` 1.1.8 installed and `import gabriel` succeeded.
 - `gabriel.whatever(web_search=True, search_context_size="low")` is callable.
-- One Boston-only live call was attempted through the Harvard HUIT proxy.
-- GABRIEL recorded connection errors and returned no response or web-search sources.
-- Source rows: 0; extraction rows: 0; Boston BTU was not rediscovered.
+- The first larger Boston prompt reached runtime but returned connection errors and no response.
+- Minimal proxy/web diagnostics then succeeded, including a tiny GABRIEL web-search call.
+- A graduated Boston retry ran attempts 1 and 2; attempt 2 succeeded on a small source-discovery prompt.
+- Returned source rows: 1; working extraction rows: 1; URLs/citations parseable: yes.
+- Boston BPS/BTU material was rediscovered through the BPS `BTU Contract Negotiations` page.
 - No ingestion happened.
 
-Suggested visual/table if any: small status table with `intended path`, `local result`, `next dependency`.
+Suggested visual/table if any: small status table with `test`, `result`, `row counts`, `next dependency`.
 
 ## Slide 12
 
-**Title:** Next test after proxy behavior is confirmed
+**Title:** Next tuning step
 
-- Next test remains a Boston-only built-in GABRIEL web smoke test.
-- Confirm whether Harvard HUIT proxy supports Responses API web-search tools through `openai-gabriel`, or whether a standard OpenAI endpoint/key is required.
-- Then inspect citation behavior and output structure.
+- Built-in GABRIEL web mode works on a small Boston query.
+- Larger structured extraction still needs incremental tuning.
+- Keep Boston-only while tuning prompt size, output size, source metadata handling, and timeout behavior.
 - Use the custom callback only if project-specific schema control is still required.
 - Keep ingestion separate.
 
-Suggested visual/table if any: next-step box with `Boston built-in smoke test -> assess output structure -> decide if fallback is needed`.
+Suggested visual/table if any: next-step box with `small Boston success -> structured Boston tuning -> decide if fallback is needed`.

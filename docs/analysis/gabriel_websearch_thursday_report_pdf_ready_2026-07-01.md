@@ -13,6 +13,7 @@
 - The five-city seed harness covers Boston, Somerville, Newton, Wayland, and Seekonk.
 - Current outputs are 5 city responses, 15 source rows, and 34 extraction rows.
 - A Boston-only built-in GABRIEL web smoke test was attempted after installing `openai-gabriel` 1.1.8. The native web path was callable, but the one live request returned no response and GABRIEL recorded connection errors.
+- A graduated Boston-only retry succeeded on the second small source-discovery prompt, returning one parseable BPS/BTU source URL and one working extraction row.
 - No ingestion was performed.
 
 ## 2. Problem and goal
@@ -195,6 +196,8 @@ The Boston-only built-in smoke test advanced past the earlier package blocker:
 The corrected framework still stands: built-in web mode is primary, and package availability is now resolved. The remaining question is whether the Harvard HUIT proxy supports built-in web-search tools through `openai-gabriel`, or whether the smoke test requires a standard OpenAI endpoint/key environment.
 
 Follow-up diagnostics used tiny prompts only. GABRIEL is installed/importable, the built-in web path exists, and the Boston smoke test reached runtime but failed with connection errors. The bounded diagnostic separated proxy/non-web behavior from web-tool behavior: raw proxy, GABRIEL non-web, GABRIEL web-search, and raw Responses web-search all succeeded in the final run. No ingestion was performed. The result category is unknown because the earlier Boston failure was not reproduced by minimal checks.
+
+A graduated Boston-only retry ran attempts 1 and 2, then stopped before attempt 3 after attempt 2 succeeded. Attempt 1 hit a connection error. Attempt 2 returned the BPS `BTU Contract Negotiations` page URL. Source rows: 1; working extraction rows: 1; URLs/citations parseable: yes; ingestion: no. Interpretation: built-in web mode works on a small Boston query, while larger structured extraction still needs tuning and transient connection behavior remains possible.
 
 ## 13. Next live-test plan
 

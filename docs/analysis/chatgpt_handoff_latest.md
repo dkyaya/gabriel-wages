@@ -2,7 +2,73 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-01T18:27:47-04:00`
+Last updated: `2026-07-01T18:42:30-04:00`
+
+---
+
+## 2026-07-01T18:42:30-04:00 - Boston graduated built-in GABRIEL web retry succeeded on attempt 2
+
+**Commit:** pending in current session
+
+### Current State After This Entry
+
+- Created and ran:
+  - `analysis/gabriel_pilot/run_gabriel_builtin_web_boston_graduated_retry.py`
+- Created graduated retry artifacts:
+  - `analysis/gabriel_pilot/builtin_web_smoke_boston_graduated_retry_2026-07-01/`
+  - `analysis/gabriel_pilot/results_gabriel_builtin_web_boston_graduated_retry_2026-07-01.csv`
+  - `analysis/gabriel_pilot/results_gabriel_builtin_web_boston_graduated_retry_sources_2026-07-01.csv`
+  - `analysis/gabriel_pilot/results_gabriel_builtin_web_boston_graduated_retry_extractions_2026-07-01.csv`
+  - `docs/analysis/gabriel_builtin_web_boston_graduated_retry_2026-07-01.md`
+- Updated Thursday draft, PDF-ready report, and presentation outline.
+- No ingestion happened.
+- No production data, corpus, inbox, or coverage files were modified.
+- No five-city live pilot, all-32 v10 run, production dataset creation, PRR recommendation, or causal claim was made.
+
+### Attempts Run
+
+| Attempt | Result |
+| --- | --- |
+| 1 tiny Boston report | ran; failed with a connection error and no response |
+| 2 source discovery only | ran; succeeded with non-empty response and a parseable source URL |
+| 3 small attribute extraction | skipped after attempt 2 succeeded |
+
+Returned source: BPS `BTU Contract Negotiations` page, `https://www.bostonpublicschools.org/school-committee/btu-contract-negotiations`.
+
+Counts:
+
+- Source rows: 1.
+- Working extraction rows: 1.
+- URLs/citations preserved: yes, parseable URL in response text.
+- Boston BTU/BPS material rediscovered: yes.
+- Ingestion: no.
+
+### Interpretation
+
+Built-in GABRIEL web mode works on a small Boston source-discovery query through the Harvard proxy. The earlier larger Boston failure was not reproduced by the graduated retry, but attempt 1 still hit a connection error, so transient connection behavior remains possible. Larger structured extraction/output shape should be tuned incrementally before any broader pilot.
+
+### Recommended Next Step
+
+Keep the next run Boston-only and tune one dimension at a time: prompt size, output cap, source metadata handling, and timeout behavior. Do not run a five-city live pilot or ingestion until a small Boston structured-output path is stable.
+
+### Validation/Audit Results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+
+python -m py_compile analysis/gabriel_pilot/run_gabriel_builtin_web_boston_graduated_retry.py
+passed
+```
 
 ---
 

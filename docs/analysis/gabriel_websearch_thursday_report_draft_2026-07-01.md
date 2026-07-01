@@ -11,6 +11,7 @@
 - We therefore built a custom `get_all_responses_fn` scaffold, `custom_get_all_responses`, as a fallback and advanced schema-control path.
 - The scaffold currently runs in seed/dry-run mode only; it remains fallback/advanced infrastructure.
 - A Boston-only built-in web smoke test was attempted after installing `openai-gabriel` 1.1.8. The package imported and the native web path was callable, but the one live request returned no response and GABRIEL recorded connection errors.
+- A graduated Boston-only retry later succeeded on the second small source-discovery prompt, returning one parseable BPS/BTU source URL and one working extraction row.
 - The intended use remains acquisition and extraction assistance for later manual review, not production measurement, not automated ingestion, and not causal inference.
 
 ### What we built
@@ -331,6 +332,8 @@ The Boston-only built-in smoke test advanced past the earlier package blocker.
 This preserves the corrected framework: built-in GABRIEL web mode remains the primary path, and the local package/signature blocker is resolved. The issue to resolve with Hemanth/toolkit creator is now whether built-in web mode should work through the Harvard HUIT proxy with the current request-header wiring, or whether it requires a standard OpenAI endpoint/key environment.
 
 Follow-up proxy diagnostics were run with tiny prompts only. GABRIEL is installed/importable, the built-in web path exists, and the prior Boston smoke test reached runtime but failed with connection errors. The diagnostic split proxy/non-web behavior from web-tool behavior: raw proxy, GABRIEL non-web, GABRIEL web-search, and raw Responses web-search all succeeded in the final bounded run. No ingestion was performed. The remaining category is unknown, with the earlier Boston failure not reproduced by the minimal checks.
+
+A graduated Boston-only retry then ran attempts 1 and 2, stopping before attempt 3 after attempt 2 produced reportable evidence. Attempt 1 hit a connection error; attempt 2 succeeded on a small source-discovery prompt and returned the BPS `BTU Contract Negotiations` page URL. Source rows: 1; working extraction rows: 1; URLs/citations parseable: yes; ingestion: no. Interpretation: built-in GABRIEL web mode works on a small Boston query, but larger structured extraction still needs incremental tuning and transient connection behavior remains possible.
 
 ## 19. Revised live path after reading the tutorial
 

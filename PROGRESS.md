@@ -6,6 +6,84 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-01 - Boston graduated built-in GABRIEL web retry succeeded on attempt 2
+
+**Did**
+- Created and ran:
+  - `analysis/gabriel_pilot/run_gabriel_builtin_web_boston_graduated_retry.py`
+- Created graduated retry artifacts:
+  - `analysis/gabriel_pilot/builtin_web_smoke_boston_graduated_retry_2026-07-01/`
+  - `analysis/gabriel_pilot/results_gabriel_builtin_web_boston_graduated_retry_2026-07-01.csv`
+  - `analysis/gabriel_pilot/results_gabriel_builtin_web_boston_graduated_retry_sources_2026-07-01.csv`
+  - `analysis/gabriel_pilot/results_gabriel_builtin_web_boston_graduated_retry_extractions_2026-07-01.csv`
+  - `docs/analysis/gabriel_builtin_web_boston_graduated_retry_2026-07-01.md`
+- Updated:
+  - `docs/analysis/gabriel_websearch_thursday_report_draft_2026-07-01.md`
+  - `docs/analysis/gabriel_websearch_thursday_report_pdf_ready_2026-07-01.md`
+  - `docs/analysis/gabriel_websearch_thursday_presentation_outline_2026-07-01.md`
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+
+**Decisions and why**
+- Ran only Boston and stopped after the first useful successful result.
+- Used `gabriel.whatever(web_search=True, search_context_size="low")`, `n_parallels=1`, and the existing Harvard proxy wiring.
+- Attempt 3 was not run because attempt 2 produced non-empty response text and a parseable BPS/BTU source URL.
+- Counted source rows from URLs explicitly retained in the response text, not every raw URL in GABRIEL's `Web Search Sources` metadata.
+- Did not ingest, create production data, run five cities, run all-32 v10, recommend PRRs, or make causal claims.
+
+**Surprises/breakage**
+- Attempt 1 still failed with a connection error and no response.
+- Attempt 2 succeeded and rediscovered the BPS `BTU Contract Negotiations` page.
+- GABRIEL exposed many raw web-search source metadata URLs, but the concise response retained one directly relevant source; the working source/extraction CSVs record that retained item only.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+
+python -m py_compile analysis/gabriel_pilot/run_gabriel_builtin_web_boston_graduated_retry.py
+passed
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+**Graduated retry snapshot**
+```text
+attempt 1 tiny Boston report: ran; failed with connection error
+attempt 2 source discovery only: ran; succeeded
+attempt 3 small attribute extraction: skipped after attempt 2 success
+source rows: 1
+working extraction rows: 1
+URLs/citations preserved: yes
+Boston BTU/BPS material rediscovered: yes
+web search run: Boston-only graduated retry
+ingestion performed: no
+production corpus modified: no
+```
+
+**Next steps**
+1. Keep the next live test Boston-only and tune one dimension at a time: prompt size, output cap, source metadata handling, and timeout behavior.
+2. Do not run a five-city live pilot until a small Boston structured-output path is stable.
+3. Keep ingestion separate from all web-search tuning runs.
+
 ## 2026-07-01 - GABRIEL/OpenAI proxy web-connectivity diagnostic completed
 
 **Did**
