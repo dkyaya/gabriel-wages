@@ -2,7 +2,64 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-01T18:42:30-04:00`
+Last updated: `2026-07-01T23:33:27-04:00`
+
+---
+
+## 2026-07-01T23:33:27-04:00 - Thursday report package integrated around Boston bounded built-in web success
+
+**Commit:** pending in current session
+
+### Current State After This Entry
+
+- Updated:
+  - `docs/analysis/gabriel_websearch_thursday_report_draft_2026-07-01.md`
+  - `docs/analysis/gabriel_websearch_thursday_report_pdf_ready_2026-07-01.md`
+  - `docs/analysis/gabriel_websearch_thursday_presentation_outline_2026-07-01.md`
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- Integrated the successful Boston graduated built-in GABRIEL web retry into the Thursday report package.
+- The live finding is no longer framed as blocked.
+- No additional live web-search or GABRIEL model/API calls were run in this integration session.
+- No ingestion happened.
+- No production data, corpus, inbox, or coverage files were modified.
+
+### Final Thursday Message
+
+Built-in GABRIEL web mode works on a bounded Boston source-discovery query through the Harvard proxy, but larger structured extraction prompts need incremental tuning for stability.
+
+### Integrated Result Summary
+
+- `openai-gabriel` installed/imported: yes
+- version: `1.1.8`
+- built-in web path confirmed: `gabriel.whatever(web_search=True)`
+- large Boston prompt: failed with connection errors
+- minimal diagnostics: all succeeded
+- graduated Boston retry:
+  - attempt 1 failed
+  - attempt 2 succeeded
+  - attempt 3 skipped
+- source rows: 1
+- extraction rows: 1
+- returned source: BPS `BTU Contract Negotiations` page
+- URL preserved: yes
+- Boston BTU/BPS material rediscovered: yes
+- ingestion: no
+
+### Recommended Next Step
+
+Boston-only structured extraction tuning, one dimension at a time:
+
+1. prompt size
+2. output cap
+3. source metadata handling
+4. timeout behavior
+
+### Notes For ChatGPT Review
+
+- Do not recommend more live GABRIEL calls in the immediate next step beyond Boston-only structured tuning.
+- Do not recommend a five-city pilot, all-32 v10, ingestion, PRRs, PDF generation, or slide generation from this state.
+- Do not convert the one successful live retry into a numeric chart.
 
 ---
 

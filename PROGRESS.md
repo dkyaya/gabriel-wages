@@ -6,6 +6,64 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-01 - Thursday package updated around Boston bounded built-in GABRIEL web success
+
+**Did**
+- Updated:
+  - `docs/analysis/gabriel_websearch_thursday_report_draft_2026-07-01.md`
+  - `docs/analysis/gabriel_websearch_thursday_report_pdf_ready_2026-07-01.md`
+  - `docs/analysis/gabriel_websearch_thursday_presentation_outline_2026-07-01.md`
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- Integrated the successful Boston graduated built-in web retry into the Thursday report package.
+- Prepared a temporary ChatGPT handoff bundle for review.
+
+**Decisions and why**
+- Reframed the live finding as bounded success rather than blocked because the Boston graduated retry succeeded on attempt 2 and returned a preserved BPS source URL.
+- Kept the reporting message narrow: built-in web source discovery works when bounded, while larger structured extraction still needs one-dimension-at-a-time tuning.
+- Did not run additional live web-search or GABRIEL calls in this session because the task was report integration and handoff packaging only.
+- Did not create charts from the live retry outputs because `n=1` does not justify numeric plotting.
+
+**Surprises/breakage**
+- No new runtime breakage in this session.
+- Validation and coverage audit remained unchanged from earlier runs, confirming the session stayed outside ingestion and production data paths.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+**Thursday message**
+```text
+Built-in GABRIEL web mode works on a bounded Boston source-discovery query through the Harvard proxy, but larger structured extraction prompts need incremental tuning for stability.
+```
+
+**Next steps**
+1. Keep the next technical run Boston-only.
+2. Tune structured extraction one dimension at a time: prompt size, output cap, source metadata handling, and timeout behavior.
+3. Do not broaden to a five-city live pilot, all-32 v10, or ingestion from this state.
+
 ## 2026-07-01 - Boston graduated built-in GABRIEL web retry succeeded on attempt 2
 
 **Did**

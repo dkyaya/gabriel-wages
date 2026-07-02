@@ -1,215 +1,73 @@
 # City-by-City Public-Source Discovery and Extraction with GABRIEL Web Mode
 
 **Date:** 2026-07-01  
-**Status:** PDF-ready abbreviated draft; framework corrected after tutorial clarification; `openai-gabriel` installed, native web call attempted, no response returned
+**Status:** PDF-ready abbreviated report updated after the Boston graduated retry
 
 ## 1. Executive summary
 
-- The tutorial clarification indicates built-in GABRIEL web mode should be the primary live path.
-- This repo had not yet wired built-in web mode into the project's city-by-city source and extraction schema.
-- We implemented a custom `get_all_responses_fn` scaffold as a fallback and advanced schema-control path.
-- The scaffold currently returns GABRIEL-compatible `Identifier` / `Response` dataframe output with parseable JSON payloads.
-- A proposed fallback `web_search` contract is now concrete enough for adapter-fit discussion if the built-in path is not structured enough.
-- The five-city seed harness covers Boston, Somerville, Newton, Wayland, and Seekonk.
-- Current outputs are 5 city responses, 15 source rows, and 34 extraction rows.
-- A Boston-only built-in GABRIEL web smoke test was attempted after installing `openai-gabriel` 1.1.8. The native web path was callable, but the one live request returned no response and GABRIEL recorded connection errors.
-- A graduated Boston-only retry succeeded on the second small source-discovery prompt, returning one parseable BPS/BTU source URL and one working extraction row.
+- The seed scaffold is ready: 5 city responses, 15 source rows, 34 extraction rows.
+- `openai-gabriel` is installed/imported locally at version `1.1.8`.
+- The built-in path is confirmed as `gabriel.whatever(..., web_search=True)`.
+- A larger Boston prompt failed with connection errors.
+- Minimal diagnostics all succeeded.
+- A graduated Boston retry succeeded on attempt 2, returning one parseable BPS `BTU Contract Negotiations` source URL and one working extraction row.
 - No ingestion was performed.
 
-## 2. Problem and goal
+## 2. Thursday message
 
-The immediate problem is not scoring local text. It is finding public, reasoning-rich municipal labor sources city by city: awards, JLMC materials, bargaining packets, mediation proposals, committee presentations, and clean public CBAs.
+Built-in GABRIEL web mode works on a bounded Boston source-discovery query through the Harvard proxy, but larger structured extraction prompts need incremental tuning for stability.
 
-The goal of this framework is to help with that acquisition step. It is designed to discover candidate sources, classify them into the right lane, and extract short structured evidence before any later manual ingestion decision.
+## 3. Compact results table
 
-This is an acquisition/extraction assistant framework. It is not production measurement, not automatic ingestion, not causal evidence, and not broad scraping.
-
-## 3. What we built
-
-- A corrected framework that puts built-in GABRIEL web mode first.
-- A custom GABRIEL callback scaffold: `custom_get_all_responses(...)`.
-- A proposed bounded fallback backend contract:
-
-```python
-web_search(
-    query: str,
-    *,
-    max_results: int = 5,
-    domains: list[str] | None = None,
-    city: str | None = None,
-    state: str | None = None,
-) -> list[dict]
-```
-
-- Two working output schemas:
-  - source discovery;
-  - evidence extraction.
-- A five-city seed harness for calibration and Thursday discussion.
-
-## 4. Primary path and fallback path
-
-Primary live path after reading the tutorial:
-
-- generate city web reports with `gabriel.whatever(..., web_search=True)`;
-- constrain scope with `web_search_filters`;
-- tune retrieved context with `search_context_size`;
-- run `gabriel.extract` or structured parsing on those reports.
-
-Fallback path:
-
-- use `custom_get_all_responses(...)` only if project-specific schema control is needed or if built-in outputs are not structured enough.
-
-## 5. Proposed callback and fallback backend contract
-
-The callback takes prompt and identifier batches and returns a dataframe with:
-
-- `Identifier`
-- `Response`
-
-`Response` is always parseable JSON. In seed mode it includes:
-
-- `city`
-- `status`
-- `source_candidates`
-- `extractions`
-- `web_search_contract`
-- `search_config`
-- `notes`
-
-Expected discovery fields from a live fallback backend are:
-
-- `title`
-- `url`
-- `snippet`
-- `source_domain`
-- `published_date`
-- `retrieval_status`
-
-The fallback contract is intentionally small. That keeps it easy to adapt if the built-in path proves insufficient and a custom backend is still needed.
-
-## 6. Five-city seed demo
-
-The seed harness uses known public leads only. It is a dry-run scaffold, not a live search pilot.
-
-| City | Source rows | Extraction rows | Calibration role |
-| --- | ---: | ---: | --- |
-| Boston | 3 | 7 | Non-safety peer-wage mechanism-proxy check |
-| Somerville | 3 | 8 | Safety arbitration/JLMC positive calibration |
-| Newton | 3 | 7 | Mediation and MOA edge-case review |
-| Wayland | 3 | 6 | JLMC positive plus grievance-arbitration exclusion |
-| Seekonk | 3 | 6 | Clean official archive ingestability check |
-
-Total seed outputs:
-
-- 5 city responses
-- 15 source rows
-- 34 extraction rows
-- Live search executed: no
-- Ingestion performed: no
-
-## 7. Worked example
-
-Short-form Boston example:
-
-```json
-{
-  "Identifier": "gabriel_websearch_city_boston_2026_06_30",
-  "city": "Boston",
-  "status": "seed_dry_run",
-  "source_candidates_count": 3,
-  "extractions_count": 7,
-  "example_source_candidate": {
-    "source_title": "BTU contract negotiations page",
-    "source_corpus_recommendation": "mechanism_proxy",
-    "comparability_signal": "high"
-  },
-  "example_extraction": {
-    "attribute": "comparability_emphasis",
-    "attribute_signal": "high"
-  },
-  "notes": [
-    "Live web search was not executed.",
-    "Response is always parseable JSON."
-  ]
-}
-```
-
-## 8. Revised live path after reading the tutorial
-
-- primary path: `gabriel.whatever(web_search=True)` to generate city web reports;
-- extraction path: `gabriel.extract` or structured parsing on those reports;
-- fallback path: custom `get_all_responses_fn` only if project-specific schema control is needed.
-
-## 9. Design choices and guardrails
-
-Key design choices:
-
-| Design choice | Decision | Reason |
+| Stage | Result | Interpretation |
 | --- | --- | --- |
-| built-in live path | Test built-in GABRIEL web mode first | Aligns the project with the tutorial-default route |
-| backend contract | Small bounded fallback `web_search` signature | Keeps the adapter surface narrow if custom plumbing is still needed |
-| returned search fields | `title`, `url`, `snippet`, `source_domain`, `published_date`, `retrieval_status` | Preserves discovery provenance cleanly |
-| domain filters | City-specific filters | Prioritizes official and high-value public sources |
-| result caps | Hard caps on results, retained sources, and extractions | Keeps the workflow reviewable and token-efficient |
-| always JSON response | Yes | Makes flattening and auditing deterministic |
-| corpus-lane separation | Yes | Protects causal vs mechanism-proxy vs lead-only distinctions |
+| Seed scaffold | 5 city responses, 15 source rows, 34 extraction rows | schema and calibration harness ready |
+| Package install | `openai-gabriel` 1.1.8 installed/imported | built-in GABRIEL available |
+| Large Boston prompt | connection errors | too large or unstable request shape |
+| Minimal diagnostics | all succeeded | proxy/web basics work |
+| Graduated Boston retry | attempt 2 succeeded | built-in web source discovery works when bounded |
 
-Guardrails:
+## 4. Boston bounded retry
 
-- no automatic ingestion;
-- no PRRs;
-- no paywalled or licensed source acquisition;
-- no broad scraping;
-- no causal claims;
-- no treating grievance arbitration as impasse evidence;
-- no treating peer-wage comparison alone as impasse evidence.
+| Attempt | Result |
+| --- | --- |
+| 1 | failed |
+| 2 | succeeded |
+| 3 | skipped |
 
-## 10. What we need to confirm Thursday
+Observed output:
 
-The open questions are built-in web-mode fit questions, not blockers:
+- source rows: 1
+- extraction rows: 1
+- returned source: BPS `BTU Contract Negotiations`
+- URL preserved: yes
+- Boston BTU/BPS material rediscovered: yes
+- ingestion: no
 
-- What is the exact built-in invocation pattern in this environment?
-- What output structure does built-in web mode return?
-- Are `web_search_filters` enough for city/domain control?
-- Should extraction happen through `gabriel.extract` or light structured parsing?
-- If built-in outputs are not structured enough, what thin fallback adapter is needed?
+## 5. Interpretation
 
-## 11. Optional live smoke test
+This is no longer a blocked result. The successful bounded retry shows that built-in web source discovery can work in this environment. The remaining issue is stability for larger structured extraction requests, not basic package availability or basic proxy/web connectivity.
 
-A one-city Boston live smoke test was considered but not executed. The corrected next step is a Boston-only built-in GABRIEL web smoke test after confirming invocation details and output structure in this environment. The report remains seed-mode only, and no ingestion was performed.
+## 6. Recommended next step
 
-## 12. Built-in GABRIEL web smoke test
+Boston-only structured extraction tuning, one dimension at a time:
 
-The Boston-only built-in smoke test advanced past the earlier package blocker:
+1. prompt size
+2. output cap
+3. source metadata handling
+4. timeout behavior
 
-- Package installed/imported: `openai-gabriel` 1.1.8.
-- Native path callable: `gabriel.whatever(web_search=True)`.
-- Intended scope: Boston BPS/BTU salary-comparison and contract-negotiation sources.
-- Model/search context: `gpt-5.4-nano`, `search_context_size="low"`.
-- Live call result: failed API/web call; GABRIEL recorded three connection errors, empty response text, and no web-search sources.
-- Source rows created: 0.
-- Extraction rows created: 0.
-- Boston BTU rediscovered: no response returned.
-- URLs/citations preserved: none returned.
-- Ingestion: no.
+Do not create plots from the live retry outputs; `n=1` is too small for a numeric chart. Keep the existing Mermaid workflow diagram only.
 
-The corrected framework still stands: built-in web mode is primary, and package availability is now resolved. The remaining question is whether the Harvard HUIT proxy supports built-in web-search tools through `openai-gabriel`, or whether the smoke test requires a standard OpenAI endpoint/key environment.
+## 7. Guardrails
 
-Follow-up diagnostics used tiny prompts only. GABRIEL is installed/importable, the built-in web path exists, and the Boston smoke test reached runtime but failed with connection errors. The bounded diagnostic separated proxy/non-web behavior from web-tool behavior: raw proxy, GABRIEL non-web, GABRIEL web-search, and raw Responses web-search all succeeded in the final run. No ingestion was performed. The result category is unknown because the earlier Boston failure was not reproduced by minimal checks.
+- No ingestion
+- No production data creation
+- No five-city live pilot
+- No all-32 v10 run
+- No PRRs
+- No causal claims
 
-A graduated Boston-only retry ran attempts 1 and 2, then stopped before attempt 3 after attempt 2 succeeded. Attempt 1 hit a connection error. Attempt 2 returned the BPS `BTU Contract Negotiations` page URL. Source rows: 1; working extraction rows: 1; URLs/citations parseable: yes; ingestion: no. Interpretation: built-in web mode works on a small Boston query, while larger structured extraction still needs tuning and transient connection behavior remains possible.
+## 8. Bottom line
 
-## 13. Next live-test plan
-
-If a safe backend is available, the first live test should stay tightly bounded:
-
-- Boston first, then the same five cities if the built-in path is adequate;
-- domain filters on;
-- max six queries per city;
-- max five results per query;
-- retain max ten sources per city;
-- extract max three spans per source;
-- compare live outputs to seeded calibration rows;
-- keep ingestion separate.
-
-Bottom line: built-in GABRIEL web mode should be tested first. The scaffold remains ready as a bounded fallback acquisition/extraction assistant if tighter schema control is needed.
+The Thursday package should present the Boston bounded retry as a narrow success: built-in GABRIEL web source discovery works when the request is kept small, and structured extraction should be tuned incrementally before any broader live run.

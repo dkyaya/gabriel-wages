@@ -4,11 +4,11 @@
 
 **Title:** Why search/extraction matters for the wage project
 
-- The project needs more than final CBAs; it needs public documents that explain wage-setting logic.
-- The current bottleneck is city-by-city discovery of reasoning-rich municipal labor sources.
-- Search assistance is most valuable upstream, before manual ingestion and formal measurement.
+- The project needs public documents that explain wage-setting logic, not only final CBAs.
+- The operational bottleneck is city-by-city discovery of reasoning-rich municipal labor sources.
+- Search assistance is most useful upstream, before manual ingestion and formal measurement.
 
-Suggested visual/table if any: simple workflow strip showing `source discovery -> evidence extraction -> manual ingestion review`.
+Suggested visual/table if any: simple workflow strip showing `source discovery -> evidence extraction -> manual review`.
 
 ## Slide 2
 
@@ -23,114 +23,96 @@ Suggested visual/table if any: small four-box diagram with `discover`, `classify
 
 ## Slide 3
 
-**Title:** Tutorial correction: primary live path vs fallback path
+**Title:** Built-in path is the primary live path
 
-- The tutorial indicates built-in GABRIEL web mode should be the main live path.
-- `modality="web"` and `web_search=True` are standard routes; `get_all_responses_fn` is the advanced route.
-- That changes the framing: test built-in web mode first, use the custom callback only if schema control is needed.
-- The repo issue is not conceptual lack of web mode; it is lack of project wiring into the city-by-city source schema.
+- The tutorial indicates built-in GABRIEL web mode should be tested first.
+- `gabriel.whatever(..., web_search=True)` is the main report-first route.
+- The custom callback remains fallback infrastructure for schema control, not the default live path.
+- The repo issue was project wiring, not lack of conceptual web capability.
 
 Suggested visual/table if any: two-column table, `primary live path` vs `fallback path`.
 
 ## Slide 4
 
-**Title:** What we found locally
+**Title:** Current package status
 
-- Existing runners score already-local text inputs.
-- `ingest/fetchers/` is portal-specific scaffolding, not a generic city web-search workflow.
-- The repo had not yet wired built-in GABRIEL web mode into the project's source/extraction tables.
-- That made a fallback scaffold useful, but not primary.
+- Seed scaffold is ready: 5 city responses, 15 source rows, 34 extraction rows.
+- `openai-gabriel` 1.1.8 is installed/imported.
+- Built-in path confirmed: `gabriel.whatever(web_search=True)`.
+- No ingestion or production data creation happened.
 
-Suggested visual/table if any: two-column table, `present locally` vs `still to wire`.
+Suggested visual/table if any: compact status table.
 
 ## Slide 5
 
-**Title:** Built-in live path to test first
+**Title:** Boston live testing sequence
 
-- Primary path should be `gabriel.whatever(..., web_search=True)` for city web reports.
-- Use `web_search_filters` for city/domain control.
-- Use `search_context_size` to tune report richness.
-- Then run `gabriel.extract` or light structured parsing on those reports.
+- Larger Boston structured prompt failed with connection errors.
+- Minimal diagnostics all succeeded.
+- Graduated Boston retry:
+  - attempt 1 failed
+  - attempt 2 succeeded
+  - attempt 3 skipped
+- Returned source rows: 1; working extraction rows: 1.
 
-Suggested visual/table if any: one short workflow strip or compact parameter table.
+Suggested visual/table if any: 3-row attempt table.
 
 ## Slide 6
 
-**Title:** Custom callback scaffold as fallback/advanced option
+**Title:** What the bounded success returned
 
-- Implemented `custom_get_all_responses(...)` as a fallback `get_all_responses_fn` scaffold.
-- Input is prompt batch plus identifiers; output is a dataframe with `Identifier` and `Response`.
-- `Response` is always parseable JSON and includes source candidates, extractions, config, and notes.
-- This remains useful if built-in web outputs are not structured enough.
+- Returned source: BPS `BTU Contract Negotiations`.
+- URL preserved: yes.
+- Boston BTU/BPS material rediscovered: yes.
+- Ingestion: no.
+- This is a working source-discovery result, not a production extraction pipeline.
 
-Suggested visual/table if any: short code signature plus one sample JSON field list.
+Suggested visual/table if any: one-row source callout table.
 
 ## Slide 7
 
-**Title:** Five-city seed demo
+**Title:** Thursday message
 
-- Seed cities: Boston, Somerville, Newton, Wayland, Seekonk.
-- Outputs: 5 city responses, 15 source rows, 34 extraction rows.
-- Live web search executed: no.
-- Ingestion performed: no.
+- Built-in GABRIEL web mode works on a bounded Boston source-discovery query through the Harvard proxy.
+- The live finding is no longer “blocked.”
+- The remaining issue is stability for larger structured extraction prompts.
+- This is a bounded operational result, not a causal claim.
 
-Suggested visual/table if any: compact city table with source and extraction counts.
+Suggested visual/table if any: one highlighted message box.
 
 ## Slide 8
 
-**Title:** Worked JSON example
+**Title:** Compact results table
 
-- Show one short seeded payload example, ideally Boston.
-- Highlight `Identifier`, `city`, `status`, source-candidate count, extraction count, one source example, and one extraction example.
-- Emphasize that the callback output is already shaped for flattening into working tables.
+- Seed scaffold: 5 city responses, 15 source rows, 34 extraction rows.
+- Package install: `openai-gabriel` 1.1.8 installed/imported.
+- Large Boston prompt: connection errors.
+- Minimal diagnostics: all succeeded.
+- Graduated Boston retry: attempt 2 succeeded.
 
-Suggested visual/table if any: small JSON callout box or two-column `field` / `example value` table.
+Suggested visual/table if any: reuse the 3-column report table verbatim.
 
 ## Slide 9
 
-**Title:** Example source classifications
+**Title:** What not to over-claim
 
-- Boston BTU: mechanism-proxy, high comparability, not impasse evidence.
-- Somerville police awards: causal calibration positives for JLMC/arbitration.
-- Wayland fire JLMC: positive impasse-pathway example.
-- Seekonk official archive: clean ingestability check; Newton: mostly manual-review or mechanism-proxy leads.
+- Do not claim full structured extraction stability yet.
+- Do not claim ingestion readiness.
+- Do not claim five-city live readiness.
+- Do not create numeric plots from the one successful live retry.
 
-Suggested visual/table if any: 5-row example table with `city`, `source`, `lane`, `why it matters`.
+Suggested visual/table if any: short guardrail checklist.
 
 ## Slide 10
 
-**Title:** Guardrails and corpus separation
+**Title:** Next technical step
 
-- No automatic ingestion, no PRRs, no licensed or paywalled search targets.
-- No broad scraping and no causal claims.
-- Keep causal, mechanism-proxy, discourse, and lead-only lanes separate.
-- Do not treat grievance arbitration or peer-wage comparison alone as impasse evidence.
+- Keep the next technical run Boston-only.
+- Tune one dimension at a time:
+  - prompt size
+  - output cap
+  - source metadata handling
+  - timeout behavior
+- Use the fallback callback only if built-in output structure remains insufficient.
 
-Suggested visual/table if any: guardrail checklist.
-
-## Slide 11
-
-**Title:** Built-in smoke test status
-
-- `openai-gabriel` 1.1.8 installed and `import gabriel` succeeded.
-- `gabriel.whatever(web_search=True, search_context_size="low")` is callable.
-- The first larger Boston prompt reached runtime but returned connection errors and no response.
-- Minimal proxy/web diagnostics then succeeded, including a tiny GABRIEL web-search call.
-- A graduated Boston retry ran attempts 1 and 2; attempt 2 succeeded on a small source-discovery prompt.
-- Returned source rows: 1; working extraction rows: 1; URLs/citations parseable: yes.
-- Boston BPS/BTU material was rediscovered through the BPS `BTU Contract Negotiations` page.
-- No ingestion happened.
-
-Suggested visual/table if any: small status table with `test`, `result`, `row counts`, `next dependency`.
-
-## Slide 12
-
-**Title:** Next tuning step
-
-- Built-in GABRIEL web mode works on a small Boston query.
-- Larger structured extraction still needs incremental tuning.
-- Keep Boston-only while tuning prompt size, output size, source metadata handling, and timeout behavior.
-- Use the custom callback only if project-specific schema control is still required.
-- Keep ingestion separate.
-
-Suggested visual/table if any: next-step box with `small Boston success -> structured Boston tuning -> decide if fallback is needed`.
+Suggested visual/table if any: simple progression strip `bounded Boston success -> Boston structured tuning -> broader pilot decision`.
