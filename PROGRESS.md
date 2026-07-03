@@ -6,6 +6,61 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-03 - Broader police/fire wage mechanism memo and data-plan package created
+
+**Did**
+- Created:
+  - `docs/analysis/police_fire_wage_mechanism_context_2026-07-02.md`
+  - `docs/analysis/police_fire_wage_mechanism_sources_2026-07-02.csv`
+  - `docs/analysis/police_fire_wage_hypothesis_matrix_2026-07-02.csv`
+  - `docs/analysis/police_fire_wage_trend_data_plan_2026-07-02.md`
+- Updated:
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- Built a broader mechanism-context memo that steps back from the current comparability/arbitration implementation lane and maps competing police/fire wage mechanisms, counterarguments, and evidence needs.
+- Kept the work strictly outside ingestion and outside live GABRIEL/model execution.
+
+**Decisions and why**
+- Treated recruitment pressure, training burden, vacancies/PTO, and arbitration as candidate mechanisms rather than public-safety-specific truths.
+- Centered a claim/counterpoint/evidence structure so the memo would not drift into confirmation of the current comparability story.
+- Used Massachusetts/JLMC as one institutional case while explicitly keeping room for broader-state mechanism snippets.
+- Kept the source bibliography curated rather than exhaustive so the package stays usable as a planning memo.
+
+**Surprises/breakage**
+- No repo breakage from this session.
+- Validation and coverage audit remained unchanged, confirming the work stayed in memo/planning space rather than corpus modification.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+**Next steps**
+1. Stay in mechanism-development mode before any broader GABRIEL web-search scaling.
+2. Pull a first descriptive OEWS/ASPEP trend baseline for police, fire, and selected non-safety comparison occupations.
+3. Add a small broader-state public snippet set to test whether institutional mechanisms differ outside Massachusetts/JLMC.
+
 ## 2026-07-01 - Thursday package updated around Boston bounded built-in GABRIEL web success
 
 **Did**

@@ -2,9 +2,59 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-01T23:33:27-04:00`
+Last updated: `2026-07-03T14:02:03-04:00`
 
 ---
+
+## 2026-07-03T14:02:03-04:00 - Broader police/fire wage mechanism memo package created
+
+**Commit:** pending in current session
+
+### Current State After This Entry
+
+- Created:
+  - `docs/analysis/police_fire_wage_mechanism_context_2026-07-02.md`
+  - `docs/analysis/police_fire_wage_mechanism_sources_2026-07-02.csv`
+  - `docs/analysis/police_fire_wage_hypothesis_matrix_2026-07-02.csv`
+  - `docs/analysis/police_fire_wage_trend_data_plan_2026-07-02.md`
+- Updated:
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- The new memo explicitly steps back from implementation and develops competing police/fire wage mechanisms, counterarguments, and evidence requirements.
+- No live GABRIEL calls were run.
+- No ingestion happened.
+- No production corpus files, `data/contracts.csv`, `data/city_coverage.csv`, `corpus/`, or `inbox/` were modified.
+
+### Analytical Position After This Entry
+
+- v9 remains a descriptive `comparability_emphasis` baseline with strong source-type confounding.
+- v10 remains a useful institutional-pathway concept, but only one mechanism among several.
+- The broader mechanism space now includes recruitment/retention pressure, post-2020 policing climate, hazard/work burden, overtime spirals, political salience, fiscal capacity, credentialing/training barriers, volunteer-to-career fire pressure, and union/institutional leverage.
+- The memo now treats each mechanism with an explicit counterpoint and a note on what evidence would distinguish it from alternatives.
+
+### Validation/Audit Results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+### Recommended Next Step
+
+Stay in mechanism-development mode:
+
+1. build a first descriptive OEWS/ASPEP trend baseline;
+2. add a small broader-state public snippet set for mechanism discovery;
+3. only then revisit whether new GABRIEL attributes should be prototyped from this expanded mechanism map.
 
 ## 2026-07-01T23:33:27-04:00 - Thursday report package integrated around Boston bounded built-in web success
 
