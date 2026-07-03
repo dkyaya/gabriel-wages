@@ -6,6 +6,61 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-03 - OEWS/ASPEP descriptive wage-trend baseline plan prepared
+
+**Did**
+- Created:
+  - `docs/analysis/police_fire_wage_trend_baseline_implementation_plan_2026-07-03.md`
+  - `docs/analysis/police_fire_wage_trend_occupation_crosswalk_2026-07-03.csv`
+  - `docs/analysis/police_fire_wage_trend_baseline_note_for_pi_2026-07-03.md`
+- Updated:
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- Confirmed the prior PI-facing mechanism synthesis commit was already in place, so no pre-work commit action was needed beyond leaving `tmp/` uncommitted.
+- Built the next-step descriptive baseline plan around exact official OEWS and ASPEP entry points, including BLS annual tables, the Massachusetts state page, the Boston-Cambridge-Newton metro listing, ASPEP table IDs, the ASPEP datasets page, and the individual-unit-file route.
+
+**Decisions and why**
+- Kept the baseline explicitly descriptive and occupation-level because OEWS/ASPEP cannot recover bargaining-unit contract wages.
+- Used national, Massachusetts, and Boston-Cambridge-Newton as the required first-pass geographies because they align with the project's current state focus while keeping the first build manageable.
+- Chose a compact set of occupation mappings that are relatively interpretable in OEWS: police, firefighters, teachers, clerical/admin, maintenance/public works proxy, sanitation, and transit.
+- Treated `public_works` and `clerical_admin` as proxy occupations rather than pretending OEWS titles perfectly match municipal bargaining units.
+- Included the national industry-specific/by-ownership OEWS file as a public/private mix sensitivity check, while noting that it does not solve the state/metro ownership problem.
+
+**Surprises/breakage**
+- No repo breakage from this session.
+- Validation and coverage audit remained unchanged, confirming the work stayed outside ingestion and production corpus changes.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+**Next steps**
+1. Implement the first OEWS descriptive panel for the selected occupations at national, Massachusetts, and Boston-Cambridge-Newton scales.
+2. Pull the parallel ASPEP function-based context tables and decide which function codes best approximate police, fire, education, transit, and public-works-adjacent services.
+3. Keep any later state expansion or ownership/public-sector refinement as a second-pass extension after the first baseline is stable.
+
 ## 2026-07-03 - PI-facing mechanism synthesis and source-QC pass completed
 
 **Did**

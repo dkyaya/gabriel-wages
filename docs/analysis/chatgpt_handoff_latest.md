@@ -2,9 +2,86 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-03T15:14:25-04:00`
+Last updated: `2026-07-03T15:55:58-04:00`
 
 ---
+
+## 2026-07-03T15:55:58-04:00 - OEWS/ASPEP descriptive wage-trend baseline plan prepared
+
+**Commit:** pending in current session
+
+### Current State After This Entry
+
+- Created:
+  - `docs/analysis/police_fire_wage_trend_baseline_implementation_plan_2026-07-03.md`
+  - `docs/analysis/police_fire_wage_trend_occupation_crosswalk_2026-07-03.csv`
+  - `docs/analysis/police_fire_wage_trend_baseline_note_for_pi_2026-07-03.md`
+- Updated:
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- No live GABRIEL calls were run.
+- No ingestion happened.
+- No production corpus files, `data/contracts.csv`, `data/city_coverage.csv`, `corpus/`, or `inbox/` were modified.
+- The prior mechanism-synthesis work was already committed as `0cd3e91`, so no cleanup commit was needed before this run.
+
+### What This New Package Does
+
+- Turns the earlier trend-data concept memo into an implementation-ready OEWS/ASPEP baseline plan with exact official source entry points.
+- Specifies the first-pass geography set: national, Massachusetts, and Boston-Cambridge-Newton, MA-NH.
+- Specifies the first-pass occupation set and flags where the mapping is clean versus proxy-based.
+- Makes explicit that OEWS and ASPEP are descriptive occupation/function sources, not bargaining-unit wage sources.
+
+### Key Source Choices
+
+- OEWS annual tables page: `https://www.bls.gov/oes/tables.htm`
+- OEWS state estimates page: `https://www.bls.gov/oes/current/oessrcst.htm`
+- OEWS metro/nonmetro page: `https://www.bls.gov/oes/current/oessrcma.htm`
+- ASPEP tables page: `https://www.census.gov/data/tables/2025/econ/apes/annual-apes.html`
+- ASPEP datasets page: `https://www.census.gov/data/datasets/2025/econ/apes/annual-apes.html`
+- ASPEP methodology page: `https://www.census.gov/programs-surveys/apes/technical-documentation/methodology/annual/2025.html`
+- ASPEP table IDs selected for the first pass:
+  - `GOVSEMPTIMESERIES.GS00EMP01`
+  - `GOVSEMPTIMESERIES.GS00EMP02`
+  - `GOVSEMPTIMESERIES.GS00EMP03`
+
+### Occupation Mapping Position
+
+High-fit first-pass mappings:
+
+- police -> `33-3051` Police and Sheriff's Patrol Officers
+- fire -> `33-2011` Firefighters
+
+Useful but imperfect comparison mappings:
+
+- teacher -> elementary and secondary teachers
+- clerical_admin -> Office Clerks, General
+- public_works -> Maintenance and Repair Workers, General
+- sanitation -> Refuse and Recyclable Material Collectors
+- transit -> Bus Drivers, Transit and Intercity
+
+The package is explicit that `clerical_admin` and especially `public_works` are proxy mappings rather than exact municipal-unit representations.
+
+### Validation/Audit Results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+### Recommended Next Step
+
+1. Implement the first descriptive OEWS panel for the selected occupations and geographies.
+2. Add ASPEP function-based context for police protection, fire protection, education, and other relevant functions.
+3. Keep the interpretation descriptive and reserve bargaining-unit wage construction for separate CBA/payroll work.
 
 ## 2026-07-03T15:14:25-04:00 - PI-facing synthesis and source-QC pass completed
 
