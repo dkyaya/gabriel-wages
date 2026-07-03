@@ -2,9 +2,61 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-03T14:02:03-04:00`
+Last updated: `2026-07-03T15:14:25-04:00`
 
 ---
+
+## 2026-07-03T15:14:25-04:00 - PI-facing synthesis and source-QC pass completed
+
+**Commit:** pending in current session
+
+### Current State After This Entry
+
+- Created:
+  - `docs/analysis/police_fire_wage_mechanism_synthesis_for_pi_2026-07-03.md`
+- Updated:
+  - `docs/analysis/police_fire_wage_mechanism_context_2026-07-02.md`
+  - `docs/analysis/police_fire_wage_mechanism_sources_2026-07-02.csv`
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- No live GABRIEL calls were run.
+- No ingestion happened.
+- No production corpus files, `data/contracts.csv`, `data/city_coverage.csv`, `corpus/`, or `inbox/` were modified.
+
+### Source-QC Findings
+
+- The bibliography now distinguishes between authoritative federal/state references, institutional-context sources, and illustrative secondary sources.
+- The AP article summarizing the PERF staffing survey is retained only as an illustrative source and should be replaced with the direct PERF release before formal citation.
+- BLS and Census landing-page references are fine for planning, but some entries still need exact table/report links before external-facing use because the page year and underlying data year are not the same thing.
+- The OOH and related entries are now annotated with access date and underlying data-year cautions.
+
+### Analytical Position After This Entry
+
+- The mechanism memo now reads more explicitly as a hypothesis map rather than an ordered explanation.
+- Comparability remains important, but the PI-facing framing is now broader: police/fire wage growth may reflect multiple interacting mechanisms rather than a single comparator story.
+- The synthesis memo explains why police and fire may differ from each other and why non-safety comparison is part of mechanism definition, not just a robustness check.
+
+### Validation/Audit Results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+### Recommended Next Step
+
+1. Replace indirect or illustrative bibliography items with exact primary citations where available.
+2. Build the first descriptive OEWS/ASPEP baseline.
+3. Keep broader-state mechanism discovery small and curated before any new GABRIEL design or run decision.
 
 ## 2026-07-03T14:02:03-04:00 - Broader police/fire wage mechanism memo package created
 

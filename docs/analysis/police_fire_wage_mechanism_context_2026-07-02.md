@@ -7,7 +7,7 @@
 
 This memo steps back from the current GABRIEL implementation work and asks a broader mechanism question: why might police and firefighter wages be high, or rise faster than other municipal occupations, in at least some places and periods?
 
-The goal is to develop competing mechanisms, counterarguments, and evidence requirements. It does **not** establish causal effects. It also does **not** assume that any one mechanism is unique to public safety. For each candidate mechanism, the key question is whether it operates differently, more intensely, or more persistently for police and fire than for comparison municipal occupations.
+The goal is to develop competing mechanisms, counterarguments, and evidence requirements. It does **not** establish causal effects. It also does **not** assume that any one mechanism is unique to public safety. For each candidate mechanism, the key question is whether it operates differently, more intensely, or more persistently for police and fire than for comparison municipal occupations. Unless otherwise noted, the discussion below should be read as a map of plausible channels rather than a ranked list of likely explanations.
 
 ## 2. Current project baseline
 
@@ -35,11 +35,11 @@ The bounded Boston GABRIEL web test showed that carefully constrained source dis
 
 Several overlapping mechanisms could generate police wage pressure.
 
-First, police hiring markets may be tight even when nominal applicant counts recover. The BLS Occupational Outlook Handbook reports 62,200 projected annual openings for police and detectives over 2024-2034, many from replacement demand rather than net growth, and describes a job with stressful, dangerous, shift-based work and common overtime ([BLS OOH, Police and Detectives](https://www.bls.gov/ooh/protective-service/police-and-detectives.htm)). That combination suggests that agencies may need to pay not just to attract any applicants, but to attract applicants who can meet academy, background, physical, and retention demands.
+First, police hiring markets may be tight even when nominal applicant counts recover. The BLS Occupational Outlook Handbook reports 62,200 projected annual openings for police and detectives over 2024-2034, many from replacement demand rather than net growth, and describes a job with stressful, dangerous, shift-based work and common overtime ([BLS OOH, Police and Detectives](https://www.bls.gov/ooh/protective-service/police-and-detectives.htm)). That combination makes recruitment pressure plausible, but it does not by itself show that wages are the binding margin or that police scarcity is worse than scarcity in other municipal occupations.
 
-Second, post-2019/2020 staffing stress should be treated as multi-causal. A plausible mechanism is that public scrutiny after George Floyd, broader legitimacy conflict, and anti-police sentiment reduced applications or increased exits in some jurisdictions. But that should sit alongside other candidate explanations: COVID-era labor-market disruption, retirement waves, burnout, slower hiring pipelines, competition from other law-enforcement employers, and wider outside options. An AP summary of a 2024 PERF survey reports both improvement in 2023 hiring and continuing large-department staffing gaps, which fits a recovery-but-not-resolution story rather than a single-shock explanation ([AP on PERF survey, 2024-04-28](https://apnews.com/article/7e39156a80de2d75e22bd554adc8f887)).
+Second, post-2019/2020 staffing stress should be treated as multi-causal. A plausible mechanism is that public scrutiny after George Floyd, broader legitimacy conflict, and anti-police sentiment reduced applications or increased exits in some jurisdictions. But that should sit alongside other candidate explanations: COVID-era labor-market disruption, retirement waves, burnout, slower hiring pipelines, competition from other law-enforcement employers, and wider outside options. An AP summary of a 2024 PERF survey reports both improvement in 2023 hiring and continuing large-department staffing gaps, which fits a recovery-but-not-resolution story rather than a single-shock explanation ([AP on PERF survey, 2024-04-28](https://apnews.com/article/7e39156a80de2d75e22bd554adc8f887)). Because this is a secondary summary rather than a direct PERF release, it should be treated as illustrative context pending substitution with the underlying PERF document.
 
-Third, police work includes burdens that can matter for compensation even when not fully visible in a salary schedule: round-the-clock shift coverage, court appearances, overtime, callback, emotional strain, exposure to violence, liability risk, and extensive entry/training requirements. BLS notes that police have some of the highest injury and illness rates of any occupation, that shift work is necessary at all times, and that academy training plus rigorous qualifications are standard ([BLS OOH, Police and Detectives](https://www.bls.gov/ooh/protective-service/police-and-detectives.htm)).
+Third, police work includes burdens that can matter for compensation even when not fully visible in a salary schedule: round-the-clock shift coverage, court appearances, overtime, callback, emotional strain, exposure to violence, liability risk, and extensive entry/training requirements. BLS notes that police have some of the highest injury and illness rates of any occupation, that shift work is necessary at all times, and that academy training plus rigorous qualifications are standard ([BLS OOH, Police and Detectives](https://www.bls.gov/ooh/protective-service/police-and-detectives.htm)). Even so, a burden-based story needs evidence that these conditions affect wage-setting rather than simply affecting job quality or turnover.
 
 Counterargument: none of this proves unusual scarcity. Some departments may still receive many applicants, and in some places the problem may be processing speed, standards, or lateral competition rather than low applicant interest. The evidence needed would be agency-level time series on applicants per academy seat, pass-through rates, vacancy duration, exits, retirements, and lateral transfers, ideally compared with non-safety municipal hiring pipelines in the same labor market.
 
@@ -51,11 +51,11 @@ The first distinction is career versus volunteer. BLS reports that paid firefigh
 
 The second distinction is that public esteem does not automatically imply abundant qualified career supply. BLS describes firefighters as typically needing EMS training, fire-academy training, physical testing, ongoing credential maintenance, and work schedules with long shifts and common overtime ([BLS OOH, Firefighters](https://www.bls.gov/ooh/protective-service/firefighters.htm)). Firefighter work also now includes large EMS burdens in many jurisdictions, not just fire suppression. So "well-liked occupation" does not automatically mean easy staffing at the credentialed career margin.
 
-Third, firefighter median pay can still be lower than police pay despite training and EMT requirements. The 2024 BLS median was $59,530 for firefighters versus $77,270 for police and detectives ([BLS OOH, Firefighters](https://www.bls.gov/ooh/protective-service/firefighters.htm); [BLS OOH, Police and Detectives](https://www.bls.gov/ooh/protective-service/police-and-detectives.htm)). Plausible reasons include occupational composition differences, different local labor markets, the presence of many volunteer and combination systems, different promotion structures, and the fact that some firefighter burdens may show up in overtime, staffing rules, or training budgets rather than in base wage levels.
+Third, firefighter median pay can still be lower than police pay despite training and EMT requirements. The 2024 BLS median was $59,530 for firefighters versus $77,270 for police and detectives ([BLS OOH, Firefighters](https://www.bls.gov/ooh/protective-service/firefighters.htm); [BLS OOH, Police and Detectives](https://www.bls.gov/ooh/protective-service/police-and-detectives.htm)). Plausible reasons include occupational composition differences, different local labor markets, the presence of many volunteer and combination systems, different promotion structures, and the fact that some firefighter burdens may show up in overtime, staffing rules, or training budgets rather than in base wage levels. These are hypotheses to test, not conclusions that can be drawn from the median gap alone.
 
 Fourth, firefighter hazards and coverage constraints remain real even in an occupation with positive public standing. BLS reports high injury/illness rates, long shifts, common overtime, and heavy protective gear, while NIOSH maintains a dedicated firefighter safety program and a National Firefighter Registry for Cancer because exposure risk is a serious national concern ([BLS OOH, Firefighters](https://www.bls.gov/ooh/protective-service/firefighters.htm); [CDC/NIOSH Firefighters](https://www.cdc.gov/niosh/firefighters/); [National Firefighter Registry for Cancer](https://www.cdc.gov/nfr/)).
 
-Fifth, volunteer recruitment and retention problems may transmit into wage pressure only indirectly. If volunteer pipelines weaken, communities may face more paid-on-call compensation, more training and turnout subsidies, more reliance on combination staffing, or pressure to professionalize formerly volunteer coverage.
+Fifth, volunteer recruitment and retention problems may transmit into wage pressure only indirectly. If volunteer pipelines weaken, communities may face more paid-on-call compensation, more training and turnout subsidies, more reliance on combination staffing, or pressure to professionalize formerly volunteer coverage. The key empirical point is that this mechanism may alter staffing models or budgets before it alters negotiated base wages.
 
 Definitions for non-specialists:
 
@@ -80,7 +80,7 @@ The relevant question is not whether these pressures exist elsewhere, but whethe
 
 Even here, the comparison should stay disciplined. Transit operators, school staff, nurses, dispatchers, sanitation crews during storms, and public works during weather or infrastructure emergencies can also face hard coverage constraints. So the evidence question is comparative intensity: are absences, vacancies, and schedule gaps more operationally costly in police/fire than in those non-safety units, and if so under what institutional conditions?
 
-Counterargument: many non-safety municipal jobs are also hard to replace on short notice, and some have equally binding service obligations. Evidence would need to compare vacancy duration, overtime substitution, service deferral options, and downstream service disruption across unit types within the same city.
+Counterargument: many non-safety municipal jobs are also hard to replace on short notice, and some have equally binding service obligations. Evidence would need to compare vacancy duration, overtime substitution, service deferral options, and downstream service disruption across unit types within the same city. In other words, the non-safety comparison is not a robustness check added later; it is part of how the mechanism claims should be defined from the start.
 
 ## 6. Arbitration and bargaining backstops
 
@@ -97,7 +97,7 @@ Formally, arbitrators are usually supposed to apply statutory or contractual cri
 
 The classic literature also discusses `chilling effects` and `narcotic effects`. In this context, a chilling effect means parties may bargain less seriously because arbitration is available. A narcotic effect means repeated use of arbitration may make the parties increasingly dependent on it over time. These are hypotheses, not settled facts for this project.
 
-A further possibility is documentation asymmetry. Arbitration and impasse settings may generate more written comparability reasoning even if comparator logic also exists outside safety bargaining. That could make safety wage-setting look more comparator-driven in text than it really is in the full bargaining universe.
+A further possibility is documentation asymmetry. Arbitration and impasse settings may generate more written comparability reasoning even if comparator logic also exists outside safety bargaining. That could make safety wage-setting look more comparator-driven in text than it really is in the full bargaining universe. This is one reason to avoid reading document frequency as direct evidence of causal importance.
 
 Counterargument: arbitration may be more visible in documents than more important in outcomes. The evidence needed would compare wage movement in otherwise similar settlements with and without formal impasse procedures, and also compare how often comparability language appears in award-style documents versus ordinary agreements.
 
@@ -105,7 +105,7 @@ Counterargument: arbitration may be more visible in documents than more importan
 
 ### BLS OEWS
 
-OEWS can measure occupation-level wages nationally, by state, and by metropolitan/nonmetropolitan area. BLS explicitly states that OEWS produces annual employment and wage estimates for roughly 830 occupations and makes them available for the nation, states, and metropolitan/nonmetropolitan areas ([OEWS overview](https://www.bls.gov/oes/)). This is the strongest public source for descriptive police-versus-fire wage trends across places.
+OEWS can measure occupation-level wages nationally, by state, and by metropolitan/nonmetropolitan area. BLS explicitly states that OEWS produces annual employment and wage estimates for roughly 830 occupations and makes them available for the nation, states, and metropolitan/nonmetropolitan areas ([OEWS overview](https://www.bls.gov/oes/)). This is a useful public source for descriptive police-versus-fire wage trends across places, but it should not be treated as a bargaining-unit data source.
 
 Limits:
 
@@ -116,7 +116,7 @@ Limits:
 
 ### Census ASPEP
 
-ASPEP provides state and local government civilian employment and gross March payroll by government function ([ASPEP](https://www.census.gov/programs-surveys/apes.html)). This is useful for public-sector context, especially police/fire function payroll and staffing at broader government-function levels.
+ASPEP provides state and local government civilian employment and gross March payroll by government function ([ASPEP](https://www.census.gov/programs-surveys/apes.html)). This is useful for public-sector context, especially police/fire function payroll and staffing at broader government-function levels, but it is better treated as background context than as direct evidence on unit-level wage-setting.
 
 Limits:
 
@@ -161,22 +161,22 @@ County-level occupational wage trend measurement is realistic for some descripti
 ## 8. Expanded hypothesis map
 
 1. `labor_scarcity_recruitment_pressure`
-   Police or fire wages rise because departments need to attract and keep enough qualified workers in a constrained labor market.
+   Police or fire wages may rise because departments need to attract and keep enough qualified workers in a constrained labor market.
 
 2. `post_2020_police_legitimacy_morale_shock`
-   Police wages rise because post-2020 public scrutiny, morale problems, resignations, and reduced applicant interest increased the compensation needed to staff departments.
+   Police wages may rise because post-2020 public scrutiny, morale problems, resignations, and reduced applicant interest increased the compensation needed to staff departments.
 
 3. `compensating_differentials_risk_stress_hours`
-   Wages rise as compensation for dangerous, stressful, irregular, or highly intrusive working conditions.
+   Wages may rise as compensation for dangerous, stressful, irregular, or highly intrusive working conditions.
 
 4. `overtime_staffing_spiral`
-   Understaffing leads to more overtime and callback; overtime dependence raises total compensation pressure and can itself worsen retention.
+   Understaffing may lead to more overtime and callback; overtime dependence may raise total compensation pressure and can itself worsen retention.
 
 5. `comparator_ratchet`
-   Wage setting is pulled upward by peer-city comparisons, parity expectations, or regional ratcheting.
+   Wage setting may be pulled upward by peer-city comparisons, parity expectations, or regional ratcheting.
 
 6. `arbitration_impasse_backstop`
-   Formal impasse procedures or bargaining in their shadow strengthen wage demands or increase settlement leverage.
+   Formal impasse procedures or bargaining in their shadow may strengthen wage demands or increase settlement leverage.
 
 7. `political_salience_public_safety_premium`
    Elected officials may pay more to avoid visible public-safety deterioration than to avoid slower degradation in less salient services.
@@ -185,16 +185,16 @@ County-level occupational wage trend measurement is realistic for some descripti
    Police/fire unions may enjoy stronger bargaining leverage, favorable statutes, or more durable organizational power.
 
 9. `budget_capacity_property_tax_base`
-   Richer jurisdictions can pay more, and police/fire may capture disproportionate shares of that capacity.
+   Richer jurisdictions may be able to pay more, and police/fire may capture disproportionate shares of that capacity.
 
 10. `credentialing_training_barriers`
-   Wages rise because entry and maintenance requirements narrow supply or increase replacement costs.
+   Wages may rise because entry and maintenance requirements narrow supply or increase replacement costs.
 
 11. `volunteer_to_career_transition_pressure`
-   Fire wages rise where weakening volunteer systems push departments toward more paid coverage.
+   Fire wages may rise where weakening volunteer systems push departments toward more paid coverage.
 
 12. `risk_liability_legal_exposure`
-   Wages rise because employers must compensate for exposure to injury, trauma, litigation, and career-ending incidents.
+   Wages may rise because employers must compensate for exposure to injury, trauma, litigation, and career-ending incidents.
 
 ## 9. Claim / counterpoint / evidence table
 

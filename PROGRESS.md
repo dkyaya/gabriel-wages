@@ -6,6 +6,62 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-03 - PI-facing mechanism synthesis and source-QC pass completed
+
+**Did**
+- Created:
+  - `docs/analysis/police_fire_wage_mechanism_synthesis_for_pi_2026-07-03.md`
+- Updated:
+  - `docs/analysis/police_fire_wage_mechanism_context_2026-07-02.md`
+  - `docs/analysis/police_fire_wage_mechanism_sources_2026-07-02.csv`
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- Audited the mechanism bibliography for source-year and access-date ambiguity.
+- Flagged which sources are authoritative, which are institutional-context sources, and which are illustrative secondary sources.
+- Revised the mechanism memo lightly to reduce overclaiming and sharpen the evidence-needed framing.
+- Added a short PI-facing synthesis memo that reframes comparability as one candidate mechanism inside a broader mechanism map.
+
+**Decisions and why**
+- Kept the source audit inside the existing CSV rather than spawning a separate QC appendix, so citation cautions now travel with the bibliography itself.
+- Treated the AP summary of the PERF staffing survey as illustrative rather than authoritative until replaced by the underlying PERF release.
+- Flagged BLS/Census landing-page citations as usable for planning but not as final table-level citations, because the page-year versus underlying-data-year distinction could confuse a PI-facing memo.
+- Kept the synthesis short and conceptual rather than adding new evidence pulls, because the requested task was QC and framing rather than new empirical research.
+
+**Surprises/breakage**
+- No repo breakage from this session.
+- Validation and coverage audit remained unchanged, confirming the work stayed outside ingestion and production data changes.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+**Next steps**
+1. Replace illustrative or indirect citations in the mechanism bibliography with direct primary artifacts before any more formal external circulation.
+2. Build the first descriptive OEWS/ASPEP baseline.
+3. Keep broader-state snippet work in a small mechanism-discovery lane before any new GABRIEL attribute run.
+
 ## 2026-07-03 - Broader police/fire wage mechanism memo and data-plan package created
 
 **Did**
