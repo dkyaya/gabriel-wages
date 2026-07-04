@@ -6,6 +6,65 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-04 - Massachusetts teacher bargaining and school finance institutional context verified
+
+**Did**
+- Confirmed the prior non-safety teacher mechanism session's changes were already committed (`efbfb31`, "Refine non-safety teacher wage mechanisms"), with only `tmp/` left untracked; no recommit was needed or performed.
+- Created:
+  - `docs/analysis/ma_teacher_bargaining_school_finance_institutional_context_2026-07-04.md`
+- Updated:
+  - `docs/analysis/non_safety_teacher_source_gaps_2026-07-04.md` (closed gap item 13 with the verified finding; light edit only)
+  - `docs/analysis/non_safety_comparison_roadmap_2026-07-04.md` (added a short update note pointing to the new institutional memo; light edit only)
+  - `docs/analysis/police_fire_wage_hypothesis_matrix_2026-07-02.csv` (refined H5, H6, H9 counterpoint/signal/confound fields with verified institutional facts; no new rows added)
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- Used bounded web search of primary/near-primary Massachusetts sources (DESE Chapter 70 program pages, Mass.gov Department of Labor Relations impasse/JLMC pages, Massachusetts General Laws Chapter 150E Section 9) to verify the two institutional claims flagged as unverified in the prior teacher mechanism session.
+
+**Decisions and why**
+- Verified, rather than assumed, that Massachusetts teacher bargaining under M.G.L. c. 150E Section 9 has only mediation plus advisory (non-binding) factfinding, after which the school committee may unilaterally implement its last, best offer; a voluntary interest-arbitration route exists on paper but requires mutual agreement and school-committee authorization and is not typical in practice, per Mass.gov's own guidance that non-police/fire bargaining has "no arbitration process." Framed this precisely as a compulsory-(JLMC)-vs-voluntary-(Chapter 150E) institutional-design difference, not a has-backstop-vs-has-no-process-at-all difference, since the earlier hedge risked overstating the contrast.
+- Verified the Chapter 70/school-finance mechanics: foundation budget, required local contribution (capped at 82.5% of foundation budget locally), net school spending as their sum, and the two-sided constraint this creates for schools (a state-mandated spending floor plus the same Proposition 2 1/2 levy-limit ceiling shared by other municipal departments) that most other municipal departments, including police/fire, do not have on the floor side.
+- Made only small, targeted edits to hypothesis-matrix rows H5, H6, and H9 rather than adding new rows, consistent with the standing preference to refine the existing map; no hypothesis needed to be added or removed based on this session's findings.
+- Kept source-gap and roadmap memo edits light (closing one gap item, adding one update note) rather than rewriting them, per this session's explicit instruction.
+- Did not touch `data/contracts.csv`, `data/city_coverage.csv`, `corpus/`, or `inbox/`; did not run GABRIEL, model/API calls, the Harvard proxy, or any OEWS/BLS download/build.
+
+**Surprises/breakage**
+- No repo breakage from this session.
+- Validation and coverage audit remained unchanged, confirming the work stayed outside ingestion and production data changes.
+- The verified institutional facts were more precise than the prior session's hedged framing anticipated: teachers are not literally barred from all arbitration (a narrow voluntary route exists), which required a careful correction rather than a simple confirmation of the original hypothesis.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+**No GABRIEL/model/API/proxy/OEWS/ingestion actions occurred in this session. No production data/corpus changes were made. Prior teacher mechanism changes were already committed (`efbfb31`) excluding `tmp/`; confirmed, not recommitted.**
+
+**Next steps**
+1. Cross-reference the new institutional memo from the existing PI-facing synthesis memo (`police_fire_wage_mechanism_synthesis_for_pi_2026-07-03.md`), so the PI-facing material states the compulsory-vs-voluntary arbitration distinction and Chapter 70 floor/ceiling structure as verified facts.
+2. Move to the public works/DPW comparison group per `non_safety_comparison_roadmap_2026-07-04.md`, checking specifically whether DPW bargaining follows the same general Chapter 150E Section 9 process as teachers (neither has JLMC access).
+3. Continue holding off on any GABRIEL/model run, OEWS/DESE build, or ingestion until source-gap and institutional work across teachers and the next comparison groups is further along.
+
 ## 2026-07-04 - Non-safety wage mechanism refinement started with teachers
 
 **Did**
