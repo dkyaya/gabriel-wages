@@ -6,6 +6,63 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-03 - Police/fire workforce context refinement and source-gap list created
+
+**Did**
+- Created:
+  - `docs/analysis/police_fire_workforce_context_refinement_2026-07-03.md`
+  - `docs/analysis/police_fire_workforce_context_source_gaps_2026-07-03.md`
+- Updated:
+  - `docs/analysis/police_fire_wage_hypothesis_matrix_2026-07-02.csv` (refined rows H2, H6, H11 only; no new rows added)
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- Deepened the police/fire workforce mechanism map on four fronts the PI flagged: police recruitment/retention/morale and disentangling COVID-era disruption from George Floyd/BLM-driven scrutiny; firefighter wage pressure vs. public esteem and the career/volunteer distinction; non-safety counterexamples (nursing, transit, sanitation) with an explicit statement of what plausibly still differs for public safety; and the interest-vs-grievance arbitration distinction plus the evidentiary logic for testing split-the-difference vs. criteria-applying arbitrator behavior.
+- This was a context-building/hypothesis-refinement session only, framed explicitly as bounded desk research.
+
+**Decisions and why**
+- Treated claims not already backed by a citation in the existing mechanism memo/bibliography as "background/analyst judgment, not yet source-verified" rather than inventing a citation, and routed those flagged claims into the new source-gap list for later verification.
+- Refined existing hypothesis-matrix rows (H2 post-2020 climate, H6 arbitration backstop, H11 volunteer-to-career transition) rather than adding new hypothesis rows, per the instruction to prefer revising over expanding the matrix.
+- Explicitly separated the George Floyd/BLM legitimacy channel from COVID-era labor disruption, pension-vintage retirement timing, and general 2021-2023 labor-market churn as four distinct, separately-testable channels, rather than treating any post-2020 staffing mention as legitimacy-channel evidence.
+- Framed volunteer-to-career fire transition pressure as a three-channel, lagged transmission mechanism (combination-department conversion, overtime/minimum-staffing substitution, full professionalization) rather than a direct driver of existing career-CBA base wages.
+- Did not touch `data/contracts.csv`, `data/city_coverage.csv`, `corpus/`, or `inbox/`; did not run GABRIEL, model/API calls, the Harvard proxy, or any OEWS/BLS download/build.
+
+**Surprises/breakage**
+- No repo breakage from this session.
+- Validation and coverage audit remained unchanged, confirming the work stayed outside ingestion and production data changes.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+**No GABRIEL/model/API/proxy/OEWS/ingestion actions occurred in this session.**
+
+**Next steps**
+1. Close the highest-value source gaps first: a direct (non-AP-summary) PERF/IACP staffing-survey citation with a multi-year applicant trend, an NFPA/FPRF or NVFC citation on volunteer-firefighter headcount trends, and one or two arbitration-behavior sources (e.g., Farber/Bazerman final-offer-arbitration literature) that speak directly to the split-the-difference-vs-criteria debate.
+2. Only after that source base is stronger, revisit which sharpened hypotheses are worth a dedicated GABRIEL attribute.
+3. Keep the OEWS/ASPEP descriptive wage-trend baseline (already planned in `police_fire_wage_trend_baseline_implementation_plan_2026-07-03.md`) as the next data-build step, separate from this mechanism-refinement lane.
+
 ## 2026-07-03 - OEWS/ASPEP descriptive wage-trend baseline plan prepared
 
 **Did**
