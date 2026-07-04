@@ -6,6 +6,68 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-04 - DPW / public works wage mechanism refinement developed
+
+**Did**
+- Confirmed the prior non-safety teacher mechanism session (`efbfb31`) and the Massachusetts teacher institutional clarification session (`e409824`) were already committed, with only `tmp/` left untracked; no recommit was needed or performed.
+- Created:
+  - `docs/analysis/non_safety_dpw_public_works_wage_mechanism_refinement_2026-07-04.md`
+  - `docs/analysis/non_safety_dpw_public_works_source_gaps_2026-07-04.md`
+- Updated:
+  - `docs/analysis/non_safety_comparison_roadmap_2026-07-04.md` (light edit: added a DPW findings update note; roadmap not rewritten)
+  - `docs/analysis/police_fire_wage_hypothesis_matrix_2026-07-02.csv` (added 5 new rows H18-H22: `dpw_operational_essentiality`, `dpw_cdl_equipment_operator_scarcity`, `dpw_contractor_substitution`, `dpw_service_deferral`, `dpw_classification_fragmentation`; lightly refined H4 and H7 counterpoint fields to fold in DPW's overtime/emergency-response and public-salience nuances)
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- Developed public works/DPW as the second non-safety comparison group per the existing roadmap: the strongest *operational* (as opposed to teachers' credentialing/salience) comparison to police/fire, since DPW shares physical risk, licensure gating, and short-notice emergency response with public safety.
+- Used bounded web search across Massachusetts-specific sources (Mass.gov hoisting-license and prevailing-wage pages, Mass.gov salary/CBA guides) and national sources (BLS Monthly Labor Review on truck-driver labor markets, national/NEIWPCC water-workforce reporting, APWA workforce materials, municipal snow-removal risk-management guidance), keeping the two source types explicitly distinguished throughout the memo rather than overgeneralizing from national context to Massachusetts.
+
+**Decisions and why**
+- Treated DPW as a multi-occupation category (laborers, equipment operators, CDL drivers, water/wastewater operators, mechanics, foremen) throughout, mirroring the teacher composition-effect discipline, rather than a single homogeneous "DPW wage" concept.
+- Found and foregrounded a genuine counterargument to the CDL-scarcity mechanism: BLS's own 2019 Monthly Labor Review analysis found no evidence of a secular truck-driver shortage, with real driver wages up only ~1.1% since 2010 — a pattern inconsistent with chronic scarcity and more consistent with a retention/wage-framing problem that industry associations have called a "shortage" since the late 1980s. Applied the same skepticism to APWA's industry-association workforce-shortage framing.
+- Identified water/wastewater operator certification, not CDL, as the strongest genuine DPW scarce-credential case, based on national and New England-regional (NEIWPCC) retirement-wave evidence.
+- Surfaced a specific, checkable Massachusetts institutional wrinkle for the contractor-substitution mechanism: Massachusetts prevailing wage law ties public-construction contractor wages to locally collectively bargained rates, meaning contracting out DPW-type work does not simply undercut the wage paid for that specific work the way outsourcing might without such a law (though routine service contracts may not always be covered).
+- Added only 5 new hypothesis-matrix rows and folded 2 more (DPW overtime/emergency response into H4; DPW public salience into H7) into existing-row refinements, consistent with the standing preference to improve the existing map over proliferating new rows.
+- Kept the roadmap-memo edit light (one update note under the existing DPW section) rather than rewriting it, per this session's explicit instruction.
+- Did not touch `data/contracts.csv`, `data/city_coverage.csv`, `corpus/`, or `inbox/`; did not run GABRIEL, model/API calls, the Harvard proxy, or any OEWS/BLS download/build.
+
+**Surprises/breakage**
+- No repo breakage from this session.
+- Validation and coverage audit remained unchanged, confirming the work stayed outside ingestion and production data changes.
+- The CDL-shortage counterargument was a genuinely useful surprise: national industry reporting frames a large truck-driver deficit, but the authoritative BLS labor-economics analysis reaches the opposite conclusion, which is a sharper and more direct illustration of the project's "do not assume shortages automatically produce wage increases" discipline than anticipated going into this session.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+**No GABRIEL/model/API/proxy/OEWS/ingestion actions occurred in this session. No production data/corpus changes were made. Prior teacher mechanism (`efbfb31`) and Massachusetts teacher institutional (`e409824`) changes were already committed excluding `tmp/`; confirmed, not recommitted.**
+
+**Next steps**
+1. Review this project's already-collected `public_works` occupation-class CBAs for classification/pay-grade structure, credential-tied premiums, and comparator-district language, without new ingestion.
+2. Verify whether Massachusetts DPW/public-works bargaining follows the same Chapter 150E Section 9 impasse process already confirmed for teachers (not directly re-verified for public works this session).
+3. Move to the next non-safety comparison group (clerical/admin) per `non_safety_comparison_roadmap_2026-07-04.md`, only after the DPW source gaps above are addressed.
+
 ## 2026-07-04 - Massachusetts teacher bargaining and school finance institutional context verified
 
 **Did**
