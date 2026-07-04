@@ -6,6 +6,66 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-04 - Non-safety wage mechanism refinement started with teachers
+
+**Did**
+- Created:
+  - `docs/analysis/non_safety_teacher_wage_mechanism_refinement_2026-07-04.md`
+  - `docs/analysis/non_safety_teacher_source_gaps_2026-07-04.md`
+  - `docs/analysis/non_safety_comparison_roadmap_2026-07-04.md`
+- Updated:
+  - `docs/analysis/police_fire_wage_hypothesis_matrix_2026-07-02.csv` (added 5 new rows H13-H17: `teacher_supply_pressure`, `teacher_shortage_buffering`, `teacher_composition_effect`, `teacher_salary_schedule_rigidity`, `non_safety_wage_restraint`; lightly refined H5 and H9 counterpoint fields to fold in `teacher_peer_district_comparability` and `school_budget_constraint`)
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- Developed the "other side" of the police/fire wage-gap comparison for the first time: rather than only asking why safety wages might rise, this session asked why non-safety wages (starting with teachers) might be restrained even under comparable staffing strain.
+- Used bounded web search (NCES/IES School Pulse Panel, Learning Policy Institute, NCTQ, Massachusetts DESE, Mass.gov Proposition 2 1/2 primer) to ground the teacher-supply, salary-schedule, and budget-constraint sections in real, cited sources rather than analyst judgment alone; flagged the two claims not directly verified this session (Chapter 70 state-aid mechanics; whether Massachusetts teacher bargaining lacks binding wage arbitration) explicitly as unverified and routed them to the new source-gap memo.
+- Set up, but did not deeply research, the next two non-safety comparison groups (public works/DPW, then clerical/admin) in a sequencing roadmap, with brief notes on later groups (sanitation, facilities/custodial, libraries/parks, transit, nurses/health).
+
+**Decisions and why**
+- Started the non-safety side with teachers specifically because they share the most features with the safety side (credentialing, unionization, political salience, public esteem), making them the hardest and therefore most informative test case, rather than starting with a weaker comparison group.
+- Kept paraprofessionals/teacher assistants explicitly separate from teachers throughout, per their distinct BLS occupational classification, and flagged this as a discipline requirement for any future extraction.
+- Did not assume teacher shortages automatically translate into wage growth; instead developed a specific structural asymmetry (teacher-side buffering tends toward cheaper substitute labor or degraded service, while police/fire overtime buffering directly raises realized pay to existing staff) as a candidate explanation for muted non-safety wage translation, with an explicit counterargument (class-size-overage stipends can convert teacher buffering into a wage-adjacent cost).
+- Added only 5 new hypothesis-matrix rows and folded 2 more into refinements of existing rows (H5, H9) rather than adding all 8 hypotheses discussed in the memo as separate rows, consistent with the standing instruction to prefer improving the existing map over proliferating new rows.
+- Did not touch `data/contracts.csv`, `data/city_coverage.csv`, `corpus/`, or `inbox/`; did not run GABRIEL, model/API calls, the Harvard proxy, or any OEWS/BLS download/build.
+
+**Surprises/breakage**
+- No repo breakage from this session.
+- Validation and coverage audit remained unchanged, confirming the work stayed outside ingestion and production data changes.
+- Bounded web search surfaced a genuinely useful quantitative base (e.g., 74% of U.S. public schools reported difficulty filling at least one teaching vacancy entering 2024-25; roughly 3 in 4 sampled districts already offer some hard-to-fill differentiated pay) that sharpened several hypotheses beyond what analyst judgment alone would have supported.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+**No GABRIEL/model/API/proxy/OEWS/ingestion actions occurred in this session. No production data/corpus changes were made.**
+
+**Next steps**
+1. Verify the two claims flagged as unverified this session: Massachusetts's Chapter 70 state-aid formula mechanics, and whether Massachusetts teacher bargaining under M.G.L. c. 150E lacks any binding wage-arbitration backstop (per the teacher source-gap memo, item 13).
+2. Review this project's existing city CBAs for teacher salary-schedule structure, hard-to-fill stipend/MOU language, and comparator-district language, since teacher units may already be present in the corpus for some cities.
+3. Move to the next non-safety comparison group (public works/DPW) per `non_safety_comparison_roadmap_2026-07-04.md`, only after the teacher source gaps above are addressed.
+
 ## 2026-07-03 - Police/fire workforce context refinement and source-gap list created
 
 **Did**
