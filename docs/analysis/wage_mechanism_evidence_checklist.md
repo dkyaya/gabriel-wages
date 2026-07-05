@@ -187,6 +187,8 @@ See "Status vocabulary" above — repeated here per the required section list. U
 
 ## 11. Known metadata cleanup issues to track
 
+**2026-07-05 metadata cleanup audit completed.** Items 1-7 below were each verified directly against `data/contracts.csv` and, where useful, the underlying corpus PDFs; three new items (broader `comparability_clause_flag` scope, an `occupation_class`/unit-title spot check, and a light provenance-field consistency check) were also audited. A full audit memo and a row-level proposed-edits table were produced — see `metadata_cleanup_audit_2026-07-05.md` and `metadata_cleanup_proposed_edits_2026-07-05.csv`. **No production metadata edits were made this session.** Next step: review the proposed edits and decide whether to authorize a production cleanup pass (see the audit memo §8).
+
 **None of these are corrected in this session or any prior desk-research session. They are tracked here for a future, dedicated metadata-cleanup pass, which should be audit-first (confirm the issue against the source document before editing) rather than direct-edit-first.**
 
 1. **Arlington `public_works` rows' `comparability_clause_flag`.** Both fully-readable Arlington `public_works` CBAs (`ma_arlington_public_works_2015`, `ma_arlington_public_works_2018`) have `comparability_clause_flag = 1`, but the flagged `comparability_text` snippet in each case is a health-insurance/workers'-compensation "comparable plan"/"comparable medical provider" clause, not peer-jurisdiction wage comparability language. The flag may have been coded for a different sense of "comparability" than the wage-comparator sense this project's DPW/H5 hypotheses are testing. Source: `non_safety_dpw_existing_corpus_scan_2026-07-04.md` §3.

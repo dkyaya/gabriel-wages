@@ -6,6 +6,69 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-05 - Metadata cleanup audit completed (audit-first; no production edits)
+
+**Did**
+- Confirmed the prior citation-audit session's changes (`b18d6bd`, "Audit public sector impasse arbitration sources") were already committed, with only `tmp/` left untracked; no recommit was needed or performed.
+- Created:
+  - `docs/analysis/metadata_cleanup_audit_2026-07-05.md`
+  - `docs/analysis/metadata_cleanup_proposed_edits_2026-07-05.csv` (20 rows)
+- Updated:
+  - `docs/analysis/wage_mechanism_evidence_checklist.md` (one concise status note added to the top of §11; the 7 tracked issues themselves were not rewritten)
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- Conducted the audit-first metadata-cleanup review queued at the end of every session since the national scan: verified the 7 metadata issues already tracked in the living checklist's §11, plus 3 newly-scoped issues (broader `comparability_clause_flag` audit, `occupation_class`/unit-title spot check, light provenance-field consistency check), directly against `data/contracts.csv` (via `csv.DictReader`, field by field) and, where useful, the underlying corpus PDFs (`pdftotext` + targeted `grep`, read-only, output kept in a session scratch directory only).
+- **Most consequential finding:** `comparability_clause_flag` is unreliable corpus-wide — all 7 currently-flagged rows capture non-wage "comparable" language (drug-testing standards, workers'-comp medical-provider continuation, health-insurance plan parity, work-group-realignment eligibility), and for two of them (the Somerville JLMC award rows) the genuine peer-wage-comparability text ("wages and benefits of comparable towns") is demonstrably sitting one field over, in `arbitration_clause_text`, uncaptured by `comparability_text`.
+- **Second major finding:** the Boston `clerical_admin` row's metadata anomaly (already flagged qualitatively in the checklist) is sharper than previously documented — it is a three-field misplacement (`total_comp_note` holds a bare JLMC citation; `longevity_detail` holds what should be `total_comp_note`'s content; `binding_arbitration_statute` holds `"clean"`, a `text_quality` value), plus a likely-miscoded `interest_arbitration_flag=1` on a row whose captured clause text is pure grievance-procedure definitions.
+- **Third finding:** `interest_arbitration_flag=1` co-occurs with grievance/discipline-only arbitration text on 4 of 6 flagged rows (Boston clerical/admin; both Arlington `public_works` cycles; Seekonk `public_works`, whose own clause states "Final binding arbitration will prevail on grievances only") — confirming and enumerating the pattern the checklist had already flagged qualitatively.
+- Confirmed, with concrete evidence, that 3 of the 7 originally-tracked issues (Seekonk clerical/admin's school-committee affiliation, `public_works` bundling variation, Worcester's successor-MOA/incorporation-by-reference limitation) require **no further action** — the relevant `total_comp_note` fields already document each of these clearly. Confirmed the teacher-aide/paraprofessional-merge risk is not realized in the current single `teacher` row (the Seekonk Educators Association contract explicitly places teacher aides outside the bargaining unit, under School Committee determination).
+
+**Decisions and why**
+- Produced a machine-readable proposed-edit table (20 rows: 16 marked `production_edit_needed=yes`, 3 `needs_followup`, 1 a schema/docs-only clarification) rather than editing `data/contracts.csv` directly, per this session's explicit audit-first, no-production-edit mandate.
+- Flagged the Boston row's proposed `binding_arbitration_statute` correction ("MA G.L. c. 150E") as medium-high, not full, confidence, and explicitly recommended direct re-verification against the source PDF before any future session writes it, rather than asserting it outright from pattern-matching and an in-row OCR/typo clue alone.
+- Surfaced two schema-level decisions (whether `comparability_clause_flag` should require wage-specific language; which `retrieval_method` value best fits a FOIA-obtained-but-now-openly-re-hosted document) as `needs_followup` items for human judgment, rather than resolving them unilaterally, since they affect the correct proposed value for multiple rows.
+- Did not touch `data/contracts.csv`, `data/city_coverage.csv`, `corpus/`, or `inbox/`; did not run GABRIEL, model/API calls, the Harvard proxy, or any OEWS/BLS download/build; did not ingest any document; did not recommend a PRR.
+
+**Surprises/breakage**
+- No repo breakage from this session.
+- Validation and coverage audit remained unchanged, confirming the work stayed outside ingestion and production data changes.
+- The `comparability_clause_flag` finding was more severe than the checklist's existing single-city (Arlington) framing suggested: it is a corpus-wide pattern (7 of 7 flagged rows), not an Arlington-specific quirk, and in the Somerville case the correct text was already present in the dataset, just in the wrong field — meaning re-extraction, not new source acquisition, is what closes it.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+**No GABRIEL/model/API/proxy calls occurred. No OEWS/BLS downloads occurred. No ingestion occurred. No production data/corpus changes were made — `data/contracts.csv` and `data/city_coverage.csv` were read-only this session, and no file under `corpus/` or `inbox/` was modified. Prior citation-audit changes (`b18d6bd`) were already committed excluding `tmp/`; confirmed, not recommitted.**
+
+**Next steps**
+1. Review `metadata_cleanup_proposed_edits_2026-07-05.csv` and resolve the 3 `needs_followup` schema-scope decisions (comparability-flag wage-specificity; interest-arbitration-flag definition already resolved as a docs clarification; FOIA-vs-public_download retrieval-method convention), then authorize a narrowly-scoped production-edit session limited to exactly the 16 flagged rows/fields.
+2. That future production-edit session should re-verify the Boston `binding_arbitration_statute` proposed value directly against `corpus/ma_boston/ma_boston_clerical_sena9158_cba_2023_2027.pdf` before writing it, run `python scripts/validate.py` immediately after editing, and confirm no `data/city_coverage.csv` update is needed (none of the proposed edits touch `occupation_class`, cycle dates, or `obs_id`).
+3. Do not begin a GABRIEL run, OEWS/municipal descriptive baseline build, or new ingestion until the metadata cleanup pass above is either completed or explicitly deprioritized.
+
+---
+
 ## 2026-07-05 - Public-sector impasse/arbitration state-law citation audit completed
 
 **Did**
