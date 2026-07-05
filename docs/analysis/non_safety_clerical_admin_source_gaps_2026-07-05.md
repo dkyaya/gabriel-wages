@@ -25,25 +25,21 @@ For each gap: why it matters, likely source families, a feasibility tag (`desk_r
 
 **Dimension:** staffing supply.
 
-## 3. Reclassification requests or studies
+## 3. Reclassification requests or studies — PARTIALLY CLOSED 2026-07-05
 
 **Why it matters:** directly tests the `clerical_admin_reclassification_pressure` hypothesis — whether reclassification requests for clerical/admin titles are common, how they are resolved, and how their outcomes compare to across-the-board wage increases in dollar terms.
 
-**Likely source families:** this project's own already-collected `clerical_admin` CBAs (Boston's contract already documents the formal OHR Classification and Compensation Unit review process, per this session's light read); municipal HR/personnel board records; classification-and-compensation study reports if municipalities commission them periodically.
+**Status:** the process itself is now fully documented in `non_safety_clerical_admin_existing_corpus_scan_2026-07-05.md` — Boston's Article 33 Compensation Grade Appeals process is a multi-stage administrative review with an explicit "arbitrary or capricious" arbitration standard and an explicit exclusion of workload/technology-driven duty changes as valid grounds.
 
-**Feasibility:** `data_build_feasible` for confirming the process described in Boston's contract in more detail; `likely_hard` for obtaining actual reclassification-request outcome data (approval rates, dollar impact), since this is typically internal HR administrative data, not published.
+**Remaining sub-gap:** actual reclassification-request outcome data (approval rates, dollar impact, frequency) remains `likely_hard`, since this is internal HR administrative data, not published in the CBA text itself.
 
 **Dimension:** classification / reclassification.
 
-## 4. Pay-grade and step-schedule structures
+## 4. Pay-grade and step-schedule structures — CLOSED 2026-07-05
 
 **Why it matters:** needed to confirm whether clerical/admin classification systems are structured similarly to the DPW classification systems already documented in this project's corpus (grade-and-step, with promotional/reclassification movement) and whether clerical/admin schedules span multiple departments under one unified system, as this memo hypothesizes based on the Boston example.
 
-**Likely source families:** this project's own already-collected `clerical_admin` CBAs and published salary schedules; municipal classification-and-compensation plan documents where publicly posted.
-
-**Feasibility:** `data_build_feasible` — this project already holds three `clerical_admin` CBAs; a fuller document-by-document review (mirroring the dedicated DPW corpus-scan session) would likely close most of this gap without new source acquisition.
-
-**Dimension:** classification.
+**Status:** closed in `non_safety_clerical_admin_existing_corpus_scan_2026-07-05.md`. Boston uses an "MM" grade system for Principal Administrative Assistant titles plus separate BCYF-derived "Group" grade tables spanning far more than clerical titles (Grants Manager, Network Administrator, Facilities Manager, Aquatics Manager, and others, Grades 3-8). Worcester and Seekonk show no comparable grade table in their (much shorter) contracts.
 
 ## 5. Pay compression evidence
 
@@ -123,15 +119,11 @@ For each gap: why it matters, likely source families, a feasibility tag (`desk_r
 
 **Feasibility:** `likely_hard` for this project's specific cities, since bargaining-unit gender-composition data is not part of this project's current corpus or schema and may not be readily available; `desk_research_feasible` only for the general academic literature background, which should not be treated as a substitute for city-specific evidence.
 
-## 13. Peer-community comparisons
+## 13. Peer-community comparisons — CLOSED 2026-07-05
 
 **Why it matters:** tests whether clerical/admin bargaining invokes "surrounding" or "comparable" community wage comparisons the way teacher and (per this project's DPW corpus scan) apparently not DPW bargaining does, and whether any such comparator language is backed by an institutional enforcement mechanism or functions as persuasive rhetoric only, mirroring the question already resolved for teachers and DPW via the JLMC-vs-Chapter-150E-Section-9 distinction.
 
-**Likely source families:** this project's own already-collected `clerical_admin` CBAs (not yet reviewed for this specific language, since this session's read was light and illustrative); municipal HR salary-survey/comparison materials if published.
-
-**Feasibility:** `data_build_feasible` if this project's already-collected `clerical_admin` CBAs are reviewed in full for comparator language, mirroring the dedicated DPW corpus-scan session's approach.
-
-**Dimension:** wage levels / classification.
+**Status:** closed in `non_safety_clerical_admin_existing_corpus_scan_2026-07-05.md`. No peer-community/surrounding-town wage comparability language was found in any of the three `clerical_admin` documents — the same genuine absence already documented across all seven `public_works` documents in the prior DPW corpus scan.
 
 ## 14. Massachusetts examples vs. national context
 
@@ -141,10 +133,8 @@ For each gap: why it matters, likely source families, a feasibility tag (`desk_r
 
 **Feasibility:** `data_build_feasible` for a small number of illustrative Massachusetts examples via a fuller review of this project's already-collected corpus; explicitly not `desk_research_feasible` at a comprehensive statewide level, consistent with this session's scope boundary against comprehensive statewide coverage.
 
-## 15. Massachusetts clerical/admin impasse-process verification
+## 15. Massachusetts clerical/admin impasse-process verification — CLOSED 2026-07-05
 
-**Why it matters:** highly likely, by the same institutional logic already established twice (for teachers and for DPW), that clerical/admin bargaining follows the ordinary Chapter 150E Section 9 route with no JLMC-equivalent backstop, since clerical/admin has no plausible JLMC eligibility argument at all (JLMC is confirmed police/fire-specific). However, this was not directly re-verified for clerical/admin specifically this session, and this project's discipline has been to verify each occupation class independently rather than assume institutional findings transfer automatically.
+**Why it matters:** highly likely, by the same institutional logic already established twice (for teachers and for DPW), that clerical/admin bargaining follows the ordinary Chapter 150E Section 9 route with no JLMC-equivalent backstop, since clerical/admin has no plausible JLMC eligibility argument at all (JLMC is confirmed police/fire-specific).
 
-**Likely source families:** Mass.gov DLR/JLMC pages (already used twice this project for teachers and DPW); this project's own `clerical_admin` CBAs' `binding_arbitration_statute` and arbitration-clause fields, which could be checked directly (Seekonk's clerical row already shows `MA G.L. c. 150E` in this field, consistent with the expected finding, though this was not the focus of a dedicated verification session for clerical/admin the way it was for teachers and DPW).
-
-**Feasibility:** `desk_research_feasible` — this is a quick, targeted verification given the institutional pattern already established twice; a short follow-up session could close this without extensive new research.
+**Status:** closed in `ma_clerical_admin_bargaining_impasse_context_2026-07-05.md`. The Massachusetts Municipal Association's Select Board Handbook explicitly states clerical and administrative employees do not qualify for JLMC services. A further wrinkle found this session, not anticipated for teachers or DPW: some administrative positions closest to municipal executive leadership (Select Board/town manager office staff) are "confidential employees" excluded from union membership entirely, meaning their pay is set unilaterally rather than through any bargaining or impasse process at all. This session also found and flagged a `data/contracts.csv` field-alignment anomaly in the Boston clerical/admin row (a stray JLMC statute citation sitting in the wrong field) that could otherwise be misread as evidence of JLMC coverage — the actual contract text contains no JLMC reference.

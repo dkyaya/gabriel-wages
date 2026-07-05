@@ -6,6 +6,68 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-05 - Clerical/admin existing-corpus scan and Massachusetts impasse context verified
+
+**Did**
+- Confirmed the prior clerical/admin mechanism session's changes (`75b8c22`, "Refine clerical admin wage mechanisms") were already committed, with only `tmp/` left untracked; no recommit was needed or performed.
+- Created:
+  - `docs/analysis/non_safety_clerical_admin_existing_corpus_scan_2026-07-05.md`
+  - `docs/analysis/ma_clerical_admin_bargaining_impasse_context_2026-07-05.md`
+- Updated:
+  - `docs/analysis/non_safety_clerical_admin_source_gaps_2026-07-05.md` (light edit: closed gap items 3 partially, 4, 13, and 15 with verified findings)
+  - `docs/analysis/non_safety_comparison_roadmap_2026-07-04.md` (light edit: added a second clerical/admin update note confirming both open items are now resolved)
+  - `docs/analysis/police_fire_wage_hypothesis_matrix_2026-07-02.csv` (small targeted edits to H6, H23, and H24 only; no new rows)
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- Closed the two immediate clerical/admin uncertainties flagged at the end of the prior clerical/admin mechanism session: (1) whether Massachusetts clerical/admin bargaining has any special JLMC-like backstop, and (2) whether this project's already-collected `clerical_admin` CBAs actually contain the classification, reclassification, compression, and workload language the clerical/admin mechanism map hypothesizes.
+- Reviewed `data/contracts.csv` (read-only) to identify all three `clerical_admin` occupation-class rows across three cities (Worcester, Boston, Seekonk), confirmed all three corpus files exist on disk, and read their content in full (native `pdftotext` extraction for Worcester and Boston, plus a prior session's ad hoc, read-only OCR pass reused for Seekonk's image-only file). No files were added to `corpus/` and no rows were added to or edited in `data/contracts.csv`.
+- Verified via the Massachusetts Municipal Association's Select Board Handbook that clerical and administrative employees are explicitly named as ineligible for JLMC services, and cross-confirmed this against the project's own corpus (Seekonk's `binding_arbitration_statute` field cites MA G.L. c. 150E; Boston's contract text shows only narrow-scope arbitration rights, none JLMC-style).
+
+**Decisions and why**
+- Found and precisely flagged a `data/contracts.csv` field-alignment anomaly in the Boston clerical/admin row: a stray "MA G.L. c. 1078 (JLMC)" citation sits in the `total_comp_note` field (not `binding_arbitration_statute`), which could be misread as evidence of JLMC coverage. Verified directly against the actual contract text that no JLMC reference exists anywhere in the document, and flagged this as a data-quality observation without correcting `data/contracts.csv`, consistent with this session's review-only scope.
+- Surfaced a new institutional wrinkle not documented for teachers or DPW: some Massachusetts municipal administrative positions closest to executive leadership (Select Board/town manager office staff) are "confidential employees" excluded from collective bargaining entirely, meaning their pay is set unilaterally rather than through any bargaining or impasse process.
+- Documented Boston's Compensation Grade Appeals (CGA) reclassification process in full, including its explicit, doubly-stated exclusion of workload/technology-driven duty changes as valid reclassification grounds — a sharper, more precisely restrictive finding than the prior session's lighter read anticipated for the `clerical_admin_automation_reorganization` discussion.
+- Made only three small, targeted hypothesis-matrix edits (H6, H23, H24) rather than adding new rows or editing many rows, consistent with the standing preference to improve the existing map with small edits.
+- Did not touch `data/contracts.csv`, `data/city_coverage.csv`, `corpus/`, or `inbox/`; did not run GABRIEL, model/API calls, the Harvard proxy, or any OEWS/BLS download/build; did not ingest any new document.
+
+**Surprises/breakage**
+- No repo breakage from this session.
+- Validation and coverage audit remained unchanged, confirming the work stayed outside ingestion and production data changes.
+- Boston's clerical/admin CBA was substantially richer than the prior session's light read anticipated: it documents the most procedurally restrictive reclassification mechanism found anywhere in this project's corpus to date (arbitration limited to an "arbitrary or capricious" standard), a CDL stipend embedded in a nominally clerical/admin unit, and a documented departmental-merger history revealing the unit spans far more than clerical titles (recreation, facilities, grants, network administration).
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+**No GABRIEL/model/API/proxy/OEWS/ingestion actions occurred in this session. No production data/corpus changes were made. Prior clerical/admin mechanism changes (`75b8c22`) were already committed excluding `tmp/`; confirmed, not recommitted.**
+
+**Next steps**
+1. Move to the national qualitative scan across police, fire, teachers, DPW, and clerical/admin per `non_safety_comparison_roadmap_2026-07-04.md`, since both clerical/admin uncertainties flagged at the end of the prior session are now resolved.
+2. If a clerical/admin-specific GABRIEL/source-extraction attribute is ever prototyped, use the corpus-confirmed textual-signal list in `non_safety_clerical_admin_existing_corpus_scan_2026-07-05.md` Section 6, and treat pay-compression, workload/backlog, and recruitment/retention framing as requiring new source acquisition rather than further review of already-collected documents.
+3. Flag the `data/contracts.csv` field-alignment anomaly in the Boston clerical/admin row for a future data-quality pass; do not correct it in a review-only session.
+
 ## 2026-07-05 - Clerical/admin wage mechanism refinement developed
 
 **Did**
