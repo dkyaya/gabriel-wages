@@ -6,6 +6,67 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-05 - Public-sector impasse/arbitration state-law citation audit completed
+
+**Did**
+- Confirmed the prior national-scan session's changes (`41d10b1`, "Add national municipal workforce mechanism scan") were already committed, with only `tmp/` left untracked; no recommit was needed or performed.
+- Created:
+  - `docs/analysis/public_sector_impasse_arbitration_state_law_citation_audit_2026-07-05.md`
+  - `docs/analysis/public_sector_impasse_arbitration_state_law_table_2026-07-05.csv`
+- Updated:
+  - `docs/analysis/national_municipal_workforce_mechanism_scan_2026-07-05.md` (small, targeted patches only: corrected Wyoming to fire-only with primary citation; sharpened the Iowa description to a general public-employee mechanism with its own 2017 safety-favoring asymmetry; added citation-audit pointers to the JLMC-pattern table row and the NC/SC/VA bargaining-rights paragraph — did not rewrite the memo)
+  - `docs/analysis/wage_mechanism_evidence_checklist.md` (concise additions to XC09 and XC10 only; did not rewrite the checklist)
+  - `docs/analysis/police_fire_wage_hypothesis_matrix_2026-07-02.csv` (small targeted edits to H6, H7, H17 only; no new rows)
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- Audited the national scan's public-sector impasse/arbitration claims against primary legal sources (state statutes, state labor-relations-agency guidance) for 12 required states (Massachusetts, New Jersey, New York, Michigan, Rhode Island, Pennsylvania, Wyoming, Oklahoma, Iowa, North Carolina, South Carolina, Virginia) plus two contrast states (Wisconsin, Illinois), producing a citation-supported state-law table that separates confirmed statutory sources, secondary summaries, and needs-follow-up claims.
+
+**Decisions and why**
+- Corrected, rather than preserved, an imprecise claim: the original national scan cited "Wyoming" generally for compulsory police/fire arbitration; this audit found a confirmed primary statute (W.S. §§27-10-101 to -109) covering fire fighters only, with no comparable Wyoming police statute found, and patched the scan accordingly.
+- Discovered and documented a materially more nuanced Iowa finding than the prior session's framing: Iowa Code §20.22 is a general, all-covered-public-employee binding arbitration statute (not teacher-specific) that predates and survives Iowa's 2017 reform (House File 291), which itself introduced a *different* kind of safety-favoring asymmetry (bargaining-scope and arbitration-criteria restriction for non-safety units, not arbitration-availability restriction) than any pattern documented in this project's Massachusetts corpus. Treated this as strengthening, not weakening, the "Iowa counterexample" finding, while adding real precision to it.
+- Flagged South Carolina's public-sector bargaining prohibition as supported only by secondary-source consensus, not a clean primary statute comparable to North Carolina's G.S. 95-98, rather than asserting equal confidence for both states.
+- Surfaced and prominently flagged a currently unsettled legal development (Wisconsin's December 2024 Dane County ruling striking down Act 10's police/fire bargaining exemption as an equal-protection violation) as directly relevant to this project's "public-safety institutional privilege" framing, sourced only from secondary/journalistic reporting and explicitly marked as such.
+- Made only small, targeted edits to the national scan, living checklist, and hypothesis matrix, consistent with the task's explicit instruction not to rewrite any of them.
+- Did not touch `data/contracts.csv`, `data/city_coverage.csv`, `corpus/`, or `inbox/`; did not run GABRIEL, model/API calls, the Harvard proxy, any OEWS/BLS download/build, any metadata edit, or any ingestion.
+
+**Surprises/breakage**
+- No repo breakage from this session.
+- Validation and coverage audit remained unchanged, confirming the work stayed outside ingestion and production data changes.
+- The Iowa finding was the most significant surprise: what the prior session treated as a single "teacher exception" data point turned out, on closer primary-source inspection, to be a richer and more analytically useful case — a state whose general compulsory-arbitration mechanism confirms the counterexample while its 2017 reform independently illustrates an entirely different wage-restraint lever (scope/criteria restriction) than anything in this project's own corpus.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+**No GABRIEL/model/API/proxy calls occurred. No OEWS/BLS downloads occurred. No ingestion occurred. No production data/corpus changes were made. No metadata edits were made to `data/contracts.csv` or any other production file. Prior national-scan changes (`41d10b1`) were already committed excluding `tmp/`; confirmed, not recommitted.**
+
+**Next steps**
+1. Conduct the metadata-cleanup audit of the 7 issues tracked in `wage_mechanism_evidence_checklist.md` Section 11 — audit-first, confirming each issue against the underlying source document before any direct edit to `data/contracts.csv`. This remains the next queued task; this citation audit was a parallel institutional-verification task, not a substitute.
+2. If future capacity allows, close the follow-up items flagged in this audit: South Carolina's primary statute, Wyoming's police-specific equivalent (if any), Rhode Island's possible teacher-specific chapter, Pennsylvania's non-safety strike-right claim, and Wisconsin's primary Act 10 text and court opinion.
+3. Continue updating `wage_mechanism_evidence_checklist.md` in place after any future corpus scans, OEWS/DESE/BLS descriptive baseline, or GABRIEL extraction run.
+
 ## 2026-07-05 - National municipal workforce mechanism scan completed
 
 **Did**
