@@ -85,15 +85,13 @@ For each gap: why it matters, likely source families, a feasibility tag (`desk_r
 
 **Dimension:** budget constraints.
 
-## 9. Classification and pay-grade structures
+## 9. Classification and pay-grade structures — CLOSED 2026-07-04
 
 **Why it matters:** the single most direct way to test whether DPW credentials (hoisting license, water/wastewater certification) actually correspond to a higher pay grade in practice, as hypothesized in Section 7 of the refinement memo, rather than assumed from the general logic of classification systems.
 
-**Likely source families:** DPW CBAs and published salary/classification schedules (often appended to union contracts); this project's own already-collected `public_works` occupation-class contracts, which may already contain this information without new ingestion.
+**Status:** closed in `non_safety_dpw_existing_corpus_scan_2026-07-04.md`. All seven `public_works` corpus rows were reviewed; credential-to-classification and credential-to-pay linkage is confirmed and detailed (e.g., Arlington's CDL-class-tied Motor Equipment Operator grades; Franklin's tiered biweekly license-stipend schedule covering CDL, hoisting, water/wastewater, pesticide, and ASE mechanic certifications). See the corpus scan memo for full findings.
 
-**Feasibility:** `data_build_feasible` — this is likely the single easiest gap on this list to close, since it only requires reviewing documents this project may have already collected, not new source acquisition.
-
-**Dimension:** classification / wage levels.
+**Remaining sub-gap:** the corpus confirms the credential-to-pay *mechanism* but contains no vacancy or applicant data, so it cannot confirm whether these premiums are set in response to actual scarcity.
 
 ## 10. Private-sector wage competition
 
@@ -105,25 +103,17 @@ For each gap: why it matters, likely source families, a feasibility tag (`desk_r
 
 **Dimension:** wage levels / wage growth.
 
-## 11. Union bargaining language
+## 11. Union bargaining language — CLOSED 2026-07-04
 
 **Why it matters:** needed to confirm, rather than assume, whether Massachusetts DPW bargaining documents actually invoke recruitment/retention, hazard, comparability, or ability-to-pay language, and in what proportion relative to the police/fire and teacher documents already reviewed in prior sessions.
 
-**Likely source families:** this project's own already-collected `public_works` CBAs; Massachusetts municipal union (e.g., AFSCME, Teamsters, or laborers' union locals commonly representing DPW workers) public statements if available.
+**Status:** closed in `non_safety_dpw_existing_corpus_scan_2026-07-04.md`. Overtime, snow/storm, and contractor-substitution language is extensive; explicit recruitment/retention framing language and hard-to-fill language are notable absences (not found in any reviewed document), which is itself a source-grounded finding, not an unclosed gap.
 
-**Feasibility:** `data_build_feasible` — same logic as gap 9, this project may already hold relevant documents without new ingestion.
-
-**Dimension:** wage levels / classification.
-
-## 12. Peer-community comparisons
+## 12. Peer-community comparisons — CLOSED 2026-07-04
 
 **Why it matters:** tests whether DPW bargaining invokes "surrounding" or "comparable" community wage comparisons the way teacher bargaining does (per the teacher peer-district comparability hypothesis), and whether that comparator language is backed by any institutional enforcement mechanism or functions as persuasive rhetoric only, mirroring the question already resolved for teachers via the JLMC-vs-Chapter-150E-Section-9 distinction.
 
-**Likely source families:** DPW CBAs and bargaining materials; Massachusetts DLR impasse records if any DPW bargaining unit has gone to fact-finding.
-
-**Feasibility:** `data_build_feasible` if this project's already-collected `public_works` CBAs contain comparator language; `desk_research_feasible` for confirming whether DPW bargaining follows the same general Chapter 150E Section 9 process as teachers (this is also listed as an open item in the roadmap memo update from this session, since it was not directly re-verified for public works specifically).
-
-**Dimension:** wage levels / classification.
+**Status:** closed on both fronts in this session's companion memos. Corpus side (`non_safety_dpw_existing_corpus_scan_2026-07-04.md`): no peer-community/surrounding-town wage comparability language was found in any of the seven `public_works` documents; the only "comparable" hits were an unrelated health-insurance-plan and workers'-compensation-provider usage of the word, not a wage comparator. Institutional side (`ma_dpw_bargaining_impasse_context_2026-07-04.md`): DPW bargaining is confirmed to follow the same general Chapter 150E Section 9 process as teachers, with no JLMC-equivalent backstop, so any DPW comparator claim (if found elsewhere) would face the same enforceability limits already established for teachers.
 
 ## 13. Massachusetts examples vs. national context
 

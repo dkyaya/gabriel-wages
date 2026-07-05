@@ -6,6 +6,67 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-05 - DPW existing-corpus scan and Massachusetts DPW impasse context verified
+
+**Did**
+- Confirmed the prior DPW mechanism session's changes (`3addd14`, "Refine DPW public works wage mechanisms") were already committed, with only `tmp/` left untracked; no recommit was needed or performed.
+- Created:
+  - `docs/analysis/non_safety_dpw_existing_corpus_scan_2026-07-04.md`
+  - `docs/analysis/ma_dpw_bargaining_impasse_context_2026-07-04.md`
+- Updated:
+  - `docs/analysis/non_safety_dpw_public_works_source_gaps_2026-07-04.md` (light edit: closed gap items 9, 11, 12 with verified findings)
+  - `docs/analysis/non_safety_comparison_roadmap_2026-07-04.md` (light edit: added a second DPW update note confirming both open items from the prior session are now resolved)
+  - `docs/analysis/police_fire_wage_hypothesis_matrix_2026-07-02.csv` (small targeted edit to H6 `arbitration_or_impasse_backstop` only, adding the DPW-specific institutional and corpus corroboration alongside the existing teacher-specific one; no new rows added)
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- Closed the two immediate DPW uncertainties flagged at the end of the prior DPW mechanism session: (1) whether Massachusetts DPW/public-works bargaining has any special JLMC-like backstop, and (2) whether this project's already-collected `public_works` CBAs actually contain the classification, licensing, overtime/emergency, and contractor-substitution language the DPW mechanism map hypothesizes.
+- Reviewed `data/contracts.csv` (read-only) to identify all seven `public_works` occupation-class rows across five cities (Worcester, Arlington x3 cycles, Seekonk, Franklin, Wayland), confirmed all seven corpus files exist on disk, and read their content (using the project's existing `pdftotext` extraction for six files, plus an ad hoc, read-only `tesseract` OCR pass for two Wayland files that had no extractable text in their stored form). No files were added to `corpus/` and no rows were added to or edited in `data/contracts.csv`.
+- Verified via Mass.gov DLR/JLMC pages and M.G.L. c. 150E that JLMC eligibility is limited to police and fire, with no public-works-specific backstop, and cross-confirmed this directly from the project's own corpus: every `public_works` row's `binding_arbitration_statute` field cites MA G.L. c. 150E (never the JLMC statute used by every police/fire row), and every arbitration clause found in that corpus is grievance/discipline-scoped, not interest-arbitration-scoped.
+
+**Decisions and why**
+- Ran ad hoc, session-local OCR (via `pdftoppm`/`tesseract`) on two image-only Wayland PDFs purely to make their already-collected content legible for this review, since the stored corpus files had no extractable text; the OCR output was not written back into `corpus/` or `data/contracts.csv`, consistent with the "review, not ingestion" scope of this session.
+- Flagged a precise, corpus-level observation rather than a data correction: `data/contracts.csv`'s `comparability_clause_flag` is set to `1` for the two fully-readable Arlington `public_works` rows, but the flagged snippet in each case is a health-insurance/workers'-compensation "comparable" usage, not peer-jurisdiction wage comparability language — noted as an observation about how to read existing metadata, not acted on as a correction, since this session does not modify `data/contracts.csv`.
+- Made only one small, targeted hypothesis-matrix edit (H6) rather than adding new rows or editing multiple DPW rows, consistent with the standing preference to improve the existing map with small edits.
+- Did not touch `data/contracts.csv`, `data/city_coverage.csv`, `corpus/`, or `inbox/`; did not run GABRIEL, model/API calls, the Harvard proxy, or any OEWS/BLS download/build; did not ingest any new document.
+
+**Surprises/breakage**
+- No repo breakage from this session.
+- Validation and coverage audit remained unchanged, confirming the work stayed outside ingestion and production data changes.
+- The existing corpus was substantially richer than expected on credential-to-pay linkage (detailed biweekly license-stipend schedules in Franklin; CDL-class-tied classification grades in Arlington) and on contractor-substitution language (Franklin's two outsourcing side letters, including a clause tying contractor mobilization during snow events to an in-house overtime-premium trigger), while genuinely absent on peer-community wage comparability and explicit recruitment/retention framing language across every document reviewed.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+**No GABRIEL/model/API/proxy/OEWS/ingestion actions occurred in this session. No production data/corpus changes were made. Prior DPW mechanism changes (`3addd14`) were already committed excluding `tmp/`; confirmed, not recommitted.**
+
+**Next steps**
+1. Move to the clerical/admin comparison group per `non_safety_comparison_roadmap_2026-07-04.md`, since both DPW uncertainties flagged at the end of the prior session are now resolved.
+2. If a DPW-specific GABRIEL/source-extraction attribute is ever prototyped, use the corpus-confirmed textual-signal list in `non_safety_dpw_existing_corpus_scan_2026-07-04.md` Section 6, and treat peer-comparability and recruitment/retention framing as requiring new source acquisition rather than further review of already-collected documents.
+3. Continue holding off on any GABRIEL/model run, OEWS/municipal descriptive baseline build, or ingestion until the clerical/admin comparison group is at least scoped.
+
 ## 2026-07-04 - DPW / public works wage mechanism refinement developed
 
 **Did**
