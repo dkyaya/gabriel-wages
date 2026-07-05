@@ -2,7 +2,70 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-05T12:01:59-04:00`
+Last updated: `2026-07-05T12:32:37-04:00`
+
+---
+
+## 2026-07-05T12:32:37-04:00 - Living wage-mechanism evidence checklist created
+
+**Commit:** pending in current session
+
+### Current State After This Entry
+
+- Confirmed the prior clerical/admin corpus-scan and Massachusetts clerical/admin impasse-context session's changes (`41be1b3`, "Scan clerical admin corpus and clarify impasse context") were already committed, with only `tmp/` left untracked at session start; no recommit was needed or performed.
+- Created:
+  - `docs/analysis/wage_mechanism_evidence_checklist.md` (undated, living reference file — do not fork a dated copy; update in place)
+- Updated:
+  - `docs/analysis/non_safety_comparison_roadmap_2026-07-04.md` (light edit: one closing note)
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- No live GABRIEL calls were run.
+- No model/API calls, and no Harvard proxy calls, were made from project scripts.
+- No national web scan or five-city web pilot was run; no new broad web research was conducted (this was a synthesis session over existing memos, not a research session).
+- No OEWS/BLS data was downloaded or processed; no wage-trend panel or figures were built.
+- No ingestion happened; no metadata edits were made to `data/contracts.csv` or any other production file.
+- No production corpus files, `data/contracts.csv`, `data/city_coverage.csv`, `corpus/`, or `inbox/` were modified.
+- This was a synthesis and repo-organization session, consolidating existing findings into one canonical reference rather than producing new mechanism research.
+
+### What This New Package Does
+
+- `wage_mechanism_evidence_checklist.md` consolidates every wage-mechanism hypothesis developed across all prior sessions — the 27-row hypothesis matrix plus additional cross-cutting mechanisms and source-family entries not previously tabulated together — into one working checklist covering police, fire, teachers, DPW/public works, clerical/admin, and cross-cutting categories.
+- Defines and uses a fixed status vocabulary (`not searched`, `partially searched`, `confirmed in current corpus`, `confirmed in external sources`, `weak evidence`, `not found in current corpus`, `contradicted`, `needs metadata cleanup`, `not applicable`) and a 12-column table structure (mechanism_id, mechanism, occupation_group, wage_pressure_direction, plausible_channel, evidence_that_would_support, evidence_that_would_weaken_or_contradict, best_source/document_types, current_repo_evidence, verification_status, next_action, notes) applied consistently across ~80 mechanism rows.
+- Includes a source/document-type inventory (17 families, from CBAs and arbitration awards through national association reports), a current-corpus-evidence summary contrasting the DPW/clerical-admin corpus-rich picture against the teacher external-sources-rich picture, a tracked (not corrected) list of 7 known metadata-cleanup issues, and an update protocol instructing future sessions to update rows in place rather than fork new dated files.
+- Explicitly frames every substantive claim as a pointer back to the underlying occupation-specific memo, so the checklist stays a fast-scan working reference rather than a competing source of truth.
+- Highlights, by putting all five occupation groups side by side for the first time, that the arbitration/impasse-backstop finding (JLMC compulsory interest arbitration confirmed unique to police/fire, with teachers, DPW, and clerical/admin all independently verified to share the same Chapter 150E Section 9 route) is now the single most thoroughly cross-verified finding in the project.
+
+### Roadmap Update
+
+- `non_safety_comparison_roadmap_2026-07-04.md` gained one closing note pointing to the new checklist, restating that the next planned step is the national qualitative scan across police, fire, teachers, DPW/public works, and clerical/admin, and that metadata cleanup should follow the national scan and be audit-first, not direct-edit-first.
+
+### Validation/Audit Results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+### Recommended Next Step
+
+1. Run the national qualitative scan across police, fire, teachers, DPW/public works, and clerical/admin.
+2. After the national scan, conduct a metadata-cleanup audit of the issues tracked in the new checklist's Section 11 — audit-first, not direct-edit-first.
+3. Update the checklist in place after the national scan, the metadata-cleanup audit, any future corpus scans, and any future OEWS/DESE/BLS descriptive baseline or GABRIEL extraction run.
+
+### Notes For ChatGPT Review
+
+- Do not treat `wage_mechanism_evidence_checklist.md` as a replacement for the occupation-specific memos it summarizes; it is a fast-scan index, and full citations/quoted contract text live in the memos it points to.
+- Do not add a dated filename fork of the checklist in a future session; update the existing file in place per its own update protocol (Section 12).
+- Do not recommend a GABRIEL run, an OEWS/municipal descriptive baseline build, ingestion, or a metadata edit as the immediate next step from this state; the recommended next step is the national qualitative scan, followed by a metadata-cleanup audit.
 
 ---
 

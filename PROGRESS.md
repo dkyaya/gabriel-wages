@@ -6,6 +6,63 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-05 - Living wage-mechanism evidence checklist created
+
+**Did**
+- Confirmed the prior clerical/admin corpus-scan and Massachusetts clerical/admin impasse-context session's changes (`41be1b3`, "Scan clerical admin corpus and clarify impasse context") were already committed, with only `tmp/` left untracked; no recommit was needed or performed.
+- Created:
+  - `docs/analysis/wage_mechanism_evidence_checklist.md` (undated, living reference file)
+- Updated:
+  - `docs/analysis/non_safety_comparison_roadmap_2026-07-04.md` (light edit: one closing note pointing to the new checklist, its update discipline, and the next planned steps)
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- Consolidated every wage-mechanism hypothesis developed across all prior sessions (police, fire, teachers, DPW/public works, clerical/admin, and cross-cutting mechanisms — 27 hypothesis-matrix rows plus several additional cross-cutting and source-family entries) into one working checklist with a defined status vocabulary (`not searched`, `partially searched`, `confirmed in current corpus`, `confirmed in external sources`, `weak evidence`, `not found in current corpus`, `contradicted`, `needs metadata cleanup`, `not applicable`), a 12-column table structure (mechanism_id, mechanism, occupation_group, wage_pressure_direction, plausible_channel, evidence_that_would_support, evidence_that_would_weaken_or_contradict, best_source/document_types, current_repo_evidence, verification_status, next_action, notes), a source/document-type inventory, a current-corpus-evidence summary, a tracked (not corrected) list of known metadata-cleanup issues, and an update protocol for future sessions.
+- This was a synthesis and repo-organization session only: no new broad web research was conducted, and every mechanism row was sourced from an existing memo rather than new investigation.
+
+**Decisions and why**
+- Built the checklist as a pointer-and-summary layer over the existing occupation-specific memos, not a replacement for them — every cell that makes a substantive claim links back to the memo where the underlying evidence and citations live, so this file stays usable without re-deriving every finding from scratch.
+- Tracked known metadata-cleanup issues (the Arlington `public_works` comparability-flag mismatch, the Boston `clerical_admin` field-alignment anomaly, the `interest_arbitration_flag` naming-vs-usage gap, and others) explicitly without correcting any of them, consistent with this session's audit-first, no-metadata-edit boundary.
+- Did not do new broad web research; the one clarification lookup performed (confirming the exact list of hypothesis IDs currently in `docs/analysis/police_fire_wage_hypothesis_matrix_2026-07-02.csv`) was a repo-internal check, not external research.
+- Did not touch `data/contracts.csv`, `data/city_coverage.csv`, `corpus/`, or `inbox/`; did not run GABRIEL, model/API calls, the Harvard proxy, any OEWS/BLS download/build, any national web scan, or any metadata edit.
+
+**Surprises/breakage**
+- No repo breakage from this session.
+- Validation and coverage audit remained unchanged, confirming the work stayed outside ingestion and production data changes.
+- Assembling all five occupation groups side by side in one table made the arbitration/impasse-backstop finding (XC09 in the new checklist) unusually visible as the single most thoroughly cross-verified finding in the project to date: JLMC's compulsory interest arbitration is confirmed, independently, to be unique to police/fire, with teachers, DPW, and clerical/admin all separately verified to share the same Chapter 150E Section 9 route.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+**No GABRIEL/model/API/proxy calls occurred. No national web scan or five-city web pilot was run. No OEWS/BLS downloads occurred. No ingestion occurred. No production data/corpus changes were made. No metadata edits were made to `data/contracts.csv` or any other production file. Prior clerical/admin corpus-scan/impasse-context changes (`41be1b3`) were already committed excluding `tmp/`; confirmed, not recommitted.**
+
+**Next steps**
+1. Run the national qualitative scan across police, fire, teachers, DPW/public works, and clerical/admin, per `non_safety_comparison_roadmap_2026-07-04.md`.
+2. After the national scan, conduct a metadata-cleanup audit of the issues tracked in `wage_mechanism_evidence_checklist.md` Section 11 — audit-first (confirm each issue against the underlying source document) before any direct edit to `data/contracts.csv`.
+3. Update `wage_mechanism_evidence_checklist.md` in place after the national scan, the metadata-cleanup audit, any future corpus scans, and any future OEWS/DESE/BLS descriptive baseline or GABRIEL extraction run, per the checklist's own update protocol (Section 12).
+
 ## 2026-07-05 - Clerical/admin existing-corpus scan and Massachusetts impasse context verified
 
 **Did**
