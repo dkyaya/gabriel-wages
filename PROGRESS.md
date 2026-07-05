@@ -6,6 +6,72 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-05 (later same day) - Authorized production metadata cleanup applied
+
+**Did**
+- Confirmed the prior metadata cleanup audit session's changes (`2e0a808`, "Audit metadata cleanup candidates") were already committed, with only `tmp/` left untracked; no recommit was needed or performed.
+- Created:
+  - `docs/analysis/metadata_cleanup_application_2026-07-05.md`
+  - `docs/analysis/metadata_cleanup_applied_edits_2026-07-05.csv` (29 rows: 23 applied, 4 skipped_not_needed, 1 skipped_deferred, 1 skipped_needs_followup)
+- Updated:
+  - **`data/contracts.csv`** — 9 rows edited, 22 field-level changes, under explicit user authorization following the prior audit.
+  - `docs/schema.md` — clarified the `interest_arbitration_flag` and `comparability_clause_flag` field definitions per the user's two approved schema decisions.
+  - `docs/analysis/wage_mechanism_evidence_checklist.md` (§11: one new top-of-section note plus short "RESOLVED" annotations on items 1, 2, and 6; not rewritten).
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- Applied the user's two approved schema decisions: (1) `comparability_clause_flag` now means peer wage/peer-community/peer-employer wage comparability specifically, not any generic "comparable" language; (2) `retrieval_method=public_download` describes this project's own access method, not a document's original legal provenance, so the two MuckRock-hosted Somerville rows correctly keep `public_download` (no change needed there).
+- **Edit categories applied to `data/contracts.csv`:** (a) `comparability_clause_flag`/`comparability_referent` corrected on 5 non-wage rows (Arlington `public_works` x2, Seekonk fire, Wayland fire, Wayland other) — flag flipped `1`→`0`, referent populated with the non-wage clarification; (b) genuine peer-wage-comparability text re-extracted verbatim from the Somerville police rows' own `arbitration_clause_text` field into `comparability_text`/`comparability_referent` (2 rows); (c) `interest_arbitration_flag` corrected `1`→`0` on 4 rows found to be grievance/discipline arbitration, not interest arbitration (Boston clerical/admin, Arlington `public_works` x2, Seekonk `public_works`); (d) Boston clerical/admin's 3-field misalignment corrected — `longevity_detail`/`total_comp_note` swapped and `binding_arbitration_statute` corrected from `"clean"` to `"MA G.L. c. 150E"`, the latter only after directly re-extracting `corpus/ma_boston/ma_boston_clerical_sena9158_cba_2023_2027.pdf` this session and confirming the citation independently at 3 locations in the source text.
+- Discovered, but did **not** correct, a new out-of-scope anomaly while verifying the Boston edit: both Somerville police rows' `binding_arbitration_statute` fields hold `text_quality`-vocabulary values (`ocr_messy`, `clean`) instead of a statute name — the same pattern as Boston's, but never previously audited or approved. Left untouched per this session's explicit boundary against unapproved edits; flagged in the new application memo for a future audit-and-approval cycle.
+
+**Decisions and why**
+- Extended the flag correction beyond the exact rows named in the prior proposed-edits table's boolean-value cells (which had marked the `comparability_clause_flag` question `needs_followup` rather than proposing specific flips) once the user's Decision 1 resolved the scope question — applying the flag flip to all 5 non-wage rows the prior audit had already evidenced (2 named explicitly under MC01, 3 implied under MC08's `needs_followup` schema-question row), not just the subset the audit table happened to spell out as separate CSV rows. Treated this as a direct, narrow application of explicit user approval, not a "broad new metadata redesign."
+- Declined to fix the newly-discovered Somerville `binding_arbitration_statute` anomaly (§ above) despite it being an obvious, evidence-clear instance of the same MC02 pattern, because it was never presented to the user for approval through the audit process — this project's cleanup discipline requires audit-then-approve, and an opportunistic mid-session fix would violate that discipline even when the fix looks safe.
+- Wrote all CSV edits programmatically (`csv.DictReader`/`DictWriter`) rather than by hand, and verified before/after row count (32), column count (34), and the file's CRLF-between-records/bare-LF-within-fields convention were unchanged, to avoid any silent formatting churn or column-shift risk.
+- Did not touch `data/city_coverage.csv`, since none of the applied edits change `occupation_class`, cycle dates, or `obs_id`; confirmed this via an unchanged `ingest/audit_coverage.py` output.
+- Did not touch `corpus/` or `inbox/`; did not run GABRIEL, model/API calls, the Harvard proxy, or any OEWS/BLS download/build; did not ingest any document; did not add any new row or new occupation_class value.
+
+**Surprises/breakage**
+- No repo breakage from this session.
+- Validation passed cleanly after the edits, with identical row/column counts to before.
+- Coverage audit output is byte-for-byte identical to before the edits, confirming none of the corrections touched any coverage-relevant field.
+- The newly-discovered Somerville `binding_arbitration_statute` anomaly (found while double-checking the Boston fix, not while reviewing Somerville's own edited fields) was the main surprise — it shows the MC02 misplacement pattern is not unique to Boston, and a future full sweep of `binding_arbitration_statute` against the `text_quality` controlled vocabulary across all 32 rows would likely be a worthwhile, low-cost follow-up audit.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+Both outputs are unchanged from the pre-edit baseline in every count.
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+**`data/contracts.csv` was edited this session (9 rows, 22 field-level changes) under explicit user authorization. `data/city_coverage.csv`, `corpus/`, and `inbox/` were not modified. No GABRIEL/model/API/proxy calls occurred. No OEWS/BLS downloads occurred. No ingestion occurred. Prior metadata-cleanup-audit changes (`2e0a808`) were already committed excluding `tmp/`; confirmed, not recommitted.**
+
+**Next steps**
+1. Review the `data/contracts.csv` diff (`git diff` against the prior commit, or the relay bundle's patch file) to confirm the applied edits read correctly.
+2. Decide whether to authorize a short, targeted follow-up audit-and-approval cycle for the newly-discovered Somerville `binding_arbitration_statute` anomaly before correcting it — do not fix it without going through the same audit-then-approve process used for everything else in this two-session cleanup arc.
+3. Only after the above, resume research planning, future source acquisition, or GABRIEL/attribute design — each still requires its own explicit authorization; none is granted by this cleanup session.
+
+---
+
 ## 2026-07-05 - Metadata cleanup audit completed (audit-first; no production edits)
 
 **Did**

@@ -39,9 +39,9 @@ One row = one bargaining unit's contract for one cycle in one city.
 ### Mechanism (GABRIEL scores these — capture verbatim, never pre-code)
 | field | type | req | notes |
 |---|---|---|---|
-| `interest_arbitration_flag` | 0/1 | | |
+| `interest_arbitration_flag` | 0/1 | | specifically wage-setting / impasse interest arbitration (e.g., JLMC-style compulsory arbitration). Grievance, discipline, and ordinary contract-interpretation arbitration should be captured verbatim in `arbitration_clause_text` without setting this flag. Clarified 2026-07-05 per `metadata_cleanup_audit_2026-07-05.md` MC06. |
 | `arbitration_clause_text` | string | | verbatim span |
-| `comparability_clause_flag` | 0/1 | | |
+| `comparability_clause_flag` | 0/1 | | peer wage / peer-community / peer-employer wage comparability language specifically. Do not set for health-insurance, workers'-compensation, internal-classification, discipline/fact-pattern, or other non-wage uses of "comparable." Clarified 2026-07-05 per `metadata_cleanup_audit_2026-07-05.md` MC08 and the user-approved schema decision in `metadata_cleanup_application_2026-07-05.md`. |
 | `comparability_text` | string | | verbatim span |
 | `comparability_referent` | string | | verbatim: what the clause pegs this unit to (other cities' police? in-city fire?). Parity spirals live here. Do not interpret — quote. |
 | `me_too_clause_flag` | 0/1 | | |

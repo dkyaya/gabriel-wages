@@ -2,7 +2,76 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-05T15:30:00-04:00`
+Last updated: `2026-07-05T17:15:00-04:00`
+
+---
+
+## 2026-07-05T17:15:00-04:00 - Authorized production metadata cleanup applied
+
+**Commit:** pending in current session
+
+### Current State After This Entry
+
+- Confirmed the prior metadata cleanup audit session's changes (`2e0a808`, "Audit metadata cleanup candidates") were already committed, with only `tmp/` left untracked at session start; no recommit was needed or performed.
+- Created:
+  - `docs/analysis/metadata_cleanup_application_2026-07-05.md`
+  - `docs/analysis/metadata_cleanup_applied_edits_2026-07-05.csv` (29 rows)
+- Updated:
+  - **`data/contracts.csv`** (9 rows, 22 field-level changes — the first production edit to this file since the metadata-cleanup arc began)
+  - `docs/schema.md` (2 field-definition clarifications: `interest_arbitration_flag`, `comparability_clause_flag`)
+  - `docs/analysis/wage_mechanism_evidence_checklist.md` (§11: one new note, 3 short "RESOLVED" annotations; not rewritten)
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- No live GABRIEL calls were run.
+- No model/API calls, and no Harvard proxy calls, were made from project scripts.
+- No OEWS/BLS data was downloaded or processed; no wage-trend panel or figures were built.
+- No ingestion happened; no new rows were added; no `occupation_class` value was changed.
+- `data/city_coverage.csv`, `corpus/`, and `inbox/` were **not** modified.
+- This was the authorized production-edit follow-up to the prior audit-only session — the first session in this cleanup arc to actually write to `data/contracts.csv`.
+
+### What This New Package Does
+
+- Applies the user's two explicit schema decisions: (1) `comparability_clause_flag` now means peer wage / peer-community / peer-employer wage comparability specifically — not health-insurance, workers'-comp, internal-classification, or discipline/fact-pattern "comparable" language; (2) `retrieval_method=public_download` describes this project's own access method (not a document's original legal provenance), so MuckRock-hosted-but-openly-downloaded Somerville rows correctly remain `public_download`.
+- **Corrects 5 non-wage `comparability_clause_flag` false positives:** Arlington `public_works` x2, Seekonk fire, Wayland fire, Wayland other — flag flipped `1`→`0`, with the non-wage finding preserved in `comparability_referent` (a schema-existing field) rather than discarded.
+- **Re-extracts the corpus's first two true-positive peer-wage-comparability rows:** both Somerville police JLMC-award rows had the genuine "wages and benefits of comparable towns" statutory-criteria text sitting in their own `arbitration_clause_text` field, uncaptured by `comparability_text`. This session extracted the exact verbatim span (same wording, same line breaks) into `comparability_text`, with `comparability_referent` naming the referent.
+- **Corrects 4 `interest_arbitration_flag` false positives** (Boston clerical/admin, Arlington `public_works` x2, Seekonk `public_works`) — all four had clause text describing grievance or civil-service disciplinary arbitration, not wage-setting interest arbitration.
+- **Corrects Boston clerical/admin's 3-field misalignment:** `longevity_detail` (held a general unit-description note) and `total_comp_note` (held a bare, misleading JLMC citation) were swapped; `binding_arbitration_statute` (held `"clean"`, a `text_quality` value) was corrected to `"MA G.L. c. 150E"` — but only after this session directly re-extracted `corpus/ma_boston/ma_boston_clerical_sena9158_cba_2023_2027.pdf` and independently confirmed the citation at 3 locations in the source text (lines 95, 485, 1047 of the extracted text), resolving the prior audit's "medium-high confidence, pending PDF re-verification" flag.
+- **Records both schema decisions in `docs/schema.md`** so future ingestion does not repeat the same miscoding.
+- **New finding, explicitly not corrected:** while verifying the Boston edit, this session discovered both Somerville police rows' `binding_arbitration_statute` fields also hold `text_quality` values (`ocr_messy`, `clean`) instead of a statute name — the same pattern as Boston's, but never previously audited or approved. Left untouched, per this session's boundary against unapproved edits, and flagged for a future audit-and-approval cycle rather than fixed opportunistically.
+
+### Checklist Update
+
+- `wage_mechanism_evidence_checklist.md` §11 gained one new top-of-section note (production cleanup applied, both schema decisions stated, pointer to the new memo/CSV, the new unresolved finding flagged) plus short "RESOLVED 2026-07-05" annotations appended to items 1, 2, and 6 (not rewritten). Items 3, 4, 5, and 7 remain as historical record (no edit was needed for those).
+
+### Validation/Audit Results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+Both outputs are identical, in every count, to the pre-edit baseline — expected, since no applied edit touches `occupation_class`, cycle dates, or `obs_id`.
+
+### Recommended Next Step
+
+1. Review the `data/contracts.csv` diff directly (this session verified it programmatically — before/after row count 32, column count 34, and exactly the 9 intended obs_ids and their intended fields changed, nothing else) before treating the cleanup as final.
+2. Decide whether to authorize a short follow-up audit-and-approval cycle for the newly-discovered Somerville `binding_arbitration_statute` anomaly — do not correct it without going through the same audit-then-approve process, even though the likely correct value (`"MA G.L. c. 1078 (JLMC)"`) is fairly obvious from cross-corpus pattern matching.
+3. Do not recommend a GABRIEL run, an OEWS/municipal descriptive baseline build, or ingestion as the immediate next step from this state; the recommended next step is reviewing this cleanup's diff and deciding on the Somerville follow-up.
+
+### Notes For ChatGPT Review
+
+- `data/contracts.csv` now has real, applied edits — this is the first entry in this handoff log where that file's diff is nonzero. Prior "no production edits" language in earlier entries applied to those specific sessions only.
+- Do not cite `ma_boston_clerical_admin_2023`'s `binding_arbitration_statute` as `"clean"` or its `total_comp_note` as a bare JLMC citation any longer — both are corrected as of this session.
+- Do not treat `ma_somerville_police_spsoa_2012`/`_spea_2012`'s `binding_arbitration_statute` fields (`"ocr_messy"`/`"clean"`) as reliable — this is a newly-discovered, not-yet-corrected anomaly; do not silently "fix" it without a dedicated audit-and-approval step first.
+- `comparability_clause_flag=1` now reliably means peer-wage comparability across the whole corpus (2 true positives: the two Somerville police rows); `comparability_clause_flag=0` rows that previously had non-wage "comparable" text still retain that text's nature documented in `comparability_referent`.
 
 ---
 
