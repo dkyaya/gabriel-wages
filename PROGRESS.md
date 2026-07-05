@@ -6,6 +6,67 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-05 - Clerical/admin wage mechanism refinement developed
+
+**Did**
+- Confirmed the prior DPW corpus-scan and Massachusetts DPW impasse-context session's changes (`d1b4969`, "Scan DPW corpus and clarify impasse context") were already committed, with only `tmp/` left untracked; no recommit was needed or performed.
+- Created:
+  - `docs/analysis/non_safety_clerical_admin_wage_mechanism_refinement_2026-07-05.md`
+  - `docs/analysis/non_safety_clerical_admin_source_gaps_2026-07-05.md`
+- Updated:
+  - `docs/analysis/non_safety_comparison_roadmap_2026-07-04.md` (light edit: added a clerical/admin findings update note, including the recommendation for a national qualitative scan as the next major step)
+  - `docs/analysis/police_fire_wage_hypothesis_matrix_2026-07-02.csv` (added 5 new rows H23-H27: `clerical_admin_classification_restraint`, `clerical_admin_reclassification_pressure`, `clerical_admin_pay_compression`, `clerical_admin_service_backlog_absorption`, `clerical_admin_lower_public_salience`; lightly extended H17's counterpoint field to note the clerical/admin extension)
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- Developed clerical/administrative municipal work as the third non-safety comparison group per the existing roadmap: the "plainest" non-safety comparison, lacking both teachers' credentialing/salience cover and DPW's operational/licensing cover, which makes it the best available test of what wage-setting institutions can restrain on their own.
+- Used bounded web search across national sources (MissionSquare Research Institute's 2024 local-government recruitment/retention reporting citing BLS JOLTS data; The Century Foundation's minimum-wage-compression cost estimate, which explicitly includes Massachusetts as one of six jurisdictions analyzed; Mass.gov's Efficiency and Regionalization shared-services grant program with concrete Massachusetts examples; general municipal-software-vendor material on permitting/records automation) and a light, illustrative read (not a full corpus scan) of this project's three already-collected `clerical_admin` corpus rows (Worcester, Boston, Seekonk), using the project's existing `pdftotext` extraction plus a session-local, read-only `tesseract` OCR pass for the one image-only Seekonk file.
+
+**Decisions and why**
+- Treated clerical/admin as a multi-title category (clerk/senior clerk/principal clerk, administrative/executive assistant, office manager, payroll/accounting staff, assessor/collector/treasurer staff, town/city clerk staff, school administrative assistants, department-nested clerical roles, supervisors) throughout, mirroring the composition discipline already established for teachers and DPW.
+- Found and foregrounded a concrete, corpus-grounded reclassification mechanism: Boston's clerical/admin CBA documents a formal "OHR Classification and Compensation Unit" review process for reclassification applications, with management rights explicitly reserved over reorganize/reclassify decisions — used this as the basis for two new hypotheses (`clerical_admin_classification_restraint`, `clerical_admin_reclassification_pressure`) rather than treating reclassification as purely speculative.
+- Identified that this project's Seekonk `clerical_admin` row (Administrative Secretaries) is specifically a school-based unit (references to School Committee and Superintendent in its own contract text), directly illustrating the task's instruction to distinguish school administrative assistants from general municipal clerical staff within the same occupation class.
+- Flagged gendered occupational valuation explicitly as a hypothesis requiring dedicated evidence, not an established fact about this project's cities, per the task's explicit instruction to handle this carefully and without unsupported claims.
+- Added exactly the 5 hypothesis rows suggested in this session's task brief (including `clerical_admin_lower_public_salience` as its own row, unlike the DPW session where the analogous salience hypothesis was folded into an existing row) and made one small extension to H17's counterpoint field, consistent with the instruction to prefer a small number of high-value additions.
+- Did not touch `data/contracts.csv`, `data/city_coverage.csv`, `corpus/`, or `inbox/`; did not run GABRIEL, model/API calls, the Harvard proxy, or any OEWS/BLS download/build; did not ingest any new document.
+
+**Surprises/breakage**
+- No repo breakage from this session.
+- Validation and coverage audit remained unchanged, confirming the work stayed outside ingestion and production data changes.
+- The Century Foundation's minimum-wage-compression cost estimate explicitly covering Massachusetts (alongside California, New York, New Jersey, Illinois, and DC) was a genuinely useful, directly quantified, multi-state-inclusive finding that sharpened the pay-compression mechanism well beyond what analyst judgment alone would have supported.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+**No GABRIEL/model/API/proxy/OEWS/ingestion actions occurred in this session. No production data/corpus changes were made. Prior DPW corpus-scan/impasse-context changes (`d1b4969`) were already committed excluding `tmp/`; confirmed, not recommitted.**
+
+**Next steps**
+1. Verify whether Massachusetts clerical/admin bargaining follows the same Chapter 150E Section 9 impasse process already confirmed for teachers and DPW (highly likely by the same institutional logic, but not directly re-verified for clerical/admin specifically this session).
+2. Conduct a full document-by-document review of this project's three already-collected `clerical_admin` corpus rows, mirroring the dedicated DPW corpus-scan session, since this session's read was intentionally light and illustrative only.
+3. Move to a national qualitative scan across police, fire, teachers, DPW, and clerical/admin per `non_safety_comparison_roadmap_2026-07-04.md`, now that all three non-safety comparison groups (teachers, DPW, clerical/admin) have an initial mechanism map in place.
+
 ## 2026-07-05 - DPW existing-corpus scan and Massachusetts DPW impasse context verified
 
 **Did**
