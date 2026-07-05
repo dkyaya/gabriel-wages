@@ -2,7 +2,80 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-05T17:15:00-04:00`
+Last updated: `2026-07-05T19:00:00-04:00`
+
+---
+
+## 2026-07-05T19:00:00-04:00 - Somerville metadata audit closed and project mechanism checkpoint completed
+
+**Commit:** pending in current session
+
+### Current State After This Entry
+
+- Confirmed the prior authorized-cleanup session's changes (`47f8d25`, "Apply approved metadata cleanup") were already committed, with only `tmp/` left untracked at session start; no recommit was needed or performed.
+- Created:
+  - `docs/analysis/somerville_police_metadata_audit_2026-07-05.md`
+  - `docs/analysis/somerville_police_metadata_audit_edits_2026-07-05.csv`
+  - `docs/analysis/wage_mechanism_project_checkpoint_2026-07-05.md`
+- Updated:
+  - **`data/contracts.csv`** (2 rows, 1 field each: `binding_arbitration_statute`)
+  - `docs/analysis/wage_mechanism_evidence_checklist.md` (§11: two new notes; not rewritten)
+  - `docs/analysis/non_safety_comparison_roadmap_2026-07-04.md` (one new update block; not rewritten)
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- `docs/analysis/police_fire_wage_hypothesis_matrix_2026-07-02.csv` was **not** updated — reviewed, no major missing/redundant hypothesis found.
+- No live GABRIEL calls were run. No model/API calls, and no Harvard proxy calls, were made from project scripts. No OEWS/BLS data was downloaded or processed. No ingestion happened. `data/city_coverage.csv`, `corpus/`, and `inbox/` were **not** modified.
+- This session had two parts: a narrow, fully-verified metadata correction (Somerville `binding_arbitration_statute`) and a broad strategic-synthesis checkpoint — neither is a data-build, GABRIEL, or ingestion session.
+
+### What This New Package Does
+
+**Part 1 — Somerville metadata audit, resolved with a direct edit:**
+- Both `ma_somerville_police_spsoa_2012` and `ma_somerville_police_spea_2012` had `binding_arbitration_statute` values (`ocr_messy`, `clean`) that were actually `text_quality` values — the same field-misplacement pattern already corrected for Boston's clerical/admin row, but never previously flagged for these two rows until discovered incidentally during the prior application session.
+- Verified via direct `pdftotext` re-extraction of both source PDFs: both are genuine JLMC award-and-decision documents (dockets JLMC-17-6072 and JLMC-14-4174), and each row's own `total_comp_note` field already correctly states `"MA G.L. c. 1078 (JLMC)"` — a redundant, in-row confirmation that made this correction higher-confidence than the earlier Boston fix (which relied on an OCR/typo inference rather than a sibling field's direct statement).
+- **Applied directly:** both rows' `binding_arbitration_statute` now reads `MA G.L. c. 1078 (JLMC)`, matching all 13 other police/fire rows' convention. A closing sweep (`binding_arbitration_statute` vs. the `text_quality` vocabulary, all 32 rows) found **zero** remaining instances of this pattern.
+
+**Part 2 — project mechanism checkpoint, a synthesis-only stocktake:**
+- Consolidated the full mechanism-development arc to date (original police/fire memos; teacher, DPW, and clerical/admin mechanism-refinement-plus-institutional-verification sequences; the national municipal workforce scan; the public-sector impasse/arbitration state-law citation audit) into one memo.
+- Documents, per occupation group (police, fire, teachers, DPW, clerical/admin): main upward and restraint mechanisms, current corpus evidence, external/national evidence, Massachusetts-specific caveats, and unresolved gaps.
+- Includes an 11-row evidence-strength table (peer wage comparability, arbitration/impasse backstop, overtime/staffing spiral, recruitment/retention, credential/licensing scarcity, classification/reclassification, service deferral/buffering, contractor substitution, public salience, budget capacity/fiscal constraint, source-document production effects) and a section on what the current CBA-heavy, discourse-empty corpus can and cannot show.
+- **Key recommendation:** `library` is the highest-priority next non-safety group, since all three `library` corpus rows (Seekonk, Franklin, Wayland) already exist and are already coverage-matched to safety pairs — a full corpus-scan-plus-institutional-verification session can run with **no new source acquisition**. `sanitation` is next-priority for a mechanism-refinement/institutional-context memo (desk research only, since zero `sanitation` rows currently exist). Transit, nurse_health, custodial/facilities, and dispatchers each need a scoping/schema decision from the user/PI before further work (§11 of the checkpoint memo).
+- **Notable new finding surfaced while assembling the checkpoint:** this project's own corpus already contains dispatchers ("Community Safety Dispatchers") embedded, unlabeled, inside a `public_works`-classified Arlington bargaining unit — a composition-fragmentation detail not previously flagged as its own issue.
+
+### Checklist and Roadmap Updates
+
+- `wage_mechanism_evidence_checklist.md` §11 gained two new notes: the Somerville resolution (with a pointer to the new audit memo/CSV) and a pointer to the checkpoint memo's next-priority recommendation. Not rewritten.
+- `non_safety_comparison_roadmap_2026-07-04.md` gained one new update block summarizing current deeper-inspection status (teachers/DPW/clerical-admin) and the checkpoint's ordered next-group recommendation. Not rewritten.
+
+### Validation/Audit Results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+Both outputs are identical, in every count, to the pre-edit baseline.
+
+### Recommended Next Step
+
+1. Run a library corpus-scan-plus-institutional-verification session (mirroring the DPW/clerical/admin two-memo pattern) using the three already-collected `library` rows — no new ingestion needed.
+2. Run a sanitation mechanism-refinement + national/Massachusetts institutional-context memo next (desk research only).
+3. Bring the checkpoint memo's three flagged scoping decisions (transit governance fit; nurse_health population mismatch; custodial/dispatcher schema questions) to the user/PI before any further work on those specific groups.
+4. Do not recommend a GABRIEL run, an OEWS/municipal descriptive baseline build, or ingestion as the immediate next step from this state.
+
+### Notes For ChatGPT Review
+
+- Both Somerville police rows' `binding_arbitration_statute` now correctly reads `MA G.L. c. 1078 (JLMC)` — do not cite the old `ocr_messy`/`clean` values, which were metadata artifacts, not evidence about anything substantive.
+- The checkpoint memo (`wage_mechanism_project_checkpoint_2026-07-05.md`) is a synthesis of existing findings, not new research — cite the underlying occupation-specific memos for full citations and quoted contract text; the checkpoint is a fast-scan index and prioritization document.
+- `library` is recommended as the next non-safety group specifically because it is already-collected, not because it is conceptually more important than sanitation or transit — do not read the priority order as a claim about which mechanism matters most.
+- Do not recommend a GABRIEL run, an OEWS/municipal descriptive baseline build, or ingestion as the immediate next step from this state; the recommended next step is the library corpus scan.
 
 ---
 

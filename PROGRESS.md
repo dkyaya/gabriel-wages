@@ -6,6 +6,72 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-05 (follow-up session) - Somerville metadata audit closed and project mechanism checkpoint completed
+
+**Did**
+- Confirmed the prior authorized-cleanup session's changes (`47f8d25`, "Apply approved metadata cleanup") were already committed, with only `tmp/` left untracked; no recommit was needed or performed.
+- Created:
+  - `docs/analysis/somerville_police_metadata_audit_2026-07-05.md`
+  - `docs/analysis/somerville_police_metadata_audit_edits_2026-07-05.csv`
+  - `docs/analysis/wage_mechanism_project_checkpoint_2026-07-05.md`
+- Updated:
+  - **`data/contracts.csv`** — 2 rows edited, 1 field each (`binding_arbitration_statute` on both Somerville police rows).
+  - `docs/analysis/wage_mechanism_evidence_checklist.md` (§11: two new notes; not rewritten).
+  - `docs/analysis/non_safety_comparison_roadmap_2026-07-04.md` (one new update block; not rewritten).
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- Did **not** update `docs/analysis/police_fire_wage_hypothesis_matrix_2026-07-02.csv` — the checkpoint review found no major missing or redundant hypotheses in the existing 27-row matrix; library/sanitation mechanisms would need their own dedicated refinement sessions (mirroring how teacher/DPW/clerical hypothesis rows were added) before a CSV edit would be warranted, per the task's own "only if useful" instruction.
+- **Part 1 — Somerville metadata audit:** verified, with full field-by-field CSV inspection plus direct `pdftotext` re-extraction of both source PDFs, that `ma_somerville_police_spsoa_2012` and `ma_somerville_police_spea_2012` had `binding_arbitration_statute` values (`ocr_messy`, `clean`) that were actually `text_quality` values, not statute citations — the same misplacement pattern already corrected for Boston's clerical/admin row in the prior cleanup session, but never previously audited for these two rows. Both source PDFs are confirmed genuine JLMC award-and-decision documents (dockets JLMC-17-6072 and JLMC-14-4174), and each row's own `total_comp_note` field already correctly states "MA G.L. c. 1078 (JLMC)" — a redundant, in-row confirmation of the correct value. **This met the session's bar for a fully-verified, narrow, high-confidence, schema-safe edit, so `data/contracts.csv` was corrected directly**: both rows' `binding_arbitration_statute` now reads `MA G.L. c. 1078 (JLMC)`, matching the convention used by all 13 other police/fire rows in the corpus. A closing corpus-wide sweep (`binding_arbitration_statute` checked against the `text_quality` vocabulary across all 32 rows) found zero remaining instances of this pattern.
+- **Part 2 — project mechanism checkpoint:** synthesized roughly a dozen prior memos (the original police/fire mechanism work, the three non-safety mechanism-refinement-plus-institutional-verification sequences for teachers/DPW/clerical-admin, the national municipal workforce scan, and the public-sector impasse/arbitration state-law citation audit) into a single stocktake memo covering current project architecture, per-occupation-group findings, the expanded hypothesis map, national-vs-Massachusetts-specific nuance, an evidence-strength table across 11 cross-cutting mechanisms, what the current CBA-heavy corpus can and cannot show, and a prioritized recommendation for the next non-safety comparison groups.
+
+**Decisions and why**
+- Edited `data/contracts.csv` directly for the Somerville correction, rather than only proposing it, because the task's explicit authorization criteria (fully verified, narrow, high-confidence, schema-safe) were clearly met — the correct value was already redundantly present in-row (`total_comp_note`), confirmed by direct source-document re-extraction, and consistent with a corpus-wide convention already used by 13 other rows. This is a stronger evidentiary basis than the earlier Boston correction, which required inferring the correct value from an OCR/typo clue rather than reading it directly from a sibling field in the same row.
+- Ran a closing sweep (`binding_arbitration_statute` vs. `text_quality` vocabulary, all 32 rows) rather than assuming the two flagged rows were the only instances, since both the Boston and Somerville anomalies were discovered incidentally rather than by systematic design — the sweep confirmed no third instance exists, closing this specific issue family completely rather than leaving it open-ended.
+- Recommended `library` as the highest-priority next non-safety group specifically because it requires **no new source acquisition** — all three `library` corpus rows (Seekonk, Franklin, Wayland) already exist and are already coverage-matched to safety pairs, making a full corpus-scan-plus-institutional-verification session (mirroring the DPW/clerical/admin pattern) immediately actionable without ingestion.
+- Flagged, rather than resolved, three scoping questions (transit's regional-governance fit with this project's one-city-one-bargaining-unit design; nurse_health's population mismatch between national hospital-nursing evidence and this project's municipal focus; whether dispatchers/custodial units need a new controlled-vocabulary value) as decisions for the user/PI, since none of them can be resolved by desk research alone — they are project-design choices, not evidence questions.
+- Did not touch `data/city_coverage.csv`, `corpus/`, or `inbox/`; did not run GABRIEL, model/API calls, the Harvard proxy, or any OEWS/BLS download/build; did not ingest any document; did not update the hypothesis matrix, since no major missing/redundant hypothesis was found.
+
+**Surprises/breakage**
+- No repo breakage from this session.
+- Validation and coverage audit both passed cleanly, with identical row/column counts before and after the Somerville edit, and coverage output byte-for-byte unchanged (the edit touches no coverage-relevant field).
+- The clearest surprise assembling the checkpoint memo: this project's own corpus already contains dispatchers ("Community Safety Dispatchers") embedded, unlabeled, inside a `public_works`-classified Arlington bargaining unit — a genuine, pre-existing composition-fragmentation finding that had not been surfaced as its own issue in any prior session, and that bears directly on how carefully any future dispatcher-related collection or classification decision needs to be made.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+Both outputs are unchanged in every count from the pre-edit baseline.
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+**`data/contracts.csv` was edited this session (2 rows, 1 field each: `binding_arbitration_statute`), fully verified and within the session's narrow-edit authorization. `data/city_coverage.csv`, `corpus/`, and `inbox/` were not modified. No GABRIEL/model/API/proxy calls occurred. No OEWS/BLS downloads occurred. No ingestion occurred. Prior authorized-cleanup changes (`47f8d25`) were already committed excluding `tmp/`; confirmed, not recommitted.**
+
+**Next steps**
+1. Run a library corpus-scan-plus-institutional-verification session (mirroring the DPW/clerical/admin pattern), using the three already-collected `library` rows — no new source acquisition needed.
+2. Run a sanitation mechanism-refinement + national/Massachusetts institutional-context memo (desk research only, no ingestion) as the next-priority non-safety group after library.
+3. Bring the three scoping decisions in `wage_mechanism_project_checkpoint_2026-07-05.md` §11 (transit governance fit, nurse_health population mismatch, custodial/dispatcher schema questions) to the user/PI before doing any further work on those specific groups.
+
+---
+
 ## 2026-07-05 (later same day) - Authorized production metadata cleanup applied
 
 **Did**
