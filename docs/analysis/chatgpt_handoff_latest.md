@@ -2,7 +2,86 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-05T12:32:37-04:00`
+Last updated: `2026-07-05T12:52:27-04:00`
+
+---
+
+## 2026-07-05T12:52:27-04:00 - National municipal workforce mechanism scan completed
+
+**Commit:** pending in current session
+
+### Current State After This Entry
+
+- Confirmed the prior living-checklist session's changes (`7557e59`, "Create wage mechanism evidence checklist") were already committed, with only `tmp/` left untracked at session start; no recommit was needed or performed.
+- Created:
+  - `docs/analysis/national_municipal_workforce_mechanism_scan_2026-07-05.md`
+- Updated:
+  - `docs/analysis/wage_mechanism_evidence_checklist.md` (in-place edits to 11 mechanism rows: PD01, PD12, FD03, FD12, TC10, TC12, DP12, CA01, CA03, CA13, XC09)
+  - `docs/analysis/non_safety_comparison_roadmap_2026-07-04.md` (light edit: one closing note)
+  - `docs/analysis/police_fire_wage_hypothesis_matrix_2026-07-02.csv` (small targeted edits to H1, H6, H9, H11 only; no new rows)
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- No live GABRIEL calls were run.
+- No model/API calls, and no Harvard proxy calls, were made from project scripts.
+- No OEWS/BLS data was downloaded or processed; no wage-trend panel or figures were built.
+- No ingestion happened; no metadata edits were made to `data/contracts.csv` or any other production file.
+- No production corpus files, `data/contracts.csv`, `data/city_coverage.csv`, `corpus/`, or `inbox/` were modified.
+- This was a bounded national qualitative scan, conducted via public-source desk research, not a data-build or GABRIEL session.
+
+### What This New Package Does
+
+- `national_municipal_workforce_mechanism_scan_2026-07-05.md` scans national context across police, fire, teachers, DPW/public works, and clerical/admin, with the specific purpose of distinguishing general U.S. municipal mechanisms from Massachusetts-specific institutions this project's prior sessions verified.
+- **Most consequential finding:** compulsory police/fire interest arbitration — the policy pattern underlying Massachusetts's JLMC — recurs in at least New Jersey, New York, Michigan, Rhode Island, Pennsylvania, Wyoming, and Oklahoma. The *pattern* (a no-strike-for-compulsory-arbitration trade specific to police/fire) generalizes; the *specific vehicle* (JLMC) is Massachusetts's own implementation, not a national template.
+- **School finance:** the general foundation-formula architecture behind Chapter 70 (a state spending floor filled by state aid after a local-capacity-based required contribution) is confirmed as the dominant national school-finance model (Urban Institute), with structurally comparable formulas confirmed in New Jersey and Wisconsin. Chapter 70's specific 82.5% cap and net-school-spending definition remain Massachusetts-specific parameters.
+- **Fire:** NFPA data quantifies the national volunteer-firefighter decline directly (897,750 in 1984 to 676,900 in 2020, a 25% decline against ~40% U.S. population growth), with IAFF documenting communities converting to all-career departments as the adaptation — now a quantified national trend, not only a qualitative framing.
+- **Police:** MissionSquare/SLGE's 2024 survey confirms real national police staffing difficulty (68% hard-to-fill) but shows it is not the single hardest local-government occupation — mental health (83%), nursing (77%), and corrections (74%) all rank higher in the same survey.
+- **Clerical/admin:** formal civil-service classification-and-reclassification-appeal architecture (the basis of Boston's mechanism) is confirmed as a national norm (NY, NJ, federal OPM, Massachusetts's own state Civil Service Commission all share it) — Boston's specific narrow "arbitrary or capricious" arbitration standard remains an untested-elsewhere local parameter within that general architecture.
+- **Important counterexamples/caveats surfaced, not smoothed over:** at least Iowa is documented to extend compulsory, state-labor-board-ordered arbitration to teachers, unlike Massachusetts's voluntary-only route; and the entire "non-safety lacks JLMC access" finding for DPW and clerical/admin presumes public-sector bargaining rights exist at all, which is false in North Carolina and South Carolina and was false in Virginia before a 2020 local-option reform. A secondary source's inconsistent characterization of Massachusetts's own teacher-strike rules was flagged explicitly rather than silently resolved, with this project's own primary-source (Mass.gov DLR) verification treated as authoritative for Massachusetts.
+- Grounded the gendered-occupational-valuation hypothesis further in credible academic literature (Paula England's research; IWPR occupational-segregation research; a CRS report noting comparable-worth policy has "made the most headway in state and local governments") while explicitly declining to upgrade its status for this project's own specific findings, per the task's explicit instruction to keep it a hypothesis requiring evidence.
+
+### Living Checklist Update
+
+- `wage_mechanism_evidence_checklist.md` updated in place across 11 mechanism rows (PD01, PD12, FD03, FD12, TC10, TC12, DP12, CA01, CA03, CA13, XC09), adding national-scan findings without overwriting the existing table structure. Verified every edited row retains exactly 13 pipe delimiters (12 columns). `confirmed in external sources` was added only where the scan found credible support; uncertain claims (e.g., the project-specific gendered-occupational-valuation claim) were explicitly kept at their prior, more cautious status.
+
+### Hypothesis Matrix Changes
+
+- H1 (`recruitment_retention_pressure`): added the MissionSquare/SLGE calibration finding (police staffing pressure real but not uniquely severe among local-government occupations).
+- H6 (`arbitration_or_impasse_backstop`): added the multi-state compulsory-arbitration pattern and the Iowa/NC/SC/VA counterexamples.
+- H9 (`fiscal_capacity_ability_to_pay`): added the national foundation-formula generalization finding.
+- H11 (`public_safety_service_necessity`): added the NFPA quantified volunteer-decline figures.
+- No new rows added, since no wholly new national mechanism family was identified — every finding sharpened or qualified an existing hypothesis. Verified 28 total rows (27 hypotheses + header), 12 columns, no CSV structure mismatches.
+
+### Roadmap Update
+
+- `non_safety_comparison_roadmap_2026-07-04.md` gained one closing note confirming the national scan is complete and the next planned step is the metadata-cleanup audit, restating that national-general and Massachusetts-specific evidence should stay explicitly distinguished in future work.
+
+### Validation/Audit Results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+### Recommended Next Step
+
+1. Conduct the metadata-cleanup audit of the 7 issues tracked in the living checklist's Section 11 — audit-first, confirming each issue against its underlying source document before any direct edit to `data/contracts.csv`.
+2. Continue updating the living checklist in place after any future corpus scans, OEWS/DESE/BLS descriptive baseline, or GABRIEL extraction run.
+3. Keep national-general and Massachusetts-specific evidence explicitly distinguished in any future PI-facing synthesis.
+
+### Notes For ChatGPT Review
+
+- Do not treat JLMC, Chapter 70, or Proposition 2½ as national institutions; they are Massachusetts's specific implementations of more general, but not universal, national patterns (compulsory police/fire arbitration; foundation-formula school finance; local property-tax levy limits).
+- Do not treat the "non-safety lacks compulsory arbitration" finding as universal; Iowa is a documented counterexample for teachers, and the finding presumes bargaining rights exist at all, which is false in NC, SC, and pre-2020 VA.
+- Do not recommend a GABRIEL run, an OEWS/municipal descriptive baseline build, ingestion, or a metadata edit as the immediate next step from this state; the recommended next step is the metadata-cleanup audit.
 
 ---
 

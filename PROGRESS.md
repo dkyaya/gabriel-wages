@@ -6,6 +6,64 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-05 - National municipal workforce mechanism scan completed
+
+**Did**
+- Confirmed the prior living-checklist session's changes (`7557e59`, "Create wage mechanism evidence checklist") were already committed, with only `tmp/` left untracked; no recommit was needed or performed.
+- Created:
+  - `docs/analysis/national_municipal_workforce_mechanism_scan_2026-07-05.md`
+- Updated:
+  - `docs/analysis/wage_mechanism_evidence_checklist.md` (added national-scan findings to specific mechanism rows in place — PD01, PD12, FD03, FD12, TC10, TC12, DP12, CA01, CA03, CA13, XC09 — without overwriting the existing table structure; verified every edited row still has 13 pipe delimiters/12 columns)
+  - `docs/analysis/non_safety_comparison_roadmap_2026-07-04.md` (light edit: one closing note confirming the scan is complete and the next step is the metadata-cleanup audit)
+  - `docs/analysis/police_fire_wage_hypothesis_matrix_2026-07-02.csv` (small targeted edits to H1, H6, H9, H11 only; no new rows, since no wholly new national mechanism was identified — the scan sharpened and qualified existing hypotheses rather than revealing a missing one)
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- Conducted bounded public-source desk research across all five occupation groups to distinguish general U.S. municipal wage-setting mechanisms from Massachusetts-specific institutions. Key findings: compulsory police/fire interest arbitration (JLMC's underlying policy pattern) is confirmed to recur in at least NJ, NY, MI, RI, PA, WY, and OK, not unique to Massachusetts; the general school-finance foundation-formula architecture behind Chapter 70 is the dominant national model (confirmed via Urban Institute and state examples in NJ and WI); NFPA data quantifies the national volunteer-firefighter decline directly (897,750 in 1984 to 676,900 in 2020); MissionSquare/SLGE survey data shows police staffing difficulty is real but not the single hardest local-government occupation to fill nationally; formal civil-service classification-and-reclassification-appeal architecture (the basis of Boston's clerical/admin mechanism) is a national norm, not a Massachusetts invention; and at least one state (Iowa) is a documented counterexample to the "non-safety lacks compulsory arbitration" finding for teachers, while DPW's and clerical/admin's "no JLMC access" finding presumes bargaining rights exist at all, which is false in NC, SC, and pre-2020 VA.
+
+**Decisions and why**
+- Updated the living checklist in place rather than creating a new dated summary, per its own update protocol; added `confirmed in external sources` status only where the national scan found credible, citable support, and explicitly left project-specific claims (e.g., gendered occupational valuation for this project's own cities) at their prior, more cautious status even where the general academic literature became better anchored.
+- Flagged, rather than silently resolved, an internal source-reliability discrepancy: one secondary legal-reference source described Massachusetts's own teacher impasse process in terms that conflict with this project's own primary-source (Mass.gov DLR) verification; treated the primary-source Massachusetts finding as authoritative and the secondary source as an illustration of why tertiary summaries need independent verification, not as grounds to revise the Massachusetts-specific finding.
+- Made only 4 small, targeted hypothesis-matrix edits (H1, H6, H9, H11) rather than adding new rows, since every national finding this session sharpened or qualified an existing hypothesis rather than revealing a genuinely new mechanism family.
+- Did not touch `data/contracts.csv`, `data/city_coverage.csv`, `corpus/`, or `inbox/`; did not run GABRIEL, model/API calls, the Harvard proxy, any OEWS/BLS download/build, any five-city web pilot, or any metadata edit; did not ingest any document.
+
+**Surprises/breakage**
+- No repo breakage from this session.
+- Validation and coverage audit remained unchanged, confirming the work stayed outside ingestion and production data changes.
+- The clearest generalizability finding of the session was that the *institutional pattern* behind JLMC (a no-strike-for-compulsory-arbitration trade specific to police/fire) recurs in a meaningful set of other states, even though the specific administrative vehicle (JLMC itself) is Massachusetts-only — a nuance this project's prior memos had implicitly assumed but never directly tested until this session.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+**No GABRIEL/model/API/proxy calls occurred. No OEWS/BLS downloads occurred. No ingestion occurred. No production data/corpus changes were made. No metadata edits were made to `data/contracts.csv` or any other production file. Prior living-checklist changes (`7557e59`) were already committed excluding `tmp/`; confirmed, not recommitted.**
+
+**Next steps**
+1. Conduct the metadata-cleanup audit of the 7 issues tracked in `wage_mechanism_evidence_checklist.md` Section 11 — audit-first, confirming each issue against the underlying source document before any direct edit to `data/contracts.csv`.
+2. Continue updating `wage_mechanism_evidence_checklist.md` in place after any future corpus scans, OEWS/DESE/BLS descriptive baseline, or GABRIEL extraction run, per the checklist's own update protocol.
+3. Keep national-general and Massachusetts-specific evidence explicitly distinguished in any future PI-facing synthesis, per this session's core finding that institutional patterns (compulsory arbitration; foundation-formula school finance; civil-service classification appeals) generalize even where the specific named Massachusetts vehicles (JLMC, Chapter 70, Proposition 2½) do not.
+
 ## 2026-07-05 - Living wage-mechanism evidence checklist created
 
 **Did**
