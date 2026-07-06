@@ -2,7 +2,64 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-06T14:00:00-04:00`
+Last updated: `2026-07-06T15:30:00-04:00`
+
+---
+
+## 2026-07-06T15:30:00-04:00 - Seekonk public works CBA sanitation language scan completed
+
+**Commit:** pending in current session (`Scan Seekonk public works sanitation language`)
+
+### Current State After This Entry
+
+- Confirmed the prior sanitation service-structure scan's changes (immediately prior, same date) were already committed, with only `tmp/` left untracked at session start; no recommit was needed or performed.
+- Created:
+  - `docs/analysis/seekonk_public_works_sanitation_language_scan_2026-07-06.md`
+  - `docs/analysis/seekonk_public_works_sanitation_language_scan_2026-07-06.csv`
+- Updated:
+  - `docs/analysis/non_safety_sanitation_solid_waste_source_gaps_2026-07-05.md` (light: 2026-07-06 update note to gap item 2)
+  - `docs/analysis/wage_mechanism_evidence_checklist.md` (light: SN08 row update)
+  - `docs/analysis/non_safety_comparison_roadmap_2026-07-04.md` (one new 2026-07-06 update block)
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- **`data/contracts.csv` and `data/city_coverage.csv` were NOT edited.** `corpus/` and `inbox/` were **not** modified. No GABRIEL calls, model/API calls, or Harvard proxy calls were made. No OEWS/BLS data was downloaded or processed. No ingestion happened, and no new corpus row was added.
+- This was a bounded, existing-corpus inspection session: read the already-collected Seekonk public works CBA in full (PDF text extraction, 675 lines), searched systematically for sanitation-related language, and classified the evidence.
+
+### What This New Package Does
+
+- Inspects the already-collected `ma_seekonk_public_works_2023` CBA full text for explicit and bundled sanitation/solid-waste language, the zero-cost next step recommended by the prior city-service-structure scan.
+- **Finding: `sanitation_possible_but_unconfirmed`.** Zero explicit sanitation terminology found anywhere in the document. Two substantive-but-unconfirmed signals: (1) "Transfer Station" explicitly named in the hours-of-work section with different scheduling (any consecutive 5 days excluding Sunday), but no linked job title or duty description; (2) CDL training reimbursement mentioned for "eligible employees," consistent with truck-operation roles, but not explicitly sanitation-linked.
+- **Remaining uncertainties:** whether the PDF's text extraction captured all Appendices and job-description Schedules (direct re-opening of the original PDF recommended); whether Seekonk's town operates its own curbside collection or contracts it out (marked "mixed/unclear" in the prior city-service-structure scan); and whether Transfer Station/CDL language together suffice to classify sanitation work as present in the unit.
+- **Recommended integration:** combine this contract-inspection finding with Seekonk's service-delivery-structure verification to reach a final determination on whether Seekonk should be treated as a `sanitation_dpw_bundled` site (if municipal-staffed and Appendix-confirmed) or remain unresolved.
+
+### Validation/Audit Results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+Both outputs are identical, in every count, to the pre-session baseline — no row was added, edited, or removed from `data/contracts.csv` or `data/city_coverage.csv` this session.
+
+### Recommended Next Step
+
+1. Confirm whether the original Seekonk public works PDF contains a job-description Appendix/Schedule that text-extraction may have missed.
+2. If Appendix exists, integrate with Seekonk's service-structure determination to classify the row as sanitation-relevant or not.
+3. Do not authorize Worcester or Somerville acquisition efforts as immediate follow-ons.
+
+### Notes For ChatGPT Review
+
+- This is an existing-corpus inspection only; no new document was acquired or ingested.
+- `data/contracts.csv` was **not** edited — the Seekonk row remains as-is, classified as "possible but unconfirmed."
+- Do not cite Transfer Station or CDL language as confirmed sanitation work until Appendix/service-structure questions are resolved.
 
 ---
 

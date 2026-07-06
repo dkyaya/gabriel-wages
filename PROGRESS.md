@@ -6,6 +6,54 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-06 (Seekonk public works sanitation language scan) - Seekonk CBA inspected for hidden sanitation language
+
+**Did**
+- Confirmed the prior sanitation-service-structure-scan session's changes (immediately prior, same date) were already committed, with only `tmp/` left untracked at session start; no recommit was needed or performed.
+- Created:
+  - `docs/analysis/seekonk_public_works_sanitation_language_scan_2026-07-06.md` (8-section memo: purpose/scope; source inspected (row metadata + corpus status); search terms and method; detailed findings by mechanism type; classification of evidence; implication for sanitation source strategy; recommended next step; quality note)
+  - `docs/analysis/seekonk_public_works_sanitation_language_scan_2026-07-06.csv` (machine-readable scan table, 1 row x 13 columns, controlled `evidence_classification` and `recommended_sanitation_use` vocabularies)
+- Updated (all light touches, no heavy rewrites):
+  - `docs/analysis/non_safety_sanitation_solid_waste_source_gaps_2026-07-05.md` (added a 2026-07-06 update note to gap item 2, clarifying Seekonk's remaining uncertainty after the CBA scan)
+  - `docs/analysis/wage_mechanism_evidence_checklist.md` (SN08 row: added detailed 2026-07-06 scan findings; classification remains `not found in current corpus` pending Appendix verification and service-structure clarification)
+  - `docs/analysis/non_safety_comparison_roadmap_2026-07-04.md` (one new 2026-07-06 update block)
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- **Existing-corpus inspection only (no new ingestion):** extracted full text from `corpus/ma_seekonk/ma_seekonk_public_works_afscme_local_1701_2023_2026.pdf` via `pdftotext` (675 clean lines); searched systematically for all sanitation-related keywords; found zero explicit sanitation terminology anywhere in the document. Two possible-but-unconfirmed signals: (1) "Transfer Station" explicitly named in hours-of-work section with distinct scheduling (any 5 consecutive days excluding Sunday), but no linked job title or duty description; (2) CDL training reimbursement mentioned for "eligible employees," consistent with truck-operation roles, but not explicitly sanitation-linked.
+- **Overall classification:** `sanitation_possible_but_unconfirmed`. Pending confirmation that the PDF extraction included all Appendices (re-opening the original PDF directly recommended to confirm) and Seekonk's service-structure verification (municipal-vs-contractor status for curbside collection, flagged as "mixed/unclear" in the prior session's city-service-structure scan).
+- Did not edit `data/contracts.csv` or `data/city_coverage.csv`; did not touch `corpus/` or `inbox/`; did not run GABRIEL, model/API calls, the Harvard proxy, or any OEWS/BLS download/build; did not ingest any document; did not add any new corpus row.
+
+**Decisions and why**
+- Treated this as a read-only existing-corpus inspection only — the Seekonk row already exists, the corpus file is already present, and the task is to determine whether hidden/bundled sanitation language is present in already-collected text without adding rows or ingesting new documents.
+- Focused the search on job-description language (Transfer Station operations, CDL roles) rather than just job-title headers, consistent with the prior session's recommendation that this re-read target "job-description language, not just titles."
+- Flagged the Appendix-extraction uncertainty (whether `pdftotext` captured the full contract including Schedules) rather than assuming absence of an Appendix means the Appendix does not exist in the source PDF.
+- Did not attempt to infer Seekonk's private-vs-municipal collection status from CBA text alone; kept that question explicitly tied to service-structure verification (the prior session's city-by-city service-structure scan found Seekonk marked "mixed_municipal_and_contractor / dpw_bundled_unclear" pending further investigation).
+
+**Surprises/breakage**
+- No repo breakage; validation and coverage audit remained byte-for-byte unchanged from the pre-session baseline.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Next steps**
+- (Immediate follow-up, not a separate authorization) Confirm whether the original Seekonk public works PDF contains a job-description Appendix/Schedule that text-extraction may have missed; re-open the original PDF directly to check.
+- (Pending broader sanitation strategy decision) Integrate Seekonk's service-delivery structure (municipal-vs-contractor, flagged as unclear in the prior session) with this contract-inspection finding to reach a final determination on whether Seekonk should be treated as a `sanitation_dpw_bundled` site (if municipal-staffed and Appendix confirms) or deprioritized.
+- (Not recommended as immediate next step) Do not authorize Worcester or Somerville acquisition efforts at this time; both remain higher-effort, lower-confidence leads compared to resolving Seekonk's Appendix question.
+
+---
+
 ## 2026-07-06 (sanitation city-service-structure session) - Sanitation service structure mapped across current project cities
 
 **Did**
