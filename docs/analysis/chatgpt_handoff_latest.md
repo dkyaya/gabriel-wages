@@ -2,7 +2,74 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-06T22:00:00-04:00`
+Last updated: `2026-07-07T01:00:00-04:00`
+
+---
+
+## 2026-07-07T01:00:00-04:00 - Dispatchers, custodial/facilities, and nurse_health confirmed via direct corpus re-reads
+
+**Commit:** pending in current session (`Review must-have evidence before report`)
+
+### Current State After This Entry
+
+- Confirmed the prior all-groups audit session's changes (`c111829`, "Audit wage mechanisms across groups") were already committed, with only `tmp/` left untracked at session start; no recommit was needed or performed.
+- Created:
+  - `docs/analysis/pre_report_must_have_evidence_review_2026-07-06.md`
+  - `docs/analysis/pre_report_must_have_evidence_review_2026-07-06.csv`
+- Updated:
+  - `docs/analysis/wage_mechanism_evidence_checklist.md` (Section 11 rows NH01/CF01/CF02/DP-D01/DP-D02/DP-D03 upgraded from `not searched`/assumed to `confirmed in current corpus`; intro and Section 14 updated)
+  - `docs/analysis/non_safety_comparison_roadmap_2026-07-04.md` (one new update block)
+  - `docs/analysis/all_groups_source_needs_2026-07-06.csv` (5 rows updated to `current_corpus`; no rows added/deleted)
+  - `docs/analysis/hypothesis_disposition_audit_2026-07-06.csv` (4 new rows appended, H40-H43, previously missing from this table)
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- **`data/contracts.csv` and `data/city_coverage.csv` were NOT edited.** `corpus/` and `inbox/` were **not** modified — a bounded OCR pass on Wayland's already-collected CBA was performed entirely under `/tmp/`, never written back. No GABRIEL calls, model/API calls, or Harvard proxy calls were made. No OEWS/BLS data was downloaded or processed. No ingestion happened, and no new corpus row was added.
+- This was a verification/confirmation pass, not a new mechanism-development session — every finding traces to already-collected corpus text.
+
+### What This New Package Does
+
+- **Arlington dispatchers, confirmed.** Direct re-read of `ma_arlington_public_works_2015` found a dedicated Article XXI ("Community Safety Dispatchers"): 9-person complement plus Lead Dispatcher, minimum-coverage-of-two rule, EMD stipend, and a requirement that dispatcher vacations be approved by "the Chief of Fire or Police." No per-classification base-wage table exists in this CBA (only unit-wide % increases; actual rates live in an external Classification and Pay Plan document not in this project's corpus). `binding_arbitration_statute` confirmed as MA G.L. c. 150E, not JLMC.
+- **Custodial/facilities, confirmed.** Georgetown's and Franklin's custodial CBAs both contain complete, multi-step salary schedules with genuine classification tiers — Georgetown's Licensed-vs-Unlicensed Maintenance pay differential (~11%) directly parallels DPW's CDL/hoisting-license findings. Arlington adds supplementary bundled evidence.
+- **Wayland nurse_health/dispatch, confirmed via a bounded OCR pass.** A 48-page, previously cover-page-only-readable scan was fully OCR'd (2,186 lines). Found substantive, dollar-figure wage-grade tables for both Community Health Nurses/Public Health Nurse (G-15/G-7A) and JCC Dispatcher/Coordinator (G-3/G-4), a Masters-degree nursing stipend, and a documented wage-restraint finding (nurse wages excluded from a 2022 compensation study). No custodial content exists in this document. The unit spans at least 9 distinct professional fields — far more fragmented than its name suggests.
+- **Group-retention recommendations upgraded:** dispatchers → `keep_public_safety_adjacent` (confirmed); custodial/facilities → `keep_strong_comparison` (confirmed, schema-blocked only administratively); nurse_health → `keep_secondary` (upgraded from `defer`; substantive but single-city/fragmented-unit).
+
+### Checklist, Roadmap, Source-Needs, and Hypothesis-Disposition Updates
+
+- `wage_mechanism_evidence_checklist.md` Section 11's six rows (NH01, CF01, CF02, DP-D01, DP-D02, DP-D03) all moved from `not searched`/assumed to `confirmed in current corpus`, with full evidentiary detail.
+- `non_safety_comparison_roadmap_2026-07-04.md` gained one update block summarizing the confirmations and the recommended move to PI-facing report planning.
+- `all_groups_source_needs_2026-07-06.csv`: 5 rows updated from `partial`/`absent` to `current_corpus` (Arlington dispatcher text, Wayland OCR ×2, Georgetown/Franklin custodial full-text, Arlington/Wayland `binding_arbitration_statute` check); no rows added or deleted.
+- `hypothesis_disposition_audit_2026-07-06.csv`: H40-H43 appended (they existed in the hypothesis matrix since the prior session but had never been dispositioned in this table) — H41 (custodial outsourcing) and H42 (dispatch coverage pressure) now `keep_central`/`strong_current_corpus`; H40 (nurse_health) and H43 (dispatch civilian-status undertranslation) `keep_supporting`/`moderate_current_corpus`.
+
+### Validation/Audit Results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+Both outputs are identical, in every count, to the pre-session baseline — no row was added, edited, or removed from `data/contracts.csv` or `data/city_coverage.csv` this session.
+
+### Recommended Next Step
+
+1. Move to PI-facing report outline/planning, using the updated group-retention table (`pre_report_must_have_evidence_review_2026-07-06.md` §6) as the current state of record.
+2. Bring the `custodial`/`facilities` schema decision to the user/PI in parallel with report planning, not as a blocking prerequisite.
+3. No further OCR or re-extraction pass is needed for any of the three documents reviewed this session.
+4. Do not recommend a GABRIEL run, an OEWS/municipal descriptive baseline build, or ingestion as the immediate next step from this state.
+
+### Notes For ChatGPT Review
+
+- Do not re-request an OCR pass on `ma_wayland_afscme_1_2_2020_2023.pdf` — this session's extraction is complete (2,186 lines) and sufficient; the temporary OCR files exist only under `/tmp/` and are not part of this repository.
+- Do not treat Arlington's dispatcher evidence as including a base-wage comparison to police/fire — no per-classification dollar table exists in this specific CBA; that comparison remains open (see H43's evidence_status).
+- Do not treat nurse_health as a strong, headline comparison group — the evidence is genuinely substantive but rests on one city inside an unusually fragmented, nine-profession bargaining unit; report it as a secondary finding with that composition caveat stated explicitly.
+- The `custodial`/`facilities` occupation_class schema decision remains open and is a user/PI action item, not something this or any prior session has authority to resolve by editing `data/contracts.csv`.
 
 ---
 
