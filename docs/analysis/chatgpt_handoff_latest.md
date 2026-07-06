@@ -2,7 +2,64 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-07T01:00:00-04:00`
+Last updated: `2026-07-07T04:00:00-04:00`
+
+---
+
+## 2026-07-07T04:00:00-04:00 - PI-facing report outline, draft, review checklist, and production plan created
+
+**Commit:** pending in current session (`Draft safety and non-safety wage mechanisms report`)
+
+### Current State After This Entry
+
+- Confirmed the prior pre-report must-have evidence review session's changes (`016711c`, "Review must-have evidence before report") were already committed, with only `tmp/` left untracked at session start; no recommit was needed or performed.
+- Created:
+  - `docs/analysis/report_outline_safety_non_safety_wage_mechanisms_2026-07-06.md`
+  - `docs/analysis/report_draft_safety_non_safety_wage_mechanisms_2026-07-06.md`
+  - `docs/analysis/report_review_checklist_safety_non_safety_wage_mechanisms_2026-07-06.md`
+  - `docs/analysis/report_production_plan_safety_non_safety_wage_mechanisms_2026-07-06.md`
+- Updated:
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- **`data/contracts.csv` and `data/city_coverage.csv` were NOT edited.** `corpus/` and `inbox/` were **not** modified. No GABRIEL calls, model/API calls, or Harvard proxy calls were made. No OEWS/BLS data was downloaded or processed. No ingestion happened, and no new corpus row was added. **No PDF, DOCX, PPTX, or other final-formatted artifact was created** — this run produced a markdown draft and supporting planning files only, per the task's explicit scope boundary.
+
+### What This New Package Does
+
+- **Report outline and claims map** (`report_outline_...md`): a detailed pre-draft planning document covering the title block, intended audience/purpose, a section-by-section breakdown (purpose, key claims, evidence basis, caveats, tables/callouts, and what-not-to-overclaim for each of the report's 8 sections), a report-level claim hierarchy (central / supporting / caveats / source-design findings / deferred), recommended tables and callouts, and 5 explicitly flagged open decisions for the PI (custodial/facilities naming, dispatcher prominence, transit's space allocation, nurse_health's placement, appendix sizing).
+- **Report draft** (`report_draft_...md`): the full PI-facing markdown draft, using the exact specified title/subtitle. Contains an Executive Summary (4 paragraphs), 8 Main Takeaways, an 11-row Evidence Map table, Group-by-Group Findings for all 11 groups (police, fire, teachers, DPW, clerical/admin, library, custodial/facilities, dispatchers, nurse_health, sanitation, transit — each with status/mechanisms/evidence-basis/MA-notes/national-caveat/source-needs), a Mechanism-by-Mechanism Synthesis across all 13 specified mechanisms, a Massachusetts and National Nuance section naming the three distinct MA wage-impasse regimes now identified (JLMC, ordinary Chapter 150E, and the MBTA's own M.G.L. c. 161A statute), a tiered (must-have/useful/optional-deferred) Source Needs section, and 4 appendix tables.
+- **Central narrative preserved:** the draft states directly that the key distinction is not "safety is hard, non-safety is easy" but "police/fire combine real upward pressure with a stronger pressure-to-wage conversion institution (JLMC), while non-safety groups' real pressures translate through classification systems, buffering, outsourcing, governance distance, budget constraints, or a weaker impasse pathway."
+- **Review checklist** (`report_review_checklist_...md`): flags claims needing PI review (the central-finding framing, group-retention labels, custodial/facilities completeness claim, the Iowa counterexample's prominence), claims needing source strengthening before a final version (the dispatcher wage-tier comparison, nurse_health's single-city generalizability, sanitation's unconfirmed signals, transit's single-data-point finding), open formatting decisions, tables that may be too large, sections that may need tightening, 5 suggested PI questions, and an artifact-generation readiness checklist.
+- **Production plan** (`report_production_plan_...md`): recommends DOCX first, then PDF; explains how to apply the Georgia/11pt/charcoal-heading/Harvard-crimson-accent style guide; allocates which tables belong in main text vs. appendix; proposes filename conventions; explains how to preserve file-name citations for auditability; and states explicitly what not to do (no new corpus rows, no OEWS build, no PRRs, no GABRIEL restart) until source acquisition is separately approved.
+
+### Validation/Audit Results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+Both outputs are identical, in every count, to the pre-session baseline — no row was added, edited, or removed from `data/contracts.csv` or `data/city_coverage.csv` this session.
+
+### Recommended Next Step
+
+1. Route the report draft and review checklist to the user/PI for review.
+2. Once PI feedback is incorporated, proceed to a dedicated formatting run (DOCX first, then PDF) per the production plan.
+3. Do not begin any new source-acquisition run, OEWS/municipal descriptive baseline build, or GABRIEL work from this state.
+
+### Notes For ChatGPT Review
+
+- This report draft is explicitly not a final, causal-evidence document — every claim in it is graded as current-corpus evidence, external/national context, or an identified source need, and the draft's own language ("current corpus shows," "evidence suggests," "requires additional sourcing") should be preserved in any future edit rather than tightened into unhedged assertions.
+- Do not generate any PDF, DOCX, or PPTX from this draft without first routing it through PI review per the review checklist — the task explicitly deferred artifact generation to a later run.
+- The group-retention frame used in this draft (central/strong comparison/public-safety-adjacent/secondary/source-design case/deferred) was supplied as a fixed input for this run; any future revision to that frame should originate from PI feedback, not from a future session's own re-derivation.
+- Every claim in the draft traces to an already-existing session memo or CSV; no new corpus review or web research occurred this session.
 
 ---
 

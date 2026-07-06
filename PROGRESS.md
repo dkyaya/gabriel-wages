@@ -6,6 +6,69 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-06 (PI-facing report planning and draft session) - Report outline, draft, review checklist, and production plan created
+
+**Did**
+- Confirmed the prior pre-report must-have evidence review session's changes (`016711c`, "Review must-have evidence before report") were already committed, with only `tmp/` left untracked at session start; no recommit was needed or performed.
+- Created:
+  - `docs/analysis/report_outline_safety_non_safety_wage_mechanisms_2026-07-06.md` (detailed outline: title block; audience/purpose; section-by-section purpose/claims/evidence/caveats/callouts for all 8 report sections; report-level claim hierarchy — central/supporting/caveats/source-design/deferred; recommended tables and callouts; 5 open decisions before formatting)
+  - `docs/analysis/report_draft_safety_non_safety_wage_mechanisms_2026-07-06.md` (the full markdown report draft: Executive Summary, 8 Main Takeaways, an 11-row Evidence Map, Group-by-Group Findings for all 11 groups, Mechanism-by-Mechanism Synthesis across 13 mechanisms, Massachusetts and National Nuance, Source Needs/Next Steps with a 3-tier priority table, and 4 appendix tables)
+  - `docs/analysis/report_review_checklist_safety_non_safety_wage_mechanisms_2026-07-06.md` (7 sections: claims needing PI review; claims needing source strengthening; open formatting decisions; tables that may be too large; sections that may need tightening; 5 suggested PI questions; an artifact-generation readiness checklist)
+  - `docs/analysis/report_production_plan_safety_non_safety_wage_mechanisms_2026-07-06.md` (recommended next run; DOCX-first-then-PDF sequencing; style-guide application notes; main-text-vs-appendix table allocation; filename conventions; citation/auditability preservation; explicit do-not-do-until-source-acquisition-approved list)
+- Updated:
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- **This run produced a markdown draft and supporting planning files only.** No PDF, DOCX, PPTX, or other final-formatted artifact was created, consistent with the task's explicit boundary that formatting and artifact generation are deferred to a later run after user review.
+- **Report content is a direct synthesis of prior session work, not new research.** Every claim in the draft traces to an already-existing memo, CSV, or corpus finding from this project's ~25 prior session artifacts (mechanism-refinement memos, corpus-scan memos, the national scan and citation audit, the all-groups audit, and the pre-report evidence-verification pass); no new corpus review, web research, or source acquisition occurred this session.
+- **Group-retention frame applied as specified:** police, fire, teachers, DPW/public works as central; clerical/admin, library, custodial/facilities as strong comparison; dispatchers as public-safety-adjacent; nurse_health/public health as secondary; sanitation/solid waste as a source-design/governance case; transit deferred as a direct city-level comparison.
+- Did not edit `data/contracts.csv` or `data/city_coverage.csv`; did not touch `corpus/` or `inbox/`; did not run GABRIEL, model/API calls, the Harvard proxy, or any OEWS/BLS download/build; did not ingest any document; did not add any new corpus row; did not create any PDF/DOCX/PPTX artifact.
+
+**Decisions and why**
+- Organized the report around mechanisms (Section 5) as well as occupation groups (Section 4), per the task's explicit instruction that the mechanism-by-mechanism view is what best supports the "translation institutions, not difficulty" central argument.
+- Followed the tone requirements closely: used hedged language ("current corpus shows," "evidence suggests," "requires additional sourcing") throughout; avoided causal verbs ("we proved," "causes," "explains why"); did not reference agent/model/session process language anywhere in the draft; used short, paraphrased evidentiary descriptions rather than long block quotations from underlying source documents, naming specific already-existing analysis files only where useful for auditability.
+- Recommended, in the production plan, a DOCX-first-then-PDF sequencing for the eventual formatting run, reasoning that a still-reviewable document benefits from a directly-editable format before a final, harder-to-revise one.
+- Flagged, rather than silently resolved, every open PI-facing decision the task specified (custodial/facilities naming, dispatcher prominence, transit's space allocation, nurse_health's placement, appendix sizing) in the outline and review checklist, since these are explicitly PI decisions per the task's own framing.
+
+**Surprises/breakage**
+- No repo breakage from this session. Validation and coverage audit both passed cleanly and remained byte-for-byte unchanged from the pre-session baseline, as expected for a documentation-only session.
+- No new surprises arose during drafting; the underlying evidence base (from the prior pre-report evidence-review session) was already stable and internally consistent, which made the report draft a synthesis task rather than one requiring new reconciliation of conflicting findings.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+Both outputs are identical, in every count, to the pre-session baseline — expected, since no row was added, edited, or removed from `data/contracts.csv` or `data/city_coverage.csv` this session.
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+**`data/contracts.csv` and `data/city_coverage.csv` were NOT edited this session. `corpus/` and `inbox/` were not modified. No GABRIEL/model/API/proxy calls occurred. No OEWS/BLS downloads occurred. No ingestion occurred. No PDF/DOCX/PPTX artifacts were created. The prior pre-report must-have evidence review session (`016711c`) was already committed excluding `tmp/`; confirmed, not recommitted.**
+
+**Next steps**
+1. Route the report draft and review checklist to the user/PI for review, focusing on the open questions and claims flagged in `report_review_checklist_safety_non_safety_wage_mechanisms_2026-07-06.md` §1, §2, and §6.
+2. Once PI feedback is incorporated into the draft, proceed to a dedicated formatting run per `report_production_plan_safety_non_safety_wage_mechanisms_2026-07-06.md` (DOCX first, then PDF), applying the Georgia/11pt/charcoal-heading/Harvard-crimson-accent style guide.
+3. Do not begin any new source-acquisition run, OEWS/municipal descriptive baseline build, or GABRIEL work from this state; the report explicitly recommends resolving its own "must-have" source needs (Section 7) only if and when the PI separately approves that work.
+
+---
+
 ## 2026-07-06 (pre-report must-have evidence review session) - Dispatchers, custodial/facilities, and nurse_health confirmed via direct corpus re-reads; group-retention recommendations upgraded
 
 **Did**
