@@ -6,6 +6,76 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-06 (transit governance-fit session) - Transit governance and wage mechanisms scoped; deferred as governance-mismatched
+
+**Did**
+- Confirmed the prior Seekonk public works sanitation-language scan (`7bc8776`, "Scan Seekonk public works sanitation language") was already committed, with only `tmp/` left untracked at session start; no recommit was needed or performed.
+- Created:
+  - `docs/analysis/non_safety_transit_governance_mechanism_scope_2026-07-06.md` (14-section memo per task spec: purpose/scope; current corpus coverage; city-by-city governance table for all 9 cities; why transit matters; occupation/classification map; upward mechanisms; restraint mechanisms; Massachusetts institutional context; national context; claim/counterpoint table; governance-fit assessment; new hypotheses; source-extraction implications; recommended next step)
+  - `docs/analysis/non_safety_transit_governance_scan_2026-07-06.csv` (machine-readable version, 9 rows x 13 columns, controlled `preliminary_transit_governance`/`likely_worker_observability`/`confidence` vocabularies)
+  - `docs/analysis/non_safety_transit_source_gaps_2026-07-06.md` (13 tracked gaps: governance/staffing/safety/scheduling/contracting/budget evidence, each rated for feasibility)
+- Updated (all light touches, no heavy rewrites):
+  - `docs/analysis/wage_mechanism_evidence_checklist.md` (new Section 10, "Transit mechanisms checklist," 9 rows TR01-TR09; Sections 11-15 renumbered from the prior 10-14; XC09 cross-referenced with the new MBTA arbitration-statute finding)
+  - `docs/analysis/non_safety_comparison_roadmap_2026-07-04.md` (one new update block)
+  - `docs/analysis/police_fire_wage_hypothesis_matrix_2026-07-02.csv` (4 new rows appended: H36-H39, `transit_route_service_coverage_pressure`, `transit_operator_shortage_and_missed_service`, `transit_contracting_governance_distance`, `transit_service_cut_buffering`; existing 35 rows untouched)
+  - `docs/analysis/police_fire_wage_trend_occupation_crosswalk_2026-07-03.csv` (one small annotation added to the existing `transit` row's `notes` field; no new row, no data build)
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- **Task A (corpus coverage check):** confirmed zero `transit` rows in `data/contracts.csv` or `data/city_coverage.csv`, and confirmed (via a keyword search across every field of `data/contracts.csv`) that no existing row contains genuine transit-, bus-, transport-, traffic-, or parking-related content (the only keyword hits were false-positive substring matches, e.g. `rta` inside "certain"). `data/contracts.csv` and `data/city_coverage.csv` were **not edited**.
+- **Task B (governance scan):** bounded web research (WebSearch) confirmed all nine of this project's current cities' transit service is governed by either the MBTA (Arlington, Boston, Newton, Somerville — a Massachusetts state authority under M.G.L. c. 161A) or a regional transit authority (Franklin/Seekonk: GATRA; Georgetown: MeVa/MVRTA; Wayland: MWRTA; Worcester: WRTA), with Seekonk uniquely served by both a Massachusetts RTA (GATRA) and an out-of-state authority (Rhode Island's RIPTA). **Zero `city_operated_transit` cases were found among this project's nine cities.**
+- **Most consequential finding:** Massachusetts regional transit authorities are required by M.G.L. c. 161B to contract actual service operation to a private operating company — directly confirmed for Worcester, where WRTA's unionized (ATU Local 22) bus operators are actually employed by First Transit, Inc. (incorporated in Massachusetts as Central Mass Transit Management, CMTM), not WRTA or the City of Worcester. This is a structurally deeper, state-law-mandated version of sanitation's city-level private-hauler contracting finding — it applies uniformly across all five RTA-served cities in this project's set, not as a city-by-city choice.
+- **A genuinely new institutional finding, not previously examined by this project:** the MBTA has its own compulsory interest-arbitration statute (M.G.L. c. 161A §§19C-19G, 1978), separate from both JLMC (police/fire) and the ordinary Chapter 150E §9 route already independently verified four times for teachers/DPW/clerical-admin/library. This is a third distinct Massachusetts arbitration regime — but it governs the MBTA's own employees as a state authority, not any of this project's nine city governments, so it does not change the project's central police/fire-vs-non-safety-municipal-employee finding.
+- **Sharpest quantified wage-to-staffing finding in this project to date, for any occupation including police/fire:** the MBTA raised bus-operator starting pay from $22.21 to $30/hour in 2024 (part of settling agreements with all 28 of its affiliated unions for the first time in 15 years) and subsequently saw a reported 365% surge in operator applications — though this describes a state authority's own workforce, not any of this project's city governments, and has not been shown to generalize to any RTA or to a smaller wage adjustment.
+- Did not edit `data/contracts.csv` or `data/city_coverage.csv`; did not touch `corpus/` or `inbox/`; did not run GABRIEL, model/API calls, the Harvard proxy, or any OEWS/BLS download/build; did not ingest any document; did not add any new corpus row.
+
+**Decisions and why**
+- Treated this as a governance-fit assessment and mechanism-scoping session, not a corpus-scan or source-acquisition session — no new corpus rows, no ingestion, consistent with the task's explicit scope boundary and its "not a corpus-building run" framing.
+- Concluded transit should be **deferred indefinitely as governance-mismatched** for this project's current city-level matched-CBA design, rather than pursued as a fifth non-safety comparison group, since every one of this project's nine cities' transit workforce sits outside its own municipal government by state-law design (MBTA state authority or RTA private-operator model), not by a city-level contracting choice the way sanitation's private-hauler pattern is.
+- Added exactly 4 new hypothesis-matrix rows (route/service coverage, operator shortage, contracting/governance distance, service-cut buffering), folding safety-sensitive-work, split-shift-scheduling, mechanic/maintenance-skill, and regional-authority-budget-constraint discussion into the checklist's Section 10 without separate hypothesis-matrix rows, consistent with the standing preference for a small number of high-value additions.
+- Made only a small, non-structural annotation to the existing OEWS crosswalk's `transit` row (no new row, no data build), per the task's explicit instruction not to force an edit or build OEWS data.
+- Did not edit `data/contracts.csv` or `data/city_coverage.csv`; did not touch `corpus/` or `inbox/`; did not run GABRIEL, model/API calls, the Harvard proxy, or any OEWS/BLS download/build; did not ingest any document; did not add any new corpus row.
+
+**Surprises/breakage**
+- No repo breakage from this session. Validation and coverage audit both passed cleanly and remained byte-for-byte unchanged from the pre-session baseline.
+- The clearest surprise was how much more structurally deep transit's governance-mismatch turned out to be compared with sanitation's: rather than a city-by-city contracting choice, transit's non-municipal-employment pattern applies to all nine of this project's cities without exception and appears to be a matter of Massachusetts state-law design (M.G.L. c. 161A for the MBTA; c. 161B for regional transit authorities), not a scoping question any further desk research within this project's current city set could resolve differently.
+- The MBTA's own distinct compulsory-arbitration statute (c. 161A) was an unexpected find — a third institutional arbitration regime this project had not previously catalogued, layered on top of the already-established JLMC/Chapter 150E binary.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+Both outputs are identical, in every count, to the pre-session baseline — expected, since no row was added, edited, or removed from `data/contracts.csv` or `data/city_coverage.csv` this session.
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+**`data/contracts.csv` and `data/city_coverage.csv` were NOT edited this session. `corpus/` and `inbox/` were not modified. No GABRIEL/model/API/proxy calls occurred. No OEWS/BLS downloads occurred. No ingestion occurred. The prior Seekonk public works sanitation-language scan (`7bc8776`) was already committed excluding `tmp/`; confirmed, not recommitted.**
+
+**Next steps**
+1. Defer transit indefinitely as governance-mismatched for this project's current design; do not pursue targeted transit source acquisition as a next comparison-group development step.
+2. If a future institutional case study (separate from this project's matched-city occupation comparison) is ever wanted, the MBTA's ATU Local 589 CBA/c. 161A arbitration history and WRTA's CMTM/ATU Local 22 arrangement are the two most information-rich targets identified — each would require its own explicit authorization before any acquisition.
+3. Move to the checkpoint memo's other still-open scoping decisions (nurse_health's population mismatch; custodial/facilities and dispatcher schema questions) or a broader non-safety source-acquisition-gap review next, per user/PI direction. Do not begin a GABRIEL run, OEWS/municipal descriptive baseline build, or new ingestion from this state.
+
+---
+
 ## 2026-07-06 (Seekonk public works sanitation language scan) - Seekonk CBA inspected for hidden sanitation language
 
 **Did**

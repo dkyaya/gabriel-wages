@@ -2,7 +2,78 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-06T15:30:00-04:00`
+Last updated: `2026-07-06T18:00:00-04:00`
+
+---
+
+## 2026-07-06T18:00:00-04:00 - Transit governance and wage mechanisms scoped; deferred as governance-mismatched
+
+**Commit:** pending in current session (`Scope transit governance and wage mechanisms`)
+
+### Current State After This Entry
+
+- Confirmed the prior Seekonk public works sanitation-language scan (`7bc8776`, "Scan Seekonk public works sanitation language") was already committed, with only `tmp/` left untracked at session start; no recommit was needed or performed.
+- Created:
+  - `docs/analysis/non_safety_transit_governance_mechanism_scope_2026-07-06.md`
+  - `docs/analysis/non_safety_transit_governance_scan_2026-07-06.csv`
+  - `docs/analysis/non_safety_transit_source_gaps_2026-07-06.md`
+- Updated:
+  - `docs/analysis/wage_mechanism_evidence_checklist.md` (new Section 10, "Transit mechanisms checklist," 9 rows TR01-TR09; Sections 11-15 renumbered; XC09 cross-referenced)
+  - `docs/analysis/non_safety_comparison_roadmap_2026-07-04.md` (one new update block)
+  - `docs/analysis/police_fire_wage_hypothesis_matrix_2026-07-02.csv` (4 new rows, H36-H39)
+  - `docs/analysis/police_fire_wage_trend_occupation_crosswalk_2026-07-03.csv` (one small annotation to the existing `transit` row's `notes` field; no new row, no data build)
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- **`data/contracts.csv` and `data/city_coverage.csv` were NOT edited.** `corpus/` and `inbox/` were **not** modified. No GABRIEL calls, model/API calls, or Harvard proxy calls were made. No OEWS/BLS data was downloaded or processed. No ingestion happened, and no new corpus row was added.
+- This was a governance-fit assessment and mechanism-scoping session, not a corpus-build, source-acquisition, or GABRIEL session — it resolves the transit scoping decision left open since `wage_mechanism_project_checkpoint_2026-07-05.md` §11 (item 2).
+
+### What This New Package Does
+
+- Confirms zero `transit` rows exist in `data/contracts.csv` or `data/city_coverage.csv`, and confirms (via a full-field keyword search) that no existing row contains genuine transit-, bus-, transport-, traffic-, or parking-related content.
+- **Classifies all nine current project cities' transit governance via bounded web research:** four (Arlington, Boston, Newton, Somerville) fall under the MBTA (a Massachusetts state authority, M.G.L. c. 161A); five (Franklin, Georgetown, Seekonk, Wayland, Worcester) fall under a regional transit authority (GATRA, MeVa/MVRTA, MWRTA, WRTA respectively), with Seekonk uniquely also served by Rhode Island's RIPTA. **Zero `city_operated_transit` cases were found.**
+- **Most consequential finding:** Massachusetts RTAs are required by M.G.L. c. 161B to contract actual operations to a private operating company — directly confirmed for Worcester, where WRTA's unionized (ATU Local 22) bus operators are employed by First Transit, Inc./Central Mass Transit Management (CMTM), not WRTA or the City of Worcester. This is a structurally deeper, state-law-mandated version of sanitation's private-hauler finding, applying uniformly across all five RTA-served cities rather than as a city-level choice.
+- **A genuinely new institutional finding:** the MBTA has its own compulsory interest-arbitration statute (M.G.L. c. 161A §§19C-19G), distinct from both JLMC (police/fire) and Chapter 150E §9 (teachers/DPW/clerical-admin/library/sanitation-by-extension) — a third Massachusetts arbitration regime this project had not previously catalogued, though it governs the MBTA's own employees as a state authority, not any of this project's nine city governments.
+- **Sharpest quantified wage-to-staffing finding in this project to date, for any occupation:** the MBTA's 2024 bus-operator starting-pay raise ($22.21 to $30/hour) was followed by a reported 365% surge in operator applications — a state-authority-specific data point, not yet shown to generalize to any RTA or a smaller wage adjustment.
+- **Governance-fit conclusion:** transit does not fit this project's city-level matched-CBA design, for all nine current cities without exception. Recommends deferring transit indefinitely as governance-mismatched, rather than developing it as a fifth non-safety comparison group.
+
+### Checklist, Roadmap, and Hypothesis Matrix Updates
+
+- `wage_mechanism_evidence_checklist.md` gained a new Section 10 ("Transit mechanisms checklist," 9 rows: TR01-TR09, explicitly marked as scoping-stage since zero corpus rows exist), with Sections 11-15 renumbered from the prior 10-14; XC09 (arbitration/impasse backstop) cross-referenced with the new MBTA c. 161A finding.
+- `non_safety_comparison_roadmap_2026-07-04.md` gained one update block confirming transit's governance-fit scoping is complete and recommending deferral.
+- `police_fire_wage_hypothesis_matrix_2026-07-02.csv` gained 4 new rows (H36-H39: `transit_route_service_coverage_pressure`, `transit_operator_shortage_and_missed_service`, `transit_contracting_governance_distance`, `transit_service_cut_buffering`); the existing 35 rows were not touched (confirmed via `git diff --numstat`: 4 insertions, 0 deletions).
+- `police_fire_wage_trend_occupation_crosswalk_2026-07-03.csv` gained one small annotation to the existing `transit` row's `notes` field only (confirmed via `git diff --numstat`: 1 insertion, 1 deletion — a single-cell edit); no new row, no OEWS data build.
+
+### Validation/Audit Results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+Both outputs are identical, in every count, to the pre-session baseline — no row was added, edited, or removed from `data/contracts.csv` or `data/city_coverage.csv` this session.
+
+### Recommended Next Step
+
+1. Defer transit indefinitely as governance-mismatched; do not pursue targeted transit source acquisition as this project's next comparison-group development step.
+2. If a future, explicitly non-matched-city institutional case study is ever wanted, the MBTA's ATU Local 589 CBA/c. 161A arbitration history and WRTA's CMTM/ATU Local 22 arrangement are the two most information-rich targets identified — each requires its own explicit authorization before any acquisition.
+3. Move to the checkpoint memo's other still-open scoping decisions (nurse_health's population mismatch; custodial/facilities and dispatcher schema questions) or a broader non-safety source-acquisition-gap review next, per user/PI direction.
+4. Do not recommend a GABRIEL run, an OEWS/municipal descriptive baseline build, or ingestion as the immediate next step from this state.
+
+### Notes For ChatGPT Review
+
+- Every transit finding in this session is bounded public-source desk research classifying governance *structure*, not a corpus-confirmed wage mechanism — do not cite any finding as "confirmed in current corpus" (this project's corpus holds zero `transit` rows).
+- Do not conflate the MBTA's c. 161A compulsory-arbitration finding with this project's central JLMC-vs-Chapter-150E police/fire-vs-non-safety-municipal-employee finding — c. 161A governs a state authority's own employees, not any of this project's city governments, and does not change that central finding.
+- Do not treat WRTA's CMTM/First Transit arrangement as evidence about GATRA, MeVa, or MWRTA specifically — the private-operator model was directly confirmed only for WRTA this session; its extension to the other three RTAs is a reasonable inference from the general M.G.L. c. 161B requirement, not an independently verified fact for each.
+- Do not treat the MBTA's 2024 wage-raise-then-hiring-surge finding as evidence about any of this project's nine city governments — it describes the MBTA's own workforce as a state authority.
+- This project's corpus still holds zero `transit` rows; nothing in this session changed that, and this session's governance-fit conclusion recommends against pursuing acquisition that would change it under the current design.
 
 ---
 
