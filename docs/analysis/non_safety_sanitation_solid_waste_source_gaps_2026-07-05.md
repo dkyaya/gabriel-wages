@@ -3,6 +3,8 @@
 **Date:** 2026-07-05
 **Scope:** desk-research and source-acquisition planning only. Lists the highest-value evidence gaps surfaced by `non_safety_sanitation_solid_waste_mechanism_scope_2026-07-05.md`. This project's corpus currently holds zero `sanitation` rows, so nearly every gap below is a source-acquisition question, not a further-review-of-already-collected-documents question — a materially different starting point than the DPW, clerical/admin, or library source-gap memos, all of which closed most of their gaps against already-collected corpus text. This is a punch list for future sessions, not a completed data build or an ingestion authorization.
 
+**2026-07-06 update — city-service-structure scan completed.** `sanitation_city_service_structure_scan_2026-07-06.md` (with a companion `.csv`) closed gap 1 and gap 2 below for this project's own nine cities specifically. Finding: at least five of nine cities (Arlington, Boston, Franklin, Georgetown, Newton) show clear evidence of private-hauler contracting for residential collection — sanitation is unlikely to be observable in these cities' municipal CBAs at all, for structural reasons, not just an unexplored gap. Two cities (Seekonk, Worcester) remain promising leads for a genuinely municipal-staffed or DPW-bundled collection workforce; Somerville is a third, lower-confidence lead entangled with a broader, pre-existing project gap (Somerville has no non-safety comparison unit of any kind). Gaps 3-15 below remain open except where individually noted; see the new scan memo §7 for the specific unresolved questions it could not close.
+
 For each gap: why it matters, likely source families, a feasibility tag (`desk_research_feasible`, `data_build_feasible`, `likely_hard`), and which dimension it speaks to (wage levels, wage growth, staffing supply, classification, public health essentiality, outsourcing, route coverage, mechanization, overtime, budget/fees, or service deferral).
 
 ## 1. Whether sanitation is municipal, contracted, regionalized, or mixed by city
@@ -15,13 +17,15 @@ For each gap: why it matters, likely source families, a feasibility tag (`desk_r
 
 **Dimension:** staffing supply (foundational — determines whether any other dimension is even testable for a given city).
 
-## 2. Whether any of this project's current nine cities directly employs sanitation/collection workers
+## 2. Whether any of this project's current nine cities directly employs sanitation/collection workers — CLOSED 2026-07-06
 
 **Why it matters:** directly operationalizes gap 1 for this project's specific city set (Worcester, Boston, Somerville, Arlington, Newton, Georgetown, Seekonk, Franklin, Wayland). This project's own corpus already shows no sanitation-specific title in any of the seven `public_works` documents from five of these cities (Worcester, Arlington, Seekonk, Franklin, Wayland) — but this could reflect functional folding into a "Laborer" title (gap 10 below) rather than contracted-out service, and this session did not resolve which explanation applies to any specific city.
 
-**Likely source families:** each of these nine cities' own DPW/public-works or trash-collection web pages (the same source type that worked directly for the four illustrative Massachusetts towns in the main memo); municipal budget books listing a solid-waste line item (municipal-employee payroll) versus a hauling-contract line item (contracted-service expense) would also directly distinguish the two arrangements.
+**Status:** closed in `sanitation_city_service_structure_scan_2026-07-06.md`. City-by-city bounded web research found: Arlington, Franklin, Georgetown, and Newton show clear private-hauler contracting (high confidence for Arlington/Franklin/Newton, medium for Georgetown); Boston's residential collection is contracted (Capitol Waste Services) though street cleaning remains municipal; Seekonk and Worcester remain the two best candidates for a genuinely municipal-staffed or DPW-bundled collection workforce (Seekonk's already-collected `public_works` CBA needs only a job-description re-read; Worcester's existing corpus row is clerical-only, so its field/operations DPW workforce is entirely unrepresented in this project's corpus); Wayland is ambiguous, leaning toward a resident-choice private-hauler model for curbside; Somerville remains the least resolved (a budget document references "a contractual relationship" but municipal-crew involvement was not ruled out).
 
-**Feasibility:** `desk_research_feasible` — this is a bounded, city-by-city web check this session did not perform for this project's own specific nine cities (the four Massachusetts examples cited in the main memo were illustrative, not drawn from this project's own city set), and would be a natural, low-cost first step before any further sanitation work.
+**Remaining sub-gap:** whether Seekonk's town-employed DPW workers (if they perform collection at all) are distinguishable from a single town-contracted hauler was not resolved from public pages alone — a job-description-level re-read of the already-collected CBA is the recommended next step, not further web search.
+
+**Likely source families:** each of these nine cities' own DPW/public-works or trash-collection web pages (confirmed this session as a reliable, if city-by-city, source); municipal budget books listing a solid-waste line item (municipal-employee payroll) versus a hauling-contract line item (contracted-service expense).
 
 **Dimension:** staffing supply / classification.
 

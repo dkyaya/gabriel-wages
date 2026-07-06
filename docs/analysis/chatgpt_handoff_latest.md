@@ -2,7 +2,74 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-06T10:00:00-04:00`
+Last updated: `2026-07-06T14:00:00-04:00`
+
+---
+
+## 2026-07-06T14:00:00-04:00 - Sanitation service structure mapped across current project cities
+
+**Commit:** pending in current session (`Map sanitation service structure`)
+
+### Current State After This Entry
+
+- Confirmed the prior sanitation-scoping session's changes (`136fc29`, "Scope sanitation wage mechanisms") were already committed, with only `tmp/` left untracked at session start; no recommit was needed or performed.
+- Created:
+  - `docs/analysis/sanitation_city_service_structure_scan_2026-07-06.md`
+  - `docs/analysis/sanitation_city_service_structure_scan_2026-07-06.csv`
+- Updated:
+  - `docs/analysis/non_safety_sanitation_solid_waste_source_gaps_2026-07-05.md` (light: scan-completed note; gap item 2 closed)
+  - `docs/analysis/wage_mechanism_evidence_checklist.md` (light: Section 9 scan-completed note)
+  - `docs/analysis/non_safety_comparison_roadmap_2026-07-04.md` (one new update block)
+  - `docs/analysis/police_fire_wage_hypothesis_matrix_2026-07-02.csv` (surgical single-cell extensions to H33 and H35 only; 35 rows/12 columns otherwise unchanged)
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- **`data/contracts.csv` and `data/city_coverage.csv` were NOT edited.** `corpus/` and `inbox/` were **not** modified. No GABRIEL calls, model/API calls, or Harvard proxy calls were made. No OEWS/BLS data was downloaded or processed. No ingestion happened, and no new corpus row was added.
+- This was a bounded, public-source desk-research session classifying residential sanitation service structure (municipal / private-contractor / regional / mixed / DPW-bundled) for this project's 9 current cities — not a corpus-build, ingestion, or GABRIEL session.
+
+### What This New Package Does
+
+- Classifies all 9 current project cities (Arlington, Boston, Franklin, Georgetown, Newton, Seekonk, Somerville, Wayland, Worcester) into a controlled `preliminary_service_structure` vocabulary using each city's own trash/DPW/procurement web pages and (for Newton) regional news coverage.
+- **5 of 9 cities (Arlington, Boston, Franklin, Georgetown, Newton) show clear private-hauler contracting** for residential collection — meaning sanitation workers there are structurally unlikely to appear in any municipal CBA this project could collect.
+- **Seekonk, Wayland, and Worcester show a DPW-bundled/mixed structure**, where collection duties are plausibly folded into existing `public_works` job descriptions rather than organized as a distinct title.
+- **Somerville is `dpw_bundled_unclear`** (lower confidence) — it has zero `public_works` rows in this project's corpus and is independently one of the three cities on this project's longstanding unmatched-safety-unit list.
+- **Most consequential new finding:** a July 2025 Republic Services/Teamsters strike hit Newton and 13 other Boston-area suburbs simultaneously, confirming that private-hauler workforces can be unionized, but typically as multi-city, private-sector bargaining units — a genuine design-fit problem for this project's one-city-one-municipal-bargaining-unit comparison logic, not merely a data-availability inconvenience.
+- **Two concrete, ranked future source targets:** (1) Seekonk — a zero-cost re-read of the already-collected `ma_seekonk_public_works_2023` CBA's job-description text (not just titles) for collection-duty content, since the town's Pay-As-You-Throw program is run by the same DPW; (2) Worcester — a higher-effort new-source-identification target, since the existing `ma_worcester_public_works_2017` row is confirmed clerical-only ("DPW Clerks"), leaving Worcester's actual field/operations DPW workforce entirely unrepresented. Somerville is a third, lower-confidence lead. The other 5 cities are explicitly **not** recommended as near-term acquisition targets.
+
+### Checklist, Roadmap, and Hypothesis Matrix Updates
+
+- `wage_mechanism_evidence_checklist.md` Section 9 gained one scan-completed note pointing to SN08/H35 (`sanitation_dpw_bundling`) and SN06/H33 (`sanitation_contractor_substitution`). Not rewritten.
+- `non_safety_comparison_roadmap_2026-07-04.md` gained one update block summarizing the scan and its recommended next steps.
+- `police_fire_wage_hypothesis_matrix_2026-07-02.csv`: H33 (`sanitation_contractor_substitution`) and H35 (`sanitation_dpw_bundling`) had their `non_safety_relevance_or_counterpoint` fields extended with this session's city-specific findings, via exact-string surgical edits (not a full-file rewrite, to preserve the file's legacy quoting convention). No new rows; 35 rows/12 columns confirmed unchanged.
+
+### Validation/Audit Results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+Both outputs are identical, in every count, to the pre-session baseline — no row was added, edited, or removed from `data/contracts.csv` or `data/city_coverage.csv` this session.
+
+### Recommended Next Step
+
+1. Re-read the already-collected `ma_seekonk_public_works_2023` CBA's job-description text (not just titles) for collection-duty content — zero-cost, no new ingestion required.
+2. Treat a Worcester field/operations-DPW source-identification effort, and a broader Somerville DPW/general-government source-acquisition effort, as separate future tasks requiring their own explicit authorization — not a default next step from this state.
+3. Do not recommend a GABRIEL run, an OEWS/municipal descriptive baseline build, ingestion, or a five-city web pilot as the immediate next step from this state.
+
+### Notes For ChatGPT Review
+
+- Every finding in this scan is bounded public-source desk research classifying service *structure*, not a corpus-confirmed wage mechanism — do not cite any city's classification as "confirmed in current corpus."
+- Do not treat Worcester's or Somerville's source-identification leads as authorized acquisition tasks; both are flagged as needing a separate, explicit go-ahead given their higher effort/lower-confidence profile relative to Seekonk's zero-cost re-read.
+- Do not treat the Newton/Republic-Services private-hauler strike finding as evidence of a wage *mechanism* result — it is a design-fit observation (multi-city bargaining units do not fit this project's one-city-one-unit comparison logic), not a measured wage outcome.
+- This project's corpus still holds zero `sanitation` rows; nothing in this session changed that.
 
 ---
 

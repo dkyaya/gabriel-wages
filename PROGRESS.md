@@ -6,6 +6,70 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-06 (sanitation city-service-structure session) - Sanitation service structure mapped across current project cities
+
+**Did**
+- Confirmed the prior sanitation-scoping session's changes (`136fc29`, "Scope sanitation wage mechanisms") were already committed, with only `tmp/` left untracked at session start; no recommit was needed or performed.
+- Created:
+  - `docs/analysis/sanitation_city_service_structure_scan_2026-07-06.md` (8-section memo: purpose/scope; current project cities; city-by-city service-structure table for all 9 cities; cross-city findings; implications for wage-mechanism design; implications for corpus/source acquisition; unresolved questions; recommended next step)
+  - `docs/analysis/sanitation_city_service_structure_scan_2026-07-06.csv` (machine-readable version, 9 rows x 13 columns, controlled `preliminary_service_structure`/`likely_worker_observability`/`confidence` vocabularies)
+- Updated (all light touches, no heavy rewrites):
+  - `docs/analysis/non_safety_sanitation_solid_waste_source_gaps_2026-07-05.md` (added a 2026-07-06 scan-completed note; closed gap item 2 on whether any of the nine cities directly employs collection workers)
+  - `docs/analysis/wage_mechanism_evidence_checklist.md` (Section 9 sanitation checklist: added a scan-completed note pointing to SN08/H35 and SN06/H33)
+  - `docs/analysis/non_safety_comparison_roadmap_2026-07-04.md` (one new update block)
+  - `docs/analysis/police_fire_wage_hypothesis_matrix_2026-07-02.csv` (surgical single-cell extensions to H33 `sanitation_contractor_substitution` and H35 `sanitation_dpw_bundling`'s `non_safety_relevance_or_counterpoint` fields only; all 35 rows and 12 columns otherwise untouched)
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- **Bounded desk research (city/town web pages, procurement/DPW pages, news coverage of a July 2025 regional hauler strike) classified all 9 current project cities' residential sanitation service structure:** Arlington, Boston, Franklin, Georgetown, and Newton show clear private-hauler contracting for residential collection (5/9); Seekonk, Wayland, and Worcester show a DPW-bundled/mixed structure where collection duties are plausibly folded into existing public_works job descriptions; Somerville remains `dpw_bundled_unclear` (zero `public_works` rows in corpus, lower confidence).
+- **Most consequential finding:** the July 2025 Republic Services/Teamsters strike, which hit Newton and 13 other Boston-area suburbs simultaneously, shows that even where a private hauler's workforce is unionized, it is typically a multi-city bargaining unit — a design-fit problem for this project's one-city-one-unit comparison logic, distinct from and more fundamental than ordinary data-availability difficulty.
+- **Two concrete, ranked future source targets identified:** (1) Seekonk — a zero-cost re-read of the already-collected `ma_seekonk_public_works_2023` CBA's job-description text (not just titles) for collection-duty content, since the town's Pay-As-You-Throw program is administered by the same DPW; (2) Worcester — a higher-effort new-source-identification target, since the existing `ma_worcester_public_works_2017` row is confirmed clerical-only ("DPW Clerks"), leaving Worcester's actual field/operations DPW workforce (which may perform the city's own "yellow bag" curbside collection) entirely unrepresented in this project's corpus. Somerville is a third, lower-confidence lead notable mainly because it sits on this project's longstanding unmatched-safety-unit list independent of the sanitation question. The other 5 cities are explicitly NOT recommended as near-term acquisition targets.
+- Did not edit `data/contracts.csv` or `data/city_coverage.csv`; did not touch `corpus/` or `inbox/`; did not run GABRIEL, model/API calls, the Harvard proxy, or any OEWS/BLS download/build; did not ingest any document; did not add any new corpus row.
+
+**Decisions and why**
+- Treated this as a source-acquisition-planning and service-structure-classification session only — no new corpus rows, no ingestion, no comprehensive statewide sweep, consistent with the task's explicit scope boundary to focus on this project's 9 current cities.
+- Extended only H33 and H35 in the hypothesis matrix (the two hypotheses this scan's findings bear on most directly) via surgical single-cell edits rather than a full-file rewrite or new rows, preserving the matrix's existing legacy quoting convention and avoiding a large, purely cosmetic diff.
+- Did not recommend the Worcester or Somerville acquisition efforts as authorized next steps; both require a separate, explicit go-ahead given their higher effort/lower-confidence profile relative to Seekonk's zero-cost re-read.
+
+**Surprises/breakage**
+- A first attempt to update the hypothesis matrix via `csv.DictReader`/`csv.DictWriter` produced a large, unwanted diff (CRLF line-ending conversion on the first attempt, then a quoting-convention mismatch on the second, each touching all 35 rows) because the file's legacy manual quoting convention always quotes columns 6-11 regardless of necessity, which Python's default `QUOTE_MINIMAL` does not replicate. Reverted via `git checkout` and redid the change as two surgical `Edit`-tool string replacements instead; confirmed via `git diff --numstat` (8 insertions/8 deletions, one hunk) and row/column count checks that the final diff touches only the two intended cells.
+- No repo breakage otherwise; validation and coverage audit both passed cleanly and remained byte-for-byte unchanged from the pre-session baseline.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+Both outputs are identical, in every count, to the pre-session baseline — expected, since no row was added, edited, or removed from `data/contracts.csv` or `data/city_coverage.csv` this session.
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+**`data/contracts.csv` and `data/city_coverage.csv` were NOT edited this session. `corpus/` and `inbox/` were not modified. No GABRIEL/model/API/proxy calls occurred. No OEWS/BLS downloads occurred. No ingestion occurred. The prior sanitation-scoping session (`136fc29`) was already committed excluding `tmp/`; confirmed, not recommitted.**
+
+**Next steps**
+1. Re-read the already-collected `ma_seekonk_public_works_2023` CBA's job-description text (not just titles) for collection-duty content — zero-cost, no new ingestion required.
+2. Treat a Worcester field/operations-DPW source-identification effort and a broader Somerville DPW/general-government source-acquisition effort as separate future tasks requiring their own explicit authorization, not a default next step.
+3. Do not begin a GABRIEL run, OEWS/municipal descriptive baseline build, new ingestion, or a five-city web pilot from this state.
+
+---
+
 ## 2026-07-06 (sanitation session) - Sanitation / solid waste wage mechanisms scoped
 
 **Did**
