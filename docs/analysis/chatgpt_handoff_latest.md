@@ -2,7 +2,75 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-05T19:00:00-04:00`
+Last updated: `2026-07-05T20:30:00-04:00`
+
+---
+
+## 2026-07-05T20:30:00-04:00 - Library wage mechanisms and corpus scan completed
+
+**Commit:** pending in current session
+
+### Current State After This Entry
+
+- Confirmed the prior Somerville-metadata-audit-and-checkpoint session's changes (`fe99104`, "Audit Somerville metadata and checkpoint wage mechanisms") were already committed, with only `tmp/` left untracked at session start; no recommit was needed or performed.
+- Created:
+  - `docs/analysis/non_safety_library_wage_mechanism_and_corpus_scan_2026-07-05.md`
+  - `docs/analysis/non_safety_library_source_gaps_2026-07-05.md`
+- Updated:
+  - `docs/analysis/wage_mechanism_evidence_checklist.md` (new Section 8 library table, 8 rows; Sections 9-13 renumbered; XC09 updated)
+  - `docs/analysis/non_safety_comparison_roadmap_2026-07-04.md` (one new update block)
+  - `docs/analysis/police_fire_wage_hypothesis_matrix_2026-07-02.csv` (4 new rows, H28-H31)
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- **`data/contracts.csv` was NOT edited** — all three `library` rows' existing metadata was directly verified against source documents and found already accurate.
+- No live GABRIEL calls were run. No model/API calls, and no Harvard proxy calls, were made from project scripts. No OEWS/BLS data was downloaded or processed. No ingestion happened. `data/city_coverage.csv`, `corpus/`, and `inbox/` were **not** modified.
+- This was library's full deeper-inspection pass — the fourth non-safety comparison group, and the first one developed in a single combined session (mechanism refinement + institutional verification + corpus scan) rather than two separate memos, since it required no new source acquisition.
+
+### What This New Package Does
+
+- Reviews all three already-collected `library` corpus rows (Seekonk, Franklin, Wayland) in full, including an ad hoc, read-only OCR pass for Wayland's image-only scan.
+- **Confirms library's part-time/page staffing model is structurally distinct from every other occupation class reviewed so far**: part-time employment is a permanent, core bargaining-unit category in all three documents (unlike teachers' separate substitute pool or DPW's seasonal-only part-time use), and pages are explicitly excluded from bargaining-unit coverage at Franklin — meaning this project's corpus has no wage data at all for the most page-like tier.
+- **Directly contradicts, rather than confirms, the volunteer-substitution sub-hypothesis**: Franklin's Article 28 explicitly bars replacing bargaining-unit hours with volunteer labor without union agreement — the clearest on-point textual signal in this scan, running counter to a naive buffering story.
+- **Confirms professional (MLS/MLIS) credentialing as a real but uneven, modest mechanism**: Franklin pays an explicit degree-tier stipend (up to $1,900/year for MLS/MLIS); Seekonk has no degree-linked pay at all; Wayland treats a Master's degree only as an education-leave benefit. This uneven pattern, even within this project's own three cities, is itself evidence against treating library credentialing as a guaranteed wage floor the way teacher licensure functions.
+- **Confirms a fourth independent instance of the project's central institutional finding**: library employees follow the ordinary Chapter 150E Section 9 route with no JLMC access, per the MMA Select Board Handbook's own direct language ("it is common for clerical and library employees to be union members"). A library-specific budget-floor mechanism was also identified: the MBLC's Municipal Appropriation Requirement (municipal library appropriation generally may not fall below ~102.5% of the prior three years' average, subject to waiver) — a real but weaker/waivable analog to teachers' Chapter 70 floor.
+- **Replicates, a fourth time, the peer-community-comparability absence** already documented for `public_works` and `clerical_admin` — no wage-comparator language was found in any of the three library documents.
+- National context (ALA/PLA 2024 staff survey; BLS occupational wage data; a dated 2006 ALA-APA compression study, explicitly flagged as not current) is kept clearly separated from Massachusetts-specific and current-corpus evidence throughout.
+
+### Checklist, Roadmap, and Hypothesis Matrix Updates
+
+- `wage_mechanism_evidence_checklist.md` gained a new Section 8 ("Library mechanisms checklist," 8 rows: LB01-LB08), with Sections 9-13 renumbered from the prior 8-12 accordingly; XC09 (arbitration/impasse backstop) updated to reflect a fourth independent non-safety confirmation.
+- `non_safety_comparison_roadmap_2026-07-04.md` gained one update block confirming library's deeper-inspection completion and restating sanitation as the next-priority group.
+- `police_fire_wage_hypothesis_matrix_2026-07-02.csv` gained 4 new rows (H28-H31: `library_professional_credentialing`, `library_classification_reclassification`, `library_part_time_volunteer_buffering`, `library_service_deferral`); the existing 27 rows were not touched.
+
+### Validation/Audit Results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+Both outputs are identical, in every count, to the pre-session baseline — no row was added, edited, or removed from `data/contracts.csv` or `data/city_coverage.csv` this session.
+
+### Recommended Next Step
+
+1. Run a sanitation mechanism-refinement + national/Massachusetts institutional-context memo next (desk research only, since zero `sanitation` rows currently exist in this project's corpus).
+2. Bring the checkpoint memo's remaining flagged scoping decisions (transit governance fit; nurse_health population mismatch; custodial/dispatcher schema questions) to the user/PI before any further work on those specific groups.
+3. Do not recommend a GABRIEL run, an OEWS/municipal descriptive baseline build, or ingestion as the immediate next step from this state.
+
+### Notes For ChatGPT Review
+
+- Library's volunteer-substitution sub-hypothesis is **contradicted**, not confirmed — do not cite "libraries use volunteers to buffer staffing costs" as a finding; Franklin's own contract explicitly prohibits it.
+- Do not treat MLS/MLIS credentialing as a universal or guaranteed wage premium — it is confirmed present (as a stipend) at only one of this project's three library cities.
+- Do not conflate the MBLC's Municipal Appropriation Requirement with Chapter 70's net-school-spending floor — the library mechanism is a weaker, waivable, rolling-local-baseline requirement, not a state-formula-driven legal mandate.
+- Do not treat this memo's national ALA/PLA and BLS citations as Massachusetts-specific or as describing any of this project's three library cities directly — they are bounded national context only, per this project's standing discipline.
 
 ---
 

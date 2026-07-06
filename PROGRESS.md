@@ -6,6 +6,74 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-05 (library session) - Library wage mechanisms and corpus scan completed
+
+**Did**
+- Confirmed the prior Somerville-metadata-audit-and-checkpoint session's changes (`fe99104`, "Audit Somerville metadata and checkpoint wage mechanisms") were already committed, with only `tmp/` left untracked; no recommit was needed or performed.
+- Created:
+  - `docs/analysis/non_safety_library_wage_mechanism_and_corpus_scan_2026-07-05.md`
+  - `docs/analysis/non_safety_library_source_gaps_2026-07-05.md`
+- Updated:
+  - `docs/analysis/wage_mechanism_evidence_checklist.md` (new Section 8, "Library mechanisms checklist," 8 rows LB01-LB08; Sections 9-13 renumbered from the prior 8-12; XC09 updated to reflect a fourth independent non-safety confirmation; Overview and purpose paragraphs lightly extended to mention library)
+  - `docs/analysis/non_safety_comparison_roadmap_2026-07-04.md` (one new update block)
+  - `docs/analysis/police_fire_wage_hypothesis_matrix_2026-07-02.csv` (4 new rows appended: H28-H31, `library_professional_credentialing`, `library_classification_reclassification`, `library_part_time_volunteer_buffering`, `library_service_deferral`; existing 27 rows untouched)
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- **`data/contracts.csv` was not edited this session.** All three `library` rows' existing metadata (`binding_arbitration_statute=MA G.L. c. 150E`, `interest_arbitration_flag=0`, `comparability_clause_flag=0`) was directly verified against the source documents and found already accurate — no tiny, obvious, schema-safe correction was identified or needed.
+- Developed library workers as the fourth non-safety comparison group, in a single combined session (mechanism refinement, Massachusetts institutional verification, and a full document-by-document corpus scan), since library is the only non-safety group with already-collected, unexamined corpus rows. Reviewed all three `library` occupation-class rows (Seekonk, Franklin, Wayland) in full, including an ad hoc, session-local, read-only OCR pass for Wayland's image-only scan (output not written back to `corpus/` or `data/contracts.csv`).
+- **Most consequential corpus finding:** Franklin's CBA contains both an explicit MLS/MLIS degree-tier stipend (Section 15.2, up to $1,900/year) and an explicit contractual prohibition on replacing bargaining-unit hours with volunteer labor (Article 28) — the clearest, most direct evidence in this scan, running counter to a naive "volunteers buffer library staffing costs" hypothesis. Wayland's OCR-recovered text yields the most granular single-unit classification structure found anywhere in this project's corpus to date (seven library grades plus a separate custodian grade, ten-step schedule). Seekonk's document is comparatively thin (no reclassification, credentialing, or volunteer language at all).
+- **Institutional finding:** the Massachusetts Municipal Association's own Select Board Handbook states directly that "it is common for clerical and library employees to be union members" under the ordinary Chapter 150E framework — an explicit, near-primary-source confirmation extending the already-three-times-verified "no JLMC access" finding to a fourth non-safety occupation class. A library-specific budget-floor mechanism was also identified and verified externally: the Massachusetts Board of Library Commissioners' Municipal Appropriation Requirement, a weaker/waivable analog to teachers' Chapter 70/net-school-spending floor.
+- Used bounded web search for national context (ALA/PLA's 2024 Public Library Staff Survey; BLS occupational wage data for Librarians vs. Library Assistants, Clerical; a dated 2006 ALA-APA non-MLS salary study, explicitly flagged as not current), keeping national and Massachusetts-specific evidence clearly distinguished throughout, per the discipline already established for teachers, DPW, and clerical/admin.
+- Ran a peer-community comparability check across all three documents: **no** peer-jurisdiction wage-comparability language was found in any of them — a fourth independent replication of the identical absence already documented for every `public_works` and `clerical_admin` document reviewed in prior sessions.
+
+**Decisions and why**
+- Combined mechanism-refinement, institutional-verification, and corpus-scan into a single memo (rather than the two-memo pattern used for DPW and clerical/admin), since library's institutional verification required comparatively little new research once the MMA Select Board Handbook's own language was found to name library employees directly, and all three corpus documents were already available with no source-acquisition gap in between stages.
+- Added exactly 4 new hypothesis-matrix rows (professional credentialing, classification/reclassification, part-time/volunteer buffering, service deferral), folding the public-support-without-wage-translation and lower-public-salience sub-hypotheses into existing-row discussion instead, consistent with the standing preference for a small number of high-value additions.
+- Treated the volunteer-substitution sub-hypothesis as **contradicted, not confirmed**, given Franklin's explicit anti-substitution clause — a clear instance of the project's discipline to report what the evidence actually shows rather than defaulting to the plausible-sounding version of a hypothesis.
+- Explicitly declined to upgrade the gendered-occupational-valuation hypothesis for library work beyond `weak evidence` (general literature only), mirroring the identical, deliberate restraint already applied to clerical/admin's CA13.
+- Did not edit `data/contracts.csv` or `data/city_coverage.csv`; did not touch `corpus/` or `inbox/` beyond read-only inspection; did not run GABRIEL, model/API calls, the Harvard proxy, or any OEWS/BLS download/build; did not ingest any document.
+
+**Surprises/breakage**
+- No repo breakage from this session.
+- Validation and coverage audit both passed cleanly and remained byte-for-byte unchanged, confirming the work stayed entirely within desk research and read-only corpus review.
+- The clearest surprise was the width of Wayland's single-unit classification spread (L-1 Library Assistant through L-7 Assistant Director, plus a separate custodian grade folded into the same pay grid) — a wider single-bargaining-unit composition spread than this project has documented for any other occupation class, DPW included, and a reminder that "library wages" is at least as composition-sensitive a concept as "DPW wages" or "teacher wages."
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+Both outputs are identical, in every count, to the pre-session baseline — expected, since no row was added, edited, or removed from `data/contracts.csv` or `data/city_coverage.csv` this session.
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+**`data/contracts.csv` was NOT edited this session — its existing library-row metadata was verified accurate. `data/city_coverage.csv`, `corpus/`, and `inbox/` were not modified. No GABRIEL/model/API/proxy calls occurred. No OEWS/BLS downloads occurred. No ingestion occurred. Prior Somerville-metadata-audit-and-checkpoint changes (`fe99104`) were already committed excluding `tmp/`; confirmed, not recommitted.**
+
+**Next steps**
+1. Run a sanitation mechanism-refinement + national/Massachusetts institutional-context memo next, per `wage_mechanism_project_checkpoint_2026-07-05.md` §10 — desk research only, since zero `sanitation` rows currently exist in this project's corpus.
+2. Bring the checkpoint memo's remaining flagged scoping decisions (transit governance fit; nurse_health population mismatch; custodial/dispatcher schema questions) to the user/PI before any further work on those specific groups.
+3. Continue treating library's remaining gaps (vacancy/turnover data, librarian-vs-assistant/page composition, part-time staffing-share trends, MBLC ARIS/compliance-history review) as future source-acquisition targets, per `non_safety_library_source_gaps_2026-07-05.md`, not as further-review gaps on already-collected documents.
+
+---
+
 ## 2026-07-05 (follow-up session) - Somerville metadata audit closed and project mechanism checkpoint completed
 
 **Did**
