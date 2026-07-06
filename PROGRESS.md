@@ -6,6 +6,76 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-06 (remaining-groups scoping, cross-group audit, and source-needs planning session) - All groups scoped and audited; next-stage synthesis inputs prepared
+
+**Did**
+- Confirmed the prior transit governance-fit session's changes (`cf6e32b`, "Scope transit governance and wage mechanisms") were already committed, with only `tmp/` left untracked at session start; no recommit was needed or performed.
+- Created:
+  - `docs/analysis/non_safety_remaining_groups_scope_2026-07-06.md` (scopes nurse_health/public health, custodial/facilities, and dispatchers, with full Task-A corpus-coverage table, Massachusetts/national context, and per-group recommendations)
+  - `docs/analysis/non_safety_remaining_groups_source_gaps_2026-07-06.md` (source-gap tables for all three groups)
+  - `docs/analysis/all_groups_wage_mechanism_audit_2026-07-06.md` (the key cross-group audit: group-by-group table for all 11 groups examined to date, a 20-row mechanism-by-mechanism audit table, Massachusetts institutional audit, national nuance audit, source-type/evidence-quality audit, hypothesis disposition summary, source-acquisition needs, a recommended safety-vs-non-safety narrative, risks/caveats, and next steps)
+  - `docs/analysis/all_groups_source_needs_2026-07-06.csv` (44 rows, structured source-target list by priority across all groups)
+  - `docs/analysis/hypothesis_disposition_audit_2026-07-06.csv` (all 39 hypothesis-matrix rows dispositioned: keep_central/keep_supporting/merge/demote/defer/drop_for_now)
+- Updated (all light-to-moderate touches):
+  - `docs/analysis/wage_mechanism_evidence_checklist.md` (new Section 11, "Nurse_health, custodial/facilities, and dispatcher mechanisms checklist," 7 rows NH01-NH02/CF01-CF02/DP-D01-DP-D03; Sections 12-16 renumbered from the prior 11-15; Purpose section updated with pointers to the 3 new synthesis files; Section 14 corpus-evidence-summary gained 2 new bullets for transit and the 3 remaining groups)
+  - `docs/analysis/non_safety_comparison_roadmap_2026-07-04.md` (one new update block)
+  - `docs/analysis/police_fire_wage_hypothesis_matrix_2026-07-02.csv` (4 new rows appended: H40-H43, `nurse_health_professional_labor_market_pressure`, `custodial_facilities_outsourcing_and_service_buffering`, `dispatch_public_safety_adjacent_coverage_pressure`, `dispatch_civilian_status_undertranslation`; existing 39 rows untouched, confirmed via clean 4-insertion/0-deletion diff)
+  - `docs/analysis/police_fire_wage_trend_occupation_crosswalk_2026-07-03.csv` (2 new forward-looking rows for `custodial_facilities` and `dispatchers`, both explicitly flagged as not-yet-controlled-vocabulary values; 1 existing `nurse_health` row's notes extended; no data build)
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- **Task A (corpus coverage check for remaining groups):** confirmed zero direct rows for `nurse_health`, and confirmed no dedicated `custodial`/`dispatchers` controlled-vocabulary value exists at all. A direct re-read of already-collected corpus text (no new ingestion) found genuine hidden/bundled content for all three groups on the first scoping pass — a first in this project's history: `ma_wayland_other_2021`'s own `total_comp_note` names "nurses" and "dispatch" among covered titles (underlying PDF not yet OCR'd beyond its cover page); a direct `pdftotext` re-read of the already-collected Arlington `public_works` CBA (AFSCME Local 680) confirmed explicit "Community Safety Dispatchers" mechanism text (9-person staffing complement plus Lead Dispatcher, an explicit minimum-coverage-of-two rule); and `ma_georgetown_other_2020`/`ma_franklin_other_2022` (both coded `other`) are confirmed, correctly-documented custodial units, mislabeled only for lack of a controlled-vocabulary value.
+- **Bounded web research** (WebSearch) confirmed: national RN-shortage data is now more precisely calibrated (~8% by 2028 easing to ~3% by 2038, concentrated in nonmetro areas) and remains hospital-sector-dominated, a population-mismatch risk for nurse_health; a live, unresolved national federal SOC-classification fight over whether 911 telecommunicators are civilian "dispatchers" or "protective service"/"first responder" workers (25 states have reclassified per NCSL Oct. 2024; the U.S. Senate passed the Enhancing First Response Act/9-1-1 SAVES Act in 2025; federal OMB explicitly declined in the 2018 SOC revision); and two concrete Massachusetts-specific dispatcher examples (Boston's 2023 mayoral executive order recognizing telecommunicators as First Responders; 2019 MA bills S.1529/H.2366 seeking a Group 1-to-Group 2 pension reclassification), neither confirmed to carry an automatic wage consequence.
+- **Cross-group audit completed** across all 11 groups examined to date (police, fire, teachers, DPW, clerical/admin, library, sanitation, transit, nurse_health, custodial/facilities, dispatchers). Recommended narrative: police/fire combine multiple genuine upward-pressure mechanisms with a strong, direct translation institution (JLMC); every other group faces real pressures of its own that instead translate through weaker, alternate, or entirely absent channels (classification/reclassification, staffing substitution, service buffering, contractor/governance distance, or, for dispatchers, civilian-status classification).
+- Did not edit `data/contracts.csv` or `data/city_coverage.csv`; did not touch `corpus/` or `inbox/`; did not run GABRIEL, model/API calls, the Harvard proxy, or any OEWS/BLS download/build; did not ingest any document; did not add any new corpus row.
+
+**Decisions and why**
+- Treated the three remaining groups (nurse_health, custodial/facilities, dispatchers) with the extra care the task required, especially dispatchers — explicitly recommended as a distinct **public-safety-adjacent** category, neither merged into ordinary non-safety comparison nor treated as safety-equivalent, pending independent re-verification of their `binding_arbitration_statute` field (not yet assumed by extension the way sanitation's Chapter 150E finding was).
+- Recommended nurse_health be deferred (thinnest corpus foothold plus the sharpest population-mismatch risk of any group examined), custodial/facilities be included pending a schema decision (two already-collected rows are ready to reclassify), and dispatchers be included as public-safety-adjacent (richest already-in-corpus finding of the three, testing a genuinely new mechanism question).
+- Extended the hypothesis matrix by exactly 4 rows (H40-H43), using the same surgical append-only technique validated in the prior sanitation/transit sessions, to avoid the CSV-rewrite pitfall documented in that earlier session.
+- Added 2 small, explicitly forward-looking OEWS-crosswalk rows for custodial/facilities and dispatchers, flagged as not-yet-controlled-vocabulary values, per the task's instruction not to force an edit or build OEWS data.
+- This session's cross-group audit and source-needs/hypothesis-disposition tables are explicitly framed as inputs to a later PI-facing report, not the report itself — consistent with the task's explicit instruction that this run is not the final PI-facing report.
+
+**Surprises/breakage**
+- No repo breakage from this session. Validation and coverage audit both passed cleanly and remained byte-for-byte unchanged from the pre-session baseline.
+- The clearest surprise was how much already-collected, already-in-corpus mechanism text existed for all three "remaining" groups without any new ingestion — particularly Arlington's explicit "Community Safety Dispatchers" staffing-complement language, which had never been surfaced in any prior session despite Arlington's `public_works` row being reviewed multiple times before (including in the original DPW corpus-scan session).
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+Both outputs are identical, in every count, to the pre-session baseline — expected, since no row was added, edited, or removed from `data/contracts.csv` or `data/city_coverage.csv` this session.
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+**`data/contracts.csv` and `data/city_coverage.csv` were NOT edited this session. `corpus/` and `inbox/` were not modified. No GABRIEL/model/API/proxy calls occurred. No OEWS/BLS downloads occurred. No ingestion occurred. The prior transit governance-fit session (`cf6e32b`) was already committed excluding `tmp/`; confirmed, not recommitted.**
+
+**Next steps**
+1. Close the "must-have" zero-cost, already-in-corpus items first: full re-read of Arlington's dispatcher text for wage/step data; OCR re-extraction of `ma_wayland_afscme_1_2_2020_2023.pdf` (resolves nurse_health, dispatcher, and possible custodial content simultaneously); full-text re-read of the two already-collected custodial CBAs (Georgetown, Franklin) beyond their metadata fields.
+2. Bring the `custodial`/`facilities` controlled-vocabulary schema decision to the user/PI — this blocks proper classification of 2 already-collected, already-correctly-documented rows and should not wait for a broader source-acquisition cycle.
+3. Prepare the PI-facing report next (format to be decided separately), using this session's audit/source-needs/hypothesis-disposition files as direct inputs, rather than running a broader new source-acquisition plan first.
+4. Do not begin a GABRIEL run, OEWS/municipal descriptive baseline build, or new ingestion from this state.
+
+---
+
 ## 2026-07-06 (transit governance-fit session) - Transit governance and wage mechanisms scoped; deferred as governance-mismatched
 
 **Did**
