@@ -2,7 +2,75 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-05T20:30:00-04:00`
+Last updated: `2026-07-06T10:00:00-04:00`
+
+---
+
+## 2026-07-06T10:00:00-04:00 - Sanitation / solid waste wage mechanisms scoped
+
+**Commit:** pending in current session
+
+### Current State After This Entry
+
+- Confirmed the prior library-mechanism-and-corpus-scan session's changes (`6397378`, "Inspect library wage mechanisms") were already committed, with only `tmp/` left untracked at session start; no recommit was needed or performed.
+- Created:
+  - `docs/analysis/non_safety_sanitation_solid_waste_mechanism_scope_2026-07-05.md`
+  - `docs/analysis/non_safety_sanitation_solid_waste_source_gaps_2026-07-05.md`
+- Updated:
+  - `docs/analysis/wage_mechanism_evidence_checklist.md` (new Section 9, "Sanitation / solid waste mechanisms checklist," 9 rows; Sections 10-14 renumbered; XC09 extended by structural inference to a sixth non-safety group)
+  - `docs/analysis/non_safety_comparison_roadmap_2026-07-04.md` (one new update block)
+  - `docs/analysis/police_fire_wage_hypothesis_matrix_2026-07-02.csv` (4 new rows, H32-H35)
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- **`data/contracts.csv` was NOT edited** — zero `sanitation` rows exist, and no correction was identified in any `public_works`/`other` row's metadata.
+- No live GABRIEL calls were run. No model/API calls, and no Harvard proxy calls, were made from project scripts. No OEWS/BLS data was downloaded or processed. No ingestion happened. No new corpus row was added. `data/city_coverage.csv`, `corpus/`, and `inbox/` were **not** modified.
+- This was a **scoping and source-planning session**, not a corpus-scan session — this project's corpus holds zero `sanitation` rows, a materially different starting point than teachers, DPW, clerical/admin, or library, all of which had at least some corpus text to work from.
+
+### What This New Package Does
+
+- Confirms zero `sanitation` rows exist in `data/contracts.csv`, and confirms — via direct field inspection plus cross-reference against the prior DPW full-corpus-scan session — that none of the seven already-collected `public_works` documents contains any sanitation-, refuse-, or recycling-specific title or duty language.
+- **Sharpest quantified finding in this project to date:** national trade-press reporting citing BLS Census of Fatal Occupational Injuries data now places refuse/recycling collection's fatality rate (37.4-41.4 per 100,000 workers) above police's own, described directly as "considerably higher than in law enforcement." This sharpens, with hard numbers, the qualitative "sanitation hazard may exceed police's" claim already flagged in the original police/fire workforce-refinement memo.
+- **Confirms real, complete (not merely supplemental) private-hauler contracting as a Massachusetts practice**, via four towns' own municipal web pages (Dedham, Andover, Marshfield, Brookline) — a materially different, more substitution-capable contractor profile than DPW's largely seasonal contractor use, and a plausible explanation for why this project's five DPW-collecting cities show no distinct sanitation title.
+- **Confirms ~70% of Massachusetts communities have a consolidated DPW**, with solid waste frequently organized as a named division within it (not a free-standing department) — directly explaining sanitation's organizational "invisibility" inside this project's existing `public_works` corpus.
+- **Extends the project's central institutional finding (no JLMC access) to sanitation by direct structural inference**, not independent re-verification — JLMC's eligibility rule (already verified four times: police/fire only, no essential-service exception for teachers, DPW, clerical/admin, or library) provides no basis to expect a sanitation-specific exception, and no source encountered this session suggests one.
+- Treats contractor/private-hauler substitution as having **both** an upward-pressure reading (genuine private-sector wage competition) and a downward-pressure reading (wage-restraining substitution) explicitly, rather than assuming either direction — consistent with genuinely mixed academic privatization-cost research reviewed this session.
+- Flags `sanitation_dirty_work_compensating_differential` explicitly as a hypothesis requiring evidence, not an assumed mechanism, mirroring the discipline already applied to gendered-occupational-valuation hypotheses elsewhere.
+
+### Checklist, Roadmap, and Hypothesis Matrix Updates
+
+- `wage_mechanism_evidence_checklist.md` gained a new Section 9 ("Sanitation / solid waste mechanisms checklist," 9 rows: SN01-SN09, explicitly marked as scoping-stage since zero corpus rows exist), with Sections 10-14 renumbered from the prior 9-13; XC09 (arbitration/impasse backstop) extended to note sanitation's structurally-inferred (not independently re-verified) sixth-group status.
+- `non_safety_comparison_roadmap_2026-07-04.md` gained one update block confirming sanitation's scoping completion and restating the recommended next step (source-acquisition planning, not a new mechanism-development group).
+- `police_fire_wage_hypothesis_matrix_2026-07-02.csv` gained 4 new rows (H32-H35: `sanitation_route_coverage_pressure`, `sanitation_contractor_substitution`, `sanitation_mechanization_route_restructuring`, `sanitation_dpw_bundling`); the existing 31 rows were not touched.
+
+### Validation/Audit Results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+Both outputs are identical, in every count, to the pre-session baseline — no row was added, edited, or removed from `data/contracts.csv` or `data/city_coverage.csv` this session.
+
+### Recommended Next Step
+
+1. Sanitation source-acquisition planning: confirm whether any of this project's current nine cities directly employs collection workers versus contracting the function entirely, and re-read the five already-collected `public_works` CBAs' job-description language (not just title language) for collection-duty content — no new ingestion required for the latter.
+2. Bring the checkpoint memo's remaining flagged scoping decisions (transit governance fit; nurse_health population mismatch; custodial/dispatcher schema questions) to the user/PI before any further work on those specific groups.
+3. Do not recommend a GABRIEL run, an OEWS/municipal descriptive baseline build, or ingestion as the immediate next step from this state.
+
+### Notes For ChatGPT Review
+
+- Every sanitation finding in this session is either bounded external desk research or a structural extension of an already-verified fact — **none is corpus-confirmed**, since zero sanitation rows exist. Do not cite any sanitation mechanism as "confirmed in current corpus."
+- Do not cite the sanitation fatal-injury-rate comparison to police as a causal or Massachusetts-specific claim — it is national data, cited via trade press, not this project's own corpus or a Massachusetts-specific source.
+- Do not assume contractor/private-hauler substitution is wage-restraining by default — this session explicitly found the mechanism can run in either direction, and academic cost research does not settle which effect dominates.
+- The central open question for any future sanitation work is whether this project's own nine cities employ sanitation workers directly at all, or contract the function out entirely — this determines whether a corpus-scan-style session (like library's) or a source-acquisition-first session (unlike any prior non-safety group) is the right next step.
 
 ---
 
