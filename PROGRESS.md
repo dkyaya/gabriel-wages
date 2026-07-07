@@ -6,6 +6,69 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-07 (Harvard Proxy evidence-window scaffold revision session) - Pilot scaffold revised to use real corpus text, not contracts.csv metadata; dry-run only, no live calls
+
+**Did**
+- Confirmed the prior Harvard Proxy calling-scaffold session's changes (`dd94c1b`, "Add Harvard Proxy pilot scaffold") were already committed, with only `tmp/` left untracked at session start; no recommit was needed or performed.
+- Diagnosed and fixed a genuine gap in the prior session's scaffold: `scripts/proxy_pilot_must_have_sources.py` built its dry-run and (would-be) live prompts entirely from a single `data/contracts.csv` metadata field (`total_comp_note`), an RA-written administrative summary, rather than the actual corpus document text — insufficient for source-need questions (dispatcher staffing rules, custodial wage classifications, sanitation/transfer-station language) that depend on a document's own body content.
+- Created:
+  - `docs/analysis/harvard_proxy_evidence_window_scaffold_revision_2026-07-07.md` (7 sections: what the old scaffold did; why the metadata snippet was insufficient; why dry-run's `selected_rows.csv` correctly has no model answer; what evidence-window mode changes; safety protections retained; remaining limitations; recommended next step before live calls)
+- Rewrote:
+  - `scripts/proxy_pilot_must_have_sources.py` — dry-run (and, if ever live-approved, live) prompts now built from bounded evidence windows located by curated term search directly in each row's own already-collected corpus file, extracted via this project's existing `ingest/extract_text.py` utility (text-layer-first, local OCR fallback, no network access). Added named `--pilot-set` options (`must_have`, `dispatch_custodial`, `sanitation_seekonk`, `custodial_only`), an explicit `--contract-id`/`--terms` option for one-off exploratory dry-runs, and a new `evidence_windows.csv` output. Live mode now skips (does not call the proxy for) any row with zero evidence windows rather than sending an empty prompt.
+- Updated (light-to-moderate touches):
+  - `docs/analysis/harvard_proxy_pilot_usage_2026-07-06.md` (new "Evidence-window mode" section; updated dry-run/live command examples for the named pilot sets and `--contract-id`; new "do not run live if evidence_windows.csv is empty or irrelevant" rule; updated expected-outputs table; updated inspect-outputs and choose-pilot-rows sections)
+  - `docs/analysis/harvard_proxy_calling_scaffold_review_2026-07-06.md` (one new note in the output/logging-pattern section pointing to the evidence-window revision)
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- **Tested the revised dry-run path directly, exercising all required pilot sets:** `--pilot-set dispatch_custodial --limit 2` (15 evidence windows each for Arlington/Franklin), `--pilot-set sanitation_seekonk --limit 1` (5 evidence windows for Seekonk), `--pilot-set must_have --limit 4` (all four rows, including a successful local OCR fallback for the `ocr_messy` Wayland file — 15 evidence windows found), and `--contract-id ma_georgetown_other_2020 --terms ...` (9 evidence windows). Directly inspected `evidence_windows.csv` and `prompt_preview.md` output and confirmed real, verbatim corpus passages are embedded — for Arlington specifically, confirmed the more specific multi-word target terms ("Lead Dispatcher," "complement," "EMD") successfully surfaced the substantive Article XXI staffing-complement and EMD-stipend text, even though a few generic single-word terms were consumed by earlier table-of-contents matches (a real, now-documented limitation, not a bug). Re-confirmed both live-mode safety-gate refusals (`--live` with no `--limit`; `--live --limit 5`) still work identically to the prior session, creating no output directory and reading no credential.
+- Did not edit `data/contracts.csv` or `data/city_coverage.csv`; did not touch `corpus/` or `inbox/` (evidence-window construction only reads already-collected files); did not run GABRIEL; did not make any live model/API/Harvard-proxy call; did not ingest any document; did not print, inspect, or commit any secret or `.env` content.
+
+**Decisions and why**
+- Reused this project's own existing `ingest/extract_text.py` utility for corpus text extraction rather than writing new extraction logic, per the task's explicit preference and this project's own discipline against re-implementing already-reviewed pipeline components.
+- Kept `selected_rows.csv` free of any model-answer-shaped column, since dry-run mode never calls the proxy and there is no model output to record — documented this explicitly in the revision memo so a future session does not "fix" this by adding a placeholder answer field.
+- Designed target-term lists to mix generic single words with specific multi-word phrases deliberately, after confirming empirically (via the Arlington dry-run) that generic single-word terms can be consumed by early, low-value matches (a table of contents) before the per-term match cap is reached — documented this as a real, known limitation rather than silently accepting a lower-quality result.
+- Made live mode skip (not error on, not send an empty prompt for) any row with zero evidence windows, so a future live run cannot accidentally burn a call on a row this scaffold's own evidence search already flagged as unlikely to be useful.
+
+**Surprises/breakage**
+- No repo breakage from this session. Validation and coverage audit both passed cleanly and remained byte-for-byte unchanged from the pre-session baseline.
+- No significant surprises; the revision closed a gap this project's own evidentiary discipline (verbatim capture, not RA summary) would have flagged in any other context, and the dry-run tests confirmed the fix works as intended on the first attempt for every pilot set tried.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+Both outputs are identical, in every count, to the pre-session baseline — expected, since no row was added, edited, or removed from `data/contracts.csv` or `data/city_coverage.csv` this session.
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+**`data/contracts.csv` and `data/city_coverage.csv` were NOT edited this session. `corpus/` and `inbox/` were not modified (only read). No GABRIEL calls occurred. No live model/API/Harvard-proxy calls occurred — only dry-run (no-network-call) modes were exercised. No secrets, keys, or `.env` contents were printed, inspected, or committed. The prior Harvard Proxy calling-scaffold session (`dd94c1b`) was already committed excluding `tmp/`; confirmed, not recommitted.**
+
+**Next steps**
+1. A user/PI should review the newest dry-run's `evidence_windows.csv` and `prompt_preview.md` for each pilot set of interest, confirming the evidence windows actually contain passages relevant to each source-need question, before any live pilot is considered.
+2. If the evidence windows are confirmed relevant, a live pilot should proceed at 1-2 calls (not the full 3-call ceiling) until the prompt's requested structured-output schema and this scaffold's response-parsing logic are reviewed together.
+3. Do not run `--live` from any future session without that explicit, out-of-band approval, and do not begin any broader GABRIEL run, OEWS/municipal descriptive baseline build, or production extraction run from this state.
+
+---
+
 ## 2026-07-07 (Harvard Proxy calling-scaffold and dry-run safety review session) - Bounded pilot harness created; dry-run only, no live calls
 
 **Did**

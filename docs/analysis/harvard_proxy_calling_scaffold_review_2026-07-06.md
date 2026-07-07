@@ -61,6 +61,7 @@
 - A `parsed_outputs.csv` (live mode only, only if parsing logic exists) — structured, tabular results.
 - Token/cost logging via the existing `scripts/log_api_spend.py` utility, in live mode only.
 - Never write the subscription key, or any other secret, to any of the above files.
+- **Revised 2026-07-07:** `selected_rows.csv` should record row-level identifying fields plus an evidence-window count, and a new `evidence_windows.csv` should record the actual bounded corpus text passages a prompt would use — a single `data/contracts.csv` metadata field (e.g. `total_comp_note`) is an RA-written administrative summary, not a substitute for the document's own text, and is insufficient for answering a source-need question that depends on the document's body content. See `docs/analysis/harvard_proxy_evidence_window_scaffold_revision_2026-07-07.md` for the full diagnosis and the revised scaffold's evidence-window design.
 
 ## 7. What live-call authorization should look like
 

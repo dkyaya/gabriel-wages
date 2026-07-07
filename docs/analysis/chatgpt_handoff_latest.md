@@ -2,7 +2,66 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-07T08:00:00-04:00`
+Last updated: `2026-07-07T12:00:00-04:00`
+
+---
+
+## 2026-07-07T12:00:00-04:00 - Harvard Proxy pilot scaffold revised to use corpus evidence windows
+
+**Commit:** pending in current session (`Revise Harvard Proxy pilot evidence windows`)
+
+### Current State After This Entry
+
+- Confirmed the prior Harvard Proxy calling-scaffold session's changes (`dd94c1b`, "Add Harvard Proxy pilot scaffold") were already committed, with only `tmp/` left untracked at session start; no recommit was needed or performed.
+- Created:
+  - `docs/analysis/harvard_proxy_evidence_window_scaffold_revision_2026-07-07.md`
+- Rewrote:
+  - `scripts/proxy_pilot_must_have_sources.py`
+- Updated:
+  - `docs/analysis/harvard_proxy_pilot_usage_2026-07-06.md`
+  - `docs/analysis/harvard_proxy_calling_scaffold_review_2026-07-06.md`
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- **`data/contracts.csv` and `data/city_coverage.csv` were NOT edited.** `corpus/` and `inbox/` were **not** modified — evidence-window construction only reads already-collected corpus files. No GABRIEL calls, model/API calls, or Harvard-proxy calls were made. No secret, key, or `.env` content was printed, inspected, or committed.
+
+### What This New Package Does
+
+- **Diagnosed a genuine gap in the prior scaffold:** it built prompts from a single `data/contracts.csv` metadata field (`total_comp_note` — an RA-written administrative summary), not the corpus document's own text, which is insufficient for source-need questions that depend on a document's body content (dispatcher staffing rules, custodial wage classifications, sanitation/transfer-station language). See `harvard_proxy_evidence_window_scaffold_revision_2026-07-07.md` for the full diagnosis.
+- **Rewrote `scripts/proxy_pilot_must_have_sources.py`** to build dry-run (and any future live) prompts from bounded **corpus evidence windows**: for each selected row, the script resolves its `full_text_path`, extracts text via this project's existing `ingest/extract_text.py` utility (text-layer-first, local OCR fallback — no network access), searches for a curated list of target terms, and builds ~200-char-before/after windows around each match. A new `evidence_windows.csv` output records every window; `prompt_preview.md` now embeds these windows, not a metadata snippet.
+- **Added named pilot sets** via `--pilot-set`: `must_have` (default, 4 rows — Arlington dispatcher, Franklin custodial, Seekonk sanitation, Wayland nurse_health/dispatch), `dispatch_custodial` (2 rows), `sanitation_seekonk` (1 row), `custodial_only` (Franklin + Georgetown, 2 rows). Added `--contract-id` plus optional `--terms` for one-off exploratory dry-runs against any row not yet in a named set.
+- **Live mode now skips any row with zero evidence windows** (logged as `skipped_no_evidence`) rather than sending an empty or near-empty prompt to the proxy.
+- **All safety properties from the prior session are unchanged:** dry-run remains the default; `--live` still requires an explicit `--limit` of 1-3 (refuses otherwise, before creating any output or reading any credential — re-tested and confirmed this session); the subscription key is still read only inside the live-call function.
+- **Dry-run tests confirmed the fix works:** ran `--pilot-set dispatch_custodial --limit 2` (15 evidence windows each for Arlington/Franklin), `--pilot-set sanitation_seekonk --limit 1` (5 windows for Seekonk), `--pilot-set must_have --limit 4` (all 4 rows, including a successful local OCR fallback for Wayland's `ocr_messy` file — 15 windows found), and `--contract-id ma_georgetown_other_2020 --terms ...` (9 windows). Directly inspected the outputs and confirmed real, verbatim corpus text is embedded in `prompt_preview.md` — for Arlington, confirmed the specific multi-word terms ("Lead Dispatcher," "complement," "EMD") successfully surfaced the substantive Article XXI staffing-complement and EMD-stipend content, while noting (as a documented, not hidden, limitation) that a few generic single-word terms were consumed by earlier table-of-contents matches first.
+
+### Validation/Audit Results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+Both outputs are identical, in every count, to the pre-session baseline — no row was added, edited, or removed from `data/contracts.csv` or `data/city_coverage.csv` this session.
+
+### Recommended Next Step
+
+1. A user/PI should review the newest dry-run's `evidence_windows.csv` and `prompt_preview.md` for each pilot set of interest before any live pilot is considered.
+2. If evidence windows are confirmed relevant, a live pilot should proceed at 1-2 calls (not the full 3-call ceiling) until the response-parsing logic is reviewed against the prompt's requested schema.
+3. Do not run `--live` from any future session without explicit, out-of-band approval.
+
+### Notes For ChatGPT Review
+
+- Do not treat `selected_rows.csv`'s absence of a model-answer column as a bug — dry-run mode never calls the proxy, so there is no model output to record; this is intentional and documented in the revision memo §3.
+- An empty `evidence_windows.csv` entry for a given row is a real, meaningful signal (the curated search terms found nothing), not proof the underlying document lacks relevant content — see the revision memo §6 for this precision-over-recall caveat before treating any zero-match row as a settled finding.
+- The Wayland row (`ma_wayland_other_2021`) requires local OCR via `ingest/extract_text.py` and is the slowest row in the `must_have` pilot set to build evidence windows for; this is expected and was tested successfully this session.
+- No secret, key, or `.env` content was printed, inspected, or committed at any point in this session.
 
 ---
 
