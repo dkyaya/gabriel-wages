@@ -2,7 +2,62 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-07T04:00:00-04:00`
+Last updated: `2026-07-07T08:00:00-04:00`
+
+---
+
+## 2026-07-07T08:00:00-04:00 - Harvard Proxy calling-scaffold and dry-run safety review completed
+
+**Commit:** pending in current session (`Add Harvard Proxy pilot scaffold`)
+
+### Current State After This Entry
+
+- Confirmed the prior PI-facing report planning session's changes (`aa13fa5`, "Draft safety and non-safety wage mechanisms report") were already committed, with only `tmp/` left untracked at session start; no recommit was needed or performed.
+- Created:
+  - `docs/analysis/harvard_proxy_calling_scaffold_review_2026-07-06.md`
+  - `scripts/proxy_pilot_must_have_sources.py`
+  - `docs/analysis/harvard_proxy_pilot_usage_2026-07-06.md`
+- Updated:
+  - `docs/analysis/chatgpt_handoff_latest.md`
+  - `PROGRESS.md`
+- **`data/contracts.csv` and `data/city_coverage.csv` were NOT edited.** `corpus/` and `inbox/` were **not** modified. **No GABRIEL run occurred. No live model/API/Harvard-proxy call occurred — only a genuine dry-run (no-network-call) mode was exercised.** No secret, key, or `.env` content was printed, inspected, or committed at any point in this session.
+
+### What This New Package Does
+
+- **Calling-scaffold review** (`harvard_proxy_calling_scaffold_review_2026-07-06.md`): inventories every existing script/doc referencing the Harvard proxy, OpenAI, or GABRIEL (`analysis/gabriel_pilot/run_gabriel.py`, `run_gabriel_v9.py`, `run_gabriel_v10_gold_dryrun.py`, the built-in-web-search smoke/demo/diagnostic scripts, `ingest/extract_spans.py`'s `llm_pass()`, `scripts/log_api_spend.py`). Key finding: **no existing script has a genuine no-network-call dry-run mode**, and none enforces a row-count ceiling on live calls — one script's name (`run_gabriel_v10_gold_dryrun.py`) is misleading, since it still makes live calls despite the "dryrun" filename (it means "bounded to an 11-row gold set," not "no API call").
+- **Pilot scaffold** (`scripts/proxy_pilot_must_have_sources.py`): a new, safety-first harness closing both gaps identified above. Defaults to dry-run with zero network calls and zero credential reads. Requires `--live` plus an explicit `--limit` of 1-3 for any real call (refuses immediately, before any output directory is created, if `--limit` is missing or exceeds 3). Reads `HARVARD_SUBSCRIPTION_KEY` only inside the live-call function, never at import time. Writes every run to a fresh, timestamped `tmp/proxy_pilots/YYYY-MM-DD_HHMMSS/` directory (refusing to overwrite a prior run), with `run_config.json`, `selected_rows.csv`, and `prompt_preview.md` written in every mode, and `responses.jsonl`/`parsed_outputs.csv`/`live_run_log.txt` written only in live mode. The hardcoded pilot set ties directly to the still-open Seekonk sanitation Appendix/job-description "must-have" item from the prior all-groups source-needs audit, plus two calibration examples (Arlington dispatcher wage detail, Wayland nurse_health credential detail).
+- **Usage doc** (`harvard_proxy_pilot_usage_2026-07-06.md`): dry-run command examples; live command examples explicitly marked "do not run unless explicitly approved"; an expected-outputs table; a pre-live-run safety checklist; how to inspect outputs without ever printing `.env`/secrets; how not to commit `tmp/` pilot outputs; how to choose future pilot rows.
+- **Tested directly this session:** `python scripts/proxy_pilot_must_have_sources.py --dry-run --limit 2` ran successfully and confirmed (in its own log) that no network call was made and no key was read. Also directly confirmed `--live` with no `--limit`, and `--live --limit 5`, both refuse immediately with no output directory created — the safety gates were verified to work before any live call was ever attempted.
+
+### Validation/Audit Results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+Both outputs are identical, in every count, to the pre-session baseline — no row was added, edited, or removed from `data/contracts.csv` or `data/city_coverage.csv` this session.
+
+### Recommended Next Step
+
+1. If the user/PI wants to test this scaffold against a real Harvard Proxy call, the recommended next step is an explicitly approved live pilot of at most 1-3 calls, starting with the Seekonk sanitation Appendix/job-description confirmation.
+2. Do not run `--live` from any future session without that explicit, out-of-band approval.
+3. Do not begin any broader GABRIEL run, OEWS/municipal descriptive baseline build, or production extraction run from this state.
+
+### Notes For ChatGPT Review
+
+- This scaffold is deliberately narrow (3-row live ceiling, hardcoded pilot set drawing only from already-collected `data/contracts.csv` fields) — it is not a general-purpose GABRIEL replacement and should not be extended to a larger row count or a different attribute without a fresh review.
+- Do not treat any output this scaffold produces (even from a future approved live run) as production data — its `parsed_outputs.csv` is explicitly a pilot artifact, not a validated corpus finding, and should not be used to edit `data/contracts.csv` directly.
+- The subscription key is read only inside `_run_live()` in the new script — if extending this scaffold in the future, preserve that discipline rather than reading the key at module load time.
+- No secret, key, or `.env` content was printed, inspected, or committed at any point in this session.
 
 ---
 
