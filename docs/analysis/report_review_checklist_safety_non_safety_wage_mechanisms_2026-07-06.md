@@ -94,6 +94,12 @@
 - Houston fire full-CBA target remains unresolved: no official houstontx.gov copy of the full executed HPFFA/IAFF Local 341 CBA was located, only a Council presentation slide deck and a non-official news mirror.
 - Austin now has two unmatched safety units (police, fire) and still no matched non-safety comparison unit — the most consequential remaining coverage gap in the Texas/Ohio batch.
 
+## 7H. Houston Fire source resolved and ingested (added 2026-07-08)
+
+- A narrow follow-up run located and ingested a genuine 2026 arbitration award (`tx_houston_fire_2024`, AAA Case No. 01-25-0005-2917, HPFFA Local 341 v. City of Houston) plus its incorporated Settlement Agreement and a clarifying MOU, resolving the last remaining held-out Texas/Ohio target. See `houston_fire_source_resolution_2026-07-08.csv` and `houston_fire_source_resolution_summary_2026-07-08.md`.
+- This is grievance/contract-interpretation arbitration under CBA Article 14 — explicitly **not** the Sec.174.1535 compulsory interest-arbitration mechanism; `interest_arbitration_flag=0` on the row.
+- **Houston is now the first Texas/Ohio city with all three institutional tiers (police, fire, non-safety) matched** in a healthy overlap-cycle pair. The full base-CBA text (all ~30 articles) remains unlocated from an official City of Houston source but is no longer blocking, given the substantive verbatim wage-mechanism text already captured.
+
 ## 7. Artifact-generation readiness checklist for later PDF/DOCX creation
 
 - [ ] PI has reviewed and approved the group-retention frame and central-claim framing (Section 1 above).

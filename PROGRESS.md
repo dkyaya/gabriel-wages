@@ -6,6 +6,72 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-08 15:12 EDT (Houston Fire source resolution) - Genuine 2026 arbitration award found and ingested; Houston now fully matched across all three tiers
+
+**Did**
+- Ran a narrow, single-target follow-up to the Texas/Ohio held-out-target run (commit `6ce5080`), focused exclusively on resolving Houston Fire — the last remaining held-out Texas/Ohio target.
+- Confirmed repo state clean at session start (only untracked `tmp/`), latest commit `6ce5080`, and pre-session counts of 42 contracts / 42 coverage rows, matching expectations.
+- Re-checked houstontx.gov's HR/legal folders and HPFFA's own official site (`local341.org`, no public CBA/documents section) — no official full base-CBA text found, consistent with prior sessions.
+- **Found a new lead via web search:** `hfdcoa.org`, the official site of the Houston Fire Department Chief Officers Association (HFOA) — a real, distinct professional association representing chief officers, separate from HPFFA (rank-and-file). Its `/cba-2024-2029/` page hosts five documents that are actually HPFFA/City-of-Houston labor-relations documents, not HFOA's own agreement: an MOU (2024-06-11), an Interim Amendment, a wage-schedule exhibit, a Settlement Agreement and Release (2026), and an Arbitration Opinion and Award (2026-02-27).
+- Downloaded and text-extracted all five for verification (via `ingest/extract_text.py`, text-layer and OCR fallback). Confirmed the **Arbitration Opinion and Award** (AAA Case No. 01-25-0005-2917, HPFFA Local 341 v. City of Houston, Arbitrator William E. Hartsfield) is a genuine, complete, 17-page grievance-arbitration ruling on Houston Fire's 2024-2029 CBA Article 17 Sec.2 "Three Percent Pay Escalator," quoting substantial CBA text verbatim (Articles 2, 6, 14, 17, 25) and explicitly incorporating a **Settlement Agreement and Release** (same case number, "Attachment 1... incorporated by this reference") resolving companion FY26 monetary grievances, plus a clarifying **MOU** cited by the Award to interpret the escalator clause. Independently corroborated by ABC13 Houston news reporting of the same ruling.
+- Fetched and stored all three (Award, Settlement, MOU) under `corpus/tx_houston/`; left the Interim Amendment and wage-schedule exhibit unfetched (verified genuine but not incorporated by reference into the ingested chain, so out of this run's necessary-companion scope).
+- Created:
+  - `docs/analysis/houston_fire_source_resolution_preflight_2026-07-08.md`
+  - `docs/analysis/houston_fire_source_resolution_2026-07-08.csv`
+  - `docs/analysis/houston_fire_fetch_manifest_2026-07-08.csv`
+  - `docs/analysis/houston_fire_source_identity_audit_2026-07-08.md`
+  - `docs/analysis/houston_fire_mechanism_excerpt_extraction_2026-07-08.md`
+  - `docs/analysis/houston_fire_mechanism_excerpt_extraction_2026-07-08.csv`
+  - `docs/analysis/houston_fire_metadata_addition_2026-07-08.csv`
+  - `docs/analysis/houston_fire_source_resolution_summary_2026-07-08.md`
+- Added one causal row to `data/contracts.csv` (`tx_houston_fire_2024`, source_type=arbitration_award) and one matching row to `data/city_coverage.csv`.
+- Lightly updated `all_groups_source_needs_2026-07-06.csv` (1 new row), the report review checklist (new Section 7H), the wage-mechanism evidence checklist (row-count refresh + pointer), and `texas_ohio_approved_source_plan_2026-07-08.csv` (both the Houston-fire approved row and the HFOA backup row's caveats updated).
+
+**Decisions and why**
+- Classified the primary ingested document as `source_type=arbitration_award`, **not** `cba`, and left `interest_arbitration_flag=0` — this is grievance/contract-interpretation arbitration under the CBA's own Article 14 procedure, not the Sec.174.1535 population-triggered compulsory *interest* arbitration mechanism. The distinction is documented in full in `binding_arbitration_statute` and the identity audit so it is never conflated in later analysis.
+- Fetched three (not one) companion documents — justified under the task's "clearly parts of the same operative agreement, both necessary" exception, since the Award's own text explicitly incorporates the Settlement ("Attachment 1... incorporated by this reference for all purposes") and cites the MOU to interpret the very clause at issue.
+- Declined to fetch the Interim Amendment or wage-schedule exhibit despite verifying both are genuine, to avoid stretching the "necessary companions" exception further than the documents' own cross-references justify; `base_wage_entry`/`base_wage_top` left blank rather than populated from an unfetched source.
+- Treated `hfdcoa.org` as `official_or_high_quality_source=yes` on the strength of internal consistency (real case number, dates, named Houston officials, a genuine Houston City Hall Annex address) plus independent ABC13 news corroboration — not because HFOA is itself a party to the HPFFA/City agreement it happens to host.
+
+**Surprises/breakage**
+- The most surprising find: a fire *officers'* association's website hosting the rank-and-file union's arbitration/settlement documents — an unusual but, on inspection, well-corroborated cross-hosting arrangement, not a mismatch or scraping artifact.
+- This also incidentally resolved a smaller open question flagged since the very first Texas/Ohio session: the HFOA-vs-HPFFA relationship. HFOA is confirmed a genuinely separate chief-officers' union, but no distinct HFOA CBA was located — only HPFFA documents mirrored on HFOA's site.
+- No repo breakage. Validation and coverage audit passed.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 43 | discourse: 0 | coverage: 43 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 43 | discourse: 0 | coverage: 43 | city_attributes: 3 | cities: 13
+healthy matched pairs: 16
+  exact-cycle: 9
+  overlap-cycle: 7
+exploratory adjacent matches: 2
+safety units unmatched: 5
+```
+
+**Corpus snapshot**
+```text
+contracts: 43 | discourse: 0 | coverage: 43 | city_attributes: 3 | cities: 13
+healthy matched pairs: 16
+  exact-cycle: 9
+  overlap-cycle: 7
+exploratory adjacent matches: 2
+safety units unmatched: 5
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012,
+  ma_newton_police_2015, tx_austin_police_2024, tx_austin_fire_2023
+```
+
+**No GABRIEL calls. No Harvard Proxy calls. No model/API calls from project scripts. No PRRs/FOIA. No statutes, budgets, pay plans, city pages, news stories, or legal pages were ingested as causal rows. The source was correctly classified as `arbitration_award` and not conflated with Sec.174.1535 compulsory interest arbitration. `docs/schema.md` was not modified.**
+
+**Recommended next step**
+Houston Fire is resolved for this project's purposes — recommend moving to a tiny GABRIEL/codify pilot next, now that Houston has all three matched tiers (the first Texas/Ohio city to reach this state). The full base-CBA text remains a lower-priority open item that does not block a pilot, given the substantive verbatim wage-mechanism text already captured (compensation schedule, grievance-arbitration clause, training/certification pay, total compensation).
+
+---
+
 ## 2026-07-08 13:48 EDT (Texas/Ohio held-out-target resolution) - 1 source resolved and fetched (Austin fire); Houston fire remains unresolved; Austin non-safety design question closed
 
 **Did**
