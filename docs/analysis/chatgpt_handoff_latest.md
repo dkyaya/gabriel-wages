@@ -2,7 +2,66 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-08T12:00:00-04:00`
+Last updated: `2026-07-08T16:00:00-04:00`
+
+---
+
+## 2026-07-08T16:00:00-04:00 - Texas/Ohio multi-city pre-ingestion scan; first ingestion batch recommended (Houston+Austin, Columbus+Cleveland); no acquisition, no data edits
+
+**Commit:** pending in current session (`Compare Texas and Ohio candidate cities`)
+
+### Current State After This Entry
+
+- Confirmed the prior Texas/Ohio legal-followup session's changes (`9aee8fd`, "Audit Texas and Ohio source targets") were already committed, with only `tmp/` left untracked at session start; no recommit was needed or performed.
+- Broadened the prior Houston/Columbus-focused assessment across 5 additional Texas cities (San Antonio, Dallas, Austin, Fort Worth, El Paso) and 5 additional Ohio cities (Cleveland, Cincinnati, Toledo, Akron, Dayton), specifically to test whether the earlier recommendation was overfit to two population-exceptional cities.
+- Created:
+  - `docs/analysis/texas_ohio_multicity_pre_ingestion_scan_2026-07-08.md`
+  - `docs/analysis/texas_ohio_multicity_source_targets_2026-07-08.csv`
+- Updated (light-to-moderate touches):
+  - `docs/analysis/texas_ohio_source_ingestion_audit_2026-07-08.csv` (first_batch/backup designations added; 6 new rows for Austin/Cleveland/Toledo)
+  - `docs/analysis/texas_ohio_candidate_source_targets_2026-07-07.csv` (Austin/Cleveland upgraded to must_have)
+  - `docs/analysis/texas_ohio_legal_source_audit_2026-07-07.csv` (4 rows resolved, 3 new rows added)
+  - `docs/analysis/all_groups_source_needs_2026-07-06.csv` (2 rows revised, 1 added)
+  - `docs/analysis/report_review_checklist_safety_non_safety_wage_mechanisms_2026-07-06.md` (new Section 7C)
+  - `PROGRESS.md`
+- **`data/contracts.csv` and `data/city_coverage.csv` were NOT edited.** `corpus/` and `inbox/` were **not** touched. No GABRIEL calls, model/API calls, or Harvard Proxy calls were made. No document was downloaded or stored as project data — every source is a citation/URL. No ingestion occurred. No PRR was recommended. No causal claim was made about Texas or Ohio wage outcomes, and no single city was treated as representative of its state.
+
+### What This New Package Does
+
+- **Multi-city scan memo** (`texas_ohio_multicity_pre_ingestion_scan_2026-07-08.md`): the headline finding is that **the Houston fire-full-bargaining(Ch.174)/police-meet-and-confer(Ch.142) split is NOT Houston-specific** — Austin and Fort Worth both show the identical split, confirmed via each city's own official labor-relations pages, meaning the general institutional pattern generalizes across a population range from ~980,000 to ~2.4 million. What remains genuinely Houston-only (confirmed via the prior session's direct statute reads) is the *compulsory* nature of its fire arbitration (§174.1535, population-gated ≥1.9M) and the *existence* of a statutory non-safety channel (Ch.146, population-gated ≥1.5M). Dallas shows a third pattern (joint police+fire meet-and-confer, no Ch.174 adoption). Austin separately codified a first-of-its-kind non-statutory AFSCME Local 1624 "consultation agreement" in February 2026 — the closest non-safety analogue to Houston's HOPE found among sub-threshold cities. On the Ohio side: Cleveland and Cincinnati were both found to have all four institutional tiers (police, fire, 1-2 non-safety unions) fully documented on official portals, with Cleveland's structure arguably more complete than Columbus's own; Toledo shows the richest non-safety union variety (3 AFSCME locals + Teamsters + UAW) of any city in either state; Akron remains the weakest-documented Ohio city; Dayton is moderately confirmed, correcting the prior session's overly pessimistic "no portal found" assessment.
+- **Multi-city source-target CSV** (`texas_ohio_multicity_source_targets_2026-07-08.csv`): 12 rows (6 TX cities, 6 OH cities) with controlled `ingestion_recommendation` (first_batch/backup/context_only/defer/reject) and `priority` ratings.
+- **Bottom-line recommendation:** first ingestion batch = **Houston + Austin (Texas), Columbus + Cleveland (Ohio)** — pairing one population-exceptional city with one representative-size city in each state. Backups: Fort Worth then San Antonio (TX); Cincinnati then Toledo (OH). Deferred, not rejected: Dallas, El Paso, Akron, Dayton.
+
+### Validation/Audit Results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+Both outputs are identical, in every count, to the pre-session baseline — no row was added, edited, or removed from `data/contracts.csv` or `data/city_coverage.csv` this session.
+
+### Recommended Next Step
+
+1. Route the multi-city scan memo and source-target table, plus all revised tables, to the PI for review.
+2. If approved, begin acquisition with the recommended first batch (Houston+Austin, Columbus+Cleveland), CBAs/agreements first, budget/pay-plan documents second, impasse/award documents third.
+3. Resolve smaller pre-ingestion follow-ups already flagged (HFOA-vs-HPFFA relationship; non-safety unions' occupation-class composition in Columbus/Cleveland/Cincinnati; current-version confirmation for Austin/Fort Worth/Dallas agreements) before ingestion begins.
+4. Do not begin GABRIEL, Harvard Proxy live calls, ingestion, or any OEWS/BLS build from this state.
+
+### Notes For ChatGPT Review
+
+- The fire/police institutional split (Ch.174 fire + Ch.142 police) recurring in Houston, Austin, AND Fort Worth is the single most important finding of this session for the project's design — it means the earlier Houston-only recommendation was not an overfitting risk in the way the task worried it might be, at least for the police/fire side; the non-safety side remains genuinely harder to generalize (Houston's Ch.146 channel is still population-unique).
+- Do not treat El Paso's institutional status as independently verified — it rests on a secondary bill-analysis source only, and was added purely for breadth, not as a near-term acquisition target.
+- Austin's AFSCME Local 1624 consultation agreement (Feb. 2026) is very new and not yet confirmed to produce negotiated wage text — treat it as a design question (does it even qualify as a matched non-safety source under this project's CBA verification standard?) before treating it as a confirmed acquisition target.
+- No document was downloaded or stored as project data this session; every source in the new memo and CSV is a citation/URL.
 
 ---
 
