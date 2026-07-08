@@ -2,7 +2,67 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-07T12:00:00-04:00`
+Last updated: `2026-07-07T16:00:00-04:00`
+
+---
+
+## 2026-07-07T16:00:00-04:00 - Texas/Ohio state-comparison scoping completed (PI request); no acquisition, no data edits
+
+**Commit:** pending in current session (`Scope Texas and Ohio comparison`)
+
+### Current State After This Entry
+
+- Confirmed the prior Harvard Proxy evidence-window scaffold revision session's changes (`911648f`, "Revise Harvard Proxy pilot evidence windows") were already committed, with only `tmp/` left untracked at session start; no recommit was needed or performed.
+- Responded to an explicit PI request (quoted in full in the new institutional-scan memo) to look beyond Massachusetts, with Texas and Ohio suggested by name, to test whether this project's safety/non-safety wage-mechanism findings depend on Massachusetts's JLMC arbitration statute specifically.
+- Created:
+  - `docs/analysis/texas_ohio_state_comparison_institutional_scan_2026-07-07.md`
+  - `docs/analysis/texas_ohio_candidate_source_targets_2026-07-07.csv`
+  - `docs/analysis/texas_ohio_legal_source_audit_2026-07-07.csv`
+  - `docs/analysis/report_addendum_state_comparison_plan_2026-07-07.md`
+- Updated (light touches):
+  - `docs/analysis/all_groups_source_needs_2026-07-06.csv` (4 new cross-cutting rows; no existing rows changed)
+  - `docs/analysis/report_review_checklist_safety_non_safety_wage_mechanisms_2026-07-06.md` (new Section 7A)
+  - `PROGRESS.md`
+- **`data/contracts.csv` and `data/city_coverage.csv` were NOT edited.** `corpus/` and `inbox/` were **not** touched. No GABRIEL calls, model/API calls, or Harvard Proxy calls were made. No document was downloaded or stored — every Texas/Ohio source recorded this session is a citation/URL in a memo or CSV, not a fetched full-text file. No ingestion occurred. No PRR was recommended. No causal claim was made about Texas or Ohio wage outcomes.
+
+### What This New Package Does
+
+- **Institutional scan** (`texas_ohio_state_comparison_institutional_scan_2026-07-07.md`): full institutional profiles for Massachusetts (baseline), Texas, and Ohio, a comparison table, and hypothesis implications. Key Texas finding: Gov't Code Ch. 617 prohibits public-sector collective bargaining generally; police/fire get a narrow, locally-adopted carve-out (Ch. 174 full bargaining, confirmed non-compulsory arbitration per §174.163/174.153; or Ch. 142 meet-and-confer, no duty to agree) that varies city-by-city (San Antonio: Ch. 174; Austin/Dallas/Fort Worth/Houston: Ch. 142); non-safety employees generally have no bargaining channel absent a separate Ch. 146 adoption (unconfirmed per city), with Houston's non-safety wages set via civil-service classification instead. Key Ohio finding: ORC Ch. 4117 is one statewide statute for all public employees; the safety/non-safety split is internal to it — ORC 4117.14(D)(1)'s no-strike list (police, fire, and several other safety-adjacent categories including some dispatchers/nurses) routes to compulsory binding conciliation, while other public employees retain a conditional strike right instead. SERB's centralized, publicly searchable CBA/fact-finding/conciliation archive (since 2012) is a stronger centralized-records resource than anything available for this project's Massachusetts cities.
+- **Candidate source-target table** (`texas_ohio_candidate_source_targets_2026-07-07.csv`): 11 rows — 5 Texas cities (Houston, San Antonio, Austin, Dallas, Fort Worth), 5 Ohio cities (Columbus, Cincinnati, Cleveland, Dayton, Akron), plus a statewide Ohio SERB-archive row — each rated on data availability, comparison value, priority, and fetch-later status. Top picks: Houston and Columbus.
+- **Legal/source citation audit** (`texas_ohio_legal_source_audit_2026-07-07.csv`): 20 rows auditing specific legal claims by source type (state statute, state agency, municipal source, legal secondary) and confidence, flagging two open Texas follow-ups (§174.1535 "Mandatory Arbitration" text; Ch. 146 non-safety-adoption status per candidate city) and one Houston sourcing note (the only located Fire CBA copy is news-hosted, not an official city page — needs replacement before acquisition).
+- **Report addendum plan** (`report_addendum_state_comparison_plan_2026-07-07.md`): recommends a short, clearly-labeled main-text paragraph (proposed language included) plus an appendix pointer for the existing report draft — not a full new section or Evidence Map row, since Texas/Ohio have zero corpus rows to date. States explicitly that no group/mechanism conclusion in the existing report draft changes as a result of this session.
+- **Source-needs and review-checklist updates:** `all_groups_source_needs_2026-07-06.csv` gained 4 new cross-cutting rows (no existing rows touched); `report_review_checklist_safety_non_safety_wage_mechanisms_2026-07-06.md` gained a new Section 7A summarizing the PI request, the incorporation decision needed, the acquisition/citation-audit prerequisite, and a caution against implying Massachusetts is nationally representative.
+
+### Validation/Audit Results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+Both outputs are identical, in every count, to the pre-session baseline — no row was added, edited, or removed from `data/contracts.csv` or `data/city_coverage.csv` this session.
+
+### Recommended Next Step
+
+1. Route all four new files and the updated checklist to the PI for review.
+2. If approved, prioritize Houston (TX) and Columbus (OH) as first acquisition targets, each requiring a matched non-safety comparison unit before satisfying this project's CBA source-verification standard.
+3. Resolve the two flagged Texas legal follow-ups (§174.1535 text; Ch. 146 adoption status per city) via a short, targeted citation-audit pass before acquisition.
+4. Do not begin GABRIEL, Harvard Proxy live calls, ingestion, or any OEWS/BLS build from this state.
+
+### Notes For ChatGPT Review
+
+- This session is explicitly scoping/source-planning only — no Texas or Ohio document was collected, fetched in full, or stored; every source in the new CSVs is a citation/URL.
+- Do not cite any Texas or Ohio institutional claim in this session's memos as more confident than the companion legal-source-audit CSV's own `current_confidence`/`needs_followup` columns indicate — several claims (Ch. 142/146 details, Dallas/Fort Worth meet-and-confer status, Cleveland's/Cincinnati's exact non-safety unit composition) rest on web-search synthesis, not a directly-fetched-and-read primary statute, and are flagged as such.
+- Do not treat Texas and Ohio as representative states, and do not extend any Massachusetts-corpus-based report conclusion to either state based on this session's institutional-law work alone.
+- The Houston Fire CBA copy located this session (interactive.khou.com) is news-hosted, not an official city source — replace with an official houstontx.gov copy before any future acquisition, per this project's preferred-source-family guidance.
 
 ---
 

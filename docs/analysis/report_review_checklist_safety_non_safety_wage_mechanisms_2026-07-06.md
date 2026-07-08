@@ -45,6 +45,13 @@
 4. Do you want a version of this report that includes a short "what this report does not claim" callout box near the front, given the emphasis on avoiding causal language?
 5. Should transit receive more or less space than the current draft gives it, given it is the group with the least direct evidence but arguably the most analytically interesting governance finding?
 
+## 7A. PI request: non-Massachusetts state comparison (added 2026-07-07)
+
+- The PI has asked to look beyond Massachusetts, specifically naming Texas and Ohio, to test whether this report's safety/non-safety findings depend on Massachusetts's JLMC arbitration statute specifically or reflect a more general public-safety institutional pattern. A bounded institutional-law scoping pass has been completed: `texas_ohio_state_comparison_institutional_scan_2026-07-07.md`, `texas_ohio_candidate_source_targets_2026-07-07.csv`, `texas_ohio_legal_source_audit_2026-07-07.csv`, and `report_addendum_state_comparison_plan_2026-07-07.md`.
+- **Need to decide how to incorporate this non-Massachusetts comparison.** The addendum plan recommends a short, clearly-labeled main-text paragraph (not a full section, not an Evidence Map row) plus an appendix pointer to the full scan — see `report_addendum_state_comparison_plan_2026-07-07.md` Sections 1-2 for the specific recommendation and proposed language.
+- **Any Texas/Ohio claim requires source acquisition and citation-audit follow-up before it can appear in the final report as more than a forward-looking note.** Zero Texas or Ohio documents have been collected into this project's corpus; two specific legal follow-ups remain open (Texas §174.1535's "Mandatory Arbitration" exception; Texas Chapter 146 non-safety-adoption status for candidate cities) — see `texas_ohio_legal_source_audit_2026-07-07.csv`.
+- **The report should avoid implying Massachusetts is representative of national or even multi-state patterns.** Texas and Ohio were selected as two additional, deliberately different contrast cases at the PI's suggestion, not as a representative or statistically sampled set of states — this framing guidance applies equally to the existing 14-state citation audit already in the report draft and to any future Texas/Ohio material.
+
 ## 7. Artifact-generation readiness checklist for later PDF/DOCX creation
 
 - [ ] PI has reviewed and approved the group-retention frame and central-claim framing (Section 1 above).
