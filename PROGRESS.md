@@ -6,6 +6,68 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-08 (Texas/Ohio first-batch live acquisition and extraction) - 9 sources fetched; 9 causal rows added; recognition-clause-first extraction completed
+
+**Did**
+- Completed the first controlled live Texas/Ohio source acquisition for the nine dry-run rows marked `ready_for_live_fetch` and `approved_first_batch`.
+- Fetched and stored nine public agreement PDFs under `corpus/tx_houston/`, `corpus/tx_austin/`, `corpus/oh_columbus/`, and `corpus/oh_cleveland/`.
+- Created:
+  - `docs/analysis/texas_ohio_live_ingestion_preflight_2026-07-08.md`
+  - `docs/analysis/texas_ohio_live_fetch_manifest_2026-07-08.csv`
+  - `docs/analysis/texas_ohio_source_identity_audit_2026-07-08.md`
+  - `docs/analysis/texas_ohio_recognition_clause_extraction_2026-07-08.md`
+  - `docs/analysis/texas_ohio_recognition_clause_extraction_2026-07-08.csv`
+  - `docs/analysis/texas_ohio_mechanism_excerpt_extraction_2026-07-08.md`
+  - `docs/analysis/texas_ohio_mechanism_excerpt_extraction_2026-07-08.csv`
+  - `docs/analysis/texas_ohio_contracts_metadata_additions_2026-07-08.csv`
+  - `docs/analysis/texas_ohio_ingestion_extraction_summary_2026-07-08.md`
+- Added nine causal agreement rows to `data/contracts.csv` and nine matching rows to `data/city_coverage.csv` per repo coverage convention.
+- Completed recognition-clause-first extraction for Houston HOPE/AFSCME Local 123, Columbus AFSCME Local 1632, and Cleveland AFSCME Local 100; all remain `occupation_class=other`.
+- Completed mechanism excerpt extraction as source-text audit work only.
+
+**Decisions and why**
+- Used `source_type=cba` for meet-and-confer agreements and CBAs because `docs/schema.md` has no separate meet-and-confer source type.
+- Kept broad non-safety units as `occupation_class=other` because recognition/classification text shows mixed municipal coverage rather than a single supported schema occupation.
+- Updated `data/city_coverage.csv` despite the task's caution because `AGENTS.md` makes coverage updates an explicit repo convention after contract additions, and the need was obvious once nine rows were added to `data/contracts.csv`.
+
+**Surprises/breakage**
+- Austin's official source page returned an HTML landing page first; the current agreement PDF was resolved from the page's official linked Widen original-file endpoint and stored at the proposed corpus path.
+- Cleveland IAFF Local 93 is image-heavy; full OCR was not pursued. Targeted local OCR confirmed source identity, recognition text, and selected mechanism text, and the row is marked `text_quality=ocr_messy`.
+- No repo breakage. Validation and coverage audit passed.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 41 | discourse: 0 | coverage: 41 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 41 | discourse: 0 | coverage: 41 | city_attributes: 3 | cities: 13
+healthy matched pairs: 15
+  exact-cycle: 9
+  overlap-cycle: 6
+exploratory adjacent matches: 2
+safety units unmatched: 4
+```
+
+**Corpus snapshot**
+```text
+contracts: 41 | discourse: 0 | coverage: 41 | city_attributes: 3 | cities: 13
+healthy matched pairs: 15
+  exact-cycle: 9
+  overlap-cycle: 6
+exploratory adjacent matches: 2
+safety units unmatched: 4
+unmatched safety obs_ids include: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015, tx_austin_police_2024
+```
+
+**No GABRIEL calls. No Harvard Proxy calls. No model/API calls from project scripts. No PRRs/FOIA. No context-only statutes, SERB pages, budgets, or pay plans were ingested. No wage panels or final PDF/DOCX artifacts were built.**
+
+**Recommended next step**
+Confirm remaining held-out Texas/Ohio targets before a second live acquisition: Houston fire full-CBA target, Austin fire cycle-specific target, Austin pay-plan URL, Cleveland budget/pay-plan URL, and the current Ohio SERB archive path. The highest-value next acquisition is Austin fire/non-safety confirmation so the new Austin police row does not remain unmatched.
+
+---
+
 ## 2026-07-08 (Texas/Ohio acquisition dry-run and recognition-clause-first audit) - Dry-run plan created; broad non-safety classification guardrail added; no acquisition
 
 **Did**

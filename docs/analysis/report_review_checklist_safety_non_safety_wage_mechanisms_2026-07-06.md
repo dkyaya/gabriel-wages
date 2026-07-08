@@ -80,6 +80,13 @@
 - **Controlled live acquisition can proceed only after user/PI approval.** The safest next step is a fetcher dry-run for the rows marked `ready_for_live_fetch`, while separately confirming Houston fire's full-CBA target, Austin fire's cycle-specific target, Austin and Cleveland pay-plan URLs, and the current SERB archive path.
 - **No source was downloaded, stored, ingested, or added to corpus/inbox in this dry-run.** This is still planning infrastructure, not production metadata.
 
+## 7F. Texas/Ohio first-batch live acquisition completed (added 2026-07-08)
+
+- The controlled first live acquisition fetched the nine dry-run rows marked `ready_for_live_fetch` and added nine causal agreement rows to `data/contracts.csv`; see `texas_ohio_live_fetch_manifest_2026-07-08.csv`, `texas_ohio_source_identity_audit_2026-07-08.md`, and `texas_ohio_contracts_metadata_additions_2026-07-08.csv`.
+- Recognition-clause-first extraction is complete for Houston HOPE/AFSCME Local 123, Columbus AFSCME Local 1632, and Cleveland AFSCME Local 100. All three remain `occupation_class=other` because their recognition/classification text covers broad mixed municipal units.
+- Mechanism excerpt extraction was recorded as source-text evidence only, not GABRIEL/model scoring. Austin police remains unmatched until an Austin fire or non-safety comparison source is confirmed; Cleveland police/fire currently have only adjacent non-safety coverage.
+- Remaining Texas/Ohio targets needing URL confirmation remain held out: Houston fire full-CBA target, Austin fire cycle-specific target, Austin pay-plan URL, Cleveland budget/pay-plan URL, and Ohio SERB archive path.
+
 ## 7. Artifact-generation readiness checklist for later PDF/DOCX creation
 
 - [ ] PI has reviewed and approved the group-retention frame and central-claim framing (Section 1 above).

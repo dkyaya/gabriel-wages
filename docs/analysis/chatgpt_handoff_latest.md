@@ -2,7 +2,91 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-08T21:00:00-04:00`
+Last updated: `2026-07-08T22:00:00-04:00`
+
+---
+
+## 2026-07-08T22:00:00-04:00 - Texas/Ohio first-batch live acquisition; 9 agreement rows added; recognition-clause-first extraction complete
+
+**Commit:** pending in current session (`Ingest Texas and Ohio first batch`)
+
+### Current State After This Entry
+
+- The prior acquisition dry-run commit was confirmed at session start (`71bb26c Prepare Texas and Ohio acquisition dry run`), with only `tmp/` untracked before edits.
+- Fetched exactly the nine rows from `texas_ohio_acquisition_dry_run_2026-07-08.csv` where `dry_run_status=ready_for_live_fetch`, `approval_status=approved_first_batch`, `store_now=no`, and `ingest_now=no`.
+- Added nine public agreement PDFs under:
+  - `corpus/tx_houston/`
+  - `corpus/tx_austin/`
+  - `corpus/oh_columbus/`
+  - `corpus/oh_cleveland/`
+- Added nine causal agreement rows to `data/contracts.csv` and nine matching rows to `data/city_coverage.csv`.
+- Created the live acquisition/extraction audit package:
+  - `docs/analysis/texas_ohio_live_ingestion_preflight_2026-07-08.md`
+  - `docs/analysis/texas_ohio_live_fetch_manifest_2026-07-08.csv`
+  - `docs/analysis/texas_ohio_source_identity_audit_2026-07-08.md`
+  - `docs/analysis/texas_ohio_recognition_clause_extraction_2026-07-08.md`
+  - `docs/analysis/texas_ohio_recognition_clause_extraction_2026-07-08.csv`
+  - `docs/analysis/texas_ohio_mechanism_excerpt_extraction_2026-07-08.md`
+  - `docs/analysis/texas_ohio_mechanism_excerpt_extraction_2026-07-08.csv`
+  - `docs/analysis/texas_ohio_contracts_metadata_additions_2026-07-08.csv`
+  - `docs/analysis/texas_ohio_ingestion_extraction_summary_2026-07-08.md`
+- Lightly updated `all_groups_source_needs_2026-07-06.csv`, the report review checklist, and the wage-mechanism evidence checklist with pointers to the completed live run.
+
+### Rows Added To `data/contracts.csv`
+
+- `tx_houston_police_2024` — Houston Police Officers' Union, `occupation_class=police`, cycle 2024-07-01 to 2025-06-30.
+- `tx_houston_other_2024` — HOPE/AFSCME Local 123, `occupation_class=other`, cycle 2024-11-01 to 2027-06-30.
+- `tx_austin_police_2024` — Austin Police Association, `occupation_class=police`, cycle 2024-10-29 to 2029-09-30.
+- `oh_columbus_police_2023` — FOP Capital City Lodge No. 9, `occupation_class=police`, cycle 2023-12-09 to 2026-12-08.
+- `oh_columbus_fire_2023` — IAFF Local 67, `occupation_class=fire`, cycle 2023-11-01 to 2026-10-31.
+- `oh_columbus_other_2024` — AFSCME Ohio Council 8 Local 1632, `occupation_class=other`, cycle 2024-04-01 to 2027-03-31.
+- `oh_cleveland_police_2025` — CPPA Patrol Officer Bargaining Unit, `occupation_class=police`, cycle 2025-04-01 to 2028-03-31.
+- `oh_cleveland_fire_2025` — Cleveland Fire Fighters Local 93, `occupation_class=fire`, cycle 2025-04-01 to 2028-03-31.
+- `oh_cleveland_other_2022` — AFSCME Ohio Council 8 Local 100, `occupation_class=other`, cycle 2022-04-01 to 2025-03-31.
+
+### Recognition-Clause-First Findings
+
+- Houston HOPE/AFSCME Local 123: bargaining unit consists of municipal employees excluding department directors, elected officials, and classified police/fire; keep `occupation_class=other`.
+- Columbus AFSCME Local 1632: recognition clause covers employees in Appendix A class titles and excludes uniformed police/fire, HR, civil-service, confidential, part-time, seasonal, and temporary categories; keep `occupation_class=other`.
+- Cleveland AFSCME Local 100: recognition/classification list spans administrative, building/housing, public health, public utilities, dispatcher/radio, airport/ARFF-adjacent, and other titles; keep `occupation_class=other`.
+
+### Source/Text Quality Notes
+
+- Austin police was resolved from the official Austin labor-relations page to the linked Widen original-file endpoint; stored file is the agreement PDF, not the page HTML.
+- Cleveland IAFF Local 93 is image-heavy. Full OCR was not pursued; targeted local OCR confirmed identity, recognition, and selected mechanism text. Metadata uses `text_quality=ocr_messy`.
+- All other fetched PDFs had usable text layers and are marked `text_quality=clean`.
+
+### Validation/Audit Results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 41 | discourse: 0 | coverage: 41 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 41 | discourse: 0 | coverage: 41 | city_attributes: 3 | cities: 13
+healthy matched pairs: 15
+  exact-cycle: 9
+  overlap-cycle: 6
+exploratory adjacent matches: 2
+safety units unmatched: 4
+```
+
+Austin police is now an unmatched safety row. Cleveland police/fire have adjacent, not healthy, non-safety matches because the Local 100 cycle ends in 2025 while the safety cycles start in 2025.
+
+### Boundaries Observed
+
+- No GABRIEL calls.
+- No Harvard Proxy calls.
+- No model/API calls from project scripts.
+- No PRRs/FOIA.
+- No budgets, pay plans, statutes, legal pages, or SERB archive pages were ingested as causal CBA rows.
+- No wage panels, OEWS/BLS data builds, or final PDF/DOCX artifacts.
+- No schema changes.
+
+### Recommended Next Step
+
+Before any second live acquisition, confirm the remaining held-out Texas/Ohio targets: Houston fire full-CBA target, Austin fire cycle-specific target, Austin pay-plan URL, Cleveland budget/pay-plan URL, and the current Ohio SERB archive path. Prioritize Austin fire/non-safety confirmation if the goal is to keep the new Austin police row from remaining unmatched.
 
 ---
 

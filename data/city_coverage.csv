@@ -31,3 +31,12 @@ ma_wayland,Wayland,MA,other,0,2021-2023,1,ma_wayland_other_2021,ingested via ocr
 ma_wayland,Wayland,MA,public_works,0,2020-2023,1,ma_wayland_public_works_2020,ingested via ocr
 ma_wayland,Wayland,MA,library,0,2020-2023,1,ma_wayland_library_2020,ingested via ocr
 ma_wayland,Wayland,MA,fire,1,2020-2023,1,ma_wayland_fire_jlmc_2020,ingested via text_layer
+tx_houston,Houston,TX,police,1,2024-2025,1,tx_houston_police_2024,Texas/Ohio first-batch live acquisition; coverage row added per repo convention after successful causal agreement metadata append.
+tx_houston,Houston,TX,other,0,2024-2027,1,tx_houston_other_2024,Texas/Ohio first-batch live acquisition; coverage row added per repo convention after successful causal agreement metadata append.
+tx_austin,Austin,TX,police,1,2024-2029,1,tx_austin_police_2024,Texas/Ohio first-batch live acquisition; coverage row added per repo convention after successful causal agreement metadata append.
+oh_columbus,Columbus,OH,police,1,2023-2026,1,oh_columbus_police_2023,Texas/Ohio first-batch live acquisition; coverage row added per repo convention after successful causal agreement metadata append.
+oh_columbus,Columbus,OH,fire,1,2023-2026,1,oh_columbus_fire_2023,Texas/Ohio first-batch live acquisition; coverage row added per repo convention after successful causal agreement metadata append.
+oh_columbus,Columbus,OH,other,0,2024-2027,1,oh_columbus_other_2024,Texas/Ohio first-batch live acquisition; coverage row added per repo convention after successful causal agreement metadata append.
+oh_cleveland,Cleveland,OH,police,1,2025-2028,1,oh_cleveland_police_2025,Texas/Ohio first-batch live acquisition; coverage row added per repo convention after successful causal agreement metadata append.
+oh_cleveland,Cleveland,OH,fire,1,2025-2028,1,oh_cleveland_fire_2025,Texas/Ohio first-batch live acquisition; coverage row added per repo convention after successful causal agreement metadata append.
+oh_cleveland,Cleveland,OH,other,0,2022-2025,1,oh_cleveland_other_2022,Texas/Ohio first-batch live acquisition; coverage row added per repo convention after successful causal agreement metadata append.
