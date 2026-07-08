@@ -100,6 +100,13 @@
 - This is grievance/contract-interpretation arbitration under CBA Article 14 — explicitly **not** the Sec.174.1535 compulsory interest-arbitration mechanism; `interest_arbitration_flag=0` on the row.
 - **Houston is now the first Texas/Ohio city with all three institutional tiers (police, fire, non-safety) matched** in a healthy overlap-cycle pair. The full base-CBA text (all ~30 articles) remains unlocated from an official City of Houston source but is no longer blocking, given the substantive verbatim wage-mechanism text already captured.
 
+## 7I. Texas second matched city completed: Austin EMS (added 2026-07-08)
+
+- Located and ingested a genuine meet-and-confer agreement between the City of Austin and the **Austin EMS Association** (`tx_austin_nursehealth_2023`, `occupation_class=nurse_health`, cycle 2023-10-01 to 2027-09-30), superseding the AFSCME Local 1624 consultation-policy dead end. See `texas_second_matched_city_source_resolution_2026-07-08.csv` and `texas_second_matched_city_summary_2026-07-08.md`.
+- **Austin police and fire both now show a healthy overlap-cycle match against EMS.** Texas now has two fully matched cities (Houston, Austin), on par with Ohio (Columbus, Cleveland) — the pre-GABRIEL design target is met.
+- Report-writing caution: EMS is civil-service-protected and statutorily adjacent to police/fire (a shared Ch.143 Civil Service Commission with police/fire; bargains under Ch.142 Subchapter D, the same chapter as Austin police) — it should not be described as an ordinary civilian/clerical comparison unit.
+- Fort Worth and San Antonio were not evaluated this session (Austin resolved first); both remain documented as backup options if a third Texas city is ever needed, though prior planning found no confirmed non-safety channel for either.
+
 ## 7. Artifact-generation readiness checklist for later PDF/DOCX creation
 
 - [ ] PI has reviewed and approved the group-retention frame and central-claim framing (Section 1 above).

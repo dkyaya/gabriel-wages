@@ -2,7 +2,83 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-08T15:12:00-04:00`
+Last updated: `2026-07-08T17:59:00-04:00`
+
+---
+
+## 2026-07-08T17:59:00-04:00 - Texas second matched city complete: Austin EMS meet-and-confer agreement found and ingested; Texas now on par with Ohio (two matched cities each)
+
+**Commit:** pending in current session (`Complete second Texas matched city`)
+
+### Current State After This Entry
+
+- Confirmed the prior Houston Fire session's changes (`4cd7550`, "Resolve Houston fire source") were already committed, with only `tmp/` left untracked at session start; pre-session counts (43 contracts / 43 coverage) matched expectations.
+- Ran a Texas second matched-city completion pass before any GABRIEL/codify pilot. Design target: two matched cities per comparison state. Ohio already had Columbus + Cleveland; Texas had Houston fully matched but Austin had police + fire with no non-safety partner (the AFSCME Local 1624 document was previously confirmed a non-wage-setting consultation policy).
+- Created:
+  - `docs/analysis/texas_second_matched_city_preflight_2026-07-08.md`
+  - `docs/analysis/texas_second_matched_city_source_resolution_2026-07-08.csv`
+  - `docs/analysis/texas_second_matched_city_fetch_manifest_2026-07-08.csv`
+  - `docs/analysis/texas_second_matched_city_source_identity_audit_2026-07-08.md`
+  - `docs/analysis/texas_second_matched_city_recognition_clause_extraction_2026-07-08.md`
+  - `docs/analysis/texas_second_matched_city_recognition_clause_extraction_2026-07-08.csv`
+  - `docs/analysis/texas_second_matched_city_mechanism_excerpt_extraction_2026-07-08.md`
+  - `docs/analysis/texas_second_matched_city_mechanism_excerpt_extraction_2026-07-08.csv`
+  - `docs/analysis/texas_second_matched_city_metadata_additions_2026-07-08.csv`
+  - `docs/analysis/texas_second_matched_city_summary_2026-07-08.md`
+- Added one public document under `corpus/tx_austin/`: `tx_austin_aemsa_ems_meet_confer_2023_2027.pdf`.
+- Added one causal row to `data/contracts.csv` (`tx_austin_nursehealth_2023`) and one matching row to `data/city_coverage.csv`.
+- Lightly updated `all_groups_source_needs_2026-07-06.csv`, the report review checklist (new Section 7I), the wage-mechanism evidence checklist, and `texas_ohio_approved_source_plan_2026-07-08.csv` (AFSCME 1624 backup row's caveat marked superseded).
+
+### What Was Found
+
+Fresh search terms surfaced a genuine lead beyond AFSCME Local 1624: the City of Austin's official `austintexas.gov/labor-relations` page family (the same hosting pattern already used for the ingested police and fire agreements) has an **EMS Meet and Confer Agreement** page linking to a complete meet-and-confer agreement between the City and the **Austin EMS Association (AEMSA)**, effective October 1, 2023 through September 30, 2027. Downloaded and text-extracted (88 pages, clean text layer via `ingest/extract_text.py`). Article 2's own definition restricts the bargaining unit to "Emergency Medical Services Personnel" per Texas Health and Safety Code Chapter 773, requiring "substantial knowledge of Emergency Prehospital Care," and explicitly excludes civilian employees — a clean, single-occupation unit with no recognition-clause-first bundling ambiguity. Contains a real 4-year fiscal-year wage schedule, on-call/call-back pay, shift differential, education incentive pay, and a grievance-arbitration clause (contract-interpretation only, not interest arbitration).
+
+A City Clerk council item (File #26-1362) referencing "non-sworn employees not covered by collective bargaining or meet and confer agreements" was checked and confirmed to be a red herring — boilerplate distinguishing civilian employees from the three groups (police/fire/EMS) that DO have negotiated agreements, not a pointer to a fourth agreement.
+
+### Row Added To `data/contracts.csv`
+
+- `tx_austin_nursehealth_2023` — Austin EMS Association, `occupation_class=nurse_health`, `safety_flag=0`, `source_type=cba`, cycle 2023-10-01 to 2027-09-30. `interest_arbitration_flag=0` (grievance/contract-interpretation arbitration only). **Flagged explicitly in row notes and the checklist:** EMS is civil-service-protected and statutorily adjacent to police/fire (shares a joint Firefighters'/Police Officers'/EMS Civil Service Commission under Chapter 143; bargains under Chapter 142 Subchapter D, the same chapter as Austin police) — this should never be described as an ordinary civilian/clerical comparison unit in later report language.
+
+### Backup City Evaluation
+
+**Not triggered.** Because Austin resolved successfully, Fort Worth and San Antonio were not evaluated for fetch/ingestion. Both remain documented as `deferred` in `texas_second_matched_city_source_resolution_2026-07-08.csv`, carrying forward prior planning's finding that neither city has a confirmed non-safety institutional channel (Fort Worth: a unilateral "Pay for Performance Program," not a negotiated agreement; San Antonio: none identified).
+
+### Coverage Impact
+
+**Texas now has two fully matched cities, on par with Ohio:**
+- Texas: Houston (police+fire vs. HOPE, other) and Austin (police+fire vs. EMS, nurse_health) — both healthy overlap-cycle matches.
+- Ohio: Columbus (healthy overlap-cycle) and Cleveland (exploratory-adjacent, not healthy — cycle-timing gap, unchanged this session).
+
+Zero Texas/Ohio safety units are unmatched as of this run; the three remaining unmatched safety units in the corpus are all Massachusetts rows (Somerville x2, Newton), unrelated to this run.
+
+### Validation/Audit Results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 44 | discourse: 0 | coverage: 44 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 44 | discourse: 0 | coverage: 44 | city_attributes: 3 | cities: 13
+healthy matched pairs: 18
+  exact-cycle: 9
+  overlap-cycle: 9
+exploratory adjacent matches: 2
+safety units unmatched: 3
+```
+
+### Boundaries Observed
+
+- No GABRIEL calls.
+- No Harvard Proxy calls.
+- No model/API calls from project scripts.
+- No PRRs/FOIA.
+- No statutes, budgets, pay plans, city pages, news stories, or consultation-only policies were ingested as causal rows.
+- No schema changes.
+
+### Recommended Next Step
+
+**The pre-GABRIEL design target is met** — both comparison states now have two matched cities each. Recommend proceeding to the tiny GABRIEL/codify pilot next; no remaining structural blocker for a Texas/Ohio pilot.
 
 ---
 
