@@ -2,7 +2,69 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-08T16:00:00-04:00`
+Last updated: `2026-07-08T20:00:00-04:00`
+
+---
+
+## 2026-07-08T20:00:00-04:00 - Texas/Ohio final pre-ingestion approval audit; CSV hygiene defects found and fixed; 15-source approved batch; no acquisition, no data edits
+
+**Commit:** pending in current session (`Approve Texas and Ohio source plan`)
+
+### Current State After This Entry
+
+- Confirmed the prior Texas/Ohio multi-city scan session's changes (`a3217b2`, "Compare Texas and Ohio candidate cities") were already committed, with only `tmp/` left untracked at session start; no recommit was needed or performed.
+- Converted three prior Texas/Ohio sessions' work into a small, exact, reviewable ingestion plan.
+- Created:
+  - `docs/analysis/texas_ohio_final_pre_ingestion_audit_2026-07-08.md`
+  - `docs/analysis/texas_ohio_approved_source_plan_2026-07-08.csv`
+- Updated (light-to-moderate touches):
+  - `docs/analysis/texas_ohio_source_ingestion_audit_2026-07-08.csv` (hygiene-repaired + cross-referenced)
+  - `docs/analysis/texas_ohio_multicity_source_targets_2026-07-08.csv` (hygiene-repaired + cross-referenced)
+  - `docs/analysis/texas_ohio_candidate_source_targets_2026-07-07.csv` (hygiene-repaired)
+  - `docs/analysis/texas_ohio_legal_source_audit_2026-07-07.csv` (hygiene-repaired)
+  - `docs/analysis/all_groups_source_needs_2026-07-06.csv`
+  - `docs/analysis/report_review_checklist_safety_non_safety_wage_mechanisms_2026-07-06.md` (new Section 7D)
+  - `docs/analysis/wage_mechanism_evidence_checklist.md`
+  - `PROGRESS.md`
+- **`data/contracts.csv` and `data/city_coverage.csv` were NOT edited.** `corpus/` and `inbox/` were **not** touched. No GABRIEL calls, model/API calls, or Harvard Proxy calls were made. No document was downloaded or stored as project data. No ingestion occurred. No PRR was recommended. No causal claim was made about Texas or Ohio wage outcomes.
+
+### What This New Package Does — and the Key Finding
+
+- **CSV hygiene check (Task A) found real, mechanically-verifiable defects, not cosmetic ones.** 19 of 75 data rows across three prior-session CSVs (`texas_ohio_source_ingestion_audit_2026-07-08.csv`, `texas_ohio_multicity_source_targets_2026-07-08.csv`, `texas_ohio_candidate_source_targets_2026-07-07.csv`) had column-count mismatches from unescaped commas in free-text cells — a defect any future automated ingestion script would break on, since it would also parse these files with Python's `csv` module. One row in `texas_ohio_legal_source_audit_2026-07-07.csv` had the same issue (a Ballotpedia URL with literal commas). Two files also had controlled-vocabulary drift (long descriptive text in columns meant to hold only `high`/`medium`/`low`). **All defects were found, repaired, and re-verified — all five reviewed CSVs are now parse-clean, duplicate-free, and controlled-value-clean.**
+- **Approved source plan** (`texas_ohio_approved_source_plan_2026-07-08.csv`, 38 rows, built directly as structured Python data with `csv.writer` to guarantee correct quoting): 15 rows marked `approved_first_batch` (Houston: fire/police/non-safety/budget; Austin: fire/police/budget; Columbus: police/fire/non-safety/budget; Cleveland: police/fire/non-safety/budget) — within the requested 12-16 range. 5 rows `context_only` (TX Ch.174/146/142+Ch.617, OH ORC 4117, OH SERB archive). 14 `backup` rows (Fort Worth, San Antonio, Cincinnati, Toledo, plus Houston's HFOA and Austin's AFSCME 1624 consultation agreement, plus Columbus's CWA and Cleveland's FOP Lodge 8 as within-city backups). 4 `defer` rows (Dallas, El Paso, Akron, Dayton).
+- **Final pre-ingestion audit memo** (`texas_ohio_final_pre_ingestion_audit_2026-07-08.md`): confirms Houston/Austin/Columbus/Cleveland as the right first-batch cities; documents the CSV hygiene findings in detail; specifies metadata conventions for later ingestion (proposed `contract_id` pattern, `occupation_class` — most non-safety unions provisionally `other`, pending a recognition-clause read, paralleling the Wayland precedent — `source_type=cba` for all meet-and-confer/CBA sources since the schema has no separate value, `retrieval_method=public_download`, `text_quality=unknown` pre-fetch); and states explicit ingestion guardrails (never ingest statutes as CBAs, never treat budgets as causal corpus, never invent contract terms).
+- **Austin's non-safety consultation agreement (AFSCME Local 1624) was deliberately NOT approved for the first batch** — its specific document URL was never located, so per the hard boundary against approving vaguely-described targets, it is marked `backup` and Austin's civil-service pay-plan pages serve as the approved-batch's non-safety fallback instead.
+
+### Validation/Audit Results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+Both outputs are identical, in every count, to the pre-session baseline — no row was added, edited, or removed from `data/contracts.csv` or `data/city_coverage.csv` this session.
+
+### Recommended Next Step
+
+1. Route the final pre-ingestion audit memo and approved source plan CSV to the PI for explicit authorization to begin fetching.
+2. If approved: `--dry-run` through `ingest/fetchers/` against the 15 approved-plan URLs before any live fetch.
+3. Resolve smaller remaining items (HFOA-vs-HPFFA relationship; non-safety unions' occupation-class composition; Cleveland's/Austin's not-yet-located budget-page URLs) alongside the dry-run.
+4. Do not begin GABRIEL, Harvard Proxy live calls, ingestion, or any OEWS/BLS build from this state.
+
+### Notes For ChatGPT Review
+
+- **Any future session that edits a Texas/Ohio (or other state-comparison) planning CSV via the Write/Edit tools should immediately spot-check it with Python's `csv` module** — this session found that two full prior sessions of in-place edits to these files never caught real parsing defects, because a rendered/visual read of the table does not expose an unescaped-comma column shift.
+- Do not re-introduce descriptive sentences into `source_availability`/`expected_design_value`/`expected_comparison_value`-type columns — keep those to the declared short controlled values and put explanatory detail in `rationale`/`notes` instead.
+- Treat `texas_ohio_approved_source_plan_2026-07-08.csv` as the single authoritative reference for "what to fetch first" going forward; the older `texas_ohio_source_ingestion_audit_2026-07-08.csv` and `texas_ohio_multicity_source_targets_2026-07-08.csv` remain useful for narrative detail but now cross-reference the approved plan rather than duplicating its authority.
+- No document was downloaded or stored as project data this session.
 
 ---
 

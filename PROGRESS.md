@@ -6,6 +6,76 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-08 (Texas/Ohio final pre-ingestion approval audit session) - CSV hygiene defects found and corrected; 15-source approved first batch created; awaiting user approval to fetch
+
+**Did**
+- Final pre-ingestion approval audit converting the prior three Texas/Ohio sessions' scoping/legal-followup/multi-city work into a small, exact, reviewable ingestion plan. Explicitly scoped as audit/planning only — no ingestion, no corpus/inbox edits, no `data/contracts.csv`/`data/city_coverage.csv` edits, no document downloaded or stored.
+- Confirmed the prior Texas/Ohio multi-city scan session's changes (`a3217b2`, "Compare Texas and Ohio candidate cities") were already committed, with only `tmp/` left untracked at session start; no recommit was needed or performed.
+- **Ran lightweight Python CSV hygiene checks (parseability, expected columns, controlled-value validity, duplicate-row detection) on the four core Texas/Ohio planning CSVs, per Task A, and found genuine, consequential defects:** 19 of 75 total data rows across `texas_ohio_source_ingestion_audit_2026-07-08.csv` (10 of 22), `texas_ohio_multicity_source_targets_2026-07-08.csv` (6 of 12), and `texas_ohio_candidate_source_targets_2026-07-07.csv` (8 of 11 — note some rows had multiple mismatches counted once) had column-count mismatches caused by unescaped commas inside free-text cells written via the Write/Edit tools in prior sessions — a real defect that any future automated ingestion script (which would also use Python's `csv` module) would choke on, not merely a cosmetic issue. `texas_ohio_legal_source_audit_2026-07-07.csv` had 1 broken row (a Ballotpedia URL containing literal commas). Additionally, two files (`texas_ohio_multicity_source_targets_2026-07-08.csv` and `texas_ohio_candidate_source_targets_2026-07-07.csv`) had controlled-vocabulary drift — long descriptive sentences sitting in columns meant to hold only a short controlled value (`source_availability`/`expected_design_value`/`expected_comparison_value`).
+- **Repaired every defect found:** merged mis-split fields back with the correct comma restored (verified against each row's own prior-session content, with two rows requiring full manual reconstruction after an initial automated merge matched the wrong field span), and moved controlled-vocabulary-violating descriptive text into an adjacent free-text column so no information was lost. Re-verified all four files parse-clean with zero column-count mismatches, zero duplicate rows, and zero controlled-value violations.
+- Created:
+  - `docs/analysis/texas_ohio_final_pre_ingestion_audit_2026-07-08.md` (10 sections: purpose/scope; inputs reviewed; CSV hygiene findings; first-batch city decision; approved first-batch source design table; context-only legal/institutional sources; backup/deferred source design; metadata/filename conventions for later ingestion; ingestion risks and guardrails; recommended next step)
+  - `docs/analysis/texas_ohio_approved_source_plan_2026-07-08.csv` (38 rows: 15 `approved_first_batch` — Houston and Austin police/fire/non-safety/budget, Columbus and Cleveland police/fire/non-safety/budget — plus 5 `context_only` legal/institutional sources, 14 `backup` rows, and 4 `defer` rows; built directly as structured Python data and written with `csv.writer` to guarantee correct quoting)
+- Updated (light touches):
+  - `docs/analysis/texas_ohio_source_ingestion_audit_2026-07-08.csv` (hygiene-repaired; 9 first-batch rows cross-referenced to the new approved plan)
+  - `docs/analysis/texas_ohio_multicity_source_targets_2026-07-08.csv` (hygiene-repaired, including 2 rows requiring manual reconstruction; 4 first-batch rows cross-referenced to the new approved plan)
+  - `docs/analysis/texas_ohio_candidate_source_targets_2026-07-07.csv` (hygiene-repaired, 8 rows fully reconstructed)
+  - `docs/analysis/texas_ohio_legal_source_audit_2026-07-07.csv` (1 row hygiene-repaired)
+  - `docs/analysis/all_groups_source_needs_2026-07-06.csv` (1 new cross-cutting row)
+  - `docs/analysis/report_review_checklist_safety_non_safety_wage_mechanisms_2026-07-06.md` (new Section 7D)
+  - `docs/analysis/wage_mechanism_evidence_checklist.md` (one-paragraph pointer added to the Purpose section)
+  - `docs/analysis/chatgpt_handoff_latest.md`
+- **No `data/contracts.csv` or `data/city_coverage.csv` edits.** No GABRIEL calls. No Harvard Proxy calls. No model/API calls from project scripts. No ingestion. No `corpus/` or `inbox/` changes. No documents downloaded or stored as project data.
+- Ran `python scripts/validate.py` (passed, byte-for-byte identical counts to baseline) and `python ingest/audit_coverage.py` (identical to baseline) — expected, since no corpus row was added, edited, or removed this session.
+
+**Decisions and why**
+- Treated the CSV hygiene check as the session's first and highest-priority task, before any content revision, since a broken CSV would make every subsequent revision (adding cross-references, updating priorities) unreliable — fixing structure before content avoided compounding the defect.
+- Chose to rebuild `texas_ohio_approved_source_plan_2026-07-08.csv` directly as structured Python data (list of lists) written via `csv.writer`, rather than authoring it as plain text via the Write tool as in prior sessions, specifically to guarantee this new file could not repeat the same class of defect just found and fixed in the other four files.
+- For the two multicity-file rows (Dallas, El Paso) where an automated merge-and-verify approach matched the wrong field span (producing a row that parsed correctly but had jumbled content), did not simply accept the parse-clean result — cross-checked field-by-field against each row's own original session content before finalizing, since column-count correctness alone does not guarantee content correctness.
+- Kept the approved first batch at exactly 15 sources (within the requested 12-16 range) by explicitly declining to approve Austin's AFSCME Local 1624 consultation agreement as a first-batch non-safety source, since its specific document URL was never located — consistent with the hard boundary against approving vaguely-described, unfindable targets. Substituted Austin's civil-service classification/pay-plan pages as the approved-batch's non-safety fallback instead, with the consultation agreement demoted to `backup`.
+
+**Surprises/breakage**
+- No repo breakage from this session's own changes; validation and coverage audit both passed cleanly and remained byte-for-byte unchanged from the pre-session baseline throughout.
+- **Genuine surprise, and the most important finding of this session:** three of the four core Texas/Ohio planning CSVs from prior sessions had real, mechanically-verifiable parsing defects that had gone undetected through two full prior sessions of revision (the legal-followup and multi-city sessions both edited these files in place without ever running them through an actual CSV parser). A human reading the rendered table in a text editor would very plausibly not notice these breaks, since the visual line-wrapping looks unremarkable; only a machine parse exposes them. This is a durable process lesson for this project, now recorded explicitly in the new audit memo and the report checklist.
+- A second, related surprise: fixing the column-count breaks was necessary but not sufficient — two files also had a subtler, independent defect (correct column count, wrong semantic content in a controlled-vocabulary column) that only surfaced once the parsing checks passed and a second-layer controlled-value check was run.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+Identical, in every count, to the pre-session baseline — no row was added, edited, or removed from `data/contracts.csv` or `data/city_coverage.csv` this session.
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+**No `data/contracts.csv` or `data/city_coverage.csv` edits occurred this session. No GABRIEL calls. No Harvard Proxy calls. No model/API calls from project scripts. No ingestion. No `corpus/` or `inbox/` changes. No documents were downloaded or stored as project data. No PRRs were recommended. No causal claim was made about Texas or Ohio wage outcomes. No first-batch city was treated as representative of its state.**
+
+**Recommended next step**
+1. Route `texas_ohio_final_pre_ingestion_audit_2026-07-08.md` and `texas_ohio_approved_source_plan_2026-07-08.csv` to the PI for review and explicit authorization to begin fetching.
+2. If approved, begin with a `--dry-run` pass through `ingest/fetchers/` against the 15 approved-plan URLs (Houston + Austin police/fire/non-safety/budget; Columbus + Cleveland police/fire/non-safety/budget) before any live fetch, per this project's existing fetcher discipline.
+3. Resolve the smaller remaining pre-ingestion items already flagged (Houston Fire Officers' Association-vs-HPFFA relationship; Columbus/Cleveland non-safety unions' exact occupation-class composition; Cleveland's and Austin's not-yet-located budget/pay-plan page URLs) alongside, not necessarily before, the dry-run.
+4. Do not begin GABRIEL, Harvard Proxy live calls, ingestion, or any OEWS/BLS build from this state — this session remains audit/planning only until explicit user authorization is given.
+
+---
+
 ## 2026-07-08 (Texas/Ohio multi-city pre-ingestion scan session) - Broadened beyond Houston/Columbus across 11 additional cities; first ingestion batch recommended
 
 **Did**
