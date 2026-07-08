@@ -2,7 +2,85 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-08T22:00:00-04:00`
+Last updated: `2026-07-08T13:48:00-04:00`
+
+---
+
+## 2026-07-08T13:48:00-04:00 - Texas/Ohio held-out-target resolution; Austin fire added; Houston fire remains unresolved; Austin non-safety design question closed
+
+**Commit:** pending in current session (`Resolve Texas and Ohio held-out sources`)
+
+### Current State After This Entry
+
+- Confirmed the prior Texas/Ohio first-batch live-acquisition session's changes (`4134f45`, "Ingest Texas and Ohio first batch") were already committed, with only `tmp/` left untracked at session start; pre-session counts (41 contracts / 41 coverage / 43 corpus files) matched expectations.
+- Resolved 5 of 6 held-out targets from the prior dry-run via bounded public web checks; fetched and ingested exactly 1 new causal source (Austin fire).
+- Created:
+  - `docs/analysis/texas_ohio_heldout_target_preflight_2026-07-08.md`
+  - `docs/analysis/texas_ohio_heldout_source_resolution_2026-07-08.csv`
+  - `docs/analysis/texas_ohio_second_batch_fetch_manifest_2026-07-08.csv`
+  - `docs/analysis/texas_ohio_second_batch_source_identity_audit_2026-07-08.md`
+  - `docs/analysis/texas_ohio_second_batch_recognition_clause_extraction_2026-07-08.md`
+  - `docs/analysis/texas_ohio_second_batch_recognition_clause_extraction_2026-07-08.csv`
+  - `docs/analysis/texas_ohio_second_batch_mechanism_excerpt_extraction_2026-07-08.md`
+  - `docs/analysis/texas_ohio_second_batch_mechanism_excerpt_extraction_2026-07-08.csv`
+  - `docs/analysis/texas_ohio_second_batch_metadata_additions_2026-07-08.csv`
+  - `docs/analysis/texas_ohio_second_batch_ingestion_extraction_summary_2026-07-08.md`
+- Added one public agreement PDF under `corpus/tx_austin/tx_austin_afa975_fire_cba_2023_2025.pdf`.
+- Added one causal row to `data/contracts.csv` (`tx_austin_fire_2023`) and one matching row to `data/city_coverage.csv`.
+- Lightly updated `all_groups_source_needs_2026-07-06.csv`, the report review checklist (new Section 7G), the wage-mechanism evidence checklist, and `texas_ohio_approved_source_plan_2026-07-08.csv` (Austin fire caveat marked RESOLVED).
+
+### Held-Out Target Resolution (All Six)
+
+1. **Houston fire full-CBA — unresolved.** The houstontx.gov press-release page links only to a 2024-04-30 City Council presentation slide deck (confirmed via `ingest/extract_text.py`: title slide, bullet points, no numbered CBA articles), not the executed agreement. No official full-text copy located; the only full-text copy anywhere is a non-official news mirror (khou.com), previously flagged as unsuitable. Deferred.
+2. **Austin fire — resolved and ingested.** Official austintexas.gov page verbatim-labels a document "Current Agreement" (Austin Firefighters Association Local 975 CBA, term through 2025-09-30); a still-in-flight Dec.2025 successor exists only as ~24 separate negotiation-session/redline documents, not a single clean copy. Fetched, 100-page clean text layer, identity confirmed via Recognition (Article 3) and Term (Article 30) articles.
+3. **Austin non-safety (AFSCME Local 1624) — resolved, confirmed non-causal.** Located City Council Resolution No. 20260122-049 (adopted 2026-02-26): a consultation-policy resolution (regular labor-management meetings on employment policy, reorganization, AI/automation), not a negotiated wage-setting CBA. Not added as a contracts.csv row. This closes a design question flagged by a prior session.
+4. **Austin budget/pay-plan — resolved, context-only.** `austintexas.gov/department/compensation-division` and `services.austintexas.gov/hr/jobdesc/job_title_pay.cfm` both return HTTP 200. Not fetched/stored (context-only per task scope).
+5. **Cleveland budget/pay-plan — resolved, context-only.** Official 2025 City of Cleveland Budget Book PDF returns HTTP 200 (10.4MB). Not fetched/stored.
+6. **Ohio SERB archive — resolved, context-only.** `serb.ohio.gov/view-document-archive` now returns HTTP 200 (previously 404 in the prior dry-run session).
+
+### Row Added To `data/contracts.csv`
+
+- `tx_austin_fire_2023` — Austin Firefighters Association Local 975 (IAFF), `occupation_class=fire`, cycle 2023-09-24 to 2025-09-30. `interest_arbitration_flag=1` (Article 30 ties the Agreement's effective date to an interest-arbitration award; successor impasse extends the Agreement pending mutually-agreed mediation/interest arbitration — Texas Chapter 174's general non-compulsory model, distinct from Houston Fire's population-triggered compulsory arbitration under §174.1535). `no_strike_clause_flag=1`. `longevity_pay_flag=1` ($100/year per year of service, max 25 years).
+
+### Mechanism/Recognition Findings
+
+- Recognition-clause-first rule was scoped as not applicable to a single-occupation fire unit (no bundled multi-department ambiguity); recognition clause still read and captured verbatim for identity confirmation.
+- Mechanism excerpts present: arbitration/impasse backstop, staffing/recruitment, overtime tied to staffing levels, wage schedule, training/certification pay, premium-pay differentials, total-compensation (health insurance reference), safety-risk (hazardous-duty and Line-of-Duty-Death language). Not found: peer-wage comparability, subcontracting/outsourcing.
+
+### Coverage Impact
+
+Austin now has **two unmatched safety units** (police, fire) and **zero** matched non-safety comparison units — the least-matched of the four first-batch cities. Houston, Columbus, Cleveland matching status unchanged from the first batch.
+
+### Validation/Audit Results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 42 | discourse: 0 | coverage: 42 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 42 | discourse: 0 | coverage: 42 | city_attributes: 3 | cities: 13
+healthy matched pairs: 15
+  exact-cycle: 9
+  overlap-cycle: 6
+exploratory adjacent matches: 2
+safety units unmatched: 5
+```
+
+### Boundaries Observed
+
+- No GABRIEL calls.
+- No Harvard Proxy calls.
+- No model/API calls from project scripts.
+- No PRRs/FOIA.
+- No budgets, pay plans, statutes, legal pages, or SERB archive pages were ingested as causal CBA rows.
+- No meet-and-confer or consultation agreement was classified as `arbitration_award`.
+- No wage panels, OEWS/BLS data builds, or final PDF/DOCX artifacts.
+- No schema changes.
+
+### Recommended Next Step
+
+Prioritize a dedicated search for an official houstontx.gov full-text copy of the HPFFA/IAFF Local 341 CBA before any further Texas/Ohio acquisition. Separately, treat Austin's non-safety comparison gap as the more consequential near-term target: confirm whether any actual wage-negotiating body exists for Austin municipal employees beyond the civil-service classification system and the now-confirmed (non-wage-setting) AFSCME consultation agreement.
 
 ---
 

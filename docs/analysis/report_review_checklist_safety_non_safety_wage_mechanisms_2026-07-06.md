@@ -87,6 +87,13 @@
 - Mechanism excerpt extraction was recorded as source-text evidence only, not GABRIEL/model scoring. Austin police remains unmatched until an Austin fire or non-safety comparison source is confirmed; Cleveland police/fire currently have only adjacent non-safety coverage.
 - Remaining Texas/Ohio targets needing URL confirmation remain held out: Houston fire full-CBA target, Austin fire cycle-specific target, Austin pay-plan URL, Cleveland budget/pay-plan URL, and Ohio SERB archive path.
 
+## 7G. Texas/Ohio held-out-target resolution completed (added 2026-07-08)
+
+- Bounded web checks resolved the Austin fire cycle-specific target: `tx_austin_fire_2023` (Austin Firefighters Association Local 975 CBA, 2023-09-24 to 2025-09-30) is now in `data/contracts.csv`. See `texas_ohio_heldout_source_resolution_2026-07-08.csv` and `texas_ohio_second_batch_ingestion_extraction_summary_2026-07-08.md`.
+- Austin's AFSCME Local 1624 document was located (City Council Resolution No. 20260122-049) and confirmed to be a consultation-policy resolution, not a wage-setting CBA — it does not resolve Austin's non-safety comparison gap.
+- Houston fire full-CBA target remains unresolved: no official houstontx.gov copy of the full executed HPFFA/IAFF Local 341 CBA was located, only a Council presentation slide deck and a non-official news mirror.
+- Austin now has two unmatched safety units (police, fire) and still no matched non-safety comparison unit — the most consequential remaining coverage gap in the Texas/Ohio batch.
+
 ## 7. Artifact-generation readiness checklist for later PDF/DOCX creation
 
 - [ ] PI has reviewed and approved the group-retention frame and central-claim framing (Section 1 above).
