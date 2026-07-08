@@ -6,6 +6,75 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-08 (Texas/Ohio legal follow-up and source-ingestion audit session) - Two Texas legal follow-ups resolved; Houston and Columbus reassessed and confirmed; ingestion audit CSV created
+
+**Did**
+- Followed directly from the prior Texas/Ohio state-comparison scoping session, resolving its two flagged Texas legal follow-ups (§174.1535 "Mandatory Arbitration"; Chapter 146 non-safety-adoption status) and reassessing Houston and Columbus as first source-acquisition targets in light of what that resolution revealed. Explicitly scoped as a follow-up legal/source audit and ingestion-planning run — no ingestion, no corpus/inbox edits, no data/contracts.csv or data/city_coverage.csv edits.
+- Confirmed the prior Texas/Ohio scoping session's changes (`88e573d`, "Scope Texas and Ohio comparison") were already committed, with only `tmp/` left untracked at session start; no recommit was needed or performed.
+- Directly fetched and read the actual statutory text of Texas Local Government Code §174.1535 and §§146.001-146.002 (previously only flagged, not read, in the prior session), plus conducted bounded web research on Houston's and Columbus's specific police/fire/non-safety labor sources.
+- **Resolved §174.1535 ("Mandatory Arbitration"):** it creates a true compulsory-binding-arbitration exception to Chapter 174's general no-compulsory-arbitration rule, but applies ONLY to a fire department serving a municipality with population ≥1.9 million. Houston (~2.39 million) is the only Texas city meeting this threshold — no other candidate city (San Antonio, Dallas, Austin, Fort Worth) is close. This makes Houston Fire the closest Texas analogue to Massachusetts's JLMC found in this project's research to date, though far narrower in scope (one city, one occupation).
+- **Resolved Chapter 146 non-safety adoption status:** Chapter 146 is NOT a general local-option chapter any city can choose to adopt — §146.001(a) restricts it to a municipality with population ≥1.5 million, with no election or ordinance step. Houston is again the only qualifying Texas city. This directly corrects the prior session's assumption that Houston's non-safety employees likely have no bargaining channel: HOPE (Houston Organization of Public Employees), AFSCME Local 123, has been Houston's Chapter 146 non-safety meet-and-confer bargaining agent since 2008, reportedly representing 12,000+ employees across most city departments, with a current 2024 agreement officially hosted on a City of Houston HR page.
+- **Also discovered (not previously known to this project):** Houston Fire Fighters (HPFFA, IAFF Local 341) operate under full Chapter 174 collective bargaining (voter-adopted 2003), not Chapter 142 meet-and-confer as the prior session's secondary-sourced city classification had assumed. Houston Police (HPOU) remain under Chapter 142 meet-and-confer. This means Houston now shows three distinct institutional tiers in one city: compulsory-arbitration fire, non-compulsory meet-and-confer police, and non-compulsory meet-and-confer non-safety — a within-city institutional range this project's Massachusetts corpus does not have (JLMC covers MA police and fire uniformly).
+- **Confirmed Columbus's remaining source gaps from the prior session:** Columbus Fire Fighters (IAFF Local 67, CBA 2023-2026) and two non-safety unions (AFSCME Local 1632, CWA) are now specifically identified, all officially hosted on the same `columbus.gov` labor-relations portal as the previously-confirmed FOP police CBA, and cross-checkable against Ohio SERB's independently-filed record (a matching 2023 IAFF Local 67 fact-finding report was located).
+- Created:
+  - `docs/analysis/texas_ohio_legal_followup_source_audit_2026-07-08.md` (9 sections: purpose/scope; Chapter 174 clarification; Chapter 146 clarification; Houston candidate assessment; Ohio Chapter 4117/SERB confirmation; Columbus candidate assessment; a Houston-vs-Columbus comparison table; ingestion-readiness conclusion; what changed from the prior session)
+  - `docs/analysis/texas_ohio_source_ingestion_audit_2026-07-08.csv` (19 rows of exact source targets — not downloaded documents — spanning Texas/Ohio statutory context, Houston's three tiers, Columbus's four contracts, and second-choice San Antonio/Cincinnati rows, each with a controlled ingestion_decision/priority/followup_needed rating)
+- Updated (light-to-moderate touches):
+  - `docs/analysis/texas_ohio_candidate_source_targets_2026-07-07.csv` (Houston and Columbus rows revised in place to reflect this session's findings; no other rows touched)
+  - `docs/analysis/texas_ohio_legal_source_audit_2026-07-07.csv` (2 existing rows' `needs_followup` flipped to resolved with an explanatory note; 6 new rows added for §174.1535, HPFFA's Ch.174 status, HOPE/Ch.146, the official Houston police/non-safety source URLs, and Columbus's fire/non-safety sources)
+  - `docs/analysis/all_groups_source_needs_2026-07-06.csv` (3 existing cross-cutting rows revised in place — the TX legal-followup row marked resolved; the Houston and Columbus rows upgraded from `absent`/no-document-identified to `partial`/specific-documents-identified)
+  - `docs/analysis/report_review_checklist_safety_non_safety_wage_mechanisms_2026-07-06.md` (new Section 7B: follow-up-completed status, Houston/Columbus ingestion-readiness, remaining pre-report decisions, and a reaffirmed caution against generalizing a Houston-only institutional finding to "Texas")
+  - `docs/analysis/chatgpt_handoff_latest.md`
+- **No `data/contracts.csv` or `data/city_coverage.csv` edits.** No GABRIEL calls. No Harvard Proxy calls. No model/API calls from project scripts. No ingestion. No `corpus/` or `inbox/` changes. No documents downloaded or stored as project data — every source in the new memo and CSVs is a citation/URL; two official Houston PDFs were fetched transiently via the web-research tool for text extraction (which failed, a tooling limitation) but were not saved into this repository.
+- Ran `python scripts/validate.py` (passed, byte-for-byte identical counts to baseline) and `python ingest/audit_coverage.py` (identical to baseline) — expected, since no corpus row was added, edited, or removed this session.
+
+**Decisions and why**
+- Prioritized resolving the two flagged Texas legal follow-ups with a direct statute fetch-and-read before touching the candidate-city assessment, since both follow-ups turned out to share the same population-gate structure and that structure changes which Texas city is actually the strongest candidate — resolving them first, rather than in parallel with the city reassessment, avoided writing a city assessment that would need to be re-corrected once the statutory text was read.
+- Chose not to attempt a local download/OCR pass on the Houston PDFs that failed to extract via the web-research tool, even though this project's own `ingest/extract_text.py` utility could plausibly handle them — this run's explicit scope boundary is planning/audit only, and invoking the extraction pipeline against externally-fetched documents would blur the line between "planning" and "acquisition" in a way the task's hard boundaries (no ingestion, no documents downloaded/stored) were designed to prevent. Flagged this as the first step of a future acquisition session instead.
+- Elected to correct the candidate-source-targets and legal-source-audit CSVs in place (revising the Houston/Columbus rows) rather than appending duplicate new rows, since the task explicitly asked to "confirm or revise" these tables and appending would have left a stale, now-incorrect Houston row sitting alongside a corrected one.
+
+**Surprises/breakage**
+- No repo breakage. Validation and coverage audit both passed cleanly and remained byte-for-byte unchanged from the pre-session baseline.
+- Genuine surprise: both of the prior session's flagged Texas follow-ups resolved into the *same* underlying legal mechanism — a population threshold, gating first fire-arbitration compulsion (≥1.9 million) and second non-safety bargaining-channel existence (≥1.5 million) — and both thresholds happen to currently identify Houston as the sole qualifying Texas city. This was not anticipated going into this session; the two follow-ups looked unrelated in the prior session's framing.
+- A second genuine surprise: the prior session's Texas institutional scan had classified Houston Fire as a Chapter 142 meet-and-confer city (based on a secondary bill-analysis source listing adoption dates by city); this session's more targeted research found Houston Fire actually operates under full Chapter 174 collective bargaining, adopted by a 2003 voter referendum. This is a correction, not merely new information, and is documented explicitly in Section 9 of the new follow-up memo so a future session does not re-introduce the earlier, incorrect classification.
+- A third surprise, this one a tooling limitation rather than a substantive finding: none of the official Houston PDFs located this session extracted as readable text through the session's web-fetch tooling, despite being confirmed as legitimate, officially-hosted documents via search-result metadata and cross-referencing. This is noted explicitly in the new memo as a reason to use this project's own extraction pipeline at acquisition time, not as evidence the documents themselves are deficient.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+Identical, in every count, to the pre-session baseline — no row was added, edited, or removed from `data/contracts.csv` or `data/city_coverage.csv` this session.
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+**No `data/contracts.csv` or `data/city_coverage.csv` edits occurred this session. No GABRIEL calls. No Harvard Proxy calls. No model/API calls from project scripts. No ingestion. No `corpus/` or `inbox/` changes. No documents were downloaded or stored as project data. No PRRs were recommended. No causal claim was made about Texas or Ohio wage outcomes, and this session's Houston-specific findings are explicitly not generalized to "Texas" as a whole.**
+
+**Recommended next step**
+1. Route the new follow-up memo and ingestion audit CSV to the PI for review, alongside the revised candidate-target and legal-source-audit tables and the updated report checklist's new Section 7B.
+2. If the PI wants to proceed toward acquisition, the recommended first step is resolving the small remaining pre-ingestion items (Houston Fire Officers' Association-vs-HPFFA relationship; Columbus AFSCME 1632/CWA occupation-class composition; confirming current-version status of each Houston contract) rather than jumping directly to ingestion.
+3. Do not begin GABRIEL, Harvard Proxy live calls, ingestion, or any OEWS/BLS build from this state — this session remains scoping/planning only.
+
+---
+
 ## 2026-07-07 (Texas/Ohio state-comparison scoping session) - Institutional scan, candidate source-target table, and legal audit created; scoping only, no acquisition
 
 **Did**
