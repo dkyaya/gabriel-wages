@@ -2,7 +2,98 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-08T20:00:00-04:00`
+Last updated: `2026-07-08T21:00:00-04:00`
+
+---
+
+## 2026-07-08T21:00:00-04:00 - Texas/Ohio acquisition dry-run; recognition-clause-first standard; no acquisition or data edits
+
+**Commit:** pending in current session (`Prepare Texas and Ohio acquisition dry run`)
+
+### Current State After This Entry
+
+- Completed a controlled Texas/Ohio acquisition dry-run for the first-batch cities: Houston, Austin, Columbus, and Cleveland.
+- Created:
+  - `docs/analysis/source_planning_csv_hygiene_standard_2026-07-08.md`
+  - `docs/analysis/recognition_clause_first_classification_standard_2026-07-08.md`
+  - `docs/analysis/texas_ohio_acquisition_dry_run_2026-07-08.md`
+  - `docs/analysis/texas_ohio_acquisition_dry_run_2026-07-08.csv`
+- Updated:
+  - `docs/analysis/texas_ohio_approved_source_plan_2026-07-08.csv` (only stale Austin fire/police URL paths and associated fetch/caveat text)
+  - `docs/analysis/all_groups_source_needs_2026-07-06.csv`
+  - `docs/analysis/report_review_checklist_safety_non_safety_wage_mechanisms_2026-07-06.md`
+  - `docs/analysis/wage_mechanism_evidence_checklist.md`
+  - `PROGRESS.md`
+- **`data/contracts.csv` and `data/city_coverage.csv` were NOT edited.** `corpus/` and `inbox/` were not touched. No source document was downloaded or stored. No ingestion occurred. No GABRIEL calls, Harvard Proxy calls, model/API calls from project scripts, PRRs, OEWS/BLS build, wage panel, or final PDF/DOCX artifact occurred.
+
+### Source-Plan and CSV Hygiene Status
+
+- `texas_ohio_approved_source_plan_2026-07-08.csv` parses cleanly with Python `csv`.
+- Required columns are present.
+- Controlled values are clean.
+- No duplicate `source_target` or `proposed_filename` values were found.
+- No `approved_first_batch` row is missing `source_url_or_lookup_path`, `proposed_filename`, `proposed_contract_id`, `proposed_occupation_class`, `proposed_source_type`, `proposed_corpus`, or `fetch_instruction`.
+- No budget/pay-plan row is incorrectly marked causal.
+- No legal/statutory row is incorrectly marked causal.
+- Broad non-safety rows remain provisionally `occupation_class=other`, not `clerical_admin`, `public_works`, or another precise value.
+- New dry-run CSV was written with `csv.DictWriter` and passed controlled-value checks. All rows have `store_now=no` and `ingest_now=no`.
+
+### Recognition-Clause-First Rule
+
+Broad non-safety agreements must not receive a precise `occupation_class` until the later extraction pass reads the recognition clause, bargaining-unit description, coverage article, appendix/classification list, or wage-schedule classification list. This applies to Houston HOPE/AFSCME Local 123, Columbus AFSCME Local 1632, Cleveland AFSCME Local 100, Austin AFSCME Local 1624 if later promoted, and CWA/technical units if later promoted. The conservative default is `other` for mixed municipal units unless the document text clearly supports an existing schema value.
+
+No schema change is authorized by this dry-run.
+
+### Acquisition Dry-Run Results
+
+`docs/analysis/texas_ohio_acquisition_dry_run_2026-07-08.csv` has 20 rows:
+
+```text
+dry_run_status counts:
+ready_for_live_fetch: 9
+needs_url_confirmation: 5
+context_only: 6
+```
+
+Rows marked `ready_for_live_fetch`:
+- Houston police — HPOU Meet & Confer Agreement
+- Houston non-safety — HOPE/AFSCME Local 123 meet-and-confer agreement
+- Austin police — Austin Police Association meet-and-confer agreement
+- Columbus police — FOP Capital City Lodge No. 9 CBA
+- Columbus fire — IAFF Local 67 CBA
+- Columbus non-safety — AFSCME Local 1632 CBA
+- Cleveland police — CPPA CBA
+- Cleveland fire — IAFF Local 93 CBA
+- Cleveland non-safety — AFSCME Ohio Council 8 Local 100 CBA
+
+Rows marked `needs_url_confirmation`:
+- Houston fire — official page live, but confirm full executed HPFFA/IAFF Local 341 CBA target rather than only settlement/summary material.
+- Austin fire — corrected official page live, but exact 2014-2024-window cycle target needs confirmation because the live page now surfaces a Dec. 18, 2025 agreement link.
+- Austin budget/pay plan — specific compensation/pay-plan URL still not confirmed.
+- Cleveland budget/pay plan — specific budget/pay-plan URL still not confirmed.
+- Ohio SERB archive — prior archive URL returned HTTP 404; current path needs confirmation.
+
+Rows marked `context_only` include Houston and Columbus budget/pay-plan context plus Texas Chapters 174/146/142 and Ohio ORC Chapter 4117. These are not CBA rows and should not enter `data/contracts.csv`.
+
+### Validation/Audit Results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+### Recommended Next Step
+
+Get explicit user/PI approval before any live acquisition. If approved, Codex should first run a fetcher dry-run for the 9 `ready_for_live_fetch` agreement rows and keep the 5 `needs_url_confirmation` rows out of live fetch until their exact source paths are confirmed. During later extraction, read recognition/coverage/classification text before assigning any precise non-safety `occupation_class`.
 
 ---
 

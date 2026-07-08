@@ -6,6 +6,66 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-08 (Texas/Ohio acquisition dry-run and recognition-clause-first audit) - Dry-run plan created; broad non-safety classification guardrail added; no acquisition
+
+**Did**
+- Completed a controlled Texas/Ohio acquisition dry-run for the first-batch cities: Houston, Austin, Columbus, and Cleveland. This was planning only — no ingestion, no source-document download/storage, no corpus/inbox changes, and no `data/contracts.csv` or `data/city_coverage.csv` edits.
+- Created:
+  - `docs/analysis/source_planning_csv_hygiene_standard_2026-07-08.md`
+  - `docs/analysis/recognition_clause_first_classification_standard_2026-07-08.md`
+  - `docs/analysis/texas_ohio_acquisition_dry_run_2026-07-08.md`
+  - `docs/analysis/texas_ohio_acquisition_dry_run_2026-07-08.csv`
+- Checked `docs/analysis/texas_ohio_approved_source_plan_2026-07-08.csv` with Python CSV parsing, required-column checks, controlled-value checks, duplicate source-target/proposed-filename checks, missing approved-field checks, budget/legal-as-causal checks, and broad non-safety occupation-class checks.
+- Lightly updated the approved source plan only where the dry-run found stale Austin official labor-relations deep links: the Austin fire and police rows now point to live `/labor-relations/...` pages rather than the old `/department/labor-relations/...` paths. The Austin fire row keeps a caveat that the live page now surfaces a Dec. 18, 2025 agreement link and the exact desired cycle must be confirmed before live fetch.
+- Added source-needs/checklist pointers for the new CSV hygiene standard, recognition-clause-first standard, and acquisition dry-run.
+- Ran bounded, header-only public URL checks. No source documents were downloaded or stored. The sandboxed network attempt failed; the header-only checks were then rerun with approved network access.
+
+**Decisions and why**
+- Made recognition-clause-first classification a standing rule because broad non-safety units (Houston HOPE/AFSCME Local 123, Columbus AFSCME Local 1632, Cleveland AFSCME Local 100, and possible later Austin AFSCME/CWA technical units) can span multiple departments/classes. They remain provisionally `occupation_class=other` until recognition, coverage, classification, or wage-schedule text is read.
+- Treated open public CBA sources as later `corpus_direct` fetcher targets, not `inbox/` items, because `ingest/README.md` clearly routes open public portals through `ingest/fetchers/`; licensed/FOIA material remains the inbox path.
+- Marked only 9 agreement rows `ready_for_live_fetch`. Five rows need URL confirmation before live acquisition: Houston fire full-CBA target, Austin fire cycle-specific target, Austin pay-plan URL, Cleveland pay-plan URL, and the current Ohio SERB archive path.
+
+**Surprises/breakage**
+- Austin's previously-approved `/department/labor-relations/...` fire and police paths now return HTTP 404, but the official Austin labor-relations landing page and corrected `/labor-relations/...` pages return HTTP 200. The police page exposes the fully executed 2024-2029 agreement link; the fire page appears to expose a later Dec. 18, 2025 agreement, so the intended 2014-2024-window target needs confirmation.
+- The prior Ohio SERB archive URL returns HTTP 404 and needs a current-path check before use.
+- No repo breakage. `python scripts/validate.py` and `python ingest/audit_coverage.py` passed.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+```
+
+**Corpus snapshot**
+```text
+contracts: 32 | discourse: 0 | coverage: 32 | city_attributes: 3 | cities: 9
+healthy matched pairs: 12
+  exact-cycle: 9
+  overlap-cycle: 3
+exploratory adjacent matches: 0
+safety units unmatched: 3
+unmatched safety obs_ids: ma_somerville_police_spsoa_2012, ma_somerville_police_spea_2012, ma_newton_police_2015
+```
+
+**No `data/contracts.csv` or `data/city_coverage.csv` edits occurred. No GABRIEL calls. No Harvard Proxy calls. No model/API calls from project scripts. No ingestion. No `corpus/` or `inbox/` changes. No source documents were downloaded or stored. No PRRs were recommended. No causal claim was made about Texas or Ohio wage outcomes. No first-batch city was treated as representative of an entire state.**
+
+**Recommended next step**
+1. Obtain explicit user/PI approval before any live acquisition.
+2. If approved, start with a fetcher dry-run for the 9 `ready_for_live_fetch` agreement rows in `texas_ohio_acquisition_dry_run_2026-07-08.csv`.
+3. Separately confirm the 5 `needs_url_confirmation` rows before live fetch: Houston fire full-CBA target, Austin fire cycle-specific target, Austin pay-plan URL, Cleveland pay-plan URL, and Ohio SERB archive path.
+4. During later extraction, read recognition/coverage/classification text before assigning any precise non-safety `occupation_class`; keep broad mixed units as `other` unless text clearly supports an existing schema value.
+
+---
+
 ## 2026-07-08 (Texas/Ohio final pre-ingestion approval audit session) - CSV hygiene defects found and corrected; 15-source approved first batch created; awaiting user approval to fetch
 
 **Did**

@@ -73,6 +73,13 @@
 - **Controlled ingestion can proceed after user approval.** No source has been fetched, downloaded, or stored as of this session — the approved plan is a pre-authorization artifact only.
 - **No sources fetched yet; this remains true after this session.** The next step, if authorized, is a `--dry-run` pass through `ingest/fetchers/` against the 15 approved-plan URLs, not a live fetch.
 
+## 7E. Texas/Ohio acquisition dry-run and recognition-clause-first standard completed (added 2026-07-08)
+
+- A no-download acquisition dry-run has now been completed: `texas_ohio_acquisition_dry_run_2026-07-08.md` and `texas_ohio_acquisition_dry_run_2026-07-08.csv`. It checks the approved first-batch plan, records later fetch destinations, and separates rows that are ready for controlled live fetch from rows needing URL confirmation.
+- Two permanent standards were created: `source_planning_csv_hygiene_standard_2026-07-08.md` and `recognition_clause_first_classification_standard_2026-07-08.md`. Future planning CSVs should be writer-generated and parse-back validated; broad non-safety agreements should remain `occupation_class=other` until recognition/coverage/classification text has been read.
+- **Controlled live acquisition can proceed only after user/PI approval.** The safest next step is a fetcher dry-run for the rows marked `ready_for_live_fetch`, while separately confirming Houston fire's full-CBA target, Austin fire's cycle-specific target, Austin and Cleveland pay-plan URLs, and the current SERB archive path.
+- **No source was downloaded, stored, ingested, or added to corpus/inbox in this dry-run.** This is still planning infrastructure, not production metadata.
+
 ## 7. Artifact-generation readiness checklist for later PDF/DOCX creation
 
 - [ ] PI has reviewed and approved the group-retention frame and central-claim framing (Section 1 above).
