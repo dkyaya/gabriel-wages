@@ -6,6 +6,67 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-09 12:06 EDT (Harvard Proxy-enabled GABRIEL/codify full-codebook pilot) - Adapter built and verified live; 4/4 calls succeeded; 100% source-grounded; no data/corpus changes
+
+**Did**
+- Ran the Harvard Proxy-enabled GABRIEL/codify pilot with the full refined 19-attribute wage-mechanism codebook, following directly from the prior session's dry-run-only pilot (no credentials were available then).
+- Confirmed repo state clean at session start (only untracked `tmp/`), latest commit `b6747d9`, and pre-session counts of 44 contracts / 44 coverage rows, matching expectations.
+- **Credential update:** the user placed `HARVARD_SUBSCRIPTION_KEY` in the repo's git-ignored `.env` file since the prior session. This session confirmed its presence exclusively via `python-dotenv`'s standard `load_dotenv()` loader (never opened, `cat`, or otherwise read `.env` directly) — presence/length checked, value never printed or logged.
+- **Traced `gabriel.codify()`'s source code** (installed package v1.1.8, not just its docstring) through `gabriel/api.py` → `gabriel/tasks/codify.py` → `gabriel/utils/openai_utils.py` to confirm its `response_fn` hook is genuinely wired end-to-end and, critically, that supplying a custom `response_fn` skips GABRIEL's internal `OPENAI_API_KEY` requirement entirely — the mechanism this pilot needed to route through `HARVARD_SUBSCRIPTION_KEY` instead. Also worked out the exact chunking math (`max_categories_per_call`, `max_words_per_call`, `n_rounds`) needed to guarantee exactly one live call per selected row, matching the 4-call cap precisely.
+- Built a `response_fn` adapter reusing this repo's already-established Harvard Proxy client pattern (`ingest/extract_spans.py`, `scripts/proxy_pilot_must_have_sources.py`: `openai.OpenAI(api_key=..., base_url="https://go.apis.huit.harvard.edu/ais-openai-direct/v2", default_headers={"Ocp-Apim-Subscription-Key": ...})`), using `gpt-5.4-nano` (the model already confirmed working on this specific proxy elsewhere in this repo, not GABRIEL's own generic default).
+- Rewrote `scripts/gabriel_codify_pilot.py` with the full 19-attribute codebook, `--use-harvard-proxy` flag, a hard cap raised to 4 live calls (enforced in code), and a per-row `gabriel.codify()` invocation loop (not one batched call) so a failure on any row is isolated and the run can stop cleanly after the first nontrivial failure.
+- Built fresh evidence windows for the task's preferred 4-row sample (`tx_houston_fire_2024`, `tx_houston_other_2024`, `tx_austin_nursehealth_2023`, `oh_columbus_fire_2023`) by combining prior hand-extracted excerpts with a few new raw passages located via local term search over already-extracted corpus text, targeting the 8 attributes new to the refined codebook.
+- **Ran the dry-run first** (per the task's own requirement), then attempted the live pilot. **Caught and fixed a real code bug before any cost was incurred:** `gabriel.codify()` is `async def` and the first attempt called it synchronously without `asyncio.run(...)`, so it silently returned an un-awaited coroutine (confirmed via Python's own `RuntimeWarning`, zero network calls made). Fixed in one line, then re-ran.
+- **4 real live calls succeeded, 0 failed.** Reported cost: $0.00 for all four (small prompts on `gpt-5.4-nano`). Ran row 1 first as a go/no-go test (per the task's hard boundary), confirmed it worked and was correctly grounded, then ran rows 2-4 together rather than re-spending the already-successful row 1 call — total real successful live calls across the session: exactly 4, matching the cap.
+- **Source-grounding audit: 53 of 53 present-status excerpts (100%) verified as verbatim substrings of their evidence window. Zero hallucinations.** The model correctly distinguished Houston Fire's grievance/contract-interpretation arbitration from interest/impasse arbitration — the specific test this codebook refinement existed to check — and correctly identified Columbus Fire's SERB conciliation language as genuine impasse backstop.
+- **Discovered a real interface limitation:** `gabriel.codify()`'s native output is a binary present/absent snippet list per category with no confidence field and no "unclear" state — this project's desired richer evidence_status/confidence schema cannot currently be fully populated by codify() alone. Documented honestly (confidence reported as `not_applicable` rather than invented) rather than silently working around it.
+- Created:
+  - `docs/analysis/gabriel_codify_harvard_proxy_adapter_design_2026-07-09.md`
+  - `docs/analysis/gabriel_codify_full_codebook_pilot_design_2026-07-09.md`
+  - `docs/analysis/gabriel_codify_full_codebook_evidence_windows_2026-07-09.csv`
+  - `docs/analysis/gabriel_codify_full_codebook_prompt_preview_2026-07-09.md`
+  - `docs/analysis/gabriel_codify_full_codebook_outputs_2026-07-09.csv`
+  - `docs/analysis/gabriel_codify_full_codebook_audit_2026-07-09.md`
+- Rewrote `scripts/gabriel_codify_pilot.py`.
+- Live-run outputs saved under `tmp/gabriel_codify_pilots/2026-07-09_120200_full_codebook_live/` (raw `coded_passages.csv`/`coding_results.csv` per row under `gabriel_save_dir/`, plus consolidated `run_config.json`, `parsed_outputs.csv`, `live_run_log.txt`).
+- Lightly updated `all_groups_source_needs_2026-07-06.csv` (1 new row), the report review checklist (new Section 7K), and the wage-mechanism evidence checklist (1 new pointer).
+- **Updated the relay-bundle convention per this task's explicit instruction:** this session's bundle uses `committed_changed_files.txt` (continuing the convention established last session).
+
+**Decisions and why**
+- Used `response_fn`, not `get_all_responses_fn` — the "lightweight" per-prompt hook keeps GABRIEL doing its own prompt construction, JSON parsing, and result aggregation (a genuinely *native* codify run), while the adapter's only job is the HTTP call itself.
+- Chose `gpt-5.4-nano` over GABRIEL's own default `gpt-5.4-mini` for the Harvard Proxy path specifically because nano is the model already confirmed working on this exact proxy elsewhere in this repo; mini has never been exercised against it.
+- When the first live call's post-processing failed on a trivial bug (`result_df.insert()` failing because `codify()` already returns the input df's `contract_id` column), reused the already-obtained real result rather than re-querying the API a second time for the same row — kept the total real live-call count at exactly 4, not 5.
+- Reported `confidence=not_applicable` throughout rather than inventing a confidence value `codify()` never actually produced, once its native output format was confirmed not to include one.
+
+**Surprises/breakage**
+- The genuine surprise: `gabriel.codify` is an `async def` function at the top level, which `inspect.signature()`'s return-type annotation (`-> pandas.DataFrame`) does not make obvious — this caused the one code bug this session (caught before any cost, fixed in one line).
+- No repo breakage. Validation and coverage audit passed, unchanged from the prior session (44 contracts / 44 coverage / 18 healthy pairs) since this run made zero edits to `data/contracts.csv`, `data/city_coverage.csv`, or `corpus/`.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 44 | discourse: 0 | coverage: 44 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 44 | discourse: 0 | coverage: 44 | city_attributes: 3 | cities: 13
+healthy matched pairs: 18
+  exact-cycle: 9
+  overlap-cycle: 9
+exploratory adjacent matches: 2
+safety units unmatched: 3
+
+python scripts/gabriel_codify_pilot.py --dry-run --use-harvard-proxy --max-calls 4 --windows docs/analysis/gabriel_codify_full_codebook_evidence_windows_2026-07-09.csv
+Dry run complete.
+```
+
+**No `data/contracts.csv` edits. No `data/city_coverage.csv` edits. No document ingestion or `corpus/` changes. No full-corpus GABRIEL run — exactly 4 rows, one call each. No Harvard Proxy scripts run outside this capped pilot script. No non-GABRIEL model/API calls. No API keys or secrets printed, inspected, copied, or committed — `HARVARD_SUBSCRIPTION_KEY` was only ever accessed via `python-dotenv`'s standard loader and `os.environ.get(...)`, never read from `.env` directly or printed. `docs/schema.md` was not modified. No causal claims were made.**
+
+**Recommended next step**
+Decide how to add a confidence dimension before scaling further — either accept codify()'s binary present/not_found output as-is, or pair it with GABRIEL's separate `rate()` task for a 0-100 confidence-like score. Clean table-of-contents noise out of evidence windows before the next run (a few low-information TOC-line matches surfaced this session, though still correctly grounded), and keep slightly more surrounding context (article headers) around passages likely to trigger the interest-vs-grievance-arbitration distinction, since one Houston HOPE excerpt was genuinely ambiguous without it. If addressed, a modestly larger (still capped) pilot covering the remaining Texas/Ohio matched-city rows would be the natural next scaling step — not yet a full-corpus run.
+
+---
+
 ## 2026-07-09 11:16 EDT (Tiny GABRIEL/codify pilot) - Interface inspected, pilot fully designed and staged; no live calls (no credentials available); no data/corpus changes
 
 **Did**

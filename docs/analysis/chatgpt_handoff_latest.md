@@ -2,7 +2,87 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-09T11:16:00-04:00`
+Last updated: `2026-07-09T12:06:00-04:00`
+
+---
+
+## 2026-07-09T12:06:00-04:00 - Harvard Proxy-enabled GABRIEL/codify full-codebook pilot: adapter built and verified live, 4/4 calls succeeded, 100% source-grounded
+
+**Commit:** pending in current session (`Run Harvard Proxy codify pilot`)
+
+### Current State After This Entry
+
+- Confirmed the prior tiny-pilot session's changes (`b6747d9`, "Pilot GABRIEL codify mechanism extraction") were already committed, with only `tmp/` left untracked at session start; pre-session counts (44 contracts / 44 coverage) matched expectations.
+- **The prior session's blocker (no credentials) is resolved:** the user placed `HARVARD_SUBSCRIPTION_KEY` in the repo's git-ignored `.env` since then. This session confirmed presence exclusively via `python-dotenv`'s `load_dotenv()` (never opened/`cat` `.env` directly; value never printed).
+- Ran the first genuinely live GABRIEL/codify calls in this repo's history, via a Harvard Proxy `response_fn` adapter, using the full refined 19-attribute wage-mechanism codebook (not the smaller 11-code set from the prior dry-run).
+- Created:
+  - `docs/analysis/gabriel_codify_harvard_proxy_adapter_design_2026-07-09.md`
+  - `docs/analysis/gabriel_codify_full_codebook_pilot_design_2026-07-09.md`
+  - `docs/analysis/gabriel_codify_full_codebook_evidence_windows_2026-07-09.csv`
+  - `docs/analysis/gabriel_codify_full_codebook_prompt_preview_2026-07-09.md`
+  - `docs/analysis/gabriel_codify_full_codebook_outputs_2026-07-09.csv`
+  - `docs/analysis/gabriel_codify_full_codebook_audit_2026-07-09.md`
+- Rewrote `scripts/gabriel_codify_pilot.py` (full codebook, `--use-harvard-proxy`, hard cap raised to 4, per-row invocation loop for isolated failure handling).
+- Live-run outputs: `tmp/gabriel_codify_pilots/2026-07-09_120200_full_codebook_live/`.
+- Lightly updated `all_groups_source_needs_2026-07-06.csv`, the report review checklist (new Section 7K), and the wage-mechanism evidence checklist.
+- Relay-bundle convention: continues using `committed_changed_files.txt` alongside `git_status_post_commit.txt`, per this task's explicit instruction (matching the convention already established last session).
+
+### Adapter Route and Why
+
+**`response_fn` injection** (not `get_all_responses_fn`, not a hand-rolled bypass). Traced `gabriel.codify()`'s actual source (v1.1.8: `api.py` → `tasks/codify.py` → `utils/openai_utils.py`) to confirm the hook is genuinely wired end-to-end, and — critically — that supplying a custom `response_fn` **skips GABRIEL's internal `OPENAI_API_KEY` requirement entirely**, exactly the mechanism needed to route through `HARVARD_SUBSCRIPTION_KEY` instead. The adapter reuses this repo's already-established Harvard Proxy client pattern (`ingest/extract_spans.py`, `scripts/proxy_pilot_must_have_sources.py`) with `gpt-5.4-nano` (confirmed working on this specific proxy elsewhere in the repo; GABRIEL's own default `gpt-5.4-mini` was never tested against it).
+
+**Call-count math worked out in advance:** codify() splits each row into word-chunks (`max_words_per_call`) and the codebook into category-batches (`max_categories_per_call`); with 19 attributes and default settings this would have produced up to 24 calls for 4 rows. Set `max_categories_per_call=19`, `max_words_per_call=1500`, `n_rounds=1` so each selected row produces exactly one live call — 4 rows, 4 calls, matching the cap precisely.
+
+### What Happened
+
+1. Dry run succeeded first (per the task's requirement).
+2. First live attempt on row 1 (`tx_houston_fire_2024`) made **zero** network calls — `gabriel.codify` is `async def` and was called without `asyncio.run(...)`, silently returning an un-awaited coroutine (confirmed by Python's own `RuntimeWarning`). Fixed in one line.
+3. Retried row 1: **real live call succeeded**, $0.00 cost, correctly distinguished grievance arbitration (present, verbatim excerpt) from interest/impasse arbitration (not_found) — the specific test this codebook refinement exists to check.
+4. A second, cosmetic bug (`result_df.insert()` failing since `codify()` already returns the input df's `contract_id` column) was fixed; row 1's already-obtained real result was kept rather than re-querying the API.
+5. Rows 2-4 (`tx_houston_other_2024`, `tx_austin_nursehealth_2023`, `oh_columbus_fire_2023`) ran together and all succeeded, $0.00 each.
+
+**Total real live GABRIEL/codify calls this session: 4 attempted, 4 succeeded, 0 failed** — exactly matching the hard cap.
+
+### Source-Grounding Audit
+
+**53 of 53 present-status excerpts (100%) verified as verbatim substrings of their evidence window. Zero hallucinations.** Two findings for human review, both documented with full context in the audit memo: (1) one plausible over-coding (`tx_houston_other_2024`'s `civil_service_or_statutory_employment_channel` matched layoff/classification language with no explicit statutory trigger phrase); (2) one ambiguous arbitration call (`tx_houston_other_2024`'s `interest_arbitration_or_formal_impasse_backstop` excerpt could plausibly be grievance-dispute mediation rather than successor-contract impasse — the compact window lacked the article header needed to disambiguate). A few low-information but still-grounded table-of-contents-line matches also surfaced, a window-construction quality issue, not a hallucination.
+
+### Interface Limitation Discovered
+
+`gabriel.codify()`'s native output is a **binary present/absent snippet list per category** — no confidence field, no explicit "unclear" state. This project's desired richer `evidence_status`/`confidence` schema cannot currently be fully populated by codify() alone, despite `additional_instructions` requesting it (codify's own fixed system-prompt/output-contract does not have a slot for it). This run reports `confidence=not_applicable` honestly rather than inventing a value. See the audit memo's "Recommended next step" for options (pairing with GABRIEL's `rate()` task, or accepting the binary output as-is).
+
+### Validation/Audit Results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 44 | discourse: 0 | coverage: 44 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 44 | discourse: 0 | coverage: 44 | city_attributes: 3 | cities: 13
+healthy matched pairs: 18
+  exact-cycle: 9
+  overlap-cycle: 9
+exploratory adjacent matches: 2
+safety units unmatched: 3
+```
+Unchanged from the prior session in every count — this run made zero edits to `data/contracts.csv`, `data/city_coverage.csv`, or `corpus/`.
+
+### Boundaries Observed
+
+- Exactly 4 live GABRIEL/codify calls (not more).
+- No full-corpus GABRIEL run.
+- No Harvard Proxy scripts run outside this capped pilot script.
+- No non-GABRIEL model/API calls.
+- No `data/contracts.csv` or `data/city_coverage.csv` edits.
+- No document ingestion or `corpus/` changes.
+- No API keys or secrets printed, inspected, copied, or committed.
+- No schema changes.
+- No causal claims made.
+
+### Recommended Next Step
+
+Decide how to add a confidence dimension (codify() alone cannot supply one) before scaling. Clean TOC-line noise from evidence windows and preserve more article-header context around ambiguous arbitration passages in the next run. If addressed, a modestly larger (still capped) pilot covering the remaining Texas/Ohio matched-city rows is the natural next step — not yet full-corpus extraction.
 
 ---
 

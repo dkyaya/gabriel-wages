@@ -114,6 +114,13 @@
 - **Future codify evidence-layer idea:** if a live pilot passes its source-grounding audit, `codify()` could eventually replace the hand-built mechanism-excerpt extraction CSVs at scale, filterable by state/city/occupation_class/mechanism.
 - **Standing caution:** any future codify output must be source-grounding audited (excerpts verified as verbatim substrings of the input text, no unsupported `present` calls) before being trusted or cited in report language — codify output is not automatically ground truth.
 
+## 7K. Harvard Proxy-enabled full-codebook GABRIEL/codify live pilot completed (added 2026-07-09)
+
+- Wired `gabriel.codify()` to the Harvard Proxy via a `response_fn` adapter (source-level trace confirmed the hook is genuinely wired end-to-end in the installed package). Ran the full refined 19-attribute codebook against 4 rows: `tx_houston_fire_2024`, `tx_houston_other_2024`, `tx_austin_nursehealth_2023`, `oh_columbus_fire_2023`. See `gabriel_codify_harvard_proxy_adapter_design_2026-07-09.md`, `gabriel_codify_full_codebook_pilot_design_2026-07-09.md`, and `gabriel_codify_full_codebook_audit_2026-07-09.md`.
+- **4/4 real live calls succeeded** (cost $0.00 each on `gpt-5.4-nano`); **53/53 present-status excerpts verified verbatim-grounded in their source window (zero hallucinations)**. The model correctly distinguished Houston Fire's grievance/contract-interpretation arbitration from interest/impasse arbitration — the key test this codebook refinement was designed for.
+- **Interface limitation found:** `gabriel.codify()`'s native output is binary present/absent per category with no confidence field and no explicit "unclear" state — this project's desired richer evidence_status/confidence schema cannot currently be fully populated by codify() alone; see the audit memo for options.
+- One plausible over-coding and one ambiguous arbitration call were flagged for human review (not blocking) — both documented in the audit memo with full context.
+
 ## 7. Artifact-generation readiness checklist for later PDF/DOCX creation
 
 - [ ] PI has reviewed and approved the group-retention frame and central-claim framing (Section 1 above).

@@ -164,3 +164,7 @@ timestamp,script_name,model,prompt_tokens,completion_tokens,estimated_cost_usd
 2026-06-30T15:13:55Z,run_gabriel_v10_gold_dryrun.py,gpt-5.4-nano,30038,245,0.006314
 2026-06-30T15:13:58Z,run_gabriel_v10_gold_dryrun.py,gpt-5.4-nano,811,137,0.000333
 2026-06-30T15:14:01Z,run_gabriel_v10_gold_dryrun.py,gpt-5.4-nano,21237,266,0.004580
+2026-07-09T15:59:17Z,gabriel_codify_pilot.py (harvard_proxy),gpt-5.4-nano,3956,2942,0.004469
+2026-07-09T16:01:24Z,gabriel_codify_pilot.py (harvard_proxy),gpt-5.4-nano,4058,2459,0.003885
+2026-07-09T16:01:36Z,gabriel_codify_pilot.py (harvard_proxy),gpt-5.4-nano,3733,1527,0.002655
+2026-07-09T16:01:45Z,gabriel_codify_pilot.py (harvard_proxy),gpt-5.4-nano,4405,1278,0.002478
