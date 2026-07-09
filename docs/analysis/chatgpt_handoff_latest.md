@@ -2,7 +2,72 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-08T17:59:00-04:00`
+Last updated: `2026-07-09T11:16:00-04:00`
+
+---
+
+## 2026-07-09T11:16:00-04:00 - Tiny GABRIEL/codify pilot: interface inspected, pilot fully designed and staged, but no live calls (no credentials available in this environment)
+
+**Commit:** pending in current session (`Pilot GABRIEL codify mechanism extraction`)
+
+### Current State After This Entry
+
+- Confirmed the prior Texas second matched-city session's changes (`e2cbc52`, "Complete second Texas matched city") were already committed, with only `tmp/` left untracked at session start; pre-session counts (44 contracts / 44 coverage) matched expectations.
+- Ran the first GABRIEL/codify pilot attempt in this repo's history. **Result: interface inspection and full pilot design succeeded; live calls did not run because no usable API credential exists in this environment.**
+- Created:
+  - `docs/analysis/gabriel_codify_interface_inspection_2026-07-08.md`
+  - `docs/analysis/gabriel_codify_pilot_design_2026-07-08.md`
+  - `docs/analysis/gabriel_codify_pilot_evidence_windows_2026-07-08.csv`
+  - `docs/analysis/gabriel_codify_pilot_prompt_preview_2026-07-08.md`
+  - `docs/analysis/gabriel_codify_pilot_audit_2026-07-08.md`
+  - `scripts/gabriel_codify_pilot.py`
+- Ran `tmp/gabriel_codify_pilots/2026-07-09_111259/` (dry-run outputs: `run_config.json`, `selected_windows.csv`, `prompt_preview.md`, `dry_run_log.txt`).
+- Lightly updated `all_groups_source_needs_2026-07-06.csv`, the report review checklist (new Section 7J), and the wage-mechanism evidence checklist.
+- **Per this session's explicit instruction, updated the relay-bundle convention going forward:** bundles now include `committed_changed_files.txt` (the list of files the commit actually touched) in addition to `git_status_post_commit.txt` (the post-commit cleanliness check) — see this entry's own relay bundle for the first instance of the new convention.
+
+### GABRIEL Interface Findings
+
+`gabriel` is installed and importable (version 1.1.8, real local package, not a stub). `gabriel.codify(df, column_name, *, save_dir, categories=None, additional_instructions="", model="gpt-5.4-mini", n_parallels=650, max_words_per_call=1000, reasoning_effort=None, n_rounds=2, response_fn=None, get_all_responses_fn=None, **cfg_kwargs) -> pandas.DataFrame` — a passage-coding task, docstring: "highlights snippets in text that match qualitative codes." `categories` is exactly the `{code_name: description}` shape needed for this project's 11-code mechanism codebook. `response_fn`/`get_all_responses_fn` are explicit injection points that could in principle route calls through this repo's existing Harvard Proxy client (from `scripts/proxy_pilot_must_have_sources.py`) — not attempted this session, since that wiring doesn't yet exist in repo conventions.
+
+**Credential check (presence/absence only, no values printed):** `OPENAI_API_KEY` NOT SET, `OPENAI_BASE_URL` NOT SET, `HARVARD_SUBSCRIPTION_KEY` NOT SET. GABRIEL's default call path needs the first two; this repo's Harvard Proxy pattern needs the third (and is a separate hand-built code path, not integrated with `codify()`). Neither is available, so **zero live calls were attempted** (0/0/0 attempted/succeeded/failed) — this is the clean "credentials missing, dry-run only" case the task's own hard boundary anticipates, not a partial failure.
+
+### Pilot Design (fully staged, ready for the first credentialed run)
+
+Selected 3 contracts (all `text_quality=clean`, all with an existing hand-built mechanism-excerpt answer key to audit against): `tx_houston_fire_2024` (8/11 mechanisms present in the prior extraction), `tx_houston_other_2024` (10/11), `oh_columbus_fire_2023` (11/11). Built one evidence window per contract by concatenating the already-extracted `evidence_status=present` excerpt bodies — 2,565 / 5,407 / 5,862 characters — with mechanism-name labels deliberately stripped from the window text so a future live run is a genuine coding test, not a label-echo exercise. Wrote the full codebook and a verbatim-only / no-causal-inference / default-to-`not_found` prompt spec (`additional_instructions`).
+
+`scripts/gabriel_codify_pilot.py`: defaults to dry-run; `--live` requires an explicit `--max-calls` hard-capped at 3 in code (not just a CLI flag); refuses cleanly and falls back to dry-run output if no credential is present (tested and confirmed both paths this session — dry-run succeeds normally, `--live` without a credential prints a clear refusal and produces dry-run output instead of crashing or hanging).
+
+### Boundaries Observed
+
+- No GABRIEL calls (0 live calls made).
+- No Harvard Proxy scripts run.
+- No non-GABRIEL model/API calls.
+- No `data/contracts.csv` or `data/city_coverage.csv` edits.
+- No document ingestion or `corpus/` changes.
+- No API keys or secrets printed, inspected, copied, or committed.
+- No schema changes.
+- No causal claims made.
+
+### Validation/Audit Results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 44 | discourse: 0 | coverage: 44 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 44 | discourse: 0 | coverage: 44 | city_attributes: 3 | cities: 13
+healthy matched pairs: 18
+  exact-cycle: 9
+  overlap-cycle: 9
+exploratory adjacent matches: 2
+safety units unmatched: 3
+```
+Unchanged from the prior session in every count — this run made zero edits to `data/contracts.csv`, `data/city_coverage.csv`, or `corpus/`.
+
+### Recommended Next Step
+
+Obtain a usable credential (`OPENAI_API_KEY`/`OPENAI_BASE_URL`, or wire `gabriel.codify()`'s `response_fn` injection point to the existing Harvard Proxy client) before attempting the first live call. When available, run `python scripts/gabriel_codify_pilot.py --live --max-calls 3` (or fewer) against the already-staged 3-row sample, then complete the source-grounding audit already scaffolded in `gabriel_codify_pilot_audit_2026-07-08.md` — check whether every returned excerpt is a verbatim substring of its window text, whether any mechanism is marked `present` without a real quoted match, and how the output compares to the known hand-extraction answer key — before deciding whether `codify()` should scale beyond this pilot.
 
 ---
 

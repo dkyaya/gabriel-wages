@@ -6,6 +6,60 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-09 11:16 EDT (Tiny GABRIEL/codify pilot) - Interface inspected, pilot fully designed and staged; no live calls (no credentials available); no data/corpus changes
+
+**Did**
+- Ran a tiny GABRIEL/codify pilot after Texas/Ohio ingestion, per the project's readiness assessment from the prior session (both comparison states now have two matched cities each). Goal: test whether `gabriel.codify()` can build a durable `state|city|occupation_class|contract_id|mechanism_code|evidence_status|excerpt|location|confidence|notes` evidence layer.
+- Confirmed repo state clean at session start (only untracked `tmp/`), latest commit `e2cbc52`, and pre-session counts of 44 contracts / 44 coverage rows, matching expectations.
+- Inspected the installed `gabriel` package (version 1.1.8, real local install). Confirmed `gabriel.codify(df, column_name, *, save_dir, categories=None, additional_instructions="", model="gpt-5.4-mini", ..., response_fn=None, get_all_responses_fn=None, **cfg_kwargs)` — a passage-coding task that maps cleanly onto this project's desired evidence-layer shape. Read the docstring in full.
+- **Checked credential presence (booleans only, no values printed or logged):** `OPENAI_API_KEY`, `OPENAI_BASE_URL`, and this repo's own `HARVARD_SUBSCRIPTION_KEY` are all unset in this environment. GABRIEL's default call path needs the first two; this repo's established Harvard Proxy calling pattern (`scripts/proxy_pilot_must_have_sources.py`) needs the third and is a separate hand-built code path that does not go through `gabriel.codify()` at all. Neither credential source is available, so **no live call could be safely attempted**, per this run's own hard boundary.
+- Designed and fully staged a 3-contract pilot anyway, so a future credentialed session can run it immediately: selected `tx_houston_fire_2024`, `tx_houston_other_2024`, and `oh_columbus_fire_2023` (all `text_quality=clean`, all with an existing hand-built mechanism-excerpt extraction to serve as a known-answer key). Built one compact evidence window per contract (2,565 / 5,407 / 5,862 characters) by concatenating the already-extracted `evidence_status=present` excerpt bodies from `houston_fire_mechanism_excerpt_extraction_2026-07-08.csv` and `texas_ohio_mechanism_excerpt_extraction_2026-07-08.csv` — deliberately stripping the mechanism-name labels out of the window text so a future live run is a genuine coding test, not a label-echo exercise.
+- Wrote the full 11-code mechanism codebook and a verbatim-only / no-causal-inference / default-to-`not_found` prompt spec (`additional_instructions`), matching this project's existing capture-verbatim-never-pre-code discipline.
+- Created:
+  - `docs/analysis/gabriel_codify_interface_inspection_2026-07-08.md`
+  - `docs/analysis/gabriel_codify_pilot_design_2026-07-08.md`
+  - `docs/analysis/gabriel_codify_pilot_evidence_windows_2026-07-08.csv`
+  - `docs/analysis/gabriel_codify_pilot_prompt_preview_2026-07-08.md`
+  - `docs/analysis/gabriel_codify_pilot_audit_2026-07-08.md`
+  - `scripts/gabriel_codify_pilot.py` (dry-run-default scaffold; `--live` requires an explicit `--max-calls` hard-capped at 3 in code; refuses cleanly and falls back to dry-run if no credential is present, verified by testing both the dry-run and the credential-refusal path)
+- Ran the dry-run pilot output into `tmp/gabriel_codify_pilots/2026-07-09_111259/` (`run_config.json` with `live_run_attempted: false`, `selected_windows.csv`, `prompt_preview.md`, `dry_run_log.txt`) — no `gabriel_codify_pilot_outputs_2026-07-08.csv` was created, since there is no live output to parse.
+- Lightly updated `all_groups_source_needs_2026-07-06.csv` (1 new cross-cutting row), the report review checklist (new Section 7J), and the wage-mechanism evidence checklist (1 new pointer sentence).
+- Updated the relay-bundle convention per this session's explicit instruction: future bundles use `committed_changed_files.txt` for the commit's file list, keeping `git_status_post_commit.txt` as the separate post-commit cleanliness check.
+
+**Decisions and why**
+- Did not attempt any live call, including a single-row test, because no usable credential exists in this environment — attempting one would either hang, fail on auth, or (worse) silently do nothing useful while still touching network code paths. Per the task's own hard boundary, this is a clean "produce dry-run only" case, not a partial-failure case.
+- Built evidence windows from already-extracted excerpts rather than re-running text extraction from the PDFs, since Task C explicitly allows reusing existing extraction files and this keeps the windows compact (2.5-5.9K characters vs. tens of thousands in the source PDFs) while still testing genuine coding ability (labels stripped from the window text).
+- Made `scripts/gabriel_codify_pilot.py` default to dry-run and hard-cap `--max-calls` at 3 in code (not just via a CLI flag), mirroring the safety pattern already established by `scripts/proxy_pilot_must_have_sources.py` for this repo's Harvard Proxy pilots.
+
+**Surprises/breakage**
+- No surprises in the interface itself — `gabriel.codify()`'s signature, docstring, and injection points (`response_fn`/`get_all_responses_fn`) are all clear and well-documented. The only blocker is environmental (missing credentials), not a code or design problem.
+- No repo breakage. Validation and coverage audit passed, unchanged from the prior session (44 contracts / 44 coverage / 18 healthy pairs) since this run made zero edits to `data/contracts.csv`, `data/city_coverage.csv`, or `corpus/`.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 44 | discourse: 0 | coverage: 44 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 44 | discourse: 0 | coverage: 44 | city_attributes: 3 | cities: 13
+healthy matched pairs: 18
+  exact-cycle: 9
+  overlap-cycle: 9
+exploratory adjacent matches: 2
+safety units unmatched: 3
+
+python scripts/gabriel_codify_pilot.py --dry-run --max-calls 3
+Dry run complete.
+```
+
+**No GABRIEL live calls were made (0 attempted / 0 succeeded / 0 failed). No Harvard Proxy scripts were run. No non-GABRIEL model/API calls were made. No `data/contracts.csv` or `data/city_coverage.csv` edits. No document ingestion or `corpus/` changes. No API keys or secrets were printed, inspected, copied, or committed — only boolean presence/absence of three credential environment variables was checked. `docs/schema.md` was not modified. No causal claims were made.**
+
+**Recommended next step**
+Obtain a usable credential (`OPENAI_API_KEY`/`OPENAI_BASE_URL`, or wire `gabriel.codify()`'s `response_fn` injection point to this repo's existing Harvard Proxy client pattern) before attempting the first live call. When available, run the fully-staged 3-row pilot (`scripts/gabriel_codify_pilot.py --live --max-calls 3`, or fewer) and complete the source-grounding audit already scaffolded in `gabriel_codify_pilot_audit_2026-07-08.md` before deciding whether `codify()` should replace any part of this project's hand-built mechanism-extraction process.
+
+---
+
 ## 2026-07-08 17:59 EDT (Texas second matched-city completion) - Austin EMS meet-and-confer agreement found and ingested; Texas now has two matched cities, on par with Ohio
 
 **Did**

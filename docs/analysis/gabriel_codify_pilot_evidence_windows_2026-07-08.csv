@@ -1,0 +1,108 @@
+contract_id,state,city,occupation_class,source_role,source_file,text_quality,window_id,window_text,window_token_or_char_count,reason_selected,notes
+tx_houston_fire_2024,TX,Houston,fire,fire,corpus/tx_houston/tx_houston_hpffa_fire_arbitration_award_2026.pdf,clean,tx_houston_fire_2024_w1,"(b) With respect to the application, interpretation and enforcement of the provisions of this Agreement the decision of the arbitrator shall be final and binding on the parties to this Agreement. (c) The arbitrator's authority shall be limited to the interpretation and application of the terms of this Agreement...and shall have no...authority to establish provisions of a new agreement or variations of the present Agreement...
+
+[...]
+
+FFs not regularly scheduled but pre-scheduled for overtime, called in on overtime or held over on overtime on a City Recognized Holiday shall receive time and one half for each hour of work performed...FFs not regularly scheduled, but pre-scheduled for overtime, called in on overtime or held over on overtime on any of the 4 premium holidays...shall receive double time for each hour of work performed.
+
+[...]
+
+Section 2. Base Salary. The annual base salary for all ranks shall receive an increase as follows: Fiscal Year 25 (7/1/24 to 6/30/25) 10% / Fiscal Year 26 (7/1/25 to 6/30/26) 3% (with 3% escalator*) / Fiscal Year 27 (7/1/26 to 6/30/27) 3% (with 3% escalator*) / Fiscal Year 28 (7/1/27 to 6/30/28) 4% (with 2% escalator*) / Fiscal Year 29 (7/1/29 to 6/30/30) 4% (with 2% escalator*)
+
+[...]
+
+The Parties agree that Article 17, Section 9, entitled EMT Suppression/EMT Administration Assignment Pay, will only be paid to Fire Fighters ('FFs') holding a current valid State of Texas EMT certification and serving on an EMS unit (basic unit, medic unit and squads), consistent with current practice.
+
+[...]
+
+i. $300.00 for FY25's uniform allowance...ii. $300.00 for FY26's uniform allowance...iii. $800.00...for each eligible member in the subsequent fiscal years prior to the expiration of the current CBA on June 30, 2029
+
+[...]
+
+The Parties agree that the City will designate $1,500,000.00 for Holiday Buy Back, inclusive of a reallocation of funds for station laundry services in section 3.1, each fiscal year starting in the current fiscal year, FY26, until June 30, 2029.
+
+[...]
+
+*Escalator percentages are contingent on joint efforts by the City and the Association to seek and ensure additional new revenues to the City for public safety.
+
+[...]
+
+The Parties agree to establish and maintain a ""Labor-Management Partnership"" that will open a new era where the Association, the City, Fire Department Administration, and employees of the bargaining unit shall work together through Joint Labor Management Committees (JLMC) to create a workforce that is highly motivated, multiskilled, and technologically advanced...",2565,"Preferred sample #1 (task-specified): arbitration/settlement source, institutionally important (Sec.174.1535-adjacent Texas fire compulsory-arbitration context).",Window built by concatenating the 8 evidence_status=present excerpt bodies already captured verbatim in docs/analysis/houston_fire_mechanism_excerpt_extraction_2026-07-08.csv (mechanism-name headers deliberately omitted from window_text to avoid leaking the answer key into the codify input).
+tx_houston_other_2024,TX,Houston,other,non_safety_general,corpus/tx_houston/tx_houston_hope_afscme123_meet_confer_2024.pdf,clean,tx_houston_other_2024_w1,"e HR Department Civil Service Coordinator at 611 Walker, 4th Floor, Houston, Texas 77002. HOPE and the City shall select a mediator through a process of mutual agreement from the Federal Mediation and Conciliation Service (FMCS). B. Should HOPE elect to proceed directly to arbitration, the City and HOPE will select an arbitrator by immediately requesting a list of seven (7) arbitrators from the FMCS and alternatively striking the names ...
+
+[...]
+
+laid-off employee in the same classification in another vacant position in the City for which the employee qualifies. During the pre-lay off and re-employment period, the City shall give preference to filling vacancies for classes offered by the Learning and Development Center to laid-off employees to assist them in qualifying for positions within the City unless another position (in or out of the City) is secured in the interim. Such ...
+
+[...]
+
+.................................................................. 34 10.04 Bilingual Pay ............................................................................................ 35 10.05 Overtime and Compensatory Time........................................................... 35 10.06 Holiday Pay .............................................................................................. 37 10.07 Premium Actual Holiday ........................................................................... 37 10.08 Call-Back Pay.................................................................
+
+[...]
+
+and confer negotiations and may not alter or amend any terms of this Agreement. Issues to be discussed should only be those that concern and affect more than an individual UM and/or affect one or more than one classification(s) of UMs or are systemic in nature and affect UMs. 4.08 Recommendations The LMCC is not a policy or decision-making body. Its purpose is limited to exploring issues and making recommendations ...
+
+[...]
+
+ommodation Letter ........................................................ 50 12.14 License and Certification .......................................................................... 50 12.15 Training Resources .................................................................................. 51 12.16 Work Schedule ......................................................................................... 51 Article 13 VOLUNTARY SEPARATION & RETIREMENT ............................................ 52 13.01 Municipal Phase Down Program .............................................................. 52
+
+[...]
+
+ry Time........................................................... 35 10.06 Holiday Pay .............................................................................................. 37 10.07 Premium Actual Holiday ........................................................................... 37 10.08 Call-Back Pay........................................................................................... 37 10.09 Emergency Activation............................................................................... 38 10.10 Special Event Pay ...................................................
+
+[...]
+
+RCE (This article was amended by the parties on November 22, 2024) 12.01 Privatization Notice The City will provide HOPE with advance written notice no later than 74 calendar days before the privatization or outsourcing occurs in which UMs are incumbents. Written notice to HOPE shall include an initial disclosure of the basis for the decision. Following notice, and at least 14 calendar days before the effective date, the City ...
+
+[...]
+
+.................................................................. 38 10.10 Special Event Pay .................................................................................... 38 Article 11 HEALTH BENEFITS ..................................................................................... 39 11.01 Eligibility ................................................................................................... 39 11.02 Premium Parity......................................................................................... 39 11.03 Change of Vendor ..............................................
+
+[...]
+
+................................................................................... 10 Article 5 WELLNESS COMMITTEE .............................................................................. 12 Article 6 SAFETY AND HEALTH .................................................................................. 13 6.01 Safety and Health Notice.......................................................................... 13 6.02 Citywide Safety Committee ...................................................................... 13 Article 7 NEW EMPLOYEE ORIENTATION ................................................
+
+[...]
+
+ion .................................................................................. 84 16.02 Appeals to the Civil Service Commission ................................................. 86 Article 17 MANAGEMENT RIGHTS .............................................................................. 87 17.01 Management Rights ................................................................................. 87 17.02 Maintenance of Standards ....................................................................... 87 17.02.01 Citywide.........................................................",5407,Preferred sample #2 (task-specified): broad HOPE/AFSCME Local 123 non-safety meet-and-confer comparison for Houston.,Window built by concatenating the 10 evidence_status=present excerpt bodies already captured verbatim in docs/analysis/texas_ohio_mechanism_excerpt_extraction_2026-07-08.csv.
+oh_columbus_fire_2023,OH,Columbus,fire,fire,corpus/oh_columbus/oh_columbus_iaff67_fire_cba_2023_2026.pdf,clean,oh_columbus_fire_2023_w1,"oyee placed in the program. This individualized plan will be developed by the Exercise Physiologist, placed in the employee's medical file, and a copy given to the employee. Each such plan must contain monthly benchmarks indicating sufficient progress and a timetable for reaching compliance. The body composition analysis results will be evaluated by the Exercise Physiologist designated by the City and the Union for each employee placed in the program. ...
+
+[...]
+
+ttlement procedure that is fully set forth in this paragraph (B)(2) and (B)(3). Upon request by the City, the parties shall jointly request from the Federal Mediation and Conciliation Service (FMCS) a list of seven (7) arbitrators and the parties shall select a single arbitrator from the list by alternate striking of names to serve as the conciliator. A coin toss shall determine the party with the right to strike ...
+
+[...]
+
+ecognition. The City recognizes its obligation to maintain a safe working environment. Safety rules and programs shall be consistent with accepted industry standards insofar as budget constraints and available staffing permit. The Union may raise disputes as to compliance with this provision under Article 9, Grievance Procedure. Section 8.3. No Smoking Policy. Smoking shall be prohibited in all City vehicles, in all City facilities and on City property pursuant to ...
+
+[...]
+
+........... 22 SECTION 12.6. COMPLETE ALPHABETICAL LISTING OF FIRE UNIFORM CLASSIFICATIONS. 22 SECTION 12.7. STEP INCREASES AND SALARY ADJUSTMENTS. ..................................... 22 ARTICLE 13 - OVERTIME, CALL-BACK TIME, HOLIDAY ELIGIBILITY.................... 23 SECTION 13.1. ELIGIBILITY AND CALL-BACK TIME. ...................................................... 23 SECTION 13.2. OVERTIME ELIGIBILITY AND PAY. ......................................................... 24 SECTION 13.3. HOLIDAY ELIGIBILITY AND PAY. ........................................................... 25 SECTION 13.4. OVERTIME AND H
+
+[...]
+
+................................................ 21 SECTION 12.5. TITLES USED AND PAY RANGES APPLIED TO CLASSES. ......................... 22 SECTION 12.6. COMPLETE ALPHABETICAL LISTING OF FIRE UNIFORM CLASSIFICATIONS. 22 SECTION 12.7. STEP INCREASES AND SALARY ADJUSTMENTS. ..................................... 22 ARTICLE 13 - OVERTIME, CALL-BACK TIME, HOLIDAY ELIGIBILITY.................... 23 SECTION 13.1. ELIGIBILITY AND CALL-BACK TIME. ...................................................... 23 SECTION 13.2. OVERTIME ELIGIBILITY AND PAY. ......................................................... 24 SECTION 13.3.
+
+[...]
+
+.......................................................... 96 SECTION 38.6. PHYSICAL FITNESS TEST. .................................................................... 96 SECTION 38.7. PHYSICAL FITNESS TRAINING PROGRAM (PFTP). ................................. 97 SECTION 38.8. WELLNESS PROGRAMS. ...................................................................... 98 SECTION 38.9. COMMITTEE. ....................................................................................... 98 SECTION 38.10. PROGRAM CHANGES. ........................................................................ 98 APPENDIX A - HEALTH
+
+[...]
+
+time worked as a result of changing shifts where there is a continuous twenty-four (24) hours per day operation and/or a continuous seven (7) day per week operation, is not subject to premium overtime rates. The words ""hours worked"" as used in this paragraph shall include all hours during which the employee is on paid status except those hours during which the employee is on authorized sick leave or injury ...
+
+[...]
+
+between alcohol and drug tests, unless otherwise agreed to by the parties. Such tests shall be spread reasonably throughout the year. The City shall contract with an outside contractor (agreeable to the Union) who shall select employees for random testing using a scientifically valid method and lists of employees supplied by the City each month. Employees notified of their selection for random testing shall proceed immediately to the collection site. ...
+
+[...]
+
+no greater rights to reinstatement or to other benefits and conditions of employment than if the employee had been continuously employed during the FMLA leave period. (F) The City shall maintain health insurance benefits for the duration of FMLA leave at the level and under the same conditions (including employee 73 premium contributions) and coverage that would have been provided if the employee had continued in active work status for ...
+
+[...]
+
+T OF RIGHTS. .......................................................................... 9 SECTION 7.2. CONTRACTING OUT/CIVILIANIZATION. ....................................................... 9 ARTICLE 8 – SAFETY.................................................................................................. 10 SECTION 8.1. INJURY REPORTS. ................................................................................. 10 SECTION 8.2. RECOGNITION. ...................................................................................... 10 SECTION 8.3. NO SMOKING POLICY. ............................................
+
+[...]
+
+....................................................................................... 7 ARTICLE 6 - MID-TERM BARGAINING ......................................................................... 7 ARTICLE 7 - MANAGEMENT RIGHTS .......................................................................... 9 SECTION 7.1. STATEMENT OF RIGHTS. .......................................................................... 9 SECTION 7.2. CONTRACTING OUT/CIVILIANIZATION. ....................................................... 9 ARTICLE 8 – SAFETY.................................................................................................. 10",5862,"Preferred sample #3 (task-specified, fire variant chosen): clean IAFF Local 67 CBA text with rich mechanism evidence across nearly all 11 codes; Ohio Chapter 4117/SERB institutional comparison to Houston's Chapter 174 fire arbitration case.",Window built by concatenating the 11 evidence_status=present excerpt bodies already captured verbatim in docs/analysis/texas_ohio_mechanism_excerpt_extraction_2026-07-08.csv.

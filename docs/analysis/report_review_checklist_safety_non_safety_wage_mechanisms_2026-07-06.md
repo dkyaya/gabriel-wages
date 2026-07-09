@@ -107,6 +107,13 @@
 - Report-writing caution: EMS is civil-service-protected and statutorily adjacent to police/fire (a shared Ch.143 Civil Service Commission with police/fire; bargains under Ch.142 Subchapter D, the same chapter as Austin police) — it should not be described as an ordinary civilian/clerical comparison unit.
 - Fort Worth and San Antonio were not evaluated this session (Austin resolved first); both remain documented as backup options if a third Texas city is ever needed, though prior planning found no confirmed non-safety channel for either.
 
+## 7J. Tiny GABRIEL/codify pilot: dry-run only, no credentials available (added 2026-07-08)
+
+- Inspected `gabriel.codify()` (installed, version 1.1.8) and designed a 3-contract tiny pilot (`tx_houston_fire_2024`, `tx_houston_other_2024`, `oh_columbus_fire_2023`) to test a durable `state|city|occupation_class|contract_id|mechanism_code|evidence_status|excerpt|location|confidence|notes` evidence layer. See `gabriel_codify_interface_inspection_2026-07-08.md`, `gabriel_codify_pilot_design_2026-07-08.md`, and `gabriel_codify_pilot_audit_2026-07-08.md`.
+- **No live calls were made** — neither `OPENAI_API_KEY`/`OPENAI_BASE_URL` nor this repo's own `HARVARD_SUBSCRIPTION_KEY` are present in this environment. Full design, evidence windows, and prompt preview are staged and reusable for a future credentialed run.
+- **Future codify evidence-layer idea:** if a live pilot passes its source-grounding audit, `codify()` could eventually replace the hand-built mechanism-excerpt extraction CSVs at scale, filterable by state/city/occupation_class/mechanism.
+- **Standing caution:** any future codify output must be source-grounding audited (excerpts verified as verbatim substrings of the input text, no unsupported `present` calls) before being trusted or cited in report language — codify output is not automatically ground truth.
+
 ## 7. Artifact-generation readiness checklist for later PDF/DOCX creation
 
 - [ ] PI has reviewed and approved the group-retention frame and central-claim framing (Section 1 above).
