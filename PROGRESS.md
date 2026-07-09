@@ -6,6 +6,62 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-09 18:48 EDT (GABRIEL codify viewer and durable evidence layer) - Local excerpt browser and append-friendly evidence table built; no live GABRIEL/Proxy/model calls; no data/corpus changes
+
+**Did**
+- Investigated how GABRIEL expects users to view codify excerpts before expanding codify to more rows/cities, then built a durable local evidence layer and browser for this project.
+- Confirmed repo state clean at session start (only untracked `tmp/`), latest commit `7c6c3b0`, and pre-session counts of 44 contracts / 44 coverage rows, matching expectations.
+- **Inspected `gabriel.utils.passage_viewer` (installed source, 2,858 lines) directly** rather than relying on docstrings alone. Found a genuine, real, fairly sophisticated built-in viewer: `gabriel.view(df, column_name, attributes=..., header_columns=..., ...)`, purpose-built to display `codify()`'s output (including a dedicated `attributes="coded_passages"` shortcut), with color-coded category highlighting (`_build_highlighted_text`, wraps matched substrings in `<span style='background-color:...'>`), a click-to-cycle legend, and notebook-styled navigation controls. **Critically, it requires a live IPython/Jupyter kernel to render at all** (`from IPython.display import HTML, display`) and has no supported standalone-file-export path. The older `tkinter`-based `PassageViewer` class is explicitly retired in this installed version (raises `RuntimeError` directing users to `gabriel.view(...)` in a notebook). No bundled tutorial notebook ships with the package; the upstream repo (`github.com/openai/GABRIEL`) was identified via package metadata but not fetched, since the installed source already gave more precise, authoritative answers.
+- **Concluded GABRIEL's built-in viewer does not meet this project's actual need** (multi-dimensional metadata filtering across state/city/contract_id/occupation_class/source_role/attribute/evidence_status/source_grounding_status, plus free-text search, plus a durable git-committable artifact) and built a project-local static HTML viewer instead — borrowing GABRIEL's excerpt-highlighting pattern (`<mark>`-wrapped matched text) as design inspiration, but with no IPython/notebook dependency at all.
+- Built the durable evidence layer (`gabriel_codify_evidence_layer.csv`) from the existing full-codebook pilot output (`gabriel_codify_full_codebook_outputs_2026-07-09.csv`), with a stable `evidence_id` scheme (`codify_YYYYMMDD_<contract_id>_<attribute>_<sequence>`) designed to be append-friendly across future codify runs, and kept strictly binary `present`/`not_found` evidence_status (no invented confidence/caveat values).
+- Built a self-contained static HTML excerpt browser (`gabriel_codify_excerpt_browser_2026-07-09.html`, 104KB, no external CDN/JS/CSS dependencies) with sidebar filters (state, city, contract_id, occupation_class, source_role, attribute, evidence_status, source_grounding_status), free-text search, live counts, a "Cards" view with Prev/Next navigation and highlighted excerpts, a compact "Table" view, and a "How to use this viewer" section.
+- Wrote a regeneration script (`scripts/build_codify_evidence_viewer.py`) that produces both files from any codify output CSV, validates controlled values and duplicate `evidence_id`s at write time, and prints a concise row-count summary. No `gabriel` import, no credential read, no network call anywhere in the script.
+- Verified the generated HTML without a browser-automation tool: extracted the embedded `<script>` block and syntax-checked it with `node --check` (passed), and extracted/parsed the embedded `const EVIDENCE = [...]` JSON with Python (92 rows, 53 present, all fields intact) — confirming the file is well-formed and the data is faithfully embedded.
+- Ran the build script twice (idempotency check) and once more as part of Task G's checks — identical row counts each time, no side effects.
+- Created:
+  - `docs/analysis/gabriel_codify_viewer_capability_review_2026-07-09.md`
+  - `docs/analysis/gabriel_codify_evidence_layer.csv`
+  - `docs/analysis/gabriel_codify_excerpt_browser_2026-07-09.html`
+  - `docs/analysis/gabriel_codify_viewer_build_audit_2026-07-09.md`
+  - `scripts/build_codify_evidence_viewer.py`
+- Lightly updated `all_groups_source_needs_2026-07-06.csv` (1 new row), the report review checklist (new Section 7L), and the wage-mechanism evidence checklist (1 new pointer).
+
+**Decisions and why**
+- Did not attempt to monkey-patch/capture GABRIEL's internal `_render_passage_viewer` HTML output, despite it being technically possible (the function assembles a self-contained `style_html + viewer_html` string before handing it to `IPython.display.HTML`) — this would depend on private, underscore-prefixed internals not intended as a stable public API, and would still not solve the actual requirement (faceted filtering across contract-level metadata, which GABRIEL's viewer was never designed for).
+- Kept the browser's excerpt highlighting as "wrap the whole excerpt in `<mark>`" rather than "find the excerpt's position within a larger passage and highlight only that span" (GABRIEL's own approach) — appropriate here because this project's evidence windows are already compact, curated excerpt concatenations, not full source documents; each `excerpt` field IS the matched span, not a position within something larger shown in the card.
+- Designed `evidence_id` and the evidence-table schema explicitly for append-friendliness (`run_date` embedded, sequence counters reset per run via the `(contract_id, attribute)` key) so a future second codify run's output CSV can be fed through the same script without colliding IDs, per Task B's explicit requirement.
+
+**Surprises/breakage**
+- The genuine surprise: GABRIEL does have a real, non-trivial viewer (not just a stub) — but it is notebook-only by explicit design, and the older desktop viewer has been deliberately retired, not merely undocumented. This confirms building a project-local viewer was the right call, not a workaround for a missing feature.
+- No repo breakage. Validation and coverage audit passed, unchanged from the prior session (44 contracts / 44 coverage / 18 healthy pairs) since this run made zero edits to `data/contracts.csv`, `data/city_coverage.csv`, or `corpus/`.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 44 | discourse: 0 | coverage: 44 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 44 | discourse: 0 | coverage: 44 | city_attributes: 3 | cities: 13
+healthy matched pairs: 18
+  exact-cycle: 9
+  overlap-cycle: 9
+exploratory adjacent matches: 2
+safety units unmatched: 3
+
+python scripts/build_codify_evidence_viewer.py
+Codify evidence layer + viewer build summary
+  input rows read:        92 | evidence rows written: 92
+  present: 53 | not_found: 39 | grounded present: 53
+```
+
+**No GABRIEL calls. No Harvard Proxy calls. No non-GABRIEL model/API calls. No `data/contracts.csv` edits. No `data/city_coverage.csv` edits. No document ingestion or `corpus/` changes. No API keys or secrets printed, inspected, copied, or committed. `docs/schema.md` was not modified. No causal claims were made. No final PDF/DOCX artifacts were created.**
+
+**Recommended next step**
+Open `docs/analysis/gabriel_codify_excerpt_browser_2026-07-09.html` directly in a browser for a manual visual/interaction pass (filters, card navigation, table view) before relying on it for real review work — this session verified it via syntax/data checks only, no live browser rendering tool was available. When a second codify pilot run happens, re-run `scripts/build_codify_evidence_viewer.py` against a combined input (or extend it with an explicit append/union mode) so the evidence layer and viewer stay cumulative rather than being overwritten per run.
+
+---
+
 ## 2026-07-09 12:06 EDT (Harvard Proxy-enabled GABRIEL/codify full-codebook pilot) - Adapter built and verified live; 4/4 calls succeeded; 100% source-grounded; no data/corpus changes
 
 **Did**

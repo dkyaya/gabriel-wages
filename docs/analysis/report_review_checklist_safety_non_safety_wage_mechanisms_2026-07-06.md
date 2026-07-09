@@ -121,6 +121,12 @@
 - **Interface limitation found:** `gabriel.codify()`'s native output is binary present/absent per category with no confidence field and no explicit "unclear" state — this project's desired richer evidence_status/confidence schema cannot currently be fully populated by codify() alone; see the audit memo for options.
 - One plausible over-coding and one ambiguous arbitration call were flagged for human review (not blocking) — both documented in the audit memo with full context.
 
+## 7L. Durable codify evidence layer and local excerpt browser built (added 2026-07-09)
+
+- Reviewed GABRIEL's built-in viewer (`gabriel.view()`) via source inspection: real and fairly sophisticated (color-coded highlighting, click-to-cycle navigation), but notebook/IPython-bound only — the desktop `tkinter` viewer is explicitly retired, and there is no supported standalone-file export. Not usable for this project's actual need (multi-dimensional metadata filtering across state/city/occupation_class/source_role). See `gabriel_codify_viewer_capability_review_2026-07-09.md`.
+- Built a project-local, self-contained static HTML viewer instead: `gabriel_codify_excerpt_browser_2026-07-09.html`, plus a durable append-friendly evidence table `gabriel_codify_evidence_layer.csv` (92 rows: 53 present, 39 not_found, all 53 present rows grounded) and a regeneration script `scripts/build_codify_evidence_viewer.py`.
+- **Future codify scaling should append to the evidence layer and rebuild the viewer** via this script, not start over. Codify remains binary present/not_found only (no native confidence/unclear state — see 7K). Source-grounding audit remains required before any evidence is used analytically.
+
 ## 7. Artifact-generation readiness checklist for later PDF/DOCX creation
 
 - [ ] PI has reviewed and approved the group-retention frame and central-claim framing (Section 1 above).

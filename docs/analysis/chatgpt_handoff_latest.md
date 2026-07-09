@@ -2,7 +2,82 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-09T12:06:00-04:00`
+Last updated: `2026-07-09T18:48:00-04:00`
+
+---
+
+## 2026-07-09T18:48:00-04:00 - GABRIEL codify viewer and durable evidence layer built; no live GABRIEL/Proxy/model calls
+
+**Commit:** pending in current session (`Build GABRIEL codify excerpt viewer`)
+
+### Current State After This Entry
+
+- Confirmed the prior Harvard Proxy pilot session's changes (`7c6c3b0`, "Run Harvard Proxy codify pilot") were already committed, with only `tmp/` left untracked at session start; pre-session counts (44 contracts / 44 coverage) matched expectations.
+- Investigated how GABRIEL expects users to view codify excerpts, then built a durable local evidence layer and browser for this project, ahead of expanding codify to more rows/cities.
+- Created:
+  - `docs/analysis/gabriel_codify_viewer_capability_review_2026-07-09.md`
+  - `docs/analysis/gabriel_codify_evidence_layer.csv`
+  - `docs/analysis/gabriel_codify_excerpt_browser_2026-07-09.html`
+  - `docs/analysis/gabriel_codify_viewer_build_audit_2026-07-09.md`
+  - `scripts/build_codify_evidence_viewer.py`
+- Lightly updated `all_groups_source_needs_2026-07-06.csv`, the report review checklist (new Section 7L), and the wage-mechanism evidence checklist.
+
+### GABRIEL Built-In Viewer Finding
+
+**Real, but notebook-only — not usable as a standalone project artifact.** Inspected `gabriel.utils.passage_viewer` (installed source, 2,858 lines) directly, not just its docstring. `gabriel.view(df, column_name, attributes=..., ...)` is a genuine, fairly sophisticated viewer purpose-built for codify output (`attributes="coded_passages"` shortcut), with color-coded category highlighting (matched substrings wrapped in `<span style='background-color:...'>`), a click-to-cycle legend, and notebook-styled nav controls. It requires a live IPython/Jupyter kernel (`from IPython.display import HTML, display`) to render anything and has no supported file-export path. **The older `tkinter` desktop `PassageViewer` is explicitly retired** in this installed version (raises `RuntimeError` telling users to use `gabriel.view(...)` in a notebook instead). No bundled tutorial notebook ships with the package; the upstream repo (`github.com/openai/GABRIEL`, found via package metadata) was not fetched since the installed source already answered every question definitively.
+
+**Decision:** build a project-local static HTML viewer instead — GABRIEL's viewer was never designed for the multi-dimensional metadata filtering (state/city/contract_id/occupation_class/source_role/attribute/evidence_status/source_grounding_status) this project actually needs, and a notebook-bound display can't be a durable, git-committable artifact anyway. GABRIEL's excerpt-highlighting pattern (`<mark>`-wrapped matched text) was reused as design inspiration.
+
+### Durable Evidence Layer
+
+`docs/analysis/gabriel_codify_evidence_layer.csv` — built from `gabriel_codify_full_codebook_outputs_2026-07-09.csv`, **92 rows** (53 `present`, 39 `not_found`, 0 duplicate `evidence_id`s). Stable ID scheme: `codify_YYYYMMDD_<contract_id>_<attribute>_<sequence>`, designed to be append-friendly across future codify runs. Strictly binary `evidence_status` (present/not_found only, matching codify's actual native output — no invented confidence/caveat values). `source_file` resolved for all 92 rows via lookup against existing `*evidence_windows*.csv` files.
+
+### Local HTML Excerpt Browser
+
+`docs/analysis/gabriel_codify_excerpt_browser_2026-07-09.html` (104,453 bytes). Fully self-contained — no external CDN/JS/CSS, no server required, opens by double-click. Sidebar filters for all 8 required dimensions (state, city, contract_id, occupation_class, source_role, attribute, evidence_status, source_grounding_status) plus free-text search (excerpt + notes) and a present-only-by-default "show not_found" toggle. Live counts panel (total/present/not_found/grounded present/selected). Two view modes: **Cards** (one evidence item at a time, `<mark>`-highlighted excerpt, full metadata grid, Prev/Next navigation) and **Table** (compact, all filtered rows). A "How to use this viewer" `<details>` section at the top.
+
+### Verification (no browser-automation tool available)
+
+- Extracted the embedded `<script>` block and syntax-checked with `node --check` — **passed**.
+- Extracted and parsed the embedded `const EVIDENCE = [...]` JSON with Python — **92 rows, 53 present, all 17 fields intact**.
+- Ran the build script twice (idempotency) plus once more in Task G's checks — identical output each time.
+- No live browser rendering/screenshot was performed; recommend the user open the file directly for a final visual pass.
+
+### Validation/Audit Results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 44 | discourse: 0 | coverage: 44 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 44 | discourse: 0 | coverage: 44 | city_attributes: 3 | cities: 13
+healthy matched pairs: 18
+  exact-cycle: 9
+  overlap-cycle: 9
+exploratory adjacent matches: 2
+safety units unmatched: 3
+
+python scripts/build_codify_evidence_viewer.py
+input rows read: 92 | evidence rows written: 92 | present: 53 | not_found: 39 | grounded present: 53
+```
+Unchanged from the prior session in every data/coverage count — this run made zero edits to `data/contracts.csv`, `data/city_coverage.csv`, or `corpus/`.
+
+### Boundaries Observed
+
+- No live GABRIEL calls.
+- No Harvard Proxy calls.
+- No non-GABRIEL model/API calls.
+- No `data/contracts.csv` or `data/city_coverage.csv` edits.
+- No document ingestion or `corpus/` changes.
+- No API keys or secrets printed, inspected, copied, or committed.
+- No schema changes.
+- No causal claims made.
+- No final PDF/DOCX artifacts created.
+
+### Recommended Next Step
+
+Open the HTML browser directly for a manual visual/interaction pass before relying on it for real review work. When a second codify pilot run happens, re-run `scripts/build_codify_evidence_viewer.py` against a combined input (or add an explicit append/union mode) so the evidence layer and viewer accumulate across runs rather than being overwritten each time.
 
 ---
 
