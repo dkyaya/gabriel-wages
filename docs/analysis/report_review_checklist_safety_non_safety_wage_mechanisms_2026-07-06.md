@@ -149,6 +149,15 @@
 - Codify remains binary present/not_found only; source verification remains required before any evidence is used analytically. No `data/contracts.csv`, `data/city_coverage.csv`, or `corpus/` edits.
 - **Next step: manual viewer QA** (open the file, exercise the new unverified-evidence toggle and Massachusetts filters in a real browser) **or a further acquisition batch** (Seekonk is a strong, fully-matched Massachusetts candidate not used this run).
 
+## 7P. Excerpt-boundary leakage fixed at the pipeline level; Seekonk added; Wayland dispatch/nurse gap recovered via bounded OCR (added 2026-07-10)
+
+- **Fixed the excerpt-boundary-leakage defect flagged in 7O at its root**: the wide-to-long reshape, grounding check, and boundary-leakage/mechanism-label cleanup now live directly in `scripts/gabriel_codify_pilot.py` (`reshape_and_validate_outputs()`), running automatically at the end of every live call — no separate one-off downstream script required. A **multi-boundary** variant (one excerpt spanning 6 separator instances) was discovered live this session and fixed with zero additional API calls by locally reprocessing the already-fetched raw output through the corrected function.
+- **Recovered Wayland's dispatch/Community Health Nurse content via a bounded OCR pass** (`tesseract`, 150 DPI, single pass, all 48 pages, ~51 seconds total) on a corpus PDF that previously extracted to ~0 usable characters — full wage-grade tables (G-3 JCC Dispatcher, G-4 JCC Dispatcher Coordinator, G-7A Public Health Nurse, G-15 Community Health Nurse) and multiple dispatcher/nurse-specific clauses recovered. See `wayland_bounded_ocr_recovery_2026-07-10.md`.
+- Ran a 6-row Seekonk/Wayland codify batch (Seekonk public_works/library/police/fire/teacher — a newly fully-matched city; Wayland other — the OCR-recovered dispatch/nurse row). All 6 live calls succeeded; 124 output rows (43 present, 81 not_found); 39/43 pass the grounding check outright, 4 boundary-leakage cases caught and flagged (not silently included).
+- Evidence layer rebuilt from all four codify output files: **603 total rows, 261 present (252 verified, 9 flagged/unverified), 342 not_found.** Seekonk now appears in the viewer for the first time.
+- Codify remains binary present/not_found; source verification remains required. No `data/contracts.csv`, `data/city_coverage.csv`, or `corpus/` edits.
+- **Next step: plan a Texas/Ohio source-expansion batch, then begin report scaffolding.**
+
 ## 7. Artifact-generation readiness checklist for later PDF/DOCX creation
 
 - [ ] PI has reviewed and approved the group-retention frame and central-claim framing (Section 1 above).

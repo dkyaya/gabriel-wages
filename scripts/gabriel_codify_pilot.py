@@ -41,9 +41,11 @@ Usage (live, requires HARVARD_SUBSCRIPTION_KEY, e.g. via a git-ignored .env file
 from __future__ import annotations
 
 import argparse
+import ast
 import asyncio
 import csv
 import json
+import re
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -55,9 +57,10 @@ PILOT_OUTPUT_ROOT = ROOT / "tmp" / "gabriel_codify_pilots"
 # Hard ceiling. --max-calls above this is refused outright, regardless of what
 # the caller passes -- raising this requires a deliberate code edit, not a flag.
 # Raised 4 -> 8 on 2026-07-09 for the Texas/Ohio scale-up run, then 8 -> 10 on
-# 2026-07-10 for the approved curated Massachusetts scale-up run (10 selected
-# rows, one call each). See gabriel_codify_massachusetts_preflight_2026-07-09.md.
-HARD_MAX_CALLS = 10
+# 2026-07-10 for the Massachusetts scale-up run, then back to 8 later the same
+# day for the approved Seekonk/Wayland run (up to 8 selected rows, one call
+# each). See gabriel_codify_seekonk_wayland_preflight_2026-07-10.md.
+HARD_MAX_CALLS = 8
 
 # Default (non-proxy) GABRIEL model; overridden to a Harvard-proxy-confirmed model
 # when --use-harvard-proxy is passed (see HARVARD_PROXY_MODEL below).
@@ -369,6 +372,252 @@ def _read_windows(path: Path, contract_id: str | None) -> list[dict]:
     return rows
 
 
+# ---------------------------------------------------------------------------
+# Excerpt-boundary leakage detection and cleanup (added 2026-07-10).
+#
+# Why this exists: the mechanism-label contamination check above stops
+# codebook vocabulary from being injected into window_text as SECTION
+# HEADERS. But a second, milder failure mode was discovered in the
+# Massachusetts scale-up run (2026-07-10): even with clean, neutral
+# "--- Excerpt N [location] ---" separators between adjacent window
+# sections, the model sometimes copies a "verbatim" span that CROSSES the
+# boundary between two adjacent sections and includes a few characters of
+# this project's own separator syntax -- e.g.
+#   'The stipend for Emergency Medical Techni\n\n--- Excerpt 7 [Section 10.2'
+#   'Section 14.2] ---\na part\nof this agreement...'
+#   '...workers compens\n\n--- Excerpt 8 ---\nurs between 12:01 am...'
+# In every observed case, genuine source text sits on at least one side of
+# the leaked fragment -- this is NOT the full-fabrication failure mode from
+# the Texas/Ohio run (where the ENTIRE excerpt was a header); it is a
+# boundary-crossing copy error. See
+# docs/analysis/gabriel_codify_massachusetts_audit_2026-07-09.md.
+#
+# Fix strategy: after codify() returns, every present excerpt is scanned for
+# a fragment of this project's own separator syntax. If found, the excerpt is
+# split at the fragment and only the LONGER of the two remaining sides is
+# kept -- this guarantees the cleaned excerpt is still a genuine, unmodified,
+# single contiguous substring of the original excerpt (never fabricated or
+# spliced from two different source locations), while removing the leaked
+# scaffolding text. The row is downgraded to source_grounding_status=unclear
+# (or unsupported if nothing usable survives) regardless of whether cleanup
+# succeeded, and a note explains exactly what was detected -- this makes
+# boundary leakage visible for review rather than silently "fixed" and
+# re-promoted as ordinary grounded evidence.
+LEAK_FULL_SEPARATOR_RE = re.compile(
+    r"-{2,}\s*Excerpt\s*\d*\s*(?:\[[^\]\n]{0,80}\])?\s*-{2,}", re.IGNORECASE
+)
+LEAK_OPENER_RE = re.compile(
+    r"-{2,}\s*Excerpt\s*\d*\s*(\[[^\]\n]{0,80}\]?)?\s*-{0,}", re.IGNORECASE
+)
+LEAK_CLOSER_RE = re.compile(
+    r"[^\[\]\n]{0,80}\]\s*-{2,}", re.IGNORECASE
+)
+LEAK_BARE_DASH_RE = re.compile(r"-{3,}")
+
+
+def _find_boundary_leak(excerpt: str) -> re.Match | None:
+    """Return the first (leftmost) boundary-leakage match found by any of the
+    three partial-fragment patterns, or None if the excerpt is clean."""
+    candidates = [
+        m for m in (LEAK_OPENER_RE.search(excerpt), LEAK_CLOSER_RE.search(excerpt),
+                     LEAK_BARE_DASH_RE.search(excerpt))
+        if m is not None
+    ]
+    if not candidates:
+        return None
+    return min(candidates, key=lambda m: m.start())
+
+
+def _clean_boundary_leak(excerpt: str) -> tuple[str, str]:
+    """Detect and remove leaked separator text from a returned excerpt.
+    Returns (cleaned_excerpt, note) -- note is "" if no leakage was found.
+    Never fabricates or splices text: the cleaned excerpt is always an
+    untouched contiguous substring of the original.
+
+    Two-stage approach, since a leaked excerpt can span EITHER a single
+    partial fragment at one boundary (e.g. '...compens\\n\\n--- Excerpt 8
+    ---\\nurs between...') OR multiple COMPLETE separators (when the model
+    over-copies across several adjacent window sections at once, observed in
+    the Seekonk/Wayland run on a teacher-contract window: one 'excerpt'
+    spanned 6 separator instances). Stage 1 splits on every complete
+    '--- Excerpt N [...] ---' instance and keeps the single longest segment
+    (generalizes a two-way split to N-way, still always a genuine untouched
+    substring). Stage 2 re-runs the original partial-fragment trim on that
+    chosen segment, in case its own edges still carry a partial separator
+    left over from the original raw excerpt's boundary."""
+    segments = [s.strip() for s in LEAK_FULL_SEPARATOR_RE.split(excerpt)]
+    segments = [s for s in segments if s]
+    multi_boundary = len(segments) > 1
+    stage1 = max(segments, key=len) if segments else excerpt
+
+    match = _find_boundary_leak(stage1)
+    if match is None:
+        if not multi_boundary:
+            return excerpt, ""
+        cleaned = stage1
+    else:
+        prefix = stage1[:match.start()].strip()
+        suffix = stage1[match.end():].strip()
+        cleaned = prefix if len(prefix) >= len(suffix) else suffix
+
+    if not cleaned:
+        return "", (
+            f"METHODOLOGY FLAG: excerpt-boundary leakage detected -- the entire returned "
+            f"excerpt was this project's own separator fragment ({excerpt!r}), with no "
+            f"genuine source text on either side. Nothing usable survives cleanup."
+        )
+    note = (
+        f"METHODOLOGY FLAG: excerpt-boundary leakage detected and cleaned -- the raw "
+        f"excerpt spanned {len(segments) if multi_boundary else 1} window-section(s) "
+        f"separated by this project's own separator syntax; kept the single longest "
+        f"genuine segment ({len(cleaned)} chars out of {len(excerpt)} chars raw) rather "
+        f"than splicing multiple locations together. Original raw excerpt: {excerpt!r}."
+    )
+    return cleaned, note
+
+
+def _has_mechanism_label_leakage(excerpt: str) -> bool:
+    """A milder cousin of _check_window_contamination: checks whether a
+    RETURNED excerpt (not the input window) contains this project's own
+    codebook vocabulary -- a signal the model may have echoed scaffolding
+    text rather than genuine document content."""
+    lowered = excerpt.lower()
+    return any(pat.lower() in lowered for pat in _contamination_patterns())
+
+
+def _normalize_ws(s: str) -> str:
+    return re.sub(r"\s+", " ", s or "").strip()
+
+
+LOCATION_RE = re.compile(r"(ARTICLE\s+[IVXLC\d]+[A-Za-z\-]?|Article\s+\d+[A-Za-z]?|Section\s+\d+(\.\d+)?)")
+
+
+def _find_excerpt_location(excerpt: str, window_text: str) -> str:
+    norm_window = _normalize_ws(window_text)
+    norm_excerpt = _normalize_ws(excerpt)
+    if not norm_excerpt:
+        return ""
+    idx = norm_window.find(norm_excerpt)
+    if idx == -1:
+        return ""
+    preceding = norm_window[max(0, idx - 300):idx]
+    matches = LOCATION_RE.findall(preceding)
+    if matches:
+        last = matches[-1]
+        return last[0] if isinstance(last, tuple) else last
+    return ""
+
+
+def _grounding_status(excerpt: str, window_text: str) -> str:
+    norm_window = _normalize_ws(window_text)
+    norm_excerpt = _normalize_ws(excerpt)
+    if not norm_excerpt:
+        return "not_applicable"
+    return "grounded" if norm_excerpt in norm_window else "unsupported"
+
+
+def reshape_and_validate_outputs(combined_df, windows_by_contract: dict[str, dict],
+                                  run_id: str, raw_output_ref_prefix: str) -> list[dict]:
+    """Reshape gabriel.codify()'s native wide-format result (one row per
+    contract, one column per attribute, each cell a Python-list-repr of
+    excerpt strings) into this project's long/tidy evidence-output schema,
+    applying boundary-leakage cleanup and mechanism-label-leakage detection
+    to every returned excerpt before it is trusted as grounded. This is the
+    single source of truth for docs/analysis/*_outputs_*.csv going forward --
+    see the module docstring above for why this logic now lives here instead
+    of a one-off downstream script."""
+    non_attr_cols = {
+        "contract_id", "state", "city", "occupation_class", "source_role", "source_file",
+        "text_quality", "window_id", "window_text", "window_char_count", "reason_selected", "notes",
+    }
+    caveat_text = (
+        "gabriel.codify()'s native output has no confidence/caveat field; not_applicable is "
+        "reported honestly rather than inventing a value."
+    )
+    attr_cols = [c for c in combined_df.columns if c not in non_attr_cols]
+
+    out_rows: list[dict] = []
+    for _, row in combined_df.iterrows():
+        contract_id = row["contract_id"]
+        window_row = windows_by_contract.get(contract_id, {})
+        window_text = window_row.get("window_text", "")
+        raw_output_ref = f"{raw_output_ref_prefix}/{contract_id}/coded_passages.csv"
+
+        for attr in attr_cols:
+            cell = row[attr]
+            try:
+                excerpts = ast.literal_eval(cell) if isinstance(cell, str) else (cell or [])
+                parse_status = "parsed"
+            except (ValueError, SyntaxError):
+                excerpts = []
+                parse_status = "failed"
+
+            if not excerpts:
+                out_rows.append({
+                    "run_id": run_id, "contract_id": contract_id,
+                    "state": window_row.get("state", ""), "city": window_row.get("city", ""),
+                    "occupation_class": window_row.get("occupation_class", ""),
+                    "source_role": window_row.get("source_role", ""),
+                    "attribute": attr, "evidence_status": "not_found", "excerpt": "",
+                    "excerpt_location": "", "confidence": "not_applicable", "caveat": caveat_text,
+                    "raw_output_ref": raw_output_ref, "parse_status": parse_status,
+                    "source_grounding_status": "not_applicable", "notes": "",
+                })
+                continue
+
+            for raw_excerpt in excerpts:
+                raw_excerpt = (raw_excerpt or "").strip()
+                cleaned_excerpt, leak_note = _clean_boundary_leak(raw_excerpt)
+                notes_parts = [leak_note] if leak_note else []
+
+                if leak_note:
+                    grounding = "unsupported" if not cleaned_excerpt else "unclear"
+                    excerpt_to_store = cleaned_excerpt or raw_excerpt
+                elif _has_mechanism_label_leakage(raw_excerpt):
+                    grounding = "unclear"
+                    notes_parts.append(
+                        f"METHODOLOGY FLAG: excerpt contains this project's own codebook "
+                        f"vocabulary rather than confirmed genuine source-document text -- "
+                        f"mechanism-label leakage check triggered for {contract_id}/{attr}. "
+                        f"Review before treating as evidence."
+                    )
+                    excerpt_to_store = raw_excerpt
+                else:
+                    grounding = _grounding_status(raw_excerpt, window_text)
+                    excerpt_to_store = raw_excerpt
+
+                out_rows.append({
+                    "run_id": run_id, "contract_id": contract_id,
+                    "state": window_row.get("state", ""), "city": window_row.get("city", ""),
+                    "occupation_class": window_row.get("occupation_class", ""),
+                    "source_role": window_row.get("source_role", ""),
+                    "attribute": attr, "evidence_status": "present", "excerpt": excerpt_to_store,
+                    "excerpt_location": _find_excerpt_location(excerpt_to_store, window_text),
+                    "confidence": "not_applicable", "caveat": caveat_text,
+                    "raw_output_ref": raw_output_ref, "parse_status": parse_status,
+                    "source_grounding_status": grounding, "notes": " ".join(notes_parts),
+                })
+    return out_rows
+
+
+def _write_validated_outputs(out_dir: Path, rows: list[dict]) -> Path:
+    fieldnames = [
+        "run_id", "contract_id", "state", "city", "occupation_class", "source_role", "attribute",
+        "evidence_status", "excerpt", "excerpt_location", "confidence", "caveat", "raw_output_ref",
+        "parse_status", "source_grounding_status", "notes",
+    ]
+    path = out_dir / "validated_outputs.csv"
+    with path.open("w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=fieldnames)
+        w.writeheader()
+        for r in rows:
+            w.writerow(r)
+    with path.open(newline="", encoding="utf-8") as f:
+        parsed = list(csv.DictReader(f))
+    assert len(parsed) == len(rows), "row count mismatch after write/reparse"
+    return path
+
+
 def _make_output_dir() -> Path:
     ts = datetime.now().strftime("%Y-%m-%d_%H%M%S")
     out_dir = PILOT_OUTPUT_ROOT / ts
@@ -641,6 +890,35 @@ def _run_live(out_dir: Path, selected: list[dict], max_calls: int, args: argpars
     if all_results:
         combined = pd.concat(all_results, ignore_index=True)
         combined.to_csv(out_dir / "parsed_outputs.csv", index=False)
+
+        # Reshape wide -> long and apply excerpt-boundary-leakage / mechanism-
+        # label-leakage cleanup and flagging (see the module docstring above
+        # reshape_and_validate_outputs). This validated_outputs.csv, not the
+        # raw wide parsed_outputs.csv, is the file that should be copied into
+        # docs/analysis/*_outputs_*.csv for the durable evidence layer.
+        run_id = f"{out_dir.name}_live"
+        windows_by_contract = {r["contract_id"]: r for r in rows}
+        raw_output_ref_prefix = f"tmp/gabriel_codify_pilots/{out_dir.name}/gabriel_save_dir"
+        validated_rows = reshape_and_validate_outputs(
+            combined, windows_by_contract, run_id, raw_output_ref_prefix
+        )
+        validated_path = _write_validated_outputs(out_dir, validated_rows)
+
+        n_present = sum(1 for r in validated_rows if r["evidence_status"] == "present")
+        n_boundary_leak = sum(1 for r in validated_rows if "boundary leakage" in r["notes"])
+        n_mechanism_leak = sum(1 for r in validated_rows if "mechanism-label leakage" in r["notes"])
+        n_grounded = sum(1 for r in validated_rows if r["source_grounding_status"] == "grounded")
+        log_lines.append("")
+        log_lines.append(f"Validated outputs written: {validated_path}")
+        log_lines.append(
+            f"present={n_present} grounded={n_grounded} "
+            f"boundary_leak_flagged={n_boundary_leak} mechanism_label_leak_flagged={n_mechanism_leak}"
+        )
+        if n_boundary_leak or n_mechanism_leak:
+            log_lines.append("Flagged rows (see validated_outputs.csv 'notes' column for detail):")
+            for r in validated_rows:
+                if r["notes"]:
+                    log_lines.append(f"  {r['contract_id']} / {r['attribute']}: {r['source_grounding_status']}")
 
     log_lines.append("")
     log_lines.append(f"Calls attempted: {calls_succeeded + len(errors)} | succeeded: {calls_succeeded} | failed: {len(errors)}")

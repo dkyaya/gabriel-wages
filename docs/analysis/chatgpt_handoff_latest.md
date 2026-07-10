@@ -2,7 +2,92 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-10T10:35:00-04:00`
+Last updated: `2026-07-10T11:54:00-04:00`
+
+---
+
+## 2026-07-10T11:54:00-04:00 - GABRIEL codify excerpt-boundary repair (pipeline-level) + Seekonk/Wayland expansion: 6 capped live calls, bounded Wayland OCR recovery
+
+**Commit:** pending in current session (`Add Seekonk and Wayland to codify viewer`)
+
+### Current State After This Entry
+
+- Confirmed the prior Massachusetts scale-up session's changes (`4f10a4f`, "Add Massachusetts to codify viewer") were already committed, with only `tmp/` left untracked at session start; pre-session counts (44 contracts / 44 coverage / 479 evidence-layer rows) matched expectations.
+- Fixed the Massachusetts run's excerpt-boundary-leakage defect at the pipeline level (not a one-off script) and expanded the evidence layer to include Seekonk (new city) and Wayland's dispatch/nurse content (recovered via bounded OCR, previously unusable). Massachusetts was again the only state touched — no other state, no full-corpus run.
+
+### Exact commands run
+
+```text
+python scripts/gabriel_codify_pilot.py --dry-run --use-harvard-proxy --max-calls 8 \
+  --windows docs/analysis/gabriel_codify_seekonk_wayland_evidence_windows_2026-07-10.csv
+
+python scripts/gabriel_codify_pilot.py --live --use-harvard-proxy --max-calls 8 \
+  --windows docs/analysis/gabriel_codify_seekonk_wayland_evidence_windows_2026-07-10.csv
+
+python scripts/build_codify_evidence_viewer.py \
+  --input docs/analysis/gabriel_codify_full_codebook_outputs_2026-07-09.csv \
+  --input docs/analysis/gabriel_codify_texas_ohio_scaleup_outputs_2026-07-09.csv \
+  --input docs/analysis/gabriel_codify_massachusetts_outputs_2026-07-09.csv \
+  --input docs/analysis/gabriel_codify_seekonk_wayland_outputs_2026-07-10.csv \
+  --evidence-out docs/analysis/gabriel_codify_evidence_layer.csv \
+  --html-out docs/analysis/gabriel_codify_excerpt_browser_latest.html \
+  --archive-html docs/analysis/gabriel_codify_excerpt_browser_2026-07-10_seekonk_wayland.html
+```
+
+Dry-run output: `tmp/gabriel_codify_pilots/2026-07-10_114636/`. Live-run output: `tmp/gabriel_codify_pilots/2026-07-10_114713/` — `live_run_log.txt` confirms `Calls attempted: 6 | succeeded: 6 | failed: 0`; no `errors.jsonl`. Only 6 of the 8 available calls used.
+
+### Code changes this session
+
+- `scripts/gabriel_codify_pilot.py`: `HARD_MAX_CALLS` lowered `10 -> 8`. Added `import ast`, `import re`. New functions: `_find_boundary_leak()`, `_clean_boundary_leak()`, `_has_mechanism_label_leakage()`, `_normalize_ws()`, `_find_excerpt_location()`, `_grounding_status()`, `reshape_and_validate_outputs()`, `_write_validated_outputs()`. `_run_live()` now calls `reshape_and_validate_outputs()` automatically after every live run, writing `validated_outputs.csv` directly into the run's `tmp/gabriel_codify_pilots/<timestamp>/` directory — **this is now the direct source for `docs/analysis/*_outputs_*.csv`, no separate one-off downstream parsing script needed** (a deliberate architectural change from every prior session, where this logic lived in scratch scripts).
+- `scripts/build_codify_evidence_viewer.py`: **no changes this session** — Task C's requirements (default-verified-only view, unverified-evidence toggle, warning banner, correct labels) were already fully implemented in the prior (Massachusetts) session and re-verified as correct against this run's new data without modification.
+
+### Boundary-leakage cleanup design (read before extending further)
+
+`_clean_boundary_leak(excerpt)` is a two-stage process:
+1. **Stage 1 (multi-boundary):** split the raw excerpt on every COMPLETE `--- Excerpt N [location] ---` instance (`LEAK_FULL_SEPARATOR_RE`, using `re.split()` with a **non-capturing** group — a capturing group here causes `re.split()` to intersperse `None`/captured-group values into the result list, a real bug caught during testing) and keep the single longest resulting segment.
+2. **Stage 2 (single-boundary trim):** re-run the original partial-fragment detection (`LEAK_OPENER_RE`/`LEAK_CLOSER_RE`/`LEAK_BARE_DASH_RE`) on the Stage-1 result, in case its own edges still carry a partial separator fragment left over from the raw excerpt's boundary.
+
+Both stages together guarantee: the cleaned excerpt is ALWAYS a genuine, untouched, single contiguous substring of what the model actually returned — never fabricated, never spliced from two different source locations. `source_grounding_status` is downgraded to `unclear` (or `unsupported` if nothing usable survives) whenever ANY leakage is detected, regardless of whether cleanup succeeded, and a `METHODOLOGY FLAG`-prefixed note explains exactly what was found (including how many window-sections the raw excerpt spanned and the full raw excerpt for audit purposes).
+
+**This design was validated against a real multi-boundary case found live this session** (`ma_seekonk_teacher_2021` / `no_strike_or_work_stoppage_constraint` — the raw excerpt spanned 6 separator instances). The original single-split-only logic (deployed for the live run) left embedded separator fragments in its "cleaned" output; the two-stage fix was applied and `validated_outputs.csv` was regenerated by **locally reprocessing `tmp/gabriel_codify_pilots/2026-07-10_114713/parsed_outputs.csv`** (the wide-format raw result, already on disk from the completed live run) through the corrected function — zero new `gabriel.codify()` calls. `tmp/.../live_run_log.txt` has a "POST-RUN REPROCESSING NOTE" appended documenting this for audit-trail completeness.
+
+### Bounded Wayland OCR recovery (Task E)
+
+Target: `corpus/ma_wayland/ma_wayland_afscme_1_2_2020_2023.pdf` (`ma_wayland_other_2021`), a pure image-scan PDF (48 pages, 270° rotation, no text layer — `pdftotext` extracts ~48-52 bytes regardless of flags). Method: `pdftoppm -r 150 -png` (all 48 pages, ~16s) → `tesseract --psm 6` (all 48 pages, ~35s) → grep-search the 48 resulting `.txt` files for `dispatch|nurse|JCC|...` and wage-grade markers to identify the ~9 relevant pages, then read those directly. Total: **~51 seconds, single pass, no re-runs.** Result quality was substantially better than expected: clean, coherent text including a full FY2022/FY2023 wage-grade table (`G-3 JCC Dispatcher`, `G-4 JCC Dispatcher Coordinator`, `G-7A Public Health Nurse`, `G-15 Community Health Nurse`, with dollar-figure step tables) and multiple genuinely dispatcher/nurse-specific clauses. A 9-page, 21,433-character cache was saved to `docs/analysis/wayland_other_bounded_ocr_extract_2026-07-10.txt` (original PDF never modified). Full writeup: `wayland_bounded_ocr_recovery_2026-07-10.md`.
+
+**Window-construction bug found and fixed while building the Wayland window:** the OCR cache file's own `--- OCR page N ---` page-boundary labels (added when caching the extract) leaked into two hand-selected excerpts, because a genuine source sentence spanned a page break in the original document and the marker-slice extraction captured everything between its start/end markers, including the intervening cache label. Fixed by stripping `--- OCR page N ---` labels from the cache text before slicing (`re.sub(r"\n*--- OCR page \d+ ---\n*", "\n", ...)`), which correctly restores the natural, continuous source sentence. A separate transcription bug (a hand-typed excerpt included a fabricated ellipsis not present in the source) was caught by a verbatim-substring assertion and fixed by switching to exact `.index()`-based marker-slicing for all 8 Wayland excerpts.
+
+### Seekonk/Wayland sample selection (Task D)
+
+6 rows (of 8 available): `ma_seekonk_public_works_2023`, `ma_seekonk_library_2023`, `ma_seekonk_police_2022`, `ma_seekonk_fire_2022`, `ma_seekonk_teacher_2021` (all clean plain-text extraction — Seekonk is now a fully matched city, 5 occupation classes), `ma_wayland_other_2021` (OCR-recovered). **Not selected:** `ma_seekonk_clerical_admin_2021` (scan, OCR out of this session's authorized scope — only Wayland's dispatch/nurse target was authorized for OCR), all other Wayland occupation classes except `other` (all scans, ~0 usable text, not authorized for OCR this session), `ma_wayland_fire_jlmc_2020` (already codified in the Massachusetts batch).
+
+### Source-grounding audit finding
+
+39/43 present excerpts pass the grounding check outright. 4/43 (9.3%) triggered the new boundary-leakage detection and were downgraded to `unclear` with a full explanatory note (not fabrication — genuine source text on the kept side in every case). 0 mechanism-label contamination (the input-side and output-side checks both report zero hits). Full detail, including the multi-boundary discovery and fix, in `gabriel_codify_seekonk_wayland_audit_2026-07-10.md`.
+
+### Evidence Layer (union rebuild, now 4 files)
+
+`docs/analysis/gabriel_codify_evidence_layer.csv` — now **603 rows** (261 present: 252 verified + 9 flagged; 342 not_found; 0 duplicate `evidence_id`s). All 603 rows resolved a `contract_label`. Seekonk appears in the viewer's Massachusetts city list for the first time; Wayland gained an `other` occupation class alongside its existing `fire` (JLMC award) row.
+
+### Viewer Paths
+
+- **Latest (open/share this one):** `docs/analysis/gabriel_codify_excerpt_browser_latest.html` (1,096,717 bytes).
+- **New dated archival copy:** `docs/analysis/gabriel_codify_excerpt_browser_2026-07-10_seekonk_wayland.html` (byte-identical to latest).
+- **Untouched:** `docs/analysis/gabriel_codify_excerpt_browser_2026-07-09.html`, `..._2026-07-09_scaleup.html`, `..._2026-07-09_massachusetts.html` — confirmed via `git status` not modified this run.
+
+### Verification performed
+
+- `node --check` on the extracted `<script>` block from the rebuilt `_latest.html` — passed.
+- `json.loads()` on both embedded `EVIDENCE` (603 rows) and `ATTRIBUTES` (19 entries) JSON blocks — both parsed cleanly.
+- Rebuild re-run a second time with identical arguments produced byte-identical `gabriel_codify_evidence_layer.csv` and `_latest.html` (checksummed) — confirms idempotency.
+- All 9 flagged rows (1 Texas/Ohio + 4 Massachusetts + 4 Seekonk/Wayland) confirmed `notes_flag: "1"` and `viewer_verified: "0"` in the rebuilt evidence data.
+- `python scripts/validate.py` — PASSED (44 contracts / 44 coverage / 3 city_attributes, unchanged).
+- `python ingest/audit_coverage.py` — 18 healthy matched pairs, unchanged.
+- No live browser rendering/screenshot was performed (same standing limitation — no browser-automation tool available).
+
+### Recommended next run
+
+Per this run's own task instructions: plan a Texas/Ohio source-expansion batch (Texas/Ohio currently has fewer matched cities/occupation classes than Massachusetts), then begin report scaffolding once evidence-layer coverage is judged sufficient for a first PI-facing draft.
 
 ---
 
