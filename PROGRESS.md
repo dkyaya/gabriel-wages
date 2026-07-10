@@ -6,6 +6,62 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-09 20:14 EDT (GABRIEL codify evidence-viewer overhaul) - PI-facing plain-English viewer with cascading filters and portable "latest" file; no live GABRIEL/Proxy/model calls; no data/corpus changes
+
+**Did**
+- Overhauled the local GABRIEL codify excerpt viewer built in the prior session so it is convenient and PI-facing rather than repo/data-facing, per explicit PI feedback. No new codify/Harvard Proxy/model calls — this run only transforms the existing 92-row full-codebook pilot output (`gabriel_codify_full_codebook_outputs_2026-07-09.csv`).
+- Confirmed repo state clean at session start (only untracked `tmp/`), latest commit `462d629`, and pre-session counts of 44 contracts / 44 coverage rows, matching expectations.
+- Rewrote `scripts/build_codify_evidence_viewer.py` with plain-English label maps for state, occupation, source role, evidence status, and source-grounding status — all deliberately **not** Texas/Ohio-specific (Massachusetts is included in every map now, even though no MA codify run happened this session), so a future MA codify output CSV needs no further code changes to these maps.
+- Added the full 19-attribute glossary (label + plain-English definition + a short "why this excerpt was coded here" clause per attribute) as Python constants, matching the refined Harvard Proxy codebook exactly.
+- Added human-readable **contract labels**, derived conservatively from `data/contracts.csv` (`city_name`, `occupation_class`, `bargaining_unit_name`, `source_type`, `cycle_start`/`cycle_end`) — read-only, no invented text. All 4 current contracts resolved a real label (e.g., `"Houston Fire — Houston Professional Fire Fighters Association, Local 341, International Association of Fire Fighters arbitration award, 2024–2029"`); a conservative `"City Occupation — contract_id"` fallback exists for any future contract not yet in `data/contracts.csv`.
+- Added a template-based **"What this excerpt shows"** explanation per present-evidence row (`_what_excerpt_shows()`), generated from the attribute's own clause text — not a new model call. Explicitly avoids the word "proves" and distinguishes interest/impasse arbitration from grievance arbitration and peer-comparator language from internal wage-schedule language, as required.
+- **Renamed "grounded" to "Verified in source text"** everywhere in the UI, with an explanation (in the viewer itself, the usage doc, and the build audit) that this is a text-integrity check confirming the excerpt is a real verbatim match — not an analytical or causal claim.
+- Rebuilt the evidence-layer CSV with 10 new plain-English columns (`state_label`, `city_label`, `occupation_label`, `source_role_label`, `contract_label`, `attribute_label`, `attribute_definition`, `evidence_status_label`, `source_grounding_label`, `what_excerpt_shows`) alongside the existing technical columns.
+- Rebuilt the HTML viewer with: cascading (faceted) filters — selecting any of state/city/contract/occupation/source-role/attribute narrows the *other* dropdowns' available options, implemented symmetrically (not a fixed one-directional chain); an attribute filter that defaults to only mechanisms with `present` evidence in the current filtered scope, with a "Show mechanisms with no evidence" toggle; a collapsible mechanism glossary; a persistent causal-proof warning banner; per-card "Copy excerpt"/"Copy citation" buttons (vanilla JS, `navigator.clipboard` with an `execCommand('copy')` fallback for `file://` contexts); and a per-card collapsible "Technical details" section holding the raw IDs/codes.
+- The build now writes **two** HTML files from one generated document: `gabriel_codify_excerpt_browser_2026-07-09.html` (dated archival copy) and `gabriel_codify_excerpt_browser_latest.html` (stable filename, the one to open/share going forward).
+- Verified the build without a browser-automation tool: `node --check` on the extracted `<script>` block (passed), `json.loads()` on both embedded `EVIDENCE` (92 rows) and `ATTRIBUTES` (19 entries) JSON blocks (both parsed cleanly), grep checks confirming required phrases ("Verified in source text," "What this excerpt shows," the causal-proof warning, copy-button labels, glossary heading) all appear, and confirmed zero external CDN/script references and zero API-key-like strings in the output.
+- Created:
+  - `docs/analysis/gabriel_codify_viewer_overhaul_plan_2026-07-09.md`
+  - `docs/analysis/gabriel_codify_viewer_usage_2026-07-09.md`
+  - `docs/analysis/gabriel_codify_excerpt_browser_latest.html`
+- Rewrote `scripts/build_codify_evidence_viewer.py`, `docs/analysis/gabriel_codify_evidence_layer.csv`, `docs/analysis/gabriel_codify_excerpt_browser_2026-07-09.html`, and `docs/analysis/gabriel_codify_viewer_build_audit_2026-07-09.md`.
+- Lightly updated `all_groups_source_needs_2026-07-06.csv` (1 new row), the report review checklist (new Section 7M), and the wage-mechanism evidence checklist (1 new pointer).
+
+**Decisions and why**
+- Implemented cascading filters as a **symmetric faceted system** (each dropdown's options recomputed from rows matching every *other* current selection) rather than a strict one-directional state→city→contract chain — this satisfies "selecting state restricts city, selecting contract restricts attribute" while also correctly handling the task's own additional requirement that "selecting contract/source restricts occupation/source_role/attribute," which a purely linear chain couldn't express cleanly.
+- Kept contract labels strictly derived from real `data/contracts.csv` fields rather than the more colloquial abbreviations used in the task's own example labels (e.g., "HPFFA / IAFF Local 341") — the task's own instruction ("Do not invent overly specific source labels if not supported by contracts.csv") took precedence over matching the example text verbatim.
+- Kept the "does not by itself establish a wage or causal effect" reminder as a separate fixed UI element (banner + per-card note) rather than folding it into every attribute-specific "what this excerpt shows" sentence, to avoid a repetitive/bloated per-card explanation while still satisfying the requirement that it appear prominently and often.
+
+**Surprises/breakage**
+- No surprises. No repo breakage. Validation and coverage audit passed, unchanged from the prior session (44 contracts / 44 coverage / 18 healthy pairs) since this run made zero edits to `data/contracts.csv`, `data/city_coverage.csv`, or `corpus/` (contracts.csv was read-only, for labeling).
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 44 | discourse: 0 | coverage: 44 | city_attributes: 3
+
+python ingest/audit_coverage.py
+contracts: 44 | discourse: 0 | coverage: 44 | city_attributes: 3 | cities: 13
+healthy matched pairs: 18
+  exact-cycle: 9
+  overlap-cycle: 9
+exploratory adjacent matches: 2
+safety units unmatched: 3
+
+python scripts/build_codify_evidence_viewer.py
+input rows read: 92 | evidence rows written: 92
+present (evidence found): 53 | not_found: 39 | verified present: 53
+rows with contract label from data/contracts.csv: 92/92
+```
+
+**No GABRIEL calls. No Harvard Proxy calls. No non-GABRIEL model/API calls. No `data/contracts.csv` edits (read-only, for labeling). No `data/city_coverage.csv` edits. No document ingestion or `corpus/` changes. No API keys or secrets printed, inspected, copied, or committed. `docs/schema.md` was not modified. No causal claims were made. No final PDF/DOCX artifacts were created.**
+
+**Recommended next step**
+Scale codify to the remaining Texas/Ohio matched-city rows (`tx_houston_police_2024`, `tx_austin_fire_2023`, `oh_columbus_police_2023`, `oh_columbus_other_2024`, `oh_cleveland_police_2025`, `oh_cleveland_fire_2025`, `oh_cleveland_other_2022`), then run a curated Massachusetts codify batch (label maps already support it), then rebuild the evidence layer and viewer from the combined output — extending `scripts/build_codify_evidence_viewer.py` with a genuine append/union mode (keyed on `evidence_id`) before that second run, so the evidence layer accumulates rather than being fully overwritten from a single input file each time.
+
+---
+
 ## 2026-07-09 18:48 EDT (GABRIEL codify viewer and durable evidence layer) - Local excerpt browser and append-friendly evidence table built; no live GABRIEL/Proxy/model calls; no data/corpus changes
 
 **Did**

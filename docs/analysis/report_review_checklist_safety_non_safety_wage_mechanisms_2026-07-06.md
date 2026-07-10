@@ -127,6 +127,12 @@
 - Built a project-local, self-contained static HTML viewer instead: `gabriel_codify_excerpt_browser_2026-07-09.html`, plus a durable append-friendly evidence table `gabriel_codify_evidence_layer.csv` (92 rows: 53 present, 39 not_found, all 53 present rows grounded) and a regeneration script `scripts/build_codify_evidence_viewer.py`.
 - **Future codify scaling should append to the evidence layer and rebuild the viewer** via this script, not start over. Codify remains binary present/not_found only (no native confidence/unclear state — see 7K). Source-grounding audit remains required before any evidence is used analytically.
 
+## 7M. Codify viewer overhauled for PI-facing use (added 2026-07-09)
+
+- Overhauled the viewer for usability and portability: plain-English labels/definitions replace underscored codes as the primary display; filters now cascade (state narrows city, city narrows contract, etc.); the attribute filter defaults to mechanisms with evidence found in the current selection; "grounded" is renamed **"Verified in source text"** everywhere, with an explicit note that this is a text-integrity check, not a causal claim; every present-evidence card carries a template-generated "What this excerpt shows" explanation. See `gabriel_codify_viewer_overhaul_plan_2026-07-09.md` and `gabriel_codify_viewer_usage_2026-07-09.md`.
+- **Use `gabriel_codify_excerpt_browser_latest.html` for sharing** — it is the stable, portable filename; `..._2026-07-09.html` is the same-day archival copy.
+- Massachusetts is prepared for but not yet included in the evidence layer (label maps already cover `ma`; no MA codify calls were made this session). Future MA/TX/OH codify runs should append to the evidence layer and rebuild the viewer, not start over.
+
 ## 7. Artifact-generation readiness checklist for later PDF/DOCX creation
 
 - [ ] PI has reviewed and approved the group-retention frame and central-claim framing (Section 1 above).
