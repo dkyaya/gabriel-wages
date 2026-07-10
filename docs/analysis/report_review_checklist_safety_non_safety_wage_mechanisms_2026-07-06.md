@@ -158,6 +158,12 @@
 - Codify remains binary present/not_found; source verification remains required. No `data/contracts.csv`, `data/city_coverage.csv`, or `corpus/` edits.
 - **Next step: plan a Texas/Ohio source-expansion batch, then begin report scaffolding.**
 
+## 7Q. Texas/Ohio source-expansion completed after interrupted-run recovery (added 2026-07-10)
+
+- A prior session's Texas/Ohio source-expansion run was interrupted mid-execution (terminal closed, likely around the `data/contracts.csv`/`data/city_coverage.csv` write step). A recovery run audited the working tree against `docs/schema.md`, confirmed the CSV writes had already completed cleanly (no duplicate IDs, no malformed rows, no orphaned coverage rows), and completed the remaining deterministic steps: mechanism-excerpt extraction and an ingestion summary. See `texas_ohio_expansion_preflight_2026-07-10.md`, `texas_ohio_expansion_source_plan_2026-07-10.csv`, `texas_ohio_expansion_selection_2026-07-10.md`, `texas_ohio_expansion_text_quality_2026-07-10.csv`, `texas_ohio_expansion_mechanism_excerpt_extraction_2026-07-10.csv`, and `texas_ohio_expansion_ingestion_summary_2026-07-10.md`.
+- **9 new causal sources added:** San Antonio police + fire (TX, unmatched — no confirmed non-safety bargaining channel, retained for institutional-contrast value only) and complete police+fire+non-safety matched triads for Cincinnati and Toledo (OH), plus a bonus Cincinnati police rank-split (non-supervisors/supervisors) row. Ohio now has four healthy matched cities (Columbus, Cleveland, Cincinnati, Toledo); Texas remains at one fully matched city (Houston).
+- **Next step: codify the expanded Texas/Ohio sources and rebuild the excerpt viewer** (`scripts/build_codify_evidence_viewer.py`, append/union mode), then resume report scaffolding. No GABRIEL/codify, Harvard Proxy, or model/API calls were made in either the original or the recovery run — this expansion is source-acquisition and deterministic verbatim-excerpt work only. Report language should continue to graph GABRIEL-coded mechanism evidence patterns once codify runs, not overstate causal proof from source acquisition alone.
+
 ## 7. Artifact-generation readiness checklist for later PDF/DOCX creation
 
 - [ ] PI has reviewed and approved the group-retention frame and central-claim framing (Section 1 above).

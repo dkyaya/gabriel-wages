@@ -6,6 +6,49 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-10 19:20 EDT (Texas/Ohio source-expansion interrupted-run recovery) - Recovered from an accidentally-closed terminal mid-Task-G; confirmed the CSV writes had already completed cleanly; completed mechanism-excerpt extraction, ingestion summary, guidance-doc updates, and full validation; no GABRIEL/codify/model/API calls, no FOIA/PRR
+
+**Did**
+- Recovered from a terminal that was accidentally closed during a Texas/Ohio source-expansion run, likely around Task G. Treated repo files as source of truth rather than re-running the original prompt from the top.
+- Recovery audit: `git status` showed `data/contracts.csv`/`data/city_coverage.csv` modified (uncommitted) and untracked `corpus/tx_san_antonio/`, `corpus/oh_cincinnati/`, `corpus/oh_toledo/` (9 PDFs total) plus four `docs/analysis/texas_ohio_expansion_*` files from Tasks A-D/F (preflight, source plan, selection, text quality).
+- **Confirmed Task G had already completed cleanly before the interruption**: `data/contracts.csv` and `data/city_coverage.csv` each already had exactly 9 new rows (44 -> 53), one-to-one matched, no duplicate `obs_id`s, no malformed/partial rows, no width mismatches. The interruption occurred after Task G but before Task H (mechanism-excerpt extraction), which had not been started.
+- Ran a full custom audit: row widths, duplicate IDs, controlled-vocabulary checks (`occupation_class`, `source_type`, `source_corpus`, `retrieval_method`, `text_quality`), `safety_flag` consistency, `full_text_path` existence for all 53 contract rows, and zero `retrieval_method=foia` anywhere in the file — all clean.
+- Completed the remaining deterministic steps: built `texas_ohio_expansion_mechanism_excerpt_extraction_2026-07-10.csv` (8 excerpt rows across 6 of the 9 new contracts, built entirely from verbatim clause text already captured during the pre-interruption session — no new PDF reading, no GABRIEL/model calls) and `texas_ohio_expansion_ingestion_summary_2026-07-10.md`.
+- Lightly updated `wage_mechanism_evidence_checklist.md` (1 revised pointer sentence), the report review checklist (new Section 7Q), and `all_groups_source_needs_2026-07-06.csv` (1 new row) to reflect the completed expansion.
+- Isolated all edits in a git worktree (`worktree-tx-oh-expansion-recovery`) per this session's background-job isolation requirement, after copying the pre-interruption uncommitted/untracked state into it (a plain worktree only carries committed history, not working-directory changes).
+
+**Decisions and why**
+- Did not re-run or re-verify sources already selected/downloaded — the selection doc's provenance checks (live `curl -I`, official-domain-only) were already complete and dated the same day; re-doing them would have been redundant per this run's explicit "don't broaden the source set unless necessary to repair consistency" instruction.
+- For 3 of the 9 new contracts (`tx_san_antonio_police_2022`, `oh_cincinnati_police_sup_2024`, `oh_cincinnati_fire_2023`), no mechanism excerpt was added: San Antonio police has no extractable text layer (218-page image scan); the other two had recognition clauses confirmed present at extraction time but not separately quoted verbatim. Left as a documented gap rather than fabricating or paraphrasing text, per the project's verbatim-only rule.
+
+**Surprises/breakage**
+- None. No CSV corruption, no duplicate rows, no orphaned coverage rows were found — the interrupted run's Task G output was fully intact and schema-conformant.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 53 | discourse: 0 | coverage: 53 | city_attributes: 3
+
+python ingest/audit_coverage.py
+healthy matched pairs: 23 (exact-cycle: 9, overlap-cycle: 14)
+safety units unmatched: 5 (incl. San Antonio police + fire, both documented as intentionally unmatched)
+
+python ingest/test_pipeline.py
+40 passed, 0 failed
+```
+Custom CSV audit: 0 width mismatches, 0 duplicate `obs_id`s, 0 invalid controlled-vocabulary values, 0 missing source files, 0 orphaned `city_coverage` rows in either direction, 0 `retrieval_method=foia` rows.
+
+**Corpus snapshot:** 53 contracts / 53 coverage rows / 3 city_attributes / 23 healthy matched pairs (up from 44/44/18 at the start of the original, interrupted run). New sources: San Antonio (TX, police+fire, deliberately unmatched — no non-safety bargaining channel found), Cincinnati (OH, police x2 rank-split + fire + other, now a healthy matched triad), Toledo (OH, police + fire + other, now a healthy matched triad). Ohio now has 4 healthy matched cities (Columbus, Cleveland, Cincinnati, Toledo); Texas remains at 1 fully matched city (Houston) plus Austin (EMS, safety-adjacent) and San Antonio (unmatched).
+
+**Confirmed:** no GABRIEL/codify calls, no Harvard Proxy calls, no model/API calls of any kind, no FOIA/PRR retrieval anywhere in this run or the recovered prior run.
+
+**Next steps**
+1. Codify the expanded Texas/Ohio sources (9 new rows: San Antonio, Cincinnati, Toledo) and rebuild the excerpt viewer via `scripts/build_codify_evidence_viewer.py`'s append/union mode.
+2. Resume report scaffolding once the evidence layer reflects the expanded Texas/Ohio coverage.
+
+---
+
 ## 2026-07-10 11:54 EDT (GABRIEL codify excerpt-boundary repair + Seekonk/Wayland expansion) - Moved leakage cleanup into the pipeline itself, bounded OCR recovered Wayland dispatch/nurse content, 6 capped live Seekonk/Wayland codify calls; Seekonk now in the evidence layer/viewer; no data/corpus changes
 
 **Did**
