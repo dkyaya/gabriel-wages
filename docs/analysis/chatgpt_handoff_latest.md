@@ -2,7 +2,78 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-09T20:14:00-04:00`
+Last updated: `2026-07-09T21:07:00-04:00`
+
+---
+
+## 2026-07-09T21:07:00-04:00 - GABRIEL codify Texas/Ohio scale-up: 8 capped live calls, append/union evidence layer rebuild
+
+**Commit:** pending in current session (`Scale codify across Texas and Ohio`)
+
+### Current State After This Entry
+
+- Confirmed the prior viewer-overhaul session's changes (`632a4a5`, "Overhaul codify excerpt viewer") were already committed, with only `tmp/` left untracked at session start; pre-session counts (44 contracts / 44 coverage / 92 evidence-layer rows) matched expectations.
+- Scaled `gabriel.codify()` from the 4-row pilot to the 8 remaining Texas/Ohio matched-city rows: `tx_houston_police_2024`, `tx_austin_police_2024`, `tx_austin_fire_2023`, `oh_columbus_police_2023`, `oh_columbus_other_2024`, `oh_cleveland_police_2025`, `oh_cleveland_fire_2025`, `oh_cleveland_other_2022`. Massachusetts was explicitly NOT run.
+
+### Exact commands run
+
+```text
+python scripts/gabriel_codify_pilot.py --dry-run --use-harvard-proxy --max-calls 8 \
+  --windows docs/analysis/gabriel_codify_texas_ohio_scaleup_evidence_windows_2026-07-09.csv
+
+python scripts/gabriel_codify_pilot.py --live --use-harvard-proxy --max-calls 8 \
+  --windows docs/analysis/gabriel_codify_texas_ohio_scaleup_evidence_windows_2026-07-09.csv
+
+python scripts/build_codify_evidence_viewer.py \
+  --input docs/analysis/gabriel_codify_full_codebook_outputs_2026-07-09.csv \
+  --input docs/analysis/gabriel_codify_texas_ohio_scaleup_outputs_2026-07-09.csv \
+  --evidence-out docs/analysis/gabriel_codify_evidence_layer.csv \
+  --html-latest-out docs/analysis/gabriel_codify_excerpt_browser_latest.html \
+  --archive-html docs/analysis/gabriel_codify_excerpt_browser_2026-07-09_scaleup.html
+```
+
+Dry-run output: `tmp/gabriel_codify_pilots/2026-07-09_205718/`. Live-run output: `tmp/gabriel_codify_pilots/2026-07-09_205815/` — `run_config.json` confirms `max_calls_allowed: 8`, `use_harvard_proxy: true`; `live_run_log.txt` confirms `Calls attempted: 8 | succeeded: 8 | failed: 0`; no `errors.jsonl` written.
+
+### Code changes this session
+
+- `scripts/gabriel_codify_pilot.py`: `HARD_MAX_CALLS` raised `4 -> 8` (deliberate, documented, in-code — not a CLI-only change).
+- `scripts/build_codify_evidence_viewer.py`: `_parse_args()` changed `--input` from a single `type=Path` argument to `action="append"` with post-parse comma-splitting (repeatable and/or comma-separated, defaults to the original single pilot CSV if omitted — default no-arg invocation unchanged). Added `--archive-html` as a synonym for `--html-out` (same `dest`). `build_evidence_rows()` signature changed from `(input_rows: list[dict], ...)` to `(input_rows_with_origin: list[tuple[dict, str]], ...)` — each row now carries its own origin `--input` file path (written per-row into `source_output_file`, replacing the old single-`rel_input`-for-all-rows approach in `write_evidence_csv()`). Dedup logic added: `seen_row_signatures: set[tuple]` keyed on `tuple(sorted(row.items()))` (full raw-row content) — **not** `(contract_id, attribute, run_id)`, which was tried first and found (via smoke test) to incorrectly collapse legitimate multi-excerpt codify results (e.g. `tx_houston_fire_2024` / `grievance_or_contract_interpretation_arbitration` genuinely has 2 distinct excerpts in one run).
+
+### Evidence-windows assembly (Task C)
+
+`docs/analysis/gabriel_codify_texas_ohio_scaleup_evidence_windows_2026-07-09.csv` (8 rows) was built by a one-off Python script (not committed) that reads `texas_ohio_mechanism_excerpt_extraction_2026-07-08.csv` and `texas_ohio_second_batch_mechanism_excerpt_extraction_2026-07-08.csv`, selects each contract's `present`/`unclear` mechanism rows in a fixed order (arbitration first, to surface interest-vs-grievance distinctions), and joins them with `--- {label} [{location}] ---` section headers into one `window_text` per contract. All under the 1,500-word `max_words_per_call` cap (396–766 words each).
+
+### Output parsing (Task F)
+
+`gabriel.codify()`'s native output is wide-format: one row per input row, one column per attribute, each cell a Python-list-repr of extracted verbatim strings (empty list = `not_found`). A one-off parsing script (`ast.literal_eval` per cell) reshaped this into the project's long/tidy schema: `docs/analysis/gabriel_codify_texas_ohio_scaleup_outputs_2026-07-09.csv`, 173 rows (95 present, 78 not_found). `excerpt_location` is derived heuristically (regex search for `Article \d+`/`Section \d+` markers in the ~200 chars preceding the excerpt's match position in `window_text`). `confidence` is fixed to `not_applicable` for every row (codify has no native confidence field), matching the same convention used by the 4-row pilot's output CSV.
+
+### Source-grounding audit finding (important — read before trusting `oh_cleveland_fire_2025`'s interest-arbitration row)
+
+94/95 present excerpts are genuinely verbatim-grounded. **1 row is a header-leakage artifact, not a hallucination and not genuine evidence:** `oh_cleveland_fire_2025` / `interest_arbitration_or_formal_impasse_backstop`'s "excerpt" is literally this project's own injected window-section header text (`"Arbitration / impasse backstop (legacy code -- may be interest OR grievance arbitration; distinguish from text) [char 1792] --- sseces 45 ..."`), echoed back because the underlying corpus passage for that section was unreadable OCR table-of-contents noise. It passes a naive substring-of-`window_text` grounding check (trivially — the header IS in `window_text`, because this project put it there), but is **not** text from the underlying Cleveland Fire CBA. Flagged explicitly in that row's `notes` field in both the outputs CSV and the durable evidence layer. **Do not cite this row as evidence that Cleveland Fire's CBA references interest arbitration** — the separate, genuinely-grounded `oh_cleveland_police_2025` WITNESSETH-clause excerpt does support that for the *police* contract. **Fix before next scale-up:** switch window-assembly section headers to neutral, keyword-free text (e.g. `--- Excerpt 1 [page 48] ---`) so codebook vocabulary can't leak into the model's evidence.
+
+### Evidence Layer (union rebuild)
+
+`docs/analysis/gabriel_codify_evidence_layer.csv` — now **265 rows** (148 present, 117 not_found, 0 duplicate `evidence_id`s, 0 rows skipped as duplicates on this rebuild since the two input files don't overlap). All 265 rows resolved a `contract_label` from `data/contracts.csv`. All 4 Texas/Ohio matched cities (Houston, Austin, Columbus, Cleveland) now have both a safety (`police`/`fire`) and a non-safety comparison `occupation_class` represented.
+
+### Viewer Paths
+
+- **Latest (open/share this one):** `docs/analysis/gabriel_codify_excerpt_browser_latest.html` (494,551 bytes) — `open docs/analysis/gabriel_codify_excerpt_browser_latest.html`.
+- **New dated archival copy:** `docs/analysis/gabriel_codify_excerpt_browser_2026-07-09_scaleup.html` (byte-identical to latest).
+- **Untouched:** `docs/analysis/gabriel_codify_excerpt_browser_2026-07-09.html` (the earlier same-day 92-row archival copy) — confirmed via `git status` not modified by this rebuild.
+
+### Verification performed
+
+- `node --check` on the extracted `<script>` block from the rebuilt `_latest.html` — passed.
+- `json.loads()` on both embedded `EVIDENCE` (265 rows) and `ATTRIBUTES` (19 entries) JSON blocks — both parsed cleanly.
+- Rebuild re-run a second time with identical arguments produced byte-identical `gabriel_codify_evidence_layer.csv` and `_latest.html` (checksummed) — confirms idempotency.
+- `python scripts/validate.py` — PASSED (44 contracts / 44 coverage / 3 city_attributes, unchanged).
+- `python ingest/audit_coverage.py` — 18 healthy matched pairs, unchanged.
+- No live browser rendering/screenshot was performed (same limitation as every prior session — no browser-automation tool available).
+
+### Recommended next run
+
+1. Fix the window-assembly header-leakage failure mode (neutral section headers) in whatever script builds the next evidence-windows CSV.
+2. Run a curated Massachusetts codify batch — `scripts/build_codify_evidence_viewer.py`'s label maps already cover `ma`, and the append/union mode built this session (see Code changes above) makes this a clean `--input` addition rather than a full rebuild.
 
 ---
 

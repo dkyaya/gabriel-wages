@@ -133,6 +133,13 @@
 - **Use `gabriel_codify_excerpt_browser_latest.html` for sharing** — it is the stable, portable filename; `..._2026-07-09.html` is the same-day archival copy.
 - Massachusetts is prepared for but not yet included in the evidence layer (label maps already cover `ma`; no MA codify calls were made this session). Future MA/TX/OH codify runs should append to the evidence layer and rebuild the viewer, not start over.
 
+## 7N. Codify scaled to remaining Texas/Ohio matched-city rows; append/union rebuild proven (added 2026-07-09)
+
+- Ran the 8 remaining Texas/Ohio rows (Houston police; Austin police/fire; Columbus police/other; Cleveland police/fire/other) through the same Harvard Proxy-adapted `gabriel.codify()` path, capped at 8 live calls. All 8 succeeded; 173 output rows (95 present, 78 not_found); 94/95 present excerpts verbatim-grounded. One row (`oh_cleveland_fire_2025` / interest-arbitration) was flagged, not silently included, as a window-assembly-header-leakage artifact rather than genuine source evidence — see `gabriel_codify_texas_ohio_scaleup_audit_2026-07-09.md` for the root cause and fix recommendation for future runs.
+- `scripts/build_codify_evidence_viewer.py` gained a genuine append/union mode (repeatable `--input`, dedup by full row content) and was used to rebuild the durable evidence layer from both codify output files combined: **265 total rows, 148 present, 117 not_found, all 4 Texas/Ohio matched cities (Houston, Austin, Columbus, Cleveland) now represented** with both a safety and a non-safety comparison occupation each.
+- Codify remains binary present/not_found only; source-grounding verification remains required before any evidence is used analytically. No `data/contracts.csv`, `data/city_coverage.csv`, or `corpus/` edits.
+- **Next scale-up should be a curated Massachusetts codify batch** — the append/union mode built and proven this run makes that a clean addition rather than a full rebuild.
+
 ## 7. Artifact-generation readiness checklist for later PDF/DOCX creation
 
 - [ ] PI has reviewed and approved the group-retention frame and central-claim framing (Section 1 above).

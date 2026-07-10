@@ -35,6 +35,19 @@ SAFETY MODEL:
 Usage:
   python scripts/build_codify_evidence_viewer.py
   python scripts/build_codify_evidence_viewer.py --input <csv> --evidence-out <csv> --html-out <html> --html-latest-out <html>
+
+Append/union mode (2026-07-09 Texas/Ohio scale-up): pass --input more than once (or a
+comma-separated list) to union multiple codify output CSVs into one evidence layer. Each
+row's source_output_file records exactly which --input file it came from. Rows are
+de-duplicated by the (contract_id, attribute, run_id) triple, so re-running the builder
+with a growing set of --input files (e.g. after a new codify batch) is idempotent rather
+than accumulating duplicate evidence rows:
+  python scripts/build_codify_evidence_viewer.py \\
+      --input docs/analysis/gabriel_codify_full_codebook_outputs_2026-07-09.csv \\
+      --input docs/analysis/gabriel_codify_texas_ohio_scaleup_outputs_2026-07-09.csv \\
+      --evidence-out docs/analysis/gabriel_codify_evidence_layer.csv \\
+      --html-latest-out docs/analysis/gabriel_codify_excerpt_browser_latest.html \\
+      --archive-html docs/analysis/gabriel_codify_excerpt_browser_2026-07-09_scaleup.html
 """
 
 from __future__ import annotations
@@ -317,15 +330,36 @@ NOT_FOUND_EXPLANATION = "No excerpt was returned for this attribute in the selec
 
 def _parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("--input", type=Path, default=DEFAULT_INPUT,
-                    help="Codify pilot output CSV to read (contract_id x attribute rows).")
+    p.add_argument(
+        "--input", dest="input", action="append", default=None,
+        help="Codify pilot output CSV to read (contract_id x attribute rows). Repeatable "
+             "(--input a.csv --input b.csv) and/or comma-separated (--input a.csv,b.csv) to "
+             "union multiple codify output files into one evidence layer. Defaults to the "
+             "single 4-row pilot output CSV if omitted, preserving the original single-file "
+             "behavior.",
+    )
     p.add_argument("--evidence-out", type=Path, default=DEFAULT_EVIDENCE_OUT,
-                    help="Durable evidence-layer CSV to write/append.")
-    p.add_argument("--html-out", type=Path, default=DEFAULT_HTML_OUT,
-                    help="Dated archival static HTML excerpt browser to write.")
+                    help="Durable evidence-layer CSV to write (union of all --input files).")
+    p.add_argument(
+        "--html-out", "--archive-html", dest="html_out", type=Path, default=DEFAULT_HTML_OUT,
+        help="Dated archival static HTML excerpt browser to write. --archive-html is an "
+             "accepted synonym for this same destination.",
+    )
     p.add_argument("--html-latest-out", type=Path, default=DEFAULT_HTML_LATEST_OUT,
                     help="Stable 'latest' static HTML excerpt browser to write (for sharing).")
-    return p.parse_args()
+    args = p.parse_args()
+
+    if args.input is None:
+        args.input = [DEFAULT_INPUT]
+    else:
+        expanded: list[Path] = []
+        for raw in args.input:
+            for piece in str(raw).split(","):
+                piece = piece.strip()
+                if piece:
+                    expanded.append(Path(piece))
+        args.input = expanded
+    return args
 
 
 def _read_input_rows(path: Path) -> list[dict]:
@@ -333,7 +367,9 @@ def _read_input_rows(path: Path) -> list[dict]:
         print(f"ERROR: input CSV not found: {path}")
         sys.exit(1)
     with path.open(newline="") as f:
-        return list(csv.DictReader(f))
+        rows = list(csv.DictReader(f))
+    print(f"  read {len(rows)} rows from {path}")
+    return rows
 
 
 def _run_date_from_run_id(run_id: str) -> str:
@@ -423,15 +459,32 @@ def _what_excerpt_shows(attribute: str, evidence_status: str) -> str:
     return f"This excerpt was coded as evidence of {info['label']} because {info['clause']}."
 
 
-def build_evidence_rows(input_rows: list[dict], contracts_meta: dict[str, dict]) -> list[dict]:
+def build_evidence_rows(input_rows_with_origin: list[tuple[dict, str]],
+                         contracts_meta: dict[str, dict]) -> tuple[list[dict], int]:
+    """Build evidence rows from one or more codify output CSVs, already flattened
+    into (row, origin_relpath) pairs (origin_relpath is the --input file this row
+    came from, recorded per-row in source_output_file so a union of multiple
+    output files stays traceable back to its source file).
+
+    De-duplicates on FULL row content (every field in the raw output row must
+    match, not just contract_id/attribute/run_id) -- a single (contract_id,
+    attribute, run_id) key legitimately repeats when codify() returns more than
+    one distinct excerpt for the same attribute in the same run, so only an
+    exact full-row match (e.g. the same --input file passed twice, or the same
+    row present in two overlapping/superset output files) is treated as a
+    duplicate and skipped. This keeps rebuilds from a growing set of --input
+    files idempotent without dropping genuine multi-excerpt rows. Returns
+    (rows, n_skipped)."""
     docs_dir = ROOT / "docs" / "analysis"
     evidence_window_csvs = sorted(docs_dir.glob("*evidence_windows*.csv"))
     source_file_cache: dict[str, str] = {}
 
     sequence_counters: dict[tuple[str, str], int] = {}
+    seen_row_signatures: set[tuple] = set()
     evidence_rows: list[dict] = []
+    n_skipped_duplicates = 0
 
-    for row in input_rows:
+    for row, origin_relpath in input_rows_with_origin:
         evidence_status = (row.get("evidence_status") or "").strip()
         if evidence_status not in ALLOWED_EVIDENCE_STATUS:
             # Keep only present/not_found/unclear semantics; anything else is
@@ -446,6 +499,12 @@ def build_evidence_rows(input_rows: list[dict], contracts_meta: dict[str, dict])
         city = row.get("city", "")
         occupation_class = row.get("occupation_class", "")
         source_role = row.get("source_role", "")
+
+        row_signature = tuple(sorted(row.items()))
+        if row_signature in seen_row_signatures:
+            n_skipped_duplicates += 1
+            continue
+        seen_row_signatures.add(row_signature)
 
         key = (contract_id, attribute)
         seq = sequence_counters.get(key, 0)
@@ -469,7 +528,7 @@ def build_evidence_rows(input_rows: list[dict], contracts_meta: dict[str, dict])
             "evidence_id": evidence_id,
             "run_id": run_id,
             "run_date": run_date,
-            "source_output_file": "",  # filled in by write_evidence_csv
+            "source_output_file": origin_relpath,
             "contract_id": contract_id,
             "state": state,
             "city": city,
@@ -494,18 +553,13 @@ def build_evidence_rows(input_rows: list[dict], contracts_meta: dict[str, dict])
             "source_grounding_label": _label(SOURCE_GROUNDING_LABELS, grounding),
             "what_excerpt_shows": _what_excerpt_shows(attribute, evidence_status),
         })
-    return evidence_rows
+    return evidence_rows, n_skipped_duplicates
 
 
-def write_evidence_csv(rows: list[dict], out_path: Path, input_path: Path) -> list[dict]:
-    # source_output_file is recorded relative to the repo root for portability.
-    try:
-        rel_input = str(input_path.resolve().relative_to(ROOT))
-    except ValueError:
-        rel_input = str(input_path)
-    for r in rows:
-        r["source_output_file"] = rel_input
-
+def write_evidence_csv(rows: list[dict], out_path: Path) -> list[dict]:
+    # source_output_file is set per-row in build_evidence_rows (one value per
+    # --input file the row actually came from), so a union of multiple input
+    # files stays traceable back to which file produced which row.
     out_path.parent.mkdir(parents=True, exist_ok=True)
     with out_path.open("w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=EVIDENCE_FIELDNAMES)
@@ -1117,12 +1171,27 @@ applyFilters();
 """
 
 
+def _rel_to_root(path: Path) -> str:
+    try:
+        return str(path.resolve().relative_to(ROOT))
+    except ValueError:
+        return str(path)
+
+
 def main() -> None:
     args = _parse_args()
-    input_rows = _read_input_rows(args.input)
+    print(f"Reading {len(args.input)} input file(s):")
+    input_rows_with_origin: list[tuple[dict, str]] = []
+    total_input_rows = 0
+    for input_path in args.input:
+        rows = _read_input_rows(input_path)
+        total_input_rows += len(rows)
+        origin = _rel_to_root(input_path)
+        input_rows_with_origin.extend((row, origin) for row in rows)
+
     contracts_meta = _load_contracts_metadata(CONTRACTS_CSV)
-    evidence_rows_raw = build_evidence_rows(input_rows, contracts_meta)
-    parsed = write_evidence_csv(evidence_rows_raw, args.evidence_out, args.input)
+    evidence_rows_raw, n_skipped_duplicates = build_evidence_rows(input_rows_with_origin, contracts_meta)
+    parsed = write_evidence_csv(evidence_rows_raw, args.evidence_out)
 
     html_doc = build_html_doc(parsed)
     for out_path in (args.html_out, args.html_latest_out):
@@ -1137,15 +1206,17 @@ def main() -> None:
     contracts_labeled = sum(1 for r in parsed if r["contract_id"] in contracts_meta)
 
     print("Codify evidence layer + viewer build summary")
-    print(f"  input rows read:          {len(input_rows)}")
-    print(f"  evidence rows written:    {len(parsed)}")
-    print(f"  present (evidence found): {present}")
-    print(f"  not_found:                {not_found}")
-    print(f"  verified present:         {verified_present}")
+    print(f"  input files:               {len(args.input)} ({', '.join(_rel_to_root(p) for p in args.input)})")
+    print(f"  input rows read (total):   {total_input_rows}")
+    print(f"  duplicate rows skipped:    {n_skipped_duplicates}")
+    print(f"  evidence rows written:     {len(parsed)}")
+    print(f"  present (evidence found):  {present}")
+    print(f"  not_found:                 {not_found}")
+    print(f"  verified present:          {verified_present}")
     print(f"  rows with contract label from data/contracts.csv: {contracts_labeled}/{len(parsed)}")
-    print(f"  evidence CSV:             {args.evidence_out}")
-    print(f"  dated html browser:       {args.html_out}")
-    print(f"  latest html browser:      {args.html_latest_out}")
+    print(f"  evidence CSV:              {args.evidence_out}")
+    print(f"  dated/archival html browser: {args.html_out}")
+    print(f"  latest html browser:       {args.html_latest_out}")
 
 
 if __name__ == "__main__":

@@ -11,8 +11,10 @@ for how the Harvard Proxy adapter is wired into gabriel.codify()'s response_fn h
 
 SAFETY MODEL — read before use:
   - Defaults to dry-run. No network call, no gabriel.codify() invocation, no key read.
-  - Live calls require --live AND an explicit --max-calls (hard-capped at 4 in code;
-    raising the cap requires a deliberate code change, not a CLI flag).
+  - Live calls require --live AND an explicit --max-calls (hard-capped at 8 in code, raised
+    from 4 on 2026-07-09 for the approved Texas/Ohio scale-up run of 8 remaining rows --
+    see docs/analysis/gabriel_codify_texas_ohio_scaleup_preflight_2026-07-09.md; raising the
+    cap requires a deliberate code change, not a CLI flag).
   - Credentials are read from the environment (optionally loaded from a git-ignored
     .env file via python-dotenv) ONLY inside the live-call code path. Presence is
     checked and logged as booleans only -- values are never printed, logged, or
@@ -52,7 +54,9 @@ PILOT_OUTPUT_ROOT = ROOT / "tmp" / "gabriel_codify_pilots"
 
 # Hard ceiling. --max-calls above this is refused outright, regardless of what
 # the caller passes -- raising this requires a deliberate code edit, not a flag.
-HARD_MAX_CALLS = 4
+# Raised 4 -> 8 on 2026-07-09 for the approved Texas/Ohio scale-up run (8 remaining
+# rows, one call each). See gabriel_codify_texas_ohio_scaleup_preflight_2026-07-09.md.
+HARD_MAX_CALLS = 8
 
 # Default (non-proxy) GABRIEL model; overridden to a Harvard-proxy-confirmed model
 # when --use-harvard-proxy is passed (see HARVARD_PROXY_MODEL below).

@@ -6,6 +6,51 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-09 21:07 EDT (GABRIEL codify Texas/Ohio scale-up) - 8 capped live codify calls on remaining Texas/Ohio rows; evidence layer/viewer rebuilt via new append/union builder mode; no data/corpus changes
+
+**Did**
+- Confirmed repo state clean at session start (only untracked `tmp/`), latest commit `632a4a5` (the PI-facing viewer overhaul), and pre-session counts of 44 contracts / 44 coverage rows / 92 evidence-layer rows, matching expectations exactly.
+- Wrote `docs/analysis/gabriel_codify_texas_ohio_scaleup_preflight_2026-07-09.md` recording repo state, already-coded contract_ids, the 8 selected remaining Texas/Ohio rows, the live-call cap, and stop rules before touching anything else.
+- Assembled `docs/analysis/gabriel_codify_texas_ohio_scaleup_evidence_windows_2026-07-09.csv` (8 rows) programmatically from this project's own already-verified verbatim excerpts in `texas_ohio_mechanism_excerpt_extraction_2026-07-08.csv` / `texas_ohio_second_batch_mechanism_excerpt_extraction_2026-07-08.csv` — no new corpus text opened, no ingestion.
+- Added genuine **append/union support** to `scripts/build_codify_evidence_viewer.py`: `--input` is now repeatable and/or comma-separated, `--archive-html` is accepted as a synonym for `--html-out`, and rows are de-duplicated on full row content (not just contract_id/attribute/run_id — an earlier version of this dedup logic incorrectly collapsed legitimate multi-excerpt rows and was caught and fixed before the real rebuild). The existing no-argument default invocation still works unchanged.
+- Raised `scripts/gabriel_codify_pilot.py`'s in-code `HARD_MAX_CALLS` from 4 to 8, deliberately and documented, for this approved 8-row scale-up.
+- Ran `--dry-run` first (`tmp/gabriel_codify_pilots/2026-07-09_205718/`), confirmed no network/credential access, then ran the capped live batch (`tmp/gabriel_codify_pilots/2026-07-09_205815/`) via the same Harvard Proxy adapter used in the prior pilot. **8/8 live calls succeeded, 0 failed, 0 skipped.**
+- Parsed `gabriel.codify()`'s native wide-format output (one list-of-excerpts cell per attribute) into the project's long/tidy evidence-output schema: `docs/analysis/gabriel_codify_texas_ohio_scaleup_outputs_2026-07-09.csv` — 173 rows (95 present, 78 not_found), 0 parse failures.
+- Ran the source-grounding audit: **94/95 present excerpts verbatim-grounded** in their windows. One row (`oh_cleveland_fire_2025` / `interest_arbitration_or_formal_impasse_backstop`) was found to be a **window-assembly-header-leakage artifact** — the model echoed this project's own section-header text (injected because the underlying OCR passage was unreadable table-of-contents garbage) rather than genuine source text. Flagged explicitly in the row's `notes` field rather than silently passed through as ordinary evidence; root cause and a fix recommendation (neutral, keyword-free window headers) are documented in `gabriel_codify_texas_ohio_scaleup_audit_2026-07-09.md`.
+- Confirmed the refined codebook's key interest-vs-grievance-arbitration distinction held up correctly in 6 of 7 genuinely-evidenced cases (the 7th being the flagged artifact) — see the audit memo's comparison table.
+- Rebuilt the durable evidence layer and viewer from the union of both codify output files (`gabriel_codify_full_codebook_outputs_2026-07-09.csv` + this run's new output): **265 total evidence rows (148 present, 117 not_found)**, all 4 Texas/Ohio matched cities (Houston, Austin, Columbus, Cleveland) now represented with both a safety and a non-safety comparison occupation each. Wrote `docs/analysis/gabriel_codify_excerpt_browser_latest.html` (updated in place) and a new dated archival copy `docs/analysis/gabriel_codify_excerpt_browser_2026-07-09_scaleup.html`, deliberately not overwriting the earlier same-day `..._2026-07-09.html` archival file.
+- Lightly updated `wage_mechanism_evidence_checklist.md` (1 new pointer), the report review checklist (new Section 7N), and `all_groups_source_needs_2026-07-06.csv` (1 new row).
+
+**Decisions and why**
+- Built the 8 evidence windows entirely from already-verified verbatim excerpts in this project's own prior hand-extraction files, rather than opening any corpus PDF directly — satisfies "use existing corpus files only, do not ingest" while guaranteeing verbatim correctness (no manual re-typing risk) via a small Python assembly script.
+- Fixed the append/union dedup key from `(contract_id, attribute, run_id)` to full-row-content after testing revealed the narrower key incorrectly discarded genuine multi-excerpt codify results — full-content dedup still makes rebuilds idempotent (confirmed by passing the same file twice and getting 100% correctly-flagged duplicates) without losing real evidence.
+- Chose to flag the header-leakage artifact transparently in the evidence layer (via `notes`) rather than silently drop it — the row is a real, honest record of what `codify()` returned, and dropping it would hide a genuine methodology finding that should inform how future window-assembly headers are written.
+
+**Surprises/breakage**
+- The append/union dedup bug above (caught during smoke-testing before the real union rebuild, not after).
+- The window-header-leakage artifact on `oh_cleveland_fire_2025` — a new failure mode not seen in the 4-row pilot, caused specifically by an OCR-garbled underlying passage combined with codebook-vocabulary-bearing section headers. Worth fixing before the next scale-up (Massachusetts).
+- No repo breakage. `data/contracts.csv`, `data/city_coverage.csv`, and `corpus/` were never touched.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 44 | discourse: 0 | coverage: 44 | city_attributes: 3
+
+python ingest/audit_coverage.py
+healthy matched pairs: 18 (exact-cycle: 9, overlap-cycle: 9) -- unchanged from the prior session
+```
+
+**Corpus snapshot:** 44 contracts / 44 coverage rows / 3 city_attributes / 18 healthy matched pairs — identical to session start, confirming zero data/corpus edits this run.
+
+**Confirmed:** no full-corpus GABRIEL extraction; no Massachusetts codify; 8 live calls attempted, 8 succeeded, 0 failed (at, not exceeding, the approved cap); no `data/contracts.csv`/`data/city_coverage.csv`/`corpus/` edits.
+
+**Next steps**
+1. Fix the window-assembly header-leakage failure mode (neutral, keyword-free section headers) before the next codify scale-up.
+2. Run a curated Massachusetts codify batch — the append/union builder mode proven this run makes that a clean addition, not a rebuild-from-scratch.
+
+---
+
 ## 2026-07-09 20:14 EDT (GABRIEL codify evidence-viewer overhaul) - PI-facing plain-English viewer with cascading filters and portable "latest" file; no live GABRIEL/Proxy/model calls; no data/corpus changes
 
 **Did**
