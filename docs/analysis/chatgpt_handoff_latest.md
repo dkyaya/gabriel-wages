@@ -2,7 +2,85 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-09T21:07:00-04:00`
+Last updated: `2026-07-10T10:35:00-04:00`
+
+---
+
+## 2026-07-10T10:35:00-04:00 - GABRIEL codify neutral-header repair + Massachusetts scale-up: 10 capped live calls, viewer-level verified-evidence gating
+
+**Commit:** pending in current session (`Add Massachusetts to codify viewer`)
+
+### Current State After This Entry
+
+- Confirmed the prior scale-up session's changes (`cd9c70f`, "Scale codify across Texas and Ohio") were already committed, with only `tmp/` left untracked at session start; pre-session counts (44 contracts / 44 coverage / 265 evidence-layer rows) matched expectations.
+- Fixed the Texas/Ohio scale-up's window-header-leakage defect, then ran a curated 10-row Massachusetts codify batch and unioned it into the evidence layer. Massachusetts was explicitly the only new state added — no full-corpus run, no other state.
+
+### Exact commands run
+
+```text
+python scripts/gabriel_codify_pilot.py --dry-run --use-harvard-proxy --max-calls 10 \
+  --windows docs/analysis/gabriel_codify_massachusetts_evidence_windows_2026-07-09.csv
+
+python scripts/gabriel_codify_pilot.py --live --use-harvard-proxy --max-calls 10 \
+  --windows docs/analysis/gabriel_codify_massachusetts_evidence_windows_2026-07-09.csv
+
+python scripts/build_codify_evidence_viewer.py \
+  --input docs/analysis/gabriel_codify_full_codebook_outputs_2026-07-09.csv \
+  --input docs/analysis/gabriel_codify_texas_ohio_scaleup_outputs_2026-07-09.csv \
+  --input docs/analysis/gabriel_codify_massachusetts_outputs_2026-07-09.csv \
+  --evidence-out docs/analysis/gabriel_codify_evidence_layer.csv \
+  --html-out docs/analysis/gabriel_codify_excerpt_browser_latest.html \
+  --archive-html docs/analysis/gabriel_codify_excerpt_browser_2026-07-09_massachusetts.html
+```
+
+Dry-run output: `tmp/gabriel_codify_pilots/2026-07-10_102543/`. Live-run output: `tmp/gabriel_codify_pilots/2026-07-10_102644/` — `run_config.json` confirms `max_calls_allowed: 10`, `use_harvard_proxy: true`; `live_run_log.txt` confirms `Calls attempted: 10 | succeeded: 10 | failed: 0`; no `errors.jsonl`.
+
+### Code changes this session
+
+- `scripts/gabriel_codify_pilot.py`: `HARD_MAX_CALLS` raised `8 -> 10`. Added `_check_window_contamination()` / `_contamination_patterns()` / `_is_notes_flagged`-equivalent read-time guardrail: before any dry-run or live call, every row's `window_text` is scanned against `list(CATEGORIES.keys())` (minus `"other"`, deliberately excluded — see below) plus `["Mechanism", "Arbitration / impasse"]`; any hit is `sys.exit(1)`, not a warning. Called from `_read_windows()`.
+- `scripts/build_codify_evidence_viewer.py`: `EVIDENCE_FIELDNAMES` gained `notes_flag`, `viewer_verified`. New constants `METHODOLOGY_FLAG_MARKER = "METHODOLOGY FLAG"`, `_is_notes_flagged(notes)`, `_viewer_verified(evidence_status, grounding, notes)` — a row is "verified" only if `present` AND `grounded` AND not flagged. `write_evidence_csv()` now re-validates `viewer_verified` matches a fresh recomputation on every write (raises if not). `build_html_doc()`'s `verified_present`/new `unverified_present` counts now use `viewer_verified` instead of raw `source_grounding_status`. JS: new `#f-showunverified` checkbox wired into `currentSelections()`/`applyFilters()` (present rows with `viewer_verified !== "1"` are hidden unless the toggle is checked); `renderCards()`/`renderTable()` show a `card-unverified`/`row-unverified` style, an on-card warning block, and override the badge text to "Not verified in source text" for such rows.
+
+### Bug found and fixed mid-session: `"other"` false-positive in the contamination check
+
+First version of the contamination check used all 19 raw `CATEGORIES` keys as substrings, including the bare word `"other"` (one of the 19 attributes). Since `"other"` is also an ordinary English word, the very first dry-run against the clean Massachusetts windows failed, flagging `"other"` inside phrases like "another Municipality," "other conditions of employment." Fixed by excluding `"other"` specifically (documented inline in code) — the other 18 keys are all multi-word/underscore-joined and would never occur in genuine prose by coincidence, so this exclusion doesn't meaningfully weaken the check. Re-verified clean-pass and contaminated-fail behavior after the fix.
+
+### Massachusetts evidence-windows assembly (Task E) — built from scratch, not reused
+
+Unlike Texas/Ohio (which reused an existing hand-extraction CSV), no Massachusetts deterministic-extraction CSV existed. Windows were built this session directly from the underlying corpus PDFs via `pdftotext -layout` (all 10 target PDFs; no ingestion), then a keyword-search helper script (`SEARCH_PATTERNS`, one-off, not committed) located up to 9 short passages per contract around mechanism-relevant terms (arbitration, staffing, overtime, classification, training, hazard, premium, benefits, subcontracting, management rights, no-strike, civil service, union security, budget, peer-comparator). Separators are strictly `--- Excerpt N [location] ---`, with `location` pulled via regex for a genuine `Article`/`Section` marker preceding the excerpt in the source text — never a mechanism name. A `check_contamination()` function in the same builder script hard-fails on any of the 19 codebook keys (again excluding `"other"`) or `"Mechanism"`/`"Arbitration / impasse"` before writing the CSV, and again on round-trip parse — 0 hits across all 10 windows.
+
+### Massachusetts sample selection (Task D)
+
+10 rows: `ma_somerville_police_spsoa_2012` (JLMC interest-arbitration award, unmatched but explicitly requested), `ma_wayland_fire_jlmc_2020` (JLMC stipulated award, unmatched), `ma_franklin_police_2022`/`fire_2022`/`public_works_2022`/`library_2022`/`other_2022` (fully matched city, 5 occupation classes), `ma_boston_clerical_admin_2023` (unmatched, rich grievance-arbitration text), `ma_georgetown_other_2020`/`police_2020` (matched city, 2 occupation classes). **Known gap, documented not silently dropped:** Massachusetts dispatch/nurse_health content exists only in `ma_wayland_other_2021`, whose `pdftotext` extraction yields ~0 usable characters (48-page, 270°-rotated scan needing a bounded OCR pass not attempted this session).
+
+### Source-grounding audit finding (important — read before trusting 4 specific Massachusetts rows)
+
+70/70 present excerpts pass the automated substring-grounding check; **the Texas/Ohio full-fabrication failure mode did not recur (0 fully-fabricated excerpts).** However, a new recurrence check (scanning every *returned excerpt*, not just the input window, for this project's scaffolding vocabulary) caught a **milder** variant in 4/70 present rows: `ma_franklin_fire_2022`/`training_certification_credential_premiums`, `ma_franklin_public_works_2022`/`premium_pay_differentials`, `ma_franklin_library_2022`/`benefits_total_compensation_or_pension`, `ma_boston_clerical_admin_2023`/`premium_pay_differentials`. In each case the model's verbatim-copied span crossed the boundary between two adjacent excerpt blocks in `window_text` and picked up a few characters of the `--- Excerpt N [location] ---` separator syntax mid-span — genuine source content surrounds the leaked fragment on both sides in every case (unlike Cleveland Fire, where the *entire* excerpt was the header). **Root cause: adjacent excerpts are separated only by `\n\n--- Excerpt N [location] ---\n` with no larger buffer**, so when two nearby regions of the same document (found by independent keyword searches) abut, the model perceives one continuous passage. **Fix for next batch:** larger break between adjacent excerpts, or trim each excerpt to a clean sentence/clause boundary. All 4 rows carry a `METHODOLOGY FLAG` note and are correctly excluded from `viewer_verified` (confirmed programmatically).
+
+### Evidence Layer (union rebuild, now 3 files)
+
+`docs/analysis/gabriel_codify_evidence_layer.csv` — now **479 rows** (218 present: 213 verified + 5 flagged/unverified; 261 not_found; 0 duplicate `evidence_id`s). All 479 rows resolved a `contract_label` from `data/contracts.csv`. Massachusetts now appears in the parsed `EVIDENCE` data's `state` values (`['MA', 'OH', 'TX']`), across 5 cities.
+
+### Viewer Paths
+
+- **Latest (open/share this one):** `docs/analysis/gabriel_codify_excerpt_browser_latest.html` (877,790 bytes).
+- **New dated archival copy:** `docs/analysis/gabriel_codify_excerpt_browser_2026-07-09_massachusetts.html` (byte-identical to latest).
+- **Untouched:** `docs/analysis/gabriel_codify_excerpt_browser_2026-07-09.html` and `..._2026-07-09_scaleup.html` — confirmed via `git status` not modified this run.
+
+### Verification performed
+
+- `node --check` on the extracted `<script>` block from the rebuilt `_latest.html` — passed.
+- `json.loads()` on both embedded `EVIDENCE` (479 rows) and `ATTRIBUTES` (19 entries) JSON blocks — both parsed cleanly.
+- Rebuild re-run a second time with identical arguments produced byte-identical `gabriel_codify_evidence_layer.csv` and `_latest.html` (checksummed) — confirms idempotency.
+- Programmatically confirmed all 5 flagged rows (1 Texas/Ohio + 4 Massachusetts) have `notes_flag: "1"` and `viewer_verified: "0"` in the rebuilt evidence data.
+- `python scripts/validate.py` — PASSED (44 contracts / 44 coverage / 3 city_attributes, unchanged).
+- `python ingest/audit_coverage.py` — 18 healthy matched pairs, unchanged.
+- No live browser rendering/screenshot was performed (same limitation as every prior session — no browser-automation tool available).
+
+### Recommended next run
+
+1. Fix the excerpt-boundary-leakage recurrence (larger break between adjacent window excerpts, or trim to clean sentence boundaries) before the next codify batch.
+2. Manual PI-facing viewer QA in a real browser — exercise the new "Show unverified / unsupported evidence" toggle and the Massachusetts filters.
+3. A further acquisition batch (Seekonk is a strong, fully-matched Massachusetts candidate not used this run) or a new state.
 
 ---
 

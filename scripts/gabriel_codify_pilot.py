@@ -54,9 +54,10 @@ PILOT_OUTPUT_ROOT = ROOT / "tmp" / "gabriel_codify_pilots"
 
 # Hard ceiling. --max-calls above this is refused outright, regardless of what
 # the caller passes -- raising this requires a deliberate code edit, not a flag.
-# Raised 4 -> 8 on 2026-07-09 for the approved Texas/Ohio scale-up run (8 remaining
-# rows, one call each). See gabriel_codify_texas_ohio_scaleup_preflight_2026-07-09.md.
-HARD_MAX_CALLS = 8
+# Raised 4 -> 8 on 2026-07-09 for the Texas/Ohio scale-up run, then 8 -> 10 on
+# 2026-07-10 for the approved curated Massachusetts scale-up run (10 selected
+# rows, one call each). See gabriel_codify_massachusetts_preflight_2026-07-09.md.
+HARD_MAX_CALLS = 10
 
 # Default (non-proxy) GABRIEL model; overridden to a Harvard-proxy-confirmed model
 # when --use-harvard-proxy is passed (see HARVARD_PROXY_MODEL below).
@@ -289,6 +290,73 @@ def _parse_args() -> argparse.Namespace:
     return p.parse_args()
 
 
+# ---------------------------------------------------------------------------
+# Mechanism-label contamination check (added 2026-07-10).
+#
+# Why this exists: the Texas/Ohio scale-up run (2026-07-09) assembled evidence
+# windows by joining excerpts under headers like
+#   "--- Arbitration / impasse backstop (legacy code -- may be interest OR
+#   grievance arbitration; distinguish from text) [char 1792] ---"
+# For oh_cleveland_fire_2025, the underlying passage under that heading was
+# unreadable OCR table-of-contents garbage, and the model echoed the header
+# text itself back as its "evidence" for interest_arbitration_or_formal_
+# impasse_backstop -- a false positive that happened to pass a naive
+# substring-of-window_text grounding check, because the header WAS literally
+# in window_text (this project put it there). See
+# docs/analysis/gabriel_codify_texas_ohio_scaleup_audit_2026-07-09.md.
+#
+# The window_text sent to codify() must therefore contain ONLY genuine
+# source-document text plus neutral, keyword-free location separators (e.g.
+# "--- Excerpt 1 [page 48] ---"). Mechanism/codebook vocabulary belongs in the
+# CATEGORIES dict and ADDITIONAL_INSTRUCTIONS above -- never in the window
+# body itself, where it becomes something the model can "find" regardless of
+# whether the underlying source document actually supports it.
+#
+# This script does not build window_text itself (it is assembled upstream by
+# a window-construction script/CSV and read here via --windows), so this is a
+# read-time guardrail: it scans every row's window_text for the codebook's own
+# attribute names (verbatim, from CATEGORIES) plus a couple of generic tells
+# ("Mechanism", "Arbitration / impasse") and refuses to proceed -- in BOTH
+# dry-run and live mode -- if any are found. Fail-safe, not warn-and-continue:
+# a window that already contains this project's own mechanism vocabulary is
+# not safe to send, dry-run or live, until the window-construction step is
+# fixed.
+GENERIC_CONTAMINATION_STRINGS = ["Mechanism", "Arbitration / impasse"]
+
+# "other" is deliberately excluded: it is a real CATEGORIES key (the catch-all
+# attribute), but as a bare substring it matches ordinary English prose
+# ("other municipality", "other conditions of employment", ...) constantly,
+# producing false positives on every real window. Every other attribute key is
+# a multi-word, underscore-joined string that would never occur in genuine
+# source-document text by coincidence, so this exclusion does not meaningfully
+# weaken the check.
+_CONTAMINATION_EXEMPT_KEYS = {"other"}
+
+
+def _contamination_patterns() -> list[str]:
+    keys = [k for k in CATEGORIES.keys() if k not in _CONTAMINATION_EXEMPT_KEYS]
+    return keys + GENERIC_CONTAMINATION_STRINGS
+
+
+def _check_window_contamination(rows: list[dict]) -> None:
+    patterns = _contamination_patterns()
+    violations: list[tuple[str, str]] = []
+    for row in rows:
+        window_text = row.get("window_text", "") or ""
+        lowered = window_text.lower()
+        for pat in patterns:
+            if pat.lower() in lowered:
+                violations.append((row.get("contract_id", "<unknown>"), pat))
+    if violations:
+        print("ERROR: mechanism-label contamination detected in evidence-window text.")
+        print("The window body must contain only source-document text and neutral")
+        print("location separators -- never codebook/mechanism vocabulary. Fix the")
+        print("window-construction step (or the --windows CSV) before proceeding.")
+        for contract_id, pat in violations:
+            print(f"  {contract_id}: contains {pat!r}")
+        sys.exit(1)
+
+
 def _read_windows(path: Path, contract_id: str | None) -> list[dict]:
     if not path.exists():
         print(f"ERROR: windows CSV not found: {path}")
@@ -297,6 +365,7 @@ def _read_windows(path: Path, contract_id: str | None) -> list[dict]:
         rows = list(csv.DictReader(f))
     if contract_id:
         rows = [r for r in rows if r["contract_id"] == contract_id]
+    _check_window_contamination(rows)
     return rows
 
 

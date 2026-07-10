@@ -75,10 +75,39 @@ EVIDENCE_FIELDNAMES = [
     "state_label", "city_label", "occupation_label", "source_role_label", "contract_label",
     "attribute_label", "attribute_definition", "evidence_status_label", "source_grounding_label",
     "what_excerpt_shows",
+    # Verified-evidence gating (added 2026-07-10, Task C -- see METHODOLOGY_FLAG_MARKER below):
+    "notes_flag", "viewer_verified",
 ]
 
 ALLOWED_EVIDENCE_STATUS = {"present", "not_found", "unclear"}
 ALLOWED_GROUNDING_STATUS = {"grounded", "unsupported", "unclear", "not_applicable"}
+
+# A row's `notes` field is flagged with this marker (see
+# gabriel_codify_texas_ohio_scaleup_outputs_2026-07-09.csv's oh_cleveland_fire_2025
+# / interest_arbitration_or_formal_impasse_backstop row for the first use) when a
+# human reviewer determines the excerpt is NOT genuine source evidence even though
+# it technically passed the automated grounding check (e.g. a window-assembly
+# header-leakage artifact -- the "excerpt" is a substring of window_text only
+# because this project's own scaffolding put it there, not because it is real
+# document text). `source_grounding_status` is never overwritten for these rows
+# -- it stays an honest record of what the automated substring check found -- but
+# the viewer must not present the row as ordinary verified evidence. `notes_flag`
+# and `viewer_verified` (below) are the mechanism for that: preserve the raw
+# data, change only what the viewer promotes by default.
+METHODOLOGY_FLAG_MARKER = "METHODOLOGY FLAG"
+
+
+def _is_notes_flagged(notes: str) -> bool:
+    return METHODOLOGY_FLAG_MARKER in (notes or "").upper()
+
+
+def _viewer_verified(evidence_status: str, grounding: str, notes: str) -> bool:
+    """A row counts as PI-facing "verified evidence" only if: evidence was
+    found, the excerpt is a confirmed verbatim match against its source
+    window, AND no human reviewer has flagged it as a non-genuine artifact in
+    `notes`. This is the single source of truth the viewer's default filter
+    and "Verified present" count both use -- see Task C, 2026-07-10."""
+    return evidence_status == "present" and grounding == "grounded" and not _is_notes_flagged(notes)
 
 RUN_DATE_RE = re.compile(r"^(\d{4})-(\d{2})-(\d{2})")
 
@@ -499,6 +528,7 @@ def build_evidence_rows(input_rows_with_origin: list[tuple[dict, str]],
         city = row.get("city", "")
         occupation_class = row.get("occupation_class", "")
         source_role = row.get("source_role", "")
+        notes_val = row.get("notes", "") or ""
 
         row_signature = tuple(sorted(row.items()))
         if row_signature in seen_row_signatures:
@@ -541,7 +571,7 @@ def build_evidence_rows(input_rows_with_origin: list[tuple[dict, str]],
             "source_file": source_file_cache.get(contract_id, ""),
             "source_grounding_status": grounding,
             "raw_output_ref": row.get("raw_output_ref", "") or "",
-            "notes": row.get("notes", "") or "",
+            "notes": notes_val,
             "state_label": _label(STATE_LABELS, state),
             "city_label": city,
             "occupation_label": _label(OCCUPATION_LABELS, occupation_class),
@@ -552,6 +582,8 @@ def build_evidence_rows(input_rows_with_origin: list[tuple[dict, str]],
             "evidence_status_label": _label(EVIDENCE_STATUS_LABELS, evidence_status),
             "source_grounding_label": _label(SOURCE_GROUNDING_LABELS, grounding),
             "what_excerpt_shows": _what_excerpt_shows(attribute, evidence_status),
+            "notes_flag": "1" if _is_notes_flagged(notes_val) else "0",
+            "viewer_verified": "1" if _viewer_verified(evidence_status, grounding, notes_val) else "0",
         })
     return evidence_rows, n_skipped_duplicates
 
@@ -582,6 +614,18 @@ def write_evidence_csv(rows: list[dict], out_path: Path) -> list[dict]:
             raise ValueError(f"row {i} bad source_grounding_status: {row['source_grounding_status']!r}")
         if row["evidence_status"] == "present" and not row["excerpt"].strip():
             raise ValueError(f"row {i} ({row['evidence_id']}) is present but has a blank excerpt")
+        if row["notes_flag"] not in {"0", "1"}:
+            raise ValueError(f"row {i} bad notes_flag: {row['notes_flag']!r}")
+        if row["viewer_verified"] not in {"0", "1"}:
+            raise ValueError(f"row {i} bad viewer_verified: {row['viewer_verified']!r}")
+        expected_verified = "1" if _viewer_verified(
+            row["evidence_status"], row["source_grounding_status"], row["notes"]
+        ) else "0"
+        if row["viewer_verified"] != expected_verified:
+            raise ValueError(
+                f"row {i} ({row['evidence_id']}) viewer_verified={row['viewer_verified']!r} "
+                f"does not match recomputed value {expected_verified!r}"
+            )
         eid = row["evidence_id"]
         if eid in seen_ids:
             raise ValueError(f"duplicate evidence_id: {eid!r}")
@@ -604,9 +648,8 @@ def build_html_doc(rows: list[dict]) -> str:
     total = len(rows)
     present = sum(1 for r in rows if r["evidence_status"] == "present")
     not_found = total - present
-    verified_present = sum(
-        1 for r in rows if r["evidence_status"] == "present" and r["source_grounding_status"] == "grounded"
-    )
+    verified_present = sum(1 for r in rows if r["viewer_verified"] == "1")
+    unverified_present = present - verified_present
 
     return HTML_TEMPLATE.format(
         data_json=data_json,
@@ -615,6 +658,7 @@ def build_html_doc(rows: list[dict]) -> str:
         present=present,
         not_found=not_found,
         verified_present=verified_present,
+        unverified_present=unverified_present,
     )
 
 
@@ -709,6 +753,9 @@ HTML_TEMPLATE = """<!doctype html>
   .card .status-present {{ background: var(--present-bg); color: var(--present); }}
   .card .status-not_found {{ background: transparent; color: var(--absent); border: 1px solid var(--border); }}
   .card .verify-badge {{ display: inline-block; font-size: 11.5px; padding: 2px 9px; border-radius: 999px; margin-left: 6px; border: 1px solid var(--accent); color: var(--accent); }}
+  .card .verify-badge.warn {{ border-color: var(--warn-text); color: var(--warn-text); }}
+  .card.card-unverified {{ border-color: var(--warn-text); }}
+  .card .unverified-warning {{ background: var(--warn-bg); color: var(--warn-text); border: 1px solid var(--warn-text); border-radius: 8px; padding: 8px 12px; font-size: 12.5px; margin: 8px 0; }}
   .card h3.contract-title {{ margin: 6px 0 2px; font-size: 16px; }}
   .card .place-line {{ font-size: 12.5px; color: var(--muted); margin-bottom: 10px; }}
   .card .excerpt {{ font-size: 15.5px; margin: 12px 0; padding: 10px 12px; background: var(--panel2); border-radius: 8px; border-left: 3px solid var(--accent); }}
@@ -736,6 +783,8 @@ HTML_TEMPLATE = """<!doctype html>
   table.evidence-table th, table.evidence-table td {{ border: 1px solid var(--border); padding: 6px 8px; text-align: left; vertical-align: top; }}
   table.evidence-table th {{ background: var(--panel2); position: sticky; top: 0; }}
   table.evidence-table tr:hover {{ background: var(--panel2); }}
+  table.evidence-table tr.row-unverified {{ background: var(--warn-bg); }}
+  table.evidence-table tr.row-unverified:hover {{ background: var(--warn-bg); }}
   .pill {{ display: inline-block; font-size: 11px; padding: 1px 7px; border-radius: 999px; }}
   .pill.present {{ background: var(--present-bg); color: var(--present); }}
   .pill.not_found {{ background: transparent; color: var(--absent); border: 1px solid var(--border); }}
@@ -757,9 +806,10 @@ HTML_TEMPLATE = """<!doctype html>
       <li><b>Filters (left sidebar)</b> narrow the evidence shown. Filters cascade: choosing a state narrows the city list, choosing a city narrows the contract list, and so on. Options that would produce zero results are removed automatically.</li>
       <li>The <b>attribute (mechanism)</b> filter defaults to showing only mechanisms with evidence found in the current selection. Toggle "Show mechanisms with no evidence" to see the full list.</li>
       <li>By default only <b>evidence found</b> rows are shown; toggle "Show 'no evidence found' rows" to include absence rows too.</li>
+      <li>By default only <b>verified</b> evidence is shown -- excerpts confirmed as a real match against their source window, with no reviewer flag. Toggle "Show unverified / unsupported evidence" to also see excerpts that failed the verification check or were flagged by a reviewer as not genuine (shown with a warning; not promoted as ordinary evidence).</li>
       <li>Switch between <b>Cards</b> (one piece of evidence at a time, with Prev/Next navigation) and <b>Table</b> (compact, all filtered rows at once).</li>
       <li>Highlighted (<mark>yellow</mark>) text inside a card is the exact verbatim excerpt identified in the source document.</li>
-      <li><b>"Verified in source text"</b> means the excerpt was checked and really does appear in the underlying source window -- a text-integrity check, not a judgment about what the excerpt means or proves.</li>
+      <li><b>"Verified in source text"</b> means the excerpt was checked and really does appear in the underlying source window -- a text-integrity check, not a judgment about what the excerpt means or proves. It is withheld from rows a reviewer has separately flagged as not genuine even if the automated check passed.</li>
       <li>Use the <b>attribute glossary</b> in the sidebar to see plain-English definitions for every mechanism.</li>
       <li>Each card has <b>Copy excerpt</b> and <b>Copy citation</b> buttons, and a "Technical details" section with the underlying IDs/codes for anyone who needs them.</li>
     </ul>
@@ -804,6 +854,10 @@ HTML_TEMPLATE = """<!doctype html>
       <input type="checkbox" id="f-shownotfound">
       <label for="f-shownotfound" style="margin:0;">Show "no evidence found" rows</label>
     </div>
+    <div class="checkbox-row">
+      <input type="checkbox" id="f-showunverified">
+      <label for="f-showunverified" style="margin:0;">Show unverified / unsupported evidence</label>
+    </div>
     <button class="reset" id="reset-filters">Reset filters</button>
 
     <h2>Counts</h2>
@@ -812,6 +866,7 @@ HTML_TEMPLATE = """<!doctype html>
       <div><span>Evidence found</span><span class="num" id="c-present">{present}</span></div>
       <div><span>No evidence found</span><span class="num" id="c-notfound">{not_found}</span></div>
       <div><span>Verified present</span><span class="num" id="c-verified">{verified_present}</span></div>
+      <div><span>Unverified / unsupported</span><span class="num" id="c-unverified">{unverified_present}</span></div>
       <div><span>Currently shown</span><span class="num" id="c-selected">0</span></div>
     </div>
 
@@ -885,6 +940,7 @@ function currentSelections() {{
     search: document.getElementById("f-search").value.trim().toLowerCase(),
     showNotFound: document.getElementById("f-shownotfound").checked,
     showAllAttrs: document.getElementById("f-showallattrs").checked,
+    showUnverified: document.getElementById("f-showunverified").checked,
   }};
 }}
 
@@ -981,6 +1037,13 @@ function applyFilters() {{
     if (sel.status && r.evidence_status !== sel.status) return false;
     if (sel.ground && r.source_grounding_status !== sel.ground) return false;
     if (!sel.status && !sel.showNotFound && r.evidence_status === "not_found") return false;
+    // Default view promotes only verified evidence (evidence found, confirmed
+    // grounded, and not flagged by a reviewer in notes -- see viewer_verified,
+    // computed once in Python by build_codify_evidence_viewer.py so the viewer
+    // never has to re-derive verification logic from raw fields). Unverified
+    // present rows (failed grounding, or flagged) only appear when the
+    // "Show unverified / unsupported evidence" toggle is checked.
+    if (r.evidence_status === "present" && r.viewer_verified !== "1" && !sel.showUnverified) return false;
     if (sel.search) {{
       const hay = ((r.excerpt || "") + " " + (r.notes || "") + " " + (r.what_excerpt_shows || "")).toLowerCase();
       if (!hay.includes(sel.search)) return false;
@@ -1049,6 +1112,8 @@ function renderCards() {{
   document.getElementById("nav-next").disabled = filtered.length <= 1;
 
   const isPresent = r.evidence_status === "present";
+  const isUnverified = isPresent && r.viewer_verified !== "1";
+  const isFlagged = r.notes_flag === "1";
   const excerptHtml = isPresent && r.excerpt
     ? "<div class='excerpt'>" + highlightExcerpt(r.excerpt) + "</div>"
     : "<div class='excerpt empty'>No excerpt (no evidence found for this mechanism in this source window).</div>";
@@ -1060,13 +1125,23 @@ function renderCards() {{
     + " (source: " + (r.source_file || "n/a") + (r.excerpt_location ? ", " + r.excerpt_location : "") + ")"
     + " [" + r.source_grounding_label + "]";
 
+  let unverifiedWarningHtml = "";
+  if (isUnverified) {{
+    const reason = isFlagged
+      ? "a reviewer flagged this excerpt as not genuine source evidence (see Notes below), even though it passed the automated text-match check"
+      : "this excerpt did not pass the automated source-verification check (status: " + esc(r.source_grounding_label) + ")";
+    unverifiedWarningHtml = "<div class='unverified-warning'>&#9888; Not verified evidence: " + reason
+      + ". Shown only because the &lsquo;Show unverified / unsupported evidence&rsquo; toggle is on -- do not treat as confirmed.</div>";
+  }}
+
   container.innerHTML = `
-    <div class="card">
+    <div class="card${{isUnverified ? " card-unverified" : ""}}">
       <span class="attr-badge">${{esc(r.attribute_label)}}</span>
       <span class="status-badge status-${{esc(r.evidence_status)}}">${{esc(r.evidence_status_label)}}</span>
-      ${{isPresent ? "<span class='verify-badge'>" + esc(r.source_grounding_label) + "</span>" : ""}}
+      ${{isPresent ? "<span class='verify-badge" + (isUnverified ? " warn" : "") + "'>" + esc(isUnverified ? "Not verified in source text" : r.source_grounding_label) + "</span>" : ""}}
       <h3 class="contract-title">${{esc(r.contract_label)}}</h3>
       <div class="place-line">${{esc(r.state_label)}} &middot; ${{esc(r.city_label)}} &middot; ${{esc(r.occupation_label)}} &middot; ${{esc(r.source_role_label)}} source</div>
+      ${{unverifiedWarningHtml}}
       <div class="explain"><b>Mechanism definition:</b> ${{esc(attrDef)}}</div>
       ${{excerptHtml}}
       <div class="explain"><b>What this excerpt shows:</b> ${{esc(r.what_excerpt_shows)}}</div>
@@ -1110,8 +1185,13 @@ function renderTable() {{
     tbody.innerHTML = "<tr><td colspan='8' class='empty-state'>No rows match the current filters.</td></tr>";
     return;
   }}
-  tbody.innerHTML = filtered.map(r => `
-    <tr>
+  tbody.innerHTML = filtered.map(r => {{
+    const isUnverifiedRow = r.evidence_status === "present" && r.viewer_verified !== "1";
+    const groundingCell = isUnverifiedRow
+      ? "&#9888; " + esc("Not verified in source text")
+      : esc(r.source_grounding_label);
+    return `
+    <tr${{isUnverifiedRow ? ' class="row-unverified"' : ""}}>
       <td>${{esc(r.state_label)}}</td>
       <td>${{esc(r.city_label)}}</td>
       <td>${{esc(r.contract_label)}}</td>
@@ -1119,9 +1199,10 @@ function renderTable() {{
       <td>${{esc(r.attribute_label)}}</td>
       <td><span class="pill ${{esc(r.evidence_status)}}">${{esc(r.evidence_status_label)}}</span></td>
       <td>${{esc((r.excerpt || "").slice(0, 140))}}${{(r.excerpt || "").length > 140 ? "&hellip;" : ""}}</td>
-      <td>${{esc(r.source_grounding_label)}}</td>
+      <td>${{groundingCell}}</td>
     </tr>
-  `).join("");
+  `;
+  }}).join("");
 }}
 
 function renderGlossary() {{
@@ -1134,7 +1215,7 @@ function renderGlossary() {{
   `).join("");
 }}
 
-document.querySelectorAll(".sidebar select, #f-search, #f-shownotfound, #f-showallattrs").forEach(el => {{
+document.querySelectorAll(".sidebar select, #f-search, #f-shownotfound, #f-showallattrs, #f-showunverified").forEach(el => {{
   el.addEventListener("input", applyFilters);
   el.addEventListener("change", applyFilters);
 }});
@@ -1144,6 +1225,7 @@ document.getElementById("reset-filters").addEventListener("click", () => {{
   document.getElementById("f-search").value = "";
   document.getElementById("f-shownotfound").checked = false;
   document.getElementById("f-showallattrs").checked = false;
+  document.getElementById("f-showunverified").checked = false;
   applyFilters();
 }});
 
@@ -1200,9 +1282,9 @@ def main() -> None:
 
     present = sum(1 for r in parsed if r["evidence_status"] == "present")
     not_found = len(parsed) - present
-    verified_present = sum(
-        1 for r in parsed if r["evidence_status"] == "present" and r["source_grounding_status"] == "grounded"
-    )
+    verified_present = sum(1 for r in parsed if r["viewer_verified"] == "1")
+    unverified_present = present - verified_present
+    flagged_rows = sum(1 for r in parsed if r["notes_flag"] == "1")
     contracts_labeled = sum(1 for r in parsed if r["contract_id"] in contracts_meta)
 
     print("Codify evidence layer + viewer build summary")
@@ -1212,7 +1294,9 @@ def main() -> None:
     print(f"  evidence rows written:     {len(parsed)}")
     print(f"  present (evidence found):  {present}")
     print(f"  not_found:                 {not_found}")
-    print(f"  verified present:          {verified_present}")
+    print(f"  verified present (viewer default): {verified_present}")
+    print(f"  unverified/unsupported present (hidden by default): {unverified_present}")
+    print(f"  rows flagged in notes:     {flagged_rows}")
     print(f"  rows with contract label from data/contracts.csv: {contracts_labeled}/{len(parsed)}")
     print(f"  evidence CSV:              {args.evidence_out}")
     print(f"  dated/archival html browser: {args.html_out}")

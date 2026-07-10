@@ -140,6 +140,15 @@
 - Codify remains binary present/not_found only; source-grounding verification remains required before any evidence is used analytically. No `data/contracts.csv`, `data/city_coverage.csv`, or `corpus/` edits.
 - **Next scale-up should be a curated Massachusetts codify batch** — the append/union mode built and proven this run makes that a clean addition rather than a full rebuild.
 
+## 7O. Neutral window-header guardrail added; curated Massachusetts codify batch completed (added 2026-07-10)
+
+- **Fixed the window-header-leakage defect** flagged in 7N: evidence windows now use strictly neutral `--- Excerpt N [location] ---` separators (no mechanism/codebook vocabulary), and `scripts/gabriel_codify_pilot.py` gained a hard-fail contamination check that refuses to run (dry-run or live) if any window contains codebook attribute names. Verified against both a clean and a deliberately re-contaminated windows file.
+- Ran a curated 10-row Massachusetts codify batch (Somerville police arbitration award; Wayland fire JLMC stipulated award; Franklin police/fire/public_works/library/other — a fully matched city; Boston clerical/admin; Georgetown police/other — matched). All 10 live calls succeeded; 214 output rows (70 present, 144 not_found); 70/70 pass the automated grounding check. A milder, non-fabricating recurrence of excerpt-boundary leakage was caught by a new recurrence check (4 rows) — flagged, not silently included; root cause and fix documented in `gabriel_codify_massachusetts_audit_2026-07-09.md`.
+- `scripts/build_codify_evidence_viewer.py` gained `notes_flag`/`viewer_verified` columns: the viewer's default view now shows only verified evidence (present, grounded, and not reviewer-flagged); a toggle reveals unverified/unsupported rows with an explicit warning. This is a second, independent layer of defense beyond the window-construction fix.
+- Evidence layer rebuilt from all three codify output files (pilot + Texas/Ohio + Massachusetts): **479 total rows, 218 present (213 verified, 5 flagged/unverified), 261 not_found.** Massachusetts now appears in the viewer's state filter alongside Texas and Ohio.
+- Codify remains binary present/not_found only; source verification remains required before any evidence is used analytically. No `data/contracts.csv`, `data/city_coverage.csv`, or `corpus/` edits.
+- **Next step: manual viewer QA** (open the file, exercise the new unverified-evidence toggle and Massachusetts filters in a real browser) **or a further acquisition batch** (Seekonk is a strong, fully-matched Massachusetts candidate not used this run).
+
 ## 7. Artifact-generation readiness checklist for later PDF/DOCX creation
 
 - [ ] PI has reviewed and approved the group-retention frame and central-claim framing (Section 1 above).

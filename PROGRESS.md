@@ -6,6 +6,52 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-10 10:35 EDT (GABRIEL codify neutral-header repair + Massachusetts scale-up) - Fixed window-header-leakage defect, added viewer-level verified-evidence gating, ran 10 capped live Massachusetts codify calls; Massachusetts now in the evidence layer/viewer; no data/corpus changes
+
+**Did**
+- Confirmed repo state clean at session start (only untracked `tmp/`), latest commit `cd9c70f` (the Texas/Ohio scale-up), and pre-session counts of 44 contracts / 44 coverage rows / 265 evidence-layer rows, matching expectations exactly.
+- **Repaired the window-header-leakage defect** the Texas/Ohio audit flagged (`oh_cleveland_fire_2025` / `interest_arbitration_or_formal_impasse_backstop`, where the model echoed this project's own mechanism-vocabulary window header as if it were source text). `scripts/gabriel_codify_pilot.py` gained a read-time contamination check (`_check_window_contamination`) that hard-fails (dry-run OR live) if any window's `window_text` contains any of the codebook's 19 attribute keys (excluding the bare word `"other"`, a deliberate exclusion after it produced false-positive floods on ordinary English text) or the generic tells `"Mechanism"`/`"Arbitration / impasse"`. Verified against both a clean windows file (passes) and a deliberately re-contaminated copy (fails loudly, naming the offending contract_id and matched string). Raised `HARD_MAX_CALLS` 8 → 10, deliberately, in-code, for this approved 10-row Massachusetts batch.
+- Built `docs/analysis/gabriel_codify_massachusetts_evidence_windows_2026-07-09.csv` (10 rows) **from scratch this session**, directly from the underlying corpus PDFs (`pdftotext -layout`, no ingestion) — no prior Massachusetts deterministic-extraction CSV existed to reuse (unlike Texas/Ohio). Every added separator is strictly `--- Excerpt N [location] ---`, with location pulled from a genuine `Article`/`Section` marker in the source text itself, never a mechanism name.
+- Selected the 10 Massachusetts rows to cover every category this run's task required: police/fire safety (Somerville, Wayland, Franklin, Georgetown), an interest-arbitration-heavy source (Somerville's JLMC award opinion, explicitly requested even though unmatched), public works/DPW (Franklin), clerical/admin (Boston), library (Franklin), custodial/mixed-municipal (Franklin, Georgetown), and two fully cross-occupation matched cities (Franklin: 5 occupation classes; Georgetown: 2). Dispatch/nurse_health content exists in the Massachusetts corpus (`ma_wayland_other_2021`) but that file's `pdftotext` extraction yields ~0 usable characters (48-page, 270°-rotated scan) — flagged as a known, documented gap rather than silently dropped or force-included with fabricated text.
+- Added a **second, independent layer of defense** in `scripts/build_codify_evidence_viewer.py` (Task C): new `notes_flag`/`viewer_verified` columns. A row only counts as "verified evidence" (shown by default in the viewer) if `evidence_status=present` AND `source_grounding_status=grounded` AND its `notes` field is not marked with the `METHODOLOGY FLAG` marker by a reviewer. The viewer gained a "Show unverified / unsupported evidence" toggle; when shown, flagged/unsupported rows render with an explicit on-card warning and a "Not verified in source text" badge instead of the ordinary "Verified in source text" one. The durable CSV keeps flagged rows (nothing is deleted); only what the viewer *promotes by default* changed.
+- Ran `--dry-run` first (`tmp/gabriel_codify_pilots/2026-07-10_102543/`), confirmed no network/credential access and 0 contamination hits, then ran the capped live batch (`tmp/gabriel_codify_pilots/2026-07-10_102644/`) via the same Harvard Proxy adapter. **10/10 live calls succeeded, 0 failed, 0 skipped.**
+- Parsed outputs into `docs/analysis/gabriel_codify_massachusetts_outputs_2026-07-09.csv` — 214 rows (70 present, 144 not_found), 0 parse failures. Ran the source-grounding audit: **70/70 present excerpts pass the automated substring-grounding check (0 `unsupported`)** — the Texas/Ohio full-fabrication failure mode did not recur. A new recurrence check (added this session, scanning every *returned excerpt* — not just the input window — for this project's own scaffolding vocabulary) caught a **milder** variant in 4 of 70 present excerpts: the model's verbatim-copied span crossed the boundary between two adjacent excerpt blocks and incidentally included a few characters of the `--- Excerpt N [location] ---` separator syntax, even though genuine source content surrounds it on both sides. Flagged via the same `METHODOLOGY FLAG` convention, not silently included.
+- Confirmed the refined codebook's interest-vs-grievance-arbitration distinction held up cleanly, including *within the same document*: `ma_somerville_police_spsoa_2012` produced both a genuine `interest_arbitration_or_formal_impasse_backstop=present` row (real JLMC arbitration-panel analysis text) and two separate `grievance_or_contract_interpretation_arbitration=present` rows (ordinary grievance-procedure clauses from the same base CBA) — correctly distinguished. `peer_comparator_wage_comparability` was present for exactly 1 of 10 rows (Somerville, naming 10 specific Massachusetts comparator communities from a Collins Center classification study) — no over-coding.
+- Rebuilt the durable evidence layer and viewer from the union of all three codify output files (pilot + Texas/Ohio + Massachusetts): **479 total evidence rows (218 present: 213 verified + 5 flagged/unverified; 261 not_found).** Massachusetts now appears in the viewer's state filter alongside Texas and Ohio (5 cities: Franklin, Georgetown, Somerville, Boston, Wayland). Wrote `docs/analysis/gabriel_codify_excerpt_browser_latest.html` (updated in place) and a new dated archival copy `gabriel_codify_excerpt_browser_2026-07-09_massachusetts.html`, leaving both earlier same-day archival files untouched.
+- Lightly updated `wage_mechanism_evidence_checklist.md` (1 new pointer), the report review checklist (new Section 7O), and `all_groups_source_needs_2026-07-06.csv` (1 new row).
+
+**Decisions and why**
+- Excluded the bare word `"other"` from the contamination-check pattern list even though it is a real codebook attribute key — as a bare substring it matches ordinary English prose ("other municipality," "other conditions of employment") constantly, and a false-positive-flooded check that always fails is worse than a narrower check that catches the 18 genuinely distinctive multi-word attribute keys plus the generic tells.
+- Built Massachusetts evidence windows from fresh `pdftotext` extraction rather than waiting for or hand-building a separate deterministic-extraction CSV first — no such file existed for Massachusetts, and re-deriving verbatim excerpts directly from the corpus PDFs (with a keyword-search helper script, not manual retyping) was faster and equally defensible as "already-existing corpus text," satisfying "use existing corpus files only."
+- Chose to flag the 4 boundary-leakage rows transparently via `notes` rather than silently drop them or attempt an automated repair mid-run — consistent with the Texas/Ohio session's precedent, and it validates that the new viewer-level `notes_flag`/`viewer_verified` safety net (Task C) actually catches recurrences the window-construction fix alone did not fully prevent.
+- Dropped Massachusetts dispatch/nurse_health coverage from this run's 10-row sample rather than attempting a bounded OCR pass on a 48-page, 270°-rotated scan mid-session — the task listed this category as optional ("if useful"), and a documented gap is safer than a rushed, unverified OCR extraction feeding into a live codify call.
+
+**Surprises/breakage**
+- The window-header-leakage defect's milder recurrence (excerpt-boundary leakage, 4/70 present rows) — proof the original fix (neutral separators) alone was necessary but not sufficient; the viewer-level notes-flag safety net (built in the same session, before this was discovered) caught it as designed.
+- The `"other"` false-positive bug in the contamination check, caught during smoke-testing before it could block a real dry run.
+- No repo breakage. `data/contracts.csv`, `data/city_coverage.csv`, and `corpus/` were never touched.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 44 | discourse: 0 | coverage: 44 | city_attributes: 3
+
+python ingest/audit_coverage.py
+healthy matched pairs: 18 (exact-cycle: 9, overlap-cycle: 9) -- unchanged from the prior session
+```
+
+**Corpus snapshot:** 44 contracts / 44 coverage rows / 3 city_attributes / 18 healthy matched pairs — identical to session start, confirming zero data/corpus edits this run.
+
+**Confirmed:** no full-corpus GABRIEL extraction; 10 live calls attempted, 10 succeeded, 0 failed (at, not exceeding, the approved cap); no `data/contracts.csv`/`data/city_coverage.csv`/`corpus/` edits; Massachusetts now appears in the viewer.
+
+**Next steps**
+1. Fix the excerpt-boundary-leakage recurrence (a larger break between adjacent window excerpts, or trim to clean sentence boundaries) before the next codify batch.
+2. Manual PI-facing viewer QA — open `gabriel_codify_excerpt_browser_latest.html` in a real browser and exercise the new "Show unverified / unsupported evidence" toggle and the Massachusetts state filter.
+3. A further acquisition batch (Seekonk is a strong, fully-matched Massachusetts candidate not used this run) or a new state, once the viewer QA pass is done.
+
+---
+
 ## 2026-07-09 21:07 EDT (GABRIEL codify Texas/Ohio scale-up) - 8 capped live codify calls on remaining Texas/Ohio rows; evidence layer/viewer rebuilt via new append/union builder mode; no data/corpus changes
 
 **Did**
