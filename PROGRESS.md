@@ -6,6 +6,47 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-10 23:10 EDT (Final integrated mechanism evidence report exported) - Created one integrated final Markdown report with appendix at the end, exported DOCX/PDF, wrote export preflight/audit, updated guidance/handoff; no GABRIEL/codify/model/API calls, no new source collection, no data/corpus edits
+
+**Did**
+- Confirmed repo state before export: working directory `/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages`; git clean except untracked `.claude/` and `tmp/`; latest starting commit `d56ae31` (`Polish mechanism evidence report scaffold`); `data/contracts.csv` and `data/city_coverage.csv` unchanged.
+- Created `docs/analysis/final_report_export_preflight_2026-07-10.md`, documenting input files, report assets, expected outputs, export constraints, and local toolchain availability.
+- Created one integrated Markdown report, `docs/analysis/final_report_safety_non_safety_wage_mechanisms_2026-07-10.md`, by combining the reviewed scaffold with `report_appendix_tables_2026-07-10.md`. The appendix starts under `# Appendix` at the end of the same report; the evidence-pattern-not-causal-proof framing and viewer path (`docs/analysis/gabriel_codify_excerpt_browser_latest.html`) were preserved.
+- Added `scripts/export_final_report.py` to make the export reproducible without internet/API calls. Because `pandoc` and LibreOffice/`soffice` are unavailable locally, the script uses `python-docx` for DOCX and ReportLab for PDF.
+- Exported final artifacts:
+  - `docs/final_reports/deeper_look_safety_non_safety_wage_mechanisms_2026-07-10.docx` — 797,087 bytes.
+  - `docs/final_reports/deeper_look_safety_non_safety_wage_mechanisms_2026-07-10.pdf` — 1,012,886 bytes.
+- Wrote `docs/analysis/final_report_export_audit_2026-07-10.md`, including commands used, file sizes, image counts, appendix-integration status, graph-reference checks, limitations, and a human review checklist.
+- Lightly updated `report_review_checklist_safety_non_safety_wage_mechanisms_2026-07-06.md`, `wage_mechanism_evidence_checklist.md`, and `all_groups_source_needs_2026-07-06.csv` to record that final export is complete and the next step is human review/revisions.
+
+**Decisions and why**
+- Used a local Python export path instead of pandoc/LibreOffice because neither external converter is installed. This keeps the export offline and reproducible in the current environment.
+- Kept the appendix inside the same report rather than producing a separate final appendix artifact, per the final-report requirement.
+- Did not rerun codify or touch source/data/corpus layers; this was a formatting/export session only.
+
+**Surprises/breakage**
+- DOCX visual render QA could not be performed because LibreOffice/`soffice` is unavailable. Structural DOCX checks passed (6 embedded images, 5 tables), and the PDF was visually rendered through Poppler for review.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 53 | discourse: 0 | coverage: 53 | city_attributes: 3
+
+python ingest/audit_coverage.py
+healthy matched pairs: 23 (exact-cycle: 9, overlap-cycle: 14)
+safety units unmatched: 5 (Somerville x2, Newton, San Antonio police, San Antonio fire)
+```
+Custom export checks: final Markdown exists; DOCX/PDF exist and are non-empty; final export audit exists; 6/6 Markdown image references resolve; DOCX contains 6 embedded media files; PDF is 15 letter-size pages and rendered to PNG pages with no obvious figure/table clipping; `all_groups_source_needs_2026-07-06.csv` parses cleanly with 67 rows and consistent 11-column width; `git diff -- data/contracts.csv data/city_coverage.csv` empty.
+
+**Corpus snapshot:** 53 contracts / 53 coverage rows / 3 city_attributes / 23 healthy matched pairs; evidence layer unchanged at 781 rows (293 present, 284 verified, 9 flagged/unverified).
+
+**Confirmed:** no GABRIEL/codify, Harvard Proxy, model, or API calls; no new source collection; no FOIA/PRR; no edits to `data/contracts.csv`, `data/city_coverage.csv`, `corpus/`, `docs/schema.md`, or `logs/api_spend_log.csv`.
+
+**Next steps**
+1. Human review of the integrated DOCX/PDF, especially title block, graph readability, state-section caveats, "What appears to drive the wage gap?" framing, appendix formatting, page numbering, and PDF rendering.
+2. Apply any requested revision pass while preserving the evidence-pattern framing and avoiding new codify/model/source-collection work unless explicitly authorized.
+
 ## 2026-07-10 22:49 EDT (Report scaffold polish: graph audit created, appendix typo fixed, prose tightened) - Created the missing report_graph_audit_2026-07-10.md, fixed a "Two rows"/"Four rows" appendix miscount, verified every graph/table reference against report_assets/, and tightened the report scaffold's Executive Summary and Method sections for PI readability; no GABRIEL/codify/model/API calls, no new source collection, no data/corpus edits
 
 **Did**

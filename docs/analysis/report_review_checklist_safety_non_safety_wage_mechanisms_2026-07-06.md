@@ -178,6 +178,12 @@
 - **No GABRIEL/codify, Harvard Proxy, or model/API calls were made during this polish pass.** No new source collection. No edits to `data/contracts.csv`, `data/city_coverage.csv`, `corpus/`, or `docs/schema.md`. No final PDF/DOCX artifact was produced.
 - **Next step: final report export (DOCX/PDF) after human/PI review.** The evidence-pattern (not causal-proof) framing must be preserved through any formatting pass — do not call codify/model/API during export unless explicitly authorized.
 
+## 7T. Final integrated report exported (added 2026-07-10)
+
+- The reviewed scaffold and appendix were merged into one integrated report: `final_report_safety_non_safety_wage_mechanisms_2026-07-10.md`. The appendix now appears at the end of the same report under `# Appendix`, not as a separate final artifact.
+- Final artifacts were exported to `docs/final_reports/deeper_look_safety_non_safety_wage_mechanisms_2026-07-10.docx` and `docs/final_reports/deeper_look_safety_non_safety_wage_mechanisms_2026-07-10.pdf`; see `final_report_export_audit_2026-07-10.md`.
+- **Next step: human review and any requested revision pass.** Preserve the evidence-pattern framing; do not convert the report into causal proof or run new codify/model/source-collection work during formatting revisions.
+
 ## 7. Artifact-generation readiness checklist for later PDF/DOCX creation
 
 - [ ] PI has reviewed and approved the group-retention frame and central-claim framing (Section 1 above).

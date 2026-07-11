@@ -2,7 +2,54 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-10T22:49:00-04:00`
+Last updated: `2026-07-10T23:10:00-04:00`
+
+---
+
+## 2026-07-10T23:10:00-04:00 - Final integrated report export: Markdown + DOCX + PDF, appendix included at end
+
+**Commit target:** `Export final mechanism evidence report`
+
+### Current State After This Entry
+
+- The reviewed/polished scaffold and appendix have been merged into one final integrated report. The appendix is not a separate final artifact; it starts at the end of the same report under `# Appendix`.
+- This was an export/formatting session only: no GABRIEL/codify, Harvard Proxy, model, API, web search, FOIA/PRR, or new source collection. `data/contracts.csv`, `data/city_coverage.csv`, `corpus/`, `docs/schema.md`, and `logs/api_spend_log.csv` remain unchanged.
+
+### New Artifacts
+
+- Preflight: `docs/analysis/final_report_export_preflight_2026-07-10.md`
+- Integrated Markdown: `docs/analysis/final_report_safety_non_safety_wage_mechanisms_2026-07-10.md`
+- Export audit: `docs/analysis/final_report_export_audit_2026-07-10.md`
+- DOCX: `docs/final_reports/deeper_look_safety_non_safety_wage_mechanisms_2026-07-10.docx` (797,087 bytes)
+- PDF: `docs/final_reports/deeper_look_safety_non_safety_wage_mechanisms_2026-07-10.pdf` (1,012,886 bytes; 15 letter-size pages)
+- Export helper: `scripts/export_final_report.py`
+
+### Export Method
+
+- `pandoc` and LibreOffice/`soffice` were unavailable.
+- DOCX was generated with `python-docx`; PDF was generated with ReportLab.
+- PDF QA used Poppler (`pdfinfo`, `pdftoppm`) to render all pages to PNG. No obvious graph/table clipping or page-boundary overflow was observed.
+- DOCX visual render QA could not be completed without LibreOffice; structural checks passed (6 embedded images, 5 tables).
+
+### Validation/audit results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 53 | discourse: 0 | coverage: 53 | city_attributes: 3
+
+python ingest/audit_coverage.py
+healthy matched pairs: 23
+  exact-cycle: 9
+  overlap-cycle: 14
+safety units unmatched: 5
+```
+
+Additional checks: final Markdown/DOCX/PDF/audit files exist and are non-empty; 6/6 inline graph references resolve from `docs/analysis/`; DOCX embeds 6 images; `all_groups_source_needs_2026-07-06.csv` parses with consistent 11-column width; `git diff -- data/contracts.csv data/city_coverage.csv` is empty.
+
+### Recommended next run
+
+Human review and revision pass only. Review the title page/title block, Executive Summary, graph readability, state sections, "What appears to drive the wage gap?" framing, appendix start/formatting, page numbering, and PDF rendering. Preserve the evidence-pattern framing; do not rerun codify/model/API or collect new sources unless a separate task explicitly authorizes it.
 
 ---
 
