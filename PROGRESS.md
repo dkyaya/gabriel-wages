@@ -6,6 +6,41 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-10 22:15 EDT (Report scaffold review, appendix gap fix, and commit) - Found an in-progress, uncommitted report scaffold (Markdown + charts + CSVs) from a separate session; filled one missing referenced file (the appendix), verified the rest was coherent, and committed
+
+**Did**
+- Resumed a prior recovery session after a Bash-tool outage. In the interim, two separate sessions had already run to completion and committed independently: `9c42999` ("Expand Texas and Ohio sources" — the interrupted-run recovery this session originally started) and `20a0f26` ("Codify expanded Texas and Ohio sources" — a follow-on GABRIEL/codify run, out of this session's original scope but committed under its own task). Confirmed both were clean (`validate.py`/`audit_coverage.py` pass, no duplicate rows) rather than redoing any of that work.
+- Found a third, uncommitted body of work already sitting in the working tree: `docs/analysis/report_scaffold_preflight_2026-07-10.md`, `report_scaffold_safety_non_safety_wage_mechanisms_2026-07-10.md`, `report_evidence_layer_audit_2026-07-10.md`, and a `report_assets/` directory of 7 chart figures (PNG+SVG) and 6 supporting CSVs — a first draft report scaffold built from the 781-row GABRIEL codify evidence layer (37 codified contracts, MA/TX/OH). Correctly scoped as Markdown/CSV/PNG/SVG only, no PDF/DOCX, no data/corpus edits, no GABRIEL/model calls.
+- Audited the scaffold for completeness before committing: found the main scaffold's Appendix section pointed at `docs/analysis/report_appendix_tables_2026-07-10.md`, which did not exist. Built it deterministically from data already in the repo — the 19-attribute codebook glossary (from `gabriel_codify_evidence_layer.csv`'s own `attribute_label`/`attribute_definition` columns), the 37-contract source inventory (from `report_assets/source_inventory_for_report_2026-07-10.csv`), a figures/tables index (from `report_assets/` directory listing, cross-checked against the scaffold's inline image references — found and documented one figure, `mechanism_presence_by_state`, generated but not embedded inline), and viewer usage notes. No new analysis, no model calls — pure compilation from existing CSVs.
+- Re-ran `python scripts/validate.py` and `python ingest/audit_coverage.py` post-fix to confirm the appendix addition touched nothing in `data/` (it didn't — both unchanged from the prior session: 53/53/3, 23 healthy matched pairs).
+- Committed `docs/analysis/report_scaffold_preflight_2026-07-10.md`, `report_scaffold_safety_non_safety_wage_mechanisms_2026-07-10.md`, `report_evidence_layer_audit_2026-07-10.md`, `report_appendix_tables_2026-07-10.md`, and `report_assets/` (7 PNG + 7 SVG + 6 CSV).
+
+**Decisions and why**
+- Did not touch `.claude/worktrees/tx-oh-expansion-recovery/` (a leftover worktree from the prior recovery session, still present and untracked) or `tmp/` — neither is part of this project's committed deliverables, and removing them wasn't requested.
+- Filled the missing appendix rather than either stripping the dangling reference or asking to re-run the whole report-scaffold task: the appendix's contents were fully derivable from already-committed CSVs (evidence layer, source inventory) with zero new judgment calls or model calls required, consistent with this project's standing practice of finishing deterministic gaps from repo state rather than re-running upstream work.
+
+**Surprises/breakage**
+- None in the data layer. The one gap found (missing appendix file) was a completeness gap in a still-in-progress report scaffold, not a data or corpus defect.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 53 | discourse: 0 | coverage: 53 | city_attributes: 3
+
+python ingest/audit_coverage.py
+healthy matched pairs: 23 (exact-cycle: 9, overlap-cycle: 14) -- unchanged (this session added no data/corpus/codify rows)
+```
+
+**Corpus snapshot:** 53 contracts / 53 coverage rows / 3 city_attributes / 23 healthy matched pairs / evidence layer 781 rows (293 present, 284 verified) — all unchanged from the prior two sessions; this session added report-layer documentation only.
+
+**Confirmed:** no GABRIEL/codify, Harvard Proxy, or model/API calls this session; no FOIA/PRR; no edits to `data/contracts.csv`, `data/city_coverage.csv`, `corpus/`, or `docs/schema.md`; no final report PDF/DOCX produced.
+
+**Next steps**
+1. Human review of the report scaffold (`report_scaffold_safety_non_safety_wage_mechanisms_2026-07-10.md` + appendix + figures) before any formatting run toward a final report artifact.
+2. If the scaffold's framing holds up under review, the next content step is a dedicated source-availability scan for a candidate next state (see the scaffold's own "Source Needs and Next-State Strategy" section — New Jersey and Pennsylvania stood out as the strongest institutional-contrast candidates) — not a re-run of Texas/Ohio work, which is now complete for this corpus's current scope.
+3. 16 Massachusetts contracts remain uncodified; a future GABRIEL/codify batch could close that gap before the report scaffold is finalized.
+
 ## 2026-07-10 20:49 EDT (Merge recovery branch + San Antonio OCR + expanded Texas/Ohio codify + viewer rebuild) - Merged the recovery commit into main, recovered San Antonio police via bounded OCR, codified all 9 newly expanded Texas/Ohio sources (9/9 live calls, 100% grounded, 0 contamination), rebuilt the evidence layer/viewer; no new source collection, no FOIA/PRR, no broad GABRIEL run
 
 **Did**

@@ -1,0 +1,267 @@
+state,state_label,occupation_class,occupation_label,safety_group,attribute,attribute_label,verified_present_count,coded_source_count,sources_with_verified_evidence,share_sources_with_verified_evidence
+MA,Massachusetts,clerical_admin,Clerical / administrative,non_safety,benefits_total_compensation_or_pension,"Benefits, total compensation, or pension",1,1,1,1.0
+MA,Massachusetts,clerical_admin,Clerical / administrative,non_safety,budget_capacity_or_fiscal_constraint,Budget capacity / fiscal constraint,0,1,0,0.0
+MA,Massachusetts,clerical_admin,Clerical / administrative,non_safety,civil_service_or_statutory_employment_channel,Civil-service or statutory employment channel,0,1,0,0.0
+MA,Massachusetts,clerical_admin,Clerical / administrative,non_safety,classification_reclassification_or_grade_structure,"Classification, reclassification, or wage-grade structure",0,1,0,0.0
+MA,Massachusetts,clerical_admin,Clerical / administrative,non_safety,grievance_or_contract_interpretation_arbitration,Grievance or contract-interpretation arbitration,4,1,1,1.0
+MA,Massachusetts,clerical_admin,Clerical / administrative,non_safety,hazard_risk_stress_or_line_of_duty_rationale,"Hazard, risk, stress, or line-of-duty rationale",0,1,0,0.0
+MA,Massachusetts,clerical_admin,Clerical / administrative,non_safety,interest_arbitration_or_formal_impasse_backstop,Interest arbitration / formal impasse backstop,0,1,0,0.0
+MA,Massachusetts,clerical_admin,Clerical / administrative,non_safety,management_rights_or_service_flexibility,Management rights / service flexibility,0,1,0,0.0
+MA,Massachusetts,clerical_admin,Clerical / administrative,non_safety,minimum_staffing_or_continuous_coverage,Minimum staffing / continuous coverage,0,1,0,0.0
+MA,Massachusetts,clerical_admin,Clerical / administrative,non_safety,no_strike_or_work_stoppage_constraint,No-strike / work-stoppage constraint,0,1,0,0.0
+MA,Massachusetts,clerical_admin,Clerical / administrative,non_safety,non_safety_wage_restraint_or_admin_channel,Non-safety wage restraint / administrative channel,0,1,0,0.0
+MA,Massachusetts,clerical_admin,Clerical / administrative,non_safety,other,Other wage-mechanism evidence,0,1,0,0.0
+MA,Massachusetts,clerical_admin,Clerical / administrative,non_safety,overtime_callback_holdover_mandatory_extra_work,"Overtime, callback, holdover, or mandatory extra work",0,1,0,0.0
+MA,Massachusetts,clerical_admin,Clerical / administrative,non_safety,peer_comparator_wage_comparability,Peer / comparator wage comparison,0,1,0,0.0
+MA,Massachusetts,clerical_admin,Clerical / administrative,non_safety,premium_pay_differentials,Premium pay / differentials,0,1,0,0.0
+MA,Massachusetts,clerical_admin,Clerical / administrative,non_safety,staffing_shortage_recruitment_retention,"Staffing shortage, recruitment, or retention",0,1,0,0.0
+MA,Massachusetts,clerical_admin,Clerical / administrative,non_safety,subcontracting_outsourcing_or_volunteer_substitution,"Subcontracting, outsourcing, or substitution",0,1,0,0.0
+MA,Massachusetts,clerical_admin,Clerical / administrative,non_safety,training_certification_credential_premiums,"Training, certification, credential, or education premiums",1,1,1,1.0
+MA,Massachusetts,clerical_admin,Clerical / administrative,non_safety,union_security_or_institutional_power,Union security / institutional power,0,1,0,0.0
+MA,Massachusetts,fire,Fire,safety,benefits_total_compensation_or_pension,"Benefits, total compensation, or pension",0,3,0,0.0
+MA,Massachusetts,fire,Fire,safety,budget_capacity_or_fiscal_constraint,Budget capacity / fiscal constraint,0,3,0,0.0
+MA,Massachusetts,fire,Fire,safety,civil_service_or_statutory_employment_channel,Civil-service or statutory employment channel,1,3,1,0.3333
+MA,Massachusetts,fire,Fire,safety,classification_reclassification_or_grade_structure,"Classification, reclassification, or wage-grade structure",3,3,1,0.3333
+MA,Massachusetts,fire,Fire,safety,grievance_or_contract_interpretation_arbitration,Grievance or contract-interpretation arbitration,2,3,2,0.6667
+MA,Massachusetts,fire,Fire,safety,hazard_risk_stress_or_line_of_duty_rationale,"Hazard, risk, stress, or line-of-duty rationale",1,3,1,0.3333
+MA,Massachusetts,fire,Fire,safety,interest_arbitration_or_formal_impasse_backstop,Interest arbitration / formal impasse backstop,0,3,0,0.0
+MA,Massachusetts,fire,Fire,safety,management_rights_or_service_flexibility,Management rights / service flexibility,0,3,0,0.0
+MA,Massachusetts,fire,Fire,safety,minimum_staffing_or_continuous_coverage,Minimum staffing / continuous coverage,1,3,1,0.3333
+MA,Massachusetts,fire,Fire,safety,no_strike_or_work_stoppage_constraint,No-strike / work-stoppage constraint,0,3,0,0.0
+MA,Massachusetts,fire,Fire,safety,non_safety_wage_restraint_or_admin_channel,Non-safety wage restraint / administrative channel,0,3,0,0.0
+MA,Massachusetts,fire,Fire,safety,other,Other wage-mechanism evidence,1,3,1,0.3333
+MA,Massachusetts,fire,Fire,safety,overtime_callback_holdover_mandatory_extra_work,"Overtime, callback, holdover, or mandatory extra work",2,3,2,0.6667
+MA,Massachusetts,fire,Fire,safety,peer_comparator_wage_comparability,Peer / comparator wage comparison,0,3,0,0.0
+MA,Massachusetts,fire,Fire,safety,premium_pay_differentials,Premium pay / differentials,0,3,0,0.0
+MA,Massachusetts,fire,Fire,safety,staffing_shortage_recruitment_retention,"Staffing shortage, recruitment, or retention",0,3,0,0.0
+MA,Massachusetts,fire,Fire,safety,subcontracting_outsourcing_or_volunteer_substitution,"Subcontracting, outsourcing, or substitution",0,3,0,0.0
+MA,Massachusetts,fire,Fire,safety,training_certification_credential_premiums,"Training, certification, credential, or education premiums",1,3,1,0.3333
+MA,Massachusetts,fire,Fire,safety,union_security_or_institutional_power,Union security / institutional power,1,3,1,0.3333
+MA,Massachusetts,library,Library,non_safety,benefits_total_compensation_or_pension,"Benefits, total compensation, or pension",3,2,2,1.0
+MA,Massachusetts,library,Library,non_safety,budget_capacity_or_fiscal_constraint,Budget capacity / fiscal constraint,0,2,0,0.0
+MA,Massachusetts,library,Library,non_safety,civil_service_or_statutory_employment_channel,Civil-service or statutory employment channel,0,2,0,0.0
+MA,Massachusetts,library,Library,non_safety,classification_reclassification_or_grade_structure,"Classification, reclassification, or wage-grade structure",3,2,2,1.0
+MA,Massachusetts,library,Library,non_safety,grievance_or_contract_interpretation_arbitration,Grievance or contract-interpretation arbitration,0,2,0,0.0
+MA,Massachusetts,library,Library,non_safety,hazard_risk_stress_or_line_of_duty_rationale,"Hazard, risk, stress, or line-of-duty rationale",0,2,0,0.0
+MA,Massachusetts,library,Library,non_safety,interest_arbitration_or_formal_impasse_backstop,Interest arbitration / formal impasse backstop,0,2,0,0.0
+MA,Massachusetts,library,Library,non_safety,management_rights_or_service_flexibility,Management rights / service flexibility,2,2,1,0.5
+MA,Massachusetts,library,Library,non_safety,minimum_staffing_or_continuous_coverage,Minimum staffing / continuous coverage,0,2,0,0.0
+MA,Massachusetts,library,Library,non_safety,no_strike_or_work_stoppage_constraint,No-strike / work-stoppage constraint,0,2,0,0.0
+MA,Massachusetts,library,Library,non_safety,non_safety_wage_restraint_or_admin_channel,Non-safety wage restraint / administrative channel,0,2,0,0.0
+MA,Massachusetts,library,Library,non_safety,other,Other wage-mechanism evidence,0,2,0,0.0
+MA,Massachusetts,library,Library,non_safety,overtime_callback_holdover_mandatory_extra_work,"Overtime, callback, holdover, or mandatory extra work",3,2,2,1.0
+MA,Massachusetts,library,Library,non_safety,peer_comparator_wage_comparability,Peer / comparator wage comparison,0,2,0,0.0
+MA,Massachusetts,library,Library,non_safety,premium_pay_differentials,Premium pay / differentials,2,2,2,1.0
+MA,Massachusetts,library,Library,non_safety,staffing_shortage_recruitment_retention,"Staffing shortage, recruitment, or retention",0,2,0,0.0
+MA,Massachusetts,library,Library,non_safety,subcontracting_outsourcing_or_volunteer_substitution,"Subcontracting, outsourcing, or substitution",0,2,0,0.0
+MA,Massachusetts,library,Library,non_safety,training_certification_credential_premiums,"Training, certification, credential, or education premiums",0,2,0,0.0
+MA,Massachusetts,library,Library,non_safety,union_security_or_institutional_power,Union security / institutional power,0,2,0,0.0
+MA,Massachusetts,other,Other / mixed municipal,non_safety,benefits_total_compensation_or_pension,"Benefits, total compensation, or pension",0,3,0,0.0
+MA,Massachusetts,other,Other / mixed municipal,non_safety,budget_capacity_or_fiscal_constraint,Budget capacity / fiscal constraint,0,3,0,0.0
+MA,Massachusetts,other,Other / mixed municipal,non_safety,civil_service_or_statutory_employment_channel,Civil-service or statutory employment channel,1,3,1,0.3333
+MA,Massachusetts,other,Other / mixed municipal,non_safety,classification_reclassification_or_grade_structure,"Classification, reclassification, or wage-grade structure",3,3,2,0.6667
+MA,Massachusetts,other,Other / mixed municipal,non_safety,grievance_or_contract_interpretation_arbitration,Grievance or contract-interpretation arbitration,0,3,0,0.0
+MA,Massachusetts,other,Other / mixed municipal,non_safety,hazard_risk_stress_or_line_of_duty_rationale,"Hazard, risk, stress, or line-of-duty rationale",0,3,0,0.0
+MA,Massachusetts,other,Other / mixed municipal,non_safety,interest_arbitration_or_formal_impasse_backstop,Interest arbitration / formal impasse backstop,0,3,0,0.0
+MA,Massachusetts,other,Other / mixed municipal,non_safety,management_rights_or_service_flexibility,Management rights / service flexibility,0,3,0,0.0
+MA,Massachusetts,other,Other / mixed municipal,non_safety,minimum_staffing_or_continuous_coverage,Minimum staffing / continuous coverage,0,3,0,0.0
+MA,Massachusetts,other,Other / mixed municipal,non_safety,no_strike_or_work_stoppage_constraint,No-strike / work-stoppage constraint,0,3,0,0.0
+MA,Massachusetts,other,Other / mixed municipal,non_safety,non_safety_wage_restraint_or_admin_channel,Non-safety wage restraint / administrative channel,0,3,0,0.0
+MA,Massachusetts,other,Other / mixed municipal,non_safety,other,Other wage-mechanism evidence,0,3,0,0.0
+MA,Massachusetts,other,Other / mixed municipal,non_safety,overtime_callback_holdover_mandatory_extra_work,"Overtime, callback, holdover, or mandatory extra work",4,3,2,0.6667
+MA,Massachusetts,other,Other / mixed municipal,non_safety,peer_comparator_wage_comparability,Peer / comparator wage comparison,0,3,0,0.0
+MA,Massachusetts,other,Other / mixed municipal,non_safety,premium_pay_differentials,Premium pay / differentials,1,3,1,0.3333
+MA,Massachusetts,other,Other / mixed municipal,non_safety,staffing_shortage_recruitment_retention,"Staffing shortage, recruitment, or retention",0,3,0,0.0
+MA,Massachusetts,other,Other / mixed municipal,non_safety,subcontracting_outsourcing_or_volunteer_substitution,"Subcontracting, outsourcing, or substitution",0,3,0,0.0
+MA,Massachusetts,other,Other / mixed municipal,non_safety,training_certification_credential_premiums,"Training, certification, credential, or education premiums",1,3,1,0.3333
+MA,Massachusetts,other,Other / mixed municipal,non_safety,union_security_or_institutional_power,Union security / institutional power,3,3,2,0.6667
+MA,Massachusetts,police,Police,safety,benefits_total_compensation_or_pension,"Benefits, total compensation, or pension",3,4,1,0.25
+MA,Massachusetts,police,Police,safety,budget_capacity_or_fiscal_constraint,Budget capacity / fiscal constraint,1,4,1,0.25
+MA,Massachusetts,police,Police,safety,civil_service_or_statutory_employment_channel,Civil-service or statutory employment channel,0,4,0,0.0
+MA,Massachusetts,police,Police,safety,classification_reclassification_or_grade_structure,"Classification, reclassification, or wage-grade structure",4,4,3,0.75
+MA,Massachusetts,police,Police,safety,grievance_or_contract_interpretation_arbitration,Grievance or contract-interpretation arbitration,6,4,4,1.0
+MA,Massachusetts,police,Police,safety,hazard_risk_stress_or_line_of_duty_rationale,"Hazard, risk, stress, or line-of-duty rationale",3,4,3,0.75
+MA,Massachusetts,police,Police,safety,interest_arbitration_or_formal_impasse_backstop,Interest arbitration / formal impasse backstop,1,4,1,0.25
+MA,Massachusetts,police,Police,safety,management_rights_or_service_flexibility,Management rights / service flexibility,2,4,1,0.25
+MA,Massachusetts,police,Police,safety,minimum_staffing_or_continuous_coverage,Minimum staffing / continuous coverage,1,4,1,0.25
+MA,Massachusetts,police,Police,safety,no_strike_or_work_stoppage_constraint,No-strike / work-stoppage constraint,0,4,0,0.0
+MA,Massachusetts,police,Police,safety,non_safety_wage_restraint_or_admin_channel,Non-safety wage restraint / administrative channel,1,4,1,0.25
+MA,Massachusetts,police,Police,safety,other,Other wage-mechanism evidence,2,4,2,0.5
+MA,Massachusetts,police,Police,safety,overtime_callback_holdover_mandatory_extra_work,"Overtime, callback, holdover, or mandatory extra work",6,4,3,0.75
+MA,Massachusetts,police,Police,safety,peer_comparator_wage_comparability,Peer / comparator wage comparison,1,4,1,0.25
+MA,Massachusetts,police,Police,safety,premium_pay_differentials,Premium pay / differentials,5,4,4,1.0
+MA,Massachusetts,police,Police,safety,staffing_shortage_recruitment_retention,"Staffing shortage, recruitment, or retention",0,4,0,0.0
+MA,Massachusetts,police,Police,safety,subcontracting_outsourcing_or_volunteer_substitution,"Subcontracting, outsourcing, or substitution",0,4,0,0.0
+MA,Massachusetts,police,Police,safety,training_certification_credential_premiums,"Training, certification, credential, or education premiums",3,4,2,0.5
+MA,Massachusetts,police,Police,safety,union_security_or_institutional_power,Union security / institutional power,0,4,0,0.0
+MA,Massachusetts,public_works,Public works / DPW,non_safety,benefits_total_compensation_or_pension,"Benefits, total compensation, or pension",2,2,1,0.5
+MA,Massachusetts,public_works,Public works / DPW,non_safety,budget_capacity_or_fiscal_constraint,Budget capacity / fiscal constraint,0,2,0,0.0
+MA,Massachusetts,public_works,Public works / DPW,non_safety,civil_service_or_statutory_employment_channel,Civil-service or statutory employment channel,0,2,0,0.0
+MA,Massachusetts,public_works,Public works / DPW,non_safety,classification_reclassification_or_grade_structure,"Classification, reclassification, or wage-grade structure",6,2,2,1.0
+MA,Massachusetts,public_works,Public works / DPW,non_safety,grievance_or_contract_interpretation_arbitration,Grievance or contract-interpretation arbitration,4,2,2,1.0
+MA,Massachusetts,public_works,Public works / DPW,non_safety,hazard_risk_stress_or_line_of_duty_rationale,"Hazard, risk, stress, or line-of-duty rationale",0,2,0,0.0
+MA,Massachusetts,public_works,Public works / DPW,non_safety,interest_arbitration_or_formal_impasse_backstop,Interest arbitration / formal impasse backstop,0,2,0,0.0
+MA,Massachusetts,public_works,Public works / DPW,non_safety,management_rights_or_service_flexibility,Management rights / service flexibility,0,2,0,0.0
+MA,Massachusetts,public_works,Public works / DPW,non_safety,minimum_staffing_or_continuous_coverage,Minimum staffing / continuous coverage,0,2,0,0.0
+MA,Massachusetts,public_works,Public works / DPW,non_safety,no_strike_or_work_stoppage_constraint,No-strike / work-stoppage constraint,0,2,0,0.0
+MA,Massachusetts,public_works,Public works / DPW,non_safety,non_safety_wage_restraint_or_admin_channel,Non-safety wage restraint / administrative channel,1,2,1,0.5
+MA,Massachusetts,public_works,Public works / DPW,non_safety,other,Other wage-mechanism evidence,0,2,0,0.0
+MA,Massachusetts,public_works,Public works / DPW,non_safety,overtime_callback_holdover_mandatory_extra_work,"Overtime, callback, holdover, or mandatory extra work",1,2,1,0.5
+MA,Massachusetts,public_works,Public works / DPW,non_safety,peer_comparator_wage_comparability,Peer / comparator wage comparison,0,2,0,0.0
+MA,Massachusetts,public_works,Public works / DPW,non_safety,premium_pay_differentials,Premium pay / differentials,0,2,0,0.0
+MA,Massachusetts,public_works,Public works / DPW,non_safety,staffing_shortage_recruitment_retention,"Staffing shortage, recruitment, or retention",0,2,0,0.0
+MA,Massachusetts,public_works,Public works / DPW,non_safety,subcontracting_outsourcing_or_volunteer_substitution,"Subcontracting, outsourcing, or substitution",0,2,0,0.0
+MA,Massachusetts,public_works,Public works / DPW,non_safety,training_certification_credential_premiums,"Training, certification, credential, or education premiums",0,2,0,0.0
+MA,Massachusetts,public_works,Public works / DPW,non_safety,union_security_or_institutional_power,Union security / institutional power,0,2,0,0.0
+MA,Massachusetts,teacher,Teachers / school employees,non_safety,benefits_total_compensation_or_pension,"Benefits, total compensation, or pension",1,1,1,1.0
+MA,Massachusetts,teacher,Teachers / school employees,non_safety,budget_capacity_or_fiscal_constraint,Budget capacity / fiscal constraint,0,1,0,0.0
+MA,Massachusetts,teacher,Teachers / school employees,non_safety,civil_service_or_statutory_employment_channel,Civil-service or statutory employment channel,1,1,1,1.0
+MA,Massachusetts,teacher,Teachers / school employees,non_safety,classification_reclassification_or_grade_structure,"Classification, reclassification, or wage-grade structure",1,1,1,1.0
+MA,Massachusetts,teacher,Teachers / school employees,non_safety,grievance_or_contract_interpretation_arbitration,Grievance or contract-interpretation arbitration,1,1,1,1.0
+MA,Massachusetts,teacher,Teachers / school employees,non_safety,hazard_risk_stress_or_line_of_duty_rationale,"Hazard, risk, stress, or line-of-duty rationale",0,1,0,0.0
+MA,Massachusetts,teacher,Teachers / school employees,non_safety,interest_arbitration_or_formal_impasse_backstop,Interest arbitration / formal impasse backstop,0,1,0,0.0
+MA,Massachusetts,teacher,Teachers / school employees,non_safety,management_rights_or_service_flexibility,Management rights / service flexibility,1,1,1,1.0
+MA,Massachusetts,teacher,Teachers / school employees,non_safety,minimum_staffing_or_continuous_coverage,Minimum staffing / continuous coverage,0,1,0,0.0
+MA,Massachusetts,teacher,Teachers / school employees,non_safety,no_strike_or_work_stoppage_constraint,No-strike / work-stoppage constraint,0,1,0,0.0
+MA,Massachusetts,teacher,Teachers / school employees,non_safety,non_safety_wage_restraint_or_admin_channel,Non-safety wage restraint / administrative channel,0,1,0,0.0
+MA,Massachusetts,teacher,Teachers / school employees,non_safety,other,Other wage-mechanism evidence,0,1,0,0.0
+MA,Massachusetts,teacher,Teachers / school employees,non_safety,overtime_callback_holdover_mandatory_extra_work,"Overtime, callback, holdover, or mandatory extra work",0,1,0,0.0
+MA,Massachusetts,teacher,Teachers / school employees,non_safety,peer_comparator_wage_comparability,Peer / comparator wage comparison,0,1,0,0.0
+MA,Massachusetts,teacher,Teachers / school employees,non_safety,premium_pay_differentials,Premium pay / differentials,0,1,0,0.0
+MA,Massachusetts,teacher,Teachers / school employees,non_safety,staffing_shortage_recruitment_retention,"Staffing shortage, recruitment, or retention",0,1,0,0.0
+MA,Massachusetts,teacher,Teachers / school employees,non_safety,subcontracting_outsourcing_or_volunteer_substitution,"Subcontracting, outsourcing, or substitution",0,1,0,0.0
+MA,Massachusetts,teacher,Teachers / school employees,non_safety,training_certification_credential_premiums,"Training, certification, credential, or education premiums",1,1,1,1.0
+MA,Massachusetts,teacher,Teachers / school employees,non_safety,union_security_or_institutional_power,Union security / institutional power,1,1,1,1.0
+OH,Ohio,fire,Fire,safety,benefits_total_compensation_or_pension,"Benefits, total compensation, or pension",3,4,2,0.5
+OH,Ohio,fire,Fire,safety,budget_capacity_or_fiscal_constraint,Budget capacity / fiscal constraint,0,4,0,0.0
+OH,Ohio,fire,Fire,safety,civil_service_or_statutory_employment_channel,Civil-service or statutory employment channel,2,4,2,0.5
+OH,Ohio,fire,Fire,safety,classification_reclassification_or_grade_structure,"Classification, reclassification, or wage-grade structure",4,4,2,0.5
+OH,Ohio,fire,Fire,safety,grievance_or_contract_interpretation_arbitration,Grievance or contract-interpretation arbitration,1,4,1,0.25
+OH,Ohio,fire,Fire,safety,hazard_risk_stress_or_line_of_duty_rationale,"Hazard, risk, stress, or line-of-duty rationale",2,4,1,0.25
+OH,Ohio,fire,Fire,safety,interest_arbitration_or_formal_impasse_backstop,Interest arbitration / formal impasse backstop,1,4,1,0.25
+OH,Ohio,fire,Fire,safety,management_rights_or_service_flexibility,Management rights / service flexibility,3,4,2,0.5
+OH,Ohio,fire,Fire,safety,minimum_staffing_or_continuous_coverage,Minimum staffing / continuous coverage,2,4,2,0.5
+OH,Ohio,fire,Fire,safety,no_strike_or_work_stoppage_constraint,No-strike / work-stoppage constraint,2,4,2,0.5
+OH,Ohio,fire,Fire,safety,non_safety_wage_restraint_or_admin_channel,Non-safety wage restraint / administrative channel,0,4,0,0.0
+OH,Ohio,fire,Fire,safety,other,Other wage-mechanism evidence,1,4,1,0.25
+OH,Ohio,fire,Fire,safety,overtime_callback_holdover_mandatory_extra_work,"Overtime, callback, holdover, or mandatory extra work",3,4,3,0.75
+OH,Ohio,fire,Fire,safety,peer_comparator_wage_comparability,Peer / comparator wage comparison,0,4,0,0.0
+OH,Ohio,fire,Fire,safety,premium_pay_differentials,Premium pay / differentials,2,4,1,0.25
+OH,Ohio,fire,Fire,safety,staffing_shortage_recruitment_retention,"Staffing shortage, recruitment, or retention",1,4,1,0.25
+OH,Ohio,fire,Fire,safety,subcontracting_outsourcing_or_volunteer_substitution,"Subcontracting, outsourcing, or substitution",2,4,2,0.5
+OH,Ohio,fire,Fire,safety,training_certification_credential_premiums,"Training, certification, credential, or education premiums",1,4,1,0.25
+OH,Ohio,fire,Fire,safety,union_security_or_institutional_power,Union security / institutional power,2,4,2,0.5
+OH,Ohio,other,Other / mixed municipal,non_safety,benefits_total_compensation_or_pension,"Benefits, total compensation, or pension",5,4,2,0.5
+OH,Ohio,other,Other / mixed municipal,non_safety,budget_capacity_or_fiscal_constraint,Budget capacity / fiscal constraint,0,4,0,0.0
+OH,Ohio,other,Other / mixed municipal,non_safety,civil_service_or_statutory_employment_channel,Civil-service or statutory employment channel,1,4,1,0.25
+OH,Ohio,other,Other / mixed municipal,non_safety,classification_reclassification_or_grade_structure,"Classification, reclassification, or wage-grade structure",4,4,2,0.5
+OH,Ohio,other,Other / mixed municipal,non_safety,grievance_or_contract_interpretation_arbitration,Grievance or contract-interpretation arbitration,3,4,3,0.75
+OH,Ohio,other,Other / mixed municipal,non_safety,hazard_risk_stress_or_line_of_duty_rationale,"Hazard, risk, stress, or line-of-duty rationale",0,4,0,0.0
+OH,Ohio,other,Other / mixed municipal,non_safety,interest_arbitration_or_formal_impasse_backstop,Interest arbitration / formal impasse backstop,0,4,0,0.0
+OH,Ohio,other,Other / mixed municipal,non_safety,management_rights_or_service_flexibility,Management rights / service flexibility,4,4,2,0.5
+OH,Ohio,other,Other / mixed municipal,non_safety,minimum_staffing_or_continuous_coverage,Minimum staffing / continuous coverage,0,4,0,0.0
+OH,Ohio,other,Other / mixed municipal,non_safety,no_strike_or_work_stoppage_constraint,No-strike / work-stoppage constraint,4,4,2,0.5
+OH,Ohio,other,Other / mixed municipal,non_safety,non_safety_wage_restraint_or_admin_channel,Non-safety wage restraint / administrative channel,0,4,0,0.0
+OH,Ohio,other,Other / mixed municipal,non_safety,other,Other wage-mechanism evidence,2,4,1,0.25
+OH,Ohio,other,Other / mixed municipal,non_safety,overtime_callback_holdover_mandatory_extra_work,"Overtime, callback, holdover, or mandatory extra work",3,4,2,0.5
+OH,Ohio,other,Other / mixed municipal,non_safety,peer_comparator_wage_comparability,Peer / comparator wage comparison,0,4,0,0.0
+OH,Ohio,other,Other / mixed municipal,non_safety,premium_pay_differentials,Premium pay / differentials,3,4,2,0.5
+OH,Ohio,other,Other / mixed municipal,non_safety,staffing_shortage_recruitment_retention,"Staffing shortage, recruitment, or retention",1,4,1,0.25
+OH,Ohio,other,Other / mixed municipal,non_safety,subcontracting_outsourcing_or_volunteer_substitution,"Subcontracting, outsourcing, or substitution",2,4,2,0.5
+OH,Ohio,other,Other / mixed municipal,non_safety,training_certification_credential_premiums,"Training, certification, credential, or education premiums",2,4,1,0.25
+OH,Ohio,other,Other / mixed municipal,non_safety,union_security_or_institutional_power,Union security / institutional power,5,4,3,0.75
+OH,Ohio,police,Police,safety,benefits_total_compensation_or_pension,"Benefits, total compensation, or pension",3,5,3,0.6
+OH,Ohio,police,Police,safety,budget_capacity_or_fiscal_constraint,Budget capacity / fiscal constraint,0,5,0,0.0
+OH,Ohio,police,Police,safety,civil_service_or_statutory_employment_channel,Civil-service or statutory employment channel,2,5,2,0.4
+OH,Ohio,police,Police,safety,classification_reclassification_or_grade_structure,"Classification, reclassification, or wage-grade structure",1,5,1,0.2
+OH,Ohio,police,Police,safety,grievance_or_contract_interpretation_arbitration,Grievance or contract-interpretation arbitration,0,5,0,0.0
+OH,Ohio,police,Police,safety,hazard_risk_stress_or_line_of_duty_rationale,"Hazard, risk, stress, or line-of-duty rationale",0,5,0,0.0
+OH,Ohio,police,Police,safety,interest_arbitration_or_formal_impasse_backstop,Interest arbitration / formal impasse backstop,3,5,3,0.6
+OH,Ohio,police,Police,safety,management_rights_or_service_flexibility,Management rights / service flexibility,4,5,3,0.6
+OH,Ohio,police,Police,safety,minimum_staffing_or_continuous_coverage,Minimum staffing / continuous coverage,0,5,0,0.0
+OH,Ohio,police,Police,safety,no_strike_or_work_stoppage_constraint,No-strike / work-stoppage constraint,0,5,0,0.0
+OH,Ohio,police,Police,safety,non_safety_wage_restraint_or_admin_channel,Non-safety wage restraint / administrative channel,0,5,0,0.0
+OH,Ohio,police,Police,safety,other,Other wage-mechanism evidence,0,5,0,0.0
+OH,Ohio,police,Police,safety,overtime_callback_holdover_mandatory_extra_work,"Overtime, callback, holdover, or mandatory extra work",2,5,2,0.4
+OH,Ohio,police,Police,safety,peer_comparator_wage_comparability,Peer / comparator wage comparison,0,5,0,0.0
+OH,Ohio,police,Police,safety,premium_pay_differentials,Premium pay / differentials,1,5,1,0.2
+OH,Ohio,police,Police,safety,staffing_shortage_recruitment_retention,"Staffing shortage, recruitment, or retention",0,5,0,0.0
+OH,Ohio,police,Police,safety,subcontracting_outsourcing_or_volunteer_substitution,"Subcontracting, outsourcing, or substitution",2,5,2,0.4
+OH,Ohio,police,Police,safety,training_certification_credential_premiums,"Training, certification, credential, or education premiums",0,5,0,0.0
+OH,Ohio,police,Police,safety,union_security_or_institutional_power,Union security / institutional power,4,5,3,0.6
+TX,Texas,fire,Fire,safety,benefits_total_compensation_or_pension,"Benefits, total compensation, or pension",3,3,2,0.6667
+TX,Texas,fire,Fire,safety,budget_capacity_or_fiscal_constraint,Budget capacity / fiscal constraint,1,3,1,0.3333
+TX,Texas,fire,Fire,safety,civil_service_or_statutory_employment_channel,Civil-service or statutory employment channel,4,3,2,0.6667
+TX,Texas,fire,Fire,safety,classification_reclassification_or_grade_structure,"Classification, reclassification, or wage-grade structure",1,3,1,0.3333
+TX,Texas,fire,Fire,safety,grievance_or_contract_interpretation_arbitration,Grievance or contract-interpretation arbitration,3,3,2,0.6667
+TX,Texas,fire,Fire,safety,hazard_risk_stress_or_line_of_duty_rationale,"Hazard, risk, stress, or line-of-duty rationale",1,3,1,0.3333
+TX,Texas,fire,Fire,safety,interest_arbitration_or_formal_impasse_backstop,Interest arbitration / formal impasse backstop,1,3,1,0.3333
+TX,Texas,fire,Fire,safety,management_rights_or_service_flexibility,Management rights / service flexibility,1,3,1,0.3333
+TX,Texas,fire,Fire,safety,minimum_staffing_or_continuous_coverage,Minimum staffing / continuous coverage,1,3,1,0.3333
+TX,Texas,fire,Fire,safety,no_strike_or_work_stoppage_constraint,No-strike / work-stoppage constraint,1,3,1,0.3333
+TX,Texas,fire,Fire,safety,non_safety_wage_restraint_or_admin_channel,Non-safety wage restraint / administrative channel,1,3,1,0.3333
+TX,Texas,fire,Fire,safety,other,Other wage-mechanism evidence,0,3,0,0.0
+TX,Texas,fire,Fire,safety,overtime_callback_holdover_mandatory_extra_work,"Overtime, callback, holdover, or mandatory extra work",3,3,2,0.6667
+TX,Texas,fire,Fire,safety,peer_comparator_wage_comparability,Peer / comparator wage comparison,0,3,0,0.0
+TX,Texas,fire,Fire,safety,premium_pay_differentials,Premium pay / differentials,1,3,1,0.3333
+TX,Texas,fire,Fire,safety,staffing_shortage_recruitment_retention,"Staffing shortage, recruitment, or retention",1,3,1,0.3333
+TX,Texas,fire,Fire,safety,subcontracting_outsourcing_or_volunteer_substitution,"Subcontracting, outsourcing, or substitution",1,3,1,0.3333
+TX,Texas,fire,Fire,safety,training_certification_credential_premiums,"Training, certification, credential, or education premiums",2,3,2,0.6667
+TX,Texas,fire,Fire,safety,union_security_or_institutional_power,Union security / institutional power,4,3,2,0.6667
+TX,Texas,nurse_health,Health / EMS / nurse-health,safety_adjacent,benefits_total_compensation_or_pension,"Benefits, total compensation, or pension",1,1,1,1.0
+TX,Texas,nurse_health,Health / EMS / nurse-health,safety_adjacent,budget_capacity_or_fiscal_constraint,Budget capacity / fiscal constraint,0,1,0,0.0
+TX,Texas,nurse_health,Health / EMS / nurse-health,safety_adjacent,civil_service_or_statutory_employment_channel,Civil-service or statutory employment channel,3,1,1,1.0
+TX,Texas,nurse_health,Health / EMS / nurse-health,safety_adjacent,classification_reclassification_or_grade_structure,"Classification, reclassification, or wage-grade structure",2,1,1,1.0
+TX,Texas,nurse_health,Health / EMS / nurse-health,safety_adjacent,grievance_or_contract_interpretation_arbitration,Grievance or contract-interpretation arbitration,2,1,1,1.0
+TX,Texas,nurse_health,Health / EMS / nurse-health,safety_adjacent,hazard_risk_stress_or_line_of_duty_rationale,"Hazard, risk, stress, or line-of-duty rationale",0,1,0,0.0
+TX,Texas,nurse_health,Health / EMS / nurse-health,safety_adjacent,interest_arbitration_or_formal_impasse_backstop,Interest arbitration / formal impasse backstop,0,1,0,0.0
+TX,Texas,nurse_health,Health / EMS / nurse-health,safety_adjacent,management_rights_or_service_flexibility,Management rights / service flexibility,1,1,1,1.0
+TX,Texas,nurse_health,Health / EMS / nurse-health,safety_adjacent,minimum_staffing_or_continuous_coverage,Minimum staffing / continuous coverage,0,1,0,0.0
+TX,Texas,nurse_health,Health / EMS / nurse-health,safety_adjacent,no_strike_or_work_stoppage_constraint,No-strike / work-stoppage constraint,1,1,1,1.0
+TX,Texas,nurse_health,Health / EMS / nurse-health,safety_adjacent,non_safety_wage_restraint_or_admin_channel,Non-safety wage restraint / administrative channel,0,1,0,0.0
+TX,Texas,nurse_health,Health / EMS / nurse-health,safety_adjacent,other,Other wage-mechanism evidence,0,1,0,0.0
+TX,Texas,nurse_health,Health / EMS / nurse-health,safety_adjacent,overtime_callback_holdover_mandatory_extra_work,"Overtime, callback, holdover, or mandatory extra work",3,1,1,1.0
+TX,Texas,nurse_health,Health / EMS / nurse-health,safety_adjacent,peer_comparator_wage_comparability,Peer / comparator wage comparison,0,1,0,0.0
+TX,Texas,nurse_health,Health / EMS / nurse-health,safety_adjacent,premium_pay_differentials,Premium pay / differentials,1,1,1,1.0
+TX,Texas,nurse_health,Health / EMS / nurse-health,safety_adjacent,staffing_shortage_recruitment_retention,"Staffing shortage, recruitment, or retention",0,1,0,0.0
+TX,Texas,nurse_health,Health / EMS / nurse-health,safety_adjacent,subcontracting_outsourcing_or_volunteer_substitution,"Subcontracting, outsourcing, or substitution",0,1,0,0.0
+TX,Texas,nurse_health,Health / EMS / nurse-health,safety_adjacent,training_certification_credential_premiums,"Training, certification, credential, or education premiums",2,1,1,1.0
+TX,Texas,nurse_health,Health / EMS / nurse-health,safety_adjacent,union_security_or_institutional_power,Union security / institutional power,1,1,1,1.0
+TX,Texas,other,Other / mixed municipal,non_safety,benefits_total_compensation_or_pension,"Benefits, total compensation, or pension",0,1,0,0.0
+TX,Texas,other,Other / mixed municipal,non_safety,budget_capacity_or_fiscal_constraint,Budget capacity / fiscal constraint,0,1,0,0.0
+TX,Texas,other,Other / mixed municipal,non_safety,civil_service_or_statutory_employment_channel,Civil-service or statutory employment channel,1,1,1,1.0
+TX,Texas,other,Other / mixed municipal,non_safety,classification_reclassification_or_grade_structure,"Classification, reclassification, or wage-grade structure",0,1,0,0.0
+TX,Texas,other,Other / mixed municipal,non_safety,grievance_or_contract_interpretation_arbitration,Grievance or contract-interpretation arbitration,0,1,0,0.0
+TX,Texas,other,Other / mixed municipal,non_safety,hazard_risk_stress_or_line_of_duty_rationale,"Hazard, risk, stress, or line-of-duty rationale",0,1,0,0.0
+TX,Texas,other,Other / mixed municipal,non_safety,interest_arbitration_or_formal_impasse_backstop,Interest arbitration / formal impasse backstop,1,1,1,1.0
+TX,Texas,other,Other / mixed municipal,non_safety,management_rights_or_service_flexibility,Management rights / service flexibility,1,1,1,1.0
+TX,Texas,other,Other / mixed municipal,non_safety,minimum_staffing_or_continuous_coverage,Minimum staffing / continuous coverage,0,1,0,0.0
+TX,Texas,other,Other / mixed municipal,non_safety,no_strike_or_work_stoppage_constraint,No-strike / work-stoppage constraint,1,1,1,1.0
+TX,Texas,other,Other / mixed municipal,non_safety,non_safety_wage_restraint_or_admin_channel,Non-safety wage restraint / administrative channel,0,1,0,0.0
+TX,Texas,other,Other / mixed municipal,non_safety,other,Other wage-mechanism evidence,0,1,0,0.0
+TX,Texas,other,Other / mixed municipal,non_safety,overtime_callback_holdover_mandatory_extra_work,"Overtime, callback, holdover, or mandatory extra work",2,1,1,1.0
+TX,Texas,other,Other / mixed municipal,non_safety,peer_comparator_wage_comparability,Peer / comparator wage comparison,0,1,0,0.0
+TX,Texas,other,Other / mixed municipal,non_safety,premium_pay_differentials,Premium pay / differentials,1,1,1,1.0
+TX,Texas,other,Other / mixed municipal,non_safety,staffing_shortage_recruitment_retention,"Staffing shortage, recruitment, or retention",1,1,1,1.0
+TX,Texas,other,Other / mixed municipal,non_safety,subcontracting_outsourcing_or_volunteer_substitution,"Subcontracting, outsourcing, or substitution",1,1,1,1.0
+TX,Texas,other,Other / mixed municipal,non_safety,training_certification_credential_premiums,"Training, certification, credential, or education premiums",0,1,0,0.0
+TX,Texas,other,Other / mixed municipal,non_safety,union_security_or_institutional_power,Union security / institutional power,1,1,1,1.0
+TX,Texas,police,Police,safety,benefits_total_compensation_or_pension,"Benefits, total compensation, or pension",4,3,2,0.6667
+TX,Texas,police,Police,safety,budget_capacity_or_fiscal_constraint,Budget capacity / fiscal constraint,0,3,0,0.0
+TX,Texas,police,Police,safety,civil_service_or_statutory_employment_channel,Civil-service or statutory employment channel,2,3,2,0.6667
+TX,Texas,police,Police,safety,classification_reclassification_or_grade_structure,"Classification, reclassification, or wage-grade structure",2,3,2,0.6667
+TX,Texas,police,Police,safety,grievance_or_contract_interpretation_arbitration,Grievance or contract-interpretation arbitration,3,3,2,0.6667
+TX,Texas,police,Police,safety,hazard_risk_stress_or_line_of_duty_rationale,"Hazard, risk, stress, or line-of-duty rationale",1,3,1,0.3333
+TX,Texas,police,Police,safety,interest_arbitration_or_formal_impasse_backstop,Interest arbitration / formal impasse backstop,1,3,1,0.3333
+TX,Texas,police,Police,safety,management_rights_or_service_flexibility,Management rights / service flexibility,5,3,3,1.0
+TX,Texas,police,Police,safety,minimum_staffing_or_continuous_coverage,Minimum staffing / continuous coverage,0,3,0,0.0
+TX,Texas,police,Police,safety,no_strike_or_work_stoppage_constraint,No-strike / work-stoppage constraint,1,3,1,0.3333
+TX,Texas,police,Police,safety,non_safety_wage_restraint_or_admin_channel,Non-safety wage restraint / administrative channel,0,3,0,0.0
+TX,Texas,police,Police,safety,other,Other wage-mechanism evidence,1,3,1,0.3333
+TX,Texas,police,Police,safety,overtime_callback_holdover_mandatory_extra_work,"Overtime, callback, holdover, or mandatory extra work",2,3,2,0.6667
+TX,Texas,police,Police,safety,peer_comparator_wage_comparability,Peer / comparator wage comparison,0,3,0,0.0
+TX,Texas,police,Police,safety,premium_pay_differentials,Premium pay / differentials,2,3,2,0.6667
+TX,Texas,police,Police,safety,staffing_shortage_recruitment_retention,"Staffing shortage, recruitment, or retention",1,3,1,0.3333
+TX,Texas,police,Police,safety,subcontracting_outsourcing_or_volunteer_substitution,"Subcontracting, outsourcing, or substitution",0,3,0,0.0
+TX,Texas,police,Police,safety,training_certification_credential_premiums,"Training, certification, credential, or education premiums",1,3,1,0.3333
+TX,Texas,police,Police,safety,union_security_or_institutional_power,Union security / institutional power,3,3,2,0.6667

@@ -1,0 +1,58 @@
+state,state_label,attribute,attribute_label,verified_present_count,coded_source_count,sources_with_verified_evidence,share_sources_with_verified_evidence
+MA,Massachusetts,benefits_total_compensation_or_pension,"Benefits, total compensation, or pension",10,16,6,0.375
+MA,Massachusetts,budget_capacity_or_fiscal_constraint,Budget capacity / fiscal constraint,1,16,1,0.0625
+MA,Massachusetts,civil_service_or_statutory_employment_channel,Civil-service or statutory employment channel,3,16,3,0.1875
+MA,Massachusetts,classification_reclassification_or_grade_structure,"Classification, reclassification, or wage-grade structure",20,16,11,0.6875
+MA,Massachusetts,grievance_or_contract_interpretation_arbitration,Grievance or contract-interpretation arbitration,17,16,10,0.625
+MA,Massachusetts,hazard_risk_stress_or_line_of_duty_rationale,"Hazard, risk, stress, or line-of-duty rationale",4,16,4,0.25
+MA,Massachusetts,interest_arbitration_or_formal_impasse_backstop,Interest arbitration / formal impasse backstop,1,16,1,0.0625
+MA,Massachusetts,management_rights_or_service_flexibility,Management rights / service flexibility,5,16,3,0.1875
+MA,Massachusetts,minimum_staffing_or_continuous_coverage,Minimum staffing / continuous coverage,2,16,2,0.125
+MA,Massachusetts,no_strike_or_work_stoppage_constraint,No-strike / work-stoppage constraint,0,16,0,0.0
+MA,Massachusetts,non_safety_wage_restraint_or_admin_channel,Non-safety wage restraint / administrative channel,2,16,2,0.125
+MA,Massachusetts,other,Other wage-mechanism evidence,3,16,3,0.1875
+MA,Massachusetts,overtime_callback_holdover_mandatory_extra_work,"Overtime, callback, holdover, or mandatory extra work",16,16,10,0.625
+MA,Massachusetts,peer_comparator_wage_comparability,Peer / comparator wage comparison,1,16,1,0.0625
+MA,Massachusetts,premium_pay_differentials,Premium pay / differentials,8,16,7,0.4375
+MA,Massachusetts,staffing_shortage_recruitment_retention,"Staffing shortage, recruitment, or retention",0,16,0,0.0
+MA,Massachusetts,subcontracting_outsourcing_or_volunteer_substitution,"Subcontracting, outsourcing, or substitution",0,16,0,0.0
+MA,Massachusetts,training_certification_credential_premiums,"Training, certification, credential, or education premiums",7,16,6,0.375
+MA,Massachusetts,union_security_or_institutional_power,Union security / institutional power,5,16,4,0.25
+TX,Texas,benefits_total_compensation_or_pension,"Benefits, total compensation, or pension",8,8,5,0.625
+TX,Texas,budget_capacity_or_fiscal_constraint,Budget capacity / fiscal constraint,1,8,1,0.125
+TX,Texas,civil_service_or_statutory_employment_channel,Civil-service or statutory employment channel,10,8,6,0.75
+TX,Texas,classification_reclassification_or_grade_structure,"Classification, reclassification, or wage-grade structure",5,8,4,0.5
+TX,Texas,grievance_or_contract_interpretation_arbitration,Grievance or contract-interpretation arbitration,8,8,5,0.625
+TX,Texas,hazard_risk_stress_or_line_of_duty_rationale,"Hazard, risk, stress, or line-of-duty rationale",2,8,2,0.25
+TX,Texas,interest_arbitration_or_formal_impasse_backstop,Interest arbitration / formal impasse backstop,3,8,3,0.375
+TX,Texas,management_rights_or_service_flexibility,Management rights / service flexibility,8,8,6,0.75
+TX,Texas,minimum_staffing_or_continuous_coverage,Minimum staffing / continuous coverage,1,8,1,0.125
+TX,Texas,no_strike_or_work_stoppage_constraint,No-strike / work-stoppage constraint,4,8,4,0.5
+TX,Texas,non_safety_wage_restraint_or_admin_channel,Non-safety wage restraint / administrative channel,1,8,1,0.125
+TX,Texas,other,Other wage-mechanism evidence,1,8,1,0.125
+TX,Texas,overtime_callback_holdover_mandatory_extra_work,"Overtime, callback, holdover, or mandatory extra work",10,8,6,0.75
+TX,Texas,peer_comparator_wage_comparability,Peer / comparator wage comparison,0,8,0,0.0
+TX,Texas,premium_pay_differentials,Premium pay / differentials,5,8,5,0.625
+TX,Texas,staffing_shortage_recruitment_retention,"Staffing shortage, recruitment, or retention",3,8,3,0.375
+TX,Texas,subcontracting_outsourcing_or_volunteer_substitution,"Subcontracting, outsourcing, or substitution",2,8,2,0.25
+TX,Texas,training_certification_credential_premiums,"Training, certification, credential, or education premiums",5,8,4,0.5
+TX,Texas,union_security_or_institutional_power,Union security / institutional power,9,8,6,0.75
+OH,Ohio,benefits_total_compensation_or_pension,"Benefits, total compensation, or pension",11,13,7,0.5385
+OH,Ohio,budget_capacity_or_fiscal_constraint,Budget capacity / fiscal constraint,0,13,0,0.0
+OH,Ohio,civil_service_or_statutory_employment_channel,Civil-service or statutory employment channel,5,13,5,0.3846
+OH,Ohio,classification_reclassification_or_grade_structure,"Classification, reclassification, or wage-grade structure",9,13,5,0.3846
+OH,Ohio,grievance_or_contract_interpretation_arbitration,Grievance or contract-interpretation arbitration,4,13,4,0.3077
+OH,Ohio,hazard_risk_stress_or_line_of_duty_rationale,"Hazard, risk, stress, or line-of-duty rationale",2,13,1,0.0769
+OH,Ohio,interest_arbitration_or_formal_impasse_backstop,Interest arbitration / formal impasse backstop,4,13,4,0.3077
+OH,Ohio,management_rights_or_service_flexibility,Management rights / service flexibility,11,13,7,0.5385
+OH,Ohio,minimum_staffing_or_continuous_coverage,Minimum staffing / continuous coverage,2,13,2,0.1538
+OH,Ohio,no_strike_or_work_stoppage_constraint,No-strike / work-stoppage constraint,6,13,4,0.3077
+OH,Ohio,non_safety_wage_restraint_or_admin_channel,Non-safety wage restraint / administrative channel,0,13,0,0.0
+OH,Ohio,other,Other wage-mechanism evidence,3,13,2,0.1538
+OH,Ohio,overtime_callback_holdover_mandatory_extra_work,"Overtime, callback, holdover, or mandatory extra work",8,13,7,0.5385
+OH,Ohio,peer_comparator_wage_comparability,Peer / comparator wage comparison,0,13,0,0.0
+OH,Ohio,premium_pay_differentials,Premium pay / differentials,6,13,4,0.3077
+OH,Ohio,staffing_shortage_recruitment_retention,"Staffing shortage, recruitment, or retention",2,13,2,0.1538
+OH,Ohio,subcontracting_outsourcing_or_volunteer_substitution,"Subcontracting, outsourcing, or substitution",6,13,6,0.4615
+OH,Ohio,training_certification_credential_premiums,"Training, certification, credential, or education premiums",3,13,2,0.1538
+OH,Ohio,union_security_or_institutional_power,Union security / institutional power,11,13,8,0.6154
