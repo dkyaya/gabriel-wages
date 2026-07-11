@@ -6,6 +6,44 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-10 22:49 EDT (Report scaffold polish: graph audit created, appendix typo fixed, prose tightened) - Created the missing report_graph_audit_2026-07-10.md, fixed a "Two rows"/"Four rows" appendix miscount, verified every graph/table reference against report_assets/, and tightened the report scaffold's Executive Summary and Method sections for PI readability; no GABRIEL/codify/model/API calls, no new source collection, no data/corpus edits
+
+**Did**
+- Confirmed repo state before editing: `git status` clean except untracked `.claude/` and `tmp/`; latest commit `74836f7`; `data/contracts.csv`/`data/city_coverage.csv` unchanged since that commit (`git diff 74836f7 -- data/contracts.csv data/city_coverage.csv` empty); `docs/analysis/report_assets/` present with 20 files (6 CSV, 7 PNG, 7 SVG).
+- Wrote `docs/analysis/report_polish_preflight_2026-07-10.md` (preflight memo: repo state, files found, known issues, checks to run, explicit no-GABRIEL/no-new-sources confirmation).
+- **Created the missing `docs/analysis/report_graph_audit_2026-07-10.md`**, requested by the original report-scaffold run but never produced: documents the evidence filter (verified present = `evidence_status=present AND viewer_verified=1`), exact evidence-layer counts (781 total, 293 present, 488 not_found, 284 verified present, 9 flagged/unverified), a full asset inventory (6 CSVs, 7 PNG/SVG figure pairs), per-figure caveats (Texas institutionally uneven; Ohio strongest matched triads; Massachusetts dense but not a uniform grid; binary codify cannot measure intensity), and a file-reference check confirming all 6 inline image references in the scaffold resolve and all 7 figures have matching PNG+SVG pairs.
+- **Fixed the appendix miscount**: `report_appendix_tables_2026-07-10.md` said "Two rows" while listing four zero-verified-present contract IDs (`oh_cincinnati_fire_2023`, `oh_cincinnati_police_sup_2024`, `ma_wayland_fire_jlmc_2020`, `ma_georgetown_other_2020`) — corrected to "Four rows." Reviewed the rest of the appendix for accurate file names, viewer path, evidence terminology, and no causal overstatement — all clean, no further changes needed.
+- **Polished the report scaffold's prose** (`report_scaffold_safety_non_safety_wage_mechanisms_2026-07-10.md`): trimmed the Executive Summary from 8 to 6 crisper bullets (still leading with "GABRIEL-coded evidence patterns, not causal estimates"); restructured Method to lead with a plain-language explanation of what `codify()` does and what "verified present" means, moving the full 19-attribute list out to a pointer to Appendix A; tightened the Massachusetts and Texas state-findings paragraphs for readability while preserving every caveat (Massachusetts's uneven per-city occupation depth; Texas's institutional unevenness and small-sample-artifact warning). Reviewed Headline Finding, "What Appears to Drive the Wage Gap?", Counterpoints, and Next-State Strategy against this run's framing requirements (evidence patterns not causal proof; binary present/not_found; verified-present-only headline graphs; no "leading cause" language) and found them already compliant from the prior session's drafting — only light touch, no rewrite needed.
+- Wrote and ran a deterministic Python check script (no GABRIEL/model calls) verifying: all 6 scaffold image references resolve; all 6 report-asset CSVs parse cleanly with no width mismatches; all 7 figures have matching PNG+SVG pairs; the new graph audit documents every file in `report_assets/`; the evidence-layer CSV parses cleanly; `data/contracts.csv`/`data/city_coverage.csv` remain unchanged since `74836f7`; the appendix typo fix is confirmed present. **All checks passed.**
+- Lightly updated `wage_mechanism_evidence_checklist.md` (one added sentence to the existing living paragraph), `report_review_checklist_safety_non_safety_wage_mechanisms_2026-07-06.md` (new Section 7S), and `all_groups_source_needs_2026-07-06.csv` (1 new cross-cutting row) to record that the scaffold is polished, the graph audit exists, and the next step is final export after human review.
+
+**Decisions and why**
+- Did not regenerate any graph or figure — all six inline references and the one appendix-only figure already resolved correctly, so regeneration would have been unnecessary risk for zero benefit (and was explicitly discouraged unless fixing an actual error).
+- Left the Headline Finding, "What Appears to Drive the Wage Gap?", Counterpoints, and Next-State Strategy sections largely as written by the prior session, after confirming each already used the required careful framing ("strongest evidence pattern," "appears," explicit "does not claim a single leading cause") — rewriting working prose that already meets spec would have been unnecessary churn.
+- Moved the 19-attribute list out of the Method section's first paragraph (previously a long inline list) to a pointer at Appendix A, since the full glossary already lives there — reduces jargon-density in the main text per this run's "avoid jargon where possible" instruction without losing any information.
+
+**Surprises/breakage**
+- None. The missing graph audit was a known, expected gap (flagged in the task instructions themselves); no data or corpus defects were found.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 53 | discourse: 0 | coverage: 53 | city_attributes: 3
+
+python ingest/audit_coverage.py
+healthy matched pairs: 23 (exact-cycle: 9, overlap-cycle: 14) -- unchanged (this run added no data/corpus/codify rows)
+```
+Custom graph-reference check: 6/6 scaffold image references resolve; 6/6 report-asset CSVs parse clean; 7/7 figures have matching PNG+SVG; graph audit documents all 20 asset files; evidence-layer CSV parses clean (781 rows, 29 cols); `data/contracts.csv`/`data/city_coverage.csv` byte-identical to `74836f7`; appendix "Four rows" fix confirmed. **Overall: PASS.**
+
+**Corpus snapshot:** 53 contracts / 53 coverage rows / 3 city_attributes / 23 healthy matched pairs / evidence layer 781 rows (293 present, 284 verified) — all unchanged from the prior two sessions; this session edited report-layer documentation and prose only.
+
+**Confirmed:** no GABRIEL/codify, Harvard Proxy, or model/API calls this session (no new `logs/api_spend_log.csv` rows, no new codify output files); no new source collection, no FOIA/PRR; no edits to `data/contracts.csv`, `data/city_coverage.csv`, `corpus/`, or `docs/schema.md`; no final PDF/DOCX artifact produced.
+
+**Next steps**
+1. **Final report export (DOCX/PDF) after human/PI review.** The scaffold, appendix, and graph audit are now polished and internally consistent; the evidence-pattern (not causal-proof) framing must be preserved through any formatting pass.
+2. 16 Massachusetts contracts remain uncodified — a future GABRIEL/codify batch could broaden the evidence layer before a later report revision, but is not required to export the current scaffold.
+
 ## 2026-07-10 22:15 EDT (Report scaffold review, appendix gap fix, and commit) - Found an in-progress, uncommitted report scaffold (Markdown + charts + CSVs) from a separate session; filled one missing referenced file (the appendix), verified the rest was coherent, and committed
 
 **Did**

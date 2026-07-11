@@ -171,6 +171,13 @@
 - The durable evidence layer (`gabriel_codify_evidence_layer.csv`) now has **781 rows (293 present, 284 verified, 9 pre-existing flagged/unverified — none new this run)**. The viewer (`gabriel_codify_excerpt_browser_latest.html`) now shows San Antonio, Cincinnati, and Toledo for the first time, alongside every previously-codified city.
 - **Next step: report scaffolding with GABRIEL-coded mechanism-evidence graphs.** The report should present coded findings as evidence *patterns* (which mechanisms were found present or not-found, and how consistently across cities/occupations) — not as proof of a causal wage effect. This applies with equal force to the newly expanded Texas/Ohio evidence as to every prior batch.
 
+## 7S. Report scaffold reviewed and polished (added 2026-07-10)
+
+- The report scaffold committed in 7R (`report_scaffold_safety_non_safety_wage_mechanisms_2026-07-10.md`, `report_appendix_tables_2026-07-10.md`) was reviewed and polished: the appendix's "Two rows" typo (should read "Four rows," referring to the four zero-verified-present contracts) was fixed; the previously-missing `report_graph_audit_2026-07-10.md` was created, documenting the evidence filter, exact counts, full asset inventory, and per-figure caveats; every image reference in the scaffold was verified to resolve against `report_assets/`, and every PNG figure has a matching SVG.
+- The Executive Summary and Method sections were tightened for PI readability (Executive Summary trimmed from 8 to 6 bullets; Method restructured to lead with a plain-language explanation of what `codify()` does and what "verified present" means before the technical detail). The Headline Finding, State Findings, "What Appears to Drive the Wage Gap?", Counterpoints, and Next-State Strategy sections were reviewed against this project's evidence-pattern framing standard and found already compliant, with only light tightening applied (most notably the Massachusetts and Texas state-findings paragraphs).
+- **No GABRIEL/codify, Harvard Proxy, or model/API calls were made during this polish pass.** No new source collection. No edits to `data/contracts.csv`, `data/city_coverage.csv`, `corpus/`, or `docs/schema.md`. No final PDF/DOCX artifact was produced.
+- **Next step: final report export (DOCX/PDF) after human/PI review.** The evidence-pattern (not causal-proof) framing must be preserved through any formatting pass — do not call codify/model/API during export unless explicitly authorized.
+
 ## 7. Artifact-generation readiness checklist for later PDF/DOCX creation
 
 - [ ] PI has reviewed and approved the group-retention frame and central-claim framing (Section 1 above).

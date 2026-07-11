@@ -72,7 +72,7 @@ Source: unique `(attribute, attribute_label, attribute_definition)` tuples from 
 | TX | San Antonio | tx_san_antonio_fire_2024 | Fire | safety | cba | clean | 5 |
 | TX | San Antonio | tx_san_antonio_police_2022 | Police | safety | cba | ocr_messy | 6 |
 
-Two rows (`oh_cincinnati_fire_2023`, `oh_cincinnati_police_sup_2024`, `ma_wayland_fire_jlmc_2020`, `ma_georgetown_other_2020`) show 0 verified-present attributes despite being codified — codify was run against a curated excerpt window for each, and returned `not_found` (or an excerpt that did not pass the verified-present filter) for all 19 attributes in that window. This reflects the excerpt-selection limitation documented in the main report's Method and Limitations sections, not an assertion that these contracts contain no wage-mechanism language.
+Four rows (`oh_cincinnati_fire_2023`, `oh_cincinnati_police_sup_2024`, `ma_wayland_fire_jlmc_2020`, `ma_georgetown_other_2020`) show 0 verified-present attributes despite being codified — codify was run against a curated excerpt window for each, and returned `not_found` (or an excerpt that did not pass the verified-present filter) for all 19 attributes in that window. This reflects the excerpt-selection limitation documented in the main report's Method and Limitations sections, not an assertion that these contracts contain no wage-mechanism language.
 
 Source: `docs/analysis/report_assets/source_inventory_for_report_2026-07-10.csv`.
 
