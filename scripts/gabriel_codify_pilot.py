@@ -59,8 +59,10 @@ PILOT_OUTPUT_ROOT = ROOT / "tmp" / "gabriel_codify_pilots"
 # Raised 4 -> 8 on 2026-07-09 for the Texas/Ohio scale-up run, then 8 -> 10 on
 # 2026-07-10 for the Massachusetts scale-up run, then back to 8 later the same
 # day for the approved Seekonk/Wayland run (up to 8 selected rows, one call
-# each). See gabriel_codify_seekonk_wayland_preflight_2026-07-10.md.
-HARD_MAX_CALLS = 8
+# each), then 8 -> 9 on 2026-07-10 for the approved expanded Texas/Ohio run
+# (San Antonio, Cincinnati, Toledo -- 9 selected rows, one call each). See
+# gabriel_codify_expanded_texas_ohio_preflight_2026-07-10.md.
+HARD_MAX_CALLS = 9
 
 # Default (non-proxy) GABRIEL model; overridden to a Harvard-proxy-confirmed model
 # when --use-harvard-proxy is passed (see HARVARD_PROXY_MODEL below).

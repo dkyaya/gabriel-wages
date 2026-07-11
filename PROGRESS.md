@@ -6,6 +6,52 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-10 20:49 EDT (Merge recovery branch + San Antonio OCR + expanded Texas/Ohio codify + viewer rebuild) - Merged the recovery commit into main, recovered San Antonio police via bounded OCR, codified all 9 newly expanded Texas/Ohio sources (9/9 live calls, 100% grounded, 0 contamination), rebuilt the evidence layer/viewer; no new source collection, no FOIA/PRR, no broad GABRIEL run
+
+**Did**
+- Merged `worktree-tx-oh-expansion-recovery` (commit `9c42999`) into `main` -- clean fast-forward. The main checkout's working tree held an untouched, byte-identical copy of the same pre-interruption uncommitted state (verified via SHA-256 checksums on all 9 corpus PDFs and diffs on the CSVs/docs); stashed it (`pre-merge-backup-tx-oh-2026-07-10-relay`, entry `18f89ec`, left in the stash list as a redundant backup, not dropped) to clear the working tree, merged cleanly, then confirmed the result matched the stash exactly.
+- **Bounded OCR recovery for San Antonio police** (`tx_san_antonio_police_2022`, 218-page image scan, previously ~0 usable characters): rendered all 218 pages (`pdftoppm`, 150 DPI, 74s) and OCR'd all 218 pages (`tesseract --psm 6`, ~2.5 min) in one bounded ~4-minute pass. Recovery succeeded well beyond expectations: full legible article structure (Recognition, No Strike, Management Rights, Grievance/Arbitration, Wages/Step Schedule, Impasse Procedure) plus a genuine Attachment 3 factfinding peer/comparator wage-comparability clause -- the first confirmed comparator-wage language found for San Antonio in this project's corpus. Updated `text_quality` (partial -> ocr_messy) and corrected `cycle_start` (2022-10-01 assumption -> document-confirmed 2022-05-12) in `data/contracts.csv`, via a surgical single-line splice that touched no other row's bytes. Also found and fixed a pre-existing row-width bug (an unquoted comma) in `texas_ohio_expansion_mechanism_excerpt_extraction_2026-07-10.csv` from the prior recovery session, and appended 7 new deterministic mechanism excerpts for San Antonio police to that file.
+- Built `docs/analysis/gabriel_codify_expanded_texas_ohio_evidence_windows_2026-07-10.csv` (9 rows, all marker-sliced/line-range-verified verbatim substrings of the underlying `pdftotext -layout` extractions or the OCR cache, all well under the 1500-word-per-call cap, neutral `--- Excerpt N [Article X] ---` separators throughout).
+- Raised `scripts/gabriel_codify_pilot.py`'s `HARD_MAX_CALLS` 8 -> 9 (deliberate code edit, per the script's own established pattern) for this approved 9-row batch.
+- Ran `--dry-run` first (`tmp/gabriel_codify_pilots/2026-07-10_204044/`), confirmed 9/9 rows selected and 0 contamination violations, then ran the capped live batch (`tmp/gabriel_codify_pilots/2026-07-10_204149/`) via the same Harvard Proxy adapter. **9/9 live calls succeeded, 0 failed, 0 skipped.**
+- Parsed outputs: `docs/analysis/gabriel_codify_expanded_texas_ohio_outputs_2026-07-10.csv` -- 178 rows (32 present, 146 not_found), 0 parse failures, **32/32 present excerpts grounded (100%), 0 boundary-leakage flags, 0 mechanism-label-contamination flags** -- the cleanest single-batch result of any Texas/Ohio codify run to date.
+- San Antonio police's recovered text correctly distinguished `interest_arbitration_or_formal_impasse_backstop` (the Chapter 174 ordinance-defined impasse procedure) from `grievance_or_contract_interpretation_arbitration` (the separate Article 15 mechanism) within the same document -- the strongest single test yet of this codebook's key distinction. One observed false negative (the model missed the genuine peer/comparator wage-comparability clause in San Antonio's factfinding guidelines) is documented honestly in the audit memo, not hand-corrected.
+- Rebuilt the durable evidence layer and viewer from the union of all five codify output files (pilot + Texas/Ohio scale-up + Massachusetts + Seekonk/Wayland + this run's expanded Texas/Ohio output): **781 total evidence rows (293 present: 284 verified + 9 pre-existing flagged, none new this run; 488 not_found).** San Antonio, Cincinnati, and Toledo now appear in the viewer for the first time. Wrote `docs/analysis/gabriel_codify_excerpt_browser_latest.html` (updated in place) and a new dated archival copy `gabriel_codify_excerpt_browser_2026-07-10_expanded_texas_ohio.html`, leaving all four earlier archival copies untouched.
+- Lightly updated `wage_mechanism_evidence_checklist.md` (1 revised pointer sentence), the report review checklist (new Section 7R), and `all_groups_source_needs_2026-07-06.csv` (1 new row).
+
+**Decisions and why**
+- Chose a full 218-page OCR pass over guessing page ranges for San Antonio police -- with zero extractable text, there was no way to locate a table of contents without OCR'ing a reconnaissance batch first, and page 1's immediately clean, correctly-oriented output gave high confidence a full pass would cost barely more than a targeted one.
+- Did not hand-correct the model's peer-comparator-wage-comparability miss on San Antonio police, even though the RA (session) could see the matching text -- per this project's standing rule that RA discretion must not contaminate GABRIEL's own coding; documented the miss in the audit memo instead.
+- Used a surgical single-line splice (not a full `csv.writer` rewrite) for every hand-edit to `data/contracts.csv` and the older Texas/Ohio CSVs this session, after an initial full-rewrite attempt normalized 12 unrelated pre-existing lines' legacy `\r\n` line endings -- the surgical approach produces a minimal, reviewable diff touching only the intended row.
+
+**Surprises/breakage**
+- The main checkout's working tree still held the *original* pre-interruption uncommitted diff, untouched, since the prior session's worktree-based recovery never cleaned it up -- caught before the merge via SHA-256 verification, stashed safely, and confirmed identical to the merge target.
+- A full `csv.writer` rewrite of `data/contracts.csv` for a single-row edit silently normalized line endings on 12 unrelated rows (legacy mixed `\r\n`/`\n` line endings in the file) -- caught via `git diff` inspection before committing anything; fixed by switching to surgical single-line splicing for every subsequent CSV edit this session.
+- A pre-existing row-width bug (unquoted comma in a `notes` field) was found in `texas_ohio_expansion_mechanism_excerpt_extraction_2026-07-10.csv`, left over from the prior recovery session -- fixed this session rather than left for a future one, since Task E's row-width check would have failed on it otherwise.
+- San Antonio police's OCR-recovered text was substantially more complete and higher-quality than expected for a 218-page, 270°-rotated Xerox scan with a 0% initial extraction rate.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 53 | discourse: 0 | coverage: 53 | city_attributes: 3
+
+python ingest/audit_coverage.py
+healthy matched pairs: 23 (exact-cycle: 9, overlap-cycle: 14) -- unchanged from the interrupted-run-recovery session (this run added no new contract/coverage rows)
+
+python ingest/test_pipeline.py
+40 passed, 0 failed
+```
+Custom CSV audit: 0 width mismatches, 0 duplicate IDs, 0 invalid controlled-vocabulary values, 0 missing source files, 0 `retrieval_method=foia` rows, 0 duplicate `evidence_id` values across all 781 evidence-layer rows, 0 invalid `evidence_status`/`confidence`/`parse_status`/`source_grounding_status` values in the new codify output CSV.
+
+**Corpus snapshot:** 53 contracts / 53 coverage rows / 3 city_attributes / 23 healthy matched pairs (unchanged from the prior recovery session -- this was a codify/OCR/viewer run, not a new-source-acquisition run). Evidence layer: 781 rows (293 present, 284 verified, 9 pre-existing flagged) -- up from 603 at the start of this session.
+
+**Confirmed:** no new source collection, no web search, no FOIA/PRR, no full-corpus GABRIEL run, no model/API calls outside the capped `scripts/gabriel_codify_pilot.py` script (max 9 live calls, 9 used); no API keys/secrets printed or committed.
+
+**Next steps**
+1. **Report scaffolding with GABRIEL-coded mechanism-evidence graphs.** The evidence layer's Texas/Ohio coverage is now materially broader (4 Ohio matched cities, 3 Texas cities with contracts) than at any prior point in this project -- report language should present coded findings as evidence patterns, not causal proof.
+2. A future session could re-run the San Antonio police codify call after a codebook refinement, or manually flag the peer-comparator-wage-comparability miss for reviewer attention, given the observed false negative documented in this session's audit memo.
+
 ## 2026-07-10 19:20 EDT (Texas/Ohio source-expansion interrupted-run recovery) - Recovered from an accidentally-closed terminal mid-Task-G; confirmed the CSV writes had already completed cleanly; completed mechanism-excerpt extraction, ingestion summary, guidance-doc updates, and full validation; no GABRIEL/codify/model/API calls, no FOIA/PRR
 
 **Did**
