@@ -6,6 +6,56 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-12 10:36 EDT (National claim-driven corpus expansion plan) - Created a two-week national source-expansion strategy organized around current claims and leading hypotheses; no GABRIEL/codify/model/API calls, no new source collection, no data/corpus/final-report edits; local commit only by design
+
+**Did**
+- Confirmed repo state before work: working directory `/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages`; latest commit `3bb9ebf Consolidate claim-centered evidence register`; working tree clean except untracked `.claude/` and `tmp/`; evidence layer 781 rows; `data/contracts.csv` and `data/city_coverage.csv` each 53 rows.
+- Created `docs/analysis/national_corpus_expansion_preflight_2026-07-12.md`, recording current git/data/evidence/claim state and explicit constraints for this planning-only run.
+- Created `docs/analysis/national_corpus_current_coverage_gap_audit_2026-07-12.md`, documenting current coverage by state, city, occupation, safety group, source type, text quality, matched-triad status, verified-present attributes, and claim relevance.
+- Created `docs/analysis/national_state_priority_rubric_2026-07-12.csv` with 20 candidate states. Tier 1 for the first source scan: Pennsylvania, New Jersey, Illinois, New York. Tier 2: California, Washington, Oregon, Michigan, Minnesota, Wisconsin, Connecticut, Rhode Island, Maryland, Colorado. Tier 3/hold states retained as conservative contrast or later-wave candidates.
+- Created `docs/analysis/two_week_claim_driven_expansion_plan_2026-07-12.md`, making the next phase source expansion and claim testing, not another report.
+- Created `docs/analysis/national_source_targets_2026-07-12.csv` with 29 initial planning targets, including 5 city targets per tier-1 state. No searches or downloads were run.
+- Created `docs/analysis/hypothesis_tracker_2026-07-12.csv` tracking the 8 leading hypotheses against current claims, attributes, source needs, and strengthening/weakening decision rules.
+- Created `docs/analysis/claim_driven_source_needs_2026-07-12.csv` mapping all 8 current claims to source priorities, suggested states/city types, attributes to watch, and what would change the claim.
+- Created `docs/analysis/next_prompt_national_source_scan_2026-07-12.md` for the next source-availability scan run: scan tier-1 states, prioritize matched triads, avoid FOIA/PRR, do not ingest unless bounded criteria are met, do not run codify, commit locally only.
+- Lightly updated `wage_mechanism_evidence_checklist.md`, `report_review_checklist_safety_non_safety_wage_mechanisms_2026-07-06.md`, and `all_groups_source_needs_2026-07-06.csv` to reflect the two-week claim-driven national expansion direction.
+
+**Decisions and why**
+- Prioritized source expansion over report writing because the claim register is still based on only MA/TX/OH, 37 codified sources, and thin comparator/factfinding evidence. Another report now would mostly restate the July report and claim consolidation.
+- Treated matched non-safety sources as the bottleneck. Safety-only material remains useful only when it serves a specific hypothesis, especially impasse/arbitration, factfinding, or peer-comparator evidence.
+- Chose conservative state scoring: unknown values remain unknown until source-availability scans verify public sources. Tier-1 states are planning priorities, not ingestion commitments.
+
+**Surprises/breakage**
+- None. The planning exercise confirmed the known gaps: current corpus covers only MA/TX/OH; `peer_comparator_wage_comparability` has only 1 verified-present row; there are no current factfinding rows; Texas non-safety outside Houston remains a major bottleneck.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 53 | discourse: 0 | coverage: 53 | city_attributes: 3
+
+python ingest/audit_coverage.py
+healthy matched pairs: 23
+  exact-cycle: 9
+  overlap-cycle: 14
+exploratory adjacent matches: 2
+safety units unmatched: 5 (Somerville x2, Newton, San Antonio police, San Antonio fire)
+
+custom planning checks
+state rubric rows: 20 | tier counts: tier_1=4, tier_2=10, tier_3=3, hold=3
+national source targets: 29 | tier-1 targets: Pennsylvania=5, New Jersey=5, Illinois=5, New York=5
+hypotheses tracked: 8 | claim-driven source-needs rows: 8
+all controlled values valid; claim IDs and hypothesis IDs resolve
+```
+Custom checks confirmed that the state rubric, national source targets, hypothesis tracker, and claim-driven source-needs CSVs parse cleanly; controlled values are valid; claim IDs referenced exist in `claim_register_2026-07-12.csv`; `data/contracts.csv`, `data/city_coverage.csv`, `corpus/`, `docs/schema.md`, and `docs/final_reports/` are unchanged.
+
+**Confirmed:** no GABRIEL/codify, Harvard Proxy, model, or API calls; no new source collection or downloads; no FOIA/PRR; no edits to `data/contracts.csv`, `data/city_coverage.csv`, `corpus/`, `docs/schema.md`, or final report DOCX/PDF artifacts; no git push; no remote inspection/configuration. Work is committed locally only by design.
+
+**Next steps**
+1. Run the next source-availability scan prompt in `docs/analysis/next_prompt_national_source_scan_2026-07-12.md`, starting with Pennsylvania, New Jersey, Illinois, and New York.
+2. Record candidate URLs and source provenance, but do not ingest until matched-triad/non-safety criteria are met or selection is reviewed.
+3. After reviewed ingestion waves, run codify in controlled batches and refresh the claim register/claim-evidence matrix. Defer full report drafting until the national evidence layer is materially larger.
+
 ## 2026-07-12 10:10 EDT (Claim-centered evidence register consolidated) - Created a real claim register, claim-evidence matrix, readiness table, and claim-consolidation memo from the current 781-row GABRIEL/codify evidence layer; no GABRIEL/codify/model/API calls, no new source collection, no data/corpus/final-report edits; local commit only by design
 
 **Did**

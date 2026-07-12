@@ -1,0 +1,21 @@
+state,priority_tier,institutional_contrast_value,expected_source_availability,matched_triad_potential,public_safety_impasse_arbitration_relevance,non_safety_bargaining_availability,expected_text_quality,claim_testing_value,expected_search_burden,recommended_role,notes
+Pennsylvania,tier_1,high,unknown,high,high,unknown,unknown,high,medium,institutional-contrast and matched-triad scan,Prior planning identified Pennsylvania as a leading institutional-contrast candidate; verify public CBA and non-safety availability before ingestion.
+New Jersey,tier_1,high,unknown,high,high,unknown,unknown,high,medium,institutional-contrast and comparator-source scan,Prior planning identified New Jersey as a leading candidate; scan PERC/municipal sources and matched non-safety availability.
+Illinois,tier_1,medium,unknown,high,medium,unknown,unknown,high,medium,large-city matched-triad scan,Potentially useful for large-city and mid-city triads; public availability must be verified.
+New York,tier_1,high,unknown,medium,high,unknown,unknown,high,high,impasse/arbitration contrast plus city triads,"High institutional value, but expected burden may be high; avoid letting NYC complexity consume the first scan."
+California,tier_2,medium,unknown,medium,medium,unknown,unknown,medium,high,large-state second-wave scan,Potentially high source volume but high search burden; promote only if clean municipal portals emerge.
+Florida,hold,medium,unknown,unknown,unknown,unknown,unknown,medium,medium,contrast-state screen only,Use to test weak/nonuniform bargaining pathways if public matched sources are findable; do not prioritize over tier_1.
+North Carolina,hold,high,unknown,low,low,low,unknown,medium,medium,negative/contrast-state screen only,"Potentially useful as a weak-bargaining contrast, but matched CBA availability may be low; avoid as first ingestion target."
+Tennessee,hold,medium,unknown,low,unknown,low,unknown,low,medium,negative/contrast-state screen only,Use only if public contracts are unexpectedly available and claim-testing value is clear.
+Washington,tier_2,medium,unknown,medium,medium,unknown,unknown,medium,medium,second-wave matched-triad scan,Potentially useful Pacific Northwest contrast; source availability unverified.
+Oregon,tier_2,medium,unknown,medium,medium,unknown,unknown,medium,medium,second-wave matched-triad scan,Potentially useful if city labor contracts are centrally posted; verify before collection.
+Michigan,tier_2,medium,unknown,medium,medium,unknown,unknown,medium,medium,Midwest comparison scan,Potentially useful for institutional contrast and matched cities; verify public availability.
+Minnesota,tier_2,medium,unknown,medium,medium,unknown,unknown,medium,medium,upper-Midwest comparison scan,Potentially useful for public-sector bargaining comparisons; verify city/non-safety sources.
+Wisconsin,tier_2,high,unknown,low,medium,low,unknown,medium,medium,institutional-change contrast scan,"May test bargaining-law variation, but non-safety availability and comparability may be limited."
+Connecticut,tier_2,high,unknown,medium,high,unknown,unknown,high,medium,New England institutional-contrast scan,Potentially useful near-MA contrast; verify municipal CBA and arbitration-source availability.
+Rhode Island,tier_2,medium,unknown,medium,medium,unknown,unknown,medium,medium,New England dense-local scan,May support small-state dense comparisons if municipal sources are public.
+Maryland,tier_2,medium,unknown,medium,medium,unknown,unknown,medium,medium,Mid-Atlantic second-wave scan,Potentially useful if county/municipal labor agreements are posted.
+Colorado,tier_2,medium,unknown,medium,medium,unknown,unknown,medium,medium,Western institutional contrast scan,Promote only if matched city contracts are public and non-safety bottleneck is solvable.
+Arizona,tier_3,medium,unknown,unknown,unknown,unknown,unknown,medium,medium,selective large-city scan,Potentially useful for meet-and-confer or local bargaining variation; source availability unverified.
+Nevada,tier_3,medium,unknown,unknown,medium,unknown,unknown,medium,medium,selective city scan,May offer useful safety arbitration/impasse contrast; verify source access first.
+Missouri,tier_3,medium,unknown,unknown,unknown,unknown,unknown,medium,medium,selective Midwest scan,Potentially useful but lower first-wave priority until public matched sources are verified.

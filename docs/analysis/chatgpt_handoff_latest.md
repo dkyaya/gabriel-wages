@@ -2,7 +2,59 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-12T10:10:00-04:00`
+Last updated: `2026-07-12T10:36:00-04:00`
+
+---
+
+## 2026-07-12T10:36:00-04:00 - National claim-driven corpus expansion plan
+
+**Commit target:** `Plan national claim-driven corpus expansion`
+
+### Current State After This Entry
+
+- Created a two-week national source-expansion plan. This is not a report run; the next phase should expand source coverage, test claims, and track hypotheses before any full claim-centered report is drafted.
+- New planning artifacts:
+  - `docs/analysis/national_corpus_expansion_preflight_2026-07-12.md`
+  - `docs/analysis/national_corpus_current_coverage_gap_audit_2026-07-12.md`
+  - `docs/analysis/national_state_priority_rubric_2026-07-12.csv` — 20 candidate states
+  - `docs/analysis/two_week_claim_driven_expansion_plan_2026-07-12.md`
+  - `docs/analysis/national_source_targets_2026-07-12.csv` — 29 initial source targets
+  - `docs/analysis/hypothesis_tracker_2026-07-12.csv` — 8 leading hypotheses
+  - `docs/analysis/claim_driven_source_needs_2026-07-12.csv` — all 8 current claims mapped to source needs
+  - `docs/analysis/next_prompt_national_source_scan_2026-07-12.md`
+- Light guidance updates were made to `wage_mechanism_evidence_checklist.md`, `report_review_checklist_safety_non_safety_wage_mechanisms_2026-07-06.md`, and `all_groups_source_needs_2026-07-06.csv`: next two weeks prioritize claim-driven national corpus expansion, matched non-safety bottlenecks, and source scans rather than another full report.
+- Tier-1 source-scan states: Pennsylvania, New Jersey, Illinois, New York. Each has 5 initial target cities in `national_source_targets_2026-07-12.csv`.
+- Tier-2 states: California, Washington, Oregon, Michigan, Minnesota, Wisconsin, Connecticut, Rhode Island, Maryland, Colorado. Tier-3/hold states are retained for later contrast or selective scans.
+- This run did not call GABRIEL/codify, Harvard Proxy, models, or APIs; did not search/download/collect sources; did not edit `data/contracts.csv`, `data/city_coverage.csv`, `corpus/`, `docs/schema.md`, or final DOCX/PDF artifacts; did not inspect/configure remotes; did not push.
+
+### Current Evidence Baseline
+
+- `data/contracts.csv`: 53 rows.
+- `data/city_coverage.csv`: 53 rows.
+- `docs/analysis/gabriel_codify_evidence_layer.csv`: 781 rows; 293 present; 488 not_found; 284 verified-present rows.
+- Current state coverage remains MA/TX/OH only.
+- Known expansion bottlenecks: peer/comparator evidence, factfinding sources, Texas non-safety outside Houston, and national matched non-safety units.
+
+### Validation/audit results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 53 | discourse: 0 | coverage: 53 | city_attributes: 3
+
+python ingest/audit_coverage.py
+healthy matched pairs: 23
+  exact-cycle: 9
+  overlap-cycle: 14
+exploratory adjacent matches: 2
+safety units unmatched: 5
+```
+
+Custom checks passed: state rubric/source targets/hypothesis tracker/claim-driven source-needs CSVs parse cleanly; controlled values are valid; claim IDs and hypothesis IDs resolve; prohibited data/corpus/schema/final-report paths unchanged.
+
+### Recommended next run
+
+Use `docs/analysis/next_prompt_national_source_scan_2026-07-12.md` to perform source-availability scans for tier-1 states. Do not ingest or codify in that scan unless bounded criteria are explicitly met. Prioritize matched triads and non-safety source availability; record source provenance and candidate URLs; commit locally only.
 
 ---
 

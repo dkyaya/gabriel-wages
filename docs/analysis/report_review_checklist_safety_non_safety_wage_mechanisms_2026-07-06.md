@@ -190,6 +190,12 @@
 - Future reports should be claim-centered by default: each claim needs evidence, reasoning, counterevidence/limits, what would change our mind, and source needs. Mechanism-inventory reports should no longer be the default structure.
 - Next source expansion should test or strengthen claims, not merely add sources: prioritize Texas non-safety gaps, additional matched triads, impasse/arbitration contrast states, repeat city cycles, and comparator-specific awards/factfinding sources.
 
+## 7V. National claim-driven expansion plan created (added 2026-07-12)
+
+- The next two weeks should prioritize national source expansion and claim testing, not another report draft. Use `two_week_claim_driven_expansion_plan_2026-07-12.md`, `national_state_priority_rubric_2026-07-12.csv`, `national_source_targets_2026-07-12.csv`, `hypothesis_tracker_2026-07-12.csv`, and `claim_driven_source_needs_2026-07-12.csv`.
+- Matched non-safety comparisons are the bottleneck and should be searched early. Safety-only sources should be collected only when they serve a specific hypothesis, such as impasse/arbitration, factfinding, or peer-comparator evidence.
+- Reports should remain claim/evidence/reasoning products later; for now, source expansion should serve explicit hypotheses and claims.
+
 ## 7. Artifact-generation readiness checklist for later PDF/DOCX creation
 
 - [ ] PI has reviewed and approved the group-retention frame and central-claim framing (Section 1 above).
