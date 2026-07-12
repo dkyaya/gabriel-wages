@@ -2,7 +2,56 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-10T23:10:00-04:00`
+Last updated: `2026-07-12T09:22:00-04:00`
+
+---
+
+## 2026-07-12T09:22:00-04:00 - Git remote diagnosis (remote NOT configured) + claim-centered project-direction reset
+
+**Commit target:** `Plan claim-centered corpus expansion`
+
+### Current State After This Entry
+
+- **Remote: still not configured, by design.** This repo has never had an `origin` remote. `git remote -v`, `remote.origin.url`, and `git config --list --local` all confirm zero `remote.*` keys; `git branch -vv` shows no upstream. `gh` is not installed. No project-specific remote URL exists anywhere in local config or repo docs (the only `github.com` references found in `PROGRESS.md`/`docs/analysis/*.md` are to the unrelated upstream GABRIEL package repo). None of the three safe-configuration cases in this task's instructions applied, so **no remote was added and no push was attempted.** Full diagnosis + exact commands: `docs/analysis/git_remote_diagnosis_2026-07-10.md`.
+- **Project direction**: a new memo, `docs/analysis/claim_centered_corpus_expansion_strategy_2026-07-10.md`, argues the project is ready to move from mechanism-inventory reporting (what the 2026-07-10 final report did) to claim-centered reporting (claim / evidence / reasoning / counterevidence / what-would-change-our-mind / source-needs), and lays out a 5-stage corpus-expansion design plus provisional next-state candidates (Pennsylvania and New Jersey rank highest for institutional contrast).
+- **Claim register template** created at `docs/analysis/claim_register_template_2026-07-10.csv` with 4 conservative draft/provisional example rows, built from real obs_ids and evidence_ids already in the corpus (not invented).
+- This was a diagnosis/planning session only: no GABRIEL/codify, Harvard Proxy, model, API, or web-search calls; no new source collection; `data/contracts.csv`, `data/city_coverage.csv`, `corpus/`, `docs/schema.md`, and all `docs/final_reports/` artifacts remain unchanged.
+
+### New Artifacts
+
+- Remote diagnosis: `docs/analysis/git_remote_diagnosis_2026-07-10.md`
+- Project-direction memo: `docs/analysis/claim_centered_corpus_expansion_strategy_2026-07-10.md`
+- Claim register template: `docs/analysis/claim_register_template_2026-07-10.csv`
+
+### Remote — exact status and what the user needs to do
+
+No `<REMOTE_URL>` was fabricated or guessed, per instructions. To fix the push failure, the user needs to run, with their own actual repo URL:
+
+```
+git remote add origin <REMOTE_URL>
+git push -u origin main
+```
+
+If a remote repo does not yet exist, the user should create one first (GitHub/GitLab web UI, or `gh repo create` after installing/authenticating `gh`), then run the two commands above. See `docs/analysis/git_remote_diagnosis_2026-07-10.md` for full detail.
+
+### Validation/audit results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 53 | discourse: 0 | coverage: 53 | city_attributes: 3
+
+python ingest/audit_coverage.py
+healthy matched pairs: 23 (exact-cycle: 9, overlap-cycle: 14) -- unchanged
+safety units unmatched: 5 -- unchanged (Somerville x2, Newton, San Antonio police, San Antonio fire)
+```
+
+`git status --porcelain` shows only the three new `docs/analysis/` files (plus this update to `PROGRESS.md`/this file) as changed; `git diff --stat -- data/contracts.csv data/city_coverage.csv docs/schema.md` is empty; no changes under `corpus/` or `docs/final_reports/`.
+
+### Recommended next run
+
+1. **User action required first**: configure the remote per the diagnosis memo, then push.
+2. **Content**: run the claim-consolidation prompt from Section 8 of `claim_centered_corpus_expansion_strategy_2026-07-10.md` — turn the 781-row evidence layer into 5-8 real claim-register rows before any new-state source-availability scan.
 
 ---
 

@@ -6,6 +6,40 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-12 09:22 EDT (Git remote diagnosis + claim-centered project-direction reset) - Diagnosed the missing-remote push failure (no `origin` ever configured, `gh` not installed, no safe URL discoverable — remote NOT configured, no push attempted), wrote a claim-centered corpus-expansion strategy memo to shift future reporting away from mechanism inventories, and created a claim register template; no data/corpus/codify/final-report edits, no GABRIEL/model/API calls, no new source collection
+
+**Did**
+- Confirmed repo state before touching anything: working directory `/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages`, `main` at `50c458b` ("Export final mechanism evidence report"), working tree clean. Worked from an isolated worktree (`worktree-remote-diagnosis`) per standing practice; git config/remotes/history are shared across worktrees, so all findings apply to `main`.
+- **Remote diagnosis**: `git remote -v`, `git config --get remote.origin.url`, and `git config --list --local` all confirm `origin` has never been configured in this repo — this is an absence, not a misconfiguration. `git branch -vv` shows no upstream tracking. `gh` is not installed (`which gh` → not found), so `gh auth status` could not be checked. Searched all repo docs for any existing project-specific remote URL; the only `github.com` hits found were unrelated references to the upstream GABRIEL package's own repo, not this project's. **No safe remote URL exists anywhere in local config or repo files** — per this task's explicit constraint, none of the three safe-configuration cases (existing URL missing only upstream; URL documented in repo; `gh` installed+authenticated+confirmable) applied, so **no remote was added and no push was attempted.** Full diagnosis and exact user-facing setup commands written to `docs/analysis/git_remote_diagnosis_2026-07-10.md`.
+- **Project-direction memo**: wrote `docs/analysis/claim_centered_corpus_expansion_strategy_2026-07-10.md`, arguing the project has enough foundational maturity (schema discipline, source hygiene, recognition-clause-first classification, a working grounded/contamination-checked GABRIEL codify pipeline, a local evidence viewer, and a first mechanism-evidence report) to shift future reports from mechanism inventories scattered across cities/states toward claims backed by explicit evidence, reasoning, counterevidence, and stated falsification conditions. Covers a 5-stage expansion design (consolidate current evidence into claims → source-availability scan → add 3-5 new states → codify → claim-centered report), provisional next-state candidates (Pennsylvania and New Jersey as strongest institutional-contrast candidates; Illinois, New York, California, and FL/NC/TN as secondary candidates pending source scans), and an evidence-management proposal (claim register, source inventory by claim, claim-to-evidence matrix, minimum evidence threshold, explicit counterevidence tracking).
+- **Claim register template**: created `docs/analysis/claim_register_template_2026-07-10.csv` (16 columns, controlled `claim_status`/`evidence_strength`/`report_ready` vocabularies) with 4 illustrative draft/provisional rows built from real obs_ids and evidence_ids already in the corpus (verified via `data/contracts.csv` and `docs/analysis/gabriel_codify_evidence_layer.csv`, not invented) — e.g., an Ohio interest-arbitration pattern across all four coded matched triads, and a Texas claim that explicitly flags San Antonio's missing non-safety comparison unit as a data gap rather than asserting the comparison is confirmed weak. All four rows marked `draft`/`needs_more_evidence`/`supported_provisional` and `report_ready=no` or `maybe`, per the conservative-only instruction.
+- Ran `python scripts/validate.py` (PASS: 53 contracts / 0 discourse / 53 coverage / 3 city_attributes) and `python ingest/audit_coverage.py` (23 healthy matched pairs, 5 safety units still unmatched — Somerville x2, Newton, San Antonio police, San Antonio fire — unchanged from prior sessions) to confirm this run made no data/corpus changes.
+
+**Decisions and why**
+- Did not configure any remote and did not push, even though the task allowed it conditionally — none of the three safe cases were met (no existing URL, no documented URL, no `gh`), and guessing or creating a repo under an uncertain owner was explicitly disallowed. Wrote exact user-facing commands instead.
+- Populated the claim register's example rows from real corpus IDs (not placeholders) so the template is immediately usable as a starting point, while keeping every row's status conservative (draft/needs_more_evidence, or supported_provisional only for a structural coverage claim directly countable from `data/contracts.csv` without further mechanism analysis).
+
+**Surprises/breakage**
+- None. The missing remote was a clean absence (never configured), not a broken configuration — confirmed via `git config --list --local` showing zero `remote.*` keys.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 53 | discourse: 0 | coverage: 53 | city_attributes: 3
+
+python ingest/audit_coverage.py
+healthy matched pairs: 23 (exact-cycle: 9, overlap-cycle: 14) -- unchanged
+safety units unmatched: 5 -- unchanged
+```
+Confirmed via `git status --porcelain`: only the three new `docs/analysis/` files are untracked; `git diff --stat -- data/contracts.csv data/city_coverage.csv docs/schema.md` empty; `corpus/` and `docs/final_reports/` show no changes.
+
+**Confirmed:** no GABRIEL/codify, Harvard Proxy, model, or API calls this session; no new source collection; no edits to `data/contracts.csv`, `data/city_coverage.csv`, `corpus/`, `docs/schema.md`, or any `docs/final_reports/` artifact; no git history rewrite; no force-push; no push to an unverified or guessed remote.
+
+**Next steps**
+1. **User**: configure the actual remote per `docs/analysis/git_remote_diagnosis_2026-07-10.md` (decide host/account, `git remote add origin <REMOTE_URL>`, `git push -u origin main`), or install/authenticate `gh` and specify the intended account/repo so a future run can do this safely.
+2. **Content**: run the claim-consolidation prompt recommended in `docs/analysis/claim_centered_corpus_expansion_strategy_2026-07-10.md` — turn the current 781-row evidence layer into 5-8 real, evidence-mapped claim-register rows (replacing this run's illustrative drafts) — before starting any new-state source-availability scan.
+
 ## 2026-07-10 23:10 EDT (Final integrated mechanism evidence report exported) - Created one integrated final Markdown report with appendix at the end, exported DOCX/PDF, wrote export preflight/audit, updated guidance/handoff; no GABRIEL/codify/model/API calls, no new source collection, no data/corpus edits
 
 **Did**
