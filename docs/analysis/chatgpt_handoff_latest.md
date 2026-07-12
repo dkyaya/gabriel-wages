@@ -2,7 +2,55 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-12T09:22:00-04:00`
+Last updated: `2026-07-12T10:10:00-04:00`
+
+---
+
+## 2026-07-12T10:10:00-04:00 - Claim-centered evidence register consolidated
+
+**Commit target:** `Consolidate claim-centered evidence register`
+
+### Current State After This Entry
+
+- Created a real claim-centered evidence register from the current durable GABRIEL/codify evidence layer, report assets, source inventory, audits, and report scaffold. The prior `claim_register_template_2026-07-10.csv` remains a template; the analytic register is the new dated file.
+- New claim artifacts:
+  - `docs/analysis/claim_consolidation_preflight_2026-07-12.md`
+  - `docs/analysis/claim_register_2026-07-12.csv` — 8 bounded candidate claims
+  - `docs/analysis/claim_evidence_matrix_2026-07-12.csv` — 59 rows
+  - `docs/analysis/claim_consolidation_summary_2026-07-12.md`
+  - `docs/analysis/claim_readiness_table_2026-07-12.csv` — 8 rows
+  - `docs/analysis/claim_viewer_integration_notes_2026-07-12.md`
+- Light guidance updates were made to `wage_mechanism_evidence_checklist.md`, `report_review_checklist_safety_non_safety_wage_mechanisms_2026-07-06.md`, and `all_groups_source_needs_2026-07-06.csv`: future reports should be claim-centered by default, and future source expansion should be claim-driven.
+- Strongest current claims: arbitration distinction (`CLM-2026-07-12-06`), Ohio matched triads (`CLM-2026-07-12-01`), and Texas institutional unevenness (`CLM-2026-07-12-02`).
+- Claims needing more evidence: peer/comparator wage evidence (`CLM-2026-07-12-07`) and Texas non-safety outside Houston (`CLM-2026-07-12-08`).
+- This run did not call GABRIEL/codify, Harvard Proxy, models, or APIs; did not collect/download sources; did not edit `data/contracts.csv`, `data/city_coverage.csv`, `corpus/`, `docs/schema.md`, or final DOCX/PDF artifacts; did not inspect/configure remotes; did not push.
+
+### Evidence Base
+
+- `docs/analysis/gabriel_codify_evidence_layer.csv`: 781 rows; 293 present; 488 not_found; 284 verified-present primary-support-eligible rows; 9 flagged/unverified present rows excluded from primary support.
+- `docs/analysis/report_assets/source_inventory_for_report_2026-07-10.csv`: 37 codified contracts across MA/TX/OH.
+- Baseline data unchanged: 53 contracts, 53 coverage rows.
+
+### Validation/audit results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 53 | discourse: 0 | coverage: 53 | city_attributes: 3
+
+python ingest/audit_coverage.py
+healthy matched pairs: 23
+  exact-cycle: 9
+  overlap-cycle: 14
+exploratory adjacent matches: 2
+safety units unmatched: 5
+```
+
+Custom checks passed: claim CSVs parse cleanly; controlled values valid; matrix evidence IDs exist in the evidence layer when nonblank; matrix/readiness claim IDs exist in the register; primary-support rows are verified, grounded, present evidence; prohibited data/corpus/schema/final-report paths unchanged.
+
+### Recommended next run
+
+Review and revise the claim register for PI-facing wording. Then use `claim_consolidation_summary_2026-07-12.md` as the structure for the next claim-centered report revision. If source expansion is authorized later, prioritize claim tests: Texas non-safety gaps, additional matched triads, impasse/arbitration contrast states, repeat cycles, and comparator-specific awards/factfinding.
 
 ---
 

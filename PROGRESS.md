@@ -6,6 +6,52 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-12 10:10 EDT (Claim-centered evidence register consolidated) - Created a real claim register, claim-evidence matrix, readiness table, and claim-consolidation memo from the current 781-row GABRIEL/codify evidence layer; no GABRIEL/codify/model/API calls, no new source collection, no data/corpus/final-report edits; local commit only by design
+
+**Did**
+- Confirmed repo state before work: working directory `/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages`; latest commit `1cf2df6 Plan claim-centered corpus expansion`; working tree clean except untracked `.claude/` and `tmp/`; evidence layer 781 rows; `data/contracts.csv` and `data/city_coverage.csv` each 53 rows.
+- Wrote `docs/analysis/claim_consolidation_preflight_2026-07-12.md`, documenting required inputs, evidence-layer counts, report asset availability, claim standards, and explicit run constraints.
+- Created the real dated claim register, `docs/analysis/claim_register_2026-07-12.csv`, replacing the prior illustrative template for analytic use while preserving the template file. It contains 8 bounded candidate claims with scope, status, support, reasoning, counterevidence/limits, what-would-change-our-mind, source needs, and report-readiness fields.
+- Created `docs/analysis/claim_evidence_matrix_2026-07-12.csv` (59 rows) mapping claims to verified-present evidence IDs, counterevidence, limitations, and explicit gap indicators. Primary support uses only verified-present, grounded evidence-layer rows.
+- Created `docs/analysis/claim_readiness_table_2026-07-12.csv` (8 rows), `docs/analysis/claim_consolidation_summary_2026-07-12.md`, and `docs/analysis/claim_viewer_integration_notes_2026-07-12.md`.
+- Lightly updated `wage_mechanism_evidence_checklist.md`, `report_review_checklist_safety_non_safety_wage_mechanisms_2026-07-06.md`, and `all_groups_source_needs_2026-07-06.csv` to make future reports claim-centered by default and source expansion claim-driven.
+
+**Decisions and why**
+- Strongest current claims: the arbitration distinction (`CLM-2026-07-12-06`), Ohio matched-triad pattern (`CLM-2026-07-12-01`), and Texas institutional unevenness/design caveat (`CLM-2026-07-12-02`).
+- Weakest/gap claims: peer/comparator wage evidence (`CLM-2026-07-12-07`) and Texas non-safety outside Houston (`CLM-2026-07-12-08`). These are marked not report-ready because comparator evidence has a documented false negative and Texas lacks public in-window general non-safety comparators outside Houston.
+- Treated `not_found` rows as limitations/gap indicators, not proof of absence. Excluded all flagged/unverified present rows from primary support.
+
+**Surprises/breakage**
+- None. The main caveats were already known from the report scaffold and audits: Texas non-safety limits, Austin safety-adjacent status, San Antonio unmatched safety rows, binary codify limitations, and the San Antonio comparator false negative.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 53 | discourse: 0 | coverage: 53 | city_attributes: 3
+
+python ingest/audit_coverage.py
+healthy matched pairs: 23
+  exact-cycle: 9
+  overlap-cycle: 14
+exploratory adjacent matches: 2
+safety units unmatched: 5 (Somerville x2, Newton, San Antonio police, San Antonio fire)
+
+custom claim checks
+claims: 8 | matrix rows: 59 | readiness rows: 8
+primary-support rows: 38 | blank gap rows: 7
+register status counts: supported_provisional=6, needs_more_evidence=2
+report-ready counts: yes=3, maybe=3, no=2
+```
+Custom checks passed: claim/register/readiness CSVs parse cleanly; controlled values valid; nonblank matrix evidence IDs exist in the evidence layer; matrix/readiness claim IDs exist in the register; no unsupported/unverified evidence used as primary support; `data/contracts.csv`, `data/city_coverage.csv`, `corpus/`, `docs/schema.md`, and `docs/final_reports/` unchanged.
+
+**Confirmed:** no GABRIEL/codify, Harvard Proxy, model, or API calls; no new source collection; no FOIA/PRR; no edits to `data/contracts.csv`, `data/city_coverage.csv`, `corpus/`, `docs/schema.md`, or final report DOCX/PDF artifacts; no git push; no remote inspection/configuration. Work is committed locally only by design.
+
+**Next steps**
+1. Review the 8 claim-register rows for PI-facing wording, especially the `report_ready=yes/maybe/no` distinctions.
+2. Use the claim-centered structure for the next report revision: claim, evidence, reasoning, counterevidence/limits, what would change our mind, source needs.
+3. If source expansion is authorized later, target claims rather than generic mechanism inventory: Texas non-safety gaps, additional public-CBA matched triads, impasse/arbitration contrast states, repeat cycles, and comparator-specific awards/factfinding.
+
 ## 2026-07-12 09:22 EDT (Git remote diagnosis + claim-centered project-direction reset) - Diagnosed the missing-remote push failure (no `origin` ever configured, `gh` not installed, no safe URL discoverable — remote NOT configured, no push attempted), wrote a claim-centered corpus-expansion strategy memo to shift future reporting away from mechanism inventories, and created a claim register template; no data/corpus/codify/final-report edits, no GABRIEL/model/API calls, no new source collection
 
 **Did**

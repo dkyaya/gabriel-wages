@@ -184,6 +184,12 @@
 - Final artifacts were exported to `docs/final_reports/deeper_look_safety_non_safety_wage_mechanisms_2026-07-10.docx` and `docs/final_reports/deeper_look_safety_non_safety_wage_mechanisms_2026-07-10.pdf`; see `final_report_export_audit_2026-07-10.md`.
 - **Next step: human review and any requested revision pass.** Preserve the evidence-pattern framing; do not convert the report into causal proof or run new codify/model/source-collection work during formatting revisions.
 
+## 7U. Claim-centered consolidation completed (added 2026-07-12)
+
+- The illustrative claim-register template has been replaced by a real dated claim register (`claim_register_2026-07-12.csv`), a claim-evidence matrix (`claim_evidence_matrix_2026-07-12.csv`), and a readiness table (`claim_readiness_table_2026-07-12.csv`), summarized in `claim_consolidation_summary_2026-07-12.md`.
+- Future reports should be claim-centered by default: each claim needs evidence, reasoning, counterevidence/limits, what would change our mind, and source needs. Mechanism-inventory reports should no longer be the default structure.
+- Next source expansion should test or strengthen claims, not merely add sources: prioritize Texas non-safety gaps, additional matched triads, impasse/arbitration contrast states, repeat city cycles, and comparator-specific awards/factfinding sources.
+
 ## 7. Artifact-generation readiness checklist for later PDF/DOCX creation
 
 - [ ] PI has reviewed and approved the group-retention frame and central-claim framing (Section 1 above).
