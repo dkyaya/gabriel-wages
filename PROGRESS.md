@@ -6,6 +6,53 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-12 10:51 EDT (PA/NJ bounded source-availability scan completed) - Scanned Pennsylvania and New Jersey (5 cities each) for public, non-FOIA municipal wage-setting sources per the two-week claim-driven expansion plan's Week-1 instruction; produced candidate-source lists and scan memos only, no downloads/ingestion/codify, no data/corpus edits; local commit only by design
+
+**Did**
+- Confirmed repo state before work: working directory `/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages`; latest starting commit `a1f2dc8 Plan national claim-driven corpus expansion`; working tree clean except untracked `.claude/` and `tmp/`; `data/contracts.csv` and `data/city_coverage.csv` each 53 rows.
+- Created `docs/analysis/pa_nj_source_scan_preflight_2026-07-12.md`, recording scope (PA/NJ only, this run), source criteria, and stop rules (60-row cap, no FOIA/OPRA/RTKL/PRR, no downloads).
+- Ran public web searches for police/fire/non-safety wage-setting sources across a task-specified 10-city list: Philadelphia, Pittsburgh, Allentown, Erie, Reading (PA); Newark, Jersey City, Paterson, Elizabeth, Trenton (NJ).
+- Created `docs/analysis/pa_nj_candidate_sources_2026-07-12.csv` — 40 candidate rows (21 PA, 19 NJ, well under the 60-row cap), built with `csv.writer` and parse-back validated (row-width, controlled-vocabulary, and required-field checks all passed) per `source_planning_csv_hygiene_standard_2026-07-08.md`. 8 rows marked `ingest_next`, 22 `needs_review`, 9 `reject` (including two documented false-positive/jurisdiction-mismatch exclusions: Erie County NY, and Passaic County vs. City of Paterson), 1 `hold`.
+- Created `docs/analysis/pennsylvania_source_scan_2026-07-12.md` and `docs/analysis/new_jersey_source_scan_2026-07-12.md`, each covering cities scanned, strongest matched cities, non-safety availability, arbitration/factfinding availability, provenance, ingestion burden, and a promote/hold recommendation.
+- Created `docs/analysis/pa_nj_source_scan_summary_2026-07-12.md`, comparing the two states and proposing a first (not-yet-executed) ingestion batch of 8 sources spanning a near-complete Philadelphia triad and a near-complete Newark triad.
+- Updated `docs/analysis/national_source_targets_2026-07-12.csv` for the 10 PA/NJ rows only (`target_status` and `notes` columns), via a Python script with parse-back validation; all other states' rows untouched.
+
+**Decisions and why**
+- Followed the task's fixed 10-city list (which substitutes Reading for Scranton and Elizabeth for Camden relative to the prior `national_source_targets_2026-07-12.csv` planning rows) rather than the original 5-per-state planning targets, since the task explicitly specified the cities to scan. Recorded this substitution explicitly in both the preflight memo and the national-targets update so Scranton/Camden are marked `not_scanned_this_pass` rather than silently dropped.
+- New Jersey was ranked ahead of Pennsylvania at the state level because PERC (NJ's state labor board) maintains a centralized, statutorily-mandated public index of nearly all municipal CBAs and a separate police/fire interest-arbitration-awards database — a structural advantage Pennsylvania does not have. At the city level, Philadelphia alone produced a stronger, more complete document set (including two city-hosted arbitration awards) than any single NJ city in this scan.
+- Marked context-only or union-existence-confirming pages (news items, PERC decisions/synopses, case law, budget-appendix references) as `causal_candidate=no/maybe` and `source_type_candidate=context_only`, never `causal_candidate=yes`, unless a document plausibly containing the actual agreement/award text was directly linked.
+- Recorded two Philadelphia AFSCME rows and one Newark IBT Local 97 row with `occupation_class_candidate=other` (provisional) per the recognition-clause-first classification standard, rather than inferring a specific non-safety class from the union name.
+
+**Surprises/breakage**
+- None to the corpus or pipeline. Notable scan surprises: (1) an early "Erie" search returned Erie County, **New York** labor-relations documents under a similarly generic domain pattern — a jurisdiction false positive, now explicitly documented as excluded; (2) Passaic County (NJ) posts its own CBAs publicly, which could be mistaken for a City of Paterson source — also documented as excluded; (3) non-safety sources were confirmed as the binding bottleneck at the city level exactly as the national plan predicted — 7 of 10 scanned cities have no confirmed non-safety document yet.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 53 | discourse: 0 | coverage: 53 | city_attributes: 3
+
+python ingest/audit_coverage.py
+healthy matched pairs: 23
+  exact-cycle: 9
+  overlap-cycle: 14
+exploratory adjacent matches: 2
+safety units unmatched: 5 (Somerville x2, Newton, San Antonio police, San Antonio fire) -- unchanged
+
+custom scan checks
+candidate CSV: 40 rows, parse-back OK, row-width OK, controlled-vocab OK, required-fields OK
+national source targets: 29 rows, parse-back OK; only the 10 PA/NJ rows' target_status/notes changed
+git diff --stat -- data/contracts.csv data/city_coverage.csv: empty
+git status --porcelain -- corpus/: empty
+```
+
+**Confirmed:** no GABRIEL/codify, Harvard Proxy, model, or API calls; no downloads of any source into `corpus/`; no new rows added to `data/contracts.csv` or `data/city_coverage.csv`; no FOIA/OPRA/RTKL/PRR routes used or recorded as viable; no git push; no remote inspection/configuration. Work is committed locally only by design.
+
+**Next steps**
+1. Run a short, targeted (still non-ingestion) follow-up: browse the NJ PERC public-sector-contracts index and interest-arbitration-awards index by employer name for Newark, Jersey City, Paterson, Elizabeth, and Trenton; confirm whether a signed (not proposed) Philadelphia AFSCME DC33/DC47 CBA is directly retrievable.
+2. If confirmed, run a reviewed ingestion pass on the 8-source batch in `pa_nj_source_scan_summary_2026-07-12.md` (Philadelphia triad + Newark triad), then `python ingest/audit_coverage.py` to check the new matched pairs.
+3. Defer Illinois/New York scanning until after this PA/NJ batch is ingested, per the summary memo's recommendation — both PA and NJ already clear the two-week plan's "clean matched triad" promotion bar pending the confirmations above.
+
 ## 2026-07-12 10:36 EDT (National claim-driven corpus expansion plan) - Created a two-week national source-expansion strategy organized around current claims and leading hypotheses; no GABRIEL/codify/model/API calls, no new source collection, no data/corpus/final-report edits; local commit only by design
 
 **Did**

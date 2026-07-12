@@ -2,7 +2,48 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-12T10:36:00-04:00`
+Last updated: `2026-07-12T10:51:00-04:00`
+
+---
+
+## 2026-07-12T10:51:00-04:00 - PA/NJ bounded source-availability scan completed
+
+**Commit target:** `Scan Pennsylvania and New Jersey source availability`
+
+### Current State After This Entry
+
+- Completed a bounded, non-ingestion source-availability scan of Pennsylvania and New Jersey, the two tier-1 states from `national_state_priority_rubric_2026-07-12.csv`, per Week-1 of `two_week_claim_driven_expansion_plan_2026-07-12.md`.
+- Scanned 10 cities via public web search only: Philadelphia, Pittsburgh, Allentown, Erie, Reading (PA); Newark, Jersey City, Paterson, Elizabeth, Trenton (NJ). No downloads, no ingestion, no GABRIEL/codify, no data/corpus edits.
+- New artifacts:
+  - `docs/analysis/pa_nj_source_scan_preflight_2026-07-12.md`
+  - `docs/analysis/pa_nj_candidate_sources_2026-07-12.csv` — 40 candidate rows (21 PA, 19 NJ), `csv.writer`-built and parse-back validated
+  - `docs/analysis/pennsylvania_source_scan_2026-07-12.md`
+  - `docs/analysis/new_jersey_source_scan_2026-07-12.md`
+  - `docs/analysis/pa_nj_source_scan_summary_2026-07-12.md`
+- Updated `docs/analysis/national_source_targets_2026-07-12.csv` — only the 10 PA/NJ rows' `target_status`/`notes` changed; Scranton and Camden (in the original planning targets but not in this task's fixed city list) marked `not_scanned_this_pass`, noting Reading and Elizabeth were scanned in their place.
+- **Strongest finding: New Jersey's PERC (Public Employment Relations Commission) maintains a centralized, statutorily-mandated public index of nearly all municipal CBAs plus a separate police/fire interest-arbitration-awards database** — a structural search-burden advantage Pennsylvania does not have. At the city level, **Philadelphia** produced the most complete single-city document set of the scan (FOP Lodge 5, IAFF Local 22, two city-hosted Act 111/interest-arbitration awards); **Newark** produced the only directly-retrievable non-safety document found anywhere in this scan (City of Newark and IBT Local 97 CBA, 2020).
+- Recommended (not yet executed) first ingestion batch: 8 sources completing a Philadelphia triad and a near-complete Newark triad — see `pa_nj_source_scan_summary_2026-07-12.md` for the exact list and which rows still need confirmation before moving from `needs_review` to `ingest_next`.
+- This run did not call GABRIEL/codify, Harvard Proxy, models, or APIs; did not download any source into `corpus/`; did not add rows to `data/contracts.csv` or `data/city_coverage.csv`; did not use FOIA/OPRA/RTKL/PRR; did not inspect/configure remotes; did not push.
+
+### Validation/audit results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 53 | discourse: 0 | coverage: 53 | city_attributes: 3
+
+python ingest/audit_coverage.py
+healthy matched pairs: 23 (unchanged)
+safety units unmatched: 5 (unchanged)
+```
+
+Custom checks passed: candidate-sources CSV (40 rows) and updated national-source-targets CSV (29 rows) both parse cleanly with `csv.writer`-based row-width/controlled-vocabulary/required-field checks; `data/contracts.csv`, `data/city_coverage.csv`, and `corpus/` unchanged (empty diffs).
+
+### Recommended next run
+
+1. Short, still non-ingestion, follow-up: browse the NJ PERC contracts and interest-arbitration-awards indexes by employer name for Newark, Jersey City, Paterson, Elizabeth, and Trenton; confirm whether a signed Philadelphia AFSCME DC33/DC47 CBA is directly retrievable.
+2. Then run a reviewed ingestion pass on the 8-source PA/NJ batch above, followed by `python ingest/audit_coverage.py`.
+3. Defer Illinois/New York scanning until after this batch is ingested — both PA and NJ already clear the two-week plan's matched-triad promotion bar pending the confirmations above.
 
 ---
 
