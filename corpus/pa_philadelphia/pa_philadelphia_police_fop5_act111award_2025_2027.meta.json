@@ -1,0 +1,16 @@
+{
+  "obs_id": "pa_philadelphia_police_2025",
+  "city_id": "pa_philadelphia",
+  "city_name": "Philadelphia",
+  "state": "PA",
+  "bargaining_unit_name": "Fraternal Order of Police, Lodge No. 5",
+  "occupation_class": "police",
+  "cycle_start": "2025-07-01",
+  "cycle_end": "2027-06-30",
+  "source_type": "arbitration_award",
+  "source_url_or_cite": "https://fop5.org/wp-content/uploads/2025/08/FOP-5-Act-111-Award-2025-2027.pdf",
+  "retrieval_date": "2026-07-13",
+  "retrieval_method": "public_download",
+  "binding_arbitration_statute": "Pennsylvania Act 111 (43 P.S. Section 217.1 et seq.)",
+  "total_comp_note": "AAA Case #01-25-0000-9827, Act 111 Interest Arbitration. Panel: Robert Gifford (neutral chair), Richard G. Poulson (FOP-appointed), Shannon Farmer (City-appointed). Term July 1 2025 - June 30 2027; 3.0% wage increases effective July 1 2025 and July 1 2026; retiree trust fund lump-sum payments; longevity schedule changes effective Jan 2026/2027."
+}

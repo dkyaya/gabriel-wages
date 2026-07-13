@@ -1,0 +1,16 @@
+{
+  "obs_id": "nj_newark_other_2020",
+  "city_id": "nj_newark",
+  "city_name": "Newark",
+  "state": "NJ",
+  "bargaining_unit_name": "Teamsters Local 97 (all regularly employed attorneys of the City of Newark, including assistant corporation counsels, public defenders, zoning attorneys, and municipal prosecutors; excludes managerial/confidential/supervisory staff, craft employees, police employees, and several named senior Law Department titles)",
+  "occupation_class": "other",
+  "cycle_start": "2020-01-01",
+  "cycle_end": "2023-12-31",
+  "source_type": "cba",
+  "source_url_or_cite": "https://www.perc.state.nj.us/publicsectorcontracts.nsf/641fe7725638ef00852578c6006e3dcf/76c9399ef546e28f85258ac50051a22a/$FILE/Newark%20and%20IBT%20Loc%2097%202020.pdf",
+  "retrieval_date": "2026-07-13",
+  "retrieval_method": "public_download",
+  "binding_arbitration_statute": "New Jersey Employer-Employee Relations Act (N.J.S.A. 34:13A-1 et seq., Ch. 13A)",
+  "total_comp_note": "Hosted on the NJ PERC public-sector-contracts database (state labor board domain), high provenance. Recognition-clause-first review corrected an initial misclassification: despite the 'Teamsters' union name, Article 1 (Recognition) reads verbatim that this unit covers 'all regularly employed attorneys employed by the City of Newark' -- a municipal legal/attorney unit, NOT sanitation or public works as the union name alone might suggest. No schema-supported class fits 'municipal attorneys'; occupation_class=other is the correct, conservative classification per the recognition-clause-first standard."
+}

@@ -2,7 +2,48 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-13T10:45:00-04:00`
+Last updated: `2026-07-13T11:27:00-04:00`
+
+---
+
+## 2026-07-13T11:27:00-04:00 - PA/NJ Ingestion Wave 1: first real ingestion since the source-scan waves
+
+**Commit target:** `PA/NJ Ingestion Wave 1: Philadelphia triad, Newark and Trenton non-safety`
+
+### Current State After This Entry
+
+- **This is the first session in the PA/NJ line of work authorized to actually download and ingest documents.** All prior PA/NJ sessions (pilot scan, follow-up scan, methodology/claim-map session) were explicitly scan-only.
+- **5 sources ingested** into `data/contracts.csv`/`data/city_coverage.csv` (53 → 58 rows) via `ingest/pipeline.py`, deterministic regex extraction only (no `--llm`, no GABRIEL/codify):
+  - Philadelphia PA: `pa_philadelphia_police_2025` (FOP Lodge 5 Act 111 award, 2025-2027), `pa_philadelphia_fire_2017` (IAFF Local 22 Act 111 award, 2017-2020), `pa_philadelphia_other_2021` (AFSCME DC33, 2021-2024, `occupation_class=other`). All three occupation classes now present for Philadelphia, but the cycles do **not** overlap — `ingest/audit_coverage.py` reports them as "exploratory adjacent," not a healthy matched pair/triad.
+  - Newark NJ: `nj_newark_other_2020` (Teamsters Local 97, 2020-2023, `occupation_class=other`). Recognition-clause review found this unit actually covers **municipal attorneys**, not sanitation/public works as the union name suggested.
+  - Trenton NJ: `nj_trenton_other_2019` (AFSCME Local 2281 "Supervisory Employees," 2019-2023, `occupation_class=other`).
+  - Newark and Trenton each now have exactly 1 non-safety unit and 0 safety units — police/fire CBAs for both cities remained unconfirmed after a dedicated PERC-index confirmation attempt this session (see below).
+- **Confirmation-pass failures (documented, not treated as errors):** Newark police, Newark fire, Trenton police, and Trenton fire current-cycle CBA PDFs were **not found** despite direct `site:perc.state.nj.us` searches and an attempted PERC frameset browse. Only PERC decisions/synopses (confirming the bargaining units are active) surfaced. Do not re-attempt via generic web search next time — the PERC public-sector-contracts index needs to be browsed directly by employer name, which this session's tooling could not do (it renders via a Lotus Notes/Domino frameset).
+- **Consequential correction:** the Reading, PA "Public Library CBA" — marked `ingest_next`/`confirmed` in *both* prior PA/NJ scan sessions — turned out on actual download/read to be a construction/electrical-contractor bid contract, not a labor agreement. Both prior sessions inferred the document's nature from its URL alone. Reading, PA yields zero ingestible sources this wave.
+- **Two deterministic-extraction false positives found and documented** (not silently corrected, per the project's audit-first convention) in `wage_mechanism_evidence_checklist.md` §15 items 8-9: `pa_philadelphia_police_2025`'s `comparability_clause_flag` (sick-leave admin comparison, not wage comparability) and `pa_philadelphia_other_2021`'s `interest_arbitration_flag` (the flagged text actually *excludes* DC33 from interest arbitration — substantively interesting once corrected).
+- `docs/analysis/state_city_claim_map_2026-07-12.csv` updated for exactly 3 rows (Philadelphia PA → `corpus_status=ingested`, still `codified=no`; Newark NJ and Trenton NJ → `corpus_status=ingested`, `matched_design_status=non_safety_only`). No claim register, evidence matrix, hypothesis tracker, or source-needs file touched — no codify occurred, so nothing in those files changed.
+- This run did not call GABRIEL/codify, Harvard Proxy, models, or APIs; did not use FOIA/OPRA/RTKL/PRR; did not touch `docs/schema.md` or any `docs/final_reports/` artifact; did not inspect/configure remotes; did not push.
+
+### Validation/audit results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 58 | discourse: 0 | coverage: 58 | city_attributes: 3
+
+python ingest/audit_coverage.py
+healthy matched pairs: 23 (unchanged)
+exploratory adjacent matches: 4 (was 2; +2 Philadelphia rows, non-overlapping cycles)
+safety units unmatched: 5 (unchanged)
+cities with no safety contract yet: 2 (new — Newark NJ, Trenton NJ)
+cities: 19 (was 16)
+```
+
+### Recommended next run
+
+1. Browse the NJ PERC public-sector-contracts index directly by employer name (`Newark`, `Trenton`) for current-cycle police/fire CBAs — this needs a tool that can render/navigate the Lotus Notes frameset, not generic web search, which has now failed twice for these four documents.
+2. Find a Philadelphia non-safety source with a cycle overlapping the 2025-2027 police or 2017-2020 fire window, to upgrade Philadelphia from "exploratory adjacent" to a genuinely matched design.
+3. Once ingestion for PA/NJ is judged sufficiently complete for a first wave, run Steps 9-13 of `claim_testing_source_wave_methodology_2026-07-12.md` (codify in a controlled, capped wave; audit grounding; rebuild the viewer; update the claim register/evidence matrix/hypothesis tracker/source-needs docs together) — not yet done, by design.
 
 ---
 

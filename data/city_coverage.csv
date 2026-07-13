@@ -52,3 +52,8 @@ oh_cincinnati,Cincinnati,OH,other,0,2025-2028,1,oh_cincinnati_other_2025,
 oh_toledo,Toledo,OH,police,1,2024-2026,1,oh_toledo_police_2024,
 oh_toledo,Toledo,OH,fire,1,2024-2026,1,oh_toledo_fire_2024,
 oh_toledo,Toledo,OH,other,0,2024-2027,1,oh_toledo_other_2024,
+pa_philadelphia,Philadelphia,PA,police,1,2025-2027,1,pa_philadelphia_police_2025,ingested via text_layer
+pa_philadelphia,Philadelphia,PA,fire,1,2017-2020,1,pa_philadelphia_fire_2017,ingested via ocr
+pa_philadelphia,Philadelphia,PA,other,0,2021-2024,1,pa_philadelphia_other_2021,ingested via ocr
+nj_newark,Newark,NJ,other,0,2020-2023,1,nj_newark_other_2020,ingested via text_layer
+nj_trenton,Trenton,NJ,other,0,2019-2023,1,nj_trenton_other_2019,ingested via ocr

@@ -1,0 +1,17 @@
+{
+  "obs_id": "nj_trenton_other_2019",
+  "city_id": "nj_trenton",
+  "city_name": "Trenton",
+  "state": "NJ",
+  "bargaining_unit_name": "Trenton, New Jersey Supervisory Employees, Local #2281, AFSCME AFL-CIO",
+  "occupation_class": "other",
+  "cycle_start": "2019-01-01",
+  "cycle_end": "2023-12-31",
+  "source_type": "cba",
+  "source_url_or_cite": "https://www.perc.state.nj.us/publicsectorcontracts.nsf/3efe43d612f7eb5285256f9400714ad6/cf68ddfd35d953fd85258ca5003ea581/$FILE/Trenton%20and%20AFSCME%202281%20WC%20BC%202019.pdf",
+  "retrieval_date": "2026-07-13",
+  "retrieval_method": "public_download",
+  "binding_arbitration_statute": "New Jersey Employer-Employee Relations Act (N.J.S.A. 34:13A-1 et seq., Ch. 13A)",
+  "text_quality": "ocr_messy",
+  "total_comp_note": "Hosted on the NJ PERC public-sector-contracts database (state labor board domain), high provenance. Document title identifies the unit as 'Trenton, New Jersey Supervisory Employees, Local #2281' -- a supervisory/mixed-title municipal unit (the candidate-CSV filename's 'WC BC' abbreviation is not borne out by the document's own self-description). Recognition-clause-first: occupation_class=other because supervisory coverage spans multiple departments/titles, not a single schema-supported class."
+}

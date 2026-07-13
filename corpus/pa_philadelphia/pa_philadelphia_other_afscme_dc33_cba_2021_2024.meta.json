@@ -1,0 +1,17 @@
+{
+  "obs_id": "pa_philadelphia_other_2021",
+  "city_id": "pa_philadelphia",
+  "city_name": "Philadelphia",
+  "state": "PA",
+  "bargaining_unit_name": "AFSCME District Council 33 (blue-collar municipal employees; Scope: employees represented by DC33 including former Traffic Court employees and School Crossing Guards, excluding interest-arbitration-eligible employees)",
+  "occupation_class": "other",
+  "cycle_start": "2021-07-01",
+  "cycle_end": "2024-06-30",
+  "source_type": "cba",
+  "source_url_or_cite": "https://afscme33.org/system/files/2025-11/2021-2024contract.pdf",
+  "retrieval_date": "2026-07-13",
+  "retrieval_method": "public_download",
+  "binding_arbitration_statute": "Pennsylvania Public Employe Relations Act (Act 195, 43 P.S. Section 1101.101 et seq.)",
+  "text_quality": "ocr_messy",
+  "total_comp_note": "Hosted on AFSCME DC33's own official Contracts page (afscme33.org/contracts), labeled '2021 3-Year Agreement'. Document's internal header reads 'TENTATIVE AGREEMENT' and its embedded file metadata reads 'Term Sheet', but the document bears dated signature blocks for both 'FOR THE CITY' and 'FOR THE UNION' (dated 9-3-2021) and is archived by the union as its governing agreement for the stated 2021-2024 term -- treated as the executed/ratified agreement for this cycle, not a live proposal. Recognition-clause-first: occupation_class=other because the scope clause explicitly covers multiple, mixed municipal titles/departments (blue-collar general municipal unit), not a single schema-supported class."
+}
