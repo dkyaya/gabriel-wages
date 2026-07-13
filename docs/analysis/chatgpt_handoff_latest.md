@@ -2,7 +2,39 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-13T12:00:00-04:00`
+Last updated: `2026-07-13T12:32:00-04:00`
+
+---
+
+## 2026-07-13T12:32:00-04:00 - Philadelphia becomes a real matched pair; NJ extraction fix plan produced (not implemented)
+
+**Commit target:** `Philadelphia non-safety re-scan (DC47 overlap) and NJ extraction-quality fix plan`
+
+### Current State After This Entry
+
+- **Philadelphia is no longer exploratory-adjacent for its police leg.** A detailed re-scan (primary sources only, not search-engine snippets) found AFSCME Local 2187's own "Contract Library" page hosting a bilaterally-signed DC47 Locals 2186/2187 term-sheet agreement, July 1 2025 - June 30 2028, externally corroborated as ratified by news coverage. Ingested as `pa_philadelphia_other_2025` (`occupation_class=other`). This overlaps the already-ingested police row (2025-2027) for its full term — `ingest/audit_coverage.py` now reports a genuine overlap-cycle matched pair. Philadelphia's fire leg (2017-2020) remains unresolved — a 2018 press release confirms a DC47 cycle existed then, but no document was located.
+- **Harrisburg/Pittsburgh fallback scan was not run**, per the task's own conditional ("if Philadelphia remains fruitless") — Philadelphia was not fruitless, so this was correctly skipped, not omitted.
+- **NJ extraction-quality issue diagnosed and a concrete fix plan produced — but not implemented.** Read `ingest/extract_spans.py` directly; all 6 prior flagged rows (`wage_mechanism_evidence_checklist.md` §15 items 8-13) plus a newly-found 7th (item 14, on the new Philadelphia row) trace to exactly 3 narrow code patterns: (1) a bare `binding arbitration` trigger with no subject-matter scoping, (2) no negation/exclusion awareness (explains both documented inversions), (3) a bare `comparable\w+` wildcard with no semantic scoping. Full diagnosis and a 5-part fix plan (A-E) in `docs/analysis/philadelphia_nonsafety_rescan_and_nj_extraction_fix_plan_2026-07-13.md`. **No code or data changes were made this session** — audit-first, per explicit task instruction.
+- This run did not call GABRIEL/codify, Harvard Proxy, models, or APIs; did not use FOIA/OPRA/RTKL/PRR; did not touch `docs/schema.md`, `ingest/extract_spans.py`, or any `docs/final_reports/` artifact; did not correct any flagged data row; did not inspect/configure remotes; did not push.
+
+### Validation/audit results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 63 | discourse: 0 | coverage: 63 | city_attributes: 3
+
+python ingest/audit_coverage.py
+healthy matched pairs: 27 (was 26; +1: Philadelphia police vs. DC47/Local 2187)
+exploratory adjacent matches: 3 (was 4)
+safety units unmatched: 6 (unchanged)
+```
+
+### Recommended next run
+
+1. Get explicit authorization for the Part B fix plan, implement it in `ingest/extract_spans.py`, and run the recommended regression check (all currently-flagged rows must clear; known-good positive rows like Toledo police, San Antonio police, Somerville's comparator row must not be suppressed) before correcting any of the 7 flagged production rows.
+2. Locate a Philadelphia non-safety source covering 2017-2020 to close the fire-window gap.
+3. Trenton NJ and Philadelphia PA (police leg) are both design-ready for a first controlled codify wave — recommend running the Part B extraction fix first, so codify scores corrected spans.
 
 ---
 

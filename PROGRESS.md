@@ -6,6 +6,52 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-13 12:32 EDT (Philadelphia non-safety re-scan converts it to a real matched pair; NJ extraction-quality audit produces a concrete, not-yet-implemented fix plan) - Detailed, document-level Philadelphia non-safety re-scan found and ingested a genuinely overlapping DC47/Local 2187 source (2025-2028), converting the police leg from exploratory-adjacent to a healthy overlap-cycle matched pair; Harrisburg/Pittsburgh fallback scan not triggered because Philadelphia was no longer fruitless; diagnosed the root cause of 7 flagged NJ/PA deterministic-extraction issues in `ingest/extract_spans.py` and produced a concrete fix plan (not implemented — audit-first per task instruction); no GABRIEL/codify/model/API calls; no push/remote work
+
+**Did**
+- Confirmed repo state before work: working directory `/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages`; latest starting commit `ec8cea6 PA/NJ Ingestion Wave 2: Newark and Trenton police/fire via direct PERC index browsing`; `data/contracts.csv`/`data/city_coverage.csv` each 62 rows. Used the latest relay bundle (`tmp/agent_relay_bundle_2026-07-13_120341/`) as source of truth alongside the live repo; confirmed the bundle's `data/contracts.csv` was byte-identical to the live file before proceeding.
+- **Part A — Philadelphia non-safety re-scan:** searched primary-source locations (union-hosted contract pages, city labor-relations pages, council/legislative attachments) rather than search-engine summaries, for both DC33 and DC47, not assuming the already-ingested cycles were the only relevant ones.
+  - Found **AFSCME Local 2187**'s own "Contract Library" page (a DC47-affiliate local representing City of Philadelphia, PHA, and PPA employees) hosting a direct PDF: a bilaterally-signed "Term Sheet Agreement" between the City and DC47 Locals 2186/2187, term **July 1, 2025 - June 30, 2028**, independently corroborated as ratified by contemporaneous news coverage (PhillyVoice, Philadelphia Inquirer, ~July 2025).
+  - This cycle overlaps the already-ingested Philadelphia police row (2025-2027) for the police row's entire term. Ingested as `pa_philadelphia_other_2025` (`occupation_class=other`, per recognition-clause-first review — the unit spans multiple agencies and both non-supervisory and supervisory titles). `ingest/audit_coverage.py` now reports Philadelphia police vs. this row as a healthy **overlap-cycle matched pair** — the first genuine (not merely design-level) Philadelphia match.
+  - The fire window (2017-2020) remains unresolved — no document found for the DC33/DC47 cycle that a 2018 `phila.gov` press release confirms existed around that period. Documented as an open gap, not stretched into a match.
+  - Rejected: DC33's `termsheet_0.pdf` (2025-2028, no signature evidence located, a bare term sheet); a `phila.gov`-hosted 2024-2025 DC33 extension document (cycle does not overlap either target window); `dc47.org/contracts/` (404, no direct navigation found).
+  - **Harrisburg/Pittsburgh fallback scan: not triggered.** The task's explicit conditional was "if Philadelphia remains fruitless" — since Philadelphia produced a genuine matched pair, the fallback scan was correctly skipped this session, per the task's own logic (documented explicitly so this is not mistaken for an unaddressed item).
+- **Part B — NJ extraction-quality audit (audit-only, no code or data changes):** read `ingest/extract_spans.py` directly and re-verified all 6 previously-flagged rows (`wage_mechanism_evidence_checklist.md` §15 items 8-13) plus the new Philadelphia row against their exact source language, confirming three root causes: (1) the `interest_arbitration` trigger list includes a bare `\bbinding arbitration\b` pattern that fires on any dispute-arbitration clause regardless of subject matter; (2) no negation/exclusion-awareness — the regex never checks whether a matched phrase is being negated in context, explaining both documented inversions; (3) the `comparability` trigger `\bcomparab\w+\b` is a bare word-root wildcard with zero semantic scoping, firing on any use of "comparable" regardless of subject (rank, benefits plan, leave, etc.).
+  - Found and documented a **7th** instance (item 14, `pa_philadelphia_other_2025`'s `interest_arbitration_flag=1`) — a passing institutional-status reference within a genuine Most-Favored-Nation clause (which itself is correctly flagged `me_too_clause_flag=1`, a true positive), not evidence the unit itself has interest arbitration.
+  - Produced a concrete fix plan in `docs/analysis/philadelphia_nonsafety_rescan_and_nj_extraction_fix_plan_2026-07-13.md`: (A) narrow the `binding arbitration` trigger to require wage/impasse co-occurrence; (B) add a negation/exclusion guard before setting any flag; (C) require a `REFERENT_PATTERNS` match before setting `comparability_clause_flag`, not just for populating `comparability_referent`; (D) flag (not implement) a structural note that a parallel `grievance_arbitration_flag` field pair would be the most complete fix, pending schema-change authorization; (E) a documentation-only NJ guardrail recommendation. **No code or data changes were made** — `ingest/extract_spans.py` and all flagged `data/contracts.csv` rows are unchanged; this is a diagnosis-and-proposal only, per the task's explicit audit-first instruction.
+- Updated `docs/analysis/state_city_claim_map_2026-07-12.csv` for Philadelphia PA only (`matched_design_status` reasoning refreshed to reflect the new overlap-cycle pair).
+
+**Decisions and why**
+- Treated the DC47/Local 2187 document as executed despite it being a compiled "contract library" packet with some appended side letters still carrying "[signature page to follow]" placeholders, because (a) a genuine bilateral dated signature block was located tied to the main term sheet's Exhibit-A incorporation clause, (b) the union hosts it persistently under its own "Contract Library" category, and (c) independent news coverage corroborates real-world ratification of this exact agreement. Documented as a judgment call in the row's `total_comp_note`, consistent with the same standard applied to the DC33 2021-2024 row in Wave 1.
+- Did not run the Harrisburg/Pittsburgh fallback scan, strictly following the task's own conditional trigger rather than scanning speculatively once Philadelphia succeeded.
+- Did not implement the Part B fix plan or correct any flagged row this session — explicitly instructed to audit first and recommend second; implementation requires a future explicit authorization.
+
+**Surprises/breakage**
+- None to the corpus or pipeline. The Part B diagnosis converged cleanly: all 7 flagged issues (6 prior + 1 new) trace to exactly 3 narrow code patterns, not 7 unrelated bugs — a genuinely tractable fix once authorized.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 63 | discourse: 0 | coverage: 63 | city_attributes: 3
+
+python ingest/audit_coverage.py
+healthy matched pairs: 27 (was 26; +1: Philadelphia police vs. DC47/Local 2187, overlap-cycle)
+  exact-cycle: 9 | overlap-cycle: 18
+exploratory adjacent matches: 3 (was 4; Philadelphia police no longer counted as adjacent)
+safety units unmatched: 6 (unchanged)
+cities with no safety contract yet: 0 (unchanged)
+cities: 19 (unchanged)
+```
+`docs/schema.md`, `ingest/extract_spans.py`, and `docs/final_reports/` confirmed unchanged (empty diffs).
+
+**Confirmed:** no GABRIEL/codify, Harvard Proxy, model, or API calls (deterministic regex extraction only, `--llm` never passed); no FOIA/OPRA/RTKL/PRR; no git push; no remote inspection/configuration. 1 new PDF now lives under `corpus/pa_philadelphia/`.
+
+**Next steps**
+1. Get explicit authorization for the Part B fix plan (`docs/analysis/philadelphia_nonsafety_rescan_and_nj_extraction_fix_plan_2026-07-13.md`), implement items A-C in `ingest/extract_spans.py`, and run the recommended regression check (known-flagged rows must clear; known-good positive rows must not be suppressed) before correcting any of the 7 flagged production rows.
+2. Locate a Philadelphia non-safety source covering 2017-2020 to close the fire-window gap (the last remaining Philadelphia design gap).
+3. Trenton NJ and Philadelphia PA are both now ready, design-wise, for a first controlled codify wave — recommend running the Part B extraction fix first, so codify scores corrected spans rather than the currently-flagged ones.
+
 ## 2026-07-13 12:00 EDT (PA/NJ Ingestion Wave 2 — Newark and Trenton police+fire confirmed via direct PERC-index browsing; Trenton becomes the corpus's first PA/NJ matched triad) - Confirmed Newark police, Newark fire, Trenton police, and Trenton fire by browsing the NJ PERC public-sector-contracts index directly by employer name (not generic search, which had failed twice); ingested 4 real sources; confirmed Philadelphia still has no non-safety agreement overlapping its safety windows (documented failure); no GABRIEL/codify/model/API calls; no push/remote work
 
 **Did**

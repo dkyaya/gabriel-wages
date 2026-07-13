@@ -1,0 +1,17 @@
+{
+  "obs_id": "pa_philadelphia_other_2025",
+  "city_id": "pa_philadelphia",
+  "city_name": "Philadelphia",
+  "state": "PA",
+  "bargaining_unit_name": "AFSCME District Council 47, Locals 2186 and 2187 (Local 2187: City of Philadelphia, Philadelphia Housing Authority, and Philadelphia Parking Authority employees, primarily white-collar/administrative, strike-eligible; Local 2186: supervisors in various city agencies, non-strike-eligible)",
+  "occupation_class": "other",
+  "cycle_start": "2025-07-01",
+  "cycle_end": "2028-06-30",
+  "source_type": "cba",
+  "source_url_or_cite": "https://www.afscme2187.org/_files/ugd/749f21_a8b8e0089c234877bbceb1f8833a82cb.pdf",
+  "retrieval_date": "2026-07-13",
+  "retrieval_method": "public_download",
+  "binding_arbitration_statute": "Pennsylvania Public Employe Relations Act (Act 195, 43 P.S. Section 1101.101 et seq.)",
+  "text_quality": "ocr_messy",
+  "total_comp_note": "Hosted on AFSCME Local 2187's own official site under a 'Contract Library' section; titled 'Term Sheet Agreement Between The City of Philadelphia and AFSCME District Council 47, Locals 2186 and 2187,' with a footer date 'City and AFSCME DC 47 Tentative Agreement -- July 15, 2025.' A bilateral, dated signature block ('FOR THE CITY OF PHILADELPHIA: / FOR AFSCME DISTRICT COUNCIL 47:', dated on or around 8/1) appears within the document (tied to Section 7's incorporation of Exhibit A), though several later appended side letters within the same compiled PDF still carry unresolved '[signature page to follow]' placeholders -- this is a compiled contract-library packet, not a single uniformly-executed instrument, and the scope of what exactly the located signature block covers is not fully certain from OCR alone. Ratification of this same tentative agreement (term July 1 2025 - June 30 2028, 2.5%/3%/3% wage increases, $1,250 ratification bonus) is independently corroborated by contemporaneous news coverage (PhillyVoice, Philadelphia Inquirer, ~July 2025). Recognition-clause-first: occupation_class=other because the unit spans multiple city agencies/authorities and both non-supervisory and supervisory titles, not a single schema-supported class. Cycle overlaps the already-ingested Philadelphia police row (pa_philadelphia_police_2025, 2025-07-01 to 2027-06-30) for the police row's entire term -- converts Philadelphia from exploratory-adjacent to a genuine cycle-overlapping matched pair."
+}

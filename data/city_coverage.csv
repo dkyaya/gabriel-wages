@@ -61,3 +61,4 @@ nj_newark,Newark,NJ,police,1,2018-2023,1,nj_newark_police_2018,ingested via ocr
 nj_newark,Newark,NJ,fire,1,2013-2015,1,nj_newark_fire_2013,ingested via text_layer
 nj_trenton,Trenton,NJ,police,1,2019-2024,1,nj_trenton_police_2019,ingested via ocr
 nj_trenton,Trenton,NJ,fire,1,2021-2026,1,nj_trenton_fire_2021,ingested via ocr
+pa_philadelphia,Philadelphia,PA,other,0,2025-2028,1,pa_philadelphia_other_2025,ingested via text_layer
