@@ -1,0 +1,16 @@
+{
+  "obs_id": "nj_newark_fire_2013",
+  "city_id": "nj_newark",
+  "city_name": "Newark",
+  "state": "NJ",
+  "bargaining_unit_name": "Newark Firefighters Union, Inc. (all Firefighters, Fire Alarm Operators, Lineworkers, and Fire Signal Systems Repairers of the Newark Fire Department, including specialized assignments such as Community Relations, Labor Relations, Arson Squad, Special Services and Supply, Training Academy, Communications, Planning and Research, and Fireboat)",
+  "occupation_class": "fire",
+  "cycle_start": "2013-01-01",
+  "cycle_end": "2015-12-31",
+  "source_type": "cba",
+  "source_url_or_cite": "https://www.perc.state.nj.us/publicsectorcontracts.nsf/e8bdc0fc8b79520c85256f4d005df32f/d980a598b888965e85257dd300670878/$FILE/Newark%20and%20Newark%20FF%20Union%202013.pdf",
+  "retrieval_date": "2026-07-13",
+  "retrieval_method": "public_download",
+  "binding_arbitration_statute": "New Jersey Employer-Employee Relations Act (N.J.S.A. 34:13A-1 et seq., Ch. 13A)",
+  "total_comp_note": "Located via the PERC public-sector-contracts 'Newark Firefighters Union - Contracts' index entry. This is the most recent Newark Firefighters Union (rank-and-file) document confirmed retrievable this session; a more current IAFF Local 1860 term (2017-2023, per direct PERC-index browsing) was identified by name and cycle but its document PDF could not be located despite extensive targeted search -- documented as an unresolved confirmation failure, not treated as ingestible. This 2013-2015 cycle does NOT overlap the already-ingested Newark non-safety row (2020-2023); it fills an occupation-coverage gap (exploratory adjacent match), consistent with how Philadelphia fire (2017-2020) was treated in the prior ingestion wave."
+}

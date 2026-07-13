@@ -1,0 +1,17 @@
+{
+  "obs_id": "nj_trenton_police_2019",
+  "city_id": "nj_trenton",
+  "city_name": "Trenton",
+  "state": "NJ",
+  "bargaining_unit_name": "New Jersey State Policemen's Benevolent Association, Inc., Local No. 11, Trenton, New Jersey (uniformed and non-uniformed officers, police officers, and police officers/detectives)",
+  "occupation_class": "police",
+  "cycle_start": "2019-01-01",
+  "cycle_end": "2024-12-31",
+  "source_type": "cba",
+  "source_url_or_cite": "https://www.perc.state.nj.us/publicsectorcontracts.nsf/e20dbee295d1a49c85256f2b00591946/ff34ffc642cbff4d85258ca50042b66c/$FILE/Trenton%20and%20pBA%20Loc%2011%20PO%202019.pdf",
+  "retrieval_date": "2026-07-13",
+  "retrieval_method": "public_download",
+  "binding_arbitration_statute": "New Jersey Employer-Employee Relations Act (N.J.S.A. 34:13A-1 et seq., Ch. 13A)",
+  "text_quality": "ocr_messy",
+  "total_comp_note": "Located by browsing the NJ PERC public-sector-contracts index directly by employer name (StartKey=Trenton), not generic web search, then confirmed via a targeted exact-filename search. Document is a City Council resolution (Resolution 23-333) authorizing execution of the CBA, with the full CBA text and signature page attached; full agreement dated July 6, 2023. Overlaps the already-ingested Trenton non-safety row (nj_trenton_other_2019, AFSCME Local 2281, 2019-2023) for the full 2019-2023 period -- a genuine cycle-overlapping matched pair."
+}

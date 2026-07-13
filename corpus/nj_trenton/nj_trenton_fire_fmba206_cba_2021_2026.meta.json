@@ -1,0 +1,17 @@
+{
+  "obs_id": "nj_trenton_fire_2021",
+  "city_id": "nj_trenton",
+  "city_name": "Trenton",
+  "state": "NJ",
+  "bargaining_unit_name": "Trenton Fire Officers Association, Firemen's Mutual Benevolent Association Local 206",
+  "occupation_class": "fire",
+  "cycle_start": "2021-01-01",
+  "cycle_end": "2026-12-31",
+  "source_type": "cba",
+  "source_url_or_cite": "https://www.perc.state.nj.us/publicsectorcontracts.nsf/e20dbee295d1a49c85256f2b00591946/3b61100f7c74e14a85258ca500435c4f/$FILE/Trenton%20and%20FMBA%20Loc%20206%20FO%202021.pdf",
+  "retrieval_date": "2026-07-13",
+  "retrieval_method": "public_download",
+  "binding_arbitration_statute": "New Jersey Employer-Employee Relations Act (N.J.S.A. 34:13A-1 et seq., Ch. 13A)",
+  "text_quality": "ocr_messy",
+  "total_comp_note": "Located by browsing the NJ PERC public-sector-contracts index directly by employer name (StartKey=Trenton), not generic web search. Full CBA, City of Trenton and Trenton Fire Officers Association/FMBA Local 206. Overlaps the already-ingested Trenton non-safety row (nj_trenton_other_2019, 2019-2023) for 2021-2023, and overlaps the Trenton police row ingested this session (2019-2024) for 2021-2024 -- with all three Trenton rows (police, fire, non-safety) pairwise overlapping in 2021-2023, this is a genuine three-way matched design, the strongest PA/NJ result to date."
+}

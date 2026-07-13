@@ -6,6 +6,59 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-13 12:00 EDT (PA/NJ Ingestion Wave 2 — Newark and Trenton police+fire confirmed via direct PERC-index browsing; Trenton becomes the corpus's first PA/NJ matched triad) - Confirmed Newark police, Newark fire, Trenton police, and Trenton fire by browsing the NJ PERC public-sector-contracts index directly by employer name (not generic search, which had failed twice); ingested 4 real sources; confirmed Philadelphia still has no non-safety agreement overlapping its safety windows (documented failure); no GABRIEL/codify/model/API calls; no push/remote work
+
+**Did**
+- Confirmed repo state before work: working directory `/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages`; latest starting commit `437e0bf PA/NJ Ingestion Wave 1: Philadelphia triad, Newark and Trenton non-safety`; `data/contracts.csv`/`data/city_coverage.csv` each 58 rows.
+- **Confirmation pass (Step 1):** Generic web search had failed twice (pilot scan, Ingestion Wave 1) to surface current-cycle Newark/Trenton police/fire CBAs. This session instead browsed the NJ PERC "Contracts By Employer" index directly, using its Domino/Notes view `StartKey` parameter to jump to the Newark and Trenton alphabetical sections and read the actual employer/union/term listing (not a search-engine snippet). This surfaced real union names and current terms that neither prior session had found:
+  - Newark police: **FOP Lodge 12**, current term 2018-2023 (previously assumed generically as "PBA").
+  - Newark fire: **Newark Firefighters Union** (rank-and-file, most-recently-documented term 2013-2015) and, separately, **IAFF Local 1860** (most recent listed term 2017-2023, more current, but its document PDF could not be located despite extensive targeted search — documented as an unresolved confirmation failure).
+  - Trenton police: **PBA Local 11**, current term 2019-2024 (a City Council resolution, No. 23-333, authorizing execution, with the full CBA attached).
+  - Trenton fire: **Trenton Fire Officers Association / FMBA Local 206**, current term 2021-2026.
+  - Direct single-ID document URLs extracted from the index view's summarized HTML mostly 404'd ("IBM Notes Exception - Entry not found in index") — the index uses a two-level view-category + document-ID path that isn't exposed by simple page summarization. Exact-filename web searches (e.g., `"Newark and FOP Lodge 12" pdf`) then successfully resolved the real PDFs for 3 of the 4 targets; the 4th (a more current Newark fire document) could not be resolved this way either.
+  - Philadelphia non-safety-overlap check: found one new lead (`phila.gov`-hosted 2024-2025 AFSCME DC33 one-year-extension document, filed as a public-records-discovery attachment) but its cycle (~July 2024-June 2025) does not overlap either the police (2025-2027) or fire (2017-2020) window even if pulled, so it was not pursued further. **Philadelphia's non-safety overlap gap remains unresolved** — documented as a valid confirmation failure per the task's explicit allowance.
+- **Ingestion (Steps 2-4):** Downloaded, read (recognition clause + exact cycle dates), and ran `ingest/pipeline.py` (deterministic regex extraction only, no `--llm`, no GABRIEL/codify) on 4 sources, all passing the provenance/recognition/matched-design-usefulness gate:
+  1. `nj_newark_police_2018` — FOP Lodge 12, 2018-2023, `occupation_class=police`. **Overlaps the already-ingested Newark non-safety row (2020-2023) for the full 2020-2023 period — a genuine cycle-overlapping matched pair**, not merely adjacent.
+  2. `nj_newark_fire_2013` — Newark Firefighters Union, 2013-2015, `occupation_class=fire`. Does not overlap the non-safety row; added for occupation-coverage completeness (consistent with how Philadelphia fire was treated in Wave 1).
+  3. `nj_trenton_police_2019` — PBA Local 11, 2019-2024, `occupation_class=police`. **Overlaps the already-ingested Trenton non-safety row (2019-2023) for the full 2019-2023 period.**
+  4. `nj_trenton_fire_2021` — Trenton Fire Officers Association/FMBA Local 206, 2021-2026, `occupation_class=fire`. **Overlaps both the non-safety row (2021-2023) and the newly-ingested police row (2021-2024).** All three Trenton rows pairwise overlap in 2021-2023 — **Trenton is now the corpus's first genuinely matched three-occupation-class design in PA/NJ**, matching the design quality of the Ohio matched triads.
+  - `data/contracts.csv`/`data/city_coverage.csv` grew from 58 to 62 rows.
+- **Deterministic-extraction audit findings (documented, not corrected, per audit-first discipline):** 5 more false-positive/inversion mechanism flags found across the 4 new rows, added as items 10-13 in `wage_mechanism_evidence_checklist.md` §15, including a second inversion (Trenton fire's `interest_arbitration_flag=1` on text that explicitly *excludes* fiscal matters from interest arbitration). A cross-document pattern is now documented: NJ police/fire CBAs consistently route wage-setting interest arbitration through an external statutory process rather than a CBA-internal clause, so the CBA's own "arbitration" article is almost always ordinary grievance arbitration — the regex extractor (tuned on MA/TX/OH phrasing) is structurally prone to false positives on this NJ document family.
+- Updated `docs/analysis/state_city_claim_map_2026-07-12.csv` for Newark NJ (`matched_design_status` → `matched_pair`) and Trenton NJ (`matched_design_status` → `matched_triad`, now the strongest PA/NJ candidate). Philadelphia's row is unchanged (no new confirmation succeeded there).
+
+**Decisions and why**
+- Ingested Newark fire (2013-2015) despite its non-overlapping cycle, for consistency with the precedent set in Wave 1 (Philadelphia fire, also non-overlapping, was ingested to complete occupation coverage) — both fill a claim-driven design gap even without an immediate cycle match.
+- Did not pursue the Philadelphia 2024-2025 AFSCME extension document once its cycle was confirmed not to overlap either target window — downloading it would not have served the specific Step 3 Priority 2 purpose (converting exploratory-adjacent into matched), so it was left as a documented lead rather than ingested speculatively.
+- Did not force a guess at the IAFF Local 1860 (Newark fire, 2017-2023) document URL — several plausible constructed URLs 404'd, and guessing further risked either wasted effort or, worse, ingesting the wrong document under an assumed name. Documented as an explicit, honest confirmation failure per the task's own allowance for that outcome.
+
+**Surprises/breakage**
+- The NJ PERC public-sector-contracts database's `Contracts By Employer` Domino view is directly browsable with a `StartKey=<name>` parameter — this is the technique that finally worked after three prior sessions' generic-search attempts failed. Recorded here as a reusable technique for any future NJ PERC confirmation work.
+- A second interest-arbitration-flag *inversion* (Trenton fire) reinforces that this is a real, recurring extraction-quality pattern for NJ documents specifically, not a one-off (see the new cross-document note in `wage_mechanism_evidence_checklist.md` §15).
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 62 | discourse: 0 | coverage: 62 | city_attributes: 3
+
+python ingest/audit_coverage.py
+healthy matched pairs: 26 (was 23; +3: Newark police, Trenton police, Trenton fire)
+  exact-cycle: 9 | overlap-cycle: 17
+exploratory adjacent matches: 4 (unchanged — Philadelphia's two rows remain adjacent-only)
+safety units unmatched: 6 (was 5; +1: Newark fire, 2013-2015, does not overlap or sit adjacent to the 2020-2023 non-safety row)
+cities with no safety contract yet: 0 (was 2 — both Newark and Trenton now have safety contracts)
+cities: 19 (unchanged)
+```
+`docs/schema.md` and `docs/final_reports/` confirmed unchanged (empty diffs).
+
+**Confirmed:** no GABRIEL/codify, Harvard Proxy, model, or API calls (deterministic regex extraction only, `--llm` never passed); no FOIA/OPRA/RTKL/PRR; no git push; no remote inspection/configuration. 4 new PDFs now live under `corpus/nj_newark/` and `corpus/nj_trenton/`.
+
+**Next steps**
+1. Locate the more current Newark fire document (IAFF Local 1860, 2017-2023 term) to convert Newark from `matched_pair` to a genuine `matched_triad` — try the PERC-index-browsing technique with additional filename variants, or a direct site visit if a browsing tool becomes available.
+2. Trenton's matched-triad design is now complete for a first codify wave — this is the strongest PA/NJ candidate for Steps 9-13 of `claim_testing_source_wave_methodology_2026-07-12.md` (codify in a controlled, capped wave; audit grounding; rebuild the viewer; update the claim register/evidence matrix/hypothesis tracker/source-needs docs together). Not done this session, by design.
+3. Philadelphia's non-safety-overlap gap remains open; the only lead found (a 2024-2025 AFSCME extension) does not overlap either safety window, so a genuinely new source (not just a newer AFSCME document) is likely needed.
+4. Resolve `wage_mechanism_evidence_checklist.md` §15 items 8-13 (six flagged mechanism fields across two ingestion waves) in a future dedicated, audit-first metadata-cleanup pass.
+
 ## 2026-07-13 11:27 EDT (PA/NJ Ingestion Wave 1 — first real ingestion into the causal corpus since the source-scan waves) - Confirmed remaining PA/NJ document gaps by reading actual pages/documents (not just search snippets), ingested 5 real sources (Philadelphia PA police+fire+non-safety, Newark NJ non-safety, Trenton NJ non-safety) via `ingest/pipeline.py`, rejected 2 candidates on direct inspection (a Reading, PA "library CBA" that turned out to be a construction contract; a Philadelphia AFSCME termsheet that was only a summary), held Newark/Trenton police+fire and all six other PA/NJ cities per the task's explicit holds; no GABRIEL/codify/model/API calls; no push/remote work
 
 **Did**

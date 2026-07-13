@@ -1,0 +1,17 @@
+{
+  "obs_id": "nj_newark_police_2018",
+  "city_id": "nj_newark",
+  "city_name": "Newark",
+  "state": "NJ",
+  "bargaining_unit_name": "Fraternal Order of Police Newark, Lodge No. 12 (all police officers of the Newark Police Department, excluding managerial executives, craft and professional employees, superior officers, clerical employees, supervisors, linemen, teletype operators, police property clerks, and records/identification officers)",
+  "occupation_class": "police",
+  "cycle_start": "2018-01-01",
+  "cycle_end": "2023-12-31",
+  "source_type": "cba",
+  "source_url_or_cite": "https://www.perc.state.nj.us/publicsectorcontracts.nsf/73c13dedea2483db852570fc0069c62e/658d7c99a8d5eb1e85258bb0007293fd/$FILE/Newark%20and%20FOP%20Lodge%2012%202018.pdf",
+  "retrieval_date": "2026-07-13",
+  "retrieval_method": "public_download",
+  "binding_arbitration_statute": "New Jersey Employer-Employee Relations Act (N.J.S.A. 34:13A-1 et seq., Ch. 13A)",
+  "text_quality": "ocr_messy",
+  "total_comp_note": "Located by browsing the NJ PERC public-sector-contracts index directly by employer name (StartKey=Newark), not generic web search, then confirmed via a targeted exact-filename search. Full CBA, City of Newark and FOP Lodge 12. Overlaps the already-ingested Newark non-safety row (nj_newark_other_2020, Teamsters Local 97, 2020-2023) for the full 2020-2023 period -- a genuine cycle-overlapping matched pair, not merely adjacent."
+}
