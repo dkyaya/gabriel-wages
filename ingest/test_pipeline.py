@@ -125,6 +125,128 @@ def test_extraction_and_spans():
               "police officers" in comp.referent.lower())
 
 
+def test_interest_arbitration_false_positive_regression():
+    print("test_interest_arbitration_false_positive_regression")
+    # Each case is drawn from an audited false positive/inversion documented in
+    # wage_mechanism_evidence_checklist.md section 15 (items 8-14). The fix in
+    # extract_spans.py (2026-07-13) must suppress every one of these.
+    negative_cases = [
+        ("item 9: PA DC33 scope clause excludes interest arbitration",
+         "This Agreement applies to employees represented by District Council 33 "
+         "including former Traffic Court employees, School Crossing Guards, but not "
+         "employees who are eligible for interest arbitration. However, the Health "
+         "and Welfare and Grievance Procedure provisions of this Agreement apply to "
+         "employees who are eligible for interest arbitration and any interest "
+         "arbitration panel shall not have jurisdiction to address issues relating "
+         "to Health and Welfare benefits, pension benefits, or the Grievance "
+         "Procedure."),
+        ("item 10: NJ Newark police legal-defense binding arbitration (no wage context)",
+         "the City shall defray all costs of defending such action, if any, and "
+         "shall pay any adverse judgment, save harmless, and protect such person "
+         "from any financial loss resulting therefrom. If a dispute should arise "
+         "concerning coverage pursuant to this Section, the City and FOP agree to "
+         "submit the issue to binding arbitration, in accordance with the parties' "
+         "Memorandum of Agreement setting forth the terms and conditions of "
+         "employment, dated February 1, 2007. No other issue regarding this Section "
+         "shall be submitted to arbitration."),
+        ("item 12: NJ Trenton police health-coverage binding arbitration (no wage context)",
+         "Any disputes pertaining to the above including but not limited to the "
+         "definition of a major carrier, and definition of “equivalent or "
+         "better” health coverage, prior to implementation, shall be submitted "
+         "to final and binding arbitration pursuant to Article XVII of the "
+         "Agreement."),
+        ("item 13: NJ Trenton fire explicitly excludes fiscal matters from interest arbitration",
+         "Fiscal matters as wages, hours, and benefits are not subject to interest "
+         "arbitration. Only the President or the Grievance Committee can authorize "
+         "a grievance moving to binding arbitration."),
+        ("item 14: PA DC47 MFN clause references, but does not grant, interest arbitration",
+         "Most Favored Nation. The City agrees that if, during the term of this "
+         "Agreement with AFSCME District Council 47, which expires on June 30, 2025, "
+         "the City and DC 33 (not including bargaining units entitled to interest "
+         "arbitration) reach agreement on a one-year collective bargaining or "
+         "extension agreement that contains an across-the-board pay increase that "
+         "exceeds the across-the-board pay increase provided for in this Agreement, "
+         "the terms of this Agreement should be adjusted to reflect the higher DC 33 "
+         "rate."),
+    ]
+    for name, text in negative_cases:
+        spans = extract_spans(text)
+        check(f"{name} -> interest_arbitration NOT flagged", spans.flag("interest_arbitration") == 0)
+
+    positive_cases = [
+        ("genuine interest arbitration via statute + impasse (unaffected by the fix)",
+         "At impasse, disputes over wages shall be submitted to binding interest "
+         "arbitration under M.G.L. c. 1078."),
+        ("genuine interest arbitration via last-best-offer (unaffected by the fix)",
+         "Wage disputes not resolved through negotiation shall proceed to last best "
+         "offer arbitration."),
+    ]
+    for name, text in positive_cases:
+        spans = extract_spans(text)
+        check(f"{name} -> interest_arbitration flagged", spans.flag("interest_arbitration") == 1)
+
+    # A bare "binding arbitration" trigger (with no "interest arbitration"/"last best
+    # offer"/"final-offer arbitration"/"impasse...arbitration" phrase) is intentionally
+    # NOT flagged, even with nearby wage vocabulary -- a co-occurring-wage-vocabulary
+    # weak-trigger heuristic was tried and retired (2026-07-13) after it produced a
+    # genuine false positive on an Ohio subcontracting/privatization dispute clause
+    # that happened to mention "the payment of a living wage". Under-flagging here
+    # leaves the row unresolved for a future, more careful pass rather than silently
+    # contaminating a primary-evidence field.
+    under_flag_cases = [
+        ("bare binding arbitration + nearby wage word stays unresolved, not flagged",
+         "In the event of an impasse over wages and a successor agreement, the "
+         "parties shall submit the dispute to binding arbitration."),
+    ]
+    for name, text in under_flag_cases:
+        spans = extract_spans(text)
+        check(f"{name} -> interest_arbitration NOT flagged", spans.flag("interest_arbitration") == 0)
+        check(f"{name} -> interest_arbitration stays unresolved", "interest_arbitration" in spans.unresolved)
+
+
+def test_comparability_false_positive_regression():
+    print("test_comparability_false_positive_regression")
+    # Each case is drawn from an audited comparability false positive (items 1, 8,
+    # 11, and the comparability half of 13). None reference a peer jurisdiction or
+    # peer wage rate, so none should pass the referent requirement.
+    negative_cases = [
+        ("item 8: PA police sick-leave-usage comparison, not wage comparability",
+         "No later than January 31, 2027, the City will provide data on the use of "
+         "sick time for calendar year 2026 compared to the comparable period in "
+         "2025. If the average number of sick days per employee used in 2026 is "
+         "105% or less than days used in 2025, the pilot program will become "
+         "permanent."),
+        ("item 11: NJ Newark fire internal rank comparison, not wage comparability",
+         "Members of the Uniformed Force assigned to Special Details Bureau and "
+         "Special Branches of the Department who are covered by this Agreement, and "
+         "who are not included in this vacation schedule, shall be limited to the "
+         "total number of vacation days allotted to members of comparable rank in "
+         "the Active Fire Fighting Force governed by this schedule."),
+        ("item 13: NJ Trenton fire optical-plan comparison, not wage comparability",
+         "Section 7.02 — Prescription / Optical / Dental. An Optical Plan "
+         "comparable to that of the New Jersey State Health Benefits Program and "
+         "effective 7/1/00 the reimbursement for an employee's spouse and "
+         "dependents shall be adjusted accordingly."),
+        ("2026-07-13 full-corpus regression find: TX Austin recruiting-vendor "
+         "clause has a peer-city referent but no wage vocabulary, not wage comparability",
+         "a) The vendor's demonstrated ability to produce diverse pools of "
+         "successful firefighters in other major or comparable metropolitan "
+         "cities;"),
+    ]
+    for name, text in negative_cases:
+        spans = extract_spans(text)
+        check(f"{name} -> comparability NOT flagged", spans.flag("comparability") == 0)
+
+    positive_cases = [
+        ("genuine peer-jurisdiction wage comparability (unaffected by the fix)",
+         "Wages shall be comparable to police officers in surrounding communities "
+         "of similar size, including Somerville and Newton."),
+    ]
+    for name, text in positive_cases:
+        spans = extract_spans(text)
+        check(f"{name} -> comparability flagged", spans.flag("comparability") == 1)
+
+
 def test_heading_detection():
     print("test_heading_detection")
     check("ARTICLE heading detected", _looks_like_heading("ARTICLE 24 — INTEREST ARBITRATION"))
@@ -257,6 +379,8 @@ def test_coverage_match_tiers():
 if __name__ == "__main__":
     test_page_number_at()
     test_extraction_and_spans()
+    test_interest_arbitration_false_positive_regression()
+    test_comparability_false_positive_regression()
     test_heading_detection()
     test_verbatim_guard()
     test_quarantine()

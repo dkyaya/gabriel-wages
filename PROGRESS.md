@@ -6,6 +6,62 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-13 16:10 EDT (Extractor fix implemented and regression-tested corpus-wide; Philadelphia fire-gap closed exact-cycle; DC47 packet precisely broken down) - Implemented the extraction fix diagnosed in the prior session's memo, regression-tested it against all 64 corpus PDFs (found and fixed 2 additional false-positive modes the fix plan hadn't anticipated), corrected 27 production data/contracts.csv fields across 18 rows, gave a precise document-level breakdown of the Philadelphia DC47/Local 2187 packet, and closed Philadelphia's fire-window gap with a genuine exact-cycle match; no GABRIEL/codify/model/API calls; no push/remote work
+
+**Did**
+- Confirmed repo state before work: working directory `/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages`; latest starting commit `dab6cb2 Philadelphia non-safety re-scan (DC47 overlap) and NJ extraction-quality fix plan`; `data/contracts.csv`/`data/city_coverage.csv` each 63 rows.
+- **Task 1 (extractor fix, `ingest/extract_spans.py`):** Implemented the fix plan's core ideas, but iterated past the original plan after regression testing surfaced two NEW false-positive modes the plan hadn't anticipated:
+  - Dropped the bare `binding arbitration` trigger for `interest_arbitration` entirely, rather than gating it on co-occurring wage vocabulary as originally planned — the wage-vocabulary-gated version still produced a false positive on an Ohio Cleveland subcontracting/privatization-dispute clause that happened to mention "the payment of a living wage."
+  - Added a negation/exclusion guard (`_is_negated`), sentence-scoped; fixed a bug in the first version, which used bare newlines as sentence boundaries and missed a negation cue ("not\n        including") that a PDF line-wrap had split across the boundary.
+  - Required comparability matches to have BOTH a peer-jurisdiction referent AND co-occurring wage vocabulary — a referent-only requirement (as originally planned) still let through a Texas Austin recruiting-vendor clause ("comparable metropolitan cities" describing candidate-pool sourcing, not wages).
+  - Added 15 new regression tests to `ingest/test_pipeline.py` (54 total, 0 failures) covering all 7 originally-documented false positives/inversions plus the 2 newly-found ones.
+- **Task 2 (regression check + corrections):** Wrote a full-corpus regression script (`extract`+`extract_spans` re-run against all 64 rows' source PDFs, diffed against production, per-row 90s timeout to survive a 43MB scanned-photo PDF). Found 19 rows needing correction:
+  - 7 documented false positives/inversions: confirmed suppressed, corrected to `0`/cleared.
+  - 2 rows (`oh_columbus_police_2023`, `oh_columbus_fire_2023`) discovered to have **non-verbatim (fabricated) text** in `arbitration_clause_text` — a direct substring check confirmed neither string appears anywhere in its source PDF, a genuine data-integrity violation of unknown provenance, not caused by this fix. Corrected to match what the fixed deterministic extractor actually produces on these documents.
+  - 2 genuine new true positives found and added: `oh_toledo_police_2024` (a verbatim "shall be subject to an interest arbitration" clause, previously missed) and `oh_cincinnati_fire_2023` (a verbatim "'Me-too' with FOP on wages..." clause, previously blank).
+  - 8 blank→`0` normalizations (cosmetic only).
+  - 8 rows' `no_strike_clause_flag` differ between stored data and today's re-extraction — **not corrected**, since `no_strike` logic was never touched by this fix; flagged as a likely OCR-non-determinism issue for a separate future investigation (checklist item 16).
+  - A final verification regression run confirms the repo is clean with respect to this fix's scope: the only remaining diffs are exactly those 8 out-of-scope `no_strike` rows.
+- **Task 3 (DC47/Local 2187 packet breakdown):** Re-mapped the 82,652-character compiled PDF structurally and found it is 5 distinct documents, not one: the main 2025-2028 term sheet; a "H&W Side Letter" (dated July 15, 2025, apparent genuine trailing signature content despite a `[signature page to follow]` template placeholder in its body); a second, Local-2186-specific side letter (same pattern); a wholly separate, **earlier** 2024-2025 "Tentative Extension Agreement" that carries the packet's one clearly-legible bilateral signature block (correcting the prior session's note, which had misattributed that signature block to the main 2025-2028 term sheet's Exhibit-A clause); and the full text of PA Act 195, appended as reference material. Corrected the row's `total_comp_note` in `data/contracts.csv` to reflect this precise breakdown. No single unambiguous signature page was found specifically for the main 2025-2028 term sheet; its execution remains a totality-of-evidence judgment (persistent hosting + news corroboration + same-round side letters), unchanged in substance from the prior session, now more precisely documented.
+- **Task 4 (Philadelphia fire-gap scan):** Found AFSCME Local 2186's own "Contracts" archive page (`afscme2186.org/contracts`) listing a document titled "City Contract & 2186 Memo Agreement 2017-2020." Downloaded and verified: a genuine, signed Memorandum of Agreement, term July 1 2017 - June 30 2020 — an **exact match** to the already-ingested Philadelphia fire row. Ingested as `pa_philadelphia_other_2017`. Rejected: a 2011 DC33-v-City legal complaint (wrong era, no attached CBA), two dead links.
+- Updated `docs/analysis/wage_mechanism_evidence_checklist.md` §15: marked items 8-14 RESOLVED with correction details; added item 15 (Columbus non-verbatim finding, resolved), item 16 (no_strike OCR-non-determinism, NOT resolved, flagged), and item 17 (extractor-fix implementation summary).
+- Created `docs/analysis/extractor_fix_and_philadelphia_fire_gap_2026-07-13.md`, the required claim-driven memo for this session.
+
+**Decisions and why**
+- Retired the weak "binding arbitration + wage context" trigger entirely rather than further special-casing it after a second false-positive mode appeared on the first regression run — two independent failure modes in one heuristic is a signal the heuristic itself is unreliable, not that it needs one more patch. Under-flagging (leaving a row `unresolved`) is preferred over over-flagging (contaminating a primary-evidence field) per the project's own stated evidence-strength discipline.
+- Corrected the two non-verbatim Columbus rows to match what the deterministic pipeline actually produces (blank/`0`) rather than hand-inserting a replacement verbatim span found via manual document review — even though genuine ORC 4117.14(G) impasse language does exist in the Columbus Fire source, inserting it by hand would reintroduce exactly the RA-discretion-at-collection-time problem `AGENTS.md` prohibits; the gap is documented for a future, properly-generalized regex trigger instead.
+- Left the 8-row `no_strike_clause_flag` discrepancy uncorrected — explicitly out of scope per the task's own decision rule (only expand fix scope to the same bug family), since `no_strike` logic was never touched and the discrepancy's cause (likely OCR non-determinism) is a different problem requiring its own investigation.
+
+**Surprises/breakage**
+- The full-corpus regression check surfaced a genuine, pre-existing data-integrity issue (two rows with fabricated, non-verbatim mechanism text) that predates this session and was not part of the original 7-item false-positive list — discovered only because re-running the fixed extractor against the actual source PDF revealed the stored text couldn't be found in it at all.
+- The negation-guard's first implementation had its own bug (bare newlines treated as sentence boundaries), caught only because a specific real document ("not\n        including...") exercised exactly that edge case during regression testing — a useful reminder that a fix for one false-positive family can itself introduce a narrower bug.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+54 passed, 0 failed (was 40; +15 new regression tests, one existing test's scenario
+updated to reflect the retired weak-trigger design)
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 (was 27; +1: Philadelphia fire vs. pa_philadelphia_other_2017, EXACT-cycle)
+  exact-cycle: 10 (was 9) | overlap-cycle: 18
+exploratory adjacent matches: 2 (was 3 -- Philadelphia's last adjacent pairing resolved)
+safety units unmatched: 6 (unchanged)
+cities: 19 (unchanged)
+```
+`docs/schema.md` and `docs/final_reports/` confirmed unchanged (empty diffs). Repo is "clean" in the sense that a fresh full-corpus regression run now shows zero remaining diffs attributable to this fix -- the only remaining diffs (8 rows' `no_strike_clause_flag`) are a documented, explicitly out-of-scope, separate issue.
+
+**Confirmed:** no GABRIEL/codify, Harvard Proxy, model, or API calls (deterministic regex extraction only, `--llm` never passed); no FOIA/OPRA/RTKL/PRR; no git push; no remote inspection/configuration. 1 new PDF now lives under `corpus/pa_philadelphia/` (the 2017-2020 fire-gap MOA).
+
+**Next steps**
+1. Philadelphia (both legs matched) and Trenton NJ (all three legs matched) are both now genuinely design-ready for a first controlled GABRIEL/codify wave -- not run this session, not authorized.
+2. Before that codify wave: investigate the `no_strike_clause_flag` OCR-non-determinism question (checklist item 16), and consider a broader non-verbatim-text audit beyond the 20 rows checked this session, so codify scores a corpus checked as thoroughly as the arbitration/comparability fields were this session.
+3. If the Columbus ORC-4117 impasse/conciliation pattern recurs in more Ohio documents, add a properly-generalized, tested regex trigger for it (not hand-inserted text).
+
 ## 2026-07-13 12:32 EDT (Philadelphia non-safety re-scan converts it to a real matched pair; NJ extraction-quality audit produces a concrete, not-yet-implemented fix plan) - Detailed, document-level Philadelphia non-safety re-scan found and ingested a genuinely overlapping DC47/Local 2187 source (2025-2028), converting the police leg from exploratory-adjacent to a healthy overlap-cycle matched pair; Harrisburg/Pittsburgh fallback scan not triggered because Philadelphia was no longer fruitless; diagnosed the root cause of 7 flagged NJ/PA deterministic-extraction issues in `ingest/extract_spans.py` and produced a concrete fix plan (not implemented — audit-first per task instruction); no GABRIEL/codify/model/API calls; no push/remote work
 
 **Did**

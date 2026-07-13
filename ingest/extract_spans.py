@@ -38,7 +38,6 @@ from dataclasses import dataclass, field
 TRIGGERS = {
     "interest_arbitration": [
         r"\binterest arbitration\b",
-        r"\bbinding arbitration\b",
         r"\blast best offer\b",
         r"\bfinal[- ]offer arbitration\b",
         r"\bimpasse\b.{0,40}\barbitration\b",
@@ -65,6 +64,40 @@ TRIGGERS = {
     ],
 }
 
+# "binding arbitration" alone is deliberately NOT in TRIGGERS["interest_arbitration"]
+# above: it is generic dispute-resolution language shared by grievance, discipline,
+# benefits-dispute, and subcontracting/privatization-dispute arbitration, and
+# matched non-wage-setting clauses as often as genuine interest arbitration (audited
+# cases: NJ police legal-defense-coverage disputes, NJ police health-plan-definition
+# disputes, an Ohio "final and binding arbitration" clause resolving a subcontracting/
+# competitive-alternative dispute -- a mechanism this project's own codify codebook
+# already tracks separately as subcontracting_outsourcing_or_volunteer_substitution,
+# not interest arbitration). An earlier version of this fix tried a co-occurring-
+# wage-vocabulary weak-trigger heuristic; it still produced the Ohio subcontracting
+# false positive above (the clause literally discusses "the payment of a living
+# wage"), so the weak trigger was retired rather than further special-cased. A row
+# that only contains bare "binding arbitration" now stays unresolved (eligible for
+# a future, more careful review or LLM-fallback pass) rather than being flagged
+# outright -- under-flagging leaves a row for human/LLM review; over-flagging
+# silently contaminates a primary-evidence field.
+
+# A trigger phrase can appear inside language that EXCLUDES the unit from it rather
+# than granting it (audited cases: a Scope clause reading "...but not employees who
+# are eligible for interest arbitration...", a clause reading "...are not subject to
+# interest arbitration...", an MFN clause merely referencing "...bargaining units
+# entitled to interest arbitration..." as an exclusion category for a DIFFERENT
+# group). Bare presence-matching cannot tell a grant from an exclusion; this guard
+# checks the sentence containing the match for a negation/exclusion cue before the
+# hit is accepted.
+_NEGATION_CUES = re.compile(
+    r"\b(not\s+(?:be\s+)?subject\s+to|excluded\s+from|does\s+not\s+apply\s+to|"
+    r"shall\s+not\s+(?:be\s+(?:submitted|subject|referred)|apply|include|have jurisdiction)|"
+    r"other\s+than|not\s+including|not\s+entitled\s+to|"
+    r"not(?:\s+\w+){0,4}\s+eligible\s+for|"
+    r"are\s+not\s+subject|is\s+not\s+subject)\b",
+    re.IGNORECASE,
+)
+
 # For comparability, try to capture what the clause pegs to (the referent) —
 # still verbatim: we return the matched phrase, we do NOT interpret it.
 # DOTALL so matches survive pdftotext's mid-sentence line wraps.
@@ -74,6 +107,14 @@ REFERENT_PATTERNS = [
     r"(?:to|with|than|among)\s+((?:other\s+)?(?:surrounding|neighboring|comparable|similar)\s+(?:communities|cities|towns|municipalities|jurisdictions).{0,140}?)(?:[.;]|$)",
     r"(the\s+(?:average|mean|median)\s+of\s+.{0,140}?)(?:[.;]|$)",
 ]
+
+# A referent match (peer-jurisdiction language) is necessary but not sufficient:
+# "comparable [to] other cities" can describe non-wage things too (audited false
+# positive: a recruiting-vendor evaluation clause comparing candidate pools "in
+# other major or comparable metropolitan cities"). The schema's comparability
+# concept is peer WAGE comparability specifically (redefined and applied
+# project-wide 2026-07-05), so the matched span must also contain wage vocabulary.
+_WAGE_VOCAB = re.compile(r"\b(wages?|salary|salaries|pay|compensation)\b", re.IGNORECASE)
 
 
 def _paragraphs(text: str) -> list[str]:
@@ -122,6 +163,23 @@ def _span_with_body(paras: list[str], idx: int) -> str:
     return "\n".join(chosen).strip()
 
 
+def _sentence_containing(text: str, pos: int) -> str:
+    """Roughly isolate the sentence enclosing position pos, for negation-cue scoping.
+    A negation cue elsewhere in a long paragraph shouldn't suppress an unrelated
+    trigger match, so the check is scoped to a sentence, not the whole paragraph.
+    Bare newlines are NOT treated as sentence boundaries: PDF text wraps mid-phrase
+    (e.g. "not\\n    including"), and a naive newline split would sever a negation
+    cue from the trigger it modifies."""
+    start = max(text.rfind(".", 0, pos), text.rfind(";", 0, pos))
+    ends = [e for e in (text.find(".", pos), text.find(";", pos)) if e != -1]
+    end = min(ends) if ends else len(text)
+    return text[start + 1:end + 1]
+
+
+def _is_negated(paragraph: str, match_start: int) -> bool:
+    return bool(_NEGATION_CUES.search(_sentence_containing(paragraph, match_start)))
+
+
 @dataclass
 class SpanHit:
     clause_type: str
@@ -147,22 +205,50 @@ def regex_pass(text: str) -> ExtractionResult:
         res.flags[ctype] = 0
         compiled = [re.compile(p, re.IGNORECASE) for p in pats]
         for idx, para in enumerate(paras):
-            if any(c.search(para) for c in compiled):
-                res.flags[ctype] = 1
-                span = _span_with_body(paras, idx)   # absorb body if heading-only
-                referent = ""
-                if ctype == "comparability":
-                    norm_span = re.sub(r"\s+", " ", span)
-                    for rp in REFERENT_PATTERNS:
-                        m = re.search(rp, norm_span, re.IGNORECASE | re.DOTALL)
-                        if m:
-                            referent = m.group(1).strip()
-                            break
-                res.hits[ctype] = SpanHit(
-                    clause_type=ctype, text=span,
-                    method="regex", referent=referent,
-                )
-                break
+            hit = None
+            for c in compiled:
+                m = c.search(para)
+                if m:
+                    hit = m
+                    break
+            if hit is None:
+                continue
+
+            # A matched trigger inside exclusion/negation language ("not eligible
+            # for interest arbitration", "not including bargaining units entitled
+            # to interest arbitration") is evidence the unit LACKS the mechanism,
+            # not that it has it -- do not accept this occurrence as a positive hit,
+            # but keep scanning later paragraphs for a genuine (non-negated) one.
+            if ctype == "interest_arbitration" and _is_negated(para, hit.start()):
+                continue
+
+            span = _span_with_body(paras, idx)   # absorb body if heading-only
+            referent = ""
+            if ctype == "comparability":
+                norm_span = re.sub(r"\s+", " ", span)
+                for rp in REFERENT_PATTERNS:
+                    m = re.search(rp, norm_span, re.IGNORECASE | re.DOTALL)
+                    if m:
+                        referent = m.group(1).strip()
+                        break
+                # A bare "comparable"/"comparability" hit with no peer-jurisdiction/
+                # peer-wage referent is not the schema's peer-wage-comparability
+                # concept (audited false positives: internal rank comparisons,
+                # benefits-plan comparisons, sick-leave-usage comparisons) -- do not
+                # flag it; keep scanning for a genuine referent-bearing occurrence.
+                # A referent alone is still not sufficient: "comparable to other
+                # cities" can describe non-wage things (audited false positive: a
+                # recruiting-vendor evaluation clause) -- also require wage
+                # vocabulary in the matched span.
+                if not referent or not _WAGE_VOCAB.search(span):
+                    continue
+
+            res.flags[ctype] = 1
+            res.hits[ctype] = SpanHit(
+                clause_type=ctype, text=span,
+                method="regex", referent=referent,
+            )
+            break
     # no_strike is flag-only in the schema; drop its text span but keep the flag
     res.hits.pop("no_strike", None)
     res.unresolved = [

@@ -1,0 +1,17 @@
+{
+  "obs_id": "pa_philadelphia_other_2017",
+  "city_id": "pa_philadelphia",
+  "city_name": "Philadelphia",
+  "state": "PA",
+  "bargaining_unit_name": "AFSCME District Council 47, Local 2186 (supervisors in various City of Philadelphia agencies)",
+  "occupation_class": "other",
+  "cycle_start": "2017-07-01",
+  "cycle_end": "2020-06-30",
+  "source_type": "cba",
+  "source_url_or_cite": "https://www.afscme2186.org/_files/ugd/075ebc_7760c32406d147f29c3de3f37290b385.pdf",
+  "retrieval_date": "2026-07-13",
+  "retrieval_method": "public_download",
+  "binding_arbitration_statute": "Pennsylvania Public Employe Relations Act (Act 195, 43 P.S. Section 1101.101 et seq.)",
+  "text_quality": "ocr_messy",
+  "total_comp_note": "Hosted on AFSCME Local 2186's own official 'Contracts' archive page (listed there as 'City Contract & 2186 Memo Agreement 2017-2020'). Titled 'MEMORANDUM OF AGREEMENT BETWEEN CITY OF PHILADELPHIA AND DC47 LOCAL 2186'; Item 1 states the term explicitly: 'The Agreement shall be for a three (3) year period from July 1, 2017 through June 30, 2020.' This is an MOA-style amendment (Redesigning Government Initiative, drug/alcohol policy, life insurance, legal services fund, mileage/clothing allowance, essential-employee weather-emergency pay, sick leave, etc.) that incorporates a prior base CBA by reference: 'Except as modified by the agreement, all terms and conditions of the collective bargaining agreement between the City and District Council 47 Locals 2186 covering the period July 1, 2009 through June 30, 2017, which do not contain specific expiration dates shall remain in full force and effect for the term of this agreement' -- the same MOA-incorporates-base-CBA-by-reference pattern already documented for Worcester MA (wage_mechanism_evidence_checklist.md section 15 item 7); the full underlying 2009-2017 base contract is not itself in this project's corpus. A signature block ('City of Philadelphia: District Council 47, Local 2186:') with visible if OCR-garbled signature marks appears at the end of the document. Recognition-clause-first: occupation_class=other (Local 2186 represents supervisors across multiple city agencies, not a single schema-supported class, per external verification during the same-session DC47/Local 2187 packet research). Cycle is an EXACT match to the already-ingested Philadelphia fire row (pa_philadelphia_fire_2017, 2017-07-01 to 2020-06-30) -- closes the Philadelphia fire-window matched-design gap."
+}

@@ -2,7 +2,42 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-13T12:32:00-04:00`
+Last updated: `2026-07-13T16:10:00-04:00`
+
+---
+
+## 2026-07-13T16:10:00-04:00 - Extractor fix implemented + regression-tested; Philadelphia now matched on both legs
+
+**Commit target:** `Implement and regression-test extractor fix; close Philadelphia fire-window gap`
+
+### Current State After This Entry
+
+- **The extractor fix (diagnosed but not implemented in the prior session) is now implemented, regression-tested, and applied to production data.** `ingest/extract_spans.py`: dropped the bare `binding arbitration` trigger for `interest_arbitration` entirely (a wage-vocabulary-gated version was tried and retired after producing a new false positive on an Ohio subcontracting-dispute clause); added a sentence-scoped negation/exclusion guard (fixed a newline-boundary bug found during testing); required comparability matches to have both a peer-jurisdiction referent AND wage vocabulary (a referent-only version let through a Texas recruiting-vendor clause). 54 tests pass (was 40; +15 new regression tests).
+- **Full-corpus regression check (all 64 rows) found 19 rows needing correction; 18 rows / 27 fields were corrected in `data/contracts.csv`:** the 7 originally-documented false positives/inversions (checklist items 8-14); 2 rows with genuinely **fabricated, non-verbatim text** discovered as a side effect (`oh_columbus_police_2023`, `oh_columbus_fire_2023` — a pre-existing data-integrity issue, not caused by this fix); 2 genuine new true positives added (`oh_toledo_police_2024` interest arbitration, `oh_cincinnati_fire_2023` me-too); 8 blank→`0` cosmetic normalizations. **8 rows' `no_strike_clause_flag` differ from a fresh re-extraction and were deliberately left uncorrected** (out of scope — `no_strike` logic untouched by this fix, likely OCR non-determinism, flagged as checklist item 16 for a separate future investigation). A final verification run confirms zero remaining diffs other than those 8 out-of-scope rows.
+- **Philadelphia DC47/Local 2187 packet precisely broken down:** it is 5 distinct documents compiled into one PDF (main 2025-2028 term sheet; two July-2025 side letters with apparent-but-unconfirmed signature pages; a wholly separate, earlier 2024-2025 extension agreement that actually carries the packet's one clearly-legible signature block — correcting a prior-session misattribution; and the full text of PA Act 195 as reference material). The row's note was corrected accordingly; the main term sheet's own execution remains a totality-of-evidence judgment, not a single clean signature.
+- **Philadelphia's fire-window gap is closed.** AFSCME Local 2186's own "Contracts" archive page hosts a genuine, signed Memorandum of Agreement for exactly July 1 2017 - June 30 2020 (`pa_philadelphia_other_2017`) — an **exact-cycle** match to the already-ingested fire row. Philadelphia is now matched on both legs: police (overlap-cycle vs. the 2025-2028 term sheet) and fire (exact-cycle vs. this new MOA).
+- This run did not call GABRIEL/codify, Harvard Proxy, models, or APIs; did not use FOIA/OPRA/RTKL/PRR; did not touch `docs/schema.md` or any `docs/final_reports/` artifact; did not inspect/configure remotes; did not push.
+
+### Validation/audit results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+54 passed, 0 failed
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 (was 27; +1: Philadelphia fire, exact-cycle)
+exploratory adjacent matches: 2 (was 3)
+```
+
+### Recommended next run
+
+1. Philadelphia (both legs) and Trenton NJ (all three legs) are both now genuinely design-ready for a first controlled GABRIEL/codify wave — not run this session, not authorized.
+2. Before that: investigate the `no_strike_clause_flag` OCR-non-determinism question (checklist item 16) and consider a broader non-verbatim-text audit beyond the 20 rows checked this session.
+3. If the Columbus ORC-4117 impasse/conciliation pattern recurs elsewhere in Ohio, add a properly-generalized, tested regex trigger for it rather than hand-inserting text.
 
 ---
 
