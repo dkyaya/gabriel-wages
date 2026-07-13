@@ -94,3 +94,7 @@ Before a city's contracts are collected, its CBA sources must be "verified." A c
 3. **Matched non-safety present** — at least one non-safety CBA (teacher/clerical/public-works) from the same city, overlapping the same cycle window.
 
 Record per city in the inventory: `safety_cba_status` (verified_portal / union_site / foia_needed / not_found), the non-safety target unit, the source URL/route, and a note on quirks (e.g. multiple hosting domains, settled-vs-awarded). A city failing (3) — safety but no matched comparison in-window — is flagged dead weight, not collected. Observation window: 2014–2024. Do not download yet; verification only confirms sources exist.
+
+## Claim-driven expansion and reporting
+
+Future source expansion should follow the repeatable 13-step sequence in `docs/analysis/claim_testing_source_wave_methodology_2026-07-12.md` (choose claims → scan states/cities → mark candidates → promote → ingest → validate → codify → audit → update claim register → decide next gap). Future reports should be claim-centered — claim, evidence, reasoning, counterevidence/limits, what would change our mind, source needs — not mechanism inventories scattered across cities/states. Do not default to a mechanism-inventory report structure; check `docs/analysis/claim_register_2026-07-12.csv` (or its latest successor) before drafting.

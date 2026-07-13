@@ -6,6 +6,55 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-13 10:45 EDT (Claim-testing methodology saved; PA/NJ follow-up digging and state/city claim map completed) - Saved the repeatable 13-step source-wave lifecycle as a durable project standard, added a concise pointer in AGENTS.md, ran a targeted PA/NJ follow-up web search to convert pilot-scan gaps into confirmed leads, and built an educated claim map covering every state/city currently in the project; no GABRIEL/codify/model/API calls, no downloads/ingestion, no data/corpus/final-report edits; local commit only by design
+
+**Did**
+- Confirmed repo state before work: working directory `/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages`; latest starting commit `b9291d0 Scan Pennsylvania and New Jersey source availability`; working tree clean except untracked `.claude/` and `tmp/`; evidence layer 781 rows; `data/contracts.csv` and `data/city_coverage.csv` each 53 rows — all matching the task's expected repo-state note.
+- Created `docs/analysis/claim_testing_source_wave_methodology_2026-07-12.md`, a durable standard documenting the repeatable 13-step source-wave lifecycle (choose claims/hypotheses → choose 1-2 states → scan ~5 cities/state → mark candidates → promote → ingest 6-12 → validate → extract → codify 8-15 → audit grounding → rebuild viewer → update claim register → decide next gap), promotion rules, evidence/scoring rules, claim-update rules, and the report standard (claim/evidence/reasoning/counterevidence/what-would-change-our-mind/source-needs).
+- Added a concise pointer section ("Claim-driven expansion and reporting") to `AGENTS.md`, referencing the new methodology doc and restating that future reports should be claim-centered, not mechanism inventories.
+- Ran a targeted, public-web-only PA/NJ follow-up search (no downloads/ingestion) across the same 10 cities as the 2026-07-12 pilot scan, aimed specifically at resolving `needs_review` rows. Created `docs/analysis/pa_nj_candidate_sources_followup_2026-07-12.csv` (39 rows, `csv.writer`-built, parse-back validated). Key upgrades: a direct, in-window (2019) non-safety CBA found for Trenton NJ (previously zero leads); a corrected non-safety union identity for Allentown PA (SEIU Local 668, not AFSCME); a new non-safety lead for Erie PA (AFSCME Local 2206, ratified 2026-03-04); Jersey City NJ resolved to a document-level candidate for all three roles via direct PERC-domain PDFs (though dated ~2009-2015); Newark NJ gained a second non-safety document (AFSCME Local 2297 Supervisory, 2010) and an extensive PERC decision history confirming its police/fire units; Elizabeth NJ confirmed as the weakest-evidenced city in either state after a second round.
+- Created `docs/analysis/pa_nj_state_city_claim_notes_2026-07-12.md`, giving each of the 10 scanned cities an explicit source-availability-informed hypothesis, matched-triad assessment, and recommended status (`ingest_next` / `scan_more` / `hold` / `reject_for_now`).
+- Created `docs/analysis/state_city_claim_map_2026-07-12.csv` (26 rows: 16 codified MA/TX/OH cities + 10 scanned-but-uningested PA/NJ cities), with a build-script-enforced rule that no PA/NJ row can be marked `codified=yes` or anything other than `evidence_status=source_availability_hypothesis`. Created `docs/analysis/state_city_claim_map_summary_2026-07-12.md` synthesizing current codified-city readiness (MA/TX/OH) against PA/NJ source-availability promise, and proposing a first (not-yet-executed) 8-source ingestion batch.
+- Updated PA/NJ rows only in `docs/analysis/national_source_targets_2026-07-12.csv` (8 rows), and added follow-up-round notes to the affected rows of `docs/analysis/claim_driven_source_needs_2026-07-12.csv` (5 rows) and `docs/analysis/hypothesis_tracker_2026-07-12.csv` (6 rows) — all other states'/claims'/hypotheses' rows untouched.
+- Lightly updated `wage_mechanism_evidence_checklist.md` (Section 16), `report_review_checklist_safety_non_safety_wage_mechanisms_2026-07-06.md` (new Section 7W), and `all_groups_source_needs_2026-07-06.csv` (one new cross-cutting row) to point future agents at the new methodology doc and claim map.
+
+**Decisions and why**
+- Recommended ingestion batch order changed from the 2026-07-12 pilot scan's Philadelphia+Newark framing: Trenton NJ is now a strong second-priority NJ target (a direct, in-window non-safety document appeared where the pilot scan had found nothing), and Jersey City NJ — despite having the only complete three-role document set found in either state — is held for a "vintage problem" (documents dated ~2009-2015) rather than promoted, since the CBA source-verification standard's 2014-2024 window is not clearly met.
+- Used a stricter, code-enforced rule in the state/city claim map (`matched_design_status` based on whether each role reaches at least `partially_confirmed`/`confirmed` follow-up status, not merely "a union is named") to avoid overstating PA/NJ candidate strength; Paterson NJ and Elizabeth NJ were deliberately marked `safety_only`/`scan_unknown` rather than any triad-shaped label given their genuine non-safety gaps.
+- Kept the claim-testing methodology doc's Steps 1-5 (scanning) explicitly separate from Steps 6-11 (ingestion/codify, not yet authorized for PA/NJ) so a future agent cannot mistake this run's source-availability work for coded evidence.
+
+**Surprises/breakage**
+- None to the corpus or pipeline. The most consequential search-methodology finding: the 2026-07-12 pilot scan's PA searches had implicitly assumed AFSCME as the default non-safety union family, which produced a false total gap for Allentown (whose actual non-safety union is SEIU Local 668) — now corrected and recorded as a general lesson in `pa_nj_state_city_claim_notes_2026-07-12.md`.
+- NJ's PERC-index advantage sharpened further this round: direct `site:perc.state.nj.us "<City>" <union> pdf` queries surfaced document-level PDFs for Newark, Jersey City, and Trenton that generic keyword search had missed in the pilot scan — recorded as a specific, reusable technique.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 53 | discourse: 0 | coverage: 53 | city_attributes: 3
+
+python ingest/audit_coverage.py
+healthy matched pairs: 23
+  exact-cycle: 9
+  overlap-cycle: 14
+exploratory adjacent matches: 2
+safety units unmatched: 5 (Somerville x2, Newton, San Antonio police, San Antonio fire) -- unchanged
+
+custom checks
+pa_nj_candidate_sources_followup_2026-07-12.csv: 39 rows, parse-back OK, row-width OK (19 cols), controlled-vocab OK, claim IDs resolve
+state_city_claim_map_2026-07-12.csv: 26 rows, parse-back OK, row-width OK (16 cols), controlled-vocab OK, claim IDs resolve, PA/NJ rows all codified=no/source_availability_hypothesis
+national_source_targets/claim_driven_source_needs/hypothesis_tracker/all_groups_source_needs: parse-back OK, only the intended rows changed
+git diff --stat -- data/contracts.csv data/city_coverage.csv docs/schema.md: empty
+git status --porcelain -- corpus/ docs/final_reports/: empty
+```
+
+**Confirmed:** no GABRIEL/codify, Harvard Proxy, model, or API calls; no downloads of any source into `corpus/`; no new rows added to `data/contracts.csv` or `data/city_coverage.csv`; no FOIA/OPRA/RTKL/PRR routes used; no new report draft prepared; no git push; no remote inspection/configuration. Work is committed locally only by design.
+
+**Next steps**
+1. Execute the recommended first ingestion batch in `state_city_claim_map_summary_2026-07-12.md` / `pa_nj_source_scan_summary_2026-07-12.md`: Philadelphia PA (police + fire confirmed, non-safety needs one more confirmation step) and Newark NJ (non-safety confirmed, police/fire need a direct PERC-index lookup), then Trenton NJ (non-safety confirmed, police/fire need a PERC-index lookup).
+2. Before ingesting Jersey City NJ, locate current-cycle (2020s) successors to the four ~2009-2015 PERC documents found this round.
+3. After a reviewed ingestion pass, follow Steps 7-13 of `claim_testing_source_wave_methodology_2026-07-12.md` (validate → extract → codify → audit → rebuild viewer → update claim register → decide next gap) before starting an Illinois/New York scan.
+
 ## 2026-07-12 10:51 EDT (PA/NJ bounded source-availability scan completed) - Scanned Pennsylvania and New Jersey (5 cities each) for public, non-FOIA municipal wage-setting sources per the two-week claim-driven expansion plan's Week-1 instruction; produced candidate-source lists and scan memos only, no downloads/ingestion/codify, no data/corpus edits; local commit only by design
 
 **Did**

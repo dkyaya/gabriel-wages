@@ -2,7 +2,42 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-12T10:51:00-04:00`
+Last updated: `2026-07-13T10:45:00-04:00`
+
+---
+
+## 2026-07-13T10:45:00-04:00 - Claim-testing methodology saved; PA/NJ follow-up digging and state/city claim map completed
+
+**Commit target:** `Save source-wave methodology and PA NJ claim map`
+
+### Current State After This Entry
+
+- The repeatable 13-step source-wave lifecycle is now a durable standard: `claim_testing_source_wave_methodology_2026-07-12.md`. `AGENTS.md` has a new concise section ("Claim-driven expansion and reporting") pointing future agents at it and restating the claim-centered report standard.
+- A targeted PA/NJ follow-up scan (public web only, no downloads/ingestion) produced `pa_nj_candidate_sources_followup_2026-07-12.csv` (39 rows). Biggest upgrades: **Trenton NJ** went from zero leads to a confirmed, in-window (2019) non-safety CBA (AFSCME Local 2281); **Allentown PA**'s non-safety union was corrected from an assumed AFSCME to the actual SEIU Local 668; **Jersey City NJ** resolved to a document-level candidate for all three roles (police/fire/non-safety) via direct PERC PDFs, but every document is dated ~2009-2015 and needs a current-cycle successor before it clears the project's 2014-2024 window; **Newark NJ** gained a second non-safety document and an extensive PERC decision history for its police/fire units; **Elizabeth NJ** remains the weakest-evidenced city in either state.
+- `pa_nj_state_city_claim_notes_2026-07-12.md` gives each of the 10 scanned PA/NJ cities an explicit source-availability-informed hypothesis and recommended status (`ingest_next`: Philadelphia, Newark; `scan_more`: Pittsburgh, Allentown, Erie, Reading, Jersey City, Trenton; `hold`: Paterson, Elizabeth).
+- `state_city_claim_map_2026-07-12.csv` (26 rows) now indexes every state/city in the project — 16 codified MA/TX/OH cities plus the 10 scanned-but-uningested PA/NJ cities — with a build-script-enforced rule that no PA/NJ row can be marked codified or anything other than `source_availability_hypothesis`. `state_city_claim_map_summary_2026-07-12.md` synthesizes this into a recommended 8-source first ingestion batch (Philadelphia triad-in-progress + Reading library CBA + Newark IBT-97 + Trenton AFSCME-2281 + Newark police/fire pending PERC-index lookup).
+- PA/NJ-relevant rows in `national_source_targets_2026-07-12.csv` (8), `claim_driven_source_needs_2026-07-12.csv` (5), and `hypothesis_tracker_2026-07-12.csv` (6) were updated with follow-up notes; no other states'/claims'/hypotheses' rows touched. Light pointers added to `wage_mechanism_evidence_checklist.md`, `report_review_checklist_safety_non_safety_wage_mechanisms_2026-07-06.md`, and `all_groups_source_needs_2026-07-06.csv`.
+- This run did not call GABRIEL/codify, Harvard Proxy, models, or APIs; did not download or ingest any source; did not add rows to `data/contracts.csv` or `data/city_coverage.csv`; did not use FOIA/OPRA/RTKL/PRR; did not prepare a new report draft; did not inspect/configure remotes; did not push.
+
+### Validation/audit results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 53 | discourse: 0 | coverage: 53 | city_attributes: 3
+
+python ingest/audit_coverage.py
+healthy matched pairs: 23 (unchanged)
+safety units unmatched: 5 (unchanged)
+```
+
+Custom checks passed: `pa_nj_candidate_sources_followup_2026-07-12.csv` (39 rows) and `state_city_claim_map_2026-07-12.csv` (26 rows) both `csv.writer`-built and parse-back validated (row-width, controlled-vocabulary, claim-ID-resolution, and — for the claim map — a PA/NJ-cannot-be-codified check); `national_source_targets`/`claim_driven_source_needs`/`hypothesis_tracker`/`all_groups_source_needs` all parse cleanly after their targeted updates; `data/contracts.csv`, `data/city_coverage.csv`, `docs/schema.md`, `corpus/`, and `docs/final_reports/` all confirmed unchanged (empty diffs).
+
+### Recommended next run
+
+1. Execute the recommended first ingestion batch (Philadelphia PA + Newark NJ + Trenton NJ + Reading PA library CBA) from `state_city_claim_map_summary_2026-07-12.md`, resolving the remaining `needs_review` items (signed Philadelphia AFSCME CBA; Newark/Trenton police/fire via direct PERC-index browsing) first.
+2. Do not ingest Jersey City NJ until current-cycle (2020s) successors to its ~2009-2015 PERC documents are located.
+3. After ingestion, follow Steps 7-13 of `claim_testing_source_wave_methodology_2026-07-12.md` (validate → extract → codify → audit → viewer → claim register → next gap) before starting an Illinois/New York scan.
 
 ---
 

@@ -196,6 +196,13 @@
 - Matched non-safety comparisons are the bottleneck and should be searched early. Safety-only sources should be collected only when they serve a specific hypothesis, such as impasse/arbitration, factfinding, or peer-comparator evidence.
 - Reports should remain claim/evidence/reasoning products later; for now, source expansion should serve explicit hypotheses and claims.
 
+## 7W. Claim-testing source-wave methodology saved; PA/NJ follow-up and state/city claim map completed (added 2026-07-12)
+
+- The repeatable 13-step source-wave sequence (claims → states/cities → candidates → promote → ingest → validate → codify → audit → viewer → claim register → next gap) is now saved as a durable standard: `claim_testing_source_wave_methodology_2026-07-12.md`. `AGENTS.md` now points to it; future agents should follow this sequence by default rather than re-deriving a process each session.
+- A bounded PA/NJ follow-up scan (`pa_nj_candidate_sources_followup_2026-07-12.csv`, 39 rows) converted several pilot-scan gaps into confirmed leads — most notably a direct, in-window non-safety CBA for Trenton, NJ (previously zero leads) and a corrected union identity for Allentown, PA (SEIU, not AFSCME). No sources were downloaded or ingested.
+- `state_city_claim_map_2026-07-12.csv` (26 rows) now indexes every state/city in the project — 16 codified MA/TX/OH cities plus 10 scanned-but-uningested PA/NJ cities — with an explicit, code-enforced distinction between codified evidence and source-availability hypotheses. Use this map, not ad hoc memory, when deciding what a future session should scan, ingest, or codify next.
+- Any future report should still be claim-centered per Section 6, using the claim register as the authoritative claim text; this map is a planning index, not a citable evidence source.
+
 ## 7. Artifact-generation readiness checklist for later PDF/DOCX creation
 
 - [ ] PI has reviewed and approved the group-retention frame and central-claim framing (Section 1 above).
