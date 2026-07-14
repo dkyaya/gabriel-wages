@@ -57,10 +57,10 @@ TRIGGERS = {
         r"\bshould any other (?:bargaining )?unit\b",
     ],
     "no_strike": [
-        r"\bno[- ]strike\b",
+        r"\bno[- ]strikes?\b",
         r"\bshall not strike\b",
-        r"\bno (?:employee|member) shall (?:engage in|participate in) (?:a |any )?strike\b",
-        r"\bwork stoppage\b",
+        r"\bno (?:employee|member) shall (?:engage in|participate in) (?:a |any )?strikes?\b",
+        r"\bwork stoppages?\b",
     ],
 }
 

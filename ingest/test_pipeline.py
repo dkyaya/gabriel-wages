@@ -204,6 +204,50 @@ def test_interest_arbitration_false_positive_regression():
         check(f"{name} -> interest_arbitration stays unresolved", "interest_arbitration" in spans.unresolved)
 
 
+def test_no_strike_plural_regression():
+    print("test_no_strike_plural_regression")
+    # Checklist item 19 (2026-07-14): the no_strike trigger list matched only
+    # singular "no strike" / "strike" as a bare noun, never plural "no strikes" /
+    # "strikes" -- ma_arlington_fire_2021's genuine "There shail be no strikes
+    # during the life of this Agreement." clause was a confirmed false negative
+    # under the old patterns. Fixed by adding an optional trailing "s?" to the
+    # strike-noun patterns in TRIGGERS["no_strike"].
+    positive_cases = [
+        ("item 19: Arlington fire's actual clause (plural, with the source's own "
+         "'shail' typo preserved verbatim)",
+         "There shail be no strikes during the life of this Agreement."),
+        ("plural 'no strikes' as a standalone noun phrase",
+         "There shall be no strikes, slowdowns, or work stoppages during the term "
+         "of this Agreement."),
+        ("plural inside the 'no employee/member shall engage in ... strike(s)' pattern",
+         "No employee covered by this agreement shall engage in, induce or "
+         "encourage any strikes, work stoppages, slow downs, or withholding of "
+         "services."),
+        ("plural 'work stoppages'",
+         "The parties agree there shall be no work stoppages of any kind during "
+         "the life of this contract."),
+        ("singular forms still work (no regression)",
+         "No employee shall engage in any strike or work stoppage during the "
+         "term."),
+    ]
+    for name, text in positive_cases:
+        spans = extract_spans(text)
+        check(f"{name} -> no_strike flagged", spans.flag("no_strike") == 1)
+
+    # Negative control: plain prose using "strike" as an unrelated verb/noun
+    # (e.g. "strike a balance", a lightning strike) must NOT be flagged -- the
+    # fix only adds an optional plural "s", it must not loosen word-boundary
+    # matching in a way that catches unrelated uses.
+    negative_cases = [
+        ("unrelated use of 'strike' (not a labor-strike context)",
+         "The parties agree to strike a fair balance between operational needs "
+         "and employee scheduling preferences."),
+    ]
+    for name, text in negative_cases:
+        spans = extract_spans(text)
+        check(f"{name} -> no_strike NOT flagged", spans.flag("no_strike") == 0)
+
+
 def test_comparability_false_positive_regression():
     print("test_comparability_false_positive_regression")
     # Each case is drawn from an audited comparability false positive (items 1, 8,
@@ -380,6 +424,7 @@ if __name__ == "__main__":
     test_page_number_at()
     test_extraction_and_spans()
     test_interest_arbitration_false_positive_regression()
+    test_no_strike_plural_regression()
     test_comparability_false_positive_regression()
     test_heading_detection()
     test_verbatim_guard()

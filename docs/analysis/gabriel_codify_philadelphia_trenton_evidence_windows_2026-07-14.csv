@@ -1,0 +1,105 @@
+contract_id,state,city,occupation_class,source_role,source_file,text_quality,window_id,window_text,window_char_count,reason_selected,notes
+pa_philadelphia_police_2025,PA,Philadelphia,police,police,corpus/pa_philadelphia/pa_philadelphia_police_fop5_act111award_2025_2027.pdf,clean,pa_philadelphia_police_2025_w1,"--- Excerpt 1 [Act 111 interest arbitration framing] ---
+This Act 111 interest arbitration was conducted under the dictates of the Pennsylvania Intergovernmental Authority Act (PICA Act), which created the
+
+--- Excerpt 2 [PICA ability-to-pay standard] ---
+In light of the PICA Act’s requirement that the Panel make findings, supported by substantial evidence in the record, that the City has the ability to pay the cost of the Award without adversely affecting service levels, the Panel has carefully considered the evidence and the contentions of the parties and makes the findings set forth herein.
+
+--- Excerpt 3 [balanced-budget finding] ---
+1. The City is statutorily required to maintain a balanced budget. 2. The City is also required to submit to PICA
+
+--- Excerpt 4 [peer-cities tax-projection finding] ---
+The City presented evidence that PICA’s analysis found that the City’s tax projections were the most accurate of the peer cities they studied, particularly the wage tax projections. The FOP also presented testimony regarding the accuracy of the City’s projections over the past several years, including a comparison of the City’s projections and actual results and an analysis of the potential for financial flexibility
+
+--- Excerpt 5 [civilianization tied to wage schedule] ---
+8. Civilianization: a. In recognition of the operational flexibility included in this section of the Award, the City shall increase the wage schedule by 1.5% effective January 1, 2026, and by 1.5% effective January 1, 2027.
+
+--- Excerpt 6 [retention incentives] ---
+17. Retention Incentives: The Panel directs the parties to submit recommendations to the Panel within 120 days regarding whether and to what extent additional adjustments may be warranted in order to foster improved retention of senior officers. The Panel encourages the parties to seek the views of senior officers in making these recommendations. The Panel will retain jurisdiction over this issue.",1961,"Philadelphia's police leg -- an Act 111 interest-arbitration award, not a base CBA, so its wage rationale is stated explicitly by the arbitration panel rather than merely referenced. Selected excerpts cover the interest-arbitration/PICA statutory framework itself, the panel's explicit ability-to-pay and balanced-budget findings, a peer-cities fiscal (not wage) comparison, a wage increase explicitly tied to a civilianization/operational-flexibility provision, and a retention-incentive directive -- together the clearest available test of whether Philadelphia's safety wage-setting mechanism resembles Ohio's ORC-4117 pattern, Arlington's shared-statute pattern, or a third, PICA-specific pattern.","This is an arbitration AWARD, not a base CBA -- expect no recognition/no-strike clause of the kind found in ordinary CBAs (PA police/fire strike prohibitions run through separate state law, not negotiated contract language); confirmed via keyword search that no no-strike phrase appears anywhere in this document. The peer-cities finding is about the ACCURACY of tax-revenue projections, not wage comparability -- do not assume this maps to peer_comparator_wage_comparability without checking the excerpt itself."
+pa_philadelphia_fire_2017,PA,Philadelphia,fire,fire,corpus/pa_philadelphia/pa_philadelphia_fire_iaff22_award_2017_2020.pdf,ocr_messy,pa_philadelphia_fire_2017_w1,"--- Excerpt 1 [Act 111 interest arbitration framing] ---
+This Act 111 interest arbitration was conducted under the dictates of the Pennsylvania Intergovernmental Authorities Act (“PICA Act’), which created the
+
+--- Excerpt 2 [PICA ability-to-pay standard] ---
+supported by substantial evidence in the record, that the City has the ability to pay the cost of the Award without adversely affecting service levels, the Panel has carefully considered the evidence and the contentions of the parties. After doing so and fully complying therewith, the Panel has made the following findings in support of its Award:
+
+--- Excerpt 3 [balanced-budget finding] ---
+1. The City is statutorily required to maintain a balanced budget. 2. The City is also required
+
+--- Excerpt 4 [budget-cuts-to-core-services history] ---
+the City made extensive cuts to its budget, including cuts which affected core services.
+
+--- Excerpt 5 [Heart and Lung Act / Civil Service Regulation 32 injury coverage] ---
+Heart and Lung Appeal: Any petition filed on behalf of the City or Claimant to the Arbitration Panel requesting the panel to issue a decision and order on behalf of the filing party. City Network Provider Panel: Complete list of all designated medical providers available to Covered Members under both Heart and Lung and Civil Service Regulation 32.",1332,"Philadelphia's fire leg -- the exact-cycle (2017-2020) counterpart to the DC47 Local 2186 MOA below. Same Act 111/PICA statutory framework as police, giving a within-city cross-occupation test on the safety side, plus genuine hazard/line-of-duty content via the PA Heart and Lung Act (a workers'-compensation-style benefit specific to injured police/fire).","Same document-type caveat as the police award -- an arbitration award, not a base CBA. OCR-quality extraction (ocr_messy in data/contracts.csv) -- excerpts were read from clearly legible passages only."
+pa_philadelphia_other_2025,PA,Philadelphia,other,non_safety_general,corpus/pa_philadelphia/pa_philadelphia_other_dc47_local2187_termsheet_2025_2028.pdf,ocr_messy,pa_philadelphia_other_2025_w1,"--- Excerpt 1 [term and wage steps] ---
+1. Term of Agree1nent. The collective bargaining agreement shall be for a period of three (3) years fron1 July 1, 2025, through.June 30, 2028. 2. Wages a. Effective upon ratification, there shall be an increase of 2.5% in each step of each pay range in the DC 47 pay plan.
+
+--- Excerpt 2 [OOC/temporary-promotion grievance-to-mediation pathway] ---
+arbitration of OOC and temporary promotion disputes (the ""OOC{fP Disputes""). ii. Should a grievance concerning OOC/fP Disputes remain unresolved after Step IV of the grievance procedure, the parties n1ay agree to submit the grievance to mediation using the services of a mutually-agreed-upon private mediator. Should the parties be unable to select a 1nediator, the parties agree to use the services of a mediator appointed by the Pennsylvania Bureau of Mediation. m. Mediation shall be inforn1al and confidential. No record shall be n1ade, and state1nents n1adc during mediation shall not be adn1issible in arbitration or other proceedings. Each party shall have a representative present with authority to settle the grievance.
+
+--- Excerpt 3 [mediation/arbitration cost-sharing] ---
+All costs associated witJ1 mediatjon and arbitration shall be split equally
+
+--- Excerpt 4 [Contract Grievances to PA Bureau of Mediation] ---
+Grievances not sul~jcct to arbitration and denied at Step IV on or after the effective date of this section (""Contract Grievances"") may be submitted to the Pennsylvania Bureau of Mediation Services (the ""Bureau"") with both parties' consent Any request made by either party to submit a Contract Grievance to mediation must be made within ten (10) business
+
+--- Excerpt 5 [Civil Service Regulation leave administration] ---
+Civil Service Regulation 21.051 governing advance use of sick leave will be",1814,"Philadelphia's non-safety leg for the 2025-2028 overlap-cycle match against police (2025-2027). A 5-document compiled packet (see extractor_fix_and_philadelphia_fire_gap_2026-07-13.md for the full breakdown) -- this window draws only from the main term-sheet document's own text. Selected excerpts cover wage steps, a specific grievance-to-mediation pathway for promotion disputes (distinct from the safety side's interest arbitration), cost-sharing for mediation/arbitration, and civil-service leave administration.","This document's execution status remains a totality-of-evidence judgment per the 2026-07-13 session's finding (no single unambiguous signature page for the main term sheet specifically) -- carry that caveat forward into any claim built from this window. OCR-quality extraction; several OCR artifacts preserved verbatim (e.g. 'Agree1nent' for 'Agreement', 'witJ1' for 'with')."
+pa_philadelphia_other_2017,PA,Philadelphia,other,non_safety_general,corpus/pa_philadelphia/pa_philadelphia_other_dc47_local2186_moa_2017_2020.pdf,ocr_messy,pa_philadelphia_other_2017_w1,"--- Excerpt 1 [term] ---
+1. The Agreement shall be for a three (3) year period from July 1, 2017 through June 30, 2020. ;
+
+--- Excerpt 2 [grievance procedure settlement-delivery amendment] ---
+The Union will deliver copies of all settlement agreements signed by the grievant, if applicable, and the Union to the Mayor’s Office of Labor Relations. The agreement shall be signed by the Mayor’s Office of Labor Relations within ten (10) working days of delivery. A fully-executed copy of the agreement shall be delivered to the Union within three (3) working days after being signed. The time for the City to implement the terms of any settlement agreement shall not begin to run until it is delivered to the Union. Delivery may be effectuated by email.
+
+--- Excerpt 3 [Civil Service Commission appeal route] ---
+may file an appeal with the Civil Service Commission or contest the denial through the Workers Compensation process.
+
+--- Excerpt 4 [PERA unfair-labor-charge withdrawal] ---
+In exchange for the Union’s withdraw of Unfair Labor Charge numbers PERA-C-18-
+
+--- Excerpt 5 [overtime rounding change] ---
+(c) Overtime: (i) Overtime will no longer be rounded to the half-hour. (ii) | Employees will be paid at the overtime rate for all time worked after 8 hours in 6 minute increments, in accordance with existing overtime rules. Employees will be paid at the overtime rate for all time worked after 10 hours in 6 minute increments, in accordance with existing overtime rules, for employees working a Pilot Work Schedule.",1524,"Philadelphia's non-safety leg for the exact-cycle 2017-2020 match against fire. Selected excerpts cover grievance-procedure amendments, a Civil Service Commission appeal pathway (distinct from the internal grievance procedure), a PA PERA-specific unfair-labor-practice-charge reference, and an overtime-computation change.",OCR-quality extraction; minor artifacts preserved verbatim.
+nj_trenton_police_2019,NJ,Trenton,police,police,corpus/nj_trenton/nj_trenton_police_pba11_cba_2019_2024.pdf,ocr_messy,nj_trenton_police_2019_w1,"--- Excerpt 1 [Article XVII, Arbitration (PERC-appointed)] ---
+Either party may institute arbitration proceedings when the Grievance Procedure has been exhausted by written demand upon the other party specifying the nature of the unsettled grievance or other matter in dispute. Within fifteen (15) days following presentation of such demand, the party demanding arbitration shall request the New Jersey Public Employment Relations Commission to appoint an arbitrator to hear the arbitration in the manner set forth in Rule 19:12- 14, Rules and Regulations and Statement of Procedure of the New Jersey Public Employment Relations Commission.
+
+--- Excerpt 2 [Section 17.05, Civil Service appeal excludes arbitration] ---
+Where an employee has exercised his right of appeal as expressly granted in the Revised Civil Service Rules or Statutes of New Jersey, there shall be no right to arbitration under the provisions of this article.
+
+--- Excerpt 3 [Section 17.07, fiscal matters excluded from interest arbitration] ---
+Article XVI and Article XVII, relating to grievance procedure and arbitration, shall apply only to the settlement of disputes, differences or grievances between the Employer and any employee or between the Employer and the Association set forth in Section 16.01 herein. Nothing herein shall require either party to submit fiscal matters such as wages, hours or benefits to interest arbitration.
+
+--- Excerpt 4 [Article XVIII, Strikes and Other Job Action] ---
+The employees recognize and acknowledge the existing state of the law in the State of New Jersey relating to the rights of public employees to strike or to take any other concerted action designed to illegally obstruct or disable the proper functions of the City, and employees agree to be bound by all such laws, as they now exist, or as they may be modified or amended, from time to time.
+
+--- Excerpt 5 [Article XIX, Management Rights (civil service constrained)] ---
+The employee recognizes that areas of responsibility must be reserved to the City to serve the public effectively. Therefore, the right to manage the affairs of the City and to direct the working forces and operations of the City, subject to the limitations of this agreement, is vested and retained by the City exclusively. The management and the conduct of the business of the City and the direction of its working force are the rights of the Employer. The employer shall have the right, subject to the terms herein contained, to hire employees, to classify, assign, transfer and promote them, to discipline or discharge them for cause, and in general maintain discipline, order and efficiency consistent with the Rules and Regulations of the Civil Service Commission. The Employer reserves the right to publish reasonable rules and regulations from time to time as it may be necessary and proper for the conduct of its business, provided that the same are consistent with the terms of this agreement, and provided further that such rules and regulations are subject to the grievance and arbitration provisions of this agreement.
+
+--- Excerpt 6 [line-of-duty death funeral reimbursement] ---
+The City agrees to reimburse a member’s family or estate the amount of funeral expenses, not to exceed $5,000, for any police officer who dies in the line of duty.",3305,"Trenton's safety leg (1 of 2) for the matched triad, overlap-cycle with the other two Trenton rows for 2021-2023. Selected excerpts cover the internal grievance-arbitration article, its explicit carve-out for Civil Service Commission appeals, the explicit exclusion of fiscal matters (wages, hours, benefits) from that internal interest-arbitration article -- meaning Trenton police wage-setting routes through NJ's EXTERNAL Police and Fire Public Interest Arbitration Reform Act, not this CBA's own Article XVII -- a statute-referencing (not clause-stated) no-strike article, management-rights language explicitly bounded by civil service rules, and a line-of-duty death benefit.","Section 17.07's exclusion clause is the same pattern already documented and corrected in data/contracts.csv for nj_trenton_fire_2021 (checklist item 13) -- confirms this is a genuine, recurring NJ institutional design (interest arbitration for police/fire wages lives in external statute, not internal CBA text), not a one-document quirk. Article XVIII references state law rather than stating a direct 'no strike' pledge -- may or may not trigger the no_strike attribute; worth checking codify's result against the deterministic layer's flag for this row."
+nj_trenton_fire_2021,NJ,Trenton,fire,fire,corpus/nj_trenton/nj_trenton_fire_fmba206_cba_2021_2026.pdf,ocr_messy,nj_trenton_fire_2021_w1,"--- Excerpt 1 [Section 19.01, minimum staffing tied to overtime program] ---
+In order to protect the health and safety of the employees of the Fire Department, and to provide an improved level of fire service to the City, the CITY agrees to provide during each day of duty a minimum of two (2) Battalion Chiefs for City-wide response, and one (1) Captain riding on each apparatus, at all times and to institute an overtime program designed to maintain this minimum staffing for firefighting.
+
+--- Excerpt 2 [callback pay] ---
+b. Callback: Each officer called back to work after completion of their regular tour of duty shail be given a minimum of four (4) hours overtime at 1 and '% times, the hourly rate. Said overtime shall be computed on an eight-hour day.
+
+--- Excerpt 3 [court-appearance premium pay] ---
+c, Court Appearances: Effective on the date of the signing of this Agreement, time spent in court by employees covered by this Agreement will be compensated at the rate of time and one half of regular pay, if the employee’s appearance in court is required by their official duties, and if the appearance falls outside of their assigned duty period for any given week.
+
+--- Excerpt 4 [Section 14.06, fiscal matters excluded from interest arbitration] ---
+Fiscal matters as wages, hours, and benefits are not subject to interest arbitration. Only the President or the Grievance Committee can authorize a grievance moving to binding arbitration.
+
+--- Excerpt 5 [line-of-duty death funeral reimbursement] ---
+not to exceed $10,000 for any Fire Officer who dies in the",1574,"Trenton's safety leg (2 of 2). Selected excerpts cover an explicit, health-and-safety-justified minimum-staffing clause directly tied to a mandatory overtime program (a clean mechanical link, same pattern family as Seekonk fire and Arlington fire), callback and court-appearance premium pay, the SAME fiscal-matters interest-arbitration exclusion pattern found in the police row above, and a line-of-duty death benefit.","The interest-arbitration exclusion clause here was already found and corrected in data/contracts.csv in a prior session (checklist item 13, an inversion the deterministic extractor originally missed) -- this codify wave provides an independent GABRIEL-based cross-check of that same finding."
+nj_trenton_other_2019,NJ,Trenton,other,non_safety_general,corpus/nj_trenton/nj_trenton_other_afscme2281_cba_2019.pdf,ocr_messy,nj_trenton_other_2019_w1,"--- Excerpt 1 [Section 22.01, Strikes and other Job Actions] ---
+New Jersey including Chapter 123 relating to the rights of public employees to strike. The Union will not authorize or sanction any strike or job action during the term of this
+
+--- Excerpt 2 [Section 9.03, Standby Employee] ---
+A standby employee shall be paid one (1) hour at straight time for each eight (8) hours, or fraction thereof, of standby time. Such standby shall not be deemed time worked for overtime
+
+--- Excerpt 3 [Section 2.01, dues deduction / union security] ---
+The City agrees to deduct Union dues, through a Union check off system, from the pay of the Union members, and to remit such deductions to the official designated by the Union in writing to receive such deductions. The Union will notify the City in writing thirty (30) days prior to any change in such dues. The Union agrees to file a dues deduction authorization form with the City
+
+--- Excerpt 4 [representation-fee (agency-fee) provision] ---
+be in an amount equal to eighty-five percent (85%) of the regular union membership dues, fees, and assessments as certified to the Employer by the Union. The Union may revise its certification of the amount of the representation fee at any time to reflect changes in the regular union membership dues, fees and assessments. The union’s entitlement to the representation fee shall
+
+--- Excerpt 5 [Section 4.01, grievance procedure] ---
+Any grievance or dispute which may arise between the parties including the application, meaning, or interpretation of this Agreement, shall be settled in the following manner. STEP 1. The Union Steward, with or without the employee, shall take up the grievance or",1690,"Trenton's non-safety leg. Selected excerpts cover a direct, non-safety no-strike clause referencing the same NJ Chapter 123 statutory framework as police/fire's own no-strike article (worth checking whether this is symmetric with the safety rows, echoing the Arlington finding), standby pay, union-security/dues-deduction and agency-fee provisions, and the grievance procedure.","No interest-arbitration or impasse-procedure language was found anywhere in this document after a full keyword scan -- consistent with NJ's interest-arbitration statute applying only to police/fire, not general municipal supervisory employees; a genuine, expected absence, not a search failure."

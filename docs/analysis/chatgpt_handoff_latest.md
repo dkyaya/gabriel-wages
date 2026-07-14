@@ -2,7 +2,49 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-14T15:04:00-04:00`
+Last updated: `2026-07-14T16:49:00-04:00`
+
+---
+
+## 2026-07-14T16:49:00-04:00 - Ledger rebuilt as claim-driven (not inventory); no_strike plural gap fixed corpus-wide; Philadelphia/Trenton codified; National Claim 4 revised to a genuinely mixed 2-2 split
+
+**Commit target:** `Rebuild ledger around interpretive standard; fix no_strike plural gap; codify Philadelphia/Trenton`
+
+### Current State After This Entry
+
+- **`docs/analysis/state_city_claims_ledger.md` fully restructured.** New top-of-file interpretive standard (claims must be evidence-backed, municipality-level, and revisable — not a source inventory) plus a 4-term maturity vocabulary (Design-ready / Codified-provisional / Report-ready / Gap claim). Every covered municipality rewritten into Claim/Evidence/Evidence-locator/Reasoning/Counterevidence/What-would-change-our-mind/Source-needs/Report-hooks structure. New "National Claims" section (5 claims) held to a stricter cross-municipality standard than municipal claims.
+- **`ingest/extract_spans.py`'s `no_strike` trigger list fixed**: now matches plural "no strikes"/"work stoppages" (previously singular-only). 6 new regression tests (`ingest/test_pipeline.py`, 60/60 passing). Full-corpus regression found and corrected 2 genuine false negatives: `ma_arlington_fire_2021` and `tx_san_antonio_fire_2024` (both `no_strike_clause_flag` 0→1). Final confirmation regression: `0 rows with flag changes` — repo clean.
+- **Philadelphia PA and Trenton NJ codified** (7 live calls, run only after the ledger rebuild and extractor fix were confirmed clean). 39 present on first pass, 35/39 grounded cleanly, 4/39 correctly auto-flagged for boundary leakage (consistent ~10% rate with prior waves). **A new failure mode was found and resolved**: `pa_philadelphia_fire_2017`'s raw model response contained the full 19-key JSON object written out twice within one pair of braces, and the empty second copy silently overwrote the genuine first copy under Python's duplicate-key semantics — confirmed isolated to this one call (of 12 this session), manually recovered via a first-value-wins JSON re-parse, independently re-verified against source text, and flagged per this project's standard `METHODOLOGY FLAG` convention (irregular provenance, genuine content — hidden from default "verified" view but fully preserved and explained, not silently promoted).
+- **National Claim 4 substantially revised**: the prior session's provisional "2-for-2 symmetric" framing (Houston TX, Arlington MA both showing non-safety sharing safety's impasse-backstop channel) is now a genuinely mixed 2-2 split. Philadelphia cleanly replicates Ohio's asymmetric pattern (safety has real Act 111 interest arbitration; non-safety shows rich grievance content but zero interest-arbitration finding). Trenton reaches the same asymmetric outcome through a different mechanism (both safety CBAs explicitly EXCLUDE wages from internal arbitration, deferring to an external NJ statute not directly observed in this corpus). Best current reading: state-specific institutional design, not one national rule. Updated `claim_register_2026-07-12.csv` (CLM-06) and `hypothesis_tracker_2026-07-12.csv` (H1/H2/H7) accordingly — no status/support-level field inflated.
+- Evidence layer: 1039 total rows (was 894), 0 duplicates, 388 present, 368 verified present.
+- This run's GABRIEL/codify calls were explicitly scoped to the Philadelphia/Trenton wave only, run only after Tasks 1-4 were confirmed clean; no FOIA/OPRA/RTKL/PRR; no push; no remote inspection/configuration; no new corpus documents ingested; `data/contracts.csv` had exactly 2 field corrections (no rows added/removed).
+
+### Validation/audit results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 (unchanged) | cities: 19 (unchanged)
+
+Full-corpus no_strike regression (post-fix): 2 corrections applied, then re-confirmed
+  clean: 0 rows with flag changes, 0 extraction errors, 0 timed out
+
+Philadelphia/Trenton codify: 7/7 calls succeeded, 39 present, 35/39 grounded, 4/39
+  boundary-leak-flagged, 1 row (7 findings) manually recovered from a duplicate-key
+  JSON bug and independently re-verified
+```
+
+### Recommended next run
+
+1. A second Pennsylvania or New Jersey city (Pittsburgh, Newark, or Jersey City) is the most direct next test of National Claim 4's 2-2 split.
+2. A reviewer audit of all `interest_arbitration_or_formal_impasse_backstop` positives corpus-wide — higher priority now given Trenton's exclusion-clause finding.
+3. Consider a duplicate-key-detecting safeguard in `scripts/gabriel_codify_pilot.py`'s reshape function if this failure mode recurs (not built this session — single-instance anomaly).
+4. Somerville MA / San Antonio TX non-safety sourcing remain open from prior sessions.
 
 ---
 
