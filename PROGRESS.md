@@ -6,6 +6,59 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-14 11:43 EDT (Ledger made permanent; Columbus/GABRIEL contamination check resolved clean; Somerville and San Antonio non-safety sourcing pass, no ingestion) - Renamed the claims ledger to a permanent path per explicit instruction; verified the GABRIEL evidence layer is NOT contaminated by the prior session's fabricated Columbus text (no rebuild needed); ran a targeted sourcing pass for the two highest-priority non-safety gaps (Somerville MA, San Antonio TX) and found no ingestible document for either, but produced a materially better-documented picture of both, including a probable institutional (not just search-coverage) explanation for San Antonio; no GABRIEL/codify/model/API calls; no push/remote work
+
+**Did**
+- Confirmed starting state: commit `322f7d2 Fix no_strike_clause_flag provenance gap; add state/city claims ledger`; `data/contracts.csv` 64 rows, 19 cities; repo clean per the prior session's full-corpus regression confirmation.
+- **Task 1 (persistent ledger).** `git mv docs/analysis/state_city_claims_ledger_2026-07-14.md docs/analysis/state_city_claims_ledger.md`. Updated the file's own header with an explicit "do not fork a dated copy" instruction and a `Last updated` line pattern (mirroring `chatgpt_handoff_latest.md`'s convention) in place of the old frozen "as of this build" framing. Swept the repo for other references to the old filename — found only inside this session's own two log entries (`PROGRESS.md`, `chatgpt_handoff_latest.md`), which were left untouched as historical record (they accurately describe what was created under that name at the time); this entry and future entries use the new permanent path.
+- **Task 2 (Columbus/GABRIEL contamination check).** Directly verified whether `docs/analysis/gabriel_codify_evidence_layer.csv`'s Columbus rows rest on the same fabricated `arbitration_clause_text` corrected in `data/contracts.csv` on 2026-07-13 — the one open question flagged at the end of the prior session:
+  - Re-extracted both Columbus PDFs fresh and confirmed the evidence layer's `interest_arbitration_or_formal_impasse_backstop` excerpts for both police and fire are genuine verbatim substrings (whitespace-normalized for PDF line-wrap) of the actual source text.
+  - Confirmed, as a control, that the *previously fabricated* `data/contracts.csv` text does **not** match the source PDFs even with the same whitespace normalization — validating that it really was fabricated, not just differently formatted.
+  - Checked all 37 of Columbus's `present`-status evidence-layer rows (not just the two interest-arbitration ones): all are `source_grounding_status=grounded`, `viewer_verified=1`.
+  - Traced the structural pathway: the codify evidence-window builder constructs its input windows directly from page-anchored source-PDF text (confirmed by inspecting `gabriel_codify_texas_ohio_scaleup_evidence_windows_2026-07-09.csv`'s window text, which carries page-number annotations), never from `data/contracts.csv`'s `arbitration_clause_text` field — so the fabrication-into-codify contamination pathway was never structurally possible.
+  - Individually re-checked all 7 evidence IDs supporting `CLM-2026-07-12-01`: all grounded/verified.
+  - **Conclusion: no contamination. No claim support changed. No rebuild needed.** Documented the full check in `docs/analysis/state_city_claims_ledger.md`'s "What would change this ledger" section.
+- **Task 3 (Somerville MA / San Antonio TX non-safety sourcing).** Ran a document-first sourcing pass for both cities (city HR/labor-relations pages, union sites, council legislative systems — Legistar and, for Somerville, an older IQM2 archive portal); no FOIA/PRR/OPRA/RTKL route used.
+  - **Somerville:** identified specific, current, cycle-dated non-safety union targets — SMEU (formerly SMEA) Unit B (DPW/Water & Sewer/Library/Clerk/Parking/Inspectional Services, FY2023-2025 MOA) and SEIU Local 3 Custodians (FY2023-2025) — but found no locatable agreement text on the city site, the unions' own sites, Legistar, or the IQM2 archive (whose full-text search is out of service); council appropriation orders fund these agreements without attaching the executed text. **Not ingested** — no document met the provenance bar.
+  - **San Antonio:** found that the city's ~6,000 civilian employees (AFSCME Local 2021) are represented through a non-binding advisory Employee Management Committee, not a collective bargaining agreement, per the union's own materials. Traced this to a likely institutional cause: Texas Gov't Code Ch. 617 generally prohibits public-sector collective bargaining; police/fire in San Antonio have a Local Gov't Code Ch. 174 statutory carve-out (which is why the existing `tx_san_antonio_police_2022`/`tx_san_antonio_fire_2024` CBAs exist), but San Antonio has not extended an equivalent channel to civilians — general wage-setting instead runs through council-adopted Municipal Civil Service Rules and a council-set pay plan (real, public, but unilateral administrative instruments with no bargaining-unit counterparty, so not schema-eligible as a CBA row even if ingested). Also checked San Antonio Water System (a separate legal entity) as an alternative lead — found no union contract. **Not ingested** — this session's finding is that a qualifying source most likely does not exist for this employer, not that search coverage was insufficient.
+  - Documented both sourcing trails in full in `docs/analysis/state_city_claims_ledger.md`'s Somerville and San Antonio sections. Appended a `notes`-field-only update to `docs/analysis/claim_register_2026-07-12.csv` (`CLM-2026-07-12-08`) and `docs/analysis/hypothesis_tracker_2026-07-12.csv` (`H6`) recording the San Antonio institutional finding — no `status`/`evidence_strength`/`report_ready` field changed on either, since this is a sourcing/institutional inference, not new coded evidence.
+
+**Decisions and why**
+- Left historical `PROGRESS.md`/`chatgpt_handoff_latest.md` entries referencing the old dated ledger filename untouched rather than editing past log entries — those entries are an accurate record of what existed at the time; only forward-looking references needed to move to the new path.
+- Did not ingest either Somerville or San Antonio non-safety candidates despite having specific, named, cycle-dated leads for Somerville — per the task's explicit instruction not to ingest speculatively, and because no document actually met the provenance standard (a locatable, actual agreement, not a news summary or funding-order title).
+- Recorded the San Antonio institutional finding as a light `notes` update to the claim register/hypothesis tracker rather than changing `evidence_strength`/`status` — the finding is a well-evidenced sourcing/institutional inference, not GABRIEL-coded evidence, and the project's own claim-update discipline (`claim_testing_source_wave_methodology_2026-07-12.md` §5-6) reserves status changes for codify-wave results.
+- Did not treat San Antonio's Municipal Civil Service Rules/pay plan as an ingestible substitute non-safety source, even though they are real and public, because they have no bargaining-unit counterparty or recognition clause and fail this project's unit-of-observation definition outright — flagged as a research-design question for a future session (whether to fold administrative/civil-service pay documents into the `civil_service_or_statutory_employment_channel` evidence base under a different row type) rather than decided unilaterally here.
+
+**Surprises/breakage**
+- None. The Columbus contamination check resolved cleanly in one pass (no rebuild needed) rather than requiring remediation, and the San Antonio institutional finding, while unexpected in its specificity, is well-supported by multiple independent sources (the union's own site, the relevant TX/local statutes, and the city's own civil-service materials).
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+54 passed, 0 failed (unchanged — no code or production-data changes this session)
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 (unchanged) | exact-cycle: 10 | overlap-cycle: 18
+exploratory adjacent matches: 2 (unchanged) | safety units unmatched: 6 (unchanged)
+cities: 19 (unchanged) -- no new corpus documents were ingested this session
+```
+Repo remains clean: no `data/contracts.csv` rows were added, removed, or field-changed this session (only `docs/analysis/claim_register_2026-07-12.csv` and `docs/analysis/hypothesis_tracker_2026-07-12.csv` got `notes`-only appends, plus the ledger rename/content update).
+
+**Confirmed:** no GABRIEL/codify, Harvard Proxy, model, or API calls; no FOIA/OPRA/RTKL/PRR (all sourcing was open-web search of city/union/legislative-portal pages); no git push; no remote inspection/configuration. No new corpus documents ingested.
+
+**Next steps**
+1. Somerville non-safety: the most promising remaining path is direct outreach to Somerville HR (`personnel@somervillema.gov`) or the SMEU/SEIU Local 3 unions for the actual FY2023-2025 agreement text — open-web sourcing has been run twice now (this session and, implicitly, via the original corpus build) without finding a document.
+2. San Antonio non-safety: reconsider the research-design question of whether San Antonio's Municipal Civil Service Rules / council pay plan should be captured as a different kind of institutional-channel evidence (not a CBA row) rather than continuing to search for a civilian CBA that may not exist; alternatively, redirect Texas non-safety sourcing effort to Austin or Houston, where it has already succeeded once each.
+3. Cheapest next codify step (unchanged from prior session): Worcester and Arlington, MA are fully ingested but uncodified.
+4. Philadelphia PA and Trenton NJ remain the strongest candidates for the next GABRIEL/codify wave — not run this session, not authorized.
+5. Extend `docs/analysis/state_city_claims_ledger.md` in place going forward — it is now at its permanent path.
+
+---
+
 ## 2026-07-14 11:08 EDT (no_strike_clause_flag discrepancy diagnosed and fixed; full-corpus regression confirmed clean; state/city claims ledger created) - Diagnosed and resolved the 8-row `no_strike_clause_flag` discrepancy left open by the prior session (checklist item 16), confirmed the full 64-row corpus now has zero unresolved extraction/production diffs, and produced the first persisted analytical synthesis document organizing the corpus by state/city and tying findings back to the existing claim register; no GABRIEL/codify/model/API calls; no push/remote work
 
 **Did**

@@ -2,7 +2,42 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-14T11:08:00-04:00`
+Last updated: `2026-07-14T11:43:00-04:00`
+
+---
+
+## 2026-07-14T11:43:00-04:00 - Ledger made permanent; Columbus/GABRIEL contamination check resolved clean; Somerville/San Antonio sourcing pass (no ingestion, one strong institutional finding)
+
+**Commit target:** `Make claims ledger permanent; verify Columbus evidence-layer clean; document Somerville/San Antonio sourcing`
+
+### Current State After This Entry
+
+- **`docs/analysis/state_city_claims_ledger.md` is now the permanent canonical path** (renamed from `state_city_claims_ledger_2026-07-14.md` via `git mv`). Its header now explicitly instructs future sessions not to fork a new dated copy. All content and the changelog history were preserved.
+- **The open Columbus/GABRIEL-evidence-layer contamination question is resolved: no contamination.** Directly verified that the GABRIEL evidence layer's Columbus `interest_arbitration_or_formal_impasse_backstop` excerpts (and all 37 of Columbus's `present`-status rows) are genuine, independently-grounded verbatim excerpts from the source PDFs — structurally unrelated to the fabricated `arbitration_clause_text` corrected in `data/contracts.csv` on 2026-07-13 (confirmed the fabricated text does NOT match the source even with whitespace normalization, while the evidence-layer excerpts DO). The codify evidence-window builder pulls its windows directly from page-anchored source-PDF text, never from `data/contracts.csv`'s text fields, so this contamination pathway was never structurally possible. All 7 evidence IDs supporting `CLM-2026-07-12-01` re-verified grounded/verified. **No claim support changed; no rebuild performed or needed.**
+- **Somerville MA non-safety sourcing: no ingestion.** Found specific, current, cycle-dated candidate unions (SMEU/SMEA Unit B — DPW/Library/Clerk/Parking/Inspectional Services, FY23-25; SEIU Local 3 Custodians, FY23-25) via city HR pages, union sites, Legistar, and an older IQM2 legislative-document archive — but no locatable agreement text for any of them. Documented in the ledger; next-step recommendation is direct outreach to HR/the union, not further open-web search.
+- **San Antonio TX non-safety sourcing: no ingestion, one strong institutional finding.** San Antonio's ~6,000 civilian employees (AFSCME Local 2021) are represented through a non-binding advisory Employee Management Committee, not a CBA — consistent with TX Gov't Code Ch. 617's general public-sector bargaining prohibition and San Antonio never having extended a Ch. 174-style statutory bargaining channel to civilians (only police/fire have that). General wage-setting instead runs through council-adopted Municipal Civil Service Rules and a council pay plan — real, public, but not a bargaining-unit contract, so not schema-eligible even if ingested. This reframes the San Antonio non-safety gap from "not yet found" to "plausibly does not exist for this employer." Recorded as a `notes`-only update to `CLM-2026-07-12-08` and `H6` (no status/evidence_strength/report_ready change).
+- This run did not call GABRIEL/codify, Harvard Proxy, models, or APIs; did not use FOIA/OPRA/RTKL/PRR; did not push; did not inspect/configure remotes; ingested no new corpus documents. `data/contracts.csv` is byte-for-byte unchanged from the prior session (only `docs/analysis/claim_register_2026-07-12.csv` and `docs/analysis/hypothesis_tracker_2026-07-12.csv` got `notes`-only appends).
+
+### Validation/audit results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+54 passed, 0 failed
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 (unchanged) | safety units unmatched: 6 (unchanged) | cities: 19 (unchanged)
+```
+
+### Recommended next run
+
+1. Somerville: try direct outreach to Somerville HR or SMEU/SEIU Local 3 for the actual FY23-25 agreement text — open-web sourcing has now been exhausted twice.
+2. San Antonio: decide whether to fold civil-service/administrative pay documents into the evidence base as a different row type, or redirect Texas non-safety sourcing effort to Austin/Houston (where it has already succeeded).
+3. Worcester and Arlington MA are the cheapest next codify targets (already ingested, zero new sourcing needed).
+4. Philadelphia PA and Trenton NJ remain the strongest candidates for the next GABRIEL/codify wave — not run, not authorized this session.
 
 ---
 
