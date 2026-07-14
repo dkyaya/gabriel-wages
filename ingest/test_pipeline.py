@@ -17,9 +17,7 @@ sys.path.insert(0, str(ROOT / "ingest"))
 from extract_spans import extract_spans, _verify_verbatim, _looks_like_heading
 from extract_text import extract, page_number_at
 from audit_coverage import summarize_matches
-
-sys.path.insert(0, str(ROOT / "analysis" / "gabriel_pilot"))
-from run_gabriel import _is_clearly_irrelevant, _is_clearly_relevant
+from relevance_filters import _is_clearly_irrelevant, _is_clearly_relevant
 
 PASS, FAIL = 0, 0
 

@@ -2,7 +2,45 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-14T16:49:00-04:00`
+Last updated: `2026-07-14T18:38:00-04:00`
+
+---
+
+## 2026-07-14T18:38:00-04:00 - Full repo cleanup and reorganization ahead of national scale-up
+
+**Commit target:** `Clean and reorganize repo for national-scale workflow`
+
+### Current State After This Entry
+
+- **`tmp/` cleaned: 232M → 5.6M.** Deleted 57 old relay-bundle directories + 61 zips (content already absorbed into current docs; fresh bundle built every session), a 74MB self-documented-scratch OCR page cache, and several smaller scratch dirs. `tmp/gabriel_codify_pilots/` (referenced by every `raw_output_ref` in the evidence layer) and a small extracted-text cache were kept. `.gitignore` now formally ignores `tmp/`.
+- **`docs/analysis/` cleaned: 240 → 89 files.** 262 files archived via `git mv` (full history preserved) into 9 themed folders under new `docs/archive/`: `legacy_gabriel_pilot_2026-06/` (the entire pre-codify v2-v10/websearch GABRIEL pipeline, code + docs), `legacy_reports_2026-06/`, `acquisition_recon_2026-06/`, `early_occupation_scoping_2026-07/`, `texas_ohio_ingestion_provenance_2026-07/`, `final_report_production_2026-07/`, `harvard_proxy_early_design_2026-07/`, `gabriel_codify_viewer_history_2026-07/`, `misc_diagnostics_2026-07/`. `data/` now holds exactly the 4 canonical `docs/schema.md` tables (moved out a superseded `ma_award_inventory.csv`).
+- **Found and fixed one genuine breakage**: `ingest/test_pipeline.py` imported directly from the legacy `analysis/gabriel_pilot/run_gabriel.py` (about to be archived). Extracted the two still-load-bearing functions verbatim into a new `ingest/relevance_filters.py`; updated the import. 60/60 tests pass.
+- **A reference check before every archive/delete caught one active cross-reference that would otherwise have been wrongly archived**: `seekonk_public_works_sanitation_language_scan_2026-07-06.*` is cited by the current Seekonk/Wayland codify audit doc — left in place.
+- **Zero functional impact confirmed**: rebuilt the evidence layer from all 7 `--input` waves post-cleanup and diffed against the committed `gabriel_codify_evidence_layer.csv` — byte-identical (1039 rows, 388 present, 368 verified present).
+- Full inventory, reference-check findings, and retention policy: `docs/analysis/repo_cleanup_audit_2026-07-14.md`.
+- This run made no GABRIEL/codify/model/API calls, ingested no new sources, and did not edit corpus contents (one explicitly `DISCARD_`-labeled orphaned file was removed from `inbox/`, outside `corpus/` itself); no FOIA/OPRA/RTKL/PRR; no push; no remote inspection/configuration.
+
+### Validation/audit results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19 (all unchanged)
+
+python -m py_compile on all 13 active scripts: all OK
+Evidence-layer rebuild vs. committed CSV: BYTE-IDENTICAL
+```
+
+### Recommended next run
+
+1. Resume analytical work: a second PA/NJ city codify wave is the most direct next test of the ledger's National Claim 4 (genuinely mixed 2-2 impasse-symmetry split).
+2. As the corpus scales, consider thematic subfolders within `docs/analysis/` once its remaining ~89 files become unwieldy again.
+3. Decide whether to keep archiving a dated HTML viewer snapshot on every rebuild, or rely on git history instead (not resolved this session).
 
 ---
 

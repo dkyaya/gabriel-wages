@@ -14,6 +14,12 @@ venv/
 .idea/
 .vscode/
 
+# Working/scratch outputs — noncanonical, regenerable, or relay-bundle staging.
+# Durable artifacts (evidence layer, ledger, audit docs) belong in docs/analysis/,
+# not here. See docs/analysis/repo_cleanup_audit_2026-07-14.md for the retention
+# policy this formalizes.
+tmp/
+
 # Corpus full-text storage — UNCOMMENT to keep documents out of git (Option A).
 # Licensed Westlaw/Lexis/Factiva pulls should NOT be committed to a shared remote.
 # corpus/

@@ -6,6 +6,59 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-14 18:38 EDT (Full repo cleanup and reorganization ahead of national scale-up: tmp/ 232M→5.6M, docs/analysis/ 240→89 files, 262 files archived, one real script breakage found and fixed) - Repo-wide cleanup/reorganization session: inventoried every top-level directory, checked references before touching anything, deleted 232MB of disposable tmp/ scratch (old relay bundles, obsolete pilot outputs, self-documented-as-scratch OCR caches), archived 262 files with full git history into 9 themed `docs/archive/` folders (legacy pre-codify GABRIEL pilot code+docs, early occupation-scoping memos, Texas/Ohio ingestion provenance, final-report drafting process, early Harvard-proxy/viewer design docs, old acquisition/records-requests/session-snapshot recon), found and fixed one genuine active-code breakage (a test-suite import into what was about to become archived code), and validated the entire pipeline end-to-end afterward including a byte-identical evidence-layer rebuild; no push/remote work
+
+**Did**
+- Confirmed starting state: commit `5fe85f5`; repo root ~1.9GB (`.claude/` 595M and `.venv/` 566M out of scope — session infra and gitignored Python env respectively; `.git/` 243M untouched; `tmp/` 232M, `corpus/` 207M, `inbox/` 95M, `docs/` 20M, top-level `analysis/` 7.5M, top-level `reports/` 3.0M were the real cleanup surface).
+- **Reference check (Task 2) before any deletion/move**, per the task's explicit instruction — grepped every archive candidate against the currently-active canonical docs (ledger, methodology doc, checklist, claim register/tracker, schema.md, AGENTS.md) and every active script's imports/CLI usage. This caught two things that would otherwise have silently broken:
+  - `docs/analysis/seekonk_public_works_sanitation_language_scan_2026-07-06.{md,csv}` is actively cross-referenced by the currently-kept Seekonk/Wayland codify audit doc — excluded from the archive batch it would otherwise have joined.
+  - `ingest/test_pipeline.py` imports `_is_clearly_relevant`/`_is_clearly_irrelevant` directly from the legacy `analysis/gabriel_pilot/run_gabriel.py` script — a genuine, still-load-bearing dependency into code that was about to be archived wholesale.
+- **Deletions:** 57 old relay-bundle directories + 61 old relay-bundle zips from `tmp/` (content already absorbed into current docs; a fresh bundle is built every session anyway); a 74MB raw OCR page-image/text cache (`tmp/san_antonio_ocr/`, self-documented in its own referencing memo as "not committed — working scratch only," durable output already preserved elsewhere); several smaller scratch dirs/scripts; an explicitly `DISCARD_`-labeled orphaned FOIA-staging PDF (confirmed unreferenced in either inbox manifest before removal); all `.DS_Store` (11) and `__pycache__` (3) filesystem clutter. **`tmp/` went from 232M to 5.6M.**
+- **Fixed the one real breakage:** extracted `_is_clearly_relevant`/`_is_clearly_irrelevant` (verbatim, no logic changes) plus their 5 supporting constant lists into a new `ingest/relevance_filters.py`, and updated `test_pipeline.py`'s import accordingly — active test code no longer reaches into archived directories.
+- **Archived 262 files via `git mv`** (full rename history preserved) into 9 themed `docs/archive/` folders: `legacy_gabriel_pilot_2026-06/` (the entire pre-codify v2-v10/websearch-era GABRIEL pipeline — 84 files from top-level `analysis/` plus 32 related `docs/analysis/` docs), `legacy_reports_2026-06/` (the v9 preliminary report deliverable, superseded by the current `docs/final_reports/` PDF/DOCX), `acquisition_recon_2026-06/` (old `docs/acquisition/`, `docs/records_requests/`, `docs/session_snapshots/`, `docs/ma_source_inventory.md`, plus a superseded `data/ma_award_inventory.csv` that wasn't one of `docs/schema.md`'s 4 canonical tables), `early_occupation_scoping_2026-07/` (43 files — per-occupation gap/scoping memos and the original, entirely superseded H1-H8 hypothesis-disposition audit), `texas_ohio_ingestion_provenance_2026-07/` (54 files — the granular fetch/source-resolution/recognition-clause audit trail for the OH/TX wave, already summarized elsewhere), `final_report_production_2026-07/` (14 files — drafting-process artifacts for a report whose actual deliverable is untouched in `docs/final_reports/`), `harvard_proxy_early_design_2026-07/` and `gabriel_codify_viewer_history_2026-07/` (early design docs superseded by current usage/adapter-design docs), `misc_diagnostics_2026-07/` (1 file). `docs/analysis/` went from 240 to 89 files.
+- Updated `.gitignore` to add `tmp/` (previously conventionally-untracked but never formally ignored) — now matches the task's target end-state ("tmp/ for ignored/noncanonical working outputs only"); `tmp/gabriel_codify_pilots/` (actively referenced by every `raw_output_ref` in the evidence layer) was confirmed never git-tracked either way, so this is a pure formalization.
+- Created `docs/analysis/repo_cleanup_audit_2026-07-14.md` — the full inventory, reference-check findings, deletion/move manifests, retained-despite-old rationale, and a recommended future retention policy.
+
+**Decisions and why**
+- Archived rather than deleted every file with genuine historical/provenance value (per AGENTS.md's provenance discipline and the task's own "archive before delete" principle carried over from the 2026-07-01 planning doc) — only genuinely disposable scratch (relay bundles, OCR image caches, an explicitly-labeled discard file, filesystem clutter) was actually deleted.
+- Did not touch `.claude/` (contains 2 live git worktrees, one locked) or `.venv/` — both are session/environment infrastructure outside this task's "research pipeline" scope, and touching either risks breaking things unrelated to repo content cleanliness.
+- Did not edit past `PROGRESS.md`/`chatgpt_handoff_latest.md` entries to "fix" the ~263 now-stale file-path mentions found in historical logs and audit docs — those are accurate historical descriptions of what existed at the time; the cleanup audit doc is the pointer for "where did this file go."
+- Extracted the two relevance-filter functions into a small, focused new module rather than either (a) leaving active test code importing from an archived directory, or (b) reverting the `analysis/` archive move entirely — the cleanest fix for a small, self-contained, still-load-bearing piece of otherwise-legacy code.
+
+**Surprises/breakage**
+- The `run_gabriel.py` import dependency was the one genuine "this would have silently broken" finding — exactly the scenario Task 2's reference-check requirement exists to catch. Caught and fixed before it caused any damage; `python ingest/test_pipeline.py` was run both before (to confirm the break) and after (60/60 pass) the fix.
+- No other functional breakage found. The evidence-layer rebuild (all 7 `--input` waves) after cleanup is byte-identical to the pre-cleanup committed version — the reorganization touched zero functional data.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | safety units unmatched: 6 | cities: 19 (all unchanged)
+
+python -m py_compile on all 13 active scripts (ingest/ + scripts/): all OK
+
+Evidence-layer rebuild (7 waves) vs. committed docs/analysis/gabriel_codify_evidence_layer.csv:
+BYTE-IDENTICAL (1039 rows, 388 present, 368 verified present)
+
+Every data/contracts.csv full_text_path resolves: confirmed, 0 missing
+Every canonical doc/data file present: confirmed (see repo_cleanup_audit_2026-07-14.md §9)
+```
+
+**Confirmed:** no GABRIEL/codify, model, or API calls; no FOIA/OPRA/RTKL/PRR; no new sources ingested; no corpus contents edited (only one explicitly-labeled orphaned discard file removed from `inbox/`, outside `corpus/` itself); no git push; no remote inspection/configuration.
+
+**Next steps**
+1. As the corpus scales nationally, `docs/analysis/`'s remaining ~89 files may eventually warrant thematic subfolders (e.g., `codify_waves/`, `claims/`) — not done this session (90 files isn't yet unwieldy; would require updating cross-references, higher risk than pure archive moves).
+2. A future pass could apply the same consolidation logic to `docs/archive/` itself once it accumulates its own clutter across many sessions.
+3. Decide (not resolved this session) whether to keep writing a new dated archival HTML viewer snapshot on every `build_codify_evidence_viewer.py` run, or rely on git history for that record instead.
+4. Resume the actual analytical work: a second PA/NJ city codify wave remains the most direct next test of the ledger's National Claim 4 (see the 2026-07-14 16:49 EDT entry above).
+
+---
+
 ## 2026-07-14 16:49 EDT (Ledger rebuilt around a claim-driven interpretive standard; no_strike plural extractor gap fixed corpus-wide; Philadelphia/Trenton codified — National Claim 4 revised from provisional-symmetric to genuinely-mixed) - Five-task session: rebuilt state_city_claims_ledger.md's entire interpretive frame (Design-ready/Codified-provisional/Report-ready/Gap-claim vocabulary, full Claim/Evidence/Reasoning structure per municipality, a new stricter National Claims section); fixed and regression-tested the no_strike plural-phrasing extractor gap found last session; ran the Philadelphia/Trenton codify wave (7 calls, found and resolved a new duplicate-key JSON failure mode); substantially revised the corpus's key cross-state finding from a 2-for-2 symmetric pattern to a genuinely mixed 2-2 split; no push/remote work
 
 **Did**
