@@ -6,6 +6,63 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-14 11:08 EDT (no_strike_clause_flag discrepancy diagnosed and fixed; full-corpus regression confirmed clean; state/city claims ledger created) - Diagnosed and resolved the 8-row `no_strike_clause_flag` discrepancy left open by the prior session (checklist item 16), confirmed the full 64-row corpus now has zero unresolved extraction/production diffs, and produced the first persisted analytical synthesis document organizing the corpus by state/city and tying findings back to the existing claim register; no GABRIEL/codify/model/API calls; no push/remote work
+
+**Did**
+- Confirmed starting state: commit `9c1cb2c Implement and regression-test extractor fix; close Philadelphia fire-window gap`; `data/contracts.csv` 64 rows, 19 cities; item 16 of the checklist open (8-row `no_strike_clause_flag` discrepancy, previously guessed to be OCR non-determinism and left uninvestigated).
+- **Phase 1 — diagnosis.** Ruled out both suspected causes with direct evidence before touching any data:
+  - OCR non-determinism: ran `extract_text.extract()` twice in the same process on the largest affected OCR document (`tx_san_antonio_saffa_fire_cba_2024.pdf`, 43MB scanned-photo PDF) and got byte-identical 229,734-character output both times. `ingest/extract_text.py`'s OCR path is single-threaded (`pdf2image` + `pytesseract`, no parallelism, no randomness source), so non-determinism was never a plausible mechanism for this codebase.
+  - `no_strike` trigger-logic bug: the trigger list in `extract_spans.py` was never modified by the 2026-07-13 fix (which touched only `interest_arbitration`/`comparability`). Individually verbatim-verified all 8 rows' fresh flag values against their source PDF text — every fresh value was correct against the existing, unmodified triggers.
+  - **Actual cause: data provenance, not extraction.** 6 of 8 rows had a `no_strike_clause_flag` that was simply never populated at original ingestion (blank, same non-pipeline-provenance pattern as the prior session's Columbus/NJ findings). 1 row (`ma_newton_police_2015`) was a genuine positive missed at ingestion (a real "ARTICLE XIV NO STRIKE CLAUSE" exists in the source). 1 row (`tx_san_antonio_fire_2024`) had a stored `1` with zero support in the deterministically-extracted text and no companion text field to audit it (`no_strike` is flag-only in `docs/schema.md`, unlike the other three mechanism flags — a structural audit-trail gap noted for future schema work, not fixed this session).
+- **Phase 1 — correction.** Applied all 8 corrections to `data/contracts.csv` by re-running the current, unmodified `extract()`+`extract_spans()` pipeline against each row's actual source PDF and writing the reproducible output: `ma_newton_police_2015` 0→1; `tx_san_antonio_police_2022` blank→1; `tx_san_antonio_fire_2024` 1→0; `oh_cincinnati_police_2024` blank→0; `oh_cincinnati_police_sup_2024` blank→0; `oh_cincinnati_fire_2023` blank→0; `oh_toledo_police_2024` blank→1; `oh_toledo_fire_2024` blank→0. No rows added or removed; only 8 field values changed.
+- **Phase 1 — verification.** `scripts/validate.py` and `ingest/test_pipeline.py` passed immediately after the correction. Then ran a full 64-row regression check (re-extract every row's source PDF, re-run `extract_spans`, diff against production) to positively confirm zero remaining diffs anywhere in the corpus, not just on the 8 corrected rows — confirmed clean (see Validation/audit results below).
+- Updated `docs/analysis/wage_mechanism_evidence_checklist.md`: item 16 marked RESOLVED with the full diagnosis and correction record; added item 18 recording the final zero-diff full-corpus regression confirmation.
+- **Phase 2 — analytical synthesis.** Created `docs/analysis/state_city_claims_ledger_2026-07-14.md`, a persisted, living Markdown document organizing the corpus by state → city → sources → synthesized claims → limits/gaps, covering all 19 corpus cities (16 codified: 9 MA + 4 OH + 3 TX; 3 ingested-but-uncodified: 2 MA + Philadelphia PA) plus the 8 remaining PA/NJ candidate/design-level cities from `docs/analysis/state_city_claim_map_2026-07-12.csv`. Every claim is scoped to what its cited sources actually show and cross-referenced to `CLM-2026-07-12-01` through `-08` where a claim ID applies; cities with no codified evidence are explicitly labeled design-ready/hypothesis, not claims. Ends with a cross-state synthesis section and a consolidated source-needs list.
+
+**Decisions and why**
+- Investigated before correcting, and correction was mechanical (re-run the unmodified deterministic pipeline, write its actual output) rather than manual/judgment-based — consistent with the "capture verbatim, never pre-code" discipline and the same precedent set by the prior session's Columbus fabricated-text correction. No row's value was chosen by RA discretion about what the clause "should" say.
+- Did not add a schema field for `no_strike_clause_text` even though its absence contributed to `tx_san_antonio_fire_2024` being unauditable — flagged as a known gap rather than changed, since a schema change is a bigger-scope decision than this session's mandate and wasn't separately authorized.
+- Wrote the Phase 2 ledger as a living document with a changelog rather than a dated one-off snapshot, per the explicit instruction that this is "not yet a full final report" but a persisted working document meant to be extended in future sessions.
+
+**Surprises/breakage**
+- None. Unlike the prior session (two rounds of extractor-logic iteration), this session's diagnosis was correct on the first pass for every one of the 8 rows, verified empirically at each step before any correction was applied — no rework was needed.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+54 passed, 0 failed (unchanged from prior session — no_strike fix was a data
+correction, not a code change)
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 (unchanged) | exact-cycle: 10 | overlap-cycle: 18
+exploratory adjacent matches: 2 (unchanged)
+safety units unmatched: 6 (unchanged)
+cities: 19 (unchanged)
+  -- unaffected by the no_strike fix, as expected: no_strike_clause_flag does not
+  feed occupation_class/cycle/matched-pair logic
+
+Full-corpus regression check (all 64 rows, source PDFs re-extracted and
+re-run through extract_spans, diffed against production):
+SUMMARY: 0 rows with flag changes, 0 extraction errors, 0 timed out (>90s)
+```
+Repo is clean: every discrepancy documented in `wage_mechanism_evidence_checklist.md` (items 1-16) is now RESOLVED; no known unresolved deterministic-extraction/production-data mismatch remains anywhere in the corpus.
+
+**Confirmed:** no GABRIEL/codify, Harvard Proxy, model, or API calls; no FOIA/OPRA/RTKL/PRR; no git push; no remote inspection/configuration. No new corpus documents ingested this session (data-correction and analytical-synthesis session only — `ingest/extract_spans.py` and `ingest/extract_text.py` were read but not modified).
+
+**Next steps**
+1. Check whether `docs/analysis/gabriel_codify_evidence_layer.csv` was built from the same fabricated Columbus `arbitration_clause_text` corrected in the prior session — not checked this session, and directly relevant to whether `CLM-2026-07-12-01`'s existing Columbus support needs re-verification.
+2. Cheapest next codify step: Worcester and Arlington MA are fully ingested (`matched_pair` design, fire+2 non-safety each) but have zero codified evidence-layer rows — no new sourcing required to add 2 more codified MA cities.
+3. Highest-leverage single source acquisition: a Somerville MA non-safety CBA would let the corpus's strongest existing source (9 verified-present attributes, the only verified peer-comparator row) finally support a real matched comparison.
+4. Highest-priority non-safety gap: a San Antonio TX general-municipal CBA, explicitly `urgent` per `CLM-2026-07-12-08`.
+5. Philadelphia PA and Trenton NJ are both now genuinely matched-design and are the strongest candidates for the next GABRIEL/codify wave — not run this session, not authorized.
+6. Extend `docs/analysis/state_city_claims_ledger_2026-07-14.md` in place (it has a changelog) rather than creating a new dated file, when future sessions add codified evidence or new cities.
+
+---
+
 ## 2026-07-13 16:10 EDT (Extractor fix implemented and regression-tested corpus-wide; Philadelphia fire-gap closed exact-cycle; DC47 packet precisely broken down) - Implemented the extraction fix diagnosed in the prior session's memo, regression-tested it against all 64 corpus PDFs (found and fixed 2 additional false-positive modes the fix plan hadn't anticipated), corrected 27 production data/contracts.csv fields across 18 rows, gave a precise document-level breakdown of the Philadelphia DC47/Local 2187 packet, and closed Philadelphia's fire-window gap with a genuine exact-cycle match; no GABRIEL/codify/model/API calls; no push/remote work
 
 **Did**

@@ -2,7 +2,46 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-13T16:10:00-04:00`
+Last updated: `2026-07-14T11:08:00-04:00`
+
+---
+
+## 2026-07-14T11:08:00-04:00 - no_strike_clause_flag fixed and corpus-wide confirmed clean; first state/city claims ledger created
+
+**Commit target:** `Fix no_strike_clause_flag provenance gap; add state/city claims ledger`
+
+### Current State After This Entry
+
+- **The `no_strike_clause_flag` discrepancy left open by the prior session (checklist item 16) is resolved.** Diagnosis ruled out both suspected causes with direct evidence: OCR non-determinism was disproved by a same-process repeat-extraction identity test (byte-identical output twice on the largest affected OCR document); a trigger-logic bug was ruled out because the `no_strike` trigger list was never touched by the 2026-07-13 fix and every one of the 8 rows' fresh values was individually verbatim-verified as correct against its source text. Actual cause: **data provenance, not extraction** — 6 of 8 rows had a `no_strike_clause_flag` never populated at original ingestion (blank), 1 was a genuine missed positive (Newton), 1 had a stored value with zero support in the deterministic extraction and no companion text field to audit it (`no_strike` is flag-only in the schema, unlike the other three mechanism flags — a noted structural gap, not fixed this session). All 8 corrected to match the current, unmodified pipeline's actual reproducible output on each source document — no code changes, only `data/contracts.csv` field values.
+- **A full 64-row regression check, run after the correction, confirms the entire corpus is now clean:** `SUMMARY: 0 rows with flag changes, 0 extraction errors, 0 timed out`. Every discrepancy documented across `wage_mechanism_evidence_checklist.md` items 1-16 is now RESOLVED.
+- **First analytical synthesis document created:** `docs/analysis/state_city_claims_ledger_2026-07-14.md` — a persisted, living Markdown ledger organizing all 19 corpus cities by state, with per-city sources, synthesized claims (cross-referenced to `CLM-2026-07-12-01` through `-08` where applicable), and limits/gaps. 16 cities are codified evidence (MA/OH/TX); Worcester and Arlington MA are ingested-but-uncodified; Philadelphia PA and the NJ/PA cities are explicitly labeled design-level hypotheses (no codified evidence exists yet for any PA/NJ city). Ends with a cross-state synthesis and consolidated source-needs list. This is a living document (has a changelog) meant to be extended in place, not superseded by a new dated file, as future codify waves land.
+- This run did not call GABRIEL/codify, Harvard Proxy, models, or APIs; did not use FOIA/OPRA/RTKL/PRR; did not touch `docs/schema.md` or any `docs/final_reports/` artifact; did not inspect/configure remotes; did not push; ingested no new corpus documents.
+
+### Validation/audit results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+54 passed, 0 failed (unchanged — data correction only, no code changes)
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 (unchanged) | exact-cycle: 10 | overlap-cycle: 18
+exploratory adjacent matches: 2 (unchanged) | safety units unmatched: 6 (unchanged)
+
+Full-corpus regression check (64/64 rows, source PDFs re-extracted, diffed
+against production):
+SUMMARY: 0 rows with flag changes, 0 extraction errors, 0 timed out (>90s)
+```
+
+### Recommended next run
+
+1. Check whether `docs/analysis/gabriel_codify_evidence_layer.csv` was built from the same fabricated Columbus `arbitration_clause_text` corrected in the prior session — not checked this session; directly relevant to whether `CLM-2026-07-12-01`'s Columbus support needs re-verification.
+2. Cheapest next codify step: Worcester and Arlington MA are fully ingested (fire + 2 non-safety each, `matched_pair` design) but have zero codified evidence-layer rows.
+3. Philadelphia PA (matched on both legs) and Trenton NJ (matched on all three legs) are both genuinely design-ready for a first PA/NJ GABRIEL/codify wave — not run this session, not authorized.
+4. Highest-leverage single source acquisition: a Somerville MA non-safety CBA (would let the corpus's strongest existing source, 9 verified-present attributes, finally support a real matched comparison). Highest-priority non-safety gap: a San Antonio TX general-municipal CBA (`urgent`, `CLM-2026-07-12-08`).
 
 ---
 
