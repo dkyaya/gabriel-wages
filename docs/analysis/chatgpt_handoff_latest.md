@@ -2,7 +2,45 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-14T11:43:00-04:00`
+Last updated: `2026-07-14T15:04:00-04:00`
+
+---
+
+## 2026-07-14T15:04:00-04:00 - Worcester/Arlington GABRIEL codify wave (49/49 grounded); Arlington complicates the Ohio-triad impasse-asymmetry pattern
+
+**Commit target:** `Codify Worcester/Arlington MA (cheap wave); propagate Arlington's impasse-symmetry finding into claim register/hypothesis tracker/ledger`
+
+### Current State After This Entry
+
+- **Worcester and Arlington, MA are now codified** (5 live GABRIEL/codify calls via the Harvard Proxy adapter, `gpt-5.4-nano`, explicitly authorized and scoped to these two cities only — Philadelphia/Trenton deliberately not touched). `docs/analysis/gabriel_codify_evidence_layer.csv` grew from 781 to 894 rows (0 duplicates); present rows 293→342, verified present 284→333. **49/49 of this wave's present excerpts grounded cleanly, 0 boundary-leakage or mechanism-label-leakage flags** — the cleanest codify wave to date.
+- **Arlington fire + public_works (exact-cycle 2021-2024) is the corpus's richest genuine matched PAIR result**: 5 shared present attributes (civil service, interest-arbitration/impasse-backstop, management rights, no-strike, overtime/callback), all cleanly grounded. Also the first non-safety exemplar of the interest-vs-grievance arbitration distinction (`CLM-2026-07-12-06`).
+- **Important complication surfaced**: Arlington's non-safety row shares its safety counterpart's interest-arbitration/impasse-backstop AND no-strike coverage — both cite the same MA statutory mechanism (Ch. 1078 of the Acts of 1973) — the opposite of the Ohio triads' asymmetric pattern (`CLM-2026-07-12-01`), and the second non-Ohio matched pair (after Houston TX) to show this. Propagated into `hypothesis_tracker_2026-07-12.csv` H1/H2/H7/H8 (`notes`/counterevidence only — support levels deliberately NOT changed; 2 cross-state examples isn't yet "regular" per H2's own decision rule) and `claim_register_2026-07-12.csv` CLM-01 (note only, stays OH-scoped), CLM-03 (substantially strengthened — evidence/reasoning/limitations), CLM-06 (extended with the new non-safety exemplar).
+- **Worcester's three rows are correctly thin, not broken**: all 3 are wage/benefits amendment MOAs to a prior base contract not in this corpus (one titled "DRAFT #1"), so `not_found` on recognition/no-strike/interest-arbitration/minimum-staffing reflects document content, not an extraction problem.
+- **A likely-generalizable deterministic-extractor gap was found via cross-check**: `no_strike`'s regex trigger list only matches singular "no strike," not plural "no strikes" — `ma_arlington_fire_2021` is a confirmed false negative. Documented as `wage_mechanism_evidence_checklist.md` item 19, **not fixed this session** (out of this session's GABRIEL/codify-only scope).
+- Also corrected a stale, incorrect codified-city count in `state_city_claims_ledger.md`'s own header (had said "16 cities, 9 MA" for the pre-session state; the true figure, verified directly from the evidence layer, was 13/6 MA). Current verified count: **15 codified cities** (8 MA + 4 OH + 3 TX).
+- This run did not call GABRIEL/codify outside the explicitly authorized Worcester/Arlington wave; did not use FOIA/OPRA/RTKL/PRR; did not push; did not inspect/configure remotes; ingested no new corpus documents; `data/contracts.csv` is unchanged.
+
+### Validation/audit results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+54 passed, 0 failed
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 (unchanged) | cities: 19 (unchanged) -- data/contracts.csv untouched this session
+
+Worcester/Arlington live codify run: 5/5 calls succeeded, 49 present, 49/49 grounded, 0 flags
+Evidence layer rebuild: 894 total rows (was 781), 0 duplicates, 342 present, 333 verified present
+```
+
+### Recommended next run
+
+1. Fix the `no_strike` plural-phrasing extractor gap (checklist item 19) and re-run the full-corpus regression check.
+2. Philadelphia PA and Trenton NJ are the strongest next codify-wave candidates — also a natural third, cross-framework test of the Arlington-surfaced impasse-symmetry question (PA Act 111 / NJ's Police and Fire Public Interest Arbitration Reform Act, distinct from both Ohio's ORC 4117 and MA's Ch. 1078).
+3. Somerville MA / San Antonio TX non-safety sourcing remain open (see prior entry) — not touched this session.
 
 ---
 

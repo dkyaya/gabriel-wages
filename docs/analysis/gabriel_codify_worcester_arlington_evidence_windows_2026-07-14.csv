@@ -1,0 +1,104 @@
+contract_id,state,city,occupation_class,source_role,source_file,text_quality,window_id,window_text,window_char_count,reason_selected,notes
+ma_worcester_fire_2017,MA,Worcester,fire,fire,corpus/ma_worcester/worcester_local1009_fire_cba_2017-2020.pdf,ocr_messy,ma_worcester_fire_2017_w1,"--- Excerpt 1 [preamble] ---
+This Memorandum is considered off the record and shall not be binding until approved by the City Manager and ratified by the membership of the Union. Failing such approval or ratification, this Memorandum shall not be admissible in any proceeding between the parties, and both parties will be free to revert to bargaining positions prior to the negotiations which produced this agreement. The ratified agreement shall be subject to funding in accordance with G.L. c. 150E.
+
+--- Excerpt 2 [Buyback Benefits] ---
+The intent of the new Benefits set forth below is to improve efficiency, increase attendance/man power levels, and reduce the cost of overtime in the Fire Department. The parties agree to meet annually to determine if the calendar year goals have been met through the reduction in the average sick leave usage of any type to 5 (five) or less tours (“sick leave reduction goal”).
+
+--- Excerpt 3 [Wellness Leave Tour/Buyback] ---
+L1009 members who use 5 (five) or less tours for sick leave of any type in the previous calendar year (beginning in calendar 2017) are eligible for 1 (one) Wellness Tour in the following calendar year (beginning in calendar year 2018), which the member may alternatively opt to be paid to the member in the form of a cash payment at the rate of 75% (seventy five percent) of their base rate of pay (based on an average 12 hour tour).
+
+--- Excerpt 4 [Side Letter re: civilian Fire Engineer position] ---
+With this Side Letter, the City of Worcester (the “City’”) and Local 1009, I.A.F.F. (the “Union”) resolve all disputes regarding the addition of a new civilian Fire Engineer position in Fire Department Fire Prevention Division. The Union agrees that the City has met all of its bargaining, contractual and legal obligations, including under M.G.L. c. 150E, related to adding a new Civilian Fire Engineer position in the Fire Department Fire Prevention Division, including without limitation the work to be performed by that position, and that the City can proceed to do so. The intention of the new position is to supplement the Fire Prevention Division. The City acknowledges that, in adding the position, there is no intention to have it take the place of a bargaining unit position.
+
+--- Excerpt 5 [Health Insurance] ---
+Effective July 1, 2017, the health insurance plan designs listed in Attachment A will be implemented.",2396,"Worcester's only ingested fire source; forms Worcester's exact-cycle matched-triad safety leg (fire vs. clerical_admin + public_works, all 2017-2020). Selected excerpts cover what this specific document actually contains -- it is a wage/benefits reopener MOA amending a prior base agreement not in this corpus, not a full base CBA, so no recognition/no-strike/grievance/minimum-staffing articles are present in this window (see notes).","IMPORTANT: this document is explicitly 'off the record and shall not be binding until approved by the City Manager and ratified by the membership' -- an execution-status caveat, and it is a wage/benefits-only reopener MOA, not the base fire CBA (which is not in this corpus). Expect not_found for recognition/no-strike/grievance-arbitration/minimum-staffing/interest-arbitration attributes -- this reflects what this specific document covers, not an absence of those provisions in the underlying employment relationship."
+ma_worcester_clerical_admin_2017,MA,Worcester,clerical_admin,non_safety_general,corpus/ma_worcester/worcester_local490_clerical_cba_2017-2020.pdf,clean,ma_worcester_clerical_admin_2017_w1,"--- Excerpt 1 [preamble] ---
+The 2016-2017 contract shall be continued in full force and effect, except as modified herein, pending the drafting of a successor contract document.
+
+--- Excerpt 2 [Article 2A, Probationary Period] ---
+All bargaining unit members shall actually serve a probationary period of one (1) year from the date of hire. Probationary employees may be disciplined or discharged by the City without cause or prior notice, and any such action shall not be subject to a grievance or arbitration by the employee or the Union.
+
+--- Excerpt 3 [Promotional Position] ---
+The Union agrees that, effective July 1, 2018, the position of Principal Staff Assistant in the Inspectional Services Office will be a non-bargaining unit position and may include responsibility for some of the duties previously performed by the Principal Accountant in the Inspectional Services Office, which is a bargaining unit position.
+
+--- Excerpt 4 [Article 5, Wages] ---
+Effective January 1, 2018, the City shall provide a two percent (2%) base wage increase Effective January 1, 2019, the City shall provide a two percent (2%) base wage increase Effective January 1, 2020, the City shall provide a two percent (2%) base wage increase (b) The parties agree to add a new maximum step to the salary schedule at 2% above the current maximum step, effective July 1, 2017.
+
+--- Excerpt 5 [Health Insurance] ---
+The parties agree that the City may make the following changes in the City’s health insurance without any further bargaining by the City with the Union. (a) Health insurance deductibles for all plans to be increased from $250/$750 to $500/$1,000 effective as of January 1, 2018.",1676,"Worcester's non-safety leg (1 of 2) for the exact-cycle matched triad. Selected excerpts cover the actual amendment content: a new probationary-period article that explicitly excludes probationary discipline from grievance/arbitration, a position moved out of the bargaining unit (a real classification/scope change), wage steps, and health-insurance changes made unilaterally by the City without further bargaining.",This document amends a 2016-2017 base contract not in this corpus ('continued in full force and effect... except as modified herein') -- recognition/no-strike/full grievance-procedure articles are not visible in this window because this document only states amendments to them.
+ma_worcester_public_works_2017,MA,Worcester,public_works,non_safety_general,corpus/ma_worcester/worcester_local170_dpw_cba_2017-2020.pdf,clean,ma_worcester_public_works_2017_w1,"--- Excerpt 1 [title page] ---
+MEMORANDUM OF AGREEMENT (DRAFT #1) between THE CITY OF WORCESTER and LOCAL 170, TEAMSTERS (DPW CLERKS)
+
+--- Excerpt 2 [Article 35, Hours of Work and Overtime] ---
+Overtime work at Ballard Street will be paid at time and one-half (1.5x) the Head Clerk maximum step base hourly rate, unless the employee is at a higher pay grade in which case the overtime rate will be one and one-half (1.5x) that employee’s base hourly rate.
+
+--- Excerpt 3 [Sick Leave Donation] ---
+The parties agree that sick leave donation requests may be made to other City bargaining unit employees to donate sick time, provided there is a signed agreement from the Union representing the other bargaining unit stating they are willing to participate in the sick leave donation program. Such signed agreement will be submitted with the MOA initiating a sick leave donation request. The City must approve any sick leave donation program.
+
+--- Excerpt 4 [Article 38, Wages] ---
+Effective January 1, 2018, the City shall provide a two percent (2%) base wage increase Effective January 1, 2019, the City shall provide a two percent (2%) base wage increase Client Matter/09556/00090/A5032071.DOCX 2 Effective January 1, 2020, the City shall provide a two percent (2%) base wage increase (b) The parties agree to add a new maximum step to the salary schedule at 2% above the current maximum step, effective July 1, 2017.
+
+--- Excerpt 5 [Article 42, Miscellaneous Provisions] ---
+The parties agree to convene a study committee to develop a sick leave buyback policy.
+
+--- Excerpt 6 [closing] ---
+This Agreement is subject to ratification by the Union and by the City Manager and appropriation by the City Council.",1708,"Worcester's non-safety leg (2 of 2) for the exact-cycle matched triad. Selected excerpts cover the actual amendment content: a location-specific overtime rate, a sick-leave donation program requiring inter-union agreement and City approval, wage steps, a study-committee commitment, and the ratification/appropriation clause.","Titled 'DRAFT #1' on its own cover and amends an existing contract not in this corpus -- an execution-status caveat similar to the fire MOA above. The signature blocks in the source PDF show typed names but no visible signature marks or dates filled in (consistent with a late-stage draft), though a 'RATIFIED' block with different signatories does also appear later in the document."
+ma_arlington_fire_2021,MA,Arlington,fire,fire,corpus/ma_arlington/ma_arlington_fire_iaff_cba_fy2022_2024.pdf,clean,ma_arlington_fire_2021_w1,"--- Excerpt 1 [Article II, Agency Fee] ---
+In accordance with Chapter 150E, effective immediately after the effective date of this agreement, it shall be a condition of employmeri: that all employees in the bargaining unit who are not members of Local 1297 in goo. standing and who have been employed for thirty (30) days or more, shall pay to Loval 1297 an agency fee to defray costs of collective bargaining and contract administr
+
+--- Excerpt 2 [Article V, Management Rights] ---
+Except as otherwise provided by this Agreement, the Town shall not be limited in any way in the exercise of the regular and customary functions of municipal management including, by way of example and not limitation, the right to appoint, promote, assign and transfer employees.
+
+--- Excerpt 3 [Article V, No Strike (Section Two)] ---
+There shail be no strikes during the life of this Agreement.
+
+--- Excerpt 4 [Article V, Civil Service seniority ranking] ---
+Effective July 1, 2015, when appointing individuals to the Department, the Town shall rank order candidates for purposes of seniority based on the order of their appearance on the Civil Service Human Resources Division list issued in response * to the Town's requisition.
+
+--- Excerpt 5 [Article VIII, Holdover-time (intro)] ---
+When employees are required to work fifteen (15) minutes or more after a regular tour of | duty is ended, overtime compensation shall be paid in accordance with the following | conditions:
+
+--- Excerpt 6 [Article VIII, Holdover-time (funds contingency)] ---
+The above overtime will be paid at time and one half the regular hourly salary when overtime funds are available. In the event overtime funds have been expended, employees shall be compensated in accordance with Chapter 48, Section 58C of the General Laws
+
+--- Excerpt 7 [Article VIII, Holdover-time (shortage standby)] ---
+In the event it should become necessary for a firefighter to stand-by due to a shortage of firefighters coming on duty for a shift, it is understood that this firefighter shall be compensated for this time for a minimum of two hours after the first fifteen minutes.
+
+--- Excerpt 8 [line-of-duty injury (Statement of Injury)] ---
+All personnel will complete a “Line of Duty Statement of Injury” or a “Statement of Witness to Injury” as soon as practicable following a line of duty injury.
+
+--- Excerpt 9 [Disability Reform Law] ---
+The Town and the Union recognize that certain provisions of c.306 of the Acts of 1996, the Disability Reform Law (the “Law”), make incumbent upon the Town and the Arlington Retirement Board certain responsibilities with regard to injuries of bargaining unit employees incurred while on and off the job.
+
+--- Excerpt 10 [Article XVIII, Promotional Exam] ---
+In so far as possible, within the limits of Civil Service Law and procedures, the town will take all necessary steps to have adequate promotional lists in effect at all times.
+
+--- Excerpt 11 [Article XVIII, Assessment Center] ---
+The parties agree that a fully delegated assessment center shall be used as the promotional process for the selection of deputy chiefs within the department. The assessment center shall be in conformance with all civil service laws.
+
+--- Excerpt 12 [Article XXVII, Duration / impasse] ---
+This Agreement shall be effective July 1, 2021 through June 30, 2024 and shall continue to be in effect thereafter during negotiations, provided that if agreement is not reached by January 2024 for the next year fiscal year, both or either party may utilize impasse procedures provided by law.",3555,"Arlington's safety leg. This is the exact-cycle matched-pair partner to ma_arlington_public_works_2021 (both 2021-2024, confirmed as the corpus's one 'healthy matched pair' for Arlington by ingest/audit_coverage.py). A full base CBA (not an amendment MOA, unlike Worcester's three documents) -- selected excerpts cover agency fee/union security, management rights, the no-strike clause, civil-service seniority/promotional-exam channels, holdover/overtime with a budget-funds contingency, a shortage-driven standby-pay clause, line-of-duty injury/disability-law provisions, and a Duration article referencing statutory impasse procedures for an unresolved successor term.","No explicit 'minimum staffing'/'minimum manning' clause was found anywhere in this document after a full keyword scan (checked: 'minimum staffing', 'minimum manning', 'shall be staffed', 'staffed with', 'on duty at all times', 'shortage of firefighters') -- only the shortage-driven standby-pay provision above exists. Also no subcontracting/civilianization language was found. Both are genuine absences in this document, not omissions from window construction. Several excerpts preserve minor extraction-layer character artifacts present in the source text itself (e.g. 'shail' for 'shall', a stray '*' character) -- kept verbatim rather than silently corrected, per this project's capture-verbatim discipline."
+ma_arlington_public_works_2021,MA,Arlington,public_works,non_safety_general,corpus/ma_arlington/ma_arlington_afscme_cba_thru_june2024.pdf,ocr_messy,ma_arlington_public_works_2021_w1,"--- Excerpt 1 [Article III(d), Rights of Management] ---
+The Town reserves and retains the right to contract out work, or subcontract out work. Pursuant to the exercise of such rights, no employee shall be laid off if there is available work in the same position or in a similar position which he/she is qualified to fill and is eligible to fill under civil service law and rules.
+
+--- Excerpt 2 [Article IV, No Strike Clause] ---
+No employee covered by this agreement shall engage in, induce or encourage any strike, work stoppage, slow down, or withholding of services, such as refusal to work emergency overtime as may be required during the life of this agreement. The union agrees that neither it nor any of its officers or agents will call, institute, authorize, participate in, sanction or ratify any such strike, work stoppage, slow down, or withholding of services.
+
+--- Excerpt 3 [Article VII, Civil Service and Disciplinary Matters (grievance jurisdiction)] ---
+The employer and the union shall recognize and adhere to all civil service laws relative to seniority, promotions, transfers, discharges, removals and suspensions. . A grievance which is, or upon proper appeal would be, within the jurisdiction of the Civil Service Commission or other duly established appeal board, shall not be subject to the grievance and arbitration procedure of Article Vil unless by mutual agreement of the parties.
+
+--- Excerpt 4 [Article VII, Civil Service and Disciplinary Matters (binding arbitration route)] ---
+A grievance involving the suspension, dismissal, removal or termination of an employee under civil service law and rules may in any instance be subject to binding arbitration by mutual agreement of the parties and the election of the employee involved, in accordance with the provision of Section 8 of Chapter 1078 of the acts of 1973.
+
+--- Excerpt 5 [callback pay] ---
+Any employee called back to work on the same day after having completed the employee's assigned work and left the employee’s place of employment and before the employee’s next regular scheduled starting time, shall be paid at the rate of time and one-half for all hours worked on recall. The employee will be guaranteed a minimum of four (4) hours pay at time and one-half.
+
+--- Excerpt 6 [Article XIII, Vacations (classification and compensation plan)] ---
+Vacation leave with pay shall be granted to all regularly employed personnel, subject to the classification and compensation plans. These employees are provided opportunity to accrue vacation leave in order that he/she may have periods of rest and relaxation from his/her job for health and well being, consistent with work load and staffing requirements of their department. Employees are encouraged to request vacation leave in blocks of time to ensure rest and relaxation. An employee shall be considered regularly employed and eligible for vacation if he/she has worked six months for the Town in a position included in the Classification and Compensation Plan.
+
+--- Excerpt 7 [holiday standby overtime] ---
+Effective July 1, 2022, in the water department employees shall be eligible for holiday standby overtime pay as follows: up to four employees designated by the Town shall receive four hours of overtime pay for each of the four days if they are available and on standby during four-day long holiday weekends. On-call employees are not also eligible for standby pay.
+
+--- Excerpt 8 [Article XXX, Duration / impasse] ---
+The union and the employer agree to re-open negotiations on any appropriate matters on or about October 1, 2023 to be effective July 1, 2024. If agreement cannot be reached by January 15, 2024, then both or either parties may utilize the impasse procedure (mediation and fact-finding) set forth in section 9 of Chapter 1078 of the Acts of 1973. In any event either party at its discretion may present its own position on money issues to the annual Town meeting in the form of an article in the warrant.",3972,"Arlington's non-safety leg. Exact-cycle matched-pair partner to ma_arlington_fire_2021 (both 2021-2024). This row's source PDF (35 pages) originally extracted to only 5,620 characters via the standard text-layer path (most pages appear to be image-only beyond the first 2) -- recovered via a bounded, single-pass OCR run this session (105,305 characters, comparable to the adjacent 2018-2021 cycle's 103,579-character clean extraction), making this row usable for the first time. Selected excerpts cover subcontracting/contracting-out language, the no-strike clause, a detailed civil-service-vs-grievance-arbitration jurisdictional distinction (directly analogous to the corpus's existing San Antonio police interest-vs-grievance arbitration distinction, CLM-2026-07-12-06), callback pay, classification/compensation plan, standby overtime pay, and a Duration article explicitly naming 'mediation and fact-finding' as its statutory impasse procedure.","text_quality is recorded as ocr_messy in data/contracts.csv (accurate for the underlying document quality) but the OCR recovery text used to build this window is the single-pass, unedited pytesseract output (150 DPI) -- has minor character-level artifacts (e.g. 'ClO' for 'AFL-CIO', 'Vil' for 'VII', stray characters) consistent with this project's prior Wayland OCR-recovery precedent, kept verbatim in these excerpts rather than silently corrected. All excerpts below were read directly from legible clause-level text, not assumed clean from a raw dump."
