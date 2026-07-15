@@ -2,7 +2,51 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-14T23:05:00-04:00`
+Last updated: `2026-07-15T10:45:00-04:00`
+
+---
+
+## 2026-07-15T10:45:00-04:00 - Added timeout/retry CLI controls + minimal-prompt mode to the GABRIEL scout; one live timeout stress test on the 6 still-failing PA municipalities; revised the failure-mode hypothesis from "call latency" to "rate limiter"
+
+**Commit target:** `Tune GABRIEL scout timeout retry controls`
+
+### Current State After This Entry
+
+- **`scripts/gabriel_state_source_scout.py` extended**: new `--timeout`/`--max-timeout` (default 90/90, reproduces prior hard-coded behavior byte-for-byte when unspecified; `dynamic_timeout` derived as `max_timeout > timeout`), `--sleep-between-prompts` (chunks the batch into `n_parallels`-sized groups with a rest between chunks; 0 = unchanged single-call behavior), `--retry-failed-from PATH` (builds the municipality retry list from a prior `failed_parses.csv`'s `municipality_id` column), and `--prompt-mode full|minimal`. New `MINIMAL_PROMPT_TEMPLATE` (flat `candidates` list) plus `extract_raw_candidate_items()` so the parser accepts either format, and a `normalize_unit_type()` normalizer. All new flags default to the prior behavior; verified via dry run (unmodified defaults reproduce prior output; `--retry-failed-from` + `--prompt-mode minimal` correctly narrowed the PA list to exactly the 6 target municipalities) and an offline unit test of the minimal-format parser before any live call.
+- **One live timeout stress test**: `--timeout 180 --max-timeout 240 --n-parallels 2 --prompt-mode minimal --sleep-between-prompts 5` against the 6 PA municipalities that failed both the first pilot and the retry (Reading, Scranton, Bethlehem, Lancaster, Harrisburg, York). **Found and fixed a real bug during this same run's audit**: the shared `save_dir` across `--sleep-between-prompts` chunks causes GABRIEL's checkpoint-resume mechanism to re-return every already-saved identifier's row on each subsequent chunk call, producing 12 raw rows (byte-identical duplicates) for 6 municipalities and making the script's own printed summary wrong (`parseable=0`, `candidate_rows=29`). **Fixed** via `drop_duplicates(subset=["Identifier"], keep="last")` in `run_live_batch()`; verified offline against the already-saved `raw_outputs.csv` (no additional API call) — **true result: 3 of 6 parseable (50%)** (Reading, Bethlehem, Harrisburg), 3 failed (Scranton, Lancaster, York, all `timeout_or_capacity`), 15 candidate rows, ~$0.040 total cost, avg 40.5s per successful call. **This fix has not been re-verified against a second live call** (one-live-test-only constraint this session) — treat `--sleep-between-prompts` output as needing one more live confirmation before fully trusting it.
+- **Revised the working hypothesis on the failure mode — this is the most important finding.** `"Can't acquire more than the maximum capacity"` traces (confirmed by reading the installed `gabriel` package source) to an `aiolimiter.AsyncLimiter` request/token-per-minute rate-limiter bucket, **not** the OpenAI client's `timeout`/`max_timeout` parameters. Every successful call across all three runs to date (first pilot 32.9s avg, retry 26.0s, this stress test 40.5s avg) finished in 26-50 seconds regardless of the timeout ceiling in effect — raising `--timeout`/`--max-timeout` to 180/240 could not have fixed this failure mode, because a request that can't acquire limiter capacity never gets far enough to hit a client-side timeout. **This session's task hypothesis (longer timeout fixes reliability) is not confirmed.** The two changes that plausibly explain this run's improved 50% rate — `prompt_mode=minimal` (smaller token footprint) and chunked/spaced requests (`sleep_between_prompts=5`) — both act on request/token throughput, consistent with the rate-limiter explanation instead.
+- Outputs: `docs/analysis/gabriel_state_source_scout_candidates_pa_2026-07-15_101602_corrected.csv` (15 corrected candidate rows — Harrisburg is the standout, with plausible primary CBA documents for all three unit types on official-adjacent domains), `docs/analysis/gabriel_state_source_scout_timeout_test_summary_2026-07-15.md` (full three-run comparison + rate-limiter diagnosis + recommended next experiment). The original (buggy, duplicate-inflated) `gabriel_state_source_scout_candidates_pa_2026-07-15_101602.csv` and `run_metadata.json` are left in place for audit trail but are superseded by the `_corrected` versions — do not use the uncorrected ones.
+- This run made only the explicitly-authorized, capped `gabriel.whatever` live call (6 prompts, one test only); no `gabriel.codify`; no FOIA/OPRA/RTKL/PRR; no ingestion; no push; no remote inspection/configuration; `data/contracts.csv`/`data/city_coverage.csv`/`corpus/`/claim-evidence files untouched.
+
+### Validation/audit results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed (unchanged)
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19 (unchanged)
+
+python -m py_compile scripts/gabriel_state_source_scout.py: OK
+
+Timeout stress test (post-dedup-fix): 6 prompted, 3 parseable (Reading,
+Bethlehem, Harrisburg), 3 failed (Scranton, Lancaster, York, all
+timeout_or_capacity), 15 candidate rows, ~$0.040 cost, avg 40.5s per
+successful call. Best rate of the three runs to date (50% vs. 30% pilot
+vs. 14% retry) on the hardest municipality set (all 6 had already failed
+twice before this run).
+```
+
+### Recommended next run
+
+1. **Do not raise `--timeout`/`--max-timeout` further** — the evidence this session points at a rate-limiter (requests/tokens-per-minute), not call latency, as the binding constraint; a bigger timeout ceiling has no mechanism to fix that.
+2. Test varying **request spacing/chunk size** instead: hold `prompt_mode=minimal`, try `sleep_between_prompts=10-15` and/or `n_parallels=1` chunks, to see whether further reducing request-rate pressure against the limiter improves reliability beyond this run's 50%.
+3. **Re-verify the checkpoint-echo dedup fix** with one more live chunked (`--sleep-between-prompts > 0`) call before relying on it further — this session's fix was validated offline against already-collected data only, not against a fresh live duplicate-producing scenario.
+4. Scranton, Lancaster, York remain untried beyond three attempts each (pilot, retry, this stress test) — all three consistently `timeout_or_capacity`.
+5. Harrisburg's 3 new candidates (police/fire/non_safety CBAs, `harrisburgpa.gov`/`harrisburgcitycontroller.com`) are this run's most actionable leads — worth a URL reachability check before any promotion decision.
 
 ---
 

@@ -31,6 +31,13 @@ Usage (safe, no network call):
 Usage (live, requires HARVARD_SUBSCRIPTION_KEY, e.g. via a git-ignored .env file):
   python scripts/gabriel_state_source_scout.py --live --state PA --limit 10 \\
       --max-prompts 10 --search-context-size low --model gpt-5.4-nano --n-parallels 3
+
+Timeout/retry tuning (2026-07-14 stress test — see docs/analysis/gabriel_state_source_scout_timeout_test_2026-07-14.md):
+  python scripts/gabriel_state_source_scout.py --live --state PA \\
+      --retry-failed-from tmp/gabriel_state_source_scout/PA/<prior_run>/failed_parses.csv \\
+      --timeout 180 --max-timeout 240 --n-parallels 2 --max-prompts 6 \\
+      --search-context-size low --model gpt-5.4-nano --prompt-mode minimal \\
+      --sleep-between-prompts 5
 """
 
 from __future__ import annotations
@@ -56,6 +63,12 @@ HARVARD_PROXY_BASE_URL = "https://go.apis.huit.harvard.edu/ais-openai-direct/v2"
 DEFAULT_MODEL = "gpt-5.4-nano"
 DEFAULT_SEARCH_CONTEXT_SIZE = "low"
 DEFAULT_N_PARALLELS = 3
+# Unchanged from the values hard-coded in run_live_batch before the 2026-07-14
+# timeout stress test; --timeout/--max-timeout let a caller override both
+# without touching defaults for any existing invocation.
+DEFAULT_TIMEOUT = 90
+DEFAULT_MAX_TIMEOUT = 90
+DEFAULT_PROMPT_MODE = "full"
 
 # Hard ceiling on live calls per run. Deliberately not overridable via CLI flag
 # — raising this requires editing this constant, per the task's safety model.
@@ -237,6 +250,27 @@ def normalize_document_type(raw: str) -> str:
     return "unknown"
 
 
+_UNIT_TYPE_ENUM = {"police", "fire", "non_safety", "unknown"}
+
+
+def normalize_unit_type(raw: str) -> str:
+    """Normalize unit_type for the minimal flat-candidates format, where the
+    model occasionally returns a near-miss (e.g. "non-safety", "general
+    municipal") instead of the exact enum value."""
+    lowered = (raw or "").strip().lower().replace(" ", "_").replace("-", "_")
+    if lowered in _UNIT_TYPE_ENUM:
+        return lowered
+    if "police" in lowered:
+        return "police"
+    if "fire" in lowered:
+        return "fire"
+    if "non" in lowered and "safety" in lowered:
+        return "non_safety"
+    if "municipal" in lowered or "general" in lowered:
+        return "non_safety"
+    return "unknown"
+
+
 PROMPT_TEMPLATE = """You are finding public-sector labor source documents for {municipality}, {state}.
 
 Return JSON only.
@@ -276,6 +310,41 @@ Return JSON with:
 }}"""
 
 
+# Shorter prompt added for the 2026-07-14 timeout stress test — asks only for
+# structured source candidates (flat list, fewer fields) to reduce reasoning/
+# output burden per call as an alternative hypothesis to raising the timeout.
+# See docs/analysis/gabriel_state_source_scout_timeout_test_2026-07-14.md.
+MINIMAL_PROMPT_TEMPLATE = """Find public URLs for municipal labor source documents for {municipality}, {state}.
+
+Return JSON only. No prose.
+
+Find up to 2 candidates each for:
+- police
+- fire
+- non_safety/general municipal
+
+Prefer official city, state labor-board, or union sources.
+
+Return:
+{{
+  "municipality": "...",
+  "state": "...",
+  "candidates": [
+    {{
+      "unit_type": "police | fire | non_safety | unknown",
+      "document_title": "...",
+      "union_name": "...",
+      "source_url": "...",
+      "source_owner_type": "city | state_labor_board | union | third_party | news | unknown",
+      "document_type": "cba | arbitration_award | factfinding | pay_plan | index_page | context_only | unknown",
+      "confidence": "high | medium | low"
+    }}
+  ]
+}}
+
+Do not invent URLs. If none found, return an empty candidates list."""
+
+
 # ---------------------------------------------------------------------------
 # Municipality list
 # ---------------------------------------------------------------------------
@@ -302,12 +371,34 @@ def load_municipalities(state: str, municipalities_csv: Path | None, limit: int 
     return rows
 
 
+def load_retry_municipality_ids(path: Path) -> list[str]:
+    """Read a prior failed_parses.csv and return its distinct municipality_id
+    values in first-seen order, for --retry-failed-from."""
+    if not path.exists():
+        raise SystemExit(f"ERROR: --retry-failed-from path not found: {path}")
+    ids: list[str] = []
+    seen: set[str] = set()
+    with path.open(newline="", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        if "municipality_id" not in (reader.fieldnames or []):
+            raise SystemExit(f"ERROR: {path} has no municipality_id column")
+        for row in reader:
+            mid = (row.get("municipality_id") or "").strip()
+            if mid and mid not in seen:
+                seen.add(mid)
+                ids.append(mid)
+    if not ids:
+        raise SystemExit(f"ERROR: no municipality_id values found in {path}")
+    return ids
+
+
 # ---------------------------------------------------------------------------
 # Prompt building
 # ---------------------------------------------------------------------------
 
-def build_prompt(municipality: str, state: str) -> str:
-    return PROMPT_TEMPLATE.format(municipality=municipality, state=state)
+def build_prompt(municipality: str, state: str, prompt_mode: str = DEFAULT_PROMPT_MODE) -> str:
+    template = MINIMAL_PROMPT_TEMPLATE if prompt_mode == "minimal" else PROMPT_TEMPLATE
+    return template.format(municipality=municipality, state=state)
 
 
 def build_identifier(run_id: str, municipality_id: str) -> str:
@@ -453,6 +544,28 @@ def triad_value_for(unit_types_present: set[str]) -> str:
 # Response -> candidate rows
 # ---------------------------------------------------------------------------
 
+def extract_raw_candidate_items(parsed: dict) -> list[tuple[str, dict]]:
+    """Return (unit_type, item) pairs from either the original per-unit-type-list
+    format (police_candidates/fire_candidates/non_safety_candidates) or the
+    minimal prompt's flat "candidates" list with a unit_type field per item."""
+    items: list[tuple[str, dict]] = []
+    flat = parsed.get("candidates")
+    if isinstance(flat, list):
+        for item in flat:
+            if not isinstance(item, dict):
+                continue
+            items.append((normalize_unit_type(str(item.get("unit_type", "") or "")), item))
+        return items
+    for unit_type, list_key in UNIT_TYPE_LIST_KEYS.items():
+        list_items = parsed.get(list_key) or []
+        if not isinstance(list_items, list):
+            continue
+        for item in list_items:
+            if isinstance(item, dict):
+                items.append((unit_type, item))
+    return items
+
+
 def parse_response_to_candidates(
     run_id: str,
     muni: dict,
@@ -476,35 +589,29 @@ def parse_response_to_candidates(
         }
 
     raw_rows: list[dict] = []
-    for unit_type, list_key in UNIT_TYPE_LIST_KEYS.items():
-        items = parsed.get(list_key) or []
-        if not isinstance(items, list):
-            continue
-        for item in items:
-            if not isinstance(item, dict):
-                continue
-            raw_rows.append(
-                {
-                    "run_id": run_id,
-                    "state": muni["state"],
-                    "municipality": muni["municipality"],
-                    "municipality_id": muni["municipality_id"],
-                    "unit_type": unit_type,
-                    "union_name": str(item.get("union_name", "") or ""),
-                    "employer": str(item.get("employer", "") or ""),
-                    "document_title": str(item.get("document_title", "") or ""),
-                    "contract_years": str(item.get("contract_years", "") or ""),
-                    "source_url": str(item.get("source_url", "") or ""),
-                    "source_owner": str(item.get("source_owner", "") or ""),
-                    "source_owner_type": normalize_owner_type(str(item.get("source_owner_type", "") or "")),
-                    "document_type": normalize_document_type(str(item.get("document_type", "") or "")),
-                    "why_relevant": str(item.get("why_relevant", "") or ""),
-                    "confidence": str(item.get("confidence", "") or ""),
-                    "raw_response_ref": raw_response_ref,
-                    "verification_status": "unverified",
-                    "promotion_status": "raw_model_output",
-                }
-            )
+    for unit_type, item in extract_raw_candidate_items(parsed):
+        raw_rows.append(
+            {
+                "run_id": run_id,
+                "state": muni["state"],
+                "municipality": muni["municipality"],
+                "municipality_id": muni["municipality_id"],
+                "unit_type": unit_type,
+                "union_name": str(item.get("union_name", "") or ""),
+                "employer": str(item.get("employer", "") or ""),
+                "document_title": str(item.get("document_title", "") or ""),
+                "contract_years": str(item.get("contract_years", "") or ""),
+                "source_url": str(item.get("source_url", "") or ""),
+                "source_owner": str(item.get("source_owner", "") or ""),
+                "source_owner_type": normalize_owner_type(str(item.get("source_owner_type", "") or "")),
+                "document_type": normalize_document_type(str(item.get("document_type", "") or "")),
+                "why_relevant": str(item.get("why_relevant", "") or ""),
+                "confidence": str(item.get("confidence", "") or ""),
+                "raw_response_ref": raw_response_ref,
+                "verification_status": "unverified",
+                "promotion_status": "raw_model_output",
+            }
+        )
 
     unit_types_present = {r["unit_type"] for r in raw_rows}
     scored_rows = []
@@ -549,6 +656,9 @@ def run_live_batch(
     model: str,
     search_context_size: str,
     n_parallels: int,
+    timeout: float = DEFAULT_TIMEOUT,
+    max_timeout: float = DEFAULT_MAX_TIMEOUT,
+    sleep_between_prompts: float = 0.0,
 ) -> tuple[Any, str | None]:
     import os
 
@@ -570,6 +680,9 @@ def run_live_batch(
 
     import asyncio
     import inspect
+    import time as time_module
+
+    import pandas as pd
 
     previous_openai_key = os.environ.get("OPENAI_API_KEY")
     previous_openai_base = os.environ.get("OPENAI_BASE_URL")
@@ -577,13 +690,16 @@ def run_live_batch(
     os.environ["OPENAI_BASE_URL"] = HARVARD_PROXY_BASE_URL
 
     save_dir = out_dir / "gabriel_save_dir"
-    kwargs = dict(
+    # dynamic_timeout is only enabled when max_timeout raises the ceiling above
+    # the initial per-call timeout; with equal defaults (90/90) this reproduces
+    # the prior hard-coded dynamic_timeout=False behavior exactly.
+    dynamic_timeout = max_timeout > timeout
+    base_kwargs = dict(
         save_dir=str(save_dir),
         file_name="gabriel_whatever_raw.csv",
         model=model,
         web_search=True,
         search_context_size=search_context_size,
-        n_parallels=n_parallels,
         reset_files=False,
         drop_prompts=False,
         reasoning_effort="low",
@@ -591,17 +707,52 @@ def run_live_batch(
         base_url=HARVARD_PROXY_BASE_URL,
         extra_headers={"Ocp-Apim-Subscription-Key": subscription_key},
         max_retries=1,
-        timeout=90,
-        max_timeout=90,
-        dynamic_timeout=False,
+        timeout=timeout,
+        max_timeout=max_timeout,
+        dynamic_timeout=dynamic_timeout,
         background_mode=False,
         print_example_prompt=False,
         quiet=True,
         verbose=False,
     )
+
+    def _call(chunk_prompts: list[str], chunk_identifiers: list[str], chunk_n_parallels: int):
+        result = gabriel.whatever(
+            chunk_prompts, identifiers=chunk_identifiers, n_parallels=chunk_n_parallels, **base_kwargs
+        )
+        return asyncio.run(result) if inspect.isawaitable(result) else result
+
     try:
-        result = gabriel.whatever(prompts, identifiers=identifiers, **kwargs)
-        df = asyncio.run(result) if inspect.isawaitable(result) else result
+        # sleep_between_prompts > 0 chunks the batch into n_parallels-sized
+        # groups and rests between chunks, on the hypothesis that per-call
+        # web-search latency against the Harvard proxy (not worker-queue
+        # contention) is the binding reliability constraint. sleep=0 (default)
+        # preserves the original single-call behavior exactly.
+        if sleep_between_prompts > 0 and len(prompts) > n_parallels:
+            chunk_size = max(1, n_parallels)
+            frames = []
+            for start in range(0, len(prompts), chunk_size):
+                chunk_df = _call(
+                    prompts[start : start + chunk_size],
+                    identifiers[start : start + chunk_size],
+                    min(chunk_size, len(prompts) - start),
+                )
+                frames.append(chunk_df)
+                if start + chunk_size < len(prompts):
+                    time_module.sleep(sleep_between_prompts)
+            df = pd.concat(frames, ignore_index=True) if len(frames) > 1 else frames[0]
+            # gabriel.whatever shares this run's save_dir/file_name across chunk
+            # calls (reset_files=False, by design, so a chunk failure doesn't
+            # wipe earlier chunks' successes) and its own checkpoint-resume
+            # logic re-returns every already-saved identifier's row on each
+            # subsequent call — found via the 2026-07-15 timeout stress test,
+            # where a 6-municipality/3-chunk run produced 12 raw rows (3x/2x/1x
+            # duplicates per chunk position), byte-identical per identifier.
+            # Keep only the last (most-accumulated) occurrence per identifier.
+            if "Identifier" in df.columns:
+                df = df.drop_duplicates(subset=["Identifier"], keep="last").reset_index(drop=True)
+        else:
+            df = _call(prompts, identifiers, n_parallels)
     except Exception as exc:
         return None, f"{type(exc).__name__}: {exc}"
     finally:
@@ -634,6 +785,11 @@ def _parse_args() -> argparse.Namespace:
     parser.add_argument("--model", default=DEFAULT_MODEL, help=f"Default: {DEFAULT_MODEL}")
     parser.add_argument("--n-parallels", type=int, default=DEFAULT_N_PARALLELS, help=f"Default: {DEFAULT_N_PARALLELS}")
     parser.add_argument("--max-prompts", type=int, default=None, help="Required for --live. Hard-capped at LIVE_HARD_CAP regardless.")
+    parser.add_argument("--timeout", type=float, default=DEFAULT_TIMEOUT, help=f"Per-call timeout (seconds) passed to gabriel.whatever (default: {DEFAULT_TIMEOUT}).")
+    parser.add_argument("--max-timeout", type=float, default=DEFAULT_MAX_TIMEOUT, help=f"Max-timeout ceiling (seconds) passed to gabriel.whatever; if greater than --timeout, dynamic_timeout is enabled (default: {DEFAULT_MAX_TIMEOUT}).")
+    parser.add_argument("--sleep-between-prompts", type=float, default=0.0, help="Seconds to rest between n_parallels-sized prompt chunks on the live path. 0 (default) = single call, unchanged behavior.")
+    parser.add_argument("--retry-failed-from", type=Path, default=None, help="Path to a prior run's failed_parses.csv; builds the municipality retry list from its municipality_id column, filtered against --state/--municipalities-csv.")
+    parser.add_argument("--prompt-mode", choices=("full", "minimal"), default=DEFAULT_PROMPT_MODE, help=f"full = original detailed prompt; minimal = shorter structured-candidates-only prompt (default: {DEFAULT_PROMPT_MODE}).")
     args = parser.parse_args()
     if not args.live:
         args.dry_run = True
@@ -651,13 +807,30 @@ def main() -> int:
 
     municipalities = load_municipalities(args.state, args.municipalities_csv, args.limit)
 
+    if args.retry_failed_from is not None:
+        retry_ids = load_retry_municipality_ids(args.retry_failed_from)
+        by_id = {m["municipality_id"]: m for m in municipalities}
+        filtered = [by_id[mid] for mid in retry_ids if mid in by_id]
+        missing = [mid for mid in retry_ids if mid not in by_id]
+        if missing:
+            print(
+                f"WARNING: --retry-failed-from listed municipality_id(s) not found in the "
+                f"loaded municipality list (state={args.state}): {missing}"
+            )
+        if not filtered:
+            raise SystemExit(
+                f"ERROR: none of the municipality_id values in {args.retry_failed_from} "
+                f"matched the loaded municipality list for state={args.state}"
+            )
+        municipalities = filtered
+
     if args.live:
         n_requested = min(args.max_prompts, LIVE_HARD_CAP)
         if args.max_prompts > LIVE_HARD_CAP:
             print(f"WARNING: --max-prompts {args.max_prompts} exceeds LIVE_HARD_CAP={LIVE_HARD_CAP}; clipping.")
         municipalities = municipalities[:n_requested]
 
-    prompts = [build_prompt(m["municipality"], m["state"]) for m in municipalities]
+    prompts = [build_prompt(m["municipality"], m["state"], args.prompt_mode) for m in municipalities]
     identifiers = [build_identifier(run_id, m["municipality_id"]) for m in municipalities]
 
     prompt_preview_path = write_prompt_preview(out_dir, municipalities, prompts, identifiers)
@@ -672,6 +845,11 @@ def main() -> int:
         "n_parallels": args.n_parallels,
         "max_prompts": args.max_prompts,
         "live_hard_cap": LIVE_HARD_CAP,
+        "timeout": args.timeout,
+        "max_timeout": args.max_timeout,
+        "sleep_between_prompts": args.sleep_between_prompts,
+        "prompt_mode": args.prompt_mode,
+        "retry_failed_from": str(args.retry_failed_from) if args.retry_failed_from else None,
         "prompt_preview_path": str(prompt_preview_path),
         "output_dir": str(out_dir),
         "live_attempted": False,
@@ -688,7 +866,16 @@ def main() -> int:
 
     metadata["live_attempted"] = True
     df, failure = run_live_batch(
-        municipalities, prompts, identifiers, out_dir, args.model, args.search_context_size, args.n_parallels
+        municipalities,
+        prompts,
+        identifiers,
+        out_dir,
+        args.model,
+        args.search_context_size,
+        args.n_parallels,
+        timeout=args.timeout,
+        max_timeout=args.max_timeout,
+        sleep_between_prompts=args.sleep_between_prompts,
     )
     if failure is not None:
         metadata["live_failure_reason"] = failure

@@ -6,6 +6,52 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-15 10:30 EDT (Added timeout/retry CLI controls and minimal-prompt mode to the GABRIEL scout; ran one live timeout stress test on the 6 still-failing PA municipalities; found and fixed a checkpoint-echo duplication bug in the new chunked-sleep path; revised the working hypothesis about the failure mode) - Longer timeout did not fix reliability; the "timeout_or_capacity" error traces to a rate-limiter (requests/tokens-per-minute), not call latency; minimal prompt + chunked/spaced requests got 50% parseable (best of 3 runs) on the hardest municipality set yet; source-scouting/staging only, no ingestion, no push/remote work
+
+**Did**
+- Confirmed starting state: commit `f08d614 Harden GABRIEL scout failure logging and retry PA failures`; `data/contracts.csv` 64 rows/19 cities (unchanged all session).
+- **Tasks 1-2 (CLI controls + minimal prompt + parser).** Added `--timeout`/`--max-timeout` (default 90/90, byte-for-byte reproducing the prior hard-coded values; `dynamic_timeout` derived as `max_timeout > timeout`), `--sleep-between-prompts` (chunks the batch into `n_parallels`-sized groups with a rest between, default 0 = unchanged single-call behavior), `--retry-failed-from` (reads a prior `failed_parses.csv`, filters the municipality list to its distinct `municipality_id` values), and `--prompt-mode full|minimal`. Added `MINIMAL_PROMPT_TEMPLATE` (flat `candidates` list, fewer fields) and `extract_raw_candidate_items()` so the parser accepts both the original per-unit-type-list format and the new flat format, plus a `normalize_unit_type()` normalizer alongside the existing owner/doc-type ones. Unit-tested offline against a synthetic minimal-format response before any live call.
+- **Task 3 (dry runs).** Verified an unmodified `--dry-run` reproduces prior behavior, and that `--retry-failed-from` against the retry's `failed_parses.csv` + `--prompt-mode minimal` correctly narrows the 10-city PA list to exactly the 6 target municipalities (Reading, Scranton, Bethlehem, Lancaster, Harrisburg, York) with the new prompt template.
+- **Task 4 (one live timeout stress test).** `--timeout 180 --max-timeout 240 --n-parallels 2 --prompt-mode minimal --sleep-between-prompts 5` against the 6 still-failing municipalities. **Found and fixed a real bug during this same run's audit**: `--sleep-between-prompts` chunks calls across a shared `save_dir` (deliberately, so a later chunk's failure can't wipe an earlier chunk's success), but GABRIEL's checkpoint-resume mechanism re-returns every already-saved identifier on each subsequent call — the 6-municipality/3-chunk run produced 12 raw rows (byte-identical duplicates), which made the script's own printed summary wrong (`parseable=0`, `candidate_rows=29`). Fixed via `drop_duplicates(subset=["Identifier"], keep="last")` in `run_live_batch()`; verified the fix offline against the already-saved `raw_outputs.csv` (no additional API call) — true result: **3 of 6 parseable (50%)** (Reading, Bethlehem, Harrisburg), 3 failed (Scranton, Lancaster, York, all `timeout_or_capacity`), 15 candidate rows, ~$0.040 total cost. The fix itself has not been re-verified against a second live call (one-live-test constraint).
+- **Revised the working hypothesis on the failure mode.** Traced `"Can't acquire more than the maximum capacity"` into the installed `gabriel` package: it originates from an `aiolimiter.AsyncLimiter` request/token-per-minute rate-limiter bucket, not the OpenAI client's `timeout`/`max_timeout` parameters. Every successful call across all three runs to date (pilot, retry, this stress test) finished in 26-50 seconds regardless of the timeout ceiling — raising `--timeout`/`--max-timeout` to 180/240 could not have helped, because a request that can't acquire limiter capacity never reaches the point where a client-side timeout would matter. The two changes that plausibly explain this run's improved 50% rate (minimal prompt, chunked/spaced requests) both act on request/token throughput, consistent with the rate-limiter explanation.
+- **Task 5 (three-run comparison).** Wrote `docs/analysis/gabriel_state_source_scout_timeout_test_summary_2026-07-15.md` comparing the first pilot (30% parseable), retry (14%), and this stress test (50% post-fix) across prompted/parseable/failed/failure-types/candidates/cost/avg-successful-time, with the revised rate-limiter diagnosis and a recommended next experiment (vary spacing/chunk size, not timeout).
+- **Task 6 (validation).** `python -m py_compile`, `python scripts/validate.py`, `python ingest/test_pipeline.py`, `python ingest/audit_coverage.py` all re-run and unchanged (64 contracts, 60/60 tests, 28 healthy pairs).
+- This run made only the explicitly-authorized, capped `gabriel.whatever` live call (6 prompts, one attempt only); no `gabriel.codify` calls; no FOIA/OPRA/RTKL/PRR; no ingestion; no push; no remote inspection/configuration; `data/contracts.csv`/`data/city_coverage.csv`/`corpus/`/claim-evidence files untouched.
+
+**Decisions and why**
+- Fixed the checkpoint-echo duplication bug in the script itself (dedup in `run_live_batch()`) rather than just hand-correcting this one run's output, since `--sleep-between-prompts` is a durable new feature that would reproduce the same bug on every future chunked run.
+- Reprocessed the buggy run's already-saved `raw_outputs.csv` offline (dedup + re-parse, no additional API call) to produce corrected `_corrected` CSVs/metadata, rather than treating the buggy `parseable=0`/`candidate_rows=29` summary as authoritative — the task's own printed numbers were simply wrong, and reporting them uncorrected would have understated a genuinely better-than-prior-runs result.
+- Did not run a second live call to re-verify the dedup fix or test the "vary spacing further" follow-up hypothesis — the task's explicit "one live test only" instruction.
+
+**Surprises/breakage**
+- **The "longer timeout" hypothesis this task set out to test was not confirmed** — successful calls in all three runs (pre- and post-timeout-increase) cluster in the same 26-50s band, and the failure error message traces to a rate-limiter, not a client-side timeout. This is a genuine revision to both the first pilot's and the retry's working hypothesis (per-call web-search latency).
+- **The checkpoint-echo duplication bug** is the most consequential finding this session for the script's own correctness — a naive read of the live run's own printed output (`parseable=0`) would have wrongly concluded the timeout stress test was a total failure, when the true, deduplicated result (50% parseable) was the best of the three runs.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed (unchanged)
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19 (all unchanged)
+
+python -m py_compile scripts/gabriel_state_source_scout.py: OK
+
+Timeout stress test (post-dedup-fix): 6 municipalities prompted, 3 parseable
+  (Reading, Bethlehem, Harrisburg), 3 failed (Scranton, Lancaster, York, all
+  timeout_or_capacity), 15 candidate rows, ~$0.040 cost, avg 40.5s per
+  successful call. Best parseable rate of the three runs to date (50% vs.
+  30% pilot vs. 14% retry) on the hardest municipality set (all 6 had
+  already failed twice).
+```
+
+**Confirmed:** no ingestion; no `data/contracts.csv`/`data/city_coverage.csv`/`corpus/`/claim-evidence-file edits; no `gabriel.codify` calls; no FOIA/OPRA/RTKL/PRR; no git push; no remote inspection/configuration. GABRIEL/`whatever` live calls this session were explicitly authorized, capped (`--max-prompts 6`, one test only), and scoped to the 6-city PA timeout stress test.
+
+---
+
 ## 2026-07-14 23:05 EDT (Hardened GABRIEL scout failure logging; retried 7 failed PA municipalities at n_parallels=1; found and fixed a real same-day filename-collision bug that had silently overwritten the first pilot's candidate CSV) - Added deterministic failure_type classification and full GABRIEL diagnostics to failed_parses.csv; retried the 7 municipalities that failed in the first PA pilot with n_parallels=1 (worse success rate, not better — revises last session's "lower concurrency" hypothesis); discovered mid-session that the retry had silently clobbered the first pilot's candidate CSV via a date-only output filename, restored it from git and fixed the script to be run_id-scoped; ran a real (not just plausibility-based) URL reachability check on the first pilot's top candidates, confirming one exact duplicate and two genuinely new Philadelphia leads; source-scouting/staging only, no ingestion, no push/remote work
 
 **Did**
