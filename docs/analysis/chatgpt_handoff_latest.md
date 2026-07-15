@@ -2,7 +2,55 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-15T10:55:00-04:00`
+Last updated: `2026-07-15T11:15:00-04:00`
+
+---
+
+## 2026-07-15T11:15:00-04:00 - Added per-run cost accounting and a --compare-runs utility to the GABRIEL scout; ran a controlled 4-cell tuning matrix (spacing x concurrency x prompt mode); confirmed n_parallels=1 + minimal prompt with 9/9 successes; produced scaling estimates for 100/500/1,000 municipalities
+
+**Commit target:** `Instrument GABRIEL scout costs and tuning matrix`
+
+### Current State After This Entry
+
+- **Cost accounting**: every live run now writes `cost_summary.json`/`cost_summary.csv` to its output directory and appends one row to `docs/analysis/gabriel_state_source_scout_cost_log.csv` (durable, append-only). Tracks total/successful/failed cost, per-prompt/per-parseable/per-candidate cost, token totals, avg successful-call time, and the run's settings. Unit-tested offline before live use.
+- **`--compare-runs` utility**: `python scripts/gabriel_state_source_scout.py --compare-runs DIR1 DIR2 ... [--compare-output PATH]` builds a markdown comparison table from each directory's `run_metadata.json`/`cost_summary.json`/`failed_parses.csv`/`raw_outputs.csv` (duplicate-identifier check included). Degrades gracefully (shows `None`) for runs from before this session that never wrote a `cost_summary.json`. This replaces the hand-written `pandas` snippets used to build every prior relay bundle's comparison table.
+- **Tuning matrix (4 live cells, Scranton/Lancaster/York — the same 3 municipalities as the prior session's ablation)**:
+  1. `minimal/n=1/sleep=10` → 3/3 (100%), $0.0320, 12 candidates
+  2. `minimal/n=1/sleep=20` → 3/3 (100%), $0.0305, 14 candidates
+  3. `minimal/n=2/sleep=20` → 2/3 (67%) — **Lancaster failed again**, the same municipality that failed the prior session's `n=2/sleep=15` test, same `timeout_or_capacity` signature, always when paired with Scranton in the concurrent chunk
+  4. (optional, run since cost/time stayed low) `full/n=1/sleep=20` → 3/3 (100%), $0.0332, but only **8 candidate rows vs. minimal's 12-14** despite more input tokens for a similar output-token budget
+- **`n_parallels=1` is now 4-for-4 across three tested spacings (10/15/20s)** — spacing itself showed no observable effect on reliability once concurrency is 1; **`n_parallels=2` is 0-for-2**, both times failing the identical municipality. This is stronger, more specific evidence than the prior session's single ablation: it's not just "concurrency is worse on average," it's a reproducible pairing-collision effect.
+- **Full prompt provides no advantage**: matched minimal's reliability and cost but produced meaningfully fewer candidate rows per token spent — a concrete mechanism (extra requested fields crowd out candidate items in the output-token budget) for preferring minimal beyond just reliability.
+- **Scaling estimates** (successful-call cost/time basis, recommended config): **100 municipalities ≈ $1.10 / ~75-85 min**; **500 ≈ $5.50 / ~6.3-7.1 hr**; **1,000 ≈ $11 / ~12.5-14.2 hr**. Caveat: `LIVE_HARD_CAP=25` (hard-coded) means a 1,000-city run needs ~40 separate invocations; expected failure rate at true scale is hedged at **0-10%**, not 0%, despite this session's 9/9 — the tested sample is 3 repeatedly-tried municipalities, not hundreds of distinct cities.
+- Outputs: `docs/analysis/gabriel_state_source_scout_tuning_matrix_summary_2026-07-15.md` (full matrix, reliability Q&A, scaling estimates, retry strategy), 4 new run-id-scoped candidate CSVs (12/14/12/8 rows), `docs/analysis/gabriel_state_source_scout_cost_log.csv` (new durable cost log, 4 rows so far).
+- This run made only four explicitly-authorized, capped `gabriel.whatever` live calls (3 prompts each); no `gabriel.codify`; no FOIA/OPRA/RTKL/PRR; no ingestion; no push; no remote inspection/configuration; `data/contracts.csv`/`data/city_coverage.csv`/`corpus/`/claim-evidence files untouched; no URL verification or candidate-audit pass (out of scope this session).
+
+### Validation/audit results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed (unchanged)
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19 (unchanged)
+
+python -m py_compile scripts/gabriel_state_source_scout.py: OK
+
+Tuning matrix: minimal/n1/sleep10 -> 3/3 (100%); minimal/n1/sleep20 -> 3/3
+(100%); minimal/n2/sleep20 -> 2/3 (67%, Lancaster failed); full/n1/sleep20
+-> 3/3 (100%, 8 candidates vs. minimal's 12-14).
+```
+
+### Recommended next run
+
+1. **Adopt `n_parallels=1` + `prompt_mode=minimal` + `sleep_between_prompts=15` (default) as the standing configuration for any scout run** — this is now confirmed (not just hypothesized) across two sessions and two municipality sets.
+2. **Pause scout tuning entirely and move to a verification/audit pass.** Enough tuning sessions have run (4 total) with a stable, confirmed configuration that further tuning has diminishing returns; the candidate backlog across all sessions (Reading/Bethlehem/Harrisburg/Scranton/Lancaster/York, ~60+ staged rows total) is large enough to warrant URL-reachability + `data/contracts.csv`-overlap checks before any more `whatever` calls.
+3. **If scaling toward a full-state run**: batch in `LIVE_HARD_CAP=25`-bounded invocations, run `--retry-failed-from` immediately after each batch, and use the new `--compare-runs` utility to track drift instead of hand-reconstructing tables.
+4. **Untested hypothesis worth a future check**: `sleep_between_prompts` below 10s (this session's floor) might still hold 100% reliability given `n_parallels=1` is the real driver — would shave wall-clock time at scale if confirmed, but don't assume it without a test.
+5. Do not test `n_parallels` values above 2 — the evidence against concurrency is now strong enough that further concurrency exploration is unlikely to be worth the reliability cost.
 
 ---
 

@@ -6,6 +6,52 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-15 11:10 EDT (Added per-run cost accounting and a --compare-runs utility to the GABRIEL scout; ran a controlled 4-cell tuning matrix isolating spacing vs. concurrency vs. prompt mode; confirmed n_parallels=1 + minimal prompt as the best configuration with 9/9 successes; produced cost/wall-clock estimates for 100/500/1,000-municipality scaling) - n_parallels=1 succeeded 4-for-4 across three different spacing values (10/15/20s); n_parallels=2 failed the same municipality (Lancaster) both times it was tried; full prompt matched minimal's reliability but yielded fewer candidate rows per token; source-scouting/staging only, no ingestion, no push/remote work
+
+**Did**
+- Confirmed starting state: commit `7fd2e68 Tune GABRIEL scout rate-limit batching`; `data/contracts.csv` 64 rows/19 cities (unchanged all session).
+- **Task 1 (cost accounting).** Added `compute_cost_summary()`/`write_cost_summary()`/`append_cost_log()` to `scripts/gabriel_state_source_scout.py`. Every live run now writes `cost_summary.json`/`cost_summary.csv` to its output directory and appends one row to a durable, never-overwritten `docs/analysis/gabriel_state_source_scout_cost_log.csv` (total/successful/failed cost, per-prompt/per-parseable/per-candidate cost, token totals, avg successful-call time, plus the run's settings). Unit-tested offline against a synthetic DataFrame before use in a live run.
+- **Task 2 (run comparison utility).** Added `--compare-runs DIR1 DIR2 ... [--compare-output PATH]`, reading `run_metadata.json` (required), `cost_summary.json` (optional, degrades gracefully for pre-this-session runs), `failed_parses.csv`, and `raw_outputs.csv` (duplicate-identifier sanity check) into one markdown comparison table. Verified against two pre-existing runs from the prior session (correctly showed `None` for cost fields those runs never computed, rather than erroring).
+- **Task 3 (tuning matrix, 4 live cells, all on Scranton/Lancaster/York).** Dry-run first, then: (1) `minimal/n=1/sleep=10` → 3/3 (100%), $0.0320; (2) `minimal/n=1/sleep=20` → 3/3 (100%), $0.0305; (3) `minimal/n=2/sleep=20` → 2/3 (67%, **Lancaster failed again** — same city as the prior session's `n=2/sleep=15` failure, same `timeout_or_capacity` signature); (4, optional, run since cost/time stayed low) `full/n=1/sleep=20` → 3/3 (100%), $0.0332 but only **8 candidate rows vs. minimal's 12-14** despite more input tokens for similar output tokens.
+- **Task 4 (reliability interpretation).** Wrote `docs/analysis/gabriel_state_source_scout_tuning_matrix_summary_2026-07-15.md`. Key findings: `n_parallels=1` is now 4-for-4 (10/15/20s spacing) on these three municipalities; spacing itself (10 vs. 15 vs. 20s) made no observable difference once `n_parallels=1` holds; `n_parallels=2` reproducibly fails the same specific municipality (Lancaster) both times tried; full prompt provides no reliability or cost advantage and yields fewer candidates per token than minimal. Produced scaling estimates: ~$1.10/75-85min for 100 municipalities, ~$5.50/6.3-7.1hr for 500, ~$11/12.5-14.2hr for 1,000 (successful-call cost basis, with explicit caveats about small-sample bias and the `LIVE_HARD_CAP=25` batching requirement).
+- **Task 6 (validation).** `python -m py_compile`, `python scripts/validate.py`, `python ingest/test_pipeline.py`, `python ingest/audit_coverage.py` all re-run and unchanged (64 contracts, 60/60 tests, 28 healthy pairs).
+- This run made only four explicitly-authorized, capped `gabriel.whatever` live calls (3 prompts each, the matrix's 4 cells); no `gabriel.codify` calls; no FOIA/OPRA/RTKL/PRR; no ingestion; no push; no remote inspection/configuration; `data/contracts.csv`/`data/city_coverage.csv`/`corpus/`/claim-evidence files untouched; no URL verification/candidate-audit pass performed (out of scope this session).
+
+**Decisions and why**
+- Ran the optional 4th matrix cell (full prompt) since cells 1-3 stayed cheap/fast — the task explicitly allowed this, and it produced a genuinely useful (if single-sample) finding about candidate yield per token that a minimal/full comparison hadn't directly measured before.
+- Reported the expected failure rate at scale as a hedged range (0-10%), not 0%, despite this session's 9/9 success rate at `n_parallels=1` — the sample is three repeatedly-tested municipalities, not a representative sample of hundreds of unfamiliar cities, and overclaiming perfect reliability from a small biased sample would set a false expectation for a future full-state run.
+- Kept the recommended default configuration unchanged from what the task started with (`n_parallels=1`/`minimal`/`sleep=15`/`timeout=90/90`) rather than proposing a new "best" setting — this session's matrix confirmed the existing recommendation rather than beating it, and `sleep_between_prompts` lower than 10s remains untested, so lowering it further was flagged as a hypothesis, not adopted.
+
+**Surprises/breakage**
+- **`n_parallels=2` failed the exact same municipality (Lancaster) in both of its two tests to date** (this session's sleep=20 and the prior session's sleep=15), always when paired with Scranton in the first concurrent chunk — a more specific, reproducible pattern than "concurrency is worse on average," and the clearest evidence yet that this is a genuine capacity-collision effect, not noise.
+- **The full prompt's candidate yield (8 rows) was lower than either minimal-prompt cell (12-14 rows) despite using more input tokens for a similar output-token budget** — a concrete mechanism (extra requested fields crowding out candidate items) for why minimal outperforms full on more than just reliability grounds.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed (unchanged)
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19 (all unchanged)
+
+python -m py_compile scripts/gabriel_state_source_scout.py: OK
+
+Tuning matrix (Scranton/Lancaster/York, 4 cells):
+  minimal/n1/sleep10 -> 3/3 (100%), $0.0320, 12 candidates
+  minimal/n1/sleep20 -> 3/3 (100%), $0.0305, 14 candidates
+  minimal/n2/sleep20 -> 2/3 (67%, Lancaster failed), $0.0223, 12 candidates
+  full/n1/sleep20    -> 3/3 (100%), $0.0332, 8 candidates
+Scaling estimate (recommended config): ~$1.10/~80min @ 100 munis,
+  ~$5.50/~6.7hr @ 500, ~$11/~13hr @ 1,000 (successful-call cost basis).
+```
+
+**Confirmed:** no ingestion; no `data/contracts.csv`/`data/city_coverage.csv`/`corpus/`/claim-evidence-file edits; no `gabriel.codify` calls; no FOIA/OPRA/RTKL/PRR; no git push; no remote inspection/configuration; no URL verification or candidate-audit pass. GABRIEL/`whatever` live calls this session were explicitly authorized, capped (`--max-prompts 3`, four matrix cells total), and scoped to the 3-city PA tuning matrix.
+
+---
+
 ## 2026-07-15 10:50 EDT (Live-tested the checkpoint-echo dedup fix (clean, but not re-triggered); ran a controlled n_parallels=1 vs. 2 ablation that isolated concurrency as a direct cause of rate-limiter failures; got 100% parseable on the 3 hardest PA municipalities; Harrisburg URL sanity check found a dead link and an expired TLS cert) - Scranton, Lancaster, York (0% success across 3 prior attempts each) all succeeded under n_parallels=1 + minimal prompt + 15s spacing; the identical Lancaster prompt failed when run concurrently with one other request under n_parallels=2 — the clearest evidence yet that concurrency, not just volume, trips the rate limiter; source-scouting/staging only, no ingestion, no push/remote work
 
 **Did**

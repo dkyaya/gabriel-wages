@@ -98,6 +98,34 @@ CANDIDATE_FIELDS = [
     "promotion_status",
 ]
 
+COST_SUMMARY_FIELDS = [
+    "run_id",
+    "state",
+    "municipality_count",
+    "parseable_count",
+    "failed_count",
+    "candidate_row_count",
+    "total_cost",
+    "successful_cost",
+    "failed_cost",
+    "avg_cost_per_prompt",
+    "avg_cost_per_parseable_response",
+    "avg_cost_per_candidate",
+    "input_tokens_total",
+    "reasoning_tokens_total",
+    "output_tokens_total",
+    "avg_input_tokens_per_prompt",
+    "avg_output_tokens_per_success",
+    "avg_time_taken_successful_seconds",
+    "model",
+    "prompt_mode",
+    "search_context_size",
+    "n_parallels",
+    "sleep_between_prompts",
+    "timeout",
+    "max_timeout",
+]
+
 FAILED_PARSE_FIELDS = [
     "run_id",
     "state",
@@ -645,6 +673,233 @@ def write_csv(path: Path, rows: list[dict], fields: list[str]) -> None:
 
 
 # ---------------------------------------------------------------------------
+# Cost accounting (Task 1, 2026-07-15 rate-limit tuning session)
+# ---------------------------------------------------------------------------
+
+def _numeric_col(df, col):
+    """Return a numeric pandas Series for `col`, coercing non-numeric/missing to NaN."""
+    import pandas as pd
+
+    if col not in df.columns:
+        return pd.Series([float("nan")] * len(df))
+    return pd.to_numeric(df[col], errors="coerce")
+
+
+def compute_cost_summary(
+    df,
+    municipalities: list[dict],
+    all_candidates: list[dict],
+    all_failed: list[dict],
+    run_id: str,
+    args: argparse.Namespace,
+) -> dict:
+    """Deterministic cost/token/timing summary for one live run. Uses GABRIEL's
+    own per-row Cost/Time Taken/*Tokens columns from `df` (already deduplicated
+    by run_live_batch), cross-referenced against which identifiers ended up in
+    all_failed (failed) vs. not (parseable) to split successful vs. failed cost."""
+    import pandas as pd
+
+    failed_identifiers = {f.get("identifier", "") for f in all_failed}
+    identifier_col = "Identifier" if "Identifier" in df.columns else None
+    if identifier_col:
+        is_failed = df[identifier_col].astype(str).isin(failed_identifiers)
+    else:
+        is_failed = pd.Series([False] * len(df))
+    is_success = ~is_failed
+
+    cost = _numeric_col(df, "Cost").fillna(0.0)
+    input_tokens = _numeric_col(df, "Input Tokens")
+    reasoning_tokens = _numeric_col(df, "Reasoning Tokens")
+    output_tokens = _numeric_col(df, "Output Tokens")
+    time_taken = _numeric_col(df, "Time Taken")
+
+    municipality_count = len(municipalities)
+    parseable_count = int(is_success.sum())
+    failed_count = int(is_failed.sum())
+    candidate_row_count = len(all_candidates)
+
+    total_cost = float(cost.sum())
+    successful_cost = float(cost[is_success].sum())
+    failed_cost = float(cost[is_failed].sum())
+
+    successful_time = time_taken[is_success].dropna()
+    successful_output = output_tokens[is_success].dropna()
+
+    def _safe_div(numer: float, denom: float):
+        return (numer / denom) if denom else None
+
+    summary = {
+        "run_id": run_id,
+        "state": args.state,
+        "municipality_count": municipality_count,
+        "parseable_count": parseable_count,
+        "failed_count": failed_count,
+        "candidate_row_count": candidate_row_count,
+        "total_cost": total_cost,
+        "successful_cost": successful_cost,
+        "failed_cost": failed_cost,
+        "avg_cost_per_prompt": _safe_div(total_cost, municipality_count),
+        "avg_cost_per_parseable_response": _safe_div(total_cost, parseable_count),
+        "avg_cost_per_candidate": _safe_div(total_cost, candidate_row_count),
+        "input_tokens_total": float(input_tokens.fillna(0.0).sum()),
+        "reasoning_tokens_total": float(reasoning_tokens.fillna(0.0).sum()),
+        "output_tokens_total": float(output_tokens.fillna(0.0).sum()),
+        "avg_input_tokens_per_prompt": _safe_div(float(input_tokens.fillna(0.0).sum()), municipality_count),
+        "avg_output_tokens_per_success": (float(successful_output.mean()) if len(successful_output) else None),
+        "avg_time_taken_successful_seconds": (float(successful_time.mean()) if len(successful_time) else None),
+        "model": args.model,
+        "prompt_mode": args.prompt_mode,
+        "search_context_size": args.search_context_size,
+        "n_parallels": args.n_parallels,
+        "sleep_between_prompts": args.sleep_between_prompts,
+        "timeout": args.timeout,
+        "max_timeout": args.max_timeout,
+    }
+    return summary
+
+
+def write_cost_summary(out_dir: Path, summary: dict) -> tuple[Path, Path]:
+    json_path = out_dir / "cost_summary.json"
+    json_path.write_text(json.dumps(summary, indent=2), encoding="utf-8")
+    csv_path = out_dir / "cost_summary.csv"
+    write_csv(csv_path, [summary], COST_SUMMARY_FIELDS)
+    return json_path, csv_path
+
+
+def append_cost_log(summary: dict) -> Path:
+    """Append one row to the durable, never-overwritten cost log. Writes the
+    header only if the file doesn't already exist, per source_planning_csv_hygiene_standard."""
+    path = DOCS_ANALYSIS / "gabriel_state_source_scout_cost_log.csv"
+    file_exists = path.exists()
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("a", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=COST_SUMMARY_FIELDS, extrasaction="ignore", lineterminator="\n")
+        if not file_exists:
+            writer.writeheader()
+        writer.writerow({k: summary.get(k, "") for k in COST_SUMMARY_FIELDS})
+    return path
+
+
+# ---------------------------------------------------------------------------
+# Run comparison utility (Task 2, 2026-07-15 rate-limit tuning session)
+# ---------------------------------------------------------------------------
+
+COMPARE_SETTINGS_KEYS = (
+    "model", "prompt_mode", "search_context_size", "n_parallels",
+    "sleep_between_prompts", "timeout", "max_timeout",
+)
+
+
+def _load_json_if_exists(path: Path) -> dict:
+    if not path.exists():
+        return {}
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return {}
+
+
+def _count_csv_rows(path: Path) -> int:
+    if not path.exists():
+        return 0
+    with path.open(newline="", encoding="utf-8") as f:
+        return sum(1 for _ in csv.DictReader(f))
+
+
+def _failure_type_counts_from_csv(path: Path) -> dict:
+    counts = {ft: 0 for ft in FAILURE_TYPES}
+    if not path.exists():
+        return counts
+    with path.open(newline="", encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            ft = row.get("failure_type", "other") or "other"
+            counts[ft] = counts.get(ft, 0) + 1
+    return counts
+
+
+def _duplicate_identifier_count(raw_outputs_path: Path) -> int:
+    """Count rows in raw_outputs.csv sharing an Identifier with another row —
+    should be 0 given the drop_duplicates fix in run_live_batch; a nonzero
+    count here would indicate the checkpoint-echo bug has recurred."""
+    if not raw_outputs_path.exists():
+        return 0
+    with raw_outputs_path.open(newline="", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        if "Identifier" not in (reader.fieldnames or []):
+            return 0
+        seen: dict[str, int] = {}
+        for row in reader:
+            ident = row.get("Identifier", "")
+            seen[ident] = seen.get(ident, 0) + 1
+    return sum(count - 1 for count in seen.values() if count > 1)
+
+
+def build_run_comparison_rows(run_dirs: list[Path]) -> list[dict]:
+    """One row per run directory, drawing on run_metadata.json (required),
+    cost_summary.json (optional), failed_parses.csv, and raw_outputs.csv."""
+    rows = []
+    for run_dir in run_dirs:
+        metadata = _load_json_if_exists(run_dir / "run_metadata.json")
+        if not metadata:
+            rows.append({"run_dir": str(run_dir), "error": "no run_metadata.json found"})
+            continue
+        cost_summary = _load_json_if_exists(run_dir / "cost_summary.json")
+        failed_path = run_dir / "failed_parses.csv"
+        n_parseable = metadata.get("n_parseable")
+        n_municipalities = metadata.get("municipalities_requested")
+        parse_rate = (
+            f"{n_parseable}/{n_municipalities} ({100 * n_parseable / n_municipalities:.0f}%)"
+            if n_parseable is not None and n_municipalities
+            else "n/a"
+        )
+        settings = " ".join(f"{k}={metadata.get(k, cost_summary.get(k, '?'))}" for k in COMPARE_SETTINGS_KEYS)
+        failure_counts = _failure_type_counts_from_csv(failed_path)
+        nonzero_failures = {k: v for k, v in failure_counts.items() if v}
+        rows.append(
+            {
+                "run_dir": str(run_dir),
+                "run_id": metadata.get("run_id", "?"),
+                "settings": settings,
+                "parse_rate": parse_rate,
+                "failure_type_counts": ", ".join(f"{k}={v}" for k, v in nonzero_failures.items()) or "none",
+                "total_cost": cost_summary.get("total_cost", metadata.get("total_cost")),
+                "cost_per_parseable": cost_summary.get("avg_cost_per_parseable_response"),
+                "avg_time_taken_successful_seconds": cost_summary.get("avg_time_taken_successful_seconds"),
+                "duplicate_identifier_count": _duplicate_identifier_count(run_dir / "raw_outputs.csv"),
+                "candidate_rows": metadata.get("n_candidate_rows", _count_csv_rows(run_dir / "parsed_candidates.csv")),
+                "comments": "",
+            }
+        )
+    return rows
+
+
+def render_comparison_markdown(rows: list[dict]) -> str:
+    cols = [
+        "run_id", "settings", "parse_rate", "failure_type_counts", "total_cost",
+        "cost_per_parseable", "avg_time_taken_successful_seconds",
+        "duplicate_identifier_count", "candidate_rows", "comments",
+    ]
+    lines = ["| " + " | ".join(cols) + " |", "|" + "---|" * len(cols)]
+    for row in rows:
+        if "error" in row:
+            lines.append(f"| {row['run_dir']} | ERROR: {row['error']} | " + " | ".join([""] * (len(cols) - 2)) + " |")
+            continue
+        lines.append("| " + " | ".join(str(row.get(c, "")) for c in cols) + " |")
+    return "\n".join(lines)
+
+
+def run_compare_mode(run_dirs: list[Path], compare_output: Path | None) -> int:
+    rows = build_run_comparison_rows(run_dirs)
+    markdown = render_comparison_markdown(rows)
+    print(markdown)
+    if compare_output is not None:
+        compare_output.parent.mkdir(parents=True, exist_ok=True)
+        compare_output.write_text(markdown + "\n", encoding="utf-8")
+        print(f"\ncompare_output={compare_output}")
+    return 0
+
+
+# ---------------------------------------------------------------------------
 # Live call (lazy imports — gabriel/dotenv are never imported on the dry-run path)
 # ---------------------------------------------------------------------------
 
@@ -790,7 +1045,11 @@ def _parse_args() -> argparse.Namespace:
     parser.add_argument("--sleep-between-prompts", type=float, default=0.0, help="Seconds to rest between n_parallels-sized prompt chunks on the live path. 0 (default) = single call, unchanged behavior.")
     parser.add_argument("--retry-failed-from", type=Path, default=None, help="Path to a prior run's failed_parses.csv; builds the municipality retry list from its municipality_id column, filtered against --state/--municipalities-csv.")
     parser.add_argument("--prompt-mode", choices=("full", "minimal"), default=DEFAULT_PROMPT_MODE, help=f"full = original detailed prompt; minimal = shorter structured-candidates-only prompt (default: {DEFAULT_PROMPT_MODE}).")
+    parser.add_argument("--compare-runs", type=Path, nargs="+", default=None, help="Compare prior runs instead of scouting: pass 2+ run output directories (each containing run_metadata.json). Bypasses --dry-run/--live entirely.")
+    parser.add_argument("--compare-output", type=Path, default=None, help="Optional path to also write the --compare-runs markdown table to (in addition to stdout).")
     args = parser.parse_args()
+    if args.compare_runs is not None:
+        return args
     if not args.live:
         args.dry_run = True
     if args.live and args.max_prompts is None:
@@ -800,6 +1059,8 @@ def _parse_args() -> argparse.Namespace:
 
 def main() -> int:
     args = _parse_args()
+    if args.compare_runs is not None:
+        return run_compare_mode(args.compare_runs, args.compare_output)
     timestamp = datetime.now().strftime("%Y-%m-%d_%H%M%S")
     run_id = f"{args.state.lower()}_{timestamp}"
     out_dir = args.output_dir or (TMP_ROOT / args.state / timestamp)
@@ -957,10 +1218,16 @@ def main() -> int:
     )
     (out_dir / "run_metadata.json").write_text(json.dumps(metadata, indent=2), encoding="utf-8")
 
+    cost_summary = compute_cost_summary(df, municipalities, all_candidates, all_failed, run_id, args)
+    cost_json_path, cost_csv_path = write_cost_summary(out_dir, cost_summary)
+    cost_log_path = append_cost_log(cost_summary)
+
     print(f"LIVE — {len(municipalities)} municipalities prompted, {len(df)} responses")
     print(f"parseable={metadata['n_parseable']} failed_parses={len(all_failed)} candidate_rows={len(all_candidates)}")
     print(f"candidates_csv={candidates_out}")
     print(f"run_metadata={out_dir / 'run_metadata.json'}")
+    print(f"cost_summary={cost_json_path} total_cost={cost_summary['total_cost']:.6f}")
+    print(f"cost_log={cost_log_path}")
     return 0
 
 
