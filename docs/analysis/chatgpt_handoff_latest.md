@@ -2,9 +2,73 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-15T12:20:00-04:00`
+Last updated: `2026-07-15T12:40:00-04:00`
 
 ---
+
+## 2026-07-15T12:40:00-04:00 - Built national scout coverage accounting setup: county universe, municipality placeholder universe, and national state/county scout rollups; added a dedicated rebuild script; no new scout calls or verification
+
+**Commit target:** `Add national scout coverage accounting`
+
+### Current State After This Entry
+
+- **National county-equivalent backbone is now live**:
+  - `docs/analysis/national_county_universe.csv` — **3,144** rows from the official 2024 Census Gazetteer county file, filtered to the **50 states plus DC** (territories excluded by design for this workflow).
+  - `docs/analysis/national_county_state_summary.csv` — 51 state/DC rows with county-equivalent counts.
+- **Municipality placeholder universe is now live**:
+  - `docs/analysis/national_municipality_universe.csv` — **65** municipalities currently known to the project, and **only** those municipalities.
+  - Sources used to populate it: `data/contracts.csv`, `docs/analysis/national_source_targets_2026-07-12.csv`, and `docs/analysis/gabriel_state_source_scout_pa_batch25_municipalities_2026-07-15.csv`.
+  - This is intentionally **not** a national municipality list; it is a project-known placeholder. Multi-county municipalities are assigned a primary county and flagged in row-level `notes`.
+- **National scout coverage rollups are now live**:
+  - `docs/analysis/national_scout_coverage_state.csv` — 51 state/DC rows, showing county-equivalent count, known municipalities, current scout coverage, candidate totals, token totals, and scout cost.
+  - `docs/analysis/national_scout_coverage_county.csv` — 3,144 county/county-equivalent rows, showing known municipalities and current scout coverage at the county level.
+  - Only **PA** currently has any scout coverage in these national files: **25 scouted**, **23 scout-positive**, **10 likely-triad**, **75 candidate rows**, **65 official-or-union candidate rows**, **3 high-priority candidate rows**, **$0.2687877** total scout cost.
+- **New methodology note**: `docs/analysis/national_scout_coverage_methodology_2026-07-15.md` defines the requested vocabulary distinction:
+  - `county_universe`
+  - `municipality_universe`
+  - `scout_coverage`
+  - `scout_positive`
+  - `verified`
+  - `ingested`
+  - `codified`
+  and explicitly states that **county coverage does not mean all municipalities in that county have been scouted**.
+- **New session summary**: `docs/analysis/national_scout_coverage_setup_2026-07-15.md`.
+- **Builder script**: `scripts/build_scout_coverage.py`
+  - command shape: `python scripts/build_scout_coverage.py`
+  - downloads/caches the 2024 Gazetteer county zip in `tmp/` if needed,
+  - rebuilds all five national accounting CSVs,
+  - parse-back validates each written CSV.
+- No new `gabriel.whatever` or `gabriel.codify` calls this session; no verification, ingestion, claim-file updates, corpus edits, or remote work.
+
+### Validation/audit results
+
+```text
+python -m py_compile scripts/build_scout_coverage.py
+OK
+
+python scripts/build_scout_coverage.py
+county_equivalents=3144
+known_municipalities=65
+scouted_municipalities=25
+
+python scripts/validate.py
+VALIDATION PASSED — contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19
+exact-cycle: 10 | overlap-cycle: 18 | exploratory adjacent matches: 2
+safety units unmatched: 6
+```
+
+### Recommended next run
+
+1. **Build an authoritative national municipality universe / county crosswalk** before running broader multi-state scout batches. The current municipality file is intentionally incomplete and only suitable for project-known accounting.
+2. Use a public source of record (for example, Census place geography plus a documented employer-target filter) to replace the curated primary-county assignments for multi-county municipalities.
+3. After that crosswalk exists, regenerate `national_municipality_universe.csv` and rerun `python scripts/build_scout_coverage.py`.
+4. Do **not** treat county rows with nonzero scout counts as "county complete" until the municipality universe itself is authoritative.
 
 ## 2026-07-15T12:20:00-04:00 - Scaled the tuned GABRIEL scout to a 25-municipality PA batch; added persistent scout coverage accounting (municipality + state CSVs); one retry pass took the batch to 100% parseable; a new "Connection error" failure signature appeared and resolved cleanly on retry
 
