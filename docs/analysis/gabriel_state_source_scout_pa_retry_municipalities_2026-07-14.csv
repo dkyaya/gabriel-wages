@@ -1,0 +1,8 @@
+municipality_id,municipality,state,population_rank_note,already_in_corpus,already_in_national_source_targets,retry_reason
+pa_erie,Erie,PA,4th largest PA city,no,yes,failed in first pilot (timeout_or_capacity)
+pa_reading,Reading,PA,5th largest PA city,no,no,failed in first pilot (timeout_or_capacity)
+pa_scranton,Scranton,PA,6th largest PA city,no,no,failed in first pilot (empty_response_with_response_id)
+pa_bethlehem,Bethlehem,PA,7th largest PA city,no,no,failed in first pilot (empty_response_with_response_id)
+pa_lancaster,Lancaster,PA,8th largest PA city,no,no,failed in first pilot (empty_response_with_response_id)
+pa_harrisburg,Harrisburg,PA,state capital; top-10 PA city,no,no,failed in first pilot (timeout_or_capacity)
+pa_york,York,PA,top-10 PA city,no,no,failed in first pilot (timeout_or_capacity)

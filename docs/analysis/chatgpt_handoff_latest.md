@@ -2,7 +2,51 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-14T20:52:00-04:00`
+Last updated: `2026-07-14T23:05:00-04:00`
+
+---
+
+## 2026-07-14T23:05:00-04:00 - Hardened GABRIEL scout failure logging; retried 7 failed PA municipalities at n_parallels=1; found and fixed a filename-collision bug that had silently overwritten the first pilot's candidate CSV
+
+**Commit target:** `Harden GABRIEL scout failure logging and retry PA failures`
+
+### Current State After This Entry
+
+- **`scripts/gabriel_state_source_scout.py` hardened**: `failed_parses.csv` now has 17 columns (was 7) including a deterministic `failure_type` (`timeout_or_capacity` / `empty_response_with_response_id` / `empty_response_no_response_id` / `json_parse_error` / `other`) plus full GABRIEL diagnostics (error log, response IDs, tokens, cost). Verified against the first pilot's saved data before any new live call — correctly reproduced the previously-known 4-timeout/3-empty-with-id split.
+- **Live retry run**: 7 previously-failed PA municipalities, `n_parallels=1` (vs. the first pilot's `n_parallels=3`). Result: **1 of 7 parseable (Erie) — a worse rate (14%) than the first pilot's 30%.** This directly revises the 2026-07-01 archived precedent's suggestion that lower concurrency helps; the bottleneck now looks like per-call web-search latency against the Harvard proxy (hard-coded 90s timeout in `run_live_batch`), not worker-queue contention. All 6 remaining failures this retry were uniformly `timeout_or_capacity` (the empty-with-response-id mode from the first pilot did not recur).
+- **Found and fixed a real, consequential bug mid-session**: the durable candidate-CSV filename was date-only (`gabriel_state_source_scout_candidates_<date>.csv`), so running the retry on the same calendar date as the first pilot **silently overwrote the first pilot's 9-row candidate CSV with the retry's 4-row file**. Caught immediately, **restored from git commit `d3006ff`** (confirmed byte-identical via `git diff --stat`), and fixed the script to name durable output by `run_id` (state + full timestamp) so this can't recur. The retry's own 4 candidates now live at a distinct, non-colliding path: `docs/analysis/gabriel_state_source_scout_candidates_pa_2026-07-14_223544.csv`.
+- **Found and fixed a smaller normalization gap**: the model returned `source_owner_type="private_legal_vendor"` for case-law-aggregator sources (`findlaw.com`, `justia.com`) — added to the owner-type/third-party-host normalization. Reprocessed both runs' saved raw responses offline (no additional API calls) to regenerate consistent scores.
+- **Real URL reachability check** (actual `curl` HTTP requests, not domain guesses) on the first pilot's 7 Pittsburgh/Philadelphia candidates: 5 confirmed live (2 Legistar/`.gov`, 3 PDF), 1 blocked (403, likely WAF), 1 TCP-timeout (unverified, not assumed dead). **Directly read `data/contracts.csv`** to resolve overlap precisely: the Philadelphia fire candidate is an exact URL duplicate of the already-ingested `pa_philadelphia_fire_2017` (reassuring — the tool rediscovers real documents); the police (2017 Act 111 award) and non_safety (2022 Act 195 "Local 159" interim award) candidates are genuinely new, verified-reachable leads.
+- Outputs: `docs/analysis/gabriel_state_source_scout_pa_retry_municipalities_2026-07-14.csv`, `docs/analysis/gabriel_state_source_scout_candidates_pa_2026-07-14_223544.csv` (4 new Erie candidates), `docs/analysis/gabriel_state_source_scout_retry_summary_2026-07-14.md` (full comparison + URL check).
+- This run made only the explicitly-authorized, capped `gabriel.whatever` retry (7 prompts, one attempt); no `gabriel.codify`; no FOIA/OPRA/RTKL/PRR; no ingestion; no push; no remote inspection/configuration; `data/contracts.csv`/`data/city_coverage.csv`/`corpus/`/claim-evidence files untouched (read-only reads only).
+
+### Validation/audit results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed (unchanged)
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19 (unchanged)
+
+python -m py_compile scripts/gabriel_state_source_scout.py: OK
+
+Retry: 7 prompted, 1 parseable (Erie), 6 failed (all timeout_or_capacity), 4
+candidate rows. First pilot's candidate CSV restored from git after an accidental
+same-day overwrite (git diff --stat confirms zero diff post-restore). URL check:
+5/7 confirmed live via curl, 1 blocked (403), 1 unreachable (TCP timeout).
+```
+
+### Recommended next run
+
+1. Test raising the hard-coded 90s `timeout`/`max_timeout` in `run_live_batch` before further `n_parallels` tuning — this session's controlled comparison shows concurrency isn't the binding constraint.
+2. Reading, Scranton, Bethlehem, Lancaster, Harrisburg, York remain untried beyond this session's one retry attempt.
+3. Diff the Philadelphia police (2017 Act 111 award, `phila.gov`) and non_safety ("Local 159" 2022 Act 195 interim award) candidates more thoroughly before any promotion decision — both confirmed genuinely new and reachable.
+4. Re-check the `apps.pittsburghpa.gov` Redtail PDF and `pittsburghpa.gov` budget PDF from a different network path (both inconclusive this session).
+5. Erie's AFSCME Local 2206 ratification news release (score 60) is the most actionable of this retry's 4 new candidates.
 
 ---
 

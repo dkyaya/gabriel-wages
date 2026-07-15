@@ -91,9 +91,76 @@ FAILED_PARSE_FIELDS = [
     "municipality",
     "municipality_id",
     "identifier",
+    "failure_type",
     "error",
+    "gabriel_successful",
+    "gabriel_error_log",
+    "gabriel_response_ids",
+    "time_taken",
+    "input_tokens",
+    "reasoning_tokens",
+    "output_tokens",
+    "cost",
+    "response_nonempty",
+    "web_sources_nonempty",
     "raw_response_ref",
 ]
+
+# Deterministic failure_type classification for a row that failed to parse.
+# See docs/analysis/gabriel_state_source_scout_methodology_2026-07-14.md for how
+# this maps to the two failure families found in the 2026-07-14 PA pilot:
+# outright proxy timeouts vs. a real OpenAI response ID with no usable text.
+FAILURE_TYPES = (
+    "timeout_or_capacity",
+    "empty_response_with_response_id",
+    "empty_response_no_response_id",
+    "json_parse_error",
+    "other",
+)
+_TIMEOUT_ERROR_MARKERS = ("timed out", "timeout", "maximum capacity")
+
+
+def _bool_str(value: bool) -> str:
+    return "yes" if value else "no"
+
+
+def classify_failure(response_text: str, gabriel_row: dict) -> tuple[str, dict]:
+    """Classify why a GABRIEL row failed to yield parseable JSON, and collect
+    GABRIEL's own diagnostic columns for failed_parses.csv."""
+    response_nonempty = bool(response_text and response_text.strip())
+    error_log = str(gabriel_row.get("Error Log", "") or "")
+    successful_raw = str(gabriel_row.get("Successful", "") or "")
+    response_ids_raw = str(gabriel_row.get("Response IDs", "") or "")
+    web_sources_raw = str(gabriel_row.get("Web Search Sources", "") or "").strip()
+    web_sources_nonempty = web_sources_raw not in ("", "[]", "{}", "None", "nan")
+    has_response_id = "resp_" in successful_raw or "resp_" in response_ids_raw
+
+    lowered_error = error_log.lower()
+    if any(marker in lowered_error for marker in _TIMEOUT_ERROR_MARKERS):
+        failure_type = "timeout_or_capacity"
+    elif response_nonempty:
+        failure_type = "json_parse_error"
+    elif has_response_id:
+        failure_type = "empty_response_with_response_id"
+    elif not response_nonempty:
+        failure_type = "empty_response_no_response_id"
+    else:
+        failure_type = "other"  # pragma: no cover - exhaustive above, kept as a safety net
+
+    diagnostics = {
+        "failure_type": failure_type,
+        "gabriel_successful": successful_raw,
+        "gabriel_error_log": error_log,
+        "gabriel_response_ids": response_ids_raw or successful_raw,
+        "time_taken": str(gabriel_row.get("Time Taken", "") or ""),
+        "input_tokens": str(gabriel_row.get("Input Tokens", "") or ""),
+        "reasoning_tokens": str(gabriel_row.get("Reasoning Tokens", "") or ""),
+        "output_tokens": str(gabriel_row.get("Output Tokens", "") or ""),
+        "cost": str(gabriel_row.get("Cost", "") or ""),
+        "response_nonempty": _bool_str(response_nonempty),
+        "web_sources_nonempty": _bool_str(web_sources_nonempty),
+    }
+    return failure_type, diagnostics
 
 UNIT_TYPES = ("police", "fire", "non_safety")
 UNIT_TYPE_LIST_KEYS = {
@@ -110,6 +177,10 @@ GENERIC_TITLE_TERMS = {
 THIRD_PARTY_HOST_MARKERS = (
     "scribd.com", "documentcloud.org", "drive.google.com", "dropbox.com",
     "slideshare.net", "issuu.com", "4shared.com",
+    # Third-party case-law aggregators — found in the 2026-07-14 retry pilot
+    # (Erie candidates hosted on caselaw.findlaw.com / law.justia.com rather
+    # than a primary city/court/union source).
+    "findlaw.com", "justia.com", "casetext.com",
 )
 
 PRR_MARKERS = ("foia", "public records request", "prr", "opra", "rtkl", "records request")
@@ -127,6 +198,8 @@ OWNER_TYPE_SYNONYMS = {
     "union": "union", "labor_union": "union", "union_local": "union", "union_website": "union",
     "school": "school", "school_district": "school",
     "third_party": "third_party", "document_host": "third_party",
+    "private_legal_vendor": "third_party", "legal_database": "third_party",
+    "case_law_database": "third_party",
     "news": "news", "media": "news", "newspaper": "news",
 }
 
@@ -386,9 +459,11 @@ def parse_response_to_candidates(
     identifier: str,
     response_text: str,
     raw_response_ref: str,
+    gabriel_row: dict | None = None,
 ) -> tuple[list[dict], dict | None]:
     parsed, error = _extract_json(response_text)
     if parsed is None:
+        _, diagnostics = classify_failure(response_text, gabriel_row or {})
         return [], {
             "run_id": run_id,
             "state": muni["state"],
@@ -397,6 +472,7 @@ def parse_response_to_candidates(
             "identifier": identifier,
             "error": error,
             "raw_response_ref": raw_response_ref,
+            **diagnostics,
         }
 
     raw_rows: list[dict] = []
@@ -641,7 +717,9 @@ def main() -> int:
             continue
         response_text = str(row.get("Response", "") or "")
         raw_response_ref = f"{raw_outputs_path}#identifier={identifier}"
-        candidates, failed = parse_response_to_candidates(run_id, muni, identifier, response_text, raw_response_ref)
+        candidates, failed = parse_response_to_candidates(
+            run_id, muni, identifier, response_text, raw_response_ref, gabriel_row=row.to_dict()
+        )
         all_candidates.extend(candidates)
         if failed:
             all_failed.append(failed)
@@ -652,7 +730,9 @@ def main() -> int:
         for muni, identifier, (_, row) in zip(municipalities, identifiers, df.iterrows()):
             response_text = str(row.get("Response", "") or "")
             raw_response_ref = f"{raw_outputs_path}#row={identifier}"
-            candidates, failed = parse_response_to_candidates(run_id, muni, identifier, response_text, raw_response_ref)
+            candidates, failed = parse_response_to_candidates(
+                run_id, muni, identifier, response_text, raw_response_ref, gabriel_row=row.to_dict()
+            )
             all_candidates.extend(candidates)
             if failed:
                 all_failed.append(failed)
@@ -662,9 +742,18 @@ def main() -> int:
     write_csv(parsed_candidates_path, all_candidates, CANDIDATE_FIELDS)
     write_csv(failed_parses_path, all_failed, FAILED_PARSE_FIELDS)
 
-    date_str = datetime.now().strftime("%Y-%m-%d")
-    candidates_out = DOCS_ANALYSIS / f"gabriel_state_source_scout_candidates_{date_str}.csv"
+    # Named by run_id (state + full timestamp), not just the calendar date — a
+    # date-only name collides and silently overwrites an earlier same-day run's
+    # staged candidates (found the hard way: a second same-day pilot clobbered
+    # the first pilot's 9-row output until this fix + a git-restore).
+    candidates_out = DOCS_ANALYSIS / f"gabriel_state_source_scout_candidates_{run_id}.csv"
     write_csv(candidates_out, all_candidates, CANDIDATE_FIELDS)
+
+    failure_type_counts = {ft: 0 for ft in FAILURE_TYPES}
+    for failed in all_failed:
+        failure_type_counts[failed.get("failure_type", "other")] = (
+            failure_type_counts.get(failed.get("failure_type", "other"), 0) + 1
+        )
 
     metadata.update(
         {
@@ -676,6 +765,7 @@ def main() -> int:
             "n_parseable": int(len(municipalities) - len(all_failed)),
             "n_failed_parses": len(all_failed),
             "n_candidate_rows": len(all_candidates),
+            "failure_type_counts": failure_type_counts,
         }
     )
     (out_dir / "run_metadata.json").write_text(json.dumps(metadata, indent=2), encoding="utf-8")
