@@ -6,6 +6,53 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-15 10:50 EDT (Live-tested the checkpoint-echo dedup fix (clean, but not re-triggered); ran a controlled n_parallels=1 vs. 2 ablation that isolated concurrency as a direct cause of rate-limiter failures; got 100% parseable on the 3 hardest PA municipalities; Harrisburg URL sanity check found a dead link and an expired TLS cert) - Scranton, Lancaster, York (0% success across 3 prior attempts each) all succeeded under n_parallels=1 + minimal prompt + 15s spacing; the identical Lancaster prompt failed when run concurrently with one other request under n_parallels=2 — the clearest evidence yet that concurrency, not just volume, trips the rate limiter; source-scouting/staging only, no ingestion, no push/remote work
+
+**Did**
+- Confirmed starting state: commit `6c041ca Tune GABRIEL scout timeout retry controls`; `data/contracts.csv` 64 rows/19 cities (unchanged all session).
+- **Task 1 (dedup fix live confirmation).** Dry-run then one live run: `--retry-failed-from` (pointed at the timeout stress test's `failed_parses_corrected.csv`, filtering to exactly Scranton/Lancaster/York) + `--prompt-mode minimal --n-parallels 1 --sleep-between-prompts 15 --timeout 90 --max-timeout 90`. Result: **3/3 parseable (100%)**, 0 duplicate identifiers in both `raw_outputs.csv` and GABRIEL's own internal checkpoint file. Honest finding: the checkpoint-echo duplication bug from the prior session did **not** recur at this smaller (3-municipality, 1-2 chunk) scale, so the fix's `drop_duplicates()` ran as a no-op both times this session — confirmed safe/harmless, but not a live demonstration of it removing a genuine duplicate. The original bug remains verified only offline (against the prior session's buggy dataset) plus safe-in-practice today.
+- **Task 2 (n_parallels ablation, run since Task 1 was clean and cheap).** Same 3 municipalities, same prompt mode and 15s spacing, `n_parallels=2` instead of 1. Result: **2/3 parseable (67%)** — Lancaster (paired concurrently with Scranton) hit `timeout_or_capacity` at 60s; the identical Lancaster prompt had just succeeded moments earlier under `n_parallels=1`. This is the most direct evidence yet that concurrency itself (not just total request volume) triggers the rate limiter.
+- **Task 3 (Harrisburg URL sanity check, read-only, no download to corpus).** Checked all 5 Harrisburg candidate URLs from the corrected timeout-test CSV via `curl` (`-o /dev/null`, content-type/size/redirect only). Found: the highest-scored (60, non_safety AFSCME) `harrisburgpa.gov` link **302-redirects to a 404** — a dead link on an otherwise-official domain; `cms2.revize.com`'s IAFF fire CBA is confirmed live with valid TLS (cleanest of the 5); both `harrisburgcitycontroller.com` links (FOP police amendment, IAFF fire second amendment) are real PDFs but sit behind an **expired TLS certificate** (expired 2026-04-22) — reachable only with verification bypassed, a genuine caveat for any future fetch; the third-party `ecode360.com` police PDF is confirmed live (already reflected in its lower score).
+- **Task 4 (five-run comparison).** Wrote `docs/analysis/gabriel_state_source_scout_rate_limit_tuning_summary_2026-07-15.md` — full comparison table across all five scout runs to date, the dedup-fix status, the n_parallels ablation, the Harrisburg URL table, and a revised recommendation: adopt `n_parallels=1` + `prompt_mode=minimal` + `sleep_between_prompts=15`+ as the default, and scale via more sequential invocations, not more parallel workers.
+- **Task 6 (validation).** `python -m py_compile`, `python scripts/validate.py`, `python ingest/test_pipeline.py`, `python ingest/audit_coverage.py` all re-run and unchanged (64 contracts, 60/60 tests, 28 healthy pairs).
+- This run made only two explicitly-authorized, capped `gabriel.whatever` live calls (3 prompts each); no `gabriel.codify` calls; no FOIA/OPRA/RTKL/PRR; no ingestion; no push; no remote inspection/configuration; `data/contracts.csv`/`data/city_coverage.csv`/`corpus/`/claim-evidence files untouched.
+
+**Decisions and why**
+- Ran the optional second micro-test (`n_parallels=2`) after the first live test came back clean and cheap (~$0.039, ~110s) — the task explicitly allowed this "if cost/time are still low," and it produced a much stronger result (a genuine same-input ablation) than stopping after just the dedup-confirmation run would have.
+- Reported the dedup fix honestly as "safe but not re-exercised" rather than claiming a definitive live confirmation — the duplication bug simply did not recur at this session's smaller test scale, and overclaiming a fix's live verification when it wasn't actually triggered would misrepresent the evidence to future sessions.
+- Used `curl -k` (TLS verification bypassed) only for the reachability/content-type check itself, not for any fetch-to-disk — appropriate for a read-only sanity check, but flagged prominently in the summary so a future ingestion attempt doesn't silently bypass a real certificate problem.
+
+**Surprises/breakage**
+- **The n_parallels=1 vs. 2 ablation is the most consequential finding this session**: the identical prompt, for the identical city, succeeded alone and failed when run alongside one concurrent request. This directly implicates concurrency (not just request volume or per-call latency) as what the rate limiter is reacting to, and is a cleaner, more controlled piece of evidence than anything in the prior three sessions.
+- **All 6 of the previously-fully-failing PA municipalities (Reading, Scranton, Bethlehem, Lancaster, Harrisburg, York) have now each produced at least one successful parse** across the four live sessions to date — a natural point to pause scout tuning and let a verification pass catch up on the candidate backlog.
+- **The Harrisburg AFSCME dead link** (highest-scored candidate, 60) is a reminder that `provenance_score` reflects plausibility, not reachability — the URL check caught this before it could waste a future verification pass.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed (unchanged)
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19 (all unchanged)
+
+python -m py_compile scripts/gabriel_state_source_scout.py: OK
+
+Dedup-confirm run: 3 municipalities (Scranton, Lancaster, York), n_parallels=1,
+  sleep_between_prompts=15, minimal prompt -> 3/3 parseable (100%), 0 duplicate
+  identifiers, 14 candidate rows, ~$0.039 cost.
+Micro-test: same 3 municipalities, n_parallels=2 -> 2/3 parseable (67%,
+  Lancaster failed), 11 candidate rows, ~$0.011 cost.
+Harrisburg URL check: 3/5 confirmed live (1 with an expired TLS cert,
+  reachable only via bypassed verification), 1 dead link (302->404).
+```
+
+**Confirmed:** no ingestion; no `data/contracts.csv`/`data/city_coverage.csv`/`corpus/`/claim-evidence-file edits; no `gabriel.codify` calls; no FOIA/OPRA/RTKL/PRR; no git push; no remote inspection/configuration. GABRIEL/`whatever` live calls this session were explicitly authorized, capped (`--max-prompts 3`, two tests total), and scoped to the 3-city PA dedup/ablation test.
+
+---
+
 ## 2026-07-15 10:30 EDT (Added timeout/retry CLI controls and minimal-prompt mode to the GABRIEL scout; ran one live timeout stress test on the 6 still-failing PA municipalities; found and fixed a checkpoint-echo duplication bug in the new chunked-sleep path; revised the working hypothesis about the failure mode) - Longer timeout did not fix reliability; the "timeout_or_capacity" error traces to a rate-limiter (requests/tokens-per-minute), not call latency; minimal prompt + chunked/spaced requests got 50% parseable (best of 3 runs) on the hardest municipality set yet; source-scouting/staging only, no ingestion, no push/remote work
 
 **Did**

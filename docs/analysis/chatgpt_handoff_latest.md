@@ -2,7 +2,53 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-15T10:45:00-04:00`
+Last updated: `2026-07-15T10:55:00-04:00`
+
+---
+
+## 2026-07-15T10:55:00-04:00 - Live-confirmed the checkpoint-echo dedup fix (clean, but not re-triggered); ran a controlled n_parallels=1 vs. 2 ablation that isolated concurrency as a direct cause of rate-limiter failures; got 100% parseable on the 3 hardest PA municipalities; Harrisburg URL sanity check found a dead link and an expired TLS cert
+
+**Commit target:** `Tune GABRIEL scout rate-limit batching`
+
+### Current State After This Entry
+
+- **Dedup fix status**: dry-run then one live run (`--retry-failed-from` pointed at the timeout stress test's `failed_parses_corrected.csv`, filtered to Scranton/Lancaster/York) with `--prompt-mode minimal --n-parallels 1 --sleep-between-prompts 15 --timeout 90 --max-timeout 90` produced **3/3 parseable (100%)**, 0 duplicate identifiers (confirmed in both `raw_outputs.csv` and GABRIEL's own internal checkpoint file). **The duplication bug did not recur** at this smaller scale, so the fix's `drop_duplicates()` ran as a no-op — safe, but not a genuine live re-trigger of the original bug. Treat as "confirmed safe, not yet confirmed against a fresh real duplicate" pending a run closer to the original bug's scale (6+ municipalities, `n_parallels=2`, 3+ chunks).
+- **n_parallels ablation (the strongest new finding)**: same 3 municipalities, same `prompt_mode=minimal` + `sleep_between_prompts=15`, only `n_parallels=2` instead of 1 → **2/3 parseable (67%)**. Lancaster — paired concurrently with Scranton — hit `timeout_or_capacity` at 60s; the *identical* Lancaster prompt had just succeeded under `n_parallels=1` moments earlier. This directly implicates **concurrency itself**, not just total request volume or per-call latency, as what the rate limiter reacts to — the cleanest controlled evidence in this project's four scout-tuning sessions.
+- **All 6 of the PA municipalities that failed every attempt through the 2026-07-14 sessions (Reading, Scranton, Bethlehem, Lancaster, Harrisburg, York) have now each succeeded at least once** across this project's four live sessions. Scranton/Lancaster/York succeeded this session under `n_parallels=1`+15s spacing; Reading/Bethlehem/Harrisburg succeeded in the prior stress test.
+- **Harrisburg URL sanity check** (read-only `curl`, no download to corpus): the highest-scored Harrisburg candidate (60, non_safety AFSCME, `harrisburgpa.gov`) is a **dead link** — 302-redirects to a `cms2.revize.com` path that 404s. `cms2.revize.com`'s IAFF fire CBA is confirmed live with valid TLS (cleanest of the 5). Both `harrisburgcitycontroller.com` links (FOP police amendment, IAFF fire second amendment) are real PDFs but sit behind an **expired TLS certificate** (expired 2026-04-22) — reachable only with verification bypassed; flag before any future fetch. Third-party `ecode360.com` police PDF confirmed live (already reflected in its lower score).
+- Outputs: `docs/analysis/gabriel_state_source_scout_candidates_pa_2026-07-15_104013.csv` (14 rows, n_parallels=1 run), `docs/analysis/gabriel_state_source_scout_candidates_pa_2026-07-15_104359.csv` (11 rows, n_parallels=2 run — includes a PA Labor Relations Board fire final-order PDF scoring 73, the highest single score this project's scout has produced), `docs/analysis/gabriel_state_source_scout_rate_limit_tuning_summary_2026-07-15.md` (full 5-run comparison, ablation, URL check, recommendation).
+- This run made only two explicitly-authorized, capped `gabriel.whatever` live calls (3 prompts each); no `gabriel.codify`; no FOIA/OPRA/RTKL/PRR; no ingestion; no push; no remote inspection/configuration; `data/contracts.csv`/`data/city_coverage.csv`/`corpus/`/claim-evidence files untouched.
+
+### Validation/audit results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed (unchanged)
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19 (unchanged)
+
+python -m py_compile scripts/gabriel_state_source_scout.py: OK
+
+Dedup-confirm (n_parallels=1): 3 municipalities, 3/3 parseable (100%), 0
+duplicates, 14 candidate rows, ~$0.039 cost.
+Micro-test (n_parallels=2): same 3 municipalities, 2/3 parseable (67%,
+Lancaster failed), 11 candidate rows, ~$0.011 cost.
+Harrisburg URL check: 3/5 confirmed live, 1 with expired TLS cert
+(reachable only via bypassed verification), 1 dead link (302->404).
+```
+
+### Recommended next run
+
+1. **Adopt `n_parallels=1` + `prompt_mode=minimal` + `sleep_between_prompts=15` (or higher) as the default configuration** for any further scout runs — this session's controlled ablation shows concurrency, not volume, is the binding constraint, and this configuration achieved 100% on the hardest available test set.
+2. **Scale via more sequential invocations, not more parallel workers**, when moving toward a full-state run.
+3. **Re-verify the dedup fix at a scale closer to the original bug** (6+ municipalities, `n_parallels=2`, 3+ chunks) before fully trusting `--sleep-between-prompts` output at larger scale — this session's two smaller tests didn't reproduce the original duplication.
+4. **Fix or drop the Harrisburg AFSCME dead link** before any promotion decision; **flag the `harrisburgcitycontroller.com` expired certificate** for whoever verifies those two PDFs next.
+5. **Pause further scout tuning and let a verification pass catch up** — all 6 previously-fully-failing PA municipalities have now produced at least one successful parse; the candidate backlog (Reading, Bethlehem, Harrisburg, Scranton, Lancaster, York) is now large enough to warrant URL-reachability + `data/contracts.csv` overlap checks (following the 2026-07-14 retry session's pattern) before running more `whatever` calls.
+6. Lancaster's PA Labor Relations Board fire final-order PDF (score 73, `state_labor_board`) is this session's most actionable single new lead.
 
 ---
 
