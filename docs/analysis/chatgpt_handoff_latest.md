@@ -2,7 +2,50 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-14T18:38:00-04:00`
+Last updated: `2026-07-14T20:52:00-04:00`
+
+---
+
+## 2026-07-14T20:52:00-04:00 - New GABRIEL statewide source-scout pilot built and run (dry-run + capped 10-prompt PA live pilot); one scoring bug found and fixed
+
+**Commit target:** `Add GABRIEL statewide source scout pilot`
+
+### Current State After This Entry
+
+- **New reusable tool: `scripts/gabriel_state_source_scout.py`.** Runs one `gabriel.whatever(web_search=True)` source-discovery prompt per municipality (police/fire/non-safety candidates), parses the JSON response, and applies a deterministic scoring layer (`provenance_score`/`likely_ingest_priority`/`triad_value`) — all documented in the new `docs/analysis/gabriel_state_source_scout_methodology_2026-07-14.md` (schema, `whatever` vs. `codify`, quarantine/promotion rules, scaling path). This is source-scouting/staging only — feeds Steps 1-5 of the existing `claim_testing_source_wave_methodology_2026-07-12.md` 13-step lifecycle, never writes to `data/contracts.csv`/`data/city_coverage.csv`/`corpus/`.
+- **Pilot municipality list**: `docs/analysis/gabriel_state_source_scout_pa_pilot_municipalities_2026-07-14.csv` (10 largest/claim-relevant PA cities). Script accepts `--municipalities-csv` to swap in a full-state gazetteer later with no code change.
+- **Dry run then capped live run.** Dry run (10 PA prompts) inspected first. Live run: `--state PA --limit 10 --max-prompts 10 --search-context-size low --model gpt-5.4-nano --n-parallels 3` via the same Harvard-proxy `api_key`/`base_url`/`extra_headers`-into-`gabriel.whatever()` pattern the 2026-07-01 archived smoke test used (not `codify`'s `response_fn` adapter — a different, now also-precedented wiring). Cost: ~$0.035.
+- **Result: 3 of 10 municipalities (Philadelphia, Pittsburgh, Allentown) returned parseable JSON; 7 of 10 did not** — 4 clear proxy timeouts (same failure family the 2026-07-01 archive already documented), 3 with a real OpenAI response ID but empty response text (a new, not-yet-diagnosed failure mode worth distinguishing in a future run). 9 candidate rows produced; Philadelphia and Pittsburgh both returned full police+fire+non_safety triads.
+- **Found and fixed a real scoring bug mid-session**: the model ignored the requested controlled vocabulary for `source_owner_type`/`document_type` (returned free-text/underscored variants like `"government"`, `"labor_union"`, `"interest_arbitration_award"` instead of the enum), which silently zeroed scoring rewards for genuinely strong official-government candidates (e.g. a `phila.gov`-hosted Act 111 arbitration award). Added `normalize_owner_type()`/`normalize_document_type()` to the script and **reprocessed the already-saved raw responses offline** (no additional API calls) to regenerate corrected scores.
+- Outputs: `docs/analysis/gabriel_state_source_scout_candidates_2026-07-14.csv` (9 rows, all `verification_status=unverified`/`promotion_status=raw_model_output`), `docs/analysis/gabriel_state_source_scout_summary_2026-07-14.md` (full audit: counts, best-verification targets, both failure modes, scalability read).
+- This run made only the explicitly-authorized, capped `gabriel.whatever` live calls (10, PA pilot); no `gabriel.codify`; no FOIA/OPRA/RTKL/PRR; no ingestion; no push; no remote inspection/configuration; `data/contracts.csv`/`data/city_coverage.csv`/`corpus/`/claim-evidence files untouched.
+
+### Validation/audit results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed (unchanged)
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19 (unchanged — no data/contracts.csv edits)
+
+python -m py_compile scripts/gabriel_state_source_scout.py: OK
+
+Live pilot: 10 prompted, 10 responses, 3 parseable, 7 failed (4 timeouts + 3
+empty-despite-response-id), 9 candidate rows, 9/9 with URL, 8/9 city-owned +
+1/9 union-owned, 0 news/context-only/third-party rows, 2 full triads. ~$0.035.
+```
+
+### Recommended next run
+
+1. Re-test with `n_parallels=1` against the 7 failed municipalities (Erie, Reading, Scranton, Bethlehem, Lancaster, Harrisburg, York) — matches the 2026-07-01 archived precedent that lower concurrency succeeded where higher didn't.
+2. Log GABRIEL's own `Successful`/`Error Log` columns per failed row to distinguish the two observed failure modes (outright timeout vs. empty-despite-response-id) rather than collapsing both to "empty response text."
+3. Manually verify (not ingest) Pittsburgh's `non_safety` and `police` candidates (scores 78/71, city-hosted PDFs, genuinely new to this corpus — Pittsburgh has no `contracts.csv` rows yet).
+4. Cross-check the Philadelphia candidates against the already-ingested `pa_philadelphia_*` rows to see whether this batch rediscovered the same documents or a different/newer cycle.
+5. Once proxy-reliability tuning (item 1) is validated, extend `--municipalities-csv` to a full PA gazetteer and run in small, resumable batches.
 
 ---
 

@@ -1,0 +1,11 @@
+municipality_id,municipality,state,population_rank_note,already_in_corpus,already_in_national_source_targets
+pa_philadelphia,Philadelphia,PA,largest PA city,yes,yes
+pa_pittsburgh,Pittsburgh,PA,2nd largest PA city,no,yes
+pa_allentown,Allentown,PA,3rd largest PA city,no,yes
+pa_erie,Erie,PA,4th largest PA city,no,yes
+pa_reading,Reading,PA,5th largest PA city,no,no
+pa_scranton,Scranton,PA,6th largest PA city,no,no
+pa_bethlehem,Bethlehem,PA,7th largest PA city,no,no
+pa_lancaster,Lancaster,PA,8th largest PA city,no,no
+pa_harrisburg,Harrisburg,PA,state capital; top-10 PA city,no,no
+pa_york,York,PA,top-10 PA city,no,no

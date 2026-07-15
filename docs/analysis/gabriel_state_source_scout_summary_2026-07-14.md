@@ -1,0 +1,45 @@
+# GABRIEL Statewide Source Scout — PA Pilot Summary (2026-07-14)
+
+**Scope:** first pilot of `scripts/gabriel_state_source_scout.py`, a `gabriel.whatever(web_search=True)` source-discovery workflow. Source-scouting/staging only — no ingestion, no `data/contracts.csv`/`data/city_coverage.csv`/corpus/claim-evidence edits. See `docs/analysis/gabriel_state_source_scout_methodology_2026-07-14.md` for the schema, scoring rules, and how this differs from `codify`.
+
+## Run parameters
+
+- State: PA. Municipality list: `docs/analysis/gabriel_state_source_scout_pa_pilot_municipalities_2026-07-14.csv` (10 cities: Philadelphia, Pittsburgh, Allentown, Erie, Reading, Scranton, Bethlehem, Lancaster, Harrisburg, York).
+- Model: `gpt-5.4-nano`. `search_context_size=low`. `n_parallels=3`. `--max-prompts 10` (within the script's `LIVE_HARD_CAP=25`).
+- Auth: Harvard HUIT OpenAI proxy (`HARVARD_SUBSCRIPTION_KEY`), same calling convention as `scripts/gabriel_codify_pilot.py`'s `response_fn` adapter and the 2026-07-01 archived `gabriel.whatever(web_search=True)` smoke tests (`docs/archive/legacy_gabriel_pilot_2026-06/gabriel_pilot/run_gabriel_builtin_web_boston_graduated_retry.py`) — `api_key`/`base_url`/`extra_headers` passed directly into `gabriel.whatever(...)`.
+- Total cost: ~$0.035 for the 10-prompt batch (per GABRIEL's own logged `Cost` column).
+- Dry run: performed first (`tmp/gabriel_state_source_scout/PA/2026-07-14_203518/`), 10 prompts previewed, no network call, inspected before the live run.
+
+## Task 7 audit
+
+- **Municipalities prompted:** 10.
+- **Raw responses received:** 10 (`Successful` or an OpenAI response ID present for all 10 rows in `raw_outputs.csv`; only 3 had a non-empty `Response` text field usable for JSON parsing).
+- **Parseable responses:** 3 of 10 (Philadelphia, Pittsburgh, Allentown).
+- **Candidate source rows produced:** 9.
+- **Candidate URLs:** 9 of 9 rows have a non-empty `source_url` (0 missing-URL rows in this batch).
+- **Likely official/city/state/union sources:** 8 of 9 rows are `source_owner_type=city` (official Philadelphia/Pittsburgh/Allentown government domains — `phila.gov`, `pittsburghpa.gov`, `pittsburgh.legistar.com`, `allentownpa.legistar.com`); 1 of 9 is `source_owner_type=union` (IAFF Local 22's own CMS-hosted document site). **0 of 9 are news-only, third-party-hosted, or context-only** — every candidate this batch produced is a plausible primary source, not a lead-only mention.
+- **Likely matched triads:** 2 of 10 municipalities — **Philadelphia and Pittsburgh** — returned candidates across all three unit types (police, fire, non_safety) in one prompt, scored `triad_value=high`. Allentown returned a fire-only candidate (`triad_value=low`). The other 7 municipalities produced no parseable candidates this run (see failure modes below).
+- **Best municipalities for immediate verification:**
+  1. **Pittsburgh** — `non_safety` (score 78, AFSCME Local 2719 budget-reference PDF) and `police` (score 71, a city-hosted 2023-2025 FOP contract-ratification PDF at `apps.pittsburghpa.gov`) are the two strongest single rows in this batch.
+  2. **Philadelphia** — `non_safety` (score 78, `phila.gov`-hosted "City-PDP-Local-159-Act-195" arbitration-award PDF) and both `police`/`fire` rows (score 71 each, `phila.gov`-hosted Act 111 awards) — notable because Philadelphia is already in the corpus (matched pair, `data/contracts.csv`), so this batch's candidates are a useful **independent cross-check** of the existing sourcing, not new-city discovery. One should verify whether these are the *same* documents already ingested or genuinely new/updated cycles.
+  3. Allentown's fire Legistar row (score 61) is a plausible lead but only single-leg; would need a police/non-safety follow-up prompt.
+- **Failure modes observed (7 of 10 municipalities):**
+  - **4 clear timeouts** (Erie, Reading, Harrisburg, York): GABRIEL's own logs show `"Can't acquire more than the maximum capacity" / "OpenAI client timed out"` — the same Harvard-proxy web-search timeout/cooldown pattern documented in the 2026-07-01 archived smoke tests (`gabriel_builtin_web_smoke_test_status_2026-07-01.md`). GABRIEL's internal retry/cooldown logic (pause after 3 timeouts/60s, then a 60s sleep) ran automatically; these 4 never produced a response.
+  - **3 empty-response-despite-request-ID** (Scranton, Bethlehem, Lancaster): the run's `Successful` column holds a real OpenAI response ID (the request was accepted and something returned upstream), but the `Response` text column is empty. This reads as a genuine, distinct failure mode from the 4 outright timeouts — most likely the model exhausted its output/reasoning budget before emitting visible text under `search_context_size=low` + `gpt-5.4-nano`'s low reasoning effort, or a `background_mode`/response-retrieval mismatch in this call shape. Recorded as `failed_parses.csv` rows with `error="empty response text"` — not distinguished from the 4 timeout cases in this pilot's schema (both show as empty `Response`); a future run should log GABRIEL's `Successful`/`Error Log` columns into `failed_parses.csv` directly to separate these two failure modes.
+  - **0 JSON-parse failures on non-empty text** — every response that came back non-empty parsed as valid JSON on the first attempt (no markdown-fence or duplicate-key issues surfaced this batch, unlike the duplicate-key JSON bug found in the 2026-07-14 16:49 Philadelphia/Trenton `codify` wave — a different code path, `whatever` vs `codify`, so that finding doesn't transfer directly, but the parser in `gabriel_state_source_scout.py` defensively handles both fenced and duplicate-key JSON regardless).
+  - **One real scoring bug found and fixed during this same session's audit**: the model did not follow the requested controlled vocabulary for `source_owner_type` (`"government"`, `"labor_union"`, `"city_legislation_portal"` instead of `city`/`union`) or `document_type` (`"interest_arbitration_award"`, `"collective_bargaining_agreement"` instead of `arbitration_award`/`cba`), which silently zeroed out several scoring rewards for genuinely strong official-source candidates. Fixed via `normalize_owner_type()`/`normalize_document_type()` synonym/keyword normalization in the script, then **reprocessed offline from the already-saved `raw_outputs.csv`** (no additional API calls) to regenerate corrected scores. This is a generalizable finding for future runs of this tool, not just a one-off patch.
+- **Is `whatever(web_search=True)` scalable?** Partially, with caveats:
+  - **Cost is trivially scalable** — $0.035 for 10 municipalities extrapolates to roughly $1.75-3.50 for a 500-750 city full-PA gazetteer run, well within a reasonable research budget.
+  - **Reliability is the binding constraint, not cost or code.** Only 3 of 10 prompts (30%) produced usable structured output in this one run, consistent with the 2026-07-01 archived finding that built-in GABRIEL web mode through the Harvard proxy is prone to timeouts under load — that session's graduated retry needed `n_parallels=1` and small prompts to get a single successful call. This pilot ran `n_parallels=3` (per the task's "conservative" instruction) and still hit the proxy's internal capacity/timeout ceiling on 7 of 10 calls.
+  - **Recommended next step before a full-state run:** re-test with `n_parallels=1` (trading wall-clock for reliability, matching the archived precedent that a single-worker version succeeded where higher concurrency didn't) and/or a `--max-prompts` batch size of ~5-10 per invocation with re-runs of only the failed municipalities (the script's per-municipality independence makes this trivial — rerun `--municipalities-csv` filtered to just the failed rows). A full-state run should be planned as **many small, resumable batches**, not one large `--live` invocation.
+  - The one clean success mode (Philadelphia, Pittsburgh, Allentown) demonstrates the *design* works end-to-end: prompt → live web search → structured JSON → scored, staged candidate rows with plausible official sources and 0 obviously-bad (news-only/context-only/third-party) candidates. The bottleneck is proxy throughput/timeout tuning, not the workflow's logic.
+
+## Outputs
+
+- `docs/analysis/gabriel_state_source_scout_candidates_2026-07-14.csv` — 9 staged candidate rows (all `verification_status=unverified`, `promotion_status=raw_model_output`).
+- `tmp/gabriel_state_source_scout/PA/2026-07-14_203518/` — dry-run artifacts (prompt preview, run metadata).
+- `tmp/gabriel_state_source_scout/PA/2026-07-14_203532/` — live-run artifacts (`raw_outputs.csv`, `parsed_candidates.csv`, `failed_parses.csv`, `run_metadata.json`, `prompt_preview.md`, `gabriel_save_dir/`).
+
+## Explicitly not done
+
+No source in this batch was verified, promoted, or ingested. No `data/contracts.csv`, `data/city_coverage.csv`, corpus, or claim/evidence file was touched. No FOIA/PRR/OPRA/RTKL route was used or suggested (the prompt explicitly instructs the model not to use one). No `gabriel.codify()` call was made.
