@@ -1,0 +1,26 @@
+municipality_id,municipality,state,population_rank_note,already_in_corpus,already_in_national_source_targets,batch_id
+pa_philadelphia,Philadelphia,PA,largest PA city,yes,yes,pa_batch25_2026-07-15
+pa_pittsburgh,Pittsburgh,PA,2nd largest PA city,no,yes,pa_batch25_2026-07-15
+pa_allentown,Allentown,PA,3rd largest PA city,no,yes,pa_batch25_2026-07-15
+pa_erie,Erie,PA,4th largest PA city,no,yes,pa_batch25_2026-07-15
+pa_reading,Reading,PA,5th largest PA city,no,no,pa_batch25_2026-07-15
+pa_scranton,Scranton,PA,6th largest PA city,no,no,pa_batch25_2026-07-15
+pa_bethlehem,Bethlehem,PA,7th largest PA city,no,no,pa_batch25_2026-07-15
+pa_lancaster,Lancaster,PA,8th largest PA city,no,no,pa_batch25_2026-07-15
+pa_harrisburg,Harrisburg,PA,state capital; top-10 PA city,no,no,pa_batch25_2026-07-15
+pa_york,York,PA,top-10 PA city,no,no,pa_batch25_2026-07-15
+pa_altoona,Altoona,PA,mid-size PA city (approx. rank 11-15 by population; general knowledge basis not a verified gazetteer),no,no,pa_batch25_2026-07-15
+pa_wilkesbarre,Wilkes-Barre,PA,mid-size PA city (approx. rank 11-15 by population; general knowledge basis),no,no,pa_batch25_2026-07-15
+pa_chester,Chester,PA,mid-size PA city (approx. rank 11-20 by population; general knowledge basis),no,no,pa_batch25_2026-07-15
+pa_williamsport,Williamsport,PA,mid-size PA city (approx. rank 11-20 by population; general knowledge basis),no,no,pa_batch25_2026-07-15
+pa_easton,Easton,PA,mid-size PA city (approx. rank 11-20 by population; general knowledge basis),no,no,pa_batch25_2026-07-15
+pa_lebanon,Lebanon,PA,mid-size PA city (approx. rank 15-25 by population; general knowledge basis),no,no,pa_batch25_2026-07-15
+pa_hazleton,Hazleton,PA,mid-size PA city (approx. rank 15-25 by population; general knowledge basis),no,no,pa_batch25_2026-07-15
+pa_newcastle,New Castle,PA,mid-size PA city (approx. rank 15-25 by population; general knowledge basis),no,no,pa_batch25_2026-07-15
+pa_norristown,Norristown,PA,larger PA borough (approx. rank 15-25 by population; general knowledge basis),no,no,pa_batch25_2026-07-15
+pa_pottstown,Pottstown,PA,mid-size PA borough (approx. rank 15-25 by population; general knowledge basis),no,no,pa_batch25_2026-07-15
+pa_chambersburg,Chambersburg,PA,mid-size PA borough (approx. rank 20-30 by population; general knowledge basis),no,no,pa_batch25_2026-07-15
+pa_carlisle,Carlisle,PA,mid-size PA borough (approx. rank 20-30 by population; general knowledge basis),no,no,pa_batch25_2026-07-15
+pa_statecollege,State College,PA,mid-size PA borough/university town (approx. rank 15-25 by population; general knowledge basis),no,no,pa_batch25_2026-07-15
+pa_johnstown,Johnstown,PA,mid-size PA city (approx. rank 20-30 by population; general knowledge basis),no,no,pa_batch25_2026-07-15
+pa_mckeesport,McKeesport,PA,mid-size PA city; Pittsburgh region (approx. rank 20-30 by population; general knowledge basis),no,no,pa_batch25_2026-07-15

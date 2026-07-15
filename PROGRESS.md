@@ -6,6 +6,53 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-15 12:15 EDT (Scaled the tuned GABRIEL scout to a 25-municipality PA batch (first batch beyond a 3-10 city test); added persistent scout coverage accounting (municipality- and state-level CSVs); one retry pass took the batch to 100% parseable) - 20/25 (80%) parseable on the first pass, all 5 failures a new transient-looking "Connection error" signature (not the usual rate-limiter timeout); one retry pass resolved all 5 to 100%; 75 candidate rows, 10 likely-triad municipalities, $0.27 total cost; source-scouting/staging only, no ingestion, no push/remote work
+
+**Did**
+- Confirmed starting state: commit `e53d87e Instrument GABRIEL scout costs and tuning matrix`; `data/contracts.csv` 64 rows/19 cities (unchanged all session).
+- **Task 1 (coverage accounting).** Added `MUNICIPALITY_COVERAGE_FIELDS`/`STATE_COVERAGE_FIELDS`, `build_municipality_coverage_rows()`/`build_state_coverage_row()`, an `upsert_csv_rows()` helper (never overwrites unrelated existing rows, merges by key), and a `--build-coverage` CLI mode to `scripts/gabriel_state_source_scout.py`. Wrote `docs/analysis/gabriel_state_source_scout_coverage_methodology_2026-07-15.md` establishing the scout-positive-vs.-verified vocabulary discipline the two new persistent CSVs (`gabriel_state_source_scout_municipality_coverage.csv`, `gabriel_state_source_scout_state_coverage.csv`) must be read under. Unit-tested both the parseable and failed code paths offline against two already-completed tuning-matrix runs before using them live.
+- **Task 2 (25-municipality PA batch list).** Extended the existing 10-city pilot list with 15 more PA municipalities (Altoona, Wilkes-Barre, Chester, Williamsport, Easton, Lebanon, Hazleton, New Castle, Norristown, Pottstown, Chambersburg, Carlisle, State College, Johnstown, McKeesport) from general knowledge of Pennsylvania's larger cities/boroughs — explicitly documented as an approximate basis, not a verified gazetteer, per the task's own "don't spend the whole run on a perfect statewide list" instruction. `docs/analysis/gabriel_state_source_scout_pa_batch25_municipalities_2026-07-15.csv`, 25 unique IDs confirmed.
+- **Task 3 (dry run).** Confirmed 25 prompts, 25 unique identifiers, `prompt_mode=minimal`, no network call.
+- **Task 4 (live 25-municipality batch).** `--n-parallels 1 --sleep-between-prompts 15 --timeout 90 --max-timeout 90 --prompt-mode minimal`. Result: **20/25 (80%) parseable**, 5 failed (Harrisburg, York, Chester, Williamsport, Easton) — all classified `empty_response_no_response_id` with `"Connection error."` in the error log, a **new failure signature** distinct from every prior session's dominant `timeout_or_capacity`/"Can't acquire more than the maximum capacity" pattern. 0 duplicate identifiers (dedup fix holds at this larger scale too). Cost $0.2188.
+- **Task 5 (one immediate retry).** Same 5 municipalities, identical settings. **5/5 (100%) parseable** — every one of the "Connection error" failures resolved on a single retry, consistent with a transient-network explanation rather than a systematic issue with these municipalities or the configuration. Cost $0.0501. **Final batch result: 25/25 (100%) parseable.**
+- **Task 6 (coverage build).** Ran `--build-coverage` against the main run + retry run. Final PA state coverage: 25/25 scouted, 23/25 with any candidate, 20/25 police, 16/25 fire, 14/25 non-safety, **10/25 likely triad**, 75 candidate rows total (65 official/union-sourced, 3 high-priority), $0.2688 total cost, ~28.9s avg successful-call time. Scaling estimates from this batch's own rates (~$1.08/~73min per 100 municipalities) closely match the prior tuning-matrix session's smaller-sample estimates — a good cross-validation.
+- **Task 7 (batch summary).** Wrote `docs/analysis/gabriel_state_source_scout_pa_batch25_summary_2026-07-15.md`.
+- **Task 8 (validation).** `python -m py_compile`, `python scripts/validate.py`, `python ingest/test_pipeline.py`, `python ingest/audit_coverage.py` all re-run and unchanged (64 contracts, 60/60 tests, 28 healthy pairs).
+- This run made only two explicitly-authorized, capped `gabriel.whatever` live calls (25-prompt main run, 5-prompt retry); no `gabriel.codify` calls; no FOIA/OPRA/RTKL/PRR; no ingestion; no push; no remote inspection/configuration; `data/contracts.csv`/`data/city_coverage.csv`/`corpus/`/claim-evidence files untouched; no URL verification or candidate-audit pass (out of scope this session, flagged as the recommended next move).
+
+**Decisions and why**
+- Built the 15 additional municipalities from general knowledge rather than pausing to source an authoritative PA gazetteer — the task explicitly said not to spend the whole run on a perfect list, and documented the basis honestly (`population_rank_note` flags every non-pilot city's rank as approximate) so a future session knows to treat this list as a working batch, not ground truth.
+- Ran exactly one retry pass, not further retries, even though it fully resolved all 5 failures — per the task's explicit "do not retry endlessly" instruction, and because 100% resolution on the first retry didn't create any residual failures needing more attempts.
+- Used upsert-by-key (not append-only) for the municipality coverage CSV so re-scouting or retrying a municipality in a future session updates its row in place rather than accumulating stale duplicate history — matches how `scout_status` is defined (final-outcome, not full attempt history).
+
+**Surprises/breakage**
+- **A new failure signature appeared** (`empty_response_no_response_id`/"Connection error.") that hadn't shown up in any of the four prior tuning sessions, all of which were dominated by `timeout_or_capacity`/"Can't acquire more than the maximum capacity." This is a genuinely different failure family (network-level, not rate-limiter-level) — worth watching for in future batches to see if it recurs or was a one-off at this session's larger 25-municipality scale.
+- **All 5 failures resolved cleanly on a single retry** — reinforces that the recommended configuration remains robust even at 5x the size of prior tuning tests, and that a one-pass retry step is sufficient discipline for batches at this scale, not evidence that more aggressive retry logic is needed.
+
+**Validation/audit results**
+```text
+python scripts/validate.py
+VALIDATION PASSED — contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed (unchanged)
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19 (all unchanged)
+
+python -m py_compile scripts/gabriel_state_source_scout.py: OK
+
+PA 25-municipality batch: main run 20/25 (80%) parseable, retry 5/5 (100%),
+  final 25/25 (100%). 75 candidate rows, 23/25 municipalities with any
+  candidate, 10/25 likely triad, 65 official/union rows, 3 high-priority
+  rows. $0.2688 total cost. Scaling estimate: ~$1.08/~73min per 100
+  municipalities, ~$5.38/~6.1hr per 500, ~$10.75/~12.2hr per 1,000.
+```
+
+**Confirmed:** no ingestion; no `data/contracts.csv`/`data/city_coverage.csv`/`corpus/`/claim-evidence-file edits; no `gabriel.codify` calls; no FOIA/OPRA/RTKL/PRR; no git push; no remote inspection/configuration; no URL verification or candidate-audit pass. GABRIEL/`whatever` live calls this session were explicitly authorized, capped (25-prompt main run + 5-prompt single retry), and scoped to the 25-city PA batch.
+
+---
+
 ## 2026-07-15 11:10 EDT (Added per-run cost accounting and a --compare-runs utility to the GABRIEL scout; ran a controlled 4-cell tuning matrix isolating spacing vs. concurrency vs. prompt mode; confirmed n_parallels=1 + minimal prompt as the best configuration with 9/9 successes; produced cost/wall-clock estimates for 100/500/1,000-municipality scaling) - n_parallels=1 succeeded 4-for-4 across three different spacing values (10/15/20s); n_parallels=2 failed the same municipality (Lancaster) both times it was tried; full prompt matched minimal's reliability but yielded fewer candidate rows per token; source-scouting/staging only, no ingestion, no push/remote work
 
 **Did**

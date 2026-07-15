@@ -672,6 +672,21 @@ def write_csv(path: Path, rows: list[dict], fields: list[str]) -> None:
             assert len(row) == len(fields), f"{path}: row {i} width {len(row)} != {len(fields)}"
 
 
+def upsert_csv_rows(path: Path, new_rows: list[dict], fields: list[str], key_field: str) -> None:
+    """Merge new_rows into path's existing rows, keyed by key_field (new rows
+    override an existing row with the same key; unrelated existing rows are
+    kept). Never silently drops prior data — this is how the persistent
+    coverage/cost-log files accumulate across runs without being overwritten."""
+    existing: dict[str, dict] = {}
+    if path.exists():
+        with path.open(newline="", encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                existing[row.get(key_field, "")] = row
+    for row in new_rows:
+        existing[row.get(key_field, "")] = row
+    write_csv(path, list(existing.values()), fields)
+
+
 # ---------------------------------------------------------------------------
 # Cost accounting (Task 1, 2026-07-15 rate-limit tuning session)
 # ---------------------------------------------------------------------------
@@ -900,6 +915,272 @@ def run_compare_mode(run_dirs: list[Path], compare_output: Path | None) -> int:
 
 
 # ---------------------------------------------------------------------------
+# Scout coverage accounting (Task 1, 2026-07-15 PA batch25 session)
+#
+# Tracks scout-stage progress ONLY — "candidate_count"/"scout_status" etc.
+# describe unverified model output, never a verified/collected/ingested
+# source. See docs/analysis/gabriel_state_source_scout_coverage_methodology_2026-07-15.md.
+# ---------------------------------------------------------------------------
+
+MUNICIPALITY_COVERAGE_FIELDS = [
+    "state",
+    "municipality",
+    "municipality_id",
+    "batch_id",
+    "scout_status",
+    "parse_status",
+    "candidate_count",
+    "police_candidate_count",
+    "fire_candidate_count",
+    "non_safety_candidate_count",
+    "unknown_candidate_count",
+    "likely_triad",
+    "best_source_owner_type",
+    "best_candidate_priority",
+    "needs_retry",
+    "needs_verification",
+    "total_cost",
+    "input_tokens_total",
+    "reasoning_tokens_total",
+    "output_tokens_total",
+    "time_taken_successful_seconds",
+    "run_id",
+    "raw_outputs_ref",
+    "parsed_candidates_ref",
+    "failed_parses_ref",
+]
+
+STATE_COVERAGE_FIELDS = [
+    "state",
+    "total_municipalities_known",
+    "municipalities_scouted",
+    "municipalities_with_any_candidate",
+    "municipalities_with_police_candidate",
+    "municipalities_with_fire_candidate",
+    "municipalities_with_non_safety_candidate",
+    "municipalities_with_likely_triad",
+    "candidate_rows_total",
+    "official_or_union_candidate_rows",
+    "high_priority_candidate_rows",
+    "parse_failures",
+    "total_cost",
+    "input_tokens_total",
+    "reasoning_tokens_total",
+    "output_tokens_total",
+    "total_successful_time_seconds",
+    "estimated_cost_per_100_municipalities",
+    "estimated_time_per_100_municipalities",
+    "last_updated",
+]
+
+# Priority orders for picking a single "best" value across a municipality's
+# candidate rows — highest-authority/highest-priority wins.
+_OWNER_TYPE_PRIORITY = ("state_labor_board", "city", "union", "third_party", "school", "news", "unknown")
+_CANDIDATE_PRIORITY_ORDER = ("high", "medium", "low")
+_OFFICIAL_OR_UNION_OWNER_TYPES = {"city", "state_labor_board", "union"}
+
+
+def _best_by_priority(values: list[str], priority_order: tuple) -> str:
+    present = set(values)
+    for candidate in priority_order:
+        if candidate in present:
+            return candidate
+    return next(iter(present), "")
+
+
+def _read_csv_rows(path: Path) -> list[dict]:
+    if not path.exists():
+        return []
+    with path.open(newline="", encoding="utf-8") as f:
+        return list(csv.DictReader(f))
+
+
+def build_municipality_coverage_rows(
+    municipalities: list[dict],
+    batch_id: str,
+    main_run_dir: Path,
+    retry_run_dir: Path | None = None,
+) -> list[dict]:
+    """One coverage row per municipality in this batch, reconciling the main
+    run against an optional immediate retry (retry outcome wins for any
+    municipality it covers)."""
+    main_metadata = _load_json_if_exists(main_run_dir / "run_metadata.json")
+    main_run_id = main_metadata.get("run_id", "")
+    main_candidates = _read_csv_rows(main_run_dir / "parsed_candidates.csv")
+    main_failed = _read_csv_rows(main_run_dir / "failed_parses.csv")
+    main_failed_ids = {r.get("municipality_id", "") for r in main_failed}
+    main_raw_outputs_ref = str(main_run_dir / "raw_outputs.csv")
+    main_parsed_ref = str(main_run_dir / "parsed_candidates.csv")
+    main_failed_ref = str(main_run_dir / "failed_parses.csv")
+
+    retry_metadata = _load_json_if_exists(retry_run_dir / "run_metadata.json") if retry_run_dir else {}
+    retry_run_id = retry_metadata.get("run_id", "")
+    retry_candidates = _read_csv_rows(retry_run_dir / "parsed_candidates.csv") if retry_run_dir else []
+    retry_failed = _read_csv_rows(retry_run_dir / "failed_parses.csv") if retry_run_dir else []
+    retry_failed_ids = {r.get("municipality_id", "") for r in retry_failed}
+    retry_attempted_ids = {r.get("municipality_id", "") for r in retry_candidates} | retry_failed_ids
+    retry_raw_outputs_ref = str(retry_run_dir / "raw_outputs.csv") if retry_run_dir else ""
+    retry_parsed_ref = str(retry_run_dir / "parsed_candidates.csv") if retry_run_dir else ""
+    retry_failed_ref = str(retry_run_dir / "failed_parses.csv") if retry_run_dir else ""
+
+    def per_muni_metrics(run_dir: Path, run_id: str, municipality_id: str) -> dict:
+        raw_outputs = _read_csv_rows(run_dir / "raw_outputs.csv")
+        identifier = build_identifier(run_id, municipality_id)
+        for row in raw_outputs:
+            if row.get("Identifier", "") == identifier:
+                return {
+                    "total_cost": row.get("Cost", ""),
+                    "input_tokens_total": row.get("Input Tokens", ""),
+                    "reasoning_tokens_total": row.get("Reasoning Tokens", ""),
+                    "output_tokens_total": row.get("Output Tokens", ""),
+                    "time_taken_successful_seconds": row.get("Time Taken", ""),
+                }
+        return {}
+
+    rows = []
+    for muni in municipalities:
+        mid = muni["municipality_id"]
+        was_retried = mid in retry_attempted_ids
+        if was_retried:
+            candidates = [r for r in retry_candidates if r.get("municipality_id") == mid]
+            failed = mid in retry_failed_ids
+            run_id, run_dir = retry_run_id, retry_run_dir
+            raw_ref, parsed_ref, failed_ref = retry_raw_outputs_ref, retry_parsed_ref, retry_failed_ref
+            scout_status = "retry_failed" if failed else "retry_parseable"
+        else:
+            candidates = [r for r in main_candidates if r.get("municipality_id") == mid]
+            failed = mid in main_failed_ids
+            run_id, run_dir = main_run_id, main_run_dir
+            raw_ref, parsed_ref, failed_ref = main_raw_outputs_ref, main_parsed_ref, main_failed_ref
+            scout_status = "scouted_failed" if failed else "scouted_parseable"
+
+        unit_types = [c.get("unit_type", "") for c in candidates]
+        owner_types = [c.get("source_owner_type", "") for c in candidates]
+        priorities = [c.get("likely_ingest_priority", "") for c in candidates]
+        metrics = per_muni_metrics(run_dir, run_id, mid) if run_dir else {}
+
+        rows.append(
+            {
+                "state": muni["state"],
+                "municipality": muni["municipality"],
+                "municipality_id": mid,
+                "batch_id": batch_id,
+                "scout_status": scout_status,
+                "parse_status": "failed" if failed else "parseable",
+                "candidate_count": len(candidates),
+                "police_candidate_count": unit_types.count("police"),
+                "fire_candidate_count": unit_types.count("fire"),
+                "non_safety_candidate_count": unit_types.count("non_safety"),
+                "unknown_candidate_count": unit_types.count("unknown"),
+                "likely_triad": _bool_str({"police", "fire", "non_safety"}.issubset(set(unit_types))),
+                "best_source_owner_type": _best_by_priority(owner_types, _OWNER_TYPE_PRIORITY) if owner_types else "",
+                "best_candidate_priority": _best_by_priority(priorities, _CANDIDATE_PRIORITY_ORDER) if priorities else "",
+                "needs_retry": _bool_str(failed),
+                "needs_verification": _bool_str(len(candidates) > 0),
+                **{k: metrics.get(k, "") for k in (
+                    "total_cost", "input_tokens_total", "reasoning_tokens_total",
+                    "output_tokens_total", "time_taken_successful_seconds",
+                )},
+                "run_id": run_id,
+                "raw_outputs_ref": raw_ref,
+                "parsed_candidates_ref": parsed_ref,
+                "failed_parses_ref": failed_ref,
+            }
+        )
+    return rows
+
+
+def build_state_coverage_row(state: str, municipality_rows: list[dict], total_municipalities_known: int, last_updated: str) -> dict:
+    """Aggregate ALL municipality-coverage rows currently on file for `state`
+    (not just this batch) into one state-level summary row."""
+    state_rows = [r for r in municipality_rows if r.get("state") == state]
+    scouted = [r for r in state_rows if r.get("scout_status") != "not_scouted"]
+
+    def _num(row, key):
+        try:
+            return float(row.get(key, "") or 0)
+        except (TypeError, ValueError):
+            return 0.0
+
+    def _int(row, key):
+        try:
+            return int(float(row.get(key, "") or 0))
+        except (TypeError, ValueError):
+            return 0
+
+    total_cost = sum(_num(r, "total_cost") for r in scouted)
+    input_tokens = sum(_num(r, "input_tokens_total") for r in scouted)
+    reasoning_tokens = sum(_num(r, "reasoning_tokens_total") for r in scouted)
+    output_tokens = sum(_num(r, "output_tokens_total") for r in scouted)
+    successful_time = sum(
+        _num(r, "time_taken_successful_seconds") for r in scouted if r.get("parse_status") == "parseable"
+    )
+    candidate_rows_total = sum(_int(r, "candidate_count") for r in scouted)
+    parse_failures = sum(1 for r in scouted if r.get("parse_status") == "failed")
+    official_or_union_rows = sum(
+        _int(r, "candidate_count") for r in scouted if r.get("best_source_owner_type") in _OFFICIAL_OR_UNION_OWNER_TYPES
+    )
+    high_priority_rows = sum(_int(r, "candidate_count") for r in scouted if r.get("best_candidate_priority") == "high")
+
+    n_scouted = len(scouted)
+    avg_cost_per_muni = (total_cost / n_scouted) if n_scouted else 0.0
+    avg_time_per_muni = (successful_time / max(1, sum(1 for r in scouted if r.get("parse_status") == "parseable"))) if scouted else 0.0
+
+    return {
+        "state": state,
+        "total_municipalities_known": total_municipalities_known,
+        "municipalities_scouted": n_scouted,
+        "municipalities_with_any_candidate": sum(1 for r in scouted if _int(r, "candidate_count") > 0),
+        "municipalities_with_police_candidate": sum(1 for r in scouted if _int(r, "police_candidate_count") > 0),
+        "municipalities_with_fire_candidate": sum(1 for r in scouted if _int(r, "fire_candidate_count") > 0),
+        "municipalities_with_non_safety_candidate": sum(1 for r in scouted if _int(r, "non_safety_candidate_count") > 0),
+        "municipalities_with_likely_triad": sum(1 for r in scouted if r.get("likely_triad") == "yes"),
+        "candidate_rows_total": candidate_rows_total,
+        "official_or_union_candidate_rows": official_or_union_rows,
+        "high_priority_candidate_rows": high_priority_rows,
+        "parse_failures": parse_failures,
+        "total_cost": total_cost,
+        "input_tokens_total": input_tokens,
+        "reasoning_tokens_total": reasoning_tokens,
+        "output_tokens_total": output_tokens,
+        "total_successful_time_seconds": successful_time,
+        "estimated_cost_per_100_municipalities": avg_cost_per_muni * 100,
+        # +15s/municipality approximates the recommended sleep_between_prompts
+        # spacing on top of the average successful call time, for a fully
+        # sequential (n_parallels=1) batch — see the tuning-matrix summary.
+        "estimated_time_per_100_municipalities": (avg_time_per_muni + 15) * 100,
+        "last_updated": last_updated,
+    }
+
+
+def run_build_coverage_mode(
+    municipalities_csv: Path,
+    state: str,
+    batch_id: str,
+    main_run_dir: Path,
+    retry_run_dir: Path | None,
+) -> int:
+    import datetime as _dt
+
+    municipalities = load_municipalities(state, municipalities_csv, None)
+    new_rows = build_municipality_coverage_rows(municipalities, batch_id, main_run_dir, retry_run_dir)
+
+    muni_coverage_path = DOCS_ANALYSIS / "gabriel_state_source_scout_municipality_coverage.csv"
+    upsert_csv_rows(muni_coverage_path, new_rows, MUNICIPALITY_COVERAGE_FIELDS, "municipality_id")
+
+    all_muni_rows = _read_csv_rows(muni_coverage_path)
+    last_updated = _dt.datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
+    state_row = build_state_coverage_row(state, all_muni_rows, len(municipalities), last_updated)
+    state_coverage_path = DOCS_ANALYSIS / "gabriel_state_source_scout_state_coverage.csv"
+    upsert_csv_rows(state_coverage_path, [state_row], STATE_COVERAGE_FIELDS, "state")
+
+    print(f"municipality_coverage={muni_coverage_path} ({len(new_rows)} rows updated/added)")
+    print(f"state_coverage={state_coverage_path}")
+    print(json.dumps(state_row, indent=2))
+    return 0
+
+
+# ---------------------------------------------------------------------------
 # Live call (lazy imports — gabriel/dotenv are never imported on the dry-run path)
 # ---------------------------------------------------------------------------
 
@@ -1047,8 +1328,16 @@ def _parse_args() -> argparse.Namespace:
     parser.add_argument("--prompt-mode", choices=("full", "minimal"), default=DEFAULT_PROMPT_MODE, help=f"full = original detailed prompt; minimal = shorter structured-candidates-only prompt (default: {DEFAULT_PROMPT_MODE}).")
     parser.add_argument("--compare-runs", type=Path, nargs="+", default=None, help="Compare prior runs instead of scouting: pass 2+ run output directories (each containing run_metadata.json). Bypasses --dry-run/--live entirely.")
     parser.add_argument("--compare-output", type=Path, default=None, help="Optional path to also write the --compare-runs markdown table to (in addition to stdout).")
+    parser.add_argument("--build-coverage", action="store_true", help="Update the persistent scout coverage CSVs from a completed run (and optional retry) instead of scouting. Bypasses --dry-run/--live entirely.")
+    parser.add_argument("--batch-id", type=str, default=None, help="Required with --build-coverage: an identifier for this scout batch, recorded per municipality-coverage row.")
+    parser.add_argument("--coverage-run-dir", type=Path, default=None, help="Required with --build-coverage: the main run's output directory.")
+    parser.add_argument("--coverage-retry-run-dir", type=Path, default=None, help="Optional with --build-coverage: an immediate-retry run's output directory; retry outcomes override the main run for any municipality it covers.")
     args = parser.parse_args()
     if args.compare_runs is not None:
+        return args
+    if args.build_coverage:
+        if args.batch_id is None or args.coverage_run_dir is None:
+            parser.error("--build-coverage requires --batch-id and --coverage-run-dir")
         return args
     if not args.live:
         args.dry_run = True
@@ -1061,6 +1350,10 @@ def main() -> int:
     args = _parse_args()
     if args.compare_runs is not None:
         return run_compare_mode(args.compare_runs, args.compare_output)
+    if args.build_coverage:
+        return run_build_coverage_mode(
+            args.municipalities_csv, args.state, args.batch_id, args.coverage_run_dir, args.coverage_retry_run_dir
+        )
     timestamp = datetime.now().strftime("%Y-%m-%d_%H%M%S")
     run_id = f"{args.state.lower()}_{timestamp}"
     out_dir = args.output_dir or (TMP_ROOT / args.state / timestamp)

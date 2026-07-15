@@ -2,7 +2,47 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-15T11:15:00-04:00`
+Last updated: `2026-07-15T12:20:00-04:00`
+
+---
+
+## 2026-07-15T12:20:00-04:00 - Scaled the tuned GABRIEL scout to a 25-municipality PA batch; added persistent scout coverage accounting (municipality + state CSVs); one retry pass took the batch to 100% parseable; a new "Connection error" failure signature appeared and resolved cleanly on retry
+
+**Commit target:** `Run PA 25-city scout batch and add coverage accounting`
+
+### Current State After This Entry
+
+- **New scout coverage accounting**: `docs/analysis/gabriel_state_source_scout_municipality_coverage.csv` (upsert-by-`municipality_id`, one row per municipality ever scouted) and `docs/analysis/gabriel_state_source_scout_state_coverage.csv` (recomputed in full from all municipality rows each time) are now live, built via a new `--build-coverage` CLI mode in `scripts/gabriel_state_source_scout.py`. See `docs/analysis/gabriel_state_source_scout_coverage_methodology_2026-07-15.md` for field definitions and — critically — the **scout-positive vs. verified** vocabulary discipline: every count in these files describes unverified model output, never a collected/verified/ingested source.
+- **25-municipality PA batch** (`docs/analysis/gabriel_state_source_scout_pa_batch25_municipalities_2026-07-15.csv`): the 10-city pilot list plus 15 more PA cities/boroughs chosen from general knowledge (documented as approximate, not a verified gazetteer). Live run at the confirmed configuration (`n_parallels=1`/`minimal`/`sleep=15`/`timeout=90/90`): **20/25 (80%) parseable** on the main pass, all 5 failures a **new failure signature** (`empty_response_no_response_id`, `"Connection error."` — distinct from every prior session's `timeout_or_capacity`/rate-limiter pattern). One immediate retry (same 5 municipalities, identical settings) → **5/5 (100%)**, so the **final batch result is 25/25 (100%) parseable**. Zero duplicate identifiers in either run — the checkpoint-echo dedup fix holds at 5x the prior test scale.
+- **Final PA coverage** (25 municipalities): 23/25 with any candidate lead, 20/25 with a police lead, 16/25 fire, 14/25 non-safety, **10/25 likely triad** (Philadelphia, Erie, Scranton, Harrisburg, York, Altoona, Williamsport, Hazleton, Chambersburg, Johnstown), 75 candidate rows total (65 official/union-sourced, 3 high-priority), **$0.2688 total cost**, 814,313 input / 36,975 reasoning / 47,791 output tokens, ~28.9s avg successful-call time. Two municipalities (Bethlehem, Carlisle) parsed successfully but returned zero candidates — a legitimate "nothing found" outcome, not a failure.
+- **Scaling estimates from this batch's own observed rates** (cross-validating the prior tuning-matrix session's smaller-sample numbers): **100 municipalities ≈ $1.08 / ~73 min**; **500 ≈ $5.38 / ~6.1 hr**; **1,000 ≈ $10.75 / ~12.2 hr**.
+- Outputs: `docs/analysis/gabriel_state_source_scout_pa_batch25_summary_2026-07-15.md` (full batch report), `docs/analysis/gabriel_state_source_scout_candidates_pa_2026-07-15_114435.csv` (55 rows, main run) + `..._120857.csv` (20 rows, retry) = 75 total new candidate rows, both coverage CSVs, coverage methodology doc.
+- This run made only two explicitly-authorized, capped `gabriel.whatever` live calls (25-prompt main run, 5-prompt retry); no `gabriel.codify`; no FOIA/OPRA/RTKL/PRR; no ingestion; no push; no remote inspection/configuration; `data/contracts.csv`/`data/city_coverage.csv`/`corpus/`/claim-evidence files untouched; no URL verification or candidate-audit pass (flagged as the recommended next move, not performed this session).
+
+### Validation/audit results
+
+```text
+python scripts/validate.py
+VALIDATION PASSED — contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed (unchanged)
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19 (unchanged)
+
+python -m py_compile scripts/gabriel_state_source_scout.py: OK
+
+PA 25-municipality batch: main 20/25 (80%), retry 5/5 (100%), final 25/25
+(100%). 75 candidate rows, 10/25 likely triad, $0.2688 total cost.
+```
+
+### Recommended next run
+
+1. **Move to a URL-reachability / `data/contracts.csv`-overlap verification pass on the accumulated candidate backlog** — the scout configuration is now confirmed across five sessions at increasing scale (3 → 6 → 10 → 25 municipalities), and the project has accumulated a substantial unverified-lead backlog across ~30+ distinct PA municipalities. Further scout-only scaling has diminishing returns relative to converting existing leads into verified, promotable candidates.
+2. **Prioritize this batch's 3 high-priority candidate rows and 10 likely-triad municipalities** for the first verification pass, following the `curl`-based reachability + `data/contracts.csv`-overlap pattern from the 2026-07-14 retry session.
+3. **Watch for recurrence of the new `empty_response_no_response_id`/"Connection error." failure signature** in future batches — this session's single retry fully resolved it, but it's worth tracking whether it's a genuine new failure family or a one-off network blip at this larger batch size.
+4. **If scaling to more states/cities**: continue using `--build-coverage` after every batch+retry to keep the municipality/state coverage CSVs current, and `--compare-runs` to track drift, rather than re-deriving comparisons by hand.
 
 ---
 
