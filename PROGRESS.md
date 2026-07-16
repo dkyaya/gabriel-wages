@@ -6,6 +6,60 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-16 18:23 EDT (Prepared and dry-previewed the eight-row Massachusetts national slice; no live/model call, source search, ingestion, codification, canonical-data change, push, or remote work) - all 8 prompts pass the Texas-calibrated filtering contract
+
+**Did**
+- Started at local commit `f24771f25c3648f082cafb2c4236b1c43cfb235b`. `tmp/national_batch01_tx_filter_contract_2026-07-16_relay_f24771f.zip` passed integrity checks; every requested carried file and Texas dry-run artifact matched the workspace byte-for-byte. The relay omitted the unchanged national manifest, but the workspace was exactly at the relay's recorded commit, so used the repository copy without finding a version conflict. Left unrelated `.claude/` material untouched and did not inspect/configure a remote.
+- Filtered the authoritative national manifest to `wave_id=NWMS-2026-07-16-01` and `state=MA`. Added an exact 8-row, 22-column projection in national priority order: Somerville, Newton, Boston, Worcester, Arlington, Georgetown, Franklin, Seekonk. Parse-back and field-for-field reconciliation to the source manifest passed.
+- Ran the specified full-context Massachusetts input in `--dry-run --prompt-mode minimal`. It produced 8 saved prompts and metadata with `mode=dry_run`, `live_attempted=false`, and `live_succeeded=false`. No GABRIEL credentials, model/API calls, source searches, candidates, or later-stage artifacts were involved.
+- Reviewed every exact prompt and added a per-municipality checklist, risk assessment, prompt-length accounting, expected verification burden, and conditional live-readiness recommendation.
+
+**Decisions and why**
+- All eight prompts preserve exact manifest employers and Census IDs. Arlington, Georgetown, and Seekonk remain `TOWN OF ...` county-subdivision governments with same-name/school/county/statistical-place cautions; Franklin preserves the unusual authoritative Census name `CITY OF FRANKLIN TOWN` rather than silently rewriting it.
+- Somerville and Newton remain ordinary civilian-comparator repairs; Boston targets fire; Worcester targets a police base agreement and optionally a full civilian base agreement; Arlington targets police/impasse; Georgetown targets a fire agreement or authoritative absence evidence; Franklin and Seekonk target repeat-cycle police/fire/non-safety/mechanism evidence.
+- Every prompt passes strict non-safety, safety-exclusion, EMS/safety-adjacent, wrong-employer, context-only, dead/insufficient, empty-result, six-field schema, and unverified-stage checks.
+- MA is acceptable for a separately authorized live scout of exactly these 8 rows only if verification capacity is reserved for the entire output. Do not release another state until the MA candidates and material trace-only leads are reviewed.
+
+**Surprises/breakage**
+- Georgetown's empty-result permission is necessary but cannot establish that no fire agreement exists; only an authoritative source can support institutional absence.
+- Franklin's Census employer name is exact but atypical and may differ from source-page naming. Boston/Worcester may return many amendments or summaries, while Franklin/Seekonk may return multi-unit sets. Estimated live verification burden is moderate-to-high, roughly 12–24 structured leads in a typical outcome plus material raw traces.
+- Prompt bodies range from 505 to 576 words. No input, prompt, parser, validation, pipeline, or coverage-audit regression occurred.
+
+**Validation/audit results**
+```text
+Massachusetts input reconciliation
+PASS — 8 rows, 22 columns, exact field-for-field projection of the national manifest filter
+
+Massachusetts dry run
+8 prompts: Somerville, Newton, Boston, Worcester, Arlington, Georgetown, Franklin, Seekonk
+mode=minimal | live_attempted=false | all 8 filtering-contract reviews pass
+
+python -m py_compile scripts/gabriel_state_source_scout.py
+python -m py_compile scripts/test_gabriel_state_source_scout_prompt.py
+OK
+
+python scripts/test_gabriel_state_source_scout_prompt.py
+4 PASS checks
+
+python scripts/validate.py
+VALIDATION PASSED — contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19
+exact-cycle: 10 | overlap-cycle: 18 | exploratory adjacent matches: 2
+safety units unmatched: 6
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units.
+
+**Next steps**
+1. Review the saved eight-prompt preview and reserve one complete direct-source verification pass for every parsed candidate and material trace-only lead.
+2. If separately authorized, bind a live run to `state=MA`, the full-context MA CSV, `max-prompts=8`, and a fresh MA output directory; preserve raw, parsed, failure, metadata, and cost artifacts.
+3. Stop before another state if the live MA output shows material wrong-employer, wrong-unit, context-only, or parser leakage. Keep all results quarantined until direct verification.
+
 ## 2026-07-16 18:06 EDT (Tightened the minimal scout filtering contract and re-dry-ran the exact Texas slice; no live/model call, search, ingestion, codification, canonical-data change, push, or remote work) - 3/3 prompts pass stricter unit, document, employer, empty-result, and stage checks
 
 **Did**

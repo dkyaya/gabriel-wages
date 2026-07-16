@@ -2,9 +2,44 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-16T18:06:22-04:00`
+Last updated: `2026-07-16T18:23:35-04:00`
 
 ---
+
+## 2026-07-16T18:23:35-04:00 - Prepared and passed the filtering-contract dry preview for all eight Massachusetts national-batch rows
+
+**Commit target:** `Prepare Massachusetts scout dry run`
+
+### Current State After This Entry
+
+- **Relay/repository check:** starting commit `f24771f25c3648f082cafb2c4236b1c43cfb235b`. The incoming relay passed ZIP integrity checks, and every requested carried file and Texas preview artifact matched the workspace byte-for-byte. The relay did not carry the unchanged national manifest; the workspace was exactly at the relay's recorded commit, so the repository manifest was used as the authoritative available copy. This was an omission, not a conflicting version. Existing `.claude/` material remained untouched. No remote was inspected or modified.
+- **Authoritative MA slice:** exact filter `wave_id=NWMS-2026-07-16-01`, `state=MA`; 8 rows in rank order: Somerville (2), Newton (3), Boston (6), Worcester (7), Arlington (8), Georgetown (9), Franklin (11), Seekonk (12). The new input retains all 22 source columns and reconciles field-for-field to the manifest.
+- **Government identities:** `CITY OF SOMERVILLE`/`166453`; `CITY OF NEWTON`/`166452`; `CITY OF BOSTON`/`128108`; `CITY OF WORCESTER`/`106079`; `TOWN OF ARLINGTON`/`166519`; `TOWN OF GEORGETOWN`/`166487`; `CITY OF FRANKLIN TOWN`/`194918`; `TOWN OF SEEKONK`/`166481`.
+- **Dry-run result:** the exact full-context input produced 8 minimal prompts under run ID `ma_2026-07-16_182108`. Metadata records `mode=dry_run`, `live_attempted=false`, and `live_succeeded=false`. No live GABRIEL/model/API call, source search, candidate generation, ingestion, codification, or canonical/claim-stage edit occurred.
+- **Prompt review:** all eight prompts pass exact-employer/Census, row-target, strict non-safety, safety-CBA exclusion, EMS/safety-adjacent exclusion, wrong-employer, context-only, dead/insufficient, empty-result, six-field JSON, and unverified-stage checks. Prompt bodies range from 505 to 576 words.
+- **Risks:** Somerville/Newton may attract school agreements; Boston/Worcester may produce amendment/summary volume; Arlington/Georgetown/Seekonk require exact town-government disambiguation; Georgetown needs authoritative evidence rather than inference from an empty result; Franklin's exact Census name is atypical; Franklin/Seekonk may produce multi-unit candidate sets.
+- **Verification capacity:** plan for moderate-to-high burden, roughly 12–24 structured leads in a typical outcome plus material raw traces. Reserve one full verification pass for all 8 rows and do not release another state before controlled source outcomes are recorded.
+
+### New Artifacts
+
+- `docs/analysis/national_batch01_ma_scout_input_2026-07-16.csv`
+- `docs/analysis/national_batch01_ma_filter_contract_dry_run_review_2026-07-16.md`
+- `tmp/gabriel_state_source_scout/MA/national_batch01_ma_filter_contract_dry_run_2026-07-16/prompt_preview.md`
+- `tmp/gabriel_state_source_scout/MA/national_batch01_ma_filter_contract_dry_run_2026-07-16/run_metadata.json`
+- `tmp/national_batch01_ma_filter_contract_validation_2026-07-16/`
+
+### Validation State
+
+- Input reconciliation — 8 rows, 22 columns, exact source-manifest projection.
+- Both requested `py_compile` commands — OK.
+- No-network prompt contract test — 4 PASS checks.
+- `scripts/validate.py` — passed; contracts 64, discourse 0, coverage 64, city attributes 3.
+- `ingest/test_pipeline.py` — 60 passed, 0 failed.
+- `ingest/audit_coverage.py` — 28 healthy pairs across 19 cities; 10 exact, 18 overlap, 2 exploratory adjacent, 6 unmatched safety units.
+
+### Interpretation and Recommended Next Move
+
+The Massachusetts prompts are acceptable for a separately authorized live scout of exactly these eight rows. This preview does not authorize that run. Before seeking authorization, confirm capacity to verify every parsed candidate and relevant trace immediately. A future live command should bind `state=MA`, `docs/analysis/national_batch01_ma_scout_input_2026-07-16.csv`, `max-prompts=8`, the tightened minimal prompt, and a fresh MA output directory. Preserve all raw/parsed/failure/cost artifacts and stop before another state if wrong-employer, wrong-unit, context-only, or parser leakage remains material. All outputs remain scout-stage until direct-source verification; do not ingest, codify, or use them in claims.
 
 ## 2026-07-16T18:06:22-04:00 - Tightened the minimal scout candidate contract and passed a no-network Texas filtering dry run
 
