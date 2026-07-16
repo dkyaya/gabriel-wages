@@ -1,0 +1,23 @@
+{
+  "diagnostic": "synthetic_no_search_proxy_smoke_test",
+  "timestamp": "2026-07-16T19:01:04",
+  "model": "gpt-5.4-nano",
+  "n_prompts": 1,
+  "n_parallels": 1,
+  "sleep_between_prompts": 15,
+  "web_search": false,
+  "search_context_size": "low",
+  "prompt_mode": "smallest_synthetic_equivalent",
+  "credential_present_after_local_env_load": true,
+  "raw_outputs_path": "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages/tmp/gabriel_proxy_connection_diagnosis_2026-07-16/raw_outputs.csv",
+  "row_count": 1,
+  "gabriel_successful": "",
+  "response_nonempty": false,
+  "response_id_present": false,
+  "error_log_present": true,
+  "error_log": "['Connection error.']",
+  "input_tokens": "13",
+  "reasoning_tokens": "",
+  "output_tokens": "",
+  "cost": "2.6e-06"
+}

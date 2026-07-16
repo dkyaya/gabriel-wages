@@ -1,0 +1,5 @@
+2026-07-16 19:01:04,754 - gabriel.utils.openai_utils - WARNING - Encountered first connection error. This may be due to network instability or bandwidth limitations. Future connection errors will be silenced and tracked in periodic updates.
+2026-07-16 19:01:04,761 - gabriel.utils.openai_utils - WARNING - 1 requests failed.
+2026-07-16 19:01:04,761 - gabriel.utils.openai_utils - WARNING - 1 API connection errors encountered, indicating network instability or bandwidth limitations; consider reducing concurrency via lower n_parallels.
+2026-07-16 19:01:04,761 - gabriel.utils.openai_utils - WARNING - 1 API errors encountered.
+SMOKE_RESULT rows=1 successful= response_nonempty=False response_id_present=False

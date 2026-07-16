@@ -6,6 +6,52 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-16 19:01 EDT (Diagnosed the Massachusetts GABRIEL connection failure with non-live checks and one authorized synthetic no-search smoke test; proxy path remains unavailable) - do not resume research scouting
+
+**Did**
+- Started at local commit `7ce744b32f1b8d235d5d1ea918914a2902479ad1`. Compared both MA live relays: `7ce744b` is the newer/more complete equivalent because it adds the five-row full-context retry projection that the earlier `eab312f` relay omitted; all shared carried artifacts matched the repository byte-for-byte. Left unrelated `.claude/` material untouched and did not inspect/configure a remote.
+- Reviewed the 8-row primary MA failure and both retry ledgers: all 16 calls are empty `Connection error.` rows with no response ID, output token, web source, or parseable content. The completed-run accounting is `$0.0025656` and 12,828 input tokens, with zero reasoning/output tokens.
+- Compared Texas's successful three-row run. It used the same `gpt-5.4-nano`, minimal prompt, low search context, serial worker, 15-second spacing, and 90-second timeout configuration, but had response IDs, 7,002 output tokens, and 3/3 parseable responses.
+- Confirmed the runner has no healthcheck/ping CLI. Local imports and the project `.env` path work without exposing any credential. Ran the one authorized synthetic, one-prompt, no-search smoke test using the same proxy/key-loading path. It failed identically: 13 input tokens, no response or response ID, zero output, and `Connection error.`.
+- Added a tiny backward-compatible runner metadata improvement separating a returned dataframe (`live_process_completed`) from actual model-response success (`model_response_succeeded`, row-success and nonempty-response counts). Added a no-network regression check for that distinction.
+
+**Decisions and why**
+- Diagnosed the incident as unresolved proxy/API transport-path failure, not prompt, parser, source, or municipal-target failure. The synthetic no-search failure rules out the MA research prompt and web-search behavior.
+- Did not run a research scout, further smoke test, state slice, verification, ingestion, codification, or claim step after the failed smoke test.
+
+**Surprises/breakage**
+- `live_succeeded=true` is historical client-call semantics and can coexist with all returned rows failing. The new metadata preserves that backward-compatible field while making the distinction explicit for future runs.
+- The generic GABRIEL error does not expose an HTTP status, so local evidence cannot safely distinguish transient Harvard proxy availability from upstream authentication/backend/model availability.
+
+**Validation/audit results**
+```text
+python -m py_compile scripts/gabriel_state_source_scout.py
+python -m py_compile scripts/test_gabriel_state_source_scout_prompt.py
+python -m py_compile tmp/gabriel_proxy_connection_diagnosis_2026-07-16/gabriel_proxy_smoke_test.py
+OK
+
+python scripts/test_gabriel_state_source_scout_prompt.py
+5 PASS checks
+
+python scripts/validate.py
+VALIDATION PASSED — contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19
+exact-cycle: 10 | overlap-cycle: 18 | exploratory adjacent matches: 2
+safety units unmatched: 6
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units. No canonical corpus change occurred.
+
+**Next steps**
+1. Have the appropriate service owner check the Harvard proxy/API path or local network path without exposing credentials in a project log.
+2. When the path is believed restored, run one new synthetic no-search smoke test first; do not resume MA automatically.
+3. Only with new authorization after a successful smoke test, use a fresh exact-eight-row MA scout output directory and retain the current failure artifacts unchanged.
+
 ## 2026-07-16 18:37 EDT (Ran the explicitly authorized eight-row Massachusetts live scout; every primary response was an empty GABRIEL proxy connection error, so no candidates or downstream work) - stop before another state or verification
 
 **Did**

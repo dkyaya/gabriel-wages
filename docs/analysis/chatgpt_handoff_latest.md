@@ -2,9 +2,27 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-16T18:37:00-04:00`
+Last updated: `2026-07-16T19:01:00-04:00`
 
 ---
+
+## 2026-07-16T19:01:00-04:00 - Synthetic no-search smoke test confirms the MA failure is an unresolved GABRIEL/Harvard proxy-path problem
+
+**Commit target:** `Diagnose GABRIEL proxy connection failure`
+
+### Current State After This Entry
+
+- **Relay check:** both available MA-live relays were inspected. `7ce744b` is the newer/more complete source because it contains the five-row full-context retry projection missing from `eab312f`; shared carried files match the repository byte-for-byte.
+- **Failure finding:** the MA primary run has 8 failed rows and its two bounded retry runs have 8 more. All 16 are empty GABRIEL `Connection error.` rows: no response ID, no response text, no web source, and no output/reasoning token. This is not evidence of source absence.
+- **Texas control:** the earlier successful TX run used the same model (`gpt-5.4-nano`), minimal prompt, low search context, `n_parallels=1`, 15-second spacing, and 90-second timeouts. It had 3/3 parseable responses, response IDs, and 7,002 output tokens. MA did not fail because of the selected runner flags or a particular municipal prompt.
+- **Local checks:** no runner healthcheck/ping CLI exists; imports succeed; the project `.env` path is present; the smoke test confirmed that the credential is available after local env loading without exposing its value. The configured Harvard proxy base URL is present in source. No credential content or remote was inspected.
+- **Smoke test:** one authorized synthetic JSON-only prompt ran with one worker, no web search, low search-context setting, and the same proxy/key-loading route. It failed in the same way: 13 input tokens, `$0.0000026`, blank response, no response ID, no output/reasoning tokens, and `Connection error.`. Artifacts are `tmp/gabriel_proxy_connection_diagnosis_2026-07-16/`.
+- **Diagnostic improvement:** `scripts/gabriel_state_source_scout.py` now preserves `live_succeeded` for backward compatibility but adds `live_process_completed`, `n_gabriel_successful_rows`, `n_nonempty_response_rows`, and `model_response_succeeded`. This prevents a returned all-failure dataframe from being mistaken for a successful model run. The prompt test now covers the distinction.
+- **Protected state:** no research scout, source verification, ingestion, codification, claim promotion, or canonical data/corpus change occurred.
+
+### Interpretation and Recommended Next Move
+
+Do not rerun MA or another state now. The synthetic no-search failure makes a current external proxy/API transport-path problem the leading explanation; generic GABRIEL logs do not distinguish transient proxy availability from upstream authentication/backend/model availability. Ask the appropriate service owner to check that path outside project logs. After it is believed restored, run a new synthetic smoke test first. Only a successful smoke response plus separate authorization would justify a fresh, separately timestamped exact-eight-row MA scout.
 
 ## 2026-07-16T18:37:00-04:00 - Massachusetts live scout returned no model content because all primary calls hit GABRIEL proxy connection errors
 

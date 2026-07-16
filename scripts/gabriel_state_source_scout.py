@@ -171,6 +171,31 @@ def _bool_str(value: bool) -> str:
     return "yes" if value else "no"
 
 
+def summarize_live_row_outcomes(rows: list[dict[str, Any]]) -> dict[str, int | bool]:
+    """Summarize returned GABRIEL rows without conflating a completed client
+    call with a successful model response.
+
+    ``gabriel.whatever`` can return a dataframe of failed rows instead of
+    raising. Existing ``live_succeeded`` remains backward-compatible (it means
+    the client call returned), while these fields make the row-level outcome
+    explicit in new run metadata.
+    """
+    successful = 0
+    response_nonempty = 0
+    for row in rows:
+        raw_success = str(row.get("Successful", "") or "").strip().lower()
+        has_response = bool(str(row.get("Response", "") or "").strip())
+        if raw_success in {"true", "1", "yes"}:
+            successful += 1
+        if has_response:
+            response_nonempty += 1
+    return {
+        "n_gabriel_successful_rows": successful,
+        "n_nonempty_response_rows": response_nonempty,
+        "model_response_succeeded": successful > 0 and response_nonempty > 0,
+    }
+
+
 def classify_failure(response_text: str, gabriel_row: dict) -> tuple[str, dict]:
     """Classify why a GABRIEL row failed to yield parseable JSON, and collect
     GABRIEL's own diagnostic columns for failed_parses.csv."""
@@ -1546,6 +1571,10 @@ def main() -> int:
         "output_dir": str(out_dir),
         "live_attempted": False,
         "live_succeeded": False,
+        "live_process_completed": False,
+        "n_gabriel_successful_rows": None,
+        "n_nonempty_response_rows": None,
+        "model_response_succeeded": False,
         "live_failure_reason": None,
     }
 
@@ -1576,7 +1605,12 @@ def main() -> int:
         print("Dry-run artifacts (prompt preview, metadata) preserved. Not retrying.")
         return 2
 
+    # Preserve the historic meaning of live_succeeded: gabriel.whatever
+    # returned a dataframe instead of raising. Row-level fields below expose
+    # whether that dataframe contains an actual successful model response.
     metadata["live_succeeded"] = True
+    metadata["live_process_completed"] = True
+    metadata.update(summarize_live_row_outcomes(df.to_dict(orient="records")))
 
     import pandas as pd  # noqa: E402  (lazy: only needed on the live path)
 

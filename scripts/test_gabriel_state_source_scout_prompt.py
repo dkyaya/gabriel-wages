@@ -119,14 +119,32 @@ def _check_new_fields_survive_parsing() -> None:
     assert candidate["likely_ingest_priority"] == "low"
 
 
+def _check_live_outcome_summary() -> None:
+    failed = scout.summarize_live_row_outcomes(
+        [{"Successful": False, "Response": ""}]
+    )
+    assert failed["n_gabriel_successful_rows"] == 0
+    assert failed["n_nonempty_response_rows"] == 0
+    assert failed["model_response_succeeded"] is False
+
+    succeeded = scout.summarize_live_row_outcomes(
+        [{"Successful": True, "Response": '{"ok": true}'}]
+    )
+    assert succeeded["n_gabriel_successful_rows"] == 1
+    assert succeeded["n_nonempty_response_rows"] == 1
+    assert succeeded["model_response_succeeded"] is True
+
+
 def main() -> int:
     _check_row_aware_prompt()
     _check_three_column_fallback()
     _check_new_fields_survive_parsing()
+    _check_live_outcome_summary()
     print("PASS: row-aware prompt retains contextual fields")
     print("PASS: three-column input fallback remains valid")
     print("PASS: strict unit/document/no-candidate guidance is present")
     print("PASS: new candidate-stage fields survive parsing and remain unverified")
+    print("PASS: live-process completion remains distinct from model-response success")
     return 0
 
 
