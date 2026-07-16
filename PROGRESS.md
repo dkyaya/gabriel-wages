@@ -6,6 +6,55 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-16 18:06 EDT (Tightened the minimal scout filtering contract and re-dry-ran the exact Texas slice; no live/model call, search, ingestion, codification, canonical-data change, push, or remote work) - 3/3 prompts pass stricter unit, document, employer, empty-result, and stage checks
+
+**Did**
+- Started at local commit `55bedf21c11d2838ef29914ba1f3eb1d06ce737c`. `tmp/national_batch01_tx_source_verification_2026-07-16_relay_55bedf2.zip` passed integrity checks; every required carried file matched the repository byte-for-byte. Left unrelated `.claude/` material untouched and did not inspect/configure a remote.
+- Tightened `scripts/gabriel_state_source_scout.py` minimal mode so police/fire/non-safety/unclear units, full agreements, settlements, compensation plans, ordinances, agenda covers, minutes, context-only pages, and dead/insufficient sources are distinct. Explicitly barred safety CBAs and safety-adjacent units from satisfying non-safety requests and permitted an empty candidate list.
+- Added `candidate_stage`, `document_completeness`, `comparator_role`, `wrong_employer_risk`, `context_only_flag`, and `needs_verification_reason` to the candidate output contract and parser. Deterministic scoring now demotes context-only, incomplete, dead, and wrong-employer-risk leads without deleting their audit trail. All parsed rows remain `verification_status=unverified` and `promotion_status=raw_model_output`.
+- Added a no-network test covering contextual rows, legacy three-column inputs, strict prompt clauses, schema retention, and stage separation. Re-ran exactly San Antonio, Austin, and Houston in dry-run mode; metadata records 3 prompts and `live_attempted=false`.
+
+**Decisions and why**
+- `non_safety` is reserved for ordinary city/civilian employees or authoritative civilian wage-setting material. EMS, airport/transit/school police, sheriffs, county corrections, hospital-district workers, and private providers cannot fill that role; ambiguity stays `unclear` and does not complete a triad.
+- Agenda covers, summaries, meeting memos, and minutes are context-only unless they include or directly attach the full binding document. Executed settlements with wage terms and authoritative civilian compensation plans remain distinct potentially qualifying types.
+- Weak leads remain in scout output with explicit stage/completeness/risk metadata, but receive priority penalties. This preserves reproducibility while reducing the chance that a locator or wrong unit enters the verification queue ahead of a full document.
+- The filtering contract is ready for one small, separately authorized national state slice followed immediately by source verification. It does not justify a blind multi-state release or remove human verification.
+
+**Surprises/breakage**
+- The exact prompt bodies increased from the earlier 323/313/349 words to 565/555/591 because the controlled schema and filtering rules are explicit. They remain JSON-only, capped at two results per requested unit/source type, and passed the compactness review; the next live slice should monitor token cost and parse reliability.
+- No parser, fallback-input, validation, pipeline, or coverage-audit regression occurred.
+
+**Validation/audit results**
+```text
+python -m py_compile scripts/gabriel_state_source_scout.py scripts/test_gabriel_state_source_scout_prompt.py
+OK
+
+python scripts/test_gabriel_state_source_scout_prompt.py
+4 PASS checks: row-aware context; three-column fallback; strict guidance; new fields/stage separation
+
+Texas dry run
+3 prompts: San Antonio, Austin, Houston | mode=minimal | live_attempted=false
+all 3 pass exact-employer, wrong-employer, non-safety, context-only, empty-result, and schema checks
+
+python scripts/validate.py
+VALIDATION PASSED — contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19
+exact-cycle: 10 | overlap-cycle: 18 | exploratory adjacent matches: 2
+safety units unmatched: 6
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units.
+
+**Next steps**
+1. Select one small state slice already present in the national manifest and reserve human verification capacity before seeking separate live-scout authorization.
+2. On that slice, monitor candidate-stage compliance, empty results, parse rate, prompt/output tokens, and wrong-unit/wrong-employer leakage; stop before another slice if leakage remains material.
+3. Keep every result quarantined until direct-source verification establishes access, provenance, employer, unit, document completeness, dates, wage material, and matched-cycle value.
+
 ## 2026-07-16 17:17 EDT (Verified the bounded Texas live-scout candidates without new scouting, ingestion, codification, canonical-data changes, push, or remote work) - Houston HOPE 2015–2018 is the one later-ingestion candidate; Austin and San Antonio still lack usable ordinary comparators
 
 **Did**

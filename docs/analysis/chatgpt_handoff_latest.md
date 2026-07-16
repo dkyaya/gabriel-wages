@@ -2,9 +2,49 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-16T17:17:08-04:00`
+Last updated: `2026-07-16T18:06:22-04:00`
 
 ---
+
+## 2026-07-16T18:06:22-04:00 - Tightened the minimal scout candidate contract and passed a no-network Texas filtering dry run
+
+**Commit target:** `Tighten scout filtering contract`
+
+### Current State After This Entry
+
+- **Relay/repository check:** starting commit `55bedf21c11d2838ef29914ba1f3eb1d06ce737c`. The incoming relay passed ZIP integrity checks, and all required carried files matched current repository copies byte-for-byte. Existing untracked `.claude/` material was left untouched. No remote was inspected or modified.
+- **Prompt contract:** minimal mode now defines police/fire/non-safety/unclear units and explicitly states that a safety CBA or EMS/airport police/transit police/sheriff/county-corrections/school-police/hospital-district/private-provider unit cannot satisfy an ordinary non-safety comparator request. Exact city/Census targeting and prior wrong-employer exclusions remain.
+- **Document contract:** the prompt separates full CBAs, arbitration/fact-finding awards, memoranda/settlements, wage schedules/compensation plans, ordinances/policies, agenda covers, meeting minutes, context-only pages, and dead/unreachable/insufficient sources. Agenda or summary material is context-only unless the full binding source is included or directly attached. Empty candidate output is explicitly valid.
+- **Output/parser contract:** candidates now retain `candidate_stage`, `document_completeness`, `comparator_role`, `wrong_employer_risk`, `context_only_flag`, and `needs_verification_reason`. Ambiguous units stay `unclear`; scout coverage counts them with unknown rather than as a completed triad. Scoring demotes context-only, incomplete, dead, and wrong-employer-risk rows but does not erase them. Every output remains unverified/raw-model scout data.
+- **Backward compatibility:** `load_municipalities` still requires only `municipality_id`, `municipality`, and `state`; the no-network test builds the fallback prompt from exactly those columns. The existing full prompt mode was not changed.
+- **Dry-run result:** the exact full-context Texas CSV generated 3 minimal previews—San Antonio, Austin, Houston—with `live_attempted=false`. All three pass strict non-safety, safety-exclusion, wrong-employer, context-only, empty-result, schema, exact-employer, and city-purpose checks. Prompt bodies are 565/555/591 words; still bounded to JSON and at most two leads per requested unit/source type.
+- **Canonical separation:** no live GABRIEL/model/API call, source search, ingestion, codification, contract/coverage/corpus/claim edit, or verified-status promotion occurred.
+
+### New or Changed Artifacts
+
+- `scripts/gabriel_state_source_scout.py`
+- `scripts/test_gabriel_state_source_scout_prompt.py`
+- `docs/analysis/scout_prompt_filtering_contract_2026-07-16.md`
+- `docs/analysis/national_batch01_tx_filter_contract_dry_run_review_2026-07-16.md`
+- `tmp/gabriel_state_source_scout/TX/national_batch01_tx_filter_contract_dry_run_2026-07-16/prompt_preview.md`
+- `tmp/gabriel_state_source_scout/TX/national_batch01_tx_filter_contract_dry_run_2026-07-16/run_metadata.json`
+- `tmp/national_batch01_tx_filter_contract_validation_2026-07-16/`
+
+### Validation State
+
+- `python -m py_compile scripts/gabriel_state_source_scout.py scripts/test_gabriel_state_source_scout_prompt.py` — OK.
+- `python scripts/test_gabriel_state_source_scout_prompt.py` — 4 PASS checks.
+- `python scripts/validate.py` — passed; contracts 64, discourse 0, coverage 64, city attributes 3.
+- `python ingest/test_pipeline.py` — 60 passed, 0 failed.
+- `python ingest/audit_coverage.py` — 28 healthy pairs across 19 cities; 10 exact, 18 overlap, 2 exploratory adjacent, 6 unmatched safety units.
+
+### Interpretation
+
+The Texas verification failures are now represented in the scout contract rather than left for reviewer intuition. The change should reduce deep-dive burden, but it is a triage contract only: the live model can still mislabel rows, and direct-source review must establish URL access, source ownership, employer, unit, completeness, dates, wage content, cycle overlap, and ingestion value. Parser success and project audits remain distinct from source verification.
+
+### Recommended Next Move
+
+Choose one small state slice from the existing national manifest, reserve capacity to verify its output immediately, and seek separate live-scout authorization for only that slice. Monitor schema compliance, parse rate, token cost, empty-result frequency, and wrong-unit/wrong-employer/context leakage. Stop before releasing another slice if the contract does not materially improve candidate precision. Do not re-scout Texas only to test the prompt, do not launch a blind 100-city batch, and do not treat candidate-stage labels or scores as verified evidence.
 
 ## 2026-07-16T17:17:08-04:00 - Completed bounded source verification for all six Texas parsed candidates and 18 Austin trace-only leads; Houston HOPE 2015–2018 is the sole later-ingestion candidate
 

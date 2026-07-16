@@ -88,6 +88,12 @@ CANDIDATE_FIELDS = [
     "source_owner",
     "source_owner_type",
     "document_type",
+    "candidate_stage",
+    "document_completeness",
+    "comparator_role",
+    "wrong_employer_risk",
+    "context_only_flag",
+    "needs_verification_reason",
     "triad_value",
     "provenance_score",
     "likely_ingest_priority",
@@ -254,14 +260,34 @@ def normalize_owner_type(raw: str) -> str:
 # (e.g. "collective bargaining agreement / contract ratification document (police)",
 # "city council resolution (ratification of police CBA)"). Normalize via keyword
 # match against the declared enum rather than requiring an exact string.
-_DOC_TYPE_ENUM = {"cba", "arbitration_award", "factfinding", "pay_plan", "index_page", "context_only", "unknown"}
+_DOC_TYPE_ENUM = {
+    "cba",
+    "arbitration_award",
+    "factfinding",
+    "memorandum_or_settlement",
+    "wage_schedule_or_compensation_plan",
+    "ordinance_or_policy",
+    "agenda_cover_sheet",
+    "meeting_minutes",
+    "index_page",
+    "context_only",
+    "dead_or_unreachable",
+    "insufficient_source",
+    "unknown",
+}
 _DOC_TYPE_KEYWORDS = [
-    ("cba", (r"collective bargaining agreement", r"\bcba\b", r"labor agreement", r"contract ratification")),
+    ("dead_or_unreachable", (r"dead link", r"unreachable", r"access denied", r"not found", r"\b404\b")),
+    ("agenda_cover_sheet", (r"agenda cover", r"agenda item", r"cover sheet")),
+    ("meeting_minutes", (r"meeting minutes", r"council minutes", r"minutes only")),
+    ("memorandum_or_settlement", (r"memorandum of agreement", r"memorandum of understanding", r"settlement agreement", r"settlement memorandum", r"\bmoa\b", r"\bmou\b")),
     ("arbitration_award", (r"arbitration award", r"interest arbitration", r"act 111 award")),
     ("factfinding", (r"fact[- ]?finding",)),
-    ("pay_plan", (r"pay plan", r"salary schedule", r"compensation plan")),
+    ("wage_schedule_or_compensation_plan", (r"pay plan", r"wage schedule", r"salary schedule", r"compensation plan")),
+    ("ordinance_or_policy", (r"ordinance", r"resolution", r"personnel policy", r"compensation policy")),
+    ("cba", (r"collective bargaining agreement", r"\bcba\b", r"labor agreement", r"full agreement")),
     ("index_page", (r"\bindex\b", r"contract(s)? (library|page|archive)", r"document (archive|portal)")),
-    ("context_only", (r"news", r"press release", r"budget document", r"operating budget", r"resolution", r"legislation", r"agenda")),
+    ("insufficient_source", (r"insufficient", r"snippet only", r"search result only", r"javascript shell")),
+    ("context_only", (r"news", r"press release", r"budget document", r"operating budget", r"legislation", r"summary", r"meeting memo")),
 ]
 
 
@@ -278,7 +304,7 @@ def normalize_document_type(raw: str) -> str:
     return "unknown"
 
 
-_UNIT_TYPE_ENUM = {"police", "fire", "non_safety", "unknown"}
+_UNIT_TYPE_ENUM = {"police", "fire", "non_safety", "unclear", "unknown"}
 
 
 def normalize_unit_type(raw: str) -> str:
@@ -294,8 +320,10 @@ def normalize_unit_type(raw: str) -> str:
         return "fire"
     if "non" in lowered and "safety" in lowered:
         return "non_safety"
-    if "municipal" in lowered or "general" in lowered:
+    if "civilian" in lowered or "general_municipal" in lowered:
         return "non_safety"
+    if "unclear" in lowered or "ambiguous" in lowered or "mixed" in lowered:
+        return "unclear"
     return "unknown"
 
 
@@ -338,10 +366,10 @@ Return JSON with:
 }}"""
 
 
-# Shorter prompt added for the 2026-07-14 timeout stress test — asks only for
-# structured source candidates (flat list, fewer fields) to reduce reasoning/
-# output burden per call as an alternative hypothesis to raising the timeout.
-# See docs/analysis/gabriel_state_source_scout_timeout_test_2026-07-14.md.
+# Bounded prompt added for the 2026-07-14 timeout stress test. It retains a
+# flat candidate list and a small per-target result cap; later source
+# verification added explicit unit/document-stage fields so weak leads can be
+# quarantined without being mistaken for qualifying agreements.
 MINIMAL_PROMPT_TEMPLATE = """Find public URLs for municipal labor source documents for {municipality}, {state}.
 
 Target employer only: {target_employer}
@@ -349,6 +377,10 @@ Target employer only: {target_employer}
 
 Follow the search target strictly. Sources outside it may appear only as clearly labeled context and do not count as requested candidates.
 County governments, school districts, transit authorities, hospital/health districts, regional authorities, special districts, and private EMS/fire providers may not substitute for the target city employer's bargaining unit or wage-setting pathway. They may appear only as clearly labeled context if relevant.
+
+Unit rules: police means sworn police or a police bargaining unit; fire means firefighters or a fire bargaining unit. non_safety means ordinary municipal/civilian employees or authoritative civilian wage-setting material. A police, fire, or other safety CBA can never satisfy a non-safety comparator request. EMS, airport police, transit police, sheriffs, county corrections, school police, hospital-district workers, and private providers are not ordinary non-safety comparators. Use unclear when unit identity is ambiguous; do not force non_safety.
+
+Document rules: distinguish a full CBA; arbitration/factfinding award; memorandum or settlement; wage schedule/compensation plan; ordinance/policy; agenda cover; meeting minutes; context-only source; and dead, unreachable, or insufficient source. A memorandum or settlement is qualifying only when it is executed/binding and contains wage-setting terms. Agenda covers, summaries, meeting memos, and minutes are context-only unless they include or directly attach the full agreement, award, wage schedule, or other binding wage-setting document. Index shells, dead links, and inaccessible pages are insufficient, not qualifying documents.
 
 Find up to 2 candidates for each requested unit or source type. Prefer official city, state labor-board, or union sources.
 
@@ -360,22 +392,28 @@ Return:
   "state": "...",
   "candidates": [
     {{
-      "unit_type": "police | fire | non_safety | unknown",
+      "unit_type": "police | fire | non_safety | unclear | unknown",
       "document_title": "...",
       "union_name": "...",
       "employer": "...",
       "contract_years": "...",
       "source_url": "...",
       "source_owner_type": "city | state_labor_board | union | third_party | news | unknown",
-      "document_type": "cba | arbitration_award | factfinding | pay_plan | index_page | context_only | unknown",
+      "document_type": "cba | arbitration_award | factfinding | memorandum_or_settlement | wage_schedule_or_compensation_plan | ordinance_or_policy | agenda_cover_sheet | meeting_minutes | index_page | context_only | dead_or_unreachable | insufficient_source | unknown",
+      "candidate_stage": "qualifying_candidate | context_only_candidate | insufficient_candidate",
+      "document_completeness": "full_document | partial_document | summary_only | index_or_landing_page | dead_or_unreachable | unclear",
+      "comparator_role": "safety_target | ordinary_non_safety_comparator | authoritative_civilian_wage_setting | mechanism_context | no_comparator_role | unclear",
+      "wrong_employer_risk": "none | possible | high",
+      "context_only_flag": "yes | no",
+      "needs_verification_reason": "...",
       "why_relevant": "...",
       "confidence": "high | medium | low"
     }}
   ]
 }}
 
-Every returned item is an unverified scout-stage candidate lead and must not be described as verified, ingested, or codified.
-Do not invent URLs. If none found, return an empty candidates list."""
+Every returned item remains unverified scout-stage lead data and must not be described as verified, ingested, codified, or claim-supporting. Context-only and insufficient leads must be labeled with candidate_stage and context_only_flag; they do not count as qualifying agreements or comparators.
+Do not invent URLs. It is acceptable to find no qualifying source for this city; return an empty candidates list when none is found."""
 
 
 # ---------------------------------------------------------------------------
@@ -577,6 +615,11 @@ def score_candidate(row: dict, unit_types_present: set[str]) -> tuple[int, str]:
     contract_years = (row.get("contract_years") or "").strip()
     why_relevant = (row.get("why_relevant") or "").strip()
     unit_type = (row.get("unit_type") or "").strip().lower()
+    candidate_stage = (row.get("candidate_stage") or "").strip().lower()
+    completeness = (row.get("document_completeness") or "").strip().lower()
+    comparator_role = (row.get("comparator_role") or "").strip().lower()
+    wrong_employer_risk = (row.get("wrong_employer_risk") or "").strip().lower()
+    context_only = (row.get("context_only_flag") or "").strip().lower() in {"yes", "true", "1"}
 
     # Rewards
     if owner_type == "city" or ".gov" in url.lower():
@@ -585,8 +628,13 @@ def score_candidate(row: dict, unit_types_present: set[str]) -> tuple[int, str]:
         score += 20
     if owner_type == "union":
         score += 12
-    if url.lower().endswith(".pdf") or doc_type in {"cba", "arbitration_award", "factfinding", "pay_plan"}:
+    if url.lower().endswith(".pdf") or doc_type in {
+        "cba", "arbitration_award", "factfinding",
+        "memorandum_or_settlement", "wage_schedule_or_compensation_plan",
+    }:
         score += 15
+    if completeness == "full_document":
+        score += 10
     years = [int(y) for y in re.findall(r"(20\d{2})", contract_years)]
     if any(y >= 2018 for y in years):
         score += 10
@@ -596,14 +644,29 @@ def score_candidate(row: dict, unit_types_present: set[str]) -> tuple[int, str]:
         score += 8
     if union_name and union_name.lower() != "unknown" and employer and employer.lower() != "unknown":
         score += 8
-    if unit_type == "non_safety":
+    if unit_type == "non_safety" and (
+        not comparator_role
+        or comparator_role in {
+            "ordinary_non_safety_comparator", "authoritative_civilian_wage_setting",
+        }
+    ):
         score += 7
 
     # Penalties
     if owner_type == "news":
         score -= 20
-    if doc_type == "context_only":
+    if doc_type in {"context_only", "agenda_cover_sheet", "meeting_minutes", "ordinance_or_policy"}:
         score -= 20
+    if candidate_stage in {"context_only_candidate", "insufficient_candidate"} or context_only:
+        score -= 25
+    if completeness in {"summary_only", "index_or_landing_page"}:
+        score -= 15
+    if completeness == "dead_or_unreachable" or doc_type in {"dead_or_unreachable", "insufficient_source"}:
+        score -= 30
+    if wrong_employer_risk == "possible":
+        score -= 15
+    elif wrong_employer_risk == "high":
+        score -= 30
     if any(marker in url.lower() for marker in THIRD_PARTY_HOST_MARKERS):
         score -= 15
     if not url:
@@ -699,6 +762,12 @@ def parse_response_to_candidates(
                 "source_owner": str(item.get("source_owner", "") or ""),
                 "source_owner_type": normalize_owner_type(str(item.get("source_owner_type", "") or "")),
                 "document_type": normalize_document_type(str(item.get("document_type", "") or "")),
+                "candidate_stage": str(item.get("candidate_stage", "") or ""),
+                "document_completeness": str(item.get("document_completeness", "") or ""),
+                "comparator_role": str(item.get("comparator_role", "") or ""),
+                "wrong_employer_risk": str(item.get("wrong_employer_risk", "") or ""),
+                "context_only_flag": str(item.get("context_only_flag", "") or ""),
+                "needs_verification_reason": str(item.get("needs_verification_reason", "") or ""),
                 "why_relevant": str(item.get("why_relevant", "") or ""),
                 "confidence": str(item.get("confidence", "") or ""),
                 "raw_response_ref": raw_response_ref,
@@ -1137,7 +1206,7 @@ def build_municipality_coverage_rows(
                 "police_candidate_count": unit_types.count("police"),
                 "fire_candidate_count": unit_types.count("fire"),
                 "non_safety_candidate_count": unit_types.count("non_safety"),
-                "unknown_candidate_count": unit_types.count("unknown"),
+                "unknown_candidate_count": unit_types.count("unknown") + unit_types.count("unclear"),
                 "likely_triad": _bool_str({"police", "fire", "non_safety"}.issubset(set(unit_types))),
                 "best_source_owner_type": _best_by_priority(owner_types, _OWNER_TYPE_PRIORITY) if owner_types else "",
                 "best_candidate_priority": _best_by_priority(priorities, _CANDIDATE_PRIORITY_ORDER) if priorities else "",
