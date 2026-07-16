@@ -2,9 +2,59 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-16T16:14:03-04:00`
+Last updated: `2026-07-16T16:32:00-04:00`
 
 ---
+
+## 2026-07-16T16:32:00-04:00 - Made the minimal state-source-scout prompt row-aware and passed the exact Texas dry-run review; no live scout/model call, verification, ingestion, codification, push, or remote work
+
+**Commit target:** `Make Texas scout prompt row-aware`
+
+### Current State After This Entry
+
+- **Relay/repository check:** starting commit `10003b699eafff4978d2ea0c2a53062054ab9af1`. All five project files carried by `tmp/national_batch01_tx_scout_dry_run_2026-07-16_relay_10003b6.zip` matched the repository byte-for-byte; its prior `prompt_preview.md` and `run_metadata.json` matched the current temporary artifacts. The relay omits unchanged runner/builders/manifest files, so the repository copies supplied them. Existing untracked `.claude/` material was left untouched. No remote was inspected or modified.
+- **Runner change:** `build_prompt` now accepts an optional full row for minimal mode. It uses `government_name`, `census_gov_id`, `expected_units_to_search`, `selection_reason`, `verification_notes`, and `county_context_summary` when present; the main loop now passes each retained row into prompt construction. Non-minimal/full prompt output is unchanged.
+- **Backward compatibility:** `load_municipalities` still requires only `municipality_id`, `municipality`, and `state`. The existing three-column Texas runner CSV loaded all three rows and built fallback prompts successfully. Missing optional fields yield the target municipal employer plus the standard police/fire/general-municipal search target; no future batch is required to add contextual columns.
+- **Common minimal-prompt safeguards:** every row names the target municipal employer; exact Census ID is included when available. County governments, school districts, transit authorities, hospital/health districts, regional authorities, special districts, and private EMS/fire providers cannot substitute for the city employer. County relationships are labeled geography-only. The candidate JSON now includes `employer`, `contract_years`, and `why_relevant`. Every return is explicitly an unverified scout-stage lead that must not be called verified, ingested, or codified.
+- **Exact Texas dry run:** the required full-context command built 3 prompts in `tmp/gabriel_state_source_scout/TX/national_batch01_tx_rowaware_dry_run_2026-07-16/`. Metadata run ID `tx_2026-07-16_163045` records `mode=dry_run`, `prompt_mode=minimal`, `municipalities_requested=3`, `live_attempted=false`, `live_succeeded=false`, and `live_failure_reason=null`. Only `prompt_preview.md` and `run_metadata.json` exist in that output directory.
+- **San Antonio:** exact `CITY OF SAN ANTONIO`, Census ID `175988`; ordinary civilian/non-safety comparator or authoritative civilian wage-setting target; existing police/fire contracts are context only, not a rediscovery objective.
+- **Austin:** exact `CITY OF AUSTIN`, Census ID `176394`; ordinary general-municipal non-safety target; EMS is explicitly excluded from counting as the comparator.
+- **Houston:** exact `CITY OF HOUSTON`, Census ID `176169`; police, fire, and at least one ordinary non-safety unit; each candidate needs contract years; repeat-cycle and public impasse/arbitration/factfinding evidence are explicitly prioritized.
+- **Review result:** all three exact saved prompt bodies pass the requested checklist and are reproduced in `docs/analysis/national_batch01_tx_rowaware_scout_dry_run_review_2026-07-16.md`. Prompt lengths are 323/313/349 words. The prompts are acceptable for a future, separately authorized three-city live scout; this entry does not authorize one.
+- **Protected state:** no changes to the Texas input CSVs, national/PA manifests or coverage outputs, `data/contracts.csv`, `data/city_coverage.csv`, `corpus/`, claim/evidence files, or ingestion inputs. No GABRIEL/model/API/codify/ingest call occurred, and no scout output exists to promote.
+
+### Validation/audit results
+
+```text
+row-aware prompt checks
+PASS — 3 exact saved previews satisfy all common and city-specific checks
+PASS — metadata confirms dry_run/minimal, 3 rows, no live attempt
+PASS — review embeds all 3 exact prompt bodies
+PASS — legacy three-column input loads/builds; full prompt mode unchanged
+
+python -m py_compile scripts/gabriel_state_source_scout.py
+python -m py_compile scripts/build_next_wave_municipality_manifest.py
+python -m py_compile scripts/build_pa_full_state_municipality_manifest.py
+python -m py_compile scripts/build_scout_coverage.py
+OK
+
+python scripts/validate.py
+VALIDATION PASSED — contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed
+
+python ingest/audit_coverage.py
+contracts: 64 | cities: 19 | healthy matched pairs: 28
+exact-cycle: 10 | overlap-cycle: 18 | exploratory adjacent matches: 2
+safety units unmatched: 6
+```
+
+### Recommended next run
+
+1. If the user separately authorizes a live scout, use the unchanged full-context Texas CSV, `--state TX`, `--prompt-mode minimal`, `--max-prompts 3`, `--n-parallels 1`, `--sleep-between-prompts 15`, and `--search-context-size low`. Permit at most one bounded retry after diagnosing a failed row.
+2. Preserve the prompt preview and raw output as scout-stage artifacts. Verify exact employer, provenance, URL/document, contract years, and matched-cycle value before changing any verification ledger; do not ingest or codify in the scout run.
+3. Review San Antonio's civilian-pathway result, Austin's non-EMS comparator result, and Houston's repeat-cycle triad result before selecting another national state slice or PA runner shard.
 
 ## 2026-07-16T16:14:03-04:00 - Prepared and dry-ran the Texas slice of national batch 01; exact three-row inputs are ready, but the generic minimal prompt should be made row-aware before any live scout
 

@@ -344,14 +344,15 @@ Return JSON with:
 # See docs/analysis/gabriel_state_source_scout_timeout_test_2026-07-14.md.
 MINIMAL_PROMPT_TEMPLATE = """Find public URLs for municipal labor source documents for {municipality}, {state}.
 
+Target employer only: {target_employer}
+{context_lines}
+
+Follow the search target strictly. Sources outside it may appear only as clearly labeled context and do not count as requested candidates.
+County governments, school districts, transit authorities, hospital/health districts, regional authorities, special districts, and private EMS/fire providers may not substitute for the target city employer's bargaining unit or wage-setting pathway. They may appear only as clearly labeled context if relevant.
+
+Find up to 2 candidates for each requested unit or source type. Prefer official city, state labor-board, or union sources.
+
 Return JSON only. No prose.
-
-Find up to 2 candidates each for:
-- police
-- fire
-- non_safety/general municipal
-
-Prefer official city, state labor-board, or union sources.
 
 Return:
 {{
@@ -362,14 +363,18 @@ Return:
       "unit_type": "police | fire | non_safety | unknown",
       "document_title": "...",
       "union_name": "...",
+      "employer": "...",
+      "contract_years": "...",
       "source_url": "...",
       "source_owner_type": "city | state_labor_board | union | third_party | news | unknown",
       "document_type": "cba | arbitration_award | factfinding | pay_plan | index_page | context_only | unknown",
+      "why_relevant": "...",
       "confidence": "high | medium | low"
     }}
   ]
 }}
 
+Every returned item is an unverified scout-stage candidate lead and must not be described as verified, ingested, or codified.
 Do not invent URLs. If none found, return an empty candidates list."""
 
 
@@ -424,9 +429,70 @@ def load_retry_municipality_ids(path: Path) -> list[str]:
 # Prompt building
 # ---------------------------------------------------------------------------
 
-def build_prompt(municipality: str, state: str, prompt_mode: str = DEFAULT_PROMPT_MODE) -> str:
-    template = MINIMAL_PROMPT_TEMPLATE if prompt_mode == "minimal" else PROMPT_TEMPLATE
-    return template.format(municipality=municipality, state=state)
+def build_prompt(
+    municipality: str,
+    state: str,
+    prompt_mode: str = DEFAULT_PROMPT_MODE,
+    context: dict | None = None,
+) -> str:
+    """Build a prompt, using optional row context only for minimal mode.
+
+    Three-column municipality inputs remain valid: when the optional manifest
+    fields are absent, the prompt falls back to the municipal employer and the
+    standard police/fire/non-safety search target.
+    """
+    if prompt_mode != "minimal":
+        return PROMPT_TEMPLATE.format(municipality=municipality, state=state)
+
+    row = context or {}
+    government_name = (row.get("government_name") or "").strip()
+    census_gov_id = (row.get("census_gov_id") or "").strip()
+    if government_name and census_gov_id:
+        target_employer = (
+            f"{government_name} municipal government, Census government ID {census_gov_id}."
+        )
+    elif government_name:
+        target_employer = f"{government_name} municipal government."
+    elif census_gov_id:
+        target_employer = (
+            f"the municipal government of {municipality}, {state}, "
+            f"Census government ID {census_gov_id}."
+        )
+    else:
+        target_employer = f"the municipal government of {municipality}, {state}."
+
+    expected_units = (row.get("expected_units_to_search") or "").strip()
+    selection_reason = (row.get("selection_reason") or "").strip()
+    verification_notes = (row.get("verification_notes") or "").strip()
+    county_context = (row.get("county_context_summary") or "").strip()
+    context_lines = [
+        f"Search target: {expected_units or 'police; fire; non_safety/general municipal'}."
+    ]
+    if "distinct from ems" in expected_units.lower():
+        context_lines.append(
+            "Comparator exclusion: EMS is explicitly excluded and may not count as the "
+            "requested ordinary general-municipal non-safety comparator."
+        )
+    if "repeat cycle" in expected_units.lower():
+        context_lines.append(
+            "Cycle evidence emphasis: identify contract years for every candidate and prioritize "
+            "repeat-cycle sources plus public impasse/arbitration/factfinding evidence."
+        )
+    if selection_reason:
+        context_lines.append(f"Selection purpose: {selection_reason}")
+    if verification_notes:
+        context_lines.append(f"Verification cautions: {verification_notes}")
+    if county_context:
+        context_lines.append(
+            f"County geography context only (not alternate employers): {county_context}"
+        )
+
+    return MINIMAL_PROMPT_TEMPLATE.format(
+        municipality=municipality,
+        state=state,
+        target_employer=target_employer,
+        context_lines="\n".join(context_lines),
+    )
 
 
 def build_identifier(run_id: str, municipality_id: str) -> str:
@@ -1384,7 +1450,10 @@ def main() -> int:
             print(f"WARNING: --max-prompts {args.max_prompts} exceeds LIVE_HARD_CAP={LIVE_HARD_CAP}; clipping.")
         municipalities = municipalities[:n_requested]
 
-    prompts = [build_prompt(m["municipality"], m["state"], args.prompt_mode) for m in municipalities]
+    prompts = [
+        build_prompt(m["municipality"], m["state"], args.prompt_mode, context=m)
+        for m in municipalities
+    ]
     identifiers = [build_identifier(run_id, m["municipality_id"]) for m in municipalities]
 
     prompt_preview_path = write_prompt_preview(out_dir, municipalities, prompts, identifiers)

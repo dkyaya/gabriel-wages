@@ -6,6 +6,58 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-16 16:32 EDT (Made the minimal state-source-scout prompt row-aware and re-dry-ran the exact Texas slice; no live scout/model call, verification, ingestion, codification, push, or remote work) - 3/3 prompts pass exact-employer, unit-target, exclusion, schema, and status checks
+
+**Did**
+- Started at local commit `10003b699eafff4978d2ea0c2a53062054ab9af1`. All five project files and both dry-run artifacts carried by `tmp/national_batch01_tx_scout_dry_run_2026-07-16_relay_10003b6.zip` matched the repository/current temporary copies byte-for-byte. The relay omitted unchanged runner/builders/manifest files, so read the repository copies. Left unrelated untracked `.claude/` material untouched and did not inspect/configure a remote.
+- Updated the minimal prompt path in `scripts/gabriel_state_source_scout.py` to consume optional retained row context: exact government name, Census government ID, expected units, selection purpose, verification cautions, and full county-geography context. Added strict wrong-employer exclusions, row-specific EMS/cycle instructions, `employer`/`contract_years`/`why_relevant` JSON fields, and explicit unverified-stage language.
+- Preserved the three required input columns and tested the legacy three-column Texas CSV through `load_municipalities` and `build_prompt`. The fallback remains municipal-employer plus police/fire/general-municipal targets. Full prompt mode remains byte-identical to its pre-existing template output.
+- Re-ran only the full-context Texas input with `--dry-run --state TX --prompt-mode minimal`. It produced exactly three previews—San Antonio, Austin, Houston—and metadata with `live_attempted=false` and `live_succeeded=false`. Added the exact prompts and per-city checklist to `national_batch01_tx_rowaware_scout_dry_run_review_2026-07-16.md`.
+
+**Decisions and why**
+- San Antonio targets an ordinary civilian/non-safety comparator or authoritative civilian wage-setting pathway and tells the scout not to rediscover existing safety contracts except as context.
+- Austin explicitly excludes EMS from counting as its ordinary general-municipal comparator.
+- Houston targets police, fire, an ordinary non-safety unit, contract years, repeat-cycle sources, and public impasse/arbitration/factfinding evidence.
+- County/school/transit/hospital-health/regional/special-district/private-provider sources cannot substitute for the exact `CITY OF ...` employer. County relationships remain labeled geography context only.
+- The previews are acceptable for a future, separately authorized three-city live scout. This dry-run is not authorization; any returns must remain raw, unverified scout-stage leads pending exact-employer/source/date/matched-cycle verification.
+
+**Surprises/breakage**
+- No relay/repository conflict and no validation breakage. A first machine-review regex assumed shorter headings and was corrected; it did not affect project artifacts or runner behavior.
+- Restoring manifest context raises the three prompt lengths to 323/313/349 words, still bounded to one compact JSON response and at most two candidates per requested unit/source type.
+
+**Validation/audit results**
+```text
+row-aware prompt checks
+PASS — 3 exact saved previews satisfy all common and city-specific checks
+PASS — metadata confirms dry_run/minimal, 3 rows, no live attempt
+PASS — review embeds all 3 exact prompt bodies
+PASS — legacy three-column input loads/builds; full prompt mode unchanged
+
+python -m py_compile scripts/gabriel_state_source_scout.py
+python -m py_compile scripts/build_next_wave_municipality_manifest.py
+python -m py_compile scripts/build_pa_full_state_municipality_manifest.py
+python -m py_compile scripts/build_scout_coverage.py
+OK
+
+python scripts/validate.py
+VALIDATION PASSED — contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19
+exact-cycle: 10 | overlap-cycle: 18 | exploratory adjacent matches: 2
+safety units unmatched: 6
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units.
+
+**Next steps**
+1. If and only if separately authorized, run the same full-context Texas slice live with `--max-prompts 3 --n-parallels 1 --sleep-between-prompts 15 --search-context-size low --prompt-mode minimal`; allow at most one bounded retry for diagnosed failures.
+2. Treat all returned candidates as unverified raw scout output. Verify exact employer, source ownership, URL/document availability, contract years, and matched safety/non-safety cycles before any promotion.
+3. Triage the Texas results before releasing another national slice or PA shard; do not turn scout-positive into verified, ingested, or codified status.
+
 ## 2026-07-16 16:14 EDT (Prepared and dry-ran the Texas slice of national batch 01; no live scout/model call, verification, ingestion, codification, push, or remote work) - 3 exact targets: San Antonio rank 1, Austin rank 4, Houston rank 13; dry-run succeeded and exposed a row-specific prompt-context gap
 
 **Did**
