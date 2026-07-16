@@ -2,9 +2,60 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-16T14:50:00-04:00`
+Last updated: `2026-07-16T15:03:30-04:00`
 
 ---
+
+## 2026-07-16T15:03:30-04:00 - Built the bounded, auditable 100-municipality next-wave scout manifest from the authoritative national universe; no live scout/model call, verification, ingestion, codification, PA re-scout, push, or remote work
+
+**Commit target:** `Build claim-driven next-wave municipality scout manifest`
+
+### Current State After This Entry
+
+- **Relay/repository check:** starting commit `4c2db6c24ce193f4f1b3f33d4265e5016aca013e`. Every substantive file carried by `tmp/national_municipality_universe_crosswalk_2026-07-16_relay_4c2db6c.zip` matched the repository byte-for-byte. The archive did not contain `AGENTS.md` or the older claim/source-strategy files requested for this task, so those unchanged repository copies supplied the missing context. Existing untracked `.claude/` material was left untouched. No remote was inspected or modified.
+- **New deterministic builder:** `scripts/build_next_wave_municipality_manifest.py` reads the authoritative municipality universe, full municipality-county crosswalk, and explicit national target ledger; resolves state + normalized municipality + expected government type; copies authoritative IDs/statuses; preserves every county relationship; and parse-validates the output.
+- **New manifest:** `docs/analysis/next_wave_municipality_scout_manifest_2026-07-16.csv` has **100** unique governments across **19 states/DC**, divided into four 25-row batches. Composition: 94 municipal + 6 township governments; 18 multi-county municipalities; 0 already scouted; 0 scout-positive; 12 already in the corpus for named repair/repeat purposes only.
+- **Priority buckets:** 10 `matched_comparison_repair`; 3 `repeat_cycle_claim_anchor`; 20 `claim_register_named_target`; 29 `institutional_regime_contrast`; 35 `within_state_replication`; 3 `population_admin_anchor`.
+- **Highest priority:** San Antonio TX, Somerville MA, Newton MA, Austin TX, Newark NJ, Boston MA, Worcester MA, Arlington MA, Georgetown MA, Jersey City NJ, then repeat cycles for Franklin MA, Seekonk MA, and Houston TX.
+- **State coverage:** CA 5; CO 2; CT 5; DC 1; FL 6; IL 10; MA 8; MD 2; MN 5; NC 6; NJ 8; NV 3; NY 10; OR 4; RI 3; TN 5; TX 8; WA 4; WI 5.
+- **Population discipline:** population is a tie-breaker and verification-burden signal, not a national top-city sort. Small named gaps remain high priority; state quotas and within-state replications prevent the largest cities from dominating.
+- **Full county context:** 18 multi-county rows preserve all 52 relationship segments, including GEOID, county-equivalent type, primary/headquarters flag, and relationship basis. County rows remain geography only and do not imply county completion.
+- **PA carry-forward:** no PA municipality appears. PA remains exactly 2,556 in-universe, 25 scouted, 23 scout-positive, 20 police, 16 fire, 14 non-safety, 10 likely triads, 75 candidate rows, 65 official/union rows, 3 high-priority rows, $0.2687877. The current need is verification, not another PA scout.
+- **County employers:** explicitly out of scope. If needed, build a separate active county-government employer universe and join it by county GEOID; never merge county employers into the municipality manifest.
+- **Protected state:** no national coverage file, canonical contract/coverage file, corpus file, claim/evidence file, or ingestion input changed. `build_scout_coverage.py` was not rerun because its inputs/outputs were untouched.
+
+### Validation/audit results
+
+```text
+python scripts/build_next_wave_municipality_manifest.py
+manifest_rows=100
+states=19
+already_scouted=0
+already_in_corpus=12
+multi_county=18
+deterministic rebuild SHA-256: 7ed1147adb1367eb669f496fd18eae520615888271257d20c5e8d681579bd767
+
+python -m py_compile scripts/build_scout_coverage.py
+OK
+
+python scripts/validate.py
+VALIDATION PASSED — contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19
+exact-cycle: 10 | overlap-cycle: 18 | exploratory adjacent matches: 2
+safety units unmatched: 6
+```
+
+### Recommended next run
+
+1. Extract only `NWMS-2026-07-16-01` (ranks 1-25) into the scout runner's input shape and run a dry-run; inspect all municipality IDs, government types, and prompts.
+2. If a live call is later authorized, use the established one-request-at-a-time/minimal-prompt configuration and one bounded retry pass. Keep all results at scout stage.
+3. Verify the strongest official/union police + fire + ordinary non-safety routes for ranks 1-10 before releasing batch 02. A legitimate no-CBA or non-bargaining pathway should be documented, not converted into a false negative or a verified source.
+4. Rebuild the manifest if the corpus, verified-source ledger, legal-regime audit, scout coverage, or Census government universe changes materially.
 
 ## 2026-07-16T14:50:00-04:00 - Replaced the 65-row municipality placeholder with the authoritative 2025 Census government-employer universe; added a full municipality-county crosswalk and rebuilt national scout accounting; no scout/model calls, verification, ingestion, codification, push, or remote work
 

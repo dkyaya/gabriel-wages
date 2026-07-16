@@ -6,6 +6,54 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-16 15:03 EDT (Built a bounded 100-municipality claim-driven next-wave scout manifest; no scout/model calls, verification, ingestion, codification, PA re-scout, push, or remote work) - 19 states/DC, four 25-row batches, 0 already scouted, 12 in corpus for named repair/repeat needs, 18 multi-county with full relationship context
+
+**Did**
+- Started at local commit `4c2db6c24ce193f4f1b3f33d4265e5016aca013e`. Every substantive source file present in `tmp/national_municipality_universe_crosswalk_2026-07-16_relay_4c2db6c.zip` matched the repository byte-for-byte. The relay omitted `AGENTS.md` and the older claim/source files named by the task, so read those unchanged repository copies. Left unrelated untracked `.claude/` material untouched and did not inspect/configure a remote.
+- Added `scripts/build_next_wave_municipality_manifest.py`, a deterministic selector/validator over the authoritative 35,589-row municipality universe and 36,816-row full county crosswalk.
+- Built `next_wave_municipality_scout_manifest_2026-07-16.csv`: **100** unique governments, **19** states/DC, four 25-row batches, 94 municipal + 6 township governments, 18 multi-county municipalities, 0 already scouted, 0 scout-positive, and 12 already in the corpus for a specific comparison-repair or repeat-cycle purpose.
+- Added the methodology note documenting the claim-first ranking, state/regime hypotheses, population tie-breaks, PA carry-forward, county-employer exclusion, rebuild gates, and sequential verification rule.
+- Did not rerun `build_scout_coverage.py` because the national universe, crosswalk, and coverage outputs were unchanged.
+
+**Decisions and why**
+- Chose 100 rows because it covers the named claim gaps and needed institutional/geographic contrasts while dividing into four already-precedented 25-row execution batches. Each batch must be verified before releasing the next.
+- Ranked 10 matched-comparison repairs first, then 3 repeat-cycle anchors, 20 explicit national source targets, 29 institutional-regime contrasts, 35 within-state replications, and 3 administrative anchors. Population is a tie-breaker/review-burden signal, not the sampling frame.
+- Included no PA row: PA's 25 municipalities are already scouted and the binding need is verification of the existing unverified lead backlog. PA carry-forward stays exactly 25 scouted/23 positive/75 candidates.
+- Kept ordinary county governments out of scope; a future county-employer universe should remain a separate employer frame joined by county GEOID.
+
+**Surprises/breakage**
+- No build or validation breakage. Exact government-type matching was necessary for same-name municipal/township pairs in IL, NY, WI, and MN; the manifest explicitly selects the intended municipal or township government and preserves the Census ID.
+- The current state-city map still contains older pre-codify language for Philadelphia/Trenton, while the newer handoff documents their later codification. The manifest follows the newer handoff and does not schedule redundant scouting for them.
+- Eighteen selected municipalities are multi-county; their 52 relationship segments are preserved rather than collapsed to the Government Units primary/headquarters county.
+
+**Validation/audit results**
+```text
+python scripts/build_next_wave_municipality_manifest.py
+manifest_rows=100 | states=19 | already_scouted=0 | already_in_corpus=12 | multi_county=18
+deterministic rebuild SHA-256: 7ed1147adb1367eb669f496fd18eae520615888271257d20c5e8d681579bd767
+
+python -m py_compile scripts/build_scout_coverage.py
+OK
+
+python scripts/validate.py
+VALIDATION PASSED — contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19
+exact-cycle: 10 | overlap-cycle: 18 | exploratory adjacent matches: 2
+safety units unmatched: 6
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units.
+
+**Next steps**
+1. Extract `NWMS-2026-07-16-01` (ranks 1-25), run the scout runner's dry-run only, and review all IDs/prompts before seeking authorization for any live scout.
+2. If a live scout is later authorized, keep every return unverified and verify ranks 1-10's safety/non-safety routes before releasing batch 02.
+3. Build a separate county-employer universe only if county public-safety employers become a defined analytical need; do not append counties to this manifest.
+
 ## 2026-07-16 14:50 EDT (Built authoritative national municipality-employer universe and full county-equivalent crosswalk; rebuilt national scout coverage; no scout/model calls, verification, ingestion, codification, push, or remote work) - 35,589 active municipal/township governments, 36,816 county relationships, 1,106 multi-county municipalities; PA 25/23 carry-forward exact
 
 **Did**
