@@ -238,6 +238,7 @@ STATE_ABBR_TO_FIPS = {
     "WI": "55",
     "WY": "56",
 }
+STATE_FIPS_TO_ABBR = {fips: state for state, fips in STATE_ABBR_TO_FIPS.items()}
 
 XLSX_NS = {"m": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"}
 
@@ -416,10 +417,14 @@ def load_government_units() -> list[dict[str, str]]:
     rows = [
         row
         for row in records
-        if row["STATE"] in STATE_ABBR_TO_FIPS
+        # STATE is the contact mailing-address state and can differ from the
+        # government's jurisdiction. FIPS_STATE is the jurisdiction field.
+        if row["FIPS_STATE"] in STATE_FIPS_TO_ABBR
         and row["UNIT_TYPE"] in {"2 - MUNICIPAL", "3 - TOWNSHIP"}
         and row["ACTIVE"] == "Y"
     ]
+    for row in rows:
+        row["JURISDICTION_STATE"] = STATE_FIPS_TO_ABBR[row["FIPS_STATE"]]
     ids = [row["CENSUS_ID_PID6"] for row in rows]
     if len(ids) != len(set(ids)):
         raise ValueError("Government Units source contains duplicate Census government IDs in scope")
@@ -618,7 +623,9 @@ def build_municipality_rows_and_crosswalk(
             "geography_type": geography_type,
         }
         provisional.append(record)
-        source_keys[(government["STATE"], normalize_municipality_lookup(municipality))].append(record)
+        source_keys[
+            (government["JURISDICTION_STATE"], normalize_municipality_lookup(municipality))
+        ].append(record)
 
     project_by_census_id: dict[str, dict] = {}
     unresolved_project_keys: dict[tuple[str, str], int] = {}
@@ -648,7 +655,7 @@ def build_municipality_rows_and_crosswalk(
     crosswalk_rows: list[dict] = []
     for item in provisional:
         government = item["government"]
-        state = government["STATE"]
+        state = government["JURISDICTION_STATE"]
         source_key = (state, normalize_municipality_lookup(item["municipality"]))
         project = project_by_census_id.get(government["CENSUS_ID_PID6"])
         if project:
@@ -788,6 +795,16 @@ def build_municipality_rows_and_crosswalk(
         raise ValueError(f"Scouted municipalities missing from national universe: {unmatched_scout_ids}")
     if len(universe_ids) != len(universe_rows):
         raise ValueError("Municipality IDs are not unique")
+    inconsistent_states = [
+        row["municipality_id"]
+        for row in universe_rows
+        if STATE_ABBR_TO_FIPS[row["state"]] != row["state_fips"]
+    ]
+    if inconsistent_states:
+        raise ValueError(
+            "Municipality jurisdiction state does not match state FIPS: "
+            f"{inconsistent_states}"
+        )
     crosswalk_keys = [(row["municipality_id"], row["county_geoid"]) for row in crosswalk_rows]
     if len(crosswalk_keys) != len(set(crosswalk_keys)):
         raise ValueError("Municipality-county crosswalk contains duplicate relationships")

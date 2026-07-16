@@ -14,6 +14,8 @@ The municipality universe uses the U.S. Census Bureau **2025 Government Units Li
 
 The listing is a snapshot of the Census Bureau's Governments Master Address File (GMAF), retrieved August 28, 2025, and covers independent government units active as of the fiscal year ending June 30, 2025. The General Purpose tab contains county, municipal, and township governments. It is a government/employer inventory, not simply a list of named population places.
 
+Jurisdiction state is derived from `FIPS_STATE`, not the workbook's `STATE` field. The latter belongs to the government contact's mailing address and can be out of state. A July 16, 2026 reconciliation found 38 active municipal/township governments where those fields differ, including Auburn Township in Susquehanna County, Pennsylvania, whose contact mailing address is in Oregon. The builder now enforces agreement between each output `state` and `state_fips` so mailing geography cannot alter the employer universe by state.
+
 The source has 38,704 general-purpose rows: 3,031 county, 19,489 municipal, and 16,184 township governments. The `ACTIVE` field distinguishes functionally active (`Y`) from dormant (`N`) units. Dormant units remain legally extant in Census inventory but have no activity, revenue, or current officers.
 
 ## Explicit scope decision for labor-contract scouting
@@ -131,7 +133,7 @@ It then rebuilds:
 - `national_scout_coverage_state.csv`
 - `national_scout_coverage_county.csv`
 
-The builder parse-validates every output, requires all 65 prior project-known municipalities to match exactly one appropriate Census government (preferring the unique municipal row when a same-name township also exists), requires every scout municipality to remain in the universe, and reconciles scout metrics to the existing state scout-coverage file. These gates preserve the PA carry-forward rather than recomputing it under new semantics.
+The builder parse-validates every output, requires jurisdiction state to agree with `state_fips`, requires all 65 prior project-known municipalities to match exactly one appropriate Census government (preferring the unique municipal row when a same-name township also exists), requires every scout municipality to remain in the universe, and reconciles scout metrics to the existing state scout-coverage file. These gates preserve the PA scout-result carry-forward rather than recomputing it under new semantics.
 
 ## Known limitations
 

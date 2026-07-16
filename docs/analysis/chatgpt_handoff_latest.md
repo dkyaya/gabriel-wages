@@ -2,9 +2,77 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-16T15:03:30-04:00`
+Last updated: `2026-07-16T15:58:25-04:00`
 
 ---
+
+## 2026-07-16T15:58:25-04:00 - Built complete PA municipality scout planning frame, corrected jurisdiction-state accounting, and compared the PA path with national batch 01; no live scout/model call, verification, ingestion, codification, push, or remote work
+
+**Commit target:** `Build Pennsylvania full-state municipality scout plan`
+
+### Current State After This Entry
+
+- **Relay/repository check:** starting commit `76ff94a043189b4dff11212724eeac7d6184ae57`. Every substantive file carried by `tmp/next_wave_municipality_scout_manifest_2026-07-16_relay_76ff94a.zip` matched the repository byte-for-byte. The relay omitted `AGENTS.md`, the national universe/crosswalk/coverage files, and the national coverage builder requested for this task, so the unchanged repository copies supplied those inputs. Existing untracked `.claude/` material was left untouched. No remote was inspected or modified.
+- **Runner contract:** `scripts/gabriel_state_source_scout.py` requires `municipality_id`, `municipality`, and `state`; ignores extra planning columns; filters one `--state`; preserves row order; defaults to dry-run; and hard-caps a live invocation at 25 prompts. The manifest therefore has both 100-row planning batches and <=25-row runner shards.
+- **PA universe correction:** Government Units `STATE` is a contact mailing-address field, while `FIPS_STATE` is jurisdiction. The old builder assigned 38 active municipal/township governments nationally by mailing state. Auburn Township (Census government ID `191397`) was consequently listed under OR despite `FIPS_STATE=42`, `FIPS_COUNTY=115`, and a Susquehanna County PA crosswalk. The builder now derives state from `FIPS_STATE` and validates state/state-FIPS consistency. The national total remains **35,589**; PA changes from 2,556 to **2,557**. This is the documented clear source evidence for correcting relay-carried accounting.
+- **PA manifest:** `docs/analysis/pa_full_state_municipality_scout_manifest_2026-07-16.csv` contains every **2,557** corrected PA employer: 1,014 municipal + 1,543 township; 25 already scouted; 23 scout-positive; 2,532 unscouted; 12 multi-county; 2,569 county relationships; 1 in the canonical corpus and city coverage (Philadelphia). IDs and authoritative fields are copied from the national universe.
+- **Batching:** the 2,532 unscouted rows form **26** planning batches (25x100 + 1x32) and **102** runner shards (101x25 + 1x7). All 25 previously scouted municipalities remain audit rows but have no live-ready batch or runner shard. No retest is justified.
+- **Priority tiers:** 222 tier-1 high-plausibility; 337 tier-2 medium-high; 699 tier-3 systematic midsize/small; 1,274 tier-4 small/low-information; 25 carry-forward. Scores use population, government form, recorded government website, prior scout/positive/likely-triad county context, and multi-county status as transparent proxies. County-cycling within tiers gives PA batch 01 28 scheduling counties; the first 25 ranks cover 25 different scheduling counties.
+- **PA batch 01:** 100 unscouted tier-1 rows; 63 township + 37 municipal; 99 have a Government Units website; population 5,050-84,893 (median 16,514.5); 0 already in corpus; 0 already scouted.
+- **Top 25:** Lower Paxton, Millcreek, Upper Darby, Lower Merion, Penn Hills, York Township, Nanticoke, Manheim Township, Lower Macungie, Spring Township, Bethlehem Township, Dunmore, Waynesboro, Bensalem, Hampden, Logan, Richland, Loyalsock, Ferguson, North Lebanon, Hempfield, Cranberry, Tredyffrin, Hermitage, and Washington. These occupy 25 distinct scheduling counties.
+- **National comparison:** national batch 01 is 25 municipalities across MA 8, IL 5, NY 5, TX 3, NJ 3, and CA 1; it contains 10 matched-comparison repairs, 3 repeat-cycle anchors, 12 named targets, 12 corpus municipalities, and 7 multi-county governments. The state-filtered runner means it must be split into six inputs.
+- **Recommendation:** execute **national batch 01 first**, not PA batch 01 or a hybrid, starting with its Texas slice (San Antonio, Austin, Houston) after a dry-run. National batch 01 directly addresses claim/design gaps; PA already has 75 unverified candidate rows. A hybrid splits verification attention without reducing the number of state-specific invocations.
+- **Status discipline:** `already_scouted`, `scout_positive_status`, corpus/coverage presence, verification, ingestion, and codification remain distinct. No scout result was promoted. `data/contracts.csv`, `data/city_coverage.csv`, and `corpus/` were not edited.
+
+### Validation/audit results
+
+```text
+python scripts/build_scout_coverage.py
+county_equivalents=3144
+municipalities_in_universe=35589
+municipality_county_relationships=36816
+multi_county_municipalities=1106
+project_known_municipalities_preserved=65
+scouted_municipalities=25
+scout_positive_municipalities=23
+
+python scripts/build_pa_full_state_municipality_manifest.py
+pa_universe=2557
+already_scouted=25
+unscouted=2532
+planning_batches=26 (25x100 + 1x32)
+runner_shards=102 (101x25 + 1x7)
+pa_batch_01=100
+pa_batch_01_counties=28
+national_manifest_rows=100
+national_manifest_pa_rows=0
+deterministic SHA-256: 2b15a57d162079610ab299f62ed0ff553130518d42d4fa7dc7e98888729df642
+
+python scripts/build_next_wave_municipality_manifest.py
+manifest_rows=100 | states=19 | already_scouted=0 | already_in_corpus=12 | multi_county=18
+deterministic SHA-256 unchanged: 7ed1147adb1367eb669f496fd18eae520615888271257d20c5e8d681579bd767
+
+python -m py_compile scripts/build_next_wave_municipality_manifest.py scripts/build_scout_coverage.py scripts/build_pa_full_state_municipality_manifest.py
+OK
+
+python scripts/validate.py
+VALIDATION PASSED — contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19
+exact-cycle: 10 | overlap-cycle: 18 | exploratory adjacent matches: 2
+safety units unmatched: 6
+```
+
+### Recommended next run
+
+1. If a live scout is separately authorized, filter national batch 01 to its three-row TX slice, run dry-run, and review identifiers/prompts. Do not pass the unsliced six-state batch to a single-state runner call.
+2. Keep returns at scout stage and verify the strongest official/union police, fire, and ordinary non-safety routes before moving to another slice.
+3. Verify or triage the existing PA 75-row candidate backlog before launching PA runner shard 001. If the PI instead prioritizes a full PA denominator, filter `PA-FULL-2026-07-16-RUN-001` to its own input CSV and dry-run those 25 rows first.
+4. Rebuild both manifests if the national universe, scout coverage, canonical corpus, verified-source ledger, or legal/source environment changes materially.
 
 ## 2026-07-16T15:03:30-04:00 - Built the bounded, auditable 100-municipality next-wave scout manifest from the authoritative national universe; no live scout/model call, verification, ingestion, codification, PA re-scout, push, or remote work
 

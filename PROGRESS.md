@@ -6,6 +6,61 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-16 15:58 EDT (Built complete PA municipality scout planning frame and compared it with the national claim-driven wave; no scout/model calls, verification, ingestion, codification, push, or remote work) - PA 2,557 total, 25 scouted excluded, 2,532 unscouted in 26 planning batches / 102 runner shards
+
+**Did**
+- Started at local commit `76ff94a043189b4dff11212724eeac7d6184ae57`. Every substantive file carried by `tmp/next_wave_municipality_scout_manifest_2026-07-16_relay_76ff94a.zip` matched the repository byte-for-byte; relay-omitted national universe/crosswalk/coverage and runner files were read from the repository. Left unrelated untracked `.claude/` material untouched and did not inspect/configure a remote.
+- Read the current scout runner and its input/coverage methodology. The runner requires `municipality_id`, `municipality`, and `state`, filters one state per invocation, preserves input order, and caps live execution at 25 prompts.
+- Added `scripts/build_pa_full_state_municipality_manifest.py` and built `pa_full_state_municipality_scout_manifest_2026-07-16.csv`: all **2,557** PA municipal/township employers, **25** already-scouted carry-forward rows excluded from default new batches, and **2,532** unscouted rows assigned to 26 planning batches (25x100 + 1x32) and 102 runner shards (101x25 + 1x7).
+- Added the PA plan documenting the transparent proxy score, full crosswalk handling, carry-forward, runner constraints, national comparison, and sequencing recommendation.
+- Reran the national 100-row manifest builder after the jurisdiction correction; its SHA-256 remained exactly `7ed1147adb1367eb669f496fd18eae520615888271257d20c5e8d681579bd767`.
+
+**Decisions and why**
+- Kept all 25 previous PA outcomes in the manifest for auditability but excluded them from live-ready batches. None has a municipality-specific retest justification; verifying the existing 75 unverified candidate rows has higher value.
+- Ranked unscouted governments with explicit population, government-form, Government Units website, prior scout-county, likely-triad-county, and multi-county signals. These are source-discovery/comparability proxies only, not evidence of bargaining units or CBAs. County-cycling within tiers improves geographic diversity.
+- Used 100-row planning batches for state-scale accounting but added 25-row runner shards because the live runner hard cap is 25. Full multi-county context remains in every row; the primary/headquarters county is scheduling only.
+- Recommend **national batch 01 first**, split into six state-specific slices and beginning with Texas (San Antonio, Austin, Houston). It directly repairs named design gaps while PA already has a verification backlog. A hybrid provides no runner or verification-efficiency advantage.
+
+**Surprises/breakage**
+- Found a genuine source-field bug during PA universe/crosswalk reconciliation: Census government ID `191397`, Auburn Township in Susquehanna County PA, was assigned to OR because the builder used the contact mailing-address `STATE` field. Census `FIPS_STATE=42` identifies the jurisdiction. Thirty-eight active municipal/township governments nationally have differing contact and jurisdiction states.
+- Corrected `build_scout_coverage.py` to derive jurisdiction from `FIPS_STATE`, added a state/state-FIPS integrity gate, and rebuilt the national universe, crosswalk, and state coverage. The national total remains **35,589**; PA becomes **2,557** (1,014 municipal + 1,543 township). Scout results remain exactly 25 scouted / 23 positive and all downstream statuses remain separate.
+- PA has 12 multi-county governments and 2,569 municipality-county relationships. Philadelphia is the only PA municipality present in the canonical corpus and city coverage; it is already scouted and excluded.
+
+**Validation/audit results**
+```text
+python scripts/build_scout_coverage.py
+county_equivalents=3144 | municipalities_in_universe=35589
+municipality_county_relationships=36816 | multi_county_municipalities=1106
+project_known_municipalities_preserved=65 | scouted=25 | scout_positive=23
+
+python scripts/build_pa_full_state_municipality_manifest.py
+pa_universe=2557 | already_scouted=25 | unscouted=2532
+planning_batches=26 (25x100 + 1x32) | runner_shards=102 (101x25 + 1x7)
+pa_batch_01=100 | pa_batch_01_counties=28 | national_manifest_pa_rows=0
+deterministic rebuild SHA-256: 2b15a57d162079610ab299f62ed0ff553130518d42d4fa7dc7e98888729df642
+
+python -m py_compile scripts/build_next_wave_municipality_manifest.py scripts/build_scout_coverage.py scripts/build_pa_full_state_municipality_manifest.py
+OK
+
+python scripts/validate.py
+VALIDATION PASSED — contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19
+exact-cycle: 10 | overlap-cycle: 18 | exploratory adjacent matches: 2
+safety units unmatched: 6
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units.
+
+**Next steps**
+1. If a future live scout is separately authorized, extract and dry-run the national batch-01 Texas slice first; do not pass an unsliced multi-state file to the state-filtered runner.
+2. Verify/triage the existing PA 75-row scout-stage backlog before releasing PA runner shard 001. Scout-positive is not verified.
+3. If PA full-state coverage becomes the PI's priority, filter `PA-FULL-2026-07-16-RUN-001` to a standalone input CSV, dry-run it, and review all 25 identifiers/prompts before any live authorization.
+
 ## 2026-07-16 15:03 EDT (Built a bounded 100-municipality claim-driven next-wave scout manifest; no scout/model calls, verification, ingestion, codification, PA re-scout, push, or remote work) - 19 states/DC, four 25-row batches, 0 already scouted, 12 in corpus for named repair/repeat needs, 18 multi-county with full relationship context
 
 **Did**

@@ -135,7 +135,7 @@ The manifest copies three status fields without inference:
 
 No field treats a scout-positive lead as verified, ingested, or codified. The 12 in-corpus rows are present because they have a named design repair or repeat-cycle purpose, not because ingestion implies scouting or verification.
 
-PA carry-forward remains exactly: 2,556 municipality employers; 25 scouted; 23 scout-positive; 20 with police candidates; 16 with fire candidates; 14 with non-safety candidates; 10 likely triads; 75 candidate rows; 65 official-or-union candidate rows; 3 high-priority candidate rows; and $0.2687877 scout cost. No PA municipality appears in this manifest. The PA bottleneck is verification of the existing unverified lead backlog, so another PA scout pass is not justified by the current criteria.
+PA carry-forward is: 2,557 municipality employers after correcting one out-of-state mailing-address assignment; 25 scouted; 23 scout-positive; 20 with police candidates; 16 with fire candidates; 14 with non-safety candidates; 10 likely triads; 75 candidate rows; 65 official-or-union candidate rows; 3 high-priority candidate rows; and $0.2687877 scout cost. The one-row universe correction does not change any scout-result metric. No PA municipality appears in this manifest. The PA bottleneck is verification of the existing unverified lead backlog, so another PA scout pass is not justified by the current criteria.
 
 ## Rebuild and validation procedure
 
@@ -170,4 +170,4 @@ The national coverage builder does not need to run for a manifest-only rebuild b
 
 ## Recommended next execution step
 
-Do not launch all 100 rows. Extract only `wave_id=NWMS-2026-07-16-01` (ranks 1-25) into the scout runner's input shape, run the runner's dry-run mode, and review the 25 prompts and IDs. If a live scout is later authorized, use the established one-request-at-a-time/minimal-prompt configuration with one bounded retry pass. Keep every return at scout stage, then verify the strongest official/union safety plus ordinary non-safety routes—starting with ranks 1-10—before releasing batch 02.
+Do not launch all 100 rows. Extract only `wave_id=NWMS-2026-07-16-01` (ranks 1-25) into the scout runner's input shape. Because `gabriel_state_source_scout.py` filters one `--state` per invocation, split batch 01 into six state-specific inputs and dry-run/review each slice; the three-row Texas slice is the recommended first slice. If a live scout is later authorized, use the established one-request-at-a-time/minimal-prompt configuration with one bounded retry pass. Keep every return at scout stage, then verify the strongest official/union safety plus ordinary non-safety routes—starting with ranks 1-10—before releasing batch 02.

@@ -28,17 +28,19 @@ The scouting universe includes functionally active municipal and township govern
 
 Township governments are included because New England towns and many municipal-type employers elsewhere are classified by Census as township rather than municipal governments. Only Census-classified independent township governments are included; statistical or inactive MCDs are not.
 
+The output state is the government's jurisdiction from `FIPS_STATE`. The workbook's `STATE` field is a contact mailing-address field and is not suitable for jurisdiction assignment. A July 16 reconciliation found 38 active municipal/township governments with out-of-state contact addresses; correcting their state allocation leaves the national total unchanged but moves each unit to its proper state.
+
 ## Counts by state
 
 | State | Municipal governments | Township governments | Total in scope |
 |---|---:|---:|---:|
-| AL | 463 | 1 | 464 |
+| AL | 463 | 0 | 463 |
 | AK | 149 | 0 | 149 |
 | AZ | 91 | 0 | 91 |
-| AR | 500 | 0 | 500 |
+| AR | 501 | 0 | 501 |
 | CA | 483 | 0 | 483 |
 | CO | 271 | 0 | 271 |
-| CT | 30 | 148 | 178 |
+| CT | 30 | 149 | 179 |
 | DE | 57 | 0 | 57 |
 | DC | 1 | 0 | 1 |
 | FL | 411 | 0 | 411 |
@@ -47,41 +49,41 @@ Township governments are included because New England towns and many municipal-t
 | ID | 198 | 0 | 198 |
 | IL | 1,294 | 1,425 | 2,719 |
 | IN | 566 | 1,003 | 1,569 |
-| IA | 940 | 2 | 942 |
-| KS | 623 | 1,209 | 1,832 |
+| IA | 939 | 0 | 939 |
+| KS | 623 | 1,212 | 1,835 |
 | KY | 411 | 0 | 411 |
-| LA | 304 | 0 | 304 |
-| ME | 23 | 458 | 481 |
+| LA | 305 | 0 | 305 |
+| ME | 23 | 459 | 482 |
 | MD | 157 | 0 | 157 |
-| MA | 58 | 294 | 352 |
+| MA | 58 | 293 | 351 |
 | MI | 533 | 1,240 | 1,773 |
-| MN | 856 | 1,777 | 2,633 |
+| MN | 856 | 1,774 | 2,630 |
 | MS | 299 | 0 | 299 |
 | MO | 934 | 283 | 1,217 |
-| MT | 127 | 2 | 129 |
-| NE | 528 | 333 | 861 |
+| MT | 127 | 0 | 127 |
+| NE | 528 | 331 | 859 |
 | NV | 19 | 0 | 19 |
-| NH | 13 | 223 | 236 |
+| NH | 13 | 221 | 234 |
 | NJ | 323 | 241 | 564 |
 | NM | 105 | 0 | 105 |
 | NY | 594 | 929 | 1,523 |
 | NC | 550 | 0 | 550 |
-| ND | 355 | 1,301 | 1,656 |
+| ND | 355 | 1,303 | 1,658 |
 | OH | 925 | 1,308 | 2,233 |
-| OK | 591 | 0 | 591 |
-| OR | 240 | 1 | 241 |
-| PA | 1,014 | 1,542 | 2,556 |
+| OK | 590 | 0 | 590 |
+| OR | 240 | 0 | 240 |
+| PA | 1,014 | 1,543 | 2,557 |
 | RI | 8 | 31 | 39 |
 | SC | 271 | 0 | 271 |
-| SD | 310 | 891 | 1,201 |
+| SD | 310 | 895 | 1,205 |
 | TN | 345 | 0 | 345 |
 | TX | 1,224 | 0 | 1,224 |
 | UT | 255 | 0 | 255 |
-| VT | 39 | 235 | 274 |
+| VT | 39 | 237 | 276 |
 | VA | 227 | 0 | 227 |
-| WA | 281 | 1 | 282 |
+| WA | 281 | 0 | 281 |
 | WV | 230 | 0 | 230 |
-| WI | 608 | 1,240 | 1,848 |
+| WI | 608 | 1,241 | 1,849 |
 | WY | 99 | 0 | 99 |
 | **National** | **19,471** | **16,118** | **35,589** |
 
@@ -128,7 +130,7 @@ Scout output never populates verified, ingested, or codified status. Verificatio
 
 The national state rollup reconciles directly to `gabriel_state_source_scout_state_coverage.csv`. The PA scout results remain:
 
-- municipalities in national universe: **2,556**
+- municipalities in national universe: **2,557**
 - municipalities scouted: **25**
 - scout-positive municipalities: **23**
 - police candidate municipalities: **20**
@@ -151,7 +153,7 @@ The deterministic builder is `scripts/build_scout_coverage.py`. Run:
 python scripts/build_scout_coverage.py
 ```
 
-It rebuilds the county universe/state summary, municipality universe, municipality-county crosswalk, and national state/county scout rollups. It also enforces unique Census government IDs, one crosswalk relationship per municipality-county pair, exact preservation of all 65 earlier project-known municipalities, inclusion of every scouted municipality, and reconciliation to the existing scout state rollup.
+It rebuilds the county universe/state summary, municipality universe, municipality-county crosswalk, and national state/county scout rollups. It also enforces unique Census government IDs, jurisdiction-state agreement with `state_fips`, one crosswalk relationship per municipality-county pair, exact preservation of all 65 earlier project-known municipalities, inclusion of every scouted municipality, and reconciliation to the existing scout state rollup.
 
 ## Known limitations
 
