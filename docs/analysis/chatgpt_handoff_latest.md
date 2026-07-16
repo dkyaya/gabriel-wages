@@ -2,9 +2,57 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-16T16:52:00-04:00`
+Last updated: `2026-07-16T17:17:08-04:00`
 
 ---
+
+## 2026-07-16T17:17:08-04:00 - Completed bounded source verification for all six Texas parsed candidates and 18 Austin trace-only leads; Houston HOPE 2015–2018 is the sole later-ingestion candidate
+
+**Commit target:** `Verify Texas scout candidate sources`
+
+### Current State After This Entry
+
+- **Relay/repository check:** starting commit `48241178f7f2a90d1fb873bc82ec3258e33f35f0`. The incoming relay passed ZIP integrity checks. Every carried project file and the full saved live-run directory matched current copies byte-for-byte; only unchanged repository files were absent from the relay. Existing untracked `.claude/` material was left untouched. No remote was inspected or modified.
+- **Bounded verification scope:** directly opened the exact 6 candidate URLs and no replacement search. The only follow-up click was the attachment exposed by the Houston HOPE agenda candidate; it yielded a signed two-page cover sheet. Downloads, response headers, extracted text, representative PDF renders, and checksums are quarantined under `tmp/source_verification/TX/national_batch01_tx_2026-07-16/` and were not moved into `corpus/`.
+- **Austin trace triage:** the raw Austin response contained 51 URLs. All were screened for relevance; 18 plausible City/union/agreement/budget/compensation links were directly opened and ledgered as `source_stage=trace_only`. Obvious Reddit, video, generic news, case-law, and unrelated labor pages were not elevated. Austin still has 0 parsed candidates.
+- **Verification ledger:** `docs/analysis/national_batch01_tx_source_verification_2026-07-16.csv` contains 24 parse-checked rows and all required controlled fields. The 6 parsed candidates resolve to 2 `verified_candidate`, 1 `partially_verified_candidate`, 2 `context_only_verified`, and 1 `insufficient_evidence`. All 18 Austin rows remain `trace_only_not_candidate` regardless of reachability.
+- **Houston HOPE 2015–2018:** official City-hosted complete 115-page meet-and-confer agreement; municipal bargaining unit excludes classified police/fire; Article 10 contains FY2016–FY2018 wage adjustments and minimum/shift rates; Article 19 ends the term June 30, 2018. It is the only `later_ingest_candidate`, but is not ingested or canonical and still needs occupation-row mapping plus a matched-cycle check.
+- **Houston police 2015–2018:** complete 105-page HPOU-City agreement with term and pay tables verified from the document. It remains `partially_verified_candidate`/`needs_manual_review` because the `citypuc` S3 host owner and chain of custody are unknown. Prefer an official City or HPOU copy before ingestion.
+- **Houston later-cycle/context:** the official 2021 HOPE agenda item and signed cover sheet verify the June 30, 2024 endpoint, three 3% increases, and $14.25 minimum wage, but not the full agreement. The official firefighter document is a three-page City Attorney settlement-summary memo covering 2017-2024 backpay and arbitration/court risk; it is not a fact-finding report, award, or executed settlement. Both remain `context_only_verified` and `context_only_do_not_ingest`.
+- **San Antonio:** the City-hosted PDF is an authentic 89-page IAFF Local 624 fire CBA for October 1, 2009-September 30, 2014 with wage provisions. It corrects the scout's `non_safety` label to `fire` and fails the civilian-comparator purpose. The Municode URL returned only the generic JavaScript shell, so the claimed ordinance text/scope/date remain `insufficient_evidence`. No civilian comparator was verified.
+- **Austin:** official 2026 draft/adopted resolutions verify a post-window AFSCME Local 1624 consultation process for civilian/non-sworn City employees. The City Compensation Division page identifies a Municipal pay-scale category distinct from EMS/fire/police and a living wage effective October 2025, but the returned HTML exposes no in-window municipal scale. No usable 2014-2024 ordinary non-EMS lead was verified. Two trace pages are clear wrong employers: Portland Local 3336 and Eastern Michigan Local 3866.
+- **Stage discipline:** no GABRIEL/model/API/codify/ingest call was made. No edit to `data/contracts.csv`, `data/city_coverage.csv`, `corpus/`, scout coverage, claim files, or codified outputs. Candidate verification did not alter canonical verified/ingested/codified/claim-stage accounting.
+
+### Validation/audit results
+
+```text
+verification ledger parse-back
+24 rows = 6 parsed candidates + 18 Austin trace-only rows
+parsed statuses: 2 verified | 1 partially verified | 2 context-only | 1 insufficient evidence
+ingestion recommendations: 1 later-ingest | 3 manual review | 6 do not ingest | 10 context-only do not ingest | 4 unreachable do not ingest
+wrong-employer flags: 2, both Austin trace-only
+
+python -m py_compile scripts/gabriel_state_source_scout.py
+OK
+
+python scripts/validate.py
+VALIDATION PASSED — contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed
+
+python ingest/audit_coverage.py
+contracts: 64 | cities: 19 | healthy matched pairs: 28
+exact-cycle: 10 | overlap-cycle: 18 | exploratory adjacent matches: 2
+safety units unmatched: 6
+```
+
+### Recommended next run
+
+1. Do not ingest directly from the verification ledger. First run a pre-ingestion review for Houston HOPE 2015–2018 that maps heterogeneous municipal classifications to occupation-specific rows, establishes the exact start date, and confirms overlap with a verified Houston safety cycle.
+2. Confirm the Houston police agreement through an official City/HPOU copy. Obtain the actual 2021 HOPE agreement and executed firefighter settlement or qualifying award before either can cross the causal-corpus gate.
+3. Tighten the scout output contract: a `non_safety` row must be an ordinary municipal unit or authoritative civilian pay plan; safety CBAs and agenda/memo context cannot substitute. Prefer official full-document URLs and permit an explicit no-candidate return.
+4. After a dry-run review of those safeguards, consider only another small national state slice with immediate verification capacity. Do not infer civilian non-availability from San Antonio's shell or Austin's empty parsed result.
 
 ## 2026-07-16T16:52:00-04:00 - Completed the explicitly authorized three-city Texas live scout; 3/3 responses parsed, 6 candidates remain quarantined and unverified, and no retry or downstream promotion occurred
 

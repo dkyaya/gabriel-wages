@@ -6,6 +6,55 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-16 17:17 EDT (Verified the bounded Texas live-scout candidates without new scouting, ingestion, codification, canonical-data changes, push, or remote work) - Houston HOPE 2015–2018 is the one later-ingestion candidate; Austin and San Antonio still lack usable ordinary comparators
+
+**Did**
+- Started at local commit `48241178f7f2a90d1fb873bc82ec3258e33f35f0`. `tmp/national_batch01_tx_live_scout_2026-07-16_relay_4824117.zip` passed integrity checks; every carried project file and live artifact matched the current copies byte-for-byte. The relay omitted only unchanged repository files. Left unrelated `.claude/` material untouched and did not inspect/configure a remote.
+- Opened all 6 parsed candidate URLs, followed only the Houston HOPE page's exposed cover-sheet attachment, and quarantined downloads/headers/text/renders under `tmp/source_verification/TX/national_batch01_tx_2026-07-16/`. Screened all 51 Austin raw trace URLs and directly reviewed the 18 plausibly relevant City/union/agreement/compensation links; no open-ended source search occurred.
+- Added a 24-row controlled verification ledger: 6 parsed candidates plus 18 Austin trace-only rows. Parsed outcomes are 2 `verified_candidate`, 1 `partially_verified_candidate`, 2 `context_only_verified`, and 1 `insufficient_evidence`; Austin rows remain `trace_only_not_candidate`. Only Houston HOPE 2015–2018 is `later_ingest_candidate`.
+
+**Decisions and why**
+- Houston HOPE 2015–2018 is a complete official City-hosted municipal-employee agreement with FY2016–FY2018 wage material and a June 30, 2018 endpoint. It advances only to pre-ingestion review; broad classifications still must be mapped to occupation-specific rows and matched safety cycles.
+- Houston police 2015–2018 is a strong full agreement but remains partially verified because the `citypuc` S3 repository owner is not established. The 2021–2024 HOPE agenda cover supplies official term/wage context without the underlying contract. The firefighter item is an official settlement-summary memo, not the scout-labeled fact-finding document.
+- San Antonio's City-hosted 2009–2014 Fire CBA is genuine but wrong-unit leakage under the scout's `non_safety` label. Municode returned only a JavaScript shell, so its claimed civilian bargaining prohibition remains unverified. No civilian comparator was established.
+- Austin's strongest trace evidence is a 2026 AFSCME Local 1624 civilian consultation policy and a current compensation index. Neither supplies an in-window ordinary non-EMS agreement/pay schedule. Two trace pages were clear wrong-employer leakage (Portland Local 3336 and Eastern Michigan Local 3866); no parsed candidate substituted a wrong employer.
+- Direct source verification remains distinct from ingestion, canonical coverage, codification, and claim evidence. No candidate changed those later-stage statuses.
+
+**Surprises/breakage**
+- All 6 candidate URLs returned HTTP 200, but nominal reachability concealed two material defects: Municode supplied no node text and Houston's HOPE agenda attachment supplied only a signed cover sheet.
+- Five Austin trace URLs were unavailable/blocked (four 404; one 403). The trace nevertheless exposed a credible post-window civilian consultation pathway, showing that Austin's empty parsed result was not proof of institutional absence.
+- No repository test or validation broke.
+
+**Validation/audit results**
+```text
+verification ledger parse-back
+24 rows = 6 parsed candidates + 18 Austin trace-only rows
+parsed statuses: 2 verified | 1 partially verified | 2 context-only | 1 insufficient evidence
+wrong-employer flags: 0 parsed | 2 Austin trace-only
+later-ingest candidates: 1 (Houston HOPE 2015–2018)
+
+python -m py_compile scripts/gabriel_state_source_scout.py
+OK
+
+python scripts/validate.py
+VALIDATION PASSED — contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19
+exact-cycle: 10 | overlap-cycle: 18 | exploratory adjacent matches: 2
+safety units unmatched: 6
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units.
+
+**Next steps**
+1. Run a separate pre-ingestion review of Houston HOPE 2015–2018: map covered classifications without collapsing occupations, establish the precise start date, and verify overlap with Houston safety cycles.
+2. Confirm an official City/HPOU copy of the 2015–2018 police agreement; obtain the full 2021 HOPE agreement and executed firefighter settlement/qualifying award before considering either for ingestion.
+3. Tighten the scout output rules against wrong-unit context and context-only substitutes, rerun a dry preview, and release only another small state slice if verification capacity is reserved. Do not treat Austin's trace context as a completed comparator.
+
 ## 2026-07-16 16:52 EDT (Ran the explicitly authorized three-city Texas live scout; 3/3 parseable, 6 unverified candidates, no retry, verification, ingestion, codification, push, or remote work) - Houston produced the only police/fire/non-safety set; San Antonio produced context only; Austin produced no candidates
 
 **Did**
