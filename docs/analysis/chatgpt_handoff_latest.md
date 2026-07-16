@@ -2,9 +2,62 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-16T16:32:00-04:00`
+Last updated: `2026-07-16T16:52:00-04:00`
 
 ---
+
+## 2026-07-16T16:52:00-04:00 - Completed the explicitly authorized three-city Texas live scout; 3/3 responses parsed, 6 candidates remain quarantined and unverified, and no retry or downstream promotion occurred
+
+**Commit target:** `Record Texas live scout candidates`
+
+### Current State After This Entry
+
+- **Relay/repository check:** starting commit `31189a5df9f0a8493f612de9c5a9d0191ac70a2f`. Every carried project file and both row-aware dry-run artifacts in `tmp/national_batch01_tx_rowaware_scout_dry_run_2026-07-16_relay_31189a5.zip` matched current copies byte-for-byte. The relay omitted unchanged `AGENTS.md` and `national_batch01_tx_scout_input_2026-07-16.csv`; repository copies supplied them. Existing `.claude/` material was left untouched. No remote was inspected or modified.
+- **Authorized scope/preflight:** the full contextual input contains exactly San Antonio (`tx_san_antonio`, Census `175988`, `CITY OF SAN ANTONIO`), Austin (`tx_austin`, `176394`, `CITY OF AUSTIN`), and Houston (`tx_houston`, `176169`, `CITY OF HOUSTON`), in order. All context columns and city-specific prompt safeguards were populated. The output directory did not exist before the run. Credential presence and GABRIEL import passed without exposing the key.
+- **Exact live run:** used `MPLCONFIGDIR=/tmp/gabriel-wages-mpl-cache` only to give Matplotlib a writable import cache, then the authorized script arguments: `--state TX`, full contextual input, fixed live output directory, `--prompt-mode minimal`, `--max-prompts 3`, `--n-parallels 1`, `--sleep-between-prompts 15`, `--search-context-size low`, and `--live`. No fourth prompt or other state/file was run.
+- **Run result:** run ID `tx_2026-07-16_164549`; 3 municipalities, 3 responses, 3 parseable, 0 failed parses, 6 candidates. `live_attempted=true`, `live_succeeded=true`, `live_failure_reason=null`. Since no row failed, no retry was run.
+- **Cost/usage:** total `$0.03468535`; input 95,158 tokens; reasoning 5,521; output 7,002; total recorded 107,681; average reported successful-call time 28.7101 seconds. These are GABRIEL-reported accounting fields, not an independently reconciled invoice.
+- **Candidate distribution:** San Antonio 2 `non_safety` context rows; Austin 0; Houston 1 police, 1 fire, 2 non-safety. All runner rows remain `verification_status=unverified` and `promotion_status=raw_model_output`; every task summary row is `scout_stage_status=unverified_scout_candidate`.
+- **San Antonio:** no ordinary civilian agreement/pay-plan candidate. The first lead is a Municode-hosted municipal-code page supporting a possible institutional non-availability pathway; the broad scope claim and owner label need verification. The second is a fire collective-bargaining document labeled `non_safety`; it is wrong-unit contextual leakage and cannot count as a comparator.
+- **Austin:** response parsed but `candidates=[]`. Raw search traces include City compensation and AFSCME pages, but none was selected as a candidate. This is not a retry-eligible parser failure and is not evidence that a comparator does not exist.
+- **Houston:** strongest comparison lead is the model-reported City-hosted 2015–2018 HOPE ordinary-municipal meet-and-confer agreement. Strongest mechanism lead is the firefighter settlement/impasse document; its model-assigned `factfinding` type is suspect. The police 2015–2018 agreement is third-party-hosted, and the later HOPE row is only an agenda cover sheet until its attachment is located.
+- **Leakage:** zero parsed wrong-employer substitutions. Raw web-search traces contain irrelevant, third-party, Reddit, and wrong-jurisdiction pages; these remain only in raw artifacts. Classification cautions are preserved in verification notes rather than silently corrected at scout stage.
+- **Artifacts:** complete live output is `tmp/gabriel_state_source_scout/TX/national_batch01_tx_live_2026-07-16/`, including prompt preview, metadata, raw outputs, GABRIEL save files, parsed candidates, empty failure ledger, cost summaries, and console log. The runner wrote `gabriel_state_source_scout_candidates_tx_2026-07-16_164549.csv` and appended the run to `gabriel_state_source_scout_cost_log.csv`. The task-level review and quarantined summary are `national_batch01_tx_live_scout_review_2026-07-16.md` and `national_batch01_tx_live_scout_candidates_2026-07-16.csv`.
+- **Protected state:** no source URL was independently opened or verified after the scout; nothing was downloaded or ingested. No change to `data/contracts.csv`, `data/city_coverage.csv`, `corpus/`, national/PA manifests, national scout coverage, claim/evidence files, or codified outputs. Candidate presence did not promote scout-positive, verified, ingested, or codified accounting.
+
+### Validation/audit results
+
+```text
+live run
+3 municipalities | 3 responses | 3 parseable | 0 failures | 6 candidates
+San Antonio: 2 non_safety-context rows | Austin: 0 | Houston: 1 police, 1 fire, 2 non_safety
+cost=$0.03468535 | input=95,158 | reasoning=5,521 | output=7,002 tokens
+
+quarantined candidate CSV
+PASS — exact header width, 6 rows, one-to-one mapping to runner candidates
+PASS — every row is unverified_scout_candidate with verification priority/notes
+
+python -m py_compile scripts/gabriel_state_source_scout.py
+OK
+
+python scripts/validate.py
+VALIDATION PASSED — contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed
+
+python ingest/audit_coverage.py
+contracts: 64 | cities: 19 | healthy matched pairs: 28
+exact-cycle: 10 | overlap-cycle: 18 | exploratory adjacent matches: 2
+safety units unmatched: 6
+```
+
+### Recommended next run
+
+1. Do not launch another scout yet. Perform a bounded verification pass on Houston HOPE 2015–2018 and the firefighter settlement first, then the police third-party PDF and later HOPE agreement attachment. Verification must establish exact employer, source owner, document identity/completeness, parties/unit, dates, and matched-cycle value.
+2. Check San Antonio's ordinance scope and authoritative civilian compensation/personnel pathways; keep the returned fire document outside the non-safety count.
+3. Manually inspect Austin's strongest City/AFSCME raw traces before deciding whether to request separate authorization for an Austin-only revised scout prompt.
+4. Do not ingest or codify during verification. Update a verification ledger only after direct source checks; preserve the current scout-stage files unchanged for auditability.
 
 ## 2026-07-16T16:32:00-04:00 - Made the minimal state-source-scout prompt row-aware and passed the exact Texas dry-run review; no live scout/model call, verification, ingestion, codification, push, or remote work
 

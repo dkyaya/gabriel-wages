@@ -6,6 +6,58 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-16 16:52 EDT (Ran the explicitly authorized three-city Texas live scout; 3/3 parseable, 6 unverified candidates, no retry, verification, ingestion, codification, push, or remote work) - Houston produced the only police/fire/non-safety set; San Antonio produced context only; Austin produced no candidates
+
+**Did**
+- Started at local commit `31189a5df9f0a8493f612de9c5a9d0191ac70a2f`. Every project file and dry-run artifact carried by `tmp/national_batch01_tx_rowaware_scout_dry_run_2026-07-16_relay_31189a5.zip` matched the repository/current temporary copy byte-for-byte. The relay omitted unchanged `AGENTS.md` and the full Texas input, so read the repository copies. Left unrelated untracked `.claude/` material untouched and did not inspect/configure a remote.
+- Preflighted the full contextual input and runner: exactly San Antonio (`tx_san_antonio`, Census `175988`), Austin (`tx_austin`, `176394`), and Houston (`tx_houston`, `176169`), in that order; all row-specific safeguards present; fresh output directory; credential available without display; GABRIEL import successful.
+- Ran the one authorized live command with `state=TX`, `max-prompts=3`, `prompt-mode=minimal`, `n-parallels=1`, `sleep-between-prompts=15`, and low search context. It returned 3 responses, all parseable, with 6 candidate rows and 0 failures. No retry was run.
+- Preserved prompt, metadata, raw GABRIEL outputs, parsed candidates, empty failure ledger, cost/token summaries, and console log. Added a plain-English review plus a separate six-row quarantined summary whose every row is `unverified_scout_candidate`. The summary parse-back and one-to-one source-row reconciliation passed.
+
+**Decisions and why**
+- No parsed candidate used a county/school/transit/hospital/regional/special/private employer. Raw search traces contained irrelevant and wrong-jurisdiction pages, but those were not promoted into candidate JSON.
+- San Antonio's two rows are context, not a civilian comparator: a municipal-code institutional-nonavailability lead and a fire document misclassified under `non_safety`. The latter is explicitly low-priority wrong-unit leakage.
+- Austin's empty candidate list is parseable, not a failed row. The failed-row-only retry authority did not apply, despite potentially relevant City/AFSCME pages in the raw search trace.
+- Houston's City-hosted 2015–2018 HOPE agreement is the strongest comparison lead; the firefighter settlement is the strongest mechanism lead; the third-party police PDF and later HOPE cover sheet need provenance/document checks. All remain unverified.
+- Candidate existence did not update verified, ingested, codified, canonical coverage, or national scout-positive accounting. Only the runner's timestamped scout-stage candidate output and cost log were written.
+
+**Surprises/breakage**
+- No parser, timeout, or API failure. Total cost was `$0.03468535`; recorded tokens were 95,158 input, 5,521 reasoning, and 7,002 output.
+- The raw search engine wandered widely, but the structured output filtered wrong-employer substitutions. Remaining classification cautions are Municode labeled `city` despite third-party hosting, a San Antonio fire source labeled `non_safety`, and a Houston settlement memo labeled `factfinding`.
+
+**Validation/audit results**
+```text
+live run
+3 municipalities | 3 responses | 3 parseable | 0 failures | 6 candidates
+San Antonio: 2 non_safety-context rows | Austin: 0 | Houston: 1 police, 1 fire, 2 non_safety
+cost=$0.03468535 | input=95,158 | reasoning=5,521 | output=7,002 tokens
+
+quarantined candidate CSV
+PASS — exact header width, 6 rows, one-to-one mapping to runner candidates
+PASS — every row is unverified_scout_candidate with verification priority/notes
+
+python -m py_compile scripts/gabriel_state_source_scout.py
+OK
+
+python scripts/validate.py
+VALIDATION PASSED — contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19
+exact-cycle: 10 | overlap-cycle: 18 | exploratory adjacent matches: 2
+safety units unmatched: 6
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units.
+
+**Next steps**
+1. Verify, without ingestion, the Houston HOPE 2015–2018 agreement and firefighter settlement first; check exact employer/source owner/document/date/unit and matched-cycle value. Then assess the police PDF and later HOPE attachment.
+2. Test San Antonio's ordinance interpretation and search authoritative civilian pay-plan/personnel pathways; never count the returned fire source as non-safety.
+3. Manually triage Austin's strongest City/AFSCME raw traces. Any narrower Austin re-scout requires separate authorization; the current empty response is not evidence of non-existence.
+
 ## 2026-07-16 16:32 EDT (Made the minimal state-source-scout prompt row-aware and re-dry-ran the exact Texas slice; no live scout/model call, verification, ingestion, codification, push, or remote work) - 3/3 prompts pass exact-employer, unit-target, exclusion, schema, and status checks
 
 **Did**
