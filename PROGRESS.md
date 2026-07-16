@@ -6,6 +6,51 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-16 18:37 EDT (Ran the explicitly authorized eight-row Massachusetts live scout; every primary response was an empty GABRIEL proxy connection error, so no candidates or downstream work) - stop before another state or verification
+
+**Did**
+- Started at local commit `94ac4e980b8da4d9e17847b818c6c04989ac1a6d`. The incoming Massachusetts dry-run relay passed ZIP integrity checks, and every requested carried repository file and dry-run artifact matched byte-for-byte. No relay/repository discrepancy existed. Left unrelated `.claude/` material untouched and did not inspect/configure a remote.
+- Confirmed the full-context MA input has exactly 8 rows and 22 columns, in locked order: Somerville, Newton, Boston, Worcester, Arlington, Georgetown, Franklin, Seekonk. Ran the authorized command with `state=MA`, `max-prompts=8`, minimal prompts, `n_parallels=1`, `sleep_between_prompts=15`, and low search context.
+- The primary run recorded 8 attempted calls, 0 parseable responses, 0 candidates, and 8 `empty_response_no_response_id` entries. Every raw row has GABRIEL error `Connection error.` and no response text, response ID, output tokens, or web sources. Preserved prompt preview, raw outputs, parsed-candidate header, failed-parses ledger, metadata, cost files, GABRIEL checkpoint, and console log.
+- Diagnosed the primary failure before retrying. Made exactly one bounded retry for every failed row, split into Somerville/Newton/Boston and Worcester/Arlington/Georgetown/Franklin/Seekonk; all eight retries failed identically. No further live calls were made.
+- Added the scout-stage review. No task-level candidate summary exists because there are zero parsed candidate rows. Did not verify URLs, ingest, codify, use a claim, or change canonical contracts, coverage, corpus, claim, or codified-output files.
+
+**Decisions and why**
+- Treated the result as transport failure, not an empty-source finding: every primary row was sent but none had model content. It cannot answer the intended municipality-specific source questions or support an absence inference.
+- Stopped after the bounded retries rather than expanding scope or retrying again. No wrong-employer, wrong-unit, safety-as-non-safety, or context-only leakage can be assessed from empty responses.
+
+**Surprises/breakage**
+- The runner records `live_succeeded=true` when `gabriel.whatever` returns a dataframe even when every row is an empty connection error. The row-level failure ledger—not that boolean—correctly shows the substantive outcome.
+- Primary recorded cost was `$0.0012828` for 6,414 input tokens and zero reasoning/output tokens. The two completed retry runs cost `$0.0004592` for 2,296 input tokens and `$0.0008236` for 4,118 input tokens. Total known cost was `$0.0025656` across 16 charged failed calls, with zero reasoning/output tokens.
+
+**Validation/audit results**
+```text
+python -m py_compile scripts/gabriel_state_source_scout.py
+python -m py_compile scripts/test_gabriel_state_source_scout_prompt.py
+OK
+
+python scripts/test_gabriel_state_source_scout_prompt.py
+4 PASS checks
+
+python scripts/validate.py
+VALIDATION PASSED — contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19
+exact-cycle: 10 | overlap-cycle: 18 | exploratory adjacent matches: 2
+safety units unmatched: 6
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units.
+
+**Next steps**
+1. Restore or diagnose GABRIEL proxy connectivity outside this research batch before authorizing another scout call.
+2. If later authorized, rerun a fresh locked full-context MA eight-row scout; this failure does not imply source absence.
+3. Do not verify, ingest, codify, or advance claims from this zero-candidate output.
+
 ## 2026-07-16 18:23 EDT (Prepared and dry-previewed the eight-row Massachusetts national slice; no live/model call, source search, ingestion, codification, canonical-data change, push, or remote work) - all 8 prompts pass the Texas-calibrated filtering contract
 
 **Did**

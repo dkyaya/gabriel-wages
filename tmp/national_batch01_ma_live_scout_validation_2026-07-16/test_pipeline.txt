@@ -1,0 +1,73 @@
+test_page_number_at
+  ok   GABRIEL_PAGETEST_ONE found in text
+  ok   GABRIEL_PAGETEST_TWO found in text
+  ok   GABRIEL_PAGETEST_ONE is on page 1
+  ok   GABRIEL_PAGETEST_TWO is on page 2
+test_extraction_and_spans
+  ok   text layer detected (not OCR)
+  ok   quality clean
+  ok   arbitration flagged
+  ok   comparability flagged
+  ok   no_strike flagged
+  ok   me_too NOT flagged (absent)
+  ok   me_too in unresolved
+  ok   arbitration span has body not just heading
+  ok   comparability span has body
+  ok   comparability referent captured
+test_interest_arbitration_false_positive_regression
+  ok   item 9: PA DC33 scope clause excludes interest arbitration -> interest_arbitration NOT flagged
+  ok   item 10: NJ Newark police legal-defense binding arbitration (no wage context) -> interest_arbitration NOT flagged
+  ok   item 12: NJ Trenton police health-coverage binding arbitration (no wage context) -> interest_arbitration NOT flagged
+  ok   item 13: NJ Trenton fire explicitly excludes fiscal matters from interest arbitration -> interest_arbitration NOT flagged
+  ok   item 14: PA DC47 MFN clause references, but does not grant, interest arbitration -> interest_arbitration NOT flagged
+  ok   genuine interest arbitration via statute + impasse (unaffected by the fix) -> interest_arbitration flagged
+  ok   genuine interest arbitration via last-best-offer (unaffected by the fix) -> interest_arbitration flagged
+  ok   bare binding arbitration + nearby wage word stays unresolved, not flagged -> interest_arbitration NOT flagged
+  ok   bare binding arbitration + nearby wage word stays unresolved, not flagged -> interest_arbitration stays unresolved
+test_no_strike_plural_regression
+  ok   item 19: Arlington fire's actual clause (plural, with the source's own 'shail' typo preserved verbatim) -> no_strike flagged
+  ok   plural 'no strikes' as a standalone noun phrase -> no_strike flagged
+  ok   plural inside the 'no employee/member shall engage in ... strike(s)' pattern -> no_strike flagged
+  ok   plural 'work stoppages' -> no_strike flagged
+  ok   singular forms still work (no regression) -> no_strike flagged
+  ok   unrelated use of 'strike' (not a labor-strike context) -> no_strike NOT flagged
+test_comparability_false_positive_regression
+  ok   item 8: PA police sick-leave-usage comparison, not wage comparability -> comparability NOT flagged
+  ok   item 11: NJ Newark fire internal rank comparison, not wage comparability -> comparability NOT flagged
+  ok   item 13: NJ Trenton fire optical-plan comparison, not wage comparability -> comparability NOT flagged
+  ok   2026-07-13 full-corpus regression find: TX Austin recruiting-vendor clause has a peer-city referent but no wage vocabulary, not wage comparability -> comparability NOT flagged
+  ok   genuine peer-jurisdiction wage comparability (unaffected by the fix) -> comparability flagged
+test_heading_detection
+  ok   ARTICLE heading detected
+  ok   all-caps short line detected
+  ok   normal sentence not a heading
+test_verbatim_guard
+  ok   exact quote accepted
+  ok   paraphrase rejected
+  ok   too-short rejected
+test_quarantine
+  ok   complete meta passes
+  ok   missing provenance caught
+test_validator_pct_range
+  ok   0.02 accepted
+  ok   2.0 rejected (200% unit slip)
+  ok   blank passes (field optional)
+  ok   non-numeric rejected
+test_gabriel_relevance_boundaries
+  ok   peer wages relevant
+  ok   total compensation relevant
+  ok   longevity payments relevant
+  ok   award outcome irrelevant
+  ok   CPI adjustment irrelevant
+  ok   generic market adjustment irrelevant
+  ok   bargaining-unit abbreviation irrelevant
+  ok   non-wage provision chart irrelevant
+  ok   generic longevity chart irrelevant
+test_coverage_match_tiers
+  ok   exact-cycle match counted
+  ok   overlap-cycle match counted when windows differ
+  ok   adjacent-cycle match counted separately
+  ok   truly unmatched safety row counted
+  ok   Seekonk-like safety rows overlap matched
+
+60 passed, 0 failed

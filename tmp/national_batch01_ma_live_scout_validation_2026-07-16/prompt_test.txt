@@ -1,0 +1,4 @@
+PASS: row-aware prompt retains contextual fields
+PASS: three-column input fallback remains valid
+PASS: strict unit/document/no-candidate guidance is present
+PASS: new candidate-stage fields survive parsing and remain unverified

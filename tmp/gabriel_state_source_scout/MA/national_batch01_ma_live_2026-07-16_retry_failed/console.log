@@ -1,0 +1,29 @@
+2026-07-16 18:34:06,649 - matplotlib - WARNING - /Users/joachimjohnson/.matplotlib is not a writable directory
+2026-07-16 18:34:06,649 - matplotlib - WARNING - Matplotlib created a temporary cache directory at /var/folders/jv/h5mr5h9s6nn_6xp2qrp3c3h00000gn/T/matplotlib-w2fb8jk_ because there was an issue with the default path (/Users/joachimjohnson/.matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+
+Fontconfig error: No writable cache directories
+	/opt/homebrew/var/cache/fontconfig
+	/Users/joachimjohnson/.cache/fontconfig
+	/Users/joachimjohnson/.fontconfig
+2026-07-16 18:34:11,669 - matplotlib.font_manager - WARNING - Matplotlib is building the font cache; this may take a moment.
+2026-07-16 18:34:16,776 - gabriel.utils.openai_utils - WARNING - ⚠️ Web search is enabled: tool lookups incur extra fees and tokens beyond this estimate, so actual costs may be significantly higher. Reduce `n_parallels` manually if tool errors occur.
+2026-07-16 18:34:18,330 - gabriel.utils.openai_utils - WARNING - Encountered first connection error. This may be due to network instability or bandwidth limitations. Future connection errors will be silenced and tracked in periodic updates.
+2026-07-16 18:34:18,337 - gabriel.utils.openai_utils - WARNING - 1 requests failed.
+2026-07-16 18:34:18,338 - gabriel.utils.openai_utils - WARNING - 1 API connection errors encountered, indicating network instability or bandwidth limitations; consider reducing concurrency via lower n_parallels.
+2026-07-16 18:34:18,338 - gabriel.utils.openai_utils - WARNING - 1 API errors encountered.
+2026-07-16 18:34:33,358 - gabriel.utils.openai_utils - WARNING - ⚠️ Web search is enabled: tool lookups incur extra fees and tokens beyond this estimate, so actual costs may be significantly higher. Reduce `n_parallels` manually if tool errors occur.
+2026-07-16 18:34:34,668 - gabriel.utils.openai_utils - WARNING - Encountered first connection error. This may be due to network instability or bandwidth limitations. Future connection errors will be silenced and tracked in periodic updates.
+2026-07-16 18:34:34,672 - gabriel.utils.openai_utils - WARNING - 1 requests failed.
+2026-07-16 18:34:34,673 - gabriel.utils.openai_utils - WARNING - 1 API connection errors encountered, indicating network instability or bandwidth limitations; consider reducing concurrency via lower n_parallels.
+2026-07-16 18:34:34,673 - gabriel.utils.openai_utils - WARNING - 1 API errors encountered.
+2026-07-16 18:34:49,693 - gabriel.utils.openai_utils - WARNING - ⚠️ Web search is enabled: tool lookups incur extra fees and tokens beyond this estimate, so actual costs may be significantly higher. Reduce `n_parallels` manually if tool errors occur.
+2026-07-16 18:34:50,984 - gabriel.utils.openai_utils - WARNING - Encountered first connection error. This may be due to network instability or bandwidth limitations. Future connection errors will be silenced and tracked in periodic updates.
+2026-07-16 18:34:50,988 - gabriel.utils.openai_utils - WARNING - 1 requests failed.
+2026-07-16 18:34:50,988 - gabriel.utils.openai_utils - WARNING - 1 API connection errors encountered, indicating network instability or bandwidth limitations; consider reducing concurrency via lower n_parallels.
+2026-07-16 18:34:50,989 - gabriel.utils.openai_utils - WARNING - 1 API errors encountered.
+LIVE — 3 municipalities prompted, 3 responses
+parseable=0 failed_parses=3 candidate_rows=0
+candidates_csv=/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages/docs/analysis/gabriel_state_source_scout_candidates_ma_2026-07-16_183405.csv
+run_metadata=tmp/gabriel_state_source_scout/MA/national_batch01_ma_live_2026-07-16_retry_failed/run_metadata.json
+cost_summary=tmp/gabriel_state_source_scout/MA/national_batch01_ma_live_2026-07-16_retry_failed/cost_summary.json total_cost=0.000459
+cost_log=/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages/docs/analysis/gabriel_state_source_scout_cost_log.csv

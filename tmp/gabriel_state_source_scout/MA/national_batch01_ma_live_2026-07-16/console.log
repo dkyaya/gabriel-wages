@@ -1,0 +1,6 @@
+LIVE — 8 municipalities prompted, 8 responses
+parseable=0 failed_parses=8 candidate_rows=0
+candidates_csv=/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages/docs/analysis/gabriel_state_source_scout_candidates_ma_2026-07-16_183246.csv
+run_metadata=tmp/gabriel_state_source_scout/MA/national_batch01_ma_live_2026-07-16/run_metadata.json
+cost_summary=tmp/gabriel_state_source_scout/MA/national_batch01_ma_live_2026-07-16/cost_summary.json total_cost=0.001283
+cost_log=/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages/docs/analysis/gabriel_state_source_scout_cost_log.csv

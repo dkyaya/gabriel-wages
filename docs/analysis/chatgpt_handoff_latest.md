@@ -2,9 +2,35 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-16T18:23:35-04:00`
+Last updated: `2026-07-16T18:37:00-04:00`
 
 ---
+
+## 2026-07-16T18:37:00-04:00 - Massachusetts live scout returned no model content because all primary calls hit GABRIEL proxy connection errors
+
+**Commit target:** `Record Massachusetts live scout transport failure`
+
+### Current State After This Entry
+
+- **Relay/repository check:** starting commit `94ac4e980b8da4d9e17847b818c6c04989ac1a6d`. The incoming relay's requested carried files and dry-run artifacts all matched the workspace byte-for-byte; there was no discrepancy. No remote was inspected or changed.
+- **Bounded live scope:** the locked full-context MA input was preflighted as exactly eight 22-column rows in this order: Somerville, Newton, Boston, Worcester, Arlington, Georgetown, Franklin, Seekonk. The primary command used `--state MA`, the locked input, `--max-prompts 8`, `--prompt-mode minimal`, `--n-parallels 1`, `--sleep-between-prompts 15`, `--search-context-size low`, and `--live`.
+- **Primary result:** run ID `ma_2026-07-16_183246` attempted all eight rows but produced 0 parseable responses and 0 candidates. Every row is `empty_response_no_response_id` with GABRIEL error `Connection error.`, no response text, no response ID, no output tokens, and no web sources. Do not infer that a municipality lacks a source.
+- **Retries:** after diagnosis, every failed row received exactly one bounded retry, split across a three-row and a five-row run. All eight retries failed identically with empty connection-error responses. Do not make another call without new authorization/infrastructure resolution.
+- **Artifacts:** primary files are under `tmp/gabriel_state_source_scout/MA/national_batch01_ma_live_2026-07-16/`; retry files are under `..._retry_failed/` and `..._remaining_first_attempt/`. The review is `docs/analysis/national_batch01_ma_live_scout_review_2026-07-16.md`. The three runner-generated MA candidate CSVs are header-only; no task-level candidate summary was created because no parsed candidates exist.
+- **Costs:** primary cost `$0.0012828` (6,414 input; 0 reasoning; 0 output tokens); three-row retry `$0.0004592` (2,296 input; 0 reasoning/output); five-row retry `$0.0008236` (4,118 input; 0 reasoning/output). Total known cost: `$0.0025656` across 16 charged failed calls.
+- **Stage discipline:** no URL was opened beyond scout behavior, and nothing was verified, ingested, codified, treated as claim evidence, or placed in canonical contracts/coverage/corpus/claim outputs. There is no leakage finding because no response content exists to classify.
+
+### Validation State
+
+- Both requested `py_compile` commands — OK.
+- Prompt contract test — 4 PASS checks.
+- `scripts/validate.py` — passed; contracts 64, discourse 0, coverage 64, city attributes 3.
+- `ingest/test_pipeline.py` — 60 passed, 0 failed.
+- `ingest/audit_coverage.py` — 28 healthy pairs across 19 cities; 10 exact, 18 overlap, 2 exploratory adjacent, 6 unmatched safety units.
+
+### Recommended Next Move
+
+First diagnose or restore the GABRIEL proxy outside this bounded batch. If a fresh MA scout is later authorized, use the same locked full-context input and preserve the new run separately. Do not interpret this zero-candidate transport failure as absence evidence, and do not start source verification, ingestion, codification, or claim promotion from it.
 
 ## 2026-07-16T18:23:35-04:00 - Prepared and passed the filtering-contract dry preview for all eight Massachusetts national-batch rows
 

@@ -1,0 +1,2 @@
+run_id,state,municipality_count,parseable_count,failed_count,candidate_row_count,total_cost,successful_cost,failed_cost,avg_cost_per_prompt,avg_cost_per_parseable_response,avg_cost_per_candidate,input_tokens_total,reasoning_tokens_total,output_tokens_total,avg_input_tokens_per_prompt,avg_output_tokens_per_success,avg_time_taken_successful_seconds,model,prompt_mode,search_context_size,n_parallels,sleep_between_prompts,timeout,max_timeout
+ma_2026-07-16_183246,MA,8,0,8,0,0.0012828,0.0,0.0012828,0.00016035,,,6414.0,0.0,0.0,801.75,,,gpt-5.4-nano,minimal,low,1,15.0,90,90

@@ -1,0 +1,6 @@
+Identifier,Response,Time Taken,Input Tokens,Reasoning Tokens,Output Tokens,Reasoning Effort,Successful,Error Log,Web Search Sources,Cost
+gabriel_state_source_scout_ma_2026-07-16_183534_ma_worcester,,,772,,,low,False,['Connection error.'],,0.0001544
+gabriel_state_source_scout_ma_2026-07-16_183534_ma_arlington,,,816,,,low,False,['Connection error.'],,0.0001632
+gabriel_state_source_scout_ma_2026-07-16_183534_ma_georgetown,,,823,,,low,False,['Connection error.'],,0.0001646
+gabriel_state_source_scout_ma_2026-07-16_183534_ma_franklin,,,843,,,low,False,['Connection error.'],,0.0001686
+gabriel_state_source_scout_ma_2026-07-16_183534_ma_seekonk,,,864,,,low,False,['Connection error.'],,0.0001728
