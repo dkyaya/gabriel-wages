@@ -2,9 +2,64 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-15T12:40:00-04:00`
+Last updated: `2026-07-16T14:50:00-04:00`
 
 ---
+
+## 2026-07-16T14:50:00-04:00 - Replaced the 65-row municipality placeholder with the authoritative 2025 Census government-employer universe; added a full municipality-county crosswalk and rebuilt national scout accounting; no scout/model calls, verification, ingestion, codification, push, or remote work
+
+**Commit target:** `Build authoritative national municipality universe`
+
+### Current State After This Entry
+
+- **Relay/repo check:** starting commit `b516140f30c84029ac5845acbb86b2d601624d3d`. Every substantive file present in `tmp/national_scout_coverage_setup_2026-07-15_relay_b516140.zip` matched the working-tree copy byte-for-byte. The relay archive did not contain `AGENTS.md` despite the task's read list, so the repository `AGENTS.md` supplied the standing instructions. Existing untracked `.claude/worktrees/*` directories were left untouched. No git remote was inspected or modified.
+- **Authoritative municipality source:** Census Bureau 2025 Government Units Listing, General Purpose tab, a GMAF snapshot of independent government units active as of FY ending 2025-06-30. Scope is `ACTIVE=Y` municipal and township governments in the 50 states plus DC. Ordinary counties, dormant governments, CDPs, school/special districts, pension systems, and territories are excluded.
+- **National universe:** `docs/analysis/national_municipality_universe.csv` now has **35,589** employer rows: **19,471 municipal + 16,118 township**. All **65/65** prior project-known municipalities were preserved. Same-name city/township collisions (e.g., Aurora/Reading/Lancaster) are kept as distinct governments; project carry-forward attaches to the unique municipal row where applicable.
+- **Full county crosswalk:** new `docs/analysis/national_municipality_county_crosswalk.csv` has **36,816** rows. Municipal governments use the official 2020 national place-by-county table; township governments use 2024 Gazetteer county-subdivision GEOIDs; **95** clearly labeled current-primary supplements cover Connecticut's planning-region conversion and post-2020 governments/recodes. **1,106** municipalities are multi-county and retain every relationship; no primary-county collapse remains.
+- **Special geographies:** independent cities map to their own county-equivalent; consolidated/composite governments stay one Census municipal employer (exact source name retained); New England towns enter as Census township governments; DC is one municipal government plus county-equivalent `11001`. Corrected the county type label for Carson City from generic county to `independent_city`; the national county count remains **3,144**.
+- **County vs. municipality accounting:** county coverage now counts municipality-county associations. Multi-county municipalities appear in each related county, so county rows are non-additive and never imply county or municipality completion.
+- **Status separation:** municipality rows have separate scout, scout-positive, verified, ingested, and codified fields. Scout output never promotes verification/ingestion/codification. Verification and codification remain `not_accounted`; ingestion is independently tied to `data/contracts.csv`.
+- **PA carry-forward unchanged:** **25 scouted, 23 scout-positive, 20 police, 16 fire, 14 non-safety, 10 likely triad, 75 candidate rows, 65 official-or-union rows, 3 high-priority rows, $0.2687877**. The builder now reconciles these metrics directly to the existing state scout file. The prior handoff narrative's `814,313` input-token figure was a prose typo; the source CSV and relay national CSV both contain the unchanged authoritative value **814,151**.
+- **Protected files unchanged:** no edits to `data/contracts.csv`, `data/city_coverage.csv`, `corpus/`, claim/evidence files, or ingestion inputs. No GABRIEL scout/model/API call and no `gabriel.codify`.
+
+### Validation/audit results
+
+```text
+python scripts/build_scout_coverage.py
+county_equivalents=3144
+municipalities_in_universe=35589
+municipality_county_relationships=36816
+multi_county_municipalities=1106
+project_known_municipalities_preserved=65
+scouted_municipalities=25
+scout_positive_municipalities=23
+
+python -m py_compile scripts/build_scout_coverage.py
+OK
+
+python scripts/validate.py
+VALIDATION PASSED — contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19
+exact-cycle: 10 | overlap-cycle: 18 | exploratory adjacent matches: 2
+safety units unmatched: 6
+
+custom geography integrity audit
+PASS — 35,589 unique municipality governments; 36,816 unique municipality-county pairs;
+1,106 multi-county municipalities; 41 independent-city county-equivalents;
+65 project-known preserved; PA carry-forward exact.
+```
+
+### Recommended next run
+
+1. Build a bounded, auditable next-wave municipality manifest from the new universe using explicit population, state-law, and matched-comparison-gap criteria; do not attempt a 35,589-government blind scout run.
+2. Before any future scout call, decide whether county-government employers need their own separate universe. Do not merge county employers into this municipality table.
+3. If current post-2020 place-boundary precision becomes material, replace the 2020 place-by-county component with a current Census GRF/TIGER relationship build while retaining the same one-row-per-relationship crosswalk schema.
+4. Keep verification and ingestion downstream of scout output; a scout-positive municipality remains only an unverified lead.
 
 ## 2026-07-15T12:40:00-04:00 - Built national scout coverage accounting setup: county universe, municipality placeholder universe, and national state/county scout rollups; added a dedicated rebuild script; no new scout calls or verification
 

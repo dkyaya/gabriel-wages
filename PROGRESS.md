@@ -6,6 +6,62 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-16 14:50 EDT (Built authoritative national municipality-employer universe and full county-equivalent crosswalk; rebuilt national scout coverage; no scout/model calls, verification, ingestion, codification, push, or remote work) - 35,589 active municipal/township governments, 36,816 county relationships, 1,106 multi-county municipalities; PA 25/23 carry-forward exact
+
+**Did**
+- Started from relay/source commit `b516140`; confirmed every substantive relay file matched the repo byte-for-byte. The archive omitted `AGENTS.md`, so used the repository copy. Left unrelated untracked `.claude/worktrees/*` untouched and did not inspect/configure any git remote.
+- Replaced the 65-row project-known placeholder with the Census Bureau 2025 Government Units Listing's functionally active municipal and township governments: **35,589** rows (**19,471 municipal; 16,118 township**), 50 states + DC. Excluded ordinary counties, dormant units, CDPs, school/special districts, pensions, and territories.
+- Added `national_municipality_county_crosswalk.csv`: **36,816** unique municipality-county relationships. Municipal places use the official 2020 place-by-county table; township governments use 2024 Gazetteer county-subdivision GEOIDs; 95 labeled 2025-primary supplements cover current entities unmatched by those geography tables. **1,106** municipalities retain multiple county rows.
+- Updated `build_scout_coverage.py` to parse the official XLSX with standard-library OOXML, cache all public sources under `tmp/`, preserve all 65 prior project-known IDs, resolve same-name city/township collisions without conflation, require every scout municipality in the universe, and reconcile national scout rollups to the existing state scout file.
+- Rebuilt national state/county coverage with county rows explicitly counting non-additive municipality-county associations. Added separate scout-positive, verified, ingested, and codified fields; no scout output promotes downstream statuses.
+- Updated methodology/setup/handoff docs. `data/contracts.csv`, `data/city_coverage.csv`, `corpus/`, claim/evidence files, and ingestion inputs were not changed.
+
+**Decisions and why**
+- Used a government inventory rather than all incorporated/statistical places because labor-contract scouting needs potential employers. Included Census township governments because New England towns and similar units provide municipal services; excluded statistical MCDs/CDPs.
+- Kept the full crosswalk separate from the one-row-per-government universe. The 2025 `FIPS_COUNTY` value is only the most-served/headquarters county for cross-county governments and is retained as a flag, never a collapse rule.
+- Kept county coverage distinct from municipality completion: a multi-county city counts in every associated county, and no county row claims all municipalities have been scouted or verified.
+- Left verification/codification as `not_accounted` because no authoritative source-level ledger was joined; ingestion is independently observable from the canonical corpus.
+
+**Surprises/breakage**
+- Same-name municipal and township employers are common (Aurora, Reading, Lancaster, etc.). The first strict match correctly stopped; fixed selection to attach existing project IDs to the unique municipal row while retaining the township as a separate Census employer.
+- The current national place-by-county product available without a Census API key is 2020 vintage. Used it for full multi-county relationships and added 95 explicit 2025-primary supplements, chiefly Connecticut planning-region changes and post-2020 governments/recodes; documented the vintage limitation.
+- Corrected Carson City's county-equivalent type from generic `county` to `independent_city`; count remains 3,144.
+- Prior handoff prose said 814,313 PA input tokens, but both the source scout CSV and relay national CSV contain 814,151. Accounting stayed unchanged; only the narrative typo was corrected.
+
+**Validation/audit results**
+```text
+python scripts/build_scout_coverage.py
+county_equivalents=3144 | municipalities_in_universe=35589
+municipality_county_relationships=36816 | multi_county_municipalities=1106
+project_known_municipalities_preserved=65 | scouted=25 | scout_positive=23
+
+python -m py_compile scripts/build_scout_coverage.py
+OK
+
+python scripts/validate.py
+VALIDATION PASSED — contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19
+exact-cycle: 10 | overlap-cycle: 18 | exploratory adjacent matches: 2
+safety units unmatched: 6
+
+national geography integrity audit
+PASS — 35,589 unique governments; 36,816 unique municipality-county pairs;
+1,106 multi-county municipalities; 41 independent-city county-equivalents;
+65 project-known preserved; PA carry-forward exact.
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units.
+
+**Next steps**
+1. Generate a bounded next-wave manifest using explicit population/state-law/matched-gap criteria; do not scout the full 35,589 blindly.
+2. Decide separately whether county-government employers require a county-employer universe; do not merge them into this municipality table.
+3. If post-2020 boundary precision becomes material, rebuild the place component from current Census GRF/TIGER relationships while preserving the full-crosswalk schema.
+
 ## 2026-07-15 12:40 EDT (Built national scout coverage accounting setup: county universe, state summary, municipality placeholder universe, and national state/county scout rollups; added a rebuild script; no new scout calls, no verification, no ingestion) - National county-equivalent backbone now in place (3,144 rows, 50 states + DC only); known municipality placeholder currently 65 municipalities from existing project files; only PA has scout coverage so far (25 scouted, 23 scout-positive, 10 likely triads, 75 candidate rows); source-scout coverage/accounting setup only, no push/remote work
 
 **Did**

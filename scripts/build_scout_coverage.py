@@ -1,21 +1,24 @@
 #!/usr/bin/env python3
-"""Build national scout coverage accounting from existing project files.
+"""Build national municipality/county universes and scout coverage accounting.
 
-This is an accounting/setup script only. It does not run GABRIEL, verify
-sources, ingest documents, or touch canonical corpus files.
+This is an accounting/setup script only. It downloads public Census source
+files when their tmp/ caches are absent. It does not run GABRIEL, verify scout
+leads, ingest documents, codify text, or touch canonical corpus files.
 """
 
 from __future__ import annotations
 
 import csv
 import io
+import re
 import sys
 import urllib.request
 import zipfile
 from collections import defaultdict
-from dataclasses import dataclass
 from datetime import datetime
+from decimal import Decimal
 from pathlib import Path
+from xml.etree import ElementTree as ET
 
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -27,13 +30,40 @@ COUNTY_ZIP_URL = (
     "2024_Gazetteer/2024_Gaz_counties_national.zip"
 )
 COUNTY_ZIP_CACHE = TMP / "2024_Gaz_counties_national.zip"
-COUNTY_SOURCE = COUNTY_ZIP_URL
 COUNTY_SOURCE_VINTAGE = "2024 Census Gazetteer counties national file"
 COUNTY_UNIVERSE_NOTES = "Filtered to 50 states plus DC; territories excluded."
-COUNTY_MAPPING_SOURCE = "curated mapping to 2024 Census county-equivalent universe"
-INCOMPLETE_MUNI_NOTE = (
-    "Known-municipality counts reflect the project's current placeholder municipality "
-    "universe, not a full national municipality inventory."
+
+GOVERNMENT_UNITS_ZIP_URL = (
+    "https://www2.census.gov/programs-surveys/gus/datasets/2025/gov_units_2025.zip"
+)
+GOVERNMENT_UNITS_ZIP_CACHE = TMP / "gov_units_2025.zip"
+GOVERNMENT_UNITS_MEMBER = "Govt_Units_2025_Final.xlsx"
+GOVERNMENT_UNITS_SOURCE_VINTAGE = (
+    "2025 Government Units Listing; GMAF snapshot active as of fiscal year ending 2025-06-30"
+)
+
+COUSUB_ZIP_URL = (
+    "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/"
+    "2024_Gazetteer/2024_Gaz_cousubs_national.zip"
+)
+COUSUB_ZIP_CACHE = TMP / "2024_Gaz_cousubs_national.zip"
+COUSUB_SOURCE_VINTAGE = "2024 Census Gazetteer county subdivisions national file"
+
+PLACE_COUNTY_URL = (
+    "https://www2.census.gov/geo/docs/reference/codes2020/"
+    "national_place_by_county2020.txt"
+)
+PLACE_COUNTY_CACHE = TMP / "national_place_by_county2020.txt"
+PLACE_COUNTY_SOURCE_VINTAGE = "2020 Census national place-by-county code table"
+
+MUNICIPALITY_SCOPE_NOTE = (
+    "Scope is functionally active Census municipal and township governments; "
+    "ordinary counties, CDPs, school districts, and special districts are excluded."
+)
+COUNTY_COVERAGE_NOTE = (
+    "County rows count municipality-county associations from the full crosswalk. "
+    "Multi-county municipalities appear in every associated county, so county rows "
+    "are not additive and do not imply municipality or county completion."
 )
 
 COUNTY_UNIVERSE_FIELDS = [
@@ -59,22 +89,58 @@ COUNTY_STATE_SUMMARY_FIELDS = [
 
 MUNICIPALITY_UNIVERSE_FIELDS = [
     "state",
+    "state_fips",
     "municipality",
     "municipality_id",
-    "county_geoid",
-    "county_name",
-    "source_for_county_mapping",
+    "census_gov_id",
+    "government_name",
+    "government_type",
+    "geography_type",
+    "political_description",
+    "local_geography_fips",
+    "population",
+    "population_year",
+    "active_status",
+    "government_units_primary_county_geoid",
+    "county_relationship_count",
+    "multi_county_flag",
+    "project_known_before_national_build",
+    "already_scouted",
+    "scout_positive_status",
+    "verified_status",
+    "ingested_status",
+    "codified_status",
+    "already_in_corpus",
+    "government_website",
     "municipality_source",
     "population_rank_note",
-    "already_scouted",
-    "already_in_corpus",
+    "notes",
+]
+
+MUNICIPALITY_COUNTY_CROSSWALK_FIELDS = [
+    "municipality_id",
+    "census_gov_id",
+    "state",
+    "municipality",
+    "government_name",
+    "government_type",
+    "geography_type",
+    "state_fips",
+    "local_geography_fips",
+    "county_geoid",
+    "county_name",
+    "county_equivalent_type",
+    "is_government_units_primary_county",
+    "relationship_source",
+    "relationship_vintage",
+    "relationship_basis",
     "notes",
 ]
 
 NATIONAL_STATE_COVERAGE_FIELDS = [
     "state",
     "county_equivalent_count",
-    "municipalities_known",
+    "municipalities_in_universe",
     "municipalities_scouted",
     "municipalities_scout_positive",
     "municipalities_with_police_candidate",
@@ -89,17 +155,18 @@ NATIONAL_STATE_COVERAGE_FIELDS = [
     "reasoning_tokens_total",
     "output_tokens_total",
     "last_updated",
+    "notes",
 ]
 
 NATIONAL_COUNTY_COVERAGE_FIELDS = [
     "state",
     "county_geoid",
     "county_name",
-    "municipalities_known",
-    "municipalities_scouted",
-    "municipalities_scout_positive",
+    "municipality_associations_in_universe",
+    "municipality_associations_scouted",
+    "municipality_associations_scout_positive",
     "candidate_rows_total",
-    "likely_triad_municipalities",
+    "likely_triad_municipality_associations",
     "notes",
 ]
 
@@ -172,80 +239,7 @@ STATE_ABBR_TO_FIPS = {
     "WY": "56",
 }
 
-
-@dataclass(frozen=True)
-class MunicipalityCountyMap:
-    county_geoid: str
-    note: str = ""
-
-
-KNOWN_MUNICIPALITY_COUNTY_MAP: dict[tuple[str, str], MunicipalityCountyMap] = {
-    ("CA", "Los Angeles"): MunicipalityCountyMap("06037"),
-    ("CA", "Sacramento"): MunicipalityCountyMap("06067"),
-    ("CO", "Denver"): MunicipalityCountyMap("08031", "County-equivalent consolidated city-county."),
-    ("CT", "Hartford"): MunicipalityCountyMap("09110", "Uses Connecticut's current Census county-equivalent planning regions."),
-    ("IL", "Aurora"): MunicipalityCountyMap("17089", "Primary county assignment only; municipality spans multiple counties."),
-    ("IL", "Chicago"): MunicipalityCountyMap("17031"),
-    ("IL", "Naperville"): MunicipalityCountyMap("17043", "Primary county assignment only; municipality spans multiple counties."),
-    ("IL", "Rockford"): MunicipalityCountyMap("17201"),
-    ("IL", "Springfield"): MunicipalityCountyMap("17167"),
-    ("MA", "Arlington"): MunicipalityCountyMap("25017"),
-    ("MA", "Boston"): MunicipalityCountyMap("25025"),
-    ("MA", "Franklin"): MunicipalityCountyMap("25021"),
-    ("MA", "Georgetown"): MunicipalityCountyMap("25009"),
-    ("MA", "Newton"): MunicipalityCountyMap("25017"),
-    ("MA", "Seekonk"): MunicipalityCountyMap("25005"),
-    ("MA", "Somerville"): MunicipalityCountyMap("25017"),
-    ("MA", "Wayland"): MunicipalityCountyMap("25017"),
-    ("MA", "Worcester"): MunicipalityCountyMap("25027"),
-    ("MD", "Baltimore"): MunicipalityCountyMap("24510", "County-equivalent independent city."),
-    ("MN", "Minneapolis"): MunicipalityCountyMap("27053"),
-    ("NJ", "Camden"): MunicipalityCountyMap("34007"),
-    ("NJ", "Jersey City"): MunicipalityCountyMap("34017"),
-    ("NJ", "Newark"): MunicipalityCountyMap("34013"),
-    ("NJ", "Paterson"): MunicipalityCountyMap("34031"),
-    ("NJ", "Trenton"): MunicipalityCountyMap("34021"),
-    ("NY", "Albany"): MunicipalityCountyMap("36001"),
-    ("NY", "Buffalo"): MunicipalityCountyMap("36029"),
-    ("NY", "Rochester"): MunicipalityCountyMap("36055"),
-    ("NY", "Syracuse"): MunicipalityCountyMap("36067"),
-    ("NY", "Yonkers"): MunicipalityCountyMap("36119"),
-    ("OH", "Cincinnati"): MunicipalityCountyMap("39061"),
-    ("OH", "Cleveland"): MunicipalityCountyMap("39035"),
-    ("OH", "Columbus"): MunicipalityCountyMap("39049", "Primary county assignment only; municipality spans multiple counties."),
-    ("OH", "Toledo"): MunicipalityCountyMap("39095"),
-    ("OR", "Portland"): MunicipalityCountyMap("41051", "Primary county assignment only; municipality spans multiple counties."),
-    ("PA", "Allentown"): MunicipalityCountyMap("42077"),
-    ("PA", "Altoona"): MunicipalityCountyMap("42013"),
-    ("PA", "Bethlehem"): MunicipalityCountyMap("42077", "Primary county assignment only; municipality spans multiple counties."),
-    ("PA", "Carlisle"): MunicipalityCountyMap("42041"),
-    ("PA", "Chambersburg"): MunicipalityCountyMap("42055"),
-    ("PA", "Chester"): MunicipalityCountyMap("42045"),
-    ("PA", "Easton"): MunicipalityCountyMap("42095"),
-    ("PA", "Erie"): MunicipalityCountyMap("42049"),
-    ("PA", "Harrisburg"): MunicipalityCountyMap("42043"),
-    ("PA", "Hazleton"): MunicipalityCountyMap("42079"),
-    ("PA", "Johnstown"): MunicipalityCountyMap("42021"),
-    ("PA", "Lancaster"): MunicipalityCountyMap("42071"),
-    ("PA", "Lebanon"): MunicipalityCountyMap("42075"),
-    ("PA", "McKeesport"): MunicipalityCountyMap("42003"),
-    ("PA", "New Castle"): MunicipalityCountyMap("42073"),
-    ("PA", "Norristown"): MunicipalityCountyMap("42091"),
-    ("PA", "Philadelphia"): MunicipalityCountyMap("42101", "County-equivalent consolidated city-county for project accounting purposes."),
-    ("PA", "Pittsburgh"): MunicipalityCountyMap("42003"),
-    ("PA", "Pottstown"): MunicipalityCountyMap("42091"),
-    ("PA", "Reading"): MunicipalityCountyMap("42011"),
-    ("PA", "Scranton"): MunicipalityCountyMap("42069"),
-    ("PA", "State College"): MunicipalityCountyMap("42027"),
-    ("PA", "Wilkes-Barre"): MunicipalityCountyMap("42079"),
-    ("PA", "Williamsport"): MunicipalityCountyMap("42081"),
-    ("PA", "York"): MunicipalityCountyMap("42133"),
-    ("TX", "Austin"): MunicipalityCountyMap("48453", "Primary county assignment only; municipality spans multiple counties."),
-    ("TX", "Houston"): MunicipalityCountyMap("48201", "Primary county assignment only; municipality spans multiple counties."),
-    ("TX", "San Antonio"): MunicipalityCountyMap("48029"),
-    ("WA", "Seattle"): MunicipalityCountyMap("53033"),
-    ("WI", "Madison"): MunicipalityCountyMap("55025"),
-}
+XLSX_NS = {"m": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"}
 
 
 def write_csv(path: Path, rows: list[dict], fields: list[str]) -> None:
@@ -269,13 +263,13 @@ def parse_back_validate(path: Path, fields: list[str]) -> None:
                 raise ValueError(f"{path}: row {line_number} width {len(row)} != {len(fields)}")
 
 
-def ensure_county_zip() -> Path:
-    COUNTY_ZIP_CACHE.parent.mkdir(parents=True, exist_ok=True)
-    if COUNTY_ZIP_CACHE.exists():
-        return COUNTY_ZIP_CACHE
-    with urllib.request.urlopen(COUNTY_ZIP_URL, timeout=60) as response:
-        COUNTY_ZIP_CACHE.write_bytes(response.read())
-    return COUNTY_ZIP_CACHE
+def ensure_download(url: str, cache_path: Path) -> Path:
+    cache_path.parent.mkdir(parents=True, exist_ok=True)
+    if cache_path.exists():
+        return cache_path
+    with urllib.request.urlopen(url, timeout=120) as response:
+        cache_path.write_bytes(response.read())
+    return cache_path
 
 
 def county_equivalent_type(state: str, county_name: str) -> str:
@@ -285,6 +279,8 @@ def county_equivalent_type(state: str, county_name: str) -> str:
         return "planning_region"
     if state == "LA":
         return "parish"
+    if state == "NV" and county_name == "Carson City":
+        return "independent_city"
     if state == "AK":
         if county_name.startswith("City and Borough of ") or county_name.endswith(" City and Borough"):
             return "city_and_borough"
@@ -322,13 +318,11 @@ def normalize_county_name(name: str) -> str:
 
 
 def load_county_universe() -> list[dict]:
-    zip_path = ensure_county_zip()
+    zip_path = ensure_download(COUNTY_ZIP_URL, COUNTY_ZIP_CACHE)
     with zipfile.ZipFile(zip_path) as archive:
-        member = archive.namelist()[0]
-        raw_text = archive.read(member).decode("utf-8")
-    reader = csv.DictReader(io.StringIO(raw_text), delimiter="\t")
+        raw_text = archive.read(archive.namelist()[0]).decode("utf-8")
     rows: list[dict] = []
-    for row in reader:
+    for row in csv.DictReader(io.StringIO(raw_text), delimiter="\t"):
         state = row["USPS"].strip()
         if state not in STATE_ABBR_TO_FIPS:
             continue
@@ -343,7 +337,7 @@ def load_county_universe() -> list[dict]:
                 "county_name": county_name,
                 "county_equivalent_type": county_equivalent_type(state, county_name),
                 "county_name_normalized": normalize_county_name(county_name),
-                "source": COUNTY_SOURCE,
+                "source": COUNTY_ZIP_URL,
                 "source_date_or_vintage": COUNTY_SOURCE_VINTAGE,
                 "notes": COUNTY_UNIVERSE_NOTES,
             }
@@ -355,71 +349,214 @@ def state_summary_rows(county_rows: list[dict]) -> list[dict]:
     counts: dict[str, int] = defaultdict(int)
     for row in county_rows:
         counts[row["state"]] += 1
-    rows = []
-    for state in sorted(counts, key=lambda abbr: (STATE_ABBR_TO_FIPS[abbr], abbr)):
-        rows.append(
-            {
-                "state": state,
-                "state_fips": STATE_ABBR_TO_FIPS[state],
-                "county_equivalent_count": counts[state],
-                "source": COUNTY_SOURCE,
-                "notes": COUNTY_UNIVERSE_NOTES,
-            }
-        )
+    return [
+        {
+            "state": state,
+            "state_fips": STATE_ABBR_TO_FIPS[state],
+            "county_equivalent_count": counts[state],
+            "source": COUNTY_ZIP_URL,
+            "notes": COUNTY_UNIVERSE_NOTES,
+        }
+        for state in sorted(counts, key=lambda abbr: (STATE_ABBR_TO_FIPS[abbr], abbr))
+    ]
+
+
+def xlsx_shared_strings(archive: zipfile.ZipFile) -> list[str]:
+    root = ET.fromstring(archive.read("xl/sharedStrings.xml"))
+    return ["".join(node.itertext()) for node in root.findall("m:si", XLSX_NS)]
+
+
+def load_xlsx_sheet_records(xlsx_bytes: bytes, sheet_member: str) -> list[dict[str, str]]:
+    with zipfile.ZipFile(io.BytesIO(xlsx_bytes)) as archive:
+        shared = xlsx_shared_strings(archive)
+        root = ET.fromstring(archive.read(sheet_member))
+    raw_rows: list[dict[str, str]] = []
+    for row_node in root.findall(".//m:sheetData/m:row", XLSX_NS):
+        values: dict[str, str] = {}
+        for cell in row_node.findall("m:c", XLSX_NS):
+            reference = cell.get("r", "")
+            match = re.match(r"[A-Z]+", reference)
+            if not match:
+                continue
+            column = match.group(0)
+            value_node = cell.find("m:v", XLSX_NS)
+            value = "" if value_node is None else value_node.text or ""
+            if cell.get("t") == "s" and value:
+                value = shared[int(value)]
+            elif cell.get("t") == "inlineStr":
+                value = "".join(cell.itertext())
+            values[column] = value.strip()
+        raw_rows.append(values)
+    if not raw_rows:
+        raise ValueError("Government Units workbook General Purpose sheet is empty")
+    field_by_column = raw_rows[0]
+    return [
+        {field: row.get(column, "") for column, field in field_by_column.items()}
+        for row in raw_rows[1:]
+    ]
+
+
+def load_government_units() -> list[dict[str, str]]:
+    zip_path = ensure_download(GOVERNMENT_UNITS_ZIP_URL, GOVERNMENT_UNITS_ZIP_CACHE)
+    with zipfile.ZipFile(zip_path) as archive:
+        xlsx_bytes = archive.read(GOVERNMENT_UNITS_MEMBER)
+    records = load_xlsx_sheet_records(xlsx_bytes, "xl/worksheets/sheet1.xml")
+    required = {
+        "CENSUS_ID_PID6",
+        "UNIT_NAME",
+        "UNIT_TYPE",
+        "STATE",
+        "FIPS_STATE",
+        "FIPS_COUNTY",
+        "FIPS_PLACE",
+        "ACTIVE",
+    }
+    if records and not required.issubset(records[0]):
+        raise ValueError("Government Units workbook layout changed; required columns are missing")
+    rows = [
+        row
+        for row in records
+        if row["STATE"] in STATE_ABBR_TO_FIPS
+        and row["UNIT_TYPE"] in {"2 - MUNICIPAL", "3 - TOWNSHIP"}
+        and row["ACTIVE"] == "Y"
+    ]
+    ids = [row["CENSUS_ID_PID6"] for row in rows]
+    if len(ids) != len(set(ids)):
+        raise ValueError("Government Units source contains duplicate Census government IDs in scope")
     return rows
 
 
-def load_contract_city_ids() -> dict[tuple[str, str], str]:
-    city_ids: dict[tuple[str, str], str] = {}
-    with (ROOT / "data" / "contracts.csv").open(newline="", encoding="utf-8") as handle:
-        for row in csv.DictReader(handle):
-            city_ids[(row["state"], row["city_name"])] = row["city_id"]
-    return city_ids
+def load_place_county_rows() -> dict[tuple[str, str], list[dict[str, str]]]:
+    path = ensure_download(PLACE_COUNTY_URL, PLACE_COUNTY_CACHE)
+    output: dict[tuple[str, str], list[dict[str, str]]] = defaultdict(list)
+    with path.open(newline="", encoding="utf-8-sig") as handle:
+        for row in csv.DictReader(handle, delimiter="|"):
+            if row["STATE"] not in STATE_ABBR_TO_FIPS:
+                continue
+            if row["TYPE"].upper() != "INCORPORATED PLACE":
+                continue
+            output[(row["STATEFP"], row["PLACEFP"])].append(row)
+    return output
 
 
-def slugify_city(text: str) -> str:
-    chars = [ch.lower() if ch.isalnum() else "_" for ch in text]
-    value = "".join(chars)
-    while "__" in value:
-        value = value.replace("__", "_")
-    return value.strip("_")
+def load_cousub_rows() -> dict[tuple[str, str, str], dict[str, str]]:
+    zip_path = ensure_download(COUSUB_ZIP_URL, COUSUB_ZIP_CACHE)
+    with zipfile.ZipFile(zip_path) as archive:
+        raw_text = archive.read(archive.namelist()[0]).decode("utf-8")
+    output: dict[tuple[str, str, str], dict[str, str]] = {}
+    for row in csv.DictReader(io.StringIO(raw_text), delimiter="\t"):
+        state = row["USPS"].strip()
+        geoid = row["GEOID"].strip()
+        if state not in STATE_ABBR_TO_FIPS:
+            continue
+        output[(geoid[:2], geoid[2:5], geoid[5:])] = row
+    return output
 
 
-def load_known_municipalities() -> list[dict]:
-    contract_city_ids = load_contract_city_ids()
-    municipality_rows: dict[tuple[str, str], dict] = {}
+def strip_legal_area_description(name: str) -> str:
+    value = " ".join(name.strip().split())
+    suffixes = (
+        " city and borough",
+        " consolidated government",
+        " metropolitan government",
+        " unified government",
+        " urban county",
+        " municipality",
+        " township",
+        " plantation",
+        " borough",
+        " village",
+        " town",
+        " city",
+    )
+    lowered = value.lower()
+    for suffix in suffixes:
+        if lowered.endswith(suffix):
+            return value[: -len(suffix)].strip()
+    return value
 
-    def upsert(state: str, municipality: str, source_label: str, municipality_id: str = "", population_rank_note: str = "", already_in_corpus: str = "") -> None:
-        key = (state, municipality)
-        row = municipality_rows.setdefault(
+
+def fallback_government_label(unit_name: str) -> str:
+    value = " ".join(unit_name.strip().split())
+    prefixes = (
+        "CONSOLIDATED GOVERNMENT OF ",
+        "METROPOLITAN GOVERNMENT OF ",
+        "UNIFIED GOVERNMENT OF ",
+        "CITY AND BOROUGH OF ",
+        "CITY AND COUNTY OF ",
+        "MUNICIPALITY OF ",
+        "CHARTER TOWNSHIP OF ",
+        "TOWNSHIP OF ",
+        "BOROUGH OF ",
+        "VILLAGE OF ",
+        "TOWN OF ",
+        "CITY OF ",
+    )
+    upper = value.upper()
+    for prefix in prefixes:
+        if upper.startswith(prefix):
+            value = value[len(prefix) :]
+            break
+    return value.title()
+
+
+def normalize_municipality_lookup(name: str) -> str:
+    value = strip_legal_area_description(name)
+    value = re.sub(r"[^a-z0-9]+", " ", value.lower()).strip()
+    return " ".join(value.split())
+
+
+def load_project_known_municipalities() -> dict[tuple[str, str], dict]:
+    rows: dict[tuple[str, str], dict] = {}
+
+    def upsert(
+        state: str,
+        municipality: str,
+        source_label: str,
+        municipality_id: str = "",
+        population_rank_note: str = "",
+        already_in_corpus: str = "",
+    ) -> None:
+        key = (state, normalize_municipality_lookup(municipality))
+        record = rows.setdefault(
             key,
             {
                 "state": state,
                 "municipality": municipality,
-                "municipality_id": municipality_id or contract_city_ids.get(key, f"{state.lower()}_{slugify_city(municipality)}"),
-                "municipality_source_parts": [],
+                "municipality_id": municipality_id,
+                "source_parts": [],
                 "population_rank_note": "",
-                "already_in_corpus": already_in_corpus or ("yes" if key in contract_city_ids else "no"),
+                "already_in_corpus": "no",
             },
         )
-        if source_label not in row["municipality_source_parts"]:
-            row["municipality_source_parts"].append(source_label)
+        if source_label not in record["source_parts"]:
+            record["source_parts"].append(source_label)
         if municipality_id:
-            row["municipality_id"] = municipality_id
-        if population_rank_note and not row["population_rank_note"]:
-            row["population_rank_note"] = population_rank_note
+            record["municipality_id"] = municipality_id
+        if population_rank_note and not record["population_rank_note"]:
+            record["population_rank_note"] = population_rank_note
         if already_in_corpus:
-            row["already_in_corpus"] = already_in_corpus
+            record["already_in_corpus"] = already_in_corpus
 
     with (ROOT / "data" / "contracts.csv").open(newline="", encoding="utf-8") as handle:
         for row in csv.DictReader(handle):
-            upsert(row["state"], row["city_name"], "data/contracts.csv", municipality_id=row["city_id"], already_in_corpus="yes")
-
+            upsert(
+                row["state"],
+                row["city_name"],
+                "data/contracts.csv",
+                municipality_id=row["city_id"],
+                already_in_corpus="yes",
+            )
     with (DOCS / "national_source_targets_2026-07-12.csv").open(newline="", encoding="utf-8") as handle:
         for row in csv.DictReader(handle):
-            upsert(FULL_STATE_TO_ABBR[row["state"]], row["city"], "docs/analysis/national_source_targets_2026-07-12.csv")
-
-    with (DOCS / "gabriel_state_source_scout_pa_batch25_municipalities_2026-07-15.csv").open(newline="", encoding="utf-8") as handle:
+            upsert(
+                FULL_STATE_TO_ABBR[row["state"]],
+                row["city"],
+                "docs/analysis/national_source_targets_2026-07-12.csv",
+            )
+    with (DOCS / "gabriel_state_source_scout_pa_batch25_municipalities_2026-07-15.csv").open(
+        newline="", encoding="utf-8"
+    ) as handle:
         for row in csv.DictReader(handle):
             upsert(
                 row["state"],
@@ -429,30 +566,10 @@ def load_known_municipalities() -> list[dict]:
                 population_rank_note=row["population_rank_note"],
                 already_in_corpus=row["already_in_corpus"],
             )
-
-    coverage_ids = load_scout_coverage_rows_by_muni_id()
-    rows: list[dict] = []
-    for key in sorted(municipality_rows):
-        row = municipality_rows[key]
-        mapping = KNOWN_MUNICIPALITY_COUNTY_MAP.get(key)
-        if mapping is None:
-            raise KeyError(f"Missing county mapping for municipality {key}")
-        notes = mapping.note
-        rows.append(
-            {
-                "state": row["state"],
-                "municipality": row["municipality"],
-                "municipality_id": row["municipality_id"],
-                "county_geoid": mapping.county_geoid,
-                "county_name": "",  # filled later
-                "source_for_county_mapping": COUNTY_MAPPING_SOURCE,
-                "municipality_source": "; ".join(row["municipality_source_parts"]),
-                "population_rank_note": row["population_rank_note"],
-                "already_scouted": "yes" if row["municipality_id"] in coverage_ids else "no",
-                "already_in_corpus": row["already_in_corpus"],
-                "notes": notes,
-            }
-        )
+    missing_ids = [key for key, row in rows.items() if not row["municipality_id"]]
+    for key in missing_ids:
+        state, normalized = key
+        rows[key]["municipality_id"] = f"{state.lower()}_{normalized.replace(' ', '_')}"
     return rows
 
 
@@ -465,31 +582,231 @@ def load_scout_coverage_rows_by_muni_id() -> dict[str, dict]:
     return rows
 
 
-def attach_county_names(municipality_rows: list[dict], county_rows: list[dict]) -> list[dict]:
-    county_lookup = {row["county_geoid"]: row["county_name"] for row in county_rows}
-    output = []
-    for row in municipality_rows:
-        county_name = county_lookup.get(row["county_geoid"])
-        if county_name is None:
-            raise KeyError(f"Unknown county geoid {row['county_geoid']} for {row['municipality_id']}")
-        updated = dict(row)
-        updated["county_name"] = county_name
-        output.append(updated)
-    return sorted(output, key=lambda row: (row["state"], row["municipality"]))
+def geographic_label_and_type(
+    government: dict[str, str],
+    place_rows: dict[tuple[str, str], list[dict[str, str]]],
+    cousub_rows: dict[tuple[str, str, str], dict[str, str]],
+) -> tuple[str, str]:
+    if government["UNIT_TYPE"] == "2 - MUNICIPAL":
+        matches = place_rows.get((government["FIPS_STATE"], government["FIPS_PLACE"]), [])
+        if matches:
+            return strip_legal_area_description(matches[0]["PLACENAME"]), "place"
+        return fallback_government_label(government["UNIT_NAME"]), "place"
+    key = (government["FIPS_STATE"], government["FIPS_COUNTY"], government["FIPS_PLACE"])
+    match = cousub_rows.get(key)
+    if match:
+        return strip_legal_area_description(match["NAME"]), "county_subdivision"
+    return fallback_government_label(government["UNIT_NAME"]), "county_subdivision"
+
+
+def build_municipality_rows_and_crosswalk(
+    county_rows: list[dict],
+    government_rows: list[dict[str, str]],
+    place_rows: dict[tuple[str, str], list[dict[str, str]]],
+    cousub_rows: dict[tuple[str, str, str], dict[str, str]],
+    project_known: dict[tuple[str, str], dict],
+    scout_rows: dict[str, dict],
+) -> tuple[list[dict], list[dict]]:
+    county_lookup = {row["county_geoid"]: row for row in county_rows}
+    provisional: list[dict] = []
+    source_keys: dict[tuple[str, str], list[dict]] = defaultdict(list)
+    for government in government_rows:
+        municipality, geography_type = geographic_label_and_type(government, place_rows, cousub_rows)
+        record = {
+            "government": government,
+            "municipality": municipality,
+            "geography_type": geography_type,
+        }
+        provisional.append(record)
+        source_keys[(government["STATE"], normalize_municipality_lookup(municipality))].append(record)
+
+    project_by_census_id: dict[str, dict] = {}
+    unresolved_project_keys: dict[tuple[str, str], int] = {}
+    for key, project in project_known.items():
+        candidates = source_keys.get(key, [])
+        if len(candidates) == 1:
+            selected = candidates[0]
+        else:
+            municipal_candidates = [
+                candidate
+                for candidate in candidates
+                if candidate["government"]["UNIT_TYPE"] == "2 - MUNICIPAL"
+            ]
+            if len(municipal_candidates) != 1:
+                unresolved_project_keys[key] = len(candidates)
+                continue
+            selected = municipal_candidates[0]
+        project_by_census_id[selected["government"]["CENSUS_ID_PID6"]] = project
+    if unresolved_project_keys:
+        raise ValueError(
+            "Project-known municipality matching is incomplete or ambiguous: "
+            f"{unresolved_project_keys}"
+        )
+
+    matched_project_keys: set[tuple[str, str]] = set()
+    universe_rows: list[dict] = []
+    crosswalk_rows: list[dict] = []
+    for item in provisional:
+        government = item["government"]
+        state = government["STATE"]
+        source_key = (state, normalize_municipality_lookup(item["municipality"]))
+        project = project_by_census_id.get(government["CENSUS_ID_PID6"])
+        if project:
+            matched_project_keys.add(source_key)
+            municipality = project["municipality"]
+            municipality_id = project["municipality_id"]
+            project_sources = project["source_parts"]
+            population_rank_note = project["population_rank_note"]
+            in_corpus = project["already_in_corpus"]
+        else:
+            municipality = item["municipality"]
+            municipality_id = f"cog_2025_{government['CENSUS_ID_PID6']}"
+            project_sources = []
+            population_rank_note = ""
+            in_corpus = "no"
+
+        primary_county_geoid = government["FIPS_STATE"] + government["FIPS_COUNTY"]
+        relationship_candidates: dict[str, dict[str, str]] = {}
+        if item["geography_type"] == "place":
+            for place_row in place_rows.get((government["FIPS_STATE"], government["FIPS_PLACE"]), []):
+                county_geoid = place_row["STATEFP"] + place_row["COUNTYFP"]
+                if county_geoid in county_lookup:
+                    relationship_candidates[county_geoid] = {
+                        "source": PLACE_COUNTY_URL,
+                        "vintage": PLACE_COUNTY_SOURCE_VINTAGE,
+                        "basis": "2020_place_by_county",
+                        "notes": "",
+                    }
+        else:
+            cousub_key = (
+                government["FIPS_STATE"],
+                government["FIPS_COUNTY"],
+                government["FIPS_PLACE"],
+            )
+            if cousub_key in cousub_rows and primary_county_geoid in county_lookup:
+                relationship_candidates[primary_county_geoid] = {
+                    "source": COUSUB_ZIP_URL,
+                    "vintage": COUSUB_SOURCE_VINTAGE,
+                    "basis": "2024_county_subdivision_geoid",
+                    "notes": "",
+                }
+
+        if primary_county_geoid in county_lookup and primary_county_geoid not in relationship_candidates:
+            fallback_note = (
+                "Current primary/headquarters county from the 2025 Government Units Listing; "
+                "the older place-by-county table did not supply a current county-equivalent match."
+            )
+            relationship_candidates[primary_county_geoid] = {
+                "source": GOVERNMENT_UNITS_ZIP_URL,
+                "vintage": GOVERNMENT_UNITS_SOURCE_VINTAGE,
+                "basis": "2025_government_units_primary_county_supplement",
+                "notes": fallback_note,
+            }
+        if not relationship_candidates:
+            raise ValueError(
+                f"No current county relationship for Census government {government['CENSUS_ID_PID6']}"
+            )
+
+        relationship_count = len(relationship_candidates)
+        for county_geoid, relationship in sorted(relationship_candidates.items()):
+            county = county_lookup[county_geoid]
+            notes = relationship["notes"]
+            if county["county_equivalent_type"] == "independent_city":
+                notes = (notes + " Independent city represented as its own county-equivalent.").strip()
+            if state == "DC":
+                notes = (notes + " DC represented as one municipal government and one county-equivalent.").strip()
+            crosswalk_rows.append(
+                {
+                    "municipality_id": municipality_id,
+                    "census_gov_id": government["CENSUS_ID_PID6"],
+                    "state": state,
+                    "municipality": municipality,
+                    "government_name": government["UNIT_NAME"],
+                    "government_type": "municipal" if government["UNIT_TYPE"] == "2 - MUNICIPAL" else "township",
+                    "geography_type": item["geography_type"],
+                    "state_fips": government["FIPS_STATE"],
+                    "local_geography_fips": government["FIPS_PLACE"],
+                    "county_geoid": county_geoid,
+                    "county_name": county["county_name"],
+                    "county_equivalent_type": county["county_equivalent_type"],
+                    "is_government_units_primary_county": "yes" if county_geoid == primary_county_geoid else "no",
+                    "relationship_source": relationship["source"],
+                    "relationship_vintage": relationship["vintage"],
+                    "relationship_basis": relationship["basis"],
+                    "notes": notes,
+                }
+            )
+
+        scout = scout_rows.get(municipality_id)
+        scout_positive_status = (
+            "not_scouted"
+            if scout is None
+            else ("yes" if int(scout["candidate_count"] or 0) > 0 else "no")
+        )
+        notes = MUNICIPALITY_SCOPE_NOTE
+        if relationship_count > 1:
+            notes += " Multi-county government; all county relationships are in the crosswalk."
+        if state == "DC":
+            notes += " District of Columbia is represented explicitly as a municipal government."
+        universe_rows.append(
+            {
+                "state": state,
+                "state_fips": government["FIPS_STATE"],
+                "municipality": municipality,
+                "municipality_id": municipality_id,
+                "census_gov_id": government["CENSUS_ID_PID6"],
+                "government_name": government["UNIT_NAME"],
+                "government_type": "municipal" if government["UNIT_TYPE"] == "2 - MUNICIPAL" else "township",
+                "geography_type": item["geography_type"],
+                "political_description": government.get("POLITICAL_CODE_DESCRIPTION", ""),
+                "local_geography_fips": government["FIPS_PLACE"],
+                "population": government.get("POPULATION", ""),
+                "population_year": government.get("POPULATION_SOURCE_YEAR", ""),
+                "active_status": government["ACTIVE"],
+                "government_units_primary_county_geoid": primary_county_geoid,
+                "county_relationship_count": relationship_count,
+                "multi_county_flag": "yes" if relationship_count > 1 else "no",
+                "project_known_before_national_build": "yes" if project else "no",
+                "already_scouted": "yes" if scout else "no",
+                "scout_positive_status": scout_positive_status,
+                "verified_status": "not_accounted",
+                "ingested_status": in_corpus,
+                "codified_status": "not_accounted",
+                "already_in_corpus": in_corpus,
+                "government_website": government.get("WEB_ADDRESS", ""),
+                "municipality_source": "; ".join([GOVERNMENT_UNITS_ZIP_URL, *project_sources]),
+                "population_rank_note": population_rank_note,
+                "notes": notes,
+            }
+        )
+
+    if matched_project_keys != set(project_known):
+        raise ValueError("Not every project-known municipality was preserved in the national universe")
+    universe_ids = {row["municipality_id"] for row in universe_rows}
+    unmatched_scout_ids = sorted(set(scout_rows) - universe_ids)
+    if unmatched_scout_ids:
+        raise ValueError(f"Scouted municipalities missing from national universe: {unmatched_scout_ids}")
+    if len(universe_ids) != len(universe_rows):
+        raise ValueError("Municipality IDs are not unique")
+    crosswalk_keys = [(row["municipality_id"], row["county_geoid"]) for row in crosswalk_rows]
+    if len(crosswalk_keys) != len(set(crosswalk_keys)):
+        raise ValueError("Municipality-county crosswalk contains duplicate relationships")
+    return (
+        sorted(universe_rows, key=lambda row: (row["state_fips"], row["municipality"], row["census_gov_id"])),
+        sorted(crosswalk_rows, key=lambda row: (row["state_fips"], row["municipality_id"], row["county_geoid"])),
+    )
 
 
 def build_national_state_coverage(
     county_rows: list[dict], municipality_rows: list[dict], scout_rows: dict[str, dict], last_updated: str
 ) -> list[dict]:
     county_counts: dict[str, int] = defaultdict(int)
+    municipalities_by_state: dict[str, list[dict]] = defaultdict(list)
+    scout_by_state: dict[str, list[dict]] = defaultdict(list)
     for row in county_rows:
         county_counts[row["state"]] += 1
-
-    known_by_state: dict[str, list[dict]] = defaultdict(list)
     for row in municipality_rows:
-        known_by_state[row["state"]].append(row)
-
-    scout_by_state: dict[str, list[dict]] = defaultdict(list)
+        municipalities_by_state[row["state"]].append(row)
     for row in scout_rows.values():
         scout_by_state[row["state"]].append(row)
 
@@ -500,14 +817,25 @@ def build_national_state_coverage(
             {
                 "state": state,
                 "county_equivalent_count": county_counts[state],
-                "municipalities_known": len(known_by_state.get(state, [])),
+                "municipalities_in_universe": len(municipalities_by_state.get(state, [])),
                 "municipalities_scouted": len(scout_rows_state),
-                "municipalities_scout_positive": sum(1 for row in scout_rows_state if int(row["candidate_count"] or 0) > 0),
-                "municipalities_with_police_candidate": sum(1 for row in scout_rows_state if int(row["police_candidate_count"] or 0) > 0),
-                "municipalities_with_fire_candidate": sum(1 for row in scout_rows_state if int(row["fire_candidate_count"] or 0) > 0),
-                "municipalities_with_non_safety_candidate": sum(1 for row in scout_rows_state if int(row["non_safety_candidate_count"] or 0) > 0),
-                "municipalities_with_likely_triad": sum(1 for row in scout_rows_state if row["likely_triad"] == "yes"),
+                "municipalities_scout_positive": sum(
+                    1 for row in scout_rows_state if int(row["candidate_count"] or 0) > 0
+                ),
+                "municipalities_with_police_candidate": sum(
+                    1 for row in scout_rows_state if int(row["police_candidate_count"] or 0) > 0
+                ),
+                "municipalities_with_fire_candidate": sum(
+                    1 for row in scout_rows_state if int(row["fire_candidate_count"] or 0) > 0
+                ),
+                "municipalities_with_non_safety_candidate": sum(
+                    1 for row in scout_rows_state if int(row["non_safety_candidate_count"] or 0) > 0
+                ),
+                "municipalities_with_likely_triad": sum(
+                    1 for row in scout_rows_state if row["likely_triad"] == "yes"
+                ),
                 "candidate_rows_total": sum(int(row["candidate_count"] or 0) for row in scout_rows_state),
+                # Preserve the existing PA municipality-level aggregation convention exactly.
                 "official_or_union_candidate_rows": sum(
                     int(row["candidate_count"] or 0)
                     for row in scout_rows_state
@@ -518,46 +846,98 @@ def build_national_state_coverage(
                     for row in scout_rows_state
                     if row["best_candidate_priority"] == "high"
                 ),
-                "scout_total_cost": round(sum(float(row["total_cost"] or 0.0) for row in scout_rows_state), 7),
-                "input_tokens_total": sum(float(row["input_tokens_total"] or 0.0) for row in scout_rows_state),
-                "reasoning_tokens_total": sum(float(row["reasoning_tokens_total"] or 0.0) for row in scout_rows_state),
-                "output_tokens_total": sum(float(row["output_tokens_total"] or 0.0) for row in scout_rows_state),
+                "scout_total_cost": round(
+                    sum(float(row["total_cost"] or 0.0) for row in scout_rows_state), 7
+                ),
+                "input_tokens_total": sum(
+                    float(row["input_tokens_total"] or 0.0) for row in scout_rows_state
+                ),
+                "reasoning_tokens_total": sum(
+                    float(row["reasoning_tokens_total"] or 0.0) for row in scout_rows_state
+                ),
+                "output_tokens_total": sum(
+                    float(row["output_tokens_total"] or 0.0) for row in scout_rows_state
+                ),
                 "last_updated": last_updated,
+                "notes": MUNICIPALITY_SCOPE_NOTE,
             }
         )
     return rows
 
 
-def build_national_county_coverage(
-    county_rows: list[dict], municipality_rows: list[dict], scout_rows: dict[str, dict]
-) -> list[dict]:
-    municipalities_by_county: dict[str, list[dict]] = defaultdict(list)
-    for row in municipality_rows:
-        municipalities_by_county[row["county_geoid"]].append(row)
+def validate_scout_state_carry_forward(national_state_rows: list[dict]) -> None:
+    """Require national scout metrics to reproduce the existing state rollup."""
+    generated = {row["state"]: row for row in national_state_rows}
+    path = DOCS / "gabriel_state_source_scout_state_coverage.csv"
+    field_map = {
+        "municipalities_scouted": "municipalities_scouted",
+        "municipalities_with_any_candidate": "municipalities_scout_positive",
+        "municipalities_with_police_candidate": "municipalities_with_police_candidate",
+        "municipalities_with_fire_candidate": "municipalities_with_fire_candidate",
+        "municipalities_with_non_safety_candidate": "municipalities_with_non_safety_candidate",
+        "municipalities_with_likely_triad": "municipalities_with_likely_triad",
+        "candidate_rows_total": "candidate_rows_total",
+        "official_or_union_candidate_rows": "official_or_union_candidate_rows",
+        "high_priority_candidate_rows": "high_priority_candidate_rows",
+        "total_cost": "scout_total_cost",
+        "input_tokens_total": "input_tokens_total",
+        "reasoning_tokens_total": "reasoning_tokens_total",
+        "output_tokens_total": "output_tokens_total",
+    }
+    with path.open(newline="", encoding="utf-8") as handle:
+        for source_row in csv.DictReader(handle):
+            state = source_row["state"]
+            target_row = generated.get(state)
+            if target_row is None:
+                raise ValueError(f"Scout state {state} is missing from national coverage")
+            for source_field, target_field in field_map.items():
+                if Decimal(str(source_row[source_field] or 0)) != Decimal(str(target_row[target_field] or 0)):
+                    raise ValueError(
+                        f"Scout carry-forward mismatch for {state} {source_field}: "
+                        f"{source_row[source_field]} != {target_row[target_field]}"
+                    )
 
-    scout_by_muni_id = scout_rows
+
+def build_national_county_coverage(
+    county_rows: list[dict],
+    municipality_rows: list[dict],
+    crosswalk_rows: list[dict],
+    scout_rows: dict[str, dict],
+) -> list[dict]:
+    municipality_lookup = {row["municipality_id"]: row for row in municipality_rows}
+    associations_by_county: dict[str, list[dict]] = defaultdict(list)
+    for relationship in crosswalk_rows:
+        associations_by_county[relationship["county_geoid"]].append(
+            municipality_lookup[relationship["municipality_id"]]
+        )
+
     rows = []
     for county_row in county_rows:
         county_geoid = county_row["county_geoid"]
-        munis = municipalities_by_county.get(county_geoid, [])
-        scouted = [m for m in munis if m["municipality_id"] in scout_by_muni_id]
+        associations = associations_by_county.get(county_geoid, [])
+        scouted = [row for row in associations if row["municipality_id"] in scout_rows]
         rows.append(
             {
                 "state": county_row["state"],
                 "county_geoid": county_geoid,
                 "county_name": county_row["county_name"],
-                "municipalities_known": len(munis),
-                "municipalities_scouted": len(scouted),
-                "municipalities_scout_positive": sum(
-                    1 for muni in scouted if int(scout_by_muni_id[muni["municipality_id"]]["candidate_count"] or 0) > 0
+                "municipality_associations_in_universe": len(associations),
+                "municipality_associations_scouted": len(scouted),
+                "municipality_associations_scout_positive": sum(
+                    1
+                    for municipality in scouted
+                    if int(scout_rows[municipality["municipality_id"]]["candidate_count"] or 0) > 0
                 ),
                 "candidate_rows_total": sum(
-                    int(scout_by_muni_id[muni["municipality_id"]]["candidate_count"] or 0) for muni in scouted
+                    int(scout_rows[municipality["municipality_id"]]["candidate_count"] or 0)
+                    for municipality in scouted
                 ),
-                "likely_triad_municipalities": sum(
-                    1 for muni in scouted if scout_by_muni_id[muni["municipality_id"]]["likely_triad"] == "yes"
+                "likely_triad_municipality_associations": sum(
+                    1
+                    for municipality in scouted
+                    if scout_rows[municipality["municipality_id"]]["likely_triad"] == "yes"
                 ),
-                "notes": INCOMPLETE_MUNI_NOTE,
+                "notes": COUNTY_COVERAGE_NOTE,
             }
         )
     return rows
@@ -566,24 +946,53 @@ def build_national_county_coverage(
 def main() -> int:
     county_rows = load_county_universe()
     county_state_rows = state_summary_rows(county_rows)
-    municipality_rows = attach_county_names(load_known_municipalities(), county_rows)
+    government_rows = load_government_units()
+    place_rows = load_place_county_rows()
+    cousub_rows = load_cousub_rows()
+    project_known = load_project_known_municipalities()
     scout_rows = load_scout_coverage_rows_by_muni_id()
+    municipality_rows, crosswalk_rows = build_municipality_rows_and_crosswalk(
+        county_rows,
+        government_rows,
+        place_rows,
+        cousub_rows,
+        project_known,
+        scout_rows,
+    )
     last_updated = datetime.now().replace(microsecond=0).isoformat()
-    national_state_rows = build_national_state_coverage(county_rows, municipality_rows, scout_rows, last_updated)
-    national_county_rows = build_national_county_coverage(county_rows, municipality_rows, scout_rows)
+    national_state_rows = build_national_state_coverage(
+        county_rows, municipality_rows, scout_rows, last_updated
+    )
+    validate_scout_state_carry_forward(national_state_rows)
+    national_county_rows = build_national_county_coverage(
+        county_rows, municipality_rows, crosswalk_rows, scout_rows
+    )
 
     write_csv(DOCS / "national_county_universe.csv", county_rows, COUNTY_UNIVERSE_FIELDS)
     write_csv(DOCS / "national_county_state_summary.csv", county_state_rows, COUNTY_STATE_SUMMARY_FIELDS)
     write_csv(DOCS / "national_municipality_universe.csv", municipality_rows, MUNICIPALITY_UNIVERSE_FIELDS)
+    write_csv(
+        DOCS / "national_municipality_county_crosswalk.csv",
+        crosswalk_rows,
+        MUNICIPALITY_COUNTY_CROSSWALK_FIELDS,
+    )
     write_csv(DOCS / "national_scout_coverage_state.csv", national_state_rows, NATIONAL_STATE_COVERAGE_FIELDS)
     write_csv(DOCS / "national_scout_coverage_county.csv", national_county_rows, NATIONAL_COUNTY_COVERAGE_FIELDS)
 
-    total_counties = len(county_rows)
-    total_municipalities = len(municipality_rows)
     total_scouted = sum(1 for row in municipality_rows if row["already_scouted"] == "yes")
-    print(f"county_equivalents={total_counties}")
-    print(f"known_municipalities={total_municipalities}")
+    total_scout_positive = sum(
+        1 for row in municipality_rows if row["scout_positive_status"] == "yes"
+    )
+    print(f"county_equivalents={len(county_rows)}")
+    print(f"municipalities_in_universe={len(municipality_rows)}")
+    print(f"municipality_county_relationships={len(crosswalk_rows)}")
+    print(
+        "multi_county_municipalities="
+        f"{sum(1 for row in municipality_rows if row['multi_county_flag'] == 'yes')}"
+    )
+    print(f"project_known_municipalities_preserved={len(project_known)}")
     print(f"scouted_municipalities={total_scouted}")
+    print(f"scout_positive_municipalities={total_scout_positive}")
     return 0
 
 
