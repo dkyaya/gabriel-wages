@@ -2,9 +2,66 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-16T15:58:25-04:00`
+Last updated: `2026-07-16T16:14:03-04:00`
 
 ---
+
+## 2026-07-16T16:14:03-04:00 - Prepared and dry-ran the Texas slice of national batch 01; exact three-row inputs are ready, but the generic minimal prompt should be made row-aware before any live scout
+
+**Commit target:** `Prepare Texas national scout dry run`
+
+### Current State After This Entry
+
+- **Relay/repository check:** starting commit `0d6b3a9ffc6d913a844490874d0cf52a8c1554d3`. Every substantive required file carried by `tmp/pa_full_state_municipality_scout_manifest_2026-07-16_relay_0d6b3a9.zip` matched the repository byte-for-byte. The relay omitted unchanged `AGENTS.md`, `next_wave_municipality_scout_manifest_2026-07-16.csv`, and `build_next_wave_municipality_manifest.py`; the repository copies supplied them. Existing untracked `.claude/` material was left untouched. No remote was inspected or modified.
+- **Exact Texas slice:** `wave_id=NWMS-2026-07-16-01` plus `state=TX` yields exactly three rows: San Antonio rank 1 (`tx_san_antonio`, Census ID `175988`), Austin rank 4 (`tx_austin`, `176394`), and Houston rank 13 (`tx_houston`, `176169`). All are municipal/place governments, multi-county, already in the corpus, not already scouted, and `ready_for_scout` at manifest stage.
+- **Full input:** `docs/analysis/national_batch01_tx_scout_input_2026-07-16.csv` preserves all 22 authoritative manifest fields. A field-for-field reconciliation to the source rows passed.
+- **Minimal input:** `docs/analysis/national_batch01_tx_scout_input_runner_minimal_2026-07-16.csv` preserves exactly `municipality_id,municipality,state` in rank order. This is the current runner's required input contract.
+- **Dry-run command:** explicit `--dry-run --state TX --prompt-mode minimal`, using the minimal input and fixed output directory `tmp/gabriel_state_source_scout/TX/national_batch01_tx_dry_run_2026-07-16`. It built three prompts and returned 0. Metadata records `mode=dry_run`, `municipalities_requested=3`, `live_attempted=false`, `live_succeeded=false`, and `live_failure_reason=null`. Only prompt preview and metadata files were created.
+- **Exact prompts/review:** `docs/analysis/national_batch01_tx_scout_dry_run_review_2026-07-16.md` embeds all three exact prompt previews and reviews identity, state, unit targets, employer confusion, separate unit searching, and unverified-status handling.
+- **Prompt-context finding:** `load_municipalities` retains extra columns, but prompt construction uses only municipality/state. The full input's exact government name, Census ID, county context, selection reason, expected units, and verification notes never reach the prompt.
+- **San Antonio:** current generic prompt is materially misaligned. The rank-1 purpose is an ordinary civilian comparator/wage-setting pathway and explicitly says not to rediscover existing safety contracts; the preview asks for police, fire, and non-safety equally.
+- **Austin:** current generic prompt is materially misaligned. The rank-4 purpose is an ordinary general-municipal comparator distinct from EMS; the preview loses the non-EMS requirement and asks for all three categories.
+- **Houston:** police/fire/non-safety categories broadly align, but the prompt omits repeat-cycle priority, contract years, and public impasse/arbitration/factfinding material.
+- **Employer risk:** none of the prompts identifies `CITY OF ...` or Census ID, and none excludes county, school, transit, hospital/health, regional-authority, or private-provider substitutes. These entities cannot silently serve as a same-city ordinary municipal comparison.
+- **Status discipline:** the minimal prompt does not itself label output unverified, but the existing parser hard-codes every eventual candidate to `verification_status=unverified` and `promotion_status=raw_model_output`. No live output or scout-positive status was created.
+- **Pre-live decision:** do not run the three generic previews live. Make prompt construction row-aware; request exact employer plus `employer`, `contract_years`, and `why_relevant`; add row-specific targets and exclusion language; explicitly label returns unverified; then rerun dry-run. This is a recommendation only—runner code was not changed in this scoped preparation/review task.
+- **Protected state:** no change to the national or PA manifest/builders, scout coverage, `data/contracts.csv`, `data/city_coverage.csv`, `corpus/`, claim/evidence files, or ingestion inputs. No GABRIEL/model/API/codify/ingest call occurred.
+
+### Validation/audit results
+
+```text
+Texas slice integrity
+PASS — full Texas slice is an exact 22-field projection of the authoritative manifest
+PASS — minimal runner input preserves exact ID/name/state order
+rows=3 | municipalities=San Antonio|Austin|Houston | priorities=1|4|13
+
+python scripts/gabriel_state_source_scout.py --dry-run ... --prompt-mode minimal
+DRY RUN — 3 municipality prompts built for state=TX
+mode=dry_run | live_attempted=false | live_succeeded=false
+
+python -m py_compile scripts/build_next_wave_municipality_manifest.py
+python -m py_compile scripts/build_pa_full_state_municipality_manifest.py
+python -m py_compile scripts/build_scout_coverage.py
+python -m py_compile scripts/gabriel_state_source_scout.py
+OK
+
+python scripts/validate.py
+VALIDATION PASSED — contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19
+exact-cycle: 10 | overlap-cycle: 18 | exploratory adjacent matches: 2
+safety units unmatched: 6
+```
+
+### Recommended next run
+
+1. Modify the minimal prompt path so each municipality row contributes exact `government_name`, `census_gov_id`, `expected_units_to_search`, selection purpose, and exclusions. Add `employer`, `contract_years`, and `why_relevant` to the minimal JSON schema because the parser/scorer already uses them.
+2. Rerun the same three-row Texas slice in dry-run mode and require: San Antonio civilian-only emphasis; Austin ordinary non-safety and explicit non-EMS emphasis; Houston full triad plus repeat-cycle/year emphasis; exact City employer; no county/school/transit/hospital/private substitution; and explicit unverified-lead language.
+3. Only after that preview passes should a live scout be separately considered. If authorized later, use `n_parallels=1`, `prompt_mode=minimal`, `sleep_between_prompts=15`, and one bounded retry at most. Keep every result unverified until exact-employer, URL, document, date, and matched-cycle verification.
 
 ## 2026-07-16T15:58:25-04:00 - Built complete PA municipality scout planning frame, corrected jurisdiction-state accounting, and compared the PA path with national batch 01; no live scout/model call, verification, ingestion, codification, push, or remote work
 

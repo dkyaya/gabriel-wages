@@ -6,6 +6,63 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-16 16:14 EDT (Prepared and dry-ran the Texas slice of national batch 01; no live scout/model call, verification, ingestion, codification, push, or remote work) - 3 exact targets: San Antonio rank 1, Austin rank 4, Houston rank 13; dry-run succeeded and exposed a row-specific prompt-context gap
+
+**Did**
+- Started at local commit `0d6b3a9ffc6d913a844490874d0cf52a8c1554d3`. Every required substantive file carried by `tmp/pa_full_state_municipality_scout_manifest_2026-07-16_relay_0d6b3a9.zip` matched the repository byte-for-byte. The relay omitted unchanged `AGENTS.md`, the national manifest, and the national-manifest builder, so read the repository copies. Left unrelated untracked `.claude/` material untouched and did not inspect/configure a remote.
+- Filtered the authoritative national manifest to `wave_id=NWMS-2026-07-16-01` and `state=TX`. Created a full 22-field context CSV and a minimal runner CSV containing exactly San Antonio (`tx_san_antonio`), Austin (`tx_austin`), and Houston (`tx_houston`) in ranks 1/4/13 order.
+- Parse-back reconciled the full rows field-for-field to the national manifest and the minimal rows to the runner-required `municipality_id,municipality,state` projection.
+- Ran `gabriel_state_source_scout.py` only with explicit `--dry-run --state TX --prompt-mode minimal` and a fixed temporary output directory. It built three previews and metadata; metadata confirms `live_attempted=false`, `live_succeeded=false`, and no failure.
+- Added a review note containing all three exact prompts, municipality-specific risk review, and the pre-live recommendation.
+
+**Decisions and why**
+- Preserved all national-manifest fields in the full input, including exact Census identity, full multi-county context, claim connection, expected unit target, and verification notes. Kept the separate three-column input because the current runner consumes only those fields.
+- Do **not** proceed live with the current generic minimal prompts. The runner retains extra CSV columns in memory but passes only municipality/state into `build_prompt`, so the manifest's target-specific reason and expected units are discarded.
+- Recommend a narrowly scoped row-aware prompt change before any live authorization: exact city employer/Census ID; row-specific expected units; explicit exclusion of county, school, transit, hospital/health, regional-authority, and private-provider substitutes; `employer`, `contract_years`, and `why_relevant` in minimal JSON; and an explicit unverified-lead instruction. Rerun dry-run after that change.
+
+**Surprises/breakage**
+- Dry-run mode worked exactly as documented and did not enter the live path.
+- San Antonio's authoritative purpose is ordinary civilian comparator repair and explicitly says not to rediscover safety contracts, but the preview asks equally for police, fire, and non-safety.
+- Austin's authoritative purpose requires an ordinary non-safety comparator distinct from EMS, but the preview loses the non-EMS exclusion and asks all three generic categories.
+- Houston's three categories broadly align, but the preview omits repeat-cycle priority, contract years, and impasse/arbitration/factfinding context.
+- The minimal response schema omits `employer`, `contract_years`, and `why_relevant` even though the existing parser/scorer accepts or uses those fields. The code still hard-codes any future candidate to `verification_status=unverified` and `promotion_status=raw_model_output`; no candidate was produced here.
+
+**Validation/audit results**
+```text
+Texas input reconciliation
+PASS — full Texas slice is an exact 22-field projection of the authoritative manifest
+PASS — minimal runner input preserves exact ID/name/state order
+rows=3 | municipalities=San Antonio|Austin|Houston | priorities=1|4|13
+
+dry run
+DRY RUN — 3 municipality prompts built for state=TX
+mode=dry_run | live_attempted=false | live_succeeded=false
+
+python -m py_compile scripts/build_next_wave_municipality_manifest.py
+python -m py_compile scripts/build_pa_full_state_municipality_manifest.py
+python -m py_compile scripts/build_scout_coverage.py
+python -m py_compile scripts/gabriel_state_source_scout.py
+OK
+
+python scripts/validate.py
+VALIDATION PASSED — contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19
+exact-cycle: 10 | overlap-cycle: 18 | exploratory adjacent matches: 2
+safety units unmatched: 6
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units.
+
+**Next steps**
+1. Make the minimal prompt row-aware without changing scout-stage status semantics, then rerun this exact three-row dry-run and inspect the new prompt preview.
+2. Do not authorize a live Texas run until San Antonio targets only its civilian comparison need, Austin explicitly excludes EMS and other non-city substitutes, and Houston requests a repeat cycle with years.
+3. If a later live run is separately authorized after prompt review, use `n_parallels=1`, `prompt_mode=minimal`, `sleep_between_prompts=15`, keep all returns unverified, and verify exact employer/date/matched cycles before any promotion.
+
 ## 2026-07-16 15:58 EDT (Built complete PA municipality scout planning frame and compared it with the national claim-driven wave; no scout/model calls, verification, ingestion, codification, push, or remote work) - PA 2,557 total, 25 scouted excluded, 2,532 unscouted in 26 planning batches / 102 runner shards
 
 **Did**
