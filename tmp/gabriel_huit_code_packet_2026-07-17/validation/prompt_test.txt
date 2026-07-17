@@ -1,0 +1,7 @@
+Command: python scripts/test_gabriel_state_source_scout_prompt.py
+Exit status: 0
+PASS: row-aware prompt retains contextual fields
+PASS: three-column input fallback remains valid
+PASS: strict unit/document/no-candidate guidance is present
+PASS: new candidate-stage fields survive parsing and remain unverified
+PASS: live-process completion remains distinct from model-response success

@@ -2,9 +2,25 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-17T14:11:00-04:00`
+Last updated: `2026-07-17T14:20:00-04:00`
 
 ---
+
+## 2026-07-17T14:20:00-04:00 - HUIT code packet prepared from the actual failing proxy-call path, with secret-safe artifacts only
+
+**Commit target:** `Package GABRIEL proxy code for HUIT`
+
+### Current State After This Entry
+
+- **Packet purpose:** HUIT requested the code returning `['Connection error.']`. The packet is an allow-listed ZIP, not a repository export: exact synthetic smoke script, actual scout runner, no-network prompt/outcome test, README, email-ready summary, sanitized metadata/console log, and the safe one-row raw output.
+- **Actual call path:** the smoke script's `main()` invokes `gabriel.whatever(...)` with `base_url=https://go.apis.huit.harvard.edu/ais-openai-direct/v2`, `gpt-5.4-nano`, one prompt, `web_search=False`, serial parallelism, and the Harvard subscription header. `scripts/gabriel_state_source_scout.py` contains the equivalent production path in `run_live_batch()`.
+- **Sanitization:** no credential value was found in the copied smoke outputs. Absolute local filesystem/cache paths were removed from metadata/console copies, which are named `_redacted`. `.env`, credentials, tokens, cookies, local key files, shell history, cache files, research/data/corpus files, and the full repository are excluded.
+- **Current failure evidence:** unchanged: one returned row, exact `['Connection error.']`, no response ID/text/output tokens, 13 input tokens, `2.6e-06` cost, and `model_response_succeeded=false`.
+- **Protected state:** no API/model call, scout, MA rerun, verification, ingestion, codification, canonical-data change, remote work, or push occurred while building the packet.
+
+### Recommended Next Move
+
+Send `tmp/gabriel_huit_code_packet_2026-07-17.zip` to HUIT, with `ERROR_SUMMARY.txt` in the email body. Ask HUIT to trace proxy transport/routing, proxy-side authentication, and upstream `gpt-5.4-nano` availability, and to provide an HTTP/proxy failure category if available. Do not retry a model call or MA until a new synthetic no-search test is separately authorized.
 
 ## 2026-07-17T14:11:00-04:00 - Fresh synthetic no-search retest still returns GABRIEL `Connection error.`
 

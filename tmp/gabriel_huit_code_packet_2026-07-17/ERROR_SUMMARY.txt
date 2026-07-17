@@ -1,0 +1,17 @@
+GABRIEL / Harvard proxy failure — HUIT diagnostic summary
+
+Exact command used:
+python tmp/gabriel_proxy_connection_retest_2026-07-17/gabriel_proxy_smoke_test.py
+
+Exact returned error: ['Connection error.']
+Endpoint: https://go.apis.huit.harvard.edu/ais-openai-direct/v2
+Model: gpt-5.4-nano
+One synthetic prompt; web_search=false; n_parallels=1; timeout/max_timeout=90/90.
+
+Returned row: response ID absent; response text absent; output tokens absent/0;
+input tokens=13; cost=2.6e-06; model_response_succeeded=false.
+Project .env found=true; HARVARD_SUBSCRIPTION_KEY present after local load=true.
+No credential value, token, or secret is included in this packet.
+
+Please check proxy routing/transport, proxy-side subscription-key authentication, and
+upstream gpt-5.4-nano availability. The client receives no HTTP status or provider-specific error.

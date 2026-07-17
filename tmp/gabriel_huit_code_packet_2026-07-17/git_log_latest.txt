@@ -1,0 +1,1 @@
+This relay's local commit is recorded in the final report and relay manifest. It packages the HUIT-shareable code path and sanitized diagnostics; no remote was inspected or contacted.

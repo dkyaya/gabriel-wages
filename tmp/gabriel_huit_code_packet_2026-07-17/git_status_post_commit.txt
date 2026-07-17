@@ -1,0 +1,3 @@
+Recorded after the local commit and before relay-bundle creation:
+
+Nothing to commit from this packet task. The pre-existing untracked .claude/ directory remains untouched and excluded. The generated ZIP artifacts are intentionally ignored by the repository and included in the relay separately.

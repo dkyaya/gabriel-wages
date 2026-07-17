@@ -6,6 +6,49 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-17 14:20 EDT (Packaged the actual GABRIEL proxy-call code and sanitized failure artifacts for HUIT; no connectivity retest or research work) - do not resume Massachusetts or any state scout
+
+**Did**
+- Started at local commit `85a8dd266dc2f20f676a17f14956c46d44844315`. Inspected the latest retest relay, current proxy diagnosis/retest notes, actual runner/test source, and the one-row failed smoke artifacts.
+- Created the HUIT code packet with the actual synthetic smoke script, `scripts/gabriel_state_source_scout.py`, and `scripts/test_gabriel_state_source_scout_prompt.py`; the runner has no other directly imported project-local module needed to explain its proxy path.
+- Added an email-ready error summary and README that identify the exact command, endpoint, model, serial/no-search settings, and current empty `['Connection error.']` row without printing a secret. Copied the metadata and console output with absolute local filesystem/cache paths removed; the raw one-row output contains no secret and was copied unchanged.
+- Ran the requested two compilation checks, prompt test, validator, pipeline test, and coverage audit. No GABRIEL/model/API call, state/MA scout, ingestion, codification, source work, or canonical data/corpus change occurred.
+
+**Decisions and why**
+- Used an explicit allow-list for the HUIT ZIP rather than a repository/archive copy: only relevant code, explanatory files, and sanitized diagnostics are shareable. `.env`, credential-bearing files, caches, shell history, research files, and the full repository are excluded.
+- Kept the runner code unchanged because HUIT requested the actual current code path, not a modified implementation.
+
+**Surprises/breakage**
+- The original diagnostic metadata/console files did not contain a credential, but each exposed absolute local paths; both copies are marked `_redacted` after path sanitization.
+
+**Validation/audit results**
+```text
+python -m py_compile scripts/gabriel_state_source_scout.py
+python -m py_compile scripts/test_gabriel_state_source_scout_prompt.py
+OK
+
+python scripts/test_gabriel_state_source_scout_prompt.py
+5 PASS checks
+
+python scripts/validate.py
+VALIDATION PASSED — contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19
+exact-cycle: 10 | overlap-cycle: 18 | exploratory adjacent matches: 2
+safety units unmatched: 6
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units. No canonical corpus change occurred.
+
+**Next steps**
+1. Send `tmp/gabriel_huit_code_packet_2026-07-17.zip` to HUIT with its `ERROR_SUMMARY.txt` in the message.
+2. Do not run any model/API call or MA/state scout while HUIT diagnoses the proxy/API path.
+3. After HUIT believes the route is restored, obtain separate authorization for one synthetic no-search smoke test; only a successful result could justify separately authorizing MA.
+
 ## 2026-07-17 14:11 EDT (Retested the synthetic no-search GABRIEL/Harvard proxy path for HUIT; connection remains unavailable) - do not resume Massachusetts or any state scout
 
 **Did**

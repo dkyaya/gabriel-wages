@@ -1,0 +1,8 @@
+2026-07-17 14:11:04,153 - matplotlib - WARNING - local matplotlib cache directory was not writable
+2026-07-17 14:11:04,154 - matplotlib - WARNING - Matplotlib created a temporary cache directory because the default path was not writable.
+2026-07-17 14:11:09,193 - matplotlib.font_manager - WARNING - Matplotlib is building the font cache; this may take a moment.
+2026-07-17 14:11:26,205 - gabriel.utils.openai_utils - WARNING - Encountered first connection error. This may be due to network instability or bandwidth limitations. Future connection errors will be silenced and tracked in periodic updates.
+2026-07-17 14:11:26,218 - gabriel.utils.openai_utils - WARNING - 1 requests failed.
+2026-07-17 14:11:26,218 - gabriel.utils.openai_utils - WARNING - 1 API connection errors encountered, indicating network instability or bandwidth limitations; consider reducing concurrency via lower n_parallels.
+2026-07-17 14:11:26,218 - gabriel.utils.openai_utils - WARNING - 1 API errors encountered.
+SMOKE_RESULT rows=1 successful= response_nonempty=False response_id_present=False connection_error_present=True model_response_succeeded=False

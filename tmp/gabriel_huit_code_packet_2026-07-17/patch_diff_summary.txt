@@ -1,0 +1,7 @@
+Summary of HUIT packet changes
+
+- Created a secret-safe, allow-listed HUIT code packet containing the actual smoke-test script, actual scout runner, and its no-network helper test.
+- Added a README and email-ready error summary for the current `['Connection error.']` result.
+- Copied smoke metadata and console output after replacing absolute local paths; raw one-row output required no redaction.
+- Added a tracked note, progress entry, handoff entry, and requested validation/audit records.
+- No runner logic, research data, corpus, state scout, MA run, model/API call, remote, or push was changed.
