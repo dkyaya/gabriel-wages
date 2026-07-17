@@ -1,0 +1,4 @@
+Recorded after the local commit and before relay-bundle creation:
+
+On branch (local working branch)
+nothing to commit; unrelated pre-existing .claude/ remains untracked and was not included or modified.

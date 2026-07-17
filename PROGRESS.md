@@ -6,6 +6,50 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-17 14:11 EDT (Retested the synthetic no-search GABRIEL/Harvard proxy path for HUIT; connection remains unavailable) - do not resume Massachusetts or any state scout
+
+**Did**
+- Started at local commit `6c7c76624e39f8090f96933e956104c1da7b1ff6`. Inspected the latest diagnosis relay and its prior synthetic artifacts, then ran exactly one new one-prompt synthetic JSON-only smoke test. It used the same Harvard proxy/key-loading path, `gpt-5.4-nano`, `n_parallels=1`, low search context, and `web_search=False`; it contained no municipality or source-discovery content.
+- Preserved the raw returned row, non-secret configuration-presence metadata, console output, diagnostic script, and requested validation outputs in `tmp/gabriel_proxy_connection_retest_2026-07-17/`.
+- The retest returned one empty failure row: exact error `['Connection error.']`; no response ID, response text, reasoning/output tokens, or web sources; 13 input tokens; recorded cost `2.6e-06`; and `model_response_succeeded=false`.
+- Ran both requested compilation checks, the prompt contract test (5 PASS checks), validator, pipeline test, and coverage audit. No canonical data, coverage, corpus, source, or research-scout file was changed.
+
+**Decisions and why**
+- Treat the state as still unresolved proxy/API transport-path failure, not a Massachusetts prompt, web-search, parser, or source finding. The new no-search synthetic failure repeats the prior failure under the smallest available diagnostic path.
+- Did not run MA, another state scout, verification, ingestion, codification, or any additional smoke test. A future MA rerun requires both a successful synthetic retest and separate authorization.
+
+**Surprises/breakage**
+- GABRIEL again supplied only the generic connection error and no HTTP/provider suberror. Local evidence cannot distinguish proxy transport/routing from an upstream authentication, availability, or model-service issue; it does not indicate a rate-limit, parser, or ordinary timeout response.
+- Matplotlib reported local cache-directory warnings during import. They are unrelated to the returned GABRIEL API error.
+
+**Validation/audit results**
+```text
+python -m py_compile scripts/gabriel_state_source_scout.py
+python -m py_compile scripts/test_gabriel_state_source_scout_prompt.py
+OK
+
+python scripts/test_gabriel_state_source_scout_prompt.py
+5 PASS checks
+
+python scripts/validate.py
+VALIDATION PASSED — contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19
+exact-cycle: 10 | overlap-cycle: 18 | exploratory adjacent matches: 2
+safety units unmatched: 6
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units. No canonical corpus change occurred.
+
+**Next steps**
+1. Give HUIT the fresh non-secret error details in `docs/analysis/gabriel_proxy_connection_retest_2026-07-17.md` and ask them to inspect the proxy/API route.
+2. After HUIT believes the path is restored, authorize one new synthetic no-search test first.
+3. Only after that succeeds and with separate explicit authorization, run the locked fresh-output MA command recorded in the retest note. Do not infer source absence from any failed connection row.
+
 ## 2026-07-16 19:01 EDT (Diagnosed the Massachusetts GABRIEL connection failure with non-live checks and one authorized synthetic no-search smoke test; proxy path remains unavailable) - do not resume research scouting
 
 **Did**

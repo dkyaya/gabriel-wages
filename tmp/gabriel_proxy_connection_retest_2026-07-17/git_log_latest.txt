@@ -1,0 +1,1 @@
+This relay's local commit is recorded in the final report and the final relay manifest. It records the GABRIEL proxy smoke retest; no remote was inspected or contacted.

@@ -1,0 +1,16 @@
+Command: python ingest/audit_coverage.py
+Exit status: 0
+contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3 | cities: 19
+healthy matched pairs: 28
+  exact-cycle: 10
+  overlap-cycle: 18
+exploratory adjacent matches: 2
+safety units unmatched: 6
+
+Safety units without any comparison unit:
+- Somerville, MA: police 2012-2018 [ma_somerville_police_spsoa_2012]
+- Somerville, MA: police 2012-2015 [ma_somerville_police_spea_2012]
+- Newton, MA: police 2015-2018 [ma_newton_police_2015]
+- San Antonio, TX: police 2022-2026 [tx_san_antonio_police_2022]
+- San Antonio, TX: fire 2024-2027 [tx_san_antonio_fire_2024]
+- Newark, NJ: fire 2013-2015 [nj_newark_fire_2013]

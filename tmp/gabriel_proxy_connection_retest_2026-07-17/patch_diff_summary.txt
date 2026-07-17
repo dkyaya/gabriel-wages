@@ -1,0 +1,6 @@
+Summary of retest changes
+
+- Ran one infrastructure-only, one-prompt, no-search GABRIEL proxy smoke test and preserved its raw row, non-secret metadata, console log, and diagnostic script.
+- Recorded current failure outcome: `Connection error.`, no response/response ID/output tokens, 13 input tokens, recorded cost 2.6e-06, and model_response_succeeded=false.
+- Added a HUIT-ready diagnostic note, updated the session progress log and ChatGPT handoff, and preserved requested validation/audit outputs.
+- No state scout, source verification, ingestion, codification, canonical data/corpus edit, remote inspection/configuration, or push occurred.

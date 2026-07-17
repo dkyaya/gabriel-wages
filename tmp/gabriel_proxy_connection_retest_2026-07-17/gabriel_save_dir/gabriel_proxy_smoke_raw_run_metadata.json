@@ -1,0 +1,10 @@
+{
+  "metadata_version": 1,
+  "task": "Whatever",
+  "output_base_name": "gabriel_proxy_smoke_raw",
+  "model": "gpt-5.4-nano",
+  "identifier_hash_bits": 64,
+  "n_attributes_per_run": null,
+  "attribute_count": 0,
+  "attribute_batches": []
+}

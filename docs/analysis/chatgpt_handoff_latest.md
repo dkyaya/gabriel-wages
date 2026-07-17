@@ -2,9 +2,26 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-16T19:01:00-04:00`
+Last updated: `2026-07-17T14:11:00-04:00`
 
 ---
+
+## 2026-07-17T14:11:00-04:00 - Fresh synthetic no-search retest still returns GABRIEL `Connection error.`
+
+**Commit target:** `Record GABRIEL proxy connection retest`
+
+### Current State After This Entry
+
+- **Fresh HUIT diagnostic:** exactly one synthetic JSON-only GABRIEL request was run at `n_parallels=1`, `web_search=False`, low search context, 90-second timeout, and model `gpt-5.4-nano`. It contains no municipality or source-discovery content and is the smallest available diagnostic path.
+- **Current returned state:** the one row failed with exact error `['Connection error.']`; response text absent; response ID absent; reasoning/output tokens absent; 13 input tokens; recorded cost `2.6e-06`; `model_response_succeeded=false`. GABRIEL logs one API connection error. This does not meet the connectivity-success condition.
+- **Non-secret configuration:** project `.env` was found and the subscription-key variable was present after local loading. The diagnostic records the configured proxy endpoint `https://go.apis.huit.harvard.edu/ais-openai-direct/v2`, model, and setting presence only—never values.
+- **Interpretation:** local import/call mechanics worked and GABRIEL returned a charged failure row, but no model response arrived. Proxy/API transport remains the leading category. The generic client error cannot distinguish proxy routing/availability from authentication, upstream backend, or model availability. It is not evidence of a parser, source, web-search, rate-limit, or ordinary timeout problem.
+- **Artifacts:** `tmp/gabriel_proxy_connection_retest_2026-07-17/` contains the diagnostic script, raw response row, metadata, console log, and validation outputs. `docs/analysis/gabriel_proxy_connection_retest_2026-07-17.md` is the plain-English HUIT-ready note.
+- **Protected state:** no MA/state research scout, source verification, ingestion, codification, canonical corpus/data edit, remote work, or push occurred.
+
+### Recommended Next Move
+
+Do not run MA or another state scout yet. Give HUIT the exact error and metadata in the retest note. Once HUIT believes the proxy/API path is restored, separately authorize one new synthetic no-search test. Only if it returns a nonempty successful response (and response ID when GABRIEL provides one), authorize a fresh MA eight-row scout using the exact command recorded in the retest note. The prior and current empty connection-error rows are not source-absence evidence.
 
 ## 2026-07-16T19:01:00-04:00 - Synthetic no-search smoke test confirms the MA failure is an unresolved GABRIEL/Harvard proxy-path problem
 
