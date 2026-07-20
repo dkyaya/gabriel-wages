@@ -6,6 +6,46 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-20 14:51 EDT (One explicitly network-approved synthetic GABRIEL wrapper smoke test succeeded) - keep MA locked pending separate authorization
+
+**Did**
+- Started at local commit `7eaf280cb0200231223df5c715200a11eb0f81dc` and treated `tmp/huit_openai_request_shape_diagnosis_2026-07-17_relay_7eaf280.zip` as source of truth. Inspected its inventory and the required diagnosis, comparison, URL-audit, handoff, progress, script, and sanitized-evidence materials before the call. No remote was inspected, configured, or changed.
+- Added `scripts/diagnose_gabriel_wrapper_smoke_test.py`, a secret-safe infrastructure-only helper. It invokes `gabriel.whatever()` once with the exact prompt `Reply with OK.`, `web_search=False`, no tools, `n_parallels=1`, zero retries, 30-second timeout/maximum, the unchanged Harvard `/v2` base, `gpt-5.4-nano`, and the bearer-plus-subscription-header configuration.
+- Ran the one synthetic wrapper call with explicit outbound-network approval. The returned GABRIEL row was `Successful=True`, response `OK.`, with one response ID, 10 input / 6 output / 0 reasoning tokens, cost `0.0000095`, and no error log. No municipality prompt, source search, MA scout, ingestion, corpus/data change, or `gabriel.codify` ran.
+- Recorded sanitized JSON/log evidence and the GABRIEL output metadata under `tmp/gabriel_wrapper_smoke_test_2026-07-20/`; added `docs/analysis/gabriel_wrapper_smoke_test_2026-07-20.md`.
+
+**Decisions and why**
+- Preserve the known-good `/v2` base, SDK-owned `/responses` path, `gpt-5.4-nano`, and bearer-plus-`Ocp-Apim-Subscription-Key` setup. The new wrapper success agrees with the already-successful direct SDK control, so no request-shape or scout-code fix is warranted.
+- Keep Massachusetts locked. A fresh MA run is now technically supportable but remains a separately authorized research task; this infrastructure authorization did not authorize it.
+
+**Surprises/breakage**
+- GABRIEL's preliminary rate-limit probe did occur before the model call. Safe instrumentation observed two `/responses` and two `/chat/completions` attempts; all sent `Authorization` and `Content-Type`, but no subscription-header name. The actual wrapper model request still completed successfully. This is a nonblocking upstream hardening concern, not evidence for changing the established runtime configuration.
+- The helper's optional cached-client close encountered `RuntimeError: Event loop is closed` after the completed wrapper call. It was cleanup-only: the returned model row was successful and no request error occurred.
+
+**Validation/audit results**
+```text
+python -m py_compile scripts/gabriel_state_source_scout.py scripts/diagnose_huit_openai_request_shapes.py scripts/diagnose_gabriel_config.py scripts/diagnose_gabriel_wrapper_smoke_test.py
+OK
+
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19
+exact-cycle: 10 | overlap-cycle: 18 | exploratory adjacent matches: 2
+safety units unmatched: 6
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units. No canonical corpus change occurred.
+
+**Next steps**
+1. Do not run MA automatically. The next recommended task is a separately authorized, locked MA rerun using the unchanged established configuration.
+2. If a future wrapper failure occurs while a direct SDK control succeeds in the same approved context, perform a focused Heavy debugging pass on GABRIEL internals: the headerless rate-limit probe, async-client lifecycle, and exception reduction. Do not make speculative scout-code changes first.
+
 ## 2026-07-20 14:34 EDT (A one-request direct SDK control proved the HUIT `/v2/responses` route, project key, nano model, and dual-header format work under explicit network authorization) - test GABRIEL once synthetically before any scout
 
 **Did**

@@ -2,9 +2,34 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-20T14:34:00-04:00`
+Last updated: `2026-07-20T14:51:00-04:00`
 
 ---
+
+## 2026-07-20T14:51:00-04:00 - Explicitly network-approved GABRIEL wrapper smoke test succeeds on the established HUIT request shape
+
+**Commit target:** `Smoke-test GABRIEL wrapper on Harvard proxy`
+
+### Current State After This Entry
+
+- **Starting point:** `7eaf280cb0200231223df5c715200a11eb0f81dc` (`Diagnose HUIT OpenAI request shapes`). The source-of-truth relay was `tmp/huit_openai_request_shape_diagnosis_2026-07-17_relay_7eaf280.zip`; its inventory and all requested carried diagnosis materials were inspected before the call. No remote operation occurred.
+- **Successful GABRIEL boundary test:** one `gabriel.whatever()` call used the exact prompt `Reply with OK.`, `web_search=False`, an empty tools list, `n_parallels=1`, `max_retries=0`, 30-second timeout/maximum, base `https://go.apis.huit.harvard.edu/ais-openai-direct/v2`, effective Responses resource `/ais-openai-direct/v2/responses`, `gpt-5.4-nano`, and the existing bearer plus Harvard subscription-header setup. It returned `Successful=True`, response `OK.`, a response ID, 10 input / 6 output / 0 reasoning tokens, cost `0.0000095`, and no error log.
+- **Direct-control comparison:** the preceding direct OpenAI SDK control succeeded at HTTP 200 with response `OK`, 10 input / 5 output tokens, and 3.21 seconds using the same base/resource/model/header configuration. Together they show the current low-level SDK/proxy and GABRIEL wrapper paths both work in explicit network-approved execution.
+- **Observed secondary behavior:** GABRIEL's preliminary rate-limit probe ran before the successful model request. Sanitized observation captured two `/responses` and two `/chat/completions` attempts. They sent only `Authorization` and `Content-Type`, not `Ocp-Apim-Subscription-Key`. This confirms a nonblocking upstream hardening concern; it does not justify altering the proven actual-request configuration.
+- **Sanitized environment/runtime:** project `.env` selected; Harvard key absent ambient/present in `.env`/effective after load; `OPENAI_API_KEY`, `OPENAI_BASE_URL`, and standard proxy variables absent. Python 3.11.7, GABRIEL 1.1.8, OpenAI SDK 2.41.0, httpx 0.28.1. No value or `.env` content was emitted. A post-call cached-client cleanup recorded `RuntimeError: Event loop is closed`; it occurred after the successful returned row and did not affect the wrapper result.
+- **New artifacts:** `scripts/diagnose_gabriel_wrapper_smoke_test.py`; `docs/analysis/gabriel_wrapper_smoke_test_2026-07-20.md`; and sanitized evidence plus validation outputs under `tmp/gabriel_wrapper_smoke_test_2026-07-20/`.
+- **Protected state:** no MA/municipality scout, source-search prompt, ingestion, codification, canonical data/coverage/corpus modification, remote operation, or push occurred.
+
+### Validation State
+
+- Requested four-file `py_compile` command — passed.
+- `scripts/validate.py` — passed; contracts 64, discourse 0, coverage 64, city attributes 3.
+- `ingest/test_pipeline.py` — 60 passed, 0 failed.
+- `ingest/audit_coverage.py` — 28 healthy pairs across 19 cities; 10 exact, 18 overlap, 2 exploratory adjacent, 6 unmatched safety units.
+
+### Recommended Next Move
+
+Do not rerun MA automatically. The next task can be a separately authorized locked Massachusetts rerun using the unchanged base, Responses resource, nano model, and dual-header construction. If a future GABRIEL failure coexists with a healthy direct SDK control in the same approved execution context, perform a focused Heavy debugging pass on GABRIEL's rate-limit probe, async client lifecycle, and exception reduction; do not modify scout request-shape code speculatively.
 
 ## 2026-07-20T14:34:00-04:00 - Explicitly network-approved SDK Responses control succeeds on the established HUIT request shape
 
