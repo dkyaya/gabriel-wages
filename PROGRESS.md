@@ -6,6 +6,56 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-20 14:20 EDT (Compared every preserved working PA/TX scout with the failed MA/synthetic runs; no code/request regression found, and a network-restricted execution context is now the leading local cause) - verify historical command network approval before another API diagnostic
+
+**Did**
+- Started at local commit `3c0d37fc081e9c14fe5573be1387391f5fab2eec`. Treated `tmp/gabriel_url_baseurl_audit_2026-07-17_relay_3c0d37f.zip` as source of truth; all 17 carried files matched the workspace by SHA-256. Left pre-existing untracked `.claude/` untouched and did not inspect/configure a Git remote.
+- Inventoried all 12 preserved live state-scout runs with at least one parseable response: 11 PA pilot/tuning/batch runs plus Texas. Reconciled run timestamps, execution/artifact commits, commands or artifact-supported command reconstructions, model, prompt mode, parallelism, spacing, timeout, search context, input shape, response IDs, token/cost accounting, parse rates, and error signatures. The PA 25-city main/retry ended 25/25 parseable; Texas was 3/3.
+- Compared the broken MA primary plus two bounded retry runs and both synthetic no-search tests. All 18 broken rows (16 MA + 2 smoke) have no response text/ID/reasoning/output; MA cost is `$0.0025656`, and each smoke row has 13 input tokens plus `$0.0000026` cost. The smoke path uses the same GABRIEL/Responses construction but turns web search off, ruling prompt/CSV/tool content out as necessary causes.
+- Used local Git history to compare PA artifact commit `325bef6`, Texas execution commit `31189a5`, MA execution-base `94ac4e9`, MA artifact commit `7ce744b`, and current HEAD. `run_live_batch()` is the same 118-line block at all five; the last function change was `6c041ca`, before PA batch 25 and Texas. The later row-aware/filter-contract changes affect prompts/parsing/scoring only.
+- Confirmed the global live-run environment evidence remains GABRIEL 1.1.8 / OpenAI 2.41.0, with relevant installed files modified 2026-06-08. PA and MA logs point to the same global pyenv site-packages. `requirements.txt` did not change. Current safe config remains one `/v2/responses` route, `gpt-5.4-nano`, 90/90 seconds, and no ambient OpenAI/base/proxy override.
+- Added `docs/analysis/gabriel_working_vs_broken_scout_comparison_2026-07-17.md`. Did not modify the scout, helper, dependencies, canonical data, coverage data, corpus, or any live/runtime behavior.
+
+**Decisions and why**
+- Ranked **network execution authorization/sandbox context** first among local causes. This command environment restricts network by default; the successful Texas command is retained as an exact approved network command, while no matching persistent MA/smoke approval is retained. The failed calls terminate in roughly 1–2 seconds without an HTTP response or ID. Historical one-time escalation metadata is not saved in repository artifacts, so the report labels this strongly supported, not proven.
+- Ranked local VPN/DNS/TLS/firewall state second and historical ambient `HARVARD_SUBSCRIPTION_KEY` override third. `.env` itself predates every run and is unchanged on disk; current ambient key status is absent, but historical ambient status was not recorded before load.
+- Ruled out speculative runtime edits. Model, request family, base path, headers, timeout, concurrency, package files, and function body are unchanged; web-search-off smoke tests fail too. The next zero-API step is to inspect historical execution authorization and ask HUIT whether the failed requests reached its edge.
+
+**Surprises/breakage**
+- The strongest new evidence is operational rather than in Python: successful Texas has an explicit retained network-approved command, while the failed command family may have run under default restricted egress. Earlier diagnosis over-weighted server-side failure without checking this distinction.
+- PA batch 25 already exhibited the same generic connection-error family on four final rows (plus one timeout), and every failed municipality succeeded minutes later under identical settings. This confirms the generic error can reflect transient transport state rather than a deterministic URL/prompt issue.
+- The repo-local `.venv` contains OpenAI 2.43.0, but preserved PA/MA logs reference the global 2.41.0 installation. No evidence shows a live interpreter switch.
+
+**Validation/audit results**
+```text
+python -m py_compile scripts/gabriel_state_source_scout.py
+python -m py_compile scripts/diagnose_gabriel_config.py
+OK
+
+python scripts/diagnose_gabriel_config.py
+network calls made: no
+effective responses request URL: https://go.apis.huit.harvard.edu/ais-openai-direct/v2/responses
+duplicate adjacent response-path components: none
+
+python scripts/validate.py
+VALIDATION PASSED — contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19
+exact-cycle: 10 | overlap-cycle: 18 | exploratory adjacent matches: 2
+safety units unmatched: 6
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units. No canonical corpus change occurred.
+
+**Next steps**
+1. Check the platform execution audit for whether MA and both smoke invocations had outbound-network approval; compare with Texas. Do not make an API call for this check.
+2. Ask HUIT whether any request arrived at the MA/smoke timestamps. A no-arrival result plus restricted execution would confirm local egress as the root cause.
+3. Only with separate authorization, run a future explicitly network-approved synthetic sequence: non-secret DNS/TCP/TLS, one raw Responses no-search call, then equivalent GABRIEL no-search only if needed. Capture sanitized nested exception cause and interpreter/package provenance. Do not resume MA until synthetic success.
+
 ## 2026-07-20 13:12 EDT (Completed a no-live audit of GABRIEL URL/base-URL construction and changes since the successful Texas run; local path is unchanged and resolves to `/v2/responses`) - send the exact route to HUIT before any new live test
 
 **Did**

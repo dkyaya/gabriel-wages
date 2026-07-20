@@ -2,9 +2,37 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-20T13:12:00-04:00`
+Last updated: `2026-07-20T14:20:00-04:00`
 
 ---
+
+## 2026-07-20T14:20:00-04:00 - Working-vs.-broken comparison moves network-restricted execution context to the top of the local-cause ranking
+
+**Commit target:** `Compare working and failed GABRIEL scout runs`
+
+### Current State After This Entry
+
+- **Source integrity:** started at `3c0d37fc081e9c14fe5573be1387391f5fab2eec`; all 17 files in `tmp/gabriel_url_baseurl_audit_2026-07-17_relay_3c0d37f.zip` matched the workspace by SHA-256. Pre-existing `.claude/` stayed untouched. No remote operation occurred.
+- **Working inventory:** all preserved successful/partly successful state-scout runs were inspected—11 PA live runs from the pilot through batch 25, plus Texas. PA batch 25 was 20/25 on the main pass and 5/5 on identical retry, ending 25/25; Texas was 3/3 with response IDs and 7,002 output tokens.
+- **Broken inventory:** MA primary and its two retry shards were 0/16 combined, all empty `Connection error.` rows, 12,828 input and zero reasoning/output tokens, `$0.0025656`. The 2026-07-16 diagnosis and 2026-07-17 retest each failed one 13-token synthetic no-search prompt identically, with no ID/output and `$0.0000026` cost.
+- **No code regression:** `run_live_batch()` is the same 118-line block at PA artifact commit `325bef6`, Texas execution `31189a5`, MA execution-base `94ac4e9`, MA artifacts `7ce744b`, and current pre-audit HEAD. Its last local change was `6c041ca`, before PA batch 25 and Texas. Later changes affect prompt/filter/parser/scoring or outcome metadata only.
+- **No request/dependency regression:** base remains `…/ais-openai-direct/v2`; installed OpenAI appends `/responses`; model remains `gpt-5.4-nano`; serial execution, headers, and 90/90 timeout remain unchanged. Relevant global GABRIEL 1.1.8/OpenAI 2.41.0 files have June 8 mtimes, and preserved PA/MA logs reference that global environment. `requirements.txt` did not change.
+- **Leading local cause:** the command environment restricts outbound network by default. The exact successful Texas command remains in local approved-command state; there is no corresponding persistent MA/smoke approval. Fast pre-HTTP failures with no response IDs are consistent with blocked DNS/socket/TLS egress. Repository artifacts do not retain one-time escalation metadata, so confirm against the platform execution audit before treating this as proven.
+- **Secondary causes:** local VPN/DNS/TLS/firewall state; then a historical ambient `HARVARD_SUBSCRIPTION_KEY` override. Project `.env` is unchanged on disk since June 18 and current ambient key status is absent, but historical ambient-before-load status was not recorded.
+- **Ruled out:** URL duplication/version bug, request-family/model change, row-aware/filter code as request-construction change, web search as necessary trigger, 22-column input shape, concurrency, timeout, and parser failure.
+- **New report:** `docs/analysis/gabriel_working_vs_broken_scout_comparison_2026-07-17.md`. Scout/helper runtime and protected data/corpus files were not modified. No live call or scout occurred.
+
+### Validation State
+
+- Both requested compilation checks — passed.
+- Sanitized helper — passed; no network calls; effective URL `.../v2/responses`; no duplicate path component.
+- `scripts/validate.py` — passed; contracts 64, discourse 0, coverage 64, city attributes 3.
+- `ingest/test_pipeline.py` — 60 passed, 0 failed.
+- `ingest/audit_coverage.py` — 28 healthy pairs across 19 cities; 10 exact, 18 overlap, 2 exploratory adjacent, 6 unmatched safety units.
+
+### Recommended Next Move
+
+First inspect historical command execution metadata to determine whether MA and the smoke tests had outbound-network escalation, and ask HUIT whether those requests reached its edge. Make no API call for either check. If a future diagnostic is separately authorized, explicitly run it in a network-approved context: non-secret DNS/TCP/TLS first, then one raw Responses no-search call, then equivalent GABRIEL only if needed, recording sanitized nested exception cause and interpreter/package provenance. Do not change `/v2`, model, request family, or scout runtime, and do not resume MA until a synthetic request succeeds.
 
 ## 2026-07-20T13:12:00-04:00 - No-live URL/base-URL audit finds unchanged local call path and exact effective `POST .../v2/responses` route
 
