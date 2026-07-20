@@ -2,9 +2,17 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-20T16:04:51-04:00`
+Last updated: `2026-07-20T16:17:30-04:00`
 
 ---
+
+## 2026-07-20T16:17:30-04:00 - New Jersey wrapper preflight failed; locked live scout correctly stopped
+
+The relay bundle `tmp/national_batch01_nj_filter_contract_dry_run_2026-07-20_relay_5283fef.zip` was reconciled against the repository before work; all relayed files matched byte-for-byte. The locked full-context input remains exactly Newark, Jersey City, and Camden, but the mandatory synthetic no-search GABRIEL wrapper preflight failed. The one call used `Reply with OK.`, `gpt-5.4-nano`, the established Harvard `/v2` base, `web_search=False`, no tools, one parallel worker, zero retries, and a 30-second timeout. It returned `Connection error.` with `Successful=False`, empty response, no response ID, no output tokens, and cost `0.0000008`.
+
+Per the hard stop rule, no NJ municipal prompt, source search, retry, or URL verification was attempted. There are no parsed candidates or parser failures from a municipal scout; employer/unit/duplicate/safety-as-non-safety and blocked-versus-dead leakage are unobserved rather than absent. No source was verified, ingested, codified, or promoted, and no canonical data/corpus file changed. Sanitized preflight evidence is at `tmp/gabriel_wrapper_preflight/NJ/national_batch01_nj_2026-07-20/`; see `docs/analysis/national_batch01_nj_live_scout_review_2026-07-20.md` for the explicit scout-stage disposition.
+
+Required local checks passed after the stop: scout scripts compiled, the six-check prompt test passed, `validate.py` passed (64 contracts), pipeline tests passed (60), and audit coverage stayed at 28 healthy pairs across 19 cities with six unmatched safety units. A future attempt needs separate authorization and a fresh successful wrapper preflight before it can run only the same locked three-city slice.
 
 ## 2026-07-20T16:04:51-04:00 - Massachusetts prompt lessons applied; New Jersey three-city full-context slice passes dry-run review
 

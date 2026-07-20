@@ -6,6 +6,49 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-20 16:17 EDT (Required NJ wrapper preflight failed; locked NJ live scout correctly stopped) - preserve failure evidence and await separate reauthorization
+
+**Did**
+- Started at local commit `5283fefcdc546edcb8abb58a1e03b56177de3074` and treated `tmp/national_batch01_nj_filter_contract_dry_run_2026-07-20_relay_5283fef.zip` as source of truth. The relay and repository copies of every relayed required file matched byte-for-byte; no remote was inspected, configured, validated, changed, or pushed.
+- Ran exactly one authorized synthetic no-search GABRIEL wrapper preflight with the exact prompt `Reply with OK.`, `gpt-5.4-nano`, Harvard `/v2` base URL, `web_search=False`, no tools, one parallel worker, zero retries, and 30-second timeout/maximum. Preserved sanitized artifacts under `tmp/gabriel_wrapper_preflight/NJ/national_batch01_nj_2026-07-20/`.
+- The preflight returned `Successful=False`, empty response, no exposed response ID, no output tokens, and `Connection error.`. Stopped immediately: no NJ municipality prompt, source search, retry, URL verification, ingestion, corpus/data change, `gabriel.codify`, or promotion occurred.
+- Added the scout-stage review note only. No parsed-candidate CSV exists because no municipal model response was obtained.
+
+**Decisions and why**
+- Enforced the mandatory stop gate: the failed synthetic infrastructure call does not authorize attempting the Newark, Jersey City, or Camden scout. The existing dry-run prompt preview remains the only municipal-scout output for this slice.
+- Do not interpret the connection failure as a source-availability, source-quality, employer/unit, or coverage finding. Those questions are unobserved, not negative results.
+
+**Surprises/breakage**
+- The wrapper loaded the subscription credential presence safely but got a connection error before any usable response. The sanitized diagnostic records only header names and environment presence, not credential values.
+
+**Validation/audit results**
+```text
+python -m py_compile scripts/gabriel_state_source_scout.py
+python -m py_compile scripts/test_gabriel_state_source_scout_prompt.py
+OK
+
+python scripts/test_gabriel_state_source_scout_prompt.py
+6 PASS checks
+
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19
+exact-cycle: 10 | overlap-cycle: 18 | exploratory adjacent matches: 2
+safety units unmatched: 6
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units. The failed preflight did not alter canonical coverage.
+
+**Next steps**
+1. Preserve this failed run as infrastructure-only evidence; do not run another live scout under the completed authorization.
+2. If separately authorized later, perform a fresh one-prompt synthetic wrapper preflight before the same locked three-city NJ slice. Proceed only on all required success signals, then verify any returned URLs in a separate stage.
+
 ## 2026-07-20 16:04 EDT (Applied Massachusetts verification lessons and prepared the three-city New Jersey national-batch slice in dry-run mode only) - NJ is prompt-ready but still requires a fresh live wrapper preflight and separate authorization
 
 **Did**
