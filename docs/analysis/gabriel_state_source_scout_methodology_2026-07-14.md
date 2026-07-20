@@ -8,7 +8,7 @@
 
 Prior source-availability scans in this project (`pa_nj_source_scan_preflight_2026-07-12.md`, `pennsylvania_source_scan_2026-07-12.md`, `national_corpus_expansion_preflight_2026-07-12.md`) were run as hand-driven, per-city research passes. This document and its companion script (`scripts/gabriel_state_source_scout.py`) generalize that into a repeatable, boundable GABRIEL `whatever(web_search=True)` workflow that can run source-discovery prompts across many municipalities in a state at once and produce a ranked, staged source-candidate queue — one row per candidate document, covering police, fire, and non-safety/general municipal labor sources per municipality.
 
-This is a **scouting and staging** tool. It does not ingest, does not touch `data/contracts.csv` / `data/city_coverage.csv` / `corpus/`, and does not run `codify`. Its output is a candidate queue for a human or a future, separately-authorized session to review under the existing 13-step `claim_testing_source_wave_methodology_2026-07-12.md` lifecycle (this tool's output feeds Steps 2-5 of that lifecycle: choose states, scan cities, mark candidates, promote).
+This is a **scouting and staging** tool. It does not ingest, does not touch `data/contracts.csv` / `data/city_coverage.csv` / `corpus/`, and does not run `codify`. Its output feeds the durable national queue in `national_scout_candidate_queue_2026-07-20.csv`. Routine post-scout work now means light triage plus scout-coverage accounting; deeper source verification is deferred to coordinated waves selected from that queue. The existing 13-step `claim_testing_source_wave_methodology_2026-07-12.md` lifecycle still governs later verification, promotion, ingestion, codification, and claim use.
 
 ## 2. `whatever` vs. `codify` — what differs
 
@@ -51,9 +51,11 @@ In short: this tool can move a candidate from "unknown" to "worth a human look,"
 - Because each municipality's prompt is independent and stateless, the same script run against a 500-city gazetteer is mechanically identical to a 10-city pilot — only wall-clock and cost scale, not code complexity. The scoring/queue-builder stage (deterministic, no model calls) already operates on the full parsed-candidates table regardless of size.
 - The main scaling risks are cost/rate **and transport availability**. `n_parallels` and `--max-prompts` manage request pressure, while the mandatory wrapper preflight and emergency-stop rule below prevent a network/proxy outage from being mistaken for a source result or amplified through retries.
 
-## 5A. Mandatory live-batch wrapper preflight and emergency stop
+## 5A. Mandatory live-batch transport preflight and emergency stop
 
-Run a **one-prompt, no-search synthetic GABRIEL wrapper smoke test before every live scout batch**. A prior successful smoke test or scout batch does not waive the next batch's preflight. The preflight must use the same wrapper, model, base URL, authentication/header construction, and execution/network context intended for the scout, while keeping web search/tools disabled and using a synthetic prompt such as `Reply with OK.`. It is infrastructure-only and must not contain a municipality or source-research request.
+Run a **one-prompt, no-search synthetic smoke test before every live scout batch**. A prior successful smoke test or scout batch does not waive the next batch's preflight. The preflight must use the same backend, model, base URL, authentication/header construction, and execution/network context intended for the scout, while keeping web search/tools disabled and using a synthetic prompt such as `Reply with OK.`. It is infrastructure-only and must not contain a municipality or source-research request.
+
+For the Harvard HUIT proxy, prefer `--live-backend direct-sdk`. The direct SDK uses the proven Responses request shape and both required header names without GABRIEL's preliminary header-incomplete rate-limit probe. If a task explicitly chooses the historical GABRIEL backend, its preflight must use that wrapper and must pass the same evidence gate. Backend preference is not live-call authorization.
 
 The preflight succeeds only when all applicable evidence agrees:
 
@@ -67,7 +69,7 @@ If any required condition fails, **do not run the scout batch**. Preserve saniti
 
 If a live scout batch begins returning repeated connection errors with no response IDs and zero output tokens, stop immediately. Do not expand the batch and do not launch a broad retry pass. Preserve sanitized failure artifacts and diagnose the wrapper/network path separately before any new research call. A connection-error row is an infrastructure failure, not evidence that a municipality has no source.
 
-The known-good reference implementation and evidence standard are documented in `docs/analysis/gabriel_wrapper_smoke_test_2026-07-20.md`. This preflight is a necessary execution gate, not authorization to run a live scout; live research still requires the task's normal separate authorization and prompt cap.
+The direct reference implementation is documented in `docs/analysis/direct_sdk_scout_backend_2026-07-20.md`; the older wrapper evidence is in `docs/analysis/gabriel_wrapper_smoke_test_2026-07-20.md`. This preflight is a necessary execution gate, not authorization to run a live scout; live research still requires the task's normal separate authorization and prompt cap.
 
 ## 5B. Full-context cycle and known-source contract
 
@@ -78,6 +80,16 @@ For national matched-repair and repeat-cycle slices, supply row-aware context wh
 - Contract years require visible operative support: cover/title, duration clause, award period, or equivalent operative text. Index labels, snippets, URLs, and inference are uncertainty, not definitive cycle evidence.
 - `blocked_or_unreadable` is separate from `dead_or_unreachable`. The latter is reserved for observed 404/410, DNS failure, or equivalent. A live official page/PDF that cannot be inspected is blocked/unreadable.
 - A complete executed scanned MOA is not partial merely because text extraction is difficult; if it is binding and contains wage-setting terms, it remains a qualifying lead pending human verification.
+
+## 5C. National-first queue and deferred verification
+
+After each completed live batch, preserve its raw artifacts and add its candidate rows to `national_scout_candidate_queue_2026-07-20.csv` with `scripts/build_national_scout_candidate_queue.py`. Rebuild `national_scout_coverage_municipality_2026-07-20.csv`, `national_scout_coverage_state.csv`, and `national_scout_coverage_county.csv` with `scripts/build_national_scout_coverage_status.py`.
+
+Routine post-scout review is deliberately light: confirm that the response parsed, keep explicit empty results, inspect metadata for obvious context/duplicate/employer/unit/access risks, assign a deterministic queue bucket, and stop. Do not open every URL. Existing TX/MA verification findings may inform calibration columns, but future rows remain unverified until a coordinated verification wave is separately selected.
+
+Scout coverage counts a successful parseable candidate or no-candidate response. Connection-only failures are recorded separately and do not count as discovery coverage. Queue status, calibration verification, later-ingestion recommendation, canonical overlap, codified status, and claim status occupy separate fields and must never be collapsed.
+
+This national-first sequence reduces verification burden: select later waves around high-value within-city police/fire/non-safety sets, institutional contrasts, and geographic gaps rather than reviewing every result or every government in the 35,589-row universe. Ingestion begins only after enough scouting and filtering exist to choose those waves rationally.
 
 ## 6. Schema — `gabriel_state_source_scout_candidates_<date>.csv`
 

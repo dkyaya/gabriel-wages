@@ -4,6 +4,11 @@
 This is an accounting/setup script only. It downloads public Census source
 files when their tmp/ caches are absent. It does not run GABRIEL, verify scout
 leads, ingest documents, codify text, or touch canonical corpus files.
+
+The Census universe/crosswalk remain owned here. Current live-scout status is
+delegated to ``build_national_scout_coverage_status.py`` so successful TX, MA,
+and NJ runs and excluded connection-only attempts are not lost to the older
+PA-only carry-forward table.
 """
 
 from __future__ import annotations
@@ -993,8 +998,14 @@ def main() -> int:
         crosswalk_rows,
         MUNICIPALITY_COUNTY_CROSSWALK_FIELDS,
     )
-    write_csv(DOCS / "national_scout_coverage_state.csv", national_state_rows, NATIONAL_STATE_COVERAGE_FIELDS)
-    write_csv(DOCS / "national_scout_coverage_county.csv", national_county_rows, NATIONAL_COUNTY_COVERAGE_FIELDS)
+    # ``national_state_rows`` and ``national_county_rows`` above retain the
+    # historical PA-only carry-forward validation. Do not write them over the
+    # current national status layer. After the authoritative universe and
+    # crosswalk are refreshed, delegate the public status outputs to the
+    # successful-run/queue-aware builder.
+    from build_national_scout_coverage_status import main as build_current_scout_status
+
+    build_current_scout_status()
 
     total_scouted = sum(1 for row in municipality_rows if row["already_scouted"] == "yes")
     total_scout_positive = sum(
@@ -1008,8 +1019,8 @@ def main() -> int:
         f"{sum(1 for row in municipality_rows if row['multi_county_flag'] == 'yes')}"
     )
     print(f"project_known_municipalities_preserved={len(project_known)}")
-    print(f"scouted_municipalities={total_scouted}")
-    print(f"scout_positive_municipalities={total_scout_positive}")
+    print(f"legacy_pa_carry_forward_scouted_municipalities={total_scouted}")
+    print(f"legacy_pa_carry_forward_scout_positive_municipalities={total_scout_positive}")
     return 0
 
 

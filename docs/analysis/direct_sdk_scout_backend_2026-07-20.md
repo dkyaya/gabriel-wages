@@ -2,15 +2,15 @@
 
 Date: 2026-07-20
 
-Stage: infrastructure implementation and one synthetic no-search smoke test only. No municipality scout, source verification, ingestion, `gabriel.codify`, canonical-data edit, or claim-stage promotion occurred.
+Stage: infrastructure implementation plus a later operational note recording the separately authorized three-city NJ transport result. The implementation task itself ran only one synthetic smoke; neither task performed source verification, ingestion, `gabriel.codify`, canonical-data edits, or claim-stage promotion.
 
 ## Plain-English result
 
 The state-source scout now has an opt-in live backend that sends its prompts directly through the OpenAI SDK Responses API instead of depending on GABRIEL's wrapper orchestration. The historical GABRIEL backend remains the default, and dry-run behavior is unchanged. For the Harvard HUIT proxy, use `--live-backend direct-sdk` when a future research scout is separately authorized, especially after a GABRIEL preflight fails.
 
-The new path passed exactly one synthetic live test. It sent `Reply with OK.` to `gpt-5.4-nano` through `https://go.apis.huit.harvard.edu/ais-openai-direct/v2/responses`, with the bearer and `Ocp-Apim-Subscription-Key` header names, no tools or web search, zero SDK retries, and a 30-second timeout. It returned `OK.`, a response ID, 10 input tokens, 0 reasoning tokens, and 6 output tokens. Credential values and `.env` contents were not logged.
+The new path first passed exactly one synthetic live test. It sent `Reply with OK.` to `gpt-5.4-nano` through `https://go.apis.huit.harvard.edu/ais-openai-direct/v2/responses`, with the bearer and `Ocp-Apim-Subscription-Key` header names, no tools or web search, zero SDK retries, and a 30-second timeout. It returned `OK.`, a response ID, 10 input tokens, 0 reasoning tokens, and 6 output tokens. Credential values and `.env` contents were not logged.
 
-This makes the direct transport ready for a separately authorized, tightly bounded NJ live scout. It does not establish how the direct backend performs with hosted web search or with the three municipal prompts, because this task intentionally did not run either.
+An immediately subsequent, separately authorized New Jersey run established the hosted-web-search boundary: Newark, Jersey City, and Camden completed 3/3 with nonempty responses, response IDs, positive output tokens, eight parsed candidates, and no connection or parser failure. Those candidate facts remain scout-stage and unverified, but the transport result makes direct SDK the preferred HUIT-proxy scout backend. See `national_batch01_nj_live_direct_sdk_scout_review_2026-07-20.md`.
 
 ## Why the GABRIEL wrapper is unreliable here
 
@@ -79,9 +79,9 @@ The helper always uses exactly one prompt (`Reply with OK.`), `gpt-5.4-nano`, no
 
 Do not reuse a nonempty output directory or reinterpret a failed infrastructure test as a source-availability result.
 
-## Future NJ live scout command — only after separate authorization
+## Example live scout command — only after separate authorization
 
-The implementation is ready for the previously locked Newark, Jersey City, and Camden input, but this command was not run in this task:
+The implementation was used successfully for the locked Newark, Jersey City, and Camden input in a later task. The following remains an example shape; never rerun it or substitute another slice without separate authorization and a fresh smoke preflight:
 
 ```bash
 python scripts/gabriel_state_source_scout.py \
@@ -100,7 +100,7 @@ python scripts/gabriel_state_source_scout.py \
   --direct-sdk-max-retries 0
 ```
 
-That future run requires explicit, separate authorization because it enables hosted web search and sends three research prompts. Its outputs would remain unverified scout-stage leads. Every returned URL would still require a distinct source-verification pass before any ingestion, codification, canonical coverage change, or claim use.
+Every live run requires explicit, separate authorization because it enables hosted web search and sends research prompts. Outputs remain unverified scout-stage leads and should be added to the national queue and scout-coverage accounting. Deep source verification is now deferred to coordinated later waves before any ingestion, codification, canonical coverage change, or claim use.
 
 ## Tests and safeguards
 
@@ -117,9 +117,8 @@ The existing six-check prompt contract test also remains green. Repository valid
 
 ## What remains unverified
 
-- No direct-SDK hosted-web-search request has run yet. The synthetic smoke test proves only the no-tool transport boundary.
-- No NJ municipality prompt or source search ran, so Newark, Jersey City, and Camden source availability and candidate quality remain unobserved.
-- The direct backend's web-search source extraction has fixture coverage but not live HUIT output coverage.
+- The NJ direct-SDK run established live HUIT hosted-search transport and source extraction for three prompts, not broad service reliability or candidate truth.
+- Newark, Jersey City, and Camden candidate URLs, source ownership, employer/unit identity, operative cycles, document completeness, matched-comparison value, and duplicates remain unverified scout-stage questions.
 - OpenAI Responses usage exposes tokens but not billed dollar cost; direct-run cost summaries therefore mark cost unavailable rather than inventing a value.
 - HUIT/GABRIEL's intermittent behavior and the precise causal role of the headerless rate-limit probe remain unresolved. The new backend removes those wrapper-specific components from the required scout path rather than claiming to repair GABRIEL itself.
-- Candidate URLs, employer/unit identity, operative cycles, document completeness, and matched-comparison value remain verification-stage questions after any future scout.
+- Future state slices still require a fresh synthetic preflight, separate live authorization, zero/controlled retries, preserved artifacts, queue/coverage updates, and later coordinated verification before ingestion.

@@ -2,9 +2,25 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-20T17:00:51-04:00`
+Last updated: `2026-07-20T18:06:56-04:00`
 
 ---
+
+## 2026-07-20T18:06:56-04:00 - National scout queue and PA/TX/MA/NJ discovery coverage are now durable; verification is deferred
+
+Started at `8b36263a8291a4d2633797f4388308901fdea674` with `tmp/national_batch01_nj_live_direct_sdk_2026-07-20_relay_8b36263.zip` as source of truth. Every shared relay/repository file matched byte-for-byte. The older TX/MA calibration ledgers and national universe/coverage inputs named for this task were present only in the repository because the NJ relay was deliberately narrow; they are complementary history, not a conflict. No Git remote was inspected or changed, and no API/model call, live scout, source URL opening, PDF download, deep verification, ingestion, codification, canonical CSV/corpus edit, or claim promotion occurred.
+
+`docs/analysis/national_scout_candidate_queue_2026-07-20.csv` now contains 113 preserved scout rows: PA 75, TX 6, MA 24, and NJ 8. Deterministic metadata-only triage assigns 33 high, 15 medium, and 19 low rows to later verification (67 total), with 33 context holds, 2 likely-duplicate holds, 1 insufficient hold, 2 calibration rejections, and 8 already-canonical holds. All uncalibrated rows remain `unverified_scout_candidate`. The 6 TX and 24 MA rows carry only explicitly prefixed calibration findings; eight prior calibration rows are scheduled as `verified_later_ingest_candidate` (TX 1, MA 7), not ingested or finally promoted.
+
+`docs/analysis/national_scout_coverage_municipality_2026-07-20.csv` accounts for every one of the 35,589 authoritative governments. Successful source-discovery coverage is 39 municipalities: PA 25, TX 3, MA 8, NJ 3. Candidate-positive counts are PA 23, TX 2, MA 8, NJ 3; Austin and two PA municipalities are successful parseable no-candidate outcomes. The three failed MA runs produced 16 connection-only request rows across the same eight municipalities; those failures are preserved in separate columns and excluded from discovery coverage, while the successful 2026-07-20 rerun counts. Remaining unscouted: 35,550 nationally; PA 2,532, TX 1,221, MA 343, NJ 561.
+
+Thirteen scout-covered municipalities already have at least one canonical contract row (PA 1, TX 3, MA 8, NJ 1), while eight specific returned candidate URLs are held as already canonical/confirmed duplicates (PA 1, MA 7). Those are distinct measurements. Scout execution, queue status, calibration, later-ingestion recommendation, canonical overlap, codification, and claim status now occupy separate fields.
+
+`scripts/build_national_scout_candidate_queue.py` and `scripts/build_national_scout_coverage_status.py` are local-only reproducible builders. `scripts/build_scout_coverage.py` still owns the Census universe/crosswalk and is the top-level orchestrator, but now delegates current coverage outputs instead of overwriting them with its historical PA-only carry-forward. Methodology and workflow docs now state: national scouting first; light triage and coverage accounting after every completed batch; coordinated later verification waves selected from matched sets; ingestion only after verification; fresh smoke preflight before every authorized live batch; and direct SDK preferred for the HUIT proxy.
+
+All requested and added compile/build checks passed. Direct-backend and prompt-contract suites passed 6/6 each; schema validation passed at 64 contracts; ingestion tests passed 60/60; canonical coverage remains 28 healthy pairs across 19 cities, 2 exploratory adjacent pairs, and 6 unmatched safety units.
+
+Recommended next move: do not verify or ingest the 113-row queue automatically. If a next live slice is separately authorized, prepare full-context rows for Chicago, Aurora, and Rockford—the next three untouched `ready_for_scout` claim-register targets—run a fresh synthetic direct-SDK preflight, and scout serially with bounded retries. Add results to the queue and coverage outputs immediately; reserve deep verification for a later coordinated wave around the strongest municipality-level matched sets.
 
 ## 2026-07-20T17:00:51-04:00 - Locked New Jersey direct-SDK scout completed cleanly; eight leads remain unverified
 

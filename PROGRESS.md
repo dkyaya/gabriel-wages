@@ -6,6 +6,43 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-20 18:07 EDT (National scout queue and four-state discovery coverage accounting created) - continue small national slices before coordinated verification waves
+
+**Did**
+- Started at `8b36263a8291a4d2633797f4388308901fdea674` and reconciled `tmp/national_batch01_nj_live_direct_sdk_2026-07-20_relay_8b36263.zip`; every shared relay/repository file matched byte-for-byte. The requested TX/MA calibration and national universe files were repository-only history outside the narrow relay, not discrepancies. No remote, API/model call, live scout, URL opening, PDF download, verification, ingestion, codification, or canonical data/corpus edit occurred.
+- Built `national_scout_candidate_queue_2026-07-20.csv` from the final PA main/retry candidates (75), TX (6), successful MA rerun (24), and NJ direct-SDK run (8): 113 rows total. Light triage queues 67 for later verification (33 high, 15 medium, 19 low) and holds 46 as context (33), likely duplicates (2), insufficient (1), calibration rejections (2), or already canonical (8).
+- Carried the 6 TX and 24 MA verification rows only as explicit `calibration_*` findings. Eight prior calibration rows retain `verified_later_ingest_candidate` as a scheduling label (TX 1, MA 7), seven MA duplicate/superseded rows plus one exact PA URL are held as already canonical, and nothing was promoted.
+- Added a one-row-per-government national coverage status over the authoritative 35,589-row universe and rebuilt state/county association summaries. Successful discovery coverage is 39 municipalities: PA 25, TX 3, MA 8, NJ 3; 36 produced candidates and 3 produced parseable empty results. Sixteen MA connection-only attempts are recorded and excluded; the later successful rerun supplies MA coverage. Nationally 35,550 remain unscouted.
+- Kept `build_scout_coverage.py` as the universe/crosswalk orchestrator but delegated current status outputs to the new queue-aware builder, preventing the historical PA-only carry-forward from overwriting TX/MA/NJ. Updated scout/filter/direct-SDK workflow documentation to national scouting first, queue/coverage updates after each live batch, coordinated later verification, then ingestion.
+
+**Decisions and why**
+- Scout coverage, queue status, calibration verification, later-ingestion recommendation, canonical overlap, codification, and claim use are separate columns. A connection failure is infrastructure evidence, not discovery coverage; a parseable empty response is coverage but not proof of source absence.
+- Later verification should select within-city matched sets and mechanism bundles, not individual highest-scoring URLs. Current priorities include the Jersey City successor set, Camden fire/civilian pair, calibration-corrected Seekonk set, Houston HOPE/HPOU pair, Worcester/Boston mechanism leads, and uncalibrated PA matched clusters.
+- Do not open all 113 URLs. The 35,589-government universe is a denominator; the manifest, queue, and coverage gaps should select bounded slices and later verification waves.
+
+**Surprises/breakage**
+- The old national state/county outputs reflected only PA because their input was the legacy PA municipality coverage ledger. The new status builder resolves this without changing the Census universe.
+- All eight MA municipalities had two excluded connection-only attempts before the successful rerun (16 request rows total). Austin and two PA municipalities are valid successful no-candidate coverage, not failures.
+- Thirteen scout-covered municipalities already have canonical corpus rows, but only eight returned candidate URLs are canonical/confirmed duplicates. Municipality overlap and candidate duplication are not interchangeable.
+
+**Validation/audit results**
+```text
+All six requested/added py_compile checks: exit 0
+queue builder: 113 rows (PA 75; TX 6; MA 24; NJ 8), controlled triage and calibration joins passed
+coverage builder/orchestrator: universe 35,589; covered 39; candidate-positive 36; excluded failures 16; unscouted 35,550
+python scripts/test_gabriel_state_source_scout_direct_sdk.py: 6 PASS checks
+python scripts/test_gabriel_state_source_scout_prompt.py: 6 PASS checks
+python scripts/validate.py: PASSED (64 contracts; 0 discourse; 64 coverage; 3 city attributes)
+python ingest/test_pipeline.py: 60 passed, 0 failed
+python ingest/audit_coverage.py: 28 healthy pairs (10 exact, 18 overlap), 2 exploratory adjacent, 6 unmatched safety units
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units. Queue/coverage accounting changed no canonical row.
+
+**Next steps**
+1. Do not verify or ingest the queue automatically. If a live batch is separately authorized, use the next untouched manifest slice—Chicago, Aurora, and Rockford—with a fresh direct-SDK synthetic preflight and full-context input.
+2. After each successful live batch, add its candidates to the queue and rebuild municipality/state/county status. After broader national scouting, select coordinated verification waves around the strongest matched sets and only then make pre-ingestion decisions.
+
 ## 2026-07-20 17:00 EDT (Locked three-city New Jersey direct-SDK scout completed 3/3 with eight unverified candidates) - verify exactly these returned URLs before any ingestion or another scout
 
 **Did**
