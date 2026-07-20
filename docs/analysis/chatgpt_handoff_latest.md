@@ -2,9 +2,38 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-17T14:20:00-04:00`
+Last updated: `2026-07-20T13:12:00-04:00`
 
 ---
+
+## 2026-07-20T13:12:00-04:00 - No-live URL/base-URL audit finds unchanged local call path and exact effective `POST .../v2/responses` route
+
+**Commit target:** `Audit GABRIEL proxy URL construction`
+
+### Current State After This Entry
+
+- **Relay/source integrity:** started at `4a33388083ae5818b779c953e9aaaa3404e44be7`; all 23 files carried by `tmp/gabriel_huit_code_packet_2026-07-17_relay_4a33388.zip` matched the workspace by SHA-256. Pre-existing `.claude/` remained untouched. No remote was inspected or configured.
+- **Exact effective URL:** `scripts/gabriel_state_source_scout.py` hardcodes base `https://go.apis.huit.harvard.edu/ais-openai-direct/v2`; installed GABRIEL 1.1.8 uses `AsyncOpenAI.responses.create()`, and OpenAI SDK 2.41.0 appends `/responses`. The final request is `POST https://go.apis.huit.harvard.edu/ais-openai-direct/v2/responses`.
+- **No path defect found:** no `/v2/v2`, missing version, `/responses/responses`, or trailing-slash defect. The base contains one `v2`, ends before a resource path, and the SDK adds one `/responses`.
+- **Environment finding:** project `.env` present and parent `.env` absent. Fixed-name/status-only audit: `HARVARD_SUBSCRIPTION_KEY` absent ambient, present in selected `.env`, present after load; `OPENAI_API_KEY`, `OPENAI_BASE_URL`, `HTTP_PROXY`, `HTTPS_PROXY`, `ALL_PROXY`, and `NO_PROXY` absent ambient and in the selected `.env`. Values were never printed. `run_live_batch()` forces `OPENAI_BASE_URL` and also passes explicit `base_url`, so an environment value cannot override this live path.
+- **Texas comparison:** successful run `tx_2026-07-16_164549` executed from commit `31189a5df9f0a8493f612de9c5a9d0191ac70a2f`; artifacts were committed at `48241178f7f2a90d1fb873bc82ec3258e33f35f0`. The extracted `run_live_batch()` SHA-256 at the execution commit and current pre-audit code is identical: `65e6634a36f822042e00f781b475ddd083b5ce9feffe861f0e08f22ca9edfe8f`. URL, model, client, headers, and request family did not change.
+- **Artifact contrast:** Texas used `gpt-5.4-nano`, low search context, one worker, 90/90-second limits, and 15-second spacing and returned 3/3 successful nonempty rows with response IDs. MA used the same settings and returned 0/8, all connection errors without response IDs. The later no-search synthetic failures show web-search payloads are not required to reproduce the incident.
+- **Secondary GABRIEL issue:** its rate-limit probe tries `{base}/responses` and `{base}/chat/completions` with Bearer authorization but does not forward the custom Harvard subscription header. The actual model request does receive `extra_headers`. Treat the probe as an upstream package cleanup, not the leading root cause.
+- **New safe artifacts:** `docs/analysis/gabriel_url_baseurl_audit_2026-07-17.md`; `scripts/diagnose_gabriel_config.py`; and `tmp/gabriel_url_baseurl_audit_2026-07-17/sanitized_config_output.txt`. The helper is no-network and checks its rendered output against loaded credential values before writing.
+- **Protected state:** no live GABRIEL/model/API call, state/MA scout, source search, ingestion, codification, canonical data/corpus edit, runtime-behavior change, remote operation, or push occurred.
+
+### Validation State
+
+- Three requested `py_compile` checks — passed.
+- No-network prompt/outcome contract test — 5 PASS checks.
+- Sanitized helper — passed; `network calls made: no`; final URL `.../v2/responses`; no duplicate path component.
+- `scripts/validate.py` — passed; contracts 64, discourse 0, coverage 64, city attributes 3.
+- `ingest/test_pipeline.py` — 60 passed, 0 failed.
+- `ingest/audit_coverage.py` — 28 healthy pairs across 19 cities; 10 exact, 18 overlap, 2 exploratory adjacent, 6 unmatched safety units.
+
+### Recommended Next Move
+
+Send HUIT the exact effective `POST /ais-openai-direct/v2/responses` route, model, and header names. Ask them to compare proxy/server logs for Texas success (`2026-07-16 16:45-16:47 EDT`) with MA failure (`~18:32 EDT`) and the synthetic retest (`2026-07-17 14:11 EDT`), then identify whether the request arrived and whether routing, subscription authentication, backend/model availability, or an upstream reset failed. Ask HUIT to state the current base/resource contract explicitly. Do not modify `/v2`, switch to chat completions, or resume a scout speculatively. If HUIT reports restoration, require separate authorization for a tiny raw-Responses-versus-GABRIEL no-search A/B before any MA/state research run.
 
 ## 2026-07-17T14:20:00-04:00 - HUIT code packet prepared from the actual failing proxy-call path, with secret-safe artifacts only
 

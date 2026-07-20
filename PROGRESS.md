@@ -6,6 +6,60 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-20 13:12 EDT (Completed a no-live audit of GABRIEL URL/base-URL construction and changes since the successful Texas run; local path is unchanged and resolves to `/v2/responses`) - send the exact route to HUIT before any new live test
+
+**Did**
+- Started at local commit `4a33388083ae5818b779c953e9aaaa3404e44be7`. Treated `tmp/gabriel_huit_code_packet_2026-07-17_relay_4a33388.zip` as source of truth: all 23 carried files matched the workspace by SHA-256. Left pre-existing untracked `.claude/` untouched and did not inspect/configure a Git remote.
+- Traced `scripts/gabriel_state_source_scout.py` from `main()` through `run_live_batch()`, installed GABRIEL 1.1.8 (`whatever` → `Whatever.run` → `get_all_responses` → `get_response`), and OpenAI SDK 2.41.0 URL joining. The hardcoded base `https://go.apis.huit.harvard.edu/ais-openai-direct/v2` is passed explicitly and the SDK appends `/responses`, yielding `https://go.apis.huit.harvard.edu/ais-openai-direct/v2/responses`.
+- Compared the runner at the successful Texas execution commit `31189a5df9f0a8493f612de9c5a9d0191ac70a2f` with current code. The extracted `run_live_batch()` block hashes identically at both versions (`65e6634a36f822042e00f781b475ddd083b5ce9feffe861f0e08f22ca9edfe8f`). Texas artifacts were committed in `48241178f7f2a90d1fb873bc82ec3258e33f35f0`; later runner edits affect prompt/scoring fields and outcome metadata, not URL, headers, model, timeout, or client construction.
+- Confirmed sanitized configuration only: project `.env` present; parent `.env` absent; `HARVARD_SUBSCRIPTION_KEY` absent ambient/present in selected `.env`/present after load; `OPENAI_API_KEY`, `OPENAI_BASE_URL`, and standard proxy variables absent ambient and in `.env`. No value was printed. The runner temporarily forces both OpenAI variables and passes `base_url` explicitly, so `OPENAI_BASE_URL` cannot silently override this function.
+- Added `scripts/diagnose_gabriel_config.py`, which makes no network call, prints only fixed environment-variable names/status plus non-secret effective URL/model/request-family information, checks duplicate path components, and refuses output containing a loaded credential. Saved its output under `tmp/gabriel_url_baseurl_audit_2026-07-17/`.
+- Added `docs/analysis/gabriel_url_baseurl_audit_2026-07-17.md`. No live/runtime behavior, canonical data, coverage, corpus, source, or research artifact was changed.
+
+**Decisions and why**
+- Did not change `/v2`, switch request families, or alter the scout. The same exact function and request configuration succeeded for Texas at 16:45 EDT and failed later for MA; the offline SDK path has no duplicate/missing component. A speculative URL change would contradict known local evidence.
+- Ranked proxy routing/authentication/upstream backend or a server-side Responses-route contract change above local configuration. The later no-search synthetic failures show that web-search tools are not necessary to reproduce the problem.
+- Recorded one secondary GABRIEL issue for upstream attention: its rate-limit probe posts to `{base}/responses` and `{base}/chat/completions` without forwarding the `Ocp-Apim-Subscription-Key` extra header. Actual model requests do receive that header, so this is not the leading explanation for the abrupt Texas-to-MA transition.
+
+**Surprises/breakage**
+- The effective final URL had never been written explicitly in the prior packet: it is `.../v2/responses`, because `v2` is the base version and the SDK owns the `/responses` suffix.
+- Installed GABRIEL/OpenAI source files have local modification times of 2026-06-08, predating both runs; there is no filesystem evidence of a package change between Texas and MA.
+- All requested tests passed. No breakage occurred.
+
+**Validation/audit results**
+```text
+python -m py_compile scripts/gabriel_state_source_scout.py
+python -m py_compile scripts/test_gabriel_state_source_scout_prompt.py
+python -m py_compile scripts/diagnose_gabriel_config.py
+OK
+
+python scripts/test_gabriel_state_source_scout_prompt.py
+5 PASS checks
+
+python scripts/diagnose_gabriel_config.py
+network calls made: no
+effective responses request URL: https://go.apis.huit.harvard.edu/ais-openai-direct/v2/responses
+duplicate adjacent response-path components: none
+
+python scripts/validate.py
+VALIDATION PASSED — contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19
+exact-cycle: 10 | overlap-cycle: 18 | exploratory adjacent matches: 2
+safety units unmatched: 6
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units. No canonical corpus change occurred.
+
+**Next steps**
+1. Give HUIT the exact effective route `POST /ais-openai-direct/v2/responses`, model, and header names; ask them to compare server logs for the successful Texas window with the MA and synthetic failures and identify routing, authentication, backend/model, or upstream-reset category.
+2. Ask HUIT to confirm the current proxy contract explicitly: base `.../v2` plus `/responses`, or a different resource/version. Do not alter local runtime behavior until that answer exists.
+3. If HUIT reports restoration, obtain separate authorization for a tiny direct Responses no-search versus GABRIEL no-search A/B test. Do not resume MA/state research scouting automatically.
+
 ## 2026-07-17 14:20 EDT (Packaged the actual GABRIEL proxy-call code and sanitized failure artifacts for HUIT; no connectivity retest or research work) - do not resume Massachusetts or any state scout
 
 **Did**
