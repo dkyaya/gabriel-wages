@@ -6,6 +6,46 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-20 15:00 EDT (Locked eight-city Massachusetts national-batch rerun completed with 8/8 connectivity and 24 unverified scout leads) - verify the Massachusetts queue before another live slice
+
+**Did**
+- Started at local commit `a533adb52d7f0b57b5a2532b1eab4a2817543618` and treated `tmp/gabriel_wrapper_smoke_test_2026-07-20_relay_a533adb.zip` as source of truth. Inspected its inventory, required relay/project files, smoke evidence, MA dry-run review/input, filtering contract, and runner before the live call. No remote was inspected, configured, or changed.
+- Confirmed the full-context MA input resolves to exactly the locked rows, in order: Somerville, Newton, Boston, Worcester, Arlington, Georgetown, Franklin, and Seekonk. Ran only that slice using the authorized command: minimal prompt mode, 8-prompt cap, serial execution, 15-second spacing, low search context, and the fixed output directory.
+- The live runner completed 8/8 GABRIEL-successful, nonempty, parseable rows with no connection errors, no parser failures, and no retry. It staged 24 candidates: Somerville 2 non-safety; Newton 2 non-safety; Boston 2 fire; Worcester 2 police/1 non-safety; Arlington 2 police; Georgetown 2 fire; Franklin 2 police/1 fire/2 non-safety; Seekonk 2 police/2 fire/2 non-safety.
+- Preserved prompt preview, metadata, raw outputs, parsed candidates, empty failed-parses ledger, cost summaries, GABRIEL checkpoint artifacts, and validation output under `tmp/gabriel_state_source_scout/MA/national_batch01_ma_live_rerun_2026-07-20/`. Added the requested review and explicitly unverified candidate CSVs in `docs/analysis/`.
+
+**Decisions and why**
+- Do not treat any returned URL or model classification as verified. The candidate CSV labels every row `unverified_scout_candidate`; no canonical contracts, coverage, corpus, claim, or codified-output file changed.
+- Prioritize direct verification of Franklin's full-document police/fire/DPW/library set, Seekonk's newer police/fire/library set, Boston's 2014–2017 fire CBA, and Arlington's awards. Treat Somerville/Georgetown and the inaccessible/partial rows as trace-only until the underlying official documents establish the missing facts.
+
+**Surprises/breakage**
+- Connectivity was restored across the full serial slice: total cost was `$0.0895092`, with 236,971 input, 12,919 reasoning, and 20,773 output tokens; average model response time was 33.04 seconds.
+- Returned labels include 12 `possible` wrong-employer-risk rows, but no high-risk or plainly different-employer row; this records unresolved identity rather than a confirmed correct employer. No unit was labeled unclear/unknown and no safety document was labeled non-safety. Six rows were correctly retained as context-only (two Somerville, one Worcester, two Georgetown, one Seekonk).
+
+**Validation/audit results**
+```text
+python -m py_compile scripts/gabriel_state_source_scout.py
+OK
+
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19
+exact-cycle: 10 | overlap-cycle: 18 | exploratory adjacent matches: 2
+safety units unmatched: 6
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units. The MA scout did not repair canonical coverage because scout leads are unverified.
+
+**Next steps**
+1. Verify the high-priority Massachusetts leads directly, beginning with Franklin, Seekonk, Boston, and Arlington. Establish exact employer, unit, document completeness, dates, wage-setting content, and matching-cycle overlap before any promotion decision.
+2. Do not release another live state slice until this MA queue is reviewed. Do not ingest or codify any lead without separate verification work and authorization.
+
 ## 2026-07-20 14:51 EDT (One explicitly network-approved synthetic GABRIEL wrapper smoke test succeeded) - keep MA locked pending separate authorization
 
 **Did**

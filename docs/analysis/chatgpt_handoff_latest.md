@@ -2,9 +2,34 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-20T14:51:00-04:00`
+Last updated: `2026-07-20T15:00:00-04:00`
 
 ---
+
+## 2026-07-20T15:00:00-04:00 - Locked Massachusetts live scout rerun completes cleanly; 24 leads remain unverified
+
+**Commit target:** `Record Massachusetts national batch 01 live scout rerun`
+
+### Current State After This Entry
+
+- **Starting point and scope:** began at `a533adb52d7f0b57b5a2532b1eab4a2817543618`, with `tmp/gabriel_wrapper_smoke_test_2026-07-20_relay_a533adb.zip` as the source-of-truth relay. The full-context MA input was checked before launch and resolved exactly to Somerville, Newton, Boston, Worcester, Arlington, Georgetown, Franklin, and Seekonk. No remote operation occurred.
+- **Authorized live run:** exactly that eight-row MA slice ran at `tmp/gabriel_state_source_scout/MA/national_batch01_ma_live_rerun_2026-07-20/`, with minimal prompts, 8 maximum prompts, `n_parallels=1`, 15-second inter-prompt sleep, low search context, and the existing Harvard GABRIEL path. No other scout, FOIA/public-records request, source ingestion, or codification ran.
+- **Connectivity/result:** all 8 rows were GABRIEL-successful, nonempty, and parseable; no connection error or parse failure occurred, so no retry was needed. The run produced 24 candidates and cost `$0.0895092` (236,971 input / 12,919 reasoning / 20,773 output tokens; 33.04 seconds average model-response time).
+- **Candidate map:** Somerville 2 non-safety; Newton 2 non-safety; Boston 2 fire; Worcester 2 police + 1 non-safety; Arlington 2 police awards; Georgetown 2 fire context leads; Franklin 2 police + 1 fire + 2 non-safety; Seekonk 2 police + 2 fire + 2 non-safety. Strongest scout leads are Boston's fire CBA; Arlington's JLMC awards; Franklin's five city-hosted full-document leads; and Seekonk's newer police/fire/library documents.
+- **Leakage/limits:** no row was explicitly high wrong-employer risk, unclear/unknown unit type, or safety material mislabeled non-safety. Twelve rows are `possible` wrong-employer risk pending confirmation; six are context-only. Somerville and Newton ordinary non-safety material is still inaccessible, partial, or memorandum-only; Georgetown returned minutes evidencing a fire agreement/renewal, not the agreement itself; Worcester did not surface the requested police base CBA.
+- **New artifacts:** the full run artifact directory; `docs/analysis/national_batch01_ma_live_scout_rerun_review_2026-07-20.md`; the required `national_batch01_ma_live_scout_candidates_2026-07-20.csv`; and the runner's staged `gabriel_state_source_scout_candidates_ma_2026-07-20_150025.csv`. Every row is explicitly `unverified_scout_candidate` in the handoff CSV.
+- **Protected state:** contracts, coverage, corpus, claims, and codified output did not change. Scout leads did not change canonical coverage.
+
+### Validation State
+
+- `python -m py_compile scripts/gabriel_state_source_scout.py` — passed.
+- `python scripts/validate.py` — passed; contracts 64, discourse 0, coverage 64, city attributes 3.
+- `python ingest/test_pipeline.py` — 60 passed, 0 failed.
+- `python ingest/audit_coverage.py` — 28 healthy pairs across 19 cities; 10 exact, 18 overlap, 2 exploratory adjacent, 6 unmatched safety units.
+
+### Recommended Next Move
+
+Do not launch another live state slice. Perform controlled direct-source verification of the Massachusetts queue, starting with full-document Franklin, Seekonk, Boston, and Arlington leads. Confirm exact employer/unit, official provenance, document completeness, visible dates, wage-setting content, and cycle overlap before any future promotion, ingestion, or claim use.
 
 ## 2026-07-20T14:51:00-04:00 - Explicitly network-approved GABRIEL wrapper smoke test succeeds on the established HUIT request shape
 
