@@ -6,6 +6,40 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-20 16:40 EDT (Added an opt-in direct OpenAI SDK live backend and passed one synthetic no-search smoke test) - ready for a separately authorized NJ direct-backend scout, not run here
+
+**Did**
+- Started at local commit `93d9ef2f0d2261be439880be906f43d0969e0ae0` and treated `tmp/national_batch01_nj_preflight_stop_2026-07-20_relay_93d9ef2.zip` as source of truth. Every relayed file that also existed in the repository matched byte-for-byte; the relay was intentionally narrow, so the requested older diagnostics and runner scripts were read from the repository. No Git remote was inspected, configured, created, validated, changed, or pushed.
+- Inspected GABRIEL 1.1.8's installed live path. Its ordinary `get_all_responses()` path unconditionally calls the private `_get_rate_limit_headers(model, base_url=...)`; that helper has no caller-header argument and constructs only `Authorization` plus `Content-Type`. No supported switch disables the probe or forwards `Ocp-Apim-Subscription-Key`. Rejected a brittle private-function monkey-patch and did not edit the installed package.
+- Added the opt-in `--live-backend direct-sdk` path to `scripts/gabriel_state_source_scout.py`, leaving `gabriel` as the live default. The backend uses `AsyncOpenAI.responses.create`, the established HUIT `/v2` base, SDK bearer authorization plus the subscription header, explicit timeout/retry controls, the existing web-search tool configuration for research scouts, and the existing prompt/parser/scoring/quarantine/artifact pipeline. Dry-run metadata/artifacts remain backend-independent.
+- Added a one-request smoke helper and a no-network backend regression test. Ran exactly one authorized synthetic direct-SDK call: `Reply with OK.`, `gpt-5.4-nano`, no tools/search, one prompt, zero retries, and 30-second timeout. It succeeded with `OK.`, a response ID, 10 input / 0 reasoning / 6 output tokens. Artifacts are under `tmp/direct_sdk_scout_backend_smoke_test_2026-07-20/`; no NJ or other municipality prompt ran.
+- Added `docs/analysis/direct_sdk_scout_backend_2026-07-20.md`. No source was scouted or verified; no ingestion, codification, claim promotion, canonical CSV edit, or corpus edit occurred.
+
+**Decisions and why**
+- Keep GABRIEL as the default for compatibility, but prefer `direct-sdk` for future HUIT-proxy scouts after a wrapper preflight failure. The direct path removes the unsupported headerless probe, cached async-client lifecycle, wrapper retry/orchestration, and generic exception reduction from the critical transport path while preserving the project-owned scout stages.
+- The synthetic smoke omits tools and web search to isolate transport. The future research path intentionally restores the existing hosted web-search tool; that tool-enabled boundary remains unverified until a separately authorized small scout.
+- Direct Responses objects report usage but not billed dollars, so direct cost summaries preserve token/timing artifacts and mark cost unavailable instead of inventing a price.
+
+**Surprises/breakage**
+- The failed NJ wrapper artifacts exactly reproduce the known probe-header omission: four preliminary attempts and no subscription header. The installed API offers no minimal supported repair point.
+- No prompt, parser, dry-run, validation, or ingestion regression was found. The direct mocked response uses the same parser and remains `verification_status=unverified` / `promotion_status=raw_model_output`.
+
+**Validation/audit results**
+```text
+All six requested/added py_compile checks: exit 0
+python scripts/test_gabriel_state_source_scout_prompt.py: 6 PASS checks
+python scripts/test_gabriel_state_source_scout_direct_sdk.py: 5 PASS checks
+python scripts/validate.py: PASSED (64 contracts; 0 discourse; 64 coverage; 3 city attributes)
+python ingest/test_pipeline.py: 60 passed, 0 failed
+python ingest/audit_coverage.py: 28 healthy pairs (10 exact, 18 overlap), 2 exploratory adjacent, 6 unmatched safety units
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units. Infrastructure-only work changed no canonical coverage.
+
+**Next steps**
+1. Do not run NJ automatically. Under separate authorization, run a fresh one-request direct-SDK no-search smoke preflight into a new directory; proceed only on nonempty `OK`, response ID, positive output tokens, and explicit success.
+2. If separately authorized after that gate, run only Newark, Jersey City, and Camden with `--live-backend direct-sdk`, one parallel worker, zero retries, and the locked full-context input. Keep every result at unverified scout stage, then verify returned URLs in a distinct task before ingestion or claim use.
+
 ## 2026-07-20 16:17 EDT (Required NJ wrapper preflight failed; locked NJ live scout correctly stopped) - preserve failure evidence and await separate reauthorization
 
 **Did**

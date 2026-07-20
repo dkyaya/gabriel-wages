@@ -2,9 +2,23 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-20T16:17:30-04:00`
+Last updated: `2026-07-20T16:40:31-04:00`
 
 ---
+
+## 2026-07-20T16:40:31-04:00 - Opt-in direct SDK scout backend implemented and synthetic transport smoke test passed
+
+The source-of-truth relay was `tmp/national_batch01_nj_preflight_stop_2026-07-20_relay_93d9ef2.zip`, and the starting local commit was `93d9ef2f0d2261be439880be906f43d0969e0ae0`. Every shared relay/repository file matched byte-for-byte; the older diagnostics and implementation scripts absent from the deliberately narrow relay were read from the repository. No Git remote was inspected, configured, created, validated, modified, or pushed.
+
+Installed GABRIEL 1.1.8 has no supported minimal fix for the HUIT probe issue. Its normal `get_all_responses()` path calls private `_get_rate_limit_headers(model, base_url=...)`; that helper accepts no caller headers and builds only `Authorization` plus `Content-Type`, so `Ocp-Apim-Subscription-Key` cannot be forwarded through public wrapper arguments. Disabling it locally would require monkey-patching a private installed-package function or substituting GABRIEL's response function. Neither was applied, and no installed package file changed.
+
+`scripts/gabriel_state_source_scout.py` now has an opt-in `--live-backend direct-sdk`; the historical `gabriel` backend remains the default. The new backend uses `AsyncOpenAI.responses.create`, base `https://go.apis.huit.harvard.edu/ais-openai-direct/v2`, SDK bearer authorization plus `Ocp-Apim-Subscription-Key`, explicit `--timeout` and `--direct-sdk-max-retries`, bounded existing parallel/chunk spacing, and the same low-context hosted web-search tool/source inclusion used by the research scout. It converts SDK responses into the historical raw columns and then reuses the unchanged parser, normalization, deterministic scoring, failed-parse quarantine, staged CSVs, and `unverified` / `raw_model_output` candidate boundaries. Direct SDK billed dollar cost is unavailable, so its summary marks cost unavailable while preserving token/timing totals.
+
+Exactly one live request ran in this task, and it was synthetic infrastructure only: `Reply with OK.`, `gpt-5.4-nano`, no tools/web search, one prompt, zero retries, and 30-second timeout. It returned `OK.`, a response ID, and 10 input / 0 reasoning / 6 output tokens. Evidence is under `tmp/direct_sdk_scout_backend_smoke_test_2026-07-20/`. No Newark, Jersey City, Camden, NJ, or other research prompt ran; no source was searched, verified, ingested, codified, or promoted, and canonical data/corpus files were untouched.
+
+The no-network direct-backend test covers the live web-search request kwargs, no-tool smoke shape, mocked response conversion into the same candidate parser, unverified/raw quarantine values, credential redaction, and backend-independent dry run. The existing six-check prompt contract still passes. `validate.py` passed at 64 contracts; pipeline tests passed 60/60; coverage remains 28 healthy pairs across 19 cities, 2 exploratory adjacent pairs, and 6 unmatched safety units. Full implementation and operating instructions are in `docs/analysis/direct_sdk_scout_backend_2026-07-20.md`.
+
+Recommended next move: do not run NJ automatically. If separately authorized, first use the direct smoke helper with a fresh output directory and require `OK`, a response ID, positive output tokens, one request, and explicit success. Only then run the unchanged locked Newark/Jersey City/Camden input with `--live-backend direct-sdk`, `n_parallels=1`, and zero retries. The direct hosted-web-search boundary and all NJ source/candidate findings remain unverified until that distinct task; every returned URL must then pass a separate verification stage before ingestion, codification, canonical coverage, or claim use.
 
 ## 2026-07-20T16:17:30-04:00 - New Jersey wrapper preflight failed; locked live scout correctly stopped
 

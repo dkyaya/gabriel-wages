@@ -1,10 +1,11 @@
 """
-gabriel_state_source_scout.py — statewide GABRIEL whatever(web_search=True) source-discovery scout.
+gabriel_state_source_scout.py — statewide source-discovery scout.
 
 Purpose: a bounded, auditable harness that runs one source-discovery prompt per
 municipality (police / fire / non-safety labor documents) across a state, using
-GABRIEL's `whatever(web_search=True)` path, and writes a deterministically-scored,
-staged candidate-source queue. See
+either GABRIEL's `whatever(web_search=True)` path or an opt-in direct OpenAI SDK
+Responses path, and writes a deterministically-scored, staged candidate-source
+queue. See
 docs/analysis/gabriel_state_source_scout_methodology_2026-07-14.md for the full
 schema, scoring rules, and how this differs from gabriel.codify().
 
@@ -31,6 +32,11 @@ Usage (safe, no network call):
 Usage (live, requires HARVARD_SUBSCRIPTION_KEY, e.g. via a git-ignored .env file):
   python scripts/gabriel_state_source_scout.py --live --state PA --limit 10 \\
       --max-prompts 10 --search-context-size low --model gpt-5.4-nano --n-parallels 3
+
+Usage (live through the HUIT-compatible direct SDK backend):
+  python scripts/gabriel_state_source_scout.py --live --live-backend direct-sdk \\
+      --state PA --limit 10 --max-prompts 10 --search-context-size low \\
+      --model gpt-5.4-nano --n-parallels 1 --direct-sdk-max-retries 0
 
 Timeout/retry tuning (2026-07-14 stress test — see docs/analysis/gabriel_state_source_scout_timeout_test_2026-07-14.md):
   python scripts/gabriel_state_source_scout.py --live --state PA \\
@@ -69,6 +75,8 @@ DEFAULT_N_PARALLELS = 3
 DEFAULT_TIMEOUT = 90
 DEFAULT_MAX_TIMEOUT = 90
 DEFAULT_PROMPT_MODE = "full"
+DEFAULT_LIVE_BACKEND = "gabriel"
+DEFAULT_DIRECT_SDK_MAX_RETRIES = 0
 
 # Hard ceiling on live calls per run. Deliberately not overridable via CLI flag
 # — raising this requires editing this constant, per the task's safety model.
@@ -196,6 +204,7 @@ def summarize_live_row_outcomes(rows: list[dict[str, Any]]) -> dict[str, int | b
             response_nonempty += 1
     return {
         "n_gabriel_successful_rows": successful,
+        "n_backend_successful_rows": successful,
         "n_nonempty_response_rows": response_nonempty,
         "model_response_succeeded": successful > 0 and response_nonempty > 0,
     }
@@ -1407,8 +1416,331 @@ def run_build_coverage_mode(
 
 
 # ---------------------------------------------------------------------------
-# Live call (lazy imports — gabriel/dotenv are never imported on the dry-run path)
+# Live calls (lazy imports — SDK/GABRIEL/dotenv stay off the dry-run path)
 # ---------------------------------------------------------------------------
+
+DIRECT_SDK_RAW_FIELDS = [
+    "Identifier",
+    "Prompt",
+    "Response",
+    "Time Taken",
+    "Input Tokens",
+    "Reasoning Tokens",
+    "Output Tokens",
+    "Reasoning Effort",
+    "Successful",
+    "Error Log",
+    "Web Search Sources",
+    "Response IDs",
+    "Cost",
+]
+
+
+def _load_live_subscription_key() -> str | None:
+    """Load the established project/parent dotenv file and return the key.
+
+    This helper is live-path only. It deliberately returns only the credential
+    value and never prints or persists it.
+    """
+    import os
+
+    from dotenv import load_dotenv
+
+    for candidate in (ROOT / ".env", ROOT.parent / ".env"):
+        if candidate.exists():
+            load_dotenv(candidate, override=False)
+            break
+    return os.environ.get("HARVARD_SUBSCRIPTION_KEY")
+
+
+def redact_direct_sdk_text(value: Any, secret_values: list[str | None], limit: int = 2_000) -> str:
+    """Remove known credential values and common credential syntax from logs."""
+    rendered = str(value)
+    for secret in sorted({secret for secret in secret_values if secret}, key=len, reverse=True):
+        rendered = rendered.replace(secret, "[REDACTED]")
+    rendered = re.sub(
+        r"(?i)(authorization\s*[:=]\s*bearer\s+)[^\s,;]+",
+        r"\1[REDACTED]",
+        rendered,
+    )
+    rendered = re.sub(
+        r"(?i)(ocp-apim-subscription-key\s*[:=]\s*)[^\s,;]+",
+        r"\1[REDACTED]",
+        rendered,
+    )
+    rendered = re.sub(
+        r"(?i)((?:api[_-]?key|subscription[_-]?key)\s*[=:]\s*)[^\s,;\"']+",
+        r"\1[REDACTED]",
+        rendered,
+    )
+    return rendered[:limit]
+
+
+def build_direct_sdk_response_kwargs(
+    prompt: str,
+    model: str,
+    search_context_size: str,
+    *,
+    web_search: bool,
+    reasoning_effort: str | None = "low",
+) -> dict[str, Any]:
+    """Build the Responses API payload used by the direct backend.
+
+    The research scout intentionally uses hosted web search. Synthetic smoke
+    tests pass ``web_search=False`` and therefore omit both tools and include.
+    """
+    kwargs: dict[str, Any] = {"model": model, "input": prompt}
+    if reasoning_effort:
+        kwargs["reasoning"] = {"effort": reasoning_effort}
+    if web_search:
+        kwargs["tools"] = [
+            {"type": "web_search", "search_context_size": search_context_size}
+        ]
+        kwargs["include"] = ["web_search_call.action.sources"]
+    return kwargs
+
+
+def _response_value(value: Any, name: str, default: Any = None) -> Any:
+    if isinstance(value, dict):
+        return value.get(name, default)
+    return getattr(value, name, default)
+
+
+def _extract_direct_sdk_sources(response: Any) -> str:
+    """Return a compact JSON list of web-search sources from an SDK response."""
+    if hasattr(response, "model_dump"):
+        payload = response.model_dump(mode="json")
+    elif isinstance(response, dict):
+        payload = response
+    else:
+        return "[]"
+
+    sources: list[dict[str, str]] = []
+    seen: set[tuple[str, str]] = set()
+
+    def visit(value: Any) -> None:
+        if isinstance(value, dict):
+            maybe_sources = value.get("sources")
+            if isinstance(maybe_sources, list):
+                for item in maybe_sources:
+                    if not isinstance(item, dict):
+                        continue
+                    url = str(item.get("url", "") or "")
+                    title = str(item.get("title", "") or "")
+                    if not url or (url, title) in seen:
+                        continue
+                    seen.add((url, title))
+                    sources.append({"url": url, "title": title})
+            for child in value.values():
+                visit(child)
+        elif isinstance(value, list):
+            for child in value:
+                visit(child)
+
+    visit(payload.get("output", []))
+    return json.dumps(sources, ensure_ascii=False)
+
+
+def direct_sdk_response_to_row(
+    response: Any,
+    identifier: str,
+    prompt: str,
+    elapsed_seconds: float,
+) -> dict[str, Any]:
+    """Translate an OpenAI Responses object into the historic raw-row schema."""
+    usage = _response_value(response, "usage")
+    output_details = _response_value(usage, "output_tokens_details")
+    status = str(_response_value(response, "status", "") or "").lower()
+    response_text = str(_response_value(response, "output_text", "") or "")
+    successful = status == "completed" or (not status and bool(response_text.strip()))
+    return {
+        "Identifier": identifier,
+        "Prompt": prompt,
+        "Response": response_text,
+        "Time Taken": round(elapsed_seconds, 3),
+        "Input Tokens": _response_value(usage, "input_tokens"),
+        "Reasoning Tokens": _response_value(output_details, "reasoning_tokens"),
+        "Output Tokens": _response_value(usage, "output_tokens"),
+        "Reasoning Effort": "low",
+        "Successful": successful,
+        "Error Log": "[]" if successful else json.dumps([f"response status: {status or 'unknown'}"]),
+        "Web Search Sources": _extract_direct_sdk_sources(response),
+        "Response IDs": str(_response_value(response, "id", "") or ""),
+        # The Responses API returns token usage, not billed dollar cost.
+        "Cost": "",
+    }
+
+
+def _direct_sdk_failure_row(
+    identifier: str,
+    prompt: str,
+    elapsed_seconds: float,
+    exc: BaseException,
+    secret_values: list[str | None],
+) -> dict[str, Any]:
+    safe_message = redact_direct_sdk_text(exc, secret_values)
+    return {
+        "Identifier": identifier,
+        "Prompt": prompt,
+        "Response": "",
+        "Time Taken": round(elapsed_seconds, 3),
+        "Input Tokens": "",
+        "Reasoning Tokens": "",
+        "Output Tokens": "",
+        "Reasoning Effort": "low",
+        "Successful": False,
+        "Error Log": json.dumps([f"{type(exc).__name__}: {safe_message}"]),
+        "Web Search Sources": "[]",
+        "Response IDs": "",
+        "Cost": "",
+    }
+
+
+def write_direct_sdk_sanitized_log(
+    out_dir: Path,
+    rows: list[dict[str, Any]],
+    *,
+    model: str,
+    web_search: bool,
+    timeout: float,
+    max_retries: int,
+    secret_values: list[str | None],
+) -> Path:
+    """Write a response-summary log with no prompt/response or credential text."""
+    lines = [
+        "Direct SDK scout backend (sanitized)",
+        f"base_url={HARVARD_PROXY_BASE_URL}",
+        "effective_resource=/responses",
+        f"model={model}",
+        f"web_search={str(web_search).lower()}",
+        f"timeout_seconds={timeout}",
+        f"max_retries={max_retries}",
+        "header_names=Authorization,Ocp-Apim-Subscription-Key",
+        f"row_count={len(rows)}",
+    ]
+    for row in rows:
+        lines.append(
+            "row "
+            f"identifier={row.get('Identifier', '')} "
+            f"successful={row.get('Successful', False)} "
+            f"response_nonempty={bool(str(row.get('Response', '') or '').strip())} "
+            f"response_id_present={bool(str(row.get('Response IDs', '') or '').strip())} "
+            f"input_tokens={row.get('Input Tokens', '')} "
+            f"reasoning_tokens={row.get('Reasoning Tokens', '')} "
+            f"output_tokens={row.get('Output Tokens', '')} "
+            f"error={row.get('Error Log', '')}"
+        )
+    rendered = redact_direct_sdk_text("\n".join(lines) + "\n", secret_values, limit=100_000)
+    if any(secret and secret in rendered for secret in secret_values):
+        raise RuntimeError("refusing to write direct-SDK log containing a credential")
+    path = out_dir / "sanitized_console.log"
+    path.write_text(rendered, encoding="utf-8")
+    return path
+
+
+def run_direct_sdk_live_batch(
+    prompts: list[str],
+    identifiers: list[str],
+    out_dir: Path,
+    model: str,
+    search_context_size: str,
+    n_parallels: int,
+    timeout: float = DEFAULT_TIMEOUT,
+    max_retries: int = DEFAULT_DIRECT_SDK_MAX_RETRIES,
+    sleep_between_prompts: float = 0.0,
+    *,
+    web_search: bool = True,
+    reasoning_effort: str | None = "low",
+) -> tuple[Any, str | None]:
+    """Execute Responses calls directly through the HUIT OpenAI-compatible API."""
+    import asyncio
+    import time as time_module
+
+    import httpx
+    import pandas as pd
+    from openai import AsyncOpenAI
+
+    subscription_key = _load_live_subscription_key()
+    if not subscription_key:
+        return None, "HARVARD_SUBSCRIPTION_KEY not set; no live call executed."
+    if max_retries < 0:
+        return None, "direct SDK max_retries must be non-negative; no live call executed."
+    if timeout <= 0:
+        return None, "direct SDK timeout must be positive; no live call executed."
+
+    async def run_all() -> list[dict[str, Any]]:
+        client = AsyncOpenAI(
+            api_key=subscription_key,
+            base_url=HARVARD_PROXY_BASE_URL,
+            default_headers={"Ocp-Apim-Subscription-Key": subscription_key},
+            timeout=httpx.Timeout(timeout),
+            max_retries=max_retries,
+        )
+
+        async def run_one(prompt: str, identifier: str) -> dict[str, Any]:
+            started = time_module.monotonic()
+            try:
+                response = await client.responses.create(
+                    **build_direct_sdk_response_kwargs(
+                        prompt,
+                        model,
+                        search_context_size,
+                        web_search=web_search,
+                        reasoning_effort=reasoning_effort,
+                    )
+                )
+                return direct_sdk_response_to_row(
+                    response,
+                    identifier,
+                    prompt,
+                    time_module.monotonic() - started,
+                )
+            except Exception as exc:
+                return _direct_sdk_failure_row(
+                    identifier,
+                    prompt,
+                    time_module.monotonic() - started,
+                    exc,
+                    [subscription_key],
+                )
+
+        rows: list[dict[str, Any]] = []
+        chunk_size = max(1, n_parallels)
+        try:
+            for start in range(0, len(prompts), chunk_size):
+                chunk = await asyncio.gather(
+                    *(
+                        run_one(prompt, identifier)
+                        for prompt, identifier in zip(
+                            prompts[start : start + chunk_size],
+                            identifiers[start : start + chunk_size],
+                        )
+                    )
+                )
+                rows.extend(chunk)
+                if sleep_between_prompts > 0 and start + chunk_size < len(prompts):
+                    await asyncio.sleep(sleep_between_prompts)
+        finally:
+            await client.close()
+        return rows
+
+    try:
+        rows = asyncio.run(run_all())
+    except Exception as exc:
+        safe_message = redact_direct_sdk_text(exc, [subscription_key])
+        return None, f"{type(exc).__name__}: {safe_message}"
+
+    out_dir.mkdir(parents=True, exist_ok=True)
+    write_direct_sdk_sanitized_log(
+        out_dir,
+        rows,
+        model=model,
+        web_search=web_search,
+        timeout=timeout,
+        max_retries=max_retries,
+        secret_values=[subscription_key],
+    )
+    return pd.DataFrame(rows, columns=DIRECT_SDK_RAW_FIELDS), None
 
 def run_live_batch(
     municipalities: list[dict],
@@ -1538,7 +1870,7 @@ def _parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument("--dry-run", action="store_true", help="Build prompts and write a prompt preview only. No network/model call.")
-    mode.add_argument("--live", action="store_true", help="Run gabriel.whatever(web_search=True) for real (bounded, see --max-prompts).")
+    mode.add_argument("--live", action="store_true", help="Run the selected live backend for real (bounded, see --max-prompts).")
     parser.add_argument("--state", default="PA", help="2-letter state code (default: PA).")
     parser.add_argument("--limit", type=int, default=None, help="Max municipalities to load from the municipality list.")
     parser.add_argument("--municipalities-csv", type=Path, default=None, help="Optional municipality list CSV (municipality_id,municipality,state,...).")
@@ -1546,6 +1878,25 @@ def _parse_args() -> argparse.Namespace:
     parser.add_argument("--search-context-size", default=DEFAULT_SEARCH_CONTEXT_SIZE, help=f"Default: {DEFAULT_SEARCH_CONTEXT_SIZE}")
     parser.add_argument("--model", default=DEFAULT_MODEL, help=f"Default: {DEFAULT_MODEL}")
     parser.add_argument("--n-parallels", type=int, default=DEFAULT_N_PARALLELS, help=f"Default: {DEFAULT_N_PARALLELS}")
+    parser.add_argument(
+        "--live-backend",
+        choices=("gabriel", "direct-sdk"),
+        default=DEFAULT_LIVE_BACKEND,
+        help=(
+            "Live execution backend. gabriel preserves historical behavior; "
+            "direct-sdk uses OpenAI Responses directly with the HUIT dual-header shape "
+            f"(default: {DEFAULT_LIVE_BACKEND}). Ignored by --dry-run."
+        ),
+    )
+    parser.add_argument(
+        "--direct-sdk-max-retries",
+        type=int,
+        default=DEFAULT_DIRECT_SDK_MAX_RETRIES,
+        help=(
+            "OpenAI SDK retry count for --live-backend direct-sdk "
+            f"(default: {DEFAULT_DIRECT_SDK_MAX_RETRIES})."
+        ),
+    )
     parser.add_argument("--max-prompts", type=int, default=None, help="Required for --live. Hard-capped at LIVE_HARD_CAP regardless.")
     parser.add_argument("--timeout", type=float, default=DEFAULT_TIMEOUT, help=f"Per-call timeout (seconds) passed to gabriel.whatever (default: {DEFAULT_TIMEOUT}).")
     parser.add_argument("--max-timeout", type=float, default=DEFAULT_MAX_TIMEOUT, help=f"Max-timeout ceiling (seconds) passed to gabriel.whatever; if greater than --timeout, dynamic_timeout is enabled (default: {DEFAULT_MAX_TIMEOUT}).")
@@ -1569,6 +1920,8 @@ def _parse_args() -> argparse.Namespace:
         args.dry_run = True
     if args.live and args.max_prompts is None:
         parser.error("--live requires --max-prompts")
+    if args.direct_sdk_max_retries < 0:
+        parser.error("--direct-sdk-max-retries must be non-negative")
     return args
 
 
@@ -1652,18 +2005,36 @@ def main() -> int:
         return 0
 
     metadata["live_attempted"] = True
-    df, failure = run_live_batch(
-        municipalities,
-        prompts,
-        identifiers,
-        out_dir,
-        args.model,
-        args.search_context_size,
-        args.n_parallels,
-        timeout=args.timeout,
-        max_timeout=args.max_timeout,
-        sleep_between_prompts=args.sleep_between_prompts,
-    )
+    metadata["live_backend"] = args.live_backend
+    metadata["web_search_enabled"] = True
+    metadata["n_backend_successful_rows"] = None
+    if args.live_backend == "direct-sdk":
+        metadata["direct_sdk_max_retries"] = args.direct_sdk_max_retries
+        df, failure = run_direct_sdk_live_batch(
+            prompts,
+            identifiers,
+            out_dir,
+            args.model,
+            args.search_context_size,
+            args.n_parallels,
+            timeout=args.timeout,
+            max_retries=args.direct_sdk_max_retries,
+            sleep_between_prompts=args.sleep_between_prompts,
+            web_search=True,
+        )
+    else:
+        df, failure = run_live_batch(
+            municipalities,
+            prompts,
+            identifiers,
+            out_dir,
+            args.model,
+            args.search_context_size,
+            args.n_parallels,
+            timeout=args.timeout,
+            max_timeout=args.max_timeout,
+            sleep_between_prompts=args.sleep_between_prompts,
+        )
     if failure is not None:
         metadata["live_failure_reason"] = failure
         (out_dir / "run_metadata.json").write_text(json.dumps(metadata, indent=2), encoding="utf-8")
@@ -1671,12 +2042,16 @@ def main() -> int:
         print("Dry-run artifacts (prompt preview, metadata) preserved. Not retrying.")
         return 2
 
-    # Preserve the historic meaning of live_succeeded: gabriel.whatever
+    # Preserve the historic meaning of live_succeeded: the selected backend
     # returned a dataframe instead of raising. Row-level fields below expose
     # whether that dataframe contains an actual successful model response.
     metadata["live_succeeded"] = True
     metadata["live_process_completed"] = True
-    metadata.update(summarize_live_row_outcomes(df.to_dict(orient="records")))
+    outcome_summary = summarize_live_row_outcomes(df.to_dict(orient="records"))
+    if args.live_backend == "direct-sdk":
+        # Keep the historical field present without implying GABRIEL ran.
+        outcome_summary["n_gabriel_successful_rows"] = None
+    metadata.update(outcome_summary)
 
     import pandas as pd  # noqa: E402  (lazy: only needed on the live path)
 
@@ -1750,6 +2125,19 @@ def main() -> int:
     (out_dir / "run_metadata.json").write_text(json.dumps(metadata, indent=2), encoding="utf-8")
 
     cost_summary = compute_cost_summary(df, municipalities, all_candidates, all_failed, run_id, args)
+    if args.live_backend == "direct-sdk":
+        # The SDK response reports usage but not billed dollar cost. Keep the
+        # artifact and token/timing totals while making the missing cost clear.
+        cost_summary["cost_available"] = False
+        for key in (
+            "total_cost",
+            "successful_cost",
+            "failed_cost",
+            "avg_cost_per_prompt",
+            "avg_cost_per_parseable_response",
+            "avg_cost_per_candidate",
+        ):
+            cost_summary[key] = None
     cost_json_path, cost_csv_path = write_cost_summary(out_dir, cost_summary)
     cost_log_path = append_cost_log(cost_summary)
 
@@ -1757,7 +2145,9 @@ def main() -> int:
     print(f"parseable={metadata['n_parseable']} failed_parses={len(all_failed)} candidate_rows={len(all_candidates)}")
     print(f"candidates_csv={candidates_out}")
     print(f"run_metadata={out_dir / 'run_metadata.json'}")
-    print(f"cost_summary={cost_json_path} total_cost={cost_summary['total_cost']:.6f}")
+    total_cost = cost_summary["total_cost"]
+    cost_display = f"{total_cost:.6f}" if isinstance(total_cost, (int, float)) else "unavailable"
+    print(f"cost_summary={cost_json_path} total_cost={cost_display}")
     print(f"cost_log={cost_log_path}")
     return 0
 
