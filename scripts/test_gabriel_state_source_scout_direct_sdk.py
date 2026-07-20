@@ -171,6 +171,22 @@ def _check_secret_redaction_and_log() -> None:
     assert "Ocp-Apim-Subscription-Key" in rendered
 
 
+def _check_repeated_connection_error_stop_signature() -> None:
+    failed = {
+        "Response": "",
+        "Response IDs": "",
+        "Output Tokens": "",
+        "Error Log": '["APIConnectionError: Connection error."]',
+    }
+    assert scout.is_direct_sdk_connection_failure_without_response(failed) is True
+    assert scout.is_direct_sdk_connection_failure_without_response(
+        {**failed, "Response IDs": "resp_fixture"}
+    ) is False
+    stopped = scout._direct_sdk_stopped_row("fixture", "prompt")
+    assert stopped["Successful"] is False
+    assert "stopped_before_request" in stopped["Error Log"]
+
+
 def _check_dry_run_remains_backend_independent() -> None:
     with tempfile.TemporaryDirectory() as tmp:
         tmp_path = Path(tmp)
@@ -222,11 +238,13 @@ def main() -> int:
     _check_request_shapes()
     _check_mocked_response_uses_existing_candidate_pipeline()
     _check_secret_redaction_and_log()
+    _check_repeated_connection_error_stop_signature()
     _check_dry_run_remains_backend_independent()
     print("PASS: direct SDK request shape preserves scout web-search settings")
     print("PASS: no-search smoke request omits tools and web search")
     print("PASS: mocked direct response enters the existing unverified candidate pipeline")
     print("PASS: credential values are redacted from direct-backend logs")
+    print("PASS: repeated connection errors trigger the no-further-request stop signature")
     print("PASS: dry-run artifacts and metadata remain backend-independent")
     return 0
 

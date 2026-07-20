@@ -6,6 +6,42 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-20 17:00 EDT (Locked three-city New Jersey direct-SDK scout completed 3/3 with eight unverified candidates) - verify exactly these returned URLs before any ingestion or another scout
+
+**Did**
+- Started at local commit `ad5279197ee003f2bd66f03ca1ebab9e1fdc861f` and treated `tmp/direct_sdk_scout_backend_2026-07-20_relay_ad52791.zip` as source of truth. Every shared relay/repository file and smoke artifact matched byte-for-byte; the relay was complete for its checkpoint, while the NJ filter-contract files named in this task were repository-only context. No Git remote was inspected, configured, created, validated, changed, or pushed.
+- Confirmed the full-context input contained exactly Newark, Jersey City, and Camden. Ran the authorized direct-SDK synthetic preflight into `tmp/direct_sdk_scout_backend_preflight/NJ/national_batch01_nj_2026-07-20/`: `Reply with OK.`, no tools/search, zero retries, 30-second timeout. It succeeded with `OK`, a response ID, and 10 input / 0 reasoning / 5 output tokens.
+- Added a narrow tested safety guard that stops uncalled prompts after two consecutive connection errors with no response text, response ID, or output tokens. Then ran exactly the authorized three-city command through `--live-backend direct-sdk`, one prompt at a time, 15-second spacing, low-context hosted search, and zero retries. No GABRIEL wrapper or other state scout ran.
+- Connectivity held 3/3: three nonempty responses, three response IDs, zero connection errors, zero parser failures, no retry, and eight unverified candidate rows. Usage was 97,461 input / 3,891 reasoning / 7,664 output tokens; billed dollar cost is unavailable from the direct SDK response.
+- Added the scout-stage review and 27-field handoff CSV. All eight handoff rows are `scout_stage_status=unverified_scout_candidate`. No URL was independently opened, no source was verified or ingested, no codification or claim promotion occurred, and canonical contracts/coverage/corpus files were unchanged.
+
+**Decisions and why**
+- Newark has only a context-only IAFF Local 1860 2017-2023 Legistar locator. It overlaps the 2020-2023 repair window but is not an inspected full executed CBA, and it repeats a prior planning trace rather than closing the canonical fire gap.
+- Jersey City produced a plausible candidate-stage successor triad: POBA police 2021-2024, Local 1066 fire continuation material through 2024 with incomplete start-date evidence, and Local 246 civilian 2019-2022. Their apparent shared 2021-2022 window is promising but entirely unverified.
+- Camden produced fire 2017-2020 and 2021-2024 leads, a CWA Local 1014 civilian 2022-2025 lead, and a 2021-2024 consent award, but no police lead. It therefore has a promising 2022-2024 fire/civilian pair and mechanism lead, not a triad. Verification must reconcile the award's IAFF Local 2578 with the Local 788 fire CBAs.
+- Do not interpret model labels as source facts. There is no visible exact canonical-URL leakage, clear wrong-employer substitution, explicit wrong-unit substitution, safety-as-non-safety leakage, or blocked/dead mislabeling; nevertheless six rows carry possible wrong-employer risk, two carry possible duplicate risk, and all require direct verification.
+
+**Surprises/breakage**
+- Direct hosted web search worked cleanly on its first locked production slice. No repeated-connection stop or failed-row retry was needed.
+- Newark returned the known Local 1860 planning trace as context but labeled duplicate risk `none`; this understates prior local surfacing even though it is not an exact canonical-source duplicate.
+- All Camden candidates were fire or civilian; the requested police leg remains absent. The Local 2578 versus Local 788 identity difference is the most important unit question in the returned queue.
+
+**Validation/audit results**
+```text
+All four requested py_compile commands: exit 0
+python scripts/test_gabriel_state_source_scout_direct_sdk.py: 6 PASS checks
+python scripts/test_gabriel_state_source_scout_prompt.py: 6 PASS checks
+python scripts/validate.py: PASSED (64 contracts; 0 discourse; 64 coverage; 3 city attributes)
+python ingest/test_pipeline.py: 60 passed, 0 failed
+python ingest/audit_coverage.py: 28 healthy pairs (10 exact, 18 overlap), 2 exploratory adjacent, 6 unmatched safety units
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units. The eight new rows are scout-stage only and do not change this snapshot.
+
+**Next steps**
+1. Run no new scout automatically. Verify exactly the eight returned URLs without replacement searching, beginning with the Jersey City three-leg set and Camden 2021-2024 fire / 2022-2025 civilian pair.
+2. Establish reachability, owner/provenance, exact city and unit, execution/completeness, visible operative dates, wage-setting content, duplicate status, and overlap. Resolve Newark's attachment/full-CBA question and Camden Local 2578 versus Local 788 before any ingestion decision.
+
 ## 2026-07-20 16:40 EDT (Added an opt-in direct OpenAI SDK live backend and passed one synthetic no-search smoke test) - ready for a separately authorized NJ direct-backend scout, not run here
 
 **Did**

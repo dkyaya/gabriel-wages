@@ -1596,6 +1596,41 @@ def _direct_sdk_failure_row(
     }
 
 
+def is_direct_sdk_connection_failure_without_response(row: dict[str, Any]) -> bool:
+    """Identify the stop-gate signature: connection error, no ID/output/text."""
+    error = str(row.get("Error Log", "") or "").lower()
+    response_text = str(row.get("Response", "") or "").strip()
+    response_id = str(row.get("Response IDs", "") or "").strip()
+    output_tokens = str(row.get("Output Tokens", "") or "").strip().lower()
+    return (
+        "connection error" in error
+        and not response_text
+        and not response_id
+        and output_tokens in {"", "0", "none", "nan"}
+    )
+
+
+def _direct_sdk_stopped_row(identifier: str, prompt: str) -> dict[str, Any]:
+    """Record an uncalled prompt after the repeated-connection-error stop gate."""
+    return {
+        "Identifier": identifier,
+        "Prompt": prompt,
+        "Response": "",
+        "Time Taken": "",
+        "Input Tokens": "",
+        "Reasoning Tokens": "",
+        "Output Tokens": "",
+        "Reasoning Effort": "low",
+        "Successful": False,
+        "Error Log": json.dumps(
+            ["stopped_before_request_after_repeated_connection_errors"]
+        ),
+        "Web Search Sources": "[]",
+        "Response IDs": "",
+        "Cost": "",
+    }
+
+
 def write_direct_sdk_sanitized_log(
     out_dir: Path,
     rows: list[dict[str, Any]],
@@ -1705,6 +1740,7 @@ def run_direct_sdk_live_batch(
                 )
 
         rows: list[dict[str, Any]] = []
+        consecutive_connection_failures = 0
         chunk_size = max(1, n_parallels)
         try:
             for start in range(0, len(prompts), chunk_size):
@@ -1718,6 +1754,20 @@ def run_direct_sdk_live_batch(
                     )
                 )
                 rows.extend(chunk)
+                for row in chunk:
+                    if is_direct_sdk_connection_failure_without_response(row):
+                        consecutive_connection_failures += 1
+                    else:
+                        consecutive_connection_failures = 0
+                next_start = start + chunk_size
+                if consecutive_connection_failures >= 2 and next_start < len(prompts):
+                    rows.extend(
+                        _direct_sdk_stopped_row(identifier, prompt)
+                        for prompt, identifier in zip(
+                            prompts[next_start:], identifiers[next_start:]
+                        )
+                    )
+                    break
                 if sleep_between_prompts > 0 and start + chunk_size < len(prompts):
                     await asyncio.sleep(sleep_between_prompts)
         finally:

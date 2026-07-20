@@ -2,9 +2,25 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-20T16:40:31-04:00`
+Last updated: `2026-07-20T17:00:51-04:00`
 
 ---
+
+## 2026-07-20T17:00:51-04:00 - Locked New Jersey direct-SDK scout completed cleanly; eight leads remain unverified
+
+The source-of-truth relay was `tmp/direct_sdk_scout_backend_2026-07-20_relay_ad52791.zip`, and the starting local commit was `ad5279197ee003f2bd66f03ca1ebab9e1fdc861f`. Every file shared by the relay and repository matched byte-for-byte. The locked full-context input was confirmed before the live call to contain exactly Newark, Jersey City, and Camden. No Git remote was inspected, configured, created, validated, modified, or pushed.
+
+Exactly two authorized API actions ran, in the required order. The fresh direct-SDK smoke preflight used `Reply with OK.`, `gpt-5.4-nano`, the Harvard `/v2` base, no tools/search, a 30-second timeout, and zero retries. It returned `OK`, a response ID, 10 input / 0 reasoning / 5 output tokens, and explicit success; artifacts are under `tmp/direct_sdk_scout_backend_preflight/NJ/national_batch01_nj_2026-07-20/`. Only after that success, the three-row NJ scout ran through `--live-backend direct-sdk`, serially, with low-context hosted web search and zero retries. All three model calls returned nonempty responses and response IDs; connectivity held, all three responses parsed, and there were no parse failures or retries.
+
+The live run used 97,461 input, 3,891 reasoning, and 7,664 output tokens. Direct-SDK billed dollar cost remains unavailable. It produced eight scout-stage candidates: Newark 1 fire; Jersey City 1 police, 1 fire, and 1 non-safety; Camden 3 fire and 1 non-safety. Every handoff row is `unverified_scout_candidate`; no URL was independently opened or verified, and nothing was ingested, codified, added to canonical coverage, or promoted for claim use.
+
+At scout stage, Newark surfaced a 2017-2023 IAFF Local 1860 Legistar/index lead that overlaps the existing 2020-2023 anchor but remains context-only rather than a verified current fire agreement. Jersey City surfaced a candidate 2021-2024 police MOA, a fire MOA/resolution through 2024, and a 2019-2022 Local 246 civilian agreement, yielding an apparent 2021-2022 overlap if verification confirms dates, unit, employer, execution, and completeness. Camden surfaced Local 788 fire agreements for 2017-2020 and 2021-2024, a CWA Local 1014 civilian agreement for 2022-2025, and a Local 2578 fire consent award for 2021-2024; there is no police leg, so this is not a police/fire/civilian triad, though the fire/civilian set and award are promising mechanism leads.
+
+No exact excluded canonical URL leaked into the output. Newark did repeat a known planning trace as a context lead; Jersey City's Local 246 row and Camden's consent-award row carry possible duplicate risk that verification must resolve. No clear wrong-employer substitution, wrong-unit substitution, or safety-as-non-safety error is visible from the model output, but six of eight rows retain `possible` wrong-employer risk, and Camden Local 2578 versus Local 788 plus Jersey City Local 246 unit scope require explicit checking. All returned rows were labeled unblocked; Newark's landing/index row was correctly kept context-only rather than called dead.
+
+The runner now also has a narrow direct-SDK safety stop: after two consecutive connection-error rows with no response text, response ID, or output tokens, it records the remaining prompts as uncalled and stops issuing requests. A no-network test covers this behavior. Required checks passed: four compile checks; 6/6 direct-backend checks; 6/6 prompt-contract checks; schema validation at 64 contracts; ingestion tests 60/60; and unchanged coverage of 28 healthy pairs across 19 cities, 2 exploratory adjacent pairs, and 6 unmatched safety units. The review is `docs/analysis/national_batch01_nj_live_direct_sdk_scout_review_2026-07-20.md`; the normalized handoff queue is `docs/analysis/national_batch01_nj_live_direct_sdk_scout_candidates_2026-07-20.csv`; raw run evidence is under `tmp/gabriel_state_source_scout/NJ/national_batch01_nj_live_direct_sdk_2026-07-20/`.
+
+Recommended next move: do not run another scout. In a separate, explicitly authorized verification task, inspect only these eight returned URLs and confirm municipal employer, bargaining unit, official provenance, execution/completeness, visible effective dates, wage-setting content, duplicates, and cross-unit overlap. Prioritize the apparent Jersey City 2021-2022 three-unit set, reconcile Camden Local 2578 versus Local 788 while checking the 2022-2024 fire/civilian overlap, and locate the executed Newark fire attachment behind the context lead. Do not ingest or promote any row until those checks pass.
 
 ## 2026-07-20T16:40:31-04:00 - Opt-in direct SDK scout backend implemented and synthetic transport smoke test passed
 
