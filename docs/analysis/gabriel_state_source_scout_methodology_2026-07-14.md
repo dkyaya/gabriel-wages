@@ -49,7 +49,25 @@ In short: this tool can move a candidate from "unknown" to "worth a human look,"
 - `--limit N` bounds how many municipalities are prompted in one run, independent of the input list's size — a full-state list can be loaded and worked through in batches across sessions.
 - `--n-parallels` and `--max-prompts` bound concurrency and total live-call volume per run; a hard-coded `LIVE_HARD_CAP` (25) in the script prevents an accidental large-scale run — raising it requires a deliberate code edit, not a flag.
 - Because each municipality's prompt is independent and stateless, the same script run against a 500-city gazetteer is mechanically identical to a 10-city pilot — only wall-clock and cost scale, not code complexity. The scoring/queue-builder stage (deterministic, no model calls) already operates on the full parsed-candidates table regardless of size.
-- The main scaling risk is *cost and rate*, not correctness — `n_parallels` and `--max-prompts` are the levers to manage that, plus running in batches (e.g., 25 municipalities at a time) rather than one giant `--live` invocation.
+- The main scaling risks are cost/rate **and transport availability**. `n_parallels` and `--max-prompts` manage request pressure, while the mandatory wrapper preflight and emergency-stop rule below prevent a network/proxy outage from being mistaken for a source result or amplified through retries.
+
+## 5A. Mandatory live-batch wrapper preflight and emergency stop
+
+Run a **one-prompt, no-search synthetic GABRIEL wrapper smoke test before every live scout batch**. A prior successful smoke test or scout batch does not waive the next batch's preflight. The preflight must use the same wrapper, model, base URL, authentication/header construction, and execution/network context intended for the scout, while keeping web search/tools disabled and using a synthetic prompt such as `Reply with OK.`. It is infrastructure-only and must not contain a municipality or source-research request.
+
+The preflight succeeds only when all applicable evidence agrees:
+
+- response text is nonempty;
+- a response ID is present when the wrapper/runtime exposes response IDs;
+- neither the response nor the error metadata contains `Connection error.`;
+- output tokens are greater than zero; and
+- `model_response_succeeded` or equivalent wrapper success metadata is true.
+
+If any required condition fails, **do not run the scout batch**. Preserve sanitized preflight metadata, error logs, token counts, response-ID presence/absence, runtime/package versions where already captured by the helper, and the exact non-secret command/configuration. Never save or print credential values.
+
+If a live scout batch begins returning repeated connection errors with no response IDs and zero output tokens, stop immediately. Do not expand the batch and do not launch a broad retry pass. Preserve sanitized failure artifacts and diagnose the wrapper/network path separately before any new research call. A connection-error row is an infrastructure failure, not evidence that a municipality has no source.
+
+The known-good reference implementation and evidence standard are documented in `docs/analysis/gabriel_wrapper_smoke_test_2026-07-20.md`. This preflight is a necessary execution gate, not authorization to run a live scout; live research still requires the task's normal separate authorization and prompt cap.
 
 ## 6. Schema — `gabriel_state_source_scout_candidates_<date>.csv`
 

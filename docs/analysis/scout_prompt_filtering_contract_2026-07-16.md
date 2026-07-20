@@ -67,7 +67,9 @@ Human or direct-source verification is still required to establish URL reachabil
 
 1. Run `python scripts/test_gabriel_state_source_scout_prompt.py` to check the row-aware path, three-column fallback, strict guidance, new schema, and stage separation without network access.
 2. Run a dry preview with the full contextual municipality input and inspect every prompt for exact employer, requested units, exclusions, empty-result permission, and reasonable length.
-3. Release only a small, separately authorized live slice for which source-verification capacity has already been reserved.
-4. Quarantine all returned rows as scout-stage output, verify sources directly, and stop scaling if wrong-employer or wrong-unit leakage remains material.
+3. Immediately before each separately authorized live batch, run a one-prompt, no-search synthetic GABRIEL wrapper smoke test in the same intended execution/network context. Success requires nonempty response text, a response ID when available, no `Connection error.`, output tokens greater than zero, and `model_response_succeeded` or equivalent success metadata. A prior batch's success does not satisfy this step.
+4. If the smoke test fails, do not run the scout batch. Preserve sanitized failure artifacts. If a scout starts returning repeated connection errors with no response IDs and zero output tokens, stop immediately rather than expanding or retrying.
+5. Release only a small, separately authorized live slice for which source-verification capacity has already been reserved.
+6. Quarantine all returned rows as scout-stage output, verify sources directly, and stop scaling if wrong-employer or wrong-unit leakage remains material.
 
 The Texas dry preview passes this contract. The project is ready to resume national scaling only in small state slices with immediate verification; the contract does not justify a blind national batch or remove the human gate.

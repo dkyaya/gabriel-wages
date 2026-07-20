@@ -6,6 +6,42 @@ Last updated: `2026-07-20T15:00:00-04:00`
 
 ---
 
+## 2026-07-20T15:45:45-04:00 - All 24 Massachusetts scout leads verified; employer/unit filtering holds, and wrapper smoke preflight is now mandatory
+
+### Current State After This Entry
+
+- Starting commit was `0797c526e60047d157ee088fb5d42ecdbd33e239`. The relay and repository matched for all shared source/run artifacts. `console.log` was absent from both, but the authoritative metadata, raw outputs, parsed candidates, costs, and empty failure ledger were complete. No Git remote was inspected, configured, created, or modified.
+- `docs/analysis/national_batch01_ma_source_verification_2026-07-20.csv` contains one verification-stage row for every one of the 24 scout leads. Counts: 9 `verified_candidate`, 4 `partially_verified_candidate`, 3 `context_only_verified`, 1 `unreachable`, and 7 `duplicate_or_superseded`. Recommendations: 7 later-ingest, 6 manual review, 7 do-not-ingest duplicates, 3 context-only/do-not-ingest, and 1 unreachable/do-not-ingest.
+- Quality result: 0 wrong-employer and 0 wrong-unit rows. The tightened municipal-employer and ordinary-non-safety exclusions worked. Residual errors are mostly access/completeness/cycle/duplicate errors: full PDFs were sometimes called dead or partial; Seekonk fire ADID 277 is 2019-2022 rather than 2016-2019; seven strong rows were already canonical.
+- Strongest genuinely new set: Seekonk police and fire 2019-2022 plus library 2020-2023. Worcester has a complete 2017-2020 Local 504 superior-officer award and executed Local 911 patrol MOA, but no police base CBA. Boston has a full 2014-2017 fire CBA and a more immediately matched 2021-2024 fire MOA. Georgetown is context only. Arlington's two official awards remain 403-blocked and need manual download. Somerville's real 2022-2025 civilian MOAs and Newton's alleged FY20-FY24 leads do not repair the current earlier safety cycles.
+- Franklin's police, sergeants, fire, DPW, and library 2022-2025 sources form a real multi-unit set but are exact duplicates of existing `contracts.csv` rows. Seekonk police/fire 2022-2025 are also duplicates. Nothing was ingested or promoted.
+- A mandatory preflight is now in `docs/analysis/gabriel_state_source_scout_methodology_2026-07-14.md` and `docs/analysis/scout_prompt_filtering_contract_2026-07-16.md`: before every live batch, run one synthetic no-search wrapper prompt in the intended context. Require nonempty response text, response ID when available, no `Connection error.`, output tokens > 0, and `model_response_succeeded` or equivalent success metadata. If it fails, do not run the scout. If repeated connection errors begin with no response IDs and zero output tokens, stop immediately rather than expanding/retrying and preserve sanitized failure artifacts.
+
+### Validation State
+
+```text
+python -m py_compile scripts/gabriel_state_source_scout.py tmp/source_verification/MA/national_batch01_ma_2026-07-20/build_verification_csv.py
+OK
+
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19
+exact-cycle: 10 | overlap-cycle: 18 | exploratory adjacent matches: 2
+safety units unmatched: 6
+```
+
+Canonical snapshot remains 64 contracts in 19 cities, 28 healthy matched pairs, 2 exploratory adjacent matches, and 6 unmatched safety units. The verification pass changed no corpus/coverage/claim data.
+
+### Recommended Next Move
+
+Scale only to another small, separately authorized national state slice with immediate verification capacity. First apply known-source/cycle exclusions for cities already in the corpus, require years from the cover/duration clause, add a `blocked_or_unreadable` outcome instead of false dead-link classification, and run the mandatory synthetic wrapper preflight. Do not ingest the MA queue automatically. If a later ingestion wave is separately authorized, start with the Seekonk 2019-2022/2020-2023 matched set after duplicate/execution/OCR checks, then evaluate Worcester's two police mechanism sources and Boston's 2021-2024 fire MOA.
+
 ## 2026-07-20T15:00:00-04:00 - Locked Massachusetts live scout rerun completes cleanly; 24 leads remain unverified
 
 **Commit target:** `Record Massachusetts national batch 01 live scout rerun`

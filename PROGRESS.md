@@ -6,6 +6,48 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-20 15:45 EDT (Verified all 24 Massachusetts live-scout leads and made the synthetic wrapper smoke test a mandatory preflight) - scale only as another small, immediately verified slice
+
+**Did**
+- Started at local commit `0797c526e60047d157ee088fb5d42ecdbd33e239` and treated `tmp/national_batch01_ma_live_scout_rerun_2026-07-20_relay_0797c52.zip` as source of truth. All shared relay/repository files and live-run artifacts matched; the requested `console.log` was absent from both, while metadata/raw/parsed/cost/failure artifacts were complete. Did not inspect, configure, or change a Git remote.
+- Reviewed all 24 exact returned URLs without new scouting, replacement-source hunting, model/API calls, ingestion, or codification. Twenty URLs served public PDFs; two Newton and two Mass.gov Arlington URLs returned 403. Used only the allowed direct parent-document follow-up for the two Arlington awards, which also returned 403. Saved bounded headers, downloads, extracted text/OCR, and validation logs under `tmp/source_verification/MA/national_batch01_ma_2026-07-20/`.
+- Added `docs/analysis/national_batch01_ma_source_verification_2026-07-20.csv` and `docs/analysis/national_batch01_ma_source_verification_review_2026-07-20.md`. Results: 9 verified, 4 partially verified, 3 context-only, 1 unreachable, and 7 duplicate/superseded; recommendations: 7 later-ingest candidates, 6 manual review, 7 do-not-ingest duplicates, 3 context-only/do-not-ingest, and 1 unreachable/do-not-ingest.
+- Added the mandatory synthetic wrapper preflight/stop rule to the durable scout methodology, the prompt-filtering release procedure, and the latest handoff: one no-search synthetic prompt before every live batch; require nonempty text, response ID when available, no `Connection error.`, positive output tokens, and success metadata; block the scout if it fails; stop immediately on repeated connection errors with no IDs/outputs; preserve sanitized failures.
+
+**Decisions and why**
+- The MA filter is good enough for another small slice: 0/24 wrong-employer and 0/24 wrong-unit leads, including no safety-as-non-safety substitution. Keep the employer/unit exclusions unchanged.
+- Do not promote the seven later-ingest recommendations now. Strongest new queue: Seekonk police/fire 2019-2022 plus library 2020-2023; Worcester superior-officer award plus patrol MOA for 2017-2020; Boston fire 2014-2017 CBA and especially the overlapping 2021-2024 MOA. Each remains verification-stage only.
+- Franklin's five full 2022-2025 agreements and Seekonk's current police/fire CBAs are exact canonical duplicates, not new sources. Future repeat-cycle prompts should receive known URL/cycle exclusions. Require cover/duration-clause support for years and distinguish `blocked_or_unreadable` from genuinely dead sources.
+
+**Surprises/breakage**
+- Several scout demotions were false: both Somerville MOAs, Worcester Local 911, Seekonk police 2019-2022, and Seekonk library 2014-2017 are live complete documents. Seekonk fire ADID 277 is 2019-2022, not the scouted 2016-2019 cycle.
+- Georgetown produced only minutes/context. Worcester produced useful police wage/mechanism instruments but no police base CBA; its full Local 495 non-safety CBA is 2010-2013 and out of window. Arlington remains blocked by Mass.gov despite official case/portal evidence.
+- Canonical data were unchanged, so the coverage snapshot is unchanged. Somerville and Newton remain the first MA comparison holes.
+
+**Validation/audit results**
+```text
+python -m py_compile scripts/gabriel_state_source_scout.py tmp/source_verification/MA/national_batch01_ma_2026-07-20/build_verification_csv.py
+OK
+
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19
+exact-cycle: 10 | overlap-cycle: 18 | exploratory adjacent matches: 2
+safety units unmatched: 6
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units. Verification did not alter canonical coverage.
+
+**Next steps**
+1. Before another separately authorized live state slice, apply the new synthetic wrapper preflight and the MA prompt refinements: known-source/cycle exclusions, visible-cycle evidence, and `blocked_or_unreadable` rather than false dead-link labels.
+2. If an ingestion wave is separately authorized later, begin with the Seekonk 2019-2022/2020-2023 matched set, then Worcester's two police mechanism sources and Boston's 2021-2024 fire MOA; rerun duplicate/execution/base-document checks first.
+
 ## 2026-07-20 15:00 EDT (Locked eight-city Massachusetts national-batch rerun completed with 8/8 connectivity and 24 unverified scout leads) - verify the Massachusetts queue before another live slice
 
 **Did**
