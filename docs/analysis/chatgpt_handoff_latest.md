@@ -2,9 +2,27 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-20T19:25:00-04:00`
+Last updated: `2026-07-20T19:42:00-04:00`
 
 ---
+
+## 2026-07-20T19:42:00-04:00 — New York 25-city state-scale input is dry-run ready; no live/model action ran
+
+### Current State
+
+- **Checkpoint reconciliation:** started at `5f60dd32a9b5c8155070d1d3bf87692e917c4d6a` (`Record Illinois 25-city direct SDK scout`). The supplied `tmp/national_batch01_il25_live_direct_sdk_2026-07-20_relay_5f60dd3.zip` passed integrity inspection, and every requested file shared with the repository matched byte-for-byte. The national manifest, municipality universe, and county crosswalk are repository-only because the relay did not carry them; they complement rather than contradict the relay. No Git remote was inspected or changed.
+- **State choice:** New York is next because Buffalo, Rochester, Syracuse, Yonkers, and Albany are the untouched high-priority manifest block at ranks 19–23, followed by five same-state manifest replication rows. This gives ten pre-prioritized cities and stronger immediate claim connection than the other untouched candidate states, while supporting a complete city-only state batch.
+- **Locked input:** [national_batch01_ny25_scout_input_2026-07-20.csv](national_batch01_ny25_scout_input_2026-07-20.csv) contains Buffalo, Rochester, Syracuse, Yonkers, Albany, New York, Utica, Schenectady, White Plains, New Rochelle, Mount Vernon, Troy, Niagara Falls, Binghamton, Poughkeepsie, Newburgh, Middletown, Ithaca, Saratoga Springs, Watertown, Kingston, Jamestown, Elmira, Rome, and Auburn, in that order. All are Census `municipal` / `place` city governments; all are `not_scouted`, have zero failed attempts, no queue row, and no canonical overlap.
+- **Selection:** bucket counts are 5 claim anchors, 3 large-city anchors, 6 mid-city comparisons, 7 regional-diversity candidates, and 4 clean municipal-employer candidates. Population ranges from 23,777 to 8,258,035. The crosswalk preserves 29 relationships: 24 single-county cities and New York City's five borough counties. No town/township, village, county, authority, district, school, transit, housing, park, university, or private employer is a target.
+- **Reproducibility:** `scripts/build_national_batch01_ny25_scout_input.py` rebuilds the CSV from the authoritative universe, coverage, crosswalk, manifest, and queue. It asserts exact order, bucket controls, city identity, unique IDs, untouched/no-failure status, no queue/canonical overlap, county counts, and parse-back schema.
+- **Dry run:** `.venv/bin/python scripts/gabriel_state_source_scout.py --dry-run --state NY --municipalities-csv docs/analysis/national_batch01_ny25_scout_input_2026-07-20.csv --output-dir tmp/gabriel_state_source_scout/NY/national_batch01_ny25_filter_contract_dry_run_2026-07-20 --prompt-mode minimal` exited 0. Run ID `ny_2026-07-20_194038` has 25 prompts, `mode=dry_run`, `live_attempted=false`, and only preview/metadata artifacts. No API/model, hosted search, URL opening, verification, ingestion, codification, queue/coverage rebuild, canonical edit, or Bloomington retry occurred.
+- **Prompt contract:** the [dry-run review](national_batch01_ny25_filter_contract_dry_run_review_2026-07-20.md) records 25/25 exact employer/Census-ID checks and all categorical exclusions, ordinary-civilian restrictions, context/insufficient staging, blocked/dead separation, year-evidence, duplicate, overlap, empty-output, and unverified-stage checks. The [selection methodology](national_batch01_ny25_selection_methodology_2026-07-20.md) explains why New York precedes other untouched states.
+- **Future envelope:** use IL25 as the conservative planning anchor: approximately 28–35 minutes, 0.9–1.2 million input, 40,000–60,000 reasoning, and 70,000–95,000 output tokens for a future serial 25-prompt run. Direct-SDK billed dollars are unavailable; the older `$0.27–$0.30` comparison is not a direct-SDK quote.
+- **Validation:** all seven requested/added compiles passed; the NY25 builder regenerated and reconciled 25 exact rows; direct-SDK and prompt-contract suites passed 6/6 each; schema validation passed at 64 contracts; ingestion tests passed 60/60; canonical coverage remains 28 healthy pairs, 2 exploratory adjacent pairs, and 6 unmatched safety units.
+
+### Next Move
+
+Do not run NY25 automatically. Under separate authorization, first require a fresh direct-SDK synthetic no-search preflight with expected `OK`, response ID, positive output tokens, one request, and explicit success. Only after that gate and separate live authorization should the exact locked 25-row input run through `--live-backend direct-sdk`, serially, with 15-second spacing and zero retries. Preserve all artifacts, queue only unverified leads, update discovery coverage, and keep verification, ingestion, codification, and claim use deferred.
 
 ## 2026-07-20T19:25:00-04:00 — Illinois IL25 direct-SDK scout completed 24/25; 76 leads are queued and remain unverified
 

@@ -6,6 +6,42 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-20 19:42 EDT (Prepared New York 25-city state-scale scout batch and passed dry prompt review) - await separately authorized direct-SDK smoke and live run
+
+**Did**
+- Started at `5f60dd32a9b5c8155070d1d3bf87692e917c4d6a` and inspected `tmp/national_batch01_il25_live_direct_sdk_2026-07-20_relay_5f60dd3.zip` first. The ZIP passed integrity testing and every requested shared relay/repository file matched byte-for-byte. The manifest, national universe, and county crosswalk were deliberately absent from the relay but present in the repository; they are complementary authoritative inputs rather than conflicting evidence. No remote was inspected, changed, or pushed.
+- Selected New York because Buffalo, Rochester, Syracuse, Yonkers, and Albany are the next five untouched high-priority manifest targets (ranks 19–23), and the manifest contains five more New York replication cities. Expanded those ten to a 25-city state batch spanning the five borough counties, Westchester, western/upstate, Capital Region, Mohawk Valley, Southern Tier, North Country, Finger Lakes, and Hudson Valley settings.
+- Added a reproducible local builder and the full-context NY25 input. All 25 are Census `municipal` / `place` city governments, `not_scouted`, zero-failure, absent from the queue, and absent from canonical overlap. No town/township, village, county, authority, school, transit, housing, park, fire/water, or other special-district target is included. Bloomington IL was not selected or retried.
+- Ran the prescribed minimal dry run only with `.venv/bin/python`. Run `ny_2026-07-20_194038` built 25 prompts and wrote only `prompt_preview.md` and `run_metadata.json`; metadata records `live_attempted=false` and no model response success. No model/API call, hosted search, URL opening, download, verification, ingestion, codification, queue/coverage rebuild, or canonical/corpus edit occurred.
+- Added the selection methodology and prompt-review note. Row-level assertions confirm exact city employer/Census IDs, complete county context, categorical substitute-employer exclusions, ordinary-civilian comparator restrictions, blocked/dead separation, visible-year evidence, duplicate handling, matched-cycle purpose, empty-output permission, and unverified-stage status.
+
+**Decisions and why**
+- The controlled bucket mix is 5 claim-register anchors, 3 large-city state anchors, 6 mid-city comparisons, 7 regional-diversity candidates, and 4 clean municipal-employer candidates. The 25 cities range from Kingston (23,777) to New York City (8,258,035); only New York City is multi-county, with all five borough-county relationships preserved.
+- New York precedes California/West Coast and other candidate states because it has the next consecutive five-city high-priority manifest block plus ten total manifest rows. Likely source availability remains a scouting hypothesis based on manifest status and municipal scale, not a verified fact.
+- A future live run should remain direct-SDK, serial, 15-second spaced, and zero-retry after a fresh synthetic smoke. Based on IL25, plan for roughly 28–35 minutes and 0.9–1.2 million input / 40,000–60,000 reasoning / 70,000–95,000 output tokens. Actual direct-SDK billed dollars remain unavailable; `$0.27–$0.30` is only an older GABRIEL-priced comparison proxy.
+
+**Surprises/breakage**
+- The spreadsheet skill's required workspace-dependency loader was unavailable, so its artifact-tool workflow could not run. The repo's local CSV builder instead performs deterministic source joins, selection assertions, schema/order checks, and CSV parse-back validation without installing or guessing a dependency.
+- The shell's `python` and `python3` shims remained unusable; `.venv/bin/python` worked for the dry run and local checks.
+
+**Validation/audit results**
+```text
+all seven requested/added py_compile checks: exit 0
+NY25 input builder: 25 rows; exact order/buckets/coverage/county/schema assertions passed
+dry run: 25 NY municipality prompts; live_attempted=false; only preview and metadata written
+direct-SDK regression test: 6 PASS checks
+prompt-contract regression test: 6 PASS checks
+validate.py: PASSED (64 contracts; 0 discourse; 64 coverage; 3 city attributes)
+ingest/test_pipeline.py: 60 passed, 0 failed
+audit_coverage.py: 28 healthy pairs (10 exact, 18 overlap), 2 exploratory adjacent, 6 unmatched safety units
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units. This dry-run preparation changed no canonical contract, coverage, or corpus row.
+
+**Next steps**
+1. Do not launch NY25 automatically. Under separate authorization, first pass a fresh one-request direct-SDK no-search smoke preflight.
+2. Only after that gate and separate live authorization, run exactly this 25-city input serially with zero retries; preserve artifacts, queue unverified candidates, and rebuild scout coverage. Continue to defer source verification, ingestion, codification, and claim use.
+
 ## 2026-07-20 19:25 EDT (Locked Illinois 25-municipality direct-SDK scout completed with 24 successful responses and 76 unverified leads) - continue national scouting; defer verification and ingestion
 
 **Did**
