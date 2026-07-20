@@ -6,6 +6,53 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-20 14:34 EDT (A one-request direct SDK control proved the HUIT `/v2/responses` route, project key, nano model, and dual-header format work under explicit network authorization) - test GABRIEL once synthetically before any scout
+
+**Did**
+- Started at local commit `dd53c4de98a84af37c9fec8f73bc674c4c9982ff`. Treated `tmp/gabriel_working_vs_broken_scout_comparison_2026-07-17_relay_dd53c4d.zip` as source of truth; its integrity passed and the carried project files matched the workspace. Left pre-existing untracked `.claude/` worktrees untouched and did not inspect/configure a Git remote.
+- Added `scripts/diagnose_huit_openai_request_shapes.py`, a secret-safe infrastructure diagnostic with prompt fixed to `Reply with OK.`, tools/web search omitted, 30-second timeout, zero SDK retries, four justified request shapes, early stop on first success, and an independent six-request hard ceiling.
+- Ran the diagnostic with explicit outbound-network permission. Request 1 used OpenAI SDK 2.41.0 `responses.create`, base `https://go.apis.huit.harvard.edu/ais-openai-direct/v2`, `gpt-5.4-nano`, and both bearer and `Ocp-Apim-Subscription-Key` headers. It returned HTTP 200, status `completed`, response text `OK`, a response ID, and 15 total tokens in 3.21 seconds.
+- Stopped after that first success. Direct HTTP Responses with both headers, direct Responses with only the subscription header, Chat Completions, and a model variant were not sent. Exactly 1 of the authorized maximum 6 requests was used.
+- Preserved sanitized JSON/log evidence and validation outputs under `tmp/huit_openai_request_shape_diagnosis_2026-07-17/`; added `docs/analysis/huit_openai_request_shape_diagnosis_2026-07-17.md`. Did not change the scout or its runtime behavior.
+
+**Decisions and why**
+- Keep `/v2`, Responses, `gpt-5.4-nano`, and the dual-header setup. The successful request directly rules out a current key, model, route, dual-header, or OpenAI SDK defect in a network-approved context.
+- Treat missing effective outbound-network authorization on the earlier failed MA/GABRIEL commands as the leading explanation. GABRIEL-specific orchestration remains the next boundary because the earlier smoke tests used GABRIEL while this clean control deliberately removed it; the calls were not simultaneous, so transient HUIT/local-network recovery remains possible.
+- Did not spend additional calls on raw HTTP, Chat Completions, subscription-only, or another model after the SDK Responses control succeeded. Those variants could no longer isolate the observed failure and the task required early stopping.
+
+**Surprises/breakage**
+- The project `.env` credential itself is confirmed working: the Harvard key was absent from the ambient process, present in the selected project `.env`, and effective after load. `OPENAI_API_KEY`, `OPENAI_BASE_URL`, and standard proxy variables were absent. No values were printed.
+- The service resolved `gpt-5.4-nano` to `gpt-5.4-nano-2026-03-17`, so a speculative model switch is not warranted.
+- All required local checks passed. No breakage occurred.
+
+**Validation/audit results**
+```text
+python -m py_compile scripts/diagnose_huit_openai_request_shapes.py
+python -m py_compile scripts/gabriel_state_source_scout.py
+OK
+
+python scripts/diagnose_huit_openai_request_shapes.py
+1 request; HTTP 200; completed; output OK; 3.21 seconds; stopped after success
+
+python scripts/validate.py
+VALIDATION PASSED — contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19
+exact-cycle: 10 | overlap-cycle: 18 | exploratory adjacent matches: 2
+safety units unmatched: 6
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units. No canonical corpus change occurred.
+
+**Next steps**
+1. With separate authorization, run exactly one network-approved synthetic `gabriel.whatever()` request using `Reply with OK.`, `web_search=False`, one worker, no retry, and the proven route/model/header configuration. This is infrastructure diagnosis, not a scout.
+2. If GABRIEL succeeds, record execution-context/transient transport state as the incident cause and make no request-shape change. If it fails while the SDK control succeeds in the same context, inspect the wrapper's rate-limit probe and async client path while preserving the proven URL/model/headers.
+3. Do not resume MA or any research scout until the synthetic GABRIEL path succeeds under separate authorization.
+
 ## 2026-07-20 14:20 EDT (Compared every preserved working PA/TX scout with the failed MA/synthetic runs; no code/request regression found, and a network-restricted execution context is now the leading local cause) - verify historical command network approval before another API diagnostic
 
 **Did**

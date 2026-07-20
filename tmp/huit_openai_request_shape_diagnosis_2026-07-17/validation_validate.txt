@@ -1,0 +1,4 @@
+python scripts/validate.py
+exit_code=0
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3

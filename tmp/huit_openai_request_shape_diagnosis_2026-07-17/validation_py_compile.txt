@@ -1,0 +1,5 @@
+python -m py_compile scripts/diagnose_huit_openai_request_shapes.py
+exit_code=0
+
+python -m py_compile scripts/gabriel_state_source_scout.py
+exit_code=0

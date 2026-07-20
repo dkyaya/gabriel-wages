@@ -1,0 +1,32 @@
+HUIT OpenAI request-shape diagnosis (sanitized)
+timestamp_utc=2026-07-20T18:30:39.002262+00:00
+base_url=https://go.apis.huit.harvard.edu/ais-openai-direct/v2
+model=gpt-5.4-nano
+prompt=Reply with OK.
+tools=omitted/disabled
+web_search=omitted/disabled
+timeout_seconds=30.0
+request_count=1
+max_diagnostic_requests=6
+stopped_after_success=true
+environment_presence:
+  HARVARD_SUBSCRIPTION_KEY: process_before=absent dotenv=present effective=present
+  OPENAI_API_KEY: process_before=absent dotenv=absent effective=absent
+  OPENAI_BASE_URL: process_before=absent dotenv=absent effective=absent
+  HTTP_PROXY: process_before=absent dotenv=absent effective=absent
+  HTTPS_PROXY: process_before=absent dotenv=absent effective=absent
+  ALL_PROXY: process_before=absent dotenv=absent effective=absent
+  NO_PROXY: process_before=absent dotenv=absent effective=absent
+results:
+  request=1 shape=A_sdk_responses_both_headers
+    success=true status_code=200
+    response_id=resp_0e3dd466c96cbeb0006a5e695170ec81a0b6ee04e878513d1b
+    exception_type=None
+    exception_message=None
+    elapsed_seconds=3.21
+    safe_response_headers={"content-type": "application/json", "date": "Mon, 20 Jul 2026 18:30:42 GMT", "x-request-id": "92eae6fe-2e32-422f-814d-c2a977283211"}
+    body_summary={"id": "resp_0e3dd466c96cbeb0006a5e695170ec81a0b6ee04e878513d1b", "model": "gpt-5.4-nano-2026-03-17", "object": "response", "output_text": "OK", "status": "completed", "usage": {"input_tokens": 10, "output_tokens": 5, "total_tokens": 15}}
+skipped_shapes:
+  B_E_http_responses_both_headers: not needed after successful shape A_sdk_responses_both_headers under the required early-stop rule
+  B_D_http_responses_subscription_only: not needed after successful shape A_sdk_responses_both_headers under the required early-stop rule
+  C_http_chat_completions_both_headers: not needed after successful shape A_sdk_responses_both_headers under the required early-stop rule

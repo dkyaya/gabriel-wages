@@ -2,9 +2,36 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-20T14:20:00-04:00`
+Last updated: `2026-07-20T14:34:00-04:00`
 
 ---
+
+## 2026-07-20T14:34:00-04:00 - Explicitly network-approved SDK Responses control succeeds on the established HUIT request shape
+
+**Commit target:** `Diagnose HUIT OpenAI request shapes`
+
+### Current State After This Entry
+
+- **Starting point:** `dd53c4de98a84af37c9fec8f73bc674c4c9982ff`. The latest working-vs-broken relay was `tmp/gabriel_working_vs_broken_scout_comparison_2026-07-17_relay_dd53c4d.zip`; ZIP integrity passed and its carried project files matched the workspace. Pre-existing `.claude/` worktrees remained untouched. No remote operation occurred.
+- **Successful minimal shape:** one OpenAI SDK 2.41.0 `responses.create` call used base `https://go.apis.huit.harvard.edu/ais-openai-direct/v2`, effective resource `/ais-openai-direct/v2/responses`, model `gpt-5.4-nano`, and both bearer and Harvard subscription headers. It returned HTTP 200, a completed response object, response text `OK`, a response ID, and 15 total tokens in 3.21 seconds.
+- **Bounded execution:** prompt was exactly `Reply with OK.`; tools and web search were omitted; timeout was 30 seconds; retries were zero. The script had four justified shapes and a separate six-request hard ceiling but stopped after request 1, as required. No raw-HTTP, subscription-only, Chat Completions, or model-variant call was sent.
+- **Sanitized environment:** project `.env` present/selected; parent `.env` absent; Harvard key absent ambient, present in `.env`, and effective. `OPENAI_API_KEY`, `OPENAI_BASE_URL`, `HTTP_PROXY`, `HTTPS_PROXY`, `ALL_PROXY`, and `NO_PROXY` were absent before load, in `.env`, and effective. Only names/statuses were logged; no value or `.env` content was exposed.
+- **What this rules out now:** invalid project key, unsupported `gpt-5.4-nano`, malformed `/v2/responses`, dual-header rejection, OpenAI SDK 2.41.0 Responses incompatibility, and current OpenAI/base/proxy environment overrides.
+- **Remaining boundary:** the earlier failed synthetic tests still used `gabriel.whatever()`, whereas this clean control removed GABRIEL. Missing network authorization on those earlier commands is now the leading explanation; GABRIEL-specific orchestration is the next component boundary; a transient local/HUIT recovery between July 17 and July 20 remains possible because this is not a simultaneous A/B.
+- **New artifacts:** `scripts/diagnose_huit_openai_request_shapes.py`; `docs/analysis/huit_openai_request_shape_diagnosis_2026-07-17.md`; and sanitized results/logs/validation outputs under `tmp/huit_openai_request_shape_diagnosis_2026-07-17/`.
+- **Protected state:** the production scout/runtime, dependencies, canonical data, coverage, and corpus were not modified. No research scout, MA run, web search/tool call, source ingestion, or codification occurred.
+
+### Validation State
+
+- Both requested `py_compile` checks — passed.
+- Authorized diagnostic — 1 request, HTTP 200, completed, `OK`; stopped immediately.
+- `scripts/validate.py` — passed; contracts 64, discourse 0, coverage 64, city attributes 3.
+- `ingest/test_pipeline.py` — 60 passed, 0 failed.
+- `ingest/audit_coverage.py` — 28 healthy pairs across 19 cities; 10 exact, 18 overlap, 2 exploratory adjacent, 6 unmatched safety units.
+
+### Recommended Next Move
+
+Do not alter the proven `/v2` base, Responses path, nano model, or dual-header setup. Do not resume MA or another research scout. If separately authorized, execute one synthetic `gabriel.whatever()` call in the same explicit network-approved context using `Reply with OK.`, `web_search=False`, one worker, and no retry. If it succeeds, the prior failures were execution-context or transient transport/service state and need no request-shape fix. If it fails while this raw SDK control succeeds in the same context, inspect GABRIEL's preliminary rate-limit probe and async client construction, preserving the proven low-level configuration.
 
 ## 2026-07-20T14:20:00-04:00 - Working-vs.-broken comparison moves network-restricted execution context to the top of the local-cause ranking
 

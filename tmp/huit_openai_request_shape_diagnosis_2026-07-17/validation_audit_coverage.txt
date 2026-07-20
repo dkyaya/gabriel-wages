@@ -1,0 +1,58 @@
+python ingest/audit_coverage.py
+exit_code=0
+================================================================
+COVERAGE AUDIT — matched-comparison health
+================================================================
+contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3 | cities: 19
+healthy matched pairs: 28
+  exact-cycle: 10
+  overlap-cycle: 18
+exploratory adjacent matches: 2
+safety units unmatched: 6
+
+[!] SAFETY UNITS WITHOUT ANY COMPARISON UNIT: 6
+    (no exact, overlapping, or adjacent same-city non-safety unit)
+      - Somerville, MA: police 2012-2018  [ma_somerville_police_spsoa_2012]
+      - Somerville, MA: police 2012-2015  [ma_somerville_police_spea_2012]
+      - Newton, MA: police 2015-2018  [ma_newton_police_2015]
+      - San Antonio, TX: police 2022-2026  [tx_san_antonio_police_2022]
+      - San Antonio, TX: fire 2024-2027  [tx_san_antonio_fire_2024]
+      - Newark, NJ: fire 2013-2015  [nj_newark_fire_2013]
+
+[~] EXPLORATORY ADJACENT MATCHES: 2
+    (not counted as healthy; useful only for exploratory comparisons)
+      - Cleveland, OH: police 2025-2028  vs  [other] (other 2022-2025)
+      - Cleveland, OH: fire 2025-2028  vs  [other] (other 2022-2025)
+
+[i] CITIES WITH NO SAFETY CONTRACT YET: 0
+
+[ok] HEALTHY MATCHED PAIRS: 28
+    exact-cycle: 10 | overlap-cycle: 18
+      - Worcester, MA: fire 2017-2020  vs  [clerical_admin,public_works]
+      - Arlington, MA: fire 2021-2024  vs  [public_works]
+      - Georgetown, MA: police 2020-2023  vs  [other]
+      - Franklin, MA: fire 2022-2025  vs  [library,other,public_works]
+      - Franklin, MA: police 2022-2025  vs  [library,other,public_works]
+      - Franklin, MA: police 2022-2025  vs  [library,other,public_works]
+      - Wayland, MA: police 2020-2023  vs  [library,public_works]
+      - Wayland, MA: fire 2020-2023  vs  [library,public_works]
+      - Wayland, MA: fire 2020-2023  vs  [library,public_works]
+      - Philadelphia, PA: fire 2017-2020  vs  [other]
+      - Boston, MA: police 2020-2025  vs  [clerical_admin] (overlap: clerical_admin 2023-2027)
+      - Seekonk, MA: police 2022-2025  vs  [clerical_admin,library,public_works,teacher] (overlap: clerical_admin 2021-2024; library 2023-2026; public_works 2023-2026; teacher 2021-2024)
+      - Seekonk, MA: fire 2022-2025  vs  [clerical_admin,library,public_works,teacher] (overlap: clerical_admin 2021-2024; library 2023-2026; public_works 2023-2026; teacher 2021-2024)
+      - Houston, TX: police 2024-2025  vs  [other] (overlap: other 2024-2027)
+      - Houston, TX: fire 2024-2029  vs  [other] (overlap: other 2024-2027)
+      - Austin, TX: police 2024-2029  vs  [nurse_health] (overlap: nurse_health 2023-2027)
+      - Austin, TX: fire 2023-2025  vs  [nurse_health] (overlap: nurse_health 2023-2027)
+      - Columbus, OH: police 2023-2026  vs  [other] (overlap: other 2024-2027)
+      - Columbus, OH: fire 2023-2026  vs  [other] (overlap: other 2024-2027)
+      - Cincinnati, OH: police 2024-2027  vs  [other] (overlap: other 2025-2028)
+      - Cincinnati, OH: police 2024-2027  vs  [other] (overlap: other 2025-2028)
+      - Cincinnati, OH: fire 2023-2026  vs  [other] (overlap: other 2025-2028)
+      - Toledo, OH: police 2024-2026  vs  [other] (overlap: other 2024-2027)
+      - Toledo, OH: fire 2024-2026  vs  [other] (overlap: other 2024-2027)
+      - Philadelphia, PA: police 2025-2027  vs  [other] (overlap: other 2025-2028)
+      - Newark, NJ: police 2018-2023  vs  [other] (overlap: other 2020-2023)
+      - Trenton, NJ: police 2019-2024  vs  [other] (overlap: other 2019-2023)
+      - Trenton, NJ: fire 2021-2026  vs  [other] (overlap: other 2019-2023)
