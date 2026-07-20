@@ -6,6 +6,38 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-20 18:20 EDT (Prepared Illinois three-city national scout slice and passed dry prompt review) - await separately authorized direct-SDK smoke preflight
+
+**Did**
+- Started at `3b630750f77e3c04c58ec73f655e8ccb32ac78d9` and treated `tmp/national_scout_queue_coverage_2026-07-20_relay_3b63075.zip` as source of truth. Every required file shared by the relay and repository matched byte-for-byte. The relay did not include `scripts/gabriel_state_source_scout.py` or the MA refinement note named for this task; those were repository-only context, not a contradiction or stale relay evidence. No remote was inspected, configured, created, validated, changed, or pushed.
+- Filtered manifest wave `NWMS-2026-07-16-01` to the exact next Illinois targets: Chicago (priority 14), Aurora (15), and Rockford (16). All three municipal-government rows are `not_scouted`; no Illinois city has a canonical contract row or national scout-queue candidate. The same-name Aurora and Rockford township universe rows were explicitly excluded.
+- Added the full-context `national_batch01_il_scout_input_2026-07-20.csv` and ran a three-row minimal prompt dry run only. It produced a prompt preview and metadata with `live_attempted=false`; no credentials, live backend, model/API call, hosted search, URL opening, PDF download, deep verification, ingestion, codification, queue change, coverage rebuild, or canonical/corpus change occurred.
+- Added the dry-run review. Prompts bind the exact CITY employer and Census ID, preserve wrong-employer and ordinary-civilian comparator boundaries, require visible cycle evidence and matched-cycle labeling, distinguish blocked from dead access, permit empty candidates, include the five new filtering fields, and label every eventual result as unverified scout-stage lead data.
+
+**Decisions and why**
+- No known-source exclusion was invented: local canonical and queue searches found no Chicago, Aurora, or Rockford source/cycle. The input records that absence and asks for a visibly supported overlapping 2014-2024 police/fire/ordinary-non-safety set rather than pretending a canonical repair anchor exists.
+- Aurora’s CITY OF AURORA ID 189929 and Rockford’s CITY OF ROCKFORD ID 102882 are explicit because same-name townships appear in the national denominator. Chicago also excludes county, CPS, CTA, park, housing, airport/transit-police, and special-district substitutes.
+
+**Surprises/breakage**
+- The shell’s `python` and `python3` shims were non-executable, despite being on PATH. The project `.venv/bin/python` succeeded for the requested dry run and all validation commands; no runtime code change was needed.
+
+**Validation/audit results**
+```text
+dry run: 3 IL municipality prompts built; live_attempted=false
+all six requested py_compile checks: exit 0
+direct-SDK regression test: 6 PASS checks
+prompt-contract regression test: 6 PASS checks
+validate.py: PASSED (64 contracts; 0 discourse; 64 coverage; 3 city attributes)
+ingest/test_pipeline.py: 60 passed, 0 failed
+audit_coverage.py: 28 healthy pairs (10 exact, 18 overlap), 2 exploratory adjacent, 6 unmatched safety units
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units. Illinois preparation changed no canonical row.
+
+**Next steps**
+1. Do not run Illinois automatically. Under separate authorization, first pass a fresh direct-SDK synthetic no-search smoke preflight.
+2. Only after that gate and separate live-scout authorization, run the locked Chicago/Aurora/Rockford input serially with direct SDK and zero retries; queue successful output and rebuild scout coverage, then defer verification/ingestion/codification/claim use.
+
 ## 2026-07-20 18:07 EDT (National scout queue and four-state discovery coverage accounting created) - continue small national slices before coordinated verification waves
 
 **Did**

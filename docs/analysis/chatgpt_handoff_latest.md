@@ -2,9 +2,24 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-20T18:06:56-04:00`
+Last updated: `2026-07-20T18:20:00-04:00`
 
 ---
+
+## 2026-07-20T18:20:00-04:00 — Illinois national-batch dry-run slice prepared; ready only after fresh direct-SDK smoke preflight and separate live authorization
+
+### Current State
+
+- **Starting checkpoint:** `3b630750f77e3c04c58ec73f655e8ccb32ac78d9` (`Add national scout queue and coverage accounting`). The supplied `tmp/national_scout_queue_coverage_2026-07-20_relay_3b63075.zip` is the source-of-truth checkpoint. Every shared required file matches the repository byte-for-byte. Its omission of `scripts/gabriel_state_source_scout.py` and `scout_prompt_filtering_contract_ma_refinement_2026-07-20.md` is a narrow-relay omission; both repository files were read as required context, and no repository evidence shows the relay stale or incomplete for the checkpoint it carries.
+- **Prepared input:** [national_batch01_il_scout_input_2026-07-20.csv](national_batch01_il_scout_input_2026-07-20.csv) contains exactly three `NWMS-2026-07-16-01` Illinois rows: Chicago (`CITY OF CHICAGO`, Census ID `162236`, priority 14), Aurora (`CITY OF AURORA`, `189929`, 15), and Rockford (`CITY OF ROCKFORD`, `102882`, 16). Each retains full manifest context plus matched-cycle discovery purpose, exact target identity, county geography, source/cycle absence context, and verification cautions.
+- **Coverage/overlap check:** the municipal rows for all three cities are `not_scouted`; none has a national scout-queue candidate or a canonical contract row. The Aurora/Rockford same-name township records are not the targets and are excluded in-row. No canonical or queued source/cycle exclusion exists to supply, so none was invented.
+- **Dry run only:** `.venv/bin/python scripts/gabriel_state_source_scout.py --dry-run --state IL --municipalities-csv docs/analysis/national_batch01_il_scout_input_2026-07-20.csv --output-dir tmp/gabriel_state_source_scout/IL/national_batch01_il_filter_contract_dry_run_2026-07-20 --prompt-mode minimal` exited 0. (The shell’s `python`/`python3` shims were non-executable; the project venv interpreter was used.) Metadata has `mode=dry_run`, `municipalities_requested=3`, `live_attempted=false`, and no live-success signal. No model/API call, hosted search, URL opening, download, verification, ingestion, codification, queue update, coverage rebuild, or canonical/corpus edit occurred.
+- **Prompt review:** [national_batch01_il_filter_contract_dry_run_review_2026-07-20.md](national_batch01_il_filter_contract_dry_run_review_2026-07-20.md) confirms each prompt contains exact CITY employer/Census ID; wrong-employer exclusions; ordinary municipal/civilian non-safety restrictions; safety-not-non-safety prohibition; context-only separation; blocked-versus-dead distinction; visible-year evidence; duplicate/known-source handling; matched-cycle purpose; allowed empty candidate lists; the five filtering fields; and unverified scout-stage status.
+- **Validation:** all six requested `py_compile` checks passed; direct-SDK and prompt tests each report six passes; `validate.py` passed (64 contracts, 0 discourse, 64 coverage, 3 city attributes); ingestion tests are 60/60; audit coverage is 28 healthy pairs (10 exact, 18 overlap), two exploratory adjacent, six unmatched safety units. Canonical data did not change.
+
+### Next Move
+
+Do not live-scout Illinois automatically. If separately authorized, first run a new direct-SDK no-search smoke preflight and proceed only on a successful `OK` response, response ID, positive output tokens, one request, and no web search. Then, under separate live authorization, run only this full-context three-city slice with `--live-backend direct-sdk`, `--n-parallels 1`, and `--direct-sdk-max-retries 0`; preserve artifacts, add successful candidates to the durable queue, and rebuild discovery coverage. Keep all returned material unverified scout-stage lead data; defer deep verification, ingestion, codification, and claim use.
 
 ## 2026-07-20T18:06:56-04:00 - National scout queue and PA/TX/MA/NJ discovery coverage are now durable; verification is deferred
 
