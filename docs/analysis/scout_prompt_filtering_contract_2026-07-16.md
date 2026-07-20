@@ -1,6 +1,6 @@
 # Scout Prompt Filtering Contract
 
-Date: 2026-07-16  
+Date: 2026-07-16; refined 2026-07-20 after Massachusetts source verification
 Scope: `scripts/gabriel_state_source_scout.py`, `prompt_mode=minimal`  
 Status: scout-stage filtering rules only; not source verification, ingestion, codification, or claim evidence
 
@@ -14,6 +14,10 @@ The row-aware Texas scout correctly targeted San Antonio, Austin, and Houston, b
 4. Austin returned no parsed candidates. That was a valid outcome: none of the bounded trace material established an in-window, ordinary non-EMS comparator. The prompt should permit an empty result instead of rewarding a forced weak match.
 
 The pipeline audits passed because the response parsed, the files reconciled, stage labels remained quarantined, and canonical data stayed unchanged. Those checks did not establish that a URL opened, that the page contained the claimed document, that the employer and unit were correct, that the years were visible, or that a source was useful for ingestion. Those are source-verification questions.
+
+## What the Massachusetts verification added
+
+Direct review of all 24 Massachusetts scout leads found zero wrong-employer and zero wrong-unit substitutions, so the employer and unit rules below remain intact. The residual burden came from seven exact canonical duplicates, a materially incorrect Seekonk fire cycle, real complete documents mislabeled dead/partial/context-only, and genuine civilian agreements that did not overlap the anchor safety cycle. The 2026-07-20 refinement therefore adds visible-year evidence, anchor-cycle overlap, duplicate risk, and a separate blocked/unreadable state without weakening the Texas-derived exclusions.
 
 ## Candidate definitions
 
@@ -40,20 +44,30 @@ The document contract distinguishes these types:
 | Agenda cover sheet | Context only unless it includes or directly attaches the full agreement, award, wage schedule, or other binding wage-setting document |
 | Meeting minutes, summary, or meeting memo | Context only under the same attachment rule |
 | Index or landing page | Locator or insufficient source, not a full document |
-| Dead, unreachable, or contentless page | Insufficient source and not a qualifying candidate |
+| Blocked or unreadable live page/PDF | `blocked_or_unreadable`; insufficient until inspected, but not described as dead |
+| Observed 404, 410, DNS failure, or equivalent | `dead_or_unreachable`; insufficient and not qualifying |
+| Complete executed scanned MOA | Qualifying when binding and wage-setting; difficult text extraction alone does not demote it |
+| Other contentless page | Insufficient source and not a qualifying candidate |
 
 ## Output fields and filtering rubric
 
 The flat JSON candidate schema keeps the earlier identity, provenance, title, year, relevance, and confidence fields and adds:
 
 - `candidate_stage`: `qualifying_candidate`, `context_only_candidate`, or `insufficient_candidate`;
-- `document_completeness`: `full_document`, `partial_document`, `summary_only`, `index_or_landing_page`, `dead_or_unreachable`, or `unclear`;
+- `document_completeness`: `full_document`, `partial_document`, `summary_only`, `index_or_landing_page`, `blocked_or_unreadable`, `dead_or_unreachable`, or `unclear`;
+- `visible_year_evidence`: `cover_or_title`, `duration_clause`, `award_period`, `other_operative_text`, `index_or_snippet_only`, `model_inference_only`, or `unclear`;
+- `overlap_with_anchor_cycle`: `overlap`, `non_overlap_deferred`, `no_anchor_supplied`, or `unclear`;
+- `duplicate_risk`: `none`, `possible`, or `exact_known_source`;
+- `blocked_or_unreadable_flag`: `yes` or `no`;
+- `cycle_match_notes`: a concise explanation of year evidence, overlap, deferral, or uncertainty;
 - `comparator_role`: `safety_target`, `ordinary_non_safety_comparator`, `authoritative_civilian_wage_setting`, `mechanism_context`, `no_comparator_role`, or `unclear`;
 - `wrong_employer_risk`: `none`, `possible`, or `high`;
 - `context_only_flag`: `yes` or `no`;
 - `needs_verification_reason`: a concise statement of what a human must establish.
 
-The parser retains all returned rows for audit; it does not silently delete weak leads. Deterministic prioritization now demotes context-only or insufficient stages, summaries and index pages, dead/unreachable sources, and possible/high wrong-employer risk. For new-schema output, it rewards a non-safety row only when its comparator role is ordinary civilian or authoritative civilian wage setting. Legacy responses that lack `comparator_role` retain the prior non-safety score for backward compatibility but still require verification. Ambiguous `unclear` units remain visible and are counted with unknown candidates in scout-coverage accounting; they do not complete the police/fire/non-safety triad.
+The parser retains all returned rows for audit; it does not silently delete weak leads. Deterministic prioritization now demotes context-only or insufficient stages, summaries and index pages, dead/unreachable sources, blocked/unreadable sources, non-overlap/deferred rows, exact/possible duplicates, and possible/high wrong-employer risk. For new-schema output, it rewards a non-safety row only when its comparator role is ordinary civilian or authoritative civilian wage setting. Legacy responses that lack the new fields retain their prior score behavior for backward compatibility but still require verification. Ambiguous `unclear` units remain visible and are counted with unknown candidates in scout-coverage accounting; they do not complete the police/fire/non-safety triad.
+
+Cycle years count as supported only when visible on a cover/title, in a duration clause, in an award period, or in equivalent operative text. Index labels, snippets, URLs, and model inference must be identified as weak evidence and cannot silently become definitive years. A matched-repair row that misses the supplied anchor cycle is `non_overlap_deferred`; a repeat-cycle row should be a different predecessor/successor cycle from represented rows. When known canonical URLs or city/unit/cycle exclusions are provided, the exact source may appear only as labeled duplicate/context, not as a new qualifying candidate.
 
 Every row still receives `verification_status=unverified` and `promotion_status=raw_model_output`. Candidate-stage classification is a queue-management aid, not verified evidence. It cannot update verified source inventories, corpus coverage, contracts, codified outputs, or claim support.
 
@@ -65,8 +79,8 @@ Human or direct-source verification is still required to establish URL reachabil
 
 ## Rebuild and release procedure
 
-1. Run `python scripts/test_gabriel_state_source_scout_prompt.py` to check the row-aware path, three-column fallback, strict guidance, new schema, and stage separation without network access.
-2. Run a dry preview with the full contextual municipality input and inspect every prompt for exact employer, requested units, exclusions, empty-result permission, and reasonable length.
+1. Run `python scripts/test_gabriel_state_source_scout_prompt.py` to check the row-aware path, three-column fallback, strict unit rules, separate blocked/dead labels, cycle/duplicate fields, parsing, and stage separation without network access.
+2. Run a dry preview with the full contextual municipality input and inspect every prompt for exact employer, requested units, exclusions, visible-year evidence, anchor/repeat-cycle purpose, known-source duplicate handling, empty-result permission, and reasonable length.
 3. Immediately before each separately authorized live batch, run a one-prompt, no-search synthetic GABRIEL wrapper smoke test in the same intended execution/network context. Success requires nonempty response text, a response ID when available, no `Connection error.`, output tokens greater than zero, and `model_response_succeeded` or equivalent success metadata. A prior batch's success does not satisfy this step.
 4. If the smoke test fails, do not run the scout batch. Preserve sanitized failure artifacts. If a scout starts returning repeated connection errors with no response IDs and zero output tokens, stop immediately rather than expanding or retrying.
 5. Release only a small, separately authorized live slice for which source-verification capacity has already been reserved.

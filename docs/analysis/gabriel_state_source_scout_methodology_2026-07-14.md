@@ -45,7 +45,7 @@ In short: this tool can move a candidate from "unknown" to "worth a human look,"
 
 ## 5. How this scales to a full state
 
-- The script accepts `--municipalities-csv` to swap the bundled 10-city PA pilot list (`gabriel_state_source_scout_pa_pilot_municipalities_2026-07-14.csv`) for a full statewide gazetteer later — no code change needed, only a differently-sized input CSV with the same `municipality_id,municipality,state` columns (extra columns are ignored).
+- The script accepts `--municipalities-csv` to swap the bundled 10-city PA pilot list (`gabriel_state_source_scout_pa_pilot_municipalities_2026-07-14.csv`) for a full statewide gazetteer later — no code change needed, only a differently-sized input CSV with the same required `municipality_id,municipality,state` columns. Three-column files remain backward compatible. In minimal mode, optional full-context columns are used rather than ignored: government name/ID, requested units, selection purpose, anchor cycle, known source/cycle exclusions, known-source notes/URLs, verification cautions, and county geography.
 - `--limit N` bounds how many municipalities are prompted in one run, independent of the input list's size — a full-state list can be loaded and worked through in batches across sessions.
 - `--n-parallels` and `--max-prompts` bound concurrency and total live-call volume per run; a hard-coded `LIVE_HARD_CAP` (25) in the script prevents an accidental large-scale run — raising it requires a deliberate code edit, not a flag.
 - Because each municipality's prompt is independent and stateless, the same script run against a 500-city gazetteer is mechanically identical to a 10-city pilot — only wall-clock and cost scale, not code complexity. The scoring/queue-builder stage (deterministic, no model calls) already operates on the full parsed-candidates table regardless of size.
@@ -69,6 +69,16 @@ If a live scout batch begins returning repeated connection errors with no respon
 
 The known-good reference implementation and evidence standard are documented in `docs/analysis/gabriel_wrapper_smoke_test_2026-07-20.md`. This preflight is a necessary execution gate, not authorization to run a live scout; live research still requires the task's normal separate authorization and prompt cap.
 
+## 5B. Full-context cycle and known-source contract
+
+For national matched-repair and repeat-cycle slices, supply row-aware context whenever the repository already knows a city/unit/cycle/source. The minimal prompt accepts `scout_purpose`, `anchor_cycle`, `known_source_cycle_exclusions`, `known_source_notes`, and `known_source_urls` in addition to the national manifest columns. These columns are optional; their absence preserves the three-column fallback.
+
+- Matched-comparison repair rows should state the existing anchor cycle. A candidate that does not overlap it remains visible but must be labeled `non_overlap_deferred` rather than counted as a repair.
+- Repeat-cycle rows should identify already represented cycles and, where practical, exact canonical URLs. The scout should prioritize a different predecessor/successor cycle and label an exact known return as duplicate/context.
+- Contract years require visible operative support: cover/title, duration clause, award period, or equivalent operative text. Index labels, snippets, URLs, and inference are uncertainty, not definitive cycle evidence.
+- `blocked_or_unreadable` is separate from `dead_or_unreachable`. The latter is reserved for observed 404/410, DNS failure, or equivalent. A live official page/PDF that cannot be inspected is blocked/unreadable.
+- A complete executed scanned MOA is not partial merely because text extraction is difficult; if it is binding and contains wage-setting terms, it remains a qualifying lead pending human verification.
+
 ## 6. Schema — `gabriel_state_source_scout_candidates_<date>.csv`
 
 One row = one candidate source document for one municipality + unit_type.
@@ -87,7 +97,18 @@ One row = one candidate source document for one municipality + unit_type.
 | `source_url` | string | as returned; not verified |
 | `source_owner` | string | verbatim from model output |
 | `source_owner_type` | enum | `city`, `state_labor_board`, `union`, `school`, `third_party`, `news`, `unknown` |
-| `document_type` | enum | `cba`, `arbitration_award`, `factfinding`, `pay_plan`, `index_page`, `context_only`, `unknown` |
+| `document_type` | enum | `cba`, `arbitration_award`, `factfinding`, `memorandum_or_settlement`, `wage_schedule_or_compensation_plan`, `ordinance_or_policy`, `agenda_cover_sheet`, `meeting_minutes`, `index_page`, `context_only`, `blocked_or_unreadable`, `dead_or_unreachable`, `insufficient_source`, `unknown` |
+| `candidate_stage` | enum | `qualifying_candidate`, `context_only_candidate`, `insufficient_candidate` |
+| `document_completeness` | enum | `full_document`, `partial_document`, `summary_only`, `index_or_landing_page`, `blocked_or_unreadable`, `dead_or_unreachable`, `unclear` |
+| `visible_year_evidence` | enum | `cover_or_title`, `duration_clause`, `award_period`, `other_operative_text`, `index_or_snippet_only`, `model_inference_only`, `unclear` |
+| `overlap_with_anchor_cycle` | enum | `overlap`, `non_overlap_deferred`, `no_anchor_supplied`, `unclear` |
+| `duplicate_risk` | enum | `none`, `possible`, `exact_known_source` |
+| `blocked_or_unreadable_flag` | enum | `yes`, `no` |
+| `cycle_match_notes` | string | visible-year basis, overlap result, deferral, or uncertainty |
+| `comparator_role` | enum | `safety_target`, `ordinary_non_safety_comparator`, `authoritative_civilian_wage_setting`, `mechanism_context`, `no_comparator_role`, `unclear` |
+| `wrong_employer_risk` | enum | `none`, `possible`, `high` |
+| `context_only_flag` | enum | `yes`, `no` |
+| `needs_verification_reason` | string | concise human/source-verification requirement |
 | `triad_value` | enum | `high`, `medium`, `low` — derived from the scoring layer (Section 7) |
 | `provenance_score` | number | 0-100, deterministic score from Section 7 |
 | `likely_ingest_priority` | enum | `high`, `medium`, `low` — derived from `provenance_score` |
@@ -123,6 +144,9 @@ Applied to every parsed candidate row to compute `provenance_score` (0-100, addi
 - uncertain jurisdiction (municipality name ambiguous with a same-named place in another state/county, and the model did not disambiguate): -15
 - public-records-only path implied (`why_relevant`/`document_title` mentions FOIA/PRR/OPRA/RTKL as the only route): -25 (this project never files these; such a candidate is low-value even as a lead)
 - school-only source not tied to municipal comparison (`source_owner_type=school` and `unit_type` not clearly municipal): -15
+- blocked/unreadable source: -20 (kept distinct from the stronger dead/unreachable penalty)
+- non-overlap/deferred candidate for a supplied anchor cycle: -20
+- possible duplicate: -15; exact known source: -40
 
 `provenance_score` is clamped to [0, 100]. `likely_ingest_priority`: `high` if score ≥ 65, `medium` if 35-64, `low` if < 35. `triad_value`: `high` if the municipality has all three unit types represented among its candidate rows this run, `medium` if two, `low` if one or zero.
 

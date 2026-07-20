@@ -6,6 +6,51 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-20 16:04 EDT (Applied Massachusetts verification lessons and prepared the three-city New Jersey national-batch slice in dry-run mode only) - NJ is prompt-ready but still requires a fresh live wrapper preflight and separate authorization
+
+**Did**
+- Started at local commit `0227f1898d110685491da7ab827cf46b2ce84410` and treated `tmp/national_batch01_ma_source_verification_2026-07-20_relay_0227f18.zip` as source of truth. Its ZIP integrity passed and every shared relay/repository file matched byte-for-byte. Did not inspect, configure, validate, or change a Git remote.
+- Refined the minimal scout contract in `scripts/gabriel_state_source_scout.py`: added visible-year evidence, anchor-cycle overlap, duplicate risk, a separate blocked/unreadable flag, and cycle-match notes; reserved dead/unreachable for observed 404/410/DNS-equivalent failures; protected complete executed scanned MOAs; added row-aware anchor/known-source context; and demoted blocked, non-overlap, and duplicate rows deterministically while preserving older responses.
+- Extended the no-network contract test for row-aware context, legacy three-column fallback, the five new fields, parsing, strict unit guidance, and blocked-versus-dead normalization. Added the MA refinement note and updated both durable scout-methodology documents.
+- Filtered manifest wave `NWMS-2026-07-16-01` to the exact three NJ rows expected: Newark, Jersey City, and Camden. Added `docs/analysis/national_batch01_nj_scout_input_2026-07-20.csv` with all requested manifest context plus anchor cycles and known-source exclusions from local canonical/planning files.
+- Ran only the prescribed no-network dry preview. It built three minimal prompts and metadata under `tmp/gabriel_state_source_scout/NJ/national_batch01_nj_filter_contract_dry_run_2026-07-20/`; `live_attempted=false`, no GABRIEL import/model/API/search occurred, and no source was verified, ingested, codified, or promoted.
+
+**Decisions and why**
+- Keep the MA employer/unit rules unchanged: they produced 0/24 wrong-employer and 0/24 wrong-unit leakage. Reduce the remaining verification burden through cycle evidence, duplicate exclusions, overlap labels, and accurate access states.
+- Newark's future prompt excludes the three canonical police/non-safety/fire sources and requires a fire leg overlapping the shared 2020-2023 police/non-safety window. Jersey City excludes its candidate-stage 2009-2015 legacy set and asks for mutually overlapping 2018-2024 successors. Camden has no known canonical/verification set, so it asks for a mutually overlapping 2014-2024 triad and explicitly excludes Camden County/same-name employers.
+- NJ is acceptable for a future separately authorized three-row live run only after a new successful wrapper smoke test. The established smoke path calls the model/API, so it was deliberately not run in this dry-run-only task.
+
+**Surprises/breakage**
+- The NJ manifest matched the expected Newark/Jersey City/Camden slice exactly; no manifest discrepancy arose.
+- Dry-run mode and both contextual/three-column prompt paths stayed intact. No breakage or canonical corpus change occurred.
+
+**Validation/audit results**
+```text
+python -m py_compile scripts/gabriel_state_source_scout.py scripts/test_gabriel_state_source_scout_prompt.py
+OK
+
+python scripts/test_gabriel_state_source_scout_prompt.py
+6 PASS checks
+
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19
+exact-cycle: 10 | overlap-cycle: 18 | exploratory adjacent matches: 2
+safety units unmatched: 6
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units. The dry run did not alter canonical coverage.
+
+**Next steps**
+1. Before any NJ live scout, run the mandatory one-prompt no-search wrapper smoke test and require nonempty response text, response ID when exposed, no `Connection error.`, positive output tokens, and explicit success metadata. Stop if it fails.
+2. If separately authorized after a successful preflight, run only Newark, Jersey City, and Camden from the locked full-context CSV, then verify every returned URL before considering another state or any ingestion.
+
 ## 2026-07-20 15:45 EDT (Verified all 24 Massachusetts live-scout leads and made the synthetic wrapper smoke test a mandatory preflight) - scale only as another small, immediately verified slice
 
 **Did**

@@ -2,9 +2,47 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-20T15:00:00-04:00`
+Last updated: `2026-07-20T16:04:51-04:00`
 
 ---
+
+## 2026-07-20T16:04:51-04:00 - Massachusetts prompt lessons applied; New Jersey three-city full-context slice passes dry-run review
+
+### Current State After This Entry
+
+- Starting commit was `0227f1898d110685491da7ab827cf46b2ce84410`. `tmp/national_batch01_ma_source_verification_2026-07-20_relay_0227f18.zip` passed integrity testing and all shared handoff files matched the repository byte-for-byte. No Git remote was inspected, configured, validated, created, or changed.
+- `scripts/gabriel_state_source_scout.py` now asks for and preserves `visible_year_evidence`, `overlap_with_anchor_cycle`, `duplicate_risk`, `blocked_or_unreadable_flag`, and `cycle_match_notes`. It distinguishes blocked live sources from observed dead/unreachable locations, protects complete executed scanned MOAs from extraction-only demotion, supports anchor/known-source context, and demotes duplicates/non-overlap/blocked rows in deterministic prioritization.
+- Existing protections remain: exact municipal employer, wrong-employer exclusions, strict police/fire/ordinary-civilian definitions, no safety-as-non-safety substitution, separate context-only rows, empty-candidate permission, and `unverified`/`raw_model_output` quarantine. Optional new fields do not break prior responses or three-column input files.
+- The no-network prompt test now covers the new row-aware fields and access labels. `docs/analysis/scout_prompt_filtering_contract_ma_refinement_2026-07-20.md` explains the MA lesson; the durable filtering contract and methodology were updated in place.
+- The locked NJ input is `docs/analysis/national_batch01_nj_scout_input_2026-07-20.csv`, containing exactly Newark, Jersey City, and Camden from wave `NWMS-2026-07-16-01`. Newark excludes three canonical sources/cycles and targets an overlapping 2020-2023 fire leg; Jersey City excludes its 2009-2015 candidate-stage legacy set and targets mutually overlapping 2018-2024 successors; Camden has no local canonical/verification source set and targets a mutually overlapping 2014-2024 triad while excluding county/same-name employers.
+- The prescribed dry run succeeded with run ID `nj_2026-07-20_160655`: three prompts, minimal mode, `live_attempted=false`, no GABRIEL/model/API/web call. Artifacts are under `tmp/gabriel_state_source_scout/NJ/national_batch01_nj_filter_contract_dry_run_2026-07-20/`; the review is `docs/analysis/national_batch01_nj_filter_contract_dry_run_review_2026-07-20.md`.
+- NJ is prompt-ready for a future separately authorized live scout, not authorized or executed now. The established synthetic smoke helper calls the model/API, so it was not run. A fresh successful wrapper smoke preflight remains mandatory immediately before any future live NJ batch.
+
+### Validation State
+
+```text
+python -m py_compile scripts/gabriel_state_source_scout.py scripts/test_gabriel_state_source_scout_prompt.py
+OK
+
+python scripts/test_gabriel_state_source_scout_prompt.py
+6 PASS checks
+
+python scripts/validate.py
+VALIDATION PASSED — all rows conform to docs/schema.md
+  contracts: 64 | discourse: 0 | coverage: 64 | city_attributes: 3
+
+python ingest/test_pipeline.py
+60 passed, 0 failed
+
+python ingest/audit_coverage.py
+healthy matched pairs: 28 | cities: 19
+exact-cycle: 10 | overlap-cycle: 18 | exploratory adjacent matches: 2
+safety units unmatched: 6
+```
+
+### Recommended Next Move
+
+Run no live research automatically. If a future NJ live task is separately authorized, first run the mandatory one-prompt no-search wrapper preflight in the intended execution context and require nonempty text, response ID when exposed, no `Connection error.`, positive output tokens, and explicit success metadata. Only after success should the exact locked three-row NJ input run, followed immediately by direct verification of every returned source before another state, ingestion, codification, or claim use.
 
 ## 2026-07-20T15:45:45-04:00 - All 24 Massachusetts scout leads verified; employer/unit filtering holds, and wrapper smoke preflight is now mandatory
 

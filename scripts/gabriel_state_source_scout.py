@@ -90,6 +90,11 @@ CANDIDATE_FIELDS = [
     "document_type",
     "candidate_stage",
     "document_completeness",
+    "visible_year_evidence",
+    "overlap_with_anchor_cycle",
+    "duplicate_risk",
+    "blocked_or_unreadable_flag",
+    "cycle_match_notes",
     "comparator_role",
     "wrong_employer_risk",
     "context_only_flag",
@@ -296,12 +301,14 @@ _DOC_TYPE_ENUM = {
     "meeting_minutes",
     "index_page",
     "context_only",
+    "blocked_or_unreadable",
     "dead_or_unreachable",
     "insufficient_source",
     "unknown",
 }
 _DOC_TYPE_KEYWORDS = [
-    ("dead_or_unreachable", (r"dead link", r"unreachable", r"access denied", r"not found", r"\b404\b")),
+    ("dead_or_unreachable", (r"dead link", r"unreachable", r"not found", r"\b404\b", r"\b410\b", r"dns failure")),
+    ("blocked_or_unreadable", (r"access denied", r"forbidden", r"blocked", r"cannot inspect", r"unreadable")),
     ("agenda_cover_sheet", (r"agenda cover", r"agenda item", r"cover sheet")),
     ("meeting_minutes", (r"meeting minutes", r"council minutes", r"minutes only")),
     ("memorandum_or_settlement", (r"memorandum of agreement", r"memorandum of understanding", r"settlement agreement", r"settlement memorandum", r"\bmoa\b", r"\bmou\b")),
@@ -405,7 +412,11 @@ County governments, school districts, transit authorities, hospital/health distr
 
 Unit rules: police means sworn police or a police bargaining unit; fire means firefighters or a fire bargaining unit. non_safety means ordinary municipal/civilian employees or authoritative civilian wage-setting material. A police, fire, or other safety CBA can never satisfy a non-safety comparator request. EMS, airport police, transit police, sheriffs, county corrections, school police, hospital-district workers, and private providers are not ordinary non-safety comparators. Use unclear when unit identity is ambiguous; do not force non_safety.
 
-Document rules: distinguish a full CBA; arbitration/factfinding award; memorandum or settlement; wage schedule/compensation plan; ordinance/policy; agenda cover; meeting minutes; context-only source; and dead, unreachable, or insufficient source. A memorandum or settlement is qualifying only when it is executed/binding and contains wage-setting terms. Agenda covers, summaries, meeting memos, and minutes are context-only unless they include or directly attach the full agreement, award, wage schedule, or other binding wage-setting document. Index shells, dead links, and inaccessible pages are insufficient, not qualifying documents.
+Cycle rules: return contract years only when they are visible on the document cover or title, in a duration clause, in an award period, or in equivalent operative text. State that evidence in visible_year_evidence. If years come only from an index label, search snippet, URL, or model inference, set contract_years to unclear unless the uncertainty is explicit, identify that weak basis in visible_year_evidence, and explain it in cycle_match_notes. For a matched-comparison repair target, prefer candidates that overlap the supplied anchor cycle; label a non-overlapping candidate non_overlap_deferred rather than presenting it as a repair. For a repeat-cycle target, prioritize a predecessor or successor cycle different from already represented rows.
+
+Known-source rules: when canonical or previously surfaced city/unit/cycle/source context is supplied above, do not return the exact same source as a new qualifying candidate. If it is necessary as context, label duplicate_risk=exact_known_source and candidate_stage=context_only_candidate. Repeat-cycle targets must prioritize not-yet-represented cycles.
+
+Document rules: distinguish a full CBA; arbitration/factfinding award; memorandum or settlement; wage schedule/compensation plan; ordinance/policy; agenda cover; meeting minutes; context-only source; blocked or unreadable source; dead or unreachable source; and other insufficient source. Reserve dead_or_unreachable for an observed 404, 410, DNS failure, or equivalent evidence that the location cannot be reached. Use blocked_or_unreadable for a live official page or PDF whose contents cannot be inspected, including access-denied responses. A complete executed scanned MOA with binding wage-setting terms remains a qualifying source even when text extraction is difficult; do not demote it solely because it is scanned. A memorandum or settlement is otherwise qualifying only when it is executed/binding and contains wage-setting terms. Agenda covers, summaries, meeting memos, and minutes are context-only unless they include or directly attach the full agreement, award, wage schedule, or other binding wage-setting document. Index shells and other contentless pages are insufficient, not qualifying documents.
 
 Find up to 2 candidates for each requested unit or source type. Prefer official city, state labor-board, or union sources.
 
@@ -424,9 +435,14 @@ Return:
       "contract_years": "...",
       "source_url": "...",
       "source_owner_type": "city | state_labor_board | union | third_party | news | unknown",
-      "document_type": "cba | arbitration_award | factfinding | memorandum_or_settlement | wage_schedule_or_compensation_plan | ordinance_or_policy | agenda_cover_sheet | meeting_minutes | index_page | context_only | dead_or_unreachable | insufficient_source | unknown",
+      "document_type": "cba | arbitration_award | factfinding | memorandum_or_settlement | wage_schedule_or_compensation_plan | ordinance_or_policy | agenda_cover_sheet | meeting_minutes | index_page | context_only | blocked_or_unreadable | dead_or_unreachable | insufficient_source | unknown",
       "candidate_stage": "qualifying_candidate | context_only_candidate | insufficient_candidate",
-      "document_completeness": "full_document | partial_document | summary_only | index_or_landing_page | dead_or_unreachable | unclear",
+      "document_completeness": "full_document | partial_document | summary_only | index_or_landing_page | blocked_or_unreadable | dead_or_unreachable | unclear",
+      "visible_year_evidence": "cover_or_title | duration_clause | award_period | other_operative_text | index_or_snippet_only | model_inference_only | unclear",
+      "overlap_with_anchor_cycle": "overlap | non_overlap_deferred | no_anchor_supplied | unclear",
+      "duplicate_risk": "none | possible | exact_known_source",
+      "blocked_or_unreadable_flag": "yes | no",
+      "cycle_match_notes": "...",
       "comparator_role": "safety_target | ordinary_non_safety_comparator | authoritative_civilian_wage_setting | mechanism_context | no_comparator_role | unclear",
       "wrong_employer_risk": "none | possible | high",
       "context_only_flag": "yes | no",
@@ -525,21 +541,48 @@ def build_prompt(
         target_employer = f"the municipal government of {municipality}, {state}."
 
     expected_units = (row.get("expected_units_to_search") or "").strip()
+    expected_units_lower = expected_units.lower().replace("-", " ").replace("_", " ")
+    scout_purpose = (
+        row.get("scout_purpose")
+        or row.get("selection_bucket")
+        or ""
+    ).strip()
+    anchor_cycle = (row.get("anchor_cycle") or "").strip()
+    known_exclusions = (row.get("known_source_cycle_exclusions") or "").strip()
+    known_notes = (row.get("known_source_notes") or "").strip()
+    known_urls = (row.get("known_source_urls") or "").strip()
     selection_reason = (row.get("selection_reason") or "").strip()
     verification_notes = (row.get("verification_notes") or "").strip()
     county_context = (row.get("county_context_summary") or "").strip()
     context_lines = [
         f"Search target: {expected_units or 'police; fire; non_safety/general municipal'}."
     ]
-    if "distinct from ems" in expected_units.lower():
+    if scout_purpose:
+        context_lines.append(f"Scout purpose: {scout_purpose}.")
+    if anchor_cycle:
+        context_lines.append(f"Anchor-cycle requirement: {anchor_cycle}")
+    if known_exclusions:
+        context_lines.append(f"Known source/cycle exclusions: {known_exclusions}")
+    if known_notes:
+        context_lines.append(f"Known-source context: {known_notes}")
+    if known_urls:
+        context_lines.append(f"Exact known URLs not to return as new candidates: {known_urls}")
+    if "distinct from ems" in expected_units_lower:
         context_lines.append(
             "Comparator exclusion: EMS is explicitly excluded and may not count as the "
             "requested ordinary general-municipal non-safety comparator."
         )
-    if "repeat cycle" in expected_units.lower():
+    purpose_lower = scout_purpose.lower().replace("-", "_")
+    if "matched_comparison_repair" in purpose_lower:
+        context_lines.append(
+            "Matched-cycle rule: a qualifying repair candidate must overlap the supplied anchor "
+            "cycle; label non-overlapping material non_overlap_deferred in overlap_with_anchor_cycle."
+        )
+    if "repeat cycle" in expected_units_lower or "repeat_cycle" in purpose_lower:
         context_lines.append(
             "Cycle evidence emphasis: identify contract years for every candidate and prioritize "
-            "repeat-cycle sources plus public impasse/arbitration/factfinding evidence."
+            "a different predecessor/successor cycle from represented rows, plus public "
+            "impasse/arbitration/factfinding evidence."
         )
     if selection_reason:
         context_lines.append(f"Selection purpose: {selection_reason}")
@@ -642,6 +685,12 @@ def score_candidate(row: dict, unit_types_present: set[str]) -> tuple[int, str]:
     unit_type = (row.get("unit_type") or "").strip().lower()
     candidate_stage = (row.get("candidate_stage") or "").strip().lower()
     completeness = (row.get("document_completeness") or "").strip().lower()
+    overlap_with_anchor = (row.get("overlap_with_anchor_cycle") or "").strip().lower()
+    duplicate_risk = (row.get("duplicate_risk") or "").strip().lower()
+    blocked_or_unreadable = (
+        (row.get("blocked_or_unreadable_flag") or "").strip().lower()
+        in {"yes", "true", "1"}
+    )
     comparator_role = (row.get("comparator_role") or "").strip().lower()
     wrong_employer_risk = (row.get("wrong_employer_risk") or "").strip().lower()
     context_only = (row.get("context_only_flag") or "").strip().lower() in {"yes", "true", "1"}
@@ -688,6 +737,18 @@ def score_candidate(row: dict, unit_types_present: set[str]) -> tuple[int, str]:
         score -= 15
     if completeness == "dead_or_unreachable" or doc_type in {"dead_or_unreachable", "insufficient_source"}:
         score -= 30
+    if (
+        blocked_or_unreadable
+        or completeness == "blocked_or_unreadable"
+        or doc_type == "blocked_or_unreadable"
+    ):
+        score -= 20
+    if overlap_with_anchor == "non_overlap_deferred":
+        score -= 20
+    if duplicate_risk == "possible":
+        score -= 15
+    elif duplicate_risk == "exact_known_source":
+        score -= 40
     if wrong_employer_risk == "possible":
         score -= 15
     elif wrong_employer_risk == "high":
@@ -789,6 +850,11 @@ def parse_response_to_candidates(
                 "document_type": normalize_document_type(str(item.get("document_type", "") or "")),
                 "candidate_stage": str(item.get("candidate_stage", "") or ""),
                 "document_completeness": str(item.get("document_completeness", "") or ""),
+                "visible_year_evidence": str(item.get("visible_year_evidence", "") or ""),
+                "overlap_with_anchor_cycle": str(item.get("overlap_with_anchor_cycle", "") or ""),
+                "duplicate_risk": str(item.get("duplicate_risk", "") or ""),
+                "blocked_or_unreadable_flag": str(item.get("blocked_or_unreadable_flag", "") or ""),
+                "cycle_match_notes": str(item.get("cycle_match_notes", "") or ""),
                 "comparator_role": str(item.get("comparator_role", "") or ""),
                 "wrong_employer_risk": str(item.get("wrong_employer_risk", "") or ""),
                 "context_only_flag": str(item.get("context_only_flag", "") or ""),
