@@ -6,6 +6,44 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-20 19:25 EDT (Locked Illinois 25-municipality direct-SDK scout completed with 24 successful responses and 76 unverified leads) - continue national scouting; defer verification and ingestion
+
+**Did**
+- Began at local commit `d25dc067ac55f731eb9794263fdd503994616790`. The supplied `tmp/national_batch01_il25_filter_contract_dry_run_2026-07-20_relay_014f24d.zip` passed integrity inspection but represents the pre-amend dry-run checkpoint: local `HEAD` preserved three newer cost-planning documentation additions, and the relay omitted two named test scripts. Shared substantive input/code otherwise matched; repository evidence clearly showed the relay was stale/incomplete. No remote was inspected, changed, or pushed.
+- Confirmed the locked input resolved to the exact ordered IL25 list. Ran the one authorized no-search direct-SDK smoke: exact `Reply with OK.`, one request, zero retries, 30-second timeout, no tools/search. It returned `OK.`, a response ID, and 10 input / 0 reasoning / 6 output tokens with explicit success.
+- Only after that gate, ran the one authorized IL25 live batch through `.venv/bin/python`, direct SDK, serial execution, low-context hosted search, 15-second spacing, and zero retries. Twenty-four responses returned nonempty text and response IDs and parsed successfully. Champaign produced a valid empty candidate list. Bloomington timed out without a response ID, text, or tokens and was not retried.
+- Preserved the full live artifacts and normalized 76 unverified rows: 31 police, 24 fire, 20 ordinary non-safety, and 1 unclear/context-only row. Added the scout-stage review and deterministic handoff builder. No returned URL was independently opened, verified, downloaded, ingested, codified, canonicalized, or used for a claim.
+- Rebuilt the durable queue and national municipality/state/county scout accounting. The queue now has 189 rows (PA 75, TX 6, MA 24, NJ 8, IL 76), of which 135 are queued for later verification. Successful discovery coverage is 63 municipalities, including IL 24: 23 with candidates and Champaign with no candidates. Bloomington is a separately retained failed attempt and excluded from coverage.
+
+**Decisions and why**
+- The single Bloomington timeout is infrastructure/failure evidence, not a successful no-candidate search. A retry would have been a third API action outside the authorization and lacked a real response to diagnose, so no retry ran.
+- Apparent Illinois matched sets remain scheduling leads only. Rockford, Springfield, Joliet, Bolingbrook, and Decatur are the strongest later-wave groups; Chicago is a blocked legacy set, Aurora lacks an ordinary civilian leg, and two Joliet police locators appear duplicative despite `duplicate_risk=none`.
+- Six blocked rows are held as insufficient by queue precedence even when model output calls them qualifying/full. Scout-stage blocked versus dead remains distinct, and all employer/unit/document/cycle claims require later direct verification.
+
+**Surprises/breakage**
+- IL usage was substantially above the prior planning proxy: 1,028,386 input, 49,032 reasoning, and 79,974 output tokens, with roughly 50.04 seconds average successful response time. Billed direct-SDK dollar cost was unavailable and was not estimated as actual cost.
+- No JSON/parser failure occurred. The only failed row was Bloomington's zero-response timeout. Exact canonical/pre-Illinois queue URL overlap was zero, but within-run duplicate-locator risk and safety-adjacent civilian comparator questions remain visible.
+- The shell's `python` and `python3` shims remained unusable; `.venv/bin/python` was used consistently.
+
+**Validation/audit results**
+```text
+all seven requested/added py_compile checks: exit 0
+IL25 handoff builder: 76 rows
+queue builder: 189 rows (IL 76; MA 24; NJ 8; PA 75; TX 6)
+coverage builders/orchestrator: universe 35,589; covered 63; candidate-positive 59; parseable empty 4; excluded failures 17
+direct-SDK regression test: 6 PASS checks
+prompt-contract regression test: 6 PASS checks
+validate.py: PASSED (64 contracts; 0 discourse; 64 coverage; 3 city attributes)
+ingest/test_pipeline.py: 60 passed, 0 failed
+audit_coverage.py: 28 healthy pairs (10 exact, 18 overlap), 2 exploratory adjacent, 6 unmatched safety units
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units. No canonical contract, coverage, or corpus row changed in this task.
+
+**Next steps**
+1. Do not verify all 76 Illinois rows or retry Bloomington automatically. Continue state-scale national scouting only under separate authorization and after a fresh direct-SDK smoke preflight.
+2. When coordinated verification begins, review municipality-level matched groups rather than isolated URLs and establish employer, unit, provenance, execution/completeness, dates, wage content, duplicates, and overlap before ingestion.
+
 ## 2026-07-20 18:45 EDT (Prepared 25-municipality Illinois state-scaling scout batch and passed dry prompt review) - await separately authorized direct-SDK smoke preflight
 
 **Did**

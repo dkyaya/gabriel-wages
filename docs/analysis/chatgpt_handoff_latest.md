@@ -2,9 +2,27 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-20T18:45:00-04:00`
+Last updated: `2026-07-20T19:25:00-04:00`
 
 ---
+
+## 2026-07-20T19:25:00-04:00 — Illinois IL25 direct-SDK scout completed 24/25; 76 leads are queued and remain unverified
+
+### Current State
+
+- **Starting checkpoint/reconciliation:** local starting commit was `d25dc067ac55f731eb9794263fdd503994616790`. The supplied `tmp/national_batch01_il25_filter_contract_dry_run_2026-07-20_relay_014f24d.zip` is the older pre-amend dry-run bundle: local `HEAD` contained three later cost-planning documentation additions, and the relay omitted two named test scripts. Shared substantive input/code otherwise matched. The repository is therefore the newer complete checkpoint. No Git remote was inspected, changed, or pushed.
+- **Required smoke:** one no-search direct-SDK request used exactly `Reply with OK.`, `gpt-5.4-nano`, Harvard `/v2`, no tools/search, zero retries, and a 30-second timeout. It returned `OK.`, a response ID, 10 input / 0 reasoning / 6 output tokens, and explicit success. Evidence is under `tmp/direct_sdk_scout_backend_preflight/IL/national_batch01_il25_2026-07-20/`.
+- **Locked live run:** only after smoke success, exactly the 25 ordered rows in [national_batch01_il25_scout_input_2026-07-20.csv](national_batch01_il25_scout_input_2026-07-20.csv) ran through `--live-backend direct-sdk`, serially, with 15-second spacing, low search context, and zero retries. The project `.venv/bin/python` was required. Full artifacts are under `tmp/gabriel_state_source_scout/IL/national_batch01_il25_live_direct_sdk_2026-07-20/`; run ID is `il_2026-07-20_184849`.
+- **Execution result:** 24 responses returned nonempty text and response IDs and parsed successfully. Champaign returned a valid empty candidate list. Bloomington timed out without text, ID, or tokens; it was not retried because no real response existed to diagnose and a retry would exceed the exactly two authorized API actions. There were no parser failures or repeated connection errors.
+- **Usage/result rows:** 1,028,386 input, 49,032 reasoning, and 79,974 output tokens; average successful request time 50.04 seconds; billed dollars unavailable. The run produced 76 rows: police 31, fire 24, ordinary non-safety 20, unclear 1. The [normalized handoff](national_batch01_il25_live_direct_sdk_scout_candidates_2026-07-20.csv) keeps all rows `unverified_scout_candidate`; the [scout review](national_batch01_il25_live_direct_sdk_scout_review_2026-07-20.md) records each municipality and leakage boundary.
+- **Scout interpretation only:** Rockford, Springfield, Joliet, Bolingbrook, and Decatur have the strongest apparent model-described matched sets. Chicago is a blocked legacy set, Aurora lacks an ordinary civilian leg, and two Joliet police locators appear to describe the same agreement despite no duplicate warning. No exact canonical/pre-IL queue URL overlap or visible substitute employer was found from local artifacts. Naperville's police-department civilian unit and Springfield's municipal-utility unit need comparator-scope review later.
+- **Queue/coverage:** the durable queue now contains 189 rows: PA 75, TX 6, MA 24, NJ 8, IL 76. One hundred thirty-five are scheduled for later verification. Successful national discovery coverage is 63 municipalities. Illinois counts 24: 23 with candidates and Champaign with no candidates. Bloomington is explicitly `scout_attempt_failed_connection` and excluded; IL therefore has 2,695 governments not successfully covered. No IL calibration, verification, later-ingestion approval, canonical, codified, or claim status was created.
+- **Protected state:** no URL was independently opened, no PDF downloaded, and no source was newly verified, ingested, codified, canonicalized, or used for a claim. Canonical contracts, city coverage, and corpus are unchanged.
+- **Validation:** all seven requested/added compiles passed; IL handoff, queue, direct coverage builder, and canonical coverage orchestrator reconciled at 76/189/63; direct-SDK and prompt-contract suites passed 6/6 each; schema validation passed at 64 contracts; ingestion tests passed 60/60; canonical coverage remains 28 healthy pairs, 2 exploratory adjacent pairs, and 6 unmatched safety units.
+
+### Next Move
+
+Do not retry Bloomington, verify all Illinois links, or launch another state automatically. A future separately authorized state-scale scout should use a fresh direct-SDK no-search smoke, a locked full-context municipal input, serial zero-retry execution, and immediate queue/coverage maintenance. When the project starts coordinated verification, select the strongest municipality-level apparent matched sets and establish exact employer/unit, official provenance, execution/completeness, visible dates, wage-setting content, duplicates, and cycle overlap before any ingestion or claim use.
 
 ## 2026-07-20T18:45:00-04:00 — Illinois now has a 25-municipality state-scaling scout input; it is dry-run ready, not live-authorized
 
