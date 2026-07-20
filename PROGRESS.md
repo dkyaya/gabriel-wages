@@ -6,6 +6,41 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-20 18:45 EDT (Prepared 25-municipality Illinois state-scaling scout batch and passed dry prompt review) - await separately authorized direct-SDK smoke preflight
+
+**Did**
+- Started at `5e753904de40633b325e86049f3bd592e1b49712` and treated `tmp/national_batch01_il_filter_contract_dry_run_2026-07-20_relay_5e75390.zip` as source of truth. Every shared relay/repository file matched byte-for-byte. The narrow relay omitted the national universe, coverage, queue, methodologies, and scout/build scripts required for this expansion; those matching repository artifacts were read as authoritative working inputs, with no evidence that the relay checkpoint was stale.
+- Replaced the too-small Illinois planning slice with a 25-row state-scale input: the five Illinois manifest anchors plus 20 additional municipal/place governments selected for population/admin importance, likely municipal cross-unit discovery value, county/regional diversity, and large/medium/smaller employer contrast. The first three remain Chicago, Aurora, and Rockford. All 25 are `not_scouted`; no selected city has a canonical contract or national queue row.
+- Preserved Census IDs and every county-crosswalk relationship, excluded township governments from selection, and kept `TOWN OF NORMAL` only because Census classifies it as a municipal place government. Added row-specific wrong-employer cautions and state-stage source/cycle absence context rather than inventing known-source exclusions.
+- Ran the 25-row minimal prompt dry run only. Its metadata is non-live. Added the IL25 selection method and review; the review verifies all prompt contracts, estimates a future bounded direct-SDK run, and specifies queue/coverage handling after a separately authorized live batch.
+- Narrowly added `township governments` to the runner's universal substitute-employer exclusion. No source URL was opened, no model/API call or hosted search ran, and no verification, ingestion, codification, queue/coverage rebuild, or canonical data/corpus change occurred.
+
+**Decisions and why**
+- The batch uses five controlled buckets: 5 claim-register anchors, 7 large-city anchors, 6 mid-city comparison candidates, 5 regional-diversity candidates, and 2 clean municipal-employer candidates. This retains claim priorities while avoiding an Illinois scan that is only Chicagoland or only the 100-row national manifest.
+- Future live execution should remain serial with direct SDK and zero retries. The 25-row size is at the runner's hard cap, so any larger Illinois expansion requires a distinct task/batch rather than changing the cap.
+- Prior priced runs support a rough 25-prompt planning proxy of `$0.27–$0.30` and an expected serial runtime of roughly 20–25 minutes. This is not a direct-SDK billing quote; the direct HUIT response exposes usage but not billed dollars.
+
+**Surprises/breakage**
+- The shared prompt had strong categorical employer exclusions but did not explicitly name township governments. The one-line contract addition closes that ambiguity and passed all no-network regression tests.
+- The shell's `python` and `python3` shims remain non-executable; `.venv/bin/python` ran the dry run and validation suite successfully.
+
+**Validation/audit results**
+```text
+dry run: 25 IL municipality prompts built; live_attempted=false
+all six requested py_compile checks: exit 0
+direct-SDK regression test: 6 PASS checks
+prompt-contract regression test: 6 PASS checks
+validate.py: PASSED (64 contracts; 0 discourse; 64 coverage; 3 city attributes)
+ingest/test_pipeline.py: 60 passed, 0 failed
+audit_coverage.py: 28 healthy pairs (10 exact, 18 overlap), 2 exploratory adjacent, 6 unmatched safety units
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units. IL25 preparation changed no canonical row.
+
+**Next steps**
+1. Do not run IL25 automatically. Under separate authorization, first run a fresh direct-SDK synthetic no-search smoke preflight.
+2. Only after that gate and separate live authorization, run this locked 25-row input serially with zero retries; preserve artifacts, add successful candidates to the queue, and rebuild discovery coverage. Defer verification, ingestion, codification, and claim use.
+
 ## 2026-07-20 18:20 EDT (Prepared Illinois three-city national scout slice and passed dry prompt review) - await separately authorized direct-SDK smoke preflight
 
 **Did**

@@ -2,9 +2,25 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-20T18:20:00-04:00`
+Last updated: `2026-07-20T18:45:00-04:00`
 
 ---
+
+## 2026-07-20T18:45:00-04:00 — Illinois now has a 25-municipality state-scaling scout input; it is dry-run ready, not live-authorized
+
+### Current State
+
+- **Starting checkpoint:** `5e753904de40633b325e86049f3bd592e1b49712` (`Prepare Illinois national scout dry-run slice`). The supplied `tmp/national_batch01_il_filter_contract_dry_run_2026-07-20_relay_5e75390.zip` is the source-of-truth checkpoint. Its shared files match byte-for-byte. The relay is deliberately narrow and omits the national universe, coverage, queue, methodologies, and scout/build scripts required for state scaling; the repository copies were read as required working inputs, with no evidence of a stale checkpoint.
+- **IL25 input:** [national_batch01_il25_scout_input_2026-07-20.csv](national_batch01_il25_scout_input_2026-07-20.csv) contains exactly 25 Illinois Census `municipal` / `place` governments, all currently `not_scouted` and without an existing national queue candidate or canonical contract row. Rows 1–3 retain Chicago (`162236`), Aurora (`189929`), and Rockford (`102882`). The full ordered list is Chicago, Aurora, Rockford, Springfield, Naperville, Joliet, Elgin, Peoria, Champaign, Waukegan, Bloomington, Decatur, Evanston, Schaumburg, Bolingbrook, Palatine, Skokie, Des Plaines, Orland Park, Tinley Park, Normal, Belleville, Moline, Carbondale, and Quincy.
+- **Selection:** five controlled buckets balance claim-driven targets and state breadth: 5 `claim_register_anchor`, 7 `large_city_state_anchor`, 6 `mid_city_comparison_candidate`, 5 `regional_diversity_candidate`, and 2 `clean_municipal_employer_candidate`. The [selection methodology](national_batch01_il25_selection_methodology_2026-07-20.md) documents the authoritative-universe, coverage-exclusion, crosswalk, regional-diversity, and non-township rules. `TOWN OF NORMAL` is a municipal Census place, not a township.
+- **Dry run:** `.venv/bin/python scripts/gabriel_state_source_scout.py --dry-run --state IL --municipalities-csv docs/analysis/national_batch01_il25_scout_input_2026-07-20.csv --output-dir tmp/gabriel_state_source_scout/IL/national_batch01_il25_filter_contract_dry_run_2026-07-20 --prompt-mode minimal` exited 0. The normal `python`/`python3` shims were non-executable. Metadata records 25 requested municipalities and `live_attempted=false`; no model/API call, hosted search, source opening, verification, ingestion, codification, queue update, coverage rebuild, or canonical/corpus edit occurred.
+- **Prompt contract:** the [IL25 dry-run review](national_batch01_il25_filter_contract_dry_run_review_2026-07-20.md) confirms all 25 prompts include exact employer/Census ID, ordinary-civilian non-safety restrictions, safety-not-non-safety prohibition, separate context/blocked/dead states, visible-year and filtering fields, duplicate handling, matched-cycle purpose, allowed empty lists, and unverified scout-stage status. The shared template now explicitly excludes township governments as substitute employers, alongside counties, schools, transit, health, regional, special-district, and private-provider substitutions.
+- **Planning envelope:** a serial 25-row direct-SDK run is expected to take roughly 20–25 minutes and use about 0.74–0.81 million input, 32,000–40,000 reasoning, and 64,000–65,000 output tokens. Prior GABRIEL-priced runs imply a rough `$0.27–$0.30` comparison benchmark, but direct HUIT responses do not expose billed dollars, so that benchmark is not a direct-SDK price quote.
+- **Validation:** all six requested compiles passed; direct-SDK and prompt suites are each 6/6; `validate.py` passed at 64 contracts / 0 discourse / 64 coverage / 3 city attributes; ingestion tests are 60/60; audit coverage remains 28 healthy pairs (10 exact, 18 overlap), two exploratory adjacent, and six unmatched safety units. Canonical data did not change.
+
+### Next Move
+
+Do not live-scout IL25 automatically. Under separate authorization, run a fresh one-request direct-SDK no-search smoke preflight first. Proceed only on expected `OK` text, response ID, positive output tokens, exactly one request, and no web search. Only with a second separate authorization then run this locked 25-row input with `--live-backend direct-sdk`, `--n-parallels 1`, and `--direct-sdk-max-retries 0`; preserve artifacts, add successful candidate output to the durable queue, rebuild discovery coverage, and keep all leads unverified until a later coordinated verification wave.
 
 ## 2026-07-20T18:20:00-04:00 — Illinois national-batch dry-run slice prepared; ready only after fresh direct-SDK smoke preflight and separate live authorization
 
