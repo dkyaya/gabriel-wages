@@ -30,6 +30,8 @@ For each worker relay, inspect its status/log/diff summaries, locked input, dry 
 
 Also require a unique attempt label and fresh output paths, a Gate 0 readiness note, the exact interpreter/package record, command launch/exit evidence, and a protected-file before/after comparison.
 
+While parallel live use is paused, also require evidence that workers obeyed the serialized recovery protocol: Gate 0/dry runs may overlap, but smoke/live intervals may not; each worker must record its coordinator live-lane grant; and the next smoke must begin at least five minutes after the prior worker's lane was released. Overlapping smoke/live timestamps are a hard scope rejection, not a reason to reinterpret failures.
+
 ## Hard relay rejection rules
 
 Reject the relay as a Stage outcome and do not start the global rebuild if any of the following is true:
@@ -43,6 +45,8 @@ Reject the relay as a Stage outcome and do not start the global rebuild if any o
 - sanitized command stdout/stderr and exit-code disposition are both absent;
 - no parseable model output exists for any municipality; or
 - the review cannot reconcile artifact-supported attempted, response, parseable, empty, candidate, and failure counts.
+- `execution_status=completed_no_parseable_outcome`, or the process exits zero despite zero parseable research outcomes under a pre-hardening runner;
+- the relay lacks live-lane grant/release evidence or shows overlapping API intervals while serialized recovery is required.
 
 A header-only `parsed_candidates.csv` may be valid only when `raw_outputs.csv` contains one or more successful, parseable `candidates=[]` model outputs. Zero candidate rows are not by themselves a rejection; zero parseable model outputs are. Synthetic smoke artifacts never substitute for research-batch raw/parsed evidence.
 
@@ -78,7 +82,7 @@ No verification, ingestion, codify, canonical coverage edit, or candidate claim 
 
 ## Report and validation
 
-Report per worker and pooled: smoke result/latency; locked, attempted, stopped, successful, nonempty, response-ID, parseable, parseable-empty, candidate-positive, and candidate-row counts; parseable and failure rates; parser failures; leakage; missing locators/duplicates; tokens/cost caveats; queue/coverage increments; and confirmation that all prior rows remain.
+Report per worker and pooled: live-lane grant/release and non-overlap; smoke result/latency; locked, attempted, stopped, successful, nonempty, response-ID, parseable, parseable-empty, candidate-positive, and candidate-row counts; parseable and failure rates; parser failures; leakage; missing locators/duplicates; tokens/cost caveats; queue/coverage increments; and confirmation that all prior rows remain. A clean serialized recovery merge does not by itself prove parallel-live stability or authorize Stage 2.
 
 Run at least:
 

@@ -23,6 +23,7 @@ Use Routine / GPT-5.6 Terra for locked execution and relay packaging. Escalate s
 | Output directory | `{{OUTPUT_DIR}}` |
 | Command-log directory | `{{COMMAND_LOG_DIR}}` |
 | Batch cost log | `{{COST_LOG_PATH}}` |
+| Coordinator live-lane grant | `{{LIVE_LANE_GRANT}}` — required before smoke; one active worker only |
 
 Use only the exact locked input. Verify its row count, distinct municipality/Census IDs, state, worker/stage metadata, pre-run eligibility, and no overlap with the other workers, current successful coverage, failure-only rows, queue, canonical context, or prohibited government types. Never substitute, append, reorder, or retry a row.
 
@@ -43,6 +44,7 @@ Require all of the following:
 7. Confirm every attempt path includes the unique `{{ATTEMPT_LABEL}}`. The dry, smoke, live, command-log, and relay paths must not exist from an earlier attempt. If any exists, stop and choose a new timestamped/retry-labeled path; never reuse, resume, clear, or overwrite a failed/incomplete directory.
 8. Record a scoped starting hash/diff inventory for the national queue, national municipality/state/county coverage, their builders/summaries, the durable global cost log, `PROGRESS.md`, the main handoff, `data/contracts.csv`, `data/city_coverage.csv`, and `corpus/`. The worker must prove these are unchanged before commit/relay.
 9. Confirm no other worker shares this writable worktree/repo copy.
+10. Confirm that Gate 0 and dry-run work may overlap across workers, but no smoke or live command is permitted without a coordinator-issued exclusive live-lane grant. Do not create or edit a tracked global file to represent the grant.
 
 The readiness note should identify the preparation relay, planning commit, attempt label, interpreter, package versions, writable-path checks, protected-file baseline, and pass/fail result. It must contain no `.env` content or credential value.
 
@@ -63,7 +65,7 @@ Review every prompt. Require exact employer/ID, wrong-employer exclusions, ordin
 
 ## Gate 2 — direct-SDK smoke preflight
 
-Only after Gate 1 and explicit authorization for live API use:
+Only after Gate 1, explicit authorization for live API use, and an exclusive coordinator live-lane grant. The grant covers this smoke and the immediately following live run; no other worker may hold a grant or use the API concurrently.
 
 ```bash
 {{PYTHON_EXECUTABLE}} scripts/diagnose_direct_sdk_scout_backend_smoke_test.py \
@@ -74,7 +76,7 @@ Require the exact `Reply with OK.` one-request, no-search/no-tools, direct-SDK, 
 
 ## Gate 3 — serial direct-SDK live scout
 
-Only after smoke success and separate explicit live authorization, run the exact command once. Capture command launch time, sanitized stdout/stderr, and exit code at the command-wrapper level; do not rely only on files written by Python. Do not stream potentially sensitive raw stderr into a shared transcript. Preserve only a sanitized console log in the relay, and explicitly record when stdout/stderr is empty.
+Only after smoke success, separate explicit live authorization, and continued possession of the same exclusive lane, run the exact command once. Capture command launch time, sanitized stdout/stderr, and exit code at the command-wrapper level; do not rely only on files written by Python. Do not stream potentially sensitive raw stderr into a shared transcript. Preserve only a sanitized console log in the relay, and explicitly record when stdout/stderr is empty.
 
 ```bash
 {{PYTHON_EXECUTABLE}} scripts/gabriel_state_source_scout.py \
@@ -92,7 +94,7 @@ Only after smoke success and separate explicit live authorization, run the exact
   --cost-log-path {{COST_LOG_PATH}}
 ```
 
-`--n-parallels 1` is mandatory even when multiple workers run at once. Stop on repeated no-ID/no-token connection failures, a systematic parser/schema issue, or unexpected shared/canonical changes. Preserve partial and stopped-before-request evidence; do not retry failures or substitute rows.
+`--n-parallels 1` is mandatory. API execution is currently serialized across workers: preparations and dry runs may overlap, but smoke/live calls may not. Retain the lane through process completion and artifact finalization, then notify the coordinator that it may be released. The next worker must wait at least five minutes after release before its smoke. Stop on repeated no-ID/no-token connection failures, a systematic parser/schema issue, or unexpected shared/canonical changes. Preserve partial and stopped-before-request evidence; do not retry failures or substitute rows.
 
 The scout now checkpoints `run_metadata.json` with `execution_status=live_started` before backend setup. A completed or handled-failure process must update that lifecycle status. A surviving `live_started` checkpoint with no completion artifacts indicates interruption and is not mergeable. An operating-system kill can bypass Python cleanup, so command-level exit/log capture remains mandatory.
 
@@ -106,7 +108,7 @@ If the live command exits nonzero, is interrupted, returns no console output, le
 - sanitized stdout/stderr, or an explicit statement that none was captured;
 - every artifact present, with sizes/hashes where useful;
 - every expected artifact missing;
-- whether `run_metadata.json` shows `live_started`, `backend_failure`, `unhandled_live_exception`, `no_response_rows`, or `completed`;
+- whether `run_metadata.json` shows `live_started`, `backend_failure`, `unhandled_live_exception`, `no_response_rows`, `completed_no_parseable_outcome`, or `completed`;
 - attempted/response-ID/token/parseable/candidate counts supported by artifacts only;
 - why the output is or is not mergeable; and
 - confirmation that no municipality is counted without parseable model output.
@@ -121,4 +123,4 @@ Run relevant local checks and compare the protected-file baseline. Confirm globa
 
 ## Prohibitions
 
-No global queue/coverage rebuild; no verification, URL opening/downloading, ingestion, codify, public-records activity, claim use, canonical/corpus edits, remote operation, push, or secrets in output. The coordinator alone performs national accounting.
+No concurrent smoke/live API use; no global queue/coverage rebuild; no verification, URL opening/downloading, ingestion, codify, public-records activity, claim use, canonical/corpus edits, remote operation, push, or secrets in output. The coordinator alone grants the live lane and performs national accounting.

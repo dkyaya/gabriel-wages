@@ -2,9 +2,28 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-21T15:50:00-04:00`
+Last updated: `2026-07-21T16:42:00-04:00`
 
 ---
+
+## 2026-07-21T16:42:00-04:00 — Worker-lane diagnosis supports serialized live recovery; five sequential synthetic calls passed
+
+### Current State
+
+- **Starting checkpoint and relays:** started at `b47ff3b2a72e06d286ab907e7aa1a2375bf8a3d6`. The named retry-3 relays were missing from main `tmp/`, found read-only in the worker worktrees, and copied unchanged into the coordinator. CA relay SHA-256 is `67a69db2859eb990f155caf104ed1d61d4d956394ccc3d4fc8f90f9574e61400`; NJ is `ffb20e1d5b9c04c4ae3e50beebc5290c1170c4d77d3b8422d77f8061a406fb3c`.
+- **CA25.2 retry:** Gate 0 and dry run passed using worker `.venv` Python 3.11.7, `openai 2.43.0`, `httpx 0.28.1`, and `pandas 3.0.3`. The one no-search smoke returned sanitized `APIConnectionError: Connection error.`, empty text, no ID, and zero output tokens. Live never launched; there are no parseable outcomes, candidates, or mergeable data.
+- **NJ25 retry:** Gate 0/dry/smoke passed with the same versions; smoke returned `OK.`, ID, and 10/0/6/16 tokens. Live used direct SDK, `n_parallels=1`, 15-second spacing, and zero retries. Its first two requests failed in 0.218/0.014 seconds with no text/ID/tokens; 23 remaining rows are explicitly stopped-before-request. Complete raw/failure/cost/command evidence exists, but there are zero parseable outcomes and no candidate handoff. It is not mergeable and contributes no coverage.
+- **Environment/key audit:** all three lanes have local `.env`, a present Harvard key after non-overriding load, and equal `.env` Harvard values compared in memory only. `OPENAI_API_KEY`, `OPENAI_BASE_URL`, `HTTP_PROXY`, `HTTPS_PROXY`, `ALL_PROXY`, and `NO_PROXY` are absent. Main and both workers use Python 3.11.7 with `openai 2.43.0`, `httpx 0.28.1`, `pandas 3.0.3`, and `python-dotenv 1.2.2` in their worker `.venv` contexts. No credential value/fingerprint was logged.
+- **Synthetic stability diagnostic:** `scripts/diagnose_parallel_worker_api_stability.py` defaults to a no-network audit and requires explicit `--smoke` for one exact `Reply with OK.` call. A persistent ledger caps the task at six. Five sequential calls ran in the required order: main 1/1, Worker 1 2/2, Worker 2 2/2. All completed with `OK`/`OK.`, IDs, positive output tokens, and no exceptions; usage is 50 input / 0 reasoning / 27 output / 77 total. The optional sixth call was skipped. Artifacts are under `tmp/parallel_worker_api_stability_2026-07-21/`.
+- **Diagnosis:** current sequential controls rule out a persistent invalid key, worker path, `.env`, package, `/v2/responses`, `gpt-5.4-nano`, or dual-header-name defect. Transient transport/proxy or execution-context instability is the leading family. Same-key concurrent/near-concurrent behavior remains plausible but unproven; no simultaneous or hosted-search diagnostic was authorized.
+- **Operating change:** [parallel_stage1_retry_recommendation_2026-07-21.md](parallel_stage1_retry_recommendation_2026-07-21.md) chooses parallel preparation/dry runs plus one exclusive coordinator smoke/live lane. Complete CA first, release/finalize, wait at least five minutes, then start NJ. A serialized recovery does not prove Stage 1 parallel-live stability; Stage 2 stays blocked.
+- **Process hardening:** an all-failure dataframe now writes `execution_status=completed_no_parseable_outcome`, preserves local evidence, returns exit 2, and skips the durable candidate handoff. Parseable empty output remains successful. The direct-SDK test now has 11 PASS checks.
+- **Protected state:** no municipality research prompt, source URL, verification, ingestion, codification, queue/coverage rebuild, canonical/corpus edit, remote action, or push occurred. The only five calls were the explicitly authorized synthetic no-search prompts. CA25.2/NJ25 remain unscouted for these attempts.
+- **Validation:** four compiles passed; the diagnostic's default no-network invocation passed; direct-SDK tests are 11/11 and prompt tests 6/6; schema validation passed at 64 contracts; ingestion tests passed 60/60; canonical coverage remains 28 healthy pairs (10 exact, 18 overlap), two adjacent exploratory, and six unmatched safety units.
+
+### Next Move
+
+Do not merge the failed relays, run Stage 2, or run two live workers concurrently. Under a new explicit live authorization, reuse the same locked CA25.2 and NJ25 inputs with fresh paths. Gate 0/dry runs may overlap, but the coordinator must grant one live lane: CA smoke plus complete live/finalization first; stop the entire wave on failure. Only after a merge-eligible CA relay and at least five quiet minutes should NJ receive its fresh smoke/live lane. Merge national queue/coverage only if both relays are complete and eligible. If a serialized hosted-search run fails immediately after a successful smoke, retain timestamps and seek HUIT route/transport tracing; do not change the established key/model/base/header shape speculatively.
 
 ## 2026-07-21T15:50:00-04:00 — Stage 1 failed/incomplete worker diagnosis is complete; retry protocol is hardened and no merge ran
 

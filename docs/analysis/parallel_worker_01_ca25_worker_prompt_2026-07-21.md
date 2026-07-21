@@ -2,7 +2,7 @@
 
 Work only in a dedicated git worktree or complete repo copy created from the coordinator's parallel-planning commit. Do not work in the coordinator's original writable repository and do not share a worktree with Worker 02.
 
-This is Stage 1 of the parallel ladder. Exactly two worker agents are expected to run concurrently: Worker 01 CA25.2 and Worker 02 NJ25. Your in-process scout concurrency must remain one. The coordinator will inspect and merge both worker relays later.
+This is the serialized recovery protocol for the paused Stage 1 parallel ladder. Worker 01 CA25.2 and Worker 02 NJ25 may prepare and dry-run concurrently, but they must not smoke or live-scout concurrently. Your in-process scout concurrency remains one, and a coordinator-controlled exclusive live-lane grant is required before smoke. The coordinator will inspect both worker relays later.
 
 ## Source of truth and required reading
 
@@ -59,7 +59,7 @@ Before the dry run, create a credential-free readiness note confirming:
 - a protected-file hash/diff baseline for national queue/coverage/builders/summaries/global cost log, `PROGRESS.md`, main handoff, canonical data, and corpus; and
 - this worktree is not shared with Worker 02.
 
-Any failure is a Gate 0 stop. Do not smoke or live-scout. The two Stage 1 worker starts must be staggered by 5–10 minutes; in-process concurrency remains one.
+Any failure is a Gate 0 stop. Do not smoke or live-scout. Gate 0 and dry runs may overlap with Worker 02, but no API call may occur until the coordinator grants Worker 01 the exclusive live lane.
 
 ## Gate 1: input and dry run
 
@@ -80,7 +80,7 @@ Inspect every rendered prompt and create an attempt-labeled `docs/analysis/paral
 
 ## Gate 2: synthetic direct-SDK smoke
 
-Only after the dry review passes and live API use is explicitly authorized, run:
+Only after the dry review passes, live API use is explicitly authorized, and the coordinator grants the exclusive live lane, run. Retain the same lane through the live command and artifact finalization; Worker 02 must not smoke or run live during this interval.
 
 ```bash
 {{PYTHON_EXECUTABLE}} scripts/diagnose_direct_sdk_scout_backend_smoke_test.py \
@@ -91,7 +91,7 @@ The helper must send exactly `Reply with OK.`, use `gpt-5.4-nano`, the Harvard H
 
 ## Gate 3: exact live run
 
-Only after smoke success and explicit live authorization, run exactly once. Capture the exact command, start/stop time, exit code, and sanitized stdout/stderr in the attempt-specific command-log directory. Explicitly record if stdout/stderr is empty.
+Only after smoke success, explicit live authorization, and continued possession of the live lane, run exactly once. Capture the exact command, start/stop time, exit code, and sanitized stdout/stderr in the attempt-specific command-log directory. Explicitly record if stdout/stderr is empty. Release the lane only after the process, review or stop note, and complete artifact set are final; the coordinator must wait at least five minutes before granting Worker 02 its smoke/live lane.
 
 ```bash
 {{PYTHON_EXECUTABLE}} scripts/gabriel_state_source_scout.py \

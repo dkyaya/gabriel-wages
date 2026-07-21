@@ -2465,33 +2465,48 @@ def main() -> int:
     write_csv(parsed_candidates_path, all_candidates, CANDIDATE_FIELDS)
     write_csv(failed_parses_path, all_failed, FAILED_PARSE_FIELDS)
 
-    # Named by run_id (state + full timestamp), not just the calendar date — a
-    # date-only name collides and silently overwrites an earlier same-day run's
-    # staged candidates (found the hard way: a second same-day pilot clobbered
-    # the first pilot's 9-row output until this fix + a git-restore).
-    candidates_out = DOCS_ANALYSIS / f"gabriel_state_source_scout_candidates_{run_id}.csv"
-    write_csv(candidates_out, all_candidates, CANDIDATE_FIELDS)
-
     failure_type_counts = {ft: 0 for ft in FAILURE_TYPES}
     for failed in all_failed:
         failure_type_counts[failed.get("failure_type", "other")] = (
             failure_type_counts.get(failed.get("failure_type", "other"), 0) + 1
         )
 
+    n_parseable = int(len(municipalities) - len(all_failed))
+    # Named by run_id (state + full timestamp), not just the calendar date — a
+    # date-only name collides and silently overwrites an earlier same-day run's
+    # staged candidates (found the hard way: a second same-day pilot clobbered
+    # the first pilot's 9-row output until this fix + a git-restore).  An
+    # all-failure run has no candidate handoff at all; its batch-local raw and
+    # failed-parse ledgers are the correct durable evidence.
+    candidates_out: Path | None = None
+    if n_parseable > 0:
+        candidates_out = (
+            DOCS_ANALYSIS / f"gabriel_state_source_scout_candidates_{run_id}.csv"
+        )
+        write_csv(candidates_out, all_candidates, CANDIDATE_FIELDS)
+
     metadata.update(
         {
             "raw_outputs_path": str(raw_outputs_path),
             "parsed_candidates_path": str(parsed_candidates_path),
             "failed_parses_path": str(failed_parses_path),
-            "candidates_csv_path": str(candidates_out),
+            "candidates_csv_path": str(candidates_out) if candidates_out else None,
             "n_responses": int(len(df)),
-            "n_parseable": int(len(municipalities) - len(all_failed)),
+            "n_parseable": n_parseable,
             "n_failed_parses": len(all_failed),
             "n_candidate_rows": len(all_candidates),
             "failure_type_counts": failure_type_counts,
         }
     )
-    write_run_metadata_checkpoint(out_dir, metadata, "completed")
+    if n_parseable > 0:
+        final_execution_status = "completed"
+    else:
+        final_execution_status = "completed_no_parseable_outcome"
+        metadata["live_failure_reason"] = (
+            "live backend returned no parseable municipality outcomes"
+        )
+        metadata["failure_stage"] = "post_response_parse"
+    write_run_metadata_checkpoint(out_dir, metadata, final_execution_status)
 
     cost_summary = compute_cost_summary(df, municipalities, all_candidates, all_failed, run_id, args)
     if args.live_backend == "direct-sdk":
@@ -2517,7 +2532,9 @@ def main() -> int:
 
     print(f"LIVE — {len(municipalities)} municipalities prompted, {len(df)} responses")
     print(f"parseable={metadata['n_parseable']} failed_parses={len(all_failed)} candidate_rows={len(all_candidates)}")
-    print(f"candidates_csv={candidates_out}")
+    print(
+        f"candidates_csv={candidates_out if candidates_out else 'not_written_no_parseable_outcome'}"
+    )
     print(f"run_metadata={run_metadata_path}")
     total_cost = cost_summary["total_cost"]
     cost_display = f"{total_cost:.6f}" if isinstance(total_cost, (int, float)) else "unavailable"
@@ -2533,6 +2550,9 @@ def main() -> int:
         f"{str(cost_summary.get('estimate_only', False)).lower()}"
     )
     print(f"cost_log={cost_log_path}")
+    if n_parseable == 0:
+        print("ERROR: live run produced no parseable municipality outcomes; artifacts preserved.")
+        return 2
     return 0
 
 

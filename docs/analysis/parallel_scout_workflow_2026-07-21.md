@@ -2,13 +2,13 @@
 
 Date: 2026-07-21
 
-Status: operating design, updated after the first Stage 1 attempt failed to produce mergeable research-batch output. CA25.2 stopped at smoke; NJ25 preserved only a live prompt preview. National queue/coverage remains unchanged, and Stage 2 is not authorized.
+Status: parallel preparation remains supported, but parallel live API execution is paused after two non-mergeable CA25.2/NJ25 attempts. The current recovery mode is parallel dry-run preparation plus one coordinator-controlled smoke/live lane. National queue/coverage remains unchanged, and Stage 2 is not authorized.
 
 ## Plain-English design
 
-Parallel scouting is now justified because five recent 25-row direct-SDK state batches—IL25, NY25, IL25.2, IL25.3, and CA25—completed the same gated workflow and preserved auditable prompt, response, parse, usage, and failure artifacts. Four of those batches had at least 96% parseable outcomes and three were 25/25; CA25 showed the remaining risk clearly, with four separated timeouts and 21/25 parseable outcomes. That history is enough to test two concurrent workers, but not enough to jump directly to many workers or 50-row runs.
+Parallel workflow preparation was justified because five recent 25-row direct-SDK state batches—IL25, NY25, IL25.2, IL25.3, and CA25—completed the same gated workflow and preserved auditable prompt, response, parse, usage, and failure artifacts. The two-worker CA25.2/NJ25 trial has now failed twice to produce mergeable paired output. A bounded follow-up diagnostic then succeeded on five of five sequential no-search calls across the main repo and both worktrees. That combination supports parallel preparation and isolated worktrees, but it does not support concurrent live API sessions today.
 
-Concurrency must happen across isolated worker repositories, not inside one scout process. Each worker receives one exact 25-row CSV, runs with `--n-parallels 1`, and owns a separate git worktree or separate repository copy. This avoids multiplying concurrency: Stage 1 should create at most two live research calls at once, not two workers times several in-process calls. Serial execution within each worker also preserves municipality-level timing and failure attribution and lets the existing consecutive-connection-error stop guard work predictably.
+Preparation can happen concurrently across isolated worker repositories. Live API work cannot. Each worker receives one exact 25-row CSV, runs with `--n-parallels 1`, and owns a separate git worktree or separate repository copy. A coordinator grants one exclusive live lane covering that worker's fresh smoke, complete live process, artifact finalization, and relay handoff. The next worker may not smoke or run live until the first grant is released and a five-minute quiet period has elapsed. This prevents overlapping sessions while preserving municipality-level timing and failure attribution.
 
 Workers must not rebuild or edit the national candidate queue or national scout coverage. Those outputs are whole-project snapshots with deterministic expected totals and source specifications. If two workers rebuild them independently from the same base, each output will contain only its own new batch, and the last commit merged can silently erase the other worker's contribution. Concurrent writes would also create unnecessary conflicts in the queue, municipality/state/county coverage tables, methodologies, summaries, and global cost log.
 
@@ -19,22 +19,23 @@ Each worker therefore writes only batch-specific prompt reviews, staged and norm
 1. Commit the locked inputs, worker prompts, and this workflow in the coordinator repository.
 2. Create exactly two worktrees or full repo copies from that same planning commit. Do not let both agents write in the original working directory.
 3. Assign Worker 01 only `parallel_worker_01_ca25_scout_input_2026-07-21.csv` and Worker 02 only `parallel_worker_02_nj25_scout_input_2026-07-21.csv`.
-4. Start exactly two agents concurrently. Each agent performs its own dry-run review and, only if authorized and passed, its own no-search smoke. A smoke call is live infrastructure use and requires explicit live authorization at execution time.
-5. Each worker runs at most its exact locked 25-row state batch through `--live-backend direct-sdk`, `--n-parallels 1`, and zero SDK retries. No row substitution and no timeout retry are allowed inside Stage 1.
-6. Each worker commits only batch-specific tracked outputs. Raw run directories and validation evidence go into that worker's relay whether or not `tmp/` is git-ignored.
-7. Do not launch the coordinator merge until both workers have either completed or stopped and produced sanitized relays explaining their dispositions.
-8. The coordinator audits scope first. It imports only valid worker outputs, then updates the global queue/coverage builders and rebuilds national accounting once.
+4. The two agents may perform Gate 0 and dry-run review concurrently. Neither may independently start a smoke or live command.
+5. The coordinator grants the exclusive API lane to one worker. That worker runs its fresh smoke and, only after smoke success and separate authorization, its exact locked 25-row batch through `--live-backend direct-sdk`, `--n-parallels 1`, and zero SDK retries. The worker retains the lane until the live process and artifacts are final.
+6. After lane release, wait at least five minutes before granting the lane to the second worker for its own fresh smoke and live process. No row substitution or timeout retry is allowed.
+7. Each worker commits only batch-specific tracked outputs. Raw run directories and validation evidence go into that worker's relay whether or not `tmp/` is git-ignored.
+8. Do not launch the coordinator merge until both workers have either completed or stopped and produced sanitized relays explaining their dispositions.
+9. The coordinator audits scope first. It imports only valid worker outputs, then updates the global queue/coverage builders and rebuilds national accounting once.
 
 Separate worktrees are preferable when both workers run on one machine because their git indexes and tracked files are isolated while they share the same base history. Separate full repo copies are acceptable when process isolation or filesystem contention is a concern. Merely using two output directories inside one working tree is not sufficient: the live scout also stages a run-specific candidate CSV under `docs/analysis`, and an incorrect command could touch a global log.
 
-## Stage 1: exactly two parallel 25-row workers
+## Stage 1: two-worker parallel-live test — currently paused
 
 Stage 1 consists of:
 
 - Worker 01: CA25.2, 25 locked California municipal/place employers;
 - Worker 02: NJ25, 25 locked New Jersey municipal/place employers.
 
-Both must keep in-process concurrency at one. Stage 1 is a test of two-worker service concurrency, output isolation, relay quality, and coordinator merge behavior—not a test of maximum throughput.
+Both must keep in-process concurrency at one. The original Stage 1 is a test of two-worker service concurrency, output isolation, relay quality, and coordinator merge behavior. It has not passed. Completing the two locked batches in serialized recovery mode will recover research outputs and test the coordinator merge, but it will not by itself prove parallel-live stability or authorize Stage 2.
 
 Move to Stage 2 only if all of the following hold:
 
@@ -51,11 +52,13 @@ Move to Stage 2 only if all of the following hold:
 
 The parseable-outcome denominator is the full locked batch, not merely the requests that returned before a stop. A stopped-before-request row therefore cannot make the success rate look better. Parseable empty `candidates=[]` output is a valid parseable discovery outcome; a connection-only response is not.
 
-## Stage 1 retry protocol after the failed CA25.2/NJ25 attempt
+## Stage 1 recovery protocol after two failed CA25.2/NJ25 attempts
 
-The first Stage 1 attempt did not pass. Worker 1's fresh CA25.2 smoke failed with a connection error, so no CA research scout ran. Worker 2's NJ25 smoke passed and its live command launched, but its live directory contains only `prompt_preview.md`; no lifecycle metadata, raw output, parsed output, failure ledger, cost summary, exit code, or sanitized console evidence survived. Neither relay is mergeable and neither batch contributes discovery coverage.
+The first Stage 1 attempt did not pass: CA25.2 stopped at smoke and NJ25 left only a prompt preview. The hardened retry also did not pass. CA25.2 again stopped when its no-search smoke returned `APIConnectionError: Connection error.` with no ID/text/tokens. NJ25 passed smoke but its first two research requests returned the same connection signature in 0.218 and 0.014 seconds; the guard left 23 rows explicitly uncalled. Neither relay is mergeable and neither batch contributes discovery coverage.
 
-Do not move to Stage 2. Retry Stage 1 with the same two locked batches only after the hardened worker/scout protocol is committed and a new task explicitly authorizes live use.
+The follow-up infrastructure diagnostic compared the same `.env` credential, Python 3.11.7, `openai 2.43.0`, `httpx 0.28.1`, and `pandas 3.0.3` across the coordinator and both worktrees. Five sequential `Reply with OK.` calls succeeded 5/5 with IDs and positive tokens. This rules out a persistent credential, path, package, base-URL, model, or dual-header defect. It does not test simultaneous sessions or hosted web search. The safest supported change is therefore serialization, not a larger timeout, smaller batch, or heavier overlap stagger.
+
+Do not move to Stage 2 or retry parallel live execution. Recover the same two locked batches only in a later separately authorized task with one coordinator-controlled live lane.
 
 The retry must:
 
@@ -64,15 +67,16 @@ The retry must:
 3. Confirm the preparation relay exists locally; local `.env` exists; `HARVARD_SUBSCRIPTION_KEY` is present after `.env` load without printing any value; output parents are writable; and the exact Python path/version is recorded.
 4. Import and record versions for `openai`, `httpx`, and `pandas` with the exact interpreter used for every worker command. Stop before smoke/live if an import fails.
 5. Record a protected-file baseline proving the worker will not change global queue/coverage/builders/summaries/cost log, `PROGRESS.md`, the main handoff, canonical data, or corpus.
-6. Stagger the two worker starts by 5–10 minutes to reduce correlated process/proxy initialization and improve failure attribution.
-7. Keep `--live-backend direct-sdk`, `--n-parallels 1`, 15-second prompt spacing, and zero SDK retries.
-8. Run a fresh smoke in each worker. If a smoke fails, stop that worker and do not launch or retry its live batch.
-9. Capture the exact live command, start/stop time, exit code, and sanitized stdout/stderr at the command-wrapper level. The scout must checkpoint `run_metadata.json` before backend setup, but wrapper evidence is still required for interrupts or operating-system kills that Python cannot finalize.
-10. On any failure, early exit, `execution_status=live_started` remainder, zero-row return, or missing artifact, create a stop note listing present/missing artifacts and the non-mergeability reason. Do not retry inside the worker task.
-11. Require a complete relay with research-batch `run_metadata.json`, `raw_outputs.csv`, parsed-output evidence, failure ledger, usage/cost evidence, sanitized command log, exit disposition, and worker review. A prompt-preview-only directory is incomplete.
-12. Do not launch the coordinator merge until both workers produce complete relays with at least one parseable research-batch model output each. If either relay is a preflight stop or incomplete, preserve both relays, leave queue/coverage unchanged, and remain at Stage 1.
+6. Allow Gate 0 and dry runs in parallel, but serialize all API work. A coordinator grant must cover one worker's smoke, live run, final artifacts, and stop/review note. Do not store the grant in a tracked worker or queue/coverage file.
+7. Release the lane only after the worker process and artifact set are final. Wait at least five minutes before the second worker's smoke. No smoke or live timestamps may overlap.
+8. Keep `--live-backend direct-sdk`, `--n-parallels 1`, 15-second prompt spacing, and zero SDK retries.
+9. Run a fresh smoke only after the coordinator grants the lane. If smoke fails, stop that worker, release the lane after packaging evidence, and do not launch or retry its live batch.
+10. Capture the exact live command, start/stop time, exit code, and sanitized stdout/stderr at the command-wrapper level. The scout must checkpoint `run_metadata.json` before backend setup, but wrapper evidence is still required for interrupts or operating-system kills that Python cannot finalize.
+11. On any failure, early exit, `execution_status=live_started` remainder, zero-row return, or missing artifact, create a stop note listing present/missing artifacts and the non-mergeability reason. Do not retry inside the worker task.
+12. Require a complete relay with research-batch `run_metadata.json`, `raw_outputs.csv`, parsed-output evidence, failure ledger, usage/cost evidence, sanitized command log, exit disposition, and worker review. A prompt-preview-only directory is incomplete.
+13. Do not launch the coordinator merge until both workers produce complete relays with at least one parseable research-batch model output each. If either relay is a preflight stop or incomplete, preserve both relays, leave queue/coverage unchanged, and remain at Stage 1.
 
-The five-to-ten-minute stagger does not raise in-process concurrency and does not authorize a smoke/live retry. It is an observability measure for the same two-worker stage.
+Serialized recovery is not a successful Stage 1 parallel-live test. After both locked batches complete and merge cleanly, the project must make a separate evidence-based decision about whether to design another concurrency test. Until then, Stage 2 and 50-row workers remain blocked.
 
 ## Stage 2: three parallel 25-row workers
 

@@ -134,3 +134,11 @@ The existing six-check prompt contract test also remains green. Repository valid
 ## Parallel-worker cost-log isolation
 
 The scout accepts optional `--cost-log-path`. Historical single-run commands may omit it and continue appending to `docs/analysis/gabriel_state_source_scout_cost_log.csv`. Parallel workers must point it to a batch-specific CSV inside their isolated output directory. This prevents two worktrees from producing conflicting versions of the durable global cost log; the later coordinator can merge audited batch records once while rebuilding national queue/coverage. The flag changes only the log destination, not token extraction, estimate-only pricing, candidate parsing, or live-run gates.
+
+## 2026-07-21 worker-lane stability update
+
+Two CA25.2/NJ25 worker attempts did not produce a mergeable pair. The hardened retry showed a failed Worker 1 smoke and a Worker 2 live stop after two sub-quarter-second `APIConnectionError` rows with no IDs, text, tokens, or HTTP status. A bounded follow-up then ran five sequential no-search SDK calls across the coordinator and both worktrees. All five returned `OK`/`OK.`, response IDs, positive output tokens, and no exception. All three locations use the same `.env` credential, Python 3.11.7, `openai 2.43.0`, `httpx 0.28.1`, and `pandas 3.0.3`; no standard proxy variables or `OPENAI_BASE_URL` are active.
+
+The direct-SDK route, model, dual-header shape, credential, and worktree environments are therefore valid for current sequential no-search use. Simultaneous sessions and the current hosted-search path were not tested by that diagnostic. Until parallel stability is separately proven, workers may prepare and dry-run concurrently, but a coordinator must serialize the complete smoke/live critical section, retain `--n-parallels 1`, use zero SDK retries, and wait at least five minutes between live-lane grants.
+
+The runner now treats an all-failure batch as a nonzero process outcome: it preserves raw/failure/cost artifacts, writes `execution_status=completed_no_parseable_outcome`, and does not write a durable candidate handoff. A parseable `candidates=[]` response remains a valid successful scout outcome and is not affected.

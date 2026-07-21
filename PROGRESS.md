@@ -6,6 +6,43 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-21 16:42 EDT (Diagnosed worker-lane API instability; 5/5 sequential synthetic calls passed; parallel live paused)
+
+**Did**
+- Started at `b47ff3b2a72e06d286ab907e7aa1a2375bf8a3d6`. The two named retry-3 ZIPs were absent from the coordinator `tmp/`; exact copies were found read-only in the worker worktrees and copied unchanged into the main repo. Worker 1 relay SHA-256 is `67a69db2859eb990f155caf104ed1d61d4d956394ccc3d4fc8f90f9574e61400`; Worker 2 is `ffb20e1d5b9c04c4ae3e50beebc5290c1170c4d77d3b8422d77f8061a406fb3c`. No worker worktree or remote was modified.
+- Audited both relays. CA25.2 Gate 0/dry passed, but its one no-search smoke failed with sanitized `APIConnectionError: Connection error.`, no ID/text/tokens, and no live launch. NJ25 Gate 0/dry/smoke passed, then its first two live calls failed in 0.218/0.014 seconds with the same no-ID/no-token signature; 23 rows were explicitly uncalled by the stop guard. It produced complete failure evidence but zero parseable outcomes/candidates. Neither relay is mergeable or discovery-covered.
+- Added `scripts/diagnose_parallel_worker_api_stability.py`, a default-no-network audit and explicit one-call smoke helper with a persistent six-call cap, exact `Reply with OK.` prompt, no tools/search, zero retries, safe exception-chain/timing/usage evidence, and credential scans. All three lanes have equal `.env` Harvard keys (compared only in memory), Python 3.11.7, `openai 2.43.0`, `httpx 0.28.1`, `pandas 3.0.3`, no `OPENAI_API_KEY`/`OPENAI_BASE_URL`, and no standard proxy variables.
+- Ran five authorized sequential synthetic calls: main 1/1, Worker 1 2/2, Worker 2 2/2. All returned completed `OK`/`OK.`, response IDs, positive output tokens, and no exception: 50 input, 0 reasoning, 27 output, 77 total tokens. The optional sixth call was not needed. Sanitized evidence is under `tmp/parallel_worker_api_stability_2026-07-21/`.
+- Added the full diagnosis and serialized-recovery recommendation. Updated the workflow, reusable worker/coordinator templates, ladder, direct-SDK backend note, and locked CA/NJ prompts: workers may prepare/dry-run concurrently, but one coordinator-controlled lane must serialize smoke plus live execution and finalization, with at least five quiet minutes before the next lane grant. Stage 2 remains blocked; a clean serialized recovery would not prove parallel-live stability.
+- Hardened all-failure process semantics. A live dataframe with zero parseable outcomes now preserves raw/failure/cost evidence, writes `execution_status=completed_no_parseable_outcome`, returns exit 2, and does not create a candidate handoff. Parseable empty candidate lists remain valid outcomes. Added a no-network regression check.
+
+**Decisions and why**
+- Treat the credential, base `/v2`, `/responses` route, model, dual-header names, packages, and worktree paths as valid for current sequential no-search use: all five controls succeeded and the same `.env` key is present/equal across lanes.
+- Treat transient transport/proxy or execution-context instability as the leading failure family. Concurrent/near-concurrent same-key sessions remain plausible but unproven because no simultaneous call was authorized. Hosted-search health also remains untested in this diagnostic.
+- Do not increase timeout or split immediately to 10-row chunks: failures occurred in 0.014–0.245 seconds and began on NJ requests 1–2, while prior serial 25-row runs succeeded. Recover the same locked 25-row batches sequentially under a coordinator lane in a later authorized task.
+
+**Surprises/breakage**
+- Worker 2's old runner exited 0 after producing a complete 25-row failure ledger because `live_succeeded` historically meant only that a dataframe returned. Metadata was accurate, but the process status was unsafe for automation; this is now corrected.
+- The current main-only coordinator sandbox reports adjacent worker `tmp/` paths non-writable, as intended. Each originating worker Gate 0 independently recorded its own parents writable and created the relayed artifacts; this is not an environment mismatch.
+
+**Validation/audit results**
+```text
+four requested/added py_compile commands: exit 0
+diagnostic default invocation: pass, no network request
+direct-SDK no-network regression test: 11 PASS checks
+prompt-contract regression test: 6 PASS checks
+validate.py: PASSED (64 contracts; 0 discourse; 64 coverage; 3 city attributes)
+ingest/test_pipeline.py: 60 passed, 0 failed
+audit_coverage.py: 28 healthy pairs (10 exact, 18 overlap), 2 exploratory adjacent, 6 unmatched safety units
+git diff --check: passed
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units. No canonical, queue, or scout-coverage row changed.
+
+**Next steps**
+1. Do not run Stage 2 or parallel live scouts. In a later explicitly authorized task, prepare both locked workers in parallel but grant the API lane to CA25.2 first; stop the whole wave if its smoke/live fails. If CA completes merge-eligible, wait at least five minutes, then grant NJ25 its fresh smoke/live lane.
+2. Merge/rebuild national queue/coverage only if both serialized relays are complete and eligible. If hosted-search live calls still fail after a successful no-search smoke, preserve exact timestamps and ask HUIT to trace request arrival/routing instead of changing the established request shape.
+
 ## 2026-07-21 15:50 EDT (Diagnosed failed/incomplete Stage 1 workers and hardened retry protocol; no scout/API call or merge)
 
 **Did**
