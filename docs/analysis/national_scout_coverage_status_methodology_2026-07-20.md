@@ -2,7 +2,7 @@
 
 Date: 2026-07-20
 
-Status: national source-discovery execution accounting. This is separate from verified-source, ingestion, canonical-contract, codified, and claim coverage.
+Status: national source-discovery execution accounting, last rebuilt 2026-07-21. This is separate from verified-source, ingestion, canonical-contract, codified, and claim coverage.
 
 ## Authoritative population denominator
 
@@ -23,7 +23,7 @@ Status: national source-discovery execution accounting. This is separate from ve
 
 A connection-only or zero-response timeout failure is not discovery coverage. Massachusetts produced 16 connection-error request rows across eight unique municipalities on 2026-07-16. Those attempts are preserved in failure-count/run-ID columns and excluded. The successful 2026-07-20 rerun is what makes the eight municipalities scout-covered. Bloomington IL later timed out without text, response ID, or tokens and remains a failure-only municipality. If a future municipality has only this kind of transport failure, it remains visibly `scout_attempt_failed_connection`, not `not_scouted` and not source-covered.
 
-Parseable empty output counts as coverage because the model completed the discovery prompt; it does not prove that no source exists. Austin TX, two PA municipalities, Champaign, Granite City, O'Fallon, Freeport, Elk Grove Village, and Kankakee IL, and Yonkers, Schenectady, Mount Vernon, and Newburgh NY are current `scouted_no_candidates` examples.
+Parseable empty output counts as coverage because the model completed the discovery prompt; it does not prove that no source exists. Austin TX, two PA municipalities, Champaign, Granite City, O'Fallon, Freeport, Elk Grove Village, and Kankakee IL, Yonkers, Schenectady, Mount Vernon, and Newburgh NY, and San Jose CA are current `scouted_no_candidates` examples.
 
 ## Queue, verification, and ingestion fields
 
@@ -49,8 +49,9 @@ The current accounting includes:
 - IL national batch 01 IL25.2 direct-SDK run: all 25 locked municipalities returned parseable responses; 22 produced candidates and Granite City, O'Fallon, and Freeport returned empty candidate lists.
 - IL national batch 01 IL25.3 direct-SDK run: all 25 locked municipalities returned parseable responses; 23 produced candidates and Elk Grove Village and Kankakee returned empty candidate lists. One parsed Rolling Meadows row lacks a source URL and remains in the batch handoff but outside the source-candidate queue.
 - NY national batch 01 state-scale direct-SDK run: all 25 locked city rows; 21 returned candidates and four returned parseable empty lists.
+- CA25 direct-SDK run: 21 of 25 locked municipal rows returned parseable responses; 20 produced candidates and San Jose returned a parseable empty list. Oakland, Stockton, Oxnard, and Redding timed out without text, IDs, or tokens and remain failure-only rows excluded from successful discovery coverage.
 
-That produces 138 scout-covered municipalities: 125 with candidate rows and 13 with parseable empty outputs. The failed MA connection-only runs and Bloomington timeout are retained separately and do not add coverage.
+That produces 159 scout-covered municipalities: 145 with candidate rows and 14 with parseable empty outputs. The failed MA connection-only runs, Bloomington timeout, and four CA25 timeouts are retained separately and do not add coverage.
 
 ## Outputs
 

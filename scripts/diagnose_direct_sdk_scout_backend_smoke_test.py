@@ -114,6 +114,7 @@ def main() -> int:
 
     input_tokens = row.get("Input Tokens", "")
     reasoning_tokens = row.get("Reasoning Tokens", "")
+    total_tokens = row.get("Total Tokens", "")
     result = {
         "timestamp_utc": datetime.now(timezone.utc).isoformat(),
         "purpose": "one synthetic infrastructure-only direct SDK scout-backend smoke test",
@@ -138,6 +139,7 @@ def main() -> int:
         "input_tokens": input_tokens,
         "reasoning_tokens": reasoning_tokens,
         "output_tokens": output_tokens,
+        "total_tokens": total_tokens,
         "cost_available": False,
         "artifacts": {
             "prompt_preview": str(preview_path),
@@ -170,15 +172,27 @@ def main() -> int:
     (output_dir / "run_metadata.json").write_text(
         json.dumps(metadata, indent=2) + "\n", encoding="utf-8"
     )
-    cost_summary = {
-        "run_id": IDENTIFIER,
-        "backend": "direct-sdk",
-        "cost_available": False,
-        "total_cost": None,
-        "input_tokens_total": input_tokens,
-        "reasoning_tokens_total": reasoning_tokens,
-        "output_tokens_total": output_tokens,
-    }
+    cost_summary = scout.apply_direct_sdk_estimated_cost(
+        {
+            "run_id": IDENTIFIER,
+            "backend": "direct-sdk",
+            "cost_available": False,
+            "total_cost": None,
+            "input_tokens_total": input_tokens,
+            "reasoning_tokens_total": reasoning_tokens,
+            "output_tokens_total": output_tokens,
+            "total_tokens_total": total_tokens,
+            "token_usage_available": bool(
+                input_tokens or output_tokens or total_tokens
+            ),
+            "input_tokens": input_tokens,
+            "reasoning_tokens": reasoning_tokens,
+            "output_tokens": output_tokens,
+            "total_tokens": total_tokens,
+        },
+        scout.DEFAULT_DIRECT_SDK_PRICING_CONFIG,
+        MODEL,
+    )
     (output_dir / "cost_summary.json").write_text(
         json.dumps(cost_summary, indent=2) + "\n", encoding="utf-8"
     )
@@ -193,6 +207,13 @@ def main() -> int:
     print(f"response_text={response_text}")
     print(f"response_id_present={str(bool(response_id)).lower()}")
     print(f"output_tokens={output_tokens}")
+    estimated_cost = cost_summary.get("estimated_total_cost")
+    print(
+        "estimated_cost_available="
+        f"{str(cost_summary.get('estimated_cost_available', False)).lower()} "
+        f"estimated_total_cost={estimated_cost if estimated_cost is not None else 'unavailable'} "
+        f"estimate_only={str(cost_summary.get('estimate_only', True)).lower()}"
+    )
     print("web_search=false tools=omitted/disabled request_count=1 max_retries=0")
     print(f"artifacts={output_dir}")
     return 0 if succeeded else 1

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "currency": "USD",
+  "config_purpose": "Estimate-only token pricing for direct-SDK scout usage summaries. This file does not establish Harvard HUIT billing.",
+  "models": {
+    "gpt-5.4-nano": {
+      "model_name": "gpt-5.4-nano",
+      "input_price_per_1m_tokens": 0.2,
+      "output_price_per_1m_tokens": 1.25,
+      "reasoning_price_per_1m_tokens": null,
+      "reasoning_billing_mode": "included_in_output_tokens",
+      "source_note": "Estimate basis only: the official OpenAI GPT-5.4 nano model page listed standard text-token rates of USD 0.20 per 1M input tokens and USD 1.25 per 1M output tokens when checked 2026-07-21. Responses API reasoning_tokens is treated as a detail within output_tokens and is not added a second time. Harvard HUIT contract/proxy pricing, cached-input treatment, hosted web-search/tool fees, taxes, credits, enterprise discounts, and other adjustments are not confirmed or included. Confirm against HUIT/OpenAI billing before treating any estimate as actual cost.",
+      "source_url": "https://developers.openai.com/api/docs/models/gpt-5.4-nano",
+      "effective_date": "2026-07-21",
+      "estimate_only": true,
+      "estimated_cost_scope": "standard_openai_text_tokens_only_excludes_huit_adjustments_and_web_search_tool_fees"
+    }
+  }
+}

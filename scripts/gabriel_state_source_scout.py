@@ -77,6 +77,9 @@ DEFAULT_MAX_TIMEOUT = 90
 DEFAULT_PROMPT_MODE = "full"
 DEFAULT_LIVE_BACKEND = "gabriel"
 DEFAULT_DIRECT_SDK_MAX_RETRIES = 0
+DEFAULT_DIRECT_SDK_PRICING_CONFIG = (
+    DOCS_ANALYSIS / "direct_sdk_pricing_config_2026-07-20.json"
+)
 
 # Hard ceiling on live calls per run. Deliberately not overridable via CLI flag
 # — raising this requires editing this constant, per the task's safety model.
@@ -133,6 +136,25 @@ COST_SUMMARY_FIELDS = [
     "input_tokens_total",
     "reasoning_tokens_total",
     "output_tokens_total",
+    "total_tokens_total",
+    "token_usage_available",
+    "input_tokens",
+    "reasoning_tokens",
+    "output_tokens",
+    "total_tokens",
+    "estimated_cost_available",
+    "pricing_missing_or_unconfirmed",
+    "estimated_input_cost",
+    "estimated_output_cost",
+    "estimated_reasoning_cost",
+    "estimated_total_cost",
+    "estimate_only",
+    "pricing_model",
+    "pricing_source_note",
+    "pricing_effective_date",
+    "reasoning_billing_mode",
+    "estimated_cost_scope",
+    "pricing_config_path",
     "avg_input_tokens_per_prompt",
     "avg_output_tokens_per_success",
     "avg_time_taken_successful_seconds",
@@ -961,6 +983,7 @@ def compute_cost_summary(
     input_tokens = _numeric_col(df, "Input Tokens")
     reasoning_tokens = _numeric_col(df, "Reasoning Tokens")
     output_tokens = _numeric_col(df, "Output Tokens")
+    total_tokens = _numeric_col(df, "Total Tokens")
     time_taken = _numeric_col(df, "Time Taken")
 
     municipality_count = len(municipalities)
@@ -978,6 +1001,24 @@ def compute_cost_summary(
     def _safe_div(numer: float, denom: float):
         return (numer / denom) if denom else None
 
+    input_total = float(input_tokens.fillna(0.0).sum())
+    reasoning_total = float(reasoning_tokens.fillna(0.0).sum())
+    output_total = float(output_tokens.fillna(0.0).sum())
+    if total_tokens.notna().any():
+        token_total = float(total_tokens.fillna(0.0).sum())
+    elif input_tokens.notna().any() or output_tokens.notna().any():
+        # Responses usage.total_tokens is input_tokens + output_tokens. Preserve
+        # that identity when a backend supplies the components but not the total.
+        token_total = input_total + output_total
+    else:
+        token_total = 0.0
+    token_usage_available = bool(
+        input_tokens.notna().any()
+        or reasoning_tokens.notna().any()
+        or output_tokens.notna().any()
+        or total_tokens.notna().any()
+    )
+
     summary = {
         "run_id": run_id,
         "state": args.state,
@@ -991,10 +1032,18 @@ def compute_cost_summary(
         "avg_cost_per_prompt": _safe_div(total_cost, municipality_count),
         "avg_cost_per_parseable_response": _safe_div(total_cost, parseable_count),
         "avg_cost_per_candidate": _safe_div(total_cost, candidate_row_count),
-        "input_tokens_total": float(input_tokens.fillna(0.0).sum()),
-        "reasoning_tokens_total": float(reasoning_tokens.fillna(0.0).sum()),
-        "output_tokens_total": float(output_tokens.fillna(0.0).sum()),
-        "avg_input_tokens_per_prompt": _safe_div(float(input_tokens.fillna(0.0).sum()), municipality_count),
+        "input_tokens_total": input_total,
+        "reasoning_tokens_total": reasoning_total,
+        "output_tokens_total": output_total,
+        "total_tokens_total": token_total,
+        "token_usage_available": token_usage_available,
+        # Exact names retained alongside the historical *_total names so the
+        # per-run artifact is easy to consume without guessing schema aliases.
+        "input_tokens": input_total,
+        "reasoning_tokens": reasoning_total,
+        "output_tokens": output_total,
+        "total_tokens": token_total,
+        "avg_input_tokens_per_prompt": _safe_div(input_total, municipality_count),
         "avg_output_tokens_per_success": (float(successful_output.mean()) if len(successful_output) else None),
         "avg_time_taken_successful_seconds": (float(successful_time.mean()) if len(successful_time) else None),
         "model": args.model,
@@ -1008,6 +1057,137 @@ def compute_cost_summary(
     return summary
 
 
+def load_direct_sdk_pricing(
+    pricing_config_path: Path,
+    model: str,
+) -> tuple[dict[str, Any] | None, str]:
+    """Load one model's estimate-only pricing without making live runs brittle.
+
+    Missing, malformed, or model-incomplete pricing returns ``None`` plus a
+    sanitized explanation. It never prevents a live run from preserving usage.
+    """
+    try:
+        payload = json.loads(pricing_config_path.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        return None, f"pricing config not found: {pricing_config_path}"
+    except (OSError, json.JSONDecodeError) as exc:
+        return None, f"pricing config unreadable: {type(exc).__name__}"
+
+    models = payload.get("models")
+    if not isinstance(models, dict):
+        return None, "pricing config has no models object"
+    pricing = models.get(model)
+    if not isinstance(pricing, dict):
+        return None, f"pricing config has no entry for model {model}"
+    return pricing, ""
+
+
+def apply_direct_sdk_estimated_cost(
+    summary: dict[str, Any],
+    pricing_config_path: Path,
+    model: str,
+) -> dict[str, Any]:
+    """Attach a clearly labeled token-cost estimate to a usage summary.
+
+    This function never turns an estimate into billed cost. The historical
+    ``cost_available``/``total_cost`` fields continue to mean actual cost from
+    the backend and remain unavailable for direct-SDK responses.
+    """
+    result = dict(summary)
+    input_tokens = float(result.get("input_tokens", result.get("input_tokens_total", 0)) or 0)
+    reasoning_tokens = float(
+        result.get("reasoning_tokens", result.get("reasoning_tokens_total", 0)) or 0
+    )
+    output_tokens = float(result.get("output_tokens", result.get("output_tokens_total", 0)) or 0)
+    total_tokens = float(
+        result.get("total_tokens", result.get("total_tokens_total", 0)) or 0
+    )
+    token_usage_available = bool(
+        result.get("token_usage_available", False)
+        or input_tokens
+        or reasoning_tokens
+        or output_tokens
+        or total_tokens
+    )
+    result.update(
+        {
+            "token_usage_available": token_usage_available,
+            "input_tokens": input_tokens,
+            "reasoning_tokens": reasoning_tokens,
+            "output_tokens": output_tokens,
+            "total_tokens": total_tokens,
+            "estimated_cost_available": False,
+            "pricing_missing_or_unconfirmed": True,
+            "estimated_input_cost": None,
+            "estimated_output_cost": None,
+            "estimated_reasoning_cost": None,
+            "estimated_total_cost": None,
+            "estimate_only": True,
+            "pricing_model": model,
+            "pricing_source_note": "",
+            "pricing_effective_date": "",
+            "reasoning_billing_mode": "unknown",
+            "estimated_cost_scope": "unavailable",
+            "pricing_config_path": str(pricing_config_path),
+        }
+    )
+
+    pricing, pricing_error = load_direct_sdk_pricing(pricing_config_path, model)
+    if pricing is None:
+        result["pricing_source_note"] = pricing_error
+        return result
+
+    result["estimate_only"] = bool(pricing.get("estimate_only", True))
+    result["pricing_source_note"] = str(pricing.get("source_note", "") or "")
+    result["pricing_effective_date"] = str(pricing.get("effective_date", "") or "")
+    reasoning_mode = str(pricing.get("reasoning_billing_mode", "unknown") or "unknown")
+    result["reasoning_billing_mode"] = reasoning_mode
+    result["estimated_cost_scope"] = str(
+        pricing.get("estimated_cost_scope", "token_only") or "token_only"
+    )
+
+    input_rate = pricing.get("input_price_per_1m_tokens")
+    output_rate = pricing.get("output_price_per_1m_tokens")
+    reasoning_rate = pricing.get("reasoning_price_per_1m_tokens")
+    if not token_usage_available or input_rate is None or output_rate is None:
+        return result
+    try:
+        estimated_input = input_tokens * float(input_rate) / 1_000_000
+        if reasoning_mode == "included_in_output_tokens":
+            # Responses output_tokens already contains the reasoning-token
+            # detail. Pricing the full output count once avoids double counting.
+            estimated_output = output_tokens * float(output_rate) / 1_000_000
+            estimated_reasoning = 0.0
+        elif reasoning_mode == "separately_billed":
+            if reasoning_rate is None:
+                return result
+            visible_output_tokens = max(0.0, output_tokens - reasoning_tokens)
+            estimated_output = visible_output_tokens * float(output_rate) / 1_000_000
+            estimated_reasoning = reasoning_tokens * float(reasoning_rate) / 1_000_000
+        elif reasoning_mode == "unknown" and reasoning_tokens == 0:
+            estimated_output = output_tokens * float(output_rate) / 1_000_000
+            estimated_reasoning = 0.0
+        else:
+            return result
+    except (TypeError, ValueError):
+        return result
+
+    result.update(
+        {
+            "estimated_cost_available": True,
+            # estimate_only=true or any non-HUIT source keeps this warning true.
+            "pricing_missing_or_unconfirmed": bool(result["estimate_only"]),
+            "estimated_input_cost": estimated_input,
+            "estimated_output_cost": estimated_output,
+            "estimated_reasoning_cost": estimated_reasoning,
+            "estimated_total_cost": (
+                estimated_input + estimated_output + estimated_reasoning
+            ),
+        }
+    )
+    return result
+
+
 def write_cost_summary(out_dir: Path, summary: dict) -> tuple[Path, Path]:
     json_path = out_dir / "cost_summary.json"
     json_path.write_text(json.dumps(summary, indent=2), encoding="utf-8")
@@ -1017,11 +1197,32 @@ def write_cost_summary(out_dir: Path, summary: dict) -> tuple[Path, Path]:
 
 
 def append_cost_log(summary: dict) -> Path:
-    """Append one row to the durable, never-overwritten cost log. Writes the
-    header only if the file doesn't already exist, per source_planning_csv_hygiene_standard."""
+    """Append one row to the durable cost log, preserving all historical rows.
+
+    When the summary schema gains fields, migrate the header deterministically
+    and copy every old row before appending. This avoids writing new-width rows
+    beneath a stale header.
+    """
     path = DOCS_ANALYSIS / "gabriel_state_source_scout_cost_log.csv"
-    file_exists = path.exists()
     path.parent.mkdir(parents=True, exist_ok=True)
+    if path.exists():
+        with path.open(newline="", encoding="utf-8") as handle:
+            reader = csv.DictReader(handle)
+            old_fields = reader.fieldnames or []
+            old_rows = list(reader)
+        if old_fields != COST_SUMMARY_FIELDS:
+            migrated_path = path.with_suffix(".csv.tmp")
+            with migrated_path.open("w", newline="", encoding="utf-8") as handle:
+                writer = csv.DictWriter(
+                    handle,
+                    fieldnames=COST_SUMMARY_FIELDS,
+                    extrasaction="ignore",
+                    lineterminator="\n",
+                )
+                writer.writeheader()
+                writer.writerows(old_rows)
+            migrated_path.replace(path)
+    file_exists = path.exists()
     with path.open("a", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=COST_SUMMARY_FIELDS, extrasaction="ignore", lineterminator="\n")
         if not file_exists:
@@ -1427,6 +1628,7 @@ DIRECT_SDK_RAW_FIELDS = [
     "Input Tokens",
     "Reasoning Tokens",
     "Output Tokens",
+    "Total Tokens",
     "Reasoning Effort",
     "Successful",
     "Error Log",
@@ -1561,6 +1763,7 @@ def direct_sdk_response_to_row(
         "Input Tokens": _response_value(usage, "input_tokens"),
         "Reasoning Tokens": _response_value(output_details, "reasoning_tokens"),
         "Output Tokens": _response_value(usage, "output_tokens"),
+        "Total Tokens": _response_value(usage, "total_tokens"),
         "Reasoning Effort": "low",
         "Successful": successful,
         "Error Log": "[]" if successful else json.dumps([f"response status: {status or 'unknown'}"]),
@@ -1587,6 +1790,7 @@ def _direct_sdk_failure_row(
         "Input Tokens": "",
         "Reasoning Tokens": "",
         "Output Tokens": "",
+        "Total Tokens": "",
         "Reasoning Effort": "low",
         "Successful": False,
         "Error Log": json.dumps([f"{type(exc).__name__}: {safe_message}"]),
@@ -1620,6 +1824,7 @@ def _direct_sdk_stopped_row(identifier: str, prompt: str) -> dict[str, Any]:
         "Input Tokens": "",
         "Reasoning Tokens": "",
         "Output Tokens": "",
+        "Total Tokens": "",
         "Reasoning Effort": "low",
         "Successful": False,
         "Error Log": json.dumps(
@@ -1663,6 +1868,7 @@ def write_direct_sdk_sanitized_log(
             f"input_tokens={row.get('Input Tokens', '')} "
             f"reasoning_tokens={row.get('Reasoning Tokens', '')} "
             f"output_tokens={row.get('Output Tokens', '')} "
+            f"total_tokens={row.get('Total Tokens', '')} "
             f"error={row.get('Error Log', '')}"
         )
     rendered = redact_direct_sdk_text("\n".join(lines) + "\n", secret_values, limit=100_000)
@@ -1939,6 +2145,16 @@ def _parse_args() -> argparse.Namespace:
         ),
     )
     parser.add_argument(
+        "--direct-sdk-pricing-config",
+        type=Path,
+        default=DEFAULT_DIRECT_SDK_PRICING_CONFIG,
+        help=(
+            "Local model pricing used only for labeled direct-SDK estimates "
+            f"(default: {DEFAULT_DIRECT_SDK_PRICING_CONFIG}). Missing or unconfirmed "
+            "pricing never blocks token-usage preservation."
+        ),
+    )
+    parser.add_argument(
         "--direct-sdk-max-retries",
         type=int,
         default=DEFAULT_DIRECT_SDK_MAX_RETRIES,
@@ -2060,6 +2276,7 @@ def main() -> int:
     metadata["n_backend_successful_rows"] = None
     if args.live_backend == "direct-sdk":
         metadata["direct_sdk_max_retries"] = args.direct_sdk_max_retries
+        metadata["direct_sdk_pricing_config"] = str(args.direct_sdk_pricing_config)
         df, failure = run_direct_sdk_live_batch(
             prompts,
             identifiers,
@@ -2188,6 +2405,11 @@ def main() -> int:
             "avg_cost_per_candidate",
         ):
             cost_summary[key] = None
+        cost_summary = apply_direct_sdk_estimated_cost(
+            cost_summary,
+            args.direct_sdk_pricing_config,
+            args.model,
+        )
     cost_json_path, cost_csv_path = write_cost_summary(out_dir, cost_summary)
     cost_log_path = append_cost_log(cost_summary)
 
@@ -2197,7 +2419,17 @@ def main() -> int:
     print(f"run_metadata={out_dir / 'run_metadata.json'}")
     total_cost = cost_summary["total_cost"]
     cost_display = f"{total_cost:.6f}" if isinstance(total_cost, (int, float)) else "unavailable"
-    print(f"cost_summary={cost_json_path} total_cost={cost_display}")
+    estimated_cost = cost_summary.get("estimated_total_cost")
+    estimated_display = (
+        f"{estimated_cost:.6f}"
+        if isinstance(estimated_cost, (int, float))
+        else "unavailable"
+    )
+    print(
+        f"cost_summary={cost_json_path} total_cost={cost_display} "
+        f"estimated_total_cost={estimated_display} estimate_only="
+        f"{str(cost_summary.get('estimate_only', False)).lower()}"
+    )
     print(f"cost_log={cost_log_path}")
     return 0
 

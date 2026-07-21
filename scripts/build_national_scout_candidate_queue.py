@@ -118,6 +118,12 @@ SOURCE_SPECS = [
         "path": DOCS / "national_batch01_ny25_live_direct_sdk_scout_candidates_2026-07-20.csv",
         "run_id": "ny_2026-07-20_200033",
     },
+    {
+        "state": "CA",
+        "wave": "CA25-2026-07-20",
+        "path": DOCS / "national_batch01_ca25_live_direct_sdk_scout_candidates_2026-07-20.csv",
+        "run_id": "ca_2026-07-21_101012",
+    },
 ]
 
 CALIBRATION_FILES = {
@@ -556,7 +562,15 @@ def build_rows() -> list[dict[str, str]]:
             }
         )
 
-    expected = {"PA": 75, "TX": 6, "MA": 24, "NJ": 8, "IL": 217, "NY": 57}
+    expected = {
+        "PA": 75,
+        "TX": 6,
+        "MA": 24,
+        "NJ": 8,
+        "IL": 217,
+        "NY": 57,
+        "CA": 64,
+    }
     observed = {state: counters[state] for state in expected}
     if observed != expected:
         raise ValueError(f"Unexpected queue source counts: {observed} != {expected}")

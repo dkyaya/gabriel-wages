@@ -3,7 +3,7 @@
 
 The 35,589-row municipality universe and municipality-county crosswalk are
 authoritative inputs. This script does not rebuild or download either source.
-It overlays successful PA/TX/MA/NJ/IL/NY live runs, keeps connection/transport-only
+It overlays successful PA/TX/MA/NJ/IL/NY/CA live runs, keeps connection/transport-only
 attempts as excluded infrastructure failures, joins the deferred-verification
 queue, and writes municipality/state/county status outputs under
 ``docs/analysis``.
@@ -90,11 +90,26 @@ SUCCESSFUL_BATCHES = [
         "input": DOCS / "national_batch01_ny25_scout_input_2026-07-20.csv",
         "backend": "direct-sdk",
     },
+    {
+        "state": "CA",
+        "wave": "CA25-2026-07-20",
+        "run_id": "ca_2026-07-21_101012",
+        "scout_date": "2026-07-21",
+        "input": DOCS / "national_batch01_ca25_scout_input_2026-07-20.csv",
+        "backend": "direct-sdk",
+        "failed_municipality_ids": [
+            "cog_2025_123093",
+            "cog_2025_211214",
+            "cog_2025_161299",
+            "cog_2025_207604",
+        ],
+    },
 ]
 
-# Preserved failed-run artifacts contain 16 MA connection-only rows plus one IL
-# no-response timeout. Every affected MA municipality later received a successful
-# rerun; Bloomington IL did not. These attempts are excluded from successful
+# Preserved failed-run artifacts contain 16 MA connection-only rows, one IL
+# no-response timeout, and four CA no-response timeouts. Every affected MA
+# municipality later received a successful rerun; Bloomington IL and the four
+# CA municipalities did not. These attempts are excluded from successful
 # discovery coverage but retained as infrastructure-failure counts.
 FAILED_CONNECTION_RUNS = {
     "ma_2026-07-16_183246": [
@@ -120,6 +135,12 @@ FAILED_CONNECTION_RUNS = {
         "ma_boston",
     ],
     "il_2026-07-20_184849": ["cog_2025_124994"],
+    "ca_2026-07-21_101012": [
+        "cog_2025_123093",
+        "cog_2025_211214",
+        "cog_2025_161299",
+        "cog_2025_207604",
+    ],
 }
 
 QUEUE_VERIFY_BUCKETS = {
@@ -449,14 +470,14 @@ def build_municipality_rows() -> list[dict[str, object]]:
         )
 
     status_counts = Counter(row["scout_coverage_status"] for row in output)
-    if status_counts["scouted_with_candidates"] != 125:
-        raise ValueError(f"Expected 125 candidate-positive municipalities: {status_counts}")
-    if status_counts["scouted_no_candidates"] != 13:
-        raise ValueError(f"Expected 13 successful empty municipalities: {status_counts}")
-    if status_counts["scout_attempt_failed_connection"] != 1:
-        raise ValueError(f"Expected one IL failure-only municipality: {status_counts}")
-    if sum(int(row["failed_connection_attempt_count"]) for row in output) != 17:
-        raise ValueError("Expected 16 MA connection attempts plus one IL timeout")
+    if status_counts["scouted_with_candidates"] != 145:
+        raise ValueError(f"Expected 145 candidate-positive municipalities: {status_counts}")
+    if status_counts["scouted_no_candidates"] != 14:
+        raise ValueError(f"Expected 14 successful empty municipalities: {status_counts}")
+    if status_counts["scout_attempt_failed_connection"] != 5:
+        raise ValueError(f"Expected five IL/CA failure-only municipalities: {status_counts}")
+    if sum(int(row["failed_connection_attempt_count"]) for row in output) != 21:
+        raise ValueError("Expected 16 MA attempts plus one IL and four CA timeouts")
     return output
 
 
@@ -481,6 +502,7 @@ def load_state_costs() -> dict[str, dict[str, str]]:
             "il_2026-07-20_215904",
         ],
         "NY": ["ny_2026-07-20_200033"],
+        "CA": ["ca_2026-07-21_101012"],
     }.items():
         rows = [cost_rows[run_id] for run_id in run_ids]
         cost_values = [row["total_cost"].strip() for row in rows]
@@ -615,8 +637,8 @@ def build_state_rows(municipality_rows: list[dict[str, object]]) -> list[dict[st
         )
     if sum(int(row["municipalities_in_universe"]) for row in output) != 35_589:
         raise ValueError("State coverage does not sum to the authoritative universe")
-    if sum(int(row["municipalities_scouted"]) for row in output) != 138:
-        raise ValueError("State coverage does not sum to 138 successful scout municipalities")
+    if sum(int(row["municipalities_scouted"]) for row in output) != 159:
+        raise ValueError("State coverage does not sum to 159 successful scout municipalities")
     return output
 
 

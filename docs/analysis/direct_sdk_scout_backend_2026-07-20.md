@@ -57,6 +57,14 @@ The smoke helper refuses to overwrite a nonempty output directory, which prevent
 
 The direct SDK response is fed into the unchanged `parse_response_to_candidates()` path. Candidate normalization, deterministic scoring, `verification_status=unverified`, `promotion_status=raw_model_output`, parser failures, and quarantine behavior therefore remain shared between the two live backends. Prompt templates, NJ row context, candidate filtering semantics, staged/durable CSV writing, and canonical-data boundaries were not changed.
 
+## Estimate-only cost reporting added for national runs
+
+Direct Responses usage now preserves `input_tokens`, `output_tokens`, nested reasoning tokens, and `total_tokens` when the SDK exposes them. Per-run JSON/CSV summaries retain the historical `*_tokens_total` fields and also write the explicit names `input_tokens`, `output_tokens`, `reasoning_tokens`, and `total_tokens`.
+
+`docs/analysis/direct_sdk_pricing_config_2026-07-20.json` is the configurable pricing source. Its `gpt-5.4-nano` entry uses the standard OpenAI text-token prices visible on the official model page when checked 2026-07-21: USD 0.20 per 1M input tokens and USD 1.25 per 1M output tokens. This is deliberately `estimate_only=true`. It is not evidence of Harvard HUIT contract/proxy billing and excludes hosted-web-search or other tool fees, cached-input treatment, taxes, credits, discounts, and adjustments. The Responses `reasoning_tokens` detail is treated as included in `output_tokens`, so it is reported but not charged a second time.
+
+The direct-SDK summary therefore keeps actual `cost_available=false` and `total_cost=null`, while separately reporting `estimated_cost_available`, `estimated_input_cost`, `estimated_output_cost`, `estimated_reasoning_cost`, `estimated_total_cost`, `estimate_only`, `pricing_source_note`, `pricing_effective_date`, `reasoning_billing_mode`, and estimate scope. `pricing_missing_or_unconfirmed=true` remains explicit for the included OpenAI-reference estimate because HUIT billing is unconfirmed. If the config is missing, malformed, lacks the selected model, has null required rates, or leaves nonzero reasoning billing unknown, token usage is still preserved and the live run continues with `estimated_cost_available=false`.
+
 Dry runs still build prompts and write only `prompt_preview.md` plus `run_metadata.json`. They do not import the OpenAI SDK/GABRIEL live path, read credentials, or record a selected live backend. A no-network regression test exercises this behavior even when `--live-backend direct-sdk` is present.
 
 ## Synthetic direct-SDK smoke preflight
@@ -119,6 +127,6 @@ The existing six-check prompt contract test also remains green. Repository valid
 
 - The NJ direct-SDK run established live HUIT hosted-search transport and source extraction for three prompts, not broad service reliability or candidate truth.
 - Newark, Jersey City, and Camden candidate URLs, source ownership, employer/unit identity, operative cycles, document completeness, matched-comparison value, and duplicates remain unverified scout-stage questions.
-- OpenAI Responses usage exposes tokens but not billed dollar cost; direct-run cost summaries therefore mark cost unavailable rather than inventing a value.
+- OpenAI Responses usage exposes tokens but not billed dollar cost. Direct-run summaries keep actual cost unavailable and provide only a separately labeled, configurable token-price estimate. The included public OpenAI rate basis is not confirmed HUIT billing and excludes web-search/tool fees.
 - HUIT/GABRIEL's intermittent behavior and the precise causal role of the headerless rate-limit probe remain unresolved. The new backend removes those wrapper-specific components from the required scout path rather than claiming to repair GABRIEL itself.
 - Future state slices still require a fresh synthetic preflight, separate live authorization, zero/controlled retries, preserved artifacts, queue/coverage updates, and later coordinated verification before ingestion.

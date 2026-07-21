@@ -6,6 +6,48 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-21 10:50 EDT (California CA25 direct-SDK scout: 21 parseable outcomes, 4 timeout failures, 64 unverified leads) - queue/coverage updated; defer retries, verification, and ingestion
+
+**Did**
+- Started at `8e14b2cf6c956c7111358087ddf4be09674c6349` and inspected the supplied IL25.3 relay first. Every requested file carried by the relay matched the repository byte-for-byte. Historical reviews and the universe/crosswalk/manifest were narrow-bundle omissions available as committed repository predecessors, not conflicts. No Git remote was inspected or changed.
+- Added configurable direct-SDK estimate-only cost reporting. Responses now preserve input, output, reasoning, and total tokens. The local config records public OpenAI standard text-token rates but explicitly says HUIT billing and hosted-search/tool fees are unconfirmed; actual billed cost remains unavailable. No-network tests cover extraction, arithmetic, estimate labels, and missing-pricing fallback.
+- Built the exact CA25 input: Los Angeles, Sacramento, San Diego, San Francisco, Fresno, San Jose, Long Beach, Oakland, Bakersfield, Anaheim, Riverside, Stockton, Chula Vista, Fremont, Modesto, Oxnard, Santa Rosa, Salinas, Vallejo, Redding, Chico, Visalia, Santa Barbara, Berkeley, and Palo Alto. All are authoritative municipal/place employers with unique IDs, all five CA manifest anchors, no pre-run coverage/failure/queue/canonical overlap, and 20-county diversity.
+- Dry run `ca_2026-07-21_100843` built 25 prompts and passed every employer/unit/cycle/duplicate/access/empty-output/unverified-stage check. The exact no-search smoke returned `OK.`, a response ID, 10 input / 0 reasoning / 6 output / 16 total tokens, and explicit success. Only then did live run `ca_2026-07-21_101012` attempt the locked 25 prompts serially with 15-second spacing and zero retries.
+- Twenty-one live responses were nonempty, had IDs/tokens, and parsed; 64 URL-bearing candidate rows resulted. San Jose returned a parseable empty list. Oakland, Stockton, Oxnard, and Redding timed out once with no text, ID, or tokens; they are failure-only and excluded from discovery coverage. No retry ran.
+- Normalized all 64 rows as `unverified_scout_candidate`; rebuilt the national queue to 451 rows and discovery coverage to 159 municipalities. California contributes 64 queue rows, 20 candidate-positive covered municipalities, one parseable-empty municipality, and four excluded failure-only timeouts.
+
+**Decisions and why**
+- San Diego, Fresno, Long Beach, Los Angeles, Chico, Anaheim, and Palo Alto are the strongest apparent matched-cycle bundles; Berkeley and Santa Barbara touch at the 2024 boundary. These are model-metadata scheduling judgments only.
+- No returned CA URL exactly matched another CA row, the pre-run queue, or canonical contracts. No visible prohibited employer or safety-as-non-safety substitution appears. One Los Angeles mechanism row is high employer-risk and already insufficient; the Chula Vista fire row has a unit-label ambiguity and remains insufficient. No parsed source is marked blocked or dead; API timeouts are not source-access findings.
+- Do not retry the four CA timeout rows without separate authorization. Do not open all 64 links, verify one by one, ingest, codify, change canonical coverage, or use scout rows for claims.
+- The token-only live estimate is USD 0.27902415 from 933,502 input / 45,418 reasoning / 73,859 output / 1,007,361 total tokens. `estimate_only=true` and HUIT/tool pricing remains unconfirmed; actual billed cost is unavailable.
+
+**Surprises/breakage**
+- The four non-consecutive API timeouts did not trigger the repeated-connection-error stop gate; successful calls resumed after each. Coverage counts 21 parseable outcomes and separately preserves four failure-only attempts.
+- The first post-run input-builder validation correctly rejected advanced coverage/queue state. The builder was hardened to accept only the exact untouched pre-run state or this exact recorded post-run distribution while preserving `coverage_status_before_run=not_scouted`.
+- The spreadsheet artifact-tool dependency loader was unavailable, so the established deterministic CSV-builder and parse-back workflow was used. `.venv/bin/python` was used consistently because shell Python shims remain unusable.
+
+**Validation/audit results**
+```text
+nine-script py_compile: exit 0
+CA25 input builder: 25 exact rows; pre/post-run status, ID, manifest, employer, county, queue, and schema assertions passed
+CA25 handoff builder: 64 rows; all URL-bearing and unverified scout-stage
+queue builder: 451 rows (CA 64; IL 217; MA 24; NJ 8; NY 57; PA 75; TX 6)
+coverage builders: universe 35,589; covered 159; candidate-positive 145; parseable empty 14; excluded failed attempts 21
+direct-SDK regression test: 7 PASS checks
+prompt-contract regression test: 6 PASS checks
+validate.py: PASSED (64 contracts; 0 discourse; 64 coverage; 3 city attributes)
+ingest/test_pipeline.py: 60 passed, 0 failed
+audit_coverage.py: 28 healthy pairs (10 exact, 18 overlap), 2 exploratory adjacent, 6 unmatched safety units
+artifact/queue assertions and credential scan: PASS
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units. No canonical row changed.
+
+**Next steps**
+1. Do not retry Oakland, Stockton, Oxnard, or Redding without separate authorization. For further discovery, prepare another untouched-state locked 25-row batch and require a fresh direct-SDK smoke.
+2. If a coordinated verification wave is authorized instead, begin with coherent CA/IL/NY municipality bundles and establish employer, unit, provenance, execution/completeness, visible dates, wage content, duplicates, access, and mutual cycle overlap before ingestion.
+
 ## 2026-07-20 22:30 EDT (Illinois IL25.3 direct-SDK scout completed 25/25; 70 parsed leads, 69 queueable sources) - continue state-scale scouting; defer verification and ingestion
 
 **Did**

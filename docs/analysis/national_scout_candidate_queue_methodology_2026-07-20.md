@@ -2,7 +2,7 @@
 
 Date: 2026-07-20
 
-Status: durable scout-stage queue standard. This methodology does not verify sources, ingest documents, run codification, alter canonical coverage, or establish claim evidence.
+Status: durable scout-stage queue standard, last rebuilt 2026-07-21. This methodology does not verify sources, ingest documents, run codification, alter canonical coverage, or establish claim evidence.
 
 ## Purpose
 
@@ -17,7 +17,7 @@ The queue is therefore a discovery and scheduling artifact. It is not a source i
 
 ## Included source sets
 
-The 2026-07-20 build contains 387 queueable source-candidate rows:
+The current build contains 451 queueable source-candidate rows:
 
 - Pennsylvania pilot/batch-25 final output: 75 rows from the successful main and five-row retry outputs on 2026-07-15;
 - Texas national batch 01: 6 rows from 2026-07-16;
@@ -27,6 +27,7 @@ The 2026-07-20 build contains 387 queueable source-candidate rows:
 - Illinois national batch 01 IL25.2 direct-SDK run: 72 rows from 25 successful responses on 2026-07-20. Granite City, O'Fallon, and Freeport returned parseable empty candidate lists and add coverage but no queue rows.
 - Illinois national batch 01 IL25.3 direct-SDK run: 70 parsed rows from 25 successful responses on 2026-07-20. Elk Grove Village and Kankakee returned parseable empty candidate lists. One Rolling Meadows fire row lacks a returned `source_url`; it remains in the normalized scout handoff but is not a source-candidate queue row, so IL25.3 adds 69 rows here.
 - New York national batch 01 state-scale direct-SDK run: 57 rows from 25 successful responses on 2026-07-20. Yonkers, Schenectady, Mount Vernon, and Newburgh returned parseable empty candidate lists and therefore add coverage but no queue rows.
+- California CA25 direct-SDK run: 64 URL-bearing rows from 21 parseable responses on 2026-07-21. San Jose returned a parseable empty candidate list. Oakland, Stockton, Oxnard, and Redding timed out without response text, IDs, or tokens and add neither queue rows nor discovery coverage.
 
 The original candidate files are read-only inputs. The builder does not rewrite them. Pennsylvania's two files are combined because the retry filled the five connection-failed municipalities from the same final 25-municipality batch; their candidate totals reconcile exactly to the existing PA municipality coverage ledger.
 
