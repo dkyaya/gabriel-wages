@@ -28,6 +28,20 @@ Also require failures to be isolated and manageable, not a repeated transport/pr
 
 Run exactly two disjoint locked 25-row workers. Promotion to Stage 2 requires both workers individually to clear the 90% rate and the pooled 50-row result to clear it as well. A worker with more than two non-collapse failures normally fails the stability test unless the coordinator documents why the failure is demonstrably non-systemic.
 
+The first CA25.2/NJ25 attempt on 2026-07-21 did not complete Stage 1: CA25.2 stopped on a failed smoke, and NJ25 preserved only a live prompt preview. Do not promote. The next attempt remains Stage 1 and must reuse the same two locked inputs only after execution hardening is committed and live use is separately authorized.
+
+For that same-stage retry:
+
+- use new unique timestamped/retry-labeled dry, smoke, live, log, and relay paths;
+- complete worker readiness checks for relay, `.env`/key presence without disclosure, interpreter, package versions, writable paths, and protected global files;
+- stagger worker starts by 5–10 minutes rather than launching both gates simultaneously;
+- keep direct SDK, `--n-parallels 1`, 15-second prompt spacing, and zero SDK retries;
+- stop a worker if its fresh smoke fails; do not launch or retry its live batch;
+- require command-level exit/sanitized-log evidence and crash-safe lifecycle metadata; and
+- do not start a coordinator merge unless both workers return complete, merge-eligible relays with parseable research-batch model outputs.
+
+A preflight-stop relay or a prompt-preview-only live relay fails Stage 1. Neither counts as discovery coverage, and neither can be used to compute a favorable parse rate by shrinking the denominator.
+
 ### Stage 2 — three parallel 25-row live scouts
 
 Run exactly three disjoint locked 25-row workers only after a clean Stage 1 coordinator merge. Promotion to Stage 3 requires every worker and the pooled 75-row result to meet the same 90% threshold, with no concurrency-collapse pattern and a clean single coordinator rebuild.
@@ -38,7 +52,7 @@ Run 50-row workers only after Stage 2 passes and a separate reviewed, tested, co
 
 ## Do not promote when
 
-Any failed smoke, connection collapse, systematic parser/schema defect, unmanaged candidate volume, missing provenance, worker mutation of shared/canonical files, dirty coordinator merge, or validation failure blocks promotion. Stay at the current stage and recommend a bounded diagnostic or another same-stage trial; do not retry failure-only municipalities without separate authorization.
+Any failed smoke, connection collapse, systematic parser/schema defect, prompt-preview-only run, missing lifecycle/exit evidence, unmanaged candidate volume, missing provenance, worker mutation of shared/canonical files, dirty coordinator merge, or validation failure blocks promotion. Stay at the current stage and recommend a bounded diagnostic or another same-stage trial; do not retry failure-only municipalities without separate authorization.
 
 ## Profile guidance
 

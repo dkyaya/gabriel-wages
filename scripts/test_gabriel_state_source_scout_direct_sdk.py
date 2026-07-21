@@ -307,6 +307,141 @@ def _check_isolated_worker_cost_log() -> None:
         assert list(rows[0]) == scout.COST_SUMMARY_FIELDS
 
 
+def _live_fixture_argv(municipalities_path: Path, output_dir: Path) -> list[str]:
+    return [
+        "gabriel_state_source_scout.py",
+        "--live",
+        "--live-backend",
+        "direct-sdk",
+        "--direct-sdk-max-retries",
+        "0",
+        "--state",
+        "PA",
+        "--municipalities-csv",
+        str(municipalities_path),
+        "--output-dir",
+        str(output_dir),
+        "--max-prompts",
+        "1",
+        "--n-parallels",
+        "1",
+        "--cost-log-path",
+        str(output_dir / "batch_cost_log.csv"),
+        "--prompt-mode",
+        "minimal",
+    ]
+
+
+def _write_live_fixture_input(path: Path) -> None:
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(
+            handle, fieldnames=["municipality_id", "municipality", "state"]
+        )
+        writer.writeheader()
+        writer.writerow(
+            {
+                "municipality_id": "live-fixture-pa-001",
+                "municipality": "Example Borough",
+                "state": "PA",
+            }
+        )
+
+
+def _check_live_checkpoint_survives_unhandled_exception() -> None:
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp_path = Path(tmp)
+        municipalities_path = tmp_path / "municipalities.csv"
+        output_dir = tmp_path / "live-exception-output"
+        _write_live_fixture_input(municipalities_path)
+
+        original_argv = sys.argv
+        original_runner = scout.run_direct_sdk_live_batch
+
+        def exploding_runner(*args, **kwargs):
+            del args, kwargs
+            checkpoint = json.loads(
+                (output_dir / "run_metadata.json").read_text(encoding="utf-8")
+            )
+            assert checkpoint["execution_status"] == "live_started"
+            assert checkpoint["live_attempted"] is True
+            assert checkpoint["backend_call_returned"] is False
+            assert checkpoint["metadata_checkpointed_before_backend"] is True
+            raise RuntimeError("synthetic backend setup failure")
+
+        try:
+            scout.run_direct_sdk_live_batch = exploding_runner
+            sys.argv = _live_fixture_argv(municipalities_path, output_dir)
+            assert scout.main() == 2
+        finally:
+            scout.run_direct_sdk_live_batch = original_runner
+            sys.argv = original_argv
+
+        metadata = json.loads(
+            (output_dir / "run_metadata.json").read_text(encoding="utf-8")
+        )
+        assert metadata["execution_status"] == "unhandled_live_exception"
+        assert metadata["live_attempted"] is True
+        assert metadata["live_process_completed"] is False
+        assert metadata["model_response_succeeded"] is False
+        assert metadata["failure_stage"] == "live_backend_invocation"
+        assert "RuntimeError: synthetic backend setup failure" in metadata[
+            "live_failure_reason"
+        ]
+        assert sorted(path.name for path in output_dir.iterdir()) == [
+            "prompt_preview.md",
+            "run_metadata.json",
+        ]
+
+
+def _check_zero_response_rows_preserve_failure_artifacts() -> None:
+    class EmptyFrame:
+        columns = scout.DIRECT_SDK_RAW_FIELDS
+
+        def __len__(self) -> int:
+            return 0
+
+        def to_csv(self, index: bool = False, lineterminator: str = "\n") -> str:
+            assert index is False
+            return ",".join(self.columns) + lineterminator
+
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp_path = Path(tmp)
+        municipalities_path = tmp_path / "municipalities.csv"
+        output_dir = tmp_path / "live-zero-row-output"
+        _write_live_fixture_input(municipalities_path)
+
+        original_argv = sys.argv
+        original_runner = scout.run_direct_sdk_live_batch
+
+        def empty_runner(*args, **kwargs):
+            del args, kwargs
+            assert (output_dir / "run_metadata.json").exists()
+            return EmptyFrame(), None
+
+        try:
+            scout.run_direct_sdk_live_batch = empty_runner
+            sys.argv = _live_fixture_argv(municipalities_path, output_dir)
+            assert scout.main() == 2
+        finally:
+            scout.run_direct_sdk_live_batch = original_runner
+            sys.argv = original_argv
+
+        metadata = json.loads(
+            (output_dir / "run_metadata.json").read_text(encoding="utf-8")
+        )
+        assert metadata["execution_status"] == "no_response_rows"
+        assert metadata["backend_call_returned"] is True
+        assert metadata["live_process_completed"] is True
+        assert metadata["live_succeeded"] is False
+        assert metadata["model_response_succeeded"] is False
+        assert metadata["n_responses"] == 0
+        assert metadata["n_parseable"] == 0
+        assert metadata["n_candidate_rows"] == 0
+        assert (output_dir / "raw_outputs.csv").exists()
+        assert (output_dir / "parsed_candidates.csv").exists()
+        assert (output_dir / "failed_parses.csv").exists()
+
+
 def main() -> int:
     _check_request_shapes()
     _check_mocked_response_uses_existing_candidate_pipeline()
@@ -315,6 +450,8 @@ def main() -> int:
     _check_estimated_cost_and_missing_pricing()
     _check_dry_run_remains_backend_independent()
     _check_isolated_worker_cost_log()
+    _check_live_checkpoint_survives_unhandled_exception()
+    _check_zero_response_rows_preserve_failure_artifacts()
     print("PASS: direct SDK request shape preserves scout web-search settings")
     print("PASS: no-search smoke request omits tools and web search")
     print("PASS: mocked direct response enters the existing unverified candidate pipeline")
@@ -323,6 +460,8 @@ def main() -> int:
     print("PASS: estimated token cost is labeled and missing pricing preserves usage")
     print("PASS: dry-run artifacts and metadata remain backend-independent")
     print("PASS: parallel workers can route cost logging to a batch-specific file")
+    print("PASS: live metadata is checkpointed before backend setup and survives exceptions")
+    print("PASS: zero-row live returns preserve explicit non-mergeable failure artifacts")
     return 0
 
 

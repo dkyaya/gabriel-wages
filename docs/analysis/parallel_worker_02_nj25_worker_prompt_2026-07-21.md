@@ -34,6 +34,24 @@ Record the starting commit. Never inspect or modify remotes and never push.
 - Do not verify/open/download sources, ingest, codify, alter canonical data/corpus, promote rows, make public-records requests, or use output as claim evidence.
 - Do not inspect/configure/create/validate/modify remotes, push, or print/package secrets.
 
+## Stage 1 retry Gate 0: readiness and unique attempt paths
+
+This locked prompt is now for a hardened same-stage retry. Set one unique `{{ATTEMPT_LABEL}}` containing a retry label or timestamp and use it in every dry, smoke, live, command-log, review, and relay path below. The prior smoke/live directories—including the prompt-preview-only live directory—are evidence; never reuse, delete, clear, resume, or overwrite them.
+
+Before the dry run, create a credential-free readiness note confirming:
+
+- the preparation relay exists locally;
+- the worker-local `.env` exists;
+- `HARVARD_SUBSCRIPTION_KEY` is present after `.env` load, recording only presence and never value/length/prefix/suffix/hash;
+- the exact Python executable path/version that will run every command;
+- successful imports and package versions for `openai`, `httpx`, and `pandas`;
+- writable parents for the unique dry, smoke, live, command-log, cost-log, and relay paths;
+- none of those attempt paths already exists;
+- a protected-file hash/diff baseline for national queue/coverage/builders/summaries/global cost log, `PROGRESS.md`, main handoff, canonical data, and corpus; and
+- this worktree is not shared with Worker 01.
+
+Any failure is a Gate 0 stop. Do not smoke or live-scout. The two Stage 1 worker starts must be staggered by 5–10 minutes; in-process concurrency remains one.
+
 ## Gate 1: input and dry run
 
 Verify exactly 25 distinct NJ municipal/place rows with distinct IDs, `worker_id=parallel_worker_02`, Stage 1 status, untouched coverage, zero failure attempts, no queue/canonical overlap, no overlap with Worker 01, and no prohibited government type. The accepted `CITY`, `TOWN`, `BOROUGH`, or `MUNICIPALITY` name does not override the authoritative `municipal` / `place` requirement.
@@ -41,36 +59,36 @@ Verify exactly 25 distinct NJ municipal/place rows with distinct IDs, `worker_id
 Run only this dry command first:
 
 ```bash
-.venv/bin/python scripts/gabriel_state_source_scout.py \
+{{PYTHON_EXECUTABLE}} scripts/gabriel_state_source_scout.py \
   --dry-run \
   --state NJ \
   --municipalities-csv docs/analysis/parallel_worker_02_nj25_scout_input_2026-07-21.csv \
-  --output-dir tmp/gabriel_state_source_scout/NJ/parallel_worker_02_nj25_filter_contract_dry_run_2026-07-21 \
+  --output-dir tmp/gabriel_state_source_scout/NJ/parallel_worker_02_nj25_{{ATTEMPT_LABEL}}_filter_contract_dry_run_2026-07-21 \
   --prompt-mode minimal
 ```
 
-Review all 25 prompts and create `docs/analysis/parallel_worker_02_nj25_filter_contract_dry_run_review_2026-07-21.md`. Require exact employer/Census ID, wrong-employer exclusions, ordinary civilian comparator rules, safety-not-non-safety, context separation, blocked-versus-dead, visible years, duplicate risk, empty output, public-records prohibition, and unverified-stage language. Stop if any check fails.
+Review all 25 prompts and create an attempt-labeled `docs/analysis/parallel_worker_02_nj25_{{ATTEMPT_LABEL}}_filter_contract_dry_run_review_2026-07-21.md`. Require exact employer/Census ID, wrong-employer exclusions, ordinary civilian comparator rules, safety-not-non-safety, context separation, blocked-versus-dead, visible years, duplicate risk, empty output, public-records prohibition, and unverified-stage language. Stop if any check fails.
 
 ## Gate 2: synthetic direct-SDK smoke
 
 Only after dry approval and explicit authorization for live API use:
 
 ```bash
-.venv/bin/python scripts/diagnose_direct_sdk_scout_backend_smoke_test.py \
-  --output-dir tmp/direct_sdk_scout_backend_preflight/NJ/parallel_worker_02_nj25_2026-07-21
+{{PYTHON_EXECUTABLE}} scripts/diagnose_direct_sdk_scout_backend_smoke_test.py \
+  --output-dir tmp/direct_sdk_scout_backend_preflight/NJ/parallel_worker_02_nj25_{{ATTEMPT_LABEL}}_2026-07-21
 ```
 
 The prompt must be exactly `Reply with OK.` with `gpt-5.4-nano`, the HUIT `/v2` base, no search/tools, one prompt, at most 30 seconds, and zero retries. Require nonempty text, response ID when exposed, positive output tokens, success metadata, and no connection error. Stop on failure.
 
 ## Gate 3: exact live run
 
-Only after smoke success and explicit live authorization:
+Only after smoke success and explicit live authorization, run exactly once. Capture the exact command, start/stop time, exit code, and sanitized stdout/stderr in the attempt-specific command-log directory. Explicitly record if stdout/stderr is empty.
 
 ```bash
-.venv/bin/python scripts/gabriel_state_source_scout.py \
+{{PYTHON_EXECUTABLE}} scripts/gabriel_state_source_scout.py \
   --state NJ \
   --municipalities-csv docs/analysis/parallel_worker_02_nj25_scout_input_2026-07-21.csv \
-  --output-dir tmp/gabriel_state_source_scout/NJ/parallel_worker_02_nj25_live_direct_sdk_2026-07-21 \
+  --output-dir tmp/gabriel_state_source_scout/NJ/parallel_worker_02_nj25_{{ATTEMPT_LABEL}}_live_direct_sdk_2026-07-21 \
   --prompt-mode minimal \
   --max-prompts 25 \
   --n-parallels 1 \
@@ -79,17 +97,19 @@ Only after smoke success and explicit live authorization:
   --live \
   --live-backend direct-sdk \
   --direct-sdk-max-retries 0 \
-  --cost-log-path tmp/gabriel_state_source_scout/NJ/parallel_worker_02_nj25_live_direct_sdk_2026-07-21/batch_cost_log.csv
+  --cost-log-path tmp/gabriel_state_source_scout/NJ/parallel_worker_02_nj25_{{ATTEMPT_LABEL}}_live_direct_sdk_2026-07-21/batch_cost_log.csv
 ```
 
 Stop on repeated no-ID/no-token connection failures. Preserve partial artifacts, do not retry, and do not substitute municipalities.
 
+The scout must create `run_metadata.json` with `execution_status=live_started` before backend setup and finalize it on handled completion/failure. If it remains `live_started`, exits nonzero, returns zero rows, or lacks required artifacts, create an attempt-specific stop note listing the launched command, exit code or unavailable reason, sanitized stdout/stderr or explicit absence, artifacts present/missing, supported outcome counts, and why the relay is non-mergeable. Do not retry.
+
 ## Batch-specific outputs
 
-Preserve every run artifact. If candidates parse, create:
+Preserve every readiness, lifecycle, command-exit, run, failure, usage, and sanitized-log artifact. A complete live relay requires `run_metadata.json`, `raw_outputs.csv`, `parsed_candidates.csv`, `failed_parses.csv` or equivalent ledger, sanitized command/live log, cost/usage evidence, and worker review. A prompt-preview-only directory is non-mergeable. If candidates parse, create attempt-labeled candidate/review files derived from:
 
-- `docs/analysis/parallel_worker_02_nj25_live_direct_sdk_scout_candidates_2026-07-21.csv`
-- `docs/analysis/parallel_worker_02_nj25_live_direct_sdk_scout_review_2026-07-21.md`
+- `docs/analysis/parallel_worker_02_nj25_{{ATTEMPT_LABEL}}_live_direct_sdk_scout_candidates_2026-07-21.csv`
+- `docs/analysis/parallel_worker_02_nj25_{{ATTEMPT_LABEL}}_live_direct_sdk_scout_review_2026-07-21.md`
 
 All normalized candidates remain `unverified_scout_candidate`. Report municipality/unit counts, valid empty results, parse/transport failures, leakage, tokens, and estimate-only cost. Never update shared queue/coverage.
 
@@ -97,4 +117,4 @@ All normalized candidates remain `unverified_scout_candidate`. Report municipali
 
 Run the full local compile/test/validation suite and batch artifact assertions. Verify that national queue/coverage, global cost log, canonical data/corpus, progress, handoff, and unrelated tracked files remain unchanged.
 
-Create one local commit with only batch-specific tracked outputs and one sanitized worker relay ZIP containing the locked input/methodology, dry review/artifacts, smoke/live artifacts if run, validation logs, git summaries, changed-file list, and next-task note. Do not push. The coordinator—not either worker—will import both relays and rebuild global queue/coverage once.
+Create one local commit with only batch-specific tracked outputs and one uniquely labeled sanitized worker relay ZIP containing the readiness note, locked input/methodology, dry review/artifacts, smoke/live artifacts if run, command exit/log evidence, stop note if applicable, protected-file comparison, validation logs, git summaries, changed-file list, and next-task note. Do not push. The coordinator will not merge unless both Stage 1 workers produce complete merge-eligible relays.

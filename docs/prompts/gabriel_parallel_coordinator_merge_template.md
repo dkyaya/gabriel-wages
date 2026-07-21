@@ -1,6 +1,6 @@
 # Gabriel Parallel Scout Coordinator Merge Template
 
-Use this template only in the main repository after every assigned worker lane has completed or stopped and supplied a sanitized relay. This is a local accounting merge, not a scout or source-research task.
+Use this template only in the main repository after every assigned worker lane has supplied a sanitized relay. First determine whether every relay is complete and merge-eligible. A stopped or incomplete relay may be diagnosed, but it does not authorize a partial accounting rebuild. This is a local accounting merge, not a scout or source-research task.
 
 Use Routine / GPT-5.6 Terra for relay packaging and deterministic queue/coverage rebuilds. Use Heavy / GPT-5.6 Sol for scope disputes, debugging, schema changes, selection/methodology decisions, or prompt/filter-contract changes. Use Low / GPT-5.4 only for tiny doc cleanup.
 
@@ -28,22 +28,44 @@ For each worker relay, inspect its status/log/diff summaries, locked input, dry 
 - did not ingest, codify, issue public-records requests, promote claim evidence, or edit canonical data/corpus; and
 - did not alter global queue/coverage, global builders/summaries, durable cost log, progress/handoff, or expose credentials.
 
-If scope was violated, do not blindly cherry-pick. Preserve the relay, document the exception, and import only independently auditable batch-specific data if safe and authorized. An unexpected canonical edit is a stop condition.
+Also require a unique attempt label and fresh output paths, a Gate 0 readiness note, the exact interpreter/package record, command launch/exit evidence, and a protected-file before/after comparison.
+
+## Hard relay rejection rules
+
+Reject the relay as a Stage outcome and do not start the global rebuild if any of the following is true:
+
+- it is a preflight-stop relay because dry review or smoke failed;
+- the live output directory contains only `prompt_preview.md`;
+- `run_metadata.json` is absent, invalid, or remains at `execution_status=live_started` without completion evidence;
+- `raw_outputs.csv` is absent;
+- `parsed_candidates.csv` or equivalent parsed-output evidence is absent;
+- the failure ledger is absent when failures or incomplete parsing are claimed;
+- sanitized command stdout/stderr and exit-code disposition are both absent;
+- no parseable model output exists for any municipality; or
+- the review cannot reconcile artifact-supported attempted, response, parseable, empty, candidate, and failure counts.
+
+A header-only `parsed_candidates.csv` may be valid only when `raw_outputs.csv` contains one or more successful, parseable `candidates=[]` model outputs. Zero candidate rows are not by themselves a rejection; zero parseable model outputs are. Synthetic smoke artifacts never substitute for research-batch raw/parsed evidence.
+
+If any assigned worker is rejected under these rules, Stage 1/2/3 is not complete. Preserve and diagnose all relays, leave national queue/coverage unchanged, and recommend a hardened same-stage retry under separate authorization. Do not merge the other worker merely because its relay is complete.
+
+If scope was violated, do not blindly cherry-pick. Preserve the relay and document the exception. An unexpected canonical edit is a stop condition. Any proposal to import independently auditable partial data after another worker failed requires separate explicit authorization; the default parallel-stage rule is no partial merge.
 
 ## Import and classify outcomes
 
 Import URL-bearing, normalized, unverified candidates and batch review files without overwriting other workers' artifacts. Record hashes if copying from a relay. Never import a worker's stale global output.
 
-Classify each municipality from raw evidence:
+Only after every assigned relay passes the hard eligibility audit, classify each municipality from raw evidence:
 
 - `scouted_with_candidates`: successful parsed result with one or more candidates;
 - `scouted_no_candidates`: successful parsed empty candidate list;
 - `scout_attempt_failed_connection`: connection/transport/timeout with no later valid response;
 - stopped-before-request or uncalled: separately logged, not discovery-covered.
 
-Do not count connection-only, malformed, absent, or stopped outcomes as coverage. A parseable empty result is coverage, not proof that no source exists.
+Do not count connection-only, malformed, absent, prompt-only, or stopped outcomes as coverage. A parseable empty result is coverage, not proof that no source exists. Never infer 25 connection failures from a prompt-only directory; without row-level evidence the batch is simply incomplete and unclassifiable.
 
 ## One global rebuild, after all imports
+
+The steps below are forbidden until all relays pass the eligibility audit.
 
 1. Add each valid normalized candidate file and exact run metadata to the queue builder's source specifications, preserving all prior rows.
 2. Add successful and failure-only outcomes to the coverage builder, preserving all historical status and attempt accounting.

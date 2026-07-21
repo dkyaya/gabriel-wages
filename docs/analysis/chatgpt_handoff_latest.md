@@ -2,9 +2,27 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-21T12:15:00-04:00`
+Last updated: `2026-07-21T15:50:00-04:00`
 
 ---
+
+## 2026-07-21T15:50:00-04:00 — Stage 1 failed/incomplete worker diagnosis is complete; retry protocol is hardened and no merge ran
+
+### Current State
+
+- **Starting checkpoint and relay recovery:** started at `11c92e71f445e9f061a4c11dcdaf84f687040fc0` (`Add reusable Gabriel scout prompt templates`). The two requested ZIPs were not in the main `tmp/`; exact copies were found read-only under the two local worker worktrees and copied unchanged to the requested coordinator paths. Worker 1 SHA-256 is `cc6f58e6f0d8455fad5496f2f518d84bf5449d4ecfa795c364c060ed0f591c3b`; Worker 2 is `4e745fab70fff4566d3aeb52004cb58937a551f996bd4a9c7c938b7f425e4d1a`. No worker worktree or remote was modified.
+- **Worker 1 CA25.2:** fresh credential presence check and dry-run passed. The exact one-request direct-SDK smoke failed after about 0.245 seconds with sanitized `APIConnectionError: Connection error.`, no response text, no response ID, zero output tokens, and no token usage. The CA25.2 research live command never launched. There are zero candidates, zero parseable municipality outcomes, and no mergeable data.
+- **Worker 2 NJ25:** fresh dry-run and direct-SDK smoke passed (`OK.`, response ID, 10 input / 0 reasoning / 6 output / 16 total tokens). The exact NJ25 live command reportedly launched once, but the live directory contains only a 202,054-byte `prompt_preview.md`. No exit code or stdout/stderr was preserved; `run_metadata.json`, `raw_outputs.csv`, `parsed_candidates.csv`, failure ledger, cost summary/log, sanitized live log, and candidate handoff are absent. Whether any API request left the process is unknown. No NJ municipality is classifiable as covered, empty, or connection-failed from this relay.
+- **Non-merge decision:** [parallel_stage1_failure_diagnosis_2026-07-21.md](parallel_stage1_failure_diagnosis_2026-07-21.md) documents the evidence, plausible transient connection and live-process/setup/termination modes, unknowns, and retry requirements. The coordinator did not import anything, rebuild anything, or alter national queue/coverage. Neither current relay counts toward Stage 1; Stage 2 is not authorized.
+- **Scout lifecycle hardening:** `gabriel_state_source_scout.py` atomically writes `run_metadata.json` with `execution_status=live_started` before live backend imports/client setup. It updates that checkpoint on backend failure, unhandled exception, zero-row return, or completion. A zero-row return writes raw/parsed/failure headers, records zero parseable outcomes, and exits nonzero. Two new no-network tests prove exception and zero-row preservation. OS-level kills still require wrapper-level command/exit logging.
+- **Worker hardening:** the reusable worker template and both locked CA/NJ prompts now require a unique `ATTEMPT_LABEL`; local preparation relay; `.env` and key presence without value disclosure; exact Python executable/version; `openai`/`httpx`/`pandas` imports/versions; writable fresh output parents; stale-directory rejection; protected global-file baselines; command-level exit/sanitized stdout/stderr evidence; and a mandatory stop note with present/missing artifacts and mergeability.
+- **Coordinator/scaling hardening:** the coordinator template hard-rejects preflight stops, prompt-preview-only live relays, absent/unfinished lifecycle metadata, missing raw or parsed evidence, missing failure/exit evidence, and relays with no parseable research output. The workflow and scaling ladder require the same locked Stage 1 retry, a 5–10 minute worker-start stagger, direct SDK, `n_parallels=1`, zero retries, fresh smoke, and no merge unless both workers produce complete relays.
+- **Protected state:** no model/API call, live scout, retry, source URL opening, verification, ingestion, codification, queue/coverage rebuild, canonical/corpus edit, remote action, or push occurred in this diagnosis/hardening task.
+- **Validation:** all three requested compiles passed; direct-SDK tests are 10/10 and prompt-contract tests are 6/6; schema validation passed at 64 contracts; ingestion tests passed 60/60; canonical coverage remains 28 healthy pairs (10 exact, 18 overlap), two exploratory adjacent matches, and six unmatched safety units.
+
+### Next Move
+
+Do not merge the current CA25.2/NJ25 relays and do not move to Stage 2. Under separate live authorization, run one fresh Stage 1 retry using the same two locked inputs in isolated worker worktrees. Give every artifact path a new attempt label; finish Gate 0; stagger starts by 5–10 minutes; run a fresh smoke per worker; stop without live execution if smoke fails; keep direct SDK, serial `n_parallels=1`, 15-second spacing, and zero retries; and capture exact command/exit/sanitized logs. The coordinator may begin queue/coverage accounting only if both relays are complete and contain parseable research-batch model-output evidence.
 
 ## 2026-07-21T12:15:00-04:00 — Reusable Gabriel scout orchestration prompts are ready; no live action ran
 

@@ -6,6 +6,40 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-21 15:50 EDT (Diagnosed failed/incomplete Stage 1 workers and hardened retry protocol; no scout/API call or merge)
+
+**Did**
+- Started at `11c92e71f445e9f061a4c11dcdaf84f687040fc0` (`Add reusable Gabriel scout prompt templates`). The two requested worker ZIPs were absent from the coordinator `tmp/`; read-only search found the exact files in the two local worker worktrees, and unchanged copies were placed at the requested coordinator paths. Worker 1 relay SHA-256 is `cc6f58e6f0d8455fad5496f2f518d84bf5449d4ecfa795c364c060ed0f591c3b`; Worker 2 is `4e745fab70fff4566d3aeb52004cb58937a551f996bd4a9c7c938b7f425e4d1a`. No worker worktree or remote was modified.
+- Audited both relays. Worker 1's fresh CA25.2 dry run passed, but its one-request smoke failed with exact sanitized `APIConnectionError: Connection error.` and no response ID/text/tokens; no live research scout launched. Worker 2's NJ25 dry run and smoke passed, and its exact live command reportedly launched, but the live directory contains only a 202,054-byte `prompt_preview.md`; exit code, console output, run metadata, raw/parsed rows, failure ledger, cost summary, and candidate handoff are absent.
+- Added [parallel_stage1_failure_diagnosis_2026-07-21.md](docs/analysis/parallel_stage1_failure_diagnosis_2026-07-21.md). Neither relay is mergeable, none of the 50 locked municipalities counts as discovery-covered, and national queue/coverage remains unchanged. Stage 1 is not proven and Stage 2 is prohibited.
+- Hardened the worker/coordinator templates, scaling ladder, workflow, and both locked CA/NJ prompts. Gate 0 now requires local preparation relay, `.env` and key presence without value disclosure, exact Python path, `openai`/`httpx`/`pandas` versions, writable unique attempt paths, no stale output directories, and protected global-file baselines. Every retry uses timestamped/retry-labeled paths, command-level exit/sanitized-log capture, and a mandatory stop note on failure/incompletion. The coordinator now hard-rejects preflight stops, prompt-only live relays, missing raw/parsed/lifecycle evidence, and zero-parseable-output relays.
+- Hardened `gabriel_state_source_scout.py` so live runs atomically checkpoint `run_metadata.json` with `execution_status=live_started` before backend imports/client setup, then finalize handled backend failure, unhandled exception, zero-row return, or completion. Zero-row returns preserve header-only raw/parsed/failure files and return nonzero. Command-wrapper logging remains required because `SIGKILL` cannot be caught by Python. Added two no-network regression checks.
+
+**Decisions and why**
+- Do not run the coordinator merge or classify NJ25 as connection failures: Worker 2 has no row-level evidence proving requests, responses, transport outcomes, or parseable empty results. Smoke artifacts are synthetic infrastructure output and cannot substitute for research-batch evidence.
+- Retry Stage 1 only with the same locked CA25.2 and NJ25 inputs after this hardening, under new explicit live authorization. Stagger worker starts by 5–10 minutes, keep direct SDK and `n_parallels=1`, and do not merge unless both relays are complete and merge-eligible.
+
+**Surprises/breakage**
+- Both narrow worker relays omitted `AGENTS.md`, `PROGRESS.md`, the main handoff, and the scout/test scripts. Shared state was reconciled from the coordinator checkpoint; future worker relays should carry or explicitly hash these required shared references.
+- Worker 2's prompt-only shape exactly matches the pre-hardening write order: preview before backend, metadata only after backend return/handled failure. The missing exit/stdout/stderr prevents distinguishing a live-only package import error, unhandled exception, external termination/session loss, or premature packaging.
+
+**Validation/audit results**
+```text
+three requested py_compile commands: exit 0
+direct-SDK no-network regression test: 10 PASS checks
+prompt-contract regression test: 6 PASS checks
+validate.py: PASSED (64 contracts; 0 discourse; 64 coverage; 3 city attributes)
+ingest/test_pipeline.py: 60 passed, 0 failed
+audit_coverage.py: 28 healthy pairs (10 exact, 18 overlap), 2 exploratory adjacent, 6 unmatched safety units
+git diff --check: passed
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units. No canonical, queue, or scout-coverage row changed.
+
+**Next steps**
+1. Do not merge the current relays and do not move to Stage 2.
+2. Under separate live authorization, create two fresh isolated attempts for the same locked CA25.2/NJ25 inputs using unique labels, the new Gate 0 evidence, a 5–10 minute stagger, fresh smoke per worker, direct SDK, serial execution, zero retries, command-level exit/log capture, and complete relays. Stop a worker if smoke fails; do not retry inside the task.
+
 ## 2026-07-21 12:15 EDT (Created reusable Gabriel scout-orchestration prompt templates; no scout/API or research action)
 
 **Did**

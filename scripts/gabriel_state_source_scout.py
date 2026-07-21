@@ -2122,6 +2122,42 @@ def run_live_batch(
 # Main
 # ---------------------------------------------------------------------------
 
+def write_run_metadata_checkpoint(
+    out_dir: Path,
+    metadata: dict[str, Any],
+    execution_status: str,
+) -> Path:
+    """Atomically persist minimal lifecycle metadata before/after live work.
+
+    A worker process can be interrupted after writing its prompt preview but
+    before the live backend returns.  Writing a checkpoint before backend
+    imports/client construction makes that state distinguishable from a run
+    that never launched.  The temporary-file replace also avoids leaving a
+    partially written JSON document if the process is interrupted mid-write.
+    """
+
+    metadata["execution_status"] = execution_status
+    metadata["metadata_updated_at"] = datetime.now().astimezone().isoformat()
+    path = out_dir / "run_metadata.json"
+    temporary_path = out_dir / "run_metadata.json.tmp"
+    temporary_path.write_text(json.dumps(metadata, indent=2), encoding="utf-8")
+    temporary_path.replace(path)
+    return path
+
+
+def sanitized_unhandled_live_exception(exc: BaseException) -> str:
+    """Return an exception summary without exposing the live credential."""
+
+    subscription_key: str | None = None
+    try:
+        subscription_key = _load_live_subscription_key()
+    except Exception:
+        # The original exception may itself be an import/dotenv failure.  The
+        # common credential-syntax redactors still run with an empty value.
+        subscription_key = None
+    safe_message = redact_direct_sdk_text(exc, [subscription_key])
+    return f"{type(exc).__name__}: {safe_message}"
+
 def _parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     mode = parser.add_mutually_exclusive_group()
@@ -2276,13 +2312,17 @@ def main() -> int:
         "n_nonempty_response_rows": None,
         "model_response_succeeded": False,
         "live_failure_reason": None,
+        "backend_call_returned": False,
+        "metadata_checkpointed_before_backend": False,
     }
 
     if not args.live:
         print(f"DRY RUN — {len(municipalities)} municipality prompts built for state={args.state}")
         print(f"prompt_preview={prompt_preview_path}")
-        (out_dir / "run_metadata.json").write_text(json.dumps(metadata, indent=2), encoding="utf-8")
-        print(f"run_metadata={out_dir / 'run_metadata.json'}")
+        run_metadata_path = write_run_metadata_checkpoint(
+            out_dir, metadata, "dry_run_completed"
+        )
+        print(f"run_metadata={run_metadata_path}")
         return 0
 
     metadata["live_attempted"] = True
@@ -2292,36 +2332,83 @@ def main() -> int:
     if args.live_backend == "direct-sdk":
         metadata["direct_sdk_max_retries"] = args.direct_sdk_max_retries
         metadata["direct_sdk_pricing_config"] = str(args.direct_sdk_pricing_config)
-        df, failure = run_direct_sdk_live_batch(
-            prompts,
-            identifiers,
-            out_dir,
-            args.model,
-            args.search_context_size,
-            args.n_parallels,
-            timeout=args.timeout,
-            max_retries=args.direct_sdk_max_retries,
-            sleep_between_prompts=args.sleep_between_prompts,
-            web_search=True,
-        )
-    else:
-        df, failure = run_live_batch(
-            municipalities,
-            prompts,
-            identifiers,
-            out_dir,
-            args.model,
-            args.search_context_size,
-            args.n_parallels,
-            timeout=args.timeout,
-            max_timeout=args.max_timeout,
-            sleep_between_prompts=args.sleep_between_prompts,
-        )
-    if failure is not None:
+    metadata["metadata_checkpointed_before_backend"] = True
+    run_metadata_path = write_run_metadata_checkpoint(out_dir, metadata, "live_started")
+
+    try:
+        if args.live_backend == "direct-sdk":
+            df, failure = run_direct_sdk_live_batch(
+                prompts,
+                identifiers,
+                out_dir,
+                args.model,
+                args.search_context_size,
+                args.n_parallels,
+                timeout=args.timeout,
+                max_retries=args.direct_sdk_max_retries,
+                sleep_between_prompts=args.sleep_between_prompts,
+                web_search=True,
+            )
+        else:
+            df, failure = run_live_batch(
+                municipalities,
+                prompts,
+                identifiers,
+                out_dir,
+                args.model,
+                args.search_context_size,
+                args.n_parallels,
+                timeout=args.timeout,
+                max_timeout=args.max_timeout,
+                sleep_between_prompts=args.sleep_between_prompts,
+            )
+        metadata["backend_call_returned"] = True
+    except BaseException as exc:
+        failure = sanitized_unhandled_live_exception(exc)
         metadata["live_failure_reason"] = failure
-        (out_dir / "run_metadata.json").write_text(json.dumps(metadata, indent=2), encoding="utf-8")
+        metadata["failure_stage"] = "live_backend_invocation"
+        write_run_metadata_checkpoint(out_dir, metadata, "unhandled_live_exception")
+        print(f"ERROR: live run raised before artifact completion: {failure}")
+        print(f"Minimal lifecycle metadata preserved at {run_metadata_path}.")
+        if isinstance(exc, (KeyboardInterrupt, SystemExit)):
+            raise
+        return 2
+
+    if failure is not None or df is None:
+        failure = failure or "live backend returned no dataframe"
+        metadata["live_failure_reason"] = failure
+        metadata["failure_stage"] = "live_backend_return"
+        write_run_metadata_checkpoint(out_dir, metadata, "backend_failure")
         print(f"ERROR: live run failed: {failure}")
         print("Dry-run artifacts (prompt preview, metadata) preserved. Not retrying.")
+        return 2
+
+    if len(df) == 0:
+        raw_outputs_path = out_dir / "raw_outputs.csv"
+        parsed_candidates_path = out_dir / "parsed_candidates.csv"
+        failed_parses_path = out_dir / "failed_parses.csv"
+        raw_outputs_path.write_text(
+            df.to_csv(index=False, lineterminator="\n"), encoding="utf-8"
+        )
+        write_csv(parsed_candidates_path, [], CANDIDATE_FIELDS)
+        write_csv(failed_parses_path, [], FAILED_PARSE_FIELDS)
+        metadata.update(
+            {
+                "live_process_completed": True,
+                "live_failure_reason": "live backend returned zero response rows",
+                "failure_stage": "live_backend_zero_rows",
+                "raw_outputs_path": str(raw_outputs_path),
+                "parsed_candidates_path": str(parsed_candidates_path),
+                "failed_parses_path": str(failed_parses_path),
+                "n_responses": 0,
+                "n_parseable": 0,
+                "n_failed_parses": 0,
+                "n_candidate_rows": 0,
+            }
+        )
+        write_run_metadata_checkpoint(out_dir, metadata, "no_response_rows")
+        print("ERROR: live backend returned zero response rows; no coverage outcome exists.")
+        print(f"Minimal zero-row artifacts preserved at {out_dir}.")
         return 2
 
     # Preserve the historic meaning of live_succeeded: the selected backend
@@ -2404,7 +2491,7 @@ def main() -> int:
             "failure_type_counts": failure_type_counts,
         }
     )
-    (out_dir / "run_metadata.json").write_text(json.dumps(metadata, indent=2), encoding="utf-8")
+    write_run_metadata_checkpoint(out_dir, metadata, "completed")
 
     cost_summary = compute_cost_summary(df, municipalities, all_candidates, all_failed, run_id, args)
     if args.live_backend == "direct-sdk":
@@ -2431,7 +2518,7 @@ def main() -> int:
     print(f"LIVE — {len(municipalities)} municipalities prompted, {len(df)} responses")
     print(f"parseable={metadata['n_parseable']} failed_parses={len(all_failed)} candidate_rows={len(all_candidates)}")
     print(f"candidates_csv={candidates_out}")
-    print(f"run_metadata={out_dir / 'run_metadata.json'}")
+    print(f"run_metadata={run_metadata_path}")
     total_cost = cost_summary["total_cost"]
     cost_display = f"{total_cost:.6f}" if isinstance(total_cost, (int, float)) else "unavailable"
     estimated_cost = cost_summary.get("estimated_total_cost")

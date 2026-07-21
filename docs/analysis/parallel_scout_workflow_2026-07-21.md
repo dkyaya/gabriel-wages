@@ -2,7 +2,7 @@
 
 Date: 2026-07-21
 
-Status: operating design and locked Stage 1 preparation only. This task made no model/API call, ran no scout, opened no source URL, and changed no queue, discovery-coverage, canonical, ingestion, codified, or claim-stage record.
+Status: operating design, updated after the first Stage 1 attempt failed to produce mergeable research-batch output. CA25.2 stopped at smoke; NJ25 preserved only a live prompt preview. National queue/coverage remains unchanged, and Stage 2 is not authorized.
 
 ## Plain-English design
 
@@ -50,6 +50,29 @@ Move to Stage 2 only if all of the following hold:
 - the full validation suite passes after the coordinator merge.
 
 The parseable-outcome denominator is the full locked batch, not merely the requests that returned before a stop. A stopped-before-request row therefore cannot make the success rate look better. Parseable empty `candidates=[]` output is a valid parseable discovery outcome; a connection-only response is not.
+
+## Stage 1 retry protocol after the failed CA25.2/NJ25 attempt
+
+The first Stage 1 attempt did not pass. Worker 1's fresh CA25.2 smoke failed with a connection error, so no CA research scout ran. Worker 2's NJ25 smoke passed and its live command launched, but its live directory contains only `prompt_preview.md`; no lifecycle metadata, raw output, parsed output, failure ledger, cost summary, exit code, or sanitized console evidence survived. Neither relay is mergeable and neither batch contributes discovery coverage.
+
+Do not move to Stage 2. Retry Stage 1 with the same two locked batches only after the hardened worker/scout protocol is committed and a new task explicitly authorizes live use.
+
+The retry must:
+
+1. Use the unchanged locked CA25.2 and NJ25 CSVs; do not substitute or append municipalities.
+2. Assign a unique timestamped or retry-labeled attempt identifier to every dry, smoke, live, command-log, and relay path. Never reuse, resume, clear, or overwrite either failed/incomplete output directory.
+3. Confirm the preparation relay exists locally; local `.env` exists; `HARVARD_SUBSCRIPTION_KEY` is present after `.env` load without printing any value; output parents are writable; and the exact Python path/version is recorded.
+4. Import and record versions for `openai`, `httpx`, and `pandas` with the exact interpreter used for every worker command. Stop before smoke/live if an import fails.
+5. Record a protected-file baseline proving the worker will not change global queue/coverage/builders/summaries/cost log, `PROGRESS.md`, the main handoff, canonical data, or corpus.
+6. Stagger the two worker starts by 5–10 minutes to reduce correlated process/proxy initialization and improve failure attribution.
+7. Keep `--live-backend direct-sdk`, `--n-parallels 1`, 15-second prompt spacing, and zero SDK retries.
+8. Run a fresh smoke in each worker. If a smoke fails, stop that worker and do not launch or retry its live batch.
+9. Capture the exact live command, start/stop time, exit code, and sanitized stdout/stderr at the command-wrapper level. The scout must checkpoint `run_metadata.json` before backend setup, but wrapper evidence is still required for interrupts or operating-system kills that Python cannot finalize.
+10. On any failure, early exit, `execution_status=live_started` remainder, zero-row return, or missing artifact, create a stop note listing present/missing artifacts and the non-mergeability reason. Do not retry inside the worker task.
+11. Require a complete relay with research-batch `run_metadata.json`, `raw_outputs.csv`, parsed-output evidence, failure ledger, usage/cost evidence, sanitized command log, exit disposition, and worker review. A prompt-preview-only directory is incomplete.
+12. Do not launch the coordinator merge until both workers produce complete relays with at least one parseable research-batch model output each. If either relay is a preflight stop or incomplete, preserve both relays, leave queue/coverage unchanged, and remain at Stage 1.
+
+The five-to-ten-minute stagger does not raise in-process concurrency and does not authorize a smoke/live retry. It is an observability measure for the same two-worker stage.
 
 ## Stage 2: three parallel 25-row workers
 
@@ -107,7 +130,9 @@ A worker must stop and preserve sanitized evidence if any of these occurs:
 - secrets or credential values would be printed or packaged; or
 - the worker discovers it is sharing a writable repo/worktree with the other worker.
 
-On a stop, do not substitute municipalities, retry timeout-only rows, or repair global accounting in the worker. Preserve the prompt preview, metadata, sanitized log, raw/failure artifacts already created, validation results that remain safe to run, and a relay explaining the stop. The coordinator decides later whether any parseable partial outcomes can be imported; failure-only municipalities never count as discovery coverage.
+Also stop if the preparation relay is missing, the local `.env`/key-presence check fails, the exact interpreter cannot import `openai`/`httpx`/`pandas`, an attempt output path already exists, a protected global file differs unexpectedly, or command exit/sanitized-log evidence cannot be preserved.
+
+On a stop, do not substitute municipalities, retry timeout-only rows, or repair global accounting in the worker. Preserve the readiness note, prompt preview, lifecycle metadata, sanitized command log, exit code when available, raw/failure artifacts already created, validation results that remain safe to run, and a relay explaining the stop. For the Stage 1 retry, the coordinator does not partially merge one worker when the other is preflight-stopped or incomplete; both complete relays are required before the accounting merge begins. Failure-only municipalities never count as discovery coverage.
 
 ## Coordinator ownership boundary
 
