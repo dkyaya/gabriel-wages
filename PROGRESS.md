@@ -6,6 +6,43 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-20 21:26 EDT (Locked Illinois IL25.2 direct-SDK scout completed with 25 successful responses and 72 unverified leads) - continue national scouting; defer verification and ingestion
+
+**Did**
+- Started at `2831ee0fe3c047f6be677bd7c00d50946ca673a2` and inspected `tmp/national_batch01_il25_2_filter_contract_dry_run_2026-07-20_relay_2831ee0.zip` first. All requested files shared by relay and repository matched byte-for-byte; the queue-methodology note was a repo-only narrow-bundle omission, not a conflict. No remote was inspected, changed, or pushed.
+- Confirmed the full-context input resolved to the exact locked 25-row order, all IDs were unique, all coverage statuses were `not_scouted`, Bloomington was absent, and none matched existing successful coverage.
+- Ran exactly two authorized API actions. The no-search direct-SDK smoke used exact `Reply with OK.`, one request, zero retries, no tools/search, and a 30-second timeout; it returned `OK`, a response ID, five output tokens, and explicit success. Only after that gate, the locked IL25.2 live scout ran serially with low search context and zero retries.
+- All 25 live calls returned nonempty responses and response IDs, and all 25 parsed. The run produced 72 unverified candidates: 31 police, 22 fire, 18 ordinary non-safety, and 1 unclear. Granite City, O'Fallon, and Freeport returned parseable empty lists. No retry ran.
+- Added the normalized IL25.2 candidate handoff and deterministic builder; rebuilt the national queue to 318 rows and discovery coverage to 113 municipalities. Illinois now has 49 successful covered municipalities (45 candidate-positive, 4 empty), while Bloomington remains separately failure-only.
+
+**Decisions and why**
+- Glenview and DeKalb are the strongest apparent matched-cycle bundles; Carpentersville and Rock Island are promising but require exact unit/cycle confirmation. Downers Grove and Elmhurst are mechanism/award leads. These are queue priorities from model metadata, not verified findings.
+- No exact IL25.2 URL duplicated another run row, the pre-run queue, or canonical contracts. Fifteen blocked rows remain blocked/insufficient holds rather than dead sources. All 72 handoff rows remain `unverified_scout_candidate`.
+- No returned URL was independently opened, verified, downloaded, ingested, codified, canonicalized, or used for claims. Canonical data, city coverage, and corpus files were untouched.
+
+**Surprises/breakage**
+- Connectivity held for every row, unlike Bloomington in IL25. Usage was 950,865 input, 48,614 reasoning, and 78,927 output tokens; average model time was 44.61 seconds. Direct-SDK dollar cost remained unavailable.
+- The spreadsheet skill dependency loader remained unavailable, so established deterministic CSV builders and parse-back assertions were used. The shell `python`/`python3` shims remained unusable; `.venv/bin/python` was used consistently.
+
+**Validation/audit results**
+```text
+IL25.2 handoff builder: 72 rows, all unverified scout-stage
+queue builder: 318 rows (IL 148; MA 24; NJ 8; NY 57; PA 75; TX 6)
+coverage builders: universe 35,589; covered 113; candidate-positive 102; parseable empty 11; excluded failures 17
+seven-script py_compile: exit 0
+direct-SDK regression test: 6 PASS checks
+prompt-contract regression test: 6 PASS checks
+validate.py: PASSED (64 contracts; 0 discourse; 64 coverage; 3 city attributes)
+ingest/test_pipeline.py: 60 passed, 0 failed
+audit_coverage.py: 28 healthy pairs (10 exact, 18 overlap), 2 exploratory adjacent, 6 unmatched safety units
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units. No canonical row changed.
+
+**Next steps**
+1. Do not verify or ingest IL25.2 links one by one. Continue national scaling through another separately prepared locked state batch, with a fresh successful direct-SDK smoke before any authorized live run.
+2. Later coordinated verification should start with municipality-level bundles such as Glenview and DeKalb, then resolve Carpentersville/Rock Island unit and cycle questions and the Downers Grove/Elmhurst award leads before any ingestion decision.
+
 ## 2026-07-20 20:47 EDT (Prepared Illinois IL25.2 second state-scale batch and passed dry prompt review) - await separately authorized direct-SDK smoke and live run
 
 **Did**

@@ -2,9 +2,26 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-20T20:47:00-04:00`
+Last updated: `2026-07-20T21:26:00-04:00`
 
 ---
+
+## 2026-07-20T21:26:00-04:00 — Illinois IL25.2 live scout succeeded; 72 leads queued and all 25 municipalities count as discovery-covered
+
+### Current State
+
+- **Checkpoint:** started at `2831ee0fe3c047f6be677bd7c00d50946ca673a2`. The source relay passed integrity/reconciliation; all requested shared files matched the repository. Its omission of the existing queue-methodology note was narrow-bundle scope, not staleness. No remote operation occurred.
+- **Authorized live boundary:** exactly two API actions ran. The fresh direct-SDK no-search smoke returned `OK`, a response ID, five output tokens, explicit success, and no connection error. Only then did the exact locked 25-row IL25.2 input run through the direct SDK, serially, with 15-second spacing and zero retries. Bloomington was not included or retried.
+- **Live result:** run `il_2026-07-20_205824` completed 25/25 responses; all had response IDs and nonempty text, all parsed, and no retry or failed parse occurred. Usage was 950,865 input / 48,614 reasoning / 78,927 output tokens; direct-SDK billed dollars are unavailable.
+- **Candidate handoff:** [national_batch01_il25_2_live_direct_sdk_scout_candidates_2026-07-20.csv](national_batch01_il25_2_live_direct_sdk_scout_candidates_2026-07-20.csv) contains 72 rows: police 31, fire 22, ordinary non-safety 18, unclear 1. Every row is `unverified_scout_candidate`. Granite City, O'Fallon, and Freeport returned valid empty lists.
+- **Scout interpretation:** Glenview appears to offer a 2023-2026 triad and DeKalb a 2017-2019 triad; Carpentersville and Rock Island are promising but have unit/cycle questions. Downers Grove and Elmhurst returned apparent award/mechanism leads. These are model-described scheduling leads only. Fifteen rows are blocked/unreadable, three context-only, and three possible duplicates; blocked is not treated as dead.
+- **Leakage review:** local string comparison found zero exact duplicates within IL25.2, against the pre-run queue, or against canonical contract URLs. No visibly substituted nonmunicipal employer or safety-as-non-safety row was identified from titles/metadata, but 59 conservative `possible` wrong-employer flags and several unit-scope questions require later verification.
+- **Queue/coverage:** the national queue is 318 rows, with 239 scheduled for later verification. Successful coverage is 113 municipalities: IL 49, MA 8, NJ 3, NY 25, PA 25, TX 3. Illinois has 45 candidate-positive and 4 parseable-empty municipalities; Bloomington remains the sole Illinois failure-only row. Seventeen failed attempts remain excluded nationally.
+- **Protected stages:** no URL was independently opened, verified, downloaded, ingested, codified, canonicalized, or used for claims. `data/contracts.csv`, `data/city_coverage.csv`, and corpus files did not change.
+
+### Next Move
+
+Continue national state-scale discovery only through another separately prepared locked batch and a fresh successful direct-SDK smoke. California is a strong next dry-run candidate. Do not verify all IL links immediately; later coordinated verification should prioritize complete municipality-level bundles (Glenview, DeKalb, then Carpentersville/Rock Island and award leads) and establish employer, unit, provenance, execution/completeness, dates, wage content, duplicate status, and matched-cycle overlap before ingestion.
 
 ## 2026-07-20T20:47:00-04:00 — Illinois IL25.2 second state-scale input is dry-run ready; no live/model action ran
 

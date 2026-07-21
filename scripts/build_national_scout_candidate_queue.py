@@ -101,6 +101,12 @@ SOURCE_SPECS = [
         "run_id": "il_2026-07-20_184849",
     },
     {
+        "state": "IL",
+        "wave": "IL25.2-2026-07-20",
+        "path": DOCS / "national_batch01_il25_2_live_direct_sdk_scout_candidates_2026-07-20.csv",
+        "run_id": "il_2026-07-20_205824",
+    },
+    {
         "state": "NY",
         "wave": "NY25-2026-07-20",
         "path": DOCS / "national_batch01_ny25_live_direct_sdk_scout_candidates_2026-07-20.csv",
@@ -540,7 +546,7 @@ def build_rows() -> list[dict[str, str]]:
             }
         )
 
-    expected = {"PA": 75, "TX": 6, "MA": 24, "NJ": 8, "IL": 76, "NY": 57}
+    expected = {"PA": 75, "TX": 6, "MA": 24, "NJ": 8, "IL": 148, "NY": 57}
     observed = {state: counters[state] for state in expected}
     if observed != expected:
         raise ValueError(f"Unexpected queue source counts: {observed} != {expected}")

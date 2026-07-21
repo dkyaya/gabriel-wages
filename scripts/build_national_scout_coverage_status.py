@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import csv
 from collections import Counter, defaultdict
+from decimal import Decimal
 from pathlib import Path
 
 
@@ -64,6 +65,14 @@ SUCCESSFUL_BATCHES = [
         "input": DOCS / "national_batch01_il25_scout_input_2026-07-20.csv",
         "backend": "direct-sdk",
         "failed_municipality_ids": ["cog_2025_124994"],
+    },
+    {
+        "state": "IL",
+        "wave": "IL25.2-2026-07-20",
+        "run_id": "il_2026-07-20_205824",
+        "scout_date": "2026-07-20",
+        "input": DOCS / "national_batch01_il25_2_scout_input_2026-07-20.csv",
+        "backend": "direct-sdk",
     },
     {
         "state": "NY",
@@ -432,10 +441,10 @@ def build_municipality_rows() -> list[dict[str, object]]:
         )
 
     status_counts = Counter(row["scout_coverage_status"] for row in output)
-    if status_counts["scouted_with_candidates"] != 80:
-        raise ValueError(f"Expected 80 candidate-positive municipalities: {status_counts}")
-    if status_counts["scouted_no_candidates"] != 8:
-        raise ValueError(f"Expected 8 successful empty municipalities: {status_counts}")
+    if status_counts["scouted_with_candidates"] != 102:
+        raise ValueError(f"Expected 102 candidate-positive municipalities: {status_counts}")
+    if status_counts["scouted_no_candidates"] != 11:
+        raise ValueError(f"Expected 11 successful empty municipalities: {status_counts}")
     if status_counts["scout_attempt_failed_connection"] != 1:
         raise ValueError(f"Expected one IL failure-only municipality: {status_counts}")
     if sum(int(row["failed_connection_attempt_count"]) for row in output) != 17:
@@ -454,20 +463,32 @@ def load_state_costs() -> dict[str, dict[str, str]]:
         "reasoning_tokens_total": pa["reasoning_tokens_total"],
         "output_tokens_total": pa["output_tokens_total"],
     }
-    for state, run_id in {
-        "TX": "tx_2026-07-16_164549",
-        "MA": "ma_2026-07-20_150025",
-        "NJ": "nj_2026-07-20_165402",
-        "IL": "il_2026-07-20_184849",
-        "NY": "ny_2026-07-20_200033",
+    for state, run_ids in {
+        "TX": ["tx_2026-07-16_164549"],
+        "MA": ["ma_2026-07-20_150025"],
+        "NJ": ["nj_2026-07-20_165402"],
+        "IL": ["il_2026-07-20_184849", "il_2026-07-20_205824"],
+        "NY": ["ny_2026-07-20_200033"],
     }.items():
-        row = cost_rows[run_id]
+        rows = [cost_rows[run_id] for run_id in run_ids]
+        cost_values = [row["total_cost"].strip() for row in rows]
+        total_cost = (
+            str(sum((Decimal(value) for value in cost_values), Decimal("0")))
+            if all(cost_values)
+            else ""
+        )
         result[state] = {
-            "scout_total_cost": row["total_cost"],
-            "scout_cost_available": "yes" if row["total_cost"] else "no",
-            "input_tokens_total": row["input_tokens_total"],
-            "reasoning_tokens_total": row["reasoning_tokens_total"],
-            "output_tokens_total": row["output_tokens_total"],
+            "scout_total_cost": total_cost,
+            "scout_cost_available": "yes" if total_cost else "no",
+            "input_tokens_total": str(
+                sum(Decimal(row["input_tokens_total"]) for row in rows)
+            ),
+            "reasoning_tokens_total": str(
+                sum(Decimal(row["reasoning_tokens_total"]) for row in rows)
+            ),
+            "output_tokens_total": str(
+                sum(Decimal(row["output_tokens_total"]) for row in rows)
+            ),
         }
     return result
 
@@ -582,8 +603,8 @@ def build_state_rows(municipality_rows: list[dict[str, object]]) -> list[dict[st
         )
     if sum(int(row["municipalities_in_universe"]) for row in output) != 35_589:
         raise ValueError("State coverage does not sum to the authoritative universe")
-    if sum(int(row["municipalities_scouted"]) for row in output) != 88:
-        raise ValueError("State coverage does not sum to 88 successful scout municipalities")
+    if sum(int(row["municipalities_scouted"]) for row in output) != 113:
+        raise ValueError("State coverage does not sum to 113 successful scout municipalities")
     return output
 
 
