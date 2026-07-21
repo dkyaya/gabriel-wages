@@ -2,9 +2,28 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-21T17:51:30-04:00`
+Last updated: `2026-07-21`
 
 ---
+
+## 2026-07-21 — CA50/NJ50/TX50 offline-prep batches locked for one future serialized 150-row queue
+
+### Current State
+
+- **Checkpoint/source reconciliation:** started at `74a96bee546a2a01d700fc377bb2536f95d1ec5f` and inspected `tmp/serialized_parallel_stage1_recovery_2026-07-21_relay_74a96be.zip` first. The repository matched the relay commit. Relay-carried artifacts are authoritative; required universe/crosswalk/manifest/templates absent from the narrow ZIP are the matching committed coordinator copies. No remote was inspected, modified, or pushed.
+- **Operating decision:** concurrent live workers remain paused. The validated production model is three persistent workers doing offline prep/dry review only, followed by one main-coordinator smoke/live API lane. Workers must not smoke, live-scout, call an API/model, or update national accounting.
+- **Worker 1 CA50:** [input](worker_1_ca50_scout_input_2026-07-21.csv), [methodology](worker_1_ca50_selection_methodology_2026-07-21.md), and [prep prompt](worker_1_ca50_prep_prompt_2026-07-21.md) lock the 50 largest eligible untouched California city/place employers, Santa Clarita through San Ramon. All 45 current covered CA municipalities and five failure-only rows—Oakland, Stockton, Oxnard, Redding, and Fairfield—are absent.
+- **Worker 2 NJ50:** [input](worker_2_nj50_scout_input_2026-07-21.csv), [methodology](worker_2_nj50_selection_methodology_2026-07-21.md), and [prep prompt](worker_2_nj50_prep_prompt_2026-07-21.md) lock 50 eligible untouched New Jersey place governments, Westfield through Ridgefield Park. Covered/canonical rows and Princeton are absent. Edison, Woodbridge, and Lakewood were not substituted despite their manifest ranks because they are township governments, a prohibited type here.
+- **Worker 3 TX50:** [input](worker_3_tx50_scout_input_2026-07-21.csv), [methodology](worker_3_tx50_selection_methodology_2026-07-21.md), and [prep prompt](worker_3_tx50_prep_prompt_2026-07-21.md) lock Dallas through Mansfield. Dallas, Fort Worth, El Paso, Arlington, and Corpus Christi preserve untouched manifest ranks 34–38; 45 additional high-population municipal employers extend the contrast. Texas remains preferred because only 3/1,224 municipalities are covered and no source-of-truth evidence supports a stronger replacement state.
+- **Eligibility/geography:** all three inputs contain exactly 50 rows and share future queue ID `COORD-SERIAL150-2026-07-21`. Across them are 150 unique municipality IDs and Census government IDs, all current `not_scouted`, zero current queue/canonical/failure overlap, and only `municipal` / `place` employers. Full county context is preserved; TX has 24 multi-county rows. The deterministic builder is `scripts/build_three_worker_50row_batches.py`.
+- **Future coordinator plan:** [three_worker_50row_batch_plan_2026-07-21.md](three_worker_50row_batch_plan_2026-07-21.md) explains the architecture, state rationale, 50-row size, 2.4–3.5 hour runtime estimate, 4.4–6.7 million total-token envelope, estimate-only cost boundary, and stop conditions. [coordinator_150row_serial_live_prompt_2026-07-21.md](coordinator_150row_serial_live_prompt_2026-07-21.md) requires all three prep relays and 50/50 reviews, one locked 150-row input, one direct-SDK smoke, one sequential live process, then one accounting rebuild.
+- **Mandatory code gate:** current `gabriel_state_source_scout.py` filters an input CSV to one `--state` and clips live work at `LIVE_HARD_CAP=25`. A future coordinator must implement, no-network-test, review, and commit explicit mixed-state support plus a cap of at least 150 before any smoke/live call. A one-state or clipped run is a hard stop. No runner change occurred here.
+- **Protected state:** no live/model/API call, smoke, scout, source URL opening/download, source verification, ingestion, codification, queue/coverage rebuild, canonical contract/city-coverage/corpus edit, or claim use occurred. Pre-existing untracked `.claude/` and `package-lock.json` were untouched.
+- **Validation:** six requested compile commands passed; direct-SDK tests passed 11/11; prompt tests passed 6/6; the batch builder reproduced 50/50/50 exact rows; schema validation passed at 64 contracts; ingestion tests passed 60/60; canonical audit remains 28 healthy pairs (10 exact, 18 overlap), two adjacent exploratory matches, and six unmatched safety units.
+
+### Next Move
+
+Run the three worker prep prompts in their persistent worktrees. Each worker should run dry-run only, inspect all 50 generated prompts, create a 50/50 filter-contract review, preserve protected global files, commit batch-specific prep evidence, and return a sanitized prep relay. Do not run smoke or live work in any worker. After all three relays pass, use the future coordinator prompt under separate authorization; first resolve and test mixed-state/150-cap support, then run one smoke and one serialized `n_parallels=1` live process. Stop on connection collapse. Rebuild queue/coverage once only after an eligible full artifact audit; keep verification, ingestion, codify, canonical edits, and claims deferred.
 
 ## 2026-07-21T17:51:30-04:00 — Serialized CA25.2/NJ25 recovery completed; queue and coverage merged once
 

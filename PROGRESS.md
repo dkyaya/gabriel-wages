@@ -6,6 +6,43 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-21 (Prepared three locked 50-row worker batches for one future serialized 150-row queue)
+
+**Did**
+- Started at local commit `74a96bee546a2a01d700fc377bb2536f95d1ec5f` and inspected `tmp/serialized_parallel_stage1_recovery_2026-07-21_relay_74a96be.zip` before selection. The repository was exactly at the relay commit; relay-carried files were treated as authoritative, and required universe/crosswalk/manifest/template files omitted from the narrow ZIP were read from that matching committed coordinator state. No remote was inspected or changed.
+- Built three deterministic, disjoint prep-only inputs from the 35,589-row authoritative municipality universe, current 207-municipality scout coverage, 540-row candidate queue, 100-row strategic manifest, and full county crosswalk: Worker 1 CA50, Worker 2 NJ50, and Worker 3 TX50. Each has exactly 50 active Census `municipal` / `place` employers, unique municipality/Census IDs, exact government identity, full county context, row-level selection/claim/search notes, and `not_scouted` pre-run status.
+- CA50 takes the 50 largest eligible untouched California cities beyond the already-covered manifest anchors. NJ50 takes the 50 largest eligible untouched New Jersey place governments; covered/canonical rows and Princeton are excluded, while unscouted manifest anchors Edison, Woodbridge, and Lakewood are excluded because they are township governments. TX50 retains the five untouched manifest anchors—Dallas, Fort Worth, El Paso, Arlington, and Corpus Christi—then adds the next 45 largest eligible Texas municipal employers. All recent timeout-only names are absent.
+- Added one reproducible builder, three selection methodologies, three worker offline-prep prompts, the three-worker plan, and a future coordinator live prompt. Worker prompts authorize dry-run/checklist/relay preparation only: no smoke, live scout, API/model call, queue/coverage update, verification, ingestion, or codify.
+- Documented two mandatory future-run gates discovered in the current scout: it filters input to one `--state` and clips live runs at `LIVE_HARD_CAP=25`. A future one-process 150-row run must first add and no-network-test explicit mixed-state loading and a cap of at least 150. This task does not change the runner.
+
+**Decisions and why**
+- Retain parallel preparation plus one coordinator-controlled serialized live lane. The prior recovery produced 48/50 parseable outcomes but did not validate concurrent live execution.
+- Keep Texas as Worker 3 because only three of 1,224 Texas municipalities are covered and its five largest untouched manifest anchors directly support the institutional-regime contrast; no source-of-truth evidence favored another third state.
+- Use 50 rows per worker to amortize offline review while keeping each state checklist auditable. Use one future locked 150-row process to centralize ordering, stop behavior, artifacts, usage, and one-time accounting.
+
+**Surprises/breakage**
+- The requested mixed-state 150-row process is not executable by the current runner without a separately reviewed code change. Passing `--max-prompts 150` today would clip at 25, and a single state flag would discard the other states. The future coordinator prompt makes both conditions hard preflight stops rather than silently degrading scope.
+- Pre-existing untracked `.claude/` and `package-lock.json` were present at session start and were not modified or included.
+
+**Validation/audit results**
+```text
+six requested py_compile targets: exit 0
+direct-SDK no-network regression test: 11 PASS checks
+prompt-contract regression test: 6 PASS checks
+batch builder: 150 unique eligible rows, 50/50/50
+validate.py: PASSED (64 contracts; 0 discourse; 64 coverage; 3 city attributes)
+ingest/test_pipeline.py: 60 passed, 0 failed
+audit_coverage.py: 28 healthy pairs (10 exact, 18 overlap), 2 exploratory adjacent, 6 unmatched safety units
+git diff --check: passed
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. No canonical contract, city-coverage, corpus, national queue/coverage, ingestion, codified, or claim row changed.
+
+**Next steps**
+1. Have Workers 1–3 use their persistent worktrees and prep prompts to run dry-run only, inspect all 50 prompts, create 50/50 reviews, and return sanitized prep relays.
+2. In a separately authorized coordinator task, audit all three relays, reconcile current eligibility, combine and hash one 150-row input, implement/test the mixed-state and cap gates, run one no-search smoke, then one direct-SDK live process with `n_parallels=1`, 15-second spacing, and zero retries.
+3. Stop on connection collapse and rebuild the national queue/coverage once only after a complete merge-eligible artifact audit. Verification, ingestion, codification, canonical edits, and claim use remain later stages.
+
 ## 2026-07-21 17:51 EDT (Recovered CA25.2/NJ25 through serialized live lane; queue 540 and scout coverage 207)
 
 **Did**
