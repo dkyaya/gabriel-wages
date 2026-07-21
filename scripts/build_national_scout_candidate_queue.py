@@ -107,6 +107,12 @@ SOURCE_SPECS = [
         "run_id": "il_2026-07-20_205824",
     },
     {
+        "state": "IL",
+        "wave": "IL25.3-2026-07-20",
+        "path": DOCS / "national_batch01_il25_3_live_direct_sdk_scout_candidates_2026-07-20.csv",
+        "run_id": "il_2026-07-20_215904",
+    },
+    {
         "state": "NY",
         "wave": "NY25-2026-07-20",
         "path": DOCS / "national_batch01_ny25_live_direct_sdk_scout_candidates_2026-07-20.csv",
@@ -432,10 +438,14 @@ def build_rows() -> list[dict[str, str]]:
     calibration_by_state = load_calibration()
     canonical_urls = load_canonical_urls()
     source_rows: list[tuple[dict, dict[str, str]]] = []
+    skipped_missing_locator: dict[str, int] = defaultdict(int)
     for spec in SOURCE_SPECS:
         for row in read_csv(spec["path"]):
             if row["state"] != spec["state"]:
                 raise ValueError(f"Unexpected state in {spec['path']}: {row['state']}")
+            if not row.get("source_url", "").strip():
+                skipped_missing_locator[spec["state"]] += 1
+                continue
             source_rows.append((spec, row))
 
     units_by_municipality: dict[str, set[str]] = defaultdict(set)
@@ -546,10 +556,15 @@ def build_rows() -> list[dict[str, str]]:
             }
         )
 
-    expected = {"PA": 75, "TX": 6, "MA": 24, "NJ": 8, "IL": 148, "NY": 57}
+    expected = {"PA": 75, "TX": 6, "MA": 24, "NJ": 8, "IL": 217, "NY": 57}
     observed = {state: counters[state] for state in expected}
     if observed != expected:
         raise ValueError(f"Unexpected queue source counts: {observed} != {expected}")
+    if dict(skipped_missing_locator) != {"IL": 1}:
+        raise ValueError(
+            "Expected one preserved IL25.3 parsed row to remain outside the source queue "
+            f"because it lacks a locator: {dict(skipped_missing_locator)}"
+        )
     if calibration_match_count != {"TX": 6, "MA": 24}:
         raise ValueError(f"Calibration joins are incomplete: {dict(calibration_match_count)}")
     return output

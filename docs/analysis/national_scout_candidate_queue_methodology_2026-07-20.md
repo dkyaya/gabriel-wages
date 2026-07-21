@@ -17,7 +17,7 @@ The queue is therefore a discovery and scheduling artifact. It is not a source i
 
 ## Included source sets
 
-The 2026-07-20 build contains 318 candidate rows:
+The 2026-07-20 build contains 387 queueable source-candidate rows:
 
 - Pennsylvania pilot/batch-25 final output: 75 rows from the successful main and five-row retry outputs on 2026-07-15;
 - Texas national batch 01: 6 rows from 2026-07-16;
@@ -25,6 +25,7 @@ The 2026-07-20 build contains 318 candidate rows:
 - New Jersey national batch 01 direct-SDK run: 8 rows from 2026-07-20;
 - Illinois national batch 01 state-scale direct-SDK run: 76 rows from 24 successful responses on 2026-07-20. Champaign returned a parseable empty candidate list, and Bloomington timed out without a response; neither adds a queue row.
 - Illinois national batch 01 IL25.2 direct-SDK run: 72 rows from 25 successful responses on 2026-07-20. Granite City, O'Fallon, and Freeport returned parseable empty candidate lists and add coverage but no queue rows.
+- Illinois national batch 01 IL25.3 direct-SDK run: 70 parsed rows from 25 successful responses on 2026-07-20. Elk Grove Village and Kankakee returned parseable empty candidate lists. One Rolling Meadows fire row lacks a returned `source_url`; it remains in the normalized scout handoff but is not a source-candidate queue row, so IL25.3 adds 69 rows here.
 - New York national batch 01 state-scale direct-SDK run: 57 rows from 25 successful responses on 2026-07-20. Yonkers, Schenectady, Mount Vernon, and Newburgh returned parseable empty candidate lists and therefore add coverage but no queue rows.
 
 The original candidate files are read-only inputs. The builder does not rewrite them. Pennsylvania's two files are combined because the retry filled the five connection-failed municipalities from the same final 25-municipality batch; their candidate totals reconcile exactly to the existing PA municipality coverage ledger.
@@ -33,7 +34,7 @@ The original candidate files are read-only inputs. The builder does not rewrite 
 
 One queue row remains one scout-returned candidate document for one municipality and one scout-labeled unit type. `queue_id` is deterministic within state and build date. `source_candidate_file`, `scout_run_id`, `raw_response_ref`, and `calibration_verification_id` preserve the path back to the original scout and calibration artifacts.
 
-The queue preserves scout wording in title, union, employer, years, type, completeness, risk, relevance, and verification-reason fields. Missing fields on older Pennsylvania/Texas schemas are recorded as `not_available_from_legacy_scout`; they are not inferred from source URLs.
+The queue preserves scout wording in title, union, employer, years, type, completeness, risk, relevance, and verification-reason fields. Missing fields on older Pennsylvania/Texas schemas are recorded as `not_available_from_legacy_scout`; they are not inferred from source URLs. A structurally parsed row with no source URL remains in its batch handoff but cannot enter this source-candidate queue, and the builder asserts the one current IL25.3 missing-locator exclusion rather than inventing a URL.
 
 ## Stage taxonomy
 
@@ -110,7 +111,7 @@ Calibration is used to:
 - identify eight prior calibration `later_ingest_candidate` recommendations for later coordinated pre-ingestion review;
 - correct triage when direct calibration showed that a scout's context/dead/partial label was wrong.
 
-Future states, including all rows from both Illinois runs and New York, should normally remain uncalibrated in the queue until a later coordinated verification wave is selected. Calibration findings should never be copied into canonical verification or ingestion fields without that later workflow's explicit decision.
+Future states, including all queueable rows from the three Illinois runs and New York, should normally remain uncalibrated in the queue until a later coordinated verification wave is selected. Calibration findings should never be copied into canonical verification or ingestion fields without that later workflow's explicit decision.
 
 ## Rebuild procedure
 

@@ -75,6 +75,14 @@ SUCCESSFUL_BATCHES = [
         "backend": "direct-sdk",
     },
     {
+        "state": "IL",
+        "wave": "IL25.3-2026-07-20",
+        "run_id": "il_2026-07-20_215904",
+        "scout_date": "2026-07-20",
+        "input": DOCS / "national_batch01_il25_3_scout_input_2026-07-20.csv",
+        "backend": "direct-sdk",
+    },
+    {
         "state": "NY",
         "wave": "NY25-2026-07-20",
         "run_id": "ny_2026-07-20_200033",
@@ -441,10 +449,10 @@ def build_municipality_rows() -> list[dict[str, object]]:
         )
 
     status_counts = Counter(row["scout_coverage_status"] for row in output)
-    if status_counts["scouted_with_candidates"] != 102:
-        raise ValueError(f"Expected 102 candidate-positive municipalities: {status_counts}")
-    if status_counts["scouted_no_candidates"] != 11:
-        raise ValueError(f"Expected 11 successful empty municipalities: {status_counts}")
+    if status_counts["scouted_with_candidates"] != 125:
+        raise ValueError(f"Expected 125 candidate-positive municipalities: {status_counts}")
+    if status_counts["scouted_no_candidates"] != 13:
+        raise ValueError(f"Expected 13 successful empty municipalities: {status_counts}")
     if status_counts["scout_attempt_failed_connection"] != 1:
         raise ValueError(f"Expected one IL failure-only municipality: {status_counts}")
     if sum(int(row["failed_connection_attempt_count"]) for row in output) != 17:
@@ -467,7 +475,11 @@ def load_state_costs() -> dict[str, dict[str, str]]:
         "TX": ["tx_2026-07-16_164549"],
         "MA": ["ma_2026-07-20_150025"],
         "NJ": ["nj_2026-07-20_165402"],
-        "IL": ["il_2026-07-20_184849", "il_2026-07-20_205824"],
+        "IL": [
+            "il_2026-07-20_184849",
+            "il_2026-07-20_205824",
+            "il_2026-07-20_215904",
+        ],
         "NY": ["ny_2026-07-20_200033"],
     }.items():
         rows = [cost_rows[run_id] for run_id in run_ids]
@@ -603,8 +615,8 @@ def build_state_rows(municipality_rows: list[dict[str, object]]) -> list[dict[st
         )
     if sum(int(row["municipalities_in_universe"]) for row in output) != 35_589:
         raise ValueError("State coverage does not sum to the authoritative universe")
-    if sum(int(row["municipalities_scouted"]) for row in output) != 113:
-        raise ValueError("State coverage does not sum to 113 successful scout municipalities")
+    if sum(int(row["municipalities_scouted"]) for row in output) != 138:
+        raise ValueError("State coverage does not sum to 138 successful scout municipalities")
     return output
 
 

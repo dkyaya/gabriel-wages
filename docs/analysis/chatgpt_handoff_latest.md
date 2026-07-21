@@ -2,9 +2,27 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-20T21:47:00-04:00`
+Last updated: `2026-07-20T22:30:30-04:00`
 
 ---
+
+## 2026-07-20T22:30:30-04:00 — Illinois IL25.3 direct-SDK scout completed 25/25; 70 parsed leads remain unverified
+
+### Current State
+
+- **Checkpoint reconciliation:** started at `4146bfb11132844846db62f6529054b6795ead58` (`Prepare Illinois third 25-city scout batch`). The supplied relay passed integrity testing and matched its expected SHA-256. Every carried requested file matched the repository byte-for-byte. The two earlier Illinois live reviews/candidate files, prompt-refinement note, and direct-SDK note were repository-only narrow-bundle omissions and committed predecessors, not conflicts. No remote operation occurred.
+- **Authorized boundary:** exactly two API actions ran. The fresh direct-SDK smoke used exact `Reply with OK.`, `gpt-5.4-nano`, Harvard `/v2`, no tools/search, one request, a 30-second timeout, and zero retries. It returned `OK`, a response ID, five output tokens, explicit success, and no connection error. Only then did the exact locked IL25.3 input run through `--live-backend direct-sdk`, serially, with 15-second spacing and zero retries. Bloomington was absent and not retried.
+- **Live execution:** run `il_2026-07-20_215904` completed 25/25 nonempty responses with IDs and positive output tokens. All 25 parsed, no failed parse or retry occurred, and connectivity held. Usage was 864,202 input / 43,236 reasoning / 72,784 output tokens; average successful request time was 39.61 seconds; billed dollars are unavailable.
+- **Candidate handoff:** [national_batch01_il25_3_live_direct_sdk_scout_candidates_2026-07-20.csv](national_batch01_il25_3_live_direct_sdk_scout_candidates_2026-07-20.csv) preserves 70 rows—24 police, 25 fire, 20 ordinary non-safety, and 1 unclear—all as `unverified_scout_candidate`. Elk Grove Village and Kankakee returned valid empty lists. One Rolling Meadows fire row lacks a returned URL; it remains in the handoff/raw evidence but is not placed in the durable source queue and no locator was inferred.
+- **Scout interpretation:** Sycamore appears to have two matched sets; Lombard has multiple cycles; Belvidere and Alton appear to have 2022-2026 triads; East Moline and Ottawa have apparent overlaps. St. Charles, Mundelein, and North Chicago have promising sets with blocked legs. These are model-metadata scheduling judgments only.
+- **Leakage/access review:** exact string comparison found zero IL25.3 URL overlap with the pre-run queue, canonical contracts, or another run row. One St. Charles row self-labels possible duplicate risk. No obvious wrong employer, wrong unit, or safety-as-non-safety row is visible; 63 rows retain conservative `possible` employer risk. Ten are blocked/unreadable and none dead. Four blocked rows are raw-labeled qualifying, but all ten are held as insufficient by queue precedence. Parser failures are zero.
+- **Queue/coverage:** the queue now has 387 URL-bearing rows: 297 later-verification rows and 90 holds/rejections. IL25.3 contributes 69 queue rows (53 high, 3 medium, 2 low, 10 insufficient, 1 context-only). National discovery coverage is 138: 125 candidate-positive and 13 parseable-empty. Illinois is 74 successful: 68 candidate-positive and 6 empty; Bloomington remains separately failure-only. Seventeen failed attempts remain excluded nationally.
+- **Protected stages:** no URL was independently opened, verified, downloaded, ingested, codified, canonicalized, or used for claims. Canonical contracts, city coverage, and corpus files are unchanged.
+- **Validation:** all seven requested/added compiles passed; handoff, queue, direct coverage, and top-level coverage builders reconciled at 70/387/138; direct-SDK and prompt suites passed 6/6 each; schema validation passed at 64 contracts; ingestion tests passed 60/60; canonical coverage remains 28 healthy pairs, 2 exploratory adjacent, and 6 unmatched safety units. Production smoke/live artifacts contain no loaded credential or unredacted header value.
+
+### Next Move
+
+Continue discovery with a separately prepared locked untouched-state batch; California is a strong next dry-run candidate. Do not retry Bloomington now and do not open Illinois links one by one. Any future live batch needs separate authorization and a fresh successful direct-SDK no-search smoke. When coordinated verification begins, prioritize Sycamore, Lombard, Belvidere, Alton, East Moline, and Ottawa, then resolve blocked/access, employer/unit, provenance, execution/completeness, dates, wage content, duplicates, and mutual cycle overlap before ingestion.
 
 ## 2026-07-20T21:47:00-04:00 — Illinois IL25.3 full-context input is dry-run ready; no live/model action ran
 

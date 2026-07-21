@@ -6,6 +6,46 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-20 22:30 EDT (Illinois IL25.3 direct-SDK scout completed 25/25; 70 parsed leads, 69 queueable sources) - continue state-scale scouting; defer verification and ingestion
+
+**Did**
+- Started at `4146bfb11132844846db62f6529054b6795ead58` and inspected `tmp/national_batch01_il25_3_filter_contract_dry_run_2026-07-20_relay_4146bfb.zip` first. The ZIP passed integrity testing and matched its recorded SHA-256. Every requested file carried by the relay matched the repository byte-for-byte; six named historical/context files were narrow-bundle omissions but exist as committed predecessors, so there was no source conflict. No remote was inspected, changed, or pushed.
+- Confirmed the locked input contained exactly the required 25 municipalities in order, with unique municipality/Census IDs, no successful coverage or queue overlap, no prior failure, and no Bloomington row. The saved 25-prompt preview retained every employer/unit/cycle/duplicate/access/quarantine guard.
+- Ran exactly two authorized API actions. The one-request direct-SDK no-search smoke used exact `Reply with OK.`, `gpt-5.4-nano`, the Harvard `/v2` base, a 30-second timeout, and zero retries; it returned `OK`, a response ID, five output tokens, explicit success, and no connection error. Only then did the exact locked IL25.3 command run serially with 15-second spacing and zero retries.
+- Live run `il_2026-07-20_215904` returned 25 nonempty responses with response IDs and positive output tokens; all 25 parsed and no retry ran. It produced 70 rows: 24 police, 25 fire, 20 ordinary non-safety, and 1 properly unclear mechanism row. Elk Grove Village and Kankakee returned parseable empty lists.
+- Added the normalized 70-row handoff and deterministic builder. One Rolling Meadows fire row parsed without a source URL; it remains in the handoff as `unverified_scout_candidate`, but no URL was inferred and it is excluded from the source queue. Rebuilt the queue to 387 URL-bearing rows and coverage to 138 successful municipalities.
+
+**Decisions and why**
+- Sycamore, Lombard, Belvidere, Alton, East Moline, and Ottawa are the strongest apparent later-verification bundles. These are metadata-only scheduling judgments, not verified source findings.
+- Exact local URL comparison found zero IL25.3 overlaps with the prior queue, canonical URLs, or another run row. Ten rows are blocked/unreadable and zero dead; queue precedence holds all blocked rows as insufficient even where the raw model called four qualifying. No obvious wrong-employer, wrong-unit, or safety-as-non-safety substitution is visible, but 63 conservative possible employer-risk labels remain unresolved.
+- All 25 municipalities count as discovery-covered: Illinois is now 74 successful (68 candidate-positive, 6 empty) plus Bloomington separately failure-only. The national queue is 387 rows (297 later-verify, 90 holds/rejections); national coverage is 138 (125 candidate-positive, 13 empty), with 17 failed attempts separately excluded.
+- No returned URL was independently opened, verified, downloaded, ingested, codified, canonicalized, or used for claims. `data/contracts.csv`, `data/city_coverage.csv`, and corpus files were untouched.
+
+**Surprises/breakage**
+- Direct-SDK token usage was 864,202 input, 43,236 reasoning, and 72,784 output; average successful model time was 39.61 seconds. Billed dollar cost remains unavailable.
+- The spreadsheet workspace loader remained unavailable, so deterministic repo CSV builders and parse-back assertions were used. Shell `python`/`python3` shims remained unusable; `.venv/bin/python` was used consistently.
+- The sole missing-locator row is a scout-quality issue, not a parser failure. It is preserved without weakening the durable queue's nonempty-URL invariant.
+
+**Validation/audit results**
+```text
+seven-script py_compile: exit 0
+IL25.3 handoff builder: 70 rows; 69 queueable sources; 1 preserved missing locator
+queue builder: 387 rows (IL 217; MA 24; NJ 8; NY 57; PA 75; TX 6)
+coverage builders: universe 35,589; covered 138; candidate-positive 125; parseable empty 13; excluded failed attempts 17
+direct-SDK regression test: 6 PASS checks
+prompt-contract regression test: 6 PASS checks
+validate.py: PASSED (64 contracts; 0 discourse; 64 coverage; 3 city attributes)
+ingest/test_pipeline.py: 60 passed, 0 failed
+audit_coverage.py: 28 healthy pairs (10 exact, 18 overlap), 2 exploratory adjacent, 6 unmatched safety units
+credential scan: no loaded credential or unredacted production header value in smoke/live artifacts
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units. No canonical row changed.
+
+**Next steps**
+1. Continue national scaling with another separately prepared locked state batch; California is a strong untouched-state contrast. Do not retry Bloomington now.
+2. Require a fresh direct-SDK no-search smoke and separate authorization before another live run. Later coordinated verification should prioritize coherent bundles such as Sycamore, Lombard, Belvidere, Alton, East Moline, and Ottawa before any ingestion decision.
+
 ## 2026-07-20 21:47 EDT (Prepared Illinois IL25.3 third state-scale batch and passed dry prompt review) - await separately authorized direct-SDK smoke and live run
 
 **Did**
