@@ -6,6 +6,41 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-20 21:47 EDT (Prepared Illinois IL25.3 third state-scale batch and passed dry prompt review) - await separately authorized direct-SDK smoke and live run
+
+**Did**
+- Started at `0e710b79fd95cc22db49d5c4972cc6abee623ad6` and inspected `tmp/national_batch01_il25_2_live_direct_sdk_2026-07-20_relay_0e710b7.zip` first. The ZIP passed integrity testing, and all 15 requested files shared by relay and repository matched byte-for-byte. Ten named older/authoritative files were repo-only omissions from the narrow relay; the repository is exactly at the relay commit, so they are complementary rather than conflicting evidence. No remote was inspected, changed, or pushed.
+- Added a reproducible local builder and full-context IL25.3 input containing exactly Lombard, Buffalo Grove, Park Ridge, Streamwood, Wheeling, Calumet City, Northbrook, St. Charles, Mundelein, Elk Grove Village, North Chicago, Highland Park, Batavia, Edwardsville, Belvidere, Kankakee, Ottawa, Jacksonville, Marion, East Peoria, East Moline, Sycamore, Alton, Rolling Meadows, and Mattoon.
+- Every selected row is a Census municipal/place city or village, `not_scouted`, has zero failed attempts, is absent from IL25 and IL25.2, is absent from the national queue and canonical corpus, and preserves all county relationships. All 49 successfully covered Illinois municipalities and Bloomington's failure-only row were excluded; Bloomington was not retried.
+- Ran the prescribed minimal dry run through `.venv/bin/python`. Run `il_2026-07-20_214419` built 25 prompts and wrote only `prompt_preview.md` and `run_metadata.json`; metadata records `live_attempted=false`. No model/API call, hosted search, source opening, download, verification, ingestion, codification, queue/coverage rebuild, or canonical/corpus edit occurred.
+
+**Decisions and why**
+- The controlled mix is 5 large city/state anchors, 7 mid-city comparisons, 7 regional-diversity candidates, 2 IL25 continuity candidates, 2 IL25.2 continuity candidates, and 2 clean smaller municipal employers. The batch contains 18 cities and 7 villages, spans 30 municipality-county relationships across 14 counties, and ranges from 16,560 to 43,779 residents.
+- Continuity rows are independent employers near earlier Illinois settings; they inherit no source, cycle, candidate, verification, ingestion, canonical, codified, or claim status.
+- The rendered preview passed every requested contract check for every prompt: exact employer/ID, substitute-employer exclusions, ordinary-civilian scope, safety-not-non-safety, context/insufficient staging, blocked/dead separation, visible years, duplicate control, matched-cycle purpose, empty-output permission, and unverified-stage quarantine.
+
+**Surprises/breakage**
+- The spreadsheet skill's required workspace-dependency loader was unavailable, so its artifact-tool workflow remained blocked. The repo's deterministic CSV builder and parse-back assertions were used without installing or guessing a substitute.
+- The shell `python`/`python3` shims remained unusable; `.venv/bin/python` was used consistently.
+
+**Validation/audit results**
+```text
+seven-script py_compile: exit 0
+IL25.3 input builder: 25 exact rows; prior-batch/Bloomington/coverage/queue/canonical/county/schema assertions passed
+dry run: 25 IL prompts; live_attempted=false; only preview and metadata written
+direct-SDK regression test: 6 PASS checks
+prompt-contract regression test: 6 PASS checks
+validate.py: PASSED (64 contracts; 0 discourse; 64 coverage; 3 city attributes)
+ingest/test_pipeline.py: 60 passed, 0 failed
+audit_coverage.py: 28 healthy pairs (10 exact, 18 overlap), 2 exploratory adjacent, 6 unmatched safety units
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units. This dry-run preparation changed no canonical row.
+
+**Next steps**
+1. Do not launch IL25.3 automatically. Under separate authorization, first pass a fresh one-request direct-SDK no-search smoke preflight.
+2. Only after that gate and separate live authorization, run exactly this locked 25-row input serially with zero retries; preserve artifacts, queue unverified candidates, and rebuild discovery coverage. Continue to defer verification, ingestion, codification, and claim use.
+
 ## 2026-07-20 21:26 EDT (Locked Illinois IL25.2 direct-SDK scout completed with 25 successful responses and 72 unverified leads) - continue national scouting; defer verification and ingestion
 
 **Did**

@@ -2,9 +2,26 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-20T21:26:00-04:00`
+Last updated: `2026-07-20T21:47:00-04:00`
 
 ---
+
+## 2026-07-20T21:47:00-04:00 — Illinois IL25.3 full-context input is dry-run ready; no live/model action ran
+
+### Current State
+
+- **Checkpoint reconciliation:** started at `0e710b79fd95cc22db49d5c4972cc6abee623ad6` (`Record Illinois IL25.2 direct SDK scout`). The supplied IL25.2 relay passed integrity testing. All 15 requested shared files matched the repository byte-for-byte. The older IL25 artifacts, authoritative universe/crosswalk, manifest, prompt/backend notes, scout runner, and top-level coverage builder were repo-only narrow-bundle omissions; the repository is exactly at the relay commit, so no source-of-truth conflict exists. No remote operation occurred.
+- **Locked input:** [national_batch01_il25_3_scout_input_2026-07-20.csv](national_batch01_il25_3_scout_input_2026-07-20.csv) contains Lombard, Buffalo Grove, Park Ridge, Streamwood, Wheeling, Calumet City, Northbrook, St. Charles, Mundelein, Elk Grove Village, North Chicago, Highland Park, Batavia, Edwardsville, Belvidere, Kankakee, Ottawa, Jacksonville, Marion, East Peoria, East Moline, Sycamore, Alton, Rolling Meadows, and Mattoon, in that order.
+- **Selection gate:** all 25 rows are unique Census municipal/place city or village employers, `not_scouted`, zero-failure, absent from IL25, IL25.2, the 318-row queue, and the canonical corpus. Bloomington remains failure-only and is excluded. The builder asserts IL25's 23 candidate-positive/one empty/one failure distribution and IL25.2's 22 candidate-positive/three empty distribution before writing.
+- **Design:** bucket counts are 5 large anchors, 7 medium comparisons, 7 regional-diversity cities, 2 IL25 continuities, 2 IL25.2 continuities, and 2 clean smaller employers. The 18-city/7-village batch covers 30 county relationships across 14 counties and populations from 16,560 to 43,779. Continuity never transfers source or downstream status.
+- **Dry run only:** `.venv/bin/python scripts/gabriel_state_source_scout.py --dry-run --state IL --municipalities-csv docs/analysis/national_batch01_il25_3_scout_input_2026-07-20.csv --output-dir tmp/gabriel_state_source_scout/IL/national_batch01_il25_3_filter_contract_dry_run_2026-07-20 --prompt-mode minimal` exited 0. Run `il_2026-07-20_214419` built 25 prompts and wrote only preview and metadata; `live_attempted=false`. No model/API call, hosted search, source review, verification, ingestion, codification, queue/coverage update, or canonical edit occurred.
+- **Prompt review:** [national_batch01_il25_3_filter_contract_dry_run_review_2026-07-20.md](national_batch01_il25_3_filter_contract_dry_run_review_2026-07-20.md) confirms 25 exact employer/ID prompts and 25 occurrences of every common filtering/staging clause: categorical substitute exclusions, ordinary civilian non-safety, safety-not-non-safety, context/insufficient separation, blocked/dead separation, visible years, duplicate controls, matched-cycle purpose, empty-output permission, and unverified-stage quarantine.
+- **Planning envelope:** IL25, IL25.2, and NY25 imply roughly 24-30 minutes, 0.95-1.05 million input tokens, 44,000-50,000 reasoning tokens, and 69,000-80,000 output tokens for a similar future serial run. Direct-SDK/HUIT billed dollars remain unavailable; no actual dollar cost is inferred.
+- **Validation:** seven scripts compiled; the input builder reproduced all 25 rows; direct-SDK and prompt-contract suites passed 6/6 each; schema validation passed at 64 contracts; ingestion tests passed 60/60; canonical audit remains 28 healthy pairs, 2 exploratory adjacent pairs, and 6 unmatched safety units.
+
+### Next Move
+
+Do not live-scout IL25.3 automatically. If separately authorized, first run a fresh one-request direct-SDK no-search smoke and require `OK`, a response ID, positive output tokens, explicit success, zero retries, and no connection error. Only then run exactly the locked 25 rows serially through `--live-backend direct-sdk`; preserve all artifacts, add parsed rows to the queue as `unverified_scout_candidate`, and count only parseable candidate/empty outputs as discovery coverage. Verification, ingestion, canonical, codified, and claim statuses remain deferred and separate.
 
 ## 2026-07-20T21:26:00-04:00 — Illinois IL25.2 live scout succeeded; 72 leads queued and all 25 municipalities count as discovery-covered
 
