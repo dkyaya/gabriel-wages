@@ -2,9 +2,28 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-20T20:30:00-04:00`
+Last updated: `2026-07-20T20:47:00-04:00`
 
 ---
+
+## 2026-07-20T20:47:00-04:00 — Illinois IL25.2 second state-scale input is dry-run ready; no live/model action ran
+
+### Current State
+
+- **Checkpoint reconciliation:** started at `11d41cae513c4fa8451b3f76e20b425343659eb4` (`Record New York 25-city direct SDK scout`). The supplied `tmp/national_batch01_ny25_live_direct_sdk_2026-07-20_relay_11d41ca.zip` passed integrity inspection. All 16 requested shared relay/repository files matched byte-for-byte. Eight requested authoritative/context files were repository-only omissions from the narrow relay—the universe, crosswalk, three IL25 artifacts, manifest, prompt-refinement note, and scout runner—and did not conflict with the relay. No Git remote was inspected or changed.
+- **Locked input:** [national_batch01_il25_2_scout_input_2026-07-20.csv](national_batch01_il25_2_scout_input_2026-07-20.csv) contains Arlington Heights, Oak Lawn, Berwyn, Mount Prospect, Wheaton, Oak Park, Hoffman Estates, Downers Grove, Plainfield, Glenview, Elmhurst, Romeoville, Crystal Lake, DeKalb, Carpentersville, Oswego, Pekin, Danville, Granite City, Urbana, Rock Island, O'Fallon, Loves Park, Galesburg, and Freeport, in that order.
+- **Exclusion gate:** all 25 prior IL25 IDs are blocked. Current coverage reconciles those prior rows as 23 candidate-positive, Champaign parseable-empty, and Bloomington failure-only. Every IL25.2 row is `not_scouted`, has zero failed attempts, and is absent from the queue and canonical corpus. Bloomington was not selected or retried. No other covered municipality can pass the same status gate.
+- **Employer/selection:** all rows are Census `municipal` / `place` governments; 14 are cities and 11 villages. No town/township, county, school, transit, housing, park, fire/water, special-district, university, regional, or private target is present. Bucket counts are 5 large anchors, 7 mid-city comparisons, 7 regional-diversity candidates, 4 continuity-with-IL25 candidates, and 2 clean municipal-employer candidates.
+- **Geography:** population ranges from 23,136 to 74,495. The input preserves 31 relationships across 18 counties. Hoffman Estates, Plainfield, Elmhurst, Oswego, Pekin, and Loves Park are multi-county. The four continuity rows are independent employers near Champaign, Moline, Belleville, and Rockford; they inherit no source or verification status.
+- **Reproducibility:** `scripts/build_national_batch01_il25_2_scout_input.py` rebuilds the CSV and asserts exact order, controlled buckets, unique city/village identity, no prior IL25/Bloomington/queue/canonical overlap, untouched and zero-failure coverage, complete county joins, and parse-back schema.
+- **Dry run:** `.venv/bin/python scripts/gabriel_state_source_scout.py --dry-run --state IL --municipalities-csv docs/analysis/national_batch01_il25_2_scout_input_2026-07-20.csv --output-dir tmp/gabriel_state_source_scout/IL/national_batch01_il25_2_filter_contract_dry_run_2026-07-20 --prompt-mode minimal` exited 0. Run `il_2026-07-20_204520` contains 25 prompts, `live_attempted=false`, and only preview/metadata artifacts. No API/model, hosted search, URL opening, verification, ingestion, codification, queue/coverage update, canonical edit, or Bloomington retry occurred.
+- **Prompt contract:** the [dry-run review](national_batch01_il25_2_filter_contract_dry_run_review_2026-07-20.md) confirms 25/25 exact employer/Census-ID checks and every categorical exclusion, ordinary-civilian restriction, safety prohibition, context/insufficient stage, blocked/dead distinction, visible-year, duplicate, matched/repeat-cycle, empty-output, and unverified-stage requirement. The [selection methodology](national_batch01_il25_2_selection_methodology_2026-07-20.md) records the state-scale rationale.
+- **Future envelope:** based on IL25 and NY25, plan for roughly 24-32 minutes, 0.95-1.10 million input, 43,000-52,000 reasoning, and 68,000-85,000 output tokens. Direct-SDK billed dollars were unavailable; `$0.27-$0.30` remains only a non-equivalent older GABRIEL proxy.
+- **Validation:** all seven requested/added compiles passed; the IL25.2 builder regenerated and reconciled 25 exact rows; direct-SDK and prompt suites passed 6/6 each; schema validation passed at 64 contracts; ingestion tests passed 60/60; canonical coverage remains 28 healthy pairs, 2 exploratory adjacent pairs, and 6 unmatched safety units.
+
+### Next Move
+
+Do not run IL25.2 automatically. Under separate authorization, first require a fresh direct-SDK synthetic no-search preflight with expected `OK`, response ID, positive output tokens, one request, zero retries, and explicit success. Only after that gate and separate live authorization should the exact locked 25-row input run through `--live-backend direct-sdk`, serially, with 15-second spacing and zero retries. Preserve all artifacts, queue only unverified leads, update discovery coverage, and keep verification, ingestion, codification, and claim use deferred.
 
 ## 2026-07-20T20:30:00-04:00 — New York NY25 direct-SDK scout completed 25/25; 57 leads are queued and remain unverified
 

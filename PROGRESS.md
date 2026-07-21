@@ -6,6 +6,42 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-20 20:47 EDT (Prepared Illinois IL25.2 second state-scale batch and passed dry prompt review) - await separately authorized direct-SDK smoke and live run
+
+**Did**
+- Started at `11d41cae513c4fa8451b3f76e20b425343659eb4` and inspected `tmp/national_batch01_ny25_live_direct_sdk_2026-07-20_relay_11d41ca.zip` first. The ZIP passed integrity testing; all 16 requested shared relay/repository files matched byte-for-byte. The authoritative universe/crosswalk, prior IL25 materials, manifest, prompt-refinement note, and scout runner were repository-only files omitted from the narrow relay and did not conflict with it. No remote was inspected, changed, or pushed.
+- Added a reproducible local builder and the full-context second Illinois 25-municipality input. All rows are Census `municipal` / `place` city or village governments, `not_scouted`, have zero failed attempts, are absent from IL25, the candidate queue, and canonical overlap, and preserve every county relationship.
+- Explicitly excluded all prior IL25 IDs: 23 candidate-positive municipalities, parseable-empty Champaign, and failure-only Bloomington. Bloomington was not retried. The five Illinois manifest rows were already successfully covered in IL25, so IL25.2 extends beyond the manifest into the next municipal-employer tier.
+- Selected Arlington Heights, Oak Lawn, Berwyn, Mount Prospect, Wheaton, Oak Park, Hoffman Estates, Downers Grove, Plainfield, Glenview, Elmhurst, Romeoville, Crystal Lake, DeKalb, Carpentersville, Oswego, Pekin, Danville, Granite City, Urbana, Rock Island, O'Fallon, Loves Park, Galesburg, and Freeport. The batch spans 31 municipality-county relationships across 18 counties; six employers are multi-county.
+- Ran the prescribed minimal dry run with `.venv/bin/python`. Run `il_2026-07-20_204520` built 25 prompts and wrote only `prompt_preview.md` and `run_metadata.json`; metadata records `live_attempted=false`. No model/API call, hosted search, URL opening, download, verification, ingestion, codification, queue/coverage rebuild, or canonical/corpus edit occurred.
+
+**Decisions and why**
+- The controlled mix is 5 large city/state anchors, 7 mid-city comparisons, 7 regional-diversity candidates, 4 continuity-with-IL25 candidates, and 2 clean municipal-employer candidates. Four continuity rows provide independent municipal comparisons near Champaign, Moline, Belleville, and Rockford; they do not inherit source or verification status.
+- Cicero was not selected despite its size because its formal `TOWN OF CICERO` name would create avoidable township-boundary ambiguity. IL25.2 uses only unambiguous `CITY OF` and `VILLAGE OF` employers.
+- The prompt review passed every requested contract check: exact employer/ID, substitute-employer exclusions, ordinary-civilian scope, safety-not-non-safety, context/insufficient staging, blocked/dead separation, visible years, duplicate controls, cycle purpose, empty-output permission, and unverified-stage status.
+
+**Surprises/breakage**
+- The spreadsheet skill's required workspace-dependency loader was unavailable, so its artifact-tool workflow was blocked. The repo's deterministic CSV builder and parse-back assertions were used without installing or guessing a substitute.
+- The shell's `python` and `python3` shims remained unusable; `.venv/bin/python` was used consistently.
+
+**Validation/audit results**
+```text
+all seven requested/added py_compile checks: exit 0
+IL25.2 input builder: 25 exact rows; coverage/IL25/Bloomington/queue/canonical/county/schema assertions passed
+dry run: 25 IL municipality prompts; live_attempted=false; only preview and metadata written
+direct-SDK regression test: 6 PASS checks
+prompt-contract regression test: 6 PASS checks
+validate.py: PASSED (64 contracts; 0 discourse; 64 coverage; 3 city attributes)
+ingest/test_pipeline.py: 60 passed, 0 failed
+audit_coverage.py: 28 healthy pairs (10 exact, 18 overlap), 2 exploratory adjacent, 6 unmatched safety units
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units. This dry-run preparation changed no canonical contract, coverage, or corpus row.
+
+**Next steps**
+1. Do not launch IL25.2 automatically. Under separate authorization, first pass a fresh one-request direct-SDK no-search smoke preflight.
+2. Only after that gate and separate live authorization, run exactly this locked 25-row input serially with zero retries; preserve artifacts, queue unverified candidates, and rebuild discovery coverage. Continue to defer verification, ingestion, codification, and claim use.
+
 ## 2026-07-20 20:30 EDT (Locked New York 25-city direct-SDK scout completed with 25 successful responses and 57 unverified leads) - continue national scouting; defer verification and ingestion
 
 **Did**
