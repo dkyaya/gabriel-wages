@@ -6,6 +6,38 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-21 12:15 EDT (Created reusable Gabriel scout-orchestration prompt templates; no scout/API or research action)
+
+**Did**
+- Started at `d8c269a058edcfe0fc03c3b3a3e4acf619500517` (`Scaffold national evidence dashboard`) and read the current project instructions, progress/handoff state, parallel-scout workflow, coordinator prompt, and both existing Stage 1 worker prompts. No remote was inspected, configured, created, validated, changed, or pushed.
+- Added five durable, placeholder-driven documents under `docs/prompts/`: a combined state-scout template, isolated parallel-worker template, coordinator-only merge template, scaling ladder, and an index/usage guide. The templates abstract the currently locked CA/NJ Stage 1 details without replacing them.
+- Encoded the gate sequence: prepare a 25-row state input if needed; dry-run preview and full checklist; synthetic direct-SDK smoke; explicitly authorized serial live run only after smoke success; then appropriate queue/coverage accounting. All templates explicitly prohibit verification, ingestion, codification, canonical/corpus edits, remote activity, and secret exposure.
+- Defined persistent parallel lanes (`worker-1`, `worker-2`, `worker-3`) in separate worktrees/copies. Workers use locked input, `--live-backend direct-sdk`, `--n-parallels 1`, zero retries, batch-specific cost logs/artifacts, and no global rebuild; the main-repo coordinator audits relays and rebuilds national queue/coverage once.
+- Recorded the requested model-profile guidance: Heavy / GPT-5.6 Sol for selection, methodology, debugging, architecture, and prompt/filter-contract changes; Routine / GPT-5.6 Terra for locked runs, deterministic rebuilds, and relays; Low / GPT-5.4 for tiny documentation cleanup only.
+
+**Decisions and why**
+- Kept the templates parameterized rather than hard-coding CA25.2/NJ25 names so future state waves and stages can reuse the same guardrails without copying historical prompts.
+- Made a smoke preflight and a live scout separate authorization gates. This preserves the project's existing boundary between infrastructure/API health checks and research execution.
+- Stage 3 remains conditional on a separately reviewed, tested hard-cap increase from 25 to 50; a prompt alone cannot authorize or bypass that code limit.
+
+**Surprises/breakage**
+- No dedicated Markdown linter was installed or configured. The available `git diff --check` passed; no dependency was installed.
+- An unrelated untracked `.claude/` directory was present before this task and was left untouched.
+
+**Validation/audit results**
+```text
+git diff --check: passed
+validate.py: PASSED (64 contracts; 0 discourse; 64 coverage; 3 city attributes)
+ingest/test_pipeline.py: 60 passed, 0 failed
+audit_coverage.py: 28 healthy pairs (10 exact, 18 overlap), 2 exploratory adjacent, 6 unmatched safety units
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units. No canonical row changed.
+
+**Next steps**
+1. Treat these templates as the durable starting point for a separately authorized live state-scout or parallel worker wave; use the existing locked Stage 1 prompts for the already prepared CA25.2/NJ25 test.
+2. If Stage 1 runs, use the coordinator template once both sanitized worker relays arrive. Do not verify, ingest, codify, retry failed rows, or scale beyond the documented gates without separate authorization.
+
 ## 2026-07-21 11:52 EDT (Built static national evidence-dashboard architecture, JSON pipeline, and React/Vite draft; no scout/API call)
 
 **Did**

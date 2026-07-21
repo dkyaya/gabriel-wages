@@ -2,9 +2,26 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-21T11:52:00-04:00`
+Last updated: `2026-07-21T12:15:00-04:00`
 
 ---
+
+## 2026-07-21T12:15:00-04:00 — Reusable Gabriel scout orchestration prompts are ready; no live action ran
+
+### Current State
+
+- **Starting checkpoint:** `d8c269a058edcfe0fc03c3b3a3e4acf619500517` (`Scaffold national evidence dashboard`). The current project instructions, progress/handoff state, [parallel workflow](parallel_scout_workflow_2026-07-21.md), [historical coordinator prompt](parallel_scout_coordinator_merge_prompt_2026-07-21.md), and both existing Stage 1 worker prompts were read before editing. No remote was inspected, modified, or pushed.
+- **Durable templates:** [docs/prompts/README.md](../prompts/README.md) indexes four reusable templates: [combined scout](../prompts/gabriel_combined_scout_template.md), [parallel worker](../prompts/gabriel_parallel_worker_template.md), [coordinator merge](../prompts/gabriel_parallel_coordinator_merge_template.md), and [scaling ladder](../prompts/gabriel_parallel_scaling_ladder.md). They use placeholders rather than CA/NJ-specific names, so they can support future state batches while retaining the existing locked Stage 1 prompts unchanged.
+- **Combined path:** the combined template requires a deterministic 25-row selection/preparation when no locked input exists, dry-run prompt preview and checklist, a one-request direct-SDK smoke, and a separately authorized serial live run only after smoke success. It then allows one appropriate queue/coverage update while prohibiting verification, ingestion, codification, and canonical/corpus edits.
+- **Parallel path:** persistent `worker-1`, `worker-2`, and `worker-3` lanes run only in separate worktrees/repo copies with locked input, dry-run first, direct-SDK smoke, `--live-backend direct-sdk`, `--n-parallels 1`, zero retries, batch-specific artifacts and cost logs, and no global queue/coverage rebuild. The coordinator template limits global accounting to the main repository after scope-auditing completed relays.
+- **Scaling:** the ladder defines Stage 1 as two concurrent 25-row workers, Stage 2 as three concurrent 25-row workers, and Stage 3 as parallel 50-row workers only after Stage 2 and a separately reviewed/tested hard-cap increase. Promotion requires smoke success, no connection collapse, at least 90% parseable outcomes, no major schema failure, manageable candidate volume, clean coordinator merge, and successful validation.
+- **Profiles:** Heavy / GPT-5.6 Sol is reserved for selection, methodology, debugging, architecture, and prompt/filter-contract changes; Routine / GPT-5.6 Terra for locked worker runs, queue/coverage rebuilds, and relay packaging; Low / GPT-5.4 for tiny documentation cleanup only.
+- **Protected state:** no scout, model/API call, URL opening/download, source verification, ingestion, `gabriel.codify`, canonical/corpus change, queue/coverage rebuild, or remote action occurred. An unrelated pre-existing untracked `.claude/` directory was not changed.
+- **Validation:** `git diff --check` passed. `python scripts/validate.py` passed at 64 contracts / 0 discourse / 64 coverage / 3 city attributes; `python ingest/test_pipeline.py` passed 60/60; and `python ingest/audit_coverage.py` remains 28 healthy pairs (10 exact, 18 overlap), two exploratory adjacent pairs, and six unmatched safety units.
+
+### Next Move
+
+Use the existing CA25.2/NJ25 Stage 1 prompts only under separate live authorization in two isolated worker copies. Once both sanitized relays arrive, use the reusable coordinator template to audit/import valid worker artifacts and rebuild national queue/coverage exactly once. Do not verify, ingest, codify, retry failure-only rows, or promote to Stage 2 absent the documented gates.
 
 ## 2026-07-21T11:52:00-04:00 — Static national evidence-dashboard architecture, JSON builder, and React/Vite draft are ready
 
