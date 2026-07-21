@@ -2,9 +2,28 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-21T11:22:23-04:00`
+Last updated: `2026-07-21T11:52:00-04:00`
 
 ---
+
+## 2026-07-21T11:52:00-04:00 — Static national evidence-dashboard architecture, JSON builder, and React/Vite draft are ready
+
+### Current State
+
+- **Checkpoint/source reconciliation:** started at `2e8ea734a97920021dc0c76741b33679bb0d7dee` (`Prepare Stage 1 parallel scout workflow`). `tmp/parallel_scout_stage1_preparation_2026-07-21_relay_2e8ea73.zip` was inspected first. The seven requested planning files carried in the relay match the repository byte-for-byte. The requested national queue/coverage/universe/crosswalk and claim tables are committed repository predecessors omitted from the narrow relay, not conflicts. No remote was inspected, modified, or pushed.
+- **Architecture:** [dashboard_architecture_plan_2026-07-21.md](dashboard_architecture_plan_2026-07-21.md) defines a React/Vite, GitHub Pages-ready, backend-free design. It covers the national map, state panel, printable state report, candidate explorer, coverage funnel, claim/evidence panel, analysis-readiness panel, and later regression panel. The dashboard is a persistent status/exploration layer and does not replace claim-centered PI reports.
+- **Data contract:** [dashboard_data_schema_2026-07-21.md](dashboard_data_schema_2026-07-21.md) defines the shared metadata envelope and current/future JSON fields. Null is distinct from zero. Scout, calibration, project-wide verification, ingestion, codified evidence, wage extraction, regression, and claim stages remain separate.
+- **Builder:** `scripts/build_dashboard_data.py` is local-only and standard-library based. It reads national state/municipality coverage, the municipality universe, the candidate queue, and optional claim/state-city/hypothesis tables. It validates all 51 state/DC rows, 35,589 municipality identities/counts, unique queue IDs, and allowed scout/calibration status labels. It never edits its inputs, opens URLs, calls a model, verifies, ingests, or changes canonical data.
+- **Generated data:** `docs/dashboard/data/state_summary.json`, `candidate_queue_summary.json`, `coverage_funnel.json`, and `analysis_readiness.json` are valid JSON. The [build summary](dashboard_data_build_summary_2026-07-21.md) records 35,589 municipal governments; 159 scout-covered; 145 candidate-positive; 14 parseable-empty; 5 current failure-only municipalities; 21 excluded connection attempts; 451 queue rows; 279/49/27 high/medium/low later-verification rows; 96 holds/rejections; and 89 likely matched-set leads. Project-wide verified, ingested, wage, and regression values are null.
+- **Frontend draft:** `docs/dashboard/` contains a draft package, Vite config, React source, print styles, component plan, design system, and README. It imports committed JSON and uses a state-grid map shell plus right-side state brief, funnel, queue overview, claim context, and disabled regression area. The repository has Node/npm but had no existing Vite project or installed dependencies. No package was installed and no frontend build ran. A later token-free Leaflet choropleth requires a reviewed, provenance-documented static state GeoJSON.
+- **Readiness score:** state map coloring uses a transparent operational discovery-readiness score (coverage presence, candidate-positive share, high-priority lead volume, likely matched-set lead volume, and prior claim context). It is explicitly not evidence strength, a wage result, or a substantive state ranking.
+- **Report/regression roadmap:** [next_report_and_regression_roadmap_2026-07-21.md](next_report_and_regression_roadmap_2026-07-21.md) proposes the PI report, current discovery-process analyses, exploratory data-availability regressions, pilot wage specifications, and full within-city-cycle wage-gap program. Early models must be labeled exploratory/pilot and expose source-stage limitations.
+- **Protected state:** no live/model/API call, scout, URL opening, source verification, download, ingestion, codification, wage extraction, regression, canonical/corpus edit, remote action, or push occurred. The prior Stage 1 CA25.2/NJ25 plan remains unchanged and unexecuted.
+- **Validation:** seven compile commands passed; the dashboard build and four JSON parse checks passed; direct-SDK tests are 8/8; prompt-contract tests are 6/6; schema validation passed at 64 contracts; ingestion tests passed 60/60; canonical coverage remains 28 healthy pairs (10 exact, 18 overlap), two exploratory adjacent matches, and six unmatched safety units.
+
+### Next Move
+
+The immediate research next move remains the separately authorized Stage 1 parallel scout test: run the locked CA25.2 and NJ25 workers in separate worktrees, then use one coordinator to import both relays and rebuild queue/coverage once. After that merge, rerun `python scripts/build_dashboard_data.py` so the dashboard reflects both workers atomically. Separately, a later frontend task can approve locked dependency installation, add a public-domain state GeoJSON with provenance, implement/test the Leaflet map and print route, and decide whether to add a GitHub Pages workflow. Do not activate project-wide verification, ingestion, wage, or regression metrics until dedicated validated inputs exist.
 
 ## 2026-07-21T11:22:23-04:00 — Stage 1 parallel workflow and two locked 25-row worker batches are ready; no live action ran
 

@@ -6,6 +6,42 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-21 11:52 EDT (Built static national evidence-dashboard architecture, JSON pipeline, and React/Vite draft; no scout/API call)
+
+**Did**
+- Started at `2e8ea734a97920021dc0c76741b33679bb0d7dee` and inspected `tmp/parallel_scout_stage1_preparation_2026-07-21_relay_2e8ea73.zip` first. The seven requested planning files carried by the relay match the repository byte-for-byte. The requested queue/coverage/universe/crosswalk and claim tables were deliberate relay omissions present as committed repository inputs; no shared file conflicted. No remote was inspected or changed.
+- Added a non-destructive static builder, `scripts/build_dashboard_data.py`. It validates 51 state/DC rows, universe/municipality count agreement, unique municipality/queue IDs, and scout/calibration status boundaries, then writes four JSON files under `docs/dashboard/data/`. Missing optional claim inputs warn and produce null/empty placeholders; missing required queue/coverage inputs stop the build.
+- Wrote the dashboard architecture, JSON schema, build summary, and PI report/regression roadmap. The design keeps scout, calibration, verification, ingestion, codified evidence, claims, wage extraction, and regression stages distinct. Current discovery metrics are displayed; project-wide verified, ingested, wage, and regression fields remain null.
+- Added an uninstalled React/Vite draft under `docs/dashboard/` with static JSON imports, national headline cards, a token-free state-grid map shell, right-side state brief, hash-routed print view, coverage funnel, queue explorer, claim-context panel, and unavailable regression panel. Node/npm are present, but the repository had no Vite project or installed dependencies; no package installation or frontend build ran. A future Leaflet map requires a provenance-documented committed state GeoJSON, not a token.
+- Built 51 state/DC summaries from the current national tables: 35,589 municipal governments; 159 scout-covered; 145 candidate-positive; 14 parseable-empty; 5 current failure-only municipalities; 21 connection-failed attempts; 451 queue rows; 279/49/27 high/medium/low later-verification rows; 96 holds/rejections; and 89 likely matched-set lead groups. These are pipeline metrics, not wage findings.
+
+**Decisions and why**
+- The dashboard complements rather than replaces PI reports. It persists current status and prints standardized state appendices; claim-centered reports still provide evidence, reasoning, counterevidence, limitations, and decisions.
+- The map color uses a documented operational discovery-readiness score, not evidence strength or a substantive state ranking. The UI never treats candidate volume or likely unit labels as verified source quality, matched cycles, wage gaps, mechanisms, or claim support.
+- Early regressions should begin with discovery-process outcomes and later move to explicitly labeled pilot wage specifications only after verified/extracted city × cycle × bargaining-unit data exist. Full wage-gap estimates retain the within-city-cycle design.
+
+**Surprises/breakage**
+- The current queue's `scout_stage_status` includes explicit `calibration_*` overlays in addition to `unverified_scout_candidate`. The builder was adjusted to allow those bounded labels while rejecting unexpected promotion statuses; calibration remains separate from project-wide verification.
+- The spreadsheet artifact dependency loader was unavailable. Because this task builds JSON rather than a workbook, the deterministic standard-library CSV/JSON builder is the appropriate local fallback. No dependency was installed.
+
+**Validation/audit results**
+```text
+seven requested/added py_compile commands: exit 0
+dashboard builder: 51 states/DC; 35,589 municipalities; 159 scout-covered; 451 candidate rows
+dashboard JSON parse checks: 4/4 valid
+direct-SDK regression test: 8 PASS checks
+prompt-contract regression test: 6 PASS checks
+validate.py: PASSED (64 contracts; 0 discourse; 64 coverage; 3 city attributes)
+ingest/test_pipeline.py: 60 passed, 0 failed
+audit_coverage.py: 28 healthy pairs (10 exact, 18 overlap), 2 exploratory adjacent, 6 unmatched safety units
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units. No canonical row changed.
+
+**Next steps**
+1. Run the already planned Stage 1 parallel CA25.2/NJ25 workers only in isolated worktrees and under separate live authorization, then perform one coordinator queue/coverage merge and rerun the dashboard builder.
+2. In a later frontend task, review/install locked dependencies, add a public-domain simplified state GeoJSON with provenance, implement the Leaflet choropleth, render-test the printable state route, and separately authorize any GitHub Pages workflow. No wage or regression panel should activate before validated structured inputs exist.
+
 ## 2026-07-21 11:22 EDT (Prepared two isolated Stage 1 parallel 25-row worker batches; no scout/API call) - await separate live authorization
 
 **Did**

@@ -1,0 +1,94 @@
+{
+  "metadata": {
+    "schema_version": "0.1.0",
+    "generated_at": "2026-07-21T15:51:30Z",
+    "data_vintage": "2026-07-20",
+    "source_files": [
+      "docs/analysis/national_scout_coverage_state.csv",
+      "docs/analysis/national_scout_coverage_municipality_2026-07-20.csv",
+      "docs/analysis/national_municipality_universe.csv",
+      "docs/analysis/national_scout_candidate_queue_2026-07-20.csv",
+      "docs/analysis/claim_register_2026-07-12.csv",
+      "docs/analysis/state_city_claim_map_2026-07-12.csv",
+      "docs/analysis/hypothesis_tracker_2026-07-12.csv"
+    ],
+    "warnings": [],
+    "limitations": [
+      "Scout coverage records parseable source-discovery outcomes, not source verification.",
+      "Candidate rows are unverified leads and must not be cited as claim evidence.",
+      "A parseable empty candidate list is a completed scout outcome, not proof that no source exists.",
+      "Connection-only failures are excluded from discovery coverage and counted separately.",
+      "Likely matched-set groups are scheduling leads inferred from scout unit labels, not verified city-cycle matches.",
+      "Project-wide verified, ingested, wage-extraction, codified, and regression metrics are not yet wired into this dashboard build."
+    ]
+  },
+  "current_funnel": [
+    {
+      "stage": "municipality_universe",
+      "label": "Municipal governments in universe",
+      "value": 35589,
+      "status": "current"
+    },
+    {
+      "stage": "scout_covered",
+      "label": "Parseable scout-covered municipalities",
+      "value": 159,
+      "status": "current"
+    },
+    {
+      "stage": "candidate_positive",
+      "label": "Candidate-positive municipalities",
+      "value": 145,
+      "status": "current_unverified"
+    },
+    {
+      "stage": "queued_for_later_verification",
+      "label": "Municipalities queued for later verification",
+      "value": 133,
+      "status": "current_unverified"
+    },
+    {
+      "stage": "likely_matched_set_leads",
+      "label": "Likely matched-set lead groups",
+      "value": 89,
+      "status": "current_unverified"
+    }
+  ],
+  "future_funnel": [
+    {
+      "stage": "verified_sources",
+      "label": "Project-wide verified sources",
+      "value": null,
+      "status": "future_input_required"
+    },
+    {
+      "stage": "ingested_contracts",
+      "label": "Dashboard-ready ingested contracts",
+      "value": null,
+      "status": "future_input_required"
+    },
+    {
+      "stage": "extracted_wage_observations",
+      "label": "Structured wage observations",
+      "value": null,
+      "status": "future_input_required"
+    },
+    {
+      "stage": "codified_mechanism_evidence",
+      "label": "Dashboard-ready codified mechanism evidence",
+      "value": null,
+      "status": "future_input_required"
+    },
+    {
+      "stage": "claim_ready_matched_sets",
+      "label": "Claim-ready matched city-cycle sets",
+      "value": null,
+      "status": "future_input_required"
+    }
+  ],
+  "separate_failure_accounting": {
+    "failure_only_municipalities": 5,
+    "connection_failed_attempts_excluded_from_coverage": 21,
+    "note": "Attempts are infrastructure outcomes, not source findings, and are not included in scout-covered counts."
+  }
+}

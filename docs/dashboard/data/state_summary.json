@@ -1,0 +1,2873 @@
+{
+  "metadata": {
+    "schema_version": "0.1.0",
+    "generated_at": "2026-07-21T15:51:30Z",
+    "data_vintage": "2026-07-20",
+    "source_files": [
+      "docs/analysis/national_scout_coverage_state.csv",
+      "docs/analysis/national_scout_coverage_municipality_2026-07-20.csv",
+      "docs/analysis/national_municipality_universe.csv",
+      "docs/analysis/national_scout_candidate_queue_2026-07-20.csv",
+      "docs/analysis/claim_register_2026-07-12.csv",
+      "docs/analysis/state_city_claim_map_2026-07-12.csv",
+      "docs/analysis/hypothesis_tracker_2026-07-12.csv"
+    ],
+    "warnings": [],
+    "limitations": [
+      "Scout coverage records parseable source-discovery outcomes, not source verification.",
+      "Candidate rows are unverified leads and must not be cited as claim evidence.",
+      "A parseable empty candidate list is a completed scout outcome, not proof that no source exists.",
+      "Connection-only failures are excluded from discovery coverage and counted separately.",
+      "Likely matched-set groups are scheduling leads inferred from scout unit labels, not verified city-cycle matches.",
+      "Project-wide verified, ingested, wage-extraction, codified, and regression metrics are not yet wired into this dashboard build."
+    ]
+  },
+  "metric_definition": {
+    "evidence_readiness_score": "Operational dashboard triage score: 20 points for any parseable coverage, up to 20 for candidate-positive share, up to 20 for high-priority lead volume, up to 30 for likely matched-set lead volume, and 10 for prior claim-registry context. It is not evidence strength and cannot make a state claim-ready.",
+    "map_color_metric": "evidence_readiness_score"
+  },
+  "totals": {
+    "states_and_dc": 51,
+    "states_with_scout_coverage": 7,
+    "municipality_universe": 35589,
+    "scout_covered_municipalities": 159,
+    "candidate_positive_municipalities": 145,
+    "no_candidate_municipalities": 14,
+    "failed_scout_municipalities": 5,
+    "failed_scout_attempts": 21,
+    "candidate_rows": 451,
+    "likely_matched_set_groups": 89,
+    "verified_sources": null,
+    "ingested_sources": null,
+    "wage_observations": null
+  },
+  "states": [
+    {
+      "state": "AK",
+      "state_name": "Alaska",
+      "municipality_universe": 149,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/AK",
+        "title": "Alaska municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 149
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "AL",
+      "state_name": "Alabama",
+      "municipality_universe": 463,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/AL",
+        "title": "Alabama municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 463
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "AR",
+      "state_name": "Arkansas",
+      "municipality_universe": 501,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/AR",
+        "title": "Arkansas municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 501
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "AZ",
+      "state_name": "Arizona",
+      "municipality_universe": 91,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/AZ",
+        "title": "Arizona municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 91
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "CA",
+      "state_name": "California",
+      "municipality_universe": 483,
+      "scout_coverage_count": 21,
+      "scout_coverage_rate": 4.3478,
+      "candidate_positive_count": 20,
+      "no_candidate_count": 1,
+      "failed_scout_municipality_count": 4,
+      "failed_scout_attempt_count": 4,
+      "candidate_rows": 64,
+      "high_priority_queue_count": 53,
+      "medium_priority_queue_count": 3,
+      "low_priority_queue_count": 2,
+      "hold_or_rejected_queue_count": 6,
+      "queued_municipality_count": 20,
+      "likely_matched_set_count": 17,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "matched_set_leads_need_verification",
+      "evidence_readiness_score": 89.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 89.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "21 of 483 municipal governments have parseable scout outcomes; 20 are candidate-positive, 1 returned parseable empty lists, and 17 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+      "printable_report_data": {
+        "route": "#/state/CA",
+        "title": "California municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 483
+          },
+          {
+            "label": "Scout covered",
+            "value": 21
+          },
+          {
+            "label": "Candidate positive",
+            "value": 20
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 17
+          }
+        ],
+        "narrative": "21 of 483 municipal governments have parseable scout outcomes; 20 are candidate-positive, 1 returned parseable empty lists, and 17 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "CO",
+      "state_name": "Colorado",
+      "municipality_universe": 271,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/CO",
+        "title": "Colorado municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 271
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "CT",
+      "state_name": "Connecticut",
+      "municipality_universe": 179,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/CT",
+        "title": "Connecticut municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 179
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "DC",
+      "state_name": "District of Columbia",
+      "municipality_universe": 1,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/DC",
+        "title": "District of Columbia municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 1
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "DE",
+      "state_name": "Delaware",
+      "municipality_universe": 57,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/DE",
+        "title": "Delaware municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 57
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "FL",
+      "state_name": "Florida",
+      "municipality_universe": 411,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/FL",
+        "title": "Florida municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 411
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "GA",
+      "state_name": "Georgia",
+      "municipality_universe": 537,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/GA",
+        "title": "Georgia municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 537
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "HI",
+      "state_name": "Hawaii",
+      "municipality_universe": 1,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/HI",
+        "title": "Hawaii municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 1
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "IA",
+      "state_name": "Iowa",
+      "municipality_universe": 939,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/IA",
+        "title": "Iowa municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 939
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "ID",
+      "state_name": "Idaho",
+      "municipality_universe": 198,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/ID",
+        "title": "Idaho municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 198
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "IL",
+      "state_name": "Illinois",
+      "municipality_universe": 2719,
+      "scout_coverage_count": 74,
+      "scout_coverage_rate": 2.7216,
+      "candidate_positive_count": 68,
+      "no_candidate_count": 6,
+      "failed_scout_municipality_count": 1,
+      "failed_scout_attempt_count": 1,
+      "candidate_rows": 217,
+      "high_priority_queue_count": 160,
+      "medium_priority_queue_count": 20,
+      "low_priority_queue_count": 2,
+      "hold_or_rejected_queue_count": 35,
+      "queued_municipality_count": 68,
+      "likely_matched_set_count": 49,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "matched_set_leads_need_verification",
+      "evidence_readiness_score": 88.4,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 88.4,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "74 of 2,719 municipal governments have parseable scout outcomes; 68 are candidate-positive, 6 returned parseable empty lists, and 49 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+      "printable_report_data": {
+        "route": "#/state/IL",
+        "title": "Illinois municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 2719
+          },
+          {
+            "label": "Scout covered",
+            "value": 74
+          },
+          {
+            "label": "Candidate positive",
+            "value": 68
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 49
+          }
+        ],
+        "narrative": "74 of 2,719 municipal governments have parseable scout outcomes; 68 are candidate-positive, 6 returned parseable empty lists, and 49 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "IN",
+      "state_name": "Indiana",
+      "municipality_universe": 1569,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/IN",
+        "title": "Indiana municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 1569
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "KS",
+      "state_name": "Kansas",
+      "municipality_universe": 1835,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/KS",
+        "title": "Kansas municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 1835
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "KY",
+      "state_name": "Kentucky",
+      "municipality_universe": 411,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/KY",
+        "title": "Kentucky municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 411
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "LA",
+      "state_name": "Louisiana",
+      "municipality_universe": 305,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/LA",
+        "title": "Louisiana municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 305
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "MA",
+      "state_name": "Massachusetts",
+      "municipality_universe": 351,
+      "scout_coverage_count": 8,
+      "scout_coverage_rate": 2.2792,
+      "candidate_positive_count": 8,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 16,
+      "candidate_rows": 24,
+      "high_priority_queue_count": 3,
+      "medium_priority_queue_count": 2,
+      "low_priority_queue_count": 8,
+      "hold_or_rejected_queue_count": 11,
+      "queued_municipality_count": 8,
+      "likely_matched_set_count": 2,
+      "calibration_verified_municipality_count": 8,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [
+        "CLM-2026-07-12-03",
+        "CLM-2026-07-12-04",
+        "CLM-2026-07-12-05",
+        "CLM-2026-07-12-06",
+        "CLM-2026-07-12-07"
+      ],
+      "claim_mapped_city_count": 9,
+      "claim_readiness_level": "matched_set_leads_need_verification",
+      "evidence_readiness_score": 62.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 62.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "8 of 351 municipal governments have parseable scout outcomes; 8 are candidate-positive, 0 returned parseable empty lists, and 2 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+      "printable_report_data": {
+        "route": "#/state/MA",
+        "title": "Massachusetts municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 351
+          },
+          {
+            "label": "Scout covered",
+            "value": 8
+          },
+          {
+            "label": "Candidate positive",
+            "value": 8
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 2
+          }
+        ],
+        "narrative": "8 of 351 municipal governments have parseable scout outcomes; 8 are candidate-positive, 0 returned parseable empty lists, and 2 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "MD",
+      "state_name": "Maryland",
+      "municipality_universe": 157,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/MD",
+        "title": "Maryland municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 157
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "ME",
+      "state_name": "Maine",
+      "municipality_universe": 482,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/ME",
+        "title": "Maine municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 482
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "MI",
+      "state_name": "Michigan",
+      "municipality_universe": 1773,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/MI",
+        "title": "Michigan municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 1773
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "MN",
+      "state_name": "Minnesota",
+      "municipality_universe": 2630,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/MN",
+        "title": "Minnesota municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 2630
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "MO",
+      "state_name": "Missouri",
+      "municipality_universe": 1217,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/MO",
+        "title": "Missouri municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 1217
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "MS",
+      "state_name": "Mississippi",
+      "municipality_universe": 299,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/MS",
+        "title": "Mississippi municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 299
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "MT",
+      "state_name": "Montana",
+      "municipality_universe": 127,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/MT",
+        "title": "Montana municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 127
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "NC",
+      "state_name": "North Carolina",
+      "municipality_universe": 550,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/NC",
+        "title": "North Carolina municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 550
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "ND",
+      "state_name": "North Dakota",
+      "municipality_universe": 1658,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/ND",
+        "title": "North Dakota municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 1658
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "NE",
+      "state_name": "Nebraska",
+      "municipality_universe": 859,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/NE",
+        "title": "Nebraska municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 859
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "NH",
+      "state_name": "New Hampshire",
+      "municipality_universe": 234,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/NH",
+        "title": "New Hampshire municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 234
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "NJ",
+      "state_name": "New Jersey",
+      "municipality_universe": 564,
+      "scout_coverage_count": 3,
+      "scout_coverage_rate": 0.5319,
+      "candidate_positive_count": 3,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 8,
+      "high_priority_queue_count": 5,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 3,
+      "queued_municipality_count": 3,
+      "likely_matched_set_count": 1,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [
+        "CLM-2026-07-12-06"
+      ],
+      "claim_mapped_city_count": 5,
+      "claim_readiness_level": "matched_set_leads_need_verification",
+      "evidence_readiness_score": 63.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 63.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "3 of 564 municipal governments have parseable scout outcomes; 3 are candidate-positive, 0 returned parseable empty lists, and 1 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+      "printable_report_data": {
+        "route": "#/state/NJ",
+        "title": "New Jersey municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 564
+          },
+          {
+            "label": "Scout covered",
+            "value": 3
+          },
+          {
+            "label": "Candidate positive",
+            "value": 3
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 1
+          }
+        ],
+        "narrative": "3 of 564 municipal governments have parseable scout outcomes; 3 are candidate-positive, 0 returned parseable empty lists, and 1 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "NM",
+      "state_name": "New Mexico",
+      "municipality_universe": 105,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/NM",
+        "title": "New Mexico municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 105
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "NV",
+      "state_name": "Nevada",
+      "municipality_universe": 19,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/NV",
+        "title": "Nevada municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 19
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "NY",
+      "state_name": "New York",
+      "municipality_universe": 1523,
+      "scout_coverage_count": 25,
+      "scout_coverage_rate": 1.6415,
+      "candidate_positive_count": 21,
+      "no_candidate_count": 4,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 57,
+      "high_priority_queue_count": 33,
+      "medium_priority_queue_count": 11,
+      "low_priority_queue_count": 4,
+      "hold_or_rejected_queue_count": 9,
+      "queued_municipality_count": 21,
+      "likely_matched_set_count": 9,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "matched_set_leads_need_verification",
+      "evidence_readiness_score": 83.8,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 83.8,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "25 of 1,523 municipal governments have parseable scout outcomes; 21 are candidate-positive, 4 returned parseable empty lists, and 9 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+      "printable_report_data": {
+        "route": "#/state/NY",
+        "title": "New York municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 1523
+          },
+          {
+            "label": "Scout covered",
+            "value": 25
+          },
+          {
+            "label": "Candidate positive",
+            "value": 21
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 9
+          }
+        ],
+        "narrative": "25 of 1,523 municipal governments have parseable scout outcomes; 21 are candidate-positive, 4 returned parseable empty lists, and 9 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "OH",
+      "state_name": "Ohio",
+      "municipality_universe": 2233,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [
+        "CLM-2026-07-12-01",
+        "CLM-2026-07-12-04",
+        "CLM-2026-07-12-05",
+        "CLM-2026-07-12-06"
+      ],
+      "claim_mapped_city_count": 4,
+      "claim_readiness_level": "claim_context_without_current_scout_coverage",
+      "evidence_readiness_score": 10.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 10.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "The claim registry contains prior structured context for this state, but the current national scout coverage table records no successful municipality discovery run.",
+      "printable_report_data": {
+        "route": "#/state/OH",
+        "title": "Ohio municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 2233
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "The claim registry contains prior structured context for this state, but the current national scout coverage table records no successful municipality discovery run.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "OK",
+      "state_name": "Oklahoma",
+      "municipality_universe": 590,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/OK",
+        "title": "Oklahoma municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 590
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "OR",
+      "state_name": "Oregon",
+      "municipality_universe": 240,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/OR",
+        "title": "Oregon municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 240
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "PA",
+      "state_name": "Pennsylvania",
+      "municipality_universe": 2557,
+      "scout_coverage_count": 25,
+      "scout_coverage_rate": 0.9777,
+      "candidate_positive_count": 23,
+      "no_candidate_count": 2,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 75,
+      "high_priority_queue_count": 24,
+      "medium_priority_queue_count": 12,
+      "low_priority_queue_count": 11,
+      "hold_or_rejected_queue_count": 28,
+      "queued_municipality_count": 23,
+      "likely_matched_set_count": 10,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [
+        "CLM-2026-07-12-06"
+      ],
+      "claim_mapped_city_count": 5,
+      "claim_readiness_level": "matched_set_leads_need_verification",
+      "evidence_readiness_score": 98.4,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 98.4,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "25 of 2,557 municipal governments have parseable scout outcomes; 23 are candidate-positive, 2 returned parseable empty lists, and 10 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+      "printable_report_data": {
+        "route": "#/state/PA",
+        "title": "Pennsylvania municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 2557
+          },
+          {
+            "label": "Scout covered",
+            "value": 25
+          },
+          {
+            "label": "Candidate positive",
+            "value": 23
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 10
+          }
+        ],
+        "narrative": "25 of 2,557 municipal governments have parseable scout outcomes; 23 are candidate-positive, 2 returned parseable empty lists, and 10 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "RI",
+      "state_name": "Rhode Island",
+      "municipality_universe": 39,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/RI",
+        "title": "Rhode Island municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 39
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "SC",
+      "state_name": "South Carolina",
+      "municipality_universe": 271,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/SC",
+        "title": "South Carolina municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 271
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "SD",
+      "state_name": "South Dakota",
+      "municipality_universe": 1205,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/SD",
+        "title": "South Dakota municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 1205
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "TN",
+      "state_name": "Tennessee",
+      "municipality_universe": 345,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/TN",
+        "title": "Tennessee municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 345
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "TX",
+      "state_name": "Texas",
+      "municipality_universe": 1224,
+      "scout_coverage_count": 3,
+      "scout_coverage_rate": 0.2451,
+      "candidate_positive_count": 2,
+      "no_candidate_count": 1,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 6,
+      "high_priority_queue_count": 1,
+      "medium_priority_queue_count": 1,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 4,
+      "queued_municipality_count": 2,
+      "likely_matched_set_count": 1,
+      "calibration_verified_municipality_count": 3,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [
+        "CLM-2026-07-12-02",
+        "CLM-2026-07-12-04",
+        "CLM-2026-07-12-05",
+        "CLM-2026-07-12-06",
+        "CLM-2026-07-12-07",
+        "CLM-2026-07-12-08"
+      ],
+      "claim_mapped_city_count": 3,
+      "claim_readiness_level": "matched_set_leads_need_verification",
+      "evidence_readiness_score": 48.3,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 48.3,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "3 of 1,224 municipal governments have parseable scout outcomes; 2 are candidate-positive, 1 returned parseable empty lists, and 1 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+      "printable_report_data": {
+        "route": "#/state/TX",
+        "title": "Texas municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 1224
+          },
+          {
+            "label": "Scout covered",
+            "value": 3
+          },
+          {
+            "label": "Candidate positive",
+            "value": 2
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 1
+          }
+        ],
+        "narrative": "3 of 1,224 municipal governments have parseable scout outcomes; 2 are candidate-positive, 1 returned parseable empty lists, and 1 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "UT",
+      "state_name": "Utah",
+      "municipality_universe": 255,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/UT",
+        "title": "Utah municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 255
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "VA",
+      "state_name": "Virginia",
+      "municipality_universe": 227,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/VA",
+        "title": "Virginia municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 227
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "VT",
+      "state_name": "Vermont",
+      "municipality_universe": 276,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/VT",
+        "title": "Vermont municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 276
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "WA",
+      "state_name": "Washington",
+      "municipality_universe": 281,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/WA",
+        "title": "Washington municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 281
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "WI",
+      "state_name": "Wisconsin",
+      "municipality_universe": 1849,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/WI",
+        "title": "Wisconsin municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 1849
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "WV",
+      "state_name": "West Virginia",
+      "municipality_universe": 230,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/WV",
+        "title": "West Virginia municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 230
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    },
+    {
+      "state": "WY",
+      "state_name": "Wyoming",
+      "municipality_universe": 99,
+      "scout_coverage_count": 0,
+      "scout_coverage_rate": 0.0,
+      "candidate_positive_count": 0,
+      "no_candidate_count": 0,
+      "failed_scout_municipality_count": 0,
+      "failed_scout_attempt_count": 0,
+      "candidate_rows": 0,
+      "high_priority_queue_count": 0,
+      "medium_priority_queue_count": 0,
+      "low_priority_queue_count": 0,
+      "hold_or_rejected_queue_count": 0,
+      "queued_municipality_count": 0,
+      "likely_matched_set_count": 0,
+      "calibration_verified_municipality_count": 0,
+      "verified_count": null,
+      "ingested_count": null,
+      "claim_ids_in_prior_registry": [],
+      "claim_mapped_city_count": 0,
+      "claim_readiness_level": "not_started",
+      "evidence_readiness_score": 0.0,
+      "map_color_metric": {
+        "field": "evidence_readiness_score",
+        "value": 0.0,
+        "scale": "0_to_100_operational_triage_only"
+      },
+      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "printable_report_data": {
+        "route": "#/state/WY",
+        "title": "Wyoming municipal labor evidence brief",
+        "headline_metrics": [
+          {
+            "label": "Municipal universe",
+            "value": 99
+          },
+          {
+            "label": "Scout covered",
+            "value": 0
+          },
+          {
+            "label": "Candidate positive",
+            "value": 0
+          },
+          {
+            "label": "Likely matched-set leads",
+            "value": 0
+          }
+        ],
+        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
+      }
+    }
+  ]
+}

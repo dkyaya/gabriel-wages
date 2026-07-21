@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "schema_version": "0.1.0",
+    "generated_at": "2026-07-21T15:51:30Z",
+    "data_vintage": "2026-07-20",
+    "source_files": [
+      "docs/analysis/national_scout_coverage_state.csv",
+      "docs/analysis/national_scout_coverage_municipality_2026-07-20.csv",
+      "docs/analysis/national_municipality_universe.csv",
+      "docs/analysis/national_scout_candidate_queue_2026-07-20.csv",
+      "docs/analysis/claim_register_2026-07-12.csv",
+      "docs/analysis/state_city_claim_map_2026-07-12.csv",
+      "docs/analysis/hypothesis_tracker_2026-07-12.csv"
+    ],
+    "warnings": [],
+    "limitations": [
+      "Scout coverage records parseable source-discovery outcomes, not source verification.",
+      "Candidate rows are unverified leads and must not be cited as claim evidence.",
+      "A parseable empty candidate list is a completed scout outcome, not proof that no source exists.",
+      "Connection-only failures are excluded from discovery coverage and counted separately.",
+      "Likely matched-set groups are scheduling leads inferred from scout unit labels, not verified city-cycle matches.",
+      "Project-wide verified, ingested, wage-extraction, codified, and regression metrics are not yet wired into this dashboard build."
+    ]
+  },
+  "overall_status": "source_discovery_dashboard_mvp",
+  "current_inputs": {
+    "national_queue_available": true,
+    "national_coverage_available": true,
+    "claim_register_available": true,
+    "state_city_claim_map_available": true,
+    "hypothesis_tracker_available": true
+  },
+  "source_discovery_readiness": {
+    "municipalities_scout_covered": 159,
+    "candidate_rows": 451,
+    "candidate_positive_municipalities": 145,
+    "likely_matched_set_leads": 89,
+    "assessment": "ready_for_PI_facing_discovery_status_reporting"
+  },
+  "claim_inventory_context": {
+    "claim_count": 8,
+    "claim_status_counts": {
+      "needs_more_evidence": 2,
+      "supported_provisional": 6
+    },
+    "report_ready_label_counts": {
+      "maybe": 3,
+      "no": 2,
+      "yes": 3
+    },
+    "state_city_claim_map_rows": 26,
+    "hypothesis_count": 8,
+    "hypothesis_support_counts": {
+      "moderate": 5,
+      "strong": 1,
+      "weak": 2
+    },
+    "caveat": "These are prior structured claim/codify contexts. New national scout leads do not strengthen them without verification, ingestion, and appropriate evidence review."
+  },
+  "stage_availability": {
+    "scout_stage": {
+      "available": true,
+      "display_status": "current"
+    },
+    "verification_stage": {
+      "available": false,
+      "display_status": "project_wide_dashboard_input_not_available",
+      "count": null
+    },
+    "ingestion_stage": {
+      "available": false,
+      "display_status": "dashboard_input_not_available",
+      "count": null
+    },
+    "codified_stage": {
+      "available": true,
+      "display_status": "prior_claim_context_only_not_national_queue_promotion",
+      "count": null
+    },
+    "wage_extraction_stage": {
+      "available": false,
+      "display_status": "not_available",
+      "observation_count": null
+    },
+    "regression_stage": {
+      "available": false,
+      "display_status": "not_available",
+      "estimate_count": null
+    }
+  },
+  "analyses_available_now": [
+    "municipal universe and scout coverage rates",
+    "candidate yield and parseable-empty rates",
+    "connection-failure accounting",
+    "candidate priority and unit-type composition",
+    "likely matched-set lead counts for later verification planning",
+    "state-level discovery-readiness comparisons"
+  ],
+  "analyses_not_yet_supported": [
+    "verified source completeness rates across the national queue",
+    "structured police, fire, and non-safety wage-gap estimates",
+    "causal or mechanism regressions using scout metadata",
+    "confidence levels for national substantive claims",
+    "claim promotion based only on candidate counts"
+  ],
+  "promotion_gate": "Do not show wage-gap or regression results until a dedicated, validated structured wage input supplies municipality, bargaining unit, occupation, cycle, wage concept, provenance, and matched-set identifiers."
+}

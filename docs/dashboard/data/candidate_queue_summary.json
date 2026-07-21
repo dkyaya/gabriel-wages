@@ -1,0 +1,141 @@
+{
+  "metadata": {
+    "schema_version": "0.1.0",
+    "generated_at": "2026-07-21T15:51:30Z",
+    "data_vintage": "2026-07-20",
+    "source_files": [
+      "docs/analysis/national_scout_coverage_state.csv",
+      "docs/analysis/national_scout_coverage_municipality_2026-07-20.csv",
+      "docs/analysis/national_municipality_universe.csv",
+      "docs/analysis/national_scout_candidate_queue_2026-07-20.csv",
+      "docs/analysis/claim_register_2026-07-12.csv",
+      "docs/analysis/state_city_claim_map_2026-07-12.csv",
+      "docs/analysis/hypothesis_tracker_2026-07-12.csv"
+    ],
+    "warnings": [],
+    "limitations": [
+      "Scout coverage records parseable source-discovery outcomes, not source verification.",
+      "Candidate rows are unverified leads and must not be cited as claim evidence.",
+      "A parseable empty candidate list is a completed scout outcome, not proof that no source exists.",
+      "Connection-only failures are excluded from discovery coverage and counted separately.",
+      "Likely matched-set groups are scheduling leads inferred from scout unit labels, not verified city-cycle matches.",
+      "Project-wide verified, ingested, wage-extraction, codified, and regression metrics are not yet wired into this dashboard build."
+    ]
+  },
+  "stage": "unverified_scout_candidate_queue",
+  "totals": {
+    "candidate_rows": 451,
+    "municipalities_with_queue_rows": 145,
+    "high_priority_rows": 279,
+    "medium_priority_rows": 49,
+    "low_priority_rows": 27,
+    "later_verification_rows": 355,
+    "hold_or_rejected_rows": 96
+  },
+  "by_state": [
+    {
+      "state": "CA",
+      "state_name": "California",
+      "candidate_rows": 64,
+      "municipalities_with_queue_rows": 20,
+      "high_priority_rows": 53,
+      "medium_priority_rows": 3,
+      "low_priority_rows": 2,
+      "hold_or_rejected_rows": 6,
+      "likely_matched_set_municipalities": 17
+    },
+    {
+      "state": "IL",
+      "state_name": "Illinois",
+      "candidate_rows": 217,
+      "municipalities_with_queue_rows": 68,
+      "high_priority_rows": 160,
+      "medium_priority_rows": 20,
+      "low_priority_rows": 2,
+      "hold_or_rejected_rows": 35,
+      "likely_matched_set_municipalities": 49
+    },
+    {
+      "state": "MA",
+      "state_name": "Massachusetts",
+      "candidate_rows": 24,
+      "municipalities_with_queue_rows": 8,
+      "high_priority_rows": 3,
+      "medium_priority_rows": 2,
+      "low_priority_rows": 8,
+      "hold_or_rejected_rows": 11,
+      "likely_matched_set_municipalities": 2
+    },
+    {
+      "state": "NJ",
+      "state_name": "New Jersey",
+      "candidate_rows": 8,
+      "municipalities_with_queue_rows": 3,
+      "high_priority_rows": 5,
+      "medium_priority_rows": 0,
+      "low_priority_rows": 0,
+      "hold_or_rejected_rows": 3,
+      "likely_matched_set_municipalities": 1
+    },
+    {
+      "state": "NY",
+      "state_name": "New York",
+      "candidate_rows": 57,
+      "municipalities_with_queue_rows": 21,
+      "high_priority_rows": 33,
+      "medium_priority_rows": 11,
+      "low_priority_rows": 4,
+      "hold_or_rejected_rows": 9,
+      "likely_matched_set_municipalities": 9
+    },
+    {
+      "state": "PA",
+      "state_name": "Pennsylvania",
+      "candidate_rows": 75,
+      "municipalities_with_queue_rows": 23,
+      "high_priority_rows": 24,
+      "medium_priority_rows": 12,
+      "low_priority_rows": 11,
+      "hold_or_rejected_rows": 28,
+      "likely_matched_set_municipalities": 10
+    },
+    {
+      "state": "TX",
+      "state_name": "Texas",
+      "candidate_rows": 6,
+      "municipalities_with_queue_rows": 2,
+      "high_priority_rows": 1,
+      "medium_priority_rows": 1,
+      "low_priority_rows": 0,
+      "hold_or_rejected_rows": 4,
+      "likely_matched_set_municipalities": 1
+    }
+  ],
+  "by_unit_type": {
+    "fire": 141,
+    "non_safety": 124,
+    "police": 177,
+    "unclear": 9
+  },
+  "by_triage_bucket": {
+    "already_canonical_hold": 8,
+    "context_only_hold": 47,
+    "high_priority_later_verify": 279,
+    "insufficient_hold": 30,
+    "likely_duplicate_hold": 9,
+    "low_priority_later_verify": 27,
+    "medium_priority_later_verify": 49,
+    "rejected_from_calibration": 2
+  },
+  "by_scout_confidence": {
+    "high": 110,
+    "low": 76,
+    "medium": 265
+  },
+  "by_verification_priority_label": {
+    "high": 219,
+    "low": 81,
+    "medium": 151
+  },
+  "interpretation": "Priority is a later-verification scheduling field. It is not source verification, ingestion approval, codified evidence, or claim support."
+}
