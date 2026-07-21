@@ -2,9 +2,27 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-21T10:50:13-04:00`
+Last updated: `2026-07-21T11:22:23-04:00`
 
 ---
+
+## 2026-07-21T11:22:23-04:00 — Stage 1 parallel workflow and two locked 25-row worker batches are ready; no live action ran
+
+### Current State
+
+- **Checkpoint/source reconciliation:** started at `d4ca8d043e89c1d3fcea7a45af0566151d8b302e` (`Scout California CA25 and estimate direct SDK costs`). The supplied CA25 relay was inspected first. Every requested carried file matched the repository byte-for-byte. Historical IL/NY reviews and the universe/crosswalk/manifest were deliberate narrow-relay omissions available as committed predecessors, not conflicting state. No remote was inspected, modified, or pushed.
+- **Workflow:** [parallel_scout_workflow_2026-07-21.md](parallel_scout_workflow_2026-07-21.md) defines exactly two parallel 25-row workers for Stage 1, three parallel 25-row workers only after Stage 1 passes, and parallel 50-row workers only after Stage 2 plus a separately reviewed increase to the current 25-call hard cap. Every worker uses a separate worktree/copy, direct SDK, fresh no-search smoke, `n_parallels=1`, zero retries, batch-specific files/cost log, and no global queue/coverage mutation.
+- **Worker 01 CA25.2:** [input](parallel_worker_01_ca25_scout_input_2026-07-21.csv), [methodology](parallel_worker_01_ca25_selection_methodology_2026-07-21.md), and [worker prompt](parallel_worker_01_ca25_worker_prompt_2026-07-21.md) lock Irvine, Santa Ana, Huntington Beach, Glendale, Ontario, Elk Grove, Oceanside, Garden Grove, Corona, Roseville, Hayward, Sunnyvale, Escondido, Pomona, Fullerton, Torrance, Pasadena, Santa Clara, Clovis, Concord, Fairfield, Richmond, San Luis Obispo, Davis, and Eureka. All 25 are untouched municipal/place governments with zero failures/queue/canonical context, unique IDs, and 15-county coverage; CA25 successes and Oakland/Stockton/Oxnard/Redding failures are excluded.
+- **Worker 02 NJ25:** [input](parallel_worker_02_nj25_scout_input_2026-07-21.csv), [methodology](parallel_worker_02_nj25_selection_methodology_2026-07-21.md), and [worker prompt](parallel_worker_02_nj25_worker_prompt_2026-07-21.md) lock Paterson, Elizabeth, Princeton, Clifton, Bayonne, East Orange, Passaic, Union City, Vineland, Hoboken, New Brunswick, Perth Amboy, Plainfield, West New York, Hackensack, Sayreville, Linden, Fort Lee, Kearny, Atlantic City, Fair Lawn, Long Branch, Garfield, Rahway, and Morristown. All are untouched zero-failure municipal/place governments with unique IDs across 11 counties. Hoboken and Atlantic City are the eligible untouched manifest anchors; Edison, Woodbridge, and Lakewood are excluded township governments; covered Newark/Jersey City/Camden and canonical-context Trenton are absent.
+- **Isolation hardening:** `gabriel_state_source_scout.py` now accepts optional `--cost-log-path`. Worker commands route this into their own output directories so their commits cannot conflict over the durable global cost log. Default historical behavior is unchanged. The no-network direct-SDK suite now has eight PASS checks.
+- **Coordinator boundary:** [parallel_scout_coordinator_merge_prompt_2026-07-21.md](parallel_scout_coordinator_merge_prompt_2026-07-21.md) requires scope-auditing both relays, importing batch-specific outputs, preserving every PA/TX/MA/NJ/IL/NY/CA row, updating source/run specifications, and rebuilding queue/coverage exactly once. It computes per-worker and pooled parse/failure rates and makes the Stage 2 promotion decision without source verification.
+- **Promotion gate:** Stage 2 requires both smokes, no connection collapse, at least 23/25 parseable outcomes for each worker and at least 90% pooled, ≤10% non-systemic parser failure, manageable timeouts and candidate volume, no shared/canonical mutations, a clean coordinator merge, and full validation. Failure means remain at Stage 1; it never authorizes automatic timeout retries.
+- **No live/scout action:** this preparation task made no smoke, model/API, web-search, dry research batch, or live scout call. It created no worker candidate/live artifact. No URL was opened/downloaded, no source was verified, and no queue/coverage, global cost log, canonical data, corpus, ingestion, codified, or claim-stage file changed.
+- **Validation:** required scripts compiled; both inputs regenerated exactly; 50 municipality and Census IDs are unique with zero cross-worker overlap; direct-SDK tests passed 8 checks; prompt tests passed 6; validation passed at 64 contracts; pipeline tests passed 60/60; audit remains 28 healthy pairs, 2 adjacent exploratory, and 6 unmatched safety units; protected-file, artifact, and credential checks passed.
+
+### Next Move
+
+Under a new explicit live authorization, create two isolated worktrees/copies from this planning commit and launch exactly the two worker prompts concurrently. Do not launch a third worker and do not raise the batch size. When both sanitized relays arrive, run the coordinator prompt once to import valid outputs and rebuild national queue/coverage, then decide whether the measured Stage 1 stability qualifies for three parallel 25-row workers. Verification, ingestion, codification, and timeout retries remain deferred.
 
 ## 2026-07-21T10:50:13-04:00 — California CA25 completed with 21 parseable outcomes, 4 timeout failures, and 64 unverified leads
 

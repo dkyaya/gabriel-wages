@@ -6,6 +6,41 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-21 11:22 EDT (Prepared two isolated Stage 1 parallel 25-row worker batches; no scout/API call) - await separate live authorization
+
+**Did**
+- Started at `d4ca8d043e89c1d3fcea7a45af0566151d8b302e` and inspected the supplied CA25 relay first. All 16 requested files carried by the relay matched the repository byte-for-byte. Four historical IL/NY reviews plus the universe/crosswalk/manifest were narrow-relay omissions available as committed predecessors, not conflicts. No remote was inspected or changed.
+- Designed the scaling ladder: exactly two concurrent 25-row workers first, then three concurrent 25-row workers only after Stage 1 stability, then parallel 50-row workers only after Stage 2 and a separately reviewed increase to the current `LIVE_HARD_CAP=25`. Every worker stays serial internally with direct SDK, fresh smoke, zero retries, batch-specific artifacts/cost log, and a later single coordinator queue/coverage rebuild.
+- Locked Worker 01 CA25.2: Irvine, Santa Ana, Huntington Beach, Glendale, Ontario, Elk Grove, Oceanside, Garden Grove, Corona, Roseville, Hayward, Sunnyvale, Escondido, Pomona, Fullerton, Torrance, Pasadena, Santa Clara, Clovis, Concord, Fairfield, Richmond, San Luis Obispo, Davis, and Eureka. It spans 15 counties and excludes all prior CA successes and Oakland/Stockton/Oxnard/Redding failures.
+- Locked Worker 02 NJ25: Paterson, Elizabeth, Princeton, Clifton, Bayonne, East Orange, Passaic, Union City, Vineland, Hoboken, New Brunswick, Perth Amboy, Plainfield, West New York, Hackensack, Sayreville, Linden, Fort Lee, Kearny, Atlantic City, Fair Lawn, Long Branch, Garfield, Rahway, and Morristown. It spans 11 counties, carries the eligible Hoboken/Atlantic City manifest anchors, excludes covered Newark/Jersey City/Camden, excludes township manifest rows, and avoids Trenton's canonical context.
+- Added deterministic generation/parse-back assertions for both inputs and worker/coordinator prompts. Added optional `--cost-log-path` so isolated workers do not produce conflicting global cost-log edits. No dry/live research scout, smoke, model/API call, URL opening, source verification, queue/coverage rebuild, ingestion, codification, or canonical/corpus edit occurred.
+
+**Decisions and why**
+- California plus New Jersey supplies West/East and source-system diversity. CA25 demonstrated useful volume plus manageable separated timeouts; the three-city NJ direct run completed cleanly. This is sufficient for a two-worker throughput test but not evidence for three workers or 50-row batches.
+- Stage 2 requires both workers' smoke success, no connection collapse, at least 23/25 parseable outcomes per worker and at least 90% pooled, manageable timeouts/parser failures, clean schema/provenance, a single successful coordinator merge, and full validation. Workers never mutate national accounting; otherwise last-write-wins commits could silently discard the other batch.
+
+**Surprises/breakage**
+- The relay deliberately omitted several large context files; repo versions were consistent committed predecessors. The spreadsheet artifact dependency loader remained unavailable, so the established deterministic builder/parse-back fallback was used.
+- Trenton was initially considered for NJ25 but the locked coverage table marks canonical corpus context. Princeton preserves Mercer County diversity without adding avoidable canonical overlap. CA county diversity initially resolved to 14; replacing Carlsbad with San Luis Obispo raised it to 15 and improved Central Coast coverage.
+
+**Validation/audit results**
+```text
+seven-script py_compile plus parallel-input builder compile: exit 0
+parallel input builder: 25 CA + 25 NJ; 50 unique municipality/Census IDs; zero cross-worker overlap
+direct-SDK regression test: 8 PASS checks (including batch-specific cost-log routing)
+prompt-contract regression test: 6 PASS checks
+validate.py: PASSED (64 contracts; 0 discourse; 64 coverage; 3 city attributes)
+ingest/test_pipeline.py: 60 passed, 0 failed
+audit_coverage.py: 28 healthy pairs (10 exact, 18 overlap), 2 exploratory adjacent, 6 unmatched safety units
+protected global/canonical diff, artifact assertions, and credential scan: PASS
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units. No canonical row changed.
+
+**Next steps**
+1. Create two separate worktrees/copies from this planning commit and launch exactly the CA25.2 and NJ25 worker prompts concurrently only under separate live authorization.
+2. After both relays arrive, run one coordinator audit/import and rebuild national queue/coverage once; decide Stage 2 eligibility from the documented ≥90% parse-rate and stability gates. Do not verify, ingest, codify, or retry failure-only rows during either worker run.
+
 ## 2026-07-21 10:50 EDT (California CA25 direct-SDK scout: 21 parseable outcomes, 4 timeout failures, 64 unverified leads) - queue/coverage updated; defer retries, verification, and ingestion
 
 **Did**

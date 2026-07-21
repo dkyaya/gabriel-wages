@@ -130,3 +130,7 @@ The existing six-check prompt contract test also remains green. Repository valid
 - OpenAI Responses usage exposes tokens but not billed dollar cost. Direct-run summaries keep actual cost unavailable and provide only a separately labeled, configurable token-price estimate. The included public OpenAI rate basis is not confirmed HUIT billing and excludes web-search/tool fees.
 - HUIT/GABRIEL's intermittent behavior and the precise causal role of the headerless rate-limit probe remain unresolved. The new backend removes those wrapper-specific components from the required scout path rather than claiming to repair GABRIEL itself.
 - Future state slices still require a fresh synthetic preflight, separate live authorization, zero/controlled retries, preserved artifacts, queue/coverage updates, and later coordinated verification before ingestion.
+
+## Parallel-worker cost-log isolation
+
+The scout accepts optional `--cost-log-path`. Historical single-run commands may omit it and continue appending to `docs/analysis/gabriel_state_source_scout_cost_log.csv`. Parallel workers must point it to a batch-specific CSV inside their isolated output directory. This prevents two worktrees from producing conflicting versions of the durable global cost log; the later coordinator can merge audited batch records once while rebuilding national queue/coverage. The flag changes only the log destination, not token extraction, estimate-only pricing, candidate parsing, or live-run gates.

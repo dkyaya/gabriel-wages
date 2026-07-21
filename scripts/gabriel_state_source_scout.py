@@ -1196,14 +1196,14 @@ def write_cost_summary(out_dir: Path, summary: dict) -> tuple[Path, Path]:
     return json_path, csv_path
 
 
-def append_cost_log(summary: dict) -> Path:
+def append_cost_log(summary: dict, path: Path | None = None) -> Path:
     """Append one row to the durable cost log, preserving all historical rows.
 
     When the summary schema gains fields, migrate the header deterministically
     and copy every old row before appending. This avoids writing new-width rows
     beneath a stale header.
     """
-    path = DOCS_ANALYSIS / "gabriel_state_source_scout_cost_log.csv"
+    path = path or (DOCS_ANALYSIS / "gabriel_state_source_scout_cost_log.csv")
     path.parent.mkdir(parents=True, exist_ok=True)
     if path.exists():
         with path.open(newline="", encoding="utf-8") as handle:
@@ -2155,6 +2155,17 @@ def _parse_args() -> argparse.Namespace:
         ),
     )
     parser.add_argument(
+        "--cost-log-path",
+        type=Path,
+        default=None,
+        help=(
+            "Optional run-specific cost-log CSV. When omitted, preserve the historical "
+            "docs/analysis/gabriel_state_source_scout_cost_log.csv behavior. Parallel "
+            "workers should point this inside their isolated batch output directory so "
+            "they do not mutate a shared global log."
+        ),
+    )
+    parser.add_argument(
         "--direct-sdk-max-retries",
         type=int,
         default=DEFAULT_DIRECT_SDK_MAX_RETRIES,
@@ -2251,6 +2262,10 @@ def main() -> int:
         "max_timeout": args.max_timeout,
         "sleep_between_prompts": args.sleep_between_prompts,
         "prompt_mode": args.prompt_mode,
+        "cost_log_path": str(
+            args.cost_log_path
+            or (DOCS_ANALYSIS / "gabriel_state_source_scout_cost_log.csv")
+        ),
         "retry_failed_from": str(args.retry_failed_from) if args.retry_failed_from else None,
         "prompt_preview_path": str(prompt_preview_path),
         "output_dir": str(out_dir),
@@ -2411,7 +2426,7 @@ def main() -> int:
             args.model,
         )
     cost_json_path, cost_csv_path = write_cost_summary(out_dir, cost_summary)
-    cost_log_path = append_cost_log(cost_summary)
+    cost_log_path = append_cost_log(cost_summary, args.cost_log_path)
 
     print(f"LIVE — {len(municipalities)} municipalities prompted, {len(df)} responses")
     print(f"parseable={metadata['n_parseable']} failed_parses={len(all_failed)} candidate_rows={len(all_candidates)}")

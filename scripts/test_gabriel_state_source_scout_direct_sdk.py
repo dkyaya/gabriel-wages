@@ -291,6 +291,22 @@ def _check_dry_run_remains_backend_independent() -> None:
         ]
 
 
+def _check_isolated_worker_cost_log() -> None:
+    with tempfile.TemporaryDirectory() as tmp:
+        worker_log = Path(tmp) / "worker_run" / "batch_cost_log.csv"
+        first = {"run_id": "worker-fixture-01", "state": "CA"}
+        second = {"run_id": "worker-fixture-02", "state": "NJ"}
+        assert scout.append_cost_log(first, worker_log) == worker_log
+        assert scout.append_cost_log(second, worker_log) == worker_log
+        with worker_log.open(newline="", encoding="utf-8") as handle:
+            rows = list(csv.DictReader(handle))
+        assert [row["run_id"] for row in rows] == [
+            "worker-fixture-01",
+            "worker-fixture-02",
+        ]
+        assert list(rows[0]) == scout.COST_SUMMARY_FIELDS
+
+
 def main() -> int:
     _check_request_shapes()
     _check_mocked_response_uses_existing_candidate_pipeline()
@@ -298,6 +314,7 @@ def main() -> int:
     _check_repeated_connection_error_stop_signature()
     _check_estimated_cost_and_missing_pricing()
     _check_dry_run_remains_backend_independent()
+    _check_isolated_worker_cost_log()
     print("PASS: direct SDK request shape preserves scout web-search settings")
     print("PASS: no-search smoke request omits tools and web search")
     print("PASS: mocked direct response enters the existing unverified candidate pipeline")
@@ -305,6 +322,7 @@ def main() -> int:
     print("PASS: repeated connection errors trigger the no-further-request stop signature")
     print("PASS: estimated token cost is labeled and missing pricing preserves usage")
     print("PASS: dry-run artifacts and metadata remain backend-independent")
+    print("PASS: parallel workers can route cost logging to a batch-specific file")
     return 0
 
 
