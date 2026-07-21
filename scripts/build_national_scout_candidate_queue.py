@@ -124,6 +124,20 @@ SOURCE_SPECS = [
         "path": DOCS / "national_batch01_ca25_live_direct_sdk_scout_candidates_2026-07-20.csv",
         "run_id": "ca_2026-07-21_101012",
     },
+    {
+        "state": "CA",
+        "wave": "SERIALIZED-STAGE1-W01-CA25.2-2026-07-21",
+        "path": DOCS
+        / "serialized_stage1_worker_01_ca25_live_direct_sdk_scout_candidates_2026-07-21.csv",
+        "run_id": "ca_2026-07-21_165516",
+    },
+    {
+        "state": "NJ",
+        "wave": "SERIALIZED-STAGE1-W02-NJ25-2026-07-21",
+        "path": DOCS
+        / "serialized_stage1_worker_02_nj25_live_direct_sdk_scout_candidates_2026-07-21.csv",
+        "run_id": "nj_2026-07-21_172457",
+    },
 ]
 
 CALIBRATION_FILES = {
@@ -566,10 +580,10 @@ def build_rows() -> list[dict[str, str]]:
         "PA": 75,
         "TX": 6,
         "MA": 24,
-        "NJ": 8,
+        "NJ": 32,
         "IL": 217,
         "NY": 57,
-        "CA": 64,
+        "CA": 129,
     }
     observed = {state: counters[state] for state in expected}
     if observed != expected:

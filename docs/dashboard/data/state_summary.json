@@ -1,8 +1,8 @@
 {
   "metadata": {
     "schema_version": "0.1.0",
-    "generated_at": "2026-07-21T15:51:30Z",
-    "data_vintage": "2026-07-20",
+    "generated_at": "2026-07-21T21:49:55Z",
+    "data_vintage": "2026-07-21",
     "source_files": [
       "docs/analysis/national_scout_coverage_state.csv",
       "docs/analysis/national_scout_coverage_municipality_2026-07-20.csv",
@@ -30,13 +30,13 @@
     "states_and_dc": 51,
     "states_with_scout_coverage": 7,
     "municipality_universe": 35589,
-    "scout_covered_municipalities": 159,
-    "candidate_positive_municipalities": 145,
-    "no_candidate_municipalities": 14,
-    "failed_scout_municipalities": 5,
-    "failed_scout_attempts": 21,
-    "candidate_rows": 451,
-    "likely_matched_set_groups": 89,
+    "scout_covered_municipalities": 207,
+    "candidate_positive_municipalities": 181,
+    "no_candidate_municipalities": 26,
+    "failed_scout_municipalities": 7,
+    "failed_scout_attempts": 23,
+    "candidate_rows": 540,
+    "likely_matched_set_groups": 105,
     "verified_sources": null,
     "ingested_sources": null,
     "wage_observations": null
@@ -266,32 +266,32 @@
       "state": "CA",
       "state_name": "California",
       "municipality_universe": 483,
-      "scout_coverage_count": 21,
-      "scout_coverage_rate": 4.3478,
-      "candidate_positive_count": 20,
+      "scout_coverage_count": 45,
+      "scout_coverage_rate": 9.3168,
+      "candidate_positive_count": 44,
       "no_candidate_count": 1,
-      "failed_scout_municipality_count": 4,
-      "failed_scout_attempt_count": 4,
-      "candidate_rows": 64,
-      "high_priority_queue_count": 53,
-      "medium_priority_queue_count": 3,
+      "failed_scout_municipality_count": 5,
+      "failed_scout_attempt_count": 5,
+      "candidate_rows": 129,
+      "high_priority_queue_count": 108,
+      "medium_priority_queue_count": 8,
       "low_priority_queue_count": 2,
-      "hold_or_rejected_queue_count": 6,
-      "queued_municipality_count": 20,
-      "likely_matched_set_count": 17,
+      "hold_or_rejected_queue_count": 11,
+      "queued_municipality_count": 44,
+      "likely_matched_set_count": 30,
       "calibration_verified_municipality_count": 0,
       "verified_count": null,
       "ingested_count": null,
       "claim_ids_in_prior_registry": [],
       "claim_mapped_city_count": 0,
       "claim_readiness_level": "matched_set_leads_need_verification",
-      "evidence_readiness_score": 89.0,
+      "evidence_readiness_score": 89.6,
       "map_color_metric": {
         "field": "evidence_readiness_score",
-        "value": 89.0,
+        "value": 89.6,
         "scale": "0_to_100_operational_triage_only"
       },
-      "short_state_narrative": "21 of 483 municipal governments have parseable scout outcomes; 20 are candidate-positive, 1 returned parseable empty lists, and 17 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+      "short_state_narrative": "45 of 483 municipal governments have parseable scout outcomes; 44 are candidate-positive, 1 returned parseable empty lists, and 30 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
         "route": "#/state/CA",
         "title": "California municipal labor evidence brief",
@@ -302,18 +302,18 @@
           },
           {
             "label": "Scout covered",
-            "value": 21
+            "value": 45
           },
           {
             "label": "Candidate positive",
-            "value": 20
+            "value": 44
           },
           {
             "label": "Likely matched-set leads",
-            "value": 17
+            "value": 30
           }
         ],
-        "narrative": "21 of 483 municipal governments have parseable scout outcomes; 20 are candidate-positive, 1 returned parseable empty lists, and 17 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+        "narrative": "45 of 483 municipal governments have parseable scout outcomes; 44 are candidate-positive, 1 returned parseable empty lists, and 30 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
         "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
       }
     },
@@ -1757,19 +1757,19 @@
       "state": "NJ",
       "state_name": "New Jersey",
       "municipality_universe": 564,
-      "scout_coverage_count": 3,
-      "scout_coverage_rate": 0.5319,
-      "candidate_positive_count": 3,
-      "no_candidate_count": 0,
-      "failed_scout_municipality_count": 0,
-      "failed_scout_attempt_count": 0,
-      "candidate_rows": 8,
-      "high_priority_queue_count": 5,
-      "medium_priority_queue_count": 0,
-      "low_priority_queue_count": 0,
-      "hold_or_rejected_queue_count": 3,
-      "queued_municipality_count": 3,
-      "likely_matched_set_count": 1,
+      "scout_coverage_count": 27,
+      "scout_coverage_rate": 4.7872,
+      "candidate_positive_count": 15,
+      "no_candidate_count": 12,
+      "failed_scout_municipality_count": 1,
+      "failed_scout_attempt_count": 1,
+      "candidate_rows": 32,
+      "high_priority_queue_count": 14,
+      "medium_priority_queue_count": 5,
+      "low_priority_queue_count": 4,
+      "hold_or_rejected_queue_count": 9,
+      "queued_municipality_count": 15,
+      "likely_matched_set_count": 4,
       "calibration_verified_municipality_count": 0,
       "verified_count": null,
       "ingested_count": null,
@@ -1778,13 +1778,13 @@
       ],
       "claim_mapped_city_count": 5,
       "claim_readiness_level": "matched_set_leads_need_verification",
-      "evidence_readiness_score": 63.0,
+      "evidence_readiness_score": 73.1,
       "map_color_metric": {
         "field": "evidence_readiness_score",
-        "value": 63.0,
+        "value": 73.1,
         "scale": "0_to_100_operational_triage_only"
       },
-      "short_state_narrative": "3 of 564 municipal governments have parseable scout outcomes; 3 are candidate-positive, 0 returned parseable empty lists, and 1 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+      "short_state_narrative": "27 of 564 municipal governments have parseable scout outcomes; 15 are candidate-positive, 12 returned parseable empty lists, and 4 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
         "route": "#/state/NJ",
         "title": "New Jersey municipal labor evidence brief",
@@ -1795,18 +1795,18 @@
           },
           {
             "label": "Scout covered",
-            "value": 3
+            "value": 27
           },
           {
             "label": "Candidate positive",
-            "value": 3
+            "value": 15
           },
           {
             "label": "Likely matched-set leads",
-            "value": 1
+            "value": 4
           }
         ],
-        "narrative": "3 of 564 municipal governments have parseable scout outcomes; 3 are candidate-positive, 0 returned parseable empty lists, and 1 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+        "narrative": "27 of 564 municipal governments have parseable scout outcomes; 15 are candidate-positive, 12 returned parseable empty lists, and 4 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
         "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
       }
     },

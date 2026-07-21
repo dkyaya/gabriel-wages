@@ -2,9 +2,27 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-21T16:42:00-04:00`
+Last updated: `2026-07-21T17:51:30-04:00`
 
 ---
+
+## 2026-07-21T17:51:30-04:00 — Serialized CA25.2/NJ25 recovery completed; queue and coverage merged once
+
+### Current State
+
+- **Checkpoint/source reconciliation:** started at `0986954c03cdbd18112a94fb138a1483477aa6ee`. The diagnosis relay SHA-256 is `a51fd898c648f5f422a41f4ca91881129394decb53336459c4dbfc4a6c67afc8`; every file it carries matches the coordinator byte-for-byte. Its omitted locked inputs/methodologies, MA filtering note, queue/coverage builders, and prompt test are committed coordinator inputs, not conflicting versions.
+- **Readiness and dry gates:** both locked CSVs remain exactly 25 authoritative `municipal` / `place` rows, all `not_scouted`, with no queue overlap, recorded failure, or prohibited timeout name. CA and NJ fresh dry runs each passed all 25 filtering-contract prompts. Reviews are [CA dry review](serialized_stage1_worker_01_ca25_filter_contract_dry_run_review_2026-07-21.md) and [NJ dry review](serialized_stage1_worker_02_nj25_filter_contract_dry_run_review_2026-07-21.md).
+- **Worker 01 CA25.2:** synthetic smoke passed with `OK.`, response ID, and 10/0/6/16 tokens. Live run `ca_2026-07-21_165516` completed 25 rows with 24 parseable outcomes, 65 candidates, and one isolated Fairfield timeout. Parse rate is 96%; no repeated connection collapse occurred. CA usage is 801,963 input / 36,458 reasoning / 62,444 output / 864,407 total. Actual cost is unavailable; estimate-only cost is `$0.23844760`. See [CA live review](serialized_stage1_worker_01_ca25_live_direct_sdk_scout_review_2026-07-21.md) and its normalized handoff.
+- **Inter-lane boundary:** CA finalized at 17:17:57 EDT. NJ dry began at 17:23:51 EDT, a 5m54s quiet interval; NJ smoke/live began later. No API-bearing interval overlapped.
+- **Worker 02 NJ25:** synthetic smoke passed with `OK.`, response ID, and 10/0/6/16 tokens. Live run `nj_2026-07-21_172457` completed 25 rows with 24 parseable outcomes, 24 candidates, and one isolated Princeton timeout. Twelve municipalities produced candidates and 12 returned parseable empty lists. Parse rate is 96%; no repeated connection collapse occurred. NJ usage is 701,097 input / 27,074 reasoning / 37,755 output / 738,852 total. Actual cost is unavailable; estimate-only cost is `$0.18741315`. See [NJ live review](serialized_stage1_worker_02_nj25_live_direct_sdk_scout_review_2026-07-21.md) and its normalized handoff.
+- **Eligibility/accounting:** Fairfield and Princeton were not retried and are not covered. Both complete artifact sets otherwise passed the merge gate. The coordinator then rebuilt once. All 451 prior queue rows and all 159 prior covered municipalities were preserved exactly. The queue is now 540 rows (433 later-verification, 107 holds); coverage is 207 municipalities (181 candidate-positive, 26 parseable-empty), seven failure-only municipalities, and 23 retained failed attempts. CA coverage is 45; NJ is 27. Dashboard JSON now reflects the same totals.
+- **Stage boundary:** all 89 new candidate rows remain `unverified_scout_candidate`. No URL was opened, source verified, document downloaded, source ingested, text codified, canonical contract/city coverage changed, or row promoted for claims. The combined review is [serialized_parallel_stage1_recovery_review_2026-07-21.md](serialized_parallel_stage1_recovery_review_2026-07-21.md).
+- **Operating decision:** parallel preparation plus serialized live execution is validated. Parallel-live Stage 1 is still unproven because no live interval overlapped; Stage 2 remains blocked. Keep one coordinator-controlled API lane, direct SDK, `n_parallels=1`, fresh smoke, and zero retries.
+- **Validation:** six compile targets passed; direct-SDK tests are 11/11 and prompt tests 6/6; schema validation passed at 64 contracts; ingestion tests passed 60/60; canonical coverage remains 28 healthy pairs (10 exact, 18 overlap), two exploratory adjacent, and six unmatched safety units. Queue/coverage and four dashboard JSON files reconcile.
+
+### Next Move
+
+Do not move to Stage 2 or retry Fairfield/Princeton/Oakland/Stockton/Oxnard/Redding without separate authorization. Keep parallel/offline preparation but serialize every smoke/live API critical section. Under a new task, either prepare another untouched 25-row contrast-state batch for the serialized lane or select a bounded coordinated verification wave from the strongest apparent matched sets. Verification must confirm exact employer, unit, official provenance, execution/completeness, visible operative dates, wage content, duplicates, and city-cycle overlap before ingestion; codification and claim use remain later stages.
 
 ## 2026-07-21T16:42:00-04:00 — Worker-lane diagnosis supports serialized live recovery; five sequential synthetic calls passed
 

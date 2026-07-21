@@ -1,8 +1,8 @@
 {
   "metadata": {
     "schema_version": "0.1.0",
-    "generated_at": "2026-07-21T15:51:30Z",
-    "data_vintage": "2026-07-20",
+    "generated_at": "2026-07-21T21:49:55Z",
+    "data_vintage": "2026-07-21",
     "source_files": [
       "docs/analysis/national_scout_coverage_state.csv",
       "docs/analysis/national_scout_coverage_municipality_2026-07-20.csv",
@@ -24,25 +24,25 @@
   },
   "stage": "unverified_scout_candidate_queue",
   "totals": {
-    "candidate_rows": 451,
-    "municipalities_with_queue_rows": 145,
-    "high_priority_rows": 279,
-    "medium_priority_rows": 49,
-    "low_priority_rows": 27,
-    "later_verification_rows": 355,
-    "hold_or_rejected_rows": 96
+    "candidate_rows": 540,
+    "municipalities_with_queue_rows": 181,
+    "high_priority_rows": 343,
+    "medium_priority_rows": 59,
+    "low_priority_rows": 31,
+    "later_verification_rows": 433,
+    "hold_or_rejected_rows": 107
   },
   "by_state": [
     {
       "state": "CA",
       "state_name": "California",
-      "candidate_rows": 64,
-      "municipalities_with_queue_rows": 20,
-      "high_priority_rows": 53,
-      "medium_priority_rows": 3,
+      "candidate_rows": 129,
+      "municipalities_with_queue_rows": 44,
+      "high_priority_rows": 108,
+      "medium_priority_rows": 8,
       "low_priority_rows": 2,
-      "hold_or_rejected_rows": 6,
-      "likely_matched_set_municipalities": 17
+      "hold_or_rejected_rows": 11,
+      "likely_matched_set_municipalities": 30
     },
     {
       "state": "IL",
@@ -69,13 +69,13 @@
     {
       "state": "NJ",
       "state_name": "New Jersey",
-      "candidate_rows": 8,
-      "municipalities_with_queue_rows": 3,
-      "high_priority_rows": 5,
-      "medium_priority_rows": 0,
-      "low_priority_rows": 0,
-      "hold_or_rejected_rows": 3,
-      "likely_matched_set_municipalities": 1
+      "candidate_rows": 32,
+      "municipalities_with_queue_rows": 15,
+      "high_priority_rows": 14,
+      "medium_priority_rows": 5,
+      "low_priority_rows": 4,
+      "hold_or_rejected_rows": 9,
+      "likely_matched_set_municipalities": 4
     },
     {
       "state": "NY",
@@ -112,30 +112,30 @@
     }
   ],
   "by_unit_type": {
-    "fire": 141,
-    "non_safety": 124,
-    "police": 177,
+    "fire": 159,
+    "non_safety": 155,
+    "police": 217,
     "unclear": 9
   },
   "by_triage_bucket": {
     "already_canonical_hold": 8,
-    "context_only_hold": 47,
-    "high_priority_later_verify": 279,
-    "insufficient_hold": 30,
-    "likely_duplicate_hold": 9,
-    "low_priority_later_verify": 27,
-    "medium_priority_later_verify": 49,
+    "context_only_hold": 50,
+    "high_priority_later_verify": 343,
+    "insufficient_hold": 34,
+    "likely_duplicate_hold": 13,
+    "low_priority_later_verify": 31,
+    "medium_priority_later_verify": 59,
     "rejected_from_calibration": 2
   },
   "by_scout_confidence": {
-    "high": 110,
-    "low": 76,
-    "medium": 265
+    "high": 130,
+    "low": 87,
+    "medium": 323
   },
   "by_verification_priority_label": {
-    "high": 219,
-    "low": 81,
-    "medium": 151
+    "high": 280,
+    "low": 92,
+    "medium": 168
   },
   "interpretation": "Priority is a later-verification scheduling field. It is not source verification, ingestion approval, codified evidence, or claim support."
 }

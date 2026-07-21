@@ -28,7 +28,7 @@ Also require failures to be isolated and manageable, not a repeated transport/pr
 
 Run exactly two disjoint locked 25-row workers. Promotion to Stage 2 requires both workers individually to clear the 90% rate and the pooled 50-row result to clear it as well. A worker with more than two non-collapse failures normally fails the stability test unless the coordinator documents why the failure is demonstrably non-systemic.
 
-Neither CA25.2/NJ25 attempt on 2026-07-21 completed Stage 1. In the hardened retry, CA25.2 again stopped on a failed smoke; NJ25 passed smoke but stopped after two connection errors and 23 explicitly uncalled rows. A bounded follow-up produced 5/5 successful sequential no-search calls across the main repo and both worker worktrees. This supports the credential/request shape and sequential operation, but does not prove concurrent live stability. Do not promote.
+Neither parallel CA25.2/NJ25 attempt on 2026-07-21 completed Stage 1. In the hardened retry, CA25.2 stopped on a failed smoke; NJ25 passed smoke but stopped after two connection errors and 23 explicitly uncalled rows. A bounded follow-up produced 5/5 successful sequential no-search calls across the main repo and both worker worktrees. A later serialized recovery then completed both locked batches at 24/25 parseable outcomes, with one isolated timeout each, and supported one clean coordinator merge. This validates sequential live operation and accounting, but does not prove concurrent live stability. Do not promote.
 
 For recovery of the same locked batches:
 
@@ -43,7 +43,7 @@ For recovery of the same locked batches:
 
 A preflight-stop relay or a prompt-preview-only live relay fails Stage 1. Neither counts as discovery coverage, and neither can be used to compute a favorable parse rate by shrinking the denominator.
 
-Completing both batches sequentially is a recovery/merge test, not a passed parallel-live Stage 1. A future concurrency test needs separate authorization and design after the sequential results are reviewed. Until that happens, Stage 2 remains blocked.
+Completing both batches sequentially was a recovery/merge test, not a passed parallel-live Stage 1. The recovered queue has 540 rows and coverage has 207 municipalities; Fairfield CA and Princeton NJ remain failure-only. A future concurrency test needs separate authorization and design after the sequential results are reviewed. Until that happens, Stage 2 remains blocked and the serialized lane is the recommended production mode.
 
 ### Stage 2 — three parallel 25-row live scouts
 

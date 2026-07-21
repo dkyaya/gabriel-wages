@@ -5,7 +5,7 @@ Builder: `scripts/build_dashboard_data.py`
 
 ## Result
 
-The initial static dashboard data build succeeded without changing canonical data or contacting any external service. It represents all 50 states plus the District of Columbia and writes four JSON files under `docs/dashboard/data/`.
+The static dashboard data build was refreshed after the serialized CA25.2/NJ25 coordinator merge without changing canonical data or contacting any external service. It represents all 50 states plus the District of Columbia and writes four JSON files under `docs/dashboard/data/`.
 
 ## Files read
 
@@ -40,23 +40,23 @@ Each file records schema version, generation timestamp, source files, data vinta
 | States plus DC represented | 51 |
 | States with successful scout coverage | 7 |
 | Municipality universe | 35,589 |
-| Parseable scout-covered municipalities | 159 |
-| Candidate-positive municipalities | 145 |
-| Parseable no-candidate municipalities | 14 |
-| Current failure-only municipalities | 5 |
-| Connection-failed attempts excluded from coverage | 21 |
-| Candidate queue rows | 451 |
-| Municipalities represented in candidate queue | 145 |
-| High-priority later-verification rows | 279 |
-| Medium-priority later-verification rows | 49 |
-| Low-priority later-verification rows | 27 |
-| Hold/rejected rows | 96 |
-| Likely matched-set lead groups | 89 |
+| Parseable scout-covered municipalities | 207 |
+| Candidate-positive municipalities | 181 |
+| Parseable no-candidate municipalities | 26 |
+| Current failure-only municipalities | 7 |
+| Connection-failed attempts excluded from coverage | 23 |
+| Candidate queue rows | 540 |
+| Municipalities represented in candidate queue | 181 |
+| High-priority later-verification rows | 343 |
+| Medium-priority later-verification rows | 59 |
+| Low-priority later-verification rows | 31 |
+| Hold/rejected rows | 107 |
+| Likely matched-set lead groups | 105 |
 | Prior claim-register rows | 8 |
 | Prior state-city claim-map rows | 26 |
 | Hypothesis-tracker rows | 8 |
 
-The 451-row queue consists of 177 police, 141 fire, 124 non-safety, and 9 unclear unit labels. Those are scout metadata, not verified bargaining units.
+The 540-row queue consists of 217 police, 159 fire, 155 non-safety, and 9 unclear unit labels. Those are scout metadata, not verified bargaining units.
 
 ## Missing and future data
 

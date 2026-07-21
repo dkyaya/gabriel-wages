@@ -2,7 +2,7 @@
 
 Date: 2026-07-21
 
-Status: parallel preparation remains supported, but parallel live API execution is paused after two non-mergeable CA25.2/NJ25 attempts. The current recovery mode is parallel dry-run preparation plus one coordinator-controlled smoke/live lane. National queue/coverage remains unchanged, and Stage 2 is not authorized.
+Status: parallel preparation remains supported, but parallel live API execution is paused. A 2026-07-21 serialized recovery completed both locked CA25.2/NJ25 batches at 24/25 parseable outcomes each and merged national accounting once. The production mode is parallel/offline preparation plus one coordinator-controlled smoke/live lane. Stage 2 is not authorized.
 
 ## Plain-English design
 
@@ -58,7 +58,7 @@ The first Stage 1 attempt did not pass: CA25.2 stopped at smoke and NJ25 left on
 
 The follow-up infrastructure diagnostic compared the same `.env` credential, Python 3.11.7, `openai 2.43.0`, `httpx 0.28.1`, and `pandas 3.0.3` across the coordinator and both worktrees. Five sequential `Reply with OK.` calls succeeded 5/5 with IDs and positive tokens. This rules out a persistent credential, path, package, base-URL, model, or dual-header defect. It does not test simultaneous sessions or hosted web search. The safest supported change is therefore serialization, not a larger timeout, smaller batch, or heavier overlap stagger.
 
-Do not move to Stage 2 or retry parallel live execution. Recover the same two locked batches only in a later separately authorized task with one coordinator-controlled live lane.
+The same two locked batches were recovered later on 2026-07-21 through one coordinator-controlled live lane. Both fresh smokes passed. CA25.2 completed 24/25 parseable with one Fairfield timeout; after a 5m54s quiet interval, NJ25 completed 24/25 parseable with one Princeton timeout. Both runs avoided connection collapse, produced complete artifacts, and supported a clean single coordinator merge. This validates the serialized operating mode and the merge/accounting boundary, not concurrent live workers.
 
 The retry must:
 
@@ -76,7 +76,7 @@ The retry must:
 12. Require a complete relay with research-batch `run_metadata.json`, `raw_outputs.csv`, parsed-output evidence, failure ledger, usage/cost evidence, sanitized command log, exit disposition, and worker review. A prompt-preview-only directory is incomplete.
 13. Do not launch the coordinator merge until both workers produce complete relays with at least one parseable research-batch model output each. If either relay is a preflight stop or incomplete, preserve both relays, leave queue/coverage unchanged, and remain at Stage 1.
 
-Serialized recovery is not a successful Stage 1 parallel-live test. After both locked batches complete and merge cleanly, the project must make a separate evidence-based decision about whether to design another concurrency test. Until then, Stage 2 and 50-row workers remain blocked.
+Serialized recovery is not a successful Stage 1 parallel-live test. The project must make a separate evidence-based decision about whether to design another concurrency test. Until then, Stage 2 and 50-row workers remain blocked. Near-term production work should keep the serialized lane and must not retry Fairfield, Princeton, or other timeout-only rows without separate authorization.
 
 ## Stage 2: three parallel 25-row workers
 

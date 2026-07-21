@@ -23,7 +23,7 @@ Status: national source-discovery execution accounting, last rebuilt 2026-07-21.
 
 A connection-only or zero-response timeout failure is not discovery coverage. Massachusetts produced 16 connection-error request rows across eight unique municipalities on 2026-07-16. Those attempts are preserved in failure-count/run-ID columns and excluded. The successful 2026-07-20 rerun is what makes the eight municipalities scout-covered. Bloomington IL later timed out without text, response ID, or tokens and remains a failure-only municipality. If a future municipality has only this kind of transport failure, it remains visibly `scout_attempt_failed_connection`, not `not_scouted` and not source-covered.
 
-Parseable empty output counts as coverage because the model completed the discovery prompt; it does not prove that no source exists. Austin TX, two PA municipalities, Champaign, Granite City, O'Fallon, Freeport, Elk Grove Village, and Kankakee IL, Yonkers, Schenectady, Mount Vernon, and Newburgh NY, and San Jose CA are current `scouted_no_candidates` examples.
+Parseable empty output counts as coverage because the model completed the discovery prompt; it does not prove that no source exists. Austin TX, two PA municipalities, Champaign, Granite City, O'Fallon, Freeport, Elk Grove Village, and Kankakee IL, Yonkers, Schenectady, Mount Vernon, and Newburgh NY, and San Jose CA are earlier examples. The serialized NJ25 recovery adds Paterson, Clifton, Passaic, Union City, Vineland, Hoboken, New Brunswick, Plainfield, Hackensack, Sayreville, Linden, and Kearny as parseable-empty outcomes.
 
 ## Queue, verification, and ingestion fields
 
@@ -50,14 +50,16 @@ The current accounting includes:
 - IL national batch 01 IL25.3 direct-SDK run: all 25 locked municipalities returned parseable responses; 23 produced candidates and Elk Grove Village and Kankakee returned empty candidate lists. One parsed Rolling Meadows row lacks a source URL and remains in the batch handoff but outside the source-candidate queue.
 - NY national batch 01 state-scale direct-SDK run: all 25 locked city rows; 21 returned candidates and four returned parseable empty lists.
 - CA25 direct-SDK run: 21 of 25 locked municipal rows returned parseable responses; 20 produced candidates and San Jose returned a parseable empty list. Oakland, Stockton, Oxnard, and Redding timed out without text, IDs, or tokens and remain failure-only rows excluded from successful discovery coverage.
+- Serialized CA25.2 direct-SDK recovery: 24 of 25 locked municipal rows returned parseable candidate-bearing responses. Fairfield timed out without text, ID, or tokens and remains failure-only.
+- Serialized NJ25 direct-SDK recovery: 24 of 25 locked municipal rows returned parseable responses; 12 produced candidates and 12 returned empty candidate lists. Princeton timed out without text, ID, or tokens and remains failure-only.
 
-That produces 159 scout-covered municipalities: 145 with candidate rows and 14 with parseable empty outputs. The failed MA connection-only runs, Bloomington timeout, and four CA25 timeouts are retained separately and do not add coverage.
+That produces 207 scout-covered municipalities: 181 with candidate rows and 26 with parseable empty outputs. The failed MA connection-only runs, Bloomington timeout, five CA timeouts, and Princeton timeout are retained separately and do not add coverage.
 
 ## Outputs
 
 `docs/analysis/national_scout_coverage_municipality_2026-07-20.csv` contains one row for every municipality in the universe and is the detailed status source.
 
-`docs/analysis/national_scout_coverage_state.csv` aggregates unique municipalities. It reports the full denominator, successful coverage, candidate-positive and empty results, failed transport attempts excluded, queued candidate counts, calibration counts, canonical overlap, and successful-run usage/cost where available. Direct-SDK NJ, IL, and NY billed costs are unavailable and remain blank rather than estimated.
+`docs/analysis/national_scout_coverage_state.csv` aggregates unique municipalities. It reports the full denominator, successful coverage, candidate-positive and empty results, failed transport attempts excluded, queued candidate counts, calibration counts, canonical overlap, and successful-run usage/cost where available. Direct-SDK billed costs remain unavailable. Token totals include the serialized CA/NJ runs; their separately preserved run summaries provide explicitly estimate-only OpenAI-reference token costs that are not confirmed HUIT billing and exclude hosted-search/tool fees.
 
 `docs/analysis/national_scout_coverage_county.csv` aggregates municipality-county associations and repeats the non-additivity warning on every row.
 

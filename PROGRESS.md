@@ -6,6 +6,42 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-21 17:51 EDT (Recovered CA25.2/NJ25 through serialized live lane; queue 540 and scout coverage 207)
+
+**Did**
+- Started at `0986954c03cdbd18112a94fb138a1483477aa6ee` and inspected `tmp/parallel_worker_api_stability_diagnosis_2026-07-21_relay_0986954.zip` first (SHA-256 `a51fd898c648f5f422a41f4ca91881129394decb53336459c4dbfc4a6c67afc8`). Every carried file matched the coordinator byte-for-byte. The locked CSVs, methodologies, filtering note, builders, and prompt test are deliberate narrow-relay omissions present in the same committed coordinator state.
+- Re-audited both locked inputs: 25 unique municipal/place employers each, all `not_scouted`, no queue overlap, no prior failure count, and no prohibited retry names. Both fresh dry runs passed all 25 exact-employer/ID, wrong-employer, ordinary-civilian, safety-not-non-safety, context, blocked/dead, year, duplicate, empty-output, public-records, and unverified-stage checks.
+- Serialized the full API critical sections. CA smoke passed, then CA25.2 completed 24/25 parseable (96%) with 65 unverified candidates; Fairfield timed out once without ID/text/tokens. After a 5m54s quiet interval, NJ smoke passed, then NJ25 completed 24/25 parseable (96%) with 24 unverified candidates; Princeton timed out once. NJ had 12 candidate-positive and 12 parseable-empty municipalities. Neither timeout was retried or counted as coverage.
+- Preserved both dry/smoke/live artifact sets and created normalized candidate handoffs plus worker and pooled reviews. Pooled live usage was 1,503,060 input, 63,532 reasoning, 100,199 output, and 1,603,259 total tokens. Actual cost is unavailable; the unconfirmed, tool-fee-excluding OpenAI-reference estimate is `$0.42586075`.
+- Only after both batches passed eligibility, added their exact source/run specs and rebuilt once. All 451 prior queue rows and 159 prior covered municipalities are unchanged. The queue is now 540 rows; coverage is 207 municipalities (181 candidate-positive, 26 parseable-empty), with seven failure-only municipalities and 23 retained failed attempts. Fairfield and Princeton are explicit failure-only rows. Dashboard JSON was refreshed to the same accounting state.
+
+**Decisions and why**
+- Keep parallel preparation plus one coordinator-controlled serialized smoke/live lane. This run proves serialized worker recovery and merge safety, not concurrent-live stability; do not move to Stage 2.
+- Do not retry Fairfield, Princeton, Oakland, Stockton, Oxnard, Redding, or other timeout-only rows without separate authorization. All 89 new rows remain scout-stage and require later coordinated verification before ingestion or claim use.
+
+**Surprises/breakage**
+- Both serialized live batches had one isolated 90-second timeout but no repeated connection collapse. The 96% parseable rate clears the existing Stage 1 outcome threshold, yet cannot validate parallel-live behavior because the intervals did not overlap.
+- NJ source discovery was much sparser than CA: 24 candidate rows and 12 parseable empty municipalities versus CA's 65 rows and 24 candidate-positive municipalities. This is a substantive scout-output difference, not a transport failure.
+
+**Validation/audit results**
+```text
+six requested py_compile targets: exit 0
+direct-SDK no-network regression test: 11 PASS checks
+prompt-contract regression test: 6 PASS checks
+validate.py: PASSED (64 contracts; 0 discourse; 64 coverage; 3 city attributes)
+ingest/test_pipeline.py: 60 passed, 0 failed
+audit_coverage.py: 28 healthy pairs (10 exact, 18 overlap), 2 exploratory adjacent, 6 unmatched safety units
+accounting: queue 540; covered 207; candidate-positive 181; parseable-empty 26; failure-only 7
+dashboard JSON parse: 4/4 valid
+git diff --check: passed
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units. No canonical contract, city-coverage, corpus, ingestion, codified, or claim row changed.
+
+**Next steps**
+1. Retain serialized live execution as the production mode; do not start Stage 2. Under separate authorization, either prepare another untouched 25-row state batch for this lane or select a bounded matched-set verification wave from the 540-row queue.
+2. Do not open or promote the 89 new candidates automatically. A later verification task must confirm employer, bargaining unit, provenance, execution/completeness, operative dates, wage content, duplicates, and city-cycle overlap before any ingestion.
+
 ## 2026-07-21 16:42 EDT (Diagnosed worker-lane API instability; 5/5 sequential synthetic calls passed; parallel live paused)
 
 **Did**
