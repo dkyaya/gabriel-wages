@@ -6,6 +6,43 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-20 20:30 EDT (Locked New York 25-city direct-SDK scout completed with 25 successful responses and 57 unverified leads) - continue national scouting; defer verification and ingestion
+
+**Did**
+- Started at `a393f60c92f7137c46536cc6ab724e7a04dacaa9` and inspected `tmp/national_batch01_ny25_filter_contract_dry_run_2026-07-20_relay_a393f60.zip` first. The ZIP passed integrity testing, and every requested shared relay/repository file plus the saved dry-run prompt and metadata matched byte-for-byte. No remote was inspected, changed, or pushed.
+- Confirmed the full-context input resolved to the exact locked 25-city order. Ran the one authorized no-search direct-SDK smoke: exact `Reply with OK.`, one request, zero retries, 30-second timeout, and no tools/search. It returned `OK`, a response ID, and 10 input / 0 reasoning / 5 output tokens with explicit success.
+- Only after that gate, ran the one authorized NY25 live batch through `.venv/bin/python`, direct SDK, serial execution, low search context, 15-second spacing, and zero retries. All 25 responses were nonempty, had response IDs, and parsed successfully. Yonkers, Schenectady, Mount Vernon, and Newburgh returned valid empty candidate lists; no row failed and no retry ran.
+- Preserved the live artifacts and normalized 57 unverified rows: 26 police, 17 fire, 11 ordinary non-safety, and 3 unclear. Added the scout-stage review and deterministic handoff builder. No returned URL was independently opened, verified, downloaded, ingested, codified, canonicalized, or used for a claim.
+- Rebuilt the durable queue and national municipality/state/county accounting. The queue now has 246 rows (PA 75, TX 6, MA 24, NJ 8, IL 76, NY 57), with 183 scheduled for later verification. Successful discovery coverage is 88 municipalities; NY contributes 25, comprising 21 with candidates and four parseable empty outputs.
+
+**Decisions and why**
+- Rochester, Ithaca, Saratoga Springs, and Syracuse are the strongest apparent later-verification groups. Poughkeepsie needs blocked-access review; New York City has only a narrow legacy overlap; Auburn's safety and civilian cycles are adjacent; Kingston's civilian row is a multi-union premium MOA. These remain scheduling judgments from model metadata, not source verification.
+- No exact NY URL duplicates or overlap with the pre-NY queue/canonical corpus were found locally. Three visibly police arbitration rows are labeled `unclear`, and Kingston's multi-union MOA cannot serve as an ordinary comparator without later unit-specific confirmation. Blocked rows remain holds rather than dead sources.
+- All 57 handoff rows retain `unverified_scout_candidate`; no NY calibration, verification, later-ingestion approval, canonical, codified, or claim status was created.
+
+**Surprises/breakage**
+- The full live batch completed without the Illinois-style timeout: 955,600 input, 43,749 reasoning, and 68,985 output tokens, with 42.38 seconds average response time and roughly 24 minutes elapsed. Direct-SDK billed dollars were unavailable.
+- The spreadsheet skill's required workspace-dependency loader was unavailable, so deterministic repo CSV builders and parse-back validation were used without installing a substitute. The shell's `python` and `python3` shims remained unusable; `.venv/bin/python` was used consistently.
+
+**Validation/audit results**
+```text
+all seven requested/added py_compile checks: exit 0
+NY25 handoff builder: 57 rows
+queue builder: 246 rows (IL 76; MA 24; NJ 8; NY 57; PA 75; TX 6)
+coverage builders/orchestrator: universe 35,589; covered 88; candidate-positive 80; parseable empty 8; excluded failures 17
+direct-SDK regression test: 6 PASS checks
+prompt-contract regression test: 6 PASS checks
+validate.py: PASSED (64 contracts; 0 discourse; 64 coverage; 3 city attributes)
+ingest/test_pipeline.py: 60 passed, 0 failed
+audit_coverage.py: 28 healthy pairs (10 exact, 18 overlap), 2 exploratory adjacent, 6 unmatched safety units
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent | 6 unmatched safety units. No canonical contract, coverage, or corpus row changed in this task.
+
+**Next steps**
+1. Do not verify all 57 NY links or ingest automatically. Continue national scaling only through a separately prepared locked state batch and a fresh direct-SDK smoke preflight before any live authorization.
+2. A California 25-city dry-run preparation is the suggested next slice because Los Angeles and Sacramento are the next untouched manifest anchors. Later coordinated verification should select municipality-level matched groups and resolve employer, unit, provenance, execution/completeness, dates, wage content, duplicates, and overlap before ingestion.
+
 ## 2026-07-20 19:42 EDT (Prepared New York 25-city state-scale scout batch and passed dry prompt review) - await separately authorized direct-SDK smoke and live run
 
 **Did**

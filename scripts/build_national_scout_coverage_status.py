@@ -3,7 +3,7 @@
 
 The 35,589-row municipality universe and municipality-county crosswalk are
 authoritative inputs. This script does not rebuild or download either source.
-It overlays successful PA/TX/MA/NJ/IL live runs, keeps connection/transport-only
+It overlays successful PA/TX/MA/NJ/IL/NY live runs, keeps connection/transport-only
 attempts as excluded infrastructure failures, joins the deferred-verification
 queue, and writes municipality/state/county status outputs under
 ``docs/analysis``.
@@ -64,6 +64,14 @@ SUCCESSFUL_BATCHES = [
         "input": DOCS / "national_batch01_il25_scout_input_2026-07-20.csv",
         "backend": "direct-sdk",
         "failed_municipality_ids": ["cog_2025_124994"],
+    },
+    {
+        "state": "NY",
+        "wave": "NY25-2026-07-20",
+        "run_id": "ny_2026-07-20_200033",
+        "scout_date": "2026-07-20",
+        "input": DOCS / "national_batch01_ny25_scout_input_2026-07-20.csv",
+        "backend": "direct-sdk",
     },
 ]
 
@@ -424,10 +432,10 @@ def build_municipality_rows() -> list[dict[str, object]]:
         )
 
     status_counts = Counter(row["scout_coverage_status"] for row in output)
-    if status_counts["scouted_with_candidates"] != 59:
-        raise ValueError(f"Expected 59 candidate-positive municipalities: {status_counts}")
-    if status_counts["scouted_no_candidates"] != 4:
-        raise ValueError(f"Expected 4 successful empty municipalities: {status_counts}")
+    if status_counts["scouted_with_candidates"] != 80:
+        raise ValueError(f"Expected 80 candidate-positive municipalities: {status_counts}")
+    if status_counts["scouted_no_candidates"] != 8:
+        raise ValueError(f"Expected 8 successful empty municipalities: {status_counts}")
     if status_counts["scout_attempt_failed_connection"] != 1:
         raise ValueError(f"Expected one IL failure-only municipality: {status_counts}")
     if sum(int(row["failed_connection_attempt_count"]) for row in output) != 17:
@@ -451,6 +459,7 @@ def load_state_costs() -> dict[str, dict[str, str]]:
         "MA": "ma_2026-07-20_150025",
         "NJ": "nj_2026-07-20_165402",
         "IL": "il_2026-07-20_184849",
+        "NY": "ny_2026-07-20_200033",
     }.items():
         row = cost_rows[run_id]
         result[state] = {
@@ -573,8 +582,8 @@ def build_state_rows(municipality_rows: list[dict[str, object]]) -> list[dict[st
         )
     if sum(int(row["municipalities_in_universe"]) for row in output) != 35_589:
         raise ValueError("State coverage does not sum to the authoritative universe")
-    if sum(int(row["municipalities_scouted"]) for row in output) != 63:
-        raise ValueError("State coverage does not sum to 63 successful scout municipalities")
+    if sum(int(row["municipalities_scouted"]) for row in output) != 88:
+        raise ValueError("State coverage does not sum to 88 successful scout municipalities")
     return output
 
 

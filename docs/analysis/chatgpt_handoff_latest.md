@@ -2,9 +2,28 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-20T19:42:00-04:00`
+Last updated: `2026-07-20T20:30:00-04:00`
 
 ---
+
+## 2026-07-20T20:30:00-04:00 — New York NY25 direct-SDK scout completed 25/25; 57 leads are queued and remain unverified
+
+### Current State
+
+- **Checkpoint reconciliation:** started at `a393f60c92f7137c46536cc6ab724e7a04dacaa9` (`Prepare New York 25-city scout batch`). The supplied `tmp/national_batch01_ny25_filter_contract_dry_run_2026-07-20_relay_a393f60.zip` passed integrity inspection, and every requested shared relay/repository file plus both dry-run artifacts matched byte-for-byte. No Git remote was inspected or changed.
+- **Required smoke:** one no-search direct-SDK request used exactly `Reply with OK.`, `gpt-5.4-nano`, Harvard `/v2`, no tools/search, zero retries, and a 30-second timeout. It returned `OK`, a response ID, 10 input / 0 reasoning / 5 output tokens, and explicit success. Evidence is under `tmp/direct_sdk_scout_backend_preflight/NY/national_batch01_ny25_2026-07-20/`.
+- **Locked live run:** only after smoke success, exactly the 25 ordered rows in [national_batch01_ny25_scout_input_2026-07-20.csv](national_batch01_ny25_scout_input_2026-07-20.csv) ran through `--live-backend direct-sdk`, serially, with 15-second spacing, low search context, and zero retries. The project `.venv/bin/python` was used. Full artifacts are under `tmp/gabriel_state_source_scout/NY/national_batch01_ny25_live_direct_sdk_2026-07-20/`; run ID is `ny_2026-07-20_200033`.
+- **Execution result:** all 25 responses were nonempty, carried response IDs, and parsed successfully. Twenty-one municipalities produced candidates. Yonkers, Schenectady, Mount Vernon, and Newburgh returned valid empty candidate lists. There were no connection errors, parser failures, zero-response rows, or retries.
+- **Usage/result rows:** 955,600 input, 43,749 reasoning, and 68,985 output tokens; average request time 42.38 seconds; roughly 24 minutes elapsed; billed dollars unavailable. The run produced 57 rows: police 26, fire 17, ordinary non-safety 11, unclear 3. The [normalized handoff](national_batch01_ny25_live_direct_sdk_scout_candidates_2026-07-20.csv) keeps all rows `unverified_scout_candidate`; the [scout review](national_batch01_ny25_live_direct_sdk_scout_review_2026-07-20.md) records municipality counts and filtering boundaries.
+- **Scout interpretation only:** Rochester, Ithaca, Saratoga Springs, and Syracuse have the strongest apparent groups. Buffalo and Albany lack civilian/fire legs; New York City has only a narrow 2017 legacy overlap; Poughkeepsie's older set includes a blocked police locator; Auburn's civilian row begins after its safety rows end. Three visibly police arbitration rows are labeled `unclear`, and Kingston's only civilian row is an insufficient multi-union premium MOA.
+- **Duplicate/employer/access review:** local artifact comparison found no exact NY within-run, pre-NY queue, or canonical URL overlap. Every employer field names the intended city, although 55 rows retain `possible` wrong-employer warnings. Three rows are blocked, none dead; queue precedence holds blocked rows as insufficient. No URL was opened to confirm any of these model descriptions.
+- **Queue/coverage:** the durable queue now contains 246 rows: PA 75, TX 6, MA 24, NJ 8, IL 76, NY 57. One hundred eighty-three are scheduled for later verification, including 48 NY rows. Successful national discovery coverage is 88 municipalities. New York counts all 25: 21 with candidates and four parseable-empty responses. NY has no failure-only attempt, calibration finding, later-ingestion approval, exact canonical candidate overlap, codified output, or claim status.
+- **Protected state:** no source was independently opened, downloaded, verified, ingested, codified, canonicalized, or used for a claim. Canonical contracts, city coverage, and corpus are unchanged.
+- **Validation:** all seven requested/added compiles passed; NY handoff, queue, direct coverage builder, and canonical coverage orchestrator reconciled at 57/246/88; direct-SDK and prompt-contract suites passed 6/6 each; schema validation passed at 64 contracts; ingestion tests passed 60/60; canonical coverage remains 28 healthy pairs, 2 exploratory adjacent pairs, and 6 unmatched safety units.
+
+### Next Move
+
+Do not open all NY links or ingest automatically. The recommended next preparation task is a locked California 25-city dry-run batch using the current universe and coverage: Los Angeles and Sacramento are the next untouched manifest anchors. Any later live batch requires separate authorization and a fresh direct-SDK no-search preflight. When coordinated verification begins, prioritize complete municipality-level bundles—especially Rochester, Ithaca, Saratoga Springs, and Syracuse—and establish exact employer/unit, official provenance, execution/completeness, dates, wage content, duplicates, and mutual overlap before ingestion or claim use.
 
 ## 2026-07-20T19:42:00-04:00 — New York 25-city state-scale input is dry-run ready; no live/model action ran
 

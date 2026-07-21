@@ -17,13 +17,14 @@ The queue is therefore a discovery and scheduling artifact. It is not a source i
 
 ## Included source sets
 
-The 2026-07-20 build contains 189 candidate rows:
+The 2026-07-20 build contains 246 candidate rows:
 
 - Pennsylvania pilot/batch-25 final output: 75 rows from the successful main and five-row retry outputs on 2026-07-15;
 - Texas national batch 01: 6 rows from 2026-07-16;
 - Massachusetts national batch 01 successful rerun: 24 rows from 2026-07-20;
-- New Jersey national batch 01 direct-SDK run: 8 rows from 2026-07-20.
+- New Jersey national batch 01 direct-SDK run: 8 rows from 2026-07-20;
 - Illinois national batch 01 state-scale direct-SDK run: 76 rows from 24 successful responses on 2026-07-20. Champaign returned a parseable empty candidate list, and Bloomington timed out without a response; neither adds a queue row.
+- New York national batch 01 state-scale direct-SDK run: 57 rows from 25 successful responses on 2026-07-20. Yonkers, Schenectady, Mount Vernon, and Newburgh returned parseable empty candidate lists and therefore add coverage but no queue rows.
 
 The original candidate files are read-only inputs. The builder does not rewrite them. Pennsylvania's two files are combined because the retry filled the five connection-failed municipalities from the same final 25-municipality batch; their candidate totals reconcile exactly to the existing PA municipality coverage ledger.
 
@@ -108,7 +109,7 @@ Calibration is used to:
 - identify eight prior calibration `later_ingest_candidate` recommendations for later coordinated pre-ingestion review;
 - correct triage when direct calibration showed that a scout's context/dead/partial label was wrong.
 
-Future states, including all Illinois rows, should normally remain uncalibrated in the queue until a later coordinated verification wave is selected. Calibration findings should never be copied into canonical verification or ingestion fields without that later workflow's explicit decision.
+Future states, including all Illinois and New York rows, should normally remain uncalibrated in the queue until a later coordinated verification wave is selected. Calibration findings should never be copied into canonical verification or ingestion fields without that later workflow's explicit decision.
 
 ## Rebuild procedure
 

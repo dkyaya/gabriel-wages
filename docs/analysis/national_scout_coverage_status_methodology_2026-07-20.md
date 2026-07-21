@@ -23,7 +23,7 @@ Status: national source-discovery execution accounting. This is separate from ve
 
 A connection-only or zero-response timeout failure is not discovery coverage. Massachusetts produced 16 connection-error request rows across eight unique municipalities on 2026-07-16. Those attempts are preserved in failure-count/run-ID columns and excluded. The successful 2026-07-20 rerun is what makes the eight municipalities scout-covered. Bloomington IL later timed out without text, response ID, or tokens and remains a failure-only municipality. If a future municipality has only this kind of transport failure, it remains visibly `scout_attempt_failed_connection`, not `not_scouted` and not source-covered.
 
-Parseable empty output counts as coverage because the model completed the discovery prompt; it does not prove that no source exists. Austin TX, two PA municipalities, and Champaign IL are current `scouted_no_candidates` examples.
+Parseable empty output counts as coverage because the model completed the discovery prompt; it does not prove that no source exists. Austin TX, two PA municipalities, Champaign IL, and Yonkers, Schenectady, Mount Vernon, and Newburgh NY are current `scouted_no_candidates` examples.
 
 ## Queue, verification, and ingestion fields
 
@@ -44,16 +44,17 @@ The current accounting includes:
 - PA pilot/batch-25 final coverage: 25 municipalities;
 - TX national batch 01: San Antonio, Austin, and Houston;
 - MA national batch 01 successful rerun: Somerville, Newton, Boston, Worcester, Arlington, Georgetown, Franklin, and Seekonk;
-- NJ national batch 01 direct-SDK run: Newark, Jersey City, and Camden.
+- NJ national batch 01 direct-SDK run: Newark, Jersey City, and Camden;
 - IL national batch 01 state-scale direct-SDK run: 24 successful municipalities from the locked IL25 input; Champaign returned a parseable empty result and Bloomington is retained as a failure-only timeout.
+- NY national batch 01 state-scale direct-SDK run: all 25 locked city rows; 21 returned candidates and four returned parseable empty lists.
 
-That produces 63 scout-covered municipalities: 59 with candidate rows and 4 with parseable empty outputs. The failed MA connection-only runs and Bloomington timeout are retained separately and do not add coverage.
+That produces 88 scout-covered municipalities: 80 with candidate rows and 8 with parseable empty outputs. The failed MA connection-only runs and Bloomington timeout are retained separately and do not add coverage.
 
 ## Outputs
 
 `docs/analysis/national_scout_coverage_municipality_2026-07-20.csv` contains one row for every municipality in the universe and is the detailed status source.
 
-`docs/analysis/national_scout_coverage_state.csv` aggregates unique municipalities. It reports the full denominator, successful coverage, candidate-positive and empty results, failed transport attempts excluded, queued candidate counts, calibration counts, canonical overlap, and successful-run usage/cost where available. Direct-SDK NJ and IL billed costs are unavailable and remain blank rather than estimated.
+`docs/analysis/national_scout_coverage_state.csv` aggregates unique municipalities. It reports the full denominator, successful coverage, candidate-positive and empty results, failed transport attempts excluded, queued candidate counts, calibration counts, canonical overlap, and successful-run usage/cost where available. Direct-SDK NJ, IL, and NY billed costs are unavailable and remain blank rather than estimated.
 
 `docs/analysis/national_scout_coverage_county.csv` aggregates municipality-county associations and repeats the non-additivity warning on every row.
 

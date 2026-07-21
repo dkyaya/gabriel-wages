@@ -6,8 +6,8 @@ files when their tmp/ caches are absent. It does not run GABRIEL, verify scout
 leads, ingest documents, codify text, or touch canonical corpus files.
 
 The Census universe/crosswalk remain owned here. Current live-scout status is
-delegated to ``build_national_scout_coverage_status.py`` so successful TX, MA,
-and NJ runs and excluded connection-only attempts are not lost to the older
+delegated to ``build_national_scout_coverage_status.py`` so successful current
+state runs and excluded connection-only attempts are not lost to the older
 PA-only carry-forward table.
 """
 
