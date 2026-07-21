@@ -31,6 +31,8 @@ STRICT_PROMPT_FRAGMENTS = (
     "wrong_employer_risk",
     "context_only_flag",
     "needs_verification_reason",
+    "Every returned item remains unverified scout-stage lead data",
+    "Do not invent URLs",
 )
 
 
@@ -52,10 +54,13 @@ def _check_row_aware_prompt() -> None:
         "county_context_summary": "Travis County; Williamson County; Hays County",
     }
     prompt = scout.build_prompt("Austin", "TX", "minimal", row)
+    assert "Locked internal municipality ID: US-CENSUSGOV-TX-1765050000" in prompt
     assert "CITY OF AUSTIN municipal government, Census government ID 175050" in prompt
+    assert "Search target: ordinary non-safety comparator distinct from EMS" in prompt
     assert "EMS is explicitly excluded" in prompt
     assert "Matched-comparison gap" in prompt
     assert "Travis County" in prompt
+    assert "Verification cautions: Exclude EMS as the comparator." in prompt
     assert "Scout purpose: matched_comparison_repair" in prompt
     assert "Austin police 2024-2029" in prompt
     assert "Known source/cycle exclusions" in prompt
@@ -83,10 +88,85 @@ def _check_three_column_fallback() -> None:
         rows = scout.load_municipalities("PA", path, None)
     assert len(rows) == 1
     prompt = scout.build_prompt("Example Borough", "PA", "minimal", rows[0])
+    assert "Locked internal municipality ID: test-pa-001" in prompt
     assert "the municipal government of Example Borough, PA" in prompt
     assert "Search target: police; fire; non_safety/general municipal" in prompt
     for fragment in STRICT_PROMPT_FRAGMENTS:
         assert fragment in prompt, fragment
+
+    # build_prompt also remains backward-compatible with legacy callers whose
+    # optional row context does not contain a municipality_id at all.
+    legacy_prompt = scout.build_prompt(
+        "Legacy Borough",
+        "PA",
+        "minimal",
+        {"municipality": "Legacy Borough", "state": "PA"},
+    )
+    assert "Locked internal municipality ID:" not in legacy_prompt
+    assert "the municipal government of Legacy Borough, PA" in legacy_prompt
+    for fragment in STRICT_PROMPT_FRAGMENTS:
+        assert fragment in legacy_prompt, fragment
+
+
+def _check_mixed_state_loading_and_live_authorization() -> None:
+    with tempfile.TemporaryDirectory() as tmp:
+        path = Path(tmp) / "locked_150.csv"
+        with path.open("w", newline="", encoding="utf-8") as f:
+            writer = csv.DictWriter(
+                f, fieldnames=["municipality_id", "municipality", "state"]
+            )
+            writer.writeheader()
+            for state in ("CA", "NJ", "TX"):
+                for index in range(1, 51):
+                    writer.writerow(
+                        {
+                            "municipality_id": f"test-{state.lower()}-{index:03d}",
+                            "municipality": f"Test {state} Municipality {index}",
+                            "state": state,
+                        }
+                    )
+
+        rows = scout.load_municipalities(
+            "ALL",
+            path,
+            None,
+            allow_mixed_states=True,
+            reject_mixed_state_input=True,
+        )
+        assert len(rows) == 150
+        assert [row["state"] for row in rows[:2]] == ["CA", "CA"]
+        assert [row["state"] for row in rows[-2:]] == ["TX", "TX"]
+        assert {row["state"] for row in rows} == {"CA", "NJ", "TX"}
+
+        try:
+            scout.load_municipalities(
+                "CA", path, None, reject_mixed_state_input=True
+            )
+        except SystemExit as exc:
+            assert "refusing to silently filter rows" in str(exc)
+        else:
+            raise AssertionError("mixed-state input was silently filtered")
+
+    assert scout.resolve_live_prompt_count(
+        150, 150, 150, require_exact=True
+    ) == 150
+    for max_prompts, hard_cap, available in (
+        (150, 25, 150),
+        (149, 150, 150),
+    ):
+        try:
+            scout.resolve_live_prompt_count(
+                max_prompts,
+                hard_cap,
+                available,
+                require_exact=True,
+            )
+        except SystemExit:
+            pass
+        else:
+            raise AssertionError(
+                "unsafe mixed-state live authorization did not fail closed"
+            )
 
 
 def _check_new_fields_survive_parsing() -> None:
@@ -172,11 +252,15 @@ def _check_live_outcome_summary() -> None:
 def main() -> int:
     _check_row_aware_prompt()
     _check_three_column_fallback()
+    _check_mixed_state_loading_and_live_authorization()
     _check_new_fields_survive_parsing()
     _check_access_labels_remain_distinct()
     _check_live_outcome_summary()
     print("PASS: row-aware prompt retains contextual fields")
     print("PASS: three-column input fallback remains valid")
+    print("PASS: missing optional municipality_id retains legacy prompt fallback")
+    print("PASS: mixed-state 150-row loading preserves all rows and exact order")
+    print("PASS: mixed-state live cap requires explicit exact authorization")
     print("PASS: strict unit/document/no-candidate guidance is present")
     print("PASS: new candidate-stage fields survive parsing and remain unverified")
     print("PASS: blocked/unreadable remains separate from dead/unreachable")

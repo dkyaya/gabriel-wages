@@ -2,7 +2,15 @@
 
 Date: 2026-07-21
 
-Disposition: **three locked offline-preparation batches are ready; no live/API action is authorized or performed**
+Disposition: **three locked offline-preparation batches are ready under the corrected prompt contract; no live/API action is authorized or performed**
+
+## 2026-07-21 coordinator correction note
+
+Worker 2's NJ50 dry-run exposed a shared prompt-contract omission: the prompt body included exact `government_name` and Census government ID but omitted the locked internal `municipality_id`. Its original review correctly failed at 0/50 municipality IDs and blocked live. The coordinator patched the prompt builder to emit an unambiguous `Locked internal municipality ID: <municipality_id>` line when that value exists, while preserving the legacy fallback when it does not. A new coordinator-only NJ50 dry run passed 50/50 for internal ID, government name, Census ID, county context, expected units, verification notes, and the full employer/unit/source-stage contract.
+
+The runner now also has an explicit mixed-state mode and explicit live-cap override. A future CA/NJ/TX run must use `--state ALL --allow-mixed-states`, `--max-prompts 150`, and `--live-hard-cap 150`. Mixed-state live execution is restricted to direct SDK, `n_parallels=1`, zero retries, exact loaded-row authorization, no `--limit`, and no retry-file mode. A multi-state CSV without the flag, a max above the cap, or a mixed row-count mismatch now fails instead of dropping or truncating rows. Offline tests loaded a synthetic ordered 150-row CA/NJ/TX input without loss and exercised both fail-closed paths.
+
+All future live prompts must be generated with this corrected code. The original Worker 2 failure remains part of the audit trail and is cured only by the new coordinator rereview. Worker 1/3 inputs remain eligible prep candidates, but the final combined 150-row dry review must verify that their live-bound prompts also use the corrected identity line.
 
 ## Plain-English plan
 
@@ -34,12 +42,12 @@ The worker size is a preparation unit, not a live-concurrency unit. No worker ge
 
 One process guarantees a single ordered queue, one active API client, `n_parallels=1`, one stop guard, one cost/usage artifact family, and one national merge boundary. It avoids inter-worker API overlap and the ambiguity of deciding whether partial worker batches should be merged. The input order will remain Worker 1 CA ranks 1–50, Worker 2 NJ ranks 1–50, then Worker 3 TX ranks 1–50.
 
-There are two mandatory code gates before a future live run. The current scout:
+There were two mandatory code gates before a future live run. The pre-fix scout:
 
 1. filters the municipalities CSV to a single `--state`; and
 2. clips live execution at `LIVE_HARD_CAP=25`.
 
-A future coordinator must implement and no-network-test explicit mixed-state input support and a reviewed cap of at least 150. The enhancement must preserve row-state prompts/identifiers, dry-run behavior, serial ordering, lifecycle checkpoints, stop-guard evidence, and all existing tests. Merely passing `--max-prompts 150` to the present code would silently run at most 25 rows; using one state flag on the mixed input would silently drop the other 100. Either condition is a hard preflight stop. This task intentionally does not change the runner.
+The coordinator implemented and no-network-tested explicit mixed-state input support and an explicit cap authorization. The corrected runner preserves row-state prompts/identifiers, dry-run behavior, serial ordering, and existing lifecycle artifacts while rejecting silent filtering/truncation. A future live command must still use the exact corrected flags and separately pass the relay, combined-input, dry-review, smoke, and live-authorization gates. The technical capability is present; permission to exercise it is not.
 
 ## Runtime, usage, and estimate-only cost
 
@@ -57,7 +65,7 @@ The serialized CA/NJ reference estimates were `$0.1874` and `$0.2384` per 25 row
 ## Risks and stop conditions
 
 - Stop before smoke if any prep relay is missing, any dry review is not 50/50, any input changed/reordered, any row became covered/queued/canonical/failure-only, any prohibited employer type appears, or the 150 IDs are not unique.
-- Stop before smoke unless mixed-state input and a live cap of at least 150 are implemented, tested, reviewed, and committed.
+- Stop before smoke unless the corrected mixed-state/cap implementation is the committed version in use and the final 150-row dry metadata/review proves all rows and corrected prompt identities are present.
 - Stop if the synthetic one-request no-search smoke fails, lacks `OK`/`OK.`, a response ID when exposed, positive output tokens, or explicit success.
 - Stop the live queue on connection collapse: two consecutive no-ID/no-text/no-token connection or timeout failures, or another repeated transport pattern that indicates service instability. Preserve partial/stopped evidence and do not retry or substitute rows.
 - Stop on systematic parser/schema failure, loss of lifecycle/command evidence, unexpected protected/global changes, or any secret exposure.

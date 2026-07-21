@@ -16,9 +16,12 @@ SAFETY MODEL — read before use:
     and `promotion_status=raw_model_output`.
   - Defaults to --dry-run: builds prompts and writes a prompt preview only. No
     network call, no gabriel/dotenv import, no credential read.
-  - --live requires an explicit --max-prompts. A hard cap (LIVE_HARD_CAP below)
-    is enforced in code regardless of --max-prompts; raising it requires editing
-    this file, not passing a bigger flag.
+  - --live requires an explicit --max-prompts. The default live cap is
+    LIVE_HARD_CAP below. A larger run requires a matching, explicit
+    --live-hard-cap value; over-cap requests fail instead of being truncated.
+  - Mixed-state CSVs are rejected unless --allow-mixed-states is paired with
+    --state ALL. A live mixed-state run is additionally restricted to the
+    direct-SDK backend, n_parallels=1, and an exact input-row authorization.
   - The Harvard Proxy subscription key is read from the environment only inside
     the live-call code path and is never printed, logged, or written to any
     output file.
@@ -81,8 +84,8 @@ DEFAULT_DIRECT_SDK_PRICING_CONFIG = (
     DOCS_ANALYSIS / "direct_sdk_pricing_config_2026-07-20.json"
 )
 
-# Hard ceiling on live calls per run. Deliberately not overridable via CLI flag
-# — raising this requires editing this constant, per the task's safety model.
+# Default ceiling on live calls per run. A larger run requires an explicit
+# matching --live-hard-cap value; requests above that value fail closed.
 LIVE_HARD_CAP = 25
 
 CANDIDATE_FIELDS = [
@@ -436,6 +439,7 @@ Return JSON with:
 MINIMAL_PROMPT_TEMPLATE = """Find public URLs for municipal labor source documents for {municipality}, {state}.
 
 Target employer only: {target_employer}
+{locked_identity_line}
 {context_lines}
 
 Follow the search target strictly. Sources outside it may appear only as clearly labeled context and do not count as requested candidates.
@@ -492,11 +496,18 @@ Do not invent URLs. It is acceptable to find no qualifying source for this city;
 # Municipality list
 # ---------------------------------------------------------------------------
 
-def load_municipalities(state: str, municipalities_csv: Path | None, limit: int | None) -> list[dict]:
+def load_municipalities(
+    state: str,
+    municipalities_csv: Path | None,
+    limit: int | None,
+    *,
+    allow_mixed_states: bool = False,
+    reject_mixed_state_input: bool = False,
+) -> list[dict]:
     path = municipalities_csv or DEFAULT_MUNICIPALITIES_CSV
     if not path.exists():
         raise SystemExit(f"ERROR: municipalities CSV not found: {path}")
-    rows: list[dict] = []
+    input_rows: list[dict] = []
     with path.open(newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         required = {"municipality_id", "municipality", "state"}
@@ -504,14 +515,67 @@ def load_municipalities(state: str, municipalities_csv: Path | None, limit: int 
         if missing:
             raise SystemExit(f"ERROR: {path} missing required columns: {sorted(missing)}")
         for row in reader:
-            if row["state"].strip().upper() != state.strip().upper():
-                continue
-            rows.append(row)
+            row_state = (row.get("state") or "").strip().upper()
+            if not row_state:
+                raise SystemExit(f"ERROR: {path} contains a row with an empty state")
+            input_rows.append(row)
+
+    input_states = sorted(
+        {(row.get("state") or "").strip().upper() for row in input_rows}
+    )
+    requested_state = state.strip().upper()
+    if allow_mixed_states:
+        if requested_state != "ALL":
+            raise SystemExit(
+                "ERROR: --allow-mixed-states requires --state ALL so the mixed-state "
+                "scope is explicit"
+            )
+        rows = input_rows
+    else:
+        if requested_state == "ALL":
+            raise SystemExit("ERROR: --state ALL requires --allow-mixed-states")
+        if reject_mixed_state_input and len(input_states) > 1:
+            raise SystemExit(
+                f"ERROR: {path} contains multiple states {input_states}; refusing to "
+                "silently filter rows. Use --state ALL --allow-mixed-states for an "
+                "explicit mixed-state run."
+            )
+        rows = [
+            row
+            for row in input_rows
+            if (row.get("state") or "").strip().upper() == requested_state
+        ]
     if not rows:
         raise SystemExit(f"ERROR: no municipalities found for state={state} in {path}")
     if limit is not None:
         rows = rows[:limit]
     return rows
+
+
+def resolve_live_prompt_count(
+    max_prompts: int,
+    live_hard_cap: int,
+    available_count: int,
+    *,
+    require_exact: bool = False,
+) -> int:
+    """Validate an explicitly authorized live window without silent clipping."""
+
+    if max_prompts <= 0:
+        raise SystemExit("ERROR: --max-prompts must be positive for --live")
+    if live_hard_cap <= 0:
+        raise SystemExit("ERROR: --live-hard-cap must be positive")
+    if max_prompts > live_hard_cap:
+        raise SystemExit(
+            f"ERROR: --max-prompts {max_prompts} exceeds --live-hard-cap "
+            f"{live_hard_cap}; refusing to truncate the requested live run"
+        )
+    if require_exact and max_prompts != available_count:
+        raise SystemExit(
+            f"ERROR: mixed-state live input contains {available_count} rows but "
+            f"--max-prompts authorizes {max_prompts}; exact authorization is required"
+        )
+    return min(max_prompts, available_count)
 
 
 def load_retry_municipality_ids(path: Path) -> list[str]:
@@ -555,6 +619,7 @@ def build_prompt(
         return PROMPT_TEMPLATE.format(municipality=municipality, state=state)
 
     row = context or {}
+    municipality_id = (row.get("municipality_id") or "").strip()
     government_name = (row.get("government_name") or "").strip()
     census_gov_id = (row.get("census_gov_id") or "").strip()
     if government_name and census_gov_id:
@@ -628,6 +693,11 @@ def build_prompt(
         municipality=municipality,
         state=state,
         target_employer=target_employer,
+        locked_identity_line=(
+            f"Locked internal municipality ID: {municipality_id}"
+            if municipality_id
+            else ""
+        ),
         context_lines="\n".join(context_lines),
     )
 
@@ -2164,6 +2234,14 @@ def _parse_args() -> argparse.Namespace:
     mode.add_argument("--dry-run", action="store_true", help="Build prompts and write a prompt preview only. No network/model call.")
     mode.add_argument("--live", action="store_true", help="Run the selected live backend for real (bounded, see --max-prompts).")
     parser.add_argument("--state", default="PA", help="2-letter state code (default: PA).")
+    parser.add_argument(
+        "--allow-mixed-states",
+        action="store_true",
+        help=(
+            "Explicitly permit a locked multi-state --municipalities-csv. Requires "
+            "--state ALL; live use is direct-SDK and sequential only."
+        ),
+    )
     parser.add_argument("--limit", type=int, default=None, help="Max municipalities to load from the municipality list.")
     parser.add_argument("--municipalities-csv", type=Path, default=None, help="Optional municipality list CSV (municipality_id,municipality,state,...).")
     parser.add_argument("--output-dir", type=Path, default=None, help="Output directory (default: tmp/gabriel_state_source_scout/<state>/<timestamp>/).")
@@ -2210,7 +2288,22 @@ def _parse_args() -> argparse.Namespace:
             f"(default: {DEFAULT_DIRECT_SDK_MAX_RETRIES})."
         ),
     )
-    parser.add_argument("--max-prompts", type=int, default=None, help="Required for --live. Hard-capped at LIVE_HARD_CAP regardless.")
+    parser.add_argument(
+        "--max-prompts",
+        type=int,
+        default=None,
+        help="Required for --live; requests above --live-hard-cap fail closed.",
+    )
+    parser.add_argument(
+        "--live-hard-cap",
+        type=int,
+        default=LIVE_HARD_CAP,
+        help=(
+            "Explicit live-call ceiling for this invocation. Defaults to "
+            f"{LIVE_HARD_CAP}; raising it does not itself authorize calls unless "
+            "--max-prompts also requests them."
+        ),
+    )
     parser.add_argument("--timeout", type=float, default=DEFAULT_TIMEOUT, help=f"Per-call timeout (seconds) passed to gabriel.whatever (default: {DEFAULT_TIMEOUT}).")
     parser.add_argument("--max-timeout", type=float, default=DEFAULT_MAX_TIMEOUT, help=f"Max-timeout ceiling (seconds) passed to gabriel.whatever; if greater than --timeout, dynamic_timeout is enabled (default: {DEFAULT_MAX_TIMEOUT}).")
     parser.add_argument("--sleep-between-prompts", type=float, default=0.0, help="Seconds to rest between n_parallels-sized prompt chunks on the live path. 0 (default) = single call, unchanged behavior.")
@@ -2231,8 +2324,35 @@ def _parse_args() -> argparse.Namespace:
         return args
     if not args.live:
         args.dry_run = True
+    if args.allow_mixed_states:
+        if args.state.strip().upper() != "ALL":
+            parser.error("--allow-mixed-states requires --state ALL")
+        if args.municipalities_csv is None:
+            parser.error("--allow-mixed-states requires an explicit --municipalities-csv")
+        if args.limit is not None:
+            parser.error("--allow-mixed-states does not permit --limit; use the locked CSV row count")
+    elif args.state.strip().upper() == "ALL":
+        parser.error("--state ALL requires --allow-mixed-states")
     if args.live and args.max_prompts is None:
         parser.error("--live requires --max-prompts")
+    if args.live_hard_cap <= 0:
+        parser.error("--live-hard-cap must be positive")
+    if args.live and args.max_prompts <= 0:
+        parser.error("--max-prompts must be positive for --live")
+    if args.live and args.max_prompts > args.live_hard_cap:
+        parser.error(
+            f"--max-prompts {args.max_prompts} exceeds --live-hard-cap "
+            f"{args.live_hard_cap}; refusing to truncate"
+        )
+    if args.live and args.allow_mixed_states:
+        if args.live_backend != "direct-sdk":
+            parser.error("mixed-state live runs require --live-backend direct-sdk")
+        if args.n_parallels != 1:
+            parser.error("mixed-state live runs require --n-parallels 1")
+        if args.direct_sdk_max_retries != 0:
+            parser.error("mixed-state live runs require --direct-sdk-max-retries 0")
+        if args.retry_failed_from is not None:
+            parser.error("mixed-state live runs do not permit --retry-failed-from")
     if args.direct_sdk_max_retries < 0:
         parser.error("--direct-sdk-max-retries must be non-negative")
     return args
@@ -2251,7 +2371,13 @@ def main() -> int:
     out_dir = args.output_dir or (TMP_ROOT / args.state / timestamp)
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    municipalities = load_municipalities(args.state, args.municipalities_csv, args.limit)
+    municipalities = load_municipalities(
+        args.state,
+        args.municipalities_csv,
+        args.limit,
+        allow_mixed_states=args.allow_mixed_states,
+        reject_mixed_state_input=args.municipalities_csv is not None,
+    )
 
     if args.retry_failed_from is not None:
         retry_ids = load_retry_municipality_ids(args.retry_failed_from)
@@ -2271,9 +2397,12 @@ def main() -> int:
         municipalities = filtered
 
     if args.live:
-        n_requested = min(args.max_prompts, LIVE_HARD_CAP)
-        if args.max_prompts > LIVE_HARD_CAP:
-            print(f"WARNING: --max-prompts {args.max_prompts} exceeds LIVE_HARD_CAP={LIVE_HARD_CAP}; clipping.")
+        n_requested = resolve_live_prompt_count(
+            args.max_prompts,
+            args.live_hard_cap,
+            len(municipalities),
+            require_exact=args.allow_mixed_states,
+        )
         municipalities = municipalities[:n_requested]
 
     prompts = [
@@ -2287,13 +2416,15 @@ def main() -> int:
     metadata: dict[str, Any] = {
         "run_id": run_id,
         "state": args.state,
+        "input_states": sorted({m["state"].strip().upper() for m in municipalities}),
+        "allow_mixed_states": args.allow_mixed_states,
         "mode": "live" if args.live else "dry_run",
         "municipalities_requested": len(municipalities),
         "model": args.model,
         "search_context_size": args.search_context_size,
         "n_parallels": args.n_parallels,
         "max_prompts": args.max_prompts,
-        "live_hard_cap": LIVE_HARD_CAP,
+        "live_hard_cap": args.live_hard_cap,
         "timeout": args.timeout,
         "max_timeout": args.max_timeout,
         "sleep_between_prompts": args.sleep_between_prompts,

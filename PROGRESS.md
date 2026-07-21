@@ -6,6 +6,45 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-21 (Corrected municipality-ID prompts and added fail-closed mixed-state 150-row runner support)
+
+**Did**
+- Started at local commit `98a203cf7fefbe3a2e0c6b1b65f6e9ace78abe5f`. The three named prep relays were absent from the main `tmp/`, so exact copies were located read-only in the existing worker worktrees, inspected, integrity-tested, and copied into coordinator `tmp/`. Their SHA-256 values are Worker 1 `6133669f8c2c599047fb4ccb181ea577eb736576e470aacfa1517237efcdd86b`, Worker 2 `e891505bd8436452b63aa0459c5d6ed9ec26c1f3615ecb7d290cb276a4891f70`, and Worker 3 `34b720da88ef7cbd4f5cd9580d82da80a4375a2f37582272af0f04fcc42d7388`. No remote operation occurred.
+- Assessed CA50 as a 50/50 offline PASS at worker commit `e391ce04347b0496f40a9283eb92f747a3e97c76`, NJ50 as an original FAIL at `0969e3923cdaf09ce5dd1bc659333f3a65ebb654` because locked municipality IDs were absent from 50/50 prompt bodies, and TX50 as a 50/50 offline PASS at `8a885ef07b8cd9a12dfecaedec77ced8a38a740a`. All three metadata files are dry-run only and retain the historical 25-row live cap.
+- Patched every minimal row-aware prompt to print `Locked internal municipality ID: <municipality_id>` when present. Government name, Census ID, state, county context, expected units, verification notes, employer/unit restrictions, empty-output guidance, blocked/dead separation, and unverified-stage handling remain intact. A legacy caller without an optional municipality ID still builds a valid fallback prompt.
+- Added explicit coordinator mixed-state support. `--state ALL --allow-mixed-states` loads the complete locked CSV in file order; an explicit multi-state CSV without the flag now fails instead of silently filtering. `--live-hard-cap` is a separate explicit ceiling; over-cap requests fail instead of clipping. Mixed-state live mode additionally requires direct SDK, `n_parallels=1`, zero retries, an exact max/input row-count match, no `--limit`, and no retry-file mode.
+- Regenerated NJ50 once from the main repo into `tmp/coordinator_regenerated_worker_2_nj50_dry_run_after_municipality_id_fix_2026-07-21`. Run `nj_2026-07-21_191043` built 50 prompts and recorded `live_attempted=false`/`backend_call_returned=false`. Automated row-by-row rereview passed 50/50 for internal ID, government name, Census ID, county context, expected units, verification notes, and all common filter controls.
+- Added the three-worker relay assessment, corrected NJ rereview, corrected future coordinator prompt, and a correction note to the batch plan. No locked worker input, national queue/coverage output, canonical contract/city-coverage/corpus file, dashboard, ingestion code/data, codified data, or claim evidence changed.
+
+**Decisions and why**
+- Use the smaller runner change rather than a state-splitting wrapper: one explicitly mixed, locked CSV preserves the required CA→NJ→TX order and one lifecycle/cost artifact family. Its fail-closed checks prevent both silent state loss and silent 25-row truncation.
+- Keep the default cap at 25 for ordinary runs. A future 150-row process must spell out both `--max-prompts 150` and `--live-hard-cap 150`; neither flag alone authorizes more than its value.
+- Treat Worker 2 as prep-complete only when its original failed relay is paired with the new coordinator regeneration/rereview. Keep the failure in the audit trail rather than rewriting it.
+
+**Surprises/breakage**
+- The Worker 1/3 reviews counted municipality-ID identity from their preview evidence, while the shared prompt body itself did not print the ID. Worker 2's stricter review exposed the omission. All future live-bound prompts must therefore be generated with the corrected coordinator code, including CA/TX.
+- The named relay ZIPs again were not initially present in main `tmp/`; the worker-held copies were intact and are now under coordinator custody. Pre-existing untracked `package-lock.json` remained untouched.
+
+**Validation/audit results**
+```text
+six requested py_compile targets: exit 0
+prompt-contract no-network regression test: 9 PASS checks
+direct-SDK fully mocked/no-network regression test: 11 PASS checks
+synthetic mixed-state fixture: 150/150 loaded in CA/NJ/TX file order; cap and exact-count failures rejected
+NJ50 regenerated preview: 50/50 for ID/employer/Census/county/expected-units/verification/strict controls
+validate.py: PASSED (64 contracts; 0 discourse; 64 coverage; 3 city attributes)
+ingest/test_pipeline.py: 60 passed, 0 failed
+audit_coverage.py: 28 healthy pairs (10 exact, 18 overlap), 2 exploratory adjacent, 6 unmatched safety units
+git diff --check: passed
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. No canonical contract, city-coverage, corpus, national queue/coverage, ingestion, codified, dashboard, or claim row changed.
+
+**Next steps**
+1. In a separately authorized coordinator task, reconcile then combine CA50, corrected NJ50, and TX50 into one hashed 150-row CSV in Worker 1→2→3 order. Run one no-network mixed-state dry review over all 150 corrected prompts.
+2. Only after that offline review and explicit API authorization, run one direct-SDK no-search smoke and, if it passes, one live process with `--state ALL --allow-mixed-states --max-prompts 150 --live-hard-cap 150 --n-parallels 1 --direct-sdk-max-retries 0`.
+3. Stop on connection collapse. Rebuild queue/coverage once only after a complete merge-eligible artifact audit. Verification, URL opening/downloading, ingestion, codify, canonical edits, and claim use remain deferred.
+
 ## 2026-07-21 (Prepared three locked 50-row worker batches for one future serialized 150-row queue)
 
 **Did**
