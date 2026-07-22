@@ -6,6 +6,39 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-22 (Bounded diagnostic confirms hosted search and production scout route are healthy now)
+
+**Did**
+- Started at `25445fe3fc0d25800d19e023e993b8fc90302256` with clean tracked state and the unrelated untracked root `package-lock.json`. Reconciled both stopped Tier 1 attempts: each used locked hash `77b66569bcc2803e5067f84ad20b63e595f8c0611beb87820166b1a3a9de112b`, attempted only Oklahoma City/Phoenix, returned no ID/text/tokens, stopped 148 rows before request, and produced zero parseable/candidate rows.
+- Added an isolated bounded helper that reuses the production `run_direct_sdk_live_batch()` transport without loading scout inputs or writing research accounting. Its plan-only run recorded three planned calls and zero external calls with no credential values loaded or logged.
+- Ran one bounded three-call suite: no-search `OK.` passed in 1.412s; the Boston hosted-search control passed in 8.880s; and the Oklahoma City municipality-style hosted-search control passed its requested JSON shape in 21.450s. All three returned response IDs, text, and usage; no exception or secret exposure occurred. No alternate model was tested because the repository documents none as supported on this HUIT route.
+- Because the suite reached Category A, ran the authorized fourth and final external call as a diagnostic-only Oklahoma City probe through the production scout runner. It returned an ID/text/usage, parsed 1/1, produced two quarantined unverified diagnostic rows, and had zero parse failure. The normal dated handoff was moved from `docs/analysis` into the probe `tmp/` directory so it cannot be mistaken for national accounting.
+
+**Decisions and why**
+- Classify the point-in-time route as **Recommendation A: healthy now**. Search tooling is not persistently failing independently of the scout prompt; the two earlier identical subsecond collapses remain transient transport/proxy/execution-context incidents of unknown external cause.
+- Do not count the probe as a scout-covered municipality or queue input. Oklahoma City and Phoenix remain ordinary unscouted Tier 1 targets; prior failures and this probe do not alter yield, coverage, priority, or claims.
+- A later full 150-row retry is reasonable only under separate authorization, in a new output directory with fresh smoke and lineage to both stopped parents plus this diagnostic. Keep one lane, five-second spacing, zero retries, and the two-consecutive-collapse stop gate.
+
+**Validation/audit results**
+```text
+plan-only: PASS; 3 planned calls; 0 external calls; no credentials loaded/logged
+bounded live diagnostic: 3/3 PASS; category A; IDs/text/usage present; no exceptions
+one-row production probe: 1/1 parseable; 2 quarantined rows; 0 failures; not merged
+three requested py_compile commands: exit 0
+mocked/no-network direct-SDK suite: 19 PASS checks
+validate.py: PASSED (64 contracts; 0 discourse; 64 coverage; 3 city attributes)
+ingest/test_pipeline.py: 60 passed, 0 failed
+audit_coverage.py: 28 healthy pairs (10 exact, 18 overlap), 2 exploratory adjacent, 6 unmatched safety units
+git diff --check: passed
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. No independent URL access, verification, ingestion, codification, queue/coverage/dashboard/priority rebuild, canonical contract/city-coverage/corpus edit, candidate promotion, claim use, remote action, or push occurred.
+
+**Next steps**
+1. Preserve the two stopped attempts and this Category A diagnostic together; do not reinterpret the earlier transport failures as municipality evidence.
+2. Under separate authorization, re-audit current eligibility/hash, run one fresh no-search smoke, and retry the full locked 150 in a fresh lineage-linked directory. Stop again on connection collapse.
+3. Rebuild national accounting once only after a complete merge-eligible full wave. Keep verification, ingestion, codification, and claim use separate.
+
 ## 2026-07-22 (Fresh Tier 1 retry reproduced immediate hosted-search transport collapse)
 
 **Did**

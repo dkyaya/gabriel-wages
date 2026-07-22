@@ -6,6 +6,23 @@ Last updated: `2026-07-22`
 
 ---
 
+## 2026-07-22 — Bounded diagnostic passes hosted search and the actual one-row scout path
+
+### Current State
+
+- **Checkpoint/evidence:** started at `25445fe3fc0d25800d19e023e993b8fc90302256`, a descendant of both stopped attempts, with clean tracked state and unrelated untracked `package-lock.json`. [The evidence audit](hosted_search_transport_failure_evidence_audit_2026-07-22.md) confirms both parents used hash `77b66569bcc2803e5067f84ad20b63e595f8c0611beb87820166b1a3a9de112b`, failed Oklahoma City/Phoenix without IDs/text/tokens, stopped 148 rows, and produced zero parseable/candidate outcomes. Neither was merged.
+- **Call-path finding:** [the call-path note](direct_sdk_hosted_search_call_path_notes_2026-07-22.md) confirms controls and scouts use the same `AsyncOpenAI.responses.create` route, fixed HUIT `/v2` base, bearer plus subscription-header names, timeout/retry implementation, and response extraction. Search adds the hosted `web_search` tool, source inclusion, and low reasoning. Required credential variable name is `HARVARD_SUBSCRIPTION_KEY`; no value or client configuration was logged.
+- **Bounded helper:** `scripts/diagnose_direct_sdk_hosted_search_transport.py` is isolated from production behavior and national accounting, refuses nonempty directories, has a hard four-call ceiling, zero retries, redaction, plan-only mode, and early stops. No supported alternate low-cost HUIT model is documented, so its fixed plan has three calls.
+- **Plan/live result:** plan-only recorded three planned and zero external calls. The one bounded live execution made exactly three calls. No-search returned `OK.`/ID/usage in 1.412s; the Boston hosted-search request returned ID/text/usage in 8.880s; the Oklahoma City municipality-style request returned ID/text/usage and valid requested JSON in 21.450s. No exception or secret exposure occurred. See [results](hosted_search_transport_diagnostic_results_2026-07-22.md).
+- **Production probe:** because the result was Category A, one final diagnostic-only Oklahoma City call ran through the actual scout runner. It completed in 59.409s, returned ID/text and 42,214 input / 1,549 reasoning / 2,381 output / 44,595 total tokens, parsed 1/1, and produced two quarantined unverified rows with no parse failure. [The probe report](tier1_one_row_scout_probe_result_2026-07-22.md) explicitly excludes it from queue/coverage. Its generated dated handoff was relocated into the probe `tmp/` directory.
+- **Diagnosis/recommendation:** **A — hosted search is healthy now.** The current result rejects a persistent search-only transport or scout-prompt/parser defect. It does not recover the exact cause of the two prior subsecond collapses; transient network/proxy/upstream or execution-context state remains the leading family. [Recommendation](hosted_search_transport_recommendation_2026-07-22.md): a later fresh full 150-row retry is reasonable only with separate authorization, fresh smoke/output, preserved lineage, one lane, five-second spacing, zero retries, and collapse stop.
+- **Accounting/protection:** no queue/coverage/dashboard/priority builder ran. Oklahoma City remains nationally `not_scouted`; the two probe rows are diagnostic-only. National accounting stays 1,009 queue rows, 504 successful, 391 candidate-positive, 113 parseable-empty, and ten failure-only. No independent URL access, verification, ingestion, codification, canonical/corpus edit, claim use, remote action, or push occurred.
+- **Validation:** helper/runner/direct-test compiles passed; mocked no-network direct-SDK tests passed 19; schema validation passed at 64 contracts; pipeline tests passed 60/60; canonical coverage remains 28 healthy pairs (10 exact, 18 overlap), two adjacent exploratory, and six unmatched safety units; diff check passed.
+
+### Next Move
+
+Do not merge the diagnostic probe. Preserve both stopped parents, the Category A transport artifacts, and [the recommendation](hosted_search_transport_recommendation_2026-07-22.md). Under a separately authorized live task, recheck locked hash/current eligibility, run one fresh no-search smoke, and retry the full 150 rows into a new lineage-linked directory. Queue/coverage/dashboard rebuild occurs once only after complete merge-eligible evidence; verification, ingestion, codification, and claims remain separate.
+
 ## 2026-07-22 — Fresh Tier 1 full retry reproduced the stopped parent's connection collapse
 
 ### Current State
