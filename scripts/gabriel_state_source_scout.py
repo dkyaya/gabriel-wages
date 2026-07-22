@@ -22,6 +22,12 @@ SAFETY MODEL — read before use:
   - Mixed-state CSVs are rejected unless --allow-mixed-states is paired with
     --state ALL. A live mixed-state run is additionally restricted to the
     direct-SDK backend, n_parallels=1, and an exact input-row authorization.
+  - Live scouting is sequential (n_parallels=1). The inter-row default is five
+    seconds; raise it to 8-10 or the earlier conservative 15 seconds if
+    transport instability returns. This does not authorize concurrent workers.
+  - Every new dry/live run requires a fresh output directory. Safe resume reads
+    a terminal prior run with an input hash and row_timing.csv, writes a plan in
+    a different fresh directory, and never mutates the parent artifacts.
   - The Harvard Proxy subscription key is read from the environment only inside
     the live-call code path and is never printed, logged, or written to any
     output file.
@@ -34,7 +40,8 @@ Usage (safe, no network call):
 
 Usage (live, requires HARVARD_SUBSCRIPTION_KEY, e.g. via a git-ignored .env file):
   python scripts/gabriel_state_source_scout.py --live --state PA --limit 10 \\
-      --max-prompts 10 --search-context-size low --model gpt-5.4-nano --n-parallels 3
+      --max-prompts 10 --search-context-size low --model gpt-5.4-nano \\
+      --n-parallels 1 --sleep-between-prompts 5
 
 Usage (live through the HUIT-compatible direct SDK backend):
   python scripts/gabriel_state_source_scout.py --live --live-backend direct-sdk \\
@@ -44,18 +51,28 @@ Usage (live through the HUIT-compatible direct SDK backend):
 Timeout/retry tuning (2026-07-14 stress test — see docs/analysis/gabriel_state_source_scout_timeout_test_2026-07-14.md):
   python scripts/gabriel_state_source_scout.py --live --state PA \\
       --retry-failed-from tmp/gabriel_state_source_scout/PA/<prior_run>/failed_parses.csv \\
-      --timeout 180 --max-timeout 240 --n-parallels 2 --max-prompts 6 \\
+      --timeout 180 --max-timeout 240 --n-parallels 1 --max-prompts 6 \\
       --search-context-size low --model gpt-5.4-nano --prompt-mode minimal \\
       --sleep-between-prompts 5
+
+Usage (safe resume planning only; no backend call):
+  python scripts/gabriel_state_source_scout.py --dry-run --state ALL \\
+      --allow-mixed-states --municipalities-csv <LOCKED_INPUT.csv> \\
+      --resume-from-output-dir <PRIOR_LIVE_DIR> \\
+      --output-dir <FRESH_RESUME_DRY_RUN_DIR> --retry-failures-only \\
+      --prompt-mode minimal --live-hard-cap 150
 """
 
 from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import json
 import re
+import statistics
 import sys
+import time
 from datetime import datetime
 from pathlib import Path
 from typing import Any
@@ -71,7 +88,7 @@ HARVARD_PROXY_BASE_URL = "https://go.apis.huit.harvard.edu/ais-openai-direct/v2"
 
 DEFAULT_MODEL = "gpt-5.4-nano"
 DEFAULT_SEARCH_CONTEXT_SIZE = "low"
-DEFAULT_N_PARALLELS = 3
+DEFAULT_N_PARALLELS = 1
 # Unchanged from the values hard-coded in run_live_batch before the 2026-07-14
 # timeout stress test; --timeout/--max-timeout let a caller override both
 # without touching defaults for any existing invocation.
@@ -80,6 +97,7 @@ DEFAULT_MAX_TIMEOUT = 90
 DEFAULT_PROMPT_MODE = "full"
 DEFAULT_LIVE_BACKEND = "gabriel"
 DEFAULT_DIRECT_SDK_MAX_RETRIES = 0
+DEFAULT_SLEEP_BETWEEN_PROMPTS = 5.0
 DEFAULT_DIRECT_SDK_PRICING_CONFIG = (
     DOCS_ANALYSIS / "direct_sdk_pricing_config_2026-07-20.json"
 )
@@ -87,6 +105,57 @@ DEFAULT_DIRECT_SDK_PRICING_CONFIG = (
 # Default ceiling on live calls per run. A larger run requires an explicit
 # matching --live-hard-cap value; requests above that value fail closed.
 LIVE_HARD_CAP = 25
+
+DEFAULT_FAILURE_RETRY_TYPES = (
+    "timeout",
+    "connection_error",
+    "parse_error",
+    "malformed_output",
+)
+
+ROW_TIMING_FIELDS = [
+    "run_id",
+    "row_index",
+    "row_identity_key",
+    "municipality_id",
+    "municipality",
+    "state",
+    "worker_id",
+    "census_gov_id",
+    "prompt_started_at",
+    "prompt_finished_at",
+    "elapsed_seconds",
+    "sleep_before_seconds",
+    "sleep_after_seconds",
+    "backend",
+    "model",
+    "live_attempted",
+    "success_status",
+    "parse_status",
+    "failure_type",
+    "response_id_present",
+    "input_tokens",
+    "output_tokens",
+    "reasoning_tokens",
+    "total_tokens",
+]
+
+RESUME_PLAN_FIELDS = [
+    "run_id",
+    "prior_run_id",
+    "row_index",
+    "row_identity_key",
+    "municipality_id",
+    "municipality",
+    "state",
+    "prior_success_status",
+    "prior_parse_status",
+    "prior_failure_type",
+    "normalized_failure_type",
+    "action",
+    "selected_for_attempt",
+    "reason",
+]
 
 CANDIDATE_FIELDS = [
     "run_id",
@@ -197,12 +266,20 @@ FAILED_PARSE_FIELDS = [
 # outright proxy timeouts vs. a real OpenAI response ID with no usable text.
 FAILURE_TYPES = (
     "timeout_or_capacity",
+    "connection_error",
     "empty_response_with_response_id",
     "empty_response_no_response_id",
     "json_parse_error",
+    "missing_response_row",
     "other",
 )
 _TIMEOUT_ERROR_MARKERS = ("timed out", "timeout", "maximum capacity")
+_CONNECTION_ERROR_MARKERS = (
+    "connection error",
+    "apiconnectionerror",
+    "transport error",
+    "connection reset",
+)
 
 
 def _bool_str(value: bool) -> str:
@@ -249,6 +326,8 @@ def classify_failure(response_text: str, gabriel_row: dict) -> tuple[str, dict]:
     lowered_error = error_log.lower()
     if any(marker in lowered_error for marker in _TIMEOUT_ERROR_MARKERS):
         failure_type = "timeout_or_capacity"
+    elif any(marker in lowered_error for marker in _CONNECTION_ERROR_MARKERS):
+        failure_type = "connection_error"
     elif response_nonempty:
         failure_type = "json_parse_error"
     elif has_response_id:
@@ -510,7 +589,7 @@ def load_municipalities(
     input_rows: list[dict] = []
     with path.open(newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
-        required = {"municipality_id", "municipality", "state"}
+        required = {"municipality", "state"}
         missing = required - set(reader.fieldnames or [])
         if missing:
             raise SystemExit(f"ERROR: {path} missing required columns: {sorted(missing)}")
@@ -518,6 +597,7 @@ def load_municipalities(
             row_state = (row.get("state") or "").strip().upper()
             if not row_state:
                 raise SystemExit(f"ERROR: {path} contains a row with an empty state")
+            row.setdefault("municipality_id", "")
             input_rows.append(row)
 
     input_states = sorted(
@@ -597,6 +677,284 @@ def load_retry_municipality_ids(path: Path) -> list[str]:
     if not ids:
         raise SystemExit(f"ERROR: no municipality_id values found in {path}")
     return ids
+
+
+def sha256_file(path: Path) -> str:
+    """Return the exact byte-level SHA-256 used to lock resume lineage."""
+
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def row_identity_key(row: dict[str, Any]) -> str:
+    """Return a deterministic row identity without fuzzy name matching.
+
+    Municipality ID is authoritative. A Census government ID is the first safe
+    legacy fallback. Exact state + normalized municipality is permitted only as
+    a final legacy fallback and is guarded by whole-input uniqueness checks.
+    """
+
+    preserved = str(row.get("row_identity_key", "") or "").strip()
+    if preserved:
+        return preserved
+    municipality_id = str(row.get("municipality_id", "") or "").strip()
+    if municipality_id:
+        return f"municipality_id:{municipality_id}"
+    state = str(row.get("state", "") or "").strip().upper()
+    census_gov_id = str(row.get("census_gov_id", "") or "").strip()
+    if state and census_gov_id:
+        return f"census_gov_id:{state}:{census_gov_id}"
+    municipality = " ".join(
+        str(row.get("municipality", "") or "").strip().casefold().split()
+    )
+    if not state or not municipality:
+        raise SystemExit(
+            "ERROR: cannot construct a stable legacy row identity without state "
+            "and municipality"
+        )
+    return f"legacy_state_municipality:{state}:{municipality}"
+
+
+def validate_unique_row_identities(rows: list[dict[str, Any]]) -> None:
+    seen: dict[str, int] = {}
+    for index, row in enumerate(rows, start=1):
+        key = row_identity_key(row)
+        if key in seen:
+            raise SystemExit(
+                f"ERROR: unsafe duplicate stable row identity {key!r} at input "
+                f"rows {seen[key]} and {index}"
+            )
+        seen[key] = index
+
+
+def row_identifier_token(row: dict[str, Any]) -> str:
+    municipality_id = str(row.get("municipality_id", "") or "").strip()
+    if municipality_id:
+        return municipality_id
+    return "legacy_" + hashlib.sha256(
+        row_identity_key(row).encode("utf-8")
+    ).hexdigest()[:20]
+
+
+def normalize_failure_retry_type(value: str) -> str:
+    raw = (value or "").strip().lower()
+    if raw in {"timeout", "timeout_or_capacity", "capacity"}:
+        return "timeout"
+    if raw in {
+        "connection_error",
+        "connection",
+        "transport_error",
+        "stopped_before_request",
+    }:
+        return "connection_error"
+    if raw in {"parse_error", "json_parse_error"}:
+        return "parse_error"
+    if raw in {
+        "malformed_output",
+        "empty_response_with_response_id",
+        "empty_response_no_response_id",
+        "missing_response_row",
+    }:
+        return "malformed_output"
+    if raw in {"other", ""}:
+        return "other"
+    raise SystemExit(f"ERROR: unsupported failure retry type: {value!r}")
+
+
+def parse_failure_retry_types(value: str) -> set[str]:
+    values = [part.strip() for part in value.split(",") if part.strip()]
+    if not values:
+        raise SystemExit("ERROR: --failure-retry-types must not be empty")
+    return {normalize_failure_retry_type(part) for part in values}
+
+
+def load_resume_evidence(prior_dir: Path) -> tuple[dict[str, Any], list[dict[str, str]]]:
+    if not prior_dir.exists() or not prior_dir.is_dir():
+        raise SystemExit(
+            f"ERROR: --resume-from-output-dir is not a directory: {prior_dir}"
+        )
+    metadata_path = prior_dir / "run_metadata.json"
+    timing_path = prior_dir / "row_timing.csv"
+    missing = [str(path) for path in (metadata_path, timing_path) if not path.is_file()]
+    if missing:
+        raise SystemExit(
+            "ERROR: prior output lacks required post-resume-contract artifact(s): "
+            + ", ".join(missing)
+            + ". Old runs without row_timing.csv cannot be resumed safely."
+        )
+    try:
+        metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise SystemExit(
+            f"ERROR: prior run metadata is unreadable: {type(exc).__name__}"
+        ) from exc
+    if metadata.get("mode") != "live" or not metadata.get("live_attempted"):
+        raise SystemExit("ERROR: resume requires a prior live-attempt output directory")
+    terminal_statuses = {
+        "completed",
+        "completed_no_parseable_outcome",
+        "no_response_rows",
+    }
+    if metadata.get("execution_status") not in terminal_statuses:
+        raise SystemExit(
+            "ERROR: prior run lacks a terminal artifact lifecycle; refusing to infer "
+            "completed rows after possible process/artifact loss"
+        )
+    if not str(metadata.get("input_csv_sha256", "") or "").strip():
+        raise SystemExit(
+            "ERROR: prior run metadata lacks input_csv_sha256; old-run resumption is "
+            "blocked because input lineage cannot be proven"
+        )
+    with timing_path.open(newline="", encoding="utf-8") as handle:
+        reader = csv.DictReader(handle)
+        required = {"parse_status", "failure_type", "municipality", "state"}
+        missing_fields = required - set(reader.fieldnames or [])
+        if missing_fields:
+            raise SystemExit(
+                f"ERROR: prior row_timing.csv missing fields: {sorted(missing_fields)}"
+            )
+        timing_rows = list(reader)
+    if not timing_rows:
+        raise SystemExit("ERROR: prior row_timing.csv is empty")
+    validate_unique_row_identities(timing_rows)
+    return metadata, timing_rows
+
+
+def build_resume_plan(
+    run_id: str,
+    municipalities: list[dict[str, Any]],
+    prior_metadata: dict[str, Any],
+    prior_timing_rows: list[dict[str, str]],
+    *,
+    skip_completed: bool,
+    retry_failures_only: bool,
+    allowed_failure_types: set[str],
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    prior_by_key = {row_identity_key(row): row for row in prior_timing_rows}
+    selected: list[dict[str, Any]] = []
+    plan: list[dict[str, Any]] = []
+    for row_index, municipality in enumerate(municipalities, start=1):
+        identity = row_identity_key(municipality)
+        prior = prior_by_key.get(identity, {})
+        prior_parse = (prior.get("parse_status") or "").strip()
+        prior_success = (prior.get("success_status") or "").strip()
+        prior_failure = (prior.get("failure_type") or "").strip()
+        normalized_failure = (
+            normalize_failure_retry_type(prior_failure) if prior_failure else ""
+        )
+        select = False
+        if retry_failures_only:
+            if prior and prior_parse == "parseable":
+                action, reason = "skip_completed", "prior parseable outcome"
+            elif prior and normalized_failure in allowed_failure_types:
+                select = True
+                action, reason = "retry_failure", (
+                    f"prior failure category {normalized_failure} is authorized"
+                )
+            elif prior:
+                action, reason = "skip_failure_type", (
+                    f"prior failure category {normalized_failure or 'unknown'} is not authorized"
+                )
+            else:
+                action, reason = "skip_not_failed", "no prior failed outcome"
+        elif skip_completed:
+            if prior and prior_parse == "parseable":
+                action, reason = "skip_completed", "prior parseable outcome"
+            else:
+                select = True
+                action = "resume_noncompleted"
+                reason = "no prior parseable outcome"
+        else:  # Parser validation prevents this path; retained fail-closed.
+            raise SystemExit(
+                "ERROR: resume requires --skip-completed-municipality-ids or "
+                "--retry-failures-only"
+            )
+        if select:
+            selected.append(municipality)
+        plan.append(
+            {
+                "run_id": run_id,
+                "prior_run_id": prior_metadata.get("run_id", ""),
+                "row_index": row_index,
+                "row_identity_key": identity,
+                "municipality_id": municipality.get("municipality_id", ""),
+                "municipality": municipality.get("municipality", ""),
+                "state": municipality.get("state", ""),
+                "prior_success_status": prior_success,
+                "prior_parse_status": prior_parse,
+                "prior_failure_type": prior_failure,
+                "normalized_failure_type": normalized_failure,
+                "action": action,
+                "selected_for_attempt": _bool_str(select),
+                "reason": reason,
+            }
+        )
+    return selected, plan
+
+
+def write_resume_summary(
+    out_dir: Path,
+    *,
+    run_id: str,
+    prior_dir: Path,
+    prior_metadata: dict[str, Any],
+    current_input_hash: str,
+    hash_mismatch: bool,
+    hash_override: bool,
+    lineage_note: str,
+    plan: list[dict[str, Any]],
+) -> Path:
+    actions: dict[str, int] = {}
+    for row in plan:
+        action = str(row.get("action", ""))
+        actions[action] = actions.get(action, 0) + 1
+    payload = {
+        "run_id": run_id,
+        "prior_run_id": prior_metadata.get("run_id"),
+        "prior_output_dir": str(prior_dir),
+        "prior_input_csv_sha256": prior_metadata.get("input_csv_sha256"),
+        "current_input_csv_sha256": current_input_hash,
+        "input_hash_mismatch": hash_mismatch,
+        "input_hash_mismatch_override_used": hash_override,
+        "resume_lineage_note": lineage_note,
+        "input_rows": len(plan),
+        "selected_rows": sum(row["selected_for_attempt"] == "yes" for row in plan),
+        "skipped_rows": sum(row["selected_for_attempt"] != "yes" for row in plan),
+        "prior_completed_rows": sum(
+            row["action"] == "skip_completed" for row in plan
+        ),
+        "prior_completed_municipality_ids": [
+            row["municipality_id"]
+            for row in plan
+            if row["action"] == "skip_completed" and row["municipality_id"]
+        ],
+        "prior_completed_row_identity_keys": [
+            row["row_identity_key"]
+            for row in plan
+            if row["action"] == "skip_completed"
+        ],
+        "selected_municipality_ids": [
+            row["municipality_id"]
+            for row in plan
+            if row["selected_for_attempt"] == "yes" and row["municipality_id"]
+        ],
+        "selected_row_identity_keys": [
+            row["row_identity_key"]
+            for row in plan
+            if row["selected_for_attempt"] == "yes"
+        ],
+        "action_counts": actions,
+        "stage_boundary": (
+            "Resume planning only. Skipped rows are prior outcomes and are not newly "
+            "scouted by this run."
+        ),
+    }
+    path = out_dir / "resume_summary.json"
+    path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+    return path
 
 
 # ---------------------------------------------------------------------------
@@ -997,6 +1355,181 @@ def write_csv(path: Path, rows: list[dict], fields: list[str]) -> None:
         assert header == fields, f"{path}: header mismatch after write"
         for i, row in enumerate(reader, start=2):
             assert len(row) == len(fields), f"{path}: row {i} width {len(row)} != {len(fields)}"
+
+
+def build_planned_row_timing(
+    run_id: str,
+    input_rows: list[dict[str, Any]],
+    selected_rows: list[dict[str, Any]],
+    *,
+    backend: str,
+    model: str,
+    dry_run: bool,
+    resume_plan: list[dict[str, Any]] | None = None,
+) -> list[dict[str, Any]]:
+    selected_keys = {row_identity_key(row) for row in selected_rows}
+    plan_by_key = {
+        str(row.get("row_identity_key", "")): row for row in (resume_plan or [])
+    }
+    timing_rows: list[dict[str, Any]] = []
+    for row_index, municipality in enumerate(input_rows, start=1):
+        identity = row_identity_key(municipality)
+        is_selected = identity in selected_keys
+        plan = plan_by_key.get(identity, {})
+        if is_selected:
+            success_status = "dry_run_planned" if dry_run else "pending_live_attempt"
+            parse_status = "not_attempted" if dry_run else "pending"
+        else:
+            success_status = str(plan.get("action", "skipped_by_plan"))
+            parse_status = str(plan.get("prior_parse_status", "not_attempted"))
+        timing_rows.append(
+            {
+                "run_id": run_id,
+                "row_index": row_index,
+                "row_identity_key": identity,
+                "municipality_id": municipality.get("municipality_id", ""),
+                "municipality": municipality.get("municipality", ""),
+                "state": municipality.get("state", ""),
+                "worker_id": municipality.get("worker_id", ""),
+                "census_gov_id": municipality.get("census_gov_id", ""),
+                "prompt_started_at": "",
+                "prompt_finished_at": "",
+                "elapsed_seconds": "",
+                "sleep_before_seconds": 0,
+                "sleep_after_seconds": 0,
+                "backend": backend,
+                "model": model,
+                "live_attempted": "no",
+                "success_status": success_status,
+                "parse_status": parse_status,
+                "failure_type": str(plan.get("prior_failure_type", "")) if not is_selected else "",
+                "response_id_present": "no",
+                "input_tokens": "",
+                "output_tokens": "",
+                "reasoning_tokens": "",
+                "total_tokens": "",
+            }
+        )
+    return timing_rows
+
+
+def finalize_row_timing(
+    planned_rows: list[dict[str, Any]],
+    selected_rows: list[dict[str, Any]],
+    identifiers: list[str],
+    raw_rows: list[dict[str, Any]],
+    failed_rows: list[dict[str, Any]],
+    timing_events: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    identifier_by_identity = {
+        row_identity_key(row): identifier
+        for row, identifier in zip(selected_rows, identifiers)
+    }
+    raw_by_identifier = {
+        str(row.get("Identifier", "")): row for row in raw_rows
+    }
+    failed_by_identifier = {
+        str(row.get("identifier", "")): row for row in failed_rows
+    }
+    event_by_identifier = {
+        str(row.get("identifier", "")): row for row in timing_events
+    }
+    output: list[dict[str, Any]] = []
+    for planned in planned_rows:
+        row = dict(planned)
+        identifier = identifier_by_identity.get(str(row["row_identity_key"]))
+        if not identifier:
+            output.append(row)
+            continue
+        raw = raw_by_identifier.get(identifier, {})
+        event = event_by_identifier.get(identifier, {})
+        failed = failed_by_identifier.get(identifier)
+        error = str(raw.get("Error Log", "") or "")
+        stopped = "stopped_before_request" in error
+        row.update(
+            {
+                "prompt_started_at": event.get("prompt_started_at", ""),
+                "prompt_finished_at": event.get("prompt_finished_at", ""),
+                "elapsed_seconds": (
+                    event.get("elapsed_seconds") or raw.get("Time Taken", "")
+                ),
+                "sleep_before_seconds": event.get("sleep_before_seconds", 0),
+                "sleep_after_seconds": event.get("sleep_after_seconds", 0),
+                "live_attempted": "no" if stopped else "yes",
+                "success_status": (
+                    "stopped_before_request"
+                    if stopped
+                    else ("failed" if failed else "completed_parseable")
+                ),
+                "parse_status": (
+                    "not_attempted"
+                    if stopped
+                    else ("failed" if failed else "parseable")
+                ),
+                "failure_type": (
+                    "stopped_before_request"
+                    if stopped
+                    else (str(failed.get("failure_type", "")) if failed else "")
+                ),
+                "response_id_present": _bool_str(
+                    bool(str(raw.get("Response IDs", "") or "").strip())
+                ),
+                "input_tokens": raw.get("Input Tokens", ""),
+                "output_tokens": raw.get("Output Tokens", ""),
+                "reasoning_tokens": raw.get("Reasoning Tokens", ""),
+                "total_tokens": raw.get("Total Tokens", ""),
+            }
+        )
+        output.append(row)
+    return output
+
+
+def timing_metadata_summary(
+    timing_rows: list[dict[str, Any]], total_elapsed_seconds: float
+) -> dict[str, Any]:
+    elapsed_values: list[float] = []
+    attempted_count = 0
+    total_sleep = 0.0
+    failure_counts: dict[str, int] = {}
+    for row in timing_rows:
+        if str(row.get("live_attempted", "")).lower() == "yes":
+            attempted_count += 1
+            try:
+                elapsed_values.append(float(row.get("elapsed_seconds", "")))
+            except (TypeError, ValueError):
+                pass
+        for key in ("sleep_before_seconds", "sleep_after_seconds"):
+            try:
+                total_sleep += float(row.get(key, 0) or 0)
+            except (TypeError, ValueError):
+                pass
+        failure_type = str(row.get("failure_type", "") or "").strip()
+        is_current_failure = (
+            str(row.get("live_attempted", "")).lower() == "yes"
+            or row.get("success_status") == "stopped_before_request"
+        )
+        if failure_type and is_current_failure:
+            failure_counts[failure_type] = failure_counts.get(failure_type, 0) + 1
+    average = statistics.mean(elapsed_values) if elapsed_values else None
+    median = statistics.median(elapsed_values) if elapsed_values else None
+    throughput = (
+        attempted_count * 3600 / total_elapsed_seconds
+        if attempted_count and total_elapsed_seconds > 0
+        else None
+    )
+    return {
+        "total_elapsed_seconds": round(total_elapsed_seconds, 3),
+        "attempted_row_count": attempted_count,
+        "average_elapsed_seconds_per_attempted_row": (
+            round(average, 3) if average is not None else None
+        ),
+        "median_elapsed_seconds_per_attempted_row": (
+            round(median, 3) if median is not None else None
+        ),
+        "total_sleep_seconds": round(total_sleep, 3),
+        "effective_rows_per_hour": round(throughput, 3) if throughput else None,
+        "failure_count_by_type": failure_counts,
+    }
 
 
 def upsert_csv_rows(path: Path, new_rows: list[dict], fields: list[str], key_field: str) -> None:
@@ -1651,10 +2184,13 @@ def build_state_coverage_row(state: str, municipality_rows: list[dict], total_mu
         "output_tokens_total": output_tokens,
         "total_successful_time_seconds": successful_time,
         "estimated_cost_per_100_municipalities": avg_cost_per_muni * 100,
-        # +15s/municipality approximates the recommended sleep_between_prompts
+        # +5s/municipality approximates the current sleep_between_prompts
         # spacing on top of the average successful call time, for a fully
-        # sequential (n_parallels=1) batch — see the tuning-matrix summary.
-        "estimated_time_per_100_municipalities": (avg_time_per_muni + 15) * 100,
+        # sequential (n_parallels=1) batch. The earlier conservative setting
+        # was 15 seconds; raise to 8-15 seconds if connection instability returns.
+        "estimated_time_per_100_municipalities": (
+            avg_time_per_muni + DEFAULT_SLEEP_BETWEEN_PROMPTS
+        ) * 100,
         "last_updated": last_updated,
     }
 
@@ -1970,7 +2506,8 @@ def run_direct_sdk_live_batch(
     *,
     web_search: bool = True,
     reasoning_effort: str | None = "low",
-) -> tuple[Any, str | None]:
+    return_timing: bool = False,
+) -> tuple[Any, str | None] | tuple[Any, str | None, list[dict[str, Any]]]:
     """Execute Responses calls directly through the HUIT OpenAI-compatible API."""
     import asyncio
     import time as time_module
@@ -1979,15 +2516,18 @@ def run_direct_sdk_live_batch(
     import pandas as pd
     from openai import AsyncOpenAI
 
+    def result(value: Any, failure: str | None, events: list[dict[str, Any]]):
+        return (value, failure, events) if return_timing else (value, failure)
+
     subscription_key = _load_live_subscription_key()
     if not subscription_key:
-        return None, "HARVARD_SUBSCRIPTION_KEY not set; no live call executed."
+        return result(None, "HARVARD_SUBSCRIPTION_KEY not set; no live call executed.", [])
     if max_retries < 0:
-        return None, "direct SDK max_retries must be non-negative; no live call executed."
+        return result(None, "direct SDK max_retries must be non-negative; no live call executed.", [])
     if timeout <= 0:
-        return None, "direct SDK timeout must be positive; no live call executed."
+        return result(None, "direct SDK timeout must be positive; no live call executed.", [])
 
-    async def run_all() -> list[dict[str, Any]]:
+    async def run_all() -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
         client = AsyncOpenAI(
             api_key=subscription_key,
             base_url=HARVARD_PROXY_BASE_URL,
@@ -1996,7 +2536,10 @@ def run_direct_sdk_live_batch(
             max_retries=max_retries,
         )
 
-        async def run_one(prompt: str, identifier: str) -> dict[str, Any]:
+        async def run_one(
+            prompt: str, identifier: str
+        ) -> tuple[dict[str, Any], dict[str, Any]]:
+            started_at = datetime.now().astimezone().isoformat()
             started = time_module.monotonic()
             try:
                 response = await client.responses.create(
@@ -2008,27 +2551,37 @@ def run_direct_sdk_live_batch(
                         reasoning_effort=reasoning_effort,
                     )
                 )
-                return direct_sdk_response_to_row(
+                row = direct_sdk_response_to_row(
                     response,
                     identifier,
                     prompt,
                     time_module.monotonic() - started,
                 )
             except Exception as exc:
-                return _direct_sdk_failure_row(
+                row = _direct_sdk_failure_row(
                     identifier,
                     prompt,
                     time_module.monotonic() - started,
                     exc,
                     [subscription_key],
                 )
+            finished_at = datetime.now().astimezone().isoformat()
+            return row, {
+                "identifier": identifier,
+                "prompt_started_at": started_at,
+                "prompt_finished_at": finished_at,
+                "elapsed_seconds": row.get("Time Taken", ""),
+                "sleep_before_seconds": 0.0,
+                "sleep_after_seconds": 0.0,
+            }
 
         rows: list[dict[str, Any]] = []
+        timing_events: list[dict[str, Any]] = []
         consecutive_connection_failures = 0
         chunk_size = max(1, n_parallels)
         try:
             for start in range(0, len(prompts), chunk_size):
-                chunk = await asyncio.gather(
+                chunk_results = await asyncio.gather(
                     *(
                         run_one(prompt, identifier)
                         for prompt, identifier in zip(
@@ -2037,7 +2590,10 @@ def run_direct_sdk_live_batch(
                         )
                     )
                 )
+                chunk = [item[0] for item in chunk_results]
+                chunk_events = [item[1] for item in chunk_results]
                 rows.extend(chunk)
+                timing_events.extend(chunk_events)
                 for row in chunk:
                     if is_direct_sdk_connection_failure_without_response(row):
                         consecutive_connection_failures += 1
@@ -2045,24 +2601,36 @@ def run_direct_sdk_live_batch(
                         consecutive_connection_failures = 0
                 next_start = start + chunk_size
                 if consecutive_connection_failures >= 2 and next_start < len(prompts):
-                    rows.extend(
-                        _direct_sdk_stopped_row(identifier, prompt)
-                        for prompt, identifier in zip(
-                            prompts[next_start:], identifiers[next_start:]
+                    for prompt, identifier in zip(
+                        prompts[next_start:], identifiers[next_start:]
+                    ):
+                        rows.append(_direct_sdk_stopped_row(identifier, prompt))
+                        timing_events.append(
+                            {
+                                "identifier": identifier,
+                                "prompt_started_at": "",
+                                "prompt_finished_at": "",
+                                "elapsed_seconds": "",
+                                "sleep_before_seconds": 0.0,
+                                "sleep_after_seconds": 0.0,
+                            }
                         )
-                    )
                     break
                 if sleep_between_prompts > 0 and start + chunk_size < len(prompts):
+                    sleep_started = time_module.monotonic()
                     await asyncio.sleep(sleep_between_prompts)
+                    chunk_events[-1]["sleep_after_seconds"] = round(
+                        time_module.monotonic() - sleep_started, 3
+                    )
         finally:
             await client.close()
-        return rows
+        return rows, timing_events
 
     try:
-        rows = asyncio.run(run_all())
+        rows, timing_events = asyncio.run(run_all())
     except Exception as exc:
         safe_message = redact_direct_sdk_text(exc, [subscription_key])
-        return None, f"{type(exc).__name__}: {safe_message}"
+        return result(None, f"{type(exc).__name__}: {safe_message}", [])
 
     out_dir.mkdir(parents=True, exist_ok=True)
     write_direct_sdk_sanitized_log(
@@ -2074,7 +2642,7 @@ def run_direct_sdk_live_batch(
         max_retries=max_retries,
         secret_values=[subscription_key],
     )
-    return pd.DataFrame(rows, columns=DIRECT_SDK_RAW_FIELDS), None
+    return result(pd.DataFrame(rows, columns=DIRECT_SDK_RAW_FIELDS), None, timing_events)
 
 def run_live_batch(
     municipalities: list[dict],
@@ -2087,10 +2655,15 @@ def run_live_batch(
     timeout: float = DEFAULT_TIMEOUT,
     max_timeout: float = DEFAULT_MAX_TIMEOUT,
     sleep_between_prompts: float = 0.0,
-) -> tuple[Any, str | None]:
+    *,
+    return_timing: bool = False,
+) -> tuple[Any, str | None] | tuple[Any, str | None, list[dict[str, Any]]]:
     import os
 
     from dotenv import load_dotenv
+
+    def result(value: Any, failure: str | None, events: list[dict[str, Any]]):
+        return (value, failure, events) if return_timing else (value, failure)
 
     for candidate in (ROOT / ".env", ROOT.parent / ".env"):
         if candidate.exists():
@@ -2099,12 +2672,12 @@ def run_live_batch(
 
     subscription_key = os.environ.get("HARVARD_SUBSCRIPTION_KEY")
     if not subscription_key:
-        return None, "HARVARD_SUBSCRIPTION_KEY not set; no live call executed."
+        return result(None, "HARVARD_SUBSCRIPTION_KEY not set; no live call executed.", [])
 
     try:
         import gabriel
     except Exception as exc:  # pragma: no cover - environment issue, not logic
-        return None, f"failed to import gabriel: {exc}"
+        return result(None, f"failed to import gabriel: {exc}", [])
 
     import asyncio
     import inspect
@@ -2150,6 +2723,7 @@ def run_live_batch(
         )
         return asyncio.run(result) if inspect.isawaitable(result) else result
 
+    timing_events: list[dict[str, Any]] = []
     try:
         # sleep_between_prompts > 0 chunks the batch into n_parallels-sized
         # groups and rests between chunks, on the hypothesis that per-call
@@ -2160,14 +2734,33 @@ def run_live_batch(
             chunk_size = max(1, n_parallels)
             frames = []
             for start in range(0, len(prompts), chunk_size):
+                chunk_started_at = datetime.now().astimezone().isoformat()
                 chunk_df = _call(
                     prompts[start : start + chunk_size],
                     identifiers[start : start + chunk_size],
                     min(chunk_size, len(prompts) - start),
                 )
+                chunk_finished_at = datetime.now().astimezone().isoformat()
+                current_identifiers = identifiers[start : start + chunk_size]
+                chunk_events = [
+                    {
+                        "identifier": identifier,
+                        "prompt_started_at": chunk_started_at,
+                        "prompt_finished_at": chunk_finished_at,
+                        "elapsed_seconds": "",
+                        "sleep_before_seconds": 0.0,
+                        "sleep_after_seconds": 0.0,
+                    }
+                    for identifier in current_identifiers
+                ]
+                timing_events.extend(chunk_events)
                 frames.append(chunk_df)
                 if start + chunk_size < len(prompts):
+                    sleep_started = time_module.monotonic()
                     time_module.sleep(sleep_between_prompts)
+                    chunk_events[-1]["sleep_after_seconds"] = round(
+                        time_module.monotonic() - sleep_started, 3
+                    )
             df = pd.concat(frames, ignore_index=True) if len(frames) > 1 else frames[0]
             # gabriel.whatever shares this run's save_dir/file_name across chunk
             # calls (reset_files=False, by design, so a chunk failure doesn't
@@ -2180,9 +2773,22 @@ def run_live_batch(
             if "Identifier" in df.columns:
                 df = df.drop_duplicates(subset=["Identifier"], keep="last").reset_index(drop=True)
         else:
+            batch_started_at = datetime.now().astimezone().isoformat()
             df = _call(prompts, identifiers, n_parallels)
+            batch_finished_at = datetime.now().astimezone().isoformat()
+            timing_events.extend(
+                {
+                    "identifier": identifier,
+                    "prompt_started_at": batch_started_at,
+                    "prompt_finished_at": batch_finished_at,
+                    "elapsed_seconds": "",
+                    "sleep_before_seconds": 0.0,
+                    "sleep_after_seconds": 0.0,
+                }
+                for identifier in identifiers
+            )
     except Exception as exc:
-        return None, f"{type(exc).__name__}: {exc}"
+        return result(None, f"{type(exc).__name__}: {exc}", timing_events)
     finally:
         if previous_openai_key is None:
             os.environ.pop("OPENAI_API_KEY", None)
@@ -2193,7 +2799,7 @@ def run_live_batch(
         else:
             os.environ["OPENAI_BASE_URL"] = previous_openai_base
 
-    return df, None
+    return result(df, None, timing_events)
 
 
 # ---------------------------------------------------------------------------
@@ -2255,7 +2861,16 @@ def _parse_args() -> argparse.Namespace:
     parser.add_argument("--output-dir", type=Path, default=None, help="Output directory (default: tmp/gabriel_state_source_scout/<state>/<timestamp>/).")
     parser.add_argument("--search-context-size", default=DEFAULT_SEARCH_CONTEXT_SIZE, help=f"Default: {DEFAULT_SEARCH_CONTEXT_SIZE}")
     parser.add_argument("--model", default=DEFAULT_MODEL, help=f"Default: {DEFAULT_MODEL}")
-    parser.add_argument("--n-parallels", type=int, default=DEFAULT_N_PARALLELS, help=f"Default: {DEFAULT_N_PARALLELS}")
+    parser.add_argument(
+        "--n-parallels",
+        type=int,
+        default=DEFAULT_N_PARALLELS,
+        help=(
+            f"Live scout concurrency (default: {DEFAULT_N_PARALLELS}). Current "
+            "production policy is one coordinator-controlled sequential lane; "
+            "higher concurrency requires explicit reauthorization."
+        ),
+    )
     parser.add_argument(
         "--live-backend",
         choices=("gabriel", "direct-sdk"),
@@ -2314,8 +2929,64 @@ def _parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--timeout", type=float, default=DEFAULT_TIMEOUT, help=f"Per-call timeout (seconds) passed to gabriel.whatever (default: {DEFAULT_TIMEOUT}).")
     parser.add_argument("--max-timeout", type=float, default=DEFAULT_MAX_TIMEOUT, help=f"Max-timeout ceiling (seconds) passed to gabriel.whatever; if greater than --timeout, dynamic_timeout is enabled (default: {DEFAULT_MAX_TIMEOUT}).")
-    parser.add_argument("--sleep-between-prompts", type=float, default=0.0, help="Seconds to rest between n_parallels-sized prompt chunks on the live path. 0 (default) = single call, unchanged behavior.")
+    parser.add_argument(
+        "--sleep-between-prompts",
+        type=float,
+        default=DEFAULT_SLEEP_BETWEEN_PROMPTS,
+        help=(
+            "Seconds to rest between sequential prompt calls/chunks. Default: "
+            f"{DEFAULT_SLEEP_BETWEEN_PROMPTS:g}. The earlier conservative setting "
+            "was 15 seconds; use 8-10 or 15 if connection instability returns."
+        ),
+    )
     parser.add_argument("--retry-failed-from", type=Path, default=None, help="Path to a prior run's failed_parses.csv; builds the municipality retry list from its municipality_id column, filtered against --state/--municipalities-csv.")
+    parser.add_argument(
+        "--resume-from-output-dir",
+        type=Path,
+        default=None,
+        help=(
+            "Prior post-resume-contract live output directory. Requires a fresh "
+            "--output-dir and one of --skip-completed-municipality-ids or "
+            "--retry-failures-only."
+        ),
+    )
+    parser.add_argument(
+        "--skip-completed-municipality-ids",
+        action="store_true",
+        help=(
+            "With --resume-from-output-dir, skip prior parseable row identities "
+            "and select only noncompleted rows."
+        ),
+    )
+    parser.add_argument(
+        "--retry-failures-only",
+        action="store_true",
+        help=(
+            "With --resume-from-output-dir, select only prior failure rows whose "
+            "normalized category is authorized by --failure-retry-types."
+        ),
+    )
+    parser.add_argument(
+        "--failure-retry-types",
+        default=",".join(DEFAULT_FAILURE_RETRY_TYPES),
+        help=(
+            "Comma-separated resume failure categories (default: "
+            f"{','.join(DEFAULT_FAILURE_RETRY_TYPES)})."
+        ),
+    )
+    parser.add_argument(
+        "--resume-lineage-note",
+        default="",
+        help="Optional non-secret note recorded in resume metadata and summary.",
+    )
+    parser.add_argument(
+        "--allow-resume-input-hash-mismatch",
+        action="store_true",
+        help=(
+            "Explicitly override the default resume stop when the exact input CSV "
+            "SHA-256 differs. The mismatch remains prominent in metadata."
+        ),
+    )
     parser.add_argument("--prompt-mode", choices=("full", "minimal"), default=DEFAULT_PROMPT_MODE, help=f"full = original detailed prompt; minimal = shorter structured-candidates-only prompt (default: {DEFAULT_PROMPT_MODE}).")
     parser.add_argument("--compare-runs", type=Path, nargs="+", default=None, help="Compare prior runs instead of scouting: pass 2+ run output directories (each containing run_metadata.json). Bypasses --dry-run/--live entirely.")
     parser.add_argument("--compare-output", type=Path, default=None, help="Optional path to also write the --compare-runs markdown table to (in addition to stdout).")
@@ -2345,6 +3016,43 @@ def _parse_args() -> argparse.Namespace:
         parser.error("--live requires --max-prompts")
     if args.live_hard_cap <= 0:
         parser.error("--live-hard-cap must be positive")
+    if args.sleep_between_prompts < 0:
+        parser.error("--sleep-between-prompts must be non-negative")
+    resume_options_used = any(
+        (
+            args.skip_completed_municipality_ids,
+            args.retry_failures_only,
+            args.allow_resume_input_hash_mismatch,
+            bool(args.resume_lineage_note),
+        )
+    )
+    if args.resume_from_output_dir is None and resume_options_used:
+        parser.error("resume selection/override/note flags require --resume-from-output-dir")
+    if args.resume_from_output_dir is not None:
+        if args.output_dir is None:
+            parser.error("--resume-from-output-dir requires an explicit fresh --output-dir")
+        if (
+            args.skip_completed_municipality_ids
+            and args.retry_failures_only
+        ):
+            parser.error(
+                "--skip-completed-municipality-ids and --retry-failures-only "
+                "are mutually exclusive resume selection modes"
+            )
+        if not (
+            args.skip_completed_municipality_ids or args.retry_failures_only
+        ):
+            parser.error(
+                "--resume-from-output-dir requires --skip-completed-municipality-ids "
+                "or --retry-failures-only"
+            )
+        if args.retry_failed_from is not None:
+            parser.error(
+                "--resume-from-output-dir cannot be combined with legacy "
+                "--retry-failed-from"
+            )
+    elif args.failure_retry_types != ",".join(DEFAULT_FAILURE_RETRY_TYPES):
+        parser.error("--failure-retry-types requires --resume-from-output-dir")
     if args.live and args.max_prompts <= 0:
         parser.error("--max-prompts must be positive for --live")
     if args.live and args.max_prompts > args.live_hard_cap:
@@ -2361,12 +3069,28 @@ def _parse_args() -> argparse.Namespace:
             parser.error("mixed-state live runs require --direct-sdk-max-retries 0")
         if args.retry_failed_from is not None:
             parser.error("mixed-state live runs do not permit --retry-failed-from")
+    if args.live and args.n_parallels != 1:
+        parser.error(
+            "live scouting currently requires --n-parallels 1; higher concurrency "
+            "requires explicit reauthorization and a separately reviewed code change"
+        )
     if args.direct_sdk_max_retries < 0:
         parser.error("--direct-sdk-max-retries must be non-negative")
     return args
 
 
+def require_fresh_output_directory(out_dir: Path) -> None:
+    if out_dir.exists() and not out_dir.is_dir():
+        raise SystemExit(f"ERROR: --output-dir exists and is not a directory: {out_dir}")
+    if out_dir.exists() and any(out_dir.iterdir()):
+        raise SystemExit(
+            f"ERROR: --output-dir is non-empty: {out_dir}. Scout artifacts are "
+            "immutable; choose a fresh output directory."
+        )
+
+
 def main() -> int:
+    process_started = time.monotonic()
     args = _parse_args()
     if args.compare_runs is not None:
         return run_compare_mode(args.compare_runs, args.compare_output)
@@ -2377,19 +3101,29 @@ def main() -> int:
     timestamp = datetime.now().strftime("%Y-%m-%d_%H%M%S")
     run_id = f"{args.state.lower()}_{timestamp}"
     out_dir = args.output_dir or (TMP_ROOT / args.state / timestamp)
-    out_dir.mkdir(parents=True, exist_ok=True)
+    if args.resume_from_output_dir is not None:
+        if out_dir.resolve() == args.resume_from_output_dir.resolve():
+            raise SystemExit(
+                "ERROR: --resume-from-output-dir and --output-dir must be different; "
+                "prior artifacts are immutable"
+            )
+    require_fresh_output_directory(out_dir)
 
-    municipalities = load_municipalities(
+    input_csv_path = args.municipalities_csv or DEFAULT_MUNICIPALITIES_CSV
+    input_csv_hash = sha256_file(input_csv_path)
+
+    loaded_municipalities = load_municipalities(
         args.state,
         args.municipalities_csv,
         args.limit,
         allow_mixed_states=args.allow_mixed_states,
         reject_mixed_state_input=args.municipalities_csv is not None,
     )
+    validate_unique_row_identities(loaded_municipalities)
 
     if args.retry_failed_from is not None:
         retry_ids = load_retry_municipality_ids(args.retry_failed_from)
-        by_id = {m["municipality_id"]: m for m in municipalities}
+        by_id = {m["municipality_id"]: m for m in loaded_municipalities}
         filtered = [by_id[mid] for mid in retry_ids if mid in by_id]
         missing = [mid for mid in retry_ids if mid not in by_id]
         if missing:
@@ -2402,7 +3136,38 @@ def main() -> int:
                 f"ERROR: none of the municipality_id values in {args.retry_failed_from} "
                 f"matched the loaded municipality list for state={args.state}"
             )
-        municipalities = filtered
+        loaded_municipalities = filtered
+
+    municipalities = list(loaded_municipalities)
+    resume_plan: list[dict[str, Any]] | None = None
+    prior_metadata: dict[str, Any] = {}
+    hash_mismatch = False
+    allowed_failure_types = parse_failure_retry_types(args.failure_retry_types)
+    if args.resume_from_output_dir is not None:
+        prior_metadata, prior_timing_rows = load_resume_evidence(
+            args.resume_from_output_dir
+        )
+        prior_hash = str(prior_metadata.get("input_csv_sha256", ""))
+        hash_mismatch = prior_hash != input_csv_hash
+        if hash_mismatch and not args.allow_resume_input_hash_mismatch:
+            raise SystemExit(
+                "ERROR: resume input CSV SHA-256 does not match the prior run; "
+                "use --allow-resume-input-hash-mismatch only after an explicit "
+                "row-identity audit"
+            )
+        municipalities, resume_plan = build_resume_plan(
+            run_id,
+            loaded_municipalities,
+            prior_metadata,
+            prior_timing_rows,
+            skip_completed=args.skip_completed_municipality_ids,
+            retry_failures_only=args.retry_failures_only,
+            allowed_failure_types=allowed_failure_types,
+        )
+        if not municipalities:
+            raise SystemExit(
+                "ERROR: resume plan selected zero rows; no backend work is authorized"
+            )
 
     if args.live:
         n_requested = resolve_live_prompt_count(
@@ -2413,21 +3178,71 @@ def main() -> int:
         )
         municipalities = municipalities[:n_requested]
 
+    if resume_plan is not None:
+        selected_keys = {row_identity_key(row) for row in municipalities}
+        for plan_row in resume_plan:
+            if (
+                plan_row["selected_for_attempt"] == "yes"
+                and plan_row["row_identity_key"] not in selected_keys
+            ):
+                plan_row["selected_for_attempt"] = "no"
+                plan_row["action"] = "skip_outside_live_authorization"
+                plan_row["reason"] = "excluded by explicit --max-prompts authorization"
+
+    out_dir.mkdir(parents=True, exist_ok=True)
+    resume_plan_path: Path | None = None
+    resume_summary_path: Path | None = None
+    if resume_plan is not None and args.resume_from_output_dir is not None:
+        resume_plan_path = out_dir / "resume_plan.csv"
+        write_csv(resume_plan_path, resume_plan, RESUME_PLAN_FIELDS)
+        resume_summary_path = write_resume_summary(
+            out_dir,
+            run_id=run_id,
+            prior_dir=args.resume_from_output_dir,
+            prior_metadata=prior_metadata,
+            current_input_hash=input_csv_hash,
+            hash_mismatch=hash_mismatch,
+            hash_override=args.allow_resume_input_hash_mismatch,
+            lineage_note=args.resume_lineage_note,
+            plan=resume_plan,
+        )
+
     prompts = [
         build_prompt(m["municipality"], m["state"], args.prompt_mode, context=m)
         for m in municipalities
     ]
-    identifiers = [build_identifier(run_id, m["municipality_id"]) for m in municipalities]
+    identifiers = [
+        build_identifier(run_id, row_identifier_token(m)) for m in municipalities
+    ]
 
     prompt_preview_path = write_prompt_preview(out_dir, municipalities, prompts, identifiers)
+    timing_input_rows = (
+        loaded_municipalities if resume_plan is not None else municipalities
+    )
+    planned_timing_rows = build_planned_row_timing(
+        run_id,
+        timing_input_rows,
+        municipalities,
+        backend=args.live_backend if args.live else "dry-run",
+        model=args.model,
+        dry_run=not args.live,
+        resume_plan=resume_plan,
+    )
+    row_timing_path = out_dir / "row_timing.csv"
+    write_csv(row_timing_path, planned_timing_rows, ROW_TIMING_FIELDS)
 
     metadata: dict[str, Any] = {
         "run_id": run_id,
         "state": args.state,
-        "input_states": sorted({m["state"].strip().upper() for m in municipalities}),
+        "input_states": sorted(
+            {m["state"].strip().upper() for m in loaded_municipalities}
+        ),
         "allow_mixed_states": args.allow_mixed_states,
         "mode": "live" if args.live else "dry_run",
+        "input_rows_loaded": len(loaded_municipalities),
         "municipalities_requested": len(municipalities),
+        "input_csv_path": str(input_csv_path),
+        "input_csv_sha256": input_csv_hash,
         "model": args.model,
         "search_context_size": args.search_context_size,
         "n_parallels": args.n_parallels,
@@ -2442,7 +3257,35 @@ def main() -> int:
             or (DOCS_ANALYSIS / "gabriel_state_source_scout_cost_log.csv")
         ),
         "retry_failed_from": str(args.retry_failed_from) if args.retry_failed_from else None,
+        "resume_from_output_dir": (
+            str(args.resume_from_output_dir)
+            if args.resume_from_output_dir is not None
+            else None
+        ),
+        "resume_prior_run_id": prior_metadata.get("run_id") or None,
+        "skip_completed_municipality_ids": args.skip_completed_municipality_ids,
+        "retry_failures_only": args.retry_failures_only,
+        "failure_retry_types": sorted(allowed_failure_types),
+        "resume_lineage_note": args.resume_lineage_note or None,
+        "resume_input_hash_mismatch": hash_mismatch,
+        "resume_input_hash_mismatch_override_used": bool(
+            hash_mismatch and args.allow_resume_input_hash_mismatch
+        ),
+        "resume_plan_path": str(resume_plan_path) if resume_plan_path else None,
+        "resume_summary_path": str(resume_summary_path) if resume_summary_path else None,
+        "resume_selected_row_count": len(municipalities) if resume_plan else None,
+        "resume_prior_completed_row_count": (
+            sum(row["action"] == "skip_completed" for row in resume_plan)
+            if resume_plan
+            else None
+        ),
+        "resume_skipped_row_count": (
+            sum(row["selected_for_attempt"] != "yes" for row in resume_plan)
+            if resume_plan
+            else None
+        ),
         "prompt_preview_path": str(prompt_preview_path),
+        "row_timing_path": str(row_timing_path),
         "output_dir": str(out_dir),
         "live_attempted": False,
         "live_succeeded": False,
@@ -2456,8 +3299,17 @@ def main() -> int:
     }
 
     if not args.live:
+        metadata.update(
+            timing_metadata_summary(
+                planned_timing_rows, time.monotonic() - process_started
+            )
+        )
         print(f"DRY RUN — {len(municipalities)} municipality prompts built for state={args.state}")
         print(f"prompt_preview={prompt_preview_path}")
+        print(f"row_timing={row_timing_path}")
+        if resume_plan_path:
+            print(f"resume_plan={resume_plan_path}")
+            print(f"resume_summary={resume_summary_path}")
         run_metadata_path = write_run_metadata_checkpoint(
             out_dir, metadata, "dry_run_completed"
         )
@@ -2474,9 +3326,10 @@ def main() -> int:
     metadata["metadata_checkpointed_before_backend"] = True
     run_metadata_path = write_run_metadata_checkpoint(out_dir, metadata, "live_started")
 
+    timing_events: list[dict[str, Any]] = []
     try:
         if args.live_backend == "direct-sdk":
-            df, failure = run_direct_sdk_live_batch(
+            backend_result = run_direct_sdk_live_batch(
                 prompts,
                 identifiers,
                 out_dir,
@@ -2487,9 +3340,10 @@ def main() -> int:
                 max_retries=args.direct_sdk_max_retries,
                 sleep_between_prompts=args.sleep_between_prompts,
                 web_search=True,
+                return_timing=True,
             )
         else:
-            df, failure = run_live_batch(
+            backend_result = run_live_batch(
                 municipalities,
                 prompts,
                 identifiers,
@@ -2500,12 +3354,24 @@ def main() -> int:
                 timeout=args.timeout,
                 max_timeout=args.max_timeout,
                 sleep_between_prompts=args.sleep_between_prompts,
+                return_timing=True,
             )
+        if len(backend_result) == 3:
+            df, failure, timing_events = backend_result
+        else:
+            # Backward-compatible with mocked/no-network test runners and any
+            # external wrapper that still returns the historical two-tuple.
+            df, failure = backend_result
         metadata["backend_call_returned"] = True
     except BaseException as exc:
         failure = sanitized_unhandled_live_exception(exc)
         metadata["live_failure_reason"] = failure
         metadata["failure_stage"] = "live_backend_invocation"
+        metadata.update(
+            timing_metadata_summary(
+                planned_timing_rows, time.monotonic() - process_started
+            )
+        )
         write_run_metadata_checkpoint(out_dir, metadata, "unhandled_live_exception")
         print(f"ERROR: live run raised before artifact completion: {failure}")
         print(f"Minimal lifecycle metadata preserved at {run_metadata_path}.")
@@ -2517,6 +3383,11 @@ def main() -> int:
         failure = failure or "live backend returned no dataframe"
         metadata["live_failure_reason"] = failure
         metadata["failure_stage"] = "live_backend_return"
+        metadata.update(
+            timing_metadata_summary(
+                planned_timing_rows, time.monotonic() - process_started
+            )
+        )
         write_run_metadata_checkpoint(out_dir, metadata, "backend_failure")
         print(f"ERROR: live run failed: {failure}")
         print("Dry-run artifacts (prompt preview, metadata) preserved. Not retrying.")
@@ -2544,6 +3415,11 @@ def main() -> int:
                 "n_failed_parses": 0,
                 "n_candidate_rows": 0,
             }
+        )
+        metadata.update(
+            timing_metadata_summary(
+                planned_timing_rows, time.monotonic() - process_started
+            )
         )
         write_run_metadata_checkpoint(out_dir, metadata, "no_response_rows")
         print("ERROR: live backend returned zero response rows; no coverage outcome exists.")
@@ -2598,6 +3474,35 @@ def main() -> int:
             all_candidates.extend(candidates)
             if failed:
                 all_failed.append(failed)
+    else:
+        returned_identifiers = {
+            str(value) for value in df[identifier_col].tolist()
+        }
+        for identifier, muni in zip(identifiers, municipalities):
+            if identifier in returned_identifiers:
+                continue
+            all_failed.append(
+                {
+                    "run_id": run_id,
+                    "state": muni["state"],
+                    "municipality": muni["municipality"],
+                    "municipality_id": muni.get("municipality_id", ""),
+                    "identifier": identifier,
+                    "failure_type": "missing_response_row",
+                    "error": "selected identifier absent from backend dataframe",
+                    "gabriel_successful": "",
+                    "gabriel_error_log": "",
+                    "gabriel_response_ids": "",
+                    "time_taken": "",
+                    "input_tokens": "",
+                    "reasoning_tokens": "",
+                    "output_tokens": "",
+                    "cost": "",
+                    "response_nonempty": "no",
+                    "web_sources_nonempty": "no",
+                    "raw_response_ref": str(raw_outputs_path),
+                }
+            )
 
     parsed_candidates_path = out_dir / "parsed_candidates.csv"
     failed_parses_path = out_dir / "failed_parses.csv"
@@ -2609,6 +3514,16 @@ def main() -> int:
         failure_type_counts[failed.get("failure_type", "other")] = (
             failure_type_counts.get(failed.get("failure_type", "other"), 0) + 1
         )
+
+    final_timing_rows = finalize_row_timing(
+        planned_timing_rows,
+        municipalities,
+        identifiers,
+        df.to_dict(orient="records"),
+        all_failed,
+        timing_events,
+    )
+    write_csv(row_timing_path, final_timing_rows, ROW_TIMING_FIELDS)
 
     n_parseable = int(len(municipalities) - len(all_failed))
     # Named by run_id (state + full timestamp), not just the calendar date — a
@@ -2636,6 +3551,11 @@ def main() -> int:
             "n_candidate_rows": len(all_candidates),
             "failure_type_counts": failure_type_counts,
         }
+    )
+    metadata.update(
+        timing_metadata_summary(
+            final_timing_rows, time.monotonic() - process_started
+        )
     )
     if n_parseable > 0:
         final_execution_status = "completed"
@@ -2675,6 +3595,7 @@ def main() -> int:
         f"candidates_csv={candidates_out if candidates_out else 'not_written_no_parseable_outcome'}"
     )
     print(f"run_metadata={run_metadata_path}")
+    print(f"row_timing={row_timing_path}")
     total_cost = cost_summary["total_cost"]
     cost_display = f"{total_cost:.6f}" if isinstance(total_cost, (int, float)) else "unavailable"
     estimated_cost = cost_summary.get("estimated_total_cost")

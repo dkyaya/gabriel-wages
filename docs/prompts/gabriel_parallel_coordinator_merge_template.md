@@ -1,6 +1,6 @@
 # Gabriel Parallel Scout Coordinator Merge Template
 
-Use this template only in the main repository after every assigned worker lane has supplied a sanitized relay. First determine whether every relay is complete and merge-eligible. A stopped or incomplete relay may be diagnosed, but it does not authorize a partial accounting rebuild. This is a local accounting merge, not a scout or source-research task.
+Use this template only in the main repository after every assigned worker lane has supplied a sanitized relay. First determine whether every relay is complete and merge-eligible. A stopped or incomplete relay may be diagnosed, but it does not authorize a partial accounting rebuild. This is a local accounting merge, not a scout or source-research task. Under the current operating model, workers prepare offline; one coordinator owns any separately authorized live lane.
 
 Use Routine / GPT-5.6 Terra for relay packaging and deterministic queue/coverage rebuilds. Use Heavy / GPT-5.6 Sol for scope disputes, debugging, schema changes, selection/methodology decisions, or prompt/filter-contract changes. Use Low / GPT-5.4 only for tiny doc cleanup.
 
@@ -22,7 +22,7 @@ For each worker relay, inspect its status/log/diff summaries, locked input, dry 
 
 - used a separate worktree/repo copy and only its locked input;
 - ran and passed dry review before smoke, and used the exact one-request smoke contract;
-- used direct SDK, `--live-backend direct-sdk`, `--n-parallels 1`, 15-second spacing, zero retries, and a batch-specific cost log for any live run;
+- did not run live when assigned as an offline-prep worker; for historical relays that were explicitly authorized to run live, used direct SDK, `--n-parallels 1`, zero retries, and a batch-specific cost log;
 - made no substitutions or failure retries and stopped safely when required;
 - kept all candidates unverified and did not open/download/verify sources;
 - did not ingest, codify, issue public-records requests, promote claim evidence, or edit canonical data/corpus; and
@@ -31,6 +31,12 @@ For each worker relay, inspect its status/log/diff summaries, locked input, dry 
 Also require a unique attempt label and fresh output paths, a Gate 0 readiness note, the exact interpreter/package record, command launch/exit evidence, and a protected-file before/after comparison.
 
 While parallel live use is paused, also require evidence that workers obeyed the serialized recovery protocol: Gate 0/dry runs may overlap, but smoke/live intervals may not; each worker must record its coordinator live-lane grant; and the next smoke must begin at least five minutes after the prior worker's lane was released. Overlapping smoke/live timestamps are a hard scope rejection, not a reason to reinterpret failures.
+
+## Durable coordinator pace and resume policy
+
+For new post-pace-contract runs, the coordinator should use explicit `--sleep-between-prompts 5`, direct SDK, `--n-parallels 1`, and zero SDK retries. Five seconds is the current sequential test default; if transport instability returns, increase spacing to 8–10 seconds or the earlier conservative 15 seconds. Do not add concurrent live workers without explicit reauthorization.
+
+Require a fresh output directory, exact input SHA-256, `row_timing.csv`, and timing-summary metadata. A stopped run may be resumed only from a terminal post-contract parent with those artifacts. First create a dry `resume_plan.csv`/`resume_summary.json`; skip prior parseable municipality IDs or select only authorized failure categories; then, under separate live authorization, write the child run into another fresh directory. Never mutate the parent, use fuzzy municipality-name matching, count skipped rows as newly scouted, or rebuild national accounting before the complete parent→child lineage is merge-eligible.
 
 ## Hard relay rejection rules
 

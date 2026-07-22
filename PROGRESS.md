@@ -6,6 +6,45 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-22 (Added five-second sequential pacing, per-row timing, and fail-closed scout resume)
+
+**Did**
+- Started at `943a4586a97f1ff333c3115c8c7315e85ef5675b` with a clean tracked worktree except the previously reported unrelated untracked root `package-lock.json`. Audited the completed 150-row artifacts: 6,937 seconds wall time, 150 attempts, 149 parseable, one timeout, 4,693.886 seconds of row-level backend time, and 2,235 seconds of scheduled 15-second sleep.
+- Changed the configurable `--sleep-between-prompts` default to five seconds and the live concurrency default to one. Live commands now fail closed unless `n_parallels=1`; five-second long-run commands remain explicit, with documented 8–10/15-second sequential fallbacks if instability returns.
+- Added `row_timing.csv` to dry and live runs, with exact row identity/context, prompt timestamps when available, elapsed/sleep fields, backend/model, attempt/success/parse/failure status, response-ID presence, and token usage. Metadata now summarizes total/average/median elapsed time, total sleep, effective rows/hour, and current-run failures by type.
+- Added immutable output enforcement and forward-safe resume flags: `--resume-from-output-dir`, `--skip-completed-municipality-ids`, `--retry-failures-only`, `--failure-retry-types`, `--resume-lineage-note`, and explicit input-hash mismatch override. Resume requires terminal post-contract metadata, exact input SHA-256, and `row_timing.csv`; it writes `resume_plan.csv` and `resume_summary.json` in a different fresh directory before any live work.
+- Added deterministic legacy identity fallback (municipality ID, then Census ID, then exact unique state+municipality) without fuzzy matching. Ambiguous fallback identities fail. Missing backend identifiers become explicit failures rather than parseable outcomes.
+- Ran a full 150-row mixed-state dry validation against locked hash `e53db4698b5dba439ad4d31fca79be1242808960d1a8d6809d31b1b915de62fc`: 150 ordered timing rows, five-second default, no backend attempt. Added the successor coordinator prompt and updated durable coordinator/combined templates; the historical 15-second prompt now carries a supersession notice.
+
+**Decisions and why**
+- Reduce spacing, never increase concurrency. The old run's 149 gaps consumed 37m15s; five seconds projects 12m25s, saving 24m50s and reducing a similar 150-row run from about 115m37s to about 90m47s if backend latency holds.
+- Make resume provenance stricter than the legacy `--retry-failed-from` path. A parent must be terminal and self-identifying; skipped parseable rows remain prior outcomes, child attempts are separate, and accounting waits for a complete reconciled lineage.
+- Reject the old successful 150-row directory as a resume parent because it predates `input_csv_sha256` and `row_timing.csv`. Moreno Valley is not automatically retried. OS-killed/prompt-only/`live_started` parents also remain non-resumable because completed-row identity cannot be proven.
+
+**Surprises/breakage**
+- The runner's code-level sleep default was historically zero even though production prompts explicitly used 15 seconds. The new constant/CLI default is now actually five seconds, and long-run prompts also specify five explicitly.
+- Existing raw artifacts already carried per-row backend `Time Taken`, tokens, response IDs, and errors, allowing a tight total-runtime decomposition; they did not carry precise per-row wall timestamps or actual sleep jitter.
+- The old direct-SDK dry-run test correctly failed its two-artifact assertion after `row_timing.csv` was added. It was expanded into full pace/resume coverage rather than weakened.
+
+**Validation/audit results**
+```text
+three requested py_compile commands: exit 0
+prompt-contract no-network suite: 10 PASS checks
+direct-SDK fully mocked/no-network suite: 19 PASS checks
+locked 150-row mixed-state dry validation: 150/150 timing rows; sleep=5; no backend
+validate.py: PASSED (64 contracts; 0 discourse; 64 coverage; 3 city attributes)
+ingest/test_pipeline.py: 60 passed, 0 failed
+audit_coverage.py: 28 healthy pairs (10 exact, 18 overlap), 2 exploratory adjacent, 6 unmatched safety units
+git diff --check: passed
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. No canonical contract, city-coverage, corpus, national queue/coverage, dashboard frontend, or deployment file changed.
+
+**Next steps**
+1. Do not run live automatically. For the next separately authorized coordinator batch, require the successor prompt, one smoke, direct SDK, `n_parallels=1`, zero retries, explicit `--sleep-between-prompts 5`, exact max/cap, and a fresh output directory.
+2. After the next run, compare `row_timing.csv` and metadata against this baseline. If two-consecutive transport collapse or a repeated connection pattern appears, stop and move to an 8–10-second sequential fallback, then 15 seconds if necessary—never concurrent workers.
+3. Resume only a terminal post-patch parent after dry review of its fresh `resume_plan.csv`; reconcile parent and child once before any queue/coverage rebuild. Verification, URL access, ingestion, codify, and claim use remain separate.
+
 ## 2026-07-21/22 (Consolidated geographic dashboard map with post-150 live results)
 
 **Did**

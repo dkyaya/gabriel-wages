@@ -293,10 +293,386 @@ def _check_dry_run_remains_backend_independent() -> None:
         assert metadata["mode"] == "dry_run"
         assert metadata["live_attempted"] is False
         assert "live_backend" not in metadata
+        assert metadata["sleep_between_prompts"] == 5.0
+        assert metadata["attempted_row_count"] == 0
+        assert metadata["average_elapsed_seconds_per_attempted_row"] is None
+        assert metadata["median_elapsed_seconds_per_attempted_row"] is None
+        assert metadata["total_sleep_seconds"] == 0.0
+        assert metadata["effective_rows_per_hour"] is None
+        assert metadata["failure_count_by_type"] == {}
+        with (output_dir / "row_timing.csv").open(
+            newline="", encoding="utf-8"
+        ) as handle:
+            timing_rows = list(csv.DictReader(handle))
+        assert len(timing_rows) == 1
+        assert list(timing_rows[0]) == scout.ROW_TIMING_FIELDS
+        assert timing_rows[0]["municipality_id"] == "dry-run-pa-001"
+        assert timing_rows[0]["live_attempted"] == "no"
+        assert timing_rows[0]["success_status"] == "dry_run_planned"
+        assert timing_rows[0]["parse_status"] == "not_attempted"
         assert sorted(path.name for path in output_dir.iterdir()) == [
             "prompt_preview.md",
+            "row_timing.csv",
             "run_metadata.json",
         ]
+
+
+def _check_sleep_default_and_explicit_override() -> None:
+    original_argv = sys.argv
+    try:
+        sys.argv = ["gabriel_state_source_scout.py", "--dry-run", "--state", "PA"]
+        assert scout._parse_args().sleep_between_prompts == 5.0
+        sys.argv = [
+            "gabriel_state_source_scout.py",
+            "--dry-run",
+            "--state",
+            "PA",
+            "--sleep-between-prompts",
+            "9",
+        ]
+        assert scout._parse_args().sleep_between_prompts == 9.0
+        sys.argv = [
+            "gabriel_state_source_scout.py",
+            "--live",
+            "--state",
+            "PA",
+            "--max-prompts",
+            "1",
+            "--n-parallels",
+            "2",
+        ]
+        try:
+            scout._parse_args()
+        except SystemExit as exc:
+            assert exc.code == 2
+        else:
+            raise AssertionError("live n_parallels>1 did not fail closed")
+    finally:
+        sys.argv = original_argv
+
+
+def _write_resume_fixture(
+    prior_dir: Path, municipalities_path: Path
+) -> None:
+    prior_dir.mkdir()
+    metadata = {
+        "run_id": "fixture-prior-live",
+        "mode": "live",
+        "live_attempted": True,
+        "execution_status": "completed",
+        "input_csv_sha256": scout.sha256_file(municipalities_path),
+    }
+    (prior_dir / "run_metadata.json").write_text(
+        json.dumps(metadata, indent=2), encoding="utf-8"
+    )
+    timing_rows = []
+    fixture_statuses = (
+        ("resume-pa-001", "completed_parseable", "parseable", ""),
+        ("resume-pa-002", "failed", "failed", "timeout_or_capacity"),
+        ("resume-pa-003", "failed", "failed", "json_parse_error"),
+    )
+    for index, (municipality_id, success, parse, failure) in enumerate(
+        fixture_statuses, start=1
+    ):
+        timing_rows.append(
+            {
+                "run_id": "fixture-prior-live",
+                "row_index": index,
+                "row_identity_key": f"municipality_id:{municipality_id}",
+                "municipality_id": municipality_id,
+                "municipality": f"Resume Borough {index}",
+                "state": "PA",
+                "worker_id": "",
+                "census_gov_id": f"fixture-{index}",
+                "prompt_started_at": f"2026-07-21T00:00:0{index}-04:00",
+                "prompt_finished_at": f"2026-07-21T00:00:1{index}-04:00",
+                "elapsed_seconds": 10,
+                "sleep_before_seconds": 0,
+                "sleep_after_seconds": 5 if index < 3 else 0,
+                "backend": "direct-sdk",
+                "model": "gpt-5.4-nano",
+                "live_attempted": "yes",
+                "success_status": success,
+                "parse_status": parse,
+                "failure_type": failure,
+                "response_id_present": "yes" if parse == "parseable" else "no",
+                "input_tokens": 100 if parse == "parseable" else "",
+                "output_tokens": 20 if parse == "parseable" else "",
+                "reasoning_tokens": 5 if parse == "parseable" else "",
+                "total_tokens": 120 if parse == "parseable" else "",
+            }
+        )
+    scout.write_csv(prior_dir / "row_timing.csv", timing_rows, scout.ROW_TIMING_FIELDS)
+
+
+def _write_resume_input(path: Path, *, changed: bool = False) -> None:
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=[
+                "municipality_id",
+                "municipality",
+                "state",
+                "census_gov_id",
+            ],
+        )
+        writer.writeheader()
+        for index in range(1, 4):
+            writer.writerow(
+                {
+                    "municipality_id": f"resume-pa-{index:03d}",
+                    "municipality": (
+                        f"Resume Borough {index}"
+                        + (" Changed" if changed and index == 3 else "")
+                    ),
+                    "state": "PA",
+                    "census_gov_id": f"fixture-{index}",
+                }
+            )
+
+
+def _resume_argv(
+    municipalities_path: Path,
+    prior_dir: Path,
+    output_dir: Path,
+    *selection_flags: str,
+) -> list[str]:
+    return [
+        "gabriel_state_source_scout.py",
+        "--dry-run",
+        "--state",
+        "PA",
+        "--municipalities-csv",
+        str(municipalities_path),
+        "--output-dir",
+        str(output_dir),
+        "--prompt-mode",
+        "minimal",
+        "--resume-from-output-dir",
+        str(prior_dir),
+        *selection_flags,
+    ]
+
+
+def _check_resume_planning_and_safety_gates() -> None:
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp_path = Path(tmp)
+        municipalities_path = tmp_path / "municipalities.csv"
+        _write_resume_input(municipalities_path)
+        prior_dir = tmp_path / "prior"
+        _write_resume_fixture(prior_dir, municipalities_path)
+        original_argv = sys.argv
+
+        skip_output = tmp_path / "skip-completed-output"
+        try:
+            sys.argv = _resume_argv(
+                municipalities_path,
+                prior_dir,
+                skip_output,
+                "--skip-completed-municipality-ids",
+            )
+            assert scout.main() == 0
+        finally:
+            sys.argv = original_argv
+        skip_metadata = json.loads(
+            (skip_output / "run_metadata.json").read_text(encoding="utf-8")
+        )
+        assert skip_metadata["municipalities_requested"] == 2
+        assert skip_metadata["resume_selected_row_count"] == 2
+        assert skip_metadata["resume_prior_completed_row_count"] == 1
+        assert skip_metadata["resume_skipped_row_count"] == 1
+        assert skip_metadata["backend_call_returned"] is False
+        with (skip_output / "resume_plan.csv").open(
+            newline="", encoding="utf-8"
+        ) as handle:
+            plan = list(csv.DictReader(handle))
+        assert [row["selected_for_attempt"] for row in plan] == ["no", "yes", "yes"]
+        assert plan[0]["action"] == "skip_completed"
+        assert plan[1]["action"] == "resume_noncompleted"
+        assert {row["municipality_id"] for row in plan if row["selected_for_attempt"] == "yes"} == {
+            "resume-pa-002",
+            "resume-pa-003",
+        }
+        resume_summary = json.loads(
+            (skip_output / "resume_summary.json").read_text(encoding="utf-8")
+        )
+        assert resume_summary["prior_completed_municipality_ids"] == [
+            "resume-pa-001"
+        ]
+        assert resume_summary["selected_municipality_ids"] == [
+            "resume-pa-002",
+            "resume-pa-003",
+        ]
+        assert (skip_output / "row_timing.csv").exists()
+
+        retry_output = tmp_path / "retry-failures-output"
+        try:
+            sys.argv = _resume_argv(
+                municipalities_path,
+                prior_dir,
+                retry_output,
+                "--retry-failures-only",
+            )
+            assert scout.main() == 0
+        finally:
+            sys.argv = original_argv
+        with (retry_output / "resume_plan.csv").open(
+            newline="", encoding="utf-8"
+        ) as handle:
+            retry_plan = list(csv.DictReader(handle))
+        assert [row["action"] for row in retry_plan] == [
+            "skip_completed",
+            "retry_failure",
+            "retry_failure",
+        ]
+        assert json.loads(
+            (retry_output / "run_metadata.json").read_text(encoding="utf-8")
+        )["live_attempted"] is False
+
+        timeout_only_output = tmp_path / "retry-timeout-only-output"
+        try:
+            sys.argv = _resume_argv(
+                municipalities_path,
+                prior_dir,
+                timeout_only_output,
+                "--retry-failures-only",
+                "--failure-retry-types",
+                "timeout",
+            )
+            assert scout.main() == 0
+        finally:
+            sys.argv = original_argv
+        with (timeout_only_output / "resume_plan.csv").open(
+            newline="", encoding="utf-8"
+        ) as handle:
+            timeout_plan = list(csv.DictReader(handle))
+        assert [row["selected_for_attempt"] for row in timeout_plan] == [
+            "no",
+            "yes",
+            "no",
+        ]
+        assert timeout_plan[2]["action"] == "skip_failure_type"
+
+        same_dir_argv = _resume_argv(
+            municipalities_path,
+            prior_dir,
+            prior_dir,
+            "--skip-completed-municipality-ids",
+        )
+        try:
+            sys.argv = same_dir_argv
+            scout.main()
+        except SystemExit as exc:
+            assert "must be different" in str(exc)
+        else:
+            raise AssertionError("resume was allowed to overwrite the prior output")
+        finally:
+            sys.argv = original_argv
+
+        try:
+            sys.argv = _resume_argv(
+                municipalities_path,
+                prior_dir,
+                tmp_path / "ambiguous-selection-output",
+                "--skip-completed-municipality-ids",
+                "--retry-failures-only",
+            )
+            scout._parse_args()
+        except SystemExit as exc:
+            assert exc.code == 2
+        else:
+            raise AssertionError("ambiguous resume selection modes were accepted")
+        finally:
+            sys.argv = original_argv
+
+        nonempty_output = tmp_path / "nonempty-output"
+        nonempty_output.mkdir()
+        (nonempty_output / "sentinel.txt").write_text("preserve", encoding="utf-8")
+        try:
+            sys.argv = _resume_argv(
+                municipalities_path,
+                prior_dir,
+                nonempty_output,
+                "--skip-completed-municipality-ids",
+            )
+            scout.main()
+        except SystemExit as exc:
+            assert "non-empty" in str(exc)
+        else:
+            raise AssertionError("non-empty output directory was overwritten")
+        finally:
+            sys.argv = original_argv
+
+        changed_input = tmp_path / "municipalities-changed.csv"
+        _write_resume_input(changed_input, changed=True)
+        blocked_output = tmp_path / "hash-blocked-output"
+        try:
+            sys.argv = _resume_argv(
+                changed_input,
+                prior_dir,
+                blocked_output,
+                "--skip-completed-municipality-ids",
+            )
+            scout.main()
+        except SystemExit as exc:
+            assert "SHA-256 does not match" in str(exc)
+        else:
+            raise AssertionError("resume input hash mismatch did not fail closed")
+        finally:
+            sys.argv = original_argv
+        assert not blocked_output.exists()
+
+        old_prior = tmp_path / "old-prior-without-timing"
+        old_prior.mkdir()
+        (old_prior / "run_metadata.json").write_text(
+            json.dumps(
+                {
+                    "run_id": "old-prior",
+                    "mode": "live",
+                    "live_attempted": True,
+                    "execution_status": "completed",
+                    "input_csv_sha256": scout.sha256_file(municipalities_path),
+                }
+            ),
+            encoding="utf-8",
+        )
+        old_parent_output = tmp_path / "old-parent-output"
+        try:
+            sys.argv = _resume_argv(
+                municipalities_path,
+                old_prior,
+                old_parent_output,
+                "--skip-completed-municipality-ids",
+            )
+            scout.main()
+        except SystemExit as exc:
+            assert "Old runs without row_timing.csv" in str(exc)
+        else:
+            raise AssertionError("old parent without timing evidence was resumed")
+        finally:
+            sys.argv = original_argv
+        assert not old_parent_output.exists()
+
+        override_output = tmp_path / "hash-override-output"
+        try:
+            sys.argv = _resume_argv(
+                changed_input,
+                prior_dir,
+                override_output,
+                "--skip-completed-municipality-ids",
+                "--allow-resume-input-hash-mismatch",
+                "--resume-lineage-note",
+                "synthetic audited mismatch",
+            )
+            assert scout.main() == 0
+        finally:
+            sys.argv = original_argv
+        override_metadata = json.loads(
+            (override_output / "run_metadata.json").read_text(encoding="utf-8")
+        )
+        assert override_metadata["resume_input_hash_mismatch"] is True
+        assert override_metadata["resume_input_hash_mismatch_override_used"] is True
+        assert override_metadata["resume_lineage_note"] == "synthetic audited mismatch"
 
 
 def _check_isolated_worker_cost_log() -> None:
@@ -397,6 +773,7 @@ def _check_live_checkpoint_survives_unhandled_exception() -> None:
         ]
         assert sorted(path.name for path in output_dir.iterdir()) == [
             "prompt_preview.md",
+            "row_timing.csv",
             "run_metadata.json",
         ]
 
@@ -448,6 +825,9 @@ def _check_zero_response_rows_preserve_failure_artifacts() -> None:
         assert (output_dir / "raw_outputs.csv").exists()
         assert (output_dir / "parsed_candidates.csv").exists()
         assert (output_dir / "failed_parses.csv").exists()
+        assert (output_dir / "row_timing.csv").exists()
+        assert metadata["total_elapsed_seconds"] >= 0
+        assert metadata["attempted_row_count"] == 0
 
 
 def _check_all_failure_rows_exit_nonzero_without_candidate_handoff() -> None:
@@ -468,6 +848,7 @@ def _check_all_failure_rows_exit_nonzero_without_candidate_handoff() -> None:
             {
                 "Identifier": "gabriel_state_source_scout_pa_fixture_live-fixture-pa-001",
                 "Prompt": "synthetic test prompt",
+                "Time Taken": "0.125",
                 "Successful": False,
                 "Error Log": '["APIConnectionError: Connection error."]',
                 "Web Search Sources": "[]",
@@ -514,6 +895,88 @@ def _check_all_failure_rows_exit_nonzero_without_candidate_handoff() -> None:
         assert (output_dir / "parsed_candidates.csv").exists()
         assert (output_dir / "failed_parses.csv").exists()
         assert (output_dir / "cost_summary.json").exists()
+        with (output_dir / "row_timing.csv").open(
+            newline="", encoding="utf-8"
+        ) as handle:
+            timing_rows = list(csv.DictReader(handle))
+        assert len(timing_rows) == 1
+        assert timing_rows[0]["live_attempted"] == "yes"
+        assert timing_rows[0]["parse_status"] == "failed"
+        assert timing_rows[0]["failure_type"] == "connection_error"
+        assert metadata["attempted_row_count"] == 1
+        assert metadata["average_elapsed_seconds_per_attempted_row"] is not None
+        assert metadata["median_elapsed_seconds_per_attempted_row"] is not None
+        assert metadata["failure_count_by_type"] == {"connection_error": 1}
+
+
+def _check_mocked_live_timing_event_propagation() -> None:
+    import pandas as pd
+
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp_path = Path(tmp)
+        municipalities_path = tmp_path / "municipalities.csv"
+        output_dir = tmp_path / "live-timing-output"
+        docs_analysis = tmp_path / "docs-analysis"
+        docs_analysis.mkdir()
+        _write_live_fixture_input(municipalities_path)
+
+        original_argv = sys.argv
+        original_runner = scout.run_direct_sdk_live_batch
+        original_docs_analysis = scout.DOCS_ANALYSIS
+
+        def timed_runner(prompts, identifiers, *args, **kwargs):
+            del args
+            assert kwargs["return_timing"] is True
+            row = scout.direct_sdk_response_to_row(
+                FakeResponse(_candidate_json()), identifiers[0], prompts[0], 1.5
+            )
+            timing = [
+                {
+                    "identifier": identifiers[0],
+                    "prompt_started_at": "2026-07-22T01:00:00-04:00",
+                    "prompt_finished_at": "2026-07-22T01:00:01.500000-04:00",
+                    "elapsed_seconds": 1.5,
+                    "sleep_before_seconds": 0.0,
+                    "sleep_after_seconds": 0.0,
+                }
+            ]
+            return pd.DataFrame([row], columns=scout.DIRECT_SDK_RAW_FIELDS), None, timing
+
+        try:
+            scout.DOCS_ANALYSIS = docs_analysis
+            scout.run_direct_sdk_live_batch = timed_runner
+            sys.argv = _live_fixture_argv(municipalities_path, output_dir)
+            assert scout.main() == 0
+        finally:
+            scout.run_direct_sdk_live_batch = original_runner
+            scout.DOCS_ANALYSIS = original_docs_analysis
+            sys.argv = original_argv
+
+        with (output_dir / "row_timing.csv").open(
+            newline="", encoding="utf-8"
+        ) as handle:
+            timing_rows = list(csv.DictReader(handle))
+        assert len(timing_rows) == 1
+        timing = timing_rows[0]
+        assert timing["prompt_started_at"] == "2026-07-22T01:00:00-04:00"
+        assert timing["prompt_finished_at"] == "2026-07-22T01:00:01.500000-04:00"
+        assert timing["elapsed_seconds"] == "1.5"
+        assert timing["success_status"] == "completed_parseable"
+        assert timing["parse_status"] == "parseable"
+        assert timing["response_id_present"] == "yes"
+        assert timing["input_tokens"] == "123"
+        assert timing["reasoning_tokens"] == "7"
+        assert timing["output_tokens"] == "45"
+        assert timing["total_tokens"] == "168"
+        metadata = json.loads(
+            (output_dir / "run_metadata.json").read_text(encoding="utf-8")
+        )
+        assert metadata["attempted_row_count"] == 1
+        assert metadata["average_elapsed_seconds_per_attempted_row"] == 1.5
+        assert metadata["median_elapsed_seconds_per_attempted_row"] == 1.5
+        assert metadata["total_sleep_seconds"] == 0.0
+        assert metadata["effective_rows_per_hour"] > 0
+        assert metadata["failure_count_by_type"] == {}
 
 
 def main() -> int:
@@ -522,22 +985,33 @@ def main() -> int:
     _check_secret_redaction_and_log()
     _check_repeated_connection_error_stop_signature()
     _check_estimated_cost_and_missing_pricing()
+    _check_sleep_default_and_explicit_override()
     _check_dry_run_remains_backend_independent()
+    _check_resume_planning_and_safety_gates()
     _check_isolated_worker_cost_log()
     _check_live_checkpoint_survives_unhandled_exception()
     _check_zero_response_rows_preserve_failure_artifacts()
     _check_all_failure_rows_exit_nonzero_without_candidate_handoff()
+    _check_mocked_live_timing_event_propagation()
     print("PASS: direct SDK request shape preserves scout web-search settings")
     print("PASS: no-search smoke request omits tools and web search")
     print("PASS: mocked direct response enters the existing unverified candidate pipeline")
     print("PASS: credential values are redacted from direct-backend logs")
     print("PASS: repeated connection errors trigger the no-further-request stop signature")
     print("PASS: estimated token cost is labeled and missing pricing preserves usage")
+    print("PASS: sleep-between-prompts defaults to 5 and accepts an explicit override")
+    print("PASS: live n_parallels greater than one fails closed")
     print("PASS: dry-run artifacts and metadata remain backend-independent")
+    print("PASS: dry-run writes row timing and timing summary fields without a backend call")
+    print("PASS: resume planning skips completed IDs and selects synthetic failures only")
+    print("PASS: resume requires a fresh output and fails closed on input hash mismatch")
+    print("PASS: old parents without row timing are not resumable")
+    print("PASS: audited input-hash mismatch override is prominent in resume metadata")
     print("PASS: parallel workers can route cost logging to a batch-specific file")
     print("PASS: live metadata is checkpointed before backend setup and survives exceptions")
     print("PASS: zero-row live returns preserve explicit non-mergeable failure artifacts")
     print("PASS: all-failure live rows exit nonzero without a candidate handoff")
+    print("PASS: mocked live timing events preserve timestamps, usage, parse status, and throughput")
     return 0
 
 

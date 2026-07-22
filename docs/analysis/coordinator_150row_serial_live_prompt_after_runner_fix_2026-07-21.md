@@ -1,5 +1,7 @@
 # Future Coordinator 150-Row Serialized Live Prompt After Runner Fix
 
+> **Superseded for future execution:** this prompt preserves the historical 15-second, non-resumable command used to plan the successful 2026-07-21 run. Future runs should use `coordinator_150row_serial_live_prompt_with_resume_and_fast_sleep_2026-07-21.md`, which specifies five-second sequential pacing, per-row timing, immutable output directories, and fail-closed resume planning. This historical prompt does not override the newer safety contract.
+
 Use this prompt only in the main coordinator repository. It describes a future task that requires separate smoke/live authorization. It does not authorize any API call now. Do not inspect or modify remotes, and do not push.
 
 ## 1. Re-establish the evidence gate

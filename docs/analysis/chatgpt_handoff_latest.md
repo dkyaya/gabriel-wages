@@ -2,9 +2,30 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-21`
+Last updated: `2026-07-22`
 
 ---
+
+## 2026-07-22 — Scout runner now has faster sequential pacing, row timing, and safe resume lineage
+
+### Current State
+
+- **Starting checkpoint:** implementation began at `943a4586a97f1ff333c3115c8c7315e85ef5675b` (`Consolidate dashboard map with live scout results`). The tracked tree was clean; the known unrelated root `package-lock.json` remained untracked and untouched.
+- **Runtime baseline:** [scout_runtime_pace_analysis_2026-07-21.md](scout_runtime_pace_analysis_2026-07-21.md) reconstructs run `all_2026-07-21_193524` at 6,937 seconds wall-clock, 150 attempts, 149 parseable, one timeout, 4,693.886 seconds summed backend time, and 2,235 seconds scheduled sleep. Five-second spacing projects 745 seconds sleep and a 1,490-second (24m50s) saving, for about 90m47s total if request latency holds.
+- **Pace contract:** `--sleep-between-prompts` now defaults to five seconds and remains configurable. The pre-patch code default was zero, while production commands used an explicit conservative 15 seconds; both code and long-run prompts now resolve to an auditable five seconds. `n_parallels` defaults to one, and live mode rejects values other than one absent a future separately reviewed reauthorization. If instability returns, use 8–10 or the historical 15 seconds; do not add concurrent live workers.
+- **Timing artifacts:** every dry/live scout writes `row_timing.csv`. It includes run/row identity, municipality/worker/Census context, prompt start/finish, elapsed and before/after sleep, backend/model, attempt/success/parse/failure status, response-ID presence, and input/output/reasoning/total tokens. `run_metadata.json` adds total elapsed, attempted-row average/median, total sleep, effective rows/hour, and current failure counts.
+- **Immutable outputs:** a non-empty output directory is rejected, and resume source/output paths must differ. The parent is never modified. A selected identifier missing from returned raw output is an explicit `missing_response_row` failure, not an inferred success.
+- **Resume contract:** new flags are `--resume-from-output-dir`, `--skip-completed-municipality-ids`, `--retry-failures-only`, `--failure-retry-types`, `--resume-lineage-note`, and `--allow-resume-input-hash-mismatch`. Resume requires terminal post-contract live metadata, exact `input_csv_sha256`, and `row_timing.csv`; it writes a pre-backend `resume_plan.csv` and `resume_summary.json` to a fresh directory. Hash mismatches stop unless explicitly overridden after a row audit, and the override remains prominent.
+- **Identity boundary:** completed detection prioritizes municipality ID, then Census government ID, then exact unique state+municipality for old lists. Fuzzy matching is never used; ambiguous legacy identity fails. Prior parseable rows are skipped/prior evidence and never counted as new attempts.
+- **Old-run limitation:** the successful 150-row directory predates the new hash and timing ledger, so it cannot serve as a safe resume parent. Moreno Valley remains historical failure-only and is not automatically retried. Prompt-only, nonterminal, OS-killed, or artifact-loss parents are also rejected.
+- **Future prompt:** [coordinator_150row_serial_live_prompt_with_resume_and_fast_sleep_2026-07-21.md](coordinator_150row_serial_live_prompt_with_resume_and_fast_sleep_2026-07-21.md) supersedes the historical post-runner-fix prompt. It keeps one coordinator direct-SDK lane, exact max/cap, `n_parallels=1`, zero retries, explicit five-second pacing, timing review, dry resume planning, fresh child directories, and one post-lineage accounting boundary.
+- **Offline proof:** the unchanged locked 150-row input, SHA-256 `e53db4698b5dba439ad4d31fca79be1242808960d1a8d6809d31b1b915de62fc`, completed one main-repo dry run with 150 unique ordered CA→NJ→TX timing rows, five-second metadata, `live_attempted=false`, and `backend_call_returned=false`.
+- **Validation:** three compiles passed; prompt tests passed 10 checks; the fully mocked/no-network direct-SDK suite passed 19 checks including defaults, override, timing, completed skipping, failure filters, same/non-empty output stops, hash block/override, legacy-parent rejection, one-lane enforcement, lifecycle, and live timing. Schema validation passed at 64 contracts; pipeline tests passed 60/60; canonical coverage remains 28 healthy pairs (10 exact, 18 overlap), two adjacent exploratory, and six unmatched safety units; `git diff --check` passed.
+- **Protected state:** no smoke, live/API/model call, hosted search, source opening/downloading, verification, ingestion, codify, queue/coverage rebuild, canonical/corpus edit, dashboard frontend change, workflow behavior change, remote action, or push occurred.
+
+### Next Move
+
+Do not live-scout without a new explicit authorization. For the next coordinator batch, use the successor prompt: fresh offline dry review, one authorized no-search smoke, then one direct-SDK process with exact max/cap, `n_parallels=1`, zero retries, and explicit `--sleep-between-prompts 5`. Review timing and throughput afterward. Stop on connection collapse; use 8–10 seconds and then 15 only as sequential fallbacks. If a post-patch run stops gracefully, first generate a dry resume plan in a different directory, review exact IDs/hash/failure categories, and only then consider one separately authorized child. Rebuild national accounting once only after a complete parent→child outcome reconciliation; keep verification, ingestion, codification, and claims deferred.
 
 ## 2026-07-21/22 — Geographic dashboard and post-150 scout accounting consolidated in main
 

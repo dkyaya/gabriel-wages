@@ -107,6 +107,36 @@ def _check_three_column_fallback() -> None:
     for fragment in STRICT_PROMPT_FRAGMENTS:
         assert fragment in legacy_prompt, fragment
 
+    # Truly old municipality lists without municipality_id are accepted only
+    # through an exact, deterministic state+municipality identity. No fuzzy
+    # name matching is used, and duplicate fallback identities fail closed.
+    with tempfile.TemporaryDirectory() as tmp:
+        legacy_path = Path(tmp) / "legacy.csv"
+        with legacy_path.open("w", newline="", encoding="utf-8") as f:
+            writer = csv.DictWriter(f, fieldnames=["municipality", "state"])
+            writer.writeheader()
+            writer.writerow({"municipality": "Legacy Borough", "state": "PA"})
+        legacy_rows = scout.load_municipalities("PA", legacy_path, None)
+        scout.validate_unique_row_identities(legacy_rows)
+        assert legacy_rows[0]["municipality_id"] == ""
+        assert scout.row_identity_key(legacy_rows[0]) == (
+            "legacy_state_municipality:PA:legacy borough"
+        )
+
+        duplicate_path = Path(tmp) / "legacy-duplicate.csv"
+        with duplicate_path.open("w", newline="", encoding="utf-8") as f:
+            writer = csv.DictWriter(f, fieldnames=["municipality", "state"])
+            writer.writeheader()
+            writer.writerow({"municipality": "Legacy Borough", "state": "PA"})
+            writer.writerow({"municipality": "  LEGACY   BOROUGH ", "state": "PA"})
+        duplicate_rows = scout.load_municipalities("PA", duplicate_path, None)
+        try:
+            scout.validate_unique_row_identities(duplicate_rows)
+        except SystemExit as exc:
+            assert "unsafe duplicate stable row identity" in str(exc)
+        else:
+            raise AssertionError("ambiguous legacy fallback identity did not fail closed")
+
 
 def _check_mixed_state_loading_and_live_authorization() -> None:
     with tempfile.TemporaryDirectory() as tmp:
@@ -259,6 +289,7 @@ def main() -> int:
     print("PASS: row-aware prompt retains contextual fields")
     print("PASS: three-column input fallback remains valid")
     print("PASS: missing optional municipality_id retains legacy prompt fallback")
+    print("PASS: legacy no-ID row identity is exact and duplicate fallback names fail closed")
     print("PASS: mixed-state 150-row loading preserves all rows and exact order")
     print("PASS: mixed-state live cap requires explicit exact authorization")
     print("PASS: strict unit/document/no-candidate guidance is present")

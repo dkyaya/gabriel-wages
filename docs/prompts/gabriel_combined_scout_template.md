@@ -70,7 +70,7 @@ Only after smoke success and separate explicit authorization for the live batch,
   --prompt-mode minimal \
   --max-prompts {{BATCH_SIZE}} \
   --n-parallels 1 \
-  --sleep-between-prompts 15 \
+  --sleep-between-prompts 5 \
   --search-context-size low \
   --live \
   --live-backend direct-sdk \
@@ -79,6 +79,8 @@ Only after smoke success and separate explicit authorization for the live batch,
 ```
 
 Stop on repeated connection failures without response IDs or output tokens, a systematic parser/schema defect, or an unexpected scope/canonical mutation. Preserve partial artifacts and stopped-before-request rows. Do not retry timeout-only rows or substitute another municipality.
+
+Five seconds is the current sequential default and is explicit here for auditability. If transport instability returns, keep `n_parallels=1` and raise spacing to 8–10 seconds, then 15 seconds if needed. A post-contract stopped run may be resumed only under separate authorization from its terminal input-hash and `row_timing.csv` evidence, using a dry resume plan and a different fresh output directory. Never resume into or mutate the parent directory.
 
 ## Post-run accounting
 
