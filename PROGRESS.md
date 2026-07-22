@@ -6,6 +6,43 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-22 (Prepared Wave 2 CA50/TX50/IL50 offline scout batches)
+
+**Did**
+- Started at `67c2c5d8e40e932a5d79ab116a518fb7f02ed91b` with a clean tracked worktree and the previously reported unrelated untracked root `package-lock.json`. Confirmed that HEAD contains both the post-150 dashboard consolidation (`943a458`) and scout pacing/resume safeguards (`67c2c5d`).
+- Read the current canonical discovery inputs rather than rebuilding them: `national_scout_candidate_queue_2026-07-20.csv` remains the 786-row current queue, and `national_scout_coverage_municipality_2026-07-20.csv` remains the 35,589-municipality current coverage output with 356 successful scout-covered and 35,233 unscouted municipalities.
+- Selected three exact 50-row municipal/place batches from the authoritative universe: Worker 1 California, Worker 2 Texas, and Worker 3 Illinois. Every row is active, `municipal` / `place`, `not_scouted`, absent from current queue/canonical context, free of prior failed attempts, and preserves municipality, Census-government, population, and county context.
+- Added the selection audit, three locked CSVs, three state-specific methodologies, three self-contained offline worker prompts, a Wave 2 operating plan, and a future coordinator prompt. The worker prompts use fresh branches from local `main`, local worktree excludes, exact structural gates, 50-prompt dry reviews, no-network checks, local commits/relays, and no smoke/live/API/verification/ingestion/accounting work.
+- Added `scripts/build_wave2_3x50_batches.py`, a deterministic local-only reproducer that asserts the current source row counts, exclusions, chosen ordering, exact 50/50/50 output, and 150 unique municipality and Census IDs before writing the three locked inputs.
+
+**Decisions and why**
+- Keep CA and TX because the completed coordinator wave showed high-volume source discovery and both states retain large, clean pools of meaningful municipal employers. Choose IL over NY for Worker 3 because current evidence is stronger and better established: IL has 74 covered municipalities, a 91.89% candidate-positive rate, and 217 candidate rows, compared with NY's 25, 84.00%, and 57. NJ is deferred because its 59.74% positive rate and 31 parseable-empty outcomes make it a lower-yield immediate repeat.
+- Rank by population within state, but distribute each batch across four fixed population bands (10/15/15/10) so the wave tests both larger employers and regional/smaller-place discovery without admitting prohibited employer types.
+- Exclude Bloomington, Oakland, Stockton, Oxnard, Redding, Fairfield, Princeton, and Moreno Valley categorically for this wave. No ad hoc retry or substitute was made. The future live process remains one coordinator-controlled serialized CA→TX→IL lane with five-second spacing and resume only into a fresh child directory.
+
+**Selection and validation results**
+```text
+CA50 SHA-256: f8b0e99e0a7343d3efacf3829325cb86db7b775814e933af21dacbbc0069f123
+TX50 SHA-256: d393601295ea86ab9a52e712bff0c7cc9cf7e0977e97793c134a6b1c02af4c6f
+IL50 SHA-256: 2257832562c87f76cdcbb6ec7efb5793034bc9d6484d39fd90bde05b7bb1c28b
+batch audit: 50/50/50 rows; 150 unique municipality IDs; 150 unique Census IDs; zero forbidden-name/type/covered/queued/canonical/failure overlap
+prompt-contract audit: 150/150 row-aware prompts contain identity, county/unit notes, strict controls, no-candidate guidance, blocked/dead separation, duplicate controls, unverified-stage handling, and the public-records prohibition
+three requested py_compile commands: exit 0
+prompt-contract no-network suite: 10 PASS checks
+direct-SDK fully mocked/no-network suite: 19 PASS checks
+validate.py: PASSED (64 contracts; 0 discourse; 64 coverage; 3 city attributes)
+ingest/test_pipeline.py: 60 passed, 0 failed
+audit_coverage.py: 28 healthy pairs (10 exact, 18 overlap), 2 exploratory adjacent, 6 unmatched safety units
+git diff --check: passed
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. No canonical contract, city-coverage, corpus, national queue/coverage, dashboard frontend, deployment, or worker-worktree file changed.
+
+**Next steps**
+1. Run each new Wave 2 worker prompt in its assigned persistent worktree. Workers must perform offline setup, structural checks, one dry run, 50/50 prompt review, no-network validation, and a local prep relay only; they must not smoke or live-scout.
+2. After all three prep relays pass, use `wave2_coordinator_150row_serial_live_prompt_2026-07-22.md` under a separate explicit authorization: combine in Worker 1→2→3 order, hash-lock, dry-review 150 prompts, run one smoke, then one direct-SDK serialized process with exact cap 150, `n_parallels=1`, zero retries, and five-second spacing.
+3. Stop on connection collapse. If a post-patch run stops with reliable terminal artifacts, plan a resume in a new directory and reconcile its lineage before the single queue/coverage rebuild. Keep verification, ingestion, codify, and claim use deferred; complete national priority tiering after this wave.
+
 ## 2026-07-22 (Added five-second sequential pacing, per-row timing, and fail-closed scout resume)
 
 **Did**
