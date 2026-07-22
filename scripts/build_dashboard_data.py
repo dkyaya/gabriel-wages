@@ -34,6 +34,13 @@ MUNICIPALITY_UNIVERSE_PATH = ANALYSIS_DIR / "national_municipality_universe.csv"
 CANDIDATE_QUEUE_PATH = (
     ANALYSIS_DIR / "national_scout_candidate_queue_2026-07-20.csv"
 )
+PRIORITY_TIERS_PATH = (
+    ANALYSIS_DIR / "national_municipality_priority_tiers_2026-07-22.csv"
+)
+STATE_PRIORITY_PATH = ANALYSIS_DIR / "state_priority_summary_2026-07-22.csv"
+TOP_PRIORITY_TARGETS_PATH = (
+    ANALYSIS_DIR / "national_priority_tier_top_targets_2026-07-22.csv"
+)
 CLAIM_REGISTER_PATH = ANALYSIS_DIR / "claim_register_2026-07-12.csv"
 STATE_CITY_CLAIM_MAP_PATH = ANALYSIS_DIR / "state_city_claim_map_2026-07-12.csv"
 HYPOTHESIS_TRACKER_PATH = ANALYSIS_DIR / "hypothesis_tracker_2026-07-12.csv"
@@ -43,6 +50,9 @@ REQUIRED_PATHS = [
     MUNICIPALITY_COVERAGE_PATH,
     MUNICIPALITY_UNIVERSE_PATH,
     CANDIDATE_QUEUE_PATH,
+    PRIORITY_TIERS_PATH,
+    STATE_PRIORITY_PATH,
+    TOP_PRIORITY_TARGETS_PATH,
 ]
 OPTIONAL_PATHS = [
     CLAIM_REGISTER_PATH,
@@ -117,6 +127,7 @@ GLOBAL_LIMITATIONS = [
     "Connection-only failures are excluded from discovery coverage and counted separately.",
     "Likely matched-set groups are scheduling leads inferred from scout unit labels, not verified city-cycle matches.",
     "Project-wide verified, ingested, wage-extraction, codified, and regression metrics are not yet wired into this dashboard build.",
+    "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
 ]
 
 
@@ -133,6 +144,12 @@ def as_int(value: str | int | None) -> int:
     if value in (None, ""):
         return 0
     return int(value)
+
+
+def as_float(value: str | float | None) -> float | None:
+    if value in (None, ""):
+        return None
+    return float(value)
 
 
 def percent(numerator: int, denominator: int) -> float:
@@ -673,12 +690,157 @@ def build_analysis_readiness(
     }
 
 
+def build_priority_summary(
+    *,
+    priority_rows: list[dict[str, str]],
+    metadata: dict[str, Any],
+) -> dict[str, Any]:
+    eligible = [
+        row for row in priority_rows if row["future_scout_eligible_flag"] == "yes"
+    ]
+    tier_eligible = Counter(row["priority_tier"] for row in eligible)
+    confidence = Counter(row["priority_confidence"] for row in priority_rows)
+    covered = sum(
+        row["scout_coverage_status"]
+        in {"scouted_with_candidates", "scouted_no_candidates"}
+        for row in priority_rows
+    )
+    return {
+        **metadata,
+        "stage": "research_operational_priority_heuristic",
+        "totals": {
+            "municipality_universe": len(priority_rows),
+            "scout_covered": covered,
+            "future_scout_eligible": len(eligible),
+            "tier_1_eligible": tier_eligible["Tier 1"],
+            "tier_2_eligible": tier_eligible["Tier 2"],
+            "tier_3_eligible": tier_eligible["Tier 3"],
+            "tier_4_eligible": tier_eligible["Tier 4"],
+            "tier_5_eligible": tier_eligible["Tier 5"],
+            "failure_only_retry_targets": sum(
+                row["failure_only_flag"] == "yes" for row in priority_rows
+            ),
+            "priority_confidence": {
+                "high": confidence["high"],
+                "medium": confidence["medium"],
+                "low": confidence["low"],
+            },
+        },
+        "tier_definitions": [
+            {"tier": "Tier 1", "label": "Highest-priority scout targets"},
+            {"tier": "Tier 2", "label": "Strong-priority scout targets"},
+            {"tier": "Tier 3", "label": "Strategic or moderate-priority targets"},
+            {"tier": "Tier 4", "label": "Low-priority targets"},
+            {"tier": "Tier 5", "label": "Defer for current research design"},
+        ],
+        "disclaimer": (
+            "Scores rank research-operational scouting value only. They do not establish "
+            "unionization, department existence, source availability, wage differences, "
+            "or causal effects."
+        ),
+    }
+
+
+def build_state_priority_layer(
+    *,
+    state_priority_rows: list[dict[str, str]],
+    metadata: dict[str, Any],
+) -> dict[str, Any]:
+    states: list[dict[str, Any]] = []
+    for row in state_priority_rows:
+        tier1 = as_int(row["tier_1_eligible_count"])
+        tier2 = as_int(row["tier_2_eligible_count"])
+        covered = as_int(row["scout_covered_count"])
+        universe = as_int(row["universe_count"])
+        states.append(
+            {
+                "state": row["state"],
+                "state_name": STATE_NAMES[row["state"]],
+                "total_universe": universe,
+                "covered": covered,
+                "eligible": as_int(row["future_scout_eligible_count"]),
+                "tier_1_eligible": tier1,
+                "tier_2_eligible": tier2,
+                "tier_3_eligible": as_int(row["tier_3_eligible_count"]),
+                "tier_4_eligible": as_int(row["tier_4_eligible_count"]),
+                "tier_5_eligible": as_int(row["tier_5_eligible_count"]),
+                "tier_1_plus_2_remaining": tier1 + tier2,
+                "high_priority_coverage_rate_pct": (
+                    round(100.0 * float(row["high_priority_coverage_rate"]), 4)
+                    if row["high_priority_coverage_rate"]
+                    else 0.0
+                ),
+                "state_yield_score": as_float(row["state_yield_score"]),
+                "state_score_confidence": row["state_score_confidence"],
+                "candidate_positive_rate_pct": (
+                    round(100.0 * float(row["candidate_positive_rate"]), 4)
+                    if row["candidate_positive_rate"]
+                    else None
+                ),
+                "recommended_next_wave_status": row[
+                    "recommended_next_wave_status"
+                ],
+            }
+        )
+    return {
+        **metadata,
+        "stage": "research_operational_priority_heuristic",
+        "safe_map_metrics": [
+            "tier_1_eligible",
+            "high_priority_coverage_rate_pct",
+            "tier_1_plus_2_remaining",
+        ],
+        "states": states,
+        "disclaimer": (
+            "State priority values guide scouting order only; sparse-state yield estimates "
+            "are smoothed and confidence-labeled."
+        ),
+    }
+
+
+def build_top_priority_targets_layer(
+    *,
+    top_rows: list[dict[str, str]],
+    metadata: dict[str, Any],
+) -> dict[str, Any]:
+    targets = [
+        {
+            "rank": as_int(row["rank"]),
+            "state": row["state"],
+            "municipality": row["municipality"],
+            "municipality_id": row["municipality_id"],
+            "government_name": row["government_name"],
+            "government_type": row["government_type"],
+            "population": as_int(row["population"]),
+            "score": as_float(row["total_priority_score"]),
+            "tier": row["priority_tier"],
+            "confidence": row["priority_confidence"],
+            "retry_flag": row["retry_flag"] == "yes",
+            "recommended_future_wave": row["recommended_future_wave"],
+        }
+        for row in top_rows
+    ]
+    return {
+        **metadata,
+        "stage": "research_operational_priority_heuristic",
+        "target_count": len(targets),
+        "targets": targets,
+        "disclaimer": (
+            "Targets are unverified scouting priorities, not evidence that a qualifying "
+            "agreement or matched safety/non-safety set exists."
+        ),
+    }
+
+
 def validate_inputs(
     *,
     state_rows: list[dict[str, str]],
     municipality_rows: list[dict[str, str]],
     universe_rows: list[dict[str, str]],
     queue_rows: list[dict[str, str]],
+    priority_rows: list[dict[str, str]],
+    state_priority_rows: list[dict[str, str]],
+    top_priority_rows: list[dict[str, str]],
 ) -> None:
     state_codes = [row["state"] for row in state_rows]
     if len(state_codes) != len(set(state_codes)):
@@ -721,6 +883,19 @@ def validate_inputs(
             + ", ".join(invalid_scout_statuses)
         )
 
+    priority_ids = [row["municipality_id"] for row in priority_rows]
+    if len(priority_ids) != len(universe_rows) or set(priority_ids) != set(municipality_ids):
+        raise ValueError("Priority tier rows do not exactly match the municipality universe")
+    if len(priority_ids) != len(set(priority_ids)):
+        raise ValueError("Priority tier input contains duplicate municipality IDs")
+    if {row["state"] for row in state_priority_rows} != set(STATE_NAMES):
+        raise ValueError("State priority summary does not contain exactly 50 states plus DC")
+    top_ranks = [as_int(row["rank"]) for row in top_priority_rows]
+    if top_ranks != list(range(1, len(top_ranks) + 1)):
+        raise ValueError("Top-priority target ranks are not contiguous from one")
+    if any(row["future_scout_eligible_flag"] != "yes" for row in priority_rows if row["municipality_id"] in {target["municipality_id"] for target in top_priority_rows}):
+        raise ValueError("Top-priority targets include an ineligible municipality")
+
 
 def main() -> int:
     for path in REQUIRED_PATHS:
@@ -739,6 +914,9 @@ def main() -> int:
     municipality_rows = read_csv(MUNICIPALITY_COVERAGE_PATH)
     universe_rows = read_csv(MUNICIPALITY_UNIVERSE_PATH)
     queue_rows = read_csv(CANDIDATE_QUEUE_PATH)
+    priority_rows = read_csv(PRIORITY_TIERS_PATH)
+    state_priority_rows = read_csv(STATE_PRIORITY_PATH)
+    top_priority_rows = read_csv(TOP_PRIORITY_TARGETS_PATH)
     claim_rows = read_csv(CLAIM_REGISTER_PATH) if CLAIM_REGISTER_PATH.exists() else []
     claim_map_rows = (
         read_csv(STATE_CITY_CLAIM_MAP_PATH) if STATE_CITY_CLAIM_MAP_PATH.exists() else []
@@ -752,6 +930,9 @@ def main() -> int:
         municipality_rows=municipality_rows,
         universe_rows=universe_rows,
         queue_rows=queue_rows,
+        priority_rows=priority_rows,
+        state_priority_rows=state_priority_rows,
+        top_priority_rows=top_priority_rows,
     )
 
     timestamp = generated_at()
@@ -786,12 +967,27 @@ def main() -> int:
         optional_availability=optional_availability,
         metadata=metadata,
     )
+    priority_summary = build_priority_summary(
+        priority_rows=priority_rows,
+        metadata=metadata,
+    )
+    state_priority_summary = build_state_priority_layer(
+        state_priority_rows=state_priority_rows,
+        metadata=metadata,
+    )
+    top_priority_targets = build_top_priority_targets_layer(
+        top_rows=top_priority_rows,
+        metadata=metadata,
+    )
 
     outputs = [
         write_json("state_summary.json", state_summary),
         write_json("candidate_queue_summary.json", candidate_summary),
         write_json("coverage_funnel.json", funnel),
         write_json("analysis_readiness.json", readiness),
+        write_json("priority_summary.json", priority_summary),
+        write_json("state_priority_summary.json", state_priority_summary),
+        write_json("top_priority_targets.json", top_priority_targets),
     ]
 
     for warning in warnings:

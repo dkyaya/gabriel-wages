@@ -6,6 +6,25 @@ Last updated: `2026-07-22`
 
 ---
 
+## 2026-07-22 — National municipality priority tiering is complete
+
+### Current State
+
+- **Checkpoint:** work began at `bb0c5eae3411cbe741ee1ea331d91092d8625fa9`, after the successful Wave 2 merge. The tracked tree was clean; the unrelated root `package-lock.json` remained untracked and untouched.
+- **Input authority:** the current dated files remain `national_municipality_universe.csv`, `national_municipality_county_crosswalk.csv`, `national_scout_coverage_municipality_2026-07-20.csv`, `national_scout_candidate_queue_2026-07-20.csv`, and current state/county summaries. Internal build dates are 2026-07-22. Universe legacy `already_scouted` covers only 25 early rows and is not operational authority.
+- **Scope:** all 35,589 unique active employer rows are valid: 19,471 municipal/place and 16,118 township/county-subdivision. Population and county relationships are complete; 1,106 employers are multi-county. No county, school, authority, district, university, or private-provider category appears.
+- **Scoring:** `scripts/build_national_municipality_priority_tiers.py` uses only existing inputs. Baseline weights are population 30, government type 10, state yield 20, research-design signals 20, geographic value 10, completeness 5, and observed municipality evidence 5. State rates use a 25-municipality pooled prior; no-sample states are low-confidence neutral, not zero.
+- **Tiers:** all-row counts are Tier 1 1,780; Tier 2 3,559; Tier 3 7,118; Tier 4 10,676; Tier 5 12,456. Future-scout eligible is 35,079: Tier 1 1,471; Tier 2 3,528; Tier 3 6,999; Tier 4 10,625; Tier 5 12,456. Successful coverage and canonical rows are excluded; ten failure-only rows remain eligible through a separate retry flag.
+- **Confidence:** high 4,990; medium 4,080; low 26,519. Low primarily means fewer than 15 successful state outcomes. It is not a low-value or no-source finding.
+- **Sensitivity:** the baseline top 500 overlaps 480/500 (96.0%) with the population-heavy version and 257/500 (51.4%) with the state-yield-heavy version. Evidence concentration in seven states makes aggressive yield weighting unstable; retain the baseline and collect cross-state learning data.
+- **Next-wave design:** recommend three cross-state 50-row prep batches from the first 150 `retry_flag=no` targets, corresponding to global eligible ranks 1–156 after six high-priority failure rows are segregated. The leading targets are Oklahoma City, Phoenix, Portland, Milwaukee, Atlanta, Kansas City, Raleigh, Honolulu, Jacksonville, and Tulsa.
+- **Dashboard layer:** `priority_summary.json`, `state_priority_summary.json`, and `top_priority_targets.json` are additive static inputs. They expose 35,079 eligible rows, tier counts, state metrics/confidence, and 500 targets. The geographic map/frontend was not changed.
+- **Boundary:** no live scout, smoke, API/model call, URL opening/downloading, verification, ingestion, codification, candidate promotion, canonical/corpus edit, queue/coverage rebuild, remote action, or push occurred. Scores are research-operational heuristics, not substantive labor-market findings.
+
+### Next Move
+
+Use a separate offline task to materialize three exact 50-row cross-state worker inputs from the committed top-target CSV, excluding every retry row and rechecking current coverage/canonical eligibility. Workers should use mixed-state dry runs only; a later coordinator authorization owns smoke/live. Rebuild this tier layer after 300–600 additional successful scouts, and do not increase the state-yield weight until top-rank stability improves. Keep verification, ingestion, codification, and claim use separate.
+
 ## 2026-07-22 — Wave 2 CA/TX/IL serialized scout completed and merged
 
 ### Current State

@@ -6,6 +6,38 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-22 (Built national municipality priority tiers and dashboard data layer)
+
+**Did**
+- Started at `bb0c5eae3411cbe741ee1ea331d91092d8625fa9` with clean tracked state and the unrelated pre-existing untracked root `package-lock.json`. Audited the authoritative 35,589-row universe, 36,816 county associations, current 504-municipality successful coverage, 1,009-row unverified queue, state/county outputs, and legacy versus current status fields.
+- Added a deterministic local scorer and offline tests. All 19,471 municipal/place and 16,118 township/county-subdivision employers retain exact identity/context and receive population, government-type, smoothed state-yield, smoothed research-design, geographic, completeness, and descriptive existing-evidence components; no prohibited category is present.
+- Assigned national rank tiers with top-5%/next-10%/next-20%/next-30%/remaining-35% safeguards. All-row counts are Tier 1 1,780; Tier 2 3,559; Tier 3 7,118; Tier 4 10,676; Tier 5 12,456. Current future eligibility is 35,079, including 1,471 Tier 1 and 3,528 Tier 2 rows; 504 successful outcomes and 19 canonical rows are excluded, while ten failure-only rows retain separate retry priority.
+- Produced full and summary CSVs, top 500 targets, failure-retry ledger, build/validation/sensitivity reports, dashboard handoff, tier-based operating strategy, and a recommended cross-state post-tiering wave. Added three static dashboard JSON files without changing frontend/map behavior.
+
+**Decisions and why**
+- Use a 25-successful-municipality empirical-Bayes prior for state rates. Forty-four state/DC positions have no successful sample, so raw zero or tiny-sample rates would be misleading; they receive pooled estimates and low confidence instead.
+- Keep population at 30 points and combined state-yield/research-design evidence at 40, with geography 10, government type 10, completeness 5, and descriptive municipality evidence 5. Townships lose six type points but are not categorically deferred.
+- Recommend three cross-state Tier 1 preparation batches from the first 150 `retry_flag=no` targets. This prioritizes large employers and learns across low-confidence states; known failures remain segregated for separately authorized retry work.
+
+**Sensitivity/limitations**
+- The baseline top 500 overlaps 96.0% with the population-heavy variant but 51.4% with the state-yield-heavy variant. The ordering is robust to more population weight and materially sensitive to placing 30 points on evidence concentrated in seven states; preserve the baseline and rebuild after 300–600 additional successful scouts.
+- Confidence is high for 4,990 rows, medium for 4,080, and low for 26,519. Low confidence reflects sparse state evidence, not low municipality value. Scores are operational heuristics, not claims about unions, departments, portals, source availability, wages, or causal effects.
+
+**Validation/audit results**
+```text
+priority builder: 35,589/35,589 rows; unique municipality/Census IDs; scores within 0–100; exact Tier 1–5 labels
+future eligibility: 35,079; covered incorrectly eligible 0; prohibited eligible 0; failure retries 10
+priority tests: 18 PASS checks, including missing population, smoothing confidence, township penalty, determinism, and no network/API imports
+dashboard priority JSON: 35,589 universe; 504 covered; 35,079 eligible; 51 state/DC rows; 500 targets
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. No live/API/model/smoke call, URL access, verification, ingestion, codification, queue/coverage rebuild, canonical/corpus edit, remote action, or push occurred.
+
+**Next steps**
+1. Under a separate offline-preparation task, build three exact cross-state 50-row inputs from the first 150 current `retry_flag=no` Tier 1 targets and recheck current coverage/canonical status before locking.
+2. Keep the ten failure-only rows out of ordinary discovery; use a separately authorized retry design if their tier/research value justifies it.
+3. Rebuild tiers after 300–600 new successful outcomes and compare realized yield by tier, state, population band, and government type before increasing the state-evidence weight.
+
 ## 2026-07-22 (Completed Wave 2 CA/TX/IL serialized 150-row scout and accounting merge)
 
 **Did**

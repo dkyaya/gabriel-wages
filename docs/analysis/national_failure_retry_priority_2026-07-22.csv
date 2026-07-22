@@ -1,0 +1,11 @@
+municipality_id,census_gov_id,state,municipality,government_name,population,prior_failure_type,prior_failure_run_ids,prior_attempt_dates,failed_attempt_count,underlying_priority_score,priority_tier,priority_confidence,retry_priority,recommended_retry_timing
+cog_2025_211214,211214,CA,Stockton,CITY OF STOCKTON,319543,connection_or_timeout_failure,ca_2026-07-21_101012,2026-07-21,1,76.177,Tier 1,high,high,next_separately_authorized_failure_retry_wave
+cog_2025_207604,207604,CA,Redding,CITY OF REDDING,92727,connection_or_timeout_failure,ca_2026-07-21_101012,2026-07-21,1,75.784,Tier 1,high,high,next_separately_authorized_failure_retry_wave
+cog_2025_123093,123093,CA,Oakland,CITY OF OAKLAND,436504,connection_or_timeout_failure,ca_2026-07-21_101012,2026-07-21,1,75.731,Tier 1,high,high,next_separately_authorized_failure_retry_wave
+cog_2025_161238,161238,CA,Moreno Valley,CITY OF MORENO VALLEY,212392,connection_or_timeout_failure,all_2026-07-21_193524,2026-07-21,1,75.644,Tier 1,high,high,next_separately_authorized_failure_retry_wave
+cog_2025_161299,161299,CA,Oxnard,CITY OF OXNARD,198488,connection_or_timeout_failure,ca_2026-07-21_101012,2026-07-21,1,75.540,Tier 1,high,high,next_separately_authorized_failure_retry_wave
+cog_2025_100750,100750,CA,Fairfield,CITY OF FAIRFIELD,120768,connection_or_timeout_failure,ca_2026-07-21_165516,2026-07-21,1,75.276,Tier 1,high,high,next_separately_authorized_failure_retry_wave
+cog_2025_124994,124994,IL,Bloomington,CITY OF BLOOMINGTON,78587,connection_or_timeout_failure,il_2026-07-20_184849,2026-07-20,1,74.525,Tier 1,high,high,next_separately_authorized_failure_retry_wave
+cog_2025_162476,162476,IL,Huntley,VILLAGE OF HUNTLEY,28269,connection_or_timeout_failure,all_2026-07-22_114424,2026-07-22,1,73.485,Tier 1,high,high,next_separately_authorized_failure_retry_wave
+cog_2025_162300,162300,IL,Roselle,VILLAGE OF ROSELLE,22508,connection_or_timeout_failure,all_2026-07-22_114424,2026-07-22,1,72.393,Tier 1,high,high,next_separately_authorized_failure_retry_wave
+cog_2025_170189,170189,NJ,Princeton,MUNICIPALITY OF PRINCETON,30289,connection_or_timeout_failure,nj_2026-07-21_172457,2026-07-21,1,65.149,Tier 3,high,medium,retry_after_next_300_to_600_new_scouts
