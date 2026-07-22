@@ -41,6 +41,11 @@ STATE_PRIORITY_PATH = ANALYSIS_DIR / "state_priority_summary_2026-07-22.csv"
 TOP_PRIORITY_TARGETS_PATH = (
     ANALYSIS_DIR / "national_priority_tier_top_targets_2026-07-22.csv"
 )
+SCOUT_YIELD_STATE_PATH = ANALYSIS_DIR / "scout_yield_learning_by_state_2026-07-22.csv"
+SCOUT_YIELD_WAVE_PATH = ANALYSIS_DIR / "scout_yield_learning_by_wave_2026-07-22.csv"
+HOSTED_SEARCH_RECOMMENDATION_PATH = (
+    ANALYSIS_DIR / "hosted_search_transport_recommendation_2026-07-22.md"
+)
 CLAIM_REGISTER_PATH = ANALYSIS_DIR / "claim_register_2026-07-12.csv"
 STATE_CITY_CLAIM_MAP_PATH = ANALYSIS_DIR / "state_city_claim_map_2026-07-12.csv"
 HYPOTHESIS_TRACKER_PATH = ANALYSIS_DIR / "hypothesis_tracker_2026-07-12.csv"
@@ -53,11 +58,14 @@ REQUIRED_PATHS = [
     PRIORITY_TIERS_PATH,
     STATE_PRIORITY_PATH,
     TOP_PRIORITY_TARGETS_PATH,
+    SCOUT_YIELD_STATE_PATH,
+    SCOUT_YIELD_WAVE_PATH,
 ]
 OPTIONAL_PATHS = [
     CLAIM_REGISTER_PATH,
     STATE_CITY_CLAIM_MAP_PATH,
     HYPOTHESIS_TRACKER_PATH,
+    HOSTED_SEARCH_RECOMMENDATION_PATH,
 ]
 
 STATE_NAMES = {
@@ -832,6 +840,150 @@ def build_top_priority_targets_layer(
     }
 
 
+def current_preflight_recommendation() -> str:
+    if not HOSTED_SEARCH_RECOMMENDATION_PATH.exists():
+        return "run_strengthened_preflight_gate_before_next_live_wave"
+    text = HOSTED_SEARCH_RECOMMENDATION_PATH.read_text(encoding="utf-8").lower()
+    if "recommendation a" in text or "category a" in text:
+        return (
+            "last_bounded_diagnostic_was_healthy; nevertheless_run_the_strengthened_"
+            "preflight_gate_immediately_before_the_next_live_wave"
+        )
+    return "hosted_search_health_not_confirmed; do_not_run_full_live_wave"
+
+
+def build_scout_operations_summary(
+    *,
+    state_rows: list[dict[str, str]],
+    queue_rows: list[dict[str, str]],
+    wave_rows: list[dict[str, str]],
+    metadata: dict[str, Any],
+) -> dict[str, Any]:
+    latest = wave_rows[-1]
+    covered = sum(as_int(row["municipalities_scouted"]) for row in state_rows)
+    positive = sum(
+        as_int(row["municipalities_scouted_with_candidates"]) for row in state_rows
+    )
+    empty = sum(
+        as_int(row["municipalities_scouted_no_candidates"]) for row in state_rows
+    )
+    failure_only = sum(
+        as_int(row["municipalities_scout_attempt_failed_connection"])
+        for row in state_rows
+    )
+    return {
+        **metadata,
+        "stage": "scout_operations_unverified_discovery",
+        "current_totals": {
+            "scout_covered_municipalities": covered,
+            "candidate_queue_rows": len(queue_rows),
+            "candidate_positive_municipalities": positive,
+            "parseable_empty_municipalities": empty,
+            "failure_only_municipalities": failure_only,
+        },
+        "latest_wave": {
+            "wave_id": latest["wave_id"],
+            "label": latest["wave_label"],
+            "runtime_seconds": as_float(latest["runtime_seconds"]),
+            "rows_per_hour": as_float(latest["rows_per_hour"]),
+            "candidate_rows_per_hour": as_float(latest["candidate_rows_per_hour"]),
+            "candidate_rows_per_parseable_municipality": as_float(
+                latest["candidate_rows_per_parseable_municipality"]
+            ),
+            "timeout_or_failure_rows": as_int(latest["failure_only_rows"]),
+        },
+        "priority_refresh_recommendation": (
+            "Rebuild the unchanged national priority methodology after 300–600 "
+            "additional successful scouts; current priority counts still reflect the "
+            "pre-Tier-1-Wave-1 checkpoint."
+        ),
+        "preflight_gate_recommendation": current_preflight_recommendation(),
+        "disclaimer": (
+            "Scout candidates remain unverified leads. Runtime and yield metrics are "
+            "operational diagnostics, not evidence of source quality or wage effects."
+        ),
+    }
+
+
+def build_scout_yield_state_layer(
+    *, state_yield_rows: list[dict[str, str]], metadata: dict[str, Any]
+) -> dict[str, Any]:
+    states = []
+    for row in state_yield_rows:
+        states.append(
+            {
+                "state": row["state"],
+                "state_name": STATE_NAMES[row["state"]],
+                "successful_scout_count": as_int(row["successful_scout_count"]),
+                "candidate_positive_rate": as_float(row["candidate_positive_rate"]),
+                "candidate_rows_per_covered_municipality": as_float(
+                    row["candidate_rows_per_covered_municipality"]
+                ),
+                "parseable_empty_rate": as_float(row["parseable_empty_rate"]),
+                "failure_only_rate": as_float(row["failure_only_rate"]),
+                "connection_failure_attempt_rate": as_float(
+                    row["connection_failure_attempt_rate"]
+                ),
+                "sample_confidence": row["sample_confidence"],
+                "recommended_next_wave_status": row[
+                    "recommended_next_wave_status"
+                ],
+            }
+        )
+    leaderboard = sorted(
+        [row for row in states if row["successful_scout_count"] >= 10],
+        key=lambda row: (
+            -(row["candidate_rows_per_covered_municipality"] or 0),
+            -(row["candidate_positive_rate"] or 0),
+            row["state"],
+        ),
+    )
+    return {
+        **metadata,
+        "stage": "scout_operations_unverified_discovery",
+        "leaderboard_minimum_successful_scouts": 10,
+        "state_yield_leaderboard": leaderboard,
+        "states": states,
+        "disclaimer": "Sparse-state estimates are confidence-labeled and must not drive selection alone.",
+    }
+
+
+def build_scout_runtime_trends(
+    *, wave_rows: list[dict[str, str]], metadata: dict[str, Any]
+) -> dict[str, Any]:
+    waves = []
+    for row in wave_rows:
+        waves.append(
+            {
+                "wave_id": row["wave_id"],
+                "label": row["wave_label"],
+                "attempted_rows": as_int(row["attempted_rows"]),
+                "parseable_rows": as_int(row["parseable_rows"]),
+                "candidate_rows": as_int(row["candidate_rows"]),
+                "failure_only_rows": as_int(row["failure_only_rows"]),
+                "runtime_seconds": as_float(row["runtime_seconds"]),
+                "rows_per_hour": as_float(row["rows_per_hour"]),
+                "candidate_rows_per_hour": as_float(row["candidate_rows_per_hour"]),
+                "candidate_rows_per_parseable_municipality": as_float(
+                    row["candidate_rows_per_parseable_municipality"]
+                ),
+                "sleep_between_prompts_seconds": as_float(
+                    row["sleep_between_prompts_seconds"]
+                ),
+            }
+        )
+    return {
+        **metadata,
+        "stage": "scout_operations_unverified_discovery",
+        "waves": waves,
+        "next_run_instrumentation": [
+            "compact prompt character/token proxy",
+            "adaptive planned and actual sleep",
+            "per-row elapsed time and failure type",
+        ],
+    }
+
+
 def validate_inputs(
     *,
     state_rows: list[dict[str, str]],
@@ -917,6 +1069,8 @@ def main() -> int:
     priority_rows = read_csv(PRIORITY_TIERS_PATH)
     state_priority_rows = read_csv(STATE_PRIORITY_PATH)
     top_priority_rows = read_csv(TOP_PRIORITY_TARGETS_PATH)
+    scout_yield_state_rows = read_csv(SCOUT_YIELD_STATE_PATH)
+    scout_yield_wave_rows = read_csv(SCOUT_YIELD_WAVE_PATH)
     claim_rows = read_csv(CLAIM_REGISTER_PATH) if CLAIM_REGISTER_PATH.exists() else []
     claim_map_rows = (
         read_csv(STATE_CITY_CLAIM_MAP_PATH) if STATE_CITY_CLAIM_MAP_PATH.exists() else []
@@ -934,6 +1088,10 @@ def main() -> int:
         state_priority_rows=state_priority_rows,
         top_priority_rows=top_priority_rows,
     )
+    if {row["state"] for row in scout_yield_state_rows} != set(STATE_NAMES):
+        raise ValueError("Scout-yield state output does not contain exactly 50 states plus DC")
+    if len(scout_yield_wave_rows) < 3:
+        raise ValueError("Scout runtime trends require at least the three reviewed waves")
 
     timestamp = generated_at()
     data_vintage = max(row.get("last_updated", "") for row in state_rows)
@@ -979,6 +1137,20 @@ def main() -> int:
         top_rows=top_priority_rows,
         metadata=metadata,
     )
+    scout_operations = build_scout_operations_summary(
+        state_rows=state_rows,
+        queue_rows=queue_rows,
+        wave_rows=scout_yield_wave_rows,
+        metadata=metadata,
+    )
+    scout_yield_by_state = build_scout_yield_state_layer(
+        state_yield_rows=scout_yield_state_rows,
+        metadata=metadata,
+    )
+    scout_runtime_trends = build_scout_runtime_trends(
+        wave_rows=scout_yield_wave_rows,
+        metadata=metadata,
+    )
 
     outputs = [
         write_json("state_summary.json", state_summary),
@@ -988,6 +1160,9 @@ def main() -> int:
         write_json("priority_summary.json", priority_summary),
         write_json("state_priority_summary.json", state_priority_summary),
         write_json("top_priority_targets.json", top_priority_targets),
+        write_json("scout_operations_summary.json", scout_operations),
+        write_json("scout_yield_by_state.json", scout_yield_by_state),
+        write_json("scout_runtime_trends.json", scout_runtime_trends),
     ]
 
     for warning in warnings:

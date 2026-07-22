@@ -8,10 +8,12 @@ from __future__ import annotations
 
 import csv
 import json
+import sys
 import tempfile
 from pathlib import Path
 
 import gabriel_state_source_scout as scout
+import build_municipality_search_hints as hint_builder
 
 
 STRICT_PROMPT_FRAGMENTS = (
@@ -68,6 +70,97 @@ def _check_row_aware_prompt() -> None:
     assert "non_overlap_deferred" in prompt
     for fragment in STRICT_PROMPT_FRAGMENTS:
         assert fragment in prompt, fragment
+
+
+def _check_compact_prompt_and_search_hints() -> None:
+    row = {
+        "municipality": "Austin",
+        "state": "TX",
+        "municipality_id": "US-CENSUSGOV-TX-1765050000",
+        "government_name": "CITY OF AUSTIN",
+        "census_gov_id": "175050",
+        "expected_units_to_search": "police; fire; ordinary non-safety municipal",
+        "verification_notes": "Keep all leads unverified.",
+        "county_context_summary": "Travis County (48453; primary)",
+        "search_hint_1": '"CITY OF AUSTIN" TX official website',
+        "search_hint_2": '"CITY OF AUSTIN" TX collective bargaining agreement',
+    }
+    minimal = scout.build_prompt("Austin", "TX", "minimal", row)
+    compact = scout.build_prompt("Austin", "TX", "compact", row)
+    assert len(compact) < len(minimal)
+    assert "Locked internal municipality ID: US-CENSUSGOV-TX-1765050000" in compact
+    assert "CITY OF AUSTIN municipal government, Census government ID 175050" in compact
+    assert "Travis County" in compact
+    assert "Verification cautions: Keep all leads unverified." in compact
+    assert "Deterministic query hints" in compact
+    assert '"CITY OF AUSTIN" TX official website' in compact
+    required = (
+        "A police, fire, or other safety CBA can never satisfy a non-safety comparator request",
+        "public-records requests",
+        "It is acceptable to find no qualifying source for this city",
+        "dead_or_unreachable",
+        "blocked_or_unreadable",
+        "duplicate_risk",
+        "candidate_stage",
+        "document_completeness",
+        "visible_year_evidence",
+        "overlap_with_anchor_cycle",
+        "cycle_match_notes",
+        "comparator_role",
+        "wrong_employer_risk",
+        "context_only_flag",
+        "needs_verification_reason",
+        "Every returned item remains unverified scout-stage lead data",
+        "Do not invent URLs",
+    )
+    for fragment in required:
+        assert fragment in compact, fragment
+    for schema_field in (
+        "unit_type", "document_title", "union_name", "employer",
+        "contract_years", "source_url", "source_owner_type", "document_type",
+        "why_relevant", "confidence",
+    ):
+        assert f'"{schema_field}"' in compact
+
+    source = {
+        "municipality_id": "fixture-id",
+        "state": "PA",
+        "municipality": "Example Borough",
+        "government_name": "BOROUGH OF EXAMPLE",
+    }
+    first = hint_builder.build_hint_row(source)
+    second = hint_builder.build_hint_row(dict(source))
+    assert first == second
+    assert len({first[f"search_hint_{index}"] for index in range(1, 6)}) == 5
+
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp_path = Path(tmp)
+        input_path = tmp_path / "input.csv"
+        hints_path = tmp_path / "hints.csv"
+        output_path = tmp_path / "output"
+        with input_path.open("w", newline="", encoding="utf-8") as handle:
+            writer = csv.DictWriter(
+                handle,
+                fieldnames=["municipality_id", "municipality", "state", "government_name"],
+            )
+            writer.writeheader()
+            writer.writerow(source)
+        hint_builder.write_rows(hints_path, [first])
+        original_argv = sys.argv
+        try:
+            sys.argv = [
+                "gabriel_state_source_scout.py", "--dry-run", "--state", "PA",
+                "--municipalities-csv", str(input_path), "--output-dir", str(output_path),
+                "--prompt-mode", "compact", "--search-hints-csv", str(hints_path),
+            ]
+            assert scout.main() == 0
+        finally:
+            sys.argv = original_argv
+        preview = (output_path / "prompt_preview.md").read_text(encoding="utf-8")
+        metadata = json.loads((output_path / "run_metadata.json").read_text(encoding="utf-8"))
+        assert first["search_hint_3"] in preview
+        assert metadata["search_hints_matched_count"] == 1
+        assert metadata["backend_call_returned"] is False
 
 
 def _check_three_column_fallback() -> None:
@@ -282,6 +375,7 @@ def _check_live_outcome_summary() -> None:
 def main() -> int:
     _check_row_aware_prompt()
     _check_three_column_fallback()
+    _check_compact_prompt_and_search_hints()
     _check_mixed_state_loading_and_live_authorization()
     _check_new_fields_survive_parsing()
     _check_access_labels_remain_distinct()
@@ -289,6 +383,8 @@ def main() -> int:
     print("PASS: row-aware prompt retains contextual fields")
     print("PASS: three-column input fallback remains valid")
     print("PASS: missing optional municipality_id retains legacy prompt fallback")
+    print("PASS: compact prompt preserves identity, guardrails, and schema while shortening prose")
+    print("PASS: deterministic search hints attach to row-aware prompts")
     print("PASS: legacy no-ID row identity is exact and duplicate fallback names fail closed")
     print("PASS: mixed-state 150-row loading preserves all rows and exact order")
     print("PASS: mixed-state live cap requires explicit exact authorization")

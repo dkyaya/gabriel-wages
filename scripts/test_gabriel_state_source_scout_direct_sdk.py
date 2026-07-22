@@ -351,6 +351,82 @@ def _check_sleep_default_and_explicit_override() -> None:
         sys.argv = original_argv
 
 
+def _check_adaptive_sleep_logic_and_dry_run_metadata() -> None:
+    fixed = scout.build_pacing_controller(
+        adaptive_sleep=False,
+        sleep_between_prompts=9,
+        adaptive_sleep_min=3,
+        adaptive_sleep_base=5,
+        adaptive_sleep_max=15,
+        adaptive_sleep_backoff=10,
+        adaptive_sleep_stability_window=25,
+        adaptive_sleep_failure_window=2,
+    )
+    assert fixed.planned_sleep() == 9
+    assert fixed.observe(transport_failure=True) == "fixed"
+    assert fixed.planned_sleep() == 9
+
+    adaptive = scout.build_pacing_controller(
+        adaptive_sleep=True,
+        sleep_between_prompts=5,
+        adaptive_sleep_min=3,
+        adaptive_sleep_base=5,
+        adaptive_sleep_max=15,
+        adaptive_sleep_backoff=10,
+        adaptive_sleep_stability_window=2,
+        adaptive_sleep_failure_window=2,
+    )
+    assert adaptive.planned_sleep() == 5
+    assert adaptive.observe(transport_failure=False) == "stable_hold"
+    assert adaptive.observe(transport_failure=False) == "stable_step_down"
+    assert adaptive.planned_sleep() == 4
+    assert adaptive.observe(transport_failure=True) == "backoff"
+    assert adaptive.planned_sleep() == 10
+    assert adaptive.observe(transport_failure=True) == "backoff"
+    assert adaptive.planned_sleep() == 15
+
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp_path = Path(tmp)
+        input_path = tmp_path / "adaptive.csv"
+        with input_path.open("w", newline="", encoding="utf-8") as handle:
+            writer = csv.DictWriter(
+                handle,
+                fieldnames=["municipality_id", "municipality", "state"],
+            )
+            writer.writeheader()
+            for index in range(1, 4):
+                writer.writerow(
+                    {
+                        "municipality_id": f"adaptive-pa-{index}",
+                        "municipality": f"Adaptive Borough {index}",
+                        "state": "PA",
+                    }
+                )
+        output_dir = tmp_path / "output"
+        original_argv = sys.argv
+        try:
+            sys.argv = [
+                "gabriel_state_source_scout.py", "--dry-run", "--state", "PA",
+                "--municipalities-csv", str(input_path), "--output-dir", str(output_dir),
+                "--prompt-mode", "compact", "--adaptive-sleep",
+                "--adaptive-sleep-stability-window", "2",
+            ]
+            assert scout.main() == 0
+        finally:
+            sys.argv = original_argv
+        metadata = json.loads((output_dir / "run_metadata.json").read_text(encoding="utf-8"))
+        assert metadata["adaptive_sleep"] is True
+        assert metadata["adaptive_sleep_min"] == 3.0
+        assert metadata["adaptive_sleep_base"] == 5.0
+        assert metadata["adaptive_sleep_max"] == 15.0
+        assert metadata["total_planned_sleep_seconds"] == 10.0
+        with (output_dir / "row_timing.csv").open(newline="", encoding="utf-8") as handle:
+            rows = list(csv.DictReader(handle))
+        assert [row["pacing_mode"] for row in rows] == ["adaptive"] * 3
+        assert [row["planned_sleep_after_seconds"] for row in rows] == ["5.0", "5.0", "0"]
+        assert [row["adaptive_sleep_level_seconds"] for row in rows] == ["5.0", "5.0", "4.0"]
+
+
 def _write_resume_fixture(
     prior_dir: Path, municipalities_path: Path
 ) -> None:
@@ -986,6 +1062,7 @@ def main() -> int:
     _check_repeated_connection_error_stop_signature()
     _check_estimated_cost_and_missing_pricing()
     _check_sleep_default_and_explicit_override()
+    _check_adaptive_sleep_logic_and_dry_run_metadata()
     _check_dry_run_remains_backend_independent()
     _check_resume_planning_and_safety_gates()
     _check_isolated_worker_cost_log()
@@ -1000,6 +1077,8 @@ def main() -> int:
     print("PASS: repeated connection errors trigger the no-further-request stop signature")
     print("PASS: estimated token cost is labeled and missing pricing preserves usage")
     print("PASS: sleep-between-prompts defaults to 5 and accepts an explicit override")
+    print("PASS: fixed pacing is unchanged and adaptive backoff/step-down is deterministic")
+    print("PASS: adaptive dry-run timing and metadata expose planned pacing without backend calls")
     print("PASS: live n_parallels greater than one fails closed")
     print("PASS: dry-run artifacts and metadata remain backend-independent")
     print("PASS: dry-run writes row timing and timing summary fields without a backend call")

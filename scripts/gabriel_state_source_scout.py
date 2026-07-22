@@ -24,7 +24,9 @@ SAFETY MODEL — read before use:
     direct-SDK backend, n_parallels=1, and an exact input-row authorization.
   - Live scouting is sequential (n_parallels=1). The inter-row default is five
     seconds; raise it to 8-10 or the earlier conservative 15 seconds if
-    transport instability returns. This does not authorize concurrent workers.
+    transport instability returns. Opt-in adaptive sleep starts at five,
+    steps toward three after stable windows, and backs off toward 10-15 after
+    transport failures. This does not authorize concurrent workers.
   - Every new dry/live run requires a fresh output directory. Safe resume reads
     a terminal prior run with an input hash and row_timing.csv, writes a plan in
     a different fresh directory, and never mutates the parent artifacts.
@@ -47,6 +49,12 @@ Usage (live through the HUIT-compatible direct SDK backend):
   python scripts/gabriel_state_source_scout.py --live --live-backend direct-sdk \\
       --state PA --limit 10 --max-prompts 10 --search-context-size low \\
       --model gpt-5.4-nano --n-parallels 1 --direct-sdk-max-retries 0
+
+Usage (future reviewed compact/adaptive direct-SDK run):
+  python scripts/gabriel_state_source_scout.py --live --live-backend direct-sdk \
+      --state ALL --allow-mixed-states --municipalities-csv <LOCKED.csv> \
+      --prompt-mode compact --search-hints-csv <HINTS.csv> --adaptive-sleep \
+      --max-prompts <N> --live-hard-cap <N> --n-parallels 1
 
 Timeout/retry tuning (2026-07-14 stress test — see docs/analysis/gabriel_state_source_scout_timeout_test_2026-07-14.md):
   python scripts/gabriel_state_source_scout.py --live --state PA \\
@@ -98,6 +106,12 @@ DEFAULT_PROMPT_MODE = "full"
 DEFAULT_LIVE_BACKEND = "gabriel"
 DEFAULT_DIRECT_SDK_MAX_RETRIES = 0
 DEFAULT_SLEEP_BETWEEN_PROMPTS = 5.0
+DEFAULT_ADAPTIVE_SLEEP_MIN = 3.0
+DEFAULT_ADAPTIVE_SLEEP_BASE = 5.0
+DEFAULT_ADAPTIVE_SLEEP_MAX = 15.0
+DEFAULT_ADAPTIVE_SLEEP_BACKOFF = 10.0
+DEFAULT_ADAPTIVE_SLEEP_STABILITY_WINDOW = 25
+DEFAULT_ADAPTIVE_SLEEP_FAILURE_WINDOW = 2
 DEFAULT_DIRECT_SDK_PRICING_CONFIG = (
     DOCS_ANALYSIS / "direct_sdk_pricing_config_2026-07-20.json"
 )
@@ -127,6 +141,11 @@ ROW_TIMING_FIELDS = [
     "elapsed_seconds",
     "sleep_before_seconds",
     "sleep_after_seconds",
+    "planned_sleep_before_seconds",
+    "planned_sleep_after_seconds",
+    "pacing_mode",
+    "adaptive_sleep_level_seconds",
+    "adaptive_sleep_event",
     "backend",
     "model",
     "live_attempted",
@@ -571,6 +590,27 @@ Every returned item remains unverified scout-stage lead data and must not be des
 Do not invent URLs. It is acceptable to find no qualifying source for this city; return an empty candidates list when none is found."""
 
 
+# Token-lean version of the minimal contract. The vocabulary and output keys are
+# intentionally identical; only repeated explanatory prose is compressed.
+COMPACT_PROMPT_TEMPLATE = """Find public municipal labor-source URLs for {municipality}, {state}. Return JSON only; no prose.
+
+IDENTITY (locked): employer={target_employer} {locked_identity_line}
+{context_lines}
+{search_hint_lines}
+
+SCOPE/GUARDRAILS:
+- Target this employer only. County/township/school/transit/hospital/regional/special-district/private-provider units are context only, never substitutes.
+- police=sworn police; fire=firefighters; non_safety=ordinary municipal/civilian employees or authoritative civilian wage setting. A police, fire, or other safety CBA can never satisfy a non-safety comparator request. Ambiguous units=unclear.
+- Prefer official city, state labor-board, or union sources; max 2 per requested unit/source type. Do not use public-records requests. Do not invent URLs. It is acceptable to find no qualifying source for this city; then candidates=[].
+- Years require cover/title, duration clause, award period, or other operative text. Snippet/index/URL/model inference alone => contract_years=unclear and explain in visible_year_evidence/cycle_match_notes. Non-overlap repair material=non_overlap_deferred.
+- Do not re-return an exact known source as new: duplicate_risk=exact_known_source and candidate_stage=context_only_candidate. Preserve duplicate controls.
+- Distinguish full CBA, award/factfinding, executed binding wage MOA/settlement, wage plan, policy, agenda/minutes, context, insufficient, blocked, and dead. Agenda covers, summaries, meeting memos, and minutes are context-only unless they attach binding wage material. A complete executed scanned MOA remains qualifying. Reserve dead_or_unreachable for an observed 404, 410, DNS failure, or equivalent; blocked_or_unreadable means a live source whose contents cannot be inspected.
+- Every returned item remains unverified scout-stage lead data: never call it verified, ingested, codified, canonical, or claim-supporting. Label context/insufficient leads; they are not qualifying comparators.
+
+SCHEMA:
+{{"municipality":"...","state":"...","candidates":[{{"unit_type":"police | fire | non_safety | unclear | unknown","document_title":"...","union_name":"...","employer":"...","contract_years":"...","source_url":"...","source_owner_type":"city | state_labor_board | union | third_party | news | unknown","document_type":"cba | arbitration_award | factfinding | memorandum_or_settlement | wage_schedule_or_compensation_plan | ordinance_or_policy | agenda_cover_sheet | meeting_minutes | index_page | context_only | blocked_or_unreadable | dead_or_unreachable | insufficient_source | unknown","candidate_stage":"qualifying_candidate | context_only_candidate | insufficient_candidate","document_completeness":"full_document | partial_document | summary_only | index_or_landing_page | blocked_or_unreadable | dead_or_unreachable | unclear","visible_year_evidence":"cover_or_title | duration_clause | award_period | other_operative_text | index_or_snippet_only | model_inference_only | unclear","overlap_with_anchor_cycle":"overlap | non_overlap_deferred | no_anchor_supplied | unclear","duplicate_risk":"none | possible | exact_known_source","blocked_or_unreadable_flag":"yes | no","cycle_match_notes":"...","comparator_role":"safety_target | ordinary_non_safety_comparator | authoritative_civilian_wage_setting | mechanism_context | no_comparator_role | unclear","wrong_employer_risk":"none | possible | high","context_only_flag":"yes | no","needs_verification_reason":"...","why_relevant":"...","confidence":"high | medium | low"}}]}}"""
+
+
 # ---------------------------------------------------------------------------
 # Municipality list
 # ---------------------------------------------------------------------------
@@ -967,14 +1007,28 @@ def build_prompt(
     prompt_mode: str = DEFAULT_PROMPT_MODE,
     context: dict | None = None,
 ) -> str:
-    """Build a prompt, using optional row context only for minimal mode.
+    """Build a prompt, using optional row context for row-aware modes.
 
     Three-column municipality inputs remain valid: when the optional manifest
     fields are absent, the prompt falls back to the municipal employer and the
     standard police/fire/non-safety search target.
     """
-    if prompt_mode != "minimal":
-        return PROMPT_TEMPLATE.format(municipality=municipality, state=state)
+    if prompt_mode == "full":
+        prompt = PROMPT_TEMPLATE.format(municipality=municipality, state=state)
+        row = context or {}
+        hints = [
+            str(row.get(f"search_hint_{index}", "") or "").strip()
+            for index in range(1, 6)
+        ]
+        hints = [hint for hint in hints if hint]
+        if hints:
+            prompt += (
+                "\n\nDeterministic query hints (starting phrases only; not discovered "
+                "sources): " + " | ".join(hints)
+            )
+        return prompt
+    if prompt_mode not in {"minimal", "compact"}:
+        raise ValueError(f"unsupported prompt mode: {prompt_mode}")
 
     row = context or {}
     municipality_id = (row.get("municipality_id") or "").strip()
@@ -1008,6 +1062,11 @@ def build_prompt(
     selection_reason = (row.get("selection_reason") or "").strip()
     verification_notes = (row.get("verification_notes") or "").strip()
     county_context = (row.get("county_context_summary") or "").strip()
+    search_hints = [
+        str(row.get(f"search_hint_{index}", "") or "").strip()
+        for index in range(1, 6)
+    ]
+    search_hints = [hint for hint in search_hints if hint]
     context_lines = [
         f"Search target: {expected_units or 'police; fire; non_safety/general municipal'}."
     ]
@@ -1047,7 +1106,8 @@ def build_prompt(
             f"County geography context only (not alternate employers): {county_context}"
         )
 
-    return MINIMAL_PROMPT_TEMPLATE.format(
+    template = MINIMAL_PROMPT_TEMPLATE if prompt_mode == "minimal" else COMPACT_PROMPT_TEMPLATE
+    return template.format(
         municipality=municipality,
         state=state,
         target_employer=target_employer,
@@ -1057,7 +1117,71 @@ def build_prompt(
             else ""
         ),
         context_lines="\n".join(context_lines),
+        search_hint_lines=(
+            "Deterministic query hints (starting phrases only; not discovered sources): "
+            + " | ".join(search_hints)
+            if search_hints
+            else ""
+        ),
     )
+
+
+def load_search_hints(path: Path) -> dict[str, dict[str, str]]:
+    """Load exact municipality-ID query hints without fuzzy matching."""
+
+    if not path.is_file():
+        raise SystemExit(f"ERROR: --search-hints-csv not found: {path}")
+    with path.open(newline="", encoding="utf-8-sig") as handle:
+        reader = csv.DictReader(handle)
+        required = {"municipality_id", *(f"search_hint_{index}" for index in range(1, 6))}
+        missing = required - set(reader.fieldnames or [])
+        if missing:
+            raise SystemExit(
+                f"ERROR: {path} missing search-hint columns: {sorted(missing)}"
+            )
+        hints: dict[str, dict[str, str]] = {}
+        for line_number, row in enumerate(reader, start=2):
+            municipality_id = str(row.get("municipality_id", "") or "").strip()
+            if not municipality_id:
+                raise SystemExit(
+                    f"ERROR: {path} row {line_number} has an empty municipality_id"
+                )
+            if municipality_id in hints:
+                raise SystemExit(
+                    f"ERROR: {path} has duplicate municipality_id {municipality_id!r}"
+                )
+            hints[municipality_id] = {
+                f"search_hint_{index}": str(row.get(f"search_hint_{index}", "") or "").strip()
+                for index in range(1, 6)
+            }
+    return hints
+
+
+def attach_search_hints(
+    municipalities: list[dict[str, Any]], hints: dict[str, dict[str, str]]
+) -> int:
+    """Attach hints by locked ID; legacy no-ID rows remain backward-compatible."""
+
+    matched = 0
+    missing_ids: list[str] = []
+    for row in municipalities:
+        municipality_id = str(row.get("municipality_id", "") or "").strip()
+        if not municipality_id:
+            continue
+        hint_row = hints.get(municipality_id)
+        if hint_row is None:
+            missing_ids.append(municipality_id)
+            continue
+        row.update(hint_row)
+        matched += 1
+    if missing_ids:
+        preview = ", ".join(missing_ids[:5])
+        suffix = " ..." if len(missing_ids) > 5 else ""
+        raise SystemExit(
+            "ERROR: --search-hints-csv lacks exact municipality_id matches for "
+            f"{len(missing_ids)} input row(s): {preview}{suffix}"
+        )
+    return matched
 
 
 def build_identifier(run_id: str, municipality_id: str) -> str:
@@ -1357,6 +1481,83 @@ def write_csv(path: Path, rows: list[dict], fields: list[str]) -> None:
             assert len(row) == len(fields), f"{path}: row {i} width {len(row)} != {len(fields)}"
 
 
+class AdaptiveSleepController:
+    """Deterministic sequential pacing state; contains no I/O or backend calls."""
+
+    def __init__(
+        self,
+        *,
+        enabled: bool,
+        fixed_seconds: float,
+        minimum: float = DEFAULT_ADAPTIVE_SLEEP_MIN,
+        base: float = DEFAULT_ADAPTIVE_SLEEP_BASE,
+        maximum: float = DEFAULT_ADAPTIVE_SLEEP_MAX,
+        backoff: float = DEFAULT_ADAPTIVE_SLEEP_BACKOFF,
+        stability_window: int = DEFAULT_ADAPTIVE_SLEEP_STABILITY_WINDOW,
+        failure_window: int = DEFAULT_ADAPTIVE_SLEEP_FAILURE_WINDOW,
+    ) -> None:
+        self.enabled = enabled
+        self.fixed_seconds = fixed_seconds
+        self.minimum = minimum
+        self.base = base
+        self.maximum = maximum
+        self.backoff = backoff
+        self.stability_window = stability_window
+        self.failure_window = failure_window
+        self.current = base if enabled else fixed_seconds
+        self.stable_count = 0
+        self.consecutive_transport_failures = 0
+
+    def observe(self, *, transport_failure: bool) -> str:
+        if not self.enabled:
+            return "fixed"
+        if transport_failure:
+            self.stable_count = 0
+            self.consecutive_transport_failures += 1
+            target = (
+                self.maximum
+                if self.consecutive_transport_failures >= self.failure_window
+                else self.backoff
+            )
+            previous = self.current
+            self.current = min(self.maximum, max(self.current, target))
+            return "backoff" if self.current > previous else "backoff_held"
+        self.consecutive_transport_failures = 0
+        self.stable_count += 1
+        if self.stable_count >= self.stability_window:
+            self.stable_count = 0
+            previous = self.current
+            self.current = max(self.minimum, self.current - 1.0)
+            return "stable_step_down" if self.current < previous else "stable_at_min"
+        return "stable_hold"
+
+    def planned_sleep(self) -> float:
+        return round(max(0.0, self.current), 3)
+
+
+def build_pacing_controller(
+    *,
+    adaptive_sleep: bool,
+    sleep_between_prompts: float,
+    adaptive_sleep_min: float,
+    adaptive_sleep_base: float,
+    adaptive_sleep_max: float,
+    adaptive_sleep_backoff: float,
+    adaptive_sleep_stability_window: int,
+    adaptive_sleep_failure_window: int,
+) -> AdaptiveSleepController:
+    return AdaptiveSleepController(
+        enabled=adaptive_sleep,
+        fixed_seconds=sleep_between_prompts,
+        minimum=adaptive_sleep_min,
+        base=adaptive_sleep_base,
+        maximum=adaptive_sleep_max,
+        backoff=adaptive_sleep_backoff,
+        stability_window=adaptive_sleep_stability_window,
+        failure_window=adaptive_sleep_failure_window,
+    )
+
+
 def build_planned_row_timing(
     run_id: str,
     input_rows: list[dict[str, Any]],
@@ -1366,17 +1567,37 @@ def build_planned_row_timing(
     model: str,
     dry_run: bool,
     resume_plan: list[dict[str, Any]] | None = None,
+    adaptive_sleep: bool = False,
+    sleep_between_prompts: float = DEFAULT_SLEEP_BETWEEN_PROMPTS,
+    adaptive_sleep_min: float = DEFAULT_ADAPTIVE_SLEEP_MIN,
+    adaptive_sleep_base: float = DEFAULT_ADAPTIVE_SLEEP_BASE,
+    adaptive_sleep_max: float = DEFAULT_ADAPTIVE_SLEEP_MAX,
+    adaptive_sleep_backoff: float = DEFAULT_ADAPTIVE_SLEEP_BACKOFF,
+    adaptive_sleep_stability_window: int = DEFAULT_ADAPTIVE_SLEEP_STABILITY_WINDOW,
+    adaptive_sleep_failure_window: int = DEFAULT_ADAPTIVE_SLEEP_FAILURE_WINDOW,
 ) -> list[dict[str, Any]]:
     selected_keys = {row_identity_key(row) for row in selected_rows}
     plan_by_key = {
         str(row.get("row_identity_key", "")): row for row in (resume_plan or [])
     }
     timing_rows: list[dict[str, Any]] = []
+    selected_position = 0
+    controller = build_pacing_controller(
+        adaptive_sleep=adaptive_sleep,
+        sleep_between_prompts=sleep_between_prompts,
+        adaptive_sleep_min=adaptive_sleep_min,
+        adaptive_sleep_base=adaptive_sleep_base,
+        adaptive_sleep_max=adaptive_sleep_max,
+        adaptive_sleep_backoff=adaptive_sleep_backoff,
+        adaptive_sleep_stability_window=adaptive_sleep_stability_window,
+        adaptive_sleep_failure_window=adaptive_sleep_failure_window,
+    )
     for row_index, municipality in enumerate(input_rows, start=1):
         identity = row_identity_key(municipality)
         is_selected = identity in selected_keys
         plan = plan_by_key.get(identity, {})
         if is_selected:
+            selected_position += 1
             success_status = "dry_run_planned" if dry_run else "pending_live_attempt"
             parse_status = "not_attempted" if dry_run else "pending"
         else:
@@ -1397,6 +1618,17 @@ def build_planned_row_timing(
                 "elapsed_seconds": "",
                 "sleep_before_seconds": 0,
                 "sleep_after_seconds": 0,
+                "planned_sleep_before_seconds": 0,
+                "planned_sleep_after_seconds": (
+                    controller.planned_sleep()
+                    if is_selected and selected_position < len(selected_rows)
+                    else 0
+                ),
+                "pacing_mode": "adaptive" if adaptive_sleep else "fixed",
+                "adaptive_sleep_level_seconds": (
+                    controller.planned_sleep() if adaptive_sleep and is_selected else ""
+                ),
+                "adaptive_sleep_event": "dry_run_stable_plan" if dry_run and is_selected else "",
                 "backend": backend,
                 "model": model,
                 "live_attempted": "no",
@@ -1410,6 +1642,8 @@ def build_planned_row_timing(
                 "total_tokens": "",
             }
         )
+        if dry_run and is_selected:
+            controller.observe(transport_failure=False)
     return timing_rows
 
 
@@ -1455,6 +1689,13 @@ def finalize_row_timing(
                 ),
                 "sleep_before_seconds": event.get("sleep_before_seconds", 0),
                 "sleep_after_seconds": event.get("sleep_after_seconds", 0),
+                "planned_sleep_before_seconds": event.get("planned_sleep_before_seconds", 0),
+                "planned_sleep_after_seconds": event.get("planned_sleep_after_seconds", 0),
+                "pacing_mode": event.get("pacing_mode", row.get("pacing_mode", "fixed")),
+                "adaptive_sleep_level_seconds": event.get(
+                    "adaptive_sleep_level_seconds", row.get("adaptive_sleep_level_seconds", "")
+                ),
+                "adaptive_sleep_event": event.get("adaptive_sleep_event", ""),
                 "live_attempted": "no" if stopped else "yes",
                 "success_status": (
                     "stopped_before_request"
@@ -1490,6 +1731,9 @@ def timing_metadata_summary(
     elapsed_values: list[float] = []
     attempted_count = 0
     total_sleep = 0.0
+    total_planned_sleep = 0.0
+    observed_sleep_levels: list[float] = []
+    pacing_events: dict[str, int] = {}
     failure_counts: dict[str, int] = {}
     for row in timing_rows:
         if str(row.get("live_attempted", "")).lower() == "yes":
@@ -1503,6 +1747,19 @@ def timing_metadata_summary(
                 total_sleep += float(row.get(key, 0) or 0)
             except (TypeError, ValueError):
                 pass
+        for key in ("planned_sleep_before_seconds", "planned_sleep_after_seconds"):
+            try:
+                total_planned_sleep += float(row.get(key, 0) or 0)
+            except (TypeError, ValueError):
+                pass
+        try:
+            level = float(row.get("adaptive_sleep_level_seconds", ""))
+            observed_sleep_levels.append(level)
+        except (TypeError, ValueError):
+            pass
+        event = str(row.get("adaptive_sleep_event", "") or "").strip()
+        if event:
+            pacing_events[event] = pacing_events.get(event, 0) + 1
         failure_type = str(row.get("failure_type", "") or "").strip()
         is_current_failure = (
             str(row.get("live_attempted", "")).lower() == "yes"
@@ -1527,6 +1784,14 @@ def timing_metadata_summary(
             round(median, 3) if median is not None else None
         ),
         "total_sleep_seconds": round(total_sleep, 3),
+        "total_planned_sleep_seconds": round(total_planned_sleep, 3),
+        "observed_sleep_level_min_seconds": (
+            round(min(observed_sleep_levels), 3) if observed_sleep_levels else None
+        ),
+        "observed_sleep_level_max_seconds": (
+            round(max(observed_sleep_levels), 3) if observed_sleep_levels else None
+        ),
+        "adaptive_sleep_event_counts": pacing_events,
         "effective_rows_per_hour": round(throughput, 3) if throughput else None,
         "failure_count_by_type": failure_counts,
     }
@@ -2504,6 +2769,13 @@ def run_direct_sdk_live_batch(
     max_retries: int = DEFAULT_DIRECT_SDK_MAX_RETRIES,
     sleep_between_prompts: float = 0.0,
     *,
+    adaptive_sleep: bool = False,
+    adaptive_sleep_min: float = DEFAULT_ADAPTIVE_SLEEP_MIN,
+    adaptive_sleep_base: float = DEFAULT_ADAPTIVE_SLEEP_BASE,
+    adaptive_sleep_max: float = DEFAULT_ADAPTIVE_SLEEP_MAX,
+    adaptive_sleep_backoff: float = DEFAULT_ADAPTIVE_SLEEP_BACKOFF,
+    adaptive_sleep_stability_window: int = DEFAULT_ADAPTIVE_SLEEP_STABILITY_WINDOW,
+    adaptive_sleep_failure_window: int = DEFAULT_ADAPTIVE_SLEEP_FAILURE_WINDOW,
     web_search: bool = True,
     reasoning_effort: str | None = "low",
     return_timing: bool = False,
@@ -2573,11 +2845,26 @@ def run_direct_sdk_live_batch(
                 "elapsed_seconds": row.get("Time Taken", ""),
                 "sleep_before_seconds": 0.0,
                 "sleep_after_seconds": 0.0,
+                "planned_sleep_before_seconds": 0.0,
+                "planned_sleep_after_seconds": 0.0,
+                "pacing_mode": "adaptive" if adaptive_sleep else "fixed",
+                "adaptive_sleep_level_seconds": "",
+                "adaptive_sleep_event": "",
             }
 
         rows: list[dict[str, Any]] = []
         timing_events: list[dict[str, Any]] = []
         consecutive_connection_failures = 0
+        pacing = build_pacing_controller(
+            adaptive_sleep=adaptive_sleep,
+            sleep_between_prompts=sleep_between_prompts,
+            adaptive_sleep_min=adaptive_sleep_min,
+            adaptive_sleep_base=adaptive_sleep_base,
+            adaptive_sleep_max=adaptive_sleep_max,
+            adaptive_sleep_backoff=adaptive_sleep_backoff,
+            adaptive_sleep_stability_window=adaptive_sleep_stability_window,
+            adaptive_sleep_failure_window=adaptive_sleep_failure_window,
+        )
         chunk_size = max(1, n_parallels)
         try:
             for start in range(0, len(prompts), chunk_size):
@@ -2594,11 +2881,24 @@ def run_direct_sdk_live_batch(
                 chunk_events = [item[1] for item in chunk_results]
                 rows.extend(chunk)
                 timing_events.extend(chunk_events)
+                chunk_transport_failure = False
                 for row in chunk:
                     if is_direct_sdk_connection_failure_without_response(row):
+                        chunk_transport_failure = True
                         consecutive_connection_failures += 1
                     else:
                         consecutive_connection_failures = 0
+                pacing_event = pacing.observe(
+                    transport_failure=chunk_transport_failure
+                )
+                planned_sleep = pacing.planned_sleep()
+                chunk_events[-1]["planned_sleep_after_seconds"] = (
+                    planned_sleep if start + chunk_size < len(prompts) else 0.0
+                )
+                chunk_events[-1]["adaptive_sleep_level_seconds"] = (
+                    planned_sleep if adaptive_sleep else ""
+                )
+                chunk_events[-1]["adaptive_sleep_event"] = pacing_event
                 next_start = start + chunk_size
                 if consecutive_connection_failures >= 2 and next_start < len(prompts):
                     for prompt, identifier in zip(
@@ -2613,12 +2913,17 @@ def run_direct_sdk_live_batch(
                                 "elapsed_seconds": "",
                                 "sleep_before_seconds": 0.0,
                                 "sleep_after_seconds": 0.0,
+                                "planned_sleep_before_seconds": 0.0,
+                                "planned_sleep_after_seconds": 0.0,
+                                "pacing_mode": "adaptive" if adaptive_sleep else "fixed",
+                                "adaptive_sleep_level_seconds": "",
+                                "adaptive_sleep_event": "stopped_before_request",
                             }
                         )
                     break
-                if sleep_between_prompts > 0 and start + chunk_size < len(prompts):
+                if planned_sleep > 0 and start + chunk_size < len(prompts):
                     sleep_started = time_module.monotonic()
-                    await asyncio.sleep(sleep_between_prompts)
+                    await asyncio.sleep(planned_sleep)
                     chunk_events[-1]["sleep_after_seconds"] = round(
                         time_module.monotonic() - sleep_started, 3
                     )
@@ -2939,6 +3244,38 @@ def _parse_args() -> argparse.Namespace:
             "was 15 seconds; use 8-10 or 15 if connection instability returns."
         ),
     )
+    parser.add_argument(
+        "--adaptive-sleep",
+        action="store_true",
+        help=(
+            "Enable direct-SDK adaptive sequential pacing. Starts at the base, "
+            "steps down after stable windows, and backs off on transport failures. "
+            "Without this flag, fixed --sleep-between-prompts behavior is unchanged."
+        ),
+    )
+    parser.add_argument("--adaptive-sleep-min", type=float, default=DEFAULT_ADAPTIVE_SLEEP_MIN)
+    parser.add_argument("--adaptive-sleep-base", type=float, default=DEFAULT_ADAPTIVE_SLEEP_BASE)
+    parser.add_argument("--adaptive-sleep-max", type=float, default=DEFAULT_ADAPTIVE_SLEEP_MAX)
+    parser.add_argument("--adaptive-sleep-backoff", type=float, default=DEFAULT_ADAPTIVE_SLEEP_BACKOFF)
+    parser.add_argument(
+        "--adaptive-sleep-stability-window",
+        type=int,
+        default=DEFAULT_ADAPTIVE_SLEEP_STABILITY_WINDOW,
+    )
+    parser.add_argument(
+        "--adaptive-sleep-failure-window",
+        type=int,
+        default=DEFAULT_ADAPTIVE_SLEEP_FAILURE_WINDOW,
+    )
+    parser.add_argument(
+        "--search-hints-csv",
+        type=Path,
+        default=None,
+        help=(
+            "Optional deterministic query-hint CSV joined by exact municipality_id. "
+            "Missing ID matches fail closed; legacy no-ID rows retain prior behavior."
+        ),
+    )
     parser.add_argument("--retry-failed-from", type=Path, default=None, help="Path to a prior run's failed_parses.csv; builds the municipality retry list from its municipality_id column, filtered against --state/--municipalities-csv.")
     parser.add_argument(
         "--resume-from-output-dir",
@@ -2987,7 +3324,16 @@ def _parse_args() -> argparse.Namespace:
             "SHA-256 differs. The mismatch remains prominent in metadata."
         ),
     )
-    parser.add_argument("--prompt-mode", choices=("full", "minimal"), default=DEFAULT_PROMPT_MODE, help=f"full = original detailed prompt; minimal = shorter structured-candidates-only prompt (default: {DEFAULT_PROMPT_MODE}).")
+    parser.add_argument(
+        "--prompt-mode",
+        choices=("full", "minimal", "compact"),
+        default=DEFAULT_PROMPT_MODE,
+        help=(
+            "full = original prompt; minimal = detailed row-aware contract; "
+            "compact = token-lean row-aware contract with the same schema and "
+            f"guardrails (default: {DEFAULT_PROMPT_MODE})."
+        ),
+    )
     parser.add_argument("--compare-runs", type=Path, nargs="+", default=None, help="Compare prior runs instead of scouting: pass 2+ run output directories (each containing run_metadata.json). Bypasses --dry-run/--live entirely.")
     parser.add_argument("--compare-output", type=Path, default=None, help="Optional path to also write the --compare-runs markdown table to (in addition to stdout).")
     parser.add_argument("--build-coverage", action="store_true", help="Update the persistent scout coverage CSVs from a completed run (and optional retry) instead of scouting. Bypasses --dry-run/--live entirely.")
@@ -3018,6 +3364,32 @@ def _parse_args() -> argparse.Namespace:
         parser.error("--live-hard-cap must be positive")
     if args.sleep_between_prompts < 0:
         parser.error("--sleep-between-prompts must be non-negative")
+    adaptive_values = (
+        args.adaptive_sleep_min,
+        args.adaptive_sleep_base,
+        args.adaptive_sleep_max,
+        args.adaptive_sleep_backoff,
+    )
+    if any(value < 0 for value in adaptive_values):
+        parser.error("adaptive sleep values must be non-negative")
+    if not (
+        args.adaptive_sleep_min
+        <= args.adaptive_sleep_base
+        <= args.adaptive_sleep_max
+    ):
+        parser.error("adaptive sleep requires min <= base <= max")
+    if not (
+        args.adaptive_sleep_min
+        <= args.adaptive_sleep_backoff
+        <= args.adaptive_sleep_max
+    ):
+        parser.error("adaptive sleep requires min <= backoff <= max")
+    if args.adaptive_sleep_stability_window <= 0:
+        parser.error("--adaptive-sleep-stability-window must be positive")
+    if args.adaptive_sleep_failure_window <= 0:
+        parser.error("--adaptive-sleep-failure-window must be positive")
+    if args.live and args.adaptive_sleep and args.live_backend != "direct-sdk":
+        parser.error("live --adaptive-sleep currently requires --live-backend direct-sdk")
     resume_options_used = any(
         (
             args.skip_completed_municipality_ids,
@@ -3120,6 +3492,14 @@ def main() -> int:
         reject_mixed_state_input=args.municipalities_csv is not None,
     )
     validate_unique_row_identities(loaded_municipalities)
+    search_hints_matched_count = 0
+    search_hints_hash: str | None = None
+    if args.search_hints_csv is not None:
+        hint_rows = load_search_hints(args.search_hints_csv)
+        search_hints_matched_count = attach_search_hints(
+            loaded_municipalities, hint_rows
+        )
+        search_hints_hash = sha256_file(args.search_hints_csv)
 
     if args.retry_failed_from is not None:
         retry_ids = load_retry_municipality_ids(args.retry_failed_from)
@@ -3227,6 +3607,14 @@ def main() -> int:
         model=args.model,
         dry_run=not args.live,
         resume_plan=resume_plan,
+        adaptive_sleep=args.adaptive_sleep,
+        sleep_between_prompts=args.sleep_between_prompts,
+        adaptive_sleep_min=args.adaptive_sleep_min,
+        adaptive_sleep_base=args.adaptive_sleep_base,
+        adaptive_sleep_max=args.adaptive_sleep_max,
+        adaptive_sleep_backoff=args.adaptive_sleep_backoff,
+        adaptive_sleep_stability_window=args.adaptive_sleep_stability_window,
+        adaptive_sleep_failure_window=args.adaptive_sleep_failure_window,
     )
     row_timing_path = out_dir / "row_timing.csv"
     write_csv(row_timing_path, planned_timing_rows, ROW_TIMING_FIELDS)
@@ -3251,7 +3639,17 @@ def main() -> int:
         "timeout": args.timeout,
         "max_timeout": args.max_timeout,
         "sleep_between_prompts": args.sleep_between_prompts,
+        "adaptive_sleep": args.adaptive_sleep,
+        "adaptive_sleep_min": args.adaptive_sleep_min,
+        "adaptive_sleep_base": args.adaptive_sleep_base,
+        "adaptive_sleep_max": args.adaptive_sleep_max,
+        "adaptive_sleep_backoff": args.adaptive_sleep_backoff,
+        "adaptive_sleep_stability_window": args.adaptive_sleep_stability_window,
+        "adaptive_sleep_failure_window": args.adaptive_sleep_failure_window,
         "prompt_mode": args.prompt_mode,
+        "search_hints_csv": str(args.search_hints_csv) if args.search_hints_csv else None,
+        "search_hints_csv_sha256": search_hints_hash,
+        "search_hints_matched_count": search_hints_matched_count,
         "cost_log_path": str(
             args.cost_log_path
             or (DOCS_ANALYSIS / "gabriel_state_source_scout_cost_log.csv")
@@ -3339,6 +3737,13 @@ def main() -> int:
                 timeout=args.timeout,
                 max_retries=args.direct_sdk_max_retries,
                 sleep_between_prompts=args.sleep_between_prompts,
+                adaptive_sleep=args.adaptive_sleep,
+                adaptive_sleep_min=args.adaptive_sleep_min,
+                adaptive_sleep_base=args.adaptive_sleep_base,
+                adaptive_sleep_max=args.adaptive_sleep_max,
+                adaptive_sleep_backoff=args.adaptive_sleep_backoff,
+                adaptive_sleep_stability_window=args.adaptive_sleep_stability_window,
+                adaptive_sleep_failure_window=args.adaptive_sleep_failure_window,
                 web_search=True,
                 return_timing=True,
             )

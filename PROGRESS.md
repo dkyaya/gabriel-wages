@@ -6,6 +6,36 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-22 (Scout speed/stability controls implemented offline)
+
+**Did**
+- Started at `b6bd6b390e415771dd7f7537be33bc2f46a50e3c` with clean tracked state and the unrelated untracked root `package-lock.json`. Preserved hashes for contracts, city coverage, national queue/coverage, and corpus boundaries.
+- Added a composite preflight gate: no-search control, hosted-search trivial query, hosted-search municipality-style query, and optional explicit one-row production probe. Its required plan-only run generated three-call artifacts with `external_calls_attempted=0`; no credentials were loaded or logged.
+- Added opt-in adaptive direct-SDK pacing (3-second minimum, 5-second base, 15-second maximum, 10-second first backoff, 25-row stability window, 2-failure window) while retaining fixed five-second behavior when the flag is absent. Timing rows now preserve planned/actual sleep, level, mode, and pacing event; metadata summarizes them.
+- Added a compact row-aware prompt with unchanged identity/guardrail/schema requirements. The representative test is 3,792 versus 5,933 characters (36.09% shorter; rough 948 versus 1,483 token proxy). Added an exact-ID hint join and built deterministic five-query hints for all 35,589 authoritative municipalities.
+- Added state/wave yield learning and three dashboard JSON operations layers. The three reviewed waves yielded 77.843/87.807/80.315 rows/hour and 1.651/1.507/1.887 candidate rows per parseable municipality. The dashboard remains static and its frontend/deployment behavior did not change.
+
+**Decisions and why**
+- Adaptive pacing is opt-in and direct-SDK-only for live use. This leaves every historical fixed command unchanged and aligns the new controller with the only authorized mixed-state backend. The two-consecutive transport-collapse stop remains authoritative.
+- Keep Tier rank primary and state yield secondary. Only nine states currently have at least ten successful scouts; 42 states/DC remain low-confidence, so sparse extremes cannot drive selection.
+- Do not rebuild priority tiers at 646 covered. Priority methodology and existing priority files remain unchanged; the documented next refresh window is 804–1,104 covered.
+
+**Validation/audit results**
+```text
+plan-only preflight: PASS; 3 planned calls; 0 external/API/model calls
+search hints: 35,589 rows; SHA-256 888583fa7d4d55111f47424eec9d9af8a2c3e3c1b49533d09fdea6fb8a613be3
+yield learning: 51 states/DC; 3 reviewed waves
+dashboard: 10 JSON files parse; current discovery 646 covered / 1,277 candidate rows
+prompt/direct-SDK no-network suites: PASS
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. No live/API/model call, hosted search, URL access, verification, ingestion, codification, queue/coverage rebuild, priority rebuild/methodology change, protected canonical/corpus edit, remote action, or push occurred.
+
+**Next steps**
+1. Prepare the next locked Tier 1 batch offline using the unchanged priority outputs and deterministic hints.
+2. Under separate authorization, run the composite gate immediately before live; proceed only on a passing executed gate, then use compact prompts, hints, adaptive pacing, one direct-SDK lane, exact caps, and a fresh output directory.
+3. After a merge-eligible wave, rebuild accounting once, refresh yield/dashboard JSON, and compare actual compact input tokens and adaptive sleep against this offline proxy.
+
 ## 2026-07-22 (Tier 1 cross-state 150-row scout completed after transport diagnostic)
 
 **Did**

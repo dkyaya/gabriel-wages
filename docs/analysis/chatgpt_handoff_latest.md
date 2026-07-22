@@ -6,6 +6,22 @@ Last updated: `2026-07-22`
 
 ---
 
+## 2026-07-22 — Offline speed/stability package ready for the next scout wave
+
+### Current State
+
+- **Checkpoint/boundary:** implementation began at `b6bd6b390e415771dd7f7537be33bc2f46a50e3c`, after the successful Tier 1 merge. The task made no live/API/model/search request and did not rebuild national queue, coverage, or priority tiers. Current official discovery remains 646 covered, 490 candidate-positive, 156 parseable-empty, 18 failure-only, and 1,277 queue rows.
+- **Preflight:** [run_scout_preflight_gate.py](../../scripts/run_scout_preflight_gate.py) composes the bounded no-search + two hosted-search diagnostic with an optional explicit one-row production probe. The audited plan-only output under `tmp/preflight_gate_plan_only_2026-07-22/` contains `preflight_plan.json`, `preflight_gate_report.md`, and a sanitized command preview; it planned three calls and made zero. Future live must be separately authorized and gated immediately beforehand.
+- **Pacing:** `--adaptive-sleep` is opt-in. Reviewed defaults are min/base/max `3/5/15`, backoff `10`, stability window `25`, and failure window `2`. It remains sequential, preserves the existing two-consecutive transport stop, and writes planned/actual sleep plus adaptive events. Without the flag, fixed `--sleep-between-prompts` behavior remains unchanged.
+- **Prompt/hints:** `--prompt-mode compact` preserves locked municipality/government/Census/county/target/verification context and all strict unit/source/document/schema/stage controls. On a representative row it is 36.09% shorter by characters. [municipality_search_hints_2026-07-22.csv](municipality_search_hints_2026-07-22.csv) contains 35,589 deterministic five-phrase rows (SHA-256 `888583fa7d4d55111f47424eec9d9af8a2c3e3c1b49533d09fdea6fb8a613be3`); `--search-hints-csv` joins by exact municipality ID and fails closed on a missing row-aware match.
+- **Learning:** [scout_yield_learning_report_2026-07-22.md](scout_yield_learning_report_2026-07-22.md) compares Wave 1, Wave 2, and Tier 1. Tier 1 had the best density (1.887 candidates/parseable) and candidates/hour (143.496), while Wave 2 had the best row throughput (87.807/hour). State rankings require at least ten successes; PA, FL, MA, CA, IL, and NY currently lead density, but FL/MA are medium confidence and 42 states/DC remain low confidence.
+- **Dashboard:** the builder now emits `scout_operations_summary.json`, `scout_yield_by_state.json`, and `scout_runtime_trends.json`. All ten dashboard JSON files parse. No frontend or Pages behavior changed. Priority JSON remains based on the pre-Tier-1 priority checkpoint and is labeled as lagging until the unchanged tier builder is intentionally rerun.
+- **Tests:** no-network suites cover fixed/adaptive pacing, adaptive metadata and dry timing, compact identity/guardrail/schema preservation, shorter prompt length, deterministic hints, dry-run hint attachment, mixed-state/cap/resume invariants, and direct-SDK mocks. Protected contracts/city coverage/corpus and national accounting remain unchanged.
+
+### Next Move
+
+Prepare a fresh locked Tier 1 wave offline. For any separately authorized live run, use [scout_speed_stability_next_wave_template_2026-07-22.md](scout_speed_stability_next_wave_template_2026-07-22.md): execute the composite gate immediately before live; stop unless it passes; then use direct SDK, state ALL/mixed authorization, exact max/cap, `n_parallels=1`, zero retries, compact prompts, deterministic hints, and adaptive 3/5/15 pacing in a fresh directory. After a complete merge-eligible lineage, rebuild accounting once, then rebuild yield and dashboard JSON. Keep verification, ingestion, codification, canonical promotion, and claim use separate.
+
 ## 2026-07-22 — Tier 1 full wave completed and merged after healthy-route diagnostic
 
 ### Current State

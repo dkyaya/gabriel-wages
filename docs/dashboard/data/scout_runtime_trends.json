@@ -1,0 +1,77 @@
+{
+  "schema_version": "0.1.0",
+  "generated_at": "2026-07-22T22:55:37Z",
+  "data_vintage": "2026-07-22",
+  "source_files": [
+    "docs/analysis/national_scout_coverage_state.csv",
+    "docs/analysis/national_scout_coverage_municipality_2026-07-20.csv",
+    "docs/analysis/national_municipality_universe.csv",
+    "docs/analysis/national_scout_candidate_queue_2026-07-20.csv",
+    "docs/analysis/national_municipality_priority_tiers_2026-07-22.csv",
+    "docs/analysis/state_priority_summary_2026-07-22.csv",
+    "docs/analysis/national_priority_tier_top_targets_2026-07-22.csv",
+    "docs/analysis/scout_yield_learning_by_state_2026-07-22.csv",
+    "docs/analysis/scout_yield_learning_by_wave_2026-07-22.csv",
+    "docs/analysis/claim_register_2026-07-12.csv",
+    "docs/analysis/state_city_claim_map_2026-07-12.csv",
+    "docs/analysis/hypothesis_tracker_2026-07-12.csv",
+    "docs/analysis/hosted_search_transport_recommendation_2026-07-22.md"
+  ],
+  "warnings": [],
+  "limitations": [
+    "Scout coverage records parseable source-discovery outcomes, not source verification.",
+    "Candidate rows are unverified leads and must not be cited as claim evidence.",
+    "A parseable empty candidate list is a completed scout outcome, not proof that no source exists.",
+    "Connection-only failures are excluded from discovery coverage and counted separately.",
+    "Likely matched-set groups are scheduling leads inferred from scout unit labels, not verified city-cycle matches.",
+    "Project-wide verified, ingested, wage-extraction, codified, and regression metrics are not yet wired into this dashboard build.",
+    "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects."
+  ],
+  "stage": "scout_operations_unverified_discovery",
+  "waves": [
+    {
+      "wave_id": "wave1",
+      "label": "Coordinator Wave 1 CA/NJ/TX",
+      "attempted_rows": 150,
+      "parseable_rows": 149,
+      "candidate_rows": 246,
+      "failure_only_rows": 1,
+      "runtime_seconds": 6937.0,
+      "rows_per_hour": 77.843,
+      "candidate_rows_per_hour": 127.663,
+      "candidate_rows_per_parseable_municipality": 1.651,
+      "sleep_between_prompts_seconds": 15.0
+    },
+    {
+      "wave_id": "wave2",
+      "label": "Coordinator Wave 2 CA/TX/IL",
+      "attempted_rows": 150,
+      "parseable_rows": 148,
+      "candidate_rows": 223,
+      "failure_only_rows": 2,
+      "runtime_seconds": 6149.884,
+      "rows_per_hour": 87.807,
+      "candidate_rows_per_hour": 130.539,
+      "candidate_rows_per_parseable_municipality": 1.507,
+      "sleep_between_prompts_seconds": 5.0
+    },
+    {
+      "wave_id": "tier1_wave1",
+      "label": "Tier 1 Wave 1 cross-state",
+      "attempted_rows": 150,
+      "parseable_rows": 142,
+      "candidate_rows": 268,
+      "failure_only_rows": 8,
+      "runtime_seconds": 6723.519,
+      "rows_per_hour": 80.315,
+      "candidate_rows_per_hour": 143.496,
+      "candidate_rows_per_parseable_municipality": 1.887,
+      "sleep_between_prompts_seconds": 5.0
+    }
+  ],
+  "next_run_instrumentation": [
+    "compact prompt character/token proxy",
+    "adaptive planned and actual sleep",
+    "per-row elapsed time and failure type"
+  ]
+}
