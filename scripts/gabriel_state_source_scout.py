@@ -1871,13 +1871,21 @@ def _direct_sdk_failure_row(
 
 
 def is_direct_sdk_connection_failure_without_response(row: dict[str, Any]) -> bool:
-    """Identify the stop-gate signature: connection error, no ID/output/text."""
+    """Identify a transport-collapse row with no ID, output tokens, or text."""
     error = str(row.get("Error Log", "") or "").lower()
     response_text = str(row.get("Response", "") or "").strip()
     response_id = str(row.get("Response IDs", "") or "").strip()
     output_tokens = str(row.get("Output Tokens", "") or "").strip().lower()
     return (
-        "connection error" in error
+        any(
+            marker in error
+            for marker in (
+                "connection error",
+                "timed out",
+                "timeout",
+                "maximum capacity",
+            )
+        )
         and not response_text
         and not response_id
         and output_tokens in {"", "0", "none", "nan"}

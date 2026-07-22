@@ -138,6 +138,13 @@ SOURCE_SPECS = [
         / "serialized_stage1_worker_02_nj25_live_direct_sdk_scout_candidates_2026-07-21.csv",
         "run_id": "nj_2026-07-21_172457",
     },
+    {
+        "state": "ALL",
+        "allowed_states": {"CA", "NJ", "TX"},
+        "wave": "COORD-SERIAL150-2026-07-21",
+        "path": DOCS / "gabriel_state_source_scout_candidates_all_2026-07-21_193524.csv",
+        "run_id": "all_2026-07-21_193524",
+    },
 ]
 
 CALIBRATION_FILES = {
@@ -461,10 +468,11 @@ def build_rows() -> list[dict[str, str]]:
     skipped_missing_locator: dict[str, int] = defaultdict(int)
     for spec in SOURCE_SPECS:
         for row in read_csv(spec["path"]):
-            if row["state"] != spec["state"]:
+            allowed_states = set(spec.get("allowed_states", {spec["state"]}))
+            if row["state"] not in allowed_states:
                 raise ValueError(f"Unexpected state in {spec['path']}: {row['state']}")
             if not row.get("source_url", "").strip():
-                skipped_missing_locator[spec["state"]] += 1
+                skipped_missing_locator[row["state"]] += 1
                 continue
             source_rows.append((spec, row))
 
@@ -578,12 +586,12 @@ def build_rows() -> list[dict[str, str]]:
 
     expected = {
         "PA": 75,
-        "TX": 6,
+        "TX": 85,
         "MA": 24,
-        "NJ": 32,
+        "NJ": 94,
         "IL": 217,
         "NY": 57,
-        "CA": 129,
+        "CA": 234,
     }
     observed = {state: counters[state] for state in expected}
     if observed != expected:

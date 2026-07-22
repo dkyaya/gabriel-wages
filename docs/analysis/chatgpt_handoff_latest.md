@@ -6,6 +6,24 @@ Last updated: `2026-07-21`
 
 ---
 
+## 2026-07-21/22 — One coordinator mixed-state 150-row live queue completed and merged
+
+### Current State
+
+- **Checkpoint and gates:** started at `264ebd56d2e95cc07ae8e3e030c9cb2ce00ac2a7`. CA50 and TX50 prep relays remained passed; original NJ50 failed its municipality-ID review but passed only when paired with the corrected coordinator 50/50 rereview. The locked CA→NJ→TX input has 150 exact rows and SHA-256 `e53db4698b5dba439ad4d31fca79be1242808960d1a8d6809d31b1b915de62fc`.
+- **Dry/smoke gates:** the mixed-state dry run generated and passed all 150 corrected row-aware prompts with no backend call. Exactly one direct-SDK no-search smoke used `Reply with OK.` and returned `OK`, an ID, and five output tokens; it was not repeated.
+- **Live execution:** exactly one coordinator process ran `all_2026-07-21_193524` through direct SDK with `--state ALL --allow-mixed-states`, exact max/cap 150, `n_parallels=1`, 15-second spacing, 90-second timeout, and zero retries. It ran about 1h55m and returned 150/150 raw rows in locked order.
+- **Results:** 149 rows parsed; 112 municipalities produced 246 URL-bearing candidates (CA 46 municipalities/105 rows, NJ 31/62, TX 35/79); 37 municipalities returned valid empty lists (CA 3, NJ 19, TX 15). Moreno Valley CA timed out once without text, ID, or tokens. The next row succeeded, there were no stop markers or schema failures, and Moreno Valley is excluded from coverage.
+- **Usage:** 4,482,102 input / 180,985 reasoning / 282,372 output / 4,764,474 total tokens. Actual billed cost is unavailable. The standard-text estimate is `$1.2493854`, explicitly estimate-only and excluding HUIT, hosted-search/tool, cached-input, tax, discount, and credit adjustments.
+- **Accounting merge:** after the artifact audit passed, the queue builder, current coverage builder, and top-level coverage builder were each invoked once in order; dashboard JSON was refreshed once. Queue is 786 rows, including 634 later-verification rows and 152 holds/rejections. Successful discovery coverage is 356 municipalities: 293 candidate-positive and 63 parseable-empty. Eight municipalities are failure-only and 24 failed attempts remain excluded.
+- **State deltas:** CA adds 49 covered/46 positive/105 candidates plus one failure-only attempt; NJ adds 50 covered/31 positive/62 candidates; TX adds 50 covered/35 positive/79 candidates. Dashboard JSON reconciles to 51 states/DC, 35,589 municipalities, 356 covered, and 786 candidate rows.
+- **Protected stages:** no candidate URL was independently opened or downloaded. No source verification, ingestion, codification, canonical contract/city-coverage/corpus edit, candidate promotion, or claim use occurred. All new rows remain unverified scout leads.
+- **Validation:** six requested compiles passed; prompt tests passed 9/9; the fully mocked direct-SDK suite passed 11/11; schema validation passed at 64 contracts; ingestion tests passed 60/60; canonical coverage remains 28 healthy pairs (10 exact, 18 overlap), two exploratory adjacent, and six unmatched safety units; four dashboard JSON parse checks and `git diff --check` passed.
+
+### Next Move
+
+Do not automatically retry Moreno Valley or inspect all 246 links. Preserve the coordinator relay, then choose a bounded coordinated verification wave from the 201 newly queued rows, prioritizing municipalities with apparent safety/non-safety bundles. Verification must establish exact employer, bargaining unit, official provenance, execution/completeness, dates, wage content, duplicates, access, and matched cycle overlap before ingestion. Keep any future live discovery in one coordinator-controlled serialized lane with the explicit mixed-state/max/cap and two-consecutive-collapse guards; do not return to concurrent live workers.
+
 ## 2026-07-21 — Worker relays assessed; NJ prompt identity fixed; mixed-state 150-row runner now fails closed
 
 ### Current State

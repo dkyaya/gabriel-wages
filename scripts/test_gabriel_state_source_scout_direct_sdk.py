@@ -184,6 +184,14 @@ def _check_repeated_connection_error_stop_signature() -> None:
     assert scout.is_direct_sdk_connection_failure_without_response(
         {**failed, "Response IDs": "resp_fixture"}
     ) is False
+    timeout = {
+        **failed,
+        "Error Log": '["APITimeoutError: Request timed out."]',
+    }
+    assert scout.is_direct_sdk_connection_failure_without_response(timeout) is True
+    assert scout.is_direct_sdk_connection_failure_without_response(
+        {**timeout, "Output Tokens": "5"}
+    ) is False
     stopped = scout._direct_sdk_stopped_row("fixture", "prompt")
     assert stopped["Successful"] is False
     assert "stopped_before_request" in stopped["Error Log"]

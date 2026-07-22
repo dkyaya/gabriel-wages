@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": "0.1.0",
-    "generated_at": "2026-07-21T21:49:55Z",
+    "generated_at": "2026-07-22T01:34:01Z",
     "data_vintage": "2026-07-21",
     "source_files": [
       "docs/analysis/national_scout_coverage_state.csv",
@@ -24,25 +24,25 @@
   },
   "stage": "unverified_scout_candidate_queue",
   "totals": {
-    "candidate_rows": 540,
-    "municipalities_with_queue_rows": 181,
-    "high_priority_rows": 343,
-    "medium_priority_rows": 59,
-    "low_priority_rows": 31,
-    "later_verification_rows": 433,
-    "hold_or_rejected_rows": 107
+    "candidate_rows": 786,
+    "municipalities_with_queue_rows": 293,
+    "high_priority_rows": 468,
+    "medium_priority_rows": 121,
+    "low_priority_rows": 45,
+    "later_verification_rows": 634,
+    "hold_or_rejected_rows": 152
   },
   "by_state": [
     {
       "state": "CA",
       "state_name": "California",
-      "candidate_rows": 129,
-      "municipalities_with_queue_rows": 44,
-      "high_priority_rows": 108,
-      "medium_priority_rows": 8,
-      "low_priority_rows": 2,
-      "hold_or_rejected_rows": 11,
-      "likely_matched_set_municipalities": 30
+      "candidate_rows": 234,
+      "municipalities_with_queue_rows": 90,
+      "high_priority_rows": 177,
+      "medium_priority_rows": 27,
+      "low_priority_rows": 6,
+      "hold_or_rejected_rows": 24,
+      "likely_matched_set_municipalities": 43
     },
     {
       "state": "IL",
@@ -69,13 +69,13 @@
     {
       "state": "NJ",
       "state_name": "New Jersey",
-      "candidate_rows": 32,
-      "municipalities_with_queue_rows": 15,
-      "high_priority_rows": 14,
-      "medium_priority_rows": 5,
-      "low_priority_rows": 4,
-      "hold_or_rejected_rows": 9,
-      "likely_matched_set_municipalities": 4
+      "candidate_rows": 94,
+      "municipalities_with_queue_rows": 46,
+      "high_priority_rows": 26,
+      "medium_priority_rows": 23,
+      "low_priority_rows": 10,
+      "hold_or_rejected_rows": 35,
+      "likely_matched_set_municipalities": 7
     },
     {
       "state": "NY",
@@ -102,40 +102,40 @@
     {
       "state": "TX",
       "state_name": "Texas",
-      "candidate_rows": 6,
-      "municipalities_with_queue_rows": 2,
-      "high_priority_rows": 1,
-      "medium_priority_rows": 1,
-      "low_priority_rows": 0,
-      "hold_or_rejected_rows": 4,
-      "likely_matched_set_municipalities": 1
+      "candidate_rows": 85,
+      "municipalities_with_queue_rows": 37,
+      "high_priority_rows": 45,
+      "medium_priority_rows": 26,
+      "low_priority_rows": 4,
+      "hold_or_rejected_rows": 10,
+      "likely_matched_set_municipalities": 14
     }
   ],
   "by_unit_type": {
-    "fire": 159,
-    "non_safety": 155,
-    "police": 217,
-    "unclear": 9
+    "fire": 196,
+    "non_safety": 250,
+    "police": 330,
+    "unclear": 10
   },
   "by_triage_bucket": {
     "already_canonical_hold": 8,
-    "context_only_hold": 50,
-    "high_priority_later_verify": 343,
-    "insufficient_hold": 34,
-    "likely_duplicate_hold": 13,
-    "low_priority_later_verify": 31,
-    "medium_priority_later_verify": 59,
+    "context_only_hold": 65,
+    "high_priority_later_verify": 468,
+    "insufficient_hold": 55,
+    "likely_duplicate_hold": 22,
+    "low_priority_later_verify": 45,
+    "medium_priority_later_verify": 121,
     "rejected_from_calibration": 2
   },
   "by_scout_confidence": {
-    "high": 130,
-    "low": 87,
-    "medium": 323
+    "high": 174,
+    "low": 127,
+    "medium": 485
   },
   "by_verification_priority_label": {
-    "high": 280,
-    "low": 92,
-    "medium": 168
+    "high": 393,
+    "low": 152,
+    "medium": 241
   },
   "interpretation": "Priority is a later-verification scheduling field. It is not source verification, ingestion approval, codified evidence, or claim support."
 }

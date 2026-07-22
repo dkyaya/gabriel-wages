@@ -1,0 +1,4 @@
+run_id,state,municipality_count,parseable_count,failed_count,candidate_row_count,input_tokens_total,reasoning_tokens_total,output_tokens_total,total_tokens_total,estimated_input_cost,estimated_output_cost,estimated_total_cost,estimate_only
+all_2026-07-21_193524,CA,50,49,1,105,1414423.0,58891.0,100893.0,1515316.0,0.2828846,0.12611625,0.40900085,true
+all_2026-07-21_193524,NJ,50,50,0,62,1478680.0,57758.0,84441.0,1563121.0,0.295736,0.10555125,0.40128725,true
+all_2026-07-21_193524,TX,50,50,0,79,1588999.0,64336.0,97038.0,1686037.0,0.3177998,0.1212975,0.4390973,true

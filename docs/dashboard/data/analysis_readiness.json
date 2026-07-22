@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": "0.1.0",
-    "generated_at": "2026-07-21T21:49:55Z",
+    "generated_at": "2026-07-22T01:34:01Z",
     "data_vintage": "2026-07-21",
     "source_files": [
       "docs/analysis/national_scout_coverage_state.csv",
@@ -31,10 +31,10 @@
     "hypothesis_tracker_available": true
   },
   "source_discovery_readiness": {
-    "municipalities_scout_covered": 207,
-    "candidate_rows": 540,
-    "candidate_positive_municipalities": 181,
-    "likely_matched_set_leads": 105,
+    "municipalities_scout_covered": 356,
+    "candidate_rows": 786,
+    "candidate_positive_municipalities": 293,
+    "likely_matched_set_leads": 134,
     "assessment": "ready_for_PI_facing_discovery_status_reporting"
   },
   "claim_inventory_context": {

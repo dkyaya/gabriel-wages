@@ -6,6 +6,47 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-21/22 (Completed one mixed-state 150-row serialized live scout and merged eligible results)
+
+**Did**
+- Started at `264ebd56d2e95cc07ae8e3e030c9cb2ce00ac2a7` with a clean tracked worktree. Reconciled all three worker relays and the corrected NJ50 rereview, combined CA50→NJ50→TX50 into one 150-row locked input, and confirmed 150 unique municipality/Census IDs with no covered, canonical, queued, prohibited timeout-name, or failed-attempt overlap. Locked SHA-256 is `e53db4698b5dba439ad4d31fca79be1242808960d1a8d6809d31b1b915de62fc`.
+- Ran one corrected-code mixed-state dry review: 150/150 prompts preserved state, municipality, locked municipality ID, government name, Census ID, county context, expected units, verification notes, strict employer/unit/source controls, no-candidate guidance, blocked/dead separation, and unverified-stage handling. No backend call occurred.
+- Ran exactly one direct-SDK no-search smoke. Exact prompt `Reply with OK.` returned `OK`, a response ID, and five output tokens with a 30-second timeout and zero retries.
+- Ran exactly one coordinator live process, direct SDK, `n_parallels=1`, 15-second spacing, 90-second timeout, zero retries, explicit mixed-state/max/cap authorization for 150. Run `all_2026-07-21_193524` returned all 150 rows: 149 parseable, 112 candidate-positive municipalities, 37 parseable-empty municipalities, 246 candidate rows, and one isolated Moreno Valley timeout. Raw order matches the locked input; all 149 successes have text, IDs, and positive output tokens.
+- After the complete-artifact audit passed, invoked the three canonical builder commands once each and refreshed dashboard JSON once. Queue rows rose `540→786`; successful discovery coverage `207→356`; candidate-positive municipalities `181→293`; parseable-empty `26→63`; failure-only `7→8`; excluded failed attempts `23→24`. Moreno Valley is failure-only and excluded from coverage.
+
+**Decisions and why**
+- Treat the run as merge-eligible because every row was attempted exactly once, the one timeout was isolated and followed by success, no stop marker or systematic parser/schema failure appeared, and lifecycle/artifact identity checks passed. Do not retry Moreno Valley in this task.
+- Keep all 246 URL-bearing rows at unverified scout stage. Queue and discovery coverage are scheduling/accounting layers, not verification, ingestion, canonical evidence, codification, or claim support.
+- Preserve mixed-run token usage by state in a deterministic three-row allocation; actual billed cost remains unavailable. The `$1.2493854` figure is estimate-only and excludes HUIT and hosted-search/tool adjustments.
+
+**Surprises/breakage**
+- The run took about 1h55m, within the prior 2.4–3.5h planning envelope and substantially faster than its upper bound.
+- The live stop classifier needed one pre-live no-network hardening so an empty `APITimeoutError` counts with connection failures toward the two-consecutive collapse guard. Mocked tests passed before live; no prompt or request shape changed, and the single already-passed smoke was not repeated.
+- Pre-existing untracked `package-lock.json` remained untouched.
+
+**Validation/audit results**
+```text
+live artifact audit: 150 ordered raw rows; 149 successes with text/ID/output tokens; 1 isolated timeout; 0 stop markers
+queue rebuild: 786 rows (CA 234, IL 217, MA 24, NJ 94, NY 57, PA 75, TX 85)
+coverage rebuild: 356 successful municipalities; 293 candidate-positive; 63 empty; 8 failure-only
+dashboard refresh: 51 states/DC; 35,589 municipalities; 356 covered; 786 candidates
+six requested py_compile targets: exit 0
+prompt-contract no-network regression: 9 PASS checks
+direct-SDK fully mocked/no-network regression: 11 PASS checks
+validate.py: PASSED (64 contracts; 0 discourse; 64 coverage; 3 city attributes)
+ingest/test_pipeline.py: 60 passed, 0 failed
+audit_coverage.py: 28 healthy pairs (10 exact, 18 overlap), 2 exploratory adjacent, 6 unmatched safety units
+four dashboard JSON parse checks and git diff --check: passed
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Canonical contracts, city coverage, and corpus files were not edited.
+
+**Next steps**
+1. Do not retry Moreno Valley or open the 246 URLs automatically. Preserve the relay and select a bounded, coordinated later-verification wave from the 201 newly queued candidates.
+2. Later verification must prioritize coherent city-level safety/non-safety bundles and confirm employer, unit, provenance, execution/completeness, operative dates, wage content, duplicates, access, and mutual cycle overlap before ingestion.
+3. Keep future live scouting in the same coordinator-controlled serialized pattern; no concurrent live workers, and retain exact mixed-state/max/cap and collapse guards.
+
 ## 2026-07-21 (Corrected municipality-ID prompts and added fail-closed mixed-state 150-row runner support)
 
 **Did**
