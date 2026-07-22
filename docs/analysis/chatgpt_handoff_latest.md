@@ -6,6 +6,24 @@ Last updated: `2026-07-22`
 
 ---
 
+## 2026-07-22 — First post-tiering Tier 1 worker inputs are locked
+
+### Current State
+
+- **Checkpoint:** work began at exact tiering commit `bbb4dfa1a0836bf3fefe4e52c5f538ee59b08714` with clean tracked state. The unrelated untracked root `package-lock.json` remains untouched.
+- **Input reconciliation:** the 500-row ranked target file was joined by exact `municipality_id` to the full 35,589-row priority table for county context and current coverage/canonical/failure fields. There are 1,471 future-eligible Tier 1 rows, including nine Tier 1 failures; the ordinary non-retry Tier 1 pool is 1,462. The ten-row failure ledger matched the locked known-failure set exactly.
+- **Locked 150:** [tier1_post_tiering_top150_scout_input_2026-07-22.csv](tier1_post_tiering_top150_scout_input_2026-07-22.csv) contains exactly 150 Tier 1, future-eligible, non-retry, non-failure-only, `not_scouted`, noncanonical municipal/place employers with unique municipality and Census IDs. It spans ordinary ranks 1–150 and source ranks 1–156 after excluding six high-ranked California retries. SHA-256 is `798d1d1bb2c4c47bb8cdddb3cb929807f86574ca5d029c52875a26aad13824ee`.
+- **Split decision:** use contiguous rank slices. Worker 1 ranks 1–50, Worker 2 ranks 51–100, and Worker 3 ranks 101–150. Their largest single-state counts are 4, 5, and 8 (8%, 10%, and 16%), so none triggers the more-than-20 or more-than-60% concentration rule. The slices span 29, 27, and 19 states and keep the clearest rank lineage.
+- **Worker inputs:** [Worker 1](tier1_worker_1_scout_input_2026-07-22.csv) SHA-256 `2828934d7185a437cbd961d16363812f81889f63a20ff77b4c332da463abf606`; [Worker 2](tier1_worker_2_scout_input_2026-07-22.csv) `02c3e5ea8529a079d3a8286dfba371a55a94041a050e5b49941b1297767ae62a`; [Worker 3](tier1_worker_3_scout_input_2026-07-22.csv) `8761ef52affd9fa0dd2cd5af88433c4e2c8725a384b7ffb9cae26388dcd60c6d`. Every input has 50 exact IDs, queue ID `COORD-TIER1-WAVE1-SERIAL150-2026-07-22`, scope `CROSS_STATE_TIER1`, source commit lineage, score components, county context, exact-employer unit targets, and verification cautions.
+- **Worker prompts:** each self-contained prompt uses its assigned persistent worktree and local `main`, Codex Routine / GPT-5.6 Terra Medium, mixed-state dry-run only, explicit cap 50/five-second settings, 50/50 prompt and timing review, no-network validation, protected-file checks, local commit, sanitized relay, and a mandatory byte-checked copy into `/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages/tmp/`. Workers do not smoke, live-scout, call an API/model, open URLs, verify, ingest, codify, or rebuild accounting.
+- **Reproducibility:** `scripts/build_tier1_worker_batches.py` fails closed on source-schema/count/identity/status/failure mismatch, compares contiguous and round-robin designs, and reproduces all locked CSVs, audits, prompts, command preview, and coordinator handoff. A second build reproduced the hashes exactly.
+- **Validation:** three requested compiles passed; prompt tests passed 10; fully mocked/no-network direct-SDK tests passed 19; schema validation passed at 64 contracts; pipeline tests passed 60/60; canonical coverage remains 28 healthy pairs (10 exact, 18 overlap), two adjacent exploratory, and six unmatched safety units; structural/hash/relay-copy gates and `git diff --check` passed.
+- **Boundary:** no worker dry-run, smoke, live scout, API/model/backend call, hosted search, URL opening/downloading, source verification, ingestion, codification, candidate/canonical promotion, queue/coverage or priority-output change, dashboard edit, worker-worktree mutation, remote action, or push occurred.
+
+### Next Move
+
+Run [Worker 1](tier1_worker_1_prep_prompt_2026-07-22.md), [Worker 2](tier1_worker_2_prep_prompt_2026-07-22.md), and [Worker 3](tier1_worker_3_prep_prompt_2026-07-22.md) separately in their assigned persistent worktrees. Require every sanitized relay to be copied into main `tmp/`. Once all three relays exist, follow [the coordinator handoff](tier1_coordinator_after_worker_relays_handoff_2026-07-22.md): inspect exact input hashes and dry evidence, combine Worker 1→2→3 without substitution, and stop before any smoke/live action unless separately authorized. Keep failure retries, source verification, ingestion, codification, and claim use out of the ordinary discovery wave.
+
 ## 2026-07-22 — National municipality priority tiering is complete
 
 ### Current State

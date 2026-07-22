@@ -6,6 +6,36 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-22 (Prepared first post-tiering Tier 1 cross-state worker wave)
+
+**Did**
+- Started at `bbb4dfa1a0836bf3fefe4e52c5f538ee59b08714` with clean tracked state and the previously documented unrelated untracked root `package-lock.json`. Reconciled the 500-row ranked target file one-to-one against the full 35,589-row priority table and exact ten-row failure-retry ledger.
+- Selected the first 150 ordinary Tier 1 targets after exact coverage, canonical, retry, failure, employer-type, municipality-ID, and Census-ID gates. The ordinary national Tier 1 pool is 1,462 rows; the selected rows span source ranks 1–156 because Stockton, Redding, Oakland, Moreno Valley, Oxnard, and Fairfield were skipped as retries. All ten known failure-only municipalities remain outside this ordinary wave.
+- Added a deterministic local builder, locked 150-row input, three exact 50-row cross-state inputs, top-level and per-worker audits, split-design comparison, three self-contained worker prompts, dry-run command preview, and the future coordinator handoff. Every worker prompt uses local `main`, `--state ALL --allow-mixed-states`, dry-run only, cap 50, five-second configuration, strict identity/control review, a local commit/relay, and a mandatory sanitized ZIP copy into the main coordinator repo `tmp/`.
+
+**Decisions and why**
+- Use contiguous rank slices: Worker 1 ranks 1–50, Worker 2 ranks 51–100, and Worker 3 ranks 101–150. The worst single-state concentration is Massachusetts at 8/50 (16%) in Worker 3, far below the defined threshold of more than 20 rows or 60%; round-robin would make score distributions more similar but add lineage complexity without fixing a real concentration problem.
+- Preserve eight consolidated municipal/place legal identities whose authoritative names contain `County`. They are not standalone county-government rows; exact-employer verification notes prohibit county or other entity substitution.
+- Standardize new operational booleans to `true`/`false`, preserve the source rank and every requested score/context field, and add exact expected-unit/verification controls. This does not alter the committed priority outputs.
+
+**Validation/audit results**
+```text
+locked top 150: 150 Tier 1 / future-eligible / non-retry / non-failure / not-scouted / noncanonical rows
+identity: 150 unique municipality IDs; 150 unique nonmissing Census IDs; 0 known failure rows
+top150 SHA-256: 798d1d1bb2c4c47bb8cdddb3cb929807f86574ca5d029c52875a26aad13824ee
+worker SHA-256: W1 2828934d7185a437cbd961d16363812f81889f63a20ff77b4c332da463abf606; W2 02c3e5ea8529a079d3a8286dfba371a55a94041a050e5b49941b1297767ae62a; W3 8761ef52affd9fa0dd2cd5af88433c4e2c8725a384b7ffb9cae26388dcd60c6d
+prompt-contract suite: 10 PASS; fully mocked/no-network direct-SDK suite: 19 PASS
+validate.py: PASSED (64 contracts; 0 discourse; 64 coverage; 3 city attributes)
+ingest/test_pipeline.py: 60 passed, 0 failed; git diff --check: passed
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. No worker dry-run, smoke, live scout, API/model/backend call, URL access, verification, ingestion, codification, queue/coverage/priority-output rebuild or mutation, dashboard change, canonical/corpus edit, worker-worktree mutation, remote action, or push occurred.
+
+**Next steps**
+1. Run the three offline worker prep prompts in their assigned persistent worktrees using Codex Routine / GPT-5.6 Terra Medium. Each worker must copy its sanitized relay ZIP into the main coordinator repo `tmp/`.
+2. After all relays arrive, inspect exact hashes, 50-prompt reviews, timing rows, metadata, validation, and protected-file evidence. Stop on any mismatch; do not substitute rows.
+3. Only under separate authorization, combine Worker 1→2→3 and run the coordinator evidence gate, 150-prompt dry review, one smoke, and one serialized direct-SDK live lane. Verification, ingestion, codification, and claim use remain separate.
+
 ## 2026-07-22 (Built national municipality priority tiers and dashboard data layer)
 
 **Did**
