@@ -6,6 +6,43 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-22 (Tier 1 Wave 2 cross-state worker batches prepared offline)
+
+**Did**
+- Started at `bef5077ef0d7837642fed651bd5d68a77110bacc`, with required Tier 1 live-merge ancestor `b6bd6b3` present and tracked state clean. The unrelated pre-existing untracked root `package-lock.json` was left untouched.
+- Overlaid the current 35,589-row national scout coverage and 1,277-row candidate queue on the intentionally stale pre-Wave-1 priority layer. The prior Tier 1 150 now resolves to 99 candidate-positive, 43 parseable-empty, and eight timeout-only rows; all 150 were excluded, as were the older ten retry rows. The current top-500 priority pool contains 343 ordinary eligible rows after exact-ID exclusions.
+- Locked the next 150 score-ordered Tier 1 municipal/place governments as operational ranks 151–300 (source ranks 157–307), with 150 unique municipality IDs, 150 unique Census IDs, no current coverage/queue/canonical/prior-wave/failure overlap, and five deterministic search hints per row.
+- Compared contiguous and round-robin splits. Chose contiguous rank slices 151–200, 201–250, and 251–300 because maximum state concentration is only 6/50, 7/50, and 5/50, respectively. Each batch spans 23–24 states and retains direct rank lineage.
+- Added three self-contained worker prompts using compact mode, exact-ID search hints, adaptive 3/5/15 pacing with 10-second backoff and 25/2 windows, 50-row mixed-state dry-run caps, explicit no-network boundaries, protected-file checks, sanitized local relays, and mandatory copies into main coordinator `tmp/`.
+
+**Locked hashes**
+```text
+top 150: d868b7af362815b1b5d9a639492e0df9b19c566dc4151552abd9f751db7a12e2
+worker 1: f9cd191ca00e6e965cde83879a1383f23d1750b8e90d0a5812697c98aa19b20f
+worker 2: 78ee47781e959867cd1a315228ab63ad2cbfabaf72e9e56cf06baf99db35b508
+worker 3: 825b6bb7d31f6e1cdbe9fd00963096a39baf25ebbc89972fc5a84f32aba99ca1
+```
+
+**Validation/audit results**
+```text
+deterministic rebuild: PASS; hashes reproduced exactly
+locked structure: 150/150 PASS; workers 50/50 each; all hints and prompt controls present
+requested py_compile set plus Wave 2 builder: exit 0
+prompt-contract suite: 12 PASS checks
+fully mocked/no-network direct-SDK suite: 21 PASS checks
+validate.py: PASSED (64 contracts; 0 discourse; 64 coverage; 3 city attributes)
+ingest/test_pipeline.py: 60 passed, 0 failed
+audit_coverage.py: 28 healthy pairs (10 exact, 18 overlap), 2 adjacent exploratory, 6 unmatched safety
+git diff --check: passed
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. No worker dry-run, smoke, hosted-search diagnostic, live/API/model/backend call, URL access, source verification, ingestion, codification, queue/coverage/priority/dashboard rebuild, canonical/corpus edit, worker-worktree mutation, remote action, or push occurred.
+
+**Next steps**
+1. Run the three offline worker prep prompts in their persistent worktrees; each must copy its sanitized relay into main `tmp/`.
+2. After all relays pass, combine Worker 1→2→3 under a separate coordinator task and run a 150-prompt compact/hints/adaptive dry review.
+3. Any later live run requires separate authorization and a passing composite preflight gate, one serialized direct-SDK lane, exact caps, collapse stops, and fresh resume lineage if needed.
+
 ## 2026-07-22 (Scout speed/stability controls implemented offline)
 
 **Did**
