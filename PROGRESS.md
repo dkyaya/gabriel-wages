@@ -6,6 +6,49 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-22 (Completed Wave 2 CA/TX/IL serialized 150-row scout and accounting merge)
+
+**Did**
+- Started at `1265366025c008b071a650d779d2492030563130` with a clean tracked worktree and the unrelated pre-existing untracked root `package-lock.json`. Verified all three exact worker ZIPs, their commits (`eaef3c1`, `a985f1b`, `5a19082`), byte-identical inputs, 50/50 reviews, passing no-network validation, five-second dry metadata, and 50 planned timing rows.
+- Combined CA50→TX50→IL50 into one exact 150-row input, SHA-256 `1227234e23635f6bae0d700d95ae7ac0890098c4906c106fffe3ef446b554bbf`. Reconciled all rows against current queue, coverage, canonical context, employer type, and failures: 150 unique municipality/Census IDs, zero ineligible or prohibited names, and no substitutions.
+- Ran a 150-prompt mixed-state dry review: 150/150 identity, county/unit/verification, employer/unit/source, empty-result, blocked/dead, duplicate, unverified-stage, and public-records checks passed; timing has 150 `dry_run_planned` rows and no backend attempt.
+- Ran exactly one direct-SDK no-search smoke. Exact `Reply with OK.` returned `OK`, a response ID, and five output tokens at 30 seconds/zero retries with no tools/search.
+- Ran exactly one coordinator live process, direct SDK, mixed state, exact max/cap 150, `n_parallels=1`, five-second spacing, 90-second timeout, and zero retries. Run `all_2026-07-22_114424` attempted all 150 rows and completed with 148 parseable, 98 candidate-positive municipalities, 50 parseable-empty municipalities, 223 candidate rows, and two isolated IL failures. No resume ran.
+- Added Wave 2 to the canonical queue/coverage builders, created exact state usage, rebuilt national accounting, and refreshed dashboard JSON. Queue rose `786→1,009`; successful coverage `356→504`; candidate-positive `293→391`; empty `63→113`; failure-only `8→10`; excluded failed attempts `24→26`.
+
+**Decisions and why**
+- Treat the complete run as merge-eligible. Huntley IL (row 113, 502/no ID/text/tokens) and Roselle IL (row 138, timeout/no ID/text/tokens) were non-consecutive, followed by parseable rows, and produced no stopped-before-request or lifecycle-loss evidence. They are retained as failure-only and excluded from coverage; retry is deferred because the authorized parent completed and the task allowed only one coordinator live process.
+- Keep five-second sequential pacing. Total time was 6,149.884 seconds (102m29.884s), with 745.158 seconds of sleep and 87.807 rows/hour. That is 787.116 seconds (13m07.116s; 11.347%) faster than Wave 1's 6,937 seconds, despite higher request latency absorbing part of the theoretical sleep saving.
+- Preserve all 223 rows as unverified scheduling leads. The `$1.2315844` standard-token figure is estimate-only; actual HUIT/hosted-search billing remains unavailable. No discovery output was independently opened, verified, ingested, codified, promoted, or used for claims.
+
+**Surprises/breakage**
+- The first current-coverage invocation stopped before writing because one historical assertion still required the pre-Wave-2 total of 356. The guard was updated to the audited 504; the successful rebuild and required top-level builder then produced identical current outputs.
+- TX yield was much lower than CA/IL: 16 candidate-positive and 34 empty municipalities, versus CA 45/5 and IL 37/11 plus two failures. This is operational discovery evidence, not evidence that qualifying sources do not exist.
+
+**Validation/audit results**
+```text
+live: 150/150 raw and timing rows; 148 parseable; 2 isolated failures; 0 stopped rows; exit 0
+timing: 6,149.884s total; 745.158s sleep; mean 36.026s; median 32.066s; 87.807 rows/hour
+usage: 4,396,997 input; 187,734 reasoning; 281,748 output; 4,678,745 total tokens
+queue: 1,009 rows (CA 351, IL 295, MA 24, NJ 94, NY 57, PA 75, TX 113)
+coverage: 504 successful; 391 candidate-positive; 113 empty; 10 failure-only; 26 failed attempts excluded
+dashboard: 51 states/DC; 35,589 municipalities; 504 covered; 1,009 candidates
+six requested py_compile commands: exit 0
+prompt-contract no-network suite: 10 PASS checks
+direct-SDK fully mocked/no-network suite: 19 PASS checks
+validate.py: PASSED (64 contracts; 0 discourse; 64 coverage; 3 city attributes)
+ingest/test_pipeline.py: 60 passed, 0 failed
+audit_coverage.py: 28 healthy pairs (10 exact, 18 overlap), 2 exploratory adjacent, 6 unmatched safety units
+git diff --check: passed
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. No canonical contract, city-coverage, corpus, verification, ingestion, codification, dashboard frontend, deployment, remote, or push action occurred.
+
+**Next steps**
+1. Do not retry Huntley or Roselle automatically and do not open the 223 new URLs automatically. Preserve the complete coordinator relay and failure evidence.
+2. Run a national priority-tiering task comparing CA/TX/IL yield, empty rates, triage buckets, employer size, timing, and later-verification burden against prior states. Decide whether the next bounded task is source verification or another discovery wave.
+3. Any later verification must establish exact employer, unit, official provenance, execution/completeness, visible dates, wage content, duplicates, access, and same-city cycle overlap before ingestion or claim use.
+
 ## 2026-07-22 (Prepared Wave 2 CA50/TX50/IL50 offline scout batches)
 
 **Did**

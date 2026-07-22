@@ -19,7 +19,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs" / "analysis"
-AS_OF = "2026-07-21"
+AS_OF = "2026-07-22"
 
 UNIVERSE_PATH = DOCS / "national_municipality_universe.csv"
 CROSSWALK_PATH = DOCS / "national_municipality_county_crosswalk.csv"
@@ -27,7 +27,10 @@ COUNTY_PATH = DOCS / "national_county_universe.csv"
 QUEUE_PATH = DOCS / "national_scout_candidate_queue_2026-07-20.csv"
 PA_COVERAGE_PATH = DOCS / "gabriel_state_source_scout_municipality_coverage.csv"
 COST_LOG_PATH = DOCS / "gabriel_state_source_scout_cost_log.csv"
-MIXED_STATE_USAGE_PATH = DOCS / "coordinator_150row_serial_live_state_usage_2026-07-21.csv"
+MIXED_STATE_USAGE_PATHS = [
+    DOCS / "coordinator_150row_serial_live_state_usage_2026-07-21.csv",
+    DOCS / "wave2_coordinator_150row_serial_live_state_usage_2026-07-22.csv",
+]
 
 MUNICIPALITY_OUTPUT = DOCS / "national_scout_coverage_municipality_2026-07-20.csv"
 STATE_OUTPUT = DOCS / "national_scout_coverage_state.csv"
@@ -133,6 +136,16 @@ SUCCESSFUL_BATCHES = [
         "backend": "direct-sdk",
         "failed_municipality_ids": ["cog_2025_161238"],
     },
+    {
+        "state": "ALL",
+        "allowed_states": {"CA", "IL", "TX"},
+        "wave": "COORD-SERIAL150-WAVE2-2026-07-22",
+        "run_id": "all_2026-07-22_114424",
+        "scout_date": "2026-07-22",
+        "input": DOCS / "wave2_coordinator_150row_serial_live_input_2026-07-22.csv",
+        "backend": "direct-sdk",
+        "failed_municipality_ids": ["cog_2025_162476", "cog_2025_162300"],
+    },
 ]
 
 # Preserved failed-run artifacts contain 16 MA connection-only rows, one IL
@@ -173,6 +186,7 @@ FAILED_CONNECTION_RUNS = {
     "ca_2026-07-21_165516": ["cog_2025_100750"],
     "nj_2026-07-21_172457": ["cog_2025_170189"],
     "all_2026-07-21_193524": ["cog_2025_161238"],
+    "all_2026-07-22_114424": ["cog_2025_162476", "cog_2025_162300"],
 }
 
 QUEUE_VERIFY_BUCKETS = {
@@ -503,22 +517,36 @@ def build_municipality_rows() -> list[dict[str, object]]:
         )
 
     status_counts = Counter(row["scout_coverage_status"] for row in output)
-    if status_counts["scouted_with_candidates"] != 293:
-        raise ValueError(f"Expected 293 candidate-positive municipalities: {status_counts}")
-    if status_counts["scouted_no_candidates"] != 63:
-        raise ValueError(f"Expected 63 successful empty municipalities: {status_counts}")
-    if status_counts["scout_attempt_failed_connection"] != 8:
-        raise ValueError(f"Expected eight failure-only municipalities: {status_counts}")
-    if sum(int(row["failed_connection_attempt_count"]) for row in output) != 24:
+    if status_counts["scouted_with_candidates"] != 391:
+        raise ValueError(f"Expected 391 candidate-positive municipalities: {status_counts}")
+    if status_counts["scouted_no_candidates"] != 113:
+        raise ValueError(f"Expected 113 successful empty municipalities: {status_counts}")
+    if status_counts["scout_attempt_failed_connection"] != 10:
+        raise ValueError(f"Expected ten failure-only municipalities: {status_counts}")
+    if sum(int(row["failed_connection_attempt_count"]) for row in output) != 26:
         raise ValueError(
-            "Expected 16 MA attempts, one IL timeout, six CA timeouts, and one NJ timeout"
+            "Expected 16 MA attempts, three IL failures, six CA timeouts, and one NJ timeout"
         )
     return output
 
 
 def load_state_costs() -> dict[str, dict[str, str]]:
     cost_rows = {row["run_id"]: row for row in read_csv(COST_LOG_PATH)}
-    mixed_usage = {row["state"]: row for row in read_csv(MIXED_STATE_USAGE_PATH)}
+    mixed_usage: dict[str, dict[str, Decimal]] = defaultdict(
+        lambda: {
+            "input_tokens_total": Decimal("0"),
+            "reasoning_tokens_total": Decimal("0"),
+            "output_tokens_total": Decimal("0"),
+        }
+    )
+    for path in MIXED_STATE_USAGE_PATHS:
+        for row in read_csv(path):
+            for field in [
+                "input_tokens_total",
+                "reasoning_tokens_total",
+                "output_tokens_total",
+            ]:
+                mixed_usage[row["state"]][field] += Decimal(row[field])
     result: dict[str, dict[str, str]] = {}
     pa = read_csv(DOCS / "gabriel_state_source_scout_state_coverage.csv")[0]
     result["PA"] = {
@@ -677,8 +705,8 @@ def build_state_rows(municipality_rows: list[dict[str, object]]) -> list[dict[st
         )
     if sum(int(row["municipalities_in_universe"]) for row in output) != 35_589:
         raise ValueError("State coverage does not sum to the authoritative universe")
-    if sum(int(row["municipalities_scouted"]) for row in output) != 356:
-        raise ValueError("State coverage does not sum to 356 successful scout municipalities")
+    if sum(int(row["municipalities_scouted"]) for row in output) != 504:
+        raise ValueError("State coverage does not sum to 504 successful scout municipalities")
     return output
 
 

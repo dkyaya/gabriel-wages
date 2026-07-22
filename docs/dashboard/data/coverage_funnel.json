@@ -1,8 +1,8 @@
 {
   "metadata": {
     "schema_version": "0.1.0",
-    "generated_at": "2026-07-22T01:54:32Z",
-    "data_vintage": "2026-07-21",
+    "generated_at": "2026-07-22T17:30:23Z",
+    "data_vintage": "2026-07-22",
     "source_files": [
       "docs/analysis/national_scout_coverage_state.csv",
       "docs/analysis/national_scout_coverage_municipality_2026-07-20.csv",
@@ -32,25 +32,25 @@
     {
       "stage": "scout_covered",
       "label": "Parseable scout-covered municipalities",
-      "value": 356,
+      "value": 504,
       "status": "current"
     },
     {
       "stage": "candidate_positive",
       "label": "Candidate-positive municipalities",
-      "value": 293,
+      "value": 391,
       "status": "current_unverified"
     },
     {
       "stage": "queued_for_later_verification",
       "label": "Municipalities queued for later verification",
-      "value": 265,
+      "value": 355,
       "status": "current_unverified"
     },
     {
       "stage": "likely_matched_set_leads",
       "label": "Likely matched-set lead groups",
-      "value": 134,
+      "value": 157,
       "status": "current_unverified"
     }
   ],
@@ -87,8 +87,8 @@
     }
   ],
   "separate_failure_accounting": {
-    "failure_only_municipalities": 8,
-    "connection_failed_attempts_excluded_from_coverage": 24,
+    "failure_only_municipalities": 10,
+    "connection_failed_attempts_excluded_from_coverage": 26,
     "note": "Attempts are infrastructure outcomes, not source findings, and are not included in scout-covered counts."
   }
 }

@@ -145,6 +145,13 @@ SOURCE_SPECS = [
         "path": DOCS / "gabriel_state_source_scout_candidates_all_2026-07-21_193524.csv",
         "run_id": "all_2026-07-21_193524",
     },
+    {
+        "state": "ALL",
+        "allowed_states": {"CA", "IL", "TX"},
+        "wave": "COORD-SERIAL150-WAVE2-2026-07-22",
+        "path": DOCS / "gabriel_state_source_scout_candidates_all_2026-07-22_114424.csv",
+        "run_id": "all_2026-07-22_114424",
+    },
 ]
 
 CALIBRATION_FILES = {
@@ -586,12 +593,12 @@ def build_rows() -> list[dict[str, str]]:
 
     expected = {
         "PA": 75,
-        "TX": 85,
+        "TX": 113,
         "MA": 24,
         "NJ": 94,
-        "IL": 217,
+        "IL": 295,
         "NY": 57,
-        "CA": 234,
+        "CA": 351,
     }
     observed = {state: counters[state] for state in expected}
     if observed != expected:

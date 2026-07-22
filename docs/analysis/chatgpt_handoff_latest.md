@@ -6,6 +6,25 @@ Last updated: `2026-07-22`
 
 ---
 
+## 2026-07-22 — Wave 2 CA/TX/IL serialized scout completed and merged
+
+### Current State
+
+- **Checkpoint and gates:** started at `1265366025c008b071a650d779d2492030563130`. All exact worker ZIPs passed integrity and content checks: 50 rows/IDs per state, queue ID `COORD-SERIAL150-WAVE2-2026-07-22`, commits `eaef3c1`/`a985f1b`/`5a19082`, five-second dry metadata, 50 planned timing rows, 50/50 reviews, and no-network validation. Tracked state was clean; unrelated root `package-lock.json` remained untracked.
+- **Locked input:** [wave2_coordinator_150row_serial_live_input_2026-07-22.csv](wave2_coordinator_150row_serial_live_input_2026-07-22.csv) is exact CA50→TX50→IL50 with 150 unique municipality and Census IDs and SHA-256 `1227234e23635f6bae0d700d95ae7ac0890098c4906c106fffe3ef446b554bbf`. Current coverage/queue/canonical/failure reconciliation found zero ineligible rows and no prohibited names.
+- **Dry/smoke:** mixed-state dry run `all_2026-07-22_114311` passed 150/150 complete prompt-contract checks and wrote 150 dry timing rows without backend use. Exactly one smoke used `Reply with OK.`, no tools/search, 30-second timeout, and zero retries; it returned `OK`, an ID, and five output tokens.
+- **Live:** exactly one direct-SDK coordinator process ran as `all_2026-07-22_114424` with state ALL, mixed-state authorization, exact max/cap 150, `n_parallels=1`, five-second spacing, 90-second timeout, and zero retries. It returned all 150 rows in locked order: 148 parseable, 98 candidate-positive municipalities, 50 parseable-empty municipalities, 223 URL-bearing candidates, and two isolated failures. Every parseable outcome has an ID and positive output tokens.
+- **State outcomes:** CA is 50 parseable / 45 positive / 5 empty / 117 candidates; TX 50 / 16 / 34 / 28; IL 48 / 37 / 11 / 78 plus Huntley 502/no-ID and Roselle timeout. Failures were rows 113 and 138, non-consecutive and followed by successes; no stopped-before-request rows occurred. The run is complete and merge-eligible. No resume was used or needed, and no failure retry is authorized automatically.
+- **Pace/usage:** 6,149.884 seconds total, 745.158 seconds sleep, 36.026-second mean, 32.066-second median, and 87.807 rows/hour. This is 787.116 seconds (11.347%) faster than Wave 1's 6,937 seconds. Usage is 4,396,997 input / 187,734 reasoning / 281,748 output / 4,678,745 total tokens. Estimate-only standard-token cost is `$1.2315844`; actual billing is unavailable.
+- **Accounting:** queue is now 1,009 rows, including 828 later-verification and 181 held/rejected/context rows. Successful discovery coverage is 504 municipalities: 391 candidate-positive and 113 empty; 10 are failure-only and 26 attempts remain excluded. State covered/candidate rows are CA 144/351, TX 103/113, and IL 122/295. Huntley and Roselle remain excluded.
+- **Dashboard:** the four JSON files were rebuilt at 51 states/DC, 35,589 municipalities, 504 scout-covered, and 1,009 candidate rows. Frontend and deployment code did not change.
+- **Validation:** six requested compiles passed; prompt tests passed 10; fully mocked/no-network direct-SDK tests passed 19; schema validation passed at 64 contracts; pipeline tests passed 60/60; canonical coverage remains 28 healthy pairs (10 exact, 18 overlap), two adjacent exploratory, and six unmatched safety units; `git diff --check` passed.
+- **Protected boundary:** no URL was independently opened/downloaded; no source verification, ingestion, codification, canonical contract/city-coverage/corpus edit, candidate promotion, claim use, dashboard frontend edit, remote action, or push occurred. All 223 new rows remain unverified scout-stage leads.
+
+### Next Move
+
+Do not automatically retry Huntley/Roselle or inspect all 223 new links. Preserve the coordinator relay, then run a separate national priority-tiering task that compares state yield, empty rates, triage buckets, employer scale, timing, and verification burden. Use that review to choose a bounded verification wave or another discovery wave. Any verification must confirm exact employer, bargaining unit, official provenance, execution/completeness, operative dates, wage content, duplicate status, accessibility, and same-city matched-cycle overlap before ingestion, codification, or claim use.
+
 ## 2026-07-22 — Wave 2 CA50/TX50/IL50 batches are locked for offline worker preparation
 
 ### Current State
