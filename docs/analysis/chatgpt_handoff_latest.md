@@ -6,6 +6,22 @@ Last updated: `2026-07-22`
 
 ---
 
+## 2026-07-22 — Fresh Tier 1 full retry reproduced the stopped parent's connection collapse
+
+### Current State
+
+- **Checkpoint/parent gate:** started at `c6b3664fee3bcfebd6ed3b7d8eddc0cedea004fb`. Parent `all_2026-07-22_152105` remains immutable and non-mergeable: two connection errors (Oklahoma City/Phoenix), no text/IDs/tokens, zero parseable/candidates, and 148 stopped-before-request rows. The locked hash and current eligibility gate pass with zero coverage/queue/canonical overlap.
+- **Fresh dry/smoke:** dry run `all_2026-07-22_155821` passed all 150 prompt identities and controls, exact state set, cap/sleep metadata, and timing rows without a backend call. Exactly one direct-SDK no-search smoke returned `OK.`, an ID, and six output tokens with no tools/search and zero retries.
+- **Fresh retry:** exactly one process ran as `all_2026-07-22_155934` in `tmp/tier1_coordinator_150row_serial_live_retry_direct_sdk_2026-07-22_attempt1`, using direct SDK, ALL/mixed states, exact max/cap 150, one sequential lane, five-second spacing, 90-second timeout, and zero retries. Oklahoma City and Phoenix again failed in 0.196/0.005 seconds with no text/IDs/tokens. The collapse guard made no further request.
+- **Result:** two attempted connection failures, 148 stopped-before-request, zero parseable/candidate-positive/empty/candidate rows, 5.800 seconds total, 5.001 seconds sleep, exit 2, and `completed_no_parseable_outcome`. This is not a runtime/yield/pacing experiment and neither municipality is a source-discovery failure.
+- **No resume/merge:** no completed IDs exist, so a resume would again select all 150. The same immediate pattern occurred twice; do not automatically retry. Queue/coverage/dashboard/priority builders did not run. National accounting remains 1,009 queue rows, 504 successful, 391 candidate-positive, 113 empty, and ten failure-only.
+- **Lineage:** standalone `--lineage-note` is unsupported, the available note flag is resume-only, and the runner rejects pre-populated output directories. A note was staged before live and copied unchanged into the terminal retry directory afterward. No runner change occurred.
+- **Validation/protection:** seven compiles, 10 prompt tests, 19 mocked direct-SDK tests, schema validation, 60 pipeline tests, coverage audit, and diff checks passed. Pre/post canonical/corpus/accounting/dashboard/priority snapshots are identical. No verification, ingestion, codification, claim use, remote operation, or push occurred.
+
+### Next Move
+
+Preserve [the parent audit](tier1_coordinator_150row_serial_live_retry_parent_audit_2026-07-22.md), [fresh dry review](tier1_coordinator_150row_serial_live_retry_dry_run_review_2026-07-22.md), and [retry result](tier1_coordinator_150row_serial_live_retry_result_review_2026-07-22.md). Do not launch another automatic retry. First obtain evidence that the HUIT/direct-SDK hosted-search transport route has stabilized or changed; the no-search smoke alone is insufficient. Any later attempt is a separately authorized fresh full-input retry with the same hash and a new directory. Rebuild accounting only after complete merge-eligible evidence; keep verification, ingestion, codification, and claims separate.
+
 ## 2026-07-22 — Tier 1 Wave 1 stopped safely on coordinator connection collapse
 
 ### Current State

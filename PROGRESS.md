@@ -6,6 +6,41 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-22 (Fresh Tier 1 retry reproduced immediate hosted-search transport collapse)
+
+**Did**
+- Started at `c6b3664fee3bcfebd6ed3b7d8eddc0cedea004fb` with clean tracked state and the unrelated untracked root `package-lock.json`. Re-audited the stopped parent `all_2026-07-22_152105`: exactly two connection failures, no response text/IDs/tokens, zero parseable/candidate rows, and 148 stopped-before-request rows. Its requested generic artifact aliases map to the runner's `failed_parses.csv`, `raw_outputs.csv`, and `parsed_candidates.csv`.
+- Reconfirmed the locked 150-row SHA-256 `77b66569bcc2803e5067f84ad20b63e595f8c0611beb87820166b1a3a9de112b`, exact state/rank/worker distribution, unique municipality/Census IDs, and current Tier 1/future-eligible/non-retry/non-failure/not-scouted/noncanonical status with zero queue overlap.
+- Ran fresh dry run `all_2026-07-22_155821`: 150/150 prompt identity/control checks and 150 dry-planned timing rows passed with no backend call. Ran exactly one no-search direct-SDK smoke; `Reply with OK.` returned `OK.`, a response ID, and six output tokens with zero retries.
+- Ran exactly one fresh coordinator retry as `all_2026-07-22_155934`. Oklahoma City and Phoenix again returned consecutive connection errors after 0.196/0.005 seconds with no text/IDs/tokens. The runner stopped rows 3–150 before request, preserved terminal artifacts, and exited 2 with zero parseable/candidate rows.
+
+**Decisions and why**
+- No resume or further retry. Both the parent and fresh retry have zero completed IDs, so skip-completed semantics would select the full 150 again; the identical immediate-collapse pattern now establishes a repeated transport condition and the task authorized one retry process.
+- No queue/coverage rebuild, dashboard refresh, or priority-tier rebuild. The retry is non-mergeable and contributes no source-yield, successful-coverage, or municipality failure evidence. National accounting remains 1,009 queue rows, 504 successful, 391 candidate-positive, 113 parseable-empty, and ten failure-only.
+- Preserve lineage in a sidecar. The runner has no standalone `--lineage-note`, its resume note cannot be used outside resume mode, and it rejects non-empty output directories. The note was prepared before live beside the output and copied unchanged into the terminal retry directory after exit, without a runner edit.
+
+**Validation/audit results**
+```text
+parent/locked input: PASS; current overlaps 0; parent parseable/candidates 0/0
+fresh dry: 150/150 PASS; 150 dry timing rows; no backend call
+smoke: PASS; one request; OK.; response ID; 6 output tokens; no tools/search
+live retry: 2 connection attempts; 148 stopped-before-request; 0 parseable; 0 candidates; exit 2; not mergeable
+protected and accounting snapshots: contracts/city coverage/corpus/queue/coverage/dashboard/priority unchanged
+seven requested py_compile commands: exit 0
+prompt-contract suite: 10 PASS checks; mocked/no-network direct-SDK suite: 19 PASS checks
+validate.py: PASSED (64 contracts; 0 discourse; 64 coverage; 3 city attributes)
+ingest/test_pipeline.py: 60 passed, 0 failed
+audit_coverage.py: 28 healthy pairs (10 exact, 18 overlap), 2 exploratory adjacent, 6 unmatched safety units
+git diff --check: passed
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. No URL review outside hosted search, verification, ingestion, codification, canonical/corpus edit, queue/coverage/priority build, dashboard refresh, claim use, remote action, or push occurred.
+
+**Next steps**
+1. Do not automatically run this input again. Preserve both stopped parents and seek HUIT/direct-SDK hosted-search transport diagnostics or wait for an external route change; the no-search smoke passing does not establish hosted-search stability.
+2. Any later full retry requires separate authorization, a fresh output directory and smoke, the same locked hash, and explicit lineage. Oklahoma City/Phoenix remain ordinary unscouted targets, not source-discovery failures.
+3. Rebuild national accounting once only after a future complete merge-eligible run. Verification, ingestion, codification, and claim use remain separate.
+
 ## 2026-07-22 (Tier 1 Wave 1 stopped safely on immediate live transport collapse)
 
 **Did**
