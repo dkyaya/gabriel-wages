@@ -14,6 +14,10 @@ venv/
 .idea/
 .vscode/
 
+# Dashboard dependencies and generated frontend build output
+docs/dashboard/node_modules/
+docs/dashboard/dist/
+
 # Working/scratch outputs — noncanonical, regenerable, or relay-bundle staging.
 # Durable artifacts (evidence layer, ledger, audit docs) belong in docs/analysis/,
 # not here. See docs/analysis/repo_cleanup_audit_2026-07-14.md for the retention

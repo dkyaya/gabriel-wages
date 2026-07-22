@@ -1,25 +1,26 @@
-# Component Plan
+# Dashboard components
 
-The first draft keeps components in `App.jsx` so the information hierarchy can be reviewed before a larger component API is frozen. Split them once the map asset and routing behavior are approved.
+The MVP uses explicit component boundaries while keeping all data loading in `App.jsx`.
 
-Recommended component boundaries:
-
-- `NationalMap`: token-free Leaflet choropleth using committed state GeoJSON; emits state selection.
-- `StateDetailPanel`: headline counts, narrative, stage badges, queue composition, and failure accounting.
-- `PrintableStateReport`: print-only state evidence-status brief using the same state object.
-- `MetricCard`: labeled value plus a one-line interpretation.
-- `StatusPill`: controlled scout/calibration/verified/ingested/codified/future vocabulary.
-- `CoverageFunnel`: current discovery stages plus null future stages.
-- `CandidateQueueExplorer`: filters and aggregate table; no raw URLs by default.
-- `ClaimEvidencePanel`: claim, evidence, reasoning, counterevidence, limitations, and source needs.
-- `AnalysisReadinessPanel`: explicit available/blocked input matrix.
-- `RegressionResultsPanel`: disabled until a versioned regression JSON exists.
+- `NationalMap.jsx` — shared map shell, five safe metrics, geographic/tile mode toggle, legend, interpretation note, and table fallback.
+- `USChoroplethMap.jsx` — token-free geographic US choropleth rendered from the committed Census GeoJSON, with hover/focus labels and state selection.
+- `StateTileGrid.jsx` — preserved schematic tile-grid alternate using the same metrics and selection callback.
+- `mapMetrics.js` — the only map-metric allowlist, formatting rules, and shared color-band calculation.
+- `StateDetailPanel.jsx` — selected-state coverage, queue, failure, likely-set, and stage summary.
+- `PrintableStateReport.jsx` — dedicated hash-routed print view derived from the same state data.
+- `CoverageFunnel.jsx` — current discovery stages, separate failures, and null future stages.
+- `CandidateQueueCards.jsx` — priority workload and scout unit-label composition.
+- `AnalysisReadinessPanel.jsx` — current versus unavailable evidence/analysis stages and wage-analysis gate.
+- `DataLimitations.jsx` — status vocabulary, interpretation limits, builder metadata, and source paths.
+- `ui.jsx` — controlled pills, metric cards, null-safe formatting, and shared labels.
 
 Component rules:
 
-1. Never infer verification, ingestion, codification, or claim support from a scout field.
-2. Render `null` as “Not available,” never as zero.
-3. Use queue priority only as later-verification scheduling language.
-4. Put technical provenance inside `<details>` unless it is essential to interpretation.
-5. Every chart or map needs a text/table equivalent for accessibility and printing.
-6. The printable state report must derive from the same state JSON as the interactive panel.
+1. Never infer verification, ingestion, codification, matched cycles, wage outcomes, or claim support from scout fields.
+2. Render `null` as “Not yet available,” never as zero.
+3. Describe queue priority only as later-verification scheduling.
+4. Put technical provenance and field definitions inside `<details>` unless essential to interpretation.
+5. Give every chart/map a text or table equivalent.
+6. Derive the printable state report from the same generated JSON as the interactive state panel.
+7. Do not fetch remote data or require runtime credentials.
+8. Keep boundary assets local and provenance-documented; never add runtime map-provider requests or token-dependent basemaps.

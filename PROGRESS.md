@@ -6,6 +6,45 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-21/22 (Consolidated geographic dashboard map with post-150 live results)
+
+**Did**
+- Started at `f6f43765da8d2ab88d08ffc0d2c212af81d06812`, the coordinator commit containing the complete 150-row serialized scout merge. Confirmed the current dashboard data held 356 scout-covered municipalities, 786 candidate rows, and state coverage of CA 94, NJ 77, and TX 53.
+- Audited the coordinator relay and dashboard relay separately. The coordinator relay owns the fresh queue/coverage/dashboard data; dashboard commit `f364b327950987ace5755c4d7ac806144fbb49f4` owns the componentized React/Vite frontend, geographic choropleth, tile-grid alternate, local Census-derived boundary asset, documentation, and GitHub Pages workflow.
+- Imported only frontend/deployment/map files from the local dashboard commit tree. The stale dashboard-relay JSON snapshot (159 covered/451 candidates) was not imported. Regenerated all four dashboard JSON files in main from current post-150 inputs.
+- Installed the dashboard's locked local dependencies with `npm ci` and built successfully with Vite 8.1.5. The final bundle includes geographic and tile-grid modes, an unchanged 51-feature local GeoJSON asset, no Mapbox/Leaflet/token dependency, and `/gabriel-wages/` asset paths.
+
+**Decisions and why**
+- Treat main's post-150 national queue/coverage as the only dashboard-data authority. Frontend code can be taken from the dashboard line, but dashboard data must always be regenerated after consolidation to prevent a historical snapshot from rolling accounting backward.
+- Keep `docs/dashboard/node_modules/` and `docs/dashboard/dist/` ignored and out of the commit. The lockfile, source, local asset, and Pages workflow are the reproducible deliverables.
+- Preserve all discovery-stage caveats in the UI. The dashboard visualizes preliminary scout coverage and unverified candidate scheduling; it does not promote sources or expose unsupported wage/claim results.
+
+**Surprises/breakage**
+- The named dashboard relay was absent from main `tmp/` but existed intact in the dashboard worktree's `tmp/`. It was copied unchanged into main and inspected without changing the dashboard worktree or examining its Git state. Its SHA-256 is `56d687654df762bcb5df7438f7aaa682971e43ee14c771723a95b3076f08cd71`.
+- A first local map assertion used the relay request's generic asset filename; the actual committed filename is `us-states-2025-20m.geojson`. The corrected contract check passed. A first metric assertion similarly used a generic JSON nesting name; the generated schema uses `totals`. No source, data, or build defect was found.
+- Pre-existing untracked root `package-lock.json` remained untouched and excluded.
+
+**Validation/audit results**
+```text
+dashboard generator: 51 states/DC; 35,589 municipalities; 356 scout-covered; 786 candidate rows
+state checks: CA 94; NJ 77; TX 53
+npm ci: exit 0; 22 locked packages installed locally
+Vite production build: exit 0; 31 modules; final JS 259.09 kB (59.91 kB gzip); CSS 15.96 kB (4.39 kB gzip); GeoJSON 293.56 kB
+map contract: 51 local features; geographic + tile modes bundled; local asset emitted unchanged; no Mapbox/Leaflet dependency; Pages base path passed
+py_compile scripts/build_dashboard_data.py: exit 0
+validate.py: PASSED (64 contracts; 0 discourse; 64 coverage; 3 city attributes)
+ingest/test_pipeline.py: 60 passed, 0 failed
+audit_coverage.py: 28 healthy pairs (10 exact, 18 overlap), 2 exploratory adjacent, 6 unmatched safety units
+git diff --check: passed
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Canonical contracts, city coverage, corpus files, scout queue/coverage inputs, and candidate-stage classifications were not altered by the consolidation.
+
+**Next steps**
+1. Under a separately authorized publication task, push the consolidation commit and verify the deployed Pages site at `https://dkyaya.github.io/gabriel-wages/`, including geographic/tile switching, state selection, mobile layout, print view, and direct asset loading under `/gabriel-wages/`.
+2. Keep future dashboard refreshes builder-driven from current main accounting. Never copy historical branch JSON over newer queue/coverage state.
+3. Research operations remain separate: do not automatically open or verify the 786 queued rows, retry failure-only scouts, ingest, codify, or use discovery leads as claim evidence.
+
 ## 2026-07-21/22 (Completed one mixed-state 150-row serialized live scout and merged eligible results)
 
 **Did**

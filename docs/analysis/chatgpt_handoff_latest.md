@@ -6,6 +6,23 @@ Last updated: `2026-07-21`
 
 ---
 
+## 2026-07-21/22 — Geographic dashboard and post-150 scout accounting consolidated in main
+
+### Current State
+
+- **Starting checkpoint:** consolidation began at `f6f43765da8d2ab88d08ffc0d2c212af81d06812`, exactly the coordinator 150-row live/merge commit. Its relay is `tmp/coordinator_150row_serial_live_relay_2026-07-21_f6f4376.zip` (SHA-256 `b1ebbf25204fc26b463278b80b061e0195e4af06ec83968db8e9aa9fc0701531`).
+- **Data authority:** main retains the post-150 national state: 356 successful scout-covered municipalities, 293 candidate-positive, 63 parseable-empty, eight failure-only, 24 excluded failed attempts, and 786 queue rows. Coverage is CA 94, NJ 77, and TX 53. All four dashboard JSON files were regenerated from those current main inputs.
+- **Frontend authority:** dashboard commit `f364b327950987ace5755c4d7ac806144fbb49f4` supplied the componentized React/Vite app, U.S. geographic choropleth, tile-grid alternate, map metrics/state details/print components, local boundary asset, frontend documentation, locked npm dependencies, and Pages workflow. The exact dashboard relay was copied read-only from the dashboard worktree into main `tmp/` because the named ZIP was initially absent from coordinator `tmp/`; the worktree itself was not modified.
+- **Stale-data guard:** the dashboard relay's four JSON files represented 159 covered municipalities and 451 candidates and were deliberately excluded. The geographic frontend consumes the current schema without a compatibility downgrade. Final JSON SHA-256 values are `c936b3caf4375bd95c1c34004cde96159f11552f182968a69efe641ecb4cbaf1` (state), `726ce4199c3247743a84c7633902cee82d675a319d60211295611c63e2d4b5e1` (queue), `60a319e34a247e268dd1372b19f1fb01a6bc5c65b96db6cdb1146c961e58933f` (funnel), and `a71fda037e33fafe2b3c16e0b388bf8cd0e62bad4a212e2493ec0db12741554b` (readiness).
+- **Map contract:** `us-states-2025-20m.geojson` has 51 features (50 states plus DC), SHA-256 `31715da6d14711893c54bff23bdd57c1817ad646a1686ca925d79857254ecb37`, and is emitted unchanged as a same-origin Vite asset. Geographic mode is the default; tile grid remains a user-selectable and failure-message-supported alternate. No Mapbox, Leaflet, provider token, API credential, or runtime backend is required.
+- **Build/deployment:** `npm ci` installed 22 locked packages locally and `npm run build` passed with Vite 8.1.5 and 31 modules. The final JS is 259.09 kB (59.91 kB gzip), CSS 15.96 kB (4.39 kB gzip), and local GeoJSON 293.56 kB. Vite/HTML paths retain `/gabriel-wages/`; the expected Pages URL is `https://dkyaya.github.io/gabriel-wages/`. No deployment or remote action occurred.
+- **Validation:** dashboard generation passed at 51 states/DC, 35,589 municipalities, 356 covered, and 786 candidates; the final map/bundle contract passed; `scripts/build_dashboard_data.py` compiled; schema validation passed at 64 contracts; ingestion tests passed 60/60; canonical coverage remains 28 healthy pairs (10 exact, 18 overlap), two exploratory adjacent, and six unmatched safety units; `git diff --check` passed.
+- **Protected state:** no scout, smoke, API/model call, source URL opening/downloading, verification, ingestion, codification, queue/coverage rebuild, canonical contract/city-coverage/corpus edit, worker-worktree edit, remote inspection, or push occurred. Generated `node_modules/` and `dist/` remain ignored. The pre-existing untracked root `package-lock.json` remains untouched.
+
+### Next Move
+
+Use a separately authorized publication task to push the local consolidation commit and inspect the deployed site at `https://dkyaya.github.io/gabriel-wages/`. Test the geographic/tile toggle, state keyboard selection, Alaska/Hawaii insets, DC marker, local boundary request, mobile behavior, printable state report, and direct navigation under `/gabriel-wages/`. Future dashboard data refreshes should always run `python scripts/build_dashboard_data.py` from the newest main queue/coverage state; do not import older branch JSON. Source verification, ingestion, codification, failure retries, and claim use remain separate later-stage decisions.
+
 ## 2026-07-21/22 — One coordinator mixed-state 150-row live queue completed and merged
 
 ### Current State

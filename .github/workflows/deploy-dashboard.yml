@@ -1,0 +1,79 @@
+name: Deploy dashboard to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/deploy-dashboard.yml
+      - docs/dashboard/**
+      - docs/analysis/national_scout_candidate_queue_2026-07-20.csv
+      - docs/analysis/national_scout_coverage_*.csv
+      - docs/analysis/national_municipality_universe.csv
+      - docs/analysis/claim_register_2026-07-12.csv
+      - docs/analysis/state_city_claim_map_2026-07-12.csv
+      - docs/analysis/hypothesis_tracker_2026-07-12.csv
+      - scripts/build_dashboard_data.py
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Regenerate dashboard JSON
+        run: |
+          python -m py_compile scripts/build_dashboard_data.py
+          python scripts/build_dashboard_data.py
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20.19"
+          cache: npm
+          cache-dependency-path: docs/dashboard/package-lock.json
+
+      - name: Install frontend dependencies
+        run: npm ci
+        working-directory: docs/dashboard
+
+      - name: Build dashboard for GitHub Pages
+        run: npm run build
+        working-directory: docs/dashboard
+        env:
+          DASHBOARD_BASE_PATH: /gabriel-wages/
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload dashboard artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: docs/dashboard/dist
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
