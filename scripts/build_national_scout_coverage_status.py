@@ -30,6 +30,7 @@ COST_LOG_PATH = DOCS / "gabriel_state_source_scout_cost_log.csv"
 MIXED_STATE_USAGE_PATHS = [
     DOCS / "coordinator_150row_serial_live_state_usage_2026-07-21.csv",
     DOCS / "wave2_coordinator_150row_serial_live_state_usage_2026-07-22.csv",
+    DOCS / "tier1_coordinator_150row_serial_live_after_diag_state_usage_2026-07-22.csv",
 ]
 
 MUNICIPALITY_OUTPUT = DOCS / "national_scout_coverage_municipality_2026-07-20.csv"
@@ -146,6 +147,30 @@ SUCCESSFUL_BATCHES = [
         "backend": "direct-sdk",
         "failed_municipality_ids": ["cog_2025_162476", "cog_2025_162300"],
     },
+    {
+        "state": "ALL",
+        "allowed_states": {
+            "AK", "AL", "AR", "AZ", "CO", "CT", "DC", "FL", "GA", "HI",
+            "IA", "ID", "IN", "KS", "KY", "LA", "MA", "MD", "MI", "MN",
+            "MO", "MS", "NC", "NE", "NM", "NV", "OH", "OK", "OR", "RI",
+            "SC", "SD", "TN", "UT", "VA", "WA", "WI",
+        },
+        "wave": "COORD-TIER1-WAVE1-SERIAL150-2026-07-22",
+        "run_id": "all_2026-07-22_164144",
+        "scout_date": "2026-07-22",
+        "input": DOCS / "tier1_coordinator_150row_serial_live_input_2026-07-22.csv",
+        "backend": "direct-sdk",
+        "failed_municipality_ids": [
+            "cog_2025_207536",
+            "cog_2025_186236",
+            "cog_2025_207957",
+            "cog_2025_169988",
+            "cog_2025_161633",
+            "cog_2025_163465",
+            "cog_2025_100435",
+            "cog_2025_176816",
+        ],
+    },
 ]
 
 # Preserved failed-run artifacts contain 16 MA connection-only rows, one IL
@@ -187,6 +212,16 @@ FAILED_CONNECTION_RUNS = {
     "nj_2026-07-21_172457": ["cog_2025_170189"],
     "all_2026-07-21_193524": ["cog_2025_161238"],
     "all_2026-07-22_114424": ["cog_2025_162476", "cog_2025_162300"],
+    "all_2026-07-22_164144": [
+        "cog_2025_207536",
+        "cog_2025_186236",
+        "cog_2025_207957",
+        "cog_2025_169988",
+        "cog_2025_161633",
+        "cog_2025_163465",
+        "cog_2025_100435",
+        "cog_2025_176816",
+    ],
 }
 
 QUEUE_VERIFY_BUCKETS = {
@@ -517,15 +552,15 @@ def build_municipality_rows() -> list[dict[str, object]]:
         )
 
     status_counts = Counter(row["scout_coverage_status"] for row in output)
-    if status_counts["scouted_with_candidates"] != 391:
-        raise ValueError(f"Expected 391 candidate-positive municipalities: {status_counts}")
-    if status_counts["scouted_no_candidates"] != 113:
-        raise ValueError(f"Expected 113 successful empty municipalities: {status_counts}")
-    if status_counts["scout_attempt_failed_connection"] != 10:
-        raise ValueError(f"Expected ten failure-only municipalities: {status_counts}")
-    if sum(int(row["failed_connection_attempt_count"]) for row in output) != 26:
+    if status_counts["scouted_with_candidates"] != 490:
+        raise ValueError(f"Expected 490 candidate-positive municipalities: {status_counts}")
+    if status_counts["scouted_no_candidates"] != 156:
+        raise ValueError(f"Expected 156 successful empty municipalities: {status_counts}")
+    if status_counts["scout_attempt_failed_connection"] != 18:
+        raise ValueError(f"Expected 18 failure-only municipalities: {status_counts}")
+    if sum(int(row["failed_connection_attempt_count"]) for row in output) != 34:
         raise ValueError(
-            "Expected 16 MA attempts, three IL failures, six CA timeouts, and one NJ timeout"
+            "Expected 26 retained prior attempts plus eight Tier 1 timeout-only attempts"
         )
     return output
 
@@ -591,6 +626,16 @@ def load_state_costs() -> dict[str, dict[str, str]]:
                 sum(Decimal(row["output_tokens_total"]) for row in rows)
                 + Decimal(usage.get("output_tokens_total", "0"))
             ),
+        }
+    for state, usage in mixed_usage.items():
+        if state in result:
+            continue
+        result[state] = {
+            "scout_total_cost": "",
+            "scout_cost_available": "no",
+            "input_tokens_total": str(usage["input_tokens_total"]),
+            "reasoning_tokens_total": str(usage["reasoning_tokens_total"]),
+            "output_tokens_total": str(usage["output_tokens_total"]),
         }
     return result
 
@@ -705,8 +750,8 @@ def build_state_rows(municipality_rows: list[dict[str, object]]) -> list[dict[st
         )
     if sum(int(row["municipalities_in_universe"]) for row in output) != 35_589:
         raise ValueError("State coverage does not sum to the authoritative universe")
-    if sum(int(row["municipalities_scouted"]) for row in output) != 504:
-        raise ValueError("State coverage does not sum to 504 successful scout municipalities")
+    if sum(int(row["municipalities_scouted"]) for row in output) != 646:
+        raise ValueError("State coverage does not sum to 646 successful scout municipalities")
     return output
 
 

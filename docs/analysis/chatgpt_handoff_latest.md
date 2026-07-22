@@ -6,6 +6,23 @@ Last updated: `2026-07-22`
 
 ---
 
+## 2026-07-22 — Tier 1 full wave completed and merged after healthy-route diagnostic
+
+### Current State
+
+- **Lineage/gates:** started at `b74e82d151a19e6e612181bfbc21cc018f237c33`. [Readiness audit](tier1_full_run_after_diagnostic_readiness_audit_2026-07-22.md) reconfirmed the exact locked SHA-256 `77b66569bcc2803e5067f84ad20b63e595f8c0611beb87820166b1a3a9de112b`, 150 eligible Tier 1 identities, zero current queue/canonical/coverage overlap, and exclusion of both stopped parents plus the Oklahoma City diagnostic probe. Fresh dry run `all_2026-07-22_164014` passed 150/150 prompt checks without a backend call; one immediate no-search smoke returned `OK.`, an ID, and six output tokens.
+- **Live result:** exactly one process ran `all_2026-07-22_164144` in the fresh after-diagnostic directory using direct SDK, state ALL/mixed authorization, exact max/cap 150, `n_parallels=1`, five-second spacing, 90-second timeout, and zero retries. It completed all 150 requests: 142 parseable, 99 candidate-positive, 43 parseable-empty, eight isolated timeout-only, zero stopped-before-request, and 268 candidate rows. No resume ran.
+- **Failures:** Phoenix AZ, Kansas City MO, Indianapolis city (balance) IN, Las Vegas NV, Tampa FL, Fort Wayne IN, Little Rock AR, and Vancouver WA timed out after approximately 90–96 seconds without IDs/text/tokens. They were non-consecutive and are excluded from successful coverage. Oklahoma City succeeded in the official full run and is no longer merely a quarantined diagnostic result.
+- **Timing/usage:** 6,723.519 seconds (112m03.519s), 745.208 seconds recorded sleep, average 39.850s, median 36.398s, and 80.315 rows/hour. Usage is 4,258,356 input / 196,927 reasoning / 309,071 output / 4,567,427 total tokens. `$1.23800995` is an estimate-only standard-token figure; actual HUIT/hosted-search cost remains unavailable.
+- **Yield:** candidate rows were 268 versus 246 in Wave 1 and 223 in Wave 2; candidates per parseable municipality were 1.887 versus 1.651/1.507. Candidate-positive municipalities were 99 versus 112/98. Tier 1 therefore improved candidate-row density against both waves but not the positive-municipality rate against Wave 1. This does not establish verified quality or a research claim.
+- **Accounting/dashboard:** queue 1,009→1,277 (+268; 1,053 later-verification and 224 hold/rejected rows). Successful coverage 504→646 (+142), candidate-positive 391→490 (+99), parseable-empty 113→156 (+43), failure-only 10→18 (+8), and retained failed attempts 26→34. Dashboard discovery JSON now reports 51 states/DC, 35,589 municipalities, 646 covered, and 1,277 candidate rows. See the [result review](tier1_coordinator_150row_serial_live_after_diag_result_review_2026-07-22.md) and [merge report](tier1_coordinator_150row_serial_live_after_diag_queue_coverage_update_2026-07-22.md).
+- **Priority layer:** not recomputed after only 142 new successes, below the 300–600 cadence. Priority CSVs and priority-specific JSON remain at the pre-wave 504-covered/10-failure vintage; current discovery JSON is fresh. Rebuild after another 158–458 successful scouts or sooner if synchronized priority counts are required.
+- **Stage boundary:** all 268 candidates remain unverified scout leads. No URL was independently opened/downloaded; no verification, ingestion, codification, canonical/corpus edit, promotion, or claim use occurred. No remote was inspected and nothing was pushed.
+
+### Next Move
+
+Preserve the after-diagnostic relay and keep the two stopped attempts plus diagnostic probe outside official accounting. Do not automatically retry the eight timeouts. The next source-discovery task may prepare another Tier 1 wave or a separately authorized bounded failure-retry wave; maintain one serialized coordinator lane, fresh directories, explicit caps, and collapse stops. Coordinate source verification separately and refresh national tiers after the next 158–458 successful scouts unless the PI needs synchronized priority dashboard counts sooner.
+
 ## 2026-07-22 — Bounded diagnostic passes hosted search and the actual one-row scout path
 
 ### Current State

@@ -6,6 +6,36 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-22 (Tier 1 cross-state 150-row scout completed after transport diagnostic)
+
+**Did**
+- Started at diagnostic commit `b74e82d151a19e6e612181bfbc21cc018f237c33` with clean tracked state and unrelated untracked root `package-lock.json`. Reconfirmed locked input SHA-256 `77b66569bcc2803e5067f84ad20b63e595f8c0611beb87820166b1a3a9de112b`, all 150 Tier 1/nonretry/not-scouted/noncanonical identities, zero queue/coverage overlap, and lineage excluding stopped attempts `c6b3664`/`25445fe` and the quarantined diagnostic probe.
+- Ran fresh dry run `all_2026-07-22_164014`: all 150 row identities and strict employer/unit/source controls passed, with 150 dry timing rows and no backend call. Exactly one immediate no-search direct-SDK smoke returned `OK.`, a response ID, and six output tokens with no tools/search and zero retries.
+- Ran exactly one full coordinator live process as `all_2026-07-22_164144`, direct SDK, mixed state, exact max/cap 150, one lane, five-second spacing, 90-second timeout, and zero retries. It attempted all 150 rows, parsed 142, found 99 candidate-positive municipalities and 268 candidate rows, returned 43 valid empty lists, and recorded eight isolated timeout-only failures with no stopped rows.
+- Added the run once to the national candidate and coverage builders, generated a deterministic 37-state usage ledger, rebuilt queue/coverage, and refreshed dashboard JSON. Queue is now 1,277; successful discovery coverage 646; candidate-positive 490; parseable-empty 156; failure-only 18; retained failed attempts 34.
+
+**Decisions and why**
+- Treat the run as complete and merge-eligible. The eight timeouts were non-consecutive, all other rows have IDs/text/tokens and parseable output, lifecycle artifacts completed, and no protected file changed. No resume was needed or run; timeout-only Phoenix, Kansas City, Indianapolis city (balance), Las Vegas, Tampa, Fort Wayne, Little Rock, and Vancouver remain outside successful coverage.
+- Tier 1 improved candidate-row density: 268 rows and 1.887 rows per parseable municipality versus 246/1.651 in Wave 1 and 223/1.507 in Wave 2. Its 99 candidate-positive municipalities exceed Wave 2 by one but trail Wave 1 by 13, so this is promising operational yield—not validation of source quality or a causal claim.
+- Defer national priority-tier recomputation. This wave adds 142 successful scouts, below the documented 300–600 refresh cadence. Current discovery dashboard panels reflect 646/1,277; priority-specific JSON remains based on the pre-wave 504-covered/10-failure priority CSVs and is labeled accordingly.
+
+**Validation/audit results**
+```text
+readiness/input gate: PASS; exact hash; 150 eligible rows; stopped/probe outputs excluded
+fresh dry: 150/150 PASS; 150 dry timing rows; no backend call
+smoke: PASS; one request; OK.; response ID; 6 output tokens; no tools/search
+live: 150 attempted; 142 parseable; 99 positive; 43 empty; 8 isolated timeouts; 268 candidates; exit 0
+timing: 6,723.519s total; 745.208s sleep; 80.315 rows/hour; estimate-only cost $1.23800995
+accounting: queue 1,009→1,277; successful 504→646; positive 391→490; empty 113→156; failure-only 10→18
+```
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. No independent URL access, source verification, ingestion, codification, canonical contract/city-coverage/corpus edit, candidate promotion, claim use, remote action, or push occurred.
+
+**Next steps**
+1. Preserve the full lineage and relay. Do not merge either stopped run or the Oklahoma City diagnostic probe; do not automatically retry the eight timeout-only rows.
+2. Prepare the next Tier 1 source-discovery wave or a separately authorized bounded retry batch. Recompute national tiers after another 158–458 successful scouts, or sooner if synchronized priority dashboard counts are operationally necessary.
+3. Keep source verification coordinated and separate; establish exact employer, unit, provenance, dates, completeness, wage content, duplicate status, and matched-cycle value before ingestion or claim use.
+
 ## 2026-07-22 (Bounded diagnostic confirms hosted search and production scout route are healthy now)
 
 **Did**

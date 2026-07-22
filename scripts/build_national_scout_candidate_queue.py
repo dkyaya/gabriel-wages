@@ -152,6 +152,18 @@ SOURCE_SPECS = [
         "path": DOCS / "gabriel_state_source_scout_candidates_all_2026-07-22_114424.csv",
         "run_id": "all_2026-07-22_114424",
     },
+    {
+        "state": "ALL",
+        "allowed_states": {
+            "AK", "AL", "AR", "AZ", "CO", "CT", "DC", "FL", "GA", "HI",
+            "IA", "ID", "IN", "KS", "KY", "LA", "MA", "MD", "MI", "MN",
+            "MO", "MS", "NC", "NE", "NM", "NV", "OH", "OK", "OR", "RI",
+            "SC", "SD", "TN", "UT", "VA", "WA", "WI",
+        },
+        "wave": "COORD-TIER1-WAVE1-SERIAL150-2026-07-22",
+        "path": DOCS / "gabriel_state_source_scout_candidates_all_2026-07-22_164144.csv",
+        "run_id": "all_2026-07-22_164144",
+    },
 ]
 
 CALIBRATION_FILES = {
@@ -592,13 +604,46 @@ def build_rows() -> list[dict[str, str]]:
         )
 
     expected = {
+        "AK": 3,
+        "AL": 4,
+        "AZ": 12,
         "PA": 75,
         "TX": 113,
-        "MA": 24,
+        "MA": 46,
         "NJ": 94,
         "IL": 295,
         "NY": 57,
         "CA": 351,
+        "CO": 11,
+        "CT": 10,
+        "DC": 5,
+        "FL": 38,
+        "GA": 2,
+        "HI": 3,
+        "IA": 11,
+        "ID": 2,
+        "KS": 3,
+        "KY": 5,
+        "LA": 5,
+        "MD": 3,
+        "MI": 8,
+        "MN": 10,
+        "MO": 6,
+        "NC": 3,
+        "NE": 7,
+        "NM": 6,
+        "NV": 12,
+        "OH": 7,
+        "OK": 8,
+        "OR": 11,
+        "RI": 3,
+        "SC": 1,
+        "SD": 3,
+        "TN": 9,
+        "UT": 3,
+        "VA": 7,
+        "WA": 14,
+        "WI": 11,
     }
     observed = {state: counters[state] for state in expected}
     if observed != expected:
