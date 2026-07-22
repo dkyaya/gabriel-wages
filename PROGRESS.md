@@ -6,6 +6,43 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-22 (Tier 1 Wave 1 stopped safely on immediate live transport collapse)
+
+**Did**
+- Started at `364fd9d90f799bfe44c2d73d395a2c415f808ce0` with clean tracked state and the unrelated untracked root `package-lock.json`. Confirmed the national tiering ancestor and all three exact worker relays/commits (`d0b24ca`, `9ab705e`, `80f808a`), byte-identical input hashes, 50/50 reviews, no-network validation, five-second dry metadata, and 50 planned timing rows.
+- Combined Worker 1 ranks 1–50, Worker 2 ranks 51–100, and Worker 3 ranks 101–150 into an exact locked input with SHA-256 `77b66569bcc2803e5067f84ad20b63e595f8c0611beb87820166b1a3a9de112b`. All 150 rows remained Tier 1, future eligible, non-retry, non-failure, not scouted, noncanonical, absent from the queue, unique by municipality/Census ID, and in the expected 37-state/DC distribution.
+- Ran the required 150-prompt mixed-state dry review. All 150 identities and employer/unit/source controls passed; metadata records cap 150, sleep 5.0, no live attempt/backend return, and 150 dry-planned timing rows.
+- Ran exactly one no-search direct-SDK smoke. `Reply with OK.` returned `OK.`, a response ID, and six output tokens at 30 seconds/zero retries with no tools or search.
+- Ran exactly one coordinator live process. Oklahoma City and Phoenix immediately returned consecutive connection errors with no text, ID, or tokens. The runner correctly stopped after two requests, marked rows 3–150 `stopped_before_request`, preserved terminal artifacts, and exited 2 with zero parseable outcomes.
+
+**Decisions and why**
+- Do not resume in this task. Connection collapse is an explicit stop condition; no completed IDs exist to preserve, `--skip-completed-municipality-ids` would select all 150 again, and the task authorized one live process. Any later retry needs separate authorization, a fresh smoke, the same locked hash, a fresh output directory, and lineage to run `all_2026-07-22_152105`.
+- Do not rebuild queue/coverage or refresh dashboard/priority data. The run is incomplete and non-mergeable. National accounting remains 1,009 queue rows, 504 successful municipalities, 391 candidate-positive, 113 parseable-empty, and ten failure-only; Oklahoma City and Phoenix are not promoted into that accounting.
+- Treat the 148 terminal placeholder rows as unattempted, not municipality failures. The run gives no Tier 1 yield or completed-runtime evidence and does not test sustained five-second pacing.
+
+**Validation/audit results**
+```text
+worker relay gate: 3/3 PASS; 150/150 worker prompts independently checked
+coordinator dry run: 150/150 PASS; 150 dry-planned timing rows; no backend call
+smoke: PASS; one request; OK.; response ID; 6 output tokens; no tools/search
+live: 2 actual attempts; 2 consecutive connection errors; 148 stopped-before-request; 0 parseable; exit 2; not mergeable
+protected hashes: contracts.csv, city_coverage.csv, and tracked corpus set unchanged
+seven requested py_compile commands: exit 0
+prompt-contract no-network suite: 10 PASS checks
+direct-SDK fully mocked/no-network suite: 19 PASS checks
+validate.py: PASSED (64 contracts; 0 discourse; 64 coverage; 3 city attributes)
+ingest/test_pipeline.py: 60 passed, 0 failed
+audit_coverage.py: 28 healthy pairs (10 exact, 18 overlap), 2 exploratory adjacent, 6 unmatched safety units
+git diff --check: passed
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. No source verification, ingestion, codification, queue/coverage/priority rebuild, dashboard refresh, canonical contract/city-coverage/corpus edit, claim use, remote action, or push occurred.
+
+**Next steps**
+1. Preserve this parent and do not rerun into its directory. Diagnose or wait out the transient direct-SDK hosted-search route before any retry; do not infer a prompt, input, or pacing defect from two subsecond connection errors.
+2. Under separate authorization, run one fresh no-search smoke. Only if it passes and transport stability is credible, resume into a fresh directory with the same locked hash and `--skip-completed-municipality-ids`; because there are no completed IDs, review the dry resume plan as a full 150-row retry before live execution.
+3. Rebuild national accounting once only after a complete merge-eligible parent/resume lineage. Keep verification, ingestion, codification, and claim use separate.
+
 ## 2026-07-22 (Prepared first post-tiering Tier 1 cross-state worker wave)
 
 **Did**

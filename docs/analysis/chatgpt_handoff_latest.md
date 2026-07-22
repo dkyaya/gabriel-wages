@@ -6,6 +6,23 @@ Last updated: `2026-07-22`
 
 ---
 
+## 2026-07-22 — Tier 1 Wave 1 stopped safely on coordinator connection collapse
+
+### Current State
+
+- **Checkpoint and relay gate:** started at `364fd9d90f799bfe44c2d73d395a2c415f808ce0`. All three exact worker ZIPs passed content/integrity review: commits `d0b24ca`/`9ab705e`/`80f808a`, expected locked hashes and rank slices, 50/50 prompt reviews, no-network validation, five-second metadata, 50 planned timing rows, clean post-commit status, and unchanged protected evidence.
+- **Locked input:** [tier1_coordinator_150row_serial_live_input_2026-07-22.csv](tier1_coordinator_150row_serial_live_input_2026-07-22.csv) is exact Worker 1→2→3, ranks 1–150, with 150 unique municipality/Census IDs and SHA-256 `77b66569bcc2803e5067f84ad20b63e595f8c0611beb87820166b1a3a9de112b`. All rows remain Tier 1/future-eligible/non-retry/non-failure/not-scouted/noncanonical, have zero current queue overlap, and match the expected 37-state/DC distribution.
+- **Dry/smoke:** coordinator dry run `all_2026-07-22_151940` passed 150/150 identity and strict control checks, with 150 dry timing rows and no backend call. Exactly one direct-SDK no-search smoke used `Reply with OK.`, no tools/search, 30 seconds, and zero retries; it returned `OK.`, an ID, and six output tokens.
+- **Live stop:** exactly one live process started as `all_2026-07-22_152105` with state ALL, mixed-state authorization, max/cap 150, `n_parallels=1`, five-second spacing, 90-second timeout, and zero retries. Oklahoma City OK and Phoenix AZ returned consecutive connection errors after 0.198/0.005 seconds with no response text, ID, or tokens. The runner applied the collapse gate and made no request for rows 3–150.
+- **Artifacts/result:** timing records two `connection_error` attempts and 148 `stopped_before_request` rows; total elapsed is 5.841 seconds including 5.001 seconds sleep. Parseable, candidate-positive, parseable-empty, and candidate-row counts are all zero. Exit code is 2 and status is `completed_no_parseable_outcome`. The run is incomplete and not merge-eligible.
+- **No resume:** no child ran. The failure is the required connection-collapse stop, there are no completed IDs, and this task allowed one live process. A skip-completed resume would be a full 150-row rerun. A future separately authorized attempt must use a fresh smoke/output directory, the same hash, reviewed lineage, and no concurrency.
+- **Accounting boundary:** no candidate queue, coverage, dashboard, or priority builder ran. Current national state stays 1,009 queue rows, 504 successful, 391 candidate-positive, 113 parseable-empty, and ten failure-only. The pre-run priority layer remains intentionally unchanged; this failed parent adds no evidence.
+- **Validation/protection:** seven compiles passed; prompt tests passed 10; mocked direct-SDK tests passed 19; schema validation passed at 64 contracts; pipeline tests passed 60/60; canonical coverage remains 28 healthy pairs (10 exact, 18 overlap), two adjacent exploratory, and six unmatched safety units. Protected contract/city-coverage/corpus hashes are unchanged. No verification, ingestion, codification, canonical/corpus edit, claim use, remote action, or push occurred.
+
+### Next Move
+
+Preserve [the result review](tier1_coordinator_150row_serial_live_result_review_2026-07-22.md) and [stop report](tier1_coordinator_150row_serial_live_stop_report_2026-07-22.md). Do not rerun into the parent directory or merge it. After transport stability is plausible and only under separate live authorization, run one fresh no-search smoke, generate/review a fresh-directory resume plan against the same hash, and recognize that zero completed IDs means the plan should select all 150. Keep one serialized lane and stop again on collapse. Queue/coverage/dashboard rebuild occurs once only after complete merge-eligible lineage; verification, ingestion, codification, and claim use remain separate.
+
 ## 2026-07-22 — First post-tiering Tier 1 worker inputs are locked
 
 ### Current State
