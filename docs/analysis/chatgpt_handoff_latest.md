@@ -6,6 +6,25 @@ Last updated: `2026-07-23`
 
 ---
 
+## 2026-07-23 — Parallel Round 1 live collection completed; merge is the next separate task
+
+### Current State
+
+- **Start and inputs:** work began at clean tracked `4ee70150dd2a0c2fa5dac226f97a571ab1e50b68`. [The readiness audit](parallel_round1_live_collection_readiness_audit_2026-07-23.md) reconfirms 150 rows per lane, locked hashes `56e592291f1dbac83836acddcf0065df40141b51f9e93bfb548a040f52b8e700` and `f381ce60c362a78561250b08b66ba32822fc583b86892b04fbb24b3a6a7b998d`, 300 unique municipality/Census IDs, zero lane/current-coverage/canonical/retry/failure overlap, and exact hints 300/300.
+- **Preflight and dry gates:** plan-only made zero external calls. [The stronger gate](parallel_round1_preflight_gate_review_2026-07-23.md) passed one no-search, two hosted-search, and one actual scout-path call. The diagnostic Lake Oswego probe parsed in 24.748 seconds and its three candidate leads remain quarantined. [Both dry runs](parallel_round1_lane_dry_run_review_2026-07-23.md) passed 150/150 compact prompt identities, five hints, strict employer/unit/source/stage controls, and dry timing without backend calls.
+- **Lane 1:** exit 0; 150 attempted/responses; 148 parseable; 137 candidate-positive; 11 parseable-empty; two failures; zero stopped; 386 candidate leads. Elapsed 6,024.615 seconds (1h40m24.615s), 89.632 rows/hour. Failures were Newark OH `outer_timeout` at 90.006 seconds and St. Cloud FL empty/no-ID at 0.276 seconds.
+- **Lane 2:** exit 0; 150 attempted/responses; 149 parseable; 135 candidate-positive; 14 parseable-empty; one failure; zero stopped; 377 candidate leads. Elapsed 5,967.545 seconds (1h39m27.545s), 90.489 rows/hour. Waterloo IA was checkpointed `outer_timeout` at 90.006 seconds.
+- **Parallel result:** 297 parseable, 272 positive, 25 empty, three failures, zero stopped, and 763 unverified candidate leads. Parallel wall time was 6,530 seconds (1h48m50s), 165.391 attempted rows/hour, and 163.737 parseable rows/hour. No resume ran. See [the full result review](parallel_round1_live_collection_result_review_2026-07-23.md).
+- **Outer timeout/adaptive behavior:** both 90-second expiries became terminal rows and the lanes continued. Each lane had one backoff and five step-downs; observed sleep levels were 4/7.5/10 seconds for Lane 1 and 5/7.5/10 for Lane 2. Combined estimated standard-token cost is `$2.741876`, estimate-only; actual HUIT/tool cost is unavailable.
+- **Auditor:** the offline audit under `tmp/parallel_scout_rounds/POST-PI-PARALLEL-ROUND1-2026-07-23/lane_audit_attempt1/` classifies both lanes `completed_merge_eligible`, confirms valid hashes and zero completed-ID overlap, and recommends `merge_all_lanes`. This is not authorization to merge.
+- **Accounting boundary:** [the no-merge note](parallel_round1_no_accounting_merge_note_2026-07-23.md) records that no candidate-queue, coverage, yield, dashboard/project-phase, or priority builder ran. Official accounting therefore remains 794 covered, 612 positive, 182 empty, 20 failure-only, and 1,602 queue rows pending a later serial merge. If that merge accepts all 297 parseable outcomes, prospective checkpoint arithmetic is 1,091/2,000 covered and 909 remaining (about seven comparable 150-row waves); those are not current official counts. The probe and stopped `bd5e259` output remain quarantined.
+- **Operational deviations:** persisted UTC files show a 9m22s start stagger, above the requested 2–5 minutes because managed-tool scheduling exceeded the reported wait; the lanes still overlapped 1h31m03s. The serial runner also emitted two unique timestamped candidate CSVs under `docs/analysis/`. They are byte-identical to the isolated lane `parsed_candidates.csv` files and were not consumed by accounting, but future parallel rounds should redirect/suppress that secondary export.
+- **Validation:** [validation](parallel_round1_live_collection_validation_2026-07-23.md) reports seven compiles, 7 parallel tests, 25 mocked direct-SDK tests, 12 prompt tests, 60 ingestion tests, schema/coverage audit, protected/accounting/dashboard/stopped-output hashes, secret-pattern scan, and diff check passed. No independent URL verification, ingestion, codification, promotion, wage-gap/causal claim, regression, remote action, or push occurred.
+
+### Next Move
+
+Use [the serial merge template](parallel_scout_serial_merge_prompt_template_2026-07-23.md) only under a new explicit authorization. Recheck the lane audit and external timestamped-export caveat, then consume both complete lanes in one serial queue/coverage rebuild, refresh yield/dashboard/project-phase once, and update progress toward 2,000. Do not merge the preflight probe or stopped `bd5e259` output. Treat Newark, St. Cloud, and Waterloo as separate failures rather than ordinary covered rows. Before a future parallel live round, direct the secondary dated candidate export into each lane root and enforce a persisted 2–5-minute stagger.
+
 ## 2026-07-23 — Two-lane parallel scout framework is planned and offline-validated
 
 ### Current State

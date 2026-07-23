@@ -6,6 +6,36 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-23 (First two-lane parallel live collection completed; serial merge deferred)
+
+**Did**
+- Started from clean tracked `4ee70150dd2a0c2fa5dac226f97a571ab1e50b68` on `main`, confirmed `4ee7015`/`3a7d762`/`6db14f0`/`bef5077` ancestry, and preserved the unrelated untracked root `package-lock.json`.
+- Revalidated both locked Tier 1 inputs: Lane 1 is 150 rows at SHA-256 `56e592291f1dbac83836acddcf0065df40141b51f9e93bfb548a040f52b8e700`; Lane 2 is 150 rows at `f381ce60c362a78561250b08b66ba32822fc583b86892b04fbb24b3a6a7b998d`. Combined identities and Census IDs are 300/300 unique, with zero current-coverage, canonical, retry, failure-only, or cross-lane overlap and exact five-hint coverage 300/300.
+- Ran plan-only preflight with zero external calls and one stronger four-call live gate. No-search and two hosted-search diagnostics returned IDs/text/tokens; the one-row Lake Oswego probe was parseable in 24.748 seconds with three quarantined leads. Both fresh offline lane dry-runs passed 150/150 compact prompts, hints, identity/source controls, and timing rows.
+- Ran exactly two process-isolated, internally serialized direct-SDK lanes. Lane 1 completed 150 responses: 148 parseable, 137 positive, 11 empty, two failed, 386 candidate leads, 6,024.615 seconds, and 89.632 rows/hour. Lane 2 completed 150 responses: 149 parseable, 135 positive, 14 empty, one failed, 377 leads, 5,967.545 seconds, and 90.489 rows/hour. Neither lane resumed.
+- Combined collection is 297 parseable, 272 candidate-positive, 25 parseable-empty, three failed, zero stopped, and 763 unverified candidate leads. Two `outer_timeout` rows ended at 90.006 seconds with empty response evidence; one isolated empty/no-ID row ended in 0.276 seconds. Both lanes completed rather than hanging or collapsing.
+- Parallel wall time was 6,530 seconds (1h48m50s), or 165.391 attempted rows/hour and 163.737 parseable rows/hour. The actual persisted start stagger was 9m22s—not the intended 2–5 minutes—because managed-tool scheduling exceeded its reported poll duration; lanes still overlapped for 1h31m03s.
+- The offline lane auditor classified both lanes `completed_merge_eligible`, confirmed valid hashes and zero completed-ID overlap, and recommends `merge_all_lanes` in a separately authorized serial task. No accounting or dashboard builder ran.
+
+**Decisions and why**
+- Preserve collection/accounting separation: current official coverage remains 794 until the later serial merge. The live outputs, timestamped exports, diagnostic probe, and stopped `bd5e259` output remain outside shared accounting.
+- Accept the auditor's `merge_all_lanes` recommendation as a recommendation only. A new task must review it and rebuild queue/coverage exactly once before refreshing yield/dashboard.
+- If that later merge accepts all 297 parseable outcomes, checkpoint arithmetic would move from 794 to 1,091 covered, leaving 909; these are prospective values, not current accounting.
+- Keep the three failed municipalities separate from ordinary discovery and decide their retry treatment during or after serial merge.
+- Before another parallel round, add a runner option to redirect/suppress its secondary timestamped `docs/analysis/` export. Both current exports are byte-identical to their isolated lane `parsed_candidates.csv` files and did not collide or enter accounting, but the shared path is an isolation caveat.
+
+**Surprises/breakage**
+- The outer-timeout fix worked in production: Newark OH and Waterloo IA were checkpointed as terminal `outer_timeout` after 90.006 seconds instead of hanging.
+- The managed execution delay made the actual stagger 9m22s even though Lane 2 was launched immediately after the coordinator's reported two-minute poll. No lane was restarted because that would exceed the exactly-two-live-process authorization.
+- The legacy timestamped candidate-export behavior writes outside the configured output root. Unique timestamps prevented collision, and byte hashes prove the exports duplicate the isolated artifacts, but future parallel runs should close this path-isolation gap.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Seven compiles passed; parallel tests passed 7/7; mocked/no-network direct-SDK checks passed 25/25; prompt checks passed 12/12; ingestion tests passed 60/60; schema validation, coverage audit, 100-file protected/accounting/dashboard/stopped-output hash comparison, 83-file secret-pattern scan, and `git diff --check` passed. No independent URL verification, ingestion, `gabriel.codify`, candidate promotion, queue/coverage/yield/dashboard/priority rebuild, wage-gap calculation or claim, causal claim, regression, remote inspection/action, or push occurred.
+
+**Next steps**
+1. In a separate explicitly authorized task, use `parallel_scout_serial_merge_prompt_template_2026-07-23.md` to review the lane audit and merge both complete lanes into national accounting exactly once.
+2. Refresh yield learning, dashboard/project-phase JSON, and the 2,000-municipality checkpoint only after that serial merge passes.
+3. Before another parallel round, route the secondary dated candidate export into each lane root and restore a reliably measured 2–5-minute launch stagger.
+
 ## 2026-07-23 (Coordinator-safe parallel scout lane framework prepared offline)
 
 **Did**
