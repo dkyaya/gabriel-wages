@@ -159,6 +159,44 @@ main > section, .hub-section-group { scroll-margin-top: 82px; }
 .project-orientation h2 { font-size: 1.35rem; }
 .project-orientation p:last-child { margin-bottom: 0; color: #52615b; font-size: 0.9rem; }
 
+.phase-panel { border-top: 5px solid var(--scout); }
+.phase-progress { margin-bottom: 18px; }
+.phase-progress-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: baseline;
+  margin-bottom: 9px;
+}
+.phase-progress-label strong { color: var(--evergreen); font-family: Georgia, "Times New Roman", serif; font-size: 1.3rem; }
+.phase-progress-label span { color: var(--muted); font-size: 0.8rem; }
+.phase-progress-track { height: 14px; overflow: hidden; border-radius: 999px; background: #dce5e4; }
+.phase-progress-track span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--scout), var(--evergreen)); }
+.phase-metrics {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-bottom: 20px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  overflow: hidden;
+}
+.phase-metrics div { display: grid; gap: 6px; padding: 15px 17px; border-right: 1px solid var(--line); background: #f7f8f5; }
+.phase-metrics div:last-child { border-right: 0; }
+.phase-metrics span { color: var(--muted); font-size: 0.72rem; }
+.phase-metrics strong { color: var(--evergreen); font-family: Georgia, "Times New Roman", serif; font-size: 1.35rem; }
+.phase-next {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.8fr) minmax(360px, 1.4fr) auto;
+  gap: 24px;
+  align-items: center;
+  padding: 18px;
+  border-radius: 10px;
+  background: #eef4f3;
+}
+.phase-next h3 { margin: 4px 0 0; color: var(--evergreen); font-family: Georgia, "Times New Roman", serif; font-size: 1.15rem; }
+.phase-next ol { display: flex; flex-wrap: wrap; gap: 7px; margin: 0; padding: 0; list-style: none; }
+.phase-next li { padding: 7px 9px; border: 1px solid #bfd0cc; border-radius: 999px; background: #fff; color: #37564e; font-size: 0.74rem; font-weight: 750; }
+
 .hub-section, .hub-section-group { margin-top: 26px; }
 .hub-section { padding: 28px; }
 .hub-section-group { padding-top: 3px; }
@@ -438,6 +476,8 @@ tbody tr:hover { background: #f1f5f1; }
 .readiness-columns li, .limitation-list li { margin: 6px 0; color: #4f5e58; font-size: 0.88rem; }
 .regression-lock { display: grid; grid-template-columns: minmax(160px, 0.5fr) 1.5fr; gap: 24px; align-items: center; margin-top: 24px; padding: 18px; border: 1px dashed #a9afab; border-radius: 10px; background: #efefec; }
 .regression-lock p { margin: 0; color: #56605c; }
+.regression-lock ul { margin: 0 0 12px; padding-left: 19px; }
+.regression-lock li { margin: 5px 0; color: #4f5e58; font-size: 0.86rem; }
 
 .status-legend { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 24px; }
 .status-legend div { display: grid; grid-template-columns: minmax(112px, auto) 1fr; gap: 10px; align-items: center; }
@@ -699,6 +739,9 @@ footer p { margin: 0 0 4px; }
   .operations-metrics { grid-template-columns: repeat(3, 1fr); }
   .operations-metrics div:nth-child(3) { border-right: 0; }
   .operations-metrics div:nth-child(-n + 3) { border-bottom: 1px solid var(--line); }
+  .phase-metrics { grid-template-columns: repeat(3, 1fr); }
+  .phase-metrics div:nth-child(3) { border-right: 0; }
+  .phase-metrics div:nth-child(-n + 3) { border-bottom: 1px solid var(--line); }
 }
 
 @media (max-width: 1000px) {
@@ -706,6 +749,7 @@ footer p { margin: 0 0 4px; }
   .map-and-panel, .two-column { grid-template-columns: 1fr; }
   .state-panel { position: static; }
   .hub-split, .report-library-grid { grid-template-columns: 1fr; }
+  .phase-next { grid-template-columns: 1fr; }
   .verification-flow { grid-template-columns: repeat(3, 1fr); }
   .verification-flow article:nth-child(3)::after { display: none; }
   .yield-grid { grid-template-columns: 1fr; }
@@ -741,10 +785,11 @@ footer p { margin: 0 0 4px; }
   .project-orientation article { min-height: 0; border-right: 0; border-bottom: 1px solid var(--line); }
   .project-orientation article:last-child { border-bottom: 0; }
   .hub-section { padding: 22px 18px; }
-  .priority-summary-strip, .operations-metrics { grid-template-columns: repeat(2, 1fr); }
-  .priority-summary-strip div, .operations-metrics div { border-bottom: 1px solid var(--line); }
-  .priority-summary-strip div:nth-child(even), .operations-metrics div:nth-child(even) { border-right: 0; }
-  .priority-summary-strip div:last-child, .operations-metrics div:last-child { border-bottom: 0; }
+  .priority-summary-strip, .operations-metrics, .phase-metrics { grid-template-columns: repeat(2, 1fr); }
+  .priority-summary-strip div, .operations-metrics div, .phase-metrics div { border-bottom: 1px solid var(--line); }
+  .priority-summary-strip div:nth-child(even), .operations-metrics div:nth-child(even), .phase-metrics div:nth-child(even) { border-right: 0; }
+  .priority-summary-strip div:last-child, .operations-metrics div:last-child, .phase-metrics div:last-child { border-bottom: 0; }
+  .phase-progress-label { align-items: flex-start; flex-direction: column; gap: 2px; }
   .tier-grid, .next-step-grid { grid-template-columns: repeat(2, 1fr); }
   .verification-flow { grid-template-columns: 1fr; }
   .verification-flow article { min-height: 0; }
@@ -763,8 +808,8 @@ footer p { margin: 0 0 4px; }
 
 @media (max-width: 430px) {
   .headline-grid, .priority-grid, .unit-composition > div, .state-metrics, .stage-grid { grid-template-columns: 1fr; }
-  .project-nav-open .project-nav-links, .priority-summary-strip, .operations-metrics, .tier-grid, .next-step-grid { grid-template-columns: 1fr; }
-  .priority-summary-strip div, .operations-metrics div { border-right: 0; }
+  .project-nav-open .project-nav-links, .priority-summary-strip, .operations-metrics, .phase-metrics, .tier-grid, .next-step-grid { grid-template-columns: 1fr; }
+  .priority-summary-strip div, .operations-metrics div, .phase-metrics div { border-right: 0; }
   .metric-select, .metric-select select { width: 100%; max-width: none; }
   .map-mode-toggle { width: 100%; }
   .map-mode-toggle button { flex: 1; }

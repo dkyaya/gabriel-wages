@@ -34,12 +34,66 @@ export function ProjectOrientation({ totals, priorityTotals, report }) {
       </article>
       <article>
         <p className="eyebrow">Forthcoming</p>
-        <h2>Verification before findings</h2>
+        <h2>Scale discovery, then verify</h2>
         <p>
-          The recommended next gate is a 50–100-row verification pilot. No project-wide verified or
-          analysis-ready scout evidence exists yet.
+          Continue coordinated 150-municipality waves to the approximately 2,000-covered checkpoint,
+          then pause broad scouting for the full downstream cycle.
         </p>
       </article>
+    </section>
+  );
+}
+
+export function ProjectPhasePanel({ phase }) {
+  const progress = Math.min(100, Math.max(0, phase.progress_percentage));
+  return (
+    <section className="panel hub-section phase-panel" id="project-phase" aria-labelledby="project-phase-title">
+      <div className="section-heading">
+        <div>
+          <p className="eyebrow">Project phase</p>
+          <h2 id="project-phase-title">Source Discovery Scale-Up</h2>
+        </div>
+        <StatusPill tone="scout">
+          {formatNumber(phase.current_scout_covered)} of {formatNumber(phase.checkpoint_target_scout_covered)}
+        </StatusPill>
+      </div>
+
+      <div className="phase-progress" aria-label={`${progress}% of the scout-coverage checkpoint reached`}>
+        <div className="phase-progress-label">
+          <strong>{formatNumber(phase.current_scout_covered)} scout-covered</strong>
+          <span>{progress}% toward the approximately {formatNumber(phase.checkpoint_target_scout_covered)} checkpoint</span>
+        </div>
+        <div className="phase-progress-track" aria-hidden="true">
+          <span style={{ width: `${progress}%` }} />
+        </div>
+      </div>
+
+      <div className="phase-metrics">
+        <div><span>Remaining</span><strong>{formatNumber(phase.remaining_to_checkpoint)}</strong></div>
+        <div><span>Estimated waves</span><strong>{phase.estimated_150_row_waves_remaining}</strong></div>
+        <div><span>Candidate leads</span><strong>{formatNumber(phase.current_candidate_queue_rows)}</strong></div>
+        <div><span>Candidate-positive</span><strong>{formatNumber(phase.current_candidate_positive_municipalities)}</strong></div>
+        <div><span>Failure-only lane</span><strong>{formatNumber(phase.current_failure_only_municipalities)}</strong></div>
+      </div>
+
+      <div className="phase-next">
+        <div>
+          <p className="eyebrow">After the checkpoint</p>
+          <h3>Pause broad scouting for the downstream cycle</h3>
+        </div>
+        <ol>
+          <li>Verification</li>
+          <li>Extraction</li>
+          <li>Ingestion</li>
+          <li>Source rating</li>
+          <li>Descriptive analysis</li>
+        </ol>
+        <StatusPill tone="future">Regressions deferred</StatusPill>
+      </div>
+      <p className="panel-note">
+        Candidate rows remain unverified, the checkpoint is a workflow pause point rather than an
+        evidentiary threshold, and ordinary discovery remains separate from failure-only retries.
+      </p>
     </section>
   );
 }
@@ -175,7 +229,7 @@ export function ScoutOperationsPanel({ operations, runtime }) {
   );
 }
 
-export function VerificationPipeline({ candidateSummary, readiness }) {
+export function VerificationPipeline({ candidateSummary, readiness, phase }) {
   const candidateRows = candidateSummary.totals.candidate_rows;
   const stages = [
     ["Candidate lead", formatNumber(candidateRows), "Collected", "scout"],
@@ -192,7 +246,7 @@ export function VerificationPipeline({ candidateSummary, readiness }) {
           <p className="eyebrow">Verification pipeline</p>
           <h2 id="verification-title">From discovered lead to analysis-ready evidence</h2>
         </div>
-        <StatusPill tone="future">Verification pilot planned</StatusPill>
+        <StatusPill tone="future">Begins near {formatNumber(phase.checkpoint_target_scout_covered)}</StatusPill>
       </div>
 
       <div className="verification-flow">
@@ -208,12 +262,12 @@ export function VerificationPipeline({ candidateSummary, readiness }) {
 
       <div className="verification-callout">
         <div>
-          <p className="eyebrow">Recommended next gate</p>
-          <h3>Verify a stratified 50–100-row candidate sample</h3>
+          <p className="eyebrow">Next phase after scale-up</p>
+          <h3>Verify, extract, ingest, rate, and analyze descriptively</h3>
         </div>
         <p>
-          Confirm exact employer and unit, source owner, document type, dates, completeness, duplicate status,
-          wage-field extractability, and matched-cycle potential before ingestion or empirical use.
+          At the approximately 2,000-covered checkpoint, confirm exact employer and unit, provenance,
+          dates, completeness, wage extractability, and matched-cycle potential before any gap calculation.
         </p>
       </div>
       <p className="panel-note">{readiness.promotion_gate}</p>
@@ -336,33 +390,37 @@ export function MethodologyDefinitions() {
   );
 }
 
-export function NextStepsPanel({ priority }) {
+export function NextStepsPanel({ priority, phase }) {
   return (
     <section className="panel hub-section next-steps-panel" id="next-steps" aria-labelledby="next-steps-title">
       <div className="section-heading">
         <div>
           <p className="eyebrow">Next steps</p>
-          <h2 id="next-steps-title">The immediate decision is breadth versus verification</h2>
+          <h2 id="next-steps-title">Continue coordinated discovery to the checkpoint</h2>
         </div>
-        <StatusPill tone="calibration">PI decision point</StatusPill>
+        <StatusPill tone="scout">PI-aligned strategy</StatusPill>
       </div>
       <div className="next-step-grid">
         <article className="recommended-step">
-          <span>Recommended</span>
-          <h3>Approve a 50–100-row verification pilot</h3>
-          <p>Measure lead conversion and matched-cycle potential before substantially expanding the queue.</p>
+          <span>Immediate</span>
+          <h3>Run the next ordinary 150-row wave</h3>
+          <p>Use compact prompts, deterministic hints, adaptive sleep/backoff, and the stronger preflight gate.</p>
         </article>
         <article>
-          <span>Optional breadth</span>
-          <h3>Continue ordinary Tier 1 scouting</h3>
-          <p>{formatNumber(priority.totals.tier_1_eligible)} eligible Tier 1 municipalities remain after the current checkpoint.</p>
+          <span>Scale-up checkpoint</span>
+          <h3>Reach approximately {formatNumber(phase.checkpoint_target_scout_covered)} covered</h3>
+          <p>{formatNumber(phase.remaining_to_checkpoint)} remain, or about {phase.estimated_150_row_waves_remaining} coordinated waves.</p>
         </article>
         <article>
-          <span>Separate retry lane</span>
-          <h3>Retry failure-only municipalities later</h3>
-          <p>Keep {formatNumber(priority.totals.failure_only_retry_targets)} transport/empty-response targets outside ordinary discovery.</p>
+          <span>Then pause breadth</span>
+          <h3>Run the downstream cycle</h3>
+          <p>Verify, extract, ingest, rate sources, calculate descriptive gaps, and document mechanism correlations. Regressions come later.</p>
         </article>
       </div>
+      <p className="panel-note">
+        {formatNumber(priority.totals.tier_1_eligible)} ordinary Tier 1 municipalities remain eligible;
+        {" "}{formatNumber(priority.totals.failure_only_retry_targets)} failure-only targets remain in a separate lane.
+      </p>
     </section>
   );
 }

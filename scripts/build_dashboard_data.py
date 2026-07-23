@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import csv
 import json
+import math
 import sys
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
@@ -52,6 +53,10 @@ HYPOTHESIS_TRACKER_PATH = ANALYSIS_DIR / "hypothesis_tracker_2026-07-12.csv"
 REPORTS_INDEX_SOURCE_PATH = (
     ROOT / "docs" / "dashboard" / "reports" / "reports_index.json"
 )
+
+SCOUT_CHECKPOINT_TARGET = 2_000
+COORDINATED_WAVE_SIZE = 150
+CURRENT_SOURCE_ACCOUNTING_COMMIT = "3f2f815f4ca4b4e90f6ca1bff769bd300843d703"
 
 REQUIRED_PATHS = [
     STATE_COVERAGE_PATH,
@@ -140,6 +145,7 @@ GLOBAL_LIMITATIONS = [
     "Likely matched-set groups are scheduling leads inferred from scout unit labels, not verified city-cycle matches.",
     "Project-wide verified, ingested, wage-extraction, codified, and regression metrics are not yet wired into this dashboard build.",
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
+    "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold.",
 ]
 
 
@@ -702,7 +708,7 @@ def build_analysis_readiness(
     )
     return {
         "metadata": metadata,
-        "overall_status": "source_discovery_dashboard_mvp",
+        "overall_status": "source_discovery_scale_up_to_approximately_2000",
         "current_inputs": {
             "national_queue_available": bool(queue_rows),
             "national_coverage_available": bool(state_rows),
@@ -762,12 +768,12 @@ def build_analysis_readiness(
             },
             "wage_extraction_stage": {
                 "available": False,
-                "display_status": "not_available",
+                "display_status": "planned_after_scout_checkpoint_and_verification",
                 "observation_count": None,
             },
             "regression_stage": {
                 "available": False,
-                "display_status": "not_available",
+                "display_status": "deferred_until_much_later",
                 "estimate_count": None,
             },
         },
@@ -967,6 +973,7 @@ def build_scout_operations_summary(
         as_int(row["municipalities_scout_attempt_failed_connection"])
         for row in state_rows
     )
+    remaining = max(SCOUT_CHECKPOINT_TARGET - covered, 0)
     return {
         **metadata,
         "stage": "scout_operations_unverified_discovery",
@@ -976,6 +983,24 @@ def build_scout_operations_summary(
             "candidate_positive_municipalities": positive,
             "parseable_empty_municipalities": empty,
             "failure_only_municipalities": failure_only,
+        },
+        "active_strategy": {
+            "current_phase": "Source discovery scale-up",
+            "checkpoint_target_scout_covered": SCOUT_CHECKPOINT_TARGET,
+            "remaining_to_checkpoint": remaining,
+            "estimated_150_row_waves_remaining": "8-9",
+            "full_150_row_waves_to_reach_or_exceed_checkpoint": math.ceil(
+                remaining / COORDINATED_WAVE_SIZE
+            ),
+            "ordinary_discovery_lane": (
+                "Continue coordinated Tier-prioritized 150-municipality waves; "
+                "keep failure-only retries separate."
+            ),
+            "next_phase": (
+                "Verification, extraction, ingestion, rating, and descriptive "
+                "wage-gap analysis"
+            ),
+            "regressions_status": "Deferred",
         },
         "latest_wave": {
             "wave_id": latest["wave_id"],
@@ -1045,7 +1070,10 @@ def build_scout_yield_state_layer(
 
 
 def build_scout_runtime_trends(
-    *, wave_rows: list[dict[str, str]], metadata: dict[str, Any]
+    *,
+    wave_rows: list[dict[str, str]],
+    state_rows: list[dict[str, str]],
+    metadata: dict[str, Any],
 ) -> dict[str, Any]:
     waves = []
     for row in wave_rows:
@@ -1072,10 +1100,87 @@ def build_scout_runtime_trends(
         **metadata,
         "stage": "scout_operations_unverified_discovery",
         "waves": waves,
+        "checkpoint_context": {
+            "target_scout_covered": SCOUT_CHECKPOINT_TARGET,
+            "current_scout_covered": sum(
+                as_int(row["municipalities_scouted"]) for row in state_rows
+            ),
+            "note": (
+                "The current total comes from national coverage accounting; runtime "
+                "waves shown here are only the four reviewed coordinated waves."
+            ),
+        },
         "next_run_instrumentation": [
             "compact prompt character/token proxy",
             "adaptive planned and actual sleep",
             "per-row elapsed time and failure type",
+        ],
+    }
+
+
+def build_project_phase_summary(
+    *,
+    state_rows: list[dict[str, str]],
+    queue_rows: list[dict[str, str]],
+    metadata: dict[str, Any],
+) -> dict[str, Any]:
+    """Build the PI-aligned source-discovery checkpoint layer."""
+
+    covered = sum(as_int(row["municipalities_scouted"]) for row in state_rows)
+    positive = sum(
+        as_int(row["municipalities_scouted_with_candidates"]) for row in state_rows
+    )
+    failure_only = sum(
+        as_int(row["municipalities_scout_attempt_failed_connection"])
+        for row in state_rows
+    )
+    remaining = max(SCOUT_CHECKPOINT_TARGET - covered, 0)
+    return {
+        **metadata,
+        "stage": "project_phase_checkpoint",
+        "current_phase": "Source discovery scale-up",
+        "checkpoint_target_scout_covered": SCOUT_CHECKPOINT_TARGET,
+        "current_scout_covered": covered,
+        "remaining_to_checkpoint": remaining,
+        "progress_percentage": round(
+            100.0 * covered / SCOUT_CHECKPOINT_TARGET, 1
+        ),
+        "estimated_150_row_waves_remaining": "8-9",
+        "full_150_row_waves_to_reach_or_exceed_checkpoint": math.ceil(
+            remaining / COORDINATED_WAVE_SIZE
+        ),
+        "current_candidate_queue_rows": len(queue_rows),
+        "current_candidate_positive_municipalities": positive,
+        "current_failure_only_municipalities": failure_only,
+        "next_phase": (
+            "Verification, extraction, ingestion, rating, descriptive wage-gap analysis"
+        ),
+        "next_phase_sequence": [
+            "verify candidate sources",
+            "extract wage data",
+            "ingest structured observations",
+            "rate source quality and extractability",
+            "analyze descriptive wage-growth gaps",
+            "document correlated wage mechanisms",
+            "add wage-growth-gap map filtering",
+            "decide the most efficient repeat strategy",
+        ],
+        "regressions_status": "Deferred",
+        "last_updated_commit": CURRENT_SOURCE_ACCOUNTING_COMMIT,
+        "last_updated_context": "source_discovery_accounting_checkpoint",
+        "future_live_controls": [
+            "stronger preflight gate",
+            "compact prompts",
+            "deterministic search hints",
+            "adaptive sleep and backoff",
+            "one serialized coordinator live lane",
+        ],
+        "caveats": [
+            "Candidate rows are unverified.",
+            "Wage gaps have not been calculated.",
+            "Mechanisms have not been analyzed for correlation with wage-growth gaps.",
+            "Priority tiers are operational scheduling inputs, not findings.",
+            "The checkpoint is a workflow pause point, not an evidentiary threshold.",
         ],
     }
 
@@ -1246,6 +1351,12 @@ def main() -> int:
     )
     scout_runtime_trends = build_scout_runtime_trends(
         wave_rows=scout_yield_wave_rows,
+        state_rows=state_rows,
+        metadata=metadata,
+    )
+    project_phase_summary = build_project_phase_summary(
+        state_rows=state_rows,
+        queue_rows=queue_rows,
         metadata=metadata,
     )
     reports_index = build_reports_index_layer(
@@ -1264,6 +1375,7 @@ def main() -> int:
         write_json("scout_operations_summary.json", scout_operations),
         write_json("scout_yield_by_state.json", scout_yield_by_state),
         write_json("scout_runtime_trends.json", scout_runtime_trends),
+        write_json("project_phase_summary.json", project_phase_summary),
         write_json("reports_index.json", reports_index),
     ]
 

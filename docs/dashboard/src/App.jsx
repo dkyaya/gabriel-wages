@@ -8,6 +8,7 @@ import statePrioritySummary from "../data/state_priority_summary.json";
 import scoutOperations from "../data/scout_operations_summary.json";
 import scoutRuntimeTrends from "../data/scout_runtime_trends.json";
 import scoutYieldByState from "../data/scout_yield_by_state.json";
+import projectPhaseSummary from "../data/project_phase_summary.json";
 import reportsIndex from "../data/reports_index.json";
 import piProgressReportPdf from "../reports/pi_progress_report_source_discovery_2026-07-22.pdf?url";
 import { AnalysisReadinessPanel } from "./components/AnalysisReadinessPanel.jsx";
@@ -21,6 +22,7 @@ import {
   MethodologyDefinitions,
   NextStepsPanel,
   PriorityTiersPanel,
+  ProjectPhasePanel,
   ProjectOrientation,
   ReportsLibrary,
   ScoutOperationsPanel,
@@ -146,7 +148,7 @@ function App() {
             </p>
           </div>
           <div className="header-status">
-            <StatusPill tone="scout">Post-Tier 1 Wave 2</StatusPill>
+            <StatusPill tone="scout">{projectPhaseSummary.current_phase}</StatusPill>
             <span>Data vintage {stateSummary.metadata.data_vintage}</span>
             <a href={piProgressReportPdf} target="_blank" rel="noreferrer">Open current PI report</a>
           </div>
@@ -166,8 +168,8 @@ function App() {
                 <h2 id="overview-title">National source-discovery status</h2>
               </div>
               <div className="checkpoint-label">
-                <span>Latest checkpoint</span>
-                <strong>{currentReport.checkpoint}</strong>
+                <span>Active project checkpoint</span>
+                <strong>Scale to approximately {formatNumber(projectPhaseSummary.checkpoint_target_scout_covered)} covered</strong>
               </div>
             </div>
 
@@ -209,6 +211,8 @@ function App() {
             />
           </section>
 
+          <ProjectPhasePanel phase={projectPhaseSummary} />
+
           <section className="hub-section-group" id="geography" aria-label="Coverage map and state status">
             <div className="hub-section-intro">
               <p className="eyebrow">Coverage and geography</p>
@@ -241,7 +245,11 @@ function App() {
             <QueueTable rows={candidateSummary.by_state} onSelect={chooseState} />
           </section>
 
-          <VerificationPipeline candidateSummary={candidateSummary} readiness={analysisReadiness} />
+          <VerificationPipeline
+            candidateSummary={candidateSummary}
+            readiness={analysisReadiness}
+            phase={projectPhaseSummary}
+          />
 
           <StateYieldPanel yieldData={scoutYieldByState} operations={scoutOperations} />
 
@@ -249,9 +257,9 @@ function App() {
 
           <MethodologyDefinitions />
 
-          <AnalysisReadinessPanel data={analysisReadiness} />
+          <AnalysisReadinessPanel data={analysisReadiness} phase={projectPhaseSummary} />
 
-          <NextStepsPanel priority={prioritySummary} />
+          <NextStepsPanel priority={prioritySummary} phase={projectPhaseSummary} />
 
           <DataLimitations
             metadata={stateSummary.metadata}

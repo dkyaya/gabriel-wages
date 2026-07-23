@@ -2,9 +2,26 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-22`
+Last updated: `2026-07-23`
 
 ---
+
+## 2026-07-23 — Scale-up checkpoint dashboard and post-PI Wave 1 worker package are ready
+
+### Current State
+
+- **Starting checkpoint:** work began at clean tracked `42dbe521f62e79d7ab54ddf7d41ca3f72e3354fb` on `main`, with `42dbe52`/`3f2f815`/`bef5077` ancestry present. The unrelated untracked root `package-lock.json` remains untouched and excluded.
+- **PI-aligned phase:** ordinary coordinated discovery continues from 794 successful scout-covered municipalities to an approximately 2,000-covered workflow checkpoint. The current gap is 1,206, or roughly 8–9 additional 150-row waves; nine full waves reach or exceed the target arithmetically.
+- **Dashboard:** `scripts/build_dashboard_data.py` now emits [project_phase_summary.json](../dashboard/data/project_phase_summary.json) from current coverage/queue accounting and adds checkpoint context to operations/runtime JSON. The hub presents Source Discovery Scale-Up, the post-checkpoint verification/extraction/ingestion/rating/descriptive sequence, deferred regressions, and a planned—but currently unavailable—wage-growth-gap percentage map/filter and mechanism-correlation layer. Existing map, reports library, state routing, and caveats remain.
+- **Locked selection:** [the top-150 input](post_pi_wave1_top150_scout_input_2026-07-23.csv) contains exactly 150 Tier 1 rows in required score order. It has zero retry, failure-only, current coverage, canonical, prior official-wave, duplicate municipality-ID, or duplicate Census-ID rows; all five hints are present. SHA-256: `cf3287ddc831fd268b81334180fe35e11ffe472841f0a971dff09acbf9528079`.
+- **Split:** [the split audit](post_pi_wave1_worker_batch_split_design_audit_2026-07-23.md) chooses contiguous rank slicing because the largest within-worker state counts are 15, 13, and 16, below the severe thresholds. Worker 1 ranks 1–50 hashes to `ac1cfad98cf21b97c5845b7b06b48718383668a57ee18a605d50b089fe20b9fc`; Worker 2 ranks 51–100 hashes to `2c45d7ceff4b619b7dfa8d65bf7ce7b7d3846f2ff8a328e76faeec24f10e80a7`; Worker 3 ranks 101–150 hashes to `574507500387ccbfb162504086b9463811b6906f765a2066d3a7d928ae17941d`.
+- **Worker controls:** [Worker 1](post_pi_wave1_worker_1_prep_prompt_2026-07-23.md), [Worker 2](post_pi_wave1_worker_2_prep_prompt_2026-07-23.md), and [Worker 3](post_pi_wave1_worker_3_prep_prompt_2026-07-23.md) are offline-only. Each requires its assigned 50-row input, compact prompts, exact hints, adaptive `3/5/15/10/25/2` metadata, `row_timing.csv`, 50/50 identity and strict control review, local commit, sanitized relay, and mandatory copy to the main repo `tmp/`. They prohibit live/API/model/preflight/search/URL/verification/ingestion/codify/accounting/remote/push actions.
+- **Validation:** all requested compiles passed; yield/dashboard builders reproduce 51 states/DC, 35,589 universe, 794 covered, and 1,602 leads; prompt tests passed 12; fully mocked/no-network direct-SDK tests passed 21; schema validation passed; ingestion tests passed 60/60; canonical coverage remains 64 contracts, 19 cities, 28 healthy pairs (10 exact/18 overlap), two adjacent exploratory, and six unmatched safety; phase/input/hash/prompt/protected checks and Vite production build passed; `git diff --check` passed.
+- **Boundary:** no scout, worker dry run, preflight, live/API/model/hosted-search call, URL access or verification, ingestion, codification, queue/coverage/priority input change, candidate promotion, protected/corpus edit, wage-gap finding, causal claim, remote inspection/action, or push occurred.
+
+### Next Move
+
+Run the three worker prep prompts independently in their assigned worker worktrees and require the three sanitized `post_pi_wave1_worker_<N>_prep_relay_2026-07-23_<commit>.zip` files to appear in the main repo `tmp/`. Then follow [the coordinator handoff](post_pi_wave1_coordinator_after_worker_relays_handoff_2026-07-23.md): inspect every relay, lock Worker 1→2→3, dry-review all 150 prompts, and only under separate live authorization run the stronger preflight followed by one serialized direct-SDK process. Keep failure-only retries separate; rebuild accounting/dashboard only for a complete merge-eligible lineage; update the 2,000 checkpoint after success.
 
 ## 2026-07-22 — Branded PI report and permanent project hub prepared
 

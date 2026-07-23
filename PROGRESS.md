@@ -6,6 +6,31 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-23 (PI-aligned 2,000-municipality checkpoint and next three worker batches prepared)
+
+**Did**
+- Started from clean tracked `42dbe521f62e79d7ab54ddf7d41ca3f72e3354fb` on `main`, confirmed required `42dbe52`/`3f2f815`/`bef5077` ancestry, and preserved the unrelated untracked root `package-lock.json`.
+- Reframed the project hub around Source Discovery Scale-Up: 794 of an approximately 2,000-covered workflow checkpoint, 1,206 remaining, and roughly 8–9 coordinated 150-row waves. Added deterministic `project_phase_summary.json`, updated operations/runtime context, preserved the map and reports library, and documented the post-checkpoint verification → extraction → ingestion → rating → descriptive-analysis sequence. Wage-growth gap mapping/filtering and mechanism-correlation documentation are explicitly planned and unavailable until verified extraction; regressions are deferred.
+- Locked the next ordinary 150 targets from the current top-500 priority layer joined to exact full-priority, current coverage, failure, canonical, prior-wave, and hint status. All 150 are Tier 1, future eligible, unscouted, nonretry, nonfailure, noncanonical, unique by municipality/Census ID, and have five deterministic hints. The top-150 SHA-256 is `cf3287ddc831fd268b81334180fe35e11ffe472841f0a971dff09acbf9528079`.
+- Chose contiguous rank slicing after comparing it with round-robin. Worker hashes are `ac1cfad98cf21b97c5845b7b06b48718383668a57ee18a605d50b089fe20b9fc`, `2c45d7ceff4b619b7dfa8d65bf7ce7b7d3846f2ff8a328e76faeec24f10e80a7`, and `574507500387ccbfb162504086b9463811b6906f765a2066d3a7d928ae17941d`. Each worker prompt requires a 50-row offline dry run, compact prompts, exact hints, adaptive `3/5/15/10/25/2` metadata, strict employer/unit/source controls, local commit, sanitized relay, and mandatory copy to main `tmp/`.
+
+**Decisions and why**
+- Continue ordinary Tier-prioritized discovery until approximately 2,000 scout-covered municipalities, then pause broad scouting for the first full downstream cycle. The checkpoint is a workflow pause point, not an evidentiary threshold.
+- Keep the 20 failure-only municipalities in a separate retry lane. Do not dilute ordinary discovery inputs with transport failures.
+- Use rank-sliced workers because the largest within-worker state count is 16 (32%), below both severe-concentration thresholds; contiguous ranks are simpler to reconstruct than round-robin.
+- Define the planned descriptive gap as safety wage growth percentage minus matched non-safety wage growth percentage in a comparable municipality/time window, subject to verification, extraction, provenance, and matching gates.
+
+**Surprises/breakage**
+- One first-pass aggregate validation assertion expected an exact prose substring across a Markdown line break; the protected-file checks still passed. The assertion was corrected to the actual formatted text and the complete structural validation then passed. No production file or locked input changed.
+- No Tier 2 continuation was needed: 1,208 ordinary Tier 1 rows remained after exact current exclusions, including 483 in the canonical top-500 file.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Prompt tests passed 12 checks; fully mocked/no-network direct-SDK tests passed 21; ingestion tests passed 60/60; dashboard/yield builders, all compiles, phase/input/hash checks, protected-file checks, Vite build, and `git diff --check` passed. No scout, worker dry-run, preflight, live/API/model/hosted-search call, URL access or verification, ingestion, GABRIEL codification, source-discovery accounting change, protected canonical/corpus edit, wage-gap finding, causal claim, remote inspection/action, or push occurred.
+
+**Next steps**
+1. Run the three worker prep prompts in their assigned worktrees; each must produce exactly 50 compact/hint/adaptive dry-run prompts and copy a sanitized relay ZIP into main `tmp/`.
+2. Under a separate coordinator task, inspect all three relays, lock Worker 1→2→3 as one 150-row input, and perform the coordinator dry/evidence review.
+3. Only under separate live authorization, run the stronger preflight and then one serialized direct-SDK live process. Rebuild accounting/dashboard only if the complete run is merge-eligible and update progress toward 2,000.
+
 ## 2026-07-22 (PI report rebranded and dashboard expanded into the full project hub)
 
 **Did**

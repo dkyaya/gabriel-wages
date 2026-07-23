@@ -8,17 +8,27 @@ This directory contains a static, PI-facing research-status dashboard. It summar
 
 > Candidate rows are unverified source leads. Scout coverage is not verified-source coverage, priority tiers are operational work-order heuristics, and the dashboard does not report wage gaps or causal findings.
 
-## Frozen checkpoint — 2026-07-22
+## Active phase and checkpoint — 2026-07-23
 
-The current data layer reflects the post–Tier 1 Wave 2 checkpoint:
+The current data layer reflects the post–Tier 1 Wave 2 accounting checkpoint and
+the PI-aligned **Source Discovery Scale-Up** strategy:
 
 - 35,589 municipal and township governments in the authoritative universe;
 - 794 successfully scout-covered municipalities;
+- an approximately 2,000-covered workflow checkpoint, with 1,206 remaining and
+  roughly 8–9 coordinated 150-row waves expected;
 - 612 candidate-positive and 182 parseable-empty municipalities;
 - 20 failure-only municipalities retained outside successful coverage;
 - 1,602 URL-bearing, unverified candidate queue rows;
 - 34,789 future-scout-eligible municipalities, including 1,227 Tier 1 and 3,478 Tier 2; and
 - latest-wave runtime of 5,738.638 seconds, or 94.099 attempted rows per hour.
+
+Ordinary Tier-prioritized scouting continues to the approximately 2,000-covered
+checkpoint. Failure-only rows remain in a separate retry lane. At the checkpoint,
+broad scouting pauses for verification, wage extraction, ingestion, source
+quality/extractability rating, descriptive wage-growth gap analysis, mechanism
+correlation documentation, and a future gap-percentage map/filter. Regressions
+are deferred.
 
 The current PI checkpoint report is available in the dashboard’s Reports Library and directly here:
 
@@ -29,15 +39,17 @@ The current PI checkpoint report is available in the dashboard’s Reports Libra
 The dashboard is organized around what has been collected, what is current, and what is forthcoming:
 
 1. **Overview** — national coverage, queue, failure, and checkpoint metrics with the project caveat.
-2. **Coverage and geography** — the existing token-free state choropleth, tile-grid alternate, state selection, and printable state view.
-3. **Scouting priority tiers** — remaining Tier 1–Tier 5 pools, retry lane, and state-level high-priority workload.
-4. **Scout operations** — wave runtimes, throughput, candidate rows per hour, failure rates, and current preflight/compact/adaptive controls.
-5. **Candidate queue** — the source-discovery funnel, queue composition, and distinction between municipality and candidate-row counts.
-6. **Verification pipeline** — the planned progression from candidate lead to verified source, ingestion, codification, and analysis readiness.
-7. **State yield and learning** — observed discovery yield with minimum-sample and confidence warnings.
-8. **Reports library** — current PI reports and durable checkpoint metadata, plus space for future verification reports.
-9. **Methodology and definitions** — source-stage definitions that keep operational counts from being mistaken for evidence.
-10. **Next steps** — the PI decision between a targeted verification pilot, additional Tier 1 breadth, and a separate failure-retry lane.
+2. **Project phase** — progress from 794 to approximately 2,000 covered, remaining waves, and the post-checkpoint downstream sequence.
+3. **Coverage and geography** — the existing token-free state choropleth, tile-grid alternate, state selection, and printable state view.
+4. **Scouting priority tiers** — remaining Tier 1–Tier 5 pools, retry lane, and state-level high-priority workload.
+5. **Scout operations** — wave runtimes, throughput, candidate rows per hour, failure rates, and current preflight/compact/adaptive controls.
+6. **Candidate queue** — the source-discovery funnel, queue composition, and distinction between municipality and candidate-row counts.
+7. **Verification pipeline** — the post-checkpoint progression from candidate lead through verification, extraction, ingestion, rating, and analysis readiness.
+8. **State yield and learning** — observed discovery yield with minimum-sample and confidence warnings.
+9. **Reports library** — current PI reports and durable checkpoint metadata, plus space for future verification reports.
+10. **Methodology and definitions** — source-stage definitions that keep operational counts from being mistaken for evidence.
+11. **Descriptive analysis plan** — future wage-growth gap percentage, map/filter, and mechanism-correlation capabilities that require verified/extracted data.
+12. **Next steps** — the next ordinary 150-row wave, continued scale-up, separate failure retries, and the checkpoint pause.
 
 The sticky section navigation becomes a collapsible menu on smaller screens. Hash routes remain reserved for state selection and printable state reports:
 
@@ -94,7 +106,10 @@ Safe display metrics are:
 4. high-priority later-verification row count; and
 5. operational evidence-readiness score.
 
-The readiness score is workflow triage, not evidence strength. Wage gaps are not a map metric. Boundary provenance and checksums are documented in [map_data_notes.md](map_data_notes.md).
+The readiness score is workflow triage, not evidence strength. Wage gaps are not
+a current map metric. A wage-growth-gap percentage layer and range filter are
+planned only after verified/extracted matched wage data exist. Boundary
+provenance and checksums are documented in [map_data_notes.md](map_data_notes.md).
 
 ## Data flow
 
@@ -134,6 +149,7 @@ The dashboard builder writes:
 - `scout_operations_summary.json`
 - `scout_yield_by_state.json`
 - `scout_runtime_trends.json`
+- `project_phase_summary.json`
 - `reports_index.json`
 
 Review the printed totals and diffs before committing. In particular, candidate-positive plus parseable-empty municipalities must equal scout-covered municipalities, and transport/failure-only results must remain outside successful coverage.

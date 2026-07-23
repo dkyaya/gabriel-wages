@@ -9,15 +9,15 @@ const STAGE_LABELS = {
   regression_stage: "Regression results",
 };
 
-export function AnalysisReadinessPanel({ data }) {
+export function AnalysisReadinessPanel({ data, phase }) {
   return (
-    <section className="panel readiness-panel" aria-labelledby="readiness-title">
+    <section className="panel readiness-panel hub-section" id="descriptive-analysis" aria-labelledby="readiness-title">
       <div className="section-heading">
         <div>
-          <p className="eyebrow">Analysis readiness</p>
-          <h2 id="readiness-title">What the current evidence supports</h2>
+          <p className="eyebrow">Future analysis capability</p>
+          <h2 id="readiness-title">Descriptive Wage-Gap Analysis, Planned</h2>
         </div>
-        <StatusPill tone="scout">Discovery reporting ready</StatusPill>
+        <StatusPill tone="future">Available after verification and extraction</StatusPill>
       </div>
 
       <div className="stage-grid">
@@ -48,11 +48,25 @@ export function AnalysisReadinessPanel({ data }) {
 
       <div className="regression-lock" role="note">
         <div>
-          <p className="eyebrow">Wage-gap panel</p>
-          <h3>Unavailable by design</h3>
+          <p className="eyebrow">Planned dashboard capability</p>
+          <h3>Wage-growth gap percentage</h3>
         </div>
-        <p>{data.promotion_gate}</p>
+        <div>
+          <ul>
+            <li>Calculate safety wage growth minus matched non-safety wage growth within comparable municipality/time windows.</li>
+            <li>Add a map layer and filtering by wage-growth gap percentage.</li>
+            <li>Document mechanisms correlated with higher or lower descriptive gaps.</li>
+            <li>Keep regressions deferred until much later.</li>
+          </ul>
+          <p>{data.promotion_gate}</p>
+        </div>
       </div>
+
+      <p className="panel-note">
+        No wage-growth gaps have been calculated and no mechanism relationship has been analyzed.
+        This work begins only after the approximately {formatNumber(phase.checkpoint_target_scout_covered)}-covered
+        checkpoint and validated source verification/extraction.
+      </p>
 
       <details>
         <summary>Prior claim inventory context</summary>

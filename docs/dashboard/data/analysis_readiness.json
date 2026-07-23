@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": "0.1.0",
-    "generated_at": "2026-07-23T03:12:54Z",
+    "generated_at": "2026-07-23T14:27:08Z",
     "data_vintage": "2026-07-22",
     "source_files": [
       "docs/analysis/national_scout_coverage_state.csv",
@@ -27,10 +27,11 @@
       "Connection-only failures are excluded from discovery coverage and counted separately.",
       "Likely matched-set groups are scheduling leads inferred from scout unit labels, not verified city-cycle matches.",
       "Project-wide verified, ingested, wage-extraction, codified, and regression metrics are not yet wired into this dashboard build.",
-      "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects."
+      "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
+      "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
     ]
   },
-  "overall_status": "source_discovery_dashboard_mvp",
+  "overall_status": "source_discovery_scale_up_to_approximately_2000",
   "current_inputs": {
     "national_queue_available": true,
     "national_coverage_available": true,
@@ -87,12 +88,12 @@
     },
     "wage_extraction_stage": {
       "available": false,
-      "display_status": "not_available",
+      "display_status": "planned_after_scout_checkpoint_and_verification",
       "observation_count": null
     },
     "regression_stage": {
       "available": false,
-      "display_status": "not_available",
+      "display_status": "deferred_until_much_later",
       "estimate_count": null
     }
   },

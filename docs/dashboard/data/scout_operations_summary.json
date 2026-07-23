@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-23T03:12:54Z",
+  "generated_at": "2026-07-23T14:27:08Z",
   "data_vintage": "2026-07-22",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -26,7 +26,8 @@
     "Connection-only failures are excluded from discovery coverage and counted separately.",
     "Likely matched-set groups are scheduling leads inferred from scout unit labels, not verified city-cycle matches.",
     "Project-wide verified, ingested, wage-extraction, codified, and regression metrics are not yet wired into this dashboard build.",
-    "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects."
+    "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
+    "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
   "stage": "scout_operations_unverified_discovery",
   "current_totals": {
@@ -35,6 +36,16 @@
     "candidate_positive_municipalities": 612,
     "parseable_empty_municipalities": 182,
     "failure_only_municipalities": 20
+  },
+  "active_strategy": {
+    "current_phase": "Source discovery scale-up",
+    "checkpoint_target_scout_covered": 2000,
+    "remaining_to_checkpoint": 1206,
+    "estimated_150_row_waves_remaining": "8-9",
+    "full_150_row_waves_to_reach_or_exceed_checkpoint": 9,
+    "ordinary_discovery_lane": "Continue coordinated Tier-prioritized 150-municipality waves; keep failure-only retries separate.",
+    "next_phase": "Verification, extraction, ingestion, rating, and descriptive wage-gap analysis",
+    "regressions_status": "Deferred"
   },
   "latest_wave": {
     "wave_id": "tier1_wave2",

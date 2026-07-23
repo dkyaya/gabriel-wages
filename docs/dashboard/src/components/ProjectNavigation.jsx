@@ -1,5 +1,6 @@
 const SECTIONS = [
   ["overview", "Overview"],
+  ["project-phase", "Project phase"],
   ["geography", "Coverage"],
   ["priorities", "Priority tiers"],
   ["operations", "Operations"],
@@ -8,6 +9,7 @@ const SECTIONS = [
   ["state-yield", "State yield"],
   ["reports", "Reports"],
   ["methodology", "Definitions"],
+  ["descriptive-analysis", "Analysis plan"],
   ["next-steps", "Next steps"],
 ];
 
