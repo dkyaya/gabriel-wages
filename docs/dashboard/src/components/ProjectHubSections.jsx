@@ -194,7 +194,7 @@ export function ScoutOperationsPanel({ operations, runtime, parallelStatus }) {
 
       <div className="hub-split operations-layout">
         <div>
-          <h3>Four-wave runtime trend</h3>
+          <h3>{runtime.waves.length}-round runtime trend</h3>
           <div className="runtime-list">
             {runtime.waves.map((wave) => (
               <article key={wave.wave_id}>
@@ -216,16 +216,16 @@ export function ScoutOperationsPanel({ operations, runtime, parallelStatus }) {
         <div>
           <h3>Current operating controls</h3>
           <ul className="check-list">
-            <li>Each lane remains serialized; the initial parallel plan allows two isolated lane processes.</li>
+            <li>Each lane remains serialized; the first two-lane collection completed with isolated lane outputs.</li>
             <li>Stronger no-search, hosted-search, and one-row preflight gate.</li>
             <li>Compact prompts with exact identity and source-stage guardrails.</li>
             <li>Five deterministic municipality-specific query hints.</li>
             <li>Adaptive sleep/backoff, outer timeout, terminal artifacts, and fresh-directory resume lineage.</li>
           </ul>
           <p className="panel-note">
-            <strong>Parallel scout lanes planned:</strong>{" "}
-            {parallelStatus.supported_lanes_initial} lanes initially,{" "}
-            {parallelStatus.supported_lanes_future} after a successful test.
+            <strong>Parallel scout lane status:</strong>{" "}
+            {parallelStatus.supported_lanes_initial} lanes completed the first controlled round;{" "}
+            {parallelStatus.supported_lanes_future} lanes remain a future option requiring explicit authorization.
             Accounting remains serial after the combined lane audit.{" "}
             {parallelStatus.caveat}
           </p>

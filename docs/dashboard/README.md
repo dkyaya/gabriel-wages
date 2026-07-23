@@ -155,12 +155,19 @@ The dashboard builder writes:
 
 Review the printed totals and diffs before committing. In particular, candidate-positive plus parseable-empty municipalities must equal scout-covered municipalities, and transport/failure-only results must remain outside successful coverage.
 
-`parallel_scout_status.json` is an operations-plan layer, not live evidence. Its
-current status is `planned_not_run`: two isolated 150-row lanes are supported
-initially, with three lanes documented as a later option only after a successful
-two-lane test. Every lane remains internally serialized and writes to a unique
-output directory. National queue/coverage, yield, and dashboard accounting remain
-one serial coordinator step after the combined lane audit.
+`parallel_scout_status.json` is an operations layer, not source evidence. Its
+current status is `round1_completed_accounting_merged`: the first two isolated
+150-row lanes completed, passed the combined audit, and entered national
+accounting through one later serial merge. Every lane remained internally
+serialized and wrote to a unique output directory. Three lanes remain a future
+option requiring an explicit strategy decision and authorization. Candidate
+leads remain unverified.
+
+The priority JSON layers still reflect the Tier 1 Wave 2 priority build at 794
+covered municipalities. They are deliberately marked stale after the Parallel
+Round 1 merge, which added 297 successful scouts—just below the documented
+300-success lower refresh trigger. Any next target selection must reconcile
+those ranks against current coverage and failure-only status.
 
 ## Run and build locally
 

@@ -6,6 +6,33 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-23 (Parallel Round 1 serial accounting merge completed)
+
+**Did**
+- Started from clean tracked `42dbe6716a88be2cb2113b245bd7733fa27f4be1` on `main`, confirmed `42dbe67`/`4ee7015`/`3a7d762`/`6db14f0` ancestry, and left the unrelated untracked root `package-lock.json` untouched.
+- Re-ran the offline lane auditor. Both 150-row lanes remain `completed_merge_eligible`; input hashes match; combined output is 297 parseable, 272 candidate-positive, 25 parseable-empty, three failure-only, 763 lead rows, zero stopped, zero pending, and zero completed-ID overlap. Recommendation remains `merge_all_lanes`.
+- Proved the two durable timestamped candidate exports are byte-identical to isolated lane `parsed_candidates.csv` artifacts. Of 763 parsed lead rows, 760 carry URLs; three explicit insufficient/no-locator placeholders remain outside the URL-bearing queue.
+- Registered both locked inputs, durable candidate exports, state usage, and terminal failures in the deterministic builders. Ran the authorized serial builder sequence. Queue rows increased 1,602→2,362; scout-covered municipalities 794→1,091; candidate-positive 612→884; parseable-empty 182→207; and failure-only 20→23. Newark OH, St. Cloud FL, and Waterloo IA remain failure-only and outside coverage.
+- Refreshed five-wave/round yield learning, all 13 dashboard JSON layers, the project-phase checkpoint, and the small Scout Operations parallel-status note. Progress is now 1,091/2,000 (54.5%), leaving 909, or approximately seven comparable 150-row waves.
+- Deferred priority rebuild: 297 successful scouts have accumulated since the Tier 1 Wave 2 priority refresh, just below the documented 300-success lower trigger. Dashboard priority layers are explicitly marked stale and require current coverage/failure reconciliation before future selection.
+
+**Decisions and why**
+- Treat the serial merge as the only accounting promotion boundary. The diagnostic probe and stopped `bd5e259` output remain quarantined and absent from queue/coverage.
+- Preserve the three no-locator placeholders as scout artifacts without fabricating URLs or queue rows. The queue is therefore +760, not +763.
+- Keep all 2,362 queue rows unverified. This merge changes discovery accounting only and does not establish source quality, matched wage data, wage gaps, mechanisms, or causation.
+- Keep three-lane execution deferred. The next ordinary round should normally remain two lanes unless the user explicitly approves a capacity expansion.
+
+**Surprises/breakage**
+- No merge gate or builder failed. The top-level `build_scout_coverage.py` orchestration deterministically delegated the current-status rewrite after refreshing cached Census universe/crosswalk files and reproduced the same 1,091 total.
+- The refreshed state-yield leaderboard is now led by OH, IA, WA, WI, and CT; this is operational discovery yield only.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Requested compiles/tests, 7 synthetic parallel tests, 25 mocked/no-network direct-SDK tests, 12 prompt tests, 60 ingestion tests, schema validation, coverage audit, dashboard JSON parsing/build, priority-vintage checks, quarantine/protected-path checks, secret scan, and `git diff --check` passed. No live/API/model/hosted-search call, preflight, URL access or verification, ingestion, `gabriel.codify`, candidate promotion, wage-gap calculation or claim, causal claim, regression, remote action, or push occurred.
+
+**Next steps**
+1. Prepare the next ordinary parallel round from current coverage, keeping the three new failure-only municipalities in the separate retry lane.
+2. Refresh the unchanged priority methodology once post-refresh successful additions reach at least 300, then build the next locked inputs from the refreshed layer.
+3. Run a second controlled two-lane cycle before considering three lanes, unless the user explicitly approves an earlier three-lane capacity test.
+
 ## 2026-07-23 (First two-lane parallel live collection completed; serial merge deferred)
 
 **Did**

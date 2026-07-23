@@ -70,6 +70,20 @@ WAVES = (
         "sleep_between_prompts_seconds": 5,
         "source_review_document": "docs/analysis/tier1_wave2_coordinator_150row_serial_live_result_review_2026-07-22.md",
     },
+    {
+        "wave_id": "parallel_round1",
+        "wave_label": "Parallel Round 1 compact/adaptive (2 serialized lanes)",
+        "run_id": "all_2026-07-23_152836+all_2026-07-23_153758",
+        "attempted_rows": 300,
+        "parseable_rows": 297,
+        "candidate_positive_municipalities": 272,
+        "parseable_empty_municipalities": 25,
+        "failure_only_rows": 3,
+        "candidate_rows": 763,
+        "runtime_seconds": 6530.0,
+        "sleep_between_prompts_seconds": 5,
+        "source_review_document": "docs/analysis/parallel_round1_live_collection_result_review_2026-07-23.md",
+    },
 )
 
 
@@ -208,11 +222,11 @@ def write_report(state_rows: list[dict[str, str]], wave_rows: list[dict[str, str
     confidence = Counter(row["sample_confidence"] for row in state_rows)
     lines.extend([
         "", "## Operating recommendation", "",
-        f"Across the four reviewed 150-row waves, mean candidate density was {average_density:.3f} rows per parseable municipality. Use Tier 1 rank as the primary selector, then blend states with medium/high sample confidence and strong observed yield with under-sampled states needed for calibration and geographic coverage.",
+        f"Across the four reviewed 150-row waves and the first 300-row two-lane parallel round, mean candidate density was {average_density:.3f} rows per parseable municipality. Use Tier 1 rank as the primary selector, then blend states with medium/high sample confidence and strong observed yield with under-sampled states needed for calibration and geographic coverage.",
         "",
         f"State sample confidence counts: high={confidence['high']}, medium={confidence['medium']}, low={confidence['low']}.",
         "",
-        "Refresh this learning report after each wave and rebuild the unchanged priority methodology after 300–600 additional successful scouts. Tier 1 Wave 2 reached the task's 135-parseable refresh gate, so the current priority layer is rebuilt after this accounting update. Do not let sparse-state extremes dominate selection.",
+        "Refresh this learning report after each wave and rebuild the unchanged priority methodology after 300–600 additional successful scouts. Parallel Round 1 adds 297 successful scouts since the Tier 1 Wave 2 refresh, just below the 300-success lower trigger, so priority refresh remains deferred in this merge. Do not let sparse-state extremes dominate selection.",
         "",
         "No network, API/model, URL verification, ingestion, codification, queue rebuild, coverage rebuild, or priority-methodology change occurs in this builder.",
     ])
@@ -225,10 +239,10 @@ def main() -> int:
     write_csv(STATE_OUTPUT, state_rows, STATE_FIELDS)
     write_csv(WAVE_OUTPUT, wave_rows, WAVE_FIELDS)
     write_report(state_rows, wave_rows)
-    if len(state_rows) != 51 or len(wave_rows) != 4:
+    if len(state_rows) != 51 or len(wave_rows) != 5:
         raise ValueError("unexpected yield-learning output row count")
     print(
-        "Scout yield learning built: states/DC=51; waves=4; "
+        "Scout yield learning built: states/DC=51; waves=5; "
         f"latest_rows_per_hour={wave_rows[-1]['rows_per_hour']}; "
         f"latest_candidate_rows_per_parseable={wave_rows[-1]['candidate_rows_per_parseable_municipality']}"
     )

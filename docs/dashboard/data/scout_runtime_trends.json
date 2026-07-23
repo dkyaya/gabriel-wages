@@ -1,7 +1,7 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-23T15:33:38Z",
-  "data_vintage": "2026-07-22",
+  "generated_at": "2026-07-23T21:53:33Z",
+  "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
     "docs/analysis/national_scout_coverage_municipality_2026-07-20.csv",
@@ -82,12 +82,25 @@
       "candidate_rows_per_hour": 205.136,
       "candidate_rows_per_parseable_municipality": 2.209,
       "sleep_between_prompts_seconds": 5.0
+    },
+    {
+      "wave_id": "parallel_round1",
+      "label": "Parallel Round 1 compact/adaptive (2 serialized lanes)",
+      "attempted_rows": 300,
+      "parseable_rows": 297,
+      "candidate_rows": 763,
+      "failure_only_rows": 3,
+      "runtime_seconds": 6530.0,
+      "rows_per_hour": 165.391,
+      "candidate_rows_per_hour": 420.643,
+      "candidate_rows_per_parseable_municipality": 2.569,
+      "sleep_between_prompts_seconds": 5.0
     }
   ],
   "checkpoint_context": {
     "target_scout_covered": 2000,
-    "current_scout_covered": 794,
-    "note": "The current total comes from national coverage accounting; runtime waves shown here are only the four reviewed coordinated waves."
+    "current_scout_covered": 1091,
+    "note": "The current total comes from national coverage accounting; runtime waves shown here are the 5 reviewed coordinated waves/rounds."
   },
   "next_run_instrumentation": [
     "compact prompt character/token proxy",

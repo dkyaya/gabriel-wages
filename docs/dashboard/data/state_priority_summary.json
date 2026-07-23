@@ -1,7 +1,7 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-23T15:33:38Z",
-  "data_vintage": "2026-07-22",
+  "generated_at": "2026-07-23T21:53:33Z",
+  "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
     "docs/analysis/national_scout_coverage_municipality_2026-07-20.csv",
@@ -30,6 +30,8 @@
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
   "stage": "research_operational_priority_heuristic",
+  "priority_vintage_status": "stale_after_parallel_round1_merge",
+  "successful_scouts_since_priority_refresh": 297,
   "safe_map_metrics": [
     "tier_1_eligible",
     "high_priority_coverage_rate_pct",

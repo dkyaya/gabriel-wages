@@ -6,6 +6,22 @@ Last updated: `2026-07-23`
 
 ---
 
+## 2026-07-23 — Parallel Round 1 is serially merged into national accounting
+
+### Current State
+
+- **Merge gate:** work began at clean tracked `42dbe6716a88be2cb2113b245bd7733fa27f4be1`. [The fresh readiness audit](parallel_round1_serial_merge_readiness_audit_2026-07-23.md) reconfirms both lanes `completed_merge_eligible`, exact locked hashes, 297 parseable outcomes, three terminal failures, zero stopped/pending rows, zero completed-ID overlap, and `merge_all_lanes`.
+- **Export identity:** [the export audit](parallel_round1_lane_candidate_export_audit_2026-07-23.md) proves each timestamped `docs/analysis/` candidate export is byte-identical to its isolated lane artifact. The 763 lead rows contain 760 URL-bearing leads and three explicit insufficient/no-locator placeholders; no URL was invented or verified.
+- **Official accounting:** [the serial update](parallel_round1_serial_merge_queue_coverage_update_2026-07-23.md) moves the national queue from 1,602 to 2,362 (+760), scout coverage from 794 to 1,091 (+297), candidate-positive from 612 to 884 (+272), parseable-empty from 182 to 207 (+25), and failure-only from 20 to 23 (+3). Newark OH, St. Cloud FL, and Waterloo IA remain failure-only and excluded from successful coverage.
+- **Checkpoint:** official progress is now 1,091/2,000 (54.5%), leaving 909, or approximately seven comparable 150-row waves. This remains a project-management checkpoint, not an evidentiary threshold.
+- **Yield/dashboard:** [the refresh review](parallel_round1_dashboard_yield_checkpoint_refresh_2026-07-23.md) records five operational waves/rounds and the latest two-lane result at 165.391 attempted rows/hour, 420.643 lead rows/hour, and 2.569 leads per parseable municipality. All 13 dashboard JSON files and the frontend production build pass. Parallel status is `round1_completed_accounting_merged`; three lanes remain an explicitly authorized future option.
+- **Priority:** [the decision](parallel_round1_priority_refresh_decision_2026-07-23.md) defers the national priority rebuild because 297 successful scouts have accumulated since the 794-covered refresh, just below the documented 300-success lower trigger. Priority source CSVs retain their Tier 1 Wave 2 vintage; dashboard priority JSON is marked stale and future selection must reconcile current coverage/failure status.
+- **Quarantine/boundary:** the diagnostic Lake Oswego probe and stopped `bd5e259` output remain outside accounting. Candidate rows remain unverified. No live/API/model call, source URL verification, ingestion, codification, wage-gap calculation/claim, causal claim, regression, remote action, or push occurred during this merge.
+
+### Next Move
+
+Prepare the next ordinary round against the refreshed 1,091-municipality coverage layer, keeping all 23 failure-only municipalities in a separate retry lane. Because the post-priority-refresh success count is 297, refresh the unchanged priority methodology once the next successful outcomes take it to at least 300, before locking subsequent ordinary targets. Default to one more controlled two-lane round before expanding to three lanes unless the user explicitly approves the capacity expansion.
+
 ## 2026-07-23 — Parallel Round 1 live collection completed; merge is the next separate task
 
 ### Current State

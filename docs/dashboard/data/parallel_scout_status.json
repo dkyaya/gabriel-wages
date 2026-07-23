@@ -1,7 +1,7 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-23T15:33:38Z",
-  "data_vintage": "2026-07-22",
+  "generated_at": "2026-07-23T21:53:33Z",
+  "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
     "docs/analysis/national_scout_coverage_municipality_2026-07-20.csv",
@@ -29,13 +29,25 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "stage": "parallel_scout_operations_plan",
-  "parallel_mode_status": "planned_not_run",
+  "stage": "parallel_scout_operations_status",
+  "parallel_mode_status": "round1_completed_accounting_merged",
   "supported_lanes_initial": 2,
   "supported_lanes_future": 3,
   "rows_per_lane": 150,
   "current_parallel_round_id": "POST-PI-PARALLEL-ROUND1-2026-07-23",
   "accounting_policy": "serial_merge_after_lane_audit",
+  "latest_round": {
+    "lanes_completed_merge_eligible": 2,
+    "attempted_rows": 300,
+    "parseable_rows": 297,
+    "candidate_positive_municipalities": 272,
+    "parseable_empty_municipalities": 25,
+    "failure_only_municipalities": 3,
+    "candidate_lead_rows": 763,
+    "url_bearing_queue_rows_added": 760,
+    "merge_recommendation": "merge_all_lanes",
+    "accounting_merge_status": "completed_serially"
+  },
   "lane_execution_policy": "Each lane is internally serialized and writes only to its own output directory; lane processes do not rebuild shared accounting.",
-  "caveat": "No parallel live scout has been executed yet."
+  "caveat": "The first two-lane round completed and was merged serially after audit. All candidate leads remain unverified; a three-lane run still requires a later strategy decision and explicit authorization."
 }

@@ -19,7 +19,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs" / "analysis"
-AS_OF = "2026-07-22"
+AS_OF = "2026-07-23"
 
 UNIVERSE_PATH = DOCS / "national_municipality_universe.csv"
 CROSSWALK_PATH = DOCS / "national_municipality_county_crosswalk.csv"
@@ -32,6 +32,8 @@ MIXED_STATE_USAGE_PATHS = [
     DOCS / "wave2_coordinator_150row_serial_live_state_usage_2026-07-22.csv",
     DOCS / "tier1_coordinator_150row_serial_live_after_diag_state_usage_2026-07-22.csv",
     DOCS / "tier1_wave2_coordinator_150row_serial_live_state_usage_2026-07-22.csv",
+    DOCS / "parallel_round1_lane_1_state_usage_2026-07-23.csv",
+    DOCS / "parallel_round1_lane_2_state_usage_2026-07-23.csv",
 ]
 
 MUNICIPALITY_OUTPUT = DOCS / "national_scout_coverage_municipality_2026-07-20.csv"
@@ -187,6 +189,37 @@ SUCCESSFUL_BATCHES = [
         "backend": "direct-sdk",
         "failed_municipality_ids": ["cog_2025_194606", "cog_2025_106133"],
     },
+    {
+        "state": "ALL",
+        "allowed_states": {
+            "CT", "FL", "IA", "MA", "MI", "NV", "OH", "OR", "WA", "WI",
+        },
+        "wave": "POST-PI-PARALLEL-ROUND1-LANE1-2026-07-23",
+        "run_id": "all_2026-07-23_152836",
+        "scout_date": "2026-07-23",
+        "input": DOCS
+        / "parallel_scout_rounds"
+        / "POST-PI-PARALLEL-ROUND1-2026-07-23"
+        / "lane_1_input.csv",
+        "backend": "direct-sdk",
+        "failed_municipality_ids": ["cog_2025_209070", "cog_2025_161668"],
+    },
+    {
+        "state": "ALL",
+        "allowed_states": {
+            "CT", "FL", "IA", "IN", "KY", "MA", "MD", "MI", "MT",
+            "NE", "NM", "OH", "OR", "RI", "SD", "WA", "WI",
+        },
+        "wave": "POST-PI-PARALLEL-ROUND1-LANE2-2026-07-23",
+        "run_id": "all_2026-07-23_153758",
+        "scout_date": "2026-07-23",
+        "input": DOCS
+        / "parallel_scout_rounds"
+        / "POST-PI-PARALLEL-ROUND1-2026-07-23"
+        / "lane_2_input.csv",
+        "backend": "direct-sdk",
+        "failed_municipality_ids": ["cog_2025_207992"],
+    },
 ]
 
 # Preserved failed-run artifacts contain 16 MA connection-only rows, one IL
@@ -239,6 +272,8 @@ FAILED_CONNECTION_RUNS = {
         "cog_2025_176816",
     ],
     "all_2026-07-22_195226": ["cog_2025_194606", "cog_2025_106133"],
+    "all_2026-07-23_152836": ["cog_2025_209070", "cog_2025_161668"],
+    "all_2026-07-23_153758": ["cog_2025_207992"],
 }
 
 QUEUE_VERIFY_BUCKETS = {
@@ -569,16 +604,16 @@ def build_municipality_rows() -> list[dict[str, object]]:
         )
 
     status_counts = Counter(row["scout_coverage_status"] for row in output)
-    if status_counts["scouted_with_candidates"] != 612:
-        raise ValueError(f"Expected 612 candidate-positive municipalities: {status_counts}")
-    if status_counts["scouted_no_candidates"] != 182:
-        raise ValueError(f"Expected 182 successful empty municipalities: {status_counts}")
-    if status_counts["scout_attempt_failed_connection"] != 20:
-        raise ValueError(f"Expected 20 failure-only municipalities: {status_counts}")
-    if sum(int(row["failed_connection_attempt_count"]) for row in output) != 36:
+    if status_counts["scouted_with_candidates"] != 884:
+        raise ValueError(f"Expected 884 candidate-positive municipalities: {status_counts}")
+    if status_counts["scouted_no_candidates"] != 207:
+        raise ValueError(f"Expected 207 successful empty municipalities: {status_counts}")
+    if status_counts["scout_attempt_failed_connection"] != 23:
+        raise ValueError(f"Expected 23 failure-only municipalities: {status_counts}")
+    if sum(int(row["failed_connection_attempt_count"]) for row in output) != 39:
         raise ValueError(
-            "Expected 26 retained prior attempts, eight Tier 1 Wave 1 failures, "
-            "and two Tier 1 Wave 2 failures"
+            "Expected 36 retained attempts through Tier 1 Wave 2 and three "
+            "Parallel Round 1 failure-only attempts"
         )
     return output
 
@@ -768,8 +803,8 @@ def build_state_rows(municipality_rows: list[dict[str, object]]) -> list[dict[st
         )
     if sum(int(row["municipalities_in_universe"]) for row in output) != 35_589:
         raise ValueError("State coverage does not sum to the authoritative universe")
-    if sum(int(row["municipalities_scouted"]) for row in output) != 794:
-        raise ValueError("State coverage does not sum to 794 successful scout municipalities")
+    if sum(int(row["municipalities_scouted"]) for row in output) != 1_091:
+        raise ValueError("State coverage does not sum to 1,091 successful scout municipalities")
     return output
 
 

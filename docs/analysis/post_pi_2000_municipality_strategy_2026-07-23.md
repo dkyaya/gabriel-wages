@@ -13,7 +13,10 @@ This is a research-operations checkpoint. It does not turn unverified leads into
 - Select ordinary future-scout-eligible targets from the current priority layer.
 - Prefer Tier 1 while at least 150 ordinary Tier 1 rows remain; then continue into Tier 2 under the same documented ordering.
 - Keep failure-only and retry rows outside ordinary waves. Use a later separately bounded retry lane.
-- Keep one future live coordinator process serialized. Workers prepare and audit dry runs only.
+- Keep each live scout lane internally serialized. Controlled parallel lanes
+  must use disjoint locked inputs and isolated output directories; shared
+  queue/coverage/dashboard accounting remains one later serial coordinator
+  merge after the combined lane audit.
 - Use compact prompts, five deterministic municipality-specific search hints, adaptive sleep/backoff, exact identity and cap controls, terminal timing artifacts, and fresh-directory resume lineage.
 - Run the stronger preflight gate immediately before any separately authorized live wave and stop on a failed evidence or transport gate.
 - Rebuild queue, coverage, yield learning, and dashboard JSON only after a complete merge-eligible live lineage.

@@ -56,7 +56,7 @@ REPORTS_INDEX_SOURCE_PATH = (
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
-CURRENT_SOURCE_ACCOUNTING_COMMIT = "3f2f815f4ca4b4e90f6ca1bff769bd300843d703"
+CURRENT_SOURCE_ACCOUNTING_COMMIT = "42dbe6716a88be2cb2113b245bd7733fa27f4be1"
 PARALLEL_SCOUT_ROUND_ID = "POST-PI-PARALLEL-ROUND1-2026-07-23"
 
 REQUIRED_PATHS = [
@@ -819,6 +819,12 @@ def build_priority_summary(
     return {
         **metadata,
         "stage": "research_operational_priority_heuristic",
+        "priority_vintage_status": "stale_after_parallel_round1_merge",
+        "successful_scouts_since_priority_refresh": 297,
+        "selection_guard": (
+            "Reconcile targets against current coverage and failure-only status before "
+            "selecting another ordinary wave."
+        ),
         "totals": {
             "municipality_universe": len(priority_rows),
             "scout_covered": covered,
@@ -896,6 +902,8 @@ def build_state_priority_layer(
     return {
         **metadata,
         "stage": "research_operational_priority_heuristic",
+        "priority_vintage_status": "stale_after_parallel_round1_merge",
+        "successful_scouts_since_priority_refresh": 297,
         "safe_map_metrics": [
             "tier_1_eligible",
             "high_priority_coverage_rate_pct",
@@ -934,6 +942,11 @@ def build_top_priority_targets_layer(
     return {
         **metadata,
         "stage": "research_operational_priority_heuristic",
+        "priority_vintage_status": "stale_after_parallel_round1_merge",
+        "selection_guard": (
+            "Exclude municipalities now covered or failure-only in current accounting "
+            "before using these stale ranked targets."
+        ),
         "target_count": len(targets),
         "targets": targets,
         "disclaimer": (
@@ -989,7 +1002,9 @@ def build_scout_operations_summary(
             "current_phase": "Source discovery scale-up",
             "checkpoint_target_scout_covered": SCOUT_CHECKPOINT_TARGET,
             "remaining_to_checkpoint": remaining,
-            "estimated_150_row_waves_remaining": "8-9",
+            "estimated_150_row_waves_remaining": str(
+                math.ceil(remaining / COORDINATED_WAVE_SIZE)
+            ),
             "full_150_row_waves_to_reach_or_exceed_checkpoint": math.ceil(
                 remaining / COORDINATED_WAVE_SIZE
             ),
@@ -1016,8 +1031,9 @@ def build_scout_operations_summary(
         },
         "priority_refresh_recommendation": (
             "The unchanged national priority methodology was refreshed after Tier 1 Wave 2 "
-            "at 794 successfully scout-covered municipalities. Rebuild again after roughly "
-            "300–600 additional successful scouts (about 1,094–1,394 covered)."
+            "at 794 successfully scout-covered municipalities. Parallel Round 1 brings the "
+            "total to 1,091, or 297 additional successes; defer until the documented "
+            "300–600-success cadence is reached."
         ),
         "preflight_gate_recommendation": current_preflight_recommendation(),
         "disclaimer": (
@@ -1108,7 +1124,7 @@ def build_scout_runtime_trends(
             ),
             "note": (
                 "The current total comes from national coverage accounting; runtime "
-                "waves shown here are only the four reviewed coordinated waves."
+                f"waves shown here are the {len(waves)} reviewed coordinated waves/rounds."
             ),
         },
         "next_run_instrumentation": [
@@ -1146,7 +1162,9 @@ def build_project_phase_summary(
         "progress_percentage": round(
             100.0 * covered / SCOUT_CHECKPOINT_TARGET, 1
         ),
-        "estimated_150_row_waves_remaining": "8-9",
+        "estimated_150_row_waves_remaining": str(
+            math.ceil(remaining / COORDINATED_WAVE_SIZE)
+        ),
         "full_150_row_waves_to_reach_or_exceed_checkpoint": math.ceil(
             remaining / COORDINATED_WAVE_SIZE
         ),
@@ -1188,22 +1206,38 @@ def build_project_phase_summary(
 
 
 def build_parallel_scout_status(*, metadata: dict[str, Any]) -> dict[str, Any]:
-    """Describe planned lane capacity without implying a parallel live result."""
+    """Describe the audited first parallel round and serial accounting boundary."""
 
     return {
         **metadata,
-        "stage": "parallel_scout_operations_plan",
-        "parallel_mode_status": "planned_not_run",
+        "stage": "parallel_scout_operations_status",
+        "parallel_mode_status": "round1_completed_accounting_merged",
         "supported_lanes_initial": 2,
         "supported_lanes_future": 3,
         "rows_per_lane": 150,
         "current_parallel_round_id": PARALLEL_SCOUT_ROUND_ID,
         "accounting_policy": "serial_merge_after_lane_audit",
+        "latest_round": {
+            "lanes_completed_merge_eligible": 2,
+            "attempted_rows": 300,
+            "parseable_rows": 297,
+            "candidate_positive_municipalities": 272,
+            "parseable_empty_municipalities": 25,
+            "failure_only_municipalities": 3,
+            "candidate_lead_rows": 763,
+            "url_bearing_queue_rows_added": 760,
+            "merge_recommendation": "merge_all_lanes",
+            "accounting_merge_status": "completed_serially",
+        },
         "lane_execution_policy": (
             "Each lane is internally serialized and writes only to its own output "
             "directory; lane processes do not rebuild shared accounting."
         ),
-        "caveat": "No parallel live scout has been executed yet.",
+        "caveat": (
+            "The first two-lane round completed and was merged serially after audit. "
+            "All candidate leads remain unverified; a three-lane run still requires "
+            "a later strategy decision and explicit authorization."
+        ),
     }
 
 
