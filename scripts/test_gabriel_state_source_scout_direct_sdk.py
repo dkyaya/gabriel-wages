@@ -661,6 +661,13 @@ def _check_resume_planning_and_safety_gates() -> None:
         finally:
             sys.argv = original_argv
 
+        lineage_only_output = tmp_path / "lineage-only-output"
+        lineage_only_output.mkdir()
+        (lineage_only_output / "lineage_note.txt").write_text(
+            "predeclared run lineage", encoding="utf-8"
+        )
+        scout.require_fresh_output_directory(lineage_only_output)
+
         nonempty_output = tmp_path / "nonempty-output"
         nonempty_output.mkdir()
         (nonempty_output / "sentinel.txt").write_text("preserve", encoding="utf-8")

@@ -6,6 +6,33 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-23 (Post-PI Wave 1 live gates passed; full run stopped on first-request lifecycle stall)
+
+**Did**
+- Started from clean tracked `6db14f070f7296c4e19229e318d1059b429b1586` on `main`, confirmed `42dbe52`/`6db14f0`/`3f2f815`/`bef5077` ancestry, and preserved the unrelated untracked root `package-lock.json`.
+- Independently tested and inspected Worker relays `11fa202`, `d11015c`, and `5212d6d`. Their 50-row inputs are byte-identical to main, hash to the expected values, preserve exact ranks 1–150 in three contiguous slices, and pass compact/hint/adaptive metadata, 50-row timing, 50/50 prompt-control, eligibility, protected-file, and validation gates.
+- Locked exact Worker 1→2→3 order as `post_pi_wave1_coordinator_150row_serial_live_input_2026-07-23.csv`, SHA-256 `56e592291f1dbac83836acddcf0065df40141b51f9e93bfb548a040f52b8e700`. All 150 are Tier 1, ordinary future eligible, nonretry, nonfailure, noncanonical, unscouted, unique by municipality/Census ID, and carry five exact deterministic hints.
+- Ran plan-only preflight with zero external calls, then the one authorized stronger live gate. No-search and both hosted-search diagnostics returned IDs/text/tokens; the one-row production-path probe was parseable. Its six unverified leads were quarantined under the probe directory and excluded from national accounting.
+- Ran the fresh 150-row dry run. It passed 150/150 locked identities, compact prompts, five hints, strict employer/unit/source controls, no-candidate/blocked/dead/duplicate/unverified/public-records safeguards, adaptive `3/5/15/10/25/2` metadata, and no-backend lifecycle.
+- Started exactly one full direct-SDK process (`all_2026-07-23_105131`) with the locked settings. It initialized prompt/metadata/timing artifacts, but its first hosted-search request did not return or checkpoint after more than five minutes, despite `--timeout 90`. The coordinator stopped it with SIGINT as an unbounded lifecycle stall. There were zero completed/parseable/candidate rows, one abandoned in-flight row, and 149 rows never reached. No resume ran.
+
+**Decisions and why**
+- Mark the run `merge_eligible=false`. The immutable timing ledger has all 150 rows pending and no response, parse, usage, cost, or candidate artifact exists; there is no valid coverage outcome to merge.
+- Do not rebuild queue, coverage, yield learning, dashboard JSON, or priority tiers. Official status remains 794/2,000 covered, 1,206 remaining, approximately 8–9 successful waves. Candidate queue and coverage counts remain 1,602 / 794 / 612 positive / 182 empty / 20 failure-only.
+- Do not use resume: with zero completed IDs, `--skip-completed-municipality-ids` would select the entire input and be a second full run rather than a bounded continuation.
+- Permit a sole precreated `lineage_note.txt` in an otherwise-fresh scout output directory so the required lineage can exist before live execution; all other nonempty directories still fail closed, and the direct-SDK safety test covers the exception.
+
+**Surprises/breakage**
+- The bounded one-row probe completed parseably in 38.690 seconds, but the subsequent full run's first request remained in flight for more than five minutes. The configured timeout did not terminate that hosted-search lifecycle, and no row-level failure checkpoint was emitted before manual stop.
+- Because the stall preceded the first completed row, compact/hint/adaptive stability, token usage, candidate yield, and throughput cannot be compared empirically with completed waves.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. All requested compiles passed; prompt tests passed 12/12; mocked/no-network direct-SDK checks passed 21/21; ingestion tests passed 60/60; schema validation, dashboard JSON parsing, locked-input/hash/uniqueness/hint checks, diagnostic-quarantine check, protected-file check, and `git diff --check` passed. No source verification, extraction, ingestion, rating, `gabriel.codify`, canonical promotion, wage-gap calculation or claim, causal claim, regression, remote inspection/action, or push occurred.
+
+**Next steps**
+1. Preserve the stopped output and diagnostic probe as quarantined evidence; do not reuse either directory or merge either result.
+2. Under a separate task, diagnose why the 90-second direct-SDK hosted-search timeout did not bound the first request, then add a tested outer lifecycle timeout/interrupt checkpoint if needed.
+3. Only after that diagnosis passes a bounded gate should a separately authorized fresh full-input run use the same locked hash in a new output directory. If it completes merge-eligibly, rebuild accounting once and refresh yield/dashboard checkpoint progress.
+
 ## 2026-07-23 (PI-aligned 2,000-municipality checkpoint and next three worker batches prepared)
 
 **Did**

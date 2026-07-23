@@ -3454,10 +3454,21 @@ def _parse_args() -> argparse.Namespace:
 def require_fresh_output_directory(out_dir: Path) -> None:
     if out_dir.exists() and not out_dir.is_dir():
         raise SystemExit(f"ERROR: --output-dir exists and is not a directory: {out_dir}")
-    if out_dir.exists() and any(out_dir.iterdir()):
+    if out_dir.exists():
+        existing_entries = list(out_dir.iterdir())
+        allowed_lineage_note = (
+            len(existing_entries) == 1
+            and existing_entries[0].is_file()
+            and existing_entries[0].name == "lineage_note.txt"
+        )
+    else:
+        existing_entries = []
+        allowed_lineage_note = False
+    if existing_entries and not allowed_lineage_note:
         raise SystemExit(
             f"ERROR: --output-dir is non-empty: {out_dir}. Scout artifacts are "
-            "immutable; choose a fresh output directory."
+            "immutable; choose a fresh output directory. The only permitted "
+            "precreated entry is lineage_note.txt."
         )
 
 

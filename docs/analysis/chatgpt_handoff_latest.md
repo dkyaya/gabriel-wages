@@ -6,6 +6,24 @@ Last updated: `2026-07-23`
 
 ---
 
+## 2026-07-23 — Post-PI Wave 1 live run stopped before its first row completed
+
+### Current State
+
+- **Start/evidence gate:** work began at clean tracked `6db14f070f7296c4e19229e318d1059b429b1586` with required ancestry present and unrelated untracked root `package-lock.json` untouched. [The relay assessment](post_pi_wave1_worker_prep_relay_assessment_2026-07-23.md) independently passes all three worker ZIPs/commits (`11fa202`, `d11015c`, `5212d6d`), exact hashes, ranks, 50-row timing, compact/hints/adaptive `3/5/15/10/25/2` metadata, 50/50 controls, and validation.
+- **Locked input:** [the coordinator CSV](post_pi_wave1_coordinator_150row_serial_live_input_2026-07-23.csv) is exact Worker 1→2→3 order, ranks 1–150, with SHA-256 `56e592291f1dbac83836acddcf0065df40141b51f9e93bfb548a040f52b8e700`. All 150 remain Tier 1, ordinary eligible, nonretry, nonfailure, unscouted, noncanonical, unique by municipality/Census ID, and complete for five deterministic hints. [The audit](post_pi_wave1_coordinator_150row_serial_live_input_audit_2026-07-23.md) reconciles current coverage, failures, prior official waves, canonical status, and hints.
+- **Preflight:** plan-only made zero external calls. [The stronger gate](post_pi_wave1_preflight_gate_review_2026-07-23.md) passed one no-search and two hosted-search controls with response IDs/text/tokens. The fourth call, a one-row production-path probe, was parseable in 38.690 seconds; its six unverified leads are quarantined under `tmp/post_pi_wave1_one_row_probe_direct_sdk_2026-07-23_attempt1/`, absent from the national queue/coverage, and not official evidence.
+- **Fresh dry run:** [the 150-row review](post_pi_wave1_coordinator_150row_serial_live_dry_run_review_2026-07-23.md) passes 150/150 ordered identities, compact prompt schema/guardrails, five hints, verification notes, adaptive metadata, and dry timing with no backend attempt.
+- **Official live stop:** exactly one full process, run ID `all_2026-07-23_105131`, started under the required direct-SDK, compact, hints, adaptive, one-lane, zero-retry settings. Its first hosted-search call never returned or checkpointed after more than five minutes despite `--timeout 90`; the coordinator interrupted it as an unbounded lifecycle stall. [The result review](post_pi_wave1_coordinator_150row_serial_live_result_review_2026-07-23.md) records zero completed attempts, zero parseable/positive/empty/failure-only outcomes, one abandoned in-flight row, 149 never reached, all 150 timing rows still pending, and no candidate/failed-parse/usage/cost artifacts.
+- **Merge/resume:** `merge_eligible=false`. No resume ran because there are zero completed IDs; a skip-completed plan would be another full run. [Queue/coverage](post_pi_wave1_coordinator_150row_serial_live_queue_coverage_update_2026-07-23.md), [dashboard/yield](post_pi_wave1_dashboard_yield_checkpoint_refresh_2026-07-23.md), and [priority](post_pi_wave1_priority_refresh_decision_2026-07-23.md) were deliberately not rebuilt/refreshed.
+- **Official accounting:** unchanged at 1,602 URL-bearing queue rows; 794 scout-covered; 612 candidate-positive; 182 parseable-empty; 20 failure-only. The source-discovery checkpoint remains 794/2,000, with 1,206 remaining and approximately 8–9 successful 150-row waves.
+- **Small runner safety change:** the scout now accepts a sole precreated `lineage_note.txt` in an otherwise fresh output directory, allowing required lineage to exist before a run. Any other nonempty output still fails closed; the mocked direct-SDK suite covers the exception.
+- **Validation/boundary:** all requested compiles, 12 prompt checks, 21 mocked direct-SDK checks, schema validation, 60 ingestion tests, coverage audit, dashboard JSON parsing, input/hash/ID/hint checks, probe quarantine, protected paths, and diff check passed. No source verification, extraction, ingestion, rating, codification, queue/coverage mutation, candidate promotion, wage-gap calculation/claim, causal claim, regression, remote action, or push occurred.
+
+### Next Move
+
+Do not merge, resume, or reuse the stopped directory. First diagnose why the SDK/hosted-search lifecycle ignored the configured 90-second bound and add a tested outer timeout/failure checkpoint if required. Only a separately authorized task should run the full unchanged 150-row input again, in a fresh directory, after the bounded diagnostic passes. On a complete merge-eligible result, rebuild queue/coverage once and then refresh yield/dashboard checkpoint status; priority tiers remain deferred until their cadence or strategy threshold.
+
 ## 2026-07-23 — Scale-up checkpoint dashboard and post-PI Wave 1 worker package are ready
 
 ### Current State
