@@ -4,6 +4,20 @@ This directory contains a static, PI-facing dashboard for national municipal-lab
 
 The MVP is intentionally about the research pipeline. It does **not** report wage gaps, causal estimates, verified-source totals, or regression results because the repository does not yet provide a validated, dashboard-ready wage and verification panel.
 
+## Frozen PI checkpoint — 2026-07-22
+
+The current committed data layer reflects the post–Tier 1 Wave 2 checkpoint:
+
+- 35,589 municipal/township governments in the authoritative universe;
+- 794 successfully scout-covered municipalities;
+- 612 candidate-positive and 182 parseable-empty municipalities;
+- 20 failure-only municipalities retained outside successful coverage;
+- 1,602 URL-bearing, unverified candidate queue rows;
+- 34,789 future-scout-eligible municipalities, including 1,227 Tier 1 and 3,478 Tier 2;
+- latest-wave runtime 5,738.638 seconds and throughput 94.099 attempted rows/hour.
+
+A candidate row is a possible source URL or document lead, not a verified source or ingested contract. The checkpoint is documented in `docs/analysis/pi_progress_report_source_discovery_2026-07-22.md`.
+
 ## What the MVP includes
 
 - national headline counts for the municipal universe, scout coverage, candidate rows, and likely matched-set leads;
@@ -66,6 +80,21 @@ The builder regenerates:
 - `docs/dashboard/data/candidate_queue_summary.json`
 - `docs/dashboard/data/coverage_funnel.json`
 - `docs/dashboard/data/analysis_readiness.json`
+- `docs/dashboard/data/priority_summary.json`
+- `docs/dashboard/data/state_priority_summary.json`
+- `docs/dashboard/data/top_priority_targets.json`
+- `docs/dashboard/data/scout_operations_summary.json`
+- `docs/dashboard/data/scout_yield_by_state.json`
+- `docs/dashboard/data/scout_runtime_trends.json`
+
+The first four files drive the current core dashboard views. The priority and operations files provide a committed, static data layer for present reporting and later low-risk UI additions; not every field is necessarily rendered by the current frontend.
+
+To refresh state/wave yield inputs before rebuilding the dashboard, run:
+
+```bash
+python scripts/build_scout_yield_learning_report.py
+python scripts/build_dashboard_data.py
+```
 
 Review the printed totals and JSON diffs before committing. In particular, confirm that candidate-positive plus parseable-empty municipalities equals scout-covered municipalities and that connection failures remain outside coverage.
 

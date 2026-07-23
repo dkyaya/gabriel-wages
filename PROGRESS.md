@@ -6,6 +6,28 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-22 (Post–Tier 1 Wave 2 state frozen for PI review)
+
+**Did**
+- Started from clean tracked commit `3f2f815f4ca4b4e90f6ca1bff769bd300843d703`, confirmed required ancestry, and left unrelated untracked root `package-lock.json` untouched. Reconciled the current universe, queue, municipality/state/county coverage, four wave reviews, yield files, refreshed priority layer, and dashboard data without substituting filenames.
+- Rebuilt the deterministic state/wave yield report and all ten dashboard JSON files from existing committed accounting. The build reproduced 35,589 universe rows, 794 successful scouts, 612 candidate-positive, 182 parseable-empty, 20 failure-only, 1,602 queue rows, 34,789 future-eligible, 1,227 Tier 1 eligible, and 3,478 Tier 2 eligible.
+- Created the [PI progress report](docs/analysis/pi_progress_report_source_discovery_2026-07-22.md), [short memo](docs/analysis/pi_progress_memo_short_2026-07-22.md), [meeting talking points](docs/analysis/pi_meeting_talking_points_2026-07-22.md), [verification plan](docs/analysis/post_pi_verification_plan_2026-07-22.md), input audit, dashboard update note, and an updated dashboard README.
+
+**Decisions and why**
+- Freeze this checkpoint as source-discovery infrastructure progress, not substantive evidence. Candidate rows remain possible source leads; municipality coverage means a parseable scout outcome; verified, ingested/codified, and analysis-ready stages remain separate.
+- Recommend a 50–100-row targeted verification pilot before further broad expansion. It should measure exact-employer/unit, provenance, source type, completeness, duplicate status, wage-field extractability, and matched safety/non-safety potential. The PI should decide the preferred breadth/verification balance.
+- Keep the 20 failure-only municipalities in a separate bounded retry lane. Their failures do not establish source absence.
+
+**Surprises/breakage**
+- None. All canonical filenames remained current despite historical date stamps. Rebuilding the deterministic data layer changed dashboard generation timestamps only; national queue/coverage and priority methodology were not changed.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. The scout queue was not promoted into this canonical corpus. No live/API/model call, hosted-search diagnostic, URL access, source verification, ingestion, codification, protected contract/city-coverage/corpus edit, queue/coverage rebuild, priority rebuild/methodology change, remote action, or push occurred.
+
+**Next steps**
+1. Present the PI report and ask for a decision on breadth versus verification; recommended default is a 50–100-row targeted verification pilot.
+2. If approved, lock a stratified candidate sample and build the verified-source ledger before ingestion or wage extraction.
+3. Continue ordinary Tier 1 discovery or the separate 20-row failure retry only under a subsequent scoped task.
+
 ## 2026-07-22 (Tier 1 Wave 2 compact/adaptive 150-row scout completed and merged)
 
 **Did**

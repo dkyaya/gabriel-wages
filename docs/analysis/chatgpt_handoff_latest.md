@@ -6,6 +6,21 @@ Last updated: `2026-07-22`
 
 ---
 
+## 2026-07-22 — PI-ready post–Tier 1 Wave 2 checkpoint
+
+### Current State
+
+- **Frozen accounting:** reporting began at `3f2f815f4ca4b4e90f6ca1bff769bd300843d703` with clean tracked state. The authoritative universe remains 35,589; successful scout coverage is 794 (612 candidate-positive plus 182 parseable-empty); failure-only is 20; and the URL-bearing candidate queue is 1,602. All leads remain unverified.
+- **Priority checkpoint:** the unchanged methodology already refreshed after Tier 1 Wave 2. Current future eligibility is 34,789, including 1,227 Tier 1 and 3,478 Tier 2; the 20 failure-only municipalities remain a separate retry lane. Priority is a research-operations heuristic, not a substantive classification.
+- **Dashboard/yield:** deterministic yield learning and all ten dashboard JSON files were rebuilt and parse successfully. The latest operations layer records Tier 1 Wave 2 at 5,738.638 seconds, 94.099 rows/hour, 205.136 parsed candidates/hour, and 2.209 parsed candidates per parseable municipality. The frontend was not changed. The documented Pages URL is `https://dkyaya.github.io/gabriel-wages/`, subject to deployment availability.
+- **PI package:** [the full report](pi_progress_report_source_discovery_2026-07-22.md), [short memo](pi_progress_memo_short_2026-07-22.md), [talking points](pi_meeting_talking_points_2026-07-22.md), and [verification plan](post_pi_verification_plan_2026-07-22.md) maintain the stage boundary from municipality searched → candidate lead → verified source → ingested/codified contract → analysis-ready matched evidence.
+- **Interpretation:** the pipeline can discover candidate municipal wage-setting records at scale, and Tier 1 Wave 2 had the strongest reviewed operational yield. The project cannot yet report verified wage gaps, safety/non-safety differentials, mechanism effects, state comparisons, or causal findings.
+- **Boundary:** this checkpoint made no live/API/model call, search diagnostic, URL access, verification, ingestion, codification, queue/coverage rebuild, priority rebuild/methodology change, protected/corpus edit, remote action, or push.
+
+### Next Move
+
+Present the PI package and request a breadth-versus-verification decision. Recommended default: verify a stratified 50–100-row candidate subset, record exact employer/unit/provenance/type/dates/completeness/duplicate/wage-extractability/matched-cycle fields, and measure conversion before adding substantially more leads. Keep the 20 failure-only targets separate. Further Tier 1 scouting remains available if the PI prioritizes breadth.
+
 ## 2026-07-22 — Tier 1 Wave 2 completed with the best reviewed runtime and yield
 
 ### Current State
