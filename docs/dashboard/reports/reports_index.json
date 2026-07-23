@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "data_vintage": "2026-07-22",
+  "reports": [
+    {
+      "id": "pi-source-discovery-2026-07-22",
+      "title": "Gabriel Wages Source-Discovery Progress Report",
+      "report_type": "PI Progress Report",
+      "date": "2026-07-22",
+      "checkpoint": "Post-Tier 1 Wave 2",
+      "summary": "A PI-facing checkpoint on the national municipality universe, four coordinated scout waves, unverified candidate-source queue, operational priority system, and recommended verification pilot.",
+      "pdf_path": "reports/pi_progress_report_source_discovery_2026-07-22.pdf",
+      "markdown_source_path": "docs/analysis/pi_progress_report_source_discovery_2026-07-22.md",
+      "tags": [
+        "PI report",
+        "source discovery",
+        "national coverage",
+        "scout operations",
+        "verification planning"
+      ],
+      "current": true,
+      "created_commit": "c3bdbc7",
+      "metrics_snapshot": {
+        "scout_covered": 794,
+        "candidate_queue_rows": 1602,
+        "candidate_positive": 612,
+        "parseable_empty": 182,
+        "failure_only": 20,
+        "tier1_eligible": 1227,
+        "tier2_eligible": 3478
+      }
+    }
+  ]
+}

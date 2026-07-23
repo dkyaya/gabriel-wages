@@ -6,6 +6,32 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-22 (PI report rebranded and dashboard expanded into the full project hub)
+
+**Did**
+- Started from clean tracked commit `c3bdbc725eb7b689a48db2f420ba776106da95bf` on `main`, confirmed the required publication/scouting/control ancestry, and left the unrelated untracked root `package-lock.json` untouched.
+- The uploaded `/mnt/data/` reference path was unavailable in this workspace, so the canonical same-title July 10 PDF at `docs/final_reports/deeper_look_safety_non_safety_wage_mechanisms_2026-07-10.pdf` was used transparently. Rendered and reviewed its 15 pages, documented its classic academic visual system, and created a reusable Gabriel Wages report style guide.
+- Restyled the local ReportLab generator around Georgia body type, crimson headings, a sparse centered cover, thin gray tables, repeated report header, short footer, and page numbers. Rebuilt byte-identical six-page analysis/dashboard PDFs and visually approved every final page.
+- Reorganized the static dashboard into a permanent hub with collected/current/forthcoming orientation, sticky responsive navigation, preserved state map, priority tiers, scout operations, candidate queue, verification pipeline, state-yield learning, a main-section reports library, definitions, readiness, and PI next steps.
+- Added validated report-library metadata at `docs/dashboard/reports/reports_index.json` and its generated data copy. Rebuilt four-wave yield learning and all eleven dashboard JSON files from existing committed artifacts. The Vite production build passed and bundled the PDF.
+
+**Decisions and why**
+- Reuse the older report’s typography and pacing, not its substantive content. The July 22 Markdown remains the report’s content authority and now accurately describes the full hub.
+- Make evidence stages visible everywhere: 1,602 candidate rows remain unverified leads; scout coverage is not verified-source coverage; tiers schedule work rather than report findings; downstream verification, ingestion, codification, and analysis readiness remain separate.
+- Keep hash routing for state views and use scroll-based hub navigation, avoiding regressions in existing state selection and printable reports.
+- Keep the recommended next action unchanged: PI review and a stratified 50–100-row verification pilot, with 20 failure-only municipalities in a separate retry lane.
+
+**Surprises/breakage**
+- The user-provided `/mnt/data/` path was not mounted, but the repository’s canonical July 10 report provided the requested visual reference and matched the supplied title/date.
+- Browser-control discovery returned no available browser. Interactive screenshot QA was therefore unavailable; the fallback validation used the successful Vite build, compiled-bundle section/link assertions, responsive source review, all-JSON parsing, and PDF asset bundling. No production code was weakened to accommodate the unavailable browser.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. The scout queue was not promoted. No scout, live/API/model/hosted-search call, candidate URL access or verification, source ingestion, GABRIEL codification, queue/coverage/priority methodology change, protected contract/city-coverage/corpus edit, wage-gap finding, or causal claim occurred.
+
+**Next steps**
+1. Allow the normal `main` Pages deployment to publish the rebuilt hub and PDF, then review `https://dkyaya.github.io/gabriel-wages/`.
+2. Present the branded report and hub to the PI and request the breadth-versus-verification decision.
+3. Recommended default: lock a stratified 50–100-row verification pilot before substantially expanding the candidate queue.
+
 ## 2026-07-22 (PI progress report published as a dashboard-linked PDF)
 
 **Did**

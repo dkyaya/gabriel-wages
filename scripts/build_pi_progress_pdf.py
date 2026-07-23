@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Build a polished PI-facing PDF from the source-discovery Markdown report.
+"""Build a reference-styled PI-facing PDF from a Markdown progress report.
 
 This script is deliberately local-only. It reads one Markdown file and writes
-one PDF with ReportLab. It does not access the network, call a model/API, open
-candidate URLs, or alter source-discovery accounting.
+one PDF with ReportLab. Its restrained Georgia/crimson report style follows the
+project's July 10, 2026 academic-report format. It does not access the network,
+call a model/API, open candidate URLs, or alter source-discovery accounting.
 """
 
 from __future__ import annotations
@@ -34,21 +35,24 @@ from reportlab.platypus import (
 )
 
 
-REPORT_LABEL = "Gabriel Wages | Source-Discovery Progress Report"
-PROJECT_LABEL = "HBS municipal labor evidence project"
+REPORT_HEADER = "Gabriel Wages Source-Discovery Progress"
+REPORT_LABEL = "Source-Discovery Progress"
 DEFAULT_TITLE = "Gabriel Wages Source-Discovery Progress Report"
+DEFAULT_SUBTITLE = "National source-discovery infrastructure, coverage, and next research stage"
+DEFAULT_REPORT_TYPE = "PI Progress Report"
 SOURCE_CAVEAT = (
-    "Source-discovery status only. Candidate rows are unverified leads, not "
-    "verified contracts, matched wage observations, or claim-supporting evidence."
+    "This report summarizes source-discovery progress. Candidate rows are "
+    "unverified source leads and should not be interpreted as wage-gap estimates, "
+    "verified contracts, or causal evidence."
 )
 
-INK = colors.HexColor("#17342E")
-EVERGREEN = colors.HexColor("#245F51")
-TEAL = colors.HexColor("#5F8E82")
-PALE_GREEN = colors.HexColor("#EAF2EE")
-PALE_SAND = colors.HexColor("#F5F2EA")
-LINE = colors.HexColor("#CCD6D1")
-MUTED = colors.HexColor("#66736E")
+INK = colors.HexColor("#111111")
+CHARCOAL = colors.HexColor("#333333")
+CRIMSON = colors.HexColor("#A51C30")
+LIGHT_GRAY = colors.HexColor("#F2F2F2")
+PALE_CAVEAT = colors.HexColor("#FBF8F6")
+LINE = colors.HexColor("#C8C8C8")
+MUTED = colors.HexColor("#666666")
 WHITE = colors.white
 
 
@@ -222,10 +226,10 @@ def make_styles(serif: str, serif_bold: str, sans: str, sans_bold: str) -> dict[
             "PI Body",
             parent=base["BodyText"],
             fontName=serif,
-            fontSize=9.6,
-            leading=13.2,
+            fontSize=10.2,
+            leading=13.0,
             textColor=INK,
-            spaceAfter=7.5,
+            spaceAfter=7,
             alignment=TA_LEFT,
             allowWidows=0,
             allowOrphans=0,
@@ -234,127 +238,131 @@ def make_styles(serif: str, serif_bold: str, sans: str, sans_bold: str) -> dict[
             "PI Bullet",
             parent=base["BodyText"],
             fontName=serif,
-            fontSize=9.25,
-            leading=12.5,
+            fontSize=10.0,
+            leading=12.8,
             textColor=INK,
-            spaceAfter=3,
+            spaceAfter=4,
         ),
         "bullet_marker": ParagraphStyle(
             "PI Bullet Marker",
             parent=base["BodyText"],
-            fontName=sans_bold,
-            fontSize=8.3,
-            leading=12.5,
-            textColor=EVERGREEN,
+            fontName=serif,
+            fontSize=9.5,
+            leading=12.8,
+            textColor=INK,
             alignment=TA_LEFT,
         ),
         "h2": ParagraphStyle(
             "PI H2",
             parent=base["Heading2"],
             fontName=serif_bold,
-            fontSize=16,
-            leading=19,
-            textColor=EVERGREEN,
-            spaceBefore=14,
-            spaceAfter=7,
+            fontSize=15.2,
+            leading=18,
+            textColor=CRIMSON,
+            spaceBefore=13,
+            spaceAfter=6,
             keepWithNext=True,
         ),
         "h3": ParagraphStyle(
             "PI H3",
             parent=base["Heading3"],
-            fontName=sans_bold,
-            fontSize=10.6,
-            leading=13,
-            textColor=INK,
-            spaceBefore=9,
-            spaceAfter=4,
+            fontName=serif_bold,
+            fontSize=11.5,
+            leading=14,
+            textColor=CHARCOAL,
+            spaceBefore=10,
+            spaceAfter=5,
             keepWithNext=True,
         ),
         "table": ParagraphStyle(
             "PI Table",
             parent=base["BodyText"],
-            fontName=sans,
-            fontSize=7.2,
-            leading=9.0,
+            fontName=serif,
+            fontSize=7.1,
+            leading=8.6,
             textColor=INK,
         ),
         "table_small": ParagraphStyle(
             "PI Table Small",
             parent=base["BodyText"],
-            fontName=sans,
-            fontSize=6.1,
-            leading=7.4,
+            fontName=serif,
+            fontSize=6.0,
+            leading=7.2,
             textColor=INK,
         ),
         "table_header": ParagraphStyle(
             "PI Table Header",
             parent=base["BodyText"],
-            fontName=sans_bold,
-            fontSize=6.9,
-            leading=8.3,
-            textColor=WHITE,
+            fontName=serif_bold,
+            fontSize=6.8,
+            leading=8.1,
+            textColor=INK,
         ),
         "table_header_small": ParagraphStyle(
             "PI Table Header Small",
             parent=base["BodyText"],
-            fontName=sans_bold,
+            fontName=serif_bold,
             fontSize=5.8,
-            leading=7.0,
-            textColor=WHITE,
+            leading=6.9,
+            textColor=INK,
         ),
         "cover_title": ParagraphStyle(
             "PI Cover Title",
             parent=base["Title"],
             fontName=serif_bold,
-            fontSize=29,
-            leading=33,
-            alignment=TA_LEFT,
-            textColor=INK,
-            spaceAfter=16,
+            fontSize=25,
+            leading=30,
+            alignment=TA_CENTER,
+            textColor=CHARCOAL,
+            spaceAfter=10,
         ),
-        "cover_label": ParagraphStyle(
-            "PI Cover Label",
+        "cover_subtitle": ParagraphStyle(
+            "PI Cover Subtitle",
             parent=base["BodyText"],
-            fontName=sans_bold,
-            fontSize=9,
-            leading=11,
-            textColor=EVERGREEN,
-            spaceAfter=8,
-            uppercase=True,
+            fontName=serif,
+            fontSize=13,
+            leading=16,
+            textColor=MUTED,
+            alignment=TA_CENTER,
+            spaceAfter=18,
+        ),
+        "cover_type": ParagraphStyle(
+            "PI Cover Type",
+            parent=base["BodyText"],
+            fontName=serif_bold,
+            fontSize=10,
+            leading=12,
+            textColor=CRIMSON,
+            alignment=TA_CENTER,
+            spaceAfter=24,
         ),
         "cover_date": ParagraphStyle(
             "PI Cover Date",
             parent=base["BodyText"],
-            fontName=sans,
+            fontName=serif,
             fontSize=10,
-            leading=13,
+            leading=12,
             textColor=MUTED,
+            alignment=TA_CENTER,
         ),
         "caveat": ParagraphStyle(
             "PI Caveat",
             parent=base["BodyText"],
-            fontName=sans_bold,
+            fontName=serif,
             fontSize=9.2,
-            leading=13,
-            textColor=INK,
+            leading=12.2,
+            textColor=CHARCOAL,
+            alignment=TA_CENTER,
         ),
-        "metric_label": ParagraphStyle(
-            "PI Metric Label",
+        "caption": ParagraphStyle(
+            "PI Caption",
             parent=base["BodyText"],
-            fontName=sans,
-            fontSize=7.1,
-            leading=8.5,
+            fontName=serif,
+            fontSize=8.5,
+            leading=10,
             textColor=MUTED,
             alignment=TA_CENTER,
-        ),
-        "metric_value": ParagraphStyle(
-            "PI Metric Value",
-            parent=base["BodyText"],
-            fontName=serif_bold,
-            fontSize=17,
-            leading=19,
-            textColor=EVERGREEN,
-            alignment=TA_CENTER,
+            spaceAfter=8,
         ),
     }
 
@@ -369,23 +377,6 @@ def extract_title_and_date(blocks: list[Block]) -> tuple[str, str]:
     if date_text == "July 22, 2026":
         date_text = "2026-07-22"
     return title, date_text
-
-
-def extract_cover_metrics(blocks: list[Block]) -> list[tuple[str, str]]:
-    desired = {
-        "Successfully scout-covered municipalities": "Scout covered",
-        "Candidate-positive municipalities": "Candidate positive",
-        "URL-bearing candidate queue rows": "Candidate leads",
-        "Tier 1 eligible municipalities": "Tier 1 eligible",
-    }
-    found: dict[str, str] = {}
-    for block in blocks:
-        if block.kind != "table":
-            continue
-        for row in block.rows[1:]:
-            if len(row) >= 2 and row[0] in desired:
-                found[desired[row[0]]] = row[1]
-    return [(label, found[label]) for label in desired.values() if label in found]
 
 
 def table_widths(rows: tuple[tuple[str, ...], ...], available: float) -> list[float]:
@@ -421,19 +412,15 @@ def build_table(
         data.append([paragraph(row[column] if column < len(row) else "", style, mono_font) for column in range(columns)])
     table = Table(data, colWidths=table_widths(rows, available), repeatRows=1, splitByRow=1, hAlign="LEFT")
     commands = [
-        ("BACKGROUND", (0, 0), (-1, 0), EVERGREEN),
-        ("TEXTCOLOR", (0, 0), (-1, 0), WHITE),
+        ("BACKGROUND", (0, 0), (-1, 0), LIGHT_GRAY),
+        ("TEXTCOLOR", (0, 0), (-1, 0), INK),
         ("VALIGN", (0, 0), (-1, -1), "TOP"),
-        ("LINEBELOW", (0, 0), (-1, 0), 0.8, EVERGREEN),
-        ("LINEBELOW", (0, 1), (-1, -1), 0.3, LINE),
+        ("GRID", (0, 0), (-1, -1), 0.25, LINE),
         ("LEFTPADDING", (0, 0), (-1, -1), 5 if not small else 3),
         ("RIGHTPADDING", (0, 0), (-1, -1), 5 if not small else 3),
         ("TOPPADDING", (0, 0), (-1, -1), 5 if not small else 4),
         ("BOTTOMPADDING", (0, 0), (-1, -1), 5 if not small else 4),
     ]
-    for row_index in range(1, len(data)):
-        if row_index % 2 == 0:
-            commands.append(("BACKGROUND", (0, row_index), (-1, row_index), colors.HexColor("#F7F9F8")))
     if columns == 2:
         commands.extend([("ALIGN", (1, 1), (1, -1), "RIGHT"), ("FONTNAME", (1, 1), (1, -1), styles["table"].fontName)])
     table.setStyle(TableStyle(commands))
@@ -447,7 +434,15 @@ class DeterministicCanvas(pdfcanvas.Canvas):
         super().__init__(*args, **kwargs)
 
 
-def build_pdf(input_path: Path, output_path: Path) -> None:
+def build_pdf(
+    input_path: Path,
+    output_path: Path,
+    *,
+    title_override: str | None = None,
+    subtitle: str = DEFAULT_SUBTITLE,
+    report_date_override: str | None = None,
+    report_type: str = DEFAULT_REPORT_TYPE,
+) -> None:
     if not input_path.is_file():
         raise FileNotFoundError(input_path)
     blocks = parse_markdown(input_path)
@@ -457,16 +452,17 @@ def build_pdf(input_path: Path, output_path: Path) -> None:
     serif, serif_bold, sans, sans_bold = register_fonts()
     mono = "Courier"
     styles = make_styles(serif, serif_bold, sans, sans_bold)
-    title, report_date = extract_title_and_date(blocks)
-    metrics = extract_cover_metrics(blocks)
+    source_title, source_date = extract_title_and_date(blocks)
+    title = title_override or source_title
+    report_date = report_date_override or source_date
 
     document = SimpleDocTemplate(
         str(output_path),
         pagesize=letter,
-        leftMargin=0.72 * inch,
-        rightMargin=0.72 * inch,
-        topMargin=0.78 * inch,
-        bottomMargin=0.72 * inch,
+        leftMargin=0.82 * inch,
+        rightMargin=0.82 * inch,
+        topMargin=0.86 * inch,
+        bottomMargin=0.78 * inch,
         title=title,
         author="Gabriel Wages research project",
         subject="PI-facing source-discovery progress report",
@@ -476,50 +472,32 @@ def build_pdf(input_path: Path, output_path: Path) -> None:
     available = letter[0] - document.leftMargin - document.rightMargin
 
     story: list = [
-        Spacer(1, 0.45 * inch),
-        paragraph(PROJECT_LABEL.upper(), styles["cover_label"], mono),
-        Spacer(1, 0.18 * inch),
+        Spacer(1, 1.45 * inch),
         paragraph(title, styles["cover_title"], mono),
-        Spacer(1, 0.08 * inch),
-        paragraph(f"Report date: {report_date} | Frozen post-Tier 1 Wave 2 checkpoint", styles["cover_date"], mono),
-        Spacer(1, 0.42 * inch),
+        paragraph(subtitle, styles["cover_subtitle"], mono),
+        paragraph(report_type, styles["cover_type"], mono),
+        paragraph(report_date, styles["cover_date"], mono),
+        Spacer(1, 0.65 * inch),
     ]
 
-    if metrics:
-        metric_cells = []
-        for label, value in metrics:
-            metric_cells.append([paragraph(value, styles["metric_value"], mono), paragraph(label, styles["metric_label"], mono)])
-        metric_table = Table([metric_cells], colWidths=[available / len(metric_cells)] * len(metric_cells), hAlign="LEFT")
-        metric_table.setStyle(
-            TableStyle(
-                [
-                    ("BACKGROUND", (0, 0), (-1, -1), PALE_GREEN),
-                    ("BOX", (0, 0), (-1, -1), 0.7, LINE),
-                    ("INNERGRID", (0, 0), (-1, -1), 0.5, LINE),
-                    ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
-                    ("LEFTPADDING", (0, 0), (-1, -1), 8),
-                    ("RIGHTPADDING", (0, 0), (-1, -1), 8),
-                    ("TOPPADDING", (0, 0), (-1, -1), 12),
-                    ("BOTTOMPADDING", (0, 0), (-1, -1), 12),
-                ]
-            )
-        )
-        story.extend([metric_table, Spacer(1, 0.42 * inch)])
-
-    caveat_table = Table([[paragraph(SOURCE_CAVEAT, styles["caveat"], mono)]], colWidths=[available])
+    caveat_table = Table(
+        [[paragraph(SOURCE_CAVEAT, styles["caveat"], mono)]],
+        colWidths=[available * 0.88],
+        hAlign="CENTER",
+    )
     caveat_table.setStyle(
         TableStyle(
             [
-                ("BACKGROUND", (0, 0), (-1, -1), PALE_SAND),
-                ("BOX", (0, 0), (-1, -1), 0.8, TEAL),
-                ("LEFTPADDING", (0, 0), (-1, -1), 14),
-                ("RIGHTPADDING", (0, 0), (-1, -1), 14),
-                ("TOPPADDING", (0, 0), (-1, -1), 12),
-                ("BOTTOMPADDING", (0, 0), (-1, -1), 12),
+                ("BACKGROUND", (0, 0), (-1, -1), PALE_CAVEAT),
+                ("BOX", (0, 0), (-1, -1), 0.7, CRIMSON),
+                ("LEFTPADDING", (0, 0), (-1, -1), 16),
+                ("RIGHTPADDING", (0, 0), (-1, -1), 16),
+                ("TOPPADDING", (0, 0), (-1, -1), 11),
+                ("BOTTOMPADDING", (0, 0), (-1, -1), 11),
             ]
         )
     )
-    story.extend([caveat_table, Spacer(1, 0.34 * inch), paragraph("Prepared for PI review", styles["cover_date"], mono), PageBreak()])
+    story.extend([caveat_table, PageBreak()])
 
     seen_title = False
     seen_date = False
@@ -546,7 +524,7 @@ def build_pdf(input_path: Path, output_path: Path) -> None:
         elif block.kind == "list":
             list_rows = []
             for item_index, item in enumerate(block.items, start=1):
-                marker = f"{item_index}." if block.ordered else "-"
+                marker = f"{item_index}." if block.ordered else "•"
                 list_rows.append(
                     [
                         paragraph(marker, styles["bullet_marker"], mono),
@@ -577,18 +555,16 @@ def build_pdf(input_path: Path, output_path: Path) -> None:
         width, height = letter
         if doc.page > 1:
             canvas.setStrokeColor(LINE)
-            canvas.setLineWidth(0.5)
-            canvas.line(doc.leftMargin, height - 0.46 * inch, width - doc.rightMargin, height - 0.46 * inch)
-            canvas.setFont(sans, 7.3)
+            canvas.setLineWidth(0.35)
+            canvas.line(doc.leftMargin, height - 0.49 * inch, width - doc.rightMargin, height - 0.49 * inch)
+            canvas.setFont(serif, 8.0)
             canvas.setFillColor(MUTED)
-            canvas.drawString(doc.leftMargin, height - 0.34 * inch, REPORT_LABEL)
-        canvas.setStrokeColor(LINE)
-        canvas.setLineWidth(0.5)
-        canvas.line(doc.leftMargin, 0.47 * inch, width - doc.rightMargin, 0.47 * inch)
-        canvas.setFont(sans, 7.3)
+            canvas.drawString(doc.leftMargin, height - 0.36 * inch, REPORT_HEADER)
+            canvas.drawRightString(width - doc.rightMargin, height - 0.36 * inch, report_type)
+        canvas.setFont(serif, 8.0)
         canvas.setFillColor(MUTED)
-        canvas.drawString(doc.leftMargin, 0.29 * inch, "Source-discovery reporting | Candidate rows remain unverified")
-        canvas.drawRightString(width - doc.rightMargin, 0.29 * inch, f"Page {doc.page}")
+        canvas.drawString(doc.leftMargin, 0.39 * inch, REPORT_LABEL)
+        canvas.drawRightString(width - doc.rightMargin, 0.39 * inch, f"Page {doc.page}")
         canvas.setTitle(title)
         canvas.setAuthor("Gabriel Wages research project")
         canvas.setSubject("PI-facing source-discovery progress report")
@@ -610,8 +586,19 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--input", required=True, type=Path, help="Input Markdown report")
     parser.add_argument("--output", required=True, type=Path, help="Output PDF path")
+    parser.add_argument("--title", help="Optional title override")
+    parser.add_argument("--subtitle", default=DEFAULT_SUBTITLE, help="Optional report subtitle")
+    parser.add_argument("--report-date", help="Optional report date override")
+    parser.add_argument("--report-type", default=DEFAULT_REPORT_TYPE, help="Optional report type/cover label")
     args = parser.parse_args()
-    build_pdf(args.input, args.output)
+    build_pdf(
+        args.input,
+        args.output,
+        title_override=args.title,
+        subtitle=args.subtitle,
+        report_date_override=args.report_date,
+        report_type=args.report_type,
+    )
     print(f"PDF built: {args.output} ({args.output.stat().st_size} bytes)")
     return 0
 

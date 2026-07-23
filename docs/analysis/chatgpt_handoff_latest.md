@@ -6,6 +6,23 @@ Last updated: `2026-07-22`
 
 ---
 
+## 2026-07-22 — Branded PI report and permanent project hub prepared
+
+### Current State
+
+- **Checkpoint:** work began at clean tracked `c3bdbc725eb7b689a48db2f420ba776106da95bf` on `main`; required `b9d698f`/`3f2f815`/`bef5077` ancestry is present. The unrelated untracked root `package-lock.json` remains untouched.
+- **Reference format:** the user’s `/mnt/data/` attachment path was unavailable, so the canonical same-title July 10 report at `docs/final_reports/deeper_look_safety_non_safety_wage_mechanisms_2026-07-10.pdf` was used transparently. Its 15 pages establish the project’s sparse title page, Georgia serif body, crimson hierarchy, thin gray tables, repeated header/footer, and page-number style. The audit and reusable style guide are [documented here](report_reference_style_audit_2026-07-22.md) and [here](report_style_guide_2026-07-22.md).
+- **PI PDF:** the updated local ReportLab builder produced byte-identical six-page analysis and dashboard copies. Both hash to `4d39ec04f1594f32a08e6093d8812ea799ee3e4a88b133e0dbb4a3230b70df23`, are 67,815 bytes, use letter size, have deterministic metadata, and passed a complete 150-DPI page-render inspection. See [the build notes](pi_progress_report_reference_style_pdf_build_notes_2026-07-22.md).
+- **Project hub:** the dashboard now includes overview; preserved geographic/tile maps; Tier 1–Tier 5 priorities; scout operations; candidate queue; verification pipeline; state yield; PI reports library; methodology definitions; readiness; and next steps. Sticky section navigation collapses on mobile without interfering with existing state hash routes.
+- **Report library:** `docs/dashboard/reports/reports_index.json` is the durable source; `scripts/build_dashboard_data.py` validates it and writes `docs/dashboard/data/reports_index.json`. The current PI report is visible in the header, primary Reports Library section, and footer.
+- **Data/accounting:** yield learning and all eleven dashboard JSON files were rebuilt from existing committed artifacts only. Frozen totals remain 35,589 universe, 794 successful scouts, 612 candidate-positive, 182 parseable-empty, 20 failure-only, 1,602 unverified leads, 34,789 future eligible, 1,227 Tier 1, and 3,478 Tier 2.
+- **Validation:** the Vite production build passes and bundles the report PDF; both report indices and all dashboard JSON parse; compiled output contains the Reports Library, priority tiers, verification pipeline, and caveats. Browser-control discovery had no available browser, so interactive browser screenshots were not possible; source-level responsive/accessibility review and production-bundle assertions were used instead.
+- **Boundary:** no scout, live/API/model/hosted-search call, URL access or verification, ingestion, codification, candidate promotion, queue/coverage or priority-methodology change, protected/corpus edit, wage-gap finding, or causal claim occurred.
+
+### Next Move
+
+After the authorized normal `main` push and Pages redeploy, review `https://dkyaya.github.io/gabriel-wages/` and present the current PDF to the PI. The recommended decision is a stratified 50–100-row verification pilot that records exact employer/unit, source ownership, provenance, dates, document type, completeness, duplicates, wage-field extractability, and matched-cycle potential. Preserve the 20 failure-only municipalities as a separate retry lane and continue Tier 1 breadth only if the PI prioritizes expansion.
+
 ## 2026-07-22 — PI PDF published through the dashboard build
 
 ### Current State

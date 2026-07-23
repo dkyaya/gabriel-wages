@@ -49,6 +49,9 @@ HOSTED_SEARCH_RECOMMENDATION_PATH = (
 CLAIM_REGISTER_PATH = ANALYSIS_DIR / "claim_register_2026-07-12.csv"
 STATE_CITY_CLAIM_MAP_PATH = ANALYSIS_DIR / "state_city_claim_map_2026-07-12.csv"
 HYPOTHESIS_TRACKER_PATH = ANALYSIS_DIR / "hypothesis_tracker_2026-07-12.csv"
+REPORTS_INDEX_SOURCE_PATH = (
+    ROOT / "docs" / "dashboard" / "reports" / "reports_index.json"
+)
 
 REQUIRED_PATHS = [
     STATE_COVERAGE_PATH,
@@ -60,6 +63,7 @@ REQUIRED_PATHS = [
     TOP_PRIORITY_TARGETS_PATH,
     SCOUT_YIELD_STATE_PATH,
     SCOUT_YIELD_WAVE_PATH,
+    REPORTS_INDEX_SOURCE_PATH,
 ]
 OPTIONAL_PATHS = [
     CLAIM_REGISTER_PATH,
@@ -197,6 +201,98 @@ def write_json(name: str, payload: dict[str, Any]) -> Path:
         json.dump(payload, handle, indent=2, ensure_ascii=False)
         handle.write("\n")
     return path
+
+
+def read_json(path: Path) -> dict[str, Any]:
+    with path.open(encoding="utf-8") as handle:
+        payload = json.load(handle)
+    if not isinstance(payload, dict):
+        raise ValueError(f"Expected a JSON object in {relative(path)}")
+    return payload
+
+
+def build_reports_index_layer(
+    *, source_index: dict[str, Any], metadata: dict[str, Any]
+) -> dict[str, Any]:
+    required_report_fields = {
+        "id",
+        "title",
+        "report_type",
+        "date",
+        "checkpoint",
+        "summary",
+        "pdf_path",
+        "markdown_source_path",
+        "tags",
+        "current",
+        "created_commit",
+        "metrics_snapshot",
+    }
+    required_metric_fields = {
+        "scout_covered",
+        "candidate_queue_rows",
+        "candidate_positive",
+        "parseable_empty",
+        "failure_only",
+        "tier1_eligible",
+        "tier2_eligible",
+    }
+    reports = source_index.get("reports")
+    if not isinstance(reports, list) or not reports:
+        raise ValueError("Report index must contain a non-empty reports list")
+
+    report_ids: list[str] = []
+    current_count = 0
+    for index, report in enumerate(reports, start=1):
+        if not isinstance(report, dict):
+            raise ValueError(f"Report index entry {index} must be an object")
+        missing = sorted(required_report_fields - set(report))
+        if missing:
+            raise ValueError(f"Report index entry {index} is missing: {missing}")
+        if not all(isinstance(report[field], str) and report[field].strip() for field in required_report_fields - {"tags", "current", "metrics_snapshot"}):
+            raise ValueError(f"Report index entry {index} has a missing text value")
+        if not isinstance(report["tags"], list) or not all(
+            isinstance(tag, str) and tag.strip() for tag in report["tags"]
+        ):
+            raise ValueError(f"Report index entry {index} tags must be non-empty strings")
+        if not isinstance(report["current"], bool):
+            raise ValueError(f"Report index entry {index} current must be boolean")
+        current_count += int(report["current"])
+        metrics = report["metrics_snapshot"]
+        if not isinstance(metrics, dict) or set(metrics) != required_metric_fields:
+            raise ValueError(
+                f"Report index entry {index} metrics_snapshot must contain exactly "
+                f"{sorted(required_metric_fields)}"
+            )
+        if any(not isinstance(value, int) or value < 0 for value in metrics.values()):
+            raise ValueError(f"Report index entry {index} metrics must be nonnegative integers")
+        pdf_path = ROOT / "docs" / "dashboard" / report["pdf_path"]
+        markdown_path = ROOT / report["markdown_source_path"]
+        if not pdf_path.is_file():
+            raise FileNotFoundError(f"Dashboard report PDF is missing: {relative(pdf_path)}")
+        if not markdown_path.is_file():
+            raise FileNotFoundError(
+                f"Dashboard report Markdown source is missing: {relative(markdown_path)}"
+            )
+        report_ids.append(report["id"])
+
+    if len(report_ids) != len(set(report_ids)):
+        raise ValueError("Report index contains duplicate report IDs")
+    if current_count != 1:
+        raise ValueError("Report index must contain exactly one current report")
+
+    return {
+        "schema_version": source_index.get("schema_version", "1.0.0"),
+        "generated_at": metadata["generated_at"],
+        "data_vintage": source_index.get("data_vintage", metadata["data_vintage"]),
+        "source_file": relative(REPORTS_INDEX_SOURCE_PATH),
+        "reports": reports,
+        "disclaimer": (
+            "Reports summarize source-discovery and research-operations status. "
+            "Candidate rows remain unverified leads; no report in this index should "
+            "be interpreted as a wage-gap estimate or causal finding."
+        ),
+    }
 
 
 def split_semicolon(value: str) -> list[str]:
@@ -1071,6 +1167,7 @@ def main() -> int:
     top_priority_rows = read_csv(TOP_PRIORITY_TARGETS_PATH)
     scout_yield_state_rows = read_csv(SCOUT_YIELD_STATE_PATH)
     scout_yield_wave_rows = read_csv(SCOUT_YIELD_WAVE_PATH)
+    reports_index_source = read_json(REPORTS_INDEX_SOURCE_PATH)
     claim_rows = read_csv(CLAIM_REGISTER_PATH) if CLAIM_REGISTER_PATH.exists() else []
     claim_map_rows = (
         read_csv(STATE_CITY_CLAIM_MAP_PATH) if STATE_CITY_CLAIM_MAP_PATH.exists() else []
@@ -1151,6 +1248,10 @@ def main() -> int:
         wave_rows=scout_yield_wave_rows,
         metadata=metadata,
     )
+    reports_index = build_reports_index_layer(
+        source_index=reports_index_source,
+        metadata=metadata,
+    )
 
     outputs = [
         write_json("state_summary.json", state_summary),
@@ -1163,6 +1264,7 @@ def main() -> int:
         write_json("scout_operations_summary.json", scout_operations),
         write_json("scout_yield_by_state.json", scout_yield_by_state),
         write_json("scout_runtime_trends.json", scout_runtime_trends),
+        write_json("reports_index.json", reports_index),
     ]
 
     for warning in warnings:

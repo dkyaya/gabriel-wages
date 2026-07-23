@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-23T02:30:33Z",
+  "generated_at": "2026-07-23T03:12:54Z",
   "data_vintage": "2026-07-22",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -12,6 +12,7 @@
     "docs/analysis/national_priority_tier_top_targets_2026-07-22.csv",
     "docs/analysis/scout_yield_learning_by_state_2026-07-22.csv",
     "docs/analysis/scout_yield_learning_by_wave_2026-07-22.csv",
+    "docs/dashboard/reports/reports_index.json",
     "docs/analysis/claim_register_2026-07-12.csv",
     "docs/analysis/state_city_claim_map_2026-07-12.csv",
     "docs/analysis/hypothesis_tracker_2026-07-12.csv",

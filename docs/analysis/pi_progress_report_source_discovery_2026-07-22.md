@@ -61,7 +61,7 @@ The configured GitHub Pages project URL is:
 
 The dashboard’s committed data layer reports national coverage and queue metrics, state-level geographic coverage, candidate triage, the source-discovery funnel, priority-tier summaries, runtime trends, and state-yield learning. It separates successful parseable outcomes from failure-only attempts and labels unavailable downstream stages rather than displaying missing data as zero.
 
-The dashboard is an operations and discovery dashboard. It does not display verified wage findings. Its priority score is a scheduling heuristic; its readiness score is workflow triage; and its candidate counts are unverified lead volume. The static frontend was not redesigned for this report, although all ten dashboard JSON files were refreshed and validated.
+The dashboard is a permanent project and research-status hub. It does not display verified wage findings. Its priority score is a scheduling heuristic; its readiness score is workflow triage; and its candidate counts are unverified lead volume. The hub now places coverage, priority tiers, scout operations, the candidate queue, the planned verification pipeline, state-yield learning, PI reports, definitions, and next steps in one navigable static interface. All eleven dashboard JSON files, including the report-library index, were refreshed and validated.
 
 ## What we can say now
 

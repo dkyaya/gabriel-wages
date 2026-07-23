@@ -1,148 +1,156 @@
-# National Municipal Labor Evidence Dashboard
+# Gabriel Wages Project Hub
 
-This directory contains a static, PI-facing dashboard for national municipal-labor source-discovery coverage and evidence readiness. It has no backend, database, secret key, Mapbox token, or runtime connection to a model service. The browser reads only committed dashboard JSON plus the committed local state-boundary GeoJSON.
+The public project hub is published at:
 
-The MVP is intentionally about the research pipeline. It does **not** report wage gaps, causal estimates, verified-source totals, or regression results because the repository does not yet provide a validated, dashboard-ready wage and verification panel.
+<https://dkyaya.github.io/gabriel-wages/>
 
-## Frozen PI checkpoint — 2026-07-22
+This directory contains a static, PI-facing research-status dashboard. It summarizes committed source-discovery, operational, prioritization, and planning artifacts. It has no backend, database, secret key, mapping token, or runtime model connection.
 
-The current committed data layer reflects the post–Tier 1 Wave 2 checkpoint:
+> Candidate rows are unverified source leads. Scout coverage is not verified-source coverage, priority tiers are operational work-order heuristics, and the dashboard does not report wage gaps or causal findings.
 
-- 35,589 municipal/township governments in the authoritative universe;
+## Frozen checkpoint — 2026-07-22
+
+The current data layer reflects the post–Tier 1 Wave 2 checkpoint:
+
+- 35,589 municipal and township governments in the authoritative universe;
 - 794 successfully scout-covered municipalities;
 - 612 candidate-positive and 182 parseable-empty municipalities;
 - 20 failure-only municipalities retained outside successful coverage;
 - 1,602 URL-bearing, unverified candidate queue rows;
-- 34,789 future-scout-eligible municipalities, including 1,227 Tier 1 and 3,478 Tier 2;
-- latest-wave runtime 5,738.638 seconds and throughput 94.099 attempted rows/hour.
+- 34,789 future-scout-eligible municipalities, including 1,227 Tier 1 and 3,478 Tier 2; and
+- latest-wave runtime of 5,738.638 seconds, or 94.099 attempted rows per hour.
 
-A candidate row is a possible source URL or document lead, not a verified source or ingested contract. The checkpoint is documented in `docs/analysis/pi_progress_report_source_discovery_2026-07-22.md`.
-
-The PI-facing checkpoint report is available as a publication-ready PDF:
+The current PI checkpoint report is available in the dashboard’s Reports Library and directly here:
 
 - [PI Source-Discovery Progress Report PDF](reports/pi_progress_report_source_discovery_2026-07-22.pdf)
 
-The dashboard footer links to the same committed PDF. Vite treats it as a managed static asset so the GitHub Pages build publishes it with the dashboard.
+## Hub sections
 
-## What the MVP includes
+The dashboard is organized around what has been collected, what is current, and what is forthcoming:
 
-- national headline counts for the municipal universe, scout coverage, candidate rows, and likely matched-set leads;
-- a token-free geographic US state choropleth plus a tile-grid alternate, with shared state selection and five safe color metrics;
-- a detailed state side panel with coverage, queue, failure, and stage labels;
-- a national source-discovery funnel with future stages rendered as unavailable;
-- candidate queue priority cards, unit-label composition, and a state workload table;
-- an analysis-readiness panel that separates discovery reporting from verification, ingestion, wage extraction, and regression;
-- a dedicated printable state report at `#/state/<CODE>/report`;
-- a status legend, limitations, source-file metadata, and an accessible state-value table; and
-- print-friendly CSS for short state appendices.
+1. **Overview** — national coverage, queue, failure, and checkpoint metrics with the project caveat.
+2. **Coverage and geography** — the existing token-free state choropleth, tile-grid alternate, state selection, and printable state view.
+3. **Scouting priority tiers** — remaining Tier 1–Tier 5 pools, retry lane, and state-level high-priority workload.
+4. **Scout operations** — wave runtimes, throughput, candidate rows per hour, failure rates, and current preflight/compact/adaptive controls.
+5. **Candidate queue** — the source-discovery funnel, queue composition, and distinction between municipality and candidate-row counts.
+6. **Verification pipeline** — the planned progression from candidate lead to verified source, ingestion, codification, and analysis readiness.
+7. **State yield and learning** — observed discovery yield with minimum-sample and confidence warnings.
+8. **Reports library** — current PI reports and durable checkpoint metadata, plus space for future verification reports.
+9. **Methodology and definitions** — source-stage definitions that keep operational counts from being mistaken for evidence.
+10. **Next steps** — the PI decision between a targeted verification pilot, additional Tier 1 breadth, and a separate failure-retry lane.
+
+The sticky section navigation becomes a collapsible menu on smaller screens. Hash routes remain reserved for state selection and printable state reports:
+
+- `#/state/CA` selects California;
+- `#/state/CA/report` opens California’s printable state report.
+
+## What the terms mean
+
+- **Scout-covered municipality:** a municipality with a successful, parseable scout result. This does not mean a source was verified.
+- **Candidate row:** one possible source URL or document lead queued for later review. A municipality can produce multiple rows.
+- **Candidate-positive municipality:** a successfully scouted municipality with one or more candidate rows, not a verified matched evidence set.
+- **Parseable-empty:** a completed scout result with no candidates. It is not proof that no source exists.
+- **Failure-only:** a request without a usable result, held outside successful coverage for possible retry.
+- **Priority tier:** a deterministic operational ranking used to schedule future discovery work. It is not a finding about unionization, source quality, or wages.
+- **Verified source:** a lead whose employer, unit, provenance, dates, document type, access, and relevance have been checked.
+- **Analysis-ready evidence:** matched safety and non-safety city-cycle evidence with validated wage fields and provenance. This stage is not yet available project-wide.
+
+## Report library
+
+Dashboard-accessible report metadata lives in:
+
+```text
+docs/dashboard/reports/reports_index.json
+```
+
+`scripts/build_dashboard_data.py` validates that source index and writes the dashboard data copy:
+
+```text
+docs/dashboard/data/reports_index.json
+```
+
+Each report record includes identity, checkpoint, source/PDF paths, tags, current status, producing commit, and a metrics snapshot. Exactly one report must be marked `current`.
+
+To add a future report:
+
+1. Commit the PDF below `docs/dashboard/reports/`.
+2. Keep the Markdown source under `docs/analysis/`.
+3. Add one validated record to `docs/dashboard/reports/reports_index.json`.
+4. Mark the prior report non-current if the new report supersedes it.
+5. Run `python scripts/build_dashboard_data.py`.
+6. Build the frontend and test the report link.
 
 ## Map status
 
-The dashboard defaults to a true **geographic state choropleth** rendered from a committed local GeoJSON asset. Alaska and Hawaii use labeled insets, and DC has an enlarged selection marker. The prior **tile-grid choropleth** remains available from the map-mode toggle as a compact schematic alternate and accessibility fallback. Both views use the same generated `state_summary.json`, safe metric selector, hash-routed state selection, detail panel, and state-value table.
+The default map is a geographic state choropleth rendered from a committed local GeoJSON asset. Alaska and Hawaii use labeled insets, and DC has an enlarged selection marker. A tile-grid choropleth remains available as a schematic alternate and accessibility fallback.
 
-The geographic view does not use a basemap, mapping SDK, API token, secret, or remote runtime URL. Vite emits the committed GeoJSON as a same-origin static asset during the GitHub Pages build. If that local asset cannot load, the UI reports the problem and directs the reader to the tile grid.
+The map has no basemap, mapping SDK, API token, secret, or remote runtime URL. Both views use the same generated `state_summary.json`, state selection, detail panel, and accessible table.
 
-The map can color states by these current, display-safe fields only:
+Safe display metrics are:
 
 1. scout coverage rate;
 2. scout-covered municipality count;
 3. candidate row count;
-4. high-priority later-verification row count; or
+4. high-priority later-verification row count; and
 5. operational evidence-readiness score.
 
-The readiness score is workflow triage, not evidence strength. Wage gaps are not an available map metric.
-
-Boundary provenance, checksums, display choices, and the offline update procedure are documented in [map_data_notes.md](map_data_notes.md). The source is the Census Bureau's 2025 1:20,000,000 state cartographic-boundary file, identified by the federal catalog as CC0 1.0. Only the 50 states and District of Columbia are retained.
+The readiness score is workflow triage, not evidence strength. Wage gaps are not a map metric. Boundary provenance and checksums are documented in [map_data_notes.md](map_data_notes.md).
 
 ## Data flow
 
 ```text
-committed national queue / coverage / universe CSVs
-                      |
-                      v
-       scripts/build_dashboard_data.py
-                      |
-                      v
-          docs/dashboard/data/*.json
-                      |
-                      v
-       static React/Vite browser bundle
+committed queue / coverage / universe / priority / wave summaries
+                              |
+                              v
+             scripts/build_dashboard_data.py
+                              |
+                              v
+                 docs/dashboard/data/*.json
+                              |
+                              v
+                 static React/Vite project hub
 ```
 
-The builder reads committed coordinator outputs and writes only dashboard JSON. It does not change national queue/coverage inputs, canonical contracts, city coverage, or corpus files. It does not open candidate URLs, verify sources, ingest documents, codify text, or call an API/model.
+The builder reads committed coordinator outputs and writes dashboard JSON only. It does not change national queue/coverage inputs, canonical contracts, city coverage, or corpus files. It does not open candidate URLs, verify sources, ingest documents, codify text, or call an API or model.
 
-## Regenerate the JSON
+## Rebuild data
 
-Run from the repository root:
-
-```bash
-python -m py_compile scripts/build_dashboard_data.py
-python scripts/build_dashboard_data.py
-```
-
-The builder regenerates:
-
-- `docs/dashboard/data/state_summary.json`
-- `docs/dashboard/data/candidate_queue_summary.json`
-- `docs/dashboard/data/coverage_funnel.json`
-- `docs/dashboard/data/analysis_readiness.json`
-- `docs/dashboard/data/priority_summary.json`
-- `docs/dashboard/data/state_priority_summary.json`
-- `docs/dashboard/data/top_priority_targets.json`
-- `docs/dashboard/data/scout_operations_summary.json`
-- `docs/dashboard/data/scout_yield_by_state.json`
-- `docs/dashboard/data/scout_runtime_trends.json`
-
-The first four files drive the current core dashboard views. The priority and operations files provide a committed, static data layer for present reporting and later low-risk UI additions; not every field is necessarily rendered by the current frontend.
-
-To refresh state/wave yield inputs before rebuilding the dashboard, run:
+From the repository root:
 
 ```bash
 python scripts/build_scout_yield_learning_report.py
 python scripts/build_dashboard_data.py
 ```
 
-Review the printed totals and JSON diffs before committing. In particular, confirm that candidate-positive plus parseable-empty municipalities equals scout-covered municipalities and that connection failures remain outside coverage.
+The dashboard builder writes:
 
-## Update after queue or coverage changes
+- `state_summary.json`
+- `candidate_queue_summary.json`
+- `coverage_funnel.json`
+- `analysis_readiness.json`
+- `priority_summary.json`
+- `state_priority_summary.json`
+- `top_priority_targets.json`
+- `scout_operations_summary.json`
+- `scout_yield_by_state.json`
+- `scout_runtime_trends.json`
+- `reports_index.json`
 
-Dashboard data should be refreshed only after a coordinator has completed and validated an atomic national queue/coverage rebuild. Do not build from one parallel worker's isolated output.
+Review the printed totals and diffs before committing. In particular, candidate-positive plus parseable-empty municipalities must equal scout-covered municipalities, and transport/failure-only results must remain outside successful coverage.
 
-1. Confirm the coordinator's national queue, municipality coverage, and state coverage outputs are complete.
-2. Run `python scripts/build_dashboard_data.py` from the repository root.
-3. Inspect all four JSON diffs, metadata timestamps, warnings, funnel identities, and state totals.
-4. Run the repository validations listed below.
-5. If frontend dependencies are already installed, run the production build and review the main dashboard plus at least one `#/state/<CODE>/report` route.
-6. Commit the coordinated queue/coverage change and JSON refresh together, or cross-reference the commits clearly.
+## Run and build locally
 
-## Run locally
-
-The dashboard requires Node.js 20.19 or newer. Install or refresh dependencies from the committed package manifest and lockfile:
+The dashboard requires Node.js 20.19 or newer. With the existing locked dependencies:
 
 ```bash
 cd docs/dashboard
-npm install
+npm ci
 npm run dev
 ```
 
-Use `npm ci` instead of `npm install` for a clean lockfile-exact installation, including CI. The default Vite base is `/gabriel-wages/`, so Vite normally serves the local dashboard at `http://localhost:5173/gabriel-wages/`. To use the root path locally, run `npm run dev -- --base /`.
+The default Vite base is `/gabriel-wages/`, so the local route is normally `http://localhost:5173/gabriel-wages/`. For a root-local route, use `npm run dev -- --base /`.
 
-State selection uses hash routes, so direct state views work without server-side rewrites:
-
-- `#/state/CA` selects California in the dashboard;
-- `#/state/CA/report` opens California's printable report.
-
-The dependency surface is minimal: React, React DOM, Vite, and the Vite React plugin. No map library is installed; the geographic component renders the local GeoJSON directly as accessible SVG paths. `node_modules/` and `dist/` are local/generated and ignored by Git; `package-lock.json` is committed for reproducible installs.
-
-## Build for GitHub Pages
-
-The dashboard is configured for the future `dkyaya/gabriel-wages` project site:
-
-```text
-https://dkyaya.github.io/gabriel-wages/
-```
-
-The default production base is `/gabriel-wages/`. After dependencies have been installed:
+Build the production bundle with:
 
 ```bash
 cd docs/dashboard
@@ -150,31 +158,9 @@ npm run build
 npm run preview
 ```
 
-The production output is `docs/dashboard/dist/`. Hash routes avoid server-side rewrite requirements. `npm run build:relative` remains available when a portable `./` asset base is preferable for local static previews.
+Output is written to `docs/dashboard/dist/`. The production base is `/gabriel-wages/`.
 
-The committed `.github/workflows/deploy-dashboard.yml` workflow regenerates dashboard JSON, installs locked frontend dependencies, builds under `/gabriel-wages/`, uploads the static artifact, and deploys through GitHub's official Pages actions. It runs on relevant pushes to `main` and by manual dispatch. No user-defined secret is required.
-
-See [DEPLOYMENT.md](DEPLOYMENT.md) for Pages enablement, exact triggers, base-path overrides, public/private Actions cost caveats, and publication safety rules. Creating the workflow does not publish the site until the future repository enables Pages with GitHub Actions and receives the commit.
-
-## Repository checks
-
-From the repository root:
-
-```bash
-python -m py_compile scripts/build_dashboard_data.py
-python scripts/build_dashboard_data.py
-python scripts/validate.py
-python ingest/test_pipeline.py
-python ingest/audit_coverage.py
-```
-
-Also run the locked frontend build:
-
-```bash
-cd docs/dashboard
-npm ci
-npm run build
-```
+The GitHub Pages workflow at `.github/workflows/deploy-dashboard.yml` regenerates dashboard JSON, installs locked dependencies, builds the site, and deploys on relevant pushes to `main`. See [DEPLOYMENT.md](DEPLOYMENT.md) for details.
 
 ## Component layout
 
@@ -190,8 +176,10 @@ src/
     DataLimitations.jsx
     NationalMap.jsx
     PrintableStateReport.jsx
-    StateTileGrid.jsx
+    ProjectHubSections.jsx
+    ProjectNavigation.jsx
     StateDetailPanel.jsx
+    StateTileGrid.jsx
     USChoroplethMap.jsx
     mapMetrics.js
     ui.jsx
@@ -199,34 +187,37 @@ src/
     us-states-2025-20m.geojson
 ```
 
-All components consume the four generated JSON imports in `App.jsx`. No component fetches remote data.
+All components consume committed local JSON and assets. No component fetches remote data.
 
-## MVP versus future
+## Validation
 
-Current MVP:
+From the repository root:
 
-- aggregate static queue/coverage/readiness data;
-- 50 states plus DC;
-- safe metric selection shared by a geographic state map and schematic tile-grid alternate;
-- state detail and print views;
-- explicit scout, calibration, verification, ingestion, and unavailable-stage language; and
-- accessible text/table alternatives and responsive/print CSS.
+```bash
+python -m py_compile scripts/build_dashboard_data.py
+python -m py_compile scripts/build_scout_yield_learning_report.py
+python scripts/build_scout_yield_learning_report.py
+python scripts/build_dashboard_data.py
+python scripts/validate.py
+python ingest/test_pipeline.py
+python ingest/audit_coverage.py
+git diff --check
+```
 
-Future work, gated by dedicated inputs or provenance review:
+Then:
 
-- optional automated geographic-asset schema/geometry regression tests;
-- automated JSON-contract, accessibility, browser, and print-render tests;
-- municipality-level exploration with county context;
-- a claim/evidence bridge that keeps scout leads under source needs;
-- project-wide verification and ingestion ledgers;
-- structured matched-cycle wage extracts; and
-- versioned regression results with frozen inputs and specification metadata.
+```bash
+cd docs/dashboard
+npm run build
+```
+
+Review the production dashboard at desktop and mobile widths, test the map, section navigation, report link, and at least one printable state route.
 
 ## Interpretation rules
 
 - A scout lead is not a verified source.
-- A high-priority row is a scheduling choice, not a source-quality judgment.
-- A likely matched-set group is based on unit labels and still needs employer, document, and cycle checks.
-- A parseable empty result is a completed scout outcome, not proof that no source exists.
-- `null` means the dashboard lacks a validated input; it must never be displayed as zero.
-- Candidate volume must not be used as evidence of a wage gap, bargaining strength, mechanism, or substantive claim.
+- A high-priority row or tier is a scheduling choice, not a source-quality judgment.
+- A likely matched-set group still requires employer, document, unit, and cycle checks.
+- A parseable-empty result is a completed scout outcome, not proof that no source exists.
+- `null` means the dashboard lacks a validated input and must never be displayed as zero.
+- Candidate volume must not be used as evidence of a wage gap, bargaining strength, mechanism, or causal effect.
