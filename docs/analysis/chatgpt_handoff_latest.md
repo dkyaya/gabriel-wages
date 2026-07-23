@@ -6,6 +6,21 @@ Last updated: `2026-07-22`
 
 ---
 
+## 2026-07-22 — PI PDF published through the dashboard build
+
+### Current State
+
+- **Checkpoint:** publication started at clean tracked commit `b9d698f9b44a38b68531bc808140ea6e5017c4c6` on `main`. The unrelated untracked root `package-lock.json` remains untouched and excluded.
+- **PDF:** [the archival PDF](pi_progress_report_source_discovery_2026-07-22.pdf) and `docs/dashboard/reports/pi_progress_report_source_discovery_2026-07-22.pdf` are byte-identical six-page files built from [the full Markdown report](pi_progress_report_source_discovery_2026-07-22.md). SHA-256 is `83f02375beda3f486c45ac1fd5fe1de7ae9641ecbb4fda81626749e8e2848054` for each.
+- **Quality:** the custom local ReportLab builder uses deterministic metadata, professional Georgia/Arial typography, title/metric/caveat blocks, page headers/footers, repeating table headers, and safe table widths. All six pages passed a second Poppler render review after correcting initial list-marker and pagination defects. `pdfinfo` reports letter size, no encryption, and no JavaScript.
+- **Dashboard:** the main footer now links **PI Source-Discovery Progress Report PDF** through a Vite-managed asset import. The production build passed and emitted a byte-identical PDF. The README and publication notes document the source path and interpretation boundary.
+- **Data:** four-wave yield learning and all ten dashboard JSON files were regenerated from existing committed accounting. Totals remain 35,589 universe rows, 794 successful scouts, 612 candidate-positive, 182 parseable-empty, 20 failure-only, 1,602 queue leads, 34,789 future eligible, 1,227 Tier 1 eligible, and 3,478 Tier 2 eligible.
+- **Boundary:** the PDF is presentation, not new evidence. Candidate rows remain unverified leads. No scout, live/API/model/hosted-search call, URL verification, ingestion, codification, promotion, protected/corpus edit, wage-gap finding, or causal claim occurred.
+
+### Next Move
+
+After the existing Pages workflow deploys the pushed `main` commit, confirm the footer link at `https://dkyaya.github.io/gabriel-wages/`. Present the PDF to the PI. Recommended default remains a stratified 50–100-row verification pilot; continue broad Tier 1 scouting only after the PI decides the desired breadth/verification balance.
+
 ## 2026-07-22 — PI-ready post–Tier 1 Wave 2 checkpoint
 
 ### Current State

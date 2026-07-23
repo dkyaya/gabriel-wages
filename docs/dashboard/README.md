@@ -18,6 +18,12 @@ The current committed data layer reflects the post–Tier 1 Wave 2 checkpoint:
 
 A candidate row is a possible source URL or document lead, not a verified source or ingested contract. The checkpoint is documented in `docs/analysis/pi_progress_report_source_discovery_2026-07-22.md`.
 
+The PI-facing checkpoint report is available as a publication-ready PDF:
+
+- [PI Source-Discovery Progress Report PDF](reports/pi_progress_report_source_discovery_2026-07-22.pdf)
+
+The dashboard footer links to the same committed PDF. Vite treats it as a managed static asset so the GitHub Pages build publishes it with the dashboard.
+
 ## What the MVP includes
 
 - national headline counts for the municipal universe, scout coverage, candidate rows, and likely matched-set leads;

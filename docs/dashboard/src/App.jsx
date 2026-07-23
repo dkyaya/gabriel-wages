@@ -3,6 +3,7 @@ import stateSummary from "../data/state_summary.json";
 import candidateSummary from "../data/candidate_queue_summary.json";
 import coverageFunnel from "../data/coverage_funnel.json";
 import analysisReadiness from "../data/analysis_readiness.json";
+import piProgressReportPdf from "../reports/pi_progress_report_source_discovery_2026-07-22.pdf?url";
 import { AnalysisReadinessPanel } from "./components/AnalysisReadinessPanel.jsx";
 import { CandidateQueueCards } from "./components/CandidateQueueCards.jsx";
 import { CoverageFunnel } from "./components/CoverageFunnel.jsx";
@@ -172,6 +173,11 @@ function App() {
       <footer>
         <p>Generated {stateSummary.metadata.generated_at}. Discovery data vintage {stateSummary.metadata.data_vintage}.</p>
         <p>Scout candidates are not yet verified, ingested, or claim-supporting evidence.</p>
+        <p className="report-resource-link">
+          <a href={piProgressReportPdf} target="_blank" rel="noreferrer">
+            PI Source-Discovery Progress Report PDF
+          </a>
+        </p>
       </footer>
     </div>
   );
