@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-22T22:55:37Z",
+  "generated_at": "2026-07-23T01:32:40Z",
   "data_vintage": "2026-07-22",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -30,18 +30,18 @@
   "stage": "research_operational_priority_heuristic",
   "totals": {
     "municipality_universe": 35589,
-    "scout_covered": 504,
-    "future_scout_eligible": 35079,
-    "tier_1_eligible": 1471,
-    "tier_2_eligible": 3528,
-    "tier_3_eligible": 6999,
-    "tier_4_eligible": 10625,
+    "scout_covered": 794,
+    "future_scout_eligible": 34789,
+    "tier_1_eligible": 1227,
+    "tier_2_eligible": 3478,
+    "tier_3_eligible": 7008,
+    "tier_4_eligible": 10620,
     "tier_5_eligible": 12456,
-    "failure_only_retry_targets": 10,
+    "failure_only_retry_targets": 20,
     "priority_confidence": {
       "high": 4990,
-      "medium": 4080,
-      "low": 26519
+      "medium": 6035,
+      "low": 24564
     }
   },
   "tier_definitions": [

@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-22T22:55:37Z",
+  "generated_at": "2026-07-23T01:32:40Z",
   "data_vintage": "2026-07-22",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -66,6 +66,19 @@
       "rows_per_hour": 80.315,
       "candidate_rows_per_hour": 143.496,
       "candidate_rows_per_parseable_municipality": 1.887,
+      "sleep_between_prompts_seconds": 5.0
+    },
+    {
+      "wave_id": "tier1_wave2",
+      "label": "Tier 1 Wave 2 compact/adaptive cross-state",
+      "attempted_rows": 150,
+      "parseable_rows": 148,
+      "candidate_rows": 327,
+      "failure_only_rows": 2,
+      "runtime_seconds": 5738.638,
+      "rows_per_hour": 94.099,
+      "candidate_rows_per_hour": 205.136,
+      "candidate_rows_per_parseable_municipality": 2.209,
       "sleep_between_prompts_seconds": 5.0
     }
   ],

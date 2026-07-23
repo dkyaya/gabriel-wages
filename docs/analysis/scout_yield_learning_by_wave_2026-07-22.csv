@@ -2,3 +2,4 @@ wave_id,wave_label,run_id,attempted_rows,parseable_rows,candidate_positive_munic
 wave1,Coordinator Wave 1 CA/NJ/TX,all_2026-07-21_193524,150,149,112,37,1,246,6937.000,77.843,127.663,1.651,0.751678,15,docs/analysis/coordinator_150row_serial_live_result_review_2026-07-21.md
 wave2,Coordinator Wave 2 CA/TX/IL,all_2026-07-22_114424,150,148,98,50,2,223,6149.884,87.807,130.539,1.507,0.662162,5,docs/analysis/wave2_coordinator_150row_serial_live_result_review_2026-07-22.md
 tier1_wave1,Tier 1 Wave 1 cross-state,all_2026-07-22_164144,150,142,99,43,8,268,6723.519,80.315,143.496,1.887,0.697183,5,docs/analysis/tier1_coordinator_150row_serial_live_after_diag_result_review_2026-07-22.md
+tier1_wave2,Tier 1 Wave 2 compact/adaptive cross-state,all_2026-07-22_195226,150,148,122,26,2,327,5738.638,94.099,205.136,2.209,0.824324,5,docs/analysis/tier1_wave2_coordinator_150row_serial_live_result_review_2026-07-22.md

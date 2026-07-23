@@ -31,6 +31,7 @@ MIXED_STATE_USAGE_PATHS = [
     DOCS / "coordinator_150row_serial_live_state_usage_2026-07-21.csv",
     DOCS / "wave2_coordinator_150row_serial_live_state_usage_2026-07-22.csv",
     DOCS / "tier1_coordinator_150row_serial_live_after_diag_state_usage_2026-07-22.csv",
+    DOCS / "tier1_wave2_coordinator_150row_serial_live_state_usage_2026-07-22.csv",
 ]
 
 MUNICIPALITY_OUTPUT = DOCS / "national_scout_coverage_municipality_2026-07-20.csv"
@@ -171,6 +172,21 @@ SUCCESSFUL_BATCHES = [
             "cog_2025_176816",
         ],
     },
+    {
+        "state": "ALL",
+        "allowed_states": {
+            "AL", "AR", "AZ", "CO", "CT", "FL", "GA", "IA", "ID", "IN",
+            "KS", "LA", "MA", "MD", "MI", "MN", "MO", "MS", "MT", "NC",
+            "ND", "NH", "NM", "NV", "OH", "OK", "OR", "PA", "SC", "TN",
+            "UT", "VA", "WA", "WI", "WV",
+        },
+        "wave": "COORD-TIER1-WAVE2-SERIAL150-2026-07-22",
+        "run_id": "all_2026-07-22_195226",
+        "scout_date": "2026-07-22",
+        "input": DOCS / "tier1_wave2_coordinator_150row_serial_live_input_2026-07-22.csv",
+        "backend": "direct-sdk",
+        "failed_municipality_ids": ["cog_2025_194606", "cog_2025_106133"],
+    },
 ]
 
 # Preserved failed-run artifacts contain 16 MA connection-only rows, one IL
@@ -222,6 +238,7 @@ FAILED_CONNECTION_RUNS = {
         "cog_2025_100435",
         "cog_2025_176816",
     ],
+    "all_2026-07-22_195226": ["cog_2025_194606", "cog_2025_106133"],
 }
 
 QUEUE_VERIFY_BUCKETS = {
@@ -552,15 +569,16 @@ def build_municipality_rows() -> list[dict[str, object]]:
         )
 
     status_counts = Counter(row["scout_coverage_status"] for row in output)
-    if status_counts["scouted_with_candidates"] != 490:
-        raise ValueError(f"Expected 490 candidate-positive municipalities: {status_counts}")
-    if status_counts["scouted_no_candidates"] != 156:
-        raise ValueError(f"Expected 156 successful empty municipalities: {status_counts}")
-    if status_counts["scout_attempt_failed_connection"] != 18:
-        raise ValueError(f"Expected 18 failure-only municipalities: {status_counts}")
-    if sum(int(row["failed_connection_attempt_count"]) for row in output) != 34:
+    if status_counts["scouted_with_candidates"] != 612:
+        raise ValueError(f"Expected 612 candidate-positive municipalities: {status_counts}")
+    if status_counts["scouted_no_candidates"] != 182:
+        raise ValueError(f"Expected 182 successful empty municipalities: {status_counts}")
+    if status_counts["scout_attempt_failed_connection"] != 20:
+        raise ValueError(f"Expected 20 failure-only municipalities: {status_counts}")
+    if sum(int(row["failed_connection_attempt_count"]) for row in output) != 36:
         raise ValueError(
-            "Expected 26 retained prior attempts plus eight Tier 1 timeout-only attempts"
+            "Expected 26 retained prior attempts, eight Tier 1 Wave 1 failures, "
+            "and two Tier 1 Wave 2 failures"
         )
     return output
 
@@ -750,8 +768,8 @@ def build_state_rows(municipality_rows: list[dict[str, object]]) -> list[dict[st
         )
     if sum(int(row["municipalities_in_universe"]) for row in output) != 35_589:
         raise ValueError("State coverage does not sum to the authoritative universe")
-    if sum(int(row["municipalities_scouted"]) for row in output) != 646:
-        raise ValueError("State coverage does not sum to 646 successful scout municipalities")
+    if sum(int(row["municipalities_scouted"]) for row in output) != 794:
+        raise ValueError("State coverage does not sum to 794 successful scout municipalities")
     return output
 
 

@@ -164,6 +164,18 @@ SOURCE_SPECS = [
         "path": DOCS / "gabriel_state_source_scout_candidates_all_2026-07-22_164144.csv",
         "run_id": "all_2026-07-22_164144",
     },
+    {
+        "state": "ALL",
+        "allowed_states": {
+            "AL", "AR", "AZ", "CO", "CT", "FL", "GA", "IA", "ID", "IN",
+            "KS", "LA", "MA", "MD", "MI", "MN", "MO", "MS", "MT", "NC",
+            "ND", "NH", "NM", "NV", "OH", "OK", "OR", "PA", "SC", "TN",
+            "UT", "VA", "WA", "WI", "WV",
+        },
+        "wave": "COORD-TIER1-WAVE2-SERIAL150-2026-07-22",
+        "path": DOCS / "gabriel_state_source_scout_candidates_all_2026-07-22_195226.csv",
+        "run_id": "all_2026-07-22_195226",
+    },
 ]
 
 CALIBRATION_FILES = {
@@ -605,53 +617,58 @@ def build_rows() -> list[dict[str, str]]:
 
     expected = {
         "AK": 3,
-        "AL": 4,
-        "AZ": 12,
-        "PA": 75,
+        "AL": 9,
+        "AR": 6,
+        "AZ": 21,
+        "PA": 76,
         "TX": 113,
-        "MA": 46,
+        "MA": 68,
         "NJ": 94,
         "IL": 295,
         "NY": 57,
         "CA": 351,
-        "CO": 11,
-        "CT": 10,
+        "CO": 21,
+        "CT": 24,
         "DC": 5,
-        "FL": 38,
-        "GA": 2,
+        "FL": 77,
+        "GA": 7,
         "HI": 3,
-        "IA": 11,
-        "ID": 2,
-        "KS": 3,
+        "IA": 17,
+        "ID": 7,
+        "KS": 14,
         "KY": 5,
-        "LA": 5,
-        "MD": 3,
-        "MI": 8,
-        "MN": 10,
-        "MO": 6,
-        "NC": 3,
+        "LA": 7,
+        "MD": 5,
+        "MI": 27,
+        "MN": 16,
+        "MO": 11,
+        "MT": 3,
+        "NC": 17,
+        "ND": 1,
         "NE": 7,
-        "NM": 6,
-        "NV": 12,
-        "OH": 7,
-        "OK": 8,
-        "OR": 11,
+        "NH": 6,
+        "NM": 13,
+        "NV": 15,
+        "OH": 25,
+        "OK": 15,
+        "OR": 32,
         "RI": 3,
-        "SC": 1,
+        "SC": 3,
         "SD": 3,
-        "TN": 9,
-        "UT": 3,
-        "VA": 7,
-        "WA": 14,
-        "WI": 11,
+        "TN": 15,
+        "UT": 18,
+        "VA": 13,
+        "WA": 47,
+        "WI": 17,
     }
     observed = {state: counters[state] for state in expected}
     if observed != expected:
         raise ValueError(f"Unexpected queue source counts: {observed} != {expected}")
-    if dict(skipped_missing_locator) != {"IL": 1}:
+    if dict(skipped_missing_locator) != {"IL": 1, "WA": 2}:
         raise ValueError(
-            "Expected one preserved IL25.3 parsed row to remain outside the source queue "
-            f"because it lacks a locator: {dict(skipped_missing_locator)}"
+            "Expected one preserved IL25.3 row and two Tier 1 Wave 2 WA insufficient "
+            "records to remain outside the source queue because they lack locators: "
+            f"{dict(skipped_missing_locator)}"
         )
     if calibration_match_count != {"TX": 6, "MA": 24}:
         raise ValueError(f"Calibration joins are incomplete: {dict(calibration_match_count)}")

@@ -6,6 +6,23 @@ Last updated: `2026-07-22`
 
 ---
 
+## 2026-07-22 — Tier 1 Wave 2 completed with the best reviewed runtime and yield
+
+### Current State
+
+- **Checkpoint/gates:** work began at `f2fa0a59b15016522ff4f3f707d4d665e6aaa0a5`. Worker relays `9395a4c`/`37125c7`/`6ae1267` passed exact 50-row hashes, ranks 151–300, compact/hint/adaptive metadata, timing, 50/50 reviews, and validation. [The coordinator input](tier1_wave2_coordinator_150row_serial_live_input_2026-07-22.csv) preserves exact worker order and hashes to `f530932c487cef73aae6d18f19e477697c2b2cfbd85dfd8226e608723d7e750e`.
+- **Preflight/dry:** plan-only made zero calls. The one four-call composite gate passed no-search, both hosted-search controls, and one parseable Coral Springs probe. Probe candidates were quarantined. The coordinator dry run generated 150 compact prompts, matched 150/150 five-hint sets, preserved all identities/controls/schema, recorded adaptive 3/5/15, 10 backoff, 25/2 windows, and made no backend call.
+- **Official live result:** run `all_2026-07-22_195226` completed all 150 responses in `tmp/tier1_wave2_coordinator_150row_serial_live_direct_sdk_2026-07-22_attempt1/`. [Result review](tier1_wave2_coordinator_150row_serial_live_result_review_2026-07-22.md): 148 parseable, 122 positive, 26 empty, two isolated failures, zero stopped, 327 parsed candidates. Joplin MO had a connection error and Framingham MA an empty/no-ID server response; both are excluded and reserved for later retry. No resume ran.
+- **Pace/yield:** runtime 5,738.638 seconds (95m38.638s), 94.099 rows/hour, average/median row 31.275/29.223 seconds. Adaptive sleep totaled 1,046.214 seconds, levels min/median/max 3/7.5/10, with one backoff and five step-downs. Candidate density is 2.209 per parseable and candidate production 205.136/hour—the best of the four reviewed 150-row waves.
+- **Tokens/cost:** 4,335,653 input, 182,344 reasoning, 315,479 output, 4,651,132 total; estimate-only standard text-token cost `$1.26147935`. Actual input tokens are 1.82% above Tier 1 Wave 1 despite a 36.09% shorter prompt-text proxy, because reported usage includes hint/search/tool context. Do not claim a measured token reduction.
+- **Accounting:** [the merge report](tier1_wave2_coordinator_150row_serial_live_queue_coverage_update_2026-07-22.md) records 325 URL-bearing additions (327 parsed minus two locator-less Spokane Valley placeholders), queue 1,277→1,602, successful 646→794, positive 490→612, empty 156→182, and failure-only 18→20. Of new queue rows, 240 are scheduled for later verification and 85 are held/context/insufficient/possible duplicate. All remain unverified.
+- **Yield/dashboard/priority:** four-wave yield learning and all ten dashboard JSON files are current. Because 148 parseable rows exceeded the task's 135 threshold, the unchanged priority methodology was refreshed at 794 covered. Current outputs: 35,589 rows, 34,789 future eligible, 1,227 Tier 1 eligible, 3,478 Tier 2 eligible, and 20 separate failure retries. Dashboard priority JSON was rebuilt afterward.
+- **Validation/protection:** all requested compiles, 12 prompt tests, 21 mocked direct-SDK tests, schema validation, 60/60 pipeline tests, coverage audit, JSON parsing, structural counts, uniqueness checks, probe quarantine proof, protected hashes, and diff check passed. Canonical corpus health remains 64 contracts, 19 cities, 28 healthy pairs (10 exact/18 overlap), two adjacent exploratory, and six unmatched safety. No independent URL access, verification, ingestion, codification, canonical/corpus edit, claim use, remote action, or push occurred.
+
+### Next Move
+
+Preserve the worker/preflight/probe/full-run lineage; only the full run is official. Do not automatically retry Joplin or Framingham. Use the refreshed priority files for the next ordinary batch, or separately prepare the now-20-row failure retry lane. Any future live wave should keep the composite gate, one serialized direct-SDK process, exact caps, compact prompts, deterministic hints, adaptive pacing, and a fresh resume directory. Source verification, ingestion, codification, and claim use remain separate tasks.
+
 ## 2026-07-22 — Tier 1 Wave 2 worker package is locked for compact/adaptive offline prep
 
 ### Current State

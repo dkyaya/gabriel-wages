@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-22T22:55:37Z",
+  "generated_at": "2026-07-23T01:32:40Z",
   "data_vintage": "2026-07-22",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -29,22 +29,22 @@
   ],
   "stage": "scout_operations_unverified_discovery",
   "current_totals": {
-    "scout_covered_municipalities": 646,
-    "candidate_queue_rows": 1277,
-    "candidate_positive_municipalities": 490,
-    "parseable_empty_municipalities": 156,
-    "failure_only_municipalities": 18
+    "scout_covered_municipalities": 794,
+    "candidate_queue_rows": 1602,
+    "candidate_positive_municipalities": 612,
+    "parseable_empty_municipalities": 182,
+    "failure_only_municipalities": 20
   },
   "latest_wave": {
-    "wave_id": "tier1_wave1",
-    "label": "Tier 1 Wave 1 cross-state",
-    "runtime_seconds": 6723.519,
-    "rows_per_hour": 80.315,
-    "candidate_rows_per_hour": 143.496,
-    "candidate_rows_per_parseable_municipality": 1.887,
-    "timeout_or_failure_rows": 8
+    "wave_id": "tier1_wave2",
+    "label": "Tier 1 Wave 2 compact/adaptive cross-state",
+    "runtime_seconds": 5738.638,
+    "rows_per_hour": 94.099,
+    "candidate_rows_per_hour": 205.136,
+    "candidate_rows_per_parseable_municipality": 2.209,
+    "timeout_or_failure_rows": 2
   },
-  "priority_refresh_recommendation": "Rebuild the unchanged national priority methodology after 300–600 additional successful scouts; current priority counts still reflect the pre-Tier-1-Wave-1 checkpoint.",
+  "priority_refresh_recommendation": "The unchanged national priority methodology was refreshed after Tier 1 Wave 2 at 794 successfully scout-covered municipalities. Rebuild again after roughly 300–600 additional successful scouts (about 1,094–1,394 covered).",
   "preflight_gate_recommendation": "last_bounded_diagnostic_was_healthy; nevertheless_run_the_strengthened_preflight_gate_immediately_before_the_next_live_wave",
   "disclaimer": "Scout candidates remain unverified leads. Runtime and yield metrics are operational diagnostics, not evidence of source quality or wage effects."
 }

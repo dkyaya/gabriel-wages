@@ -893,9 +893,9 @@ def build_scout_operations_summary(
             "timeout_or_failure_rows": as_int(latest["failure_only_rows"]),
         },
         "priority_refresh_recommendation": (
-            "Rebuild the unchanged national priority methodology after 300–600 "
-            "additional successful scouts; current priority counts still reflect the "
-            "pre-Tier-1-Wave-1 checkpoint."
+            "The unchanged national priority methodology was refreshed after Tier 1 Wave 2 "
+            "at 794 successfully scout-covered municipalities. Rebuild again after roughly "
+            "300–600 additional successful scouts (about 1,094–1,394 covered)."
         ),
         "preflight_gate_recommendation": current_preflight_recommendation(),
         "disclaimer": (

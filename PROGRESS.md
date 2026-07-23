@@ -6,6 +6,45 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-22 (Tier 1 Wave 2 compact/adaptive 150-row scout completed and merged)
+
+**Did**
+- Started at `f2fa0a59b15016522ff4f3f707d4d665e6aaa0a5`, confirmed required `b6bd6b3`/`bef5077` ancestry and clean tracked state, and left unrelated untracked root `package-lock.json` untouched. All three worker relays passed exact hash/rank/identity/status review, 50/50 compact/hint prompt audits, adaptive metadata checks, and no-network validation.
+- Locked exact Worker 1→2→3 ranks 151–300 as SHA-256 `f530932c487cef73aae6d18f19e477697c2b2cfbd85dfd8226e608723d7e750e`. The 150 IDs remain Tier 1, ordinary eligible, nonretry, nonfailure, noncanonical, and unscouted, with five exact-ID hints each.
+- Ran the composite gate once: plan-only made zero calls; one bounded live gate passed no-search, two hosted-search controls, and a parseable Coral Springs production probe. Quarantined the probe from accounting. The 150-row dry run then passed 150/150 compact identity/hints/guardrail/schema checks without a backend call.
+- Ran exactly one full process, `all_2026-07-22_195226`, with direct SDK, one lane, compact prompts, hints, adaptive 3/5/15 pacing, 10-second backoff, 25/2 windows, exact cap 150, timeout 90, and zero retries. It completed 150 responses: 148 parseable, 122 candidate-positive, 26 empty, two isolated failure-only rows, zero stopped rows, and 327 parsed candidate records.
+- Merged the complete run only. Two locator-less Spokane Valley insufficient records stayed outside the queue, yielding 325 URL-bearing additions. Queue is 1,602; successful coverage 794; positive 612; empty 182; failure-only 20. Refreshed four-wave yield learning, all dashboard JSON, the unchanged priority methodology, and dashboard priority JSON.
+
+**Decisions and why**
+- The run is merge-eligible: all requests reached terminal state; Joplin MO and Framingham MA were isolated no-ID/no-text/no-token failures; the collapse gate did not trigger; lifecycle artifacts completed. No resume was needed or run.
+- Tier 1 Wave 2 had the best reviewed operating yield: 95m38.638s, 94.099 rows/hour, 2.209 parsed candidates per parseable municipality, and 205.136 parsed candidates/hour. It was 6m51s faster than Wave 2 and 16m25s faster than Tier 1 Wave 1.
+- Compact text was 36.09% shorter in the offline proxy, but actual hosted-search input tokens were 1.82% higher than Tier 1 Wave 1 after adding hints/search context. Treat the runtime improvement as a combined system result, not a demonstrated token-saving effect.
+- Refresh priority tiers because this wave's 148 parseable rows exceed the explicit 135-row gate. Methodology is unchanged. Current future eligibility is 34,789, including 1,227 Tier 1 and 3,478 Tier 2 ordinary targets; 20 failures remain in a separate retry lane.
+
+**Surprises/breakage**
+- Fail-closed accounting assertions required audited updates for new per-state queue totals, two new locator-less WA records, and the historical 646 coverage total. Two queue attempts and one coverage attempt stopped before accepting the affected output; the subsequent successful queue/coverage pass is documented. Final structural checks prove 325 official Wave 2 rows, 122 official candidate-positive IDs, and no probe/failure contamination.
+
+**Validation/audit results**
+```text
+worker/input/preflight/dry gates: PASS; locked hash f530932c...e750e
+live: exit 0; 150 attempted; 148 parseable; 122 positive; 26 empty; 2 isolated failures; 327 parsed / 325 URL-bearing
+timing: 5,738.638s; 1,046.214s sleep; 94.099 rows/hour; adaptive levels 3/7.5/10 min/median/max; 1 backoff / 5 step-downs
+accounting: queue 1,277→1,602; successful 646→794; positive 490→612; empty 156→182; failure-only 18→20
+prompt tests: 12 PASS; mocked direct-SDK tests: 21 PASS
+validate.py: PASSED (64 contracts; 0 discourse; 64 coverage; 3 city attributes)
+ingest/test_pipeline.py: 60 passed, 0 failed
+audit_coverage.py: 28 healthy pairs (10 exact, 18 overlap), 2 adjacent exploratory, 6 unmatched safety
+dashboard JSON: 10/10 parse; priority rows: 35,589 unique; git diff --check: PASS
+protected hashes: contracts/city coverage/79 tracked corpus files unchanged
+```
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. No independent URL access, source verification, ingestion, codification, canonical contract/city-coverage/corpus edit, candidate promotion, claim use, remote action, or push occurred.
+
+**Next steps**
+1. Preserve the full live/preflight/worker lineage and do not merge the diagnostic probe or retry Joplin/Framingham automatically.
+2. Select the next ordinary wave from the refreshed priority outputs, or prepare a separately authorized bounded retry batch for the 20 failure-only municipalities.
+3. Keep one serialized coordinator lane, composite preflight, compact/hints/adaptive settings, and fresh resume directories; verify sources only in a separate coordinated task.
+
 ## 2026-07-22 (Tier 1 Wave 2 cross-state worker batches prepared offline)
 
 **Did**

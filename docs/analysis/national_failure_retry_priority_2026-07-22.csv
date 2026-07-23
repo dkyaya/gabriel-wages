@@ -1,11 +1,21 @@
 municipality_id,census_gov_id,state,municipality,government_name,population,prior_failure_type,prior_failure_run_ids,prior_attempt_dates,failed_attempt_count,underlying_priority_score,priority_tier,priority_confidence,retry_priority,recommended_retry_timing
-cog_2025_211214,211214,CA,Stockton,CITY OF STOCKTON,319543,connection_or_timeout_failure,ca_2026-07-21_101012,2026-07-21,1,76.177,Tier 1,high,high,next_separately_authorized_failure_retry_wave
-cog_2025_207604,207604,CA,Redding,CITY OF REDDING,92727,connection_or_timeout_failure,ca_2026-07-21_101012,2026-07-21,1,75.784,Tier 1,high,high,next_separately_authorized_failure_retry_wave
-cog_2025_123093,123093,CA,Oakland,CITY OF OAKLAND,436504,connection_or_timeout_failure,ca_2026-07-21_101012,2026-07-21,1,75.731,Tier 1,high,high,next_separately_authorized_failure_retry_wave
-cog_2025_161238,161238,CA,Moreno Valley,CITY OF MORENO VALLEY,212392,connection_or_timeout_failure,all_2026-07-21_193524,2026-07-21,1,75.644,Tier 1,high,high,next_separately_authorized_failure_retry_wave
-cog_2025_161299,161299,CA,Oxnard,CITY OF OXNARD,198488,connection_or_timeout_failure,ca_2026-07-21_101012,2026-07-21,1,75.540,Tier 1,high,high,next_separately_authorized_failure_retry_wave
-cog_2025_100750,100750,CA,Fairfield,CITY OF FAIRFIELD,120768,connection_or_timeout_failure,ca_2026-07-21_165516,2026-07-21,1,75.276,Tier 1,high,high,next_separately_authorized_failure_retry_wave
-cog_2025_124994,124994,IL,Bloomington,CITY OF BLOOMINGTON,78587,connection_or_timeout_failure,il_2026-07-20_184849,2026-07-20,1,74.525,Tier 1,high,high,next_separately_authorized_failure_retry_wave
-cog_2025_162476,162476,IL,Huntley,VILLAGE OF HUNTLEY,28269,connection_or_timeout_failure,all_2026-07-22_114424,2026-07-22,1,73.485,Tier 1,high,high,next_separately_authorized_failure_retry_wave
-cog_2025_162300,162300,IL,Roselle,VILLAGE OF ROSELLE,22508,connection_or_timeout_failure,all_2026-07-22_114424,2026-07-22,1,72.393,Tier 1,high,high,next_separately_authorized_failure_retry_wave
-cog_2025_170189,170189,NJ,Princeton,MUNICIPALITY OF PRINCETON,30289,connection_or_timeout_failure,nj_2026-07-21_172457,2026-07-21,1,65.149,Tier 3,high,medium,retry_after_next_300_to_600_new_scouts
+cog_2025_161633,161633,FL,Tampa,CITY OF TAMPA,403364,connection_or_timeout_failure,all_2026-07-22_164144,2026-07-22,1,79.264,Tier 1,medium,high,next_separately_authorized_failure_retry_wave
+cog_2025_176816,176816,WA,Vancouver,CITY OF VANCOUVER,196442,connection_or_timeout_failure,all_2026-07-22_164144,2026-07-22,1,79.076,Tier 1,medium,high,next_separately_authorized_failure_retry_wave
+cog_2025_207957,207957,IN,Indianapolis city (balance),CITY OF INDIANAPOLIS,879293,connection_or_timeout_failure,all_2026-07-22_164144,2026-07-22,1,78.490,Tier 1,low,high,next_separately_authorized_failure_retry_wave
+cog_2025_169988,169988,NV,Las Vegas,CITY OF LAS VEGAS,660929,connection_or_timeout_failure,all_2026-07-22_164144,2026-07-22,1,78.283,Tier 1,low,high,next_separately_authorized_failure_retry_wave
+cog_2025_163465,163465,IN,Fort Wayne,CITY OF FORT WAYNE,269994,connection_or_timeout_failure,all_2026-07-22_164144,2026-07-22,1,77.132,Tier 1,low,high,next_separately_authorized_failure_retry_wave
+cog_2025_186236,186236,MO,Kansas City,CITY OF KANSAS CITY,510704,connection_or_timeout_failure,all_2026-07-22_164144,2026-07-22,1,77.081,Tier 1,low,high,next_separately_authorized_failure_retry_wave
+cog_2025_106133,106133,MA,Framingham,CITY OF FRAMINGHAM,71875,connection_or_timeout_failure,all_2026-07-22_195226,2026-07-22,1,76.631,Tier 1,medium,high,next_separately_authorized_failure_retry_wave
+cog_2025_211214,211214,CA,Stockton,CITY OF STOCKTON,319543,connection_or_timeout_failure,ca_2026-07-21_101012,2026-07-21,1,76.194,Tier 1,high,high,next_separately_authorized_failure_retry_wave
+cog_2025_100435,100435,AR,Little Rock,CITY OF LITTLE ROCK,203842,connection_or_timeout_failure,all_2026-07-22_164144,2026-07-22,1,76.139,Tier 1,low,high,next_separately_authorized_failure_retry_wave
+cog_2025_207604,207604,CA,Redding,CITY OF REDDING,92727,connection_or_timeout_failure,ca_2026-07-21_101012,2026-07-21,1,75.801,Tier 1,high,high,next_separately_authorized_failure_retry_wave
+cog_2025_123093,123093,CA,Oakland,CITY OF OAKLAND,436504,connection_or_timeout_failure,ca_2026-07-21_101012,2026-07-21,1,75.748,Tier 1,high,high,next_separately_authorized_failure_retry_wave
+cog_2025_161238,161238,CA,Moreno Valley,CITY OF MORENO VALLEY,212392,connection_or_timeout_failure,all_2026-07-21_193524,2026-07-21,1,75.661,Tier 1,high,high,next_separately_authorized_failure_retry_wave
+cog_2025_161299,161299,CA,Oxnard,CITY OF OXNARD,198488,connection_or_timeout_failure,ca_2026-07-21_101012,2026-07-21,1,75.557,Tier 1,high,high,next_separately_authorized_failure_retry_wave
+cog_2025_100750,100750,CA,Fairfield,CITY OF FAIRFIELD,120768,connection_or_timeout_failure,ca_2026-07-21_165516,2026-07-21,1,75.293,Tier 1,high,high,next_separately_authorized_failure_retry_wave
+cog_2025_207536,207536,AZ,Phoenix,CITY OF PHOENIX,1650070,connection_or_timeout_failure,all_2026-07-22_164144,2026-07-22,1,74.630,Tier 1,medium,high,next_separately_authorized_failure_retry_wave
+cog_2025_124994,124994,IL,Bloomington,CITY OF BLOOMINGTON,78587,connection_or_timeout_failure,il_2026-07-20_184849,2026-07-20,1,74.544,Tier 1,high,high,next_separately_authorized_failure_retry_wave
+cog_2025_194606,194606,MO,Joplin,CITY OF JOPLIN,53095,connection_or_timeout_failure,all_2026-07-22_195226,2026-07-22,1,74.371,Tier 1,low,high,next_separately_authorized_failure_retry_wave
+cog_2025_162476,162476,IL,Huntley,VILLAGE OF HUNTLEY,28269,connection_or_timeout_failure,all_2026-07-22_114424,2026-07-22,1,73.504,Tier 1,high,high,next_separately_authorized_failure_retry_wave
+cog_2025_162300,162300,IL,Roselle,VILLAGE OF ROSELLE,22508,connection_or_timeout_failure,all_2026-07-22_114424,2026-07-22,1,72.413,Tier 1,high,high,next_separately_authorized_failure_retry_wave
+cog_2025_170189,170189,NJ,Princeton,MUNICIPALITY OF PRINCETON,30289,connection_or_timeout_failure,nj_2026-07-21_172457,2026-07-21,1,65.178,Tier 3,high,medium,retry_after_next_300_to_600_new_scouts
