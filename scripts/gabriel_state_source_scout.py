@@ -284,6 +284,7 @@ FAILED_PARSE_FIELDS = [
 # this maps to the two failure families found in the 2026-07-14 PA pilot:
 # outright proxy timeouts vs. a real OpenAI response ID with no usable text.
 FAILURE_TYPES = (
+    "outer_timeout",
     "timeout_or_capacity",
     "connection_error",
     "empty_response_with_response_id",
@@ -291,6 +292,10 @@ FAILURE_TYPES = (
     "json_parse_error",
     "missing_response_row",
     "other",
+)
+_OUTER_TIMEOUT_ERROR_MARKERS = (
+    "directsdkoutertimeouterror",
+    "outer per-row timeout",
 )
 _TIMEOUT_ERROR_MARKERS = ("timed out", "timeout", "maximum capacity")
 _CONNECTION_ERROR_MARKERS = (
@@ -343,7 +348,9 @@ def classify_failure(response_text: str, gabriel_row: dict) -> tuple[str, dict]:
     has_response_id = "resp_" in successful_raw or "resp_" in response_ids_raw
 
     lowered_error = error_log.lower()
-    if any(marker in lowered_error for marker in _TIMEOUT_ERROR_MARKERS):
+    if any(marker in lowered_error for marker in _OUTER_TIMEOUT_ERROR_MARKERS):
+        failure_type = "outer_timeout"
+    elif any(marker in lowered_error for marker in _TIMEOUT_ERROR_MARKERS):
         failure_type = "timeout_or_capacity"
     elif any(marker in lowered_error for marker in _CONNECTION_ERROR_MARKERS):
         failure_type = "connection_error"
@@ -781,7 +788,7 @@ def row_identifier_token(row: dict[str, Any]) -> str:
 
 def normalize_failure_retry_type(value: str) -> str:
     raw = (value or "").strip().lower()
-    if raw in {"timeout", "timeout_or_capacity", "capacity"}:
+    if raw in {"timeout", "outer_timeout", "timeout_or_capacity", "capacity"}:
         return "timeout"
     if raw in {
         "connection_error",
@@ -2651,8 +2658,11 @@ def _direct_sdk_failure_row(
     elapsed_seconds: float,
     exc: BaseException,
     secret_values: list[str | None],
+    *,
+    error_type: str | None = None,
 ) -> dict[str, Any]:
     safe_message = redact_direct_sdk_text(exc, secret_values)
+    rendered_error_type = error_type or type(exc).__name__
     return {
         "Identifier": identifier,
         "Prompt": prompt,
@@ -2664,7 +2674,7 @@ def _direct_sdk_failure_row(
         "Total Tokens": "",
         "Reasoning Effort": "low",
         "Successful": False,
-        "Error Log": json.dumps([f"{type(exc).__name__}: {safe_message}"]),
+        "Error Log": json.dumps([f"{rendered_error_type}: {safe_message}"]),
         "Web Search Sources": "[]",
         "Response IDs": "",
         "Cost": "",
@@ -2733,6 +2743,7 @@ def write_direct_sdk_sanitized_log(
         f"model={model}",
         f"web_search={str(web_search).lower()}",
         f"timeout_seconds={timeout}",
+        f"outer_per_row_timeout_seconds={timeout}",
         f"max_retries={max_retries}",
         "header_names=Authorization,Ocp-Apim-Subscription-Key",
         f"row_count={len(rows)}",
@@ -2814,20 +2825,34 @@ def run_direct_sdk_live_batch(
             started_at = datetime.now().astimezone().isoformat()
             started = time_module.monotonic()
             try:
-                response = await client.responses.create(
-                    **build_direct_sdk_response_kwargs(
-                        prompt,
-                        model,
-                        search_context_size,
-                        web_search=web_search,
-                        reasoning_effort=reasoning_effort,
-                    )
+                response = await asyncio.wait_for(
+                    client.responses.create(
+                        **build_direct_sdk_response_kwargs(
+                            prompt,
+                            model,
+                            search_context_size,
+                            web_search=web_search,
+                            reasoning_effort=reasoning_effort,
+                        )
+                    ),
+                    timeout=timeout,
                 )
                 row = direct_sdk_response_to_row(
                     response,
                     identifier,
                     prompt,
                     time_module.monotonic() - started,
+                )
+            except asyncio.TimeoutError:
+                row = _direct_sdk_failure_row(
+                    identifier,
+                    prompt,
+                    time_module.monotonic() - started,
+                    TimeoutError(
+                        f"outer per-row timeout exceeded {timeout:g} seconds"
+                    ),
+                    [subscription_key],
+                    error_type="DirectSDKOuterTimeoutError",
                 )
             except Exception as exc:
                 row = _direct_sdk_failure_row(

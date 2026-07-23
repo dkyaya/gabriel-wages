@@ -2,11 +2,14 @@
 
 from __future__ import annotations
 
+import asyncio
 import csv
 import json
 import sys
 import tempfile
+import time
 from pathlib import Path
+from unittest import mock
 
 import gabriel_state_source_scout as scout
 
@@ -814,6 +817,266 @@ def _write_live_fixture_input(path: Path) -> None:
         )
 
 
+def _write_live_timeout_fixture_input(path: Path) -> None:
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(
+            handle, fieldnames=["municipality_id", "municipality", "state"]
+        )
+        writer.writeheader()
+        for index in range(1, 4):
+            writer.writerow(
+                {
+                    "municipality_id": f"outer-timeout-pa-{index:03d}",
+                    "municipality": f"Outer Timeout Borough {index}",
+                    "state": "PA",
+                }
+            )
+
+
+def _check_outer_timeout_full_lifecycle() -> None:
+    """A never-returning SDK call must become a terminal timed row offline."""
+
+    class HangingResponses:
+        def __init__(self) -> None:
+            self.call_count = 0
+            self.cancelled_count = 0
+            self.kwargs: list[dict] = []
+
+        async def create(self, **kwargs):
+            self.call_count += 1
+            self.kwargs.append(kwargs)
+            try:
+                await asyncio.Event().wait()
+            except asyncio.CancelledError:
+                self.cancelled_count += 1
+                raise
+
+    class FakeAsyncOpenAI:
+        instances: list["FakeAsyncOpenAI"] = []
+
+        def __init__(self, **kwargs) -> None:
+            self.init_kwargs = kwargs
+            self.responses = HangingResponses()
+            self.closed = False
+            self.instances.append(self)
+
+        async def close(self) -> None:
+            self.closed = True
+
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp_path = Path(tmp)
+        municipalities_path = tmp_path / "municipalities.csv"
+        output_dir = tmp_path / "live-outer-timeout-output"
+        docs_analysis = tmp_path / "docs-analysis"
+        docs_analysis.mkdir()
+        _write_live_timeout_fixture_input(municipalities_path)
+
+        secret = "synthetic-outer-timeout-secret-for-test"
+        original_argv = sys.argv
+        original_docs_analysis = scout.DOCS_ANALYSIS
+        argv = [
+            "gabriel_state_source_scout.py",
+            "--live",
+            "--live-backend",
+            "direct-sdk",
+            "--direct-sdk-max-retries",
+            "0",
+            "--state",
+            "PA",
+            "--municipalities-csv",
+            str(municipalities_path),
+            "--output-dir",
+            str(output_dir),
+            "--max-prompts",
+            "3",
+            "--live-hard-cap",
+            "3",
+            "--n-parallels",
+            "1",
+            "--cost-log-path",
+            str(output_dir / "batch_cost_log.csv"),
+            "--prompt-mode",
+            "compact",
+            "--timeout",
+            "0.02",
+            "--adaptive-sleep",
+            "--adaptive-sleep-min",
+            "0",
+            "--adaptive-sleep-base",
+            "0",
+            "--adaptive-sleep-max",
+            "0.001",
+            "--adaptive-sleep-backoff",
+            "0.001",
+            "--adaptive-sleep-stability-window",
+            "25",
+            "--adaptive-sleep-failure-window",
+            "2",
+        ]
+
+        started = time.monotonic()
+        try:
+            scout.DOCS_ANALYSIS = docs_analysis
+            sys.argv = argv
+            with (
+                mock.patch.object(
+                    scout, "_load_live_subscription_key", return_value=secret
+                ),
+                mock.patch("openai.AsyncOpenAI", FakeAsyncOpenAI),
+            ):
+                assert scout.main() == 2
+        finally:
+            scout.DOCS_ANALYSIS = original_docs_analysis
+            sys.argv = original_argv
+        wall_elapsed = time.monotonic() - started
+
+        # Includes lazy imports and all final artifact writes; the row-level
+        # elapsed assertions below prove the configured 0.02-second guard.
+        assert wall_elapsed < 2.0
+        assert len(FakeAsyncOpenAI.instances) == 1
+        client = FakeAsyncOpenAI.instances[0]
+        assert client.responses.call_count == 2
+        assert client.responses.cancelled_count == 2
+        assert client.closed is True
+        assert all(
+            kwargs["tools"]
+            == [{"type": "web_search", "search_context_size": "low"}]
+            for kwargs in client.responses.kwargs
+        )
+
+        with (output_dir / "row_timing.csv").open(
+            newline="", encoding="utf-8"
+        ) as handle:
+            timing_rows = list(csv.DictReader(handle))
+        assert len(timing_rows) == 3
+        for row in timing_rows[:2]:
+            assert row["live_attempted"] == "yes"
+            assert row["success_status"] == "failed"
+            assert row["parse_status"] == "failed"
+            assert row["failure_type"] == "outer_timeout"
+            assert row["response_id_present"] == "no"
+            assert row["input_tokens"] == ""
+            assert row["output_tokens"] == ""
+            assert row["reasoning_tokens"] == ""
+            assert row["total_tokens"] == ""
+            assert row["prompt_started_at"]
+            assert row["prompt_finished_at"]
+            assert 0.015 <= float(row["elapsed_seconds"]) < 0.2
+        assert timing_rows[0]["adaptive_sleep_event"] == "backoff"
+        assert timing_rows[2]["live_attempted"] == "no"
+        assert timing_rows[2]["success_status"] == "stopped_before_request"
+        assert timing_rows[2]["parse_status"] == "not_attempted"
+        assert timing_rows[2]["failure_type"] == "stopped_before_request"
+        assert timing_rows[2]["prompt_started_at"] == ""
+        assert timing_rows[2]["prompt_finished_at"] == ""
+
+        with (output_dir / "raw_outputs.csv").open(
+            newline="", encoding="utf-8"
+        ) as handle:
+            raw_rows = list(csv.DictReader(handle))
+        assert len(raw_rows) == 3
+        for row in raw_rows[:2]:
+            assert "DirectSDKOuterTimeoutError" in row["Error Log"]
+            assert "outer per-row timeout exceeded 0.02 seconds" in row["Error Log"]
+            assert row["Response"] == ""
+            assert row["Response IDs"] == ""
+            assert row["Input Tokens"] == ""
+            assert row["Output Tokens"] == ""
+            assert secret not in row["Error Log"]
+            failure_type, _ = scout.classify_failure("", row)
+            assert failure_type == "outer_timeout"
+        assert "stopped_before_request" in raw_rows[2]["Error Log"]
+        assert scout.normalize_failure_retry_type("outer_timeout") == "timeout"
+
+        metadata = json.loads(
+            (output_dir / "run_metadata.json").read_text(encoding="utf-8")
+        )
+        assert metadata["execution_status"] == "completed_no_parseable_outcome"
+        assert metadata["attempted_row_count"] == 2
+        assert metadata["failure_count_by_type"] == {
+            "outer_timeout": 2,
+            "stopped_before_request": 1,
+        }
+        assert metadata["adaptive_sleep_event_counts"]["backoff"] == 1
+        assert (
+            metadata["adaptive_sleep_event_counts"]["stopped_before_request"] == 1
+        )
+        sanitized = (output_dir / "sanitized_console.log").read_text(
+            encoding="utf-8"
+        )
+        assert "outer_per_row_timeout_seconds=0.02" in sanitized
+        assert "DirectSDKOuterTimeoutError" in sanitized
+        assert secret not in sanitized
+
+
+def _check_outer_timeout_preserves_successful_calls() -> None:
+    class SuccessfulResponses:
+        def __init__(self) -> None:
+            self.kwargs: list[dict] = []
+
+        async def create(self, **kwargs):
+            self.kwargs.append(kwargs)
+            return FakeResponse(_candidate_json())
+
+    class FakeAsyncOpenAI:
+        instance: "FakeAsyncOpenAI | None" = None
+
+        def __init__(self, **kwargs) -> None:
+            self.init_kwargs = kwargs
+            self.responses = SuccessfulResponses()
+            self.closed = False
+            FakeAsyncOpenAI.instance = self
+
+        async def close(self) -> None:
+            self.closed = True
+
+    with tempfile.TemporaryDirectory() as tmp:
+        output_dir = Path(tmp)
+        secret = "synthetic-success-secret-for-test"
+        with (
+            mock.patch.object(
+                scout, "_load_live_subscription_key", return_value=secret
+            ),
+            mock.patch("openai.AsyncOpenAI", FakeAsyncOpenAI),
+        ):
+            frame, failure, timing = scout.run_direct_sdk_live_batch(
+                ["fixture prompt"],
+                ["fixture-identifier"],
+                output_dir,
+                "gpt-5.4-nano",
+                "low",
+                1,
+                timeout=0.05,
+                max_retries=0,
+                sleep_between_prompts=7,
+                adaptive_sleep=False,
+                web_search=True,
+                return_timing=True,
+            )
+
+        assert failure is None
+        assert len(frame) == 1
+        row = frame.iloc[0].to_dict()
+        assert row["Successful"] is True
+        assert row["Response"] == _candidate_json()
+        assert row["Response IDs"] == "resp_synthetic_fixture"
+        assert row["Input Tokens"] == 123
+        assert row["Reasoning Tokens"] == 7
+        assert row["Output Tokens"] == 45
+        assert row["Total Tokens"] == 168
+        assert len(timing) == 1
+        assert timing[0]["prompt_started_at"]
+        assert timing[0]["prompt_finished_at"]
+        assert timing[0]["adaptive_sleep_event"] == "fixed"
+        assert FakeAsyncOpenAI.instance is not None
+        assert FakeAsyncOpenAI.instance.closed is True
+        assert len(FakeAsyncOpenAI.instance.responses.kwargs) == 1
+        assert (
+            FakeAsyncOpenAI.instance.responses.kwargs[0]["include"]
+            == ["web_search_call.action.sources"]
+        )
+
+
 def _check_live_checkpoint_survives_unhandled_exception() -> None:
     with tempfile.TemporaryDirectory() as tmp:
         tmp_path = Path(tmp)
@@ -1073,6 +1336,8 @@ def main() -> int:
     _check_dry_run_remains_backend_independent()
     _check_resume_planning_and_safety_gates()
     _check_isolated_worker_cost_log()
+    _check_outer_timeout_full_lifecycle()
+    _check_outer_timeout_preserves_successful_calls()
     _check_live_checkpoint_survives_unhandled_exception()
     _check_zero_response_rows_preserve_failure_artifacts()
     _check_all_failure_rows_exit_nonzero_without_candidate_handoff()
@@ -1094,6 +1359,10 @@ def main() -> int:
     print("PASS: old parents without row timing are not resumable")
     print("PASS: audited input-hash mismatch override is prominent in resume metadata")
     print("PASS: parallel workers can route cost logging to a batch-specific file")
+    print("PASS: outer per-row timeout terminates a hanging mocked SDK call")
+    print("PASS: outer timeout rows checkpoint timing, failure type, and empty response evidence")
+    print("PASS: two outer timeouts trigger adaptive backoff and stop later requests")
+    print("PASS: outer timeout preserves successful direct-SDK response behavior")
     print("PASS: live metadata is checkpointed before backend setup and survives exceptions")
     print("PASS: zero-row live returns preserve explicit non-mergeable failure artifacts")
     print("PASS: all-failure live rows exit nonzero without a candidate handoff")

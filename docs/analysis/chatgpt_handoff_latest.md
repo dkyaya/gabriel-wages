@@ -6,6 +6,22 @@ Last updated: `2026-07-23`
 
 ---
 
+## 2026-07-23 — Direct-SDK outer per-row lifecycle timeout is ready
+
+### Current State
+
+- **Starting evidence:** implementation began at clean tracked `bd5e2590ec01c7e0e8883b4299686f331af2c095`, with `bd5e259`/`6db14f0`/`bef5077` ancestry present and unrelated untracked root `package-lock.json` preserved. [The failure audit](direct_sdk_outer_timeout_failure_audit_2026-07-23.md) confirms Lake Oswego remained in flight for approximately 5 minutes 49 seconds despite a 90-second SDK/httpx timeout, with no response ID/text/tokens, terminal timing, candidate artifact, or failed-parse ledger.
+- **Cause hypothesis:** [the implementation notes](direct_sdk_timeout_implementation_notes_2026-07-23.md) show that `AsyncOpenAI` received `httpx.Timeout(timeout)`, but the per-row `client.responses.create(...)` awaitable had no independent caller-level deadline. If that awaitable neither returned nor raised, the runner could not create a failure row, finalize timing, feed adaptive pacing, trigger collapse, or write terminal artifacts. This identifies the missing safety boundary; it does not claim which downstream SDK, proxy, or hosted-tool layer stalled.
+- **Fix:** every direct-SDK row now retains its inner SDK/httpx timeout and additionally runs under `asyncio.wait_for(..., timeout=timeout)`. Runner expiry creates a sanitized `DirectSDKOuterTimeoutError`, classified as `outer_timeout`, with empty response evidence and measured start/finish/elapsed timing. It feeds the existing adaptive failure/backoff and consecutive no-evidence collapse rules and maps to the existing `timeout` resume family.
+- **Compatibility:** normal SDK exceptions still use their existing conversion; malformed completed responses still enter parse handling; successful fake responses retain ID, text, usage, hosted-search request shape, timing, and fixed pacing. Compact/minimal prompts, deterministic hints, adaptive settings, fixed sleep, direct-SDK retry settings, and resume gates are unchanged.
+- **Offline tests:** the mocked suite now passes 25 checks. A genuinely never-returning local coroutine is cancelled twice at a configured 0.02-second outer deadline; both rows become terminal `outer_timeout`, the first causes adaptive backoff, the second triggers collapse, and row three is `stopped_before_request` without a third call. A success fixture is unchanged, and synthetic credential text is absent from failure artifacts/logs. Prompt checks pass 12; pipeline tests pass 60/60.
+- **Quarantine/accounting:** all eight stopped-run artifacts are byte-identical to their pre-task manifest. The locked CSV still hashes to `56e592291f1dbac83836acddcf0065df40141b51f9e93bfb548a040f52b8e700`. The parent remains nonterminal, non-mergeable, and unsafe for resume. Contracts, city coverage, corpus, national queue/coverage, dashboard, yield, and priority outputs are unchanged.
+- **Validation/boundary:** [the validation record](direct_sdk_outer_timeout_validation_2026-07-23.md) reports five compiles, 25 mocked direct-SDK checks, 12 prompt checks, schema validation, 60 ingestion tests, coverage audit, manifest/hash/protected/accounting checks, and `git diff --check` passed. No live scout, real API/model/hosted search, smoke/preflight, URL access, verification, extraction, ingestion, codification, accounting rebuild, candidate promotion, wage-gap/causal claim, regression, remote action, or push occurred.
+
+### Next Move
+
+Use [the generated retry prompt](post_pi_wave1_retry_after_outer_timeout_fix_prompt_2026-07-23.md) only under separate live authorization. Preserve `bd5e259` as quarantined non-evidence; revalidate the unchanged hash and eligibility; use fresh plan-only, stronger-preflight, diagnostic-probe, dry-run, and full-live directories; and run at most one serialized full process after all gates pass. Rebuild accounting and refresh yield/dashboard only for a complete merge-eligible lineage. Keep priority refresh deferred unless its cadence or strategy threshold is met.
+
 ## 2026-07-23 — Post-PI Wave 1 live run stopped before its first row completed
 
 ### Current State

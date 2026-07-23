@@ -6,6 +6,33 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-23 (Direct-SDK outer lifecycle timeout implemented offline)
+
+**Did**
+- Started from clean tracked `bd5e2590ec01c7e0e8883b4299686f331af2c095` on `main`, confirmed `bd5e259`/`6db14f0`/`bef5077` ancestry, and preserved the unrelated untracked root `package-lock.json`.
+- Audited the stopped Post-PI Wave 1 directory and confirmed its first Lake Oswego request ran approximately 5 minutes 49 seconds despite `--timeout 90`, returned no response ID/text/tokens or candidate/failure artifact, and left all 150 timing rows pending. The output remains nonterminal, non-mergeable, and unsafe for resume.
+- Traced the direct backend: `httpx.Timeout(timeout)` was configured on `AsyncOpenAI`, but `client.responses.create(...)` had no independent runner-level deadline. A never-returning awaitable therefore could not reach exception conversion, row timing finalization, adaptive pacing, collapse detection, or final checkpointing.
+- Retained the SDK/httpx timeout and wrapped every per-row Responses API awaitable with `asyncio.wait_for(..., timeout=timeout)`. Outer expiry now creates a sanitized terminal `DirectSDKOuterTimeoutError`, classifies as `outer_timeout`, retains empty response evidence, records start/finish/elapsed timing, enters adaptive backoff and consecutive transport-failure logic, and normalizes to the existing `timeout` resume category.
+- Added a fully mocked never-returning SDK lifecycle test with a 0.02-second deadline. Two cancelled calls become terminal outer timeouts, trigger adaptive/collapse behavior, and leave the third row stopped before request. A separate successful fake proves response IDs/text/tokens, request shape, fixed pacing, and closure remain unchanged.
+- Added the failure audit, call-path notes, fix summary, offline validation record, and a future-use retry prompt that preserves the locked 150-row hash and requires fresh directories and a fresh stronger preflight.
+
+**Decisions and why**
+- Use one reviewed timeout value for both the inner SDK/httpx configuration and the outer runner deadline. This preserves the CLI contract while bounding the entire awaited lifecycle from the caller's perspective.
+- Give runner-expired calls the distinct `outer_timeout` failure type for diagnosis, but map it to the existing `timeout` resume family so prior retry interfaces remain compatible.
+- Keep the `bd5e259` output immutable and quarantined. The fix cannot retroactively invent terminal evidence, and the nonterminal parent cannot satisfy safe-resume gates.
+- Make no accounting refresh: this task produced no scout evidence. Official discovery remains 794/2,000 covered, with 1,602 candidate queue rows, 612 candidate-positive, 182 parseable-empty, and 20 failure-only municipalities.
+
+**Surprises/breakage**
+- The existing SDK/httpx timeout bounded transport behavior understood by those layers but did not guarantee a caller-visible deadline for the observed hosted-tool lifecycle. The absence of an outer guard—not a proven defect in any particular downstream layer—is the actionable root-cause hypothesis.
+- The first focused test used a sub-0.5-second whole-process assertion; lazy imports and artifact writes made that assertion platform-sensitive. It was replaced with a two-second process ceiling while preserving strict 0.015–0.2-second per-row assertions around the configured 0.02-second guard.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Five requested compiles passed; mocked/no-network direct-SDK checks passed 25; prompt checks passed 12; ingestion tests passed 60/60; schema validation, stopped-output byte manifest, locked-input hash, protected/accounting-file checks, secret-redaction assertions, and `git diff --check` passed. No live/API/model/hosted-search call, preflight, URL access, verification, extraction, ingestion, `gabriel.codify`, queue/coverage/dashboard/yield/priority rebuild, candidate promotion, wage-gap calculation or claim, causal claim, regression, remote action, or push occurred.
+
+**Next steps**
+1. Preserve the stopped `bd5e259` directory as quarantined non-evidence and do not resume from or write into it.
+2. Under a separately authorized live task, use `post_pi_wave1_retry_after_outer_timeout_fix_prompt_2026-07-23.md`: revalidate the locked hash, use fresh plan/preflight/probe/dry/live directories, and run a fresh stronger preflight.
+3. Only after every gate passes, retry the unchanged locked Post-PI Wave 1 input once in a fresh serialized direct-SDK output directory. Rebuild queue/coverage and then yield/dashboard only if the new lineage is complete and merge-eligible.
+
 ## 2026-07-23 (Post-PI Wave 1 live gates passed; full run stopped on first-request lifecycle stall)
 
 **Did**
