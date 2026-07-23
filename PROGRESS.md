@@ -6,6 +6,34 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-23 (Aggressive parallel scaling framework prepared offline)
+
+**Did**
+- Started from clean tracked `c4cf7d0de79a2a734adeb9eb03ee37ce02125e8a` on `main`, confirmed `c4cf7d0`/`4ee7015`/`3a7d762`/`bef5077` ancestry, and left the unrelated untracked root `package-lock.json` untouched.
+- Added named `standard_150`, `aggressive_250`, and `aggressive_300` planner profiles for up to three isolated lanes, deterministic stagger schedules, explicit override recording, a 300-row default safety cap, per-lane dry-run previews, and lane-local timestamped candidate-export paths.
+- Preserved legacy serial export behavior while adding `--candidate-export-dir` to the scout runner. Generated parallel commands redirect the redundant timestamped handoff under the lane output while retaining `parsed_candidates.csv` at the lane root.
+- Upgraded the offline auditor for three lanes and 250–300-row profiles. It fail-closes on missing/mismatched lane-local exports and reports lane/combined elapsed time, effective throughput, outer timeouts, and adaptive backoff/step-down events.
+- Prepared `POST-PI-PARALLEL-ROUND2-3X150-2026-07-23`: three 150-row Tier 1 lanes, 450 unique municipality/Census IDs, zero overlap, and 450/450 exact hint sets. Lane hashes are `320f4915…79d86a`, `e06f9706…c5500a`, and `501e36ff…d50665`; scheduled starts are minute 0/4/8.
+- Prepared plan-only `POST-PI-PARALLEL-AGGRESSIVE-3X300-FEASIBILITY-2026-07-23`: 900 Tier 1 rows, 900 unique municipality/Census IDs, zero overlap, and 900/900 hint sets. It remains conditional on a clean 3 × 150 collection and serial merge.
+- Updated dashboard operations status: Round 1 remains merged, official coverage remains 1,091/2,000, 3 × 150 is next, 3 × 250–300 is gated, candidate exports are lane-local, and no three-lane live scout has occurred.
+
+**Decisions and why**
+- Keep all parallelism at the process level with `--n-parallels 1` inside each lane. National queue/coverage/yield/dashboard accounting remains one later serial merge.
+- Use four-minute starts for 3 × 150, seven minutes for 3 × 250, and eight minutes by default for 3 × 300 (configurable to ten). Larger lanes increase capacity and partial-lineage exposure.
+- Require a candidate export for every parseable lane and byte-check it against `parsed_candidates.csv`. Missing, ambiguous, or different exports block merge.
+- Stop broad scouting at approximately 2,000 official covered municipalities. The 3 × 300 artifact demonstrates selection capacity only and is not the next live input.
+
+**Surprises/breakage**
+- Current coverage reconciliation still leaves at least 900 ordinary Tier 1 rows in the documented July 22 priority order, so both plans completed without Tier 2 spillover, missing IDs, or substitutions.
+- No implementation failure occurred. The priority ranking is intentionally stale at its 794-covered build vintage; every plan applies current coverage/failure/canonical exclusions before selection.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Offline planner/auditor/runner tests, schema validation, 60 ingestion tests, coverage audit, dashboard JSON/frontend build, protected/accounting checks, and diff checks passed. No live/API/model/hosted-search call, diagnostic, preflight, URL access, verification, extraction, ingestion, `gabriel.codify`, accounting promotion, wage-gap calculation/claim, causal claim, regression, remote action, or push occurred.
+
+**Next steps**
+1. Under separate live authorization, use `parallel_round2_3x150_live_prompt_2026-07-23.md`: re-audit, stronger-preflight, dry-run all three lanes, launch at minute 0/4/8, audit, and stop before merge.
+2. Run a separate three-lane serial merge only if the auditor permits it.
+3. Consider 3 × 250 or 3 × 300 only after both steps pass and after checking whether the updated official total already reaches the approximately 2,000 checkpoint.
+
 ## 2026-07-23 (Parallel Round 1 serial accounting merge completed)
 
 **Did**

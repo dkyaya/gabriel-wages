@@ -2,6 +2,10 @@
 
 Use only after parallel lane processes have terminated and the offline combined audit exists. This prompt is a separate accounting authorization boundary.
 
+This template supports one to three lanes, including reviewed 150-, 250-, and
+300-row profiles. Never assume a fixed lane count or row count; read both from the
+locked manifest.
+
 ---
 
 Work only in the main coordinator repository:
@@ -30,20 +34,31 @@ Recompute:
 - parseable/failure/stopped/pending/candidate counts;
 - municipality/Census uniqueness across inputs;
 - completed municipality-ID overlap;
+- each configured lane-local candidate export and its byte identity with that lane's
+  `parsed_candidates.csv`;
+- per-lane and combined outer-timeout, adaptive pacing, elapsed-time, and throughput
+  summaries;
 - diagnostic/probe exclusions;
 - protected-file and national-accounting baselines.
 
-Stop if any audit artifact is missing, any input hash differs, or completed IDs overlap.
+Stop if any audit artifact is missing, any input hash differs, completed IDs
+overlap, or a required lane-local candidate export is absent, ambiguous, or differs
+from `parsed_candidates.csv`.
 
 ## Recommendation decision
 
 ### `merge_all_lanes`
 
-Proceed only when every lane is `completed_merge_eligible`, all lineages are complete, and no completed IDs overlap.
+Proceed only when every manifest lane is `completed_merge_eligible`, all lineages
+and lane-local exports are complete, and no completed IDs overlap. For a 3-lane
+round, all three lanes must pass.
 
 ### `merge_completed_lanes_only_with_user_approval`
 
-Proceed only if the user explicitly approves merging the named completed lanes and excluding the named zero-parseable failed lanes. Document that the round scope changed. Do not infer approval from the audit.
+Proceed only if the user explicitly approves merging the named completed lanes and
+excluding the named zero-parseable failed lanes. This applies equally to a
+2-complete/1-failed three-lane round. Document that the round scope changed. Do not
+infer approval from the audit.
 
 ### `do_not_merge_until_resume_or_review`
 
@@ -75,6 +90,11 @@ Update:
 - combined lane runtime/yield reporting;
 - `parallel_scout_status.json` from planned to the exact audited result;
 - project documentation and limitations.
+
+Before authorizing another broad scouting round, compare updated official coverage
+with the approximately 2,000 checkpoint. Stop broad scouting at or above it. A
+3 × 250 or 3 × 300 merge may cross the checkpoint; do not automatically prepare
+another discovery round afterward.
 
 Do not refresh priority tiers unless the documented 300–600-success cadence, another deterministic threshold, or explicit strategy requires it. Do not change methodology.
 

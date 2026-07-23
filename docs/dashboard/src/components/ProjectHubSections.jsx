@@ -224,9 +224,10 @@ export function ScoutOperationsPanel({ operations, runtime, parallelStatus }) {
           </ul>
           <p className="panel-note">
             <strong>Parallel scout lane status:</strong>{" "}
-            {parallelStatus.supported_lanes_initial} lanes completed the first controlled round;{" "}
-            {parallelStatus.supported_lanes_future} lanes remain a future option requiring explicit authorization.
-            Accounting remains serial after the combined lane audit.{" "}
+            Next parallel test: {parallelStatus.supported_lanes_future} lanes × 150 municipalities.
+            Aggressive 3 × 250–300 mode is planned only after a clean three-lane test
+            and serial merge. Accounting remains serial after the combined lane audit,
+            and candidate exports remain lane-local.{" "}
             {parallelStatus.caveat}
           </p>
           <p className="panel-note">{operations.disclaimer}</p>

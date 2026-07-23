@@ -3233,6 +3233,17 @@ def _parse_args() -> argparse.Namespace:
         ),
     )
     parser.add_argument(
+        "--candidate-export-dir",
+        type=Path,
+        default=None,
+        help=(
+            "Optional directory for the timestamped candidate handoff CSV. When "
+            "omitted, preserve the historical docs/analysis export behavior. "
+            "Parallel lanes should point this inside their isolated lane output "
+            "directory to avoid shared export collisions."
+        ),
+    )
+    parser.add_argument(
         "--direct-sdk-max-retries",
         type=int,
         default=DEFAULT_DIRECT_SDK_MAX_RETRIES,
@@ -3690,6 +3701,14 @@ def main() -> int:
             args.cost_log_path
             or (DOCS_ANALYSIS / "gabriel_state_source_scout_cost_log.csv")
         ),
+        "candidate_export_dir": str(
+            args.candidate_export_dir or DOCS_ANALYSIS
+        ),
+        "candidate_export_policy": (
+            "configured_directory"
+            if args.candidate_export_dir is not None
+            else "legacy_shared_docs_analysis"
+        ),
         "retry_failed_from": str(args.retry_failed_from) if args.retry_failed_from else None,
         "resume_from_output_dir": (
             str(args.resume_from_output_dir)
@@ -3975,8 +3994,10 @@ def main() -> int:
     # failed-parse ledgers are the correct durable evidence.
     candidates_out: Path | None = None
     if n_parseable > 0:
+        candidate_export_dir = args.candidate_export_dir or DOCS_ANALYSIS
         candidates_out = (
-            DOCS_ANALYSIS / f"gabriel_state_source_scout_candidates_{run_id}.csv"
+            candidate_export_dir
+            / f"gabriel_state_source_scout_candidates_{run_id}.csv"
         )
         write_csv(candidates_out, all_candidates, CANDIDATE_FIELDS)
 

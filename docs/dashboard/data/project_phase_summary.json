@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-23T21:53:33Z",
+  "generated_at": "2026-07-23T22:18:10Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -52,7 +52,7 @@
     "decide the most efficient repeat strategy"
   ],
   "regressions_status": "Deferred",
-  "last_updated_commit": "42dbe6716a88be2cb2113b245bd7733fa27f4be1",
+  "last_updated_commit": "c4cf7d0de79a2a734adeb9eb03ee37ce02125e8a",
   "last_updated_context": "source_discovery_accounting_checkpoint",
   "future_live_controls": [
     "stronger preflight gate",

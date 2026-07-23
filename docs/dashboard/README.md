@@ -158,9 +158,12 @@ Review the printed totals and diffs before committing. In particular, candidate-
 `parallel_scout_status.json` is an operations layer, not source evidence. Its
 current status is `round1_completed_accounting_merged`: the first two isolated
 150-row lanes completed, passed the combined audit, and entered national
-accounting through one later serial merge. Every lane remained internally
-serialized and wrote to a unique output directory. Three lanes remain a future
-option requiring an explicit strategy decision and authorization. Candidate
+accounting through one later serial merge. The next gated capacity test is three
+lanes × 150 municipalities with four-minute start spacing. Three lanes × 250–300
+remain conditional on a clean 3 × 150 collection and serial merge. Every lane
+remains internally serialized, writes to a unique output directory, and redirects
+its timestamped candidate handoff to a lane-local export directory. Shared
+accounting remains serial. No three-lane live scout has run, and all candidate
 leads remain unverified.
 
 The priority JSON layers still reflect the Tier 1 Wave 2 priority build at 794

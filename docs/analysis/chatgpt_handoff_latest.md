@@ -6,6 +6,24 @@ Last updated: `2026-07-23`
 
 ---
 
+## 2026-07-23 — Aggressive parallel scaling is prepared offline
+
+### Current State
+
+- **Starting gate:** work began at clean tracked `c4cf7d0de79a2a734adeb9eb03ee37ce02125e8a`; required `c4cf7d0`/`4ee7015`/`3a7d762`/`bef5077` ancestry is present. The unrelated untracked root `package-lock.json` remains untouched.
+- **Checkpoint:** official accounting remains 1,091 scout-covered municipalities out of approximately 2,000, with 909 remaining. Parallel Round 1 remains the latest completed/merged live work: 300 attempted, 297 parseable, 272 positive, 25 empty, three failure-only, 763 leads, and 760 queue additions at 165.391 attempted rows/hour.
+- **Runner isolation:** `--candidate-export-dir` redirects the timestamped candidate handoff. Omission preserves legacy serial `docs/analysis/` behavior. Generated lane commands use `<lane_output>/candidate_exports`, while `parsed_candidates.csv` remains at the lane root. Mocked tests prove both paths and byte identity without network calls.
+- **Profiles:** the offline planner supports `standard_150` (3 lanes, 150 rows, 4-minute stagger), `aggressive_250` (3, 250, 7-minute default), and `aggressive_300` (3, 300, 8-minute default/configurable). Explicit overrides are recorded; more than three lanes fails; more than 300 rows requires a conspicuous override.
+- **Next round:** [the locked 3 × 150 plan](parallel_scout_rounds/POST-PI-PARALLEL-ROUND2-3X150-2026-07-23/parallel_round_manifest.json) has 450 Tier 1 rows, 450 unique municipality/Census IDs, no overlap, no covered/canonical/retry/failure-only rows, and 450/450 hint sets. Lane hashes are `320f4915a1aa487e791f67a31826572ac275edf5d4b87ecb99eec4b26279d86a`, `e06f9706d69bce72cabac6f57c8581d16651d0b00ecec5752787edda5fc5500a`, and `501e36ff504ec2d5e3a1126eb1315db6fb31bbe5852c2be2590794661dd50665`.
+- **Feasibility:** [the 3 × 300 plan](parallel_scout_rounds/POST-PI-PARALLEL-AGGRESSIVE-3X300-FEASIBILITY-2026-07-23/parallel_round_manifest.json) has 900 Tier 1 rows, 900 unique municipality/Census IDs, zero overlap, and 900/900 hint sets. It is plan-only and cannot become a live round until 3 × 150 collection and serial merge both pass.
+- **Auditor:** supports three lanes and larger profiles; byte-checks lane-local exports; aggregates throughput, outer timeouts, backoff, and step-down; and fail-closes for partial lanes, duplicate completed IDs, missing/mismatched exports, or ambiguous artifacts. Shared builders are never invoked.
+- **Dashboard:** operations status identifies two-lane success, 3 × 150 as the next test, 3 × 250–300 as conditional, serial accounting, lane-local exports, and the fact that no three-lane live run has occurred. Candidate leads remain unverified.
+- **Boundary:** no live/API/model/hosted-search call, diagnostic, preflight, URL access/verification, ingestion, `gabriel.codify`, queue/coverage promotion, wage-gap calculation/claim, causal claim, regression, remote action, or push occurred.
+
+### Next Move
+
+Use [the prepared future live prompt](parallel_round2_3x150_live_prompt_2026-07-23.md) only under separate authorization. Revalidate all three hashes/eligibility, run one stronger preflight and three offline dry-runs, then launch at minute 0/4/8 with isolated outputs/cost logs/candidate exports. Run the combined auditor and stop before accounting. Use the updated [serial merge template](parallel_scout_serial_merge_prompt_template_2026-07-23.md) in a later task. Advance to 3 × 250–300 only after that collection and merge pass, and stop broad scouting when official coverage reaches approximately 2,000.
+
 ## 2026-07-23 — Parallel Round 1 is serially merged into national accounting
 
 ### Current State

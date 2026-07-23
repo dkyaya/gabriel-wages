@@ -1325,6 +1325,97 @@ def _check_mocked_live_timing_event_propagation() -> None:
         assert metadata["failure_count_by_type"] == {}
 
 
+def _check_candidate_export_directory_policy() -> None:
+    """Keep serial exports compatible while isolating parallel-lane handoffs."""
+
+    import pandas as pd
+
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp_path = Path(tmp)
+        municipalities_path = tmp_path / "municipalities.csv"
+        docs_analysis = tmp_path / "docs-analysis"
+        docs_analysis.mkdir()
+        _write_live_fixture_input(municipalities_path)
+
+        original_argv = sys.argv
+        original_runner = scout.run_direct_sdk_live_batch
+        original_docs_analysis = scout.DOCS_ANALYSIS
+
+        def successful_runner(prompts, identifiers, *args, **kwargs):
+            del args
+            assert kwargs["return_timing"] is True
+            row = scout.direct_sdk_response_to_row(
+                FakeResponse(_candidate_json()), identifiers[0], prompts[0], 0.01
+            )
+            timing = [
+                {
+                    "identifier": identifiers[0],
+                    "prompt_started_at": "2026-07-23T01:00:00-04:00",
+                    "prompt_finished_at": "2026-07-23T01:00:00.010000-04:00",
+                    "elapsed_seconds": 0.01,
+                    "sleep_before_seconds": 0.0,
+                    "sleep_after_seconds": 0.0,
+                }
+            ]
+            return pd.DataFrame(
+                [row], columns=scout.DIRECT_SDK_RAW_FIELDS
+            ), None, timing
+
+        try:
+            scout.DOCS_ANALYSIS = docs_analysis
+            scout.run_direct_sdk_live_batch = successful_runner
+
+            serial_output = tmp_path / "serial-output"
+            sys.argv = _live_fixture_argv(municipalities_path, serial_output)
+            assert scout.main() == 0
+            serial_exports = list(
+                docs_analysis.glob("gabriel_state_source_scout_candidates_*.csv")
+            )
+            assert len(serial_exports) == 1
+            assert (serial_output / "parsed_candidates.csv").read_bytes() == (
+                serial_exports[0].read_bytes()
+            )
+            serial_metadata = json.loads(
+                (serial_output / "run_metadata.json").read_text(encoding="utf-8")
+            )
+            assert (
+                serial_metadata["candidate_export_policy"]
+                == "legacy_shared_docs_analysis"
+            )
+
+            lane_output = tmp_path / "lane-output"
+            lane_export_dir = lane_output / "candidate_exports"
+            sys.argv = _live_fixture_argv(municipalities_path, lane_output) + [
+                "--candidate-export-dir",
+                str(lane_export_dir),
+            ]
+            assert scout.main() == 0
+            lane_exports = list(
+                lane_export_dir.glob("gabriel_state_source_scout_candidates_*.csv")
+            )
+            assert len(lane_exports) == 1
+            assert (lane_output / "parsed_candidates.csv").read_bytes() == (
+                lane_exports[0].read_bytes()
+            )
+            assert len(
+                list(
+                    docs_analysis.glob(
+                        "gabriel_state_source_scout_candidates_*.csv"
+                    )
+                )
+            ) == 1
+            lane_metadata = json.loads(
+                (lane_output / "run_metadata.json").read_text(encoding="utf-8")
+            )
+            assert lane_metadata["candidate_export_policy"] == "configured_directory"
+            assert lane_metadata["candidate_export_dir"] == str(lane_export_dir)
+            assert "secret" not in json.dumps(lane_metadata).lower()
+        finally:
+            scout.run_direct_sdk_live_batch = original_runner
+            scout.DOCS_ANALYSIS = original_docs_analysis
+            sys.argv = original_argv
+
+
 def main() -> int:
     _check_request_shapes()
     _check_mocked_response_uses_existing_candidate_pipeline()
@@ -1342,6 +1433,7 @@ def main() -> int:
     _check_zero_response_rows_preserve_failure_artifacts()
     _check_all_failure_rows_exit_nonzero_without_candidate_handoff()
     _check_mocked_live_timing_event_propagation()
+    _check_candidate_export_directory_policy()
     print("PASS: direct SDK request shape preserves scout web-search settings")
     print("PASS: no-search smoke request omits tools and web search")
     print("PASS: mocked direct response enters the existing unverified candidate pipeline")
@@ -1367,6 +1459,7 @@ def main() -> int:
     print("PASS: zero-row live returns preserve explicit non-mergeable failure artifacts")
     print("PASS: all-failure live rows exit nonzero without a candidate handoff")
     print("PASS: mocked live timing events preserve timestamps, usage, parse status, and throughput")
+    print("PASS: serial candidate exports remain compatible and parallel lanes redirect locally")
     return 0
 
 

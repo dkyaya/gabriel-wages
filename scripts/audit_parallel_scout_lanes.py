@@ -14,6 +14,7 @@ import csv
 import hashlib
 import json
 from collections import Counter
+from datetime import datetime
 from pathlib import Path
 from typing import Any
 
@@ -52,6 +53,23 @@ def as_bool(value: Any) -> bool:
     if isinstance(value, bool):
         return value
     return str(value).strip().lower() in {"1", "true", "yes", "y"}
+
+
+def as_float(value: Any) -> float:
+    try:
+        return float(value or 0)
+    except (TypeError, ValueError):
+        return 0.0
+
+
+def as_datetime(value: Any) -> datetime | None:
+    text = str(value or "").strip()
+    if not text:
+        return None
+    try:
+        return datetime.fromisoformat(text.replace("Z", "+00:00"))
+    except ValueError:
+        return None
 
 
 def resolve_manifest_reference(value: str) -> Path:
@@ -154,6 +172,16 @@ def inspect_lane(lane: dict[str, Any]) -> dict[str, Any]:
         "pending_rows": 0,
         "candidate_rows": 0,
         "attempted_rows": 0,
+        "outer_timeout_rows": 0,
+        "adaptive_backoff_events": 0,
+        "adaptive_step_down_events": 0,
+        "total_elapsed_seconds": 0.0,
+        "effective_rows_per_hour": 0.0,
+        "first_prompt_started_at": None,
+        "last_prompt_finished_at": None,
+        "candidate_export_dir": lane.get("candidate_export_dir"),
+        "candidate_export_files": [],
+        "candidate_export_matches_parsed_candidates": None,
         "completed_municipality_ids": [],
         "artifact_errors": [],
         "merge_eligible": False,
@@ -209,6 +237,48 @@ def inspect_lane(lane: dict[str, Any]) -> dict[str, Any]:
     )
     base["failed_parse_artifact_rows"] = len(failed_rows)
     base["timing_rows"] = len(timing_rows)
+    started_values = [
+        row.get("prompt_started_at")
+        for row in timing_rows
+        if as_datetime(row.get("prompt_started_at")) is not None
+    ]
+    finished_values = [
+        row.get("prompt_finished_at")
+        for row in timing_rows
+        if as_datetime(row.get("prompt_finished_at")) is not None
+    ]
+    if started_values:
+        base["first_prompt_started_at"] = min(
+            started_values, key=lambda value: as_datetime(value)  # type: ignore[arg-type]
+        )
+    if finished_values:
+        base["last_prompt_finished_at"] = max(
+            finished_values, key=lambda value: as_datetime(value)  # type: ignore[arg-type]
+        )
+    base["outer_timeout_rows"] = sum(
+        row.get("failure_type") == "outer_timeout" for row in timing_rows
+    )
+    base["adaptive_backoff_events"] = sum(
+        row.get("adaptive_sleep_event") in {"backoff", "backoff_held"}
+        for row in timing_rows
+    )
+    base["adaptive_step_down_events"] = sum(
+        row.get("adaptive_sleep_event") == "stable_step_down"
+        for row in timing_rows
+    )
+    elapsed = as_float(metadata.get("total_elapsed_seconds"))
+    if elapsed <= 0:
+        elapsed = sum(
+            as_float(row.get("elapsed_seconds"))
+            + as_float(row.get("sleep_before_seconds"))
+            + as_float(row.get("sleep_after_seconds"))
+            for row in timing_rows
+        )
+    base["total_elapsed_seconds"] = round(elapsed, 6)
+    if elapsed > 0:
+        base["effective_rows_per_hour"] = round(
+            base["attempted_rows"] * 3600 / elapsed, 6
+        )
     base["completed_municipality_ids"] = [
         row.get("municipality_id", "")
         for row in timing_rows
@@ -229,6 +299,49 @@ def inspect_lane(lane: dict[str, Any]) -> dict[str, Any]:
     timing_ids = [row.get("municipality_id", "") for row in timing_rows]
     if timing_ids and timing_ids != lane["_municipality_ids"]:
         artifact_errors.append("timing municipality identities/order differ from input")
+    candidate_export_dir_value = lane.get("candidate_export_dir")
+    if candidate_export_dir_value:
+        candidate_export_dir = resolve_manifest_reference(
+            str(candidate_export_dir_value)
+        )
+        export_files = (
+            sorted(
+                candidate_export_dir.glob(
+                    "gabriel_state_source_scout_candidates_*.csv"
+                )
+            )
+            if candidate_export_dir.is_dir()
+            else []
+        )
+        base["candidate_export_files"] = [relative(path) for path in export_files]
+        if base["parseable_rows"] > 0:
+            if len(export_files) != 1:
+                artifact_errors.append(
+                    "lane-local candidate export missing or ambiguous"
+                )
+                base["candidate_export_matches_parsed_candidates"] = False
+            else:
+                export_matches = (
+                    export_files[0].read_bytes() == candidates_path.read_bytes()
+                )
+                base["candidate_export_matches_parsed_candidates"] = export_matches
+                if not export_matches:
+                    artifact_errors.append(
+                        "lane-local candidate export differs from parsed_candidates.csv"
+                    )
+        elif export_files:
+            artifact_errors.append(
+                "lane-local candidate export exists despite zero parseable rows"
+            )
+            base["candidate_export_matches_parsed_candidates"] = False
+        metadata_export_dir = metadata.get("candidate_export_dir")
+        if metadata_export_dir and (
+            resolve_manifest_reference(str(metadata_export_dir))
+            != candidate_export_dir
+        ):
+            artifact_errors.append(
+                "run metadata candidate export directory differs from manifest"
+            )
     base["artifact_errors"] = artifact_errors
 
     process_terminal = metadata.get("execution_status") in TERMINAL_METADATA_STATUSES
@@ -296,15 +409,17 @@ def report_text(summary: dict[str, Any]) -> str:
         "",
         "## Lane results",
         "",
-        "| Lane | Classification | Parseable | Failures | Stopped | Pending | Candidates | Merge eligible |",
-        "|---|---|---:|---:|---:|---:|---:|---|",
+        "| Lane | Classification | Parseable | Failures | Stopped | Pending | Outer timeout | Candidates | Rows/hour | Export match | Merge eligible |",
+        "|---|---|---:|---:|---:|---:|---:|---:|---:|---|---|",
     ]
     for lane in summary["lanes"]:
         lines.append(
             f"| {lane['lane_id']} | `{lane['classification']}` | "
             f"{lane['parseable_rows']} | {lane['failure_rows']} | "
             f"{lane['stopped_before_request_rows']} | {lane['pending_rows']} | "
-            f"{lane['candidate_rows']} | "
+            f"{lane['outer_timeout_rows']} | {lane['candidate_rows']} | "
+            f"{lane['effective_rows_per_hour']:.3f} | "
+            f"{lane['candidate_export_matches_parsed_candidates']} | "
             f"{'yes' if lane['merge_eligible'] else 'no'} |"
         )
     lines.extend(
@@ -318,6 +433,22 @@ def report_text(summary: dict[str, Any]) -> str:
             (
                 "- Stopped-before-request rows across lanes: "
                 f"{summary['totals']['stopped_before_request_rows']}"
+            ),
+            (
+                "- Outer-timeout rows across lanes: "
+                f"{summary['totals']['outer_timeout_rows']}"
+            ),
+            (
+                "- Adaptive backoff events across lanes: "
+                f"{summary['totals']['adaptive_backoff_events']}"
+            ),
+            (
+                "- Adaptive step-down events across lanes: "
+                f"{summary['totals']['adaptive_step_down_events']}"
+            ),
+            (
+                "- Parallel effective attempted rows/hour: "
+                f"{summary['totals']['effective_attempted_rows_per_hour']:.3f}"
             ),
             f"- Completed municipality-ID overlap: {len(summary['completed_id_overlap'])}",
             f"- Input hashes valid: {'yes' if summary['input_hashes_valid'] else 'no'}",
@@ -378,8 +509,38 @@ def run_audit(manifest_path: Path, output_dir: Path) -> dict[str, Any]:
                 "completed municipality ID overlaps another lane"
             )
 
+    attempted_total = sum(lane["attempted_rows"] for lane in inspected)
+    actual_starts = [
+        as_datetime(lane["first_prompt_started_at"])
+        for lane in inspected
+        if as_datetime(lane["first_prompt_started_at"]) is not None
+    ]
+    actual_finishes = [
+        as_datetime(lane["last_prompt_finished_at"])
+        for lane in inspected
+        if as_datetime(lane["last_prompt_finished_at"]) is not None
+    ]
+    if len(actual_starts) == len(inspected) and len(actual_finishes) == len(inspected):
+        parallel_wall_clock_seconds = (
+            max(actual_finishes) - min(actual_starts)  # type: ignore[type-var]
+        ).total_seconds()
+        parallel_wall_clock_source = "row_timing_actual_timestamps"
+    else:
+        lane_elapsed = [
+            lane["total_elapsed_seconds"]
+            + as_float(lanes[index].get("planned_start_offset_seconds"))
+            for index, lane in enumerate(inspected)
+            if lane["total_elapsed_seconds"] > 0
+        ]
+        parallel_wall_clock_seconds = max(lane_elapsed, default=0.0)
+        parallel_wall_clock_source = "elapsed_plus_manifest_planned_offsets"
+    effective_attempted_rows_per_hour = (
+        attempted_total * 3600 / parallel_wall_clock_seconds
+        if parallel_wall_clock_seconds > 0
+        else 0.0
+    )
     summary = {
-        "schema_version": "1.0.0",
+        "schema_version": "2.0.0",
         "round_id": manifest["round_id"],
         "manifest": relative(manifest_path),
         "audit_mode": "offline_read_only_recommendation",
@@ -392,6 +553,23 @@ def run_audit(manifest_path: Path, output_dir: Path) -> dict[str, Any]:
                 lane["stopped_before_request_rows"] for lane in inspected
             ),
             "candidate_rows": sum(lane["candidate_rows"] for lane in inspected),
+            "attempted_rows": attempted_total,
+            "outer_timeout_rows": sum(
+                lane["outer_timeout_rows"] for lane in inspected
+            ),
+            "adaptive_backoff_events": sum(
+                lane["adaptive_backoff_events"] for lane in inspected
+            ),
+            "adaptive_step_down_events": sum(
+                lane["adaptive_step_down_events"] for lane in inspected
+            ),
+            "parallel_wall_clock_seconds": round(
+                parallel_wall_clock_seconds, 6
+            ),
+            "parallel_wall_clock_source": parallel_wall_clock_source,
+            "effective_attempted_rows_per_hour": round(
+                effective_attempted_rows_per_hour, 6
+            ),
         },
         "completed_id_overlap": completed_overlap,
         "input_hashes_valid": all(

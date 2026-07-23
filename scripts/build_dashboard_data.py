@@ -56,8 +56,9 @@ REPORTS_INDEX_SOURCE_PATH = (
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
-CURRENT_SOURCE_ACCOUNTING_COMMIT = "42dbe6716a88be2cb2113b245bd7733fa27f4be1"
+CURRENT_SOURCE_ACCOUNTING_COMMIT = "c4cf7d0de79a2a734adeb9eb03ee37ce02125e8a"
 PARALLEL_SCOUT_ROUND_ID = "POST-PI-PARALLEL-ROUND1-2026-07-23"
+NEXT_PARALLEL_SCOUT_ROUND_ID = "POST-PI-PARALLEL-ROUND2-3X150-2026-07-23"
 
 REQUIRED_PATHS = [
     STATE_COVERAGE_PATH,
@@ -1205,18 +1206,32 @@ def build_project_phase_summary(
     }
 
 
-def build_parallel_scout_status(*, metadata: dict[str, Any]) -> dict[str, Any]:
-    """Describe the audited first parallel round and serial accounting boundary."""
+def build_parallel_scout_status(
+    *, state_rows: list[dict[str, str]], metadata: dict[str, Any]
+) -> dict[str, Any]:
+    """Describe completed parallel work and the gated aggressive scaling ladder."""
 
+    covered = sum(as_int(row["municipalities_scouted"]) for row in state_rows)
+    remaining = max(SCOUT_CHECKPOINT_TARGET - covered, 0)
     return {
         **metadata,
         "stage": "parallel_scout_operations_status",
         "parallel_mode_status": "round1_completed_accounting_merged",
+        "current_parallel_mode": "two_lane_successfully_merged",
         "supported_lanes_initial": 2,
         "supported_lanes_future": 3,
         "rows_per_lane": 150,
-        "current_parallel_round_id": PARALLEL_SCOUT_ROUND_ID,
+        "latest_completed_round_id": PARALLEL_SCOUT_ROUND_ID,
+        "current_parallel_round_id": NEXT_PARALLEL_SCOUT_ROUND_ID,
+        "next_parallel_test": "3x150",
+        "aggressive_mode_planned": "3x250_to_3x300_after_3x150_success",
+        "current_scout_covered": covered,
+        "target_checkpoint": SCOUT_CHECKPOINT_TARGET,
+        "remaining_to_checkpoint": remaining,
+        "3x150_expected_attempted": 450,
+        "3x300_expected_attempted": 900,
         "accounting_policy": "serial_merge_after_lane_audit",
+        "lane_export_policy": "lane_local_candidate_exports",
         "latest_round": {
             "lanes_completed_merge_eligible": 2,
             "attempted_rows": 300,
@@ -1235,8 +1250,9 @@ def build_parallel_scout_status(*, metadata: dict[str, Any]) -> dict[str, Any]:
         ),
         "caveat": (
             "The first two-lane round completed and was merged serially after audit. "
-            "All candidate leads remain unverified; a three-lane run still requires "
-            "a later strategy decision and explicit authorization."
+            "No three-lane live scout has been executed. All candidate leads remain "
+            "unverified, and aggressive mode remains gated on a clean 3x150 live "
+            "collection plus serial accounting merge."
         ),
     }
 
@@ -1415,7 +1431,9 @@ def main() -> int:
         queue_rows=queue_rows,
         metadata=metadata,
     )
-    parallel_scout_status = build_parallel_scout_status(metadata=metadata)
+    parallel_scout_status = build_parallel_scout_status(
+        state_rows=state_rows, metadata=metadata
+    )
     reports_index = build_reports_index_layer(
         source_index=reports_index_source,
         metadata=metadata,

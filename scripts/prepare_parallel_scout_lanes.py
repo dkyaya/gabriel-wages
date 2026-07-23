@@ -37,7 +37,24 @@ EXPECTED_POST_PI_WAVE1_HASH = (
     "56e592291f1dbac83836acddcf0065df40141b51f9e93bfb548a040f52b8e700"
 )
 PRIORITY_SOURCE_COMMIT = "3f2f815f4ca4b4e90f6ca1bff769bd300843d703"
-PLANNER_BASELINE_COMMIT = "3a7d762141af31baf3b5331883ea6ff21a18114f"
+PLANNER_BASELINE_COMMIT = "c4cf7d0de79a2a734adeb9eb03ee37ce02125e8a"
+PROFILES = {
+    "standard_150": {
+        "num_lanes": 3,
+        "rows_per_lane": 150,
+        "stagger_seconds": 240,
+    },
+    "aggressive_250": {
+        "num_lanes": 3,
+        "rows_per_lane": 250,
+        "stagger_seconds": 420,
+    },
+    "aggressive_300": {
+        "num_lanes": 3,
+        "rows_per_lane": 300,
+        "stagger_seconds": 480,
+    },
+}
 ALLOWED_GOVERNMENTS = {
     ("municipal", "place"),
     ("township", "county_subdivision"),
@@ -54,6 +71,7 @@ EXPECTED_UNITS = (
 OUTPUT_NAMES = {
     "parallel_round_manifest.json",
     "parallel_round_input_audit.md",
+    "lane_dry_run_commands.md",
     "lane_live_commands.md",
     "lane_merge_handoff.md",
 }
@@ -397,11 +415,15 @@ def live_command(
   --adaptive-sleep-failure-window 2 \\
   --timeout 90 \\
   --direct-sdk-max-retries 0 \\
-  --cost-log-path {output_dir}/batch_cost_log.csv"""
+  --cost-log-path {output_dir}/batch_cost_log.csv \\
+  --candidate-export-dir {output_dir}/candidate_exports"""
 
 
 def commands_text(
-    round_id: str, lane_paths: list[Path], rows_per_lane: int
+    round_id: str,
+    lane_paths: list[Path],
+    rows_per_lane: int,
+    stagger_seconds: int,
 ) -> str:
     if rows_per_lane != 150:
         cap_note = (
@@ -423,24 +445,28 @@ Fresh output:
 ```
 """
         )
+    stagger_minutes = stagger_seconds / 60
     return f"""# {round_id} — Lane Live Command Preview
 
 **Preview only. Do not execute without separate live authorization.**
 
-Before launching either lane, run the stronger preflight gate and require a complete
+Before launching any lane, run the stronger preflight gate and require a complete
 pass, including an explicitly authorized one-row production probe. Quarantine all
 probe outputs from official accounting. {cap_note}
 
-Launch Lane 1 first. Wait 2–5 minutes, confirm it has not shown an immediate
-widespread transport or lifecycle failure, then launch Lane 2. Do not run more lanes
-than the round authorization permits. Stop all lanes if a widespread transport
-failure, systematic parser failure, artifact loss, protected-file mutation, or
-secret exposure appears.
+Launch lanes in numeric order. Wait exactly {stagger_seconds} seconds
+({stagger_minutes:g} minutes) between starts, confirming the active lanes have not
+shown an immediate widespread transport or lifecycle failure before starting the
+next lane. Do not run more lanes than the round authorization permits. Stop all
+lanes if a widespread transport failure, systematic parser failure, artifact loss,
+protected-file mutation, or secret exposure appears.
 
 Each command remains internally serialized with `--n-parallels 1`, uses compact
 prompts, exact hints, adaptive pacing, the SDK plus outer 90-second deadline, and a
-unique cost log. Lane processes must not rebuild queue/coverage/yield/dashboard,
-edit final project docs, or commit. Preserve every artifact.
+unique cost log. Timestamped candidate exports are redirected to each lane's
+`candidate_exports/` directory; `parsed_candidates.csv` remains at the lane output
+root. Lane processes must not rebuild queue/coverage/yield/dashboard, edit final
+project docs, or commit. Preserve every artifact.
 
 {''.join(sections)}
 ## After processes terminate
@@ -448,6 +474,56 @@ edit final project docs, or commit. Preserve every artifact.
 Run the offline lane auditor against `parallel_round_manifest.json`. Do not run any
 national builder or merge command from this file.
 """
+
+
+def dry_run_command(
+    lane_number: int, input_path: Path, rows_per_lane: int, round_id: str
+) -> str:
+    output_dir = (
+        f"tmp/parallel_scout_rounds/{round_id}/"
+        f"lane_{lane_number}_dry_run_attempt1"
+    )
+    return f"""python scripts/gabriel_state_source_scout.py \\
+  --dry-run \\
+  --state ALL \\
+  --allow-mixed-states \\
+  --municipalities-csv {relative(input_path)} \\
+  --output-dir {output_dir} \\
+  --prompt-mode compact \\
+  --search-hints-csv docs/analysis/municipality_search_hints_2026-07-22.csv \\
+  --live-hard-cap {rows_per_lane} \\
+  --sleep-between-prompts 5 \\
+  --adaptive-sleep \\
+  --adaptive-sleep-min 3 \\
+  --adaptive-sleep-base 5 \\
+  --adaptive-sleep-max 15 \\
+  --adaptive-sleep-backoff 10 \\
+  --adaptive-sleep-stability-window 25 \\
+  --adaptive-sleep-failure-window 2"""
+
+
+def dry_commands_text(
+    round_id: str, lane_paths: list[Path], rows_per_lane: int
+) -> str:
+    sections = []
+    for lane_number, lane_path in enumerate(lane_paths, start=1):
+        sections.append(
+            f"""## Lane {lane_number}
+
+```bash
+{dry_run_command(lane_number, lane_path, rows_per_lane, round_id)}
+```
+"""
+        )
+    return f"""# {round_id} — Lane Dry-Run Command Preview
+
+**Offline previews only. These commands make no backend call.**
+
+Run and audit every lane dry-run before any separately authorized live collection.
+Require exact row counts, compact prompts, complete hints, adaptive metadata, and
+locked identities. Candidate-export routing applies only to completed live runs.
+
+{''.join(sections)}"""
 
 
 def merge_handoff_text(round_id: str, manifest_path: Path) -> str:
@@ -484,8 +560,13 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output-dir", required=True)
     parser.add_argument("--round-id", required=True)
-    parser.add_argument("--num-lanes", type=int, default=2)
-    parser.add_argument("--rows-per-lane", type=int, default=150)
+    parser.add_argument("--profile", choices=sorted(PROFILES))
+    parser.add_argument("--num-lanes", type=int)
+    parser.add_argument("--rows-per-lane", type=int)
+    stagger = parser.add_mutually_exclusive_group()
+    stagger.add_argument("--stagger-minutes", type=float)
+    stagger.add_argument("--lane-start-stagger-seconds", type=int)
+    parser.add_argument("--allow-oversized-lanes", action="store_true")
     parser.add_argument("--existing-lane-input")
     parser.add_argument(
         "--priority-targets-csv", default=str(DEFAULT_PRIORITY_TARGETS)
@@ -500,10 +581,44 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> int:
     args = parse_args()
+    profile_defaults = PROFILES.get(
+        args.profile,
+        {"num_lanes": 2, "rows_per_lane": 150, "stagger_seconds": 180},
+    )
+    explicit_overrides = {
+        "num_lanes": args.num_lanes is not None,
+        "rows_per_lane": args.rows_per_lane is not None,
+        "stagger": (
+            args.stagger_minutes is not None
+            or args.lane_start_stagger_seconds is not None
+        ),
+    }
+    args.num_lanes = (
+        args.num_lanes
+        if args.num_lanes is not None
+        else profile_defaults["num_lanes"]
+    )
+    args.rows_per_lane = (
+        args.rows_per_lane
+        if args.rows_per_lane is not None
+        else profile_defaults["rows_per_lane"]
+    )
+    if args.stagger_minutes is not None:
+        stagger_seconds = round(args.stagger_minutes * 60)
+    elif args.lane_start_stagger_seconds is not None:
+        stagger_seconds = args.lane_start_stagger_seconds
+    else:
+        stagger_seconds = profile_defaults["stagger_seconds"]
     if not 1 <= args.num_lanes <= 3:
         raise SystemExit("--num-lanes must be between 1 and 3")
     if args.rows_per_lane < 1:
         raise SystemExit("--rows-per-lane must be positive")
+    if args.rows_per_lane > 300 and not args.allow_oversized_lanes:
+        raise SystemExit(
+            "--rows-per-lane above 300 requires --allow-oversized-lanes"
+        )
+    if stagger_seconds < 0:
+        raise SystemExit("lane start stagger must be nonnegative")
     if not args.plan_only:
         raise SystemExit(
             "This offline framework currently requires --plan-only; generated "
@@ -763,21 +878,30 @@ def main() -> int:
                 "priority_tier_distribution": distribution(lane_rows, "priority_tier"),
                 "live_output_dir": output_path,
                 "cost_log_path": f"{output_path}/batch_cost_log.csv",
+                "candidate_export_dir": f"{output_path}/candidate_exports",
+                "candidate_export_policy": "lane_local_required_when_parseable",
+                "planned_start_offset_seconds": (number - 1) * stagger_seconds,
                 "live_status": "planned_not_run",
             }
         )
     manifest_path = output_dir / "parallel_round_manifest.json"
     manifest = {
-        "schema_version": "1.0.0",
+        "schema_version": "2.0.0",
         "round_id": args.round_id,
         "parallel_mode_status": "planned_not_run",
         "planning_mode": "plan_only_offline",
         "external_calls_performed": 0,
+        "profile": args.profile or "legacy_default_2x150",
+        "profile_defaults": profile_defaults,
+        "explicit_profile_overrides": explicit_overrides,
+        "allow_oversized_lanes": args.allow_oversized_lanes,
         "num_lanes": args.num_lanes,
         "rows_per_lane": args.rows_per_lane,
         "total_planned_rows": args.num_lanes * args.rows_per_lane,
         "supported_lanes_initial": 2,
+        "supported_lanes_current": 3,
         "supported_lanes_future": 3,
+        "maximum_rows_per_lane_without_override": 300,
         "planner_baseline_commit": PLANNER_BASELINE_COMMIT,
         "source_files": {
             "priority_targets": {
@@ -828,7 +952,9 @@ def main() -> int:
             "timeout_seconds_inner_and_outer": 90,
             "direct_sdk_max_retries": 0,
             "n_parallels_per_lane": 1,
-            "lane_start_stagger_minutes": "2-5",
+            "lane_start_stagger_seconds": stagger_seconds,
+            "lane_start_stagger_minutes": stagger_seconds / 60,
+            "candidate_export_policy": "lane_local_required_when_parseable",
         },
         "accounting_policy": "serial_merge_after_lane_audit",
         "lane_process_prohibitions": [
@@ -850,6 +976,8 @@ Disposition: **PASS — {args.num_lanes} offline lane inputs locked; no live or 
 
 - Lanes: {args.num_lanes}
 - Rows per lane: {args.rows_per_lane}
+- Profile: `{args.profile or 'legacy_default_2x150'}`
+- Lane-start stagger: {stagger_seconds} seconds ({stagger_seconds / 60:g} minutes)
 - Total planned rows: {len(all_municipality_ids)}
 - Unique municipality IDs: {len(set(all_municipality_ids))}
 - Municipality overlap: 0
@@ -872,12 +1000,16 @@ Disposition: **PASS — {args.num_lanes} offline lane inputs locked; no live or 
             f"SHA-256 `{lane['input_sha256']}`; "
             f"states {rendered_distribution(lane['state_distribution'])}.\n"
         )
-    audit += """
+    existing_note = (
+        "Lane 1 is the existing coordinator input copied byte-for-byte. "
+        if existing_path
+        else "All lanes were selected in one deterministic pass. "
+    )
+    audit += f"""
 
-Lane 1 is the existing Post-PI Wave 1 coordinator input copied byte-for-byte.
-Additional lanes are selected deterministically from current ranked targets,
-then the full priority order if necessary, after exact current coverage,
-canonical, failure/retry, government-category, prior selected-ID, and hint gates.
+{existing_note}Additional lane rows are selected deterministically from current ranked targets,
+then the full priority order if necessary, after exact current coverage, canonical,
+failure/retry, government-category, prior selected-ID, and hint gates.
 No ad hoc substitution occurred.
 
 The generated commands are previews only. Shared national accounting remains
@@ -886,8 +1018,14 @@ audit and authorization.
 """
     write_text(output_dir / "parallel_round_input_audit.md", audit)
     write_text(
+        output_dir / "lane_dry_run_commands.md",
+        dry_commands_text(args.round_id, lane_paths, args.rows_per_lane),
+    )
+    write_text(
         output_dir / "lane_live_commands.md",
-        commands_text(args.round_id, lane_paths, args.rows_per_lane),
+        commands_text(
+            args.round_id, lane_paths, args.rows_per_lane, stagger_seconds
+        ),
     )
     write_text(
         output_dir / "lane_merge_handoff.md",

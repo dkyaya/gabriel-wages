@@ -1,0 +1,219 @@
+{
+  "accounting_policy": "serial_merge_after_lane_audit",
+  "allow_oversized_lanes": false,
+  "caveat": "No parallel live scout or dry run has been executed.",
+  "cross_lane_checks": {
+    "duplicate_municipality_ids": [],
+    "duplicate_nonblank_census_ids": [],
+    "missing_census_ids": 0,
+    "search_hints_complete": 450,
+    "unique_municipality_ids": 450,
+    "unique_nonblank_census_ids": 450
+  },
+  "explicit_profile_overrides": {
+    "num_lanes": false,
+    "rows_per_lane": false,
+    "stagger": false
+  },
+  "external_calls_performed": 0,
+  "lane_process_prohibitions": [
+    "no queue or coverage rebuild",
+    "no yield or dashboard refresh",
+    "no project documentation update",
+    "no commit"
+  ],
+  "lanes": [
+    {
+      "candidate_export_dir": "tmp/parallel_scout_rounds/POST-PI-PARALLEL-ROUND2-3X150-2026-07-23/lane_1_live_direct_sdk_attempt1/candidate_exports",
+      "candidate_export_policy": "lane_local_required_when_parseable",
+      "copied_existing_input_byte_for_byte": false,
+      "cost_log_path": "tmp/parallel_scout_rounds/POST-PI-PARALLEL-ROUND2-3X150-2026-07-23/lane_1_live_direct_sdk_attempt1/batch_cost_log.csv",
+      "input_csv": "docs/analysis/parallel_scout_rounds/POST-PI-PARALLEL-ROUND2-3X150-2026-07-23/lane_1_input.csv",
+      "input_sha256": "320f4915a1aa487e791f67a31826572ac275edf5d4b87ecb99eec4b26279d86a",
+      "lane_id": "lane_1",
+      "live_output_dir": "tmp/parallel_scout_rounds/POST-PI-PARALLEL-ROUND2-3X150-2026-07-23/lane_1_live_direct_sdk_attempt1",
+      "live_status": "planned_not_run",
+      "planned_start_offset_seconds": 0,
+      "priority_tier_distribution": {
+        "Tier 1": 150
+      },
+      "row_count": 150,
+      "state_distribution": {
+        "CA": 2,
+        "CT": 1,
+        "DE": 1,
+        "FL": 24,
+        "IA": 3,
+        "IN": 9,
+        "KY": 1,
+        "MA": 7,
+        "MD": 2,
+        "ME": 1,
+        "MI": 13,
+        "MN": 3,
+        "MT": 1,
+        "ND": 1,
+        "NE": 1,
+        "NH": 1,
+        "NV": 1,
+        "OH": 31,
+        "OK": 2,
+        "OR": 13,
+        "WA": 16,
+        "WI": 14,
+        "WY": 2
+      }
+    },
+    {
+      "candidate_export_dir": "tmp/parallel_scout_rounds/POST-PI-PARALLEL-ROUND2-3X150-2026-07-23/lane_2_live_direct_sdk_attempt1/candidate_exports",
+      "candidate_export_policy": "lane_local_required_when_parseable",
+      "copied_existing_input_byte_for_byte": false,
+      "cost_log_path": "tmp/parallel_scout_rounds/POST-PI-PARALLEL-ROUND2-3X150-2026-07-23/lane_2_live_direct_sdk_attempt1/batch_cost_log.csv",
+      "input_csv": "docs/analysis/parallel_scout_rounds/POST-PI-PARALLEL-ROUND2-3X150-2026-07-23/lane_2_input.csv",
+      "input_sha256": "e06f9706d69bce72cabac6f57c8581d16651d0b00ecec5752787edda5fc5500a",
+      "lane_id": "lane_2",
+      "live_output_dir": "tmp/parallel_scout_rounds/POST-PI-PARALLEL-ROUND2-3X150-2026-07-23/lane_2_live_direct_sdk_attempt1",
+      "live_status": "planned_not_run",
+      "planned_start_offset_seconds": 240,
+      "priority_tier_distribution": {
+        "Tier 1": 150
+      },
+      "row_count": 150,
+      "state_distribution": {
+        "AK": 2,
+        "AR": 4,
+        "CA": 5,
+        "FL": 25,
+        "IA": 6,
+        "ID": 2,
+        "IN": 6,
+        "KY": 3,
+        "MA": 3,
+        "MD": 2,
+        "MI": 10,
+        "MN": 7,
+        "MT": 2,
+        "ND": 2,
+        "NE": 1,
+        "NH": 2,
+        "NM": 2,
+        "NV": 1,
+        "NY": 1,
+        "OH": 28,
+        "OK": 3,
+        "OR": 9,
+        "RI": 2,
+        "VT": 1,
+        "WA": 8,
+        "WI": 13
+      }
+    },
+    {
+      "candidate_export_dir": "tmp/parallel_scout_rounds/POST-PI-PARALLEL-ROUND2-3X150-2026-07-23/lane_3_live_direct_sdk_attempt1/candidate_exports",
+      "candidate_export_policy": "lane_local_required_when_parseable",
+      "copied_existing_input_byte_for_byte": false,
+      "cost_log_path": "tmp/parallel_scout_rounds/POST-PI-PARALLEL-ROUND2-3X150-2026-07-23/lane_3_live_direct_sdk_attempt1/batch_cost_log.csv",
+      "input_csv": "docs/analysis/parallel_scout_rounds/POST-PI-PARALLEL-ROUND2-3X150-2026-07-23/lane_3_input.csv",
+      "input_sha256": "501e36ff504ec2d5e3a1126eb1315db6fb31bbe5852c2be2590794661dd50665",
+      "lane_id": "lane_3",
+      "live_output_dir": "tmp/parallel_scout_rounds/POST-PI-PARALLEL-ROUND2-3X150-2026-07-23/lane_3_live_direct_sdk_attempt1",
+      "live_status": "planned_not_run",
+      "planned_start_offset_seconds": 480,
+      "priority_tier_distribution": {
+        "Tier 1": 150
+      },
+      "row_count": 150,
+      "state_distribution": {
+        "AR": 1,
+        "CA": 8,
+        "CT": 1,
+        "DE": 1,
+        "FL": 11,
+        "IA": 7,
+        "ID": 3,
+        "IN": 11,
+        "KS": 1,
+        "KY": 9,
+        "MA": 2,
+        "MD": 2,
+        "ME": 1,
+        "MI": 11,
+        "MN": 7,
+        "MS": 1,
+        "MT": 1,
+        "ND": 1,
+        "NE": 4,
+        "NY": 1,
+        "OH": 30,
+        "OK": 4,
+        "OR": 7,
+        "SD": 1,
+        "WA": 17,
+        "WI": 6,
+        "WY": 1
+      }
+    }
+  ],
+  "maximum_rows_per_lane_without_override": 300,
+  "num_lanes": 3,
+  "parallel_mode_status": "planned_not_run",
+  "planner_baseline_commit": "c4cf7d0de79a2a734adeb9eb03ee37ce02125e8a",
+  "planning_mode": "plan_only_offline",
+  "profile": "standard_150",
+  "profile_defaults": {
+    "num_lanes": 3,
+    "rows_per_lane": 150,
+    "stagger_seconds": 240
+  },
+  "required_live_controls": {
+    "adaptive_sleep": true,
+    "adaptive_sleep_min_base_max_backoff": [
+      3,
+      5,
+      15,
+      10
+    ],
+    "adaptive_sleep_stability_failure_windows": [
+      25,
+      2
+    ],
+    "candidate_export_policy": "lane_local_required_when_parseable",
+    "direct_sdk_max_retries": 0,
+    "lane_start_stagger_minutes": 4.0,
+    "lane_start_stagger_seconds": 240,
+    "live_backend": "direct-sdk",
+    "n_parallels_per_lane": 1,
+    "prompt_mode": "compact",
+    "search_hints": true,
+    "timeout_seconds_inner_and_outer": 90
+  },
+  "round_id": "POST-PI-PARALLEL-ROUND2-3X150-2026-07-23",
+  "rows_per_lane": 150,
+  "schema_version": "2.0.0",
+  "source_files": {
+    "coverage": {
+      "path": "docs/analysis/national_scout_coverage_municipality_2026-07-20.csv",
+      "sha256": "e592cf328614f904406cabc8090029043be08f932aa218fa24672727d1eb3c1b"
+    },
+    "failure_retry": {
+      "path": "docs/analysis/national_failure_retry_priority_2026-07-22.csv",
+      "sha256": "45e672c4d052a18ddfdc48611b1e501c590e13f13fd34610f09928f09fdd2b13"
+    },
+    "priority_targets": {
+      "path": "docs/analysis/national_priority_tier_top_targets_2026-07-22.csv",
+      "sha256": "1fbeb97f1f1d3860e75c7db5b65491a33a27f03a16c9046885317c84e81bc414"
+    },
+    "priority_tiers": {
+      "path": "docs/analysis/national_municipality_priority_tiers_2026-07-22.csv",
+      "sha256": "45226a6773561c3e8ac62795bd997fa40ac5a5fe6b02ad0d950f2aedb7685dd8"
+    },
+    "search_hints": {
+      "path": "docs/analysis/municipality_search_hints_2026-07-22.csv",
+      "sha256": "888583fa7d4d55111f47424eec9d9af8a2c3e3c1b49533d09fdea6fb8a613be3"
+    }
+  },
+  "supported_lanes_current": 3,
+  "supported_lanes_future": 3,
+  "supported_lanes_initial": 2,
+  "total_planned_rows": 450
+}
