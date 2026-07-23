@@ -170,7 +170,7 @@ export function PriorityTiersPanel({ priority, statePriority }) {
   );
 }
 
-export function ScoutOperationsPanel({ operations, runtime }) {
+export function ScoutOperationsPanel({ operations, runtime, parallelStatus }) {
   const latest = operations.latest_wave;
   const maxRowsPerHour = Math.max(...runtime.waves.map((wave) => wave.rows_per_hour ?? 0), 1);
 
@@ -216,12 +216,19 @@ export function ScoutOperationsPanel({ operations, runtime }) {
         <div>
           <h3>Current operating controls</h3>
           <ul className="check-list">
-            <li>One serialized coordinator process; no concurrent live workers.</li>
+            <li>Each lane remains serialized; the initial parallel plan allows two isolated lane processes.</li>
             <li>Stronger no-search, hosted-search, and one-row preflight gate.</li>
             <li>Compact prompts with exact identity and source-stage guardrails.</li>
             <li>Five deterministic municipality-specific query hints.</li>
-            <li>Adaptive sleep/backoff, terminal artifacts, and fresh-directory resume lineage.</li>
+            <li>Adaptive sleep/backoff, outer timeout, terminal artifacts, and fresh-directory resume lineage.</li>
           </ul>
+          <p className="panel-note">
+            <strong>Parallel scout lanes planned:</strong>{" "}
+            {parallelStatus.supported_lanes_initial} lanes initially,{" "}
+            {parallelStatus.supported_lanes_future} after a successful test.
+            Accounting remains serial after the combined lane audit.{" "}
+            {parallelStatus.caveat}
+          </p>
           <p className="panel-note">{operations.disclaimer}</p>
         </div>
       </div>

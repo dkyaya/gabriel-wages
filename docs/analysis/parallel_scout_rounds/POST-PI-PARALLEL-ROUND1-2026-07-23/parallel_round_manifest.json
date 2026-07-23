@@ -1,0 +1,130 @@
+{
+  "accounting_policy": "serial_merge_after_lane_audit",
+  "caveat": "No parallel live scout or dry run has been executed.",
+  "cross_lane_checks": {
+    "duplicate_municipality_ids": [],
+    "duplicate_nonblank_census_ids": [],
+    "missing_census_ids": 0,
+    "search_hints_complete": 300,
+    "unique_municipality_ids": 300,
+    "unique_nonblank_census_ids": 300
+  },
+  "external_calls_performed": 0,
+  "lane_process_prohibitions": [
+    "no queue or coverage rebuild",
+    "no yield or dashboard refresh",
+    "no project documentation update",
+    "no commit"
+  ],
+  "lanes": [
+    {
+      "copied_existing_input_byte_for_byte": true,
+      "cost_log_path": "tmp/parallel_scout_rounds/POST-PI-PARALLEL-ROUND1-2026-07-23/lane_1_live_direct_sdk_attempt1/batch_cost_log.csv",
+      "input_csv": "docs/analysis/parallel_scout_rounds/POST-PI-PARALLEL-ROUND1-2026-07-23/lane_1_input.csv",
+      "input_sha256": "56e592291f1dbac83836acddcf0065df40141b51f9e93bfb548a040f52b8e700",
+      "lane_id": "lane_1",
+      "live_output_dir": "tmp/parallel_scout_rounds/POST-PI-PARALLEL-ROUND1-2026-07-23/lane_1_live_direct_sdk_attempt1",
+      "live_status": "planned_not_run",
+      "priority_tier_distribution": {
+        "Tier 1": 150
+      },
+      "row_count": 150,
+      "state_distribution": {
+        "CT": 11,
+        "FL": 27,
+        "IA": 1,
+        "MA": 3,
+        "MI": 17,
+        "NV": 1,
+        "OH": 44,
+        "OR": 22,
+        "WA": 21,
+        "WI": 3
+      }
+    },
+    {
+      "copied_existing_input_byte_for_byte": false,
+      "cost_log_path": "tmp/parallel_scout_rounds/POST-PI-PARALLEL-ROUND1-2026-07-23/lane_2_live_direct_sdk_attempt1/batch_cost_log.csv",
+      "input_csv": "docs/analysis/parallel_scout_rounds/POST-PI-PARALLEL-ROUND1-2026-07-23/lane_2_input.csv",
+      "input_sha256": "f381ce60c362a78561250b08b66ba32822fc583b86892b04fbb24b3a6a7b998d",
+      "lane_id": "lane_2",
+      "live_output_dir": "tmp/parallel_scout_rounds/POST-PI-PARALLEL-ROUND1-2026-07-23/lane_2_live_direct_sdk_attempt1",
+      "live_status": "planned_not_run",
+      "priority_tier_distribution": {
+        "Tier 1": 150
+      },
+      "row_count": 150,
+      "state_distribution": {
+        "CT": 1,
+        "FL": 30,
+        "IA": 5,
+        "IN": 2,
+        "KY": 1,
+        "MA": 17,
+        "MD": 3,
+        "MI": 8,
+        "MT": 2,
+        "NE": 1,
+        "NM": 6,
+        "OH": 40,
+        "OR": 9,
+        "RI": 3,
+        "SD": 1,
+        "WA": 14,
+        "WI": 7
+      }
+    }
+  ],
+  "num_lanes": 2,
+  "parallel_mode_status": "planned_not_run",
+  "planner_baseline_commit": "3a7d762141af31baf3b5331883ea6ff21a18114f",
+  "planning_mode": "plan_only_offline",
+  "required_live_controls": {
+    "adaptive_sleep": true,
+    "adaptive_sleep_min_base_max_backoff": [
+      3,
+      5,
+      15,
+      10
+    ],
+    "adaptive_sleep_stability_failure_windows": [
+      25,
+      2
+    ],
+    "direct_sdk_max_retries": 0,
+    "lane_start_stagger_minutes": "2-5",
+    "live_backend": "direct-sdk",
+    "n_parallels_per_lane": 1,
+    "prompt_mode": "compact",
+    "search_hints": true,
+    "timeout_seconds_inner_and_outer": 90
+  },
+  "round_id": "POST-PI-PARALLEL-ROUND1-2026-07-23",
+  "rows_per_lane": 150,
+  "schema_version": "1.0.0",
+  "source_files": {
+    "coverage": {
+      "path": "docs/analysis/national_scout_coverage_municipality_2026-07-20.csv",
+      "sha256": "7e6d185957004fab49d86ba4f45d89997aa35e1134332d0ecb839361ebee1180"
+    },
+    "failure_retry": {
+      "path": "docs/analysis/national_failure_retry_priority_2026-07-22.csv",
+      "sha256": "45e672c4d052a18ddfdc48611b1e501c590e13f13fd34610f09928f09fdd2b13"
+    },
+    "priority_targets": {
+      "path": "docs/analysis/national_priority_tier_top_targets_2026-07-22.csv",
+      "sha256": "1fbeb97f1f1d3860e75c7db5b65491a33a27f03a16c9046885317c84e81bc414"
+    },
+    "priority_tiers": {
+      "path": "docs/analysis/national_municipality_priority_tiers_2026-07-22.csv",
+      "sha256": "45226a6773561c3e8ac62795bd997fa40ac5a5fe6b02ad0d950f2aedb7685dd8"
+    },
+    "search_hints": {
+      "path": "docs/analysis/municipality_search_hints_2026-07-22.csv",
+      "sha256": "888583fa7d4d55111f47424eec9d9af8a2c3e3c1b49533d09fdea6fb8a613be3"
+    }
+  },
+  "supported_lanes_future": 3,
+  "supported_lanes_initial": 2,
+  "total_planned_rows": 300
+}

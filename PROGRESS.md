@@ -6,6 +6,34 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-23 (Coordinator-safe parallel scout lane framework prepared offline)
+
+**Did**
+- Started from clean tracked `3a7d762141af31baf3b5331883ea6ff21a18114f` on `main`, confirmed `3a7d762`/`bd5e259`/`6db14f0`/`bef5077` ancestry, and preserved the unrelated untracked root `package-lock.json`.
+- Designed process-level parallel collection with internally serialized lanes: each lane has a distinct locked CSV, ID, fresh output directory, cost log, lifecycle, and review; no lane runs shared builders, edits final project docs, or commits. One combined offline audit precedes one separately authorized serial accounting merge.
+- Added `scripts/prepare_parallel_scout_lanes.py`. The plan-only builder joins current priority, coverage, canonical, failure/retry, and exact hint evidence; supports one to three lanes; preserves an existing Lane 1 byte-for-byte; fails on eligibility or cross-lane ID overlap; and writes inputs, audits, manifest, live command previews, and merge handoff without running a scout or dry run.
+- Prepared `POST-PI-PARALLEL-ROUND1-2026-07-23`: Lane 1 is the existing locked Post-PI Wave 1 input, 150 rows, SHA-256 `56e592291f1dbac83836acddcf0065df40141b51f9e93bfb548a040f52b8e700`; Lane 2 is the next 150 ordinary Tier 1 targets, SHA-256 `f381ce60c362a78561250b08b66ba32822fc583b86892b04fbb24b3a6a7b998d`. The 300 rows have zero municipality/Census overlap, no missing Census IDs, 300/300 five-hint sets, and zero covered/canonical/retry/failure-only rows.
+- Added `scripts/audit_parallel_scout_lanes.py`, which reads lane artifacts and emits only three audit/recommendation files. It classifies lanes as not started, complete/merge-eligible, complete/nonmergeable, partial parseable, zero-parseable failed, or missing artifacts and recommends merge all, completed-only with user approval, or no merge.
+- Added seven synthetic auditor checks and proved three-lane planner extension in a separate offline plan with 450 disjoint identities. Three-lane live execution remains deferred until a two-lane round demonstrates capacity and clean accounting.
+- Added operating procedure, future two-lane live prompt, serial-merge prompt, planned-not-run dashboard JSON, and a small Scout Operations note. The dashboard continues to report 794 covered and 1,602 unverified queue rows.
+
+**Decisions and why**
+- Parallelize at the process/lane level only; retain `--n-parallels 1` inside every runner. This preserves the reviewed direct-SDK sequencing, adaptive pacing, collapse stop, resume, and outer-timeout contracts.
+- Require both lanes complete for the default `merge_all_lanes` recommendation. A completed lane plus a zero-parseable sibling may be merged only with explicit user approval; any parseable partial lane blocks accounting until resume/review.
+- Keep all shared queue/coverage/yield/dashboard writes serial. Their repository-wide reads and shared output paths make concurrent or per-lane rebuilds order-dependent and collision-prone.
+- Treat two lanes as the initial capacity experiment. Planner support for three lanes is implementation readiness, not authorization.
+
+**Surprises/breakage**
+- No implementation breakage occurred. The current top-500 targets contained enough eligible rows to build Lane 2 entirely as Tier 1 after excluding Lane 1 and all current ineligible categories.
+- The planned-round auditor correctly reports `do_not_merge_until_resume_or_review` because neither live output exists. This is intentional pre-run fail-closed behavior, not a failed plan.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Six requested compiles passed; parallel tests passed 7/7; mocked/no-network direct-SDK checks passed 25/25; prompt checks passed 12/12; ingestion tests passed 60/60; schema validation, deterministic two-lane rebuild, three-lane extension, 300-row eligibility/hash/hint/overlap checks, dashboard JSON parsing, Vite production build, protected/accounting/priority checks, and `git diff --check` passed. No live/API/model/hosted-search call, preflight, URL access, verification, extraction, ingestion, `gabriel.codify`, national queue/coverage rebuild, candidate promotion, wage-gap calculation or claim, causal claim, regression, remote action, or push occurred.
+
+**Next steps**
+1. Choose between the already prepared fresh serial Post-PI Wave 1 retry and the separately authorized first two-lane parallel round.
+2. If choosing parallel, first perform separate offline lane dry runs, then use `parallel_scout_round1_live_prompt_2026-07-23.md` with a fresh stronger preflight and a 2–5-minute Lane 2 stagger.
+3. After both lanes terminate, run only the combined auditor. Use the serial-merge prompt in a later task and rebuild shared accounting once only if its recommendation and user authorization permit.
+
 ## 2026-07-23 (Direct-SDK outer lifecycle timeout implemented offline)
 
 **Did**

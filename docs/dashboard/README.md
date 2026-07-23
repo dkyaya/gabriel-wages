@@ -150,9 +150,17 @@ The dashboard builder writes:
 - `scout_yield_by_state.json`
 - `scout_runtime_trends.json`
 - `project_phase_summary.json`
+- `parallel_scout_status.json`
 - `reports_index.json`
 
 Review the printed totals and diffs before committing. In particular, candidate-positive plus parseable-empty municipalities must equal scout-covered municipalities, and transport/failure-only results must remain outside successful coverage.
+
+`parallel_scout_status.json` is an operations-plan layer, not live evidence. Its
+current status is `planned_not_run`: two isolated 150-row lanes are supported
+initially, with three lanes documented as a later option only after a successful
+two-lane test. Every lane remains internally serialized and writes to a unique
+output directory. National queue/coverage, yield, and dashboard accounting remain
+one serial coordinator step after the combined lane audit.
 
 ## Run and build locally
 

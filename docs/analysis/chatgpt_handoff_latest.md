@@ -6,6 +6,24 @@ Last updated: `2026-07-23`
 
 ---
 
+## 2026-07-23 — Two-lane parallel scout framework is planned and offline-validated
+
+### Current State
+
+- **Repository gate:** work began at clean tracked `3a7d762141af31baf3b5331883ea6ff21a18114f`, with `3a7d762`/`bd5e259`/`6db14f0`/`bef5077` ancestry present and unrelated untracked root `package-lock.json` preserved. [The readiness audit](parallel_scout_lane_readiness_audit_2026-07-23.md) records every source used and the process/accounting risk boundary.
+- **Architecture:** [the framework design](parallel_scout_lane_framework_design_2026-07-23.md) parallelizes isolated operating-system lane processes while keeping every runner at `--n-parallels 1`. Each lane owns one immutable CSV, ID, fresh output, cost log, outer-timeout/adaptive lifecycle, and review. Lanes cannot run shared builders, edit final docs, or commit. One combined offline audit precedes one later serial accounting merge.
+- **Round 1 plan:** [the manifest](parallel_scout_rounds/POST-PI-PARALLEL-ROUND1-2026-07-23/parallel_round_manifest.json) is `planned_not_run` with zero external calls. [Lane 1](parallel_scout_rounds/POST-PI-PARALLEL-ROUND1-2026-07-23/lane_1_input.csv) is the existing locked Post-PI input copied byte-for-byte: 150 rows, SHA-256 `56e592291f1dbac83836acddcf0065df40141b51f9e93bfb548a040f52b8e700`. [Lane 2](parallel_scout_rounds/POST-PI-PARALLEL-ROUND1-2026-07-23/lane_2_input.csv) is the next 150 ordinary Tier 1 targets: SHA-256 `f381ce60c362a78561250b08b66ba32822fc583b86892b04fbb24b3a6a7b998d`.
+- **Identity/exclusion gate:** all 300 municipality and Census IDs are unique and nonblank; cross-lane overlap is zero; hints are exact 300/300; covered, canonical, retry, and failure-only counts are zero. Lane 2 is a deterministic current-priority/coverage/failure/canonical/hint join, not an ad hoc continuation.
+- **Generated controls:** [lane commands](parallel_scout_rounds/POST-PI-PARALLEL-ROUND1-2026-07-23/lane_live_commands.md) retain compact prompts, exact hints, adaptive `3/5/15/10/25/2`, 90-second inner/outer timeout, zero retries, one sequential request lane per process, separate output/cost paths, one stronger preflight, a 2–5-minute Lane 2 stagger, and a widespread-failure stop. They were not executed.
+- **Auditor:** `scripts/audit_parallel_scout_lanes.py` writes only an audit JSON, report, and recommendation. Seven synthetic checks prove complete-all, completed-only-with-approval, partial, missing, overlap-failure, candidate/stopped counting, and no-accounting-write behavior. The real planned round currently returns no-merge because both lanes are `not_started`, as intended.
+- **Three-lane readiness:** the planner accepts one to three lanes. A separate offline three-lane test generated 450 disjoint municipality/Census IDs. Three-lane live use remains deferred until two-lane capacity, isolation, and serial merge are demonstrated.
+- **Dashboard:** `parallel_scout_status.json` and a small Scout Operations note report two planned initial lanes, three future lanes, and serial accounting after audit. The status explicitly says no parallel live scout has run. Existing totals remain 794 covered, 1,602 queue rows, 612 positive, 182 empty, and 20 failure-only.
+- **Validation/boundary:** [validation](parallel_scout_lane_framework_validation_2026-07-23.md) reports six compiles, 7 parallel tests, 25 mocked direct-SDK checks, 12 prompt checks, deterministic plan rebuild, 60 ingestion tests, schema/coverage audit, all JSON parsing, Vite build, protected/accounting/priority checks, and diff check passed. No live/API/model/hosted-search call, preflight, URL access, verification, extraction, ingestion, codification, accounting rebuild, candidate promotion, claim use, remote action, or push occurred.
+
+### Next Move
+
+The user should choose between the prepared serial Post-PI Wave 1 retry and the first two-lane experiment. For parallel execution, perform separate offline dry runs for both lanes, then use [the future live prompt](parallel_scout_round1_live_prompt_2026-07-23.md) under explicit authorization. After both lanes terminate, run the combined auditor and stop. Use [the serial merge prompt](parallel_scout_serial_merge_prompt_template_2026-07-23.md) only in a separately authorized task; rebuild queue/coverage once, then yield/dashboard, only when the recommendation permits.
+
 ## 2026-07-23 — Direct-SDK outer per-row lifecycle timeout is ready
 
 ### Current State

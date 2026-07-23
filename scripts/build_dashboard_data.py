@@ -57,6 +57,7 @@ REPORTS_INDEX_SOURCE_PATH = (
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
 CURRENT_SOURCE_ACCOUNTING_COMMIT = "3f2f815f4ca4b4e90f6ca1bff769bd300843d703"
+PARALLEL_SCOUT_ROUND_ID = "POST-PI-PARALLEL-ROUND1-2026-07-23"
 
 REQUIRED_PATHS = [
     STATE_COVERAGE_PATH,
@@ -1173,7 +1174,8 @@ def build_project_phase_summary(
             "compact prompts",
             "deterministic search hints",
             "adaptive sleep and backoff",
-            "one serialized coordinator live lane",
+            "isolated parallel lane processes with each lane internally serialized",
+            "one serial accounting merge after combined lane audit",
         ],
         "caveats": [
             "Candidate rows are unverified.",
@@ -1182,6 +1184,26 @@ def build_project_phase_summary(
             "Priority tiers are operational scheduling inputs, not findings.",
             "The checkpoint is a workflow pause point, not an evidentiary threshold.",
         ],
+    }
+
+
+def build_parallel_scout_status(*, metadata: dict[str, Any]) -> dict[str, Any]:
+    """Describe planned lane capacity without implying a parallel live result."""
+
+    return {
+        **metadata,
+        "stage": "parallel_scout_operations_plan",
+        "parallel_mode_status": "planned_not_run",
+        "supported_lanes_initial": 2,
+        "supported_lanes_future": 3,
+        "rows_per_lane": 150,
+        "current_parallel_round_id": PARALLEL_SCOUT_ROUND_ID,
+        "accounting_policy": "serial_merge_after_lane_audit",
+        "lane_execution_policy": (
+            "Each lane is internally serialized and writes only to its own output "
+            "directory; lane processes do not rebuild shared accounting."
+        ),
+        "caveat": "No parallel live scout has been executed yet.",
     }
 
 
@@ -1359,6 +1381,7 @@ def main() -> int:
         queue_rows=queue_rows,
         metadata=metadata,
     )
+    parallel_scout_status = build_parallel_scout_status(metadata=metadata)
     reports_index = build_reports_index_layer(
         source_index=reports_index_source,
         metadata=metadata,
@@ -1376,6 +1399,7 @@ def main() -> int:
         write_json("scout_yield_by_state.json", scout_yield_by_state),
         write_json("scout_runtime_trends.json", scout_runtime_trends),
         write_json("project_phase_summary.json", project_phase_summary),
+        write_json("parallel_scout_status.json", parallel_scout_status),
         write_json("reports_index.json", reports_index),
     ]
 
