@@ -6,6 +6,32 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-23/24 (Aggressive 3×300 live collection stopped at Lane 1 health gate)
+
+**Did**
+- Started from clean tracked `663ffafa0a2c4c16ba09e59f0a65385b2b21efbf` on `main`, confirmed required ancestry, and left the unrelated untracked root `package-lock.json` untouched.
+- Revalidated all three locked 300-row inputs: hashes `2965bd65…81fee1`, `6057e1c7…3896a7`, and `9934026f…50843a`; 900 unique municipality/Census IDs; zero covered/canonical/retry/failure/overlap rows; and 900/900 exact five-hint sets.
+- Ran plan-only preflight with zero external calls, then exactly one authorized stronger live gate. No-search and both hosted-search controls returned response IDs/text/tokens; the Newport RI one-row probe completed parseably with three leads and remains quarantined.
+- Ran three offline dry runs. Each passed 300 compact prompts, 300/300 hints, exact locked identity order, adaptive `3/5/15/10/25/2` metadata, terminal timing, strict source/unit/stage controls, and no backend calls.
+- Launched Lane 1 in its fresh isolated directory. Newport RI and Brookings SD returned immediate `APIConnectionError` failures with no ID/text/tokens. The built-in two-consecutive-failure rule checkpointed the remaining 298 rows as `stopped_before_request` after 11.072 seconds.
+- Did not launch Lane 2 or Lane 3 because the explicit eight-minute launch gate required no immediate transport/lifecycle failure. The offline auditor classifies Lane 1 `failed_zero_parseable`, Lanes 2–3 `missing_artifacts`/not launched, and recommends `do_not_merge_until_resume_or_review`.
+
+**Decisions and why**
+- Stop before the sibling launches and accounting. Continuing after the first lane’s immediate collapse would have violated the user-supplied health gate.
+- Do not resume or reuse `attempt1`. Lane 1 produced zero parseable successes, so a later attempt should re-run the unchanged locked input under fresh preflight and fresh `attempt2` directories.
+- Keep all preflight/probe and stopped-run outputs outside national accounting. Official coverage remains 1,537/2,000.
+
+**Surprises/breakage**
+- The stronger preflight passed minutes before the production lane, but the first two lane requests failed at the connection layer in 0.228 and 0.002 seconds. This evidence does not identify a definitive provider, SDK, route, or local-network root cause.
+- The outer lifecycle guard was not invoked because both failures returned immediately. The runner’s transport-collapse checkpoint worked as designed and left no pending timing row.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Seven compiles, 7 synthetic parallel tests, 26 mocked/no-network direct-SDK tests, 12 prompt tests, 60 ingestion tests, schema validation, coverage audit, locked/dry-run/auditor checks, protected/accounting checks, and diff checks passed. Apart from the exactly authorized four-call stronger preflight and two failed Lane 1 requests, no API/model/hosted-search call occurred. No independent URL verification, ingestion, `gabriel.codify`, accounting promotion, wage-gap calculation/claim, causal claim, regression, remote action, or push occurred.
+
+**Next steps**
+1. Do not run the serial merge; no parseable official lane outcome exists.
+2. Under separate live authorization, follow `aggressive_3x300_lane_retry_recommendation_2026-07-23.md`: use a fresh stronger preflight and fresh `lane_<N>_live_direct_sdk_attempt2` directories. Require Lane 1 to demonstrate healthy parseable progress before launching Lane 2 and then Lane 3.
+3. Preserve every `attempt1` artifact and the Newport diagnostic probe as quarantined non-accounting evidence.
+
 ## 2026-07-23/24 (Aggressive 3×300 round supersedes checkpoint 3×160 plan)
 
 **Did**

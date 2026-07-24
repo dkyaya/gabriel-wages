@@ -6,6 +6,23 @@ Last updated: `2026-07-23`
 
 ---
 
+## 2026-07-23/24 — Aggressive 3×300 stopped after Lane 1 transport collapse
+
+### Current State
+
+- **Start/input gate:** work began at clean tracked `663ffafa0a2c4c16ba09e59f0a65385b2b21efbf`. All three locked 300-row hashes remain exact: `2965bd65a3f5c6fe816f52c3e9f2ce657cd9ff472db6733233bcaa4ad081fee1`, `6057e1c71b74e0342127cad32a183c2b310af704ea5ebab61e5eb7483b3896a7`, and `9934026f076a978957de5ae5767eed2ff236646d384285585aeecbddcc50843a`. The 900 municipality and Census IDs are unique and disjoint; current covered/canonical/retry/failure counts are zero; hints are exact 900/900.
+- **Preflight:** plan-only made zero external calls. Exactly one authorized stronger live gate passed no-search and both hosted-search controls with response ID/text/tokens. The Newport RI one-row production-path probe parsed and produced three unverified leads; all probe artifacts remain quarantined under the round preflight root.
+- **Dry runs:** all three exact commands passed 300/300 compact prompts, hint matches, identities, strict controls, adaptive `3/5/15/10/25/2`, and terminal dry timing with no backend calls.
+- **Lane 1 stop:** the first two official requests—Newport RI and Brookings SD—returned `APIConnectionError` in 0.228 and 0.002 seconds with no response ID, text, or tokens. The built-in collapse rule recorded two terminal `connection_error` rows, 298 `stopped_before_request` rows, two adaptive backoffs, zero parseable outcomes, and zero candidate rows in 11.072 seconds.
+- **Sibling launch gate:** Lane 2 and Lane 3 were not launched. The required minute-8/minute-16 sequence was conditional on no immediate widespread transport/lifecycle failure; Lane 1 failed that condition. No fourth lane and no resume ran.
+- **Audit:** `post_lane_audit_attempt1` classifies Lane 1 `failed_zero_parseable`, Lanes 2–3 `missing_artifacts`/not launched, validates all locked input hashes, finds no completed-ID overlap, and recommends `do_not_merge_until_resume_or_review`.
+- **Accounting boundary:** [the no-merge note](aggressive_3x300_no_accounting_merge_note_2026-07-23.md) confirms no queue, coverage, yield, dashboard/project-phase, or priority builder ran. Official accounting remains 1,537/2,000 covered, 1,267 positive, 270 empty, 27 failure-only, and 3,347 queue rows.
+- **Validation:** [the validation record](aggressive_3x300_live_collection_validation_2026-07-23.md) reports seven compiles, 7 parallel tests, 26 mocked direct-SDK tests, 12 prompt tests, 60 ingestion tests, schema/coverage audit, locked/dry-run/timing/auditor checks, and protected/accounting invariance. Apart from the authorized preflight and two failed official requests, no external call occurred; no verification, ingestion, codification, wage-gap/causal work, regression, remote action, or push occurred.
+
+### Next Move
+
+Do not run the serial merge. Under a new explicit live authorization, follow [the fresh-lane recommendation](aggressive_3x300_lane_retry_recommendation_2026-07-23.md), preserve every `attempt1` directory, and use a fresh stronger preflight plus fresh `lane_<N>_live_direct_sdk_attempt2` roots. Re-run the unchanged Lane 1 input in full because it has zero parseable successes; launch later siblings only after Lane 1 demonstrates healthy parseable progress. A later serial merge remains prohibited until an offline audit produces a merge-permitting recommendation.
+
 ## 2026-07-23/24 — Aggressive 3×300 is the active locked plan
 
 ### Current State
