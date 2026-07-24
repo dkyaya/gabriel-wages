@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0.0",
+  "status": "planned_not_started",
+  "pilot_id": "SOURCE-REVIEW-PILOT1-150-2026-07-24",
+  "created_at": "2026-07-24T18:24:21Z",
+  "triage_ledger_csv": "docs/analysis/content_triage_ledgers/content_triage_metadata_ledger_cumulative.csv",
+  "triage_ledger_sha256": "cedc269cc37f207491887151edc9c03000da1495198cdbc691c200f3eceb54c3",
+  "candidate_queue_csv": "docs/analysis/national_scout_candidate_queue_2026-07-20.csv",
+  "candidate_queue_sha256": "d46b8bc3c60cbbda9b2f6f618fc447d1878d610fa1beb0924e7bafd47f965e83",
+  "metadata_triage_rows": 4726,
+  "p1_rows": 1760,
+  "p1_download_allowed_rows": 1760,
+  "eligible_pool_rows_after_exclusions": 1747,
+  "selected_rows": 150,
+  "pilot_size": 150,
+  "num_lanes": 2,
+  "priority_scope": "p1_download_allowed",
+  "state_diversity": true,
+  "source_type_scope": "cba_first",
+  "exclude_duplicates": true,
+  "exclude_oversized": true,
+  "exclude_blocked": true,
+  "selected_state_distribution": {
+    "AK": 4,
+    "AZ": 1,
+    "CA": 4,
+    "CO": 4,
+    "CT": 4,
+    "DC": 3,
+    "DE": 4,
+    "FL": 4,
+    "GA": 1,
+    "HI": 3,
+    "IA": 4,
+    "ID": 3,
+    "IL": 4,
+    "IN": 3,
+    "KS": 4,
+    "KY": 1,
+    "MA": 4,
+    "MD": 4,
+    "ME": 4,
+    "MI": 4,
+    "MN": 4,
+    "MO": 4,
+    "MS": 1,
+    "MT": 4,
+    "NE": 4,
+    "NH": 4,
+    "NJ": 4,
+    "NM": 4,
+    "NV": 4,
+    "NY": 4,
+    "OH": 4,
+    "OK": 4,
+    "OR": 4,
+    "PA": 4,
+    "RI": 4,
+    "SD": 4,
+    "TN": 1,
+    "TX": 4,
+    "VA": 4,
+    "VT": 3,
+    "WA": 4,
+    "WI": 4,
+    "WY": 2
+  },
+  "selected_source_type_distribution": {
+    "cba": 150
+  },
+  "selected_content_type_distribution": {
+    "application/pdf": 150
+  },
+  "selected_candidate_disposition_distribution": {
+    "scheduled": 150
+  },
+  "selected_unit_type_distribution": {
+    "fire": 41,
+    "non_safety": 36,
+    "police": 73
+  },
+  "selected_official_domain_signal_distribution": {
+    "likely_official": 149,
+    "unknown": 1
+  },
+  "selected_matched_set_potential_distribution": {
+    "no": 5,
+    "yes": 145
+  },
+  "selected_unique_municipalities": 95,
+  "urls_opened": 0,
+  "network_calls": 0,
+  "documents_downloaded": 0,
+  "documents_parsed": 0,
+  "pdfs_parsed": 0,
+  "ocr_runs": 0,
+  "content_artifacts_written": 0,
+  "lanes": [
+    {
+      "lane_id": "lane_1",
+      "input_csv": "docs/analysis/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/lane_1_source_review_input.csv",
+      "input_sha256": "0253cba7ecf358e16679f64273466c239e296caf214e44a110813eeebfec6de3",
+      "expected_rows": 75,
+      "dry_run_output_dir": "tmp/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/lane_1_dry_run",
+      "future_live_output_dir": "tmp/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/lane_1_live_attempt1"
+    },
+    {
+      "lane_id": "lane_2",
+      "input_csv": "docs/analysis/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/lane_2_source_review_input.csv",
+      "input_sha256": "a5baa87593057a49c0b1e9adfff40051725ede45618c6f0d58f90f40b2630b6e",
+      "expected_rows": 75,
+      "dry_run_output_dir": "tmp/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/lane_2_dry_run",
+      "future_live_output_dir": "tmp/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/lane_2_live_attempt1"
+    }
+  ]
+}

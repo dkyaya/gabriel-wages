@@ -6,6 +6,38 @@ Last updated: `2026-07-24`
 
 ---
 
+## 2026-07-24 — Source-review framework and 150-row p1 pilot are ready
+
+### Current State
+
+- **Repository gate:** work began at clean tracked `79df80c94b2676d3a5e05f50b0a2075bdfc0563b`; all requested ancestry is present and the unrelated untracked root `package-lock.json` remains untouched.
+- **Durable input:** [the cumulative metadata-triage ledger](content_triage_ledgers/content_triage_metadata_ledger_cumulative.csv) still has 4,726 unique routed candidate identities and exact routing-ledger identity equality. The planning pool contains 1,760 p1 and 2,923 download-allowed-later rows.
+- **Framework:** [the schema](source_rating_schema_2026-07-24.md) separates candidate/routing/metadata-triage identities from future content-supported officialness, relevance, municipality/employer/unit, document-type, text-layer, and extraction-readiness ratings. `prepare_source_review_pilot.py` is offline; `source_review_sources.py` implements dry-run only and refuses live review; `audit_source_review_lanes.py` validates identities, statuses, and access counters.
+- **Locked pilot:** [the plan](source_review_pilot1_150_input_plan_2026-07-24.md) selects 150 unique p1, scheduled, CBA-labeled, reachable-PDF candidates in balanced 75/75 lanes. Hashes are `0253cba7ecf358e16679f64273466c239e296caf214e44a110813eeebfec6de3` and `a5baa87593057a49c0b1e9adfff40051725ede45618c6f0d58f90f40b2630b6e`.
+- **Diversity:** the pilot spans 43 states and 95 municipalities, with 73 police, 41 fire, and 36 non-safety labels. It contains 149 likely-official-domain and 145 matched-set-potential metadata signals. These remain unconfirmed scheduling labels.
+- **Dry gate:** [the review](source_review_pilot1_150_dry_run_review_2026-07-24.md) records two `dry_run_passed` lanes, 150/150 planned terminal rows, no duplicate IDs, and `dry_run_complete_no_live_source_review`. Every URL/network/download/parse/PDF/OCR/artifact counter is zero.
+- **Dashboard:** `source_review_phase = planned_not_started`; the 150-row pilot is visible, while content download, final source rating, extraction readiness, ingestion, codification, wage extraction, and wage-gap analysis remain not started.
+- **Boundary:** no URL/content access, source rating, scout accounting, routing/triage-ledger mutation, extraction, ingestion, codification, wage calculation/claim, causal claim, or regression occurred.
+- **Validation:** [the validation record](source_review_pilot_framework_validation_2026-07-24.md) reports five compiles, five offline tests, exact plan rebuild, two dry runs, final audit, dashboard JSON/frontend build, schema and 60 ingestion tests, immutable hashes, URL provenance, secret checks, and diff checks passed.
+
+### Interpretation and limitations
+
+All 150 rows are candidate-labeled CBAs with PDF routing responses; none is
+confirmed to be a CBA, relevant, official, matched to the intended employer or
+unit, extractable, or wage-bearing. The planner's `download_allowed_later`
+input is not download authorization, and dry-run `planned_not_reviewed` is not
+a source rating.
+
+### Next Move
+
+Review [the operating procedure](source_review_operating_procedure_2026-07-24.md),
+schema, locked inputs, and relay. If separately authorized, first implement and
+mock-test bounded source-content access, then use
+[the future live prompt](source_review_pilot1_live_prompt_2026-07-24.md).
+Stop live collection before [the separate serial merge](source_review_pilot1_merge_prompt_2026-07-24.md).
+Do not ingest, codify, extract wages, calculate wage gaps, make causal claims,
+or run regressions during source review.
+
 ## 2026-07-24 — Full-universe metadata-only content triage is durably merged
 
 ### Current State

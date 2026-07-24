@@ -38,47 +38,94 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "stage": "research_operational_priority_heuristic",
-  "priority_vintage_status": "current_after_aggressive_attempt3_merge",
-  "successful_scouts_since_priority_refresh": 0,
-  "selection_guard": "Reconcile targets against current coverage and failure-only status before selecting another ordinary wave.",
-  "totals": {
-    "municipality_universe": 35589,
-    "scout_covered": 2436,
-    "future_scout_eligible": 33147,
-    "tier_1_eligible": 245,
-    "tier_2_eligible": 2906,
-    "tier_3_eligible": 6889,
-    "tier_4_eligible": 10651,
-    "tier_5_eligible": 12456,
-    "failure_only_retry_targets": 28,
-    "priority_confidence": {
-      "high": 18838,
-      "medium": 13180,
-      "low": 3571
-    }
+  "stage": "source_rating_and_bounded_content_review_planning",
+  "source_review_phase": "planned_not_started",
+  "metadata_triage_complete": true,
+  "metadata_triage_rows": 4726,
+  "p1_rows": 1760,
+  "content_review_download_allowed_later_rows": 2923,
+  "initial_source_review_pilot_id": "SOURCE-REVIEW-PILOT1-150-2026-07-24",
+  "initial_source_review_pilot_rows": 150,
+  "initial_source_review_lane_count": 2,
+  "initial_source_review_lane_rows": {
+    "lane_1": 75,
+    "lane_2": 75
   },
-  "tier_definitions": [
-    {
-      "tier": "Tier 1",
-      "label": "Highest-priority scout targets"
-    },
-    {
-      "tier": "Tier 2",
-      "label": "Strong-priority scout targets"
-    },
-    {
-      "tier": "Tier 3",
-      "label": "Strategic or moderate-priority targets"
-    },
-    {
-      "tier": "Tier 4",
-      "label": "Low-priority targets"
-    },
-    {
-      "tier": "Tier 5",
-      "label": "Defer for current research design"
-    }
-  ],
-  "disclaimer": "Scores rank research-operational scouting value only. They do not establish unionization, department existence, source availability, wage differences, or causal effects."
+  "initial_source_review_states": 43,
+  "initial_source_review_unique_municipalities": 95,
+  "source_review_live_status": "not_started",
+  "content_download_status": "not_started",
+  "source_rating_status": "planned_not_started",
+  "extraction_readiness_status": "not_started",
+  "ingestion_status": "not_started",
+  "codify_status": "not_started",
+  "wage_extraction_status": "not_started",
+  "wage_gap_analysis_status": "not_started",
+  "selected_state_distribution": {
+    "AK": 4,
+    "AZ": 1,
+    "CA": 4,
+    "CO": 4,
+    "CT": 4,
+    "DC": 3,
+    "DE": 4,
+    "FL": 4,
+    "GA": 1,
+    "HI": 3,
+    "IA": 4,
+    "ID": 3,
+    "IL": 4,
+    "IN": 3,
+    "KS": 4,
+    "KY": 1,
+    "MA": 4,
+    "MD": 4,
+    "ME": 4,
+    "MI": 4,
+    "MN": 4,
+    "MO": 4,
+    "MS": 1,
+    "MT": 4,
+    "NE": 4,
+    "NH": 4,
+    "NJ": 4,
+    "NM": 4,
+    "NV": 4,
+    "NY": 4,
+    "OH": 4,
+    "OK": 4,
+    "OR": 4,
+    "PA": 4,
+    "RI": 4,
+    "SD": 4,
+    "TN": 1,
+    "TX": 4,
+    "VA": 4,
+    "VT": 3,
+    "WA": 4,
+    "WI": 4,
+    "WY": 2
+  },
+  "selected_source_type_distribution": {
+    "cba": 150
+  },
+  "selected_content_type_distribution": {
+    "application/pdf": 150
+  },
+  "selected_candidate_disposition_distribution": {
+    "scheduled": 150
+  },
+  "selected_unit_type_distribution": {
+    "fire": 41,
+    "non_safety": 36,
+    "police": 73
+  },
+  "pilot_manifest_source": "docs/analysis/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/source_review_pilot_manifest.json",
+  "metadata_triage_summary_source": "docs/analysis/content_triage_ledgers/content_triage_summary_latest.json",
+  "caveats": [
+    "Source review has not opened URLs or downloaded source content.",
+    "Source ratings require source-content and provenance review.",
+    "Metadata-only pilot selection does not establish officialness, relevance, employer/unit match, document type, or extraction readiness.",
+    "No source was ingested or codified and no wage data or wage gaps were calculated."
+  ]
 }

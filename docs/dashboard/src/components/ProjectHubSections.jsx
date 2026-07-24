@@ -244,6 +244,7 @@ export function VerificationPipeline({
   phase,
   verificationStatus,
   contentTriageStatus,
+  sourceReviewStatus,
 }) {
   const candidateRows = candidateSummary.totals.candidate_rows;
   const fullRouting =
@@ -396,6 +397,23 @@ export function VerificationPipeline({
               and wage-gap analysis have not started.
             </>
           )}
+        </p>
+      </div>
+      <div className="verification-callout">
+        <div>
+          <p className="eyebrow">Source review</p>
+          <h3>150-row p1 pilot prepared; no downloads yet</h3>
+        </div>
+        <p>
+          The offline source-review plan selects{" "}
+          {formatNumber(sourceReviewStatus.initial_source_review_pilot_rows)}
+          {" "}metadata-triaged candidates across{" "}
+          {formatNumber(sourceReviewStatus.initial_source_review_lane_count)}
+          {" "}balanced lanes and{" "}
+          {formatNumber(sourceReviewStatus.initial_source_review_states)}
+          {" "}states. Source content has not been accessed, and final source
+          rating, extraction readiness, ingestion, codification, wage extraction,
+          and wage-gap analysis have not started.
         </p>
       </div>
       <p className="panel-note">

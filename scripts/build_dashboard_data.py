@@ -98,6 +98,12 @@ CONTENT_TRIAGE_CUMULATIVE_SUMMARY_PATH = (
     / "content_triage_ledgers"
     / "content_triage_summary_latest.json"
 )
+SOURCE_REVIEW_PILOT_MANIFEST_PATH = (
+    ANALYSIS_DIR
+    / "source_review_pilots"
+    / "SOURCE-REVIEW-PILOT1-150-2026-07-24"
+    / "source_review_pilot_manifest.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -143,6 +149,7 @@ OPTIONAL_PATHS = [
     CONTENT_TRIAGE_REMAINDER_METADATA_STATUS_PATH,
     CONTENT_TRIAGE_CUMULATIVE_LEDGER_PATH,
     CONTENT_TRIAGE_CUMULATIVE_SUMMARY_PATH,
+    SOURCE_REVIEW_PILOT_MANIFEST_PATH,
 ]
 
 STATE_NAMES = {
@@ -1984,6 +1991,98 @@ def build_content_triage_status_summary(
     return payload
 
 
+def build_source_review_status_summary(
+    *, metadata: dict[str, Any]
+) -> dict[str, Any]:
+    """Describe the offline source-review pilot without implying content access."""
+
+    triage_summary = read_json(CONTENT_TRIAGE_CUMULATIVE_SUMMARY_PATH)
+    manifest = read_json(SOURCE_REVIEW_PILOT_MANIFEST_PATH)
+    if (
+        triage_summary.get("status")
+        != "metadata_only_full_universe_merged"
+        or int(triage_summary.get("ledger_rows", 0)) != 4_726
+    ):
+        raise ValueError(
+            "Source-review planning requires the merged full-universe "
+            "metadata-only triage layer"
+        )
+    priority_counts = triage_summary["priority_for_content_review_counts"]
+    action_counts = triage_summary["recommended_next_action_counts"]
+    selected_rows = int(manifest["selected_rows"])
+    lane_rows = {
+        str(lane["lane_id"]): int(lane["expected_rows"])
+        for lane in manifest["lanes"]
+    }
+    if selected_rows != 150 or sum(lane_rows.values()) != selected_rows:
+        raise ValueError("Source-review pilot manifest is not the locked 150-row plan")
+    if any(
+        int(manifest.get(field, -1))
+        for field in (
+            "urls_opened",
+            "network_calls",
+            "documents_downloaded",
+            "documents_parsed",
+            "pdfs_parsed",
+            "ocr_runs",
+            "content_artifacts_written",
+        )
+    ):
+        raise ValueError("Source-review plan records prohibited source access")
+    return {
+        **metadata,
+        "stage": "source_rating_and_bounded_content_review_planning",
+        "source_review_phase": "planned_not_started",
+        "metadata_triage_complete": True,
+        "metadata_triage_rows": int(triage_summary["ledger_rows"]),
+        "p1_rows": int(priority_counts.get("p1", 0)),
+        "content_review_download_allowed_later_rows": int(
+            action_counts.get("content_review_download_allowed_later", 0)
+        ),
+        "initial_source_review_pilot_id": manifest["pilot_id"],
+        "initial_source_review_pilot_rows": selected_rows,
+        "initial_source_review_lane_count": int(manifest["num_lanes"]),
+        "initial_source_review_lane_rows": lane_rows,
+        "initial_source_review_states": len(
+            manifest["selected_state_distribution"]
+        ),
+        "initial_source_review_unique_municipalities": int(
+            manifest["selected_unique_municipalities"]
+        ),
+        "source_review_live_status": "not_started",
+        "content_download_status": "not_started",
+        "source_rating_status": "planned_not_started",
+        "extraction_readiness_status": "not_started",
+        "ingestion_status": "not_started",
+        "codify_status": "not_started",
+        "wage_extraction_status": "not_started",
+        "wage_gap_analysis_status": "not_started",
+        "selected_state_distribution": manifest["selected_state_distribution"],
+        "selected_source_type_distribution": manifest[
+            "selected_source_type_distribution"
+        ],
+        "selected_content_type_distribution": manifest[
+            "selected_content_type_distribution"
+        ],
+        "selected_candidate_disposition_distribution": manifest[
+            "selected_candidate_disposition_distribution"
+        ],
+        "selected_unit_type_distribution": manifest[
+            "selected_unit_type_distribution"
+        ],
+        "pilot_manifest_source": relative(SOURCE_REVIEW_PILOT_MANIFEST_PATH),
+        "metadata_triage_summary_source": relative(
+            CONTENT_TRIAGE_CUMULATIVE_SUMMARY_PATH
+        ),
+        "caveats": [
+            "Source review has not opened URLs or downloaded source content.",
+            "Source ratings require source-content and provenance review.",
+            "Metadata-only pilot selection does not establish officialness, relevance, employer/unit match, document type, or extraction readiness.",
+            "No source was ingested or codified and no wage data or wage gaps were calculated.",
+        ],
+    }
+
+
 def validate_inputs(
     *,
     state_rows: list[dict[str, str]],
@@ -2167,6 +2266,9 @@ def main() -> int:
     content_triage_status_summary = build_content_triage_status_summary(
         queue_rows=queue_rows, metadata=metadata
     )
+    source_review_status_summary = build_source_review_status_summary(
+        metadata=metadata
+    )
     reports_index = build_reports_index_layer(
         source_index=reports_index_source,
         metadata=metadata,
@@ -2189,6 +2291,7 @@ def main() -> int:
         write_json(
             "content_triage_status_summary.json", content_triage_status_summary
         ),
+        write_json("source_review_status_summary.json", source_review_status_summary),
         write_json("reports_index.json", reports_index),
     ]
 

@@ -172,6 +172,7 @@ The dashboard builder writes:
 - `parallel_scout_status.json`
 - `verification_status_summary.json`
 - `content_triage_status_summary.json`
+- `source_review_status_summary.json`
 - `reports_index.json`
 
 Review the printed totals and diffs before committing. In particular, candidate-positive plus parseable-empty municipalities must equal scout-covered municipalities, and transport/failure-only results must remain outside successful coverage.
@@ -212,15 +213,20 @@ requires explicit `--allow-reroute-already-verified` operator intent. Keep
 3×1000 as the lower-risk routing fallback and use smaller lanes for content
 triage, downloads, parsing, extraction, or rating.
 
-The current queue now also has an offline metadata-first content-triage plan.
-`CONTENT-TRIAGE-ROUND1-1000-2026-07-24` contains 1,000 scheduled,
-high-priority routing outcomes in two 500-row lanes. Both dry runs validate
-the content-triage schema without opening a URL, downloading a document,
-parsing a PDF, or running OCR. The dashboard status is
-`planned_not_started`: source relevance, quality rating, extraction readiness,
-ingestion, codification, wage extraction, and wage-gap analysis remain
-unperformed. The 261 oversized routing outcomes are deferred to a separately
-bounded handling plan.
+The metadata-only content-triage layer is now durably merged for all 4,726
+routed candidate identities. Its p1/p2/p3/defer/exclude values remain
+preliminary scheduling outcomes, not source-content ratings. The 261
+oversized routing outcomes remain deferred to a separately bounded strategy.
+
+The next offline planning layer is
+`SOURCE-REVIEW-PILOT1-150-2026-07-24`: 150 p1,
+download-allowed-later CBA/PDF candidates in two balanced 75-row lanes. The
+pilot spans 43 states and preserves candidate, routing, and metadata-triage
+identities. Both lane dry runs validate the source-rating schema without
+opening URLs, downloading or parsing documents, or running OCR. The dashboard
+source-review status is `planned_not_started`: final source rating, extraction
+readiness, ingestion, codification, wage extraction, and wage-gap analysis
+remain unperformed.
 
 ## Run and build locally
 

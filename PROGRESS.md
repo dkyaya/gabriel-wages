@@ -6,6 +6,34 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-24 (Source-rating framework and 150-row pilot prepared offline)
+
+**Did**
+- Started from clean tracked `79df80c94b2676d3a5e05f50b0a2075bdfc0563b`, confirmed every requested ancestor, and left the unrelated untracked root `package-lock.json` untouched.
+- Confirmed the durable metadata-only triage layer has 4,726 unique candidate identities, exact routing-ledger identity equality, 1,760 p1 rows, and 2,923 download-allowed-later scheduling rows.
+- Defined a content-supported source-rating schema and added a deterministic offline pilot planner, fail-closed dry-run runner, two-lane auditor, and five synthetic/network-failing tests.
+- Prepared `SOURCE-REVIEW-PILOT1-150-2026-07-24`: 150 unique p1 rows in balanced 75/75 lanes with hashes `0253cba7ecf358e16679f64273466c239e296caf214e44a110813eeebfec6de3` and `a5baa87593057a49c0b1e9adfff40051725ede45618c6f0d58f90f40b2630b6e`.
+- The pilot spans 43 states and 95 municipalities, with 73 police, 41 fire, and 36 non-safety labels; 149 likely-official domain signals and 145 matched-set-potential signals. Every row remains only a scheduled CBA/PDF candidate label.
+- Both dry runs produced 75 terminal-planned rows. The audit reports two `dry_run_passed` lanes, complete unique identity coverage, all source-access counters zero, and `dry_run_complete_no_live_source_review`.
+- Added `source_review_status_summary.json` and a compact dashboard callout. Status is `planned_not_started`; content download and final source rating remain not started.
+
+**Decisions and why**
+- Use 150 rather than all 1,760 p1 rows so artifact handling, reviewer consistency, false-positive candidate labels, and rating vocabularies can be measured before scale.
+- Diversify deterministically across states, municipalities, and police/fire/non-safety labels while prioritizing committed official-domain and matched-set signals.
+- Exclude multi-row duplicate groups, oversized outcomes, routing failures, lower dispositions, defers, and exclusions from the first pilot. Those require distinct handling and are not upgraded by reachability or metadata labels.
+- Keep the runner dry-run only. Content access and final ratings require a separate implementation review and explicit authorization.
+
+**Surprises/breakage**
+- Strict duplicate-group exclusion reduces the eligible p1/download pool from 1,760 to 1,747 and removes the p1 pool's sole Alabama row, so the selected pilot spans 43 rather than 44 states.
+- The first dry-run command exposed an inverted `--no-download` Boolean parser and stopped before output. The flag was corrected to fail closed; both locked dry runs and all tests then passed with zero source access.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Five compiles, five offline/network-failing tests, exact pilot rebuild, two 75-row dry runs, final lane audit, 16 dashboard JSON parses, frontend production build, schema validation, 60 ingestion tests, upstream/protected/corpus hashes, URL provenance, non-URL secret scan, and diff checks passed. No URL was opened; no download, PDF parse, OCR, live source review, network/API/model/hosted-search/scout call, scout-accounting or routing/triage-ledger mutation, source rating, extraction, ingestion, `gabriel.codify`, wage extraction, wage-gap work, causal claim, regression, remote action, or push occurred.
+
+**Next steps**
+1. Review the source-review framework, locked pilot, dry-run audit, and relay.
+2. If separately authorized, implement and mock-test bounded source-content access before using the future live pilot prompt.
+3. Stop a future live collection before serial merge; keep oversized, duplicate, ingestion, codification, wage extraction, wage-gap analysis, and regressions in later gated tasks.
+
 ## 2026-07-24 (Full-universe metadata-only content triage durably merged)
 
 **Did**
