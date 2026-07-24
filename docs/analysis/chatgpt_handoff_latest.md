@@ -6,6 +6,38 @@ Last updated: `2026-07-24`
 
 ---
 
+## 2026-07-24 — Full routed universe has metadata-only triage; cumulative merge pending
+
+### Current State
+
+- **Start:** work began at clean tracked `4a49f93335178babebe4c888d9351f2dcc8d3cea`; all requested ancestry is present and the unrelated untracked root `package-lock.json` remains untouched.
+- **Preserved Round 1:** both original 500-row metadata-only ledgers remain byte-identical. Round 1 still has 1,000 terminal, unique, zero-access outcomes and has not been durably merged.
+- **Exact remainder:** subtracting Round 1 candidate identities from the cumulative 4,726-row routing ledger yields exactly 3,726 rows. [The plan](content_triage_full_universe_remainder_input_plan_2026-07-24.md) balances them 932/932/931/931 with locked hashes and zero Round 1 overlap.
+- **All-status handling:** the remainder includes reachable/reused, duplicate, oversized, blocked, not-found, error/SSL/timeout/connection, and every lower candidate disposition. Deterministic rules preserve those boundaries and never upgrade lower rows to `p1`.
+- **Collection:** all four metadata-only lanes completed 3,726/3,726 terminal rows with zero URL/network/download/parse/PDF/OCR/artifact activity.
+- **Outcomes:** [the result](content_triage_full_universe_remainder_metadata_only_result_2026-07-24.md) records 760 high-, 1,232 medium-, and 360 low-priority review rows; 295 duplicate deferrals; 261 oversized deferrals; 603 blocked/unreachable deferrals; 205 manual reviews; eight canonical-context rows; and two exclusions.
+- **Audit:** all four remainder lanes are `completed_merge_eligible` and recommendation is `merge_all_content_triage_lanes`.
+- **Full metadata coverage:** Round 1 plus remainder contains 4,726 unique triage and candidate-queue identities, exactly matching the cumulative routing universe. No durable content-triage ledger exists.
+- **Dashboard:** `content_triage_phase = metadata_only_full_universe_collected_not_merged`; 4,726 rows are collected and `metadata_only_triage_merge_status = not_started`.
+- **Boundary:** no URL/content access, source rating, scout accounting, routing-ledger mutation, extraction, ingestion, codification, wage calculation/claim, causal claim, or regression occurred.
+- **Validation:** [the validation record](content_triage_full_universe_metadata_validation_2026-07-24.md) reports 12 offline tests, final audit, 4,726-ID equality, dashboard build, schema/ingestion checks, immutable hashes, artifact/provenance/secret checks, and diff checks passed.
+
+### Interpretation and limitations
+
+Every candidate now has a metadata-only routing decision, but none of these
+decisions confirms source content, officialness, employer/unit match,
+document type, period, wage tables, extractability, or evidence quality.
+Routing exceptions remain URL outcomes, and held/context/duplicate/canonical/
+rejected dispositions remain lower dispositions.
+
+### Next Move
+
+Use [the cumulative merge prompt](content_triage_full_universe_metadata_merge_prompt_2026-07-24.md)
+under separate authorization. Re-audit both rounds and merge all 4,726
+metadata-only outcomes exactly once into cumulative/latest triage ledgers.
+Do not open URLs, download, source-rate, extract, ingest, codify, or calculate
+wages in that merge.
+
 ## 2026-07-24 — Metadata-only Content-Triage Round 1 is collected; serial merge pending
 
 ### Current State

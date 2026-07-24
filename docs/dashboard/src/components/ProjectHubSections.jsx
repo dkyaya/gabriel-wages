@@ -341,14 +341,26 @@ export function VerificationPipeline({
           <p className="eyebrow">Content triage</p>
           <h3>
             {contentTriageStatus.content_triage_phase ===
-            "metadata_only_round1_collected_not_merged"
+            "metadata_only_full_universe_collected_not_merged"
+              ? "Full routed universe has metadata-only triage"
+              : contentTriageStatus.content_triage_phase ===
+                "metadata_only_round1_collected_not_merged"
               ? "First metadata-only triage round is collected"
               : "First metadata-first review round is prepared"}
           </h3>
         </div>
         <p>
           {contentTriageStatus.content_triage_phase ===
-          "metadata_only_round1_collected_not_merged" ? (
+          "metadata_only_full_universe_collected_not_merged" ? (
+            <>
+              Metadata-only triage produced {formatNumber(contentTriageStatus.metadata_only_triage_rows_collected)}
+              {" "}terminal scheduling outcomes across the complete routed candidate universe.
+              The durable triage merge has not run. No URL was reopened, no source
+              was downloaded or parsed, and every relevance and extraction-readiness
+              signal remains preliminary.
+            </>
+          ) : contentTriageStatus.content_triage_phase ===
+            "metadata_only_round1_collected_not_merged" ? (
             <>
               Metadata-only triage produced {formatNumber(contentTriageStatus.metadata_only_triage_rows_collected)}
               {" "}terminal scheduling outcomes in {formatNumber(contentTriageStatus.initial_triage_lane_count)}

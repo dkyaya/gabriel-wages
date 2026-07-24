@@ -68,11 +68,20 @@ def synthetic_inputs(base: Path) -> tuple[Path, Path]:
         ("duplicate_of_verified_source", "likely_duplicate_hold", "cba", "application/pdf")
         for _ in range(20)
     )
+    specifications.extend(
+        ("duplicate_same_url_pending", "likely_duplicate_hold", "cba", "application/pdf")
+        for _ in range(10)
+    )
+    specifications.extend(
+        ("reachable_http", "medium_priority_later_verify", "ordinance_or_policy", "text/plain")
+        for _ in range(10)
+    )
     for status in (
         "too_large",
         "blocked_or_forbidden",
         "not_found",
         "error",
+        "ssl_error",
         "timeout",
         "connection_error",
     ):
@@ -93,6 +102,8 @@ def synthetic_inputs(base: Path) -> tuple[Path, Path]:
         )
         disposition = {
             "high_priority_later_verify": "scheduled",
+            "medium_priority_later_verify": "scheduled",
+            "low_priority_later_verify": "scheduled",
             "context_only_hold": "context_hold",
             "likely_duplicate_hold": "duplicate_hold",
         }[bucket]
@@ -159,6 +170,11 @@ def args_for(
         "include_duplicates": False,
         "include_lower_disposition": False,
         "exclude_too_large": True,
+        "exclude_triage_ledger_csv": [],
+        "include_nonreachable": False,
+        "include_too_large": False,
+        "metadata_only_all_statuses": False,
+        "balance_lanes": False,
         "plan_only": True,
     }
     values.update(overrides)
@@ -182,7 +198,7 @@ class ContentTriagePlanningTests(unittest.TestCase):
             self.assertEqual([len(lane) for lane in result["lanes"]], [500, 500])
             self.assertEqual(manifest["too_large_rows_deferred"], 10)
             self.assertEqual(
-                manifest["blocked_not_found_error_transport_rows_deferred"], 50
+                manifest["blocked_not_found_error_transport_rows_deferred"], 60
             )
             self.assertEqual(manifest["lower_disposition_rows_selected"], 0)
             self.assertTrue(
@@ -472,6 +488,243 @@ class ContentTriagePlanningTests(unittest.TestCase):
                 payload["recommended_next_action_counts"],
                 {"content_review_download_allowed_later": 20},
             )
+
+    def test_all_routed_remainder_excludes_prior_and_balances_four_lanes(
+        self,
+    ) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            routing, queue = synthetic_inputs(root)
+            routing_rows = list(
+                csv.DictReader(routing.open(newline="", encoding="utf-8"))
+            )
+            excluded = [
+                {
+                    "triage_id": f"PRIOR-{index:03d}",
+                    "candidate_queue_row_id": row["candidate_queue_row_id"],
+                    "triage_status": "high_priority_content_review",
+                }
+                for index, row in enumerate(routing_rows[:10], start=1)
+            ]
+            excluded_path = root / "prior_triage.csv"
+            write_csv(excluded_path, excluded)
+            result = planner.prepare(
+                args_for(
+                    routing,
+                    queue,
+                    root / "remainder",
+                    priority_scope="all_routed_remainder",
+                    num_lanes=4,
+                    batch_size=1000,
+                    exclude_triage_ledger_csv=[excluded_path.as_posix()],
+                    include_nonreachable=True,
+                    include_too_large=True,
+                    include_lower_disposition=True,
+                    include_duplicates=True,
+                    metadata_only_all_statuses=True,
+                    balance_lanes=True,
+                )
+            )
+            expected = len(routing_rows) - len(excluded)
+            self.assertEqual(result["manifest"]["selected_rows"], expected)
+            self.assertEqual(
+                result["manifest"]["excluded_prior_triage_rows"], len(excluded)
+            )
+            self.assertEqual(
+                result["manifest"]["selected_plus_excluded_rows"],
+                len(routing_rows),
+            )
+            self.assertEqual(
+                result["manifest"]["unselected_routed_rows_after_plan"], 0
+            )
+            lane_sizes = [len(lane) for lane in result["lanes"]]
+            self.assertLessEqual(max(lane_sizes) - min(lane_sizes), 1)
+            self.assertEqual(sum(lane_sizes), expected)
+            selected_ids = {
+                row["candidate_queue_row_id"] for row in result["selected"]
+            }
+            self.assertFalse(
+                selected_ids.intersection(
+                    row["candidate_queue_row_id"] for row in excluded
+                )
+            )
+            self.assertEqual(
+                set(result["manifest"]["selected_verification_status_distribution"]),
+                planner.ELIGIBLE_ROUTING_STATUSES
+                | planner.DEFERRED_ROUTING_STATUSES,
+            )
+
+    def test_metadata_only_all_statuses_are_terminal_and_conservative(
+        self,
+    ) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            routing, queue = synthetic_inputs(root)
+            routing_rows = list(
+                csv.DictReader(routing.open(newline="", encoding="utf-8"))
+            )
+            excluded_path = root / "prior_triage.csv"
+            write_csv(
+                excluded_path,
+                [
+                    {
+                        "triage_id": "PRIOR-ONE",
+                        "candidate_queue_row_id": routing_rows[0][
+                            "candidate_queue_row_id"
+                        ],
+                        "triage_status": "high_priority_content_review",
+                    }
+                ],
+            )
+            result = planner.prepare(
+                args_for(
+                    routing,
+                    queue,
+                    root / "remainder",
+                    priority_scope="all_routed_remainder",
+                    num_lanes=4,
+                    batch_size=1000,
+                    exclude_triage_ledger_csv=[excluded_path.as_posix()],
+                    include_nonreachable=True,
+                    include_too_large=True,
+                    include_lower_disposition=True,
+                    include_duplicates=True,
+                    metadata_only_all_statuses=True,
+                    balance_lanes=True,
+                )
+            )
+            sample_by_status: dict[str, dict[str, object]] = {}
+            for row in result["selected"]:
+                sample_by_status.setdefault(str(row["verification_status"]), row)
+            sample_path = root / "all_status_sample.csv"
+            planner.write_csv(sample_path, list(sample_by_status.values()))
+            summary = runner.run(
+                argparse.Namespace(
+                    input_csv=sample_path.as_posix(),
+                    output_dir=(root / "metadata").as_posix(),
+                    dry_run=False,
+                    max_rows=None,
+                    review_mode="metadata_only",
+                    write_content_samples=False,
+                    no_write_content_samples=True,
+                )
+            )
+            self.assertEqual(summary["urls_opened"], 0)
+            self.assertEqual(summary["documents_downloaded"], 0)
+            output = {
+                row["verification_status"]: row
+                for row in csv.DictReader(
+                    (root / "metadata" / "triage_ledger.csv").open(
+                        newline="", encoding="utf-8"
+                    )
+                )
+            }
+            self.assertEqual(
+                output["too_large"]["triage_status"],
+                "oversized_needs_separate_pass",
+            )
+            self.assertEqual(
+                output["too_large"]["recommended_next_action"],
+                "oversized_strategy_later",
+            )
+            for status in ("duplicate_of_verified_source", "duplicate_same_url_pending"):
+                self.assertEqual(
+                    output[status]["triage_status"],
+                    "duplicate_defer_to_canonical",
+                )
+                self.assertEqual(
+                    output[status]["recommended_next_action"],
+                    "duplicate_group_review",
+                )
+            for status in ("blocked_or_forbidden", "not_found"):
+                self.assertEqual(
+                    output[status]["triage_status"],
+                    "blocked_or_unreachable_defer",
+                )
+            for status in ("error", "ssl_error", "timeout", "connection_error"):
+                self.assertEqual(
+                    output[status]["triage_status"], "needs_manual_review"
+                )
+            lower_rows = [
+                row
+                for row in output.values()
+                if row["candidate_status_before_verification"] != "scheduled"
+            ]
+            self.assertTrue(lower_rows)
+            self.assertTrue(
+                all(row["priority_for_content_review"] != "p1" for row in lower_rows)
+            )
+
+    def test_four_lane_metadata_audit_recommends_merge_all(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            routing, queue = synthetic_inputs(root)
+            routing_rows = list(
+                csv.DictReader(routing.open(newline="", encoding="utf-8"))
+            )
+            excluded_path = root / "prior_triage.csv"
+            write_csv(
+                excluded_path,
+                [
+                    {
+                        "triage_id": "PRIOR-ONE",
+                        "candidate_queue_row_id": routing_rows[0][
+                            "candidate_queue_row_id"
+                        ],
+                        "triage_status": "high_priority_content_review",
+                    }
+                ],
+            )
+            result = planner.prepare(
+                args_for(
+                    routing,
+                    queue,
+                    root / "remainder",
+                    priority_scope="all_routed_remainder",
+                    num_lanes=4,
+                    batch_size=1000,
+                    exclude_triage_ledger_csv=[excluded_path.as_posix()],
+                    include_nonreachable=True,
+                    include_too_large=True,
+                    include_lower_disposition=True,
+                    include_duplicates=True,
+                    metadata_only_all_statuses=True,
+                    balance_lanes=True,
+                )
+            )
+            for index, lane in enumerate(result["manifest"]["lanes"], start=1):
+                metadata_dir = root / f"lane_{index}_metadata"
+                lane["metadata_only_output_dir"] = metadata_dir.as_posix()
+                runner.run(
+                    argparse.Namespace(
+                        input_csv=lane["input_csv"],
+                        output_dir=metadata_dir.as_posix(),
+                        dry_run=False,
+                        max_rows=None,
+                        review_mode="metadata_only",
+                        write_content_samples=False,
+                        no_write_content_samples=True,
+                    )
+                )
+            manifest_path = (
+                root / "remainder" / "content_triage_round_manifest.json"
+            )
+            manifest_path.write_text(
+                json.dumps(result["manifest"], indent=2) + "\n",
+                encoding="utf-8",
+            )
+            payload = auditor.audit(manifest_path, root / "audit")
+            self.assertEqual(
+                payload["classification_counts"],
+                {"completed_merge_eligible": 4},
+            )
+            self.assertEqual(
+                payload["merge_recommendation"],
+                "merge_all_content_triage_lanes",
+            )
+            self.assertEqual(payload["terminal_rows"], len(routing_rows) - 1)
+            self.assertEqual(payload["urls_opened"], 0)
+            self.assertIn("too_large", payload["routing_status_to_triage_status"])
 
 
 def main() -> int:

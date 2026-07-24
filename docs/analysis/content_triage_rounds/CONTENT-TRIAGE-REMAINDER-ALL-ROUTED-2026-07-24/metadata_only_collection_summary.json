@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "round_id": "CONTENT-TRIAGE-REMAINDER-ALL-ROUTED-2026-07-24",
+  "status": "metadata_only_collected_not_merged",
+  "review_mode": "metadata_only",
+  "lane_count": 4,
+  "lane_rows": {
+    "lane_1": 932,
+    "lane_2": 932,
+    "lane_3": 931,
+    "lane_4": 931
+  },
+  "ledger_rows": 3726,
+  "terminal_rows": 3726,
+  "triage_status_counts": {
+    "already_canonical_context": 8,
+    "blocked_or_unreachable_defer": 603,
+    "duplicate_defer_to_canonical": 295,
+    "excluded_from_content_review": 2,
+    "high_priority_content_review": 760,
+    "low_priority_content_review": 360,
+    "medium_priority_content_review": 1232,
+    "needs_manual_review": 205,
+    "oversized_needs_separate_pass": 261
+  },
+  "recommended_next_action_counts": {
+    "blocked_status_review_later": 603,
+    "content_review_download_allowed_later": 1923,
+    "duplicate_group_review": 295,
+    "exclude_for_now": 2,
+    "manual_review": 205,
+    "metadata_review_only": 437,
+    "oversized_strategy_later": 261
+  },
+  "extraction_readiness_prelim_counts": {
+    "low": 429,
+    "medium": 1923,
+    "none": 605,
+    "unknown": 769
+  },
+  "source_relevance_prelim_counts": {
+    "likely_relevant": 760,
+    "possibly_relevant": 1895,
+    "unknown": 1069,
+    "unlikely_relevant": 2
+  },
+  "priority_for_content_review_counts": {
+    "defer": 1372,
+    "exclude": 2,
+    "p1": 760,
+    "p2": 1232,
+    "p3": 360
+  },
+  "urls_opened": 0,
+  "network_calls": 0,
+  "documents_downloaded": 0,
+  "documents_parsed": 0,
+  "pdfs_parsed": 0,
+  "ocr_runs": 0,
+  "content_artifacts_written": 0,
+  "lane_classifications": {
+    "lane_1": "completed_merge_eligible",
+    "lane_2": "completed_merge_eligible",
+    "lane_3": "completed_merge_eligible",
+    "lane_4": "completed_merge_eligible"
+  },
+  "merge_recommendation": "merge_all_content_triage_lanes",
+  "round1_metadata_only_rows_preserved": 1000,
+  "full_routed_rows_metadata_triaged": 4726,
+  "durable_content_triage_merge_status": "not_started",
+  "caveats": [
+    "Metadata-only triage did not inspect source content.",
+    "All relevance and extraction-readiness values are preliminary scheduling signals.",
+    "Lower candidate dispositions and URL-routing exception statuses were preserved.",
+    "No URL was opened and no source was downloaded, parsed, OCRed, ingested, codified, or used for wage analysis."
+  ]
+}

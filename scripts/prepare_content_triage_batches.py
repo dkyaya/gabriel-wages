@@ -169,6 +169,53 @@ def read_csv(path: Path) -> list[dict[str, str]]:
         return list(csv.DictReader(handle))
 
 
+def read_excluded_triage_ledgers(
+    paths: list[str],
+) -> tuple[set[str], set[str], list[dict[str, object]]]:
+    queue_ids: set[str] = set()
+    triage_ids: set[str] = set()
+    sources: list[dict[str, object]] = []
+    for raw_path in paths:
+        path = Path(raw_path)
+        rows = read_csv(path)
+        if rows and {
+            "triage_id",
+            "candidate_queue_row_id",
+            "triage_status",
+        } - set(rows[0]):
+            raise ValueError(f"Excluded triage ledger lacks required fields: {path}")
+        lane_queue_ids = [row.get("candidate_queue_row_id", "") for row in rows]
+        lane_triage_ids = [row.get("triage_id", "") for row in rows]
+        if any(not value for value in lane_queue_ids + lane_triage_ids):
+            raise ValueError(f"Excluded triage ledger has blank identities: {path}")
+        if len(lane_queue_ids) != len(set(lane_queue_ids)):
+            raise ValueError(f"Excluded triage ledger repeats queue identities: {path}")
+        if len(lane_triage_ids) != len(set(lane_triage_ids)):
+            raise ValueError(f"Excluded triage ledger repeats triage identities: {path}")
+        overlap = queue_ids.intersection(lane_queue_ids)
+        if overlap:
+            raise ValueError(
+                "Excluded triage ledgers overlap candidate identities: "
+                f"{sorted(overlap)[:5]}"
+            )
+        triage_overlap = triage_ids.intersection(lane_triage_ids)
+        if triage_overlap:
+            raise ValueError(
+                "Excluded triage ledgers overlap triage identities: "
+                f"{sorted(triage_overlap)[:5]}"
+            )
+        queue_ids.update(lane_queue_ids)
+        triage_ids.update(lane_triage_ids)
+        sources.append(
+            {
+                "path": path.as_posix(),
+                "sha256": sha256_file(path),
+                "rows": len(rows),
+            }
+        )
+    return queue_ids, triage_ids, sources
+
+
 def write_csv(path: Path, rows: list[dict[str, object]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="", encoding="utf-8") as handle:
@@ -521,6 +568,19 @@ def prepare(args: argparse.Namespace) -> dict[str, object]:
     routing_rows = read_csv(routing_path)
     queue_rows = read_csv(queue_path)
     joined = validate_and_join(routing_rows, queue_rows, round_id=args.round_id)
+    exclusion_paths = list(getattr(args, "exclude_triage_ledger_csv", []) or [])
+    excluded_queue_ids, excluded_triage_ids, exclusion_sources = (
+        read_excluded_triage_ledgers(exclusion_paths)
+    )
+    routed_queue_ids = {
+        str(row["candidate_queue_row_id"]) for row in joined
+    }
+    unknown_exclusions = excluded_queue_ids - routed_queue_ids
+    if unknown_exclusions:
+        raise ValueError(
+            "Excluded triage identities are absent from cumulative routing: "
+            f"{sorted(unknown_exclusions)[:5]}"
+        )
 
     routing_status_counts = counts(joined, "verification_status")
     routing_eligible = [
@@ -531,26 +591,70 @@ def prepare(args: argparse.Namespace) -> dict[str, object]:
         for row in joined
         if row["verification_status"] in SUCCESSFULLY_REACHABLE_OR_REUSED
     ]
-    scoped_all = [
-        row
-        for row in routing_eligible
-        if eligible_for_scope(
-            row,
-            priority_scope=args.priority_scope,
-            include_html=args.include_html,
-            include_lower_disposition=args.include_lower_disposition,
-        )
-    ]
+    all_status_remainder = args.priority_scope == "all_routed_remainder"
+    include_nonreachable = bool(getattr(args, "include_nonreachable", False))
+    include_too_large = bool(getattr(args, "include_too_large", False))
+    metadata_only_all_statuses = bool(
+        getattr(args, "metadata_only_all_statuses", False)
+    )
+    include_duplicates = bool(args.include_duplicates)
+    include_lower_disposition = bool(args.include_lower_disposition)
+    balance_lanes = bool(getattr(args, "balance_lanes", False))
+
+    if all_status_remainder:
+        required_flags = {
+            "--include-nonreachable": include_nonreachable,
+            "--include-too-large": include_too_large,
+            "--include-lower-disposition": include_lower_disposition,
+            "--include-duplicates": include_duplicates,
+            "--metadata-only-all-statuses": metadata_only_all_statuses,
+            "--balance-lanes": balance_lanes,
+        }
+        missing_flags = [name for name, enabled in required_flags.items() if not enabled]
+        if missing_flags:
+            raise ValueError(
+                "all_routed_remainder requires explicit full-universe flags: "
+                + ", ".join(missing_flags)
+            )
+        if not exclusion_paths:
+            raise ValueError(
+                "all_routed_remainder requires at least one "
+                "--exclude-triage-ledger-csv"
+            )
+
+    duplicate_basis = joined if all_status_remainder else routing_eligible
     representatives, duplicate_groups, linked_duplicate_rows = (
-        mark_duplicate_representatives(routing_eligible)
+        mark_duplicate_representatives(duplicate_basis)
     )
     representative_ids = {str(row["triage_id"]) for row in representatives}
-    scoped = [
-        row
-        for row in scoped_all
-        if args.include_duplicates or row["triage_id"] in representative_ids
-    ]
-    selected = sorted(scoped, key=sort_key)[: args.batch_size]
+
+    if all_status_remainder:
+        scoped_all = [
+            row
+            for row in joined
+            if row["candidate_queue_row_id"] not in excluded_queue_ids
+        ]
+        scoped = list(scoped_all)
+        selection_capacity = args.batch_size * args.num_lanes
+    else:
+        scoped_all = [
+            row
+            for row in routing_eligible
+            if eligible_for_scope(
+                row,
+                priority_scope=args.priority_scope,
+                include_html=args.include_html,
+                include_lower_disposition=include_lower_disposition,
+            )
+        ]
+        scoped = [
+            row
+            for row in scoped_all
+            if include_duplicates or row["triage_id"] in representative_ids
+        ]
+        selection_capacity = args.batch_size
+
+    selected = sorted(scoped, key=sort_key)[:selection_capacity]
     for index, row in enumerate(selected, start=1):
         row["triage_selection_rank"] = index
     lanes: list[list[dict[str, object]]] = [
@@ -587,6 +691,11 @@ def prepare(args: argparse.Namespace) -> dict[str, object]:
                     / args.round_id
                     / f"lane_{lane_number}_live_attempt1"
                 ).as_posix(),
+                "metadata_only_output_dir": (
+                    Path("tmp/content_triage_rounds")
+                    / args.round_id
+                    / f"lane_{lane_number}_metadata_only_attempt1"
+                ).as_posix(),
             }
         )
         (output_dir / f"lane_{lane_number}_input_audit.md").write_text(
@@ -614,13 +723,32 @@ def prepare(args: argparse.Namespace) -> dict[str, object]:
         "eligible_rows_after_duplicate_policy": len(scoped),
         "selected_rows": len(selected),
         "unselected_rows_in_scope": len(scoped) - len(selected),
-        "batch_size_total": args.batch_size,
+        "batch_size_total": (
+            selection_capacity if all_status_remainder else args.batch_size
+        ),
+        "batch_size_per_lane": (
+            args.batch_size if all_status_remainder else None
+        ),
+        "total_capacity": selection_capacity,
         "num_lanes": args.num_lanes,
         "priority_scope": args.priority_scope,
         "include_html": args.include_html,
-        "include_duplicates": args.include_duplicates,
-        "include_lower_disposition": args.include_lower_disposition,
+        "include_nonreachable": include_nonreachable,
+        "include_too_large": include_too_large,
+        "include_duplicates": include_duplicates,
+        "include_lower_disposition": include_lower_disposition,
+        "metadata_only_all_statuses": metadata_only_all_statuses,
+        "balance_lanes": balance_lanes,
         "exclude_too_large": args.exclude_too_large,
+        "excluded_prior_triage_ledger_sources": exclusion_sources,
+        "excluded_prior_triage_rows": len(excluded_queue_ids),
+        "excluded_prior_unique_triage_ids": len(excluded_triage_ids),
+        "remaining_routed_rows_after_exclusion": len(joined)
+        - len(excluded_queue_ids),
+        "selected_plus_excluded_rows": len(selected) + len(excluded_queue_ids),
+        "unselected_routed_rows_after_plan": len(joined)
+        - len(excluded_queue_ids)
+        - len(selected),
         "routing_status_distribution": routing_status_counts,
         "selected_verification_status_distribution": counts(
             selected, "verification_status"
@@ -638,22 +766,37 @@ def prepare(args: argparse.Namespace) -> dict[str, object]:
         "selected_duplicate_group_count": sum(
             count > 1 for count in selected_groups.values()
         ),
-        "too_large_rows_deferred": routing_status_counts.get("too_large", 0),
+        "too_large_rows_deferred": (
+            0
+            if all_status_remainder
+            else routing_status_counts.get("too_large", 0)
+        ),
+        "too_large_rows_selected": sum(
+            row["verification_status"] == "too_large" for row in selected
+        ),
         "blocked_not_found_error_transport_rows_deferred": sum(
-            routing_status_counts.get(status, 0)
+            (
+                0
+                if all_status_remainder
+                else routing_status_counts.get(status, 0)
+            )
             for status in DEFERRED_ROUTING_STATUSES
             if status != "too_large"
         ),
+        "nonreachable_rows_selected": sum(
+            row["verification_status"] in DEFERRED_ROUTING_STATUSES
+            for row in selected
+        ),
         "lower_disposition_routing_eligible_rows": sum(
             row["candidate_status_before_verification"] in LOWER_DISPOSITIONS
-            for row in routing_eligible
+            for row in duplicate_basis
         ),
         "lower_disposition_rows_selected": sum(
             row["candidate_status_before_verification"] in LOWER_DISPOSITIONS
             for row in selected
         ),
         "triage_stage_boundary": (
-            "metadata-first planning only; no URL opening, content review, "
+            "metadata-only planning only; no URL opening, content review, "
             "download, parsing, extraction, ingestion, codification, or analysis"
         ),
         "network_calls": 0,
@@ -673,6 +816,9 @@ def prepare(args: argparse.Namespace) -> dict[str, object]:
 - Eligible rows in requested scope before duplicate policy: {len(scoped_all):,}
 - Eligible rows after duplicate policy: {len(scoped):,}
 - Selected rows: {len(selected):,}
+- Excluded prior metadata-triage rows: {len(excluded_queue_ids):,}
+- Selected plus excluded: {len(selected) + len(excluded_queue_ids):,}
+- Unselected routed rows after this plan: {manifest['unselected_routed_rows_after_plan']:,}
 - Lanes: {args.num_lanes}
 - Lane row counts: `{json.dumps({entry['lane_id']: entry['expected_rows'] for entry in lane_entries}, sort_keys=True)}`
 - Selected states: `{json.dumps(counts(selected, 'state'), sort_keys=True)}`
@@ -687,6 +833,7 @@ def prepare(args: argparse.Namespace) -> dict[str, object]:
 - Duplicate rows selected: {sum(row['duplicate_group_role_for_triage'] == 'linked_duplicate' for row in selected):,}
 - Lower-disposition routing-eligible rows: {manifest['lower_disposition_routing_eligible_rows']:,}
 - Lower-disposition rows selected: {manifest['lower_disposition_rows_selected']:,}
+- `too_large` rows selected: {manifest['too_large_rows_selected']:,}
 - `too_large` rows deferred: {manifest['too_large_rows_deferred']:,}
 - Other blocked/not-found/error/transport rows deferred: {manifest['blocked_not_found_error_transport_rows_deferred']:,}
 
@@ -700,13 +847,13 @@ outcome was promoted into source evidence or wage data.
     (output_dir / "content_triage_operating_handoff.md").write_text(
         f"""# Content-Triage Operating Handoff — {args.round_id}
 
-Run both lane inputs through `scripts/content_triage_sources.py --dry-run`,
-then audit them together with `scripts/audit_content_triage_lanes.py`.
+Run every nonempty lane input through `scripts/content_triage_sources.py
+--review-mode metadata_only`, then audit them together with
+`scripts/audit_content_triage_lanes.py`.
 
-This plan authorizes metadata-only dry planning. Any future content access,
-download, parsing, or human review requires separate authorization and an
-implemented bounded content-review path. Do not ingest, codify, extract wages,
-or calculate wage gaps.
+This plan authorizes offline metadata-only triage. It never authorizes content
+access, download, parsing, OCR, or human source review. Do not ingest, codify,
+extract wages, or calculate wage gaps.
 """,
         encoding="utf-8",
     )
@@ -729,6 +876,20 @@ Do not open URLs, ingest, codify, extract wages, or update scout accounting.
 """,
         encoding="utf-8",
     )
+    (output_dir / "content_triage_merge_handoff.md").write_text(
+        f"""# Content-Triage Merge Handoff — {args.round_id}
+
+The metadata-only outputs from this round must remain unmerged in the
+collection task. A later serial merge must re-audit every lane, validate
+complete identities and zero source-access counters, preserve routing status
+and original candidate disposition, and combine this round with any explicitly
+named prior metadata-only triage round exactly once.
+
+Do not open URLs, download or parse documents, ingest, codify, extract wages,
+or change scout accounting during that merge.
+""",
+        encoding="utf-8",
+    )
     return {"manifest": manifest, "selected": selected, "lanes": lanes}
 
 
@@ -748,12 +909,22 @@ def parse_args() -> argparse.Namespace:
             "scheduled_high_priority_reachable",
             "scheduled_reachable",
             "all_reachable",
+            "all_routed_remainder",
         ],
         default="scheduled_high_priority_reachable",
     )
     parser.add_argument("--include-html", action="store_true")
+    parser.add_argument(
+        "--exclude-triage-ledger-csv",
+        action="append",
+        default=[],
+    )
+    parser.add_argument("--include-nonreachable", action="store_true")
+    parser.add_argument("--include-too-large", action="store_true")
     parser.add_argument("--include-duplicates", action="store_true")
     parser.add_argument("--include-lower-disposition", action="store_true")
+    parser.add_argument("--metadata-only-all-statuses", action="store_true")
+    parser.add_argument("--balance-lanes", action="store_true")
     parser.add_argument(
         "--exclude-too-large",
         action="store_true",

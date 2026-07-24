@@ -37,6 +37,7 @@ METADATA_REQUIRED_FOR_CLASSIFICATION = {
     "municipality",
     "candidate_url",
     "candidate_source_type",
+    "candidate_priority",
     "candidate_status_before_verification",
     "verification_status",
     "content_type",
@@ -289,13 +290,120 @@ def classify_metadata(source: dict[str, str], triaged_at: str) -> dict[str, str]
         )
         return row
 
+    candidate_priority = source.get("candidate_priority", "").strip().lower()
     is_scheduled = disposition == "scheduled"
     is_reachable_document = verification_status == "reachable_pdf_or_document"
     is_cba = source_type == "cba"
     is_pdf = content_type == "application/pdf"
     is_html = content_type == "text/html" or verification_status == "reachable_html"
+    source_rich_types = {
+        "cba",
+        "wage_schedule_or_compensation_plan",
+        "pay_plan",
+        "arbitration_award",
+        "factfinding",
+        "memorandum_or_settlement",
+        "ordinance_or_policy",
+    }
+    source_document_type = (
+        f"{source_type or 'unknown'}_candidate_metadata_only"
+    )
 
-    if is_scheduled and is_reachable_document and is_cba and is_pdf:
+    if verification_status in {
+        "duplicate_of_verified_source",
+        "duplicate_same_url_pending",
+    }:
+        row.update(
+            {
+                "triage_status": "duplicate_defer_to_canonical",
+                "triage_status_detail": (
+                    "duplicate routing outcome requires canonical group review; "
+                    "metadata only"
+                ),
+                "source_relevance_prelim": "possibly_relevant",
+                "source_document_type_prelim": source_document_type,
+                "extraction_readiness_prelim": "unknown",
+                "priority_for_content_review": "defer",
+                "recommended_next_action": "duplicate_group_review",
+                "duplicate_handling_status": "duplicate_group_review",
+                "manual_review_reason": "duplicate_routing_status",
+                "triage_notes": (
+                    "Duplicate linkage was preserved for later canonical-group "
+                    "review; metadata-only triage did not access source content."
+                ),
+            }
+        )
+    elif verification_status == "too_large":
+        row.update(
+            {
+                "triage_status": "oversized_needs_separate_pass",
+                "triage_status_detail": (
+                    "routing exceeded the ordinary bounded byte limit; metadata only"
+                ),
+                "source_relevance_prelim": "unknown",
+                "source_document_type_prelim": source_document_type,
+                "extraction_readiness_prelim": "unknown",
+                "priority_for_content_review": "defer",
+                "recommended_next_action": "oversized_strategy_later",
+                "oversized_handling_status": "needs_oversized_strategy",
+                "manual_review_reason": "routing_outcome_too_large",
+                "triage_notes": (
+                    "Retained for a separately authorized oversized-source "
+                    "strategy; metadata-only triage did not access source content."
+                ),
+            }
+        )
+    elif verification_status in {"blocked_or_forbidden", "not_found"}:
+        row.update(
+            {
+                "triage_status": "blocked_or_unreachable_defer",
+                "triage_status_detail": (
+                    f"{verification_status} routing outcome deferred; metadata only"
+                ),
+                "source_relevance_prelim": "unknown",
+                "source_document_type_prelim": source_document_type,
+                "extraction_readiness_prelim": "none",
+                "priority_for_content_review": "defer",
+                "recommended_next_action": "blocked_status_review_later",
+                "manual_review_reason": f"routing_outcome_{verification_status}",
+                "triage_notes": (
+                    "The URL-routing exception is not a municipality source-"
+                    "absence finding; metadata-only triage accessed no content."
+                ),
+            }
+        )
+    elif verification_status in {
+        "error",
+        "ssl_error",
+        "timeout",
+        "connection_error",
+    }:
+        row.update(
+            {
+                "triage_status": "needs_manual_review",
+                "triage_status_detail": (
+                    f"{verification_status} routing exception requires later "
+                    "manual routing review; metadata only"
+                ),
+                "source_relevance_prelim": "unknown",
+                "source_document_type_prelim": source_document_type,
+                "extraction_readiness_prelim": "unknown",
+                "priority_for_content_review": "defer",
+                "recommended_next_action": "manual_review",
+                "manual_review_reason": f"routing_exception_{verification_status}",
+                "triage_notes": (
+                    "A later routing review may revisit this exception; metadata-"
+                    "only triage did not access source content."
+                ),
+            }
+        )
+    elif (
+        is_scheduled
+        and candidate_priority == "high"
+        and is_reachable_document
+        and is_cba
+        and is_pdf
+    ):
         row.update(
             {
                 "triage_status": "high_priority_content_review",
@@ -318,55 +426,132 @@ def classify_metadata(source: dict[str, str], triaged_at: str) -> dict[str, str]
                 ),
             }
         )
-    elif disposition in LOWER_DISPOSITIONS:
+    elif disposition == "duplicate_hold":
+        row.update(
+            {
+                "triage_status": "duplicate_defer_to_canonical",
+                "triage_status_detail": (
+                    "original duplicate-hold disposition preserved; metadata only"
+                ),
+                "source_relevance_prelim": "possibly_relevant",
+                "source_document_type_prelim": source_document_type,
+                "extraction_readiness_prelim": "unknown",
+                "priority_for_content_review": "defer",
+                "recommended_next_action": "duplicate_group_review",
+                "duplicate_handling_status": "duplicate_group_review",
+                "manual_review_reason": "original_duplicate_hold",
+                "triage_notes": (
+                    "The lower duplicate disposition was preserved; metadata-only "
+                    "triage did not access source content."
+                ),
+            }
+        )
+    elif disposition == "already_canonical":
+        row.update(
+            {
+                "triage_status": "already_canonical_context",
+                "triage_status_detail": (
+                    "already-canonical candidate disposition preserved; metadata only"
+                ),
+                "source_relevance_prelim": "possibly_relevant",
+                "source_document_type_prelim": source_document_type,
+                "extraction_readiness_prelim": "unknown",
+                "priority_for_content_review": "defer",
+                "recommended_next_action": "metadata_review_only",
+                "manual_review_reason": "already_canonical_disposition",
+                "triage_notes": (
+                    "This row remains canonical context and was not upgraded; "
+                    "metadata-only triage accessed no source content."
+                ),
+            }
+        )
+    elif disposition == "calibration_rejected":
+        row.update(
+            {
+                "triage_status": "excluded_from_content_review",
+                "triage_status_detail": (
+                    "calibration-rejected disposition preserved; metadata only"
+                ),
+                "source_relevance_prelim": "unlikely_relevant",
+                "source_document_type_prelim": source_document_type,
+                "extraction_readiness_prelim": "none",
+                "priority_for_content_review": "exclude",
+                "recommended_next_action": "exclude_for_now",
+                "manual_review_reason": "calibration_rejected_disposition",
+                "triage_notes": (
+                    "The rejected disposition was preserved; metadata-only triage "
+                    "did not access source content."
+                ),
+            }
+        )
+    elif disposition in {"context_hold", "insufficient_hold", "other_hold"}:
+        context_row = disposition == "context_hold"
+        row.update(
+            {
+                "triage_status": (
+                    "low_priority_content_review"
+                    if context_row
+                    else "needs_manual_review"
+                ),
+                "triage_status_detail": (
+                    f"original {disposition} disposition preserved; metadata only"
+                ),
+                "source_relevance_prelim": (
+                    "possibly_relevant" if context_row else "unknown"
+                ),
+                "source_document_type_prelim": source_document_type,
+                "extraction_readiness_prelim": (
+                    "low" if context_row else "unknown"
+                ),
+                "priority_for_content_review": (
+                    "p3" if context_row else "defer"
+                ),
+                "recommended_next_action": (
+                    "metadata_review_only" if context_row else "manual_review"
+                ),
+                "manual_review_reason": (
+                    "lower_original_candidate_disposition"
+                ),
+                "triage_notes": (
+                    "The lower candidate disposition was preserved without "
+                    "promotion; metadata-only triage did not access source content."
+                ),
+            }
+        )
+    elif verification_status in {
+        "reachable_pdf_or_document",
+        "reachable_html",
+        "reachable_http",
+    }:
+        document_like = verification_status == "reachable_pdf_or_document"
+        source_rich = source_type in source_rich_types
+        priority = "p2" if source_rich else "p3"
+        readiness = "medium" if document_like and source_rich else "low"
         action = (
-            "duplicate_group_review"
-            if disposition == "duplicate_hold"
+            "content_review_download_allowed_later"
+            if document_like and source_rich
             else "metadata_review_only"
         )
         row.update(
             {
                 "triage_status": (
-                    "duplicate_defer_to_canonical"
-                    if disposition == "duplicate_hold"
+                    "medium_priority_content_review"
+                    if source_rich
                     else "low_priority_content_review"
                 ),
                 "triage_status_detail": (
-                    "original lower candidate disposition preserved during "
-                    "metadata-only triage"
+                    f"{verification_status} candidate retained for later review; "
+                    "metadata only"
                 ),
                 "source_relevance_prelim": "possibly_relevant",
-                "source_document_type_prelim": (
-                    f"{source_type or 'unknown'}_candidate_metadata_only"
-                ),
-                "extraction_readiness_prelim": "low",
-                "priority_for_content_review": "defer",
+                "source_document_type_prelim": source_document_type,
+                "extraction_readiness_prelim": readiness,
+                "priority_for_content_review": priority,
                 "recommended_next_action": action,
-                "manual_review_reason": "lower_original_candidate_disposition",
-                "triage_notes": (
-                    "Original held/context/duplicate/canonical/rejected "
-                    "disposition was preserved; no source content was accessed."
-                ),
-            }
-        )
-    elif is_html:
-        row.update(
-            {
-                "triage_status": "medium_priority_content_review",
-                "triage_status_detail": (
-                    "reachable HTML candidate retained for metadata-first review"
-                ),
-                "source_relevance_prelim": "possibly_relevant",
-                "source_document_type_prelim": (
-                    f"{source_type or 'html'}_candidate_metadata_only"
-                ),
-                "extraction_readiness_prelim": "low",
-                "priority_for_content_review": "p2",
-                "recommended_next_action": "metadata_review_only",
                 "manual_review_reason": "",
                 "triage_notes": (
-                    "HTML routing metadata may describe an index or source; no "
-                    "page content was accessed."
+                    "The routing and candidate labels support later review, but "
+                    "metadata-only triage did not access or validate source content."
                 ),
             }
         )

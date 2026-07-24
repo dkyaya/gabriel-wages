@@ -37,13 +37,13 @@ rows. Two completed and serially merged rounds produced 4,726 durable routing
 outcomes, including 3,750 reachable or successfully reused rows. No current
 candidate URL remains unrouted.
 
-The next offline layer is content triage. Its first round contains 1,000
-scheduled, high-priority, routed candidates in two 500-row lanes. Both
-metadata-only lanes now have terminal preliminary scheduling outcomes and
-passed the lane audit without opening a URL, downloading content, parsing a
-PDF, or running OCR. The dashboard records
-`metadata_only_round1_collected_not_merged`; no durable triage merge has
-occurred. Routing outcomes have not been upgraded into content-reviewed
+The next offline layer is content triage. Metadata-only collection now covers
+all 4,726 routed candidates: the preserved 1,000-row first round plus a
+3,726-row, four-lane remainder round. All six lanes have terminal preliminary
+scheduling outcomes and passed their audits without opening a URL,
+downloading content, parsing a PDF, or running OCR. The dashboard records
+`metadata_only_full_universe_collected_not_merged`; no durable triage merge
+has occurred. Routing outcomes have not been upgraded into content-reviewed
 sources, quality ratings, extraction-ready documents, ingested records, or
 wage evidence.
 

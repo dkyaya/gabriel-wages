@@ -34,6 +34,32 @@ def sha256_file(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def cross_tab(
+    rows: list[dict[str, str]], row_field: str, column_field: str
+) -> dict[str, dict[str, int]]:
+    nested: dict[str, Counter[str]] = {}
+    for row in rows:
+        key = row.get(row_field, "")
+        nested.setdefault(key, Counter())[row.get(column_field, "")] += 1
+    return {
+        key: dict(sorted(values.items()))
+        for key, values in sorted(nested.items())
+    }
+
+
+def combine_cross_tabs(
+    tables: list[dict[str, dict[str, int]]],
+) -> dict[str, dict[str, int]]:
+    combined: dict[str, Counter[str]] = {}
+    for table in tables:
+        for row_key, columns in table.items():
+            combined.setdefault(row_key, Counter()).update(columns)
+    return {
+        key: dict(sorted(values.items()))
+        for key, values in sorted(combined.items())
+    }
+
+
 def classify_lane(
     lane: dict[str, object], round_id: str
 ) -> dict[str, object]:
@@ -66,6 +92,8 @@ def classify_lane(
         "recommended_next_action_counts": {},
         "extraction_readiness_prelim_counts": {},
         "source_relevance_prelim_counts": {},
+        "routing_status_to_triage_status": {},
+        "disposition_to_priority": {},
     }
     if not input_path.exists():
         result.update(classification="missing_artifacts", detail="input_missing")
@@ -139,6 +167,14 @@ def classify_lane(
             "recommended_next_action_counts": dict(sorted(actions.items())),
             "extraction_readiness_prelim_counts": dict(sorted(readiness.items())),
             "source_relevance_prelim_counts": dict(sorted(relevance.items())),
+            "routing_status_to_triage_status": cross_tab(
+                ledger, "verification_status", "triage_status"
+            ),
+            "disposition_to_priority": cross_tab(
+                ledger,
+                "candidate_status_before_verification",
+                "priority_for_content_review",
+            ),
             "urls_opened": int(summary.get("urls_opened", 0)),
             "network_calls": int(summary.get("network_calls", 0)),
             "documents_downloaded": int(summary.get("documents_downloaded", 0)),
@@ -299,6 +335,15 @@ def audit(manifest_path: Path, output_dir: Path) -> dict[str, object]:
                 ).items()
             )
         ),
+        "routing_status_to_triage_status": combine_cross_tabs(
+            [
+                lane["routing_status_to_triage_status"]
+                for lane in lanes
+            ]
+        ),
+        "disposition_to_priority": combine_cross_tabs(
+            [lane["disposition_to_priority"] for lane in lanes]
+        ),
         "urls_opened": sum(int(lane.get("urls_opened", 0)) for lane in lanes),
         "network_calls": sum(
             int(lane.get("network_calls", 0)) for lane in lanes
@@ -356,6 +401,8 @@ def audit(manifest_path: Path, output_dir: Path) -> dict[str, object]:
             f"- Extraction readiness: `{json.dumps(payload['extraction_readiness_prelim_counts'], sort_keys=True)}`",
             f"- Source relevance: `{json.dumps(payload['source_relevance_prelim_counts'], sort_keys=True)}`",
             f"- Content-review priorities: `{json.dumps(payload['priority_for_content_review_counts'], sort_keys=True)}`",
+            f"- Routing status → triage status: `{json.dumps(payload['routing_status_to_triage_status'], sort_keys=True)}`",
+            f"- Candidate disposition → priority: `{json.dumps(payload['disposition_to_priority'], sort_keys=True)}`",
             "",
             "The auditor does not update routing, scout accounting, contracts,",
             "ingestion, codification, extraction, or analytical evidence.",

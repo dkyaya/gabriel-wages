@@ -76,6 +76,18 @@ CONTENT_TRIAGE_ROUND1_METADATA_STATUS_PATH = (
     / "CONTENT-TRIAGE-ROUND1-1000-2026-07-24"
     / "metadata_only_collection_summary.json"
 )
+CONTENT_TRIAGE_REMAINDER_MANIFEST_PATH = (
+    ANALYSIS_DIR
+    / "content_triage_rounds"
+    / "CONTENT-TRIAGE-REMAINDER-ALL-ROUTED-2026-07-24"
+    / "content_triage_round_manifest.json"
+)
+CONTENT_TRIAGE_REMAINDER_METADATA_STATUS_PATH = (
+    ANALYSIS_DIR
+    / "content_triage_rounds"
+    / "CONTENT-TRIAGE-REMAINDER-ALL-ROUTED-2026-07-24"
+    / "metadata_only_collection_summary.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -117,6 +129,8 @@ OPTIONAL_PATHS = [
     VERIFICATION_ROUND2_LIVE_STATUS_PATH,
     CONTENT_TRIAGE_ROUND1_MANIFEST_PATH,
     CONTENT_TRIAGE_ROUND1_METADATA_STATUS_PATH,
+    CONTENT_TRIAGE_REMAINDER_MANIFEST_PATH,
+    CONTENT_TRIAGE_REMAINDER_METADATA_STATUS_PATH,
 ]
 
 STATE_NAMES = {
@@ -1677,6 +1691,16 @@ def build_content_triage_status_summary(
         if CONTENT_TRIAGE_ROUND1_METADATA_STATUS_PATH.exists()
         else {}
     )
+    remainder_manifest = (
+        read_json(CONTENT_TRIAGE_REMAINDER_MANIFEST_PATH)
+        if CONTENT_TRIAGE_REMAINDER_MANIFEST_PATH.exists()
+        else {}
+    )
+    remainder_collection = (
+        read_json(CONTENT_TRIAGE_REMAINDER_METADATA_STATUS_PATH)
+        if CONTENT_TRIAGE_REMAINDER_METADATA_STATUS_PATH.exists()
+        else {}
+    )
     status_counts = routing_summary["verification_status_counts"]
     routed_rows = int(routing_summary["ledger_rows"])
     reachable_or_reused = int(routing_summary["reachable_or_reused_total"])
@@ -1698,11 +1722,37 @@ def build_content_triage_status_summary(
         metadata_collection.get("status") == "metadata_only_collected_not_merged"
         and collected_rows == selected_rows
     )
+    remainder_collected_rows = int(
+        remainder_collection.get("terminal_rows", 0)
+    )
+    remainder_collected = (
+        remainder_collection.get("status")
+        == "metadata_only_collected_not_merged"
+        and remainder_collected_rows
+        == int(remainder_manifest.get("selected_rows", 0))
+    )
+    full_collected_rows = collected_rows + remainder_collected_rows
+    full_universe_collected = (
+        collected_not_merged
+        and remainder_collected
+        and full_collected_rows == routed_rows
+        and int(remainder_manifest.get("selected_plus_excluded_rows", 0))
+        == routed_rows
+    )
+
+    def merge_counts(field: str) -> dict[str, int]:
+        combined: Counter[str] = Counter()
+        combined.update(metadata_collection.get(field, {}))
+        combined.update(remainder_collection.get(field, {}))
+        return dict(sorted(combined.items()))
+
     payload = {
         **metadata,
         "stage": "content_triage_and_extraction_readiness_planning",
         "content_triage_phase": (
-            "metadata_only_round1_collected_not_merged"
+            "metadata_only_full_universe_collected_not_merged"
+            if full_universe_collected
+            else "metadata_only_round1_collected_not_merged"
             if collected_not_merged
             else "planned_not_started"
         ),
@@ -1719,17 +1769,32 @@ def build_content_triage_status_summary(
         "initial_triage_priority_scope": manifest["priority_scope"],
         "initial_triage_status": manifest["status"],
         "triage_live_status": (
-            "metadata_only_collected_not_merged"
+            "metadata_only_full_universe_collected_not_merged"
+            if full_universe_collected
+            else "metadata_only_collected_not_merged"
             if collected_not_merged
             else "not_started"
         ),
         "latest_content_triage_round_id": (
-            manifest["round_id"] if collected_not_merged else ""
+            remainder_manifest["round_id"]
+            if full_universe_collected
+            else manifest["round_id"]
+            if collected_not_merged
+            else ""
         ),
         "latest_content_triage_mode": (
             "metadata_only" if collected_not_merged else ""
         ),
-        "metadata_only_triage_rows_collected": collected_rows,
+        "metadata_only_triage_rows_collected": full_collected_rows,
+        "full_routed_rows_metadata_triaged": (
+            full_collected_rows if full_universe_collected else collected_rows
+        ),
+        "round1_metadata_only_rows_collected": collected_rows,
+        "remainder_metadata_only_rows_collected": remainder_collected_rows,
+        "metadata_only_triage_lane_count_collected": (
+            int(manifest["num_lanes"])
+            + int(remainder_manifest.get("num_lanes", 0))
+        ),
         "metadata_only_triage_merge_status": "not_started",
         "content_download_status": "not_started",
         "source_rating_status": "not_started",
@@ -1765,10 +1830,22 @@ def build_content_triage_status_summary(
             if collected_not_merged
             else ""
         ),
+        "remainder_round_manifest_source": (
+            relative(CONTENT_TRIAGE_REMAINDER_MANIFEST_PATH)
+            if remainder_collected
+            else ""
+        ),
+        "remainder_metadata_collection_source": (
+            relative(CONTENT_TRIAGE_REMAINDER_METADATA_STATUS_PATH)
+            if remainder_collected
+            else ""
+        ),
         "routing_summary_source": relative(VERIFICATION_ROUTING_SUMMARY_PATH),
         "caveats": [
             (
-                "Metadata-only triage has not inspected source content."
+                "Full-universe metadata-only triage has not inspected source content."
+                if full_universe_collected
+                else "Metadata-only triage has not inspected source content."
                 if collected_not_merged
                 else "Content triage has not opened URLs or downloaded source content."
             ),
@@ -1781,22 +1858,22 @@ def build_content_triage_status_summary(
     if collected_not_merged:
         payload.update(
             {
-                "metadata_only_triage_status_counts": metadata_collection.get(
-                    "triage_status_counts", {}
+                "metadata_only_triage_status_counts": merge_counts(
+                    "triage_status_counts"
                 ),
                 "metadata_only_recommended_next_action_counts": (
-                    metadata_collection.get("recommended_next_action_counts", {})
+                    merge_counts("recommended_next_action_counts")
                 ),
                 "metadata_only_extraction_readiness_prelim_counts": (
-                    metadata_collection.get(
-                        "extraction_readiness_prelim_counts", {}
-                    )
+                    merge_counts("extraction_readiness_prelim_counts")
                 ),
                 "metadata_only_source_relevance_prelim_counts": (
-                    metadata_collection.get("source_relevance_prelim_counts", {})
+                    merge_counts("source_relevance_prelim_counts")
                 ),
                 "metadata_only_lane_audit_recommendation": (
-                    metadata_collection.get("merge_recommendation", "")
+                    remainder_collection.get("merge_recommendation", "")
+                    if full_universe_collected
+                    else metadata_collection.get("merge_recommendation", "")
                 ),
             }
         )

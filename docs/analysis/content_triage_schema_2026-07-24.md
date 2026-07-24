@@ -158,3 +158,12 @@ Signal values:
 - `content_review_download_allowed_later` means only that a separately
   authorized content-review task may consider the row; it does not authorize
   source access in the metadata-only task.
+- URL-routing exceptions have metadata-only terminal routes:
+  `too_large` goes to `oversized_needs_separate_pass`; blocked/not-found goes
+  to `blocked_or_unreachable_defer`; error/SSL/timeout/connection outcomes go
+  to `needs_manual_review`; and duplicate statuses go to
+  `duplicate_defer_to_canonical`.
+- These exception routes are not findings that a municipality lacks a source.
+- Original context, insufficient, duplicate, canonical, and rejected
+  dispositions must remain visible and cannot be promoted solely because a URL
+  was routed.

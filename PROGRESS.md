@@ -6,6 +6,32 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-24 (Metadata-only triage expanded to all 4,726 routed candidates)
+
+**Did**
+- Started from clean tracked `4a49f93335178babebe4c888d9351f2dcc8d3cea`, confirmed all requested ancestry, preserved both completed Round 1 lane ledgers byte-for-byte, and left the unrelated untracked root `package-lock.json` untouched.
+- Extended the planner with a fail-closed `all_routed_remainder` scope that requires explicit prior-ledger exclusion and inclusion of non-reachable, oversized, duplicate, and lower-disposition rows. The exact identity remainder is 3,726.
+- Prepared balanced remainder lanes of 932/932/931/931 rows. Round 1 and remainder inputs have 4,726 unique triage IDs and candidate-queue IDs, zero cross-round overlap, and exact equality with the cumulative routing ledger.
+- Extended deterministic metadata-only rules across every routing status. Duplicates defer to canonical-group review, 261 oversized rows go to a separate strategy, blocked/not-found rows remain routing deferrals, transport/error rows require manual review, and lower dispositions are preserved without `p1` promotion.
+- Ran all four remainder lanes offline. All 3,726 rows are terminal; all four lanes are `completed_merge_eligible`; the audit recommends `merge_all_content_triage_lanes`; every source-access counter is zero.
+- Dashboard status is now `metadata_only_full_universe_collected_not_merged`, with 4,726/4,726 metadata-only outcomes and the durable merge still not started. Added a future prompt for one cumulative merge across both rounds.
+
+**Decisions and why**
+- Collect the entire routed universe before durable merge so the project does not create a misleading high-priority-only triage ledger.
+- Keep all routing exceptions as metadata-routing outcomes rather than source-absence findings.
+- Keep every relevance, match, document, wage, mechanism, and extraction field preliminary until source content is separately authorized and reviewed.
+
+**Surprises/breakage**
+- The exact remainder matched the estimate at 3,726 and balanced cleanly across four lanes.
+- A generic secret regex flagged a public municipal URL path slug that resembles a token prefix. Provenance-aware checks confirmed that URL fields are unchanged from the committed routing ledger, contain no credential-like query parameters, and no non-URL field contains a secret-like pattern.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Five compiles, 12 offline/network-failing tests, final four-lane audit, exact 4,726-ID union, dashboard JSON/frontend build, schema validation, 60 ingestion tests, protected/Round 1/routing hashes, artifact/provenance/secret checks, and diff checks passed. No URL was opened; no download, PDF parse, OCR, network/API/model/hosted-search/scout call, scout-accounting or routing-ledger mutation, durable triage merge, source rating, ingestion, `gabriel.codify`, wage extraction, wage-gap work, causal claim, regression, remote action, or push occurred.
+
+**Next steps**
+1. Review both metadata-only rounds and their audits.
+2. If authorized, run the prepared cumulative serial merge across all 4,726 rows exactly once.
+3. Keep content download/review, source rating, extraction, ingestion, codification, and wage analysis as later separately authorized stages.
+
 ## 2026-07-24 (Metadata-only content-triage Round 1 collected and audited)
 
 **Did**
