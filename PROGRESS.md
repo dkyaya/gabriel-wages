@@ -6,6 +6,35 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-23/24 (Parallel Round 2 three-lane live collection completed; serial merge deferred)
+
+**Did**
+- Started from clean tracked `d01580033200fd07e7d643acfec5880f501b2bb0` on `main`, confirmed required aggressive-framework ancestry, and left the unrelated untracked root `package-lock.json` untouched.
+- Revalidated the three locked Tier 1 inputs: 150 rows each; SHA-256 `320f4915…79d86a`, `e06f9706…c5500a`, and `501e36ff…d50665`; 450 unique municipality/Census IDs; zero covered, canonical, retry, failure-only, or cross-lane overlap; and exact five-hint coverage 450/450.
+- Ran plan-only preflight with zero external calls and exactly one authorized stronger live gate. No-search and both hosted-search controls returned IDs/text/tokens; the Wausau one-row probe completed parseably and its three leads remain quarantined. Three fresh dry-runs passed 150/150 compact prompts, hints, controls, and terminal dry timing with no backend calls.
+- Ran exactly three isolated, internally serialized live lanes with compact prompts, deterministic hints, adaptive `3/5/15/10/25/2`, 90-second inner/outer timeout, zero retries, lane-specific cost logs, and lane-local candidate exports. No lane resumed.
+- Lane 1 completed 148 parseable, 132 positive, 16 empty, two failure-only, and 335 candidate leads in 5,053.578 seconds (106.855 rows/hour). Lane 2 completed 149 parseable, 125 positive, 24 empty, one failure-only, and 343 leads in 5,331.764 seconds (101.280/hour). Lane 3 completed 149 parseable, 126 positive, 23 empty, one failure-only, and 307 leads in 4,764.610 seconds (113.336/hour).
+- Combined collection is 450 attempted, 446 parseable, 383 candidate-positive, 63 parseable-empty, four failure-only, zero stopped-before-request, and 985 unverified candidate leads. Parallel wall time was 5,615.561 seconds (1h33m35.561s), or 288.484 attempted rows/hour.
+- The outer guard checkpointed Hollister CA as `outer_timeout`; Lane 2 backed off and continued. Twinsburg OH, Oakland Park FL, and College Place WA returned empty/no-response-ID failures. The offline auditor classifies all three lanes `completed_merge_eligible`, confirms zero completed-ID overlap and three byte-identical lane-local export pairs, and recommends `merge_all_lanes`.
+
+**Decisions and why**
+- Stop before national accounting regardless of the clean recommendation. Official coverage remains 1,091/2,000 until a separately authorized serial merge rebuilds queue/coverage exactly once.
+- Preserve all four failures outside successful coverage and keep the preflight probe and stopped `bd5e259` lineage quarantined.
+- Treat the successful three-lane run as capacity evidence, but decide 3 × 250 versus 3 × 300 only after the serial merge establishes the updated distance to the approximately 2,000 checkpoint.
+- Record actual persisted staggers of 4m45s and 4m05s. The first exceeded the four-minute target during the explicit health check/tool transition; no input, command, isolation, or artifact gate changed.
+
+**Surprises/breakage**
+- Three-lane throughput was about 74.4% above Parallel Round 1's 165.391 attempted rows/hour, and all lanes finished faster than the prior approximately 100-minute lanes.
+- One production outer timeout occurred and behaved exactly as designed: terminal timing/failure evidence, one adaptive backoff, later step-down, and no lifecycle stall.
+- No shared `docs/analysis/` candidate export was produced; all timestamped exports stayed lane-local and hash-matched the canonical lane parsed file.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Seven compiles, 7 synthetic parallel tests, 26 mocked/no-network direct-SDK tests, 12 prompt tests, 60 ingestion tests, schema validation, coverage audit, input/export hashes, quarantine, protected/accounting checks, masked credential-shape review, and diff checks passed. Apart from the explicitly authorized preflight and three live lane collectors, no API/model/hosted-search call, diagnostic, URL verification, ingestion, `gabriel.codify`, accounting promotion, wage-gap calculation/claim, causal claim, regression, remote action, or push occurred.
+
+**Next steps**
+1. Under separate explicit authorization, re-run the three-lane offline audit and execute one serial accounting merge; then refresh yield/dashboard/project-phase status.
+2. Keep Twinsburg, Oakland Park, Hollister, and College Place in a separate bounded failure/retry process rather than ordinary scouting.
+3. After the merge, decide whether the remaining distance to approximately 2,000 warrants 3 × 250, 3 × 300, or a smaller final discovery round.
+
 ## 2026-07-23 (Aggressive parallel scaling framework prepared offline)
 
 **Did**

@@ -6,6 +6,25 @@ Last updated: `2026-07-23`
 
 ---
 
+## 2026-07-23/24 — Parallel Round 2 3×150 collection is complete; merge is pending
+
+### Current State
+
+- **Start/gates:** the task began at clean tracked `d01580033200fd07e7d643acfec5880f501b2bb0`. The three locked hashes remain `320f4915a1aa487e791f67a31826572ac275edf5d4b87ecb99eec4b26279d86a`, `e06f9706d69bce72cabac6f57c8581d16651d0b00ecec5752787edda5fc5500a`, and `501e36ff504ec2d5e3a1126eb1315db6fb31bbe5852c2be2590794661dd50665`. The 450 input rows are current ordinary Tier 1 targets, unique by municipality/Census ID, nonoverlapping, and complete for five hints.
+- **Preflight/dry-run:** plan-only made zero external calls. Exactly one stronger live gate passed no-search, trivial hosted-search, municipality-style hosted-search, and a parseable Wausau probe. Probe leads remain quarantined. All three fresh dry-runs passed 150/150 compact prompts/hints and made no backend calls.
+- **Lane 1:** exit 0; 150 attempted/responses; 148 parseable; 132 candidate-positive; 16 parseable-empty; two failure-only; zero stopped; 335 leads. Elapsed 5,053.578 seconds, 106.855 rows/hour. Twinsburg OH and Oakland Park FL were empty/no-ID failures.
+- **Lane 2:** exit 0; 150 attempted/responses; 149 parseable; 125 candidate-positive; 24 parseable-empty; one failure-only; zero stopped; 343 leads. Elapsed 5,331.764 seconds, 101.280 rows/hour. Hollister CA was checkpointed `outer_timeout`; one adaptive backoff occurred and the lane continued.
+- **Lane 3:** exit 0; 150 attempted/responses; 149 parseable; 126 candidate-positive; 23 parseable-empty; one failure-only; zero stopped; 307 leads. Elapsed 4,764.610 seconds, 113.336 rows/hour. College Place WA was an empty/no-ID failure.
+- **Combined result:** 450 attempted, 446 parseable, 383 positive, 63 empty, four failure-only, zero stopped, and 985 unverified candidate leads. Parallel wall time was 5,615.561 seconds (1h33m35.561s), with 288.484 attempted and 285.919 parseable rows/hour. No resume ran. See [the full result review](parallel_round2_3x150_live_collection_result_review_2026-07-23.md).
+- **Launch timing:** persisted starts were 22:28:45, 22:33:30, and 22:37:35 UTC: measured gaps 4m45s and 4m05s. The first includes the explicit health check/tool transition and exceeded the four-minute target; no immediate failure appeared and no command/input setting changed.
+- **Auditor:** `post_lane_audit_attempt1` classifies all lanes `completed_merge_eligible`, validates all hashes, finds zero completed-ID overlap, byte-checks all three lane-local exports against `parsed_candidates.csv`, and recommends `merge_all_lanes`. The combined estimated cost is approximately $3.84841725, estimate-only.
+- **Accounting boundary:** [the no-merge note](parallel_round2_3x150_no_accounting_merge_note_2026-07-23.md) confirms no queue, coverage, yield, dashboard/project-phase, or priority builder ran. Official accounting remains 1,091/2,000 covered. If all 446 parseable outcomes are accepted later, prospective coverage is approximately 1,537, leaving 463; this is not current accounting.
+- **Validation:** [validation](parallel_round2_3x150_live_collection_validation_2026-07-23.md) reports seven compiles, 7 parallel tests, 26 mocked/no-network direct-SDK tests, 12 prompt tests, 60 ingestion tests, schema/coverage audit, locked/export hashes, probe quarantine, protected/accounting invariance, masked credential-shape review, and diff checks passed.
+
+### Next Move
+
+Use the updated three-lane serial merge template only under separate explicit authorization. Re-audit the manifest and the three completed lane roots, preserve the four failure-only rows, consume all three lane-local parsed candidate exports exactly once, rebuild queue/coverage exactly once, and only then refresh yield/dashboard/project-phase state. Do not merge the Wausau diagnostic probe or stopped `bd5e259` output. After the official covered count is known, decide whether broad scouting should continue with 3 × 250, 3 × 300, or a smaller final round before the approximately 2,000 checkpoint.
+
 ## 2026-07-23 — Aggressive parallel scaling is prepared offline
 
 ### Current State
