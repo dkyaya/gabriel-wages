@@ -234,13 +234,12 @@ the custom `urllib` transport was replaced with the verifier-compatible
 `httpx` path, and one locked ten-row probe produced nine bounded PDF artifacts
 with matching hashes, one repeated forbidden response, and zero connection
 errors. The original 150-row attempt remains unmerged. A fresh-directory
-retry of those same 150 identities is now complete in fresh HTTPX output
-directories: 149 bounded PDF artifacts have matching hashes, the same one
-row remains forbidden, and no connection errors recurred. Both retry lanes
-are merge-eligible, but neither the original attempt nor the retry has been
-durably merged. The original transport-failed attempt remains preserved and
-unmerged. A 500-row follow-on may be planned only after serial merge and
-relay review; 750/1,000-row scale-up is not yet recommended. Final
+retry of those same 150 identities is now durably merged from the fresh HTTPX
+outputs: 149 bounded PDF artifacts have matching hashes, the same one row
+remains forbidden, and no connection errors recurred. The original
+transport-failed attempt remains preserved and superseded rather than part
+of the operative ledger. A 500-row follow-on may be planned after relay
+review; 750/1,000-row scale-up is not yet recommended. Final
 content-supported source
 rating, extraction readiness, ingestion, codification, wage extraction, and
 wage-gap analysis remain unperformed.

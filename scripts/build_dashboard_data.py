@@ -116,6 +116,16 @@ SOURCE_REVIEW_HTTPX_RETRY_SUMMARY_PATH = (
     SOURCE_REVIEW_PILOT_MANIFEST_PATH.parent
     / "source_review_httpx_retry_collection_summary.json"
 )
+SOURCE_REVIEW_DURABLE_LEDGER_PATH = (
+    ANALYSIS_DIR
+    / "source_review_ledgers"
+    / "source_review_ledger_latest.csv"
+)
+SOURCE_REVIEW_DURABLE_SUMMARY_PATH = (
+    ANALYSIS_DIR
+    / "source_review_ledgers"
+    / "source_review_summary_latest.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -165,6 +175,8 @@ OPTIONAL_PATHS = [
     SOURCE_REVIEW_PILOT_LIVE_SUMMARY_PATH,
     SOURCE_REVIEW_CONNECTION_DIAGNOSTIC_SUMMARY_PATH,
     SOURCE_REVIEW_HTTPX_RETRY_SUMMARY_PATH,
+    SOURCE_REVIEW_DURABLE_LEDGER_PATH,
+    SOURCE_REVIEW_DURABLE_SUMMARY_PATH,
 ]
 
 STATE_NAMES = {
@@ -2327,6 +2339,99 @@ def build_source_review_status_summary(
                     SOURCE_REVIEW_HTTPX_RETRY_SUMMARY_PATH
                 ),
                 "caveats": retry["caveats"],
+            }
+        )
+    if SOURCE_REVIEW_DURABLE_SUMMARY_PATH.exists():
+        durable = read_json(SOURCE_REVIEW_DURABLE_SUMMARY_PATH)
+        statuses = durable.get("source_review_status_counts", {})
+        readiness = durable.get(
+            "extraction_readiness_rating_counts", {}
+        )
+        if (
+            durable.get("status") != "pilot1_httpx_merged"
+            or durable.get("source_review_pilot_id")
+            != manifest["pilot_id"]
+            or int(durable.get("ledger_rows", 0)) != selected_rows
+            or int(durable.get("terminal_rows", 0)) != selected_rows
+            or int(durable.get("content_artifact_count", 0)) != 149
+            or int(durable.get("rows_with_matching_content_hash", 0))
+            != 149
+            or int(durable.get("merge_urls_opened", -1)) != 0
+            or int(durable.get("merge_network_calls", -1)) != 0
+        ):
+            raise ValueError(
+                "Durable source-review summary fails Pilot 1 merge gates"
+            )
+        payload.update(
+            {
+                "stage": "source_review_pilot_httpx_merged",
+                "source_review_phase": "pilot1_httpx_merged",
+                "source_review_live_status": "pilot1_httpx_merged",
+                "bounded_live_source_review_path": (
+                    "implemented_httpx_pilot1_merged"
+                ),
+                "latest_source_review_pilot_id": durable[
+                    "source_review_pilot_id"
+                ],
+                "latest_source_review_merge_id": durable[
+                    "source_review_merge_id"
+                ],
+                "pilot1_rows_merged": int(durable["ledger_rows"]),
+                "pilot1_source_review_merge_status": "merged",
+                "pilot1_artifact_saved_rows": int(
+                    statuses.get(
+                        "reviewed_metadata_and_artifact_saved", 0
+                    )
+                ),
+                "pilot1_forbidden_rows": int(
+                    statuses.get("download_forbidden", 0)
+                ),
+                "pilot1_connection_error_rows": int(
+                    statuses.get("download_connection_error", 0)
+                ),
+                "pilot1_content_artifact_bytes": int(
+                    durable["content_artifact_bytes"]
+                ),
+                "pilot1_max_content_artifact_bytes": int(
+                    durable["maximum_content_artifact_bytes"]
+                ),
+                "pilot1_preliminary_medium_extraction_readiness_rows": int(
+                    readiness.get("medium", 0)
+                ),
+                "durable_source_review_ledger_latest": relative(
+                    SOURCE_REVIEW_DURABLE_LEDGER_PATH
+                ),
+                "original_failed_attempt_status": durable[
+                    "original_failed_attempt_status"
+                ],
+                "source_rating_status": (
+                    "pilot1_preliminary_artifact_review_merged"
+                ),
+                "content_download_status": (
+                    "pilot1_bounded_artifacts_merged"
+                ),
+                "extraction_readiness_status": (
+                    "pilot1_preliminary_artifact_metadata_only"
+                ),
+                "ingestion_status": "not_started",
+                "codify_status": "not_started",
+                "wage_extraction_status": "not_started",
+                "wage_gap_analysis_status": "not_started",
+                "next_scaling_recommendation": (
+                    "plan_500_after_relay_review"
+                ),
+                "next_scaling_decision": (
+                    "plan_500_after_relay_review"
+                ),
+                "durable_source_review_summary_source": relative(
+                    SOURCE_REVIEW_DURABLE_SUMMARY_PATH
+                ),
+                "caveats": [
+                    "Source-review ratings are preliminary access/artifact signals.",
+                    "PDFs were not parsed or OCRed.",
+                    "Wage data were not extracted.",
+                    "The original failed attempt is superseded and excluded from operative results.",
+                ],
             }
         )
     return payload

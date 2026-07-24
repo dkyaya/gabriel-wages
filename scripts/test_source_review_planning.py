@@ -21,6 +21,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
 import audit_source_review_lanes as auditor  # noqa: E402
+import merge_source_review_lanes as merger  # noqa: E402
 import prepare_source_review_pilot as planner  # noqa: E402
 import source_review_sources as runner  # noqa: E402
 
@@ -258,6 +259,55 @@ class SourceReviewPlanningTests(unittest.TestCase):
         ledger = runner.read_csv(output_dir / "source_review_ledger.csv")
         self.assertEqual(len(ledger), 1)
         return summary, ledger[0], output_dir
+
+    def prepare_merge_fixture(
+        self,
+    ) -> tuple[Path, Path, Path, dict[str, object]]:
+        args = self.plan_args(self.base / "merge-plan")
+        args.pilot_id = "SYNTHETIC-SOURCE-REVIEW-PILOT"
+        args.pilot_size = 100
+        args.num_lanes = 2
+        manifest = planner.create_plan(args)
+        manifest_path = (
+            Path(args.output_dir) / "source_review_pilot_manifest.json"
+        )
+        fake = FakeHttpClient(
+            runner.HttpFetchResult(
+                200,
+                "https://example.invalid/final.pdf",
+                {"Content-Type": "application/pdf"},
+                b"%PDF-1.4\nmerge fixture\n%%EOF\n",
+                0.01,
+            )
+        )
+        for index, lane in enumerate(manifest["lanes"], start=1):
+            live_dir = self.base / f"merge-lane-{index}-live"
+            lane["future_live_output_dir"] = live_dir.as_posix()
+            lane["dry_run_output_dir"] = (
+                self.base / f"merge-lane-{index}-dry-absent"
+            ).as_posix()
+            with mock.patch.object(
+                socket,
+                "create_connection",
+                side_effect=AssertionError("network"),
+            ):
+                runner.run_live(
+                    self.live_args(
+                        str(lane["input_csv"]),
+                        live_dir,
+                        max_rows=None,
+                    ),
+                    client=fake,
+                )
+        manifest_path.write_text(
+            json.dumps(manifest, indent=2) + "\n",
+            encoding="utf-8",
+        )
+        audit_dir = self.base / "merge-audit"
+        audit_result = auditor.audit(manifest_path, audit_dir)
+        audit_path = audit_dir / "source_review_lane_audit_summary.json"
+        output_dir = self.base / "durable" / manifest["pilot_id"]
+        return manifest_path, audit_path, output_dir, audit_result
 
     def test_planner_filters_sizes_balances_and_diversifies(self) -> None:
         manifest = planner.create_plan(self.plan_args())
@@ -716,6 +766,173 @@ class SourceReviewPlanningTests(unittest.TestCase):
         self.assertTrue(result["artifact_integrity_passed"])
         self.assertEqual(result["documents_parsed"], 0)
         self.assertEqual(result["ocr_runs"], 0)
+
+    def test_merge_preserves_rows_artifacts_hashes_and_ratings(self) -> None:
+        manifest_path, audit_path, output_dir, _ = (
+            self.prepare_merge_fixture()
+        )
+        original_dir = self.base / "original-failed-attempt"
+        original_dir.mkdir()
+        (original_dir / "source_review_ledger.csv").write_text(
+            "source_review_id,source_review_status\n"
+            "poison-original,download_connection_error\n",
+            encoding="utf-8",
+        )
+        with mock.patch.object(
+            socket,
+            "create_connection",
+            side_effect=AssertionError("network"),
+        ):
+            summary = merger.merge(
+                manifest_path=manifest_path,
+                audit_path=audit_path,
+                output_dir=output_dir,
+                pilot_id="SYNTHETIC-SOURCE-REVIEW-PILOT",
+                merge_id="SYNTHETIC-HTTPX-MERGE",
+                merged_at="2026-07-24T00:00:00Z",
+            )
+        fields, rows = merger.read_csv(
+            output_dir / "source_review_ledger.csv"
+        )
+        self.assertEqual(len(rows), 100)
+        self.assertNotIn(
+            "poison-original",
+            {row["source_review_id"] for row in rows},
+        )
+        self.assertEqual(
+            {row["source_review_stage"] for row in rows},
+            {merger.MERGED_STAGE},
+        )
+        self.assertEqual(
+            {row["source_review_merge_id"] for row in rows},
+            {"SYNTHETIC-HTTPX-MERGE"},
+        )
+        self.assertEqual(summary["content_artifact_count"], 100)
+        self.assertEqual(summary["rows_with_content_hash"], 100)
+        self.assertEqual(
+            summary["source_relevance_rating_counts"],
+            {"possible": 100},
+        )
+        self.assertEqual(
+            summary["extraction_readiness_rating_counts"],
+            {"medium": 100},
+        )
+        for row in rows:
+            artifact = Path(row["content_artifact_path"])
+            self.assertTrue(artifact.is_file())
+            self.assertEqual(
+                hashlib.sha256(artifact.read_bytes()).hexdigest(),
+                row["content_hash"],
+            )
+        self.assertIn("source_review_merge_id", fields)
+        latest = output_dir.parent / "source_review_ledger_latest.csv"
+        self.assertEqual(
+            latest.read_bytes(),
+            (output_dir / "source_review_ledger.csv").read_bytes(),
+        )
+        self.assertEqual(summary["merge_urls_opened"], 0)
+        self.assertEqual(summary["merge_documents_downloaded"], 0)
+        self.assertEqual(
+            summary["original_failed_attempt_status"],
+            "preserved_unmerged_superseded_transport",
+        )
+
+    def test_merge_rejects_duplicate_source_review_ids(self) -> None:
+        with self.assertRaisesRegex(
+            merger.SourceReviewMergeError, "source_review"
+        ):
+            merger.validate_unique_identities(
+                [
+                    {
+                        "source_review_id": "duplicate",
+                        "candidate_queue_row_id": "queue-1",
+                    },
+                    {
+                        "source_review_id": "duplicate",
+                        "candidate_queue_row_id": "queue-2",
+                    },
+                ]
+            )
+
+    def test_merge_rejects_duplicate_candidate_queue_ids(self) -> None:
+        with self.assertRaisesRegex(
+            merger.SourceReviewMergeError, "candidate queue"
+        ):
+            merger.validate_unique_identities(
+                [
+                    {
+                        "source_review_id": "review-1",
+                        "candidate_queue_row_id": "duplicate",
+                    },
+                    {
+                        "source_review_id": "review-2",
+                        "candidate_queue_row_id": "duplicate",
+                    },
+                ]
+            )
+
+    def test_merge_rejects_missing_terminal_row(self) -> None:
+        manifest_path, audit_path, output_dir, _ = (
+            self.prepare_merge_fixture()
+        )
+        manifest = json.loads(manifest_path.read_text())
+        ledger_path = (
+            Path(manifest["lanes"][0]["future_live_output_dir"])
+            / "source_review_ledger.csv"
+        )
+        _, rows = merger.read_csv(ledger_path)
+        rows[0]["source_review_status"] = "planned_not_reviewed"
+        write_csv(ledger_path, rows)
+        with self.assertRaisesRegex(
+            merger.SourceReviewMergeError, "Nonterminal"
+        ):
+            merger.merge(
+                manifest_path=manifest_path,
+                audit_path=audit_path,
+                output_dir=output_dir,
+                pilot_id="SYNTHETIC-SOURCE-REVIEW-PILOT",
+                merge_id="SYNTHETIC-HTTPX-MERGE",
+            )
+
+    def test_merge_rejects_noneligible_audit(self) -> None:
+        manifest_path, audit_path, output_dir, _ = (
+            self.prepare_merge_fixture()
+        )
+        audit = json.loads(audit_path.read_text())
+        audit["merge_recommendation"] = (
+            "do_not_merge_until_resume_or_review"
+        )
+        audit_path.write_text(
+            json.dumps(audit, indent=2) + "\n",
+            encoding="utf-8",
+        )
+        with self.assertRaisesRegex(
+            merger.SourceReviewMergeError, "does not recommend"
+        ):
+            merger.merge(
+                manifest_path=manifest_path,
+                audit_path=audit_path,
+                output_dir=output_dir,
+                pilot_id="SYNTHETIC-SOURCE-REVIEW-PILOT",
+                merge_id="SYNTHETIC-HTTPX-MERGE",
+            )
+
+    def test_merge_refuses_to_overwrite_durable_outputs(self) -> None:
+        manifest_path, audit_path, output_dir, _ = (
+            self.prepare_merge_fixture()
+        )
+        output_dir.mkdir(parents=True)
+        (output_dir / "source_review_ledger.csv").write_text(
+            "already exists\n", encoding="utf-8"
+        )
+        with self.assertRaisesRegex(FileExistsError, "Refusing to overwrite"):
+            merger.merge(
+                manifest_path=manifest_path,
+                audit_path=audit_path,
+                output_dir=output_dir,
+                pilot_id="SYNTHETIC-SOURCE-REVIEW-PILOT",
+                merge_id="SYNTHETIC-HTTPX-MERGE",
+            )
 
 
 if __name__ == "__main__":

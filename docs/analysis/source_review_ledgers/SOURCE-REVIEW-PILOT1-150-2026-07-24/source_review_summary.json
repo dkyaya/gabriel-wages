@@ -1,0 +1,243 @@
+{
+  "schema_version": "1.0.0",
+  "status": "pilot1_httpx_merged",
+  "source_review_pilot_id": "SOURCE-REVIEW-PILOT1-150-2026-07-24",
+  "source_review_merge_id": "SOURCE-REVIEW-PILOT1-HTTPX-MERGE-2026-07-24",
+  "source_review_merged_at": "2026-07-24T20:14:24Z",
+  "source_review_stage": "bounded_artifact_review_not_parsed",
+  "ledger_rows": 150,
+  "terminal_rows": 150,
+  "unique_source_review_ids": 150,
+  "unique_candidate_queue_row_ids": 150,
+  "lane_count": 2,
+  "lane_rows": {
+    "lane_1": 75,
+    "lane_2": 75
+  },
+  "manifest_path": "tmp/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/pre_httpx_retry_manifest.json",
+  "manifest_sha256": "0dd5a97a0638a297419c7631f67dd9b9de2ac5567d9a26346d878c493d18c182",
+  "audit_summary_path": "tmp/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/serial_merge_httpx_retry_lane_audit_2026-07-24/source_review_lane_audit_summary.json",
+  "audit_summary_sha256": "452aa17be6ec88bb20b9d679c652f5babdae03b1f5ebee23496c20dbe272cf33",
+  "audit_merge_recommendation": "merge_all_source_review_lanes",
+  "sources": [
+    {
+      "lane_id": "lane_1",
+      "input_path": "docs/analysis/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/lane_1_source_review_input.csv",
+      "input_sha256": "0253cba7ecf358e16679f64273466c239e296caf214e44a110813eeebfec6de3",
+      "output_dir": "tmp/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/lane_1_live_attempt2_httpx",
+      "ledger_path": "tmp/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/lane_1_live_attempt2_httpx/source_review_ledger.csv",
+      "ledger_sha256": "a0de6c4ca89836580ba89ea38b7ef86531c3ed59644955a8c37ccd5c6a309a62",
+      "summary_path": "tmp/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/lane_1_live_attempt2_httpx/source_review_summary.json",
+      "summary_sha256": "71049491d47ed8ab4230fdb4e4d56100639041a9c3e832eb9b5820bf3a62baf0",
+      "timing_path": "tmp/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/lane_1_live_attempt2_httpx/source_review_timing.csv",
+      "timing_sha256": "8e3e37ba29c436fc53dc1c8df459792ef1a107a82d67baa0cab485ed624f8d5b",
+      "rows": 75,
+      "content_artifacts": 74,
+      "metadata_artifacts": 75,
+      "content_bytes": 131853168,
+      "maximum_content_bytes": 7726750,
+      "rows_with_content_hash": 74,
+      "documents_parsed": 0,
+      "pdfs_parsed": 0,
+      "ocr_runs": 0,
+      "content_samples": 0,
+      "pilot_id": "SOURCE-REVIEW-PILOT1-150-2026-07-24"
+    },
+    {
+      "lane_id": "lane_2",
+      "input_path": "docs/analysis/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/lane_2_source_review_input.csv",
+      "input_sha256": "a5baa87593057a49c0b1e9adfff40051725ede45618c6f0d58f90f40b2630b6e",
+      "output_dir": "tmp/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/lane_2_live_attempt2_httpx",
+      "ledger_path": "tmp/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/lane_2_live_attempt2_httpx/source_review_ledger.csv",
+      "ledger_sha256": "1e70f5a78e645d4317f52b0bd1f68977cab9226a38a33e3bb9e8b330dc37f1d2",
+      "summary_path": "tmp/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/lane_2_live_attempt2_httpx/source_review_summary.json",
+      "summary_sha256": "b98ec80bbf8d4becc47296160af884fa501344f5ade2557831bec4801421ae36",
+      "timing_path": "tmp/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/lane_2_live_attempt2_httpx/source_review_timing.csv",
+      "timing_sha256": "7b1214abc5569faa6a6cad53bb5b3306e442c469da8b22b1b0ef73292dd26446",
+      "rows": 75,
+      "content_artifacts": 75,
+      "metadata_artifacts": 75,
+      "content_bytes": 170117292,
+      "maximum_content_bytes": 10319152,
+      "rows_with_content_hash": 75,
+      "documents_parsed": 0,
+      "pdfs_parsed": 0,
+      "ocr_runs": 0,
+      "content_samples": 0,
+      "pilot_id": "SOURCE-REVIEW-PILOT1-150-2026-07-24"
+    }
+  ],
+  "source_review_status_counts": {
+    "download_forbidden": 1,
+    "reviewed_metadata_and_artifact_saved": 149
+  },
+  "url_access_status_counts": {
+    "forbidden": 1,
+    "reached": 149
+  },
+  "download_status_counts": {
+    "artifact_saved": 149,
+    "forbidden": 1
+  },
+  "content_type_observed_counts": {
+    "application/pdf": 149,
+    "unknown": 1
+  },
+  "content_byte_size_distribution": {
+    "0": 1,
+    "1_to_10_mib": 80,
+    "64_kib_to_1_mib": 69
+  },
+  "content_artifact_count": 149,
+  "metadata_artifact_count": 150,
+  "rows_with_content_hash": 149,
+  "rows_with_matching_content_hash": 149,
+  "content_artifact_bytes": 301970460,
+  "maximum_content_artifact_bytes": 10319152,
+  "content_sample_count": 0,
+  "source_officialness_rating_counts": {
+    "official_municipal": 82,
+    "official_state_repository": 18,
+    "official_union": 7,
+    "uncertain": 41,
+    "unknown": 2
+  },
+  "source_relevance_rating_counts": {
+    "possible": 149,
+    "unknown": 1
+  },
+  "municipality_match_rating_counts": {
+    "possible": 149,
+    "unknown": 1
+  },
+  "employer_match_rating_counts": {
+    "possible": 149,
+    "unknown": 1
+  },
+  "bargaining_unit_match_rating_counts": {
+    "possible": 149,
+    "unknown": 1
+  },
+  "safety_unit_match_signal_counts": {
+    "unknown": 150
+  },
+  "non_safety_unit_match_signal_counts": {
+    "unknown": 150
+  },
+  "document_type_rating_counts": {
+    "cba_candidate": 149,
+    "unknown": 1
+  },
+  "extraction_readiness_rating_counts": {
+    "medium": 149,
+    "not_ready": 1
+  },
+  "wage_table_signal_counts": {
+    "unknown": 150
+  },
+  "wage_growth_signal_counts": {
+    "unknown": 150
+  },
+  "mechanism_language_signal_counts": {
+    "unknown": 150
+  },
+  "candidate_disposition_counts": {
+    "scheduled": 150
+  },
+  "state_counts": {
+    "AK": 4,
+    "AZ": 1,
+    "CA": 4,
+    "CO": 4,
+    "CT": 4,
+    "DC": 3,
+    "DE": 4,
+    "FL": 4,
+    "GA": 1,
+    "HI": 3,
+    "IA": 4,
+    "ID": 3,
+    "IL": 4,
+    "IN": 3,
+    "KS": 4,
+    "KY": 1,
+    "MA": 4,
+    "MD": 4,
+    "ME": 4,
+    "MI": 4,
+    "MN": 4,
+    "MO": 4,
+    "MS": 1,
+    "MT": 4,
+    "NE": 4,
+    "NH": 4,
+    "NJ": 4,
+    "NM": 4,
+    "NV": 4,
+    "NY": 4,
+    "OH": 4,
+    "OK": 4,
+    "OR": 4,
+    "PA": 4,
+    "RI": 4,
+    "SD": 4,
+    "TN": 1,
+    "TX": 4,
+    "VA": 4,
+    "VT": 3,
+    "WA": 4,
+    "WI": 4,
+    "WY": 2
+  },
+  "source_type_counts": {
+    "cba": 150
+  },
+  "unit_type_counts": {
+    "fire": 41,
+    "non_safety": 36,
+    "police": 73
+  },
+  "disposition_to_extraction_readiness": {
+    "scheduled": {
+      "medium": 149,
+      "not_ready": 1
+    }
+  },
+  "routing_status_to_review_status": {
+    "reachable_pdf_or_document": {
+      "download_forbidden": 1,
+      "reviewed_metadata_and_artifact_saved": 149
+    }
+  },
+  "collection_urls_opened": 150,
+  "collection_network_calls": 150,
+  "collection_documents_downloaded": 149,
+  "collection_documents_parsed": 0,
+  "collection_pdfs_parsed": 0,
+  "collection_ocr_runs": 0,
+  "merge_urls_opened": 0,
+  "merge_network_calls": 0,
+  "merge_documents_downloaded": 0,
+  "merge_documents_parsed": 0,
+  "merge_pdfs_parsed": 0,
+  "merge_ocr_runs": 0,
+  "original_failed_attempt_status": "preserved_unmerged_superseded_transport",
+  "diagnostic_probe_status": "preserved_excluded_from_merge",
+  "source_rating_status": "pilot1_preliminary_artifact_review_merged",
+  "content_download_status": "pilot1_bounded_artifacts_merged",
+  "extraction_readiness_status": "pilot1_preliminary_artifact_metadata_only",
+  "ingestion_status": "not_started",
+  "codify_status": "not_started",
+  "wage_extraction_status": "not_started",
+  "wage_gap_analysis_status": "not_started",
+  "next_scaling_recommendation": "plan_500_after_relay_review",
+  "caveats": [
+    "Source-review ratings are preliminary access/artifact signals.",
+    "PDFs were not parsed or OCRed.",
+    "No wage tables or wage values were extracted.",
+    "The original transport-failed attempt is superseded and excluded from operative results.",
+    "The diagnostic probe is preserved and excluded from the durable ledger."
+  ],
+  "ledger_path": "docs/analysis/source_review_ledgers/SOURCE-REVIEW-PILOT1-150-2026-07-24/source_review_ledger.csv",
+  "ledger_sha256": "2bcfe2295950f9805322d1cbbaf08051bd93b08cb632067d688ec6f894bde109"
+}

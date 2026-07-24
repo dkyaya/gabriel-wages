@@ -6,6 +6,31 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-24 (Source-review Pilot 1 HTTPX retry durably merged)
+
+**Did**
+- Started from clean tracked `5e14f635e377384b7bf0ffbed018600d2f25c33f`, confirmed requested ancestry and locked 75/75 input hashes, and left the unrelated untracked root `package-lock.json` untouched.
+- Re-audited only `lane_1_live_attempt2_httpx` and `lane_2_live_attempt2_httpx`: both are `completed_merge_eligible`, all 150 rows are terminal, identities are unique, artifact integrity passes, and recommendation is `merge_all_source_review_lanes`.
+- Added a fail-closed offline source-review merge tool and six merge regression tests. Ran the tool exactly once with merge ID `SOURCE-REVIEW-PILOT1-HTTPX-MERGE-2026-07-24`.
+- Created a 150-row durable Pilot 1 ledger and full-universe latest pointer. Operative outcomes are 149 saved PDF artifacts and one forbidden response, with 149 matching hashes, 301,970,460 retained bytes, and a 10,319,152-byte maximum.
+- Preserved the original 149-connection-error attempt as unmerged superseded transport provenance and excluded the ten-row diagnostic probe.
+- Updated the dashboard to `pilot1_httpx_merged` and wrote the 500-row follow-on scaling plan.
+
+**Decisions and why**
+- Merge only the repaired HTTPX retry because it is the first full-pilot attempt with productive source access and clean artifact integrity. The original attempt remains useful only for transport diagnosis.
+- Recommend planning two balanced 250-row lanes next. This preserves the proven two-lane operating shape and aggregate concurrency of eight while keeping per-lane checkpoint and artifact audit burden bounded.
+- Do not move directly to 750/1,000: 150 rows already retained about 302 MB, projected 500/1,000-row volume is about 1/2 GB, and ratings remain preliminary because PDFs were not parsed.
+
+**Surprises/breakage**
+- An auxiliary secret scan initially assumed metadata JSON files were directly under `candidate_artifacts/`; they are correctly nested under the lane-local metadata directory. The corrected recursive scan passed all 150 files. No product artifact or merge output was affected.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Six compiles, 23 offline/mock tests, final retry audit, 150-row/identity/stage checks, 149 artifact hash/size/locality checks, latest-pointer byte equality, dashboard JSON/frontend production build, schema validation, 60 ingestion tests, protected/provenance digests, metadata secret-key checks, and diff checks passed. No URL, download, PDF parse, OCR, live review, scout-accounting or routing/triage-ledger mutation, ingestion, `gabriel.codify`, wage extraction, wage-gap work, causal claim, regression, remote action, or push occurred during the merge.
+
+**Next steps**
+1. Review the durable Pilot 1 ledger, preliminary ratings, scaling plan, and relay.
+2. If separately authorized, prepare `SOURCE-REVIEW-BATCH2-500-2026-07-24` from p1/download-allowed identities not already in Pilot 1, using two balanced 250-row lanes.
+3. Keep PDF parsing/OCR, content-supported rating, ingestion, codification, and wage analysis in later separately gated tasks.
+
 ## 2026-07-24 (Source-review Pilot 1 HTTPX retry succeeded; no merge)
 
 **Did**

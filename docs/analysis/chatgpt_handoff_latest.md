@@ -6,6 +6,37 @@ Last updated: `2026-07-24`
 
 ---
 
+## 2026-07-24 — Source-review Pilot 1 HTTPX retry is durably merged
+
+### Current State
+
+- **Start:** work began at clean tracked `5e14f635e377384b7bf0ffbed018600d2f25c33f`; requested ancestry and both locked input hashes passed. The unrelated untracked root `package-lock.json` remains untouched.
+- **Fresh audit:** the merge-only transient manifest points exclusively to `lane_1_live_attempt2_httpx` and `lane_2_live_attempt2_httpx`. Both lanes are `completed_merge_eligible`; coverage is 150/150, duplicate identities are zero, artifact integrity passes, and recommendation is `merge_all_source_review_lanes`.
+- **Exactly-once merge:** [the result](source_review_pilot1_httpx_retry_serial_merge_result_2026-07-24.md) records the single execution of `merge_source_review_lanes.py` with merge ID `SOURCE-REVIEW-PILOT1-HTTPX-MERGE-2026-07-24`.
+- **Durable ledger:** [the latest ledger](source_review_ledgers/source_review_ledger_latest.csv) has 150 terminal rows and unique source-review/candidate identities. It records 149 saved PDF artifacts, one forbidden response, zero connection errors, 149 matching hashes, 301,970,460 content bytes, and a 10,319,152-byte maximum.
+- **Ratings:** preliminary officialness is municipal 82, state repository 18, union 7, uncertain 41, and unknown 2. Relevance and municipality/employer/unit match are `possible` for 149 and `unknown` for one. Document type is `cba_candidate` for 149; technical extraction readiness is medium for 149 and not-ready for one. Wage-table, wage-growth, and mechanism-language signals remain unknown for all 150.
+- **Provenance:** the original attempt remains `preserved_unmerged_superseded_transport`; its two tree digests and the diagnostic-probe tree digest remain byte-identical. Neither was merged.
+- **Dashboard:** `source_review_phase = pilot1_httpx_merged`; Pilot 1 has 150 merged rows, 149 saved artifacts, one forbidden, zero connection errors, and durable latest pointers. Ingestion, codification, wage extraction, and wage-gap analysis remain `not_started`.
+- **Boundary:** no URL, network call, download, PDF parse, OCR, live review, scout accounting, routing/triage-ledger mutation, ingestion, codification, wage calculation/claim, causal claim, regression, remote inspection, or push occurred during this offline merge.
+- **Validation:** [the validation record](source_review_pilot1_httpx_retry_serial_merge_validation_2026-07-24.md) reports six compiles, 23 offline/mock tests, final lane audit, durable identity/stage and 149 artifact hash/size/locality checks, latest-pointer byte equality, dashboard JSON/frontend build, schema and 60 ingestion tests, immutable provenance/protected hashes, secret-key checks, and diff checks passed.
+
+### Interpretation
+
+The durable source-review layer records successful bounded access and
+artifact retention, not final source relevance, confirmed CBA identity,
+employer/unit match, wage content, or analysis-ready evidence. No retained
+PDF was parsed or OCRed. The original failed attempt remains useful for
+diagnostic history but is not an operative source-review result.
+
+### Next Move
+
+Review [the scaling plan](source_review_post_pilot1_scaling_plan_2026-07-24.md)
+and relay. If separately authorized, prepare—but do not automatically
+run—`SOURCE-REVIEW-BATCH2-500-2026-07-24` from p1/download-allowed rows not
+already reviewed, preferably as two balanced 250-row lanes with the same
+bounded HTTPX settings. Do not jump to 750/1,000, parse or OCR PDFs, ingest,
+codify, extract wages, or analyze wage gaps as part of that planning task.
+
 ## 2026-07-24 — Source-review Pilot 1 HTTPX retry succeeded; serial merge pending
 
 ### Current State

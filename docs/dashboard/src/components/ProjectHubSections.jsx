@@ -404,6 +404,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Source review</p>
           <h3>
             {sourceReviewStatus.source_review_phase ===
+            "pilot1_httpx_merged"
+              ? "Pilot 1 HTTPX review merged; plan the bounded 500-row follow-on"
+              : sourceReviewStatus.source_review_phase ===
             "pilot1_httpx_retry_collected_not_merged"
               ? "Pilot 1 HTTPX retry succeeded; serial merge pending"
               : sourceReviewStatus.source_review_phase ===
@@ -420,6 +423,18 @@ export function VerificationPipeline({
         </div>
         <p>
           {sourceReviewStatus.source_review_phase ===
+          "pilot1_httpx_merged" ? (
+            <>
+              The repaired Pilot 1 result is durably merged:{" "}
+              {formatNumber(sourceReviewStatus.pilot1_artifact_saved_rows)}
+              {" "}of {formatNumber(sourceReviewStatus.pilot1_rows_merged)}
+              {" "}rows retain bounded artifacts, one row is forbidden, and
+              the original transport-failed attempt remains superseded. The next
+              recommendation is a separately reviewed 500-row plan. PDFs remain
+              unparsed, and ingestion, codification, wage extraction, and wage-gap
+              analysis have not started.
+            </>
+          ) : sourceReviewStatus.source_review_phase ===
           "pilot1_httpx_retry_collected_not_merged" ? (
             <>
               The repaired-client retry completed all{" "}
