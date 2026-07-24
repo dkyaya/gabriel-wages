@@ -6,6 +6,33 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-24 (Full-universe metadata-only content triage durably merged)
+
+**Did**
+- Started from clean tracked `0097d307e53d9d23bf2d49e292e168206723f51f`, confirmed every requested ancestor, and left the unrelated untracked root `package-lock.json` untouched.
+- Re-audited the preserved 1,000-row Round 1 and 3,726-row all-routed remainder. All six lanes remain `completed_merge_eligible`, both audits recommend `merge_all_content_triage_lanes`, and every source-access counter is zero.
+- Added a fail-closed cumulative merge script and six merge-specific test cases. It requires audited complete lanes, validates lane/input metadata, rejects identity overlap or routing mismatch, refuses output overwrite, and never performs source access or downstream processing.
+- Ran the merge exactly once. The cumulative/latest metadata-only ledger contains 4,726 terminal rows, 4,726 unique triage IDs, 4,726 unique candidate-queue IDs, and exact identity equality with the cumulative routing ledger.
+- Durable planning counts are p1 1,760, p2 1,232, p3 360, defer 1,372, and exclude 2. Lower dispositions and routing-exception meanings remain intact.
+- Updated the dashboard to `metadata_only_full_universe_merged`; content download, source rating, ingestion, codification, wage extraction, and wage-gap analysis remain not started.
+- Added a next-phase plan recommending a separately authorized 100–200-row p1 source-rating/content-review pilot and a separate oversized-source strategy.
+
+**Decisions and why**
+- Preserve a hard distinction between metadata triage and content findings. The merged stage is `metadata_only_triaged_not_content_reviewed`.
+- Use exact cumulative routing identity equality as the merge gate so no candidate disappears or appears twice.
+- Keep 2,923 `content_review_download_allowed_later` rows as a future queue, not a blanket download authorization. Measure content-review precision and artifact burden in a small pilot first.
+
+**Surprises/breakage**
+- Computed cumulative distributions match the expected values exactly.
+- A provenance scan found 36 field references to inherited public source-locator query parameters with access/signature-like names. All URL fields are byte-identical to the committed routing ledger, no query value was printed or introduced, and no non-URL field contains secret-like material.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Six compiles, 18 offline/network-failing tests, final audits for both rounds, exact 4,726-ID equality, cumulative/latest byte identity, dashboard JSON/frontend build, schema validation, 60 ingestion tests, protected/routing/corpus hashes, provenance/secret checks, and diff checks passed. No URL was opened; no network/API/model/hosted-search/scout call, download, PDF parse, OCR, scout-accounting or routing-ledger mutation, source rating, ingestion, `gabriel.codify`, wage extraction, wage-gap work, causal claim, regression, remote action, or push occurred.
+
+**Next steps**
+1. Review the durable metadata-only ledger and merge relay.
+2. Build a source-rating schema and prepare a separately authorized bounded 100–200-row p1 content-review/download pilot.
+3. Keep the 261 oversized rows in a separate handling plan; defer ingestion, codification, wage extraction, wage-gap analysis, and regressions.
+
 ## 2026-07-24 (Metadata-only triage expanded to all 4,726 routed candidates)
 
 **Did**

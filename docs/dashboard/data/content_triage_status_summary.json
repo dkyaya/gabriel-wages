@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-24T17:46:34Z",
+  "generated_at": "2026-07-24T18:07:35Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -22,7 +22,9 @@
     "docs/analysis/content_triage_rounds/CONTENT-TRIAGE-ROUND1-1000-2026-07-24/content_triage_round_manifest.json",
     "docs/analysis/content_triage_rounds/CONTENT-TRIAGE-ROUND1-1000-2026-07-24/metadata_only_collection_summary.json",
     "docs/analysis/content_triage_rounds/CONTENT-TRIAGE-REMAINDER-ALL-ROUTED-2026-07-24/content_triage_round_manifest.json",
-    "docs/analysis/content_triage_rounds/CONTENT-TRIAGE-REMAINDER-ALL-ROUTED-2026-07-24/metadata_only_collection_summary.json"
+    "docs/analysis/content_triage_rounds/CONTENT-TRIAGE-REMAINDER-ALL-ROUTED-2026-07-24/metadata_only_collection_summary.json",
+    "docs/analysis/content_triage_ledgers/content_triage_ledger_latest.csv",
+    "docs/analysis/content_triage_ledgers/content_triage_summary_latest.json"
   ],
   "warnings": [],
   "limitations": [
@@ -36,7 +38,7 @@
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
   "stage": "content_triage_and_extraction_readiness_planning",
-  "content_triage_phase": "metadata_only_full_universe_collected_not_merged",
+  "content_triage_phase": "metadata_only_full_universe_merged",
   "routing_coverage_complete": true,
   "routed_url_bearing_rows": 4726,
   "reachable_or_reused_rows": 3750,
@@ -50,18 +52,21 @@
   },
   "initial_triage_priority_scope": "scheduled_high_priority_reachable",
   "initial_triage_status": "planned_not_started",
-  "triage_live_status": "metadata_only_full_universe_collected_not_merged",
+  "triage_live_status": "metadata_only_full_universe_merged",
   "latest_content_triage_round_id": "CONTENT-TRIAGE-REMAINDER-ALL-ROUTED-2026-07-24",
   "latest_content_triage_mode": "metadata_only",
+  "latest_content_triage_merge_id": "CONTENT-TRIAGE-FULL-UNIVERSE-METADATA-MERGE-2026-07-24",
   "metadata_only_triage_rows_collected": 4726,
+  "metadata_only_triage_rows_merged": 4726,
   "full_routed_rows_metadata_triaged": 4726,
   "round1_metadata_only_rows_collected": 1000,
   "remainder_metadata_only_rows_collected": 3726,
   "metadata_only_triage_lane_count_collected": 6,
-  "metadata_only_triage_merge_status": "not_started",
+  "metadata_only_triage_merge_status": "merged",
+  "durable_content_triage_ledger_latest": "docs/analysis/content_triage_ledgers/content_triage_ledger_latest.csv",
   "content_download_status": "not_started",
   "source_rating_status": "not_started",
-  "extraction_readiness_status": "preliminary_metadata_only_not_merged",
+  "extraction_readiness_status": "preliminary_metadata_only_merged",
   "ingestion_status": "not_started",
   "codify_status": "not_started",
   "wage_extraction_status": "not_started",
@@ -98,8 +103,9 @@
   "remainder_round_manifest_source": "docs/analysis/content_triage_rounds/CONTENT-TRIAGE-REMAINDER-ALL-ROUTED-2026-07-24/content_triage_round_manifest.json",
   "remainder_metadata_collection_source": "docs/analysis/content_triage_rounds/CONTENT-TRIAGE-REMAINDER-ALL-ROUTED-2026-07-24/metadata_only_collection_summary.json",
   "routing_summary_source": "docs/analysis/verification_ledgers/verified_source_routing_summary_latest.json",
+  "cumulative_content_triage_summary_source": "docs/analysis/content_triage_ledgers/content_triage_summary_latest.json",
   "caveats": [
-    "Full-universe metadata-only triage has not inspected source content.",
+    "The merged full-universe metadata-only triage has not inspected source content.",
     "Routing reachability does not equal source relevance or employer/unit validation.",
     "Preliminary extraction-readiness signals are scheduling aids until content is reviewed.",
     "Reachable documents are not ingested, codified, or extracted wage observations.",
@@ -137,5 +143,21 @@
     "unknown": 1069,
     "unlikely_relevant": 2
   },
+  "metadata_only_priority_for_content_review_counts": {
+    "defer": 1372,
+    "exclude": 2,
+    "p1": 1760,
+    "p2": 1232,
+    "p3": 360
+  },
+  "high_priority_content_review_rows": 1760,
+  "medium_priority_content_review_rows": 1232,
+  "low_priority_content_review_rows": 360,
+  "duplicate_defer_to_canonical_rows": 295,
+  "oversized_needs_separate_pass_rows": 261,
+  "blocked_or_unreachable_defer_rows": 603,
+  "needs_manual_review_rows": 205,
+  "content_review_download_allowed_later_rows": 2923,
+  "metadata_review_only_rows": 437,
   "metadata_only_lane_audit_recommendation": "merge_all_content_triage_lanes"
 }

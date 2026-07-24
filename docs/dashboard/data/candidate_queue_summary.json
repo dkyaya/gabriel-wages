@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": "0.1.0",
-    "generated_at": "2026-07-24T17:46:34Z",
+    "generated_at": "2026-07-24T18:07:35Z",
     "data_vintage": "2026-07-23",
     "source_files": [
       "docs/analysis/national_scout_coverage_state.csv",
@@ -23,7 +23,9 @@
       "docs/analysis/content_triage_rounds/CONTENT-TRIAGE-ROUND1-1000-2026-07-24/content_triage_round_manifest.json",
       "docs/analysis/content_triage_rounds/CONTENT-TRIAGE-ROUND1-1000-2026-07-24/metadata_only_collection_summary.json",
       "docs/analysis/content_triage_rounds/CONTENT-TRIAGE-REMAINDER-ALL-ROUTED-2026-07-24/content_triage_round_manifest.json",
-      "docs/analysis/content_triage_rounds/CONTENT-TRIAGE-REMAINDER-ALL-ROUTED-2026-07-24/metadata_only_collection_summary.json"
+      "docs/analysis/content_triage_rounds/CONTENT-TRIAGE-REMAINDER-ALL-ROUTED-2026-07-24/metadata_only_collection_summary.json",
+      "docs/analysis/content_triage_ledgers/content_triage_ledger_latest.csv",
+      "docs/analysis/content_triage_ledgers/content_triage_summary_latest.json"
     ],
     "warnings": [],
     "limitations": [

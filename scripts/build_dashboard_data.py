@@ -88,6 +88,16 @@ CONTENT_TRIAGE_REMAINDER_METADATA_STATUS_PATH = (
     / "CONTENT-TRIAGE-REMAINDER-ALL-ROUTED-2026-07-24"
     / "metadata_only_collection_summary.json"
 )
+CONTENT_TRIAGE_CUMULATIVE_LEDGER_PATH = (
+    ANALYSIS_DIR
+    / "content_triage_ledgers"
+    / "content_triage_ledger_latest.csv"
+)
+CONTENT_TRIAGE_CUMULATIVE_SUMMARY_PATH = (
+    ANALYSIS_DIR
+    / "content_triage_ledgers"
+    / "content_triage_summary_latest.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -131,6 +141,8 @@ OPTIONAL_PATHS = [
     CONTENT_TRIAGE_ROUND1_METADATA_STATUS_PATH,
     CONTENT_TRIAGE_REMAINDER_MANIFEST_PATH,
     CONTENT_TRIAGE_REMAINDER_METADATA_STATUS_PATH,
+    CONTENT_TRIAGE_CUMULATIVE_LEDGER_PATH,
+    CONTENT_TRIAGE_CUMULATIVE_SUMMARY_PATH,
 ]
 
 STATE_NAMES = {
@@ -1701,6 +1713,11 @@ def build_content_triage_status_summary(
         if CONTENT_TRIAGE_REMAINDER_METADATA_STATUS_PATH.exists()
         else {}
     )
+    cumulative_triage = (
+        read_json(CONTENT_TRIAGE_CUMULATIVE_SUMMARY_PATH)
+        if CONTENT_TRIAGE_CUMULATIVE_SUMMARY_PATH.exists()
+        else {}
+    )
     status_counts = routing_summary["verification_status_counts"]
     routed_rows = int(routing_summary["ledger_rows"])
     reachable_or_reused = int(routing_summary["reachable_or_reused_total"])
@@ -1739,6 +1756,13 @@ def build_content_triage_status_summary(
         and int(remainder_manifest.get("selected_plus_excluded_rows", 0))
         == routed_rows
     )
+    full_universe_merged = (
+        cumulative_triage.get("status")
+        == "metadata_only_full_universe_merged"
+        and int(cumulative_triage.get("ledger_rows", 0)) == routed_rows
+        and int(cumulative_triage.get("terminal_rows", 0)) == routed_rows
+        and bool(cumulative_triage.get("routing_identity_equality"))
+    )
 
     def merge_counts(field: str) -> dict[str, int]:
         combined: Counter[str] = Counter()
@@ -1750,7 +1774,9 @@ def build_content_triage_status_summary(
         **metadata,
         "stage": "content_triage_and_extraction_readiness_planning",
         "content_triage_phase": (
-            "metadata_only_full_universe_collected_not_merged"
+            "metadata_only_full_universe_merged"
+            if full_universe_merged
+            else "metadata_only_full_universe_collected_not_merged"
             if full_universe_collected
             else "metadata_only_round1_collected_not_merged"
             if collected_not_merged
@@ -1769,7 +1795,9 @@ def build_content_triage_status_summary(
         "initial_triage_priority_scope": manifest["priority_scope"],
         "initial_triage_status": manifest["status"],
         "triage_live_status": (
-            "metadata_only_full_universe_collected_not_merged"
+            "metadata_only_full_universe_merged"
+            if full_universe_merged
+            else "metadata_only_full_universe_collected_not_merged"
             if full_universe_collected
             else "metadata_only_collected_not_merged"
             if collected_not_merged
@@ -1785,7 +1813,17 @@ def build_content_triage_status_summary(
         "latest_content_triage_mode": (
             "metadata_only" if collected_not_merged else ""
         ),
+        "latest_content_triage_merge_id": (
+            cumulative_triage.get("content_triage_merge_id", "")
+            if full_universe_merged
+            else ""
+        ),
         "metadata_only_triage_rows_collected": full_collected_rows,
+        "metadata_only_triage_rows_merged": (
+            int(cumulative_triage["ledger_rows"])
+            if full_universe_merged
+            else 0
+        ),
         "full_routed_rows_metadata_triaged": (
             full_collected_rows if full_universe_collected else collected_rows
         ),
@@ -1795,11 +1833,20 @@ def build_content_triage_status_summary(
             int(manifest["num_lanes"])
             + int(remainder_manifest.get("num_lanes", 0))
         ),
-        "metadata_only_triage_merge_status": "not_started",
+        "metadata_only_triage_merge_status": (
+            "merged" if full_universe_merged else "not_started"
+        ),
+        "durable_content_triage_ledger_latest": (
+            relative(CONTENT_TRIAGE_CUMULATIVE_LEDGER_PATH)
+            if full_universe_merged
+            else ""
+        ),
         "content_download_status": "not_started",
         "source_rating_status": "not_started",
         "extraction_readiness_status": (
-            "preliminary_metadata_only_not_merged"
+            "preliminary_metadata_only_merged"
+            if full_universe_merged
+            else "preliminary_metadata_only_not_merged"
             if collected_not_merged
             else "planned_not_started"
         ),
@@ -1841,9 +1888,16 @@ def build_content_triage_status_summary(
             else ""
         ),
         "routing_summary_source": relative(VERIFICATION_ROUTING_SUMMARY_PATH),
+        "cumulative_content_triage_summary_source": (
+            relative(CONTENT_TRIAGE_CUMULATIVE_SUMMARY_PATH)
+            if full_universe_merged
+            else ""
+        ),
         "caveats": [
             (
-                "Full-universe metadata-only triage has not inspected source content."
+                "The merged full-universe metadata-only triage has not inspected source content."
+                if full_universe_merged
+                else "Full-universe metadata-only triage has not inspected source content."
                 if full_universe_collected
                 else "Metadata-only triage has not inspected source content."
                 if collected_not_merged
@@ -1855,7 +1909,57 @@ def build_content_triage_status_summary(
             "No source content was downloaded or parsed and no wage data or wage gaps were calculated.",
         ],
     }
-    if collected_not_merged:
+    if full_universe_merged:
+        triage_counts = cumulative_triage["triage_status_counts"]
+        action_counts = cumulative_triage["recommended_next_action_counts"]
+        payload.update(
+            {
+                "metadata_only_triage_status_counts": triage_counts,
+                "metadata_only_recommended_next_action_counts": action_counts,
+                "metadata_only_extraction_readiness_prelim_counts": (
+                    cumulative_triage["extraction_readiness_prelim_counts"]
+                ),
+                "metadata_only_source_relevance_prelim_counts": (
+                    cumulative_triage["source_relevance_prelim_counts"]
+                ),
+                "metadata_only_priority_for_content_review_counts": (
+                    cumulative_triage["priority_for_content_review_counts"]
+                ),
+                "high_priority_content_review_rows": int(
+                    triage_counts.get("high_priority_content_review", 0)
+                ),
+                "medium_priority_content_review_rows": int(
+                    triage_counts.get("medium_priority_content_review", 0)
+                ),
+                "low_priority_content_review_rows": int(
+                    triage_counts.get("low_priority_content_review", 0)
+                ),
+                "duplicate_defer_to_canonical_rows": int(
+                    triage_counts.get("duplicate_defer_to_canonical", 0)
+                ),
+                "oversized_needs_separate_pass_rows": int(
+                    triage_counts.get("oversized_needs_separate_pass", 0)
+                ),
+                "blocked_or_unreachable_defer_rows": int(
+                    triage_counts.get("blocked_or_unreachable_defer", 0)
+                ),
+                "needs_manual_review_rows": int(
+                    triage_counts.get("needs_manual_review", 0)
+                ),
+                "content_review_download_allowed_later_rows": int(
+                    action_counts.get(
+                        "content_review_download_allowed_later", 0
+                    )
+                ),
+                "metadata_review_only_rows": int(
+                    action_counts.get("metadata_review_only", 0)
+                ),
+                "metadata_only_lane_audit_recommendation": (
+                    "merge_all_content_triage_lanes"
+                ),
+            }
+        )
+    elif collected_not_merged:
         payload.update(
             {
                 "metadata_only_triage_status_counts": merge_counts(

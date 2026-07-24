@@ -20,6 +20,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 import audit_content_triage_lanes as auditor  # noqa: E402
 import content_triage_sources as runner  # noqa: E402
+import merge_content_triage_lanes as merger  # noqa: E402
 import prepare_content_triage_batches as planner  # noqa: E402
 
 
@@ -179,6 +180,91 @@ def args_for(
     }
     values.update(overrides)
     return argparse.Namespace(**values)
+
+
+def make_merge_fixture(
+    root: Path,
+) -> tuple[list[Path], list[Path], Path, Path]:
+    routing, queue = synthetic_inputs(root)
+    plan = planner.prepare(
+        args_for(
+            routing,
+            queue,
+            root / "source_plan",
+            batch_size=6,
+            num_lanes=1,
+        )
+    )
+    selected = [dict(row) for row in plan["selected"]]
+    selected[-1]["candidate_status_before_verification"] = "context_hold"
+    selected[-1]["triage_bucket"] = "context_only_hold"
+    selected[-1]["candidate_priority"] = "low"
+    selected[-1]["candidate_source_type"] = "context_only"
+    selected[-1]["verification_status"] = "reachable_html"
+    selected[-1]["content_type"] = "text/html"
+
+    _, routing_rows = merger.read_csv(routing)
+    selected_queue_ids = {
+        row["candidate_queue_row_id"] for row in selected
+    }
+    routing_subset = [
+        row
+        for row in routing_rows
+        if row["candidate_queue_row_id"] in selected_queue_ids
+    ]
+    routing_subset_path = root / "routing_subset.csv"
+    write_csv(routing_subset_path, routing_subset)
+
+    manifest_paths: list[Path] = []
+    audit_paths: list[Path] = []
+    for round_number, rows in enumerate((selected[:3], selected[3:]), start=1):
+        round_id = f"SYNTH-METADATA-ROUND-{round_number}"
+        round_dir = root / f"round_{round_number}"
+        input_path = round_dir / "lane_1_content_triage_input.csv"
+        write_csv(input_path, rows)
+        metadata_dir = root / f"round_{round_number}_metadata"
+        runner.run(
+            argparse.Namespace(
+                input_csv=input_path.as_posix(),
+                output_dir=metadata_dir.as_posix(),
+                dry_run=False,
+                max_rows=None,
+                review_mode="metadata_only",
+                write_content_samples=False,
+                no_write_content_samples=True,
+            )
+        )
+        manifest = {
+            "schema_version": "1.0.0",
+            "round_id": round_id,
+            "selected_rows": len(rows),
+            "lanes": [
+                {
+                    "lane_id": "lane_1",
+                    "input_csv": input_path.as_posix(),
+                    "input_sha256": sha(input_path),
+                    "expected_rows": len(rows),
+                    "dry_run_output_dir": (
+                        root / f"round_{round_number}_dry"
+                    ).as_posix(),
+                    "future_live_output_dir": (
+                        root / f"round_{round_number}_live"
+                    ).as_posix(),
+                    "metadata_only_output_dir": metadata_dir.as_posix(),
+                }
+            ],
+        }
+        manifest_path = round_dir / "content_triage_round_manifest.json"
+        manifest_path.write_text(
+            json.dumps(manifest, indent=2) + "\n", encoding="utf-8"
+        )
+        audit_dir = root / f"round_{round_number}_audit"
+        auditor.audit(manifest_path, audit_dir)
+        manifest_paths.append(manifest_path)
+        audit_paths.append(
+            audit_dir / "content_triage_lane_audit_summary.json"
+        )
+    return manifest_paths, audit_paths, routing_subset_path, root / "merged"
 
 
 class ContentTriagePlanningTests(unittest.TestCase):
@@ -725,6 +811,207 @@ class ContentTriagePlanningTests(unittest.TestCase):
             self.assertEqual(payload["terminal_rows"], len(routing_rows) - 1)
             self.assertEqual(payload["urls_opened"], 0)
             self.assertIn("too_large", payload["routing_status_to_triage_status"])
+
+    def test_cumulative_merge_preserves_multiple_rounds_and_is_offline(
+        self,
+    ) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            manifests, audits, routing, output = make_merge_fixture(root)
+            with patch.object(
+                socket,
+                "create_connection",
+                side_effect=AssertionError("network call attempted"),
+            ):
+                summary = merger.merge(
+                    manifest_paths=manifests,
+                    audit_paths=audits,
+                    routing_ledger_path=routing,
+                    output_dir=output,
+                    merge_id="SYNTH-CUMULATIVE-MERGE",
+                    merged_at="2026-07-24T20:00:00Z",
+                )
+            self.assertEqual(summary["ledger_rows"], 6)
+            self.assertEqual(summary["terminal_rows"], 6)
+            self.assertEqual(summary["unique_triage_ids"], 6)
+            self.assertEqual(summary["unique_candidate_queue_row_ids"], 6)
+            self.assertTrue(summary["routing_identity_equality"])
+            self.assertEqual(
+                summary["triage_status_counts"],
+                {
+                    "high_priority_content_review": 5,
+                    "low_priority_content_review": 1,
+                },
+            )
+            self.assertEqual(
+                summary["recommended_next_action_counts"],
+                {
+                    "content_review_download_allowed_later": 5,
+                    "metadata_review_only": 1,
+                },
+            )
+            self.assertEqual(
+                summary["extraction_readiness_prelim_counts"],
+                {"low": 1, "medium": 5},
+            )
+            self.assertEqual(
+                summary["source_relevance_prelim_counts"],
+                {"likely_relevant": 5, "possibly_relevant": 1},
+            )
+            self.assertEqual(
+                summary["priority_for_content_review_counts"],
+                {"p1": 5, "p3": 1},
+            )
+            self.assertTrue(
+                all(summary[field] == 0 for field in merger.ACCESS_FIELDS)
+            )
+            _, rows = merger.read_csv(output / merger.LEDGER_NAME)
+            lower = [
+                row
+                for row in rows
+                if row["candidate_status_before_verification"] == "context_hold"
+            ]
+            self.assertEqual(len(lower), 1)
+            self.assertEqual(lower[0]["priority_for_content_review"], "p3")
+            self.assertEqual(
+                lower[0]["content_triage_stage"],
+                "metadata_only_triaged_not_content_reviewed",
+            )
+            self.assertTrue(
+                all(row["content_triage_merge_id"] == "SYNTH-CUMULATIVE-MERGE" for row in rows)
+            )
+            self.assertEqual(
+                sha(output / merger.LEDGER_NAME),
+                sha(output / merger.LATEST_LEDGER_NAME),
+            )
+            with self.assertRaises(FileExistsError):
+                merger.merge(
+                    manifest_paths=manifests,
+                    audit_paths=audits,
+                    routing_ledger_path=routing,
+                    output_dir=output,
+                    merge_id="SYNTH-SECOND-MERGE",
+                )
+
+    def test_cumulative_merge_rejects_duplicate_triage_ids(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            manifests, audits, routing, output = make_merge_fixture(root)
+            _, first_rows = merger.read_csv(
+                root / "round_1_metadata" / "triage_ledger.csv"
+            )
+            duplicate_id = first_rows[0]["triage_id"]
+            second_manifest = json.loads(
+                manifests[1].read_text(encoding="utf-8")
+            )
+            second_input = Path(second_manifest["lanes"][0]["input_csv"])
+            _, input_rows = merger.read_csv(second_input)
+            input_rows[0]["triage_id"] = duplicate_id
+            write_csv(second_input, input_rows)
+            second_manifest["lanes"][0]["input_sha256"] = sha(second_input)
+            manifests[1].write_text(
+                json.dumps(second_manifest, indent=2) + "\n",
+                encoding="utf-8",
+            )
+            second_ledger = root / "round_2_metadata" / "triage_ledger.csv"
+            _, ledger_rows = merger.read_csv(second_ledger)
+            ledger_rows[0]["triage_id"] = duplicate_id
+            write_csv(second_ledger, ledger_rows)
+            auditor.audit(manifests[1], audits[1].parent)
+            with self.assertRaisesRegex(ValueError, "Duplicate triage IDs"):
+                merger.merge(
+                    manifest_paths=manifests,
+                    audit_paths=audits,
+                    routing_ledger_path=routing,
+                    output_dir=output,
+                    merge_id="SYNTH-DUPLICATE-TRIAGE",
+                )
+
+    def test_cumulative_merge_rejects_duplicate_candidate_ids(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            manifests, audits, routing, output = make_merge_fixture(root)
+            _, first_rows = merger.read_csv(
+                root / "round_1_metadata" / "triage_ledger.csv"
+            )
+            duplicate_id = first_rows[0]["candidate_queue_row_id"]
+            second_manifest = json.loads(
+                manifests[1].read_text(encoding="utf-8")
+            )
+            second_input = Path(second_manifest["lanes"][0]["input_csv"])
+            _, input_rows = merger.read_csv(second_input)
+            input_rows[0]["candidate_queue_row_id"] = duplicate_id
+            write_csv(second_input, input_rows)
+            second_manifest["lanes"][0]["input_sha256"] = sha(second_input)
+            manifests[1].write_text(
+                json.dumps(second_manifest, indent=2) + "\n",
+                encoding="utf-8",
+            )
+            second_ledger = root / "round_2_metadata" / "triage_ledger.csv"
+            _, ledger_rows = merger.read_csv(second_ledger)
+            ledger_rows[0]["candidate_queue_row_id"] = duplicate_id
+            write_csv(second_ledger, ledger_rows)
+            auditor.audit(manifests[1], audits[1].parent)
+            with self.assertRaisesRegex(
+                ValueError, "Duplicate candidate queue IDs"
+            ):
+                merger.merge(
+                    manifest_paths=manifests,
+                    audit_paths=audits,
+                    routing_ledger_path=routing,
+                    output_dir=output,
+                    merge_id="SYNTH-DUPLICATE-CANDIDATE",
+                )
+
+    def test_cumulative_merge_rejects_missing_terminal_rows(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            manifests, audits, routing, output = make_merge_fixture(root)
+            ledger_path = root / "round_2_metadata" / "triage_ledger.csv"
+            _, rows = merger.read_csv(ledger_path)
+            rows[0]["triage_status"] = ""
+            write_csv(ledger_path, rows)
+            with self.assertRaisesRegex(ValueError, "Nonterminal"):
+                merger.merge(
+                    manifest_paths=manifests,
+                    audit_paths=audits,
+                    routing_ledger_path=routing,
+                    output_dir=output,
+                    merge_id="SYNTH-NONTERMINAL",
+                )
+
+    def test_cumulative_merge_rejects_noneligible_audit(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            manifests, audits, routing, output = make_merge_fixture(root)
+            audit = json.loads(audits[1].read_text(encoding="utf-8"))
+            audit["merge_recommendation"] = "do_not_merge_until_resume_or_review"
+            audits[1].write_text(
+                json.dumps(audit, indent=2) + "\n", encoding="utf-8"
+            )
+            with self.assertRaisesRegex(ValueError, "not merge-eligible"):
+                merger.merge(
+                    manifest_paths=manifests,
+                    audit_paths=audits,
+                    routing_ledger_path=routing,
+                    output_dir=output,
+                    merge_id="SYNTH-UNSAFE-AUDIT",
+                )
+
+    def test_cumulative_merge_rejects_routing_identity_mismatch(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            manifests, audits, routing, output = make_merge_fixture(root)
+            _, routing_rows = merger.read_csv(routing)
+            write_csv(routing, routing_rows[:-1])
+            with self.assertRaisesRegex(ValueError, "identity mismatch"):
+                merger.merge(
+                    manifest_paths=manifests,
+                    audit_paths=audits,
+                    routing_ledger_path=routing,
+                    output_dir=output,
+                    merge_id="SYNTH-ROUTING-MISMATCH",
+                )
 
 
 def main() -> int:

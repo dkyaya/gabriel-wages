@@ -6,6 +6,36 @@ Last updated: `2026-07-24`
 
 ---
 
+## 2026-07-24 — Full-universe metadata-only content triage is durably merged
+
+### Current State
+
+- **Readiness:** work began at clean tracked `0097d307e53d9d23bf2d49e292e168206723f51f`. Fresh audits reproduce two Round 1 and four remainder `completed_merge_eligible` lanes, 1,000 + 3,726 terminal rows, zero source access, and `merge_all_content_triage_lanes` for both rounds.
+- **Exactly-once merge:** [the result](content_triage_full_universe_metadata_serial_merge_result_2026-07-24.md) records one execution of `merge_content_triage_lanes.py` with merge ID `CONTENT-TRIAGE-FULL-UNIVERSE-METADATA-MERGE-2026-07-24`.
+- **Durable cumulative ledger:** [the latest ledger](content_triage_ledgers/content_triage_ledger_latest.csv) contains 4,726 terminal rows, 4,726 unique triage IDs, and 4,726 unique candidate-queue IDs. Its candidate identities exactly equal the cumulative routing ledger.
+- **Planning outcomes:** p1 1,760; p2 1,232; p3 360; defer 1,372; exclude 2. There are 2,923 future content-review/download recommendations, 437 metadata-only reviews, 295 duplicate-group reviews, 261 oversized deferrals, 603 blocked/not-found deferrals, and 205 manual reviews.
+- **Disposition boundary:** all 523 context, 302 insufficient, 291 duplicate, eight already-canonical, and two calibration-rejected rows retain their original lower dispositions. Metadata triage does not upgrade them into evidence.
+- **Dashboard:** `content_triage_phase = metadata_only_full_universe_merged`, 4,726 rows are durably merged, and extraction readiness remains `preliminary_metadata_only_merged`. Content download, source rating, ingestion, codification, wage extraction, and wage-gap analysis remain `not_started`.
+- **Boundary:** no URL/source access, download, parse, OCR, scout accounting, routing-ledger mutation, source rating, extraction, ingestion, codification, wage calculation/claim, causal claim, or regression occurred.
+- **Validation:** [the validation record](content_triage_full_universe_metadata_serial_merge_validation_2026-07-24.md) reports six compiles, 18 offline tests, both final audits, exact 4,726-ID equality, cumulative/latest byte identity, dashboard JSON/frontend build, schema/ingestion checks, immutable hashes, provenance/secret checks, and diff checks passed.
+
+### Interpretation and limitations
+
+The durable ledger is a complete metadata-only scheduling layer. It does not
+confirm source content, officialness, employer or bargaining-unit match,
+document type, period, source quality, wage tables, extractability, or
+analysis-ready evidence. `content_review_download_allowed_later` still
+requires separate authorization.
+
+### Next Move
+
+Follow [the next-phase plan](post_full_metadata_triage_next_phase_plan_2026-07-24.md).
+Define a content-supported source-rating schema, then prepare a bounded
+100–200-row p1 content-review/download pilot under separate authorization.
+Keep the 261 oversized rows in a separate plan. Do not ingest, codify, extract
+wages, calculate wage gaps, make causal claims, or run regressions during
+source-rating setup.
+
 ## 2026-07-24 — Full routed universe has metadata-only triage; cumulative merge pending
 
 ### Current State

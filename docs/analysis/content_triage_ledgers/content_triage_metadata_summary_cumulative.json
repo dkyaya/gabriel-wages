@@ -1,0 +1,381 @@
+{
+  "schema_version": "1.0.0",
+  "status": "metadata_only_full_universe_merged",
+  "content_triage_merge_id": "CONTENT-TRIAGE-FULL-UNIVERSE-METADATA-MERGE-2026-07-24",
+  "content_triage_merged_at": "2026-07-24T18:05:14Z",
+  "content_triage_stage": "metadata_only_triaged_not_content_reviewed",
+  "ledger_rows": 4726,
+  "terminal_rows": 4726,
+  "unique_triage_ids": 4726,
+  "unique_candidate_queue_row_ids": 4726,
+  "routing_ledger_rows": 4726,
+  "routing_identity_equality": true,
+  "routing_ledger_path": "docs/analysis/verification_ledgers/verified_source_routing_ledger_cumulative.csv",
+  "routing_ledger_sha256": "831f40dacf3f0362d5c3c81cb2e59c4d3da502187c94672e381d355ae79f5499",
+  "round_count": 2,
+  "lane_count": 6,
+  "source_rounds": [
+    {
+      "round_id": "CONTENT-TRIAGE-ROUND1-1000-2026-07-24",
+      "manifest_path": "docs/analysis/content_triage_rounds/CONTENT-TRIAGE-ROUND1-1000-2026-07-24/content_triage_round_manifest.json",
+      "manifest_sha256": "ef36d088e06ba8db2090886334e63896e2287192e65497859c41dddc1f26442a",
+      "audit_summary_path": "tmp/content_triage_rounds/CONTENT-TRIAGE-ROUND1-1000-2026-07-24/cumulative_merge_lane_audit_2026-07-24/content_triage_lane_audit_summary.json",
+      "audit_summary_sha256": "cae19b4f14b3bdb2e9c5cc4b28792918b8c0ff0781c9bc82bfb9c4d95795f688",
+      "rows": 1000,
+      "lane_count": 2,
+      "merge_recommendation": "merge_all_content_triage_lanes",
+      "lanes": [
+        {
+          "lane_id": "lane_1",
+          "ledger_path": "tmp/content_triage_rounds/CONTENT-TRIAGE-ROUND1-1000-2026-07-24/lane_1_metadata_only_attempt1/triage_ledger.csv",
+          "ledger_sha256": "ed69c6f84f1b3c96272673f5a3d0a57a7ff10badd0989d8c8467aac42df8e61f",
+          "summary_path": "tmp/content_triage_rounds/CONTENT-TRIAGE-ROUND1-1000-2026-07-24/lane_1_metadata_only_attempt1/triage_summary.json",
+          "summary_sha256": "ed23b294c3f419ed619f133c25fbc4e9a6e2af1000567edca23749a7a02c4439",
+          "timing_path": "tmp/content_triage_rounds/CONTENT-TRIAGE-ROUND1-1000-2026-07-24/lane_1_metadata_only_attempt1/triage_timing.csv",
+          "timing_sha256": "587b7ecddbabfce6823779661cb582251ef160d2f02cc96bfbc7741a2acf0a66",
+          "rows": 500,
+          "urls_opened": 0,
+          "network_calls": 0,
+          "documents_downloaded": 0,
+          "documents_parsed": 0,
+          "pdfs_parsed": 0,
+          "ocr_runs": 0,
+          "content_artifacts_written": 0
+        },
+        {
+          "lane_id": "lane_2",
+          "ledger_path": "tmp/content_triage_rounds/CONTENT-TRIAGE-ROUND1-1000-2026-07-24/lane_2_metadata_only_attempt1/triage_ledger.csv",
+          "ledger_sha256": "e842d9470946abeb8871d819bdf3a480eefcd8b8511a4146b0de9395a8d4f9fc",
+          "summary_path": "tmp/content_triage_rounds/CONTENT-TRIAGE-ROUND1-1000-2026-07-24/lane_2_metadata_only_attempt1/triage_summary.json",
+          "summary_sha256": "53c05ee3f2277aec7c8124c7f7d5e23c33eafcf21fcbc9dbdb2ed5e77146bde9",
+          "timing_path": "tmp/content_triage_rounds/CONTENT-TRIAGE-ROUND1-1000-2026-07-24/lane_2_metadata_only_attempt1/triage_timing.csv",
+          "timing_sha256": "8ecd7217a46a8f7d6a421803b6c3bd6bba8159cfb482f13b50d8e1af943290b6",
+          "rows": 500,
+          "urls_opened": 0,
+          "network_calls": 0,
+          "documents_downloaded": 0,
+          "documents_parsed": 0,
+          "pdfs_parsed": 0,
+          "ocr_runs": 0,
+          "content_artifacts_written": 0
+        }
+      ]
+    },
+    {
+      "round_id": "CONTENT-TRIAGE-REMAINDER-ALL-ROUTED-2026-07-24",
+      "manifest_path": "docs/analysis/content_triage_rounds/CONTENT-TRIAGE-REMAINDER-ALL-ROUTED-2026-07-24/content_triage_round_manifest.json",
+      "manifest_sha256": "88bd0cadb06545582ce01ac4f5d33cabe9b51c4c30ac1a152e469ae90101f261",
+      "audit_summary_path": "tmp/content_triage_rounds/CONTENT-TRIAGE-REMAINDER-ALL-ROUTED-2026-07-24/cumulative_merge_lane_audit_2026-07-24/content_triage_lane_audit_summary.json",
+      "audit_summary_sha256": "1c400c2c80d2bcee9f76bce2e5a16b16109dda1ec029f0757d43d45bc39ecc51",
+      "rows": 3726,
+      "lane_count": 4,
+      "merge_recommendation": "merge_all_content_triage_lanes",
+      "lanes": [
+        {
+          "lane_id": "lane_1",
+          "ledger_path": "tmp/content_triage_rounds/CONTENT-TRIAGE-REMAINDER-ALL-ROUTED-2026-07-24/lane_1_metadata_only_attempt1/triage_ledger.csv",
+          "ledger_sha256": "e0020e98c39f763fc7d34d953e6bb171a6a8f846f860e74a103e8eaae6ea0588",
+          "summary_path": "tmp/content_triage_rounds/CONTENT-TRIAGE-REMAINDER-ALL-ROUTED-2026-07-24/lane_1_metadata_only_attempt1/triage_summary.json",
+          "summary_sha256": "45b866ea54451b71aa8b17354a1e4a203e3362c670a9b8ca0cad4f8e47df1e98",
+          "timing_path": "tmp/content_triage_rounds/CONTENT-TRIAGE-REMAINDER-ALL-ROUTED-2026-07-24/lane_1_metadata_only_attempt1/triage_timing.csv",
+          "timing_sha256": "cae1c14629ae59c787ff7c227a7572b2e7fba26ce361253b693e97fb2f72d8a3",
+          "rows": 932,
+          "urls_opened": 0,
+          "network_calls": 0,
+          "documents_downloaded": 0,
+          "documents_parsed": 0,
+          "pdfs_parsed": 0,
+          "ocr_runs": 0,
+          "content_artifacts_written": 0
+        },
+        {
+          "lane_id": "lane_2",
+          "ledger_path": "tmp/content_triage_rounds/CONTENT-TRIAGE-REMAINDER-ALL-ROUTED-2026-07-24/lane_2_metadata_only_attempt1/triage_ledger.csv",
+          "ledger_sha256": "6b87df2adaeebf60311add7676a8d2cf257e8d8c53e2e62de7e67c03aba22f98",
+          "summary_path": "tmp/content_triage_rounds/CONTENT-TRIAGE-REMAINDER-ALL-ROUTED-2026-07-24/lane_2_metadata_only_attempt1/triage_summary.json",
+          "summary_sha256": "cb0fc86bdbe43769e6d24e54a4656022f0b91279028a87f072576047fbc15c20",
+          "timing_path": "tmp/content_triage_rounds/CONTENT-TRIAGE-REMAINDER-ALL-ROUTED-2026-07-24/lane_2_metadata_only_attempt1/triage_timing.csv",
+          "timing_sha256": "14067db61278836e062d63f23001e512bf1080704ff51f619c05cde6dd55fda2",
+          "rows": 932,
+          "urls_opened": 0,
+          "network_calls": 0,
+          "documents_downloaded": 0,
+          "documents_parsed": 0,
+          "pdfs_parsed": 0,
+          "ocr_runs": 0,
+          "content_artifacts_written": 0
+        },
+        {
+          "lane_id": "lane_3",
+          "ledger_path": "tmp/content_triage_rounds/CONTENT-TRIAGE-REMAINDER-ALL-ROUTED-2026-07-24/lane_3_metadata_only_attempt1/triage_ledger.csv",
+          "ledger_sha256": "2485630a2ed61e112a70b400a7a7811267823df6784e95fe798f992b1e9d4a8c",
+          "summary_path": "tmp/content_triage_rounds/CONTENT-TRIAGE-REMAINDER-ALL-ROUTED-2026-07-24/lane_3_metadata_only_attempt1/triage_summary.json",
+          "summary_sha256": "f1d79563f1e1d285f5dd3c12ea04b7fe3c15478747f1e521763e648b08acb550",
+          "timing_path": "tmp/content_triage_rounds/CONTENT-TRIAGE-REMAINDER-ALL-ROUTED-2026-07-24/lane_3_metadata_only_attempt1/triage_timing.csv",
+          "timing_sha256": "1a5430b5655ae1ea1472610837e06a9424cb78d3657a0e9f4e9b91e34809ad35",
+          "rows": 931,
+          "urls_opened": 0,
+          "network_calls": 0,
+          "documents_downloaded": 0,
+          "documents_parsed": 0,
+          "pdfs_parsed": 0,
+          "ocr_runs": 0,
+          "content_artifacts_written": 0
+        },
+        {
+          "lane_id": "lane_4",
+          "ledger_path": "tmp/content_triage_rounds/CONTENT-TRIAGE-REMAINDER-ALL-ROUTED-2026-07-24/lane_4_metadata_only_attempt1/triage_ledger.csv",
+          "ledger_sha256": "a4cafc06e49cd47d5573077ff4807dae1aafb5864e793fc5dcf226edb05f52af",
+          "summary_path": "tmp/content_triage_rounds/CONTENT-TRIAGE-REMAINDER-ALL-ROUTED-2026-07-24/lane_4_metadata_only_attempt1/triage_summary.json",
+          "summary_sha256": "06ade1e77ef834ebc9d610a140a9038c26d6a293af7ae92a79d040010e2fd458",
+          "timing_path": "tmp/content_triage_rounds/CONTENT-TRIAGE-REMAINDER-ALL-ROUTED-2026-07-24/lane_4_metadata_only_attempt1/triage_timing.csv",
+          "timing_sha256": "abc4170c302f7a0d3453ccc21f840f977f66198e920d6b5715c6377336ad58ea",
+          "rows": 931,
+          "urls_opened": 0,
+          "network_calls": 0,
+          "documents_downloaded": 0,
+          "documents_parsed": 0,
+          "pdfs_parsed": 0,
+          "ocr_runs": 0,
+          "content_artifacts_written": 0
+        }
+      ]
+    }
+  ],
+  "triage_status_counts": {
+    "already_canonical_context": 8,
+    "blocked_or_unreachable_defer": 603,
+    "duplicate_defer_to_canonical": 295,
+    "excluded_from_content_review": 2,
+    "high_priority_content_review": 1760,
+    "low_priority_content_review": 360,
+    "medium_priority_content_review": 1232,
+    "needs_manual_review": 205,
+    "oversized_needs_separate_pass": 261
+  },
+  "recommended_next_action_counts": {
+    "blocked_status_review_later": 603,
+    "content_review_download_allowed_later": 2923,
+    "duplicate_group_review": 295,
+    "exclude_for_now": 2,
+    "manual_review": 205,
+    "metadata_review_only": 437,
+    "oversized_strategy_later": 261
+  },
+  "extraction_readiness_prelim_counts": {
+    "low": 429,
+    "medium": 2923,
+    "none": 605,
+    "unknown": 769
+  },
+  "source_relevance_prelim_counts": {
+    "likely_relevant": 1760,
+    "possibly_relevant": 1895,
+    "unknown": 1069,
+    "unlikely_relevant": 2
+  },
+  "priority_for_content_review_counts": {
+    "defer": 1372,
+    "exclude": 2,
+    "p1": 1760,
+    "p2": 1232,
+    "p3": 360
+  },
+  "candidate_disposition_counts": {
+    "already_canonical": 8,
+    "calibration_rejected": 2,
+    "context_hold": 523,
+    "duplicate_hold": 291,
+    "insufficient_hold": 302,
+    "scheduled": 3600
+  },
+  "verification_status_counts": {
+    "blocked_or_forbidden": 339,
+    "connection_error": 8,
+    "duplicate_of_verified_source": 70,
+    "duplicate_same_url_pending": 28,
+    "error": 45,
+    "not_found": 264,
+    "reachable_html": 145,
+    "reachable_http": 2,
+    "reachable_pdf_or_document": 3533,
+    "ssl_error": 17,
+    "timeout": 14,
+    "too_large": 261
+  },
+  "source_type_counts": {
+    "agenda_cover_sheet": 28,
+    "arbitration_award": 151,
+    "blocked_or_unreadable": 6,
+    "cba": 3000,
+    "context_only": 50,
+    "factfinding": 77,
+    "index_page": 10,
+    "insufficient_source": 5,
+    "meeting_minutes": 11,
+    "memorandum_or_settlement": 355,
+    "ordinance_or_policy": 206,
+    "pay_plan": 3,
+    "unknown": 21,
+    "wage_schedule_or_compensation_plan": 803
+  },
+  "content_type_counts": {
+    "application/json": 1,
+    "application/octet-stream": 1,
+    "application/pdf": 3855,
+    "application/vnd.openxmlformats-officedocument.wordprocessingml.document": 4,
+    "application/xml": 5,
+    "image/jpeg": 1,
+    "text/html": 728,
+    "text/plain": 2,
+    "text/xml": 2,
+    "unknown": 127
+  },
+  "state_counts": {
+    "AK": 29,
+    "AL": 14,
+    "AR": 16,
+    "AZ": 29,
+    "CA": 774,
+    "CO": 25,
+    "CT": 62,
+    "DC": 5,
+    "DE": 17,
+    "FL": 241,
+    "GA": 7,
+    "HI": 3,
+    "IA": 75,
+    "ID": 20,
+    "IL": 298,
+    "IN": 58,
+    "KS": 41,
+    "KY": 18,
+    "LA": 22,
+    "MA": 161,
+    "MD": 57,
+    "ME": 46,
+    "MI": 166,
+    "MN": 131,
+    "MO": 56,
+    "MS": 12,
+    "MT": 53,
+    "NC": 17,
+    "ND": 12,
+    "NE": 31,
+    "NH": 37,
+    "NJ": 94,
+    "NM": 41,
+    "NV": 34,
+    "NY": 139,
+    "OH": 818,
+    "OK": 21,
+    "OR": 180,
+    "PA": 102,
+    "RI": 27,
+    "SC": 3,
+    "SD": 37,
+    "TN": 28,
+    "TX": 113,
+    "UT": 37,
+    "VA": 27,
+    "VT": 15,
+    "WA": 237,
+    "WI": 214,
+    "WV": 10,
+    "WY": 16
+  },
+  "disposition_to_priority": {
+    "already_canonical": {
+      "defer": 8
+    },
+    "calibration_rejected": {
+      "exclude": 2
+    },
+    "context_hold": {
+      "defer": 175,
+      "p3": 348
+    },
+    "duplicate_hold": {
+      "defer": 291
+    },
+    "insufficient_hold": {
+      "defer": 302
+    },
+    "scheduled": {
+      "defer": 596,
+      "p1": 1760,
+      "p2": 1232,
+      "p3": 12
+    }
+  },
+  "routing_status_to_triage_status": {
+    "blocked_or_forbidden": {
+      "blocked_or_unreachable_defer": 339
+    },
+    "connection_error": {
+      "needs_manual_review": 8
+    },
+    "duplicate_of_verified_source": {
+      "duplicate_defer_to_canonical": 70
+    },
+    "duplicate_same_url_pending": {
+      "duplicate_defer_to_canonical": 28
+    },
+    "error": {
+      "needs_manual_review": 45
+    },
+    "not_found": {
+      "blocked_or_unreachable_defer": 264
+    },
+    "reachable_html": {
+      "duplicate_defer_to_canonical": 11,
+      "excluded_from_content_review": 1,
+      "low_priority_content_review": 51,
+      "medium_priority_content_review": 69,
+      "needs_manual_review": 13
+    },
+    "reachable_http": {
+      "low_priority_content_review": 1,
+      "needs_manual_review": 1
+    },
+    "reachable_pdf_or_document": {
+      "already_canonical_context": 8,
+      "duplicate_defer_to_canonical": 186,
+      "excluded_from_content_review": 1,
+      "high_priority_content_review": 1760,
+      "low_priority_content_review": 308,
+      "medium_priority_content_review": 1163,
+      "needs_manual_review": 107
+    },
+    "ssl_error": {
+      "needs_manual_review": 17
+    },
+    "timeout": {
+      "needs_manual_review": 14
+    },
+    "too_large": {
+      "oversized_needs_separate_pass": 261
+    }
+  },
+  "urls_opened": 0,
+  "network_calls": 0,
+  "documents_downloaded": 0,
+  "documents_parsed": 0,
+  "pdfs_parsed": 0,
+  "ocr_runs": 0,
+  "content_artifacts_written": 0,
+  "content_download_status": "not_started",
+  "source_rating_status": "not_started",
+  "ingestion_status": "not_started",
+  "codify_status": "not_started",
+  "wage_extraction_status": "not_started",
+  "wage_gap_analysis_status": "not_started",
+  "caveats": [
+    "Metadata-only triage did not inspect source content.",
+    "All relevance, match, document, wage, mechanism, and extraction-readiness fields remain preliminary scheduling signals.",
+    "A content-review download recommendation is not evidence that a source is relevant or contains wage data.",
+    "No URL was opened and no source was downloaded, parsed, OCRed, ingested, codified, or used for wage analysis."
+  ],
+  "ledger_path": "docs/analysis/content_triage_ledgers/content_triage_metadata_ledger_cumulative.csv",
+  "ledger_sha256": "cedc269cc37f207491887151edc9c03000da1495198cdbc691c200f3eceb54c3"
+}

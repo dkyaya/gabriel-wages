@@ -341,7 +341,10 @@ export function VerificationPipeline({
           <p className="eyebrow">Content triage</p>
           <h3>
             {contentTriageStatus.content_triage_phase ===
-            "metadata_only_full_universe_collected_not_merged"
+            "metadata_only_full_universe_merged"
+              ? "Full metadata-only triage ledger is merged"
+              : contentTriageStatus.content_triage_phase ===
+                "metadata_only_full_universe_collected_not_merged"
               ? "Full routed universe has metadata-only triage"
               : contentTriageStatus.content_triage_phase ===
                 "metadata_only_round1_collected_not_merged"
@@ -351,7 +354,23 @@ export function VerificationPipeline({
         </div>
         <p>
           {contentTriageStatus.content_triage_phase ===
-          "metadata_only_full_universe_collected_not_merged" ? (
+          "metadata_only_full_universe_merged" ? (
+            <>
+              The durable metadata-only ledger covers{" "}
+              {formatNumber(contentTriageStatus.metadata_only_triage_rows_merged)}
+              {" "}routed candidate identities:{" "}
+              {formatNumber(contentTriageStatus.high_priority_content_review_rows)} p1,{" "}
+              {formatNumber(contentTriageStatus.medium_priority_content_review_rows)} p2,{" "}
+              {formatNumber(contentTriageStatus.low_priority_content_review_rows)} p3,{" "}
+              {formatNumber(contentTriageStatus.metadata_only_priority_for_content_review_counts?.defer)} deferred,
+              and{" "}
+              {formatNumber(contentTriageStatus.metadata_only_priority_for_content_review_counts?.exclude)} excluded.
+              These are preliminary metadata scheduling outcomes. Content downloads,
+              source rating, ingestion, wage extraction, and wage-gap analysis have
+              not started.
+            </>
+          ) : contentTriageStatus.content_triage_phase ===
+            "metadata_only_full_universe_collected_not_merged" ? (
             <>
               Metadata-only triage produced {formatNumber(contentTriageStatus.metadata_only_triage_rows_collected)}
               {" "}terminal scheduling outcomes across the complete routed candidate universe.
