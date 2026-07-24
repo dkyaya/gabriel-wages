@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": "0.1.0",
-    "generated_at": "2026-07-24T14:23:35Z",
+    "generated_at": "2026-07-24T14:47:37Z",
     "data_vintage": "2026-07-23",
     "source_files": [
       "docs/analysis/national_scout_coverage_state.csv",
@@ -31,7 +31,7 @@
       "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
     ]
   },
-  "overall_status": "source_discovery_scale_up_to_approximately_2000",
+  "overall_status": "verification_scale_up_planned_after_discovery_checkpoint",
   "current_inputs": {
     "national_queue_available": true,
     "national_coverage_available": true,
@@ -73,8 +73,8 @@
     },
     "verification_stage": {
       "available": false,
-      "display_status": "project_wide_dashboard_input_not_available",
-      "count": null
+      "display_status": "framework_prepared_live_verification_not_started",
+      "count": 0
     },
     "ingestion_stage": {
       "available": false,

@@ -6,6 +6,38 @@ Last updated: `2026-07-24`
 
 ---
 
+## 2026-07-24 — Scaled verification is planned for the full candidate pool
+
+### Current State
+
+- **Repository/audit:** work began at clean tracked `98ad60851d8c4eeeb1d6566c6a42f2f446fe8d54`; required ancestry is present and unrelated untracked `package-lock.json` is untouched. The canonical queue remains `national_scout_candidate_queue_2026-07-20.csv`.
+- **Workload:** all 4,726 URL-bearing candidates are inventoried. The scheduled pool is 3,600 (2,825 high, 490 medium, 285 low); 1,126 retain context/insufficient/likely-duplicate/already-canonical/calibration dispositions. There are zero missing or syntactically invalid URLs, 4,609 normalized unique URLs, 94 duplicate groups, and 117 linked duplicate rows. Nothing was opened.
+- **Framework:** `prepare_scaled_verification_batches.py` preserves queue identity, enriches authoritative municipality/Census fields, assigns stable verification/duplicate IDs, and orders work deterministically. `verify_candidate_sources.py` fully validates/writes dry-run ledgers and intentionally fails closed in live mode. `audit_verification_lanes.py` audits identity coverage and lane status without changing accounting.
+- **Round 1:** [the manifest](verification_rounds/VERIFICATION-SCALE-ROUND1-2026-07-23/verification_round_manifest.json) locks 750 high-priority rows in three lanes of 250. Lane hashes are `afc28ab941cf2f5c12900e6c6b939db76e23621a003d3f6dd180df2d761457ef`, `913dfe90e8c2c9e201a8a5979b013bb7f64372c357b3360a18dee14c279d402d`, and `59535101d46a34069b310ca87aee71e293a92f81226a7af48b0963acd18afaa9`.
+- **Dry-run:** all three lanes passed 250-row schema/identity/URL-syntax planning. The combined audit reports 750 ledger rows, zero cross-lane duplicate verification IDs, zero URL opens/network calls, three `dry_run_passed` lanes, and `dry_run_complete_do_not_merge_live_ledger`.
+- **Full backlog:** [the full plan](verification_rounds/FULL-BACKLOG-PLAN-2026-07-23/full_backlog_manifest.json) preserves all 4,726 original queue IDs. Five nominal 750-row rounds cover the scheduled pool; two additional rounds disposition all held/context/duplicate/canonical/calibration rows.
+- **Dashboard:** `verification_status_summary.json` reports `planned_scale_up`, first 750 prepared, seven full-backlog rounds, and live verification/ingestion/wage-gap analysis `not_started`. The hub shows the same caveat and keeps candidate, verified, ingested, codified, and analysis-ready stages separate.
+- **Validation:** [the validation record](scaled_verification_framework_validation_2026-07-23.md) reports compiles, five framework checks, deterministic planners, three dry runs/audit, schema validation, 60 ingestion tests, 14 JSON parses, frontend build, protected/accounting invariance, and diff checks passed. No URL, network/API/model, live verification, ingestion, codification, extraction, wage-gap work, regression, remote action, or push occurred.
+
+### Interpretation and limitations
+
+The framework is prepared for broad verification, but live fetching is
+deliberately not implemented by this offline task. The future command file is
+therefore documentation, not an immediately executable live path. Verification
+will establish source relevance and routing only; it will not create contract
+rows, wage observations, codified mechanisms, or findings.
+
+### Next Move
+
+First implement and offline-test the bounded live fetch path under separate
+authorization, including redirects, content limits, public/licensed-source
+access rules, errors, and lane-local artifacts. Then use
+[the Round 1 live prompt](verification_scale_round1_live_prompt_2026-07-23.md)
+under explicit live authorization. Run three 250-row lanes conservatively,
+audit them together, and stop before the separately authorized verified-ledger
+merge. Broad scouting remains paused; ingestion/codification/wage analysis
+remain downstream.
+
 ## 2026-07-24 — Aggressive 3×300 Attempt 3 is merged; broad scouting is paused
 
 ### Current State

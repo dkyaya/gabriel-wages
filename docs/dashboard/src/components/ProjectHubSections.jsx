@@ -238,7 +238,7 @@ export function ScoutOperationsPanel({ operations, runtime, parallelStatus }) {
   );
 }
 
-export function VerificationPipeline({ candidateSummary, readiness, phase }) {
+export function VerificationPipeline({ candidateSummary, readiness, phase, verificationStatus }) {
   const candidateRows = candidateSummary.totals.candidate_rows;
   const stages = [
     ["Candidate lead", formatNumber(candidateRows), "Collected", "scout"],
@@ -255,7 +255,7 @@ export function VerificationPipeline({ candidateSummary, readiness, phase }) {
           <p className="eyebrow">Verification pipeline</p>
           <h2 id="verification-title">From discovered lead to analysis-ready evidence</h2>
         </div>
-        <StatusPill tone="future">Begins near {formatNumber(phase.checkpoint_target_scout_covered)}</StatusPill>
+        <StatusPill tone="future">Scale-up planned; live review not started</StatusPill>
       </div>
 
       <div className="verification-flow">
@@ -275,10 +275,17 @@ export function VerificationPipeline({ candidateSummary, readiness, phase }) {
           <h3>Verify, extract, ingest, rate, and analyze descriptively</h3>
         </div>
         <p>
-          At the approximately 2,000-covered checkpoint, confirm exact employer and unit, provenance,
-          dates, completeness, wage extractability, and matched-cycle potential before any gap calculation.
+          Verification scale-up is planned: the first {formatNumber(verificationStatus.first_round_candidate_rows)}
+          {" "}candidate rows are prepared across {verificationStatus.first_round_lanes} offline-tested lanes,
+          and the complete {formatNumber(verificationStatus.total_url_bearing_candidate_rows)}-row backlog is mapped.
+          No candidate URL has been opened by this planning work.
         </p>
       </div>
+      <p className="panel-note">
+        <strong>Coverage plan:</strong> {verificationStatus.scheduled_pool_estimated_rounds} nominal rounds cover
+        the scheduled pool; {verificationStatus.full_backlog_estimated_rounds} cover every URL-bearing candidate
+        row, including separately tracked holds and duplicate/canonical dispositions.
+      </p>
       <p className="panel-note">{readiness.promotion_gate}</p>
     </section>
   );
@@ -412,8 +419,8 @@ export function NextStepsPanel({ priority, phase }) {
       <div className="next-step-grid">
         <article className="recommended-step">
           <span>Immediate</span>
-          <h3>Prepare the first verification batch</h3>
-          <p>Select 50–100 high-value candidate rows using state yield, municipality size, likely safety/non-safety match potential, and source-type diversity.</p>
+          <h3>Authorize the first scaled verification round</h3>
+          <p>The first 750 candidate rows are locked across three 250-row lanes. Run live verification only under separate authorization, then audit before any serial ledger merge.</p>
         </article>
         <article>
           <span>Checkpoint reached</span>

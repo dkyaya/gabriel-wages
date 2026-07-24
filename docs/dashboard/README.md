@@ -32,6 +32,13 @@ extraction, ingestion, source quality/extractability rating, descriptive
 wage-growth-gap analysis, mechanism-correlation documentation, and a future
 gap-percentage map/filter. Regressions are deferred.
 
+The scaled verification framework now maps all 4,726 URL-bearing candidate
+rows. Its first offline-prepared round contains 750 scheduled candidates in
+three 250-row lanes; five nominal rounds cover all 3,600 scheduled rows and
+seven cover the full queue, including explicitly held and duplicate/canonical
+dispositions. All three first-round dry runs passed without opening a URL.
+Live verification remains `not_started`.
+
 The current PI checkpoint report is available in the dashboard’s Reports Library and directly here:
 
 - [PI Source-Discovery Progress Report PDF](reports/pi_progress_report_source_discovery_2026-07-22.pdf)
@@ -153,6 +160,7 @@ The dashboard builder writes:
 - `scout_runtime_trends.json`
 - `project_phase_summary.json`
 - `parallel_scout_status.json`
+- `verification_status_summary.json`
 - `reports_index.json`
 
 Review the printed totals and diffs before committing. In particular, candidate-positive plus parseable-empty municipalities must equal scout-covered municipalities, and transport/failure-only results must remain outside successful coverage.

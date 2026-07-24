@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0.0",
+  "round_id": "VERIFICATION-SCALE-ROUND1-2026-07-23",
+  "plan_type": "scaled_candidate_source_verification",
+  "status": "planned_not_run",
+  "created_date": "2026-07-24",
+  "candidate_queue_csv": "docs/analysis/national_scout_candidate_queue_2026-07-20.csv",
+  "candidate_queue_sha256": "d46b8bc3c60cbbda9b2f6f618fc447d1878d610fa1beb0924e7bafd47f965e83",
+  "total_url_bearing_candidate_rows": 4726,
+  "eligible_rows_in_requested_scope": 3600,
+  "planned_candidate_rows": 750,
+  "batch_size_per_lane": 250,
+  "num_lanes": 3,
+  "priority_scope": "scheduled",
+  "include_held": false,
+  "include_duplicates": false,
+  "state_scope": "ALL",
+  "duplicate_url_groups_in_full_queue": 94,
+  "duplicate_url_extra_rows_in_full_queue": 117,
+  "candidate_stage_boundary": "planned candidate leads only; not verified, ingested, codified, wage-extracted, or analysis-ready",
+  "network_calls": 0,
+  "urls_opened": 0,
+  "lanes": [
+    {
+      "lane_id": "lane_1",
+      "lane_number": 1,
+      "input_csv": "docs/analysis/verification_rounds/VERIFICATION-SCALE-ROUND1-2026-07-23/lane_1_verification_input.csv",
+      "input_sha256": "afc28ab941cf2f5c12900e6c6b939db76e23621a003d3f6dd180df2d761457ef",
+      "expected_rows": 250,
+      "dry_run_output_dir": "tmp/verification_rounds/VERIFICATION-SCALE-ROUND1-2026-07-23/lane_1_dry_run",
+      "live_output_dir": "tmp/verification_rounds/VERIFICATION-SCALE-ROUND1-2026-07-23/lane_1_live_attempt1"
+    },
+    {
+      "lane_id": "lane_2",
+      "lane_number": 2,
+      "input_csv": "docs/analysis/verification_rounds/VERIFICATION-SCALE-ROUND1-2026-07-23/lane_2_verification_input.csv",
+      "input_sha256": "913dfe90e8c2c9e201a8a5979b013bb7f64372c357b3360a18dee14c279d402d",
+      "expected_rows": 250,
+      "dry_run_output_dir": "tmp/verification_rounds/VERIFICATION-SCALE-ROUND1-2026-07-23/lane_2_dry_run",
+      "live_output_dir": "tmp/verification_rounds/VERIFICATION-SCALE-ROUND1-2026-07-23/lane_2_live_attempt1"
+    },
+    {
+      "lane_id": "lane_3",
+      "lane_number": 3,
+      "input_csv": "docs/analysis/verification_rounds/VERIFICATION-SCALE-ROUND1-2026-07-23/lane_3_verification_input.csv",
+      "input_sha256": "59535101d46a34069b310ca87aee71e293a92f81226a7af48b0963acd18afaa9",
+      "expected_rows": 250,
+      "dry_run_output_dir": "tmp/verification_rounds/VERIFICATION-SCALE-ROUND1-2026-07-23/lane_3_dry_run",
+      "live_output_dir": "tmp/verification_rounds/VERIFICATION-SCALE-ROUND1-2026-07-23/lane_3_live_attempt1"
+    }
+  ]
+}

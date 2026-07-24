@@ -1,0 +1,8 @@
+round_number,planned_round_id,phase,row_start,row_end,candidate_rows,lanes,nominal_rows_per_lane,scheduled_rows,held_or_other_rows,status
+1,VERIFICATION-SCALE-ROUND1-PLANNED,scheduled,1,750,750,3,250,750,0,planned_not_run
+2,VERIFICATION-SCALE-ROUND2-PLANNED,scheduled,751,1500,750,3,250,750,0,planned_not_run
+3,VERIFICATION-SCALE-ROUND3-PLANNED,scheduled,1501,2250,750,3,250,750,0,planned_not_run
+4,VERIFICATION-SCALE-ROUND4-PLANNED,scheduled,2251,3000,750,3,250,750,0,planned_not_run
+5,VERIFICATION-SCALE-ROUND5-PLANNED,scheduled,3001,3600,600,3,250,600,0,planned_not_run
+6,VERIFICATION-SCALE-ROUND6-PLANNED,full_backlog_extension,3601,4350,750,3,250,0,750,planned_not_run
+7,VERIFICATION-SCALE-ROUND7-PLANNED,full_backlog_extension,4351,4726,376,3,250,0,376,planned_not_run

@@ -6,6 +6,32 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-24 (Scaled candidate-source verification framework prepared offline)
+
+**Did**
+- Started from clean tracked `98ad60851d8c4eeeb1d6566c6a42f2f446fe8d54`, confirmed required ancestry, and left the unrelated untracked root `package-lock.json` untouched.
+- Audited all 4,726 URL-bearing candidate rows across 1,858 candidate-positive municipalities: 3,600 are scheduled (2,825 high, 490 medium, 285 low) and 1,126 retain explicit context/insufficient/duplicate/canonical/calibration dispositions. Offline URL syntax/normalization finds zero missing/invalid locators, 4,609 normalized unique URLs, 94 duplicate groups, and 117 linked extra rows.
+- Added a durable verification schema, deterministic batch/backlog planner, fail-closed dry-run verification runner, offline lane auditor, and synthetic/canonical no-network tests.
+- Prepared `VERIFICATION-SCALE-ROUND1-2026-07-23`: three locked 250-row high-priority lanes, 750 unique verification/queue IDs, and complete municipality/Census identity. All three dry runs passed; their combined audit inspects 750 rows with zero URL opens/network calls and recommends no live-ledger merge.
+- Created the full 4,726-row identity-preserving backlog inventory and schedule: five nominal 3×250 rounds cover the 3,600 scheduled rows, and two additional rounds cover every held/context/duplicate/canonical/calibration row.
+- Added `verification_status_summary.json` and a compact dashboard update showing scale-up planned, first 750 prepared, seven full-backlog rounds, and live verification/ingestion/wage analysis not started.
+
+**Decisions and why**
+- Preserve every original queue identity, including exact duplicates. Duplicate rows share deterministic groups so later live review can reuse one source artifact without deleting provenance.
+- Keep live URL fetching fail-closed in this task. Its implementation, access safeguards, and live execution require separate authorization; offline preparation cannot accidentally open a candidate.
+- Scale across the whole queue in auditable phases rather than treating 1,126 non-scheduled dispositions as indefinite leftovers.
+
+**Surprises/breakage**
+- The first dashboard build itself succeeded, but its `tee` path was one directory too high and caused a logging-path error. The build was rerun at the correct path and passed.
+- The first 750 deterministic scheduled rows are all high priority because that pool alone contains 2,825 rows.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Five compiles, five scaled-verification test checks, three 250-row dry runs, a 750-row dry-lane audit, schema validation, 60 ingestion tests, 14 dashboard JSON parses, frontend production build, protected/accounting hashes, and diff checks passed. No URL was opened; no live verification, network/API/model call, ingestion, `gabriel.codify`, wage extraction, wage-gap work, causal claim, regression, remote action, or push occurred.
+
+**Next steps**
+1. Under a separate task, implement and offline-test bounded public-URL fetching, redirect/content-size limits, artifact handling, and access-policy safeguards in the fail-closed live runner.
+2. Only after that implementation and explicit live authorization, use `verification_scale_round1_live_prompt_2026-07-23.md` for the three 250-row lanes.
+3. Audit all live lanes, then use a separately authorized serial merge to create the durable verified-source ledger. Do not ingest, codify, or calculate gaps during verification.
+
 ## 2026-07-24 (Aggressive 3×300 Attempt 3 accounting merged; discovery checkpoint exceeded)
 
 **Did**
