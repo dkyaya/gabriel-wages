@@ -179,13 +179,15 @@ the workflow checkpoint. They are retained as current operational state, but
 must not be used to schedule another ordinary discovery wave while broad
 scouting is paused.
 
-The verification operations layer is now
-`live_path_implemented_planned_scale_up`. The recommended first authorized
-live round is `VERIFICATION-SCALE-ROUND1-3X750-2026-07-23`: three lanes of 750
-candidate rows, bounded to eight logical requests per lane, 20-second row
-timeouts, five redirects, and 10 MiB responses. All three 750-row dry runs
-passed offline. No candidate URL has been opened, all 4,726 leads remain
-unverified, and ingestion and wage-gap analysis remain not started.
+The verification operations layer is now `round1_3x750_merged`. The bounded
+live round `VERIFICATION-SCALE-ROUND1-3X750-2026-07-23` produced and serially
+merged 2,250 terminal URL-routing outcomes: 1,888 (83.911%) were reachable or
+successfully reused. The durable routing ledger preserves every queue identity
+and every terminal status. This is availability/response-metadata routing, not
+content relevance, ingestion, employer/unit confirmation, wage extraction, or
+analysis-ready evidence. An estimated 1,350 scheduled rows and 2,476 total
+URL-bearing rows remain. Ingestion, codification, wage extraction, and
+wage-gap analysis remain not started.
 
 ## Run and build locally
 

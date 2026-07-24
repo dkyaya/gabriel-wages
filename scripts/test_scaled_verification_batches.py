@@ -14,6 +14,7 @@ from pathlib import Path
 import httpx
 
 import audit_verification_lanes as auditor
+import merge_verification_lanes as merger
 import prepare_scaled_verification_batches as planner
 import verify_candidate_sources as verifier
 
@@ -374,6 +375,228 @@ def test_mocked_live_path_and_duplicate_reuse() -> None:
         assert audit["duplicate_reuse_rows"] == 1
 
 
+def write_synthetic_merge_lane(
+    root: Path,
+    lane_id: str,
+    *,
+    pending_last_row: bool = False,
+) -> tuple[dict[str, object], dict[str, object]]:
+    input_path = root / f"{lane_id}_input.csv"
+    input_rows = write_input(input_path)
+    live_dir = root / f"{lane_id}_live"
+    live_dir.mkdir()
+    ledger_rows: list[dict[str, str]] = []
+    for index, input_row in enumerate(input_rows):
+        row = {field: "" for field in verifier.LEDGER_FIELDS}
+        for field in planner.IDENTITY_FIELDS:
+            if field in row:
+                row[field] = input_row.get(field, "")
+        row.update(
+            {
+                "verification_status": "reachable_html",
+                "verification_status_detail": "synthetic terminal result",
+                "url_reachable": "yes",
+                "http_status_code": "200",
+                "final_url": input_row["candidate_url"],
+                "redirect_detected": "no",
+                "redirect_chain_length": "0",
+                "content_type": "text/html",
+                "content_length_header": "100",
+                "bytes_read": "100",
+                "fetch_elapsed_seconds": "0.01",
+                "source_officialness_prelim": "unknown",
+                "employer_match_prelim": "needs_content_review",
+                "source_document_type_prelim": "html_needs_content_review",
+                "wage_data_signal_prelim": "unknown",
+                "mechanism_language_signal_prelim": "unknown",
+                "verified_at": "2026-07-24T00:00:00Z",
+            }
+        )
+        if pending_last_row and index == len(input_rows) - 1:
+            row["verification_status"] = "pending"
+        ledger_rows.append(row)
+    planner.write_csv(
+        live_dir / "verification_ledger.csv", ledger_rows, verifier.LEDGER_FIELDS
+    )
+    (live_dir / "verification_summary.json").write_text(
+        json.dumps(
+            {
+                "status": "completed",
+                "urls_opened": len(ledger_rows),
+                "network_calls": len(ledger_rows),
+            }
+        ),
+        encoding="utf-8",
+    )
+    lane = {
+        "lane_id": lane_id,
+        "lane_number": int(lane_id.rsplit("_", 1)[-1]),
+        "input_csv": str(input_path),
+        "input_sha256": digest(input_path),
+        "expected_rows": len(input_rows),
+        "dry_run_output_dir": str(root / f"{lane_id}_dry"),
+        "live_output_dir": str(live_dir),
+    }
+    lane_audit = {
+        "lane_id": lane_id,
+        "classification": "completed_merge_eligible",
+        "ledger_rows": len(ledger_rows),
+        "terminal_rows": len(ledger_rows),
+    }
+    return lane, lane_audit
+
+
+def synthetic_merge_audit(
+    round_id: str,
+    lanes: list[dict[str, object]],
+    lane_audits: list[dict[str, object]],
+) -> dict[str, object]:
+    rows = sum(int(lane["expected_rows"]) for lane in lanes)
+    return {
+        "round_id": round_id,
+        "lanes": lane_audits,
+        "planned_candidate_rows": rows,
+        "ledger_rows": rows,
+        "terminal_rows": rows,
+        "cross_lane_duplicate_verification_ids": 0,
+        "accounting_mutations": 0,
+        "urls_opened": rows,
+        "network_calls": rows,
+        "duplicate_reuse_rows": 0,
+        "merge_recommendation": "merge_all_verification_lanes",
+    }
+
+
+def test_serial_merge_preserves_rows_and_fields() -> None:
+    with tempfile.TemporaryDirectory(prefix="verification_merge_test_") as temporary:
+        root = Path(temporary)
+        lane, lane_audit = write_synthetic_merge_lane(root, "lane_1")
+        round_id = "SYNTHETIC-MERGE-ROUND"
+        manifest_path = root / "manifest.json"
+        audit_path = root / "audit.json"
+        manifest_path.write_text(
+            json.dumps({"round_id": round_id, "lanes": [lane]}),
+            encoding="utf-8",
+        )
+        audit_path.write_text(
+            json.dumps(synthetic_merge_audit(round_id, [lane], [lane_audit])),
+            encoding="utf-8",
+        )
+        output_dir = root / "merged"
+        summary = merger.merge(
+            manifest_path=manifest_path,
+            audit_summary_path=audit_path,
+            output_dir=output_dir,
+            round_id=round_id,
+            merge_id="SYNTHETIC-MERGE-ID",
+            merged_at="2026-07-24T00:00:00Z",
+            write_latest=False,
+        )
+        _, merged_rows = merger.read_csv(
+            output_dir / "verified_source_routing_ledger.csv"
+        )
+        assert summary["ledger_rows"] == len(merged_rows) == 4
+        assert summary["terminal_rows"] == 4
+        assert summary["verification_status_counts"] == {"reachable_html": 4}
+        assert summary["reachable_or_reused_total"] == 4
+        assert all(
+            row["verification_stage"]
+            == "url_reachability_metadata_verified"
+            for row in merged_rows
+        )
+        assert [row["duplicate_source_group_id"] for row in merged_rows]
+        assert all(row["verification_lane_id"] == "lane_1" for row in merged_rows)
+
+
+def test_serial_merge_rejects_duplicate_pending_and_ineligible() -> None:
+    with tempfile.TemporaryDirectory(prefix="verification_merge_gate_test_") as temporary:
+        root = Path(temporary)
+        lane_1, audit_1 = write_synthetic_merge_lane(root, "lane_1")
+        lane_2, audit_2 = write_synthetic_merge_lane(root, "lane_2")
+        round_id = "SYNTHETIC-MERGE-GATES"
+        manifest_path = root / "duplicate_manifest.json"
+        audit_path = root / "duplicate_audit.json"
+        manifest_path.write_text(
+            json.dumps({"round_id": round_id, "lanes": [lane_1, lane_2]}),
+            encoding="utf-8",
+        )
+        audit_path.write_text(
+            json.dumps(
+                synthetic_merge_audit(
+                    round_id, [lane_1, lane_2], [audit_1, audit_2]
+                )
+            ),
+            encoding="utf-8",
+        )
+        try:
+            merger.merge(
+                manifest_path=manifest_path,
+                audit_summary_path=audit_path,
+                output_dir=root / "duplicate_output",
+                round_id=round_id,
+                merge_id="DUPLICATE-MERGE",
+                write_latest=False,
+            )
+        except merger.MergeValidationError as exc:
+            assert "duplicate verification IDs" in str(exc)
+        else:
+            raise AssertionError("Duplicate verification IDs did not fail merge")
+
+        pending_lane, pending_audit = write_synthetic_merge_lane(
+            root, "lane_3", pending_last_row=True
+        )
+        pending_manifest = root / "pending_manifest.json"
+        pending_audit_path = root / "pending_audit.json"
+        pending_manifest.write_text(
+            json.dumps({"round_id": round_id, "lanes": [pending_lane]}),
+            encoding="utf-8",
+        )
+        pending_audit_path.write_text(
+            json.dumps(
+                synthetic_merge_audit(
+                    round_id, [pending_lane], [pending_audit]
+                )
+            ),
+            encoding="utf-8",
+        )
+        try:
+            merger.merge(
+                manifest_path=pending_manifest,
+                audit_summary_path=pending_audit_path,
+                output_dir=root / "pending_output",
+                round_id=round_id,
+                merge_id="PENDING-MERGE",
+                write_latest=False,
+            )
+        except merger.MergeValidationError as exc:
+            assert "non-terminal" in str(exc)
+        else:
+            raise AssertionError("Non-terminal row did not fail merge")
+
+        ineligible = synthetic_merge_audit(round_id, [lane_1], [audit_1])
+        ineligible["merge_recommendation"] = "do_not_merge_until_resume_or_review"
+        ineligible_path = root / "ineligible_audit.json"
+        ineligible_path.write_text(json.dumps(ineligible), encoding="utf-8")
+        single_manifest = root / "single_manifest.json"
+        single_manifest.write_text(
+            json.dumps({"round_id": round_id, "lanes": [lane_1]}),
+            encoding="utf-8",
+        )
+        try:
+            merger.merge(
+                manifest_path=single_manifest,
+                audit_summary_path=ineligible_path,
+                output_dir=root / "ineligible_output",
+                round_id=round_id,
+                merge_id="INELIGIBLE-MERGE",
+                write_latest=False,
+            )
+        except merger.MergeValidationError as exc:
+            assert "does not recommend" in str(exc)
+        else:
+            raise AssertionError("Ineligible audit did not fail merge")
+
+
 def main() -> int:
     protected = {
         path: digest(path)
@@ -385,6 +608,8 @@ def main() -> int:
         test_large_profiles,
         test_dry_runner_opens_no_urls_and_audits,
         test_mocked_live_path_and_duplicate_reuse,
+        test_serial_merge_preserves_rows_and_fields,
+        test_serial_merge_rejects_duplicate_pending_and_ineligible,
     ]
     for test in tests:
         test()

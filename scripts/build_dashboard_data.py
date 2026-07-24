@@ -53,6 +53,11 @@ HYPOTHESIS_TRACKER_PATH = ANALYSIS_DIR / "hypothesis_tracker_2026-07-12.csv"
 REPORTS_INDEX_SOURCE_PATH = (
     ROOT / "docs" / "dashboard" / "reports" / "reports_index.json"
 )
+VERIFICATION_ROUTING_SUMMARY_PATH = (
+    ANALYSIS_DIR
+    / "verification_ledgers"
+    / "verified_source_routing_summary_latest.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -87,6 +92,7 @@ OPTIONAL_PATHS = [
     STATE_CITY_CLAIM_MAP_PATH,
     HYPOTHESIS_TRACKER_PATH,
     HOSTED_SEARCH_RECOMMENDATION_PATH,
+    VERIFICATION_ROUTING_SUMMARY_PATH,
 ]
 
 STATE_NAMES = {
@@ -155,7 +161,7 @@ GLOBAL_LIMITATIONS = [
     "A parseable empty candidate list is a completed scout outcome, not proof that no source exists.",
     "Connection-only failures are excluded from discovery coverage and counted separately.",
     "Likely matched-set groups are scheduling leads inferred from scout unit labels, not verified city-cycle matches.",
-    "Project-wide verified, ingested, wage-extraction, codified, and regression metrics are not yet wired into this dashboard build.",
+    "Verification routing is available for the merged Round 1 subset; content relevance, ingestion, wage extraction, codification, and regression metrics are not yet available project-wide.",
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold.",
 ]
@@ -1181,7 +1187,7 @@ def build_project_phase_summary(
     return {
         **metadata,
         "stage": "post_scout_checkpoint_transition",
-        "current_phase": "Verification planning and source triage",
+        "current_phase": "Scaled verification routing and source triage",
         "checkpoint_target_scout_covered": SCOUT_CHECKPOINT_TARGET,
         "current_scout_covered": covered,
         "remaining_to_checkpoint": remaining,
@@ -1245,7 +1251,7 @@ def build_project_phase_summary(
         ],
         "regressions_status": "Deferred",
         "last_updated_commit": CURRENT_SOURCE_ACCOUNTING_COMMIT,
-        "last_updated_context": "post_checkpoint_transition",
+        "last_updated_context": "verification_round1_routing_merged",
         "future_live_controls": [
             "stronger preflight gate",
             "compact prompts",
@@ -1338,7 +1344,7 @@ def build_parallel_scout_status(
 def build_verification_status_summary(
     *, queue_rows: list[dict[str, str]], metadata: dict[str, Any]
 ) -> dict[str, Any]:
-    """Describe the live-ready verification plan without claiming review."""
+    """Describe merged routing outcomes without claiming content verification."""
 
     triage = Counter(row.get("triage_bucket", "") for row in queue_rows)
     scheduled = sum(triage[bucket] for bucket in VERIFY_BUCKETS)
@@ -1352,6 +1358,97 @@ def build_verification_status_summary(
     )
     capacity_3x750 = VERIFICATION_BATCH_SIZE * VERIFICATION_LANES
     capacity_3x1000 = 3_000
+    routing_summary = (
+        read_json(VERIFICATION_ROUTING_SUMMARY_PATH)
+        if VERIFICATION_ROUTING_SUMMARY_PATH.exists()
+        else None
+    )
+    if routing_summary:
+        status_counts = routing_summary["verification_status_counts"]
+        merged_rows = int(routing_summary["ledger_rows"])
+        scheduled_remaining = max(scheduled - merged_rows, 0)
+        full_remaining = max(len(queue_rows) - merged_rows, 0)
+        reachable_or_reused = int(routing_summary["reachable_or_reused_total"])
+        return {
+            **metadata,
+            "stage": "candidate_source_verification_routing",
+            "verification_phase": "round1_3x750_merged",
+            "latest_merged_round_id": routing_summary["verification_round_id"],
+            "latest_merge_id": routing_summary["verification_merge_id"],
+            "live_verification_status": "round1_merged",
+            "verification_live_status": "round1_merged",
+            "total_url_bearing_candidate_rows": len(queue_rows),
+            "scheduled_verification_rows": scheduled,
+            "held_or_context_rows": held_or_context,
+            "duplicate_or_already_canonical_rows": duplicate_or_canonical,
+            "held_rejected_context_duplicate_canonical_total": (
+                len(queue_rows) - scheduled
+            ),
+            "rows_verified_routing_total": merged_rows,
+            "url_opens_total": int(routing_summary["url_opens_total"]),
+            "reachable_or_reused_total": reachable_or_reused,
+            "reachable_or_reused_rate": round(
+                reachable_or_reused / merged_rows, 5
+            ),
+            "reachable_pdf_or_document_total": int(
+                status_counts.get("reachable_pdf_or_document", 0)
+            ),
+            "reachable_html_total": int(status_counts.get("reachable_html", 0)),
+            "blocked_or_forbidden_total": int(
+                status_counts.get("blocked_or_forbidden", 0)
+            ),
+            "not_found_total": int(status_counts.get("not_found", 0)),
+            "too_large_total": int(status_counts.get("too_large", 0)),
+            "error_total": int(status_counts.get("error", 0)),
+            "ssl_error_total": int(status_counts.get("ssl_error", 0)),
+            "timeout_total": int(status_counts.get("timeout", 0)),
+            "connection_error_total": int(
+                status_counts.get("connection_error", 0)
+            ),
+            "duplicate_reuse_rows": int(routing_summary["duplicate_reuse_rows"]),
+            "scheduled_verification_rows_remaining_estimate": scheduled_remaining,
+            "full_url_bearing_rows_remaining_estimate": full_remaining,
+            "recommended_next_round_id": (
+                "VERIFICATION-SCALE-ROUND2-3X750-2026-07-24"
+            ),
+            "recommended_concurrency_per_lane": VERIFICATION_CONCURRENCY_PER_LANE,
+            "recommended_timeout_seconds": 20,
+            "recommended_max_redirects": 5,
+            "recommended_max_bytes": 10_485_760,
+            "scheduled_verification_estimated_rounds_3x750": math.ceil(
+                scheduled_remaining / capacity_3x750
+            ),
+            "full_backlog_estimated_rounds_3x750": math.ceil(
+                full_remaining / capacity_3x750
+            ),
+            "full_backlog_estimated_rounds_3x1000": math.ceil(
+                full_remaining / capacity_3x1000
+            ),
+            "scheduled_pool_estimated_rounds": math.ceil(
+                scheduled_remaining / capacity_3x750
+            ),
+            "full_backlog_estimated_rounds": math.ceil(
+                full_remaining / capacity_3x750
+            ),
+            "ingestion_status": "not_started",
+            "codify_status": "not_started",
+            "wage_extraction_status": "not_started",
+            "wage_gap_analysis_status": "not_started",
+            "stage_boundaries": [
+                "candidate lead",
+                "verified-source routing outcome",
+                "ingested source",
+                "codified evidence",
+                "analysis-ready wage observation",
+            ],
+            "routing_summary_source": relative(VERIFICATION_ROUTING_SUMMARY_PATH),
+            "caveats": [
+                "Verification routing does not equal ingestion.",
+                "A reachable PDF/document does not equal extracted wage data or a confirmed employer/unit match.",
+                "Blocked, not-found, oversized, and transport statuses are URL-routing outcomes, not municipality source-absence findings.",
+                "No wage gaps have been calculated.",
+            ],
+        }
     return {
         **metadata,
         "stage": "candidate_source_verification_planning",

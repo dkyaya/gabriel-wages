@@ -6,6 +6,28 @@ Last updated: `2026-07-24`
 
 ---
 
+## 2026-07-24 — Verification Scale Round 1 3×750 is durably merged
+
+### Current State
+
+- **Readiness:** work started at clean tracked `642dbdab2190572a70b39e6221370a7796323b09`. The fresh audit reproduces all three locked hashes, three `completed_merge_eligible` classifications, 2,250 planned/ledger/terminal rows, zero cross-lane duplicate IDs or accounting mutations, and `merge_all_verification_lanes`.
+- **Exactly-once merge:** `merge_verification_lanes.py` validated the audit, hashes, terminal statuses, identity/group mappings, and lane-local artifact paths, then created the round directory once. It refuses to reuse that output directory.
+- **Durable ledger:** [the result](verification_scale_round1_3x750_serial_merge_result_2026-07-24.md) records 2,250 routing rows and unique verification/queue IDs. The ledger stage is `url_reachability_metadata_verified`, not ingestion or analysis-ready evidence.
+- **Outcomes:** 1,868 reachable documents, 18 reachable HTML rows, two successful duplicate reuses, six duplicate-pending followers, 137 blocked, 131 not found, 64 too large, 18 generic errors, three SSL errors, two timeouts, and one connection error. Reachable/reused is 1,888/2,250 (83.911%).
+- **Artifacts:** 2,229 nonblank ledger references resolve within lane roots and point to 2,221 unique small metadata JSON files. No content samples or full documents were introduced.
+- **Dashboard:** `verification_status_summary.json` now says `round1_3x750_merged`, reports all routing counts, and estimates 1,350 scheduled and 2,476 full-pool URL rows remain. The frontend distinguishes routing from verified content and shows ingestion/codify/wage extraction/gap analysis as not started.
+- **Boundary:** no URL was opened and no network/API/model call occurred during the merge. Scout queue/coverage remained 4,726 rows and 2,436 covered municipalities. No contract/city-coverage/corpus edit, ingestion, codification, wage extraction, wage-gap/causal work, regression, remote action, or push occurred.
+- **Validation:** compiles, eight offline/mock verification tests, the final lane audit, schema and ingestion checks, coverage audit, all dashboard JSON parsing, frontend production build, protected/accounting hashes, merged-artifact checks, and diff checks passed.
+
+### Next Move
+
+Use [the next-round plan](verification_scale_next_round_plan_2026-07-24.md) to
+prepare `VERIFICATION-SCALE-ROUND2-3X750-2026-07-24`. Only approximately 1,350
+scheduled rows remain, so the planner must exclude all Round 1 identities and
+record the actual under-capacity lane allocation. Live URL access still
+requires separate authorization. Keep ingestion, codification, wage
+extraction, and wage-gap analysis outside the routing round.
+
 ## 2026-07-24 — Verification Scale Round 1 3×750 live lanes completed; serial merge pending
 
 ### Current State

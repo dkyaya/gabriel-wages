@@ -6,6 +6,30 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-24 (Verification Scale Round 1 3×750 routing ledger merged)
+
+**Did**
+- Started from clean tracked `642dbdab2190572a70b39e6221370a7796323b09`, confirmed required ancestry and locked hashes, and left the unrelated untracked root `package-lock.json` untouched.
+- Re-ran the offline lane auditor: all three lanes remain `completed_merge_eligible`; 2,250/2,250 rows are terminal; cross-lane duplicate IDs and accounting mutations are zero; recommendation is `merge_all_verification_lanes`.
+- Added a fail-closed offline serial merge tool and tests for row preservation, duplicate IDs, nonterminal rows, and ineligible audit state. Ran the authorized merge exactly once.
+- Created a durable 2,250-row routing ledger with 1,888 reachable/reused rows (83.911%), all terminal statuses, duplicate links, lane-local artifact references, and explicit round/merge/stage metadata.
+- Refreshed the dashboard verification layer to `round1_3x750_merged`: 1,350 scheduled and 2,476 full-pool rows remain by planning subtraction. Scout queue/coverage accounting remained unchanged.
+
+**Decisions and why**
+- Treat the durable output as URL-reachability/response-metadata routing, not content verification, ingestion, employer/unit confirmation, or wage evidence.
+- Keep the 10 MiB global ceiling. Route the 64 oversized rows through a later dedicated handling plan if extraction requires them.
+- Plan Round 2 against the durable ledger's exact identities; do not rely on count subtraction alone.
+
+**Surprises/breakage**
+- None. The fresh audit, merge gates, and exactly-once output-directory guard all passed.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. The verification tests, final lane audit, dashboard JSON/frontend checks, schema validation, 60 ingestion tests, protected/accounting hashes, artifact/secret checks, and diff checks passed. This merge opened no URL and made no network/API/model call; it did not change scout accounting, contracts, city coverage, or corpus; and no ingestion, `gabriel.codify`, wage extraction, wage-gap work, causal claim, regression, remote action, or push occurred.
+
+**Next steps**
+1. Prepare `VERIFICATION-SCALE-ROUND2-3X750-2026-07-24` from the estimated 1,350 remaining scheduled rows while excluding all merged identities.
+2. Keep concurrency eight, 20-second timeout, five redirects, and 10 MiB for a separately authorized live routing round.
+3. Defer ingestion/codification and wage work until scheduled routing is substantially complete and exception handling is designed.
+
 ## 2026-07-24 (Verification Scale Round 1 3×750 live collection completed; merge deferred)
 
 **Did**

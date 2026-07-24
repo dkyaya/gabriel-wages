@@ -51,7 +51,7 @@ export function ProjectPhasePanel({ phase }) {
       <div className="section-heading">
         <div>
           <p className="eyebrow">Project phase</p>
-          <h2 id="project-phase-title">Post-Checkpoint Verification Planning</h2>
+          <h2 id="project-phase-title">Post-Checkpoint Verification Routing</h2>
         </div>
         <StatusPill tone="scout">
           {formatNumber(phase.current_scout_covered)} of {formatNumber(phase.checkpoint_target_scout_covered)}
@@ -240,9 +240,15 @@ export function ScoutOperationsPanel({ operations, runtime, parallelStatus }) {
 
 export function VerificationPipeline({ candidateSummary, readiness, phase, verificationStatus }) {
   const candidateRows = candidateSummary.totals.candidate_rows;
+  const routingMerged = verificationStatus.verification_phase === "round1_3x750_merged";
   const stages = [
     ["Candidate lead", formatNumber(candidateRows), "Collected", "scout"],
-    ["Verified source", "Not started project-wide", "Next gate", "future"],
+    [
+      "Verified-source routing",
+      routingMerged ? formatNumber(verificationStatus.rows_verified_routing_total) : "Not started project-wide",
+      routingMerged ? "Round 1 merged" : "Next gate",
+      routingMerged ? "scout" : "future",
+    ],
     ["Ingested source", "Not integrated", "Future", "future"],
     ["Codified evidence", "Prior corpus separate", "Future", "calibration"],
     ["Analysis-ready evidence", "Not available", "Future", "future"],
@@ -255,7 +261,9 @@ export function VerificationPipeline({ candidateSummary, readiness, phase, verif
           <p className="eyebrow">Verification pipeline</p>
           <h2 id="verification-title">From discovered lead to analysis-ready evidence</h2>
         </div>
-        <StatusPill tone="future">Live path ready; verification not started</StatusPill>
+        <StatusPill tone={routingMerged ? "scout" : "future"}>
+          {routingMerged ? "Round 1 3×750 routing merged" : "Live path ready; verification not started"}
+        </StatusPill>
       </div>
 
       <div className="verification-flow">
@@ -275,18 +283,26 @@ export function VerificationPipeline({ candidateSummary, readiness, phase, verif
           <h3>Verify, extract, ingest, rate, and analyze descriptively</h3>
         </div>
         <p>
-          Live verification is implemented behind bounded fetch limits. The first recommended round is{" "}
-          {verificationStatus.first_round_lanes} lanes ×{" "}
-          {formatNumber(verificationStatus.first_round_rows_per_lane)} candidate URLs (
-          {formatNumber(verificationStatus.first_round_candidate_rows)} total), and the complete{" "}
-          {formatNumber(verificationStatus.total_url_bearing_candidate_rows)}-row backlog is mapped.
-          No candidate URL has been opened yet.
+          {routingMerged ? (
+            <>
+              Round 1 routed {formatNumber(verificationStatus.rows_verified_routing_total)} candidate rows:
+              {" "}{formatPercent(verificationStatus.reachable_or_reused_rate)} were reachable or reused.
+              Ingestion, employer/unit content review, wage extraction, and wage-gap analysis have not started.
+            </>
+          ) : (
+            <>
+              Live verification is implemented behind bounded fetch limits. The complete{" "}
+              {formatNumber(verificationStatus.total_url_bearing_candidate_rows)}-row backlog is mapped,
+              but no candidate URL has been opened yet.
+            </>
+          )}
         </p>
       </div>
       <p className="panel-note">
-        <strong>Coverage plan:</strong> {verificationStatus.scheduled_pool_estimated_rounds} nominal rounds cover
-        the scheduled pool; {verificationStatus.full_backlog_estimated_rounds} cover every URL-bearing candidate
-        row, including separately tracked holds and duplicate/canonical dispositions.
+        <strong>{routingMerged ? "Remaining routing estimate:" : "Coverage plan:"}</strong>{" "}
+        {routingMerged
+          ? `${formatNumber(verificationStatus.scheduled_verification_rows_remaining_estimate)} scheduled and ${formatNumber(verificationStatus.full_url_bearing_rows_remaining_estimate)} total URL-bearing rows remain.`
+          : `${verificationStatus.scheduled_pool_estimated_rounds} nominal rounds cover the scheduled pool; ${verificationStatus.full_backlog_estimated_rounds} cover every URL-bearing candidate row.`}
       </p>
       <p className="panel-note">{readiness.promotion_gate}</p>
     </section>
