@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "round_id": "CONTENT-TRIAGE-ROUND1-1000-2026-07-24",
+  "status": "metadata_only_collected_not_merged",
+  "review_mode": "metadata_only",
+  "lane_count": 2,
+  "lane_rows": {
+    "lane_1": 500,
+    "lane_2": 500
+  },
+  "ledger_rows": 1000,
+  "terminal_rows": 1000,
+  "triage_status_counts": {
+    "high_priority_content_review": 1000
+  },
+  "recommended_next_action_counts": {
+    "content_review_download_allowed_later": 1000
+  },
+  "extraction_readiness_prelim_counts": {
+    "medium": 1000
+  },
+  "source_relevance_prelim_counts": {
+    "likely_relevant": 1000
+  },
+  "priority_for_content_review_counts": {
+    "p1": 1000
+  },
+  "urls_opened": 0,
+  "network_calls": 0,
+  "documents_downloaded": 0,
+  "documents_parsed": 0,
+  "pdfs_parsed": 0,
+  "ocr_runs": 0,
+  "content_artifacts_written": 0,
+  "lane_classifications": {
+    "lane_1": "completed_merge_eligible",
+    "lane_2": "completed_merge_eligible"
+  },
+  "merge_recommendation": "merge_all_content_triage_lanes",
+  "durable_content_triage_merge_status": "not_started",
+  "caveats": [
+    "Metadata-only triage did not inspect source content.",
+    "Likely relevance and medium extraction readiness are preliminary scheduling signals.",
+    "No URL was opened and no source was downloaded, parsed, OCRed, ingested, codified, or used for wage analysis."
+  ]
+}

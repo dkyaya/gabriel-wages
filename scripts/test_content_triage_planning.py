@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Offline tests for content-triage planning, dry-run, and lane audit."""
+"""Offline tests for content-triage planning, metadata triage, and lane audit."""
 
 from __future__ import annotations
 
@@ -328,10 +328,121 @@ class ContentTriagePlanningTests(unittest.TestCase):
                 args_for(routing, queue, root / "plan", batch_size=10)
             )
             with self.assertRaisesRegex(ValueError, "not implemented"):
-                runner.dry_run(
+                runner.run(
                     argparse.Namespace(
                         input_csv=result["manifest"]["lanes"][0]["input_csv"],
                         output_dir=(root / "live").as_posix(),
+                        dry_run=False,
+                        max_rows=None,
+                        review_mode="content_review",
+                        write_content_samples=False,
+                        no_write_content_samples=True,
+                    )
+                )
+
+    def test_metadata_only_classifies_cba_pdf_without_network(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            routing, queue = synthetic_inputs(root)
+            result = planner.prepare(
+                args_for(routing, queue, root / "plan", batch_size=10)
+            )
+            metadata_args = argparse.Namespace(
+                input_csv=result["manifest"]["lanes"][0]["input_csv"],
+                output_dir=(root / "metadata").as_posix(),
+                dry_run=False,
+                max_rows=None,
+                review_mode="metadata_only",
+                write_content_samples=False,
+                no_write_content_samples=True,
+            )
+            with patch.object(
+                socket,
+                "create_connection",
+                side_effect=AssertionError("network call attempted"),
+            ):
+                summary = runner.run(metadata_args)
+            self.assertEqual(summary["status"], "metadata_only_completed")
+            self.assertEqual(summary["urls_opened"], 0)
+            self.assertEqual(summary["network_calls"], 0)
+            self.assertEqual(summary["documents_downloaded"], 0)
+            self.assertEqual(summary["documents_parsed"], 0)
+            rows = list(
+                csv.DictReader(
+                    (root / "metadata" / "triage_ledger.csv").open(
+                        newline="", encoding="utf-8"
+                    )
+                )
+            )
+            self.assertTrue(rows)
+            self.assertTrue(
+                all(
+                    row["triage_status"] == "high_priority_content_review"
+                    for row in rows
+                )
+            )
+            self.assertTrue(
+                all(row["extraction_readiness_prelim"] == "medium" for row in rows)
+            )
+            self.assertTrue(
+                all(row["source_relevance_prelim"] == "likely_relevant" for row in rows)
+            )
+            self.assertTrue(
+                all(
+                    row["recommended_next_action"]
+                    == "content_review_download_allowed_later"
+                    for row in rows
+                )
+            )
+            self.assertTrue(all(row["reviewer"] == "script_metadata_only" for row in rows))
+
+    def test_missing_classification_metadata_needs_manual_review(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            routing, queue = synthetic_inputs(root)
+            result = planner.prepare(
+                args_for(routing, queue, root / "plan", batch_size=2)
+            )
+            lane_path = Path(result["manifest"]["lanes"][0]["input_csv"])
+            rows = list(csv.DictReader(lane_path.open(newline="", encoding="utf-8")))
+            rows[0]["candidate_source_type"] = ""
+            write_csv(lane_path, rows)
+            summary = runner.run(
+                argparse.Namespace(
+                    input_csv=lane_path.as_posix(),
+                    output_dir=(root / "metadata").as_posix(),
+                    dry_run=False,
+                    max_rows=None,
+                    review_mode="metadata_only",
+                    write_content_samples=False,
+                    no_write_content_samples=True,
+                )
+            )
+            self.assertEqual(summary["triage_status_counts"], {"needs_manual_review": 1})
+            output = list(
+                csv.DictReader(
+                    (root / "metadata" / "triage_ledger.csv").open(
+                        newline="", encoding="utf-8"
+                    )
+                )
+            )[0]
+            self.assertEqual(output["recommended_next_action"], "manual_review")
+            self.assertIn("candidate_source_type", output["manual_review_reason"])
+
+    def test_auditor_classifies_two_metadata_only_lanes(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            routing, queue = synthetic_inputs(root)
+            result = planner.prepare(
+                args_for(routing, queue, root / "plan", batch_size=20)
+            )
+            for index, lane in enumerate(result["manifest"]["lanes"], start=1):
+                metadata_dir = root / f"lane_{index}_metadata"
+                lane["metadata_only_output_dir"] = metadata_dir.as_posix()
+                runner.run(
+                    argparse.Namespace(
+                        input_csv=lane["input_csv"],
+                        output_dir=metadata_dir.as_posix(),
                         dry_run=False,
                         max_rows=None,
                         review_mode="metadata_only",
@@ -339,6 +450,28 @@ class ContentTriagePlanningTests(unittest.TestCase):
                         no_write_content_samples=True,
                     )
                 )
+            manifest_path = root / "plan" / "content_triage_round_manifest.json"
+            manifest_path.write_text(
+                json.dumps(result["manifest"], indent=2) + "\n",
+                encoding="utf-8",
+            )
+            payload = auditor.audit(manifest_path, root / "audit")
+            self.assertEqual(
+                payload["classification_counts"], {"completed_merge_eligible": 2}
+            )
+            self.assertEqual(payload["ledger_rows"], 20)
+            self.assertEqual(payload["terminal_rows"], 20)
+            self.assertEqual(
+                payload["merge_recommendation"],
+                "merge_all_content_triage_lanes",
+            )
+            self.assertEqual(payload["urls_opened"], 0)
+            self.assertEqual(payload["documents_downloaded"], 0)
+            self.assertEqual(payload["content_artifacts_written"], 0)
+            self.assertEqual(
+                payload["recommended_next_action_counts"],
+                {"content_review_download_allowed_later": 20},
+            )
 
 
 def main() -> int:

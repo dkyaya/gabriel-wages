@@ -6,6 +6,32 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-24 (Metadata-only content-triage Round 1 collected and audited)
+
+**Did**
+- Started from clean tracked `eccbd0dce368c38b5164ddefa79e29a1a32c5272`, confirmed every requested ancestor and both locked lane hashes, and left the unrelated untracked root `package-lock.json` untouched.
+- Implemented a real but strictly offline `metadata_only` path with incremental ledgers, deterministic conservative classification, timing, zero-access counters, and a fail-closed guard against any other non-dry review mode.
+- Extended the lane auditor to discover metadata-only outputs, require every row terminal and every URL/download/parse/OCR/artifact counter zero, and summarize status, action, relevance, extraction-readiness, and priority distributions.
+- Ran the locked 500/500 lanes. All 1,000 scheduled high-priority CBA-labeled PDF routing rows became preliminary `high_priority_content_review` / `p1` outcomes with `likely_relevant`, `medium` extraction readiness, and `content_review_download_allowed_later`.
+- The fresh and final audits classify both lanes `completed_merge_eligible`, find complete unique identity coverage and zero source access, and recommend `merge_all_content_triage_lanes`. No durable content-triage ledger merge ran.
+- Updated the dashboard to `metadata_only_round1_collected_not_merged`; downstream download, source rating, ingestion, codification, wage extraction, and wage-gap analysis remain not started.
+
+**Decisions and why**
+- Interpret every output as a scheduling signal derived from committed metadata. The runner leaves officialness, employer/municipality/unit match, period, wage-table, wage-growth, and mechanism signals `unknown` because content was not inspected.
+- Treat `content_review_download_allowed_later` as a recommendation for a separately authorized task, not authorization to access content now.
+- Stop before durable merge. A separate serial task must re-audit and preserve the metadata-only stage boundary.
+
+**Surprises/breakage**
+- The locked batch is homogeneous enough that the same conservative rule applies to all 1,000 rows. This is useful operationally but does not confirm that any file is actually a CBA or contains wages.
+- No implementation or validation breakage occurred.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Five compiles, nine offline/network-failing tests, fresh and final two-lane audits, dashboard JSON/frontend build, schema validation, 60 ingestion tests, immutable hashes, identity/artifact/secret checks, and diff checks passed. No URL was opened; no network/API/model/hosted-search/scout call, download, PDF parse, OCR, scout-accounting or routing-ledger mutation, ingestion, `gabriel.codify`, wage extraction, wage-gap work, causal claim, regression, remote action, or push occurred.
+
+**Next steps**
+1. Review the metadata-only lane relay and audit.
+2. If approved, run a separate serial merge into a durable content-triage ledger; do not download, ingest, codify, or extract in that merge.
+3. Authorize later content review/download only as a separate bounded stage.
+
 ## 2026-07-24 (Offline content-triage and extraction-readiness framework prepared)
 
 **Did**

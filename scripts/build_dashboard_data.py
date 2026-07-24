@@ -70,6 +70,12 @@ CONTENT_TRIAGE_ROUND1_MANIFEST_PATH = (
     / "CONTENT-TRIAGE-ROUND1-1000-2026-07-24"
     / "content_triage_round_manifest.json"
 )
+CONTENT_TRIAGE_ROUND1_METADATA_STATUS_PATH = (
+    ANALYSIS_DIR
+    / "content_triage_rounds"
+    / "CONTENT-TRIAGE-ROUND1-1000-2026-07-24"
+    / "metadata_only_collection_summary.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -110,6 +116,7 @@ OPTIONAL_PATHS = [
     VERIFICATION_ROUTING_SUMMARY_PATH,
     VERIFICATION_ROUND2_LIVE_STATUS_PATH,
     CONTENT_TRIAGE_ROUND1_MANIFEST_PATH,
+    CONTENT_TRIAGE_ROUND1_METADATA_STATUS_PATH,
 ]
 
 STATE_NAMES = {
@@ -1665,6 +1672,11 @@ def build_content_triage_status_summary(
 
     routing_summary = read_json(VERIFICATION_ROUTING_SUMMARY_PATH)
     manifest = read_json(CONTENT_TRIAGE_ROUND1_MANIFEST_PATH)
+    metadata_collection = (
+        read_json(CONTENT_TRIAGE_ROUND1_METADATA_STATUS_PATH)
+        if CONTENT_TRIAGE_ROUND1_METADATA_STATUS_PATH.exists()
+        else {}
+    )
     status_counts = routing_summary["verification_status_counts"]
     routed_rows = int(routing_summary["ledger_rows"])
     reachable_or_reused = int(routing_summary["reachable_or_reused_total"])
@@ -1681,10 +1693,19 @@ def build_content_triage_status_summary(
     }
     if sum(lane_rows.values()) != selected_rows:
         raise ValueError("Content-triage lane rows do not sum to the round total")
-    return {
+    collected_rows = int(metadata_collection.get("terminal_rows", 0))
+    collected_not_merged = (
+        metadata_collection.get("status") == "metadata_only_collected_not_merged"
+        and collected_rows == selected_rows
+    )
+    payload = {
         **metadata,
         "stage": "content_triage_and_extraction_readiness_planning",
-        "content_triage_phase": "planned_not_started",
+        "content_triage_phase": (
+            "metadata_only_round1_collected_not_merged"
+            if collected_not_merged
+            else "planned_not_started"
+        ),
         "routing_coverage_complete": True,
         "routed_url_bearing_rows": routed_rows,
         "reachable_or_reused_rows": reachable_or_reused,
@@ -1697,10 +1718,26 @@ def build_content_triage_status_summary(
         "initial_triage_lane_rows": lane_rows,
         "initial_triage_priority_scope": manifest["priority_scope"],
         "initial_triage_status": manifest["status"],
-        "triage_live_status": "not_started",
+        "triage_live_status": (
+            "metadata_only_collected_not_merged"
+            if collected_not_merged
+            else "not_started"
+        ),
+        "latest_content_triage_round_id": (
+            manifest["round_id"] if collected_not_merged else ""
+        ),
+        "latest_content_triage_mode": (
+            "metadata_only" if collected_not_merged else ""
+        ),
+        "metadata_only_triage_rows_collected": collected_rows,
+        "metadata_only_triage_merge_status": "not_started",
         "content_download_status": "not_started",
         "source_rating_status": "not_started",
-        "extraction_readiness_status": "planned_not_started",
+        "extraction_readiness_status": (
+            "preliminary_metadata_only_not_merged"
+            if collected_not_merged
+            else "planned_not_started"
+        ),
         "ingestion_status": "not_started",
         "codify_status": "not_started",
         "wage_extraction_status": "not_started",
@@ -1723,15 +1760,47 @@ def build_content_triage_status_summary(
             "selected_candidate_disposition_distribution"
         ],
         "round_manifest_source": relative(CONTENT_TRIAGE_ROUND1_MANIFEST_PATH),
+        "metadata_collection_source": (
+            relative(CONTENT_TRIAGE_ROUND1_METADATA_STATUS_PATH)
+            if collected_not_merged
+            else ""
+        ),
         "routing_summary_source": relative(VERIFICATION_ROUTING_SUMMARY_PATH),
         "caveats": [
-            "Content triage has not opened URLs or downloaded source content.",
+            (
+                "Metadata-only triage has not inspected source content."
+                if collected_not_merged
+                else "Content triage has not opened URLs or downloaded source content."
+            ),
             "Routing reachability does not equal source relevance or employer/unit validation.",
-            "Extraction readiness remains preliminary until content is reviewed.",
+            "Preliminary extraction-readiness signals are scheduling aids until content is reviewed.",
             "Reachable documents are not ingested, codified, or extracted wage observations.",
-            "No wage data or wage gaps have been calculated.",
+            "No source content was downloaded or parsed and no wage data or wage gaps were calculated.",
         ],
     }
+    if collected_not_merged:
+        payload.update(
+            {
+                "metadata_only_triage_status_counts": metadata_collection.get(
+                    "triage_status_counts", {}
+                ),
+                "metadata_only_recommended_next_action_counts": (
+                    metadata_collection.get("recommended_next_action_counts", {})
+                ),
+                "metadata_only_extraction_readiness_prelim_counts": (
+                    metadata_collection.get(
+                        "extraction_readiness_prelim_counts", {}
+                    )
+                ),
+                "metadata_only_source_relevance_prelim_counts": (
+                    metadata_collection.get("source_relevance_prelim_counts", {})
+                ),
+                "metadata_only_lane_audit_recommendation": (
+                    metadata_collection.get("merge_recommendation", "")
+                ),
+            }
+        )
+    return payload
 
 
 def validate_inputs(

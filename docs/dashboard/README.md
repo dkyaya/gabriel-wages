@@ -37,12 +37,15 @@ rows. Two completed and serially merged rounds produced 4,726 durable routing
 outcomes, including 3,750 reachable or successfully reused rows. No current
 candidate URL remains unrouted.
 
-The next offline planning layer is content triage. Its first round contains
-1,000 scheduled, high-priority, routed candidates in two 500-row lanes. Both
-dry runs passed without opening a URL, downloading content, parsing a PDF, or
-running OCR. Content triage remains `planned_not_started`; routing outcomes
-have not been upgraded into relevant sources, quality ratings, extraction-ready
-documents, ingested records, or wage evidence.
+The next offline layer is content triage. Its first round contains 1,000
+scheduled, high-priority, routed candidates in two 500-row lanes. Both
+metadata-only lanes now have terminal preliminary scheduling outcomes and
+passed the lane audit without opening a URL, downloading content, parsing a
+PDF, or running OCR. The dashboard records
+`metadata_only_round1_collected_not_merged`; no durable triage merge has
+occurred. Routing outcomes have not been upgraded into content-reviewed
+sources, quality ratings, extraction-ready documents, ingested records, or
+wage evidence.
 
 The current PI checkpoint report is available in the dashboard’s Reports Library and directly here:
 

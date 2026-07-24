@@ -6,6 +6,33 @@ Last updated: `2026-07-24`
 
 ---
 
+## 2026-07-24 — Metadata-only Content-Triage Round 1 is collected; serial merge pending
+
+### Current State
+
+- **Readiness:** work began at clean tracked `eccbd0dce368c38b5164ddefa79e29a1a32c5272`. The locked 500-row inputs retain hashes `1ae2aef43cec1756c0169b1395f00d8a772ddd12fd98a6a70c5b2937b784bc2b` and `118f3ca494782d46e504bfb2ebded6c8afe9e22a7a81661808987ea78ae64688`.
+- **Implementation:** `content_triage_sources.py` now supports non-dry `metadata_only` review. It reads committed lane fields only, checkpoints every 25 rows, writes terminal ledger/timing/summary artifacts, and refuses content-review modes. It has no URL-fetch/download/parse path.
+- **Collection:** Lane 1 and Lane 2 each produced 500/500 terminal rows. All 1,000 outcomes are preliminary `high_priority_content_review`, `p1`, `likely_relevant`, and `medium` extraction readiness with next action `content_review_download_allowed_later`.
+- **Caveat:** the uniform result reflects the locked batch metadata: scheduled/high-priority, CBA-labeled, `application/pdf`, and `reachable_pdf_or_document`. It does not confirm document identity, employer/unit match, period, content, wage tables, or extractability.
+- **Audit:** [the result](content_triage_round1_metadata_only_result_2026-07-24.md) records two `completed_merge_eligible` lanes, 1,000 unique/terminal identities, zero URL/network/download/parse/OCR/artifact activity, and `merge_all_content_triage_lanes`.
+- **Merge status:** no durable content-triage ledger merge has occurred. The dashboard says `metadata_only_round1_collected_not_merged`.
+- **Boundary:** candidate queue, scout coverage, cumulative routing ledgers, contracts, city coverage, and corpus are unchanged. No source rating, download, ingestion, codification, wage extraction, gap calculation/claim, causal claim, or regression occurred.
+- **Validation:** [the validation record](content_triage_round1_metadata_only_validation_2026-07-24.md) reports five compiles, nine offline/network-failing tests, final audit, dashboard JSON/frontend build, schema and 60 ingestion tests, immutable hashes, artifact/secret checks, and diff checks passed.
+
+### Interpretation and limitations
+
+This is a metadata-triaged source-routing layer, not content review or verified
+evidence. `content_review_download_allowed_later` names a future action that
+still requires explicit authorization. `likely_relevant` and `medium`
+extraction readiness are only scheduling aids.
+
+### Next Move
+
+Under separate serial authorization, re-audit both metadata-only lanes and
+merge them exactly once into a durable content-triage ledger. Preserve all
+preliminary labels and the no-content-access boundary. Do not download,
+source-rate, extract, ingest, codify, or calculate wages during that merge.
+
 ## 2026-07-24 — Content-triage framework and first 1,000-row dry plan are ready
 
 ### Current State

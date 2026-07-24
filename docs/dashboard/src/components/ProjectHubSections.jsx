@@ -339,14 +339,32 @@ export function VerificationPipeline({
       <div className="verification-callout">
         <div>
           <p className="eyebrow">Content triage</p>
-          <h3>First metadata-first review round is prepared</h3>
+          <h3>
+            {contentTriageStatus.content_triage_phase ===
+            "metadata_only_round1_collected_not_merged"
+              ? "First metadata-only triage round is collected"
+              : "First metadata-first review round is prepared"}
+          </h3>
         </div>
         <p>
-          Content triage is planned for {formatNumber(contentTriageStatus.initial_triage_round_rows)}
-          {" "}reachable/reused candidates in {formatNumber(contentTriageStatus.initial_triage_lane_count)}
-          {" "}offline-prepared lanes. No URL has been reopened, no source has been downloaded,
-          and source rating, extraction readiness, ingestion, codification, wage extraction,
-          and wage-gap analysis have not started.
+          {contentTriageStatus.content_triage_phase ===
+          "metadata_only_round1_collected_not_merged" ? (
+            <>
+              Metadata-only triage produced {formatNumber(contentTriageStatus.metadata_only_triage_rows_collected)}
+              {" "}terminal scheduling outcomes in {formatNumber(contentTriageStatus.initial_triage_lane_count)}
+              {" "}lanes. The durable triage merge has not run. No URL was reopened,
+              no source was downloaded or parsed, and every relevance and
+              extraction-readiness signal remains preliminary.
+            </>
+          ) : (
+            <>
+              Content triage is planned for {formatNumber(contentTriageStatus.initial_triage_round_rows)}
+              {" "}reachable/reused candidates in {formatNumber(contentTriageStatus.initial_triage_lane_count)}
+              {" "}offline-prepared lanes. No URL has been reopened, no source has been downloaded,
+              and source rating, extraction readiness, ingestion, codification, wage extraction,
+              and wage-gap analysis have not started.
+            </>
+          )}
         </p>
       </div>
       <p className="panel-note">

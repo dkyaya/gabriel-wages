@@ -83,6 +83,10 @@ official-domain signal, selection rank, and stage provenance.
 - `already_canonical_context`
 - `excluded_from_content_review`
 
+For the metadata-only execution path, any non-planning terminal status is a
+preliminary scheduling outcome derived solely from committed candidate and
+routing fields. It is not a content-reviewed classification.
+
 `source_relevance_prelim`:
 
 - `likely_relevant`
@@ -149,3 +153,8 @@ Signal values:
 - Wage-table or wage-growth signals do not contain extracted wage values.
 - Mechanism signals do not replace verbatim clause capture.
 - No triage field proves a wage gap or causal mechanism.
+- `reviewer = script_metadata_only` identifies deterministic offline
+  classification, not human source review.
+- `content_review_download_allowed_later` means only that a separately
+  authorized content-review task may consider the row; it does not authorize
+  source access in the metadata-only task.

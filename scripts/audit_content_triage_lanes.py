@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Audit offline dry-run and future content-triage lane outputs."""
+"""Audit offline dry-run and metadata-only content-triage lane outputs."""
 
 from __future__ import annotations
 
@@ -34,10 +34,22 @@ def sha256_file(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def classify_lane(lane: dict[str, object]) -> dict[str, object]:
+def classify_lane(
+    lane: dict[str, object], round_id: str
+) -> dict[str, object]:
     input_path = Path(str(lane["input_csv"]))
     dry_dir = Path(str(lane["dry_run_output_dir"]))
     live_dir = Path(str(lane["future_live_output_dir"]))
+    metadata_dir = Path(
+        str(
+            lane.get(
+                "metadata_only_output_dir",
+                Path("tmp/content_triage_rounds")
+                / round_id
+                / f"{lane['lane_id']}_metadata_only_attempt1",
+            )
+        )
+    )
     result: dict[str, object] = {
         "lane_id": lane["lane_id"],
         "expected_rows": int(lane["expected_rows"]),
@@ -51,6 +63,9 @@ def classify_lane(lane: dict[str, object]) -> dict[str, object]:
         "unexpected_rows": 0,
         "triage_status_counts": {},
         "priority_for_content_review_counts": {},
+        "recommended_next_action_counts": {},
+        "extraction_readiness_prelim_counts": {},
+        "source_relevance_prelim_counts": {},
     }
     if not input_path.exists():
         result.update(classification="missing_artifacts", detail="input_missing")
@@ -71,7 +86,9 @@ def classify_lane(lane: dict[str, object]) -> dict[str, object]:
         return result
     output_dir: Path | None = None
     mode = ""
-    if live_dir.exists():
+    if metadata_dir.exists():
+        output_dir, mode = metadata_dir, "metadata_only"
+    elif live_dir.exists():
         output_dir, mode = live_dir, "live"
     elif dry_dir.exists():
         output_dir, mode = dry_dir, "dry_run"
@@ -95,6 +112,11 @@ def classify_lane(lane: dict[str, object]) -> dict[str, object]:
     priorities = Counter(
         row.get("priority_for_content_review", "") for row in ledger
     )
+    actions = Counter(row.get("recommended_next_action", "") for row in ledger)
+    readiness = Counter(
+        row.get("extraction_readiness_prelim", "") for row in ledger
+    )
+    relevance = Counter(row.get("source_relevance_prelim", "") for row in ledger)
     terminal = (
         statuses["triage_planned"]
         if mode == "dry_run"
@@ -114,6 +136,9 @@ def classify_lane(lane: dict[str, object]) -> dict[str, object]:
             "unexpected_rows": unexpected,
             "triage_status_counts": dict(sorted(statuses.items())),
             "priority_for_content_review_counts": dict(sorted(priorities.items())),
+            "recommended_next_action_counts": dict(sorted(actions.items())),
+            "extraction_readiness_prelim_counts": dict(sorted(readiness.items())),
+            "source_relevance_prelim_counts": dict(sorted(relevance.items())),
             "urls_opened": int(summary.get("urls_opened", 0)),
             "network_calls": int(summary.get("network_calls", 0)),
             "documents_downloaded": int(summary.get("documents_downloaded", 0)),
@@ -121,6 +146,8 @@ def classify_lane(lane: dict[str, object]) -> dict[str, object]:
             "content_artifacts_written": int(
                 summary.get("content_artifacts_written", 0)
             ),
+            "pdfs_parsed": int(summary.get("pdfs_parsed", 0)),
+            "ocr_runs": int(summary.get("ocr_runs", 0)),
         }
     )
     identity_failure = (
@@ -151,15 +178,28 @@ def classify_lane(lane: dict[str, object]) -> dict[str, object]:
             detail="complete_offline_schema_plan",
         )
     elif (
-        mode == "live"
-        and summary.get("status") == "live_completed"
+        mode in {"metadata_only", "live"}
+        and summary.get("status")
+        in {"metadata_only_completed", "live_completed"}
         and terminal == len(input_rows)
+        and not any(
+            int(summary.get(field, 0))
+            for field in (
+                "urls_opened",
+                "network_calls",
+                "documents_downloaded",
+                "documents_parsed",
+                "pdfs_parsed",
+                "ocr_runs",
+                "content_artifacts_written",
+            )
+        )
     ):
         result.update(
             classification="completed_merge_eligible",
-            detail="all_rows_terminal",
+            detail="all_rows_terminal_offline_metadata_only",
         )
-    elif mode == "live" and terminal:
+    elif mode in {"metadata_only", "live"} and terminal:
         result.update(classification="partial", detail="some_terminal_rows")
     else:
         result.update(classification="failed", detail="incomplete_or_unsafe_output")
@@ -168,7 +208,10 @@ def classify_lane(lane: dict[str, object]) -> dict[str, object]:
 
 def audit(manifest_path: Path, output_dir: Path) -> dict[str, object]:
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-    lanes = [classify_lane(lane) for lane in manifest["lanes"]]
+    lanes = [
+        classify_lane(lane, str(manifest["round_id"]))
+        for lane in manifest["lanes"]
+    ]
     all_input_triage_ids: list[str] = []
     all_input_queue_ids: list[str] = []
     for lane in manifest["lanes"]:
@@ -223,6 +266,39 @@ def audit(manifest_path: Path, output_dir: Path) -> dict[str, object]:
                 ).items()
             )
         ),
+        "recommended_next_action_counts": dict(
+            sorted(
+                sum(
+                    (
+                        Counter(lane["recommended_next_action_counts"])
+                        for lane in lanes
+                    ),
+                    Counter(),
+                ).items()
+            )
+        ),
+        "extraction_readiness_prelim_counts": dict(
+            sorted(
+                sum(
+                    (
+                        Counter(lane["extraction_readiness_prelim_counts"])
+                        for lane in lanes
+                    ),
+                    Counter(),
+                ).items()
+            )
+        ),
+        "source_relevance_prelim_counts": dict(
+            sorted(
+                sum(
+                    (
+                        Counter(lane["source_relevance_prelim_counts"])
+                        for lane in lanes
+                    ),
+                    Counter(),
+                ).items()
+            )
+        ),
         "urls_opened": sum(int(lane.get("urls_opened", 0)) for lane in lanes),
         "network_calls": sum(
             int(lane.get("network_calls", 0)) for lane in lanes
@@ -233,6 +309,11 @@ def audit(manifest_path: Path, output_dir: Path) -> dict[str, object]:
         "documents_parsed": sum(
             int(lane.get("documents_parsed", 0)) for lane in lanes
         ),
+        "content_artifacts_written": sum(
+            int(lane.get("content_artifacts_written", 0)) for lane in lanes
+        ),
+        "pdfs_parsed": sum(int(lane.get("pdfs_parsed", 0)) for lane in lanes),
+        "ocr_runs": sum(int(lane.get("ocr_runs", 0)) for lane in lanes),
         "merge_recommendation": recommendation,
         "lanes": lanes,
     }
@@ -253,6 +334,7 @@ def audit(manifest_path: Path, output_dir: Path) -> dict[str, object]:
         f"- URLs opened: {payload['urls_opened']:,}",
         f"- Documents downloaded: {payload['documents_downloaded']:,}",
         f"- Documents parsed: {payload['documents_parsed']:,}",
+        f"- Content artifacts written: {payload['content_artifacts_written']:,}",
         f"- Recommendation: `{recommendation}`",
         "",
         "| Lane | Classification | Expected | Ledger | Terminal |",
@@ -267,6 +349,14 @@ def audit(manifest_path: Path, output_dir: Path) -> dict[str, object]:
     report.extend(
         [
             "",
+            "## Combined preliminary distributions",
+            "",
+            f"- Triage statuses: `{json.dumps(payload['triage_status_counts'], sort_keys=True)}`",
+            f"- Recommended next actions: `{json.dumps(payload['recommended_next_action_counts'], sort_keys=True)}`",
+            f"- Extraction readiness: `{json.dumps(payload['extraction_readiness_prelim_counts'], sort_keys=True)}`",
+            f"- Source relevance: `{json.dumps(payload['source_relevance_prelim_counts'], sort_keys=True)}`",
+            f"- Content-review priorities: `{json.dumps(payload['priority_for_content_review_counts'], sort_keys=True)}`",
+            "",
             "The auditor does not update routing, scout accounting, contracts,",
             "ingestion, codification, extraction, or analytical evidence.",
             "",
@@ -277,8 +367,9 @@ def audit(manifest_path: Path, output_dir: Path) -> dict[str, object]:
     )
     (output_dir / "content_triage_merge_recommendation.md").write_text(
         f"# Content-Triage Merge Recommendation\n\n`{recommendation}`\n\n"
-        "A dry-run recommendation is not authority to open URLs, download or "
-        "parse content, or merge a durable live triage ledger.\n",
+        "This audit recommendation does not authorize opening URLs, downloading "
+        "or parsing content, or merging a durable triage ledger. Any merge "
+        "requires a separate serial task.\n",
         encoding="utf-8",
     )
     return payload

@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-24T17:09:07Z",
+  "generated_at": "2026-07-24T17:22:20Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -19,7 +19,8 @@
     "docs/analysis/hosted_search_transport_recommendation_2026-07-22.md",
     "docs/analysis/verification_ledgers/verified_source_routing_summary_latest.json",
     "docs/analysis/verification_rounds/VERIFICATION-SCALE-ROUND2-3X1000-REMAINDER-2026-07-24/verification_live_collection_summary.json",
-    "docs/analysis/content_triage_rounds/CONTENT-TRIAGE-ROUND1-1000-2026-07-24/content_triage_round_manifest.json"
+    "docs/analysis/content_triage_rounds/CONTENT-TRIAGE-ROUND1-1000-2026-07-24/content_triage_round_manifest.json",
+    "docs/analysis/content_triage_rounds/CONTENT-TRIAGE-ROUND1-1000-2026-07-24/metadata_only_collection_summary.json"
   ],
   "warnings": [],
   "limitations": [
@@ -33,7 +34,7 @@
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
   "stage": "content_triage_and_extraction_readiness_planning",
-  "content_triage_phase": "planned_not_started",
+  "content_triage_phase": "metadata_only_round1_collected_not_merged",
   "routing_coverage_complete": true,
   "routed_url_bearing_rows": 4726,
   "reachable_or_reused_rows": 3750,
@@ -47,10 +48,14 @@
   },
   "initial_triage_priority_scope": "scheduled_high_priority_reachable",
   "initial_triage_status": "planned_not_started",
-  "triage_live_status": "not_started",
+  "triage_live_status": "metadata_only_collected_not_merged",
+  "latest_content_triage_round_id": "CONTENT-TRIAGE-ROUND1-1000-2026-07-24",
+  "latest_content_triage_mode": "metadata_only",
+  "metadata_only_triage_rows_collected": 1000,
+  "metadata_only_triage_merge_status": "not_started",
   "content_download_status": "not_started",
   "source_rating_status": "not_started",
-  "extraction_readiness_status": "planned_not_started",
+  "extraction_readiness_status": "preliminary_metadata_only_not_merged",
   "ingestion_status": "not_started",
   "codify_status": "not_started",
   "wage_extraction_status": "not_started",
@@ -83,12 +88,26 @@
     "scheduled": 1000
   },
   "round_manifest_source": "docs/analysis/content_triage_rounds/CONTENT-TRIAGE-ROUND1-1000-2026-07-24/content_triage_round_manifest.json",
+  "metadata_collection_source": "docs/analysis/content_triage_rounds/CONTENT-TRIAGE-ROUND1-1000-2026-07-24/metadata_only_collection_summary.json",
   "routing_summary_source": "docs/analysis/verification_ledgers/verified_source_routing_summary_latest.json",
   "caveats": [
-    "Content triage has not opened URLs or downloaded source content.",
+    "Metadata-only triage has not inspected source content.",
     "Routing reachability does not equal source relevance or employer/unit validation.",
-    "Extraction readiness remains preliminary until content is reviewed.",
+    "Preliminary extraction-readiness signals are scheduling aids until content is reviewed.",
     "Reachable documents are not ingested, codified, or extracted wage observations.",
-    "No wage data or wage gaps have been calculated."
-  ]
+    "No source content was downloaded or parsed and no wage data or wage gaps were calculated."
+  ],
+  "metadata_only_triage_status_counts": {
+    "high_priority_content_review": 1000
+  },
+  "metadata_only_recommended_next_action_counts": {
+    "content_review_download_allowed_later": 1000
+  },
+  "metadata_only_extraction_readiness_prelim_counts": {
+    "medium": 1000
+  },
+  "metadata_only_source_relevance_prelim_counts": {
+    "likely_relevant": 1000
+  },
+  "metadata_only_lane_audit_recommendation": "merge_all_content_triage_lanes"
 }
