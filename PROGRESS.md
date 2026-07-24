@@ -6,6 +6,32 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-23/24 (Parallel Round 2 3×150 serial accounting merge completed)
+
+**Did**
+- Started from clean tracked `4f9c865e9f6e1416643c809bcec67623039ee931` on `main`, confirmed required ancestry, and left the unrelated untracked root `package-lock.json` untouched.
+- Re-ran the offline three-lane auditor. All lanes remain `completed_merge_eligible`; locked input and lane-local export hashes match; combined output is 446 parseable, 383 candidate-positive, 63 parseable-empty, four failure-only, 985 URL-bearing leads, zero stopped/pending rows, and zero completed-ID overlap. Recommendation remained `merge_all_lanes`.
+- Preserved deterministic lane candidate and state-usage artifacts, then ran each authorized queue/coverage accounting command exactly once. Queue rows changed 2,362→3,347; successful coverage 1,091→1,537; candidate-positive 884→1,267; parseable-empty 207→270; and failure-only 23→27.
+- Kept Twinsburg OH, Oakland Park FL, Hollister CA, and College Place WA outside successful coverage. The Wausau diagnostic probe and stopped `bd5e259` lineage remain quarantined and absent from builder inputs.
+- Refreshed six-wave yield learning and all dashboard/project-phase JSON. Official checkpoint progress is 1,537/2,000 (76.9%), leaving 463.
+- Refreshed the unchanged national priority methodology because 743 successful scouts had accumulated since the prior 794-covered refresh. Current eligible counts are Tier 1 628, Tier 2 3,420, future-scout eligible 34,046, and failure-only retry 27.
+
+**Decisions and why**
+- Keep the serial rebuild as the sole accounting promotion boundary. All 3,347 queue rows remain unverified source-discovery leads.
+- Prefer a checkpoint-targeted three-lane round over automatic 3 × 300. A suggested buffered size is 160 rows per lane (480 attempts), expected to finish close to 2,000; 3 × 300 would likely reach roughly 2,429 and requires explicit acceptance of overshoot.
+- Preserve priority methodology unchanged and reset the post-refresh success count to zero. Future selection still requires current coverage/failure/canonical and cross-lane reconciliation.
+
+**Surprises/breakage**
+- Every one of the 985 parsed Round 2 lead rows had a URL and entered the queue; there were no no-locator placeholders in this round.
+- No merge gate or builder assertion failed. The top-level coverage orchestrator deterministically reproduced the same 1,537 current-status total.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Required compiles/tests, dashboard JSON parsing/frontend build, schema validation, 60 ingestion tests, coverage audit, quarantine/protected-file checks, and diff checks passed. No live/API/model/hosted-search call, diagnostic, source URL verification, ingestion, `gabriel.codify`, wage-gap calculation/claim, causal claim, regression, remote action, or push occurred during this merge.
+
+**Next steps**
+1. Prepare a fresh checkpoint-targeted three-lane ordinary discovery round from the refreshed priority layer, likely 160 rows per lane with a modest failure buffer.
+2. Keep all 27 failure-only municipalities in a separate bounded retry lane.
+3. After the next serial merge reaches approximately 2,000, pause broad scouting for verification, extraction, ingestion, rating, descriptive analysis, mechanism documentation, and the planned wage-growth-gap dashboard filter.
+
 ## 2026-07-23/24 (Parallel Round 2 three-lane live collection completed; serial merge deferred)
 
 **Did**

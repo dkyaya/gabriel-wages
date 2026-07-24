@@ -11,6 +11,7 @@ This deterministic offline report compares discovery-stage operational yield. Ca
 | Tier 1 Wave 1 cross-state | 142 | 99 | 43 | 8 | 268 | 6723.519 | 80.315 | 143.496 | 1.887 |
 | Tier 1 Wave 2 compact/adaptive cross-state | 148 | 122 | 26 | 2 | 327 | 5738.638 | 94.099 | 205.136 | 2.209 |
 | Parallel Round 1 compact/adaptive (2 serialized lanes) | 297 | 272 | 25 | 3 | 763 | 6530.000 | 165.391 | 420.643 | 2.569 |
+| Parallel Round 2 compact/adaptive (3 serialized lanes) | 446 | 383 | 63 | 4 | 985 | 5615.561 | 288.484 | 631.460 | 2.209 |
 
 ## State-yield learning
 
@@ -18,28 +19,28 @@ States with at least 10 successful scouts are ranked by candidate rows per cover
 
 | State | Covered | Positive rate | Candidate density | Empty rate | Failure-only rate | Confidence | Recommendation |
 |---|---:|---:|---:|---:|---:|---|---|
-| OH | 91 | 97.8% | 3.220 | 2.2% | 1.1% | high | strong_yield_consider_next_wave |
-| IA | 11 | 90.9% | 2.909 | 9.1% | 8.3% | medium | strong_yield_consider_next_wave |
-| WA | 50 | 98.0% | 2.860 | 2.0% | 2.0% | high | strong_yield_consider_next_wave |
-| WI | 16 | 100.0% | 2.750 | 0.0% | 0.0% | medium | strong_yield_consider_next_wave |
-| CT | 19 | 94.7% | 2.737 | 5.3% | 0.0% | medium | strong_yield_consider_next_wave |
+| OH | 179 | 96.6% | 3.207 | 3.4% | 1.1% | high | strong_yield_consider_next_wave |
+| MD | 11 | 100.0% | 2.818 | 0.0% | 0.0% | medium | strong_yield_consider_next_wave |
+| MA | 57 | 93.0% | 2.719 | 7.0% | 1.7% | high | strong_yield_consider_next_wave |
 | PA | 28 | 85.7% | 2.714 | 14.3% | 0.0% | high | strong_yield_consider_next_wave |
-| OR | 40 | 95.0% | 2.700 | 5.0% | 0.0% | high | strong_yield_consider_next_wave |
-| MA | 45 | 93.3% | 2.689 | 6.7% | 2.2% | high | strong_yield_consider_next_wave |
-| NM | 10 | 100.0% | 2.500 | 0.0% | 0.0% | medium | strong_yield_consider_next_wave |
-| CA | 144 | 93.8% | 2.438 | 6.2% | 4.0% | high | strong_yield_consider_next_wave |
+| CT | 21 | 95.2% | 2.667 | 4.8% | 0.0% | medium | strong_yield_consider_next_wave |
+| WA | 90 | 97.8% | 2.633 | 2.2% | 2.2% | high | strong_yield_consider_next_wave |
+| OR | 69 | 97.1% | 2.609 | 2.9% | 0.0% | high | strong_yield_consider_next_wave |
+| CA | 158 | 94.3% | 2.462 | 5.7% | 4.2% | high | strong_yield_consider_next_wave |
 | IL | 122 | 86.1% | 2.418 | 13.9% | 2.4% | high | strong_yield_consider_next_wave |
-| MI | 36 | 91.7% | 2.417 | 8.3% | 0.0% | high | strong_yield_consider_next_wave |
-| NY | 25 | 84.0% | 2.280 | 16.0% | 0.0% | high | strong_yield_consider_next_wave |
-| FL | 86 | 77.9% | 1.942 | 22.1% | 2.3% | high | strong_yield_consider_next_wave |
-| UT | 12 | 66.7% | 1.500 | 33.3% | 0.0% | medium | moderate_yield_use_priority_targets |
+| NM | 12 | 100.0% | 2.417 | 0.0% | 0.0% | medium | strong_yield_consider_next_wave |
+| WI | 49 | 98.0% | 2.327 | 2.0% | 0.0% | high | strong_yield_consider_next_wave |
+| MI | 70 | 88.6% | 2.300 | 11.4% | 0.0% | high | strong_yield_consider_next_wave |
+| NY | 27 | 85.2% | 2.259 | 14.8% | 0.0% | high | strong_yield_consider_next_wave |
+| IA | 27 | 77.8% | 2.185 | 22.2% | 3.6% | high | strong_yield_consider_next_wave |
+| MN | 25 | 88.0% | 2.000 | 12.0% | 0.0% | high | strong_yield_consider_next_wave |
 
 ## Operating recommendation
 
-Across the four reviewed 150-row waves and the first 300-row two-lane parallel round, mean candidate density was 1.965 rows per parseable municipality. Use Tier 1 rank as the primary selector, then blend states with medium/high sample confidence and strong observed yield with under-sampled states needed for calibration and geographic coverage.
+Across the four reviewed 150-row waves and two audited parallel rounds, mean candidate density was 2.005 rows per parseable municipality. Use the refreshed priority layer as the primary selector, then blend states with medium/high sample confidence and strong observed yield with under-sampled states needed for calibration and geographic coverage.
 
-State sample confidence counts: high=12, medium=11, low=28.
+State sample confidence counts: high=16, medium=12, low=23.
 
-Refresh this learning report after each wave and rebuild the unchanged priority methodology after 300–600 additional successful scouts. Parallel Round 1 adds 297 successful scouts since the Tier 1 Wave 2 refresh, just below the 300-success lower trigger, so priority refresh remains deferred in this merge. Do not let sparse-state extremes dominate selection.
+Refresh this learning report after each wave and rebuild the unchanged priority methodology after 300–600 additional successful scouts. Parallel Rounds 1 and 2 add 743 successful scouts since the Tier 1 Wave 2 refresh, so the Round 2 serial merge refreshes the unchanged priority methodology. Do not let sparse-state extremes dominate selection.
 
 No network, API/model, URL verification, ingestion, codification, queue rebuild, coverage rebuild, or priority-methodology change occurs in this builder.

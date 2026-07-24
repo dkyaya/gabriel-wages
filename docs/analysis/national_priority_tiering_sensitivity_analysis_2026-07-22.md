@@ -16,8 +16,8 @@ All variants use the same authoritative rows, status exclusions, smoothed state 
 
 | Comparison | Shared top 500 | Overlap |
 |---|---:|---:|
-| Baseline vs population_heavier | 426 | 85.2% |
-| Baseline vs state_yield_heavier | 344 | 68.8% |
+| Baseline vs population_heavier | 341 | 68.2% |
+| Baseline vs state_yield_heavier | 257 | 51.4% |
 
 ## Largest rank changes within the union of variant top-500 pools
 
@@ -25,71 +25,74 @@ Ranks are baseline / population-heavier / state-yield-heavier.
 
 | Municipality | State | Population | Ranks | Largest absolute change |
 |---|---|---:|---:|---:|
-| Imperial Beach | CA | 25,458 | 1794/2007/493 | 1,301 |
-| Lemon Grove | CA | 27,569 | 1689/1909/460 | 1,229 |
-| Barstow | CA | 24,964 | 1705/1952/481 | 1,224 |
-| Loma Linda | CA | 25,111 | 1693/1936/478 | 1,215 |
-| Laguna Hills | CA | 30,243 | 1564/1738/412 | 1,152 |
-| Twentynine Palms | CA | 28,734 | 1563/1758/420 | 1,143 |
-| Santa Fe Springs | CA | 20,174 | 1612/1928/494 | 1,118 |
-| Dana Point | CA | 32,567 | 1492/1640/375 | 1,117 |
-| Dixon | CA | 19,309 | 1604/1941/500 | 1,104 |
-| Cape Girardeau | MO | 40,508 | 833/466/1931 | 1,098 |
-| Norco | CA | 25,398 | 1514/1740/426 | 1,088 |
-| Cudahy | CA | 21,723 | 1547/1823/463 | 1,084 |
-| Calabasas | CA | 22,227 | 1526/1798/451 | 1,075 |
-| San Juan Capistrano | CA | 34,754 | 1421/1566/348 | 1,073 |
-| Newark | CA | 46,929 | 1345/1422/281 | 1,064 |
-| Lafayette | CA | 25,048 | 1480/1724/422 | 1,058 |
-| Duarte | CA | 23,131 | 1478/1743/436 | 1,042 |
-| El Cerrito | CA | 25,552 | 1450/1700/413 | 1,037 |
-| Dinuba | CA | 25,863 | 1447/1692/411 | 1,036 |
-| Mountain House | CA | 25,909 | 1444/1688/409 | 1,035 |
+| North Augusta | SC | 25,891 | 937/320/3631 | 2,694 |
+| Easley | SC | 26,386 | 923/305/3588 | 2,665 |
+| Peachtree Corners | GA | 42,136 | 1507/483/4165 | 2,658 |
+| Newnan | GA | 44,940 | 1430/432/4075 | 2,645 |
+| Coal Grove | OH | 1,827 | 2040/4671/495 | 2,631 |
+| Gainesville | GA | 47,265 | 1378/394/3992 | 2,614 |
+| Manchester | OH | 1,842 | 1891/4496/475 | 2,605 |
+| Plymouth | OH | 1,692 | 1524/4129/443 | 2,605 |
+| Elida | OH | 1,900 | 2039/4630/490 | 2,591 |
+| St. Paris | OH | 1,885 | 1970/4543/479 | 2,573 |
+| Edgerton | OH | 1,866 | 1862/4434/465 | 2,572 |
+| Caldwell | OH | 1,869 | 1856/4428/462 | 2,572 |
+| Valdosta | GA | 55,025 | 1212/294/3779 | 2,567 |
+| South Zanesville | OH | 1,902 | 1874/4430/458 | 2,556 |
+| Dunwoody | GA | 51,713 | 1445/409/3998 | 2,553 |
+| Dalton | OH | 1,924 | 1922/4472/468 | 2,550 |
+| Woodville | OH | 1,985 | 1894/4410/450 | 2,516 |
+| Roseville | OH | 1,740 | 1335/3846/403 | 2,511 |
+| Jamestown | OH | 2,073 | 2132/4641/476 | 2,509 |
+| Elmwood Place | OH | 2,055 | 2110/4615/474 | 2,505 |
 
 ## State composition of each top 500
 
 | State | Baseline | Population-heavy | State-yield-heavy |
 |---|---:|---:|---:|
-| AK | 0 | 2 | 0 |
-| AR | 2 | 6 | 1 |
-| AZ | 1 | 1 | 0 |
-| CA | 9 | 8 | 158 |
-| CT | 13 | 12 | 12 |
-| DE | 1 | 2 | 0 |
-| FL | 89 | 72 | 95 |
-| IA | 9 | 12 | 1 |
-| ID | 0 | 5 | 0 |
-| IL | 1 | 1 | 2 |
-| IN | 15 | 26 | 2 |
-| KS | 0 | 2 | 0 |
-| KY | 2 | 8 | 0 |
-| LA | 0 | 2 | 0 |
-| MA | 28 | 27 | 28 |
-| MD | 5 | 7 | 0 |
-| ME | 1 | 2 | 0 |
-| MI | 42 | 38 | 21 |
-| MN | 5 | 16 | 0 |
-| MO | 2 | 5 | 1 |
-| MS | 0 | 2 | 0 |
-| MT | 3 | 5 | 0 |
-| ND | 1 | 4 | 0 |
-| NE | 2 | 3 | 0 |
-| NH | 1 | 3 | 0 |
-| NM | 6 | 6 | 2 |
-| NV | 3 | 3 | 2 |
-| NY | 0 | 1 | 0 |
-| OH | 122 | 101 | 81 |
-| OK | 2 | 7 | 0 |
-| OR | 46 | 30 | 40 |
-| RI | 4 | 5 | 0 |
-| SD | 1 | 1 | 0 |
-| VT | 0 | 1 | 0 |
-| WA | 54 | 44 | 50 |
-| WI | 28 | 28 | 4 |
-| WY | 2 | 2 | 0 |
+| AK | 6 | 2 | 0 |
+| AL | 4 | 13 | 0 |
+| AR | 1 | 14 | 0 |
+| AZ | 1 | 11 | 1 |
+| CA | 90 | 66 | 189 |
+| CO | 0 | 8 | 0 |
+| DE | 4 | 4 | 0 |
+| GA | 0 | 13 | 0 |
+| IA | 2 | 4 | 1 |
+| ID | 3 | 5 | 0 |
+| IL | 3 | 3 | 3 |
+| IN | 2 | 5 | 2 |
+| KS | 7 | 16 | 0 |
+| LA | 8 | 13 | 0 |
+| MA | 3 | 2 | 4 |
+| MD | 16 | 13 | 9 |
+| ME | 13 | 10 | 5 |
+| MN | 27 | 37 | 0 |
+| MO | 19 | 35 | 1 |
+| MS | 21 | 21 | 0 |
+| MT | 10 | 5 | 4 |
+| ND | 3 | 3 | 0 |
+| NE | 2 | 2 | 0 |
+| NH | 8 | 8 | 5 |
+| NM | 12 | 7 | 2 |
+| NV | 5 | 4 | 2 |
+| NY | 20 | 26 | 0 |
+| OH | 103 | 11 | 245 |
+| PA | 15 | 14 | 0 |
+| RI | 2 | 2 | 2 |
+| SC | 0 | 12 | 0 |
+| SD | 14 | 11 | 7 |
+| TN | 7 | 17 | 0 |
+| UT | 11 | 32 | 0 |
+| VA | 8 | 17 | 0 |
+| VT | 3 | 3 | 0 |
+| WA | 1 | 1 | 2 |
+| WI | 30 | 15 | 15 |
+| WV | 8 | 9 | 0 |
+| WY | 8 | 6 | 1 |
 
 ## Interpretation
 
-The baseline retains 85.2% of its top 500 under the population-heavy variant and 68.8% under the state-yield-heavy variant. Population is the largest single baseline component at 30 points, but it is below one-third of the score and cannot by itself determine a tier. State yield and research-design evidence jointly contribute 40 points but are empirically Bayes-smoothed with a 25-municipality national prior, preventing zero- or tiny-sample states from receiving extreme scores.
+The baseline retains 68.2% of its top 500 under the population-heavy variant and 51.4% under the state-yield-heavy variant. Population is the largest single baseline component at 30 points, but it is below one-third of the score and cannot by itself determine a tier. State yield and research-design evidence jointly contribute 40 points but are empirically Bayes-smoothed with a 25-municipality national prior, preventing zero- or tiny-sample states from receiving extreme scores.
 
 The baseline is suitable for operational use if top-500 overlap remains substantial in both variants; rank movement should be treated as expected uncertainty near cutoffs rather than factual disagreement. This analysis does not establish that any municipality has a union, safety department, civilian bargaining unit, source portal, or wage gap.

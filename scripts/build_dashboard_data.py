@@ -56,9 +56,9 @@ REPORTS_INDEX_SOURCE_PATH = (
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
-CURRENT_SOURCE_ACCOUNTING_COMMIT = "c4cf7d0de79a2a734adeb9eb03ee37ce02125e8a"
-PARALLEL_SCOUT_ROUND_ID = "POST-PI-PARALLEL-ROUND1-2026-07-23"
-NEXT_PARALLEL_SCOUT_ROUND_ID = "POST-PI-PARALLEL-ROUND2-3X150-2026-07-23"
+CURRENT_SOURCE_ACCOUNTING_COMMIT = "4f9c865e9f6e1416643c809bcec67623039ee931"
+PARALLEL_SCOUT_ROUND_ID = "POST-PI-PARALLEL-ROUND2-3X150-2026-07-23"
+NEXT_PARALLEL_SCOUT_ROUND_ID = "CHECKPOINT-TARGETED-CUSTOM-ROUND-PENDING"
 
 REQUIRED_PATHS = [
     STATE_COVERAGE_PATH,
@@ -820,8 +820,8 @@ def build_priority_summary(
     return {
         **metadata,
         "stage": "research_operational_priority_heuristic",
-        "priority_vintage_status": "stale_after_parallel_round1_merge",
-        "successful_scouts_since_priority_refresh": 297,
+        "priority_vintage_status": "current_after_parallel_round2_merge",
+        "successful_scouts_since_priority_refresh": 0,
         "selection_guard": (
             "Reconcile targets against current coverage and failure-only status before "
             "selecting another ordinary wave."
@@ -903,8 +903,8 @@ def build_state_priority_layer(
     return {
         **metadata,
         "stage": "research_operational_priority_heuristic",
-        "priority_vintage_status": "stale_after_parallel_round1_merge",
-        "successful_scouts_since_priority_refresh": 297,
+        "priority_vintage_status": "current_after_parallel_round2_merge",
+        "successful_scouts_since_priority_refresh": 0,
         "safe_map_metrics": [
             "tier_1_eligible",
             "high_priority_coverage_rate_pct",
@@ -943,10 +943,10 @@ def build_top_priority_targets_layer(
     return {
         **metadata,
         "stage": "research_operational_priority_heuristic",
-        "priority_vintage_status": "stale_after_parallel_round1_merge",
+        "priority_vintage_status": "current_after_parallel_round2_merge",
         "selection_guard": (
-            "Exclude municipalities now covered or failure-only in current accounting "
-            "before using these stale ranked targets."
+            "Reconcile targets against current coverage and failure-only status before "
+            "locking the next ordinary discovery round."
         ),
         "target_count": len(targets),
         "targets": targets,
@@ -1032,9 +1032,9 @@ def build_scout_operations_summary(
         },
         "priority_refresh_recommendation": (
             "The unchanged national priority methodology was refreshed after Tier 1 Wave 2 "
-            "at 794 successfully scout-covered municipalities. Parallel Round 1 brings the "
-            "total to 1,091, or 297 additional successes; defer until the documented "
-            "300–600-success cadence is reached."
+            "at 794 successfully scout-covered municipalities and refreshed again after "
+            "Parallel Round 2 reached 1,537, following 743 additional successful scouts. "
+            "Refresh again after another documented 300–600 successes or a strategy trigger."
         ),
         "preflight_gate_recommendation": current_preflight_recommendation(),
         "disclaimer": (
@@ -1216,15 +1216,17 @@ def build_parallel_scout_status(
     return {
         **metadata,
         "stage": "parallel_scout_operations_status",
-        "parallel_mode_status": "round1_completed_accounting_merged",
-        "current_parallel_mode": "two_lane_successfully_merged",
+        "parallel_mode_status": "round2_3x150_completed_accounting_merged",
+        "current_parallel_mode": "three_lane_successfully_merged",
         "supported_lanes_initial": 2,
         "supported_lanes_future": 3,
         "rows_per_lane": 150,
         "latest_completed_round_id": PARALLEL_SCOUT_ROUND_ID,
         "current_parallel_round_id": NEXT_PARALLEL_SCOUT_ROUND_ID,
-        "next_parallel_test": "3x150",
-        "aggressive_mode_planned": "3x250_to_3x300_after_3x150_success",
+        "next_parallel_test": "checkpoint_targeted_custom_3_lane_round",
+        "aggressive_mode_planned": (
+            "3x300_feasible_but_only_with_explicit_checkpoint_overshoot_acceptance"
+        ),
         "current_scout_covered": covered,
         "target_checkpoint": SCOUT_CHECKPOINT_TARGET,
         "remaining_to_checkpoint": remaining,
@@ -1233,14 +1235,14 @@ def build_parallel_scout_status(
         "accounting_policy": "serial_merge_after_lane_audit",
         "lane_export_policy": "lane_local_candidate_exports",
         "latest_round": {
-            "lanes_completed_merge_eligible": 2,
-            "attempted_rows": 300,
-            "parseable_rows": 297,
-            "candidate_positive_municipalities": 272,
-            "parseable_empty_municipalities": 25,
-            "failure_only_municipalities": 3,
-            "candidate_lead_rows": 763,
-            "url_bearing_queue_rows_added": 760,
+            "lanes_completed_merge_eligible": 3,
+            "attempted_rows": 450,
+            "parseable_rows": 446,
+            "candidate_positive_municipalities": 383,
+            "parseable_empty_municipalities": 63,
+            "failure_only_municipalities": 4,
+            "candidate_lead_rows": 985,
+            "url_bearing_queue_rows_added": 985,
             "merge_recommendation": "merge_all_lanes",
             "accounting_merge_status": "completed_serially",
         },
@@ -1249,10 +1251,10 @@ def build_parallel_scout_status(
             "directory; lane processes do not rebuild shared accounting."
         ),
         "caveat": (
-            "The first two-lane round completed and was merged serially after audit. "
-            "No three-lane live scout has been executed. All candidate leads remain "
-            "unverified, and aggressive mode remains gated on a clean 3x150 live "
-            "collection plus serial accounting merge."
+            "The three-lane 3x150 round completed and was merged serially after audit. "
+            "All candidate leads remain unverified. A 3x300 round would likely overshoot "
+            "the approximately 2,000-municipality checkpoint, so the next collection "
+            "should be checkpoint-targeted unless the user explicitly accepts overshoot."
         ),
     }
 

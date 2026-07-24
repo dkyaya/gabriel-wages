@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-23T22:18:10Z",
+  "generated_at": "2026-07-24T00:20:47Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -31,32 +31,32 @@
   ],
   "stage": "scout_operations_unverified_discovery",
   "current_totals": {
-    "scout_covered_municipalities": 1091,
-    "candidate_queue_rows": 2362,
-    "candidate_positive_municipalities": 884,
-    "parseable_empty_municipalities": 207,
-    "failure_only_municipalities": 23
+    "scout_covered_municipalities": 1537,
+    "candidate_queue_rows": 3347,
+    "candidate_positive_municipalities": 1267,
+    "parseable_empty_municipalities": 270,
+    "failure_only_municipalities": 27
   },
   "active_strategy": {
     "current_phase": "Source discovery scale-up",
     "checkpoint_target_scout_covered": 2000,
-    "remaining_to_checkpoint": 909,
-    "estimated_150_row_waves_remaining": "7",
-    "full_150_row_waves_to_reach_or_exceed_checkpoint": 7,
+    "remaining_to_checkpoint": 463,
+    "estimated_150_row_waves_remaining": "4",
+    "full_150_row_waves_to_reach_or_exceed_checkpoint": 4,
     "ordinary_discovery_lane": "Continue coordinated Tier-prioritized 150-municipality waves; keep failure-only retries separate.",
     "next_phase": "Verification, extraction, ingestion, rating, and descriptive wage-gap analysis",
     "regressions_status": "Deferred"
   },
   "latest_wave": {
-    "wave_id": "parallel_round1",
-    "label": "Parallel Round 1 compact/adaptive (2 serialized lanes)",
-    "runtime_seconds": 6530.0,
-    "rows_per_hour": 165.391,
-    "candidate_rows_per_hour": 420.643,
-    "candidate_rows_per_parseable_municipality": 2.569,
-    "timeout_or_failure_rows": 3
+    "wave_id": "parallel_round2_3x150",
+    "label": "Parallel Round 2 compact/adaptive (3 serialized lanes)",
+    "runtime_seconds": 5615.561,
+    "rows_per_hour": 288.484,
+    "candidate_rows_per_hour": 631.46,
+    "candidate_rows_per_parseable_municipality": 2.209,
+    "timeout_or_failure_rows": 4
   },
-  "priority_refresh_recommendation": "The unchanged national priority methodology was refreshed after Tier 1 Wave 2 at 794 successfully scout-covered municipalities. Parallel Round 1 brings the total to 1,091, or 297 additional successes; defer until the documented 300–600-success cadence is reached.",
+  "priority_refresh_recommendation": "The unchanged national priority methodology was refreshed after Tier 1 Wave 2 at 794 successfully scout-covered municipalities and refreshed again after Parallel Round 2 reached 1,537, following 743 additional successful scouts. Refresh again after another documented 300–600 successes or a strategy trigger.",
   "preflight_gate_recommendation": "last_bounded_diagnostic_was_healthy; nevertheless_run_the_strengthened_preflight_gate_immediately_before_the_next_live_wave",
   "disclaimer": "Scout candidates remain unverified leads. Runtime and yield metrics are operational diagnostics, not evidence of source quality or wage effects."
 }

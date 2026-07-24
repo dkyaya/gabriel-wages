@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": "0.1.0",
-    "generated_at": "2026-07-23T22:18:10Z",
+    "generated_at": "2026-07-24T00:20:47Z",
     "data_vintage": "2026-07-23",
     "source_files": [
       "docs/analysis/national_scout_coverage_state.csv",
@@ -37,15 +37,15 @@
   },
   "totals": {
     "states_and_dc": 51,
-    "states_with_scout_coverage": 47,
+    "states_with_scout_coverage": 51,
     "municipality_universe": 35589,
-    "scout_covered_municipalities": 1091,
-    "candidate_positive_municipalities": 884,
-    "no_candidate_municipalities": 207,
-    "failed_scout_municipalities": 23,
-    "failed_scout_attempts": 39,
-    "candidate_rows": 2362,
-    "likely_matched_set_groups": 387,
+    "scout_covered_municipalities": 1537,
+    "candidate_positive_municipalities": 1267,
+    "no_candidate_municipalities": 270,
+    "failed_scout_municipalities": 27,
+    "failed_scout_attempts": 43,
+    "candidate_rows": 3347,
+    "likely_matched_set_groups": 521,
     "verified_sources": null,
     "ingested_sources": null,
     "wage_observations": null
@@ -55,32 +55,32 @@
       "state": "AK",
       "state_name": "Alaska",
       "municipality_universe": 149,
-      "scout_coverage_count": 1,
-      "scout_coverage_rate": 0.6711,
-      "candidate_positive_count": 1,
+      "scout_coverage_count": 3,
+      "scout_coverage_rate": 2.0134,
+      "candidate_positive_count": 3,
       "no_candidate_count": 0,
       "failed_scout_municipality_count": 0,
       "failed_scout_attempt_count": 0,
-      "candidate_rows": 3,
-      "high_priority_queue_count": 2,
+      "candidate_rows": 10,
+      "high_priority_queue_count": 8,
       "medium_priority_queue_count": 1,
       "low_priority_queue_count": 0,
-      "hold_or_rejected_queue_count": 0,
-      "queued_municipality_count": 1,
-      "likely_matched_set_count": 1,
+      "hold_or_rejected_queue_count": 1,
+      "queued_municipality_count": 3,
+      "likely_matched_set_count": 3,
       "calibration_verified_municipality_count": 0,
       "verified_count": null,
       "ingested_count": null,
       "claim_ids_in_prior_registry": [],
       "claim_mapped_city_count": 0,
       "claim_readiness_level": "matched_set_leads_need_verification",
-      "evidence_readiness_score": 47.0,
+      "evidence_readiness_score": 65.0,
       "map_color_metric": {
         "field": "evidence_readiness_score",
-        "value": 47.0,
+        "value": 65.0,
         "scale": "0_to_100_operational_triage_only"
       },
-      "short_state_narrative": "1 of 149 municipal governments have parseable scout outcomes; 1 are candidate-positive, 0 returned parseable empty lists, and 1 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+      "short_state_narrative": "3 of 149 municipal governments have parseable scout outcomes; 3 are candidate-positive, 0 returned parseable empty lists, and 3 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
         "route": "#/state/AK",
         "title": "Alaska municipal labor evidence brief",
@@ -91,18 +91,18 @@
           },
           {
             "label": "Scout covered",
-            "value": 1
+            "value": 3
           },
           {
             "label": "Candidate positive",
-            "value": 1
+            "value": 3
           },
           {
             "label": "Likely matched-set leads",
-            "value": 1
+            "value": 3
           }
         ],
-        "narrative": "1 of 149 municipal governments have parseable scout outcomes; 1 are candidate-positive, 0 returned parseable empty lists, and 1 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+        "narrative": "3 of 149 municipal governments have parseable scout outcomes; 3 are candidate-positive, 0 returned parseable empty lists, and 3 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
         "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
       }
     },
@@ -165,18 +165,18 @@
       "state": "AR",
       "state_name": "Arkansas",
       "municipality_universe": 501,
-      "scout_coverage_count": 3,
-      "scout_coverage_rate": 0.5988,
-      "candidate_positive_count": 2,
-      "no_candidate_count": 1,
+      "scout_coverage_count": 8,
+      "scout_coverage_rate": 1.5968,
+      "candidate_positive_count": 5,
+      "no_candidate_count": 3,
       "failed_scout_municipality_count": 1,
       "failed_scout_attempt_count": 1,
-      "candidate_rows": 6,
-      "high_priority_queue_count": 0,
+      "candidate_rows": 11,
+      "high_priority_queue_count": 2,
       "medium_priority_queue_count": 2,
       "low_priority_queue_count": 0,
-      "hold_or_rejected_queue_count": 4,
-      "queued_municipality_count": 2,
+      "hold_or_rejected_queue_count": 7,
+      "queued_municipality_count": 5,
       "likely_matched_set_count": 1,
       "calibration_verified_municipality_count": 0,
       "verified_count": null,
@@ -184,13 +184,13 @@
       "claim_ids_in_prior_registry": [],
       "claim_mapped_city_count": 0,
       "claim_readiness_level": "matched_set_leads_need_verification",
-      "evidence_readiness_score": 36.3,
+      "evidence_readiness_score": 39.5,
       "map_color_metric": {
         "field": "evidence_readiness_score",
-        "value": 36.3,
+        "value": 39.5,
         "scale": "0_to_100_operational_triage_only"
       },
-      "short_state_narrative": "3 of 501 municipal governments have parseable scout outcomes; 2 are candidate-positive, 1 returned parseable empty lists, and 1 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+      "short_state_narrative": "8 of 501 municipal governments have parseable scout outcomes; 5 are candidate-positive, 3 returned parseable empty lists, and 1 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
         "route": "#/state/AR",
         "title": "Arkansas municipal labor evidence brief",
@@ -201,18 +201,18 @@
           },
           {
             "label": "Scout covered",
-            "value": 3
+            "value": 8
           },
           {
             "label": "Candidate positive",
-            "value": 2
+            "value": 5
           },
           {
             "label": "Likely matched-set leads",
             "value": 1
           }
         ],
-        "narrative": "3 of 501 municipal governments have parseable scout outcomes; 2 are candidate-positive, 1 returned parseable empty lists, and 1 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+        "narrative": "8 of 501 municipal governments have parseable scout outcomes; 5 are candidate-positive, 3 returned parseable empty lists, and 1 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
         "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
       }
     },
@@ -275,32 +275,32 @@
       "state": "CA",
       "state_name": "California",
       "municipality_universe": 483,
-      "scout_coverage_count": 144,
-      "scout_coverage_rate": 29.8137,
-      "candidate_positive_count": 135,
+      "scout_coverage_count": 158,
+      "scout_coverage_rate": 32.7122,
+      "candidate_positive_count": 149,
       "no_candidate_count": 9,
-      "failed_scout_municipality_count": 6,
-      "failed_scout_attempt_count": 6,
-      "candidate_rows": 351,
-      "high_priority_queue_count": 268,
-      "medium_priority_queue_count": 35,
-      "low_priority_queue_count": 13,
-      "hold_or_rejected_queue_count": 35,
-      "queued_municipality_count": 135,
-      "likely_matched_set_count": 59,
+      "failed_scout_municipality_count": 7,
+      "failed_scout_attempt_count": 7,
+      "candidate_rows": 389,
+      "high_priority_queue_count": 292,
+      "medium_priority_queue_count": 39,
+      "low_priority_queue_count": 15,
+      "hold_or_rejected_queue_count": 43,
+      "queued_municipality_count": 149,
+      "likely_matched_set_count": 65,
       "calibration_verified_municipality_count": 0,
       "verified_count": null,
       "ingested_count": null,
       "claim_ids_in_prior_registry": [],
       "claim_mapped_city_count": 0,
       "claim_readiness_level": "matched_set_leads_need_verification",
-      "evidence_readiness_score": 88.8,
+      "evidence_readiness_score": 88.9,
       "map_color_metric": {
         "field": "evidence_readiness_score",
-        "value": 88.8,
+        "value": 88.9,
         "scale": "0_to_100_operational_triage_only"
       },
-      "short_state_narrative": "144 of 483 municipal governments have parseable scout outcomes; 135 are candidate-positive, 9 returned parseable empty lists, and 59 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+      "short_state_narrative": "158 of 483 municipal governments have parseable scout outcomes; 149 are candidate-positive, 9 returned parseable empty lists, and 65 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
         "route": "#/state/CA",
         "title": "California municipal labor evidence brief",
@@ -311,18 +311,18 @@
           },
           {
             "label": "Scout covered",
-            "value": 144
+            "value": 158
           },
           {
             "label": "Candidate positive",
-            "value": 135
+            "value": 149
           },
           {
             "label": "Likely matched-set leads",
-            "value": 59
+            "value": 65
           }
         ],
-        "narrative": "144 of 483 municipal governments have parseable scout outcomes; 135 are candidate-positive, 9 returned parseable empty lists, and 59 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+        "narrative": "158 of 483 municipal governments have parseable scout outcomes; 149 are candidate-positive, 9 returned parseable empty lists, and 65 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
         "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
       }
     },
@@ -385,18 +385,18 @@
       "state": "CT",
       "state_name": "Connecticut",
       "municipality_universe": 179,
-      "scout_coverage_count": 19,
-      "scout_coverage_rate": 10.6145,
-      "candidate_positive_count": 18,
+      "scout_coverage_count": 21,
+      "scout_coverage_rate": 11.7318,
+      "candidate_positive_count": 20,
       "no_candidate_count": 1,
       "failed_scout_municipality_count": 0,
       "failed_scout_attempt_count": 0,
-      "candidate_rows": 52,
-      "high_priority_queue_count": 32,
+      "candidate_rows": 56,
+      "high_priority_queue_count": 36,
       "medium_priority_queue_count": 4,
       "low_priority_queue_count": 1,
       "hold_or_rejected_queue_count": 15,
-      "queued_municipality_count": 18,
+      "queued_municipality_count": 20,
       "likely_matched_set_count": 14,
       "calibration_verified_municipality_count": 0,
       "verified_count": null,
@@ -404,13 +404,13 @@
       "claim_ids_in_prior_registry": [],
       "claim_mapped_city_count": 0,
       "claim_readiness_level": "matched_set_leads_need_verification",
-      "evidence_readiness_score": 88.9,
+      "evidence_readiness_score": 89.0,
       "map_color_metric": {
         "field": "evidence_readiness_score",
-        "value": 88.9,
+        "value": 89.0,
         "scale": "0_to_100_operational_triage_only"
       },
-      "short_state_narrative": "19 of 179 municipal governments have parseable scout outcomes; 18 are candidate-positive, 1 returned parseable empty lists, and 14 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+      "short_state_narrative": "21 of 179 municipal governments have parseable scout outcomes; 20 are candidate-positive, 1 returned parseable empty lists, and 14 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
         "route": "#/state/CT",
         "title": "Connecticut municipal labor evidence brief",
@@ -421,18 +421,18 @@
           },
           {
             "label": "Scout covered",
-            "value": 19
+            "value": 21
           },
           {
             "label": "Candidate positive",
-            "value": 18
+            "value": 20
           },
           {
             "label": "Likely matched-set leads",
             "value": 14
           }
         ],
-        "narrative": "19 of 179 municipal governments have parseable scout outcomes; 18 are candidate-positive, 1 returned parseable empty lists, and 14 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+        "narrative": "21 of 179 municipal governments have parseable scout outcomes; 20 are candidate-positive, 1 returned parseable empty lists, and 14 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
         "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
       }
     },
@@ -495,32 +495,32 @@
       "state": "DE",
       "state_name": "Delaware",
       "municipality_universe": 57,
-      "scout_coverage_count": 0,
-      "scout_coverage_rate": 0.0,
-      "candidate_positive_count": 0,
+      "scout_coverage_count": 2,
+      "scout_coverage_rate": 3.5088,
+      "candidate_positive_count": 2,
       "no_candidate_count": 0,
       "failed_scout_municipality_count": 0,
       "failed_scout_attempt_count": 0,
-      "candidate_rows": 0,
-      "high_priority_queue_count": 0,
-      "medium_priority_queue_count": 0,
+      "candidate_rows": 4,
+      "high_priority_queue_count": 2,
+      "medium_priority_queue_count": 1,
       "low_priority_queue_count": 0,
-      "hold_or_rejected_queue_count": 0,
-      "queued_municipality_count": 0,
+      "hold_or_rejected_queue_count": 1,
+      "queued_municipality_count": 2,
       "likely_matched_set_count": 0,
       "calibration_verified_municipality_count": 0,
       "verified_count": null,
       "ingested_count": null,
       "claim_ids_in_prior_registry": [],
       "claim_mapped_city_count": 0,
-      "claim_readiness_level": "not_started",
-      "evidence_readiness_score": 0.0,
+      "claim_readiness_level": "candidate_leads_need_verification",
+      "evidence_readiness_score": 44.0,
       "map_color_metric": {
         "field": "evidence_readiness_score",
-        "value": 0.0,
+        "value": 44.0,
         "scale": "0_to_100_operational_triage_only"
       },
-      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "short_state_narrative": "2 of 57 municipal governments have parseable scout outcomes; 2 are candidate-positive, 0 returned parseable empty lists, and 0 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
         "route": "#/state/DE",
         "title": "Delaware municipal labor evidence brief",
@@ -531,18 +531,18 @@
           },
           {
             "label": "Scout covered",
-            "value": 0
+            "value": 2
           },
           {
             "label": "Candidate positive",
-            "value": 0
+            "value": 2
           },
           {
             "label": "Likely matched-set leads",
             "value": 0
           }
         ],
-        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "narrative": "2 of 57 municipal governments have parseable scout outcomes; 2 are candidate-positive, 0 returned parseable empty lists, and 0 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
         "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
       }
     },
@@ -550,32 +550,32 @@
       "state": "FL",
       "state_name": "Florida",
       "municipality_universe": 411,
-      "scout_coverage_count": 86,
-      "scout_coverage_rate": 20.9246,
-      "candidate_positive_count": 67,
-      "no_candidate_count": 19,
-      "failed_scout_municipality_count": 2,
-      "failed_scout_attempt_count": 2,
-      "candidate_rows": 167,
-      "high_priority_queue_count": 106,
-      "medium_priority_queue_count": 12,
-      "low_priority_queue_count": 8,
-      "hold_or_rejected_queue_count": 41,
-      "queued_municipality_count": 67,
-      "likely_matched_set_count": 24,
+      "scout_coverage_count": 145,
+      "scout_coverage_rate": 35.2798,
+      "candidate_positive_count": 104,
+      "no_candidate_count": 41,
+      "failed_scout_municipality_count": 3,
+      "failed_scout_attempt_count": 3,
+      "candidate_rows": 241,
+      "high_priority_queue_count": 148,
+      "medium_priority_queue_count": 20,
+      "low_priority_queue_count": 10,
+      "hold_or_rejected_queue_count": 63,
+      "queued_municipality_count": 104,
+      "likely_matched_set_count": 33,
       "calibration_verified_municipality_count": 0,
       "verified_count": null,
       "ingested_count": null,
       "claim_ids_in_prior_registry": [],
       "claim_mapped_city_count": 0,
       "claim_readiness_level": "matched_set_leads_need_verification",
-      "evidence_readiness_score": 85.6,
+      "evidence_readiness_score": 84.3,
       "map_color_metric": {
         "field": "evidence_readiness_score",
-        "value": 85.6,
+        "value": 84.3,
         "scale": "0_to_100_operational_triage_only"
       },
-      "short_state_narrative": "86 of 411 municipal governments have parseable scout outcomes; 67 are candidate-positive, 19 returned parseable empty lists, and 24 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+      "short_state_narrative": "145 of 411 municipal governments have parseable scout outcomes; 104 are candidate-positive, 41 returned parseable empty lists, and 33 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
         "route": "#/state/FL",
         "title": "Florida municipal labor evidence brief",
@@ -586,18 +586,18 @@
           },
           {
             "label": "Scout covered",
-            "value": 86
+            "value": 145
           },
           {
             "label": "Candidate positive",
-            "value": 67
+            "value": 104
           },
           {
             "label": "Likely matched-set leads",
-            "value": 24
+            "value": 33
           }
         ],
-        "narrative": "86 of 411 municipal governments have parseable scout outcomes; 67 are candidate-positive, 19 returned parseable empty lists, and 24 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+        "narrative": "145 of 411 municipal governments have parseable scout outcomes; 104 are candidate-positive, 41 returned parseable empty lists, and 33 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
         "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
       }
     },
@@ -715,32 +715,32 @@
       "state": "IA",
       "state_name": "Iowa",
       "municipality_universe": 939,
-      "scout_coverage_count": 11,
-      "scout_coverage_rate": 1.1715,
-      "candidate_positive_count": 10,
-      "no_candidate_count": 1,
+      "scout_coverage_count": 27,
+      "scout_coverage_rate": 2.8754,
+      "candidate_positive_count": 21,
+      "no_candidate_count": 6,
       "failed_scout_municipality_count": 1,
       "failed_scout_attempt_count": 1,
-      "candidate_rows": 32,
-      "high_priority_queue_count": 20,
-      "medium_priority_queue_count": 1,
-      "low_priority_queue_count": 2,
-      "hold_or_rejected_queue_count": 9,
-      "queued_municipality_count": 10,
-      "likely_matched_set_count": 8,
+      "candidate_rows": 59,
+      "high_priority_queue_count": 33,
+      "medium_priority_queue_count": 5,
+      "low_priority_queue_count": 5,
+      "hold_or_rejected_queue_count": 16,
+      "queued_municipality_count": 21,
+      "likely_matched_set_count": 14,
       "calibration_verified_municipality_count": 0,
       "verified_count": null,
       "ingested_count": null,
       "claim_ids_in_prior_registry": [],
       "claim_mapped_city_count": 0,
       "claim_readiness_level": "matched_set_leads_need_verification",
-      "evidence_readiness_score": 82.2,
+      "evidence_readiness_score": 85.6,
       "map_color_metric": {
         "field": "evidence_readiness_score",
-        "value": 82.2,
+        "value": 85.6,
         "scale": "0_to_100_operational_triage_only"
       },
-      "short_state_narrative": "11 of 939 municipal governments have parseable scout outcomes; 10 are candidate-positive, 1 returned parseable empty lists, and 8 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+      "short_state_narrative": "27 of 939 municipal governments have parseable scout outcomes; 21 are candidate-positive, 6 returned parseable empty lists, and 14 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
         "route": "#/state/IA",
         "title": "Iowa municipal labor evidence brief",
@@ -751,18 +751,18 @@
           },
           {
             "label": "Scout covered",
-            "value": 11
+            "value": 27
           },
           {
             "label": "Candidate positive",
-            "value": 10
+            "value": 21
           },
           {
             "label": "Likely matched-set leads",
-            "value": 8
+            "value": 14
           }
         ],
-        "narrative": "11 of 939 municipal governments have parseable scout outcomes; 10 are candidate-positive, 1 returned parseable empty lists, and 8 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+        "narrative": "27 of 939 municipal governments have parseable scout outcomes; 21 are candidate-positive, 6 returned parseable empty lists, and 14 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
         "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
       }
     },
@@ -770,32 +770,32 @@
       "state": "ID",
       "state_name": "Idaho",
       "municipality_universe": 198,
-      "scout_coverage_count": 4,
-      "scout_coverage_rate": 2.0202,
-      "candidate_positive_count": 3,
-      "no_candidate_count": 1,
+      "scout_coverage_count": 9,
+      "scout_coverage_rate": 4.5455,
+      "candidate_positive_count": 6,
+      "no_candidate_count": 3,
       "failed_scout_municipality_count": 0,
       "failed_scout_attempt_count": 0,
-      "candidate_rows": 7,
-      "high_priority_queue_count": 5,
+      "candidate_rows": 14,
+      "high_priority_queue_count": 6,
       "medium_priority_queue_count": 1,
-      "low_priority_queue_count": 1,
-      "hold_or_rejected_queue_count": 0,
-      "queued_municipality_count": 3,
-      "likely_matched_set_count": 1,
+      "low_priority_queue_count": 3,
+      "hold_or_rejected_queue_count": 4,
+      "queued_municipality_count": 6,
+      "likely_matched_set_count": 2,
       "calibration_verified_municipality_count": 0,
       "verified_count": null,
       "ingested_count": null,
       "claim_ids_in_prior_registry": [],
       "claim_mapped_city_count": 0,
       "claim_readiness_level": "matched_set_leads_need_verification",
-      "evidence_readiness_score": 48.0,
+      "evidence_readiness_score": 51.3,
       "map_color_metric": {
         "field": "evidence_readiness_score",
-        "value": 48.0,
+        "value": 51.3,
         "scale": "0_to_100_operational_triage_only"
       },
-      "short_state_narrative": "4 of 198 municipal governments have parseable scout outcomes; 3 are candidate-positive, 1 returned parseable empty lists, and 1 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+      "short_state_narrative": "9 of 198 municipal governments have parseable scout outcomes; 6 are candidate-positive, 3 returned parseable empty lists, and 2 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
         "route": "#/state/ID",
         "title": "Idaho municipal labor evidence brief",
@@ -806,18 +806,18 @@
           },
           {
             "label": "Scout covered",
-            "value": 4
+            "value": 9
           },
           {
             "label": "Candidate positive",
-            "value": 3
+            "value": 6
           },
           {
             "label": "Likely matched-set leads",
-            "value": 1
+            "value": 2
           }
         ],
-        "narrative": "4 of 198 municipal governments have parseable scout outcomes; 3 are candidate-positive, 1 returned parseable empty lists, and 1 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+        "narrative": "9 of 198 municipal governments have parseable scout outcomes; 6 are candidate-positive, 3 returned parseable empty lists, and 2 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
         "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
       }
     },
@@ -880,32 +880,32 @@
       "state": "IN",
       "state_name": "Indiana",
       "municipality_universe": 1569,
-      "scout_coverage_count": 6,
-      "scout_coverage_rate": 0.3824,
-      "candidate_positive_count": 6,
-      "no_candidate_count": 0,
+      "scout_coverage_count": 32,
+      "scout_coverage_rate": 2.0395,
+      "candidate_positive_count": 26,
+      "no_candidate_count": 6,
       "failed_scout_municipality_count": 2,
       "failed_scout_attempt_count": 2,
-      "candidate_rows": 11,
-      "high_priority_queue_count": 5,
-      "medium_priority_queue_count": 3,
-      "low_priority_queue_count": 0,
-      "hold_or_rejected_queue_count": 3,
-      "queued_municipality_count": 6,
-      "likely_matched_set_count": 1,
+      "candidate_rows": 55,
+      "high_priority_queue_count": 25,
+      "medium_priority_queue_count": 7,
+      "low_priority_queue_count": 2,
+      "hold_or_rejected_queue_count": 21,
+      "queued_municipality_count": 26,
+      "likely_matched_set_count": 9,
       "calibration_verified_municipality_count": 0,
       "verified_count": null,
       "ingested_count": null,
       "claim_ids_in_prior_registry": [],
       "claim_mapped_city_count": 0,
       "claim_readiness_level": "matched_set_leads_need_verification",
-      "evidence_readiness_score": 53.0,
+      "evidence_readiness_score": 83.2,
       "map_color_metric": {
         "field": "evidence_readiness_score",
-        "value": 53.0,
+        "value": 83.2,
         "scale": "0_to_100_operational_triage_only"
       },
-      "short_state_narrative": "6 of 1,569 municipal governments have parseable scout outcomes; 6 are candidate-positive, 0 returned parseable empty lists, and 1 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+      "short_state_narrative": "32 of 1,569 municipal governments have parseable scout outcomes; 26 are candidate-positive, 6 returned parseable empty lists, and 9 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
         "route": "#/state/IN",
         "title": "Indiana municipal labor evidence brief",
@@ -916,18 +916,18 @@
           },
           {
             "label": "Scout covered",
-            "value": 6
+            "value": 32
           },
           {
             "label": "Candidate positive",
-            "value": 6
+            "value": 26
           },
           {
             "label": "Likely matched-set leads",
-            "value": 1
+            "value": 9
           }
         ],
-        "narrative": "6 of 1,569 municipal governments have parseable scout outcomes; 6 are candidate-positive, 0 returned parseable empty lists, and 1 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+        "narrative": "32 of 1,569 municipal governments have parseable scout outcomes; 26 are candidate-positive, 6 returned parseable empty lists, and 9 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
         "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
       }
     },
@@ -935,10 +935,10 @@
       "state": "KS",
       "state_name": "Kansas",
       "municipality_universe": 1835,
-      "scout_coverage_count": 7,
-      "scout_coverage_rate": 0.3815,
+      "scout_coverage_count": 8,
+      "scout_coverage_rate": 0.436,
       "candidate_positive_count": 5,
-      "no_candidate_count": 2,
+      "no_candidate_count": 3,
       "failed_scout_municipality_count": 0,
       "failed_scout_attempt_count": 0,
       "candidate_rows": 14,
@@ -954,13 +954,13 @@
       "claim_ids_in_prior_registry": [],
       "claim_mapped_city_count": 0,
       "claim_readiness_level": "matched_set_leads_need_verification",
-      "evidence_readiness_score": 56.3,
+      "evidence_readiness_score": 54.5,
       "map_color_metric": {
         "field": "evidence_readiness_score",
-        "value": 56.3,
+        "value": 54.5,
         "scale": "0_to_100_operational_triage_only"
       },
-      "short_state_narrative": "7 of 1,835 municipal governments have parseable scout outcomes; 5 are candidate-positive, 2 returned parseable empty lists, and 2 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+      "short_state_narrative": "8 of 1,835 municipal governments have parseable scout outcomes; 5 are candidate-positive, 3 returned parseable empty lists, and 2 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
         "route": "#/state/KS",
         "title": "Kansas municipal labor evidence brief",
@@ -971,7 +971,7 @@
           },
           {
             "label": "Scout covered",
-            "value": 7
+            "value": 8
           },
           {
             "label": "Candidate positive",
@@ -982,7 +982,7 @@
             "value": 2
           }
         ],
-        "narrative": "7 of 1,835 municipal governments have parseable scout outcomes; 5 are candidate-positive, 2 returned parseable empty lists, and 2 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+        "narrative": "8 of 1,835 municipal governments have parseable scout outcomes; 5 are candidate-positive, 3 returned parseable empty lists, and 2 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
         "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
       }
     },
@@ -990,18 +990,18 @@
       "state": "KY",
       "state_name": "Kentucky",
       "municipality_universe": 411,
-      "scout_coverage_count": 3,
-      "scout_coverage_rate": 0.7299,
-      "candidate_positive_count": 3,
-      "no_candidate_count": 0,
+      "scout_coverage_count": 16,
+      "scout_coverage_rate": 3.8929,
+      "candidate_positive_count": 10,
+      "no_candidate_count": 6,
       "failed_scout_municipality_count": 0,
       "failed_scout_attempt_count": 0,
-      "candidate_rows": 6,
-      "high_priority_queue_count": 3,
-      "medium_priority_queue_count": 1,
-      "low_priority_queue_count": 0,
-      "hold_or_rejected_queue_count": 2,
-      "queued_municipality_count": 3,
+      "candidate_rows": 18,
+      "high_priority_queue_count": 8,
+      "medium_priority_queue_count": 3,
+      "low_priority_queue_count": 1,
+      "hold_or_rejected_queue_count": 6,
+      "queued_municipality_count": 10,
       "likely_matched_set_count": 0,
       "calibration_verified_municipality_count": 0,
       "verified_count": null,
@@ -1009,13 +1009,13 @@
       "claim_ids_in_prior_registry": [],
       "claim_mapped_city_count": 0,
       "claim_readiness_level": "candidate_leads_need_verification",
-      "evidence_readiness_score": 46.0,
+      "evidence_readiness_score": 48.5,
       "map_color_metric": {
         "field": "evidence_readiness_score",
-        "value": 46.0,
+        "value": 48.5,
         "scale": "0_to_100_operational_triage_only"
       },
-      "short_state_narrative": "3 of 411 municipal governments have parseable scout outcomes; 3 are candidate-positive, 0 returned parseable empty lists, and 0 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+      "short_state_narrative": "16 of 411 municipal governments have parseable scout outcomes; 10 are candidate-positive, 6 returned parseable empty lists, and 0 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
         "route": "#/state/KY",
         "title": "Kentucky municipal labor evidence brief",
@@ -1026,18 +1026,18 @@
           },
           {
             "label": "Scout covered",
-            "value": 3
+            "value": 16
           },
           {
             "label": "Candidate positive",
-            "value": 3
+            "value": 10
           },
           {
             "label": "Likely matched-set leads",
             "value": 0
           }
         ],
-        "narrative": "3 of 411 municipal governments have parseable scout outcomes; 3 are candidate-positive, 0 returned parseable empty lists, and 0 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+        "narrative": "16 of 411 municipal governments have parseable scout outcomes; 10 are candidate-positive, 6 returned parseable empty lists, and 0 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
         "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
       }
     },
@@ -1100,19 +1100,19 @@
       "state": "MA",
       "state_name": "Massachusetts",
       "municipality_universe": 351,
-      "scout_coverage_count": 45,
-      "scout_coverage_rate": 12.8205,
-      "candidate_positive_count": 42,
-      "no_candidate_count": 3,
+      "scout_coverage_count": 57,
+      "scout_coverage_rate": 16.2393,
+      "candidate_positive_count": 53,
+      "no_candidate_count": 4,
       "failed_scout_municipality_count": 1,
       "failed_scout_attempt_count": 17,
-      "candidate_rows": 121,
-      "high_priority_queue_count": 64,
-      "medium_priority_queue_count": 10,
+      "candidate_rows": 155,
+      "high_priority_queue_count": 84,
+      "medium_priority_queue_count": 14,
       "low_priority_queue_count": 12,
-      "hold_or_rejected_queue_count": 35,
-      "queued_municipality_count": 42,
-      "likely_matched_set_count": 23,
+      "hold_or_rejected_queue_count": 45,
+      "queued_municipality_count": 53,
+      "likely_matched_set_count": 31,
       "calibration_verified_municipality_count": 8,
       "verified_count": null,
       "ingested_count": null,
@@ -1125,13 +1125,13 @@
       ],
       "claim_mapped_city_count": 9,
       "claim_readiness_level": "matched_set_leads_need_verification",
-      "evidence_readiness_score": 98.7,
+      "evidence_readiness_score": 98.6,
       "map_color_metric": {
         "field": "evidence_readiness_score",
-        "value": 98.7,
+        "value": 98.6,
         "scale": "0_to_100_operational_triage_only"
       },
-      "short_state_narrative": "45 of 351 municipal governments have parseable scout outcomes; 42 are candidate-positive, 3 returned parseable empty lists, and 23 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+      "short_state_narrative": "57 of 351 municipal governments have parseable scout outcomes; 53 are candidate-positive, 4 returned parseable empty lists, and 31 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
         "route": "#/state/MA",
         "title": "Massachusetts municipal labor evidence brief",
@@ -1142,18 +1142,18 @@
           },
           {
             "label": "Scout covered",
-            "value": 45
+            "value": 57
           },
           {
             "label": "Candidate positive",
-            "value": 42
+            "value": 53
           },
           {
             "label": "Likely matched-set leads",
-            "value": 23
+            "value": 31
           }
         ],
-        "narrative": "45 of 351 municipal governments have parseable scout outcomes; 42 are candidate-positive, 3 returned parseable empty lists, and 23 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+        "narrative": "57 of 351 municipal governments have parseable scout outcomes; 53 are candidate-positive, 4 returned parseable empty lists, and 31 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
         "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
       }
     },
@@ -1161,32 +1161,32 @@
       "state": "MD",
       "state_name": "Maryland",
       "municipality_universe": 157,
-      "scout_coverage_count": 5,
-      "scout_coverage_rate": 3.1847,
-      "candidate_positive_count": 5,
+      "scout_coverage_count": 11,
+      "scout_coverage_rate": 7.0064,
+      "candidate_positive_count": 11,
       "no_candidate_count": 0,
       "failed_scout_municipality_count": 0,
       "failed_scout_attempt_count": 0,
-      "candidate_rows": 12,
-      "high_priority_queue_count": 5,
+      "candidate_rows": 31,
+      "high_priority_queue_count": 14,
       "medium_priority_queue_count": 3,
-      "low_priority_queue_count": 0,
-      "hold_or_rejected_queue_count": 4,
-      "queued_municipality_count": 5,
-      "likely_matched_set_count": 1,
+      "low_priority_queue_count": 2,
+      "hold_or_rejected_queue_count": 12,
+      "queued_municipality_count": 11,
+      "likely_matched_set_count": 2,
       "calibration_verified_municipality_count": 0,
       "verified_count": null,
       "ingested_count": null,
       "claim_ids_in_prior_registry": [],
       "claim_mapped_city_count": 0,
       "claim_readiness_level": "matched_set_leads_need_verification",
-      "evidence_readiness_score": 53.0,
+      "evidence_readiness_score": 66.0,
       "map_color_metric": {
         "field": "evidence_readiness_score",
-        "value": 53.0,
+        "value": 66.0,
         "scale": "0_to_100_operational_triage_only"
       },
-      "short_state_narrative": "5 of 157 municipal governments have parseable scout outcomes; 5 are candidate-positive, 0 returned parseable empty lists, and 1 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+      "short_state_narrative": "11 of 157 municipal governments have parseable scout outcomes; 11 are candidate-positive, 0 returned parseable empty lists, and 2 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
         "route": "#/state/MD",
         "title": "Maryland municipal labor evidence brief",
@@ -1197,18 +1197,18 @@
           },
           {
             "label": "Scout covered",
-            "value": 5
+            "value": 11
           },
           {
             "label": "Candidate positive",
-            "value": 5
+            "value": 11
           },
           {
             "label": "Likely matched-set leads",
-            "value": 1
+            "value": 2
           }
         ],
-        "narrative": "5 of 157 municipal governments have parseable scout outcomes; 5 are candidate-positive, 0 returned parseable empty lists, and 1 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+        "narrative": "11 of 157 municipal governments have parseable scout outcomes; 11 are candidate-positive, 0 returned parseable empty lists, and 2 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
         "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
       }
     },
@@ -1216,32 +1216,32 @@
       "state": "ME",
       "state_name": "Maine",
       "municipality_universe": 482,
-      "scout_coverage_count": 0,
-      "scout_coverage_rate": 0.0,
-      "candidate_positive_count": 0,
+      "scout_coverage_count": 2,
+      "scout_coverage_rate": 0.4149,
+      "candidate_positive_count": 2,
       "no_candidate_count": 0,
       "failed_scout_municipality_count": 0,
       "failed_scout_attempt_count": 0,
-      "candidate_rows": 0,
+      "candidate_rows": 6,
       "high_priority_queue_count": 0,
-      "medium_priority_queue_count": 0,
-      "low_priority_queue_count": 0,
-      "hold_or_rejected_queue_count": 0,
-      "queued_municipality_count": 0,
-      "likely_matched_set_count": 0,
+      "medium_priority_queue_count": 1,
+      "low_priority_queue_count": 2,
+      "hold_or_rejected_queue_count": 3,
+      "queued_municipality_count": 2,
+      "likely_matched_set_count": 1,
       "calibration_verified_municipality_count": 0,
       "verified_count": null,
       "ingested_count": null,
       "claim_ids_in_prior_registry": [],
       "claim_mapped_city_count": 0,
-      "claim_readiness_level": "not_started",
-      "evidence_readiness_score": 0.0,
+      "claim_readiness_level": "matched_set_leads_need_verification",
+      "evidence_readiness_score": 43.0,
       "map_color_metric": {
         "field": "evidence_readiness_score",
-        "value": 0.0,
+        "value": 43.0,
         "scale": "0_to_100_operational_triage_only"
       },
-      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "short_state_narrative": "2 of 482 municipal governments have parseable scout outcomes; 2 are candidate-positive, 0 returned parseable empty lists, and 1 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
         "route": "#/state/ME",
         "title": "Maine municipal labor evidence brief",
@@ -1252,18 +1252,18 @@
           },
           {
             "label": "Scout covered",
-            "value": 0
+            "value": 2
           },
           {
             "label": "Candidate positive",
-            "value": 0
+            "value": 2
           },
           {
             "label": "Likely matched-set leads",
-            "value": 0
+            "value": 1
           }
         ],
-        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "narrative": "2 of 482 municipal governments have parseable scout outcomes; 2 are candidate-positive, 0 returned parseable empty lists, and 1 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
         "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
       }
     },
@@ -1271,32 +1271,32 @@
       "state": "MI",
       "state_name": "Michigan",
       "municipality_universe": 1773,
-      "scout_coverage_count": 36,
-      "scout_coverage_rate": 2.0305,
-      "candidate_positive_count": 33,
-      "no_candidate_count": 3,
+      "scout_coverage_count": 70,
+      "scout_coverage_rate": 3.9481,
+      "candidate_positive_count": 62,
+      "no_candidate_count": 8,
       "failed_scout_municipality_count": 0,
       "failed_scout_attempt_count": 0,
-      "candidate_rows": 87,
-      "high_priority_queue_count": 67,
+      "candidate_rows": 161,
+      "high_priority_queue_count": 113,
       "medium_priority_queue_count": 3,
-      "low_priority_queue_count": 8,
-      "hold_or_rejected_queue_count": 9,
-      "queued_municipality_count": 33,
-      "likely_matched_set_count": 17,
+      "low_priority_queue_count": 16,
+      "hold_or_rejected_queue_count": 29,
+      "queued_municipality_count": 62,
+      "likely_matched_set_count": 28,
       "calibration_verified_municipality_count": 0,
       "verified_count": null,
       "ingested_count": null,
       "claim_ids_in_prior_registry": [],
       "claim_mapped_city_count": 0,
       "claim_readiness_level": "matched_set_leads_need_verification",
-      "evidence_readiness_score": 88.3,
+      "evidence_readiness_score": 87.7,
       "map_color_metric": {
         "field": "evidence_readiness_score",
-        "value": 88.3,
+        "value": 87.7,
         "scale": "0_to_100_operational_triage_only"
       },
-      "short_state_narrative": "36 of 1,773 municipal governments have parseable scout outcomes; 33 are candidate-positive, 3 returned parseable empty lists, and 17 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+      "short_state_narrative": "70 of 1,773 municipal governments have parseable scout outcomes; 62 are candidate-positive, 8 returned parseable empty lists, and 28 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
         "route": "#/state/MI",
         "title": "Michigan municipal labor evidence brief",
@@ -1307,18 +1307,18 @@
           },
           {
             "label": "Scout covered",
-            "value": 36
+            "value": 70
           },
           {
             "label": "Candidate positive",
-            "value": 33
+            "value": 62
           },
           {
             "label": "Likely matched-set leads",
-            "value": 17
+            "value": 28
           }
         ],
-        "narrative": "36 of 1,773 municipal governments have parseable scout outcomes; 33 are candidate-positive, 3 returned parseable empty lists, and 17 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+        "narrative": "70 of 1,773 municipal governments have parseable scout outcomes; 62 are candidate-positive, 8 returned parseable empty lists, and 28 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
         "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
       }
     },
@@ -1326,32 +1326,32 @@
       "state": "MN",
       "state_name": "Minnesota",
       "municipality_universe": 2630,
-      "scout_coverage_count": 8,
-      "scout_coverage_rate": 0.3042,
-      "candidate_positive_count": 6,
-      "no_candidate_count": 2,
+      "scout_coverage_count": 25,
+      "scout_coverage_rate": 0.9506,
+      "candidate_positive_count": 22,
+      "no_candidate_count": 3,
       "failed_scout_municipality_count": 0,
       "failed_scout_attempt_count": 0,
-      "candidate_rows": 16,
-      "high_priority_queue_count": 16,
-      "medium_priority_queue_count": 0,
-      "low_priority_queue_count": 0,
-      "hold_or_rejected_queue_count": 0,
-      "queued_municipality_count": 6,
-      "likely_matched_set_count": 3,
+      "candidate_rows": 50,
+      "high_priority_queue_count": 32,
+      "medium_priority_queue_count": 4,
+      "low_priority_queue_count": 4,
+      "hold_or_rejected_queue_count": 10,
+      "queued_municipality_count": 22,
+      "likely_matched_set_count": 5,
       "calibration_verified_municipality_count": 0,
       "verified_count": null,
       "ingested_count": null,
       "claim_ids_in_prior_registry": [],
       "claim_mapped_city_count": 0,
       "claim_readiness_level": "matched_set_leads_need_verification",
-      "evidence_readiness_score": 64.0,
+      "evidence_readiness_score": 72.6,
       "map_color_metric": {
         "field": "evidence_readiness_score",
-        "value": 64.0,
+        "value": 72.6,
         "scale": "0_to_100_operational_triage_only"
       },
-      "short_state_narrative": "8 of 2,630 municipal governments have parseable scout outcomes; 6 are candidate-positive, 2 returned parseable empty lists, and 3 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+      "short_state_narrative": "25 of 2,630 municipal governments have parseable scout outcomes; 22 are candidate-positive, 3 returned parseable empty lists, and 5 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
         "route": "#/state/MN",
         "title": "Minnesota municipal labor evidence brief",
@@ -1362,18 +1362,18 @@
           },
           {
             "label": "Scout covered",
-            "value": 8
+            "value": 25
           },
           {
             "label": "Candidate positive",
-            "value": 6
+            "value": 22
           },
           {
             "label": "Likely matched-set leads",
-            "value": 3
+            "value": 5
           }
         ],
-        "narrative": "8 of 2,630 municipal governments have parseable scout outcomes; 6 are candidate-positive, 2 returned parseable empty lists, and 3 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+        "narrative": "25 of 2,630 municipal governments have parseable scout outcomes; 22 are candidate-positive, 3 returned parseable empty lists, and 5 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
         "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
       }
     },
@@ -1436,18 +1436,18 @@
       "state": "MS",
       "state_name": "Mississippi",
       "municipality_universe": 299,
-      "scout_coverage_count": 2,
-      "scout_coverage_rate": 0.6689,
-      "candidate_positive_count": 1,
+      "scout_coverage_count": 3,
+      "scout_coverage_rate": 1.0033,
+      "candidate_positive_count": 2,
       "no_candidate_count": 1,
       "failed_scout_municipality_count": 0,
       "failed_scout_attempt_count": 0,
-      "candidate_rows": 2,
+      "candidate_rows": 4,
       "high_priority_queue_count": 0,
       "medium_priority_queue_count": 0,
       "low_priority_queue_count": 1,
-      "hold_or_rejected_queue_count": 1,
-      "queued_municipality_count": 1,
+      "hold_or_rejected_queue_count": 3,
+      "queued_municipality_count": 2,
       "likely_matched_set_count": 0,
       "calibration_verified_municipality_count": 0,
       "verified_count": null,
@@ -1455,13 +1455,13 @@
       "claim_ids_in_prior_registry": [],
       "claim_mapped_city_count": 0,
       "claim_readiness_level": "candidate_leads_need_verification",
-      "evidence_readiness_score": 30.0,
+      "evidence_readiness_score": 33.3,
       "map_color_metric": {
         "field": "evidence_readiness_score",
-        "value": 30.0,
+        "value": 33.3,
         "scale": "0_to_100_operational_triage_only"
       },
-      "short_state_narrative": "2 of 299 municipal governments have parseable scout outcomes; 1 are candidate-positive, 1 returned parseable empty lists, and 0 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+      "short_state_narrative": "3 of 299 municipal governments have parseable scout outcomes; 2 are candidate-positive, 1 returned parseable empty lists, and 0 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
         "route": "#/state/MS",
         "title": "Mississippi municipal labor evidence brief",
@@ -1472,18 +1472,18 @@
           },
           {
             "label": "Scout covered",
-            "value": 2
+            "value": 3
           },
           {
             "label": "Candidate positive",
-            "value": 1
+            "value": 2
           },
           {
             "label": "Likely matched-set leads",
             "value": 0
           }
         ],
-        "narrative": "2 of 299 municipal governments have parseable scout outcomes; 1 are candidate-positive, 1 returned parseable empty lists, and 0 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+        "narrative": "3 of 299 municipal governments have parseable scout outcomes; 2 are candidate-positive, 1 returned parseable empty lists, and 0 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
         "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
       }
     },
@@ -1491,32 +1491,32 @@
       "state": "MT",
       "state_name": "Montana",
       "municipality_universe": 127,
-      "scout_coverage_count": 3,
-      "scout_coverage_rate": 2.3622,
-      "candidate_positive_count": 3,
+      "scout_coverage_count": 7,
+      "scout_coverage_rate": 5.5118,
+      "candidate_positive_count": 7,
       "no_candidate_count": 0,
       "failed_scout_municipality_count": 0,
       "failed_scout_attempt_count": 0,
-      "candidate_rows": 10,
-      "high_priority_queue_count": 6,
-      "medium_priority_queue_count": 1,
+      "candidate_rows": 22,
+      "high_priority_queue_count": 12,
+      "medium_priority_queue_count": 3,
       "low_priority_queue_count": 0,
-      "hold_or_rejected_queue_count": 3,
-      "queued_municipality_count": 3,
-      "likely_matched_set_count": 3,
+      "hold_or_rejected_queue_count": 7,
+      "queued_municipality_count": 7,
+      "likely_matched_set_count": 5,
       "calibration_verified_municipality_count": 0,
       "verified_count": null,
       "ingested_count": null,
       "claim_ids_in_prior_registry": [],
       "claim_mapped_city_count": 0,
       "claim_readiness_level": "matched_set_leads_need_verification",
-      "evidence_readiness_score": 61.0,
+      "evidence_readiness_score": 75.0,
       "map_color_metric": {
         "field": "evidence_readiness_score",
-        "value": 61.0,
+        "value": 75.0,
         "scale": "0_to_100_operational_triage_only"
       },
-      "short_state_narrative": "3 of 127 municipal governments have parseable scout outcomes; 3 are candidate-positive, 0 returned parseable empty lists, and 3 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+      "short_state_narrative": "7 of 127 municipal governments have parseable scout outcomes; 7 are candidate-positive, 0 returned parseable empty lists, and 5 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
         "route": "#/state/MT",
         "title": "Montana municipal labor evidence brief",
@@ -1527,18 +1527,18 @@
           },
           {
             "label": "Scout covered",
-            "value": 3
+            "value": 7
           },
           {
             "label": "Candidate positive",
-            "value": 3
+            "value": 7
           },
           {
             "label": "Likely matched-set leads",
-            "value": 3
+            "value": 5
           }
         ],
-        "narrative": "3 of 127 municipal governments have parseable scout outcomes; 3 are candidate-positive, 0 returned parseable empty lists, and 3 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+        "narrative": "7 of 127 municipal governments have parseable scout outcomes; 7 are candidate-positive, 0 returned parseable empty lists, and 5 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
         "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
       }
     },
@@ -1601,18 +1601,18 @@
       "state": "ND",
       "state_name": "North Dakota",
       "municipality_universe": 1658,
-      "scout_coverage_count": 1,
-      "scout_coverage_rate": 0.0603,
-      "candidate_positive_count": 1,
-      "no_candidate_count": 0,
+      "scout_coverage_count": 5,
+      "scout_coverage_rate": 0.3016,
+      "candidate_positive_count": 4,
+      "no_candidate_count": 1,
       "failed_scout_municipality_count": 0,
       "failed_scout_attempt_count": 0,
-      "candidate_rows": 1,
-      "high_priority_queue_count": 1,
-      "medium_priority_queue_count": 0,
+      "candidate_rows": 5,
+      "high_priority_queue_count": 2,
+      "medium_priority_queue_count": 2,
       "low_priority_queue_count": 0,
-      "hold_or_rejected_queue_count": 0,
-      "queued_municipality_count": 1,
+      "hold_or_rejected_queue_count": 1,
+      "queued_municipality_count": 4,
       "likely_matched_set_count": 0,
       "calibration_verified_municipality_count": 0,
       "verified_count": null,
@@ -1620,13 +1620,13 @@
       "claim_ids_in_prior_registry": [],
       "claim_mapped_city_count": 0,
       "claim_readiness_level": "candidate_leads_need_verification",
-      "evidence_readiness_score": 42.0,
+      "evidence_readiness_score": 40.0,
       "map_color_metric": {
         "field": "evidence_readiness_score",
-        "value": 42.0,
+        "value": 40.0,
         "scale": "0_to_100_operational_triage_only"
       },
-      "short_state_narrative": "1 of 1,658 municipal governments have parseable scout outcomes; 1 are candidate-positive, 0 returned parseable empty lists, and 0 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+      "short_state_narrative": "5 of 1,658 municipal governments have parseable scout outcomes; 4 are candidate-positive, 1 returned parseable empty lists, and 0 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
         "route": "#/state/ND",
         "title": "North Dakota municipal labor evidence brief",
@@ -1637,18 +1637,18 @@
           },
           {
             "label": "Scout covered",
-            "value": 1
+            "value": 5
           },
           {
             "label": "Candidate positive",
-            "value": 1
+            "value": 4
           },
           {
             "label": "Likely matched-set leads",
             "value": 0
           }
         ],
-        "narrative": "1 of 1,658 municipal governments have parseable scout outcomes; 1 are candidate-positive, 0 returned parseable empty lists, and 0 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+        "narrative": "5 of 1,658 municipal governments have parseable scout outcomes; 4 are candidate-positive, 1 returned parseable empty lists, and 0 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
         "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
       }
     },
@@ -1656,18 +1656,18 @@
       "state": "NE",
       "state_name": "Nebraska",
       "municipality_universe": 859,
-      "scout_coverage_count": 3,
-      "scout_coverage_rate": 0.3492,
-      "candidate_positive_count": 3,
+      "scout_coverage_count": 9,
+      "scout_coverage_rate": 1.0477,
+      "candidate_positive_count": 9,
       "no_candidate_count": 0,
       "failed_scout_municipality_count": 0,
       "failed_scout_attempt_count": 0,
-      "candidate_rows": 8,
-      "high_priority_queue_count": 5,
-      "medium_priority_queue_count": 2,
-      "low_priority_queue_count": 0,
-      "hold_or_rejected_queue_count": 1,
-      "queued_municipality_count": 3,
+      "candidate_rows": 17,
+      "high_priority_queue_count": 10,
+      "medium_priority_queue_count": 3,
+      "low_priority_queue_count": 1,
+      "hold_or_rejected_queue_count": 3,
+      "queued_municipality_count": 9,
       "likely_matched_set_count": 1,
       "calibration_verified_municipality_count": 0,
       "verified_count": null,
@@ -1675,13 +1675,13 @@
       "claim_ids_in_prior_registry": [],
       "claim_mapped_city_count": 0,
       "claim_readiness_level": "matched_set_leads_need_verification",
-      "evidence_readiness_score": 53.0,
+      "evidence_readiness_score": 63.0,
       "map_color_metric": {
         "field": "evidence_readiness_score",
-        "value": 53.0,
+        "value": 63.0,
         "scale": "0_to_100_operational_triage_only"
       },
-      "short_state_narrative": "3 of 859 municipal governments have parseable scout outcomes; 3 are candidate-positive, 0 returned parseable empty lists, and 1 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+      "short_state_narrative": "9 of 859 municipal governments have parseable scout outcomes; 9 are candidate-positive, 0 returned parseable empty lists, and 1 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
         "route": "#/state/NE",
         "title": "Nebraska municipal labor evidence brief",
@@ -1692,18 +1692,18 @@
           },
           {
             "label": "Scout covered",
-            "value": 3
+            "value": 9
           },
           {
             "label": "Candidate positive",
-            "value": 3
+            "value": 9
           },
           {
             "label": "Likely matched-set leads",
             "value": 1
           }
         ],
-        "narrative": "3 of 859 municipal governments have parseable scout outcomes; 3 are candidate-positive, 0 returned parseable empty lists, and 1 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+        "narrative": "9 of 859 municipal governments have parseable scout outcomes; 9 are candidate-positive, 0 returned parseable empty lists, and 1 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
         "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
       }
     },
@@ -1711,32 +1711,32 @@
       "state": "NH",
       "state_name": "New Hampshire",
       "municipality_universe": 234,
-      "scout_coverage_count": 2,
-      "scout_coverage_rate": 0.8547,
-      "candidate_positive_count": 2,
+      "scout_coverage_count": 5,
+      "scout_coverage_rate": 2.1368,
+      "candidate_positive_count": 5,
       "no_candidate_count": 0,
       "failed_scout_municipality_count": 0,
       "failed_scout_attempt_count": 0,
-      "candidate_rows": 6,
-      "high_priority_queue_count": 5,
+      "candidate_rows": 19,
+      "high_priority_queue_count": 14,
       "medium_priority_queue_count": 0,
-      "low_priority_queue_count": 0,
+      "low_priority_queue_count": 4,
       "hold_or_rejected_queue_count": 1,
-      "queued_municipality_count": 2,
-      "likely_matched_set_count": 1,
+      "queued_municipality_count": 5,
+      "likely_matched_set_count": 3,
       "calibration_verified_municipality_count": 0,
       "verified_count": null,
       "ingested_count": null,
       "claim_ids_in_prior_registry": [],
       "claim_mapped_city_count": 0,
       "claim_readiness_level": "matched_set_leads_need_verification",
-      "evidence_readiness_score": 53.0,
+      "evidence_readiness_score": 69.0,
       "map_color_metric": {
         "field": "evidence_readiness_score",
-        "value": 53.0,
+        "value": 69.0,
         "scale": "0_to_100_operational_triage_only"
       },
-      "short_state_narrative": "2 of 234 municipal governments have parseable scout outcomes; 2 are candidate-positive, 0 returned parseable empty lists, and 1 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+      "short_state_narrative": "5 of 234 municipal governments have parseable scout outcomes; 5 are candidate-positive, 0 returned parseable empty lists, and 3 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
         "route": "#/state/NH",
         "title": "New Hampshire municipal labor evidence brief",
@@ -1747,18 +1747,18 @@
           },
           {
             "label": "Scout covered",
-            "value": 2
+            "value": 5
           },
           {
             "label": "Candidate positive",
-            "value": 2
+            "value": 5
           },
           {
             "label": "Likely matched-set leads",
-            "value": 1
+            "value": 3
           }
         ],
-        "narrative": "2 of 234 municipal governments have parseable scout outcomes; 2 are candidate-positive, 0 returned parseable empty lists, and 1 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+        "narrative": "5 of 234 municipal governments have parseable scout outcomes; 5 are candidate-positive, 0 returned parseable empty lists, and 3 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
         "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
       }
     },
@@ -1823,18 +1823,18 @@
       "state": "NM",
       "state_name": "New Mexico",
       "municipality_universe": 105,
-      "scout_coverage_count": 10,
-      "scout_coverage_rate": 9.5238,
-      "candidate_positive_count": 10,
+      "scout_coverage_count": 12,
+      "scout_coverage_rate": 11.4286,
+      "candidate_positive_count": 12,
       "no_candidate_count": 0,
       "failed_scout_municipality_count": 0,
       "failed_scout_attempt_count": 0,
-      "candidate_rows": 25,
-      "high_priority_queue_count": 12,
+      "candidate_rows": 29,
+      "high_priority_queue_count": 14,
       "medium_priority_queue_count": 2,
-      "low_priority_queue_count": 2,
+      "low_priority_queue_count": 4,
       "hold_or_rejected_queue_count": 9,
-      "queued_municipality_count": 10,
+      "queued_municipality_count": 12,
       "likely_matched_set_count": 4,
       "calibration_verified_municipality_count": 0,
       "verified_count": null,
@@ -1848,7 +1848,7 @@
         "value": 72.0,
         "scale": "0_to_100_operational_triage_only"
       },
-      "short_state_narrative": "10 of 105 municipal governments have parseable scout outcomes; 10 are candidate-positive, 0 returned parseable empty lists, and 4 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+      "short_state_narrative": "12 of 105 municipal governments have parseable scout outcomes; 12 are candidate-positive, 0 returned parseable empty lists, and 4 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
         "route": "#/state/NM",
         "title": "New Mexico municipal labor evidence brief",
@@ -1859,18 +1859,18 @@
           },
           {
             "label": "Scout covered",
-            "value": 10
+            "value": 12
           },
           {
             "label": "Candidate positive",
-            "value": 10
+            "value": 12
           },
           {
             "label": "Likely matched-set leads",
             "value": 4
           }
         ],
-        "narrative": "10 of 105 municipal governments have parseable scout outcomes; 10 are candidate-positive, 0 returned parseable empty lists, and 4 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+        "narrative": "12 of 105 municipal governments have parseable scout outcomes; 12 are candidate-positive, 0 returned parseable empty lists, and 4 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
         "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
       }
     },
@@ -1878,32 +1878,32 @@
       "state": "NV",
       "state_name": "Nevada",
       "municipality_universe": 19,
-      "scout_coverage_count": 5,
-      "scout_coverage_rate": 26.3158,
-      "candidate_positive_count": 5,
+      "scout_coverage_count": 7,
+      "scout_coverage_rate": 36.8421,
+      "candidate_positive_count": 7,
       "no_candidate_count": 0,
       "failed_scout_municipality_count": 1,
       "failed_scout_attempt_count": 1,
-      "candidate_rows": 17,
-      "high_priority_queue_count": 13,
+      "candidate_rows": 23,
+      "high_priority_queue_count": 17,
       "medium_priority_queue_count": 1,
       "low_priority_queue_count": 0,
-      "hold_or_rejected_queue_count": 3,
-      "queued_municipality_count": 5,
-      "likely_matched_set_count": 4,
+      "hold_or_rejected_queue_count": 5,
+      "queued_municipality_count": 7,
+      "likely_matched_set_count": 5,
       "calibration_verified_municipality_count": 0,
       "verified_count": null,
       "ingested_count": null,
       "claim_ids_in_prior_registry": [],
       "claim_mapped_city_count": 0,
       "claim_readiness_level": "matched_set_leads_need_verification",
-      "evidence_readiness_score": 72.0,
+      "evidence_readiness_score": 75.0,
       "map_color_metric": {
         "field": "evidence_readiness_score",
-        "value": 72.0,
+        "value": 75.0,
         "scale": "0_to_100_operational_triage_only"
       },
-      "short_state_narrative": "5 of 19 municipal governments have parseable scout outcomes; 5 are candidate-positive, 0 returned parseable empty lists, and 4 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+      "short_state_narrative": "7 of 19 municipal governments have parseable scout outcomes; 7 are candidate-positive, 0 returned parseable empty lists, and 5 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
         "route": "#/state/NV",
         "title": "Nevada municipal labor evidence brief",
@@ -1914,18 +1914,18 @@
           },
           {
             "label": "Scout covered",
-            "value": 5
+            "value": 7
           },
           {
             "label": "Candidate positive",
-            "value": 5
+            "value": 7
           },
           {
             "label": "Likely matched-set leads",
-            "value": 4
+            "value": 5
           }
         ],
-        "narrative": "5 of 19 municipal governments have parseable scout outcomes; 5 are candidate-positive, 0 returned parseable empty lists, and 4 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+        "narrative": "7 of 19 municipal governments have parseable scout outcomes; 7 are candidate-positive, 0 returned parseable empty lists, and 5 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
         "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
       }
     },
@@ -1933,18 +1933,18 @@
       "state": "NY",
       "state_name": "New York",
       "municipality_universe": 1523,
-      "scout_coverage_count": 25,
-      "scout_coverage_rate": 1.6415,
-      "candidate_positive_count": 21,
+      "scout_coverage_count": 27,
+      "scout_coverage_rate": 1.7728,
+      "candidate_positive_count": 23,
       "no_candidate_count": 4,
       "failed_scout_municipality_count": 0,
       "failed_scout_attempt_count": 0,
-      "candidate_rows": 57,
-      "high_priority_queue_count": 33,
+      "candidate_rows": 61,
+      "high_priority_queue_count": 35,
       "medium_priority_queue_count": 11,
-      "low_priority_queue_count": 4,
-      "hold_or_rejected_queue_count": 9,
-      "queued_municipality_count": 21,
+      "low_priority_queue_count": 5,
+      "hold_or_rejected_queue_count": 10,
+      "queued_municipality_count": 23,
       "likely_matched_set_count": 9,
       "calibration_verified_municipality_count": 0,
       "verified_count": null,
@@ -1952,13 +1952,13 @@
       "claim_ids_in_prior_registry": [],
       "claim_mapped_city_count": 0,
       "claim_readiness_level": "matched_set_leads_need_verification",
-      "evidence_readiness_score": 83.8,
+      "evidence_readiness_score": 84.0,
       "map_color_metric": {
         "field": "evidence_readiness_score",
-        "value": 83.8,
+        "value": 84.0,
         "scale": "0_to_100_operational_triage_only"
       },
-      "short_state_narrative": "25 of 1,523 municipal governments have parseable scout outcomes; 21 are candidate-positive, 4 returned parseable empty lists, and 9 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+      "short_state_narrative": "27 of 1,523 municipal governments have parseable scout outcomes; 23 are candidate-positive, 4 returned parseable empty lists, and 9 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
         "route": "#/state/NY",
         "title": "New York municipal labor evidence brief",
@@ -1969,18 +1969,18 @@
           },
           {
             "label": "Scout covered",
-            "value": 25
+            "value": 27
           },
           {
             "label": "Candidate positive",
-            "value": 21
+            "value": 23
           },
           {
             "label": "Likely matched-set leads",
             "value": 9
           }
         ],
-        "narrative": "25 of 1,523 municipal governments have parseable scout outcomes; 21 are candidate-positive, 4 returned parseable empty lists, and 9 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+        "narrative": "27 of 1,523 municipal governments have parseable scout outcomes; 23 are candidate-positive, 4 returned parseable empty lists, and 9 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
         "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
       }
     },
@@ -1988,19 +1988,19 @@
       "state": "OH",
       "state_name": "Ohio",
       "municipality_universe": 2233,
-      "scout_coverage_count": 91,
-      "scout_coverage_rate": 4.0752,
-      "candidate_positive_count": 89,
-      "no_candidate_count": 2,
-      "failed_scout_municipality_count": 1,
-      "failed_scout_attempt_count": 1,
-      "candidate_rows": 293,
-      "high_priority_queue_count": 247,
-      "medium_priority_queue_count": 16,
-      "low_priority_queue_count": 4,
-      "hold_or_rejected_queue_count": 26,
-      "queued_municipality_count": 89,
-      "likely_matched_set_count": 56,
+      "scout_coverage_count": 179,
+      "scout_coverage_rate": 8.0161,
+      "candidate_positive_count": 173,
+      "no_candidate_count": 6,
+      "failed_scout_municipality_count": 2,
+      "failed_scout_attempt_count": 2,
+      "candidate_rows": 574,
+      "high_priority_queue_count": 466,
+      "medium_priority_queue_count": 23,
+      "low_priority_queue_count": 14,
+      "hold_or_rejected_queue_count": 71,
+      "queued_municipality_count": 173,
+      "likely_matched_set_count": 106,
       "calibration_verified_municipality_count": 0,
       "verified_count": null,
       "ingested_count": null,
@@ -2012,13 +2012,13 @@
       ],
       "claim_mapped_city_count": 4,
       "claim_readiness_level": "matched_set_leads_need_verification",
-      "evidence_readiness_score": 99.6,
+      "evidence_readiness_score": 99.3,
       "map_color_metric": {
         "field": "evidence_readiness_score",
-        "value": 99.6,
+        "value": 99.3,
         "scale": "0_to_100_operational_triage_only"
       },
-      "short_state_narrative": "91 of 2,233 municipal governments have parseable scout outcomes; 89 are candidate-positive, 2 returned parseable empty lists, and 56 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+      "short_state_narrative": "179 of 2,233 municipal governments have parseable scout outcomes; 173 are candidate-positive, 6 returned parseable empty lists, and 106 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
         "route": "#/state/OH",
         "title": "Ohio municipal labor evidence brief",
@@ -2029,18 +2029,18 @@
           },
           {
             "label": "Scout covered",
-            "value": 91
+            "value": 179
           },
           {
             "label": "Candidate positive",
-            "value": 89
+            "value": 173
           },
           {
             "label": "Likely matched-set leads",
-            "value": 56
+            "value": 106
           }
         ],
-        "narrative": "91 of 2,233 municipal governments have parseable scout outcomes; 89 are candidate-positive, 2 returned parseable empty lists, and 56 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+        "narrative": "179 of 2,233 municipal governments have parseable scout outcomes; 173 are candidate-positive, 6 returned parseable empty lists, and 106 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
         "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
       }
     },
@@ -2048,18 +2048,18 @@
       "state": "OK",
       "state_name": "Oklahoma",
       "municipality_universe": 590,
-      "scout_coverage_count": 6,
-      "scout_coverage_rate": 1.0169,
-      "candidate_positive_count": 5,
-      "no_candidate_count": 1,
+      "scout_coverage_count": 15,
+      "scout_coverage_rate": 2.5424,
+      "candidate_positive_count": 9,
+      "no_candidate_count": 6,
       "failed_scout_municipality_count": 0,
       "failed_scout_attempt_count": 0,
-      "candidate_rows": 15,
-      "high_priority_queue_count": 12,
+      "candidate_rows": 21,
+      "high_priority_queue_count": 15,
       "medium_priority_queue_count": 2,
       "low_priority_queue_count": 0,
-      "hold_or_rejected_queue_count": 1,
-      "queued_municipality_count": 5,
+      "hold_or_rejected_queue_count": 4,
+      "queued_municipality_count": 9,
       "likely_matched_set_count": 2,
       "calibration_verified_municipality_count": 0,
       "verified_count": null,
@@ -2067,13 +2067,13 @@
       "claim_ids_in_prior_registry": [],
       "claim_mapped_city_count": 0,
       "claim_readiness_level": "matched_set_leads_need_verification",
-      "evidence_readiness_score": 62.7,
+      "evidence_readiness_score": 58.0,
       "map_color_metric": {
         "field": "evidence_readiness_score",
-        "value": 62.7,
+        "value": 58.0,
         "scale": "0_to_100_operational_triage_only"
       },
-      "short_state_narrative": "6 of 590 municipal governments have parseable scout outcomes; 5 are candidate-positive, 1 returned parseable empty lists, and 2 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+      "short_state_narrative": "15 of 590 municipal governments have parseable scout outcomes; 9 are candidate-positive, 6 returned parseable empty lists, and 2 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
         "route": "#/state/OK",
         "title": "Oklahoma municipal labor evidence brief",
@@ -2084,18 +2084,18 @@
           },
           {
             "label": "Scout covered",
-            "value": 6
+            "value": 15
           },
           {
             "label": "Candidate positive",
-            "value": 5
+            "value": 9
           },
           {
             "label": "Likely matched-set leads",
             "value": 2
           }
         ],
-        "narrative": "6 of 590 municipal governments have parseable scout outcomes; 5 are candidate-positive, 1 returned parseable empty lists, and 2 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+        "narrative": "15 of 590 municipal governments have parseable scout outcomes; 9 are candidate-positive, 6 returned parseable empty lists, and 2 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
         "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
       }
     },
@@ -2103,32 +2103,32 @@
       "state": "OR",
       "state_name": "Oregon",
       "municipality_universe": 240,
-      "scout_coverage_count": 40,
-      "scout_coverage_rate": 16.6667,
-      "candidate_positive_count": 38,
+      "scout_coverage_count": 69,
+      "scout_coverage_rate": 28.75,
+      "candidate_positive_count": 67,
       "no_candidate_count": 2,
       "failed_scout_municipality_count": 0,
       "failed_scout_attempt_count": 0,
-      "candidate_rows": 108,
-      "high_priority_queue_count": 59,
-      "medium_priority_queue_count": 13,
-      "low_priority_queue_count": 8,
-      "hold_or_rejected_queue_count": 28,
-      "queued_municipality_count": 38,
-      "likely_matched_set_count": 15,
+      "candidate_rows": 180,
+      "high_priority_queue_count": 97,
+      "medium_priority_queue_count": 20,
+      "low_priority_queue_count": 12,
+      "hold_or_rejected_queue_count": 51,
+      "queued_municipality_count": 67,
+      "likely_matched_set_count": 21,
       "calibration_verified_municipality_count": 0,
       "verified_count": null,
       "ingested_count": null,
       "claim_ids_in_prior_registry": [],
       "claim_mapped_city_count": 0,
       "claim_readiness_level": "matched_set_leads_need_verification",
-      "evidence_readiness_score": 89.0,
+      "evidence_readiness_score": 89.4,
       "map_color_metric": {
         "field": "evidence_readiness_score",
-        "value": 89.0,
+        "value": 89.4,
         "scale": "0_to_100_operational_triage_only"
       },
-      "short_state_narrative": "40 of 240 municipal governments have parseable scout outcomes; 38 are candidate-positive, 2 returned parseable empty lists, and 15 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+      "short_state_narrative": "69 of 240 municipal governments have parseable scout outcomes; 67 are candidate-positive, 2 returned parseable empty lists, and 21 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
         "route": "#/state/OR",
         "title": "Oregon municipal labor evidence brief",
@@ -2139,18 +2139,18 @@
           },
           {
             "label": "Scout covered",
-            "value": 40
+            "value": 69
           },
           {
             "label": "Candidate positive",
-            "value": 38
+            "value": 67
           },
           {
             "label": "Likely matched-set leads",
-            "value": 15
+            "value": 21
           }
         ],
-        "narrative": "40 of 240 municipal governments have parseable scout outcomes; 38 are candidate-positive, 2 returned parseable empty lists, and 15 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+        "narrative": "69 of 240 municipal governments have parseable scout outcomes; 67 are candidate-positive, 2 returned parseable empty lists, and 21 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
         "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
       }
     },
@@ -2215,32 +2215,32 @@
       "state": "RI",
       "state_name": "Rhode Island",
       "municipality_universe": 39,
-      "scout_coverage_count": 4,
-      "scout_coverage_rate": 10.2564,
-      "candidate_positive_count": 4,
+      "scout_coverage_count": 6,
+      "scout_coverage_rate": 15.3846,
+      "candidate_positive_count": 6,
       "no_candidate_count": 0,
       "failed_scout_municipality_count": 0,
       "failed_scout_attempt_count": 0,
-      "candidate_rows": 13,
-      "high_priority_queue_count": 8,
-      "medium_priority_queue_count": 0,
+      "candidate_rows": 19,
+      "high_priority_queue_count": 11,
+      "medium_priority_queue_count": 1,
       "low_priority_queue_count": 0,
-      "hold_or_rejected_queue_count": 5,
-      "queued_municipality_count": 4,
-      "likely_matched_set_count": 4,
+      "hold_or_rejected_queue_count": 7,
+      "queued_municipality_count": 6,
+      "likely_matched_set_count": 6,
       "calibration_verified_municipality_count": 0,
       "verified_count": null,
       "ingested_count": null,
       "claim_ids_in_prior_registry": [],
       "claim_mapped_city_count": 0,
       "claim_readiness_level": "matched_set_leads_need_verification",
-      "evidence_readiness_score": 68.0,
+      "evidence_readiness_score": 78.0,
       "map_color_metric": {
         "field": "evidence_readiness_score",
-        "value": 68.0,
+        "value": 78.0,
         "scale": "0_to_100_operational_triage_only"
       },
-      "short_state_narrative": "4 of 39 municipal governments have parseable scout outcomes; 4 are candidate-positive, 0 returned parseable empty lists, and 4 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+      "short_state_narrative": "6 of 39 municipal governments have parseable scout outcomes; 6 are candidate-positive, 0 returned parseable empty lists, and 6 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
         "route": "#/state/RI",
         "title": "Rhode Island municipal labor evidence brief",
@@ -2251,18 +2251,18 @@
           },
           {
             "label": "Scout covered",
-            "value": 4
+            "value": 6
           },
           {
             "label": "Candidate positive",
-            "value": 4
+            "value": 6
           },
           {
             "label": "Likely matched-set leads",
-            "value": 4
+            "value": 6
           }
         ],
-        "narrative": "4 of 39 municipal governments have parseable scout outcomes; 4 are candidate-positive, 0 returned parseable empty lists, and 4 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+        "narrative": "6 of 39 municipal governments have parseable scout outcomes; 6 are candidate-positive, 0 returned parseable empty lists, and 6 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
         "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
       }
     },
@@ -2325,32 +2325,32 @@
       "state": "SD",
       "state_name": "South Dakota",
       "municipality_universe": 1205,
-      "scout_coverage_count": 2,
-      "scout_coverage_rate": 0.166,
-      "candidate_positive_count": 2,
+      "scout_coverage_count": 3,
+      "scout_coverage_rate": 0.249,
+      "candidate_positive_count": 3,
       "no_candidate_count": 0,
       "failed_scout_municipality_count": 0,
       "failed_scout_attempt_count": 0,
-      "candidate_rows": 7,
-      "high_priority_queue_count": 4,
+      "candidate_rows": 10,
+      "high_priority_queue_count": 6,
       "medium_priority_queue_count": 0,
       "low_priority_queue_count": 0,
-      "hold_or_rejected_queue_count": 3,
-      "queued_municipality_count": 2,
-      "likely_matched_set_count": 2,
+      "hold_or_rejected_queue_count": 4,
+      "queued_municipality_count": 3,
+      "likely_matched_set_count": 3,
       "calibration_verified_municipality_count": 0,
       "verified_count": null,
       "ingested_count": null,
       "claim_ids_in_prior_registry": [],
       "claim_mapped_city_count": 0,
       "claim_readiness_level": "matched_set_leads_need_verification",
-      "evidence_readiness_score": 54.0,
+      "evidence_readiness_score": 61.0,
       "map_color_metric": {
         "field": "evidence_readiness_score",
-        "value": 54.0,
+        "value": 61.0,
         "scale": "0_to_100_operational_triage_only"
       },
-      "short_state_narrative": "2 of 1,205 municipal governments have parseable scout outcomes; 2 are candidate-positive, 0 returned parseable empty lists, and 2 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+      "short_state_narrative": "3 of 1,205 municipal governments have parseable scout outcomes; 3 are candidate-positive, 0 returned parseable empty lists, and 3 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
         "route": "#/state/SD",
         "title": "South Dakota municipal labor evidence brief",
@@ -2361,18 +2361,18 @@
           },
           {
             "label": "Scout covered",
-            "value": 2
+            "value": 3
           },
           {
             "label": "Candidate positive",
-            "value": 2
+            "value": 3
           },
           {
             "label": "Likely matched-set leads",
-            "value": 2
+            "value": 3
           }
         ],
-        "narrative": "2 of 1,205 municipal governments have parseable scout outcomes; 2 are candidate-positive, 0 returned parseable empty lists, and 2 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+        "narrative": "3 of 1,205 municipal governments have parseable scout outcomes; 3 are candidate-positive, 0 returned parseable empty lists, and 3 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
         "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
       }
     },
@@ -2607,32 +2607,32 @@
       "state": "VT",
       "state_name": "Vermont",
       "municipality_universe": 276,
-      "scout_coverage_count": 0,
-      "scout_coverage_rate": 0.0,
-      "candidate_positive_count": 0,
+      "scout_coverage_count": 1,
+      "scout_coverage_rate": 0.3623,
+      "candidate_positive_count": 1,
       "no_candidate_count": 0,
       "failed_scout_municipality_count": 0,
       "failed_scout_attempt_count": 0,
-      "candidate_rows": 0,
-      "high_priority_queue_count": 0,
+      "candidate_rows": 3,
+      "high_priority_queue_count": 1,
       "medium_priority_queue_count": 0,
       "low_priority_queue_count": 0,
-      "hold_or_rejected_queue_count": 0,
-      "queued_municipality_count": 0,
-      "likely_matched_set_count": 0,
+      "hold_or_rejected_queue_count": 2,
+      "queued_municipality_count": 1,
+      "likely_matched_set_count": 1,
       "calibration_verified_municipality_count": 0,
       "verified_count": null,
       "ingested_count": null,
       "claim_ids_in_prior_registry": [],
       "claim_mapped_city_count": 0,
-      "claim_readiness_level": "not_started",
-      "evidence_readiness_score": 0.0,
+      "claim_readiness_level": "matched_set_leads_need_verification",
+      "evidence_readiness_score": 45.0,
       "map_color_metric": {
         "field": "evidence_readiness_score",
-        "value": 0.0,
+        "value": 45.0,
         "scale": "0_to_100_operational_triage_only"
       },
-      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "short_state_narrative": "1 of 276 municipal governments have parseable scout outcomes; 1 are candidate-positive, 0 returned parseable empty lists, and 1 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
         "route": "#/state/VT",
         "title": "Vermont municipal labor evidence brief",
@@ -2643,18 +2643,18 @@
           },
           {
             "label": "Scout covered",
-            "value": 0
+            "value": 1
           },
           {
             "label": "Candidate positive",
-            "value": 0
+            "value": 1
           },
           {
             "label": "Likely matched-set leads",
-            "value": 0
+            "value": 1
           }
         ],
-        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "narrative": "1 of 276 municipal governments have parseable scout outcomes; 1 are candidate-positive, 0 returned parseable empty lists, and 1 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
         "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
       }
     },
@@ -2662,19 +2662,19 @@
       "state": "WA",
       "state_name": "Washington",
       "municipality_universe": 281,
-      "scout_coverage_count": 50,
-      "scout_coverage_rate": 17.7936,
-      "candidate_positive_count": 49,
-      "no_candidate_count": 1,
-      "failed_scout_municipality_count": 1,
-      "failed_scout_attempt_count": 1,
-      "candidate_rows": 143,
-      "high_priority_queue_count": 76,
-      "medium_priority_queue_count": 20,
-      "low_priority_queue_count": 6,
-      "hold_or_rejected_queue_count": 41,
-      "queued_municipality_count": 49,
-      "likely_matched_set_count": 15,
+      "scout_coverage_count": 90,
+      "scout_coverage_rate": 32.0285,
+      "candidate_positive_count": 88,
+      "no_candidate_count": 2,
+      "failed_scout_municipality_count": 2,
+      "failed_scout_attempt_count": 2,
+      "candidate_rows": 237,
+      "high_priority_queue_count": 123,
+      "medium_priority_queue_count": 32,
+      "low_priority_queue_count": 21,
+      "hold_or_rejected_queue_count": 61,
+      "queued_municipality_count": 88,
+      "likely_matched_set_count": 21,
       "calibration_verified_municipality_count": 0,
       "verified_count": null,
       "ingested_count": null,
@@ -2687,7 +2687,7 @@
         "value": 89.6,
         "scale": "0_to_100_operational_triage_only"
       },
-      "short_state_narrative": "50 of 281 municipal governments have parseable scout outcomes; 49 are candidate-positive, 1 returned parseable empty lists, and 15 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+      "short_state_narrative": "90 of 281 municipal governments have parseable scout outcomes; 88 are candidate-positive, 2 returned parseable empty lists, and 21 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
         "route": "#/state/WA",
         "title": "Washington municipal labor evidence brief",
@@ -2698,18 +2698,18 @@
           },
           {
             "label": "Scout covered",
-            "value": 50
+            "value": 90
           },
           {
             "label": "Candidate positive",
-            "value": 49
+            "value": 88
           },
           {
             "label": "Likely matched-set leads",
-            "value": 15
+            "value": 21
           }
         ],
-        "narrative": "50 of 281 municipal governments have parseable scout outcomes; 49 are candidate-positive, 1 returned parseable empty lists, and 15 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+        "narrative": "90 of 281 municipal governments have parseable scout outcomes; 88 are candidate-positive, 2 returned parseable empty lists, and 21 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
         "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
       }
     },
@@ -2717,32 +2717,32 @@
       "state": "WI",
       "state_name": "Wisconsin",
       "municipality_universe": 1849,
-      "scout_coverage_count": 16,
-      "scout_coverage_rate": 0.8653,
-      "candidate_positive_count": 16,
-      "no_candidate_count": 0,
+      "scout_coverage_count": 49,
+      "scout_coverage_rate": 2.6501,
+      "candidate_positive_count": 48,
+      "no_candidate_count": 1,
       "failed_scout_municipality_count": 0,
       "failed_scout_attempt_count": 0,
-      "candidate_rows": 44,
-      "high_priority_queue_count": 34,
-      "medium_priority_queue_count": 4,
-      "low_priority_queue_count": 1,
-      "hold_or_rejected_queue_count": 5,
-      "queued_municipality_count": 16,
-      "likely_matched_set_count": 9,
+      "candidate_rows": 114,
+      "high_priority_queue_count": 74,
+      "medium_priority_queue_count": 13,
+      "low_priority_queue_count": 11,
+      "hold_or_rejected_queue_count": 16,
+      "queued_municipality_count": 48,
+      "likely_matched_set_count": 16,
       "calibration_verified_municipality_count": 0,
       "verified_count": null,
       "ingested_count": null,
       "claim_ids_in_prior_registry": [],
       "claim_mapped_city_count": 0,
       "claim_readiness_level": "matched_set_leads_need_verification",
-      "evidence_readiness_score": 87.0,
+      "evidence_readiness_score": 89.6,
       "map_color_metric": {
         "field": "evidence_readiness_score",
-        "value": 87.0,
+        "value": 89.6,
         "scale": "0_to_100_operational_triage_only"
       },
-      "short_state_narrative": "16 of 1,849 municipal governments have parseable scout outcomes; 16 are candidate-positive, 0 returned parseable empty lists, and 9 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+      "short_state_narrative": "49 of 1,849 municipal governments have parseable scout outcomes; 48 are candidate-positive, 1 returned parseable empty lists, and 16 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
         "route": "#/state/WI",
         "title": "Wisconsin municipal labor evidence brief",
@@ -2753,18 +2753,18 @@
           },
           {
             "label": "Scout covered",
-            "value": 16
+            "value": 49
           },
           {
             "label": "Candidate positive",
-            "value": 16
+            "value": 48
           },
           {
             "label": "Likely matched-set leads",
-            "value": 9
+            "value": 16
           }
         ],
-        "narrative": "16 of 1,849 municipal governments have parseable scout outcomes; 16 are candidate-positive, 0 returned parseable empty lists, and 9 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
+        "narrative": "49 of 1,849 municipal governments have parseable scout outcomes; 48 are candidate-positive, 1 returned parseable empty lists, and 16 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
         "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
       }
     },
@@ -2827,32 +2827,32 @@
       "state": "WY",
       "state_name": "Wyoming",
       "municipality_universe": 99,
-      "scout_coverage_count": 0,
-      "scout_coverage_rate": 0.0,
-      "candidate_positive_count": 0,
+      "scout_coverage_count": 3,
+      "scout_coverage_rate": 3.0303,
+      "candidate_positive_count": 3,
       "no_candidate_count": 0,
       "failed_scout_municipality_count": 0,
       "failed_scout_attempt_count": 0,
-      "candidate_rows": 0,
-      "high_priority_queue_count": 0,
+      "candidate_rows": 7,
+      "high_priority_queue_count": 2,
       "medium_priority_queue_count": 0,
       "low_priority_queue_count": 0,
-      "hold_or_rejected_queue_count": 0,
-      "queued_municipality_count": 0,
-      "likely_matched_set_count": 0,
+      "hold_or_rejected_queue_count": 5,
+      "queued_municipality_count": 3,
+      "likely_matched_set_count": 1,
       "calibration_verified_municipality_count": 0,
       "verified_count": null,
       "ingested_count": null,
       "claim_ids_in_prior_registry": [],
       "claim_mapped_city_count": 0,
-      "claim_readiness_level": "not_started",
-      "evidence_readiness_score": 0.0,
+      "claim_readiness_level": "matched_set_leads_need_verification",
+      "evidence_readiness_score": 47.0,
       "map_color_metric": {
         "field": "evidence_readiness_score",
-        "value": 0.0,
+        "value": 47.0,
         "scale": "0_to_100_operational_triage_only"
       },
-      "short_state_narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+      "short_state_narrative": "3 of 99 municipal governments have parseable scout outcomes; 3 are candidate-positive, 0 returned parseable empty lists, and 1 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
         "route": "#/state/WY",
         "title": "Wyoming municipal labor evidence brief",
@@ -2863,18 +2863,18 @@
           },
           {
             "label": "Scout covered",
-            "value": 0
+            "value": 3
           },
           {
             "label": "Candidate positive",
-            "value": 0
+            "value": 3
           },
           {
             "label": "Likely matched-set leads",
-            "value": 0
+            "value": 1
           }
         ],
-        "narrative": "No successful national source-discovery run is recorded for this state yet; evidence and wage-analysis readiness are not established.",
+        "narrative": "3 of 99 municipal governments have parseable scout outcomes; 3 are candidate-positive, 0 returned parseable empty lists, and 1 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
         "status_caveat": "Discovery-stage counts do not establish source validity, contract completeness, matched bargaining cycles, wage gaps, causal mechanisms, or claim support."
       }
     }

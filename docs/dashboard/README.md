@@ -156,21 +156,21 @@ The dashboard builder writes:
 Review the printed totals and diffs before committing. In particular, candidate-positive plus parseable-empty municipalities must equal scout-covered municipalities, and transport/failure-only results must remain outside successful coverage.
 
 `parallel_scout_status.json` is an operations layer, not source evidence. Its
-current status is `round1_completed_accounting_merged`: the first two isolated
+current status is `round2_3x150_completed_accounting_merged`: all three isolated
 150-row lanes completed, passed the combined audit, and entered national
-accounting through one later serial merge. The next gated capacity test is three
-lanes × 150 municipalities with four-minute start spacing. Three lanes × 250–300
-remain conditional on a clean 3 × 150 collection and serial merge. Every lane
-remains internally serialized, writes to a unique output directory, and redirects
-its timestamped candidate handoff to a lane-local export directory. Shared
-accounting remains serial. No three-lane live scout has run, and all candidate
-leads remain unverified.
+accounting through one later serial merge. Every lane remains internally
+serialized, writes to a unique output directory, and redirects its timestamped
+candidate handoff to a lane-local export directory. Shared accounting remains
+serial. The next collection should use a checkpoint-targeted custom three-lane
+size; a full 3 × 300 round would likely overshoot the approximately 2,000-covered
+checkpoint and therefore requires an explicit decision. All candidate leads
+remain unverified.
 
-The priority JSON layers still reflect the Tier 1 Wave 2 priority build at 794
-covered municipalities. They are deliberately marked stale after the Parallel
-Round 1 merge, which added 297 successful scouts—just below the documented
-300-success lower refresh trigger. Any next target selection must reconcile
-those ranks against current coverage and failure-only status.
+The priority JSON layers reflect the unchanged canonical methodology refreshed
+after the Parallel Round 2 merge. The refresh followed 743 successful scouts
+since the prior Tier 1 Wave 2 build, exceeding the documented 300–600-success
+cadence. Any next target selection must still reconcile ranks against current
+coverage and failure-only status.
 
 ## Run and build locally
 

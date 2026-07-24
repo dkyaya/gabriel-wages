@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": "0.1.0",
-    "generated_at": "2026-07-23T22:18:10Z",
+    "generated_at": "2026-07-24T00:20:47Z",
     "data_vintage": "2026-07-23",
     "source_files": [
       "docs/analysis/national_scout_coverage_state.csv",
@@ -33,25 +33,25 @@
   },
   "stage": "unverified_scout_candidate_queue",
   "totals": {
-    "candidate_rows": 2362,
-    "municipalities_with_queue_rows": 884,
-    "high_priority_rows": 1516,
-    "medium_priority_rows": 261,
-    "low_priority_rows": 115,
-    "later_verification_rows": 1892,
-    "hold_or_rejected_rows": 470
+    "candidate_rows": 3347,
+    "municipalities_with_queue_rows": 1267,
+    "high_priority_rows": 2110,
+    "medium_priority_rows": 334,
+    "low_priority_rows": 190,
+    "later_verification_rows": 2634,
+    "hold_or_rejected_rows": 713
   },
   "by_state": [
     {
       "state": "AK",
       "state_name": "Alaska",
-      "candidate_rows": 3,
-      "municipalities_with_queue_rows": 1,
-      "high_priority_rows": 2,
+      "candidate_rows": 10,
+      "municipalities_with_queue_rows": 3,
+      "high_priority_rows": 8,
       "medium_priority_rows": 1,
       "low_priority_rows": 0,
-      "hold_or_rejected_rows": 0,
-      "likely_matched_set_municipalities": 1
+      "hold_or_rejected_rows": 1,
+      "likely_matched_set_municipalities": 3
     },
     {
       "state": "AL",
@@ -67,12 +67,12 @@
     {
       "state": "AR",
       "state_name": "Arkansas",
-      "candidate_rows": 6,
-      "municipalities_with_queue_rows": 2,
-      "high_priority_rows": 0,
+      "candidate_rows": 11,
+      "municipalities_with_queue_rows": 5,
+      "high_priority_rows": 2,
       "medium_priority_rows": 2,
       "low_priority_rows": 0,
-      "hold_or_rejected_rows": 4,
+      "hold_or_rejected_rows": 7,
       "likely_matched_set_municipalities": 1
     },
     {
@@ -89,13 +89,13 @@
     {
       "state": "CA",
       "state_name": "California",
-      "candidate_rows": 351,
-      "municipalities_with_queue_rows": 135,
-      "high_priority_rows": 268,
-      "medium_priority_rows": 35,
-      "low_priority_rows": 13,
-      "hold_or_rejected_rows": 35,
-      "likely_matched_set_municipalities": 59
+      "candidate_rows": 389,
+      "municipalities_with_queue_rows": 149,
+      "high_priority_rows": 292,
+      "medium_priority_rows": 39,
+      "low_priority_rows": 15,
+      "hold_or_rejected_rows": 43,
+      "likely_matched_set_municipalities": 65
     },
     {
       "state": "CO",
@@ -111,9 +111,9 @@
     {
       "state": "CT",
       "state_name": "Connecticut",
-      "candidate_rows": 52,
-      "municipalities_with_queue_rows": 18,
-      "high_priority_rows": 32,
+      "candidate_rows": 56,
+      "municipalities_with_queue_rows": 20,
+      "high_priority_rows": 36,
       "medium_priority_rows": 4,
       "low_priority_rows": 1,
       "hold_or_rejected_rows": 15,
@@ -131,15 +131,26 @@
       "likely_matched_set_municipalities": 1
     },
     {
+      "state": "DE",
+      "state_name": "Delaware",
+      "candidate_rows": 4,
+      "municipalities_with_queue_rows": 2,
+      "high_priority_rows": 2,
+      "medium_priority_rows": 1,
+      "low_priority_rows": 0,
+      "hold_or_rejected_rows": 1,
+      "likely_matched_set_municipalities": 0
+    },
+    {
       "state": "FL",
       "state_name": "Florida",
-      "candidate_rows": 167,
-      "municipalities_with_queue_rows": 67,
-      "high_priority_rows": 106,
-      "medium_priority_rows": 12,
-      "low_priority_rows": 8,
-      "hold_or_rejected_rows": 41,
-      "likely_matched_set_municipalities": 24
+      "candidate_rows": 241,
+      "municipalities_with_queue_rows": 104,
+      "high_priority_rows": 148,
+      "medium_priority_rows": 20,
+      "low_priority_rows": 10,
+      "hold_or_rejected_rows": 63,
+      "likely_matched_set_municipalities": 33
     },
     {
       "state": "GA",
@@ -166,24 +177,24 @@
     {
       "state": "IA",
       "state_name": "Iowa",
-      "candidate_rows": 32,
-      "municipalities_with_queue_rows": 10,
-      "high_priority_rows": 20,
-      "medium_priority_rows": 1,
-      "low_priority_rows": 2,
-      "hold_or_rejected_rows": 9,
-      "likely_matched_set_municipalities": 8
+      "candidate_rows": 59,
+      "municipalities_with_queue_rows": 21,
+      "high_priority_rows": 33,
+      "medium_priority_rows": 5,
+      "low_priority_rows": 5,
+      "hold_or_rejected_rows": 16,
+      "likely_matched_set_municipalities": 14
     },
     {
       "state": "ID",
       "state_name": "Idaho",
-      "candidate_rows": 7,
-      "municipalities_with_queue_rows": 3,
-      "high_priority_rows": 5,
+      "candidate_rows": 14,
+      "municipalities_with_queue_rows": 6,
+      "high_priority_rows": 6,
       "medium_priority_rows": 1,
-      "low_priority_rows": 1,
-      "hold_or_rejected_rows": 0,
-      "likely_matched_set_municipalities": 1
+      "low_priority_rows": 3,
+      "hold_or_rejected_rows": 4,
+      "likely_matched_set_municipalities": 2
     },
     {
       "state": "IL",
@@ -199,13 +210,13 @@
     {
       "state": "IN",
       "state_name": "Indiana",
-      "candidate_rows": 11,
-      "municipalities_with_queue_rows": 6,
-      "high_priority_rows": 5,
-      "medium_priority_rows": 3,
-      "low_priority_rows": 0,
-      "hold_or_rejected_rows": 3,
-      "likely_matched_set_municipalities": 1
+      "candidate_rows": 55,
+      "municipalities_with_queue_rows": 26,
+      "high_priority_rows": 25,
+      "medium_priority_rows": 7,
+      "low_priority_rows": 2,
+      "hold_or_rejected_rows": 21,
+      "likely_matched_set_municipalities": 9
     },
     {
       "state": "KS",
@@ -221,12 +232,12 @@
     {
       "state": "KY",
       "state_name": "Kentucky",
-      "candidate_rows": 6,
-      "municipalities_with_queue_rows": 3,
-      "high_priority_rows": 3,
-      "medium_priority_rows": 1,
-      "low_priority_rows": 0,
-      "hold_or_rejected_rows": 2,
+      "candidate_rows": 18,
+      "municipalities_with_queue_rows": 10,
+      "high_priority_rows": 8,
+      "medium_priority_rows": 3,
+      "low_priority_rows": 1,
+      "hold_or_rejected_rows": 6,
       "likely_matched_set_municipalities": 0
     },
     {
@@ -243,46 +254,57 @@
     {
       "state": "MA",
       "state_name": "Massachusetts",
-      "candidate_rows": 121,
-      "municipalities_with_queue_rows": 42,
-      "high_priority_rows": 64,
-      "medium_priority_rows": 10,
+      "candidate_rows": 155,
+      "municipalities_with_queue_rows": 53,
+      "high_priority_rows": 84,
+      "medium_priority_rows": 14,
       "low_priority_rows": 12,
-      "hold_or_rejected_rows": 35,
-      "likely_matched_set_municipalities": 23
+      "hold_or_rejected_rows": 45,
+      "likely_matched_set_municipalities": 31
     },
     {
       "state": "MD",
       "state_name": "Maryland",
-      "candidate_rows": 12,
-      "municipalities_with_queue_rows": 5,
-      "high_priority_rows": 5,
+      "candidate_rows": 31,
+      "municipalities_with_queue_rows": 11,
+      "high_priority_rows": 14,
       "medium_priority_rows": 3,
-      "low_priority_rows": 0,
-      "hold_or_rejected_rows": 4,
+      "low_priority_rows": 2,
+      "hold_or_rejected_rows": 12,
+      "likely_matched_set_municipalities": 2
+    },
+    {
+      "state": "ME",
+      "state_name": "Maine",
+      "candidate_rows": 6,
+      "municipalities_with_queue_rows": 2,
+      "high_priority_rows": 0,
+      "medium_priority_rows": 1,
+      "low_priority_rows": 2,
+      "hold_or_rejected_rows": 3,
       "likely_matched_set_municipalities": 1
     },
     {
       "state": "MI",
       "state_name": "Michigan",
-      "candidate_rows": 87,
-      "municipalities_with_queue_rows": 33,
-      "high_priority_rows": 67,
+      "candidate_rows": 161,
+      "municipalities_with_queue_rows": 62,
+      "high_priority_rows": 113,
       "medium_priority_rows": 3,
-      "low_priority_rows": 8,
-      "hold_or_rejected_rows": 9,
-      "likely_matched_set_municipalities": 17
+      "low_priority_rows": 16,
+      "hold_or_rejected_rows": 29,
+      "likely_matched_set_municipalities": 28
     },
     {
       "state": "MN",
       "state_name": "Minnesota",
-      "candidate_rows": 16,
-      "municipalities_with_queue_rows": 6,
-      "high_priority_rows": 16,
-      "medium_priority_rows": 0,
-      "low_priority_rows": 0,
-      "hold_or_rejected_rows": 0,
-      "likely_matched_set_municipalities": 3
+      "candidate_rows": 50,
+      "municipalities_with_queue_rows": 22,
+      "high_priority_rows": 32,
+      "medium_priority_rows": 4,
+      "low_priority_rows": 4,
+      "hold_or_rejected_rows": 10,
+      "likely_matched_set_municipalities": 5
     },
     {
       "state": "MO",
@@ -298,24 +320,24 @@
     {
       "state": "MS",
       "state_name": "Mississippi",
-      "candidate_rows": 2,
-      "municipalities_with_queue_rows": 1,
+      "candidate_rows": 4,
+      "municipalities_with_queue_rows": 2,
       "high_priority_rows": 0,
       "medium_priority_rows": 0,
       "low_priority_rows": 1,
-      "hold_or_rejected_rows": 1,
+      "hold_or_rejected_rows": 3,
       "likely_matched_set_municipalities": 0
     },
     {
       "state": "MT",
       "state_name": "Montana",
-      "candidate_rows": 10,
-      "municipalities_with_queue_rows": 3,
-      "high_priority_rows": 6,
-      "medium_priority_rows": 1,
+      "candidate_rows": 22,
+      "municipalities_with_queue_rows": 7,
+      "high_priority_rows": 12,
+      "medium_priority_rows": 3,
       "low_priority_rows": 0,
-      "hold_or_rejected_rows": 3,
-      "likely_matched_set_municipalities": 3
+      "hold_or_rejected_rows": 7,
+      "likely_matched_set_municipalities": 5
     },
     {
       "state": "NC",
@@ -331,35 +353,35 @@
     {
       "state": "ND",
       "state_name": "North Dakota",
-      "candidate_rows": 1,
-      "municipalities_with_queue_rows": 1,
-      "high_priority_rows": 1,
-      "medium_priority_rows": 0,
+      "candidate_rows": 5,
+      "municipalities_with_queue_rows": 4,
+      "high_priority_rows": 2,
+      "medium_priority_rows": 2,
       "low_priority_rows": 0,
-      "hold_or_rejected_rows": 0,
+      "hold_or_rejected_rows": 1,
       "likely_matched_set_municipalities": 0
     },
     {
       "state": "NE",
       "state_name": "Nebraska",
-      "candidate_rows": 8,
-      "municipalities_with_queue_rows": 3,
-      "high_priority_rows": 5,
-      "medium_priority_rows": 2,
-      "low_priority_rows": 0,
-      "hold_or_rejected_rows": 1,
+      "candidate_rows": 17,
+      "municipalities_with_queue_rows": 9,
+      "high_priority_rows": 10,
+      "medium_priority_rows": 3,
+      "low_priority_rows": 1,
+      "hold_or_rejected_rows": 3,
       "likely_matched_set_municipalities": 1
     },
     {
       "state": "NH",
       "state_name": "New Hampshire",
-      "candidate_rows": 6,
-      "municipalities_with_queue_rows": 2,
-      "high_priority_rows": 5,
+      "candidate_rows": 19,
+      "municipalities_with_queue_rows": 5,
+      "high_priority_rows": 14,
       "medium_priority_rows": 0,
-      "low_priority_rows": 0,
+      "low_priority_rows": 4,
       "hold_or_rejected_rows": 1,
-      "likely_matched_set_municipalities": 1
+      "likely_matched_set_municipalities": 3
     },
     {
       "state": "NJ",
@@ -375,68 +397,68 @@
     {
       "state": "NM",
       "state_name": "New Mexico",
-      "candidate_rows": 25,
-      "municipalities_with_queue_rows": 10,
-      "high_priority_rows": 12,
+      "candidate_rows": 29,
+      "municipalities_with_queue_rows": 12,
+      "high_priority_rows": 14,
       "medium_priority_rows": 2,
-      "low_priority_rows": 2,
+      "low_priority_rows": 4,
       "hold_or_rejected_rows": 9,
       "likely_matched_set_municipalities": 4
     },
     {
       "state": "NV",
       "state_name": "Nevada",
-      "candidate_rows": 17,
-      "municipalities_with_queue_rows": 5,
-      "high_priority_rows": 13,
+      "candidate_rows": 23,
+      "municipalities_with_queue_rows": 7,
+      "high_priority_rows": 17,
       "medium_priority_rows": 1,
       "low_priority_rows": 0,
-      "hold_or_rejected_rows": 3,
-      "likely_matched_set_municipalities": 4
+      "hold_or_rejected_rows": 5,
+      "likely_matched_set_municipalities": 5
     },
     {
       "state": "NY",
       "state_name": "New York",
-      "candidate_rows": 57,
-      "municipalities_with_queue_rows": 21,
-      "high_priority_rows": 33,
+      "candidate_rows": 61,
+      "municipalities_with_queue_rows": 23,
+      "high_priority_rows": 35,
       "medium_priority_rows": 11,
-      "low_priority_rows": 4,
-      "hold_or_rejected_rows": 9,
+      "low_priority_rows": 5,
+      "hold_or_rejected_rows": 10,
       "likely_matched_set_municipalities": 9
     },
     {
       "state": "OH",
       "state_name": "Ohio",
-      "candidate_rows": 293,
-      "municipalities_with_queue_rows": 89,
-      "high_priority_rows": 247,
-      "medium_priority_rows": 16,
-      "low_priority_rows": 4,
-      "hold_or_rejected_rows": 26,
-      "likely_matched_set_municipalities": 56
+      "candidate_rows": 574,
+      "municipalities_with_queue_rows": 173,
+      "high_priority_rows": 466,
+      "medium_priority_rows": 23,
+      "low_priority_rows": 14,
+      "hold_or_rejected_rows": 71,
+      "likely_matched_set_municipalities": 106
     },
     {
       "state": "OK",
       "state_name": "Oklahoma",
-      "candidate_rows": 15,
-      "municipalities_with_queue_rows": 5,
-      "high_priority_rows": 12,
+      "candidate_rows": 21,
+      "municipalities_with_queue_rows": 9,
+      "high_priority_rows": 15,
       "medium_priority_rows": 2,
       "low_priority_rows": 0,
-      "hold_or_rejected_rows": 1,
+      "hold_or_rejected_rows": 4,
       "likely_matched_set_municipalities": 2
     },
     {
       "state": "OR",
       "state_name": "Oregon",
-      "candidate_rows": 108,
-      "municipalities_with_queue_rows": 38,
-      "high_priority_rows": 59,
-      "medium_priority_rows": 13,
-      "low_priority_rows": 8,
-      "hold_or_rejected_rows": 28,
-      "likely_matched_set_municipalities": 15
+      "candidate_rows": 180,
+      "municipalities_with_queue_rows": 67,
+      "high_priority_rows": 97,
+      "medium_priority_rows": 20,
+      "low_priority_rows": 12,
+      "hold_or_rejected_rows": 51,
+      "likely_matched_set_municipalities": 21
     },
     {
       "state": "PA",
@@ -452,13 +474,13 @@
     {
       "state": "RI",
       "state_name": "Rhode Island",
-      "candidate_rows": 13,
-      "municipalities_with_queue_rows": 4,
-      "high_priority_rows": 8,
-      "medium_priority_rows": 0,
+      "candidate_rows": 19,
+      "municipalities_with_queue_rows": 6,
+      "high_priority_rows": 11,
+      "medium_priority_rows": 1,
       "low_priority_rows": 0,
-      "hold_or_rejected_rows": 5,
-      "likely_matched_set_municipalities": 4
+      "hold_or_rejected_rows": 7,
+      "likely_matched_set_municipalities": 6
     },
     {
       "state": "SC",
@@ -474,13 +496,13 @@
     {
       "state": "SD",
       "state_name": "South Dakota",
-      "candidate_rows": 7,
-      "municipalities_with_queue_rows": 2,
-      "high_priority_rows": 4,
+      "candidate_rows": 10,
+      "municipalities_with_queue_rows": 3,
+      "high_priority_rows": 6,
       "medium_priority_rows": 0,
       "low_priority_rows": 0,
-      "hold_or_rejected_rows": 3,
-      "likely_matched_set_municipalities": 2
+      "hold_or_rejected_rows": 4,
+      "likely_matched_set_municipalities": 3
     },
     {
       "state": "TN",
@@ -527,53 +549,76 @@
       "likely_matched_set_municipalities": 2
     },
     {
+      "state": "VT",
+      "state_name": "Vermont",
+      "candidate_rows": 3,
+      "municipalities_with_queue_rows": 1,
+      "high_priority_rows": 1,
+      "medium_priority_rows": 0,
+      "low_priority_rows": 0,
+      "hold_or_rejected_rows": 2,
+      "likely_matched_set_municipalities": 1
+    },
+    {
       "state": "WA",
       "state_name": "Washington",
-      "candidate_rows": 143,
-      "municipalities_with_queue_rows": 49,
-      "high_priority_rows": 76,
-      "medium_priority_rows": 20,
-      "low_priority_rows": 6,
-      "hold_or_rejected_rows": 41,
-      "likely_matched_set_municipalities": 15
+      "candidate_rows": 237,
+      "municipalities_with_queue_rows": 88,
+      "high_priority_rows": 123,
+      "medium_priority_rows": 32,
+      "low_priority_rows": 21,
+      "hold_or_rejected_rows": 61,
+      "likely_matched_set_municipalities": 21
     },
     {
       "state": "WI",
       "state_name": "Wisconsin",
-      "candidate_rows": 44,
-      "municipalities_with_queue_rows": 16,
-      "high_priority_rows": 34,
-      "medium_priority_rows": 4,
-      "low_priority_rows": 1,
+      "candidate_rows": 114,
+      "municipalities_with_queue_rows": 48,
+      "high_priority_rows": 74,
+      "medium_priority_rows": 13,
+      "low_priority_rows": 11,
+      "hold_or_rejected_rows": 16,
+      "likely_matched_set_municipalities": 16
+    },
+    {
+      "state": "WY",
+      "state_name": "Wyoming",
+      "candidate_rows": 7,
+      "municipalities_with_queue_rows": 3,
+      "high_priority_rows": 2,
+      "medium_priority_rows": 0,
+      "low_priority_rows": 0,
       "hold_or_rejected_rows": 5,
-      "likely_matched_set_municipalities": 9
+      "likely_matched_set_municipalities": 1
     }
   ],
   "by_unit_type": {
-    "fire": 531,
-    "non_safety": 857,
-    "police": 958,
-    "unclear": 16
+    "fire": 728,
+    "non_safety": 1266,
+    "police": 1330,
+    "unclear": 22,
+    "unknown": 1
   },
   "by_triage_bucket": {
     "already_canonical_hold": 8,
-    "context_only_hold": 188,
-    "high_priority_later_verify": 1516,
-    "insufficient_hold": 153,
-    "likely_duplicate_hold": 119,
-    "low_priority_later_verify": 115,
-    "medium_priority_later_verify": 261,
+    "context_only_hold": 307,
+    "high_priority_later_verify": 2110,
+    "insufficient_hold": 215,
+    "likely_duplicate_hold": 181,
+    "low_priority_later_verify": 190,
+    "medium_priority_later_verify": 334,
     "rejected_from_calibration": 2
   },
   "by_scout_confidence": {
-    "high": 537,
-    "low": 373,
-    "medium": 1452
+    "high": 737,
+    "low": 552,
+    "medium": 2058
   },
   "by_verification_priority_label": {
-    "high": 1389,
-    "low": 392,
-    "medium": 581
+    "high": 1978,
+    "low": 544,
+    "medium": 825
   },
   "interpretation": "Priority is a later-verification scheduling field. It is not source verification, ingestion approval, codified evidence, or claim support."
 }

@@ -15,32 +15,32 @@ Disposition: **PASS — identity, schema, score, tier, operational-status, sensi
 
 ## Score and tier bounds
 
-- Minimum score: 37.170
-- Maximum score: 85.371
+- Minimum score: 37.578
+- Maximum score: 84.259
 - Scores outside 0–100: 0
 - Invalid tier labels: 0
 
 | Tier | Rows | Eligible |
 |---|---:|---:|
-| Tier 1 | 1,780 | 1,227 |
-| Tier 2 | 3,559 | 3,478 |
-| Tier 3 | 7,118 | 7,008 |
-| Tier 4 | 10,676 | 10,620 |
+| Tier 1 | 1,780 | 628 |
+| Tier 2 | 3,559 | 3,420 |
+| Tier 3 | 7,118 | 6,934 |
+| Tier 4 | 10,676 | 10,608 |
 | Tier 5 | 12,456 | 12,456 |
 
 ## Operational checks
 
-- Future-scout eligible rows: 34,789
+- Future-scout eligible rows: 34,046
 - Already-covered rows incorrectly eligible: 0
-- Failure-only retry rows: 20
-- Failure-only rows retained as eligible: 20
+- Failure-only retry rows: 27
+- Failure-only rows retained as eligible: 27
 - Canonical rows excluded: 19
 
 ## Confidence
 
-- High: 4,990
-- Medium: 6,035
-- Low: 24,564
+- High: 10,279
+- Medium: 13,159
+- Low: 12,151
 
 ## Spot-check logic
 
@@ -53,23 +53,23 @@ Disposition: **PASS — identity, schema, score, tier, operational-status, sensi
 
 Top-target identity spot checks:
 
-- 1: Tampa, FL — CITY OF TAMPA; population 403,364; score 79.264; Tier 1; confidence medium.
-- 2: Vancouver, WA — CITY OF VANCOUVER; population 196,442; score 79.076; Tier 1; confidence medium.
-- 3: Indianapolis city (balance), IN — CITY OF INDIANAPOLIS; population 879,293; score 78.490; Tier 1; confidence low.
-- 4: Las Vegas, NV — CITY OF LAS VEGAS; population 660,929; score 78.283; Tier 1; confidence low.
-- 5: Lake Oswego, OR — CITY OF LAKE OSWEGO; population 39,924; score 77.268; Tier 1; confidence low.
+- 1: Las Vegas, NV — CITY OF LAS VEGAS; population 660,929; score 79.537; Tier 1; confidence low.
+- 2: Newark, OH — CITY OF NEWARK; population 51,046; score 78.911; Tier 1; confidence high.
+- 3: Kansas City, MO — CITY OF KANSAS CITY; population 510,704; score 78.378; Tier 1; confidence low.
+- 4: Indianapolis city (balance), IN — CITY OF INDIANAPOLIS; population 879,293; score 77.359; Tier 1; confidence medium.
+- 5: Framingham, MA — CITY OF FRAMINGHAM; population 71,875; score 77.299; Tier 1; confidence high.
 
-Failure-retry spot checks: Tampa FL (Tier 1, high); Vancouver WA (Tier 1, high); Indianapolis city (balance) IN (Tier 1, high); Las Vegas NV (Tier 1, high); Fort Wayne IN (Tier 1, high).
+Failure-retry spot checks: Las Vegas NV (Tier 1, high); Newark OH (Tier 1, high); Kansas City MO (Tier 1, high); Indianapolis city (balance) IN (Tier 1, high); Framingham MA (Tier 1, high).
 
 ## Output hashes
 
 | Output | SHA-256 |
 |---|---|
-| `docs/analysis/national_municipality_priority_tiers_2026-07-22.csv` | `45226a6773561c3e8ac62795bd997fa40ac5a5fe6b02ad0d950f2aedb7685dd8` |
-| `docs/analysis/national_municipality_priority_tier_summary_2026-07-22.csv` | `d658b8832619500dbb5d0fc0c0e76a95a9e1897752ad4ac566792b1fd589665e` |
-| `docs/analysis/state_priority_summary_2026-07-22.csv` | `e2d1097ba19871e8a1255d3ba050123ba99824c314768e64eef64e4485b0e753` |
-| `docs/analysis/national_priority_tier_top_targets_2026-07-22.csv` | `1fbeb97f1f1d3860e75c7db5b65491a33a27f03a16c9046885317c84e81bc414` |
-| `docs/analysis/national_failure_retry_priority_2026-07-22.csv` | `45e672c4d052a18ddfdc48611b1e501c590e13f13fd34610f09928f09fdd2b13` |
+| `docs/analysis/national_municipality_priority_tiers_2026-07-22.csv` | `504a1301f6f6670c35e835d47057cc8a035f5499bac444cf8db147401e3855fc` |
+| `docs/analysis/national_municipality_priority_tier_summary_2026-07-22.csv` | `ea414889cb7651e0394e634a2d8f403c41d76ef264a7c818daa00c31a2e16ef3` |
+| `docs/analysis/state_priority_summary_2026-07-22.csv` | `b08869a16264eaaef05893c3b449744c49907f0433f39ae26902e13e63ea1cd7` |
+| `docs/analysis/national_priority_tier_top_targets_2026-07-22.csv` | `b8b3c5f427373dff9438ac32c6ea93ff6b25b4ebbcf7e201446a5662bb5bd71f` |
+| `docs/analysis/national_failure_retry_priority_2026-07-22.csv` | `19c1e7b296472a6f4d494c0dc098da3d9ac589d92cb5302e87d93fb6cb314d94` |
 
 ## Sensitivity and limitations
 

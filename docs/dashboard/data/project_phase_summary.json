@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-23T22:18:10Z",
+  "generated_at": "2026-07-24T00:20:47Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -32,14 +32,14 @@
   "stage": "project_phase_checkpoint",
   "current_phase": "Source discovery scale-up",
   "checkpoint_target_scout_covered": 2000,
-  "current_scout_covered": 1091,
-  "remaining_to_checkpoint": 909,
-  "progress_percentage": 54.5,
-  "estimated_150_row_waves_remaining": "7",
-  "full_150_row_waves_to_reach_or_exceed_checkpoint": 7,
-  "current_candidate_queue_rows": 2362,
-  "current_candidate_positive_municipalities": 884,
-  "current_failure_only_municipalities": 23,
+  "current_scout_covered": 1537,
+  "remaining_to_checkpoint": 463,
+  "progress_percentage": 76.8,
+  "estimated_150_row_waves_remaining": "4",
+  "full_150_row_waves_to_reach_or_exceed_checkpoint": 4,
+  "current_candidate_queue_rows": 3347,
+  "current_candidate_positive_municipalities": 1267,
+  "current_failure_only_municipalities": 27,
   "next_phase": "Verification, extraction, ingestion, rating, descriptive wage-gap analysis",
   "next_phase_sequence": [
     "verify candidate sources",
@@ -52,7 +52,7 @@
     "decide the most efficient repeat strategy"
   ],
   "regressions_status": "Deferred",
-  "last_updated_commit": "c4cf7d0de79a2a734adeb9eb03ee37ce02125e8a",
+  "last_updated_commit": "4f9c865e9f6e1416643c809bcec67623039ee931",
   "last_updated_context": "source_discovery_accounting_checkpoint",
   "future_live_controls": [
     "stronger preflight gate",

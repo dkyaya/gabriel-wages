@@ -216,7 +216,7 @@ export function ScoutOperationsPanel({ operations, runtime, parallelStatus }) {
         <div>
           <h3>Current operating controls</h3>
           <ul className="check-list">
-            <li>Each lane remains serialized; the first two-lane collection completed with isolated lane outputs.</li>
+            <li>Each lane remains serialized; the three-lane 3 × 150 collection completed with isolated lane outputs.</li>
             <li>Stronger no-search, hosted-search, and one-row preflight gate.</li>
             <li>Compact prompts with exact identity and source-stage guardrails.</li>
             <li>Five deterministic municipality-specific query hints.</li>
@@ -224,9 +224,10 @@ export function ScoutOperationsPanel({ operations, runtime, parallelStatus }) {
           </ul>
           <p className="panel-note">
             <strong>Parallel scout lane status:</strong>{" "}
-            Next parallel test: {parallelStatus.supported_lanes_future} lanes × 150 municipalities.
-            Aggressive 3 × 250–300 mode is planned only after a clean three-lane test
-            and serial merge. Accounting remains serial after the combined lane audit,
+            Round 2 completed and merged {parallelStatus.supported_lanes_future} lanes × 150 municipalities.
+            The next collection should use a checkpoint-targeted custom three-lane size.
+            Aggressive 3 × 300 remains feasible only with explicit acceptance of likely
+            checkpoint overshoot. Accounting remains serial after the combined lane audit,
             and candidate exports remain lane-local.{" "}
             {parallelStatus.caveat}
           </p>

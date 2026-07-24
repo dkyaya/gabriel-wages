@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-23T22:18:10Z",
+  "generated_at": "2026-07-24T00:20:47Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -30,23 +30,23 @@
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
   "stage": "research_operational_priority_heuristic",
-  "priority_vintage_status": "stale_after_parallel_round1_merge",
-  "successful_scouts_since_priority_refresh": 297,
+  "priority_vintage_status": "current_after_parallel_round2_merge",
+  "successful_scouts_since_priority_refresh": 0,
   "selection_guard": "Reconcile targets against current coverage and failure-only status before selecting another ordinary wave.",
   "totals": {
     "municipality_universe": 35589,
-    "scout_covered": 794,
-    "future_scout_eligible": 34789,
-    "tier_1_eligible": 1227,
-    "tier_2_eligible": 3478,
-    "tier_3_eligible": 7008,
-    "tier_4_eligible": 10620,
+    "scout_covered": 1537,
+    "future_scout_eligible": 34046,
+    "tier_1_eligible": 628,
+    "tier_2_eligible": 3420,
+    "tier_3_eligible": 6934,
+    "tier_4_eligible": 10608,
     "tier_5_eligible": 12456,
-    "failure_only_retry_targets": 20,
+    "failure_only_retry_targets": 27,
     "priority_confidence": {
-      "high": 4990,
-      "medium": 6035,
-      "low": 24564
+      "high": 10279,
+      "medium": 13159,
+      "low": 12151
     }
   },
   "tier_definitions": [

@@ -6,6 +6,22 @@ Last updated: `2026-07-23`
 
 ---
 
+## 2026-07-23/24 — Parallel Round 2 3×150 is serially merged
+
+### Current State
+
+- **Merge gate:** the task began at clean tracked `4f9c865e9f6e1416643c809bcec67623039ee931`. The fresh auditor classifies all three lanes `completed_merge_eligible`, validates the three expected input hashes, byte-checks each lane-local export, finds zero stopped/pending rows and zero completed-ID overlap, and recommends `merge_all_lanes`.
+- **Official accounting:** the one authorized serial builder sequence moved the national queue 2,362→3,347 (+985), successful scout coverage 1,091→1,537 (+446), candidate-positive 884→1,267 (+383), parseable-empty 207→270 (+63), and failure-only 23→27 (+4). See [the queue/coverage update](parallel_round2_3x150_serial_merge_queue_coverage_update_2026-07-23.md).
+- **Failure boundary:** Twinsburg OH, Oakland Park FL, Hollister CA, and College Place WA remain failure-only and outside coverage. The Wausau diagnostic probe and stopped `bd5e259` output remain quarantined and absent from national builders.
+- **Checkpoint:** official progress is 1,537/2,000 (76.9%), leaving 463. Four serial 150-row waves would reach or exceed the checkpoint; a three-lane custom round around 160 rows/lane supplies a modest failure buffer and is expected to land near 2,013.
+- **Yield/dashboard:** [the refresh](parallel_round2_3x150_dashboard_yield_checkpoint_refresh_2026-07-23.md) records six reviewed waves/rounds and the latest round at 288.484 attempted rows/hour and 2.209 leads per parseable municipality. All dashboard JSON and the frontend build pass. Parallel status now says the three-lane round completed and merged; 3 × 300 is technically feasible but likely to overshoot.
+- **Priority:** [the priority decision](parallel_round2_3x150_priority_refresh_decision_2026-07-23.md) refreshed the unchanged methodology because 743 successful scouts had accrued since the 794-covered build. Current counts are 34,046 future eligible, Tier 1 628, Tier 2 3,420, and 27 failure-only retry targets.
+- **Stage boundary:** all 3,347 queue rows remain unverified. No live/API/model call, URL verification, ingestion, codification, wage-gap calculation/claim, causal claim, regression, remote action, or push occurred in this merge.
+
+### Next Move
+
+Prepare a new checkpoint-targeted ordinary round from the refreshed coverage and priority artifacts. Prefer approximately 160 rows per lane across three lanes (480 total) over the existing 3 × 300 feasibility plan unless the user explicitly accepts a substantial checkpoint overshoot. Lock new inputs only after excluding all current coverage, canonical, retry/failure-only, and cross-lane overlaps. After a later serial merge reaches approximately 2,000, pause broad scouting and begin verification → extraction → ingestion → rating → descriptive wage-gap analysis and mechanism documentation; regressions remain deferred.
+
 ## 2026-07-23/24 — Parallel Round 2 3×150 collection is complete; merge is pending
 
 ### Current State
