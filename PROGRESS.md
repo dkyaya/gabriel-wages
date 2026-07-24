@@ -6,6 +6,32 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-24 (Verification Scale Round 1 3×750 live collection completed; merge deferred)
+
+**Did**
+- Started from clean tracked `ee7041a47a047d40bbc83469e3aaea0cb1cb8000`; all three locked 750-row hashes, 2,250 unique verification/queue identities, scheduled status, municipality/Census identities, duplicate groups, and fresh output paths passed. The unrelated root `package-lock.json` remained untouched.
+- Ran three fresh dry gates: 750/750 rows each, zero URL opens/network calls.
+- Ran exactly three authorized bounded live lanes with concurrency eight, total/connect/read limits 20/8/15 seconds, five redirects, 10 MiB, disabled samples, no environment proxy/auth inheritance, incremental checkpoints, and lane-local metadata. No fourth lane or resume ran.
+- All lanes completed 750/750 terminal rows. Combined: 2,242 logical URL opens, 1,868 reachable documents, 18 reachable HTML rows, two reachable duplicate reuses, six duplicate pending rows, 137 blocked, 131 not found, 64 too large, 18 generic errors, three SSL errors, two timeouts, and one connection error.
+- Preserved all identities while avoiding eight duplicate fetches. The live auditor classifies all three lanes `completed_merge_eligible`, reports zero cross-lane duplicate IDs/accounting mutations, and recommends `merge_all_verification_lanes`.
+- Created 2,221 small lane-local JSON metadata artifacts (952,655 bytes total; 627 bytes maximum), with no content samples or full documents.
+
+**Decisions and why**
+- Stop before merge. `merge_all_verification_lanes` is an audit result, not authority to create/update the durable verified-source ledger.
+- Keep all automated officialness fields `unknown` and employer matches `needs_content_review`; bounded reachability does not establish source relevance, employer/unit match, or wage content.
+- Preserve blocked/not-found/oversized/transport outcomes as explicit verification-routing results, not scout failures or source evidence.
+
+**Surprises/breakage**
+- Bounded checks were much faster than the conservative estimate: the combined live wall interval was 4m20.782s because most public responses completed quickly and the lanes overlapped.
+- The three lanes reached/reused 1,888 of 2,250 candidate rows (83.911%). PDF content types appeared on some blocked/oversized results, so content-type counts must not be read as reachability counts.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Five compiles, six offline/mock verification checks, three fresh dry runs, three complete live lanes, the combined audit, schema validation, 60 ingestion tests, protected/accounting hashes, artifact confinement, no-sample/secret-header checks, and diff checks passed. No verified-ledger merge, scout-accounting/dashboard rebuild, contract/corpus edit, ingestion, `gabriel.codify`, wage extraction, wage-gap work, causal claim, regression, remote action, or push occurred.
+
+**Next steps**
+1. Under separate authorization, use `verification_scale_round1_3x750_merge_prompt_2026-07-23.md` to re-audit and serially merge eligible lane ledgers exactly once.
+2. Keep verification merge separate from ingestion, codification, and wage extraction.
+3. After the durable ledger exists, design content/employer/unit review for reachable sources and a retry/manual-review route for other terminal statuses.
+
 ## 2026-07-24 (Bounded live verification implemented; 3×750 prepared offline)
 
 **Did**

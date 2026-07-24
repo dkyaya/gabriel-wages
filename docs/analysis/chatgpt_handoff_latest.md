@@ -6,6 +6,31 @@ Last updated: `2026-07-24`
 
 ---
 
+## 2026-07-24 — Verification Scale Round 1 3×750 live lanes completed; serial merge pending
+
+### Current State
+
+- **Start/gates:** work began at clean tracked `ee7041a47a047d40bbc83469e3aaea0cb1cb8000`. The locked hashes remain `c03701be02afaa6c64cb63a8bb46cf9cae59f8665c3b2969e693b41a31cbfa65`, `ac9ee0b048f331df295ead483305d72c587ce8962b89426f84b5f42d96d048ca`, and `a9192b47724dcc39eb09ac2760325a9fccd98fadc0b16452518fe4538ec9994a`. All 2,250 verification and queue IDs are unique and all duplicate groups remain lane-local.
+- **Dry gates:** three fresh 750-row dry runs passed with zero URL opens and zero network calls.
+- **Execution:** exactly three live lanes ran with concurrency eight, bounded 20/8/15-second total/connect/read limits, five redirects, 10 MiB, disabled content samples, and lane-local artifacts. No fourth lane and no resume ran.
+- **Lane 1:** 750 terminal, 744 logical opens, 620 reachable documents, eight reachable HTML, two reachable duplicate links, 43 blocked, 44 not found, 21 too large, six generic errors, one SSL error, one connection error, and four duplicate-pending rows. Runtime 130.782 seconds.
+- **Lane 2:** 750 terminal, 749 opens, 626 reachable documents, five reachable HTML, 41 blocked, 51 not found, 18 too large, five generic errors, two SSL errors, one timeout, and one duplicate-pending row. Runtime 107.948 seconds.
+- **Lane 3:** 750 terminal, 749 opens, 622 reachable documents, five reachable HTML, 53 blocked, 36 not found, 25 too large, seven generic errors, one timeout, and one duplicate-pending row. Runtime 96.105 seconds.
+- **Combined:** 2,250 terminal rows, 2,242 logical fetches, eight duplicate reuses, 1,888 reachable/reused rows (83.911%), 257 redirects, and 362 other terminal routing outcomes. Live wall interval 260.782 seconds; effective 31,060.438 candidate rows/hour.
+- **Artifacts:** 2,221 lane-local JSON metadata files, 952,655 bytes total and 627 bytes maximum. No content sample or full candidate document was stored. No auth/cookie/token header keys appear in artifact JSON.
+- **Interpretation:** all officialness remains `unknown`; all employer matches remain `needs_content_review`. Reachability is not source relevance, ingestion, wage extraction, or evidence.
+- **Audit:** [the result review](verification_scale_round1_3x750_live_collection_result_review_2026-07-24.md) records three `completed_merge_eligible` lanes, zero cross-lane duplicate IDs, zero accounting mutations, and `merge_all_verification_lanes`.
+- **Boundary:** no durable verified-ledger merge, queue/coverage/dashboard rebuild, contract/city-coverage/corpus change, ingestion, codification, wage extraction, gap calculation/claim, causal claim, regression, remote action, or push occurred.
+- **Validation:** [the validation record](verification_scale_round1_3x750_live_collection_validation_2026-07-24.md) reports compiles, mock/offline tests, schema and ingestion tests, coverage audit, protected hashes, artifact confinement, and diff checks passed.
+
+### Next Move
+
+Use [the serial merge prompt](verification_scale_round1_3x750_merge_prompt_2026-07-23.md)
+only under separate authorization. Re-run the lane auditor, require the same
+three merge-eligible classifications and identity coverage, then merge into
+the durable verified-source ledger exactly once. Do not ingest, codify,
+extract wages, or calculate gaps during that merge.
+
 ## 2026-07-24 — Bounded live verification is ready; 3×750 is next
 
 ### Current State
