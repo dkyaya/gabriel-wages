@@ -404,12 +404,30 @@ export function VerificationPipeline({
           <p className="eyebrow">Source review</p>
           <h3>
             {sourceReviewStatus.source_review_phase ===
+            "pilot1_live_collected_not_merged"
+              ? "Pilot 1 collected; terminal transport outcomes await merge"
+              : sourceReviewStatus.source_review_phase ===
             "live_path_implemented_ready_for_pilot"
               ? "Bounded live path mock-tested; 150-row pilot ready"
               : "150-row p1 pilot prepared; no downloads yet"}
           </h3>
         </div>
         <p>
+          {sourceReviewStatus.source_review_phase ===
+          "pilot1_live_collected_not_merged" ? (
+            <>
+              Bounded access was attempted for all{" "}
+              {formatNumber(sourceReviewStatus.pilot1_live_rows_collected)}
+              {" "}locked candidates. All rows are terminal, but{" "}
+              {formatNumber(sourceReviewStatus.pilot1_source_review_status_counts?.download_connection_error)}
+              {" "}ended in connection errors and{" "}
+              {formatNumber(sourceReviewStatus.pilot1_source_review_status_counts?.download_forbidden)}
+              {" "}was forbidden; no source body was retained. The durable source-review
+              merge, ingestion, codification, wage extraction, and wage-gap analysis
+              have not started.
+            </>
+          ) : (
+            <>
           The offline source-review plan selects{" "}
           {formatNumber(sourceReviewStatus.initial_source_review_pilot_rows)}
           {" "}metadata-triaged candidates across{" "}
@@ -423,6 +441,8 @@ export function VerificationPipeline({
           No real source content has been accessed, and final source
           rating, extraction readiness, ingestion, codification, wage extraction,
           and wage-gap analysis have not started.
+            </>
+          )}
         </p>
       </div>
       <p className="panel-note">

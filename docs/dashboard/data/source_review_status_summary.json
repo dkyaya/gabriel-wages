@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-24T18:44:43Z",
+  "generated_at": "2026-07-24T19:01:17Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -38,8 +38,8 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "stage": "source_rating_and_bounded_content_review_readiness",
-  "source_review_phase": "live_path_implemented_ready_for_pilot",
+  "stage": "source_review_pilot_live_collection",
+  "source_review_phase": "pilot1_live_collected_not_merged",
   "metadata_triage_complete": true,
   "metadata_triage_rows": 4726,
   "p1_rows": 1760,
@@ -53,7 +53,7 @@
   },
   "initial_source_review_states": 43,
   "initial_source_review_unique_municipalities": 95,
-  "source_review_live_status": "ready_not_started",
+  "source_review_live_status": "pilot1_collected_not_merged",
   "bounded_live_source_review_path": "implemented_mock_tested",
   "recommended_initial_live_concurrency": 4,
   "recommended_initial_timeout_seconds": 30,
@@ -61,10 +61,10 @@
   "recommended_initial_read_timeout_seconds": 20,
   "recommended_initial_max_redirects": 5,
   "recommended_initial_max_bytes": 26214400,
-  "next_scaling_decision": "after_150_row_live_pilot",
-  "content_download_status": "ready_for_pilot_not_started",
-  "source_rating_status": "ready_for_pilot_not_started",
-  "extraction_readiness_status": "not_started",
+  "next_scaling_decision": "do_not_scale_diagnose_connection_errors_before_any_separately_authorized_retry",
+  "content_download_status": "pilot1_collected_not_merged",
+  "source_rating_status": "pilot1_collected_not_merged",
+  "extraction_readiness_status": "preliminary_pilot1_not_merged",
   "ingestion_status": "not_started",
   "codify_status": "not_started",
   "wage_extraction_status": "not_started",
@@ -131,10 +131,37 @@
   "pilot_manifest_source": "docs/analysis/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/source_review_pilot_manifest.json",
   "metadata_triage_summary_source": "docs/analysis/content_triage_ledgers/content_triage_summary_latest.json",
   "caveats": [
-    "Source review has not opened real URLs or downloaded real source content.",
-    "Source ratings require observed source content and provenance review.",
-    "The live path has been tested only with synthetic and mocked transport.",
-    "Metadata-only pilot selection does not establish officialness, relevance, employer/unit match, document type, or extraction readiness.",
+    "All 150 rows have terminal routing outcomes, but no source body was retained.",
+    "Connection errors affected 149 rows and one row was forbidden.",
+    "No content-supported source rating or extraction-readiness evidence was produced.",
+    "The lane audit merge recommendation reflects terminal completeness and artifact integrity, not source-review yield.",
+    "No durable source-review merge occurred.",
+    "Preliminary source-review transport outcomes are not a durable merged source-rating ledger.",
     "No source was ingested or codified and no wage data or wage gaps were calculated."
-  ]
+  ],
+  "latest_source_review_pilot_id": "SOURCE-REVIEW-PILOT1-150-2026-07-24",
+  "pilot1_live_rows_collected": 150,
+  "pilot1_terminal_rows": 150,
+  "pilot1_source_review_merge_status": "not_started",
+  "pilot1_source_review_status_counts": {
+    "download_connection_error": 149,
+    "download_forbidden": 1
+  },
+  "pilot1_url_access_status_counts": {
+    "connection_error": 149,
+    "forbidden": 1
+  },
+  "pilot1_download_status_counts": {
+    "connection_error": 149,
+    "forbidden": 1
+  },
+  "pilot1_content_type_observed_counts": {
+    "unknown": 150
+  },
+  "pilot1_content_artifact_count": 0,
+  "pilot1_metadata_artifact_count": 150,
+  "pilot1_total_artifact_bytes": 114939,
+  "pilot1_manual_review_burden_rows": 150,
+  "pilot1_lane_audit_recommendation": "merge_all_source_review_lanes",
+  "live_collection_summary_source": "docs/analysis/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/source_review_live_collection_summary.json"
 }

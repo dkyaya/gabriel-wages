@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0.0",
+  "status": "pilot1_live_collected_not_merged",
+  "pilot_id": "SOURCE-REVIEW-PILOT1-150-2026-07-24",
+  "selected_rows": 150,
+  "ledger_rows": 150,
+  "terminal_rows": 150,
+  "unique_source_review_ids": 150,
+  "unique_candidate_queue_row_ids": 150,
+  "exact_input_identity_equality": true,
+  "lane_rows": {
+    "lane_1": 75,
+    "lane_2": 75
+  },
+  "source_review_status_counts": {
+    "download_connection_error": 149,
+    "download_forbidden": 1
+  },
+  "url_access_status_counts": {
+    "connection_error": 149,
+    "forbidden": 1
+  },
+  "download_status_counts": {
+    "connection_error": 149,
+    "forbidden": 1
+  },
+  "content_type_observed_counts": {
+    "unknown": 150
+  },
+  "content_byte_size_distribution": {
+    "0": 150
+  },
+  "source_officialness_rating_counts": {
+    "unknown": 150
+  },
+  "source_relevance_rating_counts": {
+    "unknown": 150
+  },
+  "municipality_match_rating_counts": {
+    "unknown": 150
+  },
+  "employer_match_rating_counts": {
+    "unknown": 150
+  },
+  "bargaining_unit_match_rating_counts": {
+    "unknown": 150
+  },
+  "document_type_rating_counts": {
+    "unknown": 150
+  },
+  "extraction_readiness_rating_counts": {
+    "not_ready": 150
+  },
+  "pdf_page_count_counts": {
+    "unknown": 150
+  },
+  "text_layer_status_counts": {
+    "unknown": 150
+  },
+  "urls_opened": 150,
+  "network_calls": 150,
+  "documents_downloaded": 0,
+  "documents_parsed": 0,
+  "pdfs_parsed": 0,
+  "ocr_runs": 0,
+  "content_artifacts_written": 0,
+  "content_artifact_count": 0,
+  "metadata_artifact_count": 150,
+  "content_sample_count": 0,
+  "total_artifact_file_count": 150,
+  "content_artifact_bytes": 0,
+  "metadata_artifact_bytes": 114939,
+  "total_artifact_bytes": 114939,
+  "maximum_content_artifact_bytes": 0,
+  "maximum_metadata_artifact_bytes": 805,
+  "maximum_artifact_bytes": 805,
+  "rows_with_content_hash": 0,
+  "artifact_integrity": true,
+  "lane_runtime_seconds": {
+    "lane_1": 27.0,
+    "lane_2": 26.0
+  },
+  "lane_rows_per_hour": {
+    "lane_1": 10000.0,
+    "lane_2": 10384.615
+  },
+  "combined_wall_clock_seconds": 39.0,
+  "combined_rows_per_hour": 13846.154,
+  "manual_review_burden_rows": 150,
+  "lane_audit_classification_counts": {
+    "completed_merge_eligible": 2
+  },
+  "lane_audit_recommendation": "merge_all_source_review_lanes",
+  "scaling_recommendation": "do_not_scale_diagnose_connection_errors_before_any_separately_authorized_retry",
+  "source_review_merge_status": "not_started",
+  "ingestion_status": "not_started",
+  "codify_status": "not_started",
+  "wage_extraction_status": "not_started",
+  "wage_gap_analysis_status": "not_started",
+  "caveats": [
+    "All 150 rows have terminal routing outcomes, but no source body was retained.",
+    "Connection errors affected 149 rows and one row was forbidden.",
+    "No content-supported source rating or extraction-readiness evidence was produced.",
+    "The lane audit merge recommendation reflects terminal completeness and artifact integrity, not source-review yield.",
+    "No durable source-review merge occurred."
+  ]
+}

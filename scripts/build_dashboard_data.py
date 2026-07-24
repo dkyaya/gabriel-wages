@@ -104,6 +104,10 @@ SOURCE_REVIEW_PILOT_MANIFEST_PATH = (
     / "SOURCE-REVIEW-PILOT1-150-2026-07-24"
     / "source_review_pilot_manifest.json"
 )
+SOURCE_REVIEW_PILOT_LIVE_SUMMARY_PATH = (
+    SOURCE_REVIEW_PILOT_MANIFEST_PATH.parent
+    / "source_review_live_collection_summary.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -2029,7 +2033,7 @@ def build_source_review_status_summary(
         )
     ):
         raise ValueError("Source-review plan records prohibited source access")
-    return {
+    payload = {
         **metadata,
         "stage": "source_rating_and_bounded_content_review_readiness",
         "source_review_phase": "live_path_implemented_ready_for_pilot",
@@ -2090,6 +2094,67 @@ def build_source_review_status_summary(
             "No source was ingested or codified and no wage data or wage gaps were calculated.",
         ],
     }
+    if SOURCE_REVIEW_PILOT_LIVE_SUMMARY_PATH.exists():
+        live = read_json(SOURCE_REVIEW_PILOT_LIVE_SUMMARY_PATH)
+        if (
+            live.get("status") != "pilot1_live_collected_not_merged"
+            or live.get("pilot_id") != manifest["pilot_id"]
+            or int(live.get("selected_rows", 0)) != selected_rows
+            or int(live.get("ledger_rows", 0)) != selected_rows
+            or int(live.get("terminal_rows", 0)) != selected_rows
+        ):
+            raise ValueError("Source-review live summary fails locked pilot gates")
+        payload.update(
+            {
+                "stage": "source_review_pilot_live_collection",
+                "source_review_phase": "pilot1_live_collected_not_merged",
+                "source_review_live_status": "pilot1_collected_not_merged",
+                "latest_source_review_pilot_id": live["pilot_id"],
+                "pilot1_live_rows_collected": int(live["ledger_rows"]),
+                "pilot1_terminal_rows": int(live["terminal_rows"]),
+                "pilot1_source_review_merge_status": "not_started",
+                "source_rating_status": "pilot1_collected_not_merged",
+                "content_download_status": "pilot1_collected_not_merged",
+                "extraction_readiness_status": "preliminary_pilot1_not_merged",
+                "pilot1_source_review_status_counts": live[
+                    "source_review_status_counts"
+                ],
+                "pilot1_url_access_status_counts": live[
+                    "url_access_status_counts"
+                ],
+                "pilot1_download_status_counts": live[
+                    "download_status_counts"
+                ],
+                "pilot1_content_type_observed_counts": live[
+                    "content_type_observed_counts"
+                ],
+                "pilot1_content_artifact_count": int(
+                    live["content_artifact_count"]
+                ),
+                "pilot1_metadata_artifact_count": int(
+                    live["metadata_artifact_count"]
+                ),
+                "pilot1_total_artifact_bytes": int(
+                    live["total_artifact_bytes"]
+                ),
+                "pilot1_manual_review_burden_rows": int(
+                    live["manual_review_burden_rows"]
+                ),
+                "pilot1_lane_audit_recommendation": live[
+                    "lane_audit_recommendation"
+                ],
+                "next_scaling_decision": live["scaling_recommendation"],
+                "live_collection_summary_source": relative(
+                    SOURCE_REVIEW_PILOT_LIVE_SUMMARY_PATH
+                ),
+                "caveats": live["caveats"]
+                + [
+                    "Preliminary source-review transport outcomes are not a durable merged source-rating ledger.",
+                    "No source was ingested or codified and no wage data or wage gaps were calculated.",
+                ],
+            }
+        )
+    return payload
 
 
 def validate_inputs(

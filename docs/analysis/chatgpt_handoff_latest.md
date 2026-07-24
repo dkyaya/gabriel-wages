@@ -6,6 +6,37 @@ Last updated: `2026-07-24`
 
 ---
 
+## 2026-07-24 — Source-review Pilot 1 collected; no source bodies retained
+
+### Current State
+
+- **Start:** work began at clean tracked `a0c2445f577f8256849f65f73b0a4492ad6fda7c`; all requested ancestry was present. The unrelated untracked root `package-lock.json` remains untouched.
+- **Dry gate:** fresh 75/75 pre-live dry runs passed using `.venv/bin/python` because the shell `python` shim was unavailable. The audit reports 150/150 terminal-planned rows, two `dry_run_passed` lanes, zero source access, and `dry_run_complete_no_live_source_review`.
+- **Live scope:** exactly the locked 150 source-review IDs ran in two lanes at concurrency four, 30/8/20-second limits, five redirects, 25 MiB, and samples off. Lane 1 established checkpoints before Lane 2 launched. Both scripts exited zero; no third lane or retry ran.
+- **Terminal outcomes:** [the result review](source_review_pilot1_live_collection_result_review_2026-07-24.md) records 149 `download_connection_error` and one `download_forbidden`. All 150 rows are terminal, but no source body was retained.
+- **Artifacts:** 150 lane-local response-metadata JSON files total 114,939 bytes; maximum 805 bytes. Content artifacts, hashes, samples, parses, and OCR outputs are zero. Artifact locality/integrity and metadata secret/header scans passed.
+- **Ratings:** officialness, relevance, municipality/employer/unit match, document type, PDF page count, and text layer are unknown for all 150. Extraction readiness is `not_ready` for all 150. No wage or mechanism signal was populated.
+- **Audit:** both lanes are `completed_merge_eligible`; exact input identity equality and artifact integrity pass; recommendation is `merge_all_source_review_lanes`. This is terminal accounting eligibility, not successful content review. [No durable merge occurred](source_review_pilot1_live_no_merge_note_2026-07-24.md).
+- **Dashboard:** `source_review_phase = pilot1_live_collected_not_merged`, 150 rows collected, merge not started. The dashboard reports the actual error mix and no retained body.
+- **Boundary:** no scout accounting, routing/triage-ledger mutation, source-review merge, PDF parse, OCR, extraction, ingestion, codification, wage calculation/claim, causal claim, regression, remote inspection, or push occurred.
+- **Validation:** [the validation record](source_review_pilot1_live_collection_validation_2026-07-24.md) reports five compiles, 13 mocked tests, final live audit, exact identity equality, dashboard JSON/frontend build, schema and 60 ingestion tests, immutable hashes, artifact/secret checks, and diff checks passed.
+
+### Interpretation
+
+The collection is structurally complete but substantively low-yield. The
+calculated 13,846 rows/hour reflects fast terminal connection failure. It is
+not evidence of scalable content review. No rating field gained
+content-supported information.
+
+### Next Move
+
+The audit permits a separate serial merge of the 150 terminal transport
+outcomes, without URL access. Do not scale to 500, 750, or 1,000. Diagnose the
+149 connection errors in a separate task and obtain explicit authorization
+before any bounded retry. Do not retry, ingest, codify, parse PDFs, run OCR,
+extract wages, calculate wage gaps, make causal claims, or run regressions as
+part of the merge.
+
 ## 2026-07-24 — Bounded source-review live path is ready; pilot not started
 
 ### Current State

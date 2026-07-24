@@ -6,6 +6,33 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-24 (Source-review Pilot 1 live collection completed; no merge)
+
+**Did**
+- Started from clean tracked `a0c2445f577f8256849f65f73b0a4492ad6fda7c`, confirmed every requested ancestor, exact 75/75 lane hashes and identities, no existing live output, and no durable source-review ledger. The unrelated untracked root `package-lock.json` remained untouched.
+- The shell `python` shim was unavailable, so all Python commands used `.venv/bin/python`. Fresh 75/75 pre-live dry runs passed with 150 terminal-planned rows, two `dry_run_passed` lanes, zero source-access counters, and `dry_run_complete_no_live_source_review`.
+- Created two guarded one-lane command scripts with separate console/exit logs. Lane 1 established its checkpointed ledger, summary, timing, and artifact directory before Lane 2 launched. Exactly two lanes ran at concurrency four, 30/8/20-second limits, five redirects, 25 MiB, and content samples off.
+- Both live scripts exited zero and produced 75/75 terminal rows. Combined outcomes are 149 `download_connection_error` and one `download_forbidden`; no source body, content hash, content sample, parse, or OCR output was produced.
+- The 150 lane-local response-metadata JSON files total 114,939 bytes, with an 805-byte maximum. Artifact paths and metadata secret/header checks passed.
+- The live audit reports two `completed_merge_eligible` lanes, exact 150-ID coverage, clean artifact integrity, and `merge_all_source_review_lanes`. No durable source-review merge ran.
+- Updated the dashboard to `pilot1_live_collected_not_merged`, recorded the actual transport distribution, and set the scale decision to diagnose connection failures before any separately authorized retry.
+
+**Decisions and why**
+- Do not retry in this task: the prompt authorizes one attempt and explicitly prohibits new retry directories.
+- Do not scale to 500 despite fast terminal throughput. Zero retained source bodies, zero content hashes, unknown ratings for all rows, and 150/150 transport/manual-review burden fail every substantive scale gate.
+- Preserve the audit's merge recommendation as an accounting result: all terminal outcomes are complete and safe to merge later, but merge eligibility is not evidence that content review succeeded.
+
+**Surprises/breakage**
+- The live transport reached terminal states rapidly, but 149 connections failed and one response was forbidden. The apparent 13,846 combined rows/hour measures fast failure rather than productive content review.
+- An initial dashboard-builder patch returned before applying the live summary and briefly affected two unrelated return statements during correction. The issue was caught before validation; the final builder compiles, rebuilds all dashboard JSON, and passes the frontend build.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Five compiles, 13 offline/mock tests, final 150-row live audit, exact input/ledger identity equality, dashboard rebuild/16 JSON parses/frontend production build, schema validation, 60 ingestion tests, immutable protected hashes, lane-local artifact and secret scans, and diff checks passed. Exactly 150 locked locator attempts ran. No third lane, retry, durable source-review merge, scout-accounting or routing/triage-ledger mutation, source-content retention, PDF parse, OCR, extraction, ingestion, `gabriel.codify`, wage extraction, wage-gap work, causal claim, regression, remote action, or push occurred.
+
+**Next steps**
+1. Review the live collection relay and terminal error distribution.
+2. If desired, run a separate serial merge of the 150 terminal source-review outcomes; do not open URLs in that merge.
+3. Do not scale. Diagnose connection behavior and obtain separate explicit authorization before any bounded retry; keep OCR, parsing, ingestion, codification, and wage analysis in later gated tasks.
+
 ## 2026-07-24 (Bounded source-review live path implemented and mock-tested)
 
 **Did**
