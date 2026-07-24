@@ -7,11 +7,12 @@ The live path is fail-closed. It requires all of:
 * ``--download-mode bounded``
 * ``--allow-live-content-access``
 
-Tests inject a fake HTTP client; importing or calling ``run_live`` with that
-client never creates a real network connection. The CLI uses a bounded urllib
-client only after the explicit live gates pass. This module never writes to
-``corpus/``, contract/coverage data, routing ledgers, or triage ledgers, and it
-never performs OCR, wage extraction, ingestion, or codification.
+Tests inject a fake or ``httpx.MockTransport`` client; importing or calling
+``run_live`` with that client never creates a real network connection. The CLI
+uses a bounded verifier-compatible ``httpx`` client only after the explicit
+live gates pass. This module never writes to ``corpus/``, contract/coverage
+data, routing ledgers, or triage ledgers, and it never performs OCR, wage
+extraction, ingestion, or codification.
 """
 
 from __future__ import annotations
@@ -22,18 +23,16 @@ import hashlib
 import json
 import os
 import re
-import socket
-import ssl
 import time
-import urllib.error
 import urllib.parse
-import urllib.request
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Mapping, Protocol
+
+import httpx
 
 from prepare_source_review_pilot import (
     IDENTITY_FIELDS,
@@ -77,6 +76,7 @@ LEDGER_EXTRA_FIELDS = [
     "response_metadata_path",
     "content_sample_path",
     "error_type",
+    "transport_exception_type",
     "error_message_sanitized",
 ]
 LEDGER_FIELDS = OUTPUT_FIELDS + LEDGER_EXTRA_FIELDS
@@ -116,19 +116,34 @@ SENSITIVE_QUERY_KEYS = {
 }
 
 
-class FetchTimeout(Exception):
+def sanitize_exception_type(value: object) -> str:
+    """Return a non-sensitive exception class/category token."""
+
+    clean = re.sub(r"[^A-Za-z0-9_.-]+", "_", str(value or "")).strip("._")
+    return (clean or "unknown")[:80]
+
+
+class TypedFetchError(Exception):
+    """Base error retaining only a sanitized transport exception class."""
+
+    def __init__(self, message: str, *, cause_type: str = "unknown") -> None:
+        super().__init__(message)
+        self.cause_type = sanitize_exception_type(cause_type)
+
+
+class FetchTimeout(TypedFetchError):
     """A bounded HTTP operation exceeded its configured timeout."""
 
 
-class FetchConnectionError(Exception):
+class FetchConnectionError(TypedFetchError):
     """A bounded HTTP connection could not be established."""
 
 
-class FetchSslError(Exception):
+class FetchSslError(TypedFetchError):
     """TLS validation or negotiation failed."""
 
 
-class TooManyRedirects(Exception):
+class TooManyRedirects(TypedFetchError):
     """The configured redirect ceiling was exceeded."""
 
 
@@ -163,21 +178,17 @@ class HttpClient(Protocol):
         """Return one bounded response or raise a typed fetch exception."""
 
 
-class _LimitedRedirectHandler(urllib.request.HTTPRedirectHandler):
-    def __init__(self, max_redirects: int) -> None:
-        super().__init__()
-        self.max_redirects = max_redirects
-        self.redirect_count = 0
+class HttpxBoundedHttpClient:
+    """Verifier-compatible transport used only after explicit live gates pass."""
 
-    def redirect_request(self, req, fp, code, msg, headers, newurl):  # type: ignore[no-untyped-def]
-        self.redirect_count += 1
-        if self.redirect_count > self.max_redirects:
-            raise TooManyRedirects("redirect limit exceeded")
-        return super().redirect_request(req, fp, code, msg, headers, newurl)
-
-
-class UrllibBoundedHttpClient:
-    """Real transport used only after all explicit live gates pass."""
+    def __init__(
+        self,
+        *,
+        trust_env_proxy: bool = False,
+        transport: httpx.BaseTransport | None = None,
+    ) -> None:
+        self.trust_env_proxy = trust_env_proxy
+        self.transport = transport
 
     def fetch(
         self,
@@ -193,105 +204,110 @@ class UrllibBoundedHttpClient:
         parsed = urllib.parse.urlsplit(url)
         if parsed.scheme not in {"http", "https"} or not parsed.netloc:
             raise ValueError("source locator must be an absolute HTTP(S) URL")
-        redirect_handler = _LimitedRedirectHandler(max_redirects)
-        opener = urllib.request.build_opener(
-            urllib.request.ProxyHandler({}),
-            redirect_handler,
-            urllib.request.HTTPSHandler(context=ssl.create_default_context()),
-        )
-        request = urllib.request.Request(
-            url,
-            headers={
-                "User-Agent": user_agent,
-                "Accept": (
-                    "application/pdf,text/html,application/xhtml+xml,"
-                    "text/plain,application/xml,application/json,*/*;q=0.1"
-                ),
-            },
-            method="GET",
+        timeout_config = httpx.Timeout(
+            timeout,
+            connect=connect_timeout,
+            read=read_timeout,
+            write=timeout,
+            pool=timeout,
         )
         started = time.monotonic()
         try:
-            with opener.open(request, timeout=connect_timeout) as response:
-                socket_object = getattr(
-                    getattr(getattr(response, "fp", None), "raw", None),
-                    "_sock",
-                    None,
-                )
-                if socket_object is not None:
-                    socket_object.settimeout(read_timeout)
-                raw_length = response.headers.get("Content-Length", "")
-                try:
-                    content_length = int(raw_length) if raw_length else None
-                except ValueError:
-                    content_length = None
-                if content_length is not None and content_length > max_bytes:
-                    return HttpFetchResult(
-                        status_code=int(response.status),
-                        final_url=str(response.geturl()),
-                        headers=dict(response.headers.items()),
-                        body=b"",
-                        elapsed_seconds=time.monotonic() - started,
-                        redirect_count=redirect_handler.redirect_count,
-                        too_large=True,
-                        content_length_header=content_length,
-                    )
-                chunks: list[bytes] = []
-                bytes_read = 0
-                while True:
-                    remaining = timeout - (time.monotonic() - started)
-                    if remaining <= 0:
-                        raise FetchTimeout("total timeout exceeded")
-                    if socket_object is not None:
-                        socket_object.settimeout(min(read_timeout, remaining))
-                    chunk = response.read(min(64 * 1024, max_bytes + 1 - bytes_read))
-                    if not chunk:
-                        break
-                    chunks.append(chunk)
-                    bytes_read += len(chunk)
-                    if bytes_read > max_bytes:
+            with httpx.Client(
+                timeout=timeout_config,
+                follow_redirects=True,
+                max_redirects=max_redirects,
+                headers={"User-Agent": user_agent},
+                transport=self.transport,
+                trust_env=self.trust_env_proxy,
+            ) as client:
+                with client.stream(
+                    "GET",
+                    url,
+                    headers={
+                        "Accept": (
+                            "application/pdf,text/html,application/xhtml+xml,"
+                            "text/plain,application/xml,application/json,*/*;q=0.1"
+                        )
+                    },
+                ) as response:
+                    raw_length = response.headers.get("content-length", "")
+                    try:
+                        content_length = int(raw_length) if raw_length else None
+                    except ValueError:
+                        content_length = None
+                    if content_length is not None and content_length > max_bytes:
                         return HttpFetchResult(
-                            status_code=int(response.status),
-                            final_url=str(response.geturl()),
-                            headers=dict(response.headers.items()),
+                            status_code=response.status_code,
+                            final_url=str(response.url),
+                            headers=dict(response.headers),
                             body=b"",
                             elapsed_seconds=time.monotonic() - started,
-                            redirect_count=redirect_handler.redirect_count,
+                            redirect_count=len(response.history),
                             too_large=True,
                             content_length_header=content_length,
                         )
-                return HttpFetchResult(
-                    status_code=int(response.status),
-                    final_url=str(response.geturl()),
-                    headers=dict(response.headers.items()),
-                    body=b"".join(chunks),
-                    elapsed_seconds=time.monotonic() - started,
-                    redirect_count=redirect_handler.redirect_count,
-                    content_length_header=content_length,
-                )
-        except TooManyRedirects:
+                    body = bytearray()
+                    for chunk in response.iter_bytes():
+                        if time.monotonic() - started > timeout:
+                            raise FetchTimeout(
+                                "total timeout exceeded",
+                                cause_type="TotalTimeout",
+                            )
+                        body.extend(chunk)
+                        if len(body) > max_bytes:
+                            return HttpFetchResult(
+                                status_code=response.status_code,
+                                final_url=str(response.url),
+                                headers=dict(response.headers),
+                                body=b"",
+                                elapsed_seconds=time.monotonic() - started,
+                                redirect_count=len(response.history),
+                                too_large=True,
+                                content_length_header=content_length,
+                            )
+                    return HttpFetchResult(
+                        status_code=response.status_code,
+                        final_url=str(response.url),
+                        headers=dict(response.headers),
+                        body=bytes(body),
+                        elapsed_seconds=time.monotonic() - started,
+                        redirect_count=len(response.history),
+                        content_length_header=content_length,
+                    )
+        except FetchTimeout:
             raise
-        except urllib.error.HTTPError as exc:
-            return HttpFetchResult(
-                status_code=int(exc.code),
-                final_url=str(exc.geturl()),
-                headers=dict(exc.headers.items()) if exc.headers else {},
-                body=b"",
-                elapsed_seconds=time.monotonic() - started,
-                redirect_count=redirect_handler.redirect_count,
-            )
-        except (socket.timeout, TimeoutError) as exc:
-            raise FetchTimeout("socket timeout") from exc
-        except ssl.SSLError as exc:
-            raise FetchSslError("TLS negotiation failed") from exc
-        except urllib.error.URLError as exc:
-            if isinstance(exc.reason, ssl.SSLError):
-                raise FetchSslError("TLS negotiation failed") from exc
-            if isinstance(exc.reason, (socket.timeout, TimeoutError)):
-                raise FetchTimeout("connection timeout") from exc
-            raise FetchConnectionError("URL connection failed") from exc
-        except OSError as exc:
-            raise FetchConnectionError("socket connection failed") from exc
+        except httpx.TooManyRedirects as exc:
+            raise TooManyRedirects(
+                "redirect limit exceeded", cause_type=type(exc).__name__
+            ) from exc
+        except httpx.TimeoutException as exc:
+            raise FetchTimeout(
+                "bounded HTTP timeout", cause_type=type(exc).__name__
+            ) from exc
+        except httpx.InvalidURL as exc:
+            raise ValueError("HTTP client rejected source locator") from exc
+        except httpx.ConnectError as exc:
+            cause_type = type(exc).__name__
+            message = str(exc)
+            if re.search(r"(?i)ssl|certificate|tls", message):
+                raise FetchSslError(
+                    "TLS validation or negotiation failed",
+                    cause_type=cause_type,
+                ) from exc
+            raise FetchConnectionError(
+                "HTTP connection failed", cause_type=cause_type
+            ) from exc
+        except httpx.NetworkError as exc:
+            raise FetchConnectionError(
+                "HTTP network operation failed",
+                cause_type=type(exc).__name__,
+            ) from exc
+        except httpx.HTTPError as exc:
+            raise FetchConnectionError(
+                "bounded HTTP client failed",
+                cause_type=type(exc).__name__,
+            ) from exc
 
 
 def now_utc() -> str:
@@ -525,6 +541,12 @@ def summarize(
         "max_redirects": args.max_redirects,
         "max_bytes": args.max_bytes,
         "concurrency": args.concurrency,
+        "trust_env_proxy": bool(getattr(args, "trust_env_proxy", False)),
+        "http_client": (
+            getattr(args, "http_client_label", "httpx_verifier_compatible")
+            if live_attempted
+            else "not_instantiated"
+        ),
         "completed_at": completed_at,
     }
     if review_mode == "source_rating_planned":
@@ -614,6 +636,7 @@ def response_metadata_payload(row: dict[str, str]) -> dict[str, object]:
         "text_layer_status": row["text_layer_status"],
         "pdf_page_count": row["pdf_page_count"],
         "error_type": row["error_type"],
+        "transport_exception_type": row["transport_exception_type"],
         "error_message_sanitized": row["error_message_sanitized"],
         "reviewed_at": row["reviewed_at"],
         "ocr_runs": 0,
@@ -818,7 +841,7 @@ def process_live_row(
                     sample_path = artifact_root / "samples" / f"{stem}.txt"
                     write_bytes(sample_path, sample.encode("utf-8"))
                     row["content_sample_path"] = sample_path.as_posix()
-    except FetchTimeout:
+    except FetchTimeout as exc:
         row["urls_opened"] = "1"
         row["network_calls"] = "1"
         terminal_error(
@@ -829,7 +852,8 @@ def process_live_row(
             error_type="timeout",
             detail="bounded source access timed out",
         )
-    except FetchSslError:
+        row["transport_exception_type"] = exc.cause_type
+    except FetchSslError as exc:
         row["urls_opened"] = "1"
         row["network_calls"] = "1"
         terminal_error(
@@ -840,7 +864,8 @@ def process_live_row(
             error_type="ssl_error",
             detail="TLS validation or negotiation failed",
         )
-    except FetchConnectionError:
+        row["transport_exception_type"] = exc.cause_type
+    except FetchConnectionError as exc:
         row["urls_opened"] = "1"
         row["network_calls"] = "1"
         terminal_error(
@@ -851,7 +876,8 @@ def process_live_row(
             error_type="connection_error",
             detail="bounded source connection failed",
         )
-    except TooManyRedirects:
+        row["transport_exception_type"] = exc.cause_type
+    except TooManyRedirects as exc:
         row["urls_opened"] = "1"
         row["network_calls"] = "1"
         terminal_error(
@@ -862,6 +888,7 @@ def process_live_row(
             error_type="redirect_limit",
             detail="redirect limit exceeded",
         )
+        row["transport_exception_type"] = exc.cause_type
     except (ValueError, OSError):
         terminal_error(
             row,
@@ -911,6 +938,7 @@ def dry_args_defaults(args: argparse.Namespace) -> None:
         "max_bytes": MAX_LIVE_BYTES,
         "concurrency": 4,
         "user_agent": DEFAULT_USER_AGENT,
+        "trust_env_proxy": False,
     }
     for field, value in defaults.items():
         if not hasattr(args, field):
@@ -1102,7 +1130,14 @@ def run_live(
         for index, row in enumerate(rows, start=1)
         if row["source_review_id"] not in completed
     ]
-    active_client = client or UrllibBoundedHttpClient()
+    active_client = client or HttpxBoundedHttpClient(
+        trust_env_proxy=bool(getattr(args, "trust_env_proxy", False))
+    )
+    args.http_client_label = (
+        "httpx_verifier_compatible"
+        if isinstance(active_client, HttpxBoundedHttpClient)
+        else "injected_test_client"
+    )
     with ThreadPoolExecutor(max_workers=args.concurrency) as executor:
         futures = {
             executor.submit(
@@ -1209,6 +1244,14 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--concurrency", type=int, default=4)
     parser.add_argument("--candidate-artifact-dir")
     parser.add_argument("--user-agent", default=DEFAULT_USER_AGENT)
+    parser.add_argument(
+        "--trust-env-proxy",
+        action="store_true",
+        help=(
+            "Opt in to environment proxy settings. Disabled by default to "
+            "match the successful bounded URL verifier."
+        ),
+    )
     parser.add_argument("--resume-from-output-dir")
     parser.add_argument(
         "--skip-completed-source-review-ids", action="store_true"

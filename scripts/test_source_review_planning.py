@@ -14,6 +14,8 @@ import unittest
 from pathlib import Path
 from unittest import mock
 
+import httpx
+
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -47,9 +49,11 @@ class FakeHttpClient:
         self.result = result
         self.error = error
         self.calls = 0
+        self.call_urls: list[str] = []
 
     def fetch(self, url: str, **kwargs: object) -> runner.HttpFetchResult:
         self.calls += 1
+        self.call_urls.append(url)
         if self.error is not None:
             raise self.error
         if self.result is None:
@@ -228,6 +232,7 @@ class SourceReviewPlanningTests(unittest.TestCase):
             concurrency=2,
             candidate_artifact_dir=None,
             user_agent=runner.DEFAULT_USER_AGENT,
+            trust_env_proxy=False,
             resume_from_output_dir=None,
             skip_completed_source_review_ids=False,
             allow_live_content_access=True,
@@ -356,6 +361,117 @@ class SourceReviewPlanningTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "download-mode bounded"):
             runner.run_live(args, client=FakeHttpClient())
         self.assertFalse((self.base / "live-gate").exists())
+
+    def test_live_uses_raw_locator_and_only_records_sanitized_url(self) -> None:
+        manifest = planner.create_plan(self.plan_args())
+        source = planner.read_csv(Path(manifest["lanes"][0]["input_csv"]))[0]
+        raw_locator = (
+            "https://example.invalid/document.pdf?"
+            "access_token=fixture-secret&document=123"
+        )
+        source["source_locator"] = raw_locator
+        source["final_url"] = raw_locator
+        source["candidate_url"] = raw_locator
+        input_csv = self.base / "raw-locator-input.csv"
+        write_csv(input_csv, [source])
+        fake = FakeHttpClient(
+            runner.HttpFetchResult(
+                200,
+                raw_locator,
+                {"Content-Type": "application/pdf"},
+                b"%PDF-1.4\nfixture\n",
+                0.01,
+            )
+        )
+        output_dir = self.base / "raw-locator-live"
+        args = self.live_args(input_csv.as_posix(), output_dir)
+        runner.run_live(args, client=fake)
+        row = runner.read_csv(output_dir / "source_review_ledger.csv")[0]
+        self.assertEqual(fake.call_urls, [raw_locator])
+        self.assertNotIn("fixture-secret", row["final_access_url_sanitized"])
+        self.assertIn("%5BREDACTED%5D", row["final_access_url_sanitized"])
+
+    def test_proxy_environment_is_explicit_and_disabled_by_default(self) -> None:
+        with mock.patch.object(
+            sys,
+            "argv",
+            [
+                "source_review_sources.py",
+                "--input-csv",
+                "input.csv",
+                "--output-dir",
+                "output",
+            ],
+        ):
+            self.assertFalse(runner.parse_args().trust_env_proxy)
+        with mock.patch.object(
+            sys,
+            "argv",
+            [
+                "source_review_sources.py",
+                "--input-csv",
+                "input.csv",
+                "--output-dir",
+                "output",
+                "--trust-env-proxy",
+            ],
+        ):
+            self.assertTrue(runner.parse_args().trust_env_proxy)
+        self.assertFalse(runner.HttpxBoundedHttpClient().trust_env_proxy)
+
+    def test_connection_error_preserves_only_sanitized_exception_type(self) -> None:
+        fake = FakeHttpClient(
+            error=runner.FetchConnectionError(
+                "sensitive fixture detail",
+                cause_type="../../Connect Secret Type",
+            )
+        )
+        _, row, _ = self.run_one_fake(fake, label="connection-diagnostic")
+        self.assertEqual(row["source_review_status"], "download_connection_error")
+        self.assertEqual(
+            row["transport_exception_type"], "Connect_Secret_Type"
+        )
+        self.assertEqual(
+            row["error_message_sanitized"],
+            "bounded source connection failed",
+        )
+        self.assertNotIn("sensitive", json.dumps(row))
+
+    def test_verifier_compatible_httpx_mock_transport_succeeds(self) -> None:
+        requests: list[str] = []
+        body = b"%PDF-1.4\nhttpx mock fixture\n%%EOF\n"
+
+        def handler(request: httpx.Request) -> httpx.Response:
+            requests.append(str(request.url))
+            return httpx.Response(
+                200,
+                headers={"Content-Type": "application/pdf"},
+                content=body,
+                request=request,
+            )
+
+        client = runner.HttpxBoundedHttpClient(
+            trust_env_proxy=False,
+            transport=httpx.MockTransport(handler),
+        )
+        summary, row, output_dir = self.run_one_fake(
+            client,  # type: ignore[arg-type]
+            label="httpx-compatible-live",
+        )
+        self.assertEqual(len(requests), 1)
+        self.assertEqual(
+            row["source_review_status"],
+            "reviewed_metadata_and_artifact_saved",
+        )
+        self.assertEqual(row["content_hash"], hashlib.sha256(body).hexdigest())
+        self.assertEqual(summary["http_client"], "httpx_verifier_compatible")
+        self.assertFalse(summary["trust_env_proxy"])
+        self.assertTrue(Path(row["content_artifact_path"]).is_file())
+        self.assertTrue(
+            Path(row["content_artifact_path"])
+            .resolve()
+            .is_relative_to(output_dir.resolve())
+        )
 
     def test_mocked_reachable_pdf_saves_lane_local_artifact_and_hash(self) -> None:
         body = b"%PDF-1.4\nmock bounded PDF fixture\n%%EOF\n"

@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0.0",
+  "status": "connection_diagnosis_completed_probe_succeeded",
+  "pilot_id": "SOURCE-REVIEW-PILOT1-150-2026-07-24",
+  "diagnostic_probe_id": "SOURCE-REVIEW-PILOT1-CONNECTION-DIAGNOSTIC-10-2026-07-24",
+  "diagnostic_probe_input": "docs/analysis/source_review_pilot1_diagnostic_probe_input_2026-07-24.csv",
+  "diagnostic_probe_input_sha256": "9eb4057e979209b7adbb1bdad51601c69a76fe4050682a519dd2d0bcde3b2540",
+  "selected_rows": 10,
+  "terminal_rows": 10,
+  "original_lane_1_rows": 5,
+  "original_lane_2_rows": 5,
+  "distinct_states": 10,
+  "distinct_hosts": 10,
+  "urls_opened": 10,
+  "network_calls": 10,
+  "source_review_status_counts": {
+    "download_forbidden": 1,
+    "reviewed_metadata_and_artifact_saved": 9
+  },
+  "url_access_status_counts": {
+    "forbidden": 1,
+    "reached": 9
+  },
+  "download_status_counts": {
+    "artifact_saved": 9,
+    "forbidden": 1
+  },
+  "content_type_observed_counts": {
+    "application/pdf": 9,
+    "unknown": 1
+  },
+  "connection_error_rows": 0,
+  "content_artifact_count": 9,
+  "rows_with_content_hash": 9,
+  "content_artifact_bytes": 12536566,
+  "maximum_content_artifact_bytes": 3328197,
+  "metadata_artifact_count": 10,
+  "metadata_artifact_bytes": 10675,
+  "content_samples_written": 0,
+  "documents_parsed": 0,
+  "pdfs_parsed": 0,
+  "ocr_runs": 0,
+  "source_officialness_rating_counts": {
+    "official_municipal": 3,
+    "official_state_repository": 5,
+    "uncertain": 1,
+    "unknown": 1
+  },
+  "source_relevance_rating_counts": {
+    "possible": 9,
+    "unknown": 1
+  },
+  "document_type_rating_counts": {
+    "cba_candidate": 9,
+    "unknown": 1
+  },
+  "extraction_readiness_rating_counts": {
+    "medium": 9,
+    "not_ready": 1
+  },
+  "http_client": "httpx_verifier_compatible",
+  "trust_env_proxy": false,
+  "root_cause": "source_review_urllib_transport_mismatch",
+  "root_cause_confidence": "high",
+  "original_attempt_merge_recommendation": "preserve_unmerged_and_supersede_with_separately_authorized_fresh_directory_retry",
+  "scaling_recommendation": "do_not_scale_prepare_bounded_150_row_retry_only",
+  "durable_source_review_merge_status": "not_started",
+  "completed_at": "2026-07-24"
+}

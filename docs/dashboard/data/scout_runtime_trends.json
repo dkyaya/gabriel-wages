@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-24T19:01:17Z",
+  "generated_at": "2026-07-24T19:26:07Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -25,7 +25,9 @@
     "docs/analysis/content_triage_rounds/CONTENT-TRIAGE-REMAINDER-ALL-ROUTED-2026-07-24/metadata_only_collection_summary.json",
     "docs/analysis/content_triage_ledgers/content_triage_ledger_latest.csv",
     "docs/analysis/content_triage_ledgers/content_triage_summary_latest.json",
-    "docs/analysis/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/source_review_pilot_manifest.json"
+    "docs/analysis/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/source_review_pilot_manifest.json",
+    "docs/analysis/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/source_review_live_collection_summary.json",
+    "docs/analysis/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/source_review_connection_diagnostic_summary.json"
   ],
   "warnings": [],
   "limitations": [

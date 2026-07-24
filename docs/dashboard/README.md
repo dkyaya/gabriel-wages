@@ -229,10 +229,15 @@ locked locators were attempted in two bounded lanes. All rows are terminal:
 149 connection errors and one forbidden response. No source body or content
 sample was retained; 150 small lane-local response-metadata files passed
 artifact-integrity audit. The durable source-review merge has not run, and the
-pilot does not support scaling until the connection behavior is diagnosed in
-a separately authorized task. Final content-supported source rating,
-extraction readiness, ingestion, codification, wage extraction, and wage-gap
-analysis remain unperformed.
+pilot does not support scaling. The connection diagnosis is now complete:
+the custom `urllib` transport was replaced with the verifier-compatible
+`httpx` path, and one locked ten-row probe produced nine bounded PDF artifacts
+with matching hashes, one repeated forbidden response, and zero connection
+errors. The original 150-row attempt remains unmerged. A fresh-directory
+retry of those same 150 identities requires separate authorization, and no
+500-row-or-larger scale-up is authorized. Final content-supported source
+rating, extraction readiness, ingestion, codification, wage extraction, and
+wage-gap analysis remain unperformed.
 
 ## Run and build locally
 

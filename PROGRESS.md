@@ -6,6 +6,33 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-24 (Source-review connection failure diagnosed; 10-row repair probe succeeded)
+
+**Did**
+- Started from clean tracked `d97f5e423d48b4a3fef4f1ba4d21d9e2de1a1470`, confirmed requested ancestry, reproduced the preserved 149 connection errors plus one forbidden outcome, and left the unrelated untracked root `package-lock.json` untouched.
+- Matched all 150 Pilot 1 identities to prior URL-verification rows: all had HTTP 200, `application/pdf`, and `reachable_pdf_or_document`, and every source-review locator exactly equaled the verifier's recorded final URL.
+- Compared the clients and replaced the source-review-only custom `urllib` transport with a bounded synchronous `httpx` path aligned to the successful verifier. Proxy inheritance remains off by default; an explicit opt-in was added. Raw locators are used for access, recorded URLs are sanitized, and failures retain only a sanitized transport exception class.
+- Expanded the offline suite from 13 to 17 tests, including raw-versus-sanitized locator handling, proxy defaults, sanitized exception diagnostics, and an end-to-end `httpx.MockTransport` artifact/hash test.
+- Selected exactly ten locked rows—five from each original lane, ten states/hosts, state repositories, DocumentCenter paths, and the original forbidden row. The dry run passed with zero source access.
+- Ran one authorized live probe at concurrency two and the existing 30/8/20-second, five-redirect, 25 MiB, no-sample limits. It produced nine hashed PDF artifacts and one repeated forbidden outcome, with zero connection errors. No additional probe or full retry ran.
+- Updated dashboard/status documentation to preserve the original failed attempt while recording the successful transport diagnosis. Prepared a future fresh-directory 150-row retry prompt without executing it.
+
+**Decisions and why**
+- Treat the custom `urllib` transport mismatch as the high-confidence practical root cause: a controlled `httpx` probe reached 9/10 diverse prior-success URLs, while the only non-success reproduced the original HTTP-forbidden outcome.
+- Preserve the original 150-row attempt as immutable provenance but do not merge it. Its 149 connection outcomes come from a superseded client and would misstate current accessibility if treated as operative review results.
+- Do not scale. The next possible live action is a separately authorized retry of the same locked 150 identities in fresh output directories; 500/750/1,000 remains blocked.
+
+**Surprises/breakage**
+- The repair was decisive without proxy inheritance: connection errors fell from 149/150 to 0/10, confirming the proxy setting was not the supported cause.
+- The first dashboard patch landed in the adjacent content-triage builder because of repeated `payload.update` context. It was removed immediately and inserted in the source-review builder before validation; final dashboard data and frontend builds pass.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Five compiles, 17 offline/mock tests, ten-row dry and live scope checks, nine artifact/hash/PDF-signature checks, dashboard rebuild/16 JSON parses/frontend production build, schema validation, 60 ingestion tests, immutable protected hashes, artifact/secret checks, and diff checks passed. No full retry, scale-up, durable source-review merge, scout-accounting or routing/triage-ledger mutation, PDF parse, OCR, ingestion, `gabriel.codify`, wage extraction, wage-gap work, causal claim, regression, remote action, or push occurred.
+
+**Next steps**
+1. Review the comparison, diagnosis, diagnostic artifacts, and relay.
+2. If separately authorized, use the prepared retry prompt to rerun only the locked 150 identities in fresh `attempt2_httpx` directories and stop before merge.
+3. Do not scale until the full repaired pilot demonstrates acceptable artifact yield, errors, runtime, and manual-review burden.
+
 ## 2026-07-24 (Source-review Pilot 1 live collection completed; no merge)
 
 **Did**

@@ -108,6 +108,10 @@ SOURCE_REVIEW_PILOT_LIVE_SUMMARY_PATH = (
     SOURCE_REVIEW_PILOT_MANIFEST_PATH.parent
     / "source_review_live_collection_summary.json"
 )
+SOURCE_REVIEW_CONNECTION_DIAGNOSTIC_SUMMARY_PATH = (
+    SOURCE_REVIEW_PILOT_MANIFEST_PATH.parent
+    / "source_review_connection_diagnostic_summary.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -154,6 +158,8 @@ OPTIONAL_PATHS = [
     CONTENT_TRIAGE_CUMULATIVE_LEDGER_PATH,
     CONTENT_TRIAGE_CUMULATIVE_SUMMARY_PATH,
     SOURCE_REVIEW_PILOT_MANIFEST_PATH,
+    SOURCE_REVIEW_PILOT_LIVE_SUMMARY_PATH,
+    SOURCE_REVIEW_CONNECTION_DIAGNOSTIC_SUMMARY_PATH,
 ]
 
 STATE_NAMES = {
@@ -2150,6 +2156,86 @@ def build_source_review_status_summary(
                 "caveats": live["caveats"]
                 + [
                     "Preliminary source-review transport outcomes are not a durable merged source-rating ledger.",
+                    "No source was ingested or codified and no wage data or wage gaps were calculated.",
+                ],
+            }
+        )
+    if SOURCE_REVIEW_CONNECTION_DIAGNOSTIC_SUMMARY_PATH.exists():
+        diagnostic = read_json(
+            SOURCE_REVIEW_CONNECTION_DIAGNOSTIC_SUMMARY_PATH
+        )
+        if (
+            diagnostic.get("status")
+            != "connection_diagnosis_completed_probe_succeeded"
+            or diagnostic.get("pilot_id") != manifest["pilot_id"]
+            or int(diagnostic.get("selected_rows", 0)) != 10
+            or int(diagnostic.get("terminal_rows", 0)) != 10
+            or int(diagnostic.get("connection_error_rows", -1)) != 0
+            or int(diagnostic.get("content_artifact_count", 0)) != 9
+            or int(diagnostic.get("rows_with_content_hash", 0)) != 9
+        ):
+            raise ValueError(
+                "Source-review connection diagnostic summary fails probe gates"
+            )
+        payload.update(
+            {
+                "stage": "source_review_connection_diagnosis",
+                "source_review_phase": (
+                    "pilot1_connection_diagnosed_retry_not_started"
+                ),
+                "source_review_live_status": (
+                    "pilot1_original_content_yield_failed_diagnosis_complete"
+                ),
+                "bounded_live_source_review_path": (
+                    "httpx_patch_probe_succeeded"
+                ),
+                "connection_diagnosis_status": "completed_probe_succeeded",
+                "diagnostic_probe_rows": int(diagnostic["selected_rows"]),
+                "diagnostic_probe_terminal_rows": int(
+                    diagnostic["terminal_rows"]
+                ),
+                "diagnostic_probe_source_review_status_counts": diagnostic[
+                    "source_review_status_counts"
+                ],
+                "diagnostic_probe_url_access_status_counts": diagnostic[
+                    "url_access_status_counts"
+                ],
+                "diagnostic_probe_download_status_counts": diagnostic[
+                    "download_status_counts"
+                ],
+                "diagnostic_probe_content_type_observed_counts": diagnostic[
+                    "content_type_observed_counts"
+                ],
+                "diagnostic_probe_connection_error_rows": int(
+                    diagnostic["connection_error_rows"]
+                ),
+                "diagnostic_probe_content_artifact_count": int(
+                    diagnostic["content_artifact_count"]
+                ),
+                "diagnostic_probe_rows_with_content_hash": int(
+                    diagnostic["rows_with_content_hash"]
+                ),
+                "diagnostic_probe_content_artifact_bytes": int(
+                    diagnostic["content_artifact_bytes"]
+                ),
+                "diagnostic_probe_root_cause": diagnostic["root_cause"],
+                "pilot1_source_review_merge_status": "not_started",
+                "source_rating_status": "diagnostic_probe_only_not_merged",
+                "content_download_status": "diagnostic_probe_only_not_merged",
+                "extraction_readiness_status": (
+                    "preliminary_diagnostic_probe_only_not_merged"
+                ),
+                "next_scaling_decision": diagnostic[
+                    "scaling_recommendation"
+                ],
+                "connection_diagnostic_summary_source": relative(
+                    SOURCE_REVIEW_CONNECTION_DIAGNOSTIC_SUMMARY_PATH
+                ),
+                "caveats": [
+                    "The original 150-row source-review attempt failed its content-yield gate and remains unmerged.",
+                    "A verifier-compatible HTTP client diagnostic probe saved nine bounded PDF artifacts and retained one expected forbidden outcome.",
+                    "The ten-row diagnostic proves repaired access mechanics; it is not a durable source-rating ledger or authorization to scale.",
+                    "A full Pilot 1 retry requires separate authorization and fresh output directories.",
                     "No source was ingested or codified and no wage data or wage gaps were calculated.",
                 ],
             }

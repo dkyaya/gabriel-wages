@@ -404,6 +404,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Source review</p>
           <h3>
             {sourceReviewStatus.source_review_phase ===
+            "pilot1_connection_diagnosed_retry_not_started"
+              ? "Pilot 1 transport fixed; bounded retry awaits authorization"
+              : sourceReviewStatus.source_review_phase ===
             "pilot1_live_collected_not_merged"
               ? "Pilot 1 collected; terminal transport outcomes await merge"
               : sourceReviewStatus.source_review_phase ===
@@ -414,6 +417,19 @@ export function VerificationPipeline({
         </div>
         <p>
           {sourceReviewStatus.source_review_phase ===
+          "pilot1_connection_diagnosed_retry_not_started" ? (
+            <>
+              The original 150-row attempt remains unmerged after 149 connection
+              errors. A verifier-compatible client then completed a locked{" "}
+              {formatNumber(sourceReviewStatus.diagnostic_probe_rows)}-row
+              diagnostic with{" "}
+              {formatNumber(sourceReviewStatus.diagnostic_probe_content_artifact_count)}
+              {" "}bounded PDF artifacts, one forbidden response, and zero connection
+              errors. This proves the repaired access path but does not authorize a
+              retry or scale-up; ingestion, codification, wage extraction, and
+              wage-gap analysis remain unstarted.
+            </>
+          ) : sourceReviewStatus.source_review_phase ===
           "pilot1_live_collected_not_merged" ? (
             <>
               Bounded access was attempted for all{" "}
