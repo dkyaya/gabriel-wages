@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0.0",
+  "status": "batch2_500_collected_not_merged",
+  "batch_id": "SOURCE-REVIEW-BATCH2-500-2026-07-24",
+  "planned_rows": 500,
+  "ledger_rows": 500,
+  "terminal_rows": 500,
+  "unique_source_review_ids": 500,
+  "unique_candidate_queue_row_ids": 500,
+  "pilot1_candidate_overlap": 0,
+  "pilot1_source_review_id_overlap": 0,
+  "lane_count": 2,
+  "lane_rows": {
+    "lane_1": 250,
+    "lane_2": 250
+  },
+  "lane_input_sha256": {
+    "lane_1": "41a93aafc50c628db05de4597600ceccb20429d9c0a24d926a751b21ac061cef",
+    "lane_2": "51050f366f98313719d1848aefec7ea3983c5abad0ceaa6433f7c1617c2469c9"
+  },
+  "source_review_status_counts": {
+    "download_timeout": 5,
+    "reviewed_metadata_and_artifact_saved": 495
+  },
+  "url_access_status_counts": {
+    "reached": 495,
+    "timeout": 5
+  },
+  "download_status_counts": {
+    "artifact_saved": 495,
+    "timeout": 5
+  },
+  "content_type_observed_counts": {
+    "application/pdf": 495,
+    "unknown": 5
+  },
+  "source_officialness_rating_counts": {
+    "official_municipal": 235,
+    "official_state_repository": 47,
+    "official_union": 22,
+    "uncertain": 185,
+    "unknown": 11
+  },
+  "source_relevance_rating_counts": {
+    "possible": 495,
+    "unknown": 5
+  },
+  "municipality_match_rating_counts": {
+    "possible": 495,
+    "unknown": 5
+  },
+  "employer_match_rating_counts": {
+    "possible": 495,
+    "unknown": 5
+  },
+  "bargaining_unit_match_rating_counts": {
+    "possible": 495,
+    "unknown": 5
+  },
+  "document_type_rating_counts": {
+    "cba_candidate": 495,
+    "unknown": 5
+  },
+  "extraction_readiness_rating_counts": {
+    "medium": 495,
+    "not_ready": 5
+  },
+  "wage_table_signal_counts": {
+    "unknown": 500
+  },
+  "wage_growth_signal_counts": {
+    "unknown": 500
+  },
+  "mechanism_language_signal_counts": {
+    "unknown": 500
+  },
+  "content_byte_size_distribution": {
+    "0": 5,
+    "1_to_64_kib": 1,
+    "64_kib_to_1_mib": 207,
+    "1_to_10_mib": 287
+  },
+  "content_artifact_count": 495,
+  "metadata_artifact_count": 500,
+  "rows_with_content_hash": 495,
+  "rows_with_matching_content_hash": 495,
+  "content_artifact_bytes": 1008783033,
+  "metadata_artifact_bytes": 543237,
+  "total_artifact_bytes": 1009326270,
+  "minimum_content_artifact_bytes": 18771,
+  "median_content_artifact_bytes": 1249035,
+  "maximum_content_artifact_bytes": 9476151,
+  "content_sample_count": 0,
+  "urls_opened": 500,
+  "network_calls": 500,
+  "documents_downloaded": 495,
+  "documents_parsed": 0,
+  "pdfs_parsed": 0,
+  "ocr_runs": 0,
+  "lane_runtime": {
+    "lane_1": {
+      "started_at": "2026-07-24T21:36:17Z",
+      "completed_at": "2026-07-24T21:40:39Z",
+      "elapsed_seconds": 262,
+      "rows_per_hour": 3435.114504
+    },
+    "lane_2": {
+      "started_at": "2026-07-24T21:56:40Z",
+      "completed_at": "2026-07-24T22:01:19Z",
+      "elapsed_seconds": 279,
+      "rows_per_hour": 3225.806452
+    },
+    "combined": {
+      "started_at": "2026-07-24T21:36:17Z",
+      "completed_at": "2026-07-24T22:01:19Z",
+      "elapsed_seconds": 1502,
+      "rows_per_hour": 1198.40213
+    }
+  },
+  "mean_attempt_seconds": 4.268857,
+  "maximum_attempt_seconds": 64.355029,
+  "manual_review_burden_rows": 5,
+  "manual_review_burden_rate": 0.01,
+  "classification_counts": {
+    "completed_merge_eligible": 2
+  },
+  "artifact_integrity_passed": true,
+  "merge_recommendation": "merge_all_source_review_lanes",
+  "durable_batch2_merge_status": "not_started",
+  "cumulative_merged_source_review_rows": 150,
+  "http_client": "httpx_verifier_compatible",
+  "trust_env_proxy": false,
+  "concurrency_per_lane": 4,
+  "timeout_seconds": 30,
+  "connect_timeout_seconds": 8,
+  "read_timeout_seconds": 20,
+  "max_redirects": 5,
+  "max_bytes": 26214400,
+  "write_content_samples": false,
+  "rating_fields_are_preliminary": true,
+  "ingestion_status": "not_started",
+  "codify_status": "not_started",
+  "wage_extraction_status": "not_started",
+  "wage_gap_analysis_status": "not_started",
+  "next_scaling_recommendation": "consider_750_after_batch2_serial_merge_and_relay_review",
+  "caveats": [
+    "Batch 2 is collected and audited but not durably merged.",
+    "Source-review ratings are preliminary access and artifact signals.",
+    "PDFs were not parsed or OCRed.",
+    "No wage tables or wage values were extracted.",
+    "Pilot 1 durable identities were excluded."
+  ]
+}

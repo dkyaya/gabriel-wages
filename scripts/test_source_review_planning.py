@@ -205,6 +205,8 @@ class SourceReviewPlanningTests(unittest.TestCase):
             exclude_duplicates=True,
             exclude_oversized=True,
             exclude_blocked=True,
+            exclude_source_review_ledger_csv=[],
+            balance_lanes=True,
             plan_only=True,
         )
 
@@ -354,6 +356,70 @@ class SourceReviewPlanningTests(unittest.TestCase):
                 [row["source_review_id"] for row in first_rows],
                 [row["source_review_id"] for row in second_rows],
             )
+
+    def test_planner_excludes_prior_ledger_and_balances_500_rows(self) -> None:
+        states = [f"S{index:02d}" for index in range(10)]
+        rows = [
+            self.row(
+                f"batch2-{index:04d}",
+                state=states[index % len(states)],
+                municipality_id=f"{states[index % len(states)]}-m-{index:04d}",
+            )
+            for index in range(550)
+        ]
+        triage = self.base / "batch2-triage.csv"
+        queue = self.base / "batch2-queue.csv"
+        prior = self.base / "pilot1-ledger.csv"
+        write_csv(triage, rows)
+        write_csv(
+            queue,
+            [{"queue_id": row["candidate_queue_row_id"]} for row in rows],
+        )
+        prior_rows = [
+            {
+                "source_review_id": f"pilot1-review-{index:04d}",
+                "candidate_queue_row_id": rows[index][
+                    "candidate_queue_row_id"
+                ],
+            }
+            for index in range(50)
+        ]
+        write_csv(prior, prior_rows)
+        args = self.plan_args(self.base / "batch2-plan")
+        args.triage_ledger_csv = triage.as_posix()
+        args.candidate_queue_csv = queue.as_posix()
+        args.pilot_id = "SOURCE-REVIEW-BATCH2-500-TEST"
+        args.pilot_size = 500
+        args.exclude_source_review_ledger_csv = [prior.as_posix()]
+        manifest = planner.create_plan(args)
+        self.assertEqual(
+            manifest["eligible_pool_rows_before_prior_review_exclusion"],
+            550,
+        )
+        self.assertEqual(manifest["excluded_prior_candidate_queue_ids"], 50)
+        self.assertEqual(manifest["eligible_pool_rows_after_exclusions"], 500)
+        self.assertEqual(manifest["selected_rows"], 500)
+        self.assertEqual(
+            [lane["expected_rows"] for lane in manifest["lanes"]],
+            [250, 250],
+        )
+        selected = [
+            row
+            for lane in manifest["lanes"]
+            for row in planner.read_csv(Path(lane["input_csv"]))
+        ]
+        prior_candidate_ids = {
+            row["candidate_queue_row_id"] for row in prior_rows
+        }
+        prior_review_ids = {row["source_review_id"] for row in prior_rows}
+        self.assertFalse(
+            {row["candidate_queue_row_id"] for row in selected}
+            & prior_candidate_ids
+        )
+        self.assertFalse(
+            {row["source_review_id"] for row in selected}
+            & prior_review_ids
+        )
 
     def test_dry_run_opens_no_network_and_writes_schema(self) -> None:
         manifest = planner.create_plan(self.plan_args())

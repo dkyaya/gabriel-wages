@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0.0",
+  "status": "planned_not_started",
+  "pilot_id": "SOURCE-REVIEW-BATCH2-500-2026-07-24",
+  "created_at": "2026-07-24T21:34:17Z",
+  "triage_ledger_csv": "docs/analysis/content_triage_ledgers/content_triage_metadata_ledger_cumulative.csv",
+  "triage_ledger_sha256": "cedc269cc37f207491887151edc9c03000da1495198cdbc691c200f3eceb54c3",
+  "candidate_queue_csv": "docs/analysis/national_scout_candidate_queue_2026-07-20.csv",
+  "candidate_queue_sha256": "d46b8bc3c60cbbda9b2f6f618fc447d1878d610fa1beb0924e7bafd47f965e83",
+  "metadata_triage_rows": 4726,
+  "p1_rows": 1760,
+  "p1_download_allowed_rows": 1760,
+  "eligible_pool_rows_before_prior_review_exclusion": 1747,
+  "prior_source_review_ledger_sources": [
+    {
+      "path": "docs/analysis/source_review_ledgers/SOURCE-REVIEW-PILOT1-150-2026-07-24/source_review_ledger.csv",
+      "sha256": "2bcfe2295950f9805322d1cbbaf08051bd93b08cb632067d688ec6f894bde109",
+      "rows": 150,
+      "unique_candidate_queue_row_ids": 150,
+      "unique_source_review_ids": 150
+    }
+  ],
+  "prior_source_review_rows_read": 150,
+  "excluded_prior_candidate_queue_ids": 150,
+  "excluded_prior_source_review_ids": 150,
+  "eligible_prior_review_rows_excluded": 150,
+  "eligible_pool_rows_after_exclusions": 1597,
+  "selected_rows": 500,
+  "pilot_size": 500,
+  "num_lanes": 2,
+  "priority_scope": "p1_download_allowed",
+  "state_diversity": true,
+  "source_type_scope": "cba_first",
+  "exclude_duplicates": true,
+  "exclude_oversized": true,
+  "exclude_blocked": true,
+  "balance_lanes": true,
+  "selected_prior_candidate_overlap": 0,
+  "selected_prior_source_review_id_overlap": 0,
+  "selected_state_distribution": {
+    "AK": 5,
+    "CA": 26,
+    "CO": 4,
+    "CT": 25,
+    "DE": 4,
+    "FL": 26,
+    "IA": 22,
+    "ID": 3,
+    "IL": 26,
+    "IN": 3,
+    "KS": 6,
+    "MA": 25,
+    "MD": 8,
+    "ME": 7,
+    "MI": 26,
+    "MN": 25,
+    "MO": 9,
+    "MT": 13,
+    "NE": 8,
+    "NH": 10,
+    "NJ": 15,
+    "NM": 6,
+    "NV": 15,
+    "NY": 19,
+    "OH": 26,
+    "OK": 8,
+    "OR": 25,
+    "PA": 17,
+    "RI": 9,
+    "SD": 3,
+    "TX": 19,
+    "VA": 4,
+    "VT": 3,
+    "WA": 25,
+    "WI": 25
+  },
+  "selected_source_type_distribution": {
+    "cba": 500
+  },
+  "selected_content_type_distribution": {
+    "application/pdf": 500
+  },
+  "selected_candidate_disposition_distribution": {
+    "scheduled": 500
+  },
+  "selected_unit_type_distribution": {
+    "fire": 151,
+    "non_safety": 152,
+    "police": 197
+  },
+  "selected_official_domain_signal_distribution": {
+    "likely_official": 494,
+    "unknown": 6
+  },
+  "selected_matched_set_potential_distribution": {
+    "no": 45,
+    "yes": 455
+  },
+  "selected_unique_municipalities": 310,
+  "urls_opened": 0,
+  "network_calls": 0,
+  "documents_downloaded": 0,
+  "documents_parsed": 0,
+  "pdfs_parsed": 0,
+  "ocr_runs": 0,
+  "content_artifacts_written": 0,
+  "lanes": [
+    {
+      "lane_id": "lane_1",
+      "input_csv": "docs/analysis/source_review_pilots/SOURCE-REVIEW-BATCH2-500-2026-07-24/lane_1_source_review_input.csv",
+      "input_sha256": "41a93aafc50c628db05de4597600ceccb20429d9c0a24d926a751b21ac061cef",
+      "expected_rows": 250,
+      "dry_run_output_dir": "tmp/source_review_pilots/SOURCE-REVIEW-BATCH2-500-2026-07-24/lane_1_dry_run_pre_live",
+      "future_live_output_dir": "tmp/source_review_pilots/SOURCE-REVIEW-BATCH2-500-2026-07-24/lane_1_live_attempt1"
+    },
+    {
+      "lane_id": "lane_2",
+      "input_csv": "docs/analysis/source_review_pilots/SOURCE-REVIEW-BATCH2-500-2026-07-24/lane_2_source_review_input.csv",
+      "input_sha256": "51050f366f98313719d1848aefec7ea3983c5abad0ceaa6433f7c1617c2469c9",
+      "expected_rows": 250,
+      "dry_run_output_dir": "tmp/source_review_pilots/SOURCE-REVIEW-BATCH2-500-2026-07-24/lane_2_dry_run_pre_live",
+      "future_live_output_dir": "tmp/source_review_pilots/SOURCE-REVIEW-BATCH2-500-2026-07-24/lane_2_live_attempt1"
+    }
+  ]
+}

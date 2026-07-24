@@ -250,6 +250,53 @@ def validate_inputs(
             )
 
 
+def load_prior_source_reviews(
+    paths: list[str],
+) -> tuple[set[str], set[str], list[dict[str, object]]]:
+    candidate_ids: set[str] = set()
+    review_ids: set[str] = set()
+    sources: list[dict[str, object]] = []
+    for value in paths:
+        path = Path(value)
+        rows = read_csv(path)
+        if not rows:
+            raise ValueError(f"Prior source-review ledger is empty: {path}")
+        required = {"source_review_id", "candidate_queue_row_id"}
+        missing = required - set(rows[0])
+        if missing:
+            raise ValueError(
+                f"Prior source-review ledger lacks fields {sorted(missing)}: {path}"
+            )
+        lane_candidate_ids = [
+            row.get("candidate_queue_row_id", "") for row in rows
+        ]
+        lane_review_ids = [row.get("source_review_id", "") for row in rows]
+        if any(not value for value in lane_candidate_ids + lane_review_ids):
+            raise ValueError(
+                f"Prior source-review ledger has blank identities: {path}"
+            )
+        if len(lane_candidate_ids) != len(set(lane_candidate_ids)):
+            raise ValueError(
+                f"Prior source-review ledger repeats candidate identities: {path}"
+            )
+        if len(lane_review_ids) != len(set(lane_review_ids)):
+            raise ValueError(
+                f"Prior source-review ledger repeats source-review identities: {path}"
+            )
+        candidate_ids.update(lane_candidate_ids)
+        review_ids.update(lane_review_ids)
+        sources.append(
+            {
+                "path": path.as_posix(),
+                "sha256": sha256_file(path),
+                "rows": len(rows),
+                "unique_candidate_queue_row_ids": len(set(lane_candidate_ids)),
+                "unique_source_review_ids": len(set(lane_review_ids)),
+            }
+        )
+    return candidate_ids, review_ids, sources
+
+
 def is_duplicate(row: dict[str, str]) -> bool:
     if row.get("triage_status") in DUPLICATE_TRIAGE_STATUSES:
         return True
@@ -459,14 +506,26 @@ def create_plan(args: argparse.Namespace) -> dict[str, object]:
     triage_path = Path(args.triage_ledger_csv)
     queue_path = Path(args.candidate_queue_csv)
     output_dir = Path(args.output_dir)
-    if not 100 <= args.pilot_size <= 200:
-        raise ValueError("--pilot-size must be between 100 and 200")
+    if not 100 <= args.pilot_size <= 1000:
+        raise ValueError("--pilot-size must be between 100 and 1000")
     if args.num_lanes < 1 or args.num_lanes > args.pilot_size:
         raise ValueError("--num-lanes must be positive and no greater than pilot size")
+    if not getattr(args, "balance_lanes", True):
+        raise ValueError("Only balanced source-review lane planning is supported")
     triage_rows = read_csv(triage_path)
     queue_rows = read_csv(queue_path)
     validate_inputs(triage_rows, queue_rows)
-    pool = [
+    exclusion_values = getattr(
+        args, "exclude_source_review_ledger_csv", []
+    ) or []
+    if isinstance(exclusion_values, str):
+        exclusion_values = [exclusion_values]
+    (
+        prior_candidate_ids,
+        prior_review_ids,
+        prior_sources,
+    ) = load_prior_source_reviews(list(exclusion_values))
+    eligible_before_prior_exclusion = [
         row
         for row in triage_rows
         if eligible(
@@ -477,6 +536,11 @@ def create_plan(args: argparse.Namespace) -> dict[str, object]:
             exclude_oversized=args.exclude_oversized,
             exclude_blocked=args.exclude_blocked,
         )
+    ]
+    pool = [
+        row
+        for row in eligible_before_prior_exclusion
+        if row["candidate_queue_row_id"] not in prior_candidate_ids
     ]
     if len(pool) < args.pilot_size:
         raise ValueError(
@@ -500,6 +564,10 @@ def create_plan(args: argparse.Namespace) -> dict[str, object]:
         raise ValueError("Planner generated duplicate source-review IDs")
     if len(queue_ids) != len(set(queue_ids)):
         raise ValueError("Planner selected duplicate candidate identities")
+    if set(queue_ids) & prior_candidate_ids:
+        raise ValueError("Planner selected a previously source-reviewed candidate")
+    if set(review_ids) & prior_review_ids:
+        raise ValueError("Planner generated a prior source-review identity")
     output_dir.mkdir(parents=True, exist_ok=True)
     lane_manifest: list[dict[str, object]] = []
     for index, rows in enumerate(lane_rows, start=1):
@@ -514,7 +582,7 @@ def create_plan(args: argparse.Namespace) -> dict[str, object]:
             "dry_run_output_dir": (
                 Path("tmp/source_review_pilots")
                 / args.pilot_id
-                / f"{lane_id}_dry_run"
+                / f"{lane_id}_dry_run_pre_live"
             ).as_posix(),
             "future_live_output_dir": (
                 Path("tmp/source_review_pilots")
@@ -560,6 +628,18 @@ This is an offline input audit. No URL or source content was accessed.
             == "content_review_download_allowed_later"
             for row in triage_rows
         ),
+        "eligible_pool_rows_before_prior_review_exclusion": len(
+            eligible_before_prior_exclusion
+        ),
+        "prior_source_review_ledger_sources": prior_sources,
+        "prior_source_review_rows_read": sum(
+            int(source["rows"]) for source in prior_sources
+        ),
+        "excluded_prior_candidate_queue_ids": len(prior_candidate_ids),
+        "excluded_prior_source_review_ids": len(prior_review_ids),
+        "eligible_prior_review_rows_excluded": (
+            len(eligible_before_prior_exclusion) - len(pool)
+        ),
         "eligible_pool_rows_after_exclusions": len(pool),
         "selected_rows": len(selected_flat),
         "pilot_size": args.pilot_size,
@@ -570,6 +650,13 @@ This is an offline input audit. No URL or source content was accessed.
         "exclude_duplicates": args.exclude_duplicates,
         "exclude_oversized": args.exclude_oversized,
         "exclude_blocked": args.exclude_blocked,
+        "balance_lanes": True,
+        "selected_prior_candidate_overlap": len(
+            set(queue_ids) & prior_candidate_ids
+        ),
+        "selected_prior_source_review_id_overlap": len(
+            set(review_ids) & prior_review_ids
+        ),
         "selected_state_distribution": counts(selected_flat, "state"),
         "selected_source_type_distribution": counts(
             selected_flat, "candidate_source_type"
@@ -610,6 +697,8 @@ Pilot: `{args.pilot_id}`
 
 - Durable metadata-triage rows: {len(triage_rows):,}
 - p1/download-allowed pool: {manifest['p1_download_allowed_rows']:,}
+- Eligible before prior-review exclusion: {len(eligible_before_prior_exclusion):,}
+- Prior source-review candidate identities excluded: {len(prior_candidate_ids):,}
 - Eligible after duplicate/oversized/blocked filters: {len(pool):,}
 - Selected: {len(selected_flat):,}
 - Lanes: {' / '.join(str(len(rows)) for rows in lane_rows)}
@@ -628,8 +717,9 @@ downloaded or parsed, and no source received a final rating.
 
 The `{args.pilot_id}` pilot is locked to {len(selected_flat)} rows in
 {args.num_lanes} balanced lanes. Run the dry-run source-review command for each
-lane before any separately authorized content-review implementation. The
-current runner is dry-run only and must fail closed for live review.
+lane before any separately authorized bounded live review. Live operation must
+retain its explicit authorization, bounded-download, concurrency, timeout,
+redirect, byte-cap, lane-local artifact, and no-sample safeguards.
 
 No input label is a final officialness, relevance, employer, bargaining-unit,
 document-type, extraction-readiness, wage, or mechanism finding.
@@ -692,6 +782,20 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--exclude-blocked",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+    )
+    parser.add_argument(
+        "--exclude-source-review-ledger-csv",
+        action="append",
+        default=[],
+        help=(
+            "Prior durable source-review ledger whose candidate identities "
+            "must be excluded; repeat for multiple ledgers"
+        ),
+    )
+    parser.add_argument(
+        "--balance-lanes",
         action=argparse.BooleanOptionalAction,
         default=True,
     )

@@ -238,8 +238,13 @@ retry of those same 150 identities is now durably merged from the fresh HTTPX
 outputs: 149 bounded PDF artifacts have matching hashes, the same one row
 remains forbidden, and no connection errors recurred. The original
 transport-failed attempt remains preserved and superseded rather than part
-of the operative ledger. A 500-row follow-on may be planned after relay
-review; 750/1,000-row scale-up is not yet recommended. Final
+of the operative ledger. The bounded 500-row follow-on is now collected in
+two 250-row lanes and awaits a separate serial merge: 495 PDF artifacts have
+matching hashes and sizes, five rows timed out, and no connection errors
+occurred. Batch 2 retained approximately 1.009 GB across content and metadata
+artifacts. The durable source-review layer remains the 150-row Pilot 1 ledger.
+After Batch 2 merge and relay review, a 750-row checkpoint may be considered;
+1,000-row scale-up is not yet recommended. Final
 content-supported source
 rating, extraction readiness, ingestion, codification, wage extraction, and
 wage-gap analysis remain unperformed.

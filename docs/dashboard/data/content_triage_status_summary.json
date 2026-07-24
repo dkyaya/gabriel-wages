@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-24T20:17:34Z",
+  "generated_at": "2026-07-24T22:09:55Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -30,7 +30,8 @@
     "docs/analysis/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/source_review_connection_diagnostic_summary.json",
     "docs/analysis/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/source_review_httpx_retry_collection_summary.json",
     "docs/analysis/source_review_ledgers/source_review_ledger_latest.csv",
-    "docs/analysis/source_review_ledgers/source_review_summary_latest.json"
+    "docs/analysis/source_review_ledgers/source_review_summary_latest.json",
+    "docs/analysis/source_review_pilots/SOURCE-REVIEW-BATCH2-500-2026-07-24/source_review_batch2_500_collection_summary.json"
   ],
   "warnings": [],
   "limitations": [

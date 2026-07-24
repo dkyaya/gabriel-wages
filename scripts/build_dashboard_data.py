@@ -126,6 +126,12 @@ SOURCE_REVIEW_DURABLE_SUMMARY_PATH = (
     / "source_review_ledgers"
     / "source_review_summary_latest.json"
 )
+SOURCE_REVIEW_BATCH2_SUMMARY_PATH = (
+    ANALYSIS_DIR
+    / "source_review_pilots"
+    / "SOURCE-REVIEW-BATCH2-500-2026-07-24"
+    / "source_review_batch2_500_collection_summary.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -177,6 +183,7 @@ OPTIONAL_PATHS = [
     SOURCE_REVIEW_HTTPX_RETRY_SUMMARY_PATH,
     SOURCE_REVIEW_DURABLE_LEDGER_PATH,
     SOURCE_REVIEW_DURABLE_SUMMARY_PATH,
+    SOURCE_REVIEW_BATCH2_SUMMARY_PATH,
 ]
 
 STATE_NAMES = {
@@ -2432,6 +2439,102 @@ def build_source_review_status_summary(
                     "Wage data were not extracted.",
                     "The original failed attempt is superseded and excluded from operative results.",
                 ],
+            }
+        )
+    if SOURCE_REVIEW_BATCH2_SUMMARY_PATH.exists():
+        batch2 = read_json(SOURCE_REVIEW_BATCH2_SUMMARY_PATH)
+        if (
+            batch2.get("status") != "batch2_500_collected_not_merged"
+            or batch2.get("batch_id")
+            != "SOURCE-REVIEW-BATCH2-500-2026-07-24"
+            or int(batch2.get("planned_rows", 0)) != 500
+            or int(batch2.get("ledger_rows", 0)) != 500
+            or int(batch2.get("terminal_rows", 0)) != 500
+            or int(batch2.get("pilot1_candidate_overlap", -1)) != 0
+            or int(batch2.get("pilot1_source_review_id_overlap", -1)) != 0
+            or int(batch2.get("content_artifact_count", 0)) != 495
+            or int(batch2.get("rows_with_matching_content_hash", 0)) != 495
+            or int(batch2.get("documents_parsed", -1)) != 0
+            or int(batch2.get("pdfs_parsed", -1)) != 0
+            or int(batch2.get("ocr_runs", -1)) != 0
+            or int(batch2.get("content_sample_count", -1)) != 0
+            or batch2.get("durable_batch2_merge_status") != "not_started"
+            or batch2.get("merge_recommendation")
+            != "merge_all_source_review_lanes"
+        ):
+            raise ValueError(
+                "Source-review Batch 2 summary fails collection gates"
+            )
+        payload.update(
+            {
+                "stage": "source_review_batch2_500_collection",
+                "bounded_live_source_review_path": (
+                    "implemented_httpx_batch2_collected"
+                ),
+                "source_review_phase": "batch2_500_collected_not_merged",
+                "source_review_live_status": (
+                    "batch2_500_collected_not_merged"
+                ),
+                "latest_source_review_batch_id": batch2["batch_id"],
+                "batch2_500_rows_collected": int(batch2["ledger_rows"]),
+                "batch2_500_terminal_rows": int(batch2["terminal_rows"]),
+                "batch2_500_merge_status": "not_started",
+                "batch2_500_source_review_status_counts": batch2[
+                    "source_review_status_counts"
+                ],
+                "batch2_500_url_access_status_counts": batch2[
+                    "url_access_status_counts"
+                ],
+                "batch2_500_download_status_counts": batch2[
+                    "download_status_counts"
+                ],
+                "batch2_500_content_type_observed_counts": batch2[
+                    "content_type_observed_counts"
+                ],
+                "batch2_500_content_artifact_count": int(
+                    batch2["content_artifact_count"]
+                ),
+                "batch2_500_content_artifact_bytes": int(
+                    batch2["content_artifact_bytes"]
+                ),
+                "batch2_500_maximum_content_artifact_bytes": int(
+                    batch2["maximum_content_artifact_bytes"]
+                ),
+                "batch2_500_rows_with_content_hash": int(
+                    batch2["rows_with_content_hash"]
+                ),
+                "batch2_500_manual_review_burden_rows": int(
+                    batch2["manual_review_burden_rows"]
+                ),
+                "batch2_500_lane_audit_recommendation": batch2[
+                    "merge_recommendation"
+                ],
+                "cumulative_merged_source_review_rows": int(
+                    batch2["cumulative_merged_source_review_rows"]
+                ),
+                "source_rating_status": (
+                    "batch2_500_collected_not_merged"
+                ),
+                "content_download_status": (
+                    "batch2_500_collected_not_merged"
+                ),
+                "extraction_readiness_status": (
+                    "preliminary_batch2_not_merged"
+                ),
+                "ingestion_status": "not_started",
+                "codify_status": "not_started",
+                "wage_extraction_status": "not_started",
+                "wage_gap_analysis_status": "not_started",
+                "next_scaling_decision": batch2[
+                    "next_scaling_recommendation"
+                ],
+                "next_scaling_recommendation": batch2[
+                    "next_scaling_recommendation"
+                ],
+                "batch2_collection_summary_source": relative(
+                    SOURCE_REVIEW_BATCH2_SUMMARY_PATH
+                ),
+                "caveats": batch2["caveats"],
             }
         )
     return payload

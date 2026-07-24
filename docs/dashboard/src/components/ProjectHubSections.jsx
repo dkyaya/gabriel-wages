@@ -404,6 +404,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Source review</p>
           <h3>
             {sourceReviewStatus.source_review_phase ===
+            "batch2_500_collected_not_merged"
+              ? "Batch 2 collected: 495 of 500 bounded artifacts; serial merge pending"
+              : sourceReviewStatus.source_review_phase ===
             "pilot1_httpx_merged"
               ? "Pilot 1 HTTPX review merged; plan the bounded 500-row follow-on"
               : sourceReviewStatus.source_review_phase ===
@@ -423,6 +426,20 @@ export function VerificationPipeline({
         </div>
         <p>
           {sourceReviewStatus.source_review_phase ===
+          "batch2_500_collected_not_merged" ? (
+            <>
+              Batch 2 completed all{" "}
+              {formatNumber(sourceReviewStatus.batch2_500_rows_collected)}
+              {" "}locked rows and retained{" "}
+              {formatNumber(sourceReviewStatus.batch2_500_content_artifact_count)}
+              {" "}hashed PDF artifacts; five bounded attempts timed out and no
+              connection errors occurred. The durable source-review layer remains
+              at {formatNumber(sourceReviewStatus.cumulative_merged_source_review_rows)}
+              {" "}Pilot 1 rows until a separate serial merge. PDFs remain unparsed,
+              and ingestion, codification, wage extraction, and wage-gap analysis
+              have not started.
+            </>
+          ) : sourceReviewStatus.source_review_phase ===
           "pilot1_httpx_merged" ? (
             <>
               The repaired Pilot 1 result is durably merged:{" "}

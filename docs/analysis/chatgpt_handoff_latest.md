@@ -6,6 +6,39 @@ Last updated: `2026-07-24`
 
 ---
 
+## 2026-07-24 — Source-review Batch 2 collected; serial merge pending
+
+### Current State
+
+- **Start:** work began at clean tracked `ed042c126dfa3f1f869acbedf013da508144d9e5`; requested ancestry and the durable 150-row Pilot 1 ledger passed readiness checks. The unrelated untracked root `package-lock.json` remains untouched.
+- **Plan:** [the Batch 2 plan](source_review_batch2_500_input_plan_2026-07-24.md) locks 500 p1/download-allowed identities not present in Pilot 1. Lanes are 250/250 with SHA-256 `41a93aafc50c628db05de4597600ceccb20429d9c0a24d926a751b21ac061cef` and `51050f366f98313719d1848aefec7ea3983c5abad0ceaa6433f7c1617c2469c9`.
+- **Dry gate:** both lanes are `dry_run_passed`; all 500 rows are terminal-planned, with zero source access, download, artifact, parse, or OCR counters.
+- **Live scope:** exactly the two locked lanes ran with verifier-compatible HTTPX, concurrency four per lane, 30/8/20-second timeouts, five redirects, 25 MiB, proxy inheritance off, and samples off. Both scripts exited zero; no third lane or retry ran.
+- **Outcomes:** [the result review](source_review_batch2_500_live_collection_result_review_2026-07-24.md) records 495 `reviewed_metadata_and_artifact_saved` and five `download_timeout`. There are zero connection errors. The 495 PDFs total 1,008,783,033 bytes, have matching hashes and sizes, and remain lane-local; the maximum is 9,476,151 bytes.
+- **Ratings:** officialness is municipal 235, state repository 47, union 22, uncertain 185, and unknown 11. Relevance and municipality/employer/unit match are `possible` for 495 and `unknown` for five. Document type is `cba_candidate` and technical extraction readiness is `medium` for 495; the five timeout rows are unknown/not-ready. Wage-table, wage-growth, and mechanism-language signals remain unknown for all 500.
+- **Audit:** both lanes are `completed_merge_eligible`, artifact integrity passes, and recommendation is `merge_all_source_review_lanes`. [No durable Batch 2 merge occurred](source_review_batch2_500_no_merge_note_2026-07-24.md); the durable source-review layer remains Pilot 1 with 150 rows.
+- **Dashboard:** `source_review_phase = batch2_500_collected_not_merged`; Batch 2 has 500 collected rows and merge `not_started`, while cumulative merged rows remain 150.
+- **Boundary:** no scout accounting, broader URL verification, durable routing/triage/source-review-ledger mutation, content sample, PDF parse, OCR, extraction, ingestion, codification, wage calculation/claim, causal claim, regression, remote inspection, or push occurred.
+- **Validation:** [the validation record](source_review_batch2_500_live_collection_validation_2026-07-24.md) reports six compiles, 24 offline/mock tests, final audit, exact identity/Pilot 1 exclusion checks, 495 independent PDF hash/size/locality checks, 500 metadata safety checks, dashboard JSON/frontend build, schema and 60 ingestion tests, protected/durable-ledger hashes, and diff checks passed.
+
+### Interpretation
+
+The bounded HTTPX access layer scaled cleanly from 150 to 500 rows: artifact
+yield is 99.0%, connection errors remain zero, and retained volume tracks the
+Pilot 1 projection. These are still preliminary source-access and artifact
+signals. No PDF was parsed or OCRed, so the collection does not establish
+final relevance, officialness, employer/unit match, wage content, or
+analysis-ready evidence.
+
+### Next Move
+
+After relay review and separate authorization, run a serial offline merge of
+only the two Batch 2 `lane_*_live_attempt1` ledgers, preserving Pilot 1 in
+the cumulative durable layer. If that merge passes, a 750-row checkpoint is
+reasonable. Do not automatically move to 1,000: Batch 2 retained about
+1.01 GB, and parsing, content-supported rating, OCR, ingestion, codification,
+and wage analysis remain separately gated.
+
 ## 2026-07-24 — Source-review Pilot 1 HTTPX retry is durably merged
 
 ### Current State

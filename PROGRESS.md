@@ -6,6 +6,32 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-24 (Source-review Batch 2 500-row live collection completed; no merge)
+
+**Did**
+- Started from clean tracked `ed042c126dfa3f1f869acbedf013da508144d9e5`, confirmed requested ancestry and the durable 150-row Pilot 1 result, and left the unrelated untracked root `package-lock.json` untouched.
+- Extended the offline planner with repeatable prior-ledger exclusion and balanced follow-on support, with a regression test for selecting 500 new identities. The locked Batch 2 plan has 500 unique p1/download-allowed rows, no Pilot 1 identity overlap, and balanced 250/250 lanes.
+- Ran fresh dry gates: both lanes were `dry_run_passed`, all 500 rows were terminal-planned, and source-access/download/parse/OCR/artifact counters were zero.
+- Ran exactly the two locked lanes with the verifier-compatible HTTPX client at concurrency four per lane, 30/8/20-second limits, five redirects, 25 MiB, proxy inheritance off, and content samples off. Both guarded scripts exited zero; no third lane or retry ran.
+- Collected 495 bounded PDF artifacts and five timeout outcomes. All 500 rows are terminal, all 495 hashes and sizes match, retained content totals 1,008,783,033 bytes, and the maximum artifact is 9,476,151 bytes.
+- Both lanes audit as `completed_merge_eligible`, artifact integrity passes, and recommendation is `merge_all_source_review_lanes`. The durable source-review layer remains the 150-row Pilot 1 ledger; Batch 2 was not merged.
+- Updated the dashboard to `batch2_500_collected_not_merged` while preserving `cumulative_merged_source_review_rows = 150`.
+
+**Decisions and why**
+- A separately authorized serial merge is the next step because terminal coverage, identity separation, artifact locality, and hash validation all passed.
+- After merge and relay review, a 750-row checkpoint is reasonable. Do not jump directly to 1,000: Batch 2 retained about 1.01 GB, and ratings are still preliminary access/artifact signals because PDFs were not parsed.
+- Preserve all downstream gates. No source was ingested or codified, and no wage or mechanism content was extracted.
+
+**Surprises/breakage**
+- Five rows timed out, but there were zero connection errors; artifact yield was 99.0% versus 99.333% in Pilot 1. Observed content volume was within 0.22% of the Pilot 1 projection, confirming that storage—not HTTP transport—is the important next scaling constraint.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Six compiles, 24 offline/mock tests, final 500-row lane audit, exact input/live/Pilot 1 exclusion checks, 495 PDF hash/size/locality checks, 500 metadata safety checks, dashboard JSON/frontend build, schema validation, 60 ingestion tests, protected/durable-ledger hashes, and diff checks passed. No durable Batch 2 merge, third lane, retry, scout-accounting or routing/triage/source-review-ledger mutation, content sample, PDF parse, OCR, ingestion, `gabriel.codify`, wage extraction, wage-gap work, causal claim, regression, remote action, or push occurred.
+
+**Next steps**
+1. Review the Batch 2 plan, 495 retained artifacts, five timeout records, audit, and relay.
+2. If separately authorized, serially merge only the two Batch 2 `lane_*_live_attempt1` ledgers and keep the 150-row Pilot 1 durable results cumulative.
+3. After merge and relay review, consider planning 750—not automatically 1,000—with the same bounded settings; keep parsing/OCR/content-supported rating in smaller separately gated work.
+
 ## 2026-07-24 (Source-review Pilot 1 HTTPX retry durably merged)
 
 **Did**
