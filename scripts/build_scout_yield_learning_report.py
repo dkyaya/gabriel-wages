@@ -101,6 +101,23 @@ WAVES = (
         "sleep_between_prompts_seconds": 5,
         "source_review_document": "docs/analysis/parallel_round2_3x150_live_collection_result_review_2026-07-23.md",
     },
+    {
+        "wave_id": "aggressive_3x300_attempt3",
+        "wave_label": "Aggressive 3x300 Attempt 3 compact/adaptive (3 serialized lanes)",
+        "run_id": (
+            "all_2026-07-23_221645+all_2026-07-23_222540+"
+            "all_2026-07-23_223840"
+        ),
+        "attempted_rows": 900,
+        "parseable_rows": 899,
+        "candidate_positive_municipalities": 591,
+        "parseable_empty_municipalities": 308,
+        "failure_only_rows": 1,
+        "candidate_rows": 1389,
+        "runtime_seconds": 9422.628,
+        "sleep_between_prompts_seconds": 5,
+        "source_review_document": "docs/analysis/aggressive_3x300_attempt3_live_collection_result_review_2026-07-23.md",
+    },
 )
 
 
@@ -239,11 +256,11 @@ def write_report(state_rows: list[dict[str, str]], wave_rows: list[dict[str, str
     confidence = Counter(row["sample_confidence"] for row in state_rows)
     lines.extend([
         "", "## Operating recommendation", "",
-        f"Across the four reviewed 150-row waves and two audited parallel rounds, mean candidate density was {average_density:.3f} rows per parseable municipality. Use the refreshed priority layer as the primary selector, then blend states with medium/high sample confidence and strong observed yield with under-sampled states needed for calibration and geographic coverage.",
+        f"Across the four reviewed 150-row waves and three audited parallel rounds, mean candidate density was {average_density:.3f} rows per parseable municipality. The project has crossed the approximately 2,000-covered checkpoint, so pause broad scouting and use state-yield patterns to select the first bounded verification batch rather than another ordinary discovery wave.",
         "",
         f"State sample confidence counts: high={confidence['high']}, medium={confidence['medium']}, low={confidence['low']}.",
         "",
-        "Refresh this learning report after each wave and rebuild the unchanged priority methodology after 300–600 additional successful scouts. Parallel Rounds 1 and 2 add 743 successful scouts since the Tier 1 Wave 2 refresh, so the Round 2 serial merge refreshes the unchanged priority methodology. Do not let sparse-state extremes dominate selection.",
+        "The unchanged priority methodology is refreshed after Aggressive Attempt 3 because 899 successful scouts materially changed coverage and crossed the workflow checkpoint. Priority remains an operational layer; do not use it to authorize another discovery wave while broad scouting is paused.",
         "",
         "No network, API/model, URL verification, ingestion, codification, queue rebuild, coverage rebuild, or priority-methodology change occurs in this builder.",
     ])
@@ -256,10 +273,10 @@ def main() -> int:
     write_csv(STATE_OUTPUT, state_rows, STATE_FIELDS)
     write_csv(WAVE_OUTPUT, wave_rows, WAVE_FIELDS)
     write_report(state_rows, wave_rows)
-    if len(state_rows) != 51 or len(wave_rows) != 6:
+    if len(state_rows) != 51 or len(wave_rows) != 7:
         raise ValueError("unexpected yield-learning output row count")
     print(
-        "Scout yield learning built: states/DC=51; waves=6; "
+        "Scout yield learning built: states/DC=51; waves=7; "
         f"latest_rows_per_hour={wave_rows[-1]['rows_per_hour']}; "
         f"latest_candidate_rows_per_parseable={wave_rows[-1]['candidate_rows_per_parseable_municipality']}"
     )

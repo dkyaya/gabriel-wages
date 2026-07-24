@@ -56,16 +56,14 @@ REPORTS_INDEX_SOURCE_PATH = (
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
-CURRENT_SOURCE_ACCOUNTING_COMMIT = "8b653b2ba14fc5e6b2a96a523ed3fe6100a780a8"
-PARALLEL_SCOUT_ROUND_ID = "POST-PI-PARALLEL-ROUND2-3X150-2026-07-23"
-NEXT_PARALLEL_SCOUT_ROUND_ID = "POST-PI-AGGRESSIVE-ROUND-3X300-2026-07-23"
-NEXT_ROUND_LANES = 3
-NEXT_ROUND_ROWS_PER_LANE = 300
-NEXT_ROUND_ATTEMPTED = (
-    NEXT_ROUND_LANES * NEXT_ROUND_ROWS_PER_LANE
-)
-NEXT_ROUND_EXPECTED_PARSEABLE = 892
-NEXT_ROUND_EXPECTED_POST_COVERAGE = 2_429
+CURRENT_SOURCE_ACCOUNTING_COMMIT = "27d3cd222517a9c54a7c61d7af3f1d5185d1bd97"
+PARALLEL_SCOUT_ROUND_ID = "POST-PI-AGGRESSIVE-ROUND-3X300-2026-07-23"
+NEXT_PARALLEL_SCOUT_ROUND_ID = "NONE-BROAD-SCOUTING-PAUSED-AFTER-CHECKPOINT"
+NEXT_ROUND_LANES = 0
+NEXT_ROUND_ROWS_PER_LANE = 0
+NEXT_ROUND_ATTEMPTED = 0
+NEXT_ROUND_EXPECTED_PARSEABLE = 0
+NEXT_ROUND_EXPECTED_POST_COVERAGE = 2_436
 
 REQUIRED_PATHS = [
     STATE_COVERAGE_PATH,
@@ -827,7 +825,7 @@ def build_priority_summary(
     return {
         **metadata,
         "stage": "research_operational_priority_heuristic",
-        "priority_vintage_status": "current_after_parallel_round2_merge",
+        "priority_vintage_status": "current_after_aggressive_attempt3_merge",
         "successful_scouts_since_priority_refresh": 0,
         "selection_guard": (
             "Reconcile targets against current coverage and failure-only status before "
@@ -910,7 +908,7 @@ def build_state_priority_layer(
     return {
         **metadata,
         "stage": "research_operational_priority_heuristic",
-        "priority_vintage_status": "current_after_parallel_round2_merge",
+        "priority_vintage_status": "current_after_aggressive_attempt3_merge",
         "successful_scouts_since_priority_refresh": 0,
         "safe_map_metrics": [
             "tier_1_eligible",
@@ -950,7 +948,7 @@ def build_top_priority_targets_layer(
     return {
         **metadata,
         "stage": "research_operational_priority_heuristic",
-        "priority_vintage_status": "current_after_parallel_round2_merge",
+        "priority_vintage_status": "current_after_aggressive_attempt3_merge",
         "selection_guard": (
             "Reconcile targets against current coverage and failure-only status before "
             "locking the next ordinary discovery round."
@@ -1007,9 +1005,11 @@ def build_scout_operations_summary(
             "failure_only_municipalities": failure_only,
         },
         "active_strategy": {
-            "current_phase": "Source discovery scale-up",
+            "current_phase": "Post-checkpoint verification planning",
             "checkpoint_target_scout_covered": SCOUT_CHECKPOINT_TARGET,
             "remaining_to_checkpoint": remaining,
+            "checkpoint_status": "reached_exceeded",
+            "checkpoint_margin": covered - SCOUT_CHECKPOINT_TARGET,
             "estimated_150_row_waves_remaining": str(
                 math.ceil(remaining / COORDINATED_WAVE_SIZE)
             ),
@@ -1017,10 +1017,9 @@ def build_scout_operations_summary(
                 remaining / COORDINATED_WAVE_SIZE
             ),
             "ordinary_discovery_lane": (
-                "Run the user-approved aggressive 3x300 ordinary discovery round; "
-                "keep failure-only retries separate. The intentional checkpoint "
-                "overshoot becomes official only after a later successful serial "
-                "merge, after which broad scouting pauses."
+                "Paused after the successful aggressive 3x300 serial merge crossed "
+                "the approximately 2,000-covered checkpoint. Do not run another "
+                "ordinary discovery wave without explicit user or PI authorization."
             ),
             "next_planned_round_id": NEXT_PARALLEL_SCOUT_ROUND_ID,
             "next_planned_round_lanes": NEXT_ROUND_LANES,
@@ -1032,7 +1031,7 @@ def build_scout_operations_summary(
             "next_planned_round_expected_post_coverage": (
                 NEXT_ROUND_EXPECTED_POST_COVERAGE
             ),
-            "checkpoint_overshoot_intent": "intentional_user_approved",
+            "checkpoint_overshoot_intent": "completed_intentional_user_approved",
             "superseded_round_id": "POST-PI-CHECKPOINT-ROUND-3X160-2026-07-23",
             "next_phase": (
                 "Verification, extraction, ingestion, rating, and descriptive "
@@ -1052,10 +1051,10 @@ def build_scout_operations_summary(
             "timeout_or_failure_rows": as_int(latest["failure_only_rows"]),
         },
         "priority_refresh_recommendation": (
-            "The unchanged national priority methodology was refreshed after Tier 1 Wave 2 "
-            "at 794 successfully scout-covered municipalities and refreshed again after "
-            "Parallel Round 2 reached 1,537, following 743 additional successful scouts. "
-            "Refresh again after another documented 300–600 successes or a strategy trigger."
+            "The unchanged national priority methodology was refreshed after the "
+            "Aggressive Attempt 3 merge added 899 successful scouts and crossed the "
+            "workflow checkpoint. Treat the layer as current but do not use it to "
+            "schedule another ordinary discovery wave while broad scouting is paused."
         ),
         "preflight_gate_recommendation": current_preflight_recommendation(),
         "disclaimer": (
@@ -1176,11 +1175,13 @@ def build_project_phase_summary(
     remaining = max(SCOUT_CHECKPOINT_TARGET - covered, 0)
     return {
         **metadata,
-        "stage": "project_phase_checkpoint",
-        "current_phase": "Source discovery scale-up",
+        "stage": "post_scout_checkpoint_transition",
+        "current_phase": "Verification planning and source triage",
         "checkpoint_target_scout_covered": SCOUT_CHECKPOINT_TARGET,
         "current_scout_covered": covered,
         "remaining_to_checkpoint": remaining,
+        "checkpoint_status": "reached_exceeded",
+        "checkpoint_margin": covered - SCOUT_CHECKPOINT_TARGET,
         "progress_percentage": round(
             100.0 * covered / SCOUT_CHECKPOINT_TARGET, 1
         ),
@@ -1195,8 +1196,8 @@ def build_project_phase_summary(
         "current_failure_only_municipalities": failure_only,
         "next_planned_round": {
             "round_id": NEXT_PARALLEL_SCOUT_ROUND_ID,
-            "status": "planned_not_run",
-            "profile": "aggressive_300",
+            "status": "none_broad_scouting_paused",
+            "profile": "none",
             "lanes": NEXT_ROUND_LANES,
             "rows_per_lane": NEXT_ROUND_ROWS_PER_LANE,
             "expected_attempted": NEXT_ROUND_ATTEMPTED,
@@ -1206,13 +1207,10 @@ def build_project_phase_summary(
             "expected_post_round_scout_covered": (
                 NEXT_ROUND_EXPECTED_POST_COVERAGE
             ),
-            "expected_checkpoint_margin": (
-                NEXT_ROUND_EXPECTED_POST_COVERAGE
-                - SCOUT_CHECKPOINT_TARGET
-            ),
-            "checkpoint_overshoot_intent": "intentional_user_approved",
-            "lane_start_stagger_minutes": 8,
-            "projection_status": "operational_estimate_not_live_evidence",
+            "expected_checkpoint_margin": covered - SCOUT_CHECKPOINT_TARGET,
+            "checkpoint_overshoot_intent": "completed_intentional_user_approved",
+            "lane_start_stagger_minutes": 0,
+            "projection_status": "no_additional_round_planned",
         },
         "superseded_plans": [
             {
@@ -1222,9 +1220,9 @@ def build_project_phase_summary(
             }
         ],
         "checkpoint_pause_rule": (
-            "After the user-approved aggressive round is successfully merged and "
-            "the approximately 2,000-covered checkpoint is exceeded, pause broad "
-            "scouting and begin the documented downstream cycle."
+            "Active: the user-approved aggressive round was merged and the "
+            "approximately 2,000-covered checkpoint was exceeded. Broad scouting "
+            "is paused; begin the documented downstream cycle."
         ),
         "next_phase": (
             "Verification, extraction, ingestion, rating, descriptive wage-growth-gap "
@@ -1242,7 +1240,7 @@ def build_project_phase_summary(
         ],
         "regressions_status": "Deferred",
         "last_updated_commit": CURRENT_SOURCE_ACCOUNTING_COMMIT,
-        "last_updated_context": "source_discovery_accounting_checkpoint",
+        "last_updated_context": "post_checkpoint_transition",
         "future_live_controls": [
             "stronger preflight gate",
             "compact prompts",
@@ -1264,35 +1262,33 @@ def build_project_phase_summary(
 def build_parallel_scout_status(
     *, state_rows: list[dict[str, str]], metadata: dict[str, Any]
 ) -> dict[str, Any]:
-    """Describe completed parallel work and the gated aggressive scaling ladder."""
+    """Describe completed parallel work and the post-checkpoint pause."""
 
     covered = sum(as_int(row["municipalities_scouted"]) for row in state_rows)
     remaining = max(SCOUT_CHECKPOINT_TARGET - covered, 0)
     return {
         **metadata,
         "stage": "parallel_scout_operations_status",
-        "parallel_mode_status": "aggressive_3x300_planned_not_run",
-        "current_parallel_mode": "three_lane_aggressive_round_planned",
+        "parallel_mode_status": "aggressive_3x300_completed_accounting_merged",
+        "current_parallel_mode": "three_lane_aggressive_round_successfully_merged",
         "supported_lanes_initial": 2,
         "supported_lanes_future": 3,
-        "rows_per_lane": NEXT_ROUND_ROWS_PER_LANE,
+        "rows_per_lane": 300,
         "latest_completed_round_id": PARALLEL_SCOUT_ROUND_ID,
-        "current_parallel_round_id": NEXT_PARALLEL_SCOUT_ROUND_ID,
-        "next_parallel_test": "user_approved_aggressive_3x300",
-        "aggressive_mode_planned": "3x300_live_ready_planned_not_run",
+        "current_parallel_round_id": PARALLEL_SCOUT_ROUND_ID,
+        "next_parallel_test": "none_broad_scouting_paused",
+        "aggressive_mode_planned": "completed_checkpoint_exceeded",
         "current_scout_covered": covered,
         "target_checkpoint": SCOUT_CHECKPOINT_TARGET,
         "remaining_to_checkpoint": remaining,
         "planned_round_expected_attempted": NEXT_ROUND_ATTEMPTED,
         "planned_round_expected_parseable": NEXT_ROUND_EXPECTED_PARSEABLE,
-        "planned_round_expected_post_coverage": (
-            NEXT_ROUND_EXPECTED_POST_COVERAGE
-        ),
+        "planned_round_expected_post_coverage": covered,
         "planned_round_expected_checkpoint_margin": (
-            NEXT_ROUND_EXPECTED_POST_COVERAGE - SCOUT_CHECKPOINT_TARGET
+            covered - SCOUT_CHECKPOINT_TARGET
         ),
-        "planned_round_status": "planned_not_run",
-        "checkpoint_overshoot_intent": "intentional_user_approved",
+        "planned_round_status": "none_broad_scouting_paused",
+        "checkpoint_overshoot_intent": "completed_intentional_user_approved",
         "superseded_round": {
             "round_id": "POST-PI-CHECKPOINT-ROUND-3X160-2026-07-23",
             "status": "superseded_preserved_not_active",
@@ -1304,13 +1300,13 @@ def build_parallel_scout_status(
         "lane_export_policy": "lane_local_candidate_exports",
         "latest_round": {
             "lanes_completed_merge_eligible": 3,
-            "attempted_rows": 450,
-            "parseable_rows": 446,
-            "candidate_positive_municipalities": 383,
-            "parseable_empty_municipalities": 63,
-            "failure_only_municipalities": 4,
-            "candidate_lead_rows": 985,
-            "url_bearing_queue_rows_added": 985,
+            "attempted_rows": 900,
+            "parseable_rows": 899,
+            "candidate_positive_municipalities": 591,
+            "parseable_empty_municipalities": 308,
+            "failure_only_municipalities": 1,
+            "candidate_lead_rows": 1389,
+            "url_bearing_queue_rows_added": 1379,
             "merge_recommendation": "merge_all_lanes",
             "accounting_merge_status": "completed_serially",
         },
@@ -1319,18 +1315,17 @@ def build_parallel_scout_status(
             "directory; lane processes do not rebuild shared accounting."
         ),
         "post_checkpoint_policy": (
-            "Pause broad scouting after the aggressive round is successfully "
-            "merged and the approximately 2,000 checkpoint is exceeded; proceed "
-            "to verification, extraction, ingestion, rating, descriptive "
+            "Broad scouting is paused after the successfully merged aggressive "
+            "round exceeded the approximately 2,000 checkpoint. Proceed to "
+            "verification, extraction, ingestion, rating, descriptive "
             "wage-growth-gap analysis, mechanism-correlation documentation, and "
             "the planned wage-gap dashboard filter."
         ),
         "caveat": (
-            "The three-lane 3x150 round completed and was merged serially after audit. "
-            "The checkpoint-targeted 3x160 plan is preserved but superseded. The "
-            "user-approved aggressive 3x300 round is planned and has not run. Its "
-            "projected checkpoint overshoot is intentional. All candidate leads "
-            "remain unverified, and no wage-gap layer is active."
+            "The user-approved aggressive 3x300 Attempt 3 completed and was merged "
+            "serially after audit. The checkpoint overshoot was intentional. Broad "
+            "scouting is paused; all candidate leads remain unverified, and no "
+            "wage-gap layer is active."
         ),
     }
 

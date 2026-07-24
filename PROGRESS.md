@@ -6,6 +6,32 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-24 (Aggressive 3×300 Attempt 3 accounting merged; discovery checkpoint exceeded)
+
+**Did**
+- Started from clean tracked `27d3cd222517a9c54a7c61d7af3f1d5185d1bd97`, confirmed required ancestry, and left the unrelated untracked root `package-lock.json` untouched.
+- Re-ran the exact Attempt 3 manifest audit. All three input hashes and lane-local export pairs match, all lanes remain `completed_merge_eligible`, completed-ID overlap/pending/stopped counts are zero, and the recommendation is `merge_all_lanes`. Attempts 1–2 and the Newport probe remain quarantined.
+- Preserved the three audited candidate exports and state-usage summaries as durable local accounting inputs. Ran the candidate-queue, coverage-status, and coverage-orchestrator commands once each, serially.
+- Official accounting moved from 3,347 to 4,726 URL-bearing queue rows (+1,379), 1,537 to 2,436 scout-covered (+899), 1,267 to 1,858 candidate-positive (+591), 270 to 578 parseable-empty (+308), and 27 to 28 failure-only (+1). Ten of 1,389 parsed leads lacked a locator; Shelby, OH remains failure-only.
+- Refreshed yield learning, dashboard/project phase, and the unchanged priority methodology. Future-eligible is 33,147, including 245 eligible Tier 1 and 2,906 Tier 2; 28 failure retries remain separate.
+- Marked the checkpoint `reached_exceeded` by 436, paused broad scouting, and created the post-checkpoint verification → extraction → ingestion → rating → descriptive-analysis transition plan.
+
+**Decisions and why**
+- Stop ordinary source-discovery waves because the user-approved overshoot brought official coverage to 121.8% of the approximately 2,000 workflow target. More scouting now requires explicit user or PI authorization.
+- Use the first 50–100-row verification batch to learn conversion, extractability, and safety/non-safety match rates before deciding any later collection.
+- Keep refreshed priority files as operational state only; they do not authorize another ordinary or failure-retry wave.
+
+**Surprises/breakage**
+- Ten parsed candidate records lacked URLs, so 1,379 of 1,389 lead rows entered the URL-bearing queue. Every positive municipality retained at least one URL-bearing lead, so municipality-positive accounting was unchanged.
+- No validation breakage occurred. The dashboard frontend required wording updates because its prior static copy still described 3×300 as planned rather than completed.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Thirteen compiles, 7 synthetic parallel tests, 26 mocked/no-network direct-SDK tests, 12 prompt tests, 60 ingestion tests, schema validation, coverage audit, 13 dashboard JSON parses, priority JSON checks, frontend production build, protected/quarantine checks, and diff checks passed. No live/API/model/hosted-search call, URL verification, extraction, ingestion, `gabriel.codify`, wage-gap calculation/claim, causal claim, regression, remote action, or push occurred.
+
+**Next steps**
+1. Prepare—but do not yet execute—a deterministic 50–100-row verification batch emphasizing large municipalities, high-yield states, likely safety/non-safety matched sets, and source-type diversity.
+2. Under separate authorization, verify exact employer/unit/provenance/dates/document type/completeness and matched-comparison availability before downloading or ingesting.
+3. Continue through extraction, provenance-gated ingestion, source rating, validated descriptive wage-growth gaps, mechanism-correlation documentation, and the planned dashboard gap filter. Regressions remain deferred.
+
 ## 2026-07-23/24 (Aggressive 3×300 Attempt 3 collection completed; merge deferred)
 
 **Did**

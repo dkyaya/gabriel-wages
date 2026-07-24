@@ -34,10 +34,10 @@ export function ProjectOrientation({ totals, priorityTotals, report }) {
       </article>
       <article>
         <p className="eyebrow">Forthcoming</p>
-        <h2>Scale discovery, then verify</h2>
+        <h2>Verify, extract, and build matched evidence</h2>
         <p>
-          Continue coordinated 150-municipality waves to the approximately 2,000-covered checkpoint,
-          then pause broad scouting for the full downstream cycle.
+          The approximately 2,000-covered checkpoint is exceeded. Broad scouting is paused while
+          the project begins the downstream verification and extraction cycle.
         </p>
       </article>
     </section>
@@ -51,7 +51,7 @@ export function ProjectPhasePanel({ phase }) {
       <div className="section-heading">
         <div>
           <p className="eyebrow">Project phase</p>
-          <h2 id="project-phase-title">Source Discovery Scale-Up</h2>
+          <h2 id="project-phase-title">Post-Checkpoint Verification Planning</h2>
         </div>
         <StatusPill tone="scout">
           {formatNumber(phase.current_scout_covered)} of {formatNumber(phase.checkpoint_target_scout_covered)}
@@ -61,7 +61,7 @@ export function ProjectPhasePanel({ phase }) {
       <div className="phase-progress" aria-label={`${progress}% of the scout-coverage checkpoint reached`}>
         <div className="phase-progress-label">
           <strong>{formatNumber(phase.current_scout_covered)} scout-covered</strong>
-          <span>{progress}% toward the approximately {formatNumber(phase.checkpoint_target_scout_covered)} checkpoint</span>
+          <span>{phase.progress_percentage}% of the approximately {formatNumber(phase.checkpoint_target_scout_covered)} checkpoint; target exceeded by {formatNumber(phase.checkpoint_margin)}</span>
         </div>
         <div className="phase-progress-track" aria-hidden="true">
           <span style={{ width: `${progress}%` }} />
@@ -69,8 +69,8 @@ export function ProjectPhasePanel({ phase }) {
       </div>
 
       <div className="phase-metrics">
-        <div><span>Remaining</span><strong>{formatNumber(phase.remaining_to_checkpoint)}</strong></div>
-        <div><span>Estimated waves</span><strong>{phase.estimated_150_row_waves_remaining}</strong></div>
+        <div><span>Checkpoint margin</span><strong>+{formatNumber(phase.checkpoint_margin)}</strong></div>
+        <div><span>Broad scouting</span><strong>Paused</strong></div>
         <div><span>Candidate leads</span><strong>{formatNumber(phase.current_candidate_queue_rows)}</strong></div>
         <div><span>Candidate-positive</span><strong>{formatNumber(phase.current_candidate_positive_municipalities)}</strong></div>
         <div><span>Failure-only lane</span><strong>{formatNumber(phase.current_failure_only_municipalities)}</strong></div>
@@ -78,8 +78,8 @@ export function ProjectPhasePanel({ phase }) {
 
       <div className="phase-next">
         <div>
-          <p className="eyebrow">After the checkpoint</p>
-          <h3>Pause broad scouting for the downstream cycle</h3>
+          <p className="eyebrow">Current transition</p>
+          <h3>Begin the downstream evidence cycle</h3>
         </div>
         <ol>
           <li>Verification</li>
@@ -116,7 +116,7 @@ export function PriorityTiersPanel({ priority, statePriority }) {
       <div className="section-heading">
         <div>
           <p className="eyebrow">Scouting priority tiers</p>
-          <h2 id="priority-tier-title">Where ordinary discovery should go next</h2>
+          <h2 id="priority-tier-title">Current priorities while discovery is paused</h2>
         </div>
         <StatusPill tone="calibration">Operational heuristic</StatusPill>
       </div>
@@ -216,7 +216,7 @@ export function ScoutOperationsPanel({ operations, runtime, parallelStatus }) {
         <div>
           <h3>Current operating controls</h3>
           <ul className="check-list">
-            <li>Each lane remains serialized; the three-lane 3 × 150 collection completed with isolated lane outputs.</li>
+            <li>The three-lane 3 × 300 Attempt 3 completed with isolated lane outputs and was merged serially.</li>
             <li>Stronger no-search, hosted-search, and one-row preflight gate.</li>
             <li>Compact prompts with exact identity and source-stage guardrails.</li>
             <li>Five deterministic municipality-specific query hints.</li>
@@ -224,13 +224,11 @@ export function ScoutOperationsPanel({ operations, runtime, parallelStatus }) {
           </ul>
           <p className="panel-note">
             <strong>Parallel scout lane status:</strong>{" "}
-            Round 2 completed and merged {parallelStatus.supported_lanes_future} lanes × 150 municipalities.
-            The next planned collection is the user-approved aggressive {parallelStatus.supported_lanes_future} ×
-            {" "}{parallelStatus.rows_per_lane} round ({formatNumber(parallelStatus.planned_round_expected_attempted)} attempts).
-            It is planned, not executed, and is expected to exceed the approximately 2,000-covered checkpoint;
-            that overshoot is intentional. The earlier 3 × 160 plan is superseded and preserved only as
-            planning history. Accounting remains serial after the combined lane audit, and candidate
-            exports remain lane-local.{" "}
+            Attempt 3 completed and merged {parallelStatus.latest_round.lanes_completed_merge_eligible} lanes ×
+            {" "}300 municipalities. Its {formatNumber(parallelStatus.latest_round.parseable_rows)} parseable outcomes
+            raised official scout coverage above the approximately 2,000-covered checkpoint. Broad scouting is now
+            paused; the earlier 3 × 160 plan remains superseded planning history. Accounting remained serial after
+            the combined lane audit, and candidate exports remained lane-local.{" "}
             {parallelStatus.caveat}
           </p>
           <p className="panel-note">{operations.disclaimer}</p>
@@ -407,25 +405,25 @@ export function NextStepsPanel({ priority, phase }) {
       <div className="section-heading">
         <div>
           <p className="eyebrow">Next steps</p>
-          <h2 id="next-steps-title">Continue coordinated discovery to the checkpoint</h2>
+          <h2 id="next-steps-title">Transition from discovery to verified evidence</h2>
         </div>
         <StatusPill tone="scout">PI-aligned strategy</StatusPill>
       </div>
       <div className="next-step-grid">
         <article className="recommended-step">
           <span>Immediate</span>
-          <h3>Run the planned 3 × 300 collection</h3>
-          <p>Use the locked aggressive round, stronger preflight, compact prompts, deterministic hints, adaptive sleep/backoff, and eight-minute lane starts.</p>
+          <h3>Prepare the first verification batch</h3>
+          <p>Select 50–100 high-value candidate rows using state yield, municipality size, likely safety/non-safety match potential, and source-type diversity.</p>
         </article>
         <article>
-          <span>Scale-up checkpoint</span>
-          <h3>Reach approximately {formatNumber(phase.checkpoint_target_scout_covered)} covered</h3>
-          <p>{formatNumber(phase.remaining_to_checkpoint)} remain, or about {phase.estimated_150_row_waves_remaining} coordinated waves.</p>
+          <span>Checkpoint reached</span>
+          <h3>{formatNumber(phase.current_scout_covered)} scout-covered municipalities</h3>
+          <p>The target is exceeded by {formatNumber(phase.checkpoint_margin)}. Do not run another broad discovery wave without explicit authorization.</p>
         </article>
         <article>
-          <span>Then pause breadth</span>
+          <span>Downstream cycle</span>
           <h3>Run the downstream cycle</h3>
-          <p>After the later serial merge, verify, extract, ingest, rate sources, calculate descriptive gaps, and document mechanism correlations. Regressions come later.</p>
+          <p>Verify, extract, ingest, rate sources, calculate descriptive gaps only from validated matched data, and document mechanism correlations. Regressions come later.</p>
         </article>
       </div>
       <p className="panel-note">

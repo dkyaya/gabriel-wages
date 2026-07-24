@@ -228,6 +228,44 @@ SOURCE_SPECS = [
         "path": DOCS / "parallel_round2_lane_3_scout_candidates_2026-07-23.csv",
         "run_id": "all_2026-07-23_183735",
     },
+    {
+        "state": "ALL",
+        "allowed_states": {
+            "AK", "AL", "CA", "DE", "ID", "KS", "LA", "MA", "MD", "ME",
+            "MN", "MO", "MS", "MT", "NE", "NH", "NM", "NV", "NY", "OH",
+            "PA", "RI", "SD", "TN", "UT", "VA", "VT", "WI", "WV", "WY",
+        },
+        "wave": "POST-PI-AGGRESSIVE-3X300-ATTEMPT3-LANE1-2026-07-23",
+        "path": DOCS
+        / "aggressive_3x300_attempt3_lane_1_scout_candidates_2026-07-23.csv",
+        "run_id": "all_2026-07-23_221645",
+    },
+    {
+        "state": "ALL",
+        "allowed_states": {
+            "AK", "AL", "AR", "AZ", "CA", "CO", "CT", "IA", "ID", "KS",
+            "LA", "MA", "MD", "ME", "MN", "MO", "MS", "MT", "ND", "NE",
+            "NM", "NY", "OH", "PA", "SC", "SD", "TN", "UT", "VA", "VT",
+            "WI", "WV", "WY",
+        },
+        "wave": "POST-PI-AGGRESSIVE-3X300-ATTEMPT3-LANE2-2026-07-23",
+        "path": DOCS
+        / "aggressive_3x300_attempt3_lane_2_scout_candidates_2026-07-23.csv",
+        "run_id": "all_2026-07-23_222540",
+    },
+    {
+        "state": "ALL",
+        "allowed_states": {
+            "AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DE", "IA", "ID",
+            "IL", "IN", "KS", "LA", "MD", "ME", "MI", "MN", "MO", "MS",
+            "MT", "ND", "NE", "NM", "NY", "OH", "PA", "SC", "TN", "UT",
+            "VA", "VT", "WI", "WV", "WY",
+        },
+        "wave": "POST-PI-AGGRESSIVE-3X300-ATTEMPT3-LANE3-2026-07-23",
+        "path": DOCS
+        / "aggressive_3x300_attempt3_lane_3_scout_candidates_2026-07-23.csv",
+        "run_id": "all_2026-07-23_223840",
+    },
 ]
 
 CALIBRATION_FILES = {
@@ -668,65 +706,78 @@ def build_rows() -> list[dict[str, str]]:
         )
 
     expected = {
-        "AK": 10,
-        "AL": 9,
-        "AR": 11,
-        "AZ": 21,
-        "PA": 76,
+        "AK": 29,
+        "AL": 14,
+        "AR": 16,
+        "AZ": 29,
+        "PA": 102,
         "TX": 113,
-        "MA": 155,
+        "MA": 161,
         "NJ": 94,
-        "IL": 295,
-        "NY": 61,
-        "CA": 389,
-        "CO": 21,
-        "CT": 56,
+        "IL": 298,
+        "NY": 139,
+        "CA": 774,
+        "CO": 25,
+        "CT": 62,
         "DC": 5,
-        "DE": 4,
+        "DE": 17,
         "FL": 241,
         "GA": 7,
         "HI": 3,
-        "IA": 59,
-        "ID": 14,
-        "IN": 55,
-        "KS": 14,
+        "IA": 75,
+        "ID": 20,
+        "IN": 58,
+        "KS": 41,
         "KY": 18,
-        "LA": 7,
-        "MD": 31,
-        "ME": 6,
-        "MI": 161,
-        "MN": 50,
-        "MO": 11,
-        "MS": 4,
-        "MT": 22,
+        "LA": 22,
+        "MD": 57,
+        "ME": 46,
+        "MI": 166,
+        "MN": 131,
+        "MO": 56,
+        "MS": 12,
+        "MT": 53,
         "NC": 17,
-        "ND": 5,
-        "NE": 17,
-        "NH": 19,
-        "NM": 29,
-        "NV": 23,
-        "OH": 574,
+        "ND": 12,
+        "NE": 31,
+        "NH": 37,
+        "NM": 41,
+        "NV": 34,
+        "OH": 818,
         "OK": 21,
         "OR": 180,
-        "RI": 19,
+        "RI": 27,
         "SC": 3,
-        "SD": 10,
-        "TN": 15,
-        "UT": 18,
-        "VA": 13,
-        "VT": 3,
+        "SD": 37,
+        "TN": 28,
+        "UT": 37,
+        "VA": 27,
+        "VT": 15,
         "WA": 237,
-        "WI": 114,
-        "WY": 7,
+        "WI": 214,
+        "WV": 10,
+        "WY": 16,
     }
     observed = {state: counters[state] for state in expected}
     if observed != expected:
         raise ValueError(f"Unexpected queue source counts: {observed} != {expected}")
-    if dict(skipped_missing_locator) != {"FL": 1, "IL": 1, "WA": 4}:
+    if dict(skipped_missing_locator) != {
+        "CA": 2,
+        "FL": 1,
+        "IL": 1,
+        "LA": 1,
+        "MD": 1,
+        "ME": 1,
+        "OH": 1,
+        "TN": 2,
+        "VA": 2,
+        "WA": 4,
+    }:
         raise ValueError(
             "Expected one preserved IL25.3 row, two Tier 1 Wave 2 WA records, "
             "two Parallel Round 1 WA records, and one Parallel Round 1 FL record "
-            "to remain outside the source queue because they lack locators: "
+            "plus ten Aggressive Attempt 3 lead rows to remain outside the source "
+            "queue because they lack locators: "
             f"{dict(skipped_missing_locator)}"
         )
     if calibration_match_count != {"TX": 6, "MA": 24}:

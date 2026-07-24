@@ -2,9 +2,34 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-23`
+Last updated: `2026-07-24`
 
 ---
+
+## 2026-07-24 — Aggressive 3×300 Attempt 3 is merged; broad scouting is paused
+
+### Current State
+
+- **Readiness:** the fresh Attempt 3 auditor validates the three locked hashes, 900 terminal rows, 899 parseable outcomes, zero completed-ID overlap, all three byte-identical lane-local exports, three `completed_merge_eligible` classifications, and `merge_all_lanes`. Attempts 1–2 and the Newport probe remain quarantined.
+- **Serial accounting:** the queue/coverage sequence ran once. Official totals are now 2,436 scout-covered, 1,858 candidate-positive, 578 parseable-empty, 28 failure-only, and 4,726 URL-bearing queue rows.
+- **Queue delta:** 1,379 URL-bearing rows were added. Attempt 3 produced 1,389 parsed leads, but ten lacked a source locator and remain outside the URL-bearing queue. All 591 positive municipalities retained at least one queued URL.
+- **Failure boundary:** Shelby, OH (`cog_2025_209091`) is the sole new failure-only municipality and remains outside successful coverage.
+- **Checkpoint:** official progress is 2,436/2,000 (121.8%), a +436 intentional overshoot. The dashboard and project-phase JSON now say `reached_exceeded`; no additional broad round is planned.
+- **Yield/dashboard:** seven coordinated waves/rounds are represented. Attempt 3 is latest at 343.853 attempted rows/hour and 1.545 parsed leads per parseable municipality. All candidate rows remain unverified, and the wage-growth-gap layer remains planned/inactive.
+- **Priority:** the unchanged methodology was refreshed after 899 new successful scouts. It reports 33,147 future-eligible municipalities, including 245 eligible Tier 1 and 2,906 Tier 2, plus 28 separate failure-retry targets. These files are current operational state, not authorization for more discovery.
+- **Validation:** [the validation record](aggressive_3x300_attempt3_serial_merge_validation_2026-07-23.md) reports all compiles/tests, schema and coverage checks, dashboard and priority JSON parsing, frontend build, protected/quarantine checks, and diff checks passed. No live/API call, URL verification, ingestion, codification, wage-gap calculation/claim, causal claim, regression, remote action, or push occurred.
+
+### Interpretation and limitations
+
+The discovery checkpoint is a workflow threshold, not empirical evidence.
+Scout leads may still be wrong-employer, wrong-unit, incomplete, duplicated,
+out of window, inaccessible, or unusable for wage extraction. No project-wide
+verified-source conversion, matched safety/non-safety wage dataset, wage-growth
+gap, or mechanism correlation exists yet.
+
+### Next Move
+
+Follow [the post-checkpoint transition plan](post_checkpoint_transition_plan_2026-07-23.md). First prepare a deterministic 50–100-row verification batch, prioritizing large municipalities, high-yield states, likely safety/non-safety matched sets, source-type diversity, and 2014–2024 coverage while excluding holds/duplicates/canonical/failure rows. Under separate authorization, verify sources before extraction or ingestion. Broad scouting and failure retries remain paused unless the user or PI explicitly reauthorizes them. Regressions remain deferred.
 
 ## 2026-07-23/24 — Aggressive 3×300 Attempt 3 is complete; serial merge pending
 

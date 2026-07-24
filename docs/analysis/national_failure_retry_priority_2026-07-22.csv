@@ -1,28 +1,29 @@
 municipality_id,census_gov_id,state,municipality,government_name,population,prior_failure_type,prior_failure_run_ids,prior_attempt_dates,failed_attempt_count,underlying_priority_score,priority_tier,priority_confidence,retry_priority,recommended_retry_timing
-cog_2025_169988,169988,NV,Las Vegas,CITY OF LAS VEGAS,660929,connection_or_timeout_failure,all_2026-07-22_164144,2026-07-22,1,79.537,Tier 1,low,high,next_separately_authorized_failure_retry_wave
-cog_2025_209070,209070,OH,Newark,CITY OF NEWARK,51046,connection_or_timeout_failure,all_2026-07-23_152836,2026-07-23,1,78.911,Tier 1,high,high,next_separately_authorized_failure_retry_wave
-cog_2025_186236,186236,MO,Kansas City,CITY OF KANSAS CITY,510704,connection_or_timeout_failure,all_2026-07-22_164144,2026-07-22,1,78.378,Tier 1,low,high,next_separately_authorized_failure_retry_wave
-cog_2025_207957,207957,IN,Indianapolis city (balance),CITY OF INDIANAPOLIS,879293,connection_or_timeout_failure,all_2026-07-22_164144,2026-07-22,1,77.359,Tier 1,medium,high,next_separately_authorized_failure_retry_wave
-cog_2025_106133,106133,MA,Framingham,CITY OF FRAMINGHAM,71875,connection_or_timeout_failure,all_2026-07-22_195226,2026-07-22,1,77.299,Tier 1,high,high,next_separately_authorized_failure_retry_wave
-cog_2025_211214,211214,CA,Stockton,CITY OF STOCKTON,319543,connection_or_timeout_failure,ca_2026-07-21_101012,2026-07-21,1,76.647,Tier 1,high,high,next_separately_authorized_failure_retry_wave
-cog_2025_194843,194843,OH,Twinsburg,CITY OF TWINSBURG,19439,connection_or_timeout_failure,all_2026-07-23_182845,2026-07-23,1,76.590,Tier 1,high,high,next_separately_authorized_failure_retry_wave
-cog_2025_207604,207604,CA,Redding,CITY OF REDDING,92727,connection_or_timeout_failure,ca_2026-07-21_101012,2026-07-21,1,76.254,Tier 1,high,high,next_separately_authorized_failure_retry_wave
-cog_2025_123093,123093,CA,Oakland,CITY OF OAKLAND,436504,connection_or_timeout_failure,ca_2026-07-21_101012,2026-07-21,1,76.201,Tier 1,high,high,next_separately_authorized_failure_retry_wave
-cog_2025_163465,163465,IN,Fort Wayne,CITY OF FORT WAYNE,269994,connection_or_timeout_failure,all_2026-07-22_164144,2026-07-22,1,76.121,Tier 1,medium,high,next_separately_authorized_failure_retry_wave
-cog_2025_161238,161238,CA,Moreno Valley,CITY OF MORENO VALLEY,212392,connection_or_timeout_failure,all_2026-07-21_193524,2026-07-21,1,76.114,Tier 1,high,high,next_separately_authorized_failure_retry_wave
-cog_2025_161299,161299,CA,Oxnard,CITY OF OXNARD,198488,connection_or_timeout_failure,ca_2026-07-21_101012,2026-07-21,1,76.010,Tier 1,high,high,next_separately_authorized_failure_retry_wave
-cog_2025_100750,100750,CA,Fairfield,CITY OF FAIRFIELD,120768,connection_or_timeout_failure,ca_2026-07-21_165516,2026-07-21,1,75.746,Tier 1,high,high,next_separately_authorized_failure_retry_wave
-cog_2025_207992,207992,IA,Waterloo,CITY OF WATERLOO,66606,connection_or_timeout_failure,all_2026-07-23_153758,2026-07-23,1,75.720,Tier 1,medium,high,next_separately_authorized_failure_retry_wave
-cog_2025_194606,194606,MO,Joplin,CITY OF JOPLIN,53095,connection_or_timeout_failure,all_2026-07-22_195226,2026-07-22,1,75.669,Tier 1,low,high,next_separately_authorized_failure_retry_wave
-cog_2025_207536,207536,AZ,Phoenix,CITY OF PHOENIX,1650070,connection_or_timeout_failure,all_2026-07-22_164144,2026-07-22,1,75.668,Tier 1,medium,high,next_separately_authorized_failure_retry_wave
-cog_2025_100435,100435,AR,Little Rock,CITY OF LITTLE ROCK,203842,connection_or_timeout_failure,all_2026-07-22_164144,2026-07-22,1,75.282,Tier 1,low,high,next_separately_authorized_failure_retry_wave
-cog_2025_161242,161242,CA,Hollister,CITY OF HOLLISTER,44658,connection_or_timeout_failure,all_2026-07-23_183330,2026-07-23,1,75.199,Tier 1,high,high,next_separately_authorized_failure_retry_wave
-cog_2025_176816,176816,WA,Vancouver,CITY OF VANCOUVER,196442,connection_or_timeout_failure,all_2026-07-22_164144,2026-07-22,1,75.173,Tier 1,high,high,next_separately_authorized_failure_retry_wave
-cog_2025_124994,124994,IL,Bloomington,CITY OF BLOOMINGTON,78587,connection_or_timeout_failure,il_2026-07-20_184849,2026-07-20,1,74.827,Tier 1,high,high,next_separately_authorized_failure_retry_wave
-cog_2025_162476,162476,IL,Huntley,VILLAGE OF HUNTLEY,28269,connection_or_timeout_failure,all_2026-07-22_114424,2026-07-22,1,73.787,Tier 1,high,high,next_separately_authorized_failure_retry_wave
-cog_2025_162300,162300,IL,Roselle,VILLAGE OF ROSELLE,22508,connection_or_timeout_failure,all_2026-07-22_114424,2026-07-22,1,72.695,Tier 1,high,high,next_separately_authorized_failure_retry_wave
-cog_2025_176888,176888,WA,College Place,TOWN OF COLLEGE PLACE,9762,connection_or_timeout_failure,all_2026-07-23_183735,2026-07-23,1,71.427,Tier 2,high,high,next_separately_authorized_failure_retry_wave
-cog_2025_161633,161633,FL,Tampa,CITY OF TAMPA,403364,connection_or_timeout_failure,all_2026-07-22_164144,2026-07-22,1,68.366,Tier 2,high,high,next_separately_authorized_failure_retry_wave
-cog_2025_161668,161668,FL,St. Cloud,CITY OF ST CLOUD,66448,connection_or_timeout_failure,all_2026-07-23_152836,2026-07-23,1,66.621,Tier 3,high,medium,retry_after_next_300_to_600_new_scouts
-cog_2025_170189,170189,NJ,Princeton,MUNICIPALITY OF PRINCETON,30289,connection_or_timeout_failure,nj_2026-07-21_172457,2026-07-21,1,65.585,Tier 3,high,medium,retry_after_next_300_to_600_new_scouts
-cog_2025_189806,189806,FL,Oakland Park,CITY OF OAKLAND PARK,44105,connection_or_timeout_failure,all_2026-07-23_182845,2026-07-23,1,65.472,Tier 3,high,medium,retry_after_next_300_to_600_new_scouts
+cog_2025_169988,169988,NV,Las Vegas,CITY OF LAS VEGAS,660929,connection_or_timeout_failure,all_2026-07-22_164144,2026-07-22,1,76.668,Tier 1,low,high,next_separately_authorized_failure_retry_wave
+cog_2025_207957,207957,IN,Indianapolis city (balance),CITY OF INDIANAPOLIS,879293,connection_or_timeout_failure,all_2026-07-22_164144,2026-07-22,1,76.112,Tier 1,medium,high,next_separately_authorized_failure_retry_wave
+cog_2025_106133,106133,MA,Framingham,CITY OF FRAMINGHAM,71875,connection_or_timeout_failure,all_2026-07-22_195226,2026-07-22,1,76.038,Tier 1,high,high,next_separately_authorized_failure_retry_wave
+cog_2025_207604,207604,CA,Redding,CITY OF REDDING,92727,connection_or_timeout_failure,ca_2026-07-21_101012,2026-07-21,1,75.249,Tier 1,high,high,next_separately_authorized_failure_retry_wave
+cog_2025_123093,123093,CA,Oakland,CITY OF OAKLAND,436504,connection_or_timeout_failure,ca_2026-07-21_101012,2026-07-21,1,74.982,Tier 1,high,high,next_separately_authorized_failure_retry_wave
+cog_2025_211214,211214,CA,Stockton,CITY OF STOCKTON,319543,connection_or_timeout_failure,ca_2026-07-21_101012,2026-07-21,1,74.892,Tier 1,high,high,next_separately_authorized_failure_retry_wave
+cog_2025_163465,163465,IN,Fort Wayne,CITY OF FORT WAYNE,269994,connection_or_timeout_failure,all_2026-07-22_164144,2026-07-22,1,74.874,Tier 1,medium,high,next_separately_authorized_failure_retry_wave
+cog_2025_176816,176816,WA,Vancouver,CITY OF VANCOUVER,196442,connection_or_timeout_failure,all_2026-07-22_164144,2026-07-22,1,74.625,Tier 1,high,high,next_separately_authorized_failure_retry_wave
+cog_2025_124994,124994,IL,Bloomington,CITY OF BLOOMINGTON,78587,connection_or_timeout_failure,il_2026-07-20_184849,2026-07-20,1,74.418,Tier 1,high,high,next_separately_authorized_failure_retry_wave
+cog_2025_207536,207536,AZ,Phoenix,CITY OF PHOENIX,1650070,connection_or_timeout_failure,all_2026-07-22_164144,2026-07-22,1,74.259,Tier 1,medium,high,next_separately_authorized_failure_retry_wave
+cog_2025_161242,161242,CA,Hollister,CITY OF HOLLISTER,44658,connection_or_timeout_failure,all_2026-07-23_183330,2026-07-23,1,74.194,Tier 1,high,high,next_separately_authorized_failure_retry_wave
+cog_2025_161299,161299,CA,Oxnard,CITY OF OXNARD,198488,connection_or_timeout_failure,ca_2026-07-21_101012,2026-07-21,1,74.106,Tier 1,high,high,next_separately_authorized_failure_retry_wave
+cog_2025_161238,161238,CA,Moreno Valley,CITY OF MORENO VALLEY,212392,connection_or_timeout_failure,all_2026-07-21_193524,2026-07-21,1,73.930,Tier 1,high,high,next_separately_authorized_failure_retry_wave
+cog_2025_207992,207992,IA,Waterloo,CITY OF WATERLOO,66606,connection_or_timeout_failure,all_2026-07-23_153758,2026-07-23,1,73.512,Tier 1,medium,high,next_separately_authorized_failure_retry_wave
+cog_2025_100750,100750,CA,Fairfield,CITY OF FAIRFIELD,120768,connection_or_timeout_failure,ca_2026-07-21_165516,2026-07-21,1,73.456,Tier 1,high,high,next_separately_authorized_failure_retry_wave
+cog_2025_162476,162476,IL,Huntley,VILLAGE OF HUNTLEY,28269,connection_or_timeout_failure,all_2026-07-22_114424,2026-07-22,1,73.378,Tier 1,high,high,next_separately_authorized_failure_retry_wave
+cog_2025_209070,209070,OH,Newark,CITY OF NEWARK,51046,connection_or_timeout_failure,all_2026-07-23_152836,2026-07-23,1,72.833,Tier 1,high,high,next_separately_authorized_failure_retry_wave
+cog_2025_162300,162300,IL,Roselle,VILLAGE OF ROSELLE,22508,connection_or_timeout_failure,all_2026-07-22_114424,2026-07-22,1,72.277,Tier 1,high,high,next_separately_authorized_failure_retry_wave
+cog_2025_186236,186236,MO,Kansas City,CITY OF KANSAS CITY,510704,connection_or_timeout_failure,all_2026-07-22_164144,2026-07-22,1,71.411,Tier 1,medium,high,next_separately_authorized_failure_retry_wave
+cog_2025_176888,176888,WA,College Place,TOWN OF COLLEGE PLACE,9762,connection_or_timeout_failure,all_2026-07-23_183735,2026-07-23,1,70.879,Tier 1,high,high,next_separately_authorized_failure_retry_wave
+cog_2025_194843,194843,OH,Twinsburg,CITY OF TWINSBURG,19439,connection_or_timeout_failure,all_2026-07-23_182845,2026-07-23,1,70.345,Tier 1,high,high,next_separately_authorized_failure_retry_wave
+cog_2025_100435,100435,AR,Little Rock,CITY OF LITTLE ROCK,203842,connection_or_timeout_failure,all_2026-07-22_164144,2026-07-22,1,70.200,Tier 1,medium,high,next_separately_authorized_failure_retry_wave
+cog_2025_209091,209091,OH,Shelby,CITY OF SHELBY,9263,connection_or_timeout_failure,all_2026-07-23_221645,2026-07-23,1,69.630,Tier 1,high,high,next_separately_authorized_failure_retry_wave
+cog_2025_194606,194606,MO,Joplin,CITY OF JOPLIN,53095,connection_or_timeout_failure,all_2026-07-22_195226,2026-07-22,1,68.945,Tier 2,medium,high,next_separately_authorized_failure_retry_wave
+cog_2025_161633,161633,FL,Tampa,CITY OF TAMPA,403364,connection_or_timeout_failure,all_2026-07-22_164144,2026-07-22,1,67.995,Tier 2,high,high,next_separately_authorized_failure_retry_wave
+cog_2025_161668,161668,FL,St. Cloud,CITY OF ST CLOUD,66448,connection_or_timeout_failure,all_2026-07-23_152836,2026-07-23,1,66.250,Tier 2,high,high,next_separately_authorized_failure_retry_wave
+cog_2025_189806,189806,FL,Oakland Park,CITY OF OAKLAND PARK,44105,connection_or_timeout_failure,all_2026-07-23_182845,2026-07-23,1,65.102,Tier 2,high,high,next_separately_authorized_failure_retry_wave
+cog_2025_170189,170189,NJ,Princeton,MUNICIPALITY OF PRINCETON,30289,connection_or_timeout_failure,nj_2026-07-21_172457,2026-07-21,1,64.967,Tier 2,high,high,next_separately_authorized_failure_retry_wave

@@ -7,171 +7,171 @@ Disposition: **complete — all authoritative municipality-employer rows receive
 ## National totals
 
 - Rows scored: 35,589
-- Future-scout eligible: 34,046
-- Already successfully covered: 1,537
+- Future-scout eligible: 33,147
+- Already successfully covered: 2,436
 - Already canonical: 19
-- Failure-only retry targets: 27
-- High-priority (Tier 1 or Tier 2) already covered: 1,287
+- Failure-only retry targets: 28
+- High-priority (Tier 1 or Tier 2) already covered: 2,182
 
 ## Tier distribution
 
 | Tier | All rows | Future-scout eligible |
 |---|---:|---:|
-| Tier 1 | 1,780 | 628 |
-| Tier 2 | 3,559 | 3,420 |
-| Tier 3 | 7,118 | 6,934 |
-| Tier 4 | 10,676 | 10,608 |
+| Tier 1 | 1,780 | 245 |
+| Tier 2 | 3,559 | 2,906 |
+| Tier 3 | 7,118 | 6,889 |
+| Tier 4 | 10,676 | 10,651 |
 | Tier 5 | 12,456 | 12,456 |
 
 ## Government-type distribution
 
 | Type | Tier 1 | Tier 2 | Tier 3 | Tier 4 | Tier 5 |
 |---|---:|---:|---:|---:|---:|
-| municipal | 1,778 | 3,138 | 4,534 | 5,832 | 4,189 |
-| township | 2 | 421 | 2,584 | 4,844 | 8,267 |
+| municipal | 1,768 | 2,862 | 4,751 | 6,291 | 3,799 |
+| township | 12 | 697 | 2,367 | 4,385 | 8,657 |
 
 ## Confidence
 
 | Confidence | Rows |
 |---|---:|
-| high | 10,279 |
-| medium | 13,159 |
-| low | 12,151 |
+| high | 18,838 |
+| medium | 13,180 |
+| low | 3,571 |
 
 ## Population by tier
 
 | Tier | Median | Minimum | Maximum |
 |---|---:|---:|---:|
-| Tier 1 | 32,341.0 | 2,775 | 8,258,035 |
-| Tier 2 | 8,049.0 | 826 | 2,314,157 |
-| Tier 3 | 2,569.0 | 216 | 979,882 |
-| Tier 4 | 995.0 | 28 | 254,373 |
-| Tier 5 | 206.0 | 0 | 59,394 |
+| Tier 1 | 29,347.5 | 2,558 | 8,258,035 |
+| Tier 2 | 9,146.0 | 763 | 1,550,542 |
+| Tier 3 | 2,887.5 | 226 | 398,431 |
+| Tier 4 | 923.0 | 23 | 106,836 |
+| Tier 5 | 235.0 | 0 | 9,790 |
 
 ## States with the largest Tier 1 eligible pools
 
 | State | Tier 1 eligible | Tier 2 eligible | State evidence confidence | Recommendation |
 |---|---:|---:|---|---|
-| OH | 116 | 389 | high | priority_high_evidence_state |
-| CA | 113 | 170 | high | priority_high_evidence_state |
-| WI | 46 | 154 | medium | priority_growing_evidence_state |
-| MN | 36 | 145 | medium | priority_growing_evidence_state |
-| PA | 28 | 336 | medium | priority_growing_evidence_state |
-| NY | 25 | 200 | medium | priority_growing_evidence_state |
-| MO | 25 | 137 | low | priority_exploratory_state |
-| MS | 21 | 58 | low | cross_state_priority_fill |
-| MD | 19 | 48 | low | cross_state_priority_fill |
-| UT | 17 | 65 | low | cross_state_priority_fill |
-| ME | 15 | 9 | low | defer_or_geographic_balance_only |
-| SD | 15 | 24 | low | cross_state_priority_fill |
-| NM | 14 | 23 | low | cross_state_priority_fill |
-| MT | 12 | 29 | low | cross_state_priority_fill |
-| LA | 12 | 64 | low | cross_state_priority_fill |
+| IL | 92 | 431 | high | priority_high_evidence_state |
+| MI | 46 | 277 | high | priority_high_evidence_state |
+| CA | 31 | 122 | high | priority_high_evidence_state |
+| IN | 24 | 194 | medium | cross_state_priority_fill |
+| OR | 12 | 79 | high | cross_state_priority_fill |
+| WA | 12 | 82 | high | cross_state_priority_fill |
+| CT | 7 | 116 | medium | cross_state_priority_fill |
+| AZ | 6 | 41 | medium | cross_state_priority_fill |
+| NE | 4 | 54 | medium | cross_state_priority_fill |
+| OH | 3 | 91 | high | cross_state_priority_fill |
+| GA | 2 | 145 | low | cross_state_priority_fill |
+| IA | 2 | 146 | medium | cross_state_priority_fill |
+| NV | 1 | 7 | low | defer_or_geographic_balance_only |
+| MA | 1 | 176 | high | cross_state_priority_fill |
+| AR | 1 | 32 | medium | cross_state_priority_fill |
 
 ## Top 100 future scout targets
 
 | Rank | Municipality | State | Population | Score | Tier | Confidence |
 |---:|---|---|---:|---:|---|---|
-| 1 | Las Vegas | NV | 660,929 | 79.537 | Tier 1 | low |
-| 2 | Newark | OH | 51,046 | 78.911 | Tier 1 | high |
-| 3 | Kansas City | MO | 510,704 | 78.378 | Tier 1 | low |
-| 4 | Indianapolis city (balance) | IN | 879,293 | 77.359 | Tier 1 | medium |
-| 5 | Framingham | MA | 71,875 | 77.299 | Tier 1 | high |
-| 6 | Stockton | CA | 319,543 | 76.647 | Tier 1 | high |
-| 7 | Twinsburg | OH | 19,439 | 76.590 | Tier 1 | high |
-| 8 | Redding | CA | 92,727 | 76.254 | Tier 1 | high |
-| 9 | Newport | RI | 24,717 | 76.212 | Tier 1 | low |
-| 10 | Oakland | CA | 436,504 | 76.201 | Tier 1 | high |
-| 11 | Fort Wayne | IN | 269,994 | 76.121 | Tier 1 | medium |
-| 12 | Moreno Valley | CA | 212,392 | 76.114 | Tier 1 | high |
-| 13 | Oxnard | CA | 198,488 | 76.010 | Tier 1 | high |
-| 14 | Fairfield | CA | 120,768 | 75.746 | Tier 1 | high |
-| 15 | Waterloo | IA | 66,606 | 75.720 | Tier 1 | medium |
-| 16 | Joplin | MO | 53,095 | 75.669 | Tier 1 | low |
-| 17 | Phoenix | AZ | 1,650,070 | 75.668 | Tier 1 | medium |
-| 18 | Brookings | SD | 24,312 | 75.536 | Tier 1 | low |
-| 19 | Keene | NH | 22,917 | 75.480 | Tier 1 | low |
-| 20 | Portsmouth | NH | 22,733 | 75.465 | Tier 1 | low |
-| 21 | Watertown | SD | 23,230 | 75.452 | Tier 1 | low |
-| 22 | Box Elder | SD | 13,868 | 75.396 | Tier 1 | low |
-| 23 | Little Rock | AR | 203,842 | 75.282 | Tier 1 | low |
-| 24 | Bangor | ME | 31,628 | 75.272 | Tier 1 | low |
-| 25 | Hollister | CA | 44,658 | 75.199 | Tier 1 | high |
-| 26 | Vancouver | WA | 196,442 | 75.173 | Tier 1 | high |
-| 27 | Central Falls | RI | 22,543 | 75.110 | Tier 1 | low |
-| 28 | Laconia | NH | 17,142 | 74.930 | Tier 1 | low |
-| 29 | South Portland | ME | 26,840 | 74.882 | Tier 1 | low |
-| 30 | Napoleon | OH | 8,750 | 74.864 | Tier 1 | high |
-| 31 | Bloomington | IL | 78,587 | 74.827 | Tier 1 | high |
-| 32 | Bryan | OH | 8,609 | 74.825 | Tier 1 | high |
-| 33 | Girard | OH | 9,469 | 74.810 | Tier 1 | high |
-| 34 | Laramie | WY | 32,152 | 74.799 | Tier 1 | low |
-| 35 | Shelby | OH | 9,263 | 74.799 | Tier 1 | high |
-| 36 | Westminster | MD | 20,536 | 74.757 | Tier 1 | low |
-| 37 | Eaton | OH | 8,301 | 74.735 | Tier 1 | high |
-| 38 | Rittman | OH | 6,105 | 74.734 | Tier 1 | high |
-| 39 | Struthers | OH | 9,916 | 74.731 | Tier 1 | high |
-| 40 | Lebanon | NH | 15,342 | 74.705 | Tier 1 | low |
-| 41 | Yankton | SD | 15,630 | 74.691 | Tier 1 | low |
-| 42 | Mitchell | SD | 15,621 | 74.690 | Tier 1 | low |
-| 43 | Biddeford | ME | 22,367 | 74.657 | Tier 1 | low |
-| 44 | Sanford | ME | 22,251 | 74.647 | Tier 1 | low |
-| 45 | Southaven | MS | 56,851 | 74.626 | Tier 1 | low |
-| 46 | Auburn | ME | 24,793 | 74.626 | Tier 1 | low |
-| 47 | St. Marys | OH | 8,377 | 74.622 | Tier 1 | high |
-| 48 | Kenton | OH | 7,840 | 74.595 | Tier 1 | high |
-| 49 | Orrville | OH | 8,422 | 74.585 | Tier 1 | high |
-| 50 | Cumberland | MD | 18,751 | 74.582 | Tier 1 | low |
-| 51 | Huron | SD | 14,618 | 74.558 | Tier 1 | low |
-| 52 | Saco | ME | 20,960 | 74.537 | Tier 1 | low |
-| 53 | Aberdeen | MD | 18,006 | 74.501 | Tier 1 | low |
-| 54 | Wauseon | OH | 7,443 | 74.475 | Tier 1 | high |
-| 55 | Lake Charles | LA | 79,633 | 74.474 | Tier 1 | low |
-| 56 | Pierre | SD | 13,880 | 74.451 | Tier 1 | low |
-| 57 | Wheeling | WV | 26,208 | 74.415 | Tier 1 | low |
-| 58 | Easton | MD | 17,225 | 74.413 | Tier 1 | low |
-| 59 | North College Hill | OH | 9,463 | 74.398 | Tier 1 | high |
-| 60 | Westbrook | ME | 20,564 | 74.397 | Tier 1 | low |
-| 61 | Madeira | OH | 9,423 | 74.387 | Tier 1 | high |
-| 62 | Logan | OH | 7,166 | 74.383 | Tier 1 | high |
-| 63 | Claremont | NH | 13,111 | 74.382 | Tier 1 | low |
-| 64 | Charleston | WV | 46,838 | 74.380 | Tier 1 | low |
-| 65 | Augusta | ME | 19,102 | 74.362 | Tier 1 | low |
-| 66 | Spearfish | SD | 13,282 | 74.356 | Tier 1 | low |
-| 67 | Olive Branch | MS | 47,029 | 74.346 | Tier 1 | low |
-| 68 | Hyattsville | MD | 20,662 | 74.324 | Tier 1 | low |
-| 69 | Sunbury | OH | 8,340 | 74.321 | Tier 1 | high |
-| 70 | Sheffield Lake | OH | 8,965 | 74.308 | Tier 1 | high |
-| 71 | Newark | DE | 30,169 | 74.289 | Tier 1 | low |
-| 72 | South Burlington | VT | 21,043 | 74.275 | Tier 1 | low |
-| 73 | Hubbard | OH | 7,568 | 74.265 | Tier 1 | high |
-| 74 | Elkton | MD | 15,968 | 74.258 | Tier 1 | low |
-| 75 | Cape Girardeau | MO | 40,508 | 74.256 | Tier 1 | low |
-| 76 | Upper Sandusky | OH | 6,647 | 74.200 | Tier 1 | high |
-| 77 | Rock Springs | WY | 22,954 | 74.197 | Tier 1 | low |
-| 78 | Hillsboro | OH | 6,617 | 74.191 | Tier 1 | high |
-| 79 | Wyoming | OH | 8,672 | 74.184 | Tier 1 | high |
-| 80 | Kenner | LA | 63,333 | 74.153 | Tier 1 | low |
-| 81 | Cheviot | OH | 8,565 | 74.152 | Tier 1 | high |
-| 82 | Vermillion | SD | 12,011 | 74.149 | Tier 1 | low |
-| 83 | Havre de Grace | MD | 15,032 | 74.144 | Tier 1 | low |
-| 84 | Campbell | OH | 7,745 | 74.140 | Tier 1 | high |
-| 85 | Takoma Park | MD | 17,464 | 74.124 | Tier 1 | low |
-| 86 | Mount Airy | MD | 9,889 | 74.123 | Tier 1 | low |
-| 87 | Waterville | ME | 16,823 | 74.110 | Tier 1 | low |
-| 88 | Anaconda-Deer Lodge County | MT | 9,673 | 74.100 | Tier 1 | low |
-| 89 | Canfield | OH | 7,610 | 74.100 | Tier 1 | high |
-| 90 | Cortland | OH | 7,062 | 74.099 | Tier 1 | high |
-| 91 | St. Joseph | MO | 70,634 | 74.088 | Tier 1 | low |
-| 92 | Belpre | OH | 6,614 | 74.086 | Tier 1 | high |
-| 93 | Deming | NM | 14,603 | 74.081 | Tier 1 | low |
-| 94 | Belgrade | MT | 12,509 | 74.060 | Tier 1 | low |
-| 95 | Jackson | OH | 6,206 | 74.032 | Tier 1 | high |
-| 96 | Havre | MT | 9,330 | 74.020 | Tier 1 | low |
-| 97 | Greenfield | OH | 4,336 | 74.001 | Tier 1 | high |
-| 98 | Ontario | OH | 6,653 | 73.996 | Tier 1 | high |
-| 99 | Tupelo | MS | 37,675 | 73.990 | Tier 1 | low |
-| 100 | Grandview Heights | OH | 8,841 | 73.984 | Tier 1 | high |
+| 1 | Las Vegas | NV | 660,929 | 76.668 | Tier 1 | low |
+| 2 | Indianapolis city (balance) | IN | 879,293 | 76.112 | Tier 1 | medium |
+| 3 | Framingham | MA | 71,875 | 76.038 | Tier 1 | high |
+| 4 | Redding | CA | 92,727 | 75.249 | Tier 1 | high |
+| 5 | Oakland | CA | 436,504 | 74.982 | Tier 1 | high |
+| 6 | Stockton | CA | 319,543 | 74.892 | Tier 1 | high |
+| 7 | Fort Wayne | IN | 269,994 | 74.874 | Tier 1 | medium |
+| 8 | Vancouver | WA | 196,442 | 74.625 | Tier 1 | high |
+| 9 | Bloomington | IL | 78,587 | 74.418 | Tier 1 | high |
+| 10 | Phoenix | AZ | 1,650,070 | 74.259 | Tier 1 | medium |
+| 11 | Hollister | CA | 44,658 | 74.194 | Tier 1 | high |
+| 12 | Oxnard | CA | 198,488 | 74.106 | Tier 1 | high |
+| 13 | Moreno Valley | CA | 212,392 | 73.930 | Tier 1 | high |
+| 14 | Waterloo | IA | 66,606 | 73.512 | Tier 1 | medium |
+| 15 | Fairfield | CA | 120,768 | 73.456 | Tier 1 | high |
+| 16 | Huntley | IL | 28,269 | 73.378 | Tier 1 | high |
+| 17 | Newark | OH | 51,046 | 72.833 | Tier 1 | high |
+| 18 | Roselle | IL | 22,508 | 72.277 | Tier 1 | high |
+| 19 | Kansas City | MO | 510,704 | 71.411 | Tier 1 | medium |
+| 20 | Streator | IL | 12,269 | 71.252 | Tier 1 | high |
+| 21 | Channahon | IL | 14,138 | 71.200 | Tier 1 | high |
+| 22 | Centralia | IL | 11,848 | 71.200 | Tier 1 | high |
+| 23 | Bourbonnais | IL | 18,042 | 70.981 | Tier 1 | high |
+| 24 | Lemont | IL | 17,575 | 70.959 | Tier 1 | high |
+| 25 | Columbia | IL | 10,933 | 70.939 | Tier 1 | high |
+| 26 | Bensenville | IL | 18,352 | 70.893 | Tier 1 | high |
+| 27 | College Place | WA | 9,762 | 70.879 | Tier 1 | high |
+| 28 | Minooka | IL | 12,879 | 70.870 | Tier 1 | high |
+| 29 | East St. Louis | IL | 17,642 | 70.838 | Tier 1 | high |
+| 30 | Morton | IL | 17,469 | 70.833 | Tier 1 | high |
+| 31 | Godfrey | IL | 17,597 | 70.779 | Tier 1 | high |
+| 32 | Charleston | IL | 17,028 | 70.779 | Tier 1 | high |
+| 33 | Cahokia Heights | IL | 17,114 | 70.778 | Tier 1 | high |
+| 34 | Hinsdale | IL | 17,297 | 70.773 | Tier 1 | high |
+| 35 | Peru | IL | 9,780 | 70.756 | Tier 1 | high |
+| 36 | Cary | IL | 17,977 | 70.733 | Tier 1 | high |
+| 37 | Dixon | IL | 15,096 | 70.704 | Tier 1 | high |
+| 38 | Sheridan | OR | 6,483 | 70.680 | Tier 1 | high |
+| 39 | Lake Zurich | IL | 19,676 | 70.673 | Tier 1 | high |
+| 40 | Macomb | IL | 14,849 | 70.673 | Tier 1 | high |
+| 41 | Tillamook | OR | 5,196 | 70.665 | Tier 1 | high |
+| 42 | Fairview Heights | IL | 16,125 | 70.659 | Tier 1 | high |
+| 43 | Bradley | IL | 15,263 | 70.643 | Tier 1 | high |
+| 44 | Lake Forest | IL | 19,354 | 70.638 | Tier 1 | high |
+| 45 | Washington | IL | 15,833 | 70.635 | Tier 1 | high |
+| 46 | Rochelle | IL | 9,319 | 70.632 | Tier 1 | high |
+| 47 | Anderson | CA | 11,210 | 70.631 | Tier 1 | high |
+| 48 | Sterling | IL | 14,508 | 70.623 | Tier 1 | high |
+| 49 | Morris | IL | 14,508 | 70.623 | Tier 1 | high |
+| 50 | Grand Ledge | MI | 7,784 | 70.595 | Tier 1 | high |
+| 51 | Mount Vernon | IL | 14,247 | 70.582 | Tier 1 | high |
+| 52 | Sturgis | MI | 11,012 | 70.571 | Tier 1 | high |
+| 53 | Chatham | IL | 14,525 | 70.568 | Tier 1 | high |
+| 54 | Fox Lake | IL | 10,805 | 70.564 | Tier 1 | high |
+| 55 | Round Lake | IL | 18,430 | 70.546 | Tier 1 | high |
+| 56 | Crest Hill | IL | 20,118 | 70.533 | Tier 1 | high |
+| 57 | Mill Valley | CA | 13,792 | 70.518 | Tier 1 | high |
+| 58 | Mokena | IL | 19,759 | 70.501 | Tier 1 | high |
+| 59 | Shiloh | IL | 14,736 | 70.480 | Tier 1 | high |
+| 60 | Fraser | MI | 14,434 | 70.472 | Tier 1 | high |
+| 61 | Cadillac | MI | 10,430 | 70.454 | Tier 1 | high |
+| 62 | North Aurora | IL | 19,022 | 70.445 | Tier 1 | high |
+| 63 | Grand Haven | MI | 11,002 | 70.444 | Tier 1 | high |
+| 64 | Junction City | OR | 7,072 | 70.444 | Tier 1 | high |
+| 65 | Swansea | IL | 14,472 | 70.441 | Tier 1 | high |
+| 66 | Shasta Lake | CA | 10,262 | 70.434 | Tier 1 | high |
+| 67 | Schererville | IN | 29,657 | 70.428 | Tier 1 | medium |
+| 68 | Hobart | IN | 29,408 | 70.414 | Tier 1 | medium |
+| 69 | Franklin | IN | 25,908 | 70.410 | Tier 1 | medium |
+| 70 | Lincoln | IL | 13,072 | 70.405 | Tier 1 | high |
+| 71 | Othello | WA | 8,878 | 70.404 | Tier 1 | high |
+| 72 | Winston | OR | 5,678 | 70.393 | Tier 1 | high |
+| 73 | Alpena | MI | 10,130 | 70.384 | Tier 1 | high |
+| 74 | Canton | IL | 12,875 | 70.376 | Tier 1 | high |
+| 75 | Harvey | IL | 19,397 | 70.361 | Tier 1 | high |
+| 76 | Shorewood | IL | 18,369 | 70.359 | Tier 1 | high |
+| 77 | Twinsburg | OH | 19,439 | 70.345 | Tier 1 | high |
+| 78 | Larkspur | CA | 12,589 | 70.330 | Tier 1 | high |
+| 79 | Evergreen Park | IL | 19,010 | 70.319 | Tier 1 | high |
+| 80 | San Anselmo | CA | 12,498 | 70.313 | Tier 1 | high |
+| 81 | Glen Carbon | IL | 13,868 | 70.299 | Tier 1 | high |
+| 82 | Brookfield | IL | 18,591 | 70.279 | Tier 1 | high |
+| 83 | Homewood | IL | 18,540 | 70.274 | Tier 1 | high |
+| 84 | Effingham | IL | 12,258 | 70.272 | Tier 1 | high |
+| 85 | Kewanee | IL | 12,222 | 70.266 | Tier 1 | high |
+| 86 | Seymour | IN | 21,666 | 70.260 | Tier 1 | medium |
+| 87 | Matteson | IL | 18,293 | 70.246 | Tier 1 | high |
+| 88 | Marysville | MI | 9,917 | 70.246 | Tier 1 | high |
+| 89 | Sierra Vista | AZ | 44,431 | 70.241 | Tier 1 | medium |
+| 90 | Chowchilla | CA | 19,328 | 70.239 | Tier 1 | high |
+| 91 | La Porte | IN | 22,486 | 70.235 | Tier 1 | medium |
+| 92 | Barrington | IL | 10,476 | 70.235 | Tier 1 | high |
+| 93 | Alsip | IL | 18,198 | 70.234 | Tier 1 | high |
+| 94 | East Grand Rapids | MI | 11,429 | 70.230 | Tier 1 | high |
+| 95 | Lexington | NE | 10,816 | 70.226 | Tier 1 | medium |
+| 96 | Howell | MI | 10,008 | 70.213 | Tier 1 | high |
+| 97 | Avon | IN | 24,231 | 70.210 | Tier 1 | medium |
+| 98 | Alma | MI | 9,364 | 70.210 | Tier 1 | high |
+| 99 | Little Rock | AR | 203,842 | 70.200 | Tier 1 | medium |
+| 100 | Bellwood | IL | 17,890 | 70.200 | Tier 1 | high |
 
 ## Deferred examples
 
@@ -179,26 +179,26 @@ The following are low-scoring Tier 5 examples, not findings that sources or rele
 
 | Municipality | State | Type | Population | Score | Current status |
 |---|---|---|---:|---:|---|
-| Walpack | NJ | township | 6 | 37.578 | not_scouted |
-| Impact | TX | municipal | 21 | 41.846 | not_scouted |
-| Los Ybanez | TX | municipal | 21 | 42.221 | not_scouted |
-| Corral City | TX | municipal | 40 | 42.307 | not_scouted |
-| Quintana | TX | municipal | 26 | 42.407 | not_scouted |
-| Spofford | TX | municipal | 45 | 43.453 | not_scouted |
-| Tavistock | NJ | municipal | 7 | 43.608 | not_scouted |
-| Dayton Lakes | TX | municipal | 55 | 43.813 | not_scouted |
-| Toyah | TX | municipal | 58 | 43.905 | not_scouted |
-| Lakeview | TX | municipal | 58 | 43.905 | not_scouted |
-| Harper | ND | township | 0 | 43.948 | not_scouted |
-| Pyote | TX | municipal | 67 | 44.186 | not_scouted |
-| Valentine | TX | municipal | 67 | 44.186 | not_scouted |
-| Putnam | TX | municipal | 68 | 44.216 | not_scouted |
-| Uncertain | TX | municipal | 87 | 44.223 | not_scouted |
-| Neylandville | TX | municipal | 70 | 44.273 | not_scouted |
-| Sun Valley | TX | municipal | 73 | 44.361 | not_scouted |
-| Seven Oaks | TX | municipal | 73 | 44.361 | not_scouted |
-| Petronila | TX | municipal | 86 | 44.401 | not_scouted |
-| Miller's Cove | TX | municipal | 76 | 44.444 | not_scouted |
+| West Keating | PA | township | 16 | 36.565 | not_scouted |
+| Walpack | NJ | township | 6 | 36.960 | not_scouted |
+| Elk | PA | township | 44 | 38.115 | not_scouted |
+| Grugan | PA | township | 47 | 38.235 | not_scouted |
+| Pine | PA | township | 59 | 38.640 | not_scouted |
+| Stewardson | PA | township | 62 | 38.732 | not_scouted |
+| Hovey | PA | township | 71 | 39.006 | not_scouted |
+| Sylvania | PA | township | 72 | 39.036 | not_scouted |
+| Hangaard | MN | township | 3 | 39.038 | not_scouted |
+| Brady | PA | township | 73 | 39.064 | not_scouted |
+| Pleasant Valley | PA | township | 79 | 39.225 | not_scouted |
+| Millstone | PA | township | 92 | 39.303 | not_scouted |
+| Brown | PA | township | 91 | 39.470 | not_scouted |
+| Fork | MN | township | 5 | 39.501 | not_scouted |
+| Sugartree | MO | township | 9 | 39.585 | not_scouted |
+| Fairhope | PA | township | 100 | 39.743 | not_scouted |
+| Grove | PA | township | 107 | 39.888 | not_scouted |
+| Heath | PA | township | 115 | 40.060 | not_scouted |
+| McHenry | PA | township | 119 | 40.081 | not_scouted |
+| Wharton | PA | township | 117 | 40.100 | not_scouted |
 
 ## Warnings and limitations
 

@@ -37,6 +37,9 @@ MIXED_STATE_USAGE_PATHS = [
     DOCS / "parallel_round2_lane_1_state_usage_2026-07-23.csv",
     DOCS / "parallel_round2_lane_2_state_usage_2026-07-23.csv",
     DOCS / "parallel_round2_lane_3_state_usage_2026-07-23.csv",
+    DOCS / "aggressive_3x300_attempt3_lane_1_state_usage_2026-07-23.csv",
+    DOCS / "aggressive_3x300_attempt3_lane_2_state_usage_2026-07-23.csv",
+    DOCS / "aggressive_3x300_attempt3_lane_3_state_usage_2026-07-23.csv",
 ]
 
 MUNICIPALITY_OUTPUT = DOCS / "national_scout_coverage_municipality_2026-07-20.csv"
@@ -274,6 +277,57 @@ SUCCESSFUL_BATCHES = [
         "backend": "direct-sdk",
         "failed_municipality_ids": ["cog_2025_176888"],
     },
+    {
+        "state": "ALL",
+        "allowed_states": {
+            "AK", "AL", "CA", "DE", "ID", "KS", "LA", "MA", "MD", "ME",
+            "MN", "MO", "MS", "MT", "NE", "NH", "NM", "NV", "NY", "OH",
+            "PA", "RI", "SD", "TN", "UT", "VA", "VT", "WI", "WV", "WY",
+        },
+        "wave": "POST-PI-AGGRESSIVE-3X300-ATTEMPT3-LANE1-2026-07-23",
+        "run_id": "all_2026-07-23_221645",
+        "scout_date": "2026-07-23",
+        "input": DOCS
+        / "parallel_scout_rounds"
+        / "POST-PI-AGGRESSIVE-ROUND-3X300-2026-07-23"
+        / "lane_1_input.csv",
+        "backend": "direct-sdk",
+        "failed_municipality_ids": ["cog_2025_209091"],
+    },
+    {
+        "state": "ALL",
+        "allowed_states": {
+            "AK", "AL", "AR", "AZ", "CA", "CO", "CT", "IA", "ID", "KS",
+            "LA", "MA", "MD", "ME", "MN", "MO", "MS", "MT", "ND", "NE",
+            "NM", "NY", "OH", "PA", "SC", "SD", "TN", "UT", "VA", "VT",
+            "WI", "WV", "WY",
+        },
+        "wave": "POST-PI-AGGRESSIVE-3X300-ATTEMPT3-LANE2-2026-07-23",
+        "run_id": "all_2026-07-23_222540",
+        "scout_date": "2026-07-23",
+        "input": DOCS
+        / "parallel_scout_rounds"
+        / "POST-PI-AGGRESSIVE-ROUND-3X300-2026-07-23"
+        / "lane_2_input.csv",
+        "backend": "direct-sdk",
+    },
+    {
+        "state": "ALL",
+        "allowed_states": {
+            "AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DE", "IA", "ID",
+            "IL", "IN", "KS", "LA", "MD", "ME", "MI", "MN", "MO", "MS",
+            "MT", "ND", "NE", "NM", "NY", "OH", "PA", "SC", "TN", "UT",
+            "VA", "VT", "WI", "WV", "WY",
+        },
+        "wave": "POST-PI-AGGRESSIVE-3X300-ATTEMPT3-LANE3-2026-07-23",
+        "run_id": "all_2026-07-23_223840",
+        "scout_date": "2026-07-23",
+        "input": DOCS
+        / "parallel_scout_rounds"
+        / "POST-PI-AGGRESSIVE-ROUND-3X300-2026-07-23"
+        / "lane_3_input.csv",
+        "backend": "direct-sdk",
+    },
 ]
 
 # Preserved failed-run artifacts contain 16 MA connection-only rows, one IL
@@ -331,6 +385,7 @@ FAILED_CONNECTION_RUNS = {
     "all_2026-07-23_182845": ["cog_2025_194843", "cog_2025_189806"],
     "all_2026-07-23_183330": ["cog_2025_161242"],
     "all_2026-07-23_183735": ["cog_2025_176888"],
+    "all_2026-07-23_221645": ["cog_2025_209091"],
 }
 
 QUEUE_VERIFY_BUCKETS = {
@@ -661,16 +716,16 @@ def build_municipality_rows() -> list[dict[str, object]]:
         )
 
     status_counts = Counter(row["scout_coverage_status"] for row in output)
-    if status_counts["scouted_with_candidates"] != 1_267:
-        raise ValueError(f"Expected 1,267 candidate-positive municipalities: {status_counts}")
-    if status_counts["scouted_no_candidates"] != 270:
-        raise ValueError(f"Expected 270 successful empty municipalities: {status_counts}")
-    if status_counts["scout_attempt_failed_connection"] != 27:
-        raise ValueError(f"Expected 27 failure-only municipalities: {status_counts}")
-    if sum(int(row["failed_connection_attempt_count"]) for row in output) != 43:
+    if status_counts["scouted_with_candidates"] != 1_858:
+        raise ValueError(f"Expected 1,858 candidate-positive municipalities: {status_counts}")
+    if status_counts["scouted_no_candidates"] != 578:
+        raise ValueError(f"Expected 578 successful empty municipalities: {status_counts}")
+    if status_counts["scout_attempt_failed_connection"] != 28:
+        raise ValueError(f"Expected 28 failure-only municipalities: {status_counts}")
+    if sum(int(row["failed_connection_attempt_count"]) for row in output) != 44:
         raise ValueError(
-            "Expected 39 retained attempts through Parallel Round 1 and four "
-            "Parallel Round 2 failure-only attempts"
+            "Expected 43 retained failed attempts through Parallel Round 2 and "
+            "one Aggressive Attempt 3 outer timeout"
         )
     return output
 
@@ -860,8 +915,8 @@ def build_state_rows(municipality_rows: list[dict[str, object]]) -> list[dict[st
         )
     if sum(int(row["municipalities_in_universe"]) for row in output) != 35_589:
         raise ValueError("State coverage does not sum to the authoritative universe")
-    if sum(int(row["municipalities_scouted"]) for row in output) != 1_537:
-        raise ValueError("State coverage does not sum to 1,537 successful scout municipalities")
+    if sum(int(row["municipalities_scouted"]) for row in output) != 2_436:
+        raise ValueError("State coverage does not sum to 2,436 successful scout municipalities")
     return output
 
 

@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-24T01:11:00Z",
+  "generated_at": "2026-07-24T14:23:35Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -29,30 +29,32 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "stage": "project_phase_checkpoint",
-  "current_phase": "Source discovery scale-up",
+  "stage": "post_scout_checkpoint_transition",
+  "current_phase": "Verification planning and source triage",
   "checkpoint_target_scout_covered": 2000,
-  "current_scout_covered": 1537,
-  "remaining_to_checkpoint": 463,
-  "progress_percentage": 76.8,
-  "estimated_150_row_waves_remaining": "4",
-  "full_150_row_waves_to_reach_or_exceed_checkpoint": 4,
-  "current_candidate_queue_rows": 3347,
-  "current_candidate_positive_municipalities": 1267,
-  "current_failure_only_municipalities": 27,
+  "current_scout_covered": 2436,
+  "remaining_to_checkpoint": 0,
+  "checkpoint_status": "reached_exceeded",
+  "checkpoint_margin": 436,
+  "progress_percentage": 121.8,
+  "estimated_150_row_waves_remaining": "0",
+  "full_150_row_waves_to_reach_or_exceed_checkpoint": 0,
+  "current_candidate_queue_rows": 4726,
+  "current_candidate_positive_municipalities": 1858,
+  "current_failure_only_municipalities": 28,
   "next_planned_round": {
-    "round_id": "POST-PI-AGGRESSIVE-ROUND-3X300-2026-07-23",
-    "status": "planned_not_run",
-    "profile": "aggressive_300",
-    "lanes": 3,
-    "rows_per_lane": 300,
-    "expected_attempted": 900,
-    "expected_parseable_at_recent_rate": 892,
-    "expected_post_round_scout_covered": 2429,
-    "expected_checkpoint_margin": 429,
-    "checkpoint_overshoot_intent": "intentional_user_approved",
-    "lane_start_stagger_minutes": 8,
-    "projection_status": "operational_estimate_not_live_evidence"
+    "round_id": "NONE-BROAD-SCOUTING-PAUSED-AFTER-CHECKPOINT",
+    "status": "none_broad_scouting_paused",
+    "profile": "none",
+    "lanes": 0,
+    "rows_per_lane": 0,
+    "expected_attempted": 0,
+    "expected_parseable_at_recent_rate": 0,
+    "expected_post_round_scout_covered": 2436,
+    "expected_checkpoint_margin": 436,
+    "checkpoint_overshoot_intent": "completed_intentional_user_approved",
+    "lane_start_stagger_minutes": 0,
+    "projection_status": "no_additional_round_planned"
   },
   "superseded_plans": [
     {
@@ -61,7 +63,7 @@
       "reason": "User explicitly selected the aggressive 3x300 round."
     }
   ],
-  "checkpoint_pause_rule": "After the user-approved aggressive round is successfully merged and the approximately 2,000-covered checkpoint is exceeded, pause broad scouting and begin the documented downstream cycle.",
+  "checkpoint_pause_rule": "Active: the user-approved aggressive round was merged and the approximately 2,000-covered checkpoint was exceeded. Broad scouting is paused; begin the documented downstream cycle.",
   "next_phase": "Verification, extraction, ingestion, rating, descriptive wage-growth-gap analysis, and mechanism-correlation documentation",
   "next_phase_sequence": [
     "verify candidate sources",
@@ -74,8 +76,8 @@
     "decide the most efficient repeat strategy"
   ],
   "regressions_status": "Deferred",
-  "last_updated_commit": "8b653b2ba14fc5e6b2a96a523ed3fe6100a780a8",
-  "last_updated_context": "source_discovery_accounting_checkpoint",
+  "last_updated_commit": "27d3cd222517a9c54a7c61d7af3f1d5185d1bd97",
+  "last_updated_context": "post_checkpoint_transition",
   "future_live_controls": [
     "stronger preflight gate",
     "compact prompts",

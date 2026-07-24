@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-24T01:11:00Z",
+  "generated_at": "2026-07-24T14:23:35Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -108,12 +108,25 @@
       "candidate_rows_per_hour": 631.46,
       "candidate_rows_per_parseable_municipality": 2.209,
       "sleep_between_prompts_seconds": 5.0
+    },
+    {
+      "wave_id": "aggressive_3x300_attempt3",
+      "label": "Aggressive 3x300 Attempt 3 compact/adaptive (3 serialized lanes)",
+      "attempted_rows": 900,
+      "parseable_rows": 899,
+      "candidate_rows": 1389,
+      "failure_only_rows": 1,
+      "runtime_seconds": 9422.628,
+      "rows_per_hour": 343.853,
+      "candidate_rows_per_hour": 530.68,
+      "candidate_rows_per_parseable_municipality": 1.545,
+      "sleep_between_prompts_seconds": 5.0
     }
   ],
   "checkpoint_context": {
     "target_scout_covered": 2000,
-    "current_scout_covered": 1537,
-    "note": "The current total comes from national coverage accounting; runtime waves shown here are the 6 reviewed coordinated waves/rounds."
+    "current_scout_covered": 2436,
+    "note": "The current total comes from national coverage accounting; runtime waves shown here are the 7 reviewed coordinated waves/rounds."
   },
   "next_run_instrumentation": [
     "compact prompt character/token proxy",
