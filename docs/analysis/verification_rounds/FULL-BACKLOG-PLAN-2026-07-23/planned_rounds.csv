@@ -1,8 +1,8 @@
-round_number,planned_round_id,phase,row_start,row_end,candidate_rows,lanes,nominal_rows_per_lane,scheduled_rows,held_or_other_rows,status
-1,VERIFICATION-SCALE-ROUND1-PLANNED,scheduled,1,750,750,3,250,750,0,planned_not_run
-2,VERIFICATION-SCALE-ROUND2-PLANNED,scheduled,751,1500,750,3,250,750,0,planned_not_run
-3,VERIFICATION-SCALE-ROUND3-PLANNED,scheduled,1501,2250,750,3,250,750,0,planned_not_run
-4,VERIFICATION-SCALE-ROUND4-PLANNED,scheduled,2251,3000,750,3,250,750,0,planned_not_run
-5,VERIFICATION-SCALE-ROUND5-PLANNED,scheduled,3001,3600,600,3,250,600,0,planned_not_run
-6,VERIFICATION-SCALE-ROUND6-PLANNED,full_backlog_extension,3601,4350,750,3,250,0,750,planned_not_run
-7,VERIFICATION-SCALE-ROUND7-PLANNED,full_backlog_extension,4351,4726,376,3,250,0,376,planned_not_run
+scenario,round_number,planned_round_id,row_start,row_end,candidate_rows,lanes,nominal_rows_per_lane,round_capacity,status
+scheduled_3x750,1,SCHEDULED_3X750-ROUND1-PLANNED,1,2250,2250,3,750,2250,planned_not_run
+scheduled_3x750,2,SCHEDULED_3X750-ROUND2-PLANNED,2251,3600,1350,3,750,2250,planned_not_run
+all_url_bearing_3x750,1,ALL_URL_BEARING_3X750-ROUND1-PLANNED,1,2250,2250,3,750,2250,planned_not_run
+all_url_bearing_3x750,2,ALL_URL_BEARING_3X750-ROUND2-PLANNED,2251,4500,2250,3,750,2250,planned_not_run
+all_url_bearing_3x750,3,ALL_URL_BEARING_3X750-ROUND3-PLANNED,4501,4726,226,3,750,2250,planned_not_run
+all_url_bearing_3x1000,1,ALL_URL_BEARING_3X1000-ROUND1-PLANNED,1,3000,3000,3,1000,3000,planned_not_run
+all_url_bearing_3x1000,2,ALL_URL_BEARING_3X1000-ROUND2-PLANNED,3001,4726,1726,3,1000,3000,planned_not_run

@@ -6,6 +6,33 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-24 (Bounded live verification implemented; 3×750 prepared offline)
+
+**Did**
+- Started from clean tracked `3616bae5d010c7c4b4a2e1c43f47941a93a48b64`, confirmed `98ad608` ancestry, and left the unrelated untracked root `package-lock.json` untouched.
+- Implemented a bounded async URL-verification path with eight-request lane limits, 20/8/15-second total/connect/read controls, five redirects, a 10 MiB response cap, lane-local metadata, incremental ledger checkpoints, sanitized errors, optional disabled-by-default HTML samples, and resumable terminal-ID reuse.
+- Added exact-URL fetch reuse without dropping candidate identities. Mock-only tests cover HTML, PDF/document, redirect, timeout, oversized response, duplicate reuse, and live-lane audit behavior.
+- Added `conservative_250`, `standard_500`, `aggressive_750`, and `max_1000` profiles. Prepared `VERIFICATION-SCALE-ROUND1-3X750-2026-07-23`: three 750-row high-priority lanes (2,250 total), six duplicate groups, eight reusable rows, and zero split groups.
+- All three dry runs passed with 2,250/2,250 ledger rows, zero URL opens/network calls, and a correctly non-mergeable dry-run audit.
+- Updated the full backlog: two 3×750 rounds cover 3,600 scheduled rows; three cover all 4,726 candidates; two 3×1000 rounds cover the full pool.
+- Updated dashboard status to `live_path_implemented_planned_scale_up`, first live round `3×750`, live `ready_not_started`, and ingestion/wage-gap analysis `not_started`.
+
+**Decisions and why**
+- Recommend 3×750 first: it materially increases scale while preserving a 31.3-minute timeout-heavy lane envelope and an auditable 2,250-row checkpoint.
+- Keep 3×250 as historical planning and reserve 3×1000 until a real 3×750 audit demonstrates stable public-server and artifact behavior.
+- Treat automated results as reachability/preliminary metadata only. Officialness, employer/unit match, wage content, and mechanism language remain unknown or need content review.
+
+**Surprises/breakage**
+- The first combined validation command was invoked from the dashboard directory, so repository-relative Python paths were unavailable. Nothing ran or changed in that failed invocation; the full sequence was rerun from repository root and passed.
+- The selected 2,250 rows contain only six exact-URL groups (fourteen rows), yielding eight in-lane fetch reuses; the planner keeps all six groups intact within lanes.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Five compiles, six scaled-verification checks, three 750-row dry runs, the 2,250-row audit, schema validation, 60 ingestion tests, 14 dashboard JSON parses, frontend production build, protected/accounting hashes, and diff checks passed. No candidate URL was opened; no real network/API/model call, live verification, ingestion, `gabriel.codify`, wage extraction, wage-gap work, causal claim, regression, remote action, or push occurred.
+
+**Next steps**
+1. Only under explicit live authorization, use `verification_scale_round1_3x750_live_prompt_2026-07-23.md` with fresh isolated lane outputs.
+2. Audit all three live lanes and stop before merge.
+3. Under a later serial task, merge only eligible verification ledgers; do not ingest, codify, or extract wages during verification.
+
 ## 2026-07-24 (Scaled candidate-source verification framework prepared offline)
 
 **Did**

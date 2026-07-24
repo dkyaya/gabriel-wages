@@ -255,7 +255,7 @@ export function VerificationPipeline({ candidateSummary, readiness, phase, verif
           <p className="eyebrow">Verification pipeline</p>
           <h2 id="verification-title">From discovered lead to analysis-ready evidence</h2>
         </div>
-        <StatusPill tone="future">Scale-up planned; live review not started</StatusPill>
+        <StatusPill tone="future">Live path ready; verification not started</StatusPill>
       </div>
 
       <div className="verification-flow">
@@ -275,10 +275,12 @@ export function VerificationPipeline({ candidateSummary, readiness, phase, verif
           <h3>Verify, extract, ingest, rate, and analyze descriptively</h3>
         </div>
         <p>
-          Verification scale-up is planned: the first {formatNumber(verificationStatus.first_round_candidate_rows)}
-          {" "}candidate rows are prepared across {verificationStatus.first_round_lanes} offline-tested lanes,
-          and the complete {formatNumber(verificationStatus.total_url_bearing_candidate_rows)}-row backlog is mapped.
-          No candidate URL has been opened by this planning work.
+          Live verification is implemented behind bounded fetch limits. The first recommended round is{" "}
+          {verificationStatus.first_round_lanes} lanes ×{" "}
+          {formatNumber(verificationStatus.first_round_rows_per_lane)} candidate URLs (
+          {formatNumber(verificationStatus.first_round_candidate_rows)} total), and the complete{" "}
+          {formatNumber(verificationStatus.total_url_bearing_candidate_rows)}-row backlog is mapped.
+          No candidate URL has been opened yet.
         </p>
       </div>
       <p className="panel-note">

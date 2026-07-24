@@ -56,12 +56,13 @@ REPORTS_INDEX_SOURCE_PATH = (
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
-CURRENT_SOURCE_ACCOUNTING_COMMIT = "27d3cd222517a9c54a7c61d7af3f1d5185d1bd97"
+CURRENT_SOURCE_ACCOUNTING_COMMIT = "98ad608"
 PARALLEL_SCOUT_ROUND_ID = "POST-PI-AGGRESSIVE-ROUND-3X300-2026-07-23"
-FIRST_VERIFICATION_ROUND_ID = "VERIFICATION-SCALE-ROUND1-2026-07-23"
-FIRST_VERIFICATION_ROUND_ROWS = 750
-VERIFICATION_BATCH_SIZE = 250
+FIRST_VERIFICATION_ROUND_ID = "VERIFICATION-SCALE-ROUND1-3X750-2026-07-23"
+FIRST_VERIFICATION_ROUND_ROWS = 2_250
+VERIFICATION_BATCH_SIZE = 750
 VERIFICATION_LANES = 3
+VERIFICATION_CONCURRENCY_PER_LANE = 8
 NEXT_PARALLEL_SCOUT_ROUND_ID = "NONE-BROAD-SCOUTING-PAUSED-AFTER-CHECKPOINT"
 NEXT_ROUND_LANES = 0
 NEXT_ROUND_ROWS_PER_LANE = 0
@@ -1337,7 +1338,7 @@ def build_parallel_scout_status(
 def build_verification_status_summary(
     *, queue_rows: list[dict[str, str]], metadata: dict[str, Any]
 ) -> dict[str, Any]:
-    """Describe the offline verification scale-up plan without claiming review."""
+    """Describe the live-ready verification plan without claiming review."""
 
     triage = Counter(row.get("triage_bucket", "") for row in queue_rows)
     scheduled = sum(triage[bucket] for bucket in VERIFY_BUCKETS)
@@ -1349,11 +1350,12 @@ def build_verification_status_summary(
     duplicate_or_canonical = (
         triage["likely_duplicate_hold"] + triage["already_canonical_hold"]
     )
-    capacity = VERIFICATION_BATCH_SIZE * VERIFICATION_LANES
+    capacity_3x750 = VERIFICATION_BATCH_SIZE * VERIFICATION_LANES
+    capacity_3x1000 = 3_000
     return {
         **metadata,
         "stage": "candidate_source_verification_planning",
-        "verification_phase": "planned_scale_up",
+        "verification_phase": "live_path_implemented_planned_scale_up",
         "total_url_bearing_candidate_rows": len(queue_rows),
         "scheduled_verification_rows": scheduled,
         "held_or_context_rows": held_or_context,
@@ -1362,16 +1364,37 @@ def build_verification_status_summary(
             len(queue_rows) - scheduled
         ),
         "first_verification_round_id": FIRST_VERIFICATION_ROUND_ID,
+        "first_live_round_recommended": FIRST_VERIFICATION_ROUND_ID,
         "first_round_candidate_rows": FIRST_VERIFICATION_ROUND_ROWS,
         "first_round_lanes": VERIFICATION_LANES,
         "first_round_rows_per_lane": VERIFICATION_BATCH_SIZE,
-        "scheduled_pool_estimated_rounds": math.ceil(scheduled / capacity),
-        "full_backlog_estimated_rounds": math.ceil(len(queue_rows) / capacity),
-        "additional_rounds_for_full_backlog": (
-            math.ceil(len(queue_rows) / capacity)
-            - math.ceil(scheduled / capacity)
+        "lane_count": VERIFICATION_LANES,
+        "rows_per_lane": VERIFICATION_BATCH_SIZE,
+        "recommended_concurrency_per_lane": VERIFICATION_CONCURRENCY_PER_LANE,
+        "recommended_timeout_seconds": 20,
+        "recommended_max_redirects": 5,
+        "recommended_max_bytes": 10_485_760,
+        "scheduled_verification_estimated_rounds_3x750": math.ceil(
+            scheduled / capacity_3x750
         ),
-        "verification_live_status": "not_started",
+        "full_backlog_estimated_rounds_3x750": math.ceil(
+            len(queue_rows) / capacity_3x750
+        ),
+        "full_backlog_estimated_rounds_3x1000": math.ceil(
+            len(queue_rows) / capacity_3x1000
+        ),
+        # Backward-compatible aliases consumed by the current dashboard panel.
+        "scheduled_pool_estimated_rounds": math.ceil(
+            scheduled / capacity_3x750
+        ),
+        "full_backlog_estimated_rounds": math.ceil(
+            len(queue_rows) / capacity_3x750
+        ),
+        "additional_rounds_for_full_backlog": (
+            math.ceil(len(queue_rows) / capacity_3x750)
+            - math.ceil(scheduled / capacity_3x750)
+        ),
+        "verification_live_status": "ready_not_started",
         "verification_dry_run_status": "three_lanes_passed_offline",
         "ingestion_status": "not_started",
         "wage_gap_analysis_status": "not_started",
@@ -1383,7 +1406,7 @@ def build_verification_status_summary(
             "analysis-ready wage observation",
         ],
         "caveats": [
-            "Verification planning and dry runs have not opened candidate URLs.",
+            "The bounded live path is implemented and mock-tested, but no candidate URL has been opened.",
             "Candidate rows remain unverified until separately authorized live verification runs.",
             "Verification is not ingestion, codification, wage extraction, or analysis-ready evidence.",
             "Wage gaps have not been calculated.",

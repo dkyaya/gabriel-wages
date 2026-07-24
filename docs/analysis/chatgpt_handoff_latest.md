@@ -6,6 +6,38 @@ Last updated: `2026-07-24`
 
 ---
 
+## 2026-07-24 — Bounded live verification is ready; 3×750 is next
+
+### Current State
+
+- **Repository gate:** work began at clean tracked `3616bae5d010c7c4b4a2e1c43f47941a93a48b64`; `98ad608` is an ancestor and the unrelated untracked root `package-lock.json` remains untouched.
+- **Workload:** the immutable canonical queue still has 4,726 URL-bearing candidates: 3,600 scheduled (2,825 high, 490 medium, 285 low) and 1,126 held/context/duplicate/canonical/rejected. Queue and scout-coverage accounting did not change.
+- **Bounded verifier:** `verify_candidate_sources.py` now supports live operation behind total/connect/read timeouts `20/8/15`, five redirects, 10 MiB, concurrency eight, no proxy/auth inheritance, checkpointed ledgers, lane-local metadata, disabled-by-default samples, sanitized errors, and optional resume. It does not ingest, codify, or extract wages.
+- **Duplicate reuse:** every original queue identity remains in the ledger. One in-lane exact-URL representative may be fetched; reachable followers become `duplicate_of_verified_source`, while unsuccessful followers remain `duplicate_same_url_pending`.
+- **Locked first round:** [the manifest](verification_rounds/VERIFICATION-SCALE-ROUND1-3X750-2026-07-23/verification_round_manifest.json) contains 2,250 high-priority rows in three lanes of 750. Hashes are `c03701be02afaa6c64cb63a8bb46cf9cae59f8665c3b2969e693b41a31cbfa65`, `ac9ee0b048f331df295ead483305d72c587ce8962b89426f84b5f42d96d048ca`, and `a9192b47724dcc39eb09ac2760325a9fccd98fadc0b16452518fe4538ec9994a`.
+- **Duplicate plan:** six exact-URL groups cover fourteen selected rows; eight rows can reuse an in-lane fetch, and zero groups are split across lanes.
+- **Dry run:** all three 750-row lanes passed. The auditor sees 2,250/2,250 rows, three `dry_run_passed` lanes, zero URL opens/network calls, and `do_not_merge_until_resume_or_review`.
+- **Backlog:** two 3×750 rounds cover the 3,600 scheduled pool; three cover all 4,726 rows. Two 3×1000 rounds could cover the full pool after 3×750 proves stable.
+- **Runtime:** the 3×750 estimate is 3.1–12.5 minutes per lane under a two-to-eight-second average response assumption; the all-timeout envelope is 31.3 minutes, excluding launch/audit overhead.
+- **Dashboard:** `verification_phase` is `live_path_implemented_planned_scale_up`, first live round is the locked 3×750 plan, and `verification_live_status` is `ready_not_started`. Ingestion and wage-gap analysis remain `not_started`.
+- **Validation:** [the validation record](bounded_live_verification_validation_2026-07-23.md) reports five compiles, six mock/offline checks, three dry runs/audit, schema and ingestion tests, dashboard JSON/frontend checks, protected-file invariance, and diff checks passed.
+
+### Interpretation and limitations
+
+All live-path tests use `httpx.MockTransport`; no candidate URL has been
+opened. Automated reachability and content-type results are preliminary
+routing metadata, not proof of officialness, correct employer/unit identity,
+wage data, mechanism text, or analysis-ready evidence.
+
+### Next Move
+
+Use [the 3×750 live prompt](verification_scale_round1_3x750_live_prompt_2026-07-23.md)
+only under separate explicit URL-access authorization. Run fresh dry gates,
+three isolated bounded lanes, and the combined auditor, then stop before
+merge. Use [the serial merge prompt](verification_scale_round1_3x750_merge_prompt_2026-07-23.md)
+only in a later task. Do not ingest, codify, extract wages, or calculate gaps
+during either collection or verification-ledger merge.
+
 ## 2026-07-24 — Scaled verification is planned for the full candidate pool
 
 ### Current State

@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-24T14:47:37Z",
+  "generated_at": "2026-07-24T15:19:32Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -76,7 +76,7 @@
     "decide the most efficient repeat strategy"
   ],
   "regressions_status": "Deferred",
-  "last_updated_commit": "27d3cd222517a9c54a7c61d7af3f1d5185d1bd97",
+  "last_updated_commit": "98ad608",
   "last_updated_context": "post_checkpoint_transition",
   "future_live_controls": [
     "stronger preflight gate",

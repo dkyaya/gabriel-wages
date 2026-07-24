@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Audit verification lanes without modifying queue, coverage, or evidence."""
+"""Audit verification lanes without mutating queue, coverage, or evidence."""
 
 from __future__ import annotations
 
@@ -9,6 +9,25 @@ import hashlib
 import json
 from collections import Counter
 from pathlib import Path
+from typing import Any
+
+
+TERMINAL_LIVE_STATUSES = {
+    "reachable_http",
+    "reachable_pdf_or_document",
+    "reachable_html",
+    "blocked_or_forbidden",
+    "not_found",
+    "timeout",
+    "connection_error",
+    "too_large",
+    "unsupported_scheme",
+    "invalid_url",
+    "ssl_error",
+    "error",
+    "duplicate_of_verified_source",
+    "duplicate_same_url_pending",
+}
 
 
 def read_csv(path: Path) -> list[dict[str, str]]:
@@ -20,99 +39,150 @@ def sha256_file(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def byte_bucket(value: str) -> str:
+    try:
+        size = int(value or 0)
+    except ValueError:
+        return "invalid"
+    if size == 0:
+        return "0"
+    if size <= 65_536:
+        return "1_to_64KiB"
+    if size <= 1_048_576:
+        return "64KiB_to_1MiB"
+    if size <= 10_485_760:
+        return "1MiB_to_10MiB"
+    return "over_10MiB"
+
+
 def classify_lane(lane: dict[str, object]) -> dict[str, object]:
     input_path = Path(str(lane["input_csv"]))
     dry_dir = Path(str(lane["dry_run_output_dir"]))
     live_dir = Path(str(lane["live_output_dir"]))
-    base = {
+    base: dict[str, Any] = {
         "lane_id": lane["lane_id"],
         "input_csv": input_path.as_posix(),
         "expected_rows": int(lane["expected_rows"]),
         "classification": "not_started",
         "ledger_rows": 0,
+        "terminal_rows": 0,
         "duplicate_verification_ids": 0,
         "missing_candidate_rows": int(lane["expected_rows"]),
+        "unexpected_candidate_rows": 0,
         "duplicate_group_count": 0,
+        "duplicate_reuse_rows": 0,
         "urls_opened": 0,
         "network_calls": 0,
+        "verification_status_counts": {},
+        "content_type_distribution": {},
+        "bytes_read_distribution": {},
     }
     if not input_path.exists():
-        base["classification"] = "missing_artifacts"
-        base["detail"] = "input_csv_missing"
+        base.update(classification="missing_artifacts", detail="input_csv_missing")
         return base
     if sha256_file(input_path) != lane["input_sha256"]:
-        base["classification"] = "failed"
-        base["detail"] = "input_hash_mismatch"
+        base.update(classification="failed", detail="input_hash_mismatch")
         return base
     input_rows = read_csv(input_path)
     input_ids = [row["verification_id"] for row in input_rows]
     if len(input_ids) != len(set(input_ids)):
-        base["classification"] = "failed"
-        base["detail"] = "duplicate_verification_ids_in_input"
-        base["duplicate_verification_ids"] = len(input_ids) - len(set(input_ids))
+        base.update(
+            classification="failed",
+            detail="duplicate_verification_ids_in_input",
+            duplicate_verification_ids=len(input_ids) - len(set(input_ids)),
+        )
         return base
+    input_group_by_id = {
+        row["verification_id"]: row.get("duplicate_source_group_id", "")
+        for row in input_rows
+    }
 
     output_dir: Path | None = None
     mode = ""
     if live_dir.exists():
-        output_dir = live_dir
-        mode = "live"
+        output_dir, mode = live_dir, "live"
     elif dry_dir.exists():
-        output_dir = dry_dir
-        mode = "dry_run"
+        output_dir, mode = dry_dir, "dry_run"
     if output_dir is None:
         return base
     ledger_path = output_dir / "verification_ledger.csv"
     summary_path = output_dir / "verification_summary.json"
     if not ledger_path.exists() or not summary_path.exists():
-        base["classification"] = "missing_artifacts"
-        base["detail"] = "ledger_or_summary_missing"
+        base.update(
+            classification="missing_artifacts",
+            detail="ledger_or_summary_missing",
+            mode=mode,
+        )
         return base
+
     ledger_rows = read_csv(ledger_path)
     ledger_ids = [row["verification_id"] for row in ledger_rows]
     duplicate_ids = len(ledger_ids) - len(set(ledger_ids))
     missing = len(set(input_ids) - set(ledger_ids))
     extra = len(set(ledger_ids) - set(input_ids))
+    group_mismatches = sum(
+        row["verification_id"] in input_group_by_id
+        and row.get("duplicate_source_group_id", "")
+        != input_group_by_id[row["verification_id"]]
+        for row in ledger_rows
+    )
     summary = json.loads(summary_path.read_text(encoding="utf-8"))
+    statuses = Counter(row.get("verification_status", "") for row in ledger_rows)
+    terminal = (
+        statuses["dry_run_planned"]
+        if mode == "dry_run"
+        else sum(statuses[status] for status in TERMINAL_LIVE_STATUSES)
+    )
+    content_types = Counter(
+        (row.get("content_type", "").split(";", 1)[0].strip().lower() or "unknown")
+        for row in ledger_rows
+    )
+    byte_sizes = Counter(byte_bucket(row.get("bytes_read", "")) for row in ledger_rows)
     base.update(
         {
             "mode": mode,
             "ledger_rows": len(ledger_rows),
+            "terminal_rows": terminal,
             "duplicate_verification_ids": duplicate_ids,
             "missing_candidate_rows": missing,
             "unexpected_candidate_rows": extra,
+            "duplicate_group_mismatches": group_mismatches,
             "duplicate_group_count": len(
-                {row.get("duplicate_source_group_id", "") for row in ledger_rows}
+                {
+                    row.get("duplicate_source_group_id", "")
+                    for row in ledger_rows
+                    if row.get("duplicate_source_group_id", "")
+                }
+            ),
+            "duplicate_reuse_rows": (
+                statuses["duplicate_of_verified_source"]
+                + statuses["duplicate_same_url_pending"]
             ),
             "urls_opened": int(summary.get("urls_opened", 0)),
             "network_calls": int(summary.get("network_calls", 0)),
+            "verification_status_counts": dict(sorted(statuses.items())),
+            "content_type_distribution": dict(sorted(content_types.items())),
+            "bytes_read_distribution": dict(sorted(byte_sizes.items())),
         }
     )
-    if duplicate_ids or missing or extra:
-        base["classification"] = "failed"
-        base["detail"] = "identity_coverage_failure"
+    if duplicate_ids or missing or extra or group_mismatches:
+        base.update(classification="failed", detail="identity_or_group_coverage_failure")
     elif mode == "dry_run" and summary.get("status") == "dry_run_passed":
-        base["classification"] = "dry_run_passed"
-        base["detail"] = "complete_offline_plan_artifacts"
-    elif mode == "live":
-        statuses = Counter(row.get("verification_status", "") for row in ledger_rows)
-        terminal = sum(
-            count
-            for status, count in statuses.items()
-            if status and status not in {"planned_not_verified", "pending"}
+        base.update(
+            classification="dry_run_passed",
+            detail="complete_offline_plan_artifacts",
         )
-        if terminal == len(input_rows):
-            base["classification"] = "completed_merge_eligible"
-            base["detail"] = "all_rows_terminal"
-        elif terminal:
-            base["classification"] = "partial"
-            base["detail"] = "some_terminal_rows"
-        else:
-            base["classification"] = "failed"
-            base["detail"] = "no_terminal_rows"
+    elif mode == "live" and terminal == len(input_rows):
+        base.update(
+            classification="completed_merge_eligible",
+            detail="all_rows_terminal",
+        )
+    elif mode == "live" and terminal:
+        base.update(classification="partial", detail="some_terminal_rows")
+    elif mode == "live":
+        base.update(classification="failed", detail="no_terminal_rows")
     else:
-        base["classification"] = "failed"
-        base["detail"] = "unrecognized_summary_status"
+        base.update(classification="failed", detail="unrecognized_summary_status")
     return base
 
 
@@ -126,14 +196,35 @@ def audit(manifest_path: Path, output_dir: Path) -> dict[str, object]:
         if path.exists():
             all_ids.extend(row["verification_id"] for row in read_csv(path))
     cross_lane_duplicates = len(all_ids) - len(set(all_ids))
-    if classes["completed_merge_eligible"] == len(lanes) and not cross_lane_duplicates:
+
+    complete_count = classes["completed_merge_eligible"]
+    noncomplete = [
+        lane for lane in lanes if lane["classification"] != "completed_merge_eligible"
+    ]
+    if complete_count == len(lanes) and not cross_lane_duplicates:
         recommendation = "merge_all_verification_lanes"
-    elif classes["dry_run_passed"] == len(lanes) and not cross_lane_duplicates:
-        recommendation = "dry_run_complete_do_not_merge_live_ledger"
+    elif (
+        complete_count > 0
+        and not cross_lane_duplicates
+        and all(
+            lane["classification"] in {"not_started", "failed", "missing_artifacts"}
+            and int(lane["terminal_rows"]) == 0
+            for lane in noncomplete
+        )
+    ):
+        recommendation = "merge_completed_lanes_only_with_user_approval"
     else:
         recommendation = "do_not_merge_until_resume_or_review"
+
+    combined_statuses: Counter[str] = Counter()
+    combined_content_types: Counter[str] = Counter()
+    combined_bytes: Counter[str] = Counter()
+    for lane in lanes:
+        combined_statuses.update(lane["verification_status_counts"])
+        combined_content_types.update(lane["content_type_distribution"])
+        combined_bytes.update(lane["bytes_read_distribution"])
     payload: dict[str, object] = {
-        "schema_version": "1.0.0",
+        "schema_version": "2.0.0",
         "round_id": manifest["round_id"],
         "manifest": manifest_path.as_posix(),
         "lane_count": len(lanes),
@@ -141,8 +232,15 @@ def audit(manifest_path: Path, output_dir: Path) -> dict[str, object]:
         "cross_lane_duplicate_verification_ids": cross_lane_duplicates,
         "planned_candidate_rows": sum(int(lane["expected_rows"]) for lane in lanes),
         "ledger_rows": sum(int(lane["ledger_rows"]) for lane in lanes),
+        "terminal_rows": sum(int(lane["terminal_rows"]) for lane in lanes),
         "urls_opened": sum(int(lane["urls_opened"]) for lane in lanes),
         "network_calls": sum(int(lane["network_calls"]) for lane in lanes),
+        "duplicate_reuse_rows": sum(
+            int(lane["duplicate_reuse_rows"]) for lane in lanes
+        ),
+        "verification_status_counts": dict(sorted(combined_statuses.items())),
+        "content_type_distribution": dict(sorted(combined_content_types.items())),
+        "bytes_read_distribution": dict(sorted(combined_bytes.items())),
         "lanes": lanes,
         "merge_recommendation": recommendation,
         "accounting_mutations": 0,
@@ -157,25 +255,30 @@ def audit(manifest_path: Path, output_dir: Path) -> dict[str, object]:
         f"- Lanes: {len(lanes)}",
         f"- Planned candidate rows: {payload['planned_candidate_rows']}",
         f"- Ledger rows inspected: {payload['ledger_rows']}",
+        f"- Terminal rows: {payload['terminal_rows']}",
         f"- Cross-lane duplicate verification IDs: {cross_lane_duplicates}",
         f"- URLs opened according to summaries: {payload['urls_opened']}",
         f"- Network calls according to summaries: {payload['network_calls']}",
+        f"- Duplicate rows reusing in-lane fetches: {payload['duplicate_reuse_rows']}",
+        f"- Status counts: `{json.dumps(payload['verification_status_counts'], sort_keys=True)}`",
+        f"- Content types: `{json.dumps(payload['content_type_distribution'], sort_keys=True)}`",
+        f"- Bytes read: `{json.dumps(payload['bytes_read_distribution'], sort_keys=True)}`",
         f"- Recommendation: `{recommendation}`",
         "",
-        "| Lane | Classification | Expected | Ledger | Missing |",
-        "|---|---|---:|---:|---:|",
+        "| Lane | Classification | Expected | Ledger | Terminal | Missing |",
+        "|---|---|---:|---:|---:|---:|",
     ]
     for lane in lanes:
         report_lines.append(
             f"| {lane['lane_id']} | `{lane['classification']}` | "
             f"{lane['expected_rows']} | {lane['ledger_rows']} | "
-            f"{lane['missing_candidate_rows']} |"
+            f"{lane['terminal_rows']} | {lane['missing_candidate_rows']} |"
         )
     report_lines.extend(
         [
             "",
             "This auditor does not update the candidate queue, coverage, contracts,",
-            "ingestion, codification, or any analysis-ready evidence layer.",
+            "ingestion, codification, extraction, or any analysis-ready evidence.",
             "",
         ]
     )
@@ -184,8 +287,8 @@ def audit(manifest_path: Path, output_dir: Path) -> dict[str, object]:
     )
     (output_dir / "verification_merge_recommendation.md").write_text(
         f"# Verification Merge Recommendation\n\n`{recommendation}`\n\n"
-        "A dry-run recommendation is not authority to open URLs or merge a live "
-        "verified-source ledger. Use a separate explicitly authorized task.\n",
+        "Dry-run completion is never authority to open URLs or merge a live "
+        "verified-source ledger. Use a separately authorized serial merge task.\n",
         encoding="utf-8",
     )
     return payload

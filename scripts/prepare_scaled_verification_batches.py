@@ -42,6 +42,16 @@ HOLD_BUCKETS = {
 }
 DUPLICATE_BUCKET = "likely_duplicate_hold"
 PRIORITY_ORDER = {"high": 0, "medium": 1, "low": 2, "held": 3}
+VERIFICATION_PROFILES = {
+    "conservative_250": {"num_lanes": 3, "batch_size": 250},
+    "standard_500": {"num_lanes": 3, "batch_size": 500},
+    "aggressive_750": {"num_lanes": 3, "batch_size": 750},
+    "max_1000": {"num_lanes": 3, "batch_size": 1000},
+}
+DEFAULT_CONCURRENCY = 8
+DEFAULT_TIMEOUT = 20.0
+DEFAULT_MAX_BYTES = 10_485_760
+DEFAULT_MAX_REDIRECTS = 5
 
 IDENTITY_FIELDS = [
     "verification_id",
@@ -292,17 +302,70 @@ def sort_candidates(rows: list[dict[str, object]]) -> list[dict[str, object]]:
 
 
 def distribute_lanes(
-    rows: list[dict[str, object]], num_lanes: int, batch_size: int
+    rows: list[dict[str, object]],
+    num_lanes: int,
+    batch_size: int,
+    *,
+    dedupe_fetch_plan: bool = False,
 ) -> list[list[dict[str, object]]]:
     selected = rows[: num_lanes * batch_size]
     lanes: list[list[dict[str, object]]] = [[] for _ in range(num_lanes)]
-    for index, row in enumerate(selected):
-        lanes[index % num_lanes].append(row)
+    if not dedupe_fetch_plan:
+        for index, row in enumerate(selected):
+            lanes[index % num_lanes].append(row)
+    else:
+        groups: dict[str, list[dict[str, object]]] = {}
+        group_order: list[str] = []
+        for row in selected:
+            group_id = str(row["duplicate_source_group_id"])
+            if group_id not in groups:
+                group_order.append(group_id)
+                groups[group_id] = []
+            groups[group_id].append(row)
+        remaining = [batch_size] * num_lanes
+        for group_id in group_order:
+            group = groups[group_id]
+            candidates = [
+                index
+                for index, capacity in enumerate(remaining)
+                if capacity >= len(group)
+            ]
+            if candidates:
+                lane_index = max(candidates, key=lambda index: (remaining[index], -index))
+                lanes[lane_index].extend(group)
+                remaining[lane_index] -= len(group)
+            else:
+                # Extremely large groups are deterministically split rather than
+                # dropping identities. The manifest records any cross-lane group.
+                for row in group:
+                    lane_index = max(
+                        range(num_lanes),
+                        key=lambda index: (remaining[index], -index),
+                    )
+                    if remaining[lane_index] <= 0:
+                        raise AssertionError("No remaining lane capacity")
+                    lanes[lane_index].append(row)
+                    remaining[lane_index] -= 1
     if len(selected) == num_lanes * batch_size and any(
         len(lane) != batch_size for lane in lanes
     ):
         raise AssertionError("Lane distribution did not produce equal full lanes")
     return lanes
+
+
+def runtime_estimate(
+    rows_per_lane: int, concurrency: int, timeout_seconds: float
+) -> dict[str, float]:
+    """Return transparent rough bounds, not a service-level guarantee."""
+
+    request_waves = math.ceil(rows_per_lane / concurrency)
+    return {
+        "expected_lower_minutes": round(request_waves * 2 / 60, 1),
+        "expected_upper_minutes": round(request_waves * 8 / 60, 1),
+        "all_rows_timeout_upper_minutes": round(
+            request_waves * timeout_seconds / 60, 1
+        ),
+    }
 
 
 def counts_by(rows: list[dict[str, object]], field: str) -> dict[str, int]:
@@ -312,6 +375,7 @@ def counts_by(rows: list[dict[str, object]], field: str) -> dict[str, int]:
 def lane_audit_markdown(
     lane_number: int, path: Path, rows: list[dict[str, object]]
 ) -> str:
+    groups = Counter(str(row["duplicate_source_group_id"]) for row in rows)
     return f"""# Verification Round Lane {lane_number} Input Audit
 
 - Input: `{path.as_posix()}`
@@ -323,13 +387,23 @@ def lane_audit_markdown(
 - Candidate priorities: `{json.dumps(counts_by(rows, 'candidate_priority'), sort_keys=True)}`
 - States: `{json.dumps(counts_by(rows, 'state'), sort_keys=True)}`
 - Candidate source types: `{json.dumps(counts_by(rows, 'candidate_source_type'), sort_keys=True)}`
+- Exact duplicate URL groups represented: {sum(count > 1 for count in groups.values()):,}
+- Duplicate rows eligible for in-lane fetch reuse: {sum(count - 1 for count in groups.values() if count > 1):,}
 
 This is an offline locked planning input. No URL was opened, no source was
 verified, and no row was promoted beyond candidate-lead status.
 """
 
 
-def live_commands(round_id: str, output_dir: Path, num_lanes: int) -> str:
+def live_commands(
+    round_id: str,
+    output_dir: Path,
+    num_lanes: int,
+    *,
+    timeout: float,
+    concurrency: int,
+    max_bytes: int,
+) -> str:
     lines = [
         f"# Future Live Verification Commands — {round_id}",
         "",
@@ -349,8 +423,14 @@ def live_commands(round_id: str, output_dir: Path, num_lanes: int) -> str:
                 "python scripts/verify_candidate_sources.py \\",
                 f"  --input-csv {input_path.as_posix()} \\",
                 f"  --output-dir {live_dir.as_posix()} \\",
-                "  --timeout 30 \\",
-                "  --concurrency 3 \\",
+                f"  --candidate-artifact-dir {live_dir.as_posix()}/candidate_artifacts \\",
+                f"  --timeout {timeout:g} \\",
+                "  --connect-timeout 8 \\",
+                "  --read-timeout 15 \\",
+                f"  --max-redirects {DEFAULT_MAX_REDIRECTS} \\",
+                f"  --max-bytes {max_bytes} \\",
+                f"  --concurrency {concurrency} \\",
+                "  --no-write-content-samples \\",
                 "  --respect-robots-note",
                 "```",
                 "",
@@ -358,9 +438,9 @@ def live_commands(round_id: str, output_dir: Path, num_lanes: int) -> str:
         )
     lines.extend(
         [
-            "The current runner intentionally fails closed in live mode until the",
-            "separately authorized live-verification implementation task completes.",
-            "These commands never ingest, codify, extract wages, or calculate gaps.",
+            "The bounded live path is implemented, but these commands require a",
+            "separate explicit live-verification authorization. They never ingest,",
+            "codify, extract wages, or calculate gaps.",
             "",
         ]
     )
@@ -398,42 +478,30 @@ def build_full_backlog(
     capacity = batch_size * num_lanes
     inventory_path = output_dir / "full_backlog_inventory.csv"
     write_csv(inventory_path, selected, IDENTITY_FIELDS)
-    scheduled_rounds = math.ceil(len(scheduled) / capacity)
-    all_rounds = math.ceil(len(selected) / capacity)
-    held = [
-        row
-        for row in selected
-        if row["candidate_status_before_verification"] != "scheduled"
+    scenarios = [
+        ("scheduled_3x750", len(scheduled), 3, 750),
+        ("all_url_bearing_3x750", len(inventory), 3, 750),
+        ("all_url_bearing_3x1000", len(inventory), 3, 1000),
     ]
-    phases = [("scheduled", scheduled), ("full_backlog_extension", held)]
     planned: list[dict[str, object]] = []
-    global_start = 0
-    round_number = 0
-    for phase, phase_rows in phases:
-        for phase_start in range(0, len(phase_rows), capacity):
-            round_number += 1
-            round_rows = phase_rows[phase_start : phase_start + capacity]
-            start = global_start
-            end = start + len(round_rows)
-            global_start = end
+    for scenario, row_count, scenario_lanes, scenario_batch in scenarios:
+        scenario_capacity = scenario_lanes * scenario_batch
+        for start in range(0, row_count, scenario_capacity):
+            round_number = start // scenario_capacity + 1
+            rows_this_round = min(scenario_capacity, row_count - start)
             planned.append(
                 {
+                    "scenario": scenario,
                     "round_number": round_number,
-                    "planned_round_id": f"VERIFICATION-SCALE-ROUND{round_number}-PLANNED",
-                    "phase": phase,
+                    "planned_round_id": (
+                        f"{scenario.upper()}-ROUND{round_number}-PLANNED"
+                    ),
                     "row_start": start + 1,
-                    "row_end": end,
-                    "candidate_rows": len(round_rows),
-                    "lanes": num_lanes,
-                    "nominal_rows_per_lane": batch_size,
-                    "scheduled_rows": sum(
-                        row["candidate_status_before_verification"] == "scheduled"
-                        for row in round_rows
-                    ),
-                    "held_or_other_rows": sum(
-                        row["candidate_status_before_verification"] != "scheduled"
-                        for row in round_rows
-                    ),
+                    "row_end": start + rows_this_round,
+                    "candidate_rows": rows_this_round,
+                    "lanes": scenario_lanes,
+                    "nominal_rows_per_lane": scenario_batch,
+                    "round_capacity": scenario_capacity,
                     "status": "planned_not_run",
                 }
             )
@@ -441,21 +509,23 @@ def build_full_backlog(
         output_dir / "planned_rounds.csv",
         planned,
         [
+            "scenario",
             "round_number",
             "planned_round_id",
-            "phase",
             "row_start",
             "row_end",
             "candidate_rows",
             "lanes",
             "nominal_rows_per_lane",
-            "scheduled_rows",
-            "held_or_other_rows",
+            "round_capacity",
             "status",
         ],
     )
+    scheduled_rounds_3x750 = math.ceil(len(scheduled) / 2250)
+    all_rounds_3x750 = math.ceil(len(inventory) / 2250)
+    all_rounds_3x1000 = math.ceil(len(inventory) / 3000)
     manifest = {
-        "schema_version": "1.0.0",
+        "schema_version": "2.0.0",
         "round_id": round_id,
         "plan_type": "full_verification_backlog",
         "status": "planned_not_run",
@@ -467,12 +537,13 @@ def build_full_backlog(
         "full_backlog_inventory_sha256": sha256_file(inventory_path),
         "scheduled_verification_rows": len(scheduled),
         "held_or_other_rows": len(inventory) - len(scheduled),
+        "selected_profile": getattr(args, "profile", "aggressive_750"),
         "batch_size_per_lane": batch_size,
         "num_lanes": num_lanes,
         "round_capacity": capacity,
-        "scheduled_rounds_required": scheduled_rounds,
-        "full_backlog_rounds_required": all_rounds,
-        "additional_rounds_for_full_backlog": max(all_rounds - scheduled_rounds, 0),
+        "scheduled_rounds_required_3x750": scheduled_rounds_3x750,
+        "full_backlog_rounds_required_3x750": all_rounds_3x750,
+        "full_backlog_rounds_required_3x1000": all_rounds_3x1000,
         "priority_scope": args.priority_scope,
         "include_held": args.include_held,
         "include_duplicates": args.include_duplicates,
@@ -485,10 +556,9 @@ def build_full_backlog(
 - Total URL-bearing candidate rows: {len(inventory):,}
 - Scheduled verification rows: {len(scheduled):,}
 - Held/context/duplicate/canonical/rejected rows: {len(inventory) - len(scheduled):,}
-- Nominal round capacity: {num_lanes} lanes × {batch_size} = {capacity:,}
-- Rounds for scheduled pool: {scheduled_rounds}
-- Rounds for all selected rows: {all_rounds}
-- Additional rounds to cover the full queue: {max(all_rounds - scheduled_rounds, 0)}
+- Scheduled-only at 3×750 (2,250/round): {scheduled_rounds_3x750} rounds
+- All URL-bearing rows at 3×750: {all_rounds_3x750} rounds
+- All URL-bearing rows at 3×1,000: {all_rounds_3x1000} rounds
 - Candidate priorities: `{json.dumps(counts_by(inventory, 'candidate_priority'), sort_keys=True)}`
 - Candidate dispositions: `{json.dumps(counts_by(inventory, 'candidate_status_before_verification'), sort_keys=True)}`
 - State distribution: `{json.dumps(counts_by(inventory, 'state'), sort_keys=True)}`
@@ -506,12 +576,35 @@ verification, ingestion, codification, extraction, or wage analysis.
 def prepare(args: argparse.Namespace) -> dict[str, object]:
     queue_path = Path(args.candidate_queue_csv)
     output_dir = Path(args.output_dir)
+    profile_name = getattr(args, "profile", None) or "conservative_250"
+    if profile_name not in VERIFICATION_PROFILES:
+        raise ValueError(f"Unsupported profile: {profile_name}")
+    profile = VERIFICATION_PROFILES[profile_name]
+    if getattr(args, "batch_size", None) is None:
+        args.batch_size = profile["batch_size"]
+    if getattr(args, "num_lanes", None) is None:
+        args.num_lanes = profile["num_lanes"]
+    args.profile = profile_name
+    args.concurrency_per_lane = getattr(
+        args, "concurrency_per_lane", DEFAULT_CONCURRENCY
+    )
+    args.verification_timeout = getattr(
+        args, "verification_timeout", DEFAULT_TIMEOUT
+    )
+    args.max_bytes = getattr(args, "max_bytes", DEFAULT_MAX_BYTES)
+    args.dedupe_fetch_plan = getattr(args, "dedupe_fetch_plan", False)
     if args.batch_size < 1:
         raise ValueError("--batch-size must be positive")
     if args.num_lanes < 1:
         raise ValueError("--num-lanes must be positive")
     if args.num_lanes > 12:
         raise ValueError("--num-lanes above 12 requires a framework change")
+    if args.concurrency_per_lane < 1:
+        raise ValueError("--concurrency-per-lane must be positive")
+    if args.verification_timeout <= 0:
+        raise ValueError("--verification-timeout must be positive")
+    if args.max_bytes < 1:
+        raise ValueError("--max-bytes must be positive")
     output_dir.mkdir(parents=True, exist_ok=True)
 
     queue_rows = read_csv(queue_path)
@@ -556,7 +649,12 @@ def prepare(args: argparse.Namespace) -> dict[str, object]:
         raise ValueError(
             f"Requested {requested} rows but only {len(selected)} match the scope"
         )
-    lanes = distribute_lanes(selected, args.num_lanes, args.batch_size)
+    lanes = distribute_lanes(
+        selected,
+        args.num_lanes,
+        args.batch_size,
+        dedupe_fetch_plan=args.dedupe_fetch_plan,
+    )
     selected_rows = [row for lane in lanes for row in lane]
     selected_ids = [str(row["verification_id"]) for row in selected_rows]
     if len(selected_ids) != len(set(selected_ids)):
@@ -573,6 +671,9 @@ def prepare(args: argparse.Namespace) -> dict[str, object]:
                 "input_csv": input_path.as_posix(),
                 "input_sha256": sha256_file(input_path),
                 "expected_rows": len(lane),
+                "expected_concurrency": args.concurrency_per_lane,
+                "expected_timeout_seconds": args.verification_timeout,
+                "expected_max_bytes": args.max_bytes,
                 "dry_run_output_dir": (
                     Path("tmp/verification_rounds")
                     / args.round_id
@@ -593,8 +694,22 @@ def prepare(args: argparse.Namespace) -> dict[str, object]:
     duplicate_groups = Counter(
         str(row["duplicate_source_group_id"]) for row in inventory
     )
+    selected_group_lanes: dict[str, set[int]] = {}
+    for lane_index, lane in enumerate(lanes, start=1):
+        for row in lane:
+            selected_group_lanes.setdefault(
+                str(row["duplicate_source_group_id"]), set()
+            ).add(lane_index)
+    selected_groups = Counter(
+        str(row["duplicate_source_group_id"]) for row in selected_rows
+    )
+    estimate = runtime_estimate(
+        args.batch_size,
+        args.concurrency_per_lane,
+        args.verification_timeout,
+    )
     manifest = {
-        "schema_version": "1.0.0",
+        "schema_version": "2.0.0",
         "round_id": args.round_id,
         "plan_type": "scaled_candidate_source_verification",
         "status": "planned_not_run",
@@ -604,8 +719,18 @@ def prepare(args: argparse.Namespace) -> dict[str, object]:
         "total_url_bearing_candidate_rows": len(inventory),
         "eligible_rows_in_requested_scope": len(selected),
         "planned_candidate_rows": len(selected_rows),
+        "profile": args.profile,
         "batch_size_per_lane": args.batch_size,
         "num_lanes": args.num_lanes,
+        "concurrency_per_lane": args.concurrency_per_lane,
+        "verification_timeout_seconds": args.verification_timeout,
+        "connect_timeout_seconds": 8,
+        "read_timeout_seconds": 15,
+        "max_redirects": DEFAULT_MAX_REDIRECTS,
+        "max_bytes": args.max_bytes,
+        "write_content_samples": False,
+        "dedupe_fetch_plan": args.dedupe_fetch_plan,
+        "runtime_estimate": estimate,
         "priority_scope": args.priority_scope,
         "include_held": args.include_held,
         "include_duplicates": args.include_duplicates,
@@ -615,6 +740,16 @@ def prepare(args: argparse.Namespace) -> dict[str, object]:
         ),
         "duplicate_url_extra_rows_in_full_queue": sum(
             count - 1 for count in duplicate_groups.values() if count > 1
+        ),
+        "duplicate_url_groups_in_selected_round": sum(
+            count > 1 for count in selected_groups.values()
+        ),
+        "duplicate_fetch_reuse_rows_in_selected_round": sum(
+            count - 1 for count in selected_groups.values() if count > 1
+        ),
+        "duplicate_groups_split_across_lanes": sum(
+            len(lane_numbers) > 1
+            for lane_numbers in selected_group_lanes.values()
         ),
         "candidate_stage_boundary": (
             "planned candidate leads only; not verified, ingested, codified, "
@@ -635,8 +770,15 @@ def prepare(args: argparse.Namespace) -> dict[str, object]:
 - Requested scope: `{args.priority_scope}`
 - Eligible rows in scope: {len(selected):,}
 - Planned rows: {len(selected_rows):,}
+- Profile: `{args.profile}`
 - Lanes: {args.num_lanes}
 - Rows per lane: {args.batch_size}
+- Concurrency per lane: {args.concurrency_per_lane}
+- Bounded timeout: {args.verification_timeout:g} seconds
+- Maximum response bytes: {args.max_bytes:,}
+- Duplicate-aware lane assignment: {args.dedupe_fetch_plan}
+- Expected lane runtime (2–8 second average response assumption): {estimate['expected_lower_minutes']:.1f}–{estimate['expected_upper_minutes']:.1f} minutes
+- Timeout-heavy upper bound: {estimate['all_rows_timeout_upper_minutes']:.1f} minutes
 - Unique verification IDs across lanes: {len(set(selected_ids)):,}
 - Duplicate verification IDs across lanes: {len(selected_ids) - len(set(selected_ids))}
 - Syntactically valid HTTP(S) URLs: {sum(valid_http_url(str(row['candidate_url'])) for row in selected_rows):,}/{len(selected_rows):,}
@@ -646,6 +788,9 @@ def prepare(args: argparse.Namespace) -> dict[str, object]:
 - Candidate source types: `{json.dumps(counts_by(selected_rows, 'candidate_source_type'), sort_keys=True)}`
 - Exact normalized URL duplicate groups in full queue: {sum(count > 1 for count in duplicate_groups.values()):,}
 - Extra rows linked to exact duplicate URLs in full queue: {sum(count - 1 for count in duplicate_groups.values() if count > 1):,}
+- Exact duplicate URL groups in selected round: {sum(count > 1 for count in selected_groups.values()):,}
+- Selected duplicate rows eligible for reuse: {sum(count - 1 for count in selected_groups.values() if count > 1):,}
+- Selected duplicate groups split across lanes: {sum(len(lane_numbers) > 1 for lane_numbers in selected_group_lanes.values()):,}
 
 ## Gate
 
@@ -659,7 +804,15 @@ ingestion, codification, extraction, or wage analysis occurred.
         audit, encoding="utf-8"
     )
     (output_dir / "verification_live_commands.md").write_text(
-        live_commands(args.round_id, output_dir, args.num_lanes), encoding="utf-8"
+        live_commands(
+            args.round_id,
+            output_dir,
+            args.num_lanes,
+            timeout=args.verification_timeout,
+            concurrency=args.concurrency_per_lane,
+            max_bytes=args.max_bytes,
+        ),
+        encoding="utf-8",
     )
     (output_dir / "verification_merge_handoff.md").write_text(
         merge_handoff(args.round_id, args.num_lanes), encoding="utf-8"
@@ -672,10 +825,35 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--candidate-queue-csv", default=str(DEFAULT_QUEUE))
     parser.add_argument("--output-dir", required=True)
     parser.add_argument("--round-id", required=True)
-    parser.add_argument("--batch-size", type=int, default=250)
-    parser.add_argument("--num-lanes", type=int, default=3)
+    parser.add_argument(
+        "--profile",
+        choices=sorted(VERIFICATION_PROFILES),
+        default="conservative_250",
+    )
+    parser.add_argument(
+        "--batch-size",
+        type=int,
+        help="Override the selected profile's per-lane row count.",
+    )
+    parser.add_argument(
+        "--num-lanes",
+        type=int,
+        help="Override the selected profile's lane count.",
+    )
+    parser.add_argument(
+        "--concurrency-per-lane", type=int, default=DEFAULT_CONCURRENCY
+    )
+    parser.add_argument(
+        "--verification-timeout", type=float, default=DEFAULT_TIMEOUT
+    )
+    parser.add_argument("--max-bytes", type=int, default=DEFAULT_MAX_BYTES)
     parser.add_argument("--include-held", action="store_true")
     parser.add_argument("--include-duplicates", action="store_true")
+    parser.add_argument(
+        "--dedupe-fetch-plan",
+        action="store_true",
+        help="Keep exact URL groups together where lane capacity permits.",
+    )
     parser.add_argument(
         "--priority-scope",
         choices=["scheduled", "high", "medium", "low", "all"],

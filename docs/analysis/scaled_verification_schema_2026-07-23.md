@@ -1,7 +1,7 @@
 # Scaled Candidate-Source Verification Schema
 
 Date: 2026-07-23/24
-Schema version: `1.0.0`
+Schema version: `2.0.0`
 
 ## Purpose and stage boundary
 
@@ -67,6 +67,29 @@ These are ordering/audit metadata, not verification findings.
 
 ## Controlled verification statuses
 
+The bounded automated reachability pass uses conservative transport/document
+statuses:
+
+- `reachable_http`
+- `reachable_html`
+- `reachable_pdf_or_document`
+- `blocked_or_forbidden`
+- `not_found`
+- `timeout`
+- `connection_error`
+- `ssl_error`
+- `too_large`
+- `unsupported_scheme`
+- `invalid_url`
+- `error`
+- `duplicate_of_verified_source`
+- `duplicate_same_url_pending`
+
+`dry_run_planned` is the offline-only status. `pending` may appear in a
+checkpointed, interrupted live ledger and is not terminal.
+
+The later reviewer/enrichment layer may use:
+
 - `verified_candidate_source`
 - `verified_context_source`
 - `duplicate_of_verified_source`
@@ -80,8 +103,14 @@ These are ordering/audit metadata, not verification findings.
 - `already_canonical`
 - `error`
 
-The offline runner additionally uses `planned_not_verified`; it is never a
-terminal live-verification result.
+The automated ledger also records `redirect_chain_length`,
+`content_length_header`, `bytes_read`, `fetch_elapsed_seconds`,
+`error_type`, and `error_message_sanitized`. Its
+`source_officialness_prelim`, `employer_match_prelim`,
+`source_document_type_prelim`, `wage_data_signal_prelim`, and
+`mechanism_language_signal_prelim` fields remain `unknown` or
+`needs_content_review` unless a later authorized content-review stage supplies
+evidence. They do not replace the durable reviewer-confirmed fields above.
 
 ## Controlled provenance and signal values
 
