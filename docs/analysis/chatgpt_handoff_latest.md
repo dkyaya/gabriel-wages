@@ -6,6 +6,25 @@ Last updated: `2026-07-23`
 
 ---
 
+## 2026-07-23/24 — Aggressive 3×300 Attempt 3 is complete; serial merge pending
+
+### Current State
+
+- **Start/readiness:** work began at clean tracked `18c3415aca43fd8db81f39995c7954d49b191d9b`. The three locked hashes remain exact; all 900 municipality/Census IDs are unique, disjoint, currently eligible, and complete for five hints. Attempts 1 (`dcf3cd5`) and 2 (`18c3415`) remain quarantined and non-mergeable.
+- **Preflight/dry gates:** plan-only made zero external calls. Exactly one stronger live gate passed no-search, both hosted-search controls, and a parseable Newport probe; its three leads remain quarantined. All three dry runs passed 300/300 compact prompts/hints and made no backend calls.
+- **Health-gated launches:** the runner does not incrementally flush terminal row status, so the prompt-authorized sustained-process fallback was used. Starts were `22:16:45`, `22:25:40`, and `22:38:40` ET—gaps of 8m55s and 13m00s. No lane was suppressed, no fourth lane ran, and no resume ran.
+- **Lane 1:** exit 0; 300 attempted; 299 parseable; 214 positive; 85 empty; one failure-only; zero stopped; 548 leads. Runtime 9,423.437 seconds (2h37m03.437s), 114.608 rows/hour. Shelby, OH was checkpointed `outer_timeout`; one backoff occurred and the lane recovered.
+- **Lane 2:** exit 0; 300 attempted/parseable; 200 positive; 100 empty; zero failures/stopped; 456 leads. Runtime 8,251.981 seconds (2h17m31.981s), 130.878 rows/hour.
+- **Lane 3:** exit 0; 300 attempted/parseable; 177 positive; 123 empty; zero failures/stopped; 385 leads. Runtime 7,622.049 seconds (2h07m02.049s), 141.694 rows/hour.
+- **Combined:** 900 attempted, 899 parseable, 591 positive, 308 empty, one failure-only, zero stopped, and 1,389 unverified leads. Parallel wall time was 9,422.628 seconds (2h37m02.628s), with 343.853 attempted rows/hour. Estimated standard-token cost is `$6.713879`, estimate-only.
+- **Auditor:** `post_lane_audit_attempt3` validates all inputs, finds zero completed-ID overlap, byte-checks all three lane-local exports, classifies all lanes `completed_merge_eligible`, and recommends `merge_all_lanes`.
+- **Accounting boundary:** [the no-merge note](aggressive_3x300_attempt3_no_accounting_merge_note_2026-07-23.md) confirms no queue, coverage, yield, dashboard/project-phase, or priority builder ran. Official totals remain 1,537/2,000 covered, 1,267 positive, 270 empty, 27 failure-only, and 3,347 queue rows.
+- **Validation:** [the validation record](aggressive_3x300_attempt3_live_collection_validation_2026-07-23.md) reports all requested compiles/tests, schema/coverage checks, lane export/overlap checks, quarantine/protected/accounting invariance, and operational secret-pattern checks passed.
+
+### Next Move
+
+Do not resume or rerun a lane. Under a separate explicit serial authorization, use the aggressive merge prompt against the three Attempt 3 roots, rerun the offline auditor, keep Shelby, OH failure-only, exclude the Newport probe and Attempts 1–2, and rebuild national accounting exactly once. If the official merge crosses approximately 2,000 as expected, stop broad source discovery and begin verification → extraction → ingestion → rating → descriptive wage-growth-gap analysis → mechanism-correlation documentation and dashboard filtering. Regressions remain deferred.
+
 ## 2026-07-23/24 — Aggressive 3×300 Attempt 2 stopped before collection
 
 ### Current State

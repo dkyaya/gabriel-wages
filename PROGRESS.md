@@ -6,6 +6,34 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-23/24 (Aggressive 3×300 Attempt 3 collection completed; merge deferred)
+
+**Did**
+- Started from clean tracked `18c3415aca43fd8db81f39995c7954d49b191d9b`, confirmed required ancestry, and left the unrelated untracked root `package-lock.json` untouched.
+- Revalidated the unchanged 300-row lane hashes `2965bd65…81fee1`, `6057e1c7…3896a7`, and `9934026f…50843a`; all 900 municipality/Census IDs remained unique, disjoint, eligible, and complete for five hints. Attempts 1–2 remain non-mergeable and quarantined.
+- Ran plan-only preflight with zero calls and exactly one authorized four-call stronger gate. No-search and both hosted-search controls returned ID/text/tokens; the Newport probe parsed with three leads and remains quarantined.
+- Ran three offline dry runs; each passed 300 compact prompts, 300/300 hints, exact identities and guardrails, adaptive `3/5/15/10/25/2`, terminal dry timing, and no backend call.
+- Ran exactly three fresh, isolated, internally serialized Attempt 3 lanes with lane-local exports. Lane 1 completed 299 parseable, 214 positive, 85 empty, one outer-timeout failure, and 548 leads in 9,423.437 seconds. Lane 2 completed 300 parseable, 200 positive, 100 empty, zero failures, and 456 leads in 8,251.981 seconds. Lane 3 completed 300 parseable, 177 positive, 123 empty, zero failures, and 385 leads in 7,622.049 seconds.
+- Combined collection is 900 attempted, 899 parseable, 591 positive, 308 empty, one failure-only, zero stopped, and 1,389 unverified leads. Parallel wall time was 9,422.628 seconds (2h37m02.628s), or 343.853 attempted rows/hour.
+- Re-ran the offline auditor with an Attempt 3 manifest because the committed planning manifest points to Attempt 1 roots. It validates all hashes, all three byte-identical lane-local exports, zero completed-ID overlap, and classifies every lane `completed_merge_eligible`; recommendation is `merge_all_lanes`.
+
+**Decisions and why**
+- Use the authorized conservative health fallback because the runner does not incrementally flush row timing or console output. Lane 2 began 8m55s after Lane 1; Lane 3 began 13m00s after Lane 2. Both predecessors survived well beyond the two-timeout collapse window; terminal results later confirmed 299 and 300 parseable rows.
+- Keep Shelby, OH (`outer_timeout`) failure-only and outside successful coverage in a later merge.
+- Stop before serial accounting despite the clean audit. Official totals remain 1,537 covered, 1,267 positive, 270 empty, 27 failure-only, and 3,347 queue rows.
+
+**Surprises/breakage**
+- The requested ten-parseable live gate could not be measured exactly because terminal statuses are written only after an entire lane returns; the prompt-authorized time/process fallback was required.
+- Lane 1's one 90-second outer timeout triggered one backoff and the lane recovered. No connection-collapse stop occurred.
+- Lane 3, though launched last, completed before Lane 1; all outputs remained isolated.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Seven compiles, 7 synthetic parallel tests, 26 mocked/no-network direct-SDK tests, 12 prompt tests, 60 ingestion tests, schema validation, coverage audit, export/overlap/quarantine/protected/accounting/secret checks, and diff checks passed. Apart from the exactly authorized stronger preflight/probe and three live lanes, no external call occurred. No independent URL verification, ingestion, `gabriel.codify`, accounting promotion, wage-gap calculation/claim, causal claim, regression, remote action, or push occurred.
+
+**Next steps**
+1. Do not resume any lane; all three are complete.
+2. Under separate explicit authorization, re-audit Attempt 3 and run exactly one serial accounting merge for all three lanes, preserving Shelby as failure-only and excluding the Newport probe and Attempts 1–2.
+3. If the later official merge crosses approximately 2,000, pause broad scouting and begin verification → extraction → ingestion → rating → descriptive wage-growth-gap analysis → mechanism documentation and dashboard filtering.
+
 ## 2026-07-23/24 (Aggressive 3×300 Attempt 2 stopped at stronger preflight)
 
 **Did**
