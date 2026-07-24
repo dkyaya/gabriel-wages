@@ -10,6 +10,7 @@ import hashlib
 import json
 import tempfile
 from pathlib import Path
+from unittest.mock import patch
 
 import httpx
 
@@ -114,6 +115,8 @@ def planner_args(
         exclude_verified_ledger_csv="",
         fill_with_held_after_scheduled=False,
         balance_lanes=False,
+        capacity_only_plan=False,
+        allow_reroute_already_verified=False,
         priority_scope=priority_scope,
         state_scope="",
         plan_only=True,
@@ -278,6 +281,177 @@ def test_option_b_remainder_excludes_round1_and_balances() -> None:
         assert manifest["excluded_verification_ids"] == 2250
 
 
+def write_synthetic_queue_file(path: Path, row_count: int) -> None:
+    entries = [
+        (
+            f"BULK-{index:05d}",
+            (
+                "https://bulk-00001.invalid/source.pdf#duplicate"
+                if index == 2
+                else f"https://bulk-{index:05d}.invalid/source.pdf"
+            ),
+            "high_priority_later_verify",
+        )
+        for index in range(1, row_count + 1)
+    ]
+    rows = synthetic_queue(entries)
+    planner.write_csv(path, rows, list(rows[0]))
+
+
+def prepare_synthetic_bulk(
+    *,
+    queue_path: Path,
+    output_dir: Path,
+    row_count: int,
+) -> dict[str, object]:
+    write_synthetic_queue_file(queue_path, row_count)
+    args = planner_args(
+        output_dir,
+        profile="bulk_2x2000",
+        priority_scope="future_unverified",
+    )
+    args.candidate_queue_csv = str(queue_path)
+    args.capacity_only_plan = True
+    args.balance_lanes = True
+    with patch.object(
+        planner,
+        "load_local_enrichment",
+        return_value=(synthetic_universe(), {"MA": 2.5}),
+    ):
+        return planner.prepare(args)
+
+
+def test_bulk_2x2000_profile_and_balancing() -> None:
+    with tempfile.TemporaryDirectory(prefix="verification_bulk_plan_") as temporary:
+        root = Path(temporary)
+        full = prepare_synthetic_bulk(
+            queue_path=root / "queue_4000.csv",
+            output_dir=root / "round_4000",
+            row_count=4000,
+        )
+        assert [len(lane) for lane in full["lanes"]] == [2000, 2000]
+        full_manifest = json.loads(
+            (root / "round_4000" / "verification_round_manifest.json").read_text()
+        )
+        assert full_manifest["profile"] == "bulk_2x2000"
+        assert full_manifest["num_lanes"] == 2
+        assert full_manifest["batch_size_per_lane"] == 2000
+        assert full_manifest["round_capacity"] == 4000
+        assert full_manifest["planned_candidate_rows"] == 4000
+        assert full_manifest["profile_intended_use"] == "future_routing_only_bulk"
+        assert full_manifest["concurrency_per_lane"] == 8
+        assert full_manifest["write_content_samples"] is False
+        group_lanes: dict[str, set[int]] = {}
+        for lane_number, lane in enumerate(full["lanes"], start=1):
+            for row in lane:
+                group_lanes.setdefault(
+                    str(row["duplicate_source_group_id"]), set()
+                ).add(lane_number)
+        assert max(len(lanes) for lanes in group_lanes.values()) == 1
+
+        under_capacity = prepare_synthetic_bulk(
+            queue_path=root / "queue_3501.csv",
+            output_dir=root / "round_3501",
+            row_count=3501,
+        )
+        assert [len(lane) for lane in under_capacity["lanes"]] == [1751, 1750]
+        ids = [
+            str(row["verification_id"])
+            for lane in under_capacity["lanes"]
+            for row in lane
+        ]
+        assert len(ids) == len(set(ids)) == 3501
+
+        small_queue = root / "queue_10.csv"
+        write_synthetic_queue_file(small_queue, 10)
+        unapproved = planner_args(
+            root / "unapproved_concurrency",
+            profile="bulk_2x2000",
+            priority_scope="future_unverified",
+        )
+        unapproved.candidate_queue_csv = str(small_queue)
+        unapproved.capacity_only_plan = True
+        unapproved.concurrency_per_lane = 10
+        with patch.object(
+            planner,
+            "load_local_enrichment",
+            return_value=(synthetic_universe(), {"MA": 2.5}),
+        ):
+            try:
+                planner.prepare(unapproved)
+            except ValueError as exc:
+                assert "--allow-bulk-concurrency-increase" in str(exc)
+            else:
+                raise AssertionError("Unapproved bulk concurrency increase passed")
+
+        approved = planner_args(
+            root / "approved_concurrency",
+            profile="bulk_2x2000",
+            priority_scope="future_unverified",
+        )
+        approved.candidate_queue_csv = str(small_queue)
+        approved.capacity_only_plan = True
+        approved.concurrency_per_lane = 10
+        approved.allow_bulk_concurrency_increase = True
+        with patch.object(
+            planner,
+            "load_local_enrichment",
+            return_value=(synthetic_universe(), {"MA": 2.5}),
+        ):
+            approved_result = planner.prepare(approved)
+        assert [len(lane) for lane in approved_result["lanes"]] == [5, 5]
+
+
+def test_bulk_current_queue_no_work_and_explicit_reroute_gate() -> None:
+    with tempfile.TemporaryDirectory(prefix="verification_bulk_no_work_") as temporary:
+        root = Path(temporary)
+        guarded_args = planner_args(
+            root / "guarded",
+            profile="bulk_2x2000",
+            priority_scope="future_unverified",
+        )
+        guarded_args.capacity_only_plan = True
+        guarded_args.balance_lanes = True
+        guarded = planner.prepare(guarded_args)
+        assert guarded["no_work"] is True
+        assert guarded["selected"] == []
+        assert guarded["lanes"] == []
+        guarded_manifest = json.loads(
+            (root / "guarded" / "verification_round_manifest.json").read_text()
+        )
+        assert guarded_manifest["status"] == "no_work_current_queue_fully_routed"
+        assert guarded_manifest["planned_candidate_rows"] == 0
+        assert guarded_manifest["remaining_url_bearing_rows_after_exclusion"] == 0
+        assert guarded_manifest["excluded_verified_ledger_rows"] == 4726
+        assert not list((root / "guarded").glob("lane_*_verification_input.csv"))
+        no_work_audit = auditor.audit(
+            root / "guarded" / "verification_round_manifest.json",
+            root / "guarded_audit",
+        )
+        assert no_work_audit["no_work_plan"] is True
+        assert (
+            no_work_audit["merge_recommendation"]
+            == "no_verification_work_required"
+        )
+
+        reroute_args = planner_args(
+            root / "explicit_reroute",
+            profile="bulk_2x2000",
+            priority_scope="future_unverified",
+        )
+        reroute_args.capacity_only_plan = True
+        reroute_args.allow_reroute_already_verified = True
+        reroute = planner.prepare(reroute_args)
+        assert [len(lane) for lane in reroute["lanes"]] == [2000, 2000]
+        reroute_manifest = json.loads(
+            (
+                root / "explicit_reroute" / "verification_round_manifest.json"
+            ).read_text()
+        )
+        assert reroute_manifest["allow_reroute_already_verified"] is True
+        assert reroute_manifest["excluded_verified_ledger_rows"] == 0
+
+
 def write_input(
     path: Path, entries: list[tuple[str, str, str]] | None = None
 ) -> list[dict[str, str]]:
@@ -329,6 +503,46 @@ def test_dry_runner_opens_no_urls_and_audits() -> None:
         assert result["merge_recommendation"] == "do_not_merge_until_resume_or_review"
         assert result["urls_opened"] == 0
         assert result["network_calls"] == 0
+
+
+def test_bulk_2000_row_dry_runs_and_two_lane_audit() -> None:
+    with tempfile.TemporaryDirectory(prefix="verification_bulk_dry_") as temporary:
+        root = Path(temporary)
+        plan = prepare_synthetic_bulk(
+            queue_path=root / "queue.csv",
+            output_dir=root / "round",
+            row_count=4000,
+        )
+        assert [len(lane) for lane in plan["lanes"]] == [2000, 2000]
+        for lane_number in (1, 2):
+            input_path = root / "round" / f"lane_{lane_number}_verification_input.csv"
+            dry_dir = root / "dry" / f"lane_{lane_number}"
+            summary = verifier.run_dry(
+                verifier_args(input_path, dry_dir, dry_run=True)
+            )
+            assert summary["planned_rows"] == 2000
+            assert summary["terminal_rows"] == 2000
+            assert summary["urls_opened"] == 0
+            assert summary["network_calls"] == 0
+            assert not (dry_dir / "candidate_artifacts").exists()
+            with (dry_dir / "plan_timing.csv").open(
+                newline="", encoding="utf-8"
+            ) as handle:
+                assert sum(1 for _ in csv.DictReader(handle)) == 2000
+
+        manifest_path = root / "round" / "verification_round_manifest.json"
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        for lane_number, lane in enumerate(manifest["lanes"], start=1):
+            lane["dry_run_output_dir"] = str(root / "dry" / f"lane_{lane_number}")
+        manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+        audit = auditor.audit(manifest_path, root / "audit")
+        assert audit["lane_count"] == 2
+        assert audit["planned_candidate_rows"] == 4000
+        assert audit["terminal_rows"] == 4000
+        assert audit["lane_classification_counts"] == {"dry_run_passed": 2}
+        assert audit["merge_recommendation"] == "do_not_merge_until_resume_or_review"
+        assert audit["urls_opened"] == 0
+        assert audit["network_calls"] == 0
 
 
 def test_mocked_live_path_and_duplicate_reuse() -> None:
@@ -566,6 +780,61 @@ def test_serial_merge_preserves_rows_and_fields() -> None:
         assert all(row["verification_lane_id"] == "lane_1" for row in merged_rows)
 
 
+def test_two_lane_serial_merge_preserves_all_rows() -> None:
+    with tempfile.TemporaryDirectory(prefix="verification_two_lane_merge_") as temporary:
+        root = Path(temporary)
+        lane_1, audit_1 = write_synthetic_merge_lane(
+            root,
+            "lane_1",
+            entries=[
+                ("T1-A", "https://two-lane.invalid/a", "high_priority_later_verify"),
+                ("T1-B", "https://two-lane.invalid/b", "high_priority_later_verify"),
+            ],
+        )
+        lane_2, audit_2 = write_synthetic_merge_lane(
+            root,
+            "lane_2",
+            entries=[
+                ("T2-A", "https://two-lane.invalid/c", "high_priority_later_verify"),
+                ("T2-B", "https://two-lane.invalid/d", "high_priority_later_verify"),
+            ],
+        )
+        round_id = "SYNTHETIC-TWO-LANE-MERGE"
+        manifest_path = root / "manifest.json"
+        audit_path = root / "audit.json"
+        manifest_path.write_text(
+            json.dumps({"round_id": round_id, "lanes": [lane_1, lane_2]}),
+            encoding="utf-8",
+        )
+        audit_path.write_text(
+            json.dumps(
+                synthetic_merge_audit(
+                    round_id, [lane_1, lane_2], [audit_1, audit_2]
+                )
+            ),
+            encoding="utf-8",
+        )
+        summary = merger.merge(
+            manifest_path=manifest_path,
+            audit_summary_path=audit_path,
+            output_dir=root / "merged",
+            round_id=round_id,
+            merge_id="SYNTHETIC-TWO-LANE-MERGE-ID",
+            merged_at="2026-07-24T00:00:00Z",
+            write_latest=False,
+        )
+        _, rows = merger.read_csv(
+            root / "merged" / merger.ROUND_LEDGER_NAME
+        )
+        assert summary["ledger_rows"] == len(rows) == 4
+        assert {row["verification_lane_id"] for row in rows} == {
+            "lane_1",
+            "lane_2",
+        }
+        assert len({row["verification_id"] for row in rows}) == 4
+        assert len({row["candidate_queue_row_id"] for row in rows}) == 4
+
+
 def test_serial_merge_rejects_duplicate_pending_and_ineligible() -> None:
     with tempfile.TemporaryDirectory(prefix="verification_merge_gate_test_") as temporary:
         root = Path(temporary)
@@ -746,9 +1015,13 @@ def main() -> int:
         test_scope_controls,
         test_large_profiles,
         test_option_b_remainder_excludes_round1_and_balances,
+        test_bulk_2x2000_profile_and_balancing,
+        test_bulk_current_queue_no_work_and_explicit_reroute_gate,
         test_dry_runner_opens_no_urls_and_audits,
+        test_bulk_2000_row_dry_runs_and_two_lane_audit,
         test_mocked_live_path_and_duplicate_reuse,
         test_serial_merge_preserves_rows_and_fields,
+        test_two_lane_serial_merge_preserves_all_rows,
         test_serial_merge_rejects_duplicate_pending_and_ineligible,
         test_serial_merge_builds_cumulative_latest_without_losing_prior_round,
     ]

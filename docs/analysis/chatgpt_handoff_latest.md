@@ -6,6 +6,36 @@ Last updated: `2026-07-24`
 
 ---
 
+## 2026-07-24 — Future 2×2000 URL-routing profile is ready; current queue has no work
+
+### Current State
+
+- **Repository gate:** work began at clean tracked `e028432c3fd00117d9419ace6cd1ca36e4320f5d`, all requested ancestry is present, and the unrelated untracked root `package-lock.json` remains untouched.
+- **Completed current queue:** the durable cumulative ledger still covers exactly 4,726/4,726 URL-bearing candidate identities. Reachable/reused remains 3,750 (79.3483%); no current URL-routing work remains.
+- **Future bulk profile:** `scripts/prepare_scaled_verification_batches.py` now supports `bulk_2x2000`: two lanes, at most 2,000 rows each, 4,000 total capacity, concurrency eight, 20/8/15-second timeouts, five redirects, 10 MiB, disabled samples, duplicate-aware balancing, and routing-only purpose metadata.
+- **Fail-closed rerun guard:** against the canonical queue, the planner automatically applies `verified_source_routing_ledger_cumulative.csv` unless the operator explicitly supplies `--allow-reroute-already-verified`. With all identities excluded it writes a zero-row sentinel and no lane CSV. Bulk concurrency above eight requires `--allow-bulk-concurrency-increase` and cannot exceed 12.
+- **Current no-work proof:** [the no-work plan](future_2x2000_current_queue_no_work_plan_2026-07-24.md) selects zero rows, creates zero lane inputs, opens zero URLs, and audits as `no_verification_work_required`.
+- **Runner/audit/merge:** the verifier already provided incremental atomic checkpoints, bounded memory, resume/skip, terminal status, duplicate reuse, and lane-local metadata safeguards, so it did not change. The auditor now checks missing/out-of-lane live artifacts and recognizes zero-lane sentinels. The cumulative merge was already lane-count agnostic and strict about prior overlap, so it did not change.
+- **Synthetic validation:** two 2,000-row lanes, a balanced 1,751/1,750 under-capacity plan, two complete 2,000-row dry ledgers, two-lane audit and merge, duplicate preservation, current-queue no-work, and explicit reroute opt-in all pass. The suite has 14 checks and uses mock transport only.
+- **Dashboard:** full routing remains 4,726/4,726. New fields say `bulk_2x2000` is available for future unrouted queues, the current bulk rerun is `not_needed`, and current unrouted rows are zero.
+- **Boundary:** no URL was opened and no live verification, network/API/model/hosted-search/scout call, download, scout-accounting change, ingestion, codification, wage extraction, gap calculation/claim, causal claim, regression, remote action, or push occurred.
+
+### Interpretation and limitations
+
+The 2×2000 profile is appropriate only for lightweight bounded routing. It is
+not a scale recommendation for content triage, document download, PDF parsing,
+OCR, source rating, employer/unit review, ingestion, codification, or wage
+work. A failed 2,000-row lane also creates a larger resume/audit unit than the
+proven 3×1000 fallback.
+
+### Next Move
+
+Use [the operating procedure](future_2x2000_verification_operating_procedure_2026-07-24.md)
+and live/merge templates only for a future queue with new unrouted identities
+and separate authorization. For the current queue, proceed instead to an
+offline 500–1,000-row content-triage and extraction-readiness framework.
+Handle the 261 oversized routing outcomes in a separate bounded plan.
+
 ## 2026-07-24 — Full candidate URL routing is durably merged
 
 ### Current State

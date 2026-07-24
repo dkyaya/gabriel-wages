@@ -29,6 +29,13 @@ DEFAULT_UNIVERSE = ROOT / "docs" / "analysis" / "national_municipality_universe.
 DEFAULT_YIELD = (
     ROOT / "docs" / "analysis" / "scout_yield_learning_by_state_2026-07-22.csv"
 )
+DEFAULT_CUMULATIVE_LEDGER = (
+    ROOT
+    / "docs"
+    / "analysis"
+    / "verification_ledgers"
+    / "verified_source_routing_ledger_cumulative.csv"
+)
 SCHEDULED_BUCKETS = {
     "high_priority_later_verify": "high",
     "medium_priority_later_verify": "medium",
@@ -43,10 +50,33 @@ HOLD_BUCKETS = {
 DUPLICATE_BUCKET = "likely_duplicate_hold"
 PRIORITY_ORDER = {"high": 0, "medium": 1, "low": 2, "held": 3}
 VERIFICATION_PROFILES = {
-    "conservative_250": {"num_lanes": 3, "batch_size": 250},
-    "standard_500": {"num_lanes": 3, "batch_size": 500},
-    "aggressive_750": {"num_lanes": 3, "batch_size": 750},
-    "max_1000": {"num_lanes": 3, "batch_size": 1000},
+    "conservative_250": {
+        "num_lanes": 3,
+        "batch_size": 250,
+        "intended_use": "routing_only_low_risk",
+    },
+    "standard_500": {
+        "num_lanes": 3,
+        "batch_size": 500,
+        "intended_use": "routing_only_standard",
+    },
+    "aggressive_750": {
+        "num_lanes": 3,
+        "batch_size": 750,
+        "intended_use": "routing_only_scaled",
+    },
+    "max_1000": {
+        "num_lanes": 3,
+        "batch_size": 1000,
+        "intended_use": "routing_only_high_throughput_fallback",
+    },
+    "bulk_2x2000": {
+        "num_lanes": 2,
+        "batch_size": 2000,
+        "intended_use": "future_routing_only_bulk",
+        "initial_concurrency_per_lane": 8,
+        "operator_approved_concurrency_range": "10-12",
+    },
 }
 DEFAULT_CONCURRENCY = 8
 DEFAULT_TIMEOUT = 20.0
@@ -281,6 +311,8 @@ def eligible_for_scope(
         return disposition == "scheduled" and priority == priority_scope
     if priority_scope == "remainder_all":
         return True
+    if priority_scope == "future_unverified":
+        return True
     if priority_scope != "all":
         raise ValueError(f"Unsupported priority scope: {priority_scope}")
     if disposition == "scheduled":
@@ -466,6 +498,128 @@ analysis-ready stages remain distinct.
 """
 
 
+def write_no_work_plan(
+    *,
+    args: argparse.Namespace,
+    queue_path: Path,
+    output_dir: Path,
+    inventory_before_exclusion: list[dict[str, object]],
+    inventory_after_exclusion: list[dict[str, object]],
+    excluded_ledger_path: Path | None,
+    excluded_ledger_rows: int,
+    excluded_queue_ids: set[str],
+    excluded_verification_ids: set[str],
+) -> dict[str, object]:
+    """Write a fail-closed sentinel when a queue has no unrouted URL rows."""
+
+    requested = args.batch_size * args.num_lanes
+    manifest: dict[str, object] = {
+        "schema_version": "2.1.0",
+        "round_id": args.round_id,
+        "plan_type": "scaled_candidate_source_verification_no_work",
+        "status": "no_work_current_queue_fully_routed",
+        "created_date": date.today().isoformat(),
+        "candidate_queue_csv": queue_path.as_posix(),
+        "candidate_queue_sha256": sha256_file(queue_path),
+        "total_url_bearing_candidate_rows": len(inventory_before_exclusion),
+        "total_url_bearing_candidate_rows_before_exclusion": len(
+            inventory_before_exclusion
+        ),
+        "remaining_url_bearing_rows_after_exclusion": len(
+            inventory_after_exclusion
+        ),
+        "remaining_url_bearing_rows_unselected": len(inventory_after_exclusion),
+        "excluded_verified_ledger_csv": (
+            excluded_ledger_path.as_posix() if excluded_ledger_path else ""
+        ),
+        "excluded_verified_ledger_sha256": (
+            sha256_file(excluded_ledger_path) if excluded_ledger_path else ""
+        ),
+        "excluded_verified_ledger_rows": excluded_ledger_rows,
+        "excluded_candidate_queue_row_ids": len(excluded_queue_ids),
+        "excluded_verification_ids": len(excluded_verification_ids),
+        "eligible_rows_in_requested_scope": 0,
+        "planned_candidate_rows": 0,
+        "round_capacity": requested,
+        "under_capacity_rows": requested,
+        "selected_scheduled_rows": 0,
+        "selected_non_scheduled_rows": 0,
+        "profile": args.profile,
+        "profile_intended_use": VERIFICATION_PROFILES[args.profile][
+            "intended_use"
+        ],
+        "batch_size_per_lane": args.batch_size,
+        "num_lanes": args.num_lanes,
+        "concurrency_per_lane": args.concurrency_per_lane,
+        "verification_timeout_seconds": args.verification_timeout,
+        "connect_timeout_seconds": 8,
+        "read_timeout_seconds": 15,
+        "max_redirects": DEFAULT_MAX_REDIRECTS,
+        "max_bytes": args.max_bytes,
+        "write_content_samples": False,
+        "priority_scope": args.priority_scope,
+        "capacity_only_plan": args.capacity_only_plan,
+        "allow_reroute_already_verified": args.allow_reroute_already_verified,
+        "allow_bulk_concurrency_increase": args.allow_bulk_concurrency_increase,
+        "candidate_stage_boundary": (
+            "no work selected; current URL-bearing identities already have "
+            "durable routing outcomes"
+        ),
+        "network_calls": 0,
+        "urls_opened": 0,
+        "lanes": [],
+    }
+    write_json(output_dir / "verification_round_manifest.json", manifest)
+    audit = f"""# Verification Round Input Audit — {args.round_id}
+
+## No-work sentinel
+
+- Canonical queue: `{queue_path.as_posix()}`
+- Queue SHA-256: `{sha256_file(queue_path)}`
+- URL-bearing queue rows before exclusion: {len(inventory_before_exclusion):,}
+- Durable routing ledger: `{excluded_ledger_path.as_posix() if excluded_ledger_path else 'none'}`
+- Durable ledger identities excluded: {excluded_ledger_rows:,}
+- Unrouted URL-bearing rows after exclusion: {len(inventory_after_exclusion):,}
+- Selected rows: 0
+- Profile capacity: {args.num_lanes} × {args.batch_size:,} = {requested:,}
+- Lane input files created: 0
+- URLs opened: 0
+- Network calls: 0
+
+**NO WORK REQUIRED.** The current queue is fully represented in the durable
+routing ledger. This sentinel deliberately creates no live lane input. Future
+use requires a queue with new/unrouted candidate identities, or an explicit
+`--allow-reroute-already-verified` operator decision.
+"""
+    (output_dir / "verification_round_input_audit.md").write_text(
+        audit, encoding="utf-8"
+    )
+    (output_dir / "verification_live_commands.md").write_text(
+        f"""# Future Live Verification Commands — {args.round_id}
+
+No live commands were generated because the plan selected zero unrouted rows.
+Do not open the current queue again. Prepare a new plan only when new candidate
+URL identities exist or rerouting is explicitly authorized.
+""",
+        encoding="utf-8",
+    )
+    (output_dir / "verification_merge_handoff.md").write_text(
+        f"""# Verification Merge Handoff — {args.round_id}
+
+No merge is required. This is a zero-row no-work sentinel with no lanes and no
+verification outcomes. A future nonempty round must pass its own lane audit
+before any serial cumulative-ledger merge.
+""",
+        encoding="utf-8",
+    )
+    return {
+        "inventory": inventory_after_exclusion,
+        "selected": [],
+        "lanes": [],
+        "no_work": True,
+    }
+
+
 def build_full_backlog(
     *,
     output_dir: Path,
@@ -603,6 +757,44 @@ def prepare(args: argparse.Namespace) -> dict[str, object]:
         args, "fill_with_held_after_scheduled", False
     )
     args.balance_lanes = getattr(args, "balance_lanes", False)
+    args.capacity_only_plan = getattr(args, "capacity_only_plan", False)
+    args.allow_reroute_already_verified = getattr(
+        args, "allow_reroute_already_verified", False
+    )
+    args.allow_bulk_concurrency_increase = getattr(
+        args, "allow_bulk_concurrency_increase", False
+    )
+    if args.exclude_verified_ledger_csv and args.allow_reroute_already_verified:
+        raise ValueError(
+            "--exclude-verified-ledger-csv and "
+            "--allow-reroute-already-verified are mutually exclusive"
+        )
+    if (
+        args.profile == "bulk_2x2000"
+        and not args.exclude_verified_ledger_csv
+        and not args.allow_reroute_already_verified
+        and queue_path.resolve() == DEFAULT_QUEUE.resolve()
+        and DEFAULT_CUMULATIVE_LEDGER.is_file()
+    ):
+        # Fail closed for the current canonical queue. A future queue path may
+        # legitimately have no prior ledger; the current queue may not be
+        # rerouted accidentally.
+        args.exclude_verified_ledger_csv = str(DEFAULT_CUMULATIVE_LEDGER)
+    if args.profile == "bulk_2x2000":
+        args.dedupe_fetch_plan = True
+        if args.num_lanes > 2:
+            raise ValueError("bulk_2x2000 supports at most two lanes")
+        if args.batch_size > 2000:
+            raise ValueError("bulk_2x2000 supports at most 2,000 rows per lane")
+        if args.concurrency_per_lane > 8:
+            if (
+                not args.allow_bulk_concurrency_increase
+                or args.concurrency_per_lane > 12
+            ):
+                raise ValueError(
+                    "bulk_2x2000 concurrency above 8 requires "
+                    "--allow-bulk-concurrency-increase and may not exceed 12"
+                )
     if args.priority_scope == "remainder_all":
         if not args.exclude_verified_ledger_csv:
             raise ValueError(
@@ -726,6 +918,18 @@ def prepare(args: argparse.Namespace) -> dict[str, object]:
         ]
     )
     if not selected:
+        if args.capacity_only_plan or args.profile == "bulk_2x2000":
+            return write_no_work_plan(
+                args=args,
+                queue_path=queue_path,
+                output_dir=output_dir,
+                inventory_before_exclusion=inventory_before_exclusion,
+                inventory_after_exclusion=inventory,
+                excluded_ledger_path=excluded_ledger_path,
+                excluded_ledger_rows=excluded_ledger_rows,
+                excluded_queue_ids=excluded_queue_ids,
+                excluded_verification_ids=excluded_verification_ids,
+            )
         raise ValueError("No candidate rows match the requested verification scope")
 
     if args.round_id.startswith("FULL-BACKLOG"):
@@ -745,7 +949,7 @@ def prepare(args: argparse.Namespace) -> dict[str, object]:
     allow_under_capacity = (
         args.priority_scope == "remainder_all"
         and args.fill_with_held_after_scheduled
-    )
+    ) or args.capacity_only_plan
     if len(selected) < requested and not allow_under_capacity:
         raise ValueError(
             f"Requested {requested} rows but only {len(selected)} match the scope"
@@ -823,7 +1027,7 @@ def prepare(args: argparse.Namespace) -> dict[str, object]:
         args.verification_timeout,
     )
     manifest = {
-        "schema_version": "2.0.0",
+        "schema_version": "2.1.0",
         "round_id": args.round_id,
         "plan_type": "scaled_candidate_source_verification",
         "status": "planned_not_run",
@@ -858,6 +1062,10 @@ def prepare(args: argparse.Namespace) -> dict[str, object]:
             for row in selected_rows
         ),
         "profile": args.profile,
+        "profile_intended_use": profile["intended_use"],
+        "profile_operator_approved_concurrency_range": profile.get(
+            "operator_approved_concurrency_range", ""
+        ),
         "batch_size_per_lane": args.batch_size,
         "num_lanes": args.num_lanes,
         "concurrency_per_lane": args.concurrency_per_lane,
@@ -870,6 +1078,9 @@ def prepare(args: argparse.Namespace) -> dict[str, object]:
         "dedupe_fetch_plan": args.dedupe_fetch_plan,
         "fill_with_held_after_scheduled": args.fill_with_held_after_scheduled,
         "balance_lanes": args.balance_lanes,
+        "capacity_only_plan": args.capacity_only_plan,
+        "allow_reroute_already_verified": args.allow_reroute_already_verified,
+        "allow_bulk_concurrency_increase": args.allow_bulk_concurrency_increase,
         "runtime_estimate": estimate,
         "priority_scope": args.priority_scope,
         "include_held": args.include_held,
@@ -924,6 +1135,7 @@ def prepare(args: argparse.Namespace) -> dict[str, object]:
 - Round capacity / under-capacity rows: {requested:,} / {requested - len(selected_rows):,}
 - Remaining URL-bearing rows left unselected: {len(inventory) - len(selected_rows):,}
 - Profile: `{args.profile}`
+- Profile intended use: `{profile['intended_use']}`
 - Lanes: {args.num_lanes}
 - Maximum rows per lane: {args.batch_size}
 - Actual lane rows: `{json.dumps([len(lane) for lane in lanes])}`
@@ -947,6 +1159,9 @@ def prepare(args: argparse.Namespace) -> dict[str, object]:
 - Exact duplicate URL groups in selected round: {sum(count > 1 for count in selected_groups.values()):,}
 - Selected duplicate rows eligible for reuse: {sum(count - 1 for count in selected_groups.values() if count > 1):,}
 - Selected duplicate groups split across lanes: {sum(len(lane_numbers) > 1 for lane_numbers in selected_group_lanes.values()):,}
+- Capacity-only underfill allowed: {args.capacity_only_plan}
+- Explicit reroute authorization supplied: {args.allow_reroute_already_verified}
+- Bulk concurrency increase authorization supplied: {args.allow_bulk_concurrency_increase}
 
 ## Gate
 
@@ -1027,8 +1242,40 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--priority-scope",
-        choices=["scheduled", "high", "medium", "low", "all", "remainder_all"],
+        choices=[
+            "scheduled",
+            "high",
+            "medium",
+            "low",
+            "all",
+            "remainder_all",
+            "future_unverified",
+        ],
         default="scheduled",
+    )
+    parser.add_argument(
+        "--capacity-only-plan",
+        action="store_true",
+        help=(
+            "Allow an under-capacity or zero-row sentinel plan; never fills "
+            "capacity by rerouting excluded identities."
+        ),
+    )
+    parser.add_argument(
+        "--allow-reroute-already-verified",
+        action="store_true",
+        help=(
+            "Explicitly permit planning rows that may already have routing "
+            "outcomes. Never implied by a profile."
+        ),
+    )
+    parser.add_argument(
+        "--allow-bulk-concurrency-increase",
+        action="store_true",
+        help=(
+            "For bulk_2x2000 only, acknowledge operator approval to raise "
+            "per-lane concurrency above 8, with a hard maximum of 12."
+        ),
     )
     parser.add_argument(
         "--state-scope",

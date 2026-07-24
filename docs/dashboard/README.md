@@ -191,6 +191,16 @@ and extraction-readiness triage, not another broad URL-routing round.
 Ingestion, codification, wage extraction, and wage-gap analysis remain not
 started.
 
+The offline planner also exposes `bulk_2x2000` for future candidate-queue
+expansions: two routing-only lanes with at most 2,000 rows each, concurrency
+eight per lane, 20/8/15-second total/connect/read limits, five redirects,
+10 MiB, and content samples disabled. This is not a pending round for the
+current queue. A capacity-only plan against the current cumulative ledger
+selects zero rows and creates no lane input, while rerouting durable identities
+requires explicit `--allow-reroute-already-verified` operator intent. Keep
+3×1000 as the lower-risk routing fallback and use smaller lanes for content
+triage, downloads, parsing, extraction, or rating.
+
 ## Run and build locally
 
 The dashboard requires Node.js 20.19 or newer. With the existing locked dependencies:

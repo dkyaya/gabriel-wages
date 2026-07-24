@@ -6,6 +6,33 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-24 (Future 2×2000 routing-only verification profile prepared)
+
+**Did**
+- Started from clean tracked `e028432c3fd00117d9419ace6cd1ca36e4320f5d`, confirmed all required ancestry, and left the unrelated untracked root `package-lock.json` untouched.
+- Added a fail-closed `bulk_2x2000` profile: two lanes, at most 2,000 rows each, 4,000 total capacity, concurrency eight, 20/8/15-second total/connect/read limits, five redirects, 10 MiB, disabled samples, duplicate-aware balancing, and routing-only stage language.
+- Added current-queue rerun protection. The canonical queue automatically uses the cumulative ledger unless rerouting is explicitly authorized; a fully routed queue emits a zero-row sentinel with no lane inputs. Concurrency above eight requires a separate bulk acknowledgement and is capped at 12.
+- Confirmed the verifier already has incremental atomic checkpoints, bounded row state, terminal outcomes, resume/skip-completed support, duplicate reuse, lane-local sanitized metadata, and disabled content saving; no verifier change was needed. Tightened the auditor to validate lane-local artifact paths and recognize zero-lane no-work plans. Existing two-lane cumulative merge logic required no change.
+- Added synthetic 4,000-row 2,000/2,000 planning, 3,501-row 1,751/1,750 balancing, two 2,000-row dry runs, two-lane audit/merge, no-work, and explicit-reroute tests. All 14 tests pass offline with mocked HTTP only.
+- Generated the current-queue no-work plan: 4,726 cumulative identities excluded, zero unrouted/selected rows, zero lane inputs, zero URL/network calls, and `no_verification_work_required`.
+- Preserved dashboard `full_url_routing_merged` at 4,726/4,726 and added future-profile availability/current-rerun-not-needed fields. Added the operating procedure and reusable live/merge templates.
+
+**Decisions and why**
+- Treat 2×2000 as a future URL-routing-only capability, not current pending work. Complete routing must fail closed rather than quietly rerun durable identities.
+- Keep 3×1000 as the lower-risk future routing fallback. Use smaller batches when content, downloads, parsing, review, extraction, rating, ingestion, or wage work begins.
+- Keep initial concurrency at eight. Larger lanes increase resume, artifact-audit, and correlated-failure burden even though prior routing throughput makes them feasible.
+
+**Surprises/breakage**
+- The verifier and cumulative merge tools were already lane-count agnostic and had the needed checkpoint/resume/cumulative protections. Only planner guards, auditor artifact/no-work handling, tests, and status documentation required changes.
+- One local secret-scan command initially had a shell quoting error; it was corrected and the scan passed. It made no network call and changed no artifact.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Six compiles, 14 offline/mock verification tests, the exact no-work rebuild and audit, 14 dashboard JSON parses, frontend production build, schema validation, 60 ingestion tests, protected/accounting/cumulative/corpus hashes, secret scan, and diff checks passed. No URL was opened; no live verification, network/API/model/hosted-search/scout call, scout-accounting mutation, source download, ingestion, `gabriel.codify`, wage extraction, wage-gap work, causal claim, regression, remote action, or push occurred.
+
+**Next steps**
+1. Move to the substantive 500–1,000-source content-triage and extraction-readiness framework for the already routed current queue.
+2. Keep `bulk_2x2000` dormant until a future candidate queue contains new unrouted URLs and receives separate live authorization.
+3. Design oversized-source handling for the 261 cumulative `too_large` outcomes separately from ordinary content triage.
+
 ## 2026-07-24 (Full candidate URL-routing ledger completed)
 
 **Did**

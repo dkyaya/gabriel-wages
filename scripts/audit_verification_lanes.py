@@ -76,6 +76,9 @@ def classify_lane(lane: dict[str, object]) -> dict[str, object]:
         "verification_status_counts": {},
         "content_type_distribution": {},
         "bytes_read_distribution": {},
+        "artifact_path_rows": 0,
+        "missing_artifact_paths": 0,
+        "out_of_lane_artifact_paths": 0,
     }
     if not input_path.exists():
         base.update(classification="missing_artifacts", detail="input_csv_missing")
@@ -84,6 +87,13 @@ def classify_lane(lane: dict[str, object]) -> dict[str, object]:
         base.update(classification="failed", detail="input_hash_mismatch")
         return base
     input_rows = read_csv(input_path)
+    if len(input_rows) != int(lane["expected_rows"]):
+        base.update(
+            classification="failed",
+            detail="input_row_count_mismatch",
+            input_rows=len(input_rows),
+        )
+        return base
     input_ids = [row["verification_id"] for row in input_rows]
     if len(input_ids) != len(set(input_ids)):
         base.update(
@@ -138,6 +148,19 @@ def classify_lane(lane: dict[str, object]) -> dict[str, object]:
         for row in ledger_rows
     )
     byte_sizes = Counter(byte_bucket(row.get("bytes_read", "")) for row in ledger_rows)
+    artifact_paths = [
+        Path(row["artifact_path"])
+        for row in ledger_rows
+        if row.get("artifact_path", "").strip()
+    ]
+    missing_artifacts = sum(not path.is_file() for path in artifact_paths)
+    live_root = live_dir.resolve()
+    out_of_lane_artifacts = 0
+    for path in artifact_paths:
+        try:
+            path.resolve().relative_to(live_root)
+        except ValueError:
+            out_of_lane_artifacts += 1
     base.update(
         {
             "mode": mode,
@@ -163,9 +186,18 @@ def classify_lane(lane: dict[str, object]) -> dict[str, object]:
             "verification_status_counts": dict(sorted(statuses.items())),
             "content_type_distribution": dict(sorted(content_types.items())),
             "bytes_read_distribution": dict(sorted(byte_sizes.items())),
+            "artifact_path_rows": len(artifact_paths),
+            "missing_artifact_paths": missing_artifacts,
+            "out_of_lane_artifact_paths": out_of_lane_artifacts,
         }
     )
-    if duplicate_ids or missing or extra or group_mismatches:
+    if (
+        duplicate_ids
+        or missing
+        or extra
+        or group_mismatches
+        or (mode == "live" and (missing_artifacts or out_of_lane_artifacts))
+    ):
         base.update(classification="failed", detail="identity_or_group_coverage_failure")
     elif mode == "dry_run" and summary.get("status") == "dry_run_passed":
         base.update(
@@ -201,7 +233,14 @@ def audit(manifest_path: Path, output_dir: Path) -> dict[str, object]:
     noncomplete = [
         lane for lane in lanes if lane["classification"] != "completed_merge_eligible"
     ]
-    if complete_count == len(lanes) and not cross_lane_duplicates:
+    no_work_plan = (
+        not lanes
+        and int(manifest.get("planned_candidate_rows", 0)) == 0
+        and str(manifest.get("status", "")).startswith("no_work")
+    )
+    if no_work_plan:
+        recommendation = "no_verification_work_required"
+    elif complete_count == len(lanes) and not cross_lane_duplicates:
         recommendation = "merge_all_verification_lanes"
     elif (
         complete_count > 0
@@ -228,6 +267,7 @@ def audit(manifest_path: Path, output_dir: Path) -> dict[str, object]:
         "round_id": manifest["round_id"],
         "manifest": manifest_path.as_posix(),
         "lane_count": len(lanes),
+        "no_work_plan": no_work_plan,
         "lane_classification_counts": dict(sorted(classes.items())),
         "cross_lane_duplicate_verification_ids": cross_lane_duplicates,
         "planned_candidate_rows": sum(int(lane["expected_rows"]) for lane in lanes),
@@ -237,6 +277,15 @@ def audit(manifest_path: Path, output_dir: Path) -> dict[str, object]:
         "network_calls": sum(int(lane["network_calls"]) for lane in lanes),
         "duplicate_reuse_rows": sum(
             int(lane["duplicate_reuse_rows"]) for lane in lanes
+        ),
+        "artifact_path_rows": sum(
+            int(lane["artifact_path_rows"]) for lane in lanes
+        ),
+        "missing_artifact_paths": sum(
+            int(lane["missing_artifact_paths"]) for lane in lanes
+        ),
+        "out_of_lane_artifact_paths": sum(
+            int(lane["out_of_lane_artifact_paths"]) for lane in lanes
         ),
         "verification_status_counts": dict(sorted(combined_statuses.items())),
         "content_type_distribution": dict(sorted(combined_content_types.items())),
@@ -260,6 +309,9 @@ def audit(manifest_path: Path, output_dir: Path) -> dict[str, object]:
         f"- URLs opened according to summaries: {payload['urls_opened']}",
         f"- Network calls according to summaries: {payload['network_calls']}",
         f"- Duplicate rows reusing in-lane fetches: {payload['duplicate_reuse_rows']}",
+        f"- Nonblank artifact-path rows: {payload['artifact_path_rows']}",
+        f"- Missing artifact paths: {payload['missing_artifact_paths']}",
+        f"- Out-of-lane artifact paths: {payload['out_of_lane_artifact_paths']}",
         f"- Status counts: `{json.dumps(payload['verification_status_counts'], sort_keys=True)}`",
         f"- Content types: `{json.dumps(payload['content_type_distribution'], sort_keys=True)}`",
         f"- Bytes read: `{json.dumps(payload['bytes_read_distribution'], sort_keys=True)}`",

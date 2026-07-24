@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-24T16:32:48Z",
+  "generated_at": "2026-07-24T16:48:42Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -27,7 +27,7 @@
     "A parseable empty candidate list is a completed scout outcome, not proof that no source exists.",
     "Connection-only failures are excluded from discovery coverage and counted separately.",
     "Likely matched-set groups are scheduling leads inferred from scout unit labels, not verified city-cycle matches.",
-    "Verification routing is available for the merged Round 1 subset; content relevance, ingestion, wage extraction, codification, and regression metrics are not yet available project-wide.",
+    "URL-routing outcomes cover the current candidate queue; content relevance, ingestion, wage extraction, codification, and regression metrics are not yet available project-wide.",
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
@@ -78,6 +78,10 @@
   "round2_merge_status": "merged",
   "scheduled_verification_rows_remaining_estimate": 0,
   "full_url_bearing_rows_remaining_estimate": 0,
+  "future_bulk_verification_profile": "bulk_2x2000",
+  "future_bulk_profile_status": "available_for_future_unrouted_candidate_queues",
+  "current_queue_bulk_rerun_status": "not_needed",
+  "current_queue_unrouted_url_bearing_rows": 0,
   "recommended_next_round_id": "NONE-FULL-URL-ROUTING-COMPLETE",
   "recommended_concurrency_per_lane": 8,
   "recommended_timeout_seconds": 20,

@@ -171,7 +171,7 @@ GLOBAL_LIMITATIONS = [
     "A parseable empty candidate list is a completed scout outcome, not proof that no source exists.",
     "Connection-only failures are excluded from discovery coverage and counted separately.",
     "Likely matched-set groups are scheduling leads inferred from scout unit labels, not verified city-cycle matches.",
-    "Verification routing is available for the merged Round 1 subset; content relevance, ingestion, wage extraction, codification, and regression metrics are not yet available project-wide.",
+    "URL-routing outcomes cover the current candidate queue; content relevance, ingestion, wage extraction, codification, and regression metrics are not yet available project-wide.",
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold.",
 ]
@@ -1498,6 +1498,14 @@ def build_verification_status_summary(
             ),
             "scheduled_verification_rows_remaining_estimate": scheduled_remaining,
             "full_url_bearing_rows_remaining_estimate": full_remaining,
+            "future_bulk_verification_profile": "bulk_2x2000",
+            "future_bulk_profile_status": (
+                "available_for_future_unrouted_candidate_queues"
+            ),
+            "current_queue_bulk_rerun_status": (
+                "not_needed" if full_routing_merged else "not_applicable"
+            ),
+            "current_queue_unrouted_url_bearing_rows": full_remaining,
             "recommended_next_round_id": (
                 "NONE-FULL-URL-ROUTING-COMPLETE"
                 if full_routing_merged

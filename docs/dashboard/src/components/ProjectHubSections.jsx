@@ -334,7 +334,7 @@ export function VerificationPipeline({ candidateSummary, readiness, phase, verif
         <strong>{routingMerged ? "Remaining routing estimate:" : "Coverage plan:"}</strong>{" "}
         {routingMerged
           ? fullRouting
-            ? "No URL-bearing queue identities remain unrouted. The next step is content relevance and extraction-readiness triage, not another broad URL-routing round."
+            ? `No URL-bearing queue identities remain unrouted. The next step is content relevance and extraction-readiness triage, not another broad URL-routing round. The ${verificationStatus.future_bulk_verification_profile} profile is reserved for future queues with new unrouted identities.`
             : round2Collected
             ? "Round 2 selected every remaining URL-bearing queue identity; the durable ledger still contains only the 2,250 merged Round 1 rows until a separate serial merge."
             : `${formatNumber(verificationStatus.scheduled_verification_rows_remaining_estimate)} scheduled and ${formatNumber(verificationStatus.full_url_bearing_rows_remaining_estimate)} total URL-bearing rows remain.`
