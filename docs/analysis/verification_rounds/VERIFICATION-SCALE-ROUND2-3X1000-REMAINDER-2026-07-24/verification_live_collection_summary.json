@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "round_id": "VERIFICATION-SCALE-ROUND2-3X1000-REMAINDER-2026-07-24",
+  "collection_status": "completed_audited_not_merged",
+  "completed_at": "2026-07-24T16:08:56Z",
+  "selected_rows": 2476,
+  "terminal_rows": 2476,
+  "url_opens": 2386,
+  "network_calls": 2386,
+  "duplicate_reuse_rows": 90,
+  "reachable_or_reused_total": 1862,
+  "reachable_or_reused_rate": 0.752019,
+  "verification_status_counts": {
+    "blocked_or_forbidden": 202,
+    "connection_error": 7,
+    "duplicate_of_verified_source": 68,
+    "duplicate_same_url_pending": 22,
+    "error": 27,
+    "not_found": 133,
+    "reachable_html": 127,
+    "reachable_http": 2,
+    "reachable_pdf_or_document": 1665,
+    "ssl_error": 14,
+    "timeout": 12,
+    "too_large": 197
+  },
+  "content_type_distribution": {
+    "application/json": 1,
+    "application/octet-stream": 1,
+    "application/pdf": 1921,
+    "application/vnd.openxmlformats-officedocument.wordprocessingml.document": 4,
+    "application/xml": 5,
+    "image/jpeg": 1,
+    "text/html": 457,
+    "text/plain": 2,
+    "text/xml": 2,
+    "unknown": 82
+  },
+  "bytes_read_distribution": {
+    "0": 674,
+    "1MiB_to_10MiB": 744,
+    "1_to_64KiB": 123,
+    "64KiB_to_1MiB": 935
+  },
+  "lane_rows": {
+    "lane_1": 826,
+    "lane_2": 825,
+    "lane_3": 825
+  },
+  "lane_runtime_seconds": {
+    "lane_1": 143.756,
+    "lane_2": 130.393,
+    "lane_3": 113.56
+  },
+  "lane_rows_per_hour": {
+    "lane_1": 20685.094,
+    "lane_2": 22777.341,
+    "lane_3": 26153.526
+  },
+  "combined_wall_seconds": 260.016,
+  "combined_rows_per_hour": 34280.976,
+  "artifact_json_files": 2330,
+  "artifact_total_bytes": 993431,
+  "artifact_max_bytes": 979,
+  "lane_audit_recommendation": "merge_all_verification_lanes",
+  "durable_merge_status": "not_started",
+  "scout_accounting_mutations": 0,
+  "ingestion_status": "not_started",
+  "codify_status": "not_started",
+  "wage_extraction_status": "not_started",
+  "wage_gap_analysis_status": "not_started"
+}

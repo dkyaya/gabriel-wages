@@ -29,6 +29,14 @@ MUNICIPALITY_COVERAGE = (
 )
 STATE_COVERAGE = ROOT / "docs" / "analysis" / "national_scout_coverage_state.csv"
 COUNTY_COVERAGE = ROOT / "docs" / "analysis" / "national_scout_coverage_county.csv"
+ROUND1_ROUTING_LEDGER = (
+    ROOT
+    / "docs"
+    / "analysis"
+    / "verification_ledgers"
+    / "VERIFICATION-SCALE-ROUND1-3X750-2026-07-23"
+    / "verified_source_routing_ledger.csv"
+)
 
 
 def digest(path: Path) -> str:
@@ -103,6 +111,9 @@ def planner_args(
         include_held=include_held,
         include_duplicates=include_duplicates,
         dedupe_fetch_plan=True,
+        exclude_verified_ledger_csv="",
+        fill_with_held_after_scheduled=False,
+        balance_lanes=False,
         priority_scope=priority_scope,
         state_scope="",
         plan_only=True,
@@ -219,6 +230,52 @@ def test_large_profiles() -> None:
             for row in lane
         ]
         assert len(ids_1000) == len(set(ids_1000)) == 3000
+
+
+def test_option_b_remainder_excludes_round1_and_balances() -> None:
+    with tempfile.TemporaryDirectory(prefix="verification_remainder_test_") as temporary:
+        root = Path(temporary)
+        args = planner_args(
+            root / "remainder",
+            profile="max_1000",
+            priority_scope="remainder_all",
+        )
+        args.exclude_verified_ledger_csv = str(ROUND1_ROUTING_LEDGER)
+        args.fill_with_held_after_scheduled = True
+        args.balance_lanes = True
+        result = planner.prepare(args)
+        lanes = result["lanes"]
+        assert [len(lane) for lane in lanes] == [826, 825, 825]
+        selected = [row for lane in lanes for row in lane]
+        assert len(selected) == 2476
+        assert sum(
+            row["candidate_status_before_verification"] == "scheduled"
+            for row in selected
+        ) == 1350
+        assert sum(
+            row["candidate_status_before_verification"] != "scheduled"
+            for row in selected
+        ) == 1126
+        with ROUND1_ROUTING_LEDGER.open(newline="", encoding="utf-8") as handle:
+            prior = list(csv.DictReader(handle))
+        prior_queue_ids = {row["candidate_queue_row_id"] for row in prior}
+        prior_verification_ids = {row["verification_id"] for row in prior}
+        assert not (
+            {str(row["candidate_queue_row_id"]) for row in selected}
+            & prior_queue_ids
+        )
+        assert not (
+            {str(row["verification_id"]) for row in selected}
+            & prior_verification_ids
+        )
+        manifest = json.loads(
+            (root / "remainder" / "verification_round_manifest.json").read_text()
+        )
+        assert manifest["planned_candidate_rows"] == 2476
+        assert manifest["under_capacity_rows"] == 524
+        assert manifest["remaining_url_bearing_rows_unselected"] == 0
+        assert manifest["excluded_candidate_queue_row_ids"] == 2250
+        assert manifest["excluded_verification_ids"] == 2250
 
 
 def write_input(
@@ -606,6 +663,7 @@ def main() -> int:
         test_identity_and_duplicate_groups,
         test_scope_controls,
         test_large_profiles,
+        test_option_b_remainder_excludes_round1_and_balances,
         test_dry_runner_opens_no_urls_and_audits,
         test_mocked_live_path_and_duplicate_reuse,
         test_serial_merge_preserves_rows_and_fields,

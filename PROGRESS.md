@@ -6,6 +6,32 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-24 (Verification Scale Round 2 Option B remainder live collection completed; merge deferred)
+
+**Did**
+- Started from clean tracked `2bab4b02ce801975e6c86612528486d012abd6e7`, confirmed required ancestry, and left the unrelated untracked root `package-lock.json` untouched.
+- Recomputed the candidate remainder by exact identity: the 4,726-row URL-bearing queue minus the 2,250-row durable Round 1 routing ledger leaves exactly 2,476 rows. Option B selected all 1,350 remaining scheduled rows first, then all 1,126 context/insufficient/duplicate/canonical/calibration rows while retaining every original disposition.
+- Extended the offline planner with prior-ledger exclusion, scheduled-first remainder fill, balanced under-capacity lanes, and fail-closed overlap audits. The locked lanes contain 826/825/825 rows, with zero Round 1 queue-ID overlap and zero duplicate verification IDs.
+- All three dry runs passed with 2,476 terminal planned rows and zero URL opens/network calls. Exactly three authorized live lanes then ran with concurrency eight, 20/8/15-second total/connect/read limits, five redirects, 10 MiB, disabled samples, incremental ledgers, and lane-local metadata.
+- Live collection completed 2,476/2,476 terminal rows using 2,386 logical URL opens and 90 duplicate reuses. Outcomes include 1,665 reachable documents, 127 reachable HTML rows, two reachable HTTP rows, 68 successful duplicate reuses, 22 duplicate-pending rows, 202 blocked, 133 not found, 197 too large, 27 generic errors, 14 SSL errors, 12 timeouts, and seven connection errors.
+- The live auditor classifies all three lanes `completed_merge_eligible`, reports zero cross-lane duplicate IDs or accounting mutations, and recommends `merge_all_verification_lanes`. The dashboard labels Round 2 collected but not merged and keeps the cumulative durable merged count at 2,250.
+
+**Decisions and why**
+- Stop before durable merge. The clean auditor recommendation is evidence for a separate serial merge task, not authority to merge in this collection task.
+- Include every lower-disposition remainder row to honor the user-approved Option B universe-wide routing pass, but never reinterpret those dispositions as high-quality or analysis-ready evidence.
+- Preserve the 10 MiB cap and all terminal routing statuses. The 197 oversized rows need a later dedicated handling decision rather than a global live-limit increase.
+
+**Surprises/breakage**
+- Exact subtraction matched the estimate: 2,476 rows remained, so the three 1,000-capacity lanes balanced to 826/825/825 and left 524 capacity slots unused.
+- Round 2’s lower-disposition mix reduced reachable/reused routing to 1,862/2,476 (75.202%) versus Round 1’s 83.911%, while still routing every remaining queue identity.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. The planner tests, dry and live lane audits, schema validation, ingestion tests, dashboard JSON/frontend checks, protected/accounting hashes, identity/artifact/secret checks, and diff checks passed. Apart from the 2,386 explicitly authorized bounded URL calls, no network activity occurred; no API/model/hosted-search call, scout, durable Round 2 merge, scout-accounting mutation, ingestion, `gabriel.codify`, wage extraction, wage-gap work, causal claim, regression, remote action, or push occurred.
+
+**Next steps**
+1. Under separate authorization, re-audit and serially merge the 2,476 eligible Round 2 lane ledgers into the durable verification-routing layer exactly once.
+2. Keep all original candidate dispositions and distinguish routing availability from content/employer/unit verification.
+3. Plan dedicated handling for oversized and other non-reachable outcomes after the Round 2 ledger is merged; keep ingestion, codification, and wage work separate.
+
 ## 2026-07-24 (Verification Scale Round 1 3×750 routing ledger merged)
 
 **Did**

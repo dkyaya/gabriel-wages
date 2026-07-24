@@ -241,6 +241,9 @@ export function ScoutOperationsPanel({ operations, runtime, parallelStatus }) {
 export function VerificationPipeline({ candidateSummary, readiness, phase, verificationStatus }) {
   const candidateRows = candidateSummary.totals.candidate_rows;
   const routingMerged = verificationStatus.verification_phase === "round1_3x750_merged";
+  const round2Collected =
+    verificationStatus.live_verification_status ===
+    "round2_3x1000_remainder_collected_not_merged";
   const stages = [
     ["Candidate lead", formatNumber(candidateRows), "Collected", "scout"],
     [
@@ -262,7 +265,11 @@ export function VerificationPipeline({ candidateSummary, readiness, phase, verif
           <h2 id="verification-title">From discovered lead to analysis-ready evidence</h2>
         </div>
         <StatusPill tone={routingMerged ? "scout" : "future"}>
-          {routingMerged ? "Round 1 3×750 routing merged" : "Live path ready; verification not started"}
+          {round2Collected
+            ? "Round 2 remainder collected; merge pending"
+            : routingMerged
+              ? "Round 1 3×750 routing merged"
+              : "Live path ready; verification not started"}
         </StatusPill>
       </div>
 
@@ -287,6 +294,13 @@ export function VerificationPipeline({ candidateSummary, readiness, phase, verif
             <>
               Round 1 routed {formatNumber(verificationStatus.rows_verified_routing_total)} candidate rows:
               {" "}{formatPercent(verificationStatus.reachable_or_reused_rate)} were reachable or reused.
+              {round2Collected ? (
+                <>
+                  {" "}Round 2 has {formatNumber(verificationStatus.round2_terminal_rows)} terminal,
+                  audited outcomes ({formatPercent(verificationStatus.round2_reachable_or_reused_rate)}
+                  reachable or reused), but those outcomes are not yet in the durable routing ledger.
+                </>
+              ) : null}
               Ingestion, employer/unit content review, wage extraction, and wage-gap analysis have not started.
             </>
           ) : (
@@ -301,7 +315,9 @@ export function VerificationPipeline({ candidateSummary, readiness, phase, verif
       <p className="panel-note">
         <strong>{routingMerged ? "Remaining routing estimate:" : "Coverage plan:"}</strong>{" "}
         {routingMerged
-          ? `${formatNumber(verificationStatus.scheduled_verification_rows_remaining_estimate)} scheduled and ${formatNumber(verificationStatus.full_url_bearing_rows_remaining_estimate)} total URL-bearing rows remain.`
+          ? round2Collected
+            ? "Round 2 selected every remaining URL-bearing queue identity; the durable ledger still contains only the 2,250 merged Round 1 rows until a separate serial merge."
+            : `${formatNumber(verificationStatus.scheduled_verification_rows_remaining_estimate)} scheduled and ${formatNumber(verificationStatus.full_url_bearing_rows_remaining_estimate)} total URL-bearing rows remain.`
           : `${verificationStatus.scheduled_pool_estimated_rounds} nominal rounds cover the scheduled pool; ${verificationStatus.full_backlog_estimated_rounds} cover every URL-bearing candidate row.`}
       </p>
       <p className="panel-note">{readiness.promotion_gate}</p>

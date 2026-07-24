@@ -58,6 +58,12 @@ VERIFICATION_ROUTING_SUMMARY_PATH = (
     / "verification_ledgers"
     / "verified_source_routing_summary_latest.json"
 )
+VERIFICATION_ROUND2_LIVE_STATUS_PATH = (
+    ANALYSIS_DIR
+    / "verification_rounds"
+    / "VERIFICATION-SCALE-ROUND2-3X1000-REMAINDER-2026-07-24"
+    / "verification_live_collection_summary.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -93,6 +99,7 @@ OPTIONAL_PATHS = [
     HYPOTHESIS_TRACKER_PATH,
     HOSTED_SEARCH_RECOMMENDATION_PATH,
     VERIFICATION_ROUTING_SUMMARY_PATH,
+    VERIFICATION_ROUND2_LIVE_STATUS_PATH,
 ]
 
 STATE_NAMES = {
@@ -1369,7 +1376,7 @@ def build_verification_status_summary(
         scheduled_remaining = max(scheduled - merged_rows, 0)
         full_remaining = max(len(queue_rows) - merged_rows, 0)
         reachable_or_reused = int(routing_summary["reachable_or_reused_total"])
-        return {
+        payload = {
             **metadata,
             "stage": "candidate_source_verification_routing",
             "verification_phase": "round1_3x750_merged",
@@ -1449,6 +1456,40 @@ def build_verification_status_summary(
                 "No wage gaps have been calculated.",
             ],
         }
+        if VERIFICATION_ROUND2_LIVE_STATUS_PATH.exists():
+            round2 = read_json(VERIFICATION_ROUND2_LIVE_STATUS_PATH)
+            payload.update(
+                {
+                    "live_verification_status": (
+                        "round2_3x1000_remainder_collected_not_merged"
+                    ),
+                    "verification_live_status": (
+                        "round2_3x1000_remainder_collected_not_merged"
+                    ),
+                    "latest_live_round_id": round2["round_id"],
+                    "round2_selected_rows": int(round2["selected_rows"]),
+                    "round2_terminal_rows": int(round2["terminal_rows"]),
+                    "round2_url_opens": int(round2["url_opens"]),
+                    "round2_reachable_or_reused_total": int(
+                        round2["reachable_or_reused_total"]
+                    ),
+                    "round2_reachable_or_reused_rate": round(
+                        float(round2["reachable_or_reused_rate"]), 6
+                    ),
+                    "round2_duplicate_reuse_rows": int(
+                        round2["duplicate_reuse_rows"]
+                    ),
+                    "round2_lane_audit_recommendation": round2[
+                        "lane_audit_recommendation"
+                    ],
+                    "round2_merge_status": "not_started",
+                    "cumulative_merged_rows_verified_routing_total": merged_rows,
+                    "latest_live_collection_status_source": relative(
+                        VERIFICATION_ROUND2_LIVE_STATUS_PATH
+                    ),
+                }
+            )
+        return payload
     return {
         **metadata,
         "stage": "candidate_source_verification_planning",

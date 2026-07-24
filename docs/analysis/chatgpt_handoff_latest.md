@@ -6,6 +6,36 @@ Last updated: `2026-07-24`
 
 ---
 
+## 2026-07-24 — Verification Scale Round 2 Option B remainder is collected; serial merge pending
+
+### Current State
+
+- **Start and identity boundary:** work began at clean tracked `2bab4b02ce801975e6c86612528486d012abd6e7`. The canonical 4,726-row URL queue was subtracted from the 2,250-row durable Round 1 ledger by `candidate_queue_row_id` and verification identity, leaving exactly 2,476 unique unverified queue rows and no Round 1 overlap.
+- **Option B plan:** all 1,350 remaining scheduled rows were ordered first, followed by 523 context-only, 302 insufficient, 291 likely-duplicate, eight already-canonical, and two calibration-rejected rows. All original dispositions remain unchanged. The balanced lanes are 826/825/825 rows with hashes `ec60e33b9a79ffa7ad0dbabb43b490e3c9b2c338205722a3068269b980826bff`, `1c1e39c09fafd13f1eb4e2f914fc82ba716c0e548dd22a33dec8307788a03a04`, and `2beb6fdb5857a6d8bea9ccee6e03992f7411c257ca86187d56210be92a2bc8fd`.
+- **Dry gates:** all three dry runs completed 2,476 planned terminal rows with zero URL opens/network calls. The dry auditor reports three `dry_run_passed` lanes, complete identity coverage, and the expected non-live merge prohibition.
+- **Live collection:** exactly three authorized lanes ran with concurrency eight, 20/8/15-second total/connect/read limits, five redirects, 10 MiB, disabled content samples, incremental checkpoint ledgers, duplicate reuse, and lane-local metadata. There was no fourth lane, retry, or resume.
+- **Outcomes:** 2,476/2,476 rows are terminal; 2,386 URLs were opened and 90 rows reused an in-lane exact-URL result. The combined ledger records 1,665 reachable documents, 127 reachable HTML rows, two other reachable HTTP rows, 68 successful duplicate reuses, 22 duplicate-pending rows, 202 blocked, 133 not found, 197 too large, 27 generic errors, 14 SSL errors, 12 timeouts, and seven connection errors. Reachable/reused is 1,862/2,476 (75.2019%).
+- **Runtime and artifacts:** live wall time was 260.016 seconds, or 34,280.976 selected rows/hour. Lanes ran 143.756, 130.393, and 113.560 seconds. They produced 2,330 lane-local metadata JSON files totaling 993,431 bytes, with no HTML content samples or full documents.
+- **Audit:** [the result review](verification_scale_round2_3x1000_remainder_live_collection_result_review_2026-07-24.md) records three `completed_merge_eligible` lanes, zero cross-lane duplicate verification IDs, zero accounting mutations, and `merge_all_verification_lanes`.
+- **Dashboard/accounting boundary:** Round 2 is `collected_not_merged`; the cumulative durable merged count remains 2,250. No scout accounting changed. No ingestion, codification, wage extraction, gap calculation/claim, causal claim, or regression occurred.
+- **Validation:** [the validation record](verification_scale_round2_3x1000_remainder_live_collection_validation_2026-07-24.md) records the planner/test suite, final audit, dashboard JSON/frontend build, schema/ingestion checks, protected/accounting invariance, Round 1 exclusion, terminal identity coverage, artifact confinement, and secret checks.
+
+### Interpretation and limitations
+
+Round 2 routes the full identity remainder but does not create verified content,
+ingested contracts, codified evidence, or wage observations. Lower-disposition
+rows remain lower-disposition candidates. Reachable results still need content,
+employer/unit, date, document-type, and extractability review; non-reachable
+statuses are URL outcomes, not findings that a municipality lacks sources.
+
+### Next Move
+
+Do not rerun or resume the live lanes. Under separate serial authorization,
+re-run the lane audit and merge the three complete Round 2 ledgers exactly
+once. Preserve every original disposition and terminal status. Keep scout
+accounting, ingestion, codification, wage extraction, and wage-gap analysis
+outside that merge.
+
 ## 2026-07-24 — Verification Scale Round 1 3×750 is durably merged
 
 ### Current State

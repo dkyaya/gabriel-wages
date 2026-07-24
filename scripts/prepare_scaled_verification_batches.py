@@ -279,6 +279,8 @@ def eligible_for_scope(
         return disposition == "scheduled"
     if priority_scope in {"high", "medium", "low"}:
         return disposition == "scheduled" and priority == priority_scope
+    if priority_scope == "remainder_all":
+        return True
     if priority_scope != "all":
         raise ValueError(f"Unsupported priority scope: {priority_scope}")
     if disposition == "scheduled":
@@ -385,6 +387,7 @@ def lane_audit_markdown(
 - Unique candidate queue rows: {len({row['candidate_queue_row_id'] for row in rows}):,}
 - Syntactically valid HTTP(S) URLs: {sum(valid_http_url(str(row['candidate_url'])) for row in rows):,}/{len(rows):,}
 - Candidate priorities: `{json.dumps(counts_by(rows, 'candidate_priority'), sort_keys=True)}`
+- Original candidate dispositions: `{json.dumps(counts_by(rows, 'candidate_status_before_verification'), sort_keys=True)}`
 - States: `{json.dumps(counts_by(rows, 'state'), sort_keys=True)}`
 - Candidate source types: `{json.dumps(counts_by(rows, 'candidate_source_type'), sort_keys=True)}`
 - Exact duplicate URL groups represented: {sum(count > 1 for count in groups.values()):,}
@@ -593,6 +596,26 @@ def prepare(args: argparse.Namespace) -> dict[str, object]:
     )
     args.max_bytes = getattr(args, "max_bytes", DEFAULT_MAX_BYTES)
     args.dedupe_fetch_plan = getattr(args, "dedupe_fetch_plan", False)
+    args.exclude_verified_ledger_csv = getattr(
+        args, "exclude_verified_ledger_csv", ""
+    )
+    args.fill_with_held_after_scheduled = getattr(
+        args, "fill_with_held_after_scheduled", False
+    )
+    args.balance_lanes = getattr(args, "balance_lanes", False)
+    if args.priority_scope == "remainder_all":
+        if not args.exclude_verified_ledger_csv:
+            raise ValueError(
+                "--priority-scope remainder_all requires "
+                "--exclude-verified-ledger-csv"
+            )
+        if not args.fill_with_held_after_scheduled:
+            raise ValueError(
+                "--priority-scope remainder_all requires "
+                "--fill-with-held-after-scheduled"
+            )
+        # Option B always retains exact-URL groups for fetch reuse.
+        args.dedupe_fetch_plan = True
     if args.batch_size < 1:
         raise ValueError("--batch-size must be positive")
     if args.num_lanes < 1:
@@ -610,6 +633,80 @@ def prepare(args: argparse.Namespace) -> dict[str, object]:
     queue_rows = read_csv(queue_path)
     universe, state_yield = load_local_enrichment()
     inventory = enrich_candidates(queue_rows, universe, state_yield)
+    inventory_before_exclusion = list(inventory)
+    excluded_queue_ids: set[str] = set()
+    excluded_verification_ids: set[str] = set()
+    excluded_ledger_rows = 0
+    excluded_ledger_path: Path | None = None
+    if args.exclude_verified_ledger_csv:
+        excluded_ledger_path = Path(args.exclude_verified_ledger_csv)
+        if not excluded_ledger_path.is_file():
+            raise FileNotFoundError(
+                f"Excluded verification ledger is missing: {excluded_ledger_path}"
+            )
+        ledger_rows = read_csv(excluded_ledger_path)
+        required_ledger_fields = {
+            "candidate_queue_row_id",
+            "verification_id",
+            "verification_status",
+            "verification_stage",
+        }
+        if ledger_rows:
+            missing = required_ledger_fields - set(ledger_rows[0])
+            if missing:
+                raise ValueError(
+                    "Excluded verification ledger is missing fields: "
+                    f"{sorted(missing)}"
+                )
+        excluded_ledger_rows = len(ledger_rows)
+        excluded_queue_ids = {
+            row["candidate_queue_row_id"].strip() for row in ledger_rows
+        }
+        excluded_verification_ids = {
+            row["verification_id"].strip() for row in ledger_rows
+        }
+        if (
+            len(excluded_queue_ids) != excluded_ledger_rows
+            or len(excluded_verification_ids) != excluded_ledger_rows
+            or "" in excluded_queue_ids
+            or "" in excluded_verification_ids
+        ):
+            raise ValueError(
+                "Excluded verification ledger identities are blank or duplicated"
+            )
+        if any(
+            not row.get("verification_status", "").strip()
+            or row.get("verification_stage", "").strip()
+            != "url_reachability_metadata_verified"
+            for row in ledger_rows
+        ):
+            raise ValueError(
+                "Excluded verification ledger is not fully terminal routing output"
+            )
+        inventory = [
+            row
+            for row in inventory
+            if str(row["candidate_queue_row_id"]) not in excluded_queue_ids
+            and str(row["verification_id"]) not in excluded_verification_ids
+        ]
+        matched_queue_ids = {
+            str(row["candidate_queue_row_id"])
+            for row in inventory_before_exclusion
+            if str(row["candidate_queue_row_id"]) in excluded_queue_ids
+        }
+        matched_verification_ids = {
+            str(row["verification_id"])
+            for row in inventory_before_exclusion
+            if str(row["verification_id"]) in excluded_verification_ids
+        }
+        if (
+            matched_queue_ids != excluded_queue_ids
+            or matched_verification_ids != excluded_verification_ids
+        ):
+            raise ValueError(
+                "Excluded verification ledger identities do not map exactly to "
+                "the canonical queue inventory"
+            )
     state_scope = (
         {value.strip().upper() for value in args.state_scope.split(",") if value.strip()}
         if args.state_scope
@@ -645,7 +742,11 @@ def prepare(args: argparse.Namespace) -> dict[str, object]:
         return {"inventory": inventory, "selected": selected, "lanes": []}
 
     requested = args.batch_size * args.num_lanes
-    if len(selected) < requested:
+    allow_under_capacity = (
+        args.priority_scope == "remainder_all"
+        and args.fill_with_held_after_scheduled
+    )
+    if len(selected) < requested and not allow_under_capacity:
         raise ValueError(
             f"Requested {requested} rows but only {len(selected)} match the scope"
         )
@@ -659,6 +760,15 @@ def prepare(args: argparse.Namespace) -> dict[str, object]:
     selected_ids = [str(row["verification_id"]) for row in selected_rows]
     if len(selected_ids) != len(set(selected_ids)):
         raise ValueError("Duplicate verification IDs across lanes")
+    selected_queue_ids = [
+        str(row["candidate_queue_row_id"]) for row in selected_rows
+    ]
+    if len(selected_queue_ids) != len(set(selected_queue_ids)):
+        raise ValueError("Duplicate candidate queue IDs across lanes")
+    if set(selected_ids) & excluded_verification_ids:
+        raise ValueError("Selected rows overlap excluded verification IDs")
+    if set(selected_queue_ids) & excluded_queue_ids:
+        raise ValueError("Selected rows overlap excluded candidate queue IDs")
 
     lane_records: list[dict[str, object]] = []
     for index, lane in enumerate(lanes, start=1):
@@ -692,6 +802,9 @@ def prepare(args: argparse.Namespace) -> dict[str, object]:
         )
 
     duplicate_groups = Counter(
+        str(row["duplicate_source_group_id"]) for row in inventory_before_exclusion
+    )
+    remaining_duplicate_groups = Counter(
         str(row["duplicate_source_group_id"]) for row in inventory
     )
     selected_group_lanes: dict[str, set[int]] = {}
@@ -703,8 +816,9 @@ def prepare(args: argparse.Namespace) -> dict[str, object]:
     selected_groups = Counter(
         str(row["duplicate_source_group_id"]) for row in selected_rows
     )
+    max_lane_rows = max((len(lane) for lane in lanes), default=0)
     estimate = runtime_estimate(
-        args.batch_size,
+        max_lane_rows,
         args.concurrency_per_lane,
         args.verification_timeout,
     )
@@ -716,9 +830,33 @@ def prepare(args: argparse.Namespace) -> dict[str, object]:
         "created_date": date.today().isoformat(),
         "candidate_queue_csv": queue_path.as_posix(),
         "candidate_queue_sha256": sha256_file(queue_path),
-        "total_url_bearing_candidate_rows": len(inventory),
+        "total_url_bearing_candidate_rows": len(inventory_before_exclusion),
+        "total_url_bearing_candidate_rows_before_exclusion": len(
+            inventory_before_exclusion
+        ),
+        "remaining_url_bearing_rows_after_exclusion": len(inventory),
+        "excluded_verified_ledger_csv": (
+            excluded_ledger_path.as_posix() if excluded_ledger_path else ""
+        ),
+        "excluded_verified_ledger_sha256": (
+            sha256_file(excluded_ledger_path) if excluded_ledger_path else ""
+        ),
+        "excluded_verified_ledger_rows": excluded_ledger_rows,
+        "excluded_candidate_queue_row_ids": len(excluded_queue_ids),
+        "excluded_verification_ids": len(excluded_verification_ids),
         "eligible_rows_in_requested_scope": len(selected),
         "planned_candidate_rows": len(selected_rows),
+        "round_capacity": requested,
+        "under_capacity_rows": requested - len(selected_rows),
+        "remaining_url_bearing_rows_unselected": len(inventory) - len(selected_rows),
+        "selected_scheduled_rows": sum(
+            row["candidate_status_before_verification"] == "scheduled"
+            for row in selected_rows
+        ),
+        "selected_non_scheduled_rows": sum(
+            row["candidate_status_before_verification"] != "scheduled"
+            for row in selected_rows
+        ),
         "profile": args.profile,
         "batch_size_per_lane": args.batch_size,
         "num_lanes": args.num_lanes,
@@ -730,6 +868,8 @@ def prepare(args: argparse.Namespace) -> dict[str, object]:
         "max_bytes": args.max_bytes,
         "write_content_samples": False,
         "dedupe_fetch_plan": args.dedupe_fetch_plan,
+        "fill_with_held_after_scheduled": args.fill_with_held_after_scheduled,
+        "balance_lanes": args.balance_lanes,
         "runtime_estimate": estimate,
         "priority_scope": args.priority_scope,
         "include_held": args.include_held,
@@ -740,6 +880,14 @@ def prepare(args: argparse.Namespace) -> dict[str, object]:
         ),
         "duplicate_url_extra_rows_in_full_queue": sum(
             count - 1 for count in duplicate_groups.values() if count > 1
+        ),
+        "duplicate_url_groups_in_remaining_pool": sum(
+            count > 1 for count in remaining_duplicate_groups.values()
+        ),
+        "duplicate_url_extra_rows_in_remaining_pool": sum(
+            count - 1
+            for count in remaining_duplicate_groups.values()
+            if count > 1
         ),
         "duplicate_url_groups_in_selected_round": sum(
             count > 1 for count in selected_groups.values()
@@ -766,13 +914,19 @@ def prepare(args: argparse.Namespace) -> dict[str, object]:
 
 - Canonical queue: `{queue_path.as_posix()}`
 - Queue SHA-256: `{sha256_file(queue_path)}`
-- Total URL-bearing queue rows: {len(inventory):,}
+- Total URL-bearing queue rows before prior-ledger exclusion: {len(inventory_before_exclusion):,}
+- Prior durable routing ledger: `{excluded_ledger_path.as_posix() if excluded_ledger_path else 'none'}`
+- Prior ledger rows/queue IDs/verification IDs excluded: {excluded_ledger_rows:,}/{len(excluded_queue_ids):,}/{len(excluded_verification_ids):,}
+- Exact URL-bearing rows remaining after exclusion: {len(inventory):,}
 - Requested scope: `{args.priority_scope}`
 - Eligible rows in scope: {len(selected):,}
 - Planned rows: {len(selected_rows):,}
+- Round capacity / under-capacity rows: {requested:,} / {requested - len(selected_rows):,}
+- Remaining URL-bearing rows left unselected: {len(inventory) - len(selected_rows):,}
 - Profile: `{args.profile}`
 - Lanes: {args.num_lanes}
-- Rows per lane: {args.batch_size}
+- Maximum rows per lane: {args.batch_size}
+- Actual lane rows: `{json.dumps([len(lane) for lane in lanes])}`
 - Concurrency per lane: {args.concurrency_per_lane}
 - Bounded timeout: {args.verification_timeout:g} seconds
 - Maximum response bytes: {args.max_bytes:,}
@@ -784,6 +938,8 @@ def prepare(args: argparse.Namespace) -> dict[str, object]:
 - Syntactically valid HTTP(S) URLs: {sum(valid_http_url(str(row['candidate_url'])) for row in selected_rows):,}/{len(selected_rows):,}
 - Candidate priorities: `{json.dumps(counts_by(selected_rows, 'candidate_priority'), sort_keys=True)}`
 - Candidate dispositions: `{json.dumps(counts_by(selected_rows, 'candidate_status_before_verification'), sort_keys=True)}`
+- Previously routed candidate queue ID overlap: {len(set(selected_queue_ids) & excluded_queue_ids)}
+- Previously routed verification ID overlap: {len(set(selected_ids) & excluded_verification_ids)}
 - States: `{json.dumps(counts_by(selected_rows, 'state'), sort_keys=True)}`
 - Candidate source types: `{json.dumps(counts_by(selected_rows, 'candidate_source_type'), sort_keys=True)}`
 - Exact normalized URL duplicate groups in full queue: {sum(count > 1 for count in duplicate_groups.values()):,}
@@ -850,13 +1006,28 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--include-held", action="store_true")
     parser.add_argument("--include-duplicates", action="store_true")
     parser.add_argument(
+        "--exclude-verified-ledger-csv",
+        default="",
+        help="Exclude every queue and verification identity in a durable ledger.",
+    )
+    parser.add_argument(
+        "--fill-with-held-after-scheduled",
+        action="store_true",
+        help="For remainder_all, fill capacity after scheduled rows with all dispositions.",
+    )
+    parser.add_argument(
+        "--balance-lanes",
+        action="store_true",
+        help="Balance under-capacity selection across the configured lanes.",
+    )
+    parser.add_argument(
         "--dedupe-fetch-plan",
         action="store_true",
         help="Keep exact URL groups together where lane capacity permits.",
     )
     parser.add_argument(
         "--priority-scope",
-        choices=["scheduled", "high", "medium", "low", "all"],
+        choices=["scheduled", "high", "medium", "low", "all", "remainder_all"],
         default="scheduled",
     )
     parser.add_argument(

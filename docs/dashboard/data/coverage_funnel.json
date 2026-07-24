@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": "0.1.0",
-    "generated_at": "2026-07-24T15:52:39Z",
+    "generated_at": "2026-07-24T16:19:51Z",
     "data_vintage": "2026-07-23",
     "source_files": [
       "docs/analysis/national_scout_coverage_state.csv",
@@ -18,7 +18,8 @@
       "docs/analysis/state_city_claim_map_2026-07-12.csv",
       "docs/analysis/hypothesis_tracker_2026-07-12.csv",
       "docs/analysis/hosted_search_transport_recommendation_2026-07-22.md",
-      "docs/analysis/verification_ledgers/verified_source_routing_summary_latest.json"
+      "docs/analysis/verification_ledgers/verified_source_routing_summary_latest.json",
+      "docs/analysis/verification_rounds/VERIFICATION-SCALE-ROUND2-3X1000-REMAINDER-2026-07-24/verification_live_collection_summary.json"
     ],
     "warnings": [],
     "limitations": [
