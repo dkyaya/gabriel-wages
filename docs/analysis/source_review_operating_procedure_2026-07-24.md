@@ -24,10 +24,10 @@ directories, and stop before any durable merge.
 
 ## Bounded content-review principles
 
-A future live implementation requires separate authorization. It should:
+A future live run requires separate authorization. The implemented path:
 
-1. use conservative concurrency, total/connect/read timeouts, redirects, and a
-   documented byte cap;
+1. defaults to four workers per lane, 30-second total, eight-second connect,
+   and 20-second read limits, at most five redirects, and 25 MiB per response;
 2. fetch only the locked source locator for each pilot identity;
 3. checkpoint every terminal row incrementally;
 4. hash exact downloaded bytes and record observed type and size;
@@ -38,8 +38,16 @@ A future live implementation requires separate authorization. It should:
 9. leave candidate, routing, metadata-triage, contract, and corpus layers
    unchanged.
 
-Content samples are off by default. No document should enter `corpus/` or
+The runner additionally disables environment proxy inheritance, requires the
+explicit combination of `source_rating_live`, bounded download mode, and
+`--allow-live-content-access`, and refuses a nonempty output directory unless
+an explicit same-directory resume also requests completed-ID skipping.
+Content samples are off by default. No document enters `corpus/` or
 `data/contracts.csv` during source review.
+
+The implementation does not parse PDFs. Page count and text-layer status
+remain unknown, and OCR is unsupported. This keeps the initial path bounded
+to access, retention, hashing, and preliminary artifact metadata.
 
 ## Rating discipline
 
@@ -77,6 +85,16 @@ The auditor must verify hashes, expected identity coverage, terminal statuses,
 download/parse counters, artifact paths, content hashes, and rating
 vocabularies. Live collection stops before merge. A separate serial task may
 merge exactly once only if all lanes are `completed_merge_eligible`.
+
+## Scale decision after the pilot
+
+Recommend a 500-row next batch only when the 150-row pilot has complete
+terminal outcomes, clean lane-local artifacts and hashes, acceptable
+transport/manual-review burden, and useful preliminary rating signals. If
+runtime is exceptionally fast and those quality gates are strong, 750 or
+1,000 rows may be considered. Speed alone is insufficient. Artifact volume,
+error rates, rating usefulness, and reviewer burden control the decision.
+OCR, heavy PDF parsing, and manual interpretation use smaller lanes.
 
 ## Downstream flow
 

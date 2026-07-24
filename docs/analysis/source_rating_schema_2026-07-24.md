@@ -92,6 +92,7 @@ values in dry-run output are intentional.
 
 ### Source relevance
 
+- `possible` (provisional live-path artifact-metadata value only)
 - `high`
 - `medium`
 - `low`
@@ -108,6 +109,7 @@ values in dry-run output are intentional.
 
 ### Document type
 
+- `cba_candidate` (provisional artifact-metadata label only)
 - `cba`
 - `wage_schedule`
 - `compensation_plan`
@@ -119,6 +121,23 @@ values in dry-run output are intentional.
 - `portal_index`
 - `unrelated`
 - `unknown`
+
+## Bounded live-path population discipline
+
+The bounded pilot runner may populate transport and artifact facts: access
+status, HTTP status, observed content type, retained byte size, SHA-256 hash,
+and lane-local artifact path. Because the implementation does not parse PDF
+content, PDF page count and text-layer status remain `unknown`. It does not
+populate a final document type from a discovery label: `cba_candidate` is the
+only provisional CBA value available without content inspection.
+
+URL/domain and committed owner metadata may support only a preliminary
+officialness value. Relevance and municipality/employer/unit matches remain
+`possible` or `unknown` until content supports something stronger.
+`wage_table_signal`, `wage_growth_signal`, and
+`mechanism_language_signal` remain `unknown`. An extraction-readiness value
+describes only technical artifact accessibility/type/size at this stage, not
+the presence of extractable wage evidence.
 
 ### Extraction readiness
 

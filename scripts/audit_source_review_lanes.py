@@ -12,14 +12,18 @@ from pathlib import Path
 
 
 LIVE_TERMINAL_STATUSES = {
-    "reviewed_relevant",
-    "reviewed_context_only",
-    "reviewed_not_relevant",
-    "duplicate_of_reviewed_source",
-    "download_failed",
+    "reviewed_metadata_and_artifact_saved",
+    "reviewed_metadata_only_no_download",
+    "download_too_large",
+    "download_forbidden",
+    "download_not_found",
+    "download_timeout",
+    "download_connection_error",
+    "download_ssl_error",
+    "unsupported_content_type",
+    "parse_not_attempted",
     "needs_manual_review",
-    "oversized_deferred",
-    "excluded",
+    "error",
 }
 SAFETY_COUNTER_FIELDS = [
     "urls_opened",
@@ -29,6 +33,20 @@ SAFETY_COUNTER_FIELDS = [
     "pdfs_parsed",
     "ocr_runs",
     "content_artifacts_written",
+]
+FORBIDDEN_LIVE_COUNTERS = ["documents_parsed", "pdfs_parsed", "ocr_runs"]
+DISTRIBUTION_FIELDS = [
+    "source_review_status",
+    "url_access_status",
+    "download_status",
+    "content_type_observed",
+    "source_officialness_rating",
+    "source_relevance_rating",
+    "municipality_match_rating",
+    "employer_match_rating",
+    "bargaining_unit_match_rating",
+    "document_type_rating",
+    "extraction_readiness_rating",
 ]
 
 
@@ -45,9 +63,117 @@ def sha256_file(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def is_within(path: Path, parent: Path) -> bool:
+    try:
+        path.resolve().relative_to(parent.resolve())
+    except ValueError:
+        return False
+    return True
+
+
+def bytes_distribution(rows: list[dict[str, str]]) -> dict[str, int]:
+    result: Counter[str] = Counter()
+    for row in rows:
+        try:
+            value = int(row.get("content_byte_size") or 0)
+        except ValueError:
+            value = 0
+        if value == 0:
+            bucket = "0"
+        elif value <= 64 * 1024:
+            bucket = "1_to_64_kib"
+        elif value <= 1024 * 1024:
+            bucket = "64_kib_to_1_mib"
+        elif value <= 10 * 1024 * 1024:
+            bucket = "1_to_10_mib"
+        elif value <= 25 * 1024 * 1024:
+            bucket = "10_to_25_mib"
+        else:
+            bucket = "over_25_mib"
+        result[bucket] += 1
+    return dict(sorted(result.items()))
+
+
+def count_distribution(
+    rows: list[dict[str, str]], field: str
+) -> dict[str, int]:
+    return dict(sorted(Counter(row.get(field, "") for row in rows).items()))
+
+
+def audit_artifacts(
+    rows: list[dict[str, str]], output_dir: Path, *, mode: str
+) -> dict[str, object]:
+    content_paths = [
+        Path(row["content_artifact_path"])
+        for row in rows
+        if row.get("content_artifact_path")
+    ]
+    metadata_paths = [
+        Path(row["response_metadata_path"])
+        for row in rows
+        if row.get("response_metadata_path")
+    ]
+    sample_paths = [
+        Path(row["content_sample_path"])
+        for row in rows
+        if row.get("content_sample_path")
+    ]
+    all_paths = content_paths + metadata_paths + sample_paths
+    lane_local = all(is_within(path, output_dir) for path in all_paths)
+    all_exist = all(path.is_file() for path in all_paths)
+    hash_failures = 0
+    size_failures = 0
+    for row in rows:
+        raw = row.get("content_artifact_path", "")
+        if not raw:
+            if row.get("content_hash"):
+                hash_failures += 1
+            continue
+        path = Path(raw)
+        if not path.is_file():
+            continue
+        expected_hash = row.get("content_hash", "")
+        if not expected_hash or sha256_file(path) != expected_hash:
+            hash_failures += 1
+        try:
+            expected_size = int(row.get("content_byte_size") or -1)
+        except ValueError:
+            expected_size = -1
+        if expected_size != path.stat().st_size:
+            size_failures += 1
+    metadata_expected = len(rows) if mode == "live" else 0
+    metadata_complete = len(metadata_paths) == metadata_expected
+    passed = (
+        lane_local
+        and all_exist
+        and hash_failures == 0
+        and size_failures == 0
+        and metadata_complete
+    )
+    if mode == "dry_run":
+        passed = not all_paths
+    return {
+        "artifact_integrity_passed": passed,
+        "artifact_paths_lane_local": lane_local,
+        "artifact_paths_exist": all_exist,
+        "content_artifact_files": len(content_paths),
+        "metadata_artifact_files": len(metadata_paths),
+        "content_sample_files": len(sample_paths),
+        "content_hash_failures": hash_failures,
+        "content_size_failures": size_failures,
+    }
+
+
 def classify_lane(lane: dict[str, object]) -> dict[str, object]:
     input_path = Path(str(lane["input_csv"]))
-    dry_dir = Path(str(lane["dry_run_output_dir"]))
+    dry_dir = Path(
+        str(
+            lane.get(
+                "implementation_dry_run_output_dir",
+                lane["dry_run_output_dir"],
+            )
+        )
+    )
     live_dir = Path(str(lane["future_live_output_dir"]))
     expected = int(lane["expected_rows"])
     result: dict[str, object] = {
@@ -62,11 +188,20 @@ def classify_lane(lane: dict[str, object]) -> dict[str, object]:
         "missing_rows": expected,
         "unexpected_rows": 0,
         "source_review_status_counts": {},
+        "artifact_integrity_passed": False,
     }
     if not input_path.exists():
-        return {**result, "classification": "missing_artifacts", "detail": "input_missing"}
+        return {
+            **result,
+            "classification": "missing_artifacts",
+            "detail": "input_missing",
+        }
     if sha256_file(input_path) != lane["input_sha256"]:
-        return {**result, "classification": "failed", "detail": "input_hash_mismatch"}
+        return {
+            **result,
+            "classification": "failed",
+            "detail": "input_hash_mismatch",
+        }
     input_rows = read_csv(input_path)
     if len(input_rows) != expected:
         return {
@@ -114,26 +249,38 @@ def classify_lane(lane: dict[str, object]) -> dict[str, object]:
         if mode == "dry_run"
         else sum(statuses[status] for status in LIVE_TERMINAL_STATUSES)
     )
+    artifacts = audit_artifacts(ledger, output_dir, mode=mode)
     result.update(
         {
             "mode": mode,
+            "output_dir": output_dir.as_posix(),
             "ledger_rows": len(ledger),
             "terminal_rows": terminal,
             "duplicate_source_review_ids": len(review_ids) - len(set(review_ids)),
             "duplicate_candidate_queue_ids": len(queue_ids) - len(set(queue_ids)),
             "missing_rows": missing,
             "unexpected_rows": unexpected,
-            "source_review_status_counts": dict(sorted(statuses.items())),
-            "url_access_status_counts": dict(
-                sorted(Counter(row.get("url_access_status", "") for row in ledger).items())
+            **{
+                f"{field}_counts": count_distribution(ledger, field)
+                for field in DISTRIBUTION_FIELDS
+            },
+            "content_byte_size_distribution": bytes_distribution(ledger),
+            "rows_with_content_hash": sum(
+                bool(row.get("content_hash")) for row in ledger
             ),
-            "download_status_counts": dict(
-                sorted(Counter(row.get("download_status", "") for row in ledger).items())
+            "rows_with_pdf_page_count": sum(
+                row.get("pdf_page_count", "") not in {"", "unknown"}
+                for row in ledger
+            ),
+            "rows_with_known_text_layer": sum(
+                row.get("text_layer_status", "") not in {"", "unknown"}
+                for row in ledger
             ),
             **{
                 field: int(summary.get(field, 0))
                 for field in SAFETY_COUNTER_FIELDS
             },
+            **artifacts,
         }
     )
     identity_failure = (
@@ -141,6 +288,16 @@ def classify_lane(lane: dict[str, object]) -> dict[str, object]:
         or result["duplicate_candidate_queue_ids"]
         or missing
         or unexpected
+        or len(ledger) != expected
+    )
+    summary_unsafe = (
+        int(summary.get("protected_writes", 0)) != 0
+        or bool(summary.get("ingestion_attempted"))
+        or bool(summary.get("codify_attempted"))
+        or bool(summary.get("wage_extraction_attempted"))
+    )
+    forbidden_activity = any(
+        int(summary.get(field, 0)) for field in FORBIDDEN_LIVE_COUNTERS
     )
     if identity_failure:
         result.update(classification="failed", detail="identity_coverage_failure")
@@ -148,7 +305,10 @@ def classify_lane(lane: dict[str, object]) -> dict[str, object]:
         mode == "dry_run"
         and summary.get("status") == "dry_run_passed"
         and terminal == expected
-        and not any(int(summary.get(field, 0)) for field in SAFETY_COUNTER_FIELDS)
+        and not any(
+            int(summary.get(field, 0)) for field in SAFETY_COUNTER_FIELDS
+        )
+        and artifacts["artifact_integrity_passed"]
     ):
         result.update(
             classification="dry_run_passed",
@@ -158,12 +318,15 @@ def classify_lane(lane: dict[str, object]) -> dict[str, object]:
         mode == "live"
         and summary.get("status") == "completed"
         and terminal == expected
+        and artifacts["artifact_integrity_passed"]
+        and not summary_unsafe
+        and not forbidden_activity
     ):
         result.update(
             classification="completed_merge_eligible",
-            detail="all_rows_terminal_and_audited",
+            detail="all_rows_terminal_artifacts_local_and_safety_gates_passed",
         )
-    elif terminal:
+    elif mode == "live" and terminal and not summary_unsafe:
         result.update(classification="partial", detail="some_terminal_rows")
     else:
         result.update(classification="failed", detail="incomplete_or_unsafe_output")
@@ -192,13 +355,13 @@ def audit(manifest_path: Path, output_dir: Path) -> dict[str, object]:
     if lanes and classifications["completed_merge_eligible"] == len(lanes):
         recommendation = "merge_all_source_review_lanes"
     elif classifications["completed_merge_eligible"]:
-        recommendation = "merge_completed_source_review_lanes_with_user_approval"
+        recommendation = "merge_completed_lanes_only_with_user_approval"
     elif lanes and classifications["dry_run_passed"] == len(lanes):
         recommendation = "dry_run_complete_no_live_source_review"
     else:
         recommendation = "do_not_merge_until_resume_or_review"
     payload: dict[str, object] = {
-        "schema_version": "1.0.0",
+        "schema_version": "1.1.0",
         "pilot_id": manifest["pilot_id"],
         "manifest": manifest_path.as_posix(),
         "planned_rows": int(manifest["selected_rows"]),
@@ -210,19 +373,32 @@ def audit(manifest_path: Path, output_dir: Path) -> dict[str, object]:
         "cross_lane_duplicate_candidate_queue_ids": len(all_queue_ids)
         - len(set(all_queue_ids)),
         "classification_counts": dict(sorted(classifications.items())),
-        "source_review_status_counts": aggregate_counts(
-            lanes, "source_review_status_counts"
-        ),
-        "url_access_status_counts": aggregate_counts(
-            lanes, "url_access_status_counts"
-        ),
-        "download_status_counts": aggregate_counts(
-            lanes, "download_status_counts"
+        **{
+            f"{field}_counts": aggregate_counts(lanes, f"{field}_counts")
+            for field in DISTRIBUTION_FIELDS
+        },
+        "content_byte_size_distribution": aggregate_counts(
+            lanes, "content_byte_size_distribution"
         ),
         **{
             field: sum(int(lane.get(field, 0)) for lane in lanes)
             for field in SAFETY_COUNTER_FIELDS
         },
+        "content_artifact_files": sum(
+            int(lane.get("content_artifact_files", 0)) for lane in lanes
+        ),
+        "metadata_artifact_files": sum(
+            int(lane.get("metadata_artifact_files", 0)) for lane in lanes
+        ),
+        "content_sample_files": sum(
+            int(lane.get("content_sample_files", 0)) for lane in lanes
+        ),
+        "rows_with_content_hash": sum(
+            int(lane.get("rows_with_content_hash", 0)) for lane in lanes
+        ),
+        "artifact_integrity_passed": all(
+            bool(lane.get("artifact_integrity_passed")) for lane in lanes
+        ),
         "merge_recommendation": recommendation,
         "lanes": lanes,
     }
@@ -242,6 +418,7 @@ def audit(manifest_path: Path, output_dir: Path) -> dict[str, object]:
         f"- URL opens: {payload['urls_opened']}",
         f"- Downloads: {payload['documents_downloaded']}",
         f"- Parses/OCR: {payload['documents_parsed']} / {payload['ocr_runs']}",
+        f"- Artifact integrity: {payload['artifact_integrity_passed']}",
         "",
         "## Lanes",
         "",
@@ -249,7 +426,8 @@ def audit(manifest_path: Path, output_dir: Path) -> dict[str, object]:
     for lane in lanes:
         report_lines.append(
             f"- `{lane['lane_id']}`: `{lane['classification']}`; "
-            f"{lane['ledger_rows']}/{lane['expected_rows']} rows."
+            f"{lane['ledger_rows']}/{lane['expected_rows']} rows; "
+            f"artifact integrity `{lane['artifact_integrity_passed']}`."
         )
     report_lines.extend(
         [
@@ -265,7 +443,9 @@ def audit(manifest_path: Path, output_dir: Path) -> dict[str, object]:
         "# Source-Review Merge Recommendation\n\n"
         f"`{recommendation}`\n\n"
         "Dry-run outputs are schema plans, not source ratings and not mergeable "
-        "live review evidence.\n",
+        "live review evidence. Live eligibility requires complete identities, "
+        "terminal rows, lane-local artifacts, matching hashes, and clean safety "
+        "markers.\n",
         encoding="utf-8",
     )
     return payload

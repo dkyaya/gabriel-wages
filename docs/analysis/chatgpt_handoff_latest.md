@@ -6,6 +6,37 @@ Last updated: `2026-07-24`
 
 ---
 
+## 2026-07-24 — Bounded source-review live path is ready; pilot not started
+
+### Current State
+
+- **Repository gate:** work began at clean tracked `b94aad961e8c0a7f783b4ea4f1924c105f1c9020`; all requested ancestry is present and the unrelated untracked root `package-lock.json` remains untouched.
+- **Locked pilot unchanged:** `SOURCE-REVIEW-PILOT1-150-2026-07-24` remains 150 unique p1/scheduled/CBA-candidate/reachable-PDF rows in balanced 75/75 lanes. Input hashes remain `0253cba7ecf358e16679f64273466c239e296caf214e44a110813eeebfec6de3` and `a5baa87593057a49c0b1e9adfff40051725ede45618c6f0d58f90f40b2630b6e`.
+- **Live implementation:** `source_review_sources.py` is fail closed unless `source_rating_live`, bounded download mode, and `--allow-live-content-access` are all present. It adds proxy-free bounded HTTP(S), four-worker default concurrency, 30/8/20-second total/connect/read limits, five redirects, a 25 MiB ceiling, incremental checkpoints, same-directory resume gates, lane-local sanitized artifacts/metadata, hashes, and terminal error routing.
+- **Content boundary:** no PDF parsing or OCR is implemented. Page count/text layer remain unknown. Preliminary ratings describe URL/domain or artifact accessibility only; relevance and employer/unit matches remain possible/unknown, `cba_candidate` is not a confirmed CBA, and wage/mechanism signals remain unknown.
+- **Mock coverage:** [the implementation summary](source_review_live_path_implementation_summary_2026-07-24.md) records 13 passing offline tests: explicit gate failures, mocked PDF/HTML, byte cap, timeout, 404, 403, TLS error, output reuse, path traversal, and a clean two-lane mocked live audit. Fake clients were injected and socket creation was blocked; no real transport ran.
+- **Locked dry gate:** the updated runner produced 75/75 planned rows in fresh implementation dry-run directories. The final audit reports two `dry_run_passed` lanes, 150/150 terminal-planned rows, zero source-access/artifact counters, and `dry_run_complete_no_live_source_review`.
+- **Dashboard:** `source_review_phase = live_path_implemented_ready_for_pilot`, `source_review_live_status = ready_not_started`, and `bounded_live_source_review_path = implemented_mock_tested`. Recommended settings are concurrency four and 25 MiB.
+- **Boundary:** no real URL, source download, parse, OCR, live review, scout accounting, routing/triage-ledger mutation, merge, extraction, ingestion, codification, wage calculation/claim, causal claim, or regression occurred.
+- **Validation:** [the validation record](source_review_live_path_implementation_validation_2026-07-24.md) reports five compiles, 13 tests, locked dry reruns/final audit, dashboard JSON/frontend build, schema and 60 ingestion tests, immutable hashes, secret/artifact scan, and diff checks passed.
+
+### Scale rule
+
+Use the 150-row pilot to measure terminal completion, artifact/hash integrity,
+transport and manual-review burden, runtime, and rating usefulness. Recommend
+500 next only if all of those gates pass. Consider 750 or 1,000 only if quality
+remains strong; do not scale on speed alone. OCR, heavy parsing, and intensive
+manual review require smaller lanes.
+
+### Next Move
+
+Review the readiness audit, implementation summary, runner/auditor tests, and
+[directly runnable future prompt](source_review_pilot1_live_prompt_2026-07-24.md).
+Only after separate explicit authorization, run the locked 150-row live pilot
+with concurrency four, 30/8/20-second limits, five redirects, 25 MiB, and
+samples off. Stop before the separate serial merge. Do not ingest, codify,
+extract wages, calculate wage gaps, make causal claims, or run regressions.
+
 ## 2026-07-24 — Source-review framework and 150-row p1 pilot are ready
 
 ### Current State

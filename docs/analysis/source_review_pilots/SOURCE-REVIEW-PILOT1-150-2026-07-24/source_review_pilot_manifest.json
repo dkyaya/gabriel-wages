@@ -102,6 +102,7 @@
       "input_sha256": "0253cba7ecf358e16679f64273466c239e296caf214e44a110813eeebfec6de3",
       "expected_rows": 75,
       "dry_run_output_dir": "tmp/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/lane_1_dry_run",
+      "implementation_dry_run_output_dir": "tmp/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/lane_1_dry_run_livepath_impl",
       "future_live_output_dir": "tmp/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/lane_1_live_attempt1"
     },
     {
@@ -110,6 +111,7 @@
       "input_sha256": "a5baa87593057a49c0b1e9adfff40051725ede45618c6f0d58f90f40b2630b6e",
       "expected_rows": 75,
       "dry_run_output_dir": "tmp/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/lane_2_dry_run",
+      "implementation_dry_run_output_dir": "tmp/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/lane_2_dry_run_livepath_impl",
       "future_live_output_dir": "tmp/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/lane_2_live_attempt1"
     }
   ]

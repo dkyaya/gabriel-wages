@@ -224,9 +224,14 @@ download-allowed-later CBA/PDF candidates in two balanced 75-row lanes. The
 pilot spans 43 states and preserves candidate, routing, and metadata-triage
 identities. Both lane dry runs validate the source-rating schema without
 opening URLs, downloading or parsing documents, or running OCR. The dashboard
-source-review status is `planned_not_started`: final source rating, extraction
-readiness, ingestion, codification, wage extraction, and wage-gap analysis
-remain unperformed.
+source-review status is now `live_path_implemented_ready_for_pilot`. The
+fail-closed runner has mocked coverage for bounded PDF/HTML retention,
+transport failures, byte limits, artifact hashes/locality, and live-lane
+audit gates. The recommended future settings are concurrency four per lane,
+30/8/20-second total/connect/read limits, five redirects, 25 MiB, and content
+samples off. No real URL or source content has been accessed; final source
+rating, extraction readiness, ingestion, codification, wage extraction, and
+wage-gap analysis remain unperformed.
 
 ## Run and build locally
 

@@ -1994,7 +1994,7 @@ def build_content_triage_status_summary(
 def build_source_review_status_summary(
     *, metadata: dict[str, Any]
 ) -> dict[str, Any]:
-    """Describe the offline source-review pilot without implying content access."""
+    """Describe the mock-tested source-review path without implying content access."""
 
     triage_summary = read_json(CONTENT_TRIAGE_CUMULATIVE_SUMMARY_PATH)
     manifest = read_json(SOURCE_REVIEW_PILOT_MANIFEST_PATH)
@@ -2031,8 +2031,8 @@ def build_source_review_status_summary(
         raise ValueError("Source-review plan records prohibited source access")
     return {
         **metadata,
-        "stage": "source_rating_and_bounded_content_review_planning",
-        "source_review_phase": "planned_not_started",
+        "stage": "source_rating_and_bounded_content_review_readiness",
+        "source_review_phase": "live_path_implemented_ready_for_pilot",
         "metadata_triage_complete": True,
         "metadata_triage_rows": int(triage_summary["ledger_rows"]),
         "p1_rows": int(priority_counts.get("p1", 0)),
@@ -2049,9 +2049,17 @@ def build_source_review_status_summary(
         "initial_source_review_unique_municipalities": int(
             manifest["selected_unique_municipalities"]
         ),
-        "source_review_live_status": "not_started",
-        "content_download_status": "not_started",
-        "source_rating_status": "planned_not_started",
+        "source_review_live_status": "ready_not_started",
+        "bounded_live_source_review_path": "implemented_mock_tested",
+        "recommended_initial_live_concurrency": 4,
+        "recommended_initial_timeout_seconds": 30,
+        "recommended_initial_connect_timeout_seconds": 8,
+        "recommended_initial_read_timeout_seconds": 20,
+        "recommended_initial_max_redirects": 5,
+        "recommended_initial_max_bytes": 26_214_400,
+        "next_scaling_decision": "after_150_row_live_pilot",
+        "content_download_status": "ready_for_pilot_not_started",
+        "source_rating_status": "ready_for_pilot_not_started",
         "extraction_readiness_status": "not_started",
         "ingestion_status": "not_started",
         "codify_status": "not_started",
@@ -2075,8 +2083,9 @@ def build_source_review_status_summary(
             CONTENT_TRIAGE_CUMULATIVE_SUMMARY_PATH
         ),
         "caveats": [
-            "Source review has not opened URLs or downloaded source content.",
-            "Source ratings require source-content and provenance review.",
+            "Source review has not opened real URLs or downloaded real source content.",
+            "Source ratings require observed source content and provenance review.",
+            "The live path has been tested only with synthetic and mocked transport.",
             "Metadata-only pilot selection does not establish officialness, relevance, employer/unit match, document type, or extraction readiness.",
             "No source was ingested or codified and no wage data or wage gaps were calculated.",
         ],

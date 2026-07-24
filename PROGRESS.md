@@ -6,6 +6,34 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-24 (Bounded source-review live path implemented and mock-tested)
+
+**Did**
+- Started from clean tracked `b94aad961e8c0a7f783b4ea4f1924c105f1c9020`, confirmed every requested ancestor, and left the unrelated untracked root `package-lock.json` untouched.
+- Reconfirmed the locked `SOURCE-REVIEW-PILOT1-150-2026-07-24` inputs at 75/75 rows with hashes `0253cba7ecf358e16679f64273466c239e296caf214e44a110813eeebfec6de3` and `a5baa87593057a49c0b1e9adfff40051725ede45618c6f0d58f90f40b2630b6e`.
+- Implemented a fail-closed bounded source-access runner. Live operation requires `source_rating_live`, bounded download mode, and explicit content-access authorization; it uses proxy-free transport, concurrency/timeout/redirect/byte ceilings, incremental checkpoints, sanitized paths/errors, lane-local artifacts and metadata, SHA-256 hashes, safe resume gates, and no content samples by default.
+- Kept PDF parsing and OCR disabled. Page/text-layer fields remain unknown, rating values remain preliminary artifact-metadata signals, and wage/mechanism signals remain unknown.
+- Extended the auditor with live terminal statuses, type/size/rating distributions, exact artifact locality/hash/size checks, and protected/downstream safety gates.
+- Expanded the offline suite to 13 tests covering authorization failure, mocked PDF/HTML retention, byte cap, timeout, 404, forbidden, TLS failure, directory reuse, traversal resistance, and two merge-eligible mocked live lanes.
+- Reran the unchanged locked inputs offline into new 75/75 implementation dry-run directories. The final audit reports two `dry_run_passed` lanes, 150/150 terminal-planned rows, zero source-access counters, clean dry artifact integrity, and `dry_run_complete_no_live_source_review`.
+- Updated the future live prompt, schema/operating boundary, dashboard data/frontend, and validation record. Dashboard status is `live_path_implemented_ready_for_pilot` / `ready_not_started`.
+
+**Decisions and why**
+- Use four workers per lane, 30/8/20-second total/connect/read limits, five redirects, 25 MiB, and samples off for the first live pilot. This permits bounded artifact retention while keeping the pilot auditable.
+- Do not parse even mocked PDFs in the implementation path. Access, observed type, byte size, and hash are sufficient to test artifact mechanics; content-supported ratings and technical parsing can be layered later.
+- Consider 500 next only if completion, artifacts/hashes, runtime, rating usefulness, and manual-review burden all pass. Consider 750–1,000 only when quality stays strong; speed alone does not justify scale.
+
+**Surprises/breakage**
+- The first dashboard-data validation command was launched from `docs/dashboard`, so its relative script path did not exist and it stopped without writes. The builder was immediately rerun from the repository root and passed; the frontend build also passed.
+- No safe PDF-library dependency was needed for this task, so page count and text-layer inspection deliberately remain unimplemented rather than adding an unreviewed parser.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Five compiles, 13 offline/mock-network tests, two 75-row dry reruns, final lane audit, dashboard rebuild/16 JSON parses/frontend production build, schema validation, 60 ingestion tests, immutable protected hashes, secret/artifact scan, and diff checks passed. No real URL was opened; no real download, PDF parse, OCR, live source review, real network/API/model/hosted-search/scout call, scout-accounting or routing/triage-ledger mutation, source-review merge, ingestion, `gabriel.codify`, wage extraction, wage-gap work, causal claim, regression, remote action, or push occurred.
+
+**Next steps**
+1. Review the implementation, mocked tests, locked dry-run audit, future live prompt, and relay.
+2. If separately authorized, run the 150-row live pilot with the documented bounded settings and stop before durable merge.
+3. Choose 500, 750, 1,000, or a smaller specialized lane only after reviewing artifact quality, errors, runtime, preliminary rating usefulness, and manual-review burden.
+
 ## 2026-07-24 (Source-rating framework and 150-row pilot prepared offline)
 
 **Did**

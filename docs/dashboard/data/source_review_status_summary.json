@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-24T18:24:22Z",
+  "generated_at": "2026-07-24T18:44:43Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -38,8 +38,8 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "stage": "source_rating_and_bounded_content_review_planning",
-  "source_review_phase": "planned_not_started",
+  "stage": "source_rating_and_bounded_content_review_readiness",
+  "source_review_phase": "live_path_implemented_ready_for_pilot",
   "metadata_triage_complete": true,
   "metadata_triage_rows": 4726,
   "p1_rows": 1760,
@@ -53,9 +53,17 @@
   },
   "initial_source_review_states": 43,
   "initial_source_review_unique_municipalities": 95,
-  "source_review_live_status": "not_started",
-  "content_download_status": "not_started",
-  "source_rating_status": "planned_not_started",
+  "source_review_live_status": "ready_not_started",
+  "bounded_live_source_review_path": "implemented_mock_tested",
+  "recommended_initial_live_concurrency": 4,
+  "recommended_initial_timeout_seconds": 30,
+  "recommended_initial_connect_timeout_seconds": 8,
+  "recommended_initial_read_timeout_seconds": 20,
+  "recommended_initial_max_redirects": 5,
+  "recommended_initial_max_bytes": 26214400,
+  "next_scaling_decision": "after_150_row_live_pilot",
+  "content_download_status": "ready_for_pilot_not_started",
+  "source_rating_status": "ready_for_pilot_not_started",
   "extraction_readiness_status": "not_started",
   "ingestion_status": "not_started",
   "codify_status": "not_started",
@@ -123,8 +131,9 @@
   "pilot_manifest_source": "docs/analysis/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/source_review_pilot_manifest.json",
   "metadata_triage_summary_source": "docs/analysis/content_triage_ledgers/content_triage_summary_latest.json",
   "caveats": [
-    "Source review has not opened URLs or downloaded source content.",
-    "Source ratings require source-content and provenance review.",
+    "Source review has not opened real URLs or downloaded real source content.",
+    "Source ratings require observed source content and provenance review.",
+    "The live path has been tested only with synthetic and mocked transport.",
     "Metadata-only pilot selection does not establish officialness, relevance, employer/unit match, document type, or extraction readiness.",
     "No source was ingested or codified and no wage data or wage gaps were calculated."
   ]

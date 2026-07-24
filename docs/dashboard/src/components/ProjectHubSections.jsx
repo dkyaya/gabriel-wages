@@ -402,7 +402,12 @@ export function VerificationPipeline({
       <div className="verification-callout">
         <div>
           <p className="eyebrow">Source review</p>
-          <h3>150-row p1 pilot prepared; no downloads yet</h3>
+          <h3>
+            {sourceReviewStatus.source_review_phase ===
+            "live_path_implemented_ready_for_pilot"
+              ? "Bounded live path mock-tested; 150-row pilot ready"
+              : "150-row p1 pilot prepared; no downloads yet"}
+          </h3>
         </div>
         <p>
           The offline source-review plan selects{" "}
@@ -411,7 +416,11 @@ export function VerificationPipeline({
           {formatNumber(sourceReviewStatus.initial_source_review_lane_count)}
           {" "}balanced lanes and{" "}
           {formatNumber(sourceReviewStatus.initial_source_review_states)}
-          {" "}states. Source content has not been accessed, and final source
+          {" "}states. {sourceReviewStatus.source_review_phase ===
+          "live_path_implemented_ready_for_pilot"
+            ? `The fail-closed runner is ready at concurrency ${formatNumber(sourceReviewStatus.recommended_initial_live_concurrency)} and a ${formatNumber(sourceReviewStatus.recommended_initial_max_bytes)}-byte cap after mocked transport tests. `
+            : null}
+          No real source content has been accessed, and final source
           rating, extraction readiness, ingestion, codification, wage extraction,
           and wage-gap analysis have not started.
         </p>
