@@ -6,6 +6,39 @@ Last updated: `2026-07-24`
 
 ---
 
+## 2026-07-24 — Source-review Pilot 1 HTTPX retry succeeded; serial merge pending
+
+### Current State
+
+- **Start:** work began at clean tracked `1544750f857bc2da8724a7dd48dd43b689532a6e`; requested ancestry and exact locked lane hashes are present. The unrelated untracked root `package-lock.json` remains untouched.
+- **Preserved provenance:** original Lane 1/Lane 2 and diagnostic-probe tree digests remained byte-identical. The original attempt is still 149 connection errors plus one forbidden, and remains unmerged.
+- **Dry gate:** fresh 75/75 dry runs produced 150 terminal-planned rows, two `dry_run_passed` lanes, zero source access, and `dry_run_complete_no_live_source_review`.
+- **Retry scope:** exactly the same locked 150 identities ran in two lanes at concurrency four, 30/8/20-second timeouts, five redirects, 25 MiB, proxy inheritance off, and samples off. No third lane ran.
+- **Retry outcomes:** [the result review](source_review_pilot1_httpx_retry_result_review_2026-07-24.md) records 149 `reviewed_metadata_and_artifact_saved`, one repeated `download_forbidden`, and zero connection errors. The 149 PDF artifacts total 301,970,460 bytes; every recorded content hash and size matches.
+- **Ratings:** officialness is municipal 82, state repository 18, union 7, uncertain 41, unknown 2. Relevance and municipality/employer/unit match are only `possible` for the 149 accessible rows. Document type is `cba_candidate` and technical extraction readiness is `medium` for those rows. Pages, text layer, wage/mechanism signals, safety match, and non-safety match remain unknown because content was not parsed.
+- **Audit:** both lanes are `completed_merge_eligible`, artifact integrity passes, and recommendation is `merge_all_source_review_lanes`. [No durable merge occurred](source_review_pilot1_httpx_retry_no_merge_note_2026-07-24.md).
+- **Dashboard:** `source_review_phase = pilot1_httpx_retry_collected_not_merged`; 150 retry rows are collected and merge remains `not_started`.
+- **Boundary:** no scale-up, scout accounting, routing/triage-ledger mutation, content sample, PDF parse, OCR, extraction, ingestion, codification, wage calculation/claim, causal claim, regression, remote inspection, or push occurred.
+- **Validation:** [the validation record](source_review_pilot1_httpx_retry_validation_2026-07-24.md) reports five compiles, 17 mock/offline tests, final audit, exact scope and immutable provenance checks, 149 artifact/hash/PDF/locality checks, dashboard JSON/frontend build, schema and 60 ingestion tests, protected hashes, and diff checks passed.
+
+### Interpretation
+
+The repaired client succeeded at full pilot scale: connection errors fell
+from 149 to zero and 149 bodies were retained. The one forbidden row is
+stable across the original attempt, diagnostic probe, and retry. These
+artifacts and ratings remain preliminary source-review outputs—not ingested
+evidence, confirmed CBAs, employer/unit matches, extracted wage data, or
+analysis-ready observations.
+
+### Next Move
+
+Under separate authorization, run a serial source-review merge using only
+the repaired `lane_1_live_attempt2_httpx` and
+`lane_2_live_attempt2_httpx` ledgers as operative outcomes. Preserve the
+original attempt as superseded diagnostic provenance. After merge and relay
+review, a bounded 500-row plan is reasonable; do not move directly to
+750/1,000, OCR, heavy parsing, ingestion, codification, or wage analysis.
+
 ## 2026-07-24 — Source-review connection diagnosis succeeded; full retry not started
 
 ### Current State

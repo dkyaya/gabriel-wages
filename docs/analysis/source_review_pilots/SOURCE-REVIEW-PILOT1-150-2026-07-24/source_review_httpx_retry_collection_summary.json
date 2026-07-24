@@ -1,0 +1,122 @@
+{
+  "schema_version": "1.0.0",
+  "status": "pilot1_httpx_retry_collected_not_merged",
+  "pilot_id": "SOURCE-REVIEW-PILOT1-150-2026-07-24",
+  "attempt_id": "pilot1_live_attempt2_httpx",
+  "selected_rows": 150,
+  "ledger_rows": 150,
+  "terminal_rows": 150,
+  "lane_rows": {
+    "lane_1": 75,
+    "lane_2": 75
+  },
+  "lane_runtime_seconds": {
+    "lane_1": 26,
+    "lane_2": 33
+  },
+  "lane_rows_per_hour": {
+    "lane_1": 10384.615,
+    "lane_2": 8181.818
+  },
+  "total_wall_clock_seconds": 115,
+  "combined_rows_per_hour": 4695.652,
+  "source_review_status_counts": {
+    "download_forbidden": 1,
+    "reviewed_metadata_and_artifact_saved": 149
+  },
+  "url_access_status_counts": {
+    "forbidden": 1,
+    "reached": 149
+  },
+  "download_status_counts": {
+    "artifact_saved": 149,
+    "forbidden": 1
+  },
+  "content_type_observed_counts": {
+    "application/pdf": 149,
+    "unknown": 1
+  },
+  "content_byte_size_distribution": {
+    "0": 1,
+    "64_kib_to_1_mib": 69,
+    "1_to_10_mib": 80
+  },
+  "content_artifact_count": 149,
+  "content_artifact_bytes": 301970460,
+  "maximum_content_artifact_bytes": 10319152,
+  "metadata_artifact_count": 150,
+  "metadata_artifact_bytes": 163090,
+  "total_artifact_bytes": 302133550,
+  "rows_with_content_hash": 149,
+  "rows_with_matching_content_hash": 149,
+  "content_sample_count": 0,
+  "source_officialness_rating_counts": {
+    "official_municipal": 82,
+    "official_state_repository": 18,
+    "official_union": 7,
+    "uncertain": 41,
+    "unknown": 2
+  },
+  "source_relevance_rating_counts": {
+    "possible": 149,
+    "unknown": 1
+  },
+  "municipality_match_rating_counts": {
+    "possible": 149,
+    "unknown": 1
+  },
+  "employer_match_rating_counts": {
+    "possible": 149,
+    "unknown": 1
+  },
+  "bargaining_unit_match_rating_counts": {
+    "possible": 149,
+    "unknown": 1
+  },
+  "document_type_rating_counts": {
+    "cba_candidate": 149,
+    "unknown": 1
+  },
+  "extraction_readiness_rating_counts": {
+    "medium": 149,
+    "not_ready": 1
+  },
+  "pdf_page_count_counts": {
+    "unknown": 150
+  },
+  "text_layer_status_counts": {
+    "unknown": 150
+  },
+  "wage_table_signal_counts": {
+    "unknown": 150
+  },
+  "wage_growth_signal_counts": {
+    "unknown": 150
+  },
+  "mechanism_language_signal_counts": {
+    "unknown": 150
+  },
+  "manual_review_burden_rows": 1,
+  "manual_review_burden_rate": 0.006667,
+  "urls_opened": 150,
+  "network_calls": 150,
+  "documents_downloaded": 149,
+  "documents_parsed": 0,
+  "pdfs_parsed": 0,
+  "ocr_runs": 0,
+  "content_artifacts_written": 149,
+  "artifact_integrity_passed": true,
+  "input_identity_exact_match": true,
+  "connection_error_rows": 0,
+  "lane_audit_recommendation": "merge_all_source_review_lanes",
+  "original_failed_attempt_status": "preserved_unmerged_superseded_transport",
+  "source_review_merge_status": "not_started",
+  "scaling_recommendation": "eligible_to_plan_500_after_serial_merge_and_relay_review",
+  "caveats": [
+    "The original failed attempt remains preserved and unmerged.",
+    "The HTTPX retry is not durable until a separate serial source-review merge.",
+    "The retained artifacts were not parsed or OCRed and no content samples were saved.",
+    "Ratings are preliminary access-and-artifact signals, not final source-content ratings.",
+    "No source was ingested or codified and no wage data or wage gaps were calculated."
+  ]
+}

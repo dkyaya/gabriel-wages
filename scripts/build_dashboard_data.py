@@ -112,6 +112,10 @@ SOURCE_REVIEW_CONNECTION_DIAGNOSTIC_SUMMARY_PATH = (
     SOURCE_REVIEW_PILOT_MANIFEST_PATH.parent
     / "source_review_connection_diagnostic_summary.json"
 )
+SOURCE_REVIEW_HTTPX_RETRY_SUMMARY_PATH = (
+    SOURCE_REVIEW_PILOT_MANIFEST_PATH.parent
+    / "source_review_httpx_retry_collection_summary.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -160,6 +164,7 @@ OPTIONAL_PATHS = [
     SOURCE_REVIEW_PILOT_MANIFEST_PATH,
     SOURCE_REVIEW_PILOT_LIVE_SUMMARY_PATH,
     SOURCE_REVIEW_CONNECTION_DIAGNOSTIC_SUMMARY_PATH,
+    SOURCE_REVIEW_HTTPX_RETRY_SUMMARY_PATH,
 ]
 
 STATE_NAMES = {
@@ -2238,6 +2243,90 @@ def build_source_review_status_summary(
                     "A full Pilot 1 retry requires separate authorization and fresh output directories.",
                     "No source was ingested or codified and no wage data or wage gaps were calculated.",
                 ],
+            }
+        )
+    if SOURCE_REVIEW_HTTPX_RETRY_SUMMARY_PATH.exists():
+        retry = read_json(SOURCE_REVIEW_HTTPX_RETRY_SUMMARY_PATH)
+        if (
+            retry.get("status")
+            != "pilot1_httpx_retry_collected_not_merged"
+            or retry.get("pilot_id") != manifest["pilot_id"]
+            or int(retry.get("selected_rows", 0)) != selected_rows
+            or int(retry.get("ledger_rows", 0)) != selected_rows
+            or int(retry.get("terminal_rows", 0)) != selected_rows
+            or int(retry.get("connection_error_rows", -1)) != 0
+            or int(retry.get("content_artifact_count", 0)) != 149
+            or int(retry.get("rows_with_matching_content_hash", 0)) != 149
+        ):
+            raise ValueError(
+                "Source-review HTTPX retry summary fails locked pilot gates"
+            )
+        payload.update(
+            {
+                "stage": "source_review_pilot_httpx_retry_collection",
+                "source_review_phase": (
+                    "pilot1_httpx_retry_collected_not_merged"
+                ),
+                "source_review_live_status": (
+                    "pilot1_httpx_retry_collected_not_merged"
+                ),
+                "bounded_live_source_review_path": (
+                    "httpx_retry_succeeded_not_merged"
+                ),
+                "latest_source_review_pilot_id": retry["pilot_id"],
+                "pilot1_httpx_retry_rows_collected": int(
+                    retry["ledger_rows"]
+                ),
+                "pilot1_httpx_retry_terminal_rows": int(
+                    retry["terminal_rows"]
+                ),
+                "pilot1_httpx_retry_source_review_status_counts": retry[
+                    "source_review_status_counts"
+                ],
+                "pilot1_httpx_retry_url_access_status_counts": retry[
+                    "url_access_status_counts"
+                ],
+                "pilot1_httpx_retry_download_status_counts": retry[
+                    "download_status_counts"
+                ],
+                "pilot1_httpx_retry_content_type_observed_counts": retry[
+                    "content_type_observed_counts"
+                ],
+                "pilot1_httpx_retry_content_artifact_count": int(
+                    retry["content_artifact_count"]
+                ),
+                "pilot1_httpx_retry_content_artifact_bytes": int(
+                    retry["content_artifact_bytes"]
+                ),
+                "pilot1_httpx_retry_metadata_artifact_count": int(
+                    retry["metadata_artifact_count"]
+                ),
+                "pilot1_httpx_retry_rows_with_content_hash": int(
+                    retry["rows_with_content_hash"]
+                ),
+                "pilot1_httpx_retry_manual_review_burden_rows": int(
+                    retry["manual_review_burden_rows"]
+                ),
+                "pilot1_httpx_retry_lane_audit_recommendation": retry[
+                    "lane_audit_recommendation"
+                ],
+                "pilot1_source_review_merge_status": "not_started",
+                "source_rating_status": (
+                    "pilot1_httpx_retry_collected_not_merged"
+                ),
+                "content_download_status": (
+                    "pilot1_httpx_retry_collected_not_merged"
+                ),
+                "extraction_readiness_status": (
+                    "preliminary_pilot1_httpx_retry_not_merged"
+                ),
+                "next_scaling_decision": retry[
+                    "scaling_recommendation"
+                ],
+                "httpx_retry_collection_summary_source": relative(
+                    SOURCE_REVIEW_HTTPX_RETRY_SUMMARY_PATH
+                ),
+                "caveats": retry["caveats"],
             }
         )
     return payload

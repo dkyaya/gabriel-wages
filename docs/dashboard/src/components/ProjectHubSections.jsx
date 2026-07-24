@@ -404,6 +404,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Source review</p>
           <h3>
             {sourceReviewStatus.source_review_phase ===
+            "pilot1_httpx_retry_collected_not_merged"
+              ? "Pilot 1 HTTPX retry succeeded; serial merge pending"
+              : sourceReviewStatus.source_review_phase ===
             "pilot1_connection_diagnosed_retry_not_started"
               ? "Pilot 1 transport fixed; bounded retry awaits authorization"
               : sourceReviewStatus.source_review_phase ===
@@ -417,6 +420,19 @@ export function VerificationPipeline({
         </div>
         <p>
           {sourceReviewStatus.source_review_phase ===
+          "pilot1_httpx_retry_collected_not_merged" ? (
+            <>
+              The repaired-client retry completed all{" "}
+              {formatNumber(sourceReviewStatus.pilot1_httpx_retry_rows_collected)}
+              {" "}locked rows and retained{" "}
+              {formatNumber(sourceReviewStatus.pilot1_httpx_retry_content_artifact_count)}
+              {" "}hashed PDF artifacts; one expected row remained forbidden and
+              no connection errors recurred. The original transport-failed attempt
+              remains preserved and unmerged. A separate serial merge is still
+              required, and ingestion, codification, wage extraction, and wage-gap
+              analysis remain unstarted.
+            </>
+          ) : sourceReviewStatus.source_review_phase ===
           "pilot1_connection_diagnosed_retry_not_started" ? (
             <>
               The original 150-row attempt remains unmerged after 149 connection

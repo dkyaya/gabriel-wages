@@ -6,6 +6,33 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-24 (Source-review Pilot 1 HTTPX retry succeeded; no merge)
+
+**Did**
+- Started from clean tracked `1544750f857bc2da8724a7dd48dd43b689532a6e`, confirmed requested ancestry, exact 75/75 input hashes, absence of fresh retry outputs and a durable source-review ledger, and left the unrelated untracked root `package-lock.json` untouched.
+- Recorded immutable tree digests for both original failed lane directories and the successful ten-row diagnostic probe. Those digests remained unchanged after the retry.
+- Ran fresh 75/75 dry runs and a retry-specific audit: 150 terminal-planned rows, two `dry_run_passed` lanes, zero source access, and `dry_run_complete_no_live_source_review`.
+- Ran exactly the locked 150 identities in two guarded HTTPX lanes at concurrency four, 30/8/20-second limits, five redirects, 25 MiB, proxy inheritance off, and samples off. Lane 1 established checkpoints before Lane 2 launched; both scripts exited zero.
+- The retry produced 149 `reviewed_metadata_and_artifact_saved` rows and one repeated `download_forbidden`, with zero connection errors. All 149 retained PDFs have matching hashes and total 301,970,460 bytes; 150 metadata records total 163,090 bytes.
+- Both lanes audit as `completed_merge_eligible`, exact identity and artifact-integrity gates pass, and recommendation is `merge_all_source_review_lanes`. The original attempt and retry remain unmerged.
+- Updated the dashboard to `pilot1_httpx_retry_collected_not_merged`, retaining original-attempt and diagnostic history.
+
+**Decisions and why**
+- Treat the repaired retry as the operative Pilot 1 collection for any later serial merge; retain the original failed attempt only as superseded diagnostic provenance.
+- Permit planning a 500-row follow-on only after serial merge and relay review because all completion, artifact-yield, hash/locality, runtime, and immediate manual-burden gates passed. Do not recommend 750/1,000 yet: the ratings are still artifact-metadata signals, and speed alone is not content-review quality.
+- Keep OCR, PDF parsing, content samples, ingestion, codification, and wage work outside this collection layer.
+
+**Surprises/breakage**
+- The repair was stronger at full-pilot scale than the ten-row probe alone could establish: 149/150 source bodies were retained, and the only non-success was the same expected forbidden row.
+- The gated end-to-end wall clock was 115 seconds, while lane-local runtimes were 26 and 33 seconds. The combined wall metric includes the checkpoint/launch gate and should not be interpreted as pure client throughput.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Five compiles, 17 offline/mock tests, final retry audit, exact 150-ID equality, 149 hash/PDF/locality checks, dashboard rebuild/16 JSON parses/frontend production build, schema validation, 60 ingestion tests, immutable protected/original/diagnostic hashes, metadata safety checks, and diff checks passed. No third lane, scale-up, durable source-review merge, scout-accounting or routing/triage-ledger mutation, content sample, PDF parse, OCR, ingestion, `gabriel.codify`, wage extraction, wage-gap work, causal claim, regression, remote action, or push occurred.
+
+**Next steps**
+1. Review the retry artifacts, preliminary ratings, audit, and relay.
+2. If separately authorized, serially merge only the repaired HTTPX retry outcomes while preserving the original attempt as superseded provenance.
+3. After merge and relay review, consider planning a bounded 500-row next batch; keep heavier parsing/OCR/manual work in smaller lanes.
+
 ## 2026-07-24 (Source-review connection failure diagnosed; 10-row repair probe succeeded)
 
 **Did**

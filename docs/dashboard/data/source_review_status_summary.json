@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-24T19:26:07Z",
+  "generated_at": "2026-07-24T19:44:25Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -27,7 +27,8 @@
     "docs/analysis/content_triage_ledgers/content_triage_summary_latest.json",
     "docs/analysis/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/source_review_pilot_manifest.json",
     "docs/analysis/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/source_review_live_collection_summary.json",
-    "docs/analysis/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/source_review_connection_diagnostic_summary.json"
+    "docs/analysis/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/source_review_connection_diagnostic_summary.json",
+    "docs/analysis/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/source_review_httpx_retry_collection_summary.json"
   ],
   "warnings": [],
   "limitations": [
@@ -40,8 +41,8 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "stage": "source_review_connection_diagnosis",
-  "source_review_phase": "pilot1_connection_diagnosed_retry_not_started",
+  "stage": "source_review_pilot_httpx_retry_collection",
+  "source_review_phase": "pilot1_httpx_retry_collected_not_merged",
   "metadata_triage_complete": true,
   "metadata_triage_rows": 4726,
   "p1_rows": 1760,
@@ -55,18 +56,18 @@
   },
   "initial_source_review_states": 43,
   "initial_source_review_unique_municipalities": 95,
-  "source_review_live_status": "pilot1_original_content_yield_failed_diagnosis_complete",
-  "bounded_live_source_review_path": "httpx_patch_probe_succeeded",
+  "source_review_live_status": "pilot1_httpx_retry_collected_not_merged",
+  "bounded_live_source_review_path": "httpx_retry_succeeded_not_merged",
   "recommended_initial_live_concurrency": 4,
   "recommended_initial_timeout_seconds": 30,
   "recommended_initial_connect_timeout_seconds": 8,
   "recommended_initial_read_timeout_seconds": 20,
   "recommended_initial_max_redirects": 5,
   "recommended_initial_max_bytes": 26214400,
-  "next_scaling_decision": "do_not_scale_prepare_bounded_150_row_retry_only",
-  "content_download_status": "diagnostic_probe_only_not_merged",
-  "source_rating_status": "diagnostic_probe_only_not_merged",
-  "extraction_readiness_status": "preliminary_diagnostic_probe_only_not_merged",
+  "next_scaling_decision": "eligible_to_plan_500_after_serial_merge_and_relay_review",
+  "content_download_status": "pilot1_httpx_retry_collected_not_merged",
+  "source_rating_status": "pilot1_httpx_retry_collected_not_merged",
+  "extraction_readiness_status": "preliminary_pilot1_httpx_retry_not_merged",
   "ingestion_status": "not_started",
   "codify_status": "not_started",
   "wage_extraction_status": "not_started",
@@ -133,10 +134,10 @@
   "pilot_manifest_source": "docs/analysis/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/source_review_pilot_manifest.json",
   "metadata_triage_summary_source": "docs/analysis/content_triage_ledgers/content_triage_summary_latest.json",
   "caveats": [
-    "The original 150-row source-review attempt failed its content-yield gate and remains unmerged.",
-    "A verifier-compatible HTTP client diagnostic probe saved nine bounded PDF artifacts and retained one expected forbidden outcome.",
-    "The ten-row diagnostic proves repaired access mechanics; it is not a durable source-rating ledger or authorization to scale.",
-    "A full Pilot 1 retry requires separate authorization and fresh output directories.",
+    "The original failed attempt remains preserved and unmerged.",
+    "The HTTPX retry is not durable until a separate serial source-review merge.",
+    "The retained artifacts were not parsed or OCRed and no content samples were saved.",
+    "Ratings are preliminary access-and-artifact signals, not final source-content ratings.",
     "No source was ingested or codified and no wage data or wage gaps were calculated."
   ],
   "latest_source_review_pilot_id": "SOURCE-REVIEW-PILOT1-150-2026-07-24",
@@ -188,5 +189,30 @@
   "diagnostic_probe_rows_with_content_hash": 9,
   "diagnostic_probe_content_artifact_bytes": 12536566,
   "diagnostic_probe_root_cause": "source_review_urllib_transport_mismatch",
-  "connection_diagnostic_summary_source": "docs/analysis/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/source_review_connection_diagnostic_summary.json"
+  "connection_diagnostic_summary_source": "docs/analysis/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/source_review_connection_diagnostic_summary.json",
+  "pilot1_httpx_retry_rows_collected": 150,
+  "pilot1_httpx_retry_terminal_rows": 150,
+  "pilot1_httpx_retry_source_review_status_counts": {
+    "download_forbidden": 1,
+    "reviewed_metadata_and_artifact_saved": 149
+  },
+  "pilot1_httpx_retry_url_access_status_counts": {
+    "forbidden": 1,
+    "reached": 149
+  },
+  "pilot1_httpx_retry_download_status_counts": {
+    "artifact_saved": 149,
+    "forbidden": 1
+  },
+  "pilot1_httpx_retry_content_type_observed_counts": {
+    "application/pdf": 149,
+    "unknown": 1
+  },
+  "pilot1_httpx_retry_content_artifact_count": 149,
+  "pilot1_httpx_retry_content_artifact_bytes": 301970460,
+  "pilot1_httpx_retry_metadata_artifact_count": 150,
+  "pilot1_httpx_retry_rows_with_content_hash": 149,
+  "pilot1_httpx_retry_manual_review_burden_rows": 1,
+  "pilot1_httpx_retry_lane_audit_recommendation": "merge_all_source_review_lanes",
+  "httpx_retry_collection_summary_source": "docs/analysis/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/source_review_httpx_retry_collection_summary.json"
 }
