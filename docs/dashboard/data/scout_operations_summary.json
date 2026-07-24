@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-24T16:48:42Z",
+  "generated_at": "2026-07-24T17:09:07Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -18,7 +18,8 @@
     "docs/analysis/hypothesis_tracker_2026-07-12.csv",
     "docs/analysis/hosted_search_transport_recommendation_2026-07-22.md",
     "docs/analysis/verification_ledgers/verified_source_routing_summary_latest.json",
-    "docs/analysis/verification_rounds/VERIFICATION-SCALE-ROUND2-3X1000-REMAINDER-2026-07-24/verification_live_collection_summary.json"
+    "docs/analysis/verification_rounds/VERIFICATION-SCALE-ROUND2-3X1000-REMAINDER-2026-07-24/verification_live_collection_summary.json",
+    "docs/analysis/content_triage_rounds/CONTENT-TRIAGE-ROUND1-1000-2026-07-24/content_triage_round_manifest.json"
   ],
   "warnings": [],
   "limitations": [

@@ -6,6 +6,39 @@ Last updated: `2026-07-24`
 
 ---
 
+## 2026-07-24 — Content-triage framework and first 1,000-row dry plan are ready
+
+### Current State
+
+- **Repository gate:** work began at clean tracked `5c9c524b31a19dd9d68984aacef750f3cac78b33`; all required ancestry is present and the unrelated untracked root `package-lock.json` remains untouched.
+- **Routing input:** [the cumulative routing ledger](verification_ledgers/verified_source_routing_ledger_cumulative.csv) covers all 4,726 queue identities. It contains 3,750 reachable/successfully reused rows and 28 additional duplicate-pending rows in the requested five-status planning pool.
+- **Framework:** `prepare_content_triage_batches.py` joins routing and queue provenance, applies scheduled/high-priority/document/source/official/matched-set/state-yield ordering, preserves exact-URL groups, and plans lanes without URL access. `content_triage_sources.py` implements only schema dry-run and refuses live execution. `audit_content_triage_lanes.py` checks lane hashes, identities, row coverage, statuses, and safety counters without mutating an upstream/downstream layer.
+- **Locked first round:** [the manifest](content_triage_rounds/CONTENT-TRIAGE-ROUND1-1000-2026-07-24/content_triage_round_manifest.json) selects 1,000 rows balanced 500/500. Lane hashes are `1ae2aef43cec1756c0169b1395f00d8a772ddd12fd98a6a70c5b2937b784bc2b` and `118f3ca494782d46e504bfb2ebded6c8afe9e22a7a81661808987ea78ae64688`.
+- **Selection:** all 1,000 are scheduled/high-priority candidate-labeled CBAs with PDF routing responses because the deterministic ranking has more than 1,000 such records. The labels are unconfirmed until later content review. States are OH 454, CA 206, WA 67, IL 66, MA 58, OR 54, CT 30, NV 18, MT 16, NH/RI 13 each, DC 3, and HI 2.
+- **Duplicate/exception policy:** the routing-eligible pool has 78 duplicate groups and 93 linked rows; linked duplicates are not in Round 1. All 756 reachable lower-disposition rows, 261 oversized rows, and 687 other routing-exception rows are deferred without deletion or evidentiary reinterpretation.
+- **Dry gate:** both 500-row dry runs pass. The combined audit has 1,000 terminal `triage_planned` rows, zero cross-lane duplicate triage/queue IDs, zero URL/network/download/parse activity, and recommendation `dry_run_complete_do_not_merge_live_triage`.
+- **Dashboard:** `content_triage_status_summary.json` reports `planned_not_started`, a 1,000-row two-lane first round, 261 oversized rows deferred, and every downstream source-rating/extraction/ingestion/codification/wage stage not started.
+- **Boundary:** no URL was opened; no content was downloaded, parsed, or OCRed; no live triage/verification, network/API/model/hosted-search/scout call, scout accounting, ingestion, codification, wage extraction, wage-gap work, causal claim, regression, remote action, or push occurred.
+
+### Interpretation and limitations
+
+The first round is a metadata-based review queue, not a set of confirmed CBAs
+or relevant documents. `triage_planned` says only that routing provenance,
+identity, and the future triage schema are complete. The 3,750 headline
+excludes 28 duplicate-pending rows; the planner reports both values instead of
+quietly treating pending linkage as successful reuse.
+
+### Next Move
+
+Review [the operating procedure](content_triage_operating_procedure_2026-07-24.md),
+[schema](content_triage_schema_2026-07-24.md), and relay. If the next task is
+authorized, first implement and mock-test a bounded metadata-first content
+review path. Then use [the future live prompt](content_triage_round1_live_prompt_2026-07-24.md)
+and stop before [the separate serial merge](content_triage_round1_merge_prompt_2026-07-24.md).
+Do not globally raise the 10 MiB limit; use
+[the oversized plan](oversized_source_handling_plan_2026-07-24.md) for those
+261 rows.
+
 ## 2026-07-24 — Future 2×2000 URL-routing profile is ready; current queue has no work
 
 ### Current State

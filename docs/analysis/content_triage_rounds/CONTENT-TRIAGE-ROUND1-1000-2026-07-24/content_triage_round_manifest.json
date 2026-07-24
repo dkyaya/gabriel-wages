@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0.0",
+  "round_id": "CONTENT-TRIAGE-ROUND1-1000-2026-07-24",
+  "plan_type": "offline_metadata_first_content_triage",
+  "status": "planned_not_started",
+  "created_date": "2026-07-24",
+  "routing_ledger_csv": "docs/analysis/verification_ledgers/verified_source_routing_ledger_cumulative.csv",
+  "routing_ledger_sha256": "831f40dacf3f0362d5c3c81cb2e59c4d3da502187c94672e381d355ae79f5499",
+  "candidate_queue_csv": "docs/analysis/national_scout_candidate_queue_2026-07-20.csv",
+  "candidate_queue_sha256": "d46b8bc3c60cbbda9b2f6f618fc447d1878d610fa1beb0924e7bafd47f965e83",
+  "total_routed_rows": 4726,
+  "reachable_or_successfully_reused_rows": 3750,
+  "routing_eligible_rows_including_duplicate_pending": 3778,
+  "eligible_rows_in_scope_before_duplicate_policy": 2391,
+  "eligible_rows_after_duplicate_policy": 2382,
+  "selected_rows": 1000,
+  "unselected_rows_in_scope": 1382,
+  "batch_size_total": 1000,
+  "num_lanes": 2,
+  "priority_scope": "scheduled_high_priority_reachable",
+  "include_html": true,
+  "include_duplicates": false,
+  "include_lower_disposition": false,
+  "exclude_too_large": true,
+  "routing_status_distribution": {
+    "blocked_or_forbidden": 339,
+    "connection_error": 8,
+    "duplicate_of_verified_source": 70,
+    "duplicate_same_url_pending": 28,
+    "error": 45,
+    "not_found": 264,
+    "reachable_html": 145,
+    "reachable_http": 2,
+    "reachable_pdf_or_document": 3533,
+    "ssl_error": 17,
+    "timeout": 14,
+    "too_large": 261
+  },
+  "selected_verification_status_distribution": {
+    "reachable_pdf_or_document": 1000
+  },
+  "selected_state_distribution": {
+    "CA": 206,
+    "CT": 30,
+    "DC": 3,
+    "HI": 2,
+    "IL": 66,
+    "MA": 58,
+    "MT": 16,
+    "NH": 13,
+    "NV": 18,
+    "OH": 454,
+    "OR": 54,
+    "RI": 13,
+    "WA": 67
+  },
+  "selected_source_type_distribution": {
+    "cba": 1000
+  },
+  "selected_content_type_distribution": {
+    "application/pdf": 1000
+  },
+  "selected_candidate_disposition_distribution": {
+    "scheduled": 1000
+  },
+  "duplicate_group_count_in_routing_eligible_pool": 78,
+  "linked_duplicate_rows_in_routing_eligible_pool": 93,
+  "selected_duplicate_group_count": 0,
+  "too_large_rows_deferred": 261,
+  "blocked_not_found_error_transport_rows_deferred": 687,
+  "lower_disposition_routing_eligible_rows": 756,
+  "lower_disposition_rows_selected": 0,
+  "triage_stage_boundary": "metadata-first planning only; no URL opening, content review, download, parsing, extraction, ingestion, codification, or analysis",
+  "network_calls": 0,
+  "urls_opened": 0,
+  "documents_downloaded": 0,
+  "documents_parsed": 0,
+  "lanes": [
+    {
+      "lane_id": "lane_1",
+      "input_csv": "docs/analysis/content_triage_rounds/CONTENT-TRIAGE-ROUND1-1000-2026-07-24/lane_1_content_triage_input.csv",
+      "input_sha256": "1ae2aef43cec1756c0169b1395f00d8a772ddd12fd98a6a70c5b2937b784bc2b",
+      "expected_rows": 500,
+      "dry_run_output_dir": "tmp/content_triage_rounds/CONTENT-TRIAGE-ROUND1-1000-2026-07-24/lane_1_dry_run",
+      "future_live_output_dir": "tmp/content_triage_rounds/CONTENT-TRIAGE-ROUND1-1000-2026-07-24/lane_1_live_attempt1"
+    },
+    {
+      "lane_id": "lane_2",
+      "input_csv": "docs/analysis/content_triage_rounds/CONTENT-TRIAGE-ROUND1-1000-2026-07-24/lane_2_content_triage_input.csv",
+      "input_sha256": "118f3ca494782d46e504bfb2ebded6c8afe9e22a7a81661808987ea78ae64688",
+      "expected_rows": 500,
+      "dry_run_output_dir": "tmp/content_triage_rounds/CONTENT-TRIAGE-ROUND1-1000-2026-07-24/lane_2_dry_run",
+      "future_live_output_dir": "tmp/content_triage_rounds/CONTENT-TRIAGE-ROUND1-1000-2026-07-24/lane_2_live_attempt1"
+    }
+  ]
+}

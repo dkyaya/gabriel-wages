@@ -32,47 +32,63 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "stage": "research_operational_priority_heuristic",
-  "priority_vintage_status": "current_after_aggressive_attempt3_merge",
-  "successful_scouts_since_priority_refresh": 0,
-  "selection_guard": "Reconcile targets against current coverage and failure-only status before selecting another ordinary wave.",
-  "totals": {
-    "municipality_universe": 35589,
-    "scout_covered": 2436,
-    "future_scout_eligible": 33147,
-    "tier_1_eligible": 245,
-    "tier_2_eligible": 2906,
-    "tier_3_eligible": 6889,
-    "tier_4_eligible": 10651,
-    "tier_5_eligible": 12456,
-    "failure_only_retry_targets": 28,
-    "priority_confidence": {
-      "high": 18838,
-      "medium": 13180,
-      "low": 3571
-    }
+  "stage": "content_triage_and_extraction_readiness_planning",
+  "content_triage_phase": "planned_not_started",
+  "routing_coverage_complete": true,
+  "routed_url_bearing_rows": 4726,
+  "reachable_or_reused_rows": 3750,
+  "routing_eligible_rows_including_duplicate_pending": 3778,
+  "initial_triage_round_id": "CONTENT-TRIAGE-ROUND1-1000-2026-07-24",
+  "initial_triage_round_rows": 1000,
+  "initial_triage_lane_count": 2,
+  "initial_triage_lane_rows": {
+    "lane_1": 500,
+    "lane_2": 500
   },
-  "tier_definitions": [
-    {
-      "tier": "Tier 1",
-      "label": "Highest-priority scout targets"
-    },
-    {
-      "tier": "Tier 2",
-      "label": "Strong-priority scout targets"
-    },
-    {
-      "tier": "Tier 3",
-      "label": "Strategic or moderate-priority targets"
-    },
-    {
-      "tier": "Tier 4",
-      "label": "Low-priority targets"
-    },
-    {
-      "tier": "Tier 5",
-      "label": "Defer for current research design"
-    }
-  ],
-  "disclaimer": "Scores rank research-operational scouting value only. They do not establish unionization, department existence, source availability, wage differences, or causal effects."
+  "initial_triage_priority_scope": "scheduled_high_priority_reachable",
+  "initial_triage_status": "planned_not_started",
+  "triage_live_status": "not_started",
+  "content_download_status": "not_started",
+  "source_rating_status": "not_started",
+  "extraction_readiness_status": "planned_not_started",
+  "ingestion_status": "not_started",
+  "codify_status": "not_started",
+  "wage_extraction_status": "not_started",
+  "wage_gap_analysis_status": "not_started",
+  "oversized_rows_deferred": 261,
+  "duplicate_group_count_in_routing_eligible_pool": 78,
+  "linked_duplicate_rows_in_routing_eligible_pool": 93,
+  "selected_state_distribution": {
+    "CA": 206,
+    "CT": 30,
+    "DC": 3,
+    "HI": 2,
+    "IL": 66,
+    "MA": 58,
+    "MT": 16,
+    "NH": 13,
+    "NV": 18,
+    "OH": 454,
+    "OR": 54,
+    "RI": 13,
+    "WA": 67
+  },
+  "selected_source_type_distribution": {
+    "cba": 1000
+  },
+  "selected_content_type_distribution": {
+    "application/pdf": 1000
+  },
+  "selected_candidate_disposition_distribution": {
+    "scheduled": 1000
+  },
+  "round_manifest_source": "docs/analysis/content_triage_rounds/CONTENT-TRIAGE-ROUND1-1000-2026-07-24/content_triage_round_manifest.json",
+  "routing_summary_source": "docs/analysis/verification_ledgers/verified_source_routing_summary_latest.json",
+  "caveats": [
+    "Content triage has not opened URLs or downloaded source content.",
+    "Routing reachability does not equal source relevance or employer/unit validation.",
+    "Extraction readiness remains preliminary until content is reviewed.",
+    "Reachable documents are not ingested, codified, or extracted wage observations.",
+    "No wage data or wage gaps have been calculated."
+  ]
 }

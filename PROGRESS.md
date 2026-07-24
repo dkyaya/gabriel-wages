@@ -6,6 +6,33 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-24 (Offline content-triage and extraction-readiness framework prepared)
+
+**Did**
+- Started from clean tracked `5c9c524b31a19dd9d68984aacef750f3cac78b33`, confirmed all requested ancestry, and left the unrelated untracked root `package-lock.json` untouched.
+- Validated the cumulative routing ledger against all 4,726 canonical queue identities. It contains 3,750 reachable/successfully reused rows plus 28 duplicate-pending rows; the latter remain a separate duplicate-resolution category.
+- Added an offline content-triage planner, schema-only dry-run runner, lane auditor, and six synthetic/local tests. The runner refuses non-dry execution, so it cannot open or download content in this framework task.
+- Prepared `CONTENT-TRIAGE-ROUND1-1000-2026-07-24`: 1,000 scheduled high-priority rows balanced 500/500 with unique triage/queue identities. The locked inputs hash to `1ae2aef43cec1756c0169b1395f00d8a772ddd12fd98a6a70c5b2937b784bc2b` and `118f3ca494782d46e504bfb2ebded6c8afe9e22a7a81661808987ea78ae64688`.
+- Both dry runs produced 500 terminal `triage_planned` rows, no content artifacts, and zero URL/network/download/parse/OCR activity. The combined audit reports two `dry_run_passed` lanes and `dry_run_complete_do_not_merge_live_triage`.
+- Defined the durable triage schema, operating procedure, future live/merge prompts, and a separate handling plan for all 261 oversized routing outcomes. Added a dashboard triage status layer and concise first-round card.
+
+**Decisions and why**
+- Keep candidate, routing, triage, source rating, extraction readiness, ingestion, codification, and analysis-ready wage stages distinct. Metadata-based priority is not content verification.
+- Review one deterministic representative per exact-URL group by default. All linked identities stay preserved and can be explicitly included later.
+- Defer lower-disposition reachable rows and routing exceptions from the first ordinary batch. Reachability does not upgrade context, insufficient, duplicate, canonical, or rejected candidates.
+- Use a concentrated first block: the ordering produced 1,000 candidate-labeled CBAs with PDF routing responses because more than 1,000 high-priority records meet those metadata criteria. Neither label is treated as confirmed content.
+
+**Surprises/breakage**
+- The routing-eligible pool is 3,778 when the requested five statuses include 28 `duplicate_same_url_pending` rows, while the cumulative “reachable/reused” headline remains 3,750. Both counts are now explicit.
+- The first deterministic batch is geographically concentrated in Ohio (454) and California (206) and contains one candidate source/content-type block. Later rounds can broaden state/source diversity after this highest-priority block.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Five compiles, six offline tests, exact plan rebuild, two dry runs/audit, dashboard JSON/frontend checks, schema validation, 60 ingestion tests, protected/accounting/routing hashes, secret checks, and diff checks passed. No URL was opened; no download, PDF parse, OCR, live triage/verification, network/API/model/hosted-search/scout call, scout-accounting mutation, ingestion, `gabriel.codify`, wage extraction, wage-gap work, causal claim, regression, remote action, or push occurred.
+
+**Next steps**
+1. Review this framework/relay before implementing any live metadata/content-review path.
+2. If authorized, implement and mock-test a bounded metadata-first triage path, then use the future live prompt and stop before durable triage merge.
+3. Keep the 261 oversized rows in their separate strategy; do not raise ordinary limits globally.
+
 ## 2026-07-24 (Future 2×2000 routing-only verification profile prepared)
 
 **Did**

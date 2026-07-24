@@ -11,6 +11,7 @@ import scoutYieldByState from "../data/scout_yield_by_state.json";
 import projectPhaseSummary from "../data/project_phase_summary.json";
 import parallelScoutStatus from "../data/parallel_scout_status.json";
 import verificationStatus from "../data/verification_status_summary.json";
+import contentTriageStatus from "../data/content_triage_status_summary.json";
 import reportsIndex from "../data/reports_index.json";
 import piProgressReportPdf from "../reports/pi_progress_report_source_discovery_2026-07-22.pdf?url";
 import { AnalysisReadinessPanel } from "./components/AnalysisReadinessPanel.jsx";
@@ -256,6 +257,7 @@ function App() {
             readiness={analysisReadiness}
             phase={projectPhaseSummary}
             verificationStatus={verificationStatus}
+            contentTriageStatus={contentTriageStatus}
           />
 
           <StateYieldPanel yieldData={scoutYieldByState} operations={scoutOperations} />

@@ -238,7 +238,13 @@ export function ScoutOperationsPanel({ operations, runtime, parallelStatus }) {
   );
 }
 
-export function VerificationPipeline({ candidateSummary, readiness, phase, verificationStatus }) {
+export function VerificationPipeline({
+  candidateSummary,
+  readiness,
+  phase,
+  verificationStatus,
+  contentTriageStatus,
+}) {
   const candidateRows = candidateSummary.totals.candidate_rows;
   const fullRouting =
     verificationStatus.verification_phase === "full_url_routing_merged";
@@ -328,6 +334,19 @@ export function VerificationPipeline({ candidateSummary, readiness, phase, verif
               but no candidate URL has been opened yet.
             </>
           )}
+        </p>
+      </div>
+      <div className="verification-callout">
+        <div>
+          <p className="eyebrow">Content triage</p>
+          <h3>First metadata-first review round is prepared</h3>
+        </div>
+        <p>
+          Content triage is planned for {formatNumber(contentTriageStatus.initial_triage_round_rows)}
+          {" "}reachable/reused candidates in {formatNumber(contentTriageStatus.initial_triage_lane_count)}
+          {" "}offline-prepared lanes. No URL has been reopened, no source has been downloaded,
+          and source rating, extraction readiness, ingestion, codification, wage extraction,
+          and wage-gap analysis have not started.
         </p>
       </div>
       <p className="panel-note">

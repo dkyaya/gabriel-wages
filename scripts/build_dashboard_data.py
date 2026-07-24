@@ -64,6 +64,12 @@ VERIFICATION_ROUND2_LIVE_STATUS_PATH = (
     / "VERIFICATION-SCALE-ROUND2-3X1000-REMAINDER-2026-07-24"
     / "verification_live_collection_summary.json"
 )
+CONTENT_TRIAGE_ROUND1_MANIFEST_PATH = (
+    ANALYSIS_DIR
+    / "content_triage_rounds"
+    / "CONTENT-TRIAGE-ROUND1-1000-2026-07-24"
+    / "content_triage_round_manifest.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -103,6 +109,7 @@ OPTIONAL_PATHS = [
     HOSTED_SEARCH_RECOMMENDATION_PATH,
     VERIFICATION_ROUTING_SUMMARY_PATH,
     VERIFICATION_ROUND2_LIVE_STATUS_PATH,
+    CONTENT_TRIAGE_ROUND1_MANIFEST_PATH,
 ]
 
 STATE_NAMES = {
@@ -1651,6 +1658,82 @@ def build_verification_status_summary(
     }
 
 
+def build_content_triage_status_summary(
+    *, queue_rows: list[dict[str, str]], metadata: dict[str, Any]
+) -> dict[str, Any]:
+    """Describe offline triage planning without implying content review."""
+
+    routing_summary = read_json(VERIFICATION_ROUTING_SUMMARY_PATH)
+    manifest = read_json(CONTENT_TRIAGE_ROUND1_MANIFEST_PATH)
+    status_counts = routing_summary["verification_status_counts"]
+    routed_rows = int(routing_summary["ledger_rows"])
+    reachable_or_reused = int(routing_summary["reachable_or_reused_total"])
+    if routed_rows != len(queue_rows):
+        raise ValueError(
+            "Content-triage planning requires complete current-queue routing"
+        )
+    if int(manifest["total_routed_rows"]) != routed_rows:
+        raise ValueError("Content-triage manifest/routing row counts disagree")
+    selected_rows = int(manifest["selected_rows"])
+    lane_rows = {
+        str(lane["lane_id"]): int(lane["expected_rows"])
+        for lane in manifest["lanes"]
+    }
+    if sum(lane_rows.values()) != selected_rows:
+        raise ValueError("Content-triage lane rows do not sum to the round total")
+    return {
+        **metadata,
+        "stage": "content_triage_and_extraction_readiness_planning",
+        "content_triage_phase": "planned_not_started",
+        "routing_coverage_complete": True,
+        "routed_url_bearing_rows": routed_rows,
+        "reachable_or_reused_rows": reachable_or_reused,
+        "routing_eligible_rows_including_duplicate_pending": int(
+            manifest["routing_eligible_rows_including_duplicate_pending"]
+        ),
+        "initial_triage_round_id": manifest["round_id"],
+        "initial_triage_round_rows": selected_rows,
+        "initial_triage_lane_count": int(manifest["num_lanes"]),
+        "initial_triage_lane_rows": lane_rows,
+        "initial_triage_priority_scope": manifest["priority_scope"],
+        "initial_triage_status": manifest["status"],
+        "triage_live_status": "not_started",
+        "content_download_status": "not_started",
+        "source_rating_status": "not_started",
+        "extraction_readiness_status": "planned_not_started",
+        "ingestion_status": "not_started",
+        "codify_status": "not_started",
+        "wage_extraction_status": "not_started",
+        "wage_gap_analysis_status": "not_started",
+        "oversized_rows_deferred": int(status_counts.get("too_large", 0)),
+        "duplicate_group_count_in_routing_eligible_pool": int(
+            manifest["duplicate_group_count_in_routing_eligible_pool"]
+        ),
+        "linked_duplicate_rows_in_routing_eligible_pool": int(
+            manifest["linked_duplicate_rows_in_routing_eligible_pool"]
+        ),
+        "selected_state_distribution": manifest["selected_state_distribution"],
+        "selected_source_type_distribution": manifest[
+            "selected_source_type_distribution"
+        ],
+        "selected_content_type_distribution": manifest[
+            "selected_content_type_distribution"
+        ],
+        "selected_candidate_disposition_distribution": manifest[
+            "selected_candidate_disposition_distribution"
+        ],
+        "round_manifest_source": relative(CONTENT_TRIAGE_ROUND1_MANIFEST_PATH),
+        "routing_summary_source": relative(VERIFICATION_ROUTING_SUMMARY_PATH),
+        "caveats": [
+            "Content triage has not opened URLs or downloaded source content.",
+            "Routing reachability does not equal source relevance or employer/unit validation.",
+            "Extraction readiness remains preliminary until content is reviewed.",
+            "Reachable documents are not ingested, codified, or extracted wage observations.",
+            "No wage data or wage gaps have been calculated.",
+        ],
+    }
+
+
 def validate_inputs(
     *,
     state_rows: list[dict[str, str]],
@@ -1831,6 +1914,9 @@ def main() -> int:
     verification_status_summary = build_verification_status_summary(
         queue_rows=queue_rows, metadata=metadata
     )
+    content_triage_status_summary = build_content_triage_status_summary(
+        queue_rows=queue_rows, metadata=metadata
+    )
     reports_index = build_reports_index_layer(
         source_index=reports_index_source,
         metadata=metadata,
@@ -1850,6 +1936,9 @@ def main() -> int:
         write_json("project_phase_summary.json", project_phase_summary),
         write_json("parallel_scout_status.json", parallel_scout_status),
         write_json("verification_status_summary.json", verification_status_summary),
+        write_json(
+            "content_triage_status_summary.json", content_triage_status_summary
+        ),
         write_json("reports_index.json", reports_index),
     ]
 

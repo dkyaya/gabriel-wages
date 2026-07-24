@@ -32,12 +32,17 @@ extraction, ingestion, source quality/extractability rating, descriptive
 wage-growth-gap analysis, mechanism-correlation documentation, and a future
 gap-percentage map/filter. Regressions are deferred.
 
-The scaled verification framework now maps all 4,726 URL-bearing candidate
-rows. Its first offline-prepared round contains 750 scheduled candidates in
-three 250-row lanes; five nominal rounds cover all 3,600 scheduled rows and
-seven cover the full queue, including explicitly held and duplicate/canonical
-dispositions. All three first-round dry runs passed without opening a URL.
-Live verification remains `not_started`.
+The verification-routing layer now covers all 4,726 URL-bearing candidate
+rows. Two completed and serially merged rounds produced 4,726 durable routing
+outcomes, including 3,750 reachable or successfully reused rows. No current
+candidate URL remains unrouted.
+
+The next offline planning layer is content triage. Its first round contains
+1,000 scheduled, high-priority, routed candidates in two 500-row lanes. Both
+dry runs passed without opening a URL, downloading content, parsing a PDF, or
+running OCR. Content triage remains `planned_not_started`; routing outcomes
+have not been upgraded into relevant sources, quality ratings, extraction-ready
+documents, ingested records, or wage evidence.
 
 The current PI checkpoint report is available in the dashboard’s Reports Library and directly here:
 
@@ -161,6 +166,7 @@ The dashboard builder writes:
 - `project_phase_summary.json`
 - `parallel_scout_status.json`
 - `verification_status_summary.json`
+- `content_triage_status_summary.json`
 - `reports_index.json`
 
 Review the printed totals and diffs before committing. In particular, candidate-positive plus parseable-empty municipalities must equal scout-covered municipalities, and transport/failure-only results must remain outside successful coverage.
@@ -200,6 +206,16 @@ selects zero rows and creates no lane input, while rerouting durable identities
 requires explicit `--allow-reroute-already-verified` operator intent. Keep
 3×1000 as the lower-risk routing fallback and use smaller lanes for content
 triage, downloads, parsing, extraction, or rating.
+
+The current queue now also has an offline metadata-first content-triage plan.
+`CONTENT-TRIAGE-ROUND1-1000-2026-07-24` contains 1,000 scheduled,
+high-priority routing outcomes in two 500-row lanes. Both dry runs validate
+the content-triage schema without opening a URL, downloading a document,
+parsing a PDF, or running OCR. The dashboard status is
+`planned_not_started`: source relevance, quality rating, extraction readiness,
+ingestion, codification, wage extraction, and wage-gap analysis remain
+unperformed. The 261 oversized routing outcomes are deferred to a separately
+bounded handling plan.
 
 ## Run and build locally
 
