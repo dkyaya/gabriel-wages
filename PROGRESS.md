@@ -6,6 +6,32 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-23/24 (Aggressive 3×300 Attempt 2 stopped at stronger preflight)
+
+**Did**
+- Started from clean tracked `dcf3cd5f0ff77c746bf6b27c6e7561d9b8ccb1f8` on `main`, confirmed required ancestry, and left the unrelated untracked root `package-lock.json` untouched.
+- Revalidated the unchanged 300-row lane hashes `2965bd65…81fee1`, `6057e1c7…3896a7`, and `9934026f…50843a`; all 900 municipality/Census IDs remain unique, disjoint, currently eligible, and complete for five hints.
+- Confirmed Attempt 1 remains non-mergeable and quarantined with zero parseable outcomes and no accounting changes.
+- Ran Attempt 2 plan-only preflight with zero external calls. Ran exactly one stronger live gate; its first no-search control failed after 0.465 seconds with a sanitized HTTP 500 `InternalServerError` and no response ID, text, or tokens.
+- The gate stopped with `no_search_control_failed` after one external call. It did not attempt either hosted-search diagnostic or the Newport probe.
+- Suppressed all three dry runs, all three live lanes, lane scripts, and lane audit because the complete preflight prerequisite failed. No ten-parseable lane-health gate was entered.
+
+**Decisions and why**
+- Stop rather than retry the preflight inside Attempt 2. The authorization allowed exactly one stronger gate, and the prompt required a complete pass before dry runs or lane collection.
+- Do not audit the historical Attempt 1 roots as if they were Attempt 2. No Attempt 2 lane artifact exists.
+- Recommend a separately authorized fresh Attempt 3 with fresh paths and the same staged ten-parseable launch gates.
+
+**Surprises/breakage**
+- Attempt 2 failed even earlier than Attempt 1: the no-search baseline returned a generic server-side 500 before any hosted-search or scout probe request.
+- The failure was upstream of municipality prompting, so no municipality source failure, candidate, timing row, or accounting evidence exists.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Seven compiles, 7 synthetic parallel tests, 26 mocked/no-network direct-SDK tests, 12 prompt tests, 60 ingestion tests, schema validation, coverage audit, hash/eligibility/quarantine/protected/accounting checks, secret-pattern scan, and diff checks passed. Apart from the one authorized failed no-search preflight call, no API/model/backend/hosted-search call occurred. No URL verification, ingestion, `gabriel.codify`, accounting promotion, wage-gap calculation/claim, causal claim, regression, remote action, or push occurred.
+
+**Next steps**
+1. Do not run a serial merge; Attempt 2 has no lane output.
+2. Under separate authorization, follow `aggressive_3x300_attempt3_retry_recommendation_2026-07-23.md` with entirely fresh Attempt 3 paths.
+3. Require a complete stronger preflight and fresh dry runs before Lane 1; retain the ten-parseable health gates before Lanes 2 and 3.
+
 ## 2026-07-23/24 (Aggressive 3×300 live collection stopped at Lane 1 health gate)
 
 **Did**

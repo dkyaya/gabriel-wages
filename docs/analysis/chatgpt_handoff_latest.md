@@ -6,6 +6,23 @@ Last updated: `2026-07-23`
 
 ---
 
+## 2026-07-23/24 — Aggressive 3×300 Attempt 2 stopped before collection
+
+### Current State
+
+- **Start/readiness:** work began at clean tracked `dcf3cd5f0ff77c746bf6b27c6e7561d9b8ccb1f8`. All three locked 300-row hashes remain exact; the combined 900 municipality/Census IDs are unique and disjoint; current covered/canonical/retry/failure counts are zero; hints are 900/900.
+- **Attempt 1 boundary:** Attempt 1 remains quarantined and non-mergeable. Nothing from it entered Attempt 2 or national accounting.
+- **Plan-only:** passed with zero external calls.
+- **Exactly one stronger gate:** failed on its first no-search baseline call after 0.465 seconds. The persisted sanitized error is an HTTP 500 `InternalServerError`; response ID, response text, and token usage are absent. The gate made one external call total and stopped with `no_search_control_failed`.
+- **Suppressed stages:** both hosted-search diagnostics, the Newport probe, all three dry runs, all lane scripts, and all live lanes were not run. The ten-parseable health gates were never entered.
+- **Audit/merge:** there is no Attempt 2 lane artifact to audit. Running the committed manifest would inspect the historical Attempt 1 roots, so no misleading lane audit was produced. The controlling recommendation is `do_not_merge_until_fresh_preflight_and_collection`.
+- **Accounting:** official totals remain 1,537/2,000 covered, 1,267 positive, 270 empty, 27 failure-only, and 3,347 queue rows. No builder ran.
+- **Validation:** [the validation record](aggressive_3x300_attempt2_live_collection_validation_2026-07-23.md) reports all requested compiles/tests, schema and coverage checks, protected/accounting invariance, quarantine checks, secret-pattern scan, and diff check passed.
+
+### Next Move
+
+Do not run the serial merge. Under separate authorization, use [the Attempt 3 recommendation](aggressive_3x300_attempt3_retry_recommendation_2026-07-23.md) with fresh preflight/probe/dry/live/audit roots. Proceed to Lane 1 only after a complete stronger gate; launch Lanes 2–3 only after their preceding lane has ten checkpointed parseable rows and no active collapse pattern.
+
 ## 2026-07-23/24 — Aggressive 3×300 stopped after Lane 1 transport collapse
 
 ### Current State
