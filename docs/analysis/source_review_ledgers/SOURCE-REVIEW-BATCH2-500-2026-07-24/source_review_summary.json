@@ -1,0 +1,235 @@
+{
+  "schema_version": "1.1.0",
+  "status": "batch2_500_merged",
+  "source_review_pilot_id": "SOURCE-REVIEW-BATCH2-500-2026-07-24",
+  "source_review_merge_id": "SOURCE-REVIEW-BATCH2-500-MERGE-2026-07-24",
+  "source_review_merged_at": "2026-07-24T23:09:19Z",
+  "source_review_stage": "bounded_artifact_review_not_parsed",
+  "lane_count": 2,
+  "lane_rows": {
+    "lane_1": 250,
+    "lane_2": 250
+  },
+  "manifest_path": "docs/analysis/source_review_pilots/SOURCE-REVIEW-BATCH2-500-2026-07-24/source_review_pilot_manifest.json",
+  "manifest_sha256": "ab0e997b8ad561d2702f8cdd155f13d74874848dd4805ee4ab84970f7ca8fd4a",
+  "audit_summary_path": "tmp/source_review_pilots/SOURCE-REVIEW-BATCH2-500-2026-07-24/serial_merge_lane_audit_2026-07-24/source_review_lane_audit_summary.json",
+  "audit_summary_sha256": "9a0542850e9484186ef54ed0bef055b9cf09b27a92f5e74b5b133a7049da84f7",
+  "audit_merge_recommendation": "merge_all_source_review_lanes",
+  "sources": [
+    {
+      "lane_id": "lane_1",
+      "input_path": "docs/analysis/source_review_pilots/SOURCE-REVIEW-BATCH2-500-2026-07-24/lane_1_source_review_input.csv",
+      "input_sha256": "41a93aafc50c628db05de4597600ceccb20429d9c0a24d926a751b21ac061cef",
+      "output_dir": "tmp/source_review_pilots/SOURCE-REVIEW-BATCH2-500-2026-07-24/lane_1_live_attempt1",
+      "ledger_path": "tmp/source_review_pilots/SOURCE-REVIEW-BATCH2-500-2026-07-24/lane_1_live_attempt1/source_review_ledger.csv",
+      "ledger_sha256": "85eeda7b50d2087d37719989468cb63c83551ecb3033c8f2928e48178ccc027a",
+      "summary_path": "tmp/source_review_pilots/SOURCE-REVIEW-BATCH2-500-2026-07-24/lane_1_live_attempt1/source_review_summary.json",
+      "summary_sha256": "445729f0d2115600b9d1dca3cab76e8f1a4a0ff16acbe23b237d23718885ba0d",
+      "timing_path": "tmp/source_review_pilots/SOURCE-REVIEW-BATCH2-500-2026-07-24/lane_1_live_attempt1/source_review_timing.csv",
+      "timing_sha256": "e44eeb87403ae2a4f234fc59398ab5607e44c5a3588bb44f3edd0697809e3b6f",
+      "rows": 250,
+      "content_artifacts": 247,
+      "metadata_artifacts": 250,
+      "content_bytes": 534120629,
+      "maximum_content_bytes": 9476151,
+      "rows_with_content_hash": 247,
+      "documents_parsed": 0,
+      "pdfs_parsed": 0,
+      "ocr_runs": 0,
+      "content_samples": 0,
+      "pilot_id": "SOURCE-REVIEW-BATCH2-500-2026-07-24"
+    },
+    {
+      "lane_id": "lane_2",
+      "input_path": "docs/analysis/source_review_pilots/SOURCE-REVIEW-BATCH2-500-2026-07-24/lane_2_source_review_input.csv",
+      "input_sha256": "51050f366f98313719d1848aefec7ea3983c5abad0ceaa6433f7c1617c2469c9",
+      "output_dir": "tmp/source_review_pilots/SOURCE-REVIEW-BATCH2-500-2026-07-24/lane_2_live_attempt1",
+      "ledger_path": "tmp/source_review_pilots/SOURCE-REVIEW-BATCH2-500-2026-07-24/lane_2_live_attempt1/source_review_ledger.csv",
+      "ledger_sha256": "ed38a8246197a6402b85ee6f0a20aa43cbb5d73d3bbf9ed2ab616ec8e537f000",
+      "summary_path": "tmp/source_review_pilots/SOURCE-REVIEW-BATCH2-500-2026-07-24/lane_2_live_attempt1/source_review_summary.json",
+      "summary_sha256": "44eaddbac35719f37664eec9467417ec478dc65efd74730dd42ad952c95913f7",
+      "timing_path": "tmp/source_review_pilots/SOURCE-REVIEW-BATCH2-500-2026-07-24/lane_2_live_attempt1/source_review_timing.csv",
+      "timing_sha256": "79bb1ab48b436fb39fd981fce424f5d30e4e2c645f40ff52531461e110969901",
+      "rows": 250,
+      "content_artifacts": 248,
+      "metadata_artifacts": 250,
+      "content_bytes": 474662404,
+      "maximum_content_bytes": 9178040,
+      "rows_with_content_hash": 248,
+      "documents_parsed": 0,
+      "pdfs_parsed": 0,
+      "ocr_runs": 0,
+      "content_samples": 0,
+      "pilot_id": "SOURCE-REVIEW-BATCH2-500-2026-07-24"
+    }
+  ],
+  "ledger_rows": 500,
+  "terminal_rows": 500,
+  "unique_source_review_ids": 500,
+  "unique_candidate_queue_row_ids": 500,
+  "source_review_status_counts": {
+    "download_timeout": 5,
+    "reviewed_metadata_and_artifact_saved": 495
+  },
+  "url_access_status_counts": {
+    "reached": 495,
+    "timeout": 5
+  },
+  "download_status_counts": {
+    "artifact_saved": 495,
+    "timeout": 5
+  },
+  "content_type_observed_counts": {
+    "application/pdf": 495,
+    "unknown": 5
+  },
+  "content_byte_size_distribution": {
+    "0": 5,
+    "1_to_10_mib": 287,
+    "1_to_64_kib": 1,
+    "64_kib_to_1_mib": 207
+  },
+  "content_artifact_count": 495,
+  "metadata_artifact_count": 500,
+  "rows_with_content_hash": 495,
+  "rows_with_matching_content_hash": 495,
+  "content_artifact_bytes": 1008783033,
+  "maximum_content_artifact_bytes": 9476151,
+  "content_sample_count": 0,
+  "source_officialness_rating_counts": {
+    "official_municipal": 235,
+    "official_state_repository": 47,
+    "official_union": 22,
+    "uncertain": 185,
+    "unknown": 11
+  },
+  "source_relevance_rating_counts": {
+    "possible": 495,
+    "unknown": 5
+  },
+  "municipality_match_rating_counts": {
+    "possible": 495,
+    "unknown": 5
+  },
+  "employer_match_rating_counts": {
+    "possible": 495,
+    "unknown": 5
+  },
+  "bargaining_unit_match_rating_counts": {
+    "possible": 495,
+    "unknown": 5
+  },
+  "safety_unit_match_signal_counts": {
+    "unknown": 500
+  },
+  "non_safety_unit_match_signal_counts": {
+    "unknown": 500
+  },
+  "document_type_rating_counts": {
+    "cba_candidate": 495,
+    "unknown": 5
+  },
+  "extraction_readiness_rating_counts": {
+    "medium": 495,
+    "not_ready": 5
+  },
+  "wage_table_signal_counts": {
+    "unknown": 500
+  },
+  "wage_growth_signal_counts": {
+    "unknown": 500
+  },
+  "mechanism_language_signal_counts": {
+    "unknown": 500
+  },
+  "candidate_disposition_counts": {
+    "scheduled": 500
+  },
+  "state_counts": {
+    "AK": 5,
+    "CA": 26,
+    "CO": 4,
+    "CT": 25,
+    "DE": 4,
+    "FL": 26,
+    "IA": 22,
+    "ID": 3,
+    "IL": 26,
+    "IN": 3,
+    "KS": 6,
+    "MA": 25,
+    "MD": 8,
+    "ME": 7,
+    "MI": 26,
+    "MN": 25,
+    "MO": 9,
+    "MT": 13,
+    "NE": 8,
+    "NH": 10,
+    "NJ": 15,
+    "NM": 6,
+    "NV": 15,
+    "NY": 19,
+    "OH": 26,
+    "OK": 8,
+    "OR": 25,
+    "PA": 17,
+    "RI": 9,
+    "SD": 3,
+    "TX": 19,
+    "VA": 4,
+    "VT": 3,
+    "WA": 25,
+    "WI": 25
+  },
+  "source_type_counts": {
+    "cba": 500
+  },
+  "unit_type_counts": {
+    "fire": 151,
+    "non_safety": 152,
+    "police": 197
+  },
+  "disposition_to_extraction_readiness": {
+    "scheduled": {
+      "medium": 495,
+      "not_ready": 5
+    }
+  },
+  "routing_status_to_review_status": {
+    "reachable_pdf_or_document": {
+      "download_timeout": 5,
+      "reviewed_metadata_and_artifact_saved": 495
+    }
+  },
+  "collection_urls_opened": 500,
+  "collection_network_calls": 500,
+  "collection_documents_downloaded": 495,
+  "collection_documents_parsed": 0,
+  "collection_pdfs_parsed": 0,
+  "collection_ocr_runs": 0,
+  "merge_urls_opened": 0,
+  "merge_network_calls": 0,
+  "merge_documents_downloaded": 0,
+  "merge_documents_parsed": 0,
+  "merge_pdfs_parsed": 0,
+  "merge_ocr_runs": 0,
+  "original_failed_attempt_status": "preserved_unmerged_superseded_transport",
+  "diagnostic_probe_status": "preserved_excluded_from_merge",
+  "source_rating_status": "batch2_preliminary_artifact_review_merged",
+  "content_download_status": "batch2_bounded_artifacts_merged",
+  "extraction_readiness_status": "preliminary_artifact_metadata_only",
+  "ingestion_status": "not_started",
+  "codify_status": "not_started",
+  "wage_extraction_status": "not_started",
+  "wage_gap_analysis_status": "not_started",
+  "next_scaling_recommendation": "prepare_batch3_1000",
+  "caveats": [
+    "Source-review ratings are preliminary access/artifact signals.",
+    "PDFs were not parsed or OCRed.",
+    "No wage tables or wage values were extracted.",
+    "This round ledger contains only the audited lane outputs named in its manifest."
+  ],
+  "ledger_path": "docs/analysis/source_review_ledgers/SOURCE-REVIEW-BATCH2-500-2026-07-24/source_review_ledger.csv",
+  "ledger_sha256": "8f3312613fdaf414b675900b7edc003bf6d9eff995dd7730833838f5ae93fd76"
+}

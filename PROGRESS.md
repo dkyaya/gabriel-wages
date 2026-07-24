@@ -6,6 +6,33 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-24 (Source-review Batch 2 durably merged; 650 cumulative rows)
+
+**Did**
+- Started from clean tracked `4db43178481e84620c0762da62fcc7b94b7d7672`, confirmed all requested ancestry, and left the unrelated untracked root `package-lock.json` untouched.
+- Re-audited only the two Batch 2 `lane_*_live_attempt1` outputs: 500/500 terminal rows, unique identities, no Pilot 1 overlap, 495 intact PDF artifacts, five timeouts, two `completed_merge_eligible` lanes, and `merge_all_source_review_lanes`.
+- Extended the fail-closed offline merge tool so an explicit prior durable ledger can be preserved in cumulative/latest pointers. Added cumulative-pointer and cross-prior-overlap tests; the suite now has 26 passing offline/mock tests.
+- Ran the Batch 2 merge exactly once with merge ID `SOURCE-REVIEW-BATCH2-500-MERGE-2026-07-24`. The round ledger has 500 rows; cumulative/latest have 650 rows combining Pilot 1 (150) and Batch 2 (500).
+- Independently verified all 644 cumulative retained PDFs against their recorded hashes, byte sizes, lane-local paths and PDF signatures. Cumulative retained PDF bytes are 1,310,753,493; Batch 2 contributes 1,008,783,033 bytes and has a 9,476,151-byte maximum.
+- Updated dashboard/status to `batch2_500_merged`, reporting 650 cumulative rows, 644 saved artifacts, one Pilot 1 forbidden outcome, five Batch 2 timeouts, and Batch 3 planning as the next action.
+- Wrote a planning-only Batch 3 note for 1,000 rows. No Batch 3 inputs, lanes, dry runs, URLs or artifacts were created.
+
+**Decisions and why**
+- Keep round-specific Batch 2 outputs and project-wide cumulative/latest outputs simultaneously. Replacing the Pilot 1 latest pointer with a Batch 2-only file would undercount durable source review.
+- Recommend four 250-row Batch 3 lanes, operated in two gated waves with no more than two active lanes. This preserves Batch 2's proven lane size and aggregate concurrency while limiting interruption and artifact-audit risk.
+- Require relay review before Batch 3 preparation. The 1,000-row proposal is supported by 1,097 remaining planner-default eligible p1/download-allowed identities, but projected PDF retention is about 2.0–2.1 GB and ratings remain preliminary.
+
+**Surprises/breakage**
+- The preexisting merge tool was Pilot 1-specific and would refuse the already-present latest pointers. It was generalized rather than bypassed: explicit prior-ledger equality, schema, identity-disjointness and artifact gates now fail closed.
+- No merge or integrity gate failed. The unrelated untracked root `package-lock.json` remained outside the commit.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Six compiles, 26 offline/mock tests, final 500-row lane audit, 500/650 durable identity and stage checks, all 644 cumulative PDF hash/size/locality/signature checks, dashboard JSON/frontend production build, schema validation, 60 ingestion tests, protected-ledger hashes, metadata secret-key checks, and diff checks passed. No URL, download, PDF parse, OCR, live review, scout-accounting or routing/triage-ledger mutation, ingestion, `gabriel.codify`, wage extraction, wage-gap work, causal claim, regression, remote action, or push occurred during the merge.
+
+**Next steps**
+1. Review the Batch 2 durable/cumulative ledgers, preliminary ratings, dashboard refresh, validation, Batch 3 planning note, and relay.
+2. If separately authorized after relay review, prepare `SOURCE-REVIEW-BATCH3-1000-2026-07-24` from p1/download-allowed identities not in the 650-row cumulative ledger, as four balanced 250-row lanes operated in two gated waves.
+3. Keep PDF parsing/OCR, content-supported rating, ingestion, codification, wage extraction, and wage analysis separately authorized and gated.
+
 ## 2026-07-24 (Source-review Batch 2 500-row live collection completed; no merge)
 
 **Did**

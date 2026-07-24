@@ -218,36 +218,24 @@ routed candidate identities. Its p1/p2/p3/defer/exclude values remain
 preliminary scheduling outcomes, not source-content ratings. The 261
 oversized routing outcomes remain deferred to a separately bounded strategy.
 
-The next offline planning layer is
-`SOURCE-REVIEW-PILOT1-150-2026-07-24`: 150 p1,
-download-allowed-later CBA/PDF candidates in two balanced 75-row lanes. The
-pilot spans 43 states and preserves candidate, routing, and metadata-triage
-identities. Both lane dry runs validate the source-rating schema without
-opening URLs, downloading or parsing documents, or running OCR. The dashboard
-source-review status is now `pilot1_live_collected_not_merged`. Exactly 150
-locked locators were attempted in two bounded lanes. All rows are terminal:
-149 connection errors and one forbidden response. No source body or content
-sample was retained; 150 small lane-local response-metadata files passed
-artifact-integrity audit. The durable source-review merge has not run, and the
-pilot does not support scaling. The connection diagnosis is now complete:
-the custom `urllib` transport was replaced with the verifier-compatible
-`httpx` path, and one locked ten-row probe produced nine bounded PDF artifacts
-with matching hashes, one repeated forbidden response, and zero connection
-errors. The original 150-row attempt remains unmerged. A fresh-directory
-retry of those same 150 identities is now durably merged from the fresh HTTPX
-outputs: 149 bounded PDF artifacts have matching hashes, the same one row
-remains forbidden, and no connection errors recurred. The original
-transport-failed attempt remains preserved and superseded rather than part
-of the operative ledger. The bounded 500-row follow-on is now collected in
-two 250-row lanes and awaits a separate serial merge: 495 PDF artifacts have
-matching hashes and sizes, five rows timed out, and no connection errors
-occurred. Batch 2 retained approximately 1.009 GB across content and metadata
-artifacts. The durable source-review layer remains the 150-row Pilot 1 ledger.
-After Batch 2 merge and relay review, a 750-row checkpoint may be considered;
-1,000-row scale-up is not yet recommended. Final
-content-supported source
-rating, extraction readiness, ingestion, codification, wage extraction, and
-wage-gap analysis remain unperformed.
+The source-review layer now has 650 cumulative durable rows: the repaired
+150-row Pilot 1 HTTPX result plus the 500-row Batch 2 result. Pilot 1 retains
+149 bounded PDFs and one forbidden outcome. Batch 2 retains 495 bounded PDFs
+and five timeout outcomes. Across both rounds, 644 artifact hashes and sizes
+match, retained PDF content totals approximately 1.311 GB, and connection
+errors are zero. The original Pilot 1 `urllib` transport-failed attempt and
+its diagnostic probe remain preserved but excluded from the operative
+durable ledger. The dashboard phase is `batch2_500_merged`; latest and
+cumulative pointers both represent all 650 rows.
+
+After merge-relay review, the next recommendation is planning—but not yet
+running—`SOURCE-REVIEW-BATCH3-1000-2026-07-24`. The remaining raw
+p1/download-allowed pool is 1,110 rows, or 1,097 after default duplicate
+exclusion. Four balanced 250-row lanes operated in two gated waves would
+preserve the proven per-lane artifact and checkpoint burden. Final
+content-supported source rating, PDF parsing/OCR, extraction readiness,
+ingestion, codification, wage extraction, and wage-gap analysis remain
+unperformed.
 
 ## Run and build locally
 

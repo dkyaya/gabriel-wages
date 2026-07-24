@@ -311,6 +311,53 @@ class SourceReviewPlanningTests(unittest.TestCase):
         output_dir = self.base / "durable" / manifest["pilot_id"]
         return manifest_path, audit_path, output_dir, audit_result
 
+    def prepare_prior_durable_fixture(
+        self,
+        *,
+        manifest_path: Path,
+        output_dir: Path,
+        collide_with_current: bool = False,
+    ) -> tuple[Path, Path]:
+        manifest = json.loads(manifest_path.read_text())
+        lane_ledger = (
+            Path(manifest["lanes"][0]["future_live_output_dir"])
+            / "source_review_ledger.csv"
+        )
+        _, current_rows = merger.read_csv(lane_ledger)
+        prior_rows: list[dict[str, str]] = []
+        for index, source in enumerate(current_rows[:10]):
+            row = dict(source)
+            row["source_review_id"] = f"prior-{row['source_review_id']}"
+            if not collide_with_current or index:
+                row["candidate_queue_row_id"] = (
+                    f"prior-{row['candidate_queue_row_id']}"
+                )
+            row["source_review_pilot_id"] = "SYNTHETIC-PRIOR-PILOT"
+            row["source_review_merge_id"] = "SYNTHETIC-PRIOR-MERGE"
+            row["source_review_merged_at"] = "2026-07-23T00:00:00Z"
+            row["source_review_stage"] = merger.MERGED_STAGE
+            prior_rows.append(row)
+        prior_dir = output_dir.parent / "SYNTHETIC-PRIOR-PILOT"
+        prior_ledger = prior_dir / "source_review_ledger.csv"
+        prior_summary = prior_dir / "source_review_summary.json"
+        write_csv(prior_ledger, prior_rows)
+        prior_summary.write_text(
+            json.dumps(
+                {
+                    "status": "source_review_batch_merged",
+                    "ledger_rows": len(prior_rows),
+                },
+                indent=2,
+            )
+            + "\n",
+            encoding="utf-8",
+        )
+        latest_ledger = output_dir.parent / merger.LATEST_LEDGER_NAME
+        latest_summary = output_dir.parent / merger.LATEST_SUMMARY_NAME
+        latest_ledger.write_bytes(prior_ledger.read_bytes())
+        latest_summary.write_bytes(prior_summary.read_bytes())
+        return prior_ledger, prior_summary
+
     def test_planner_filters_sizes_balances_and_diversifies(self) -> None:
         manifest = planner.create_plan(self.plan_args())
         self.assertEqual(manifest["p1_download_allowed_rows"], 224)
@@ -896,12 +943,102 @@ class SourceReviewPlanningTests(unittest.TestCase):
             latest.read_bytes(),
             (output_dir / "source_review_ledger.csv").read_bytes(),
         )
+        cumulative = output_dir.parent / "source_review_ledger_cumulative.csv"
+        self.assertEqual(cumulative.read_bytes(), latest.read_bytes())
         self.assertEqual(summary["merge_urls_opened"], 0)
         self.assertEqual(summary["merge_documents_downloaded"], 0)
         self.assertEqual(
             summary["original_failed_attempt_status"],
             "preserved_unmerged_superseded_transport",
         )
+
+    def test_merge_builds_cumulative_latest_from_explicit_prior(self) -> None:
+        manifest_path, audit_path, output_dir, _ = (
+            self.prepare_merge_fixture()
+        )
+        prior_ledger, prior_summary = self.prepare_prior_durable_fixture(
+            manifest_path=manifest_path,
+            output_dir=output_dir,
+        )
+        summary = merger.merge(
+            manifest_path=manifest_path,
+            audit_path=audit_path,
+            output_dir=output_dir,
+            pilot_id="SYNTHETIC-SOURCE-REVIEW-PILOT",
+            merge_id="SYNTHETIC-HTTPX-MERGE",
+            prior_ledger_path=prior_ledger,
+            prior_summary_path=prior_summary,
+            merged_at="2026-07-24T00:00:00Z",
+        )
+        _, round_rows = merger.read_csv(
+            output_dir / merger.ROUND_LEDGER_NAME
+        )
+        cumulative_path = (
+            output_dir.parent / merger.CUMULATIVE_LEDGER_NAME
+        )
+        _, cumulative_rows = merger.read_csv(cumulative_path)
+        latest_path = output_dir.parent / merger.LATEST_LEDGER_NAME
+        cumulative_summary = json.loads(
+            (
+                output_dir.parent / merger.CUMULATIVE_SUMMARY_NAME
+            ).read_text()
+        )
+        self.assertEqual(len(round_rows), 100)
+        self.assertEqual(summary["ledger_rows"], 100)
+        self.assertEqual(len(cumulative_rows), 110)
+        self.assertEqual(
+            len({row["source_review_id"] for row in cumulative_rows}),
+            110,
+        )
+        self.assertEqual(
+            len(
+                {
+                    row["candidate_queue_row_id"]
+                    for row in cumulative_rows
+                }
+            ),
+            110,
+        )
+        self.assertEqual(latest_path.read_bytes(), cumulative_path.read_bytes())
+        self.assertEqual(cumulative_summary["ledger_rows"], 110)
+        self.assertEqual(cumulative_summary["content_artifact_count"], 110)
+        self.assertEqual(
+            cumulative_summary["merged_batch_rows"],
+            {
+                "SYNTHETIC-PRIOR-PILOT": 10,
+                "SYNTHETIC-SOURCE-REVIEW-PILOT": 100,
+            },
+        )
+
+    def test_merge_rejects_identity_overlap_with_prior(self) -> None:
+        manifest_path, audit_path, output_dir, _ = (
+            self.prepare_merge_fixture()
+        )
+        prior_ledger, prior_summary = self.prepare_prior_durable_fixture(
+            manifest_path=manifest_path,
+            output_dir=output_dir,
+            collide_with_current=True,
+        )
+        latest_before = (
+            output_dir.parent / merger.LATEST_LEDGER_NAME
+        ).read_bytes()
+        with self.assertRaisesRegex(
+            merger.SourceReviewMergeError, "candidate queue"
+        ):
+            merger.merge(
+                manifest_path=manifest_path,
+                audit_path=audit_path,
+                output_dir=output_dir,
+                pilot_id="SYNTHETIC-SOURCE-REVIEW-PILOT",
+                merge_id="SYNTHETIC-HTTPX-MERGE",
+                prior_ledger_path=prior_ledger,
+                prior_summary_path=prior_summary,
+            )
+        self.assertEqual(
+            (output_dir.parent / merger.LATEST_LEDGER_NAME).read_bytes(),
+            latest_before,
+        )
+        self.assertFalse(output_dir.exists())
 
     def test_merge_rejects_duplicate_source_review_ids(self) -> None:
         with self.assertRaisesRegex(

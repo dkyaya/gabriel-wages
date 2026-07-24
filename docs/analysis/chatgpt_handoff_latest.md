@@ -6,6 +6,42 @@ Last updated: `2026-07-24`
 
 ---
 
+## 2026-07-24 — Source-review Batch 2 is durably merged; 650 cumulative rows
+
+### Current State
+
+- **Start:** work began at clean tracked `4db43178481e84620c0762da62fcc7b94b7d7672`; all requested ancestry was present. The unrelated untracked root `package-lock.json` remains untouched.
+- **Fresh merge gate:** only the two Batch 2 `lane_*_live_attempt1` ledgers were re-audited. Both are `completed_merge_eligible`; coverage is 500/500, identities are unique and disjoint from Pilot 1, artifact integrity passes, and recommendation is `merge_all_source_review_lanes`.
+- **Exactly-once merge:** [the merge result](source_review_batch2_500_serial_merge_result_2026-07-24.md) records the single execution of `merge_source_review_lanes.py` with merge ID `SOURCE-REVIEW-BATCH2-500-MERGE-2026-07-24`.
+- **Durable outputs:** the [Batch 2 ledger](source_review_ledgers/SOURCE-REVIEW-BATCH2-500-2026-07-24/source_review_ledger.csv) has 500 terminal rows. The [cumulative/latest ledger](source_review_ledgers/source_review_ledger_cumulative.csv) has 650 terminal rows: 150 Pilot 1 plus 500 Batch 2. Cumulative and latest pointers are byte-identical.
+- **Batch 2 outcomes:** 495 `reviewed_metadata_and_artifact_saved`, five `download_timeout`, zero connection errors, 495 matching hashes, 1,008,783,033 retained PDF bytes, and a 9,476,151-byte maximum.
+- **Cumulative outcomes:** 644 saved PDFs, one Pilot 1 forbidden, five Batch 2 timeouts, zero connection errors, 1,310,753,493 retained PDF bytes, and a 10,319,152-byte maximum. All 644 PDF hash, size, lane-local path and signature checks passed.
+- **Ratings:** Batch 2 preliminary officialness is municipal 235, state repository 47, union 22, uncertain 185, and unknown 11. Relevance and municipality/employer/unit match are `possible` for 495 and `unknown` for five. Document type is `cba_candidate` and extraction readiness is `medium` for 495; all wage-table, wage-growth and mechanism-language signals remain unknown.
+- **Dashboard:** `source_review_phase = batch2_500_merged`; cumulative merged rows are 650 and saved-artifact rows are 644. Ingestion, codification, wage extraction and wage-gap analysis remain `not_started`.
+- **Boundary:** this offline merge opened no URL, made no network call, downloaded or parsed no document, and ran no OCR. It did not change scout accounting, durable routing or metadata-triage ledgers, contracts, city coverage or `corpus/`. It performed no ingestion, codification, wage work, causal claim or regression.
+- **Validation:** [the validation record](source_review_batch2_500_serial_merge_validation_2026-07-24.md) reports six compiles, 26 offline/mock tests, final lane audit, 500/650 identity checks, 644 independent artifact checks, dashboard JSON/frontend build, schema and 60 ingestion tests, protected hashes, metadata safety checks and diff checks passed.
+
+### Interpretation
+
+The durable layer records bounded source access and artifact-metadata
+signals, not final source ratings or content-supported relevance. No PDF was
+parsed or OCRed, and no wage or mechanism content was extracted.
+
+The metadata-triage layer contains 1,760 p1/download-allowed identities.
+After the 650 durable reviews, 1,110 remain; the current planner's default
+duplicate exclusion leaves 1,097, enough for a 1,000-row next batch.
+
+### Next Move
+
+Review [the Batch 3 preparation plan](source_review_batch3_1000_preparation_plan_2026-07-24.md)
+and relay. Only after separate authorization should Batch 3 inputs be
+prepared. The recommended shape is four balanced 250-row lanes, operated in
+two gated waves with at most two active lanes, using the established bounded
+HTTPX settings. Expected PDF retention is about 2.0–2.1 GB, so verify storage
+headroom before any live run. Do not parse/OCR PDFs, ingest, codify, extract
+wages, calculate wage gaps, make causal claims, or run regressions as part of
+that planning.
+
 ## 2026-07-24 — Source-review Batch 2 collected; serial merge pending
 
 ### Current State

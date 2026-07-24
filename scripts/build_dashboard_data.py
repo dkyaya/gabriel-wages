@@ -126,6 +126,16 @@ SOURCE_REVIEW_DURABLE_SUMMARY_PATH = (
     / "source_review_ledgers"
     / "source_review_summary_latest.json"
 )
+SOURCE_REVIEW_CUMULATIVE_LEDGER_PATH = (
+    ANALYSIS_DIR
+    / "source_review_ledgers"
+    / "source_review_ledger_cumulative.csv"
+)
+SOURCE_REVIEW_CUMULATIVE_SUMMARY_PATH = (
+    ANALYSIS_DIR
+    / "source_review_ledgers"
+    / "source_review_summary_cumulative.json"
+)
 SOURCE_REVIEW_BATCH2_SUMMARY_PATH = (
     ANALYSIS_DIR
     / "source_review_pilots"
@@ -183,6 +193,8 @@ OPTIONAL_PATHS = [
     SOURCE_REVIEW_HTTPX_RETRY_SUMMARY_PATH,
     SOURCE_REVIEW_DURABLE_LEDGER_PATH,
     SOURCE_REVIEW_DURABLE_SUMMARY_PATH,
+    SOURCE_REVIEW_CUMULATIVE_LEDGER_PATH,
+    SOURCE_REVIEW_CUMULATIVE_SUMMARY_PATH,
     SOURCE_REVIEW_BATCH2_SUMMARY_PATH,
 ]
 
@@ -2354,93 +2366,183 @@ def build_source_review_status_summary(
         readiness = durable.get(
             "extraction_readiness_rating_counts", {}
         )
-        if (
-            durable.get("status") != "pilot1_httpx_merged"
-            or durable.get("source_review_pilot_id")
-            != manifest["pilot_id"]
-            or int(durable.get("ledger_rows", 0)) != selected_rows
-            or int(durable.get("terminal_rows", 0)) != selected_rows
-            or int(durable.get("content_artifact_count", 0)) != 149
-            or int(durable.get("rows_with_matching_content_hash", 0))
-            != 149
-            or int(durable.get("merge_urls_opened", -1)) != 0
-            or int(durable.get("merge_network_calls", -1)) != 0
-        ):
-            raise ValueError(
-                "Durable source-review summary fails Pilot 1 merge gates"
+        if durable.get("status") == "pilot1_httpx_merged":
+            if (
+                durable.get("source_review_pilot_id")
+                != manifest["pilot_id"]
+                or int(durable.get("ledger_rows", 0)) != selected_rows
+                or int(durable.get("terminal_rows", 0)) != selected_rows
+                or int(durable.get("content_artifact_count", 0)) != 149
+                or int(durable.get("rows_with_matching_content_hash", 0))
+                != 149
+                or int(durable.get("merge_urls_opened", -1)) != 0
+                or int(durable.get("merge_network_calls", -1)) != 0
+            ):
+                raise ValueError(
+                    "Durable source-review summary fails Pilot 1 merge gates"
+                )
+            payload.update(
+                {
+                    "stage": "source_review_pilot_httpx_merged",
+                    "source_review_phase": "pilot1_httpx_merged",
+                    "source_review_live_status": "pilot1_httpx_merged",
+                    "bounded_live_source_review_path": (
+                        "implemented_httpx_pilot1_merged"
+                    ),
+                    "latest_source_review_pilot_id": durable[
+                        "source_review_pilot_id"
+                    ],
+                    "latest_source_review_merge_id": durable[
+                        "source_review_merge_id"
+                    ],
+                    "pilot1_rows_merged": int(durable["ledger_rows"]),
+                    "pilot1_source_review_merge_status": "merged",
+                    "pilot1_artifact_saved_rows": int(
+                        statuses.get(
+                            "reviewed_metadata_and_artifact_saved", 0
+                        )
+                    ),
+                    "pilot1_forbidden_rows": int(
+                        statuses.get("download_forbidden", 0)
+                    ),
+                    "pilot1_connection_error_rows": int(
+                        statuses.get("download_connection_error", 0)
+                    ),
+                    "pilot1_content_artifact_bytes": int(
+                        durable["content_artifact_bytes"]
+                    ),
+                    "pilot1_max_content_artifact_bytes": int(
+                        durable["maximum_content_artifact_bytes"]
+                    ),
+                    "pilot1_preliminary_medium_extraction_readiness_rows": int(
+                        readiness.get("medium", 0)
+                    ),
+                    "durable_source_review_ledger_latest": relative(
+                        SOURCE_REVIEW_DURABLE_LEDGER_PATH
+                    ),
+                    "original_failed_attempt_status": durable[
+                        "original_failed_attempt_status"
+                    ],
+                    "source_rating_status": (
+                        "pilot1_preliminary_artifact_review_merged"
+                    ),
+                    "content_download_status": (
+                        "pilot1_bounded_artifacts_merged"
+                    ),
+                    "extraction_readiness_status": (
+                        "pilot1_preliminary_artifact_metadata_only"
+                    ),
+                    "ingestion_status": "not_started",
+                    "codify_status": "not_started",
+                    "wage_extraction_status": "not_started",
+                    "wage_gap_analysis_status": "not_started",
+                    "next_scaling_recommendation": (
+                        "plan_500_after_relay_review"
+                    ),
+                    "next_scaling_decision": (
+                        "plan_500_after_relay_review"
+                    ),
+                    "durable_source_review_summary_source": relative(
+                        SOURCE_REVIEW_DURABLE_SUMMARY_PATH
+                    ),
+                    "caveats": [
+                        "Source-review ratings are preliminary access/artifact signals.",
+                        "PDFs were not parsed or OCRed.",
+                        "Wage data were not extracted.",
+                        "The original failed attempt is superseded and excluded from operative results.",
+                    ],
+                }
             )
-        payload.update(
-            {
-                "stage": "source_review_pilot_httpx_merged",
-                "source_review_phase": "pilot1_httpx_merged",
-                "source_review_live_status": "pilot1_httpx_merged",
-                "bounded_live_source_review_path": (
-                    "implemented_httpx_pilot1_merged"
-                ),
-                "latest_source_review_pilot_id": durable[
-                    "source_review_pilot_id"
-                ],
-                "latest_source_review_merge_id": durable[
-                    "source_review_merge_id"
-                ],
-                "pilot1_rows_merged": int(durable["ledger_rows"]),
-                "pilot1_source_review_merge_status": "merged",
-                "pilot1_artifact_saved_rows": int(
-                    statuses.get(
-                        "reviewed_metadata_and_artifact_saved", 0
-                    )
-                ),
-                "pilot1_forbidden_rows": int(
-                    statuses.get("download_forbidden", 0)
-                ),
-                "pilot1_connection_error_rows": int(
-                    statuses.get("download_connection_error", 0)
-                ),
-                "pilot1_content_artifact_bytes": int(
-                    durable["content_artifact_bytes"]
-                ),
-                "pilot1_max_content_artifact_bytes": int(
-                    durable["maximum_content_artifact_bytes"]
-                ),
-                "pilot1_preliminary_medium_extraction_readiness_rows": int(
-                    readiness.get("medium", 0)
-                ),
-                "durable_source_review_ledger_latest": relative(
-                    SOURCE_REVIEW_DURABLE_LEDGER_PATH
-                ),
-                "original_failed_attempt_status": durable[
-                    "original_failed_attempt_status"
-                ],
-                "source_rating_status": (
-                    "pilot1_preliminary_artifact_review_merged"
-                ),
-                "content_download_status": (
-                    "pilot1_bounded_artifacts_merged"
-                ),
-                "extraction_readiness_status": (
-                    "pilot1_preliminary_artifact_metadata_only"
-                ),
-                "ingestion_status": "not_started",
-                "codify_status": "not_started",
-                "wage_extraction_status": "not_started",
-                "wage_gap_analysis_status": "not_started",
-                "next_scaling_recommendation": (
-                    "plan_500_after_relay_review"
-                ),
-                "next_scaling_decision": (
-                    "plan_500_after_relay_review"
-                ),
-                "durable_source_review_summary_source": relative(
-                    SOURCE_REVIEW_DURABLE_SUMMARY_PATH
-                ),
-                "caveats": [
-                    "Source-review ratings are preliminary access/artifact signals.",
-                    "PDFs were not parsed or OCRed.",
-                    "Wage data were not extracted.",
-                    "The original failed attempt is superseded and excluded from operative results.",
-                ],
-            }
-        )
+        elif durable.get("status") == "source_review_cumulative_merged":
+            if (
+                durable.get("latest_source_review_pilot_id")
+                != "SOURCE-REVIEW-BATCH2-500-2026-07-24"
+                or durable.get("latest_source_review_merge_id")
+                != "SOURCE-REVIEW-BATCH2-500-MERGE-2026-07-24"
+                or int(durable.get("ledger_rows", 0)) != 650
+                or int(durable.get("terminal_rows", 0)) != 650
+                or int(durable.get("content_artifact_count", 0)) != 644
+                or int(durable.get("rows_with_matching_content_hash", 0))
+                != 644
+                or int(durable.get("merge_urls_opened", -1)) != 0
+                or int(durable.get("merge_network_calls", -1)) != 0
+            ):
+                raise ValueError(
+                    "Cumulative source-review summary fails Batch 2 merge gates"
+                )
+            payload.update(
+                {
+                    "stage": "source_review_batch2_500_merged",
+                    "source_review_phase": "batch2_500_merged",
+                    "source_review_live_status": "batch2_500_merged",
+                    "bounded_live_source_review_path": (
+                        "implemented_httpx_batch2_merged"
+                    ),
+                    "latest_source_review_batch_id": durable[
+                        "latest_source_review_pilot_id"
+                    ],
+                    "latest_source_review_merge_id": durable[
+                        "latest_source_review_merge_id"
+                    ],
+                    "batch2_500_rows_merged": 500,
+                    "batch2_500_artifact_saved_rows": 495,
+                    "batch2_500_timeout_rows": 5,
+                    "batch2_500_connection_error_rows": 0,
+                    "batch2_500_content_artifact_bytes": 1008783033,
+                    "batch2_500_total_artifact_bytes": 1009326270,
+                    "batch2_500_max_content_artifact_bytes": 9476151,
+                    "batch2_500_merge_status": "merged",
+                    "cumulative_merged_source_review_rows": int(
+                        durable["ledger_rows"]
+                    ),
+                    "cumulative_artifact_saved_rows": int(
+                        statuses.get(
+                            "reviewed_metadata_and_artifact_saved", 0
+                        )
+                    ),
+                    "cumulative_content_artifact_bytes": int(
+                        durable["content_artifact_bytes"]
+                    ),
+                    "cumulative_max_content_artifact_bytes": int(
+                        durable["maximum_content_artifact_bytes"]
+                    ),
+                    "durable_source_review_ledger_latest": relative(
+                        SOURCE_REVIEW_DURABLE_LEDGER_PATH
+                    ),
+                    "durable_source_review_ledger_cumulative": relative(
+                        SOURCE_REVIEW_CUMULATIVE_LEDGER_PATH
+                    ),
+                    "source_rating_status": (
+                        "batch2_preliminary_artifact_review_merged"
+                    ),
+                    "content_download_status": (
+                        "batch2_bounded_artifacts_merged"
+                    ),
+                    "extraction_readiness_status": (
+                        "preliminary_artifact_metadata_only"
+                    ),
+                    "ingestion_status": "not_started",
+                    "codify_status": "not_started",
+                    "wage_extraction_status": "not_started",
+                    "wage_gap_analysis_status": "not_started",
+                    "next_scaling_recommendation": "prepare_batch3_1000",
+                    "next_scaling_decision": "prepare_batch3_1000",
+                    "durable_source_review_summary_source": relative(
+                        SOURCE_REVIEW_DURABLE_SUMMARY_PATH
+                    ),
+                    "durable_source_review_cumulative_summary_source": relative(
+                        SOURCE_REVIEW_CUMULATIVE_SUMMARY_PATH
+                    ),
+                    "caveats": [
+                        "Source-review ratings are preliminary access/artifact signals.",
+                        "PDFs were not parsed or OCRed.",
+                        "Wage data were not extracted.",
+                        "Batch 3 may be planned at 1,000 only after this merge relay is reviewed.",
+                    ],
+                }
+            )
+        else:
+            raise ValueError("Unrecognized durable source-review status")
     if SOURCE_REVIEW_BATCH2_SUMMARY_PATH.exists():
         batch2 = read_json(SOURCE_REVIEW_BATCH2_SUMMARY_PATH)
         if (
@@ -2467,18 +2569,9 @@ def build_source_review_status_summary(
             )
         payload.update(
             {
-                "stage": "source_review_batch2_500_collection",
-                "bounded_live_source_review_path": (
-                    "implemented_httpx_batch2_collected"
-                ),
-                "source_review_phase": "batch2_500_collected_not_merged",
-                "source_review_live_status": (
-                    "batch2_500_collected_not_merged"
-                ),
                 "latest_source_review_batch_id": batch2["batch_id"],
                 "batch2_500_rows_collected": int(batch2["ledger_rows"]),
                 "batch2_500_terminal_rows": int(batch2["terminal_rows"]),
-                "batch2_500_merge_status": "not_started",
                 "batch2_500_source_review_status_counts": batch2[
                     "source_review_status_counts"
                 ],
@@ -2509,34 +2602,50 @@ def build_source_review_status_summary(
                 "batch2_500_lane_audit_recommendation": batch2[
                     "merge_recommendation"
                 ],
-                "cumulative_merged_source_review_rows": int(
-                    batch2["cumulative_merged_source_review_rows"]
-                ),
-                "source_rating_status": (
-                    "batch2_500_collected_not_merged"
-                ),
-                "content_download_status": (
-                    "batch2_500_collected_not_merged"
-                ),
-                "extraction_readiness_status": (
-                    "preliminary_batch2_not_merged"
-                ),
-                "ingestion_status": "not_started",
-                "codify_status": "not_started",
-                "wage_extraction_status": "not_started",
-                "wage_gap_analysis_status": "not_started",
-                "next_scaling_decision": batch2[
-                    "next_scaling_recommendation"
-                ],
-                "next_scaling_recommendation": batch2[
-                    "next_scaling_recommendation"
-                ],
                 "batch2_collection_summary_source": relative(
                     SOURCE_REVIEW_BATCH2_SUMMARY_PATH
                 ),
-                "caveats": batch2["caveats"],
             }
         )
+        if payload.get("source_review_phase") != "batch2_500_merged":
+            payload.update(
+                {
+                    "stage": "source_review_batch2_500_collection",
+                    "bounded_live_source_review_path": (
+                        "implemented_httpx_batch2_collected"
+                    ),
+                    "source_review_phase": (
+                        "batch2_500_collected_not_merged"
+                    ),
+                    "source_review_live_status": (
+                        "batch2_500_collected_not_merged"
+                    ),
+                    "batch2_500_merge_status": "not_started",
+                    "cumulative_merged_source_review_rows": int(
+                        batch2["cumulative_merged_source_review_rows"]
+                    ),
+                    "source_rating_status": (
+                        "batch2_500_collected_not_merged"
+                    ),
+                    "content_download_status": (
+                        "batch2_500_collected_not_merged"
+                    ),
+                    "extraction_readiness_status": (
+                        "preliminary_batch2_not_merged"
+                    ),
+                    "ingestion_status": "not_started",
+                    "codify_status": "not_started",
+                    "wage_extraction_status": "not_started",
+                    "wage_gap_analysis_status": "not_started",
+                    "next_scaling_decision": batch2[
+                        "next_scaling_recommendation"
+                    ],
+                    "next_scaling_recommendation": batch2[
+                        "next_scaling_recommendation"
+                    ],
+                    "caveats": batch2["caveats"],
+                }
+            )
     return payload
 
 

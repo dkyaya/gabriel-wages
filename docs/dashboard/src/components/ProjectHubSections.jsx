@@ -404,6 +404,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Source review</p>
           <h3>
             {sourceReviewStatus.source_review_phase ===
+            "batch2_500_merged"
+              ? "Batch 2 merged: 650 cumulative source-review rows; plan Batch 3"
+              : sourceReviewStatus.source_review_phase ===
             "batch2_500_collected_not_merged"
               ? "Batch 2 collected: 495 of 500 bounded artifacts; serial merge pending"
               : sourceReviewStatus.source_review_phase ===
@@ -426,6 +429,20 @@ export function VerificationPipeline({
         </div>
         <p>
           {sourceReviewStatus.source_review_phase ===
+          "batch2_500_merged" ? (
+            <>
+              Batch 2 is durably merged:{" "}
+              {formatNumber(sourceReviewStatus.batch2_500_artifact_saved_rows)}
+              {" "}of {formatNumber(sourceReviewStatus.batch2_500_rows_merged)}
+              {" "}Batch 2 rows retain bounded artifacts, five attempts timed
+              out, and the cumulative source-review ledger now contains{" "}
+              {formatNumber(sourceReviewStatus.cumulative_merged_source_review_rows)}
+              {" "}rows. The next recommendation is Batch 3 planning at 1,000
+              rows after relay review. PDFs remain unparsed, and ingestion,
+              codification, wage extraction, and wage-gap analysis have not
+              started.
+            </>
+          ) : sourceReviewStatus.source_review_phase ===
           "batch2_500_collected_not_merged" ? (
             <>
               Batch 2 completed all{" "}
