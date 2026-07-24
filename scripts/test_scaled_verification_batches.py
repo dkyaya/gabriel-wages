@@ -437,9 +437,10 @@ def write_synthetic_merge_lane(
     lane_id: str,
     *,
     pending_last_row: bool = False,
+    entries: list[tuple[str, str, str]] | None = None,
 ) -> tuple[dict[str, object], dict[str, object]]:
     input_path = root / f"{lane_id}_input.csv"
-    input_rows = write_input(input_path)
+    input_rows = write_input(input_path, entries)
     live_dir = root / f"{lane_id}_live"
     live_dir.mkdir()
     ledger_rows: list[dict[str, str]] = []
@@ -654,6 +655,87 @@ def test_serial_merge_rejects_duplicate_pending_and_ineligible() -> None:
             raise AssertionError("Ineligible audit did not fail merge")
 
 
+def test_serial_merge_builds_cumulative_latest_without_losing_prior_round() -> None:
+    with tempfile.TemporaryDirectory(prefix="verification_cumulative_test_") as temporary:
+        root = Path(temporary)
+        ledger_root = root / "verification_ledgers"
+        ledger_root.mkdir()
+
+        lane_1, audit_1 = write_synthetic_merge_lane(root, "lane_1")
+        manifest_1 = root / "manifest_1.json"
+        audit_path_1 = root / "audit_1.json"
+        round_1 = "SYNTHETIC-ROUND-1"
+        manifest_1.write_text(
+            json.dumps({"round_id": round_1, "lanes": [lane_1]}),
+            encoding="utf-8",
+        )
+        audit_path_1.write_text(
+            json.dumps(synthetic_merge_audit(round_1, [lane_1], [audit_1])),
+            encoding="utf-8",
+        )
+        merger.merge(
+            manifest_path=manifest_1,
+            audit_summary_path=audit_path_1,
+            output_dir=ledger_root / round_1,
+            round_id=round_1,
+            merge_id="SYNTHETIC-MERGE-1",
+            merged_at="2026-07-24T00:00:00Z",
+            write_latest=True,
+        )
+
+        second_entries = [
+            ("R1", "https://second.invalid/one", "high_priority_later_verify"),
+            ("R2", "https://second.invalid/two", "high_priority_later_verify"),
+            ("R3", "https://second.invalid/three", "medium_priority_later_verify"),
+            ("R4", "https://second.invalid/four", "low_priority_later_verify"),
+        ]
+        lane_2, audit_2 = write_synthetic_merge_lane(
+            root, "lane_2", entries=second_entries
+        )
+        manifest_2 = root / "manifest_2.json"
+        audit_path_2 = root / "audit_2.json"
+        round_2 = "SYNTHETIC-ROUND-2"
+        manifest_2.write_text(
+            json.dumps({"round_id": round_2, "lanes": [lane_2]}),
+            encoding="utf-8",
+        )
+        audit_path_2.write_text(
+            json.dumps(synthetic_merge_audit(round_2, [lane_2], [audit_2])),
+            encoding="utf-8",
+        )
+        round_2_summary = merger.merge(
+            manifest_path=manifest_2,
+            audit_summary_path=audit_path_2,
+            output_dir=ledger_root / round_2,
+            round_id=round_2,
+            merge_id="SYNTHETIC-MERGE-2",
+            merged_at="2026-07-24T00:01:00Z",
+            write_latest=True,
+        )
+
+        _, round_2_rows = merger.read_csv(
+            ledger_root / round_2 / merger.ROUND_LEDGER_NAME
+        )
+        _, cumulative_rows = merger.read_csv(
+            ledger_root / merger.CUMULATIVE_LEDGER_NAME
+        )
+        _, latest_rows = merger.read_csv(ledger_root / merger.LATEST_LEDGER_NAME)
+        cumulative_summary = merger.load_json(
+            ledger_root / merger.CUMULATIVE_SUMMARY_NAME
+        )
+        latest_summary = merger.load_json(ledger_root / merger.LATEST_SUMMARY_NAME)
+        assert len(round_2_rows) == round_2_summary["ledger_rows"] == 4
+        assert len(cumulative_rows) == len(latest_rows) == 8
+        assert len({row["verification_id"] for row in cumulative_rows}) == 8
+        assert len({row["candidate_queue_row_id"] for row in cumulative_rows}) == 8
+        assert cumulative_summary == latest_summary
+        assert cumulative_summary["summary_scope"] == "cumulative_project_wide"
+        assert cumulative_summary["verification_round_ids"] == [round_1, round_2]
+        assert cumulative_summary["round_rows"] == {round_1: 4, round_2: 4}
+        assert cumulative_summary["reachable_or_reused_total"] == 8
+        assert cumulative_summary["rows_added_by_latest_merge"] == 4
+
+
 def main() -> int:
     protected = {
         path: digest(path)
@@ -668,6 +750,7 @@ def main() -> int:
         test_mocked_live_path_and_duplicate_reuse,
         test_serial_merge_preserves_rows_and_fields,
         test_serial_merge_rejects_duplicate_pending_and_ineligible,
+        test_serial_merge_builds_cumulative_latest_without_losing_prior_round,
     ]
     for test in tests:
         test()

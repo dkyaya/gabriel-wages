@@ -179,17 +179,17 @@ the workflow checkpoint. They are retained as current operational state, but
 must not be used to schedule another ordinary discovery wave while broad
 scouting is paused.
 
-The verification operations layer keeps `round1_3x750_merged` as the durable
-ledger phase. Round 1 serially merged 2,250 terminal URL-routing outcomes:
-1,888 (83.911%) were reachable or successfully reused. The authorized Round 2
-Option B remainder collection then produced 2,476 additional terminal,
-audited outcomes covering every queue identity not in Round 1; 1,862 (75.202%)
-were reachable or reused. Round 2 is explicitly
-`collected_not_merged`, so the cumulative durable routing-ledger count remains
-2,250 until a separate serial merge. These are availability/response-metadata
-routing outcomes, not content relevance, ingestion, employer/unit
-confirmation, wage extraction, or analysis-ready evidence. Ingestion,
-codification, wage extraction, and wage-gap analysis remain not started.
+The verification operations layer is now `full_url_routing_merged`. Round 1
+contributes 2,250 terminal rows and Round 2 contributes 2,476, yielding 4,726
+/ 4,726 durably routed candidate URLs. Cumulatively, 3,750 (79.3483%) are
+reachable or successfully reused. Round-specific ledgers remain preserved;
+the cumulative and `latest` files retain both rounds rather than replacing
+Round 1 with Round 2. These are availability/response-metadata routing
+outcomes, not content relevance, ingestion, employer/unit confirmation, wage
+extraction, or analysis-ready evidence. The next phase is content relevance
+and extraction-readiness triage, not another broad URL-routing round.
+Ingestion, codification, wage extraction, and wage-gap analysis remain not
+started.
 
 ## Run and build locally
 

@@ -1,61 +1,61 @@
 {
-  "schema_version": "2.0.0",
+  "schema_version": "1.0.0",
   "verification_round_id": "VERIFICATION-SCALE-ROUND2-3X1000-REMAINDER-2026-07-24",
   "verification_merge_id": "VERIFICATION-SCALE-ROUND2-3X1000-REMAINDER-MERGE-2026-07-24",
   "verification_merged_at": "2026-07-24T16:30:26Z",
   "verification_stage": "url_reachability_metadata_verified",
   "manifest": "docs/analysis/verification_rounds/VERIFICATION-SCALE-ROUND2-3X1000-REMAINDER-2026-07-24/verification_round_manifest.json",
   "audit_summary": "tmp/verification_rounds/VERIFICATION-SCALE-ROUND2-3X1000-REMAINDER-2026-07-24/serial_merge_lane_audit_2026-07-24/verification_lane_audit_summary.json",
-  "durable_ledger": "docs/analysis/verification_ledgers/verified_source_routing_ledger_cumulative.csv",
-  "ledger_sha256": "831f40dacf3f0362d5c3c81cb2e59c4d3da502187c94672e381d355ae79f5499",
-  "ledger_rows": 4726,
-  "terminal_rows": 4726,
-  "unique_verification_ids": 4726,
-  "unique_candidate_queue_row_ids": 4726,
+  "durable_ledger": "docs/analysis/verification_ledgers/VERIFICATION-SCALE-ROUND2-3X1000-REMAINDER-2026-07-24/verified_source_routing_ledger.csv",
+  "ledger_sha256": "e1834b2e7b2bc7eede38e1aaefee64ee1931e7dc1360b49118f7f7f9995ef949",
+  "ledger_rows": 2476,
+  "terminal_rows": 2476,
+  "unique_verification_ids": 2476,
+  "unique_candidate_queue_row_ids": 2476,
   "verification_status_counts": {
-    "blocked_or_forbidden": 339,
-    "connection_error": 8,
-    "duplicate_of_verified_source": 70,
-    "duplicate_same_url_pending": 28,
-    "error": 45,
-    "not_found": 264,
-    "reachable_html": 145,
+    "blocked_or_forbidden": 202,
+    "connection_error": 7,
+    "duplicate_of_verified_source": 68,
+    "duplicate_same_url_pending": 22,
+    "error": 27,
+    "not_found": 133,
+    "reachable_html": 127,
     "reachable_http": 2,
-    "reachable_pdf_or_document": 3533,
-    "ssl_error": 17,
-    "timeout": 14,
-    "too_large": 261
+    "reachable_pdf_or_document": 1665,
+    "ssl_error": 14,
+    "timeout": 12,
+    "too_large": 197
   },
-  "reachable_or_reused_total": 3750,
-  "reachable_or_reused_rate": 0.793483,
-  "url_opens_total": 4628,
-  "network_calls_total": 4628,
-  "duplicate_reuse_rows": 98,
-  "successfully_reused_rows": 70,
-  "duplicate_same_url_pending_rows": 28,
-  "duplicate_link_rows": 98,
+  "reachable_or_reused_total": 1862,
+  "reachable_or_reused_rate": 0.752019,
+  "url_opens_total": 2386,
+  "network_calls_total": 2386,
+  "duplicate_reuse_rows": 90,
+  "successfully_reused_rows": 68,
+  "duplicate_same_url_pending_rows": 22,
+  "duplicate_link_rows": 90,
   "content_type_distribution": {
     "application/json": 1,
     "application/octet-stream": 1,
-    "application/pdf": 3855,
+    "application/pdf": 1921,
     "application/vnd.openxmlformats-officedocument.wordprocessingml.document": 4,
     "application/xml": 5,
     "image/jpeg": 1,
-    "text/html": 728,
+    "text/html": 457,
     "text/plain": 2,
     "text/xml": 2,
-    "unknown": 127
+    "unknown": 82
   },
   "bytes_read_distribution": {
-    "0": 1033,
-    "1MiB_to_10MiB": 1822,
-    "1_to_64KiB": 155,
-    "64KiB_to_1MiB": 1716
+    "0": 674,
+    "1MiB_to_10MiB": 744,
+    "1_to_64KiB": 123,
+    "64KiB_to_1MiB": 935
   },
   "state_routing_counts": {
     "AK": {
-      "other_terminal": 9,
-      "reachable_or_reused": 20
+      "other_terminal": 3,
+      "reachable_or_reused": 8
     },
     "AL": {
       "other_terminal": 7,
@@ -70,23 +70,20 @@
       "reachable_or_reused": 20
     },
     "CA": {
-      "other_terminal": 223,
-      "reachable_or_reused": 551
+      "other_terminal": 86,
+      "reachable_or_reused": 180
     },
     "CO": {
       "other_terminal": 3,
       "reachable_or_reused": 22
     },
     "CT": {
-      "other_terminal": 15,
-      "reachable_or_reused": 47
-    },
-    "DC": {
-      "reachable_or_reused": 5
+      "other_terminal": 8,
+      "reachable_or_reused": 14
     },
     "DE": {
       "other_terminal": 2,
-      "reachable_or_reused": 15
+      "reachable_or_reused": 7
     },
     "FL": {
       "other_terminal": 58,
@@ -96,20 +93,17 @@
       "other_terminal": 1,
       "reachable_or_reused": 6
     },
-    "HI": {
-      "reachable_or_reused": 3
-    },
     "IA": {
-      "other_terminal": 16,
-      "reachable_or_reused": 59
+      "other_terminal": 8,
+      "reachable_or_reused": 25
     },
     "ID": {
       "other_terminal": 4,
       "reachable_or_reused": 16
     },
     "IL": {
-      "other_terminal": 57,
-      "reachable_or_reused": 241
+      "other_terminal": 36,
+      "reachable_or_reused": 44
     },
     "IN": {
       "other_terminal": 12,
@@ -117,7 +111,7 @@
     },
     "KS": {
       "other_terminal": 5,
-      "reachable_or_reused": 36
+      "reachable_or_reused": 27
     },
     "KY": {
       "other_terminal": 1,
@@ -128,20 +122,20 @@
       "reachable_or_reused": 19
     },
     "MA": {
-      "other_terminal": 29,
-      "reachable_or_reused": 132
+      "other_terminal": 22,
+      "reachable_or_reused": 52
     },
     "MD": {
       "other_terminal": 16,
       "reachable_or_reused": 41
     },
     "ME": {
-      "other_terminal": 6,
-      "reachable_or_reused": 40
+      "other_terminal": 4,
+      "reachable_or_reused": 28
     },
     "MI": {
-      "other_terminal": 26,
-      "reachable_or_reused": 140
+      "other_terminal": 14,
+      "reachable_or_reused": 37
     },
     "MN": {
       "other_terminal": 28,
@@ -156,8 +150,8 @@
       "reachable_or_reused": 11
     },
     "MT": {
-      "other_terminal": 20,
-      "reachable_or_reused": 33
+      "other_terminal": 12,
+      "reachable_or_reused": 11
     },
     "NC": {
       "other_terminal": 2,
@@ -168,12 +162,12 @@
       "reachable_or_reused": 5
     },
     "NE": {
-      "other_terminal": 5,
-      "reachable_or_reused": 26
+      "other_terminal": 1,
+      "reachable_or_reused": 8
     },
     "NH": {
-      "other_terminal": 6,
-      "reachable_or_reused": 31
+      "other_terminal": 2,
+      "reachable_or_reused": 16
     },
     "NJ": {
       "other_terminal": 13,
@@ -184,24 +178,24 @@
       "reachable_or_reused": 31
     },
     "NV": {
-      "other_terminal": 7,
-      "reachable_or_reused": 27
+      "other_terminal": 4,
+      "reachable_or_reused": 6
     },
     "NY": {
-      "other_terminal": 26,
-      "reachable_or_reused": 113
+      "other_terminal": 9,
+      "reachable_or_reused": 55
     },
     "OH": {
-      "other_terminal": 70,
-      "reachable_or_reused": 748
+      "other_terminal": 29,
+      "reachable_or_reused": 145
     },
     "OK": {
       "other_terminal": 3,
       "reachable_or_reused": 18
     },
     "OR": {
-      "other_terminal": 71,
-      "reachable_or_reused": 109
+      "other_terminal": 36,
+      "reachable_or_reused": 47
     },
     "PA": {
       "other_terminal": 19,
@@ -209,15 +203,15 @@
     },
     "RI": {
       "other_terminal": 4,
-      "reachable_or_reused": 23
+      "reachable_or_reused": 10
     },
     "SC": {
       "other_terminal": 1,
       "reachable_or_reused": 2
     },
     "SD": {
-      "other_terminal": 11,
-      "reachable_or_reused": 26
+      "other_terminal": 5,
+      "reachable_or_reused": 11
     },
     "TN": {
       "other_terminal": 6,
@@ -237,15 +231,15 @@
     },
     "VT": {
       "other_terminal": 3,
-      "reachable_or_reused": 12
+      "reachable_or_reused": 6
     },
     "WA": {
-      "other_terminal": 55,
-      "reachable_or_reused": 182
+      "other_terminal": 26,
+      "reachable_or_reused": 88
     },
     "WI": {
-      "other_terminal": 40,
-      "reachable_or_reused": 174
+      "other_terminal": 25,
+      "reachable_or_reused": 80
     },
     "WV": {
       "other_terminal": 1,
@@ -276,30 +270,18 @@
       "reachable_or_reused": 121
     },
     "scheduled": {
-      "other_terminal": 586,
-      "reachable_or_reused": 3014
+      "other_terminal": 224,
+      "reachable_or_reused": 1126
     }
   },
-  "artifact_rows": 4645,
-  "blank_artifact_rows": 81,
+  "artifact_rows": 2416,
+  "blank_artifact_rows": 60,
   "artifact_paths_validated": true,
   "input_audit_recommendation": "merge_all_verification_lanes",
   "stage_boundary": "URL reachability and response-metadata routing only; not ingestion, codification, wage extraction, or analysis-ready evidence.",
   "scout_accounting_mutations": 0,
   "network_calls_during_merge": 0,
-  "summary_scope": "cumulative_project_wide",
-  "verification_round_ids": [
-    "VERIFICATION-SCALE-ROUND1-3X750-2026-07-23",
-    "VERIFICATION-SCALE-ROUND2-3X1000-REMAINDER-2026-07-24"
-  ],
-  "latest_merged_round_id": "VERIFICATION-SCALE-ROUND2-3X1000-REMAINDER-2026-07-24",
-  "latest_merge_id": "VERIFICATION-SCALE-ROUND2-3X1000-REMAINDER-MERGE-2026-07-24",
-  "round_rows": {
-    "VERIFICATION-SCALE-ROUND1-3X750-2026-07-23": 2250,
-    "VERIFICATION-SCALE-ROUND2-3X1000-REMAINDER-2026-07-24": 2476
-  },
-  "latest_round_specific_ledger": "docs/analysis/verification_ledgers/VERIFICATION-SCALE-ROUND2-3X1000-REMAINDER-2026-07-24/verified_source_routing_ledger.csv",
-  "latest_round_specific_summary": "docs/analysis/verification_ledgers/VERIFICATION-SCALE-ROUND2-3X1000-REMAINDER-2026-07-24/verified_source_routing_summary.json",
-  "prior_cumulative_rows": 2250,
-  "rows_added_by_latest_merge": 2476
+  "cumulative_ledger": "docs/analysis/verification_ledgers/verified_source_routing_ledger_cumulative.csv",
+  "cumulative_summary": "docs/analysis/verification_ledgers/verified_source_routing_summary_cumulative.json",
+  "cumulative_ledger_rows": 4726
 }

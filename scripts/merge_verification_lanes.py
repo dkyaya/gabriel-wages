@@ -30,6 +30,12 @@ MERGE_FIELDS = [
     "verification_stage",
 ]
 VERIFICATION_STAGE = "url_reachability_metadata_verified"
+ROUND_LEDGER_NAME = "verified_source_routing_ledger.csv"
+ROUND_SUMMARY_NAME = "verified_source_routing_summary.json"
+CUMULATIVE_LEDGER_NAME = "verified_source_routing_ledger_cumulative.csv"
+CUMULATIVE_SUMMARY_NAME = "verified_source_routing_summary_cumulative.json"
+LATEST_LEDGER_NAME = "verified_source_routing_ledger_latest.csv"
+LATEST_SUMMARY_NAME = "verified_source_routing_summary_latest.json"
 REACHABLE_OR_REUSED_STATUSES = {
     "reachable_http",
     "reachable_html",
@@ -217,6 +223,7 @@ def summarize(
     )
     byte_sizes = Counter(byte_bucket(row.get("bytes_read", "")) for row in rows)
     state_counts: dict[str, Counter[str]] = defaultdict(Counter)
+    disposition_counts: dict[str, Counter[str]] = defaultdict(Counter)
     for row in rows:
         state = row.get("state", "") or "unknown"
         status = row["verification_status"]
@@ -226,6 +233,10 @@ def summarize(
             else "other_terminal"
         )
         state_counts[state][bucket] += 1
+        disposition = (
+            row.get("candidate_status_before_verification", "") or "unknown"
+        )
+        disposition_counts[disposition][bucket] += 1
     reachable_or_reused = sum(statuses[s] for s in REACHABLE_OR_REUSED_STATUSES)
     artifact_rows = sum(bool(row.get("artifact_path", "").strip()) for row in rows)
     duplicate_link_rows = (
@@ -263,6 +274,10 @@ def summarize(
             state: dict(sorted(counts.items()))
             for state, counts in sorted(state_counts.items())
         },
+        "candidate_disposition_routing_counts": {
+            disposition: dict(sorted(counts.items()))
+            for disposition, counts in sorted(disposition_counts.items())
+        },
         "artifact_rows": artifact_rows,
         "blank_artifact_rows": len(rows) - artifact_rows,
         "artifact_paths_validated": True,
@@ -289,6 +304,170 @@ def write_json_atomic(path: Path, value: dict[str, Any]) -> None:
     temporary = path.with_suffix(path.suffix + ".tmp")
     temporary.write_text(json.dumps(value, indent=2) + "\n", encoding="utf-8")
     temporary.replace(path)
+
+
+def copy_file_atomic(source: Path, destination: Path) -> None:
+    temporary = destination.with_suffix(destination.suffix + ".tmp")
+    shutil.copyfile(source, temporary)
+    temporary.replace(destination)
+
+
+def validate_prior_cumulative(
+    *,
+    parent: Path,
+    expected_fields: list[str],
+) -> tuple[list[dict[str, str]], dict[str, Any] | None]:
+    cumulative_ledger = parent / CUMULATIVE_LEDGER_NAME
+    cumulative_summary = parent / CUMULATIVE_SUMMARY_NAME
+    latest_ledger = parent / LATEST_LEDGER_NAME
+    latest_summary = parent / LATEST_SUMMARY_NAME
+
+    if cumulative_ledger.exists() or cumulative_summary.exists():
+        if not cumulative_ledger.is_file() or not cumulative_summary.is_file():
+            raise MergeValidationError("Cumulative ledger/summary pair is incomplete")
+        prior_ledger = cumulative_ledger
+        prior_summary_path = cumulative_summary
+    elif latest_ledger.exists() or latest_summary.exists():
+        if not latest_ledger.is_file() or not latest_summary.is_file():
+            raise MergeValidationError("Latest ledger/summary pair is incomplete")
+        prior_ledger = latest_ledger
+        prior_summary_path = latest_summary
+    else:
+        return [], None
+
+    prior_fields, prior_rows = read_csv(prior_ledger)
+    if prior_fields != expected_fields:
+        raise MergeValidationError("Prior cumulative ledger schema does not match")
+    verification_ids = [row.get("verification_id", "") for row in prior_rows]
+    queue_ids = [row.get("candidate_queue_row_id", "") for row in prior_rows]
+    if (
+        not all(verification_ids)
+        or len(verification_ids) != len(set(verification_ids))
+        or not all(queue_ids)
+        or len(queue_ids) != len(set(queue_ids))
+    ):
+        raise MergeValidationError("Prior cumulative ledger identities are invalid")
+    if any(
+        row.get("verification_status", "") not in TERMINAL_LIVE_STATUSES
+        or row.get("verification_stage", "") != VERIFICATION_STAGE
+        for row in prior_rows
+    ):
+        raise MergeValidationError("Prior cumulative ledger is not fully terminal")
+
+    prior_summary = load_json(prior_summary_path)
+    if int(prior_summary.get("ledger_rows", -1)) != len(prior_rows):
+        raise MergeValidationError("Prior cumulative summary row count mismatch")
+    if int(prior_summary.get("terminal_rows", -1)) != len(prior_rows):
+        raise MergeValidationError("Prior cumulative summary terminal count mismatch")
+    if prior_summary.get("ledger_sha256") != sha256_file(prior_ledger):
+        raise MergeValidationError("Prior cumulative ledger hash mismatch")
+    return prior_rows, prior_summary
+
+
+def write_cumulative_outputs(
+    *,
+    parent: Path,
+    fieldnames: list[str],
+    round_rows: list[dict[str, str]],
+    round_summary: dict[str, Any],
+    manifest_path: Path,
+    audit_summary_path: Path,
+    audit: dict[str, Any],
+    round_id: str,
+    merge_id: str,
+    merged_at: str,
+) -> dict[str, Any]:
+    prior_rows, prior_summary = validate_prior_cumulative(
+        parent=parent, expected_fields=fieldnames
+    )
+    prior_verification_ids = {row["verification_id"] for row in prior_rows}
+    prior_queue_ids = {row["candidate_queue_row_id"] for row in prior_rows}
+    new_verification_ids = {row["verification_id"] for row in round_rows}
+    new_queue_ids = {row["candidate_queue_row_id"] for row in round_rows}
+    if prior_verification_ids & new_verification_ids:
+        raise MergeValidationError(
+            "Round ledger overlaps prior cumulative verification IDs"
+        )
+    if prior_queue_ids & new_queue_ids:
+        raise MergeValidationError(
+            "Round ledger overlaps prior cumulative queue identities"
+        )
+
+    cumulative_rows = prior_rows + round_rows
+    cumulative_verification_ids = [
+        row["verification_id"] for row in cumulative_rows
+    ]
+    cumulative_queue_ids = [
+        row["candidate_queue_row_id"] for row in cumulative_rows
+    ]
+    if len(cumulative_verification_ids) != len(set(cumulative_verification_ids)):
+        raise MergeValidationError("Cumulative verification IDs are duplicated")
+    if len(cumulative_queue_ids) != len(set(cumulative_queue_ids)):
+        raise MergeValidationError("Cumulative queue identities are duplicated")
+
+    cumulative_ledger = parent / CUMULATIVE_LEDGER_NAME
+    cumulative_summary_path = parent / CUMULATIVE_SUMMARY_NAME
+    write_csv_atomic(cumulative_ledger, fieldnames, cumulative_rows)
+
+    prior_url_opens = int((prior_summary or {}).get("url_opens_total", 0))
+    prior_network_calls = int((prior_summary or {}).get("network_calls_total", 0))
+    prior_duplicate_reuse = int(
+        (prior_summary or {}).get("duplicate_reuse_rows", 0)
+    )
+    cumulative_audit = {
+        "urls_opened": prior_url_opens + int(audit["urls_opened"]),
+        "network_calls": prior_network_calls + int(audit["network_calls"]),
+        "duplicate_reuse_rows": (
+            prior_duplicate_reuse + int(audit["duplicate_reuse_rows"])
+        ),
+        "merge_recommendation": audit["merge_recommendation"],
+    }
+    cumulative_summary = summarize(
+        rows=cumulative_rows,
+        manifest_path=manifest_path,
+        audit_summary_path=audit_summary_path,
+        audit=cumulative_audit,
+        round_id=round_id,
+        merge_id=merge_id,
+        merged_at=merged_at,
+        ledger_path=cumulative_ledger,
+    )
+    prior_round_ids = list(
+        (prior_summary or {}).get(
+            "verification_round_ids",
+            (
+                [(prior_summary or {}).get("verification_round_id")]
+                if (prior_summary or {}).get("verification_round_id")
+                else []
+            ),
+        )
+    )
+    if round_id in prior_round_ids:
+        raise MergeValidationError("Round ID already exists in cumulative summary")
+    round_ids = prior_round_ids + [round_id]
+    rows_by_round = Counter(
+        row.get("verification_round_id", "") for row in cumulative_rows
+    )
+    cumulative_summary.update(
+        {
+            "schema_version": "2.0.0",
+            "summary_scope": "cumulative_project_wide",
+            "verification_round_ids": round_ids,
+            "latest_merged_round_id": round_id,
+            "latest_merge_id": merge_id,
+            "round_rows": dict(sorted(rows_by_round.items())),
+            "latest_round_specific_ledger": round_summary["durable_ledger"],
+            "latest_round_specific_summary": (
+                parent / round_id / ROUND_SUMMARY_NAME
+            ).as_posix(),
+            "prior_cumulative_rows": len(prior_rows),
+            "rows_added_by_latest_merge": len(round_rows),
+        }
+    )
+    write_json_atomic(cumulative_summary_path, cumulative_summary)
+    copy_file_atomic(cumulative_ledger, parent / LATEST_LEDGER_NAME)
+    copy_file_atomic(cumulative_summary_path, parent / LATEST_SUMMARY_NAME)
+    return cumulative_summary
 
 
 def write_audit_note(path: Path, summary: dict[str, Any]) -> None:
@@ -343,6 +522,15 @@ def merge(
         microsecond=0
     ).isoformat().replace("+00:00", "Z")
 
+    pointer_paths = [
+        output_dir.parent / CUMULATIVE_LEDGER_NAME,
+        output_dir.parent / CUMULATIVE_SUMMARY_NAME,
+        output_dir.parent / LATEST_LEDGER_NAME,
+        output_dir.parent / LATEST_SUMMARY_NAME,
+    ]
+    pointer_backups = {
+        path: path.read_bytes() if path.is_file() else None for path in pointer_paths
+    }
     output_dir.mkdir(parents=True)
     try:
         all_rows: list[dict[str, str]] = []
@@ -368,8 +556,8 @@ def merge(
         if len(queue_ids) != len(set(queue_ids)):
             raise MergeValidationError("Merged lanes contain duplicate queue identities")
 
-        ledger_path = output_dir / "verified_source_routing_ledger.csv"
-        summary_path = output_dir / "verified_source_routing_summary.json"
+        ledger_path = output_dir / ROUND_LEDGER_NAME
+        summary_path = output_dir / ROUND_SUMMARY_NAME
         audit_note_path = output_dir / "verified_source_routing_merge_audit.md"
         fieldnames = list(source_fields or []) + MERGE_FIELDS
         write_csv_atomic(ledger_path, fieldnames, all_rows)
@@ -386,15 +574,37 @@ def merge(
         write_json_atomic(summary_path, summary)
         write_audit_note(audit_note_path, summary)
         if write_latest:
-            latest_ledger = output_dir.parent / "verified_source_routing_ledger_latest.csv"
-            latest_summary = (
-                output_dir.parent / "verified_source_routing_summary_latest.json"
+            cumulative_summary = write_cumulative_outputs(
+                parent=output_dir.parent,
+                fieldnames=fieldnames,
+                round_rows=all_rows,
+                round_summary=summary,
+                manifest_path=manifest_path,
+                audit_summary_path=audit_summary_path,
+                audit=audit,
+                round_id=round_id,
+                merge_id=merge_id,
+                merged_at=merged_at,
             )
-            shutil.copyfile(ledger_path, latest_ledger)
-            shutil.copyfile(summary_path, latest_summary)
+            summary["cumulative_ledger"] = (
+                output_dir.parent / CUMULATIVE_LEDGER_NAME
+            ).as_posix()
+            summary["cumulative_summary"] = (
+                output_dir.parent / CUMULATIVE_SUMMARY_NAME
+            ).as_posix()
+            summary["cumulative_ledger_rows"] = cumulative_summary["ledger_rows"]
+            write_json_atomic(summary_path, summary)
+            write_audit_note(audit_note_path, summary)
         return summary
     except Exception:
         shutil.rmtree(output_dir, ignore_errors=True)
+        for path, backup in pointer_backups.items():
+            if backup is None:
+                path.unlink(missing_ok=True)
+            else:
+                temporary = path.with_suffix(path.suffix + ".restore")
+                temporary.write_bytes(backup)
+                temporary.replace(path)
         raise
 
 

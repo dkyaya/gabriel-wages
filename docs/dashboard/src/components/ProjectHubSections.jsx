@@ -240,7 +240,10 @@ export function ScoutOperationsPanel({ operations, runtime, parallelStatus }) {
 
 export function VerificationPipeline({ candidateSummary, readiness, phase, verificationStatus }) {
   const candidateRows = candidateSummary.totals.candidate_rows;
-  const routingMerged = verificationStatus.verification_phase === "round1_3x750_merged";
+  const fullRouting =
+    verificationStatus.verification_phase === "full_url_routing_merged";
+  const routingMerged =
+    fullRouting || verificationStatus.verification_phase === "round1_3x750_merged";
   const round2Collected =
     verificationStatus.live_verification_status ===
     "round2_3x1000_remainder_collected_not_merged";
@@ -249,7 +252,7 @@ export function VerificationPipeline({ candidateSummary, readiness, phase, verif
     [
       "Verified-source routing",
       routingMerged ? formatNumber(verificationStatus.rows_verified_routing_total) : "Not started project-wide",
-      routingMerged ? "Round 1 merged" : "Next gate",
+      fullRouting ? "Full queue routed" : routingMerged ? "Round 1 merged" : "Next gate",
       routingMerged ? "scout" : "future",
     ],
     ["Ingested source", "Not integrated", "Future", "future"],
@@ -267,6 +270,8 @@ export function VerificationPipeline({ candidateSummary, readiness, phase, verif
         <StatusPill tone={routingMerged ? "scout" : "future"}>
           {round2Collected
             ? "Round 2 remainder collected; merge pending"
+            : fullRouting
+              ? "Full candidate URL routing merged"
             : routingMerged
               ? "Round 1 3×750 routing merged"
               : "Live path ready; verification not started"}
@@ -292,8 +297,21 @@ export function VerificationPipeline({ candidateSummary, readiness, phase, verif
         <p>
           {routingMerged ? (
             <>
-              Round 1 routed {formatNumber(verificationStatus.rows_verified_routing_total)} candidate rows:
-              {" "}{formatPercent(verificationStatus.reachable_or_reused_rate)} were reachable or reused.
+              {fullRouting ? (
+                <>
+                  Round 1 routed {formatNumber(verificationStatus.round1_rows_verified_routing_total)}
+                  {" "}rows and Round 2 routed {formatNumber(verificationStatus.round2_rows_verified_routing_total)}
+                  {" "}rows. Together they cover {formatNumber(verificationStatus.rows_verified_routing_total)}
+                  {" "}/ {formatNumber(verificationStatus.total_url_bearing_candidate_rows)} candidate URLs;
+                  {" "}{formatPercent(verificationStatus.cumulative_reachable_or_reused_rate)}
+                  {" "}were reachable or reused.
+                </>
+              ) : (
+                <>
+                  Round 1 routed {formatNumber(verificationStatus.rows_verified_routing_total)} candidate rows:
+                  {" "}{formatPercent(verificationStatus.reachable_or_reused_rate)} were reachable or reused.
+                </>
+              )}
               {round2Collected ? (
                 <>
                   {" "}Round 2 has {formatNumber(verificationStatus.round2_terminal_rows)} terminal,
@@ -315,7 +333,9 @@ export function VerificationPipeline({ candidateSummary, readiness, phase, verif
       <p className="panel-note">
         <strong>{routingMerged ? "Remaining routing estimate:" : "Coverage plan:"}</strong>{" "}
         {routingMerged
-          ? round2Collected
+          ? fullRouting
+            ? "No URL-bearing queue identities remain unrouted. The next step is content relevance and extraction-readiness triage, not another broad URL-routing round."
+            : round2Collected
             ? "Round 2 selected every remaining URL-bearing queue identity; the durable ledger still contains only the 2,250 merged Round 1 rows until a separate serial merge."
             : `${formatNumber(verificationStatus.scheduled_verification_rows_remaining_estimate)} scheduled and ${formatNumber(verificationStatus.full_url_bearing_rows_remaining_estimate)} total URL-bearing rows remain.`
           : `${verificationStatus.scheduled_pool_estimated_rounds} nominal rounds cover the scheduled pool; ${verificationStatus.full_backlog_estimated_rounds} cover every URL-bearing candidate row.`}

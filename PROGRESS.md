@@ -6,6 +6,32 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-24 (Full candidate URL-routing ledger completed)
+
+**Did**
+- Started from clean tracked `e86abf760d40a037713dcf53db2a1becdede09c9`, confirmed required ancestry, and left the unrelated untracked root `package-lock.json` untouched.
+- Re-ran the Round 2 lane auditor and exact identity gates: all three lanes remain `completed_merge_eligible`; 2,476/2,476 rows are terminal; Round 1 overlap, duplicate verification IDs, and accounting mutations are zero; recommendation is `merge_all_verification_lanes`.
+- Updated and tested the serial merge tool so a later round cannot replace an earlier round in the project-wide `latest` pointer. Ran the authorized merge exactly once.
+- Created the 2,476-row Round 2 durable ledger and explicit 4,726-row cumulative/latest ledgers. The cumulative identities equal the complete canonical URL-bearing queue, and the original 2,250-row Round 1 ledger remains unchanged.
+- Cumulative routing is 3,750 reachable/reused (79.3483%): 3,533 reachable documents, 145 reachable HTML rows, two other reachable HTTP rows, and 70 successful duplicate reuses. Other outcomes include 339 blocked, 264 not found, 261 too large, 45 generic errors, 17 SSL errors, 14 timeouts, eight connection errors, and 28 duplicate-pending rows.
+- Refreshed the dashboard to `full_url_routing_merged`, 4,726/4,726 routed, zero scheduled/full-backlog rows remaining, and downstream ingestion/codification/wage work not started. Added a post-routing transition plan for 500–1,000-source content triage and separate oversized-document handling.
+
+**Decisions and why**
+- Treat cumulative/latest as project-wide history and keep round-specific ledgers immutable. This prevents Round 2 from making Round 1 appear to disappear.
+- End broad URL routing for the current queue. The next useful gate is content relevance, employer/unit validation, source quality, and extraction readiness—not more URL opening.
+- Retain all original candidate dispositions and all routing exceptions. Complete routing is not complete source verification or evidence.
+
+**Surprises/breakage**
+- The preexisting merge script copied only the newest round into `latest`. It was corrected before the exactly-once Round 2 merge, with a synthetic two-round test and rollback-safe pointer writes.
+- No validation breakage occurred. Cumulative `too_large` is 261, confirming the need for a separate oversized-source plan rather than a global limit increase.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Six compiles, ten offline/mock verification tests, the final lane audit, schema validation, 60 ingestion tests, 14 dashboard JSON parses, frontend production build, cumulative identity/status/artifact checks, protected/accounting hashes, secret checks, and diff checks passed. This merge opened no URL and made no network/API/model/hosted-search/scout call; no scout accounting, contract/city-coverage/corpus edit, ingestion, `gabriel.codify`, wage extraction, wage-gap work, causal claim, regression, remote action, or push occurred.
+
+**Next steps**
+1. Prepare an offline deterministic 500–1,000-row content-triage and extraction-readiness batch from reachable/reused sources, prioritizing official-looking PDFs, scheduled/high-priority candidates, likely CBA-related types, and matched safety/non-safety potential.
+2. Define relevance, employer/unit/cycle, source-quality, and extraction-readiness schemas before opening or downloading content.
+3. Design a separate, bounded oversized-source handling pass for the 261 `too_large` rows. Keep ingestion, codification, wage extraction, descriptive gaps, and regressions downstream.
+
 ## 2026-07-24 (Verification Scale Round 2 Option B remainder live collection completed; merge deferred)
 
 **Did**

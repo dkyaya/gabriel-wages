@@ -6,6 +6,38 @@ Last updated: `2026-07-24`
 
 ---
 
+## 2026-07-24 — Full candidate URL routing is durably merged
+
+### Current State
+
+- **Readiness:** work began at clean tracked `e86abf760d40a037713dcf53db2a1becdede09c9`. A fresh audit reproduces the three locked hashes, 826/825/825 terminal rows, three `completed_merge_eligible` lanes, zero cross-lane duplicate IDs or accounting mutations, and `merge_all_verification_lanes`.
+- **Exactly-once Round 2 merge:** [the result](verification_scale_round2_3x1000_remainder_serial_merge_result_2026-07-24.md) records one execution of `merge_verification_lanes.py` with merge ID `VERIFICATION-SCALE-ROUND2-3X1000-REMAINDER-MERGE-2026-07-24`.
+- **Round-specific ledger:** Round 2 contains 2,476 rows and unique verification/queue identities. Reachable/reused is 1,862 (75.2019%). Every original scheduled/context/insufficient/duplicate/canonical/calibration disposition remains intact.
+- **Cumulative ledger:** Round 1 contributes 2,250 rows and Round 2 contributes 2,476. The cumulative/latest ledger contains 4,726 terminal, unique queue identities—exactly the full URL-bearing queue—and the original Round 1 round ledger remains unchanged.
+- **Cumulative outcomes:** 3,750 reachable/reused (79.3483%), including 3,533 reachable documents, 145 reachable HTML, two other reachable HTTP, and 70 successful duplicate reuses. Other routing includes 339 blocked, 264 not found, 261 too large, 45 generic errors, 17 SSL errors, 14 timeouts, eight connection errors, and 28 duplicate-pending rows.
+- **Dashboard:** `verification_phase = full_url_routing_merged`, live status is `all_candidate_urls_routed`, coverage is 4,726/4,726, and scheduled/full-backlog remaining estimates are zero. Ingestion, codification, wage extraction, and wage-gap analysis remain `not_started`.
+- **Boundary:** this merge opened no URL and made no network/API/model/hosted-search/scout call. It changed no scout queue/coverage, contract, city-coverage, or corpus file and performed no ingestion, codification, wage extraction, gap calculation/claim, causal claim, or regression.
+- **Validation:** [the validation record](verification_scale_round2_3x1000_remainder_serial_merge_validation_2026-07-24.md) reports ten offline/mock tests, the final audit, schema and ingestion checks, dashboard JSON/frontend build, exact 4,726-ID coverage, cumulative/latest identity, protected hashes, artifact confinement, secret checks, and diff checks passed.
+
+### Interpretation and limitations
+
+All current candidate URLs have routing outcomes, but the project does not yet
+have 4,726 relevant or official sources. Reachable results still require
+content, employer/unit, date/cycle, document-type, provenance, and
+extractability review. Lower-disposition rows remain lower-disposition
+candidates. Non-reachable outcomes remain routing exceptions, not findings
+that a municipality lacks a source.
+
+### Next Move
+
+Follow [the post-routing transition plan](post_full_url_routing_transition_plan_2026-07-24.md).
+Prepare, but do not yet execute, a 500–1,000-row content-triage and
+extraction-readiness batch from reachable/reused sources. Prioritize
+official-looking public documents, scheduled/high-priority candidates, likely
+CBA/award/fact-finding/wage-schedule types, large/high-yield states, and
+matched safety/non-safety potential. Separately design bounded handling for
+the 261 oversized rows. Do not run another broad URL-routing round.
+
 ## 2026-07-24 — Verification Scale Round 2 Option B remainder is collected; serial merge pending
 
 ### Current State

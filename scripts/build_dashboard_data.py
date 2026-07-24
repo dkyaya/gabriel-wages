@@ -70,6 +70,9 @@ COORDINATED_WAVE_SIZE = 150
 CURRENT_SOURCE_ACCOUNTING_COMMIT = "98ad608"
 PARALLEL_SCOUT_ROUND_ID = "POST-PI-AGGRESSIVE-ROUND-3X300-2026-07-23"
 FIRST_VERIFICATION_ROUND_ID = "VERIFICATION-SCALE-ROUND1-3X750-2026-07-23"
+SECOND_VERIFICATION_ROUND_ID = (
+    "VERIFICATION-SCALE-ROUND2-3X1000-REMAINDER-2026-07-24"
+)
 FIRST_VERIFICATION_ROUND_ROWS = 2_250
 VERIFICATION_BATCH_SIZE = 750
 VERIFICATION_LANES = 3
@@ -1373,17 +1376,49 @@ def build_verification_status_summary(
     if routing_summary:
         status_counts = routing_summary["verification_status_counts"]
         merged_rows = int(routing_summary["ledger_rows"])
-        scheduled_remaining = max(scheduled - merged_rows, 0)
+        full_routing_merged = (
+            routing_summary.get("summary_scope") == "cumulative_project_wide"
+            and merged_rows == len(queue_rows)
+        )
+        scheduled_remaining = 0 if full_routing_merged else max(
+            scheduled - merged_rows, 0
+        )
         full_remaining = max(len(queue_rows) - merged_rows, 0)
         reachable_or_reused = int(routing_summary["reachable_or_reused_total"])
+        round_rows = routing_summary.get("round_rows", {})
+        round1_rows = int(round_rows.get(FIRST_VERIFICATION_ROUND_ID, merged_rows))
+        round2_rows = int(round_rows.get(SECOND_VERIFICATION_ROUND_ID, 0))
+        round2_live = (
+            read_json(VERIFICATION_ROUND2_LIVE_STATUS_PATH)
+            if VERIFICATION_ROUND2_LIVE_STATUS_PATH.exists()
+            else {}
+        )
+        latest_round_id = routing_summary.get(
+            "latest_merged_round_id", routing_summary["verification_round_id"]
+        )
+        latest_merge_id = routing_summary.get(
+            "latest_merge_id", routing_summary["verification_merge_id"]
+        )
         payload = {
             **metadata,
             "stage": "candidate_source_verification_routing",
-            "verification_phase": "round1_3x750_merged",
-            "latest_merged_round_id": routing_summary["verification_round_id"],
-            "latest_merge_id": routing_summary["verification_merge_id"],
-            "live_verification_status": "round1_merged",
-            "verification_live_status": "round1_merged",
+            "verification_phase": (
+                "full_url_routing_merged"
+                if full_routing_merged
+                else "round1_3x750_merged"
+            ),
+            "latest_merged_round_id": latest_round_id,
+            "latest_merge_id": latest_merge_id,
+            "live_verification_status": (
+                "all_candidate_urls_routed"
+                if full_routing_merged
+                else "round1_merged"
+            ),
+            "verification_live_status": (
+                "all_candidate_urls_routed"
+                if full_routing_merged
+                else "round1_merged"
+            ),
             "total_url_bearing_candidate_rows": len(queue_rows),
             "scheduled_verification_rows": scheduled,
             "held_or_context_rows": held_or_context,
@@ -1392,15 +1427,34 @@ def build_verification_status_summary(
                 len(queue_rows) - scheduled
             ),
             "rows_verified_routing_total": merged_rows,
+            "url_bearing_routing_coverage_rate": round(
+                merged_rows / len(queue_rows), 6
+            ),
+            "round1_rows_verified_routing_total": round1_rows,
+            "round2_rows_verified_routing_total": round2_rows,
             "url_opens_total": int(routing_summary["url_opens_total"]),
             "reachable_or_reused_total": reachable_or_reused,
             "reachable_or_reused_rate": round(
                 reachable_or_reused / merged_rows, 5
             ),
+            "cumulative_reachable_or_reused_total": reachable_or_reused,
+            "cumulative_reachable_or_reused_rate": round(
+                reachable_or_reused / merged_rows, 6
+            ),
             "reachable_pdf_or_document_total": int(
                 status_counts.get("reachable_pdf_or_document", 0)
             ),
             "reachable_html_total": int(status_counts.get("reachable_html", 0)),
+            "reachable_http_total": int(status_counts.get("reachable_http", 0)),
+            "cumulative_reachable_pdf_or_document_total": int(
+                status_counts.get("reachable_pdf_or_document", 0)
+            ),
+            "cumulative_reachable_html_total": int(
+                status_counts.get("reachable_html", 0)
+            ),
+            "cumulative_reachable_http_total": int(
+                status_counts.get("reachable_http", 0)
+            ),
             "blocked_or_forbidden_total": int(
                 status_counts.get("blocked_or_forbidden", 0)
             ),
@@ -1412,11 +1466,42 @@ def build_verification_status_summary(
             "connection_error_total": int(
                 status_counts.get("connection_error", 0)
             ),
+            "cumulative_blocked_or_forbidden_total": int(
+                status_counts.get("blocked_or_forbidden", 0)
+            ),
+            "cumulative_not_found_total": int(
+                status_counts.get("not_found", 0)
+            ),
+            "cumulative_too_large_total": int(
+                status_counts.get("too_large", 0)
+            ),
+            "cumulative_error_total": int(status_counts.get("error", 0)),
+            "cumulative_ssl_error_total": int(
+                status_counts.get("ssl_error", 0)
+            ),
+            "cumulative_timeout_total": int(status_counts.get("timeout", 0)),
+            "cumulative_connection_error_total": int(
+                status_counts.get("connection_error", 0)
+            ),
             "duplicate_reuse_rows": int(routing_summary["duplicate_reuse_rows"]),
+            "cumulative_duplicate_reuse_rows": int(
+                routing_summary["duplicate_reuse_rows"]
+            ),
+            "round2_reachable_or_reused_total": int(
+                round2_live.get("reachable_or_reused_total", 0)
+            ),
+            "round2_reachable_or_reused_rate": round(
+                float(round2_live.get("reachable_or_reused_rate", 0)), 6
+            ),
+            "round2_merge_status": (
+                "merged" if full_routing_merged and round2_rows else "not_started"
+            ),
             "scheduled_verification_rows_remaining_estimate": scheduled_remaining,
             "full_url_bearing_rows_remaining_estimate": full_remaining,
             "recommended_next_round_id": (
-                "VERIFICATION-SCALE-ROUND2-3X750-2026-07-24"
+                "NONE-FULL-URL-ROUTING-COMPLETE"
+                if full_routing_merged
+                else "VERIFICATION-SCALE-ROUND2-3X750-2026-07-24"
             ),
             "recommended_concurrency_per_lane": VERIFICATION_CONCURRENCY_PER_LANE,
             "recommended_timeout_seconds": 20,
@@ -1449,15 +1534,21 @@ def build_verification_status_summary(
                 "analysis-ready wage observation",
             ],
             "routing_summary_source": relative(VERIFICATION_ROUTING_SUMMARY_PATH),
+            "routing_summary_scope": routing_summary.get(
+                "summary_scope", "round_specific"
+            ),
             "caveats": [
-                "Verification routing does not equal ingestion.",
+                "URL routing coverage is complete, but source relevance and content extraction are not."
+                if full_routing_merged
+                else "Verification routing does not equal ingestion.",
                 "A reachable PDF/document does not equal extracted wage data or a confirmed employer/unit match.",
                 "Blocked, not-found, oversized, and transport statuses are URL-routing outcomes, not municipality source-absence findings.",
+                "Held, context, duplicate, canonical, and rejected rows retain their original lower dispositions.",
                 "No wage gaps have been calculated.",
             ],
         }
-        if VERIFICATION_ROUND2_LIVE_STATUS_PATH.exists():
-            round2 = read_json(VERIFICATION_ROUND2_LIVE_STATUS_PATH)
+        if VERIFICATION_ROUND2_LIVE_STATUS_PATH.exists() and not full_routing_merged:
+            round2 = round2_live
             payload.update(
                 {
                     "live_verification_status": (
