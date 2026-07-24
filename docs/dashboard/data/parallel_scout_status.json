@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-24T01:00:10Z",
+  "generated_at": "2026-07-24T01:11:00Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -30,24 +30,29 @@
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
   "stage": "parallel_scout_operations_status",
-  "parallel_mode_status": "checkpoint_3x160_planned_not_run",
-  "current_parallel_mode": "three_lane_checkpoint_round_planned",
+  "parallel_mode_status": "aggressive_3x300_planned_not_run",
+  "current_parallel_mode": "three_lane_aggressive_round_planned",
   "supported_lanes_initial": 2,
   "supported_lanes_future": 3,
-  "rows_per_lane": 160,
+  "rows_per_lane": 300,
   "latest_completed_round_id": "POST-PI-PARALLEL-ROUND2-3X150-2026-07-23",
-  "current_parallel_round_id": "POST-PI-CHECKPOINT-ROUND-3X160-2026-07-23",
-  "next_parallel_test": "checkpoint_targeted_3x160",
-  "aggressive_mode_planned": "3x300_feasible_but_only_with_explicit_checkpoint_overshoot_acceptance",
+  "current_parallel_round_id": "POST-PI-AGGRESSIVE-ROUND-3X300-2026-07-23",
+  "next_parallel_test": "user_approved_aggressive_3x300",
+  "aggressive_mode_planned": "3x300_live_ready_planned_not_run",
   "current_scout_covered": 1537,
   "target_checkpoint": 2000,
   "remaining_to_checkpoint": 463,
-  "checkpoint_round_expected_attempted": 480,
-  "checkpoint_round_expected_parseable": 476,
-  "checkpoint_round_expected_post_coverage": 2013,
-  "checkpoint_round_expected_margin": 13,
-  "checkpoint_round_status": "planned_not_run",
-  "lane_start_stagger_minutes": 4,
+  "planned_round_expected_attempted": 900,
+  "planned_round_expected_parseable": 892,
+  "planned_round_expected_post_coverage": 2429,
+  "planned_round_expected_checkpoint_margin": 429,
+  "planned_round_status": "planned_not_run",
+  "checkpoint_overshoot_intent": "intentional_user_approved",
+  "superseded_round": {
+    "round_id": "POST-PI-CHECKPOINT-ROUND-3X160-2026-07-23",
+    "status": "superseded_preserved_not_active"
+  },
+  "lane_start_stagger_minutes": 8,
   "3x150_expected_attempted": 450,
   "3x300_expected_attempted": 900,
   "accounting_policy": "serial_merge_after_lane_audit",
@@ -65,6 +70,6 @@
     "accounting_merge_status": "completed_serially"
   },
   "lane_execution_policy": "Each lane is internally serialized and writes only to its own output directory; lane processes do not rebuild shared accounting.",
-  "post_checkpoint_policy": "Pause broad scouting after the checkpoint round is successfully merged at approximately 2,000; proceed to verification, extraction, ingestion, rating, descriptive wage-growth-gap analysis, and mechanism-correlation documentation.",
-  "caveat": "The three-lane 3x150 round completed and was merged serially after audit. The checkpoint-targeted 3x160 round is planned but has not run. All candidate leads remain unverified. A 3x300 round is deferred because it would likely overshoot the approximately 2,000-municipality checkpoint by more than 400 municipalities."
+  "post_checkpoint_policy": "Pause broad scouting after the aggressive round is successfully merged and the approximately 2,000 checkpoint is exceeded; proceed to verification, extraction, ingestion, rating, descriptive wage-growth-gap analysis, mechanism-correlation documentation, and the planned wage-gap dashboard filter.",
+  "caveat": "The three-lane 3x150 round completed and was merged serially after audit. The checkpoint-targeted 3x160 plan is preserved but superseded. The user-approved aggressive 3x300 round is planned and has not run. Its projected checkpoint overshoot is intentional. All candidate leads remain unverified, and no wage-gap layer is active."
 }

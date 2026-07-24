@@ -6,6 +6,25 @@ Last updated: `2026-07-23`
 
 ---
 
+## 2026-07-23/24 — Aggressive 3×300 is the active locked plan
+
+### Current State
+
+- **Repository gate:** work began at clean tracked `67a41c40b48c693da893d82809ad84e827bd2d8a`; all required ancestry is present and the unrelated untracked root `package-lock.json` remains untouched.
+- **Official checkpoint:** accounting remains 1,537/2,000 covered (463 remaining), 1,267 candidate-positive, 270 parseable-empty, 27 failure-only, and 3,347 unverified queue rows. No queue/coverage builder ran.
+- **Supersession:** the user explicitly replaced the prepared 3×160 checkpoint plan with 3×300 and accepted the likely overshoot. The 3×160 package remains preserved but is marked `superseded_preserved_not_active`.
+- **Locked aggressive plan:** [the manifest](parallel_scout_rounds/POST-PI-AGGRESSIVE-ROUND-3X300-2026-07-23/parallel_round_manifest.json) contains three 300-row ordinary lanes. Hashes are `2965bd65a3f5c6fe816f52c3e9f2ce657cd9ff472db6733233bcaa4ad081fee1`, `6057e1c71b74e0342127cad32a183c2b310af704ea5ebab61e5eb7483b3896a7`, and `9934026f076a978957de5ae5767eed2ff236646d384285585aeecbddcc50843a`.
+- **Eligibility:** all 900 municipality and Census IDs are unique, cross-lane overlap is zero, exact five-hint coverage is 900/900, and covered/canonical/retry/failure-only counts are zero. The refreshed ordinary selection is Tier 1 606 and Tier 2 294; 22 summary-level Tier 1 rows are excluded because they are current retry/failure-only municipalities.
+- **Projection:** at the recent 446/450 parseable rate, 900 attempts imply approximately 892 successful outcomes and roughly 2,429 covered after a later successful serial merge, an intentional planning margin of about +429. This is not live evidence or current accounting.
+- **Controls:** [lane commands](parallel_scout_rounds/POST-PI-AGGRESSIVE-ROUND-3X300-2026-07-23/lane_live_commands.md) retain compact prompts, exact hints, adaptive `3/5/15/10/25/2`, the 90-second outer guard, `n_parallels=1` per lane, exact cap 300, starts at minute 0/8/16, lane-specific costs, and lane-local candidate exports.
+- **Prompts:** [the live prompt](parallel_aggressive_3x300_live_prompt_2026-07-23.md) requires stronger preflight and three dry-run gates, audits, and stops before accounting. [The merge prompt](parallel_aggressive_3x300_serial_merge_prompt_2026-07-23.md) is a later authorization boundary and requires broad scouting to pause after a successful checkpoint-crossing merge.
+- **Dashboard:** status is `aggressive_3x300_planned_not_run`; the current 1,537 official total is unchanged, the overshoot is labeled user-approved, and the wage-growth-gap layer remains planned rather than active.
+- **Boundary:** no live/API/model/hosted-search call, diagnostic, preflight, URL verification, extraction, ingestion, codification, accounting rebuild, wage-gap calculation/claim, causal claim, regression, remote action, or push occurred.
+
+### Next Move
+
+Use [the aggressive live prompt](parallel_aggressive_3x300_live_prompt_2026-07-23.md) only under separate explicit authorization. Recompute all three hashes and current eligibility, run the stronger gate and three exact 300-row dry runs, then launch isolated lanes at minute 0/8/16. Audit and stop before merge. A later serial merge must update accounting exactly once; if it crosses approximately 2,000 as expected, end broad discovery and move to verification → extraction → ingestion → rating → descriptive wage-growth-gap analysis → mechanism documentation → dashboard filtering. Regressions remain deferred.
+
 ## 2026-07-23/24 — Checkpoint-targeted 3×160 round is locked offline
 
 ### Current State

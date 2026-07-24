@@ -1,5 +1,14 @@
 # Aggressive Parallel Scout Scaling Framework — 2026-07-23
 
+## Current approved position
+
+The 3 × 150 collection and its serial merge have passed. The user has
+explicitly selected `aggressive_300` as the next round and accepted the likely
+overshoot beyond approximately 2,000 covered municipalities. The prior 3 × 160
+checkpoint-targeted package is preserved but superseded. This approval changes
+the active planning choice; it does not collapse the live-collection, lane-audit,
+and serial-accounting authorization boundaries described below.
+
 ## Architecture
 
 Parallelism remains process-level. Each lane invokes the existing scout with
@@ -14,9 +23,9 @@ accounting is a later, single, serial coordinator action.
 | Stage | Lanes | Rows/lane | Attempted | Start stagger | Gate |
 |---|---:|---:|---:|---:|---|
 | Completed baseline | 2 | 150 | 300 | 2–5 minutes planned | Merged successfully |
-| `standard_150` | 3 | 150 | 450 | 4 minutes | Next live test |
+| `standard_150` | 3 | 150 | 450 | 4 minutes | Completed and merged |
 | `aggressive_250` | 3 | 250 | 750 | 7 minutes by default; 6–8 allowed | Only after 3 × 150 collection and merge pass |
-| `aggressive_300` | 3 | 300 | 900 | 8 minutes by default; 8–10 configurable | Only after a clean 3 × 150 result |
+| `aggressive_300` | 3 | 300 | 900 | 8 minutes by default; 8–10 configurable | Active user-approved next plan |
 
 Explicit lane, row, or stagger arguments may override a profile, but the planner
 records every override in the manifest. More than three lanes fails closed. More
@@ -75,12 +84,13 @@ No auditor path writes queue, coverage, yield, dashboard, or priority files.
 
 Run 3 × 150 only because the completed 2 × 150 round and serial merge passed. Advance
 to 3 × 250–300 only after the 3 × 150 live collection and its later serial merge
-both pass. Prefer 3 × 250 if the test shows elevated timeouts, transport failures,
-backoff, or uneven lane completion. Use 3 × 300 only when transport health is clean
-and the expected merge will not violate the project’s workflow intent.
+both pass. Those gates are now satisfied. Prefer 3 × 250 if the test shows elevated
+timeouts, transport failures, backoff, or uneven lane completion. The user instead
+approved 3 × 300 after reviewing the clean three-lane result and intentionally
+accepted its expected checkpoint overshoot.
 
-Broad discovery stops when official serial accounting reaches or exceeds
-approximately 2,000 scout-covered municipalities. The project then pauses for
-verification, extraction, ingestion, source rating, descriptive wage-growth-gap
-analysis, mechanism-correlation documentation, and planned dashboard filtering.
-Regressions remain deferred.
+Broad discovery stops after the aggressive round's later serial accounting
+reaches or exceeds approximately 2,000 scout-covered municipalities. The
+project then pauses for verification, extraction, ingestion, source rating,
+descriptive wage-growth-gap analysis, mechanism-correlation documentation, and
+planned dashboard filtering. Regressions remain deferred.

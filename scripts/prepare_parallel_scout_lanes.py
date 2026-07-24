@@ -37,7 +37,7 @@ EXPECTED_POST_PI_WAVE1_HASH = (
     "56e592291f1dbac83836acddcf0065df40141b51f9e93bfb548a040f52b8e700"
 )
 PRIORITY_SOURCE_COMMIT = "8b653b2ba14fc5e6b2a96a523ed3fe6100a780a8"
-PLANNER_BASELINE_COMMIT = "8b653b2ba14fc5e6b2a96a523ed3fe6100a780a8"
+PLANNER_BASELINE_COMMIT = "67a41c40b48c693da893d82809ad84e827bd2d8a"
 SCOUT_CHECKPOINT_TARGET = 2_000
 RECENT_PARSEABLE_NUMERATOR = 446
 RECENT_PARSEABLE_DENOMINATOR = 450
@@ -1048,6 +1048,7 @@ Disposition: **PASS — {args.num_lanes} offline lane inputs locked; no live or 
 This projection is an operational planning estimate, not live evidence or a
 guarantee. Official accounting remains unchanged until completed lane outputs
 pass audit and a separately authorized serial merge runs.
+{"The planned round is expected to overshoot the approximately 2,000-covered checkpoint; this is intentional only when the user has explicitly approved that overshoot." if expected_post_round_coverage > SCOUT_CHECKPOINT_TARGET else "The planned round is expected to finish at or below the approximately 2,000-covered checkpoint."}
 
 ## Locked lane files
 

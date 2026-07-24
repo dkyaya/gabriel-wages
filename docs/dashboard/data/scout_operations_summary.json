@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-24T01:00:10Z",
+  "generated_at": "2026-07-24T01:11:00Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -43,14 +43,16 @@
     "remaining_to_checkpoint": 463,
     "estimated_150_row_waves_remaining": "4",
     "full_150_row_waves_to_reach_or_exceed_checkpoint": 4,
-    "ordinary_discovery_lane": "Run the locked checkpoint-targeted 3x160 ordinary discovery round; keep failure-only retries separate and pause broad scouting after a successful serial merge reaches approximately 2,000.",
-    "next_planned_round_id": "POST-PI-CHECKPOINT-ROUND-3X160-2026-07-23",
+    "ordinary_discovery_lane": "Run the user-approved aggressive 3x300 ordinary discovery round; keep failure-only retries separate. The intentional checkpoint overshoot becomes official only after a later successful serial merge, after which broad scouting pauses.",
+    "next_planned_round_id": "POST-PI-AGGRESSIVE-ROUND-3X300-2026-07-23",
     "next_planned_round_lanes": 3,
-    "next_planned_round_rows_per_lane": 160,
-    "next_planned_round_expected_attempted": 480,
-    "next_planned_round_expected_parseable": 476,
-    "next_planned_round_expected_post_coverage": 2013,
-    "next_phase": "Verification, extraction, ingestion, rating, and descriptive wage-gap analysis",
+    "next_planned_round_rows_per_lane": 300,
+    "next_planned_round_expected_attempted": 900,
+    "next_planned_round_expected_parseable": 892,
+    "next_planned_round_expected_post_coverage": 2429,
+    "checkpoint_overshoot_intent": "intentional_user_approved",
+    "superseded_round_id": "POST-PI-CHECKPOINT-ROUND-3X160-2026-07-23",
+    "next_phase": "Verification, extraction, ingestion, rating, and descriptive wage-growth-gap and mechanism analysis",
     "regressions_status": "Deferred"
   },
   "latest_wave": {

@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-24T01:00:10Z",
+  "generated_at": "2026-07-24T01:11:00Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -41,18 +41,28 @@
   "current_candidate_positive_municipalities": 1267,
   "current_failure_only_municipalities": 27,
   "next_planned_round": {
-    "round_id": "POST-PI-CHECKPOINT-ROUND-3X160-2026-07-23",
+    "round_id": "POST-PI-AGGRESSIVE-ROUND-3X300-2026-07-23",
     "status": "planned_not_run",
+    "profile": "aggressive_300",
     "lanes": 3,
-    "rows_per_lane": 160,
-    "expected_attempted": 480,
-    "expected_parseable_at_recent_rate": 476,
-    "expected_post_round_scout_covered": 2013,
-    "expected_checkpoint_margin": 13,
+    "rows_per_lane": 300,
+    "expected_attempted": 900,
+    "expected_parseable_at_recent_rate": 892,
+    "expected_post_round_scout_covered": 2429,
+    "expected_checkpoint_margin": 429,
+    "checkpoint_overshoot_intent": "intentional_user_approved",
+    "lane_start_stagger_minutes": 8,
     "projection_status": "operational_estimate_not_live_evidence"
   },
-  "checkpoint_pause_rule": "After a successful serial merge reaches approximately 2,000 scout-covered municipalities, pause broad scouting and begin the documented downstream cycle.",
-  "next_phase": "Verification, extraction, ingestion, rating, descriptive wage-gap analysis",
+  "superseded_plans": [
+    {
+      "round_id": "POST-PI-CHECKPOINT-ROUND-3X160-2026-07-23",
+      "status": "superseded_preserved_not_active",
+      "reason": "User explicitly selected the aggressive 3x300 round."
+    }
+  ],
+  "checkpoint_pause_rule": "After the user-approved aggressive round is successfully merged and the approximately 2,000-covered checkpoint is exceeded, pause broad scouting and begin the documented downstream cycle.",
+  "next_phase": "Verification, extraction, ingestion, rating, descriptive wage-growth-gap analysis, and mechanism-correlation documentation",
   "next_phase_sequence": [
     "verify candidate sources",
     "extract wage data",

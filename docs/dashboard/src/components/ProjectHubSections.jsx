@@ -225,12 +225,12 @@ export function ScoutOperationsPanel({ operations, runtime, parallelStatus }) {
           <p className="panel-note">
             <strong>Parallel scout lane status:</strong>{" "}
             Round 2 completed and merged {parallelStatus.supported_lanes_future} lanes × 150 municipalities.
-            The next planned collection is a checkpoint-targeted {parallelStatus.supported_lanes_future} ×
-            {" "}{parallelStatus.rows_per_lane} round ({formatNumber(parallelStatus.checkpoint_round_expected_attempted)} attempts).
-            It is planned, not executed, and is expected to finish close to the approximately 2,000-covered checkpoint.
-            Aggressive 3 × 300 remains feasible only with explicit acceptance of likely
-            checkpoint overshoot. Accounting remains serial after the combined lane audit,
-            and candidate exports remain lane-local.{" "}
+            The next planned collection is the user-approved aggressive {parallelStatus.supported_lanes_future} ×
+            {" "}{parallelStatus.rows_per_lane} round ({formatNumber(parallelStatus.planned_round_expected_attempted)} attempts).
+            It is planned, not executed, and is expected to exceed the approximately 2,000-covered checkpoint;
+            that overshoot is intentional. The earlier 3 × 160 plan is superseded and preserved only as
+            planning history. Accounting remains serial after the combined lane audit, and candidate
+            exports remain lane-local.{" "}
             {parallelStatus.caveat}
           </p>
           <p className="panel-note">{operations.disclaimer}</p>
@@ -414,8 +414,8 @@ export function NextStepsPanel({ priority, phase }) {
       <div className="next-step-grid">
         <article className="recommended-step">
           <span>Immediate</span>
-          <h3>Run the next ordinary 150-row wave</h3>
-          <p>Use compact prompts, deterministic hints, adaptive sleep/backoff, and the stronger preflight gate.</p>
+          <h3>Run the planned 3 × 300 collection</h3>
+          <p>Use the locked aggressive round, stronger preflight, compact prompts, deterministic hints, adaptive sleep/backoff, and eight-minute lane starts.</p>
         </article>
         <article>
           <span>Scale-up checkpoint</span>
@@ -425,7 +425,7 @@ export function NextStepsPanel({ priority, phase }) {
         <article>
           <span>Then pause breadth</span>
           <h3>Run the downstream cycle</h3>
-          <p>Verify, extract, ingest, rate sources, calculate descriptive gaps, and document mechanism correlations. Regressions come later.</p>
+          <p>After the later serial merge, verify, extract, ingest, rate sources, calculate descriptive gaps, and document mechanism correlations. Regressions come later.</p>
         </article>
       </div>
       <p className="panel-note">

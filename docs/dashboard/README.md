@@ -10,25 +10,29 @@ This directory contains a static, PI-facing research-status dashboard. It summar
 
 ## Active phase and checkpoint — 2026-07-23
 
-The current data layer reflects the post–Tier 1 Wave 2 accounting checkpoint and
-the PI-aligned **Source Discovery Scale-Up** strategy:
+The current data layer reflects the serially merged Parallel Round 2 accounting
+checkpoint and the PI-aligned **Source Discovery Scale-Up** strategy:
 
 - 35,589 municipal and township governments in the authoritative universe;
-- 794 successfully scout-covered municipalities;
-- an approximately 2,000-covered workflow checkpoint, with 1,206 remaining and
-  roughly 8–9 coordinated 150-row waves expected;
-- 612 candidate-positive and 182 parseable-empty municipalities;
-- 20 failure-only municipalities retained outside successful coverage;
-- 1,602 URL-bearing, unverified candidate queue rows;
-- 34,789 future-scout-eligible municipalities, including 1,227 Tier 1 and 3,478 Tier 2; and
-- latest-wave runtime of 5,738.638 seconds, or 94.099 attempted rows per hour.
+- 1,537 successfully scout-covered municipalities;
+- an approximately 2,000-covered workflow checkpoint, with 463 remaining;
+- 1,267 candidate-positive and 270 parseable-empty municipalities;
+- 27 failure-only municipalities retained outside successful coverage;
+- 3,347 URL-bearing, unverified candidate queue rows;
+- 34,046 future-scout-eligible municipalities, including 628 Tier 1 and 3,420 Tier 2; and
+- latest-round wall time of 5,615.561 seconds, or 288.484 attempted rows per hour
+  across the three completed Round 2 lanes.
 
-Ordinary Tier-prioritized scouting continues to the approximately 2,000-covered
-checkpoint. Failure-only rows remain in a separate retry lane. At the checkpoint,
-broad scouting pauses for verification, wage extraction, ingestion, source
-quality/extractability rating, descriptive wage-growth gap analysis, mechanism
-correlation documentation, and a future gap-percentage map/filter. Regressions
-are deferred.
+The user-approved next plan is three internally serialized lanes × 300 ordinary
+Tier-prioritized municipalities, with starts at minute 0/8/16. The earlier 3 ×
+160 checkpoint-targeted plan is preserved but superseded. The aggressive round
+is expected to overshoot 2,000; that overshoot is intentional, but it is only a
+planning projection until a later live collection passes lane audit and a
+separate serial merge updates accounting. Failure-only rows remain in a separate
+retry lane. After that merge, broad scouting pauses for verification, wage
+extraction, ingestion, source quality/extractability rating, descriptive
+wage-growth-gap analysis, mechanism-correlation documentation, and a future
+gap-percentage map/filter. Regressions are deferred.
 
 The current PI checkpoint report is available in the dashboard’s Reports Library and directly here:
 
@@ -39,7 +43,7 @@ The current PI checkpoint report is available in the dashboard’s Reports Libra
 The dashboard is organized around what has been collected, what is current, and what is forthcoming:
 
 1. **Overview** — national coverage, queue, failure, and checkpoint metrics with the project caveat.
-2. **Project phase** — progress from 794 to approximately 2,000 covered, remaining waves, and the post-checkpoint downstream sequence.
+2. **Project phase** — progress from 1,537 to approximately 2,000 covered, the user-approved aggressive round, and the post-checkpoint downstream sequence.
 3. **Coverage and geography** — the existing token-free state choropleth, tile-grid alternate, state selection, and printable state view.
 4. **Scouting priority tiers** — remaining Tier 1–Tier 5 pools, retry lane, and state-level high-priority workload.
 5. **Scout operations** — wave runtimes, throughput, candidate rows per hour, failure rates, and current preflight/compact/adaptive controls.
@@ -49,7 +53,7 @@ The dashboard is organized around what has been collected, what is current, and 
 9. **Reports library** — current PI reports and durable checkpoint metadata, plus space for future verification reports.
 10. **Methodology and definitions** — source-stage definitions that keep operational counts from being mistaken for evidence.
 11. **Descriptive analysis plan** — future wage-growth gap percentage, map/filter, and mechanism-correlation capabilities that require verified/extracted data.
-12. **Next steps** — the next ordinary 150-row wave, continued scale-up, separate failure retries, and the checkpoint pause.
+12. **Next steps** — the planned 3 × 300 collection, separate failure retries, serial accounting, and the checkpoint pause.
 
 The sticky section navigation becomes a collapsible menu on smaller screens. Hash routes remain reserved for state selection and printable state reports:
 
@@ -156,16 +160,17 @@ The dashboard builder writes:
 Review the printed totals and diffs before committing. In particular, candidate-positive plus parseable-empty municipalities must equal scout-covered municipalities, and transport/failure-only results must remain outside successful coverage.
 
 `parallel_scout_status.json` is an operations layer, not source evidence. Its
-current status is `checkpoint_3x160_planned_not_run`: the successful Round 2
-3 × 150 merge remains the latest completed work, while three fresh 160-row
-lanes are locked as the checkpoint-targeted next collection. Every lane remains
-internally serialized, writes to a unique output directory, and redirects its
-timestamped candidate handoff to a lane-local export directory. Shared
-accounting remains serial. The 480 planned attempts are expected to finish close
-to approximately 2,000 covered municipalities, but this is an operational
-projection rather than live evidence. A full 3 × 300 round remains deferred
-because it would likely overshoot the checkpoint by more than 400. All candidate
-leads remain unverified.
+current status is `aggressive_3x300_planned_not_run`: the successful Round 2
+3 × 150 merge remains the latest completed work, while three fresh 300-row lanes
+are locked as the user-approved next collection. The earlier 3 × 160 plan is
+marked `superseded_preserved_not_active`. Every active lane remains internally
+serialized, writes to a unique output directory, and redirects its timestamped
+candidate handoff to a lane-local export directory. Shared accounting remains
+serial. At the recent 446/450 parseable rate, the 900 planned attempts project
+about 892 newly covered municipalities and about 2,429 after a later successful
+merge—an intentional, user-approved overshoot of roughly 429. This is an
+operational projection, not live evidence. All candidate leads remain
+unverified.
 
 The priority JSON layers reflect the unchanged canonical methodology refreshed
 after the Parallel Round 2 merge. The refresh followed 743 successful scouts

@@ -1,17 +1,25 @@
 # Aggressive Parallel Scout Scaling Operating Procedure — 2026-07-23
 
+## Active operating choice
+
+The user has approved the `aggressive_300` profile as the next live collection
+after the successful 3 × 150 collection and serial merge. Use the locked
+`POST-PI-AGGRESSIVE-ROUND-3X300-2026-07-23` package and its dedicated live
+prompt under separate authorization. The older 3 × 160 package is preserved but
+superseded.
+
 ## 1. Prepare and lock
 
-Run the offline planner with a named profile. For the next test use
-`standard_150`, which produces three 150-row CSVs, individual audits, a combined
-no-overlap audit, manifest, dry-run commands, live commands, and merge handoff.
-Recompute all hashes and reconcile every row against current coverage, canonical
-status, and failure/retry exclusions before live authorization.
+Run the offline planner with a named profile. The active plan uses
+`aggressive_300`, which produces three 300-row CSVs, individual audits, a
+combined no-overlap audit, manifest, dry-run commands, live commands, and merge
+handoff. Recompute all hashes and reconcile every row against current coverage,
+canonical status, and failure/retry exclusions before live authorization.
 
-The generated Round 2 manifest schedules Lane 1 at minute 0, Lane 2 at minute 4,
-and Lane 3 at minute 8. Do not compress the stagger. For `aggressive_300`, use at
-least eight minutes between starts; increase to ten minutes when recent transport
-health is uncertain.
+The active manifest schedules Lane 1 at minute 0, Lane 2 at minute 8, and Lane
+3 at minute 16. Do not compress the stagger. Increase to ten minutes between
+starts if the separately authorized preflight or early lane health makes route
+capacity uncertain.
 
 ## 2. Gate and dry-run
 
@@ -27,11 +35,12 @@ probe is not parseable. Then run all lane dry-runs offline and require:
 - strict employer/unit/source/no-public-records controls;
 - complete dry timing with no backend call.
 
-## 3. Launch and monitor 3 × 150
+## 3. Launch and monitor the approved profile
 
-Start Lane 1 from the coordinator. After four minutes and a clean lifecycle check,
-start Lane 2. Four minutes later, repeat the check and start Lane 3. Each process
-must use its generated input, output directory, cost log, and
+For the active `aggressive_300` round, start Lane 1 from the coordinator. After
+eight minutes and a clean lifecycle check, start Lane 2. Eight minutes later,
+repeat the check and start Lane 3. Each process must use its generated input,
+output directory, cost log, and
 `candidate_exports/` directory. Each remains internally serialized.
 
 Monitor process liveness, artifact checkpoints, row timing, outer timeouts,
@@ -57,18 +66,17 @@ Never run shared builders from the collection task or a lane process.
 
 ## 5. Advance—or stop
 
-A successful 3 × 150 collection is not enough by itself; its later serial merge and
-dashboard/checkpoint refresh must also pass. Then:
+The 3 × 150 collection, serial merge, and dashboard/checkpoint refresh all
+passed. The user reviewed the updated checkpoint distance and chose
+`aggressive_300` rather than `aggressive_250` or the prepared 3 × 160 plan.
+Retain three lanes, the eight-minute stagger, and all collection/accounting
+boundaries.
 
-- choose `aggressive_250` when timeout/failure/backoff rates were elevated;
-- choose `aggressive_300` only for a clean, balanced result with stable route health;
-- retain three lanes and increase stagger with lane size;
-- reevaluate the official checkpoint before authorizing the larger round.
-
-At the current 1,091 coverage count, a fully parseable 3 × 300 round would exceed
-the approximate 2,000 checkpoint once merged. It is a feasibility profile, not the
-next live authorization. Stop broad scouting at or above the checkpoint and begin
-the downstream verification-to-descriptive-analysis cycle.
+At the current 1,537 coverage count, the recent 446/450 parseable rate projects
+roughly 2,429 after a later successful 3 × 300 merge. The user has accepted this
+intentional overshoot. The locked plan is still not live authorization by itself.
+After collection and a separately authorized serial merge, stop broad scouting
+and begin the downstream verification-to-descriptive-analysis cycle.
 
 ## Candidate export behavior
 
