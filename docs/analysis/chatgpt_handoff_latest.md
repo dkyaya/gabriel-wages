@@ -6,6 +6,24 @@ Last updated: `2026-07-23`
 
 ---
 
+## 2026-07-23/24 — Checkpoint-targeted 3×160 round is locked offline
+
+### Current State
+
+- **Repository gate:** work began at clean tracked `8b653b2ba14fc5e6b2a96a523ed3fe6100a780a8`; required ancestry is present and the unrelated untracked root `package-lock.json` remains untouched.
+- **Official checkpoint:** accounting remains 1,537/2,000 covered (463 remaining), 1,267 candidate-positive, 270 parseable-empty, 27 failure-only, and 3,347 unverified queue rows. No accounting builder ran.
+- **Locked plan:** [the manifest](parallel_scout_rounds/POST-PI-CHECKPOINT-ROUND-3X160-2026-07-23/parallel_round_manifest.json) contains three ordinary Tier 1 lanes of 160 rows. Lane hashes are `fb924eea0bee80d3073235815b475ac6a238287d49c70d7d028490802ee82a3c`, `812204917afeac05fb0e433a8439a56fa9063ea0d09603c602345cd1713450ed`, and `cac770459eda2a04b9e9410a8853432e75fa0d728adb06278264352fbe2adc1d`.
+- **Eligibility:** all 480 municipality and Census IDs are unique, cross-lane overlap is zero, all five hints are complete, and covered/canonical/retry/failure-only counts are zero. Tier distribution is Tier 1 480; confidence is 187 high, 94 medium, and 199 low.
+- **Projection:** at the recent 446/450 parseable rate, 480 attempts imply approximately 476 successful outcomes and a prospective 2,013 covered after a later successful serial merge. This is an operational estimate, not evidence. The 3 × 300 feasibility plan remains deferred because it would likely reach roughly 2,429.
+- **Controls:** [lane commands](parallel_scout_rounds/POST-PI-CHECKPOINT-ROUND-3X160-2026-07-23/lane_live_commands.md) retain compact prompts, exact hints, adaptive `3/5/15/10/25/2`, the 90-second outer guard, `n_parallels=1` per lane, exact cap 160, four-minute spacing, lane-specific costs, and lane-local candidate exports.
+- **Prompts:** [the live prompt](parallel_checkpoint_3x160_live_prompt_2026-07-23.md) requires stronger preflight and three dry-run gates, launches at minute 0/4/8, audits, and stops before accounting. [The merge prompt](parallel_checkpoint_3x160_serial_merge_prompt_2026-07-23.md) is a later authorization boundary and pauses broad scouting if the merge reaches approximately 2,000.
+- **Dashboard:** status is `checkpoint_3x160_planned_not_run`; current official totals are unchanged and the expected 2,013 projection is labeled planning-only. The wage-growth-gap layer remains planned, not active.
+- **Boundary:** no live/API/model/hosted-search call, diagnostic, preflight, URL verification, ingestion, codification, accounting rebuild, wage-gap calculation/claim, causal claim, regression, remote action, or push occurred.
+
+### Next Move
+
+Use [the checkpoint live prompt](parallel_checkpoint_3x160_live_prompt_2026-07-23.md) only under separate explicit live authorization. Recompute all three hashes and current eligibility, run the stronger gate and exact 160-row dry runs, then launch isolated lanes at minute 0/4/8. Audit and stop before merge. If a later serial merge reaches approximately 2,000, end broad discovery and move to verification → extraction → ingestion → rating → descriptive wage-growth-gap analysis and mechanism documentation; regressions remain deferred.
+
 ## 2026-07-23/24 — Parallel Round 2 3×150 is serially merged
 
 ### Current State

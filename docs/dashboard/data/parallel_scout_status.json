@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-24T00:20:47Z",
+  "generated_at": "2026-07-24T01:00:10Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -30,18 +30,24 @@
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
   "stage": "parallel_scout_operations_status",
-  "parallel_mode_status": "round2_3x150_completed_accounting_merged",
-  "current_parallel_mode": "three_lane_successfully_merged",
+  "parallel_mode_status": "checkpoint_3x160_planned_not_run",
+  "current_parallel_mode": "three_lane_checkpoint_round_planned",
   "supported_lanes_initial": 2,
   "supported_lanes_future": 3,
-  "rows_per_lane": 150,
+  "rows_per_lane": 160,
   "latest_completed_round_id": "POST-PI-PARALLEL-ROUND2-3X150-2026-07-23",
-  "current_parallel_round_id": "CHECKPOINT-TARGETED-CUSTOM-ROUND-PENDING",
-  "next_parallel_test": "checkpoint_targeted_custom_3_lane_round",
+  "current_parallel_round_id": "POST-PI-CHECKPOINT-ROUND-3X160-2026-07-23",
+  "next_parallel_test": "checkpoint_targeted_3x160",
   "aggressive_mode_planned": "3x300_feasible_but_only_with_explicit_checkpoint_overshoot_acceptance",
   "current_scout_covered": 1537,
   "target_checkpoint": 2000,
   "remaining_to_checkpoint": 463,
+  "checkpoint_round_expected_attempted": 480,
+  "checkpoint_round_expected_parseable": 476,
+  "checkpoint_round_expected_post_coverage": 2013,
+  "checkpoint_round_expected_margin": 13,
+  "checkpoint_round_status": "planned_not_run",
+  "lane_start_stagger_minutes": 4,
   "3x150_expected_attempted": 450,
   "3x300_expected_attempted": 900,
   "accounting_policy": "serial_merge_after_lane_audit",
@@ -59,5 +65,6 @@
     "accounting_merge_status": "completed_serially"
   },
   "lane_execution_policy": "Each lane is internally serialized and writes only to its own output directory; lane processes do not rebuild shared accounting.",
-  "caveat": "The three-lane 3x150 round completed and was merged serially after audit. All candidate leads remain unverified. A 3x300 round would likely overshoot the approximately 2,000-municipality checkpoint, so the next collection should be checkpoint-targeted unless the user explicitly accepts overshoot."
+  "post_checkpoint_policy": "Pause broad scouting after the checkpoint round is successfully merged at approximately 2,000; proceed to verification, extraction, ingestion, rating, descriptive wage-growth-gap analysis, and mechanism-correlation documentation.",
+  "caveat": "The three-lane 3x150 round completed and was merged serially after audit. The checkpoint-targeted 3x160 round is planned but has not run. All candidate leads remain unverified. A 3x300 round is deferred because it would likely overshoot the approximately 2,000-municipality checkpoint by more than 400 municipalities."
 }

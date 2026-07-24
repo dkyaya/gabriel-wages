@@ -6,6 +6,31 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-23/24 (Checkpoint-targeted 3×160 round prepared offline)
+
+**Did**
+- Started from clean tracked `8b653b2ba14fc5e6b2a96a523ed3fe6100a780a8` on `main`, confirmed required ancestry, and left the unrelated untracked root `package-lock.json` untouched.
+- Updated the offline planner's source-provenance metadata to the refreshed Round 2 priority commit and added combined tier/confidence/score and checkpoint-projection reporting without changing selection methodology.
+- Prepared `POST-PI-CHECKPOINT-ROUND-3X160-2026-07-23`: three 160-row ordinary Tier 1 lanes, 480 unique municipality/Census IDs, zero overlap, zero covered/canonical/retry/failure-only rows, and 480/480 exact five-hint sets. Lane hashes are `fb924eea…e82a3c`, `81220491…3450ed`, and `cac77045…2adc1d`.
+- Generated exact dry-run/live command previews with compact prompts, hints, adaptive `3/5/15/10/25/2`, 90-second outer timeout, one in-lane parallelism, four-minute start spacing, unique cost logs, and lane-local candidate exports. Generated separate future live and serial-merge prompts.
+- Updated dashboard/project status to `checkpoint_3x160_planned_not_run` while preserving official accounting at 1,537/2,000 covered, 1,267 positive, 270 empty, 27 failure-only, and 3,347 queue rows.
+
+**Decisions and why**
+- Prefer 480 attempts over 3 × 300. Applying the recent 446/450 parseable rate projects about 476 new covered municipalities and roughly 2,013 after a later successful merge; 3 × 300 would likely reach roughly 2,429.
+- Keep four-minute stagger spacing because 160 rows is only modestly above the proven 150-row profile. The live task must still recheck route health before each sibling launch.
+- Stop before dry runs, preflight, live collection, and accounting. Each remains a later explicit authorization boundary.
+
+**Surprises/breakage**
+- The refreshed top-500 priority file supplied all 480 rows as Tier 1 without fallback to Tier 2 or ad hoc substitution.
+- The deterministic rank slices are state-concentrated (102 OH and 83 CA combined), but identities remain disjoint and all current eligibility gates pass.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Nine compiles, 7 parallel tests, 26 mocked/no-network direct-SDK tests, 12 prompt tests, 60 ingestion tests, schema validation, coverage audit, exact planner reproduction, dashboard JSON/frontend build, protected/accounting/priority checks, and diff checks passed. No live/API/model/hosted-search call, diagnostic, preflight, URL verification, ingestion, `gabriel.codify`, accounting change, wage-gap calculation/claim, causal claim, regression, remote action, or push occurred.
+
+**Next steps**
+1. Under separate live authorization, use `parallel_checkpoint_3x160_live_prompt_2026-07-23.md`: re-audit, stronger preflight, dry-run each lane, launch at minute 0/4/8, audit, and stop before merge.
+2. Under a later serial authorization, use the checkpoint merge prompt and rebuild accounting exactly once only if gates pass.
+3. When official coverage reaches approximately 2,000, pause broad scouting and begin verification, extraction, ingestion, rating, descriptive analysis, mechanism documentation, and the planned wage-gap dashboard filter.
+
 ## 2026-07-23/24 (Parallel Round 2 3×150 serial accounting merge completed)
 
 **Did**

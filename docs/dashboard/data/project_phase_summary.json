@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-24T00:20:47Z",
+  "generated_at": "2026-07-24T01:00:10Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -40,6 +40,18 @@
   "current_candidate_queue_rows": 3347,
   "current_candidate_positive_municipalities": 1267,
   "current_failure_only_municipalities": 27,
+  "next_planned_round": {
+    "round_id": "POST-PI-CHECKPOINT-ROUND-3X160-2026-07-23",
+    "status": "planned_not_run",
+    "lanes": 3,
+    "rows_per_lane": 160,
+    "expected_attempted": 480,
+    "expected_parseable_at_recent_rate": 476,
+    "expected_post_round_scout_covered": 2013,
+    "expected_checkpoint_margin": 13,
+    "projection_status": "operational_estimate_not_live_evidence"
+  },
+  "checkpoint_pause_rule": "After a successful serial merge reaches approximately 2,000 scout-covered municipalities, pause broad scouting and begin the documented downstream cycle.",
   "next_phase": "Verification, extraction, ingestion, rating, descriptive wage-gap analysis",
   "next_phase_sequence": [
     "verify candidate sources",
@@ -52,7 +64,7 @@
     "decide the most efficient repeat strategy"
   ],
   "regressions_status": "Deferred",
-  "last_updated_commit": "4f9c865e9f6e1416643c809bcec67623039ee931",
+  "last_updated_commit": "8b653b2ba14fc5e6b2a96a523ed3fe6100a780a8",
   "last_updated_context": "source_discovery_accounting_checkpoint",
   "future_live_controls": [
     "stronger preflight gate",

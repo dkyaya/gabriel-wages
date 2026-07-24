@@ -1,0 +1,232 @@
+{
+  "accounting_policy": "serial_merge_after_lane_audit",
+  "allow_oversized_lanes": false,
+  "caveat": "No parallel live scout or dry run has been executed.",
+  "checkpoint_projection": {
+    "all_rows_parseable_post_round_scout_covered": 2017,
+    "checkpoint_target_scout_covered": 2000,
+    "current_scout_covered": 1537,
+    "expected_checkpoint_margin": 13,
+    "expected_parseable_rows_at_recent_rate": 476,
+    "expected_post_round_scout_covered": 2013,
+    "projection_is_operational_not_evidence": true,
+    "recent_parseable_rate_denominator": 450,
+    "recent_parseable_rate_numerator": 446,
+    "remaining_to_checkpoint": 463
+  },
+  "cross_lane_checks": {
+    "duplicate_municipality_ids": [],
+    "duplicate_nonblank_census_ids": [],
+    "missing_census_ids": 0,
+    "search_hints_complete": 480,
+    "unique_municipality_ids": 480,
+    "unique_nonblank_census_ids": 480
+  },
+  "explicit_profile_overrides": {
+    "num_lanes": true,
+    "rows_per_lane": true,
+    "stagger": true
+  },
+  "external_calls_performed": 0,
+  "lane_process_prohibitions": [
+    "no queue or coverage rebuild",
+    "no yield or dashboard refresh",
+    "no project documentation update",
+    "no commit"
+  ],
+  "lanes": [
+    {
+      "candidate_export_dir": "tmp/parallel_scout_rounds/POST-PI-CHECKPOINT-ROUND-3X160-2026-07-23/lane_1_live_direct_sdk_attempt1/candidate_exports",
+      "candidate_export_policy": "lane_local_required_when_parseable",
+      "copied_existing_input_byte_for_byte": false,
+      "cost_log_path": "tmp/parallel_scout_rounds/POST-PI-CHECKPOINT-ROUND-3X160-2026-07-23/lane_1_live_direct_sdk_attempt1/batch_cost_log.csv",
+      "input_csv": "docs/analysis/parallel_scout_rounds/POST-PI-CHECKPOINT-ROUND-3X160-2026-07-23/lane_1_input.csv",
+      "input_sha256": "fb924eea0bee80d3073235815b475ac6a238287d49c70d7d028490802ee82a3c",
+      "lane_id": "lane_1",
+      "live_output_dir": "tmp/parallel_scout_rounds/POST-PI-CHECKPOINT-ROUND-3X160-2026-07-23/lane_1_live_direct_sdk_attempt1",
+      "live_status": "planned_not_run",
+      "planned_start_offset_seconds": 0,
+      "priority_tier_distribution": {
+        "Tier 1": 160
+      },
+      "row_count": 160,
+      "state_distribution": {
+        "AK": 1,
+        "CA": 3,
+        "DE": 4,
+        "KS": 2,
+        "LA": 5,
+        "MA": 1,
+        "MD": 12,
+        "ME": 9,
+        "MN": 4,
+        "MO": 7,
+        "MS": 6,
+        "MT": 5,
+        "NH": 7,
+        "NM": 5,
+        "NV": 1,
+        "NY": 4,
+        "OH": 57,
+        "PA": 2,
+        "RI": 2,
+        "SD": 11,
+        "VA": 1,
+        "VT": 2,
+        "WI": 1,
+        "WV": 5,
+        "WY": 3
+      }
+    },
+    {
+      "candidate_export_dir": "tmp/parallel_scout_rounds/POST-PI-CHECKPOINT-ROUND-3X160-2026-07-23/lane_2_live_direct_sdk_attempt1/candidate_exports",
+      "candidate_export_policy": "lane_local_required_when_parseable",
+      "copied_existing_input_byte_for_byte": false,
+      "cost_log_path": "tmp/parallel_scout_rounds/POST-PI-CHECKPOINT-ROUND-3X160-2026-07-23/lane_2_live_direct_sdk_attempt1/batch_cost_log.csv",
+      "input_csv": "docs/analysis/parallel_scout_rounds/POST-PI-CHECKPOINT-ROUND-3X160-2026-07-23/lane_2_input.csv",
+      "input_sha256": "812204917afeac05fb0e433a8439a56fa9063ea0d09603c602345cd1713450ed",
+      "lane_id": "lane_2",
+      "live_output_dir": "tmp/parallel_scout_rounds/POST-PI-CHECKPOINT-ROUND-3X160-2026-07-23/lane_2_live_direct_sdk_attempt1",
+      "live_status": "planned_not_run",
+      "planned_start_offset_seconds": 240,
+      "priority_tier_distribution": {
+        "Tier 1": 160
+      },
+      "row_count": 160,
+      "state_distribution": {
+        "AK": 3,
+        "AL": 1,
+        "CA": 40,
+        "ID": 2,
+        "KS": 2,
+        "LA": 1,
+        "MA": 1,
+        "MD": 1,
+        "ME": 1,
+        "MN": 16,
+        "MO": 3,
+        "MS": 9,
+        "MT": 3,
+        "NE": 1,
+        "NH": 1,
+        "NM": 4,
+        "NV": 3,
+        "NY": 8,
+        "OH": 30,
+        "PA": 7,
+        "SD": 2,
+        "TN": 3,
+        "UT": 1,
+        "VA": 2,
+        "VT": 1,
+        "WI": 14
+      }
+    },
+    {
+      "candidate_export_dir": "tmp/parallel_scout_rounds/POST-PI-CHECKPOINT-ROUND-3X160-2026-07-23/lane_3_live_direct_sdk_attempt1/candidate_exports",
+      "candidate_export_policy": "lane_local_required_when_parseable",
+      "copied_existing_input_byte_for_byte": false,
+      "cost_log_path": "tmp/parallel_scout_rounds/POST-PI-CHECKPOINT-ROUND-3X160-2026-07-23/lane_3_live_direct_sdk_attempt1/batch_cost_log.csv",
+      "input_csv": "docs/analysis/parallel_scout_rounds/POST-PI-CHECKPOINT-ROUND-3X160-2026-07-23/lane_3_input.csv",
+      "input_sha256": "cac770459eda2a04b9e9410a8853432e75fa0d728adb06278264352fbe2adc1d",
+      "lane_id": "lane_3",
+      "live_output_dir": "tmp/parallel_scout_rounds/POST-PI-CHECKPOINT-ROUND-3X160-2026-07-23/lane_3_live_direct_sdk_attempt1",
+      "live_status": "planned_not_run",
+      "planned_start_offset_seconds": 480,
+      "priority_tier_distribution": {
+        "Tier 1": 160
+      },
+      "row_count": 160,
+      "state_distribution": {
+        "AK": 2,
+        "AL": 3,
+        "CA": 40,
+        "IA": 1,
+        "ID": 1,
+        "KS": 3,
+        "LA": 2,
+        "MD": 3,
+        "ME": 3,
+        "MN": 8,
+        "MO": 7,
+        "MS": 6,
+        "MT": 2,
+        "ND": 3,
+        "NE": 1,
+        "NM": 3,
+        "NY": 8,
+        "OH": 15,
+        "PA": 6,
+        "SD": 1,
+        "TN": 4,
+        "UT": 10,
+        "VA": 5,
+        "WI": 15,
+        "WV": 3,
+        "WY": 5
+      }
+    }
+  ],
+  "maximum_rows_per_lane_without_override": 300,
+  "num_lanes": 3,
+  "parallel_mode_status": "planned_not_run",
+  "planner_baseline_commit": "8b653b2ba14fc5e6b2a96a523ed3fe6100a780a8",
+  "planning_mode": "plan_only_offline",
+  "profile": "custom_explicit",
+  "profile_defaults": {
+    "num_lanes": 2,
+    "rows_per_lane": 150,
+    "stagger_seconds": 180
+  },
+  "required_live_controls": {
+    "adaptive_sleep": true,
+    "adaptive_sleep_min_base_max_backoff": [
+      3,
+      5,
+      15,
+      10
+    ],
+    "adaptive_sleep_stability_failure_windows": [
+      25,
+      2
+    ],
+    "candidate_export_policy": "lane_local_required_when_parseable",
+    "direct_sdk_max_retries": 0,
+    "lane_start_stagger_minutes": 4.0,
+    "lane_start_stagger_seconds": 240,
+    "live_backend": "direct-sdk",
+    "n_parallels_per_lane": 1,
+    "prompt_mode": "compact",
+    "search_hints": true,
+    "timeout_seconds_inner_and_outer": 90
+  },
+  "round_id": "POST-PI-CHECKPOINT-ROUND-3X160-2026-07-23",
+  "rows_per_lane": 160,
+  "schema_version": "2.0.0",
+  "source_files": {
+    "coverage": {
+      "path": "docs/analysis/national_scout_coverage_municipality_2026-07-20.csv",
+      "sha256": "398770e8f796919a5f19b3db82160b856a0d294eacd43828260c155a75857657"
+    },
+    "failure_retry": {
+      "path": "docs/analysis/national_failure_retry_priority_2026-07-22.csv",
+      "sha256": "19c1e7b296472a6f4d494c0dc098da3d9ac589d92cb5302e87d93fb6cb314d94"
+    },
+    "priority_targets": {
+      "path": "docs/analysis/national_priority_tier_top_targets_2026-07-22.csv",
+      "sha256": "b8b3c5f427373dff9438ac32c6ea93ff6b25b4ebbcf7e201446a5662bb5bd71f"
+    },
+    "priority_tiers": {
+      "path": "docs/analysis/national_municipality_priority_tiers_2026-07-22.csv",
+      "sha256": "504a1301f6f6670c35e835d47057cc8a035f5499bac444cf8db147401e3855fc"
+    },
+    "search_hints": {
+      "path": "docs/analysis/municipality_search_hints_2026-07-22.csv",
+      "sha256": "888583fa7d4d55111f47424eec9d9af8a2c3e3c1b49533d09fdea6fb8a613be3"
+    }
+  },
+  "supported_lanes_current": 3,
+  "supported_lanes_future": 3,
+  "supported_lanes_initial": 2,
+  "total_planned_rows": 480
+}

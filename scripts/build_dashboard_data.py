@@ -56,9 +56,16 @@ REPORTS_INDEX_SOURCE_PATH = (
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
-CURRENT_SOURCE_ACCOUNTING_COMMIT = "4f9c865e9f6e1416643c809bcec67623039ee931"
+CURRENT_SOURCE_ACCOUNTING_COMMIT = "8b653b2ba14fc5e6b2a96a523ed3fe6100a780a8"
 PARALLEL_SCOUT_ROUND_ID = "POST-PI-PARALLEL-ROUND2-3X150-2026-07-23"
-NEXT_PARALLEL_SCOUT_ROUND_ID = "CHECKPOINT-TARGETED-CUSTOM-ROUND-PENDING"
+NEXT_PARALLEL_SCOUT_ROUND_ID = "POST-PI-CHECKPOINT-ROUND-3X160-2026-07-23"
+CHECKPOINT_ROUND_LANES = 3
+CHECKPOINT_ROUND_ROWS_PER_LANE = 160
+CHECKPOINT_ROUND_ATTEMPTED = (
+    CHECKPOINT_ROUND_LANES * CHECKPOINT_ROUND_ROWS_PER_LANE
+)
+CHECKPOINT_ROUND_EXPECTED_PARSEABLE = 476
+CHECKPOINT_ROUND_EXPECTED_POST_COVERAGE = 2_013
 
 REQUIRED_PATHS = [
     STATE_COVERAGE_PATH,
@@ -1010,8 +1017,19 @@ def build_scout_operations_summary(
                 remaining / COORDINATED_WAVE_SIZE
             ),
             "ordinary_discovery_lane": (
-                "Continue coordinated Tier-prioritized 150-municipality waves; "
-                "keep failure-only retries separate."
+                "Run the locked checkpoint-targeted 3x160 ordinary discovery round; "
+                "keep failure-only retries separate and pause broad scouting after "
+                "a successful serial merge reaches approximately 2,000."
+            ),
+            "next_planned_round_id": NEXT_PARALLEL_SCOUT_ROUND_ID,
+            "next_planned_round_lanes": CHECKPOINT_ROUND_LANES,
+            "next_planned_round_rows_per_lane": CHECKPOINT_ROUND_ROWS_PER_LANE,
+            "next_planned_round_expected_attempted": CHECKPOINT_ROUND_ATTEMPTED,
+            "next_planned_round_expected_parseable": (
+                CHECKPOINT_ROUND_EXPECTED_PARSEABLE
+            ),
+            "next_planned_round_expected_post_coverage": (
+                CHECKPOINT_ROUND_EXPECTED_POST_COVERAGE
             ),
             "next_phase": (
                 "Verification, extraction, ingestion, rating, and descriptive "
@@ -1172,6 +1190,29 @@ def build_project_phase_summary(
         "current_candidate_queue_rows": len(queue_rows),
         "current_candidate_positive_municipalities": positive,
         "current_failure_only_municipalities": failure_only,
+        "next_planned_round": {
+            "round_id": NEXT_PARALLEL_SCOUT_ROUND_ID,
+            "status": "planned_not_run",
+            "lanes": CHECKPOINT_ROUND_LANES,
+            "rows_per_lane": CHECKPOINT_ROUND_ROWS_PER_LANE,
+            "expected_attempted": CHECKPOINT_ROUND_ATTEMPTED,
+            "expected_parseable_at_recent_rate": (
+                CHECKPOINT_ROUND_EXPECTED_PARSEABLE
+            ),
+            "expected_post_round_scout_covered": (
+                CHECKPOINT_ROUND_EXPECTED_POST_COVERAGE
+            ),
+            "expected_checkpoint_margin": (
+                CHECKPOINT_ROUND_EXPECTED_POST_COVERAGE
+                - SCOUT_CHECKPOINT_TARGET
+            ),
+            "projection_status": "operational_estimate_not_live_evidence",
+        },
+        "checkpoint_pause_rule": (
+            "After a successful serial merge reaches approximately 2,000 "
+            "scout-covered municipalities, pause broad scouting and begin the "
+            "documented downstream cycle."
+        ),
         "next_phase": (
             "Verification, extraction, ingestion, rating, descriptive wage-gap analysis"
         ),
@@ -1216,20 +1257,30 @@ def build_parallel_scout_status(
     return {
         **metadata,
         "stage": "parallel_scout_operations_status",
-        "parallel_mode_status": "round2_3x150_completed_accounting_merged",
-        "current_parallel_mode": "three_lane_successfully_merged",
+        "parallel_mode_status": "checkpoint_3x160_planned_not_run",
+        "current_parallel_mode": "three_lane_checkpoint_round_planned",
         "supported_lanes_initial": 2,
         "supported_lanes_future": 3,
-        "rows_per_lane": 150,
+        "rows_per_lane": CHECKPOINT_ROUND_ROWS_PER_LANE,
         "latest_completed_round_id": PARALLEL_SCOUT_ROUND_ID,
         "current_parallel_round_id": NEXT_PARALLEL_SCOUT_ROUND_ID,
-        "next_parallel_test": "checkpoint_targeted_custom_3_lane_round",
+        "next_parallel_test": "checkpoint_targeted_3x160",
         "aggressive_mode_planned": (
             "3x300_feasible_but_only_with_explicit_checkpoint_overshoot_acceptance"
         ),
         "current_scout_covered": covered,
         "target_checkpoint": SCOUT_CHECKPOINT_TARGET,
         "remaining_to_checkpoint": remaining,
+        "checkpoint_round_expected_attempted": CHECKPOINT_ROUND_ATTEMPTED,
+        "checkpoint_round_expected_parseable": CHECKPOINT_ROUND_EXPECTED_PARSEABLE,
+        "checkpoint_round_expected_post_coverage": (
+            CHECKPOINT_ROUND_EXPECTED_POST_COVERAGE
+        ),
+        "checkpoint_round_expected_margin": (
+            CHECKPOINT_ROUND_EXPECTED_POST_COVERAGE - SCOUT_CHECKPOINT_TARGET
+        ),
+        "checkpoint_round_status": "planned_not_run",
+        "lane_start_stagger_minutes": 4,
         "3x150_expected_attempted": 450,
         "3x300_expected_attempted": 900,
         "accounting_policy": "serial_merge_after_lane_audit",
@@ -1250,11 +1301,18 @@ def build_parallel_scout_status(
             "Each lane is internally serialized and writes only to its own output "
             "directory; lane processes do not rebuild shared accounting."
         ),
+        "post_checkpoint_policy": (
+            "Pause broad scouting after the checkpoint round is successfully "
+            "merged at approximately 2,000; proceed to verification, extraction, "
+            "ingestion, rating, descriptive wage-growth-gap analysis, and "
+            "mechanism-correlation documentation."
+        ),
         "caveat": (
             "The three-lane 3x150 round completed and was merged serially after audit. "
-            "All candidate leads remain unverified. A 3x300 round would likely overshoot "
-            "the approximately 2,000-municipality checkpoint, so the next collection "
-            "should be checkpoint-targeted unless the user explicitly accepts overshoot."
+            "The checkpoint-targeted 3x160 round is planned but has not run. All "
+            "candidate leads remain unverified. A 3x300 round is deferred because it "
+            "would likely overshoot the approximately 2,000-municipality checkpoint "
+            "by more than 400 municipalities."
         ),
     }
 

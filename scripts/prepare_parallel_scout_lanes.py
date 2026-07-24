@@ -36,8 +36,11 @@ DEFAULT_HINTS = ANALYSIS / "municipality_search_hints_2026-07-22.csv"
 EXPECTED_POST_PI_WAVE1_HASH = (
     "56e592291f1dbac83836acddcf0065df40141b51f9e93bfb548a040f52b8e700"
 )
-PRIORITY_SOURCE_COMMIT = "3f2f815f4ca4b4e90f6ca1bff769bd300843d703"
-PLANNER_BASELINE_COMMIT = "c4cf7d0de79a2a734adeb9eb03ee37ce02125e8a"
+PRIORITY_SOURCE_COMMIT = "8b653b2ba14fc5e6b2a96a523ed3fe6100a780a8"
+PLANNER_BASELINE_COMMIT = "8b653b2ba14fc5e6b2a96a523ed3fe6100a780a8"
+SCOUT_CHECKPOINT_TARGET = 2_000
+RECENT_PARSEABLE_NUMERATOR = 446
+RECENT_PARSEABLE_DENOMINATOR = 450
 PROFILES = {
     "standard_150": {
         "num_lanes": 3,
@@ -593,6 +596,14 @@ def main() -> int:
             or args.lane_start_stagger_seconds is not None
         ),
     }
+    plan_profile_label = (
+        args.profile
+        or (
+            "custom_explicit"
+            if any(explicit_overrides.values())
+            else "legacy_default_2x150"
+        )
+    )
     args.num_lanes = (
         args.num_lanes
         if args.num_lanes is not None
@@ -885,13 +896,29 @@ def main() -> int:
             }
         )
     manifest_path = output_dir / "parallel_round_manifest.json"
+    combined_rows = [row for lane_rows in lanes for row in lane_rows]
+    combined_summary = lane_summary(combined_rows)
+    current_scout_covered = sum(
+        row["scout_coverage_status"]
+        in {"scouted_with_candidates", "scouted_no_candidates"}
+        for row in coverage_rows
+    )
+    remaining_to_checkpoint = max(
+        SCOUT_CHECKPOINT_TARGET - current_scout_covered, 0
+    )
+    expected_parseable = round(
+        len(combined_rows)
+        * RECENT_PARSEABLE_NUMERATOR
+        / RECENT_PARSEABLE_DENOMINATOR
+    )
+    expected_post_round_coverage = current_scout_covered + expected_parseable
     manifest = {
         "schema_version": "2.0.0",
         "round_id": args.round_id,
         "parallel_mode_status": "planned_not_run",
         "planning_mode": "plan_only_offline",
         "external_calls_performed": 0,
-        "profile": args.profile or "legacy_default_2x150",
+        "profile": plan_profile_label,
         "profile_defaults": profile_defaults,
         "explicit_profile_overrides": explicit_overrides,
         "allow_oversized_lanes": args.allow_oversized_lanes,
@@ -957,6 +984,22 @@ def main() -> int:
             "candidate_export_policy": "lane_local_required_when_parseable",
         },
         "accounting_policy": "serial_merge_after_lane_audit",
+        "checkpoint_projection": {
+            "checkpoint_target_scout_covered": SCOUT_CHECKPOINT_TARGET,
+            "current_scout_covered": current_scout_covered,
+            "remaining_to_checkpoint": remaining_to_checkpoint,
+            "recent_parseable_rate_numerator": RECENT_PARSEABLE_NUMERATOR,
+            "recent_parseable_rate_denominator": RECENT_PARSEABLE_DENOMINATOR,
+            "expected_parseable_rows_at_recent_rate": expected_parseable,
+            "expected_post_round_scout_covered": expected_post_round_coverage,
+            "expected_checkpoint_margin": (
+                expected_post_round_coverage - SCOUT_CHECKPOINT_TARGET
+            ),
+            "all_rows_parseable_post_round_scout_covered": (
+                current_scout_covered + len(combined_rows)
+            ),
+            "projection_is_operational_not_evidence": True,
+        },
         "lane_process_prohibitions": [
             "no queue or coverage rebuild",
             "no yield or dashboard refresh",
@@ -967,16 +1010,14 @@ def main() -> int:
     }
     write_json(manifest_path, manifest)
 
-    combined_states = distribution(
-        [row for lane_rows in lanes for row in lane_rows], "state"
-    )
+    combined_states = combined_summary["states"]
     audit = f"""# {args.round_id} — Parallel Round Input Audit
 
 Disposition: **PASS — {args.num_lanes} offline lane inputs locked; no live or dry run executed.**
 
 - Lanes: {args.num_lanes}
 - Rows per lane: {args.rows_per_lane}
-- Profile: `{args.profile or 'legacy_default_2x150'}`
+- Profile: `{plan_profile_label}`
 - Lane-start stagger: {stagger_seconds} seconds ({stagger_seconds / 60:g} minutes)
 - Total planned rows: {len(all_municipality_ids)}
 - Unique municipality IDs: {len(set(all_municipality_ids))}
@@ -990,6 +1031,23 @@ Disposition: **PASS — {args.num_lanes} offline lane inputs locked; no live or 
 - Already-covered rows: 0
 - Already-canonical rows: 0
 - Combined states: {rendered_distribution(combined_states)}
+- Priority tiers: {rendered_distribution(combined_summary['priority_tiers'])}
+- Confidence: {rendered_distribution(combined_summary['confidence'])}
+- Priority score min/median/max: {combined_summary['score_min']:.3f} / {combined_summary['score_median']:.3f} / {combined_summary['score_max']:.3f}
+
+## Checkpoint projection
+
+- Current successful scout coverage: {current_scout_covered:,}/{SCOUT_CHECKPOINT_TARGET:,}
+- Remaining before this planned round: {remaining_to_checkpoint:,}
+- Maximum post-round coverage if all {len(combined_rows)} rows parse: {current_scout_covered + len(combined_rows):,}
+- Recent reference parseable rate: {RECENT_PARSEABLE_NUMERATOR}/{RECENT_PARSEABLE_DENOMINATOR} ({100 * RECENT_PARSEABLE_NUMERATOR / RECENT_PARSEABLE_DENOMINATOR:.3f}%)
+- Expected parseable rows at that rate: approximately {expected_parseable}
+- Expected post-round successful coverage after a later serial merge: approximately {expected_post_round_coverage:,}/{SCOUT_CHECKPOINT_TARGET:,}
+- Expected checkpoint margin: {expected_post_round_coverage - SCOUT_CHECKPOINT_TARGET:+,}
+
+This projection is an operational planning estimate, not live evidence or a
+guarantee. Official accounting remains unchanged until completed lane outputs
+pass audit and a separately authorized serial merge runs.
 
 ## Locked lane files
 

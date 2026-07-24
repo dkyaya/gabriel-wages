@@ -225,7 +225,9 @@ export function ScoutOperationsPanel({ operations, runtime, parallelStatus }) {
           <p className="panel-note">
             <strong>Parallel scout lane status:</strong>{" "}
             Round 2 completed and merged {parallelStatus.supported_lanes_future} lanes × 150 municipalities.
-            The next collection should use a checkpoint-targeted custom three-lane size.
+            The next planned collection is a checkpoint-targeted {parallelStatus.supported_lanes_future} ×
+            {" "}{parallelStatus.rows_per_lane} round ({formatNumber(parallelStatus.checkpoint_round_expected_attempted)} attempts).
+            It is planned, not executed, and is expected to finish close to the approximately 2,000-covered checkpoint.
             Aggressive 3 × 300 remains feasible only with explicit acceptance of likely
             checkpoint overshoot. Accounting remains serial after the combined lane audit,
             and candidate exports remain lane-local.{" "}

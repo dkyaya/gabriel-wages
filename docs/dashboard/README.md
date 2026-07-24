@@ -156,15 +156,16 @@ The dashboard builder writes:
 Review the printed totals and diffs before committing. In particular, candidate-positive plus parseable-empty municipalities must equal scout-covered municipalities, and transport/failure-only results must remain outside successful coverage.
 
 `parallel_scout_status.json` is an operations layer, not source evidence. Its
-current status is `round2_3x150_completed_accounting_merged`: all three isolated
-150-row lanes completed, passed the combined audit, and entered national
-accounting through one later serial merge. Every lane remains internally
-serialized, writes to a unique output directory, and redirects its timestamped
-candidate handoff to a lane-local export directory. Shared accounting remains
-serial. The next collection should use a checkpoint-targeted custom three-lane
-size; a full 3 × 300 round would likely overshoot the approximately 2,000-covered
-checkpoint and therefore requires an explicit decision. All candidate leads
-remain unverified.
+current status is `checkpoint_3x160_planned_not_run`: the successful Round 2
+3 × 150 merge remains the latest completed work, while three fresh 160-row
+lanes are locked as the checkpoint-targeted next collection. Every lane remains
+internally serialized, writes to a unique output directory, and redirects its
+timestamped candidate handoff to a lane-local export directory. Shared
+accounting remains serial. The 480 planned attempts are expected to finish close
+to approximately 2,000 covered municipalities, but this is an operational
+projection rather than live evidence. A full 3 × 300 round remains deferred
+because it would likely overshoot the checkpoint by more than 400. All candidate
+leads remain unverified.
 
 The priority JSON layers reflect the unchanged canonical methodology refreshed
 after the Parallel Round 2 merge. The refresh followed 743 successful scouts
