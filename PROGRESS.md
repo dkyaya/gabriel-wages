@@ -6,6 +6,32 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-25 (Targeted QA passes; provisional 1,000-document scale-up authorized)
+
+**Did**
+- Started from clean tracked `a569606fab8df160705505d9ac7e8b8d5723b2f7`, preserving the unrelated untracked root `package-lock.json` and local adjudication renders. Hash-locked the original 500-document selection, packet, decision, and five lane ledgers.
+- Added an offline deterministic resolver and seven focused tests. It processed all 187 frozen review rows without GABRIEL/API, new extraction, document selection, URL access, download, or OCR.
+- Canonicalized three exact structured-content duplicate observations across two groups while retaining every source row. Classified the 83 conflict groups as 27 non-base misroutes, 26 distinct schedule cells, 11 distinct classifications/ranks, five distinct effective periods, and 14 under-specified groups retained for review.
+- Resolved all 102 individually queued base/non-base records and rerouted 151 quantitative records in total, including additional records inside conflict groups. Wrote five separate corrected provisional shadow ledgers plus a row-complete resolution ledger.
+- Recomputed the gate: 920 active quantitative, 1,181 qualitative-mechanism, 177 mixed, 1,477 non-base-wage, and 90 reference/exclusion records; zero invalid page pointers; zero duplicate observation IDs; zero unresolved base/non-base contamination; unresolved conflict rate 14/920 (1.5217%).
+- Updated generated dashboard data, the existing calibration card, dashboard docs, analysis readiness, result/decision/validation docs, and `next_task.md`.
+
+**Decisions and why**
+- The recomputed decision is `recommend_1000_document_extraction`. The stated rule passes: integrity remains green, unresolved conflict rate is at most 2%, base/non-base ambiguity is resolved, and the frozen 180 police / 120 fire / 200 non-safety matched design remains intact.
+- The 14 under-specified conflict groups remain active and explicitly unresolved; the gate tolerates them only because their rate is 1.5217%. No missing distinctions were invented.
+- Corrected outputs remain provisional shadow ledgers and are not final analysis inputs. Five original mixed rows are inactive after rerouting removed their last quantitative member; their qualitative sub-records remain separately available.
+
+**Surprises/breakage**
+- The 102 individually queued contamination records understated the correction surface: structured conflict-group signals identified 49 additional non-base quantitative records, for 151 unique reroutes total.
+- Municipality display strings were not the matching authority. The frozen selection's 200 stable matched non-safety case IDs preserve the comparison design across related government-name variants.
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Five compiles, 33 Gate 1–3 regression tests, 10 extraction tests, eight targeted-QA tests, dashboard data/frontend builds, repository validation, 60 ingestion tests, coverage audit, immutable input hashes, corrected-page/ID checks, and diff hygiene passed.
+
+**Next steps**
+1. Separately authorize and freeze a representative 1,000-document provisional extraction selection using the corrected routing rules.
+2. Run bounded, resumable lanes with strict preflight and stop before final merge.
+3. Keep ingestion, codification, analysis-ready merge, wage-gap work, regression, URL access, download, and OCR closed.
+
 ## 2026-07-25 (Provisional 500-document compensation extraction complete; scale QA hold)
 
 **Did**

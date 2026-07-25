@@ -365,6 +365,39 @@ COMPENSATION_EXTRACTION_500_REFERENCE_PATH = (
     COMPENSATION_EXTRACTION_500_DIR
     / "lanes/reference_and_exclusion/reference_exclusion_ledger.csv"
 )
+COMPENSATION_EXTRACTION_500_TARGETED_QA_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "COMPENSATION-EVIDENCE-EXTRACTION-500DOC-TARGETED-QA-2026-07-25"
+)
+COMPENSATION_EXTRACTION_500_TARGETED_QA_DECISION_PATH = (
+    COMPENSATION_EXTRACTION_500_TARGETED_QA_DIR
+    / "compensation_extraction_500_recomputed_decision.json"
+)
+COMPENSATION_EXTRACTION_500_TARGETED_QA_SUMMARY_PATH = (
+    COMPENSATION_EXTRACTION_500_TARGETED_QA_DIR
+    / "compensation_extraction_500_targeted_qa_summary.json"
+)
+COMPENSATION_EXTRACTION_500_TARGETED_QA_QUANT_PATH = (
+    COMPENSATION_EXTRACTION_500_TARGETED_QA_DIR
+    / "quantitative_extraction_ledger_qa_corrected.csv"
+)
+COMPENSATION_EXTRACTION_500_TARGETED_QA_QUAL_PATH = (
+    COMPENSATION_EXTRACTION_500_TARGETED_QA_DIR
+    / "qualitative_mechanism_extraction_ledger_qa_corrected.csv"
+)
+COMPENSATION_EXTRACTION_500_TARGETED_QA_MIXED_PATH = (
+    COMPENSATION_EXTRACTION_500_TARGETED_QA_DIR
+    / "mixed_extraction_ledger_qa_corrected.csv"
+)
+COMPENSATION_EXTRACTION_500_TARGETED_QA_NONBASE_PATH = (
+    COMPENSATION_EXTRACTION_500_TARGETED_QA_DIR
+    / "non_base_wage_compensation_ledger_qa_corrected.csv"
+)
+COMPENSATION_EXTRACTION_500_TARGETED_QA_REFERENCE_PATH = (
+    COMPENSATION_EXTRACTION_500_TARGETED_QA_DIR
+    / "reference_exclusion_ledger_qa_corrected.csv"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -1093,22 +1126,48 @@ def build_analysis_readiness(
         COMPENSATION_EXTRACTION_500_NONBASE_PATH,
         COMPENSATION_EXTRACTION_500_REFERENCE_PATH,
     ))
+    targeted_qa_completed = all(path.exists() for path in (
+        COMPENSATION_EXTRACTION_500_TARGETED_QA_DECISION_PATH,
+        COMPENSATION_EXTRACTION_500_TARGETED_QA_SUMMARY_PATH,
+        COMPENSATION_EXTRACTION_500_TARGETED_QA_QUANT_PATH,
+        COMPENSATION_EXTRACTION_500_TARGETED_QA_QUAL_PATH,
+        COMPENSATION_EXTRACTION_500_TARGETED_QA_MIXED_PATH,
+        COMPENSATION_EXTRACTION_500_TARGETED_QA_NONBASE_PATH,
+        COMPENSATION_EXTRACTION_500_TARGETED_QA_REFERENCE_PATH,
+    ))
     extraction_decision = (
-        read_json(COMPENSATION_EXTRACTION_500_DECISION_PATH)
-        if extraction_completed else {}
+        read_json(COMPENSATION_EXTRACTION_500_TARGETED_QA_DECISION_PATH)
+        if targeted_qa_completed
+        else read_json(COMPENSATION_EXTRACTION_500_DECISION_PATH)
+        if extraction_completed
+        else {}
     )
     extraction_quant_count = (
-        len(read_csv(COMPENSATION_EXTRACTION_500_QUANT_PATH))
-        if extraction_completed else 0
+        sum(
+            row.get("active_in_corrected_lane") == "true"
+            for row in read_csv(COMPENSATION_EXTRACTION_500_TARGETED_QA_QUANT_PATH)
+        )
+        if targeted_qa_completed
+        else len(read_csv(COMPENSATION_EXTRACTION_500_QUANT_PATH))
+        if extraction_completed
+        else 0
     )
     extraction_qual_count = (
-        len(read_csv(COMPENSATION_EXTRACTION_500_QUAL_PATH))
-        if extraction_completed else 0
+        sum(
+            row.get("active_in_corrected_lane") == "true"
+            for row in read_csv(COMPENSATION_EXTRACTION_500_TARGETED_QA_QUAL_PATH)
+        )
+        if targeted_qa_completed
+        else len(read_csv(COMPENSATION_EXTRACTION_500_QUAL_PATH))
+        if extraction_completed
+        else 0
     )
     return {
         "metadata": metadata,
         "overall_status": (
-            "provisional_500_compensation_extraction_complete_scale_qa_hold"
+            "provisional_500_compensation_extraction_targeted_qa_pass_1000_authorized"
+            if targeted_qa_completed
+            else "provisional_500_compensation_extraction_complete_scale_qa_hold"
             if extraction_completed
             else "verification_scale_up_planned_after_discovery_checkpoint"
         ),
@@ -1172,7 +1231,9 @@ def build_analysis_readiness(
             "wage_extraction_stage": {
                 "available": extraction_completed,
                 "display_status": (
-                    "provisional_500_complete_not_analysis_ready"
+                    "targeted_qa_pass_1000_authorized_provisional_not_analysis_ready"
+                    if targeted_qa_completed
+                    else "provisional_500_complete_not_analysis_ready"
                     if extraction_completed
                     else "planned_after_scout_checkpoint_and_verification"
                 ),
@@ -1187,6 +1248,10 @@ def build_analysis_readiness(
                     "scale_1000_recommendation"
                 ),
                 "analysis_ready": False,
+                "targeted_qa_completed": targeted_qa_completed,
+                "scale_1000_allowed": extraction_decision.get(
+                    "scale_1000_allowed", False
+                ),
             },
             "regression_stage": {
                 "available": False,
@@ -4374,6 +4439,22 @@ def build_text_table_calibration_status_summary(
         extraction_mixed: list[dict[str, str]] = []
         extraction_nonbase: list[dict[str, str]] = []
         extraction_reference: list[dict[str, str]] = []
+        targeted_qa_completed = all(path.exists() for path in (
+            COMPENSATION_EXTRACTION_500_TARGETED_QA_DECISION_PATH,
+            COMPENSATION_EXTRACTION_500_TARGETED_QA_SUMMARY_PATH,
+            COMPENSATION_EXTRACTION_500_TARGETED_QA_QUANT_PATH,
+            COMPENSATION_EXTRACTION_500_TARGETED_QA_QUAL_PATH,
+            COMPENSATION_EXTRACTION_500_TARGETED_QA_MIXED_PATH,
+            COMPENSATION_EXTRACTION_500_TARGETED_QA_NONBASE_PATH,
+            COMPENSATION_EXTRACTION_500_TARGETED_QA_REFERENCE_PATH,
+        ))
+        targeted_qa_decision: dict[str, Any] = {}
+        targeted_qa_summary: dict[str, Any] = {}
+        targeted_qa_quant: list[dict[str, str]] = []
+        targeted_qa_qual: list[dict[str, str]] = []
+        targeted_qa_mixed: list[dict[str, str]] = []
+        targeted_qa_nonbase: list[dict[str, str]] = []
+        targeted_qa_reference: list[dict[str, str]] = []
         if extraction_completed:
             extraction_decision = read_json(
                 COMPENSATION_EXTRACTION_500_DECISION_PATH
@@ -4415,10 +4496,82 @@ def build_text_table_calibration_status_summary(
                 raise ValueError(
                     "provisional 500-document compensation extraction fails dashboard gates"
                 )
+        if targeted_qa_completed:
+            targeted_qa_decision = read_json(
+                COMPENSATION_EXTRACTION_500_TARGETED_QA_DECISION_PATH
+            )
+            targeted_qa_summary = read_json(
+                COMPENSATION_EXTRACTION_500_TARGETED_QA_SUMMARY_PATH
+            )
+            targeted_qa_quant = read_csv(
+                COMPENSATION_EXTRACTION_500_TARGETED_QA_QUANT_PATH
+            )
+            targeted_qa_qual = read_csv(
+                COMPENSATION_EXTRACTION_500_TARGETED_QA_QUAL_PATH
+            )
+            targeted_qa_mixed = read_csv(
+                COMPENSATION_EXTRACTION_500_TARGETED_QA_MIXED_PATH
+            )
+            targeted_qa_nonbase = read_csv(
+                COMPENSATION_EXTRACTION_500_TARGETED_QA_NONBASE_PATH
+            )
+            targeted_qa_reference = read_csv(
+                COMPENSATION_EXTRACTION_500_TARGETED_QA_REFERENCE_PATH
+            )
+            active_counts = {
+                "quantitative": sum(
+                    row.get("active_in_corrected_lane") == "true"
+                    for row in targeted_qa_quant
+                ),
+                "qualitative": sum(
+                    row.get("active_in_corrected_lane") == "true"
+                    for row in targeted_qa_qual
+                ),
+                "mixed": sum(
+                    row.get("active_in_corrected_lane") == "true"
+                    for row in targeted_qa_mixed
+                ),
+                "nonbase": sum(
+                    row.get("active_in_corrected_lane") == "true"
+                    for row in targeted_qa_nonbase
+                ),
+                "reference": sum(
+                    row.get("active_in_corrected_lane") == "true"
+                    for row in targeted_qa_reference
+                ),
+            }
+            if (
+                targeted_qa_decision.get("task_id")
+                != "COMPENSATION-EVIDENCE-EXTRACTION-500DOC-TARGETED-QA-AND-DASHBOARD-PUSH-2026-07-25"
+                or targeted_qa_decision.get("integrity_qa_pass") is not True
+                or targeted_qa_decision.get("scale_qa_pass") is not True
+                or targeted_qa_decision.get("scale_1000_allowed") is not True
+                or targeted_qa_decision.get("decision")
+                != "recommend_1000_document_extraction"
+                or int(targeted_qa_decision.get("review_rows_processed", 0)) != 187
+                or int(targeted_qa_decision.get("duplicate_observation_id_count", -1)) != 0
+                or int(targeted_qa_decision.get("invalid_observation_page_count", -1)) != 0
+                or float(targeted_qa_decision.get("unresolved_quantitative_conflict_rate", 1)) > 0.02
+                or int(targeted_qa_decision.get("unresolved_base_non_base_contamination_count", -1)) != 0
+                or targeted_qa_decision.get("matched_representation_intact") is not True
+                or targeted_qa_decision.get("corrected_ledgers_provisional_and_separate") is not True
+                or active_counts != {
+                    "quantitative": int(targeted_qa_summary["corrected_quantitative_active_observation_count"]),
+                    "qualitative": int(targeted_qa_summary["corrected_qualitative_active_observation_count"]),
+                    "mixed": int(targeted_qa_summary["corrected_mixed_active_case_count"]),
+                    "nonbase": int(targeted_qa_summary["corrected_non_base_wage_active_observation_count"]),
+                    "reference": int(targeted_qa_summary["corrected_reference_exclusion_active_case_count"]),
+                }
+            ):
+                raise ValueError(
+                    "targeted compensation extraction QA fails dashboard gates"
+                )
         return {
             **metadata,
             "calibration_phase": (
-                "compensation_extraction_500_provisional_completed"
+                "compensation_extraction_500_targeted_qa_completed"
+                if targeted_qa_completed
+                else "compensation_extraction_500_provisional_completed"
                 if extraction_completed
                 else "auto_gabriel_gate3_compensation_completed"
                 if gate3_completed
@@ -4448,6 +4601,30 @@ def build_text_table_calibration_status_summary(
                 "COMPENSATION-EVIDENCE-EXTRACTION-500DOC-2026-07-25"
                 if extraction_completed else None
             ),
+            "latest_compensation_extraction_qa_id": (
+                "COMPENSATION-EVIDENCE-EXTRACTION-500DOC-TARGETED-QA-2026-07-25"
+                if targeted_qa_completed else None
+            ),
+            "targeted_qa_review_rows_processed": (
+                int(targeted_qa_decision.get("review_rows_processed", 0))
+                if targeted_qa_completed else 0
+            ),
+            "targeted_qa_duplicate_observations_canonicalized": (
+                int(targeted_qa_decision.get("duplicate_observations_canonicalized", 0))
+                if targeted_qa_completed else 0
+            ),
+            "targeted_qa_conflict_resolution_counts": (
+                targeted_qa_decision.get("conflict_resolution_counts", {})
+                if targeted_qa_completed else {}
+            ),
+            "targeted_qa_unresolved_conflict_rate": (
+                float(targeted_qa_decision.get("unresolved_quantitative_conflict_rate", 0))
+                if targeted_qa_completed else None
+            ),
+            "targeted_qa_quantitative_reroutes": (
+                int(targeted_qa_decision.get("quantitative_records_routed_to_non_base_wage", 0))
+                if targeted_qa_completed else 0
+            ),
             "compensation_extraction_case_count": (
                 500 if extraction_completed else 0
             ),
@@ -4459,22 +4636,32 @@ def build_text_table_calibration_status_summary(
                 if extraction_completed else {}
             ),
             "quantitative_observation_count": (
-                len(extraction_quant) if extraction_completed else 0
+                int(targeted_qa_summary["corrected_quantitative_active_observation_count"])
+                if targeted_qa_completed
+                else len(extraction_quant) if extraction_completed else 0
             ),
             "qualitative_mechanism_observation_count": (
-                len(extraction_qual) if extraction_completed else 0
+                int(targeted_qa_summary["corrected_qualitative_active_observation_count"])
+                if targeted_qa_completed
+                else len(extraction_qual) if extraction_completed else 0
             ),
             "mixed_case_count": (
-                len(extraction_mixed) if extraction_completed else 0
+                int(targeted_qa_summary["corrected_mixed_active_case_count"])
+                if targeted_qa_completed
+                else len(extraction_mixed) if extraction_completed else 0
             ),
             "non_base_wage_observation_count": (
-                len(extraction_nonbase) if extraction_completed else 0
+                int(targeted_qa_summary["corrected_non_base_wage_active_observation_count"])
+                if targeted_qa_completed
+                else len(extraction_nonbase) if extraction_completed else 0
             ),
             "reference_exclusion_case_count": (
                 len(extraction_reference) if extraction_completed else 0
             ),
             "compensation_extraction_qa_status": (
-                extraction_decision.get("qa_status")
+                targeted_qa_decision.get("qa_status")
+                if targeted_qa_completed
+                else extraction_decision.get("qa_status")
                 if extraction_completed else None
             ),
             "compensation_extraction_conflict_groups": (
@@ -4482,8 +4669,14 @@ def build_text_table_calibration_status_summary(
                 if extraction_completed else 0
             ),
             "scale_1000_recommendation": (
-                extraction_decision.get("scale_1000_recommendation")
+                targeted_qa_decision.get("scale_1000_recommendation")
+                if targeted_qa_completed
+                else extraction_decision.get("scale_1000_recommendation")
                 if extraction_completed else None
+            ),
+            "scale_1000_allowed": (
+                bool(targeted_qa_decision.get("scale_1000_allowed", False))
+                if targeted_qa_completed else False
             ),
             "prior_auto_adjudication_gate_id": (
                 "TEXT-TABLE-AUTO-GABRIEL-GATE2-REFINEMENT-2026-07-25"
@@ -4636,7 +4829,9 @@ def build_text_table_calibration_status_summary(
                 else float(decision["wrong_page_rate"])
             ),
             "extraction_decision": (
-                extraction_decision.get("decision")
+                targeted_qa_decision.get("decision")
+                if targeted_qa_completed
+                else extraction_decision.get("decision")
                 if extraction_completed
                 else auto_decision["extraction_decision"]
                 if auto_gate_completed

@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": "0.1.0",
-    "generated_at": "2026-07-25T21:54:39Z",
+    "generated_at": "2026-07-25T22:23:01Z",
     "data_vintage": "2026-07-23",
     "source_files": [
       "docs/analysis/national_scout_coverage_state.csv",
@@ -82,7 +82,7 @@
       "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
     ]
   },
-  "overall_status": "provisional_500_compensation_extraction_complete_scale_qa_hold",
+  "overall_status": "provisional_500_compensation_extraction_targeted_qa_pass_1000_authorized",
   "current_inputs": {
     "national_queue_available": true,
     "national_coverage_available": true,
@@ -139,12 +139,14 @@
     },
     "wage_extraction_stage": {
       "available": true,
-      "display_status": "provisional_500_complete_not_analysis_ready",
-      "observation_count": 1073,
+      "display_status": "targeted_qa_pass_1000_authorized_provisional_not_analysis_ready",
+      "observation_count": 920,
       "qualitative_mechanism_observation_count": 1181,
-      "qa_status": "integrity_pass_scale_hold",
-      "scale_1000_recommendation": "premature_pending_targeted_qa",
-      "analysis_ready": false
+      "qa_status": "pass",
+      "scale_1000_recommendation": "recommend_1000_document_extraction",
+      "analysis_ready": false,
+      "targeted_qa_completed": true,
+      "scale_1000_allowed": true
     },
     "regression_stage": {
       "available": false,

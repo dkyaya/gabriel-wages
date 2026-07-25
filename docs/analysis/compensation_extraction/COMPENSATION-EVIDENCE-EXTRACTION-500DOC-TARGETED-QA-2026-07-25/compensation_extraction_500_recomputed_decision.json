@@ -1,0 +1,69 @@
+{
+  "base_non_base_review_counts": {
+    "route_to_non_base_wage": 102
+  },
+  "codify_allowed": false,
+  "conflict_group_count": 83,
+  "conflict_resolution_counts": {
+    "distinct_classification_or_rank": 11,
+    "distinct_effective_period": 5,
+    "distinct_schedule_cell": 26,
+    "insufficient_evidence_needs_review": 14,
+    "non_base_wage_misroute": 27
+  },
+  "corrected_ledgers_provisional_and_separate": true,
+  "corrected_mixed_active_case_count": 177,
+  "corrected_mixed_source_row_count": 182,
+  "corrected_non_base_wage_active_observation_count": 1477,
+  "corrected_non_base_wage_source_row_count": 1478,
+  "corrected_qualitative_active_observation_count": 1181,
+  "corrected_quantitative_active_observation_count": 920,
+  "corrected_quantitative_source_row_count": 1073,
+  "corrected_reference_exclusion_active_case_count": 90,
+  "dashboard_status_required": "compensation_extraction_500_targeted_qa_completed",
+  "decision": "recommend_1000_document_extraction",
+  "duplicate_groups_resolved": 2,
+  "duplicate_observation_id_count": 0,
+  "duplicate_observations_canonicalized": 3,
+  "final_analysis_merge_allowed": false,
+  "gabriel_api_used": false,
+  "generated_at": "2026-07-25T22:20:16Z",
+  "ingestion_allowed": false,
+  "input_sha256": {
+    "compensation_extraction_500_conflict_review.csv": "12b6e9ba19067c00ea2116faf7cbba15c5bf27c3e5473b5d40ad4bd975991aa8",
+    "compensation_extraction_500_decision_report.json": "2b62c2948bc2843ebc06d66747b97680202bd4bf791af15cefe4dd74f5eb7fde",
+    "compensation_extraction_500_packet_manifest.csv": "484e8059d2f0bc6d883ac2f6d206cae5cb388cc9e5f20be132abcf1f82a9ef68",
+    "compensation_extraction_500_selection_manifest.csv": "2341e68426e5e62bdf406817fed17c703ee116d7c31af81f9e73b8b96ad583fb",
+    "lanes/mixed/mixed_extraction_ledger.csv": "145a8822ae4db3fc141185ebdf563f24e45fa450c18ccf75fb348d1515544e9f",
+    "lanes/non_base_wage/non_base_wage_compensation_ledger.csv": "d8f404e48a9b5c6cb39df74628ea30453111ac90229985465f008af28f1c6825",
+    "lanes/qualitative/qualitative_mechanism_extraction_ledger.csv": "417446d92c2ee101d81d1e5c0109b385e07f227ed36a086bdf2281c692e9f429",
+    "lanes/quantitative/quantitative_extraction_ledger.csv": "762f85e9c0d1f3588860be6ccfab90426f196446458d32e056a5c7d6ca896279",
+    "lanes/reference_and_exclusion/reference_exclusion_ledger.csv": "0dcd29d8c7ad77fb2b67279da015ab87f28bc9c79af041d47dc7bd0f3e9c235b"
+  },
+  "integrity_qa_pass": true,
+  "invalid_observation_page_count": 0,
+  "matched_municipality_count": 200,
+  "matched_representation_intact": true,
+  "qa_status": "pass",
+  "quantitative_records_routed_to_non_base_wage": 151,
+  "resolved_conflict_group_count": 69,
+  "review_rows_processed": 187,
+  "review_type_counts": {
+    "exact_content_duplicate": 2,
+    "possible_non_base_wage_in_quantitative_lane": 102,
+    "potential_quantitative_conflict": 83
+  },
+  "scale_1000_allowed": true,
+  "scale_1000_recommendation": "recommend_1000_document_extraction",
+  "scale_qa_pass": true,
+  "selection_count": 500,
+  "task_id": "COMPENSATION-EVIDENCE-EXTRACTION-500DOC-TARGETED-QA-AND-DASHBOARD-PUSH-2026-07-25",
+  "unit_type_counts": {
+    "fire": 120,
+    "non_safety": 200,
+    "police": 180
+  },
+  "unresolved_base_non_base_contamination_count": 0,
+  "unresolved_conflict_group_count": 14,
+  "unresolved_quantitative_conflict_rate": 0.015217
+}

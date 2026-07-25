@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "compensation_extraction_500_targeted_qa_completed"
+              ? "Targeted QA passed; provisional 1,000-document scale-up authorized"
+              : textTableCalibrationStatus.calibration_phase ===
             "compensation_extraction_500_provisional_completed"
               ? "Provisional 500-document compensation extraction complete; QA hold before 1,000"
               : textTableCalibrationStatus.calibration_phase ===
@@ -789,6 +792,25 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "compensation_extraction_500_targeted_qa_completed" ? (
+            <>
+              Targeted QA processed {formatNumber(
+                textTableCalibrationStatus.targeted_qa_review_rows_processed,
+              )} review rows, canonicalized {formatNumber(
+                textTableCalibrationStatus.targeted_qa_duplicate_observations_canonicalized,
+              )} duplicate observations, and rerouted {formatNumber(
+                textTableCalibrationStatus.targeted_qa_quantitative_reroutes,
+              )} quantitative records to the non-base-wage shadow lane. The corrected provisional layer retains {formatNumber(
+                textTableCalibrationStatus.quantitative_observation_count,
+              )} active quantitative, {formatNumber(
+                textTableCalibrationStatus.qualitative_mechanism_observation_count,
+              )} qualitative-mechanism, and {formatNumber(
+                textTableCalibrationStatus.non_base_wage_observation_count,
+              )} non-base-wage observations. The unresolved conflict rate is {formatPercent(
+                100 * textTableCalibrationStatus.targeted_qa_unresolved_conflict_rate,
+              )}; scale QA passed and the recommendation is {textTableCalibrationStatus.scale_1000_recommendation}. These remain provisional QA ledgers, not analysis-ready data.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "compensation_extraction_500_provisional_completed" ? (
             <>
               The frozen run completed {formatNumber(

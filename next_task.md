@@ -1,22 +1,24 @@
-# Next task: targeted provisional-extraction QA before 1,000 documents
+# Next task: prepare a provisional 1,000-document compensation extraction
 
-Start from the committed
-`COMPENSATION-EVIDENCE-EXTRACTION-500DOC-2026-07-25` provisional layer.
+The targeted QA gate authorizes a future 1,000-document provisional extraction
+run. Begin from the corrected shadow-ledger rules and the unchanged durable
+local artifact authorities.
 
-1. Review only the 187 rows in
-   `compensation_extraction_500_conflict_review.csv` against their bounded local
-   page pointers.
-2. Resolve two exact quantitative duplicates and one exact non-base-wage
-   duplicate without deleting provenance.
-3. Adjudicate the 83 potential same-key quantitative conflict groups as true
-   conflicts versus distinct schedule cells/effective periods.
-4. Adjudicate the 102 possible non-base-wage records currently in the
-   quantitative lane; re-route rather than silently discard or promote them.
-5. Recompute the 500-document QA decision without selecting new documents or
-   running new extraction.
-6. Authorize a 1,000-document run only if conflict rate is at most 2%, no
-   unresolved base/non-base contamination remains, integrity QA stays green,
-   and the matched police/fire/non-safety representation remains intact.
+1. Freeze exactly 1,000 unique retained document identities with explicit
+   police, fire, and non-safety quotas and stable city × unit × negotiation-
+   cycle matching.
+2. Carry forward canonical observation IDs, active/inactive provenance rules,
+   and the separate quantitative, qualitative, mixed, non-base-wage, and
+   reference/exclusion lanes.
+3. Apply the targeted QA routing vocabulary during extraction so overtime,
+   premiums, longevity, certification, benefits, pension, leave,
+   reimbursements, and uniform/equipment evidence do not enter base wage.
+4. Use bounded page packets, dry run, representative preflight, resumable live
+   lanes, strict schemas, and stop-before-final-merge discipline.
+5. Recompute integrity and scale QA after the run. Keep all unresolved
+   structured conflicts explicit and preserve every source observation.
 
-Keep URL access, downloads, OCR, ingestion, `gabriel.codify`, final merge,
-wage-gap analysis, regression, remote inspection, and push closed.
+This recommendation authorizes scale, not final analysis. Require separate
+execution authorization before running the 1,000 documents. Keep URL access,
+downloads, OCR, ingestion, `gabriel.codify`, final merge, wage-gap analysis,
+and regression closed.

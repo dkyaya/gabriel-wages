@@ -6,6 +6,37 @@ Last updated: `2026-07-25`
 
 ---
 
+## 2026-07-25 — Targeted QA passes; 1,000-document provisional scale-up authorized
+
+### Current State
+
+- **Authority/start:** work began at clean tracked `a569606fab8df160705505d9ac7e8b8d5723b2f7`. The unrelated untracked root `package-lock.json` and local adjudication renders remain outside the task. Original extraction authorities and ledgers are hash-recorded and unchanged.
+- **Method:** `scripts/run_compensation_extraction_targeted_qa.py` is an offline deterministic resolver. Seven focused tests cover non-base routing, conflict distinctions, fail-closed ambiguity, provenance, and no-call behavior. No GABRIEL/API was used.
+- **Queue:** [the result](compensation_extraction_500_targeted_qa_result_2026-07-25.md) processes 187/187 rows. Three duplicate observations across two exact-content groups are canonicalized without deletion. Conflict resolutions are 27 non-base misroutes, 26 separate schedule cells, 11 separate classifications/ranks, five effective periods, and 14 explicitly under-specified groups.
+- **Routing:** all 102 individually queued possible non-base records are resolved. In total, 151 quantitative records are rerouted, including 49 additional records inside the conflict groups. No base/non-base contamination remains unresolved.
+- **Shadows:** corrected active counts are 920 quantitative, 1,181 qualitative mechanism, 177 mixed, 1,477 non-base wage, and 90 reference/exclusion. All original rows remain present with canonical/routing provenance and active-lane flags. Five mixed rows are inactive because rerouting removed their last quantitative member; their qualitative records remain.
+- **QA:** duplicate observation IDs and invalid page pointers are both zero. The 14 unresolved groups yield a 1.5217% conflict rate, below the 2% gate. The frozen 500 identities, 180/120/200 unit quotas, and 200 stable matched comparison IDs remain intact.
+- **Decision:** [the recomputed decision](compensation_extraction/COMPENSATION-EVIDENCE-EXTRACTION-500DOC-TARGETED-QA-2026-07-25/compensation_extraction_500_recomputed_decision.json) is `recommend_1000_document_extraction`; scale QA passes. Final analysis merge, ingestion, and codification remain false.
+- **Dashboard:** phase is `compensation_extraction_500_targeted_qa_completed`; analysis readiness remains false, while `scale_1000_allowed` is true. [The dashboard note](compensation_extraction_500_targeted_qa_dashboard_status_note_2026-07-25.md) explains the provisional status.
+- **Boundary:** no new extraction, new document selection, GABRIEL/API, URL/hosted search, download/redownload, OCR, scout, source review, verification, ingestion, `gabriel.codify`, final merge, wage-gap work, regression, remote inspection, or remote configuration occurred. A plain post-commit push is required only to publish the dashboard and will be recorded in the relay.
+
+### Interpretation
+
+The targeted QA gate resolves the identified scale blockers without pretending
+the provisional records are final. The remaining 14 under-specified groups are
+preserved as unresolved rather than guessed; their 1.5217% rate satisfies the
+stated scale rule. Non-base compensation remains a separate evidence family,
+not discarded or promoted to base wage.
+
+### Next Move
+
+Follow [next_task.md](../../next_task.md) only after separate execution
+authorization. Freeze a representative 1,000-document local selection, apply
+the corrected routing vocabulary during extraction, run strict bounded and
+resumable lanes, and stop before final merge. Keep ingestion, codification,
+analysis-ready promotion, wage-gap analysis, regression, URL access, download,
+and OCR closed.
+
 ## 2026-07-25 — Provisional 500-document extraction completed; targeted QA required before 1,000
 
 ### Current State
