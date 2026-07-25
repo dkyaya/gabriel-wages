@@ -10,7 +10,11 @@ import json
 from collections import Counter
 from pathlib import Path
 
-from text_table_detection_sources import DRY_STATUS, TERMINAL_STATUSES
+from text_table_detection_sources import (
+    DRY_STATUS,
+    TABLE_METHOD,
+    TERMINAL_STATUSES,
+)
 
 
 def read_csv(path: Path) -> list[dict[str, str]]:
@@ -135,6 +139,13 @@ def classify_lane(lane: dict[str, object]) -> dict[str, object]:
     hash_failures = status_counts["hash_mismatch"]
     missing_artifacts = status_counts["artifact_missing"]
     parser_errors = status_counts["parser_error"]
+    expected_heuristic = str(
+        lane.get("frozen_heuristic_version", TABLE_METHOD)
+    )
+    heuristic_mismatches = sum(
+        row.get("table_detection_method", "") != expected_heuristic
+        for row in rows
+    )
     hint_overruns = sum(
         len(row.get("candidate_contract_period_text", "")) > 300
         for row in rows
@@ -188,6 +199,7 @@ def classify_lane(lane: dict[str, object]) -> dict[str, object]:
         and len(candidate_ids) == len(set(candidate_ids))
         and hint_overruns == 0
         and candidate_page_errors == 0
+        and heuristic_mismatches == 0
         and not full_text_artifacts
         and no_forbidden_activity
     )
@@ -267,6 +279,8 @@ def classify_lane(lane: dict[str, object]) -> dict[str, object]:
             "hash_failures": hash_failures,
             "missing_artifacts": missing_artifacts,
             "parser_errors": parser_errors,
+            "heuristic_version": expected_heuristic,
+            "heuristic_mismatches": heuristic_mismatches,
             "hint_overruns": hint_overruns,
             "candidate_page_errors": candidate_page_errors,
             "full_text_artifacts_found": len(full_text_artifacts),
@@ -395,6 +409,12 @@ def audit(manifest_path: Path, output_dir: Path) -> dict[str, object]:
         ),
         "parser_errors": sum(
             int(lane.get("parser_errors", 0)) for lane in lanes
+        ),
+        "frozen_heuristic_version": manifest.get(
+            "frozen_heuristic_version", TABLE_METHOD
+        ),
+        "heuristic_mismatches": sum(
+            int(lane.get("heuristic_mismatches", 0)) for lane in lanes
         ),
         "hint_overruns": sum(
             int(lane.get("hint_overruns", 0)) for lane in lanes

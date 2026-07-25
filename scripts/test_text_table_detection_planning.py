@@ -178,10 +178,15 @@ class TextTableDetectionTests(unittest.TestCase):
             output_dir=str(root / "plan"),
             pilot_id="TEST-TEXT-TABLE-150",
             sample_size=150,
+            all_parse_text=False,
             num_lanes=3,
+            balance_lanes=True,
             state_diversity=True,
             include_partial_text_layer=True,
             exclude_ocr_later=True,
+            freeze_heuristic_version=(
+                planner.FROZEN_HEURISTIC_VERSION
+            ),
             plan_only=True,
         )
 
@@ -232,6 +237,51 @@ class TextTableDetectionTests(unittest.TestCase):
             args = self.planner_fixture(Path(raw))
             manifest = planner.create_plan(args)
             self.assertEqual(manifest["lane_rows"], [50, 50, 50])
+
+    def test_full_planner_selects_all_parse_text_rows_in_four_lanes(self):
+        with tempfile.TemporaryDirectory() as raw:
+            args = self.planner_fixture(Path(raw))
+            args.pilot_id = "TEST-TEXT-TABLE-FULL"
+            args.all_parse_text = True
+            args.num_lanes = 4
+            manifest = planner.create_plan(args)
+            rows: list[dict[str, str]] = []
+            for lane in range(1, 5):
+                rows.extend(
+                    read_csv(
+                        Path(args.output_dir)
+                        / f"lane_{lane}_text_table_detection_input.csv"
+                    )
+                )
+            self.assertEqual(manifest["selected_rows"], 180)
+            self.assertEqual(manifest["lane_rows"], [45, 45, 45, 45])
+            self.assertEqual(len(rows), 180)
+            self.assertEqual(
+                len({row["pdf_readiness_id"] for row in rows}), 180
+            )
+            self.assertTrue(
+                all(
+                    row["sample_selection_reason"]
+                    == (
+                        "complete durable parse_text_layer_later universe "
+                        "under frozen heuristic"
+                    )
+                    for row in rows
+                )
+            )
+            self.assertEqual(
+                manifest["frozen_heuristic_version"],
+                runner.TABLE_METHOD,
+            )
+
+    def test_planner_rejects_unfrozen_heuristic_version(self):
+        with tempfile.TemporaryDirectory() as raw:
+            args = self.planner_fixture(Path(raw))
+            args.freeze_heuristic_version = "changed_heuristic"
+            with self.assertRaisesRegex(
+                ValueError, "unsupported heuristic version"
+            ):
+                planner.create_plan(args)
 
     def test_dry_run_opens_no_pdfs(self):
         with tempfile.TemporaryDirectory() as raw:

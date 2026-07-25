@@ -6,6 +6,45 @@ Last updated: `2026-07-25`
 
 ---
 
+## 2026-07-25 — Full text/table detection is collected and audited
+
+### Current State
+
+- **Start and authority:** work began at clean tracked `4a9c2c78e3812c6ac02cd78a574a228399e55a3e`; all requested ancestry passed and the unrelated untracked root `package-lock.json` remains untouched. The durable PDF-readiness ledger contains 1,828 `parse_text_layer_later` and 296 `ocr_later` rows.
+- **Frozen implementation:** the planner now supports exact all-parse-text selection, balanced lanes, and fail-closed `bounded_keyword_numeric_structure_v1` freezing. The 16-test offline/mock suite passes.
+- **Locked scope:** [the input plan](text_table_detection_full_run_input_plan_2026-07-24.md) locks all 1,828 parse-text identities into four 457-row lanes. Input hashes are `eaec2dec027f332486199012175d876f284859f33c7c2b67b541a2b8f190a442`, `dcd1413776de58b3981c5d0625c93de95702aed8739538d6b08c54328e70c0a8`, `b71af7bbd072193cd2cd4755fba1aa64fd19e2b124dd4a55e11a1985b5ad1a2b`, and `b07b153a7f45510ad5a97bb8df259be8eec357c42fcd5984983951a550f04431`. All OCR-later rows are excluded.
+- **Dry gate:** all four dry lanes are `dry_run_passed`, with zero PDF opens, parsing, URL/network access, downloads, OCR, or retained text.
+- **Full local result:** [the result review](text_table_detection_full_run_result_review_2026-07-24.md) records 1,828 `detection_checked` rows, zero parser/hash/missing-artifact failures, and four `completed_merge_eligible` lanes.
+- **Signals:** wage table is 1,067 likely, 749 possible, and 12 unlikely; contract period is 1,672 likely, 103 possible, and 53 unlikely; table structure is 1,717 likely, 107 possible, and four unlikely. Scheduling priorities are 1,067 p1, 754 p2, and seven p3.
+- **Bounded content:** 17,861 pages were scanned and 17,369 returned text. The detector inspected 21,232,318 capped characters in memory and retained 7,649 candidate page numbers plus at most 300 redacted contract-period characters per PDF. It retained no table cells, complete page/document text, or final wage values.
+- **Pilot reproducibility:** all 150 Pilot 1 PDF-readiness identities were rerun under new full-run detection IDs. Exact comparison found zero result mismatches under the frozen heuristic.
+- **Audit/no merge:** all four lanes recommend `merge_all_text_table_detection_lanes`. [No durable merge occurred](text_table_detection_full_run_no_merge_note_2026-07-24.md).
+- **Dashboard:** `text_table_detection_phase = full_parse_text_collected_not_merged`; ingestion, codification, wage extraction, and wage-gap analysis remain `not_started`.
+- **Boundary:** no URL, network/API/model call, download/redownload, OCR, final wage extraction, ingestion, codification, scout accounting, routing/triage/source-review/PDF-readiness-ledger mutation, durable detection merge, regression, remote inspection, or push occurred.
+- **Validation:** [the validation record](text_table_detection_full_run_validation_2026-07-24.md) reports five compiles, 16 offline/mock tests, final four-lane audit, exact durable-authority and Pilot 1 reproducibility checks, dashboard JSON/frontend build, repository schema and 60 ingestion tests, immutable protected/upstream hashes, secret-safety, redaction, no-full-text, and diff checks passed.
+
+### Interpretation
+
+The bounded local detector is reproducible and operationally reliable: all
+1,828 eligible artifacts are terminal, and the 150 Pilot 1 overlaps reproduce
+exactly. The 1,816 / 1,828 likely-or-possible wage-table signal rate confirms
+that the heuristic is deliberately recall-oriented. It does not establish
+that nearly every document contains a usable wage table, and the signal must
+not be treated as a final wage observation.
+
+### Next Move
+
+Review [the future serial merge prompt](text_table_detection_full_run_merge_prompt_2026-07-24.md)
+and lite relay. If separately authorized, merge only the four full-run lane
+ledgers, use the 1,828-row rerun as the uniform durable result, and preserve
+Pilot 1 as superseded diagnostic provenance.
+
+After merge, manually review a stratified calibration subset of likely,
+possible, and unlikely page hints before designing any wage-table extraction
+pilot. Do not OCR the 296 deferred PDFs, extract final wages, ingest, codify,
+calculate wage gaps, resume broad downloads, or run a durable merge without
+separate authorization.
+
 ## 2026-07-25 — Text/table-detection Pilot 1 is collected and audited
 
 ### Current State

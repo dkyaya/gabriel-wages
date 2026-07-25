@@ -656,6 +656,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Text/table detection</p>
           <h3>
             {textTableDetectionStatus.text_table_detection_phase ===
+            "full_parse_text_collected_not_merged"
+              ? "Full bounded local pass collected; serial merge pending"
+              : textTableDetectionStatus.text_table_detection_phase ===
             "pilot1_collected_not_merged"
               ? "Bounded local pilot collected; merge pending"
               : "Bounded local pilot not started"}
@@ -663,6 +666,31 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableDetectionStatus.text_table_detection_phase ===
+          "full_parse_text_collected_not_merged" ? (
+            <>
+              All{" "}
+              {formatNumber(
+                textTableDetectionStatus.full_parse_text_rows_collected,
+              )}
+              {" "}durable parse-text PDFs produced terminal frozen-heuristic
+              results:{" "}
+              {formatNumber(
+                textTableDetectionStatus.wage_table_signal_counts?.likely,
+              )}
+              {" "}likely,{" "}
+              {formatNumber(
+                textTableDetectionStatus.wage_table_signal_counts?.possible,
+              )}
+              {" "}possible, and{" "}
+              {formatNumber(
+                textTableDetectionStatus.wage_table_signal_counts?.unlikely,
+              )}
+              {" "}unlikely wage-table signals. These are preliminary page
+              hints, not wage observations. A separate serial merge and
+              manual calibration are next; OCR, final wage extraction,
+              ingestion, and codification have not started.
+            </>
+          ) : textTableDetectionStatus.text_table_detection_phase ===
           "pilot1_collected_not_merged" ? (
             <>
               All{" "}

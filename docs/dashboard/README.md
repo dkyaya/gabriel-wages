@@ -243,20 +243,22 @@ absent; technical parseability is high, medium, and low for the same groups.
 Page counts range from 1 to 463, have a median of 44, and represent 108,028
 pages. Parser, hash, missing-artifact, and signature failures are zero.
 
-The PDF-readiness phase remains `full_retained_merged`. A bounded local
-text/table-detection pilot has now checked 150 representative
-`parse_text_layer_later` artifacts in three 50-row lanes. It produced 94
-likely, 55 possible, and one unlikely wage-table signal; 112 likely, 20
-possible, and 18 unlikely contract-period signals; and 135 likely, 14
-possible, and one unlikely table-structure signal. The runner retained 599
-candidate page-number hints but no table cells, complete page text, document
-text, or final wage values.
+The PDF-readiness phase remains `full_retained_merged`. The full bounded
+local text/table-detection pass has now checked all 1,828
+`parse_text_layer_later` artifacts in four 457-row lanes. It produced 1,067
+likely, 749 possible, and 12 unlikely wage-table signals; 1,672 likely, 103
+possible, and 53 unlikely contract-period signals; and 1,717 likely, 107
+possible, and four unlikely table-structure signals. The runner retained
+7,649 candidate page-number hints but no table cells, complete page text,
+document text, or final wage values.
 
-The text/table-detection phase is `pilot1_collected_not_merged`. All 150
-rows are terminal and the three lanes are structurally merge-eligible, but
-no durable detection merge occurred. The next recommendation is a full
-local detection pass over the 1,828 parse-text candidates after calibrating
-the deliberately sensitive heuristic on the pilot outputs. No URL was
+The text/table-detection phase is
+`full_parse_text_collected_not_merged`. All 1,828 rows are terminal and the
+four lanes are structurally merge-eligible, but no durable detection merge
+occurred. The 150 Pilot 1 identities were rerun under the same frozen
+heuristic and reproduced exactly. The next recommendation is a separate
+serial full-run merge, followed by manual calibration of likely, possible,
+and unlikely page hints before any wage-table extraction pilot. No URL was
 opened, nothing was downloaded, OCR did not run, and ingestion,
 codification, final wage extraction, and wage-gap analysis remain
 unperformed.

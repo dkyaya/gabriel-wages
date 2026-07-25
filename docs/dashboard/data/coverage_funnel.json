@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": "0.1.0",
-    "generated_at": "2026-07-25T12:55:50Z",
+    "generated_at": "2026-07-25T13:12:32Z",
     "data_vintage": "2026-07-23",
     "source_files": [
       "docs/analysis/national_scout_coverage_state.csv",
@@ -41,7 +41,8 @@
       "docs/analysis/pdf_readiness_pilots/PDF-READINESS-REMAINDER-ALL-RETAINED-2026-07-24/pdf_readiness_collection_summary.json",
       "docs/analysis/pdf_readiness_ledgers/pdf_readiness_ledger_latest.csv",
       "docs/analysis/pdf_readiness_ledgers/pdf_readiness_summary_cumulative.json",
-      "docs/analysis/text_table_detection_pilots/TEXT-TABLE-DETECTION-PILOT1-150-2026-07-24/text_table_detection_collection_summary.json"
+      "docs/analysis/text_table_detection_pilots/TEXT-TABLE-DETECTION-PILOT1-150-2026-07-24/text_table_detection_collection_summary.json",
+      "docs/analysis/text_table_detection_pilots/TEXT-TABLE-DETECTION-FULL-PARSE-TEXT-2026-07-24/text_table_detection_collection_summary.json"
     ],
     "warnings": [],
     "limitations": [

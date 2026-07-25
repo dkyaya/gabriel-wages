@@ -6,6 +6,34 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-25 (Full text/table-detection run collected; serial merge pending)
+
+**Did**
+- Started from clean tracked `4a9c2c78e3812c6ac02cd78a574a228399e55a3e`, confirmed all requested ancestry, and preserved the unrelated untracked root `package-lock.json`.
+- Extended the offline planner with an all-parse-text mode, four-lane balancing, and fail-closed freezing to `bounded_keyword_numeric_structure_v1`. The offline/mock suite now has 16 passing tests.
+- Recomputed exactly 1,828 durable `parse_text_layer_later` rows and excluded all 296 `ocr_later` rows. Locked four 457-row lanes with SHA-256 `eaec2dec027f332486199012175d876f284859f33c7c2b67b541a2b8f190a442`, `dcd1413776de58b3981c5d0625c93de95702aed8739538d6b08c54328e70c0a8`, `b71af7bbd072193cd2cd4755fba1aa64fd19e2b124dd4a55e11a1985b5ad1a2b`, and `b07b153a7f45510ad5a97bb8df259be8eec357c42fcd5984983951a550f04431`.
+- All four dry runs passed without opening PDFs. The four local lanes then produced 1,828 / 1,828 terminal `detection_checked` rows; hashes, missing artifacts, parser errors, candidate-page validation, hint bounds, heuristic version, and full-text checks all passed.
+- Preliminary full-run signals are wage table 1,067 likely / 749 possible / 12 unlikely; contract period 1,672 likely / 103 possible / 53 unlikely; and table structure 1,717 likely / 107 possible / four unlikely. Scheduling priorities are 1,067 p1 / 754 p2 / seven p3.
+- Scanned 17,861 pages, received bounded text from 17,369, inspected 21,232,318 capped characters in memory, and retained 7,649 candidate page-number hints. No table cells, complete page/document text, or final wage values were retained.
+- Reran all 150 Pilot 1 identities under new full-run detection IDs. Exact comparison across terminal, scan, signal, candidate-page, bounded-hint, priority, and action fields found zero mismatches.
+- All four lanes are `completed_merge_eligible`; the audit recommends `merge_all_text_table_detection_lanes`. No durable detection merge occurred. The dashboard now shows `full_parse_text_collected_not_merged`.
+
+**Decisions and why**
+- Recommend a separate serial merge of the 1,828 full-run rows after relay review. The uniform full-run rerun should be operative; preserve the earlier 150-row Pilot 1 as superseded diagnostic provenance rather than double-counting it.
+- Require manual calibration of stratified likely/possible/unlikely page hints before any wage-table extraction pilot. The 99.34% likely-or-possible rate confirms a sensitive scheduling heuristic, not extraction-grade precision or wage-table prevalence.
+- Keep OCR, final wage extraction, ingestion, and codification separately gated. Candidate page hints and contract-period snippets are preliminary structural signals only.
+
+**Surprises/breakage**
+- `pypdf` emitted repair warnings for malformed object pointers in some retained PDFs, especially one Lane 2 file, but recovered; terminal parser errors remained zero.
+- An independent validator initially used an incorrect remembered hash for the municipality-coverage authority. A direct comparison with the starting commit confirmed the file was unchanged; the fixture was corrected to the actual starting-commit hash and the full gate passed.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Five compiles, 16 offline/mock tests, the final 1,828-row four-lane audit, independent exact-authority/Pilot-1-reproducibility/redaction checks, dashboard JSON/frontend production build, schema validation, 60 ingestion tests, protected/upstream hashes, secret-safety and diff checks passed. No URL, network/API/model call, download/redownload, OCR, final wage extraction, scout-accounting or routing/triage/source-review/PDF-readiness-ledger mutation, ingestion, `gabriel.codify`, wage-gap work, causal claim, regression, durable detection merge, remote action, or push occurred.
+
+**Next steps**
+1. Review the 1,828-row lane outputs, audit, preliminary signals, calibration warning, validation, dashboard status, future merge prompt, and lite relay.
+2. If separately authorized, serially merge only the four full-run lane ledgers, treating the rerun as the uniform result and Pilot 1 as preserved superseded provenance.
+3. After merge, manually calibrate likely/possible/unlikely page hints before designing a bounded wage-table extraction pilot. Keep OCR, final wage extraction, ingestion, codification, and wage analysis separately authorized.
+
 ## 2026-07-25 (Text/table-detection Pilot 1 collected; no durable detection merge)
 
 **Did**

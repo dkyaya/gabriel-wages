@@ -21,6 +21,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_PILOT_ID = "TEXT-TABLE-DETECTION-PILOT1-150-2026-07-24"
 DEFAULT_SAMPLE_SIZE = 150
 DEFAULT_NUM_LANES = 3
+FROZEN_HEURISTIC_VERSION = "bounded_keyword_numeric_structure_v1"
 
 IDENTITY_FIELDS = [
     "text_table_detection_id",
@@ -406,6 +407,13 @@ def create_plan(args: argparse.Namespace) -> dict[str, object]:
         raise ValueError("sample size and lane count must be positive")
     if not args.exclude_ocr_later:
         raise ValueError("--exclude-ocr-later is mandatory for this pilot")
+    if not args.balance_lanes:
+        raise ValueError("--balance-lanes is mandatory")
+    if args.freeze_heuristic_version != FROZEN_HEURISTIC_VERSION:
+        raise ValueError(
+            "unsupported heuristic version; expected "
+            f"{FROZEN_HEURISTIC_VERSION}"
+        )
 
     fieldnames, all_rows = read_csv(readiness_path)
     eligible = validate_authority(
@@ -414,12 +422,17 @@ def create_plan(args: argparse.Namespace) -> dict[str, object]:
         include_partial=args.include_partial_text_layer,
         exclude_ocr_later=args.exclude_ocr_later,
     )
-    selected = select_diverse(
-        eligible,
-        args.sample_size,
-        pilot_id=args.pilot_id,
-        state_diversity=args.state_diversity,
-    )
+    if args.all_parse_text:
+        selected = list(eligible)
+        effective_size = len(selected)
+    else:
+        selected = select_diverse(
+            eligible,
+            args.sample_size,
+            pilot_id=args.pilot_id,
+            state_diversity=args.state_diversity,
+        )
+        effective_size = args.sample_size
     selected_review_ids = {row["source_review_id"] for row in selected}
     selected_triage_ids = {row["triage_id"] for row in selected}
     supporting_sources = [
@@ -437,8 +450,8 @@ def create_plan(args: argparse.Namespace) -> dict[str, object]:
 
     lanes = balance_lanes(selected, args.num_lanes)
     expected_sizes = [
-        args.sample_size // args.num_lanes
-        + (1 if index < args.sample_size % args.num_lanes else 0)
+        effective_size // args.num_lanes
+        + (1 if index < effective_size % args.num_lanes else 0)
         for index in range(args.num_lanes)
     ]
     if [len(lane) for lane in lanes] != expected_sizes:
@@ -473,8 +486,15 @@ def create_plan(args: argparse.Namespace) -> dict[str, object]:
                         "artifact_byte_size_bin"
                     ],
                     "sample_selection_reason": (
-                        "deterministic diversity sample from durable "
-                        "parse_text_layer_later retained PDFs"
+                        (
+                            "complete durable parse_text_layer_later "
+                            "universe under frozen heuristic"
+                        )
+                        if args.all_parse_text
+                        else (
+                            "deterministic diversity sample from durable "
+                            "parse_text_layer_later retained PDFs"
+                        )
                     ),
                 }
             )
@@ -515,6 +535,9 @@ def create_plan(args: argparse.Namespace) -> dict[str, object]:
             {
                 "lane_id": f"lane_{lane_number}",
                 "expected_rows": len(prepared),
+                "frozen_heuristic_version": (
+                    args.freeze_heuristic_version
+                ),
                 "input_csv": lane_path.as_posix(),
                 "input_sha256": lane_hash,
                 "input_audit": audit_path.as_posix(),
@@ -568,7 +591,9 @@ def create_plan(args: argparse.Namespace) -> dict[str, object]:
         "num_lanes": len(lanes),
         "lane_rows": [len(lane) for lane in lanes],
         "selection": {
-            "sample_size": args.sample_size,
+            "sample_size": effective_size,
+            "all_parse_text": args.all_parse_text,
+            "balance_lanes": args.balance_lanes,
             "state_diversity": args.state_diversity,
             "include_partial_text_layer": (
                 args.include_partial_text_layer
@@ -580,6 +605,7 @@ def create_plan(args: argparse.Namespace) -> dict[str, object]:
             "full_text_saved": False,
             "final_wage_extraction": False,
         },
+        "frozen_heuristic_version": args.freeze_heuristic_version,
         "selected_distributions": {
             field: distribution(flattened, field)
             for field in DIVERSITY_FIELDS
@@ -637,7 +663,8 @@ def create_plan(args: argparse.Namespace) -> dict[str, object]:
                 "",
                 f"Pilot: `{args.pilot_id}`",
                 "",
-                "Run all three dry-run lanes before opening a retained PDF. "
+                f"Run all {len(lanes)} dry-run lanes before opening a "
+                "retained PDF. "
                 "The local runner may open only the paths locked in these "
                 "inputs, must verify hash and size first, scan at most 10 "
                 "deterministic pages and 1,500 characters per page, save no "
@@ -681,7 +708,17 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--sample-size", type=int, default=DEFAULT_SAMPLE_SIZE
     )
+    parser.add_argument(
+        "--all-parse-text",
+        action="store_true",
+        help="Select the complete eligible parse_text_layer_later universe.",
+    )
     parser.add_argument("--num-lanes", type=int, default=DEFAULT_NUM_LANES)
+    parser.add_argument(
+        "--balance-lanes",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+    )
     parser.add_argument(
         "--state-diversity",
         action=argparse.BooleanOptionalAction,
@@ -696,6 +733,10 @@ def build_parser() -> argparse.ArgumentParser:
         "--exclude-ocr-later",
         action=argparse.BooleanOptionalAction,
         default=True,
+    )
+    parser.add_argument(
+        "--freeze-heuristic-version",
+        default=FROZEN_HEURISTIC_VERSION,
     )
     parser.add_argument("--plan-only", action="store_true")
     return parser

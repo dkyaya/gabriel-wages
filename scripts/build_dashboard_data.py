@@ -182,6 +182,12 @@ TEXT_TABLE_DETECTION_PILOT1_SUMMARY_PATH = (
     / "TEXT-TABLE-DETECTION-PILOT1-150-2026-07-24"
     / "text_table_detection_collection_summary.json"
 )
+TEXT_TABLE_DETECTION_FULL_RUN_SUMMARY_PATH = (
+    ANALYSIS_DIR
+    / "text_table_detection_pilots"
+    / "TEXT-TABLE-DETECTION-FULL-PARSE-TEXT-2026-07-24"
+    / "text_table_detection_collection_summary.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -243,6 +249,7 @@ OPTIONAL_PATHS = [
     PDF_READINESS_DURABLE_LEDGER_PATH,
     PDF_READINESS_DURABLE_SUMMARY_PATH,
     TEXT_TABLE_DETECTION_PILOT1_SUMMARY_PATH,
+    TEXT_TABLE_DETECTION_FULL_RUN_SUMMARY_PATH,
 ]
 
 STATE_NAMES = {
@@ -3318,9 +3325,12 @@ def build_pdf_readiness_status_summary(
 def build_text_table_detection_status_summary(
     *, metadata: dict[str, Any]
 ) -> dict[str, Any]:
-    """Build bounded local text/table-detection pilot status."""
+    """Build bounded local text/table-detection collection status."""
 
-    if not TEXT_TABLE_DETECTION_PILOT1_SUMMARY_PATH.exists():
+    if (
+        not TEXT_TABLE_DETECTION_PILOT1_SUMMARY_PATH.exists()
+        and not TEXT_TABLE_DETECTION_FULL_RUN_SUMMARY_PATH.exists()
+    ):
         return {
             **metadata,
             "text_table_detection_phase": "not_started",
@@ -3343,7 +3353,6 @@ def build_text_table_detection_status_summary(
             ],
         }
 
-    pilot = read_json(TEXT_TABLE_DETECTION_PILOT1_SUMMARY_PATH)
     forbidden_fields = (
         "urls_opened",
         "network_calls",
@@ -3356,6 +3365,119 @@ def build_text_table_detection_status_summary(
         "codify_actions",
         "durable_text_table_merges",
     )
+    if TEXT_TABLE_DETECTION_FULL_RUN_SUMMARY_PATH.exists():
+        full_run = read_json(TEXT_TABLE_DETECTION_FULL_RUN_SUMMARY_PATH)
+        if (
+            full_run.get("status")
+            != "text_table_detection_full_parse_text_collected_not_merged"
+            or full_run.get("round_id")
+            != "TEXT-TABLE-DETECTION-FULL-PARSE-TEXT-2026-07-24"
+            or int(full_run.get("planned_rows", 0)) != 1828
+            or int(full_run.get("ledger_rows", 0)) != 1828
+            or int(full_run.get("terminal_rows", 0)) != 1828
+            or full_run.get("lane_rows") != [457, 457, 457, 457]
+            or full_run.get("lane_classification_counts")
+            != {"completed_merge_eligible": 4}
+            or full_run.get("detection_status_counts")
+            != {"detection_checked": 1828}
+            or full_run.get("heuristic_version")
+            != "bounded_keyword_numeric_structure_v1"
+            or int(full_run.get("heuristic_mismatches", -1)) != 0
+            or int(full_run.get("hash_failures", -1)) != 0
+            or int(full_run.get("missing_artifacts", -1)) != 0
+            or int(full_run.get("parser_errors", -1)) != 0
+            or int(full_run.get("candidate_page_errors", -1)) != 0
+            or int(full_run.get("hint_overruns", -1)) != 0
+            or int(full_run.get("full_text_artifacts_found", -1)) != 0
+            or int(
+                full_run.get("contract_hint_money_pattern_violations", -1)
+            )
+            != 0
+            or any(
+                int(full_run.get(field, -1)) != 0
+                for field in forbidden_fields
+            )
+            or full_run.get("durable_text_table_merge_status")
+            != "not_started"
+            or full_run.get("merge_recommendation")
+            != "merge_all_text_table_detection_lanes"
+        ):
+            raise ValueError(
+                "full text/table detection summary fails collection gates"
+            )
+
+        return {
+            **metadata,
+            "text_table_detection_phase": (
+                "full_parse_text_collected_not_merged"
+            ),
+            "latest_text_table_detection_round_id": full_run["round_id"],
+            "full_parse_text_rows_collected": int(full_run["ledger_rows"]),
+            "full_parse_text_terminal_rows": int(full_run["terminal_rows"]),
+            "full_parse_text_lane_rows": full_run["lane_rows"],
+            "full_parse_text_lane_input_sha256": full_run[
+                "lane_input_sha256"
+            ],
+            "text_table_detection_merge_status": "not_started",
+            "parse_text_layer_later_rows_available": int(
+                full_run["parse_text_layer_later_rows_available"]
+            ),
+            "ocr_later_rows": int(full_run["ocr_later_rows"]),
+            "detection_status_counts": full_run["detection_status_counts"],
+            "wage_table_signal_counts": full_run[
+                "wage_table_signal_counts"
+            ],
+            "wage_table_signal_confidence_counts": full_run[
+                "wage_table_signal_confidence_counts"
+            ],
+            "contract_period_signal_counts": full_run[
+                "contract_period_signal_counts"
+            ],
+            "contract_period_confidence_counts": full_run[
+                "contract_period_confidence_counts"
+            ],
+            "table_like_structure_signal_counts": full_run[
+                "table_like_structure_signal_counts"
+            ],
+            "extraction_pilot_priority_counts": full_run[
+                "extraction_pilot_priority_counts"
+            ],
+            "recommended_next_action_counts": full_run[
+                "recommended_next_action_counts"
+            ],
+            "pages_scanned": int(full_run["pages_scanned"]),
+            "pages_with_text": int(full_run["pages_with_text"]),
+            "bounded_text_characters_inspected": int(
+                full_run["total_text_chars_scanned"]
+            ),
+            "candidate_wage_page_hints": int(
+                full_run["candidate_wage_page_hints"]
+            ),
+            "parser_library": full_run["parser_library"],
+            "parser_version": full_run["parser_version"],
+            "heuristic_version": full_run["heuristic_version"],
+            "parser_error_rows": int(full_run["parser_errors"]),
+            "hash_failure_rows": int(full_run["hash_failures"]),
+            "missing_artifact_rows": int(full_run["missing_artifacts"]),
+            "next_recommendation": full_run["next_recommendation"],
+            "ingestion_status": "not_started",
+            "codify_status": "not_started",
+            "wage_extraction_status": "not_started",
+            "wage_gap_analysis_status": "not_started",
+            "summary_source": relative(
+                TEXT_TABLE_DETECTION_FULL_RUN_SUMMARY_PATH
+            ),
+            "caveats": [
+                "Table detection is deterministic, heuristic, and preliminary.",
+                "Candidate wage pages are page hints, not wage observations.",
+                "No final wage values were extracted.",
+                "No OCR, ingestion, or codification occurred.",
+                "Manual calibration is required before wage extraction.",
+                "Full-run outcomes are collected but not durably merged.",
+            ],
+        }
+
+    pilot = read_json(TEXT_TABLE_DETECTION_PILOT1_SUMMARY_PATH)
     if (
         pilot.get("status")
         != "text_table_detection_pilot1_collected_not_merged"

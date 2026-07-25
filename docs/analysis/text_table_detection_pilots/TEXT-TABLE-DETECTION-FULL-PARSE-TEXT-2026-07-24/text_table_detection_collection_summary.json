@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0.0",
+  "status": "text_table_detection_full_parse_text_collected_not_merged",
+  "round_id": "TEXT-TABLE-DETECTION-FULL-PARSE-TEXT-2026-07-24",
+  "planned_rows": 1828,
+  "ledger_rows": 1828,
+  "terminal_rows": 1828,
+  "lane_rows": [
+    457,
+    457,
+    457,
+    457
+  ],
+  "lane_input_sha256": [
+    "eaec2dec027f332486199012175d876f284859f33c7c2b67b541a2b8f190a442",
+    "dcd1413776de58b3981c5d0625c93de95702aed8739538d6b08c54328e70c0a8",
+    "b71af7bbd072193cd2cd4755fba1aa64fd19e2b124dd4a55e11a1985b5ad1a2b",
+    "b07b153a7f45510ad5a97bb8df259be8eec357c42fcd5984983951a550f04431"
+  ],
+  "lane_classification_counts": {
+    "completed_merge_eligible": 4
+  },
+  "parse_text_layer_later_rows_available": 1828,
+  "ocr_later_rows": 296,
+  "pilot1_overlap_rows_rerun": 150,
+  "pilot1_frozen_heuristic_mismatch_rows": 0,
+  "detection_status_counts": {
+    "detection_checked": 1828
+  },
+  "wage_table_signal_counts": {
+    "likely": 1067,
+    "possible": 749,
+    "unlikely": 12
+  },
+  "wage_table_signal_confidence_counts": {
+    "high": 1067,
+    "medium": 749,
+    "low": 12
+  },
+  "contract_period_signal_counts": {
+    "likely": 1672,
+    "possible": 103,
+    "unlikely": 53
+  },
+  "contract_period_confidence_counts": {
+    "high": 1672,
+    "medium": 103,
+    "low": 53
+  },
+  "table_like_structure_signal_counts": {
+    "likely": 1717,
+    "possible": 107,
+    "unlikely": 4
+  },
+  "extraction_pilot_priority_counts": {
+    "p1": 1067,
+    "p2": 754,
+    "p3": 7
+  },
+  "recommended_next_action_counts": {
+    "wage_table_extraction_pilot": 1067,
+    "larger_text_detection_pass": 747,
+    "contract_period_extraction_pilot": 7,
+    "manual_review": 7
+  },
+  "source_review_batch_distribution": {
+    "SOURCE-REVIEW-PILOT1-150-2026-07-24": 127,
+    "SOURCE-REVIEW-BATCH2-500-2026-07-24": 404,
+    "SOURCE-REVIEW-BATCH3-3X500-2026-07-24": 1297
+  },
+  "priority_distribution": {
+    "p1": 1501,
+    "p2": 327
+  },
+  "unit_type_distribution": {
+    "police": 782,
+    "fire": 439,
+    "non_safety": 607
+  },
+  "source_officialness_distribution": {
+    "official_municipal": 648,
+    "official_state_repository": 525,
+    "official_union": 42,
+    "uncertain": 546,
+    "unknown": 67
+  },
+  "candidate_source_type_distribution": {
+    "cba": 1719,
+    "wage_schedule_or_compensation_plan": 58,
+    "memorandum_or_settlement": 20,
+    "ordinance_or_policy": 19,
+    "arbitration_award": 10,
+    "factfinding": 2
+  },
+  "page_count_bin_distribution": {
+    "1_to_10": 76,
+    "11_to_25": 174,
+    "26_to_50": 846,
+    "51_to_100": 617,
+    "over_100": 115
+  },
+  "text_layer_status_distribution": {
+    "present": 1608,
+    "partial": 220
+  },
+  "pages_scanned": 17861,
+  "pages_with_text": 17369,
+  "total_text_chars_scanned": 21232318,
+  "candidate_wage_page_hints": 7649,
+  "maximum_contract_hint_characters": 300,
+  "contract_hint_money_pattern_violations": 0,
+  "parser_library": "pypdf",
+  "parser_version": "6.13.2",
+  "heuristic_version": "bounded_keyword_numeric_structure_v1",
+  "heuristic_mismatches": 0,
+  "lane_elapsed_seconds": [
+    84.725615,
+    75.675852,
+    81.141593,
+    84.002896
+  ],
+  "aggregate_lane_elapsed_seconds": 325.545956,
+  "parallel_wall_clock_seconds": 84.725615,
+  "parallel_wall_clock_rows_per_hour": 77671.906,
+  "hash_failures": 0,
+  "missing_artifacts": 0,
+  "parser_errors": 0,
+  "candidate_page_errors": 0,
+  "hint_overruns": 0,
+  "full_text_artifacts_found": 0,
+  "urls_opened": 0,
+  "network_calls": 0,
+  "downloads": 0,
+  "redownloads": 0,
+  "ocr_runs": 0,
+  "full_text_artifacts_written": 0,
+  "final_wage_values_extracted": 0,
+  "ingestion_actions": 0,
+  "codify_actions": 0,
+  "durable_text_table_merges": 0,
+  "durable_text_table_merge_status": "not_started",
+  "merge_recommendation": "merge_all_text_table_detection_lanes",
+  "next_recommendation": "serial_full_run_merge_then_manual_calibration",
+  "audit_summary": "tmp/text_table_detection_pilots/TEXT-TABLE-DETECTION-FULL-PARSE-TEXT-2026-07-24/local_lane_audit_attempt1/text_table_detection_lane_audit_summary.json",
+  "caveats": [
+    "Table detection is deterministic, heuristic, and preliminary.",
+    "Candidate wage pages are page hints, not extracted wage observations.",
+    "No final wage values were extracted.",
+    "No OCR, ingestion, or codification occurred.",
+    "High likely and possible signal rates require manual calibration before wage extraction."
+  ]
+}
