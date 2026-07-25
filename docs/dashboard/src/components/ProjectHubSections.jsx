@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "refinement_prepared_after_failed_review"
+              ? "Visual table gate prepared; refined re-review is next"
+              : textTableCalibrationStatus.calibration_phase ===
             "subset1_reviewed"
               ? textTableCalibrationStatus.calibration_pass_status === "fail"
                 ? "Assisted calibration complete; extraction gate failed"
@@ -768,6 +771,18 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "refinement_prepared_after_failed_review" ? (
+            <>
+              The prior 150-row assisted review remains a failed extraction
+              gate: its rendered-page challenge disagreed in all five checked
+              cases. The refined schema now separates wage prose, pay-number
+              language, visually supported table structure, non-wage tables,
+              and contents/appendix navigation. The same 150 rows must be
+              re-reviewed under the refined visual gate before extraction;
+              the 500-document extraction run remains prohibited. No OCR,
+              wage extraction, ingestion, or codification occurred.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "subset1_reviewed" ? (
             <>
               All{" "}

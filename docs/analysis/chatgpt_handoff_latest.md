@@ -6,6 +6,37 @@ Last updated: `2026-07-25`
 
 ---
 
+## 2026-07-25 — Refined visual table gate is prepared; re-review has not run
+
+### Current State
+
+- **Start and failure authority:** work began at clean tracked `7438f1a68fc0a9874fb5340523f1d9325055ba80`. REVIEW1 remains the diagnostic authority: 150 assisted rows, 55 needing second review, extraction gate `fail`, and five material disagreements in five rendered-page challenges.
+- **Refined schema:** [the schema](text_table_detection_refined_schema_2026-07-24.md) separates wage language, pay-numeric language, actual table structure, confirmed wage schedules, page relationships, navigation, confirmation method, and extraction-gate reasons.
+- **Refined rubric:** [the rubric](text_table_detection_refined_review_rubric_2026-07-24.md) treats prose, benefits tables, classification-only pages, non-wage tables, front matter, and contents/index pages as distinct families. Wage language alone can never authorize extraction.
+- **Tooling:** `review_text_table_calibration_subset.py` now supports opt-in `refined_visual_gate_v1` with six bounded pages, three temporary renders, four navigation targets, and 300-character notes by default. Legacy behavior is preserved. Renderer success is not called human review.
+- **Tests:** ten legacy plus nine refined synthetic tests pass. They enforce negative families, contents navigation, bounded rendering/page/snippet budgets, allowed labels, preserved identities, immutable REVIEW1 files, and no network/OCR/full-text output.
+- **Future run:** [the REVIEW2 prompt](text_table_calibration_subset1_refined_re_review_prompt_2026-07-24.md) is preparation only. It targets the same 150 identities under new ID `TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24`; it was not run.
+- **Dashboard:** `calibration_phase = refinement_prepared_after_failed_review`; the prior gate remains `fail`, next is `refined_re_review_before_extraction`, and wage extraction, ingestion, codification, and wage-gap analysis remain `not_started`.
+- **Boundary:** original calibration input and REVIEW1 files remain byte-identical. Only synthetic fixture PDFs were opened by tests; no selected calibration artifact, URL, network/API/model service, download, OCR, wage extraction, durable-ledger mutation, ingestion, codification, remote action, or push occurred.
+
+### Interpretation
+
+The refinement fixes the conceptual failure in the old assisted workflow:
+wage-related prose is now recorded separately from table structure. It also
+adds bounded contents/index/appendix navigation and prevents a front page,
+benefit table, or classification list without pay from receiving a
+wage-schedule layout. These are preparation controls, not a new precision
+estimate and not extraction authorization.
+
+### Next Move
+
+Review [the future refined re-review prompt](text_table_calibration_subset1_refined_re_review_prompt_2026-07-24.md).
+If separately authorized, run REVIEW2 only on the original 150 calibration
+artifacts, preserve REVIEW1, and perform a documented independent visual QA
+challenge. Decide explicitly among a 500-document run, a smaller separately
+approved pilot, or continued schema refinement. Until those gates pass, do
+not run wage extraction, OCR, ingestion, or codification.
+
 ## 2026-07-25 — Calibration was assisted-reviewed; extraction gate failed
 
 ### Current State

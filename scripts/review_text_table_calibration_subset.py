@@ -16,6 +16,8 @@ import importlib.metadata
 import json
 import os
 import re
+import subprocess
+import tempfile
 import time
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
@@ -51,6 +53,10 @@ DEFAULT_AUTHORITY = (
 )
 REVIEWER = "codex_assisted_local_review"
 REVIEW_METHOD = "codex_assisted_local_adjudication"
+REFINED_REVIEWER = "codex_refined_visual_gate_review"
+REFINED_REVIEW_METHOD = "codex_refined_visual_table_gate_v1"
+LEGACY_REVIEW_MODE = "legacy_assisted_local_v1"
+REFINED_REVIEW_MODE = "refined_visual_gate_v1"
 MAX_INTERNAL_PAGE_CHARS = 20_000
 
 MANUAL_FIELDS = (
@@ -86,6 +92,29 @@ AUDIT_FIELDS = (
     "pages_with_text_review",
     "bounded_text_chars_inspected",
     "review_elapsed_seconds",
+)
+REFINED_FIELDS = (
+    "wage_language_present_label",
+    "pay_numeric_language_present_label",
+    "visual_table_structure_label",
+    "wage_schedule_table_confirmed_label",
+    "candidate_page_relationship_label",
+    "table_navigation_signal",
+    "visual_confirmation_method",
+    "extraction_gate_label",
+    "extraction_gate_reason",
+    "refined_review_mode",
+    "navigation_pages_requested",
+    "navigation_pages_inspected",
+    "navigation_references_found",
+    "rendered_pages_review",
+    "rendered_page_count",
+    "render_failures",
+    "table_row_like_line_count",
+    "table_column_evidence_count",
+    "benefit_term_count",
+    "wage_term_count_refined",
+    "pay_numeric_token_count",
 )
 ALLOWED = {
     "calibration_status": {
@@ -146,6 +175,60 @@ ALLOWED = {
         "unknown",
     },
     "reviewer_confidence": {"high", "medium", "low", "unknown"},
+    "wage_language_present_label": {"yes", "maybe", "no", "unknown"},
+    "pay_numeric_language_present_label": {
+        "yes",
+        "maybe",
+        "no",
+        "unknown",
+    },
+    "visual_table_structure_label": {
+        "confirmed_table",
+        "possible_table",
+        "prose_only",
+        "index_or_contents",
+        "benefits_table",
+        "classification_only",
+        "non_wage_table",
+        "front_matter",
+        "unknown",
+    },
+    "wage_schedule_table_confirmed_label": {
+        "yes",
+        "maybe",
+        "no",
+        "unknown",
+    },
+    "candidate_page_relationship_label": {
+        "exact_table_page",
+        "adjacent_to_table",
+        "points_to_later_table",
+        "wrong_page",
+        "no_candidate_page",
+        "unknown",
+    },
+    "table_navigation_signal": {
+        "direct",
+        "nearby",
+        "index_or_contents",
+        "appendix_reference",
+        "none",
+        "unknown",
+    },
+    "visual_confirmation_method": {
+        "rendered_page",
+        "text_structure_plus_rendered_check",
+        "text_structure_only",
+        "human_manual",
+        "unknown",
+    },
+    "extraction_gate_label": {
+        "pass_high_confidence",
+        "pass_with_schema_update",
+        "second_review_required",
+        "fail_exclude",
+        "unknown",
+    },
 }
 SENSITIVE_ERROR = re.compile(
     r"(?i)(https?://|token|cookie|authorization|api[_-]?key|password)"
@@ -168,6 +251,34 @@ INCREASE_RE = re.compile(
 APPENDIX_RE = re.compile(
     r"\b(?:appendix|schedule\s+[a-z])\b", re.IGNORECASE
 )
+FRONT_MATTER_RE = re.compile(
+    r"\b(?:memorandum|recommendation|synopsis|transmittal|"
+    r"agreement\s+between|execution copy)\b",
+    re.IGNORECASE,
+)
+WAGE_LANGUAGE_RE = re.compile(
+    r"\b(?:wage|wages|salary|salaries|pay\s+(?:rate|schedule|plan)|"
+    r"compensation|hourly\s+rate|annual\s+salary|step\s+\d+|"
+    r"grade\s+\d+)\b",
+    re.IGNORECASE,
+)
+PAY_NUMERIC_RE = re.compile(
+    r"(?<!\w)(?:\$\s*)?(?:\d{1,3}(?:,\d{3})+|\d+)"
+    r"(?:\.\d{1,4})?%?(?!\w)"
+)
+TABLE_HEADER_RE = re.compile(
+    r"\b(?:step|grade|range|rank|classification|class(?:ification)?|"
+    r"position|hourly|annual|salary|wage|rate|effective)\b",
+    re.IGNORECASE,
+)
+NAVIGATION_TARGET_RE = re.compile(
+    r"\b(?:salary|wage|pay|compensation)\s+"
+    r"(?:table|schedule|plan|appendix)|"
+    r"\b(?:table|schedule|appendix)\s+[a-z]?\s*"
+    r"(?:salary|wage|pay|compensation)\b",
+    re.IGNORECASE,
+)
+PAGE_NUMBER_AT_END_RE = re.compile(r"\b(\d{1,4})\s*$")
 
 
 def now_utc() -> str:
@@ -387,11 +498,22 @@ def initial_result(
     input_fields: list[str],
     review_id: str,
     method: str,
+    review_mode: str = LEGACY_REVIEW_MODE,
 ) -> dict[str, str]:
+    reviewer = (
+        REFINED_REVIEWER
+        if review_mode == REFINED_REVIEW_MODE
+        else REVIEWER
+    )
+    review_method = (
+        REFINED_REVIEW_METHOD
+        if review_mode == REFINED_REVIEW_MODE
+        else REVIEW_METHOD
+    )
     result = {field: row.get(field, "") for field in input_fields}
     result.update(
         {
-            "reviewer": "" if method == "dry_run" else REVIEWER,
+            "reviewer": "" if method == "dry_run" else reviewer,
             "reviewed_at": "" if method == "dry_run" else now_utc(),
             "calibration_status": "not_reviewed",
             "page_hint_precision_label": "unknown",
@@ -408,9 +530,9 @@ def initial_result(
             "reviewer_notes": "",
             "review_id": review_id,
             "review_method": (
-                "planned_no_pdf_open"
+                f"planned_no_pdf_open_{review_mode}"
                 if method == "dry_run"
-                else REVIEW_METHOD
+                else review_method
             ),
             "review_status_detail": (
                 "dry-run input validation only"
@@ -429,6 +551,27 @@ def initial_result(
             "pages_with_text_review": "0",
             "bounded_text_chars_inspected": "0",
             "review_elapsed_seconds": "0.000000",
+            "wage_language_present_label": "unknown",
+            "pay_numeric_language_present_label": "unknown",
+            "visual_table_structure_label": "unknown",
+            "wage_schedule_table_confirmed_label": "unknown",
+            "candidate_page_relationship_label": "unknown",
+            "table_navigation_signal": "unknown",
+            "visual_confirmation_method": "unknown",
+            "extraction_gate_label": "unknown",
+            "extraction_gate_reason": "",
+            "refined_review_mode": review_mode,
+            "navigation_pages_requested": "",
+            "navigation_pages_inspected": "",
+            "navigation_references_found": "",
+            "rendered_pages_review": "",
+            "rendered_page_count": "0",
+            "render_failures": "0",
+            "table_row_like_line_count": "0",
+            "table_column_evidence_count": "0",
+            "benefit_term_count": "0",
+            "wage_term_count_refined": "0",
+            "pay_numeric_token_count": "0",
         }
     )
     return result
@@ -525,6 +668,302 @@ def compare_contract_hint(
     ):
         return present, "partially_correct"
     return present, "incorrect"
+
+
+def bounded_refined_page_plan(
+    candidate_pages: list[int],
+    page_count: int,
+    window: int,
+    maximum: int,
+) -> tuple[list[int], set[int], set[int], set[int]]:
+    """Reserve context pages before sampling candidates and neighbors."""
+
+    if maximum < 1:
+        raise ValueError("max pages per document must be positive")
+    if window < 0:
+        raise ValueError("candidate page window must be nonnegative")
+    context = [number for number in (1, 2) if number <= page_count]
+    ordered = list(context[:maximum])
+    remaining = maximum - len(ordered)
+    candidates: list[int] = []
+    if candidate_pages and remaining:
+        if len(candidate_pages) <= remaining:
+            candidates = list(candidate_pages)
+        else:
+            positions = (
+                {
+                    round(
+                        index
+                        * (len(candidate_pages) - 1)
+                        / (remaining - 1)
+                    )
+                    for index in range(remaining)
+                }
+                if remaining > 1
+                else {0}
+            )
+            candidates = [
+                candidate_pages[index] for index in sorted(positions)
+            ][:remaining]
+    for number in candidates:
+        if number not in ordered and len(ordered) < maximum:
+            ordered.append(number)
+    adjacent: list[int] = []
+    for candidate in candidates:
+        for offset in range(1, window + 1):
+            for number in (candidate - offset, candidate + offset):
+                if (
+                    1 <= number <= page_count
+                    and number not in ordered
+                    and number not in adjacent
+                ):
+                    adjacent.append(number)
+    for number in adjacent:
+        if len(ordered) == maximum:
+            break
+        ordered.append(number)
+    if not ordered:
+        ordered = list(range(1, min(page_count, maximum) + 1))
+        context = list(ordered)
+    selected = set(ordered)
+    return (
+        ordered,
+        selected.intersection(candidates),
+        selected.intersection(adjacent),
+        selected.intersection(context),
+    )
+
+
+def find_navigation_references(
+    page_text: dict[int, str],
+    *,
+    page_count: int,
+) -> tuple[list[int], str]:
+    """Find bounded contents/appendix page references without following URLs."""
+
+    references: list[int] = []
+    signal = "none"
+    for text in page_text.values():
+        is_index = bool(INDEX_RE.search(text))
+        for line in text.splitlines():
+            bounded = re.sub(r"\s+", " ", line).strip()[:240]
+            if not bounded or not NAVIGATION_TARGET_RE.search(bounded):
+                continue
+            if APPENDIX_RE.search(bounded):
+                signal = "appendix_reference"
+            elif is_index and signal == "none":
+                signal = "index_or_contents"
+            match = PAGE_NUMBER_AT_END_RE.search(bounded)
+            if match:
+                number = int(match.group(1))
+                if 1 <= number <= page_count and number not in references:
+                    references.append(number)
+    return references, signal
+
+
+def bounded_navigation_plan(
+    references: list[int],
+    *,
+    page_count: int,
+    budget: int,
+    already_selected: set[int],
+) -> list[int]:
+    if budget < 0:
+        raise ValueError("navigation page budget must be nonnegative")
+    plan: list[int] = []
+    for reference in references:
+        for number in (reference, reference - 1, reference + 1):
+            if (
+                1 <= number <= page_count
+                and number not in already_selected
+                and number not in plan
+            ):
+                plan.append(number)
+            if len(plan) == budget:
+                return plan
+    return plan
+
+
+def refined_page_features(text: str) -> dict[str, object]:
+    """Derive conservative language and row/column signals from bounded text."""
+
+    lines = [
+        re.sub(r"\s+$", "", line)
+        for line in text.splitlines()
+        if line.strip()
+    ]
+    wage_terms = len(WAGE_LANGUAGE_RE.findall(text))
+    benefit_terms = len(BENEFIT_RE.findall(text))
+    pay_numeric_tokens = len(PAY_NUMERIC_RE.findall(text))
+    row_like = 0
+    column_evidence = 0
+    header_lines = 0
+    for line in lines:
+        numeric = PAY_NUMERIC_RE.findall(line)
+        columns = [
+            value
+            for value in re.split(r"\s{2,}|\t+", line.strip())
+            if value
+        ]
+        words = re.findall(r"[A-Za-z][A-Za-z/-]*", line)
+        if TABLE_HEADER_RE.search(line):
+            header_lines += 1
+        compact_row = (
+            len(numeric) >= 3
+            and len(words) <= 20
+            and len(line) <= 180
+            and not line.rstrip().endswith((".", ";"))
+        )
+        aligned_row = (
+            len(numeric) >= 2
+            and len(columns) >= 3
+            and bool(words)
+            and len(line) <= 220
+        )
+        if compact_row or aligned_row:
+            row_like += 1
+        if len(columns) >= 3 and len(words) >= 2:
+            column_evidence += 1
+    index_page = bool(INDEX_RE.search(text))
+    front_matter = bool(FRONT_MATTER_RE.search("\n".join(lines[:12])))
+    classification = bool(CLASSIFICATION_RE.search(text))
+    wage_language = (
+        "yes" if wage_terms >= 2 else "maybe" if wage_terms == 1 else "no"
+    )
+    if wage_terms and pay_numeric_tokens >= 2:
+        pay_numeric = "yes"
+    elif wage_terms and pay_numeric_tokens == 1:
+        pay_numeric = "maybe"
+    else:
+        pay_numeric = "no"
+
+    confirmed = (
+        wage_terms >= 1
+        and pay_numeric_tokens >= 2
+        and row_like >= 2
+        and (column_evidence >= 1 or header_lines >= 1)
+    )
+    possible = (
+        wage_terms >= 1
+        and pay_numeric_tokens >= 1
+        and row_like >= 1
+        and header_lines >= 1
+    )
+    benefit_dominant = (
+        benefit_terms >= 2
+        and benefit_terms > wage_terms
+        and row_like >= 1
+    )
+    if index_page:
+        structure = "index_or_contents"
+    elif benefit_dominant:
+        structure = "benefits_table"
+    elif confirmed:
+        structure = "confirmed_table"
+    elif possible:
+        structure = "possible_table"
+    elif (
+        classification
+        and pay_numeric == "no"
+        and (row_like or column_evidence >= 2)
+    ):
+        structure = "classification_only"
+    elif row_like:
+        structure = "non_wage_table"
+    elif front_matter and row_like == 0:
+        structure = "front_matter"
+    elif wage_language in {"yes", "maybe"}:
+        structure = "prose_only"
+    else:
+        structure = "unknown"
+    wage_schedule = (
+        "yes"
+        if structure == "confirmed_table" and pay_numeric == "yes"
+        else "maybe"
+        if structure == "possible_table"
+        else "no"
+    )
+    return {
+        "wage_language": wage_language,
+        "pay_numeric_language": pay_numeric,
+        "structure": structure,
+        "wage_schedule": wage_schedule,
+        "row_like_lines": row_like,
+        "column_evidence": column_evidence,
+        "benefit_terms": benefit_terms,
+        "wage_terms": wage_terms,
+        "pay_numeric_tokens": pay_numeric_tokens,
+    }
+
+
+def render_pdf_page(
+    artifact: Path,
+    page_number: int,
+    output_prefix: Path,
+) -> bool:
+    """Render one page locally; output is temporary and never retained."""
+
+    command = [
+        "pdftoppm",
+        "-f",
+        str(page_number),
+        "-l",
+        str(page_number),
+        "-singlefile",
+        "-r",
+        "96",
+        "-png",
+        str(artifact),
+        str(output_prefix),
+    ]
+    completed = subprocess.run(
+        command,
+        check=False,
+        capture_output=True,
+        text=True,
+        timeout=30,
+    )
+    rendered = output_prefix.with_suffix(".png")
+    return (
+        completed.returncode == 0
+        and rendered.is_file()
+        and rendered.stat().st_size > 100
+    )
+
+
+def refined_layout_from_text(
+    text: str,
+    structure: str,
+) -> str:
+    if structure not in {"confirmed_table", "possible_table"}:
+        if structure == "prose_only":
+            return "prose_only"
+        if structure in {
+            "benefits_table",
+            "classification_only",
+            "non_wage_table",
+            "front_matter",
+            "index_or_contents",
+        }:
+            return "no_wage_table"
+        return "unknown"
+    if STEP_GRADE_RE.search(text) and re.search(
+        r"\b(?:grade|range)\b", text, re.IGNORECASE
+    ):
+        return "step_grade"
+    if STEP_GRADE_RE.search(text) and RANK_POSITION_RE.search(text):
+        return "rank_step"
+    if CLASSIFICATION_RE.search(text):
+        return "classification_table"
+    if HOURLY_RE.search(text):
+        return "hourly_schedule"
+    if ANNUAL_RE.search(text) or SALARY_RE.search(text):
+        return "annual_salary_schedule"
+    if PERCENT_RE.search(text) and INCREASE_RE.search(text):
+        return "percent_increase_schedule"
+    if APPENDIX_RE.search(text):
+        return "appendix_table"
+    return "other"
 
 
 def adjudicate(
@@ -681,6 +1120,305 @@ def adjudicate(
     )
 
 
+def refined_adjudicate(
+    result: dict[str, str],
+    *,
+    page_text: dict[int, str],
+    page_features: dict[int, dict[str, object]],
+    requested: list[int],
+    candidate_selected: set[int],
+    adjacent_selected: set[int],
+    navigation_references: list[int],
+    navigation_pages: set[int],
+    navigation_signal: str,
+    rendered_pages: set[int],
+    require_visual_table_confirmation: bool,
+) -> None:
+    """Apply the conservative visual/table gate without extracting cells."""
+
+    confirmed_pages = {
+        number
+        for number, features in page_features.items()
+        if features["structure"] == "confirmed_table"
+        and features["wage_schedule"] == "yes"
+    }
+    possible_pages = {
+        number
+        for number, features in page_features.items()
+        if features["structure"] == "possible_table"
+    }
+    qualifying_pages = confirmed_pages | possible_pages
+    exact_pages = qualifying_pages.intersection(candidate_selected)
+    nearby_pages = qualifying_pages.intersection(adjacent_selected)
+    navigated_table_pages = qualifying_pages.intersection(navigation_pages)
+
+    if exact_pages:
+        relationship = "exact_table_page"
+        effective_navigation = "direct"
+    elif nearby_pages:
+        relationship = "adjacent_to_table"
+        effective_navigation = "nearby"
+    elif navigation_references:
+        relationship = "points_to_later_table"
+        effective_navigation = (
+            navigation_signal
+            if navigation_signal in {
+                "index_or_contents",
+                "appendix_reference",
+            }
+            else "index_or_contents"
+        )
+    elif requested:
+        relationship = "wrong_page"
+        effective_navigation = "none"
+    else:
+        relationship = "no_candidate_page"
+        effective_navigation = "none"
+
+    structures = [
+        str(features["structure"]) for features in page_features.values()
+    ]
+    if confirmed_pages:
+        structure = "confirmed_table"
+    elif possible_pages:
+        structure = "possible_table"
+    else:
+        structure = next(
+            (
+                value
+                for value in (
+                    "index_or_contents",
+                    "benefits_table",
+                    "classification_only",
+                    "non_wage_table",
+                    "front_matter",
+                    "prose_only",
+                )
+                if value in structures
+            ),
+            "unknown",
+        )
+
+    wage_labels = {
+        str(features["wage_language"]) for features in page_features.values()
+    }
+    pay_numeric_labels = {
+        str(features["pay_numeric_language"])
+        for features in page_features.values()
+    }
+    wage_language = (
+        "yes"
+        if "yes" in wage_labels
+        else "maybe"
+        if "maybe" in wage_labels
+        else "no"
+    )
+    pay_numeric = (
+        "yes"
+        if "yes" in pay_numeric_labels
+        else "maybe"
+        if "maybe" in pay_numeric_labels
+        else "no"
+    )
+    if confirmed_pages:
+        wage_schedule = "yes"
+    elif possible_pages or navigation_references:
+        wage_schedule = "maybe"
+    else:
+        wage_schedule = "no"
+
+    rendered_relevant = qualifying_pages.intersection(rendered_pages)
+    visual_method = (
+        "text_structure_plus_rendered_check"
+        if rendered_pages
+        else "text_structure_only"
+    )
+    visual_gate_met = (
+        not require_visual_table_confirmation or bool(rendered_relevant)
+    )
+
+    if (
+        confirmed_pages
+        and relationship in {
+            "exact_table_page",
+            "adjacent_to_table",
+            "points_to_later_table",
+        }
+        and visual_gate_met
+    ):
+        gate = "pass_high_confidence"
+        gate_reason = (
+            "Confirmed repeated wage/pay rows and columns on a bounded "
+            "candidate-related page with the configured render check."
+        )
+    elif (
+        possible_pages
+        and relationship in {"exact_table_page", "adjacent_to_table"}
+        and visual_gate_met
+    ):
+        gate = "pass_with_schema_update"
+        gate_reason = (
+            "Possible wage table has bounded row/column evidence but needs "
+            "schema or layout adjudication."
+        )
+    elif relationship == "points_to_later_table":
+        gate = "second_review_required"
+        gate_reason = (
+            "Contents/index/appendix language points to a later wage table; "
+            "the reference requires independent confirmation."
+        )
+    elif wage_language in {"yes", "maybe"} and structure in {
+        "prose_only",
+        "front_matter",
+        "index_or_contents",
+        "possible_table",
+    }:
+        gate = "second_review_required"
+        gate_reason = (
+            "Wage/pay language is present without a visually gated confirmed "
+            "table."
+        )
+    elif confirmed_pages and not visual_gate_met:
+        gate = "second_review_required"
+        gate_reason = (
+            "Strong text-structure evidence exists, but the required bounded "
+            "render confirmation is unavailable."
+        )
+    elif structure in {
+        "benefits_table",
+        "classification_only",
+        "non_wage_table",
+        "front_matter",
+    }:
+        gate = "fail_exclude"
+        gate_reason = (
+            "Bounded evidence is benefits/non-wage/classification/front "
+            "matter rather than a usable wage schedule."
+        )
+    else:
+        gate = "fail_exclude"
+        gate_reason = "No bounded wage-table structure was confirmed."
+
+    if relationship == "exact_table_page":
+        page_precision = "correct"
+        page_match = "exact"
+    elif relationship in {"adjacent_to_table", "points_to_later_table"}:
+        page_precision = "partially_correct"
+        page_match = "nearby"
+    elif relationship == "wrong_page":
+        page_precision = "incorrect"
+        page_match = (
+            "no_wage_table" if wage_schedule == "no" else "wrong_page"
+        )
+    elif relationship == "no_candidate_page":
+        page_precision = "not_applicable"
+        page_match = (
+            "no_wage_table" if wage_schedule == "no" else "wrong_page"
+        )
+    else:
+        page_precision = "unknown"
+        page_match = "unknown"
+
+    if wage_schedule == "yes":
+        wage_presence = "yes"
+    elif wage_schedule == "maybe":
+        wage_presence = "maybe"
+    else:
+        wage_presence = "no"
+    combined_text = "\n".join(page_text.values())
+    contract_present, contract_match = compare_contract_hint(
+        result["candidate_contract_period_text"], combined_text
+    )
+    layout = refined_layout_from_text(combined_text, structure)
+    false_positive = {
+        "benefits_table": "benefit_table",
+        "classification_only": "classification_without_pay",
+        "index_or_contents": "index_or_contents",
+        "non_wage_table": "non_wage_schedule",
+        "front_matter": "other:bounded_signal_without_confirmed_table",
+        "prose_only": "other:bounded_signal_without_confirmed_table",
+    }.get(structure, "not_applicable")
+    if gate == "pass_high_confidence":
+        complexity = "easy" if len(qualifying_pages) == 1 else "moderate"
+        action = "include_in_wage_extraction_pilot"
+        confidence = "high"
+        status = "reviewed"
+    elif gate == "pass_with_schema_update":
+        complexity = "hard"
+        action = "include_after_schema_update"
+        confidence = "medium"
+        status = "reviewed"
+    elif gate == "second_review_required":
+        complexity = "hard"
+        action = "manual_review_only"
+        confidence = "low"
+        status = "needs_second_review"
+    else:
+        complexity = "not_extractable"
+        action = "exclude_for_now"
+        confidence = "medium" if structure != "unknown" else "low"
+        status = "reviewed" if structure != "unknown" else "needs_second_review"
+
+    row_like = sum(
+        int(features["row_like_lines"]) for features in page_features.values()
+    )
+    columns = sum(
+        int(features["column_evidence"]) for features in page_features.values()
+    )
+    benefit_terms = sum(
+        int(features["benefit_terms"]) for features in page_features.values()
+    )
+    wage_terms = sum(
+        int(features["wage_terms"]) for features in page_features.values()
+    )
+    pay_tokens = sum(
+        int(features["pay_numeric_tokens"])
+        for features in page_features.values()
+    )
+    result.update(
+        {
+            "calibration_status": status,
+            "page_hint_precision_label": page_precision,
+            "wage_table_present_label": wage_presence,
+            "wage_table_page_match_label": page_match,
+            "contract_period_present_label": contract_present,
+            "contract_period_hint_match_label": contract_match,
+            "table_layout_type": layout,
+            "extraction_complexity_label": complexity,
+            "false_positive_family": false_positive,
+            "extraction_schema_notes": (
+                "Preserve page/table identity and require independently "
+                "confirmed row/column headers before extraction."
+            ),
+            "recommended_extraction_action": action,
+            "reviewer_confidence": confidence,
+            "reviewer_notes": (
+                f"Refined bounded gate inspected {len(page_text)} pages; "
+                f"row-like lines={row_like}; column evidence={columns}; "
+                "no page text, table cells, or wage values retained."
+            ),
+            "review_status_detail": (
+                "refined visual/table gate completed; this remains assisted "
+                "and requires independent calibration"
+            ),
+            "wage_language_present_label": wage_language,
+            "pay_numeric_language_present_label": pay_numeric,
+            "visual_table_structure_label": structure,
+            "wage_schedule_table_confirmed_label": wage_schedule,
+            "candidate_page_relationship_label": relationship,
+            "table_navigation_signal": effective_navigation,
+            "visual_confirmation_method": visual_method,
+            "extraction_gate_label": gate,
+            "extraction_gate_reason": gate_reason,
+            "table_row_like_line_count": str(row_like),
+            "table_column_evidence_count": str(columns),
+            "benefit_term_count": str(benefit_terms),
+            "wage_term_count_refined": str(wage_terms),
+            "pay_numeric_token_count": str(pay_tokens),
+        }
+    )
+
+
 def review_row(
     row: dict[str, str],
     *,
@@ -690,9 +1428,20 @@ def review_row(
     candidate_page_window: int,
     max_pages_per_document: int,
     max_snippet_chars: int,
+    review_mode: str = LEGACY_REVIEW_MODE,
+    render_pages: bool = False,
+    max_rendered_pages_per_document: int = 3,
+    navigation_page_budget: int = 4,
+    require_visual_table_confirmation: bool = True,
     reader_factory: Callable[..., object] = PdfReader,
 ) -> dict[str, str]:
-    result = initial_result(row, input_fields, review_id, "local")
+    result = initial_result(
+        row,
+        input_fields,
+        review_id,
+        "local",
+        review_mode,
+    )
     started = time.monotonic()
     artifact = resolve_local_artifact(row["content_artifact_path"])
     if not artifact.is_file():
@@ -706,6 +1455,10 @@ def review_row(
                 "recommended_extraction_action": "manual_review_only",
                 "reviewer_confidence": "low",
                 "reviewer_notes": "Artifact missing; no PDF opened.",
+                "extraction_gate_label": "second_review_required",
+                "extraction_gate_reason": (
+                    "Retained artifact is missing; no review was possible."
+                ),
             }
         )
         result["review_elapsed_seconds"] = (
@@ -735,6 +1488,10 @@ def review_row(
                 "reviewer_notes": (
                     "Integrity mismatch; PDF content was not opened."
                 ),
+                "extraction_gate_label": "second_review_required",
+                "extraction_gate_reason": (
+                    "Artifact integrity differs from the durable authority."
+                ),
             }
         )
         result["review_elapsed_seconds"] = (
@@ -750,12 +1507,22 @@ def review_row(
         requested = parse_page_numbers(
             row["candidate_wage_pages"], page_count
         )
-        plan, candidates, adjacent, context = bounded_page_plan(
-            requested,
-            page_count,
-            candidate_page_window,
-            max_pages_per_document,
-        )
+        if review_mode == REFINED_REVIEW_MODE:
+            plan, candidates, adjacent, context = (
+                bounded_refined_page_plan(
+                    requested,
+                    page_count,
+                    candidate_page_window,
+                    max_pages_per_document,
+                )
+            )
+        else:
+            plan, candidates, adjacent, context = bounded_page_plan(
+                requested,
+                page_count,
+                candidate_page_window,
+                max_pages_per_document,
+            )
         result.update(
             {
                 "pdf_opened_review": "1",
@@ -783,6 +1550,47 @@ def review_row(
                 analyses[number] = analyze_page(bounded)
                 chars += len(bounded)
             del bounded
+        navigation_references: list[int] = []
+        navigation_signal = "none"
+        navigation_plan: list[int] = []
+        if review_mode == REFINED_REVIEW_MODE:
+            navigation_references, navigation_signal = (
+                find_navigation_references(
+                    page_text,
+                    page_count=page_count,
+                )
+            )
+            navigation_plan = bounded_navigation_plan(
+                navigation_references,
+                page_count=page_count,
+                budget=navigation_page_budget,
+                already_selected=set(plan),
+            )
+            for number in navigation_plan:
+                extracted = pages[number - 1].extract_text() or ""
+                bounded = extracted[:MAX_INTERNAL_PAGE_CHARS]
+                del extracted
+                if bounded.strip():
+                    page_text[number] = bounded
+                    analyses[number] = analyze_page(bounded)
+                    chars += len(bounded)
+                del bounded
+            if navigation_plan:
+                plan.extend(navigation_plan)
+            result.update(
+                {
+                    "navigation_pages_requested": ",".join(
+                        map(str, navigation_references)
+                    ),
+                    "navigation_pages_inspected": ",".join(
+                        map(str, navigation_plan)
+                    ),
+                    "navigation_references_found": ",".join(
+                        map(str, navigation_references)
+                    ),
+                    "pages_inspected": ",".join(map(str, plan)),
+                }
+            )
         result["pages_with_text_review"] = str(len(page_text))
         result["bounded_text_chars_inspected"] = str(chars)
         if not page_text:
@@ -805,7 +1613,78 @@ def review_row(
                     "reviewer_notes": (
                         "No text on bounded reviewed pages; no OCR run."
                     ),
+                    "extraction_gate_label": "second_review_required",
+                    "extraction_gate_reason": (
+                        "Bounded reviewed pages returned no text; OCR was not "
+                        "run."
+                    ),
+                    "visual_confirmation_method": (
+                        "text_structure_only"
+                        if review_mode == REFINED_REVIEW_MODE
+                        else "unknown"
+                    ),
                 }
+            )
+        elif review_mode == REFINED_REVIEW_MODE:
+            features = {
+                number: refined_page_features(text)
+                for number, text in page_text.items()
+            }
+            qualifying = [
+                number
+                for number, values in features.items()
+                if values["structure"]
+                in {"confirmed_table", "possible_table"}
+            ]
+            render_candidates = [
+                *qualifying,
+                *[number for number in plan if number not in qualifying],
+            ][:max_rendered_pages_per_document]
+            rendered_pages: set[int] = set()
+            render_failures = 0
+            if render_pages and render_candidates:
+                scratch_root = ROOT / "tmp"
+                scratch_root.mkdir(parents=True, exist_ok=True)
+                with tempfile.TemporaryDirectory(
+                    prefix="text_table_refined_render_",
+                    dir=scratch_root,
+                ) as temporary:
+                    temporary_path = Path(temporary)
+                    for number in render_candidates:
+                        try:
+                            if render_pdf_page(
+                                artifact,
+                                number,
+                                temporary_path / f"page_{number}",
+                            ):
+                                rendered_pages.add(number)
+                            else:
+                                render_failures += 1
+                        except Exception:
+                            render_failures += 1
+            result.update(
+                {
+                    "rendered_pages_review": ",".join(
+                        map(str, sorted(rendered_pages))
+                    ),
+                    "rendered_page_count": str(len(rendered_pages)),
+                    "render_failures": str(render_failures),
+                }
+            )
+            refined_adjudicate(
+                result,
+                page_text=page_text,
+                page_features=features,
+                requested=requested,
+                candidate_selected=candidates,
+                adjacent_selected=adjacent,
+                navigation_references=navigation_references,
+                navigation_pages=set(navigation_plan),
+                navigation_signal=navigation_signal,
+                rendered_pages=rendered_pages,
+                require_visual_table_confirmation=(
+                    require_visual_table_confirmation
+                ),
             )
         else:
             adjudicate(
@@ -832,6 +1711,10 @@ def review_row(
                 "reviewer_notes": (
                     "Parser/review error; no adjudication claim made."
                 ),
+                "extraction_gate_label": "second_review_required",
+                "extraction_gate_reason": (
+                    "Parser/review error prevented refined confirmation."
+                ),
             }
         )
     for field, values in ALLOWED.items():
@@ -841,6 +1724,7 @@ def review_row(
         "reviewer_notes",
         "extraction_schema_notes",
         "review_status_detail",
+        "extraction_gate_reason",
     ):
         result[field] = result[field][:max_snippet_chars]
     result["review_elapsed_seconds"] = f"{time.monotonic() - started:.6f}"
@@ -917,6 +1801,14 @@ def summary_payload(
             "false_positive_family",
             "recommended_extraction_action",
             "reviewer_confidence",
+            "wage_language_present_label",
+            "pay_numeric_language_present_label",
+            "visual_table_structure_label",
+            "wage_schedule_table_confirmed_label",
+            "candidate_page_relationship_label",
+            "table_navigation_signal",
+            "visual_confirmation_method",
+            "extraction_gate_label",
         )
     }
     likely = [
@@ -933,9 +1825,17 @@ def summary_payload(
         row["calibration_status"] == "needs_second_review"
         for row in rows
     )
+    review_mode = getattr(args, "review_mode", LEGACY_REVIEW_MODE)
     if mode == "dry_run":
         pass_status = "not_evaluated"
-        next_recommendation = "run_bounded_assisted_local_review"
+        next_recommendation = (
+            "run_refined_re_review"
+            if review_mode == REFINED_REVIEW_MODE
+            else "run_bounded_assisted_local_review"
+        )
+    elif review_mode == REFINED_REVIEW_MODE:
+        pass_status = "requires_independent_adjudication"
+        next_recommendation = "independent_refined_calibration_decision"
     elif (
         likely_rate >= 0.8
         and included >= 50
@@ -958,10 +1858,13 @@ def summary_payload(
         ),
         "review_id": args.review_id,
         "review_method": (
-            "planned_no_pdf_open"
+            f"planned_no_pdf_open_{review_mode}"
             if mode == "dry_run"
+            else REFINED_REVIEW_METHOD
+            if review_mode == REFINED_REVIEW_MODE
             else REVIEW_METHOD
         ),
+        "review_mode": review_mode,
         "input_csv": args.input_csv,
         "input_sha256_before": input_hash_before,
         "input_sha256_after": input_hash_after,
@@ -1009,6 +1912,22 @@ def summary_payload(
         "bounded_text_chars_inspected_in_memory": sum(
             int(row["bounded_text_chars_inspected"]) for row in rows
         ),
+        "rendered_pages": sum(
+            int(row["rendered_page_count"]) for row in rows
+        ),
+        "render_failures": sum(
+            int(row["render_failures"]) for row in rows
+        ),
+        "navigation_pages_inspected": sum(
+            len(
+                [
+                    value
+                    for value in row["navigation_pages_inspected"].split(",")
+                    if value
+                ]
+            )
+            for row in rows
+        ),
         "full_text_artifacts_written": 0,
         "urls_opened": 0,
         "network_calls": 0,
@@ -1019,11 +1938,17 @@ def summary_payload(
         "codify_actions": 0,
         "durable_ledger_mutations": 0,
         "caveats": [
-            "Review used deterministic Codex-assisted local adjudication, not a human reviewer.",
-            "Assisted concordance rates are not independent ground-truth precision estimates.",
-            "Only bounded candidate, adjacent, and first-page context was inspected.",
-            "Labels evaluate heuristic usefulness and extraction feasibility, not final wage values.",
-            "Human validation remains required before production extraction.",
+            (
+                "Review used the refined deterministic visual/table gate, "
+                "not an independent human reviewer."
+                if review_mode == REFINED_REVIEW_MODE
+                else "Review used deterministic Codex-assisted local "
+                "adjudication, not a human reviewer."
+            ),
+            "Assisted results are not independent ground-truth precision estimates.",
+            "Only bounded candidate, adjacent, context, and navigation pages were eligible.",
+            "Rendered-page checks are temporary and save no PNG, page text, table cells, or wage values.",
+            "Independent human/visual validation remains required before extraction.",
         ],
     }
 
@@ -1136,6 +2061,31 @@ def layout_markdown(summary: dict[str, object]) -> str:
 
 
 def run(args: argparse.Namespace) -> dict[str, object]:
+    review_mode = getattr(args, "review_mode", LEGACY_REVIEW_MODE)
+    if review_mode not in {LEGACY_REVIEW_MODE, REFINED_REVIEW_MODE}:
+        raise ValueError(f"unsupported review mode: {review_mode}")
+    render_pages = bool(getattr(args, "render_pages", False))
+    max_rendered_pages = int(
+        getattr(args, "max_rendered_pages_per_document", 3)
+    )
+    navigation_budget = int(getattr(args, "navigation_page_budget", 4))
+    require_visual = bool(
+        getattr(args, "require_visual_table_confirmation", True)
+    )
+    max_pages_per_document = getattr(
+        args,
+        "max_pages_per_document",
+        None,
+    )
+    if max_pages_per_document is None:
+        max_pages_per_document = (
+            6 if review_mode == REFINED_REVIEW_MODE else 5
+        )
+    max_pages_per_document = int(max_pages_per_document)
+    if max_rendered_pages < 0:
+        raise ValueError("max rendered pages must be nonnegative")
+    if navigation_budget < 0:
+        raise ValueError("navigation page budget must be nonnegative")
     input_path = Path(args.input_csv)
     authority_path = Path(args.text_table_ledger_csv)
     output_dir = Path(args.output_dir)
@@ -1161,7 +2111,13 @@ def run(args: argparse.Namespace) -> dict[str, object]:
     started = time.monotonic()
     if args.dry_run:
         reviewed = [
-            initial_result(row, input_fields, args.review_id, "dry_run")
+            initial_result(
+                row,
+                input_fields,
+                args.review_id,
+                "dry_run",
+                review_mode,
+            )
             for row in selected
         ]
         mode = "dry_run"
@@ -1173,8 +2129,13 @@ def run(args: argparse.Namespace) -> dict[str, object]:
                 review_id=args.review_id,
                 authority=authority[row["text_table_detection_id"]],
                 candidate_page_window=args.candidate_page_window,
-                max_pages_per_document=args.max_pages_per_document,
+                max_pages_per_document=max_pages_per_document,
                 max_snippet_chars=args.max_snippet_chars,
+                review_mode=review_mode,
+                render_pages=render_pages,
+                max_rendered_pages_per_document=max_rendered_pages,
+                navigation_page_budget=navigation_budget,
+                require_visual_table_confirmation=require_visual,
             )
             for row in selected
         ]
@@ -1184,7 +2145,7 @@ def run(args: argparse.Namespace) -> dict[str, object]:
         raise RuntimeError("original calibration input changed during review")
     elapsed = time.monotonic() - started
     output_fields = [*input_fields]
-    for field in AUDIT_FIELDS:
+    for field in (*AUDIT_FIELDS, *REFINED_FIELDS):
         if field not in output_fields:
             output_fields.append(field)
     write_csv(
@@ -1254,8 +2215,29 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--max-rows", type=int)
     parser.add_argument("--candidate-page-window", type=int, default=1)
-    parser.add_argument("--max-pages-per-document", type=int, default=5)
+    parser.add_argument("--max-pages-per-document", type=int)
     parser.add_argument("--max-snippet-chars", type=int, default=300)
+    parser.add_argument(
+        "--review-mode",
+        choices=(LEGACY_REVIEW_MODE, REFINED_REVIEW_MODE),
+        default=LEGACY_REVIEW_MODE,
+    )
+    parser.add_argument("--render-pages", action="store_true")
+    parser.add_argument(
+        "--max-rendered-pages-per-document",
+        type=int,
+        default=3,
+    )
+    parser.add_argument(
+        "--navigation-page-budget",
+        type=int,
+        default=4,
+    )
+    parser.add_argument(
+        "--require-visual-table-confirmation",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+    )
     parser.add_argument(
         "--no-save-full-text",
         action="store_true",

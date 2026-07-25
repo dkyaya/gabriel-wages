@@ -222,6 +222,22 @@ TEXT_TABLE_CALIBRATION_SUBSET1_REVIEW_LEDGER_PATH = (
     / "TEXT-TABLE-CALIBRATION-SUBSET1-REVIEW1-2026-07-24"
     / "calibration_reviewed.csv"
 )
+TEXT_TABLE_CALIBRATION_REFINE1_READINESS_PATH = (
+    ANALYSIS_DIR
+    / "text_table_detection_refine1_readiness_audit_2026-07-24.md"
+)
+TEXT_TABLE_CALIBRATION_REFINED_SCHEMA_PATH = (
+    ANALYSIS_DIR
+    / "text_table_detection_refined_schema_2026-07-24.md"
+)
+TEXT_TABLE_CALIBRATION_REFINED_RUBRIC_PATH = (
+    ANALYSIS_DIR
+    / "text_table_detection_refined_review_rubric_2026-07-24.md"
+)
+TEXT_TABLE_CALIBRATION_REFINED_REVIEW_PROMPT_PATH = (
+    ANALYSIS_DIR
+    / "text_table_calibration_subset1_refined_re_review_prompt_2026-07-24.md"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -290,6 +306,10 @@ OPTIONAL_PATHS = [
     TEXT_TABLE_CALIBRATION_SUBSET1_INPUT_PATH,
     TEXT_TABLE_CALIBRATION_SUBSET1_REVIEW_SUMMARY_PATH,
     TEXT_TABLE_CALIBRATION_SUBSET1_REVIEW_LEDGER_PATH,
+    TEXT_TABLE_CALIBRATION_REFINE1_READINESS_PATH,
+    TEXT_TABLE_CALIBRATION_REFINED_SCHEMA_PATH,
+    TEXT_TABLE_CALIBRATION_REFINED_RUBRIC_PATH,
+    TEXT_TABLE_CALIBRATION_REFINED_REVIEW_PROMPT_PATH,
 ]
 
 STATE_NAMES = {
@@ -3833,13 +3853,52 @@ def build_text_table_calibration_status_summary(
             raise ValueError(
                 "text/table calibration review fails dashboard gates"
             )
+        refinement_paths = (
+            TEXT_TABLE_CALIBRATION_REFINE1_READINESS_PATH,
+            TEXT_TABLE_CALIBRATION_REFINED_SCHEMA_PATH,
+            TEXT_TABLE_CALIBRATION_REFINED_RUBRIC_PATH,
+            TEXT_TABLE_CALIBRATION_REFINED_REVIEW_PROMPT_PATH,
+        )
+        refinement_prepared = all(path.exists() for path in refinement_paths)
+        if refinement_prepared and (
+            summary.get("calibration_pass_status") != "fail"
+            or int(
+                summary.get("visual_qa", {}).get(
+                    "challenge_rows_with_material_disagreement", -1
+                )
+            )
+            != 5
+            or int(
+                summary.get("visual_qa", {}).get(
+                    "challenge_rows_checked", -1
+                )
+            )
+            != 5
+        ):
+            raise ValueError(
+                "refinement status requires the recorded failed gate and "
+                "five-of-five visual challenge disagreement"
+            )
         return {
             **metadata,
-            "calibration_phase": "subset1_reviewed",
+            "calibration_phase": (
+                "refinement_prepared_after_failed_review"
+                if refinement_prepared
+                else "subset1_reviewed"
+            ),
             "latest_calibration_id": (
                 "TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24"
             ),
             "latest_calibration_review_id": summary["review_id"],
+            "latest_refinement_id": (
+                "TEXT-TABLE-DETECTION-REFINE1-VISUAL-TABLE-GATE-2026-07-24"
+                if refinement_prepared
+                else None
+            ),
+            "prior_calibration_review_id": summary["review_id"],
+            "prior_calibration_pass_status": summary[
+                "calibration_pass_status"
+            ],
             "calibration_subset_rows": int(summary["rows"]),
             "reviewed_rows": int(summary["reviewed_rows"]),
             "review_method": summary["review_method"],
@@ -3866,8 +3925,16 @@ def build_text_table_calibration_status_summary(
             "calibration_pass_status": summary[
                 "calibration_pass_status"
             ],
-            "next_recommendation": summary["next_recommendation"],
-            "manual_review_status": "assisted_review_complete",
+            "next_recommendation": (
+                "refined_re_review_before_extraction"
+                if refinement_prepared
+                else summary["next_recommendation"]
+            ),
+            "manual_review_status": (
+                "refined_re_review_not_started"
+                if refinement_prepared
+                else "assisted_review_complete"
+            ),
             "wage_extraction_status": "not_started",
             "ingestion_status": "not_started",
             "codify_status": "not_started",
@@ -3878,11 +3945,37 @@ def build_text_table_calibration_status_summary(
             "reviewed_ledger": relative(
                 TEXT_TABLE_CALIBRATION_SUBSET1_REVIEW_LEDGER_PATH
             ),
+            "refined_schema": (
+                relative(TEXT_TABLE_CALIBRATION_REFINED_SCHEMA_PATH)
+                if refinement_prepared
+                else None
+            ),
+            "refined_review_rubric": (
+                relative(TEXT_TABLE_CALIBRATION_REFINED_RUBRIC_PATH)
+                if refinement_prepared
+                else None
+            ),
             "caveats": [
-                "Calibration used deterministic Codex-assisted local adjudication, not independent human ground truth.",
-                "Candidate-page concordance is not a final precision estimate.",
+                (
+                    "The prior assisted review failed the extraction gate."
+                    if refinement_prepared
+                    else "Calibration used deterministic Codex-assisted "
+                    "local adjudication, not independent human ground truth."
+                ),
+                (
+                    "Visual/table confirmation refinement is prepared; "
+                    "the refined re-review has not run."
+                    if refinement_prepared
+                    else "Candidate-page concordance is not a final "
+                    "precision estimate."
+                ),
                 "A five-row rendered-page challenge materially disagreed with all five assisted outcomes.",
-                "Detector/review-schema refinement and independent calibration are required before extraction.",
+                (
+                    "No wage extraction is authorized."
+                    if refinement_prepared
+                    else "Detector/review-schema refinement and independent "
+                    "calibration are required before extraction."
+                ),
                 "No final wage values were extracted.",
                 "No OCR, ingestion, or codification occurred.",
             ],

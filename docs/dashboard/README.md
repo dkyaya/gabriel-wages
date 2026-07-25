@@ -277,6 +277,18 @@ The review opened only the 150 retained local PDFs and performed no URL
 access, download, OCR, full-text retention, final wage extraction, ingestion,
 or codification.
 
+That failed review is now followed by a prepared—but not yet run—refined
+visual table gate. The calibration phase is
+`refinement_prepared_after_failed_review`. The refined schema records wage
+language, pay-number language, actual table structure, wage-schedule
+confirmation, candidate-page relationship, bounded contents/index/appendix
+navigation, and confirmation method separately. It treats benefits tables,
+classification lists without pay, non-wage tables, front matter, and prose
+as distinct negative families. The original packet and REVIEW1 remain
+unchanged; the next recommendation is `refined_re_review_before_extraction`.
+The 500-document extraction remains prohibited, and OCR, wage extraction,
+ingestion, and codification remain unstarted.
+
 ## Run and build locally
 
 The dashboard requires Node.js 20.19 or newer. With the existing locked dependencies:

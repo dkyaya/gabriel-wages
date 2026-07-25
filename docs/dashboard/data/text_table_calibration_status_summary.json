@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-25T14:17:08Z",
+  "generated_at": "2026-07-25T14:42:31Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -47,7 +47,11 @@
     "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24/calibration_sampling_summary.json",
     "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24/calibration_review_input.csv",
     "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-REVIEW1-2026-07-24/calibration_review_summary.json",
-    "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-REVIEW1-2026-07-24/calibration_reviewed.csv"
+    "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-REVIEW1-2026-07-24/calibration_reviewed.csv",
+    "docs/analysis/text_table_detection_refine1_readiness_audit_2026-07-24.md",
+    "docs/analysis/text_table_detection_refined_schema_2026-07-24.md",
+    "docs/analysis/text_table_detection_refined_review_rubric_2026-07-24.md",
+    "docs/analysis/text_table_calibration_subset1_refined_re_review_prompt_2026-07-24.md"
   ],
   "warnings": [],
   "limitations": [
@@ -60,9 +64,12 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "calibration_phase": "subset1_reviewed",
+  "calibration_phase": "refinement_prepared_after_failed_review",
   "latest_calibration_id": "TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24",
   "latest_calibration_review_id": "TEXT-TABLE-CALIBRATION-SUBSET1-REVIEW1-2026-07-24",
+  "latest_refinement_id": "TEXT-TABLE-DETECTION-REFINE1-VISUAL-TABLE-GATE-2026-07-24",
+  "prior_calibration_review_id": "TEXT-TABLE-CALIBRATION-SUBSET1-REVIEW1-2026-07-24",
+  "prior_calibration_pass_status": "fail",
   "calibration_subset_rows": 150,
   "reviewed_rows": 150,
   "review_method": "codex_assisted_local_adjudication",
@@ -113,19 +120,21 @@
     "medium": 83
   },
   "calibration_pass_status": "fail",
-  "next_recommendation": "refine_detector_or_schema",
-  "manual_review_status": "assisted_review_complete",
+  "next_recommendation": "refined_re_review_before_extraction",
+  "manual_review_status": "refined_re_review_not_started",
   "wage_extraction_status": "not_started",
   "ingestion_status": "not_started",
   "codify_status": "not_started",
   "wage_gap_analysis_status": "not_started",
   "summary_source": "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-REVIEW1-2026-07-24/calibration_review_summary.json",
   "reviewed_ledger": "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-REVIEW1-2026-07-24/calibration_reviewed.csv",
+  "refined_schema": "docs/analysis/text_table_detection_refined_schema_2026-07-24.md",
+  "refined_review_rubric": "docs/analysis/text_table_detection_refined_review_rubric_2026-07-24.md",
   "caveats": [
-    "Calibration used deterministic Codex-assisted local adjudication, not independent human ground truth.",
-    "Candidate-page concordance is not a final precision estimate.",
+    "The prior assisted review failed the extraction gate.",
+    "Visual/table confirmation refinement is prepared; the refined re-review has not run.",
     "A five-row rendered-page challenge materially disagreed with all five assisted outcomes.",
-    "Detector/review-schema refinement and independent calibration are required before extraction.",
+    "No wage extraction is authorized.",
     "No final wage values were extracted.",
     "No OCR, ingestion, or codification occurred."
   ]

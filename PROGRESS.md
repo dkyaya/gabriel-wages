@@ -6,6 +6,32 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-25 (Refined visual table gate prepared; REVIEW2 not run)
+
+**Did**
+- Started from clean tracked `7438f1a68fc0a9874fb5340523f1d9325055ba80`, confirmed all requested ancestry, and preserved the unrelated untracked root `package-lock.json`.
+- Reconfirmed the failed REVIEW1 authority: 150 rows, 95 `reviewed`, 55 `needs_second_review`, extraction gate `fail`, and five material disagreements in five rendered-page challenges. Recorded hashes for the original calibration input, REVIEW1 outputs, durable ledgers, protected CSVs, and corpus filename inventory.
+- Defined a refined schema and rubric that separately record wage language, pay-numeric language, structural/visual table evidence, confirmed wage schedules, candidate-page relationship, contents/index/appendix navigation, confirmation method, and a conservative extraction gate.
+- Extended the review helper with opt-in `refined_visual_gate_v1`. It reserves bounded navigation and rendering budgets, recognizes front matter and negative table families, refuses table-layout labels for prose-only pages, and writes only bounded labels/notes. The legacy REVIEW1 mode remains available for provenance.
+- Added nine synthetic refined tests alongside the ten legacy tests. They cover wage prose, benefit tables, classification-without-pay, contents navigation, confirmed wage tables, immutable REVIEW1 files, render/page budgets, snippet caps, controlled values, and no network/OCR/full-text outputs.
+- Prepared—but did not run—the future REVIEW2 prompt for the same 150 identities. Updated the dashboard to `refinement_prepared_after_failed_review`, with `refined_re_review_before_extraction` next and the 500-document extraction still prohibited.
+
+**Decisions and why**
+- Rendering success is recorded as a bounded diagnostic, not described as human visual confirmation. A high-confidence automated gate requires structural wage-table evidence plus the configured render check; extraction authorization still requires later independent calibration.
+- Contents/index references are navigation signals, not tables. Prose, benefits, classifications without pay, non-wage tables, and front matter are distinct negative families.
+- REVIEW1 and the original calibration input remain immutable. REVIEW2 must use a new review ID and output directory.
+
+**Surprises/breakage**
+- The first refined test exposed a pay-number regex that rejected an uncommaed five-digit synthetic salary; the regex was corrected before production use. All 19 review tests then passed.
+- The first dashboard build check used outdated visual-QA key names; the builder was corrected to the committed REVIEW1 `visual_qa` schema and then passed.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Four compiles, 19 synthetic/offline tests, dashboard JSON/frontend production build, schema validation, 60 ingestion tests, immutable input/REVIEW1/durable/protected hashes, corpus filename inventory, secret-safety, and diff checks passed. Only synthetic fixture PDFs were opened in tests; no selected calibration artifact, URL, network/API/model service, redownload, OCR, wage extraction, durable-ledger mutation, ingestion, `gabriel.codify`, wage-gap work, regression, remote action, or push occurred.
+
+**Next steps**
+1. Review the refined schema, rubric, dashboard note, validation record, and future REVIEW2 prompt.
+2. If separately authorized, run `TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24` over only the same 150 retained artifacts and compare it row-for-row with REVIEW1.
+3. Do not run the 500-document extraction unless the refined independent/visual calibration passes every documented gate.
+
 ## 2026-07-25 (Text/table calibration assisted review completed; extraction gate failed)
 
 **Did**
