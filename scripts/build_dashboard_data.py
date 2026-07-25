@@ -398,6 +398,35 @@ COMPENSATION_EXTRACTION_500_TARGETED_QA_REFERENCE_PATH = (
     COMPENSATION_EXTRACTION_500_TARGETED_QA_DIR
     / "reference_exclusion_ledger_qa_corrected.csv"
 )
+COMPENSATION_EXTRACTION_1000_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "COMPENSATION-EVIDENCE-EXTRACTION-1000DOC-2026-07-25"
+)
+COMPENSATION_EXTRACTION_1000_SELECTION_PATH = (
+    COMPENSATION_EXTRACTION_1000_DIR
+    / "compensation_extraction_1000_selection_manifest.csv"
+)
+COMPENSATION_EXTRACTION_1000_SELECTION_SUMMARY_PATH = (
+    COMPENSATION_EXTRACTION_1000_DIR
+    / "compensation_extraction_1000_selection_summary.json"
+)
+COMPENSATION_EXTRACTION_1000_PACKET_SUMMARY_PATH = (
+    COMPENSATION_EXTRACTION_1000_DIR
+    / "compensation_extraction_1000_packet_summary.json"
+)
+COMPENSATION_EXTRACTION_1000_PREFLIGHT_REPORT_PATH = (
+    COMPENSATION_EXTRACTION_1000_DIR
+    / "compensation_extraction_1000_preflight_report.md"
+)
+COMPENSATION_EXTRACTION_1000_REQUEST_METADATA_PATH = (
+    COMPENSATION_EXTRACTION_1000_DIR
+    / "compensation_extraction_1000_request_metadata.csv"
+)
+COMPENSATION_EXTRACTION_1000_DECISION_PATH = (
+    COMPENSATION_EXTRACTION_1000_DIR
+    / "compensation_extraction_1000_decision_report.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -1135,6 +1164,11 @@ def build_analysis_readiness(
         COMPENSATION_EXTRACTION_500_TARGETED_QA_NONBASE_PATH,
         COMPENSATION_EXTRACTION_500_TARGETED_QA_REFERENCE_PATH,
     ))
+    scale_1000_attempted = COMPENSATION_EXTRACTION_1000_DECISION_PATH.exists()
+    scale_1000_decision = (
+        read_json(COMPENSATION_EXTRACTION_1000_DECISION_PATH)
+        if scale_1000_attempted else {}
+    )
     extraction_decision = (
         read_json(COMPENSATION_EXTRACTION_500_TARGETED_QA_DECISION_PATH)
         if targeted_qa_completed
@@ -1165,7 +1199,9 @@ def build_analysis_readiness(
     return {
         "metadata": metadata,
         "overall_status": (
-            "provisional_500_compensation_extraction_targeted_qa_pass_1000_authorized"
+            "provisional_1000_compensation_extraction_stopped_at_preflight"
+            if scale_1000_attempted
+            else "provisional_500_compensation_extraction_targeted_qa_pass_1000_authorized"
             if targeted_qa_completed
             else "provisional_500_compensation_extraction_complete_scale_qa_hold"
             if extraction_completed
@@ -1231,7 +1267,9 @@ def build_analysis_readiness(
             "wage_extraction_stage": {
                 "available": extraction_completed,
                 "display_status": (
-                    "targeted_qa_pass_1000_authorized_provisional_not_analysis_ready"
+                    "cumulative_1000_frozen_live_stopped_at_schema_preflight"
+                    if scale_1000_attempted
+                    else "targeted_qa_pass_1000_authorized_provisional_not_analysis_ready"
                     if targeted_qa_completed
                     else "provisional_500_complete_not_analysis_ready"
                     if extraction_completed
@@ -1246,11 +1284,19 @@ def build_analysis_readiness(
                 "qa_status": extraction_decision.get("qa_status"),
                 "scale_1000_recommendation": extraction_decision.get(
                     "scale_1000_recommendation"
+                ) if not scale_1000_attempted else scale_1000_decision.get(
+                    "decision"
                 ),
                 "analysis_ready": False,
                 "targeted_qa_completed": targeted_qa_completed,
                 "scale_1000_allowed": extraction_decision.get(
                     "scale_1000_allowed", False
+                ) if not scale_1000_attempted else False,
+                "scale_1000_live_started": scale_1000_decision.get(
+                    "live_extraction_started", False
+                ),
+                "scale_beyond_1000_recommendation": scale_1000_decision.get(
+                    "scale_beyond_1000_recommendation"
                 ),
             },
             "regression_stage": {
@@ -4455,6 +4501,17 @@ def build_text_table_calibration_status_summary(
         targeted_qa_mixed: list[dict[str, str]] = []
         targeted_qa_nonbase: list[dict[str, str]] = []
         targeted_qa_reference: list[dict[str, str]] = []
+        scale_1000_attempted = all(path.exists() for path in (
+            COMPENSATION_EXTRACTION_1000_SELECTION_PATH,
+            COMPENSATION_EXTRACTION_1000_SELECTION_SUMMARY_PATH,
+            COMPENSATION_EXTRACTION_1000_PACKET_SUMMARY_PATH,
+            COMPENSATION_EXTRACTION_1000_PREFLIGHT_REPORT_PATH,
+            COMPENSATION_EXTRACTION_1000_REQUEST_METADATA_PATH,
+            COMPENSATION_EXTRACTION_1000_DECISION_PATH,
+        ))
+        scale_1000_decision: dict[str, Any] = {}
+        scale_1000_selection_summary: dict[str, Any] = {}
+        scale_1000_packet_summary: dict[str, Any] = {}
         if extraction_completed:
             extraction_decision = read_json(
                 COMPENSATION_EXTRACTION_500_DECISION_PATH
@@ -4566,10 +4623,56 @@ def build_text_table_calibration_status_summary(
                 raise ValueError(
                     "targeted compensation extraction QA fails dashboard gates"
                 )
+        if scale_1000_attempted:
+            scale_1000_decision = read_json(
+                COMPENSATION_EXTRACTION_1000_DECISION_PATH
+            )
+            scale_1000_selection_summary = read_json(
+                COMPENSATION_EXTRACTION_1000_SELECTION_SUMMARY_PATH
+            )
+            scale_1000_packet_summary = read_json(
+                COMPENSATION_EXTRACTION_1000_PACKET_SUMMARY_PATH
+            )
+            scale_1000_requests = read_csv(
+                COMPENSATION_EXTRACTION_1000_REQUEST_METADATA_PATH
+            )
+            if (
+                scale_1000_decision.get("task_id")
+                != "COMPENSATION-EVIDENCE-EXTRACTION-1000DOC-PROVISIONAL-SCALE-2026-07-25"
+                or scale_1000_decision.get("decision")
+                != "stopped_at_preflight_schema_invalid"
+                or scale_1000_decision.get("live_extraction_started") is not False
+                or int(scale_1000_decision.get("selection_count", 0)) != 1000
+                or int(scale_1000_decision.get("corrected_seed_case_count", 0)) != 500
+                or int(scale_1000_decision.get("new_document_count", 0)) != 500
+                or int(scale_1000_decision.get("preflight_case_count", 0)) != 6
+                or int(scale_1000_decision.get("preflight_schema_valid_count", 0)) != 5
+                or len(scale_1000_requests) != 6
+                or sum(row.get("schema_valid") == "true" for row in scale_1000_requests) != 5
+                or int(scale_1000_selection_summary.get("selection_count", 0)) != 1000
+                or int(scale_1000_packet_summary.get("case_count", 0)) != 1000
+                or int(scale_1000_packet_summary.get("max_pages_per_case", 99)) > 6
+                or int(scale_1000_packet_summary.get("max_text_chars_per_page", 99999)) > 1500
+                or int(scale_1000_packet_summary.get("max_text_chars_per_case", 99999)) > 6000
+                or any(
+                    row.get(field) == "true"
+                    for row in scale_1000_requests
+                    for field in (
+                        "raw_prompt_saved", "raw_response_saved",
+                        "encoded_image_saved", "credential_value_saved",
+                        "authorization_header_saved",
+                    )
+                )
+            ):
+                raise ValueError(
+                    "provisional 1,000-document stopped preflight fails dashboard gates"
+                )
         return {
             **metadata,
             "calibration_phase": (
-                "compensation_extraction_500_targeted_qa_completed"
+                "compensation_extraction_1000_stopped_at_preflight"
+                if scale_1000_attempted
+                else "compensation_extraction_500_targeted_qa_completed"
                 if targeted_qa_completed
                 else "compensation_extraction_500_provisional_completed"
                 if extraction_completed
@@ -4598,7 +4701,9 @@ def build_text_table_calibration_status_summary(
                 else None
             ),
             "latest_compensation_extraction_id": (
-                "COMPENSATION-EVIDENCE-EXTRACTION-500DOC-2026-07-25"
+                "COMPENSATION-EVIDENCE-EXTRACTION-1000DOC-2026-07-25"
+                if scale_1000_attempted
+                else "COMPENSATION-EVIDENCE-EXTRACTION-500DOC-2026-07-25"
                 if extraction_completed else None
             ),
             "latest_compensation_extraction_qa_id": (
@@ -4675,8 +4780,34 @@ def build_text_table_calibration_status_summary(
                 if extraction_completed else None
             ),
             "scale_1000_allowed": (
-                bool(targeted_qa_decision.get("scale_1000_allowed", False))
+                False
+                if scale_1000_attempted
+                else bool(targeted_qa_decision.get("scale_1000_allowed", False))
                 if targeted_qa_completed else False
+            ),
+            "compensation_extraction_1000_selection_count": (
+                int(scale_1000_selection_summary.get("selection_count", 0))
+                if scale_1000_attempted else 0
+            ),
+            "compensation_extraction_1000_corrected_seed_count": (
+                int(scale_1000_selection_summary.get("corrected_500_seed_count", 0))
+                if scale_1000_attempted else 0
+            ),
+            "compensation_extraction_1000_new_document_count": (
+                int(scale_1000_selection_summary.get("new_document_count", 0))
+                if scale_1000_attempted else 0
+            ),
+            "compensation_extraction_1000_preflight_schema_valid_rate": (
+                float(scale_1000_decision.get("preflight_schema_valid_rate", 0))
+                if scale_1000_attempted else None
+            ),
+            "compensation_extraction_1000_live_started": (
+                bool(scale_1000_decision.get("live_extraction_started", False))
+                if scale_1000_attempted else False
+            ),
+            "scale_beyond_1000_recommendation": (
+                scale_1000_decision.get("scale_beyond_1000_recommendation")
+                if scale_1000_attempted else None
             ),
             "prior_auto_adjudication_gate_id": (
                 "TEXT-TABLE-AUTO-GABRIEL-GATE2-REFINEMENT-2026-07-25"
@@ -4829,7 +4960,9 @@ def build_text_table_calibration_status_summary(
                 else float(decision["wrong_page_rate"])
             ),
             "extraction_decision": (
-                targeted_qa_decision.get("decision")
+                scale_1000_decision.get("decision")
+                if scale_1000_attempted
+                else targeted_qa_decision.get("decision")
                 if targeted_qa_completed
                 else extraction_decision.get("decision")
                 if extraction_completed
@@ -4859,7 +4992,9 @@ def build_text_table_calibration_status_summary(
                 else False
             ),
             "next_recommendation": (
-                "targeted_conflict_and_non_base_wage_qa_before_1000"
+                scale_1000_decision.get("next_recommendation")
+                if scale_1000_attempted
+                else "targeted_conflict_and_non_base_wage_qa_before_1000"
                 if extraction_completed
                 else auto_decision["next_recommendation"]
                 if auto_gate_completed
@@ -4876,11 +5011,15 @@ def build_text_table_calibration_status_summary(
                 )
             ),
             "wage_extraction_status": (
-                "provisional_500_completed_qa_hold"
+                "provisional_1000_stopped_preflight_no_live"
+                if scale_1000_attempted
+                else "provisional_500_completed_qa_hold"
                 if extraction_completed else "not_started"
             ),
             "qualitative_extraction_status": (
-                "provisional_500_completed_qa_hold"
+                "provisional_1000_stopped_preflight_no_live"
+                if scale_1000_attempted
+                else "provisional_500_completed_qa_hold"
                 if extraction_completed else "not_started"
             ),
             "ingestion_status": "not_started",
@@ -4947,6 +5086,15 @@ def build_text_table_calibration_status_summary(
                 else 0
             ),
             "caveats": (
+                [
+                    "The 1,000-document selection and bounded packets are frozen, but live extraction did not start because the representative preflight failed strict semantic schema.",
+                    "The corrected 500-document targeted-QA ledgers remain the latest valid provisional extraction layer.",
+                    "No 1,000-document observation, conflict, contamination, or QA metrics were computed.",
+                    "No OCR, ingestion, codification, wage-gap calculation, or regression occurred.",
+                    "GABRIEL evaluated six bounded new-case preflight packets only; the corrected seed was not resent.",
+                ]
+                if scale_1000_attempted
+                else
                 [
                     "The 500-document ledgers are provisional and are not a final analysis dataset.",
                     "Integrity QA passed, but targeted conflict and non-base-wage QA is required before scaling.",

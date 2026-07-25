@@ -1,0 +1,7 @@
+request_phase,extraction_case_id,started_at,finished_at,local_packet_seconds,gabriel_elapsed_seconds,request_status
+preflight_1000_quantitative_base_wage,cex1000_a1d9a51edbd3611bbd6db0fa,,2026-07-25T22:40:48Z,0.000000,9.413138,success
+preflight_1000_qualitative_mechanism,cex1000_33c44824f357c9463855503a,,2026-07-25T22:40:48Z,0.000000,12.280592,success
+preflight_1000_mixed_quant_qual,cex1000_c58de708dde4fd15a33552c0,,2026-07-25T22:40:48Z,0.000000,28.402938,success
+preflight_1000_non_base_wage,cex1000_f5c9ee9a20150452392fef15,,2026-07-25T22:40:48Z,0.000000,40.227127,success
+preflight_1000_reference_exclusion,cex1000_c2fd75f0f2204f109d4ee4f5,,2026-07-25T22:40:48Z,0.000000,54.031469,success
+preflight_1000_effective_date_or_classification_conflict,cex1000_a2a4a753588b930fb86f0d3d,,2026-07-25T22:40:48Z,0.000000,66.139430,schema_invalid

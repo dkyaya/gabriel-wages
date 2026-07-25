@@ -1,0 +1,15 @@
+{
+  "case_count": 6,
+  "completed_at": "2026-07-25T22:40:48Z",
+  "passed": false,
+  "roles": [
+    "quantitative_base_wage",
+    "qualitative_mechanism",
+    "mixed_quant_qual",
+    "non_base_wage",
+    "reference_exclusion",
+    "effective_date_or_classification_conflict"
+  ],
+  "schema_valid_count": 5,
+  "seed_case_calls": 0
+}

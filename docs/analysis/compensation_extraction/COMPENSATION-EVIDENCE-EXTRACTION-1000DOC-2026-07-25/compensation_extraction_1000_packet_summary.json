@@ -1,0 +1,15 @@
+{
+  "case_count": 1000,
+  "encoded_images_saved": false,
+  "full_tables_saved": false,
+  "full_text_saved": false,
+  "max_pages_per_case": 6,
+  "max_text_chars_per_case": 5999,
+  "max_text_chars_per_page": 1499,
+  "new_case_count": 500,
+  "packet_page_rows": 5767,
+  "raw_prompts_saved": false,
+  "raw_responses_saved": false,
+  "rendered_page_available_count": 112,
+  "seed_case_count": 500
+}

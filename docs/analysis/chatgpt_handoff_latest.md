@@ -6,6 +6,41 @@ Last updated: `2026-07-25`
 
 ---
 
+## 2026-07-25 — Cumulative 1,000-document extraction stopped at strict preflight
+
+### Current State
+
+- **Authority/start:** work began at clean tracked `513f6b8bb8dcabec8af31277d780e413004dce4e`. The unrelated untracked root `package-lock.json` and local adjudication renders remain outside the task. The corrected 500-document targeted-QA authority and all protected prior ledgers are unchanged.
+- **Runner:** `scripts/run_compensation_evidence_extraction.py` now preserves the earlier 500 modes and adds `freeze_1000_selection`, `preflight_1000`, and `live_lanes_1000`. New quantitative validation rejects non-base evidence and requires explicit base-pay justification for `other`.
+- **Selection:** [the audit](compensation_extraction/COMPENSATION-EVIDENCE-EXTRACTION-1000DOC-2026-07-25/compensation_extraction_1000_selection_audit.md) freezes 1,000 unique identities: the corrected 500 seed plus 500 new retained local documents. Units are 363 police / 237 fire / 400 non-safety across 40 states/DC and six source families. Every safety record has a selected non-safety partner. SHA-256 is `147e311e7a6d6c3aeb98c52357f6d46ea8ee52798be45493bf0a1c138a3b9f15`.
+- **Packets:** 5,767 page records cover all cases. Maxima are six pages/case, 1,499 text characters/page, and 5,999/case. The freeze made zero API calls and saved no full text/table or raw request/response artifact.
+- **Preflight:** GABRIEL ran on six new representative cases only. Five passed. The conflict-prone sixth case returned `mixed_ready` without both mandatory sub-record arrays and was rejected as `schema_invalid`. Backend was `huit_openai_responses_direct_sdk`; model was `gpt-5.4-nano`. The seed was not resent.
+- **Stop/decision:** [the result](compensation_extraction_1000_result_2026-07-25.md) and [decision](compensation_extraction/COMPENSATION-EVIDENCE-EXTRACTION-1000DOC-2026-07-25/compensation_extraction_1000_decision_report.json) record `stopped_at_preflight_schema_invalid`. Live attempts are zero. No cumulative lane ledgers or observation/QA metrics were produced. Scaling beyond 1,000 is blocked.
+- **Dashboard:** phase is `compensation_extraction_1000_stopped_at_preflight`; selection and preflight facts are shown, analysis readiness is false, and the corrected 500 QA layer remains the latest valid provisional evidence.
+- **Validation:** four compiles, 57 offline/mock tests, dashboard data/frontend builds, repository validation, 60 ingestion tests, coverage audit, protected-path immutability, artifact safety, and diff hygiene pass.
+- **Boundary:** no URL/hosted search, download/redownload, OCR, scout, source review, verification, live extraction, ingestion, `gabriel.codify`, final merge, wage-gap work, regression, durable-ledger mutation, or remote inspection occurred. No full text/table, raw prompt/response, encoded image copy, or secret was retained.
+
+### Interpretation
+
+The selection layer is ready and reusable; the extraction layer is not. A
+request can complete successfully at transport/API level and still fail the
+project's semantic schema. The sixth preflight result demonstrates why the
+disposition-to-sub-record rule must remain fail closed. Five passing cases are
+not enough to authorize a 500-case live run.
+
+The prior targeted-QA authorization was a prerequisite to attempt the scale,
+not permission to bypass a new preflight failure. The corrected 500-document
+shadow ledgers therefore remain the only current provisional extraction
+evidence.
+
+### Next Move
+
+Follow [next_task.md](../../next_task.md): preserve the frozen 1,000 identities,
+add a regression for inconsistent `mixed_ready` output, strengthen strict
+schema/prompt consistency, and rerun only the same six-path preflight. Require
+6/6 before starting `live_lanes_1000`. Do not select new documents or resend
+the corrected seed.
+
 ## 2026-07-25 — Targeted QA passes; 1,000-document provisional scale-up authorized
 
 ### Current State

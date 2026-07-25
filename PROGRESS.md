@@ -6,6 +6,34 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-25 (Cumulative 1,000-document extraction frozen; live run stopped at preflight)
+
+**Did**
+- Started from clean tracked `513f6b8bb8dcabec8af31277d780e413004dce4e`, preserving the unrelated untracked root `package-lock.json` and local adjudication renders. Confirmed the targeted-QA scale authority, required local inputs, and configured credential presence without printing values.
+- Extended the provisional extraction runner and added six focused 1,000-scale tests. The cumulative design reuses all 500 corrected seed identities without new model calls, integrates the targeted-QA base/non-base routing vocabulary, and adds 500 new retained identities.
+- Froze exactly 1,000 unique identities and hashes: 363 police, 237 fire, and 400 non-safety across 40 states/DC and six source families. Every safety record retains an explicit selected non-safety partner. Selection SHA-256 is `147e311e7a6d6c3aeb98c52357f6d46ea8ee52798be45493bf0a1c138a3b9f15`.
+- Built 5,767 bounded packet rows under the six-page, 1,500-character/page, and 6,000-character/case limits. The observed maxima are 6, 1,499, and 5,999. The no-call freeze passed.
+- Ran the authorized six-case representative GABRIEL preflight only against new cases. Five responses passed; one conflict-prone response declared `mixed_ready` without both required sub-record arrays and was rejected by the semantic validator.
+- Stopped before live extraction under the explicit fail-closed rule. Wrote stopped-decision, QA, result, readiness, dashboard, and next-task artifacts without creating incomplete lane ledgers.
+- Updated generated dashboard data, analysis readiness, the existing extraction card, and dashboard documentation to show `compensation_extraction_1000_stopped_at_preflight`.
+
+**Decisions and why**
+- Decision is `stopped_at_preflight_schema_invalid`. The frozen 1,000-case design remains reusable, but the 500 new live cases are not authorized until the unchanged six-path preflight reaches 6/6 strict semantic validity.
+- The corrected 500-document targeted-QA shadow ledgers remain the latest valid provisional extraction layer. No 1,000-document observation counts, conflict rate, contamination rate, or QA decision is inferred from a partial preflight.
+- Scaling beyond 1,000 is `blocked_preflight_schema_invalid`, not merely on hold for routine QA.
+
+**Surprises/breakage**
+- The retained matched pool supports 117—not 120—new fire identities with explicit cumulative non-safety partners. The additive selection therefore uses 183 police, 117 fire, and 200 non-safety rather than forcing unmatched fire cases.
+- Local packet scoring labels most new cases as mixed evidence; representative preflight selection was therefore based on deterministic page-feature evidence while preserving the frozen packets.
+- The strict schema caught a disposition/sub-record inconsistency even though the API request itself completed. This is the intended fail-closed behavior.
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Four compiles, 57 offline/mock regression tests, dashboard data/frontend builds, repository validation, 60 ingestion tests, coverage audit, protected-path immutability checks, packet/metadata safety checks, and diff hygiene passed.
+
+**Next steps**
+1. Add a focused mixed-disposition regression fixture and further constrain disposition/array consistency without changing the frozen 1,000 identities.
+2. Rerun the same six new-case preflight; require 6/6 before any live lane.
+3. If it passes, run only the 500 new cases resumably and materialize cumulative provisional QA; keep final merge, ingestion, codification, wage-gap work, regression, URL access, download, and OCR closed.
+
 ## 2026-07-25 (Targeted QA passes; provisional 1,000-document scale-up authorized)
 
 **Did**

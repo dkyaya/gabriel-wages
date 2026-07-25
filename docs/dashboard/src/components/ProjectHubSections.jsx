@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "compensation_extraction_1000_stopped_at_preflight"
+              ? "Provisional 1,000-document scale-up stopped at strict preflight"
+              : textTableCalibrationStatus.calibration_phase ===
             "compensation_extraction_500_targeted_qa_completed"
               ? "Targeted QA passed; provisional 1,000-document scale-up authorized"
               : textTableCalibrationStatus.calibration_phase ===
@@ -792,6 +795,19 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "compensation_extraction_1000_stopped_at_preflight" ? (
+            <>
+              The cumulative selection froze {formatNumber(
+                textTableCalibrationStatus.compensation_extraction_1000_selection_count,
+              )} retained identities, preserving {formatNumber(
+                textTableCalibrationStatus.compensation_extraction_1000_corrected_seed_count,
+              )} corrected seed cases without new model calls and adding {formatNumber(
+                textTableCalibrationStatus.compensation_extraction_1000_new_document_count,
+              )} new cases. The six-path preflight achieved {formatPercent(
+                100 * textTableCalibrationStatus.compensation_extraction_1000_preflight_schema_valid_rate,
+              )} strict semantic-schema validity, so live extraction did not start. The corrected 500-document QA layer remains the latest valid provisional evidence; scaling beyond 1,000 is {textTableCalibrationStatus.scale_beyond_1000_recommendation}.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "compensation_extraction_500_targeted_qa_completed" ? (
             <>
               Targeted QA processed {formatNumber(

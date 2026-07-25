@@ -1,24 +1,26 @@
-# Next task: prepare a provisional 1,000-document compensation extraction
+# Next task: repair and rerun the 1,000-document representative preflight
 
-The targeted QA gate authorizes a future 1,000-document provisional extraction
-run. Begin from the corrected shadow-ledger rules and the unchanged durable
-local artifact authorities.
+The cumulative 1,000-document selection is already frozen and must remain
+unchanged. The corrected 500-case seed must remain untouched and must not be
+sent to GABRIEL again.
 
-1. Freeze exactly 1,000 unique retained document identities with explicit
-   police, fire, and non-safety quotas and stable city × unit × negotiation-
-   cycle matching.
-2. Carry forward canonical observation IDs, active/inactive provenance rules,
-   and the separate quantitative, qualitative, mixed, non-base-wage, and
-   reference/exclusion lanes.
-3. Apply the targeted QA routing vocabulary during extraction so overtime,
-   premiums, longevity, certification, benefits, pension, leave,
-   reimbursements, and uniform/equipment evidence do not enter base wage.
-4. Use bounded page packets, dry run, representative preflight, resumable live
-   lanes, strict schemas, and stop-before-final-merge discipline.
-5. Recompute integrity and scale QA after the run. Keep all unresolved
-   structured conflicts explicit and preserve every source observation.
+Before any live extraction:
 
-This recommendation authorizes scale, not final analysis. Require separate
-execution authorization before running the 1,000 documents. Keep URL access,
-downloads, OCR, ingestion, `gabriel.codify`, final merge, wage-gap analysis,
-and regression closed.
+1. Add a focused regression fixture for a response that declares
+   `mixed_ready` but omits either the quantitative or qualitative sub-record
+   array.
+2. Strengthen the strict response schema or prompt so disposition and array
+   requirements are internally consistent without post-hoc fabrication.
+3. Run all offline extraction tests.
+4. Reconstruct and hash-check the existing frozen packets; do not select new
+   identities.
+5. Rerun the same six-path preflight only. It must achieve 6/6 strict semantic
+   validity before `live_lanes_1000` is allowed.
+6. If it passes, run only the 500 new cases resumably, then materialize the
+   cumulative provisional ledgers and compute duplicate, page-pointer,
+   conflict, and base/non-base contamination QA.
+
+Continue to prohibit URLs, hosted search, downloads, OCR, scouts, source
+review, verification, ingestion, `gabriel.codify`, final analysis merge,
+wage-gap work, regressions, raw prompt/response retention, and durable-ledger
+mutation.
