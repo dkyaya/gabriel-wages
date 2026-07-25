@@ -756,8 +756,8 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
-            "compensation_extraction_1000_stopped_at_preflight"
-              ? "Provisional 1,000-document scale-up stopped at strict preflight"
+            "compensation_extraction_1000_live_incomplete_499_of_500"
+              ? "Provisional 1,000-document scale-up stopped with one new case unresolved"
               : textTableCalibrationStatus.calibration_phase ===
             "compensation_extraction_500_targeted_qa_completed"
               ? "Targeted QA passed; provisional 1,000-document scale-up authorized"
@@ -795,7 +795,7 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
-          "compensation_extraction_1000_stopped_at_preflight" ? (
+          "compensation_extraction_1000_live_incomplete_499_of_500" ? (
             <>
               The cumulative selection froze {formatNumber(
                 textTableCalibrationStatus.compensation_extraction_1000_selection_count,
@@ -803,9 +803,15 @@ export function VerificationPipeline({
                 textTableCalibrationStatus.compensation_extraction_1000_corrected_seed_count,
               )} corrected seed cases without new model calls and adding {formatNumber(
                 textTableCalibrationStatus.compensation_extraction_1000_new_document_count,
-              )} new cases. The six-path preflight achieved {formatPercent(
+              )} new cases. The repaired six-path preflight achieved {formatPercent(
                 100 * textTableCalibrationStatus.compensation_extraction_1000_preflight_schema_valid_rate,
-              )} strict semantic-schema validity, so live extraction did not start. The corrected 500-document QA layer remains the latest valid provisional evidence; scaling beyond 1,000 is {textTableCalibrationStatus.scale_beyond_1000_recommendation}.
+              )} strict semantic-schema validity. Live extraction then stored {formatNumber(
+                textTableCalibrationStatus.compensation_extraction_1000_live_schema_valid_case_count,
+              )} of 500 new cases after {formatNumber(
+                textTableCalibrationStatus.compensation_extraction_1000_live_attempt_count,
+              )} bounded attempts; {formatNumber(
+                textTableCalibrationStatus.compensation_extraction_1000_live_unresolved_case_count,
+              )} longevity-routing case remains invalid. No cumulative 1,000-case lanes or QA metrics were materialized. The corrected 500-document QA layer remains the latest complete valid provisional evidence; scaling beyond 1,000 is {textTableCalibrationStatus.scale_beyond_1000_recommendation}.
             </>
           ) : textTableCalibrationStatus.calibration_phase ===
           "compensation_extraction_500_targeted_qa_completed" ? (

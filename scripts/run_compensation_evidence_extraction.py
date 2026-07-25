@@ -535,11 +535,31 @@ RESPONSE_KEYS = {"case_disposition", "page_relationship", "quantitative_observat
 RESPONSE_SCHEMA = {
     "type": "object", "additionalProperties": False, "required": sorted(RESPONSE_KEYS),
     "properties": {
-        "case_disposition": {"type": "string", "enum": sorted(DISPOSITIONS)},
+        "case_disposition": {
+            "type": "string",
+            "enum": sorted(DISPOSITIONS),
+            "description": (
+                "Use mixed_ready only when both quantitative_observations and "
+                "qualitative_observations are non-empty; quantitative_ready only "
+                "when quantitative is non-empty and qualitative is empty; "
+                "qualitative_ready only when qualitative is non-empty and "
+                "quantitative is empty; non_base_wage only when non-base is "
+                "non-empty and both base quantitative and qualitative are empty."
+            ),
+        },
         "page_relationship": {"type": "string", "enum": sorted(RELATIONSHIPS)},
-        "quantitative_observations": {"type": "array", "maxItems": 5, "items": QUANT_OBS_SCHEMA},
-        "qualitative_observations": {"type": "array", "maxItems": 5, "items": QUAL_OBS_SCHEMA},
-        "non_base_wage_observations": {"type": "array", "maxItems": 5, "items": NONBASE_OBS_SCHEMA},
+        "quantitative_observations": {
+            "type": "array", "maxItems": 5, "items": QUANT_OBS_SCHEMA,
+            "description": "Required non-empty for quantitative_ready and mixed_ready; otherwise empty unless a base-wage observation truly coexists with separately routed non-base evidence.",
+        },
+        "qualitative_observations": {
+            "type": "array", "maxItems": 5, "items": QUAL_OBS_SCHEMA,
+            "description": "Required non-empty for qualitative_ready and mixed_ready; empty for quantitative_ready and non_base_wage.",
+        },
+        "non_base_wage_observations": {
+            "type": "array", "maxItems": 5, "items": NONBASE_OBS_SCHEMA,
+            "description": "Use for non-base compensation only; non_base_wage disposition requires this non-empty and both base quantitative and qualitative arrays empty.",
+        },
         "confidence": {"type": "string", "enum": sorted(CONFIDENCE)},
         "reason_codes": {"type": "array", "minItems": 1, "maxItems": 8, "items": {"type": "string", "pattern": "^[A-Z][A-Z0-9_]{0,39}$"}},
         "short_rationale": {"type": "string", "minLength": 1, "maxLength": 300},
@@ -552,15 +572,37 @@ def prompt(row: dict[str, str], pages: list[PagePacket]) -> str:
         "case": {k: row[k] for k in ("extraction_case_id", "state", "municipality", "government_name", "unit_type", "candidate_source_type", "contract_period_start", "contract_period_end")},
         "pages": [{"page_number": p.page, "page_role": p.role, "bounded_text": p.text, "local_features": {"wage_terms": p.wage, "numeric_tokens": p.numeric, "table_lines": p.table, "mechanism_terms": p.qual, "non_base_terms": p.nonbase, "reference_signal": p.reference}, "image_attached": bool(p.image)} for p in pages],
     }
+    retry_hint = row.get("_nonbase_retry_hint", "")
+    retry_instruction = (
+        " A prior strict-validation attempt detected the non-base family "
+        f"'{retry_hint}' inside a quantitative item for this same bounded packet. "
+        "Reassess the evidence independently, but do not repeat that routing: "
+        "if that family is present, put it only in non_base_wage_observations. "
+        "Treat this as a hard exclusion from the quantitative array: do not use "
+        "that family name, a synonym, or its eligibility language in any "
+        "quantitative field or quantitative reason code. Set "
+        "quantitative_observations to [] unless the packet contains a base-wage "
+        "item completely independent of that non-base family. "
+        "If no valid base-wage quantitative item remains, choose qualitative_ready, "
+        "non_base_wage, reference_only, exclude, or second_review as supported; "
+        "never fabricate a base item."
+        if retry_hint
+        else ""
+    )
     return (
         "Extract provisional compensation evidence only from this bounded local page packet. "
         "Return separate quantitative, qualitative-mechanism, and non-base-wage observation arrays. "
-        "For mixed evidence populate both quantitative and qualitative arrays; never collapse them. "
+        "Apply this disposition decision matrix exactly: mixed_ready means BOTH quantitative_observations and qualitative_observations contain at least one valid item; quantitative_ready means quantitative is non-empty and qualitative is empty; qualitative_ready means qualitative is non-empty and quantitative is empty; non_base_wage means non-base is non-empty and both base quantitative and qualitative arrays are empty. "
+        "If you initially consider mixed_ready but only one evidence family is actually supported, change the disposition to quantitative_ready or qualitative_ready. Never fabricate a missing sub-record merely to satisfy mixed_ready. "
+        "For genuine mixed evidence populate both quantitative and qualitative arrays; never collapse them. "
         "Copy only the specific visible value tokens needed for structured fields; do not reproduce rows, tables, or long passages. "
         "Do not calculate, normalize, annualize, infer unseen values, or create final observations. Empty strings mean absent fields. "
         "The quantitative array is BASE WAGE ONLY. Overtime, premium or differential pay, leave, healthcare contributions, pension, stipends, bonuses, longevity, certification or education incentives, reimbursements, uniform or equipment allowances, benefits, and every other non-base component belong only in non_base_wage_observations. If base and non-base evidence coexist, create separate observations in their respective arrays. "
+        "Before returning JSON, audit every quantitative observation field and reason code. If any item describes overtime, premium, differential, stipend, bonus, longevity, certification or education incentive, leave, healthcare, pension, reimbursement, uniform/equipment, benefit, or other non-base pay, remove that entire item from quantitative_observations and place it only in non_base_wage_observations. Do not report total-compensation or benefit-inclusive amounts as base wage. If this leaves no base quantitative item, use qualitative_ready when qualitative mechanism evidence remains, non_base_wage when only non-base evidence remains, or the appropriate reference/exclusion disposition. "
         "Do not use compensation_type=other as a dump bucket: it is permitted only for an explicit base-pay calculation or regular base-rate formula, with a specific reason code. "
-        "A reference page without its target is reference_only. All page numbers must be among supplied pages. Summaries must be concise paraphrases, not quotations. Return strict JSON only.\n"
+        "A reference page without its target is reference_only. All page numbers must be among supplied pages. Summaries must be concise paraphrases, not quotations. Return strict JSON only."
+        + retry_instruction
+        + "\n"
         f"BOUNDED_PACKET={json.dumps(packet, separators=(',', ':'))}"
     )
 
@@ -587,16 +629,30 @@ def validate_response(raw: str, allowed_pages: set[int]) -> dict[str, Any]:
             type_field = "compensation_type" if field.startswith("quant") else "mechanism_type" if field.startswith("qual") else "non_base_wage_type"
             if item.get(type_field) not in allowed_types: raise ValueError(f"invalid {type_field}")
             if field == "quantitative_observations":
-                if targeted_nonbase_type({k: str(v) for k, v in item.items()}):
-                    raise ValueError("non-base compensation is in quantitative array")
+                detected_nonbase = targeted_nonbase_type(
+                    {k: str(v) for k, v in item.items()}
+                )
+                if detected_nonbase:
+                    raise ValueError(
+                        "non-base compensation is in quantitative array: "
+                        + detected_nonbase
+                    )
                 if item["compensation_type"] == "other":
                     diagnostic = " ".join(str(v) for v in item.values()).replace("_", " ")
                     if not re.search(r"\b(base|regular rate|wage formula|salary calculation|basic rate)\b", diagnostic, re.I):
                         raise ValueError("quantitative other lacks explicit base-pay reason")
-    if value["case_disposition"] == "quantitative_ready" and not value["quantitative_observations"]: raise ValueError("quantitative disposition without observation")
-    if value["case_disposition"] == "qualitative_ready" and not value["qualitative_observations"]: raise ValueError("qualitative disposition without observation")
-    if value["case_disposition"] == "mixed_ready" and (not value["quantitative_observations"] or not value["qualitative_observations"]): raise ValueError("mixed disposition missing sub-records")
-    if value["case_disposition"] == "non_base_wage" and not value["non_base_wage_observations"]: raise ValueError("non-base disposition without observation")
+    disposition = value["case_disposition"]
+    has_quant = bool(value["quantitative_observations"])
+    has_qual = bool(value["qualitative_observations"])
+    has_nonbase = bool(value["non_base_wage_observations"])
+    if disposition == "quantitative_ready" and (not has_quant or has_qual):
+        raise ValueError("quantitative_ready requires quantitative-only base/mechanism evidence")
+    if disposition == "qualitative_ready" and (not has_qual or has_quant):
+        raise ValueError("qualitative_ready requires qualitative-only base/mechanism evidence")
+    if disposition == "mixed_ready" and (not has_quant or not has_qual):
+        raise ValueError("mixed_ready requires quantitative and qualitative sub-records")
+    if disposition == "non_base_wage" and (not has_nonbase or has_quant or has_qual):
+        raise ValueError("non_base_wage requires non-base-only evidence arrays")
     return value
 
 
@@ -1466,7 +1522,14 @@ def preflight_1000(
         for role, row in chosen
     ]
     results = call_gabriel(requests, key, parallel=1)
-    metadata = [result_metadata(result, request) for result, request in zip(results, requests)]
+    metadata_path = output / "compensation_extraction_1000_request_metadata.csv"
+    timing_path = output / "compensation_extraction_1000_timing.csv"
+    prior_metadata = read_csv(metadata_path) if metadata_path.is_file() else []
+    prior_timing = read_csv(timing_path) if timing_path.is_file() else []
+    metadata = [
+        result_metadata(result, request)
+        for result, request in zip(results, requests)
+    ] + [row for row in prior_metadata if row["request_phase"] == "live_1000"]
     timing = [
         {
             "request_phase": request.phase,
@@ -1478,9 +1541,9 @@ def preflight_1000(
             "request_status": result.status,
         }
         for result, request in zip(results, requests)
-    ]
-    write_csv(output / "compensation_extraction_1000_request_metadata.csv", METADATA_FIELDS, metadata)
-    write_csv(output / "compensation_extraction_1000_timing.csv", TIMING_FIELDS, timing)
+    ] + [row for row in prior_timing if row["request_phase"] == "live_1000"]
+    write_csv(metadata_path, METADATA_FIELDS, metadata)
+    write_csv(timing_path, TIMING_FIELDS, timing)
     passed = len(results) == 6 and all(result.status == "success" for result in results)
     report = "# Cumulative 1,000-document extraction preflight\n\n"
     report += "\n".join(
@@ -1999,10 +2062,29 @@ def live_1000(
     pending = [row for row in new_selection if row["extraction_case_id"] not in stored]
     for start in range(0, len(pending), 25):
         batch_rows = pending[start : start + 25]
-        requests = [
-            Request(row, packet_map[row["extraction_case_id"]], "live_1000")
-            for row in batch_rows
-        ]
+        requests: list[Request] = []
+        for row in batch_rows:
+            request_row = dict(row)
+            prior_errors = [
+                item["error_message"]
+                for item in metadata
+                if item["request_phase"] == "live_1000"
+                and item["extraction_case_id"] == row["extraction_case_id"]
+                and item["error_message"].startswith(
+                    "non-base compensation is in quantitative array: "
+                )
+            ]
+            if prior_errors:
+                request_row["_nonbase_retry_hint"] = prior_errors[-1].rsplit(
+                    ": ", 1
+                )[-1]
+            requests.append(
+                Request(
+                    request_row,
+                    packet_map[row["extraction_case_id"]],
+                    "live_1000",
+                )
+            )
         results = call_gabriel(requests, key, parallel=2)
         for result, request in zip(results, requests):
             metadata.append(result_metadata(result, request))
@@ -2080,6 +2162,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     p.add_argument("--preflight-representative-cases", action="store_true")
     p.add_argument("--allow-gabriel", action="store_true")
     p.add_argument("--resume", action="store_true")
+    p.add_argument("--only-requires-gabriel", choices=("yes", "no"))
     return p.parse_args(argv)
 
 
@@ -2152,6 +2235,10 @@ def main(argv: list[str] | None = None) -> int:
         return preflight_1000(output, selection, packet_map, key)
     if not args.resume: raise ValueError("live lanes require --resume")
     if args.mode == "live_lanes_1000":
+        if args.only_requires_gabriel != "yes":
+            raise ValueError(
+                "live 1,000 lanes require --only-requires-gabriel yes"
+            )
         return live_1000(
             output,
             selection,

@@ -95,6 +95,37 @@ def response() -> dict[str, object]:
     }
 
 
+def qualitative_observation() -> dict[str, object]:
+    return {
+        "page_number": 2,
+        "mechanism_type": "implementation_or_effective_date_logic",
+        "bargaining_logic": "",
+        "indexing_formula": "",
+        "comparability_basis": "",
+        "parity_logic": "",
+        "step_progression_rule": "",
+        "eligibility_rule": "",
+        "implementation_rule": "The base schedule takes effect on the listed date.",
+        "fiscal_constraint": "",
+        "reopener_clause": "",
+        "differentiation_logic": "Base salary varies by rank and step.",
+        "confidence": "high",
+        "reason_code": "BASE_EFFECTIVE_DATE_RULE",
+    }
+
+
+def nonbase_observation() -> dict[str, object]:
+    return {
+        "page_number": 2,
+        "non_base_wage_type": "stipend",
+        "value_text": "$500",
+        "effective_date": "",
+        "eligibility_or_implementation_rule": "Eligible certified employees.",
+        "confidence": "medium",
+        "reason_code": "CERTIFICATION_STIPEND",
+    }
+
+
 class CompensationExtraction1000Tests(unittest.TestCase):
     def test_modes_are_backward_compatible(self) -> None:
         choices = extract.parse_args(
@@ -108,7 +139,19 @@ class CompensationExtraction1000Tests(unittest.TestCase):
             self.assertEqual(parsed.mode, mode)
 
     def test_real_cumulative_selection_is_exact_and_preserves_seed(self) -> None:
+        frozen_selection = (
+            ROOT
+            / "docs/analysis/compensation_extraction"
+            / "COMPENSATION-EVIDENCE-EXTRACTION-1000DOC-2026-07-25"
+            / "compensation_extraction_1000_selection_manifest.csv"
+        )
+        expected_hash = (
+            "147e311e7a6d6c3aeb98c52357f6d46e"
+            "a8ee52798be45493bf0a1c138a3b9f15"
+        )
+        self.assertEqual(extract.sha_file(frozen_selection), expected_hash)
         protected = [
+            frozen_selection,
             extract.EXTRACTION_500_DIR / "compensation_extraction_500_selection_manifest.csv",
             extract.TARGETED_QA_500_DIR / "compensation_extraction_500_recomputed_decision.json",
             extract.GATE3,
@@ -143,6 +186,67 @@ class CompensationExtraction1000Tests(unittest.TestCase):
         self.assertTrue(all(row["matched_non_safety_case_id"] for row in rows))
         self.assertEqual(before, {path: extract.sha_file(path) for path in protected})
 
+    def test_mixed_ready_missing_quantitative_subrecords_fails_closed(self) -> None:
+        value = response()
+        value["case_disposition"] = "mixed_ready"
+        value["quantitative_observations"] = []
+        value["qualitative_observations"] = [qualitative_observation()]
+        with self.assertRaisesRegex(ValueError, "mixed_ready requires"):
+            extract.validate_response(json.dumps(value), {2})
+
+    def test_mixed_ready_missing_qualitative_subrecords_fails_closed(self) -> None:
+        value = response()
+        value["case_disposition"] = "mixed_ready"
+        value["qualitative_observations"] = []
+        with self.assertRaisesRegex(ValueError, "mixed_ready requires"):
+            extract.validate_response(json.dumps(value), {2})
+
+    def test_disposition_matrix_accepts_only_supported_evidence_family(self) -> None:
+        quantitative = response()
+        self.assertEqual(
+            extract.validate_response(json.dumps(quantitative), {2})[
+                "case_disposition"
+            ],
+            "quantitative_ready",
+        )
+
+        qualitative = response()
+        qualitative["case_disposition"] = "qualitative_ready"
+        qualitative["quantitative_observations"] = []
+        qualitative["qualitative_observations"] = [qualitative_observation()]
+        self.assertEqual(
+            extract.validate_response(json.dumps(qualitative), {2})[
+                "case_disposition"
+            ],
+            "qualitative_ready",
+        )
+
+        mixed = response()
+        mixed["case_disposition"] = "mixed_ready"
+        mixed["qualitative_observations"] = [qualitative_observation()]
+        self.assertEqual(
+            extract.validate_response(json.dumps(mixed), {2})[
+                "case_disposition"
+            ],
+            "mixed_ready",
+        )
+
+        nonbase = response()
+        nonbase["case_disposition"] = "non_base_wage"
+        nonbase["quantitative_observations"] = []
+        nonbase["non_base_wage_observations"] = [nonbase_observation()]
+        self.assertEqual(
+            extract.validate_response(json.dumps(nonbase), {2})[
+                "case_disposition"
+            ],
+            "non_base_wage",
+        )
+
+        invalid_quant = response()
+        invalid_quant["qualitative_observations"] = [qualitative_observation()]
+        with self.assertRaisesRegex(ValueError, "quantitative_ready requires"):
+            extract.validate_response(json.dumps(invalid_quant), {2})
+
     def test_quantitative_schema_routes_nonbase_and_rejects_other_dump(self) -> None:
         valid = response()
         self.assertEqual(
@@ -176,13 +280,21 @@ class CompensationExtraction1000Tests(unittest.TestCase):
             extract.validate_response(json.dumps(vague_other), {2})
 
     def test_prompt_is_bounded_and_excludes_prior_labels(self) -> None:
-        text = extract.prompt(selection("new_case", "quantitative"), [packet()])
+        row = selection("new_case", "quantitative")
+        text = extract.prompt(row, [packet()])
         self.assertLess(len(text), 10000)
         lowered = text.lower()
         for forbidden in ("review1", "review2", "gate 1 label", "gate 2 label", "gate 3 label"):
             self.assertNotIn(forbidden, lowered)
         self.assertIn("base wage", lowered)
         self.assertIn("non-base", lowered)
+        row["_nonbase_retry_hint"] = "longevity"
+        retry_text = extract.prompt(row, [packet()])
+        self.assertIn("prior strict-validation attempt", retry_text)
+        self.assertIn("'longevity'", retry_text)
+        self.assertIn("hard exclusion from the quantitative array", retry_text)
+        self.assertIn("completely independent of that non-base family", retry_text)
+        self.assertIn("never fabricate a base item", retry_text)
 
     def test_six_path_preflight_calls_only_new_cases_and_saves_no_raw(self) -> None:
         lanes = [
@@ -230,6 +342,33 @@ class CompensationExtraction1000Tests(unittest.TestCase):
 
         with tempfile.TemporaryDirectory() as temp:
             output = Path(temp)
+            prior_metadata = {field: "" for field in extract.METADATA_FIELDS}
+            prior_metadata.update(
+                {
+                    "request_phase": "live_1000",
+                    "extraction_case_id": "previous_live_case",
+                    "request_status": "success",
+                    "schema_valid": "true",
+                }
+            )
+            prior_timing = {field: "" for field in extract.TIMING_FIELDS}
+            prior_timing.update(
+                {
+                    "request_phase": "live_1000",
+                    "extraction_case_id": "previous_live_case",
+                    "request_status": "success",
+                }
+            )
+            extract.write_csv(
+                output / "compensation_extraction_1000_request_metadata.csv",
+                extract.METADATA_FIELDS,
+                [prior_metadata],
+            )
+            extract.write_csv(
+                output / "compensation_extraction_1000_timing.csv",
+                extract.TIMING_FIELDS,
+                [prior_timing],
+            )
             with mock.patch.object(extract, "call_gabriel", side_effect=fake_call):
                 self.assertEqual(
                     extract.preflight_1000(output, [seed, *rows], packet_map, "redacted-test-key"),
@@ -238,6 +377,11 @@ class CompensationExtraction1000Tests(unittest.TestCase):
             marker = json.loads((output / ".preflight_1000_passed.json").read_text())
             self.assertEqual(marker["schema_valid_count"], 6)
             self.assertEqual(marker["seed_case_calls"], 0)
+            metadata = extract.read_csv(
+                output / "compensation_extraction_1000_request_metadata.csv"
+            )
+            self.assertEqual(len(metadata), 7)
+            self.assertEqual(metadata[-1]["extraction_case_id"], "previous_live_case")
             names = {path.name for path in output.iterdir()}
             self.assertFalse(any("prompt" in name or "response" in name for name in names))
 

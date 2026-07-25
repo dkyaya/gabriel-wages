@@ -1,66 +1,66 @@
-# Provisional 1,000-document compensation extraction: stopped at preflight
+# Provisional 1,000-document compensation extraction: 499/500 new cases stored
 
-Task ID: `COMPENSATION-EVIDENCE-EXTRACTION-1000DOC-PROVISIONAL-SCALE-2026-07-25`
+Task ID: `COMPENSATION-EVIDENCE-EXTRACTION-1000DOC-PREFLIGHT-REPAIR-AND-LIVE-500NEW-2026-07-25`
 
 ## Result
 
-The cumulative selection and packet freeze succeeded, but the representative
-GABRIEL preflight failed the strict semantic schema. The run therefore stopped
-before live extraction, exactly as required by the fail-closed rule. The
-corrected 500-document provisional layer remains authoritative; no incomplete
-1,000-document lane output is being presented as extraction.
+The mixed-disposition repair succeeded at preflight: the exact same six
+representative cases passed 6/6 strict semantic-schema validation, including
+the previously failing conflict-prone case. Live extraction then ran only for
+the frozen 500 new documents. The corrected 500-document seed was never sent
+to GABRIEL.
 
-## Frozen cumulative design
+Resumable passes produced 499 unique strict-schema-valid new-case results.
+One case remained invalid after ten attempts because it repeatedly placed
+longevity evidence in `quantitative_observations`. The validator rejected every
+attempt. The runner therefore did not materialize cumulative lanes.
 
-- Exactly 1,000 unique retained document identities and content hashes.
-- Prior corrected seed preserved: 500 identities, zero new API calls.
-- New expansion: 500 identities.
+## Repair
+
+- Added explicit strict-schema descriptions tying dispositions to required
+  arrays.
+- Added a prompt decision matrix for quantitative-only, qualitative-only,
+  mixed, and non-base-only evidence.
+- Added fail-closed semantic checks for both forms of incomplete `mixed_ready`.
+- Added regression coverage for all four supported evidence-family outcomes.
+- Added an explicit `--only-requires-gabriel yes` live guard.
+- Added retry-only non-base routing hints derived solely from redacted
+  validation errors; no raw response was read or retained.
+- Preserved prior live request/timing metadata across preflight reruns.
+
+## Frozen design and execution
+
+- Selection: exactly 1,000 unique identities and content hashes.
+- Seed: 500 corrected cases; GABRIEL calls zero.
+- New cohort: 500.
 - Units: 363 police, 237 fire, 400 non-safety.
-- Matching: every safety identity retains an explicit selected non-safety
-  comparison pointer.
-- States/DC: 40.
-- Source families: six—951 CBAs, 24 wage schedules/compensation plans, ten
-  memoranda/settlements, nine ordinances/policies, five arbitration awards,
-  and one factfinding document.
-- Frozen selection SHA-256:
+- States/DC: 40; source families: six.
+- Packet rows: 5,767.
+- Packet maxima: six pages/case, 1,499 characters/page, 5,999/case.
+- Selection SHA-256:
   `147e311e7a6d6c3aeb98c52357f6d46ea8ee52798be45493bf0a1c138a3b9f15`.
-- Packet rows: 5,767, covering all 1,000 identities.
-- Packet caps: six pages/case, 1,500 text characters/page, and 6,000 text
-  characters/case; observed maxima were 6, 1,499, and 5,999.
-
-The additive unit mix is 183 police, 117 fire, and 200 non-safety. This uses
-all 117 available new fire identities with an explicit selected non-safety
-partner and avoids forcing unmatched cases merely to reproduce the earlier
-percentage split.
-
-## Preflight
-
-GABRIEL ran only for six new representative cases after the no-call freeze and
-local packet validation. Backend was `huit_openai_responses_direct_sdk`; model
-was `gpt-5.4-nano`. The bounded requests contained 29 page references, 28,526
-text characters, and one existing rendered image totaling 34,138 bytes.
-
-Five cases were schema-valid. The conflict-prone case returned a
-`mixed_ready` disposition without both mandatory quantitative and qualitative
-sub-record types. The deterministic semantic validator rejected it rather
-than coercing or repairing the answer. Preflight validity was 5/6 (83.3333%),
-below the required 100% for live start.
-
-No raw prompt, raw response, image copy, full page/document text, full table,
-credential, or authorization header was retained.
+- Final repaired preflight: 6/6.
+- GABRIEL backend/model: `huit_openai_responses_direct_sdk` / `gpt-5.4-nano`.
+- Live attempts: 551.
+- Unique new cases stored: 499/500 (99.8%).
+- Request outcomes: 499 success, 51 schema-invalid, one request failure.
 
 ## Decision
 
-Decision: `stopped_at_preflight_schema_invalid`.
+Decision: `live_incomplete_schema_invalid`.
 
-- Live 500-new-document extraction: not started.
-- Cumulative observation counts: not computed.
-- 1,000-document QA: not run because there are no live lane outputs.
-- Scaling beyond 1,000: blocked.
-- Latest usable provisional extraction layer: the corrected 500-document
-  targeted-QA shadow ledgers.
+No cumulative 1,000-document observation or QA counts exist because the
+all-or-nothing materialization gate did not pass. The 499-case parsed
+checkpoint remains resumable but is not a provisional cumulative lane. The
+corrected 500-document targeted-QA layer remains the latest complete valid
+provisional extraction evidence.
 
-The next action is to repair or further constrain the relationship between
-`case_disposition` and required sub-record arrays, add a focused regression
-fixture for the exact mixed-disposition failure, and rerun the unchanged
-six-path preflight. Live extraction remains prohibited until all six pass.
+Targeted observation-level QA is not yet appropriate: the blocker is one
+missing strict-schema case, not a populated cumulative conflict queue. The
+remaining unique readable parse-text documents may not run next. First resolve
+the single bounded longevity-routing case, reach 500/500, materialize the
+cumulative ledgers, and compute duplicate, page-pointer, conflict, and
+base/non-base contamination QA.
+
+No URL access, download, OCR, scout, review, verification, ingestion,
+codification, final merge, wage-gap work, regression, or causal claim occurred.

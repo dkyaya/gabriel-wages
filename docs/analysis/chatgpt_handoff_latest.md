@@ -6,6 +6,37 @@ Last updated: `2026-07-25`
 
 ---
 
+## 2026-07-25 — Preflight repaired; live 1,000-document expansion stopped at 499/500 new cases
+
+### Current State
+
+- **Authority/start:** work began at clean tracked `505306c0fcf052ee1de87e7446c038652780ff0d`. The unrelated untracked root `package-lock.json` and local adjudication renders remain outside the task. All Gate 1–3, durable, original 500-document, corrected targeted-QA, and frozen selection inputs remain unchanged.
+- **Repair:** `scripts/run_compensation_evidence_extraction.py` now expresses and enforces an explicit disposition/array contract. `mixed_ready` requires at least one quantitative and one qualitative record; quantitative-only, qualitative-only, and non-base-only dispositions require their own evidence arrays and reject conflicting arrays. Missing evidence is invalid and is never fabricated.
+- **Frozen design:** [the selection](compensation_extraction/COMPENSATION-EVIDENCE-EXTRACTION-1000DOC-2026-07-25/compensation_extraction_1000_selection_manifest.csv) remains exactly 1,000 unique identities: 500 corrected seed plus 500 new. The SHA-256 remains `147e311e7a6d6c3aeb98c52357f6d46ea8ee52798be45493bf0a1c138a3b9f15`; packets remain 5,767 bounded page rows with maxima of six pages, 1,499 characters/page, and 5,999/case.
+- **Preflight:** the exact same six representative paths passed 6/6 strict semantic validation after repair. The corrected seed received zero GABRIEL calls.
+- **Live run:** GABRIEL ran only for the 500 frozen `requires_gabriel=yes` new cases. Across 551 bounded attempts, 499 unique cases were stored as strict-valid structured results. One case, `cex1000_150f3ac41a7919533b202cc2`, remained invalid after ten attempts because longevity evidence repeatedly appeared in `quantitative_observations`.
+- **Fail-closed stop:** [the decision](compensation_extraction/COMPENSATION-EVIDENCE-EXTRACTION-1000DOC-2026-07-25/compensation_extraction_1000_decision_report.json) is `live_incomplete_schema_invalid`. No cumulative lane was materialized and no 1,000-case observation, duplicate, page-pointer, conflict, contamination, or QA metric is claimed. The 499-case parsed checkpoint is resumable intermediate state.
+- **Dashboard:** phase is `compensation_extraction_1000_live_incomplete_499_of_500`; analysis readiness remains false. The corrected 500-document targeted-QA shadow ledgers remain the latest complete valid provisional extraction evidence.
+- **Boundary:** no URL/hosted search, download/redownload, OCR, scout, source review, verification, ingestion, `gabriel.codify`, final merge, wage-gap work, regression, durable-ledger mutation, remote inspection, fetch, or pull occurred. No full text/table, raw prompt/response, encoded image, or secret was retained.
+
+### Interpretation
+
+The schema/prompt repair succeeded at the intended six-case gate and recovered
+nearly the full new cohort. The remaining problem is no longer broad prompt
+instability: it is one explicit longevity-routing edge case. Treating that
+response as valid would reintroduce the base/non-base contamination that the
+500-document targeted QA corrected. Repeated generic retries are therefore not
+a defensible substitute for a case-bounded response contract.
+
+### Next Move
+
+Follow [next_task.md](../../next_task.md). Preserve the frozen selection and
+499-case checkpoint, validate a longevity-only non-base response contract, and
+send at most the one unresolved case. If it passes, materialize cumulative
+provisional lanes and compute the full 1,000-case QA gate. Do not resend the
+corrected seed or any stored new case, and do not run the remaining readable
+parse-text pool before cumulative QA passes.
+
 ## 2026-07-25 — Cumulative 1,000-document extraction stopped at strict preflight
 
 ### Current State

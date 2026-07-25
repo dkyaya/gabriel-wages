@@ -6,6 +6,33 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-25 (1,000-document preflight repaired; live run stopped at 499/500 new cases)
+
+**Did**
+- Started from clean tracked `505306c0fcf052ee1de87e7446c038652780ff0d`, preserving the unrelated untracked root `package-lock.json` and local adjudication renders. Reverified every frozen selection, packet, corrected-seed, and protected-ledger input without inspecting a remote.
+- Strengthened the extraction schema, prompt decision matrix, and semantic validator: `mixed_ready` now requires both quantitative and qualitative sub-records; single-family dispositions require the matching array and exclude conflicting arrays; non-base-only evidence must remain outside base quantitative records. Added focused regression coverage and a live guard requiring `--only-requires-gabriel yes`.
+- Preserved the 1,000-case selection SHA-256 `147e311e7a6d6c3aeb98c52357f6d46ea8ee52798be45493bf0a1c138a3b9f15`, exact identities, 5,767 packet rows, page/text caps, and all 500 corrected seed cases without GABRIEL calls.
+- Reran the unchanged six-path representative preflight. All six cases passed strict semantic validation, including the previously failing effective-date/classification-conflict case.
+- Ran bounded, resumable live extraction only on the frozen 500 new cases. Across 551 attempts, 499 unique cases reached strict semantic-schema validity. One case remained invalid after ten bounded attempts because longevity evidence repeatedly appeared in the base quantitative array.
+- Stopped before cumulative lane materialization. Preserved the 499 structured results as a resumable checkpoint and published no incomplete cumulative observation, conflict, contamination, or QA count.
+- Updated the extraction decision, QA/result documentation, generated dashboard data, analysis readiness, the existing dashboard card, dashboard documentation, and `next_task.md` to show `compensation_extraction_1000_live_incomplete_499_of_500`.
+
+**Decisions and why**
+- Decision is `live_incomplete_schema_invalid`. The preflight repair succeeded, but cumulative 1,000-case materialization remains all-or-nothing; one unresolved response cannot be fabricated, coerced, or heuristically demoted.
+- The corrected 500-document targeted-QA shadow ledgers remain the latest complete valid provisional extraction layer. The 499-case checkpoint is resumable intermediate state, not an analysis-ready or cumulative ledger.
+- Scaling beyond 1,000 and the remaining readable parse-text pool remain blocked until the single longevity case is valid, the cumulative lanes are materialized, and duplicate/page/conflict/base-vs-non-base QA is computed.
+
+**Surprises/breakage**
+- The stricter prompt and retry guidance recovered 499 cases, but the model repeatedly classified longevity as base quantitative evidence for one bounded packet. Ten rejected responses confirmed that further generic retries were not a defensible resolution strategy.
+- Preflight and live constraints remained operationally distinct: the unchanged six-path sample passed 6/6, while the full frozen new cohort still exposed one persistent semantic edge case.
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Focused regression tests, dashboard generation/frontend build, repository validation, 60 ingestion tests, coverage audit, protected-state checks, packet/hash checks, and diff hygiene passed.
+
+**Next steps**
+1. Resolve only `cex1000_150f3ac41a7919533b202cc2` under a validated longevity-only non-base response contract; do not resend the seed or the other 499 new cases.
+2. If the case passes, materialize cumulative provisional ledgers and compute the full 1,000-case QA gate.
+3. Keep further scale, final merge, ingestion, codification, wage-gap work, regression, URL access, download, and OCR closed until cumulative QA passes.
+
 ## 2026-07-25 (Cumulative 1,000-document extraction frozen; live run stopped at preflight)
 
 **Did**

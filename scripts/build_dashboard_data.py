@@ -1199,7 +1199,7 @@ def build_analysis_readiness(
     return {
         "metadata": metadata,
         "overall_status": (
-            "provisional_1000_compensation_extraction_stopped_at_preflight"
+            "provisional_1000_compensation_extraction_live_incomplete_499_of_500"
             if scale_1000_attempted
             else "provisional_500_compensation_extraction_targeted_qa_pass_1000_authorized"
             if targeted_qa_completed
@@ -1267,7 +1267,7 @@ def build_analysis_readiness(
             "wage_extraction_stage": {
                 "available": extraction_completed,
                 "display_status": (
-                    "cumulative_1000_frozen_live_stopped_at_schema_preflight"
+                    "cumulative_1000_live_incomplete_499_of_500_no_materialization"
                     if scale_1000_attempted
                     else "targeted_qa_pass_1000_authorized_provisional_not_analysis_ready"
                     if targeted_qa_completed
@@ -4636,19 +4636,38 @@ def build_text_table_calibration_status_summary(
             scale_1000_requests = read_csv(
                 COMPENSATION_EXTRACTION_1000_REQUEST_METADATA_PATH
             )
+            scale_1000_preflight_requests = [
+                row for row in scale_1000_requests
+                if row.get("request_phase", "").startswith("preflight_1000_")
+            ]
+            scale_1000_live_requests = [
+                row for row in scale_1000_requests
+                if row.get("request_phase") == "live_1000"
+            ]
+            scale_1000_live_valid_case_ids = {
+                row.get("extraction_case_id", "")
+                for row in scale_1000_live_requests
+                if row.get("schema_valid") == "true"
+            }
             if (
                 scale_1000_decision.get("task_id")
-                != "COMPENSATION-EVIDENCE-EXTRACTION-1000DOC-PROVISIONAL-SCALE-2026-07-25"
+                != "COMPENSATION-EVIDENCE-EXTRACTION-1000DOC-PREFLIGHT-REPAIR-AND-LIVE-500NEW-2026-07-25"
                 or scale_1000_decision.get("decision")
-                != "stopped_at_preflight_schema_invalid"
-                or scale_1000_decision.get("live_extraction_started") is not False
+                != "live_incomplete_schema_invalid"
+                or scale_1000_decision.get("live_extraction_started") is not True
                 or int(scale_1000_decision.get("selection_count", 0)) != 1000
                 or int(scale_1000_decision.get("corrected_seed_case_count", 0)) != 500
                 or int(scale_1000_decision.get("new_document_count", 0)) != 500
                 or int(scale_1000_decision.get("preflight_case_count", 0)) != 6
-                or int(scale_1000_decision.get("preflight_schema_valid_count", 0)) != 5
-                or len(scale_1000_requests) != 6
-                or sum(row.get("schema_valid") == "true" for row in scale_1000_requests) != 5
+                or int(scale_1000_decision.get("preflight_schema_valid_count", 0)) != 6
+                or len(scale_1000_preflight_requests) != 6
+                or sum(row.get("schema_valid") == "true" for row in scale_1000_preflight_requests) != 6
+                or len(scale_1000_live_requests) != 551
+                or len(scale_1000_live_valid_case_ids) != 499
+                or int(scale_1000_decision.get("live_schema_valid_case_count", 0)) != 499
+                or int(scale_1000_decision.get("live_unresolved_case_count", 0)) != 1
+                or int(scale_1000_decision.get("seed_gabriel_calls", -1)) != 0
+                or scale_1000_decision.get("cumulative_materialization_completed") is not False
                 or int(scale_1000_selection_summary.get("selection_count", 0)) != 1000
                 or int(scale_1000_packet_summary.get("case_count", 0)) != 1000
                 or int(scale_1000_packet_summary.get("max_pages_per_case", 99)) > 6
@@ -4665,12 +4684,12 @@ def build_text_table_calibration_status_summary(
                 )
             ):
                 raise ValueError(
-                    "provisional 1,000-document stopped preflight fails dashboard gates"
+                    "provisional 1,000-document incomplete live run fails dashboard gates"
                 )
         return {
             **metadata,
             "calibration_phase": (
-                "compensation_extraction_1000_stopped_at_preflight"
+                "compensation_extraction_1000_live_incomplete_499_of_500"
                 if scale_1000_attempted
                 else "compensation_extraction_500_targeted_qa_completed"
                 if targeted_qa_completed
@@ -4803,6 +4822,30 @@ def build_text_table_calibration_status_summary(
             ),
             "compensation_extraction_1000_live_started": (
                 bool(scale_1000_decision.get("live_extraction_started", False))
+                if scale_1000_attempted else False
+            ),
+            "compensation_extraction_1000_live_attempt_count": (
+                int(scale_1000_decision.get("live_case_attempt_count", 0))
+                if scale_1000_attempted else 0
+            ),
+            "compensation_extraction_1000_live_schema_valid_case_count": (
+                int(scale_1000_decision.get("live_schema_valid_case_count", 0))
+                if scale_1000_attempted else 0
+            ),
+            "compensation_extraction_1000_live_schema_valid_rate": (
+                float(scale_1000_decision.get(
+                    "live_schema_valid_rate_against_frozen_new_cases", 0
+                ))
+                if scale_1000_attempted else None
+            ),
+            "compensation_extraction_1000_live_unresolved_case_count": (
+                int(scale_1000_decision.get("live_unresolved_case_count", 0))
+                if scale_1000_attempted else 0
+            ),
+            "compensation_extraction_1000_cumulative_materialized": (
+                bool(scale_1000_decision.get(
+                    "cumulative_materialization_completed", False
+                ))
                 if scale_1000_attempted else False
             ),
             "scale_beyond_1000_recommendation": (
@@ -5011,13 +5054,13 @@ def build_text_table_calibration_status_summary(
                 )
             ),
             "wage_extraction_status": (
-                "provisional_1000_stopped_preflight_no_live"
+                "provisional_1000_live_incomplete_499_of_500_no_cumulative"
                 if scale_1000_attempted
                 else "provisional_500_completed_qa_hold"
                 if extraction_completed else "not_started"
             ),
             "qualitative_extraction_status": (
-                "provisional_1000_stopped_preflight_no_live"
+                "provisional_1000_live_incomplete_499_of_500_no_cumulative"
                 if scale_1000_attempted
                 else "provisional_500_completed_qa_hold"
                 if extraction_completed else "not_started"
