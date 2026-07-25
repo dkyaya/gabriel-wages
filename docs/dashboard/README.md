@@ -218,25 +218,22 @@ routed candidate identities. Its p1/p2/p3/defer/exclude values remain
 preliminary scheduling outcomes, not source-content ratings. The 261
 oversized routing outcomes remain deferred to a separately bounded strategy.
 
-The durable source-review layer still has 650 cumulative rows: the repaired
-150-row Pilot 1 HTTPX result plus the 500-row Batch 2 result. Pilot 1 retains
-149 bounded PDFs and one forbidden outcome. Batch 2 retains 495 bounded PDFs
-and five timeout outcomes. Across both merged rounds, 644 artifact hashes and
-sizes match and retained PDF content totals approximately 1.311 GB.
+The durable source-review layer now has 2,150 cumulative rows: the repaired
+150-row Pilot 1 HTTPX result, the 500-row Batch 2 result, and the 1,500-row
+Batch 3 result. Across the three merged rounds, 2,124 retained PDF artifacts
+have matching hashes and sizes. Retained PDF content totals approximately
+4.500 GB; five rows are forbidden, 21 timed out, and repaired HTTPX
+connection errors remain zero.
 
-`SOURCE-REVIEW-BATCH3-3X500-2026-07-24` is now collected and audited but not
-merged. It contains 1,500 terminal rows in three 500-row lanes: 1,480 retained
-PDFs, 16 timeout outcomes, four forbidden outcomes, and zero connection
-errors. Retained Batch 3 PDF content is approximately 3.190 GB. The dashboard
-phase is `batch3_3x500_collected_not_merged`, while the cumulative durable
-count deliberately remains 650.
+The dashboard phase is `batch3_3x500_merged`. Batch 3 contributes 1,480
+retained PDFs, 16 timeout outcomes, four forbidden outcomes, and approximately
+3.190 GB of PDF content.
 
-The next recommendation is a separate serial Batch 3 merge after relay
-review. If it passes, evaluate text-layer/page-count readiness on a bounded
-retained-artifact sample before automatically downloading the remaining 726
-default-eligible p2 rows. Final content-supported source rating, PDF parsing
-or OCR, ingestion, codification, wage extraction, and wage-gap analysis
-remain unperformed.
+The next recommendation is a bounded 100–200-row text-layer/page-count
+readiness pilot over retained artifacts before automatically downloading the
+remaining 726 default-eligible p2 rows. Final content-supported source rating,
+PDF parsing or OCR, ingestion, codification, wage extraction, and wage-gap
+analysis remain unperformed.
 
 ## Run and build locally
 

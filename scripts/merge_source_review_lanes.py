@@ -162,6 +162,11 @@ def summarize_rows(rows: list[dict[str, str]]) -> dict[str, Any]:
     content_sizes = [
         int(row.get("content_byte_size") or 0) for row in rows
     ]
+    metadata_sizes = [
+        Path(row["response_metadata_path"]).stat().st_size
+        for row in rows
+        if row.get("response_metadata_path")
+    ]
     return {
         "ledger_rows": len(rows),
         "terminal_rows": len(rows),
@@ -193,6 +198,8 @@ def summarize_rows(rows: list[dict[str, str]]) -> dict[str, Any]:
             bool(row.get("content_hash")) for row in rows
         ),
         "content_artifact_bytes": sum(content_sizes),
+        "metadata_artifact_bytes": sum(metadata_sizes),
+        "total_artifact_bytes": sum(content_sizes) + sum(metadata_sizes),
         "maximum_content_artifact_bytes": max(content_sizes, default=0),
         "content_sample_count": sum(
             bool(row.get("content_sample_path")) for row in rows
@@ -651,33 +658,37 @@ def merge(
         "latest_ledger": parent_dir / LATEST_LEDGER_NAME,
         "latest_summary": parent_dir / LATEST_SUMMARY_NAME,
     }
-    round_or_cumulative = (
+    round_outputs = (
         output_paths["ledger"],
         output_paths["summary"],
         output_paths["audit"],
-        output_paths["cumulative_ledger"],
-        output_paths["cumulative_summary"],
     )
-    existing = [path for path in round_or_cumulative if path.exists()]
+    existing = [path for path in round_outputs if path.exists()]
     if existing:
         raise FileExistsError(
-            "Refusing to overwrite existing durable source-review outputs: "
+            "Refusing to overwrite existing round-specific source-review outputs: "
             + ", ".join(path.as_posix() for path in existing)
         )
     latest_paths = (
         output_paths["latest_ledger"],
         output_paths["latest_summary"],
     )
-    prior_latest_bytes: dict[Path, bytes] = {}
+    cumulative_paths = (
+        output_paths["cumulative_ledger"],
+        output_paths["cumulative_summary"],
+    )
+    prior_pointer_bytes: dict[Path, bytes] = {}
     prior_fields: list[str] | None = None
     prior_rows: list[dict[str, str]] = []
     if prior_ledger_path is None:
-        existing_latest = [path for path in latest_paths if path.exists()]
-        if existing_latest:
+        existing_pointers = [
+            path for path in (*latest_paths, *cumulative_paths) if path.exists()
+        ]
+        if existing_pointers:
             raise FileExistsError(
-                "Existing latest source-review pointers require explicit "
+                "Existing cumulative/latest source-review pointers require explicit "
                 "--prior-ledger-csv and --prior-summary-json: "
-                + ", ".join(path.as_posix() for path in existing_latest)
+                + ", ".join(path.as_posix() for path in existing_pointers)
             )
     else:
         assert prior_summary_path is not None
@@ -704,10 +715,32 @@ def merge(
             raise SourceReviewMergeError(
                 "Existing latest summary does not equal the explicit prior summary"
             )
+        existing_cumulative = [path.exists() for path in cumulative_paths]
+        if any(existing_cumulative) and not all(existing_cumulative):
+            raise SourceReviewMergeError(
+                "Existing cumulative ledger and summary must both be present"
+            )
+        if all(existing_cumulative):
+            if (
+                prior_ledger_path.read_bytes()
+                != output_paths["cumulative_ledger"].read_bytes()
+            ):
+                raise SourceReviewMergeError(
+                    "Existing cumulative ledger does not equal the explicit prior ledger"
+                )
+            if (
+                prior_summary_path.read_bytes()
+                != output_paths["cumulative_summary"].read_bytes()
+            ):
+                raise SourceReviewMergeError(
+                    "Existing cumulative summary does not equal the explicit prior summary"
+                )
         prior_fields, prior_rows = read_csv(prior_ledger_path)
         validate_prior_durable_rows(fields=prior_fields, rows=prior_rows)
-        prior_latest_bytes = {
-            path: path.read_bytes() for path in latest_paths
+        prior_pointer_bytes = {
+            path: path.read_bytes()
+            for path in (*latest_paths, *cumulative_paths)
+            if path.exists()
         }
 
     manifest = read_json(manifest_path)
@@ -792,11 +825,44 @@ def merge(
         pilot_id == "SOURCE-REVIEW-BATCH2-500-2026-07-24"
         and merge_id == "SOURCE-REVIEW-BATCH2-500-MERGE-2026-07-24"
     )
+    is_batch3 = (
+        pilot_id == "SOURCE-REVIEW-BATCH3-3X500-2026-07-24"
+        and merge_id
+        == "SOURCE-REVIEW-BATCH3-3X500-MERGE-2026-07-24"
+    )
+    round_status = (
+        "batch2_500_merged"
+        if is_batch2
+        else "batch3_3x500_merged"
+        if is_batch3
+        else "source_review_batch_merged"
+    )
+    source_rating_status = (
+        "batch2_preliminary_artifact_review_merged"
+        if is_batch2
+        else "batch3_preliminary_artifact_review_merged"
+        if is_batch3
+        else "preliminary_artifact_review_merged"
+    )
+    content_download_status = (
+        "batch2_bounded_artifacts_merged"
+        if is_batch2
+        else "batch3_bounded_artifacts_merged"
+        if is_batch3
+        else "bounded_artifacts_merged"
+    )
+    next_recommendation = (
+        "prepare_batch3_1000"
+        if is_batch2
+        else "text_layer_page_count_readiness_pilot"
+        if is_batch3
+        else "review_before_next_scale"
+    )
     round_metrics = summarize_rows(merged_rows)
     cumulative_metrics = summarize_rows(cumulative_rows)
     summary: dict[str, Any] = {
         "schema_version": "1.1.0",
-        "status": "batch2_500_merged" if is_batch2 else "source_review_batch_merged",
+        "status": round_status,
         "source_review_pilot_id": pilot_id,
         "source_review_merge_id": merge_id,
         "source_review_merged_at": timestamp,
@@ -822,26 +888,14 @@ def merge(
             "preserved_unmerged_superseded_transport"
         ),
         "diagnostic_probe_status": "preserved_excluded_from_merge",
-        "source_rating_status": (
-            "batch2_preliminary_artifact_review_merged"
-            if is_batch2
-            else "preliminary_artifact_review_merged"
-        ),
-        "content_download_status": (
-            "batch2_bounded_artifacts_merged"
-            if is_batch2
-            else "bounded_artifacts_merged"
-        ),
+        "source_rating_status": source_rating_status,
+        "content_download_status": content_download_status,
         "extraction_readiness_status": "preliminary_artifact_metadata_only",
         "ingestion_status": "not_started",
         "codify_status": "not_started",
         "wage_extraction_status": "not_started",
         "wage_gap_analysis_status": "not_started",
-        "next_scaling_recommendation": (
-            "prepare_batch3_1000"
-            if is_batch2
-            else "review_before_next_scale"
-        ),
+        "next_scaling_recommendation": next_recommendation,
         "caveats": [
             "Source-review ratings are preliminary access/artifact signals.",
             "PDFs were not parsed or OCRed.",
@@ -888,18 +942,14 @@ def merge(
             "preserved_unmerged_superseded_transport"
         ),
         "diagnostic_probe_status": "preserved_excluded_from_merge",
-        "source_rating_status": "batch2_preliminary_artifact_review_merged",
-        "content_download_status": "batch2_bounded_artifacts_merged",
+        "source_rating_status": source_rating_status,
+        "content_download_status": content_download_status,
         "extraction_readiness_status": "preliminary_artifact_metadata_only",
         "ingestion_status": "not_started",
         "codify_status": "not_started",
         "wage_extraction_status": "not_started",
         "wage_gap_analysis_status": "not_started",
-        "next_scaling_recommendation": (
-            "prepare_batch3_1000"
-            if is_batch2
-            else "review_before_next_scale"
-        ),
+        "next_scaling_recommendation": next_recommendation,
         "caveats": [
             "Source-review ratings are preliminary access/artifact signals.",
             "PDFs were not parsed or OCRed.",
@@ -985,9 +1035,14 @@ def merge(
         )
     except Exception:
         for key, path in output_paths.items():
-            if key in ("latest_ledger", "latest_summary"):
-                if path in prior_latest_bytes:
-                    path.write_bytes(prior_latest_bytes[path])
+            if key in (
+                "latest_ledger",
+                "latest_summary",
+                "cumulative_ledger",
+                "cumulative_summary",
+            ):
+                if path in prior_pointer_bytes:
+                    path.write_bytes(prior_pointer_bytes[path])
                 else:
                     path.unlink(missing_ok=True)
             else:

@@ -404,6 +404,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Source review</p>
           <h3>
             {sourceReviewStatus.source_review_phase ===
+            "batch3_3x500_merged"
+              ? "Batch 3 merged: 2,150 cumulative source-review rows"
+              : sourceReviewStatus.source_review_phase ===
             "batch3_3x500_collected_not_merged"
               ? "Batch 3 collected: 1,480 of 1,500 bounded artifacts; serial merge pending"
               : sourceReviewStatus.source_review_phase ===
@@ -432,6 +435,23 @@ export function VerificationPipeline({
         </div>
         <p>
           {sourceReviewStatus.source_review_phase ===
+          "batch3_3x500_merged" ? (
+            <>
+              Batch 3 is durably merged:{" "}
+              {formatNumber(sourceReviewStatus.batch3_3x500_artifact_saved_rows)}
+              {" "}of {formatNumber(sourceReviewStatus.batch3_3x500_rows_merged)}
+              {" "}Batch 3 rows retain bounded artifacts, 16 attempts timed
+              out, four were forbidden, and connection errors remained zero.
+              The cumulative source-review ledger now contains{" "}
+              {formatNumber(sourceReviewStatus.cumulative_merged_source_review_rows)}
+              {" "}rows and{" "}
+              {formatNumber(sourceReviewStatus.cumulative_artifact_saved_rows)}
+              {" "}saved artifacts. The next recommendation is a bounded
+              text-layer/page-count readiness pilot. PDFs remain unparsed;
+              ingestion, codification, wage extraction, and wage-gap analysis
+              have not started.
+            </>
+          ) : sourceReviewStatus.source_review_phase ===
           "batch3_3x500_collected_not_merged" ? (
             <>
               Batch 3 completed all{" "}

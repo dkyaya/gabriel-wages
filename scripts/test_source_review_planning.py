@@ -1148,6 +1148,90 @@ class SourceReviewPlanningTests(unittest.TestCase):
                 "SYNTHETIC-SOURCE-REVIEW-PILOT": 100,
             },
         )
+        self.assertGreater(cumulative_summary["metadata_artifact_bytes"], 0)
+        self.assertEqual(
+            cumulative_summary["total_artifact_bytes"],
+            cumulative_summary["content_artifact_bytes"]
+            + cumulative_summary["metadata_artifact_bytes"],
+        )
+
+    def test_merge_replaces_matching_existing_cumulative_pointers(self) -> None:
+        manifest_path, audit_path, output_dir, _ = (
+            self.prepare_merge_fixture()
+        )
+        prior_ledger, prior_summary = self.prepare_prior_durable_fixture(
+            manifest_path=manifest_path,
+            output_dir=output_dir,
+        )
+        cumulative_ledger = (
+            output_dir.parent / merger.CUMULATIVE_LEDGER_NAME
+        )
+        cumulative_summary = (
+            output_dir.parent / merger.CUMULATIVE_SUMMARY_NAME
+        )
+        cumulative_ledger.write_bytes(prior_ledger.read_bytes())
+        cumulative_summary.write_bytes(prior_summary.read_bytes())
+        prior_hash = file_hash(cumulative_ledger)
+        merger.merge(
+            manifest_path=manifest_path,
+            audit_path=audit_path,
+            output_dir=output_dir,
+            pilot_id="SYNTHETIC-SOURCE-REVIEW-PILOT",
+            merge_id="SYNTHETIC-HTTPX-MERGE",
+            prior_ledger_path=cumulative_ledger,
+            prior_summary_path=cumulative_summary,
+            merged_at="2026-07-24T00:00:00Z",
+        )
+        _, cumulative_rows = merger.read_csv(cumulative_ledger)
+        self.assertEqual(len(cumulative_rows), 110)
+        self.assertNotEqual(file_hash(cumulative_ledger), prior_hash)
+        self.assertEqual(
+            cumulative_ledger.read_bytes(),
+            (
+                output_dir.parent / merger.LATEST_LEDGER_NAME
+            ).read_bytes(),
+        )
+        self.assertEqual(
+            cumulative_summary.read_bytes(),
+            (
+                output_dir.parent / merger.LATEST_SUMMARY_NAME
+            ).read_bytes(),
+        )
+
+    def test_merge_rejects_mismatched_existing_cumulative_pointer(self) -> None:
+        manifest_path, audit_path, output_dir, _ = (
+            self.prepare_merge_fixture()
+        )
+        prior_ledger, prior_summary = self.prepare_prior_durable_fixture(
+            manifest_path=manifest_path,
+            output_dir=output_dir,
+        )
+        cumulative_ledger = (
+            output_dir.parent / merger.CUMULATIVE_LEDGER_NAME
+        )
+        cumulative_summary = (
+            output_dir.parent / merger.CUMULATIVE_SUMMARY_NAME
+        )
+        cumulative_ledger.write_text("mismatched\n", encoding="utf-8")
+        cumulative_summary.write_bytes(prior_summary.read_bytes())
+        with self.assertRaisesRegex(
+            merger.SourceReviewMergeError,
+            "cumulative ledger does not equal",
+        ):
+            merger.merge(
+                manifest_path=manifest_path,
+                audit_path=audit_path,
+                output_dir=output_dir,
+                pilot_id="SYNTHETIC-SOURCE-REVIEW-PILOT",
+                merge_id="SYNTHETIC-HTTPX-MERGE",
+                prior_ledger_path=prior_ledger,
+                prior_summary_path=prior_summary,
+            )
+        self.assertEqual(
+            cumulative_ledger.read_text(encoding="utf-8"),
+            "mismatched\n",
+        )
+        self.assertFalse(output_dir.exists())
 
     def test_merge_rejects_identity_overlap_with_prior(self) -> None:
         manifest_path, audit_path, output_dir, _ = (

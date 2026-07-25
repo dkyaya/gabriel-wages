@@ -6,6 +6,44 @@ Last updated: `2026-07-24`
 
 ---
 
+## 2026-07-24 — Source-review Batch 3 is durably merged; 2,150 cumulative rows
+
+### Current State
+
+- **Start:** work began at clean tracked `46923a2d2dc9a5e911df31adffef1f5ea6790511`; all requested ancestry and the 650-row prior durable layer passed. The unrelated untracked root `package-lock.json` remains untouched.
+- **Fresh merge gate:** only the three Batch 3 `lane_*_live_attempt1` ledgers were re-audited. All three are `completed_merge_eligible`; coverage is 1,500/1,500, identities are unique and prior-disjoint, artifact integrity passes, and recommendation is `merge_all_source_review_lanes`.
+- **Exactly-once merge:** [the merge result](source_review_batch3_3x500_serial_merge_result_2026-07-24.md) records the single execution of `merge_source_review_lanes.py` with merge ID `SOURCE-REVIEW-BATCH3-3X500-MERGE-2026-07-24`.
+- **Durable outputs:** the [Batch 3 ledger](source_review_ledgers/SOURCE-REVIEW-BATCH3-3X500-2026-07-24/source_review_ledger.csv) has 1,500 terminal rows. The [cumulative/latest ledger](source_review_ledgers/source_review_ledger_cumulative.csv) has 2,150 terminal rows: 150 Pilot 1, 500 Batch 2, and 1,500 Batch 3. Cumulative and latest pointers are byte-identical.
+- **Batch 3 outcomes:** 1,480 `reviewed_metadata_and_artifact_saved`, 16 `download_timeout`, four `download_forbidden`, zero connection errors, 1,480 matching hashes, 3,189,614,089 retained PDF bytes, and a 10,470,269-byte maximum.
+- **Cumulative outcomes:** 2,124 saved PDFs, 21 timeouts, five forbidden outcomes, zero repaired-client connection errors, 4,500,367,582 retained PDF bytes, 2,330,781 response-metadata bytes, and 4,502,698,363 total artifact bytes. All 2,124 PDF hash, size, lane-local path, and signature checks passed.
+- **Ratings:** Batch 3 preliminary officialness is state repository 471, municipal 468, uncertain 451, unknown 87, and union 23. Relevance and municipality/employer/unit match are `possible` for 1,480 and `unknown` for 20. Document type is `cba_candidate` for 1,359 and unknown for 141. Extraction readiness is medium for 1,480 and not-ready for 20. All page-count, text-layer, wage-table, wage-growth, and mechanism-language fields remain unknown.
+- **Remaining pool:** 773 raw download-allowed rows remain (13 p1 and 760 p2). Default planning gates leave 726 p2 rows and no p1/p3 rows.
+- **Dashboard:** `source_review_phase = batch3_3x500_merged`; cumulative merged rows are 2,150 and saved-artifact rows are 2,124. Ingestion, codification, wage extraction, and wage-gap analysis remain `not_started`.
+- **Boundary:** this offline merge opened no URL, made no network call, downloaded or parsed no document, and ran no OCR. It did not change scout accounting, durable routing or metadata-triage ledgers, contracts, city coverage, or `corpus/`. It performed no ingestion, codification, wage work, causal claim, or regression.
+- **Validation:** [the validation record](source_review_batch3_3x500_serial_merge_validation_2026-07-24.md) reports six compiles, 30 offline/mock tests, final lane audit, 1,500/2,150 identity checks, 2,124 independent artifact checks, dashboard JSON/frontend build, schema and 60 ingestion tests, protected hashes, metadata safety checks, and diff checks passed.
+
+### Interpretation
+
+The durable source-review layer records bounded source access and
+artifact-metadata signals, not final content-supported ratings. No PDF has
+been parsed or OCRed. Page counts, text layers, wage tables, wage growth,
+mechanism language, and analysis-ready wage observations therefore remain
+unknown or not started.
+
+The access layer is now large enough that technical parse/readiness—not
+additional downloading—is the next useful uncertainty. Automatically adding
+the remaining p2 rows would increase storage beyond the current 4.50 GB
+without showing whether retained artifacts are cheaply parseable.
+
+### Next Move
+
+Review [the next-phase plan](source_review_post_batch3_next_phase_plan_2026-07-24.md)
+and relay. If separately authorized, prepare a 100–200-row local
+text-layer/page-count readiness pilot over already-retained PDFs; 150 is the
+recommended default. Sample all three rounds, p1/p2, police/fire/non-safety,
+officialness groups, states, and artifact sizes. Do not open URLs, OCR,
+extract wages, ingest, codify, or analyze wage gaps in that readiness task.
+
 ## 2026-07-24 — Source-review Batch 3 collected; serial merge pending
 
 ### Current State

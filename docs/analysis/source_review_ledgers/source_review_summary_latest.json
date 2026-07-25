@@ -1,177 +1,195 @@
 {
   "schema_version": "1.1.0",
   "status": "source_review_cumulative_merged",
-  "latest_source_review_pilot_id": "SOURCE-REVIEW-BATCH2-500-2026-07-24",
-  "latest_source_review_merge_id": "SOURCE-REVIEW-BATCH2-500-MERGE-2026-07-24",
-  "source_review_merged_at": "2026-07-24T23:09:19Z",
+  "latest_source_review_pilot_id": "SOURCE-REVIEW-BATCH3-3X500-2026-07-24",
+  "latest_source_review_merge_id": "SOURCE-REVIEW-BATCH3-3X500-MERGE-2026-07-24",
+  "source_review_merged_at": "2026-07-25T02:29:26Z",
   "source_review_stage": "bounded_artifact_review_not_parsed",
-  "merged_batch_count": 2,
+  "merged_batch_count": 3,
   "merged_batch_rows": {
     "SOURCE-REVIEW-BATCH2-500-2026-07-24": 500,
+    "SOURCE-REVIEW-BATCH3-3X500-2026-07-24": 1500,
     "SOURCE-REVIEW-PILOT1-150-2026-07-24": 150
   },
   "merged_merge_ids": {
     "SOURCE-REVIEW-BATCH2-500-MERGE-2026-07-24": 500,
+    "SOURCE-REVIEW-BATCH3-3X500-MERGE-2026-07-24": 1500,
     "SOURCE-REVIEW-PILOT1-HTTPX-MERGE-2026-07-24": 150
   },
-  "prior_ledger_path": "docs/analysis/source_review_ledgers/SOURCE-REVIEW-PILOT1-150-2026-07-24/source_review_ledger.csv",
-  "prior_ledger_sha256": "2bcfe2295950f9805322d1cbbaf08051bd93b08cb632067d688ec6f894bde109",
-  "latest_round_ledger_path": "docs/analysis/source_review_ledgers/SOURCE-REVIEW-BATCH2-500-2026-07-24/source_review_ledger.csv",
-  "latest_round_summary_path": "docs/analysis/source_review_ledgers/SOURCE-REVIEW-BATCH2-500-2026-07-24/source_review_summary.json",
-  "ledger_rows": 650,
-  "terminal_rows": 650,
-  "unique_source_review_ids": 650,
-  "unique_candidate_queue_row_ids": 650,
+  "prior_ledger_path": "docs/analysis/source_review_ledgers/source_review_ledger_cumulative.csv",
+  "prior_ledger_sha256": "6724b1629508c50c5859fd609f7b7ed5f40449d210505e5205ab3472cade5744",
+  "latest_round_ledger_path": "docs/analysis/source_review_ledgers/SOURCE-REVIEW-BATCH3-3X500-2026-07-24/source_review_ledger.csv",
+  "latest_round_summary_path": "docs/analysis/source_review_ledgers/SOURCE-REVIEW-BATCH3-3X500-2026-07-24/source_review_summary.json",
+  "ledger_rows": 2150,
+  "terminal_rows": 2150,
+  "unique_source_review_ids": 2150,
+  "unique_candidate_queue_row_ids": 2150,
   "source_review_status_counts": {
-    "download_forbidden": 1,
-    "download_timeout": 5,
-    "reviewed_metadata_and_artifact_saved": 644
+    "download_forbidden": 5,
+    "download_timeout": 21,
+    "reviewed_metadata_and_artifact_saved": 2124
   },
   "url_access_status_counts": {
-    "forbidden": 1,
-    "reached": 644,
-    "timeout": 5
+    "forbidden": 5,
+    "reached": 2124,
+    "timeout": 21
   },
   "download_status_counts": {
-    "artifact_saved": 644,
-    "forbidden": 1,
-    "timeout": 5
+    "artifact_saved": 2124,
+    "forbidden": 5,
+    "timeout": 21
   },
   "content_type_observed_counts": {
-    "application/pdf": 644,
-    "unknown": 6
+    "application/pdf": 2124,
+    "unknown": 26
   },
   "content_byte_size_distribution": {
-    "0": 6,
-    "1_to_10_mib": 367,
-    "1_to_64_kib": 1,
-    "64_kib_to_1_mib": 276
+    "0": 26,
+    "1_to_10_mib": 1246,
+    "1_to_64_kib": 12,
+    "64_kib_to_1_mib": 866
   },
-  "content_artifact_count": 644,
-  "metadata_artifact_count": 650,
-  "rows_with_content_hash": 644,
-  "rows_with_matching_content_hash": 644,
-  "content_artifact_bytes": 1310753493,
-  "maximum_content_artifact_bytes": 10319152,
+  "content_artifact_count": 2124,
+  "metadata_artifact_count": 2150,
+  "rows_with_content_hash": 2124,
+  "rows_with_matching_content_hash": 2124,
+  "content_artifact_bytes": 4500367582,
+  "metadata_artifact_bytes": 2330781,
+  "total_artifact_bytes": 4502698363,
+  "maximum_content_artifact_bytes": 10470269,
   "content_sample_count": 0,
   "source_officialness_rating_counts": {
-    "official_municipal": 317,
-    "official_state_repository": 65,
-    "official_union": 29,
-    "uncertain": 226,
-    "unknown": 13
+    "official_municipal": 785,
+    "official_state_repository": 536,
+    "official_union": 52,
+    "uncertain": 677,
+    "unknown": 100
   },
   "source_relevance_rating_counts": {
-    "possible": 644,
-    "unknown": 6
+    "possible": 2124,
+    "unknown": 26
   },
   "municipality_match_rating_counts": {
-    "possible": 644,
-    "unknown": 6
+    "possible": 2124,
+    "unknown": 26
   },
   "employer_match_rating_counts": {
-    "possible": 644,
-    "unknown": 6
+    "possible": 2124,
+    "unknown": 26
   },
   "bargaining_unit_match_rating_counts": {
-    "possible": 644,
-    "unknown": 6
+    "possible": 2124,
+    "unknown": 26
   },
   "safety_unit_match_signal_counts": {
-    "unknown": 650
+    "unknown": 2150
   },
   "non_safety_unit_match_signal_counts": {
-    "unknown": 650
+    "unknown": 2150
   },
   "document_type_rating_counts": {
-    "cba_candidate": 644,
-    "unknown": 6
+    "cba_candidate": 2003,
+    "unknown": 147
   },
   "extraction_readiness_rating_counts": {
-    "medium": 644,
-    "not_ready": 6
+    "medium": 2124,
+    "not_ready": 26
   },
   "wage_table_signal_counts": {
-    "unknown": 650
+    "unknown": 2150
   },
   "wage_growth_signal_counts": {
-    "unknown": 650
+    "unknown": 2150
   },
   "mechanism_language_signal_counts": {
-    "unknown": 650
+    "unknown": 2150
   },
   "candidate_disposition_counts": {
-    "scheduled": 650
+    "scheduled": 2150
   },
   "state_counts": {
-    "AK": 9,
-    "AZ": 1,
-    "CA": 30,
-    "CO": 8,
-    "CT": 29,
-    "DC": 3,
-    "DE": 8,
-    "FL": 30,
-    "GA": 1,
+    "AK": 14,
+    "AL": 2,
+    "AR": 2,
+    "AZ": 4,
+    "CA": 266,
+    "CO": 14,
+    "CT": 36,
+    "DC": 5,
+    "DE": 10,
+    "FL": 121,
+    "GA": 4,
     "HI": 3,
-    "IA": 26,
-    "ID": 6,
-    "IL": 30,
-    "IN": 6,
-    "KS": 10,
-    "KY": 1,
-    "MA": 29,
-    "MD": 12,
-    "ME": 11,
-    "MI": 30,
-    "MN": 29,
-    "MO": 13,
-    "MS": 1,
-    "MT": 17,
-    "NE": 12,
-    "NH": 14,
-    "NJ": 19,
-    "NM": 10,
-    "NV": 19,
-    "NY": 23,
-    "OH": 30,
-    "OK": 12,
-    "OR": 29,
-    "PA": 21,
+    "IA": 32,
+    "ID": 11,
+    "IL": 202,
+    "IN": 10,
+    "KS": 13,
+    "KY": 5,
+    "LA": 3,
+    "MA": 75,
+    "MD": 17,
+    "ME": 24,
+    "MI": 113,
+    "MN": 61,
+    "MO": 16,
+    "MS": 3,
+    "MT": 24,
+    "NC": 2,
+    "ND": 2,
+    "NE": 17,
+    "NH": 23,
+    "NJ": 28,
+    "NM": 14,
+    "NV": 22,
+    "NY": 33,
+    "OH": 538,
+    "OK": 16,
+    "OR": 70,
+    "PA": 30,
     "RI": 13,
-    "SD": 7,
-    "TN": 1,
-    "TX": 23,
-    "VA": 8,
+    "SC": 2,
+    "SD": 10,
+    "TN": 4,
+    "TX": 39,
+    "UT": 3,
+    "VA": 10,
     "VT": 6,
-    "WA": 29,
-    "WI": 29,
-    "WY": 2
+    "WA": 106,
+    "WI": 66,
+    "WV": 2,
+    "WY": 4
   },
   "source_type_counts": {
-    "cba": 650
+    "arbitration_award": 10,
+    "cba": 2029,
+    "factfinding": 3,
+    "memorandum_or_settlement": 23,
+    "ordinance_or_policy": 20,
+    "pay_plan": 1,
+    "wage_schedule_or_compensation_plan": 64
   },
   "unit_type_counts": {
-    "fire": 192,
-    "non_safety": 188,
-    "police": 270
+    "fire": 512,
+    "non_safety": 713,
+    "police": 925
   },
   "disposition_to_extraction_readiness": {
     "scheduled": {
-      "medium": 644,
-      "not_ready": 6
+      "medium": 2124,
+      "not_ready": 26
     }
   },
   "routing_status_to_review_status": {
     "reachable_pdf_or_document": {
-      "download_forbidden": 1,
-      "download_timeout": 5,
-      "reviewed_metadata_and_artifact_saved": 644
+      "download_forbidden": 5,
+      "download_timeout": 21,
+      "reviewed_metadata_and_artifact_saved": 2124
     }
   },
-  "collection_urls_opened": 650,
-  "collection_network_calls": 650,
-  "collection_documents_downloaded": 644,
+  "collection_urls_opened": 2150,
+  "collection_network_calls": 2150,
+  "collection_documents_downloaded": 2124,
   "collection_documents_parsed": 0,
   "collection_pdfs_parsed": 0,
   "collection_ocr_runs": 0,
@@ -183,14 +201,14 @@
   "merge_ocr_runs": 0,
   "original_failed_attempt_status": "preserved_unmerged_superseded_transport",
   "diagnostic_probe_status": "preserved_excluded_from_merge",
-  "source_rating_status": "batch2_preliminary_artifact_review_merged",
-  "content_download_status": "batch2_bounded_artifacts_merged",
+  "source_rating_status": "batch3_preliminary_artifact_review_merged",
+  "content_download_status": "batch3_bounded_artifacts_merged",
   "extraction_readiness_status": "preliminary_artifact_metadata_only",
   "ingestion_status": "not_started",
   "codify_status": "not_started",
   "wage_extraction_status": "not_started",
   "wage_gap_analysis_status": "not_started",
-  "next_scaling_recommendation": "prepare_batch3_1000",
+  "next_scaling_recommendation": "text_layer_page_count_readiness_pilot",
   "caveats": [
     "Source-review ratings are preliminary access/artifact signals.",
     "PDFs were not parsed or OCRed.",
@@ -198,7 +216,7 @@
     "Latest pointers represent the full cumulative durable layer."
   ],
   "ledger_path": "docs/analysis/source_review_ledgers/source_review_ledger_cumulative.csv",
-  "ledger_sha256": "6724b1629508c50c5859fd609f7b7ed5f40449d210505e5205ab3472cade5744",
+  "ledger_sha256": "e29d580d42068615611b464e6da40654f336f273fa7c40a7b0717d4894148c9f",
   "latest_ledger_path": "docs/analysis/source_review_ledgers/source_review_ledger_latest.csv",
   "latest_summary_path": "docs/analysis/source_review_ledgers/source_review_summary_latest.json"
 }

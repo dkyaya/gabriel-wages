@@ -6,6 +6,33 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-24 (Source-review Batch 3 3×500 durably merged; 2,150 cumulative rows)
+
+**Did**
+- Started from clean tracked `46923a2d2dc9a5e911df31adffef1f5ea6790511`, confirmed all requested ancestry, preserved the unrelated untracked root `package-lock.json`, and re-audited only the three locked Batch 3 `lane_*_live_attempt1` outputs.
+- Confirmed 1,500/1,500 terminal rows, unique identities, no overlap with the prior 650 durable rows, 1,480 intact lane-local PDFs, 16 timeouts, four forbidden outcomes, three `completed_merge_eligible` lanes, and `merge_all_source_review_lanes`.
+- Extended the fail-closed offline merge tool to replace existing cumulative/latest pointers only when they are byte-identical to the explicitly supplied prior ledger and summary. Three new regression tests bring the offline/mock suite to 30 passing tests.
+- Ran the Batch 3 merge exactly once with merge ID `SOURCE-REVIEW-BATCH3-3X500-MERGE-2026-07-24`. The round ledger has 1,500 rows; cumulative/latest have 2,150 unique terminal rows combining Pilot 1 (150), Batch 2 (500), and Batch 3 (1,500).
+- Independently verified all 2,124 cumulative retained PDFs against recorded hashes, sizes, lane-local paths, and PDF signatures. Cumulative retained PDF bytes are 4,500,367,582; response metadata adds 2,330,781 bytes; total retained artifacts are 4,502,698,363 bytes.
+- Updated dashboard/status to `batch3_3x500_merged`, reporting 2,150 cumulative rows, 2,124 saved artifacts, 21 timeouts, five forbidden outcomes, zero repaired-client connection errors, and a text-layer/page-count readiness pilot as the next action.
+- Computed 773 raw download-allowed rows remaining (13 p1 and 760 p2); 726 p2 rows remain after default planner gates.
+
+**Decisions and why**
+- Make local parse/readiness the next bottleneck rather than automatically downloading the remaining p2 pool. All page counts and text-layer statuses remain unknown despite 4.50 GB of retained artifacts.
+- Recommend a 150-row local text-layer/page-count pilot sampled across Pilot 1, Batch 2, Batch 3, p1/p2, unit types, officialness signals, states, and artifact sizes. It must not open URLs, OCR, extract wages, ingest, or codify.
+- Keep all source-review ratings preliminary. Bounded access and artifact metadata do not establish source relevance, CBA identity, employer/unit match, wage content, or analysis-ready evidence.
+
+**Surprises/breakage**
+- The existing cumulative/latest pointers required a narrow merge-tool extension for a third round. The tool now validates explicit prior-pointer byte equality and preserves rollback bytes before atomic replacement; it still refuses pre-existing round outputs.
+- No audit, merge, artifact-integrity, dashboard, or validation gate failed. All 2,124 retained PDFs and 2,150 metadata files passed independent checks.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Six compiles, 30 offline/mock tests, final 1,500-row lane audit, 1,500/2,150 durable identity and stage checks, all 2,124 cumulative PDF hash/size/locality/signature checks, 2,150 metadata safety checks, dashboard JSON/frontend production build, schema validation, 60 ingestion tests, protected/upstream/prior-ledger hashes, and diff checks passed. No URL, download, PDF parse, OCR, live review, scout-accounting or routing/triage-ledger mutation, ingestion, `gabriel.codify`, wage extraction, wage-gap work, causal claim, regression, remote action, or push occurred during the merge.
+
+**Next steps**
+1. Review the Batch 3 durable/cumulative ledgers, preliminary ratings, dashboard refresh, validation, next-phase plan, and lite relay.
+2. If separately authorized, prepare and run a 100–200-row local text-layer/page-count readiness pilot over already-retained PDFs; 150 is recommended.
+3. Use that readiness evidence to decide whether to finish the remaining 726 default-eligible p2 downloads, run a larger local readiness pass, or design a later content- and identity-gated wage-table extraction pilot.
+
 ## 2026-07-24 (Source-review Batch 3 3×500 live collection completed; no merge)
 
 **Did**

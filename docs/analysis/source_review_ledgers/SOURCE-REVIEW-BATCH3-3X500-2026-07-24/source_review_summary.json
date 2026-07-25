@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.1.0",
+  "status": "batch3_3x500_merged",
+  "source_review_pilot_id": "SOURCE-REVIEW-BATCH3-3X500-2026-07-24",
+  "source_review_merge_id": "SOURCE-REVIEW-BATCH3-3X500-MERGE-2026-07-24",
+  "source_review_merged_at": "2026-07-25T02:29:26Z",
+  "source_review_stage": "bounded_artifact_review_not_parsed",
+  "lane_count": 3,
+  "lane_rows": {
+    "lane_1": 500,
+    "lane_2": 500,
+    "lane_3": 500
+  },
+  "manifest_path": "docs/analysis/source_review_pilots/SOURCE-REVIEW-BATCH3-3X500-2026-07-24/source_review_pilot_manifest.json",
+  "manifest_sha256": "30fba79ba1296f44e8ac9b537876bfcf6970e52dc197ca5caaaea0afed605b1d",
+  "audit_summary_path": "tmp/source_review_pilots/SOURCE-REVIEW-BATCH3-3X500-2026-07-24/serial_merge_lane_audit_2026-07-24/source_review_lane_audit_summary.json",
+  "audit_summary_sha256": "c87593f876a60812a3576c2b1187c3e946686b13426a3dac779756cc5d9c7e92",
+  "audit_merge_recommendation": "merge_all_source_review_lanes",
+  "sources": [
+    {
+      "lane_id": "lane_1",
+      "input_path": "docs/analysis/source_review_pilots/SOURCE-REVIEW-BATCH3-3X500-2026-07-24/lane_1_source_review_input.csv",
+      "input_sha256": "fab5d2666465460fbad18f3039b614e0793ba8179673ae55832f0302627af774",
+      "output_dir": "tmp/source_review_pilots/SOURCE-REVIEW-BATCH3-3X500-2026-07-24/lane_1_live_attempt1",
+      "ledger_path": "tmp/source_review_pilots/SOURCE-REVIEW-BATCH3-3X500-2026-07-24/lane_1_live_attempt1/source_review_ledger.csv",
+      "ledger_sha256": "5a5eba921bf3ecc12fb695aaae253f8b84f87b5b8ef24f7afc13e2d24d51056e",
+      "summary_path": "tmp/source_review_pilots/SOURCE-REVIEW-BATCH3-3X500-2026-07-24/lane_1_live_attempt1/source_review_summary.json",
+      "summary_sha256": "4f3da7a693e17dc4bc5a18459b151bdc8ba837ee7782e5fdd7357c9535fa50ea",
+      "timing_path": "tmp/source_review_pilots/SOURCE-REVIEW-BATCH3-3X500-2026-07-24/lane_1_live_attempt1/source_review_timing.csv",
+      "timing_sha256": "d3a8c59483b43c31e4d650134b6fba16df1ffe1bdb7ffa917df942d61c467a0c",
+      "rows": 500,
+      "content_artifacts": 492,
+      "metadata_artifacts": 500,
+      "content_bytes": 1109526689,
+      "maximum_content_bytes": 10312150,
+      "rows_with_content_hash": 492,
+      "documents_parsed": 0,
+      "pdfs_parsed": 0,
+      "ocr_runs": 0,
+      "content_samples": 0,
+      "pilot_id": "SOURCE-REVIEW-BATCH3-3X500-2026-07-24"
+    },
+    {
+      "lane_id": "lane_2",
+      "input_path": "docs/analysis/source_review_pilots/SOURCE-REVIEW-BATCH3-3X500-2026-07-24/lane_2_source_review_input.csv",
+      "input_sha256": "54d149db261956c45c9539b077498c50a6644d02aa0f05da7038f3d3c4422c9f",
+      "output_dir": "tmp/source_review_pilots/SOURCE-REVIEW-BATCH3-3X500-2026-07-24/lane_2_live_attempt1",
+      "ledger_path": "tmp/source_review_pilots/SOURCE-REVIEW-BATCH3-3X500-2026-07-24/lane_2_live_attempt1/source_review_ledger.csv",
+      "ledger_sha256": "633e71ed40623ab6cf34ddfc35696bbb9395b754e002de6c62fb315dee6bbfd3",
+      "summary_path": "tmp/source_review_pilots/SOURCE-REVIEW-BATCH3-3X500-2026-07-24/lane_2_live_attempt1/source_review_summary.json",
+      "summary_sha256": "4ef0e2c35e68746c552ff1f8296b1ee87958ec5e093c69d1df781a91e6ff62ac",
+      "timing_path": "tmp/source_review_pilots/SOURCE-REVIEW-BATCH3-3X500-2026-07-24/lane_2_live_attempt1/source_review_timing.csv",
+      "timing_sha256": "401962e7190cf4d372f14722d9a834b2ebfbaa0e96fa143d2a5d15738f7793ac",
+      "rows": 500,
+      "content_artifacts": 494,
+      "metadata_artifacts": 500,
+      "content_bytes": 1049339398,
+      "maximum_content_bytes": 10369118,
+      "rows_with_content_hash": 494,
+      "documents_parsed": 0,
+      "pdfs_parsed": 0,
+      "ocr_runs": 0,
+      "content_samples": 0,
+      "pilot_id": "SOURCE-REVIEW-BATCH3-3X500-2026-07-24"
+    },
+    {
+      "lane_id": "lane_3",
+      "input_path": "docs/analysis/source_review_pilots/SOURCE-REVIEW-BATCH3-3X500-2026-07-24/lane_3_source_review_input.csv",
+      "input_sha256": "aa4b1afa17daf2d2eabd38d0b012df8fe864671dc52a7b20f62b8801020a4991",
+      "output_dir": "tmp/source_review_pilots/SOURCE-REVIEW-BATCH3-3X500-2026-07-24/lane_3_live_attempt1",
+      "ledger_path": "tmp/source_review_pilots/SOURCE-REVIEW-BATCH3-3X500-2026-07-24/lane_3_live_attempt1/source_review_ledger.csv",
+      "ledger_sha256": "5c722cb147f6c239b628747c2657980ef171ab11c5d72f90b64dd5fda1a0ed5c",
+      "summary_path": "tmp/source_review_pilots/SOURCE-REVIEW-BATCH3-3X500-2026-07-24/lane_3_live_attempt1/source_review_summary.json",
+      "summary_sha256": "98add64090ddaab78be5c839cd75ca7687936be02c418d6026dec7978ad14e4f",
+      "timing_path": "tmp/source_review_pilots/SOURCE-REVIEW-BATCH3-3X500-2026-07-24/lane_3_live_attempt1/source_review_timing.csv",
+      "timing_sha256": "ab8b312e76590c2390ab45bed0c773aa9b648df61c94271040c83e0c0c431601",
+      "rows": 500,
+      "content_artifacts": 494,
+      "metadata_artifacts": 500,
+      "content_bytes": 1030748002,
+      "maximum_content_bytes": 10470269,
+      "rows_with_content_hash": 494,
+      "documents_parsed": 0,
+      "pdfs_parsed": 0,
+      "ocr_runs": 0,
+      "content_samples": 0,
+      "pilot_id": "SOURCE-REVIEW-BATCH3-3X500-2026-07-24"
+    }
+  ],
+  "ledger_rows": 1500,
+  "terminal_rows": 1500,
+  "unique_source_review_ids": 1500,
+  "unique_candidate_queue_row_ids": 1500,
+  "source_review_status_counts": {
+    "download_forbidden": 4,
+    "download_timeout": 16,
+    "reviewed_metadata_and_artifact_saved": 1480
+  },
+  "url_access_status_counts": {
+    "forbidden": 4,
+    "reached": 1480,
+    "timeout": 16
+  },
+  "download_status_counts": {
+    "artifact_saved": 1480,
+    "forbidden": 4,
+    "timeout": 16
+  },
+  "content_type_observed_counts": {
+    "application/pdf": 1480,
+    "unknown": 20
+  },
+  "content_byte_size_distribution": {
+    "0": 20,
+    "1_to_10_mib": 879,
+    "1_to_64_kib": 11,
+    "64_kib_to_1_mib": 590
+  },
+  "content_artifact_count": 1480,
+  "metadata_artifact_count": 1500,
+  "rows_with_content_hash": 1480,
+  "rows_with_matching_content_hash": 1480,
+  "content_artifact_bytes": 3189614089,
+  "metadata_artifact_bytes": 1624454,
+  "total_artifact_bytes": 3191238543,
+  "maximum_content_artifact_bytes": 10470269,
+  "content_sample_count": 0,
+  "source_officialness_rating_counts": {
+    "official_municipal": 468,
+    "official_state_repository": 471,
+    "official_union": 23,
+    "uncertain": 451,
+    "unknown": 87
+  },
+  "source_relevance_rating_counts": {
+    "possible": 1480,
+    "unknown": 20
+  },
+  "municipality_match_rating_counts": {
+    "possible": 1480,
+    "unknown": 20
+  },
+  "employer_match_rating_counts": {
+    "possible": 1480,
+    "unknown": 20
+  },
+  "bargaining_unit_match_rating_counts": {
+    "possible": 1480,
+    "unknown": 20
+  },
+  "safety_unit_match_signal_counts": {
+    "unknown": 1500
+  },
+  "non_safety_unit_match_signal_counts": {
+    "unknown": 1500
+  },
+  "document_type_rating_counts": {
+    "cba_candidate": 1359,
+    "unknown": 141
+  },
+  "extraction_readiness_rating_counts": {
+    "medium": 1480,
+    "not_ready": 20
+  },
+  "wage_table_signal_counts": {
+    "unknown": 1500
+  },
+  "wage_growth_signal_counts": {
+    "unknown": 1500
+  },
+  "mechanism_language_signal_counts": {
+    "unknown": 1500
+  },
+  "candidate_disposition_counts": {
+    "scheduled": 1500
+  },
+  "state_counts": {
+    "AK": 5,
+    "AL": 2,
+    "AR": 2,
+    "AZ": 3,
+    "CA": 236,
+    "CO": 6,
+    "CT": 7,
+    "DC": 2,
+    "DE": 2,
+    "FL": 91,
+    "GA": 3,
+    "IA": 6,
+    "ID": 5,
+    "IL": 172,
+    "IN": 4,
+    "KS": 3,
+    "KY": 4,
+    "LA": 3,
+    "MA": 46,
+    "MD": 5,
+    "ME": 13,
+    "MI": 83,
+    "MN": 32,
+    "MO": 3,
+    "MS": 2,
+    "MT": 7,
+    "NC": 2,
+    "ND": 2,
+    "NE": 5,
+    "NH": 9,
+    "NJ": 9,
+    "NM": 4,
+    "NV": 3,
+    "NY": 10,
+    "OH": 508,
+    "OK": 4,
+    "OR": 41,
+    "PA": 9,
+    "SC": 2,
+    "SD": 3,
+    "TN": 3,
+    "TX": 16,
+    "UT": 3,
+    "VA": 2,
+    "WA": 77,
+    "WI": 37,
+    "WV": 2,
+    "WY": 2
+  },
+  "source_type_counts": {
+    "arbitration_award": 10,
+    "cba": 1379,
+    "factfinding": 3,
+    "memorandum_or_settlement": 23,
+    "ordinance_or_policy": 20,
+    "pay_plan": 1,
+    "wage_schedule_or_compensation_plan": 64
+  },
+  "unit_type_counts": {
+    "fire": 320,
+    "non_safety": 525,
+    "police": 655
+  },
+  "disposition_to_extraction_readiness": {
+    "scheduled": {
+      "medium": 1480,
+      "not_ready": 20
+    }
+  },
+  "routing_status_to_review_status": {
+    "reachable_pdf_or_document": {
+      "download_forbidden": 4,
+      "download_timeout": 16,
+      "reviewed_metadata_and_artifact_saved": 1480
+    }
+  },
+  "collection_urls_opened": 1500,
+  "collection_network_calls": 1500,
+  "collection_documents_downloaded": 1480,
+  "collection_documents_parsed": 0,
+  "collection_pdfs_parsed": 0,
+  "collection_ocr_runs": 0,
+  "merge_urls_opened": 0,
+  "merge_network_calls": 0,
+  "merge_documents_downloaded": 0,
+  "merge_documents_parsed": 0,
+  "merge_pdfs_parsed": 0,
+  "merge_ocr_runs": 0,
+  "original_failed_attempt_status": "preserved_unmerged_superseded_transport",
+  "diagnostic_probe_status": "preserved_excluded_from_merge",
+  "source_rating_status": "batch3_preliminary_artifact_review_merged",
+  "content_download_status": "batch3_bounded_artifacts_merged",
+  "extraction_readiness_status": "preliminary_artifact_metadata_only",
+  "ingestion_status": "not_started",
+  "codify_status": "not_started",
+  "wage_extraction_status": "not_started",
+  "wage_gap_analysis_status": "not_started",
+  "next_scaling_recommendation": "text_layer_page_count_readiness_pilot",
+  "caveats": [
+    "Source-review ratings are preliminary access/artifact signals.",
+    "PDFs were not parsed or OCRed.",
+    "No wage tables or wage values were extracted.",
+    "This round ledger contains only the audited lane outputs named in its manifest."
+  ],
+  "ledger_path": "docs/analysis/source_review_ledgers/SOURCE-REVIEW-BATCH3-3X500-2026-07-24/source_review_ledger.csv",
+  "ledger_sha256": "cf67670da9b48fee69e88fb4b71dc5fcf8d9ae713f104751bf33e381e22a9f4b"
+}

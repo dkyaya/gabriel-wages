@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-25T00:18:20Z",
+  "generated_at": "2026-07-25T02:35:46Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -34,7 +34,8 @@
     "docs/analysis/source_review_ledgers/source_review_ledger_cumulative.csv",
     "docs/analysis/source_review_ledgers/source_review_summary_cumulative.json",
     "docs/analysis/source_review_pilots/SOURCE-REVIEW-BATCH2-500-2026-07-24/source_review_batch2_500_collection_summary.json",
-    "docs/analysis/source_review_pilots/SOURCE-REVIEW-BATCH3-3X500-2026-07-24/source_review_batch3_3x500_collection_summary.json"
+    "docs/analysis/source_review_pilots/SOURCE-REVIEW-BATCH3-3X500-2026-07-24/source_review_batch3_3x500_collection_summary.json",
+    "docs/analysis/source_review_ledgers/SOURCE-REVIEW-BATCH3-3X500-2026-07-24/source_review_summary.json"
   ],
   "warnings": [],
   "limitations": [
@@ -47,8 +48,8 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "stage": "source_review_batch3_3x500_collection",
-  "source_review_phase": "batch3_3x500_collected_not_merged",
+  "stage": "source_review_batch3_3x500_merged",
+  "source_review_phase": "batch3_3x500_merged",
   "metadata_triage_complete": true,
   "metadata_triage_rows": 4726,
   "p1_rows": 1760,
@@ -62,18 +63,18 @@
   },
   "initial_source_review_states": 43,
   "initial_source_review_unique_municipalities": 95,
-  "source_review_live_status": "batch3_3x500_collected_not_merged",
-  "bounded_live_source_review_path": "implemented_httpx_batch3_collected",
+  "source_review_live_status": "batch3_3x500_merged",
+  "bounded_live_source_review_path": "implemented_httpx_batch3_merged",
   "recommended_initial_live_concurrency": 4,
   "recommended_initial_timeout_seconds": 30,
   "recommended_initial_connect_timeout_seconds": 8,
   "recommended_initial_read_timeout_seconds": 20,
   "recommended_initial_max_redirects": 5,
   "recommended_initial_max_bytes": 26214400,
-  "next_scaling_decision": "merge_batch3_first_then_choose_remaining_downloads_or_text_layer_pilot",
-  "content_download_status": "batch3_3x500_collected_not_merged",
-  "source_rating_status": "batch3_3x500_collected_not_merged",
-  "extraction_readiness_status": "preliminary_batch3_not_merged",
+  "next_scaling_decision": "text_layer_page_count_readiness_pilot",
+  "content_download_status": "batch3_bounded_artifacts_merged",
+  "source_rating_status": "batch3_preliminary_artifact_review_merged",
+  "extraction_readiness_status": "preliminary_artifact_metadata_only",
   "ingestion_status": "not_started",
   "codify_status": "not_started",
   "wage_extraction_status": "not_started",
@@ -140,11 +141,10 @@
   "pilot_manifest_source": "docs/analysis/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/source_review_pilot_manifest.json",
   "metadata_triage_summary_source": "docs/analysis/content_triage_ledgers/content_triage_summary_latest.json",
   "caveats": [
-    "Batch 3 is collected and audited but not durably merged.",
-    "Source-review ratings are preliminary access and artifact signals.",
+    "Source-review ratings are preliminary access/artifact signals.",
     "PDFs were not parsed or OCRed.",
-    "No wage tables or wage values were extracted.",
-    "All 650 prior durable candidate identities were excluded."
+    "Wage data were not extracted.",
+    "The next step should test text-layer and page-count readiness before more bulk downloading."
   ],
   "latest_source_review_pilot_id": "SOURCE-REVIEW-PILOT1-150-2026-07-24",
   "pilot1_live_rows_collected": 150,
@@ -222,7 +222,7 @@
   "pilot1_httpx_retry_lane_audit_recommendation": "merge_all_source_review_lanes",
   "httpx_retry_collection_summary_source": "docs/analysis/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/source_review_httpx_retry_collection_summary.json",
   "latest_source_review_batch_id": "SOURCE-REVIEW-BATCH3-3X500-2026-07-24",
-  "latest_source_review_merge_id": "SOURCE-REVIEW-BATCH2-500-MERGE-2026-07-24",
+  "latest_source_review_merge_id": "SOURCE-REVIEW-BATCH3-3X500-MERGE-2026-07-24",
   "batch2_500_rows_merged": 500,
   "batch2_500_artifact_saved_rows": 495,
   "batch2_500_timeout_rows": 5,
@@ -231,13 +231,13 @@
   "batch2_500_total_artifact_bytes": 1009326270,
   "batch2_500_max_content_artifact_bytes": 9476151,
   "batch2_500_merge_status": "merged",
-  "cumulative_merged_source_review_rows": 650,
-  "cumulative_artifact_saved_rows": 644,
-  "cumulative_content_artifact_bytes": 1310753493,
-  "cumulative_max_content_artifact_bytes": 10319152,
+  "cumulative_merged_source_review_rows": 2150,
+  "cumulative_artifact_saved_rows": 2124,
+  "cumulative_content_artifact_bytes": 4500367582,
+  "cumulative_max_content_artifact_bytes": 10470269,
   "durable_source_review_ledger_latest": "docs/analysis/source_review_ledgers/source_review_ledger_latest.csv",
   "durable_source_review_ledger_cumulative": "docs/analysis/source_review_ledgers/source_review_ledger_cumulative.csv",
-  "next_scaling_recommendation": "merge_batch3_first_then_choose_remaining_downloads_or_text_layer_pilot",
+  "next_scaling_recommendation": "text_layer_page_count_readiness_pilot",
   "durable_source_review_summary_source": "docs/analysis/source_review_ledgers/source_review_summary_latest.json",
   "durable_source_review_cumulative_summary_source": "docs/analysis/source_review_ledgers/source_review_summary_cumulative.json",
   "batch2_500_rows_collected": 500,
@@ -266,7 +266,7 @@
   "batch2_collection_summary_source": "docs/analysis/source_review_pilots/SOURCE-REVIEW-BATCH2-500-2026-07-24/source_review_batch2_500_collection_summary.json",
   "batch3_3x500_rows_collected": 1500,
   "batch3_3x500_terminal_rows": 1500,
-  "batch3_3x500_merge_status": "not_started",
+  "batch3_3x500_merge_status": "merged",
   "batch3_3x500_priority_distribution": {
     "p1": 1097,
     "p2": 403
@@ -300,5 +300,10 @@
   "batch3_3x500_connection_error_rows": 0,
   "batch3_3x500_manual_review_burden_rows": 20,
   "batch3_3x500_lane_audit_recommendation": "merge_all_source_review_lanes",
-  "batch3_collection_summary_source": "docs/analysis/source_review_pilots/SOURCE-REVIEW-BATCH3-3X500-2026-07-24/source_review_batch3_3x500_collection_summary.json"
+  "batch3_collection_summary_source": "docs/analysis/source_review_pilots/SOURCE-REVIEW-BATCH3-3X500-2026-07-24/source_review_batch3_3x500_collection_summary.json",
+  "batch3_3x500_rows_merged": 1500,
+  "batch3_3x500_artifact_saved_rows": 1480,
+  "cumulative_total_artifact_bytes": 4502698363,
+  "next_recommendation": "text_layer_page_count_readiness_pilot",
+  "batch3_durable_summary_source": "docs/analysis/source_review_ledgers/SOURCE-REVIEW-BATCH3-3X500-2026-07-24/source_review_summary.json"
 }
