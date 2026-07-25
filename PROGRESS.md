@@ -6,6 +6,34 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-24 (Local PDF-readiness Pilot 1 collected; no durable readiness merge)
+
+**Did**
+- Started from clean tracked `985d5813f89c377eb49f9ad76fe9072a7d8c78f9`, confirmed all requested ancestry, preserved the unrelated untracked root `package-lock.json`, and independently reverified all 2,124 cumulative retained PDF paths, sizes, signatures, and hashes.
+- Defined a technical-readiness schema and implemented an offline deterministic sampler, bounded local `pypdf` runner, lane auditor, and 11-test synthetic/mock suite. The runner has no network client, verifies each hash before parsing, samples at most three pages and 500 characters per page, retains only counts/statuses, and performs no OCR.
+- Locked a deliberately diversity-weighted 150-PDF sample in three 50-row lanes. It covers Pilot 1/Batch 2/Batch 3 (31/32/87), p1/p2 (66/84), police/fire/non-safety (52/45/53), all 50 states plus DC, all five preliminary officialness groups, seven source types, and four artifact-size bins.
+- All three dry runs passed with 150 terminal-planned rows and zero artifact opens, source access, parsing, OCR, or output text.
+- Ran the three local-only lanes serially. All 150 artifacts passed existence, byte-size, SHA-256, and PDF-signature checks; `pypdf 6.13.2` obtained all page counts with zero terminal parser errors.
+- Results are 107 text-layer `present`, 19 `partial`, and 24 `absent`; page counts range 1–463 with median 37.5, p90 98, and 7,145 total represented pages. The three lane runtimes total 8.525 seconds.
+- All three lanes audit as `completed_merge_eligible`; recommendation is `merge_all_pdf_readiness_lanes`. No durable readiness merge occurred.
+- Added a separate dashboard PDF Readiness status/card: `pilot1_collected_not_merged`, with downstream ingestion, codification, wage extraction, and wage-gap analysis still not started.
+
+**Decisions and why**
+- Recommend a larger local text-layer/page-count pass over the 2,124 retained PDFs before more downloads or wage-table work. The pilot shows broad technical promise—126/150 have sampled text and all 150 yield page counts—but its diagnostic diversity weighting is not a prevalence estimate.
+- Do not equate text-layer presence with substantive readiness. The pilot does not establish CBA identity, employer/unit match, source relevance, wage-table presence, wage values, or analysis-ready evidence.
+- Preserve the 24 `ocr_later` outcomes as a technical planning category only. OCR remains unrun and separately authorized.
+
+**Surprises/breakage**
+- The first dry-run command failed before creating output because the CLI parser inverted the explicit `--no-save-text` flag. The flag was corrected, a regression test was added, and the full suite/dry runs passed before any PDF was opened.
+- `pypdf` repaired a few imperfect cross-reference pointers with warnings but still produced terminal page-count/text-layer results; no row became a parser error. An initial validation secret scan included its own test strings, was narrowed to product artifacts, and then passed.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Five compiles, 11 offline/mock tests, final 150-row lane audit, 150 identity/hash/size/signature/page-count checks, dashboard 17-JSON/frontend production build, schema validation, 60 ingestion tests, protected/upstream/durable-ledger and corpus hashes, no-text-artifact and secret-indicator checks, and diff checks passed. No URL, network/API/model call, download, OCR, full-text artifact, live review, scout-accounting or routing/triage/source-review-ledger mutation, ingestion, `gabriel.codify`, wage extraction, wage-gap work, causal claim, regression, remote action, or push occurred.
+
+**Next steps**
+1. Review the locked sample, 150 lane results, technical caveats, audit, validation, and lite relay.
+2. If separately authorized, either serially merge the three readiness lanes or prepare a larger local page-count/text-layer pass over retained artifacts; keep those actions separate.
+3. Do not design wage-table extraction until content identity/relevance and technical parseability gates are explicit. Keep OCR, ingestion, codification, wage extraction, and wage analysis separately authorized.
+
 ## 2026-07-24 (Source-review Batch 3 3×500 durably merged; 2,150 cumulative rows)
 
 **Did**

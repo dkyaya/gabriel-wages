@@ -6,6 +6,44 @@ Last updated: `2026-07-24`
 
 ---
 
+## 2026-07-24 — Local PDF-readiness Pilot 1 collected; merge pending
+
+### Current State
+
+- **Start:** work began at clean tracked `985d5813f89c377eb49f9ad76fe9072a7d8c78f9`; requested ancestry and the 2,150-row cumulative source-review layer passed. The unrelated untracked root `package-lock.json` remains untouched.
+- **Readiness:** all 2,124 retained PDF paths independently passed existence, lane-locality, signature, recorded-size, and SHA-256 checks. All 2,150 durable page-count/text-layer fields were still unknown before the pilot.
+- **Implementation:** the new schema, deterministic planner, bounded local `pypdf` runner, auditor, and 11-test suite are offline-only. The runner verifies each locked hash before opening the PDF, samples at most first/middle/last pages and 500 counted characters per page, discards text immediately, and has no network or OCR path.
+- **Plan:** [the input plan](pdf_readiness_pilot1_150_input_plan_2026-07-24.md) locks 150 unique retained PDFs in three 50-row lanes. The diversity-weighted sample covers all prior source-review rounds, p1/p2, all unit types, all 50 states plus DC, all officialness groups, seven source types, and four size bins.
+- **Dry gate:** all three lanes are `dry_run_passed`; 150 rows are terminal-planned and zero artifacts or PDFs were opened.
+- **Local results:** [the result review](pdf_readiness_pilot1_150_result_review_2026-07-24.md) records 150 `readiness_checked`, 107 text-layer `present`, 19 `partial`, and 24 `absent`. All 150 yield page counts; minimum/median/p90/maximum are 1/37.5/98/463. Hash, size, signature, missing-artifact, parser, and timeout failures are zero.
+- **Bounded sample:** 431 pages were sampled and 341 returned text. Only a capped character count was retained; no page or document text was saved. Aggregate lane runtime was 8.525 seconds with `pypdf 6.13.2`.
+- **Audit:** all three lanes are `completed_merge_eligible`; recommendation is `merge_all_pdf_readiness_lanes`. [No durable readiness merge occurred](pdf_readiness_pilot1_150_no_merge_note_2026-07-24.md).
+- **Dashboard:** `pdf_readiness_phase = pilot1_collected_not_merged`; present/partial/absent and page-count statistics are shown separately from the durable source-review layer. Ingestion, codification, wage extraction, and wage-gap analysis remain `not_started`.
+- **Boundary:** no URL, network/API/model call, download, live review, OCR, retained extracted text, wage extraction, ingestion, codification, scout-accounting or routing/triage/source-review-ledger mutation, empirical/causal claim, regression, remote inspection, or push occurred.
+- **Validation:** [the validation record](pdf_readiness_pilot1_150_validation_2026-07-24.md) reports five compiles, 11 tests, final lane audit, 150 local integrity/page-count checks, 17 dashboard JSON files/frontend build, schema and 60 ingestion tests, immutable protected/upstream/durable hashes, no-text-artifact and secret-indicator checks, and diff checks passed.
+
+### Interpretation
+
+The diversity-weighted pilot shows that bounded local parsing is technically
+promising: 126/150 PDFs have text on at least one sampled page, all 150
+produce page counts, and no terminal parser error occurred. It is not a
+population-weighted estimate. Text-layer presence does not establish the
+intended CBA, employer/unit match, substantive relevance, wage-table content,
+or extractable wage values.
+
+The 24 `absent` cases are a future technical subset, not an OCR
+authorization. No OCR was run.
+
+### Next Move
+
+Review the pilot and relay. Under separate authorization, either serially
+merge the three readiness lanes or plan a larger local page-count/text-layer
+pass over the already-retained PDFs. A larger pass is recommended before
+more p2 downloads or wage-table extraction because it can establish
+population-wide technical readiness without network or storage growth.
+Continue to prohibit saved full text, OCR, wage extraction, ingestion,
+codification, wage-gap claims, and regressions unless separately authorized.
+
 ## 2026-07-24 — Source-review Batch 3 is durably merged; 2,150 cumulative rows
 
 ### Current State

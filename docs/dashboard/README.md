@@ -229,11 +229,19 @@ The dashboard phase is `batch3_3x500_merged`. Batch 3 contributes 1,480
 retained PDFs, 16 timeout outcomes, four forbidden outcomes, and approximately
 3.190 GB of PDF content.
 
-The next recommendation is a bounded 100–200-row text-layer/page-count
-readiness pilot over retained artifacts before automatically downloading the
-remaining 726 default-eligible p2 rows. Final content-supported source rating,
-PDF parsing or OCR, ingestion, codification, wage extraction, and wage-gap
-analysis remain unperformed.
+`PDF-READINESS-PILOT1-150-2026-07-24` is now collected and audited but not
+durably merged. The local-only diversity sample covers 150 already-retained
+PDFs in three 50-row lanes. All 150 passed existence, hash, size, signature,
+and page-count gates. Sampled text-layer status is 107 present, 19 partial,
+and 24 absent; parser errors are zero. Page counts range from 1 to 463 with a
+median of 37.5.
+
+The next recommendation is a larger local text-layer/page-count pass over
+retained artifacts before automatically downloading the remaining 726
+default-eligible p2 rows or designing wage-table extraction. The pilot opened
+no URL, downloaded nothing, ran no OCR, and saved no extracted text. Final
+content-supported source rating, ingestion, codification, wage extraction,
+and wage-gap analysis remain unperformed.
 
 ## Run and build locally
 

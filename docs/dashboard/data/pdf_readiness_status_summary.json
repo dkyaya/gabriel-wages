@@ -49,47 +49,69 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "stage": "parallel_scout_operations_status",
-  "parallel_mode_status": "aggressive_3x300_completed_accounting_merged",
-  "current_parallel_mode": "three_lane_aggressive_round_successfully_merged",
-  "supported_lanes_initial": 2,
-  "supported_lanes_future": 3,
-  "rows_per_lane": 300,
-  "latest_completed_round_id": "POST-PI-AGGRESSIVE-ROUND-3X300-2026-07-23",
-  "current_parallel_round_id": "POST-PI-AGGRESSIVE-ROUND-3X300-2026-07-23",
-  "next_parallel_test": "none_broad_scouting_paused",
-  "aggressive_mode_planned": "completed_checkpoint_exceeded",
-  "current_scout_covered": 2436,
-  "target_checkpoint": 2000,
-  "remaining_to_checkpoint": 0,
-  "planned_round_expected_attempted": 0,
-  "planned_round_expected_parseable": 0,
-  "planned_round_expected_post_coverage": 2436,
-  "planned_round_expected_checkpoint_margin": 436,
-  "planned_round_status": "none_broad_scouting_paused",
-  "checkpoint_overshoot_intent": "completed_intentional_user_approved",
-  "superseded_round": {
-    "round_id": "POST-PI-CHECKPOINT-ROUND-3X160-2026-07-23",
-    "status": "superseded_preserved_not_active"
+  "pdf_readiness_phase": "pilot1_collected_not_merged",
+  "latest_pdf_readiness_pilot_id": "PDF-READINESS-PILOT1-150-2026-07-24",
+  "pilot_rows_collected": 150,
+  "pilot_terminal_rows": 150,
+  "pilot_lane_rows": [
+    50,
+    50,
+    50
+  ],
+  "pdf_readiness_merge_status": "not_started",
+  "source_review_rows_available": 2150,
+  "retained_pdf_artifacts_available": 2124,
+  "readiness_status_counts": {
+    "readiness_checked": 150
   },
-  "lane_start_stagger_minutes": 8,
-  "3x150_expected_attempted": 450,
-  "3x300_expected_attempted": 900,
-  "accounting_policy": "serial_merge_after_lane_audit",
-  "lane_export_policy": "lane_local_candidate_exports",
-  "latest_round": {
-    "lanes_completed_merge_eligible": 3,
-    "attempted_rows": 900,
-    "parseable_rows": 899,
-    "candidate_positive_municipalities": 591,
-    "parseable_empty_municipalities": 308,
-    "failure_only_municipalities": 1,
-    "candidate_lead_rows": 1389,
-    "url_bearing_queue_rows_added": 1379,
-    "merge_recommendation": "merge_all_lanes",
-    "accounting_merge_status": "completed_serially"
+  "text_layer_status_counts": {
+    "absent": 24,
+    "partial": 19,
+    "present": 107
   },
-  "lane_execution_policy": "Each lane is internally serialized and writes only to its own output directory; lane processes do not rebuild shared accounting.",
-  "post_checkpoint_policy": "Broad scouting is paused after the successfully merged aggressive round exceeded the approximately 2,000 checkpoint. Proceed to verification, extraction, ingestion, rating, descriptive wage-growth-gap analysis, mechanism-correlation documentation, and the planned wage-gap dashboard filter.",
-  "caveat": "The user-approved aggressive 3x300 Attempt 3 completed and was merged serially after audit. The checkpoint overshoot was intentional. Broad scouting is paused; all candidate leads remain unverified, and no wage-gap layer is active."
+  "technical_parseability_rating_counts": {
+    "high": 107,
+    "low": 24,
+    "medium": 19
+  },
+  "recommended_next_action_counts": {
+    "ocr_later": 24,
+    "parse_text_layer_later": 126
+  },
+  "page_count_summary": {
+    "count": 150,
+    "minimum": 1,
+    "median": 37,
+    "mean": 47.633333,
+    "p90": 98,
+    "maximum": 463,
+    "total_pages": 7145,
+    "buckets": {
+      "1_to_10": 40,
+      "11_to_25": 21,
+      "26_to_50": 30,
+      "51_to_100": 45,
+      "over_100": 14
+    }
+  },
+  "sampled_pages_checked": 431,
+  "sampled_pages_with_text": 341,
+  "parser_library": "pypdf",
+  "parser_version": "6.13.2",
+  "parser_error_rows": 0,
+  "hash_failure_rows": 0,
+  "missing_artifact_rows": 0,
+  "next_recommendation": "larger_local_text_layer_page_count_pass_before_wage_extraction",
+  "ingestion_status": "not_started",
+  "codify_status": "not_started",
+  "wage_extraction_status": "not_started",
+  "wage_gap_analysis_status": "not_started",
+  "summary_source": "docs/analysis/pdf_readiness_pilots/PDF-READINESS-PILOT1-150-2026-07-24/pdf_readiness_collection_summary.json",
+  "caveats": [
+    "Readiness only samples already-retained local artifacts.",
+    "The sample is diversity-weighted and is not a prevalence estimate.",
+    "Text-layer presence does not prove wage data exist.",
+    "No OCR, full-text retention, wage extraction, or ingestion occurred.",
+    "Pilot outcomes are collected but not durably merged."
+  ]
 }

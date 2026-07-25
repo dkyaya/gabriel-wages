@@ -1,0 +1,124 @@
+{
+  "schema_version": "1.0.0",
+  "status": "pdf_readiness_pilot1_collected_not_merged",
+  "pilot_id": "PDF-READINESS-PILOT1-150-2026-07-24",
+  "planned_rows": 150,
+  "ledger_rows": 150,
+  "terminal_rows": 150,
+  "lane_rows": [
+    50,
+    50,
+    50
+  ],
+  "lane_input_sha256": [
+    "3d04c40eb0b150fb618944b01790dc33ac44d2143ea0176b05e5e75153f2aaca",
+    "aebf88b78d45e326da1eba60bc0fd0d98d1de784b66375d5dcbbfb9e977bed89",
+    "ee7c0f779d8e43c0826cc6db94cd69e57a24046f733e27fa1672d09836e5a124"
+  ],
+  "readiness_status_counts": {
+    "readiness_checked": 150
+  },
+  "text_layer_status_counts": {
+    "absent": 24,
+    "partial": 19,
+    "present": 107
+  },
+  "technical_parseability_rating_counts": {
+    "high": 107,
+    "low": 24,
+    "medium": 19
+  },
+  "recommended_next_action_counts": {
+    "ocr_later": 24,
+    "parse_text_layer_later": 126
+  },
+  "page_count_summary": {
+    "count": 150,
+    "minimum": 1,
+    "median": 37,
+    "mean": 47.633333,
+    "p90": 98,
+    "maximum": 463,
+    "total_pages": 7145,
+    "buckets": {
+      "1_to_10": 40,
+      "11_to_25": 21,
+      "26_to_50": 30,
+      "51_to_100": 45,
+      "over_100": 14
+    }
+  },
+  "sampled_pages_checked": 431,
+  "sampled_pages_with_text": 341,
+  "text_chars_sampled_total": 142281,
+  "parser_library": "pypdf",
+  "parser_version": "6.13.2",
+  "parser_error_rows": 0,
+  "hash_failure_rows": 0,
+  "missing_artifact_rows": 0,
+  "invalid_signature_rows": 0,
+  "selected_artifact_bytes": 334676242,
+  "source_review_batch_distribution": {
+    "SOURCE-REVIEW-BATCH2-500-2026-07-24": 32,
+    "SOURCE-REVIEW-BATCH3-3X500-2026-07-24": 87,
+    "SOURCE-REVIEW-PILOT1-150-2026-07-24": 31
+  },
+  "priority_distribution": {
+    "p1": 66,
+    "p2": 84
+  },
+  "unit_type_distribution": {
+    "fire": 45,
+    "non_safety": 53,
+    "police": 52
+  },
+  "source_officialness_distribution": {
+    "official_municipal": 48,
+    "official_state_repository": 23,
+    "official_union": 17,
+    "uncertain": 44,
+    "unknown": 18
+  },
+  "candidate_source_type_distribution": {
+    "arbitration_award": 10,
+    "cba": 75,
+    "factfinding": 3,
+    "memorandum_or_settlement": 17,
+    "ordinance_or_policy": 15,
+    "pay_plan": 1,
+    "wage_schedule_or_compensation_plan": 29
+  },
+  "artifact_byte_size_bin_distribution": {
+    "large_2_to_5_mib": 29,
+    "medium_512_kib_to_2_mib": 45,
+    "small_le_512_kib": 49,
+    "very_large_gt_5_mib": 27
+  },
+  "lane_elapsed_seconds": [
+    2.112323,
+    2.012755,
+    4.399514
+  ],
+  "aggregate_lane_elapsed_seconds": 8.524592,
+  "urls_opened": 0,
+  "network_calls": 0,
+  "downloads": 0,
+  "redownloads": 0,
+  "ocr_runs": 0,
+  "full_text_artifacts_written": 0,
+  "wage_tables_extracted": 0,
+  "wage_values_extracted": 0,
+  "ingestion_actions": 0,
+  "codify_actions": 0,
+  "durable_readiness_merge_status": "not_started",
+  "merge_recommendation": "merge_all_pdf_readiness_lanes",
+  "source_review_rows_available": 2150,
+  "retained_pdf_artifacts_available": 2124,
+  "next_recommendation": "larger_local_text_layer_page_count_pass_before_wage_extraction",
+  "caveats": [
+    "The pilot is a deliberately diversity-weighted technical sample, not a prevalence-weighted estimate of the full retained corpus.",
+    "Text-layer presence does not prove that wage tables or wage values exist.",
+    "The 24 absent rows are tagged ocr_later only; OCR was not run or authorized.",
+    "No full extracted text was saved and no durable readiness merge occurred."
+  ]
+}

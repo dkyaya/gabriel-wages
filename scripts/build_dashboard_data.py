@@ -154,6 +154,12 @@ SOURCE_REVIEW_BATCH3_DURABLE_SUMMARY_PATH = (
     / "SOURCE-REVIEW-BATCH3-3X500-2026-07-24"
     / "source_review_summary.json"
 )
+PDF_READINESS_PILOT1_SUMMARY_PATH = (
+    ANALYSIS_DIR
+    / "pdf_readiness_pilots"
+    / "PDF-READINESS-PILOT1-150-2026-07-24"
+    / "pdf_readiness_collection_summary.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -210,6 +216,7 @@ OPTIONAL_PATHS = [
     SOURCE_REVIEW_BATCH2_SUMMARY_PATH,
     SOURCE_REVIEW_BATCH3_SUMMARY_PATH,
     SOURCE_REVIEW_BATCH3_DURABLE_SUMMARY_PATH,
+    PDF_READINESS_PILOT1_SUMMARY_PATH,
 ]
 
 STATE_NAMES = {
@@ -2946,6 +2953,104 @@ def build_source_review_status_summary(
     return payload
 
 
+def build_pdf_readiness_status_summary(
+    *, metadata: dict[str, Any]
+) -> dict[str, Any]:
+    """Build the local-only PDF-readiness collection status."""
+
+    if not PDF_READINESS_PILOT1_SUMMARY_PATH.exists():
+        return {
+            **metadata,
+            "pdf_readiness_phase": "not_started",
+            "latest_pdf_readiness_pilot_id": None,
+            "pilot_rows_collected": 0,
+            "pdf_readiness_merge_status": "not_started",
+            "source_review_rows_available": 2150,
+            "retained_pdf_artifacts_available": 2124,
+            "text_layer_status_counts": {},
+            "technical_parseability_rating_counts": {},
+            "ingestion_status": "not_started",
+            "codify_status": "not_started",
+            "wage_extraction_status": "not_started",
+            "wage_gap_analysis_status": "not_started",
+            "caveats": [
+                "PDF readiness has not started.",
+                "No OCR, wage extraction, or ingestion has occurred.",
+            ],
+        }
+    pilot = read_json(PDF_READINESS_PILOT1_SUMMARY_PATH)
+    if (
+        pilot.get("status") != "pdf_readiness_pilot1_collected_not_merged"
+        or pilot.get("pilot_id")
+        != "PDF-READINESS-PILOT1-150-2026-07-24"
+        or int(pilot.get("planned_rows", 0)) != 150
+        or int(pilot.get("ledger_rows", 0)) != 150
+        or int(pilot.get("terminal_rows", 0)) != 150
+        or pilot.get("lane_rows") != [50, 50, 50]
+        or int(pilot.get("parser_error_rows", -1)) != 0
+        or int(pilot.get("hash_failure_rows", -1)) != 0
+        or int(pilot.get("missing_artifact_rows", -1)) != 0
+        or int(pilot.get("urls_opened", -1)) != 0
+        or int(pilot.get("network_calls", -1)) != 0
+        or int(pilot.get("downloads", -1)) != 0
+        or int(pilot.get("ocr_runs", -1)) != 0
+        or int(pilot.get("full_text_artifacts_written", -1)) != 0
+        or int(pilot.get("wage_values_extracted", -1)) != 0
+        or int(pilot.get("ingestion_actions", -1)) != 0
+        or int(pilot.get("codify_actions", -1)) != 0
+        or pilot.get("durable_readiness_merge_status") != "not_started"
+        or pilot.get("merge_recommendation")
+        != "merge_all_pdf_readiness_lanes"
+    ):
+        raise ValueError("PDF-readiness Pilot 1 summary fails collection gates")
+    return {
+        **metadata,
+        "pdf_readiness_phase": "pilot1_collected_not_merged",
+        "latest_pdf_readiness_pilot_id": pilot["pilot_id"],
+        "pilot_rows_collected": int(pilot["ledger_rows"]),
+        "pilot_terminal_rows": int(pilot["terminal_rows"]),
+        "pilot_lane_rows": pilot["lane_rows"],
+        "pdf_readiness_merge_status": "not_started",
+        "source_review_rows_available": int(
+            pilot["source_review_rows_available"]
+        ),
+        "retained_pdf_artifacts_available": int(
+            pilot["retained_pdf_artifacts_available"]
+        ),
+        "readiness_status_counts": pilot["readiness_status_counts"],
+        "text_layer_status_counts": pilot["text_layer_status_counts"],
+        "technical_parseability_rating_counts": pilot[
+            "technical_parseability_rating_counts"
+        ],
+        "recommended_next_action_counts": pilot[
+            "recommended_next_action_counts"
+        ],
+        "page_count_summary": pilot["page_count_summary"],
+        "sampled_pages_checked": int(pilot["sampled_pages_checked"]),
+        "sampled_pages_with_text": int(
+            pilot["sampled_pages_with_text"]
+        ),
+        "parser_library": pilot["parser_library"],
+        "parser_version": pilot["parser_version"],
+        "parser_error_rows": int(pilot["parser_error_rows"]),
+        "hash_failure_rows": int(pilot["hash_failure_rows"]),
+        "missing_artifact_rows": int(pilot["missing_artifact_rows"]),
+        "next_recommendation": pilot["next_recommendation"],
+        "ingestion_status": "not_started",
+        "codify_status": "not_started",
+        "wage_extraction_status": "not_started",
+        "wage_gap_analysis_status": "not_started",
+        "summary_source": relative(PDF_READINESS_PILOT1_SUMMARY_PATH),
+        "caveats": [
+            "Readiness only samples already-retained local artifacts.",
+            "The sample is diversity-weighted and is not a prevalence estimate.",
+            "Text-layer presence does not prove wage data exist.",
+            "No OCR, full-text retention, wage extraction, or ingestion occurred.",
+            "Pilot outcomes are collected but not durably merged.",
+        ],
+    }
+
+
 def validate_inputs(
     *,
     state_rows: list[dict[str, str]],
@@ -3132,6 +3237,9 @@ def main() -> int:
     source_review_status_summary = build_source_review_status_summary(
         metadata=metadata
     )
+    pdf_readiness_status_summary = build_pdf_readiness_status_summary(
+        metadata=metadata
+    )
     reports_index = build_reports_index_layer(
         source_index=reports_index_source,
         metadata=metadata,
@@ -3155,6 +3263,10 @@ def main() -> int:
             "content_triage_status_summary.json", content_triage_status_summary
         ),
         write_json("source_review_status_summary.json", source_review_status_summary),
+        write_json(
+            "pdf_readiness_status_summary.json",
+            pdf_readiness_status_summary,
+        ),
         write_json("reports_index.json", reports_index),
     ]
 

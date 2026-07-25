@@ -245,6 +245,7 @@ export function VerificationPipeline({
   verificationStatus,
   contentTriageStatus,
   sourceReviewStatus,
+  pdfReadinessStatus,
 }) {
   const candidateRows = candidateSummary.totals.candidate_rows;
   const fullRouting =
@@ -560,6 +561,44 @@ export function VerificationPipeline({
           No real source content has been accessed, and final source
           rating, extraction readiness, ingestion, codification, wage extraction,
           and wage-gap analysis have not started.
+            </>
+          )}
+        </p>
+      </div>
+      <div className="verification-callout">
+        <div>
+          <p className="eyebrow">PDF readiness</p>
+          <h3>
+            {pdfReadinessStatus.pdf_readiness_phase ===
+            "pilot1_collected_not_merged"
+              ? "Local PDF-readiness pilot collected; merge pending"
+              : "Local PDF-readiness pilot not started"}
+          </h3>
+        </div>
+        <p>
+          {pdfReadinessStatus.pdf_readiness_phase ===
+          "pilot1_collected_not_merged" ? (
+            <>
+              The bounded local pilot checked{" "}
+              {formatNumber(pdfReadinessStatus.pilot_rows_collected)}
+              {" "}already-retained PDFs:{" "}
+              {formatNumber(pdfReadinessStatus.text_layer_status_counts?.present)}
+              {" "}have text on every sampled page,{" "}
+              {formatNumber(pdfReadinessStatus.text_layer_status_counts?.partial)}
+              {" "}have partial sampled text, and{" "}
+              {formatNumber(pdfReadinessStatus.text_layer_status_counts?.absent)}
+              {" "}have no sampled text. All yielded page counts; parser,
+              hash, and missing-artifact failures were zero. Results are
+              collected but not durably merged. No URL, download, OCR,
+              retained extracted text, wage extraction, ingestion, or
+              codification occurred.
+            </>
+          ) : (
+            <>
+              The source-review layer retains{" "}
+              {formatNumber(pdfReadinessStatus.retained_pdf_artifacts_available)}
+              {" "}PDFs, but local page-count and text-layer readiness has not
+              been sampled.
             </>
           )}
         </p>
