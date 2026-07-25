@@ -6,6 +6,48 @@ Last updated: `2026-07-24`
 
 ---
 
+## 2026-07-24 — Full retained PDF readiness collected; cumulative merge pending
+
+### Current State
+
+- **Start:** work began at clean tracked `74a843a825c5ef8b2a3b5b272ffbfc56a10d444a`; requested ancestry, Pilot 1 outputs, and the 2,150-row cumulative source-review layer passed. The unrelated untracked root `package-lock.json` remains untouched.
+- **Exact complement:** [the input plan](pdf_readiness_full_retained_remainder_input_plan_2026-07-24.md) excludes the 150 Pilot 1 source-review identities and locks every one of the 1,974 remaining retained PDFs. Lanes are 494/494/493/493 with hashes `299e7effbeae6ed59f1906ea94f6a77245ed4c1e5418cb30abd5ffd82950c23b`, `8b1460125963214f46d0c9a52d401d9ab9c4d0ff1dcd0287501d2efb5c93aa6d`, `46cdc9bd67fd56bf1a360d8099ce73e14d758f72cf839a55c8f5056b7b30e05c`, and `40c662efebbed31b6ccce8e5c9fd7ff4d8038a697033a06a76af7fd77065216d`.
+- **Dry gate:** all four remainder lanes are `dry_run_passed`; 1,974 rows are terminal-planned and zero PDFs, URLs, downloads, OCR operations, or text outputs occurred.
+- **Local remainder:** [the result review](pdf_readiness_full_retained_remainder_result_review_2026-07-24.md) records 1,974 `readiness_checked`, 1,501 text-layer `present`, 201 `partial`, and 272 `absent`. All 1,974 yield page counts; minimum/median/p90/maximum are 1/45/84/284. Hash, size, signature, missing-artifact, timeout, and terminal parser failures are zero.
+- **Full retained result:** Pilot 1 plus remainder is exactly 2,124 / 2,124 retained PDFs with no cross-round source-review or candidate overlap. Cumulative text status is 1,608 present, 220 partial, and 296 absent; 1,828 have sampled text. All page counts exist, representing 108,028 pages with median 44, p90 84, and maximum 463.
+- **Bounded execution:** 6,322 pages were sampled and 5,201 returned text. Only capped character counts were retained; no page or document text was saved. Aggregate lane runtime across both rounds was 104.594 seconds with `pypdf 6.13.2`.
+- **Audit:** Pilot 1 has three and the remainder has four `completed_merge_eligible` lanes. Both recommend `merge_all_pdf_readiness_lanes`. [No durable readiness merge occurred](pdf_readiness_full_retained_remainder_no_merge_note_2026-07-24.md).
+- **Dashboard:** `pdf_readiness_phase = full_retained_collected_not_merged`; all 2,124 rows and cumulative distributions are shown separately from durable source-review. OCR, ingestion, codification, wage extraction, and wage-gap analysis remain `not_started`.
+- **Boundary:** no URL, network/API/model call, download, live review, OCR, retained extracted text, wage extraction, ingestion, codification, scout-accounting or routing/triage/source-review-ledger mutation, empirical/causal claim, regression, remote inspection, or push occurred.
+- **Validation:** [the validation record](pdf_readiness_full_retained_remainder_validation_2026-07-24.md) reports five compiles, 13 tests, final seven-lane audits, 2,124 local integrity/page-count checks, 17 dashboard JSON files/frontend build, schema and 60 ingestion tests, immutable protected/upstream/durable hashes, no-text-artifact and secret-indicator checks, and diff checks passed.
+
+### Interpretation
+
+The full retained artifact layer is technically promising: 86.1% have text
+on at least one bounded sampled page, every retained PDF yields a page count,
+and no artifact or terminal parser gate failed. This establishes technical
+parseability only. It does not establish document identity, relevance,
+employer or bargaining-unit match, wage-table presence, wage values, or
+analysis-ready evidence.
+
+The 296 `ocr_later` rows are a future technical category, not authorization
+to OCR. Cross-reference repair warnings in some PDFs did not prevent
+terminal results, but later content extraction should retain parser/version
+provenance and remain bounded.
+
+### Next Move
+
+After relay review and separate authorization, use
+[the cumulative merge prompt](pdf_readiness_full_retained_merge_prompt_2026-07-24.md)
+to merge Pilot 1 plus the remainder exactly once. Require exact source-review
+and candidate identity equality with all 2,124 retained PDFs and preserve all
+no-network/no-OCR/no-text gates.
+
+After that merge, design a bounded content/identity and structured-text
+evaluation from the 1,828 text-bearing PDFs. Do not automatically OCR the 296
+no-sampled-text rows, download more sources, extract wages, ingest, codify, or
+analyze wage gaps.
+
 ## 2026-07-24 — Local PDF-readiness Pilot 1 collected; merge pending
 
 ### Current State

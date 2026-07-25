@@ -229,19 +229,21 @@ The dashboard phase is `batch3_3x500_merged`. Batch 3 contributes 1,480
 retained PDFs, 16 timeout outcomes, four forbidden outcomes, and approximately
 3.190 GB of PDF content.
 
-`PDF-READINESS-PILOT1-150-2026-07-24` is now collected and audited but not
-durably merged. The local-only diversity sample covers 150 already-retained
-PDFs in three 50-row lanes. All 150 passed existence, hash, size, signature,
-and page-count gates. Sampled text-layer status is 107 present, 19 partial,
-and 24 absent; parser errors are zero. Page counts range from 1 to 463 with a
-median of 37.5.
+Local PDF readiness now covers the complete 2,124-retained-PDF universe in
+two collected, unmerged rounds: the preserved 150-row Pilot 1 and a 1,974-row
+four-lane remainder. Every retained artifact passed existence, hash, size,
+signature, and page-count gates. Cumulative sampled text-layer status is
+1,608 present, 220 partial, and 296 absent; parser errors are zero. Page
+counts range from 1 to 463, have a median of 44, and represent 108,028 pages.
 
-The next recommendation is a larger local text-layer/page-count pass over
-retained artifacts before automatically downloading the remaining 726
-default-eligible p2 rows or designing wage-table extraction. The pilot opened
-no URL, downloaded nothing, ran no OCR, and saved no extracted text. Final
-content-supported source rating, ingestion, codification, wage extraction,
-and wage-gap analysis remain unperformed.
+The dashboard phase is `full_retained_collected_not_merged`. The next
+recommendation is one serial cumulative PDF-readiness merge covering both
+rounds exactly once. After that merge, a bounded content/identity and
+structured-text evaluation over text-bearing PDFs is preferable to more bulk
+downloading. The complete local pass opened no URL, downloaded nothing, ran
+no OCR, and saved no extracted text. Final content-supported source rating,
+ingestion, codification, wage extraction, and wage-gap analysis remain
+unperformed.
 
 ## Run and build locally
 

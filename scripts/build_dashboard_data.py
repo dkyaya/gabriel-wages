@@ -160,6 +160,12 @@ PDF_READINESS_PILOT1_SUMMARY_PATH = (
     / "PDF-READINESS-PILOT1-150-2026-07-24"
     / "pdf_readiness_collection_summary.json"
 )
+PDF_READINESS_REMAINDER_SUMMARY_PATH = (
+    ANALYSIS_DIR
+    / "pdf_readiness_pilots"
+    / "PDF-READINESS-REMAINDER-ALL-RETAINED-2026-07-24"
+    / "pdf_readiness_collection_summary.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -217,6 +223,7 @@ OPTIONAL_PATHS = [
     SOURCE_REVIEW_BATCH3_SUMMARY_PATH,
     SOURCE_REVIEW_BATCH3_DURABLE_SUMMARY_PATH,
     PDF_READINESS_PILOT1_SUMMARY_PATH,
+    PDF_READINESS_REMAINDER_SUMMARY_PATH,
 ]
 
 STATE_NAMES = {
@@ -3003,6 +3010,110 @@ def build_pdf_readiness_status_summary(
         != "merge_all_pdf_readiness_lanes"
     ):
         raise ValueError("PDF-readiness Pilot 1 summary fails collection gates")
+    if PDF_READINESS_REMAINDER_SUMMARY_PATH.exists():
+        full = read_json(PDF_READINESS_REMAINDER_SUMMARY_PATH)
+        if (
+            full.get("status")
+            != "pdf_readiness_full_retained_collected_not_merged"
+            or full.get("round_id")
+            != "PDF-READINESS-REMAINDER-ALL-RETAINED-2026-07-24"
+            or full.get("pilot1_id")
+            != "PDF-READINESS-PILOT1-150-2026-07-24"
+            or int(full.get("pilot1_rows", 0)) != 150
+            or int(full.get("remainder_rows", 0)) != 1974
+            or int(full.get("full_retained_rows_collected", 0)) != 2124
+            or int(full.get("retained_pdf_artifacts_available", 0)) != 2124
+            or full.get("remainder_lane_rows") != [494, 494, 493, 493]
+            or int(full.get("remainder_terminal_rows", 0)) != 1974
+            or full.get("remainder_lane_classification_counts")
+            != {"completed_merge_eligible": 4}
+            or full.get("full_readiness_status_counts")
+            != {"readiness_checked": 2124}
+            or int(full.get("full_page_count_summary", {}).get("count", 0))
+            != 2124
+            or any(
+                int(full.get(field, -1)) != 0
+                for field in (
+                    "hash_failures",
+                    "missing_artifacts",
+                    "invalid_pdf_signatures",
+                    "parser_errors",
+                    "urls_opened",
+                    "network_calls",
+                    "downloads",
+                    "redownloads",
+                    "ocr_runs",
+                    "full_text_artifacts_written",
+                    "wage_tables_extracted",
+                    "wage_values_extracted",
+                    "ingestion_actions",
+                    "codify_actions",
+                    "durable_readiness_merges",
+                )
+            )
+            or full.get("pilot1_merge_status") != "not_started"
+            or full.get("remainder_merge_status") != "not_started"
+        ):
+            raise ValueError(
+                "full-retained PDF-readiness summary fails collection gates"
+            )
+        return {
+            **metadata,
+            "pdf_readiness_phase": "full_retained_collected_not_merged",
+            "latest_pdf_readiness_pilot_id": pilot["pilot_id"],
+            "latest_pdf_readiness_round_id": full["round_id"],
+            "pilot_rows_collected": int(full["pilot1_rows"]),
+            "remainder_rows_collected": int(full["remainder_rows"]),
+            "full_retained_pdf_readiness_rows_collected": int(
+                full["full_retained_rows_collected"]
+            ),
+            "remainder_lane_rows": full["remainder_lane_rows"],
+            "pdf_readiness_merge_status": "not_started",
+            "source_review_rows_available": int(
+                full["source_review_rows_available"]
+            ),
+            "retained_pdf_artifacts_available": int(
+                full["retained_pdf_artifacts_available"]
+            ),
+            "readiness_status_counts": full[
+                "full_readiness_status_counts"
+            ],
+            "text_layer_status_counts": full[
+                "full_text_layer_status_counts"
+            ],
+            "technical_parseability_rating_counts": full[
+                "full_technical_parseability_rating_counts"
+            ],
+            "recommended_next_action_counts": full[
+                "full_recommended_next_action_counts"
+            ],
+            "page_count_summary": full["full_page_count_summary"],
+            "sampled_pages_checked": int(
+                full["full_sampled_pages_checked"]
+            ),
+            "sampled_pages_with_text": int(
+                full["full_sampled_pages_with_text"]
+            ),
+            "parser_library": full["parser_library"],
+            "parser_version": full["parser_version"],
+            "parser_error_rows": int(full["parser_errors"]),
+            "hash_failure_rows": int(full["hash_failures"]),
+            "missing_artifact_rows": int(full["missing_artifacts"]),
+            "next_recommendation": full["next_recommendation"],
+            "ingestion_status": "not_started",
+            "codify_status": "not_started",
+            "wage_extraction_status": "not_started",
+            "wage_gap_analysis_status": "not_started",
+            "summary_source": relative(
+                PDF_READINESS_REMAINDER_SUMMARY_PATH
+            ),
+            "caveats": [
+                "Readiness records technical parseability only.",
+                "Text-layer presence does not prove wage data exist.",
+                "No OCR, full-text retention, wage extraction, or ingestion occurred.",
+                "Pilot 1 and the remainder are collected but not durably merged.",
+            ],
+        }
     return {
         **metadata,
         "pdf_readiness_phase": "pilot1_collected_not_merged",

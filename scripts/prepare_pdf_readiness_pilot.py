@@ -23,6 +23,13 @@ ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_PILOT_ID = "PDF-READINESS-PILOT1-150-2026-07-24"
 DEFAULT_SAMPLE_SIZE = 150
 DEFAULT_NUM_LANES = 3
+TERMINAL_READINESS_STATUSES = {
+    "readiness_checked",
+    "artifact_missing",
+    "hash_mismatch",
+    "artifact_problem",
+    "parser_error",
+}
 
 IDENTITY_FIELDS = [
     "pdf_readiness_id",
@@ -200,10 +207,63 @@ def validate_source_rows(
     return eligible
 
 
+def read_excluded_readiness_rows(
+    raw_paths: list[str],
+) -> tuple[list[dict[str, str]], list[dict[str, str]]]:
+    required = {
+        "pdf_readiness_id",
+        "source_review_id",
+        "candidate_queue_row_id",
+        "readiness_status",
+    }
+    rows: list[dict[str, str]] = []
+    sources: list[dict[str, str]] = []
+    for raw_path in raw_paths:
+        path = Path(raw_path)
+        fieldnames, lane_rows = read_csv(path)
+        missing = sorted(required - set(fieldnames))
+        if missing:
+            raise ValueError(
+                f"readiness exclusion ledger {path} missing fields: {missing}"
+            )
+        if not lane_rows:
+            raise ValueError(f"readiness exclusion ledger is empty: {path}")
+        for row in lane_rows:
+            if any(not row.get(field) for field in required):
+                raise ValueError(
+                    f"readiness exclusion ledger has blank required field: {path}"
+                )
+            if row["readiness_status"] not in TERMINAL_READINESS_STATUSES:
+                raise ValueError(
+                    "readiness exclusion row is not terminal: "
+                    f"{row['pdf_readiness_id']}"
+                )
+        rows.extend(lane_rows)
+        sources.append(
+            {
+                "path": path.as_posix(),
+                "sha256": sha256_file(path),
+                "rows": len(lane_rows),
+            }
+        )
+    for field in (
+        "pdf_readiness_id",
+        "source_review_id",
+        "candidate_queue_row_id",
+    ):
+        values = [row[field] for row in rows]
+        if len(values) != len(set(values)):
+            raise ValueError(
+                f"readiness exclusion ledgers contain duplicate {field}"
+            )
+    return rows, sources
+
+
 def select_diverse(
     eligible: list[dict[str, str]],
     sample_size: int,
     *,
+    pilot_id: str,
     state_diversity: bool,
     include_prior_batches: bool,
 ) -> list[dict[str, str]]:
@@ -227,7 +287,7 @@ def select_diverse(
     ]
     stable_order = {
         row["source_review_id"]: stable_token(
-            DEFAULT_PILOT_ID,
+            pilot_id,
             row["source_review_id"],
             row["candidate_queue_row_id"],
             length=64,
@@ -342,24 +402,83 @@ def create_plan(args: argparse.Namespace) -> dict[str, object]:
     output_dir = Path(args.output_dir)
     if output_dir.exists():
         raise FileExistsError(f"output directory already exists: {output_dir}")
-    if args.sample_size <= 0 or args.num_lanes <= 0:
-        raise ValueError("sample size and lane count must be positive")
+    if args.num_lanes <= 0:
+        raise ValueError("lane count must be positive")
+    if not args.all_remaining and args.sample_size <= 0:
+        raise ValueError("sample size must be positive")
+    if args.all_remaining and not args.include_prior_batches:
+        raise ValueError(
+            "--all-remaining requires --include-prior-batches"
+        )
     fieldnames, rows = read_csv(ledger_path)
     eligible = validate_source_rows(fieldnames, rows)
-    selected = select_diverse(
-        eligible,
-        args.sample_size,
-        state_diversity=args.state_diversity,
-        include_prior_batches=args.include_prior_batches,
+    excluded_rows, exclusion_sources = read_excluded_readiness_rows(
+        list(args.exclude_readiness_ledger_csv or [])
     )
-    if len(selected) != args.sample_size:
+    eligible_by_review_id = {
+        row["source_review_id"]: row for row in eligible
+    }
+    excluded_review_ids = {
+        row["source_review_id"] for row in excluded_rows
+    }
+    unknown_exclusions = sorted(
+        excluded_review_ids - set(eligible_by_review_id)
+    )
+    if unknown_exclusions:
+        raise ValueError(
+            "readiness exclusions are not retained-PDF source-review rows: "
+            f"{unknown_exclusions[:5]}"
+        )
+    excluded_candidate_ids = {
+        row["candidate_queue_row_id"] for row in excluded_rows
+    }
+    for row in excluded_rows:
+        source = eligible_by_review_id[row["source_review_id"]]
+        if source["candidate_queue_row_id"] != row["candidate_queue_row_id"]:
+            raise ValueError(
+                "readiness exclusion candidate identity disagrees with "
+                f"source-review ledger: {row['source_review_id']}"
+            )
+    remaining = [
+        row
+        for row in eligible
+        if row["source_review_id"] not in excluded_review_ids
+    ]
+    if not remaining:
+        raise ValueError("no retained PDF artifacts remain after exclusions")
+    if any(
+        row["candidate_queue_row_id"] in excluded_candidate_ids
+        for row in remaining
+    ):
+        raise ValueError("excluded candidate identity remains selectable")
+    target_size = len(remaining) if args.all_remaining else args.sample_size
+    if args.all_remaining:
+        selected = sorted(
+            remaining,
+            key=lambda row: (
+                row["source_review_pilot_id"],
+                row["priority_for_content_review"],
+                row["state"],
+                row["unit_type"],
+                row["source_review_id"],
+            ),
+        )
+    else:
+        selected = select_diverse(
+            remaining,
+            target_size,
+            pilot_id=args.pilot_id,
+            state_diversity=args.state_diversity,
+            include_prior_batches=args.include_prior_batches,
+        )
+    if len(selected) != target_size:
         raise AssertionError("planner did not produce exact requested sample")
 
     output_dir.mkdir(parents=True)
     lanes = balance_lanes(selected, args.num_lanes)
     expected_sizes = [
-        args.sample_size // args.num_lanes
-        + (1 if index < args.sample_size % args.num_lanes else 0)
+        target_size // args.num_lanes
+        + (1 if index < target_size % args.num_lanes else 0)
         for index in range(args.num_lanes)
     ]
     if [len(lane) for lane in lanes] != expected_sizes:
@@ -390,7 +509,10 @@ def create_plan(args: argparse.Namespace) -> dict[str, object]:
                         "artifact_byte_size_bin"
                     ],
                     "sample_selection_reason": (
-                        "deterministic diversity sample from retained "
+                        "complete retained-PDF remainder after readiness "
+                        "identity exclusion"
+                        if args.all_remaining
+                        else "deterministic diversity sample from retained "
                         "hash-addressed PDF artifacts"
                     ),
                 }
@@ -479,11 +601,16 @@ def create_plan(args: argparse.Namespace) -> dict[str, object]:
         "source_review_ledger_sha256": sha256_file(ledger_path),
         "source_review_ledger_rows": len(rows),
         "eligible_retained_pdf_rows": len(eligible),
+        "excluded_readiness_rows": len(excluded_rows),
+        "excluded_readiness_ledger_sources": exclusion_sources,
+        "eligible_remaining_pdf_rows": len(remaining),
         "selected_rows": len(flattened),
         "num_lanes": len(lanes),
         "lane_rows": [len(lane) for lane in lanes],
         "selection": {
-            "sample_size": args.sample_size,
+            "sample_size": target_size,
+            "all_remaining": bool(args.all_remaining),
+            "balance_lanes": bool(args.balance_lanes),
             "state_diversity": args.state_diversity,
             "include_prior_batches": args.include_prior_batches,
             "retained_pdf_only": True,
@@ -518,6 +645,8 @@ def create_plan(args: argparse.Namespace) -> dict[str, object]:
                 "",
                 f"- source ledger rows: {len(rows)}",
                 f"- eligible retained PDFs: {len(eligible)}",
+                f"- terminal readiness rows excluded: {len(excluded_rows)}",
+                f"- retained PDFs remaining after exclusion: {len(remaining)}",
                 f"- selected rows: {len(flattened)}",
                 f"- lane rows: {' / '.join(map(str, manifest['lane_rows']))}",
                 f"- selected artifact bytes: {manifest['selected_artifact_bytes']}",
@@ -562,8 +691,9 @@ def create_plan(args: argparse.Namespace) -> dict[str, object]:
             [
                 "# Future PDF-Readiness Merge Prompt Stub",
                 "",
-                "Audit all three locked local readiness lanes. Merge exactly "
-                "once only if every lane is completed and identity, hash, "
+                f"Audit all {len(lanes)} locked local readiness lanes. "
+                "Merge exactly once only if every lane is completed and "
+                "identity, hash, "
                 "coverage, terminal-status, no-network, no-OCR, and no-text-"
                 "artifact gates pass. Preserve all technical results and stop "
                 "before ingestion, codify, wage extraction, wage-gap analysis, "
@@ -584,7 +714,23 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--sample-size", type=int, default=DEFAULT_SAMPLE_SIZE
     )
+    parser.add_argument(
+        "--all-remaining",
+        action="store_true",
+        help="Select every eligible retained PDF left after readiness exclusions.",
+    )
     parser.add_argument("--num-lanes", type=int, default=DEFAULT_NUM_LANES)
+    parser.add_argument(
+        "--balance-lanes",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+    )
+    parser.add_argument(
+        "--exclude-readiness-ledger-csv",
+        action="append",
+        default=[],
+        help="Terminal readiness ledger whose source-review IDs are excluded; repeatable.",
+    )
     parser.add_argument(
         "--state-diversity",
         action=argparse.BooleanOptionalAction,

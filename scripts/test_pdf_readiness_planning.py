@@ -153,13 +153,20 @@ class PdfReadinessPlanningTests(unittest.TestCase):
         *,
         sample_size: int = 150,
         num_lanes: int = 3,
+        all_remaining: bool = False,
+        exclusion_paths: list[Path] | None = None,
     ) -> argparse.Namespace:
         return argparse.Namespace(
             source_review_ledger_csv=self.source_ledger.as_posix(),
             output_dir=output.as_posix(),
             pilot_id="PDF-READINESS-TEST",
             sample_size=sample_size,
+            all_remaining=all_remaining,
             num_lanes=num_lanes,
+            balance_lanes=True,
+            exclude_readiness_ledger_csv=[
+                path.as_posix() for path in (exclusion_paths or [])
+            ],
             state_diversity=True,
             include_prior_batches=True,
             plan_only=True,
@@ -213,6 +220,90 @@ class PdfReadinessPlanningTests(unittest.TestCase):
                 "SOURCE-REVIEW-BATCH2-500-2026-07-24",
                 "SOURCE-REVIEW-BATCH3-3X500-2026-07-24",
             },
+        )
+
+    def test_all_remaining_excludes_prior_readiness_and_balances_four_lanes(
+        self,
+    ) -> None:
+        exclusion_paths: list[Path] = []
+        excluded_review_ids: set[str] = set()
+        for lane_index, source_subset in enumerate(
+            (self.source_rows[:4], self.source_rows[4:7]), start=1
+        ):
+            rows = []
+            for source in source_subset:
+                excluded_review_ids.add(source["source_review_id"])
+                rows.append(
+                    {
+                        "pdf_readiness_id": (
+                            f"prior-{source['source_review_id']}"
+                        ),
+                        "source_review_id": source["source_review_id"],
+                        "candidate_queue_row_id": source[
+                            "candidate_queue_row_id"
+                        ],
+                        "readiness_status": "readiness_checked",
+                    }
+                )
+            path = self.base / f"prior_lane_{lane_index}.csv"
+            write_csv(path, rows)
+            exclusion_paths.append(path)
+        manifest = planner.create_plan(
+            self.plan_args(
+                self.base / "all_remaining_plan",
+                num_lanes=4,
+                all_remaining=True,
+                exclusion_paths=exclusion_paths,
+            )
+        )
+        self.assertEqual(manifest["eligible_retained_pdf_rows"], 180)
+        self.assertEqual(manifest["excluded_readiness_rows"], 7)
+        self.assertEqual(manifest["eligible_remaining_pdf_rows"], 173)
+        self.assertEqual(manifest["selected_rows"], 173)
+        self.assertEqual(manifest["lane_rows"], [44, 43, 43, 43])
+        selected: list[dict[str, str]] = []
+        for lane in manifest["lanes"]:
+            _, lane_rows = runner.read_csv(Path(lane["input_csv"]))
+            selected.extend(lane_rows)
+        selected_review_ids = {
+            row["source_review_id"] for row in selected
+        }
+        self.assertFalse(selected_review_ids & excluded_review_ids)
+        self.assertEqual(
+            selected_review_ids | excluded_review_ids,
+            {row["source_review_id"] for row in self.source_rows},
+        )
+        self.assertEqual(
+            len({row["candidate_queue_row_id"] for row in selected}),
+            173,
+        )
+
+    def test_all_remaining_cli_accepts_repeatable_exclusions(self) -> None:
+        args = planner.build_parser().parse_args(
+            [
+                "--source-review-ledger-csv",
+                "source.csv",
+                "--output-dir",
+                "output",
+                "--pilot-id",
+                "PDF-READINESS-REMAINDER",
+                "--all-remaining",
+                "--num-lanes",
+                "4",
+                "--balance-lanes",
+                "--include-prior-batches",
+                "--exclude-readiness-ledger-csv",
+                "lane_1.csv",
+                "--exclude-readiness-ledger-csv",
+                "lane_2.csv",
+                "--plan-only",
+            ]
+        )
+        self.assertTrue(args.all_remaining)
+        self.assertTrue(args.balance_lanes)
+        self.assertEqual(
+            args.exclude_readiness_ledger_csv,
+            ["lane_1.csv", "lane_2.csv"],
         )
 
     def one_input(self, artifact: Path) -> dict[str, str]:

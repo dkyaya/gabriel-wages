@@ -570,6 +570,9 @@ export function VerificationPipeline({
           <p className="eyebrow">PDF readiness</p>
           <h3>
             {pdfReadinessStatus.pdf_readiness_phase ===
+            "full_retained_collected_not_merged"
+              ? "Full retained PDF readiness collected; merge pending"
+              : pdfReadinessStatus.pdf_readiness_phase ===
             "pilot1_collected_not_merged"
               ? "Local PDF-readiness pilot collected; merge pending"
               : "Local PDF-readiness pilot not started"}
@@ -577,6 +580,27 @@ export function VerificationPipeline({
         </div>
         <p>
           {pdfReadinessStatus.pdf_readiness_phase ===
+          "full_retained_collected_not_merged" ? (
+            <>
+              Local technical readiness now covers{" "}
+              {formatNumber(
+                pdfReadinessStatus.full_retained_pdf_readiness_rows_collected,
+              )}
+              {" "}of{" "}
+              {formatNumber(pdfReadinessStatus.retained_pdf_artifacts_available)}
+              {" "}retained PDFs:{" "}
+              {formatNumber(pdfReadinessStatus.text_layer_status_counts?.present)}
+              {" "}have text on every sampled page,{" "}
+              {formatNumber(pdfReadinessStatus.text_layer_status_counts?.partial)}
+              {" "}have partial sampled text, and{" "}
+              {formatNumber(pdfReadinessStatus.text_layer_status_counts?.absent)}
+              {" "}have no sampled text. Every retained PDF yielded a page
+              count; parser, hash, and missing-artifact failures were zero.
+              Pilot 1 and the full remainder are collected but not durably
+              merged. No URL, download, OCR, retained extracted text, wage
+              extraction, ingestion, or codification occurred.
+            </>
+          ) : pdfReadinessStatus.pdf_readiness_phase ===
           "pilot1_collected_not_merged" ? (
             <>
               The bounded local pilot checked{" "}

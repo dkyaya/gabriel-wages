@@ -6,6 +6,34 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-24 (Full retained PDF readiness collected; cumulative merge pending)
+
+**Did**
+- Started from clean tracked `74a843a825c5ef8b2a3b5b272ffbfc56a10d444a`, confirmed all requested ancestry, preserved the unrelated untracked root `package-lock.json`, and verified the completed 150-row Pilot 1 readiness outputs.
+- Extended the offline planner with repeatable terminal readiness-ledger exclusions, `--all-remaining`, and balanced remainder lanes. The synthetic/mock suite now has 13 passing tests.
+- Recomputed 2,124 retained PDFs in the 2,150-row durable source-review layer. Pilot 1 accounts for 150; the exact complement is 1,974 rows and 4,165,691,340 bytes, with zero source-review or candidate overlap.
+- Locked four remainder lanes at 494/494/493/493 rows. All four dry runs passed with zero artifact opens, network, download, OCR, or text-output counters.
+- Ran all four local-only lanes serially using `pypdf 6.13.2`, hash-first checks, at most three sampled pages, 500 counted characters per page, and no text retention. All 1,974 rows are terminal `readiness_checked`; hash, missing, signature, and terminal parser failures are zero.
+- Remainder results are 1,501 text-layer `present`, 201 `partial`, and 272 `absent`. Combined with Pilot 1, the complete 2,124-PDF result is 1,608 present, 220 partial, and 296 absent. Every retained PDF yielded a page count; the cumulative median is 44, p90 is 84, maximum is 463, and total represented pages are 108,028.
+- Re-audited all seven Pilot 1 plus remainder lanes. Pilot 1 has three and the remainder has four `completed_merge_eligible` lanes; both recommend `merge_all_pdf_readiness_lanes`. No durable readiness merge occurred.
+- Updated the dashboard to `full_retained_collected_not_merged` and created a future exactly-once cumulative merge prompt covering both rounds.
+
+**Decisions and why**
+- Recommend one serial cumulative PDF-readiness merge after relay review. Merging Pilot 1 alone would create a misleading partial durable layer; the two disjoint rounds now provide exact 2,124-row retained-PDF coverage.
+- After merge, prioritize bounded content/identity and structured-text evaluation over more bulk downloading. The current technical bottleneck is how to use the 1,828 text-bearing PDFs safely, not source access.
+- Keep the 296 `ocr_later` rows as a planning category only. No OCR is authorized, and sampled-page absence does not prove every page is image-only.
+
+**Surprises/breakage**
+- `pypdf` emitted repair warnings for malformed cross-reference pointers in some retained files, including one noisy object table, but all 2,124 PDFs still produced terminal page-count/text-layer outcomes. Parser failures remained zero.
+- The initial independent secret scan matched its own validation pattern. The scan was scoped to product outputs, the validator was excluded from self-inspection, and the unchanged product artifacts then passed.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Five compiles, 13 offline/mock tests, final audits for all seven lanes, 2,124 exact identity/hash/size/signature/page-count checks, 17 dashboard JSON files/frontend production build, schema validation, 60 ingestion tests, protected/upstream/durable-ledger and corpus hashes, no-text-artifact and secret-indicator checks, and diff checks passed. No URL, network/API/model call, download, OCR, retained extracted text, scout-accounting or routing/triage/source-review-ledger mutation, ingestion, `gabriel.codify`, wage extraction, wage-gap work, causal claim, regression, remote action, or push occurred.
+
+**Next steps**
+1. Review the complete remainder inputs, seven lane results, cumulative distributions, validation, future merge prompt, and lite relay.
+2. If separately authorized, run one serial cumulative PDF-readiness merge of Pilot 1 plus the remainder, requiring exact equality with the 2,124 retained-PDF source-review identities.
+3. After merge, design a bounded content/identity and structured-text evaluation from the 1,828 text-bearing PDFs. Keep OCR, wage extraction, ingestion, codification, and analysis separately authorized.
+
 ## 2026-07-24 (Local PDF-readiness Pilot 1 collected; no durable readiness merge)
 
 **Did**

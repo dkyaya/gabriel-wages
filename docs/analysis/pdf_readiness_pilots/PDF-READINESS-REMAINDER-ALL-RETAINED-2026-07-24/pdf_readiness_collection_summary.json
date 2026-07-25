@@ -1,0 +1,129 @@
+{
+  "schema_version": "1.0.0",
+  "status": "pdf_readiness_full_retained_collected_not_merged",
+  "round_id": "PDF-READINESS-REMAINDER-ALL-RETAINED-2026-07-24",
+  "pilot1_id": "PDF-READINESS-PILOT1-150-2026-07-24",
+  "source_review_rows_available": 2150,
+  "retained_pdf_artifacts_available": 2124,
+  "pilot1_rows": 150,
+  "remainder_rows": 1974,
+  "full_retained_rows_collected": 2124,
+  "remainder_lane_rows": [
+    494,
+    494,
+    493,
+    493
+  ],
+  "remainder_terminal_rows": 1974,
+  "remainder_lane_classification_counts": {
+    "completed_merge_eligible": 4
+  },
+  "remainder_readiness_status_counts": {
+    "readiness_checked": 1974
+  },
+  "remainder_text_layer_status_counts": {
+    "absent": 272,
+    "partial": 201,
+    "present": 1501
+  },
+  "remainder_technical_parseability_rating_counts": {
+    "high": 1501,
+    "low": 272,
+    "medium": 201
+  },
+  "remainder_recommended_next_action_counts": {
+    "ocr_later": 272,
+    "parse_text_layer_later": 1702
+  },
+  "full_readiness_status_counts": {
+    "readiness_checked": 2124
+  },
+  "full_text_layer_status_counts": {
+    "absent": 296,
+    "partial": 220,
+    "present": 1608
+  },
+  "full_technical_parseability_rating_counts": {
+    "high": 1608,
+    "low": 296,
+    "medium": 220
+  },
+  "full_recommended_next_action_counts": {
+    "ocr_later": 296,
+    "parse_text_layer_later": 1828
+  },
+  "remainder_page_count_summary": {
+    "count": 1974,
+    "minimum": 1,
+    "median": 45,
+    "mean": 51.105876,
+    "p90": 84,
+    "maximum": 284,
+    "total_pages": 100883,
+    "buckets": {
+      "1_to_10": 46,
+      "11_to_25": 194,
+      "26_to_50": 960,
+      "51_to_100": 656,
+      "over_100": 118
+    }
+  },
+  "full_page_count_summary": {
+    "count": 2124,
+    "minimum": 1,
+    "median": 44,
+    "mean": 50.86064,
+    "p90": 84,
+    "maximum": 463,
+    "total_pages": 108028,
+    "buckets": {
+      "1_to_10": 86,
+      "11_to_25": 215,
+      "26_to_50": 990,
+      "51_to_100": 701,
+      "over_100": 132
+    }
+  },
+  "remainder_sampled_pages_checked": 5891,
+  "remainder_sampled_pages_with_text": 4860,
+  "remainder_text_chars_sampled_total": 1854740,
+  "full_sampled_pages_checked": 6322,
+  "full_sampled_pages_with_text": 5201,
+  "full_text_chars_sampled_total": 1997021,
+  "parser_library": "pypdf",
+  "parser_version": "6.13.2",
+  "remainder_lane_elapsed_seconds": [
+    23.300783,
+    24.779218,
+    23.558849,
+    24.430431
+  ],
+  "remainder_elapsed_seconds": 96.069281,
+  "full_elapsed_seconds": 104.593873,
+  "hash_failures": 0,
+  "missing_artifacts": 0,
+  "invalid_pdf_signatures": 0,
+  "parser_errors": 0,
+  "urls_opened": 0,
+  "network_calls": 0,
+  "downloads": 0,
+  "redownloads": 0,
+  "ocr_runs": 0,
+  "full_text_artifacts_written": 0,
+  "wage_tables_extracted": 0,
+  "wage_values_extracted": 0,
+  "ingestion_actions": 0,
+  "codify_actions": 0,
+  "durable_readiness_merges": 0,
+  "pilot1_merge_status": "not_started",
+  "remainder_merge_status": "not_started",
+  "merge_recommendation": "merge_both_readiness_rounds_exactly_once_after_relay_review",
+  "next_recommendation": "serial_cumulative_pdf_readiness_merge",
+  "caveats": [
+    "Readiness records technical parseability only.",
+    "Text-layer presence does not prove wage content exists.",
+    "No OCR or extracted text was retained.",
+    "No wage extraction, ingestion, or codification occurred.",
+    "Pilot 1 and remainder are collected but not durably merged."
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-25T03:27:35Z",
+  "generated_at": "2026-07-25T03:48:18Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -36,7 +36,8 @@
     "docs/analysis/source_review_pilots/SOURCE-REVIEW-BATCH2-500-2026-07-24/source_review_batch2_500_collection_summary.json",
     "docs/analysis/source_review_pilots/SOURCE-REVIEW-BATCH3-3X500-2026-07-24/source_review_batch3_3x500_collection_summary.json",
     "docs/analysis/source_review_ledgers/SOURCE-REVIEW-BATCH3-3X500-2026-07-24/source_review_summary.json",
-    "docs/analysis/pdf_readiness_pilots/PDF-READINESS-PILOT1-150-2026-07-24/pdf_readiness_collection_summary.json"
+    "docs/analysis/pdf_readiness_pilots/PDF-READINESS-PILOT1-150-2026-07-24/pdf_readiness_collection_summary.json",
+    "docs/analysis/pdf_readiness_pilots/PDF-READINESS-REMAINDER-ALL-RETAINED-2026-07-24/pdf_readiness_collection_summary.json"
   ],
   "warnings": [],
   "limitations": [
@@ -49,69 +50,71 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "pdf_readiness_phase": "pilot1_collected_not_merged",
+  "pdf_readiness_phase": "full_retained_collected_not_merged",
   "latest_pdf_readiness_pilot_id": "PDF-READINESS-PILOT1-150-2026-07-24",
+  "latest_pdf_readiness_round_id": "PDF-READINESS-REMAINDER-ALL-RETAINED-2026-07-24",
   "pilot_rows_collected": 150,
-  "pilot_terminal_rows": 150,
-  "pilot_lane_rows": [
-    50,
-    50,
-    50
+  "remainder_rows_collected": 1974,
+  "full_retained_pdf_readiness_rows_collected": 2124,
+  "remainder_lane_rows": [
+    494,
+    494,
+    493,
+    493
   ],
   "pdf_readiness_merge_status": "not_started",
   "source_review_rows_available": 2150,
   "retained_pdf_artifacts_available": 2124,
   "readiness_status_counts": {
-    "readiness_checked": 150
+    "readiness_checked": 2124
   },
   "text_layer_status_counts": {
-    "absent": 24,
-    "partial": 19,
-    "present": 107
+    "absent": 296,
+    "partial": 220,
+    "present": 1608
   },
   "technical_parseability_rating_counts": {
-    "high": 107,
-    "low": 24,
-    "medium": 19
+    "high": 1608,
+    "low": 296,
+    "medium": 220
   },
   "recommended_next_action_counts": {
-    "ocr_later": 24,
-    "parse_text_layer_later": 126
+    "ocr_later": 296,
+    "parse_text_layer_later": 1828
   },
   "page_count_summary": {
-    "count": 150,
+    "count": 2124,
     "minimum": 1,
-    "median": 37,
-    "mean": 47.633333,
-    "p90": 98,
+    "median": 44,
+    "mean": 50.86064,
+    "p90": 84,
     "maximum": 463,
-    "total_pages": 7145,
+    "total_pages": 108028,
     "buckets": {
-      "1_to_10": 40,
-      "11_to_25": 21,
-      "26_to_50": 30,
-      "51_to_100": 45,
-      "over_100": 14
+      "1_to_10": 86,
+      "11_to_25": 215,
+      "26_to_50": 990,
+      "51_to_100": 701,
+      "over_100": 132
     }
   },
-  "sampled_pages_checked": 431,
-  "sampled_pages_with_text": 341,
+  "sampled_pages_checked": 6322,
+  "sampled_pages_with_text": 5201,
   "parser_library": "pypdf",
   "parser_version": "6.13.2",
   "parser_error_rows": 0,
   "hash_failure_rows": 0,
   "missing_artifact_rows": 0,
-  "next_recommendation": "larger_local_text_layer_page_count_pass_before_wage_extraction",
+  "next_recommendation": "serial_cumulative_pdf_readiness_merge",
   "ingestion_status": "not_started",
   "codify_status": "not_started",
   "wage_extraction_status": "not_started",
   "wage_gap_analysis_status": "not_started",
-  "summary_source": "docs/analysis/pdf_readiness_pilots/PDF-READINESS-PILOT1-150-2026-07-24/pdf_readiness_collection_summary.json",
+  "summary_source": "docs/analysis/pdf_readiness_pilots/PDF-READINESS-REMAINDER-ALL-RETAINED-2026-07-24/pdf_readiness_collection_summary.json",
   "caveats": [
-    "Readiness only samples already-retained local artifacts.",
-    "The sample is diversity-weighted and is not a prevalence estimate.",
+    "Readiness records technical parseability only.",
     "Text-layer presence does not prove wage data exist.",
     "No OCR, full-text retention, wage extraction, or ingestion occurred.",
-    "Pilot outcomes are collected but not durably merged."
+    "Pilot 1 and the remainder are collected but not durably merged."
   ]
 }

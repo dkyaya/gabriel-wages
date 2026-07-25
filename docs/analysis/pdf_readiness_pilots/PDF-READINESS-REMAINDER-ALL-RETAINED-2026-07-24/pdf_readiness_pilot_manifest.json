@@ -1,0 +1,167 @@
+{
+  "schema_version": "1.0.0",
+  "pilot_id": "PDF-READINESS-REMAINDER-ALL-RETAINED-2026-07-24",
+  "created_at": "2026-07-25T03:40:17Z",
+  "mode": "local_pdf_readiness_plan_only",
+  "source_review_ledger_csv": "docs/analysis/source_review_ledgers/source_review_ledger_cumulative.csv",
+  "source_review_ledger_sha256": "e29d580d42068615611b464e6da40654f336f273fa7c40a7b0717d4894148c9f",
+  "source_review_ledger_rows": 2150,
+  "eligible_retained_pdf_rows": 2124,
+  "excluded_readiness_rows": 150,
+  "excluded_readiness_ledger_sources": [
+    {
+      "path": "tmp/pdf_readiness_pilots/PDF-READINESS-PILOT1-150-2026-07-24/lane_1_local_attempt1/pdf_readiness_ledger.csv",
+      "sha256": "336c10d2524fcb066f34f1d6761d234a99b9933ae804dd06a99dfe8a03e10efb",
+      "rows": 50
+    },
+    {
+      "path": "tmp/pdf_readiness_pilots/PDF-READINESS-PILOT1-150-2026-07-24/lane_2_local_attempt1/pdf_readiness_ledger.csv",
+      "sha256": "91357af01be0203d8c35a9ff0b4168b5ef4582247c63288edfa9568859edd58d",
+      "rows": 50
+    },
+    {
+      "path": "tmp/pdf_readiness_pilots/PDF-READINESS-PILOT1-150-2026-07-24/lane_3_local_attempt1/pdf_readiness_ledger.csv",
+      "sha256": "67c5b67318c8176e6381dd665d3c69775239f6e6fde8f8bb36997d9ca20adc8d",
+      "rows": 50
+    }
+  ],
+  "eligible_remaining_pdf_rows": 1974,
+  "selected_rows": 1974,
+  "num_lanes": 4,
+  "lane_rows": [
+    494,
+    494,
+    493,
+    493
+  ],
+  "selection": {
+    "sample_size": 1974,
+    "all_remaining": true,
+    "balance_lanes": true,
+    "state_diversity": true,
+    "include_prior_batches": true,
+    "retained_pdf_only": true,
+    "network_access": false,
+    "ocr": false,
+    "full_text_saved": false,
+    "wage_extraction": false
+  },
+  "selected_distributions": {
+    "source_review_pilot_id": {
+      "SOURCE-REVIEW-BATCH2-500-2026-07-24": 463,
+      "SOURCE-REVIEW-BATCH3-3X500-2026-07-24": 1393,
+      "SOURCE-REVIEW-PILOT1-150-2026-07-24": 118
+    },
+    "priority_for_content_review": {
+      "p1": 1661,
+      "p2": 313
+    },
+    "unit_type": {
+      "fire": 461,
+      "non_safety": 651,
+      "police": 862
+    },
+    "state": {
+      "AK": 11,
+      "CA": 256,
+      "CO": 11,
+      "CT": 33,
+      "DC": 2,
+      "DE": 7,
+      "FL": 115,
+      "GA": 1,
+      "IA": 29,
+      "ID": 7,
+      "IL": 196,
+      "IN": 7,
+      "KS": 10,
+      "KY": 2,
+      "MA": 70,
+      "MD": 14,
+      "ME": 21,
+      "MI": 110,
+      "MN": 56,
+      "MO": 13,
+      "MT": 20,
+      "NE": 14,
+      "NH": 20,
+      "NJ": 25,
+      "NM": 11,
+      "NV": 19,
+      "NY": 28,
+      "OH": 534,
+      "OK": 13,
+      "OR": 66,
+      "PA": 27,
+      "RI": 10,
+      "SD": 7,
+      "TX": 36,
+      "VA": 7,
+      "VT": 3,
+      "WA": 102,
+      "WI": 61
+    },
+    "source_officialness_rating": {
+      "official_municipal": 737,
+      "official_state_repository": 513,
+      "official_union": 35,
+      "uncertain": 633,
+      "unknown": 56
+    },
+    "artifact_byte_size_bin": {
+      "large_2_to_5_mib": 463,
+      "medium_512_kib_to_2_mib": 980,
+      "small_le_512_kib": 341,
+      "very_large_gt_5_mib": 190
+    },
+    "candidate_source_type": {
+      "cba": 1928,
+      "memorandum_or_settlement": 6,
+      "ordinance_or_policy": 5,
+      "wage_schedule_or_compensation_plan": 35
+    },
+    "document_type_rating": {
+      "cba_candidate": 1928,
+      "unknown": 46
+    }
+  },
+  "selected_artifact_bytes": 4165691340,
+  "lanes": [
+    {
+      "lane_id": "lane_1",
+      "expected_rows": 494,
+      "input_csv": "docs/analysis/pdf_readiness_pilots/PDF-READINESS-REMAINDER-ALL-RETAINED-2026-07-24/lane_1_pdf_readiness_input.csv",
+      "input_sha256": "299e7effbeae6ed59f1906ea94f6a77245ed4c1e5418cb30abd5ffd82950c23b",
+      "input_audit": "docs/analysis/pdf_readiness_pilots/PDF-READINESS-REMAINDER-ALL-RETAINED-2026-07-24/lane_1_input_audit.md",
+      "dry_run_output_dir": "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages/tmp/pdf_readiness_pilots/PDF-READINESS-REMAINDER-ALL-RETAINED-2026-07-24/lane_1_dry_run",
+      "future_local_output_dir": "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages/tmp/pdf_readiness_pilots/PDF-READINESS-REMAINDER-ALL-RETAINED-2026-07-24/lane_1_local_attempt1"
+    },
+    {
+      "lane_id": "lane_2",
+      "expected_rows": 494,
+      "input_csv": "docs/analysis/pdf_readiness_pilots/PDF-READINESS-REMAINDER-ALL-RETAINED-2026-07-24/lane_2_pdf_readiness_input.csv",
+      "input_sha256": "8b1460125963214f46d0c9a52d401d9ab9c4d0ff1dcd0287501d2efb5c93aa6d",
+      "input_audit": "docs/analysis/pdf_readiness_pilots/PDF-READINESS-REMAINDER-ALL-RETAINED-2026-07-24/lane_2_input_audit.md",
+      "dry_run_output_dir": "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages/tmp/pdf_readiness_pilots/PDF-READINESS-REMAINDER-ALL-RETAINED-2026-07-24/lane_2_dry_run",
+      "future_local_output_dir": "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages/tmp/pdf_readiness_pilots/PDF-READINESS-REMAINDER-ALL-RETAINED-2026-07-24/lane_2_local_attempt1"
+    },
+    {
+      "lane_id": "lane_3",
+      "expected_rows": 493,
+      "input_csv": "docs/analysis/pdf_readiness_pilots/PDF-READINESS-REMAINDER-ALL-RETAINED-2026-07-24/lane_3_pdf_readiness_input.csv",
+      "input_sha256": "46cdc9bd67fd56bf1a360d8099ce73e14d758f72cf839a55c8f5056b7b30e05c",
+      "input_audit": "docs/analysis/pdf_readiness_pilots/PDF-READINESS-REMAINDER-ALL-RETAINED-2026-07-24/lane_3_input_audit.md",
+      "dry_run_output_dir": "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages/tmp/pdf_readiness_pilots/PDF-READINESS-REMAINDER-ALL-RETAINED-2026-07-24/lane_3_dry_run",
+      "future_local_output_dir": "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages/tmp/pdf_readiness_pilots/PDF-READINESS-REMAINDER-ALL-RETAINED-2026-07-24/lane_3_local_attempt1"
+    },
+    {
+      "lane_id": "lane_4",
+      "expected_rows": 493,
+      "input_csv": "docs/analysis/pdf_readiness_pilots/PDF-READINESS-REMAINDER-ALL-RETAINED-2026-07-24/lane_4_pdf_readiness_input.csv",
+      "input_sha256": "40c662efebbed31b6ccce8e5c9fd7ff4d8038a697033a06a76af7fd77065216d",
+      "input_audit": "docs/analysis/pdf_readiness_pilots/PDF-READINESS-REMAINDER-ALL-RETAINED-2026-07-24/lane_4_input_audit.md",
+      "dry_run_output_dir": "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages/tmp/pdf_readiness_pilots/PDF-READINESS-REMAINDER-ALL-RETAINED-2026-07-24/lane_4_dry_run",
+      "future_local_output_dir": "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages/tmp/pdf_readiness_pilots/PDF-READINESS-REMAINDER-ALL-RETAINED-2026-07-24/lane_4_local_attempt1"
+    }
+  ]
+}
