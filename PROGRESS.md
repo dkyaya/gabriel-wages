@@ -6,6 +6,34 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-24 (Source-review Batch 3 3×500 live collection completed; no merge)
+
+**Did**
+- Started from clean tracked `12b3f109f570068e61e899b23f5359ddcbd61c78`, confirmed all requested ancestry, preserved the unrelated untracked root `package-lock.json`, and verified that durable Pilot 1 plus Batch 2 source review remained 650 unique rows.
+- Extended the offline planner to select up to 1,500 download-allowed rows in p1→p2→p3 order, support three balanced lanes and document under-capacity plans. Two new regression tests bring the offline/mock suite to 28 passing tests.
+- Locked 1,500 unique identities with no prior-review overlap: all 1,097 remaining default-eligible p1 rows plus 403 p2 rows and no p3 rows. The lanes are 500/500/500 with SHA-256 `fab5d2666465460fbad18f3039b614e0793ba8179673ae55832f0302627af774`, `54d149db261956c45c9539b077498c50a6644d02aa0f05da7038f3d3c4422c9f`, and `aa4b1afa17daf2d2eabd38d0b012df8fe864671dc52a7b20f62b8801020a4991`.
+- Confirmed 135.7 GiB free and projected roughly 3.0 GB of retained content. All three dry-run lanes passed with 1,500 terminal-planned rows and zero access, download, parse, OCR or artifact counters.
+- Ran exactly the three guarded live lanes with verifier-compatible HTTPX, concurrency four per lane, 30/8/20-second limits, five redirects, 25 MiB, proxy inheritance off and samples off. All scripts exited zero; no fourth lane or retry ran.
+- Collected 1,480 hashed lane-local PDFs, 16 timeout outcomes and four forbidden outcomes, with zero connection errors. Retained PDF bytes are 3,189,614,089; response metadata add 1,624,454 bytes; maximum PDF size is 10,470,269 bytes.
+- All three lanes audit as `completed_merge_eligible`; artifact integrity passed and the recommendation is `merge_all_source_review_lanes`. The cumulative durable source-review ledger remains unchanged at 650 rows.
+- Updated dashboard/status to `batch3_3x500_collected_not_merged` while keeping downstream ingestion, codification and wage work not started.
+
+**Decisions and why**
+- Select every remaining default-eligible p1 row before filling with p2. This exhausts the p1 planner pool without promoting defer, duplicate, oversized, blocked or excluded candidates.
+- Merge Batch 3 serially before any further download scale. After merge, compare the remaining 726 default-eligible p2 rows against a bounded text-layer/page-count evaluation; speed alone is not evidence that more downloads are the best next phase.
+- Keep all ratings preliminary. The access layer did not parse source content, so relevance, CBA identity, employer/unit match, extraction readiness and wage/mechanism content are not final findings.
+
+**Surprises/breakage**
+- Batch 3 retained 3.19 GB total, about 5.4% above the preflight per-row projection but well within available disk headroom. Yield remained high at 98.67%; the only non-download outcomes were 16 timeouts and four forbidden responses.
+- No connection errors returned at 1,500-row scale. No planning, dry-run, live, artifact or validation gate failed.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Six compiles, 28 offline/mock tests, final 1,500-row lane audit, exact identity/prior-exclusion checks, 1,480 PDF hash/size/locality/signature checks, 1,500 metadata safety checks, dashboard JSON/frontend production build, schema validation, 60 ingestion tests, immutable protected/durable-ledger hashes and diff checks passed. No fourth lane, retry, durable Batch 3 merge, scout-accounting or routing/triage/source-review-ledger mutation, content sample, PDF parse, OCR, ingestion, `gabriel.codify`, wage extraction, wage-gap work, causal claim, regression, remote action or push occurred.
+
+**Next steps**
+1. Review the locked plan, 1,480 retained artifacts, 20 bounded non-download outcomes, audit, validation and lite relay.
+2. If separately authorized, serially merge only the three Batch 3 `lane_*_live_attempt1` ledgers, preserving the 650 durable Pilot 1 plus Batch 2 rows cumulatively.
+3. After merge, decide between the remaining 726 default-eligible p2 downloads and a smaller text-layer/page-count evaluation. Keep OCR, substantive parsing, ingestion, codification and wage analysis separately authorized.
+
 ## 2026-07-24 (Source-review Batch 2 durably merged; 650 cumulative rows)
 
 **Did**

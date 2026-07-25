@@ -315,18 +315,40 @@ def eligible(
     exclude_oversized: bool,
     exclude_blocked: bool,
 ) -> bool:
-    if priority_scope != "p1_download_allowed":
-        raise ValueError("Only --priority-scope p1_download_allowed is supported")
+    supported_scopes = {
+        "p1_download_allowed",
+        "p1_then_p2_download_allowed",
+    }
+    if priority_scope not in supported_scopes:
+        raise ValueError(
+            "Supported --priority-scope values are "
+            "p1_download_allowed and p1_then_p2_download_allowed"
+        )
+    priority = row.get("priority_for_content_review")
+    expected_status = {
+        "p1": "high_priority_content_review",
+        "p2": "medium_priority_content_review",
+        "p3": "low_priority_content_review",
+    }
+    permitted_priorities = (
+        {"p1"}
+        if priority_scope == "p1_download_allowed"
+        else {"p1", "p2", "p3"}
+    )
     if (
-        row.get("priority_for_content_review") != "p1"
+        priority not in permitted_priorities
         or row.get("recommended_next_action")
         != "content_review_download_allowed_later"
-        or row.get("triage_status") != "high_priority_content_review"
+        or row.get("triage_status") != expected_status.get(priority)
     ):
         return False
     if row.get("candidate_status_before_verification") in LOWER_DISPOSITIONS:
         return False
-    if source_type_scope == "cba_first" and row.get("candidate_source_type") != "cba":
+    if (
+        priority_scope == "p1_download_allowed"
+        and source_type_scope == "cba_first"
+        and row.get("candidate_source_type") != "cba"
+    ):
         return False
     if source_type_scope not in {"cba_first", "all"}:
         raise ValueError(
@@ -443,57 +465,105 @@ def select_state_diverse(
     return selected
 
 
+def order_pool(
+    pool: list[dict[str, str]],
+    *,
+    state_diversity: bool,
+    source_type_scope: str,
+) -> list[dict[str, str]]:
+    if source_type_scope not in {"cba_first", "all"}:
+        raise ValueError(
+            "Only --source-type-scope cba_first or all is supported"
+        )
+
+    def ordered(rows: list[dict[str, str]]) -> list[dict[str, str]]:
+        if state_diversity:
+            return select_state_diverse(rows, len(rows))
+        return sorted(rows, key=lambda row: (row_sort_key(row), row["state"]))
+
+    if source_type_scope == "all":
+        return ordered(pool)
+    cba_rows = [
+        row for row in pool if row.get("candidate_source_type") == "cba"
+    ]
+    other_rows = [
+        row for row in pool if row.get("candidate_source_type") != "cba"
+    ]
+    return ordered(cba_rows) + ordered(other_rows)
+
+
+def select_priority_ordered(
+    pool: list[dict[str, str]],
+    *,
+    pilot_size: int,
+    state_diversity: bool,
+    source_type_scope: str,
+) -> list[dict[str, str]]:
+    selected: list[dict[str, str]] = []
+    for priority in ("p1", "p2", "p3"):
+        priority_rows = [
+            row
+            for row in pool
+            if row.get("priority_for_content_review") == priority
+        ]
+        for row in order_pool(
+            priority_rows,
+            state_diversity=state_diversity,
+            source_type_scope=source_type_scope,
+        ):
+            if len(selected) == pilot_size:
+                return selected
+            selected.append(row)
+    return selected
+
+
 def build_rows(
     selected: list[dict[str, str]], pilot_id: str, num_lanes: int
 ) -> list[list[dict[str, object]]]:
-    lane_sizes = [
-        len(selected) // num_lanes + (1 if index < len(selected) % num_lanes else 0)
-        for index in range(num_lanes)
-    ]
     lanes: list[list[dict[str, object]]] = [[] for _ in range(num_lanes)]
-    cursor = 0
-    for lane_index, lane_size in enumerate(lane_sizes):
-        for source in selected[cursor : cursor + lane_size]:
-            row: dict[str, object] = {
-                field: source.get(field, "") for field in OUTPUT_FIELDS
+    for selection_index, source in enumerate(selected):
+        lane_index = selection_index % num_lanes
+        priority = source.get("priority_for_content_review", "unknown")
+        source_type = source.get("candidate_source_type", "unknown")
+        row: dict[str, object] = {
+            field: source.get(field, "") for field in OUTPUT_FIELDS
+        }
+        row.update(
+            {
+                "source_review_id": stable_review_id(pilot_id, source),
+                "pilot_selection_rank": str(selection_index + 1),
+                "source_review_lane_id": f"lane_{lane_index + 1}",
+                "source_review_stage": "planned_not_reviewed",
+                "pilot_selection_reason": (
+                    f"{priority} download-allowed {source_type} candidate; "
+                    "selected from committed metadata only"
+                ),
+                "source_review_status": "planned_not_reviewed",
+                "source_review_status_detail": (
+                    "offline pilot planning only; source content not accessed"
+                ),
+                "url_access_status": "not_started",
+                "download_status": "not_started",
+                "content_type_observed": "unknown",
+                "text_layer_status": "unknown",
+                "source_officialness_rating": "unknown",
+                "source_relevance_rating": "unknown",
+                "municipality_match_rating": "unknown",
+                "employer_match_rating": "unknown",
+                "bargaining_unit_match_rating": "unknown",
+                "safety_unit_match_signal": "unknown",
+                "non_safety_unit_match_signal": "unknown",
+                "document_type_rating": "unknown",
+                "wage_table_signal": "unknown",
+                "wage_growth_signal": "unknown",
+                "mechanism_language_signal": "unknown",
+                "extraction_readiness_rating": "unknown",
+                "extraction_mode_recommended": "manual_review",
+                "duplicate_canonical_decision": "not_reviewed",
+                **{field: "0" for field in SAFETY_COUNTER_FIELDS},
             }
-            row.update(
-                {
-                    "source_review_id": stable_review_id(pilot_id, source),
-                    "pilot_selection_rank": str(cursor + 1),
-                    "source_review_lane_id": f"lane_{lane_index + 1}",
-                    "source_review_stage": "planned_not_reviewed",
-                    "pilot_selection_reason": (
-                        "p1 scheduled CBA candidate with reachable PDF/document "
-                        "routing; selected from committed metadata only"
-                    ),
-                    "source_review_status": "planned_not_reviewed",
-                    "source_review_status_detail": (
-                        "offline pilot planning only; source content not accessed"
-                    ),
-                    "url_access_status": "not_started",
-                    "download_status": "not_started",
-                    "content_type_observed": "unknown",
-                    "text_layer_status": "unknown",
-                    "source_officialness_rating": "unknown",
-                    "source_relevance_rating": "unknown",
-                    "municipality_match_rating": "unknown",
-                    "employer_match_rating": "unknown",
-                    "bargaining_unit_match_rating": "unknown",
-                    "safety_unit_match_signal": "unknown",
-                    "non_safety_unit_match_signal": "unknown",
-                    "document_type_rating": "unknown",
-                    "wage_table_signal": "unknown",
-                    "wage_growth_signal": "unknown",
-                    "mechanism_language_signal": "unknown",
-                    "extraction_readiness_rating": "unknown",
-                    "extraction_mode_recommended": "manual_review",
-                    "duplicate_canonical_decision": "not_reviewed",
-                    **{field: "0" for field in SAFETY_COUNTER_FIELDS},
-                }
-            )
-            lanes[lane_index].append(row)
-            cursor += 1
+        )
+        lanes[lane_index].append(row)
     return lanes
 
 
@@ -506,12 +576,22 @@ def create_plan(args: argparse.Namespace) -> dict[str, object]:
     triage_path = Path(args.triage_ledger_csv)
     queue_path = Path(args.candidate_queue_csv)
     output_dir = Path(args.output_dir)
-    if not 100 <= args.pilot_size <= 1000:
-        raise ValueError("--pilot-size must be between 100 and 1000")
+    if not 100 <= args.pilot_size <= 1500:
+        raise ValueError("--pilot-size must be between 100 and 1500")
     if args.num_lanes < 1 or args.num_lanes > args.pilot_size:
         raise ValueError("--num-lanes must be positive and no greater than pilot size")
     if not getattr(args, "balance_lanes", True):
         raise ValueError("Only balanced source-review lane planning is supported")
+    rows_per_lane = getattr(args, "rows_per_lane", None)
+    if rows_per_lane is not None and rows_per_lane < 1:
+        raise ValueError("--rows-per-lane must be positive")
+    if (
+        rows_per_lane is not None
+        and args.pilot_size > rows_per_lane * args.num_lanes
+    ):
+        raise ValueError(
+            "--pilot-size exceeds --rows-per-lane × --num-lanes"
+        )
     triage_rows = read_csv(triage_path)
     queue_rows = read_csv(queue_path)
     validate_inputs(triage_rows, queue_rows)
@@ -542,18 +622,25 @@ def create_plan(args: argparse.Namespace) -> dict[str, object]:
         for row in eligible_before_prior_exclusion
         if row["candidate_queue_row_id"] not in prior_candidate_ids
     ]
-    if len(pool) < args.pilot_size:
+    if (
+        len(pool) < args.pilot_size
+        and args.priority_scope == "p1_download_allowed"
+    ):
         raise ValueError(
             f"Eligible pool has {len(pool)} rows, fewer than requested {args.pilot_size}"
         )
-    selected = (
-        select_state_diverse(pool, args.pilot_size)
-        if args.state_diversity
-        else sorted(pool, key=lambda row: (row_sort_key(row), row["state"]))[
-            : args.pilot_size
-        ]
+    selection_size = min(args.pilot_size, len(pool))
+    selected = select_priority_ordered(
+        pool,
+        pilot_size=selection_size,
+        state_diversity=args.state_diversity,
+        source_type_scope=args.source_type_scope,
     )
     lane_rows = build_rows(selected, args.pilot_id, args.num_lanes)
+    if rows_per_lane is not None and any(
+        len(rows) > rows_per_lane for rows in lane_rows
+    ):
+        raise ValueError("Balanced plan exceeds --rows-per-lane")
     review_ids = [
         str(row["source_review_id"]) for rows in lane_rows for row in rows
     ]
@@ -628,6 +715,19 @@ This is an offline input audit. No URL or source content was accessed.
             == "content_review_download_allowed_later"
             for row in triage_rows
         ),
+        "download_allowed_rows_by_priority": counts(
+            [
+                row
+                for row in triage_rows
+                if row.get("recommended_next_action")
+                == "content_review_download_allowed_later"
+            ],
+            "priority_for_content_review",
+        ),
+        "eligible_pool_by_priority_before_prior_review_exclusion": counts(
+            eligible_before_prior_exclusion,
+            "priority_for_content_review",
+        ),
         "eligible_pool_rows_before_prior_review_exclusion": len(
             eligible_before_prior_exclusion
         ),
@@ -641,9 +741,14 @@ This is an offline input audit. No URL or source content was accessed.
             len(eligible_before_prior_exclusion) - len(pool)
         ),
         "eligible_pool_rows_after_exclusions": len(pool),
+        "eligible_pool_by_priority_after_exclusions": counts(
+            pool, "priority_for_content_review"
+        ),
         "selected_rows": len(selected_flat),
         "pilot_size": args.pilot_size,
+        "selection_under_capacity": len(selected_flat) < args.pilot_size,
         "num_lanes": args.num_lanes,
+        "rows_per_lane": rows_per_lane,
         "priority_scope": args.priority_scope,
         "state_diversity": args.state_diversity,
         "source_type_scope": args.source_type_scope,
@@ -658,6 +763,9 @@ This is an offline input audit. No URL or source content was accessed.
             set(review_ids) & prior_review_ids
         ),
         "selected_state_distribution": counts(selected_flat, "state"),
+        "selected_priority_distribution": counts(
+            selected_flat, "priority_for_content_review"
+        ),
         "selected_source_type_distribution": counts(
             selected_flat, "candidate_source_type"
         ),
@@ -700,7 +808,10 @@ Pilot: `{args.pilot_id}`
 - Eligible before prior-review exclusion: {len(eligible_before_prior_exclusion):,}
 - Prior source-review candidate identities excluded: {len(prior_candidate_ids):,}
 - Eligible after duplicate/oversized/blocked filters: {len(pool):,}
+- Eligible priority split: {json.dumps(manifest['eligible_pool_by_priority_after_exclusions'], sort_keys=True)}
 - Selected: {len(selected_flat):,}
+- Selected priority split: {json.dumps(manifest['selected_priority_distribution'], sort_keys=True)}
+- Under requested capacity: {manifest['selection_under_capacity']}
 - Lanes: {' / '.join(str(len(rows)) for rows in lane_rows)}
 - Unique source-review IDs: {len(set(review_ids)):,}
 - Unique candidate-queue IDs: {len(set(queue_ids)):,}
@@ -761,6 +872,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--pilot-id", default=DEFAULT_PILOT_ID)
     parser.add_argument("--pilot-size", type=int, default=150)
     parser.add_argument("--num-lanes", type=int, default=2)
+    parser.add_argument("--rows-per-lane", type=int)
     parser.add_argument(
         "--priority-scope", default="p1_download_allowed"
     )

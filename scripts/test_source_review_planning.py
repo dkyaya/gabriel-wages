@@ -157,6 +157,7 @@ class SourceReviewPlanningTests(unittest.TestCase):
         triage_status: str = "high_priority_content_review",
         priority_for_content_review: str = "p1",
         candidate_status_before_verification: str = "scheduled",
+        candidate_source_type: str = "cba",
     ) -> dict[str, str]:
         return {
             "triage_id": f"triage-{queue_id}",
@@ -171,7 +172,7 @@ class SourceReviewPlanningTests(unittest.TestCase):
             "final_url": f"https://example.invalid/{queue_id}.pdf",
             "source_locator": f"https://example.invalid/{queue_id}.pdf",
             "candidate_title": f"Candidate {queue_id}",
-            "candidate_source_type": "cba",
+            "candidate_source_type": candidate_source_type,
             "candidate_status_before_verification": candidate_status_before_verification,
             "verification_status": verification_status,
             "content_type": "application/pdf",
@@ -466,6 +467,144 @@ class SourceReviewPlanningTests(unittest.TestCase):
         self.assertFalse(
             {row["source_review_id"] for row in selected}
             & prior_review_ids
+        )
+
+    def test_planner_selects_1500_in_p1_then_p2_then_p3_order(self) -> None:
+        priorities = [
+            ("p1", "high_priority_content_review", 1150),
+            ("p2", "medium_priority_content_review", 500),
+            ("p3", "low_priority_content_review", 100),
+        ]
+        rows: list[dict[str, str]] = []
+        index = 0
+        for priority, triage_status, total in priorities:
+            for priority_index in range(total):
+                source_type = (
+                    "cba"
+                    if priority != "p2" or priority_index < 250
+                    else "wage_schedule_or_compensation_plan"
+                )
+                rows.append(
+                    self.row(
+                        f"batch3-{index:04d}",
+                        state=f"S{index % 20:02d}",
+                        municipality_id=f"m-{index:04d}",
+                        priority_for_content_review=priority,
+                        triage_status=triage_status,
+                        candidate_source_type=source_type,
+                    )
+                )
+                index += 1
+        triage = self.base / "batch3-triage.csv"
+        queue = self.base / "batch3-queue.csv"
+        prior = self.base / "batch3-prior.csv"
+        write_csv(triage, rows)
+        write_csv(
+            queue,
+            [{"queue_id": row["candidate_queue_row_id"]} for row in rows],
+        )
+        prior_rows = [
+            {
+                "source_review_id": f"prior-review-{index:04d}",
+                "candidate_queue_row_id": rows[index][
+                    "candidate_queue_row_id"
+                ],
+            }
+            for index in range(100)
+        ]
+        write_csv(prior, prior_rows)
+        args = self.plan_args(self.base / "batch3-plan")
+        args.triage_ledger_csv = triage.as_posix()
+        args.candidate_queue_csv = queue.as_posix()
+        args.pilot_id = "SOURCE-REVIEW-BATCH3-3X500-TEST"
+        args.pilot_size = 1500
+        args.num_lanes = 3
+        args.rows_per_lane = 500
+        args.priority_scope = "p1_then_p2_download_allowed"
+        args.exclude_source_review_ledger_csv = [prior.as_posix()]
+        manifest = planner.create_plan(args)
+        self.assertEqual(manifest["selected_rows"], 1500)
+        self.assertFalse(manifest["selection_under_capacity"])
+        self.assertEqual(
+            manifest["selected_priority_distribution"],
+            {"p1": 1050, "p2": 450},
+        )
+        self.assertEqual(
+            [lane["expected_rows"] for lane in manifest["lanes"]],
+            [500, 500, 500],
+        )
+        selected = sorted(
+            [
+                row
+                for lane in manifest["lanes"]
+                for row in planner.read_csv(Path(lane["input_csv"]))
+            ],
+            key=lambda row: int(row["pilot_selection_rank"]),
+        )
+        self.assertTrue(
+            all(
+                row["priority_for_content_review"] == "p1"
+                for row in selected[:1050]
+            )
+        )
+        self.assertTrue(
+            all(
+                row["priority_for_content_review"] == "p2"
+                for row in selected[1050:]
+            )
+        )
+        p2_rows = selected[1050:]
+        self.assertTrue(
+            all(
+                row["candidate_source_type"] == "cba"
+                for row in p2_rows[:250]
+            )
+        )
+        self.assertFalse(
+            {row["candidate_queue_row_id"] for row in selected}
+            & {
+                row["candidate_queue_row_id"]
+                for row in prior_rows
+            }
+        )
+
+    def test_priority_ordered_planner_selects_all_when_under_capacity(
+        self,
+    ) -> None:
+        rows = [
+            self.row(
+                f"under-{index:04d}",
+                priority_for_content_review=(
+                    "p1" if index < 200 else "p2"
+                ),
+                triage_status=(
+                    "high_priority_content_review"
+                    if index < 200
+                    else "medium_priority_content_review"
+                ),
+            )
+            for index in range(450)
+        ]
+        triage = self.base / "under-triage.csv"
+        queue = self.base / "under-queue.csv"
+        write_csv(triage, rows)
+        write_csv(
+            queue,
+            [{"queue_id": row["candidate_queue_row_id"]} for row in rows],
+        )
+        args = self.plan_args(self.base / "under-plan")
+        args.triage_ledger_csv = triage.as_posix()
+        args.candidate_queue_csv = queue.as_posix()
+        args.pilot_size = 1500
+        args.num_lanes = 3
+        args.rows_per_lane = 500
+        args.priority_scope = "p1_then_p2_download_allowed"
+        manifest = planner.create_plan(args)
+        self.assertEqual(manifest["selected_rows"], 450)
+        self.assertTrue(manifest["selection_under_capacity"])
+        self.assertEqual(
+            [lane["expected_rows"] for lane in manifest["lanes"]],
+            [150, 150, 150],
         )
 
     def test_dry_run_opens_no_network_and_writes_schema(self) -> None:

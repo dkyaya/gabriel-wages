@@ -6,6 +6,44 @@ Last updated: `2026-07-24`
 
 ---
 
+## 2026-07-24 — Source-review Batch 3 collected; serial merge pending
+
+### Current State
+
+- **Start:** work began at clean tracked `12b3f109f570068e61e899b23f5359ddcbd61c78`; requested ancestry and the 650-row cumulative durable source-review ledger passed. The unrelated untracked root `package-lock.json` remains untouched.
+- **Readiness:** 135.7 GiB was free on the repository volume. Existing Pilot 1 plus Batch 2 artifacts implied about 3.025 GB for 1,500 new rows, so storage was adequate.
+- **Plan:** [the Batch 3 plan](source_review_batch3_3x500_input_plan_2026-07-24.md) locks 1,500 unique, prior-disjoint download-allowed identities: all 1,097 remaining default-eligible p1 rows followed by 403 p2 rows and no p3 rows. Lanes are 500/500/500 with SHA-256 `fab5d2666465460fbad18f3039b614e0793ba8179673ae55832f0302627af774`, `54d149db261956c45c9539b077498c50a6644d02aa0f05da7038f3d3c4422c9f`, and `aa4b1afa17daf2d2eabd38d0b012df8fe864671dc52a7b20f62b8801020a4991`.
+- **Dry gate:** all three lanes are `dry_run_passed`; 1,500 rows are terminal-planned and all source-access, download, artifact, parse and OCR counters are zero.
+- **Live scope:** exactly the locked three lanes ran with verifier-compatible HTTPX, concurrency four per lane, 30/8/20-second timeouts, five redirects, 25 MiB, proxy inheritance off and samples off. Each preceding lane established checkpoints before the next launched. All scripts exited zero; no fourth lane or retry ran.
+- **Outcomes:** [the result review](source_review_batch3_3x500_live_collection_result_review_2026-07-24.md) records 1,480 `reviewed_metadata_and_artifact_saved`, 16 `download_timeout` and four `download_forbidden`, with zero connection errors. The 1,480 PDFs total 3,189,614,089 bytes; all recorded hashes and sizes match and the maximum is 10,470,269 bytes.
+- **Ratings:** preliminary officialness is state repository 471, municipal 468, uncertain 451, unknown 87 and union 23. Relevance and municipality/employer/unit match are `possible` for 1,480 and `unknown` for 20. Document type is `cba_candidate` for 1,359 and unknown for 141. Technical extraction readiness is medium for 1,480 and not-ready for 20. Wage-table, wage-growth and mechanism-language signals remain unknown for every row.
+- **Audit:** all three lanes are `completed_merge_eligible`, artifact integrity passes, and recommendation is `merge_all_source_review_lanes`. [No durable Batch 3 merge occurred](source_review_batch3_3x500_no_merge_note_2026-07-24.md); the durable cumulative source-review ledger remains 650 rows.
+- **Dashboard:** `source_review_phase = batch3_3x500_collected_not_merged`; Batch 3 has 1,500 collected rows and merge `not_started`, while cumulative merged rows remain 650.
+- **Boundary:** no broader URL verification, scout accounting, durable routing/triage/source-review-ledger mutation, content sample, PDF parse, OCR, ingestion, codification, wage calculation/claim, causal claim, regression, remote inspection or push occurred.
+- **Validation:** [the validation record](source_review_batch3_3x500_live_collection_validation_2026-07-24.md) reports six compiles, 28 offline/mock tests, final audit, exact identity/prior-exclusion checks, 1,480 PDF hash/size/locality/signature checks, 1,500 metadata safety checks, dashboard JSON/frontend build, schema and 60 ingestion tests, protected/durable-ledger hashes and diff checks passed.
+
+### Interpretation
+
+The HTTPX artifact-access layer remained stable at 1,500 rows: artifact yield
+is 98.67%, connection errors remain zero and all artifact-integrity gates
+pass. These are preliminary access and artifact-metadata signals, not final
+source ratings. No PDF was parsed or OCRed, so the batch does not establish
+content relevance, document type, employer/unit match, wage content or
+analysis-ready evidence.
+
+After Batch 3, 726 planner-default eligible download-allowed p2 identities
+remain; p1 is exhausted and no p3 row is download-allowed. This remaining
+count is planning context only because Batch 3 is not yet durable.
+
+### Next Move
+
+After relay review and separate authorization, serially merge only the three
+Batch 3 `lane_*_live_attempt1` ledgers while preserving the current 650 rows
+in the cumulative durable layer. If that merge passes, decide whether to
+finish the remaining 726 default-eligible p2 downloads or first run a small
+bounded text-layer/page-count evaluation. Do not parse or OCR PDFs, ingest,
+codify, extract wages or analyze wage gaps as part of the merge.
+
 ## 2026-07-24 — Source-review Batch 2 is durably merged; 650 cumulative rows
 
 ### Current State

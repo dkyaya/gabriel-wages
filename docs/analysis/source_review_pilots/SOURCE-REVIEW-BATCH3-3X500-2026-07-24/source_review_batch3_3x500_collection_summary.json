@@ -1,0 +1,205 @@
+{
+  "schema_version": "1.0.0",
+  "status": "batch3_3x500_collected_not_merged",
+  "batch_id": "SOURCE-REVIEW-BATCH3-3X500-2026-07-24",
+  "planned_rows": 1500,
+  "ledger_rows": 1500,
+  "terminal_rows": 1500,
+  "unique_source_review_ids": 1500,
+  "unique_candidate_queue_row_ids": 1500,
+  "prior_candidate_overlap": 0,
+  "prior_source_review_id_overlap": 0,
+  "lane_count": 3,
+  "lane_rows": {
+    "lane_1": 500,
+    "lane_2": 500,
+    "lane_3": 500
+  },
+  "lane_input_sha256": {
+    "lane_1": "fab5d2666465460fbad18f3039b614e0793ba8179673ae55832f0302627af774",
+    "lane_2": "54d149db261956c45c9539b077498c50a6644d02aa0f05da7038f3d3c4422c9f",
+    "lane_3": "aa4b1afa17daf2d2eabd38d0b012df8fe864671dc52a7b20f62b8801020a4991"
+  },
+  "selected_priority_distribution": {
+    "p1": 1097,
+    "p2": 403
+  },
+  "source_review_status_counts": {
+    "download_forbidden": 4,
+    "download_timeout": 16,
+    "reviewed_metadata_and_artifact_saved": 1480
+  },
+  "url_access_status_counts": {
+    "forbidden": 4,
+    "reached": 1480,
+    "timeout": 16
+  },
+  "download_status_counts": {
+    "artifact_saved": 1480,
+    "forbidden": 4,
+    "timeout": 16
+  },
+  "content_type_observed_counts": {
+    "application/pdf": 1480,
+    "unknown": 20
+  },
+  "source_officialness_rating_counts": {
+    "official_municipal": 468,
+    "official_state_repository": 471,
+    "official_union": 23,
+    "uncertain": 451,
+    "unknown": 87
+  },
+  "source_relevance_rating_counts": {
+    "possible": 1480,
+    "unknown": 20
+  },
+  "municipality_match_rating_counts": {
+    "possible": 1480,
+    "unknown": 20
+  },
+  "employer_match_rating_counts": {
+    "possible": 1480,
+    "unknown": 20
+  },
+  "bargaining_unit_match_rating_counts": {
+    "possible": 1480,
+    "unknown": 20
+  },
+  "document_type_rating_counts": {
+    "cba_candidate": 1359,
+    "unknown": 141
+  },
+  "extraction_readiness_rating_counts": {
+    "medium": 1480,
+    "not_ready": 20
+  },
+  "wage_table_signal_counts": {
+    "unknown": 1500
+  },
+  "wage_growth_signal_counts": {
+    "unknown": 1500
+  },
+  "mechanism_language_signal_counts": {
+    "unknown": 1500
+  },
+  "priority_to_status": {
+    "p1": {
+      "download_forbidden": 2,
+      "download_timeout": 12,
+      "reviewed_metadata_and_artifact_saved": 1083
+    },
+    "p2": {
+      "download_forbidden": 2,
+      "download_timeout": 4,
+      "reviewed_metadata_and_artifact_saved": 397
+    }
+  },
+  "source_type_to_status": {
+    "arbitration_award": {
+      "reviewed_metadata_and_artifact_saved": 10
+    },
+    "cba": {
+      "download_forbidden": 4,
+      "download_timeout": 16,
+      "reviewed_metadata_and_artifact_saved": 1359
+    },
+    "factfinding": {
+      "reviewed_metadata_and_artifact_saved": 3
+    },
+    "memorandum_or_settlement": {
+      "reviewed_metadata_and_artifact_saved": 23
+    },
+    "ordinance_or_policy": {
+      "reviewed_metadata_and_artifact_saved": 20
+    },
+    "pay_plan": {
+      "reviewed_metadata_and_artifact_saved": 1
+    },
+    "wage_schedule_or_compensation_plan": {
+      "reviewed_metadata_and_artifact_saved": 64
+    }
+  },
+  "content_byte_size_distribution": {
+    "0": 20,
+    "1_to_10_mib": 879,
+    "1_to_64_kib": 11,
+    "64_kib_to_1_mib": 590
+  },
+  "content_artifact_count": 1480,
+  "metadata_artifact_count": 1500,
+  "rows_with_content_hash": 1480,
+  "rows_with_matching_content_hash": 1480,
+  "content_artifact_bytes": 3189614089,
+  "metadata_artifact_bytes": 1624454,
+  "total_artifact_bytes": 3191238543,
+  "minimum_content_artifact_bytes": 7030,
+  "median_content_artifact_bytes": 1381775,
+  "maximum_content_artifact_bytes": 10470269,
+  "content_sample_count": 0,
+  "urls_opened": 1500,
+  "network_calls": 1500,
+  "documents_downloaded": 1480,
+  "documents_parsed": 0,
+  "pdfs_parsed": 0,
+  "ocr_runs": 0,
+  "lane_runtime": {
+    "lane_1": {
+      "started_at": "2026-07-24T23:57:01Z",
+      "completed_at": "2026-07-25T00:08:18Z",
+      "elapsed_seconds": 677,
+      "rows_per_hour": 2658.788774
+    },
+    "lane_2": {
+      "started_at": "2026-07-24T23:57:38Z",
+      "completed_at": "2026-07-25T00:09:43Z",
+      "elapsed_seconds": 725,
+      "rows_per_hour": 2482.758621
+    },
+    "lane_3": {
+      "started_at": "2026-07-24T23:58:56Z",
+      "completed_at": "2026-07-25T00:10:53Z",
+      "elapsed_seconds": 717,
+      "rows_per_hour": 2510.460251
+    },
+    "combined": {
+      "started_at": "2026-07-24T23:57:01Z",
+      "completed_at": "2026-07-25T00:10:53Z",
+      "elapsed_seconds": 832,
+      "rows_per_hour": 6490.384615
+    }
+  },
+  "mean_attempt_seconds": 5.604151,
+  "maximum_attempt_seconds": 65.345466,
+  "manual_review_burden_rows": 20,
+  "manual_review_burden_rate": 0.013333,
+  "classification_counts": {
+    "completed_merge_eligible": 3
+  },
+  "artifact_integrity_passed": true,
+  "merge_recommendation": "merge_all_source_review_lanes",
+  "durable_batch3_merge_status": "not_started",
+  "cumulative_merged_source_review_rows": 650,
+  "http_client": "httpx_verifier_compatible",
+  "trust_env_proxy": false,
+  "concurrency_per_lane": 4,
+  "timeout_seconds": 30,
+  "connect_timeout_seconds": 8,
+  "read_timeout_seconds": 20,
+  "max_redirects": 5,
+  "max_bytes": 26214400,
+  "write_content_samples": false,
+  "rating_fields_are_preliminary": true,
+  "ingestion_status": "not_started",
+  "codify_status": "not_started",
+  "wage_extraction_status": "not_started",
+  "wage_gap_analysis_status": "not_started",
+  "next_phase_recommendation": "merge_batch3_first_then_choose_remaining_downloads_or_text_layer_pilot",
+  "caveats": [
+    "Batch 3 is collected and audited but not durably merged.",
+    "Source-review ratings are preliminary access and artifact signals.",
+    "PDFs were not parsed or OCRed.",
+    "No wage tables or wage values were extracted.",
+    "All 650 prior durable candidate identities were excluded."
+  ]
+}

@@ -218,24 +218,25 @@ routed candidate identities. Its p1/p2/p3/defer/exclude values remain
 preliminary scheduling outcomes, not source-content ratings. The 261
 oversized routing outcomes remain deferred to a separately bounded strategy.
 
-The source-review layer now has 650 cumulative durable rows: the repaired
+The durable source-review layer still has 650 cumulative rows: the repaired
 150-row Pilot 1 HTTPX result plus the 500-row Batch 2 result. Pilot 1 retains
 149 bounded PDFs and one forbidden outcome. Batch 2 retains 495 bounded PDFs
-and five timeout outcomes. Across both rounds, 644 artifact hashes and sizes
-match, retained PDF content totals approximately 1.311 GB, and connection
-errors are zero. The original Pilot 1 `urllib` transport-failed attempt and
-its diagnostic probe remain preserved but excluded from the operative
-durable ledger. The dashboard phase is `batch2_500_merged`; latest and
-cumulative pointers both represent all 650 rows.
+and five timeout outcomes. Across both merged rounds, 644 artifact hashes and
+sizes match and retained PDF content totals approximately 1.311 GB.
 
-After merge-relay review, the next recommendation is planning—but not yet
-running—`SOURCE-REVIEW-BATCH3-1000-2026-07-24`. The remaining raw
-p1/download-allowed pool is 1,110 rows, or 1,097 after default duplicate
-exclusion. Four balanced 250-row lanes operated in two gated waves would
-preserve the proven per-lane artifact and checkpoint burden. Final
-content-supported source rating, PDF parsing/OCR, extraction readiness,
-ingestion, codification, wage extraction, and wage-gap analysis remain
-unperformed.
+`SOURCE-REVIEW-BATCH3-3X500-2026-07-24` is now collected and audited but not
+merged. It contains 1,500 terminal rows in three 500-row lanes: 1,480 retained
+PDFs, 16 timeout outcomes, four forbidden outcomes, and zero connection
+errors. Retained Batch 3 PDF content is approximately 3.190 GB. The dashboard
+phase is `batch3_3x500_collected_not_merged`, while the cumulative durable
+count deliberately remains 650.
+
+The next recommendation is a separate serial Batch 3 merge after relay
+review. If it passes, evaluate text-layer/page-count readiness on a bounded
+retained-artifact sample before automatically downloading the remaining 726
+default-eligible p2 rows. Final content-supported source rating, PDF parsing
+or OCR, ingestion, codification, wage extraction, and wage-gap analysis
+remain unperformed.
 
 ## Run and build locally
 

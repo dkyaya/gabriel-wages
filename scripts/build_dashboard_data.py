@@ -142,6 +142,12 @@ SOURCE_REVIEW_BATCH2_SUMMARY_PATH = (
     / "SOURCE-REVIEW-BATCH2-500-2026-07-24"
     / "source_review_batch2_500_collection_summary.json"
 )
+SOURCE_REVIEW_BATCH3_SUMMARY_PATH = (
+    ANALYSIS_DIR
+    / "source_review_pilots"
+    / "SOURCE-REVIEW-BATCH3-3X500-2026-07-24"
+    / "source_review_batch3_3x500_collection_summary.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -196,6 +202,7 @@ OPTIONAL_PATHS = [
     SOURCE_REVIEW_CUMULATIVE_LEDGER_PATH,
     SOURCE_REVIEW_CUMULATIVE_SUMMARY_PATH,
     SOURCE_REVIEW_BATCH2_SUMMARY_PATH,
+    SOURCE_REVIEW_BATCH3_SUMMARY_PATH,
 ]
 
 STATE_NAMES = {
@@ -2646,6 +2653,131 @@ def build_source_review_status_summary(
                     "caveats": batch2["caveats"],
                 }
             )
+    if SOURCE_REVIEW_BATCH3_SUMMARY_PATH.exists():
+        batch3 = read_json(SOURCE_REVIEW_BATCH3_SUMMARY_PATH)
+        if (
+            batch3.get("status")
+            != "batch3_3x500_collected_not_merged"
+            or batch3.get("batch_id")
+            != "SOURCE-REVIEW-BATCH3-3X500-2026-07-24"
+            or int(batch3.get("planned_rows", 0)) != 1500
+            or int(batch3.get("ledger_rows", 0)) != 1500
+            or int(batch3.get("terminal_rows", 0)) != 1500
+            or int(batch3.get("prior_candidate_overlap", -1)) != 0
+            or int(batch3.get("prior_source_review_id_overlap", -1)) != 0
+            or int(batch3.get("content_artifact_count", 0)) != 1480
+            or int(batch3.get("rows_with_matching_content_hash", 0))
+            != 1480
+            or int(batch3.get("documents_parsed", -1)) != 0
+            or int(batch3.get("pdfs_parsed", -1)) != 0
+            or int(batch3.get("ocr_runs", -1)) != 0
+            or int(batch3.get("content_sample_count", -1)) != 0
+            or batch3.get("durable_batch3_merge_status") != "not_started"
+            or batch3.get("merge_recommendation")
+            != "merge_all_source_review_lanes"
+            or int(batch3.get("cumulative_merged_source_review_rows", 0))
+            != 650
+        ):
+            raise ValueError(
+                "Source-review Batch 3 summary fails collection gates"
+            )
+        payload.update(
+            {
+                "stage": "source_review_batch3_3x500_collection",
+                "source_review_phase": (
+                    "batch3_3x500_collected_not_merged"
+                ),
+                "source_review_live_status": (
+                    "batch3_3x500_collected_not_merged"
+                ),
+                "bounded_live_source_review_path": (
+                    "implemented_httpx_batch3_collected"
+                ),
+                "latest_source_review_batch_id": batch3["batch_id"],
+                "batch3_3x500_rows_collected": int(
+                    batch3["ledger_rows"]
+                ),
+                "batch3_3x500_terminal_rows": int(
+                    batch3["terminal_rows"]
+                ),
+                "batch3_3x500_merge_status": "not_started",
+                "batch3_3x500_priority_distribution": batch3[
+                    "selected_priority_distribution"
+                ],
+                "batch3_3x500_source_review_status_counts": batch3[
+                    "source_review_status_counts"
+                ],
+                "batch3_3x500_url_access_status_counts": batch3[
+                    "url_access_status_counts"
+                ],
+                "batch3_3x500_download_status_counts": batch3[
+                    "download_status_counts"
+                ],
+                "batch3_3x500_content_type_observed_counts": batch3[
+                    "content_type_observed_counts"
+                ],
+                "batch3_3x500_content_artifact_count": int(
+                    batch3["content_artifact_count"]
+                ),
+                "batch3_3x500_content_artifact_bytes": int(
+                    batch3["content_artifact_bytes"]
+                ),
+                "batch3_3x500_total_artifact_bytes": int(
+                    batch3["total_artifact_bytes"]
+                ),
+                "batch3_3x500_max_content_artifact_bytes": int(
+                    batch3["maximum_content_artifact_bytes"]
+                ),
+                "batch3_3x500_rows_with_content_hash": int(
+                    batch3["rows_with_content_hash"]
+                ),
+                "batch3_3x500_timeout_rows": int(
+                    batch3["source_review_status_counts"].get(
+                        "download_timeout", 0
+                    )
+                ),
+                "batch3_3x500_forbidden_rows": int(
+                    batch3["source_review_status_counts"].get(
+                        "download_forbidden", 0
+                    )
+                ),
+                "batch3_3x500_connection_error_rows": int(
+                    batch3["source_review_status_counts"].get(
+                        "download_connection_error", 0
+                    )
+                ),
+                "batch3_3x500_manual_review_burden_rows": int(
+                    batch3["manual_review_burden_rows"]
+                ),
+                "batch3_3x500_lane_audit_recommendation": batch3[
+                    "merge_recommendation"
+                ],
+                "batch3_collection_summary_source": relative(
+                    SOURCE_REVIEW_BATCH3_SUMMARY_PATH
+                ),
+                "cumulative_merged_source_review_rows": 650,
+                "source_rating_status": (
+                    "batch3_3x500_collected_not_merged"
+                ),
+                "content_download_status": (
+                    "batch3_3x500_collected_not_merged"
+                ),
+                "extraction_readiness_status": (
+                    "preliminary_batch3_not_merged"
+                ),
+                "ingestion_status": "not_started",
+                "codify_status": "not_started",
+                "wage_extraction_status": "not_started",
+                "wage_gap_analysis_status": "not_started",
+                "next_scaling_decision": batch3[
+                    "next_phase_recommendation"
+                ],
+                "next_scaling_recommendation": batch3[
+                    "next_phase_recommendation"
+                ],
+                "caveats": batch3["caveats"],
+            }
+        )
     return payload
 
 
