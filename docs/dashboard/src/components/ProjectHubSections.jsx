@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "auto_gabriel_gate3_compensation_completed"
+              ? "Compensation-evidence Gate 3 complete; future 500-doc extraction authorized"
+              : textTableCalibrationStatus.calibration_phase ===
             "auto_gabriel_gate2_completed"
               ? "Automated GABRIEL Gate 2 complete; extraction remains closed"
               : textTableCalibrationStatus.calibration_phase ===
@@ -783,6 +786,35 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "auto_gabriel_gate3_compensation_completed" ? (
+            <>
+              Gate 3 classified{" "}
+              {formatNumber(textTableCalibrationStatus.auto_gate_case_count)}
+              {" "}bounded cases with{" "}
+              {formatPercent(
+                100 * textTableCalibrationStatus.gate3_schema_valid_rate,
+              )}
+              {" "}schema-valid image-assisted GABRIEL responses. It found{" "}
+              {formatNumber(
+                textTableCalibrationStatus
+                  .gate3_compensation_evidence_category_counts
+                  ?.mixed_quant_qual_ready,
+              )}
+              {" "}mixed, {formatNumber(
+                textTableCalibrationStatus
+                  .gate3_compensation_evidence_category_counts
+                  ?.qual_mechanism_ready,
+              )}{" "}qualitative-mechanism, and {formatNumber(
+                textTableCalibrationStatus
+                  .gate3_compensation_evidence_category_counts
+                  ?.quant_table_ready,
+              )}{" "}quantitative-table cases. The computed decision is{" "}
+              {textTableCalibrationStatus.extraction_decision}; this authorizes
+              a future 500-document compensation-evidence extraction design,
+              not an extraction run in this task. No final observations, OCR,
+              ingestion, or codification occurred.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "auto_gabriel_gate2_completed" ? (
             <>
               Gate 2 completed{" "}

@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-25T19:23:56Z",
+  "generated_at": "2026-07-25T20:13:16Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -64,7 +64,10 @@
     "docs/analysis/text_table_calibration/TEXT-TABLE-AUTO-GABRIEL-ADJUDICATION-GATE1-2026-07-24/auto_gabriel_adjudication_gate_decision.json",
     "docs/analysis/text_table_calibration/TEXT-TABLE-AUTO-GABRIEL-GATE2-REFINEMENT-2026-07-25/auto_gabriel_adjudication_summary.json",
     "docs/analysis/text_table_calibration/TEXT-TABLE-AUTO-GABRIEL-GATE2-REFINEMENT-2026-07-25/auto_gabriel_adjudication_ledger.csv",
-    "docs/analysis/text_table_calibration/TEXT-TABLE-AUTO-GABRIEL-GATE2-REFINEMENT-2026-07-25/auto_gabriel_adjudication_gate_decision.json"
+    "docs/analysis/text_table_calibration/TEXT-TABLE-AUTO-GABRIEL-GATE2-REFINEMENT-2026-07-25/auto_gabriel_adjudication_gate_decision.json",
+    "docs/analysis/text_table_calibration/TEXT-TABLE-AUTO-GABRIEL-GATE3-COMPENSATION-EVIDENCE-2026-07-25/auto_gabriel_compensation_adjudication_summary.json",
+    "docs/analysis/text_table_calibration/TEXT-TABLE-AUTO-GABRIEL-GATE3-COMPENSATION-EVIDENCE-2026-07-25/auto_gabriel_compensation_adjudication_ledger.csv",
+    "docs/analysis/text_table_calibration/TEXT-TABLE-AUTO-GABRIEL-GATE3-COMPENSATION-EVIDENCE-2026-07-25/auto_gabriel_compensation_gate_decision.json"
   ],
   "warnings": [],
   "limitations": [

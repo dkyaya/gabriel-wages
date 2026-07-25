@@ -192,12 +192,15 @@ The dashboard builder writes:
 - `reports_index.json`
 
 The text/table calibration layer currently reports
-`auto_gabriel_gate2_completed`. Gate 2 completed 150 bounded, schema-valid
-GABRIEL adjudications, but only 21/80 original likely/p1 cases were ready and
-only 22 cases were ready overall. The 1.52% candidate-bearing wrong-page rate
-passes its threshold; coverage and representation do not. The computed
-decision remains `continue_schema_refinement`, and neither a 500-document nor
-smaller extraction run is authorized.
+`auto_gabriel_gate3_compensation_completed`. Gate 3 completed 150 bounded,
+image-assisted, schema-valid GABRIEL compensation-evidence adjudications. It
+classified 84 mixed quantitative/qualitative, 14 quantitative-table, 12
+qualitative-mechanism, one compact-quantitative, 31 non-base-wage, seven
+irrelevant, and one reference-only cases. Seventy of 80 original likely/p1
+cases meet the high/medium-confidence ready rule, and the representative
+108-case ready set passes the computed 500-document compensation-extraction
+authorization. Extraction itself has not started; no final quantitative or
+qualitative observation, OCR, ingestion, or codification was produced.
 
 Review the printed totals and diffs before committing. In particular, candidate-positive plus parseable-empty municipalities must equal scout-covered municipalities, and transport/failure-only results must remain outside successful coverage.
 

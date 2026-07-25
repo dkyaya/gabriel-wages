@@ -6,6 +6,33 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-25 (Automated GABRIEL Gate 3 compensation evidence authorizes future 500-doc extraction)
+
+**Did**
+- Started from clean tracked `90891ea45aec078f37544891601fcd2801a7660c`, verified every requested ancestor, and preserved the unrelated untracked root `package-lock.json` and 785 local adjudication renders.
+- Added backward-compatible `auto_gabriel_gate3_compensation_evidence` mode, a strict quantitative/qualitative/mixed/non-base-wage schema, actual bounded rendered-image input, text/layout fallback, resumable exact-case retries, redacted metadata, and deterministic compensation-extraction decision rules. Gate 1 remains the default and Gate 2 remains unchanged.
+- Passed the 150-case no-call dry run over 769 pages and a corrected one-case image preflight. The final image-assisted ledger has 150/150 schema-valid GABRIEL adjudications, 682 attached existing renders, 632,553 bounded text characters, and no failed cases.
+- Classified 84 mixed, 31 non-wage compensation, 14 quantitative-table, 12 qualitative-mechanism, seven irrelevant, one compact-quantitative, and one reference-only cases. Evidence presence is 112 quantitative yes and 122 qualitative-mechanism yes.
+- Compared Gate 3 with Gate 2. All 22 Gate 2 ready rows remain ready; 64 Gate 2 exclusions and 22 Gate 2 second-review rows now satisfy the broader Gate 3 ready rule. Gate 3's 108 ready rows span 36 police, 32 fire, 40 non-safety units and six source families.
+- Updated dashboard data/frontend/docs and prepared the authorized future 500-document compensation-evidence extraction prompt without running it.
+
+**Decisions and why**
+- Decision is `500_doc_compensation_extraction_allowed`: 70/80 original likely/p1 cases (87.50%) are high/medium-confidence ready, schema validity is 100%, only one case is reference-only, none is second-review/error, and representation passes across units, sources, and states.
+- This authorization covers a future combined quantitative plus qualitative compensation-evidence extraction design. It does not retroactively label all pages as wage tables, and it does not authorize ingestion, codification, wage-gap analysis, or a final dataset.
+- Non-base-wage compensation remains a separate 31-row evidence family; it is neither silently promoted to base wage nor discarded as irrelevant.
+
+**Surprises/breakage**
+- The endpoint rejected `uniqueItems` in its strict JSON Schema before the first image adjudication. Removing only that unsupported transport keyword and retaining local controlled-value validation produced a passing image preflight.
+- The primary 150-case pass returned 145 locally valid responses and five duplicate controlled qualitative-field values. A bounded five-case resume normalized allowed duplicates locally and preserved the other 145 rows, yielding 150/150 final validity.
+- The first offline regression pass caught Gate 3 rationale redaction in the legacy writer. Moving it into the Gate 3 writer restored all Gate 1/2 tests; no prior output or durable authority changed.
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Five compiles, 14 Gate 1 tests, 10 Gate 2 tests, 9 Gate 3 tests, dashboard data/frontend builds, schema validation, 60 ingestion tests, exact page/text/image caps, 150 redacted request-metadata rows, immutable original/REVIEW1/REVIEW2/independent-packet/Gate 1/Gate 2/durable/protected hashes, secret-safety, rationale redaction, and diff checks passed. No URL/hosted search, redownload, OCR, wage extraction, qualitative final extraction, full-text/table retention, durable-ledger mutation, ingestion, `gabriel.codify`, wage-gap work, regression, remote inspection, push, or final observation creation occurred.
+
+**Next steps**
+1. Review the prepared future 500-document compensation-evidence extraction prompt and separately authorize its execution.
+2. Freeze a representative 500-document selection with distinct quantitative, qualitative, mixed, non-base-wage, reference, and exclusion lanes; preserve city × unit × cycle identity and matched non-safety coverage.
+3. Run resumable lanes only against retained local artifacts, stop before final merge, and keep ingestion/codification/analysis closed until extraction QA is separately approved.
+
 ## 2026-07-25 (Automated GABRIEL Gate 2 completed; extraction remains closed)
 
 **Did**

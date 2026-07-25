@@ -6,6 +6,39 @@ Last updated: `2026-07-25`
 
 ---
 
+## 2026-07-25 — Automated GABRIEL Gate 3 authorizes future 500-doc compensation extraction
+
+### Current State
+
+- **Scope/readiness:** work began at clean tracked `90891ea45aec078f37544891601fcd2801a7660c`. [The readiness audit](text_table_auto_gabriel_gate3_compensation_readiness_audit_2026-07-25.md) confirms requested ancestry, the immutable 150-case scope, 785 local renders, configured HUIT direct Responses backend, and all extraction prohibitions.
+- **Runner/schema:** `scripts/run_auto_gabriel_text_table_adjudication.py` preserves Gate 1/2 and adds opt-in `auto_gabriel_gate3_compensation_evidence`. [The schema](text_table_auto_gabriel_gate3_compensation_schema_2026-07-25.md) separates quantitative, qualitative, mixed, reference, non-base-wage, irrelevant, and ambiguous use; [the prompt](text_table_auto_gabriel_gate3_compensation_prompt_template_2026-07-25.md) evaluates research use rather than classic tables alone.
+- **Dry run/preflight:** the 150-case no-call dry run passed over 769 pages. The endpoint rejected unsupported `uniqueItems` before adjudication; local strictness was retained, the corrected one-case image preflight passed, and no text-only fallback was needed.
+- **Live result:** [the Gate 3 result](text_table_auto_gabriel_gate3_compensation_result_2026-07-25.md) records 150/150 final schema-valid image-assisted responses, zero failures, 682 existing rendered images (93,613,400 bytes across requests), and 632,553 bounded text characters. Five duplicate controlled arrays from the primary pass were resolved through an exact five-case resumable retry without changing the other 145 rows.
+- **Categories:** 84 mixed, 31 non-wage compensation, 14 quantitative-table, 12 qualitative-mechanism, seven irrelevant, one compact-quantitative, and one reference-only. Quantitative evidence is 112 yes / 16 maybe / 22 no; qualitative mechanism evidence is 122 yes / nine maybe / 18 no / one unknown.
+- **Paths:** recommendations are 102 mixed-ready, 22 qualitative-ready, 15 quantitative-ready, eight exclude, and three reference-followup. The deterministic ready set is 108 cases: 36 police, 32 fire, 40 non-safety across six source families.
+- **Gate 2 comparison:** [the comparison](text_table_auto_gabriel_gate3_compensation_vs_gate2_comparison_2026-07-25.md) shows all 22 Gate 2 ready rows remaining ready, plus 64 Gate 2 exclusions and 22 Gate 2 second-review rows meeting the broader ready rule. Gate 3 supports 95 quantitative, 92 qualitative-mechanism, and 84 mixed-category cases; sets overlap.
+- **Decision:** [the decision](post_auto_gabriel_gate3_compensation_extraction_decision_2026-07-25.md) is `500_doc_compensation_extraction_allowed`. Original likely/p1 readiness is 70/80 (87.50%), schema validity is 100%, and representation/ambiguity criteria pass. [The future prompt](compensation_evidence_extraction_500_doc_prompt_2026-07-25.md) was prepared but not run.
+- **Dashboard:** phase is `auto_gabriel_gate3_compensation_completed`; Gate 2 remains the prior gate; quantitative and qualitative extraction, ingestion, codification, and wage-gap analysis are all `not_started`.
+- **Validation:** [the validation record](text_table_auto_gabriel_gate3_compensation_validation_2026-07-25.md) reports five compiles, 33 offline/mock tests, dashboard data/frontend builds, schema validation, 60 ingestion tests, coverage audit, exact caps, rationale/value redaction, metadata/secret checks, immutable upstream/Gate 1/Gate 2/durable/protected hashes, and diff checks.
+- **Boundary:** GABRIEL ran only after corrected image preflight and explicit `--allow-gabriel`. No URL/hosted search, redownload, OCR, wage extraction, qualitative final extraction, full-text/table retention, ingestion, `gabriel.codify`, durable-ledger mutation, wage-gap work, regression, remote inspection, or push occurred.
+
+### Interpretation
+
+Gate 3 demonstrates that the frozen calibration corpus contains substantially
+more project-useful compensation evidence than a wage-table-only frame
+recognized. The result does not weaken base-wage precision rules: non-base-
+wage compensation, reference-only material, and irrelevant material remain
+separate. It authorizes a future combined extraction design, not a claim that
+all 108 ready pages are classic salary schedules.
+
+### Next Move
+
+Use the prepared 500-document compensation-evidence prompt only after separate
+execution authorization. Freeze a representative local-artifact selection,
+run resumable quantitative/qualitative/mixed lanes, and stop before final merge.
+Keep OCR, URL access, ingestion, codification, wage-gap analysis, and regression
+closed until lane QA and a later merge decision pass.
+
 ## 2026-07-25 — Automated GABRIEL Gate 2 completed; extraction remains closed
 
 ### Current State

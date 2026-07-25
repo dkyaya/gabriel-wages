@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import argparse
 import asyncio
+import base64
 import csv
 import hashlib
 import json
@@ -35,7 +36,10 @@ DEFAULT_BACKEND = "huit_openai_responses_direct_sdk"
 DEFAULT_MODEL = "gpt-5.4-nano"
 GATE1_MODE = "auto_gabriel_gate1"
 GATE2_MODE = "auto_gabriel_gate2_navigation_table_refine"
-GATE_MODES = {GATE1_MODE, GATE2_MODE}
+GATE3_MODE = "auto_gabriel_gate3_compensation_evidence"
+GATE_MODES = {GATE1_MODE, GATE2_MODE, GATE3_MODE}
+REFINED_PAGE_MODES = {GATE2_MODE, GATE3_MODE}
+GATE3_SCHEMA_VERSION = "gate3_compensation_evidence_v1"
 ORIGINAL_CALIBRATION_PATH = (
     ROOT
     / "docs/analysis/text_table_calibration"
@@ -114,6 +118,48 @@ GATE2_LEDGER_FIELDS = (
     + GATE2_FIELDS
     + GABRIEL_FIELDS
     + FINAL_FIELDS
+)
+
+GATE3_IDENTITY_FIELDS = [
+    "gate3_compensation_id",
+    *IDENTITY_FIELDS[1:],
+]
+GATE3_CLASSIFICATION_FIELDS = [
+    "compensation_evidence_category",
+    "quantitative_evidence_present",
+    "qualitative_mechanism_evidence_present",
+    "quantitative_evidence_type",
+    "qualitative_mechanism_type",
+    "non_wage_compensation_type",
+    "extractable_quant_fields",
+    "extractable_qual_fields",
+    "candidate_page_relationship",
+    "evidence_strength",
+    "extraction_path_recommendation",
+    "gate3_confidence",
+    "gate3_reason_codes",
+    "gate3_short_rationale",
+]
+GATE3_GABRIEL_FIELDS = [
+    "gabriel_request_id",
+    "gabriel_backend",
+    "gabriel_model",
+    "gabriel_status",
+    "gabriel_schema_valid",
+    "gabriel_input_page_count",
+    "gabriel_input_text_chars",
+    "gabriel_used_images",
+    "gabriel_elapsed_seconds",
+    "vision_evidence_used",
+    "vision_legibility",
+    "image_table_structure_observed",
+    "image_role_pay_alignment_observed",
+]
+GATE3_LEDGER_FIELDS = (
+    GATE3_IDENTITY_FIELDS
+    + LOCAL_FIELDS
+    + GATE3_CLASSIFICATION_FIELDS
+    + GATE3_GABRIEL_FIELDS
 )
 
 GABRIEL_RESPONSE_KEYS = {
@@ -217,6 +263,185 @@ GABRIEL_JSON_SCHEMA = {
             },
         },
         "short_rationale": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 300,
+        },
+    },
+}
+
+GATE3_RESPONSE_KEYS = {
+    *GATE3_CLASSIFICATION_FIELDS,
+    "vision_legibility",
+    "image_table_structure_observed",
+    "image_role_pay_alignment_observed",
+}
+GATE3_ALLOWED = {
+    "compensation_evidence_category": {
+        "quant_table_ready",
+        "quant_compact_ready",
+        "quant_prose_ready",
+        "qual_mechanism_ready",
+        "mixed_quant_qual_ready",
+        "reference_navigation_only",
+        "non_wage_compensation",
+        "not_compensation_relevant",
+        "second_review_required",
+        "error",
+    },
+    "quantitative_evidence_present": {"yes", "maybe", "no", "unknown"},
+    "qualitative_mechanism_evidence_present": {
+        "yes",
+        "maybe",
+        "no",
+        "unknown",
+    },
+    "quantitative_evidence_type": {
+        "wage_table",
+        "salary_schedule",
+        "hourly_rate_schedule",
+        "annual_salary_schedule",
+        "rank_step_schedule",
+        "grade_step_schedule",
+        "pay_band",
+        "percentage_increase_schedule",
+        "compact_compensation_sheet",
+        "ordinance_rate_listing",
+        "prose_specific_rate",
+        "prose_percentage_raise",
+        "none",
+        "unknown",
+    },
+    "qualitative_mechanism_type": {
+        "collective_bargaining_agreement_terms",
+        "memorandum_or_settlement_terms",
+        "arbitration_or_factfinding_reasoning",
+        "CPI_or_COLA_indexing",
+        "comparability_or_market_study",
+        "parity_or_internal_equity",
+        "step_movement_or_seniority",
+        "rank_or_classification_differentiation",
+        "certification_or_education_incentive",
+        "longevity_or_service_based_pay",
+        "fiscal_constraint_or_budget_logic",
+        "wage_reopener_or_future_negotiation",
+        "implementation_or_effective_date_logic",
+        "none",
+        "unknown",
+    },
+    "non_wage_compensation_type": {
+        "benefits",
+        "overtime",
+        "stipend",
+        "longevity",
+        "education_or_certification",
+        "pension",
+        "leave",
+        "reimbursements",
+        "healthcare_contributions",
+        "uniform_or_equipment",
+        "other",
+        "not_applicable",
+        "unknown",
+    },
+    "candidate_page_relationship": {
+        "exact_evidence_page",
+        "adjacent_to_evidence",
+        "points_to_later_evidence",
+        "wrong_page",
+        "no_candidate_page",
+        "unknown",
+    },
+    "evidence_strength": {"high", "medium", "low", "unknown"},
+    "extraction_path_recommendation": {
+        "quantitative_extraction_ready",
+        "qualitative_extraction_ready",
+        "mixed_extraction_ready",
+        "extraction_ready_with_schema_update",
+        "reference_followup_needed",
+        "second_review_required",
+        "exclude_for_now",
+        "error",
+    },
+    "gate3_confidence": {"high", "medium", "low", "unknown"},
+    "vision_legibility": {
+        "clear",
+        "partial",
+        "illegible",
+        "not_applicable",
+        "unknown",
+    },
+    "image_table_structure_observed": {
+        "yes",
+        "maybe",
+        "no",
+        "not_applicable",
+        "unknown",
+    },
+    "image_role_pay_alignment_observed": {
+        "yes",
+        "maybe",
+        "no",
+        "not_applicable",
+        "unknown",
+    },
+}
+GATE3_QUANT_FIELDS = {
+    "rate",
+    "salary",
+    "hourly_rate",
+    "annual_salary",
+    "percentage_increase",
+    "effective_date",
+    "step",
+    "grade",
+    "rank",
+    "classification",
+    "unit",
+    "contract_period",
+}
+GATE3_QUAL_FIELDS = {
+    "mechanism",
+    "bargaining_logic",
+    "indexing_formula",
+    "comparability_basis",
+    "parity_logic",
+    "step_progression_rule",
+    "eligibility_rule",
+    "implementation_rule",
+    "fiscal_constraint",
+    "reopener_clause",
+    "differentiation_logic",
+}
+GATE3_JSON_SCHEMA = {
+    "type": "object",
+    "additionalProperties": False,
+    "required": sorted(GATE3_RESPONSE_KEYS),
+    "properties": {
+        **{
+            field: {"type": "string", "enum": sorted(values)}
+            for field, values in GATE3_ALLOWED.items()
+        },
+        "extractable_quant_fields": {
+            "type": "array",
+            "maxItems": 12,
+            "items": {"type": "string", "enum": sorted(GATE3_QUANT_FIELDS)},
+        },
+        "extractable_qual_fields": {
+            "type": "array",
+            "maxItems": 11,
+            "items": {"type": "string", "enum": sorted(GATE3_QUAL_FIELDS)},
+        },
+        "gate3_reason_codes": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 8,
+            "items": {
+                "type": "string",
+                "pattern": "^[A-Z][A-Z0-9_]{0,39}$",
+            },
+        },
+        "gate3_short_rationale": {
             "type": "string",
             "minLength": 1,
             "maxLength": 300,
@@ -360,6 +585,8 @@ class PageEvidence:
     role_pay_rows: int = 0
     aligned_numeric_columns: int = 0
     compact_role_pay_lines: int = 0
+    rendered_path: str = ""
+    rendered_bytes: int = 0
 
 
 @dataclass
@@ -383,6 +610,9 @@ class CaseEvidence:
     diagnostic_reason_codes: list[str] | None = None
     printed_page_offsets: list[int] | None = None
     unresolved_navigation_targets: list[int] | None = None
+    use_images: bool = False
+    image_paths: list[str] | None = None
+    image_bytes: int = 0
 
 
 @dataclass
@@ -870,6 +1100,11 @@ def page_evidence(
         image_path = Path(rendered["_resolved_image"])
         horizontal, vertical, dark_density = image_features(image_path)
         rendered_available = True
+        rendered_path = str(image_path)
+        rendered_bytes = image_path.stat().st_size
+    else:
+        rendered_path = ""
+        rendered_bytes = 0
     navigation = bool(INDEX_RE.search(text) or role == "navigation")
     snippet = select_snippet(text, max_chars, navigation)
     return PageEvidence(
@@ -898,7 +1133,7 @@ def page_evidence(
         image_dark_density=dark_density,
         navigation_targets=(
             find_gate2_navigation_targets(text, page_count)
-            if gate_mode == GATE2_MODE
+            if gate_mode in REFINED_PAGE_MODES
             else find_navigation_targets(text, page_count)
         ),
         printed_page_number=printed_page_number,
@@ -906,6 +1141,8 @@ def page_evidence(
         role_pay_rows=role_pay_rows,
         aligned_numeric_columns=aligned_numeric_columns,
         compact_role_pay_lines=compact_role_pay_lines,
+        rendered_path=rendered_path,
+        rendered_bytes=rendered_bytes,
     )
 
 
@@ -1439,6 +1676,120 @@ def prompt_for_gate2_case(evidence: CaseEvidence) -> str:
     )
 
 
+def prompt_for_gate3_case(evidence: CaseEvidence) -> str:
+    pages = []
+    for page in evidence.pages:
+        pages.append(
+            {
+                "page_number": page.page_number,
+                "page_role": page.role,
+                "bounded_redacted_snippet": page.snippet,
+                "features": {
+                    "wage_terms": page.wage_terms,
+                    "role_terms": page.role_terms,
+                    "numeric_tokens": page.numeric_tokens,
+                    "money_tokens": page.money_tokens,
+                    "percent_tokens": page.percent_tokens,
+                    "row_like_lines": page.row_like_lines,
+                    "column_lines": page.column_lines,
+                    "header_lines": page.header_lines,
+                    "geometry_rows": page.geometry_rows,
+                    "geometry_columns": page.geometry_columns,
+                    "role_pay_rows": page.role_pay_rows,
+                    "aligned_numeric_columns": page.aligned_numeric_columns,
+                    "compact_role_pay_lines": page.compact_role_pay_lines,
+                    "benefit_terms": page.benefit_terms,
+                    "budget_terms": page.budget_terms,
+                    "classification_terms": page.classification_terms,
+                    "index_signal": page.index_signal,
+                    "front_signal": page.front_signal,
+                    "rendered_available": page.rendered_available,
+                    "navigation_target_printed_pages": page.navigation_targets,
+                    "printed_page_number": page.printed_page_number,
+                    "pdf_minus_printed_page_offset": page.printed_page_offset,
+                },
+            }
+        )
+    packet = {
+        "schema_version": GATE3_SCHEMA_VERSION,
+        "case_context": {
+            "adjudication_case_id": evidence.source["adjudication_case_id"],
+            "state": evidence.source["state"],
+            "municipality": evidence.source["municipality"],
+            "unit_type": evidence.source["unit_type"],
+            "candidate_source_type": evidence.source["candidate_source_type"],
+            "candidate_pages_supplied": bool(
+                evidence.source["blinded_candidate_pages"].strip()
+            ),
+        },
+        "images_attached_to_request": evidence.use_images,
+        "attached_image_count": len(evidence.image_paths or []),
+        "case_scores": {
+            "table_structure": evidence.table_score,
+            "wage_language": evidence.wage_score,
+            "pay_numeric": evidence.numeric_score,
+            "navigation": evidence.navigation_score,
+            "non_wage_false_positive": evidence.non_wage_score,
+            "compact_compensation": evidence.compact_score,
+        },
+        "pages": pages,
+    }
+    response_shape = {
+        "compensation_evidence_category": sorted(
+            GATE3_ALLOWED["compensation_evidence_category"]
+        ),
+        "quantitative_evidence_present": "yes|maybe|no|unknown",
+        "qualitative_mechanism_evidence_present": "yes|maybe|no|unknown",
+        "quantitative_evidence_type": sorted(
+            GATE3_ALLOWED["quantitative_evidence_type"]
+        ),
+        "qualitative_mechanism_type": sorted(
+            GATE3_ALLOWED["qualitative_mechanism_type"]
+        ),
+        "non_wage_compensation_type": sorted(
+            GATE3_ALLOWED["non_wage_compensation_type"]
+        ),
+        "extractable_quant_fields": sorted(GATE3_QUANT_FIELDS),
+        "extractable_qual_fields": sorted(GATE3_QUAL_FIELDS),
+        "candidate_page_relationship": sorted(
+            GATE3_ALLOWED["candidate_page_relationship"]
+        ),
+        "evidence_strength": "high|medium|low|unknown",
+        "extraction_path_recommendation": sorted(
+            GATE3_ALLOWED["extraction_path_recommendation"]
+        ),
+        "gate3_confidence": "high|medium|low|unknown",
+        "gate3_reason_codes": ["SHORT_UPPERCASE_CODE"],
+        "gate3_short_rationale": "max 300 characters; no wage values",
+        "vision_legibility": "clear|partial|illegible|not_applicable|unknown",
+        "image_table_structure_observed": "yes|maybe|no|not_applicable|unknown",
+        "image_role_pay_alignment_observed": "yes|maybe|no|not_applicable|unknown",
+    }
+    return (
+        "Evaluate bounded municipal labor/compensation page evidence by its "
+        "best research use. The research needs quantitative compensation "
+        "evidence and qualitative mechanisms explaining how compensation is "
+        "set, adjusted, negotiated, differentiated, constrained, or "
+        "implemented. Do not focus only on classic wage tables. Distinguish "
+        "clean schedules, compact listings, prose with specific rates or "
+        "percentage/effective-date changes, useful mechanism language, "
+        "reference-only pages, non-base-wage compensation, and irrelevant "
+        "material. Wage-related prose is quantitative only when it supplies "
+        "a specific rate, salary, percentage, effective date, or implementable "
+        "quantitative rule. Compensation-setting prose may be qualitative "
+        "without numeric values. Benefits, overtime, stipends, longevity, "
+        "pension, leave, reimbursements, healthcare, and uniforms are separate "
+        "non-base-wage compensation unless other qualifying evidence is also "
+        "present. A pointer without its target is reference_navigation_only. "
+        "Judge only supplied pages/images; infer nothing outside them. Do not "
+        "extract or repeat wage rows, complete mechanism passages, or final "
+        "observations. Do not calculate anything. Return one strict JSON object "
+        "only, no markdown or extra keys, using: "
+        f"{json.dumps(response_shape, separators=(',', ':'))}\n"
+        f"BOUNDED_COMPENSATION_EVIDENCE={json.dumps(packet, separators=(',', ':'))}"
+    )
+
+
 def build_case_evidence(
     source: dict[str, str],
     *,
@@ -1450,6 +1801,9 @@ def build_case_evidence(
     max_chars_per_case: int,
     gate_mode: str = GATE1_MODE,
     candidate_window: int = 1,
+    use_images: bool = False,
+    max_images: int = 6,
+    max_image_bytes: int = 2_000_000,
 ) -> CaseEvidence:
     artifact = resolve_local_path(source["content_artifact_path"])
     if artifact.suffix.lower() != ".pdf" or not artifact.is_file():
@@ -1468,7 +1822,7 @@ def build_case_evidence(
             navigation_budget=navigation_budget,
             candidate_window=candidate_window,
         )
-        if gate_mode == GATE2_MODE
+        if gate_mode in REFINED_PAGE_MODES
         else choose_initial_pages(
             source, max_pages=max_pages, navigation_budget=navigation_budget
         )
@@ -1506,7 +1860,7 @@ def build_case_evidence(
     )
     unresolved_targets: list[int] = []
     resolved_targets: list[int] = []
-    if gate_mode == GATE2_MODE:
+    if gate_mode in REFINED_PAGE_MODES:
         navigation_added = sum(page.role == "navigation" for page in pages)
         for printed_target in referenced:
             proposals: list[tuple[int, str]] = []
@@ -1572,7 +1926,7 @@ def build_case_evidence(
         for page_number in fallback_navigation:
             if len(pages) >= max_pages or remaining_chars <= 0:
                 break
-            if gate_mode == GATE2_MODE and navigation_added >= navigation_budget:
+            if gate_mode in REFINED_PAGE_MODES and navigation_added >= navigation_budget:
                 break
             if page_number in used:
                 continue
@@ -1587,12 +1941,12 @@ def build_case_evidence(
             )
             pages.append(evidence)
             used.add(page_number)
-            if gate_mode == GATE2_MODE:
+            if gate_mode in REFINED_PAGE_MODES:
                 navigation_added += 1
             remaining_chars -= evidence.snippet_chars
     if len(pages) > max_pages:
         raise AssertionError("page budget exceeded")
-    if gate_mode == GATE2_MODE and sum(
+    if gate_mode in REFINED_PAGE_MODES and sum(
         page.role
         in {"navigation", "navigation_target", "navigation_target_offset"}
         for page in pages
@@ -1605,12 +1959,12 @@ def build_case_evidence(
         raise AssertionError("per-case text cap exceeded")
     table_score, wage_score, numeric_score, non_wage_score, compact_score = (
         score_case_gate2(pages)
-        if gate_mode == GATE2_MODE
+        if gate_mode in REFINED_PAGE_MODES
         else score_case(pages)
     )
     targets_evaluated = (
         sorted(set(resolved_targets))
-        if gate_mode == GATE2_MODE
+        if gate_mode in REFINED_PAGE_MODES
         else [
             page.page_number
             for page in pages
@@ -1635,7 +1989,7 @@ def build_case_evidence(
             unresolved_targets=unresolved_targets,
             printed_offsets=printed_offsets,
         )
-        if gate_mode == GATE2_MODE
+        if gate_mode in REFINED_PAGE_MODES
         else []
     )
     case = CaseEvidence(
@@ -1668,8 +2022,25 @@ def build_case_evidence(
         printed_page_offsets=printed_offsets,
         unresolved_navigation_targets=unresolved_targets,
     )
+    if gate_mode == GATE3_MODE and use_images:
+        selected_image_paths: list[str] = []
+        selected_image_bytes = 0
+        for page in pages:
+            if not page.rendered_path:
+                continue
+            if len(selected_image_paths) >= max_images:
+                break
+            if selected_image_bytes + page.rendered_bytes > max_image_bytes:
+                continue
+            selected_image_paths.append(page.rendered_path)
+            selected_image_bytes += page.rendered_bytes
+        case.image_paths = selected_image_paths
+        case.image_bytes = selected_image_bytes
+        case.use_images = bool(selected_image_paths)
     case.prompt = (
-        prompt_for_gate2_case(case)
+        prompt_for_gate3_case(case)
+        if gate_mode == GATE3_MODE
+        else prompt_for_gate2_case(case)
         if gate_mode == GATE2_MODE
         else prompt_for_case(case)
     )
@@ -1678,14 +2049,23 @@ def build_case_evidence(
         "wage_schedule_table_confirmed_label",
         "REVIEW1",
         "REVIEW2",
-        "GATE1",
-        "Gate 1",
-        "gate1",
         "auto_gate_label",
         "recommended_extraction_action",
     )
     if any(marker in case.prompt for marker in forbidden_prompt_markers):
         raise AssertionError("prior label marker entered the primary prompt")
+    if gate_mode == GATE3_MODE and any(
+        marker in case.prompt
+        for marker in (
+            "GATE1",
+            "Gate 1",
+            "gate1",
+            "GATE2",
+            "Gate 2",
+            "gate2",
+        )
+    ):
+        raise AssertionError("prior gate marker entered the Gate 3 prompt")
     return case
 
 
@@ -1716,6 +2096,49 @@ def validate_gabriel_response(raw: str) -> dict[str, Any]:
     return parsed
 
 
+def validate_gate3_response(raw: str) -> dict[str, Any]:
+    """Validate the compensation-evidence response without coercion."""
+
+    parsed = json.loads(raw.strip())
+    if not isinstance(parsed, dict):
+        raise ValueError("GABRIEL response is not a JSON object")
+    if set(parsed) != GATE3_RESPONSE_KEYS:
+        raise ValueError("Gate 3 response keys do not match strict schema")
+    for field, allowed in GATE3_ALLOWED.items():
+        if parsed[field] not in allowed:
+            raise ValueError(f"invalid {field}: {parsed[field]!r}")
+    for field, allowed in (
+        ("extractable_quant_fields", GATE3_QUANT_FIELDS),
+        ("extractable_qual_fields", GATE3_QUAL_FIELDS),
+    ):
+        values = parsed[field]
+        if (
+            not isinstance(values, list)
+            or any(not isinstance(value, str) or value not in allowed for value in values)
+        ):
+            raise ValueError(f"invalid {field}")
+        # The endpoint's strict-schema dialect does not support uniqueItems.
+        # Repeated controlled values are therefore normalized locally without
+        # changing their semantic content; out-of-vocabulary values still fail.
+        parsed[field] = list(dict.fromkeys(values))
+    codes = parsed["gate3_reason_codes"]
+    if (
+        not isinstance(codes, list)
+        or not 1 <= len(codes) <= 8
+        or any(
+            not isinstance(code, str) or not REASON_CODE_RE.fullmatch(code)
+            for code in codes
+        )
+    ):
+        raise ValueError("invalid gate3_reason_codes")
+    rationale = parsed["gate3_short_rationale"]
+    if not isinstance(rationale, str) or not rationale.strip():
+        raise ValueError("gate3_short_rationale must be nonempty")
+    if len(rationale) > 300:
+        raise ValueError("gate3_short_rationale exceeds 300 characters")
+    return parsed
+
+
 def empty_gabriel(
     *, backend: str, model: str, status: str = "not_called"
 ) -> dict[str, str]:
@@ -1739,6 +2162,51 @@ def empty_gabriel(
         "gabriel_input_page_count": "0",
         "gabriel_input_text_chars": "0",
         "gabriel_elapsed_seconds": "0.000000",
+    }
+
+
+def empty_gate3(
+    *,
+    backend: str,
+    model: str,
+    status: str = "not_called",
+    used_images: bool = False,
+) -> dict[str, str]:
+    return {
+        "compensation_evidence_category": "error",
+        "quantitative_evidence_present": "unknown",
+        "qualitative_mechanism_evidence_present": "unknown",
+        "quantitative_evidence_type": "unknown",
+        "qualitative_mechanism_type": "unknown",
+        "non_wage_compensation_type": "unknown",
+        "extractable_quant_fields": "",
+        "extractable_qual_fields": "",
+        "candidate_page_relationship": "unknown",
+        "evidence_strength": "unknown",
+        "extraction_path_recommendation": "error",
+        "gate3_confidence": "unknown",
+        "gate3_reason_codes": "GABRIEL_REQUIRED",
+        "gate3_short_rationale": (
+            "Fail closed: a schema-valid bounded GABRIEL compensation "
+            "adjudication is required."
+        ),
+        "gabriel_request_id": "",
+        "gabriel_backend": backend,
+        "gabriel_model": model,
+        "gabriel_status": status,
+        "gabriel_schema_valid": "false",
+        "gabriel_input_page_count": "0",
+        "gabriel_input_text_chars": "0",
+        "gabriel_used_images": "true" if used_images else "false",
+        "gabriel_elapsed_seconds": "0.000000",
+        "vision_evidence_used": "true" if used_images else "false",
+        "vision_legibility": "unknown" if used_images else "not_applicable",
+        "image_table_structure_observed": (
+            "unknown" if used_images else "not_applicable"
+        ),
+        "image_role_pay_alignment_observed": (
+            "unknown" if used_images else "not_applicable"
+        ),
     }
 
 
@@ -2034,6 +2502,8 @@ async def _run_direct_sdk_batch(
     model: str,
     timeout: float,
     parallel: int,
+    response_schema: dict[str, Any] = GABRIEL_JSON_SCHEMA,
+    schema_name: str = "bounded_text_table_adjudication",
 ) -> list[LiveResult]:
     import httpx
     from openai import AsyncOpenAI
@@ -2051,17 +2521,40 @@ async def _run_direct_sdk_batch(
         started = time.monotonic()
         async with semaphore:
             try:
+                request_input: object = case.prompt
+                if case.use_images and case.image_paths:
+                    content: list[dict[str, str]] = [
+                        {"type": "input_text", "text": case.prompt}
+                    ]
+                    for image_path in case.image_paths:
+                        path = Path(image_path)
+                        mime = (
+                            "image/png"
+                            if path.suffix.lower() == ".png"
+                            else "image/jpeg"
+                        )
+                        encoded = base64.b64encode(path.read_bytes()).decode(
+                            "ascii"
+                        )
+                        content.append(
+                            {
+                                "type": "input_image",
+                                "image_url": f"data:{mime};base64,{encoded}",
+                                "detail": "low",
+                            }
+                        )
+                    request_input = [{"role": "user", "content": content}]
                 response = await asyncio.wait_for(
                     client.responses.create(
                         model=model,
-                        input=case.prompt,
+                        input=request_input,
                         reasoning={"effort": "low"},
                         text={
                             "format": {
                                 "type": "json_schema",
-                                "name": "bounded_text_table_adjudication",
+                                "name": schema_name,
                                 "strict": True,
-                                "schema": GABRIEL_JSON_SCHEMA,
+                                "schema": response_schema,
                             }
                         },
                     ),
@@ -2126,6 +2619,8 @@ def run_live_requests(
     model: str,
     timeout: float,
     parallel: int,
+    response_schema: dict[str, Any] = GABRIEL_JSON_SCHEMA,
+    schema_name: str = "bounded_text_table_adjudication",
 ) -> list[LiveResult]:
     if backend != DEFAULT_BACKEND:
         raise ValueError(f"unsupported GABRIEL backend: {backend}")
@@ -2136,6 +2631,8 @@ def run_live_requests(
             model=model,
             timeout=timeout,
             parallel=parallel,
+            response_schema=response_schema,
+            schema_name=schema_name,
         )
     )
 
@@ -2242,6 +2739,12 @@ def identity_fields(evidence: CaseEvidence) -> dict[str, str]:
     }
 
 
+def gate3_identity_fields(evidence: CaseEvidence) -> dict[str, str]:
+    fields = identity_fields(evidence)
+    fields["gate3_compensation_id"] = fields.pop("auto_adjudication_id")
+    return fields
+
+
 def gabriel_fields_from_result(
     *,
     evidence: CaseEvidence,
@@ -2341,6 +2844,121 @@ def gabriel_fields_from_result(
     return fields, metadata, None
 
 
+def gate3_fields_from_result(
+    *,
+    evidence: CaseEvidence,
+    result: LiveResult,
+    backend: str,
+    model: str,
+) -> tuple[dict[str, str], dict[str, object], dict[str, str] | None]:
+    fields = empty_gate3(
+        backend=backend,
+        model=model,
+        status=result.status,
+        used_images=evidence.use_images,
+    )
+    fields.update(
+        {
+            "gabriel_request_id": result.request_id,
+            "gabriel_input_page_count": str(len(evidence.pages)),
+            "gabriel_input_text_chars": str(evidence.text_chars),
+            "gabriel_used_images": "true" if evidence.use_images else "false",
+            "vision_evidence_used": "true" if evidence.use_images else "false",
+            "gabriel_elapsed_seconds": f"{result.elapsed_seconds:.6f}",
+        }
+    )
+    metadata: dict[str, object] = {
+        "gate3_compensation_id": evidence.auto_id,
+        "calibration_id": evidence.source["calibration_id"],
+        "gabriel_request_id": result.request_id,
+        "gabriel_backend": backend,
+        "gabriel_model": model,
+        "request_status": result.status,
+        "prompt_sha256": sha256_bytes(evidence.prompt.encode("utf-8")),
+        "prompt_chars": len(evidence.prompt),
+        "input_page_count": len(evidence.pages),
+        "input_text_chars": evidence.text_chars,
+        "image_input_requested": evidence.use_images,
+        "image_input_used": evidence.use_images,
+        "input_image_count": len(evidence.image_paths or []),
+        "input_image_bytes": evidence.image_bytes,
+        "prior_labels_in_prompt": False,
+        "raw_prompt_saved": False,
+        "raw_response_saved": False,
+        "raw_images_saved": False,
+        "response_chars": len(result.response_text),
+        "response_sha256": (
+            sha256_bytes(result.response_text.encode("utf-8"))
+            if result.response_text
+            else ""
+        ),
+        "input_tokens": result.input_tokens,
+        "output_tokens": result.output_tokens,
+        "total_tokens": result.total_tokens,
+        "elapsed_seconds": round(result.elapsed_seconds, 6),
+        "error_type": result.error_type,
+        "error_message": result.error_message,
+        "credential_value_saved": False,
+        "authorization_header_saved": False,
+    }
+    if result.status != "success":
+        failed = {
+            "gate3_compensation_id": evidence.auto_id,
+            "calibration_id": evidence.source["calibration_id"],
+            "gabriel_status": result.status,
+            "error_type": result.error_type,
+            "error_message": result.error_message,
+        }
+        return fields, metadata, failed
+    try:
+        parsed = validate_gate3_response(result.response_text)
+    except (json.JSONDecodeError, ValueError) as exc:
+        fields["gabriel_status"] = "schema_invalid"
+        fields["gate3_reason_codes"] = "GABRIEL_SCHEMA_INVALID"
+        fields["gate3_short_rationale"] = (
+            "Fail closed: the response did not satisfy the strict Gate 3 schema."
+        )
+        metadata["request_status"] = "schema_invalid"
+        metadata["error_type"] = type(exc).__name__
+        metadata["error_message"] = bounded(str(exc), 240)
+        failed = {
+            "gate3_compensation_id": evidence.auto_id,
+            "calibration_id": evidence.source["calibration_id"],
+            "gabriel_status": "schema_invalid",
+            "error_type": type(exc).__name__,
+            "error_message": bounded(str(exc), 240),
+        }
+        return fields, metadata, failed
+    fields.update(
+        {
+            key: "|".join(value) if isinstance(value, list) else value
+            for key, value in parsed.items()
+        }
+    )
+    fields["gate3_short_rationale"] = redact_numbers(
+        fields["gate3_short_rationale"]
+    )
+    fields.update(
+        {
+            "gabriel_status": "success",
+            "gabriel_schema_valid": "true",
+            "gabriel_request_id": result.request_id,
+            "gabriel_backend": backend,
+            "gabriel_model": model,
+            "gabriel_input_page_count": str(len(evidence.pages)),
+            "gabriel_input_text_chars": str(evidence.text_chars),
+            "gabriel_used_images": "true" if evidence.use_images else "false",
+            "vision_evidence_used": "true" if evidence.use_images else "false",
+            "gabriel_elapsed_seconds": f"{result.elapsed_seconds:.6f}",
+        }
+    )
+    if not evidence.use_images:
+        fields["vision_legibility"] = "not_applicable"
+        fields["image_table_structure_observed"] = "not_applicable"
+        fields["image_role_pay_alignment_observed"] = "not_applicable"
+    return fields, metadata, None
+
+
 def decision_metrics(
     ledger: list[dict[str, str]],
     input_rows: list[dict[str, str]],
@@ -2407,7 +3025,10 @@ def decision_metrics(
     )
     representation_pass = (
         len(ready_rows) >= 30
-        and all(unit_ready.get(value, 0) >= 5 for value in ("police", "fire", "non_safety"))
+        and all(
+            unit_ready.get(value, 0) >= 5
+            for value in ("police", "fire", "non_safety")
+        )
         and sum(count > 0 for count in source_ready.values()) >= 3
     )
     ambiguity_pass = (
@@ -2467,10 +3088,12 @@ def decision_metrics(
             "non_wage_false_positives_and_ambiguity_resolved": ambiguity_pass,
         },
         "extraction_decision": decision,
-        "five_hundred_doc_extraction_allowed": decision
-        == "500_doc_extraction_allowed",
-        "smaller_extraction_pilot_allowed": decision
-        == "smaller_extraction_pilot_only",
+        "five_hundred_doc_extraction_allowed": (
+            decision == "500_doc_extraction_allowed"
+        ),
+        "smaller_extraction_pilot_allowed": (
+            decision == "smaller_extraction_pilot_only"
+        ),
         "next_recommendation": (
             "prepare_500_doc_extraction_prompt"
             if decision == "500_doc_extraction_allowed"
@@ -2483,6 +3106,156 @@ def decision_metrics(
     }
 
 
+def gate3_decision_metrics(
+    ledger: list[dict[str, str]],
+) -> dict[str, Any]:
+    original: dict[str, dict[str, str]] = {}
+    if ORIGINAL_CALIBRATION_PATH.is_file():
+        _, original_rows = read_csv(ORIGINAL_CALIBRATION_PATH)
+        original = {row["calibration_id"]: row for row in original_rows}
+    ready_categories = {
+        "quant_table_ready",
+        "quant_compact_ready",
+        "quant_prose_ready",
+        "qual_mechanism_ready",
+        "mixed_quant_qual_ready",
+    }
+    ready_recommendations = {
+        "quantitative_extraction_ready",
+        "qualitative_extraction_ready",
+        "mixed_extraction_ready",
+        "extraction_ready_with_schema_update",
+    }
+    ready_rows = [
+        row
+        for row in ledger
+        if row["compensation_evidence_category"] in ready_categories
+        and row["extraction_path_recommendation"] in ready_recommendations
+        and row["gate3_confidence"] in {"high", "medium"}
+    ]
+    likely_rows = [
+        row
+        for row in ledger
+        if original.get(row["calibration_id"], {}).get("wage_table_signal")
+        == "likely"
+        and original.get(row["calibration_id"], {}).get(
+            "extraction_pilot_priority"
+        )
+        == "p1"
+    ]
+    likely_ready_ids = {row["gate3_compensation_id"] for row in ready_rows}
+    likely_ready = sum(
+        row["gate3_compensation_id"] in likely_ready_ids for row in likely_rows
+    )
+    schema_valid = sum(
+        row["gabriel_schema_valid"] == "true" for row in ledger
+    )
+    unit_ready = Counter(row["unit_type"] for row in ready_rows)
+    source_ready = Counter(row["candidate_source_type"] for row in ready_rows)
+    state_ready = Counter(row["state"] for row in ready_rows)
+    reference_count = sum(
+        row["compensation_evidence_category"] == "reference_navigation_only"
+        for row in ledger
+    )
+    second_count = sum(
+        row["compensation_evidence_category"] == "second_review_required"
+        for row in ledger
+    )
+    error_count = sum(
+        row["compensation_evidence_category"] == "error" for row in ledger
+    )
+    schema_rate = schema_valid / len(ledger) if ledger else 0.0
+    likely_rate = likely_ready / len(likely_rows) if likely_rows else 0.0
+    reference_second_rate = (
+        (reference_count + second_count) / len(ledger) if ledger else 1.0
+    )
+    representation_pass = (
+        len(ready_rows) >= 40
+        and all(
+            unit_ready.get(value, 0) >= 5
+            for value in ("police", "fire", "non_safety")
+        )
+        and len(source_ready) >= 3
+        and len(state_ready) >= 3
+    )
+    ambiguity_pass = (
+        error_count == 0
+        and reference_second_rate < 0.50
+        and second_count / max(1, len(ledger)) <= 0.20
+    )
+    full_scope = len(ledger) == 150
+    five_hundred = all(
+        (
+            full_scope,
+            schema_rate >= 0.95,
+            likely_rate >= 0.80,
+            representation_pass,
+            ambiguity_pass,
+        )
+    )
+    smaller = (
+        full_scope
+        and not five_hundred
+        and schema_rate >= 0.95
+        and len(ready_rows) >= 40
+        and likely_rate >= 0.50
+        and all(
+            unit_ready.get(value, 0) >= 5
+            for value in ("police", "fire", "non_safety")
+        )
+        and len(source_ready) >= 3
+        and reference_second_rate < 0.50
+        and error_count == 0
+    )
+    decision = (
+        "500_doc_compensation_extraction_allowed"
+        if five_hundred
+        else "smaller_compensation_extraction_pilot_only"
+        if smaller
+        else "continue_evidence_discovery_refinement"
+    )
+    return {
+        "full_150_case_scope": full_scope,
+        "case_count": len(ledger),
+        "gabriel_schema_valid_count": schema_valid,
+        "gabriel_schema_valid_rate": round(schema_rate, 6),
+        "original_likely_p1_denominator": len(likely_rows),
+        "original_likely_p1_ready_count": likely_ready,
+        "original_likely_p1_ready_rate": round(likely_rate, 6),
+        "ready_count": len(ready_rows),
+        "ready_unit_type_counts": dict(sorted(unit_ready.items())),
+        "ready_source_type_counts": dict(sorted(source_ready.items())),
+        "ready_state_counts": dict(sorted(state_ready.items())),
+        "reference_navigation_only_count": reference_count,
+        "second_review_count": second_count,
+        "reference_or_second_review_rate": round(reference_second_rate, 6),
+        "error_count": error_count,
+        "representation_pass": representation_pass,
+        "systematic_ambiguity_pass": ambiguity_pass,
+        "five_hundred_criteria": {
+            "likely_p1_ready_rate_at_least_0_80": likely_rate >= 0.80,
+            "schema_valid_rate_at_least_0_95": schema_rate >= 0.95,
+            "representative_ready_rows": representation_pass,
+            "reference_and_second_review_not_dominant": (
+                reference_second_rate < 0.50
+            ),
+            "no_major_unresolved_ambiguity": ambiguity_pass,
+        },
+        "extraction_decision": decision,
+        "five_hundred_doc_compensation_extraction_allowed": (
+            decision == "500_doc_compensation_extraction_allowed"
+        ),
+        "smaller_compensation_extraction_pilot_allowed": (
+            decision == "smaller_compensation_extraction_pilot_only"
+        ),
+        "next_recommendation": (
+            "prepare_500_doc_compensation_extraction_prompt"
+            if decision == "500_doc_compensation_extraction_allowed"
+            else "prepare_smaller_compensation_extraction_pilot"
+            if decision == "smaller_compensation_extraction_pilot_only"
+            else "refine_bounded_compensation_evidence_discovery"
+        ),
+    }
 def counts(ledger: list[dict[str, str]], field: str) -> dict[str, int]:
     return dict(sorted(Counter(row[field] for row in ledger).items()))
 
@@ -2733,6 +3506,272 @@ wage-gap analysis, and durable-ledger mutation did not occur.
     return summary
 
 
+def write_gate3_outputs(
+    *,
+    output_dir: Path,
+    gate_id: str,
+    mode: str,
+    backend: str,
+    model: str,
+    evidence_cases: list[CaseEvidence],
+    ledger: list[dict[str, str]],
+    metadata_rows: list[dict[str, object]],
+    timing_rows: list[dict[str, object]],
+    failed_rows: list[dict[str, str]],
+    input_hash: str,
+    render_hash: str,
+    started_at: str,
+    elapsed: float,
+    image_fallback_occurred: bool = False,
+) -> dict[str, Any]:
+    output_dir.mkdir(parents=True, exist_ok=True)
+    for row in ledger:
+        row["gate3_short_rationale"] = redact_numbers(
+            row["gate3_short_rationale"]
+        )
+    write_csv(
+        output_dir / "auto_gabriel_compensation_adjudication_ledger.csv",
+        GATE3_LEDGER_FIELDS,
+        ledger,
+    )
+    write_csv(
+        output_dir / "auto_gabriel_compensation_adjudication_timing.csv",
+        [
+            "gate3_compensation_id",
+            "calibration_id",
+            "started_at",
+            "finished_at",
+            "local_evidence_elapsed_seconds",
+            "gabriel_elapsed_seconds",
+            "total_elapsed_seconds",
+            "gabriel_status",
+        ],
+        timing_rows,
+    )
+    request_fields = [
+        "gate3_compensation_id",
+        "calibration_id",
+        "gabriel_request_id",
+        "gabriel_backend",
+        "gabriel_model",
+        "request_status",
+        "prompt_sha256",
+        "prompt_chars",
+        "input_page_count",
+        "input_text_chars",
+        "image_input_requested",
+        "image_input_used",
+        "input_image_count",
+        "input_image_bytes",
+        "prior_labels_in_prompt",
+        "raw_prompt_saved",
+        "raw_response_saved",
+        "raw_images_saved",
+        "response_chars",
+        "response_sha256",
+        "input_tokens",
+        "output_tokens",
+        "total_tokens",
+        "elapsed_seconds",
+        "error_type",
+        "error_message",
+        "credential_value_saved",
+        "authorization_header_saved",
+    ]
+    write_csv(
+        output_dir
+        / "auto_gabriel_compensation_adjudication_request_metadata.csv",
+        request_fields,
+        metadata_rows,
+    )
+    failed_path = (
+        output_dir / "auto_gabriel_compensation_adjudication_failed_cases.csv"
+    )
+    if failed_rows:
+        write_csv(
+            failed_path,
+            [
+                "gate3_compensation_id",
+                "calibration_id",
+                "gabriel_status",
+                "error_type",
+                "error_message",
+            ],
+            failed_rows,
+        )
+    elif failed_path.exists():
+        failed_path.unlink()
+    decision = gate3_decision_metrics(ledger)
+    method = (
+        "automated_bounded_rendered_image_plus_text_layout_gabriel_"
+        "compensation_evidence_adjudication"
+        if any(row["gabriel_used_images"] == "true" for row in ledger)
+        else "automated_bounded_text_layout_gabriel_compensation_"
+        "evidence_adjudication"
+    )
+    decision.update(
+        {
+            "gate_id": gate_id,
+            "gate_mode": GATE3_MODE,
+            "compensation_schema_version": GATE3_SCHEMA_VERSION,
+            "method": method,
+            "mode": mode,
+            "gabriel_backend": backend,
+            "gabriel_model": model,
+            "generated_at": now_utc(),
+            "image_evidence_used": any(
+                row["gabriel_used_images"] == "true" for row in ledger
+            ),
+            "image_fallback_occurred": image_fallback_occurred,
+        }
+    )
+    write_json(
+        output_dir / "auto_gabriel_compensation_gate_decision.json",
+        decision,
+    )
+    summary = {
+        "gate_id": gate_id,
+        "gate_mode": GATE3_MODE,
+        "compensation_schema_version": GATE3_SCHEMA_VERSION,
+        "status": (
+            "dry_run_completed_no_gabriel_calls"
+            if mode == "dry_run"
+            else "preflight_passed"
+            if mode in {"preflight", "vision_preflight"} and not failed_rows
+            else "preflight_failed"
+            if mode in {"preflight", "vision_preflight"}
+            else "auto_gabriel_compensation_adjudication_completed"
+        ),
+        "method": method,
+        "mode": mode,
+        "started_at": started_at,
+        "finished_at": now_utc(),
+        "elapsed_seconds": round(elapsed, 6),
+        "gabriel_backend": backend,
+        "gabriel_model": model,
+        "cases": len(ledger),
+        "local_pages_evaluated": sum(
+            len(parse_pages(row["candidate_pages_evaluated"], int(row["pdf_page_count"])))
+            + len(parse_pages(row["nearby_pages_evaluated"], int(row["pdf_page_count"])))
+            + len(parse_pages(row["navigation_pages_evaluated"], int(row["pdf_page_count"])))
+            for row in ledger
+        ),
+        "bounded_text_chars_in_prompts": sum(
+            int(row["gabriel_input_text_chars"]) for row in ledger
+        ),
+        "rendered_pages_available_in_packets": sum(
+            int(row["rendered_page_count_used"]) for row in ledger
+        ),
+        "image_evidence_used": any(
+            row["gabriel_used_images"] == "true" for row in ledger
+        ),
+        "image_input_case_count": sum(
+            row["gabriel_used_images"] == "true" for row in ledger
+        ),
+        "image_input_page_count": sum(
+            int(row.get("input_image_count", 0) or 0) for row in metadata_rows
+        ),
+        "image_input_bytes": sum(
+            int(row.get("input_image_bytes", 0) or 0) for row in metadata_rows
+        ),
+        "image_fallback_occurred": image_fallback_occurred,
+        "gabriel_status_counts": counts(ledger, "gabriel_status"),
+        "gabriel_schema_valid_counts": counts(ledger, "gabriel_schema_valid"),
+        "compensation_evidence_category_counts": counts(
+            ledger, "compensation_evidence_category"
+        ),
+        "quantitative_evidence_present_counts": counts(
+            ledger, "quantitative_evidence_present"
+        ),
+        "qualitative_mechanism_evidence_present_counts": counts(
+            ledger, "qualitative_mechanism_evidence_present"
+        ),
+        "quantitative_evidence_type_counts": counts(
+            ledger, "quantitative_evidence_type"
+        ),
+        "qualitative_mechanism_type_counts": counts(
+            ledger, "qualitative_mechanism_type"
+        ),
+        "non_wage_compensation_type_counts": counts(
+            ledger, "non_wage_compensation_type"
+        ),
+        "extractable_quant_field_counts": delimited_code_counts(
+            ledger, "extractable_quant_fields"
+        ),
+        "extractable_qual_field_counts": delimited_code_counts(
+            ledger, "extractable_qual_fields"
+        ),
+        "candidate_page_relationship_counts": counts(
+            ledger, "candidate_page_relationship"
+        ),
+        "evidence_strength_counts": counts(ledger, "evidence_strength"),
+        "extraction_path_recommendation_counts": counts(
+            ledger, "extraction_path_recommendation"
+        ),
+        "gate3_confidence_counts": counts(ledger, "gate3_confidence"),
+        "gate3_reason_code_counts": delimited_code_counts(
+            ledger, "gate3_reason_codes"
+        ),
+        "failed_cases": len(failed_rows),
+        "input_sha256_before_after": [input_hash, input_hash],
+        "render_manifest_sha256_before_after": [render_hash, render_hash],
+        "full_text_saved": False,
+        "full_tables_saved": False,
+        "structured_wage_values_saved": False,
+        "final_qualitative_observations_saved": False,
+        "raw_prompts_saved": False,
+        "raw_responses_saved": False,
+        "urls_opened": 0,
+        "hosted_search_calls": 0,
+        "ocr_runs": 0,
+        "wage_extraction_runs": 0,
+        "qualitative_extraction_runs": 0,
+        "ingestion_actions": 0,
+        "codify_actions": 0,
+        "decision": decision,
+    }
+    write_json(
+        output_dir / "auto_gabriel_compensation_adjudication_summary.json",
+        summary,
+    )
+    report = f"""# Automated GABRIEL compensation-evidence adjudication report
+
+Gate: `{gate_id}`
+Mode: `{mode}`
+Method: `{method}`
+
+## Status
+
+- Cases: {len(ledger)}
+- Local bounded pages evaluated: {summary['local_pages_evaluated']}
+- Capped text characters supplied: {summary['bounded_text_chars_in_prompts']}
+- Image evidence used: `{str(summary['image_evidence_used']).lower()}`
+- Image fallback occurred: `{str(image_fallback_occurred).lower()}`
+- GABRIEL backend/model: `{backend}` / `{model}`
+- Schema-valid responses: {decision['gabriel_schema_valid_count']} / {len(ledger)}
+- Categories: `{json.dumps(summary['compensation_evidence_category_counts'], sort_keys=True)}`
+
+## Decision
+
+`{decision['extraction_decision']}`
+
+- 500-document compensation extraction allowed: `{str(decision['five_hundred_doc_compensation_extraction_allowed']).lower()}`
+- Smaller compensation pilot allowed: `{str(decision['smaller_compensation_extraction_pilot_allowed']).lower()}`
+- Original likely/p1 ready rate: {decision['original_likely_p1_ready_rate']:.2%}
+- GABRIEL schema-valid rate: {decision['gabriel_schema_valid_rate']:.2%}
+
+## Boundary
+
+Only bounded local evidence was adjudicated. No URL, hosted search, download,
+OCR, wage extraction, qualitative final extraction, ingestion, codification,
+wage-gap analysis, full-text/table saving, or raw prompt/response saving occurred.
+"""
+    (
+        output_dir / "auto_gabriel_compensation_adjudication_report.md"
+    ).write_text(report, encoding="utf-8")
+    return summary
+
+
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--blinded-input-csv", type=Path, required=True)
@@ -2743,6 +3782,8 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         "--gate-mode", choices=sorted(GATE_MODES), default=GATE1_MODE
     )
     parser.add_argument("--max-cases", type=int)
+    parser.add_argument("--only-calibration-id", action="append", default=[])
+    parser.add_argument("--resume-existing-output", action="store_true")
     parser.add_argument("--candidate-page-window", type=int, default=1)
     parser.add_argument("--navigation-page-budget", type=int, default=4)
     parser.add_argument("--max-pages-per-case", type=int, default=6)
@@ -2754,6 +3795,18 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--parallel", type=int, default=1)
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--preflight-only", action="store_true")
+    parser.add_argument("--vision-preflight-only", action="store_true")
+    parser.add_argument("--use-rendered-images", action="store_true")
+    parser.add_argument(
+        "--allow-image-fallback-to-text-layout", action="store_true"
+    )
+    parser.add_argument("--max-images-per-case", type=int, default=6)
+    parser.add_argument(
+        "--max-image-bytes-per-case", type=int, default=2_000_000
+    )
+    parser.add_argument(
+        "--compensation-schema-version", default=GATE3_SCHEMA_VERSION
+    )
     parser.add_argument("--no-save-full-text", action="store_true", default=True)
     parser.add_argument("--allow-gabriel", action="store_true")
     return parser.parse_args(argv)
@@ -2761,8 +3814,11 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
 
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv)
-    if args.dry_run and args.preflight_only:
-        raise ValueError("--dry-run and --preflight-only are mutually exclusive")
+    if sum((args.dry_run, args.preflight_only, args.vision_preflight_only)) > 1:
+        raise ValueError(
+            "--dry-run, --preflight-only, and --vision-preflight-only are "
+            "mutually exclusive"
+        )
     if not args.no_save_full_text:
         raise ValueError("full-text saving is prohibited")
     if args.max_cases is not None and not 1 <= args.max_cases <= 150:
@@ -2781,6 +3837,34 @@ def main(argv: list[str] | None = None) -> int:
         raise ValueError("timeout-per-case must be positive")
     if args.parallel not in {1, 2}:
         raise ValueError("parallel must be 1 or 2")
+    if not 1 <= args.max_images_per_case <= 6:
+        raise ValueError("max-images-per-case must be between 1 and 6")
+    if args.max_image_bytes_per_case <= 0:
+        raise ValueError("max-image-bytes-per-case must be positive")
+    if args.use_rendered_images and args.gate_mode != GATE3_MODE:
+        raise ValueError("rendered image input is available only in Gate 3 mode")
+    if args.vision_preflight_only and (
+        args.gate_mode != GATE3_MODE or not args.use_rendered_images
+    ):
+        raise ValueError(
+            "vision preflight requires Gate 3 mode and --use-rendered-images"
+        )
+    if (
+        args.gate_mode == GATE3_MODE
+        and args.compensation_schema_version != GATE3_SCHEMA_VERSION
+    ):
+        raise ValueError("unsupported Gate 3 compensation schema version")
+    if args.resume_existing_output and (
+        args.gate_mode != GATE3_MODE
+        or args.dry_run
+        or args.preflight_only
+        or args.vision_preflight_only
+        or not args.only_calibration_id
+    ):
+        raise ValueError(
+            "resume-existing-output requires a live Gate 3 run with one or "
+            "more --only-calibration-id values"
+        )
     live = not args.dry_run
     if live and not args.allow_gabriel:
         raise ValueError("live GABRIEL calls require --allow-gabriel")
@@ -2794,8 +3878,21 @@ def main(argv: list[str] | None = None) -> int:
     render_hash = sha256_file(render_path)
     fields, all_rows = read_csv(input_path)
     validate_blinded_input(fields, all_rows)
-    rows = all_rows[: args.max_cases] if args.max_cases else all_rows
-    if args.preflight_only:
+    rows = all_rows
+    if args.only_calibration_id:
+        requested_ids = set(args.only_calibration_id)
+        known_ids = {row["calibration_id"] for row in all_rows}
+        unknown_ids = sorted(requested_ids - known_ids)
+        if unknown_ids:
+            raise ValueError(
+                "unknown --only-calibration-id values: " + ",".join(unknown_ids)
+            )
+        rows = [
+            row for row in all_rows if row["calibration_id"] in requested_ids
+        ]
+    if args.max_cases:
+        rows = rows[: args.max_cases]
+    if args.preflight_only or args.vision_preflight_only:
         rows = rows[:1]
     render_map = validate_render_manifest(render_path, all_rows)
 
@@ -2815,12 +3912,16 @@ def main(argv: list[str] | None = None) -> int:
             max_chars_per_case=args.max_text_chars_per_case,
             gate_mode=args.gate_mode,
             candidate_window=args.candidate_page_window,
+            use_images=args.use_rendered_images,
+            max_images=args.max_images_per_case,
+            max_image_bytes=args.max_image_bytes_per_case,
         )
         local_elapsed[source["calibration_id"]] = time.monotonic() - started
         evidence_cases.append(evidence)
 
     key: str | None = None
     dotenv_location = "not_loaded"
+    image_fallback_occurred = False
     if live:
         key, dotenv_location = load_subscription_key()
         if not key:
@@ -2834,7 +3935,52 @@ def main(argv: list[str] | None = None) -> int:
             model=args.gabriel_model,
             timeout=args.timeout_per_case,
             parallel=args.parallel,
+            response_schema=(
+                GATE3_JSON_SCHEMA
+                if args.gate_mode == GATE3_MODE
+                else GABRIEL_JSON_SCHEMA
+            ),
+            schema_name=(
+                "bounded_compensation_evidence_adjudication"
+                if args.gate_mode == GATE3_MODE
+                else "bounded_text_table_adjudication"
+            ),
         )
+        if (
+            args.vision_preflight_only
+            and args.allow_image_fallback_to_text_layout
+            and any(result.status != "success" for result in live_results)
+            and any(
+                token in (
+                    result.error_type + " " + result.error_message
+                ).lower()
+                for result in live_results
+                for token in (
+                    "image",
+                    "vision",
+                    "unsupported",
+                    "input content",
+                    "input_image",
+                    "base64",
+                )
+            )
+        ):
+            image_fallback_occurred = True
+            for evidence in evidence_cases:
+                evidence.use_images = False
+                evidence.image_paths = []
+                evidence.image_bytes = 0
+                evidence.prompt = prompt_for_gate3_case(evidence)
+            live_results = run_live_requests(
+                evidence_cases,
+                key=key,
+                backend=args.gabriel_backend,
+                model=args.gabriel_model,
+                timeout=args.timeout_per_case,
+                parallel=args.parallel,
+                response_schema=GATE3_JSON_SCHEMA,
+                schema_name="bounded_compensation_evidence_adjudication",
+            )
     else:
         live_results = [
             LiveResult(
@@ -2856,13 +4002,60 @@ def main(argv: list[str] | None = None) -> int:
     timing_rows: list[dict[str, object]] = []
     failed_rows: list[dict[str, str]] = []
     for evidence, live_result in zip(evidence_cases, live_results):
-        if live:
+        if live and args.gate_mode == GATE3_MODE:
+            gabriel, metadata, failed = gate3_fields_from_result(
+                evidence=evidence,
+                result=live_result,
+                backend=args.gabriel_backend,
+                model=args.gabriel_model,
+            )
+        elif live:
             gabriel, metadata, failed = gabriel_fields_from_result(
                 evidence=evidence,
                 result=live_result,
                 backend=args.gabriel_backend,
                 model=args.gabriel_model,
             )
+        elif args.gate_mode == GATE3_MODE:
+            gabriel = empty_gate3(
+                backend=args.gabriel_backend,
+                model=args.gabriel_model,
+                status="not_called",
+                used_images=evidence.use_images,
+            )
+            gabriel["gabriel_input_page_count"] = str(len(evidence.pages))
+            gabriel["gabriel_input_text_chars"] = str(evidence.text_chars)
+            metadata = {
+                "gate3_compensation_id": evidence.auto_id,
+                "calibration_id": evidence.source["calibration_id"],
+                "gabriel_request_id": "",
+                "gabriel_backend": args.gabriel_backend,
+                "gabriel_model": args.gabriel_model,
+                "request_status": "not_called",
+                "prompt_sha256": sha256_bytes(evidence.prompt.encode("utf-8")),
+                "prompt_chars": len(evidence.prompt),
+                "input_page_count": len(evidence.pages),
+                "input_text_chars": evidence.text_chars,
+                "image_input_requested": args.use_rendered_images,
+                "image_input_used": evidence.use_images,
+                "input_image_count": len(evidence.image_paths or []),
+                "input_image_bytes": evidence.image_bytes,
+                "prior_labels_in_prompt": False,
+                "raw_prompt_saved": False,
+                "raw_response_saved": False,
+                "raw_images_saved": False,
+                "response_chars": 0,
+                "response_sha256": "",
+                "input_tokens": 0,
+                "output_tokens": 0,
+                "total_tokens": 0,
+                "elapsed_seconds": 0.0,
+                "error_type": "",
+                "error_message": "",
+                "credential_value_saved": False,
+                "authorization_header_saved": False,
+            }
+            failed = None
         else:
             gabriel = empty_gabriel(
                 backend=args.gabriel_backend,
@@ -2899,30 +4092,41 @@ def main(argv: list[str] | None = None) -> int:
                 "authorization_header_saved": False,
             }
             failed = None
-        final = (
-            combine_gate2(evidence, gabriel)
-            if args.gate_mode == GATE2_MODE
-            else combine_gate(evidence, gabriel)
-        )
-        row = {
-            **identity_fields(evidence),
-            **local_fields(evidence),
-            **(
-                gate2_fields(evidence)
+        if args.gate_mode == GATE3_MODE:
+            row = {
+                **gate3_identity_fields(evidence),
+                **local_fields(evidence),
+                **gabriel,
+            }
+            expected_fields = GATE3_LEDGER_FIELDS
+        else:
+            final = (
+                combine_gate2(evidence, gabriel)
                 if args.gate_mode == GATE2_MODE
-                else {}
-            ),
-            **gabriel,
-            **final,
-        }
-        expected_fields = (
-            GATE2_LEDGER_FIELDS
-            if args.gate_mode == GATE2_MODE
-            else LEDGER_FIELDS
-        )
+                else combine_gate(evidence, gabriel)
+            )
+            row = {
+                **identity_fields(evidence),
+                **local_fields(evidence),
+                **(
+                    gate2_fields(evidence)
+                    if args.gate_mode == GATE2_MODE
+                    else {}
+                ),
+                **gabriel,
+                **final,
+            }
+            expected_fields = (
+                GATE2_LEDGER_FIELDS
+                if args.gate_mode == GATE2_MODE
+                else LEDGER_FIELDS
+            )
         if set(row) != set(expected_fields):
             raise AssertionError("ledger row field set mismatch")
-        if row["auto_gate_label"] not in AUTO_GATE_LABELS:
+        if (
+            args.gate_mode != GATE3_MODE
+            and row["auto_gate_label"] not in AUTO_GATE_LABELS
+        ):
             raise AssertionError("invalid final gate label")
         ledger.append(row)
         metadata["dotenv_location"] = dotenv_location
@@ -2935,7 +4139,11 @@ def main(argv: list[str] | None = None) -> int:
         )
         timing_rows.append(
             {
-                "auto_adjudication_id": evidence.auto_id,
+                (
+                    "gate3_compensation_id"
+                    if args.gate_mode == GATE3_MODE
+                    else "auto_adjudication_id"
+                ): evidence.auto_id,
                 "calibration_id": evidence.source["calibration_id"],
                 "started_at": local_started_at[
                     evidence.source["calibration_id"]
@@ -2959,16 +4167,92 @@ def main(argv: list[str] | None = None) -> int:
     render_hash_after = sha256_file(render_path)
     if input_hash != input_hash_after or render_hash != render_hash_after:
         raise RuntimeError("immutable packet input changed during adjudication")
-    summary = write_outputs(
+    if args.resume_existing_output:
+        ledger_path = (
+            output_dir / "auto_gabriel_compensation_adjudication_ledger.csv"
+        )
+        metadata_path = output_dir / (
+            "auto_gabriel_compensation_adjudication_request_metadata.csv"
+        )
+        timing_path = output_dir / (
+            "auto_gabriel_compensation_adjudication_timing.csv"
+        )
+        if not all(path.is_file() for path in (ledger_path, metadata_path, timing_path)):
+            raise RuntimeError("Gate 3 resume requires existing output ledgers")
+        _, prior_ledger = read_csv(ledger_path)
+        _, prior_metadata = read_csv(metadata_path)
+        _, prior_timing = read_csv(timing_path)
+        replacement_ids = {row["calibration_id"] for row in ledger}
+        ledger_by_id = {
+            row["calibration_id"]: row
+            for row in prior_ledger
+            if row["calibration_id"] not in replacement_ids
+        }
+        ledger_by_id.update({row["calibration_id"]: row for row in ledger})
+        ledger = [ledger_by_id[row["calibration_id"]] for row in all_rows]
+        metadata_by_id = {
+            row["calibration_id"]: row
+            for row in prior_metadata
+            if row["calibration_id"] not in replacement_ids
+        }
+        metadata_by_id.update(
+            {row["calibration_id"]: row for row in metadata_rows}
+        )
+        metadata_rows = [
+            metadata_by_id[row["calibration_id"]] for row in all_rows
+        ]
+        timing_by_id = {
+            row["calibration_id"]: row
+            for row in prior_timing
+            if row["calibration_id"] not in replacement_ids
+        }
+        timing_by_id.update({row["calibration_id"]: row for row in timing_rows})
+        timing_rows = [timing_by_id[row["calibration_id"]] for row in all_rows]
+        prior_failed_path = output_dir / (
+            "auto_gabriel_compensation_adjudication_failed_cases.csv"
+        )
+        prior_failed: list[dict[str, str]] = []
+        if prior_failed_path.is_file():
+            _, prior_failed = read_csv(prior_failed_path)
+        failed_rows = [
+            row
+            for row in prior_failed
+            if row["calibration_id"] not in replacement_ids
+        ] + failed_rows
+    output_mode = (
+        "dry_run"
+        if args.dry_run
+        else "vision_preflight"
+        if args.vision_preflight_only
+        else "preflight"
+        if args.preflight_only
+        else "live_resume"
+        if args.resume_existing_output
+        else "live"
+    )
+    summary = (
+        write_gate3_outputs(
+            output_dir=output_dir,
+            gate_id=args.gate_id,
+            mode=output_mode,
+            backend=args.gabriel_backend,
+            model=args.gabriel_model,
+            evidence_cases=evidence_cases,
+            ledger=ledger,
+            metadata_rows=metadata_rows,
+            timing_rows=timing_rows,
+            failed_rows=failed_rows,
+            input_hash=input_hash,
+            render_hash=render_hash,
+            started_at=started_at,
+            elapsed=time.monotonic() - overall_started,
+            image_fallback_occurred=image_fallback_occurred,
+        )
+        if args.gate_mode == GATE3_MODE
+        else write_outputs(
         output_dir=output_dir,
         gate_id=args.gate_id,
-        mode=(
-            "dry_run"
-            if args.dry_run
-            else "preflight"
-            if args.preflight_only
-            else "live"
-        ),
+        mode=output_mode,
         backend=args.gabriel_backend,
         model=args.gabriel_model,
         evidence_cases=evidence_cases,
@@ -2982,6 +4266,7 @@ def main(argv: list[str] | None = None) -> int:
         started_at=started_at,
         elapsed=time.monotonic() - overall_started,
         gate_mode=args.gate_mode,
+        )
     )
     print(
         json.dumps(
@@ -2996,7 +4281,7 @@ def main(argv: list[str] | None = None) -> int:
             sort_keys=True,
         )
     )
-    if args.preflight_only:
+    if args.preflight_only or args.vision_preflight_only:
         return 0 if not failed_rows and all(
             row["gabriel_schema_valid"] == "true" for row in ledger
         ) else 2
