@@ -2,9 +2,48 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-24`
+Last updated: `2026-07-25`
 
 ---
+
+## 2026-07-25 — Full retained PDF readiness is durably merged
+
+### Current State
+
+- **Start and gate:** work began at clean tracked `b45876e2cd2541ce3a51b9d2ce397d7a715908a6`; all requested ancestry passed and the unrelated untracked root `package-lock.json` remains untouched. Fresh audits classify all three Pilot 1 and all four remainder lanes `completed_merge_eligible`; both recommend `merge_all_pdf_readiness_lanes`.
+- **Approved scope:** only the 150 Pilot 1 and 1,974 remainder local-readiness rows were merged. Combined identities are unique and terminal: 2,124 readiness IDs, source-review IDs, and candidate IDs, with zero cross-round duplicates.
+- **Authority equality:** [the readiness audit](pdf_readiness_full_retained_serial_merge_readiness_audit_2026-07-24.md) confirms exact source-review-ID and candidate-ID equality with every retained-PDF row in [the cumulative source-review ledger](source_review_ledgers/source_review_ledger_cumulative.csv). Artifact path, hash, byte size, and observed content type also match row-for-row.
+- **Exactly-once merge:** [the merge result](pdf_readiness_full_retained_serial_merge_result_2026-07-24.md) records the single execution of `merge_pdf_readiness_lanes.py` with merge ID `PDF-READINESS-FULL-RETAINED-MERGE-2026-07-24`.
+- **Durable outputs:** [the cumulative readiness ledger](pdf_readiness_ledgers/pdf_readiness_ledger_cumulative.csv) and latest pointer each contain 2,124 rows and are byte-identical. [The cumulative summary](pdf_readiness_ledgers/pdf_readiness_summary_cumulative.json) and latest summary are also byte-identical.
+- **Technical outcomes:** all 2,124 rows are `readiness_checked`; text layers are 1,608 `present`, 220 `partial`, and 296 `absent`. Parseability is 1,608 high, 220 medium, and 296 low. Next actions are 1,828 `parse_text_layer_later` and 296 `ocr_later`.
+- **Pages:** every retained PDF has a page count. The layer represents 108,028 pages; minimum/median/mean/p90/maximum are 1/44/50.86/84/463.
+- **Coverage:** prior source-review batches contribute Pilot 1 149, Batch 2 495, and Batch 3 1,480 retained PDFs. Priorities are p1 1,727 and p2 397; unit types are police 914, fire 506, and non-safety 704.
+- **Dashboard:** `pdf_readiness_phase = full_retained_merged`, readiness coverage is 1.0, and the next recommendation is `text_layer_table_detection_pilot`. OCR, ingestion, codification, wage extraction, and wage-gap analysis remain `not_started`.
+- **Boundary:** the merge was CSV/JSON-only. It opened no URL or PDF, made no network/API/model call, downloaded nothing, ran no OCR, retained no extracted text, and performed no wage extraction, ingestion, codification, scout accounting, or routing/triage/source-review-ledger mutation.
+- **Validation:** [the validation record](pdf_readiness_full_retained_serial_merge_validation_2026-07-24.md) reports six compiles, 21 offline/mock tests, final seven-lane audits, independent authority/field/statistic checks, 17 dashboard JSON files and frontend production build, schema and 60 ingestion tests, protected/upstream hashes, safety scans, and diff checks passed.
+
+### Interpretation
+
+The retained PDF universe is now completely covered by a durable technical
+readiness layer. About 86.1% have sampled text on at least one checked page,
+but this is not a content finding: it does not establish source relevance,
+employer or unit match, wage-table presence, wage values, or analysis-ready
+evidence. The 296 `ocr_later` rows are a planning category only; OCR remains
+unauthorized and unrun.
+
+### Next Move
+
+Review [the next-phase plan](post_full_pdf_readiness_next_phase_plan_2026-07-24.md)
+and lite relay. If separately authorized, plan a bounded 100–200-row
+text-layer content/table-detection pilot from the 1,828
+`parse_text_layer_later` PDFs; 150 is the recommended default. Sample p1/p2,
+police/fire/non-safety, officialness and source-type groups, and page-count
+bins. Keep snippets or structural metadata bounded and do not infer wage
+content from technical parseability.
+
+Do not automatically OCR the 296 absent-text rows, resume broad downloads,
+extract wages at scale, ingest, codify, or analyze wage gaps without separate
+authorization and explicit quality gates.
 
 ## 2026-07-24 — Full retained PDF readiness collected; cumulative merge pending
 

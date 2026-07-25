@@ -6,6 +6,33 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-25 (Full retained PDF readiness durably merged; 2,124-row technical-readiness layer)
+
+**Did**
+- Started from clean tracked `b45876e2cd2541ce3a51b9d2ce397d7a715908a6`, confirmed all requested ancestry, preserved the unrelated untracked root `package-lock.json`, and re-audited the completed Pilot 1 and remainder readiness lanes.
+- Confirmed three Pilot 1 and four remainder lanes are `completed_merge_eligible`, both round audits recommend `merge_all_pdf_readiness_lanes`, and the approved inputs contain 150 + 1,974 = 2,124 terminal readiness rows.
+- Added a fail-closed, offline multi-round merge tool and expanded the synthetic/mock suite to 21 passing tests. The tool requires merge-eligible audits, rejects duplicate/nonterminal rows and inherited artifact-field mismatches, verifies exact equality with the retained-PDF source-review authority, and refuses pre-existing targets.
+- Ran the cumulative merge exactly once with merge ID `PDF-READINESS-FULL-RETAINED-MERGE-2026-07-24`. The durable cumulative/latest ledgers contain 2,124 unique readiness, source-review, and candidate identities and exactly equal the retained-PDF subset of the 2,150-row cumulative source-review ledger.
+- Durable outcomes are 2,124 `readiness_checked`: 1,608 text-layer `present`, 220 `partial`, and 296 `absent`; technical parseability is 1,608 high, 220 medium, and 296 low. Recommended actions are 1,828 `parse_text_layer_later` and 296 `ocr_later`.
+- Every retained PDF has a page count. The durable layer represents 108,028 pages; minimum/median/mean/p90/maximum are 1/44/50.86/84/463.
+- Updated the dashboard to `full_retained_merged`, 2,124/2,124 retained PDFs checked, and `text_layer_table_detection_pilot` as the next recommendation.
+
+**Decisions and why**
+- Treat this durable layer as technical readiness only. Text-layer presence does not establish document identity, substantive relevance, wage-table presence, wage values, or analysis-ready evidence.
+- Recommend a bounded 100–200-PDF text-layer content/table-detection pilot next; 150 is a sensible default. Sample the 1,828 text-bearing PDFs across priority, unit, officialness, source type, and page-count bins.
+- Do not automatically OCR the 296 absent-sampled-text PDFs or resume bulk downloading. The next bottleneck is bounded content/table-detection yield, and OCR cost/quality should be evaluated separately.
+
+**Surprises/breakage**
+- The first expanded test run exposed an accounting ambiguity: a successful durable merge must record one durable merge, while prohibited execution counters remain zero. The summary/test expectation was corrected before the production merge; all 21 tests then passed.
+- No readiness audit, exact-identity, merge, dashboard, frontend, schema, ingestion, protected-file, or secret-safety gate failed.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Six compiles, 21 offline/mock tests, final audits for all seven lanes, independent 2,124-row authority and inherited-field checks, 17 dashboard JSON files/frontend production build, schema validation, 60 ingestion tests, protected/upstream/source-review-ledger and corpus hashes, no-PDF/no-text relay-output and secret-indicator checks, and diff checks passed. No URL, network/API/model call, download/redownload, PDF parse during merge, OCR, full-text artifact, scout-accounting or routing/triage/source-review-ledger mutation, ingestion, `gabriel.codify`, wage extraction, wage-gap work, causal claim, regression, remote action, or push occurred.
+
+**Next steps**
+1. Review the durable PDF-readiness ledger, merge audit, dashboard refresh, validation, next-phase plan, and lite relay.
+2. If separately authorized, plan a 100–200-row text-layer content/table-detection pilot from the 1,828 `parse_text_layer_later` rows; keep output bounded and preserve source identity/relevance caveats.
+3. Keep OCR, broad wage extraction, ingestion, codification, remaining downloads, and wage analysis separately authorized.
+
 ## 2026-07-24 (Full retained PDF readiness collected; cumulative merge pending)
 
 **Did**

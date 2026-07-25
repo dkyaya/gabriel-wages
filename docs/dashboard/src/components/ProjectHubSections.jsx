@@ -570,6 +570,9 @@ export function VerificationPipeline({
           <p className="eyebrow">PDF readiness</p>
           <h3>
             {pdfReadinessStatus.pdf_readiness_phase ===
+            "full_retained_merged"
+              ? "Full retained PDF readiness merged"
+              : pdfReadinessStatus.pdf_readiness_phase ===
             "full_retained_collected_not_merged"
               ? "Full retained PDF readiness collected; merge pending"
               : pdfReadinessStatus.pdf_readiness_phase ===
@@ -580,6 +583,26 @@ export function VerificationPipeline({
         </div>
         <p>
           {pdfReadinessStatus.pdf_readiness_phase ===
+          "full_retained_merged" ? (
+            <>
+              The durable technical-readiness layer covers{" "}
+              {formatNumber(pdfReadinessStatus.pdf_readiness_rows_merged)}
+              {" "}of{" "}
+              {formatNumber(pdfReadinessStatus.retained_pdf_artifacts_available)}
+              {" "}retained PDFs:{" "}
+              {formatNumber(pdfReadinessStatus.text_layer_present_rows)}
+              {" "}have text on every sampled page,{" "}
+              {formatNumber(pdfReadinessStatus.text_layer_partial_rows)}
+              {" "}have partial sampled text, and{" "}
+              {formatNumber(pdfReadinessStatus.text_layer_absent_rows)}
+              {" "}have no sampled text. The layer represents{" "}
+              {formatNumber(pdfReadinessStatus.total_pages_represented)}
+              {" "}pages. Technical readiness is complete for retained PDFs;
+              the next recommendation is a bounded text-layer/table-detection
+              pilot. OCR, wage extraction, ingestion, and codification have
+              not started.
+            </>
+          ) : pdfReadinessStatus.pdf_readiness_phase ===
           "full_retained_collected_not_merged" ? (
             <>
               Local technical readiness now covers{" "}

@@ -17,6 +17,7 @@ from pypdf import PdfWriter
 from reportlab.pdfgen import canvas
 
 import audit_pdf_readiness_lanes as auditor
+import merge_pdf_readiness_lanes as merger
 import pdf_readiness_sources as runner
 import prepare_pdf_readiness_pilot as planner
 
@@ -465,6 +466,387 @@ class PdfReadinessPlanningTests(unittest.TestCase):
             "merge_all_pdf_readiness_lanes",
         )
         self.assertEqual(result["terminal_rows"], 6)
+
+
+class PdfReadinessMergeTests(unittest.TestCase):
+    def setUp(self) -> None:
+        self.temp = tempfile.TemporaryDirectory()
+        self.base = Path(self.temp.name)
+        self.protected_before = {
+            path: file_hash(path) for path in PROTECTED if path.exists()
+        }
+
+    def tearDown(self) -> None:
+        for path, digest in self.protected_before.items():
+            self.assertEqual(file_hash(path), digest)
+        self.temp.cleanup()
+
+    def source_row(self, index: int) -> dict[str, str]:
+        return {
+            "source_review_id": f"source-{index}",
+            "candidate_queue_row_id": f"candidate-{index}",
+            "triage_id": f"triage-{index}",
+            "verification_id": f"verification-{index}",
+            "source_review_pilot_id": (
+                "SOURCE-REVIEW-PILOT1"
+                if index < 2
+                else "SOURCE-REVIEW-BATCH2"
+            ),
+            "state": ["OH", "MA", "CA", "IL"][index],
+            "municipality": f"Municipality {index}",
+            "government_name": f"Government {index}",
+            "unit_type_scouted": ["police", "fire", "non_safety", "police"][
+                index
+            ],
+            "candidate_source_type": "cba",
+            "priority_for_content_review": "p1" if index < 3 else "p2",
+            "source_officialness_rating": "official_municipal",
+            "source_relevance_rating": "possible",
+            "document_type_rating": "cba_candidate",
+            "extraction_readiness_rating": "medium",
+            "content_artifact_path": f"/retained/lane_{index}/artifact.pdf",
+            "content_hash": f"{index + 1:064x}",
+            "content_byte_size": str(1000 + index),
+            "content_type_observed": "application/pdf",
+            "source_review_status": "reviewed_metadata_and_artifact_saved",
+        }
+
+    def readiness_row(
+        self, source: dict[str, str], round_id: str, lane_id: str
+    ) -> dict[str, str]:
+        text_status = (
+            "present"
+            if source["source_review_id"] in {"source-0", "source-2"}
+            else "partial"
+            if source["source_review_id"] == "source-1"
+            else "absent"
+        )
+        parseability = {
+            "present": "high",
+            "partial": "medium",
+            "absent": "low",
+        }[text_status]
+        return {
+            "pdf_readiness_id": f"readiness-{source['source_review_id']}",
+            "source_review_id": source["source_review_id"],
+            "candidate_queue_row_id": source["candidate_queue_row_id"],
+            "triage_id": source["triage_id"],
+            "verification_id": source["verification_id"],
+            "source_review_pilot_id": source["source_review_pilot_id"],
+            "state": source["state"],
+            "municipality": source["municipality"],
+            "government_name": source["government_name"],
+            "unit_type": source["unit_type_scouted"],
+            "candidate_source_type": source["candidate_source_type"],
+            "priority_for_content_review": source[
+                "priority_for_content_review"
+            ],
+            "source_officialness_rating": source[
+                "source_officialness_rating"
+            ],
+            "source_relevance_rating": source["source_relevance_rating"],
+            "document_type_rating": source["document_type_rating"],
+            "extraction_readiness_rating": source[
+                "extraction_readiness_rating"
+            ],
+            "content_artifact_path": source["content_artifact_path"],
+            "content_hash": source["content_hash"],
+            "content_byte_size": source["content_byte_size"],
+            "content_type_observed": source["content_type_observed"],
+            "pdf_readiness_pilot_id": round_id,
+            "pdf_readiness_lane_id": lane_id,
+            "pilot_selection_rank": "1",
+            "artifact_byte_size_bin": "small_le_512_kib",
+            "sample_selection_reason": "test",
+            "readiness_status": "readiness_checked",
+            "readiness_status_detail": "bounded technical check complete",
+            "artifact_exists": "yes",
+            "artifact_hash_verified": "yes",
+            "pdf_signature_valid": "yes",
+            "parser_library": "pypdf",
+            "parser_version": "test",
+            "parser_elapsed_seconds": "0.1",
+            "pdf_page_count": str(10 + int(source["source_review_id"][-1])),
+            "text_layer_status": text_status,
+            "sampled_pages_checked": "3",
+            "sampled_pages_with_text": (
+                "3" if text_status == "present" else "1"
+                if text_status == "partial"
+                else "0"
+            ),
+            "text_chars_sampled_total": (
+                "100" if text_status != "absent" else "0"
+            ),
+            "text_extraction_error_type": "",
+            "text_extraction_error_sanitized": "",
+            "technical_parseability_rating": parseability,
+            "recommended_next_action": (
+                "ocr_later"
+                if text_status == "absent"
+                else "parse_text_layer_later"
+            ),
+            "ocr_needed_signal": "yes" if text_status == "absent" else "no",
+            "reviewer": "test",
+            "reviewed_at": "2026-07-24T00:00:00Z",
+        }
+
+    def build_fixture(
+        self,
+        base: Path,
+        *,
+        row_mutator: object | None = None,
+        source_mutator: object | None = None,
+        audit_mutator: object | None = None,
+    ) -> tuple[argparse.Namespace, list[dict[str, str]]]:
+        base.mkdir(parents=True)
+        source_rows = [self.source_row(index) for index in range(4)]
+        if callable(source_mutator):
+            source_mutator(source_rows)
+        source_path = base / "source_review.csv"
+        write_csv(source_path, source_rows)
+        manifests: list[str] = []
+        audits: list[str] = []
+        readiness_rows: list[dict[str, str]] = []
+        for round_index, indexes in enumerate(((0, 1), (2, 3)), start=1):
+            round_id = f"PDF-ROUND-{round_index}"
+            lane_id = "lane_1"
+            lane_dir = base / f"round_{round_index}_local"
+            lane_dir.mkdir()
+            rows = [
+                self.readiness_row(
+                    self.source_row(index), round_id, lane_id
+                )
+                for index in indexes
+            ]
+            readiness_rows.extend(rows)
+            ledger = lane_dir / "pdf_readiness_ledger.csv"
+            write_csv(ledger, rows)
+            manifest_path = base / f"round_{round_index}_manifest.json"
+            manifest = {
+                "pilot_id": round_id,
+                "selected_rows": 2,
+                "lanes": [
+                    {
+                        "lane_id": lane_id,
+                        "expected_rows": 2,
+                        "future_local_output_dir": lane_dir.as_posix(),
+                    }
+                ],
+            }
+            manifest_path.write_text(
+                json.dumps(manifest, indent=2) + "\n", encoding="utf-8"
+            )
+            audit_path = base / f"round_{round_index}_audit.json"
+            audit = {
+                "pilot_id": round_id,
+                "manifest": manifest_path.as_posix(),
+                "planned_rows": 2,
+                "ledger_rows": 2,
+                "terminal_rows": 2,
+                "lane_classification_counts": {
+                    "completed_merge_eligible": 1
+                },
+                "lanes": [
+                    {
+                        "lane_id": lane_id,
+                        "classification": "completed_merge_eligible",
+                        "mode": "local",
+                        "no_forbidden_activity": True,
+                        "terminal_rows": 2,
+                    }
+                ],
+                "cross_lane_duplicate_pdf_readiness_ids": 0,
+                "cross_lane_duplicate_source_review_ids": 0,
+                "cross_lane_duplicate_candidate_queue_ids": 0,
+                "hash_failures": 0,
+                "missing_artifacts": 0,
+                "parser_errors": 0,
+                "urls_opened": 0,
+                "network_calls": 0,
+                "downloads": 0,
+                "ocr_runs": 0,
+                "full_text_artifacts_written": 0,
+                "wage_values_extracted": 0,
+                "ingestion_actions": 0,
+                "codify_actions": 0,
+                "durable_readiness_merges": 0,
+                "merge_recommendation": "merge_all_pdf_readiness_lanes",
+            }
+            if callable(audit_mutator):
+                audit_mutator(audit, round_index)
+            audit_path.write_text(
+                json.dumps(audit, indent=2) + "\n", encoding="utf-8"
+            )
+            manifests.append(manifest_path.as_posix())
+            audits.append(audit_path.as_posix())
+        if callable(row_mutator):
+            row_mutator(base, readiness_rows)
+            for round_index in (1, 2):
+                indexes = (0, 1) if round_index == 1 else (2, 3)
+                write_csv(
+                    base
+                    / f"round_{round_index}_local"
+                    / "pdf_readiness_ledger.csv",
+                    [readiness_rows[index] for index in indexes],
+                )
+        return (
+            argparse.Namespace(
+                manifest=manifests,
+                audit_summary=audits,
+                source_review_ledger_csv=source_path.as_posix(),
+                output_dir=(base / "durable").as_posix(),
+                merge_id="PDF-MERGE-TEST",
+            ),
+            readiness_rows,
+        )
+
+    def test_merge_preserves_all_round_rows_and_readiness_fields(self) -> None:
+        args, input_rows = self.build_fixture(self.base / "preserve")
+        with mock.patch.object(
+            socket,
+            "create_connection",
+            side_effect=AssertionError("network attempted"),
+        ):
+            summary = merger.merge(args)
+        output = Path(args.output_dir)
+        _, merged = merger.read_csv(
+            output / "pdf_readiness_ledger_cumulative.csv"
+        )
+        self.assertEqual(len(merged), 4)
+        self.assertEqual(summary["pdf_readiness_rows_merged"], 4)
+        self.assertEqual(summary["retained_pdf_artifacts_available"], 4)
+        self.assertEqual(
+            summary["text_layer_status_counts"],
+            {"absent": 1, "partial": 1, "present": 2},
+        )
+        by_id = {row["pdf_readiness_id"]: row for row in merged}
+        for source in input_rows:
+            result = by_id[source["pdf_readiness_id"]]
+            for field in (
+                "content_artifact_path",
+                "content_hash",
+                "content_byte_size",
+                "content_type_observed",
+                "pdf_page_count",
+                "text_layer_status",
+                "technical_parseability_rating",
+                "recommended_next_action",
+            ):
+                self.assertEqual(result[field], source[field])
+            self.assertEqual(
+                result["pdf_readiness_stage"],
+                "technical_readiness_checked_not_extracted",
+            )
+        self.assertEqual(
+            (
+                output / "pdf_readiness_ledger_cumulative.csv"
+            ).read_bytes(),
+            (output / "pdf_readiness_ledger_latest.csv").read_bytes(),
+        )
+        self.assertEqual(
+            (
+                output / "pdf_readiness_summary_cumulative.json"
+            ).read_bytes(),
+            (output / "pdf_readiness_summary_latest.json").read_bytes(),
+        )
+        for field in merger.FORBIDDEN_COUNTER_FIELDS:
+            self.assertEqual(summary[field], 0)
+        self.assertEqual(summary["durable_readiness_merges"], 1)
+
+    def test_duplicate_identities_fail(self) -> None:
+        for field in (
+            "pdf_readiness_id",
+            "source_review_id",
+            "candidate_queue_row_id",
+        ):
+            with self.subTest(field=field):
+                def mutate(
+                    _base: Path,
+                    rows: list[dict[str, str]],
+                    target: str = field,
+                ) -> None:
+                    rows[2][target] = rows[0][target]
+
+                args, _ = self.build_fixture(
+                    self.base / f"duplicate_{field}",
+                    row_mutator=mutate,
+                )
+                with self.assertRaisesRegex(ValueError, "duplicate identity"):
+                    merger.merge(args)
+
+    def test_missing_terminal_row_fails(self) -> None:
+        def mutate(_base: Path, rows: list[dict[str, str]]) -> None:
+            rows[0]["readiness_status"] = "planned_not_checked"
+
+        args, _ = self.build_fixture(
+            self.base / "nonterminal", row_mutator=mutate
+        )
+        with self.assertRaisesRegex(ValueError, "nonterminal readiness"):
+            merger.merge(args)
+
+    def test_non_merge_eligible_audit_fails(self) -> None:
+        def mutate(audit: dict[str, object], round_index: int) -> None:
+            if round_index == 2:
+                audit["merge_recommendation"] = (
+                    "do_not_merge_until_resume_or_review"
+                )
+
+        args, _ = self.build_fixture(
+            self.base / "bad_audit", audit_mutator=mutate
+        )
+        with self.assertRaisesRegex(ValueError, "not merge eligible"):
+            merger.merge(args)
+
+    def test_retained_source_review_identity_mismatch_fails(self) -> None:
+        def mutate(rows: list[dict[str, str]]) -> None:
+            rows.pop()
+
+        args, _ = self.build_fixture(
+            self.base / "authority_identity", source_mutator=mutate
+        )
+        with self.assertRaisesRegex(ValueError, "identity mismatch"):
+            merger.merge(args)
+
+    def test_authority_artifact_field_mismatches_fail(self) -> None:
+        for field in (
+            "content_artifact_path",
+            "content_hash",
+            "content_byte_size",
+            "content_type_observed",
+        ):
+            with self.subTest(field=field):
+                def mutate(
+                    _base: Path,
+                    rows: list[dict[str, str]],
+                    target: str = field,
+                ) -> None:
+                    rows[0][target] = "mismatch"
+
+                args, _ = self.build_fixture(
+                    self.base / f"authority_{field}",
+                    row_mutator=mutate,
+                )
+                with self.assertRaisesRegex(
+                    ValueError, "authority field mismatch"
+                ):
+                    merger.merge(args)
+
+    def test_forbidden_activity_audit_fails(self) -> None:
+        def mutate(audit: dict[str, object], round_index: int) -> None:
+            if round_index == 1:
+                audit["downloads"] = 1
+
+        args, _ = self.build_fixture(
+            self.base / "forbidden", audit_mutator=mutate
+        )
+        with self.assertRaisesRegex(ValueError, "forbidden audit counter"):
+            merger.merge(args)
+
+    def test_existing_durable_target_fails_closed(self) -> None:
+        args, _ = self.build_fixture(self.base / "existing")
+        Path(args.output_dir).mkdir()
+        with self.assertRaises(FileExistsError):
+            merger.merge(args)
 
 
 if __name__ == "__main__":

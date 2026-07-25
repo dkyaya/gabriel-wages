@@ -166,6 +166,16 @@ PDF_READINESS_REMAINDER_SUMMARY_PATH = (
     / "PDF-READINESS-REMAINDER-ALL-RETAINED-2026-07-24"
     / "pdf_readiness_collection_summary.json"
 )
+PDF_READINESS_DURABLE_LEDGER_PATH = (
+    ANALYSIS_DIR
+    / "pdf_readiness_ledgers"
+    / "pdf_readiness_ledger_latest.csv"
+)
+PDF_READINESS_DURABLE_SUMMARY_PATH = (
+    ANALYSIS_DIR
+    / "pdf_readiness_ledgers"
+    / "pdf_readiness_summary_cumulative.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -224,6 +234,8 @@ OPTIONAL_PATHS = [
     SOURCE_REVIEW_BATCH3_DURABLE_SUMMARY_PATH,
     PDF_READINESS_PILOT1_SUMMARY_PATH,
     PDF_READINESS_REMAINDER_SUMMARY_PATH,
+    PDF_READINESS_DURABLE_LEDGER_PATH,
+    PDF_READINESS_DURABLE_SUMMARY_PATH,
 ]
 
 STATE_NAMES = {
@@ -3010,6 +3022,140 @@ def build_pdf_readiness_status_summary(
         != "merge_all_pdf_readiness_lanes"
     ):
         raise ValueError("PDF-readiness Pilot 1 summary fails collection gates")
+    if PDF_READINESS_DURABLE_SUMMARY_PATH.exists():
+        durable = read_json(PDF_READINESS_DURABLE_SUMMARY_PATH)
+        retained = int(durable.get("retained_pdf_artifacts_available", 0))
+        merged = int(durable.get("pdf_readiness_rows_merged", 0))
+        identity = durable.get("exact_retained_pdf_identity_equality", {})
+        forbidden_fields = (
+            "urls_opened",
+            "network_calls",
+            "downloads",
+            "redownloads",
+            "ocr_runs",
+            "full_text_artifacts_written",
+            "wage_tables_extracted",
+            "wage_values_extracted",
+            "ingestion_actions",
+            "codify_actions",
+            "scout_accounting_mutations",
+            "routing_ledger_mutations",
+            "metadata_triage_ledger_mutations",
+            "source_review_ledger_mutations",
+        )
+        if (
+            durable.get("status") != "pdf_readiness_full_retained_merged"
+            or durable.get("pdf_readiness_merge_id")
+            != "PDF-READINESS-FULL-RETAINED-MERGE-2026-07-24"
+            or durable.get("pdf_readiness_stage")
+            != "technical_readiness_checked_not_extracted"
+            or merged != retained
+            or float(
+                durable.get("retained_pdf_readiness_coverage_rate", 0)
+            )
+            != 1.0
+            or int(durable.get("unique_pdf_readiness_ids", 0)) != merged
+            or int(durable.get("unique_source_review_ids", 0)) != merged
+            or int(durable.get("unique_candidate_queue_row_ids", 0))
+            != merged
+            or any(
+                int(durable.get(field, -1)) != 0
+                for field in (
+                    "duplicate_pdf_readiness_ids",
+                    "duplicate_source_review_ids",
+                    "duplicate_candidate_queue_row_ids",
+                    "missing_artifacts",
+                    "hash_failures",
+                    "invalid_pdf_signatures",
+                    "parser_errors",
+                    *forbidden_fields,
+                )
+            )
+            or int(durable.get("durable_readiness_merges", 0)) != 1
+            or identity.get("source_review_id_set_equal") is not True
+            or identity.get("candidate_queue_row_id_set_equal") is not True
+            or identity.get("authority_field_mismatch_counts") != {}
+            or durable.get("readiness_status_counts")
+            != {"readiness_checked": merged}
+            or int(
+                durable.get("page_count_summary", {}).get("count", 0)
+            )
+            != merged
+            or not PDF_READINESS_DURABLE_LEDGER_PATH.exists()
+        ):
+            raise ValueError(
+                "durable full-retained PDF-readiness summary fails gates"
+            )
+        text_counts = durable["text_layer_status_counts"]
+        action_counts = durable["recommended_next_action_counts"]
+        pages = durable["page_count_summary"]
+        return {
+            **metadata,
+            "pdf_readiness_phase": "full_retained_merged",
+            "latest_pdf_readiness_pilot_id": pilot["pilot_id"],
+            "latest_pdf_readiness_round_id": (
+                "PDF-READINESS-REMAINDER-ALL-RETAINED-2026-07-24"
+            ),
+            "latest_pdf_readiness_merge_id": durable[
+                "pdf_readiness_merge_id"
+            ],
+            "pdf_readiness_merge_status": "merged",
+            "source_review_rows_available": int(
+                durable["source_review_rows"]
+            ),
+            "retained_pdf_artifacts_available": retained,
+            "pdf_readiness_rows_merged": merged,
+            "retained_pdf_readiness_coverage_rate": float(
+                durable["retained_pdf_readiness_coverage_rate"]
+            ),
+            "readiness_status_counts": durable["readiness_status_counts"],
+            "text_layer_status_counts": text_counts,
+            "text_layer_present_rows": int(text_counts.get("present", 0)),
+            "text_layer_partial_rows": int(text_counts.get("partial", 0)),
+            "text_layer_absent_rows": int(text_counts.get("absent", 0)),
+            "technical_parseability_rating_counts": durable[
+                "technical_parseability_rating_counts"
+            ],
+            "recommended_next_action_counts": action_counts,
+            "parse_text_layer_later_rows": int(
+                action_counts.get("parse_text_layer_later", 0)
+            ),
+            "ocr_later_rows": int(action_counts.get("ocr_later", 0)),
+            "page_count_summary": pages,
+            "total_pages_represented": int(pages["total_pages"]),
+            "median_page_count": pages["median"],
+            "max_page_count": pages["maximum"],
+            "sampled_pages_checked": int(
+                durable["sampled_pages_checked"]
+            ),
+            "sampled_pages_with_text": int(
+                durable["sampled_pages_with_text"]
+            ),
+            "parser_library_counts": durable["parser_library_counts"],
+            "parser_version_counts": durable["parser_version_counts"],
+            "parser_error_rows": int(durable["parser_errors"]),
+            "hash_failure_rows": int(durable["hash_failures"]),
+            "missing_artifact_rows": int(durable["missing_artifacts"]),
+            "durable_pdf_readiness_ledger_latest": relative(
+                PDF_READINESS_DURABLE_LEDGER_PATH
+            ),
+            "technical_readiness_status": "complete_for_retained_pdfs",
+            "next_recommendation": "text_layer_table_detection_pilot",
+            "ingestion_status": "not_started",
+            "codify_status": "not_started",
+            "wage_extraction_status": "not_started",
+            "wage_gap_analysis_status": "not_started",
+            "summary_source": relative(
+                PDF_READINESS_DURABLE_SUMMARY_PATH
+            ),
+            "caveats": [
+                "PDF-readiness is technical parseability only.",
+                "Text-layer presence does not prove wage data exists.",
+                "OCR has not run.",
+                "Wage extraction has not started.",
+                "No ingestion or codification has occurred.",
+            ],
+        }
     if PDF_READINESS_REMAINDER_SUMMARY_PATH.exists():
         full = read_json(PDF_READINESS_REMAINDER_SUMMARY_PATH)
         if (

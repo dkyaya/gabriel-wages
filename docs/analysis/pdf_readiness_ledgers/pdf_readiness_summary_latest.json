@@ -1,0 +1,217 @@
+{
+  "audit_summary_paths": [
+    "tmp/pdf_readiness_pilots/PDF-READINESS-PILOT1-150-2026-07-24/cumulative_merge_readiness_audit_2026-07-24/pdf_readiness_lane_audit_summary.json",
+    "tmp/pdf_readiness_pilots/PDF-READINESS-REMAINDER-ALL-RETAINED-2026-07-24/cumulative_merge_readiness_audit_2026-07-24/pdf_readiness_lane_audit_summary.json"
+  ],
+  "candidate_source_type_distribution": {
+    "arbitration_award": 10,
+    "cba": 2003,
+    "factfinding": 3,
+    "memorandum_or_settlement": 23,
+    "ordinance_or_policy": 20,
+    "pay_plan": 1,
+    "wage_schedule_or_compensation_plan": 64
+  },
+  "caveats": [
+    "PDF-readiness is technical parseability only.",
+    "Text-layer presence does not prove wage data exists.",
+    "OCR has not run.",
+    "Wage extraction has not started.",
+    "No ingestion or codification has occurred."
+  ],
+  "codify_actions": 0,
+  "content_artifact_bytes": 4500367582,
+  "document_type_distribution": {
+    "cba_candidate": 2003,
+    "unknown": 121
+  },
+  "downloads": 0,
+  "duplicate_candidate_queue_row_ids": 0,
+  "duplicate_pdf_readiness_ids": 0,
+  "duplicate_source_review_ids": 0,
+  "durable_readiness_merges": 1,
+  "exact_retained_pdf_identity_equality": {
+    "authority_field_mismatch_counts": {},
+    "authority_fields_checked": {
+      "candidate_queue_row_id": "candidate_queue_row_id",
+      "candidate_source_type": "candidate_source_type",
+      "content_artifact_path": "content_artifact_path",
+      "content_byte_size": "content_byte_size",
+      "content_hash": "content_hash",
+      "content_type_observed": "content_type_observed",
+      "document_type_rating": "document_type_rating",
+      "extraction_readiness_rating": "extraction_readiness_rating",
+      "government_name": "government_name",
+      "municipality": "municipality",
+      "priority_for_content_review": "priority_for_content_review",
+      "source_officialness_rating": "source_officialness_rating",
+      "source_relevance_rating": "source_relevance_rating",
+      "source_review_pilot_id": "source_review_pilot_id",
+      "state": "state",
+      "triage_id": "triage_id",
+      "unit_type": "unit_type_scouted",
+      "verification_id": "verification_id"
+    },
+    "candidate_queue_row_id_set_equal": true,
+    "source_review_id_set_equal": true
+  },
+  "full_text_artifacts_written": 0,
+  "hash_failures": 0,
+  "ingestion_actions": 0,
+  "invalid_pdf_signatures": 0,
+  "manifest_paths": [
+    "docs/analysis/pdf_readiness_pilots/PDF-READINESS-PILOT1-150-2026-07-24/pdf_readiness_pilot_manifest.json",
+    "docs/analysis/pdf_readiness_pilots/PDF-READINESS-REMAINDER-ALL-RETAINED-2026-07-24/pdf_readiness_pilot_manifest.json"
+  ],
+  "metadata_triage_ledger_mutations": 0,
+  "missing_artifacts": 0,
+  "network_calls": 0,
+  "next_recommendation": "text_layer_table_detection_pilot",
+  "ocr_runs": 0,
+  "officialness_distribution": {
+    "official_municipal": 785,
+    "official_state_repository": 536,
+    "official_union": 52,
+    "uncertain": 677,
+    "unknown": 74
+  },
+  "page_count_summary": {
+    "buckets": {
+      "11_to_25": 215,
+      "1_to_10": 86,
+      "26_to_50": 990,
+      "51_to_100": 701,
+      "over_100": 132
+    },
+    "count": 2124,
+    "maximum": 463,
+    "mean": 50.86064,
+    "median": 44,
+    "minimum": 1,
+    "p90": 84,
+    "total_pages": 108028
+  },
+  "parser_errors": 0,
+  "parser_library_counts": {
+    "pypdf": 2124
+  },
+  "parser_version_counts": {
+    "6.13.2": 2124
+  },
+  "pdf_readiness_merge_id": "PDF-READINESS-FULL-RETAINED-MERGE-2026-07-24",
+  "pdf_readiness_merged_at": "2026-07-25T12:25:23Z",
+  "pdf_readiness_rows_merged": 2124,
+  "pdf_readiness_stage": "technical_readiness_checked_not_extracted",
+  "priority_distribution": {
+    "p1": 1727,
+    "p2": 397
+  },
+  "readiness_status_counts": {
+    "readiness_checked": 2124
+  },
+  "recommended_next_action_counts": {
+    "ocr_later": 296,
+    "parse_text_layer_later": 1828
+  },
+  "redownloads": 0,
+  "retained_pdf_artifacts_available": 2124,
+  "retained_pdf_readiness_coverage_rate": 1.0,
+  "round_ids": [
+    "PDF-READINESS-PILOT1-150-2026-07-24",
+    "PDF-READINESS-REMAINDER-ALL-RETAINED-2026-07-24"
+  ],
+  "round_row_counts": {
+    "PDF-READINESS-PILOT1-150-2026-07-24": 150,
+    "PDF-READINESS-REMAINDER-ALL-RETAINED-2026-07-24": 1974
+  },
+  "routing_ledger_mutations": 0,
+  "sampled_pages_checked": 6322,
+  "sampled_pages_with_text": 5201,
+  "schema_version": "1.0.0",
+  "scout_accounting_mutations": 0,
+  "source_review_batch_distribution": {
+    "SOURCE-REVIEW-BATCH2-500-2026-07-24": 495,
+    "SOURCE-REVIEW-BATCH3-3X500-2026-07-24": 1480,
+    "SOURCE-REVIEW-PILOT1-150-2026-07-24": 149
+  },
+  "source_review_ledger_csv": "docs/analysis/source_review_ledgers/source_review_ledger_cumulative.csv",
+  "source_review_ledger_mutations": 0,
+  "source_review_ledger_sha256": "e29d580d42068615611b464e6da40654f336f273fa7c40a7b0717d4894148c9f",
+  "source_review_rows": 2150,
+  "state_distribution": {
+    "AK": 14,
+    "AL": 2,
+    "AR": 2,
+    "AZ": 3,
+    "CA": 259,
+    "CO": 14,
+    "CT": 36,
+    "DC": 5,
+    "DE": 10,
+    "FL": 118,
+    "GA": 4,
+    "HI": 3,
+    "IA": 32,
+    "ID": 10,
+    "IL": 199,
+    "IN": 10,
+    "KS": 13,
+    "KY": 5,
+    "LA": 3,
+    "MA": 73,
+    "MD": 17,
+    "ME": 24,
+    "MI": 113,
+    "MN": 59,
+    "MO": 16,
+    "MS": 3,
+    "MT": 24,
+    "NC": 2,
+    "ND": 2,
+    "NE": 17,
+    "NH": 23,
+    "NJ": 28,
+    "NM": 14,
+    "NV": 22,
+    "NY": 31,
+    "OH": 537,
+    "OK": 16,
+    "OR": 69,
+    "PA": 30,
+    "RI": 13,
+    "SC": 2,
+    "SD": 10,
+    "TN": 4,
+    "TX": 39,
+    "UT": 3,
+    "VA": 10,
+    "VT": 6,
+    "WA": 105,
+    "WI": 64,
+    "WV": 2,
+    "WY": 4
+  },
+  "status": "pdf_readiness_full_retained_merged",
+  "technical_parseability_rating_counts": {
+    "high": 1608,
+    "low": 296,
+    "medium": 220
+  },
+  "text_chars_sampled_total": 1997021,
+  "text_layer_status_counts": {
+    "absent": 296,
+    "partial": 220,
+    "present": 1608
+  },
+  "unique_candidate_queue_row_ids": 2124,
+  "unique_pdf_readiness_ids": 2124,
+  "unique_source_review_ids": 2124,
+  "unit_type_distribution": {
+    "fire": 506,
+    "non_safety": 704,
+    "police": 914
+  },
+  "urls_opened": 0,
+  "wage_tables_extracted": 0,
+  "wage_values_extracted": 0
+}

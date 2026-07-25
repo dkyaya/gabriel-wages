@@ -229,21 +229,25 @@ The dashboard phase is `batch3_3x500_merged`. Batch 3 contributes 1,480
 retained PDFs, 16 timeout outcomes, four forbidden outcomes, and approximately
 3.190 GB of PDF content.
 
-Local PDF readiness now covers the complete 2,124-retained-PDF universe in
-two collected, unmerged rounds: the preserved 150-row Pilot 1 and a 1,974-row
-four-lane remainder. Every retained artifact passed existence, hash, size,
-signature, and page-count gates. Cumulative sampled text-layer status is
-1,608 present, 220 partial, and 296 absent; parser errors are zero. Page
-counts range from 1 to 463, have a median of 44, and represent 108,028 pages.
+Local PDF readiness is now durably merged for the complete
+2,124-retained-PDF universe. The cumulative ledger combines exactly the
+preserved 150-row Pilot 1 and the 1,974-row four-lane remainder. It has exact
+source-review and candidate identity equality with the retained-PDF subset
+of the cumulative source-review ledger. Every readiness row is terminal and
+has a page count.
 
-The dashboard phase is `full_retained_collected_not_merged`. The next
-recommendation is one serial cumulative PDF-readiness merge covering both
-rounds exactly once. After that merge, a bounded content/identity and
-structured-text evaluation over text-bearing PDFs is preferable to more bulk
-downloading. The complete local pass opened no URL, downloaded nothing, ran
-no OCR, and saved no extracted text. Final content-supported source rating,
-ingestion, codification, wage extraction, and wage-gap analysis remain
-unperformed.
+Cumulative sampled text-layer status is 1,608 present, 220 partial, and 296
+absent; technical parseability is high, medium, and low for the same groups.
+Page counts range from 1 to 463, have a median of 44, and represent 108,028
+pages. Parser, hash, missing-artifact, and signature failures are zero.
+
+The dashboard phase is `full_retained_merged`. The next recommendation is a
+bounded 100-200 PDF text-layer content-structure and table-detection pilot
+from the 1,828 `parse_text_layer_later` rows. The merge opened no URL or PDF,
+downloaded nothing, ran no OCR, and saved no extracted text. Text-layer
+presence does not prove wage data exist. Final content-supported source
+rating, ingestion, codification, wage extraction, and wage-gap analysis
+remain unperformed.
 
 ## Run and build locally
 
