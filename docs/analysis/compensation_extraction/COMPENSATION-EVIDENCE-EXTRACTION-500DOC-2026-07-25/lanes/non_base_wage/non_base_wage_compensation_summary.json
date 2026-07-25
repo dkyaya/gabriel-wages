@@ -1,0 +1,17 @@
+{
+  "case_count": 395,
+  "observation_count": 1327,
+  "type_counts": {
+    "benefits": 59,
+    "education_or_certification": 52,
+    "healthcare_contributions": 75,
+    "leave": 432,
+    "longevity": 45,
+    "other": 301,
+    "overtime": 222,
+    "pension": 39,
+    "reimbursements": 30,
+    "stipend": 29,
+    "uniform_or_equipment": 43
+  }
+}

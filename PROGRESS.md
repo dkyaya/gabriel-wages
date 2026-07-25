@@ -6,6 +6,34 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-25 (Provisional 500-document compensation extraction complete; scale QA hold)
+
+**Did**
+- Started from clean tracked `207657535563117295f302ca04c220f50f4c868e`, preserving the unrelated untracked root `package-lock.json` and 785 local adjudication renders. Verified the Gate 3 authorization and hash-verified, signature-valid, OCR-free local eligibility pool.
+- Froze exactly 500 unique retained document identities across 200 matched municipalities: 180 police, 120 fire, and 200 non-safety cases in 40 states/DC and six source families. Selection SHA-256 is `2341e68426e5e62bdf406817fed17c703ee116d7c31af81f9e73b8b96ad583fb`.
+- Built 2,843 bounded page packets under six-page, 1,500-character/page, and 6,000-character/case limits. Existing images were used for 108 pages in 42 calibration cases; no image copy was saved.
+- Passed a four-case quantitative/qualitative/mixed/reference preflight, then ran resumable GABRIEL lanes. The first pass stored 476/500 strict semantic-schema results; retries recovered 21, two, and one cases, producing 500/500 final validity without relaxing the schema.
+- Materialized separate provisional ledgers: 1,073 quantitative observations, 1,181 qualitative-mechanism observations, 182 mixed join rows linking 686 quantitative and 572 qualitative sub-records, 1,327 non-base-wage observations, and 90 reference/exclusion cases.
+- Added targeted QA annotations and a 187-row review queue. Integrity QA passes with zero invalid page pointers and zero duplicate IDs. Scale QA holds for 83 possible quantitative conflict groups, three exact structured-content duplicates, and 102 possible non-base-wage quantitative records.
+- Updated generated dashboard data, the existing calibration card, dashboard docs, analysis readiness, result/decision/validation docs, and `next_task.md`.
+
+**Decisions and why**
+- The run decision is `premature_pending_targeted_qa`. The provisional 500 layer is complete and structurally valid, but scaling to 1,000 is not recommended until the explicit conflict/duplicate/non-base review queue is resolved.
+- No final merge or ingestion is allowed. Mixed evidence retains separate stable-joined quantitative and qualitative sub-records; non-base compensation is separately preserved and possible lane contamination is flagged rather than silently changed.
+- Final case-level schema validity is 100%; request-attempt success is 500/528 (94.70%) because 26 semantically invalid attempts and two timeouts were rejected and retried.
+
+**Surprises/breakage**
+- The extraction selection was feasible only by explicitly preserving 200 matched municipality seeds, then filling fixed unit quotas. This yielded complete selected non-safety pairing and stronger design discipline than an unpaired score-only sample.
+- API JSON Schema alone did not enforce lane semantics: 26 attempts returned shapes such as `mixed_ready` without both sub-record arrays. The local invariant rejected them; bounded retries resolved every case.
+- The first conflict heuristic over-counted legitimate distinct steps and effective dates. A refined same-key rule reduced 225 groups to 83 and retained all values for targeted review.
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Four compiles, 33 Gate 1–3 regression tests, 10 extraction tests, dashboard data/frontend builds, repository validation, 60 ingestion tests, coverage audit, immutable authority/protected hashes, packet/secret/raw-artifact checks, and diff checks passed.
+
+**Next steps**
+1. Review the 187-row bounded QA queue; resolve exact duplicates, true-versus-structural conflicts, and base/non-base lane placement without changing the frozen 500 identities.
+2. Recompute the 500-document QA decision without new extraction.
+3. Keep 1,000-document scaling, final merge, ingestion, codification, wage-gap analysis, regression, URL access, download, and OCR closed until scale QA passes.
+
 ## 2026-07-25 (Automated GABRIEL Gate 3 compensation evidence authorizes future 500-doc extraction)
 
 **Did**

@@ -6,6 +6,37 @@ Last updated: `2026-07-25`
 
 ---
 
+## 2026-07-25 — Provisional 500-document extraction completed; targeted QA required before 1,000
+
+### Current State
+
+- **Authority/start:** work began at clean tracked `207657535563117295f302ca04c220f50f4c868e`, the Gate 3 commit that authorized a 500-document compensation-evidence extraction design. The unrelated untracked root `package-lock.json` and local 785-page adjudication render directory remain outside the task.
+- **Selection:** [the audit](compensation_extraction/COMPENSATION-EVIDENCE-EXTRACTION-500DOC-2026-07-25/compensation_extraction_500_selection_audit.md) freezes 500 unique retained hashes across 200 matched municipalities: 180 police, 120 fire, and 200 non-safety in 40 states/DC. Selection SHA-256 is `2341e68426e5e62bdf406817fed17c703ee116d7c31af81f9e73b8b96ad583fb`.
+- **Packets:** 2,843 local page records obey six-page, 1,500-character/page, and 6,000-character/case caps. Final successful requests used 2,841,259 bounded text characters and 108 existing images across 42 cases. No PDF/image/text/table copy is in the output.
+- **GABRIEL:** four representative preflight requests passed. The live first pass stored 476/500 strict semantic-schema cases; resumable retries recovered 21, two, and one cases. Final validity is 500/500. Across 528 live attempts, 500 succeeded, 26 were rejected by stricter local lane semantics, and two timed out.
+- **Ledgers:** [the result](compensation_extraction_500_result_2026-07-25.md) records 1,073 quantitative observations across 283 cases, 1,181 qualitative mechanisms across 387, 182 mixed-case stable joins, 1,327 non-base-wage observations across 395, and 90 reference/exclusion cases. Mixed rows link 686 quantitative and 572 qualitative sub-records without collapsing them.
+- **QA:** [the QA report](compensation_extraction/COMPENSATION-EVIDENCE-EXTRACTION-500DOC-2026-07-25/compensation_extraction_500_qa_report.md) passes integrity: exact 500 identity/result counts, bounded packets, zero invalid page pointers, and zero duplicate IDs. Scale QA is held by 83 possible same-key quantitative conflicts, three exact structured-content duplicates, and 102 possible non-base-wage quantitative records. The review manifest has 187 rows.
+- **Decision:** [the decision](compensation_extraction/COMPENSATION-EVIDENCE-EXTRACTION-500DOC-2026-07-25/compensation_extraction_500_decision_report.md) is `premature_pending_targeted_qa`; final merge and ingestion are false. Scaling to 1,000 is premature.
+- **Dashboard:** phase is `compensation_extraction_500_provisional_completed`; provisional quantitative/qualitative extraction is shown as complete on QA hold, while analysis readiness is false. Ingestion, codification, wage-gap analysis, and regression remain not started.
+- **Validation:** [the validation record](compensation_extraction/COMPENSATION-EVIDENCE-EXTRACTION-500DOC-2026-07-25/compensation_extraction_500_validation_2026-07-25.md) reports four compiles, 33 prior-gate regression tests, 10 extraction tests, dashboard data/frontend builds, repository validation, 60 ingestion tests, coverage audit, immutable authority/protected hashes, exact packet limits, artifact/secret safety, and diff hygiene.
+- **Boundary:** GABRIEL ran only after preflight and explicit authorization. No URL/hosted search, download/redownload, OCR, scout, source review, verification, ingestion, `gabriel.codify`, final merge, wage-gap work, regression, remote inspection, or push occurred.
+
+### Interpretation
+
+The provisional layer demonstrates broad extractable compensation evidence but
+also identifies the exact QA bottleneck before scale. It is not analysis-ready.
+The high non-base-wage volume is retained deliberately; suspected quantitative
+lane contamination is flagged rather than silently recoded. The 83 conflict
+groups are conservative review candidates, not confirmed contradictions.
+
+### Next Move
+
+Follow [next_task.md](../../next_task.md): review only the 187 bounded queue
+rows, preserve provenance while resolving duplicates and lane placement, and
+recompute QA without new document selection or extraction. Authorize 1,000
+documents only after conflict rate is at most 2%, base/non-base ambiguity is
+resolved, and all integrity/matching checks remain green.
+
 ## 2026-07-25 — Automated GABRIEL Gate 3 authorizes future 500-doc compensation extraction
 
 ### Current State

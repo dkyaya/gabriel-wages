@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": "0.1.0",
-    "generated_at": "2026-07-25T20:13:16Z",
+    "generated_at": "2026-07-25T21:54:39Z",
     "data_vintage": "2026-07-23",
     "source_files": [
       "docs/analysis/national_scout_coverage_state.csv",
@@ -82,7 +82,7 @@
       "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
     ]
   },
-  "overall_status": "verification_scale_up_planned_after_discovery_checkpoint",
+  "overall_status": "provisional_500_compensation_extraction_complete_scale_qa_hold",
   "current_inputs": {
     "national_queue_available": true,
     "national_coverage_available": true,
@@ -138,9 +138,13 @@
       "count": null
     },
     "wage_extraction_stage": {
-      "available": false,
-      "display_status": "planned_after_scout_checkpoint_and_verification",
-      "observation_count": null
+      "available": true,
+      "display_status": "provisional_500_complete_not_analysis_ready",
+      "observation_count": 1073,
+      "qualitative_mechanism_observation_count": 1181,
+      "qa_status": "integrity_pass_scale_hold",
+      "scale_1000_recommendation": "premature_pending_targeted_qa",
+      "analysis_ready": false
     },
     "regression_stage": {
       "available": false,
@@ -154,7 +158,8 @@
     "connection-failure accounting",
     "candidate priority and unit-type composition",
     "likely matched-set lead counts for later verification planning",
-    "state-level discovery-readiness comparisons"
+    "state-level discovery-readiness comparisons",
+    "provisional compensation-extraction QA diagnostics"
   ],
   "analyses_not_yet_supported": [
     "verified source completeness rates across the national queue",

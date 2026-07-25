@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "compensation_extraction_500_provisional_completed"
+              ? "Provisional 500-document compensation extraction complete; QA hold before 1,000"
+              : textTableCalibrationStatus.calibration_phase ===
             "auto_gabriel_gate3_compensation_completed"
               ? "Compensation-evidence Gate 3 complete; future 500-doc extraction authorized"
               : textTableCalibrationStatus.calibration_phase ===
@@ -786,6 +789,21 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "compensation_extraction_500_provisional_completed" ? (
+            <>
+              The frozen run completed {formatNumber(
+                textTableCalibrationStatus.compensation_extraction_case_count,
+              )} documents with {formatPercent(
+                100 * textTableCalibrationStatus.compensation_extraction_schema_valid_rate,
+              )} final case-level schema validity. Its provisional ledgers contain{" "}
+              {formatNumber(textTableCalibrationStatus.quantitative_observation_count)} quantitative,
+              {" "}{formatNumber(textTableCalibrationStatus.qualitative_mechanism_observation_count)} qualitative-mechanism,
+              and {formatNumber(textTableCalibrationStatus.non_base_wage_observation_count)} non-base-wage observations across{" "}
+              {formatNumber(textTableCalibrationStatus.mixed_case_count)} mixed cases. Integrity QA passed, but{" "}
+              {formatNumber(textTableCalibrationStatus.compensation_extraction_conflict_groups)} potential quantitative conflict groups require targeted review; scaling is{" "}
+              {textTableCalibrationStatus.scale_1000_recommendation}. These are provisional QA ledgers, not an analysis-ready dataset.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "auto_gabriel_gate3_compensation_completed" ? (
             <>
               Gate 3 classified{" "}

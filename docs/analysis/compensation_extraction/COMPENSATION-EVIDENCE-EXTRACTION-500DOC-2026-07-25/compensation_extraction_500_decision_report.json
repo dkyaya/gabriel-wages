@@ -1,0 +1,37 @@
+{
+  "conflict_rate": 0.077353,
+  "conflict_review_row_count": 187,
+  "conflicting_quantitative_group_count": 83,
+  "decision": "premature_pending_targeted_qa",
+  "disposition_counts": {
+    "exclude": 43,
+    "mixed_ready": 182,
+    "non_base_wage": 126,
+    "qualitative_ready": 58,
+    "quantitative_ready": 44,
+    "reference_only": 41,
+    "second_review": 6
+  },
+  "duplicate_observation_id_count": 0,
+  "duplicate_structured_content_counts": {
+    "non_base_wage": 1,
+    "qualitative": 0,
+    "quantitative": 2
+  },
+  "evidence_bearing_case_count": 410,
+  "final_merge_allowed": false,
+  "generated_at": "2026-07-25T21:48:25Z",
+  "ingestion_allowed": false,
+  "integrity_qa_pass": true,
+  "invalid_observation_page_count": 0,
+  "packet_compliant": true,
+  "packet_rows": 2843,
+  "qa_pass": true,
+  "qa_status": "integrity_pass_scale_hold",
+  "quantitative_records_flagged_possible_non_base_wage": 102,
+  "result_count": 500,
+  "scale_1000_recommendation": "premature_pending_targeted_qa",
+  "scale_qa_pass": false,
+  "selection_count": 500,
+  "task_id": "COMPENSATION-EVIDENCE-EXTRACTION-500DOC-PROVISIONAL-LANES-2026-07-25"
+}

@@ -192,15 +192,18 @@ The dashboard builder writes:
 - `reports_index.json`
 
 The text/table calibration layer currently reports
-`auto_gabriel_gate3_compensation_completed`. Gate 3 completed 150 bounded,
-image-assisted, schema-valid GABRIEL compensation-evidence adjudications. It
-classified 84 mixed quantitative/qualitative, 14 quantitative-table, 12
-qualitative-mechanism, one compact-quantitative, 31 non-base-wage, seven
-irrelevant, and one reference-only cases. Seventy of 80 original likely/p1
-cases meet the high/medium-confidence ready rule, and the representative
-108-case ready set passes the computed 500-document compensation-extraction
-authorization. Extraction itself has not started; no final quantitative or
-qualitative observation, OCR, ingestion, or codification was produced.
+`compensation_extraction_500_provisional_completed`. Gate 3 first authorized
+the design; the frozen run then completed 500/500 strict-schema-valid bounded
+case results across 180 police, 120 fire, and 200 matched non-safety documents.
+The separate provisional ledgers contain 1,073 quantitative, 1,181 qualitative
+mechanism, and 1,327 non-base-wage observations plus 182 mixed-case join rows
+and 90 reference/exclusion cases. Integrity QA passed, but scale QA is held for
+83 potential quantitative conflict groups, three exact structured-content
+duplicates, and 102 quantitative records carrying possible non-base-wage
+signals. The 1,000-document recommendation is
+`premature_pending_targeted_qa`. These are not final or analysis-ready
+observations; no OCR, ingestion, codification, wage-gap calculation, or
+regression occurred.
 
 Review the printed totals and diffs before committing. In particular, candidate-positive plus parseable-empty municipalities must equal scout-covered municipalities, and transport/failure-only results must remain outside successful coverage.
 

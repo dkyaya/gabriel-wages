@@ -1,0 +1,10 @@
+{
+  "case_count": 283,
+  "confidence_counts": {
+    "high": 617,
+    "low": 58,
+    "medium": 397,
+    "unknown": 1
+  },
+  "observation_count": 1073
+}

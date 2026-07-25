@@ -1,0 +1,13 @@
+{
+  "case_count": 500,
+  "cases_with_rendered_pages": 42,
+  "full_tables_saved": false,
+  "full_text_saved": false,
+  "max_pages_per_case": 6,
+  "max_text_chars_per_case": 5999,
+  "max_text_chars_per_page": 1499,
+  "packet_page_rows": 2843,
+  "raw_prompts_saved": false,
+  "raw_responses_saved": false,
+  "rendered_page_available_count": 108
+}

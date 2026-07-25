@@ -1,0 +1,8 @@
+{
+  "case_count": 90,
+  "disposition_counts": {
+    "exclude": 43,
+    "reference_only": 41,
+    "second_review": 6
+  }
+}
