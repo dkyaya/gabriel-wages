@@ -6,6 +6,32 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-25 (Text/table manual-calibration packet prepared; review not started)
+
+**Did**
+- Started from clean tracked `32ae355693cda097a6ca0a6da7e7c2cf49f514b0`, confirmed all requested ancestry, and preserved the unrelated untracked root `package-lock.json`.
+- Revalidated the 1,828-row durable text/table-detection authority: 1,067 likely, 749 possible, and 12 unlikely wage-table signals; 1,067 p1, 754 p2, and seven p3 extraction priorities; and 7,649 candidate page-number hints. No final wage fields are populated.
+- Added a deterministic offline calibration planner, human-review schema/rubric, manual-review prompt, and nine-test synthetic suite. The planner reads committed CSV metadata only and has no PDF, URL, network, OCR, or text-extraction path.
+- Prepared `TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24` with 80 likely, 58 possible, and all 12 unlikely rows. It includes all seven p3/manual-review edge cases, 51 police / 44 fire / 55 non-safety units, all six source-type families, all five officialness categories, all three source-review batches, all five page-count bins, all 50 states plus DC, and 150 distinct state/municipality pairs.
+- Initialized every manual field as `not_reviewed` or `unknown`. No manual review or adjudication was performed.
+- Added dashboard status `subset1_prepared_not_reviewed` and a concise calibration card that keeps heuristic page hints separate from reviewed precision and wage observations.
+
+**Decisions and why**
+- Use 80 / 58 / 12 rather than 80 / 55 / 12 plus arbitrary rows: the final three possible rows deliberately cover both p3/manual-review cases and a partial-text, over-100-page edge case.
+- Preserve the already-merged bounded contract-period hint and candidate page numbers for future human comparison, but add no extracted text and make no calibration judgment.
+- Require manual review/adjudication of this packet before defining extraction rules or authorizing a wage-table extraction pilot.
+
+**Surprises/breakage**
+- No readiness, selection, identity, schema, dashboard, test, protected-file, or secret-safety gate failed.
+- The packet can cover all 51 state/DC jurisdictions and 150 distinct municipalities while retaining the required signal and edge-case allocation.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Three compiles, nine offline tests, an independent 150-row authority/identity/hash/manual-field/no-PDF/no-full-text audit, dashboard JSON/frontend production build, schema validation, 60 ingestion tests, protected/upstream/durable hashes, corpus filename hash, secret-safety, and diff checks passed. No PDF or URL was opened; no network/API/model call, additional text extraction, OCR, wage extraction, scout-accounting or durable-ledger mutation, ingestion, `gabriel.codify`, wage-gap work, causal claim, regression, remote action, or push occurred.
+
+**Next steps**
+1. Review the readiness audit, schema, 150-row review CSV, workbook, rubric, dashboard note, validation record, and lite relay.
+2. Manually inspect only the retained PDF pages named in the packet and record labels in a copied reviewed output, preserving the original packet and all durable ledgers.
+3. Adjudicate precision, false-positive families, contract-period hints, layout types, and extraction complexity before designing any bounded wage-table extraction pilot. Keep OCR, ingestion, codification, and wage analysis separately authorized.
+
 ## 2026-07-25 (Full text/table detection durably merged; calibration next)
 
 **Did**

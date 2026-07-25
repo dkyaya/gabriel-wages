@@ -175,6 +175,7 @@ The dashboard builder writes:
 - `source_review_status_summary.json`
 - `pdf_readiness_status_summary.json`
 - `text_table_detection_status_summary.json`
+- `text_table_calibration_status_summary.json`
 - `reports_index.json`
 
 Review the printed totals and diffs before committing. In particular, candidate-positive plus parseable-empty municipalities must equal scout-covered municipalities, and transport/failure-only results must remain outside successful coverage.
@@ -262,6 +263,16 @@ manual calibration of likely, possible, and unlikely page hints before any
 wage-table extraction pilot. No URL was opened, nothing was downloaded, OCR
 did not run, and ingestion, codification, final wage extraction, and
 wage-gap analysis remain unperformed.
+
+The first manual-calibration packet is now prepared but not reviewed. Its
+150 rows include 80 likely, 58 possible, and all 12 unlikely wage-table
+signals; all seven p3 edge cases; police, fire, and non-safety units; every
+available source-type family; all five officialness categories; all three
+source-review batches; every page-count bin; and all 50 states plus DC.
+Every manual field is initialized as `not_reviewed` or `unknown`. Preparing
+the packet opened no PDF or URL and performed no additional text extraction,
+OCR, wage extraction, ingestion, or codification. Manual review and
+adjudication are the next step.
 
 ## Run and build locally
 

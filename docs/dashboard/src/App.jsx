@@ -15,6 +15,7 @@ import contentTriageStatus from "../data/content_triage_status_summary.json";
 import sourceReviewStatus from "../data/source_review_status_summary.json";
 import pdfReadinessStatus from "../data/pdf_readiness_status_summary.json";
 import textTableDetectionStatus from "../data/text_table_detection_status_summary.json";
+import textTableCalibrationStatus from "../data/text_table_calibration_status_summary.json";
 import reportsIndex from "../data/reports_index.json";
 import piProgressReportPdf from "../reports/pi_progress_report_source_discovery_2026-07-22.pdf?url";
 import { AnalysisReadinessPanel } from "./components/AnalysisReadinessPanel.jsx";
@@ -264,6 +265,7 @@ function App() {
             sourceReviewStatus={sourceReviewStatus}
             pdfReadinessStatus={pdfReadinessStatus}
             textTableDetectionStatus={textTableDetectionStatus}
+            textTableCalibrationStatus={textTableCalibrationStatus}
           />
 
           <StateYieldPanel yieldData={scoutYieldByState} operations={scoutOperations} />

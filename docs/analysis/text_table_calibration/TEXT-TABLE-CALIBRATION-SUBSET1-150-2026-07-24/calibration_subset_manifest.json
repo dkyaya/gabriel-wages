@@ -1,0 +1,46 @@
+{
+  "additional_text_extractions": 0,
+  "calibration_id": "TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24",
+  "created_at": "2026-07-25T13:42:21Z",
+  "durable_ledger_mutations": 0,
+  "final_wage_values_extracted": 0,
+  "include_unlikely": true,
+  "inputs": [
+    {
+      "path": "docs/analysis/text_table_detection_ledgers/text_table_detection_ledger_cumulative.csv",
+      "rows": 1828,
+      "sha256": "4992efe74c4d76d66e345ab9716b987df850b73b3db98af17a2573da98bced03"
+    },
+    {
+      "path": "docs/analysis/pdf_readiness_ledgers/pdf_readiness_ledger_cumulative.csv",
+      "sha256": "dd120453068a668b5c818352402ca828073ac9639ee4d8d1ffc88f9488d4d953"
+    },
+    {
+      "path": "docs/analysis/source_review_ledgers/source_review_ledger_cumulative.csv",
+      "sha256": "e29d580d42068615611b464e6da40654f336f273fa7c40a7b0717d4894148c9f"
+    }
+  ],
+  "manual_review_status": "not_started",
+  "manual_reviews_completed": 0,
+  "mode": "offline_calibration_plan_only",
+  "network_calls": 0,
+  "ocr_runs": 0,
+  "outputs": {
+    "calibration_review_input.csv": "489e39cd99ba8812eb0b101b595825cdecd66da630c7a2eea7c612bdcc097535",
+    "calibration_review_rubric.md": "0b215bed6231552e32a9de851bc40d4856deb6a78171820de74ed511f35dd4a6",
+    "calibration_review_workbook.md": "72784b6781e4d39e3eac5f032feda142e98c2d7ef60b18b0681f03718c401fca",
+    "calibration_sampling_summary.json": "69bd0501f2ec42a9ad2372533bce05b5b44131291ed0f15d8c42dbed5be5f368",
+    "calibration_subset_input_audit.md": "79c5348a2cfd570bb28a189fb654c0c09b42b6750d0f4761e24b35870ec075f6"
+  },
+  "pdfs_opened": 0,
+  "sample_size": 150,
+  "schema_version": "1.0.0",
+  "selected_rows": 150,
+  "signal_allocation": {
+    "likely": 80,
+    "possible": 58,
+    "unlikely": 12
+  },
+  "stratify": true,
+  "urls_opened": 0
+}

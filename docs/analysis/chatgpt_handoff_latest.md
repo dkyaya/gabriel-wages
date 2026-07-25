@@ -6,6 +6,40 @@ Last updated: `2026-07-25`
 
 ---
 
+## 2026-07-25 — Manual text/table calibration packet is prepared, not reviewed
+
+### Current State
+
+- **Start and authority:** work began at clean tracked `32ae355693cda097a6ca0a6da7e7c2cf49f514b0`; requested ancestry passed and the unrelated untracked root `package-lock.json` remains untouched. The operative durable detection ledger still has 1,828 unique terminal rows and is unchanged.
+- **Readiness:** [the readiness audit](text_table_calibration_subset1_readiness_audit_2026-07-24.md) confirms 1,067 likely / 749 possible / 12 unlikely wage-table signals, 1,067 p1 / 754 p2 / seven p3 priorities, 7,649 candidate page hints, and no final wage fields.
+- **Schema and tooling:** [the calibration schema](text_table_calibration_schema_2026-07-24.md), deterministic offline planner, review workbook/rubric, future manual-review prompt, and nine-test suite operate only on existing CSV fields. They do not open PDFs or URLs or extract additional text.
+- **Locked packet:** [the input plan](text_table_calibration_subset1_input_plan_2026-07-24.md) records 150 unique, unreviewed rows: 80 likely, 58 possible, and all 12 unlikely signals. The 58 possible rows include 55 base rows plus both p3/manual-review edges and one partial-text, over-100-page edge.
+- **Coverage:** extraction priorities are 80 p1 / 63 p2 / seven p3; unit types are 51 police / 44 fire / 55 non-safety; sources are 80 CBA / 30 wage-schedule / 15 memorandum / 16 ordinance / eight arbitration / one factfinding. The packet includes all five officialness categories, all three source-review batches, all five page bins, all 50 states plus DC, and 150 distinct municipalities.
+- **Review state:** every manual field is initialized as `not_reviewed` or `unknown`. Manual review, adjudication, precision estimation, and extraction-rule approval have not started.
+- **Dashboard:** `calibration_phase = subset1_prepared_not_reviewed`; wage extraction, ingestion, codification, and wage-gap analysis remain `not_started`.
+- **Boundary:** no PDF or URL was opened, no network/API/model call or additional text extraction occurred, OCR did not run, no wage was extracted, and no scout accounting or durable routing/triage/source-review/PDF-readiness/detection ledger was mutated.
+- **Validation:** [the validation record](text_table_calibration_subset1_validation_2026-07-24.md) reports three compiles, nine offline tests, independent packet/authority/hash/no-PDF/no-full-text checks, dashboard JSON/frontend production build, schema and 60 ingestion tests, protected/durable/corpus hashes, secret-safety, and diff checks passed.
+
+### Interpretation
+
+This is a review packet, not a reviewed calibration result. Its strata and
+edge cases are designed to measure likely/possible precision, false-positive
+families, contract-period-hint usefulness, layout diversity, and extraction
+complexity. Candidate page numbers and bounded hints remain heuristic
+metadata; no precision estimate or wage observation exists yet.
+
+### Next Move
+
+Follow [the manual-review prompt](text_table_calibration_subset1_manual_review_prompt_2026-07-24.md).
+Open only the retained PDF artifacts needed for the separately authorized
+manual review, inspect the candidate pages, and write labels to a copied
+reviewed CSV without modifying this original packet or any durable ledger.
+
+After review, adjudicate disagreements and summarize precision by signal and
+stratum before designing a bounded wage-table extraction pilot. Do not run
+OCR, broad extraction, ingestion, codification, wage-gap analysis, or renewed
+scouting without separate authorization.
+
 ## 2026-07-25 — Full text/table detection is durably merged
 
 ### Current State

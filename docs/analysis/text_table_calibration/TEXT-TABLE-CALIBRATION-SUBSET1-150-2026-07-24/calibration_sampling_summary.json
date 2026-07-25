@@ -1,0 +1,153 @@
+{
+  "additional_text_extractions": 0,
+  "calibration_id": "TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24",
+  "calibration_subset_rows": 150,
+  "candidate_source_type_counts": {
+    "arbitration_award": 8,
+    "cba": 80,
+    "factfinding": 1,
+    "memorandum_or_settlement": 15,
+    "ordinance_or_policy": 16,
+    "wage_schedule_or_compensation_plan": 30
+  },
+  "candidate_wage_page_hints": 562,
+  "caveats": [
+    "The calibration subset has not been manually reviewed.",
+    "Detection signals and candidate pages remain heuristic.",
+    "No final wage values were extracted.",
+    "No PDF, URL, OCR, ingestion, or codification action occurred."
+  ],
+  "codify_actions": 0,
+  "created_at": "2026-07-25T13:42:21Z",
+  "durable_detection_ledger_csv": "docs/analysis/text_table_detection_ledgers/text_table_detection_ledger_cumulative.csv",
+  "durable_detection_ledger_sha256": "4992efe74c4d76d66e345ab9716b987df850b73b3db98af17a2573da98bced03",
+  "durable_detection_rows": 1828,
+  "durable_ledger_mutations": 0,
+  "extraction_pilot_priority_counts": {
+    "p1": 80,
+    "p2": 63,
+    "p3": 7
+  },
+  "final_wage_values_extracted": 0,
+  "full_text_artifacts_written": 0,
+  "ingestion_actions": 0,
+  "manual_fields_initialized_not_reviewed": 150,
+  "manual_review_status": "not_started",
+  "network_calls": 0,
+  "ocr_runs": 0,
+  "page_count_bin_counts": {
+    "11_to_25": 24,
+    "1_to_10": 40,
+    "26_to_50": 33,
+    "51_to_100": 38,
+    "over_100": 15
+  },
+  "pdf_readiness_ledger_csv": "docs/analysis/pdf_readiness_ledgers/pdf_readiness_ledger_cumulative.csv",
+  "pdf_readiness_ledger_sha256": "dd120453068a668b5c818352402ca828073ac9639ee4d8d1ffc88f9488d4d953",
+  "pdfs_opened": 0,
+  "priority_for_content_review_counts": {
+    "p1": 73,
+    "p2": 77
+  },
+  "recommended_next_action_counts": {
+    "contract_period_extraction_pilot": 7,
+    "larger_text_detection_pass": 56,
+    "manual_review": 7,
+    "wage_table_extraction_pilot": 80
+  },
+  "rows_without_candidate_wage_pages": 18,
+  "schema_version": "1.0.0",
+  "selected_pdf_readiness_identity_coverage": 150,
+  "selected_source_review_identity_coverage": 150,
+  "signal_targets": {
+    "likely": 80,
+    "possible": 58,
+    "unlikely": 12
+  },
+  "source_officialness_rating_counts": {
+    "official_municipal": 52,
+    "official_state_repository": 23,
+    "official_union": 16,
+    "uncertain": 50,
+    "unknown": 9
+  },
+  "source_review_batch_counts": {
+    "SOURCE-REVIEW-BATCH2-500-2026-07-24": 38,
+    "SOURCE-REVIEW-BATCH3-3X500-2026-07-24": 86,
+    "SOURCE-REVIEW-PILOT1-150-2026-07-24": 26
+  },
+  "source_review_ledger_csv": "docs/analysis/source_review_ledgers/source_review_ledger_cumulative.csv",
+  "source_review_ledger_sha256": "e29d580d42068615611b464e6da40654f336f273fa7c40a7b0717d4894148c9f",
+  "state_counts": {
+    "AK": 4,
+    "AL": 2,
+    "AR": 2,
+    "AZ": 1,
+    "CA": 5,
+    "CO": 4,
+    "CT": 2,
+    "DC": 1,
+    "DE": 3,
+    "FL": 2,
+    "GA": 3,
+    "HI": 1,
+    "IA": 4,
+    "ID": 3,
+    "IL": 4,
+    "IN": 5,
+    "KS": 3,
+    "KY": 4,
+    "LA": 2,
+    "MA": 4,
+    "MD": 6,
+    "ME": 4,
+    "MI": 6,
+    "MN": 4,
+    "MO": 6,
+    "MS": 2,
+    "MT": 5,
+    "NC": 1,
+    "ND": 2,
+    "NE": 2,
+    "NH": 1,
+    "NJ": 3,
+    "NM": 5,
+    "NV": 6,
+    "NY": 2,
+    "OH": 6,
+    "OK": 3,
+    "OR": 1,
+    "PA": 2,
+    "RI": 1,
+    "SC": 2,
+    "SD": 2,
+    "TN": 1,
+    "TX": 2,
+    "UT": 2,
+    "VA": 2,
+    "VT": 1,
+    "WA": 4,
+    "WI": 3,
+    "WV": 1,
+    "WY": 3
+  },
+  "status": "text_table_calibration_subset1_prepared_not_reviewed",
+  "supporting_field_mismatch_counts": {},
+  "text_layer_status_counts": {
+    "partial": 52,
+    "present": 98
+  },
+  "unique_municipalities": 150,
+  "unique_states": 51,
+  "unit_type_counts": {
+    "fire": 44,
+    "non_safety": 55,
+    "police": 51
+  },
+  "urls_opened": 0,
+  "wage_table_signal_counts": {
+    "likely": 80,
+    "possible": 58,
+    "unlikely": 12
+  }
+}

@@ -58,44 +58,65 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "stage": "scout_operations_unverified_discovery",
-  "current_totals": {
-    "scout_covered_municipalities": 2436,
-    "candidate_queue_rows": 4726,
-    "candidate_positive_municipalities": 1858,
-    "parseable_empty_municipalities": 578,
-    "failure_only_municipalities": 28
+  "calibration_phase": "subset1_prepared_not_reviewed",
+  "latest_calibration_id": "TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24",
+  "calibration_subset_rows": 150,
+  "wage_table_signal_counts": {
+    "likely": 80,
+    "possible": 58,
+    "unlikely": 12
   },
-  "active_strategy": {
-    "current_phase": "Post-checkpoint verification planning",
-    "checkpoint_target_scout_covered": 2000,
-    "remaining_to_checkpoint": 0,
-    "checkpoint_status": "reached_exceeded",
-    "checkpoint_margin": 436,
-    "estimated_150_row_waves_remaining": "0",
-    "full_150_row_waves_to_reach_or_exceed_checkpoint": 0,
-    "ordinary_discovery_lane": "Paused after the successful aggressive 3x300 serial merge crossed the approximately 2,000-covered checkpoint. Do not run another ordinary discovery wave without explicit user or PI authorization.",
-    "next_planned_round_id": "NONE-BROAD-SCOUTING-PAUSED-AFTER-CHECKPOINT",
-    "next_planned_round_lanes": 0,
-    "next_planned_round_rows_per_lane": 0,
-    "next_planned_round_expected_attempted": 0,
-    "next_planned_round_expected_parseable": 0,
-    "next_planned_round_expected_post_coverage": 2436,
-    "checkpoint_overshoot_intent": "completed_intentional_user_approved",
-    "superseded_round_id": "POST-PI-CHECKPOINT-ROUND-3X160-2026-07-23",
-    "next_phase": "Verification, extraction, ingestion, rating, and descriptive wage-growth-gap and mechanism analysis",
-    "regressions_status": "Deferred"
+  "extraction_pilot_priority_counts": {
+    "p1": 80,
+    "p2": 63,
+    "p3": 7
   },
-  "latest_wave": {
-    "wave_id": "aggressive_3x300_attempt3",
-    "label": "Aggressive 3x300 Attempt 3 compact/adaptive (3 serialized lanes)",
-    "runtime_seconds": 9422.628,
-    "rows_per_hour": 343.853,
-    "candidate_rows_per_hour": 530.68,
-    "candidate_rows_per_parseable_municipality": 1.545,
-    "timeout_or_failure_rows": 1
+  "unit_type_counts": {
+    "fire": 44,
+    "non_safety": 55,
+    "police": 51
   },
-  "priority_refresh_recommendation": "The unchanged national priority methodology was refreshed after the Aggressive Attempt 3 merge added 899 successful scouts and crossed the workflow checkpoint. Treat the layer as current but do not use it to schedule another ordinary discovery wave while broad scouting is paused.",
-  "preflight_gate_recommendation": "last_bounded_diagnostic_was_healthy; nevertheless_run_the_strengthened_preflight_gate_immediately_before_the_next_live_wave",
-  "disclaimer": "Scout candidates remain unverified leads. Runtime and yield metrics are operational diagnostics, not evidence of source quality or wage effects."
+  "candidate_source_type_counts": {
+    "arbitration_award": 8,
+    "cba": 80,
+    "factfinding": 1,
+    "memorandum_or_settlement": 15,
+    "ordinance_or_policy": 16,
+    "wage_schedule_or_compensation_plan": 30
+  },
+  "source_officialness_rating_counts": {
+    "official_municipal": 52,
+    "official_state_repository": 23,
+    "official_union": 16,
+    "uncertain": 50,
+    "unknown": 9
+  },
+  "source_review_batch_counts": {
+    "SOURCE-REVIEW-BATCH2-500-2026-07-24": 38,
+    "SOURCE-REVIEW-BATCH3-3X500-2026-07-24": 86,
+    "SOURCE-REVIEW-PILOT1-150-2026-07-24": 26
+  },
+  "page_count_bin_counts": {
+    "11_to_25": 24,
+    "1_to_10": 40,
+    "26_to_50": 33,
+    "51_to_100": 38,
+    "over_100": 15
+  },
+  "unique_states": 51,
+  "unique_municipalities": 150,
+  "candidate_wage_page_hints": 562,
+  "manual_review_status": "not_started",
+  "wage_extraction_status": "not_started",
+  "ingestion_status": "not_started",
+  "codify_status": "not_started",
+  "wage_gap_analysis_status": "not_started",
+  "summary_source": "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24/calibration_sampling_summary.json",
+  "review_input": "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24/calibration_review_input.csv",
+  "caveats": [
+    "The calibration subset has not been manually reviewed.",
+    "Candidate pages remain heuristic hints, not wage observations.",
+    "No wage values were extracted.",
+    "No OCR, ingestion, or codification occurred."
+  ]
 }

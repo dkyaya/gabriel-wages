@@ -198,6 +198,18 @@ TEXT_TABLE_DETECTION_DURABLE_SUMMARY_PATH = (
     / "text_table_detection_ledgers"
     / "text_table_detection_summary_cumulative.json"
 )
+TEXT_TABLE_CALIBRATION_SUBSET1_SUMMARY_PATH = (
+    ANALYSIS_DIR
+    / "text_table_calibration"
+    / "TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24"
+    / "calibration_sampling_summary.json"
+)
+TEXT_TABLE_CALIBRATION_SUBSET1_INPUT_PATH = (
+    ANALYSIS_DIR
+    / "text_table_calibration"
+    / "TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24"
+    / "calibration_review_input.csv"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -262,6 +274,8 @@ OPTIONAL_PATHS = [
     TEXT_TABLE_DETECTION_FULL_RUN_SUMMARY_PATH,
     TEXT_TABLE_DETECTION_DURABLE_LEDGER_PATH,
     TEXT_TABLE_DETECTION_DURABLE_SUMMARY_PATH,
+    TEXT_TABLE_CALIBRATION_SUBSET1_SUMMARY_PATH,
+    TEXT_TABLE_CALIBRATION_SUBSET1_INPUT_PATH,
 ]
 
 STATE_NAMES = {
@@ -3740,6 +3754,132 @@ def build_text_table_detection_status_summary(
     }
 
 
+def build_text_table_calibration_status_summary(
+    *, metadata: dict[str, Any]
+) -> dict[str, Any]:
+    """Build manual-calibration packet status without review inference."""
+
+    if not TEXT_TABLE_CALIBRATION_SUBSET1_SUMMARY_PATH.exists():
+        return {
+            **metadata,
+            "calibration_phase": "not_started",
+            "latest_calibration_id": None,
+            "calibration_subset_rows": 0,
+            "manual_review_status": "not_started",
+            "wage_extraction_status": "not_started",
+            "ingestion_status": "not_started",
+            "codify_status": "not_started",
+            "wage_gap_analysis_status": "not_started",
+            "caveats": [
+                "No manual calibration packet has been prepared.",
+                "No wage values, OCR, or ingestion outputs exist.",
+            ],
+        }
+
+    summary = read_json(TEXT_TABLE_CALIBRATION_SUBSET1_SUMMARY_PATH)
+    review_rows = read_csv(TEXT_TABLE_CALIBRATION_SUBSET1_INPUT_PATH)
+    forbidden_fields = (
+        "pdfs_opened",
+        "urls_opened",
+        "network_calls",
+        "additional_text_extractions",
+        "ocr_runs",
+        "full_text_artifacts_written",
+        "final_wage_values_extracted",
+        "ingestion_actions",
+        "codify_actions",
+        "durable_ledger_mutations",
+    )
+    calibration_ids = [row.get("calibration_id", "") for row in review_rows]
+    identity_fields = (
+        "text_table_detection_id",
+        "pdf_readiness_id",
+        "source_review_id",
+        "candidate_queue_row_id",
+    )
+    if (
+        summary.get("status")
+        != "text_table_calibration_subset1_prepared_not_reviewed"
+        or summary.get("calibration_id")
+        != "TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24"
+        or int(summary.get("calibration_subset_rows", 0)) != 150
+        or len(review_rows) != 150
+        or summary.get("wage_table_signal_counts")
+        != {"likely": 80, "possible": 58, "unlikely": 12}
+        or summary.get("manual_review_status") != "not_started"
+        or int(
+            summary.get("manual_fields_initialized_not_reviewed", 0)
+        )
+        != 150
+        or any(int(summary.get(field, -1)) != 0 for field in forbidden_fields)
+        or len(calibration_ids) != len(set(calibration_ids))
+        or any(not value for value in calibration_ids)
+        or any(
+            len(values) != len(set(values)) or any(not value for value in values)
+            for values in (
+                [row.get(field, "") for row in review_rows]
+                for field in identity_fields
+            )
+        )
+        or any(
+            row.get("calibration_status") != "not_reviewed"
+            or row.get("reviewer")
+            or row.get("reviewed_at")
+            for row in review_rows
+        )
+    ):
+        raise ValueError(
+            "text/table calibration subset fails preparation gates"
+        )
+    return {
+        **metadata,
+        "calibration_phase": "subset1_prepared_not_reviewed",
+        "latest_calibration_id": summary["calibration_id"],
+        "calibration_subset_rows": int(
+            summary["calibration_subset_rows"]
+        ),
+        "wage_table_signal_counts": summary[
+            "wage_table_signal_counts"
+        ],
+        "extraction_pilot_priority_counts": summary[
+            "extraction_pilot_priority_counts"
+        ],
+        "unit_type_counts": summary["unit_type_counts"],
+        "candidate_source_type_counts": summary[
+            "candidate_source_type_counts"
+        ],
+        "source_officialness_rating_counts": summary[
+            "source_officialness_rating_counts"
+        ],
+        "source_review_batch_counts": summary[
+            "source_review_batch_counts"
+        ],
+        "page_count_bin_counts": summary["page_count_bin_counts"],
+        "unique_states": int(summary["unique_states"]),
+        "unique_municipalities": int(summary["unique_municipalities"]),
+        "candidate_wage_page_hints": int(
+            summary["candidate_wage_page_hints"]
+        ),
+        "manual_review_status": "not_started",
+        "wage_extraction_status": "not_started",
+        "ingestion_status": "not_started",
+        "codify_status": "not_started",
+        "wage_gap_analysis_status": "not_started",
+        "summary_source": relative(
+            TEXT_TABLE_CALIBRATION_SUBSET1_SUMMARY_PATH
+        ),
+        "review_input": relative(
+            TEXT_TABLE_CALIBRATION_SUBSET1_INPUT_PATH
+        ),
+        "caveats": [
+            "The calibration subset has not been manually reviewed.",
+            "Candidate pages remain heuristic hints, not wage observations.",
+            "No wage values were extracted.",
+            "No OCR, ingestion, or codification occurred.",
+        ],
+    }
+
+
 def validate_inputs(
     *,
     state_rows: list[dict[str, str]],
@@ -3932,6 +4072,9 @@ def main() -> int:
     text_table_detection_status_summary = (
         build_text_table_detection_status_summary(metadata=metadata)
     )
+    text_table_calibration_status_summary = (
+        build_text_table_calibration_status_summary(metadata=metadata)
+    )
     reports_index = build_reports_index_layer(
         source_index=reports_index_source,
         metadata=metadata,
@@ -3962,6 +4105,10 @@ def main() -> int:
         write_json(
             "text_table_detection_status_summary.json",
             text_table_detection_status_summary,
+        ),
+        write_json(
+            "text_table_calibration_status_summary.json",
+            text_table_calibration_status_summary,
         ),
         write_json("reports_index.json", reports_index),
     ]

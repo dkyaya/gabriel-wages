@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-25T13:30:58Z",
+  "generated_at": "2026-07-25T13:45:45Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -43,7 +43,9 @@
     "docs/analysis/text_table_detection_pilots/TEXT-TABLE-DETECTION-PILOT1-150-2026-07-24/text_table_detection_collection_summary.json",
     "docs/analysis/text_table_detection_pilots/TEXT-TABLE-DETECTION-FULL-PARSE-TEXT-2026-07-24/text_table_detection_collection_summary.json",
     "docs/analysis/text_table_detection_ledgers/text_table_detection_ledger_latest.csv",
-    "docs/analysis/text_table_detection_ledgers/text_table_detection_summary_cumulative.json"
+    "docs/analysis/text_table_detection_ledgers/text_table_detection_summary_cumulative.json",
+    "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24/calibration_sampling_summary.json",
+    "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24/calibration_review_input.csv"
   ],
   "warnings": [],
   "limitations": [

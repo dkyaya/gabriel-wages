@@ -247,6 +247,7 @@ export function VerificationPipeline({
   sourceReviewStatus,
   pdfReadinessStatus,
   textTableDetectionStatus,
+  textTableCalibrationStatus,
 }) {
   const candidateRows = candidateSummary.totals.candidate_rows;
   const fullRouting =
@@ -746,6 +747,53 @@ export function VerificationPipeline({
               )}
               {" "}parse-text candidates, but bounded table detection has not
               started.
+            </>
+          )}
+        </p>
+      </div>
+      <div className="verification-callout">
+        <div>
+          <p className="eyebrow">Manual calibration</p>
+          <h3>
+            {textTableCalibrationStatus.calibration_phase ===
+            "subset1_prepared_not_reviewed"
+              ? "Stratified calibration packet prepared; review not started"
+              : "Manual calibration packet not prepared"}
+          </h3>
+        </div>
+        <p>
+          {textTableCalibrationStatus.calibration_phase ===
+          "subset1_prepared_not_reviewed" ? (
+            <>
+              The review packet contains{" "}
+              {formatNumber(textTableCalibrationStatus.calibration_subset_rows)}
+              {" "}unreviewed rows:{" "}
+              {formatNumber(
+                textTableCalibrationStatus.wage_table_signal_counts?.likely,
+              )}
+              {" "}likely,{" "}
+              {formatNumber(
+                textTableCalibrationStatus.wage_table_signal_counts?.possible,
+              )}
+              {" "}possible, and{" "}
+              {formatNumber(
+                textTableCalibrationStatus.wage_table_signal_counts?.unlikely,
+              )}
+              {" "}unlikely heuristic signals. It spans{" "}
+              {formatNumber(textTableCalibrationStatus.unique_states)}
+              {" "}states or districts and{" "}
+              {formatNumber(
+                textTableCalibrationStatus.unique_municipalities,
+              )}
+              {" "}municipalities. No PDFs were opened while preparing it;
+              precision has not been measured, and no wage extraction, OCR,
+              ingestion, or codification occurred.
+            </>
+          ) : (
+            <>
+              The durable heuristic detection layer still requires a
+              stratified manual calibration subset before any wage-table
+              extraction pilot.
             </>
           )}
         </p>
