@@ -55,13 +55,16 @@ The current PI checkpoint report is available in the dashboard’s Reports Libra
 
 ## Text/table calibration status — 2026-07-25
 
-The 150-case blinded independent human adjudication packet is prepared but
-has not been human-reviewed. It contains bounded local page aids and excludes
-REVIEW1/REVIEW2 labels and prior extraction actions from the human-facing
-CSV. Refined REVIEW2 remains `continue_schema_refinement`: neither the
-500-document extraction nor a smaller pilot is authorized. Independent human
-adjudication is the next recommended action. Wage extraction, OCR, ingestion,
-codification, and wage-gap analysis remain not started.
+Automated visual + GABRIEL adjudication gate 1 completed all 150 blinded
+calibration cases using 738 bounded local pages. All 150 GABRIEL responses
+passed the strict JSON schema. The final auto gate contains 12
+high-confidence-ready rows, 16 schema-update-ready rows, 19 second-review
+rows, and 103 exclusions; its candidate-bearing wrong-page rate is 6.82%.
+Only 27 of 80 original likely/p1 cases were ready, so the computed extraction
+decision remains `continue_schema_refinement`. Neither the 500-document
+extraction nor a smaller pilot is authorized. GABRIEL saw bounded page
+packets only; no final wage values, URLs/downloads, OCR, extraction,
+ingestion, codification, or wage-gap analysis occurred.
 
 ## Hub sections
 

@@ -277,6 +277,23 @@ TEXT_TABLE_INDEPENDENT_ADJUDICATION_PREP1_SAMPLING_SUMMARY_PATH = (
     TEXT_TABLE_INDEPENDENT_ADJUDICATION_PREP1_DIR
     / "independent_adjudication_sampling_summary.json"
 )
+TEXT_TABLE_AUTO_GABRIEL_GATE1_DIR = (
+    ANALYSIS_DIR
+    / "text_table_calibration"
+    / "TEXT-TABLE-AUTO-GABRIEL-ADJUDICATION-GATE1-2026-07-24"
+)
+TEXT_TABLE_AUTO_GABRIEL_GATE1_SUMMARY_PATH = (
+    TEXT_TABLE_AUTO_GABRIEL_GATE1_DIR
+    / "auto_gabriel_adjudication_summary.json"
+)
+TEXT_TABLE_AUTO_GABRIEL_GATE1_LEDGER_PATH = (
+    TEXT_TABLE_AUTO_GABRIEL_GATE1_DIR
+    / "auto_gabriel_adjudication_ledger.csv"
+)
+TEXT_TABLE_AUTO_GABRIEL_GATE1_DECISION_PATH = (
+    TEXT_TABLE_AUTO_GABRIEL_GATE1_DIR
+    / "auto_gabriel_adjudication_gate_decision.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -356,6 +373,9 @@ OPTIONAL_PATHS = [
     TEXT_TABLE_INDEPENDENT_ADJUDICATION_PREP1_BLINDED_INPUT_PATH,
     TEXT_TABLE_INDEPENDENT_ADJUDICATION_PREP1_RENDER_MANIFEST_PATH,
     TEXT_TABLE_INDEPENDENT_ADJUDICATION_PREP1_SAMPLING_SUMMARY_PATH,
+    TEXT_TABLE_AUTO_GABRIEL_GATE1_SUMMARY_PATH,
+    TEXT_TABLE_AUTO_GABRIEL_GATE1_LEDGER_PATH,
+    TEXT_TABLE_AUTO_GABRIEL_GATE1_DECISION_PATH,
 ]
 
 STATE_NAMES = {
@@ -4021,10 +4041,92 @@ def build_text_table_calibration_status_summary(
                 raise ValueError(
                     "independent adjudication packet fails dashboard gates"
                 )
+        auto_gate_completed = (
+            TEXT_TABLE_AUTO_GABRIEL_GATE1_SUMMARY_PATH.exists()
+            and TEXT_TABLE_AUTO_GABRIEL_GATE1_LEDGER_PATH.exists()
+            and TEXT_TABLE_AUTO_GABRIEL_GATE1_DECISION_PATH.exists()
+        )
+        auto_summary: dict[str, Any] = {}
+        auto_decision: dict[str, Any] = {}
+        auto_rows: list[dict[str, str]] = []
+        if auto_gate_completed:
+            auto_summary = read_json(
+                TEXT_TABLE_AUTO_GABRIEL_GATE1_SUMMARY_PATH
+            )
+            auto_decision = read_json(
+                TEXT_TABLE_AUTO_GABRIEL_GATE1_DECISION_PATH
+            )
+            auto_rows = read_csv(
+                TEXT_TABLE_AUTO_GABRIEL_GATE1_LEDGER_PATH
+            )
+            gate_id = (
+                "TEXT-TABLE-AUTO-GABRIEL-"
+                "ADJUDICATION-GATE1-2026-07-24"
+            )
+            auto_identity_fields = (
+                "auto_adjudication_id",
+                "adjudication_case_id",
+                "calibration_id",
+                "source_review_id",
+                "pdf_readiness_id",
+                "candidate_queue_row_id",
+            )
+            if (
+                auto_summary.get("gate_id") != gate_id
+                or auto_summary.get("status")
+                != "auto_gabriel_adjudication_completed"
+                or auto_summary.get("mode") != "live"
+                or int(auto_summary.get("cases", 0)) != 150
+                or len(auto_rows) != 150
+                or int(auto_summary.get("failed_cases", -1)) != 0
+                or auto_summary.get("gabriel_schema_valid_counts")
+                != {"true": 150}
+                or auto_summary.get("full_text_saved") is not False
+                or auto_summary.get("full_tables_saved") is not False
+                or auto_summary.get("structured_wage_values_saved")
+                is not False
+                or int(auto_summary.get("urls_opened", -1)) != 0
+                or int(auto_summary.get("hosted_search_calls", -1)) != 0
+                or int(auto_summary.get("ocr_runs", -1)) != 0
+                or int(auto_summary.get("wage_extraction_runs", -1)) != 0
+                or int(auto_summary.get("ingestion_actions", -1)) != 0
+                or int(auto_summary.get("codify_actions", -1)) != 0
+                or auto_decision.get("gate_id") != gate_id
+                or auto_decision.get("extraction_decision")
+                != "continue_schema_refinement"
+                or auto_decision.get(
+                    "five_hundred_doc_extraction_allowed"
+                )
+                is not False
+                or auto_decision.get("smaller_extraction_pilot_allowed")
+                is not False
+                or float(
+                    auto_decision.get("gabriel_schema_valid_rate", -1)
+                )
+                != 1.0
+                or any(
+                    len(values) != len(set(values))
+                    or any(not value for value in values)
+                    for values in (
+                        [row.get(field, "") for row in auto_rows]
+                        for field in auto_identity_fields
+                    )
+                )
+                or any(
+                    row.get("gabriel_schema_valid") != "true"
+                    or row.get("gabriel_status") != "success"
+                    for row in auto_rows
+                )
+            ):
+                raise ValueError(
+                    "automated GABRIEL adjudication gate fails dashboard gates"
+                )
         return {
             **metadata,
             "calibration_phase": (
-                "independent_adjudication_packet_prepared"
+                "auto_gabriel_gate1_completed"
+                if auto_gate_completed
+                else "independent_adjudication_packet_prepared"
                 if adjudication_prepared
                 else "refined_review2_completed"
             ),
@@ -4036,6 +4138,36 @@ def build_text_table_calibration_status_summary(
                 adjudication_manifest.get("adjudication_prep_id")
                 if adjudication_prepared
                 else None
+            ),
+            "latest_auto_adjudication_gate_id": (
+                auto_decision.get("gate_id")
+                if auto_gate_completed
+                else None
+            ),
+            "auto_adjudication_method": (
+                auto_decision.get("method")
+                if auto_gate_completed
+                else None
+            ),
+            "auto_gate_case_count": (
+                int(auto_summary.get("cases", 0))
+                if auto_gate_completed
+                else 0
+            ),
+            "gabriel_schema_valid_rate": (
+                float(auto_decision.get("gabriel_schema_valid_rate", 0))
+                if auto_gate_completed
+                else None
+            ),
+            "auto_gate_label_counts": (
+                auto_summary.get("auto_gate_label_counts", {})
+                if auto_gate_completed
+                else {}
+            ),
+            "auto_gate_confidence_counts": (
+                auto_summary.get("auto_gate_confidence_counts", {})
+                if auto_gate_completed
+                else {}
             ),
             "prior_refined_review_id": decision["review_id"],
             "prior_extraction_decision": decision["extraction_decision"],
@@ -4104,12 +4236,22 @@ def build_text_table_calibration_status_summary(
             "likely_signal_visual_confirmation_rate": float(
                 decision["likely_signal_visually_confirmed_yes_rate"]
             ),
-            "wrong_page_rate": float(decision["wrong_page_rate"]),
-            "extraction_decision": decision["extraction_decision"],
+            "wrong_page_rate": (
+                float(auto_decision["wrong_page_rate"])
+                if auto_gate_completed
+                else float(decision["wrong_page_rate"])
+            ),
+            "extraction_decision": (
+                auto_decision["extraction_decision"]
+                if auto_gate_completed
+                else decision["extraction_decision"]
+            ),
             "five_hundred_doc_extraction_allowed": False,
             "smaller_extraction_pilot_allowed": False,
             "next_recommendation": (
-                "independent_human_adjudication"
+                auto_decision["next_recommendation"]
+                if auto_gate_completed
+                else "independent_human_adjudication"
                 if adjudication_prepared
                 else decision["next_recommendation"]
             ),
@@ -4125,6 +4267,21 @@ def build_text_table_calibration_status_summary(
             "ingestion_status": "not_started",
             "codify_status": "not_started",
             "wage_gap_analysis_status": "not_started",
+            "auto_gate_summary_source": (
+                relative(TEXT_TABLE_AUTO_GABRIEL_GATE1_SUMMARY_PATH)
+                if auto_gate_completed
+                else None
+            ),
+            "auto_gate_ledger": (
+                relative(TEXT_TABLE_AUTO_GABRIEL_GATE1_LEDGER_PATH)
+                if auto_gate_completed
+                else None
+            ),
+            "auto_gate_decision_source": (
+                relative(TEXT_TABLE_AUTO_GABRIEL_GATE1_DECISION_PATH)
+                if auto_gate_completed
+                else None
+            ),
             "summary_source": relative(
                 TEXT_TABLE_CALIBRATION_SUBSET1_REVIEW2_SUMMARY_PATH
             ),
@@ -4172,6 +4329,13 @@ def build_text_table_calibration_status_summary(
             ),
             "caveats": (
                 [
+                    "Automated adjudication is calibration, not final wage extraction.",
+                    "No final wage values were extracted.",
+                    "No OCR or ingestion occurred.",
+                    "GABRIEL evaluated bounded page packets only.",
+                ]
+                if auto_gate_completed
+                else [
                     "REVIEW2 did not authorize extraction.",
                     "The human adjudication packet is blinded to prior labels.",
                     "No wage extraction has started.",

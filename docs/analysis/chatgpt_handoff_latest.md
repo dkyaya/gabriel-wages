@@ -6,6 +6,43 @@ Last updated: `2026-07-25`
 
 ---
 
+## 2026-07-25 — Automated visual + GABRIEL gate 1 completed; extraction remains closed
+
+### Current State
+
+- **Scope and readiness:** work began at clean tracked `51f709ab4029a2dd1de0f1be5701fcb9fa2a8ae4`. [The readiness audit](text_table_auto_gabriel_adjudication_gate1_readiness_audit_2026-07-24.md) confirms the 150 blinded cases, 785 valid local renders, immutable source/review inputs, requested ancestry, and configured HUIT direct Responses backend without exposing a credential.
+- **Runner:** `scripts/run_auto_gabriel_text_table_adjudication.py` reads the blinded input and render manifest, opens only selected pages from the same 150 PDFs, derives text/geometry/render/navigation features, redacts numeric snippet values, and enforces six pages, four navigation pages, 1,500 characters per page, and 6,000 per case. It saves no raw prompt/response, full text/table, or structured wage value.
+- **Preflight:** the no-call dry run passed all 150 cases and 738 pages. A one-case live preflight passed before any full calls. The first pass rejected 28 schema-shape violations; strict API JSON Schema was added, a replacement preflight passed, and the replacement full pass achieved 150/150 schema-valid responses with zero failures.
+- **Final labels:** [the result](text_table_auto_gabriel_adjudication_gate1_result_2026-07-24.md) records 12 `extraction_ready_high_confidence`, 16 `extraction_ready_with_schema_update`, 19 `second_review_required`, and 103 `exclude_for_now`. Confidence is 93 high / 51 medium / 6 low. Wage-schedule presence is 37 yes / 12 maybe / 101 no.
+- **Page/navigation result:** relationships are 46 exact, 9 adjacent, 5 later-table pointers, 9 wrong, 71 no-candidate, and 10 unknown. Candidate-bearing wrong-page rate is 9/132 (6.82%).
+- **Comparison:** [the REVIEW1/REVIEW2 comparison](text_table_auto_gabriel_gate1_vs_review1_review2_comparison_2026-07-24.md) records 62/74 REVIEW2 high-confidence rows not retaining automated high confidence, one evidence-supported upgrade among REVIEW2 fail/second-review rows, and substantial downgrading of prose/non-wage/index material.
+- **Decision:** [the extraction decision](post_auto_gabriel_gate1_extraction_decision_2026-07-24.md) is `continue_schema_refinement`. Only 27/80 likely/p1 rows (33.75%) are ready and the total ready set is 28; neither a 500-document run nor a smaller pilot is allowed. [The only future prompt](text_table_auto_gabriel_gate2_refinement_prompt_2026-07-24.md) is for gate-2 calibration refinement.
+- **Dashboard:** phase is `auto_gabriel_gate1_completed`; GABRIEL schema-valid rate is 1.0; extraction, ingestion, codification, and wage-gap analysis remain `not_started`; next is `refine_auto_gabriel_table_and_navigation_gate`.
+- **Validation:** [the validation record](text_table_auto_gabriel_adjudication_gate1_validation_2026-07-24.md) reports three compiles, 14 offline tests, dashboard data/frontend builds, repository schema validation, 60 ingestion tests, coverage audit, 785 render-hash checks, immutable inputs/ledgers/protected files, credential-value absence, and diff checks.
+- **Boundary:** live GABRIEL calls used only preflight-approved bounded packets and explicit `--allow-gabriel`. No URL or hosted search was used. No redownload, OCR, wage extraction, full-text/table retention, ingestion, `gabriel.codify`, durable-ledger mutation, wage-gap work, regression, remote inspection, or push occurred.
+
+### Interpretation
+
+Gate 1 is operationally rigorous and schema-stable, and it materially improves
+wrong-page and non-wage false-positive control. It does not provide enough
+positive coverage to scale. Passing schema-validity and wrong-page thresholds
+cannot substitute for the failed 80% likely/p1 readiness criterion or the
+undersized 28-row representative ready set.
+
+The automated result is best understood as evidence that REVIEW1 and REVIEW2
+were substantially over-positive, not as permission to extract. The 103
+exclusions and 19 unresolved cases must be studied through bounded calibration
+rules before another gate.
+
+### Next Move
+
+Keep extraction at zero. Use the gate-2 refinement prompt on the same local
+150-case scope, focusing on the 53 likely/p1 rows that are not ready and the 19
+second-review rows. Improve exact/adjacent/target page discovery, compact-sheet
+structure, and no-candidate versus wrong-page rules without OCR, URL access,
+larger packets, or relaxed non-wage exclusions. Rerun all decision thresholds
+before authorizing any extraction scale.
+
 ## 2026-07-25 — Blinded independent adjudication packet is prepared
 
 ### Current State

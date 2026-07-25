@@ -6,6 +6,33 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-25 (Automated visual + GABRIEL gate completed; extraction remains closed)
+
+**Did**
+- Started from clean tracked `51f709ab4029a2dd1de0f1be5701fcb9fa2a8ae4`, confirmed all requested local ancestry, and preserved the unrelated untracked root `package-lock.json` and the 785 local adjudication renders.
+- Built a bounded local-layout/text/render runner, strict adjudication schema and prompt, and 14-test offline suite. The runner caps packets at six pages, 1,500 text characters per page, 6,000 per case, and four navigation pages; numbers in snippets are redacted and no raw prompt/response is saved.
+- Passed the 150-case no-call dry run over 738 pages, then passed a one-case GABRIEL preflight using the configured HUIT Responses direct SDK and `gpt-5.4-nano`.
+- The first full pass rejected 28 malformed response shapes rather than repairing them. Added strict API JSON Schema output, passed a replacement one-case preflight, and completed a replacement 150-case pass with 150/150 schema-valid responses and zero failed cases. Only the replacement ledger drives the result.
+- Final auto labels are 12 high-confidence ready, 16 schema-update ready, 19 second review, and 103 excluded. GABRIEL presence is 37 yes / 12 maybe / 101 no; the candidate-bearing wrong-page rate is 9/132 (6.82%).
+- Compared the final ledger to REVIEW1/REVIEW2. Sixty-two of 74 REVIEW2 high-confidence rows did not retain automated high confidence; only one REVIEW2 fail/second-review row was upgraded to a ready label.
+- Updated dashboard data/frontend/docs to `auto_gabriel_gate1_completed`.
+
+**Decisions and why**
+- Decision is `continue_schema_refinement`: 150/150 schema validity and 6.82% wrong pages pass, but only 27/80 original likely/p1 rows (33.75%) are ready and there are only 28 ready rows overall. Neither the 500-document run nor a smaller pilot is authorized.
+- The next refinement must improve bounded page discovery and distinguish true no-candidate cases from bad candidate hints; it must not weaken prose/non-wage exclusions or page/text budgets.
+- The initial 122/150 pass is implementation history only. Invalid model shapes were never promoted into labels, and the final strict-schema pass replaced it completely.
+
+**Surprises/breakage**
+- One valid local PDF triggered a pypdf layout-mode zero-width-font error. The runner now falls back to the same local PDF text layer, never OCR, while retaining render/layout evidence and conservative rules.
+- The automated gate fixed the prior wrong-page threshold but found far fewer true schedule pages than REVIEW1/REVIEW2. This is why lower wrong-page error does not translate into scale authorization.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Three compiles, 14 offline tests, 150-case dry run, two strict one-case preflights, 150/150 final schema validation, dashboard JSON/frontend build, schema validation, 60 ingestion tests, 785 render hash checks, immutable calibration/REVIEW1/REVIEW2/independent-packet/durable/protected checks, credential-value scan, and diff checks passed. GABRIEL calls occurred only after preflight and explicit live flags. No URL/hosted search, redownload, OCR, wage extraction, full-text/table retention, durable-ledger mutation, ingestion, `gabriel.codify`, wage-gap work, regression, remote inspection, push, or final wage-value creation occurred.
+
+**Next steps**
+1. Keep both extraction scales closed.
+2. Run the prepared gate-2 refinement only on the same bounded local calibration scope, focusing on the 53 likely/p1 non-ready rows and 19 second-review rows.
+3. Reconsider extraction only if likely/p1 readiness reaches 80%, wrong pages remain at or below 15%, schema validity remains at or above 95%, the ready set is representative, and no systematic non-wage family is extraction-positive.
+
 ## 2026-07-25 (Blinded independent adjudication packet prepared; review pending)
 
 **Did**

@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": "0.1.0",
-    "generated_at": "2026-07-25T15:35:11Z",
+    "generated_at": "2026-07-25T18:48:29Z",
     "data_vintage": "2026-07-23",
     "source_files": [
       "docs/analysis/national_scout_coverage_state.csv",
@@ -59,7 +59,10 @@
       "docs/analysis/text_table_calibration/TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24/independent_adjudication_manifest.json",
       "docs/analysis/text_table_calibration/TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24/independent_adjudication_blinded_review_input.csv",
       "docs/analysis/text_table_calibration/TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24/independent_adjudication_render_manifest.csv",
-      "docs/analysis/text_table_calibration/TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24/independent_adjudication_sampling_summary.json"
+      "docs/analysis/text_table_calibration/TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24/independent_adjudication_sampling_summary.json",
+      "docs/analysis/text_table_calibration/TEXT-TABLE-AUTO-GABRIEL-ADJUDICATION-GATE1-2026-07-24/auto_gabriel_adjudication_summary.json",
+      "docs/analysis/text_table_calibration/TEXT-TABLE-AUTO-GABRIEL-ADJUDICATION-GATE1-2026-07-24/auto_gabriel_adjudication_ledger.csv",
+      "docs/analysis/text_table_calibration/TEXT-TABLE-AUTO-GABRIEL-ADJUDICATION-GATE1-2026-07-24/auto_gabriel_adjudication_gate_decision.json"
     ],
     "warnings": [],
     "limitations": [

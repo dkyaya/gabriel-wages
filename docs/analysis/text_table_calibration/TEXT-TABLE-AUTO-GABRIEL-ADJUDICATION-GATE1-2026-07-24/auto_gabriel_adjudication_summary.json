@@ -1,0 +1,140 @@
+{
+  "auto_gate_confidence_counts": {
+    "high": 93,
+    "low": 6,
+    "medium": 51
+  },
+  "auto_gate_label_counts": {
+    "exclude_for_now": 103,
+    "extraction_ready_high_confidence": 12,
+    "extraction_ready_with_schema_update": 16,
+    "second_review_required": 19
+  },
+  "bounded_text_chars_in_prompts": 585644,
+  "cases": 150,
+  "codify_actions": 0,
+  "decision": {
+    "candidate_bearing_denominator": 132,
+    "case_count": 150,
+    "extraction_decision": "continue_schema_refinement",
+    "five_hundred_criteria": {
+      "likely_p1_rate_at_least_0_80": false,
+      "non_wage_false_positives_and_ambiguity_resolved": true,
+      "representative_ready_rows": false,
+      "schema_valid_rate_at_least_0_95": true,
+      "wrong_page_rate_at_most_0_15": true
+    },
+    "five_hundred_doc_extraction_allowed": false,
+    "full_150_case_scope": true,
+    "gabriel_backend": "huit_openai_responses_direct_sdk",
+    "gabriel_model": "gpt-5.4-nano",
+    "gabriel_schema_valid_count": 150,
+    "gabriel_schema_valid_rate": 1.0,
+    "gate_id": "TEXT-TABLE-AUTO-GABRIEL-ADJUDICATION-GATE1-2026-07-24",
+    "generated_at": "2026-07-25T18:45:15Z",
+    "method": "automated_local_visual_layout_plus_gabriel_bounded_page_adjudication",
+    "mode": "live",
+    "next_recommendation": "refine_auto_gabriel_table_and_navigation_gate",
+    "non_wage_positive_ready_count": 0,
+    "original_likely_p1_denominator": 80,
+    "original_likely_p1_ready_count": 27,
+    "original_likely_p1_ready_rate": 0.3375,
+    "ready_count": 28,
+    "ready_source_type_counts": {
+      "arbitration_award": 1,
+      "cba": 10,
+      "ordinance_or_policy": 5,
+      "wage_schedule_or_compensation_plan": 12
+    },
+    "ready_unit_type_counts": {
+      "fire": 7,
+      "non_safety": 16,
+      "police": 5
+    },
+    "representation_pass": false,
+    "second_review_count": 19,
+    "smaller_extraction_pilot_allowed": false,
+    "systematic_ambiguity_pass": true,
+    "wrong_page_count": 9,
+    "wrong_page_rate": 0.068182
+  },
+  "elapsed_seconds": 493.79892,
+  "failed_cases": 0,
+  "finished_at": "2026-07-25T18:45:15Z",
+  "full_tables_saved": false,
+  "full_text_saved": false,
+  "gabriel_backend": "huit_openai_responses_direct_sdk",
+  "gabriel_candidate_page_relationship_counts": {
+    "adjacent_to_table": 9,
+    "exact_table_page": 46,
+    "no_candidate_page": 71,
+    "points_to_later_table": 5,
+    "unknown": 10,
+    "wrong_page": 9
+  },
+  "gabriel_extraction_complexity_counts": {
+    "easy": 13,
+    "hard": 4,
+    "moderate": 47,
+    "not_extractable": 86
+  },
+  "gabriel_model": "gpt-5.4-nano",
+  "gabriel_non_wage_family_counts": {
+    "benefits": 25,
+    "budget_or_fiscal": 3,
+    "classification_without_pay": 2,
+    "front_matter": 4,
+    "incentive_or_bonus_prose": 3,
+    "index_or_contents": 14,
+    "memorandum_without_table": 8,
+    "not_applicable": 73,
+    "other": 18
+  },
+  "gabriel_schema_valid_counts": {
+    "true": 150
+  },
+  "gabriel_status_counts": {
+    "success": 150
+  },
+  "gabriel_visual_table_type_counts": {
+    "annual_salary_schedule": 10,
+    "benefits_table": 5,
+    "budget_or_fiscal_table": 3,
+    "classification_pay_table": 9,
+    "classification_without_pay": 2,
+    "compact_compensation_sheet": 1,
+    "front_matter": 5,
+    "hourly_schedule": 11,
+    "index_or_contents": 8,
+    "no_table": 15,
+    "non_wage_table": 1,
+    "prose_only": 67,
+    "step_grade": 13
+  },
+  "gabriel_wage_schedule_present_counts": {
+    "maybe": 12,
+    "no": 101,
+    "yes": 37
+  },
+  "gate_id": "TEXT-TABLE-AUTO-GABRIEL-ADJUDICATION-GATE1-2026-07-24",
+  "hosted_search_calls": 0,
+  "ingestion_actions": 0,
+  "input_sha256_before_after": [
+    "a85cf58bd91fa523154824253bbdb5f63ca8150fb134330f8352643fcd5016ff",
+    "a85cf58bd91fa523154824253bbdb5f63ca8150fb134330f8352643fcd5016ff"
+  ],
+  "local_pages_evaluated": 738,
+  "method": "automated_local_visual_layout_plus_gabriel_bounded_page_adjudication",
+  "mode": "live",
+  "ocr_runs": 0,
+  "render_manifest_sha256_before_after": [
+    "a77b80dea8288acd42816aa26865babd2300d8875d4619137d25a1528561f005",
+    "a77b80dea8288acd42816aa26865babd2300d8875d4619137d25a1528561f005"
+  ],
+  "rendered_pages_used": 734,
+  "started_at": "2026-07-25T18:37:01Z",
+  "status": "auto_gabriel_adjudication_completed",
+  "structured_wage_values_saved": false,
+  "urls_opened": 0,
+  "wage_extraction_runs": 0
+}

@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "auto_gabriel_gate1_completed"
+              ? "Automated visual + GABRIEL gate complete; extraction remains closed"
+              : textTableCalibrationStatus.calibration_phase ===
             "independent_adjudication_packet_prepared"
               ? "Blinded independent adjudication packet prepared"
               : textTableCalibrationStatus.calibration_phase ===
@@ -777,6 +780,33 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "auto_gabriel_gate1_completed" ? (
+            <>
+              The bounded automated gate completed{" "}
+              {formatNumber(textTableCalibrationStatus.auto_gate_case_count)}
+              {" "}cases with{" "}
+              {formatPercent(
+                100 * textTableCalibrationStatus.gabriel_schema_valid_rate,
+              )}
+              {" "}schema-valid GABRIEL responses. It retained{" "}
+              {formatNumber(
+                textTableCalibrationStatus.auto_gate_label_counts
+                  ?.extraction_ready_high_confidence,
+              )}
+              {" "}high-confidence and{" "}
+              {formatNumber(
+                textTableCalibrationStatus.auto_gate_label_counts
+                  ?.extraction_ready_with_schema_update,
+              )}
+              {" "}schema-update-ready rows; the candidate-page wrong-page
+              rate was{" "}
+              {formatPercent(100 * textTableCalibrationStatus.wrong_page_rate)}
+              . The computed decision is{" "}
+              {textTableCalibrationStatus.extraction_decision}: neither the
+              500-document nor smaller extraction run is authorized. No final
+              wage values, OCR, ingestion, or codification occurred.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "independent_adjudication_packet_prepared" ? (
             <>
               A blinded packet now covers{" "}
