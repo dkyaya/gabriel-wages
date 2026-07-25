@@ -6,6 +6,34 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-25 (Full text/table detection durably merged; calibration next)
+
+**Did**
+- Started from clean tracked `827917bb201fb59bcfe1ce77dfd1fe3e29651ee6`, confirmed all requested ancestry, and preserved the unrelated untracked root `package-lock.json`.
+- Re-audited the four 457-row full-run lanes. All are `completed_merge_eligible`; the fresh audit records 1,828 / 1,828 terminal rows, zero duplicate detection/readiness/source/candidate identities, zero artifact/parser/heuristic/page-hint/bounded-hint failures, and `merge_all_text_table_detection_lanes`.
+- Independently proved exact set and inherited-field equality between the 1,828 full-run rows and the complete durable `parse_text_layer_later` PDF-readiness authority. The full run contains all 150 Pilot 1 readiness identities and reproduces their frozen-heuristic results exactly.
+- Added a fail-closed offline merge tool and expanded the synthetic/mock suite to 24 passing tests. The tool requires a merge-eligible local audit, rejects duplicate/nonterminal or authority-mismatched inputs, preserves detection fields and bounded hints, and refuses an existing durable target.
+- Ran the production merge exactly once with ID `TEXT-TABLE-DETECTION-FULL-PARSE-TEXT-MERGE-2026-07-24`. The cumulative/latest durable ledgers contain 1,828 rows and are byte-identical; the cumulative/latest summaries are also byte-identical.
+- Durable signals are wage table 1,067 likely / 749 possible / 12 unlikely; contract period 1,672 likely / 103 possible / 53 unlikely; table structure 1,717 likely / 107 possible / four unlikely; and extraction priority 1,067 p1 / 754 p2 / seven p3. The output retains 7,649 candidate page hints from 17,861 bounded scanned pages, not wage observations.
+- Preserved Pilot 1 as superseded diagnostic provenance and concatenated zero pilot rows into the uniform full-run result.
+- Updated the dashboard to `full_parse_text_merged`, exact coverage 1,828 / 1,828, and `manual_calibration_subset_before_extraction` as the next recommendation.
+
+**Decisions and why**
+- Require a manually reviewed 100–150-row calibration subset before any wage-table extraction pilot. The 1,816 / 1,828 likely-or-possible rate (99.3435%) reflects a sensitive scheduler and makes false-positive measurement essential.
+- Treat candidate page numbers and bounded contract-period hints as heuristic scheduling metadata only. They are not final wage values, extracted table rows, source-coded evidence, or analysis-ready observations.
+- Keep OCR, wage extraction, ingestion, codification, wage-gap analysis, and additional discovery/downloading separately gated.
+
+**Surprises/breakage**
+- One validation command was initially launched from the dashboard subdirectory with a repository-relative interpreter path; it failed before running the independent validator. The same validator was immediately rerun from the repository root and passed. The dashboard production build in that command completed successfully.
+- No readiness, authority, merge, dashboard, test, schema, ingestion, protected-file, secret-safety, or diff gate failed.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Six compiles, 24 offline/mock tests, the final 1,828-row four-lane audit, independent exact-authority/field/latest-pointer/secret/no-full-text checks, dashboard JSON/frontend production build, schema validation, 60 ingestion tests, protected/upstream/corpus hashes, and diff checks passed. No URL, network/API/model call, download/redownload, PDF parse during merge, OCR, full extracted text, final wage extraction, scout-accounting or routing/triage/source-review/PDF-readiness-ledger mutation, ingestion, `gabriel.codify`, wage-gap work, causal claim, regression, remote action, or push occurred.
+
+**Next steps**
+1. Review the durable text/table ledger, merge audit/result, dashboard refresh, validation record, next-phase plan, and lite relay.
+2. If separately authorized, plan and run a stratified 100–150-row manual calibration subset across signal, priority, unit, source type, officialness, page-count, state, and source-review strata.
+3. Use calibration precision and layout findings to design a bounded wage-table extraction pilot. Keep OCR, broad extraction, ingestion, codification, and wage analysis separately authorized.
+
 ## 2026-07-25 (Full text/table-detection run collected; serial merge pending)
 
 **Did**

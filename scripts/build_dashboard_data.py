@@ -188,6 +188,16 @@ TEXT_TABLE_DETECTION_FULL_RUN_SUMMARY_PATH = (
     / "TEXT-TABLE-DETECTION-FULL-PARSE-TEXT-2026-07-24"
     / "text_table_detection_collection_summary.json"
 )
+TEXT_TABLE_DETECTION_DURABLE_LEDGER_PATH = (
+    ANALYSIS_DIR
+    / "text_table_detection_ledgers"
+    / "text_table_detection_ledger_latest.csv"
+)
+TEXT_TABLE_DETECTION_DURABLE_SUMMARY_PATH = (
+    ANALYSIS_DIR
+    / "text_table_detection_ledgers"
+    / "text_table_detection_summary_cumulative.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -250,6 +260,8 @@ OPTIONAL_PATHS = [
     PDF_READINESS_DURABLE_SUMMARY_PATH,
     TEXT_TABLE_DETECTION_PILOT1_SUMMARY_PATH,
     TEXT_TABLE_DETECTION_FULL_RUN_SUMMARY_PATH,
+    TEXT_TABLE_DETECTION_DURABLE_LEDGER_PATH,
+    TEXT_TABLE_DETECTION_DURABLE_SUMMARY_PATH,
 ]
 
 STATE_NAMES = {
@@ -3330,6 +3342,7 @@ def build_text_table_detection_status_summary(
     if (
         not TEXT_TABLE_DETECTION_PILOT1_SUMMARY_PATH.exists()
         and not TEXT_TABLE_DETECTION_FULL_RUN_SUMMARY_PATH.exists()
+        and not TEXT_TABLE_DETECTION_DURABLE_SUMMARY_PATH.exists()
     ):
         return {
             **metadata,
@@ -3365,6 +3378,163 @@ def build_text_table_detection_status_summary(
         "codify_actions",
         "durable_text_table_merges",
     )
+    if TEXT_TABLE_DETECTION_DURABLE_SUMMARY_PATH.exists():
+        durable = read_json(TEXT_TABLE_DETECTION_DURABLE_SUMMARY_PATH)
+        durable_rows = int(durable.get("full_parse_text_rows_merged", 0))
+        durable_ledger_rows = len(
+            read_csv(TEXT_TABLE_DETECTION_DURABLE_LEDGER_PATH)
+        )
+        authority_equality = durable.get(
+            "exact_parse_text_authority_equality", {}
+        )
+        durable_failure_fields = (
+            "hash_failures",
+            "missing_artifacts",
+            "parser_errors",
+            "invalid_candidate_page_hints",
+            "bounded_hint_overruns",
+            "heuristic_mismatches",
+            "urls_opened",
+            "network_calls",
+            "downloads",
+            "redownloads",
+            "ocr_runs",
+            "full_text_artifacts_written",
+            "final_wage_values_extracted",
+            "ingestion_actions",
+            "codify_actions",
+            "scout_accounting_mutations",
+            "routing_ledger_mutations",
+            "metadata_triage_ledger_mutations",
+            "source_review_ledger_mutations",
+            "pdf_readiness_ledger_mutations",
+        )
+        if (
+            durable.get("status")
+            != "text_table_detection_full_parse_text_merged"
+            or durable.get("text_table_detection_merge_id")
+            != "TEXT-TABLE-DETECTION-FULL-PARSE-TEXT-MERGE-2026-07-24"
+            or durable.get("text_table_detection_stage")
+            != "heuristic_text_table_detection_not_extracted"
+            or durable_rows != int(
+                durable.get("parse_text_layer_later_rows_available", 0)
+            )
+            or durable_rows != durable_ledger_rows
+            or float(durable.get("parse_text_coverage_rate", 0)) != 1.0
+            or int(durable.get("unique_text_table_detection_ids", 0))
+            != durable_rows
+            or int(durable.get("unique_pdf_readiness_ids", 0))
+            != durable_rows
+            or int(durable.get("unique_source_review_ids", 0))
+            != durable_rows
+            or int(durable.get("unique_candidate_queue_row_ids", 0))
+            != durable_rows
+            or any(
+                int(durable.get(field, -1)) != 0
+                for field in (
+                    "duplicate_text_table_detection_ids",
+                    "duplicate_pdf_readiness_ids",
+                    "duplicate_source_review_ids",
+                    "duplicate_candidate_queue_row_ids",
+                    *durable_failure_fields,
+                )
+            )
+            or int(durable.get("durable_text_table_merges", 0)) != 1
+            or durable.get("detection_status_counts")
+            != {"detection_checked": durable_rows}
+            or durable.get("heuristic_version_counts")
+            != {"bounded_keyword_numeric_structure_v1": durable_rows}
+            or not all(
+                authority_equality.get(field) is True
+                for field in (
+                    "pdf_readiness_id_set_equal",
+                    "source_review_id_set_equal",
+                    "candidate_queue_row_id_set_equal",
+                )
+            )
+            or authority_equality.get("authority_field_mismatch_counts")
+            != {}
+        ):
+            raise ValueError(
+                "durable text/table detection summary fails merge gates"
+            )
+        return {
+            **metadata,
+            "text_table_detection_phase": "full_parse_text_merged",
+            "latest_text_table_detection_round_id": durable["full_run_id"],
+            "latest_text_table_detection_merge_id": durable[
+                "text_table_detection_merge_id"
+            ],
+            "text_table_detection_merge_status": "merged",
+            "full_parse_text_rows_merged": durable_rows,
+            "parse_text_layer_later_rows_available": int(
+                durable["parse_text_layer_later_rows_available"]
+            ),
+            "ocr_later_rows": int(durable["ocr_later_rows"]),
+            "detection_status_counts": durable["detection_status_counts"],
+            "wage_table_signal_counts": durable[
+                "wage_table_signal_counts"
+            ],
+            "wage_table_signal_confidence_counts": durable[
+                "wage_table_signal_confidence_counts"
+            ],
+            "contract_period_signal_counts": durable[
+                "contract_period_signal_counts"
+            ],
+            "contract_period_confidence_counts": durable[
+                "contract_period_confidence_counts"
+            ],
+            "table_like_structure_signal_counts": durable[
+                "table_like_structure_signal_counts"
+            ],
+            "extraction_pilot_priority_counts": durable[
+                "extraction_pilot_priority_counts"
+            ],
+            "recommended_next_action_counts": durable[
+                "recommended_next_action_counts"
+            ],
+            "pages_scanned": int(durable["pages_scanned"]),
+            "pages_with_text": int(durable["pages_with_text"]),
+            "bounded_text_characters_inspected": int(
+                durable["total_text_chars_scanned"]
+            ),
+            "candidate_wage_page_hints": int(
+                durable["candidate_wage_page_hints"]
+            ),
+            "parser_library": next(
+                iter(durable["parser_library_counts"]), ""
+            ),
+            "parser_version": next(
+                iter(durable["parser_version_counts"]), ""
+            ),
+            "heuristic_version": next(
+                iter(durable["heuristic_version_counts"]), ""
+            ),
+            "parser_error_rows": int(durable["parser_errors"]),
+            "hash_failure_rows": int(durable["hash_failures"]),
+            "missing_artifact_rows": int(durable["missing_artifacts"]),
+            "durable_text_table_detection_ledger_latest": relative(
+                TEXT_TABLE_DETECTION_DURABLE_LEDGER_PATH
+            ),
+            "next_recommendation": (
+                "manual_calibration_subset_before_extraction"
+            ),
+            "ingestion_status": "not_started",
+            "codify_status": "not_started",
+            "wage_extraction_status": "not_started",
+            "wage_gap_analysis_status": "not_started",
+            "summary_source": relative(
+                TEXT_TABLE_DETECTION_DURABLE_SUMMARY_PATH
+            ),
+            "caveats": [
+                "Table detection is deterministic, heuristic, and preliminary.",
+                "Candidate wage pages are page hints, not wage observations.",
+                "No final wage values were extracted.",
+                "No OCR, ingestion, or codification occurred.",
+                "Manual calibration is required before extraction.",
+            ],
+        }
+
     if TEXT_TABLE_DETECTION_FULL_RUN_SUMMARY_PATH.exists():
         full_run = read_json(TEXT_TABLE_DETECTION_FULL_RUN_SUMMARY_PATH)
         if (

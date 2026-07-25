@@ -22,6 +22,7 @@ ROOT = SCRIPTS.parent
 sys.path.insert(0, str(SCRIPTS))
 
 import audit_text_table_detection_lanes as auditor  # noqa: E402
+import merge_text_table_detection_lanes as merger  # noqa: E402
 import prepare_text_table_detection_pilot as planner  # noqa: E402
 import text_table_detection_sources as runner  # noqa: E402
 
@@ -488,9 +489,322 @@ class TextTableDetectionTests(unittest.TestCase):
         self.assertEqual(before, after)
 
 
+class TextTableDetectionMergeTests(unittest.TestCase):
+    def detection_row(
+        self,
+        index: int,
+        *,
+        pilot_id: str = "TEST-TEXT-TABLE-FULL",
+        lane_id: str = "lane_1",
+    ) -> dict[str, str]:
+        base = readiness_row(index)
+        values = {
+            **base,
+            "text_table_detection_id": f"ttd_{index:04d}",
+            "text_table_detection_pilot_id": pilot_id,
+            "text_table_detection_lane_id": lane_id,
+            "pilot_selection_rank": str(index + 1),
+            "page_count_bin": "1_to_10",
+            "artifact_byte_size_bin": "small_le_512_kib",
+            "sample_selection_reason": (
+                "complete durable parse_text_layer_later universe "
+                "under frozen heuristic"
+            ),
+            "detection_status": "detection_checked",
+            "detection_status_detail": "synthetic bounded detection",
+            "parser_library": "pypdf",
+            "parser_version": "6.13.2",
+            "parser_elapsed_seconds": "0.01",
+            "pages_scanned": "1",
+            "pages_with_text": "1",
+            "total_text_chars_scanned": "100",
+            "wage_table_signal": "likely" if index % 2 else "possible",
+            "wage_table_signal_confidence": (
+                "high" if index % 2 else "medium"
+            ),
+            "candidate_wage_pages": "1",
+            "candidate_wage_page_count": "1",
+            "contract_period_signal": "likely",
+            "contract_period_confidence": "high",
+            "candidate_contract_period_text": "Effective 2020 through 2023",
+            "pay_schedule_signal": "detected",
+            "salary_schedule_signal": "detected",
+            "hourly_rate_signal": "not_detected",
+            "step_grade_signal": "detected",
+            "rank_position_signal": "detected",
+            "effective_date_signal": "detected",
+            "bargaining_unit_signal": "detected",
+            "public_safety_signal": "detected",
+            "non_safety_signal": "not_detected",
+            "table_like_structure_signal": "likely",
+            "table_detection_method": runner.TABLE_METHOD,
+            "extraction_pilot_priority": "p1",
+            "recommended_next_action": "wage_table_extraction_pilot",
+            "detection_notes": "synthetic bounded signals only",
+            "reviewer": "synthetic_test",
+            "reviewed_at": "2026-07-25T00:00:00Z",
+        }
+        return {field: values.get(field, "") for field in runner.LEDGER_FIELDS}
+
+    def merge_fixture(self, root: Path) -> argparse.Namespace:
+        pilot_id = "TEST-TEXT-TABLE-FULL"
+        rows = [
+            self.detection_row(index, pilot_id=pilot_id, lane_id="lane_1")
+            for index in range(2)
+        ]
+        rows += [
+            self.detection_row(index, pilot_id=pilot_id, lane_id="lane_2")
+            for index in range(2, 4)
+        ]
+        lanes = []
+        for lane_number in (1, 2):
+            lane_id = f"lane_{lane_number}"
+            output = root / lane_id / "local"
+            lane_rows = [
+                row
+                for row in rows
+                if row["text_table_detection_lane_id"] == lane_id
+            ]
+            write_csv(
+                output / "text_table_detection_ledger.csv",
+                lane_rows,
+                runner.LEDGER_FIELDS,
+            )
+            lanes.append(
+                {
+                    "lane_id": lane_id,
+                    "expected_rows": len(lane_rows),
+                    "future_local_output_dir": str(output),
+                    "frozen_heuristic_version": runner.TABLE_METHOD,
+                }
+            )
+        manifest = {
+            "pilot_id": pilot_id,
+            "selected_rows": len(rows),
+            "frozen_heuristic_version": runner.TABLE_METHOD,
+            "lanes": lanes,
+        }
+        manifest_path = root / "manifest.json"
+        manifest_path.write_text(
+            json.dumps(manifest, indent=2) + "\n", encoding="utf-8"
+        )
+        audit = {
+            "pilot_id": pilot_id,
+            "manifest": manifest_path.as_posix(),
+            "planned_rows": len(rows),
+            "ledger_rows": len(rows),
+            "terminal_rows": len(rows),
+            "lane_classification_counts": {
+                "completed_merge_eligible": len(lanes)
+            },
+            "lanes": [
+                {
+                    "lane_id": lane["lane_id"],
+                    "classification": "completed_merge_eligible",
+                    "mode": "local",
+                    "no_forbidden_activity": True,
+                    "terminal_rows": lane["expected_rows"],
+                }
+                for lane in lanes
+            ],
+            "detection_status_counts": {"detection_checked": len(rows)},
+            "frozen_heuristic_version": runner.TABLE_METHOD,
+            "merge_recommendation": (
+                "merge_all_text_table_detection_lanes"
+            ),
+            **{field: 0 for field in merger.AUDIT_ZERO_FIELDS},
+            **{field: 0 for field in merger.FORBIDDEN_AUDIT_FIELDS},
+        }
+        audit_path = root / "audit.json"
+        audit_path.write_text(
+            json.dumps(audit, indent=2) + "\n", encoding="utf-8"
+        )
+        authority_rows = []
+        for row in rows:
+            authority = {
+                field: row.get(field, "")
+                for field in [
+                    "pdf_readiness_id",
+                    *merger.AUTHORITY_MATCH_FIELDS,
+                ]
+            }
+            authority.update(
+                {
+                    "recommended_next_action": "parse_text_layer_later",
+                    "text_layer_status": row["text_layer_status"],
+                }
+            )
+            authority_rows.append(authority)
+        authority_fields = list(
+            dict.fromkeys(
+                [
+                    "pdf_readiness_id",
+                    *merger.AUTHORITY_MATCH_FIELDS,
+                    "recommended_next_action",
+                ]
+            )
+        )
+        readiness_path = root / "readiness.csv"
+        write_csv(readiness_path, authority_rows, authority_fields)
+        return argparse.Namespace(
+            manifest=str(manifest_path),
+            audit_summary=str(audit_path),
+            pdf_readiness_ledger_csv=str(readiness_path),
+            output_dir=str(root / "durable"),
+            merge_id="TEST-TEXT-TABLE-MERGE",
+        )
+
+    def lane_ledger(
+        self, args: argparse.Namespace, lane_id: str = "lane_1"
+    ) -> Path:
+        manifest = json.loads(Path(args.manifest).read_text(encoding="utf-8"))
+        lane = next(
+            item for item in manifest["lanes"] if item["lane_id"] == lane_id
+        )
+        return (
+            Path(lane["future_local_output_dir"])
+            / "text_table_detection_ledger.csv"
+        )
+
+    def mutate_lane(
+        self,
+        args: argparse.Namespace,
+        mutator,
+        lane_id: str = "lane_1",
+    ) -> None:
+        path = self.lane_ledger(args, lane_id)
+        rows = read_csv(path)
+        mutator(rows)
+        write_csv(path, rows, runner.LEDGER_FIELDS)
+
+    def test_merge_preserves_all_rows_and_detection_fields(self):
+        with tempfile.TemporaryDirectory() as raw:
+            args = self.merge_fixture(Path(raw))
+            summary = merger.merge(args)
+            rows = read_csv(
+                Path(args.output_dir)
+                / merger.OUTPUT_NAMES["ledger"]
+            )
+            self.assertEqual(summary["full_parse_text_rows_merged"], 4)
+            self.assertEqual(len(rows), 4)
+            self.assertEqual(
+                {row["table_detection_method"] for row in rows},
+                {runner.TABLE_METHOD},
+            )
+            self.assertEqual(
+                {row["candidate_wage_pages"] for row in rows}, {"1"}
+            )
+            self.assertTrue(
+                all(
+                    row["text_table_detection_stage"] == merger.STAGE
+                    for row in rows
+                )
+            )
+            self.assertTrue(
+                summary["exact_parse_text_authority_equality"][
+                    "pdf_readiness_id_set_equal"
+                ]
+            )
+            self.assertEqual(summary["urls_opened"], 0)
+            self.assertEqual(summary["network_calls"], 0)
+            self.assertEqual(summary["final_wage_values_extracted"], 0)
+
+    def test_duplicate_identity_fields_fail(self):
+        for field in merger.IDENTITY_FIELDS:
+            with self.subTest(field=field):
+                with tempfile.TemporaryDirectory() as raw:
+                    args = self.merge_fixture(Path(raw))
+
+                    def duplicate(rows):
+                        rows[1][field] = rows[0][field]
+
+                    self.mutate_lane(args, duplicate)
+                    with self.assertRaisesRegex(
+                        ValueError, f"duplicate identity: {field}"
+                    ):
+                        merger.merge(args)
+
+    def test_nonterminal_row_fails(self):
+        with tempfile.TemporaryDirectory() as raw:
+            args = self.merge_fixture(Path(raw))
+            self.mutate_lane(
+                args,
+                lambda rows: rows[0].__setitem__(
+                    "detection_status", runner.DRY_STATUS
+                ),
+            )
+            with self.assertRaisesRegex(ValueError, "nonterminal"):
+                merger.merge(args)
+
+    def test_non_merge_eligible_audit_fails(self):
+        with tempfile.TemporaryDirectory() as raw:
+            args = self.merge_fixture(Path(raw))
+            path = Path(args.audit_summary)
+            audit = json.loads(path.read_text(encoding="utf-8"))
+            audit["merge_recommendation"] = "do_not_merge"
+            path.write_text(json.dumps(audit), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "not merge eligible"):
+                merger.merge(args)
+
+    def test_authority_identity_mismatch_fails(self):
+        with tempfile.TemporaryDirectory() as raw:
+            args = self.merge_fixture(Path(raw))
+            path = Path(args.pdf_readiness_ledger_csv)
+            fields, rows = merger.read_csv(path)
+            rows[0]["pdf_readiness_id"] = "different_authority_id"
+            write_csv(path, rows, fields)
+            with self.assertRaisesRegex(ValueError, "identity mismatch"):
+                merger.merge(args)
+
+    def test_authority_artifact_mismatch_fails(self):
+        with tempfile.TemporaryDirectory() as raw:
+            args = self.merge_fixture(Path(raw))
+            path = Path(args.pdf_readiness_ledger_csv)
+            fields, rows = merger.read_csv(path)
+            rows[0]["content_hash"] = "f" * 64
+            write_csv(path, rows, fields)
+            with self.assertRaisesRegex(
+                ValueError, "authority field mismatch"
+            ):
+                merger.merge(args)
+
+    def test_existing_output_fails_closed(self):
+        with tempfile.TemporaryDirectory() as raw:
+            args = self.merge_fixture(Path(raw))
+            Path(args.output_dir).mkdir()
+            with self.assertRaises(FileExistsError):
+                merger.merge(args)
+
+    def test_merge_makes_no_network_calls_or_protected_mutations(self):
+        protected = [
+            ROOT / "data" / "contracts.csv",
+            ROOT / "data" / "city_coverage.csv",
+        ]
+        before = {path: sha256(path) for path in protected}
+        with tempfile.TemporaryDirectory() as raw:
+            args = self.merge_fixture(Path(raw))
+            with mock.patch.object(
+                socket.socket,
+                "connect",
+                side_effect=AssertionError("network call attempted"),
+            ):
+                summary = merger.merge(args)
+            self.assertEqual(summary["network_calls"], 0)
+            self.assertEqual(summary["durable_text_table_merges"], 1)
+        after = {path: sha256(path) for path in protected}
+        self.assertEqual(before, after)
+
+
 def main() -> int:
-    suite = unittest.defaultTestLoader.loadTestsFromTestCase(
-        TextTableDetectionTests
+    suite = unittest.TestSuite(
+        [
+            unittest.defaultTestLoader.loadTestsFromTestCase(
+                TextTableDetectionTests
+            ),
+            unittest.defaultTestLoader.loadTestsFromTestCase(
+                TextTableDetectionMergeTests
+            ),
+        ]
     )
     result = unittest.TextTestRunner(verbosity=2).run(suite)
     return 0 if result.wasSuccessful() else 1

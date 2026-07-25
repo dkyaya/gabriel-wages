@@ -656,6 +656,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Text/table detection</p>
           <h3>
             {textTableDetectionStatus.text_table_detection_phase ===
+            "full_parse_text_merged"
+              ? "Full bounded local pass merged; calibration is next"
+              : textTableDetectionStatus.text_table_detection_phase ===
             "full_parse_text_collected_not_merged"
               ? "Full bounded local pass collected; serial merge pending"
               : textTableDetectionStatus.text_table_detection_phase ===
@@ -666,6 +669,30 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableDetectionStatus.text_table_detection_phase ===
+          "full_parse_text_merged" ? (
+            <>
+              The durable detection ledger covers all{" "}
+              {formatNumber(
+                textTableDetectionStatus.full_parse_text_rows_merged,
+              )}
+              {" "}parse-text PDFs:{" "}
+              {formatNumber(
+                textTableDetectionStatus.wage_table_signal_counts?.likely,
+              )}
+              {" "}likely,{" "}
+              {formatNumber(
+                textTableDetectionStatus.wage_table_signal_counts?.possible,
+              )}
+              {" "}possible, and{" "}
+              {formatNumber(
+                textTableDetectionStatus.wage_table_signal_counts?.unlikely,
+              )}
+              {" "}unlikely wage-table signals. Candidate pages are
+              heuristic hints, not wage observations. Manual calibration is
+              next; OCR, final wage extraction, ingestion, and codification
+              have not started.
+            </>
+          ) : textTableDetectionStatus.text_table_detection_phase ===
           "full_parse_text_collected_not_merged" ? (
             <>
               All{" "}

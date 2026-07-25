@@ -1,0 +1,237 @@
+{
+  "audit_summary_path": "tmp/text_table_detection_pilots/TEXT-TABLE-DETECTION-FULL-PARSE-TEXT-2026-07-24/serial_merge_lane_audit_2026-07-24/text_table_detection_lane_audit_summary.json",
+  "audit_summary_sha256": "1ca3fd28de7911cd9ac4ced1e453a9dfadbc563f5f633ff2108994bffc55d15a",
+  "bounded_hint_overruns": 0,
+  "candidate_source_type_distribution": {
+    "arbitration_award": 10,
+    "cba": 1719,
+    "factfinding": 2,
+    "memorandum_or_settlement": 20,
+    "ordinance_or_policy": 19,
+    "wage_schedule_or_compensation_plan": 58
+  },
+  "candidate_wage_page_hints": 7649,
+  "caveats": [
+    "Table detection is heuristic and preliminary.",
+    "Candidate pages are hints, not wage observations.",
+    "No final wage values were extracted.",
+    "No OCR or ingestion was run.",
+    "Manual calibration is required before extraction."
+  ],
+  "codify_actions": 0,
+  "contract_period_confidence_counts": {
+    "high": 1672,
+    "low": 53,
+    "medium": 103
+  },
+  "contract_period_signal_counts": {
+    "likely": 1672,
+    "possible": 103,
+    "unlikely": 53
+  },
+  "detection_status_counts": {
+    "detection_checked": 1828
+  },
+  "downloads": 0,
+  "duplicate_candidate_queue_row_ids": 0,
+  "duplicate_pdf_readiness_ids": 0,
+  "duplicate_source_review_ids": 0,
+  "duplicate_text_table_detection_ids": 0,
+  "durable_text_table_merges": 1,
+  "exact_parse_text_authority_equality": {
+    "authority_field_mismatch_counts": {},
+    "authority_fields_checked": [
+      "source_review_id",
+      "candidate_queue_row_id",
+      "triage_id",
+      "verification_id",
+      "source_review_pilot_id",
+      "state",
+      "municipality",
+      "government_name",
+      "unit_type",
+      "candidate_source_type",
+      "priority_for_content_review",
+      "source_officialness_rating",
+      "source_relevance_rating",
+      "document_type_rating",
+      "extraction_readiness_rating",
+      "content_artifact_path",
+      "content_hash",
+      "content_byte_size",
+      "content_type_observed",
+      "pdf_page_count",
+      "text_layer_status"
+    ],
+    "candidate_queue_row_id_set_equal": true,
+    "pdf_readiness_id_set_equal": true,
+    "source_review_id_set_equal": true
+  },
+  "extraction_pilot_priority_counts": {
+    "p1": 1067,
+    "p2": 754,
+    "p3": 7
+  },
+  "final_wage_values_extracted": 0,
+  "full_parse_text_rows_merged": 1828,
+  "full_run_id": "TEXT-TABLE-DETECTION-FULL-PARSE-TEXT-2026-07-24",
+  "full_text_artifacts_written": 0,
+  "hash_failures": 0,
+  "heuristic_mismatches": 0,
+  "heuristic_version_counts": {
+    "bounded_keyword_numeric_structure_v1": 1828
+  },
+  "ingestion_actions": 0,
+  "invalid_candidate_page_hints": 0,
+  "manifest_path": "docs/analysis/text_table_detection_pilots/TEXT-TABLE-DETECTION-FULL-PARSE-TEXT-2026-07-24/text_table_detection_pilot_manifest.json",
+  "manifest_sha256": "221ac0a09fa34af3c6e185b0211a4a750219cd3812f66e154269d218fb1f64f3",
+  "maximum_contract_hint_characters": 300,
+  "metadata_triage_ledger_mutations": 0,
+  "missing_artifacts": 0,
+  "network_calls": 0,
+  "next_recommendation": "manual_calibration_subset_before_extraction",
+  "ocr_later_rows": 296,
+  "ocr_runs": 0,
+  "officialness_distribution": {
+    "official_municipal": 648,
+    "official_state_repository": 525,
+    "official_union": 42,
+    "uncertain": 546,
+    "unknown": 67
+  },
+  "page_count_bin_distribution": {
+    "11_to_25": 174,
+    "1_to_10": 76,
+    "26_to_50": 846,
+    "51_to_100": 617,
+    "over_100": 115
+  },
+  "pages_scanned": 17861,
+  "pages_with_text": 17369,
+  "parse_text_coverage_rate": 1.0,
+  "parse_text_layer_later_rows_available": 1828,
+  "parser_errors": 0,
+  "parser_library_counts": {
+    "pypdf": 1828
+  },
+  "parser_version_counts": {
+    "6.13.2": 1828
+  },
+  "pdf_readiness_ledger_csv": "docs/analysis/pdf_readiness_ledgers/pdf_readiness_ledger_cumulative.csv",
+  "pdf_readiness_ledger_mutations": 0,
+  "pdf_readiness_ledger_sha256": "dd120453068a668b5c818352402ca828073ac9639ee4d8d1ffc88f9488d4d953",
+  "pdf_readiness_rows": 2124,
+  "pilot1_supersession": {
+    "pilot_id": "TEXT-TABLE-DETECTION-PILOT1-150-2026-07-24",
+    "pilot_rows_concatenated": 0,
+    "reason": "the full run reran all pilot identities under the same frozen heuristic",
+    "status": "preserved_as_superseded_diagnostic_provenance"
+  },
+  "priority_distribution": {
+    "p1": 1501,
+    "p2": 327
+  },
+  "recommended_next_action_counts": {
+    "contract_period_extraction_pilot": 7,
+    "larger_text_detection_pass": 747,
+    "manual_review": 7,
+    "wage_table_extraction_pilot": 1067
+  },
+  "redownloads": 0,
+  "routing_ledger_mutations": 0,
+  "schema_version": "1.0.0",
+  "scout_accounting_mutations": 0,
+  "source_review_batch_distribution": {
+    "SOURCE-REVIEW-BATCH2-500-2026-07-24": 404,
+    "SOURCE-REVIEW-BATCH3-3X500-2026-07-24": 1297,
+    "SOURCE-REVIEW-PILOT1-150-2026-07-24": 127
+  },
+  "source_review_ledger_mutations": 0,
+  "state_distribution": {
+    "AK": 14,
+    "AL": 2,
+    "AR": 2,
+    "AZ": 3,
+    "CA": 238,
+    "CO": 13,
+    "CT": 23,
+    "DC": 2,
+    "DE": 9,
+    "FL": 102,
+    "GA": 4,
+    "HI": 3,
+    "IA": 29,
+    "ID": 9,
+    "IL": 131,
+    "IN": 8,
+    "KS": 11,
+    "KY": 5,
+    "LA": 3,
+    "MA": 54,
+    "MD": 11,
+    "ME": 13,
+    "MI": 94,
+    "MN": 50,
+    "MO": 13,
+    "MS": 3,
+    "MT": 20,
+    "NC": 2,
+    "ND": 2,
+    "NE": 17,
+    "NH": 17,
+    "NJ": 7,
+    "NM": 14,
+    "NV": 21,
+    "NY": 26,
+    "OH": 528,
+    "OK": 14,
+    "OR": 67,
+    "PA": 19,
+    "RI": 7,
+    "SC": 2,
+    "SD": 10,
+    "TN": 1,
+    "TX": 34,
+    "UT": 3,
+    "VA": 9,
+    "VT": 2,
+    "WA": 95,
+    "WI": 57,
+    "WV": 1,
+    "WY": 4
+  },
+  "status": "text_table_detection_full_parse_text_merged",
+  "table_like_structure_signal_counts": {
+    "likely": 1717,
+    "possible": 107,
+    "unlikely": 4
+  },
+  "text_layer_status_counts": {
+    "partial": 220,
+    "present": 1608
+  },
+  "text_table_detection_merge_id": "TEXT-TABLE-DETECTION-FULL-PARSE-TEXT-MERGE-2026-07-24",
+  "text_table_detection_merged_at": "2026-07-25T13:27:39Z",
+  "text_table_detection_stage": "heuristic_text_table_detection_not_extracted",
+  "total_text_chars_scanned": 21232318,
+  "unique_candidate_queue_row_ids": 1828,
+  "unique_pdf_readiness_ids": 1828,
+  "unique_source_review_ids": 1828,
+  "unique_text_table_detection_ids": 1828,
+  "unit_type_distribution": {
+    "fire": 439,
+    "non_safety": 607,
+    "police": 782
+  },
+  "urls_opened": 0,
+  "wage_table_signal_confidence_counts": {
+    "high": 1067,
+    "low": 12,
+    "medium": 749
+  },
+  "wage_table_signal_counts": {
+    "likely": 1067,
+    "possible": 749,
+    "unlikely": 12
+  }
+}

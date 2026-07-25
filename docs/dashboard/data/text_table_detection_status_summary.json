@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-25T13:12:32Z",
+  "generated_at": "2026-07-25T13:30:58Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -41,7 +41,9 @@
     "docs/analysis/pdf_readiness_ledgers/pdf_readiness_ledger_latest.csv",
     "docs/analysis/pdf_readiness_ledgers/pdf_readiness_summary_cumulative.json",
     "docs/analysis/text_table_detection_pilots/TEXT-TABLE-DETECTION-PILOT1-150-2026-07-24/text_table_detection_collection_summary.json",
-    "docs/analysis/text_table_detection_pilots/TEXT-TABLE-DETECTION-FULL-PARSE-TEXT-2026-07-24/text_table_detection_collection_summary.json"
+    "docs/analysis/text_table_detection_pilots/TEXT-TABLE-DETECTION-FULL-PARSE-TEXT-2026-07-24/text_table_detection_collection_summary.json",
+    "docs/analysis/text_table_detection_ledgers/text_table_detection_ledger_latest.csv",
+    "docs/analysis/text_table_detection_ledgers/text_table_detection_summary_cumulative.json"
   ],
   "warnings": [],
   "limitations": [
@@ -54,23 +56,11 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "text_table_detection_phase": "full_parse_text_collected_not_merged",
+  "text_table_detection_phase": "full_parse_text_merged",
   "latest_text_table_detection_round_id": "TEXT-TABLE-DETECTION-FULL-PARSE-TEXT-2026-07-24",
-  "full_parse_text_rows_collected": 1828,
-  "full_parse_text_terminal_rows": 1828,
-  "full_parse_text_lane_rows": [
-    457,
-    457,
-    457,
-    457
-  ],
-  "full_parse_text_lane_input_sha256": [
-    "eaec2dec027f332486199012175d876f284859f33c7c2b67b541a2b8f190a442",
-    "dcd1413776de58b3981c5d0625c93de95702aed8739538d6b08c54328e70c0a8",
-    "b71af7bbd072193cd2cd4755fba1aa64fd19e2b124dd4a55e11a1985b5ad1a2b",
-    "b07b153a7f45510ad5a97bb8df259be8eec357c42fcd5984983951a550f04431"
-  ],
-  "text_table_detection_merge_status": "not_started",
+  "latest_text_table_detection_merge_id": "TEXT-TABLE-DETECTION-FULL-PARSE-TEXT-MERGE-2026-07-24",
+  "text_table_detection_merge_status": "merged",
+  "full_parse_text_rows_merged": 1828,
   "parse_text_layer_later_rows_available": 1828,
   "ocr_later_rows": 296,
   "detection_status_counts": {
@@ -83,8 +73,8 @@
   },
   "wage_table_signal_confidence_counts": {
     "high": 1067,
-    "medium": 749,
-    "low": 12
+    "low": 12,
+    "medium": 749
   },
   "contract_period_signal_counts": {
     "likely": 1672,
@@ -93,8 +83,8 @@
   },
   "contract_period_confidence_counts": {
     "high": 1672,
-    "medium": 103,
-    "low": 53
+    "low": 53,
+    "medium": 103
   },
   "table_like_structure_signal_counts": {
     "likely": 1717,
@@ -107,10 +97,10 @@
     "p3": 7
   },
   "recommended_next_action_counts": {
-    "wage_table_extraction_pilot": 1067,
-    "larger_text_detection_pass": 747,
     "contract_period_extraction_pilot": 7,
-    "manual_review": 7
+    "larger_text_detection_pass": 747,
+    "manual_review": 7,
+    "wage_table_extraction_pilot": 1067
   },
   "pages_scanned": 17861,
   "pages_with_text": 17369,
@@ -122,18 +112,18 @@
   "parser_error_rows": 0,
   "hash_failure_rows": 0,
   "missing_artifact_rows": 0,
-  "next_recommendation": "serial_full_run_merge_then_manual_calibration",
+  "durable_text_table_detection_ledger_latest": "docs/analysis/text_table_detection_ledgers/text_table_detection_ledger_latest.csv",
+  "next_recommendation": "manual_calibration_subset_before_extraction",
   "ingestion_status": "not_started",
   "codify_status": "not_started",
   "wage_extraction_status": "not_started",
   "wage_gap_analysis_status": "not_started",
-  "summary_source": "docs/analysis/text_table_detection_pilots/TEXT-TABLE-DETECTION-FULL-PARSE-TEXT-2026-07-24/text_table_detection_collection_summary.json",
+  "summary_source": "docs/analysis/text_table_detection_ledgers/text_table_detection_summary_cumulative.json",
   "caveats": [
     "Table detection is deterministic, heuristic, and preliminary.",
     "Candidate wage pages are page hints, not wage observations.",
     "No final wage values were extracted.",
     "No OCR, ingestion, or codification occurred.",
-    "Manual calibration is required before wage extraction.",
-    "Full-run outcomes are collected but not durably merged."
+    "Manual calibration is required before extraction."
   ]
 }

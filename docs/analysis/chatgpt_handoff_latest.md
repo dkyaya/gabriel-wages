@@ -6,6 +6,43 @@ Last updated: `2026-07-25`
 
 ---
 
+## 2026-07-25 — Full text/table detection is durably merged
+
+### Current State
+
+- **Start and gate:** work began at clean tracked `827917bb201fb59bcfe1ce77dfd1fe3e29651ee6`; requested ancestry passed and the unrelated untracked root `package-lock.json` remains untouched. A fresh audit classifies all four full-run lanes `completed_merge_eligible`.
+- **Approved scope:** the merge used only the four 457-row ledgers from `TEXT-TABLE-DETECTION-FULL-PARSE-TEXT-2026-07-24`. The 150-row Pilot 1 remains preserved as superseded diagnostic provenance and was not concatenated.
+- **Authority equality:** [the readiness audit](text_table_detection_full_run_serial_merge_readiness_audit_2026-07-24.md) confirms exact equality between all 1,828 full-run PDF-readiness IDs and the durable `parse_text_layer_later` subset. Source-review/candidate identities and inherited artifact path/hash/size/type/page-count/text-layer fields match row for row.
+- **Exactly-once merge:** [the result](text_table_detection_full_run_serial_merge_result_2026-07-24.md) records one invocation of `merge_text_table_detection_lanes.py` with merge ID `TEXT-TABLE-DETECTION-FULL-PARSE-TEXT-MERGE-2026-07-24`.
+- **Durable outputs:** [the cumulative ledger](text_table_detection_ledgers/text_table_detection_ledger_cumulative.csv) and latest ledger contain 1,828 rows and are byte-identical. [The cumulative summary](text_table_detection_ledgers/text_table_detection_summary_cumulative.json) and latest summary are also byte-identical.
+- **Signals:** wage table is 1,067 likely / 749 possible / 12 unlikely; contract period is 1,672 likely / 103 possible / 53 unlikely; table structure is 1,717 likely / 107 possible / four unlikely. Priorities are 1,067 p1 / 754 p2 / seven p3.
+- **Bounded diagnostics:** the durable rows preserve 7,649 candidate page-number hints from 17,861 bounded scanned pages and 21,232,318 bounded in-memory characters. No table cells, complete page/document text, or final wage values were retained.
+- **Dashboard:** `text_table_detection_phase = full_parse_text_merged`, coverage is 1,828 / 1,828, downstream stages remain `not_started`, and the next recommendation is `manual_calibration_subset_before_extraction`.
+- **Boundary:** the merge was CSV/JSON-only. No URL/PDF was opened, no network/API/model call or download occurred, OCR did not run, no final wage value was extracted, and no upstream authority, scout accounting, ingestion, codification, wage-gap, regression, remote, or push action occurred.
+- **Validation:** [the validation record](text_table_detection_full_run_serial_merge_validation_2026-07-24.md) reports six compiles, 24 offline/mock tests, a final four-lane audit, independent 1,828-row authority/field/latest-pointer/safety checks, dashboard JSON/frontend build, schema validation, 60 ingestion tests, protected/upstream/corpus hashes, and diff checks passed.
+
+### Interpretation
+
+The durable layer is a complete deterministic screening result for every
+parse-text PDF, not a wage dataset. The 99.3435% likely-or-possible rate shows
+that the heuristic is recall-oriented and must be calibrated for precision.
+Candidate wage pages are hints; bounded contract-period snippets are not
+final extracted periods; neither is analysis-ready evidence.
+
+### Next Move
+
+Review [the next-phase plan](post_full_text_table_detection_next_phase_plan_2026-07-24.md)
+and lite relay. If separately authorized, create a reproducible, manually
+reviewed 100–150-row calibration subset stratified across likely/possible/
+unlikely signals, p1/p2, police/fire/non-safety, source type, officialness,
+page-count bin, state, and source-review batch.
+
+Use calibration results to estimate candidate-page precision, validate
+contract-period hints, catalogue common layouts, and define a small extraction
+schema. Do not run OCR, broad wage extraction, ingestion, codification,
+wage-gap analysis, new scouting, or bulk downloading without separate
+authorization and reviewed quality gates.
+
 ## 2026-07-25 — Full text/table detection is collected and audited
 
 ### Current State

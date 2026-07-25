@@ -252,16 +252,16 @@ possible, and four unlikely table-structure signals. The runner retained
 7,649 candidate page-number hints but no table cells, complete page text,
 document text, or final wage values.
 
-The text/table-detection phase is
-`full_parse_text_collected_not_merged`. All 1,828 rows are terminal and the
-four lanes are structurally merge-eligible, but no durable detection merge
-occurred. The 150 Pilot 1 identities were rerun under the same frozen
-heuristic and reproduced exactly. The next recommendation is a separate
-serial full-run merge, followed by manual calibration of likely, possible,
-and unlikely page hints before any wage-table extraction pilot. No URL was
-opened, nothing was downloaded, OCR did not run, and ingestion,
-codification, final wage extraction, and wage-gap analysis remain
-unperformed.
+The text/table-detection phase is `full_parse_text_merged`. The durable
+1,828-row ledger has exact PDF-readiness, source-review, and candidate
+identity equality with the complete `parse_text_layer_later` authority. The
+150 Pilot 1 identities were rerun under the same frozen heuristic and are
+represented once through the uniform full-run result; the earlier pilot
+outputs remain superseded diagnostic provenance. The next recommendation is
+manual calibration of likely, possible, and unlikely page hints before any
+wage-table extraction pilot. No URL was opened, nothing was downloaded, OCR
+did not run, and ingestion, codification, final wage extraction, and
+wage-gap analysis remain unperformed.
 
 ## Run and build locally
 
