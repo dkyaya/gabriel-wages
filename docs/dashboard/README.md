@@ -173,6 +173,8 @@ The dashboard builder writes:
 - `verification_status_summary.json`
 - `content_triage_status_summary.json`
 - `source_review_status_summary.json`
+- `pdf_readiness_status_summary.json`
+- `text_table_detection_status_summary.json`
 - `reports_index.json`
 
 Review the printed totals and diffs before committing. In particular, candidate-positive plus parseable-empty municipalities must equal scout-covered municipalities, and transport/failure-only results must remain outside successful coverage.
@@ -241,13 +243,23 @@ absent; technical parseability is high, medium, and low for the same groups.
 Page counts range from 1 to 463, have a median of 44, and represent 108,028
 pages. Parser, hash, missing-artifact, and signature failures are zero.
 
-The dashboard phase is `full_retained_merged`. The next recommendation is a
-bounded 100-200 PDF text-layer content-structure and table-detection pilot
-from the 1,828 `parse_text_layer_later` rows. The merge opened no URL or PDF,
-downloaded nothing, ran no OCR, and saved no extracted text. Text-layer
-presence does not prove wage data exist. Final content-supported source
-rating, ingestion, codification, wage extraction, and wage-gap analysis
-remain unperformed.
+The PDF-readiness phase remains `full_retained_merged`. A bounded local
+text/table-detection pilot has now checked 150 representative
+`parse_text_layer_later` artifacts in three 50-row lanes. It produced 94
+likely, 55 possible, and one unlikely wage-table signal; 112 likely, 20
+possible, and 18 unlikely contract-period signals; and 135 likely, 14
+possible, and one unlikely table-structure signal. The runner retained 599
+candidate page-number hints but no table cells, complete page text, document
+text, or final wage values.
+
+The text/table-detection phase is `pilot1_collected_not_merged`. All 150
+rows are terminal and the three lanes are structurally merge-eligible, but
+no durable detection merge occurred. The next recommendation is a full
+local detection pass over the 1,828 parse-text candidates after calibrating
+the deliberately sensitive heuristic on the pilot outputs. No URL was
+opened, nothing was downloaded, OCR did not run, and ingestion,
+codification, final wage extraction, and wage-gap analysis remain
+unperformed.
 
 ## Run and build locally
 

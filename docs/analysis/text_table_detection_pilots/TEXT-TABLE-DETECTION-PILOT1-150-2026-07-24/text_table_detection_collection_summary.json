@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.0.0",
+  "status": "text_table_detection_pilot1_collected_not_merged",
+  "pilot_id": "TEXT-TABLE-DETECTION-PILOT1-150-2026-07-24",
+  "planned_rows": 150,
+  "ledger_rows": 150,
+  "terminal_rows": 150,
+  "lane_rows": [
+    50,
+    50,
+    50
+  ],
+  "lane_classification_counts": {
+    "completed_merge_eligible": 3
+  },
+  "parse_text_layer_later_rows_available": 1828,
+  "ocr_later_rows": 296,
+  "detection_status_counts": {
+    "detection_checked": 150
+  },
+  "wage_table_signal_counts": {
+    "likely": 94,
+    "possible": 55,
+    "unlikely": 1
+  },
+  "wage_table_signal_confidence_counts": {
+    "high": 94,
+    "medium": 55,
+    "low": 1
+  },
+  "contract_period_signal_counts": {
+    "likely": 112,
+    "possible": 20,
+    "unlikely": 18
+  },
+  "contract_period_confidence_counts": {
+    "high": 112,
+    "medium": 20,
+    "low": 18
+  },
+  "table_like_structure_signal_counts": {
+    "likely": 135,
+    "possible": 14,
+    "unlikely": 1
+  },
+  "extraction_pilot_priority_counts": {
+    "p1": 94,
+    "p2": 54,
+    "p3": 2
+  },
+  "recommended_next_action_counts": {
+    "wage_table_extraction_pilot": 94,
+    "larger_text_detection_pass": 54,
+    "manual_review": 2
+  },
+  "source_review_batch_distribution": {
+    "SOURCE-REVIEW-PILOT1-150-2026-07-24": 30,
+    "SOURCE-REVIEW-BATCH2-500-2026-07-24": 35,
+    "SOURCE-REVIEW-BATCH3-3X500-2026-07-24": 85
+  },
+  "priority_distribution": {
+    "p1": 67,
+    "p2": 83
+  },
+  "unit_type_distribution": {
+    "police": 51,
+    "fire": 44,
+    "non_safety": 55
+  },
+  "source_officialness_distribution": {
+    "official_municipal": 49,
+    "official_state_repository": 24,
+    "official_union": 18,
+    "uncertain": 43,
+    "unknown": 16
+  },
+  "candidate_source_type_distribution": {
+    "cba": 76,
+    "wage_schedule_or_compensation_plan": 28,
+    "memorandum_or_settlement": 17,
+    "ordinance_or_policy": 17,
+    "arbitration_award": 10,
+    "factfinding": 2
+  },
+  "page_count_bin_distribution": {
+    "1_to_10": 39,
+    "11_to_25": 28,
+    "26_to_50": 29,
+    "51_to_100": 34,
+    "over_100": 20
+  },
+  "text_layer_status_distribution": {
+    "present": 107,
+    "partial": 43
+  },
+  "pages_scanned": 1295,
+  "pages_with_text": 1203,
+  "total_text_chars_scanned": 1499904,
+  "candidate_wage_page_hints": 599,
+  "maximum_contract_hint_characters": 300,
+  "contract_hint_money_pattern_violations": 0,
+  "parser_library": "pypdf",
+  "parser_version": "6.13.2",
+  "lane_elapsed_seconds": [
+    8.821208,
+    7.029462,
+    6.630438
+  ],
+  "aggregate_lane_elapsed_seconds": 22.481108,
+  "parallel_wall_clock_seconds": 8.821208,
+  "hash_failures": 0,
+  "missing_artifacts": 0,
+  "parser_errors": 0,
+  "candidate_page_errors": 0,
+  "hint_overruns": 0,
+  "full_text_artifacts_found": 0,
+  "urls_opened": 0,
+  "network_calls": 0,
+  "downloads": 0,
+  "redownloads": 0,
+  "ocr_runs": 0,
+  "full_text_artifacts_written": 0,
+  "final_wage_values_extracted": 0,
+  "ingestion_actions": 0,
+  "codify_actions": 0,
+  "durable_text_table_merges": 0,
+  "durable_text_table_merge_status": "not_started",
+  "merge_recommendation": "merge_all_text_table_detection_lanes",
+  "next_recommendation": "prepare_full_text_table_detection_run",
+  "audit_summary": "tmp/text_table_detection_pilots/TEXT-TABLE-DETECTION-PILOT1-150-2026-07-24/local_lane_audit_attempt1/text_table_detection_lane_audit_summary.json",
+  "caveats": [
+    "Table detection is deterministic, heuristic, and preliminary.",
+    "Candidate wage pages are page hints, not extracted wage observations.",
+    "No final wage values were extracted.",
+    "No OCR, ingestion, or codification occurred.",
+    "High signal yield requires later manual calibration before wage extraction."
+  ]
+}

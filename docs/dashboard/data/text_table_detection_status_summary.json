@@ -53,108 +53,75 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "stage": "scout_operations_unverified_discovery",
-  "waves": [
-    {
-      "wave_id": "wave1",
-      "label": "Coordinator Wave 1 CA/NJ/TX",
-      "attempted_rows": 150,
-      "parseable_rows": 149,
-      "candidate_rows": 246,
-      "failure_only_rows": 1,
-      "runtime_seconds": 6937.0,
-      "rows_per_hour": 77.843,
-      "candidate_rows_per_hour": 127.663,
-      "candidate_rows_per_parseable_municipality": 1.651,
-      "sleep_between_prompts_seconds": 15.0
-    },
-    {
-      "wave_id": "wave2",
-      "label": "Coordinator Wave 2 CA/TX/IL",
-      "attempted_rows": 150,
-      "parseable_rows": 148,
-      "candidate_rows": 223,
-      "failure_only_rows": 2,
-      "runtime_seconds": 6149.884,
-      "rows_per_hour": 87.807,
-      "candidate_rows_per_hour": 130.539,
-      "candidate_rows_per_parseable_municipality": 1.507,
-      "sleep_between_prompts_seconds": 5.0
-    },
-    {
-      "wave_id": "tier1_wave1",
-      "label": "Tier 1 Wave 1 cross-state",
-      "attempted_rows": 150,
-      "parseable_rows": 142,
-      "candidate_rows": 268,
-      "failure_only_rows": 8,
-      "runtime_seconds": 6723.519,
-      "rows_per_hour": 80.315,
-      "candidate_rows_per_hour": 143.496,
-      "candidate_rows_per_parseable_municipality": 1.887,
-      "sleep_between_prompts_seconds": 5.0
-    },
-    {
-      "wave_id": "tier1_wave2",
-      "label": "Tier 1 Wave 2 compact/adaptive cross-state",
-      "attempted_rows": 150,
-      "parseable_rows": 148,
-      "candidate_rows": 327,
-      "failure_only_rows": 2,
-      "runtime_seconds": 5738.638,
-      "rows_per_hour": 94.099,
-      "candidate_rows_per_hour": 205.136,
-      "candidate_rows_per_parseable_municipality": 2.209,
-      "sleep_between_prompts_seconds": 5.0
-    },
-    {
-      "wave_id": "parallel_round1",
-      "label": "Parallel Round 1 compact/adaptive (2 serialized lanes)",
-      "attempted_rows": 300,
-      "parseable_rows": 297,
-      "candidate_rows": 763,
-      "failure_only_rows": 3,
-      "runtime_seconds": 6530.0,
-      "rows_per_hour": 165.391,
-      "candidate_rows_per_hour": 420.643,
-      "candidate_rows_per_parseable_municipality": 2.569,
-      "sleep_between_prompts_seconds": 5.0
-    },
-    {
-      "wave_id": "parallel_round2_3x150",
-      "label": "Parallel Round 2 compact/adaptive (3 serialized lanes)",
-      "attempted_rows": 450,
-      "parseable_rows": 446,
-      "candidate_rows": 985,
-      "failure_only_rows": 4,
-      "runtime_seconds": 5615.561,
-      "rows_per_hour": 288.484,
-      "candidate_rows_per_hour": 631.46,
-      "candidate_rows_per_parseable_municipality": 2.209,
-      "sleep_between_prompts_seconds": 5.0
-    },
-    {
-      "wave_id": "aggressive_3x300_attempt3",
-      "label": "Aggressive 3x300 Attempt 3 compact/adaptive (3 serialized lanes)",
-      "attempted_rows": 900,
-      "parseable_rows": 899,
-      "candidate_rows": 1389,
-      "failure_only_rows": 1,
-      "runtime_seconds": 9422.628,
-      "rows_per_hour": 343.853,
-      "candidate_rows_per_hour": 530.68,
-      "candidate_rows_per_parseable_municipality": 1.545,
-      "sleep_between_prompts_seconds": 5.0
-    }
+  "text_table_detection_phase": "pilot1_collected_not_merged",
+  "latest_text_table_detection_pilot_id": "TEXT-TABLE-DETECTION-PILOT1-150-2026-07-24",
+  "pilot_rows_collected": 150,
+  "pilot_terminal_rows": 150,
+  "pilot_lane_rows": [
+    50,
+    50,
+    50
   ],
-  "checkpoint_context": {
-    "target_scout_covered": 2000,
-    "current_scout_covered": 2436,
-    "note": "The current total comes from national coverage accounting; runtime waves shown here are the 7 reviewed coordinated waves/rounds."
+  "text_table_detection_merge_status": "not_started",
+  "parse_text_layer_later_rows_available": 1828,
+  "ocr_later_rows": 296,
+  "detection_status_counts": {
+    "detection_checked": 150
   },
-  "next_run_instrumentation": [
-    "compact prompt character/token proxy",
-    "adaptive planned and actual sleep",
-    "per-row elapsed time and failure type"
+  "wage_table_signal_counts": {
+    "likely": 94,
+    "possible": 55,
+    "unlikely": 1
+  },
+  "wage_table_signal_confidence_counts": {
+    "high": 94,
+    "medium": 55,
+    "low": 1
+  },
+  "contract_period_signal_counts": {
+    "likely": 112,
+    "possible": 20,
+    "unlikely": 18
+  },
+  "contract_period_confidence_counts": {
+    "high": 112,
+    "medium": 20,
+    "low": 18
+  },
+  "table_like_structure_signal_counts": {
+    "likely": 135,
+    "possible": 14,
+    "unlikely": 1
+  },
+  "extraction_pilot_priority_counts": {
+    "p1": 94,
+    "p2": 54,
+    "p3": 2
+  },
+  "recommended_next_action_counts": {
+    "wage_table_extraction_pilot": 94,
+    "larger_text_detection_pass": 54,
+    "manual_review": 2
+  },
+  "pages_scanned": 1295,
+  "pages_with_text": 1203,
+  "candidate_wage_page_hints": 599,
+  "parser_library": "pypdf",
+  "parser_version": "6.13.2",
+  "parser_error_rows": 0,
+  "hash_failure_rows": 0,
+  "missing_artifact_rows": 0,
+  "next_recommendation": "prepare_full_text_table_detection_run",
+  "ingestion_status": "not_started",
+  "codify_status": "not_started",
+  "wage_extraction_status": "not_started",
+  "wage_gap_analysis_status": "not_started",
+  "summary_source": "docs/analysis/text_table_detection_pilots/TEXT-TABLE-DETECTION-PILOT1-150-2026-07-24/text_table_detection_collection_summary.json",
+  "caveats": [
+    "Table detection is deterministic, heuristic, and preliminary.",
+    "Candidate wage pages are page hints, not wage observations.",
+    "No final wage values were extracted.",
+    "No OCR, ingestion, or codification occurred.",
+    "Manual calibration is required before wage extraction."
   ]
 }

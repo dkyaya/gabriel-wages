@@ -176,6 +176,12 @@ PDF_READINESS_DURABLE_SUMMARY_PATH = (
     / "pdf_readiness_ledgers"
     / "pdf_readiness_summary_cumulative.json"
 )
+TEXT_TABLE_DETECTION_PILOT1_SUMMARY_PATH = (
+    ANALYSIS_DIR
+    / "text_table_detection_pilots"
+    / "TEXT-TABLE-DETECTION-PILOT1-150-2026-07-24"
+    / "text_table_detection_collection_summary.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -236,6 +242,7 @@ OPTIONAL_PATHS = [
     PDF_READINESS_REMAINDER_SUMMARY_PATH,
     PDF_READINESS_DURABLE_LEDGER_PATH,
     PDF_READINESS_DURABLE_SUMMARY_PATH,
+    TEXT_TABLE_DETECTION_PILOT1_SUMMARY_PATH,
 ]
 
 STATE_NAMES = {
@@ -3308,6 +3315,139 @@ def build_pdf_readiness_status_summary(
     }
 
 
+def build_text_table_detection_status_summary(
+    *, metadata: dict[str, Any]
+) -> dict[str, Any]:
+    """Build bounded local text/table-detection pilot status."""
+
+    if not TEXT_TABLE_DETECTION_PILOT1_SUMMARY_PATH.exists():
+        return {
+            **metadata,
+            "text_table_detection_phase": "not_started",
+            "latest_text_table_detection_pilot_id": None,
+            "pilot_rows_collected": 0,
+            "text_table_detection_merge_status": "not_started",
+            "parse_text_layer_later_rows_available": 1828,
+            "ocr_later_rows": 296,
+            "wage_table_signal_counts": {},
+            "contract_period_signal_counts": {},
+            "table_like_structure_signal_counts": {},
+            "extraction_pilot_priority_counts": {},
+            "ingestion_status": "not_started",
+            "codify_status": "not_started",
+            "wage_extraction_status": "not_started",
+            "wage_gap_analysis_status": "not_started",
+            "caveats": [
+                "Text/table detection has not started.",
+                "No OCR, wage extraction, or ingestion has occurred.",
+            ],
+        }
+
+    pilot = read_json(TEXT_TABLE_DETECTION_PILOT1_SUMMARY_PATH)
+    forbidden_fields = (
+        "urls_opened",
+        "network_calls",
+        "downloads",
+        "redownloads",
+        "ocr_runs",
+        "full_text_artifacts_written",
+        "final_wage_values_extracted",
+        "ingestion_actions",
+        "codify_actions",
+        "durable_text_table_merges",
+    )
+    if (
+        pilot.get("status")
+        != "text_table_detection_pilot1_collected_not_merged"
+        or pilot.get("pilot_id")
+        != "TEXT-TABLE-DETECTION-PILOT1-150-2026-07-24"
+        or int(pilot.get("planned_rows", 0)) != 150
+        or int(pilot.get("ledger_rows", 0)) != 150
+        or int(pilot.get("terminal_rows", 0)) != 150
+        or pilot.get("lane_rows") != [50, 50, 50]
+        or pilot.get("lane_classification_counts")
+        != {"completed_merge_eligible": 3}
+        or pilot.get("detection_status_counts")
+        != {"detection_checked": 150}
+        or int(pilot.get("hash_failures", -1)) != 0
+        or int(pilot.get("missing_artifacts", -1)) != 0
+        or int(pilot.get("parser_errors", -1)) != 0
+        or int(pilot.get("candidate_page_errors", -1)) != 0
+        or int(pilot.get("hint_overruns", -1)) != 0
+        or int(pilot.get("full_text_artifacts_found", -1)) != 0
+        or int(
+            pilot.get("contract_hint_money_pattern_violations", -1)
+        )
+        != 0
+        or any(int(pilot.get(field, -1)) != 0 for field in forbidden_fields)
+        or pilot.get("durable_text_table_merge_status") != "not_started"
+        or pilot.get("merge_recommendation")
+        != "merge_all_text_table_detection_lanes"
+    ):
+        raise ValueError(
+            "text/table detection Pilot 1 summary fails collection gates"
+        )
+
+    return {
+        **metadata,
+        "text_table_detection_phase": "pilot1_collected_not_merged",
+        "latest_text_table_detection_pilot_id": pilot["pilot_id"],
+        "pilot_rows_collected": int(pilot["ledger_rows"]),
+        "pilot_terminal_rows": int(pilot["terminal_rows"]),
+        "pilot_lane_rows": pilot["lane_rows"],
+        "text_table_detection_merge_status": "not_started",
+        "parse_text_layer_later_rows_available": int(
+            pilot["parse_text_layer_later_rows_available"]
+        ),
+        "ocr_later_rows": int(pilot["ocr_later_rows"]),
+        "detection_status_counts": pilot["detection_status_counts"],
+        "wage_table_signal_counts": pilot["wage_table_signal_counts"],
+        "wage_table_signal_confidence_counts": pilot[
+            "wage_table_signal_confidence_counts"
+        ],
+        "contract_period_signal_counts": pilot[
+            "contract_period_signal_counts"
+        ],
+        "contract_period_confidence_counts": pilot[
+            "contract_period_confidence_counts"
+        ],
+        "table_like_structure_signal_counts": pilot[
+            "table_like_structure_signal_counts"
+        ],
+        "extraction_pilot_priority_counts": pilot[
+            "extraction_pilot_priority_counts"
+        ],
+        "recommended_next_action_counts": pilot[
+            "recommended_next_action_counts"
+        ],
+        "pages_scanned": int(pilot["pages_scanned"]),
+        "pages_with_text": int(pilot["pages_with_text"]),
+        "candidate_wage_page_hints": int(
+            pilot["candidate_wage_page_hints"]
+        ),
+        "parser_library": pilot["parser_library"],
+        "parser_version": pilot["parser_version"],
+        "parser_error_rows": int(pilot["parser_errors"]),
+        "hash_failure_rows": int(pilot["hash_failures"]),
+        "missing_artifact_rows": int(pilot["missing_artifacts"]),
+        "next_recommendation": pilot["next_recommendation"],
+        "ingestion_status": "not_started",
+        "codify_status": "not_started",
+        "wage_extraction_status": "not_started",
+        "wage_gap_analysis_status": "not_started",
+        "summary_source": relative(
+            TEXT_TABLE_DETECTION_PILOT1_SUMMARY_PATH
+        ),
+        "caveats": [
+            "Table detection is deterministic, heuristic, and preliminary.",
+            "Candidate wage pages are page hints, not wage observations.",
+            "No final wage values were extracted.",
+            "No OCR, ingestion, or codification occurred.",
+            "Manual calibration is required before wage extraction.",
+        ],
+    }
+
+
 def validate_inputs(
     *,
     state_rows: list[dict[str, str]],
@@ -3497,6 +3637,9 @@ def main() -> int:
     pdf_readiness_status_summary = build_pdf_readiness_status_summary(
         metadata=metadata
     )
+    text_table_detection_status_summary = (
+        build_text_table_detection_status_summary(metadata=metadata)
+    )
     reports_index = build_reports_index_layer(
         source_index=reports_index_source,
         metadata=metadata,
@@ -3523,6 +3666,10 @@ def main() -> int:
         write_json(
             "pdf_readiness_status_summary.json",
             pdf_readiness_status_summary,
+        ),
+        write_json(
+            "text_table_detection_status_summary.json",
+            text_table_detection_status_summary,
         ),
         write_json("reports_index.json", reports_index),
     ]

@@ -6,6 +6,44 @@ Last updated: `2026-07-25`
 
 ---
 
+## 2026-07-25 — Text/table-detection Pilot 1 is collected and audited
+
+### Current State
+
+- **Start and gate:** work began at clean tracked `11e689a6d7b21c0dd60d8af8c349c571d6000322`; all requested ancestry passed and the unrelated untracked root `package-lock.json` remains untouched.
+- **Authority:** the 2,124-row durable PDF-readiness ledger has 1,828 `parse_text_layer_later` rows and 296 `ocr_later` rows. Every parse-text candidate has recorded local artifact path/hash/size metadata.
+- **Implementation:** [the schema](text_table_detection_schema_2026-07-24.md), deterministic offline planner, bounded local `pypdf` runner, lane auditor, and 14-test suite enforce local-only operation, hash-first checks, no OCR, no complete text retention, no final wage values, and terminal output for every locked row.
+- **Locked sample:** [the input plan](text_table_detection_pilot1_150_input_plan_2026-07-24.md) records 150 unique parse-text candidates in three 50-row lanes. The diversity-weighted sample covers all source-review rounds, p1/p2, police/fire/non-safety, all 50 states plus DC, five officialness groups, six source types, five page-count bins, and present/partial text layers.
+- **Dry gate:** all three dry lanes are `dry_run_passed`, with zero PDF opens, parsing, URL/network access, downloads, OCR, or retained text.
+- **Local results:** [the result review](text_table_detection_pilot1_150_result_review_2026-07-24.md) records 150 `detection_checked`, zero parser/hash/missing-artifact failures, and three `completed_merge_eligible` lanes.
+- **Signals:** wage table is 94 likely, 55 possible, and one unlikely; contract period is 112 likely, 20 possible, and 18 unlikely; table-like structure is 135 likely, 14 possible, and one unlikely. Scheduling priority is 94 p1, 54 p2, and two p3.
+- **Bounded content:** 1,295 pages were scanned and 1,203 returned bounded text. The outputs retain 599 candidate page-number hints and at most 300 redacted contract-period characters per PDF; they retain no table cells, complete page text, document text, or final wage values.
+- **Audit/no merge:** all three lanes recommend `merge_all_text_table_detection_lanes` structurally. [No durable merge occurred](text_table_detection_pilot1_150_no_merge_note_2026-07-24.md).
+- **Dashboard:** `text_table_detection_phase = pilot1_collected_not_merged`; downstream ingestion, codification, wage extraction, and wage-gap analysis remain `not_started`.
+- **Boundary:** no URL, network/API/model call, download/redownload, OCR, final wage extraction, ingestion, codification, scout accounting, routing/triage/source-review/PDF-readiness-ledger mutation, durable detection merge, regression, remote inspection, or push occurred.
+- **Validation:** [the validation record](text_table_detection_pilot1_150_validation_2026-07-24.md) reports five compiles, 14 offline/mock tests, the final three-lane audit, independent identity/authority/bounded-output checks, 18 dashboard JSON files and frontend build, repository schema and 60 ingestion tests, immutable protected/upstream hashes, and diff checks passed.
+
+### Interpretation
+
+Local bounded text/table detection is technically viable: every selected
+artifact was readable and the deterministic heuristic returned terminal
+signals. The 149/150 likely-or-possible wage signal rate makes the output
+useful as a recall-oriented candidate-page scheduler, but it also requires
+manual calibration before any final wage-table or wage-value extraction.
+Candidate page hints are not wage observations and do not prove document
+identity, relevance, or wage content.
+
+### Next Move
+
+Review [the full-run prompt](text_table_detection_full_run_prompt_2026-07-24.md)
+and lite relay. If separately authorized, calibrate representative likely,
+possible, and unlikely pilot rows, then run the same bounded local detector
+over all 1,828 `parse_text_layer_later` PDFs and stop before durable merge.
+
+Do not OCR the 296 separately deferred PDFs, extract final wages, ingest,
+codify, calculate wage gaps, resume broad downloading, or merge the
+detection outputs without separate authorization.
+
 ## 2026-07-25 — Full retained PDF readiness is durably merged
 
 ### Current State

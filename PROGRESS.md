@@ -6,6 +6,34 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-25 (Text/table-detection Pilot 1 collected; no durable detection merge)
+
+**Did**
+- Started from clean tracked `11e689a6d7b21c0dd60d8af8c349c571d6000322`, confirmed all requested ancestry, preserved the unrelated untracked root `package-lock.json`, and verified the 2,124-row durable PDF-readiness authority.
+- Confirmed 1,828 `parse_text_layer_later` candidates and 296 separately deferred `ocr_later` rows. All parse-text candidates have recorded local artifact paths, hashes, and positive byte sizes; no OCR or wage fields were populated.
+- Defined the bounded detection schema and implemented an offline deterministic sampler, local `pypdf` runner, lane auditor, and 14-test synthetic/mock suite. The runner scans at most 10 deterministic pages and 1,500 text characters per page, retains only page numbers/counts/signals plus at most 300 redacted contract-period characters, and has no network or OCR path.
+- Locked a 150-row diversity-weighted sample in three 50-row lanes. Input hashes are `98d273658e4e51101b97eb19ec783485f6ddf68dfbbc3b07c2a7bb3bd38168d9`, `f2636a5b80e6e37e28ceccab4bd2d2c4058aecbe2dba37c6181203c20fe2defd`, and `8747e82eced3f76db14cfdebd75a407d20766dd504ef8a2d3f301db9cfc787e0`.
+- All dry runs passed without opening PDFs. The three local lanes then produced 150 / 150 terminal `detection_checked` rows with zero parser, hash, missing-artifact, or bounded-output failures.
+- Preliminary signals are wage table 94 likely / 55 possible / one unlikely; contract period 112 likely / 20 possible / 18 unlikely; and table-like structure 135 likely / 14 possible / one unlikely. Scheduling priorities are 94 p1 / 54 p2 / two p3, with 94 wage-table-pilot, 54 larger-pass, and two manual-review recommendations.
+- Scanned 1,295 pages, received bounded text from 1,203, and retained 599 candidate page-number hints. No table cells, complete page text, document text, or final wage values were retained.
+- All three lanes audit `completed_merge_eligible`; the structural recommendation is `merge_all_text_table_detection_lanes`. No durable detection merge occurred. The dashboard now shows `pilot1_collected_not_merged`.
+
+**Decisions and why**
+- Recommend a full local detection pass over the 1,828 parse-text candidates, but first manually calibrate the deliberately sensitive heuristic. A 149/150 likely-or-possible wage signal rate is useful for recall-oriented scheduling, not proof of wage tables or precision sufficient for extraction.
+- Keep candidate page numbers and bounded contract-period hints as preliminary detection signals only. Do not treat them as wage observations, final document ratings, or authorization for wage extraction.
+- Keep the 296 `ocr_later` PDFs outside this phase. OCR, durable detection merge, wage extraction, ingestion, and codification remain separately authorized.
+
+**Surprises/breakage**
+- `pypdf` emitted repair warnings for a few malformed object pointers in Lane 3 but recovered; all affected PDFs remained terminal and parser errors were zero.
+- No readiness, planning, dry-run, lane, audit, dashboard, protected-file, no-full-text, secret-safety, or validation gate failed.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Five compiles, 14 offline/mock tests, the final 150-row three-lane audit, independent locked-identity/authority/bounded-hint checks, 18 dashboard JSON files/frontend production build, schema validation, 60 ingestion tests, protected/upstream/durable-ledger hashes, no-full-text and secret-indicator checks, and diff checks passed. No URL, network/API/model call, download/redownload, OCR, final wage extraction, scout-accounting or routing/triage/source-review/PDF-readiness-ledger mutation, ingestion, `gabriel.codify`, wage-gap work, causal claim, regression, durable detection merge, remote action, or push occurred.
+
+**Next steps**
+1. Review the 150-row sample, preliminary signals, calibration caveat, audits, validation record, dashboard status, full-run prompt, and lite relay.
+2. If separately authorized, manually review/calibrate the high-signal subset and run bounded local detection over all 1,828 `parse_text_layer_later` PDFs, stopping before durable merge.
+3. Keep OCR, final wage extraction, ingestion, codification, wage-gap analysis, and broad downloads separately gated.
+
 ## 2026-07-25 (Full retained PDF readiness durably merged; 2,124-row technical-readiness layer)
 
 **Did**

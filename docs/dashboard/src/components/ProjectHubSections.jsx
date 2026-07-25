@@ -246,6 +246,7 @@ export function VerificationPipeline({
   contentTriageStatus,
   sourceReviewStatus,
   pdfReadinessStatus,
+  textTableDetectionStatus,
 }) {
   const candidateRows = candidateSummary.totals.candidate_rows;
   const fullRouting =
@@ -646,6 +647,50 @@ export function VerificationPipeline({
               {formatNumber(pdfReadinessStatus.retained_pdf_artifacts_available)}
               {" "}PDFs, but local page-count and text-layer readiness has not
               been sampled.
+            </>
+          )}
+        </p>
+      </div>
+      <div className="verification-callout">
+        <div>
+          <p className="eyebrow">Text/table detection</p>
+          <h3>
+            {textTableDetectionStatus.text_table_detection_phase ===
+            "pilot1_collected_not_merged"
+              ? "Bounded local pilot collected; merge pending"
+              : "Bounded local pilot not started"}
+          </h3>
+        </div>
+        <p>
+          {textTableDetectionStatus.text_table_detection_phase ===
+          "pilot1_collected_not_merged" ? (
+            <>
+              All{" "}
+              {formatNumber(textTableDetectionStatus.pilot_rows_collected)}
+              {" "}locked retained PDFs produced terminal heuristic results:{" "}
+              {formatNumber(
+                textTableDetectionStatus.wage_table_signal_counts?.likely,
+              )}
+              {" "}likely and{" "}
+              {formatNumber(
+                textTableDetectionStatus.wage_table_signal_counts?.possible,
+              )}
+              {" "}possible wage-table signals, with{" "}
+              {formatNumber(textTableDetectionStatus.candidate_wage_page_hints)}
+              {" "}candidate page hints. These are preliminary page-level
+              signals, not wage observations. A full local detection pass is
+              recommended after review; the pilot remains unmerged, and OCR,
+              final wage extraction, ingestion, and codification have not
+              started.
+            </>
+          ) : (
+            <>
+              The durable readiness layer has{" "}
+              {formatNumber(
+                textTableDetectionStatus.parse_text_layer_later_rows_available,
+              )}
+              {" "}parse-text candidates, but bounded table detection has not
+              started.
             </>
           )}
         </p>

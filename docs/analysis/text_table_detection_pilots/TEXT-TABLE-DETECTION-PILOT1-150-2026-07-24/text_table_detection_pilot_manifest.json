@@ -1,0 +1,175 @@
+{
+  "schema_version": "1.0.0",
+  "pilot_id": "TEXT-TABLE-DETECTION-PILOT1-150-2026-07-24",
+  "created_at": "2026-07-25T12:49:59Z",
+  "mode": "local_text_table_detection_plan_only",
+  "pdf_readiness_ledger_csv": "docs/analysis/pdf_readiness_ledgers/pdf_readiness_ledger_cumulative.csv",
+  "pdf_readiness_ledger_sha256": "dd120453068a668b5c818352402ca828073ac9639ee4d8d1ffc88f9488d4d953",
+  "pdf_readiness_ledger_rows": 2124,
+  "parse_text_layer_candidate_rows": 1828,
+  "ocr_later_rows_excluded": 296,
+  "supporting_ledger_sources": [
+    {
+      "path": "docs/analysis/source_review_ledgers/source_review_ledger_cumulative.csv",
+      "sha256": "e29d580d42068615611b464e6da40654f336f273fa7c40a7b0717d4894148c9f",
+      "rows": 2150,
+      "identity_field": "source_review_id",
+      "selected_identity_coverage": 150
+    },
+    {
+      "path": "docs/analysis/content_triage_ledgers/content_triage_metadata_ledger_cumulative.csv",
+      "sha256": "cedc269cc37f207491887151edc9c03000da1495198cdbc691c200f3eceb54c3",
+      "rows": 4726,
+      "identity_field": "triage_id",
+      "selected_identity_coverage": 150
+    }
+  ],
+  "selected_rows": 150,
+  "num_lanes": 3,
+  "lane_rows": [
+    50,
+    50,
+    50
+  ],
+  "selection": {
+    "sample_size": 150,
+    "state_diversity": true,
+    "include_partial_text_layer": true,
+    "exclude_ocr_later": true,
+    "network_access": false,
+    "pdfs_opened_during_planning": 0,
+    "ocr": false,
+    "full_text_saved": false,
+    "final_wage_extraction": false
+  },
+  "selected_distributions": {
+    "source_review_pilot_id": {
+      "SOURCE-REVIEW-BATCH2-500-2026-07-24": 35,
+      "SOURCE-REVIEW-BATCH3-3X500-2026-07-24": 85,
+      "SOURCE-REVIEW-PILOT1-150-2026-07-24": 30
+    },
+    "priority_for_content_review": {
+      "p1": 67,
+      "p2": 83
+    },
+    "unit_type": {
+      "fire": 44,
+      "non_safety": 55,
+      "police": 51
+    },
+    "state": {
+      "AK": 3,
+      "AL": 2,
+      "AR": 2,
+      "AZ": 3,
+      "CA": 3,
+      "CO": 3,
+      "CT": 3,
+      "DC": 2,
+      "DE": 4,
+      "FL": 3,
+      "GA": 4,
+      "HI": 3,
+      "IA": 3,
+      "ID": 3,
+      "IL": 3,
+      "IN": 3,
+      "KS": 3,
+      "KY": 4,
+      "LA": 3,
+      "MA": 3,
+      "MD": 4,
+      "ME": 3,
+      "MI": 3,
+      "MN": 3,
+      "MO": 4,
+      "MS": 3,
+      "MT": 5,
+      "NC": 2,
+      "ND": 2,
+      "NE": 3,
+      "NH": 3,
+      "NJ": 3,
+      "NM": 3,
+      "NV": 3,
+      "NY": 3,
+      "OH": 3,
+      "OK": 3,
+      "OR": 3,
+      "PA": 3,
+      "RI": 3,
+      "SC": 2,
+      "SD": 3,
+      "TN": 1,
+      "TX": 3,
+      "UT": 3,
+      "VA": 3,
+      "VT": 2,
+      "WA": 3,
+      "WI": 3,
+      "WV": 1,
+      "WY": 4
+    },
+    "source_officialness_rating": {
+      "official_municipal": 49,
+      "official_state_repository": 24,
+      "official_union": 18,
+      "uncertain": 43,
+      "unknown": 16
+    },
+    "candidate_source_type": {
+      "arbitration_award": 10,
+      "cba": 76,
+      "factfinding": 2,
+      "memorandum_or_settlement": 17,
+      "ordinance_or_policy": 17,
+      "wage_schedule_or_compensation_plan": 28
+    },
+    "document_type_rating": {
+      "cba_candidate": 76,
+      "unknown": 74
+    },
+    "page_count_bin": {
+      "11_to_25": 28,
+      "1_to_10": 39,
+      "26_to_50": 29,
+      "51_to_100": 34,
+      "over_100": 20
+    },
+    "text_layer_status": {
+      "partial": 43,
+      "present": 107
+    }
+  },
+  "selected_artifact_bytes": 217728578,
+  "selected_pages": 7309,
+  "lanes": [
+    {
+      "lane_id": "lane_1",
+      "expected_rows": 50,
+      "input_csv": "docs/analysis/text_table_detection_pilots/TEXT-TABLE-DETECTION-PILOT1-150-2026-07-24/lane_1_text_table_detection_input.csv",
+      "input_sha256": "98d273658e4e51101b97eb19ec783485f6ddf68dfbbc3b07c2a7bb3bd38168d9",
+      "input_audit": "docs/analysis/text_table_detection_pilots/TEXT-TABLE-DETECTION-PILOT1-150-2026-07-24/lane_1_input_audit.md",
+      "dry_run_output_dir": "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages/tmp/text_table_detection_pilots/TEXT-TABLE-DETECTION-PILOT1-150-2026-07-24/lane_1_dry_run",
+      "future_local_output_dir": "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages/tmp/text_table_detection_pilots/TEXT-TABLE-DETECTION-PILOT1-150-2026-07-24/lane_1_local_attempt1"
+    },
+    {
+      "lane_id": "lane_2",
+      "expected_rows": 50,
+      "input_csv": "docs/analysis/text_table_detection_pilots/TEXT-TABLE-DETECTION-PILOT1-150-2026-07-24/lane_2_text_table_detection_input.csv",
+      "input_sha256": "f2636a5b80e6e37e28ceccab4bd2d2c4058aecbe2dba37c6181203c20fe2defd",
+      "input_audit": "docs/analysis/text_table_detection_pilots/TEXT-TABLE-DETECTION-PILOT1-150-2026-07-24/lane_2_input_audit.md",
+      "dry_run_output_dir": "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages/tmp/text_table_detection_pilots/TEXT-TABLE-DETECTION-PILOT1-150-2026-07-24/lane_2_dry_run",
+      "future_local_output_dir": "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages/tmp/text_table_detection_pilots/TEXT-TABLE-DETECTION-PILOT1-150-2026-07-24/lane_2_local_attempt1"
+    },
+    {
+      "lane_id": "lane_3",
+      "expected_rows": 50,
+      "input_csv": "docs/analysis/text_table_detection_pilots/TEXT-TABLE-DETECTION-PILOT1-150-2026-07-24/lane_3_text_table_detection_input.csv",
+      "input_sha256": "8747e82eced3f76db14cfdebd75a407d20766dd504ef8a2d3f301db9cfc787e0",
+      "input_audit": "docs/analysis/text_table_detection_pilots/TEXT-TABLE-DETECTION-PILOT1-150-2026-07-24/lane_3_input_audit.md",
+      "dry_run_output_dir": "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages/tmp/text_table_detection_pilots/TEXT-TABLE-DETECTION-PILOT1-150-2026-07-24/lane_3_dry_run",
+      "future_local_output_dir": "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages/tmp/text_table_detection_pilots/TEXT-TABLE-DETECTION-PILOT1-150-2026-07-24/lane_3_local_attempt1"
+    }
+  ]
+}
