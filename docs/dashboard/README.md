@@ -191,6 +191,14 @@ The dashboard builder writes:
 - `text_table_calibration_status_summary.json`
 - `reports_index.json`
 
+The text/table calibration layer currently reports
+`auto_gabriel_gate2_completed`. Gate 2 completed 150 bounded, schema-valid
+GABRIEL adjudications, but only 21/80 original likely/p1 cases were ready and
+only 22 cases were ready overall. The 1.52% candidate-bearing wrong-page rate
+passes its threshold; coverage and representation do not. The computed
+decision remains `continue_schema_refinement`, and neither a 500-document nor
+smaller extraction run is authorized.
+
 Review the printed totals and diffs before committing. In particular, candidate-positive plus parseable-empty municipalities must equal scout-covered municipalities, and transport/failure-only results must remain outside successful coverage.
 
 `parallel_scout_status.json` is an operations layer, not source evidence. Its

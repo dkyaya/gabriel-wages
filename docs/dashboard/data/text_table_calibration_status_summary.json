@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-25T18:48:29Z",
+  "generated_at": "2026-07-25T19:23:56Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -61,7 +61,10 @@
     "docs/analysis/text_table_calibration/TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24/independent_adjudication_sampling_summary.json",
     "docs/analysis/text_table_calibration/TEXT-TABLE-AUTO-GABRIEL-ADJUDICATION-GATE1-2026-07-24/auto_gabriel_adjudication_summary.json",
     "docs/analysis/text_table_calibration/TEXT-TABLE-AUTO-GABRIEL-ADJUDICATION-GATE1-2026-07-24/auto_gabriel_adjudication_ledger.csv",
-    "docs/analysis/text_table_calibration/TEXT-TABLE-AUTO-GABRIEL-ADJUDICATION-GATE1-2026-07-24/auto_gabriel_adjudication_gate_decision.json"
+    "docs/analysis/text_table_calibration/TEXT-TABLE-AUTO-GABRIEL-ADJUDICATION-GATE1-2026-07-24/auto_gabriel_adjudication_gate_decision.json",
+    "docs/analysis/text_table_calibration/TEXT-TABLE-AUTO-GABRIEL-GATE2-REFINEMENT-2026-07-25/auto_gabriel_adjudication_summary.json",
+    "docs/analysis/text_table_calibration/TEXT-TABLE-AUTO-GABRIEL-GATE2-REFINEMENT-2026-07-25/auto_gabriel_adjudication_ledger.csv",
+    "docs/analysis/text_table_calibration/TEXT-TABLE-AUTO-GABRIEL-GATE2-REFINEMENT-2026-07-25/auto_gabriel_adjudication_gate_decision.json"
   ],
   "warnings": [],
   "limitations": [
@@ -74,25 +77,35 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "calibration_phase": "auto_gabriel_gate1_completed",
+  "calibration_phase": "auto_gabriel_gate2_completed",
   "latest_calibration_id": "TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24",
   "latest_calibration_review_id": "TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24",
   "latest_adjudication_prep_id": "TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24",
-  "latest_auto_adjudication_gate_id": "TEXT-TABLE-AUTO-GABRIEL-ADJUDICATION-GATE1-2026-07-24",
-  "auto_adjudication_method": "automated_local_visual_layout_plus_gabriel_bounded_page_adjudication",
+  "latest_auto_adjudication_gate_id": "TEXT-TABLE-AUTO-GABRIEL-GATE2-REFINEMENT-2026-07-25",
+  "prior_auto_adjudication_gate_id": "TEXT-TABLE-AUTO-GABRIEL-ADJUDICATION-GATE1-2026-07-24",
+  "auto_adjudication_method": "automated_local_visual_layout_navigation_offset_plus_gabriel_bounded_page_adjudication",
   "auto_gate_case_count": 150,
   "gabriel_schema_valid_rate": 1.0,
   "auto_gate_label_counts": {
-    "exclude_for_now": 103,
-    "extraction_ready_high_confidence": 12,
-    "extraction_ready_with_schema_update": 16,
-    "second_review_required": 19
+    "exclude_for_now": 105,
+    "extraction_ready_high_confidence": 9,
+    "extraction_ready_with_schema_update": 13,
+    "second_review_required": 23
   },
   "auto_gate_confidence_counts": {
-    "high": 93,
-    "low": 6,
-    "medium": 51
+    "high": 110,
+    "low": 7,
+    "medium": 33
   },
+  "gate2_schema_valid_rate": 1.0,
+  "gate2_auto_gate_label_counts": {
+    "exclude_for_now": 105,
+    "extraction_ready_high_confidence": 9,
+    "extraction_ready_with_schema_update": 13,
+    "second_review_required": 23
+  },
+  "gate2_wrong_page_rate": 0.015152,
+  "gate2_likely_p1_ready_rate": 0.2625,
   "prior_refined_review_id": "TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24",
   "prior_extraction_decision": "continue_schema_refinement",
   "independent_human_review_status": "packet_prepared_not_reviewed",
@@ -178,19 +191,19 @@
   "visual_qa_agreement_rate": 0.555556,
   "visual_qa_exact_gate_agreement_rate": 0.444444,
   "likely_signal_visual_confirmation_rate": 0.7625,
-  "wrong_page_rate": 0.068182,
+  "wrong_page_rate": 0.015152,
   "extraction_decision": "continue_schema_refinement",
   "five_hundred_doc_extraction_allowed": false,
   "smaller_extraction_pilot_allowed": false,
-  "next_recommendation": "refine_auto_gabriel_table_and_navigation_gate",
+  "next_recommendation": "refine_auto_gabriel_gate3_candidate_discovery",
   "manual_review_status": "packet_prepared_not_reviewed",
   "wage_extraction_status": "not_started",
   "ingestion_status": "not_started",
   "codify_status": "not_started",
   "wage_gap_analysis_status": "not_started",
-  "auto_gate_summary_source": "docs/analysis/text_table_calibration/TEXT-TABLE-AUTO-GABRIEL-ADJUDICATION-GATE1-2026-07-24/auto_gabriel_adjudication_summary.json",
-  "auto_gate_ledger": "docs/analysis/text_table_calibration/TEXT-TABLE-AUTO-GABRIEL-ADJUDICATION-GATE1-2026-07-24/auto_gabriel_adjudication_ledger.csv",
-  "auto_gate_decision_source": "docs/analysis/text_table_calibration/TEXT-TABLE-AUTO-GABRIEL-ADJUDICATION-GATE1-2026-07-24/auto_gabriel_adjudication_gate_decision.json",
+  "auto_gate_summary_source": "docs/analysis/text_table_calibration/TEXT-TABLE-AUTO-GABRIEL-GATE2-REFINEMENT-2026-07-25/auto_gabriel_adjudication_summary.json",
+  "auto_gate_ledger": "docs/analysis/text_table_calibration/TEXT-TABLE-AUTO-GABRIEL-GATE2-REFINEMENT-2026-07-25/auto_gabriel_adjudication_ledger.csv",
+  "auto_gate_decision_source": "docs/analysis/text_table_calibration/TEXT-TABLE-AUTO-GABRIEL-GATE2-REFINEMENT-2026-07-25/auto_gabriel_adjudication_gate_decision.json",
   "summary_source": "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24/calibration_review_summary.json",
   "reviewed_ledger": "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24/calibration_reviewed.csv",
   "decision_source": "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24/calibration_review2_decision.json",

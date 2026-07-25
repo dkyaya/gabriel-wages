@@ -1,0 +1,45 @@
+{
+  "candidate_bearing_denominator": 132,
+  "case_count": 150,
+  "extraction_decision": "continue_schema_refinement",
+  "five_hundred_criteria": {
+    "likely_p1_rate_at_least_0_80": false,
+    "non_wage_false_positives_and_ambiguity_resolved": true,
+    "representative_ready_rows": false,
+    "schema_valid_rate_at_least_0_95": true,
+    "wrong_page_rate_at_most_0_15": true
+  },
+  "five_hundred_doc_extraction_allowed": false,
+  "full_150_case_scope": true,
+  "gabriel_backend": "huit_openai_responses_direct_sdk",
+  "gabriel_model": "gpt-5.4-nano",
+  "gabriel_schema_valid_count": 150,
+  "gabriel_schema_valid_rate": 1.0,
+  "gate_id": "TEXT-TABLE-AUTO-GABRIEL-GATE2-REFINEMENT-2026-07-25",
+  "gate_mode": "auto_gabriel_gate2_navigation_table_refine",
+  "generated_at": "2026-07-25T19:20:21Z",
+  "method": "automated_local_visual_layout_navigation_offset_plus_gabriel_bounded_page_adjudication",
+  "mode": "live",
+  "next_recommendation": "refine_auto_gabriel_gate3_candidate_discovery",
+  "non_wage_positive_ready_count": 0,
+  "original_likely_p1_denominator": 80,
+  "original_likely_p1_ready_count": 21,
+  "original_likely_p1_ready_rate": 0.2625,
+  "ready_count": 22,
+  "ready_source_type_counts": {
+    "cba": 7,
+    "ordinance_or_policy": 4,
+    "wage_schedule_or_compensation_plan": 11
+  },
+  "ready_unit_type_counts": {
+    "fire": 7,
+    "non_safety": 10,
+    "police": 5
+  },
+  "representation_pass": false,
+  "second_review_count": 23,
+  "smaller_extraction_pilot_allowed": false,
+  "systematic_ambiguity_pass": true,
+  "wrong_page_count": 2,
+  "wrong_page_rate": 0.015152
+}

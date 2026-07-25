@@ -33,6 +33,9 @@ ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = "https://go.apis.huit.harvard.edu/ais-openai-direct/v2"
 DEFAULT_BACKEND = "huit_openai_responses_direct_sdk"
 DEFAULT_MODEL = "gpt-5.4-nano"
+GATE1_MODE = "auto_gabriel_gate1"
+GATE2_MODE = "auto_gabriel_gate2_navigation_table_refine"
+GATE_MODES = {GATE1_MODE, GATE2_MODE}
 ORIGINAL_CALIBRATION_PATH = (
     ROOT
     / "docs/analysis/text_table_calibration"
@@ -99,6 +102,19 @@ FINAL_FIELDS = [
     "auto_gate_passes_500_doc_criteria_candidate",
 ]
 LEDGER_FIELDS = IDENTITY_FIELDS + LOCAL_FIELDS + GABRIEL_FIELDS + FINAL_FIELDS
+GATE2_FIELDS = [
+    "gate_mode",
+    "gate2_diagnostic_reason_codes",
+    "gate2_candidate_discovery_summary",
+    "gate2_printed_page_offsets",
+]
+GATE2_LEDGER_FIELDS = (
+    IDENTITY_FIELDS
+    + LOCAL_FIELDS
+    + GATE2_FIELDS
+    + GABRIEL_FIELDS
+    + FINAL_FIELDS
+)
 
 GABRIEL_RESPONSE_KEYS = {
     "wage_schedule_present",
@@ -267,6 +283,20 @@ SECRET_ERROR_RE = re.compile(
     r"cookie|password|token|https?://)"
 )
 REASON_CODE_RE = re.compile(r"^[A-Z][A-Z0-9_]{0,39}$")
+GATE2_DIAGNOSTIC_CODES = {
+    "no_candidate_detected",
+    "candidate_is_prose_only",
+    "candidate_is_index_or_contents",
+    "target_table_outside_budget",
+    "possible_printed_page_offset",
+    "compact_compensation_candidate",
+    "non_wage_numeric_table",
+    "benefits_table",
+    "budget_table",
+    "classification_without_pay",
+    "true_wage_table_evidence",
+    "insufficient_role_pay_columns",
+}
 
 NEGATIVE_TABLE_TYPES = {
     "percent_increase_only",
@@ -325,6 +355,11 @@ class PageEvidence:
     image_vertical_bands: int
     image_dark_density: float
     navigation_targets: list[int]
+    printed_page_number: int | None = None
+    printed_page_offset: int | None = None
+    role_pay_rows: int = 0
+    aligned_numeric_columns: int = 0
+    compact_role_pay_lines: int = 0
 
 
 @dataclass
@@ -344,6 +379,10 @@ class CaseEvidence:
     compact_score: float
     navigation_targets_found: list[int]
     prompt: str
+    gate_mode: str = GATE1_MODE
+    diagnostic_reason_codes: list[str] | None = None
+    printed_page_offsets: list[int] | None = None
+    unresolved_navigation_targets: list[int] | None = None
 
 
 @dataclass
@@ -676,6 +715,98 @@ def find_navigation_targets(text: str, page_count: int) -> list[int]:
     return targets
 
 
+def find_gate2_navigation_targets(text: str, page_count: int) -> list[int]:
+    """Return printed target page numbers from bounded navigation text."""
+
+    targets = find_navigation_targets(text, page_count)
+    for line in text.splitlines():
+        compact = re.sub(r"\s+", " ", line).strip()[:300]
+        if not compact:
+            continue
+        has_wage_target = bool(
+            re.search(
+                r"\b(?:salary|salaries|wage|wages|pay|compensation|"
+                r"rate\s+of\s+pay)\b",
+                compact,
+                re.IGNORECASE,
+            )
+        )
+        has_target_form = bool(
+            re.search(
+                r"\b(?:schedule|table|plan|appendix|exhibit|attachment|"
+                r"pay\s+scale)\b",
+                compact,
+                re.IGNORECASE,
+            )
+        )
+        if not (has_wage_target and has_target_form):
+            continue
+        matches = re.findall(r"(?:\.{2,}|\s)(\d{1,4})\s*$", compact)
+        if not matches:
+            matches = re.findall(r"\bpage\s+(\d{1,4})\b", compact, re.I)
+        for value in matches[-1:]:
+            page = int(value)
+            if 1 <= page <= page_count and page not in targets:
+                targets.append(page)
+    return targets
+
+
+def detect_printed_page_number(
+    text: str, *, pdf_page_number: int, page_count: int
+) -> tuple[int | None, int | None]:
+    """Infer one printed page number from an already selected page only."""
+
+    lines = [re.sub(r"\s+", " ", line).strip() for line in text.splitlines()]
+    lines = [line for line in lines if line]
+    boundary = lines[:8] + lines[-12:]
+    candidates: list[int] = []
+    for line in boundary:
+        matches = re.findall(r"\bpage\s+([ivxlcdm]+|\d{1,4})\b", line, re.I)
+        matches += re.findall(r"^[-–—]?\s*(\d{1,4})\s*[-–—]?$", line)
+        for value in matches:
+            if not str(value).isdigit():
+                continue
+            printed = int(value)
+            if 1 <= printed <= page_count:
+                candidates.append(printed)
+    if not candidates:
+        return None, None
+    printed = min(candidates, key=lambda value: abs(pdf_page_number - value))
+    offset = pdf_page_number - printed
+    if abs(offset) > 30:
+        return None, None
+    return printed, offset
+
+
+def gate2_line_structure(lines: list[str]) -> tuple[int, int, int]:
+    """Count direct role/pay rows, stable numeric columns, and compact rows."""
+
+    role_pay_rows = 0
+    compact_rows = 0
+    numeric_positions: Counter[int] = Counter()
+    for line in lines:
+        numeric_matches = list(NUMBER_RE.finditer(line))
+        words = re.findall(r"[A-Za-z][A-Za-z/-]*", line)
+        has_role = bool(ROLE_RE.search(line))
+        has_pay_term = bool(WAGE_RE.search(line) or TABLE_HEADER_RE.search(line))
+        sentence_like = line.rstrip().endswith((".", ";")) and len(words) > 12
+        if numeric_matches and has_role and not sentence_like:
+            role_pay_rows += 1
+        if (
+            numeric_matches
+            and (has_role or has_pay_term)
+            and len(words) <= 12
+            and len(line) <= 180
+            and not sentence_like
+        ):
+            compact_rows += 1
+        if len(numeric_matches) >= 1 and len(words) >= 1 and not sentence_like:
+            for match in numeric_matches[-4:]:
+                numeric_positions[round(match.start() / 8)] += 1
+    aligned_columns = sum(1 for count in numeric_positions.values() if count >= 3)
+    return min(role_pay_rows, 40), min(aligned_columns, 12), min(compact_rows, 40)
+
+
 def page_evidence(
     *,
     page: Any,
@@ -684,6 +815,7 @@ def page_evidence(
     page_count: int,
     rendered: dict[str, str] | None,
     max_chars: int,
+    gate_mode: str = GATE1_MODE,
 ) -> PageEvidence:
     try:
         text = page.extract_text(extraction_mode="layout") or ""
@@ -723,6 +855,12 @@ def page_evidence(
             row_like += 1
         if len(columns) >= 3 and len(words) >= 1 and len(numeric) >= 1:
             column_lines += 1
+    role_pay_rows, aligned_numeric_columns, compact_role_pay_lines = (
+        gate2_line_structure(lines)
+    )
+    printed_page_number, printed_page_offset = detect_printed_page_number(
+        text, pdf_page_number=page_number, page_count=page_count
+    )
     geometry_rows, geometry_columns = text_geometry(page)
     horizontal = 0
     vertical = 0
@@ -758,7 +896,16 @@ def page_evidence(
         image_horizontal_bands=horizontal,
         image_vertical_bands=vertical,
         image_dark_density=dark_density,
-        navigation_targets=find_navigation_targets(text, page_count),
+        navigation_targets=(
+            find_gate2_navigation_targets(text, page_count)
+            if gate_mode == GATE2_MODE
+            else find_navigation_targets(text, page_count)
+        ),
+        printed_page_number=printed_page_number,
+        printed_page_offset=printed_page_offset,
+        role_pay_rows=role_pay_rows,
+        aligned_numeric_columns=aligned_numeric_columns,
+        compact_role_pay_lines=compact_role_pay_lines,
     )
 
 
@@ -798,6 +945,87 @@ def choose_initial_pages(
     add(navigation, "navigation")
     if not selected:
         add(range(1, min(page_count, base_cap) + 1), "navigation")
+    return selected
+
+
+def choose_gate2_initial_pages(
+    source: dict[str, str],
+    *,
+    max_pages: int,
+    navigation_budget: int,
+    candidate_window: int,
+) -> list[tuple[int, str]]:
+    """Select a bounded candidate/nearby/navigation seed with target reserve."""
+
+    page_count = int(source["pdf_page_count"])
+    candidates = parse_pages(source["blinded_candidate_pages"], page_count)
+    supplied_nearby = parse_pages(source["blinded_nearby_pages"], page_count)
+    navigation = parse_pages(source["blinded_navigation_pages"], page_count)[
+        :navigation_budget
+    ]
+    generated_nearby: list[int] = []
+    for candidate in candidates:
+        for delta in range(1, candidate_window + 1):
+            for page in (candidate - delta, candidate + delta):
+                if 1 <= page <= page_count and page not in generated_nearby:
+                    generated_nearby.append(page)
+    nearby = generated_nearby + [
+        page for page in supplied_nearby if page not in generated_nearby
+    ]
+    # Reserve one page for an included navigation target whenever a pointer
+    # page is available. This fixes Gate 1's tendency to spend the full budget
+    # before resolving a target.
+    initial_cap = max_pages - (1 if navigation and max_pages > 1 else 0)
+    selected: list[tuple[int, str]] = []
+    used: set[int] = set()
+    navigation_used = 0
+
+    def add(
+        values: Iterable[int], role: str, limit: int | None = None
+    ) -> None:
+        nonlocal navigation_used
+        added = 0
+        for page in values:
+            if len(selected) >= initial_cap:
+                return
+            if page in used:
+                continue
+            if role == "navigation" and navigation_used >= navigation_budget:
+                return
+            selected.append((page, role))
+            used.add(page)
+            added += 1
+            if role == "navigation":
+                navigation_used += 1
+            if limit is not None and added >= limit:
+                return
+
+    if candidates:
+        candidate_limit = min(3, initial_cap)
+        add(evenly_sample(candidates, candidate_limit), "candidate")
+        nearby_limit = min(3, max(0, initial_cap - len(selected)))
+        add(nearby, "nearby", nearby_limit)
+        if navigation and len(selected) < initial_cap:
+            add(navigation, "navigation", 1)
+    else:
+        add(nearby, "nearby", min(2, initial_cap))
+        add(navigation, "navigation", min(navigation_budget, initial_cap))
+    if not selected:
+        add(range(1, min(page_count, initial_cap) + 1), "navigation")
+    if navigation and not any(role == "navigation" for _, role in selected):
+        # Replace the last nearby page, never a candidate page, when possible.
+        replacement_index = next(
+            (
+                index
+                for index in range(len(selected) - 1, -1, -1)
+                if selected[index][1] == "nearby"
+            ),
+            None,
+        )
+        if replacement_index is not None and navigation[0] not in used:
+            used.remove(selected[replacement_index][0])
+            selected[replacement_index] = (navigation[0], "navigation")
+            used.add(navigation[0])
     return selected
 
 
@@ -859,6 +1087,143 @@ def score_case(pages: list[PageEvidence]) -> tuple[float, float, float, float, f
             compact_score,
         )
     )
+
+
+def score_case_gate2(
+    pages: list[PageEvidence],
+) -> tuple[float, float, float, float, float]:
+    """Refine Gate 1 scores with direct row/column and compact evidence."""
+
+    base_table, wage_score, numeric_score, non_wage_score, _ = score_case(pages)
+    page_scores: list[float] = []
+    compact_page_scores: list[float] = []
+    for page in pages:
+        direct = (
+            0.34 * min(1.0, page.role_pay_rows / 4)
+            + 0.24 * min(1.0, page.aligned_numeric_columns / 3)
+            + 0.16 * min(1.0, page.row_like_lines / 4)
+            + 0.12 * min(1.0, page.column_lines / 3)
+            + 0.08 * min(1.0, page.header_lines / 2)
+            + 0.06
+            * min(
+                1.0,
+                (page.image_horizontal_bands + page.image_vertical_bands) / 8,
+            )
+        )
+        if page.index_signal or page.front_signal:
+            direct *= 0.45
+        page_scores.append(direct)
+        compact = (
+            0.40 * min(1.0, page.compact_role_pay_lines / 3)
+            + 0.25 * min(1.0, page.role_pay_rows / 3)
+            + 0.15 * min(1.0, page.aligned_numeric_columns / 2)
+            + 0.10 * min(1.0, page.wage_terms / 2)
+            + 0.10 * min(1.0, page.numeric_tokens / 4)
+        )
+        if page.index_signal or page.front_signal or page.benefit_terms >= 4:
+            compact *= 0.35
+        compact_page_scores.append(compact)
+    refined_table = max(base_table * 0.72, max(page_scores, default=0.0))
+    compact_score = max(compact_page_scores, default=0.0)
+    return tuple(
+        round(min(1.0, value), 6)
+        for value in (
+            refined_table,
+            wage_score,
+            numeric_score,
+            non_wage_score,
+            compact_score,
+        )
+    )
+
+
+def gate2_diagnostics(
+    *,
+    source: dict[str, str],
+    pages: list[PageEvidence],
+    compact_score: float,
+    unresolved_targets: list[int],
+    printed_offsets: list[int],
+) -> list[str]:
+    """Produce transparent lowercase diagnostics, never prior answer labels."""
+
+    codes: list[str] = []
+
+    def add(code: str) -> None:
+        if code not in codes:
+            codes.append(code)
+
+    candidate_pages = [page for page in pages if page.role == "candidate"]
+    evidence_pages = [
+        page
+        for page in pages
+        if page.role in {"candidate", "nearby", "navigation_target", "navigation_target_offset"}
+    ]
+    true_structure = any(
+        page.role_pay_rows >= 2
+        and (
+            page.aligned_numeric_columns >= 1
+            or page.row_like_lines >= 2
+            or page.column_lines >= 2
+        )
+        and not page.index_signal
+        and page.benefit_terms < 4
+        and page.budget_terms < 4
+        for page in evidence_pages
+    )
+    plausible = true_structure or any(
+        page.compact_role_pay_lines >= 2
+        and page.role_pay_rows >= 1
+        and not page.index_signal
+        for page in evidence_pages
+    )
+    if not plausible:
+        add("no_candidate_detected")
+    if any(
+        page.wage_terms >= 1
+        and page.role_pay_rows == 0
+        and page.row_like_lines == 0
+        and not page.index_signal
+        for page in candidate_pages or evidence_pages
+    ):
+        add("candidate_is_prose_only")
+    if any(page.index_signal for page in candidate_pages):
+        add("candidate_is_index_or_contents")
+    if unresolved_targets:
+        add("target_table_outside_budget")
+    if any(offset != 0 for offset in printed_offsets):
+        add("possible_printed_page_offset")
+    if compact_score >= 0.62 and any(
+        page.compact_role_pay_lines >= 2 and page.role_pay_rows >= 1
+        for page in evidence_pages
+    ):
+        add("compact_compensation_candidate")
+    numeric_total = sum(page.numeric_tokens for page in evidence_pages)
+    if numeric_total >= 4 and not true_structure and any(
+        page.benefit_terms or page.budget_terms or page.index_signal
+        for page in evidence_pages
+    ):
+        add("non_wage_numeric_table")
+    if any(page.benefit_terms >= 3 for page in evidence_pages):
+        add("benefits_table")
+    if any(page.budget_terms >= 3 for page in evidence_pages):
+        add("budget_table")
+    if any(
+        page.classification_terms >= 1
+        and page.role_pay_rows == 0
+        and page.numeric_tokens <= 1
+        for page in evidence_pages
+    ):
+        add("classification_without_pay")
+    if true_structure:
+        add("true_wage_table_evidence")
+    else:
+        add("insufficient_role_pay_columns")
+    if not source["blinded_candidate_pages"].strip() and not plausible:
+        add("no_candidate_detected")
+    if not set(codes) <= GATE2_DIAGNOSTIC_CODES:
+        raise AssertionError("unknown Gate 2 diagnostic code")
+    return codes
 
 
 def prompt_for_case(evidence: CaseEvidence) -> str:
@@ -961,6 +1326,119 @@ def prompt_for_case(evidence: CaseEvidence) -> str:
     )
 
 
+def prompt_for_gate2_case(evidence: CaseEvidence) -> str:
+    page_payload = []
+    for page in evidence.pages:
+        page_payload.append(
+            {
+                "page_number": page.page_number,
+                "page_role": page.role,
+                "bounded_redacted_snippet": page.snippet,
+                "features": {
+                    "wage_terms": page.wage_terms,
+                    "role_terms": page.role_terms,
+                    "numeric_tokens": page.numeric_tokens,
+                    "money_tokens": page.money_tokens,
+                    "row_like_lines": page.row_like_lines,
+                    "column_lines": page.column_lines,
+                    "header_lines": page.header_lines,
+                    "geometry_rows": page.geometry_rows,
+                    "geometry_columns": page.geometry_columns,
+                    "role_pay_rows": page.role_pay_rows,
+                    "aligned_numeric_columns": page.aligned_numeric_columns,
+                    "compact_role_pay_lines": page.compact_role_pay_lines,
+                    "benefit_terms": page.benefit_terms,
+                    "budget_terms": page.budget_terms,
+                    "classification_terms": page.classification_terms,
+                    "index_signal": page.index_signal,
+                    "front_signal": page.front_signal,
+                    "rendered_available": page.rendered_available,
+                    "image_horizontal_bands": page.image_horizontal_bands,
+                    "image_vertical_bands": page.image_vertical_bands,
+                    "navigation_target_printed_pages": page.navigation_targets,
+                    "printed_page_number": page.printed_page_number,
+                    "pdf_minus_printed_page_offset": page.printed_page_offset,
+                },
+            }
+        )
+    packet = {
+        "case_context": {
+            "adjudication_case_id": evidence.source["adjudication_case_id"],
+            "state": evidence.source["state"],
+            "municipality": evidence.source["municipality"],
+            "unit_type": evidence.source["unit_type"],
+            "candidate_source_type": evidence.source["candidate_source_type"],
+            "candidate_pages_supplied": bool(
+                evidence.source["blinded_candidate_pages"].strip()
+            ),
+        },
+        "local_diagnostics_not_answer_labels": (
+            evidence.diagnostic_reason_codes or []
+        ),
+        "case_scores": {
+            "table_structure": evidence.table_score,
+            "wage_language": evidence.wage_score,
+            "pay_numeric": evidence.numeric_score,
+            "navigation": evidence.navigation_score,
+            "non_wage_false_positive": evidence.non_wage_score,
+            "compact_compensation_sheet": evidence.compact_score,
+        },
+        "pages": page_payload,
+    }
+    response_shape = {
+        "wage_schedule_present": "yes|maybe|no|unknown",
+        "candidate_page_relationship": (
+            "exact_table_page|adjacent_to_table|points_to_later_table|"
+            "wrong_page|no_candidate_page|unknown"
+        ),
+        "visual_table_type": (
+            "step_grade|rank_step|classification_pay_table|hourly_schedule|"
+            "annual_salary_schedule|compact_compensation_sheet|"
+            "percent_increase_only|prose_only|benefits_table|"
+            "budget_or_fiscal_table|classification_without_pay|"
+            "index_or_contents|front_matter|non_wage_table|no_table|other|unknown"
+        ),
+        "non_wage_family": (
+            "not_applicable|benefits|budget_or_fiscal|"
+            "classification_without_pay|incentive_or_bonus_prose|"
+            "index_or_contents|front_matter|non_wage_appendix|"
+            "memorandum_without_table|other|unknown"
+        ),
+        "navigation_needed": "yes|no|unknown",
+        "navigation_target_found": "yes|no|not_applicable|unknown",
+        "extraction_complexity": "easy|moderate|hard|not_extractable|unknown",
+        "extraction_recommendation": (
+            "extraction_ready|extraction_ready_with_schema_update|"
+            "second_review_required|exclude_for_now|unknown"
+        ),
+        "confidence": "high|medium|low|unknown",
+        "reason_codes": ["SHORT_UPPERCASE_CODE"],
+        "short_rationale": "max 300 characters; no wage values",
+    }
+    return (
+        "Evaluate only this bounded local PDF-page packet. Wage/pay prose is "
+        "not a schedule. A positive schedule requires structured role, "
+        "classification, rank, grade, or position evidence plus pay bands, "
+        "rates, salaries, or repeated role-to-pay lines. no_candidate_page "
+        "means this packet lacks a plausible table target; wrong_page means a "
+        "supplied candidate exists but is materially unrelated or a distinct "
+        "non-wage family. exact_table_page applies to an included candidate; "
+        "adjacent_to_table applies when an included neighbor has the table. "
+        "Contents/index is only a pointer. points_to_later_table requires the "
+        "referenced target itself in the packet with supporting table evidence. "
+        "Do not infer unseen targets. A compact compensation sheet may be "
+        "schema-usable only when it structurally maps roles/classifications to "
+        "pay bands, rates, or salaries. Benefits, budget/fiscal, classification "
+        "without pay, front matter, prose-only, and non-wage numeric tables "
+        "cannot be high-confidence wage schedules. Local diagnostics are "
+        "fallible transparent features, not answer labels. Do not extract or "
+        "repeat wage values. Return one strict JSON object only, no markdown, "
+        "using exactly these fields and allowed values: "
+        f"{json.dumps(response_shape, separators=(',', ':'))}\n"
+        f"BOUNDED_EVIDENCE={json.dumps(packet, separators=(',', ':'))}"
+    )
+
+
 def build_case_evidence(
     source: dict[str, str],
     *,
@@ -970,6 +1448,8 @@ def build_case_evidence(
     navigation_budget: int,
     max_chars_per_page: int,
     max_chars_per_case: int,
+    gate_mode: str = GATE1_MODE,
+    candidate_window: int = 1,
 ) -> CaseEvidence:
     artifact = resolve_local_path(source["content_artifact_path"])
     if artifact.suffix.lower() != ".pdf" or not artifact.is_file():
@@ -981,8 +1461,17 @@ def build_case_evidence(
     page_count = int(source["pdf_page_count"])
     if len(reader.pages) != page_count:
         raise ValueError("PDF page count differs from blinded packet")
-    initial = choose_initial_pages(
-        source, max_pages=max_pages, navigation_budget=navigation_budget
+    initial = (
+        choose_gate2_initial_pages(
+            source,
+            max_pages=max_pages,
+            navigation_budget=navigation_budget,
+            candidate_window=candidate_window,
+        )
+        if gate_mode == GATE2_MODE
+        else choose_initial_pages(
+            source, max_pages=max_pages, navigation_budget=navigation_budget
+        )
     )
     pages: list[PageEvidence] = []
     used: set[int] = set()
@@ -996,6 +1485,7 @@ def build_case_evidence(
             page_count=page_count,
             rendered=render_map.get(page_number),
             max_chars=maximum,
+            gate_mode=gate_mode,
         )
         pages.append(evidence)
         used.add(page_number)
@@ -1006,29 +1496,83 @@ def build_case_evidence(
             if target not in referenced:
                 referenced.append(target)
     navigation_added = 0
-    for target in referenced:
-        if len(pages) >= max_pages or remaining_chars <= 0:
-            break
-        if target in used or navigation_added >= navigation_budget:
-            continue
-        evidence = page_evidence(
-            page=reader.pages[target - 1],
-            page_number=target,
-            role="navigation_target",
-            page_count=page_count,
-            rendered=render_map.get(target),
-            max_chars=min(max_chars_per_page, remaining_chars),
-        )
-        pages.append(evidence)
-        used.add(target)
-        navigation_added += 1
-        remaining_chars -= evidence.snippet_chars
+    printed_offsets = sorted(
+        {
+            page.printed_page_offset
+            for page in pages
+            if page.printed_page_offset is not None
+            and page.printed_page_offset != 0
+        }
+    )
+    unresolved_targets: list[int] = []
+    resolved_targets: list[int] = []
+    if gate_mode == GATE2_MODE:
+        navigation_added = sum(page.role == "navigation" for page in pages)
+        for printed_target in referenced:
+            proposals: list[tuple[int, str]] = []
+            for offset in printed_offsets:
+                adjusted = printed_target + offset
+                if 1 <= adjusted <= page_count:
+                    proposals.append((adjusted, "navigation_target_offset"))
+            if 1 <= printed_target <= page_count:
+                proposals.append((printed_target, "navigation_target"))
+            added_target = False
+            for target, role in proposals:
+                if target in used:
+                    resolved_targets.append(target)
+                    added_target = True
+                    break
+                if (
+                    len(pages) >= max_pages
+                    or remaining_chars <= 0
+                    or navigation_added >= navigation_budget
+                ):
+                    continue
+                evidence = page_evidence(
+                    page=reader.pages[target - 1],
+                    page_number=target,
+                    role=role,
+                    page_count=page_count,
+                    rendered=render_map.get(target),
+                    max_chars=min(max_chars_per_page, remaining_chars),
+                    gate_mode=gate_mode,
+                )
+                pages.append(evidence)
+                used.add(target)
+                navigation_added += 1
+                remaining_chars -= evidence.snippet_chars
+                resolved_targets.append(target)
+                added_target = True
+                break
+            if not added_target:
+                unresolved_targets.append(printed_target)
+    else:
+        for target in referenced:
+            if len(pages) >= max_pages or remaining_chars <= 0:
+                break
+            if target in used or navigation_added >= navigation_budget:
+                continue
+            evidence = page_evidence(
+                page=reader.pages[target - 1],
+                page_number=target,
+                role="navigation_target",
+                page_count=page_count,
+                rendered=render_map.get(target),
+                max_chars=min(max_chars_per_page, remaining_chars),
+                gate_mode=gate_mode,
+            )
+            pages.append(evidence)
+            used.add(target)
+            navigation_added += 1
+            remaining_chars -= evidence.snippet_chars
     if len(pages) < max_pages and remaining_chars > 0:
         fallback_navigation = parse_pages(
             source["blinded_navigation_pages"], page_count
         )[:navigation_budget]
         for page_number in fallback_navigation:
             if len(pages) >= max_pages or remaining_chars <= 0:
+                break
+            if gate_mode == GATE2_MODE and navigation_added >= navigation_budget:
                 break
             if page_number in used:
                 continue
@@ -1039,23 +1583,40 @@ def build_case_evidence(
                 page_count=page_count,
                 rendered=render_map.get(page_number),
                 max_chars=min(max_chars_per_page, remaining_chars),
+                gate_mode=gate_mode,
             )
             pages.append(evidence)
             used.add(page_number)
+            if gate_mode == GATE2_MODE:
+                navigation_added += 1
             remaining_chars -= evidence.snippet_chars
     if len(pages) > max_pages:
         raise AssertionError("page budget exceeded")
+    if gate_mode == GATE2_MODE and sum(
+        page.role
+        in {"navigation", "navigation_target", "navigation_target_offset"}
+        for page in pages
+    ) > navigation_budget:
+        raise AssertionError("Gate 2 navigation-page budget exceeded")
     if any(page.snippet_chars > max_chars_per_page for page in pages):
         raise AssertionError("per-page text cap exceeded")
     text_chars = sum(page.snippet_chars for page in pages)
     if text_chars > max_chars_per_case:
         raise AssertionError("per-case text cap exceeded")
     table_score, wage_score, numeric_score, non_wage_score, compact_score = (
-        score_case(pages)
+        score_case_gate2(pages)
+        if gate_mode == GATE2_MODE
+        else score_case(pages)
     )
-    targets_evaluated = [
-        page.page_number for page in pages if page.role == "navigation_target"
-    ]
+    targets_evaluated = (
+        sorted(set(resolved_targets))
+        if gate_mode == GATE2_MODE
+        else [
+            page.page_number
+            for page in pages
+            if page.role == "navigation_target"
+        ]
+    )
     has_reference = any(page.navigation_targets for page in pages)
     navigation_score = (
         1.0
@@ -1065,6 +1626,17 @@ def build_case_evidence(
         else 0.2
         if any(page.index_signal for page in pages)
         else 0.0
+    )
+    diagnostics = (
+        gate2_diagnostics(
+            source=source,
+            pages=pages,
+            compact_score=compact_score,
+            unresolved_targets=unresolved_targets,
+            printed_offsets=printed_offsets,
+        )
+        if gate_mode == GATE2_MODE
+        else []
     )
     case = CaseEvidence(
         source=source,
@@ -1079,7 +1651,8 @@ def build_case_evidence(
         navigation_pages=[
             page.page_number
             for page in pages
-            if page.role in {"navigation", "navigation_target"}
+            if page.role
+            in {"navigation", "navigation_target", "navigation_target_offset"}
         ],
         text_chars=text_chars,
         table_score=table_score,
@@ -1090,13 +1663,25 @@ def build_case_evidence(
         compact_score=compact_score,
         navigation_targets_found=targets_evaluated,
         prompt="",
+        gate_mode=gate_mode,
+        diagnostic_reason_codes=diagnostics,
+        printed_page_offsets=printed_offsets,
+        unresolved_navigation_targets=unresolved_targets,
     )
-    case.prompt = prompt_for_case(case)
+    case.prompt = (
+        prompt_for_gate2_case(case)
+        if gate_mode == GATE2_MODE
+        else prompt_for_case(case)
+    )
     forbidden_prompt_markers = (
         "extraction_gate_label",
         "wage_schedule_table_confirmed_label",
         "REVIEW1",
         "REVIEW2",
+        "GATE1",
+        "Gate 1",
+        "gate1",
+        "auto_gate_label",
         "recommended_extraction_action",
     )
     if any(marker in case.prompt for marker in forbidden_prompt_markers):
@@ -1308,6 +1893,112 @@ def combine_gate(
     }
 
 
+def combine_gate2(
+    evidence: CaseEvidence, gabriel: dict[str, str]
+) -> dict[str, str]:
+    """Apply Gate 2 direct-structure and navigation refinements fail closed."""
+
+    base = combine_gate(evidence, gabriel)
+    if base["auto_gate_label"] in {"gabriel_unavailable", "error"}:
+        return base
+    diagnostics = set(evidence.diagnostic_reason_codes or [])
+    table_type = gabriel["gabriel_visual_table_type"]
+    relationship = gabriel["gabriel_candidate_page_relationship"]
+    recommendation = gabriel["gabriel_extraction_recommendation"]
+    confidence = gabriel["gabriel_confidence"]
+    wage_present = gabriel["gabriel_wage_schedule_present"]
+    non_wage = gabriel["gabriel_non_wage_family"]
+    relationship_resolved = relationship in {
+        "exact_table_page",
+        "adjacent_to_table",
+    } or (
+        relationship == "points_to_later_table"
+        and gabriel["gabriel_navigation_target_found"] == "yes"
+        and bool(evidence.navigation_targets_found)
+    )
+    negative = table_type in NEGATIVE_TABLE_TYPES or non_wage in NEGATIVE_FAMILIES
+    if negative and base["auto_gate_label"].startswith("extraction_ready"):
+        return {
+            "auto_gate_label": "second_review_required",
+            "auto_gate_confidence": confidence,
+            "auto_gate_reason_codes": "GATE2_NEGATIVE_FAMILY_VETO",
+            "auto_gate_rationale": (
+                "Gate 2 vetoes an extraction-ready label because the bounded "
+                "evidence contains a negative table or non-wage family."
+            ),
+            "auto_gate_passes_500_doc_criteria_candidate": "false",
+        }
+    compact_ready = (
+        table_type == "compact_compensation_sheet"
+        and "compact_compensation_candidate" in diagnostics
+        and wage_present == "yes"
+        and non_wage == "not_applicable"
+        and relationship_resolved
+        and recommendation
+        in {"extraction_ready", "extraction_ready_with_schema_update"}
+        and confidence in {"high", "medium"}
+    )
+    if compact_ready:
+        return {
+            "auto_gate_label": "extraction_ready_with_schema_update",
+            "auto_gate_confidence": confidence,
+            "auto_gate_reason_codes": (
+                "GATE2_COMPACT_ROLE_PAY_EVIDENCE|SCHEMA_UPDATE_REQUIRED"
+            ),
+            "auto_gate_rationale": (
+                "Direct compact role-to-pay evidence and schema-valid GABRIEL "
+                "agreement support a separate compact-compensation schema."
+            ),
+            "auto_gate_passes_500_doc_criteria_candidate": "true",
+        }
+    if "target_table_outside_budget" in diagnostics and relationship in {
+        "points_to_later_table",
+        "unknown",
+    }:
+        return {
+            "auto_gate_label": "second_review_required",
+            "auto_gate_confidence": confidence,
+            "auto_gate_reason_codes": "GATE2_TARGET_OUTSIDE_BUDGET",
+            "auto_gate_rationale": (
+                "A bounded navigation reference could not be resolved inside "
+                "the six-page/four-navigation-page budget."
+            ),
+            "auto_gate_passes_500_doc_criteria_candidate": "false",
+        }
+    if base["auto_gate_label"] == "extraction_ready_high_confidence" and (
+        "true_wage_table_evidence" not in diagnostics
+    ):
+        return {
+            "auto_gate_label": "second_review_required",
+            "auto_gate_confidence": confidence,
+            "auto_gate_reason_codes": "GATE2_ROLE_PAY_STRUCTURE_REQUIRED",
+            "auto_gate_rationale": (
+                "GABRIEL is positive, but Gate 2 lacks repeated local role/pay "
+                "rows or aligned pay columns required for high confidence."
+            ),
+            "auto_gate_passes_500_doc_criteria_candidate": "false",
+        }
+    if base["auto_gate_label"] == "extraction_ready_with_schema_update" and not (
+        "true_wage_table_evidence" in diagnostics
+        or "compact_compensation_candidate" in diagnostics
+    ):
+        return {
+            "auto_gate_label": "second_review_required",
+            "auto_gate_confidence": confidence,
+            "auto_gate_reason_codes": "GATE2_INSUFFICIENT_ROLE_PAY_COLUMNS",
+            "auto_gate_rationale": (
+                "The bounded model judgment is positive, but Gate 2 direct "
+                "role/pay-column evidence remains insufficient."
+            ),
+            "auto_gate_passes_500_doc_criteria_candidate": "false",
+        }
+    if base["auto_gate_label"] == "extraction_ready_high_confidence":
+        base["auto_gate_reason_codes"] += "|GATE2_DIRECT_STRUCTURE_CONFIRMED"
+    elif base["auto_gate_label"] == "extraction_ready_with_schema_update":
+        base["auto_gate_reason_codes"] += "|GATE2_DIRECT_STRUCTURE_SUPPORTED"
+    return base
+
+
 def load_subscription_key() -> tuple[str | None, str]:
     from dotenv import dotenv_values, load_dotenv
 
@@ -1496,6 +2187,37 @@ def local_fields(evidence: CaseEvidence) -> dict[str, str]:
     }
 
 
+def gate2_fields(evidence: CaseEvidence) -> dict[str, str]:
+    summary = {
+        "candidate_pages": len(evidence.candidate_pages),
+        "nearby_pages": len(evidence.nearby_pages),
+        "navigation_pages": len(evidence.navigation_pages),
+        "role_pay_rows": sum(page.role_pay_rows for page in evidence.pages),
+        "aligned_numeric_columns": sum(
+            page.aligned_numeric_columns for page in evidence.pages
+        ),
+        "compact_role_pay_lines": sum(
+            page.compact_role_pay_lines for page in evidence.pages
+        ),
+        "resolved_navigation_targets": len(evidence.navigation_targets_found),
+        "unresolved_navigation_targets": len(
+            evidence.unresolved_navigation_targets or []
+        ),
+    }
+    return {
+        "gate_mode": evidence.gate_mode,
+        "gate2_diagnostic_reason_codes": "|".join(
+            evidence.diagnostic_reason_codes or []
+        ),
+        "gate2_candidate_discovery_summary": bounded(
+            json.dumps(summary, sort_keys=True, separators=(",", ":")), 600
+        ),
+        "gate2_printed_page_offsets": ",".join(
+            str(value) for value in evidence.printed_page_offsets or []
+        ),
+    }
+
+
 def identity_fields(evidence: CaseEvidence) -> dict[str, str]:
     source = evidence.source
     return {
@@ -1620,7 +2342,9 @@ def gabriel_fields_from_result(
 
 
 def decision_metrics(
-    ledger: list[dict[str, str]], input_rows: list[dict[str, str]]
+    ledger: list[dict[str, str]],
+    input_rows: list[dict[str, str]],
+    gate_mode: str = GATE1_MODE,
 ) -> dict[str, Any]:
     original: dict[str, dict[str, str]] = {}
     if ORIGINAL_CALIBRATION_PATH.is_file():
@@ -1752,6 +2476,8 @@ def decision_metrics(
             if decision == "500_doc_extraction_allowed"
             else "prepare_smaller_extraction_pilot"
             if decision == "smaller_extraction_pilot_only"
+            else "refine_auto_gabriel_gate3_candidate_discovery"
+            if gate_mode == GATE2_MODE
             else "refine_auto_gabriel_table_and_navigation_gate"
         ),
     }
@@ -1759,6 +2485,21 @@ def decision_metrics(
 
 def counts(ledger: list[dict[str, str]], field: str) -> dict[str, int]:
     return dict(sorted(Counter(row[field] for row in ledger).items()))
+
+
+def delimited_code_counts(
+    ledger: list[dict[str, str]], field: str
+) -> dict[str, int]:
+    return dict(
+        sorted(
+            Counter(
+                code
+                for row in ledger
+                for code in row.get(field, "").split("|")
+                if code
+            ).items()
+        )
+    )
 
 
 def write_outputs(
@@ -1778,11 +2519,12 @@ def write_outputs(
     render_hash: str,
     started_at: str,
     elapsed: float,
+    gate_mode: str = GATE1_MODE,
 ) -> dict[str, Any]:
     output_dir.mkdir(parents=True, exist_ok=True)
     write_csv(
         output_dir / "auto_gabriel_adjudication_ledger.csv",
-        LEDGER_FIELDS,
+        GATE2_LEDGER_FIELDS if gate_mode == GATE2_MODE else LEDGER_FIELDS,
         ledger,
     )
     timing_fields = [
@@ -1845,20 +2587,26 @@ def write_outputs(
         )
     elif failed_path.exists():
         failed_path.unlink()
-    decision = decision_metrics(ledger, input_rows)
+    decision = decision_metrics(ledger, input_rows, gate_mode=gate_mode)
+    method = (
+        "automated_local_visual_layout_navigation_offset_plus_"
+        "gabriel_bounded_page_adjudication"
+        if gate_mode == GATE2_MODE
+        else "automated_local_visual_layout_plus_"
+        "gabriel_bounded_page_adjudication"
+    )
     decision.update(
         {
             "gate_id": gate_id,
-            "method": (
-                "automated_local_visual_layout_plus_"
-                "gabriel_bounded_page_adjudication"
-            ),
+            "method": method,
             "mode": mode,
             "gabriel_backend": backend,
             "gabriel_model": model,
             "generated_at": now_utc(),
         }
     )
+    if gate_mode == GATE2_MODE:
+        decision["gate_mode"] = gate_mode
     write_json(
         output_dir / "auto_gabriel_adjudication_gate_decision.json",
         decision,
@@ -1874,10 +2622,7 @@ def write_outputs(
             if mode == "preflight"
             else "auto_gabriel_adjudication_completed"
         ),
-        "method": (
-            "automated_local_visual_layout_plus_"
-            "gabriel_bounded_page_adjudication"
-        ),
+        "method": method,
         "mode": mode,
         "started_at": started_at,
         "finished_at": now_utc(),
@@ -1931,14 +2676,28 @@ def write_outputs(
         "codify_actions": 0,
         "decision": decision,
     }
+    if gate_mode == GATE2_MODE:
+        summary["gate_mode"] = gate_mode
+        summary["gabriel_reason_code_counts"] = delimited_code_counts(
+            ledger, "gabriel_reason_codes"
+        )
+        summary["auto_gate_reason_code_counts"] = delimited_code_counts(
+            ledger, "auto_gate_reason_codes"
+        )
+        summary["gate2_diagnostic_reason_code_counts"] = (
+            delimited_code_counts(ledger, "gate2_diagnostic_reason_codes")
+        )
     write_json(
         output_dir / "auto_gabriel_adjudication_summary.json", summary
+    )
+    gate_mode_line = (
+        f"Gate mode: `{gate_mode}`\n" if gate_mode == GATE2_MODE else ""
     )
     report = f"""# Automated visual + GABRIEL adjudication report
 
 Gate: `{gate_id}`
 Mode: `{mode}`
-Method: `automated_local_visual_layout_plus_gabriel_bounded_page_adjudication`
+{gate_mode_line}Method: `{method}`
 
 ## Status
 
@@ -1980,6 +2739,9 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--render-manifest-csv", type=Path, required=True)
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--gate-id", required=True)
+    parser.add_argument(
+        "--gate-mode", choices=sorted(GATE_MODES), default=GATE1_MODE
+    )
     parser.add_argument("--max-cases", type=int)
     parser.add_argument("--candidate-page-window", type=int, default=1)
     parser.add_argument("--navigation-page-budget", type=int, default=4)
@@ -2051,6 +2813,8 @@ def main(argv: list[str] | None = None) -> int:
             navigation_budget=args.navigation_page_budget,
             max_chars_per_page=args.max_text_chars_per_page,
             max_chars_per_case=args.max_text_chars_per_case,
+            gate_mode=args.gate_mode,
+            candidate_window=args.candidate_page_window,
         )
         local_elapsed[source["calibration_id"]] = time.monotonic() - started
         evidence_cases.append(evidence)
@@ -2135,14 +2899,28 @@ def main(argv: list[str] | None = None) -> int:
                 "authorization_header_saved": False,
             }
             failed = None
-        final = combine_gate(evidence, gabriel)
+        final = (
+            combine_gate2(evidence, gabriel)
+            if args.gate_mode == GATE2_MODE
+            else combine_gate(evidence, gabriel)
+        )
         row = {
             **identity_fields(evidence),
             **local_fields(evidence),
+            **(
+                gate2_fields(evidence)
+                if args.gate_mode == GATE2_MODE
+                else {}
+            ),
             **gabriel,
             **final,
         }
-        if set(row) != set(LEDGER_FIELDS):
+        expected_fields = (
+            GATE2_LEDGER_FIELDS
+            if args.gate_mode == GATE2_MODE
+            else LEDGER_FIELDS
+        )
+        if set(row) != set(expected_fields):
             raise AssertionError("ledger row field set mismatch")
         if row["auto_gate_label"] not in AUTO_GATE_LABELS:
             raise AssertionError("invalid final gate label")
@@ -2203,6 +2981,7 @@ def main(argv: list[str] | None = None) -> int:
         render_hash=render_hash,
         started_at=started_at,
         elapsed=time.monotonic() - overall_started,
+        gate_mode=args.gate_mode,
     )
     print(
         json.dumps(

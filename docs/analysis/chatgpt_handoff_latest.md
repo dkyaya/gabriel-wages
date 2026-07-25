@@ -6,6 +6,42 @@ Last updated: `2026-07-25`
 
 ---
 
+## 2026-07-25 — Automated GABRIEL Gate 2 completed; extraction remains closed
+
+### Current State
+
+- **Scope/readiness:** work began at clean tracked `6b10da8615e91454864667689563d23a23d10d0e`. [The readiness audit](text_table_auto_gabriel_gate2_readiness_audit_2026-07-25.md) confirms requested ancestry, the immutable 150-case scope, configured HUIT direct Responses backend, and all extraction prohibitions.
+- **Diagnosis:** [the Gate 1 failure diagnosis](text_table_auto_gabriel_gate2_failure_diagnosis_2026-07-25.md) classifies the 53 likely/p1 non-ready rows, 19 second-review rows, 71 no-candidate relationships, 10 unknown relationships, negative families, and the saturated Gate 1 compact feature.
+- **Runner:** `scripts/run_auto_gabriel_text_table_adjudication.py` retains Gate 1 as the default and adds opt-in `auto_gabriel_gate2_navigation_table_refine`. Gate 2 uses candidate±1 pages, bounded target reserve, contents/appendix navigation, printed-page offsets, direct role/pay geometry, compact-sheet evidence, and explicit diagnostic codes. Caps remain six pages, four navigation pages, 1,500 characters per page, and 6,000 per case.
+- **Dry run/preflight:** the no-call dry run passed all 150 cases over 769 pages. A one-case live strict-schema preflight passed before the full run. No heuristic-only fallback occurred.
+- **Live result:** [the Gate 2 result](text_table_auto_gabriel_gate2_result_2026-07-25.md) records 150/150 schema-valid GABRIEL responses, zero failed cases, 632,553 bounded text characters, 682 existing renders used for local features, and 452.075 seconds wall runtime. Raw prompts/responses, full text/tables, and wage values were not saved.
+- **Labels:** 9 `extraction_ready_high_confidence`, 13 `extraction_ready_with_schema_update`, 23 `second_review_required`, and 105 `exclude_for_now`. Wage-schedule presence is 36 yes / 7 maybe / 107 no; relationships are 38 exact / 2 adjacent / 2 later / 2 wrong / 105 no-candidate / 1 unknown.
+- **Gate 1 comparison:** [the comparison](text_table_auto_gabriel_gate2_vs_gate1_comparison_2026-07-25.md) shows ready rows falling 28→22 and likely/p1 readiness falling 33.75%→26.25%, while wrong pages improve 6.82%→1.52%. Gate 2 resolved loose wrong/unknown labels mainly by reclassifying weak packets as no-candidate, not by finding tables.
+- **Decision:** [the extraction decision](post_auto_gabriel_gate2_extraction_decision_2026-07-25.md) remains `continue_schema_refinement`. Only 21/80 likely/p1 rows are ready and the 22-row ready set fails representation. Neither a 500-document extraction nor a smaller pilot is allowed.
+- **Dashboard:** phase is `auto_gabriel_gate2_completed`; Gate 1 is retained as prior authority; next is `refine_auto_gabriel_gate3_candidate_discovery`. Extraction, ingestion, codification, and wage-gap analysis remain `not_started`.
+- **Validation:** four compiles, 24 offline/mock tests, dashboard data/frontend builds, repository schema validation, 60 ingestion tests, coverage audit, exact packet caps, immutable upstream/Gate 1/durable/protected hashes, request-metadata redaction, credential-value absence, and diff checks pass.
+- **Boundary:** GABRIEL ran only after successful preflight and explicit live authorization. No URL/hosted search, redownload, OCR, wage extraction, full-text/table retention, ingestion, `gabriel.codify`, durable-ledger mutation, wage-gap work, regression, remote inspection, or push occurred.
+
+### Interpretation
+
+Gate 2 is stricter and more decisive about page identity, but it does not solve
+positive discovery. The 105 no-candidate judgments may mix true no-schedule
+documents with pages whose visual table structure is not faithfully conveyed
+by bounded text and aggregate render features. Printed-page offsets and compact
+scores are too overinclusive to relax the gate.
+
+The result therefore strengthens the reason to keep extraction closed. High
+schema validity and low wrong-page error cannot substitute for a 26.25%
+likely/p1 ready rate or an unrepresentative 22-row ready set.
+
+### Next Move
+
+Use [the Gate 3 refinement prompt](text_table_auto_gabriel_gate3_refinement_prompt_2026-07-25.md)
+only if separately authorized. Preflight bounded vision-capable input from the
+existing rendered pages, improve arbitrary-job-title row geometry and
+page-local negative-family rules, then rerun the unchanged authorization
+thresholds. Do not run extraction at either scale.
+
 ## 2026-07-25 — Automated visual + GABRIEL gate 1 completed; extraction remains closed
 
 ### Current State

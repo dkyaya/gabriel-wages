@@ -6,6 +6,33 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-25 (Automated GABRIEL Gate 2 completed; extraction remains closed)
+
+**Did**
+- Started from clean tracked `6b10da8615e91454864667689563d23a23d10d0e`, confirmed all requested local ancestry, and preserved the unrelated untracked root `package-lock.json` and 785 local adjudication renders.
+- Diagnosed the 53 Gate 1 likely/p1 non-ready rows, 19 second-review rows, 71 no-candidate relationships, 10 unknown relationships, and Gate 1's overinclusive compact feature without opening additional PDFs for the diagnosis.
+- Added backward-compatible Gate 2 mode to the bounded runner. Gate 2 adds candidate±1 selection, target capacity reservation, in-budget contents/appendix parsing, printed/PDF page-offset proposals, direct role/pay-row and aligned-column features, compact-sheet rules, and deterministic diagnostics while retaining all six-page/four-navigation/1,500-character/6,000-character caps.
+- Added 10 Gate 2 synthetic/mock tests; all 14 Gate 1 tests also pass unchanged.
+- Passed a 150-case no-call dry run over 769 pages, then a one-case strict-schema GABRIEL preflight. The full live run completed 150/150 schema-valid adjudications with zero failed cases using the configured HUIT direct Responses backend and `gpt-5.4-nano`.
+- Final labels are 9 high-confidence ready, 13 schema-update ready, 23 second review, and 105 excluded. Updated the dashboard/frontend/docs to `auto_gabriel_gate2_completed`.
+
+**Decisions and why**
+- Decision is `continue_schema_refinement`: Gate 2 passes schema validity (100%), candidate-bearing wrong pages (2/132, 1.52%), and non-wage control, but only 21/80 original likely/p1 rows (26.25%) are ready and the total 22-row ready set is not representative enough.
+- Neither the 500-document extraction nor a smaller pilot is authorized. Gate 2 improved precision labels but shifted weak wrong/unknown/adjacent packets into `no_candidate_page` (105 total) rather than recovering missed tables.
+- Gate 3 should preflight bounded vision-capable use of existing page renders, recognize arbitrary job-title rows without police/fire-specific terms, and apply negative-family evidence page-locally. It must not relax packet caps or non-wage vetoes.
+
+**Surprises/breakage**
+- The first structural check caught and fixed a helper-placement defect before any real dry/live run; Gate 1 regression tests remained green.
+- Printed-page offsets were diagnosable on 48 packets, but only two later-table relationships were confirmed. The deterministic compact diagnostic appeared 45 times while GABRIEL confirmed only two compact sheets, so both remain ranking features rather than authorization evidence.
+- Gate 2 evaluated 31 more pages and 46,909 more bounded text characters than Gate 1, yet ready coverage fell by six rows. This supports the diagnosis that text/feature-only packets cannot by themselves distinguish true absence from visually present low-text/arbitrary-title tables.
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Four compiles, 14 Gate 1 tests, 10 Gate 2 tests, dashboard data/frontend builds, schema validation, 60 ingestion tests, immutable original/REVIEW1/REVIEW2/independent-packet/Gate 1/durable/protected hashes, exact page/text caps, 150 redacted request-metadata rows, secret-safety, and diff checks passed. Live GABRIEL calls occurred only after the successful preflight and explicit `--allow-gabriel`. No URL/hosted search, redownload, OCR, wage extraction, full-text/table retention, durable-ledger mutation, ingestion, `gabriel.codify`, wage-gap work, regression, remote inspection, push, or final wage-value creation occurred.
+
+**Next steps**
+1. Keep both extraction scales closed.
+2. Review the Gate 3 refinement prompt; if separately authorized, test bounded rendered-pixel evidence on the same frozen calibration cases after a fresh preflight.
+3. Reconsider extraction only after at least 64/80 likely/p1 rows are ready, wrong pages remain at or below 15%, schema validity remains at or above 95%, and the ready set is representative with no systematic non-wage ambiguity.
+
 ## 2026-07-25 (Automated visual + GABRIEL gate completed; extraction remains closed)
 
 **Did**

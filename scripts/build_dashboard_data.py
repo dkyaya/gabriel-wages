@@ -294,6 +294,23 @@ TEXT_TABLE_AUTO_GABRIEL_GATE1_DECISION_PATH = (
     TEXT_TABLE_AUTO_GABRIEL_GATE1_DIR
     / "auto_gabriel_adjudication_gate_decision.json"
 )
+TEXT_TABLE_AUTO_GABRIEL_GATE2_DIR = (
+    ANALYSIS_DIR
+    / "text_table_calibration"
+    / "TEXT-TABLE-AUTO-GABRIEL-GATE2-REFINEMENT-2026-07-25"
+)
+TEXT_TABLE_AUTO_GABRIEL_GATE2_SUMMARY_PATH = (
+    TEXT_TABLE_AUTO_GABRIEL_GATE2_DIR
+    / "auto_gabriel_adjudication_summary.json"
+)
+TEXT_TABLE_AUTO_GABRIEL_GATE2_LEDGER_PATH = (
+    TEXT_TABLE_AUTO_GABRIEL_GATE2_DIR
+    / "auto_gabriel_adjudication_ledger.csv"
+)
+TEXT_TABLE_AUTO_GABRIEL_GATE2_DECISION_PATH = (
+    TEXT_TABLE_AUTO_GABRIEL_GATE2_DIR
+    / "auto_gabriel_adjudication_gate_decision.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -376,6 +393,9 @@ OPTIONAL_PATHS = [
     TEXT_TABLE_AUTO_GABRIEL_GATE1_SUMMARY_PATH,
     TEXT_TABLE_AUTO_GABRIEL_GATE1_LEDGER_PATH,
     TEXT_TABLE_AUTO_GABRIEL_GATE1_DECISION_PATH,
+    TEXT_TABLE_AUTO_GABRIEL_GATE2_SUMMARY_PATH,
+    TEXT_TABLE_AUTO_GABRIEL_GATE2_LEDGER_PATH,
+    TEXT_TABLE_AUTO_GABRIEL_GATE2_DECISION_PATH,
 ]
 
 STATE_NAMES = {
@@ -4041,27 +4061,45 @@ def build_text_table_calibration_status_summary(
                 raise ValueError(
                     "independent adjudication packet fails dashboard gates"
                 )
+        gate2_completed = (
+            TEXT_TABLE_AUTO_GABRIEL_GATE2_SUMMARY_PATH.exists()
+            and TEXT_TABLE_AUTO_GABRIEL_GATE2_LEDGER_PATH.exists()
+            and TEXT_TABLE_AUTO_GABRIEL_GATE2_DECISION_PATH.exists()
+        )
+        auto_summary_path = (
+            TEXT_TABLE_AUTO_GABRIEL_GATE2_SUMMARY_PATH
+            if gate2_completed
+            else TEXT_TABLE_AUTO_GABRIEL_GATE1_SUMMARY_PATH
+        )
+        auto_ledger_path = (
+            TEXT_TABLE_AUTO_GABRIEL_GATE2_LEDGER_PATH
+            if gate2_completed
+            else TEXT_TABLE_AUTO_GABRIEL_GATE1_LEDGER_PATH
+        )
+        auto_decision_path = (
+            TEXT_TABLE_AUTO_GABRIEL_GATE2_DECISION_PATH
+            if gate2_completed
+            else TEXT_TABLE_AUTO_GABRIEL_GATE1_DECISION_PATH
+        )
         auto_gate_completed = (
-            TEXT_TABLE_AUTO_GABRIEL_GATE1_SUMMARY_PATH.exists()
-            and TEXT_TABLE_AUTO_GABRIEL_GATE1_LEDGER_PATH.exists()
-            and TEXT_TABLE_AUTO_GABRIEL_GATE1_DECISION_PATH.exists()
+            auto_summary_path.exists()
+            and auto_ledger_path.exists()
+            and auto_decision_path.exists()
         )
         auto_summary: dict[str, Any] = {}
         auto_decision: dict[str, Any] = {}
         auto_rows: list[dict[str, str]] = []
         if auto_gate_completed:
-            auto_summary = read_json(
-                TEXT_TABLE_AUTO_GABRIEL_GATE1_SUMMARY_PATH
-            )
-            auto_decision = read_json(
-                TEXT_TABLE_AUTO_GABRIEL_GATE1_DECISION_PATH
-            )
-            auto_rows = read_csv(
-                TEXT_TABLE_AUTO_GABRIEL_GATE1_LEDGER_PATH
-            )
+            auto_summary = read_json(auto_summary_path)
+            auto_decision = read_json(auto_decision_path)
+            auto_rows = read_csv(auto_ledger_path)
             gate_id = (
-                "TEXT-TABLE-AUTO-GABRIEL-"
-                "ADJUDICATION-GATE1-2026-07-24"
+                "TEXT-TABLE-AUTO-GABRIEL-GATE2-REFINEMENT-2026-07-25"
+                if gate2_completed
+                else (
+                    "TEXT-TABLE-AUTO-GABRIEL-"
+                    "ADJUDICATION-GATE1-2026-07-24"
+                )
             )
             auto_identity_fields = (
                 "auto_adjudication_id",
@@ -4092,6 +4130,16 @@ def build_text_table_calibration_status_summary(
                 or int(auto_summary.get("ingestion_actions", -1)) != 0
                 or int(auto_summary.get("codify_actions", -1)) != 0
                 or auto_decision.get("gate_id") != gate_id
+                or (
+                    gate2_completed
+                    and auto_summary.get("gate_mode")
+                    != "auto_gabriel_gate2_navigation_table_refine"
+                )
+                or (
+                    gate2_completed
+                    and auto_decision.get("gate_mode")
+                    != "auto_gabriel_gate2_navigation_table_refine"
+                )
                 or auto_decision.get("extraction_decision")
                 != "continue_schema_refinement"
                 or auto_decision.get(
@@ -4124,7 +4172,9 @@ def build_text_table_calibration_status_summary(
         return {
             **metadata,
             "calibration_phase": (
-                "auto_gabriel_gate1_completed"
+                "auto_gabriel_gate2_completed"
+                if gate2_completed
+                else "auto_gabriel_gate1_completed"
                 if auto_gate_completed
                 else "independent_adjudication_packet_prepared"
                 if adjudication_prepared
@@ -4142,6 +4192,12 @@ def build_text_table_calibration_status_summary(
             "latest_auto_adjudication_gate_id": (
                 auto_decision.get("gate_id")
                 if auto_gate_completed
+                else None
+            ),
+            "prior_auto_adjudication_gate_id": (
+                "TEXT-TABLE-AUTO-GABRIEL-"
+                "ADJUDICATION-GATE1-2026-07-24"
+                if gate2_completed
                 else None
             ),
             "auto_adjudication_method": (
@@ -4168,6 +4224,28 @@ def build_text_table_calibration_status_summary(
                 auto_summary.get("auto_gate_confidence_counts", {})
                 if auto_gate_completed
                 else {}
+            ),
+            "gate2_schema_valid_rate": (
+                float(auto_decision.get("gabriel_schema_valid_rate", 0))
+                if gate2_completed
+                else None
+            ),
+            "gate2_auto_gate_label_counts": (
+                auto_summary.get("auto_gate_label_counts", {})
+                if gate2_completed
+                else {}
+            ),
+            "gate2_wrong_page_rate": (
+                float(auto_decision.get("wrong_page_rate", 0))
+                if gate2_completed
+                else None
+            ),
+            "gate2_likely_p1_ready_rate": (
+                float(
+                    auto_decision.get("original_likely_p1_ready_rate", 0)
+                )
+                if gate2_completed
+                else None
             ),
             "prior_refined_review_id": decision["review_id"],
             "prior_extraction_decision": decision["extraction_decision"],
@@ -4268,17 +4346,17 @@ def build_text_table_calibration_status_summary(
             "codify_status": "not_started",
             "wage_gap_analysis_status": "not_started",
             "auto_gate_summary_source": (
-                relative(TEXT_TABLE_AUTO_GABRIEL_GATE1_SUMMARY_PATH)
+                relative(auto_summary_path)
                 if auto_gate_completed
                 else None
             ),
             "auto_gate_ledger": (
-                relative(TEXT_TABLE_AUTO_GABRIEL_GATE1_LEDGER_PATH)
+                relative(auto_ledger_path)
                 if auto_gate_completed
                 else None
             ),
             "auto_gate_decision_source": (
-                relative(TEXT_TABLE_AUTO_GABRIEL_GATE1_DECISION_PATH)
+                relative(auto_decision_path)
                 if auto_gate_completed
                 else None
             ),
