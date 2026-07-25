@@ -256,6 +256,27 @@ TEXT_TABLE_CALIBRATION_REFINED_REVIEW_PROMPT_PATH = (
     ANALYSIS_DIR
     / "text_table_calibration_subset1_refined_re_review_prompt_2026-07-24.md"
 )
+TEXT_TABLE_INDEPENDENT_ADJUDICATION_PREP1_DIR = (
+    ANALYSIS_DIR
+    / "text_table_calibration"
+    / "TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24"
+)
+TEXT_TABLE_INDEPENDENT_ADJUDICATION_PREP1_MANIFEST_PATH = (
+    TEXT_TABLE_INDEPENDENT_ADJUDICATION_PREP1_DIR
+    / "independent_adjudication_manifest.json"
+)
+TEXT_TABLE_INDEPENDENT_ADJUDICATION_PREP1_BLINDED_INPUT_PATH = (
+    TEXT_TABLE_INDEPENDENT_ADJUDICATION_PREP1_DIR
+    / "independent_adjudication_blinded_review_input.csv"
+)
+TEXT_TABLE_INDEPENDENT_ADJUDICATION_PREP1_RENDER_MANIFEST_PATH = (
+    TEXT_TABLE_INDEPENDENT_ADJUDICATION_PREP1_DIR
+    / "independent_adjudication_render_manifest.csv"
+)
+TEXT_TABLE_INDEPENDENT_ADJUDICATION_PREP1_SAMPLING_SUMMARY_PATH = (
+    TEXT_TABLE_INDEPENDENT_ADJUDICATION_PREP1_DIR
+    / "independent_adjudication_sampling_summary.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -331,6 +352,10 @@ OPTIONAL_PATHS = [
     TEXT_TABLE_CALIBRATION_REFINED_SCHEMA_PATH,
     TEXT_TABLE_CALIBRATION_REFINED_RUBRIC_PATH,
     TEXT_TABLE_CALIBRATION_REFINED_REVIEW_PROMPT_PATH,
+    TEXT_TABLE_INDEPENDENT_ADJUDICATION_PREP1_MANIFEST_PATH,
+    TEXT_TABLE_INDEPENDENT_ADJUDICATION_PREP1_BLINDED_INPUT_PATH,
+    TEXT_TABLE_INDEPENDENT_ADJUDICATION_PREP1_RENDER_MANIFEST_PATH,
+    TEXT_TABLE_INDEPENDENT_ADJUDICATION_PREP1_SAMPLING_SUMMARY_PATH,
 ]
 
 STATE_NAMES = {
@@ -3898,13 +3923,127 @@ def build_text_table_calibration_status_summary(
             raise ValueError(
                 "refined text/table calibration REVIEW2 fails dashboard gates"
             )
+        adjudication_prepared = (
+            TEXT_TABLE_INDEPENDENT_ADJUDICATION_PREP1_MANIFEST_PATH.exists()
+        )
+        adjudication_manifest: dict[str, Any] = {}
+        adjudication_rows: list[dict[str, str]] = []
+        adjudication_render_rows: list[dict[str, str]] = []
+        if adjudication_prepared:
+            adjudication_manifest = read_json(
+                TEXT_TABLE_INDEPENDENT_ADJUDICATION_PREP1_MANIFEST_PATH
+            )
+            adjudication_rows = read_csv(
+                TEXT_TABLE_INDEPENDENT_ADJUDICATION_PREP1_BLINDED_INPUT_PATH
+            )
+            adjudication_render_rows = read_csv(
+                TEXT_TABLE_INDEPENDENT_ADJUDICATION_PREP1_RENDER_MANIFEST_PATH
+            )
+            human_forbidden_fields = {
+                "wage_table_signal",
+                "extraction_gate_label",
+                "wage_schedule_table_confirmed_label",
+                "candidate_page_relationship_label",
+                "recommended_extraction_action",
+                "recommended_next_action",
+                "reviewer",
+                "review_id",
+                "review_method",
+            }
+            per_case_render_counts = Counter(
+                row["adjudication_case_id"]
+                for row in adjudication_render_rows
+            )
+            if (
+                adjudication_manifest.get("adjudication_prep_id")
+                != (
+                    "TEXT-TABLE-INDEPENDENT-ADJUDICATION-"
+                    "PREP1-2026-07-24"
+                )
+                or adjudication_manifest.get("status")
+                != "packet_generated_with_bounded_renders"
+                or int(adjudication_manifest.get("cases_prepared", 0)) != 150
+                or len(adjudication_rows) != 150
+                or len(
+                    {
+                        row.get("adjudication_case_id", "")
+                        for row in adjudication_rows
+                    }
+                )
+                != 150
+                or any(
+                    not row.get(field)
+                    for row in adjudication_rows
+                    for field in (
+                        "adjudication_case_id",
+                        "calibration_id",
+                        "source_review_id",
+                        "pdf_readiness_id",
+                        "candidate_queue_row_id",
+                        "content_artifact_path",
+                    )
+                )
+                or any(
+                    row.get("human_review_status") != "not_reviewed"
+                    for row in adjudication_rows
+                )
+                or (
+                    adjudication_rows
+                    and human_forbidden_fields
+                    & set(adjudication_rows[0])
+                )
+                or adjudication_manifest.get(
+                    "review2_labels_in_human_facing_files"
+                )
+                is not False
+                or adjudication_manifest.get("full_text_saved") is not False
+                or adjudication_manifest.get("full_tables_saved") is not False
+                or adjudication_manifest.get("structured_wage_values_saved")
+                is not False
+                or int(adjudication_manifest.get("urls_opened", -1)) != 0
+                or int(adjudication_manifest.get("network_calls", -1)) != 0
+                or int(adjudication_manifest.get("ocr_runs", -1)) != 0
+                or int(adjudication_manifest.get("wage_extraction_runs", -1))
+                != 0
+                or int(adjudication_manifest.get("ingestion_actions", -1))
+                != 0
+                or int(adjudication_manifest.get("codify_actions", -1)) != 0
+                or int(
+                    adjudication_manifest.get("render_manifest_rows", -1)
+                )
+                != len(adjudication_render_rows)
+                or int(adjudication_manifest.get("render_failures", -1)) != 0
+                or (
+                    per_case_render_counts
+                    and max(per_case_render_counts.values()) > 6
+                )
+            ):
+                raise ValueError(
+                    "independent adjudication packet fails dashboard gates"
+                )
         return {
             **metadata,
-            "calibration_phase": "refined_review2_completed",
+            "calibration_phase": (
+                "independent_adjudication_packet_prepared"
+                if adjudication_prepared
+                else "refined_review2_completed"
+            ),
             "latest_calibration_id": (
                 "TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24"
             ),
             "latest_calibration_review_id": decision["review_id"],
+            "latest_adjudication_prep_id": (
+                adjudication_manifest.get("adjudication_prep_id")
+                if adjudication_prepared
+                else None
+            ),
+            "prior_refined_review_id": decision["review_id"],
+            "prior_extraction_decision": decision["extraction_decision"],
+            "independent_human_review_status": (
+                "packet_prepared_not_reviewed"
+                if adjudication_prepared
+                else "not_prepared"
+            ),
             "latest_refinement_id": (
                 "TEXT-TABLE-DETECTION-REFINE1-"
                 "VISUAL-TABLE-GATE-2026-07-24"
@@ -3969,9 +4108,18 @@ def build_text_table_calibration_status_summary(
             "extraction_decision": decision["extraction_decision"],
             "five_hundred_doc_extraction_allowed": False,
             "smaller_extraction_pilot_allowed": False,
-            "next_recommendation": decision["next_recommendation"],
+            "next_recommendation": (
+                "independent_human_adjudication"
+                if adjudication_prepared
+                else decision["next_recommendation"]
+            ),
             "manual_review_status": (
-                "assisted_refined_review_complete_independent_human_review_needed"
+                "packet_prepared_not_reviewed"
+                if adjudication_prepared
+                else (
+                    "assisted_refined_review_complete_"
+                    "independent_human_review_needed"
+                )
             ),
             "wage_extraction_status": "not_started",
             "ingestion_status": "not_started",
@@ -3986,13 +4134,59 @@ def build_text_table_calibration_status_summary(
             "decision_source": relative(
                 TEXT_TABLE_CALIBRATION_SUBSET1_REVIEW2_DECISION_PATH
             ),
-            "caveats": [
-                "Refined review is calibration, not final wage extraction.",
-                "No wage values were extracted into a final dataset.",
-                "Independent rendered-page QA agreement was 55.56 percent, below the 80 percent gate.",
-                "The 500-document and smaller extraction runs are not authorized.",
-                "No OCR, ingestion, or codification occurred.",
-            ],
+            "adjudication_packet_manifest": (
+                relative(
+                    TEXT_TABLE_INDEPENDENT_ADJUDICATION_PREP1_MANIFEST_PATH
+                )
+                if adjudication_prepared
+                else None
+            ),
+            "adjudication_blinded_input": (
+                relative(
+                    TEXT_TABLE_INDEPENDENT_ADJUDICATION_PREP1_BLINDED_INPUT_PATH
+                )
+                if adjudication_prepared
+                else None
+            ),
+            "adjudication_render_manifest": (
+                relative(
+                    TEXT_TABLE_INDEPENDENT_ADJUDICATION_PREP1_RENDER_MANIFEST_PATH
+                )
+                if adjudication_prepared
+                else None
+            ),
+            "adjudication_cases_prepared": (
+                int(adjudication_manifest.get("cases_prepared", 0))
+                if adjudication_prepared
+                else 0
+            ),
+            "adjudication_rendered_page_count": (
+                int(adjudication_manifest.get("rendered_page_count", 0))
+                if adjudication_prepared
+                else 0
+            ),
+            "adjudication_rendered_bytes": (
+                int(adjudication_manifest.get("rendered_bytes", 0))
+                if adjudication_prepared
+                else 0
+            ),
+            "caveats": (
+                [
+                    "REVIEW2 did not authorize extraction.",
+                    "The human adjudication packet is blinded to prior labels.",
+                    "No wage extraction has started.",
+                    "Neither the 500-document nor smaller extraction run is authorized.",
+                    "No OCR, ingestion, or codification occurred.",
+                ]
+                if adjudication_prepared
+                else [
+                    "Refined review is calibration, not final wage extraction.",
+                    "No wage values were extracted into a final dataset.",
+                    "Independent rendered-page QA agreement was 55.56 percent, below the 80 percent gate.",
+                    "The 500-document and smaller extraction runs are not authorized.",
+                    "No OCR, ingestion, or codification occurred.",
+                ]
+            ),
         }
 
     if TEXT_TABLE_CALIBRATION_SUBSET1_REVIEW_SUMMARY_PATH.exists():

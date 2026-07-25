@@ -6,6 +6,32 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-25 (Blinded independent adjudication packet prepared; review pending)
+
+**Did**
+- Started from clean tracked `c3580a41bbd750f2f721e0b2f9c52c8ac725c56f`, confirmed all requested local ancestry, and preserved the unrelated untracked root `package-lock.json`.
+- Reconfirmed REVIEW2's failed authorization metrics: 76.25% strict likely confirmation, 31.82% wrong pages, and 55.56% rendered QA agreement. Its decision remains `continue_schema_refinement`; neither extraction scale is authorized.
+- Defined a human adjudication schema/rubric and navigation/table-rule plan that require visible role/classification/rank rows plus pay columns, treat compact compensation sheets separately, make negative table families explicit, and fail closed on unreached contents/index targets.
+- Added a local-only packet generator and seven-test synthetic suite. The human CSV preserves 150 identity sets and bounded page lists while excluding REVIEW1/REVIEW2 labels, detector signals, prior actions, snippets, full text/tables, and structured wage values.
+- Ran the requested plan-only pass, then generated 785 bounded page-level JPEG aids with zero failures. The images total 106,889,932 bytes (about 101.94 MiB); they remain in the local packet but are excluded from the lite relay because they are bulky.
+- Updated dashboard data, calibration-card copy, and dashboard documentation to `independent_adjudication_packet_prepared`, `packet_prepared_not_reviewed`, with independent human adjudication next.
+
+**Decisions and why**
+- REVIEW2 was used only for read-only identity equality, not human-packet labels or strata, preserving independence from its judgments.
+- Contents/index/appendix pages are pointers only. `points_to_later_table` requires an actually checked target within the four-page navigation budget; unreached targets require second review.
+- The 102 MiB rendered aids are local review material. The lite relay carries the render manifest, hashes, case index, and instructions rather than the images.
+
+**Surprises/breakage**
+- The six-page-per-case cap produced 785 readable pages—larger than a lite relay but still a bounded local review set. All 785 render hashes and byte sizes match the manifest.
+- No implementation or validation failure occurred. The dashboard frontend emitted only its existing chunk-size advisory.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Three compiles, seven offline tests, dashboard JSON/frontend build, schema validation, 60 ingestion tests, 150-row blinding/identity/default checks, 785 render-manifest/hash checks, immutable original/REVIEW1/REVIEW2/durable/protected hashes, corpus inventory, secret-safety, and diff checks passed. Only bounded pages from the original 150 local PDFs were rendered; no URL, network/API/model call, redownload, OCR, full-text/table retention, wage extraction, durable-ledger mutation, ingestion, `gabriel.codify`, wage-gap work, regression, remote action, or push occurred.
+
+**Next steps**
+1. Have an independent human complete the blinded CSV as `independent_adjudication_human_reviewed.csv` without consulting REVIEW1/REVIEW2.
+2. Freeze that file, then run the prepared adjudication analysis to calculate the strict likely/p1 rate, wrong-page rate, extraction-ready count, and systematic false-positive families.
+3. Keep both extraction scales closed unless the human evidence passes every documented authorization rule.
+
 ## 2026-07-25 (Refined REVIEW2 completed; extraction remains closed)
 
 **Did**

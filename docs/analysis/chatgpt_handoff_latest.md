@@ -6,6 +6,36 @@ Last updated: `2026-07-25`
 
 ---
 
+## 2026-07-25 — Blinded independent adjudication packet is prepared
+
+### Current State
+
+- **Readiness:** work began at clean tracked `c3580a41bbd750f2f721e0b2f9c52c8ac725c56f`; all requested local ancestry passed and the unrelated untracked root `package-lock.json` remains untouched. [The readiness audit](text_table_independent_adjudication_prep1_readiness_audit_2026-07-24.md) preserves the failed REVIEW2 authority.
+- **Packet:** [the result](text_table_independent_adjudication_prep1_packet_result_2026-07-24.md) records 150/150 cases under `TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24`. The human CSV has only required identities/page lists and initialized human fields; REVIEW1/REVIEW2 labels, detector signals, prior actions, snippets, full text/tables, and structured wage values are absent.
+- **Rules:** [the schema](text_table_independent_adjudication_schema_2026-07-24.md), [rubric](text_table_independent_adjudication_rubric_2026-07-24.md), and [refinement plan](text_table_navigation_table_rule_refinement_plan_2026-07-24.md) require visible role/classification/rank rows plus pay columns, recognize compact compensation sheets separately, reject prose/benefit/budget/classification-only/front matter, and make bounded navigation fail closed.
+- **Render aids:** the local packet contains 785 page-level JPEGs, zero failures, at most six per case, totaling 106,889,932 bytes. The image set is excluded from the lite relay because it is about 102 MiB; the render manifest retains page roles, paths, sizes, and hashes.
+- **Future work:** [the human prompt](text_table_independent_human_adjudication_prompt_2026-07-24.md) instructs an independent reviewer to save `independent_adjudication_human_reviewed.csv`. [The analysis prompt](text_table_independent_adjudication_analysis_prompt_2026-07-24.md) defines the later rates, false-positive analysis, and extraction decision.
+- **Dashboard:** phase is `independent_adjudication_packet_prepared`; human status is `packet_prepared_not_reviewed`; next is `independent_human_adjudication`. REVIEW2 remains `continue_schema_refinement`; extraction, ingestion, codification, and wage-gap analysis remain `not_started`.
+- **Validation:** [the validation record](text_table_independent_adjudication_prep1_validation_2026-07-24.md) reports three compiles, seven offline tests, dashboard JSON/frontend build, schema and 60 ingestion tests, exact blinding/identity/page-budget/render-hash checks, immutable original/REVIEW1/REVIEW2/durable/protected hashes, corpus inventory, secret-safety, and diff checks passed.
+- **Boundary:** no URL, network/API/model/hosted search, redownload, OCR, wage extraction, ingestion, codification, durable-ledger mutation, wage-gap work, regression, remote inspection, or push occurred.
+
+### Interpretation
+
+The packet is independent-review-ready, but it contains no human judgments
+yet and changes no authorization result. REVIEW2's 76.25% strict likely rate,
+31.82% wrong-page rate, and 55.56% rendered QA agreement remain the operative
+failed gates. The rendered aids make the row/column evidence visible without
+turning page content into a text or wage dataset.
+
+### Next Move
+
+Assign the blinded packet to an independent human reviewer. The reviewer must
+inspect only listed pages, avoid REVIEW1/REVIEW2, fill every human field, and
+save a new completed CSV. After that file is frozen, run the prepared analysis
+and keep both extraction scales closed unless strict human-confirmed likely/p1
+reaches at least 80%, wrong pages are no more than 15%, sufficient
+extraction-ready rows exist, and no systematic false-positive family remains.
+
 ## 2026-07-25 — Refined REVIEW2 completed; extraction remains closed
 
 ### Current State

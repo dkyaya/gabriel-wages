@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-25T15:13:56Z",
+  "generated_at": "2026-07-25T15:35:11Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -54,7 +54,11 @@
     "docs/analysis/text_table_detection_refine1_readiness_audit_2026-07-24.md",
     "docs/analysis/text_table_detection_refined_schema_2026-07-24.md",
     "docs/analysis/text_table_detection_refined_review_rubric_2026-07-24.md",
-    "docs/analysis/text_table_calibration_subset1_refined_re_review_prompt_2026-07-24.md"
+    "docs/analysis/text_table_calibration_subset1_refined_re_review_prompt_2026-07-24.md",
+    "docs/analysis/text_table_calibration/TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24/independent_adjudication_manifest.json",
+    "docs/analysis/text_table_calibration/TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24/independent_adjudication_blinded_review_input.csv",
+    "docs/analysis/text_table_calibration/TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24/independent_adjudication_render_manifest.csv",
+    "docs/analysis/text_table_calibration/TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24/independent_adjudication_sampling_summary.json"
   ],
   "warnings": [],
   "limitations": [
@@ -67,9 +71,13 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "calibration_phase": "refined_review2_completed",
+  "calibration_phase": "independent_adjudication_packet_prepared",
   "latest_calibration_id": "TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24",
   "latest_calibration_review_id": "TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24",
+  "latest_adjudication_prep_id": "TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24",
+  "prior_refined_review_id": "TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24",
+  "prior_extraction_decision": "continue_schema_refinement",
+  "independent_human_review_status": "packet_prepared_not_reviewed",
   "latest_refinement_id": "TEXT-TABLE-DETECTION-REFINE1-VISUAL-TABLE-GATE-2026-07-24",
   "prior_calibration_review_id": "TEXT-TABLE-CALIBRATION-SUBSET1-REVIEW1-2026-07-24",
   "prior_calibration_pass_status": "fail",
@@ -156,8 +164,8 @@
   "extraction_decision": "continue_schema_refinement",
   "five_hundred_doc_extraction_allowed": false,
   "smaller_extraction_pilot_allowed": false,
-  "next_recommendation": "independent_human_adjudication_and_navigation_rule_refinement",
-  "manual_review_status": "assisted_refined_review_complete_independent_human_review_needed",
+  "next_recommendation": "independent_human_adjudication",
+  "manual_review_status": "packet_prepared_not_reviewed",
   "wage_extraction_status": "not_started",
   "ingestion_status": "not_started",
   "codify_status": "not_started",
@@ -165,11 +173,17 @@
   "summary_source": "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24/calibration_review_summary.json",
   "reviewed_ledger": "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24/calibration_reviewed.csv",
   "decision_source": "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24/calibration_review2_decision.json",
+  "adjudication_packet_manifest": "docs/analysis/text_table_calibration/TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24/independent_adjudication_manifest.json",
+  "adjudication_blinded_input": "docs/analysis/text_table_calibration/TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24/independent_adjudication_blinded_review_input.csv",
+  "adjudication_render_manifest": "docs/analysis/text_table_calibration/TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24/independent_adjudication_render_manifest.csv",
+  "adjudication_cases_prepared": 150,
+  "adjudication_rendered_page_count": 785,
+  "adjudication_rendered_bytes": 106889932,
   "caveats": [
-    "Refined review is calibration, not final wage extraction.",
-    "No wage values were extracted into a final dataset.",
-    "Independent rendered-page QA agreement was 55.56 percent, below the 80 percent gate.",
-    "The 500-document and smaller extraction runs are not authorized.",
+    "REVIEW2 did not authorize extraction.",
+    "The human adjudication packet is blinded to prior labels.",
+    "No wage extraction has started.",
+    "Neither the 500-document nor smaller extraction run is authorized.",
     "No OCR, ingestion, or codification occurred."
   ]
 }

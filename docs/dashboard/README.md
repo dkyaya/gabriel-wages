@@ -53,6 +53,16 @@ The current PI checkpoint report is available in the dashboard’s Reports Libra
 
 - [PI Source-Discovery Progress Report PDF](reports/pi_progress_report_source_discovery_2026-07-22.pdf)
 
+## Text/table calibration status — 2026-07-25
+
+The 150-case blinded independent human adjudication packet is prepared but
+has not been human-reviewed. It contains bounded local page aids and excludes
+REVIEW1/REVIEW2 labels and prior extraction actions from the human-facing
+CSV. Refined REVIEW2 remains `continue_schema_refinement`: neither the
+500-document extraction nor a smaller pilot is authorized. Independent human
+adjudication is the next recommended action. Wage extraction, OCR, ingestion,
+codification, and wage-gap analysis remain not started.
+
 ## Hub sections
 
 The dashboard is organized around what has been collected, what is current, and what is forthcoming:

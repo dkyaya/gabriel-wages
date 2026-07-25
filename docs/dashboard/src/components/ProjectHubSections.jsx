@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "independent_adjudication_packet_prepared"
+              ? "Blinded independent adjudication packet prepared"
+              : textTableCalibrationStatus.calibration_phase ===
             "refined_review2_completed"
               ? "Refined visual review complete; extraction remains closed"
               : textTableCalibrationStatus.calibration_phase ===
@@ -774,6 +777,25 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "independent_adjudication_packet_prepared" ? (
+            <>
+              A blinded packet now covers{" "}
+              {formatNumber(
+                textTableCalibrationStatus.adjudication_cases_prepared,
+              )}
+              {" "}calibration cases with{" "}
+              {formatNumber(
+                textTableCalibrationStatus.adjudication_rendered_page_count,
+              )}
+              {" "}bounded local page aids. Human review has not started, and
+              the packet excludes REVIEW1/REVIEW2 labels and prior extraction
+              actions. REVIEW2 remains{" "}
+              {textTableCalibrationStatus.prior_extraction_decision}; neither
+              the 500-document nor smaller extraction run is authorized.
+              Independent human adjudication is next. No OCR, wage extraction,
+              ingestion, or codification occurred.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "refined_review2_completed" ? (
             <>
               All{" "}
