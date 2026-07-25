@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "refined_review2_completed"
+              ? "Refined visual review complete; extraction remains closed"
+              : textTableCalibrationStatus.calibration_phase ===
             "refinement_prepared_after_failed_review"
               ? "Visual table gate prepared; refined re-review is next"
               : textTableCalibrationStatus.calibration_phase ===
@@ -771,6 +774,32 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "refined_review2_completed" ? (
+            <>
+              All{" "}
+              {formatNumber(textTableCalibrationStatus.reviewed_rows)}
+              {" "}rows completed the assisted refined visual gate, but the
+              blinded rendered-page challenge agreed on only{" "}
+              {formatPercent(
+                100 * textTableCalibrationStatus.visual_qa_agreement_rate,
+              )}
+              {" "}of material decisions. The strict likely-signal visual
+              confirmation rate was{" "}
+              {formatPercent(
+                100 *
+                  textTableCalibrationStatus
+                    .likely_signal_visual_confirmation_rate,
+              )}
+              {" "}and the candidate-page wrong-page rate was{" "}
+              {formatPercent(100 * textTableCalibrationStatus.wrong_page_rate)}
+              . The decision is{" "}
+              {textTableCalibrationStatus.extraction_decision}: neither a
+              500-document nor smaller extraction run is authorized.
+              Independent human adjudication and navigation/table-rule
+              refinement are next. No OCR, wage extraction, ingestion, or
+              codification occurred.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "refinement_prepared_after_failed_review" ? (
             <>
               The prior 150-row assisted review remains a failed extraction

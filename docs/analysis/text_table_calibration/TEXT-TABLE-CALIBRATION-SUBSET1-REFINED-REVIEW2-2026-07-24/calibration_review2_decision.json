@@ -1,0 +1,41 @@
+{
+  "review_id": "TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24",
+  "review_method": "codex_assisted_refined_visual_gate",
+  "reviewed_rows": 150,
+  "likely_signal_rows": 80,
+  "likely_signal_visually_confirmed_yes_rows": 61,
+  "likely_signal_visually_confirmed_yes_rate": 0.7625,
+  "likely_signal_visually_confirmed_yes_or_maybe_rows": 68,
+  "likely_signal_visually_confirmed_yes_or_maybe_rate": 0.85,
+  "candidate_page_rows": 132,
+  "wrong_page_rows": 42,
+  "wrong_page_rate": 0.318182,
+  "p1_pass_high_confidence_rows": 61,
+  "p1_pass_with_schema_update_rows": 7,
+  "independent_visual_qa_rows": 18,
+  "independent_visual_qa_primary_agreement_rows": 10,
+  "independent_visual_qa_primary_agreement_rate": 0.555556,
+  "independent_visual_qa_exact_gate_agreement_rows": 8,
+  "independent_visual_qa_exact_gate_agreement_rate": 0.444444,
+  "extraction_decision": "continue_schema_refinement",
+  "five_hundred_doc_extraction_allowed": false,
+  "smaller_extraction_pilot_allowed": false,
+  "decision_reasons": [
+    "The strict likely-signal visual confirmation rate is below 80 percent.",
+    "The candidate-page wrong-page rate is above 15 percent.",
+    "The independent rendered-page QA agreement rate is below 80 percent.",
+    "The challenge exposed unresolved prose, budget, contents-navigation, and simple compensation-sheet ambiguities."
+  ],
+  "next_recommendation": "independent_human_adjudication_and_navigation_rule_refinement",
+  "forbidden_activity_counters": {
+    "urls_opened": 0,
+    "network_calls": 0,
+    "downloads_or_redownloads": 0,
+    "ocr_runs": 0,
+    "full_text_artifacts_written": 0,
+    "final_wage_values_extracted": 0,
+    "ingestion_actions": 0,
+    "codify_actions": 0,
+    "durable_ledger_mutations": 0
+  }
+}

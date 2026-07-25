@@ -6,6 +6,40 @@ Last updated: `2026-07-25`
 
 ---
 
+## 2026-07-25 — Refined REVIEW2 completed; extraction remains closed
+
+### Current State
+
+- **Locked scope:** work began at clean tracked `0e9430bc2d902764fec0fc98debf411123b7c4a0`. REVIEW2 used the unchanged [original 150-row input](text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24/calibration_review_input.csv), opened only those 150 local PDFs, and wrote to a new REVIEW2 directory. REVIEW1 and all durable/protected authorities remain byte-identical.
+- **Review method:** [the result](text_table_calibration_subset1_refined_review2_result_2026-07-24.md) is `codex_assisted_refined_visual_gate`, not independent human review. It inspected 762 bounded pages and rendered 407 bounded pages with zero render failures; temporary page images were deleted.
+- **Refined labels:** 77 yes / 16 maybe / 56 no / one unknown confirmed wage schedules; page relationships 84 exact / three adjacent / three later-pointer / 42 wrong / 17 no-candidate / one unknown; extraction gates 74 high-confidence / 15 schema-update / 29 second-review / 32 exclude.
+- **REVIEW1 comparison:** [the row-level comparison](text_table_calibration_subset1_review2_vs_review1_comparison_2026-07-24.md) records 42 wrong pages among the 132 REVIEW1 correct/partial hints and 81 changed extraction actions.
+- **Independent challenge:** [the 18-row rendered QA](text_table_calibration_subset1_refined_review2_visual_qa_2026-07-24.md) spans six likely, six possible, six unlikely and p1/p2/p3. Primary material agreement is 10/18 (55.56%); exact-gate agreement is 8/18 (44.44%). Only one of six challenged likely/p1 rows visibly showed the repeated wage table REVIEW2 claimed.
+- **Authorization metrics:** strict likely-signal confirmation is 61/80 (76.25%); candidate-bearing wrong-page rate is 42/132 (31.82%); visual QA agreement is 55.56%. All fail their documented thresholds.
+- **Decision:** [the decision note](post_refined_review2_extraction_decision_2026-07-24.md) is `continue_schema_refinement`. Neither the 500-document nor a smaller extraction run is authorized.
+- **Dashboard:** `calibration_phase = refined_review2_completed`; next is `independent_human_adjudication_and_navigation_rule_refinement`; OCR, wage extraction, ingestion, codification, and wage-gap analysis remain `not_started`.
+- **Boundary:** no URL/network/API/model call, redownload, OCR, full-text/table retention, final wage value, durable-ledger mutation, ingestion, codification, wage-gap analysis, regression, remote action, or push occurred.
+- **Validation:** [the validation record](text_table_calibration_subset1_refined_review2_validation_2026-07-24.md) reports four compiles, 19 offline tests, dashboard JSON/frontend build, schema and 60 ingestion tests, exact selected-scope and bounded-output checks, immutable original/REVIEW1/durable/protected hashes, corpus inventory, secret-safety, and diff checks passed.
+
+### Interpretation
+
+The refined gate is diagnostically better than REVIEW1—it exposes wrong
+pages, contents/index pointers, and explicit negative table families—but it
+is still not a valid precision authority. Its assisted render checks continue
+to promote wage prose and aggregate budget/benefit material, while also
+rejecting at least one compact schedule-like compensation sheet. The blinded
+challenge is the operative authorization evidence and failed badly.
+
+### Next Move
+
+Do not run wage extraction at any scale. Obtain independent human
+adjudication on a balanced rendered-page subset, refine visual row/column
+requirements and bounded target-page navigation, then rerun a blinded
+challenge. Extraction can be reconsidered only after strict likely
+confirmation reaches at least 80%, wrong pages fall to at most 15%, rendered
+QA agreement reaches at least 80%, and no major table-family ambiguity
+remains.
+
 ## 2026-07-25 — Refined visual table gate is prepared; re-review has not run
 
 ### Current State

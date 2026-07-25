@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-25T14:42:31Z",
+  "generated_at": "2026-07-25T15:13:56Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -48,6 +48,9 @@
     "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24/calibration_review_input.csv",
     "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-REVIEW1-2026-07-24/calibration_review_summary.json",
     "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-REVIEW1-2026-07-24/calibration_reviewed.csv",
+    "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24/calibration_review_summary.json",
+    "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24/calibration_reviewed.csv",
+    "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24/calibration_review2_decision.json",
     "docs/analysis/text_table_detection_refine1_readiness_audit_2026-07-24.md",
     "docs/analysis/text_table_detection_refined_schema_2026-07-24.md",
     "docs/analysis/text_table_detection_refined_review_rubric_2026-07-24.md",
@@ -64,78 +67,109 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "calibration_phase": "refinement_prepared_after_failed_review",
+  "calibration_phase": "refined_review2_completed",
   "latest_calibration_id": "TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24",
-  "latest_calibration_review_id": "TEXT-TABLE-CALIBRATION-SUBSET1-REVIEW1-2026-07-24",
+  "latest_calibration_review_id": "TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24",
   "latest_refinement_id": "TEXT-TABLE-DETECTION-REFINE1-VISUAL-TABLE-GATE-2026-07-24",
   "prior_calibration_review_id": "TEXT-TABLE-CALIBRATION-SUBSET1-REVIEW1-2026-07-24",
   "prior_calibration_pass_status": "fail",
   "calibration_subset_rows": 150,
   "reviewed_rows": 150,
-  "review_method": "codex_assisted_local_adjudication",
+  "review_method": "codex_assisted_refined_visual_gate",
+  "refined_label_counts": {
+    "wage_language_present_label": {
+      "maybe": 16,
+      "no": 22,
+      "unknown": 1,
+      "yes": 111
+    },
+    "pay_numeric_language_present_label": {
+      "no": 23,
+      "unknown": 1,
+      "yes": 126
+    },
+    "visual_table_structure_label": {
+      "benefits_table": 4,
+      "classification_only": 3,
+      "confirmed_table": 77,
+      "front_matter": 2,
+      "index_or_contents": 23,
+      "non_wage_table": 16,
+      "possible_table": 15,
+      "prose_only": 7,
+      "unknown": 3
+    },
+    "wage_schedule_table_confirmed_label": {
+      "maybe": 16,
+      "no": 56,
+      "unknown": 1,
+      "yes": 77
+    },
+    "candidate_page_relationship_label": {
+      "adjacent_to_table": 3,
+      "exact_table_page": 84,
+      "no_candidate_page": 17,
+      "points_to_later_table": 3,
+      "unknown": 1,
+      "wrong_page": 42
+    },
+    "table_navigation_signal": {
+      "appendix_reference": 1,
+      "direct": 84,
+      "index_or_contents": 2,
+      "nearby": 3,
+      "none": 59,
+      "unknown": 1
+    },
+    "visual_confirmation_method": {
+      "text_structure_only": 1,
+      "text_structure_plus_rendered_check": 149
+    },
+    "extraction_gate_label": {
+      "fail_exclude": 32,
+      "pass_high_confidence": 74,
+      "pass_with_schema_update": 15,
+      "second_review_required": 29
+    }
+  },
   "calibration_status_counts": {
-    "needs_second_review": 55,
-    "reviewed": 95
-  },
-  "wage_table_present_label_counts": {
-    "maybe": 22,
-    "no": 15,
-    "unknown": 1,
-    "yes": 112
-  },
-  "page_hint_precision_label_counts": {
-    "correct": 118,
-    "not_applicable": 17,
-    "partially_correct": 14,
-    "unknown": 1
-  },
-  "contract_period_present_label_counts": {
-    "maybe": 30,
-    "no": 20,
-    "unknown": 1,
-    "yes": 99
-  },
-  "contract_period_hint_match_label_counts": {
-    "correct": 68,
-    "incorrect": 12,
-    "no_period_found": 20,
-    "partially_correct": 30,
-    "unknown": 20
+    "needs_second_review": 31,
+    "reviewed": 119
   },
   "extraction_complexity_label_counts": {
-    "easy": 11,
-    "hard": 59,
-    "moderate": 65,
-    "not_extractable": 15
+    "easy": 26,
+    "hard": 44,
+    "moderate": 48,
+    "not_extractable": 32
   },
   "recommended_extraction_action_counts": {
-    "exclude_for_now": 15,
-    "include_after_schema_update": 36,
-    "include_in_wage_extraction_pilot": 76,
-    "manual_review_only": 23
+    "exclude_for_now": 32,
+    "include_after_schema_update": 15,
+    "include_in_wage_extraction_pilot": 74,
+    "manual_review_only": 29
   },
-  "reviewer_confidence_counts": {
-    "high": 51,
-    "low": 16,
-    "medium": 83
-  },
-  "calibration_pass_status": "fail",
-  "next_recommendation": "refined_re_review_before_extraction",
-  "manual_review_status": "refined_re_review_not_started",
+  "visual_qa_rows": 18,
+  "visual_qa_agreement_rate": 0.555556,
+  "visual_qa_exact_gate_agreement_rate": 0.444444,
+  "likely_signal_visual_confirmation_rate": 0.7625,
+  "wrong_page_rate": 0.318182,
+  "extraction_decision": "continue_schema_refinement",
+  "five_hundred_doc_extraction_allowed": false,
+  "smaller_extraction_pilot_allowed": false,
+  "next_recommendation": "independent_human_adjudication_and_navigation_rule_refinement",
+  "manual_review_status": "assisted_refined_review_complete_independent_human_review_needed",
   "wage_extraction_status": "not_started",
   "ingestion_status": "not_started",
   "codify_status": "not_started",
   "wage_gap_analysis_status": "not_started",
-  "summary_source": "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-REVIEW1-2026-07-24/calibration_review_summary.json",
-  "reviewed_ledger": "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-REVIEW1-2026-07-24/calibration_reviewed.csv",
-  "refined_schema": "docs/analysis/text_table_detection_refined_schema_2026-07-24.md",
-  "refined_review_rubric": "docs/analysis/text_table_detection_refined_review_rubric_2026-07-24.md",
+  "summary_source": "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24/calibration_review_summary.json",
+  "reviewed_ledger": "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24/calibration_reviewed.csv",
+  "decision_source": "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24/calibration_review2_decision.json",
   "caveats": [
-    "The prior assisted review failed the extraction gate.",
-    "Visual/table confirmation refinement is prepared; the refined re-review has not run.",
-    "A five-row rendered-page challenge materially disagreed with all five assisted outcomes.",
-    "No wage extraction is authorized.",
-    "No final wage values were extracted.",
+    "Refined review is calibration, not final wage extraction.",
+    "No wage values were extracted into a final dataset.",
+    "Independent rendered-page QA agreement was 55.56 percent, below the 80 percent gate.",
+    "The 500-document and smaller extraction runs are not authorized.",
     "No OCR, ingestion, or codification occurred."
   ]
 }

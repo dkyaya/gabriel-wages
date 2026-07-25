@@ -289,6 +289,21 @@ unchanged; the next recommendation is `refined_re_review_before_extraction`.
 The 500-document extraction remains prohibited, and OCR, wage extraction,
 ingestion, and codification remain unstarted.
 
+The refined 150-row re-review has now completed under
+`refined_visual_gate_v1`, so the calibration phase is
+`refined_review2_completed`. REVIEW2 separated wage language, pay-number
+language, visual structure, wage-schedule confirmation, page relationship,
+navigation, and extraction gate. Its assisted labels included 74
+`pass_high_confidence`, 15 `pass_with_schema_update`, 29
+`second_review_required`, and 32 `fail_exclude` rows. However, strict
+likely-signal confirmation was 76.25%, the wrong-page rate was 31.82%, and
+an 18-row blinded rendered-page challenge agreed on only 55.56% of material
+decisions. The extraction decision is `continue_schema_refinement`: neither
+the 500-document run nor a smaller extraction pilot is authorized.
+Independent human adjudication and navigation/table-rule refinement are
+next. No URL access, download, OCR, final wage extraction, ingestion, or
+codification occurred.
+
 ## Run and build locally
 
 The dashboard requires Node.js 20.19 or newer. With the existing locked dependencies:

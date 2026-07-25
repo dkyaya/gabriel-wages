@@ -1,0 +1,412 @@
+{
+  "bounded_text_chars_inspected_in_memory": 1594660,
+  "calibration_pass_status": "requires_independent_adjudication",
+  "calibration_status": {
+    "needs_second_review": 31,
+    "reviewed": 119
+  },
+  "candidate_page_relationship_label": {
+    "adjacent_to_table": 3,
+    "exact_table_page": 84,
+    "no_candidate_page": 17,
+    "points_to_later_table": 3,
+    "unknown": 1,
+    "wrong_page": 42
+  },
+  "caveats": [
+    "Review used the refined deterministic visual/table gate, not an independent human reviewer.",
+    "Assisted results are not independent ground-truth precision estimates.",
+    "Only bounded candidate, adjacent, context, and navigation pages were eligible.",
+    "Rendered-page checks are temporary and save no PNG, page text, table cells, or wage values.",
+    "Independent human/visual validation remains required before extraction."
+  ],
+  "codify_actions": 0,
+  "contract_period_hint_match_label": {
+    "correct": 96,
+    "incorrect": 1,
+    "no_period_found": 11,
+    "partially_correct": 23,
+    "unknown": 19
+  },
+  "contract_period_present_label": {
+    "maybe": 27,
+    "no": 11,
+    "unknown": 1,
+    "yes": 111
+  },
+  "downloads_or_redownloads": 0,
+  "durable_ledger_mutations": 0,
+  "elapsed_seconds": 64.882293,
+  "extraction_complexity_label": {
+    "easy": 26,
+    "hard": 44,
+    "moderate": 48,
+    "not_extractable": 32
+  },
+  "extraction_gate_label": {
+    "fail_exclude": 32,
+    "pass_high_confidence": 74,
+    "pass_with_schema_update": 15,
+    "second_review_required": 29
+  },
+  "false_positive_family": {
+    "benefit_table": 4,
+    "classification_without_pay": 3,
+    "index_or_contents": 23,
+    "non_wage_schedule": 16,
+    "not_applicable": 94,
+    "other:bounded_signal_without_confirmed_table": 9,
+    "unknown": 1
+  },
+  "final_wage_values_extracted": 0,
+  "full_text_artifacts_written": 0,
+  "group_metrics": {
+    "candidate_source_type": {
+      "arbitration_award": {
+        "correct_or_partial_page_hint_rate": 0.5,
+        "correct_or_partial_page_hint_rows": 4,
+        "rows": 8,
+        "useful_rate": 0.625,
+        "useful_rows": 5,
+        "wage_table_yes_or_maybe_rows": 5
+      },
+      "cba": {
+        "correct_or_partial_page_hint_rate": 0.5625,
+        "correct_or_partial_page_hint_rows": 45,
+        "rows": 80,
+        "useful_rate": 0.5625,
+        "useful_rows": 45,
+        "wage_table_yes_or_maybe_rows": 45
+      },
+      "factfinding": {
+        "correct_or_partial_page_hint_rate": 0.0,
+        "correct_or_partial_page_hint_rows": 0,
+        "rows": 1,
+        "useful_rate": 0.0,
+        "useful_rows": 0,
+        "wage_table_yes_or_maybe_rows": 0
+      },
+      "memorandum_or_settlement": {
+        "correct_or_partial_page_hint_rate": 0.666667,
+        "correct_or_partial_page_hint_rows": 10,
+        "rows": 15,
+        "useful_rate": 0.8,
+        "useful_rows": 12,
+        "wage_table_yes_or_maybe_rows": 12
+      },
+      "ordinance_or_policy": {
+        "correct_or_partial_page_hint_rate": 0.8125,
+        "correct_or_partial_page_hint_rows": 13,
+        "rows": 16,
+        "useful_rate": 0.8125,
+        "useful_rows": 13,
+        "wage_table_yes_or_maybe_rows": 13
+      },
+      "wage_schedule_or_compensation_plan": {
+        "correct_or_partial_page_hint_rate": 0.6,
+        "correct_or_partial_page_hint_rows": 18,
+        "rows": 30,
+        "useful_rate": 0.6,
+        "useful_rows": 18,
+        "wage_table_yes_or_maybe_rows": 18
+      }
+    },
+    "contract_period_signal": {
+      "likely": {
+        "correct_or_partial_page_hint_rate": 0.650943,
+        "correct_or_partial_page_hint_rows": 69,
+        "rows": 106,
+        "useful_rate": 0.669811,
+        "useful_rows": 71,
+        "wage_table_yes_or_maybe_rows": 71
+      },
+      "possible": {
+        "correct_or_partial_page_hint_rate": 0.64,
+        "correct_or_partial_page_hint_rows": 16,
+        "rows": 25,
+        "useful_rate": 0.64,
+        "useful_rows": 16,
+        "wage_table_yes_or_maybe_rows": 16
+      },
+      "unlikely": {
+        "correct_or_partial_page_hint_rate": 0.263158,
+        "correct_or_partial_page_hint_rows": 5,
+        "rows": 19,
+        "useful_rate": 0.315789,
+        "useful_rows": 6,
+        "wage_table_yes_or_maybe_rows": 6
+      }
+    },
+    "extraction_pilot_priority": {
+      "p1": {
+        "correct_or_partial_page_hint_rate": 0.85,
+        "correct_or_partial_page_hint_rows": 68,
+        "rows": 80,
+        "useful_rate": 0.85,
+        "useful_rows": 68,
+        "wage_table_yes_or_maybe_rows": 68
+      },
+      "p2": {
+        "correct_or_partial_page_hint_rate": 0.349206,
+        "correct_or_partial_page_hint_rows": 22,
+        "rows": 63,
+        "useful_rate": 0.396825,
+        "useful_rows": 25,
+        "wage_table_yes_or_maybe_rows": 25
+      },
+      "p3": {
+        "correct_or_partial_page_hint_rate": 0.0,
+        "correct_or_partial_page_hint_rows": 0,
+        "rows": 7,
+        "useful_rate": 0.0,
+        "useful_rows": 0,
+        "wage_table_yes_or_maybe_rows": 0
+      }
+    },
+    "page_count_bin": {
+      "11_to_25": {
+        "correct_or_partial_page_hint_rate": 0.791667,
+        "correct_or_partial_page_hint_rows": 19,
+        "rows": 24,
+        "useful_rate": 0.791667,
+        "useful_rows": 19,
+        "wage_table_yes_or_maybe_rows": 19
+      },
+      "1_to_10": {
+        "correct_or_partial_page_hint_rate": 0.6,
+        "correct_or_partial_page_hint_rows": 24,
+        "rows": 40,
+        "useful_rate": 0.625,
+        "useful_rows": 25,
+        "wage_table_yes_or_maybe_rows": 25
+      },
+      "26_to_50": {
+        "correct_or_partial_page_hint_rate": 0.484848,
+        "correct_or_partial_page_hint_rows": 16,
+        "rows": 33,
+        "useful_rate": 0.484848,
+        "useful_rows": 16,
+        "wage_table_yes_or_maybe_rows": 16
+      },
+      "51_to_100": {
+        "correct_or_partial_page_hint_rate": 0.552632,
+        "correct_or_partial_page_hint_rows": 21,
+        "rows": 38,
+        "useful_rate": 0.605263,
+        "useful_rows": 23,
+        "wage_table_yes_or_maybe_rows": 23
+      },
+      "over_100": {
+        "correct_or_partial_page_hint_rate": 0.666667,
+        "correct_or_partial_page_hint_rows": 10,
+        "rows": 15,
+        "useful_rate": 0.666667,
+        "useful_rows": 10,
+        "wage_table_yes_or_maybe_rows": 10
+      }
+    },
+    "source_officialness_rating": {
+      "official_municipal": {
+        "correct_or_partial_page_hint_rate": 0.596154,
+        "correct_or_partial_page_hint_rows": 31,
+        "rows": 52,
+        "useful_rate": 0.615385,
+        "useful_rows": 32,
+        "wage_table_yes_or_maybe_rows": 32
+      },
+      "official_state_repository": {
+        "correct_or_partial_page_hint_rate": 0.565217,
+        "correct_or_partial_page_hint_rows": 13,
+        "rows": 23,
+        "useful_rate": 0.608696,
+        "useful_rows": 14,
+        "wage_table_yes_or_maybe_rows": 14
+      },
+      "official_union": {
+        "correct_or_partial_page_hint_rate": 0.6875,
+        "correct_or_partial_page_hint_rows": 11,
+        "rows": 16,
+        "useful_rate": 0.6875,
+        "useful_rows": 11,
+        "wage_table_yes_or_maybe_rows": 11
+      },
+      "uncertain": {
+        "correct_or_partial_page_hint_rate": 0.56,
+        "correct_or_partial_page_hint_rows": 28,
+        "rows": 50,
+        "useful_rate": 0.58,
+        "useful_rows": 29,
+        "wage_table_yes_or_maybe_rows": 29
+      },
+      "unknown": {
+        "correct_or_partial_page_hint_rate": 0.777778,
+        "correct_or_partial_page_hint_rows": 7,
+        "rows": 9,
+        "useful_rate": 0.777778,
+        "useful_rows": 7,
+        "wage_table_yes_or_maybe_rows": 7
+      }
+    },
+    "unit_type": {
+      "fire": {
+        "correct_or_partial_page_hint_rate": 0.568182,
+        "correct_or_partial_page_hint_rows": 25,
+        "rows": 44,
+        "useful_rate": 0.568182,
+        "useful_rows": 25,
+        "wage_table_yes_or_maybe_rows": 25
+      },
+      "non_safety": {
+        "correct_or_partial_page_hint_rate": 0.636364,
+        "correct_or_partial_page_hint_rows": 35,
+        "rows": 55,
+        "useful_rate": 0.654545,
+        "useful_rows": 36,
+        "wage_table_yes_or_maybe_rows": 36
+      },
+      "police": {
+        "correct_or_partial_page_hint_rate": 0.588235,
+        "correct_or_partial_page_hint_rows": 30,
+        "rows": 51,
+        "useful_rate": 0.627451,
+        "useful_rows": 32,
+        "wage_table_yes_or_maybe_rows": 32
+      }
+    },
+    "wage_table_signal": {
+      "likely": {
+        "correct_or_partial_page_hint_rate": 0.85,
+        "correct_or_partial_page_hint_rows": 68,
+        "rows": 80,
+        "useful_rate": 0.85,
+        "useful_rows": 68,
+        "wage_table_yes_or_maybe_rows": 68
+      },
+      "possible": {
+        "correct_or_partial_page_hint_rate": 0.37931,
+        "correct_or_partial_page_hint_rows": 22,
+        "rows": 58,
+        "useful_rate": 0.431034,
+        "useful_rows": 25,
+        "wage_table_yes_or_maybe_rows": 25
+      },
+      "unlikely": {
+        "correct_or_partial_page_hint_rate": 0.0,
+        "correct_or_partial_page_hint_rows": 0,
+        "rows": 12,
+        "useful_rate": 0.0,
+        "useful_rows": 0,
+        "wage_table_yes_or_maybe_rows": 0
+      }
+    }
+  },
+  "ingestion_actions": 0,
+  "input_csv": "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24/calibration_review_input.csv",
+  "input_sha256_after": "489e39cd99ba8812eb0b101b595825cdecd66da630c7a2eea7c612bdcc097535",
+  "input_sha256_before": "489e39cd99ba8812eb0b101b595825cdecd66da630c7a2eea7c612bdcc097535",
+  "likely_useful_rate": 0.85,
+  "likely_useful_rows": 68,
+  "navigation_pages_inspected": 32,
+  "network_calls": 0,
+  "next_recommendation": "independent_refined_calibration_decision",
+  "ocr_runs": 0,
+  "original_input_preserved": true,
+  "page_hint_precision_label": {
+    "correct": 84,
+    "incorrect": 42,
+    "not_applicable": 17,
+    "partially_correct": 6,
+    "unknown": 1
+  },
+  "pages_inspected": 762,
+  "pages_with_text": 730,
+  "parser_library": "pypdf",
+  "parser_version": "6.13.2",
+  "pay_numeric_language_present_label": {
+    "no": 23,
+    "unknown": 1,
+    "yes": 126
+  },
+  "pdfs_opened": 150,
+  "recommended_extraction_action": {
+    "exclude_for_now": 32,
+    "include_after_schema_update": 15,
+    "include_in_wage_extraction_pilot": 74,
+    "manual_review_only": 29
+  },
+  "render_failures": 0,
+  "rendered_pages": 407,
+  "review_id": "TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24",
+  "review_method": "codex_refined_visual_table_gate_v1",
+  "review_mode": "refined_visual_gate_v1",
+  "reviewed_rows": 150,
+  "reviewer_confidence": {
+    "high": 74,
+    "low": 31,
+    "medium": 45
+  },
+  "rows": 150,
+  "schema_version": "1.0.0",
+  "status": "calibration_review_complete_assisted_local",
+  "table_layout_type": {
+    "annual_salary_schedule": 9,
+    "appendix_table": 2,
+    "classification_table": 1,
+    "hourly_schedule": 8,
+    "no_wage_table": 48,
+    "other": 1,
+    "prose_only": 7,
+    "rank_step": 21,
+    "step_grade": 50,
+    "unknown": 3
+  },
+  "table_navigation_signal": {
+    "appendix_reference": 1,
+    "direct": 84,
+    "index_or_contents": 2,
+    "nearby": 3,
+    "none": 59,
+    "unknown": 1
+  },
+  "urls_opened": 0,
+  "visual_confirmation_method": {
+    "text_structure_only": 1,
+    "text_structure_plus_rendered_check": 149
+  },
+  "visual_table_structure_label": {
+    "benefits_table": 4,
+    "classification_only": 3,
+    "confirmed_table": 77,
+    "front_matter": 2,
+    "index_or_contents": 23,
+    "non_wage_table": 16,
+    "possible_table": 15,
+    "prose_only": 7,
+    "unknown": 3
+  },
+  "wage_language_present_label": {
+    "maybe": 16,
+    "no": 22,
+    "unknown": 1,
+    "yes": 111
+  },
+  "wage_schedule_table_confirmed_label": {
+    "maybe": 16,
+    "no": 56,
+    "unknown": 1,
+    "yes": 77
+  },
+  "wage_table_page_match_label": {
+    "exact": 84,
+    "nearby": 6,
+    "no_wage_table": 56,
+    "unknown": 1,
+    "wrong_page": 3
+  },
+  "wage_table_present_label": {
+    "maybe": 16,
+    "no": 56,
+    "unknown": 1,
+    "yes": 77
+  }
+}

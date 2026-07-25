@@ -222,6 +222,24 @@ TEXT_TABLE_CALIBRATION_SUBSET1_REVIEW_LEDGER_PATH = (
     / "TEXT-TABLE-CALIBRATION-SUBSET1-REVIEW1-2026-07-24"
     / "calibration_reviewed.csv"
 )
+TEXT_TABLE_CALIBRATION_SUBSET1_REVIEW2_SUMMARY_PATH = (
+    ANALYSIS_DIR
+    / "text_table_calibration"
+    / "TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24"
+    / "calibration_review_summary.json"
+)
+TEXT_TABLE_CALIBRATION_SUBSET1_REVIEW2_LEDGER_PATH = (
+    ANALYSIS_DIR
+    / "text_table_calibration"
+    / "TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24"
+    / "calibration_reviewed.csv"
+)
+TEXT_TABLE_CALIBRATION_SUBSET1_REVIEW2_DECISION_PATH = (
+    ANALYSIS_DIR
+    / "text_table_calibration"
+    / "TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24"
+    / "calibration_review2_decision.json"
+)
 TEXT_TABLE_CALIBRATION_REFINE1_READINESS_PATH = (
     ANALYSIS_DIR
     / "text_table_detection_refine1_readiness_audit_2026-07-24.md"
@@ -306,6 +324,9 @@ OPTIONAL_PATHS = [
     TEXT_TABLE_CALIBRATION_SUBSET1_INPUT_PATH,
     TEXT_TABLE_CALIBRATION_SUBSET1_REVIEW_SUMMARY_PATH,
     TEXT_TABLE_CALIBRATION_SUBSET1_REVIEW_LEDGER_PATH,
+    TEXT_TABLE_CALIBRATION_SUBSET1_REVIEW2_SUMMARY_PATH,
+    TEXT_TABLE_CALIBRATION_SUBSET1_REVIEW2_LEDGER_PATH,
+    TEXT_TABLE_CALIBRATION_SUBSET1_REVIEW2_DECISION_PATH,
     TEXT_TABLE_CALIBRATION_REFINE1_READINESS_PATH,
     TEXT_TABLE_CALIBRATION_REFINED_SCHEMA_PATH,
     TEXT_TABLE_CALIBRATION_REFINED_RUBRIC_PATH,
@@ -3792,6 +3813,187 @@ def build_text_table_calibration_status_summary(
     *, metadata: dict[str, Any]
 ) -> dict[str, Any]:
     """Build calibration packet/review status without extraction inference."""
+
+    if TEXT_TABLE_CALIBRATION_SUBSET1_REVIEW2_SUMMARY_PATH.exists():
+        summary = read_json(
+            TEXT_TABLE_CALIBRATION_SUBSET1_REVIEW2_SUMMARY_PATH
+        )
+        review_rows = read_csv(
+            TEXT_TABLE_CALIBRATION_SUBSET1_REVIEW2_LEDGER_PATH
+        )
+        decision = read_json(
+            TEXT_TABLE_CALIBRATION_SUBSET1_REVIEW2_DECISION_PATH
+        )
+        forbidden_fields = (
+            "urls_opened",
+            "network_calls",
+            "downloads_or_redownloads",
+            "ocr_runs",
+            "full_text_artifacts_written",
+            "final_wage_values_extracted",
+            "ingestion_actions",
+            "codify_actions",
+            "durable_ledger_mutations",
+        )
+        identity_fields = (
+            "calibration_id",
+            "text_table_detection_id",
+            "pdf_readiness_id",
+            "source_review_id",
+            "candidate_queue_row_id",
+        )
+        decision_forbidden = decision.get(
+            "forbidden_activity_counters", {}
+        )
+        if (
+            summary.get("status")
+            != "calibration_review_complete_assisted_local"
+            or summary.get("review_id")
+            != (
+                "TEXT-TABLE-CALIBRATION-SUBSET1-"
+                "REFINED-REVIEW2-2026-07-24"
+            )
+            or summary.get("review_method")
+            != "codex_refined_visual_table_gate_v1"
+            or summary.get("review_mode") != "refined_visual_gate_v1"
+            or int(summary.get("rows", 0)) != 150
+            or int(summary.get("reviewed_rows", 0)) != 150
+            or len(review_rows) != 150
+            or not summary.get("original_input_preserved")
+            or any(
+                int(summary.get(field, -1)) != 0
+                for field in forbidden_fields
+            )
+            or any(
+                int(decision_forbidden.get(field, -1)) != 0
+                for field in forbidden_fields
+            )
+            or any(
+                len(values) != len(set(values))
+                or any(not value for value in values)
+                for values in (
+                    [row.get(field, "") for row in review_rows]
+                    for field in identity_fields
+                )
+            )
+            or any(
+                row.get("reviewer") != "codex_refined_visual_gate_review"
+                or row.get("refined_review_mode")
+                != "refined_visual_gate_v1"
+                for row in review_rows
+            )
+            or int(decision.get("reviewed_rows", 0)) != 150
+            or decision.get("extraction_decision")
+            != "continue_schema_refinement"
+            or decision.get("five_hundred_doc_extraction_allowed")
+            is not False
+            or decision.get("smaller_extraction_pilot_allowed") is not False
+            or float(
+                decision.get(
+                    "independent_visual_qa_primary_agreement_rate", -1
+                )
+            )
+            != 0.555556
+        ):
+            raise ValueError(
+                "refined text/table calibration REVIEW2 fails dashboard gates"
+            )
+        return {
+            **metadata,
+            "calibration_phase": "refined_review2_completed",
+            "latest_calibration_id": (
+                "TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24"
+            ),
+            "latest_calibration_review_id": decision["review_id"],
+            "latest_refinement_id": (
+                "TEXT-TABLE-DETECTION-REFINE1-"
+                "VISUAL-TABLE-GATE-2026-07-24"
+            ),
+            "prior_calibration_review_id": (
+                "TEXT-TABLE-CALIBRATION-SUBSET1-REVIEW1-2026-07-24"
+            ),
+            "prior_calibration_pass_status": "fail",
+            "calibration_subset_rows": 150,
+            "reviewed_rows": 150,
+            "review_method": "codex_assisted_refined_visual_gate",
+            "refined_label_counts": {
+                "wage_language_present_label": summary[
+                    "wage_language_present_label"
+                ],
+                "pay_numeric_language_present_label": summary[
+                    "pay_numeric_language_present_label"
+                ],
+                "visual_table_structure_label": summary[
+                    "visual_table_structure_label"
+                ],
+                "wage_schedule_table_confirmed_label": summary[
+                    "wage_schedule_table_confirmed_label"
+                ],
+                "candidate_page_relationship_label": summary[
+                    "candidate_page_relationship_label"
+                ],
+                "table_navigation_signal": summary[
+                    "table_navigation_signal"
+                ],
+                "visual_confirmation_method": summary[
+                    "visual_confirmation_method"
+                ],
+                "extraction_gate_label": summary[
+                    "extraction_gate_label"
+                ],
+            },
+            "calibration_status_counts": summary["calibration_status"],
+            "extraction_complexity_label_counts": summary[
+                "extraction_complexity_label"
+            ],
+            "recommended_extraction_action_counts": summary[
+                "recommended_extraction_action"
+            ],
+            "visual_qa_rows": int(
+                decision["independent_visual_qa_rows"]
+            ),
+            "visual_qa_agreement_rate": float(
+                decision[
+                    "independent_visual_qa_primary_agreement_rate"
+                ]
+            ),
+            "visual_qa_exact_gate_agreement_rate": float(
+                decision[
+                    "independent_visual_qa_exact_gate_agreement_rate"
+                ]
+            ),
+            "likely_signal_visual_confirmation_rate": float(
+                decision["likely_signal_visually_confirmed_yes_rate"]
+            ),
+            "wrong_page_rate": float(decision["wrong_page_rate"]),
+            "extraction_decision": decision["extraction_decision"],
+            "five_hundred_doc_extraction_allowed": False,
+            "smaller_extraction_pilot_allowed": False,
+            "next_recommendation": decision["next_recommendation"],
+            "manual_review_status": (
+                "assisted_refined_review_complete_independent_human_review_needed"
+            ),
+            "wage_extraction_status": "not_started",
+            "ingestion_status": "not_started",
+            "codify_status": "not_started",
+            "wage_gap_analysis_status": "not_started",
+            "summary_source": relative(
+                TEXT_TABLE_CALIBRATION_SUBSET1_REVIEW2_SUMMARY_PATH
+            ),
+            "reviewed_ledger": relative(
+                TEXT_TABLE_CALIBRATION_SUBSET1_REVIEW2_LEDGER_PATH
+            ),
+            "decision_source": relative(
+                TEXT_TABLE_CALIBRATION_SUBSET1_REVIEW2_DECISION_PATH
+            ),
+            "caveats": [
+                "Refined review is calibration, not final wage extraction.",
+                "No wage values were extracted into a final dataset.",
+                "Independent rendered-page QA agreement was 55.56 percent, below the 80 percent gate.",
+                "The 500-document and smaller extraction runs are not authorized.",
+                "No OCR, ingestion, or codification occurred.",
+            ],
+        }
 
     if TEXT_TABLE_CALIBRATION_SUBSET1_REVIEW_SUMMARY_PATH.exists():
         summary = read_json(

@@ -6,6 +6,35 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-25 (Refined REVIEW2 completed; extraction remains closed)
+
+**Did**
+- Started from clean tracked `0e9430bc2d902764fec0fc98debf411123b7c4a0`, confirmed all requested ancestry, and preserved the unrelated untracked root `package-lock.json`.
+- Revalidated the locked 150-row original packet and recorded pre-run hashes for the original input, REVIEW1, durable detection/readiness/source-review ledgers, protected CSVs, and corpus filename inventory. All 150 artifact paths resolve and agree with durable authority metadata.
+- Passed 10 legacy and nine refined pre-review tests, then ran the requested dry run with zero PDF opens.
+- Ran `refined_visual_gate_v1` on exactly the same 150 retained local PDFs. REVIEW2 inspected 762 bounded pages, rendered 407 bounded pages with zero render failures, and produced 150 terminal rows in 64.882 seconds.
+- Assisted REVIEW2 labels are 77 confirmed / 16 maybe / 56 no / one unknown wage schedules; 84 exact / three adjacent / three later-pointer / 42 wrong / 17 no-candidate / one unknown page relationships; and 74 high-confidence / 15 schema-update / 29 second-review / 32 exclude gates.
+- Compared REVIEW2 with REVIEW1 row by row. REVIEW2 identifies 42 wrong pages among 132 pages REVIEW1 called correct/partial, and 81 extraction actions changed.
+- Performed an 18-row blinded rendered-page challenge spanning likely/possible/unlikely and p1/p2/p3. Material agreement was only 10/18 (55.56%) and exact gate agreement 8/18 (44.44%). Temporary contact sheets/rendered images were deleted after adjudication.
+- Set the final decision to `continue_schema_refinement`. The 500-document run and a smaller extraction pilot are both unauthorized. Updated dashboard data/frontend/docs accordingly.
+
+**Decisions and why**
+- Use strict `wage_schedule_table_confirmed_label=yes` for the likely-signal authorization rate: 61/80 (76.25%). Counting `maybe` would produce 85%, but that is not confirmed visual evidence.
+- Use candidate-bearing rows for wrong-page precision: 42/132 (31.82%). This exceeds the 15% ceiling.
+- Do not treat assisted rendered checks as independent truth. The challenge found unresolved wage-prose, budget/benefit, compact compensation-sheet, and contents-navigation errors, so extraction remains closed.
+
+**Surprises/breakage**
+- Only one of six challenged original-likely/p1 rows visibly showed the repeated wage table REVIEW2 claimed; five were prose, budget/front matter, or navigation material.
+- REVIEW2 also rejected a compact one-page compensation sheet that the independent visual check judged schedule-like and potentially schema-usable, showing that both false-positive and false-negative table-family errors remain.
+- One read-only validation assertion initially expected `pdf_opened_review=true`; the CSV correctly serializes the flag as `1`. Correcting that assertion changed no project artifact.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Four compiles, 19 offline tests, dashboard JSON/frontend build, schema validation, 60 ingestion tests, exact 150-row scope/identity/bounds checks, immutable original/REVIEW1/durable/protected hashes, corpus filename inventory, secret-safety, and diff checks passed. Only the locked 150 local PDFs were eligible/opened; no URL, network/API/model call, redownload, OCR, full-text/table retention, wage extraction, durable-ledger mutation, ingestion, `gabriel.codify`, wage-gap work, regression, remote action, or push occurred.
+
+**Next steps**
+1. Do not run either wage-extraction scale.
+2. Obtain independent human adjudication for a balanced rendered-page subset and refine actual rendered row/column evidence, compact compensation-sheet handling, and bounded contents/appendix target navigation.
+3. Rerun a blinded visual challenge and require at least 80% agreement, at least 80% strict likely confirmation, and no more than 15% wrong pages before reconsidering extraction.
+
 ## 2026-07-25 (Refined visual table gate prepared; REVIEW2 not run)
 
 **Did**

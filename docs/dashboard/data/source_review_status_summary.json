@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-25T14:42:31Z",
+  "generated_at": "2026-07-25T15:13:56Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -48,6 +48,9 @@
     "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24/calibration_review_input.csv",
     "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-REVIEW1-2026-07-24/calibration_review_summary.json",
     "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-REVIEW1-2026-07-24/calibration_reviewed.csv",
+    "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24/calibration_review_summary.json",
+    "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24/calibration_reviewed.csv",
+    "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24/calibration_review2_decision.json",
     "docs/analysis/text_table_detection_refine1_readiness_audit_2026-07-24.md",
     "docs/analysis/text_table_detection_refined_schema_2026-07-24.md",
     "docs/analysis/text_table_detection_refined_review_rubric_2026-07-24.md",
