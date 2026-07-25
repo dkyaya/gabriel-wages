@@ -6,6 +6,35 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-25 (Text/table calibration assisted review completed; extraction gate failed)
+
+**Did**
+- Started from clean tracked `610f5e8e9c12f4330de9a2edec2438fa0c778b51`, confirmed all requested ancestry, and preserved the unrelated untracked root `package-lock.json`.
+- Revalidated the locked 150-row calibration packet: all calibration/detection/readiness/source identities are unique, all local artifact paths resolve, all rows match the durable detection authority, and the original review input remains byte-identical.
+- Added a fail-closed local review helper and ten-test synthetic suite. The helper verifies artifact hashes/sizes and opens only locked candidate, adjacent, and first-page context pages; it retains labels and bounded structural notes, not full text, tables, or wage values.
+- Ran a dry pass with zero PDF opens, then bounded Codex-assisted local adjudication across all 150 PDFs. It inspected 630 pages (612 with text) in 10.915 seconds with zero missing/hash/size/parser failures.
+- Assisted labels are 118 correct / 14 partial / 17 not-applicable / one unknown page hint; 112 yes / 22 maybe / 15 no / one unknown wage-table presence; and 76 include-now / 36 schema-update / 23 manual-only / 15 exclude actions. Fifty-five rows need second review and 59 are structurally hard.
+- Performed a five-row rendered-page challenge across assisted step-grade, rank-step, annual-salary, hourly, and no-table outcomes. All five materially disagreed: the claimed layouts were wage-related prose/front matter, while the no-table case's contents page pointed to a later salary table.
+- Set the extraction gate to `fail` and the next recommendation to `refine_detector_or_schema`. The archived 500-document prompt is explicitly blocked until a revised independent calibration passes.
+- Updated the dashboard to `subset1_reviewed`, method `codex_assisted_local_adjudication`, gate `fail`, with extraction/ingestion/codify/wage analysis still `not_started`.
+
+**Decisions and why**
+- Do not report assisted detector/adjudicator concordance as independent precision. Both use overlapping text/numeric-structure cues, and the rendered-page challenge exposed systematic prose-versus-table confusion.
+- Do not authorize a 500-document extraction run. First separate wage-language detection from actual table/layout evidence, revise the calibration schema, and obtain independent human/visual adjudication.
+- Preserve the reviewed CSV as the bounded assisted output and record the visual challenge separately rather than pretending five pages relabel all 150 documents.
+
+**Surprises/breakage**
+- The first dry-run invocation exposed reversed CLI semantics for `--no-save-full-text`; it stopped before opening any PDF or creating production output. The flag was corrected to a positive safety switch and all tests/dry-run gates passed.
+- `pypdf` repaired malformed internal pointers in several retained artifacts without a terminal parser failure.
+- The rendered visual QA contradicted all five challenged assisted outcomes, converting an initially cautionary algorithmic result into a failed extraction gate.
+
+**Corpus snapshot:** validation reports 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Three compiles, ten offline tests, dashboard JSON/frontend build, schema validation, 60 ingestion tests, independent 150-row identity/artifact/bounds/no-full-text/protected-hash/secret checks, and diff checks passed. Only the 150 locked local artifacts were eligible and opened; no URL, network/API/model call, redownload, OCR, complete text/table retention, final wage extraction, scout-accounting or durable-ledger mutation, ingestion, `gabriel.codify`, wage-gap work, causal claim, regression, remote action, or push occurred.
+
+**Next steps**
+1. Review the assisted ledger, rendered-page challenge, failed calibration gate, dashboard note, validation record, and lite relay.
+2. Revise detection/review rules to distinguish wage-related prose from actual tabular structure and to search document indexes/appendices safely within bounded controls.
+3. Run a new independent human/visual calibration before any extraction pilot. Keep the 500-document prompt blocked and keep OCR, ingestion, codification, and wage analysis separately authorized.
+
 ## 2026-07-25 (Text/table manual-calibration packet prepared; review not started)
 
 **Did**

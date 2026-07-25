@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-25T13:45:45Z",
+  "generated_at": "2026-07-25T14:17:08Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -45,7 +45,9 @@
     "docs/analysis/text_table_detection_ledgers/text_table_detection_ledger_latest.csv",
     "docs/analysis/text_table_detection_ledgers/text_table_detection_summary_cumulative.json",
     "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24/calibration_sampling_summary.json",
-    "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24/calibration_review_input.csv"
+    "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24/calibration_review_input.csv",
+    "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-REVIEW1-2026-07-24/calibration_review_summary.json",
+    "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-REVIEW1-2026-07-24/calibration_reviewed.csv"
   ],
   "warnings": [],
   "limitations": [
@@ -58,65 +60,73 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "calibration_phase": "subset1_prepared_not_reviewed",
+  "calibration_phase": "subset1_reviewed",
   "latest_calibration_id": "TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24",
+  "latest_calibration_review_id": "TEXT-TABLE-CALIBRATION-SUBSET1-REVIEW1-2026-07-24",
   "calibration_subset_rows": 150,
-  "wage_table_signal_counts": {
-    "likely": 80,
-    "possible": 58,
-    "unlikely": 12
+  "reviewed_rows": 150,
+  "review_method": "codex_assisted_local_adjudication",
+  "calibration_status_counts": {
+    "needs_second_review": 55,
+    "reviewed": 95
   },
-  "extraction_pilot_priority_counts": {
-    "p1": 80,
-    "p2": 63,
-    "p3": 7
+  "wage_table_present_label_counts": {
+    "maybe": 22,
+    "no": 15,
+    "unknown": 1,
+    "yes": 112
   },
-  "unit_type_counts": {
-    "fire": 44,
-    "non_safety": 55,
-    "police": 51
+  "page_hint_precision_label_counts": {
+    "correct": 118,
+    "not_applicable": 17,
+    "partially_correct": 14,
+    "unknown": 1
   },
-  "candidate_source_type_counts": {
-    "arbitration_award": 8,
-    "cba": 80,
-    "factfinding": 1,
-    "memorandum_or_settlement": 15,
-    "ordinance_or_policy": 16,
-    "wage_schedule_or_compensation_plan": 30
+  "contract_period_present_label_counts": {
+    "maybe": 30,
+    "no": 20,
+    "unknown": 1,
+    "yes": 99
   },
-  "source_officialness_rating_counts": {
-    "official_municipal": 52,
-    "official_state_repository": 23,
-    "official_union": 16,
-    "uncertain": 50,
-    "unknown": 9
+  "contract_period_hint_match_label_counts": {
+    "correct": 68,
+    "incorrect": 12,
+    "no_period_found": 20,
+    "partially_correct": 30,
+    "unknown": 20
   },
-  "source_review_batch_counts": {
-    "SOURCE-REVIEW-BATCH2-500-2026-07-24": 38,
-    "SOURCE-REVIEW-BATCH3-3X500-2026-07-24": 86,
-    "SOURCE-REVIEW-PILOT1-150-2026-07-24": 26
+  "extraction_complexity_label_counts": {
+    "easy": 11,
+    "hard": 59,
+    "moderate": 65,
+    "not_extractable": 15
   },
-  "page_count_bin_counts": {
-    "11_to_25": 24,
-    "1_to_10": 40,
-    "26_to_50": 33,
-    "51_to_100": 38,
-    "over_100": 15
+  "recommended_extraction_action_counts": {
+    "exclude_for_now": 15,
+    "include_after_schema_update": 36,
+    "include_in_wage_extraction_pilot": 76,
+    "manual_review_only": 23
   },
-  "unique_states": 51,
-  "unique_municipalities": 150,
-  "candidate_wage_page_hints": 562,
-  "manual_review_status": "not_started",
+  "reviewer_confidence_counts": {
+    "high": 51,
+    "low": 16,
+    "medium": 83
+  },
+  "calibration_pass_status": "fail",
+  "next_recommendation": "refine_detector_or_schema",
+  "manual_review_status": "assisted_review_complete",
   "wage_extraction_status": "not_started",
   "ingestion_status": "not_started",
   "codify_status": "not_started",
   "wage_gap_analysis_status": "not_started",
-  "summary_source": "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24/calibration_sampling_summary.json",
-  "review_input": "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24/calibration_review_input.csv",
+  "summary_source": "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-REVIEW1-2026-07-24/calibration_review_summary.json",
+  "reviewed_ledger": "docs/analysis/text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-REVIEW1-2026-07-24/calibration_reviewed.csv",
   "caveats": [
-    "The calibration subset has not been manually reviewed.",
-    "Candidate pages remain heuristic hints, not wage observations.",
-    "No wage values were extracted.",
+    "Calibration used deterministic Codex-assisted local adjudication, not independent human ground truth.",
+    "Candidate-page concordance is not a final precision estimate.",
+    "A five-row rendered-page challenge materially disagreed with all five assisted outcomes.",
+    "Detector/review-schema refinement and independent calibration are required before extraction.",
+    "No final wage values were extracted.",
     "No OCR, ingestion, or codification occurred."
   ]
 }

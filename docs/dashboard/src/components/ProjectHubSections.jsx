@@ -756,6 +756,11 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "subset1_reviewed"
+              ? textTableCalibrationStatus.calibration_pass_status === "fail"
+                ? "Assisted calibration complete; extraction gate failed"
+                : "Assisted calibration complete; extraction gate is cautionary"
+              : textTableCalibrationStatus.calibration_phase ===
             "subset1_prepared_not_reviewed"
               ? "Stratified calibration packet prepared; review not started"
               : "Manual calibration packet not prepared"}
@@ -763,6 +768,38 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "subset1_reviewed" ? (
+            <>
+              All{" "}
+              {formatNumber(textTableCalibrationStatus.reviewed_rows)}
+              {" "}rows received bounded Codex-assisted local adjudication:{" "}
+              {formatNumber(
+                textTableCalibrationStatus.wage_table_present_label_counts
+                  ?.yes,
+              )}
+              {" "}yes,{" "}
+              {formatNumber(
+                textTableCalibrationStatus.wage_table_present_label_counts
+                  ?.maybe,
+              )}
+              {" "}maybe, and{" "}
+              {formatNumber(
+                textTableCalibrationStatus.wage_table_present_label_counts
+                  ?.no,
+              )}
+              {" "}no wage-table-presence labels. The gate is{" "}
+              {textTableCalibrationStatus.calibration_pass_status};{" "}
+              {formatNumber(
+                textTableCalibrationStatus.calibration_status_counts
+                  ?.needs_second_review,
+              )}
+              {" "}rows still need second review. This is not independent
+              human precision or final wage extraction. A rendered-page
+              challenge found material disagreement in all five checked
+              cases, so detector/schema refinement is next. No OCR,
+              ingestion, or codification occurred.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "subset1_prepared_not_reviewed" ? (
             <>
               The review packet contains{" "}

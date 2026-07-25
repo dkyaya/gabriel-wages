@@ -264,15 +264,18 @@ wage-table extraction pilot. No URL was opened, nothing was downloaded, OCR
 did not run, and ingestion, codification, final wage extraction, and
 wage-gap analysis remain unperformed.
 
-The first manual-calibration packet is now prepared but not reviewed. Its
-150 rows include 80 likely, 58 possible, and all 12 unlikely wage-table
-signals; all seven p3 edge cases; police, fire, and non-safety units; every
-available source-type family; all five officialness categories; all three
-source-review batches; every page-count bin; and all 50 states plus DC.
-Every manual field is initialized as `not_reviewed` or `unknown`. Preparing
-the packet opened no PDF or URL and performed no additional text extraction,
-OCR, wage extraction, ingestion, or codification. Manual review and
-adjudication are the next step.
+The first 150-row calibration packet has now completed bounded
+Codex-assisted local adjudication. This was not independent human manual
+review. Assisted labels are 112 yes, 22 maybe, 15 no, and one unknown for
+wage-table presence; page hints are 118 correct, 14 partially correct, 17
+not applicable, and one unknown. The extraction gate is `fail`: 55 rows need
+second review, 59 are structurally hard, and detector/adjudicator concordance
+is not ground-truth precision. A five-row rendered-page challenge materially
+disagreed with all five assisted outcomes. Detector/review-schema refinement
+and a new independent calibration are required before any extraction run.
+The review opened only the 150 retained local PDFs and performed no URL
+access, download, OCR, full-text retention, final wage extraction, ingestion,
+or codification.
 
 ## Run and build locally
 

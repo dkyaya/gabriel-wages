@@ -6,6 +6,35 @@ Last updated: `2026-07-25`
 
 ---
 
+## 2026-07-25 — Calibration was assisted-reviewed; extraction gate failed
+
+### Current State
+
+- **Start and locked scope:** work began at clean tracked `610f5e8e9c12f4330de9a2edec2438fa0c778b51`. The original 150-row calibration input remains byte-identical, all five identity fields are unique, all artifact paths resolve, and every row matches the durable text/table authority.
+- **Review method:** [the result](text_table_calibration_subset1_review_result_2026-07-24.md) is `codex_assisted_local_adjudication`, not human manual review. The bounded helper opened only the 150 selected local artifacts, verified hashes/sizes, inspected at most five candidate/adjacent/context pages per document, and saved no complete text, table, or wage value.
+- **Assisted output:** 150 terminal rows; 95 `reviewed` and 55 `needs_second_review`; page hints 118 correct / 14 partial / 17 not applicable / one unknown; wage presence 112 yes / 22 maybe / 15 no / one unknown; complexity 11 easy / 65 moderate / 59 hard / 15 not extractable; actions 76 include-now / 36 schema-update / 23 manual-only / 15 exclude.
+- **Independent visual challenge:** [the five-row spot-check](text_table_calibration/TEXT-TABLE-CALIBRATION-SUBSET1-REVIEW1-2026-07-24/calibration_visual_qa_spotcheck.md) materially disagreed with all five challenged assisted outcomes. Four alleged layouts were wage-related prose/front matter rather than the claimed tables; the assisted no-table case had a contents entry pointing to a later salary table.
+- **Gate:** `calibration_pass_status = fail`; `next_recommendation = refine_detector_or_schema`. The [500-document prompt](wage_table_extraction_500_doc_prompt_2026-07-24.md) is blocked archival planning material, not an authorized next run.
+- **Dashboard:** phase is `subset1_reviewed`, method is explicitly assisted, the failed extraction gate and five visual disagreements are shown, and wage extraction, ingestion, codification, and wage-gap analysis remain `not_started`.
+- **Boundary:** no URL/network/API/model call or redownload occurred, OCR did not run, and no full text/table, final wage observation, scout-accounting or durable-ledger mutation, ingestion, codification, wage-gap result, regression, remote action, or push occurred.
+
+### Interpretation
+
+The assisted counts measure agreement between overlapping deterministic
+text/numeric-structure rules. They are not a valid independent precision
+estimate. The rendered challenge supplies direct evidence that wage language
+and numeric density are being confused with actual table structure and that
+bounded page selection can miss tables referenced later in a document.
+
+### Next Move
+
+Do not start the 500-document extraction. Revise the detector/review schema to
+separate wage-related prose from visible table structure, improve bounded
+appendix/index navigation, and prepare a new independently human/visually
+adjudicated calibration. Only a passing independent calibration should
+authorize a small provisional extraction pilot; OCR, ingestion, codification,
+and wage analysis remain separately gated.
+
 ## 2026-07-25 — Manual text/table calibration packet is prepared, not reviewed
 
 ### Current State

@@ -210,6 +210,18 @@ TEXT_TABLE_CALIBRATION_SUBSET1_INPUT_PATH = (
     / "TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24"
     / "calibration_review_input.csv"
 )
+TEXT_TABLE_CALIBRATION_SUBSET1_REVIEW_SUMMARY_PATH = (
+    ANALYSIS_DIR
+    / "text_table_calibration"
+    / "TEXT-TABLE-CALIBRATION-SUBSET1-REVIEW1-2026-07-24"
+    / "calibration_review_summary.json"
+)
+TEXT_TABLE_CALIBRATION_SUBSET1_REVIEW_LEDGER_PATH = (
+    ANALYSIS_DIR
+    / "text_table_calibration"
+    / "TEXT-TABLE-CALIBRATION-SUBSET1-REVIEW1-2026-07-24"
+    / "calibration_reviewed.csv"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -276,6 +288,8 @@ OPTIONAL_PATHS = [
     TEXT_TABLE_DETECTION_DURABLE_SUMMARY_PATH,
     TEXT_TABLE_CALIBRATION_SUBSET1_SUMMARY_PATH,
     TEXT_TABLE_CALIBRATION_SUBSET1_INPUT_PATH,
+    TEXT_TABLE_CALIBRATION_SUBSET1_REVIEW_SUMMARY_PATH,
+    TEXT_TABLE_CALIBRATION_SUBSET1_REVIEW_LEDGER_PATH,
 ]
 
 STATE_NAMES = {
@@ -3757,7 +3771,122 @@ def build_text_table_detection_status_summary(
 def build_text_table_calibration_status_summary(
     *, metadata: dict[str, Any]
 ) -> dict[str, Any]:
-    """Build manual-calibration packet status without review inference."""
+    """Build calibration packet/review status without extraction inference."""
+
+    if TEXT_TABLE_CALIBRATION_SUBSET1_REVIEW_SUMMARY_PATH.exists():
+        summary = read_json(
+            TEXT_TABLE_CALIBRATION_SUBSET1_REVIEW_SUMMARY_PATH
+        )
+        review_rows = read_csv(
+            TEXT_TABLE_CALIBRATION_SUBSET1_REVIEW_LEDGER_PATH
+        )
+        forbidden_fields = (
+            "urls_opened",
+            "network_calls",
+            "downloads_or_redownloads",
+            "ocr_runs",
+            "full_text_artifacts_written",
+            "final_wage_values_extracted",
+            "ingestion_actions",
+            "codify_actions",
+            "durable_ledger_mutations",
+        )
+        identity_fields = (
+            "calibration_id",
+            "text_table_detection_id",
+            "pdf_readiness_id",
+            "source_review_id",
+            "candidate_queue_row_id",
+        )
+        if (
+            summary.get("status")
+            != "calibration_review_complete_assisted_local"
+            or summary.get("review_id")
+            != "TEXT-TABLE-CALIBRATION-SUBSET1-REVIEW1-2026-07-24"
+            or summary.get("review_method")
+            != "codex_assisted_local_adjudication"
+            or int(summary.get("rows", 0)) != 150
+            or int(summary.get("reviewed_rows", 0)) != 150
+            or len(review_rows) != 150
+            or summary.get("calibration_pass_status")
+            not in {"pass", "caution", "fail"}
+            or not summary.get("original_input_preserved")
+            or any(
+                int(summary.get(field, -1)) != 0
+                for field in forbidden_fields
+            )
+            or any(
+                len(values) != len(set(values))
+                or any(not value for value in values)
+                for values in (
+                    [row.get(field, "") for row in review_rows]
+                    for field in identity_fields
+                )
+            )
+            or any(
+                row.get("reviewer") != "codex_assisted_local_review"
+                or row.get("calibration_status")
+                not in {"reviewed", "needs_second_review"}
+                for row in review_rows
+            )
+        ):
+            raise ValueError(
+                "text/table calibration review fails dashboard gates"
+            )
+        return {
+            **metadata,
+            "calibration_phase": "subset1_reviewed",
+            "latest_calibration_id": (
+                "TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24"
+            ),
+            "latest_calibration_review_id": summary["review_id"],
+            "calibration_subset_rows": int(summary["rows"]),
+            "reviewed_rows": int(summary["reviewed_rows"]),
+            "review_method": summary["review_method"],
+            "calibration_status_counts": summary["calibration_status"],
+            "wage_table_present_label_counts": summary[
+                "wage_table_present_label"
+            ],
+            "page_hint_precision_label_counts": summary[
+                "page_hint_precision_label"
+            ],
+            "contract_period_present_label_counts": summary[
+                "contract_period_present_label"
+            ],
+            "contract_period_hint_match_label_counts": summary[
+                "contract_period_hint_match_label"
+            ],
+            "extraction_complexity_label_counts": summary[
+                "extraction_complexity_label"
+            ],
+            "recommended_extraction_action_counts": summary[
+                "recommended_extraction_action"
+            ],
+            "reviewer_confidence_counts": summary["reviewer_confidence"],
+            "calibration_pass_status": summary[
+                "calibration_pass_status"
+            ],
+            "next_recommendation": summary["next_recommendation"],
+            "manual_review_status": "assisted_review_complete",
+            "wage_extraction_status": "not_started",
+            "ingestion_status": "not_started",
+            "codify_status": "not_started",
+            "wage_gap_analysis_status": "not_started",
+            "summary_source": relative(
+                TEXT_TABLE_CALIBRATION_SUBSET1_REVIEW_SUMMARY_PATH
+            ),
+            "reviewed_ledger": relative(
+                TEXT_TABLE_CALIBRATION_SUBSET1_REVIEW_LEDGER_PATH
+            ),
+            "caveats": [
+                "Calibration used deterministic Codex-assisted local adjudication, not independent human ground truth.",
+                "Candidate-page concordance is not a final precision estimate.",
+                "A five-row rendered-page challenge materially disagreed with all five assisted outcomes.",
+                "Detector/review-schema refinement and independent calibration are required before extraction.",
+                "No final wage values were extracted.",
+                "No OCR, ingestion, or codification occurred.",
+            ],
+        }
 
     if not TEXT_TABLE_CALIBRATION_SUBSET1_SUMMARY_PATH.exists():
         return {
