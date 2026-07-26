@@ -6,6 +6,25 @@ Last updated: `2026-07-26`
 
 ---
 
+## 2026-07-26 — Limited qualitative usage layer accepted and registered
+
+### Current State
+
+- **Authority/start:** began at clean tracked `8953392b4427d6f8b90b1cc80e367068357adc87`; 32 QA/materialization inputs and the inherited five-package chain passed immutable verification.
+- **Decision:** `limited_qualitative_usage_layer_acceptance_registered`; a separately authorized registry review is allowed next. Global/full qualitative readiness and analysis-facing promotion remain false.
+- **Hashes/scope:** candidate-ID SHA-256 `0365d38babf9d4000295a3326c8cfc77b92f8a7ad1f2f1117d0cb40f1613b91b`, layer hash, and schema hash passed. Registered scope is 643 rows; contamination is zero; the strict-primary manifest remains 56 and non-analytic.
+- **Registration boundary:** zero evidence rows and zero analysis outputs were created. Restricted 116, navigation 1,195, quantitative 862/1,045, non-base 4,733, reference/control 345, and two conflicts/five observations remain separate.
+- **Hardening:** 61 new tests plus 360 predecessor tests pass. Dashboard/repository builds, schema validation, 60 ingestion tests, coverage audit, diff checks, partial-output guards, and idempotent resume pass.
+- **Forbidden actions:** no PDF/page, URL/download, OCR, model/GABRIEL, extraction, selection, ingestion run, codification, statistics, wage-gap, regression, or causal work occurred; no upstream ledger changed.
+
+### Interpretation
+
+Acceptance records the already-QA-passed bounded evidence layer; it is not a readiness promotion or analytical result. Mechanism language remains evidence of wording, not wage effects.
+
+### Next Move
+
+Use `next_limited_qualitative_usage_registry_review_prompt.md` only after separate authorization. The task must review registration metadata only, create no evidence/analysis output, and preserve readiness=false.
+
 ## 2026-07-26 — Limited qualitative usage layer passed QA; acceptance prompt allowed
 
 ### Current State

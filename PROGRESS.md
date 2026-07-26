@@ -6,6 +6,27 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-26 (Limited qualitative usage layer accepted and registered)
+
+**Did**
+- Reverified 32 immutable QA/materialization inputs, the inherited five-package chain, the 643-ID authorization hash, layer-file hash, schema hash, zero-contamination audits, and scope counts.
+- Registered the QA-passed 643-row literal mechanism-language layer without copying or creating evidence rows and without producing analysis output.
+- Preserved 116 restricted rows, 1,195 navigation-only rows, the 56-row strict-primary non-analytic manifest, and quantitative/non-base/reference/conflict lanes outside the registered layer.
+- Added 61 acceptance tests across 36 adversarial modes and dashboard fail-closed gates. All 421 focused tests and 60 ingestion tests passed.
+
+**Decisions**
+- Decision is `limited_qualitative_usage_layer_acceptance_registered`. The bounded layer is accepted for its documented restricted evidence scope only.
+- A separately authorized registry review may run next. Global/full qualitative readiness, analysis-facing promotion, statistics, ingestion, codification, wage-gap, regression, and causal work remain closed.
+
+**Surprises/breakage**
+- Five predecessor dashboard tests correctly rejected the new descendant phase until their phase allowlists were extended. Evidence, hash, scope, and readiness assertions were unchanged.
+
+**Corpus snapshot**
+- `contracts=64`, `discourse=0`, `coverage=64`, `cities=19`; 28 healthy matched pairs (10 exact-cycle, 18 overlap-cycle), two exploratory adjacent matches, and six unmatched safety units.
+
+**Next steps**
+- Seek separate authorization for `next_limited_qualitative_usage_registry_review_prompt.md`. Review registration metadata only; create no evidence or analysis output and keep global readiness false.
+
 ## 2026-07-26 (Limited qualitative usage layer passed QA; acceptance prompt allowed)
 
 **Did**
