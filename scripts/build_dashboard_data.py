@@ -1014,6 +1014,23 @@ COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_SUMMARY_REVIEW_636_INVARIANTS_PATH 
     COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_SUMMARY_REVIEW_636_DIR
     / "gabriel_claim_rating_summary_review_636_invariant_checks.json"
 )
+COMPENSATION_EXTRACTION_PROVISIONAL_CLAIM_REVIEW_636_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "COMPENSATION-EVIDENCE-PROVISIONAL-CLAIM-REVIEW-FROM-GABRIEL-RATINGS-636-2026-07-25"
+)
+COMPENSATION_EXTRACTION_PROVISIONAL_CLAIM_REVIEW_636_DECISION_PATH = (
+    COMPENSATION_EXTRACTION_PROVISIONAL_CLAIM_REVIEW_636_DIR
+    / "provisional_claim_review_636_decision.json"
+)
+COMPENSATION_EXTRACTION_PROVISIONAL_CLAIM_REVIEW_636_REGISTRY_SUMMARY_PATH = (
+    COMPENSATION_EXTRACTION_PROVISIONAL_CLAIM_REVIEW_636_DIR
+    / "provisional_claim_review_claim_registry_summary.json"
+)
+COMPENSATION_EXTRACTION_PROVISIONAL_CLAIM_REVIEW_636_INVARIANTS_PATH = (
+    COMPENSATION_EXTRACTION_PROVISIONAL_CLAIM_REVIEW_636_DIR
+    / "provisional_claim_review_636_invariant_checks.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -2697,6 +2714,68 @@ def gabriel_claim_rating_summary_review_636_status() -> tuple[bool, dict[str, An
     return True, decision
 
 
+def provisional_claim_review_636_status() -> tuple[bool, dict[str, Any]]:
+    """Fail closed unless the 636-row summary produced only bounded provisional claims."""
+    required = (
+        COMPENSATION_EXTRACTION_PROVISIONAL_CLAIM_REVIEW_636_DECISION_PATH,
+        COMPENSATION_EXTRACTION_PROVISIONAL_CLAIM_REVIEW_636_REGISTRY_SUMMARY_PATH,
+        COMPENSATION_EXTRACTION_PROVISIONAL_CLAIM_REVIEW_636_INVARIANTS_PATH,
+        COMPENSATION_EXTRACTION_PROVISIONAL_CLAIM_REVIEW_636_DIR
+        / "provisional_claim_review_claim_registry.csv",
+        COMPENSATION_EXTRACTION_PROVISIONAL_CLAIM_REVIEW_636_DIR
+        / "provisional_claim_review_636_summary.md",
+        COMPENSATION_EXTRACTION_PROVISIONAL_CLAIM_REVIEW_636_DIR
+        / "next_targeted_scouting_restart_from_provisional_claim_review_prompt.md",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    decision = read_json(COMPENSATION_EXTRACTION_PROVISIONAL_CLAIM_REVIEW_636_DECISION_PATH)
+    registry_summary = read_json(
+        COMPENSATION_EXTRACTION_PROVISIONAL_CLAIM_REVIEW_636_REGISTRY_SUMMARY_PATH
+    )
+    invariants = read_json(COMPENSATION_EXTRACTION_PROVISIONAL_CLAIM_REVIEW_636_INVARIANTS_PATH)
+    claims = read_csv(
+        COMPENSATION_EXTRACTION_PROVISIONAL_CLAIM_REVIEW_636_DIR
+        / "provisional_claim_review_claim_registry.csv"
+    )
+    expected_counts = {
+        "supported_documentary_mechanism_claim": 9,
+        "supported_direct_text_claim": 5,
+        "provisional_causal_candidate_claim": 5,
+        "needs_more_data": 10,
+        "not_allowed": 6,
+    }
+    observed_counts: dict[str, int] = {}
+    for row in claims:
+        value = row.get("claim_type", "")
+        observed_counts[value] = observed_counts.get(value, 0) + 1
+    if not (
+        decision.get("task_id")
+        == "COMPENSATION-EVIDENCE-PROVISIONAL-CLAIM-REVIEW-FROM-GABRIEL-RATINGS-636-2026-07-25"
+        and decision.get("decision")
+        == "provisional_claim_review_completed_targeted_scouting_restart_recommended"
+        and decision.get("valid_summary_rows") == 636
+        and decision.get("excluded_quarantine_rows") == 7
+        and decision.get("positive_attribute_cells") == 722
+        and decision.get("claim_rows") == len(claims) == 35
+        and decision.get("claim_type_counts") == expected_counts
+        and observed_counts == expected_counts
+        and len({row.get("claim_id") for row in claims}) == 35
+        and all(row.get("boundary_language") for row in claims)
+        and decision.get("quantitative_rows_preserved_not_analyzed") == 862
+        and decision.get("targeted_scouting_restart_recommended") is True
+        and decision.get("gabriel_api_or_model_called") is False
+        and decision.get("global_analysis_readiness") is False
+        and decision.get("no_wage_gap_regression_treatment_or_final_causal_claims") is True
+        and registry_summary.get("claim_rows") == 35
+        and registry_summary.get("claim_type_counts") == expected_counts
+        and registry_summary.get("global_analysis_readiness") is False
+        and invariants.get("all_invariants_passed") is True
+    ):
+        raise ValueError("provisional claim review 636 fails dashboard gates")
+    return True, decision
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -3423,6 +3502,10 @@ def build_analysis_readiness(
         gabriel_claim_rating_summary_review_636_completed,
         gabriel_claim_rating_summary_review_636_decision,
     ) = gabriel_claim_rating_summary_review_636_status()
+    (
+        provisional_claim_review_636_completed,
+        provisional_claim_review_636_decision,
+    ) = provisional_claim_review_636_status()
     if scale_1000_targeted_qa_completed and (
         scale_1000_targeted_qa_decision.get("qa_pass") is not True
         or scale_1000_targeted_qa_decision.get(
@@ -3469,6 +3552,9 @@ def build_analysis_readiness(
     return {
         "metadata": metadata,
         "overall_status": (
+            "provisional_claim_review_636_completed_targeted_scouting_restart_recommended_global_analysis_closed"
+            if provisional_claim_review_636_completed
+            else
             "gabriel_claim_rating_summary_review_636_completed_provisional_claim_review_allowed_global_analysis_closed"
             if gabriel_claim_rating_summary_review_636_completed
             else
@@ -4080,6 +4166,19 @@ def build_analysis_readiness(
                 "provisional_claim_review_allowed": (
                     bool(gabriel_claim_rating_summary_review_636_decision.get("provisional_claim_review_allowed", False))
                     if gabriel_claim_rating_summary_review_636_completed else False
+                ),
+                "provisional_claim_review_636_completed": provisional_claim_review_636_completed,
+                "provisional_claim_review_636_decision": (
+                    provisional_claim_review_636_decision.get("decision")
+                    if provisional_claim_review_636_completed else None
+                ),
+                "provisional_claim_review_claim_rows": (
+                    int(provisional_claim_review_636_decision.get("claim_rows", 0))
+                    if provisional_claim_review_636_completed else 0
+                ),
+                "targeted_scouting_restart_recommended": (
+                    bool(provisional_claim_review_636_decision.get("targeted_scouting_restart_recommended", False))
+                    if provisional_claim_review_636_completed else False
                 ),
                 "gabriel_claim_rating_global_analysis_readiness": False,
                 "limited_qualitative_usage_registry_review_global_analysis_readiness": False,
@@ -7984,9 +8083,16 @@ def build_text_table_calibration_status_summary(
             gabriel_claim_rating_summary_review_636_completed,
             gabriel_claim_rating_summary_review_636_decision,
         ) = gabriel_claim_rating_summary_review_636_status()
+        (
+            provisional_claim_review_636_completed,
+            provisional_claim_review_636_decision,
+        ) = provisional_claim_review_636_status()
         return {
             **metadata,
             "calibration_phase": (
+                "compensation_extraction_provisional_claim_review_636_completed_targeted_scouting_restart_recommended"
+                if provisional_claim_review_636_completed
+                else
                 "compensation_extraction_gabriel_claim_rating_summary_review_636_completed_provisional_claim_review_allowed"
                 if gabriel_claim_rating_summary_review_636_completed
                 else
@@ -9121,6 +9227,23 @@ def build_text_table_calibration_status_summary(
             "provisional_claim_review_allowed": (
                 bool(gabriel_claim_rating_summary_review_636_decision.get("provisional_claim_review_allowed", False))
                 if gabriel_claim_rating_summary_review_636_completed else False
+            ),
+            "provisional_claim_review_636_completed": provisional_claim_review_636_completed,
+            "provisional_claim_review_636_decision": (
+                provisional_claim_review_636_decision.get("decision")
+                if provisional_claim_review_636_completed else None
+            ),
+            "provisional_claim_review_636_path": (
+                relative(COMPENSATION_EXTRACTION_PROVISIONAL_CLAIM_REVIEW_636_DIR)
+                if provisional_claim_review_636_completed else None
+            ),
+            "provisional_claim_review_claim_rows": (
+                int(provisional_claim_review_636_decision.get("claim_rows", 0))
+                if provisional_claim_review_636_completed else 0
+            ),
+            "targeted_scouting_restart_recommended": (
+                bool(provisional_claim_review_636_decision.get("targeted_scouting_restart_recommended", False))
+                if provisional_claim_review_636_completed else False
             ),
             "gabriel_claim_rating_global_analysis_readiness": False,
             "limited_qualitative_usage_registry_review_global_analysis_readiness": False,

@@ -1,0 +1,21 @@
+{
+  "all_invariants_passed": true,
+  "checks": {
+    "all_causal_candidates_explicitly_provisional": true,
+    "all_claims_have_boundaries": true,
+    "all_five_claim_types_present": true,
+    "claim_registry_has_35_unique_rows": true,
+    "excluded_scope_exactly_7": true,
+    "global_analysis_readiness_false": true,
+    "no_final_wage_gap_regression_treatment_or_causal_claims": true,
+    "no_forbidden_actions_or_raw_payloads": true,
+    "no_gabriel_api_or_model_calls": true,
+    "only_summary_review_inputs_used": true,
+    "partial_outputs_cannot_masquerade_as_complete": true,
+    "positive_attribute_cells_reconcile_to_722": true,
+    "quantitative_862_acknowledged_only_not_analyzed": true,
+    "sparse_and_absent_mechanisms_routed_to_more_data": true,
+    "valid_scope_exactly_636": true
+  },
+  "task_id": "COMPENSATION-EVIDENCE-PROVISIONAL-CLAIM-REVIEW-FROM-GABRIEL-RATINGS-636-2026-07-25"
+}

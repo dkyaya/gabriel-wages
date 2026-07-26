@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-26T19:58:46Z",
+  "generated_at": "2026-07-26T20:16:10Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -80,7 +80,7 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "calibration_phase": "compensation_extraction_gabriel_claim_rating_summary_review_636_completed_provisional_claim_review_allowed",
+  "calibration_phase": "compensation_extraction_provisional_claim_review_636_completed_targeted_scouting_restart_recommended",
   "latest_calibration_id": "TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24",
   "latest_calibration_review_id": "TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24",
   "latest_adjudication_prep_id": "TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24",
@@ -356,6 +356,11 @@
   "gabriel_claim_rating_summary_review_valid_rows": 636,
   "gabriel_claim_rating_summary_review_excluded_rows": 7,
   "provisional_claim_review_allowed": true,
+  "provisional_claim_review_636_completed": true,
+  "provisional_claim_review_636_decision": "provisional_claim_review_completed_targeted_scouting_restart_recommended",
+  "provisional_claim_review_636_path": "docs/analysis/compensation_extraction/COMPENSATION-EVIDENCE-PROVISIONAL-CLAIM-REVIEW-FROM-GABRIEL-RATINGS-636-2026-07-25",
+  "provisional_claim_review_claim_rows": 35,
+  "targeted_scouting_restart_recommended": true,
   "gabriel_claim_rating_global_analysis_readiness": false,
   "limited_qualitative_usage_registry_review_global_analysis_readiness": false,
   "limited_qualitative_usage_layer_acceptance_global_analysis_readiness": false,

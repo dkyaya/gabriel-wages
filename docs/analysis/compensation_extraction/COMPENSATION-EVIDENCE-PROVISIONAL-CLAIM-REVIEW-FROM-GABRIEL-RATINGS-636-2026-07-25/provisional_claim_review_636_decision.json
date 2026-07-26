@@ -1,0 +1,24 @@
+{
+  "claim_memo_allowed_next": false,
+  "claim_rows": 35,
+  "claim_type_counts": {
+    "needs_more_data": 10,
+    "not_allowed": 6,
+    "provisional_causal_candidate_claim": 5,
+    "supported_direct_text_claim": 5,
+    "supported_documentary_mechanism_claim": 9
+  },
+  "decision": "provisional_claim_review_completed_targeted_scouting_restart_recommended",
+  "direct_text_claim_cells": 150,
+  "documentary_claim_cells": 254,
+  "excluded_quarantine_rows": 7,
+  "gabriel_api_or_model_called": false,
+  "global_analysis_readiness": false,
+  "no_wage_gap_regression_treatment_or_final_causal_claims": true,
+  "positive_attribute_cells": 722,
+  "provisional_causal_candidate_cells": 81,
+  "quantitative_rows_preserved_not_analyzed": 862,
+  "targeted_scouting_restart_recommended": true,
+  "task_id": "COMPENSATION-EVIDENCE-PROVISIONAL-CLAIM-REVIEW-FROM-GABRIEL-RATINGS-636-2026-07-25",
+  "valid_summary_rows": 636
+}

@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "compensation_extraction_provisional_claim_review_636_completed_targeted_scouting_restart_recommended"
+              ? "Bounded provisional claim review complete; targeted scouting restart recommended"
+              : textTableCalibrationStatus.calibration_phase ===
             "compensation_extraction_gabriel_claim_rating_summary_review_636_completed_provisional_claim_review_allowed"
               ? "Bounded GABRIEL rating summary complete; provisional claim review may proceed"
               : textTableCalibrationStatus.calibration_phase ===
@@ -888,6 +891,18 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "compensation_extraction_provisional_claim_review_636_completed_targeted_scouting_restart_recommended" ? (
+            <>
+              The 636-row rating summaries now support 35 bounded claim records:
+              nine documentary-mechanism claims, five direct-text claims, five
+              explicitly provisional causal-candidate scaffolds, ten more-data
+              claims, and six prohibited claim classes. Seven quarantine rows remain
+              excluded and the 862-row quantitative lane remains unanalyzed. Targeted
+              matched city-cycle scouting is recommended next; wage effects, wage
+              gaps, regressions, treatment effects, final causal claims, and global
+              analysis readiness remain closed.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "compensation_extraction_gabriel_claim_rating_summary_review_636_completed_provisional_claim_review_allowed" ? (
             <>
               The bounded review summarized exactly 636 schema-valid v1.1 ratings and

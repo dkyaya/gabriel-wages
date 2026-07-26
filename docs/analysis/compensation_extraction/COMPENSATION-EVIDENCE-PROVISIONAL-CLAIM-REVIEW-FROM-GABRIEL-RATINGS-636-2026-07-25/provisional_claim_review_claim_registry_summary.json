@@ -1,0 +1,17 @@
+{
+  "all_causal_candidates_explicitly_provisional": true,
+  "all_claims_have_boundary_language": true,
+  "claim_rows": 35,
+  "claim_type_counts": {
+    "needs_more_data": 10,
+    "not_allowed": 6,
+    "provisional_causal_candidate_claim": 5,
+    "supported_direct_text_claim": 5,
+    "supported_documentary_mechanism_claim": 9
+  },
+  "excluded_quarantine_rows": 7,
+  "global_analysis_readiness": false,
+  "quantitative_rows_preserved_not_analyzed": 862,
+  "task_id": "COMPENSATION-EVIDENCE-PROVISIONAL-CLAIM-REVIEW-FROM-GABRIEL-RATINGS-636-2026-07-25",
+  "valid_summary_rows": 636
+}
