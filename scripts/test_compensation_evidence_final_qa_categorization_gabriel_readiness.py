@@ -185,6 +185,12 @@ class PhaseCloseGuardrailTests(unittest.TestCase):
             {"overall_status": "final_qa_categorization_closed_gabriel_attribute_ready_global_analysis_closed"},
         )
 
+    def test_claim_oriented_descendant_dashboard_passes(self):
+        runner.validate_dashboard_state(
+            {"calibration_phase": "compensation_extraction_claim_oriented_phase_closed_gabriel_claim_rating_ready", "analysis_facing_promotion_allowed": False},
+            {"overall_status": "claim_oriented_phase_closed_gabriel_claim_rating_ready_global_analysis_closed"},
+        )
+
     def test_dashboard_phase_jump_fails(self):
         with self.assertRaisesRegex(RuntimeError, "phase"):
             runner.validate_dashboard_state(

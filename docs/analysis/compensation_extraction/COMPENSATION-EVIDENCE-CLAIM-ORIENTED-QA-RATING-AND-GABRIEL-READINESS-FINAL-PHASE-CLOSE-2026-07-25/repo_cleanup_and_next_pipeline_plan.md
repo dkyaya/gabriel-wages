@@ -1,0 +1,3 @@
+# Repository cleanup and next-pipeline plan
+
+The repository should keep historical evidence layers immutable but treat this directory as the current claim-oriented entry point. Cleanup means indexing and documentation, not deletion. Future stages should read the 643-row rating manifest, the v1 codebook, and the source-rating schema; older directories remain audit lineage. After rating, run one bounded QA pass, then either summarize the collected corpus under explicit scope or restart scouting with the same v1 fields. Do not create another metadata acceptance ladder unless an integrity failure occurs.

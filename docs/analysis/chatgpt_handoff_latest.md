@@ -6,6 +6,26 @@ Last updated: `2026-07-26`
 
 ---
 
+## 2026-07-26 — Claim-oriented compensation QA/rating phase closed
+
+### Current State
+
+- **Authority/start:** began at tracked descendant `5b1e883a871181f30098dd1d661dc0f5c343db4b`; the accepted registry, final categorization, 25 direct immutable inputs, and inherited five-package chain passed.
+- **Decision:** `claim_oriented_phase_closed_gabriel_claim_rating_ready`; a separately authorized GABRIEL claim-oriented rating run may use 643 exact-span rows. Global/full readiness and analysis-facing promotion remain false.
+- **Categories:** all 8,939 records retain exactly one primary category. The derived claim-ready aggregate is 1,505: 862 quantitative direct-text candidates and 643 qualitative mechanism candidates. Navigation is 614; companion/context 5,078; quarantine 121; write-off 1,621.
+- **Causal boundary:** causal-candidate-supporting is zero before rating. The scaffold permits only explicitly provisional hypotheses after evidence-specific rating; final causal, wage-gap, regression, and national claims remain forbidden.
+- **Codebook:** stable `attribute_taxonomy_version=v1`, 13 fixed attributes, controlled presence/direction/strength/relevance/reason/quote/boundary fields, and exact-quote enforcement.
+- **Hardening:** 69 new tests, 382 required predecessor tests, and 75 immediate-prior tests pass (526/526 total). Dashboard/repository builds, schema validation, 60 ingestion tests, coverage audit, partial-output guards, and idempotent resume pass.
+- **Forbidden actions:** no PDF/page, URL/download, OCR, model/GABRIEL, extraction, selection, ingestion run, codification, cross-document statistics, wage-gap, regression, or final causal work occurred; no upstream ledger changed.
+
+### Interpretation
+
+This closes the QA/rating-preparation phase without pretending the evidence is perfect. Accepted structured values support document-level direct-text claims; exact spans support bounded documentary mechanism claims. Weak evidence remains excluded. Future GABRIEL work measures claim-oriented attributes and provisional directions; it does not decide causality.
+
+### Next Move
+
+Use `next_gabriel_claim_oriented_attribute_rating_prompt.md` only after separate authorization. Supply only the 643 exact spans, enforce codebook v1 and exact quotes, quarantine invalid output, and produce no cross-row statistics, wage gaps, regressions, or final causal conclusions.
+
 ## 2026-07-26 — Compensation-evidence QA categorization phase closed
 
 ### Current State

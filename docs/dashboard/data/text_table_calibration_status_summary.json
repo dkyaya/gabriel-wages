@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-26T17:10:08Z",
+  "generated_at": "2026-07-26T18:03:52Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -80,7 +80,7 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "calibration_phase": "compensation_extraction_final_qa_categorization_phase_closed_gabriel_attribute_analysis_ready",
+  "calibration_phase": "compensation_extraction_claim_oriented_phase_closed_gabriel_claim_rating_ready",
   "latest_calibration_id": "TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24",
   "latest_calibration_review_id": "TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24",
   "latest_adjudication_prep_id": "TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24",
@@ -330,6 +330,15 @@
   "gabriel_attribute_analysis_ready": true,
   "gabriel_attribute_analysis_ready_rows": 643,
   "final_qa_categorization_global_analysis_readiness": false,
+  "claim_oriented_phase_close_completed": true,
+  "claim_oriented_phase_close_decision": "claim_oriented_phase_closed_gabriel_claim_rating_ready",
+  "claim_oriented_phase_close_path": "docs/analysis/compensation_extraction/COMPENSATION-EVIDENCE-CLAIM-ORIENTED-QA-RATING-AND-GABRIEL-READINESS-FINAL-PHASE-CLOSE-2026-07-25",
+  "claim_ready_evidence_rows": 1505,
+  "quantitative_direct_text_claim_ready_rows": 862,
+  "qualitative_mechanism_claim_ready_rows": 643,
+  "gabriel_claim_rating_ready": true,
+  "gabriel_claim_rating_ready_rows": 643,
+  "claim_oriented_global_analysis_readiness": false,
   "limited_qualitative_usage_registry_review_global_analysis_readiness": false,
   "limited_qualitative_usage_layer_acceptance_global_analysis_readiness": false,
   "limited_qualitative_usage_layer_qa_global_analysis_readiness": false,

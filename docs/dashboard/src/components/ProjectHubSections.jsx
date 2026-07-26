@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "compensation_extraction_claim_oriented_phase_closed_gabriel_claim_rating_ready"
+              ? "Claim-oriented compensation phase closed; bounded GABRIEL claim rating may proceed"
+              : textTableCalibrationStatus.calibration_phase ===
             "compensation_extraction_final_qa_categorization_phase_closed_gabriel_attribute_analysis_ready"
               ? "Compensation-evidence QA phase closed; bounded GABRIEL attribute analysis may proceed"
               : textTableCalibrationStatus.calibration_phase ===
@@ -870,6 +873,18 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "compensation_extraction_claim_oriented_phase_closed_gabriel_claim_rating_ready" ? (
+            <>
+              The claim-oriented QA/rating phase is closed with all 8,939 records assigned to
+              exactly one primary category. The bounded claim-ready aggregate contains 1,505
+              records: 862 accepted quantitative records with explicit structured values and
+              643 exact-span qualitative mechanism records. The 643 exact-span rows are ready
+              for a separately authorized GABRIEL claim-rating run under the stable v1 codebook.
+              Causal-candidate support remains unrated and provisional; global readiness,
+              cross-document statistics, wage gaps, regressions, and final causal claims remain
+              closed.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "compensation_extraction_final_qa_categorization_phase_closed_gabriel_attribute_analysis_ready" ? (
             <>
               The QA/debugging/categorization phase is closed with 8,939 records assigned to

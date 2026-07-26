@@ -1,0 +1,3 @@
+# Claim-oriented phase-close stress test
+
+The focused suite covers 56 adversarial failure modes across immutable inputs, exact-one categorization, direct-value support, exclusion lanes, provisional causal boundaries, the stable v1 codebook, rating schema, prompts, dashboard closure, reruns, partial outputs, relays, and forbidden work. All 69 focused tests passed after repairing shared-taxonomy mutation, missing source-lane enforcement, and exact descendant-dashboard compatibility. Six required predecessor suites passed 382/382; the immediate prior final-categorization suite passed 75/75. No guardrail was weakened.

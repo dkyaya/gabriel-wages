@@ -188,6 +188,7 @@ def validate_dashboard_state(calibration: dict[str, Any], readiness: dict[str, A
         "compensation_extraction_limited_qualitative_usage_registry_review_pass_registry_acceptance_prompt_allowed",
         "compensation_extraction_limited_qualitative_usage_registry_acceptance_registered_strategy_prompt_allowed",
         "compensation_extraction_final_qa_categorization_phase_closed_gabriel_attribute_analysis_ready",
+        "compensation_extraction_claim_oriented_phase_closed_gabriel_claim_rating_ready",
     }
     if calibration.get("calibration_phase") not in allowed_phases:
         raise RuntimeError("Dashboard phase is inconsistent with registry acceptance")
@@ -197,6 +198,7 @@ def validate_dashboard_state(calibration: dict[str, Any], readiness: dict[str, A
         "limited_qualitative_usage_registry_review_pass_registry_acceptance_prompt_allowed_global_analysis_closed",
         "limited_qualitative_usage_registry_acceptance_registered_strategy_only_global_analysis_closed",
         "final_qa_categorization_closed_gabriel_attribute_ready_global_analysis_closed",
+        "claim_oriented_phase_closed_gabriel_claim_rating_ready_global_analysis_closed",
     }
     if readiness.get("overall_status") not in allowed_overall:
         raise RuntimeError("Dashboard overall registry-acceptance state is inconsistent")

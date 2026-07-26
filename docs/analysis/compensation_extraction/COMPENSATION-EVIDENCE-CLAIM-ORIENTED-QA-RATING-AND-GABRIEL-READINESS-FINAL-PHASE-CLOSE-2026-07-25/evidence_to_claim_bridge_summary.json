@@ -1,0 +1,9 @@
+{
+  "allowed_now": 2,
+  "claim_types": 6,
+  "exclusion_label": 1,
+  "forbidden_final": 1,
+  "future_separate_summary_required": 1,
+  "global_analysis_readiness": false,
+  "provisional_scaffold_only": 1
+}

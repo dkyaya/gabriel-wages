@@ -1,0 +1,260 @@
+{
+  "attribute_taxonomy_version": "v1",
+  "attributes": [
+    {
+      "attribute_id": "automatic_raise_mechanism",
+      "claim_relevance": [
+        "direct_text",
+        "documentary_mechanism",
+        "causal_candidate"
+      ],
+      "definition": "Raises occur automatically through COLA, CPI, steps, seniority, a schedule, or a contract formula.",
+      "exclusion_rule": "Do not mark present for a one-time discretionary increase without an automatic rule.",
+      "positive_examples": [
+        "CPI-linked adjustment",
+        "annual step progression",
+        "formula-driven schedule increase"
+      ],
+      "short_label": "Automatic raise mechanism"
+    },
+    {
+      "attribute_id": "bargaining_power_signal",
+      "claim_relevance": [
+        "documentary_mechanism",
+        "causal_candidate"
+      ],
+      "definition": "Text shows bargaining, arbitration, settlement, memorandum, or negotiated leverage affecting pay.",
+      "exclusion_rule": "Do not infer bargaining power from the mere existence of a CBA.",
+      "positive_examples": [
+        "arbitration award sets compensation",
+        "negotiated memorandum changes pay"
+      ],
+      "short_label": "Bargaining power signal"
+    },
+    {
+      "attribute_id": "market_or_comparability_pressure",
+      "claim_relevance": [
+        "documentary_mechanism",
+        "causal_candidate"
+      ],
+      "definition": "Pay is justified by peer comparisons, market evidence, recruitment, retention, or competitiveness.",
+      "exclusion_rule": "Do not infer market pressure from a wage schedule alone.",
+      "positive_examples": [
+        "peer-city comparison",
+        "recruitment difficulty",
+        "retention adjustment"
+      ],
+      "short_label": "Market or comparability pressure"
+    },
+    {
+      "attribute_id": "rank_or_specialization_premium",
+      "claim_relevance": [
+        "direct_text",
+        "documentary_mechanism",
+        "causal_candidate"
+      ],
+      "definition": "Pay differs by rank, classification, certification, specialty, hazard, assignment, or role.",
+      "exclusion_rule": "Do not mark present when titles differ but no compensation difference is stated.",
+      "positive_examples": [
+        "rank differential",
+        "certification premium",
+        "special assignment rate"
+      ],
+      "short_label": "Rank or specialization premium"
+    },
+    {
+      "attribute_id": "implementation_or_retroactivity_advantage",
+      "claim_relevance": [
+        "direct_text",
+        "documentary_mechanism",
+        "causal_candidate"
+      ],
+      "definition": "Text gives effective dates, retroactivity, staged increases, or implementation timing that may affect compensation.",
+      "exclusion_rule": "Do not assign a directional advantage from a date alone without comparative support.",
+      "positive_examples": [
+        "retroactive raise",
+        "staged effective dates",
+        "implementation schedule"
+      ],
+      "short_label": "Implementation or retroactivity advantage"
+    },
+    {
+      "attribute_id": "fiscal_constraint_signal",
+      "claim_relevance": [
+        "documentary_mechanism",
+        "causal_candidate"
+      ],
+      "definition": "Text cites affordability, budgets, funding, fiscal crisis, tax limits, or municipal finance constraints.",
+      "exclusion_rule": "Do not infer a fiscal constraint from government authorship alone.",
+      "positive_examples": [
+        "budget limit",
+        "affordability finding",
+        "funding shortfall"
+      ],
+      "short_label": "Fiscal constraint signal"
+    },
+    {
+      "attribute_id": "parity_or_internal_equity_signal",
+      "claim_relevance": [
+        "documentary_mechanism",
+        "causal_candidate"
+      ],
+      "definition": "Text invokes parity, compression, internal equity, or alignment with another employee group.",
+      "exclusion_rule": "Do not infer parity merely because two groups receive the same percentage increase.",
+      "positive_examples": [
+        "parity adjustment",
+        "compression relief",
+        "internal equity alignment"
+      ],
+      "short_label": "Parity or internal equity signal"
+    },
+    {
+      "attribute_id": "non_base_compensation_signal",
+      "claim_relevance": [
+        "direct_text",
+        "context_only"
+      ],
+      "definition": "Text concerns overtime, stipends, longevity, certification, healthcare, pensions, leave, equipment, or other non-base compensation.",
+      "exclusion_rule": "Do not treat non-base compensation as base-wage evidence.",
+      "positive_examples": [
+        "longevity stipend",
+        "overtime provision",
+        "healthcare contribution"
+      ],
+      "short_label": "Non-base compensation signal"
+    },
+    {
+      "attribute_id": "base_wage_direct_value",
+      "claim_relevance": [
+        "direct_text"
+      ],
+      "definition": "Text directly reports a base wage, rate, salary, step, grade, pay band, percentage raise, or effective date.",
+      "exclusion_rule": "Do not mark present for inferred, annualized, or coerced values lacking direct support.",
+      "positive_examples": [
+        "3 percent raise",
+        "$25.00 hourly rate",
+        "salary schedule effective July 1"
+      ],
+      "short_label": "Base wage direct value"
+    },
+    {
+      "attribute_id": "safety_advantage_signal",
+      "claim_relevance": [
+        "causal_candidate"
+      ],
+      "definition": "Text suggests a mechanism that may advantage police, fire, or public-safety compensation relative to non-safety compensation.",
+      "exclusion_rule": "Do not infer advantage from a safety occupation label without comparative mechanism language.",
+      "positive_examples": [
+        "safety-only premium",
+        "police comparability provision",
+        "fire-specific retention increase"
+      ],
+      "short_label": "Safety advantage signal"
+    },
+    {
+      "attribute_id": "non_safety_constraint_signal",
+      "claim_relevance": [
+        "causal_candidate"
+      ],
+      "definition": "Text suggests non-safety pay is constrained, standardized, delayed, weaker, or less differentiated.",
+      "exclusion_rule": "Do not infer constraint solely from a non-safety occupation label.",
+      "positive_examples": [
+        "delayed implementation",
+        "standardized non-safety schedule",
+        "explicit constraint on adjustments"
+      ],
+      "short_label": "Non-safety constraint signal"
+    },
+    {
+      "attribute_id": "gap_narrowing_signal",
+      "claim_relevance": [
+        "documentary_mechanism",
+        "causal_candidate"
+      ],
+      "definition": "Text suggests parity, equity, compression relief, or shared raises that may narrow safety/non-safety differences.",
+      "exclusion_rule": "Do not claim an actual narrowed gap without separately approved quantitative comparison.",
+      "positive_examples": [
+        "equity adjustment",
+        "compression correction",
+        "shared across-unit increase"
+      ],
+      "short_label": "Gap narrowing signal"
+    },
+    {
+      "attribute_id": "weak_or_no_claim_support",
+      "claim_relevance": [
+        "not_claim_ready"
+      ],
+      "definition": "Evidence is too weak for claim support in this phase and must carry a specific reason code.",
+      "exclusion_rule": "Do not use when another attribute is clearly supported by the supplied evidence.",
+      "positive_examples": [
+        "ambiguous direction",
+        "missing comparison",
+        "insufficient evidence"
+      ],
+      "short_label": "Weak or no claim support"
+    }
+  ],
+  "final_causal_decision_allowed": false,
+  "not_present_policy": "Use attribute_present=false with a specific reason_code; do not use null or no_good.",
+  "rating_enums": {
+    "attribute_present": [
+      true,
+      false
+    ],
+    "claim_relevance": [
+      "direct_text_claim",
+      "documentary_mechanism_claim",
+      "provisional_causal_candidate",
+      "context_only",
+      "not_claim_ready"
+    ],
+    "claim_support": [
+      "direct_text",
+      "documentary_mechanism",
+      "causal_candidate",
+      "not_supported"
+    ],
+    "direction_of_pressure": [
+      "safety_advantage",
+      "non_safety_advantage",
+      "gap_narrowing",
+      "neutral_or_unclear",
+      "not_applicable"
+    ],
+    "evidence_quality": [
+      "high",
+      "medium",
+      "low"
+    ],
+    "evidence_strength": [
+      "strong",
+      "moderate",
+      "weak",
+      "not_supported"
+    ],
+    "mechanism_strength": [
+      "strong",
+      "moderate",
+      "weak",
+      "none"
+    ],
+    "scout_priority": [
+      "high",
+      "medium",
+      "low"
+    ]
+  },
+  "required_rating_fields": [
+    "attribute_present",
+    "direction_of_pressure",
+    "evidence_strength",
+    "claim_relevance",
+    "reason_code",
+    "supporting_quote",
+    "claim_boundary"
+  ],
+  "schema_version": "claim_oriented_compensation_attribute_taxonomy_v1",
+  "stability_contract": "Definitions and identifiers are fixed across current evidence, future scouting, verification, extraction, and GABRIEL rating batches; changes require a versioned migration note.",
+  "supporting_quote_policy": "If a source span is supplied, supporting_quote must be empty when unsupported or an exact substring when supported."
+}

@@ -1,0 +1,7 @@
+claim_type,current_status,eligible_categories,claim_boundary,next_requirement
+direct_text_claim,allowed_now,quantitative_direct_text_claim_ready|qualitative_mechanism_claim_ready,State only what the collected document/span or accepted structured extracted value reports.,cite evidence ID and preserve document-level scope
+documentary_mechanism_claim,allowed_now,qualitative_mechanism_claim_ready,State that collected documents contain specified mechanism language; do not claim wage effects.,use exact span and provenance
+provisional_pattern_claim,future_separate_summary_required,none_in_this_task,May describe the collected corpus only after approved ratings and a separate summary task.,bounded rating plus approved descriptive aggregation
+causal_candidate_claim,allowed_only_as_provisional_scaffold,qualitative_mechanism_claim_ready_after_rating,Phrase only as a plausible contributor in collected evidence that requires broader data and testing.,claim-oriented rating and separate inferred-causal-claim review
+not_supported_this_phase,allowed_as_exclusion_label,navigation_only|companion_context_only|quarantined|write_off_this_phase,Record why evidence cannot support a claim this phase.,none unless a future claim requires repair
+forbidden_final_claim,forbidden,none,"No national generalization, final wage-gap estimate, regression result, or causal effect conclusion.",separate accepted quantitative analysis and causal-claim QA

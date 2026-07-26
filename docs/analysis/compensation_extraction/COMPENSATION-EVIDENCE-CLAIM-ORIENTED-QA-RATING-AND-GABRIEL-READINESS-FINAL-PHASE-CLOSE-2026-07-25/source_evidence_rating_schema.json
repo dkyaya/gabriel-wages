@@ -1,0 +1,166 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "invariants": {
+    "causal_candidate_must_be_provisional": true,
+    "final_causal_claims_allowed": false,
+    "one_rating_per_attribute_id": true,
+    "supporting_quote_exact_substring_when_span_supplied": true,
+    "wage_gap_or_regression_claims_allowed": false
+  },
+  "properties": {
+    "attribute_ratings": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "attribute_id": {
+            "enum": [
+              "automatic_raise_mechanism",
+              "bargaining_power_signal",
+              "market_or_comparability_pressure",
+              "rank_or_specialization_premium",
+              "implementation_or_retroactivity_advantage",
+              "fiscal_constraint_signal",
+              "parity_or_internal_equity_signal",
+              "non_base_compensation_signal",
+              "base_wage_direct_value",
+              "safety_advantage_signal",
+              "non_safety_constraint_signal",
+              "gap_narrowing_signal",
+              "weak_or_no_claim_support"
+            ]
+          },
+          "attribute_present": {
+            "type": "boolean"
+          },
+          "claim_boundary": {
+            "maxLength": 300,
+            "minLength": 1,
+            "type": "string"
+          },
+          "claim_relevance": {
+            "enum": [
+              "direct_text_claim",
+              "documentary_mechanism_claim",
+              "provisional_causal_candidate",
+              "context_only",
+              "not_claim_ready"
+            ]
+          },
+          "claim_support": {
+            "enum": [
+              "direct_text",
+              "documentary_mechanism",
+              "causal_candidate",
+              "not_supported"
+            ]
+          },
+          "direction_of_pressure": {
+            "enum": [
+              "safety_advantage",
+              "non_safety_advantage",
+              "gap_narrowing",
+              "neutral_or_unclear",
+              "not_applicable"
+            ]
+          },
+          "evidence_quality": {
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ]
+          },
+          "evidence_strength": {
+            "enum": [
+              "strong",
+              "moderate",
+              "weak",
+              "not_supported"
+            ]
+          },
+          "mechanism_strength": {
+            "enum": [
+              "strong",
+              "moderate",
+              "weak",
+              "none"
+            ]
+          },
+          "reason_code": {
+            "maxLength": 80,
+            "minLength": 1,
+            "type": "string"
+          },
+          "scout_priority": {
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ]
+          },
+          "supporting_quote": {
+            "maxLength": 500,
+            "type": "string"
+          }
+        },
+        "required": [
+          "attribute_id",
+          "attribute_present",
+          "direction_of_pressure",
+          "evidence_strength",
+          "claim_relevance",
+          "reason_code",
+          "supporting_quote",
+          "claim_boundary",
+          "mechanism_strength",
+          "claim_support",
+          "evidence_quality",
+          "scout_priority"
+        ],
+        "type": "object"
+      },
+      "maxItems": 13,
+      "minItems": 13,
+      "type": "array"
+    },
+    "attribute_taxonomy_version": {
+      "const": "v1"
+    },
+    "evidence_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "overall_evidence_quality": {
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "overall_scout_priority": {
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "qa_status": {
+      "enum": [
+        "schema_valid_exact_quote_verified",
+        "schema_valid_no_supported_attribute",
+        "quarantined_model_output"
+      ]
+    }
+  },
+  "required": [
+    "evidence_id",
+    "attribute_taxonomy_version",
+    "attribute_ratings",
+    "overall_evidence_quality",
+    "overall_scout_priority",
+    "qa_status"
+  ],
+  "title": "GABRIEL claim-oriented compensation evidence rating v1",
+  "type": "object"
+}

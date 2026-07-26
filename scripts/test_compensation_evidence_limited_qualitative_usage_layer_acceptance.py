@@ -323,6 +323,7 @@ class MaterializedAcceptanceTests(unittest.TestCase):
                 "compensation_extraction_limited_qualitative_usage_registry_review_pass_registry_acceptance_prompt_allowed",
                 "compensation_extraction_limited_qualitative_usage_registry_acceptance_registered_strategy_prompt_allowed",
                 "compensation_extraction_final_qa_categorization_phase_closed_gabriel_attribute_analysis_ready",
+                "compensation_extraction_claim_oriented_phase_closed_gabriel_claim_rating_ready",
             },
         )
         self.assertTrue(calibration["limited_qualitative_usage_layer_acceptance_registered"])

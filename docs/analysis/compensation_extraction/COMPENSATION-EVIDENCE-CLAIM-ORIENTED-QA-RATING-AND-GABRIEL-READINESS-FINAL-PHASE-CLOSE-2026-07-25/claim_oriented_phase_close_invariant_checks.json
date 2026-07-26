@@ -1,0 +1,27 @@
+{
+  "all_invariants_passed": true,
+  "checks": {
+    "all_8939_records_have_one_primary_category": true,
+    "category_counts_reconcile": true,
+    "causal_candidate_language_is_provisional": true,
+    "causal_candidate_manifest_empty_before_rating": true,
+    "claim_ready_excludes_navigation_quarantine_writeoff": true,
+    "dashboard_global_analysis_readiness_false": true,
+    "final_causal_wage_gap_regression_claims_forbidden": true,
+    "future_prompt_is_claim_oriented_and_phase_bounded": true,
+    "gabriel_rating_manifest_is_643_exact_span_rows": true,
+    "idempotent_resume_supported": true,
+    "immutable_input_hashes_verified": true,
+    "partial_outputs_cannot_claim_complete": true,
+    "prior_registry_acceptance_and_final_categorization_verified": true,
+    "quantitative_direct_claims_have_explicit_accepted_values": true,
+    "rating_schema_has_all_continuous_fields": true,
+    "repo_cleanup_plan_preserves_audit_lineage": true,
+    "taxonomy_forbids_vague_null_no_good": true,
+    "taxonomy_has_13_stable_attributes": true,
+    "taxonomy_version_is_v1": true,
+    "weak_evidence_can_be_written_off": true
+  },
+  "schema_version": "compensation_evidence_claim_oriented_phase_close_v1",
+  "task_id": "COMPENSATION-EVIDENCE-CLAIM-ORIENTED-QA-RATING-AND-GABRIEL-READINESS-FINAL-PHASE-CLOSE-2026-07-25"
+}

@@ -6,6 +6,27 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-26 (Claim-oriented compensation QA/rating phase closed)
+
+**Did**
+- Reverified the accepted registry and final-categorization chain, 25 immutable direct inputs, five inherited package hashes, and all 8,939 evidence records.
+- Built a claim-oriented registry with exactly one primary category per record and a 1,505-row claim-ready aggregate: 862 accepted quantitative records with explicit structured values plus 643 exact-span qualitative mechanism records.
+- Preserved 614 ambiguous rows as navigation-only, 5,078 non-base/reference rows as companion context, 121 restricted/conflict rows as quarantined, and 1,621 unavailable/exception rows as written off.
+- Added a stable `v1` 13-attribute codebook, controlled source-rating schema, provisional claim scaffold, evidence-to-claim bridge, repository lineage inventory, and 69 focused tests across 56 adversarial modes. All 526 focused tests and 60 ingestion tests passed.
+
+**Decisions**
+- Decision is `claim_oriented_phase_closed_gabriel_claim_rating_ready`. A separately authorized bounded GABRIEL claim-oriented rating run may use only the 643 exact-span rows.
+- No row is labeled causal-candidate-supporting before rating. Direct document/value claims and documentary mechanism claims are boundedly allowed; global readiness, cross-document statistics, wage gaps, regressions, and final causal claims remain closed.
+
+**Surprises/breakage**
+- Adversarial tests exposed shared nested taxonomy objects and missing source-lane enforcement; both were fixed with regression coverage. Predecessor dashboard validators also required the exact new descendant phase; only their phase allowlists changed.
+
+**Corpus snapshot**
+- `contracts=64`, `discourse=0`, `coverage=64`, `cities=19`; 28 healthy matched pairs (10 exact-cycle, 18 overlap-cycle), two exploratory adjacent matches, and six unmatched safety units.
+
+**Next steps**
+- Seek separate authorization for `next_gabriel_claim_oriented_attribute_rating_prompt.md`. Rate only the 643 exact-span rows under codebook v1; compute no cross-row statistics, wage gaps, regressions, or final causal claims.
+
 ## 2026-07-26 (Compensation-evidence QA categorization phase closed)
 
 **Did**
