@@ -980,6 +980,23 @@ COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_643_INVARIANTS_PATH = (
     COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_643_DIR
     / "gabriel_claim_rating_643_invariant_checks.json"
 )
+COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_35_REPAIR_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "COMPENSATION-EVIDENCE-GABRIEL-CLAIM-RATING-35-QUARANTINE-REPAIR-2026-07-25"
+)
+COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_35_REPAIR_DECISION_PATH = (
+    COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_35_REPAIR_DIR
+    / "gabriel_claim_rating_35_quarantine_repair_decision.json"
+)
+COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_35_REPAIR_SUMMARY_PATH = (
+    COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_35_REPAIR_DIR
+    / "gabriel_claim_oriented_attribute_ratings_643_repaired_summary.json"
+)
+COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_35_REPAIR_INVARIANTS_PATH = (
+    COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_35_REPAIR_DIR
+    / "gabriel_claim_rating_35_quarantine_repair_invariant_checks.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -2531,6 +2548,71 @@ def gabriel_claim_rating_643_status() -> tuple[bool, dict[str, Any]]:
     return True, decision
 
 
+def gabriel_claim_rating_35_repair_status() -> tuple[bool, dict[str, Any]]:
+    """Fail closed unless the explicit 35-ID repair reconciles to 643."""
+    required = (
+        COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_35_REPAIR_DECISION_PATH,
+        COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_35_REPAIR_SUMMARY_PATH,
+        COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_35_REPAIR_INVARIANTS_PATH,
+        COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_35_REPAIR_DIR
+        / "gabriel_claim_rating_35_quarantine_repair_summary.json",
+        COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_35_REPAIR_DIR
+        / "gabriel_claim_rating_35_repair_preflight_report.md",
+        COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_35_REPAIR_DIR
+        / "gabriel_claim_oriented_attribute_ratings_643_repaired.csv",
+        COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_35_REPAIR_DIR
+        / "gabriel_claim_oriented_attribute_rating_remaining_quarantine.csv",
+        COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_35_REPAIR_DIR
+        / "next_gabriel_claim_rating_summary_review_prompt.md",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    decision = read_json(
+        COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_35_REPAIR_DECISION_PATH
+    )
+    summary = read_json(
+        COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_35_REPAIR_SUMMARY_PATH
+    )
+    invariants = read_json(
+        COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_35_REPAIR_INVARIANTS_PATH
+    )
+    valid_rows = read_csv(
+        COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_35_REPAIR_DIR
+        / "gabriel_claim_oriented_attribute_ratings_643_repaired.csv"
+    )
+    quarantine_rows = read_csv(
+        COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_35_REPAIR_DIR
+        / "gabriel_claim_oriented_attribute_rating_remaining_quarantine.csv"
+    )
+    accepted_decisions = {
+        "gabriel_claim_rating_643_repaired_summary_review_allowed",
+        "gabriel_claim_rating_643_repaired_with_remaining_quarantine",
+    }
+    if not (
+        decision.get("task_id")
+        == "COMPENSATION-EVIDENCE-GABRIEL-CLAIM-RATING-35-QUARANTINE-REPAIR-2026-07-25"
+        and decision.get("decision") in accepted_decisions
+        and decision.get("attribute_taxonomy_version") == "v1.1"
+        and decision.get("gabriel_api_ran") is True
+        and decision.get("preflight_passed") is True
+        and decision.get("original_valid_rows") == 608
+        and decision.get("original_valid_rows_unchanged") == 608
+        and decision.get("repair_input_rows") == 35
+        and decision.get("repaired_valid_rows") + decision.get("remaining_quarantine_rows") == 35
+        and decision.get("total_valid_rows") == len(valid_rows)
+        and decision.get("remaining_quarantine_rows") == len(quarantine_rows)
+        and len(valid_rows) + len(quarantine_rows) == 643
+        and decision.get("summary_review_allowed") is True
+        and decision.get("global_analysis_readiness") is False
+        and decision.get("no_wage_effect_or_final_causal_claims") is True
+        and decision.get("cross_row_statistics_computed") is False
+        and summary == decision
+        and invariants.get("all_invariants_passed") is True
+    ):
+        raise ValueError("GABRIEL claim-rating 35-row repair fails dashboard gates")
+    return True, decision
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -3249,6 +3331,10 @@ def build_analysis_readiness(
         gabriel_claim_rating_643_completed,
         gabriel_claim_rating_643_decision,
     ) = gabriel_claim_rating_643_status()
+    (
+        gabriel_claim_rating_35_repair_completed,
+        gabriel_claim_rating_35_repair_decision,
+    ) = gabriel_claim_rating_35_repair_status()
     if scale_1000_targeted_qa_completed and (
         scale_1000_targeted_qa_decision.get("qa_pass") is not True
         or scale_1000_targeted_qa_decision.get(
@@ -3295,6 +3381,14 @@ def build_analysis_readiness(
     return {
         "metadata": metadata,
         "overall_status": (
+            (
+                "gabriel_claim_rating_643_repaired_summary_review_allowed_global_analysis_closed"
+                if gabriel_claim_rating_35_repair_decision.get("decision")
+                == "gabriel_claim_rating_643_repaired_summary_review_allowed"
+                else "gabriel_claim_rating_643_repaired_with_remaining_quarantine_summary_review_allowed_global_analysis_closed"
+            )
+            if gabriel_claim_rating_35_repair_completed
+            else
             (
                 "gabriel_claim_rating_643_completed_summary_review_allowed_global_analysis_closed"
                 if gabriel_claim_rating_643_decision.get("decision")
@@ -3861,8 +3955,23 @@ def build_analysis_readiness(
                     if gabriel_claim_rating_643_completed else 0
                 ),
                 "gabriel_claim_rating_summary_review_allowed": (
-                    bool(gabriel_claim_rating_643_decision.get("summary_review_allowed", False))
+                    bool(gabriel_claim_rating_35_repair_decision.get("summary_review_allowed", False))
+                    if gabriel_claim_rating_35_repair_completed
+                    else bool(gabriel_claim_rating_643_decision.get("summary_review_allowed", False))
                     if gabriel_claim_rating_643_completed else False
+                ),
+                "gabriel_claim_rating_35_repair_completed": gabriel_claim_rating_35_repair_completed,
+                "gabriel_claim_rating_35_repair_decision": (
+                    gabriel_claim_rating_35_repair_decision.get("decision")
+                    if gabriel_claim_rating_35_repair_completed else None
+                ),
+                "gabriel_claim_rating_repaired_total_valid_rows": (
+                    int(gabriel_claim_rating_35_repair_decision.get("total_valid_rows", 0))
+                    if gabriel_claim_rating_35_repair_completed else 0
+                ),
+                "gabriel_claim_rating_repaired_remaining_quarantine_rows": (
+                    int(gabriel_claim_rating_35_repair_decision.get("remaining_quarantine_rows", 0))
+                    if gabriel_claim_rating_35_repair_completed else 0
                 ),
                 "gabriel_claim_rating_global_analysis_readiness": False,
                 "limited_qualitative_usage_registry_review_global_analysis_readiness": False,
@@ -7759,9 +7868,21 @@ def build_text_table_calibration_status_summary(
             gabriel_claim_rating_643_completed,
             gabriel_claim_rating_643_decision,
         ) = gabriel_claim_rating_643_status()
+        (
+            gabriel_claim_rating_35_repair_completed,
+            gabriel_claim_rating_35_repair_decision,
+        ) = gabriel_claim_rating_35_repair_status()
         return {
             **metadata,
             "calibration_phase": (
+                (
+                    "compensation_extraction_gabriel_claim_rating_643_repaired_summary_review_allowed"
+                    if gabriel_claim_rating_35_repair_decision.get("decision")
+                    == "gabriel_claim_rating_643_repaired_summary_review_allowed"
+                    else "compensation_extraction_gabriel_claim_rating_643_repaired_with_remaining_quarantine_summary_review_allowed"
+                )
+                if gabriel_claim_rating_35_repair_completed
+                else
                 (
                     "compensation_extraction_gabriel_claim_rating_643_completed_summary_review_allowed"
                     if gabriel_claim_rating_643_decision.get("decision")
@@ -8843,8 +8964,27 @@ def build_text_table_calibration_status_summary(
                 if gabriel_claim_rating_643_completed else 0
             ),
             "gabriel_claim_rating_summary_review_allowed": (
-                bool(gabriel_claim_rating_643_decision.get("summary_review_allowed", False))
+                bool(gabriel_claim_rating_35_repair_decision.get("summary_review_allowed", False))
+                if gabriel_claim_rating_35_repair_completed
+                else bool(gabriel_claim_rating_643_decision.get("summary_review_allowed", False))
                 if gabriel_claim_rating_643_completed else False
+            ),
+            "gabriel_claim_rating_35_repair_completed": gabriel_claim_rating_35_repair_completed,
+            "gabriel_claim_rating_35_repair_decision": (
+                gabriel_claim_rating_35_repair_decision.get("decision")
+                if gabriel_claim_rating_35_repair_completed else None
+            ),
+            "gabriel_claim_rating_35_repair_path": (
+                relative(COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_35_REPAIR_DIR)
+                if gabriel_claim_rating_35_repair_completed else None
+            ),
+            "gabriel_claim_rating_repaired_total_valid_rows": (
+                int(gabriel_claim_rating_35_repair_decision.get("total_valid_rows", 0))
+                if gabriel_claim_rating_35_repair_completed else 0
+            ),
+            "gabriel_claim_rating_repaired_remaining_quarantine_rows": (
+                int(gabriel_claim_rating_35_repair_decision.get("remaining_quarantine_rows", 0))
+                if gabriel_claim_rating_35_repair_completed else 0
             ),
             "gabriel_claim_rating_global_analysis_readiness": False,
             "limited_qualitative_usage_registry_review_global_analysis_readiness": False,

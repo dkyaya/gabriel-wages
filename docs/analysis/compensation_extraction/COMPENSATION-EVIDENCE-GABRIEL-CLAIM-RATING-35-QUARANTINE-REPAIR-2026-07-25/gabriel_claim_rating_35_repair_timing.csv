@@ -1,0 +1,2 @@
+stage,elapsed_seconds,repair_input_rows,resumed_repaired_rows,new_request_attempts,repaired_valid_rows,remaining_quarantine_rows,parallel,timeout_seconds,max_attempts
+repair_live,186.971359,35,0,45,28,7,4,120.0,2

@@ -256,6 +256,8 @@ def validate_dashboard_state(calibration: dict[str, Any], readiness: dict[str, A
         "compensation_extraction_claim_oriented_phase_closed_gabriel_claim_rating_ready",
         "compensation_extraction_gabriel_claim_rating_643_completed_summary_review_allowed",
         "compensation_extraction_gabriel_claim_rating_643_completed_with_quarantine",
+        "compensation_extraction_gabriel_claim_rating_643_repaired_summary_review_allowed",
+        "compensation_extraction_gabriel_claim_rating_643_repaired_with_remaining_quarantine_summary_review_allowed",
     }
     if calibration.get("calibration_phase") not in allowed_phases:
         raise RuntimeError("Dashboard phase is inconsistent with phase-close categorization")
@@ -267,6 +269,8 @@ def validate_dashboard_state(calibration: dict[str, Any], readiness: dict[str, A
         "claim_oriented_phase_closed_gabriel_claim_rating_ready_global_analysis_closed",
         "gabriel_claim_rating_643_completed_summary_review_allowed_global_analysis_closed",
         "gabriel_claim_rating_643_completed_with_quarantine_global_analysis_closed",
+        "gabriel_claim_rating_643_repaired_summary_review_allowed_global_analysis_closed",
+        "gabriel_claim_rating_643_repaired_with_remaining_quarantine_summary_review_allowed_global_analysis_closed",
     }
     if readiness.get("overall_status") not in allowed_overall:
         raise RuntimeError("Dashboard overall status is inconsistent with phase close")

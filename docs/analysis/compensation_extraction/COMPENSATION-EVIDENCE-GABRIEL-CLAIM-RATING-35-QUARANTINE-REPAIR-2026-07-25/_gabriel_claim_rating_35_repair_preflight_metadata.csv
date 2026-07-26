@@ -1,0 +1,5 @@
+evidence_id,stage,attempt,request_id,backend,model,status,schema_valid,input_chars,input_tokens,output_tokens,total_tokens,elapsed_seconds,error_type,error_code,raw_prompt_saved,raw_response_saved
+qualitative:lobs_105175a47d0bf328006c847a,repair_preflight,1,resp_0be0d18273a046f6006a6662b496c081949f08dd2ae2ee7fcd,huit_openai_responses_direct_sdk,gpt-5.4-nano,success,true,5114,3164,1549,4713,13.410564,,,false,false
+qualitative:lobs_04f9eb5b8890fe6d4dc6eeb3,repair_preflight,1,resp_0bb2acff32436fd7006a6662b496608196aaf3f6d987280970,huit_openai_responses_direct_sdk,gpt-5.4-nano,success,true,5100,3165,1674,4839,14.490722,,,false,false
+qualitative:lobs_36b39fbc5f98ee94b6d9cd7a,repair_preflight,1,resp_039433c9d2c71cea006a6662c1a2808196a77a52f37e3e6c5d,huit_openai_responses_direct_sdk,gpt-5.4-nano,success,true,5140,3174,1828,5002,27.564921,,,false,false
+qualitative:lobs_c8faa70a5f9e6fa3e2ad3b8f,repair_preflight,1,resp_0925f4055bc828f1006a6662c2cec081908ea23b0247f39bcd,huit_openai_responses_direct_sdk,gpt-5.4-nano,success,true,5117,3178,1303,4481,24.851150,,,false,false

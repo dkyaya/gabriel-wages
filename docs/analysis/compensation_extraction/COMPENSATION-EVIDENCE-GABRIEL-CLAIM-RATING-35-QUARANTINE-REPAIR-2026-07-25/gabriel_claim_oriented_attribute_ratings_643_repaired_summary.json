@@ -1,0 +1,33 @@
+{
+  "attribute_taxonomy_version": "v1.1",
+  "backend": "huit_openai_responses_direct_sdk",
+  "bounded_model_retry_input_rows": 35,
+  "cross_row_statistics_computed": false,
+  "decision": "gabriel_claim_rating_643_repaired_with_remaining_quarantine",
+  "deterministically_repaired_rows": 0,
+  "gabriel_api_ran": true,
+  "global_analysis_readiness": false,
+  "model": "gpt-5.4-nano",
+  "no_wage_effect_or_final_causal_claims": true,
+  "original_valid_rows": 608,
+  "original_valid_rows_canonical_sha256": "eff7c4bf00327c39ccdc42a3ca99643da01f20128f1ba4f8d1c63b26e05128fc",
+  "original_valid_rows_unchanged": 608,
+  "positive_exact_quote_pass_count": 722,
+  "preflight_passed": true,
+  "preflight_rows": 4,
+  "remaining_quarantine_error_code_counts": {
+    "no_supported_attribute_without_weak_marker": 2,
+    "response_identity_or_version_invalid": 1,
+    "supporting_quote_not_exact_substring": 4
+  },
+  "remaining_quarantine_rows": 7,
+  "repair_input_rows": 35,
+  "repair_mode": "deterministic_diagnostics_then_bounded_model_retry_over_35_ids",
+  "repaired_valid_rows": 28,
+  "request_attempt_rows": 45,
+  "schema_valid_rate": 0.9891135303265941,
+  "summary_review_allowed": true,
+  "summary_review_scope": "636_schema_valid_rows_with_7_explicit_quarantine_exclusions",
+  "task_id": "COMPENSATION-EVIDENCE-GABRIEL-CLAIM-RATING-35-QUARANTINE-REPAIR-2026-07-25",
+  "total_valid_rows": 636
+}

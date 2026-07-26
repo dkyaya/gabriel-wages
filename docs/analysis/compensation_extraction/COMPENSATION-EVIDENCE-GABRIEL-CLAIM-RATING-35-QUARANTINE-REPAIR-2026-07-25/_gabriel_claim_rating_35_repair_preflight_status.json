@@ -1,0 +1,16 @@
+{
+  "coverage": {
+    "forbidden_final_claim_language": "qualitative:lobs_c8faa70a5f9e6fa3e2ad3b8f",
+    "positive_attribute_has_negative_controls": "qualitative:lobs_36b39fbc5f98ee94b6d9cd7a",
+    "supporting_quote_not_exact_substring": "qualitative:lobs_105175a47d0bf328006c847a",
+    "weak_attribute_controls_invalid": "qualitative:lobs_04f9eb5b8890fe6d4dc6eeb3"
+  },
+  "global_analysis_readiness": false,
+  "input_rows": 4,
+  "model": "gpt-5.4-nano",
+  "passed": true,
+  "raw_prompts_saved": 0,
+  "raw_responses_saved": 0,
+  "remaining_quarantine_rows": 0,
+  "valid_rows": 4
+}

@@ -1,0 +1,19 @@
+{
+  "all_invariants_passed": true,
+  "checks": {
+    "all_positive_attributes_have_reason_codes": true,
+    "all_positive_quotes_exact_substrings": true,
+    "all_valid_rows_use_v1_1_14_attributes": true,
+    "cross_row_statistics_not_computed": true,
+    "global_analysis_readiness_false": true,
+    "no_duplicate_evidence_ids": true,
+    "no_non_quarantined_id_entered_retry": true,
+    "no_raw_prompts_or_responses_saved": true,
+    "no_wage_effect_or_final_causal_claims": true,
+    "original_608_valid_rows_hash_identical": true,
+    "partial_outputs_cannot_masquerade_as_complete": true,
+    "repair_scope_exactly_35_ids": true,
+    "valid_plus_quarantine_reconciles_to_643": true
+  },
+  "task_id": "COMPENSATION-EVIDENCE-GABRIEL-CLAIM-RATING-35-QUARANTINE-REPAIR-2026-07-25"
+}

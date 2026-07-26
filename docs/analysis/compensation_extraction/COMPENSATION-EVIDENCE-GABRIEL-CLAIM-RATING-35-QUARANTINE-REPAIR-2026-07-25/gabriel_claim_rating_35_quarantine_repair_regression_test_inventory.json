@@ -1,0 +1,26 @@
+{
+  "failure_modes": [
+    "repair_scope_not_35",
+    "non_quarantined_id_in_repair",
+    "original_valid_file_hash_drift",
+    "original_valid_row_hash_drift",
+    "quarantine_id_hash_drift",
+    "deterministic_quote_fabrication",
+    "weak_attribute_control_drift",
+    "positive_attribute_negative_controls",
+    "final_claim_language",
+    "supporting_quote_paraphrase",
+    "missing_positive_reason",
+    "valid_quarantine_reconciliation_failure",
+    "duplicate_evidence_id",
+    "preflight_bypass",
+    "raw_prompt_persistence",
+    "raw_response_persistence",
+    "dashboard_global_readiness_true",
+    "future_prompt_phase_jump",
+    "partial_completion",
+    "non_idempotent_resume"
+  ],
+  "task_id": "COMPENSATION-EVIDENCE-GABRIEL-CLAIM-RATING-35-QUARANTINE-REPAIR-2026-07-25",
+  "test_suite": "scripts/test_compensation_evidence_gabriel_claim_rating_35_quarantine_repair.py"
+}

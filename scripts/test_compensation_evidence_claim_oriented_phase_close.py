@@ -322,6 +322,8 @@ class MaterializedClaimPhaseTests(unittest.TestCase):
             "compensation_extraction_claim_oriented_phase_closed_gabriel_claim_rating_ready",
             "compensation_extraction_gabriel_claim_rating_643_completed_summary_review_allowed",
             "compensation_extraction_gabriel_claim_rating_643_completed_with_quarantine",
+            "compensation_extraction_gabriel_claim_rating_643_repaired_summary_review_allowed",
+            "compensation_extraction_gabriel_claim_rating_643_repaired_with_remaining_quarantine_summary_review_allowed",
         })
         self.assertTrue(calibration["gabriel_claim_rating_ready"])
         self.assertFalse(calibration["analysis_facing_promotion_allowed"])
@@ -332,6 +334,8 @@ class MaterializedClaimPhaseTests(unittest.TestCase):
             "claim_oriented_phase_closed_gabriel_claim_rating_ready_global_analysis_closed",
             "gabriel_claim_rating_643_completed_summary_review_allowed_global_analysis_closed",
             "gabriel_claim_rating_643_completed_with_quarantine_global_analysis_closed",
+            "gabriel_claim_rating_643_repaired_summary_review_allowed_global_analysis_closed",
+            "gabriel_claim_rating_643_repaired_with_remaining_quarantine_summary_review_allowed_global_analysis_closed",
         })
         self.assertNotIn('"global_analysis_readiness": true', json.dumps(readiness, sort_keys=True).casefold())
 

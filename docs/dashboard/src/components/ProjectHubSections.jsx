@@ -756,6 +756,12 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "compensation_extraction_gabriel_claim_rating_643_repaired_with_remaining_quarantine_summary_review_allowed"
+              ? "Bounded GABRIEL quarantine repair complete; summary review may proceed with seven exclusions"
+              : textTableCalibrationStatus.calibration_phase ===
+            "compensation_extraction_gabriel_claim_rating_643_repaired_summary_review_allowed"
+              ? "Bounded GABRIEL quarantine repair complete; all 643 ratings are valid"
+              : textTableCalibrationStatus.calibration_phase ===
             "compensation_extraction_gabriel_claim_rating_643_completed_with_quarantine"
               ? "Bounded GABRIEL claim rating completed; 35 rows remain quarantined"
               : textTableCalibrationStatus.calibration_phase ===
@@ -879,6 +885,24 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "compensation_extraction_gabriel_claim_rating_643_repaired_with_remaining_quarantine_summary_review_allowed" ? (
+            <>
+              The bounded repair retried only the 35 explicit quarantine IDs and accepted
+              28 additional schema-valid, exact-quote-verified ratings. The layer now has
+              636 valid ratings and seven explicit exclusions, while the original 608
+              accepted rows remain hash-identical. A bounded summary review may proceed
+              over only the 636 valid rows. Wage effects, wage gaps, regressions, final
+              causal claims, and global analysis readiness remain closed.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
+          "compensation_extraction_gabriel_claim_rating_643_repaired_summary_review_allowed" ? (
+            <>
+              The bounded repair resolved all prior quarantine rows without changing the
+              original accepted ratings. All 643 rows are schema-valid and exact-quote
+              verified. A bounded summary review may proceed; wage effects, wage gaps,
+              regressions, final causal claims, and global analysis readiness remain closed.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "compensation_extraction_gabriel_claim_rating_643_completed_with_quarantine" ? (
             <>
               The bounded v1.1 GABRIEL run processed exactly 643 authorized exact-span
