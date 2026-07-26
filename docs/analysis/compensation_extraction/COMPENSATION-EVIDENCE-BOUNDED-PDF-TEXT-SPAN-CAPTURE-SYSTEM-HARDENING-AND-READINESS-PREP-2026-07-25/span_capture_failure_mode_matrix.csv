@@ -1,0 +1,16 @@
+failure_mode,expected_status,guardrail
+empty_text_page,no_text_layer,mark unavailable; no OCR/image fallback
+multiple_identical_occurrences,span_ambiguous_multiple_candidates,retain shortest exact span; QA false
+no_literal_match,span_unavailable_or_unverified,navigation only; never infer
+page_pointer_mismatch,fail_closed,reject access
+ocr_later_document,fail_closed,never open
+duplicate_observation_id,fail_closed,reject preflight
+missing_pdf,fail_closed,reject preflight
+wrong_pdf_hash,fail_closed,reject before PDF parsing
+partial_checkpoint,partial_only,cannot materialize final outputs
+idempotent_rerun,reuse_or_refuse,signature-matched resume only
+offset_corruption,fail_closed,round-trip invariant
+full_page_text_leakage,fail_closed,bounded span and forbidden-field guards
+schema_version_mismatch,fail_closed,invalidate checkpoint
+non_target_page_access,fail_closed,approved-set guard
+multiline_span_storage,fail_closed,stored spans must be single-line exact substrings

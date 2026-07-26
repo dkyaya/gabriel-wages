@@ -1,0 +1,29 @@
+{
+  "bugs_discovered_and_fixed": [
+    "resume_accounting_used_production_constant_instead_of_scoped_row_count",
+    "integration_test_temporary_output_violated_docs_analysis_output_boundary",
+    "navigation_shadow_overwrote_historical_qa_status_with_span_qa_status",
+    "multiline_exact_spans_failed_repository_diff_hygiene"
+  ],
+  "focused_test_count_at_materialization": 32,
+  "offline_only": true,
+  "required_failure_mode_count": 15,
+  "required_failure_modes": [
+    "empty_text_page",
+    "multiple_identical_occurrences",
+    "no_literal_match",
+    "page_pointer_mismatch",
+    "ocr_later_document",
+    "duplicate_observation_id",
+    "missing_pdf",
+    "wrong_pdf_hash",
+    "partial_checkpoint",
+    "idempotent_rerun",
+    "offset_corruption",
+    "full_page_text_leakage",
+    "schema_version_mismatch",
+    "non_target_page_access",
+    "multiline_span_storage"
+  ],
+  "test_script": "scripts/test_compensation_evidence_bounded_local_pdf_text_layer_span_capture.py"
+}

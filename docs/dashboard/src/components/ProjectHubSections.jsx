@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "compensation_extraction_bounded_pdf_text_span_capture_partial_additional_repair_required"
+              ? "Bounded PDF text-layer capture hardened; literal spans remain partially QA-ready"
+              : textTableCalibrationStatus.calibration_phase ===
             "compensation_extraction_bounded_span_residual_repair_blocked_missing_text_support"
               ? "Bounded residual repair improved metadata; literal spans remain blocked by missing retained text payloads"
               : textTableCalibrationStatus.calibration_phase ===
@@ -831,6 +834,17 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "compensation_extraction_bounded_pdf_text_span_capture_partial_additional_repair_required" ? (
+            <>
+              The hardened local text-layer run accessed exactly 1,223 approved pages across 788
+              retained readable PDFs, with zero OCR-later, rendered-image, invalid-pointer, or
+              non-target accesses. It captured 1,346 exact single-line literal substrings: 455
+              unique-candidate QA passes and 891 explicitly ambiguous matches; 608 rows had no safe literal match.
+              The qualitative lane therefore remains navigation-only. Cycle, occupation,
+              quantitative, non-base, reference/control, and residual-conflict quarantines are
+              unchanged, and analysis readiness remains false pending bounded follow-up.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "compensation_extraction_bounded_span_residual_repair_blocked_missing_text_support" ? (
             <>
               All 1,954 qualitative page pointers reconcile to retained bounded packet records,

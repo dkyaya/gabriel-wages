@@ -6,6 +6,30 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-26 (Bounded PDF text-layer span capture hardened; partial follow-up required)
+
+**Did**
+- Started from clean tracked `5b14af566eeab501f94d3a443d7d0dc2c8b20254`; left the known rendered-pages directory and root `package-lock.json` untouched.
+- Built a deterministic, resumable, fail-closed local PDF text-layer runner. It reverified immutable structured hashes and all 788 retained PDF hashes before accessing exactly 1,223 approved pages for 1,954 qualitative rows.
+- Captured 1,346 exact single-line literal substrings: 455 unique-candidate QA passes and 891 explicitly ambiguous matches. Another 608 rows had no safe literal match. No page text, OCR, image, prompt, response, or model output was retained.
+- Added 32 focused tests covering page guards, hashes, OCR-later rejection, duplicate IDs, exact offsets/hashes, leakage, checkpoints, resume/idempotency, historical-QA preservation, and multiline-span rejection. The hardening loop found and fixed four defects without weakening guards.
+- Byte-preserved the 862/1,045 quantitative candidate/exception files, 4,733 non-base companion rows, 345 reference/control rows, and two-group/five-observation conflict quarantine.
+
+**Decisions**
+- Decision is `bounded_pdf_text_layer_span_capture_partial_additional_repair_needed`. The coded qualitative view was not created because 1,499 rows remain ambiguous or unavailable for coded use.
+- Analysis readiness, promotion, ingestion, codification, wage-gap work, regression, and causal analysis remain false.
+
+**Surprises/breakage**
+- All approved pages had extractable text layers; there were zero parser errors, invalid pointers, OCR-later inputs, rendered-image uses, or non-target accesses.
+- The first navigation shadow incorrectly reused `qa_status` for span QA. The shadow-only bug was caught, repaired with a separate `span_qa_status`, and regression-tested; upstream QA was never mutated.
+- A repository whitespace check exposed multiline exact spans. The runner now stores only single-line exact substrings and has a dedicated fail-closed regression test.
+
+**Corpus snapshot**
+- `contracts=64`, `discourse=0`, `coverage=64`, `cities=19`; 28 healthy matched pairs (10 exact-cycle, 18 overlap-cycle), two exploratory adjacent matches, and six unmatched safety units.
+
+**Next steps**
+- Run only the separately authorized bounded follow-up described in `next_task.md`. Preserve all 455 exact QA spans, keep 891 ambiguous and 608 unmatched rows navigation-only, and do not mark analysis readiness true.
+
 ## 2026-07-26 (Bounded qualitative-span repair blocked by missing retained text payloads)
 
 **Did**

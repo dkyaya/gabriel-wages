@@ -1,0 +1,26 @@
+{
+  "ambiguous_exact_span_count": 891,
+  "coded_qualitative_analysis_view_created": false,
+  "exact_literal_span_captured_count": 1346,
+  "exact_substring_qa_pass_count": 1346,
+  "exact_substring_validation_pass_count": 1346,
+  "extraction_runs": 0,
+  "full_page_text_saved": false,
+  "model_calls": 0,
+  "navigation_view_with_span_status_created": true,
+  "new_document_selection_runs": 0,
+  "ocr_used": false,
+  "qualitative_row_count": 1954,
+  "schema_version": "bounded_pdf_text_span_capture_v1",
+  "span_capture_status_counts": {
+    "exact_verified": 455,
+    "span_ambiguous_multiple_candidates": 891,
+    "span_unavailable_or_unverified": 608
+  },
+  "span_failure_reason_counts": {
+    "no_exact_structured_or_literal_mechanism_match": 608
+  },
+  "span_unavailable_or_not_qa_sufficient_count": 1499,
+  "task_id": "COMPENSATION-EVIDENCE-BOUNDED-PDF-TEXT-SPAN-CAPTURE-SYSTEM-HARDENING-AND-READINESS-PREP-2026-07-25",
+  "unique_candidate_span_qa_pass_count": 455
+}

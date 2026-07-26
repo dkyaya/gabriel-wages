@@ -649,6 +649,27 @@ COMPENSATION_EXTRACTION_BOUNDED_SPAN_RESIDUAL_REPAIR_OCCUPATION_AUDIT_PATH = (
     COMPENSATION_EXTRACTION_BOUNDED_SPAN_RESIDUAL_REPAIR_DIR
     / "residual_non_safety_occupation_bridge_audit.json"
 )
+COMPENSATION_EXTRACTION_BOUNDED_PDF_TEXT_SPAN_CAPTURE_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "COMPENSATION-EVIDENCE-BOUNDED-PDF-TEXT-SPAN-CAPTURE-SYSTEM-HARDENING-AND-READINESS-PREP-2026-07-25"
+)
+COMPENSATION_EXTRACTION_BOUNDED_PDF_TEXT_SPAN_CAPTURE_DECISION_PATH = (
+    COMPENSATION_EXTRACTION_BOUNDED_PDF_TEXT_SPAN_CAPTURE_DIR
+    / "bounded_pdf_text_span_capture_system_hardening_decision.json"
+)
+COMPENSATION_EXTRACTION_BOUNDED_PDF_TEXT_SPAN_CAPTURE_AUDIT_PATH = (
+    COMPENSATION_EXTRACTION_BOUNDED_PDF_TEXT_SPAN_CAPTURE_DIR
+    / "qualitative_literal_span_capture_pdf_text_layer_audit.json"
+)
+COMPENSATION_EXTRACTION_BOUNDED_PDF_TEXT_SPAN_CAPTURE_PAGE_SUMMARY_PATH = (
+    COMPENSATION_EXTRACTION_BOUNDED_PDF_TEXT_SPAN_CAPTURE_DIR
+    / "bounded_pdf_text_layer_page_access_summary.json"
+)
+COMPENSATION_EXTRACTION_BOUNDED_PDF_TEXT_SPAN_CAPTURE_INVARIANTS_PATH = (
+    COMPENSATION_EXTRACTION_BOUNDED_PDF_TEXT_SPAN_CAPTURE_DIR
+    / "span_capture_invariant_checks.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -1127,6 +1148,54 @@ def bounded_span_residual_metadata_repair_status() -> tuple[bool, dict[str, Any]
         and decision.get("forbidden_actions_performed") == []
     ):
         raise ValueError("bounded qualitative span/residual metadata repair fails dashboard gates")
+    return True, decision
+
+
+def bounded_pdf_text_span_capture_status() -> tuple[bool, dict[str, Any]]:
+    required = (
+        COMPENSATION_EXTRACTION_BOUNDED_PDF_TEXT_SPAN_CAPTURE_DECISION_PATH,
+        COMPENSATION_EXTRACTION_BOUNDED_PDF_TEXT_SPAN_CAPTURE_AUDIT_PATH,
+        COMPENSATION_EXTRACTION_BOUNDED_PDF_TEXT_SPAN_CAPTURE_PAGE_SUMMARY_PATH,
+        COMPENSATION_EXTRACTION_BOUNDED_PDF_TEXT_SPAN_CAPTURE_INVARIANTS_PATH,
+        COMPENSATION_EXTRACTION_BOUNDED_PDF_TEXT_SPAN_CAPTURE_DIR
+        / "bounded_pdf_text_span_capture_validation_2026-07-25.md",
+        COMPENSATION_EXTRACTION_BOUNDED_PDF_TEXT_SPAN_CAPTURE_DIR
+        / "next_bounded_schema_repair_followup_prompt.md",
+    )
+    completed = all(path.exists() for path in required)
+    if not completed:
+        return False, {}
+    decision = read_json(COMPENSATION_EXTRACTION_BOUNDED_PDF_TEXT_SPAN_CAPTURE_DECISION_PATH)
+    audit = decision.get("qualitative_span_capture", {})
+    pages = decision.get("page_access", {})
+    invariants = decision.get("invariants", {})
+    if not (
+        decision.get("task_id")
+        == "COMPENSATION-EVIDENCE-BOUNDED-PDF-TEXT-SPAN-CAPTURE-SYSTEM-HARDENING-AND-READINESS-PREP-2026-07-25"
+        and decision.get("decision")
+        == "bounded_pdf_text_layer_span_capture_partial_additional_repair_needed"
+        and decision.get("analysis_readiness") is False
+        and decision.get("analysis_facing_promotion_allowed") is False
+        and decision.get("repeat_analysis_readiness_review_allowed") is False
+        and decision.get("package_or_prior_or_durable_ledgers_mutated") is False
+        and int(decision.get("package_sha256_checks_passed", 0)) == 5
+        and int(audit.get("qualitative_row_count", 0)) == 1954
+        and int(audit.get("exact_literal_span_captured_count", 0)) == 1346
+        and int(audit.get("exact_substring_qa_pass_count", 0)) == 1346
+        and int(audit.get("unique_candidate_span_qa_pass_count", 0)) == 455
+        and int(audit.get("ambiguous_exact_span_count", 0)) == 891
+        and int(audit.get("span_unavailable_or_not_qa_sufficient_count", 0)) == 1499
+        and audit.get("coded_qualitative_analysis_view_created") is False
+        and int(pages.get("unique_retained_pdf_count", 0)) == 788
+        and int(pages.get("unique_approved_page_count", 0)) == 1223
+        and int(pages.get("unique_pages_accessed", 0)) == 1223
+        and int(pages.get("ocr_later_access_count", -1)) == 0
+        and int(pages.get("non_target_page_access_count", -1)) == 0
+        and int(pages.get("page_text_persisted_count", -1)) == 0
+        and invariants.get("all_invariants_passed") is True
+        and decision.get("forbidden_actions_performed") == []
+    ):
+        raise ValueError("bounded PDF text-layer span capture fails dashboard gates")
     return True, decision
 
 
@@ -1788,6 +1857,10 @@ def build_analysis_readiness(
         bounded_span_residual_repair_completed,
         bounded_span_residual_repair_decision,
     ) = bounded_span_residual_metadata_repair_status()
+    (
+        bounded_pdf_text_span_capture_completed,
+        bounded_pdf_text_span_capture_decision,
+    ) = bounded_pdf_text_span_capture_status()
     if scale_1000_targeted_qa_completed and (
         scale_1000_targeted_qa_decision.get("qa_pass") is not True
         or scale_1000_targeted_qa_decision.get(
@@ -1834,7 +1907,9 @@ def build_analysis_readiness(
     return {
         "metadata": metadata,
         "overall_status": (
-            "bounded_span_residual_repair_blocked_missing_text_support_analysis_closed"
+            "bounded_pdf_text_span_capture_partial_additional_repair_analysis_closed"
+            if bounded_pdf_text_span_capture_completed
+            else "bounded_span_residual_repair_blocked_missing_text_support_analysis_closed"
             if bounded_span_residual_repair_completed
             else "bounded_schema_followup_partial_additional_repair_required_analysis_closed"
             if bounded_schema_followup_completed
@@ -2019,7 +2094,9 @@ def build_analysis_readiness(
                 ),
                 "scale_beyond_1000_recommendation": scale_1000_decision.get(
                     "scale_beyond_1000_recommendation"
-                ) if not scale_1000_targeted_qa_completed else bounded_span_residual_repair_decision.get(
+                ) if not scale_1000_targeted_qa_completed else bounded_pdf_text_span_capture_decision.get(
+                    "next_recommendation"
+                ) if bounded_pdf_text_span_capture_completed else bounded_span_residual_repair_decision.get(
                     "next_recommendation"
                 ) if bounded_span_residual_repair_completed else bounded_schema_followup_decision.get(
                     "next_recommendation"
@@ -2102,6 +2179,19 @@ def build_analysis_readiness(
                 "bounded_span_residual_metadata_repair_decision": (
                     bounded_span_residual_repair_decision.get("decision")
                     if bounded_span_residual_repair_completed else None
+                ),
+                "bounded_pdf_text_span_capture_completed": bounded_pdf_text_span_capture_completed,
+                "bounded_pdf_text_span_capture_decision": (
+                    bounded_pdf_text_span_capture_decision.get("decision")
+                    if bounded_pdf_text_span_capture_completed else None
+                ),
+                "bounded_pdf_text_span_capture_exact_qa_count": (
+                    int(bounded_pdf_text_span_capture_decision.get("qualitative_span_capture", {}).get("unique_candidate_span_qa_pass_count", 0))
+                    if bounded_pdf_text_span_capture_completed else None
+                ),
+                "bounded_pdf_text_span_capture_ambiguous_count": (
+                    int(bounded_pdf_text_span_capture_decision.get("qualitative_span_capture", {}).get("ambiguous_exact_span_count", 0))
+                    if bounded_pdf_text_span_capture_completed else None
                 ),
                 "analysis_facing_promotion_allowed": False,
             },
@@ -5932,10 +6022,16 @@ def build_text_table_calibration_status_summary(
             bounded_span_residual_repair_completed,
             bounded_span_residual_repair_decision,
         ) = bounded_span_residual_metadata_repair_status()
+        (
+            bounded_pdf_text_span_capture_completed,
+            bounded_pdf_text_span_capture_decision,
+        ) = bounded_pdf_text_span_capture_status()
         return {
             **metadata,
             "calibration_phase": (
-                "compensation_extraction_bounded_span_residual_repair_blocked_missing_text_support"
+                "compensation_extraction_bounded_pdf_text_span_capture_partial_additional_repair_required"
+                if bounded_pdf_text_span_capture_completed
+                else "compensation_extraction_bounded_span_residual_repair_blocked_missing_text_support"
                 if bounded_span_residual_repair_completed
                 else "compensation_extraction_bounded_schema_followup_partial_additional_repair_required"
                 if bounded_schema_followup_completed
@@ -6543,6 +6639,39 @@ def build_text_table_calibration_status_summary(
                 int(bounded_span_residual_repair_decision.get("occupation", {}).get("revised_non_safety_subclass_count", 0))
                 if bounded_span_residual_repair_completed else None
             ),
+            "bounded_pdf_text_span_capture_completed": bounded_pdf_text_span_capture_completed,
+            "bounded_pdf_text_span_capture_decision": (
+                bounded_pdf_text_span_capture_decision.get("decision")
+                if bounded_pdf_text_span_capture_completed else None
+            ),
+            "bounded_pdf_text_span_capture_path": (
+                relative(COMPENSATION_EXTRACTION_BOUNDED_PDF_TEXT_SPAN_CAPTURE_DIR)
+                if bounded_pdf_text_span_capture_completed else None
+            ),
+            "bounded_pdf_text_span_capture_exact_span_count": (
+                int(bounded_pdf_text_span_capture_decision.get("qualitative_span_capture", {}).get("exact_literal_span_captured_count", 0))
+                if bounded_pdf_text_span_capture_completed else None
+            ),
+            "bounded_pdf_text_span_capture_exact_qa_count": (
+                int(bounded_pdf_text_span_capture_decision.get("qualitative_span_capture", {}).get("unique_candidate_span_qa_pass_count", 0))
+                if bounded_pdf_text_span_capture_completed else None
+            ),
+            "bounded_pdf_text_span_capture_exact_substring_validation_count": (
+                int(bounded_pdf_text_span_capture_decision.get("qualitative_span_capture", {}).get("exact_substring_validation_pass_count", 0))
+                if bounded_pdf_text_span_capture_completed else None
+            ),
+            "bounded_pdf_text_span_capture_ambiguous_count": (
+                int(bounded_pdf_text_span_capture_decision.get("qualitative_span_capture", {}).get("ambiguous_exact_span_count", 0))
+                if bounded_pdf_text_span_capture_completed else None
+            ),
+            "bounded_pdf_text_span_capture_unavailable_count": (
+                int(bounded_pdf_text_span_capture_decision.get("qualitative_span_capture", {}).get("span_unavailable_or_not_qa_sufficient_count", 0))
+                if bounded_pdf_text_span_capture_completed else None
+            ),
+            "bounded_pdf_text_span_capture_page_count": (
+                int(bounded_pdf_text_span_capture_decision.get("page_access", {}).get("unique_pages_accessed", 0))
+                if bounded_pdf_text_span_capture_completed else None
+            ),
             "analysis_facing_promotion_allowed": False,
             "prior_auto_adjudication_gate_id": (
                 "TEXT-TABLE-AUTO-GABRIEL-GATE2-REFINEMENT-2026-07-25"
@@ -6695,7 +6824,9 @@ def build_text_table_calibration_status_summary(
                 else float(decision["wrong_page_rate"])
             ),
             "extraction_decision": (
-                bounded_span_residual_repair_decision.get("decision")
+                bounded_pdf_text_span_capture_decision.get("decision")
+                if bounded_pdf_text_span_capture_completed
+                else bounded_span_residual_repair_decision.get("decision")
                 if bounded_span_residual_repair_completed
                 else bounded_schema_followup_decision.get("decision")
                 if bounded_schema_followup_completed
@@ -6747,7 +6878,12 @@ def build_text_table_calibration_status_summary(
                 else False
             ),
             "next_recommendation": (
-                bounded_span_residual_repair_decision.get(
+                bounded_pdf_text_span_capture_decision.get(
+                    "next_recommendation",
+                    "run_bounded_followup_for_ambiguous_or_unavailable_literal_spans",
+                )
+                if bounded_pdf_text_span_capture_completed
+                else bounded_span_residual_repair_decision.get(
                     "next_recommendation",
                     "seek_separate_authorization_for_bounded_local_pdf_text_layer_span_capture",
                 )
@@ -6795,7 +6931,9 @@ def build_text_table_calibration_status_summary(
                 )
             ),
             "wage_extraction_status": (
-                "bounded_span_residual_repair_quantitative_candidates_preserved_analysis_closed"
+                "bounded_pdf_text_span_capture_quantitative_candidates_preserved_analysis_closed"
+                if bounded_pdf_text_span_capture_completed
+                else "bounded_span_residual_repair_quantitative_candidates_preserved_analysis_closed"
                 if bounded_span_residual_repair_completed
                 else "bounded_schema_followup_partial_quantitative_candidates_provisional_analysis_closed"
                 if bounded_schema_followup_completed
@@ -6825,7 +6963,9 @@ def build_text_table_calibration_status_summary(
                 if extraction_completed else "not_started"
             ),
             "qualitative_extraction_status": (
-                "bounded_span_residual_repair_navigation_only_no_retained_text_payload"
+                "bounded_pdf_text_span_capture_partial_navigation_only_455_exact_qa_891_ambiguous_608_unmatched"
+                if bounded_pdf_text_span_capture_completed
+                else "bounded_span_residual_repair_navigation_only_no_retained_text_payload"
                 if bounded_span_residual_repair_completed
                 else "bounded_schema_followup_navigation_only_literal_span_capture_required"
                 if bounded_schema_followup_completed

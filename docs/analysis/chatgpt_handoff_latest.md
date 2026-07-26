@@ -6,6 +6,26 @@ Last updated: `2026-07-26`
 
 ---
 
+## 2026-07-26 — Hardened bounded PDF text-layer span capture completed partially
+
+### Current State
+
+- **Authority/start:** work began at clean tracked `5b14af566eeab501f94d3a443d7d0dc2c8b20254` under explicit page-scoped local PDF text-layer authorization.
+- **Decision:** `bounded_pdf_text_layer_span_capture_partial_additional_repair_needed`; analysis readiness, promotion, and repeat readiness review remain false.
+- **Access boundary:** 788 retained PDFs were SHA-256 verified; exactly 1,223 approved pages served all 1,954 rows. OCR-later, non-target, invalid-pointer, rendered-image, and parser-error counts are zero. No full page text was saved.
+- **Spans:** 1,346 exact single-line substrings were captured. Of these, 455 are unique-candidate exact QA passes and 891 are explicitly ambiguous; 608 rows have no safe literal match. The 1,499 ambiguous/unmatched rows remain navigation-only, so no coded qualitative analysis view exists.
+- **Hardening:** 32 focused tests cover empty pages, ambiguous repetitions, missing matches/paths, wrong hashes, OCR rejection, duplicate IDs, page guards, offsets/hashes, leakage, checkpoints, resume/idempotency, schema invalidation, historical-QA preservation, and multiline-span rejection. Four bugs were found and fixed.
+- **Carry-forward:** cycles/matching remain 1,359 exact / 203 matched documents / 91 groups / 467 quarantined; controlled occupations remain 1,458 with 239 non-safety subclasses and 368 quarantined. Quantitative candidates/exceptions remain 862/1,045; non-base/reference remain 4,733/345; both residual groups/five observations remain quarantined.
+- **Boundary:** no URL/search, download, OCR, image rendering, GABRIEL/API, extraction, selection, scout, source review, verification run, ingestion, codification, wage-gap work, regression, causal analysis, fetch, pull, or remote inspection occurred.
+
+### Interpretation
+
+The text-layer infrastructure is now repeatable and auditable, but the evidence contract is only partially satisfied. Exact substring status is not the same as unique-candidate coded readiness: ambiguity remains explicit by design.
+
+### Next Move
+
+Follow [next_task.md](../../next_task.md) only after separate authorization. Review only the 891 ambiguous and 608 unmatched rows, preserve all verified spans and quarantines, and keep analysis readiness false.
+
 ## 2026-07-26 — Bounded schema-repair follow-up completed partially
 
 ### Current State

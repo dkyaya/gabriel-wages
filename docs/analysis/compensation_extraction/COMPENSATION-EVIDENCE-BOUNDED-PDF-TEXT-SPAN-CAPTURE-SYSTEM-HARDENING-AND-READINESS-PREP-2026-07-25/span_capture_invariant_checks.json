@@ -1,0 +1,19 @@
+{
+  "all_invariants_passed": true,
+  "checks": {
+    "all_qualitative_observation_ids_accounted_for": true,
+    "all_span_hashes_valid": true,
+    "all_span_lengths_valid": true,
+    "all_stored_spans_single_line": true,
+    "all_statuses_controlled": true,
+    "historical_qualitative_qa_status_preserved": true,
+    "no_full_page_text_columns": true,
+    "non_target_page_access_count_zero": true,
+    "ocr_later_access_count_zero": true,
+    "one_row_per_qualitative_observation_id": true,
+    "only_approved_pages_accessed": true,
+    "page_text_persisted_count_zero": true,
+    "span_qa_status_separate_and_nonblank": true
+  },
+  "schema_version": "bounded_pdf_text_span_capture_v1"
+}

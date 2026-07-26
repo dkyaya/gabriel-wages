@@ -1,0 +1,20 @@
+{
+  "approved_qualitative_row_count": 1954,
+  "checkpoint_complete": true,
+  "checkpoint_new_row_count": 1954,
+  "checkpoint_reused_row_count": 0,
+  "input_signature": "2e7f5c6f826c9a480ba119f21f3b823ec825229de35c3365c0d7c33c7b7265a7",
+  "no_text_layer_page_count": 0,
+  "non_target_page_access_count": 0,
+  "ocr_later_access_count": 0,
+  "page_pointer_invalid_count": 0,
+  "page_text_persisted_count": 0,
+  "pdf_text_extraction_error_count": 0,
+  "qualitative_row_page_access_count": 1954,
+  "rendered_image_access_count": 0,
+  "text_layer_present_page_count": 1223,
+  "unique_approved_page_count": 1223,
+  "unique_pages_accessed": 1223,
+  "unique_pages_accessed_this_run": 1223,
+  "unique_retained_pdf_count": 788
+}

@@ -1,0 +1,6 @@
+blocker_id,area,status,affected_count,resolution_or_boundary
+P01,qualitative_span_qa,partial,1499,Only exact unique short spans are coded-analysis eligible; ambiguous or unavailable rows remain navigation-only.
+P02,residual_cycle_metadata,carried_forward_quarantine,467,"1,359 exact cycles and 203 matched documents/91 groups preserved; no inference."
+P03,residual_occupation_metadata,carried_forward_quarantine,368,"1,458 controlled occupations/239 non-safety subclasses preserved; no inference."
+P04,quantitative_exceptions,carried_forward,1045,"862 candidates and 1,045 exceptions remain separate; no coercion."
+P05,unresolved_conflicts,quarantined,5,Two groups/five observations remain explicit and excluded.
