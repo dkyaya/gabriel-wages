@@ -6,6 +6,32 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-25 (Remaining readable parse-text extraction stopped at 825/826)
+
+**Did**
+- Started from clean tracked `0fc3ae54b900621e787b75abc206befacabdc52f`, preserving unrelated untracked dashboard `package-lock.json` and local adjudication renders. Confirmed the cumulative 1,000-case targeted-QA authority, corrected shadow inputs, durable readable inventory, and configured GABRIEL credential presence without printing values.
+- Added a dedicated remaining-pool runner and ten offline tests. Froze 826 unique readable hashes from 827 remaining rows, documented the single North Miami duplicate hash, and preserved the corrected 1,000-case layer as a no-call seed.
+- Built 4,610 bounded packet rows with maxima of six pages, 1,499 characters/page, and 5,999/case. Selection is 417 police / 202 fire / 207 non-safety across 48 states/DC and six source families; SHA-256 is `43b768fba4e3d122727d2cbf9614885922a55be5f2bd1afd37d36f47a4695d81`.
+- Passed the definitive seven-path GABRIEL preflight 7/7. Ran resumable live extraction only on the frozen 826 cases. Across 861 attempts, 825 unique cases reached strict semantic-schema validity; the seed received zero calls.
+- Stopped fail-closed after the sole Hartland, Wisconsin police case failed ten times because education/certification compensation appeared in the base quantitative array. Preserved the 825-case checkpoint and did not materialize incomplete new lanes or cumulative 1,826-case outputs.
+- Updated the stopped decision, validation/result docs, generated dashboard data, analysis readiness, the existing extraction card, dashboard documentation, handoff, and `next_task.md` to show `compensation_extraction_remaining_parse_text_live_incomplete_825_of_826`.
+
+**Decisions and why**
+- Decision is `live_incomplete_schema_invalid`. Strict validity is all-or-nothing for materialization; the final case cannot be coerced, fabricated, or silently promoted into base wage.
+- The corrected 1,000-document targeted-QA shadow ledgers remain the latest complete valid provisional layer. The 825 stored cases are resumable intermediate state only.
+- The next action is one-case education/certification non-base routing repair. No broader extraction or final merge is authorized.
+
+**Surprises/breakage**
+- The seven-path gate passed and 99.8789% of the new cohort validated, but one persistent semantic edge case survived ten schema-aware retries.
+- The 827-row discrepancy was exactly one duplicate North Miami content hash; deterministic representative selection reduced the live cohort to the intended 826 unique hashes.
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Offline tests, dashboard generation/frontend build, repository validation, ingestion tests, coverage audit, protected-state checks, metadata safety checks, and diff hygiene passed; the intentional 826-case live completeness gate failed at 825.
+
+**Next steps**
+1. Add a one-case non-base education/certification response contract for `cexrem_4a267735daf6729f5c4e4835`; preserve the selection and 825-case checkpoint.
+2. Preflight and call only that case. If strict-valid, materialize cumulative provisional 1,826-hash lanes and run full QA.
+3. Keep final merge, ingestion, codification, wage-gap work, regression, URL access, download, and OCR closed.
+
 ## 2026-07-25 (Cumulative 1,000-document targeted QA passed; remaining readable pool authorized)
 
 **Did**

@@ -6,6 +6,36 @@ Last updated: `2026-07-25`
 
 ---
 
+## 2026-07-25 — Remaining readable parse-text run stopped at 825/826
+
+### Current State
+
+- **Authority/start:** work began at clean tracked `0fc3ae54b900621e787b75abc206befacabdc52f`. Durable/Gate/original extraction/targeted-QA inputs remain unchanged; unrelated untracked local renders and root `package-lock.json` remain outside scope.
+- **Selection:** [the audit](compensation_extraction/COMPENSATION-EVIDENCE-EXTRACTION-REMAINING-PARSE-TEXT-826-2026-07-25/remaining_parse_text_selection_audit.md) freezes 826 unique remaining readable hashes from 827 durable rows. The duplicate is one North Miami hash represented once with both detection identities documented. Selection SHA-256 is `43b768fba4e3d122727d2cbf9614885922a55be5f2bd1afd37d36f47a4695d81`.
+- **Coverage/packets:** 417 police / 202 fire / 207 non-safety across 48 states/DC and six source families. The packet has 4,610 page rows under six-page, 1,500-character/page, and 6,000-character/case caps.
+- **Preflight:** the definitive seven-path preflight passed 7/7 strict-valid using `huit_openai_responses_direct_sdk` and `gpt-5.4-nano`. No corrected-seed case was called.
+- **Live:** GABRIEL ran only on the frozen remaining cohort. Across 861 bounded attempts, 825 cases reached strict semantic validity. One case, `cexrem_4a267735daf6729f5c4e4835`, failed ten times because education/certification compensation remained in the base quantitative array.
+- **Fail-closed stop:** [the decision](compensation_extraction/COMPENSATION-EVIDENCE-EXTRACTION-REMAINING-PARSE-TEXT-826-2026-07-25/remaining_parse_text_decision_report.json) is `live_incomplete_schema_invalid`. No new lanes, cumulative 1,826-case ledger, or cumulative QA metric was materialized. The corrected 1,000-case targeted-QA shadow layer remains the latest complete valid provisional evidence.
+- **Dashboard:** phase is `compensation_extraction_remaining_parse_text_live_incomplete_825_of_826`; analysis readiness is false and the one-case routing repair is next.
+- **Boundary:** no URL/hosted search, download/redownload, OCR, scout, source review, verification, ingestion, codification, final merge, wage-gap work, regression, upstream-ledger mutation, remote inspection, fetch, or pull occurred. No full text/table, raw prompt/response, encoded image, or secret was retained.
+
+### Interpretation
+
+The broad extraction design and representative gate succeeded, but cumulative
+materialization remains incomplete by one semantic routing case. Accepting the
+case as base quantitative evidence would recreate the contamination that prior
+targeted QA removed. The 825 stored results therefore remain a checkpoint, not
+a provisional cumulative layer.
+
+### Next Move
+
+Follow [next_task.md](../../next_task.md). Preserve the selection, zero-call
+1,000-case seed, and 825-case checkpoint. Add an education/certification-only
+non-base response contract, test it offline, and send only the unresolved case
+through one bounded preflight and one live call. Materialize the cumulative
+1,826-hash provisional layer only after 826/826 strict validity, then run full
+integrity QA and stop before final merge.
+
 ## 2026-07-25 — Cumulative 1,000-document targeted QA passed
 
 ### Current State

@@ -192,19 +192,18 @@ The dashboard builder writes:
 - `reports_index.json`
 
 The text/table calibration layer currently reports
-`compensation_extraction_1000_targeted_qa_completed`. The deterministic
-cumulative QA pass processed all 151 unresolved routing rows/groups without a
-new extraction or GABRIEL/API call. It resolved all 126 possible base/non-base
-routing records and 23 of 25 under-specified conflict groups. The corrected
-provisional shadow layer contains 1,214 active quantitative observations,
-1,464 qualitative-mechanism observations, 256 mixed cases, 2,889 non-base-wage
-observations, and 175 reference/exclusion records. Duplicate observation IDs,
-invalid bounded page pointers, and unresolved base/non-base contamination are
-zero. Two conflict groups remain explicit; their 0.1647% rate is below the 2%
-gate. Integrity QA passes, so a future provisional extraction run over the
-remaining unique readable parse-text documents is authorized. Analysis
-readiness remains false, and no URL access, download, OCR, ingestion,
-codification, wage-gap calculation, or regression occurred.
+`compensation_extraction_remaining_parse_text_live_incomplete_825_of_826`.
+The final readable parse-text batch froze 826 unique hashes from 827 remaining
+durable rows and passed a seven-path preflight. GABRIEL produced 825
+strict-valid case results after 861 bounded attempts while the corrected
+1,000-case seed received zero calls. One Hartland, Wisconsin police case
+remains invalid because education/certification compensation was repeatedly
+placed in the base quantitative array. The run stopped fail-closed: no
+cumulative 1,826-case ledgers or QA metrics were materialized. The corrected
+1,000-case targeted-QA shadows remain the latest complete valid provisional
+layer. Analysis readiness remains false, and no URL access, download, OCR,
+ingestion, codification, final merge, wage-gap calculation, or regression
+occurred.
 
 Review the printed totals and diffs before committing. In particular, candidate-positive plus parseable-empty municipalities must equal scout-covered municipalities, and transport/failure-only results must remain outside successful coverage.
 

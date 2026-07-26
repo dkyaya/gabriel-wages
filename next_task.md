@@ -1,37 +1,30 @@
-# Next task: freeze and run the remaining readable parse-text provisional extraction
+# Next task: resolve one remaining education/certification routing case
 
-The cumulative 1,000-document targeted QA passed. The corrected shadow layer
-has zero duplicate observation IDs, zero invalid page pointers, zero unresolved
-base/non-base contamination, two explicit unresolved conflict groups, and a
-0.1647% conflict rate. A future provisional extraction over the remaining
-unique readable parse-text pool is authorized.
-
-Inventory before selection:
-
-- durable parse-text detection rows: 1,828;
-- unique durable content hashes: 1,826;
-- frozen 1,000-document selected hashes: 1,000;
-- remaining rows outside the frozen selection: 827;
-- remaining unique retained readable content hashes: 826;
-- remaining units: 418 police / 202 fire / 207 non-safety;
-- remaining states/DC: 48;
-- remaining priorities: 430 p1 / 392 p2 / 5 p3.
+The remaining readable parse-text selection is frozen at 826 unique hashes.
+Seven-path preflight passed, and 825 cases are preserved as strict-valid
+resumable results. One case remains invalid after ten bounded attempts:
+`cexrem_4a267735daf6729f5c4e4835`, Village of Hartland, Wisconsin police CBA.
+Every response incorrectly placed education/certification compensation in the
+base quantitative array.
 
 The next run should:
 
-1. freeze one identity per remaining unique retained readable content hash and
-   explain the single duplicate-hash row without silently selecting it twice;
-2. preserve the corrected 1,000-document shadow ledgers as a no-call seed;
-3. integrate the targeted-QA routing rules before any live request;
-4. preserve city × unit × negotiation-cycle identity and matched non-safety
-   opportunities;
-5. run a no-call packet dry run and strict representative preflight before any
-   GABRIEL/API use;
-6. extract only newly frozen remaining identities in resumable lanes;
-7. materialize a new cumulative provisional layer and stop before final merge;
-8. recompute duplicate, page-pointer, conflict, base/non-base, and matching QA.
+1. preserve selection SHA-256
+   `43b768fba4e3d122727d2cbf9614885922a55be5f2bd1afd37d36f47a4695d81`;
+2. preserve the corrected 1,000-document seed with zero GABRIEL calls;
+3. preserve the exact 825-case checkpoint without resending any stored case;
+4. add a one-case contract requiring non-base disposition, empty quantitative
+   observations, and education/certification evidence only in the non-base
+   array when that is the only visible compensation family;
+5. prove the contract with offline regression tests;
+6. run one bounded preflight and, only if it passes, one live request for the
+   unresolved case alone;
+7. if strict-valid, append the case, materialize the cumulative provisional
+   1,826-hash lanes, and run duplicate, page-pointer, conflict,
+   base/non-base-contamination, matching, and provenance QA;
+8. stop before final merge and require targeted QA if any integrity gate fails.
 
-Continue to prohibit URLs, hosted search, downloads, OCR, scouts, source
-review, verification, ingestion, `gabriel.codify`, final analysis merge,
-wage-gap work, regressions, and durable upstream-ledger mutation. No remaining
-document was selected or extracted by the targeted-QA task itself.
+Do not send the seed or 825 stored cases. Continue to prohibit URLs, hosted
+search, downloads, OCR, scouts, source review, verification, ingestion,
+`gabriel.codify`, final analysis merge, wage-gap work, regressions, and durable
+upstream-ledger mutation.

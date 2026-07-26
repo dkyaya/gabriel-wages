@@ -460,6 +460,31 @@ COMPENSATION_EXTRACTION_1000_TARGETED_QA_REFERENCE_PATH = (
     COMPENSATION_EXTRACTION_1000_TARGETED_QA_DIR
     / "reference_exclusion_ledger_qa_corrected.csv"
 )
+COMPENSATION_EXTRACTION_REMAINING_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "COMPENSATION-EVIDENCE-EXTRACTION-REMAINING-PARSE-TEXT-826-2026-07-25"
+)
+COMPENSATION_EXTRACTION_REMAINING_SELECTION_SUMMARY_PATH = (
+    COMPENSATION_EXTRACTION_REMAINING_DIR
+    / "remaining_parse_text_selection_summary.json"
+)
+COMPENSATION_EXTRACTION_REMAINING_PACKET_SUMMARY_PATH = (
+    COMPENSATION_EXTRACTION_REMAINING_DIR
+    / "remaining_parse_text_packet_summary.json"
+)
+COMPENSATION_EXTRACTION_REMAINING_PREFLIGHT_REPORT_PATH = (
+    COMPENSATION_EXTRACTION_REMAINING_DIR
+    / "remaining_parse_text_preflight_report.md"
+)
+COMPENSATION_EXTRACTION_REMAINING_REQUEST_METADATA_PATH = (
+    COMPENSATION_EXTRACTION_REMAINING_DIR
+    / "remaining_parse_text_request_metadata.csv"
+)
+COMPENSATION_EXTRACTION_REMAINING_DECISION_PATH = (
+    COMPENSATION_EXTRACTION_REMAINING_DIR
+    / "remaining_parse_text_decision_report.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -1222,6 +1247,17 @@ def build_analysis_readiness(
         read_json(COMPENSATION_EXTRACTION_1000_TARGETED_QA_SUMMARY_PATH)
         if scale_1000_targeted_qa_completed else {}
     )
+    remaining_parse_text_attempted = all(path.exists() for path in (
+        COMPENSATION_EXTRACTION_REMAINING_SELECTION_SUMMARY_PATH,
+        COMPENSATION_EXTRACTION_REMAINING_PACKET_SUMMARY_PATH,
+        COMPENSATION_EXTRACTION_REMAINING_PREFLIGHT_REPORT_PATH,
+        COMPENSATION_EXTRACTION_REMAINING_REQUEST_METADATA_PATH,
+        COMPENSATION_EXTRACTION_REMAINING_DECISION_PATH,
+    ))
+    remaining_parse_text_decision = (
+        read_json(COMPENSATION_EXTRACTION_REMAINING_DECISION_PATH)
+        if remaining_parse_text_attempted else {}
+    )
     if scale_1000_targeted_qa_completed and (
         scale_1000_targeted_qa_decision.get("qa_pass") is not True
         or scale_1000_targeted_qa_decision.get(
@@ -1268,6 +1304,9 @@ def build_analysis_readiness(
     return {
         "metadata": metadata,
         "overall_status": (
+            "provisional_remaining_parse_text_live_incomplete_825_of_826"
+            if remaining_parse_text_attempted
+            else
             "provisional_1000_compensation_extraction_targeted_qa_pass_remaining_parse_text_authorized"
             if scale_1000_targeted_qa_completed
             else "provisional_1000_compensation_extraction_materialized_qa_blocked"
@@ -1340,6 +1379,9 @@ def build_analysis_readiness(
             "wage_extraction_stage": {
                 "available": extraction_completed,
                 "display_status": (
+                    "remaining_parse_text_live_incomplete_825_of_826_no_cumulative_materialization"
+                    if remaining_parse_text_attempted
+                    else
                     "cumulative_1000_targeted_qa_pass_remaining_parse_text_authorized"
                     if scale_1000_targeted_qa_completed
                     else "cumulative_1000_materialized_integrity_qa_blocked"
@@ -1371,7 +1413,9 @@ def build_analysis_readiness(
                     else extraction_qual_count if extraction_completed else None
                 ),
                 "qa_status": (
-                    scale_1000_targeted_qa_decision.get("qa_status")
+                    remaining_parse_text_decision.get("qa_status")
+                    if remaining_parse_text_attempted
+                    else scale_1000_targeted_qa_decision.get("qa_status")
                     if scale_1000_targeted_qa_completed
                     else scale_1000_decision.get("qa_status")
                     if scale_1000_materialized
@@ -1395,12 +1439,32 @@ def build_analysis_readiness(
                 ),
                 "scale_beyond_1000_recommendation": scale_1000_decision.get(
                     "scale_beyond_1000_recommendation"
-                ) if not scale_1000_targeted_qa_completed else scale_1000_targeted_qa_decision.get(
+                ) if not scale_1000_targeted_qa_completed else remaining_parse_text_decision.get(
+                    "next_recommendation"
+                ) if remaining_parse_text_attempted else scale_1000_targeted_qa_decision.get(
                     "next_recommendation"
                 ),
                 "remaining_readable_parse_text_extraction_allowed": bool(
                     scale_1000_targeted_qa_decision.get(
                         "remaining_readable_parse_text_extraction_allowed", False
+                    )
+                ) and not remaining_parse_text_attempted,
+                "remaining_readable_parse_text_live_started": bool(
+                    remaining_parse_text_attempted
+                ),
+                "remaining_readable_parse_text_schema_valid_case_count": int(
+                    remaining_parse_text_decision.get(
+                        "schema_valid_new_case_count", 0
+                    )
+                ),
+                "remaining_readable_parse_text_unresolved_case_count": int(
+                    remaining_parse_text_decision.get(
+                        "unresolved_new_case_count", 0
+                    )
+                ),
+                "remaining_readable_parse_text_cumulative_materialized": bool(
+                    remaining_parse_text_decision.get(
+                        "cumulative_materialization_completed", False
                     )
                 ),
             },
@@ -4629,6 +4693,16 @@ def build_text_table_calibration_status_summary(
         ))
         scale_1000_targeted_qa_decision: dict[str, Any] = {}
         scale_1000_targeted_qa_summary: dict[str, Any] = {}
+        remaining_parse_text_attempted = all(path.exists() for path in (
+            COMPENSATION_EXTRACTION_REMAINING_SELECTION_SUMMARY_PATH,
+            COMPENSATION_EXTRACTION_REMAINING_PACKET_SUMMARY_PATH,
+            COMPENSATION_EXTRACTION_REMAINING_PREFLIGHT_REPORT_PATH,
+            COMPENSATION_EXTRACTION_REMAINING_REQUEST_METADATA_PATH,
+            COMPENSATION_EXTRACTION_REMAINING_DECISION_PATH,
+        ))
+        remaining_parse_text_selection_summary: dict[str, Any] = {}
+        remaining_parse_text_packet_summary: dict[str, Any] = {}
+        remaining_parse_text_decision: dict[str, Any] = {}
         if extraction_completed:
             extraction_decision = read_json(
                 COMPENSATION_EXTRACTION_500_DECISION_PATH
@@ -4922,9 +4996,102 @@ def build_text_table_calibration_status_summary(
                 raise ValueError(
                     "cumulative 1,000-document targeted QA fails dashboard gates"
                 )
+        if remaining_parse_text_attempted:
+            remaining_parse_text_selection_summary = read_json(
+                COMPENSATION_EXTRACTION_REMAINING_SELECTION_SUMMARY_PATH
+            )
+            remaining_parse_text_packet_summary = read_json(
+                COMPENSATION_EXTRACTION_REMAINING_PACKET_SUMMARY_PATH
+            )
+            remaining_parse_text_decision = read_json(
+                COMPENSATION_EXTRACTION_REMAINING_DECISION_PATH
+            )
+            remaining_requests = read_csv(
+                COMPENSATION_EXTRACTION_REMAINING_REQUEST_METADATA_PATH
+            )
+            preflight_requests = [
+                row for row in remaining_requests
+                if row.get("request_phase", "").startswith("preflight_remaining_")
+            ]
+            live_requests = [
+                row for row in remaining_requests
+                if row.get("request_phase") == "live_remaining"
+            ]
+            live_valid_case_ids = {
+                row.get("extraction_case_id", "")
+                for row in live_requests
+                if row.get("schema_valid") == "true"
+            }
+            if (
+                remaining_parse_text_decision.get("task_id")
+                != "COMPENSATION-EVIDENCE-EXTRACTION-REMAINING-PARSE-TEXT-826-2026-07-25"
+                or remaining_parse_text_decision.get("decision")
+                != "live_incomplete_schema_invalid"
+                or int(remaining_parse_text_selection_summary.get(
+                    "selection_count", 0
+                )) != 826
+                or int(remaining_parse_text_selection_summary.get(
+                    "unique_content_hash_count", 0
+                )) != 826
+                or int(remaining_parse_text_selection_summary.get(
+                    "corrected_1000_seed_count", 0
+                )) != 1000
+                or int(remaining_parse_text_selection_summary.get(
+                    "seed_gabriel_calls", -1
+                )) != 0
+                or int(remaining_parse_text_packet_summary.get(
+                    "case_count", 0
+                )) != 826
+                or int(remaining_parse_text_packet_summary.get(
+                    "max_pages_per_case", 99
+                )) > 6
+                or int(remaining_parse_text_packet_summary.get(
+                    "max_text_chars_per_page", 99999
+                )) > 1500
+                or int(remaining_parse_text_packet_summary.get(
+                    "max_text_chars_per_case", 99999
+                )) > 6000
+                or len(preflight_requests) != 7
+                or sum(
+                    row.get("schema_valid") == "true"
+                    for row in preflight_requests
+                ) != 7
+                or len(live_requests) != 861
+                or len(live_valid_case_ids) != 825
+                or int(remaining_parse_text_decision.get(
+                    "schema_valid_new_case_count", 0
+                )) != 825
+                or int(remaining_parse_text_decision.get(
+                    "unresolved_new_case_count", 0
+                )) != 1
+                or remaining_parse_text_decision.get(
+                    "unresolved_new_case_ids"
+                ) != ["cexrem_4a267735daf6729f5c4e4835"]
+                or int(remaining_parse_text_decision.get(
+                    "seed_gabriel_calls", -1
+                )) != 0
+                or remaining_parse_text_decision.get(
+                    "cumulative_materialization_completed"
+                ) is not False
+                or any(
+                    row.get(field) == "true"
+                    for row in remaining_requests
+                    for field in (
+                        "raw_prompt_saved", "raw_response_saved",
+                        "encoded_image_saved", "credential_value_saved",
+                        "authorization_header_saved",
+                    )
+                )
+            ):
+                raise ValueError(
+                    "remaining readable parse-text incomplete live run fails dashboard gates"
+                )
         return {
             **metadata,
             "calibration_phase": (
+                "compensation_extraction_remaining_parse_text_live_incomplete_825_of_826"
+                if remaining_parse_text_attempted
+                else
                 "compensation_extraction_1000_targeted_qa_completed"
                 if scale_1000_targeted_qa_completed
                 else "compensation_extraction_1000_materialized_qa_blocked"
@@ -4960,7 +5127,9 @@ def build_text_table_calibration_status_summary(
                 else None
             ),
             "latest_compensation_extraction_id": (
-                "COMPENSATION-EVIDENCE-EXTRACTION-1000DOC-2026-07-25"
+                "COMPENSATION-EVIDENCE-EXTRACTION-REMAINING-PARSE-TEXT-826-2026-07-25"
+                if remaining_parse_text_attempted
+                else "COMPENSATION-EVIDENCE-EXTRACTION-1000DOC-2026-07-25"
                 if scale_1000_attempted
                 else "COMPENSATION-EVIDENCE-EXTRACTION-500DOC-2026-07-25"
                 if extraction_completed else None
@@ -5075,7 +5244,9 @@ def build_text_table_calibration_status_summary(
                 else len(extraction_reference) if extraction_completed else 0
             ),
             "compensation_extraction_qa_status": (
-                scale_1000_targeted_qa_decision.get("qa_status")
+                remaining_parse_text_decision.get("qa_status")
+                if remaining_parse_text_attempted
+                else scale_1000_targeted_qa_decision.get("qa_status")
                 if scale_1000_targeted_qa_completed
                 else scale_1000_decision.get("qa_status")
                 if scale_1000_materialized
@@ -5179,7 +5350,9 @@ def build_text_table_calibration_status_summary(
                 if scale_1000_materialized else None
             ),
             "scale_beyond_1000_recommendation": (
-                scale_1000_targeted_qa_decision.get("next_recommendation")
+                remaining_parse_text_decision.get("next_recommendation")
+                if remaining_parse_text_attempted
+                else scale_1000_targeted_qa_decision.get("next_recommendation")
                 if scale_1000_targeted_qa_completed
                 else scale_1000_decision.get("scale_beyond_1000_recommendation")
                 if scale_1000_attempted else None
@@ -5187,7 +5360,68 @@ def build_text_table_calibration_status_summary(
             "remaining_readable_parse_text_extraction_allowed": (
                 bool(scale_1000_targeted_qa_decision.get(
                     "remaining_readable_parse_text_extraction_allowed", False
-                )) if scale_1000_targeted_qa_completed else False
+                )) if scale_1000_targeted_qa_completed
+                and not remaining_parse_text_attempted else False
+            ),
+            "remaining_parse_text_selection_count": (
+                int(remaining_parse_text_selection_summary.get(
+                    "selection_count", 0
+                )) if remaining_parse_text_attempted else 0
+            ),
+            "remaining_parse_text_unique_hash_count": (
+                int(remaining_parse_text_selection_summary.get(
+                    "unique_content_hash_count", 0
+                )) if remaining_parse_text_attempted else 0
+            ),
+            "remaining_parse_text_duplicate_extra_row_count": (
+                int(remaining_parse_text_selection_summary.get(
+                    "duplicate_extra_row_count", 0
+                )) if remaining_parse_text_attempted else 0
+            ),
+            "remaining_parse_text_packet_page_count": (
+                int(remaining_parse_text_packet_summary.get(
+                    "packet_page_rows", 0
+                )) if remaining_parse_text_attempted else 0
+            ),
+            "remaining_parse_text_preflight_schema_valid_rate": (
+                float(remaining_parse_text_decision.get(
+                    "preflight_schema_valid_rate", 0
+                )) if remaining_parse_text_attempted else None
+            ),
+            "remaining_parse_text_live_attempt_count": (
+                int(remaining_parse_text_decision.get(
+                    "live_case_attempt_count", 0
+                )) if remaining_parse_text_attempted else 0
+            ),
+            "remaining_parse_text_live_schema_valid_case_count": (
+                int(remaining_parse_text_decision.get(
+                    "schema_valid_new_case_count", 0
+                )) if remaining_parse_text_attempted else 0
+            ),
+            "remaining_parse_text_live_schema_valid_rate": (
+                float(remaining_parse_text_decision.get(
+                    "schema_valid_new_case_rate", 0
+                )) if remaining_parse_text_attempted else None
+            ),
+            "remaining_parse_text_live_unresolved_case_count": (
+                int(remaining_parse_text_decision.get(
+                    "unresolved_new_case_count", 0
+                )) if remaining_parse_text_attempted else 0
+            ),
+            "remaining_parse_text_live_unresolved_case_ids": (
+                remaining_parse_text_decision.get(
+                    "unresolved_new_case_ids", []
+                ) if remaining_parse_text_attempted else []
+            ),
+            "remaining_parse_text_seed_gabriel_calls": (
+                int(remaining_parse_text_decision.get(
+                    "seed_gabriel_calls", -1
+                )) if remaining_parse_text_attempted else 0
+            ),
+            "remaining_parse_text_cumulative_materialized": (
+                bool(remaining_parse_text_decision.get(
+                    "cumulative_materialization_completed", False
+                )) if remaining_parse_text_attempted else False
             ),
             "prior_auto_adjudication_gate_id": (
                 "TEXT-TABLE-AUTO-GABRIEL-GATE2-REFINEMENT-2026-07-25"
@@ -5340,7 +5574,9 @@ def build_text_table_calibration_status_summary(
                 else float(decision["wrong_page_rate"])
             ),
             "extraction_decision": (
-                scale_1000_targeted_qa_decision.get("decision")
+                remaining_parse_text_decision.get("decision")
+                if remaining_parse_text_attempted
+                else scale_1000_targeted_qa_decision.get("decision")
                 if scale_1000_targeted_qa_completed
                 else scale_1000_decision.get("decision")
                 if scale_1000_attempted
@@ -5374,7 +5610,9 @@ def build_text_table_calibration_status_summary(
                 else False
             ),
             "next_recommendation": (
-                scale_1000_targeted_qa_decision.get("next_recommendation")
+                remaining_parse_text_decision.get("next_recommendation")
+                if remaining_parse_text_attempted
+                else scale_1000_targeted_qa_decision.get("next_recommendation")
                 if scale_1000_targeted_qa_completed
                 else scale_1000_decision.get("next_recommendation")
                 if scale_1000_attempted
@@ -5395,7 +5633,9 @@ def build_text_table_calibration_status_summary(
                 )
             ),
             "wage_extraction_status": (
-                "provisional_1000_targeted_qa_pass_remaining_parse_text_authorized"
+                "remaining_parse_text_live_incomplete_825_of_826_no_cumulative"
+                if remaining_parse_text_attempted
+                else "provisional_1000_targeted_qa_pass_remaining_parse_text_authorized"
                 if scale_1000_targeted_qa_completed
                 else "provisional_1000_materialized_integrity_qa_blocked"
                 if scale_1000_materialized
@@ -5405,7 +5645,9 @@ def build_text_table_calibration_status_summary(
                 if extraction_completed else "not_started"
             ),
             "qualitative_extraction_status": (
-                "provisional_1000_targeted_qa_pass_remaining_parse_text_authorized"
+                "remaining_parse_text_live_incomplete_825_of_826_no_cumulative"
+                if remaining_parse_text_attempted
+                else "provisional_1000_targeted_qa_pass_remaining_parse_text_authorized"
                 if scale_1000_targeted_qa_completed
                 else "provisional_1000_materialized_integrity_qa_blocked"
                 if scale_1000_materialized
@@ -5478,6 +5720,15 @@ def build_text_table_calibration_status_summary(
                 else 0
             ),
             "caveats": (
+                [
+                    "The remaining readable parse-text selection is frozen at 826 unique hashes, but one education/certification-routing case remains strict-invalid after ten bounded attempts.",
+                    "Only 825 of 826 new cases are stored in a resumable checkpoint; no cumulative 1,826-case lane or QA metric was materialized.",
+                    "The corrected 1,000-document targeted-QA shadow ledgers remain the latest complete valid provisional layer and received zero GABRIEL calls.",
+                    "No raw prompt/response, full text/table, encoded image, secret, URL access, download, OCR, ingestion, codification, final merge, wage-gap calculation, or regression occurred.",
+                    "The next action is a one-case education/certification non-base routing repair; further broad extraction is closed.",
+                ]
+                if remaining_parse_text_attempted
+                else
                 [
                     "The cumulative 1,000-document targeted QA passed and authorizes only a future provisional run over the remaining unique readable parse-text documents.",
                     "The corrected cumulative shadow ledgers remain provisional and are not final analysis inputs.",

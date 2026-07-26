@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "compensation_extraction_remaining_parse_text_live_incomplete_825_of_826"
+              ? "Remaining readable parse-text run stopped with one case unresolved"
+              : textTableCalibrationStatus.calibration_phase ===
             "compensation_extraction_1000_targeted_qa_completed"
               ? "Cumulative 1,000-document targeted QA passed; remaining readable parse-text run authorized"
               : textTableCalibrationStatus.calibration_phase ===
@@ -801,6 +804,21 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "compensation_extraction_remaining_parse_text_live_incomplete_825_of_826" ? (
+            <>
+              The final readable parse-text batch froze {formatNumber(
+                textTableCalibrationStatus.remaining_parse_text_selection_count,
+              )} unique retained hashes from 827 inventory rows, with one duplicate-hash row resolved deterministically. Its seven-path preflight passed at {formatPercent(
+                100 * textTableCalibrationStatus.remaining_parse_text_preflight_schema_valid_rate,
+              )}. Live extraction stored {formatNumber(
+                textTableCalibrationStatus.remaining_parse_text_live_schema_valid_case_count,
+              )} of 826 cases after {formatNumber(
+                textTableCalibrationStatus.remaining_parse_text_live_attempt_count,
+              )} bounded attempts; {formatNumber(
+                textTableCalibrationStatus.remaining_parse_text_live_unresolved_case_count,
+              )} education/certification-routing case remains strict-invalid. The corrected 1,000-case seed received zero model calls, and no cumulative 1,826-case ledger or QA result was materialized. A one-case routing repair is required before cumulative QA.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "compensation_extraction_1000_targeted_qa_completed" ? (
             <>
               Targeted QA processed {formatNumber(

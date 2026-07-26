@@ -1,0 +1,31 @@
+{
+  "codify_allowed": false,
+  "corrected_1000_seed_count": 1000,
+  "cumulative_case_count": 1000,
+  "cumulative_materialization_completed": false,
+  "cumulative_readable_parse_text_target_count": 1826,
+  "decision": "live_incomplete_schema_invalid",
+  "final_merge_allowed": false,
+  "gabriel_backend": "huit_openai_responses_direct_sdk",
+  "gabriel_model": "gpt-5.4-nano",
+  "generated_at": "2026-07-26T02:05:53Z",
+  "ingestion_allowed": false,
+  "live_case_attempt_count": 861,
+  "live_schema_invalid_attempt_count": 36,
+  "next_recommendation": "resolve_only_the_remaining_education_certification_routing_case",
+  "preflight_case_count": 7,
+  "preflight_schema_valid_count": 7,
+  "preflight_schema_valid_rate": 1.0,
+  "qa_status": "not_run",
+  "schema_valid_new_case_count": 825,
+  "schema_valid_new_case_rate": 0.9987893462469734,
+  "seed_gabriel_calls": 0,
+  "selection_count": 826,
+  "targeted_qa_required": true,
+  "task_id": "COMPENSATION-EVIDENCE-EXTRACTION-REMAINING-PARSE-TEXT-826-2026-07-25",
+  "unique_remaining_content_hash_count": 826,
+  "unresolved_new_case_count": 1,
+  "unresolved_new_case_ids": [
+    "cexrem_4a267735daf6729f5c4e4835"
+  ]
+}

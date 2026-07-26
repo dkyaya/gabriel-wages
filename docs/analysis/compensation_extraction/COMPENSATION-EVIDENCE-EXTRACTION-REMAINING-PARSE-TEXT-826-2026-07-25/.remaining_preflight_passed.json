@@ -1,0 +1,17 @@
+{
+  "case_count": 7,
+  "completed_at": "2026-07-26T01:09:37Z",
+  "passed": true,
+  "roles": [
+    "duplicate_hash_selection_provenance",
+    "quantitative_base_wage",
+    "qualitative_mechanism",
+    "mixed_quant_qual",
+    "non_base_wage",
+    "reference_exclusion",
+    "effective_date_or_classification_conflict"
+  ],
+  "schema_valid_count": 7,
+  "seed_case_calls": 0,
+  "selection_sha256": "43b768fba4e3d122727d2cbf9614885922a55be5f2bd1afd37d36f47a4695d81"
+}
