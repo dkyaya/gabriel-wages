@@ -1,0 +1,12 @@
+{
+  "analysis_results_computed": false,
+  "contains_observation_rows": false,
+  "global_analysis_readiness": false,
+  "row_count": 4733,
+  "schema_version": "limited_qualitative_usage_layer_v1",
+  "scope": "non_base_companion",
+  "separate_from_qualitative_usage_layer": true,
+  "source_path": "source recorded in promotion lane manifest",
+  "source_sha256": "e93ab79afd1956d9b736c6fa0d823f4013a543042241b7bc1dbe7d6359cecb92",
+  "treatment": "companion-only; never base-wage or qualitative outcome evidence"
+}

@@ -1,0 +1,19 @@
+{
+  "allowed_usage": "narrow literal-evidence manifest only",
+  "analysis_results_computed": false,
+  "contains_observation_rows": false,
+  "global_analysis_readiness": false,
+  "qualitative_observation_id_set_sha256": "e1cb111eb6e95455ec5c48cdef9ff86e1b16e61780cd51fa97d71e9bbd2e2d96",
+  "restrictions": [
+    "literal mechanism-language evidence only",
+    "no descriptive or inferential analysis",
+    "no wage effects, wage gaps, regressions, treatment effects, or causal claims",
+    "global analysis readiness remains false",
+    "row-level restrictions remain binding",
+    "56-row scope does not establish power, representativeness, or effects"
+  ],
+  "row_count": 56,
+  "schema_version": "limited_qualitative_usage_layer_v1",
+  "scope": "strict_primary_matched_city_cycle",
+  "source_sha256": "23230cb632dfb890e4c095ec44acd6a972ada7944aaea6c9089d05c7088ce53d"
+}

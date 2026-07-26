@@ -6,6 +6,27 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-26 (Limited qualitative usage layer materialized; QA review allowed)
+
+**Did**
+- Reverified the authorized usage-review decision, all 24 immutable inputs, the inherited five-package hash contract, and the 643-ID authorization hash without accessing PDFs/pages or external systems.
+- Materialized a rollback-safe 643-row literal mechanism-language layer with exact spans, pointers, provenance, lineage, historical QA, cycle/matching and occupation metadata, and explicit non-analytic/non-causal use restrictions.
+- Preserved 116 restricted exact-span rows, 1,195 ambiguous/unavailable navigation rows, the 56-row strict primary manifest, and every quantitative/non-base/reference/conflict lane separately.
+- Added 66 focused usage-layer tests, independent dashboard completion gates, future-prompt and relay guards, and updated downstream predecessor-test phase allowlists. All 295 focused tests and 60 ingestion tests passed.
+
+**Decisions**
+- Decision is `limited_qualitative_usage_layer_materialized_qa_review_allowed`. A separately authorized QA review may inspect this limited layer next; the layer itself is not an analysis result.
+- Global/full qualitative analysis readiness, analysis-facing promotion, ingestion, codification, wage-gap, regression, and causal work remain closed.
+
+**Surprises/breakage**
+- The first write pass stopped closed because the generated future prompt combined remote-inspection and remote-configuration language while its validator required the standalone inspection phrase. The generator and regression test now require both constraints explicitly; the incomplete attempt could not pass completion validation.
+
+**Corpus snapshot**
+- `contracts=64`, `discourse=0`, `coverage=64`, `cities=19`; 28 healthy matched pairs (10 exact-cycle, 18 overlap-cycle), two exploratory adjacent matches, and six unmatched safety units.
+
+**Next steps**
+- Seek separate authorization for `next_limited_qualitative_usage_layer_qa_review_prompt.md`; reverify the 643-row layer and manifests without analysis, source access, or any readiness promotion.
+
 ## 2026-07-26 (Limited exact-span qualitative usage review passed; usage-layer prompt allowed)
 
 **Did**

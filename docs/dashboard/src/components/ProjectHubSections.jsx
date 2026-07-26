@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "compensation_extraction_limited_qualitative_usage_layer_materialized_qa_review_allowed"
+              ? "Limited qualitative usage layer materialized; bounded QA review may proceed"
+              : textTableCalibrationStatus.calibration_phase ===
             "compensation_extraction_limited_exact_span_qualitative_usage_review_completed_usage_layer_prompt_allowed"
               ? "Limited exact-span qualitative usage scope reviewed; a restricted usage-layer prompt may proceed"
               : textTableCalibrationStatus.calibration_phase ===
@@ -852,6 +855,18 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "compensation_extraction_limited_qualitative_usage_layer_materialized_qa_review_allowed" ? (
+            <>
+              The rollback-safe usage layer contains exactly 643 authorized, unique, literal
+              exact-span mechanism rows. Its authorization ID-set hash matches, all rows remain
+              explicitly non-analytic and non-causal, and the 56 strict primary matched
+              city-cycle rows remain only a narrow manifest. The 116 restricted exact-span rows
+              stay quarantined; all 614 ambiguous plus 581 unavailable rows stay navigation-only.
+              Quantitative, non-base, reference/control, and residual-conflict lanes remain
+              separate. A separately authorized layer QA review is the next allowed step; global
+              analysis readiness remains false.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "compensation_extraction_limited_exact_span_qualitative_usage_review_completed_usage_layer_prompt_allowed" ? (
             <>
               The usage review preserves the 759-row promoted universe and authorizes a future,

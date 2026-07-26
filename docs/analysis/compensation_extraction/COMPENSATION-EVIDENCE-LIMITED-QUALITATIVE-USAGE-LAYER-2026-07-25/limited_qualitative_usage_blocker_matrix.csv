@@ -1,0 +1,10 @@
+blocker_id,lane,row_count,severity,status,usage_treatment,blocks_global_readiness
+UL-QA-001,restricted_exact_span,116,major,quarantined,excluded from usage layer,true
+UL-QA-002,ambiguous_navigation,614,critical,navigation_only,not coded evidence,true
+UL-QA-003,unavailable_navigation,581,critical,navigation_only,not coded evidence,true
+UL-CY-001,cycle,190,major,usage_rows_without_exact_cycle,not cycle-aware eligible,true
+UL-OC-001,occupation,205,major,usage_rows_without_controlled_occupation,not occupation-aware eligible,true
+UL-MT-001,matching,566,major,usage_rows_without_exact_period_match,not matched-set eligible,true
+UL-PR-001,primary_design,56,scope_limit,narrow_manifest,non-analytic evidence manifest only,true
+UL-QN-001,quantitative,1045,critical,separate_exceptions,excluded from qualitative usage layer,true
+UL-CF-001,conflict,5,critical,two_groups_quarantined,excluded and explicit,true

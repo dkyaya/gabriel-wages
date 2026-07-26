@@ -1,0 +1,13 @@
+{
+  "analysis_results_computed": false,
+  "contains_observation_rows": false,
+  "global_analysis_readiness": false,
+  "group_count": 2,
+  "row_count": 5,
+  "schema_version": "limited_qualitative_usage_layer_v1",
+  "scope": "unresolved_conflict_quarantine",
+  "separate_from_qualitative_usage_layer": true,
+  "source_path": "source recorded in promotion lane manifest",
+  "source_sha256": "dcead3280d7bdb9b7d2f93debc536fd72dd60cf209d4b7f8e9fd8ca797a1eec7",
+  "treatment": "two unresolved groups remain explicit and quarantined"
+}

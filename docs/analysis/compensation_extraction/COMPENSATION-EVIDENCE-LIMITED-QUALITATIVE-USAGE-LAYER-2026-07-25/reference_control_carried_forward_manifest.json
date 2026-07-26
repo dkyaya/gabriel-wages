@@ -1,0 +1,12 @@
+{
+  "analysis_results_computed": false,
+  "contains_observation_rows": false,
+  "global_analysis_readiness": false,
+  "row_count": 345,
+  "schema_version": "limited_qualitative_usage_layer_v1",
+  "scope": "reference_control",
+  "separate_from_qualitative_usage_layer": true,
+  "source_path": "source recorded in promotion lane manifest",
+  "source_sha256": "38e37f11dbfb927ce47aaded6559bf74402142e26d9194461822dd7e2868663a",
+  "treatment": "control-only; never outcome evidence"
+}

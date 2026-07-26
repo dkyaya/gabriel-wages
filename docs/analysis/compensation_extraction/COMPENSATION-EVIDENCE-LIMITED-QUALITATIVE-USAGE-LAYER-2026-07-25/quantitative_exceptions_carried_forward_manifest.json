@@ -1,0 +1,12 @@
+{
+  "analysis_results_computed": false,
+  "contains_observation_rows": false,
+  "global_analysis_readiness": false,
+  "row_count": 1045,
+  "schema_version": "limited_qualitative_usage_layer_v1",
+  "scope": "quantitative_exceptions",
+  "separate_from_qualitative_usage_layer": true,
+  "source_path": "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages/docs/analysis/compensation_extraction/COMPENSATION-EVIDENCE-QUALITATIVE-EVIDENCE-CONTRACT-FOLLOWUP-2026-07-25/quantitative_exception_ledger_evidence_contract_followup.csv",
+  "source_sha256": "4482409deee67d18ebec4e5a56f4922e9d6d2b067eaa1dcbf7a996d60f97d401",
+  "treatment": "separate exception lane; never silently promoted"
+}

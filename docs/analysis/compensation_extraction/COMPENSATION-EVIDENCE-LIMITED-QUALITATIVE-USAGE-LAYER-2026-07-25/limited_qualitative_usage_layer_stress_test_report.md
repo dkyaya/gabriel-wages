@@ -1,0 +1,5 @@
+# Limited qualitative usage-layer stress test
+
+The materialization registers 35 adversarial failure modes spanning authorization and hashes, identity/count contamination, exact-span/provenance integrity, QA and mixed membership, eligibility subsets, forbidden analysis, lane separation, unresolved conflicts, readiness, output boundaries, prompt/relay contracts, checkpoints, and idempotency.
+
+The new suite passed 66/66 tests. Five predecessor suites passed 229/229 tests, yielding 295/295 focused passes. The first materialization attempt found one orchestration defect: the generated future prompt combined remote-inspection and remote-configuration restrictions, while its fail-closed validator required the exact standalone phrase `Do not inspect remotes`. The generator now emits both constraints independently, and the regression suite asserts both phrases. No guardrail was weakened. A deliberately incomplete output from that failed attempt was rejected by the completion validator and replaced by a complete materialization.

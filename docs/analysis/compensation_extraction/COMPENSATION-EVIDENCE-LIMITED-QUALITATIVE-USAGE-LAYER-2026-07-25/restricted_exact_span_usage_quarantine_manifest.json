@@ -1,0 +1,15 @@
+{
+  "allowed_usage": "quarantine metadata and evidence navigation only",
+  "analysis_results_computed": false,
+  "contains_observation_rows": false,
+  "global_analysis_readiness": false,
+  "qualitative_observation_id_set_sha256": "f5cba452adc92677415366366d527a5e05913fdede2a4c76119f4b680d894c85",
+  "restrictions": [
+    "not usage-layer coded evidence",
+    "retain all upstream evidence and blocker metadata"
+  ],
+  "row_count": 116,
+  "schema_version": "limited_qualitative_usage_layer_v1",
+  "scope": "restricted_exact_span",
+  "source_sha256": "a8820e4466c496509241724c37534af5aa7c9d340b3d5ffd799155416f4fb773"
+}

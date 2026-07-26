@@ -1,0 +1,5 @@
+# Limited qualitative usage scope contract
+
+This provisional layer contains exactly 643 authorized exact-span qualitative observations. Each row is one qualitative observation with literal span evidence, bounded page pointer, provenance, QA/lineage fields, deterministic cycle/matching/occupation metadata, and explicit usage restrictions. Structured mechanism-detail fields other than `mechanism_type` are intentionally omitted: this layer is evidence-first and does not silently elevate earlier extracted characterizations into final coded measurements. Those upstream fields remain immutable and available in the promotion layer.
+
+Allowed use is limited evidence organization, navigation, and later separately authorized QA. The layer contains no descriptive statistic, estimate, wage effect, wage gap, regression, treatment effect, or causal claim. The 116 restricted exact-span observations and 1,195 ambiguous/unavailable observations are represented only by separate manifests. Quantitative, non-base, reference/control, and conflict lanes remain separate. Global analysis readiness remains false.

@@ -6,6 +6,26 @@ Last updated: `2026-07-26`
 
 ---
 
+## 2026-07-26 — Limited qualitative usage layer materialized; QA review allowed
+
+### Current State
+
+- **Authority/start:** began at clean tracked `f72362341803f38f14d788c647da03436702d6f8`; all 24 immutable material inputs and the inherited five-package hash contract passed.
+- **Decision:** `limited_qualitative_usage_layer_materialized_qa_review_allowed`; a separately authorized layer QA review is allowed next. Global/full qualitative readiness remains false.
+- **Authorization hash:** the 643-row authorized and materialized observation-ID sets both hash to `0365d38babf9d4000295a3326c8cfc77b92f8a7ad1f2f1117d0cb40f1613b91b`.
+- **Layer:** 643 unique, current-active, literal exact-span mechanism rows with preserved span hashes/offsets/pointers, provenance, lineage, QA, cycle/matching, occupation, and explicit usage restrictions. Every row is marked non-analytic and non-causal.
+- **Separation:** 116 restricted rows remain quarantine metadata; 614 ambiguous and 581 unavailable rows remain navigation-only; 56 strict-primary rows remain a narrow manifest. Quantitative 862/1,045, non-base 4,733, reference/control 345, and two conflict groups/five observations remain separate manifests.
+- **Hardening:** 66 new tests and 229 predecessor tests pass; dashboard and repository builds, validation, 60 ingestion tests, coverage audit, diff checks, and idempotent resume pass.
+- **Boundary:** no PDF/page, URL/download, OCR, model/GABRIEL, extraction, selection, ingestion run, codification, wage-gap, regression, or causal work occurred; no upstream ledger changed.
+
+### Interpretation
+
+This is an organized literal-evidence-use layer, not an analysis dataset or result. Its row restrictions and companion manifests are sufficiently explicit for a separate mechanical QA review.
+
+### Next Move
+
+Use the output directory's `next_limited_qualitative_usage_layer_qa_review_prompt.md` only after separate authorization. The review must preserve all lane boundaries, perform no analysis or source access, and keep global readiness false.
+
 ## 2026-07-26 — Limited exact-span qualitative usage review passed; usage-layer prompt allowed
 
 ### Current State
