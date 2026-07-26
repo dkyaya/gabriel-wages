@@ -21,3 +21,10 @@ calculate wage gaps, run regressions, or make causal claims. Keep OCR-later
 documents untouched. URLs, downloads, OCR, extraction, selection,
 GABRIEL/API, scouts, source review, verification, and mutation of the package
 or durable ledgers remain prohibited.
+# Next task: bounded compensation schema-repair follow-up
+
+Run the separately authorized prompt at:
+
+`docs/analysis/compensation_extraction/COMPENSATION-EVIDENCE-FINAL-PROVISIONAL-SCHEMA-REPAIR-AND-ANALYSIS-VIEW-PREP-2026-07-25/next_bounded_schema_repair_followup_prompt.md`
+
+The follow-up must remain local, bounded, and non-extractive. It should establish cycle/matched-set, controlled non-safety occupation, retrieval provenance, and literal qualitative evidence-span fields only where explicit existing local structured evidence supports them. Otherwise keep those rows quarantined. Preserve all package hashes, raw values, historical QA fields, duplicate/canonical provenance, mixed membership, non-base separation, reference controls, and both residual conflict groups. Keep analysis readiness false and stop before promotion, ingestion, codification, wage-gap analysis, regression, or causal analysis.

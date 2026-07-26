@@ -1,0 +1,32 @@
+{
+  "active_join_validation": {
+    "active_mixed_rows": 371
+  },
+  "active_qualitative_historical_inactive_rows": 50,
+  "active_qualitative_historical_inactive_unique_keys": 16,
+  "active_qualitative_historical_missing_rows": 20,
+  "active_qualitative_historical_missing_unique_keys": 5,
+  "historical_keys_never_treated_as_active": true,
+  "membership_counts": {
+    "mixed": {
+      "active": 371,
+      "historical_inactive": 16
+    },
+    "non_base_wage": {
+      "active": 53,
+      "historical_inactive": 32,
+      "none": 4661
+    },
+    "qualitative": {
+      "active": 890,
+      "historical_inactive": 50,
+      "historical_missing": 20,
+      "none": 994
+    },
+    "quantitative": {
+      "active": 1237,
+      "historical_inactive": 32,
+      "none": 775
+    }
+  }
+}

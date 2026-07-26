@@ -2,9 +2,33 @@
 
 Reverse-chronological handoff for ChatGPT/Codex planning. Unlike `PROGRESS.md`, this file is more explicit about current interpretation, artifact paths, open decisions, and the recommended next run.
 
-Last updated: `2026-07-25`
+Last updated: `2026-07-26`
 
 ---
+
+## 2026-07-26 — Final provisional schema repair completed partially
+
+### Current State
+
+- **Authority/start:** work began at clean tracked `aa2a473f0f997a37fb764587683955b738d306b3` under explicit schema-repair authorization. Package and durable ledgers stayed read-only.
+- **Decision:** [schema repair](compensation_extraction/COMPENSATION-EVIDENCE-FINAL-PROVISIONAL-SCHEMA-REPAIR-AND-ANALYSIS-VIEW-PREP-2026-07-25/schema_repair_decision.json) is `schema_repairs_partial_additional_bounded_evidence_needed`. Analysis readiness, promotion, and repeat readiness review remain false.
+- **Identity bridge:** all 1,826 package identities map one-to-one to 1,826 unique raw retained hashes, local artifact pointers, source cites, detection IDs, source-review IDs, and PDF-readiness IDs. Durable bridge hashes are recorded; no input changed.
+- **Missing metadata:** 1,219 police/fire occupation classes are exact; 607 non-safety subclasses remain unknown. Contract/cycle dates, negotiation-cycle IDs, matched-set IDs, retrieval dates, and retrieval methods remain blank because durable structured sources do not supply them.
+- **Non-base headers:** both positional quantitative lineage copies contain 134 values and both mixed copies 85; zero disagreements. Repaired unique headers and canonical current lineage fields preserve both originals.
+- **Quantitative:** 1,907 active observations, 387 strict mechanical candidates, 1,520 exceptions, zero analysis-promotion eligible. Exact ranges remain min/max; formulas/pairs/multipliers/hours and ambiguous values are not scalarized. Both groups/five members remain quarantined.
+- **Qualitative:** 1,954 navigation rows; no coded mechanism candidate because dedicated literal evidence spans are absent.
+- **Mixed:** 371/371 active joins validate. Fifty active qualitative rows have 16 inactive historical keys and 20 have five missing historical keys, now explicitly labeled and never active.
+- **Non-base/reference:** 4,733 active companion rows with zero base-wage eligibility; 345 control rows with zero outcome eligibility. Of 904 original `other` rows, 389 have a single keyword-supported subtype, 141 match multiple families, and 374 remain unsupported.
+- **Dashboard:** phase is `compensation_extraction_final_provisional_schema_repair_partial_followup_required`; analysis readiness remains false.
+- **Boundary:** no GABRIEL/API, extraction, selection, URL/search, download, PDF opening, OCR, source review, verification, ingestion, codification, wage-gap work, regression, causal analysis, fetch, pull, or remote inspection occurred.
+
+### Interpretation
+
+Schema mechanics and identity provenance are materially improved, but the layer is still a provisional preparation surface, not an analysis dataset. A bounded follow-up must either establish the missing cycle/matching/retrieval/qualitative-span fields from explicit existing local structure or preserve the gaps as quarantine.
+
+### Next Move
+
+Follow [next_task.md](../../next_task.md) only after separate authorization. Run the bounded follow-up prompt, then decide in a later separate task whether another analysis-readiness review is warranted.
 
 ## 2026-07-26 — Final provisional schema review held analysis promotion
 

@@ -586,6 +586,27 @@ COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_SCHEMA_REPAIR_PROMPT_PATH = (
     COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_SCHEMA_REVIEW_DIR
     / "next_schema_repair_prompt.md"
 )
+COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_SCHEMA_REPAIR_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "COMPENSATION-EVIDENCE-FINAL-PROVISIONAL-SCHEMA-REPAIR-AND-ANALYSIS-VIEW-PREP-2026-07-25"
+)
+COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_SCHEMA_REPAIR_DECISION_PATH = (
+    COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_SCHEMA_REPAIR_DIR
+    / "schema_repair_decision.json"
+)
+COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_SCHEMA_REPAIR_BRIDGE_AUDIT_PATH = (
+    COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_SCHEMA_REPAIR_DIR
+    / "identity_provenance_bridge_audit.json"
+)
+COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_SCHEMA_REPAIR_QUARANTINE_PATH = (
+    COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_SCHEMA_REPAIR_DIR
+    / "analysis_view_quarantine_summary.json"
+)
+COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_SCHEMA_REPAIR_FOLLOWUP_PATH = (
+    COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_SCHEMA_REPAIR_DIR
+    / "next_bounded_schema_repair_followup_prompt.md"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -917,6 +938,52 @@ def final_provisional_schema_review_status() -> tuple[bool, dict[str, Any]]:
         and decision.get("causal_analysis_allowed") is False
     ):
         raise ValueError("final provisional schema review fails dashboard gates")
+    return True, decision
+
+
+def final_provisional_schema_repair_status() -> tuple[bool, dict[str, Any]]:
+    required = (
+        COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_SCHEMA_REPAIR_DECISION_PATH,
+        COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_SCHEMA_REPAIR_BRIDGE_AUDIT_PATH,
+        COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_SCHEMA_REPAIR_QUARANTINE_PATH,
+        COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_SCHEMA_REPAIR_FOLLOWUP_PATH,
+        COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_SCHEMA_REPAIR_DIR
+        / "schema_repair_validation_2026-07-25.md",
+    )
+    completed = all(path.exists() for path in required)
+    if not completed:
+        return False, {}
+    decision = read_json(
+        COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_SCHEMA_REPAIR_DECISION_PATH
+    )
+    bridge = decision.get("identity_provenance_bridge", {})
+    quantitative = decision.get("quantitative", {})
+    qualitative = decision.get("qualitative", {})
+    mixed = decision.get("mixed", {})
+    if not (
+        decision.get("task_id")
+        == "COMPENSATION-EVIDENCE-FINAL-PROVISIONAL-SCHEMA-REPAIR-AND-ANALYSIS-VIEW-PREP-2026-07-25"
+        and decision.get("decision")
+        == "schema_repairs_partial_additional_bounded_evidence_needed"
+        and decision.get("analysis_readiness") is False
+        and decision.get("analysis_facing_promotion_allowed") is False
+        and decision.get("repeat_analysis_readiness_review_allowed") is False
+        and decision.get("package_ledgers_mutated") is False
+        and decision.get("durable_bridge_inputs_mutated") is False
+        and int(decision.get("package_sha256_checks_passed", 0)) == 5
+        and int(bridge.get("document_identity_count", 0)) == 1826
+        and int(bridge.get("unique_raw_retained_content_hash_count", 0)) == 1826
+        and int(bridge.get("identity_quarantine_count", -1)) == 0
+        and int(bridge.get("ocr_needed_or_ocr_later_count", -1)) == 0
+        and int(bridge.get("parse_text_present_or_partial_count", 0)) == 1826
+        and int(quantitative.get("unresolved_conflict_group_count", 0)) == 2
+        and int(quantitative.get("unresolved_conflict_member_observation_count", 0)) == 5
+        and qualitative.get("coded_analysis_candidate_created") is False
+        and int(mixed.get("active_join_validation", {}).get("active_mixed_rows", 0)) == 371
+        and decision.get("forbidden_actions_performed") == []
+        and decision.get("ocr_later_documents_included") is False
+    ):
+        raise ValueError("final provisional schema repair fails dashboard gates")
     return True, decision
 
 
@@ -1566,6 +1633,10 @@ def build_analysis_readiness(
         final_schema_review_completed,
         final_schema_review_decision,
     ) = final_provisional_schema_review_status()
+    (
+        final_schema_repair_completed,
+        final_schema_repair_decision,
+    ) = final_provisional_schema_repair_status()
     if scale_1000_targeted_qa_completed and (
         scale_1000_targeted_qa_decision.get("qa_pass") is not True
         or scale_1000_targeted_qa_decision.get(
@@ -1612,7 +1683,9 @@ def build_analysis_readiness(
     return {
         "metadata": metadata,
         "overall_status": (
-            "final_provisional_schema_readiness_hold_repairs_required_analysis_closed"
+            "final_provisional_schema_repairs_partial_bounded_followup_required_analysis_closed"
+            if final_schema_repair_completed
+            else "final_provisional_schema_readiness_hold_repairs_required_analysis_closed"
             if final_schema_review_completed
             else "final_provisional_package_materialized_qa_pass_analysis_closed"
             if final_package_materialized
@@ -1699,7 +1772,9 @@ def build_analysis_readiness(
             "wage_extraction_stage": {
                 "available": extraction_completed,
                 "display_status": (
-                    "final_provisional_schema_readiness_hold_repairs_required"
+                    "final_provisional_schema_repairs_partial_bounded_followup_required"
+                    if final_schema_repair_completed
+                    else "final_provisional_schema_readiness_hold_repairs_required"
                     if final_schema_review_completed
                     else "final_provisional_package_materialized_qa_pass_not_analysis_ready"
                     if final_package_materialized
@@ -1789,7 +1864,9 @@ def build_analysis_readiness(
                 ),
                 "scale_beyond_1000_recommendation": scale_1000_decision.get(
                     "scale_beyond_1000_recommendation"
-                ) if not scale_1000_targeted_qa_completed else final_schema_review_decision.get(
+                ) if not scale_1000_targeted_qa_completed else final_schema_repair_decision.get(
+                    "next_recommendation"
+                ) if final_schema_repair_completed else final_schema_review_decision.get(
                     "next_recommendation"
                 ) if final_schema_review_completed else final_package_decision.get(
                     "next_recommendation"
@@ -1851,6 +1928,11 @@ def build_analysis_readiness(
                 "final_provisional_schema_readiness_decision": (
                     final_schema_review_decision.get("schema_readiness_decision")
                     if final_schema_review_completed else None
+                ),
+                "final_provisional_schema_repair_completed": final_schema_repair_completed,
+                "final_provisional_schema_repair_decision": (
+                    final_schema_repair_decision.get("decision")
+                    if final_schema_repair_completed else None
                 ),
                 "analysis_facing_promotion_allowed": False,
             },
@@ -5669,10 +5751,16 @@ def build_text_table_calibration_status_summary(
             final_schema_review_completed,
             final_schema_review_decision,
         ) = final_provisional_schema_review_status()
+        (
+            final_schema_repair_completed,
+            final_schema_repair_decision,
+        ) = final_provisional_schema_repair_status()
         return {
             **metadata,
             "calibration_phase": (
-                "compensation_extraction_final_provisional_schema_readiness_review_completed_hold"
+                "compensation_extraction_final_provisional_schema_repair_partial_followup_required"
+                if final_schema_repair_completed
+                else "compensation_extraction_final_provisional_schema_readiness_review_completed_hold"
                 if final_schema_review_completed
                 else "compensation_extraction_final_provisional_package_materialized_qa_pass"
                 if final_package_materialized
@@ -6006,7 +6094,9 @@ def build_text_table_calibration_status_summary(
                 if scale_1000_materialized else None
             ),
             "scale_beyond_1000_recommendation": (
-                final_schema_review_decision.get("next_recommendation")
+                final_schema_repair_decision.get("next_recommendation")
+                if final_schema_repair_completed
+                else final_schema_review_decision.get("next_recommendation")
                 if final_schema_review_completed
                 else final_package_decision.get("next_recommendation")
                 if final_package_materialized
@@ -6193,6 +6283,27 @@ def build_text_table_calibration_status_summary(
                 relative(COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_SCHEMA_REVIEW_DIR)
                 if final_schema_review_completed else None
             ),
+            "final_provisional_schema_repair_completed": final_schema_repair_completed,
+            "final_provisional_schema_repair_decision": (
+                final_schema_repair_decision.get("decision")
+                if final_schema_repair_completed else None
+            ),
+            "final_provisional_schema_repair_path": (
+                relative(COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_SCHEMA_REPAIR_DIR)
+                if final_schema_repair_completed else None
+            ),
+            "schema_repair_identity_bridge_count": (
+                int(final_schema_repair_decision.get("identity_provenance_bridge", {}).get("document_identity_count", 0))
+                if final_schema_repair_completed else None
+            ),
+            "schema_repair_quantitative_candidate_count": (
+                int(final_schema_repair_decision.get("quantitative", {}).get("quantitative_analysis_candidate_count", 0))
+                if final_schema_repair_completed else None
+            ),
+            "schema_repair_quantitative_exception_count": (
+                int(final_schema_repair_decision.get("quantitative", {}).get("quantitative_normalization_exception_count", 0))
+                if final_schema_repair_completed else None
+            ),
             "analysis_facing_promotion_allowed": False,
             "prior_auto_adjudication_gate_id": (
                 "TEXT-TABLE-AUTO-GABRIEL-GATE2-REFINEMENT-2026-07-25"
@@ -6345,7 +6456,9 @@ def build_text_table_calibration_status_summary(
                 else float(decision["wrong_page_rate"])
             ),
             "extraction_decision": (
-                final_schema_review_decision.get("schema_readiness_decision")
+                final_schema_repair_decision.get("decision")
+                if final_schema_repair_completed
+                else final_schema_review_decision.get("schema_readiness_decision")
                 if final_schema_review_completed
                 else final_package_decision.get("decision")
                 if final_package_materialized
@@ -6391,7 +6504,12 @@ def build_text_table_calibration_status_summary(
                 else False
             ),
             "next_recommendation": (
-                final_schema_review_decision.get("next_recommendation")
+                final_schema_repair_decision.get(
+                    "next_recommendation",
+                    "run_separately_authorized_bounded_schema_repair_followup",
+                )
+                if final_schema_repair_completed
+                else final_schema_review_decision.get("next_recommendation")
                 if final_schema_review_completed
                 else final_package_decision.get("next_recommendation")
                 if final_package_materialized
@@ -6424,7 +6542,9 @@ def build_text_table_calibration_status_summary(
                 )
             ),
             "wage_extraction_status": (
-                "final_provisional_schema_readiness_hold_repairs_required"
+                "final_provisional_schema_repairs_partial_bounded_followup_required"
+                if final_schema_repair_completed
+                else "final_provisional_schema_readiness_hold_repairs_required"
                 if final_schema_review_completed
                 else "final_provisional_package_materialized_qa_pass_not_analysis_ready"
                 if final_package_materialized
@@ -6448,7 +6568,9 @@ def build_text_table_calibration_status_summary(
                 if extraction_completed else "not_started"
             ),
             "qualitative_extraction_status": (
-                "final_provisional_schema_readiness_hold_repairs_required"
+                "final_provisional_schema_repairs_partial_navigation_only_bounded_followup_required"
+                if final_schema_repair_completed
+                else "final_provisional_schema_readiness_hold_repairs_required"
                 if final_schema_review_completed
                 else "final_provisional_package_materialized_qa_pass_not_analysis_ready"
                 if final_package_materialized
@@ -6535,6 +6657,15 @@ def build_text_table_calibration_status_summary(
                 else 0
             ),
             "caveats": (
+                [
+                    "Rollback-safe schema-repair shadows were created without modifying the immutable package or durable bridge ledgers; analysis readiness remains false.",
+                    "All 1,826 document identities now have one-to-one raw retained-hash and local artifact bridges, and duplicate non-base lineage columns were repaired losslessly with zero disagreements.",
+                    "Cycle dates, negotiation-cycle IDs, matched-set IDs, retrieval date/method, and controlled non-safety occupation subclasses remain unavailable without inference.",
+                    "Only 387 quantitative rows meet the strict mechanical parse contract; 1,520 active rows remain explicit normalization exceptions, including both unresolved groups and all five member observations.",
+                    "Qualitative evidence remains a 1,954-row navigation view because the package lacks dedicated literal evidence spans; non-base remains companion-only and reference/exclusion remains control-only.",
+                ]
+                if final_schema_repair_completed
+                else
                 [
                     "Schema readiness review held analysis-facing promotion even though immutable package integrity remains passed.",
                     "Critical blockers are missing raw retained hashes, matched city-unit-cycle/occupation keys, non-normalized quantitative values and dates, duplicate non-base lineage headers, and incomplete self-contained provenance.",

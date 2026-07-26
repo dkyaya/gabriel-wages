@@ -1,0 +1,21 @@
+{
+  "active_quantitative_row_count": 1907,
+  "ambiguous_compensation_type_other_count": 162,
+  "analysis_promotion_eligible_count": 0,
+  "exception_reason_counts_nonexclusive": {
+    "ambiguous_compensation_type_other": 162,
+    "effective_date_not_exactly_parseable": 1087,
+    "explicit_unresolved_conflict_member": 5,
+    "neither_amount_nor_percentage": 168,
+    "no_safe_normalized_value": 513,
+    "percentage_not_exact_scalar_token": 179,
+    "raw_value_formula_pair_multiplier_hours_or_unparsed": 176,
+    "typed_primary_value_missing_or_misaligned": 112
+  },
+  "identity_quarantine_count": 0,
+  "neither_amount_nor_percentage_count": 168,
+  "quantitative_analysis_candidate_count": 387,
+  "quantitative_normalization_exception_count": 1520,
+  "unresolved_conflict_group_count": 2,
+  "unresolved_conflict_member_observation_count": 5
+}

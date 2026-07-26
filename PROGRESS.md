@@ -6,6 +6,33 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-26 (Final provisional schema repair partial; bounded follow-up required)
+
+**Did**
+- Started from clean tracked `aa2a473f0f997a37fb764587683955b738d306b3`, preserving the unrelated untracked rendered-page directory and root `package-lock.json`.
+- Added a deterministic schema-repair runner and 13 focused offline tests. A zero-write preflight reverified all five package hashes, a new rollback-safe output boundary, 1,826 one-to-one retained-hash bridges, and 371/371 active mixed joins before materialization.
+- Produced lossless five-lane repaired shadows, a positional non-base lineage map, durable-input hash record, identity/provenance bridge, strict quantitative parse candidates/exceptions, mixed membership audit, residual-conflict quarantine, non-base companion candidate, qualitative navigation candidate, and reference/control view.
+- Preserved every raw value and historical QA/provenance field. The package and durable ledgers remained unchanged; no analysis dataset was created.
+- Updated dashboard generation/data/frontend/docs, result/status docs, handoff, and `next_task.md` to show a partial repair with analysis readiness false.
+
+**Decisions and why**
+- Decision is `schema_repairs_partial_additional_bounded_evidence_needed`. Raw identity and schema mechanics were repaired safely, but durable metadata does not contain cycle dates, matched-set IDs, retrieval date/method, or controlled non-safety occupation subclasses.
+- Only 387/1,907 active quantitative rows satisfy the deliberately strict mechanical parse contract; 1,520 remain explicit exceptions. No annualization or ambiguous scalar coercion occurred.
+- The 1,954 qualitative rows remain navigation-only because a dedicated literal/verbatim evidence-span and QA contract is absent. Non-base remains companion-only and reference/exclusion control-only.
+- Another analysis-readiness review is not yet authorized. The next step is a separately authorized bounded metadata/evidence-contract follow-up.
+
+**Surprises/breakage**
+- The raw retained-hash bridge is complete and one-to-one for all 1,826 identities, but the source-review layer has zero contract-period dates for this package and no explicit retrieval-method field.
+- Of 904 active non-base `other` rows, 389 support one deterministic keyword subtype, 141 match multiple families, and 374 remain unsupported; all original types remain intact.
+- Strict parsing quarantines 168 rows with neither amount nor percentage, 162 ambiguous `other` rows, 179 non-scalar percentage strings, and all five members of the two residual groups. Reason counts overlap by design.
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Thirteen focused repair tests, five hash checks, dashboard generation/frontend build, repository validation, 60 ingestion tests, coverage audit, protected-input checks, and diff hygiene passed.
+
+**Next steps**
+1. Obtain separate authorization for the bounded schema-repair follow-up prompt.
+2. Establish cycle/matched-set, non-safety occupation, retrieval, and literal evidence-span fields only where existing local structured evidence is explicit; otherwise preserve quarantine.
+3. Keep promotion, ingestion, codification, wage-gap work, regression, and causal analysis closed pending another separate readiness review.
+
 ## 2026-07-26 (Final provisional schema readiness held for lossless repairs)
 
 **Did**

@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "compensation_extraction_final_provisional_schema_repair_partial_followup_required"
+              ? "Schema mechanics repaired; bounded metadata and evidence follow-up still required"
+              : textTableCalibrationStatus.calibration_phase ===
             "compensation_extraction_final_provisional_schema_readiness_review_completed_hold"
               ? "Package integrity passed; schema repairs required before analysis promotion"
               : textTableCalibrationStatus.calibration_phase ===
@@ -822,6 +825,18 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "compensation_extraction_final_provisional_schema_repair_partial_followup_required" ? (
+            <>
+              A rollback-safe repair layer now supplies one-to-one retained-hash bridges for all
+              1,826 documents, lossless non-base lineage columns, deterministic current-active and
+              QA semantics, strict quantitative parse statuses, and explicit active versus
+              historical mixed membership. Only 387 quantitative rows meet the mechanical parse
+              contract; 1,520 remain exceptions. Qualitative evidence remains navigation-only
+              because literal evidence spans are absent. Cycle and matched-set metadata remain
+              unavailable without inference, so analysis readiness, promotion, ingestion,
+              codification, wage-gap work, and regression remain closed.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "compensation_extraction_final_provisional_schema_readiness_review_completed_hold" ? (
             <>
               The independent schema review preserved all five package ledgers and verified every

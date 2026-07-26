@@ -66,6 +66,10 @@ extraction nor a smaller pilot is authorized. GABRIEL saw bounded page
 packets only; no final wage values, URLs/downloads, OCR, extraction,
 ingestion, codification, or wage-gap analysis occurred.
 
+## Final provisional schema repair — 2026-07-26
+
+The dashboard now reports the rollback-safe schema-repair layer as `compensation_extraction_final_provisional_schema_repair_partial_followup_required`. The five immutable package ledgers remain unchanged. The repair supplies 1,826 one-to-one retained-hash bridges, lossless unique non-base lineage columns, deterministic current-active/QA semantics, strict quantitative parsing with 387 candidates and 1,520 active exceptions, explicit historical mixed-membership statuses, a non-base companion view, and a reference/control view. Qualitative evidence remains navigation-only because literal evidence spans are absent; cycle/matched-set and controlled non-safety occupation metadata also remain incomplete. Analysis readiness and promotion remain false pending a separately authorized bounded follow-up.
+
 ## Final provisional schema readiness — 2026-07-26
 
 The immutable five-ledger provisional package remains integrity-valid, but a

@@ -1,0 +1,25 @@
+{
+  "artifact_pointer_count": 1826,
+  "bridge_result": "identity_hash_one_to_one_provenance_partial_matching_incomplete",
+  "contract_period_complete_count": 0,
+  "document_identity_count": 1826,
+  "durable_input_sha256": {
+    "pdf_readiness": "dd120453068a668b5c818352402ca828073ac9639ee4d8d1ffc88f9488d4d953",
+    "source_review": "e29d580d42068615611b464e6da40654f336f273fa7c40a7b0717d4894148c9f",
+    "text_table_detection": "4992efe74c4d76d66e345ab9716b987df850b73b3db98af17a2573da98bced03"
+  },
+  "durable_inputs_mutated": false,
+  "identity_quarantine_count": 0,
+  "matched_set_id_count": 0,
+  "negotiation_cycle_id_count": 0,
+  "no_inference_policy_enforced": true,
+  "occupation_class_exact_count": 1219,
+  "occupation_class_incomplete_non_safety_count": 607,
+  "ocr_needed_or_ocr_later_count": 0,
+  "parse_text_present_or_partial_count": 1826,
+  "retrieval_date_count": 0,
+  "retrieval_method_count": 0,
+  "source_cite_count": 1826,
+  "task_id": "COMPENSATION-EVIDENCE-FINAL-PROVISIONAL-SCHEMA-REPAIR-AND-ANALYSIS-VIEW-PREP-2026-07-25",
+  "unique_raw_retained_content_hash_count": 1826
+}
