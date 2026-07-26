@@ -94,6 +94,8 @@ The current phase is `compensation_extraction_pipeline_hardening_complete_limite
 
 The current phase is `compensation_extraction_limited_exact_span_qualitative_promotion_completed_usage_review_allowed`. The rollback-safe provisional promotion retains all 759 exact-span qualitative rows and makes every restriction explicit: 643 rows are eligible for limited qualitative use, 116 exact-span rows are restricted, 453 support exact-cycle analysis, 438 support controlled-occupation comparison, 77 have exact-period matched-set support, and 56 satisfy the complete strict matched city-cycle design. The 614 ambiguous and 581 unavailable rows remain in a separate 1,195-row navigation-only file. Quantitative, non-base, reference/control, and two unresolved groups/five observations remain separate. A separately authorized limited-usage review is allowed next; global analysis readiness remains false.
 
+The current phase is `compensation_extraction_limited_exact_span_qualitative_usage_review_completed_usage_layer_prompt_allowed`. The review authorizes preparation of a future, separately approved limited qualitative usage layer for the 643 eligible exact-span rows only; it does not run that layer or perform analysis. The 116 restricted exact-span rows remain quarantined, the 1,195 ambiguous/unavailable rows remain navigation-only, and the 453 exact-cycle, 438 controlled-occupation, 77 exact-period matched-set, and 56 strict primary matched city-cycle subsets retain explicit scope restrictions. Mechanism language is not evidence of wage effects, and global analysis readiness remains false.
+
 ## Final provisional schema readiness — 2026-07-26
 
 The immutable five-ledger provisional package remains integrity-valid, but a

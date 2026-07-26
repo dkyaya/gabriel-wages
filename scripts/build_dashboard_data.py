@@ -771,6 +771,23 @@ COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_PROMOTION_INVARIANTS_PATH = (
     COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_PROMOTION_DIR
     / "limited_exact_span_qualitative_promotion_invariant_checks.json"
 )
+COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REVIEW_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "COMPENSATION-EVIDENCE-LIMITED-EXACT-SPAN-QUALITATIVE-USAGE-REVIEW-2026-07-25"
+)
+COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REVIEW_DECISION_PATH = (
+    COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REVIEW_DIR
+    / "limited_exact_span_qualitative_usage_review_decision.json"
+)
+COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REVIEW_AUDIT_PATH = (
+    COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REVIEW_DIR
+    / "limited_exact_span_qualitative_usage_eligibility_audit.json"
+)
+COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REVIEW_INVARIANTS_PATH = (
+    COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REVIEW_DIR
+    / "limited_exact_span_qualitative_usage_review_invariant_checks.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -1645,6 +1662,107 @@ def limited_exact_span_qualitative_promotion_status() -> tuple[bool, dict[str, A
     return True, decision
 
 
+def limited_exact_span_qualitative_usage_review_status() -> tuple[bool, dict[str, Any]]:
+    required = (
+        COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REVIEW_DECISION_PATH,
+        COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REVIEW_AUDIT_PATH,
+        COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REVIEW_INVARIANTS_PATH,
+        COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REVIEW_DIR
+        / "limited_exact_span_qualitative_usage_scope_matrix.csv",
+        COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REVIEW_DIR
+        / "limited_exact_span_qualitative_usage_blocker_matrix.csv",
+        COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REVIEW_DIR
+        / "limited_qualitative_mechanism_usage_candidate_manifest.json",
+        COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REVIEW_DIR
+        / "strict_primary_matched_city_cycle_usage_candidate_manifest.json",
+        COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REVIEW_DIR
+        / "restricted_exact_span_usage_quarantine_manifest.json",
+        COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REVIEW_DIR
+        / "navigation_only_qualitative_usage_manifest.json",
+        COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REVIEW_DIR
+        / "next_limited_qualitative_usage_layer_prompt.md",
+    )
+    completed = all(path.exists() for path in required)
+    if not completed:
+        return False, {}
+    decision = read_json(COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REVIEW_DECISION_PATH)
+    audit = read_json(COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REVIEW_AUDIT_PATH)
+    invariants = read_json(COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REVIEW_INVARIANTS_PATH)
+    candidate = read_json(
+        COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REVIEW_DIR
+        / "limited_qualitative_mechanism_usage_candidate_manifest.json"
+    )
+    primary = read_json(
+        COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REVIEW_DIR
+        / "strict_primary_matched_city_cycle_usage_candidate_manifest.json"
+    )
+    restricted = read_json(
+        COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REVIEW_DIR
+        / "restricted_exact_span_usage_quarantine_manifest.json"
+    )
+    navigation = read_json(
+        COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REVIEW_DIR
+        / "navigation_only_qualitative_usage_manifest.json"
+    )
+    scopes = decision.get("scope_counts", {})
+    expected = {
+        "promoted_view": 759,
+        "limited_use_candidate": 643,
+        "restricted_exact_span": 116,
+        "ambiguous_navigation": 614,
+        "unavailable_navigation": 581,
+        "navigation_only": 1195,
+        "strict_primary_matched_city_cycle": 56,
+        "exact_cycle": 453,
+        "controlled_occupation": 438,
+        "exact_period_matched_set": 77,
+        "typed_mechanism": 643,
+        "quantitative_candidates": 862,
+        "quantitative_exceptions": 1045,
+        "non_base_companion": 4733,
+        "reference_control": 345,
+        "unresolved_conflict_groups": 2,
+        "unresolved_conflict_observations": 5,
+    }
+    if not (
+        decision.get("task_id")
+        == "COMPENSATION-EVIDENCE-LIMITED-EXACT-SPAN-QUALITATIVE-USAGE-REVIEW-2026-07-25"
+        and decision.get("decision")
+        == "limited_exact_span_qualitative_usage_review_pass_prepare_usage_layer_prompt"
+        and decision.get("global_analysis_readiness") is False
+        and decision.get("global_analysis_facing_promotion") is False
+        and decision.get("analysis_results_computed") is False
+        and decision.get("limited_usage_layer_prompt_allowed_next") is True
+        and decision.get("limited_usage_layer_requires_separate_authorization") is True
+        and int(decision.get("package_sha256_checks_passed", 0)) == 5
+        and scopes == expected
+        and audit.get("all_checks_passed") is True
+        and audit.get("global_analysis_readiness") is False
+        and int(audit.get("candidate_restricted_overlap", -1)) == 0
+        and int(audit.get("candidate_navigation_overlap", -1)) == 0
+        and int(audit.get("pdf_pages_accessed", -1)) == 0
+        and int(audit.get("ocr_later_accessed", -1)) == 0
+        and int(audit.get("network_or_model_calls", -1)) == 0
+        and invariants.get("all_invariants_passed") is True
+        and int(candidate.get("row_count", 0)) == 643
+        and int(primary.get("row_count", 0)) == 56
+        and int(restricted.get("row_count", 0)) == 116
+        and int(navigation.get("row_count", 0)) == 1195
+        and int(navigation.get("ambiguous_rows", 0)) == 614
+        and int(navigation.get("unavailable_rows", 0)) == 581
+        and all(
+            record.get("contains_observation_rows") is False
+            and record.get("analysis_results_computed") is False
+            and record.get("global_analysis_readiness") is False
+            for record in (candidate, primary, restricted, navigation)
+        )
+        and decision.get("forbidden_actions_performed") == []
+        and decision.get("immutable_inputs_modified") is False
+    ):
+        raise ValueError("limited exact-span qualitative usage review fails dashboard gates")
+    return True, decision
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -2327,6 +2445,10 @@ def build_analysis_readiness(
         limited_qualitative_promotion_completed,
         limited_qualitative_promotion_decision,
     ) = limited_exact_span_qualitative_promotion_status()
+    (
+        limited_qualitative_usage_review_completed,
+        limited_qualitative_usage_review_decision,
+    ) = limited_exact_span_qualitative_usage_review_status()
     if scale_1000_targeted_qa_completed and (
         scale_1000_targeted_qa_decision.get("qa_pass") is not True
         or scale_1000_targeted_qa_decision.get(
@@ -2373,7 +2495,9 @@ def build_analysis_readiness(
     return {
         "metadata": metadata,
         "overall_status": (
-            "limited_exact_span_qualitative_promotion_complete_usage_review_allowed_global_analysis_closed"
+            "limited_exact_span_qualitative_usage_review_complete_usage_layer_prompt_allowed_global_analysis_closed"
+            if limited_qualitative_usage_review_completed
+            else "limited_exact_span_qualitative_promotion_complete_usage_review_allowed_global_analysis_closed"
             if limited_qualitative_promotion_completed
             else "pipeline_hardening_complete_limited_promotion_allowed_global_analysis_closed"
             if pipeline_hardening_accelerator_completed
@@ -2478,7 +2602,9 @@ def build_analysis_readiness(
             "wage_extraction_stage": {
                 "available": extraction_completed,
                 "display_status": (
-                    "limited_exact_span_qualitative_promotion_completed_usage_review_only_global_analysis_closed"
+                    "limited_exact_span_qualitative_usage_review_completed_usage_layer_prompt_only_global_analysis_closed"
+                    if limited_qualitative_usage_review_completed
+                    else "limited_exact_span_qualitative_promotion_completed_usage_review_only_global_analysis_closed"
                     if limited_qualitative_promotion_completed
                     else "pipeline_hardening_complete_limited_promotion_allowed_global_analysis_closed"
                     if pipeline_hardening_accelerator_completed
@@ -2778,6 +2904,23 @@ def build_analysis_readiness(
                 "limited_exact_span_qualitative_usage_review_allowed": (
                     bool(limited_qualitative_promotion_decision.get("limited_usage_review_allowed_next", False))
                     if limited_qualitative_promotion_completed else False
+                ),
+                "limited_exact_span_qualitative_usage_review_completed": limited_qualitative_usage_review_completed,
+                "limited_exact_span_qualitative_usage_review_decision": (
+                    limited_qualitative_usage_review_decision.get("decision")
+                    if limited_qualitative_usage_review_completed else None
+                ),
+                "limited_exact_span_qualitative_usage_layer_prompt_allowed": (
+                    bool(limited_qualitative_usage_review_decision.get("limited_usage_layer_prompt_allowed_next", False))
+                    if limited_qualitative_usage_review_completed else False
+                ),
+                "limited_exact_span_qualitative_usage_candidate_count": (
+                    int(limited_qualitative_usage_review_decision.get("scope_counts", {}).get("limited_use_candidate", 0))
+                    if limited_qualitative_usage_review_completed else None
+                ),
+                "limited_exact_span_qualitative_usage_primary_count": (
+                    int(limited_qualitative_usage_review_decision.get("scope_counts", {}).get("strict_primary_matched_city_cycle", 0))
+                    if limited_qualitative_usage_review_completed else None
                 ),
                 "limited_exact_span_qualitative_global_analysis_readiness": False,
                 "analysis_facing_promotion_allowed": False,
@@ -6633,10 +6776,16 @@ def build_text_table_calibration_status_summary(
             limited_qualitative_promotion_completed,
             limited_qualitative_promotion_decision,
         ) = limited_exact_span_qualitative_promotion_status()
+        (
+            limited_qualitative_usage_review_completed,
+            limited_qualitative_usage_review_decision,
+        ) = limited_exact_span_qualitative_usage_review_status()
         return {
             **metadata,
             "calibration_phase": (
-                "compensation_extraction_limited_exact_span_qualitative_promotion_completed_usage_review_allowed"
+                "compensation_extraction_limited_exact_span_qualitative_usage_review_completed_usage_layer_prompt_allowed"
+                if limited_qualitative_usage_review_completed
+                else "compensation_extraction_limited_exact_span_qualitative_promotion_completed_usage_review_allowed"
                 if limited_qualitative_promotion_completed
                 else "compensation_extraction_pipeline_hardening_complete_limited_promotion_allowed"
                 if pipeline_hardening_accelerator_completed
@@ -7432,6 +7581,48 @@ def build_text_table_calibration_status_summary(
                 bool(limited_qualitative_promotion_decision.get("limited_usage_review_allowed_next", False))
                 if limited_qualitative_promotion_completed else False
             ),
+            "limited_exact_span_qualitative_usage_review_completed": limited_qualitative_usage_review_completed,
+            "limited_exact_span_qualitative_usage_review_decision": (
+                limited_qualitative_usage_review_decision.get("decision")
+                if limited_qualitative_usage_review_completed else None
+            ),
+            "limited_exact_span_qualitative_usage_review_path": (
+                relative(COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REVIEW_DIR)
+                if limited_qualitative_usage_review_completed else None
+            ),
+            "limited_exact_span_qualitative_usage_candidate_count": (
+                int(limited_qualitative_usage_review_decision.get("scope_counts", {}).get("limited_use_candidate", 0))
+                if limited_qualitative_usage_review_completed else None
+            ),
+            "limited_exact_span_qualitative_usage_restricted_count": (
+                int(limited_qualitative_usage_review_decision.get("scope_counts", {}).get("restricted_exact_span", 0))
+                if limited_qualitative_usage_review_completed else None
+            ),
+            "limited_exact_span_qualitative_usage_navigation_count": (
+                int(limited_qualitative_usage_review_decision.get("scope_counts", {}).get("navigation_only", 0))
+                if limited_qualitative_usage_review_completed else None
+            ),
+            "limited_exact_span_qualitative_usage_primary_count": (
+                int(limited_qualitative_usage_review_decision.get("scope_counts", {}).get("strict_primary_matched_city_cycle", 0))
+                if limited_qualitative_usage_review_completed else None
+            ),
+            "limited_exact_span_qualitative_usage_cycle_count": (
+                int(limited_qualitative_usage_review_decision.get("scope_counts", {}).get("exact_cycle", 0))
+                if limited_qualitative_usage_review_completed else None
+            ),
+            "limited_exact_span_qualitative_usage_occupation_count": (
+                int(limited_qualitative_usage_review_decision.get("scope_counts", {}).get("controlled_occupation", 0))
+                if limited_qualitative_usage_review_completed else None
+            ),
+            "limited_exact_span_qualitative_usage_matched_set_count": (
+                int(limited_qualitative_usage_review_decision.get("scope_counts", {}).get("exact_period_matched_set", 0))
+                if limited_qualitative_usage_review_completed else None
+            ),
+            "limited_exact_span_qualitative_usage_layer_prompt_allowed": (
+                bool(limited_qualitative_usage_review_decision.get("limited_usage_layer_prompt_allowed_next", False))
+                if limited_qualitative_usage_review_completed else False
+            ),
+            "limited_exact_span_qualitative_usage_review_global_analysis_readiness": False,
             "limited_exact_span_qualitative_global_analysis_readiness": False,
             "bounded_pdf_text_span_capture_completed": bounded_pdf_text_span_capture_completed,
             "bounded_pdf_text_span_capture_decision": (
@@ -7676,7 +7867,9 @@ def build_text_table_calibration_status_summary(
                 else False
             ),
             "next_recommendation": (
-                "seek_separate_authorization_to_run_limited_qualitative_usage_review"
+                "seek_separate_authorization_to_run_limited_qualitative_usage_layer_prompt"
+                if limited_qualitative_usage_review_completed
+                else "seek_separate_authorization_to_run_limited_qualitative_usage_review"
                 if limited_qualitative_promotion_completed
                 else "seek_separate_authorization_to_run_hardened_limited_qualitative_promotion_prompt"
                 if pipeline_hardening_accelerator_completed

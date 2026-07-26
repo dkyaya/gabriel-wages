@@ -236,6 +236,7 @@ class MaterializedOutputTests(unittest.TestCase):
                 "compensation_extraction_limited_exact_span_qualitative_readiness_review_completed_pass_with_blockers",
                 "compensation_extraction_pipeline_hardening_complete_limited_promotion_allowed",
                 "compensation_extraction_limited_exact_span_qualitative_promotion_completed_usage_review_allowed",
+                "compensation_extraction_limited_exact_span_qualitative_usage_review_completed_usage_layer_prompt_allowed",
             },
         )
         self.assertEqual(dashboard["qualitative_evidence_contract_repeat_review_scope"], "limited_exact_span_only")
@@ -247,6 +248,7 @@ class MaterializedOutputTests(unittest.TestCase):
                 "limited_exact_span_qualitative_readiness_pass_with_blockers_promotion_prompt_allowed_analysis_closed",
                 "pipeline_hardening_complete_limited_promotion_allowed_global_analysis_closed",
                 "limited_exact_span_qualitative_promotion_complete_usage_review_allowed_global_analysis_closed",
+                "limited_exact_span_qualitative_usage_review_complete_usage_layer_prompt_allowed_global_analysis_closed",
             },
         )
         self.assertIn("analysis_closed", readiness["overall_status"])

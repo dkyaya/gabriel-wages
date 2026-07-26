@@ -1,0 +1,9 @@
+usage_scope,eligible_row_count,allowed_next_layer,permitted_characterization,prohibited_use,review_outcome
+limited_qualitative_mechanism,643,restricted literal-mechanism evidence layer,mechanism-language evidence with row-level eligibility,wage effects|wage gaps|regression|causal claims,pass_prepare_prompt
+strict_primary_matched_city_cycle,56,narrow primary-design evidence manifest only,bounded matched-design evidence navigation,effect estimation|generalization|causal inference,pass_with_narrow_scope
+exact_cycle_descriptive,453,cycle-aware qualitative evidence review,contract-cycle-linked mechanism language,wage-gap analysis|treatment effects,pass_with_restrictions
+controlled_occupation_descriptive,438,occupation-aware qualitative evidence review,controlled-occupation mechanism language,wage-gap analysis|causal comparison,pass_with_restrictions
+exact_period_matched_set_review,77,matched-set evidence review,matched-set coverage and mechanism-language navigation,effect estimation|causal inference,pass_with_restrictions
+restricted_exact_span,116,quarantine metadata only,exact-span evidence retained but restricted,coded qualitative usage,quarantined
+ambiguous_navigation,614,navigation only,ambiguous exact-span navigation,coded evidence|analysis,navigation_only
+unavailable_navigation,581,navigation only,unavailable/unverified span navigation,coded evidence|analysis,navigation_only

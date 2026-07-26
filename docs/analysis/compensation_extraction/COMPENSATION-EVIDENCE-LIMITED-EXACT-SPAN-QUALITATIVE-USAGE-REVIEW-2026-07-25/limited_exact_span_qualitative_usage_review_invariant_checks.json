@@ -1,0 +1,42 @@
+{
+  "all_invariants_passed": true,
+  "checks": {
+    "carried_lanes_remain_separate": true,
+    "five_package_sha256_checks_pass": true,
+    "future_prompt_preserves_phase_boundaries": true,
+    "global_analysis_readiness_false": true,
+    "immutable_promotion_inputs_match_authorized_baseline": true,
+    "limited_use_count_643": true,
+    "navigation_count_1195": true,
+    "no_full_page_or_forbidden_payload": true,
+    "no_pdf_network_ocr_model_or_pipeline_action": true,
+    "no_restricted_or_navigation_contamination": true,
+    "partial_output_cannot_claim_complete": true,
+    "promoted_view_count_759": true,
+    "promotion_decision_authorizes_usage_review": true,
+    "restricted_count_116": true,
+    "strict_primary_count_56": true,
+    "unresolved_conflicts_remain_quarantined": true,
+    "usage_outputs_are_manifests_not_analysis_datasets": true
+  },
+  "schema_version": "limited_exact_span_qualitative_usage_review_v1",
+  "scope_counts": {
+    "ambiguous_navigation": 614,
+    "controlled_occupation": 438,
+    "exact_cycle": 453,
+    "exact_period_matched_set": 77,
+    "limited_use_candidate": 643,
+    "navigation_only": 1195,
+    "non_base_companion": 4733,
+    "promoted_view": 759,
+    "quantitative_candidates": 862,
+    "quantitative_exceptions": 1045,
+    "reference_control": 345,
+    "restricted_exact_span": 116,
+    "strict_primary_matched_city_cycle": 56,
+    "typed_mechanism": 643,
+    "unavailable_navigation": 581,
+    "unresolved_conflict_groups": 2,
+    "unresolved_conflict_observations": 5
+  }
+}

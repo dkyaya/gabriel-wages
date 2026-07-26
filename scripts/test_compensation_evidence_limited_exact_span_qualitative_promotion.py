@@ -272,9 +272,12 @@ class MaterializedPromotionTests(unittest.TestCase):
     def test_dashboard_phase_and_readiness_are_fail_closed(self):
         calibration = runner.read_json(ROOT / "docs/dashboard/data/text_table_calibration_status_summary.json")
         readiness = runner.read_json(ROOT / "docs/dashboard/data/analysis_readiness.json")
-        self.assertEqual(
+        self.assertIn(
             calibration["calibration_phase"],
-            "compensation_extraction_limited_exact_span_qualitative_promotion_completed_usage_review_allowed",
+            {
+                "compensation_extraction_limited_exact_span_qualitative_promotion_completed_usage_review_allowed",
+                "compensation_extraction_limited_exact_span_qualitative_usage_review_completed_usage_layer_prompt_allowed",
+            },
         )
         self.assertFalse(calibration["limited_exact_span_qualitative_global_analysis_readiness"])
         self.assertIn("global_analysis_closed", readiness["overall_status"])

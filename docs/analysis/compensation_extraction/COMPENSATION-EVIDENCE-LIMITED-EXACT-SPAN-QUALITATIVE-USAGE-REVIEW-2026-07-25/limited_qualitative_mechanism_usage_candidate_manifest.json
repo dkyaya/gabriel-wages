@@ -1,0 +1,18 @@
+{
+  "allowed_use": "future restricted qualitative mechanism usage layer",
+  "analysis_results_computed": false,
+  "contains_observation_rows": false,
+  "global_analysis_readiness": false,
+  "qualitative_observation_id_set_sha256": "0365d38babf9d4000295a3326c8cfc77b92f8a7ad1f2f1117d0cb40f1613b91b",
+  "restrictions": [
+    "literal mechanism-language evidence only",
+    "no wage effects or quantitative outcomes",
+    "no wage gaps, regressions, treatment effects, or causal claims",
+    "row-level eligibility and quarantine fields remain binding",
+    "separate authorization required to materialize a usage layer"
+  ],
+  "row_count": 643,
+  "schema_version": "limited_exact_span_qualitative_usage_review_v1",
+  "scope": "limited_qualitative_mechanism",
+  "source_promoted_view_sha256": "23230cb632dfb890e4c095ec44acd6a972ada7944aaea6c9089d05c7088ce53d"
+}

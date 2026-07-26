@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "compensation_extraction_limited_exact_span_qualitative_usage_review_completed_usage_layer_prompt_allowed"
+              ? "Limited exact-span qualitative usage scope reviewed; a restricted usage-layer prompt may proceed"
+              : textTableCalibrationStatus.calibration_phase ===
             "compensation_extraction_limited_exact_span_qualitative_promotion_completed_usage_review_allowed"
               ? "Limited exact-span qualitative layer promoted with explicit restrictions; usage review may proceed"
               : textTableCalibrationStatus.calibration_phase ===
@@ -849,6 +852,17 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "compensation_extraction_limited_exact_span_qualitative_usage_review_completed_usage_layer_prompt_allowed" ? (
+            <>
+              The usage review preserves the 759-row promoted universe and authorizes a future,
+              separately approved usage-layer prompt for 643 exact-span rows only. The 116
+              restricted exact-span rows remain quarantined, and all 614 ambiguous plus 581
+              unavailable rows remain navigation-only. Exact-cycle, controlled-occupation,
+              exact-period matched-set, and strict primary subsets contain 453, 438, 77, and 56
+              rows respectively. These are evidence-scope contracts, not analysis results;
+              global analysis readiness remains false.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "compensation_extraction_limited_exact_span_qualitative_promotion_completed_usage_review_allowed" ? (
             <>
               The provisional promoted view preserves all 759 exact-span rows with row-level

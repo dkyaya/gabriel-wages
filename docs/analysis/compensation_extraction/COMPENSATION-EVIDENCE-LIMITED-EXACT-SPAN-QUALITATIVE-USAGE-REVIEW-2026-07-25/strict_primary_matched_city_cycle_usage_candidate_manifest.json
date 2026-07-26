@@ -1,0 +1,19 @@
+{
+  "allowed_use": "future narrow primary-design evidence manifest and usage review",
+  "analysis_results_computed": false,
+  "contains_observation_rows": false,
+  "global_analysis_readiness": false,
+  "qualitative_observation_id_set_sha256": "e1cb111eb6e95455ec5c48cdef9ff86e1b16e61780cd51fa97d71e9bbd2e2d96",
+  "restrictions": [
+    "literal mechanism-language evidence only",
+    "no wage effects or quantitative outcomes",
+    "no wage gaps, regressions, treatment effects, or causal claims",
+    "row-level eligibility and quarantine fields remain binding",
+    "separate authorization required to materialize a usage layer",
+    "56-row scope is narrow and does not establish representativeness or statistical power"
+  ],
+  "row_count": 56,
+  "schema_version": "limited_exact_span_qualitative_usage_review_v1",
+  "scope": "strict_primary_matched_city_cycle",
+  "source_promoted_view_sha256": "23230cb632dfb890e4c095ec44acd6a972ada7944aaea6c9089d05c7088ce53d"
+}

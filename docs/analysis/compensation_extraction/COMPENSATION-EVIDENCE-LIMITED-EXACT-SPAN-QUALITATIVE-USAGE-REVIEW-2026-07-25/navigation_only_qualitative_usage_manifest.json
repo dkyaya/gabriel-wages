@@ -1,0 +1,17 @@
+{
+  "allowed_use": "navigation only",
+  "ambiguous_rows": 614,
+  "analysis_results_computed": false,
+  "contains_observation_rows": false,
+  "global_analysis_readiness": false,
+  "qualitative_observation_id_set_sha256": "2def3947c027a7d6577a88865733dcff95811155e6f6bdf736c7879d7e28e36d",
+  "restrictions": [
+    "never coded evidence",
+    "ambiguous and unavailable tiers remain separate"
+  ],
+  "row_count": 1195,
+  "schema_version": "limited_exact_span_qualitative_usage_review_v1",
+  "scope": "ambiguous_unavailable_navigation_only",
+  "source_promoted_view_sha256": "abac49348cc31e06f830a69011e61c2a0a54f979a12b794d2f6339600b42cb1f",
+  "unavailable_rows": 581
+}

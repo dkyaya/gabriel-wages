@@ -1,0 +1,15 @@
+{
+  "allowed_use": "quarantine and evidence navigation only",
+  "analysis_results_computed": false,
+  "contains_observation_rows": false,
+  "global_analysis_readiness": false,
+  "qualitative_observation_id_set_sha256": "f5cba452adc92677415366366d527a5e05913fdede2a4c76119f4b680d894c85",
+  "restrictions": [
+    "not eligible for limited coded use",
+    "preserve exact spans and blocker reasons"
+  ],
+  "row_count": 116,
+  "schema_version": "limited_exact_span_qualitative_usage_review_v1",
+  "scope": "restricted_exact_span",
+  "source_promoted_view_sha256": "23230cb632dfb890e4c095ec44acd6a972ada7944aaea6c9089d05c7088ce53d"
+}

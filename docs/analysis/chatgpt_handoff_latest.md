@@ -6,6 +6,25 @@ Last updated: `2026-07-26`
 
 ---
 
+## 2026-07-26 — Limited exact-span qualitative usage review passed; usage-layer prompt allowed
+
+### Current State
+
+- **Authority/start:** began at clean tracked `9052a30a350d6be60796897de5b600b974414523`; 15 promotion artifacts and the inherited five-package hash contract passed.
+- **Decision:** `limited_exact_span_qualitative_usage_review_pass_prepare_usage_layer_prompt`; a separately authorized future usage-layer prompt is allowed for 643 exact-span rows only. Global and full qualitative analysis readiness remain false.
+- **Scope:** 759 promoted rows; 643 limited-use candidates; 116 restricted exact-span rows; 614 ambiguous and 581 unavailable navigation rows; 453 exact-cycle; 438 controlled-occupation; 77 exact-period matched-set; 56 strict primary matched city-cycle.
+- **Lane boundary:** 862 quantitative candidates, 1,045 quantitative exceptions, 4,733 non-base companion rows, 345 reference/control rows, and two unresolved conflict groups/five observations remain separate.
+- **System hardening:** 51 focused tests cover authorization, immutable hashes, identity and tier contamination, eligibility subsets, historical joins, forbidden analysis fields, dashboard readiness, prompt/relay contracts, checkpoint completeness, and idempotency.
+- **Boundary:** no PDF/page, OCR, model, URL/download, extraction, selection, ingestion, codification, wage-gap, regression, or causal work occurred; no upstream ledgers changed.
+
+### Interpretation
+
+The limited-use tier has a defensible manifest and row-eligibility contract for a future evidence-organization layer. The 56-row strict primary subset is narrow and cannot be treated as proof of power, representativeness, effects, or causality.
+
+### Next Move
+
+Use the new output directory's `next_task.md` only after separate authorization. Revalidate the 643-ID manifest hash, materialize no analysis results, preserve every quarantine/navigation lane, and keep global readiness false.
+
 ## 2026-07-26 — Pipeline hardening complete; limited qualitative promotion prompt allowed
 
 ### Current State

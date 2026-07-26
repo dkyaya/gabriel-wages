@@ -6,6 +6,26 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-26 (Limited exact-span qualitative usage review passed; usage-layer prompt allowed)
+
+**Did**
+- Reverified the authorized 759-row promotion layer, all 15 immutable promotion artifacts, and the inherited five-package SHA contract without accessing PDFs/pages or modifying upstream evidence.
+- Reconciled 643 limited-use candidates, 116 restricted exact-span rows, 614 ambiguous and 581 unavailable navigation-only rows, plus 453 exact-cycle, 438 controlled-occupation, 77 exact-period matched-set, and 56 strict primary matched city-cycle subsets.
+- Added a deterministic usage-review runner, 51 focused fail-closed tests, manifest-only usage scopes, blocker and eligibility audits, dashboard gates, and a separately authorization-gated future prompt.
+
+**Decisions**
+- Decision is `limited_exact_span_qualitative_usage_review_pass_prepare_usage_layer_prompt`. A future limited qualitative usage-layer prompt may be run only with separate explicit authorization and only for the 643 eligible exact-span identities.
+- The 56-row strict primary subset is a narrow evidence manifest, not proof of statistical power, wage effects, or causality. Global and full qualitative analysis readiness remain false.
+
+**Surprises/breakage**
+- No evidence or eligibility defect was found. Two predecessor tests hard-coded the immediately prior dashboard phase; their allowlists were extended to recognize this downstream, still-analysis-closed stage without weakening readiness guards.
+
+**Corpus snapshot**
+- `contracts=64`, `discourse=0`, `coverage=64`, `cities=19`; 28 healthy matched pairs (10 exact-cycle, 18 overlap-cycle), two exploratory adjacent matches, and six unmatched safety units.
+
+**Next steps**
+- Seek separate authorization for `next_limited_qualitative_usage_layer_prompt.md`. Keep restricted/navigation rows and every non-qualitative lane separate, compute no analysis results, and keep global readiness false.
+
 ## 2026-07-26 (Pipeline hardening complete; limited promotion allowed)
 
 **Did**
