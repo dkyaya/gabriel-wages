@@ -1,0 +1,18 @@
+{
+  "all_live_run_status_not_started": true,
+  "all_required_fields_complete": true,
+  "dry_run_rows": 2000,
+  "duplicate_avoidance_passed": true,
+  "global_analysis_readiness": false,
+  "lane_counts": {
+    "lane_1": 500,
+    "lane_2": 500,
+    "lane_3": 500,
+    "lane_4": 500
+  },
+  "live_hosted_search_runs": 0,
+  "model_or_api_calls": 0,
+  "no_call": true,
+  "url_pdf_page_download_or_ocr_access": 0,
+  "verification_extraction_rating_ingestion_codify_runs": 0
+}

@@ -1,0 +1,21 @@
+{
+  "duplicate_risk_counts": {
+    "low": 1828,
+    "medium": 172
+  },
+  "exact_duplicates_removed": 0,
+  "exact_duplicates_retained": 0,
+  "prior_ledgers_checked": [
+    "docs/analysis/national_scout_coverage_municipality_2026-07-20.csv",
+    "docs/analysis/national_scout_candidate_queue_2026-07-20.csv",
+    "data/city_coverage.csv"
+  ],
+  "prior_seen_status_counts": {
+    "known_safety_row_counterpart_target_not_satisfied": 7,
+    "municipality_and_non_safety_lead_seen_mechanism_target_is_new": 172,
+    "municipality_seen_safety_lead_target_unit_not_seen": 321,
+    "not_seen_in_consolidated_prior_scout_or_candidate_ledgers": 1500
+  },
+  "upstream_duplicate_municipality_keys": 86,
+  "upstream_duplicate_municipality_records_canonicalized": 121
+}

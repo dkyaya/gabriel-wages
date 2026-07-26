@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "targeted_scouting_four_lane_prep_dry_run_completed_lane_1_live_ready"
+              ? "Four-lane targeted scouting dry prep complete; Lane 1 is ready for separate live authorization"
+              : textTableCalibrationStatus.calibration_phase ===
             "compensation_extraction_provisional_claim_review_636_completed_targeted_scouting_restart_recommended"
               ? "Bounded provisional claim review complete; targeted scouting restart recommended"
               : textTableCalibrationStatus.calibration_phase ===
@@ -891,6 +894,18 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "targeted_scouting_four_lane_prep_dry_run_completed_lane_1_live_ready" ? (
+            <>
+              Four candidate-only scouting lanes of 500 targets each passed
+              deterministic no-call validation. Lane 1 prioritizes known safety
+              contracts or scout-stage safety leads that need a same-city non-safety
+              counterpart; Lanes 2–4 target previously unscouted municipalities for
+              the sparse dispute-resolution, fiscal/equity, and market/safety-premium
+              mechanism families. No live search or model/API call ran. Lane 1 requires
+              a separate future authorization and preflight; global analysis readiness
+              remains closed.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "compensation_extraction_provisional_claim_review_636_completed_targeted_scouting_restart_recommended" ? (
             <>
               The 636-row rating summaries now support 35 bounded claim records:

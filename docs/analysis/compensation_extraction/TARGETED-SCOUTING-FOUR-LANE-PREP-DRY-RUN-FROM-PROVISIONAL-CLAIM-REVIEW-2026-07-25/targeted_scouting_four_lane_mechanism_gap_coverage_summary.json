@@ -1,0 +1,13 @@
+{
+  "all_high_priority_gaps_targeted": true,
+  "mechanism_gap_count": 7,
+  "target_counts": {
+    "bargaining_power_signal": 500,
+    "fiscal_constraint_signal": 1000,
+    "market_or_comparability_pressure": 500,
+    "non_safety_constraint_signal": 1500,
+    "parity_or_internal_equity_signal": 1000,
+    "safety_advantage_signal": 1500,
+    "strike_or_no_strike_constraint": 500
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "candidate_only": true,
+  "dry_run_passed": true,
+  "lane_id": "lane_3",
+  "live_run_status": "not_started",
+  "primary_mechanism": "fiscal_constraint_signal",
+  "queue_cap": 500,
+  "queue_rows": 500
+}

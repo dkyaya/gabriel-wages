@@ -1,0 +1,7 @@
+{
+  "candidate_only_rows": 2000,
+  "known_counterpart_rows": 500,
+  "lane_1_matched_non_safety_targets": 500,
+  "rows": 2000,
+  "verified_rows_created": 0
+}

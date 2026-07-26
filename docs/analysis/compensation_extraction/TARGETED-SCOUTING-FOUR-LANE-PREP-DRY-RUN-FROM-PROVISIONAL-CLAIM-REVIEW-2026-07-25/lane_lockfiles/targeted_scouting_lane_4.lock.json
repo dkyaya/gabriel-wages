@@ -1,0 +1,12 @@
+{
+  "candidate_only": true,
+  "lane_id": "lane_4",
+  "live_run_status": "not_started",
+  "lock_status": "prepared_not_live",
+  "queue_cap": 500,
+  "queue_rows": 500,
+  "queue_sha256": "a426b6e8dd5a1aca637a1f0669ef551a1ff1d5452c3ccdc0bd640d62eebbdfed",
+  "separate_future_prompt_required": true,
+  "target_id_set_sha256": "39d8cba8141ddf00cf7ab0b234b997d67c5cf5db6afd52d2a361a88a731db964",
+  "task_id": "TARGETED-SCOUTING-FOUR-LANE-PREP-DRY-RUN-FROM-PROVISIONAL-CLAIM-REVIEW-2026-07-25"
+}

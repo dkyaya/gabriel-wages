@@ -1,0 +1,19 @@
+{
+  "decision": "targeted_scouting_four_lane_prep_dry_run_completed_lane_1_live_ready",
+  "global_analysis_readiness": false,
+  "high_quality_target_rows": 2000,
+  "lane_1_live_ready_next": true,
+  "lane_counts": {
+    "lane_1": 500,
+    "lane_2": 500,
+    "lane_3": 500,
+    "lane_4": 500
+  },
+  "lanes_requiring_repair": [],
+  "live_hosted_search_runs": 0,
+  "master_queue_rows": 2000,
+  "model_or_api_calls": 0,
+  "prep_and_dry_run_only": true,
+  "task_id": "TARGETED-SCOUTING-FOUR-LANE-PREP-DRY-RUN-FROM-PROVISIONAL-CLAIM-REVIEW-2026-07-25",
+  "weak_padding_rows": 0
+}

@@ -1,0 +1,27 @@
+{
+  "all_invariants_passed": true,
+  "checks": {
+    "all_live_status_not_started": true,
+    "all_required_fields_complete": true,
+    "duplicate_avoidance_completed": true,
+    "four_lanes_exactly_500_each": true,
+    "global_analysis_readiness_false": true,
+    "immutable_inputs_verified": true,
+    "lane_1_prioritizes_matched_non_safety": true,
+    "lane_2_prioritizes_strike_and_bargaining": true,
+    "lane_3_prioritizes_fiscal_non_safety_parity_gap": true,
+    "lane_4_prioritizes_market_safety_rank_implementation": true,
+    "lockfiles_and_worker_prompts_complete": true,
+    "master_queue_exactly_2000": true,
+    "mechanism_gap_tags_present": true,
+    "no_live_search_model_api_or_url_access": true,
+    "no_verification_extraction_rating_ingestion_codify": true,
+    "no_wage_gap_regression_treatment_or_final_causal_work": true,
+    "no_weak_padding": true,
+    "partial_outputs_fail_closed": true,
+    "prep_and_dry_run_only": true,
+    "prior_seen_status_populated": true,
+    "stagger_and_api_protection_complete": true
+  },
+  "task_id": "TARGETED-SCOUTING-FOUR-LANE-PREP-DRY-RUN-FROM-PROVISIONAL-CLAIM-REVIEW-2026-07-25"
+}

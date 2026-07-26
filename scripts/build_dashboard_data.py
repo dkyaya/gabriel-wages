@@ -1031,6 +1031,20 @@ COMPENSATION_EXTRACTION_PROVISIONAL_CLAIM_REVIEW_636_INVARIANTS_PATH = (
     COMPENSATION_EXTRACTION_PROVISIONAL_CLAIM_REVIEW_636_DIR
     / "provisional_claim_review_636_invariant_checks.json"
 )
+TARGETED_SCOUTING_FOUR_LANE_PREP_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "TARGETED-SCOUTING-FOUR-LANE-PREP-DRY-RUN-FROM-PROVISIONAL-CLAIM-REVIEW-2026-07-25"
+)
+TARGETED_SCOUTING_FOUR_LANE_PREP_DECISION_PATH = (
+    TARGETED_SCOUTING_FOUR_LANE_PREP_DIR / "targeted_scouting_four_lane_prep_decision.json"
+)
+TARGETED_SCOUTING_FOUR_LANE_PREP_SUMMARY_PATH = (
+    TARGETED_SCOUTING_FOUR_LANE_PREP_DIR / "targeted_scouting_four_lane_master_queue_summary.json"
+)
+TARGETED_SCOUTING_FOUR_LANE_PREP_INVARIANTS_PATH = (
+    TARGETED_SCOUTING_FOUR_LANE_PREP_DIR / "targeted_scouting_four_lane_prep_invariant_checks.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -2776,6 +2790,56 @@ def provisional_claim_review_636_status() -> tuple[bool, dict[str, Any]]:
     return True, decision
 
 
+def targeted_scouting_four_lane_prep_status() -> tuple[bool, dict[str, Any]]:
+    """Fail closed unless four candidate-only, no-call lane queues are dry-ready."""
+    required = (
+        TARGETED_SCOUTING_FOUR_LANE_PREP_DECISION_PATH,
+        TARGETED_SCOUTING_FOUR_LANE_PREP_SUMMARY_PATH,
+        TARGETED_SCOUTING_FOUR_LANE_PREP_INVARIANTS_PATH,
+        TARGETED_SCOUTING_FOUR_LANE_PREP_DIR / "targeted_scouting_four_lane_master_queue.csv",
+        TARGETED_SCOUTING_FOUR_LANE_PREP_DIR / "targeted_scouting_four_lane_no_call_validation.md",
+        TARGETED_SCOUTING_FOUR_LANE_PREP_DIR / "next_targeted_scouting_lane_1_live_prompt.md",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    decision = read_json(TARGETED_SCOUTING_FOUR_LANE_PREP_DECISION_PATH)
+    summary = read_json(TARGETED_SCOUTING_FOUR_LANE_PREP_SUMMARY_PATH)
+    invariants = read_json(TARGETED_SCOUTING_FOUR_LANE_PREP_INVARIANTS_PATH)
+    queue = read_csv(TARGETED_SCOUTING_FOUR_LANE_PREP_DIR / "targeted_scouting_four_lane_master_queue.csv")
+    expected_lanes = {"lane_1": 500, "lane_2": 500, "lane_3": 500, "lane_4": 500}
+    observed_lanes: dict[str, int] = {}
+    for row in queue:
+        lane = row.get("lane_id", "")
+        observed_lanes[lane] = observed_lanes.get(lane, 0) + 1
+    if not (
+        decision.get("task_id")
+        == "TARGETED-SCOUTING-FOUR-LANE-PREP-DRY-RUN-FROM-PROVISIONAL-CLAIM-REVIEW-2026-07-25"
+        and decision.get("decision")
+        == "targeted_scouting_four_lane_prep_dry_run_completed_lane_1_live_ready"
+        and decision.get("master_queue_rows") == len(queue) == 2000
+        and decision.get("lane_counts") == expected_lanes
+        and observed_lanes == expected_lanes
+        and len({row.get("scout_target_id") for row in queue}) == 2000
+        and all(row.get("dry_run_status") == "validated_no_call" for row in queue)
+        and all(row.get("live_run_status") == "not_started" for row in queue)
+        and all(row.get("target_mechanism_family") for row in queue)
+        and all(row.get("prior_seen_status") for row in queue)
+        and decision.get("high_quality_target_rows") == 2000
+        and decision.get("weak_padding_rows") == 0
+        and decision.get("lane_1_live_ready_next") is True
+        and decision.get("lanes_requiring_repair") == []
+        and decision.get("prep_and_dry_run_only") is True
+        and decision.get("live_hosted_search_runs") == 0
+        and decision.get("model_or_api_calls") == 0
+        and decision.get("global_analysis_readiness") is False
+        and summary.get("candidate_only") is True
+        and summary.get("url_pdf_download_or_ocr_access") == 0
+        and invariants.get("all_invariants_passed") is True
+    ):
+        raise ValueError("targeted scouting four-lane prep fails dashboard gates")
+    return True, decision
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -3506,6 +3570,10 @@ def build_analysis_readiness(
         provisional_claim_review_636_completed,
         provisional_claim_review_636_decision,
     ) = provisional_claim_review_636_status()
+    (
+        targeted_scouting_four_lane_prep_completed,
+        targeted_scouting_four_lane_prep_decision,
+    ) = targeted_scouting_four_lane_prep_status()
     if scale_1000_targeted_qa_completed and (
         scale_1000_targeted_qa_decision.get("qa_pass") is not True
         or scale_1000_targeted_qa_decision.get(
@@ -3552,6 +3620,9 @@ def build_analysis_readiness(
     return {
         "metadata": metadata,
         "overall_status": (
+            "targeted_scouting_four_lane_prep_dry_run_completed_lane_1_live_ready_global_analysis_closed"
+            if targeted_scouting_four_lane_prep_completed
+            else
             "provisional_claim_review_636_completed_targeted_scouting_restart_recommended_global_analysis_closed"
             if provisional_claim_review_636_completed
             else
@@ -4179,6 +4250,19 @@ def build_analysis_readiness(
                 "targeted_scouting_restart_recommended": (
                     bool(provisional_claim_review_636_decision.get("targeted_scouting_restart_recommended", False))
                     if provisional_claim_review_636_completed else False
+                ),
+                "targeted_scouting_four_lane_prep_completed": targeted_scouting_four_lane_prep_completed,
+                "targeted_scouting_four_lane_prep_decision": (
+                    targeted_scouting_four_lane_prep_decision.get("decision")
+                    if targeted_scouting_four_lane_prep_completed else None
+                ),
+                "targeted_scouting_four_lane_master_queue_rows": (
+                    int(targeted_scouting_four_lane_prep_decision.get("master_queue_rows", 0))
+                    if targeted_scouting_four_lane_prep_completed else 0
+                ),
+                "targeted_scouting_lane_1_live_ready": (
+                    bool(targeted_scouting_four_lane_prep_decision.get("lane_1_live_ready_next", False))
+                    if targeted_scouting_four_lane_prep_completed else False
                 ),
                 "gabriel_claim_rating_global_analysis_readiness": False,
                 "limited_qualitative_usage_registry_review_global_analysis_readiness": False,
@@ -8087,9 +8171,16 @@ def build_text_table_calibration_status_summary(
             provisional_claim_review_636_completed,
             provisional_claim_review_636_decision,
         ) = provisional_claim_review_636_status()
+        (
+            targeted_scouting_four_lane_prep_completed,
+            targeted_scouting_four_lane_prep_decision,
+        ) = targeted_scouting_four_lane_prep_status()
         return {
             **metadata,
             "calibration_phase": (
+                "targeted_scouting_four_lane_prep_dry_run_completed_lane_1_live_ready"
+                if targeted_scouting_four_lane_prep_completed
+                else
                 "compensation_extraction_provisional_claim_review_636_completed_targeted_scouting_restart_recommended"
                 if provisional_claim_review_636_completed
                 else
@@ -9244,6 +9335,23 @@ def build_text_table_calibration_status_summary(
             "targeted_scouting_restart_recommended": (
                 bool(provisional_claim_review_636_decision.get("targeted_scouting_restart_recommended", False))
                 if provisional_claim_review_636_completed else False
+            ),
+            "targeted_scouting_four_lane_prep_completed": targeted_scouting_four_lane_prep_completed,
+            "targeted_scouting_four_lane_prep_decision": (
+                targeted_scouting_four_lane_prep_decision.get("decision")
+                if targeted_scouting_four_lane_prep_completed else None
+            ),
+            "targeted_scouting_four_lane_prep_path": (
+                relative(TARGETED_SCOUTING_FOUR_LANE_PREP_DIR)
+                if targeted_scouting_four_lane_prep_completed else None
+            ),
+            "targeted_scouting_four_lane_master_queue_rows": (
+                int(targeted_scouting_four_lane_prep_decision.get("master_queue_rows", 0))
+                if targeted_scouting_four_lane_prep_completed else 0
+            ),
+            "targeted_scouting_lane_1_live_ready": (
+                bool(targeted_scouting_four_lane_prep_decision.get("lane_1_live_ready_next", False))
+                if targeted_scouting_four_lane_prep_completed else False
             ),
             "gabriel_claim_rating_global_analysis_readiness": False,
             "limited_qualitative_usage_registry_review_global_analysis_readiness": False,

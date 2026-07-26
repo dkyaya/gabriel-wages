@@ -1,0 +1,8 @@
+mechanism_family,target_count,lane_ids,prior_positive_rating_count,coverage_status
+safety_advantage_signal,1500,lane_1|lane_2|lane_4,0,targeted_in_dry_queue
+non_safety_constraint_signal,1500,lane_1|lane_2|lane_3,0,targeted_in_dry_queue
+strike_or_no_strike_constraint,500,lane_2,4,targeted_in_dry_queue
+fiscal_constraint_signal,1000,lane_1|lane_3,6,targeted_in_dry_queue
+parity_or_internal_equity_signal,1000,lane_1|lane_3,9,targeted_in_dry_queue
+market_or_comparability_pressure,500,lane_4,21,targeted_in_dry_queue
+bargaining_power_signal,500,lane_2,22,targeted_in_dry_queue

@@ -1,0 +1,3 @@
+# Four-lane duplicate and prior-seen avoidance
+
+Duplicate avoidance ran deterministically against the consolidated municipality scout coverage, the 4,726-row prior candidate queue, and current city coverage. Lane 1 deliberately revisits municipalities only for an unsatisfied or incomplete non-safety counterpart target; Lanes 2–4 use mutually exclusive municipalities marked not scouted with zero prior candidate rows. The discovery pool canonicalized 121 duplicate government records across 86 state–municipality keys before ranking. No exact target key is duplicated within or across lanes, and no prior source URL is copied into the queue.
