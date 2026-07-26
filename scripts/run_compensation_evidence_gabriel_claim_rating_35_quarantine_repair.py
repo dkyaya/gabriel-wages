@@ -713,7 +713,7 @@ Decision: `{decision}`. {next_scope}
     )
     dashboard_doc = ANALYSIS_ROOT / "compensation_evidence_gabriel_claim_rating_35_quarantine_repair_dashboard_status_note_2026-07-25.md"
     dashboard_doc.write_text(
-        f"# Dashboard status note — GABRIEL 35-row quarantine repair\n\n- Decision: `{decision}`.\n- Original valid: 608; repaired valid: {len(repaired_new)}; remaining quarantine: {len(remaining)}.\n- Total valid: {len(combined)}; reconciled universe: 643.\n- Summary review allowed: {str(decision == 'gabriel_claim_rating_643_repaired_summary_review_allowed').lower()}.\n- Global analysis readiness: false.\n",
+        f"# Dashboard status note — GABRIEL 35-row quarantine repair\n\n- Decision: `{decision}`.\n- Original valid: 608; repaired valid: {len(repaired_new)}; remaining quarantine: {len(remaining)}.\n- Total valid: {len(combined)}; reconciled universe: 643.\n- Summary review allowed: true, limited to {len(combined)} valid rows with {len(remaining)} explicit exclusions.\n- Global analysis readiness: false.\n",
         encoding="utf-8",
     )
     return decision

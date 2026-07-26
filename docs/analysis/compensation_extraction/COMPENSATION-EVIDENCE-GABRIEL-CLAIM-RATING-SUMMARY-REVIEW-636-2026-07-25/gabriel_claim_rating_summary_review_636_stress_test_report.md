@@ -1,0 +1,45 @@
+# Summary-review stress test report
+
+Result: **41/41 passed**.
+
+- `valid_count_drift`: passed fail-closed.
+- `excluded_count_drift`: passed fail-closed.
+- `partition_overlap`: passed fail-closed.
+- `partition_gap`: passed fail-closed.
+- `valid_file_hash_drift`: passed fail-closed.
+- `excluded_file_hash_drift`: passed fail-closed.
+- `authorized_manifest_hash_drift`: passed fail-closed.
+- `quarantine_summary_hash_drift`: passed fail-closed.
+- `predecessor_decision_not_authorized`: passed fail-closed.
+- `summary_scope_drift`: passed fail-closed.
+- `predecessor_invariant_failure`: passed fail-closed.
+- `duplicate_valid_id`: passed fail-closed.
+- `duplicate_excluded_id`: passed fail-closed.
+- `quarantined_id_in_valid_scope`: passed fail-closed.
+- `rating_schema_invalid`: passed fail-closed.
+- `taxonomy_version_drift`: passed fail-closed.
+- `attribute_count_drift`: passed fail-closed.
+- `positive_cell_count_drift`: passed fail-closed.
+- `forbidden_claim_phrase`: passed fail-closed.
+- `unbounded_mechanism_narrative`: passed fail-closed.
+- `quantitative_lane_analysis_attempt`: passed fail-closed.
+- `global_readiness_true`: passed fail-closed.
+- `raw_prompt_persistence`: passed fail-closed.
+- `raw_response_persistence`: passed fail-closed.
+- `model_call_attempt`: passed fail-closed.
+- `pdf_page_access_attempt`: passed fail-closed.
+- `ocr_attempt`: passed fail-closed.
+- `url_or_download_attempt`: passed fail-closed.
+- `extraction_attempt`: passed fail-closed.
+- `selection_attempt`: passed fail-closed.
+- `ingestion_attempt`: passed fail-closed.
+- `codify_attempt`: passed fail-closed.
+- `wage_gap_attempt`: passed fail-closed.
+- `regression_attempt`: passed fail-closed.
+- `treatment_effect_attempt`: passed fail-closed.
+- `final_causal_claim_attempt`: passed fail-closed.
+- `partial_output_completion`: passed fail-closed.
+- `non_analysis_output_path`: passed fail-closed.
+- `future_prompt_missing_boundary`: passed fail-closed.
+- `relay_missing_inspection_metadata`: passed fail-closed.
+- `resume_output_mutation`: passed fail-closed.

@@ -380,6 +380,14 @@ class CompletedOutputTests(unittest.TestCase):
         self.assertEqual(decision["total_valid_rows"], len(self.ratings))
         self.assertEqual(decision["remaining_quarantine_rows"], len(self.remaining))
 
+    def test_dashboard_note_allows_exclusion_scoped_summary(self):
+        note = (
+            runner.ANALYSIS_ROOT
+            / "compensation_evidence_gabriel_claim_rating_35_quarantine_repair_dashboard_status_note_2026-07-25.md"
+        ).read_text(encoding="utf-8")
+        self.assertIn("Summary review allowed: true", note)
+        self.assertIn("636 valid rows with 7 explicit exclusions", note)
+
     def test_future_prompt_preserves_phase_boundaries(self):
         text = (self.out / "next_gabriel_claim_rating_summary_review_prompt.md").read_text(encoding="utf-8")
         required = (

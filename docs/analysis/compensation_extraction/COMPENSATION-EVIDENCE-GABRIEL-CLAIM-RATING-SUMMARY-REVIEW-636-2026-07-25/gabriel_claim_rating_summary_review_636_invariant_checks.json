@@ -1,0 +1,19 @@
+{
+  "all_invariants_passed": true,
+  "checks": {
+    "all_14_attributes_summarized": true,
+    "all_mechanism_claims_bounded_to_valid_corpus": true,
+    "excluded_rows_exactly_7": true,
+    "global_analysis_readiness_false": true,
+    "no_final_wage_gap_regression_treatment_or_causal_claims": true,
+    "no_forbidden_work_or_raw_payloads": true,
+    "no_gabriel_api_or_model_calls": true,
+    "partial_outputs_cannot_masquerade_as_complete": true,
+    "positive_attribute_cell_count_reconciles": true,
+    "quantitative_lane_mentioned_only_not_analyzed": true,
+    "valid_and_excluded_disjoint": true,
+    "valid_plus_excluded_reconciles_to_643": true,
+    "valid_rows_exactly_636": true
+  },
+  "task_id": "COMPENSATION-EVIDENCE-GABRIEL-CLAIM-RATING-SUMMARY-REVIEW-636-2026-07-25"
+}

@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "compensation_extraction_gabriel_claim_rating_summary_review_636_completed_provisional_claim_review_allowed"
+              ? "Bounded GABRIEL rating summary complete; provisional claim review may proceed"
+              : textTableCalibrationStatus.calibration_phase ===
             "compensation_extraction_gabriel_claim_rating_643_repaired_with_remaining_quarantine_summary_review_allowed"
               ? "Bounded GABRIEL quarantine repair complete; summary review may proceed with seven exclusions"
               : textTableCalibrationStatus.calibration_phase ===
@@ -885,6 +888,17 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "compensation_extraction_gabriel_claim_rating_summary_review_636_completed_provisional_claim_review_allowed" ? (
+            <>
+              The bounded review summarized exactly 636 schema-valid v1.1 ratings and
+              preserved seven quarantine rows as explicit exclusions. Implementation
+              timing, automatic raises, base-wage text, and non-base compensation are
+              the strongest textual signals in this collected valid-rated corpus. Direct
+              safety-advantage and non-safety-constraint support remains absent. A
+              provisional claim review may proceed; wage effects, wage gaps, regressions,
+              treatment effects, final causal claims, and global analysis readiness remain closed.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "compensation_extraction_gabriel_claim_rating_643_repaired_with_remaining_quarantine_summary_review_allowed" ? (
             <>
               The bounded repair retried only the 35 explicit quarantine IDs and accepted

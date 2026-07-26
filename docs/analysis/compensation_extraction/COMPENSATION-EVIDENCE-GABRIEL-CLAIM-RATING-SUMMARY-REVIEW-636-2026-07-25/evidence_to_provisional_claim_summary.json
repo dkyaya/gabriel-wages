@@ -1,0 +1,12 @@
+{
+  "bounded_provisional_review_allowed": 11,
+  "claim_count": 13,
+  "claim_type_counts": {
+    "documentary_mechanism_claim": 11,
+    "not_supported_this_phase": 2
+  },
+  "global_analysis_readiness": false,
+  "more_data_required": 2,
+  "task_id": "COMPENSATION-EVIDENCE-GABRIEL-CLAIM-RATING-SUMMARY-REVIEW-636-2026-07-25",
+  "valid_row_denominator": 636
+}

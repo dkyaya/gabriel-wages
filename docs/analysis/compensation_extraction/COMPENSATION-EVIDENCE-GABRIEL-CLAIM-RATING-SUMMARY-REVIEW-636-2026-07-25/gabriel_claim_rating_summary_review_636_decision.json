@@ -1,0 +1,17 @@
+{
+  "attribute_taxonomy_version": "v1.1",
+  "bounded_descriptive_summaries_computed": true,
+  "decision": "gabriel_claim_rating_summary_review_636_completed_provisional_claim_review_allowed",
+  "excluded_quarantine_rows": 7,
+  "gabriel_api_or_model_called": false,
+  "global_analysis_readiness": false,
+  "no_wage_gap_regression_treatment_or_final_causal_claims": true,
+  "positive_attribute_cells": 722,
+  "provisional_claim_review_allowed": true,
+  "quantitative_direct_text_rows_preserved_for_later_triage": 862,
+  "scouting_restart_recommended_next": false,
+  "summary_review_scope": "636_schema_valid_rows_with_7_explicit_quarantine_exclusions",
+  "task_id": "COMPENSATION-EVIDENCE-GABRIEL-CLAIM-RATING-SUMMARY-REVIEW-636-2026-07-25",
+  "valid_plus_excluded_rows": 643,
+  "valid_summary_rows": 636
+}

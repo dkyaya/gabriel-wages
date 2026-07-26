@@ -1,0 +1,15 @@
+attribute_id,valid_rows,present_count,absent_count,present_rate,strong_count,moderate_count,weak_count,not_supported_count,direct_text_claim_count,documentary_mechanism_claim_count,provisional_causal_candidate_count,context_only_count,not_claim_ready_count
+automatic_raise_mechanism,636,109,527,0.171384,5,68,36,0,19,71,15,4,0
+bargaining_power_signal,636,22,614,0.034591,0,8,14,0,6,15,1,0,0
+market_or_comparability_pressure,636,21,615,0.033019,0,9,12,0,7,11,2,1,0
+rank_or_specialization_premium,636,27,609,0.042453,1,10,16,0,8,12,6,1,0
+implementation_or_retroactivity_advantage,636,171,465,0.268868,1,47,123,0,14,81,45,31,0
+fiscal_constraint_signal,636,6,630,0.009434,0,2,4,0,0,2,0,4,0
+parity_or_internal_equity_signal,636,9,627,0.014151,0,2,7,0,1,5,1,2,0
+non_base_compensation_signal,636,76,560,0.119497,2,42,32,0,38,23,5,10,0
+base_wage_direct_value,636,100,536,0.157233,11,52,37,0,57,30,5,8,0
+safety_advantage_signal,636,0,636,0.000000,0,0,0,0,0,0,0,0,0
+non_safety_constraint_signal,636,0,636,0.000000,0,0,0,0,0,0,0,0,0
+gap_narrowing_signal,636,2,634,0.003145,0,0,2,0,0,0,1,1,0
+strike_or_no_strike_constraint,636,4,632,0.006289,0,2,2,0,0,4,0,0,0
+weak_or_no_claim_support,636,175,461,0.275157,0,0,167,8,0,0,0,0,175

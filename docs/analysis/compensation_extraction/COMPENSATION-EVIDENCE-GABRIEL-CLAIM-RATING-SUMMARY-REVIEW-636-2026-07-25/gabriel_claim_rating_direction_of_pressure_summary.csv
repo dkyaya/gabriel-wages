@@ -1,0 +1,6 @@
+controlled_value,count_all_attribute_cells,count_present_attribute_cells,scope_note
+safety_advantage,10,10,636 rows x 14 attributes; present count is the interpretation denominator
+non_safety_advantage,82,82,636 rows x 14 attributes; present count is the interpretation denominator
+gap_narrowing,175,175,636 rows x 14 attributes; present count is the interpretation denominator
+neutral_or_unclear,345,345,636 rows x 14 attributes; present count is the interpretation denominator
+not_applicable,8292,110,636 rows x 14 attributes; present count is the interpretation denominator

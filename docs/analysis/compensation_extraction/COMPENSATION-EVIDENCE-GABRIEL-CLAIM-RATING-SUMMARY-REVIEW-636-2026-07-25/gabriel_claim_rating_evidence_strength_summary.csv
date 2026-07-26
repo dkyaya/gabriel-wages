@@ -1,0 +1,5 @@
+controlled_value,count_all_attribute_cells,count_present_attribute_cells,scope_note
+strong,20,20,636 rows x 14 attributes; present count is the interpretation denominator
+moderate,242,242,636 rows x 14 attributes; present count is the interpretation denominator
+weak,452,452,636 rows x 14 attributes; present count is the interpretation denominator
+not_supported,8190,8,636 rows x 14 attributes; present count is the interpretation denominator

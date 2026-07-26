@@ -1,0 +1,262 @@
+{
+  "attribute_count": 14,
+  "attribute_taxonomy_version": "v1.1",
+  "attributes": {
+    "automatic_raise_mechanism": {
+      "absent_count": 527,
+      "claim_relevance_present_only": {
+        "context_only": 4,
+        "direct_text_claim": 19,
+        "documentary_mechanism_claim": 71,
+        "provisional_causal_candidate": 15
+      },
+      "direction_of_pressure_present_only": {
+        "gap_narrowing": 72,
+        "neutral_or_unclear": 32,
+        "non_safety_advantage": 3,
+        "safety_advantage": 2
+      },
+      "evidence_strength_present_only": {
+        "moderate": 68,
+        "strong": 5,
+        "weak": 36
+      },
+      "present_count": 109
+    },
+    "bargaining_power_signal": {
+      "absent_count": 614,
+      "claim_relevance_present_only": {
+        "direct_text_claim": 6,
+        "documentary_mechanism_claim": 15,
+        "provisional_causal_candidate": 1
+      },
+      "direction_of_pressure_present_only": {
+        "gap_narrowing": 7,
+        "neutral_or_unclear": 11,
+        "non_safety_advantage": 4
+      },
+      "evidence_strength_present_only": {
+        "moderate": 8,
+        "weak": 14
+      },
+      "present_count": 22
+    },
+    "base_wage_direct_value": {
+      "absent_count": 536,
+      "claim_relevance_present_only": {
+        "context_only": 8,
+        "direct_text_claim": 57,
+        "documentary_mechanism_claim": 30,
+        "provisional_causal_candidate": 5
+      },
+      "direction_of_pressure_present_only": {
+        "gap_narrowing": 19,
+        "neutral_or_unclear": 61,
+        "non_safety_advantage": 16,
+        "safety_advantage": 4
+      },
+      "evidence_strength_present_only": {
+        "moderate": 52,
+        "strong": 11,
+        "weak": 37
+      },
+      "present_count": 100
+    },
+    "fiscal_constraint_signal": {
+      "absent_count": 630,
+      "claim_relevance_present_only": {
+        "context_only": 4,
+        "documentary_mechanism_claim": 2
+      },
+      "direction_of_pressure_present_only": {
+        "gap_narrowing": 1,
+        "neutral_or_unclear": 3,
+        "non_safety_advantage": 2
+      },
+      "evidence_strength_present_only": {
+        "moderate": 2,
+        "weak": 4
+      },
+      "present_count": 6
+    },
+    "gap_narrowing_signal": {
+      "absent_count": 634,
+      "claim_relevance_present_only": {
+        "context_only": 1,
+        "provisional_causal_candidate": 1
+      },
+      "direction_of_pressure_present_only": {
+        "gap_narrowing": 1,
+        "neutral_or_unclear": 1
+      },
+      "evidence_strength_present_only": {
+        "weak": 2
+      },
+      "present_count": 2
+    },
+    "implementation_or_retroactivity_advantage": {
+      "absent_count": 465,
+      "claim_relevance_present_only": {
+        "context_only": 31,
+        "direct_text_claim": 14,
+        "documentary_mechanism_claim": 81,
+        "provisional_causal_candidate": 45
+      },
+      "direction_of_pressure_present_only": {
+        "gap_narrowing": 45,
+        "neutral_or_unclear": 125,
+        "safety_advantage": 1
+      },
+      "evidence_strength_present_only": {
+        "moderate": 47,
+        "strong": 1,
+        "weak": 123
+      },
+      "present_count": 171
+    },
+    "market_or_comparability_pressure": {
+      "absent_count": 615,
+      "claim_relevance_present_only": {
+        "context_only": 1,
+        "direct_text_claim": 7,
+        "documentary_mechanism_claim": 11,
+        "provisional_causal_candidate": 2
+      },
+      "direction_of_pressure_present_only": {
+        "gap_narrowing": 8,
+        "neutral_or_unclear": 6,
+        "non_safety_advantage": 5,
+        "safety_advantage": 2
+      },
+      "evidence_strength_present_only": {
+        "moderate": 9,
+        "weak": 12
+      },
+      "present_count": 21
+    },
+    "non_base_compensation_signal": {
+      "absent_count": 560,
+      "claim_relevance_present_only": {
+        "context_only": 10,
+        "direct_text_claim": 38,
+        "documentary_mechanism_claim": 23,
+        "provisional_causal_candidate": 5
+      },
+      "direction_of_pressure_present_only": {
+        "gap_narrowing": 2,
+        "neutral_or_unclear": 28,
+        "non_safety_advantage": 46
+      },
+      "evidence_strength_present_only": {
+        "moderate": 42,
+        "strong": 2,
+        "weak": 32
+      },
+      "present_count": 76
+    },
+    "non_safety_constraint_signal": {
+      "absent_count": 636,
+      "claim_relevance_present_only": {},
+      "direction_of_pressure_present_only": {},
+      "evidence_strength_present_only": {},
+      "present_count": 0
+    },
+    "parity_or_internal_equity_signal": {
+      "absent_count": 627,
+      "claim_relevance_present_only": {
+        "context_only": 2,
+        "direct_text_claim": 1,
+        "documentary_mechanism_claim": 5,
+        "provisional_causal_candidate": 1
+      },
+      "direction_of_pressure_present_only": {
+        "gap_narrowing": 9
+      },
+      "evidence_strength_present_only": {
+        "moderate": 2,
+        "weak": 7
+      },
+      "present_count": 9
+    },
+    "rank_or_specialization_premium": {
+      "absent_count": 609,
+      "claim_relevance_present_only": {
+        "context_only": 1,
+        "direct_text_claim": 8,
+        "documentary_mechanism_claim": 12,
+        "provisional_causal_candidate": 6
+      },
+      "direction_of_pressure_present_only": {
+        "gap_narrowing": 11,
+        "neutral_or_unclear": 9,
+        "non_safety_advantage": 6,
+        "safety_advantage": 1
+      },
+      "evidence_strength_present_only": {
+        "moderate": 10,
+        "strong": 1,
+        "weak": 16
+      },
+      "present_count": 27
+    },
+    "safety_advantage_signal": {
+      "absent_count": 636,
+      "claim_relevance_present_only": {},
+      "direction_of_pressure_present_only": {},
+      "evidence_strength_present_only": {},
+      "present_count": 0
+    },
+    "strike_or_no_strike_constraint": {
+      "absent_count": 632,
+      "claim_relevance_present_only": {
+        "documentary_mechanism_claim": 4
+      },
+      "direction_of_pressure_present_only": {
+        "neutral_or_unclear": 4
+      },
+      "evidence_strength_present_only": {
+        "moderate": 2,
+        "weak": 2
+      },
+      "present_count": 4
+    },
+    "weak_or_no_claim_support": {
+      "absent_count": 461,
+      "claim_relevance_present_only": {
+        "not_claim_ready": 175
+      },
+      "direction_of_pressure_present_only": {
+        "neutral_or_unclear": 65,
+        "not_applicable": 110
+      },
+      "evidence_strength_present_only": {
+        "not_supported": 8,
+        "weak": 167
+      },
+      "present_count": 175
+    }
+  },
+  "interpretation_scope": "bounded descriptive summaries of the 636 valid-rated collected rows only",
+  "overall_evidence_quality_counts": {
+    "high": 6,
+    "low": 535,
+    "medium": 95
+  },
+  "positive_attribute_cells": 722,
+  "primary_attribute_counts": {
+    "automatic_raise_mechanism": 103,
+    "bargaining_power_signal": 18,
+    "base_wage_direct_value": 81,
+    "fiscal_constraint_signal": 5,
+    "gap_narrowing_signal": 1,
+    "implementation_or_retroactivity_advantage": 140,
+    "market_or_comparability_pressure": 17,
+    "non_base_compensation_signal": 72,
+    "parity_or_internal_equity_signal": 6,
+    "rank_or_specialization_premium": 15,
+    "strike_or_no_strike_constraint": 3,
+    "weak_or_no_claim_support": 175
+  },
+  "task_id": "COMPENSATION-EVIDENCE-GABRIEL-CLAIM-RATING-SUMMARY-REVIEW-636-2026-07-25",
+  "valid_rows": 636
+}
