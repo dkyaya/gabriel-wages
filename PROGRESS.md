@@ -6,6 +6,34 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-25 (Longevity case resolved; cumulative 1,000-case layer materialized on QA hold)
+
+**Did**
+- Started from clean tracked `b00c7974608a5cf517b2e1f4dc386567782e1534`, preserving the unrelated untracked root `package-lock.json` and local adjudication renders. Reconfirmed the frozen 1,000-case selection hash, exact 499-case checkpoint, sole unresolved identity, corrected-seed inputs, bounded packet, and configured credential presence without printing values.
+- Added isolated one-case preflight/live modes and a strict longevity contract. It requires `non_base_wage`, empty quantitative and qualitative arrays, and at least one longevity non-base observation; missing evidence remains invalid and no generic 500-case resume path is used.
+- Passed 63 offline/mock tests. The new fixture proves longevity is rejected from the base quantitative array, accepted only in the non-base array, the preflight preserves the checkpoint byte-for-byte, exactly one case is sent per authorized phase, seed/stored cases are never selected, and cumulative materialization rejects 499 results.
+- Ran one bounded preflight and one live request for `cex1000_150f3ac41a7919533b202cc2`. Both passed. The live result has zero quantitative, zero qualitative, and two longevity non-base observations. Seed calls and stored-case resends remained zero.
+- Completed the new checkpoint at 500/500 and materialized cumulative provisional ledgers for all 1,000 frozen identities: 1,347 active quantitative observations, 1,464 qualitative mechanisms, 272 mixed cases, 2,758 non-base observations, and 173 reference/exclusion cases.
+- Computed full cumulative QA: zero duplicate IDs, zero invalid page pointers, nine duplicate observations canonicalized across seven groups, 82 quantitative conflict groups with 25 unresolved, a 1.8560% unresolved conflict rate, and intact 363 police / 237 fire / 400 non-safety representation.
+- Expanded the review ledger to 215 rows. A stricter cumulative scan identified 126 active corrected-seed quantitative records with possible non-base terminology; together with 25 under-specified conflicts, 151 review items remain unresolved.
+- Updated result/QA/decision/validation docs, generated dashboard data, analysis readiness, the existing extraction card, dashboard documentation, and `next_task.md` to show `compensation_extraction_1000_materialized_qa_blocked`.
+
+**Decisions and why**
+- Decision is `blocked_by_integrity_qa_failure`. Although schema validity is 100%, page/identity/matching controls pass, and conflict rate is below 2%, further scale is prohibited until the 126 possible base/non-base routing records are resolved.
+- The cumulative outputs remain provisional and separate from final analysis. The stricter scan is conservative: it queues records rather than silently rerouting observations that may contain both genuine base-rate and non-base terminology.
+- A targeted no-new-extraction QA pass is required over 151 unresolved rows/groups. The remaining readable parse-text pool stays closed.
+
+**Surprises/breakage**
+- The one-case contract resolved the previously persistent longevity response on both authorized calls.
+- The cumulative join exposed 126 possible non-base records still active in the corrected seed, despite the prior targeted queue reporting zero unresolved contamination. This broader post-join invariant is now an explicit QA blocker and an actionable review queue.
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Compiles, 63 offline/mock tests, dashboard data/frontend builds, repository validation, 60 ingestion tests, coverage audit, frozen-hash/protected-state checks, metadata safety checks, and diff hygiene passed.
+
+**Next steps**
+1. Run no-new-extraction targeted QA on the 126 possible base/non-base records and 25 under-specified conflict groups; preserve the current cumulative ledgers and write corrected shadows.
+2. Recompute integrity QA and authorize further provisional scale only if contamination is zero and every existing threshold remains satisfied.
+3. Keep final merge, ingestion, codification, wage-gap work, regression, URL access, download, and OCR closed.
+
 ## 2026-07-25 (1,000-document preflight repaired; live run stopped at 499/500 new cases)
 
 **Did**

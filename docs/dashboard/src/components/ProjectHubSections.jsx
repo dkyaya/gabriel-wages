@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "compensation_extraction_1000_materialized_qa_blocked"
+              ? "Provisional 1,000-document layer materialized; targeted QA required"
+              : textTableCalibrationStatus.calibration_phase ===
             "compensation_extraction_1000_live_incomplete_499_of_500"
               ? "Provisional 1,000-document scale-up stopped with one new case unresolved"
               : textTableCalibrationStatus.calibration_phase ===
@@ -795,6 +798,23 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "compensation_extraction_1000_materialized_qa_blocked" ? (
+            <>
+              The one-case longevity contract completed the frozen new cohort at 500/500 strict-valid cases without resending the corrected seed or the 499 stored cases. The cumulative provisional layer now contains {formatNumber(
+                textTableCalibrationStatus.quantitative_observation_count,
+              )} active quantitative, {formatNumber(
+                textTableCalibrationStatus.qualitative_mechanism_observation_count,
+              )} qualitative-mechanism, {formatNumber(
+                textTableCalibrationStatus.mixed_case_count,
+              )} mixed, and {formatNumber(
+                textTableCalibrationStatus.non_base_wage_observation_count,
+              )} non-base-wage records. Integrity QA is blocked by {formatNumber(
+                textTableCalibrationStatus.compensation_extraction_1000_base_nonbase_contamination_count,
+              )} possible base/non-base routing records. The unresolved conflict rate is {formatPercent(
+                100 * textTableCalibrationStatus.compensation_extraction_1000_unresolved_conflict_rate,
+              )}; further scale remains {textTableCalibrationStatus.scale_beyond_1000_recommendation}. These are provisional QA ledgers, not analysis-ready data.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "compensation_extraction_1000_live_incomplete_499_of_500" ? (
             <>
               The cumulative selection froze {formatNumber(

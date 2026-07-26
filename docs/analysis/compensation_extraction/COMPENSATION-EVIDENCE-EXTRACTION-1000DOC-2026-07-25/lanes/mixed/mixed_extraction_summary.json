@@ -1,0 +1,10 @@
+{
+  "case_count": 272,
+  "cohort_counts": {
+    "corrected_500_seed": 177,
+    "new_500_scale": 95
+  },
+  "qualitative_subrecord_count": 727,
+  "quantitative_subrecord_count": 882,
+  "source_row_count": 272
+}

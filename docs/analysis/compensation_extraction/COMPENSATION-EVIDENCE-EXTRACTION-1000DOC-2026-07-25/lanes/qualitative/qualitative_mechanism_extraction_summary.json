@@ -1,0 +1,15 @@
+{
+  "case_count": 539,
+  "cohort_counts": {
+    "corrected_500_seed": 1181,
+    "new_500_scale": 283
+  },
+  "confidence_counts": {
+    "high": 436,
+    "low": 162,
+    "medium": 864,
+    "unknown": 2
+  },
+  "observation_count": 1464,
+  "source_row_count": 1464
+}

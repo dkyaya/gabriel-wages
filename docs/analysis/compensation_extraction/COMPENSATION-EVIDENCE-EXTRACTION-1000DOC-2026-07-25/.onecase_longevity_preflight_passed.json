@@ -1,0 +1,12 @@
+{
+  "case_id": "cex1000_150f3ac41a7919533b202cc2",
+  "checkpoint_sha256": "c7ee897b3dcf6342dc4805048ab86fd0b94b50ebc4376d5a10f4d307e374e694",
+  "completed_at": "2026-07-26T00:11:04Z",
+  "passed": true,
+  "request_count": 1,
+  "schema_valid_count": 1,
+  "seed_case_calls": 0,
+  "selection_sha256": "147e311e7a6d6c3aeb98c52357f6d46ea8ee52798be45493bf0a1c138a3b9f15",
+  "stored_new_cases_resent": 0,
+  "task_id": "COMPENSATION-EVIDENCE-EXTRACTION-1000DOC-ONECASE-LONGEVITY-RESOLUTION-2026-07-25"
+}

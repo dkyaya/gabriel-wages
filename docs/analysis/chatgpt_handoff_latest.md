@@ -6,6 +6,38 @@ Last updated: `2026-07-25`
 
 ---
 
+## 2026-07-25 — Longevity case resolved; cumulative 1,000-case QA requires targeted routing review
+
+### Current State
+
+- **Authority/start:** work began at clean tracked `b00c7974608a5cf517b2e1f4dc386567782e1534`. All durable/Gate/original-500/targeted-QA inputs and the frozen selection remain unchanged. The unrelated root `package-lock.json` and local adjudication renders remain untracked and outside scope.
+- **One-case contract:** the runner now has isolated `preflight_1000_longevity_onecase` and `live_1000_longevity_onecase` modes. The contract requires non-base disposition, empty quantitative/qualitative arrays, and a longevity non-base observation. The generic 500-case resume path is not used.
+- **Calls:** one preflight and one live request were sent only for `cex1000_150f3ac41a7919533b202cc2`. Both passed strict validation. Seed calls and resends of the 499 stored new cases are zero. The result contains two longevity non-base records and no base quantitative or qualitative record.
+- **Frozen integrity:** the selection remains 1,000 unique identities with SHA-256 `147e311e7a6d6c3aeb98c52357f6d46ea8ee52798be45493bf0a1c138a3b9f15`. The packet remains 5,767 rows under six-page/1,500-character-page/6,000-character-case caps. The checkpoint is 500/500 unique new cases.
+- **Cumulative ledgers:** [the result](compensation_extraction_1000_result_2026-07-25.md) reports 1,347 active quantitative, 1,464 qualitative-mechanism, 272 mixed, 2,758 non-base-wage, and 173 reference/exclusion records across 1,000 schema-valid cases.
+- **QA:** duplicate observation IDs and invalid page pointers are zero; matching remains 363 police / 237 fire / 400 non-safety. Nine exact duplicates were canonicalized across seven groups. Of 82 quantitative conflict groups, 25 remain unresolved; the conflict rate is 1.8560%, below 2%.
+- **Blocker:** a stricter cumulative scan identified 126 active corrected-seed quantitative records with possible non-base signals. The 215-row review ledger contains seven duplicate groups, 82 conflict groups, and 126 routing records; 151 rows/groups remain unresolved.
+- **Decision/dashboard:** [the decision](compensation_extraction/COMPENSATION-EVIDENCE-EXTRACTION-1000DOC-2026-07-25/compensation_extraction_1000_decision_report.json) is `blocked_by_integrity_qa_failure`. Dashboard phase is `compensation_extraction_1000_materialized_qa_blocked`; analysis readiness and further scale are false.
+- **Boundary:** only the two authorized one-case GABRIEL requests ran. No URL/hosted search, download, OCR, scout, source review, verification, ingestion, codification, final merge, wage-gap work, regression, upstream-ledger mutation, remote inspection, fetch, or pull occurred. No raw prompt/response, full text/table, encoded image, or secret was retained.
+
+### Interpretation
+
+The extraction completeness problem is solved; the routing QA problem is not.
+The stricter cumulative invariant found records that were outside the earlier
+500-case targeted queue. Some may be genuine false positives from words such
+as “premium” or “leave,” while others may be non-base observations that need
+rerouting or splitting. Keeping them active without review would violate the
+scale rule, but silently moving them would destroy provenance and could remove
+valid base components.
+
+### Next Move
+
+Follow [next_task.md](../../next_task.md). Run a no-new-extraction targeted QA
+pass over the 126 possible base/non-base records and 25 under-specified conflict
+groups, write corrected cumulative shadow ledgers, and recompute integrity QA.
+Default to no GABRIEL. Do not run the remaining readable parse-text pool until
+contamination is zero and cumulative QA passes.
+
 ## 2026-07-25 — Preflight repaired; live 1,000-document expansion stopped at 499/500 new cases
 
 ### Current State

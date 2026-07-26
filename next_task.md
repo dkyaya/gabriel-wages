@@ -1,34 +1,34 @@
-# Next task: resolve one frozen longevity-routing case and finish cumulative 1,000-case QA
+# Next task: targeted cumulative 1,000-case routing and conflict QA
 
-The cumulative 1,000-document identity and packet selection remains frozen.
-The repaired representative preflight passed 6/6, and 499 of the 500 new
-cases now have strict semantic-schema-valid structured results. The corrected
-500-case seed received zero model calls and must remain untouched.
+The frozen cumulative extraction is complete at 1,000/1,000 strict-valid
+cases. Do not run new extraction and do not change selected identities.
 
-The only live blocker is extraction case
-`cex1000_150f3ac41a7919533b202cc2`. Ten bounded attempts were rejected because
-longevity evidence was placed in the base quantitative array. Do not fabricate
-or silently recode a response.
+Use only:
 
-Next:
+- `compensation_extraction_1000_conflict_review.csv`;
+- the cumulative provisional quantitative/non-base/mixed ledgers;
+- existing bounded evidence pointers and local retained artifacts.
 
-1. Preserve the selection SHA-256
-   `147e311e7a6d6c3aeb98c52357f6d46ea8ee52798be45493bf0a1c138a3b9f15`
-   and the existing 499-case resumable checkpoint.
-2. Add a one-case, non-base-family response contract that requires any
-   longevity-only evidence to appear in `non_base_wage_observations` with empty
-   base quantitative and qualitative arrays. Validate this contract offline.
-3. Run a single bounded preflight on the frozen longevity case. If it fails,
-   stop again; do not coerce or fabricate data.
-4. If it passes, request exactly that one case once under the validated
-   contract. Do not resend any seed case or any of the 499 stored new cases.
-5. After the checkpoint reaches 500/500, materialize cumulative provisional
-   ledgers from the corrected 500-case shadow ledgers plus the 500 new results.
-6. Compute duplicate-ID, bounded-page-pointer, quantitative-conflict, and
-   base/non-base contamination QA before authorizing any further scale.
+Review the 151 unresolved rows/groups:
 
-Keep the remaining readable parse-text pool closed until cumulative QA passes.
-Continue to prohibit URLs, hosted search, downloads, OCR, scouts, source
-review, verification, ingestion, `gabriel.codify`, final analysis merge,
-wage-gap work, regressions, raw prompt/response retention, and durable-ledger
-mutation.
+1. Resolve 126 active quantitative records flagged by the stricter cumulative
+   non-base scan. Classify each as `retain_quantitative_base_wage`,
+   `route_to_non_base_wage`, `split_quant_and_non_base_components`,
+   `reference_only`, or `insufficient_evidence_needs_review`.
+2. Resolve or retain explicitly the 25 under-specified quantitative conflict
+   groups. Do not invent missing step, rank, classification, or effective-date
+   distinctions.
+3. Preserve the nine already canonicalized duplicate observations and every
+   provenance row.
+4. Write corrected cumulative shadow ledgers; never overwrite the current
+   provisional cumulative ledgers.
+5. Recompute integrity QA. Further provisional scale is eligible only if
+   duplicate IDs and invalid pointers remain zero, base/non-base contamination
+   is zero, unresolved conflict rate remains at most 2%, and matching remains
+   intact.
+
+Default to no GABRIEL/API. Any model use would require a separately bounded and
+explicitly authorized QA-only preflight. Continue to prohibit URLs, hosted
+search, downloads, OCR, scouts, source review, verification, ingestion,
+`gabriel.codify`, final analysis merge, wage-gap work, regressions, and durable
+upstream-ledger mutation.

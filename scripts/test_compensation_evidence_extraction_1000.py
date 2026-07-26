@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import shutil
 import sys
 import tempfile
 import unittest
@@ -124,6 +125,33 @@ def nonbase_observation() -> dict[str, object]:
         "confidence": "medium",
         "reason_code": "CERTIFICATION_STIPEND",
     }
+
+
+def longevity_response() -> dict[str, object]:
+    value = response()
+    value.update(
+        {
+            "case_disposition": "non_base_wage",
+            "quantitative_observations": [],
+            "qualitative_observations": [],
+            "non_base_wage_observations": [
+                {
+                    "page_number": 2,
+                    "non_base_wage_type": "longevity",
+                    "value_text": "$500",
+                    "effective_date": "",
+                    "eligibility_or_implementation_rule": (
+                        "Employees qualify after the stated service period."
+                    ),
+                    "confidence": "high",
+                    "reason_code": "LONGEVITY_NON_BASE",
+                }
+            ],
+            "reason_codes": ["LONGEVITY_NON_BASE"],
+            "short_rationale": "The bounded evidence is longevity pay only.",
+        }
+    )
+    return value
 
 
 class CompensationExtraction1000Tests(unittest.TestCase):
@@ -279,6 +307,34 @@ class CompensationExtraction1000Tests(unittest.TestCase):
         with self.assertRaises(ValueError):
             extract.validate_response(json.dumps(vague_other), {2})
 
+    def test_longevity_onecase_contract_rejects_base_and_accepts_nonbase(self) -> None:
+        invalid = response()
+        invalid["quantitative_observations"][0].update(
+            {
+                "compensation_type": "other",
+                "occupation_unit_classification_rank": "longevity schedule",
+                "rate_value": "$500 longevity payment",
+                "salary_value": "",
+                "annual_salary": "",
+                "reason_code": "LONGEVITY_PAY",
+            }
+        )
+        with self.assertRaisesRegex(ValueError, "non-base compensation"):
+            extract.validate_longevity_onecase_response(
+                json.dumps(invalid), {2}
+            )
+        valid = longevity_response()
+        parsed = extract.validate_longevity_onecase_response(
+            json.dumps(valid), {2}
+        )
+        self.assertEqual(parsed["case_disposition"], "non_base_wage")
+        self.assertEqual(parsed["quantitative_observations"], [])
+        self.assertEqual(parsed["qualitative_observations"], [])
+        self.assertEqual(
+            parsed["non_base_wage_observations"][0]["non_base_wage_type"],
+            "longevity",
+        )
+
     def test_prompt_is_bounded_and_excludes_prior_labels(self) -> None:
         row = selection("new_case", "quantitative")
         text = extract.prompt(row, [packet()])
@@ -393,6 +449,142 @@ class CompensationExtraction1000Tests(unittest.TestCase):
         source = RUNNER.read_text(encoding="utf-8")
         for forbidden_write in ("raw_prompt.json", "raw_response.json", "full_page_text"):
             self.assertNotIn(forbidden_write, source)
+
+    def test_onecase_modes_send_only_unresolved_case_and_complete_checkpoint(self) -> None:
+        real_output = (
+            ROOT
+            / "docs/analysis/compensation_extraction"
+            / "COMPENSATION-EVIDENCE-EXTRACTION-1000DOC-2026-07-25"
+        )
+        copied = (
+            "compensation_extraction_1000_selection_manifest.csv",
+            "compensation_extraction_1000_new_case_results.jsonl",
+            "compensation_extraction_1000_request_metadata.csv",
+            "compensation_extraction_1000_timing.csv",
+        )
+        sent: list[tuple[str, str]] = []
+
+        def fake_call(requests, key, parallel):
+            self.assertEqual(key, "redacted-test-key")
+            self.assertEqual(parallel, 1)
+            self.assertEqual(len(requests), 1)
+            request = requests[0]
+            self.assertEqual(
+                request.row["extraction_case_id"], extract.LONGEVITY_ONECASE_ID
+            )
+            self.assertEqual(request.row["_longevity_onecase_contract"], "yes")
+            sent.append((request.phase, request.row["extraction_case_id"]))
+            value = longevity_response()
+            return [
+                extract.Result(
+                    case_id=extract.LONGEVITY_ONECASE_ID,
+                    status="success",
+                    request_id=f"req_{request.phase}",
+                    raw=json.dumps(value),
+                    parsed=value,
+                    elapsed=0.01,
+                    input_tokens=10,
+                    output_tokens=10,
+                    total_tokens=20,
+                    error_type="",
+                    error_message="",
+                    prompt_hash="abc",
+                    prompt_chars=100,
+                    image_count=0,
+                    image_bytes=0,
+                )
+            ]
+
+        with tempfile.TemporaryDirectory() as temp:
+            output = Path(temp)
+            for name in copied:
+                shutil.copyfile(real_output / name, output / name)
+            initial_stored = extract.load_new_case_checkpoint(output)
+            initial_stored.pop(extract.LONGEVITY_ONECASE_ID, None)
+            extract.write_new_case_checkpoint(output, initial_stored)
+            selection_rows = extract.read_csv(
+                output / "compensation_extraction_1000_selection_manifest.csv"
+            )
+            packet_map = {
+                extract.LONGEVITY_ONECASE_ID: [packet()]
+            }
+            checkpoint_before = extract.sha_file(
+                output / "compensation_extraction_1000_new_case_results.jsonl"
+            )
+            with mock.patch.object(extract, "call_gabriel", side_effect=fake_call):
+                self.assertEqual(
+                    extract.preflight_1000_longevity_onecase(
+                        output, selection_rows, packet_map, "redacted-test-key"
+                    ),
+                    0,
+                )
+            self.assertEqual(
+                extract.sha_file(
+                    output / "compensation_extraction_1000_new_case_results.jsonl"
+                ),
+                checkpoint_before,
+            )
+            with (
+                mock.patch.object(extract, "call_gabriel", side_effect=fake_call),
+                mock.patch.object(
+                    extract,
+                    "materialize_cumulative_1000",
+                    return_value={"decision": {"qa_pass": True}},
+                ) as materialize,
+            ):
+                self.assertEqual(
+                    extract.live_1000_longevity_onecase(
+                        output,
+                        selection_rows,
+                        [],
+                        packet_map,
+                        extract.TARGETED_QA_500_DIR,
+                        "redacted-test-key",
+                    ),
+                    0,
+                )
+            stored = extract.load_new_case_checkpoint(output)
+            self.assertEqual(len(stored), 500)
+            self.assertIn(extract.LONGEVITY_ONECASE_ID, stored)
+            self.assertEqual(
+                sent,
+                [
+                    ("preflight_1000_longevity_onecase", extract.LONGEVITY_ONECASE_ID),
+                    ("live_1000_longevity_onecase", extract.LONGEVITY_ONECASE_ID),
+                ],
+            )
+            materialize.assert_called_once()
+            metadata = extract.read_csv(
+                output / "compensation_extraction_1000_onecase_request_metadata.csv"
+            )
+            self.assertEqual(len(metadata), 2)
+            self.assertEqual(
+                {row["extraction_case_id"] for row in metadata},
+                {extract.LONGEVITY_ONECASE_ID},
+            )
+
+    def test_cumulative_materialization_rejects_499_results(self) -> None:
+        real_output = (
+            ROOT
+            / "docs/analysis/compensation_extraction"
+            / "COMPENSATION-EVIDENCE-EXTRACTION-1000DOC-2026-07-25"
+        )
+        selection_rows = extract.read_csv(
+            real_output / "compensation_extraction_1000_selection_manifest.csv"
+        )
+        stored = extract.load_new_case_checkpoint(real_output)
+        stored.pop(extract.LONGEVITY_ONECASE_ID)
+        self.assertEqual(len(stored), 499)
+        with self.assertRaisesRegex(
+            RuntimeError, "requires exactly 500 frozen new results"
+        ):
+            extract.materialize_cumulative_1000(
+                real_output,
+                selection_rows,
+                [],
+                stored,
+                extract.TARGETED_QA_500_DIR,
+            )
 
 
 if __name__ == "__main__":

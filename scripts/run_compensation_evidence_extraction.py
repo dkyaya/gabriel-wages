@@ -32,7 +32,16 @@ ROOT = Path(__file__).resolve().parents[1]
 TASK_ID = "COMPENSATION-EVIDENCE-EXTRACTION-500DOC-PROVISIONAL-LANES-2026-07-25"
 OUTPUT_ID = "COMPENSATION-EVIDENCE-EXTRACTION-500DOC-2026-07-25"
 TASK_1000_ID = "COMPENSATION-EVIDENCE-EXTRACTION-1000DOC-PROVISIONAL-SCALE-2026-07-25"
+TASK_1000_ONECASE_ID = (
+    "COMPENSATION-EVIDENCE-EXTRACTION-1000DOC-"
+    "ONECASE-LONGEVITY-RESOLUTION-2026-07-25"
+)
 OUTPUT_1000_ID = "COMPENSATION-EVIDENCE-EXTRACTION-1000DOC-2026-07-25"
+LONGEVITY_ONECASE_ID = "cex1000_150f3ac41a7919533b202cc2"
+FROZEN_1000_SELECTION_SHA256 = (
+    "147e311e7a6d6c3aeb98c52357f6d46e"
+    "a8ee52798be45493bf0a1c138a3b9f15"
+)
 BACKEND = "huit_openai_responses_direct_sdk"
 MODEL = "gpt-5.4-nano"
 BASE_URL = "https://go.apis.huit.harvard.edu/ais-openai-direct/v2"
@@ -573,6 +582,7 @@ def prompt(row: dict[str, str], pages: list[PagePacket]) -> str:
         "pages": [{"page_number": p.page, "page_role": p.role, "bounded_text": p.text, "local_features": {"wage_terms": p.wage, "numeric_tokens": p.numeric, "table_lines": p.table, "mechanism_terms": p.qual, "non_base_terms": p.nonbase, "reference_signal": p.reference}, "image_attached": bool(p.image)} for p in pages],
     }
     retry_hint = row.get("_nonbase_retry_hint", "")
+    longevity_onecase = row.get("_longevity_onecase_contract") == "yes"
     retry_instruction = (
         " A prior strict-validation attempt detected the non-base family "
         f"'{retry_hint}' inside a quantitative item for this same bounded packet. "
@@ -589,6 +599,22 @@ def prompt(row: dict[str, str], pages: list[PagePacket]) -> str:
         if retry_hint
         else ""
     )
+    onecase_instruction = (
+        " ONE-CASE LONGEVITY CONTRACT: This request is limited to the frozen "
+        "longevity-routing case. Treat visible longevity or service-based extra "
+        "pay as non-base compensation only. If the bounded pages contain only "
+        "longevity/non-base compensation evidence, return case_disposition "
+        "non_base_wage, quantitative_observations [], qualitative_observations "
+        "[], and at least one non_base_wage_observations item with "
+        "non_base_wage_type longevity. Do not create or infer base wage, salary, "
+        "step, grade, pay band, or percentage-increase observations. Do not use "
+        "a quantitative field to restate a longevity value, eligibility rule, "
+        "or service schedule. If the evidence cannot satisfy this contract from "
+        "the supplied pages, return an otherwise schema-valid non-ready result; "
+        "the local contract will fail closed."
+        if longevity_onecase
+        else ""
+    )
     return (
         "Extract provisional compensation evidence only from this bounded local page packet. "
         "Return separate quantitative, qualitative-mechanism, and non-base-wage observation arrays. "
@@ -602,6 +628,7 @@ def prompt(row: dict[str, str], pages: list[PagePacket]) -> str:
         "Do not use compensation_type=other as a dump bucket: it is permitted only for an explicit base-pay calculation or regular base-rate formula, with a specific reason code. "
         "A reference page without its target is reference_only. All page numbers must be among supplied pages. Summaries must be concise paraphrases, not quotations. Return strict JSON only."
         + retry_instruction
+        + onecase_instruction
         + "\n"
         f"BOUNDED_PACKET={json.dumps(packet, separators=(',', ':'))}"
     )
@@ -653,6 +680,25 @@ def validate_response(raw: str, allowed_pages: set[int]) -> dict[str, Any]:
         raise ValueError("mixed_ready requires quantitative and qualitative sub-records")
     if disposition == "non_base_wage" and (not has_nonbase or has_quant or has_qual):
         raise ValueError("non_base_wage requires non-base-only evidence arrays")
+    return value
+
+
+def validate_longevity_onecase_response(
+    raw: str, allowed_pages: set[int]
+) -> dict[str, Any]:
+    """Enforce the frozen one-case non-base longevity response contract."""
+    value = validate_response(raw, allowed_pages)
+    if value["case_disposition"] != "non_base_wage":
+        raise ValueError("longevity one-case disposition must be non_base_wage")
+    if value["quantitative_observations"]:
+        raise ValueError("longevity one-case quantitative observations must be empty")
+    if value["qualitative_observations"]:
+        raise ValueError("longevity one-case qualitative observations must be empty")
+    nonbase = value["non_base_wage_observations"]
+    if not nonbase or not any(
+        item["non_base_wage_type"] == "longevity" for item in nonbase
+    ):
+        raise ValueError("longevity one-case requires a longevity non-base observation")
     return value
 
 
@@ -716,7 +762,14 @@ async def _call(requests: list[Request], key: str, parallel: int, timeout: float
                     image_bytes += len(data); image_count += 1
                 response = await asyncio.wait_for(client.responses.create(model=MODEL, input=[{"role": "user", "content": content}], reasoning={"effort": "low"}, text={"format": {"type": "json_schema", "name": "bounded_compensation_extraction", "strict": True, "schema": RESPONSE_SCHEMA}}), timeout=timeout)
                 raw = str(getattr(response, "output_text", "") or ""); usage = getattr(response, "usage", None)
-                try: parsed = validate_response(raw, {p.page for p in req.pages}); status = "success"; et = ""; em = ""
+                try:
+                    validator = (
+                        validate_longevity_onecase_response
+                        if req.row.get("_longevity_onecase_contract") == "yes"
+                        else validate_response
+                    )
+                    parsed = validator(raw, {p.page for p in req.pages})
+                    status = "success"; et = ""; em = ""
                 except Exception as exc: parsed = None; status = "schema_invalid"; et = type(exc).__name__; em = safe_error(exc, key)
                 return Result(req.row["extraction_case_id"], status, str(getattr(response, "id", "") or ""), raw, parsed, time.monotonic()-started, int(getattr(usage, "input_tokens", 0) or 0), int(getattr(usage, "output_tokens", 0) or 0), int(getattr(usage, "total_tokens", 0) or 0), et, em, sha_bytes(text_prompt.encode()), len(text_prompt), image_count, image_bytes)
             except Exception as exc:
@@ -1569,6 +1622,186 @@ def preflight_1000(
     return 0 if passed else 2
 
 
+def load_new_case_checkpoint(output: Path) -> dict[str, dict[str, Any]]:
+    checkpoint = output / "compensation_extraction_1000_new_case_results.jsonl"
+    if not checkpoint.is_file():
+        raise RuntimeError("1,000-document new-case checkpoint is missing")
+    stored: dict[str, dict[str, Any]] = {}
+    for line in checkpoint.read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
+        item = json.loads(line)
+        case_id = item["extraction_case_id"]
+        if case_id in stored:
+            raise RuntimeError("new-case checkpoint contains duplicate case ID")
+        stored[case_id] = item["result"]
+    return stored
+
+
+def write_new_case_checkpoint(
+    output: Path, stored: dict[str, dict[str, Any]]
+) -> None:
+    checkpoint = output / "compensation_extraction_1000_new_case_results.jsonl"
+    checkpoint.write_text(
+        "\n".join(
+            json.dumps(
+                {"extraction_case_id": case_id, "result": stored[case_id]},
+                sort_keys=True,
+            )
+            for case_id in sorted(stored)
+        )
+        + ("\n" if stored else ""),
+        encoding="utf-8",
+    )
+
+
+def longevity_onecase_context(
+    output: Path,
+    selection: list[dict[str, str]],
+    packet_map: dict[str, list[PagePacket]],
+) -> tuple[dict[str, str], list[PagePacket], dict[str, dict[str, Any]]]:
+    selection_path = output / "compensation_extraction_1000_selection_manifest.csv"
+    if sha_file(selection_path) != FROZEN_1000_SELECTION_SHA256:
+        raise RuntimeError("frozen 1,000-document selection hash changed")
+    if len(selection) != 1000:
+        raise RuntimeError("frozen selection no longer contains 1,000 cases")
+    new_rows = [row for row in selection if row["requires_gabriel"] == "yes"]
+    seed_rows = [row for row in selection if row["requires_gabriel"] == "no"]
+    if len(new_rows) != 500 or len(seed_rows) != 500:
+        raise RuntimeError("frozen seed/new cohort counts changed")
+    stored = load_new_case_checkpoint(output)
+    new_ids = {row["extraction_case_id"] for row in new_rows}
+    missing = new_ids - set(stored)
+    if len(stored) != 499 or missing != {LONGEVITY_ONECASE_ID}:
+        raise RuntimeError("one-case mode requires the exact 499-case checkpoint")
+    if not set(stored).issubset(new_ids):
+        raise RuntimeError("checkpoint contains a non-new-cohort case")
+    metadata_path = output / "compensation_extraction_1000_request_metadata.csv"
+    metadata = read_csv(metadata_path) if metadata_path.is_file() else []
+    seed_ids = {row["extraction_case_id"] for row in seed_rows}
+    if any(row["extraction_case_id"] in seed_ids for row in metadata):
+        raise RuntimeError("seed case appears in prior GABRIEL request metadata")
+    valid_prior_ids = {
+        row["extraction_case_id"]
+        for row in metadata
+        if row["request_phase"] == "live_1000"
+        and row["schema_valid"] == "true"
+    }
+    if valid_prior_ids != set(stored):
+        raise RuntimeError("checkpoint and prior strict-valid request IDs differ")
+    row = next(
+        item for item in new_rows
+        if item["extraction_case_id"] == LONGEVITY_ONECASE_ID
+    )
+    pages = packet_map.get(LONGEVITY_ONECASE_ID, [])
+    if not pages or len(pages) > 6 or sum(len(page.text) for page in pages) > 6000:
+        raise RuntimeError("one-case packet violates the frozen bounded limits")
+    if any(len(page.text) > 1500 for page in pages):
+        raise RuntimeError("one-case per-page text limit violated")
+    return row, pages, stored
+
+
+def append_onecase_request_artifacts(
+    output: Path, result: Result, request: Request
+) -> None:
+    metadata_path = output / "compensation_extraction_1000_request_metadata.csv"
+    timing_path = output / "compensation_extraction_1000_timing.csv"
+    metadata = read_csv(metadata_path) if metadata_path.is_file() else []
+    timing = read_csv(timing_path) if timing_path.is_file() else []
+    metadata_row = result_metadata(result, request)
+    timing_row = {
+        "request_phase": request.phase,
+        "extraction_case_id": result.case_id,
+        "started_at": "",
+        "finished_at": now(),
+        "local_packet_seconds": "0.000000",
+        "gabriel_elapsed_seconds": f"{result.elapsed:.6f}",
+        "request_status": result.status,
+    }
+    metadata.append(metadata_row)
+    timing.append(timing_row)
+    write_csv(metadata_path, METADATA_FIELDS, metadata)
+    write_csv(timing_path, TIMING_FIELDS, timing)
+    onecase_metadata_path = (
+        output / "compensation_extraction_1000_onecase_request_metadata.csv"
+    )
+    onecase_timing_path = (
+        output / "compensation_extraction_1000_onecase_timing.csv"
+    )
+    onecase_metadata = (
+        read_csv(onecase_metadata_path) if onecase_metadata_path.is_file() else []
+    )
+    onecase_timing = (
+        read_csv(onecase_timing_path) if onecase_timing_path.is_file() else []
+    )
+    onecase_metadata.append(metadata_row)
+    onecase_timing.append(timing_row)
+    write_csv(onecase_metadata_path, METADATA_FIELDS, onecase_metadata)
+    write_csv(onecase_timing_path, TIMING_FIELDS, onecase_timing)
+
+
+def preflight_1000_longevity_onecase(
+    output: Path,
+    selection: list[dict[str, str]],
+    packet_map: dict[str, list[PagePacket]],
+    key: str,
+) -> int:
+    row, pages, stored = longevity_onecase_context(output, selection, packet_map)
+    checkpoint_path = output / "compensation_extraction_1000_new_case_results.jsonl"
+    checkpoint_sha_before = sha_file(checkpoint_path)
+    request_row = dict(row)
+    request_row["_longevity_onecase_contract"] = "yes"
+    request = Request(
+        request_row,
+        pages,
+        "preflight_1000_longevity_onecase",
+    )
+    results = call_gabriel([request], key, parallel=1)
+    if len(results) != 1 or results[0].case_id != LONGEVITY_ONECASE_ID:
+        raise RuntimeError("one-case preflight transport returned unexpected scope")
+    result = results[0]
+    append_onecase_request_artifacts(output, result, request)
+    checkpoint_sha_after = sha_file(checkpoint_path)
+    if checkpoint_sha_after != checkpoint_sha_before or len(stored) != 499:
+        raise RuntimeError("one-case preflight modified the 499-case checkpoint")
+    passed = result.status == "success" and result.parsed is not None
+    report = f"""# Frozen longevity one-case preflight
+
+- Case: `{LONGEVITY_ONECASE_ID}`
+- Request count: 1
+- Result: `{result.status}`
+- Strict longevity contract valid: `{'true' if passed else 'false'}`
+- Packet pages: {len(pages)}
+- Packet text characters: {sum(len(page.text) for page in pages)}
+- Existing new-case checkpoint preserved: 499 / 499
+- Corrected seed calls: 0
+- Previously valid new cases resent: 0
+- Raw prompt/response saved: false
+
+The preflight required longevity evidence to remain exclusively in the
+non-base-wage array. It did not materialize cumulative lanes.
+"""
+    (output / "compensation_extraction_1000_onecase_preflight_report.md").write_text(
+        report, encoding="utf-8"
+    )
+    write_json(
+        output / ".onecase_longevity_preflight_passed.json",
+        {
+            "task_id": TASK_1000_ONECASE_ID,
+            "passed": passed,
+            "case_id": LONGEVITY_ONECASE_ID,
+            "request_count": 1,
+            "schema_valid_count": int(passed),
+            "seed_case_calls": 0,
+            "stored_new_cases_resent": 0,
+            "selection_sha256": FROZEN_1000_SELECTION_SHA256,
+            "checkpoint_sha256": checkpoint_sha_before,
+            "completed_at": now(),
+        },
+    )
+    return 0 if passed else 2
+
+
 def cumulative_row(
     row: dict[str, str], id_field: str, cohort: str, *, seed: bool
 ) -> dict[str, str]:
@@ -1602,8 +1835,15 @@ def materialize_cumulative_1000(
     packet_rows: list[dict[str, str]],
     new_results: dict[str, dict[str, Any]],
     targeted_qa_dir: Path,
+    *,
+    task_id: str = TASK_1000_ID,
 ) -> dict[str, Any]:
     new_selection = [row for row in selection if row["requires_gabriel"] == "yes"]
+    expected_new_ids = {row["extraction_case_id"] for row in new_selection}
+    if len(new_selection) != 500 or set(new_results) != expected_new_ids:
+        raise RuntimeError(
+            "cumulative materialization requires exactly 500 frozen new results"
+        )
     with tempfile.TemporaryDirectory(prefix="compensation_1000_new_") as temp:
         new_lanes = materialize_lanes(Path(temp), new_selection, new_results)["rows"]
 
@@ -1783,6 +2023,38 @@ def materialize_cumulative_1000(
         row["qualitative_observation_count"] = str(len(qual_ids))
         row["active_in_provisional_lane"] = "true" if quant_ids and qual_ids else "false"
 
+    contamination_rows: list[dict[str, str]] = []
+    for row in cumulative["quant"]:
+        if row["active_in_provisional_lane"] != "true":
+            continue
+        family = targeted_nonbase_type(row)
+        if family is None:
+            continue
+        contamination_rows.append(row)
+        row["qa_resolution_classification"] = "insufficient_evidence_needs_review"
+        row["qa_resolution_status"] = "unresolved"
+        row["qa_status"] = "needs_non_base_wage_review"
+        review_rows.append(
+            {
+                "review_type": "possible_non_base_wage_quantitative",
+                "extraction_case_id": row["extraction_case_id"],
+                "page_number": row["page_number"],
+                "lane": "quantitative",
+                "observation_ids": row["quantitative_observation_id"],
+                "observation_count": "1",
+                "qa_reason": f"POSSIBLE_NON_BASE_{family.upper()}",
+                "resolution_classification": "insufficient_evidence_needs_review",
+                "resolution_status": "unresolved",
+                "unresolved_flag": "true",
+                "structured_basis": (
+                    f"Cumulative strict scan detected {family} terminology in "
+                    "an active seed quantitative record."
+                ),
+                "canonical_observation_id": "",
+                "duplicate_observation_ids": "",
+            }
+        )
+
     paths = {
         "quant": output / "lanes/quantitative/quantitative_extraction_ledger.csv",
         "qual": output / "lanes/qualitative/qualitative_mechanism_extraction_ledger.csv",
@@ -1869,7 +2141,7 @@ def materialize_cumulative_1000(
         + [row["non_base_wage_observation_id"] for row in cumulative["nonbase"]]
     )
     duplicate_ids = len(all_ids) - len(set(all_ids))
-    contamination = sum(targeted_nonbase_type(row) is not None for row in active["quant"])
+    contamination = len(contamination_rows)
     conflict_rate = unresolved_groups / max(1, len(active["quant"]))
     packet_compliant = (
         len({row["extraction_case_id"] for row in packet_rows}) == 1000
@@ -1934,14 +2206,19 @@ def materialize_cumulative_1000(
     disposition_counts.update(value["case_disposition"] for value in new_results.values())
 
     metadata_rows = read_csv(output / "compensation_extraction_1000_request_metadata.csv")
-    live_attempts = [row for row in metadata_rows if row["request_phase"] == "live_1000"]
+    live_attempts = [
+        row for row in metadata_rows
+        if row["request_phase"] in {
+            "live_1000", "live_1000_longevity_onecase"
+        }
+    ]
     successful_live_ids = {
         row["extraction_case_id"]
         for row in live_attempts
         if row["schema_valid"] == "true"
     }
     decision = {
-        "task_id": TASK_1000_ID,
+        "task_id": task_id,
         "generated_at": now(),
         "decision": scale,
         "qa_status": "pass" if integrity_pass else "fail",
@@ -1949,11 +2226,30 @@ def materialize_cumulative_1000(
         "integrity_qa_pass": integrity_pass,
         "selection_count": len(selection),
         "corrected_seed_case_count": 500,
+        "new_document_count": 500,
         "new_case_count": len(new_results),
         "case_level_schema_valid_count": 500 + len(new_results),
         "case_level_schema_valid_rate": round((500 + len(new_results)) / 1000, 6),
         "new_case_schema_valid_count": len(successful_live_ids),
         "new_case_schema_valid_rate": round(len(successful_live_ids) / 500, 6),
+        "preflight_case_count": 6,
+        "preflight_schema_valid_count": 6,
+        "preflight_schema_valid_rate": 1.0,
+        "live_extraction_started": True,
+        "live_case_attempt_count": len(live_attempts),
+        "live_schema_valid_case_count": len(successful_live_ids),
+        "live_schema_valid_rate_against_frozen_new_cases": round(
+            len(successful_live_ids) / 500, 6
+        ),
+        "live_unresolved_case_count": 500 - len(successful_live_ids),
+        "cumulative_materialization_completed": True,
+        "selection_manifest_sha256": FROZEN_1000_SELECTION_SHA256,
+        "onecase_longevity_case_id": LONGEVITY_ONECASE_ID,
+        "onecase_preflight_schema_valid": True,
+        "onecase_live_schema_valid": True,
+        "onecase_total_request_count": 2,
+        "stored_new_cases_resent": 0,
+        "live_new_case_attempt_count": len(live_attempts),
         "packet_compliant": packet_compliant,
         "packet_rows": len(packet_rows),
         "invalid_observation_page_count": invalid_pages,
@@ -1965,7 +2261,17 @@ def materialize_cumulative_1000(
         "unresolved_quantitative_conflict_rate": round(conflict_rate, 6),
         "base_non_base_wage_contamination_count": contamination,
         "another_targeted_qa_required": another_targeted_qa,
+        "targeted_qa_required": another_targeted_qa or contamination > 0,
         "scale_beyond_1000_recommendation": scale,
+        "remaining_readable_parse_text_run_allowed": scale
+        == "eligible_for_further_provisional_scale",
+        "next_recommendation": (
+            f"targeted_base_non_base_contamination_qa_for_{contamination}_records"
+            if contamination
+            else "targeted_quantitative_conflict_and_duplicate_qa"
+            if another_targeted_qa
+            else "consider_remaining_readable_parse_text_provisional_scale"
+        ),
         "matched_representation_intact": matching_intact,
         "unit_type_counts": dict(unit_counts),
         "state_count": len({row["state"] for row in selection}),
@@ -2034,6 +2340,58 @@ Repository-wide validation commands are appended after the required test suite.
         validation, encoding="utf-8"
     )
     return {"decision": decision, "summaries": summaries, "rows": cumulative}
+
+
+def live_1000_longevity_onecase(
+    output: Path,
+    selection: list[dict[str, str]],
+    packet_rows: list[dict[str, str]],
+    packet_map: dict[str, list[PagePacket]],
+    targeted_qa_dir: Path,
+    key: str,
+) -> int:
+    marker_path = output / ".onecase_longevity_preflight_passed.json"
+    if not marker_path.is_file():
+        raise RuntimeError("one-case live mode requires one-case preflight marker")
+    marker = read_json(marker_path)
+    if (
+        marker.get("passed") is not True
+        or marker.get("case_id") != LONGEVITY_ONECASE_ID
+        or int(marker.get("schema_valid_count", 0)) != 1
+        or int(marker.get("request_count", 0)) != 1
+        or int(marker.get("seed_case_calls", -1)) != 0
+        or int(marker.get("stored_new_cases_resent", -1)) != 0
+        or marker.get("selection_sha256") != FROZEN_1000_SELECTION_SHA256
+    ):
+        raise RuntimeError("one-case preflight marker is not valid")
+    row, pages, stored = longevity_onecase_context(output, selection, packet_map)
+    if sha_file(
+        output / "compensation_extraction_1000_new_case_results.jsonl"
+    ) != marker.get("checkpoint_sha256"):
+        raise RuntimeError("499-case checkpoint changed after one-case preflight")
+    request_row = dict(row)
+    request_row["_longevity_onecase_contract"] = "yes"
+    request = Request(request_row, pages, "live_1000_longevity_onecase")
+    results = call_gabriel([request], key, parallel=1)
+    if len(results) != 1 or results[0].case_id != LONGEVITY_ONECASE_ID:
+        raise RuntimeError("one-case live transport returned unexpected scope")
+    result = results[0]
+    append_onecase_request_artifacts(output, result, request)
+    if result.status != "success" or result.parsed is None:
+        return 2
+    stored[LONGEVITY_ONECASE_ID] = result.parsed
+    if len(stored) != 500:
+        raise RuntimeError("one-case live result did not complete the frozen cohort")
+    write_new_case_checkpoint(output, stored)
+    materialized = materialize_cumulative_1000(
+        output,
+        selection,
+        packet_rows,
+        stored,
+        targeted_qa_dir,
+        task_id=TASK_1000_ONECASE_ID,
+    )
+    return 0 if materialized["decision"]["qa_pass"] else 2
 
 
 def live_1000(
@@ -2151,6 +2509,8 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
             "freeze_1000_selection",
             "preflight_1000",
             "live_lanes_1000",
+            "preflight_1000_longevity_onecase",
+            "live_1000_longevity_onecase",
         ),
         required=True,
     )
@@ -2175,6 +2535,8 @@ def main(argv: list[str] | None = None) -> int:
         "freeze_1000_selection",
         "preflight_1000",
         "live_lanes_1000",
+        "preflight_1000_longevity_onecase",
+        "live_1000_longevity_onecase",
     }
     expected_limit = 1000 if is_1000 else 500
     if args.case_limit != expected_limit:
@@ -2233,7 +2595,24 @@ def main(argv: list[str] | None = None) -> int:
         if not args.preflight_representative_cases:
             raise ValueError("representative 1,000-document preflight flag required")
         return preflight_1000(output, selection, packet_map, key)
+    if args.mode == "preflight_1000_longevity_onecase":
+        return preflight_1000_longevity_onecase(
+            output, selection, packet_map, key
+        )
     if not args.resume: raise ValueError("live lanes require --resume")
+    if args.mode == "live_1000_longevity_onecase":
+        if args.only_requires_gabriel != "yes":
+            raise ValueError(
+                "one-case live mode requires --only-requires-gabriel yes"
+            )
+        return live_1000_longevity_onecase(
+            output,
+            selection,
+            packet_rows,
+            packet_map,
+            targeted_qa_dir,
+            key,
+        )
     if args.mode == "live_lanes_1000":
         if args.only_requires_gabriel != "yes":
             raise ValueError(

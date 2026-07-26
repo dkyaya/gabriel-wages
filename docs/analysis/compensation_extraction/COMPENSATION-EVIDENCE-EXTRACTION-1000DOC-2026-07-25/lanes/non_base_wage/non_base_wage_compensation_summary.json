@@ -1,0 +1,22 @@
+{
+  "case_count": 770,
+  "cohort_counts": {
+    "corrected_500_seed": 1469,
+    "new_500_scale": 1289
+  },
+  "observation_count": 2758,
+  "source_row_count": 2766,
+  "type_counts": {
+    "benefits": 103,
+    "education_or_certification": 92,
+    "healthcare_contributions": 128,
+    "leave": 772,
+    "longevity": 116,
+    "other": 577,
+    "overtime": 642,
+    "pension": 105,
+    "reimbursements": 60,
+    "stipend": 85,
+    "uniform_or_equipment": 78
+  }
+}

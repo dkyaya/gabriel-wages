@@ -1,0 +1,13 @@
+{
+  "case_count": 173,
+  "cohort_counts": {
+    "corrected_500_seed": 90,
+    "new_500_scale": 83
+  },
+  "disposition_counts": {
+    "exclude": 114,
+    "reference_only": 53,
+    "second_review": 6
+  },
+  "source_row_count": 173
+}

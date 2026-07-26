@@ -192,20 +192,19 @@ The dashboard builder writes:
 - `reports_index.json`
 
 The text/table calibration layer currently reports
-`compensation_extraction_1000_live_incomplete_499_of_500`. The cumulative
-selection remains frozen at exactly 1,000 retained identities—500 corrected
-seed documents reused without new model calls plus 500 new documents—and
-5,767 bounded packet rows. The mixed-disposition repair passed the unchanged
-six-case GABRIEL preflight 6/6. Live extraction then stored 499 strict-valid
-new-case results after 551 bounded attempts. One case remains invalid because
-longevity evidence was repeatedly placed in the base quantitative array. The
-fail-closed rule prevented cumulative lane materialization, so no 1,000-case
-observation or QA counts are shown. The corrected 500-document targeted-QA
-shadow ledgers remain the latest complete valid provisional extraction layer.
-Analysis readiness is false, and scaling beyond 1,000 is blocked pending
-strict resolution of the one remaining case and cumulative QA. No URL access,
-download, OCR, ingestion, codification, wage-gap calculation, or regression
-occurred.
+`compensation_extraction_1000_materialized_qa_blocked`. A one-case longevity
+contract passed preflight and live validation, completed the frozen new cohort
+at 500/500, and left corrected-seed model calls at zero. The cumulative
+provisional layer now covers 1,000 identities and contains 1,347 active
+quantitative observations, 1,464 qualitative-mechanism observations, 272 mixed
+cases, 2,758 non-base-wage observations, and 173 reference/exclusion cases.
+Packet, page-pointer, identity, and matching checks pass; duplicate observation
+IDs are zero. The unresolved conflict rate is 1.8560%, below 2%, but integrity
+QA fails because a stricter cumulative scan identified 126 active seed
+quantitative records with possible non-base-wage signals. Those records require
+targeted routing QA before further scale. Analysis readiness remains false.
+No URL access, download, OCR, ingestion, codification, wage-gap calculation, or
+regression occurred.
 
 Review the printed totals and diffs before committing. In particular, candidate-positive plus parseable-empty municipalities must equal scout-covered municipalities, and transport/failure-only results must remain outside successful coverage.
 
