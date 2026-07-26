@@ -70,6 +70,10 @@ ingestion, codification, or wage-gap analysis occurred.
 
 The dashboard now reports the rollback-safe schema-repair layer as `compensation_extraction_final_provisional_schema_repair_partial_followup_required`. The five immutable package ledgers remain unchanged. The repair supplies 1,826 one-to-one retained-hash bridges, lossless unique non-base lineage columns, deterministic current-active/QA semantics, strict quantitative parsing with 387 candidates and 1,520 active exceptions, explicit historical mixed-membership statuses, a non-base companion view, and a reference/control view. Qualitative evidence remains navigation-only because literal evidence spans are absent; cycle/matched-set and controlled non-safety occupation metadata also remain incomplete. Analysis readiness and promotion remain false pending a separately authorized bounded follow-up.
 
+## Bounded schema-repair follow-up — 2026-07-26
+
+The bounded follow-up phase is `compensation_extraction_bounded_schema_followup_partial_additional_repair_required`. It establishes 1,255 exact full-date cycle bridges, 188 documents in 84 exact-period matched groups, 72 controlled non-safety subclasses, and retrieval provenance for all 1,826 identities. Exact-token parsing raises mechanically safe quantitative candidates to 862 while leaving 1,045 explicit exceptions. The immutable package and prior shadows remain unchanged. Qualitative evidence is still navigation-only because no dedicated literal spans exist, so analysis readiness and promotion remain false pending separately authorized bounded span/residual-metadata repair.
+
 ## Final provisional schema readiness — 2026-07-26
 
 The immutable five-ledger provisional package remains integrity-valid, but a

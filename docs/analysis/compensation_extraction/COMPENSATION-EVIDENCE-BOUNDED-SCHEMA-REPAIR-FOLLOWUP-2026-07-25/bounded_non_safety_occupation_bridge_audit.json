@@ -1,0 +1,34 @@
+{
+  "bridge_status_counts": {
+    "established_single_explicit_structured_label_rule": 72,
+    "exact_public_safety_unit_type": 1219,
+    "quarantined_multiple_controlled_label_rules": 7,
+    "quarantined_no_controlled_explicit_label": 528
+  },
+  "controlled_occupation_class_count": 1291,
+  "controlled_vocabulary": [
+    "clerical_admin",
+    "library",
+    "nurse_health",
+    "parks_rec",
+    "public_works",
+    "sanitation",
+    "teacher",
+    "transit"
+  ],
+  "document_identity_count": 1826,
+  "government_name_inference_used": false,
+  "non_safety_quarantined_count": 535,
+  "non_safety_subclass_established_count": 72,
+  "occupation_class_counts": {
+    "clerical_admin": 34,
+    "fire": 439,
+    "library": 3,
+    "parks_rec": 1,
+    "police": 780,
+    "public_works": 32,
+    "quarantined_unclassified": 535,
+    "transit": 2
+  },
+  "public_safety_exact_count": 1219
+}

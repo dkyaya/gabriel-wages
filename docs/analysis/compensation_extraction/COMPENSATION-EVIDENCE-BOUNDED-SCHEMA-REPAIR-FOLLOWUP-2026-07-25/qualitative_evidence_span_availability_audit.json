@@ -1,0 +1,14 @@
+{
+  "active_qualitative_navigation_rows": 1954,
+  "bounded_pointer_count": 1954,
+  "coded_analysis_candidate_created": false,
+  "dedicated_literal_verbatim_span_count": 0,
+  "fields_inspected": {
+    "prior_repaired_qualitative.bounded_evidence_pointer": 1954,
+    "prior_repaired_qualitative.literal_verbatim_evidence_span": 0
+  },
+  "model_calls": 0,
+  "navigation_view_created": true,
+  "pdfs_opened": 0,
+  "result": "literal_verbatim_spans_unavailable_in_existing_bounded_structured_artifacts"
+}

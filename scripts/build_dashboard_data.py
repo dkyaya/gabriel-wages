@@ -607,6 +607,27 @@ COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_SCHEMA_REPAIR_FOLLOWUP_PATH = (
     COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_SCHEMA_REPAIR_DIR
     / "next_bounded_schema_repair_followup_prompt.md"
 )
+COMPENSATION_EXTRACTION_BOUNDED_SCHEMA_FOLLOWUP_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "COMPENSATION-EVIDENCE-BOUNDED-SCHEMA-REPAIR-FOLLOWUP-2026-07-25"
+)
+COMPENSATION_EXTRACTION_BOUNDED_SCHEMA_FOLLOWUP_DECISION_PATH = (
+    COMPENSATION_EXTRACTION_BOUNDED_SCHEMA_FOLLOWUP_DIR
+    / "bounded_schema_repair_followup_decision.json"
+)
+COMPENSATION_EXTRACTION_BOUNDED_SCHEMA_FOLLOWUP_CYCLE_AUDIT_PATH = (
+    COMPENSATION_EXTRACTION_BOUNDED_SCHEMA_FOLLOWUP_DIR
+    / "bounded_cycle_matching_bridge_audit.json"
+)
+COMPENSATION_EXTRACTION_BOUNDED_SCHEMA_FOLLOWUP_OCCUPATION_AUDIT_PATH = (
+    COMPENSATION_EXTRACTION_BOUNDED_SCHEMA_FOLLOWUP_DIR
+    / "bounded_non_safety_occupation_bridge_audit.json"
+)
+COMPENSATION_EXTRACTION_BOUNDED_SCHEMA_FOLLOWUP_RETRIEVAL_AUDIT_PATH = (
+    COMPENSATION_EXTRACTION_BOUNDED_SCHEMA_FOLLOWUP_DIR
+    / "bounded_retrieval_provenance_bridge_audit.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -984,6 +1005,57 @@ def final_provisional_schema_repair_status() -> tuple[bool, dict[str, Any]]:
         and decision.get("ocr_later_documents_included") is False
     ):
         raise ValueError("final provisional schema repair fails dashboard gates")
+    return True, decision
+
+
+def bounded_schema_repair_followup_status() -> tuple[bool, dict[str, Any]]:
+    required = (
+        COMPENSATION_EXTRACTION_BOUNDED_SCHEMA_FOLLOWUP_DECISION_PATH,
+        COMPENSATION_EXTRACTION_BOUNDED_SCHEMA_FOLLOWUP_CYCLE_AUDIT_PATH,
+        COMPENSATION_EXTRACTION_BOUNDED_SCHEMA_FOLLOWUP_OCCUPATION_AUDIT_PATH,
+        COMPENSATION_EXTRACTION_BOUNDED_SCHEMA_FOLLOWUP_RETRIEVAL_AUDIT_PATH,
+        COMPENSATION_EXTRACTION_BOUNDED_SCHEMA_FOLLOWUP_DIR
+        / "qualitative_evidence_span_availability_audit.json",
+        COMPENSATION_EXTRACTION_BOUNDED_SCHEMA_FOLLOWUP_DIR
+        / "bounded_schema_repair_followup_validation_2026-07-25.md",
+        COMPENSATION_EXTRACTION_BOUNDED_SCHEMA_FOLLOWUP_DIR
+        / "next_bounded_schema_repair_followup_prompt.md",
+    )
+    completed = all(path.exists() for path in required)
+    if not completed:
+        return False, {}
+    decision = read_json(COMPENSATION_EXTRACTION_BOUNDED_SCHEMA_FOLLOWUP_DECISION_PATH)
+    cycle = decision.get("cycle_matching", {})
+    occupation = decision.get("occupation", {})
+    retrieval = decision.get("retrieval_provenance", {})
+    quantitative = decision.get("quantitative", {})
+    qualitative = decision.get("qualitative", {})
+    quarantine = decision.get("quarantine", {})
+    if not (
+        decision.get("task_id")
+        == "COMPENSATION-EVIDENCE-BOUNDED-SCHEMA-REPAIR-FOLLOWUP-2026-07-25"
+        and decision.get("decision")
+        == "bounded_schema_followup_partial_additional_bounded_repair_needed"
+        and decision.get("analysis_readiness") is False
+        and decision.get("analysis_facing_promotion_allowed") is False
+        and decision.get("repeat_analysis_readiness_review_allowed") is False
+        and decision.get("package_ledgers_mutated") is False
+        and decision.get("prior_repair_shadows_mutated") is False
+        and decision.get("durable_ledgers_mutated") is False
+        and int(decision.get("package_sha256_checks_passed", 0)) == 5
+        and int(cycle.get("document_identity_count", 0)) == 1826
+        and int(cycle.get("exact_cycle_established_count", 0)) > 0
+        and int(occupation.get("document_identity_count", 0)) == 1826
+        and int(retrieval.get("retrieval_date_count", 0)) == 1826
+        and int(retrieval.get("retrieval_method_count", 0)) == 1826
+        and int(quantitative.get("followup_candidate_count", 0)) > 0
+        and qualitative.get("coded_analysis_candidate_created") is False
+        and int(qualitative.get("dedicated_literal_verbatim_span_count", -1)) == 0
+        and int(quarantine.get("unresolved_conflict_group_count", 0)) == 2
+        and int(quarantine.get("unresolved_conflict_member_observation_count", 0)) == 5
+        and decision.get("ocr_later_documents_included") is False
+    ):
+        raise ValueError("bounded compensation schema-repair follow-up fails dashboard gates")
     return True, decision
 
 
@@ -1637,6 +1709,10 @@ def build_analysis_readiness(
         final_schema_repair_completed,
         final_schema_repair_decision,
     ) = final_provisional_schema_repair_status()
+    (
+        bounded_schema_followup_completed,
+        bounded_schema_followup_decision,
+    ) = bounded_schema_repair_followup_status()
     if scale_1000_targeted_qa_completed and (
         scale_1000_targeted_qa_decision.get("qa_pass") is not True
         or scale_1000_targeted_qa_decision.get(
@@ -1683,7 +1759,9 @@ def build_analysis_readiness(
     return {
         "metadata": metadata,
         "overall_status": (
-            "final_provisional_schema_repairs_partial_bounded_followup_required_analysis_closed"
+            "bounded_schema_followup_partial_additional_repair_required_analysis_closed"
+            if bounded_schema_followup_completed
+            else "final_provisional_schema_repairs_partial_bounded_followup_required_analysis_closed"
             if final_schema_repair_completed
             else "final_provisional_schema_readiness_hold_repairs_required_analysis_closed"
             if final_schema_review_completed
@@ -1864,7 +1942,9 @@ def build_analysis_readiness(
                 ),
                 "scale_beyond_1000_recommendation": scale_1000_decision.get(
                     "scale_beyond_1000_recommendation"
-                ) if not scale_1000_targeted_qa_completed else final_schema_repair_decision.get(
+                ) if not scale_1000_targeted_qa_completed else bounded_schema_followup_decision.get(
+                    "next_recommendation"
+                ) if bounded_schema_followup_completed else final_schema_repair_decision.get(
                     "next_recommendation"
                 ) if final_schema_repair_completed else final_schema_review_decision.get(
                     "next_recommendation"
@@ -1933,6 +2013,11 @@ def build_analysis_readiness(
                 "final_provisional_schema_repair_decision": (
                     final_schema_repair_decision.get("decision")
                     if final_schema_repair_completed else None
+                ),
+                "bounded_schema_repair_followup_completed": bounded_schema_followup_completed,
+                "bounded_schema_repair_followup_decision": (
+                    bounded_schema_followup_decision.get("decision")
+                    if bounded_schema_followup_completed else None
                 ),
                 "analysis_facing_promotion_allowed": False,
             },
@@ -5755,10 +5840,16 @@ def build_text_table_calibration_status_summary(
             final_schema_repair_completed,
             final_schema_repair_decision,
         ) = final_provisional_schema_repair_status()
+        (
+            bounded_schema_followup_completed,
+            bounded_schema_followup_decision,
+        ) = bounded_schema_repair_followup_status()
         return {
             **metadata,
             "calibration_phase": (
-                "compensation_extraction_final_provisional_schema_repair_partial_followup_required"
+                "compensation_extraction_bounded_schema_followup_partial_additional_repair_required"
+                if bounded_schema_followup_completed
+                else "compensation_extraction_final_provisional_schema_repair_partial_followup_required"
                 if final_schema_repair_completed
                 else "compensation_extraction_final_provisional_schema_readiness_review_completed_hold"
                 if final_schema_review_completed
@@ -6304,6 +6395,39 @@ def build_text_table_calibration_status_summary(
                 int(final_schema_repair_decision.get("quantitative", {}).get("quantitative_normalization_exception_count", 0))
                 if final_schema_repair_completed else None
             ),
+            "bounded_schema_followup_completed": bounded_schema_followup_completed,
+            "bounded_schema_followup_decision": (
+                bounded_schema_followup_decision.get("decision")
+                if bounded_schema_followup_completed else None
+            ),
+            "bounded_schema_followup_path": (
+                relative(COMPENSATION_EXTRACTION_BOUNDED_SCHEMA_FOLLOWUP_DIR)
+                if bounded_schema_followup_completed else None
+            ),
+            "bounded_schema_followup_cycle_count": (
+                int(bounded_schema_followup_decision.get("cycle_matching", {}).get("exact_cycle_established_count", 0))
+                if bounded_schema_followup_completed else None
+            ),
+            "bounded_schema_followup_matched_document_count": (
+                int(bounded_schema_followup_decision.get("cycle_matching", {}).get("matched_set_id_document_count", 0))
+                if bounded_schema_followup_completed else None
+            ),
+            "bounded_schema_followup_non_safety_subclass_count": (
+                int(bounded_schema_followup_decision.get("occupation", {}).get("non_safety_subclass_established_count", 0))
+                if bounded_schema_followup_completed else None
+            ),
+            "bounded_schema_followup_retrieval_count": (
+                int(bounded_schema_followup_decision.get("retrieval_provenance", {}).get("retrieval_date_count", 0))
+                if bounded_schema_followup_completed else None
+            ),
+            "bounded_schema_followup_quantitative_candidate_count": (
+                int(bounded_schema_followup_decision.get("quantitative", {}).get("followup_candidate_count", 0))
+                if bounded_schema_followup_completed else None
+            ),
+            "bounded_schema_followup_quantitative_exception_count": (
+                int(bounded_schema_followup_decision.get("quantitative", {}).get("followup_exception_count", 0))
+                if bounded_schema_followup_completed else None
+            ),
             "analysis_facing_promotion_allowed": False,
             "prior_auto_adjudication_gate_id": (
                 "TEXT-TABLE-AUTO-GABRIEL-GATE2-REFINEMENT-2026-07-25"
@@ -6456,7 +6580,9 @@ def build_text_table_calibration_status_summary(
                 else float(decision["wrong_page_rate"])
             ),
             "extraction_decision": (
-                final_schema_repair_decision.get("decision")
+                bounded_schema_followup_decision.get("decision")
+                if bounded_schema_followup_completed
+                else final_schema_repair_decision.get("decision")
                 if final_schema_repair_completed
                 else final_schema_review_decision.get("schema_readiness_decision")
                 if final_schema_review_completed
@@ -6504,7 +6630,12 @@ def build_text_table_calibration_status_summary(
                 else False
             ),
             "next_recommendation": (
-                final_schema_repair_decision.get(
+                bounded_schema_followup_decision.get(
+                    "next_recommendation",
+                    "run_separately_authorized_bounded_qualitative_span_and_residual_metadata_repair",
+                )
+                if bounded_schema_followup_completed
+                else final_schema_repair_decision.get(
                     "next_recommendation",
                     "run_separately_authorized_bounded_schema_repair_followup",
                 )
@@ -6542,7 +6673,9 @@ def build_text_table_calibration_status_summary(
                 )
             ),
             "wage_extraction_status": (
-                "final_provisional_schema_repairs_partial_bounded_followup_required"
+                "bounded_schema_followup_partial_quantitative_candidates_provisional_analysis_closed"
+                if bounded_schema_followup_completed
+                else "final_provisional_schema_repairs_partial_bounded_followup_required"
                 if final_schema_repair_completed
                 else "final_provisional_schema_readiness_hold_repairs_required"
                 if final_schema_review_completed
@@ -6568,7 +6701,9 @@ def build_text_table_calibration_status_summary(
                 if extraction_completed else "not_started"
             ),
             "qualitative_extraction_status": (
-                "final_provisional_schema_repairs_partial_navigation_only_bounded_followup_required"
+                "bounded_schema_followup_navigation_only_literal_span_capture_required"
+                if bounded_schema_followup_completed
+                else "final_provisional_schema_repairs_partial_navigation_only_bounded_followup_required"
                 if final_schema_repair_completed
                 else "final_provisional_schema_readiness_hold_repairs_required"
                 if final_schema_review_completed
@@ -6657,6 +6792,15 @@ def build_text_table_calibration_status_summary(
                 else 0
             ),
             "caveats": (
+                [
+                    "The bounded follow-up improves provisional schema bridges but does not make the package analysis-ready.",
+                    "Exact full-date cycles are supported for 1,255 identities and 188 documents in 84 exact-period matched groups; 571 cycle identities remain missing or ambiguous.",
+                    "Seventy-two non-safety subclasses were assigned by a single explicit controlled label rule; 535 remain quarantined. Retrieval date, method, source corpus, cite, and artifact provenance are supported for all 1,826 identities.",
+                    "Exact-token parsing increases mechanically safe quantitative candidates to 862 while preserving raw and prior normalized fields; 1,045 active exceptions and both unresolved groups/five members remain quarantined.",
+                    "Qualitative evidence remains a 1,954-row navigation view because dedicated literal spans are absent; non-base remains companion-only, reference/exclusion remains control-only, and analysis readiness remains false.",
+                ]
+                if bounded_schema_followup_completed
+                else
                 [
                     "Rollback-safe schema-repair shadows were created without modifying the immutable package or durable bridge ledgers; analysis readiness remains false.",
                     "All 1,826 document identities now have one-to-one raw retained-hash and local artifact bridges, and duplicate non-base lineage columns were repaired losslessly with zero disagreements.",

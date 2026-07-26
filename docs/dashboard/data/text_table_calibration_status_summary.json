@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-26T04:54:24Z",
+  "generated_at": "2026-07-26T05:22:10Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -80,7 +80,7 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "calibration_phase": "compensation_extraction_final_provisional_schema_repair_partial_followup_required",
+  "calibration_phase": "compensation_extraction_bounded_schema_followup_partial_additional_repair_required",
   "latest_calibration_id": "TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24",
   "latest_calibration_review_id": "TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24",
   "latest_adjudication_prep_id": "TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24",
@@ -196,6 +196,15 @@
   "schema_repair_identity_bridge_count": 1826,
   "schema_repair_quantitative_candidate_count": 387,
   "schema_repair_quantitative_exception_count": 1520,
+  "bounded_schema_followup_completed": true,
+  "bounded_schema_followup_decision": "bounded_schema_followup_partial_additional_bounded_repair_needed",
+  "bounded_schema_followup_path": "docs/analysis/compensation_extraction/COMPENSATION-EVIDENCE-BOUNDED-SCHEMA-REPAIR-FOLLOWUP-2026-07-25",
+  "bounded_schema_followup_cycle_count": 1255,
+  "bounded_schema_followup_matched_document_count": 188,
+  "bounded_schema_followup_non_safety_subclass_count": 72,
+  "bounded_schema_followup_retrieval_count": 1826,
+  "bounded_schema_followup_quantitative_candidate_count": 862,
+  "bounded_schema_followup_quantitative_exception_count": 1045,
   "analysis_facing_promotion_allowed": false,
   "prior_auto_adjudication_gate_id": "TEXT-TABLE-AUTO-GABRIEL-GATE2-REFINEMENT-2026-07-25",
   "auto_adjudication_method": "automated_bounded_rendered_image_plus_text_layout_gabriel_compensation_evidence_adjudication",
@@ -319,15 +328,15 @@
   "visual_qa_exact_gate_agreement_rate": 0.444444,
   "likely_signal_visual_confirmation_rate": 0.7625,
   "wrong_page_rate": 0.0,
-  "extraction_decision": "schema_repairs_partial_additional_bounded_evidence_needed",
+  "extraction_decision": "bounded_schema_followup_partial_additional_bounded_repair_needed",
   "five_hundred_doc_extraction_allowed": false,
   "smaller_extraction_pilot_allowed": false,
   "five_hundred_doc_compensation_extraction_allowed": true,
   "smaller_compensation_extraction_pilot_allowed": false,
-  "next_recommendation": "run_separately_authorized_bounded_schema_repair_followup",
+  "next_recommendation": "run_separately_authorized_bounded_qualitative_span_and_residual_metadata_repair",
   "manual_review_status": "packet_prepared_not_reviewed",
-  "wage_extraction_status": "final_provisional_schema_repairs_partial_bounded_followup_required",
-  "qualitative_extraction_status": "final_provisional_schema_repairs_partial_navigation_only_bounded_followup_required",
+  "wage_extraction_status": "bounded_schema_followup_partial_quantitative_candidates_provisional_analysis_closed",
+  "qualitative_extraction_status": "bounded_schema_followup_navigation_only_literal_span_capture_required",
   "ingestion_status": "not_started",
   "codify_status": "not_started",
   "wage_gap_analysis_status": "not_started",
@@ -344,10 +353,10 @@
   "adjudication_rendered_page_count": 785,
   "adjudication_rendered_bytes": 106889932,
   "caveats": [
-    "Rollback-safe schema-repair shadows were created without modifying the immutable package or durable bridge ledgers; analysis readiness remains false.",
-    "All 1,826 document identities now have one-to-one raw retained-hash and local artifact bridges, and duplicate non-base lineage columns were repaired losslessly with zero disagreements.",
-    "Cycle dates, negotiation-cycle IDs, matched-set IDs, retrieval date/method, and controlled non-safety occupation subclasses remain unavailable without inference.",
-    "Only 387 quantitative rows meet the strict mechanical parse contract; 1,520 active rows remain explicit normalization exceptions, including both unresolved groups and all five member observations.",
-    "Qualitative evidence remains a 1,954-row navigation view because the package lacks dedicated literal evidence spans; non-base remains companion-only and reference/exclusion remains control-only."
+    "The bounded follow-up improves provisional schema bridges but does not make the package analysis-ready.",
+    "Exact full-date cycles are supported for 1,255 identities and 188 documents in 84 exact-period matched groups; 571 cycle identities remain missing or ambiguous.",
+    "Seventy-two non-safety subclasses were assigned by a single explicit controlled label rule; 535 remain quarantined. Retrieval date, method, source corpus, cite, and artifact provenance are supported for all 1,826 identities.",
+    "Exact-token parsing increases mechanically safe quantitative candidates to 862 while preserving raw and prior normalized fields; 1,045 active exceptions and both unresolved groups/five members remain quarantined.",
+    "Qualitative evidence remains a 1,954-row navigation view because dedicated literal spans are absent; non-base remains companion-only, reference/exclusion remains control-only, and analysis readiness remains false."
   ]
 }

@@ -6,6 +6,31 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-26 (Bounded schema-repair follow-up partial; literal spans still required)
+
+**Did**
+- Started from clean tracked `b6407970bbb69f11af4e8fa3b6692ae323890a8a`; left the known untracked rendered-pages directory and root `package-lock.json` untouched.
+- Added a deterministic offline follow-up runner and nine focused tests. A zero-write preflight revalidated all five immutable package hashes and every prior/durable input hash before materializing a new rollback-safe layer.
+- Established 1,255 exact full-date cycle bridges, 188 documents in 84 exact-period matched groups, 72 controlled non-safety subclasses, and complete durable retrieval provenance for all 1,826 identities.
+- Preserved every raw and prior normalized quantitative field while parsing only exact anchored effective-date tokens. Mechanical candidates rose from 387 to 862; active exceptions fell from 1,520 to 1,045.
+- Preserved 1,954 qualitative navigation rows, 4,733 non-base companion rows, 345 reference/control rows, and both unresolved groups/five member observations. No coded qualitative view was created because dedicated literal spans remain unavailable.
+
+**Decisions**
+- Decision is `bounded_schema_followup_partial_additional_bounded_repair_needed`. Analysis readiness, promotion, and repeat readiness review remain false.
+- Missing/ambiguous cycles, uncertain non-safety subclasses, ambiguous quantitative tokens, and absent qualitative spans remain explicit quarantines. No title/filename/date/value guess was accepted.
+- The next task is separately authorized bounded literal-span and residual-metadata repair, not promotion or analysis.
+
+**Surprises/breakage**
+- Durable verification and saved-artifact fields support retrieval date/method for all 1,826 identities.
+- Existing bounded period fields contain enough exact full-date pairs for 1,255 identities, but 35 identities contain conflicting/multiple pairs and 536 contain none.
+- Existing structured qualitative rows have complete bounded pointers but zero dedicated literal spans.
+
+**Corpus snapshot**
+- `contracts=64`, `discourse=0`, `coverage=64`, `cities=19`; 28 healthy matched pairs (10 exact-cycle, 18 overlap-cycle), two exploratory adjacent matches, and six unmatched safety units.
+
+**Next steps**
+- Follow `next_task.md` only after separate authorization. Keep the immutable package and every prior shadow/durable ledger read-only; capture exact qualitative spans only within existing bounded parse-text artifacts and retain all residual quarantines unless explicit structured support resolves them.
+
 ## 2026-07-26 (Final provisional schema repair partial; bounded follow-up required)
 
 **Did**

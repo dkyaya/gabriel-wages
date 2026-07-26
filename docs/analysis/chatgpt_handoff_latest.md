@@ -6,6 +6,29 @@ Last updated: `2026-07-26`
 
 ---
 
+## 2026-07-26 — Bounded schema-repair follow-up completed partially
+
+### Current State
+
+- **Authority/start:** work began at clean tracked `b6407970bbb69f11af4e8fa3b6692ae323890a8a`. The immutable package, prior repair shadows, and durable ledgers stayed read-only.
+- **Decision:** [the follow-up decision](compensation_extraction/COMPENSATION-EVIDENCE-BOUNDED-SCHEMA-REPAIR-FOLLOWUP-2026-07-25/bounded_schema_repair_followup_decision.json) is `bounded_schema_followup_partial_additional_bounded_repair_needed`. Analysis readiness, promotion, and repeat readiness review remain false.
+- **Cycle/matching:** 1,255 identities have one unambiguous exact full-date pair; 35 conflicting/multiple and 536 absent pairs remain quarantined. Exact-period matching identifies 188 documents in 84 groups with both safety and non-safety units.
+- **Occupation:** all 1,219 police/fire identities remain exact. Seventy-two non-safety identities receive one controlled subclass from explicit structured title/unit labels; 535 remain quarantined, including seven multi-rule cases.
+- **Retrieval/provenance:** all 1,826 identities have retrieval date, `public_download` method, causal source corpus/type, cite, and artifact pointer supported by agreeing durable successful-verification and saved-artifact fields.
+- **Quantitative:** raw and prior normalized columns are unchanged. Exact anchored effective-date parsing raises mechanical candidates from 387 to 862 and reduces active exceptions from 1,520 to 1,045. Both unresolved groups/five members stay quarantined.
+- **Qualitative:** 1,954 navigation rows and bounded pointers remain; zero dedicated literal spans exist, so no coded analysis view was created.
+- **Non-base/reference:** 4,733 active non-base rows remain companion-only; the 904 original `other` dispositions are unchanged. All 345 reference/exclusion rows remain control-only.
+- **Dashboard:** phase is `compensation_extraction_bounded_schema_followup_partial_additional_repair_required`; analysis readiness remains false.
+- **Boundary:** no URL/search, download, PDF opening, OCR, GABRIEL/API, extraction, selection, scout, source review, verification run, ingestion, codification, wage-gap work, regression, causal analysis, fetch, pull, or remote inspection occurred.
+
+### Interpretation
+
+The local structured metadata supports meaningful deterministic improvements, but it does not close the analysis contract. In particular, qualitative mechanism rows still lack literal evidence spans, and substantial cycle, non-safety subclass, and quantitative normalization gaps remain explicit.
+
+### Next Move
+
+Follow [next_task.md](../../next_task.md) only after separate authorization. The prepared task is bounded literal-span and residual-metadata repair, not analysis promotion. Preserve all hashes, raw values, historical statuses, duplicate/canonical links, mixed membership, lane separation, and both residual conflicts.
+
 ## 2026-07-26 — Final provisional schema repair completed partially
 
 ### Current State

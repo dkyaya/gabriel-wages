@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "compensation_extraction_bounded_schema_followup_partial_additional_repair_required"
+              ? "Bounded schema follow-up improved coverage; literal-span and residual repair still required"
+              : textTableCalibrationStatus.calibration_phase ===
             "compensation_extraction_final_provisional_schema_repair_partial_followup_required"
               ? "Schema mechanics repaired; bounded metadata and evidence follow-up still required"
               : textTableCalibrationStatus.calibration_phase ===
@@ -825,6 +828,17 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "compensation_extraction_bounded_schema_followup_partial_additional_repair_required" ? (
+            <>
+              The bounded follow-up establishes exact cycles for 1,255 identities, 188 documents
+              in 84 exact-period matched groups, 72 controlled non-safety subclasses, and durable
+              retrieval provenance for all 1,826 identities. Exact-token parsing raises mechanical
+              quantitative candidates to 862 while 1,045 rows remain explicit exceptions.
+              Qualitative evidence remains navigation-only because dedicated literal spans are
+              absent; both residual conflict groups remain quarantined. Analysis readiness,
+              promotion, ingestion, codification, wage-gap work, and regression remain closed.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "compensation_extraction_final_provisional_schema_repair_partial_followup_required" ? (
             <>
               A rollback-safe repair layer now supplies one-to-one retained-hash bridges for all

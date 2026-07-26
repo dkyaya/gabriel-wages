@@ -1,0 +1,7 @@
+blocker_id,area,status,affected_count,resolution_or_boundary
+F01,cycle_and_matching,partial,571,Exact full-date pairs only; missing or conflicting pairs remain quarantined.
+F02,non_safety_occupation,partial,535,Only one unambiguous explicit controlled label rule is accepted.
+F03,retrieval_provenance,resolved,0,Derived only from agreeing durable successful-verification and saved-artifact fields.
+F04,qualitative_literal_spans,blocked_missing_bounded_span,1954,Navigation only; future separately authorized bounded literal-span capture required.
+F05,quantitative_normalization,partial,1045,Raw values preserved; only exact anchored effective-date tokens received follow-up parses.
+F06,residual_conflicts,quarantined,5,Two groups/five observations remain explicitly excluded from candidates.

@@ -1,0 +1,14 @@
+{
+  "artifact_pointer_count": 1826,
+  "document_identity_count": 1826,
+  "retrieval_date_count": 1826,
+  "retrieval_method_count": 1826,
+  "retrieval_method_rule": "public_download only when explicit durable successful verification, byte, URL-access, saved-artifact, and downloaded-document fields all agree",
+  "retrieval_status_counts": {
+    "established_from_explicit_successful_verification_and_saved_artifact_fields": 1826
+  },
+  "source_cite_count": 1826,
+  "source_corpus_count": 1826,
+  "source_type_count": 1826,
+  "urls_opened_by_followup": 0
+}
