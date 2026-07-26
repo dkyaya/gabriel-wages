@@ -859,6 +859,35 @@ COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_LAYER_ACCEPTANCE_INVARIANTS_PA
     COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_LAYER_ACCEPTANCE_DIR
     / "limited_qualitative_usage_layer_acceptance_invariant_checks.json"
 )
+COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REGISTRY_REVIEW_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "COMPENSATION-EVIDENCE-LIMITED-QUALITATIVE-USAGE-REGISTRY-REVIEW-2026-07-25"
+)
+COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REGISTRY_REVIEW_DECISION_PATH = (
+    COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REGISTRY_REVIEW_DIR
+    / "limited_qualitative_usage_registry_review_decision.json"
+)
+COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REGISTRY_REVIEW_HASH_AUDIT_PATH = (
+    COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REGISTRY_REVIEW_DIR
+    / "limited_qualitative_usage_registry_hash_audit.json"
+)
+COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REGISTRY_REVIEW_SCOPE_AUDIT_PATH = (
+    COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REGISTRY_REVIEW_DIR
+    / "limited_qualitative_usage_registry_scope_audit.json"
+)
+COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REGISTRY_REVIEW_DASHBOARD_AUDIT_PATH = (
+    COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REGISTRY_REVIEW_DIR
+    / "limited_qualitative_usage_registry_dashboard_audit.json"
+)
+COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REGISTRY_REVIEW_FORBIDDEN_AUDIT_PATH = (
+    COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REGISTRY_REVIEW_DIR
+    / "limited_qualitative_usage_registry_forbidden_action_audit.json"
+)
+COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REGISTRY_REVIEW_INVARIANTS_PATH = (
+    COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REGISTRY_REVIEW_DIR
+    / "limited_qualitative_usage_registry_review_invariant_checks.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -2076,6 +2105,82 @@ def limited_qualitative_usage_layer_acceptance_status() -> tuple[bool, dict[str,
     return True, decision
 
 
+def limited_qualitative_usage_registry_review_status() -> tuple[bool, dict[str, Any]]:
+    """Fail closed unless the accepted registry passed its metadata-only review."""
+    required = (
+        COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REGISTRY_REVIEW_DECISION_PATH,
+        COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REGISTRY_REVIEW_HASH_AUDIT_PATH,
+        COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REGISTRY_REVIEW_SCOPE_AUDIT_PATH,
+        COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REGISTRY_REVIEW_DASHBOARD_AUDIT_PATH,
+        COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REGISTRY_REVIEW_FORBIDDEN_AUDIT_PATH,
+        COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REGISTRY_REVIEW_INVARIANTS_PATH,
+        COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REGISTRY_REVIEW_DIR
+        / "limited_qualitative_usage_registry_future_prompt_audit.json",
+        COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REGISTRY_REVIEW_DIR
+        / "next_limited_qualitative_usage_registry_acceptance_prompt.md",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    decision = read_json(COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REGISTRY_REVIEW_DECISION_PATH)
+    hash_audit = read_json(COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REGISTRY_REVIEW_HASH_AUDIT_PATH)
+    scope = read_json(COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REGISTRY_REVIEW_SCOPE_AUDIT_PATH)
+    dashboard = read_json(COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REGISTRY_REVIEW_DASHBOARD_AUDIT_PATH)
+    forbidden = read_json(COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REGISTRY_REVIEW_FORBIDDEN_AUDIT_PATH)
+    invariants = read_json(COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REGISTRY_REVIEW_INVARIANTS_PATH)
+    prompt = read_json(
+        COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REGISTRY_REVIEW_DIR
+        / "limited_qualitative_usage_registry_future_prompt_audit.json"
+    )
+    if not (
+        decision.get("task_id")
+        == "COMPENSATION-EVIDENCE-LIMITED-QUALITATIVE-USAGE-REGISTRY-REVIEW-2026-07-25"
+        and decision.get("decision")
+        == "limited_qualitative_usage_registry_review_pass_registry_acceptance_prompt_allowed"
+        and decision.get("record_type") == "registry_review_only"
+        and decision.get("candidate_id_set_sha256")
+        == "0365d38babf9d4000295a3326c8cfc77b92f8a7ad1f2f1117d0cb40f1613b91b"
+        and decision.get("candidate_id_set_hash_verified") is True
+        and decision.get("layer_sha256")
+        == "cf29690a7687401960804a714d0bdfb0a24407eee10ba70695ee5487a60fcbc5"
+        and decision.get("layer_sha256_verified") is True
+        and decision.get("schema_sha256")
+        == "3c31d1d663cde730d198184444c6b77591cc186411c9714ea0086f2135d8533a"
+        and decision.get("schema_sha256_verified") is True
+        and decision.get("registered_accepted_rows") == 643
+        and decision.get("restricted_navigation_external_contamination_count") == 0
+        and decision.get("strict_primary_manifest_rows") == 56
+        and decision.get("evidence_rows_created") == 0
+        and decision.get("analysis_outputs_created") == 0
+        and decision.get("descriptive_statistics_computed") is False
+        and decision.get("inferential_statistics_computed") is False
+        and decision.get("global_analysis_readiness") is False
+        and decision.get("full_qualitative_readiness") is False
+        and decision.get("analysis_facing_promotion_allowed") is False
+        and decision.get("registry_acceptance_prompt_allowed_next") is True
+        and decision.get("registry_acceptance_requires_separate_authorization") is True
+        and decision.get("forbidden_actions_performed") == []
+        and decision.get("immutable_inputs_modified") is False
+        and hash_audit.get("all_hash_checks_passed") is True
+        and hash_audit.get("candidate_id_set_hash_match") is True
+        and hash_audit.get("layer_sha256_match") is True
+        and hash_audit.get("schema_sha256_match") is True
+        and scope.get("all_scope_checks_passed") is True
+        and scope.get("restricted_navigation_external_contamination_count") == 0
+        and scope.get("evidence_rows_created") == 0
+        and scope.get("analysis_outputs_created") == 0
+        and dashboard.get("dashboard_state_consistent") is True
+        and dashboard.get("global_analysis_readiness") is False
+        and dashboard.get("analysis_facing_promotion_allowed") is False
+        and prompt.get("future_prompt_constraints_complete") is True
+        and prompt.get("phase_boundaries_preserved") is True
+        and forbidden.get("all_forbidden_action_checks_passed") is True
+        and forbidden.get("global_analysis_readiness") is False
+        and invariants.get("all_invariants_passed") is True
+    ):
+        raise ValueError("limited qualitative usage registry review fails dashboard gates")
+    return True, decision
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -2774,6 +2879,10 @@ def build_analysis_readiness(
         limited_qualitative_usage_layer_acceptance_completed,
         limited_qualitative_usage_layer_acceptance_decision,
     ) = limited_qualitative_usage_layer_acceptance_status()
+    (
+        limited_qualitative_usage_registry_review_completed,
+        limited_qualitative_usage_registry_review_decision,
+    ) = limited_qualitative_usage_registry_review_status()
     if scale_1000_targeted_qa_completed and (
         scale_1000_targeted_qa_decision.get("qa_pass") is not True
         or scale_1000_targeted_qa_decision.get(
@@ -2820,7 +2929,9 @@ def build_analysis_readiness(
     return {
         "metadata": metadata,
         "overall_status": (
-            "limited_qualitative_usage_layer_acceptance_registered_registry_review_only_global_analysis_closed"
+            "limited_qualitative_usage_registry_review_pass_registry_acceptance_prompt_allowed_global_analysis_closed"
+            if limited_qualitative_usage_registry_review_completed
+            else "limited_qualitative_usage_layer_acceptance_registered_registry_review_only_global_analysis_closed"
             if limited_qualitative_usage_layer_acceptance_completed
             else "limited_qualitative_usage_layer_qa_pass_acceptance_prompt_allowed_global_analysis_closed"
             if limited_qualitative_usage_layer_qa_completed
@@ -2933,7 +3044,9 @@ def build_analysis_readiness(
             "wage_extraction_stage": {
                 "available": extraction_completed,
                 "display_status": (
-                    "limited_qualitative_usage_layer_acceptance_registered_registry_review_only_global_analysis_closed"
+                    "limited_qualitative_usage_registry_review_pass_registry_acceptance_only_global_analysis_closed"
+                    if limited_qualitative_usage_registry_review_completed
+                    else "limited_qualitative_usage_layer_acceptance_registered_registry_review_only_global_analysis_closed"
                     if limited_qualitative_usage_layer_acceptance_completed
                     else "limited_qualitative_usage_layer_qa_pass_acceptance_registration_only_global_analysis_closed"
                     if limited_qualitative_usage_layer_qa_completed
@@ -3290,6 +3403,16 @@ def build_analysis_readiness(
                     bool(limited_qualitative_usage_layer_acceptance_decision.get("registry_review_prompt_allowed_next", False))
                     if limited_qualitative_usage_layer_acceptance_completed else False
                 ),
+                "limited_qualitative_usage_registry_review_completed": limited_qualitative_usage_registry_review_completed,
+                "limited_qualitative_usage_registry_review_decision": (
+                    limited_qualitative_usage_registry_review_decision.get("decision")
+                    if limited_qualitative_usage_registry_review_completed else None
+                ),
+                "limited_qualitative_usage_registry_acceptance_prompt_allowed": (
+                    bool(limited_qualitative_usage_registry_review_decision.get("registry_acceptance_prompt_allowed_next", False))
+                    if limited_qualitative_usage_registry_review_completed else False
+                ),
+                "limited_qualitative_usage_registry_review_global_analysis_readiness": False,
                 "limited_qualitative_usage_layer_acceptance_global_analysis_readiness": False,
                 "limited_qualitative_usage_layer_qa_global_analysis_readiness": False,
                 "limited_qualitative_usage_layer_global_analysis_readiness": False,
@@ -7163,10 +7286,16 @@ def build_text_table_calibration_status_summary(
             limited_qualitative_usage_layer_acceptance_completed,
             limited_qualitative_usage_layer_acceptance_decision,
         ) = limited_qualitative_usage_layer_acceptance_status()
+        (
+            limited_qualitative_usage_registry_review_completed,
+            limited_qualitative_usage_registry_review_decision,
+        ) = limited_qualitative_usage_registry_review_status()
         return {
             **metadata,
             "calibration_phase": (
-                "compensation_extraction_limited_qualitative_usage_layer_acceptance_registered_registry_review_prompt_allowed"
+                "compensation_extraction_limited_qualitative_usage_registry_review_pass_registry_acceptance_prompt_allowed"
+                if limited_qualitative_usage_registry_review_completed
+                else "compensation_extraction_limited_qualitative_usage_layer_acceptance_registered_registry_review_prompt_allowed"
                 if limited_qualitative_usage_layer_acceptance_completed
                 else "compensation_extraction_limited_qualitative_usage_layer_qa_review_pass_acceptance_prompt_allowed"
                 if limited_qualitative_usage_layer_qa_completed
@@ -8107,6 +8236,32 @@ def build_text_table_calibration_status_summary(
                 bool(limited_qualitative_usage_layer_acceptance_decision.get("registry_review_prompt_allowed_next", False))
                 if limited_qualitative_usage_layer_acceptance_completed else False
             ),
+            "limited_qualitative_usage_registry_review_completed": limited_qualitative_usage_registry_review_completed,
+            "limited_qualitative_usage_registry_review_decision": (
+                limited_qualitative_usage_registry_review_decision.get("decision")
+                if limited_qualitative_usage_registry_review_completed else None
+            ),
+            "limited_qualitative_usage_registry_review_path": (
+                relative(COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REGISTRY_REVIEW_DIR)
+                if limited_qualitative_usage_registry_review_completed else None
+            ),
+            "limited_qualitative_usage_registry_review_registered_row_count": (
+                int(limited_qualitative_usage_registry_review_decision.get("registered_accepted_rows", 0))
+                if limited_qualitative_usage_registry_review_completed else None
+            ),
+            "limited_qualitative_usage_registry_review_contamination_count": (
+                int(limited_qualitative_usage_registry_review_decision.get("restricted_navigation_external_contamination_count", -1))
+                if limited_qualitative_usage_registry_review_completed else None
+            ),
+            "limited_qualitative_usage_registry_review_primary_count": (
+                int(limited_qualitative_usage_registry_review_decision.get("strict_primary_manifest_rows", 0))
+                if limited_qualitative_usage_registry_review_completed else None
+            ),
+            "limited_qualitative_usage_registry_acceptance_prompt_allowed": (
+                bool(limited_qualitative_usage_registry_review_decision.get("registry_acceptance_prompt_allowed_next", False))
+                if limited_qualitative_usage_registry_review_completed else False
+            ),
+            "limited_qualitative_usage_registry_review_global_analysis_readiness": False,
             "limited_qualitative_usage_layer_acceptance_global_analysis_readiness": False,
             "limited_qualitative_usage_layer_qa_global_analysis_readiness": False,
             "limited_qualitative_usage_layer_global_analysis_readiness": False,
@@ -8354,7 +8509,9 @@ def build_text_table_calibration_status_summary(
                 else False
             ),
             "next_recommendation": (
-                "seek_separate_authorization_to_run_limited_qualitative_usage_registry_review"
+                "seek_separate_authorization_to_run_limited_qualitative_usage_registry_acceptance"
+                if limited_qualitative_usage_registry_review_completed
+                else "seek_separate_authorization_to_run_limited_qualitative_usage_registry_review"
                 if limited_qualitative_usage_layer_acceptance_completed
                 else "seek_separate_authorization_to_run_limited_qualitative_usage_layer_acceptance_registration"
                 if limited_qualitative_usage_layer_qa_completed
@@ -8470,7 +8627,9 @@ def build_text_table_calibration_status_summary(
                 if extraction_completed else "not_started"
             ),
             "qualitative_extraction_status": (
-                "limited_qualitative_usage_layer_acceptance_registered_643_rows_zero_contamination_registry_review_only_analysis_closed"
+                "limited_qualitative_usage_registry_review_pass_643_rows_zero_contamination_registry_acceptance_only_analysis_closed"
+                if limited_qualitative_usage_registry_review_completed
+                else "limited_qualitative_usage_layer_acceptance_registered_643_rows_zero_contamination_registry_review_only_analysis_closed"
                 if limited_qualitative_usage_layer_acceptance_completed
                 else "limited_qualitative_usage_layer_qa_pass_643_rows_zero_contamination_acceptance_registration_only_analysis_closed"
                 if limited_qualitative_usage_layer_qa_completed

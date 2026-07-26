@@ -100,6 +100,8 @@ The current phase is `compensation_extraction_limited_qualitative_usage_layer_ma
 
 The current phase is `compensation_extraction_limited_qualitative_usage_layer_acceptance_registered_registry_review_prompt_allowed`. The QA-passed 643-row literal mechanism-language layer is accepted and registered as a bounded evidence layer. Candidate-ID, layer-file, and schema hashes were reverified; restricted, navigation, and external-lane contamination remains zero; and the 56-row strict-primary subset remains a narrow non-analytic manifest. Registration created no evidence rows or analysis outputs. A separately authorized registry review may run next; global and full qualitative analysis readiness remain false.
 
+The current phase is `compensation_extraction_limited_qualitative_usage_registry_review_pass_registry_acceptance_prompt_allowed`. The accepted 643-row limited qualitative registry passed its metadata-only consistency review. Candidate-ID, layer-file, and schema hashes and all registered scope counts reconcile; restricted, navigation, and external-lane contamination remains zero; and the 56-row strict-primary manifest remains narrow and non-analytic. The review created no evidence rows or analysis outputs. A separately authorized registry-acceptance step may run next; global readiness, full qualitative readiness, and analysis-facing promotion remain false.
+
 ## Final provisional schema readiness — 2026-07-26
 
 The immutable five-ledger provisional package remains integrity-valid, but a

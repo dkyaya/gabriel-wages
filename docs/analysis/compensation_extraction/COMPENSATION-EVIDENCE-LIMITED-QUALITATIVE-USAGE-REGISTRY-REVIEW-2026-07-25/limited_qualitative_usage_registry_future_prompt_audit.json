@@ -1,0 +1,10 @@
+{
+  "future_prompt_constraints_checked": 25,
+  "future_prompt_constraints_complete": true,
+  "phase_boundaries_preserved": true,
+  "schema_version": "limited_qualitative_usage_registry_review_v1",
+  "separate_authorization_required": true,
+  "source_prompt_constraints_checked": 23,
+  "source_prompt_constraints_complete": true,
+  "task_id": "COMPENSATION-EVIDENCE-LIMITED-QUALITATIVE-USAGE-REGISTRY-REVIEW-2026-07-25"
+}

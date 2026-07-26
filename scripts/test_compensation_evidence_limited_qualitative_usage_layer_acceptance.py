@@ -316,9 +316,12 @@ class MaterializedAcceptanceTests(unittest.TestCase):
     def test_dashboard_records_registration_but_not_readiness(self):
         calibration = runner.read_json(ROOT / "docs/dashboard/data/text_table_calibration_status_summary.json")
         readiness = runner.read_json(ROOT / "docs/dashboard/data/analysis_readiness.json")
-        self.assertEqual(
+        self.assertIn(
             calibration["calibration_phase"],
-            "compensation_extraction_limited_qualitative_usage_layer_acceptance_registered_registry_review_prompt_allowed",
+            {
+                "compensation_extraction_limited_qualitative_usage_layer_acceptance_registered_registry_review_prompt_allowed",
+                "compensation_extraction_limited_qualitative_usage_registry_review_pass_registry_acceptance_prompt_allowed",
+            },
         )
         self.assertTrue(calibration["limited_qualitative_usage_layer_acceptance_registered"])
         self.assertFalse(calibration["limited_qualitative_usage_layer_acceptance_global_analysis_readiness"])

@@ -1,0 +1,23 @@
+{
+  "all_forbidden_action_checks_passed": true,
+  "analysis_facing_promotion_allowed": false,
+  "analysis_outputs_created": 0,
+  "causal_claims_made": 0,
+  "descriptive_statistics_computed": 0,
+  "downloads_or_redownloads": 0,
+  "evidence_rows_created": 0,
+  "extraction_or_document_selection_runs": 0,
+  "full_qualitative_readiness": false,
+  "gabriel_api_or_model_calls": 0,
+  "global_analysis_readiness": false,
+  "immutable_inputs_modified": 0,
+  "inferential_statistics_computed": 0,
+  "ingestion_or_codification_runs": 0,
+  "network_or_url_access": 0,
+  "ocr_or_rendered_image_access": 0,
+  "pdf_or_page_access": 0,
+  "schema_version": "limited_qualitative_usage_registry_review_v1",
+  "scout_source_review_or_verification_runs": 0,
+  "task_id": "COMPENSATION-EVIDENCE-LIMITED-QUALITATIVE-USAGE-REGISTRY-REVIEW-2026-07-25",
+  "wage_gap_or_regression_runs": 0
+}

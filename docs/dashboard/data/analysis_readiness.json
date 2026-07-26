@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": "0.1.0",
-    "generated_at": "2026-07-26T16:10:45Z",
+    "generated_at": "2026-07-26T16:25:15Z",
     "data_vintage": "2026-07-23",
     "source_files": [
       "docs/analysis/national_scout_coverage_state.csv",
@@ -82,7 +82,7 @@
       "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
     ]
   },
-  "overall_status": "limited_qualitative_usage_layer_acceptance_registered_registry_review_only_global_analysis_closed",
+  "overall_status": "limited_qualitative_usage_registry_review_pass_registry_acceptance_prompt_allowed_global_analysis_closed",
   "current_inputs": {
     "national_queue_available": true,
     "national_coverage_available": true,
@@ -139,7 +139,7 @@
     },
     "wage_extraction_stage": {
       "available": true,
-      "display_status": "limited_qualitative_usage_layer_acceptance_registered_registry_review_only_global_analysis_closed",
+      "display_status": "limited_qualitative_usage_registry_review_pass_registry_acceptance_only_global_analysis_closed",
       "observation_count": 1907,
       "qualitative_mechanism_observation_count": 1954,
       "qa_status": "pass",
@@ -221,6 +221,10 @@
       "limited_qualitative_usage_layer_acceptance_registered": true,
       "limited_qualitative_usage_layer_acceptance_decision": "limited_qualitative_usage_layer_acceptance_registered",
       "limited_qualitative_usage_registry_review_prompt_allowed": true,
+      "limited_qualitative_usage_registry_review_completed": true,
+      "limited_qualitative_usage_registry_review_decision": "limited_qualitative_usage_registry_review_pass_registry_acceptance_prompt_allowed",
+      "limited_qualitative_usage_registry_acceptance_prompt_allowed": true,
+      "limited_qualitative_usage_registry_review_global_analysis_readiness": false,
       "limited_qualitative_usage_layer_acceptance_global_analysis_readiness": false,
       "limited_qualitative_usage_layer_qa_global_analysis_readiness": false,
       "limited_qualitative_usage_layer_global_analysis_readiness": false,

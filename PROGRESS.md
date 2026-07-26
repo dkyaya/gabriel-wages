@@ -6,6 +6,27 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-26 (Limited qualitative usage registry review passed)
+
+**Did**
+- Reverified the 12 immutable acceptance inputs, two signed dashboard baseline contracts, the candidate-ID/layer/schema hashes, every registered scope count, and zero contamination.
+- Reviewed only acceptance, registry, dashboard, prompt, and carried-scope metadata; created zero evidence rows and zero analysis outputs.
+- Preserved 643 accepted rows, 116 restricted rows, 1,195 navigation-only rows, the 56-row strict-primary non-analytic manifest, and quantitative/non-base/reference/conflict lanes as separate registry scopes.
+- Added 66 registry-review tests across 37 adversarial modes and updated descendant-phase regression contracts. All 487 focused tests and 60 ingestion tests passed.
+
+**Decisions**
+- Decision is `limited_qualitative_usage_registry_review_pass_registry_acceptance_prompt_allowed`. A separately authorized registry-acceptance prompt may run next.
+- Global/full qualitative readiness, analysis-facing promotion, statistics, ingestion, codification, wage-gap, regression, and causal work remain closed.
+
+**Surprises/breakage**
+- Six predecessor dashboard tests correctly rejected the new descendant phase until their explicit fail-closed phase allowlists were extended. No evidence, scope, hash, or readiness assertion was weakened.
+
+**Corpus snapshot**
+- `contracts=64`, `discourse=0`, `coverage=64`, `cities=19`; 28 healthy matched pairs (10 exact-cycle, 18 overlap-cycle), two exploratory adjacent matches, and six unmatched safety units.
+
+**Next steps**
+- Seek separate authorization for `next_limited_qualitative_usage_registry_acceptance_prompt.md`. Accept registry metadata only; create no evidence or analysis output and keep every readiness flag false.
+
 ## 2026-07-26 (Limited qualitative usage layer accepted and registered)
 
 **Did**

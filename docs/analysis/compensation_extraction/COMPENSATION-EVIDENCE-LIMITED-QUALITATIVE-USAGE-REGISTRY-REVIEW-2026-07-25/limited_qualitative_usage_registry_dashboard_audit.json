@@ -1,0 +1,13 @@
+{
+  "analysis_facing_promotion_allowed": false,
+  "dashboard_state_consistent": true,
+  "full_qualitative_readiness": false,
+  "global_analysis_readiness": false,
+  "registry_review_only": true,
+  "schema_version": "limited_qualitative_usage_registry_review_v1",
+  "source_calibration_phase": "compensation_extraction_limited_qualitative_usage_layer_acceptance_registered_registry_review_prompt_allowed",
+  "source_overall_status": "limited_qualitative_usage_layer_acceptance_registered_registry_review_only_global_analysis_closed",
+  "target_calibration_phase": "compensation_extraction_limited_qualitative_usage_registry_review_pass_registry_acceptance_prompt_allowed",
+  "target_overall_status": "limited_qualitative_usage_registry_review_pass_registry_acceptance_prompt_allowed_global_analysis_closed",
+  "task_id": "COMPENSATION-EVIDENCE-LIMITED-QUALITATIVE-USAGE-REGISTRY-REVIEW-2026-07-25"
+}

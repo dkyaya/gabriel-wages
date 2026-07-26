@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "compensation_extraction_limited_qualitative_usage_registry_review_pass_registry_acceptance_prompt_allowed"
+              ? "Limited qualitative usage registry review passed; registry acceptance may proceed"
+              : textTableCalibrationStatus.calibration_phase ===
             "compensation_extraction_limited_qualitative_usage_layer_acceptance_registered_registry_review_prompt_allowed"
               ? "Limited qualitative usage layer accepted and registered; registry review may proceed"
               : textTableCalibrationStatus.calibration_phase ===
@@ -861,6 +864,17 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "compensation_extraction_limited_qualitative_usage_registry_review_pass_registry_acceptance_prompt_allowed" ? (
+            <>
+              The accepted 643-row literal mechanism-language registry passed its
+              metadata-only review. Candidate-ID, layer-file, and schema hashes and every
+              registered scope count reconcile; restricted, navigation, and external-lane
+              contamination remain zero. The 56-row strict-primary manifest remains narrow
+              and non-analytic. Review created no evidence rows or analysis outputs. A
+              separately authorized registry-acceptance step may run next; global and full
+              qualitative readiness remain false.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "compensation_extraction_limited_qualitative_usage_layer_acceptance_registered_registry_review_prompt_allowed" ? (
             <>
               The QA-passed 643-row literal mechanism-language layer is now accepted and
