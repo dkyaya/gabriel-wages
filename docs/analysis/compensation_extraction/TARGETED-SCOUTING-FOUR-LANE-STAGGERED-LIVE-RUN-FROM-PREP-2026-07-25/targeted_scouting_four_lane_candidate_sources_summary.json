@@ -1,0 +1,12 @@
+{
+  "candidate_only": true,
+  "candidate_source_count": 0,
+  "failure_code": "fixed_stagger_conflicts_with_no_simultaneous_lane_execution",
+  "lane_counts": {
+    "lane_1": 0,
+    "lane_2": 0,
+    "lane_3": 0,
+    "lane_4": 0
+  },
+  "live_not_run": true
+}

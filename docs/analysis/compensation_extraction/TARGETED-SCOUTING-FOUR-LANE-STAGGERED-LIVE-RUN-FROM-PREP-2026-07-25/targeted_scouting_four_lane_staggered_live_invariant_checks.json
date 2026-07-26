@@ -1,0 +1,16 @@
+{
+  "all_2000_targets_explicitly_not_run": true,
+  "all_invariants_passed": true,
+  "candidate_count_zero": true,
+  "global_analysis_readiness_false": true,
+  "hosted_search_calls_zero": true,
+  "lane_counts_500_each": true,
+  "locked_targets_reconcile_to_2000": true,
+  "model_api_calls_zero": true,
+  "no_live_lane_started": true,
+  "no_verified_extracted_rated_or_causal_output": true,
+  "partial_outputs_cannot_masquerade_as_complete": true,
+  "preflight_failure_recorded": true,
+  "queue_and_id_hashes_match": true,
+  "schedule_conflict_detected": true
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-26T20:43:28Z",
+  "generated_at": "2026-07-26T21:03:55Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -80,7 +80,7 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "calibration_phase": "targeted_scouting_four_lane_prep_dry_run_completed_lane_1_live_ready",
+  "calibration_phase": "targeted_scouting_four_lane_staggered_live_preflight_failed_repair_required",
   "latest_calibration_id": "TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24",
   "latest_calibration_review_id": "TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24",
   "latest_adjudication_prep_id": "TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24",
@@ -366,6 +366,12 @@
   "targeted_scouting_four_lane_prep_path": "docs/analysis/compensation_extraction/TARGETED-SCOUTING-FOUR-LANE-PREP-DRY-RUN-FROM-PROVISIONAL-CLAIM-REVIEW-2026-07-25",
   "targeted_scouting_four_lane_master_queue_rows": 2000,
   "targeted_scouting_lane_1_live_ready": true,
+  "targeted_scouting_four_lane_staggered_live_preflight_failed": true,
+  "targeted_scouting_four_lane_staggered_live_decision": "targeted_scouting_four_lane_staggered_live_preflight_failed",
+  "targeted_scouting_four_lane_staggered_live_path": "docs/analysis/compensation_extraction/TARGETED-SCOUTING-FOUR-LANE-STAGGERED-LIVE-RUN-FROM-PREP-2026-07-25",
+  "targeted_scouting_four_lane_live_calls": 0,
+  "targeted_scouting_four_lane_candidate_sources": 0,
+  "targeted_scouting_four_lane_repair_required": true,
   "gabriel_claim_rating_global_analysis_readiness": false,
   "limited_qualitative_usage_registry_review_global_analysis_readiness": false,
   "limited_qualitative_usage_layer_acceptance_global_analysis_readiness": false,

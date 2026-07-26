@@ -1,0 +1,5 @@
+lane_id,scheduled_offset_minutes,actual_start_utc,actual_finish_utc,elapsed_seconds,live_attempted,status,notes
+lane_1,0,,,0,no,not_started_preflight_failed,No stagger timer or hosted request started.
+lane_2,8,,,0,no,not_started_preflight_failed,No stagger timer or hosted request started.
+lane_3,16,,,0,no,not_started_preflight_failed,No stagger timer or hosted request started.
+lane_4,24,,,0,no,not_started_preflight_failed,No stagger timer or hosted request started.

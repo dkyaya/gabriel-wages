@@ -1,0 +1,294 @@
+{
+  "all_input_integrity_checks_passed": true,
+  "checked_at_utc": "2026-07-26T21:03:53Z",
+  "checks": [
+    {
+      "check": "required_prep_artifacts_present",
+      "detail": {
+        "missing": []
+      },
+      "passed": true
+    },
+    {
+      "check": "prep_decision_allows_live_preflight",
+      "detail": "targeted_scouting_four_lane_prep_dry_run_completed_lane_1_live_ready",
+      "passed": true
+    },
+    {
+      "check": "prep_commit_locked",
+      "detail": {
+        "commit": "b338003063bd1fd2c29fb70c0af6130987c67ffa",
+        "is_local_ancestor_of_head": true
+      },
+      "passed": true
+    },
+    {
+      "check": "master_locked_target_count",
+      "detail": 2000,
+      "passed": true
+    },
+    {
+      "check": "master_unique_target_ids",
+      "detail": 2000,
+      "passed": true
+    },
+    {
+      "check": "lane_1_exact_500_unique_locked_targets",
+      "detail": {
+        "all_lane_ids_match": true,
+        "all_live_not_started": true,
+        "lock_queue_sha256": "04103dbe8ea765418c64dc2848bdfd83880c34d41fedc8bb249c0b5b34235f77",
+        "lock_target_id_set_sha256": "57d510553ab6950f422794ddabfda2b88419e87fd4a6beb610f573fc050ffc47",
+        "queue_sha256": "04103dbe8ea765418c64dc2848bdfd83880c34d41fedc8bb249c0b5b34235f77",
+        "rows": 500,
+        "target_id_set_sha256": "57d510553ab6950f422794ddabfda2b88419e87fd4a6beb610f573fc050ffc47",
+        "unique_target_ids": 500
+      },
+      "passed": true
+    },
+    {
+      "check": "lane_1_queue_hash_matches_lock",
+      "detail": "04103dbe8ea765418c64dc2848bdfd83880c34d41fedc8bb249c0b5b34235f77",
+      "passed": true
+    },
+    {
+      "check": "lane_1_target_id_hash_matches_lock",
+      "detail": "57d510553ab6950f422794ddabfda2b88419e87fd4a6beb610f573fc050ffc47",
+      "passed": true
+    },
+    {
+      "check": "lane_1_scope_and_status_locked",
+      "detail": {
+        "all_lane_ids_match": true,
+        "all_live_not_started": true,
+        "lock_queue_sha256": "04103dbe8ea765418c64dc2848bdfd83880c34d41fedc8bb249c0b5b34235f77",
+        "lock_target_id_set_sha256": "57d510553ab6950f422794ddabfda2b88419e87fd4a6beb610f573fc050ffc47",
+        "queue_sha256": "04103dbe8ea765418c64dc2848bdfd83880c34d41fedc8bb249c0b5b34235f77",
+        "rows": 500,
+        "target_id_set_sha256": "57d510553ab6950f422794ddabfda2b88419e87fd4a6beb610f573fc050ffc47",
+        "unique_target_ids": 500
+      },
+      "passed": true
+    },
+    {
+      "check": "lane_2_exact_500_unique_locked_targets",
+      "detail": {
+        "all_lane_ids_match": true,
+        "all_live_not_started": true,
+        "lock_queue_sha256": "c34f2aaecc4e7eeed44b7bc375f8fe661afe31eebb1b58da4fe9872a9017f9ed",
+        "lock_target_id_set_sha256": "93fea73af598355b61aa30c09ce557618853787fcc5afb7ec38189c908c2e2ee",
+        "queue_sha256": "c34f2aaecc4e7eeed44b7bc375f8fe661afe31eebb1b58da4fe9872a9017f9ed",
+        "rows": 500,
+        "target_id_set_sha256": "93fea73af598355b61aa30c09ce557618853787fcc5afb7ec38189c908c2e2ee",
+        "unique_target_ids": 500
+      },
+      "passed": true
+    },
+    {
+      "check": "lane_2_queue_hash_matches_lock",
+      "detail": "c34f2aaecc4e7eeed44b7bc375f8fe661afe31eebb1b58da4fe9872a9017f9ed",
+      "passed": true
+    },
+    {
+      "check": "lane_2_target_id_hash_matches_lock",
+      "detail": "93fea73af598355b61aa30c09ce557618853787fcc5afb7ec38189c908c2e2ee",
+      "passed": true
+    },
+    {
+      "check": "lane_2_scope_and_status_locked",
+      "detail": {
+        "all_lane_ids_match": true,
+        "all_live_not_started": true,
+        "lock_queue_sha256": "c34f2aaecc4e7eeed44b7bc375f8fe661afe31eebb1b58da4fe9872a9017f9ed",
+        "lock_target_id_set_sha256": "93fea73af598355b61aa30c09ce557618853787fcc5afb7ec38189c908c2e2ee",
+        "queue_sha256": "c34f2aaecc4e7eeed44b7bc375f8fe661afe31eebb1b58da4fe9872a9017f9ed",
+        "rows": 500,
+        "target_id_set_sha256": "93fea73af598355b61aa30c09ce557618853787fcc5afb7ec38189c908c2e2ee",
+        "unique_target_ids": 500
+      },
+      "passed": true
+    },
+    {
+      "check": "lane_3_exact_500_unique_locked_targets",
+      "detail": {
+        "all_lane_ids_match": true,
+        "all_live_not_started": true,
+        "lock_queue_sha256": "b679806e087f48b9ffcf89f78ce1ed69a655786eb42ee2904936704d1ade2005",
+        "lock_target_id_set_sha256": "69207e2cf914dc865a329211720767933b02984b8ca854c54242a96060674ed1",
+        "queue_sha256": "b679806e087f48b9ffcf89f78ce1ed69a655786eb42ee2904936704d1ade2005",
+        "rows": 500,
+        "target_id_set_sha256": "69207e2cf914dc865a329211720767933b02984b8ca854c54242a96060674ed1",
+        "unique_target_ids": 500
+      },
+      "passed": true
+    },
+    {
+      "check": "lane_3_queue_hash_matches_lock",
+      "detail": "b679806e087f48b9ffcf89f78ce1ed69a655786eb42ee2904936704d1ade2005",
+      "passed": true
+    },
+    {
+      "check": "lane_3_target_id_hash_matches_lock",
+      "detail": "69207e2cf914dc865a329211720767933b02984b8ca854c54242a96060674ed1",
+      "passed": true
+    },
+    {
+      "check": "lane_3_scope_and_status_locked",
+      "detail": {
+        "all_lane_ids_match": true,
+        "all_live_not_started": true,
+        "lock_queue_sha256": "b679806e087f48b9ffcf89f78ce1ed69a655786eb42ee2904936704d1ade2005",
+        "lock_target_id_set_sha256": "69207e2cf914dc865a329211720767933b02984b8ca854c54242a96060674ed1",
+        "queue_sha256": "b679806e087f48b9ffcf89f78ce1ed69a655786eb42ee2904936704d1ade2005",
+        "rows": 500,
+        "target_id_set_sha256": "69207e2cf914dc865a329211720767933b02984b8ca854c54242a96060674ed1",
+        "unique_target_ids": 500
+      },
+      "passed": true
+    },
+    {
+      "check": "lane_4_exact_500_unique_locked_targets",
+      "detail": {
+        "all_lane_ids_match": true,
+        "all_live_not_started": true,
+        "lock_queue_sha256": "a426b6e8dd5a1aca637a1f0669ef551a1ff1d5452c3ccdc0bd640d62eebbdfed",
+        "lock_target_id_set_sha256": "39d8cba8141ddf00cf7ab0b234b997d67c5cf5db6afd52d2a361a88a731db964",
+        "queue_sha256": "a426b6e8dd5a1aca637a1f0669ef551a1ff1d5452c3ccdc0bd640d62eebbdfed",
+        "rows": 500,
+        "target_id_set_sha256": "39d8cba8141ddf00cf7ab0b234b997d67c5cf5db6afd52d2a361a88a731db964",
+        "unique_target_ids": 500
+      },
+      "passed": true
+    },
+    {
+      "check": "lane_4_queue_hash_matches_lock",
+      "detail": "a426b6e8dd5a1aca637a1f0669ef551a1ff1d5452c3ccdc0bd640d62eebbdfed",
+      "passed": true
+    },
+    {
+      "check": "lane_4_target_id_hash_matches_lock",
+      "detail": "39d8cba8141ddf00cf7ab0b234b997d67c5cf5db6afd52d2a361a88a731db964",
+      "passed": true
+    },
+    {
+      "check": "lane_4_scope_and_status_locked",
+      "detail": {
+        "all_lane_ids_match": true,
+        "all_live_not_started": true,
+        "lock_queue_sha256": "a426b6e8dd5a1aca637a1f0669ef551a1ff1d5452c3ccdc0bd640d62eebbdfed",
+        "lock_target_id_set_sha256": "39d8cba8141ddf00cf7ab0b234b997d67c5cf5db6afd52d2a361a88a731db964",
+        "queue_sha256": "a426b6e8dd5a1aca637a1f0669ef551a1ff1d5452c3ccdc0bd640d62eebbdfed",
+        "rows": 500,
+        "target_id_set_sha256": "39d8cba8141ddf00cf7ab0b234b997d67c5cf5db6afd52d2a361a88a731db964",
+        "unique_target_ids": 500
+      },
+      "passed": true
+    },
+    {
+      "check": "combined_scope_exactly_2000_unique",
+      "detail": {
+        "rows": 2000,
+        "unique": 2000
+      },
+      "passed": true
+    },
+    {
+      "check": "search_credential_present_without_disclosure",
+      "detail": "present",
+      "passed": true
+    },
+    {
+      "check": "fixed_stagger_offsets_recorded",
+      "detail": {
+        "lane_1": 0,
+        "lane_2": 8,
+        "lane_3": 16,
+        "lane_4": 24
+      },
+      "passed": true
+    },
+    {
+      "check": "stagger_schedule_compatible_with_no_lane_overlap",
+      "detail": {
+        "blocker": "A 500-request lane cannot complete before the next exact eight-minute start; exact starts would overlap lanes, while waiting would violate the offsets.",
+        "exact_offsets_required": true,
+        "no_lane_overlap_required": true,
+        "runtime_diagnostics": {
+          "available_nonoverlap_window_seconds": 480,
+          "local_timing_files": 6,
+          "median_seconds_per_request": 46.297,
+          "minimum_seconds_per_request": 15.413,
+          "projected_lane_seconds_at_historical_median": 23148.5,
+          "projected_lane_seconds_at_historical_minimum": 7706.5,
+          "timed_requests": 128
+        },
+        "sequential_mixed_state_backend_required": true
+      },
+      "passed": false
+    }
+  ],
+  "credential_present": true,
+  "failure_code": "fixed_stagger_conflicts_with_no_simultaneous_lane_execution",
+  "global_analysis_readiness": false,
+  "hosted_search_calls": 0,
+  "lane_counts": {
+    "lane_1": 500,
+    "lane_2": 500,
+    "lane_3": 500,
+    "lane_4": 500
+  },
+  "locked_target_count": 2000,
+  "model_api_calls": 0,
+  "preflight_passed": false,
+  "prep_commit": "b338003063bd1fd2c29fb70c0af6130987c67ffa",
+  "queue_audits": {
+    "lane_1": {
+      "all_lane_ids_match": true,
+      "all_live_not_started": true,
+      "lock_queue_sha256": "04103dbe8ea765418c64dc2848bdfd83880c34d41fedc8bb249c0b5b34235f77",
+      "lock_target_id_set_sha256": "57d510553ab6950f422794ddabfda2b88419e87fd4a6beb610f573fc050ffc47",
+      "queue_sha256": "04103dbe8ea765418c64dc2848bdfd83880c34d41fedc8bb249c0b5b34235f77",
+      "rows": 500,
+      "target_id_set_sha256": "57d510553ab6950f422794ddabfda2b88419e87fd4a6beb610f573fc050ffc47",
+      "unique_target_ids": 500
+    },
+    "lane_2": {
+      "all_lane_ids_match": true,
+      "all_live_not_started": true,
+      "lock_queue_sha256": "c34f2aaecc4e7eeed44b7bc375f8fe661afe31eebb1b58da4fe9872a9017f9ed",
+      "lock_target_id_set_sha256": "93fea73af598355b61aa30c09ce557618853787fcc5afb7ec38189c908c2e2ee",
+      "queue_sha256": "c34f2aaecc4e7eeed44b7bc375f8fe661afe31eebb1b58da4fe9872a9017f9ed",
+      "rows": 500,
+      "target_id_set_sha256": "93fea73af598355b61aa30c09ce557618853787fcc5afb7ec38189c908c2e2ee",
+      "unique_target_ids": 500
+    },
+    "lane_3": {
+      "all_lane_ids_match": true,
+      "all_live_not_started": true,
+      "lock_queue_sha256": "b679806e087f48b9ffcf89f78ce1ed69a655786eb42ee2904936704d1ade2005",
+      "lock_target_id_set_sha256": "69207e2cf914dc865a329211720767933b02984b8ca854c54242a96060674ed1",
+      "queue_sha256": "b679806e087f48b9ffcf89f78ce1ed69a655786eb42ee2904936704d1ade2005",
+      "rows": 500,
+      "target_id_set_sha256": "69207e2cf914dc865a329211720767933b02984b8ca854c54242a96060674ed1",
+      "unique_target_ids": 500
+    },
+    "lane_4": {
+      "all_lane_ids_match": true,
+      "all_live_not_started": true,
+      "lock_queue_sha256": "a426b6e8dd5a1aca637a1f0669ef551a1ff1d5452c3ccdc0bd640d62eebbdfed",
+      "lock_target_id_set_sha256": "39d8cba8141ddf00cf7ab0b234b997d67c5cf5db6afd52d2a361a88a731db964",
+      "queue_sha256": "a426b6e8dd5a1aca637a1f0669ef551a1ff1d5452c3ccdc0bd640d62eebbdfed",
+      "rows": 500,
+      "target_id_set_sha256": "39d8cba8141ddf00cf7ab0b234b997d67c5cf5db6afd52d2a361a88a731db964",
+      "unique_target_ids": 500
+    }
+  },
+  "schedule_check_passed": false,
+  "start_offsets_minutes": {
+    "lane_1": 0,
+    "lane_2": 8,
+    "lane_3": 16,
+    "lane_4": 24
+  },
+  "task_id": "TARGETED-SCOUTING-FOUR-LANE-STAGGERED-LIVE-RUN-FROM-PREP-2026-07-25"
+}

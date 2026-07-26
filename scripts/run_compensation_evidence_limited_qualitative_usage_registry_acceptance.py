@@ -196,6 +196,7 @@ def validate_dashboard_state(calibration: dict[str, Any], readiness: dict[str, A
         "compensation_extraction_gabriel_claim_rating_summary_review_636_completed_provisional_claim_review_allowed",
         "compensation_extraction_provisional_claim_review_636_completed_targeted_scouting_restart_recommended",
         "targeted_scouting_four_lane_prep_dry_run_completed_lane_1_live_ready",
+        "targeted_scouting_four_lane_staggered_live_preflight_failed_repair_required",
     }
     if calibration.get("calibration_phase") not in allowed_phases:
         raise RuntimeError("Dashboard phase is inconsistent with registry acceptance")
@@ -213,6 +214,7 @@ def validate_dashboard_state(calibration: dict[str, Any], readiness: dict[str, A
         "gabriel_claim_rating_summary_review_636_completed_provisional_claim_review_allowed_global_analysis_closed",
         "provisional_claim_review_636_completed_targeted_scouting_restart_recommended_global_analysis_closed",
         "targeted_scouting_four_lane_prep_dry_run_completed_lane_1_live_ready_global_analysis_closed",
+        "targeted_scouting_four_lane_staggered_live_preflight_failed_repair_required_global_analysis_closed",
     }
     if readiness.get("overall_status") not in allowed_overall:
         raise RuntimeError("Dashboard overall registry-acceptance state is inconsistent")

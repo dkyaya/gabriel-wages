@@ -230,7 +230,10 @@ class DashboardTests(unittest.TestCase):
         _, decision = dashboard.targeted_scouting_four_lane_prep_status(); self.assertFalse(decision["global_analysis_readiness"])
     def test_dashboard_json_global_closed(self):
         readiness = runner.read_json(ROOT / "docs/dashboard/data/analysis_readiness.json")
-        self.assertEqual(readiness["overall_status"], "targeted_scouting_four_lane_prep_dry_run_completed_lane_1_live_ready_global_analysis_closed")
+        self.assertIn(readiness["overall_status"], {
+            "targeted_scouting_four_lane_prep_dry_run_completed_lane_1_live_ready_global_analysis_closed",
+            "targeted_scouting_four_lane_staggered_live_preflight_failed_repair_required_global_analysis_closed",
+        })
         self.assertNotIn('"global_analysis_readiness": true', json.dumps(readiness, sort_keys=True).casefold())
 
 

@@ -1,0 +1,15 @@
+{
+  "candidate_duplicate_count": 0,
+  "candidate_merge_count": 0,
+  "duplicate_risk_counts": {
+    "low": 1828,
+    "medium": 172
+  },
+  "locked_target_rows": 2000,
+  "prior_seen_status_counts": {
+    "known_safety_row_counterpart_target_not_satisfied": 7,
+    "municipality_and_non_safety_lead_seen_mechanism_target_is_new": 172,
+    "municipality_seen_safety_lead_target_unit_not_seen": 321,
+    "not_seen_in_consolidated_prior_scout_or_candidate_ledgers": 1500
+  }
+}

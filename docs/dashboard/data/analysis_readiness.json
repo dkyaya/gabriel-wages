@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": "0.1.0",
-    "generated_at": "2026-07-26T20:43:28Z",
+    "generated_at": "2026-07-26T21:03:55Z",
     "data_vintage": "2026-07-23",
     "source_files": [
       "docs/analysis/national_scout_coverage_state.csv",
@@ -82,7 +82,7 @@
       "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
     ]
   },
-  "overall_status": "targeted_scouting_four_lane_prep_dry_run_completed_lane_1_live_ready_global_analysis_closed",
+  "overall_status": "targeted_scouting_four_lane_staggered_live_preflight_failed_repair_required_global_analysis_closed",
   "current_inputs": {
     "national_queue_available": true,
     "national_coverage_available": true,
@@ -263,6 +263,11 @@
       "targeted_scouting_four_lane_prep_decision": "targeted_scouting_four_lane_prep_dry_run_completed_lane_1_live_ready",
       "targeted_scouting_four_lane_master_queue_rows": 2000,
       "targeted_scouting_lane_1_live_ready": true,
+      "targeted_scouting_four_lane_staggered_live_preflight_failed": true,
+      "targeted_scouting_four_lane_staggered_live_decision": "targeted_scouting_four_lane_staggered_live_preflight_failed",
+      "targeted_scouting_four_lane_live_calls": 0,
+      "targeted_scouting_four_lane_candidate_sources": 0,
+      "targeted_scouting_four_lane_repair_required": true,
       "gabriel_claim_rating_global_analysis_readiness": false,
       "limited_qualitative_usage_registry_review_global_analysis_readiness": false,
       "limited_qualitative_usage_layer_acceptance_global_analysis_readiness": false,

@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "targeted_scouting_four_lane_staggered_live_preflight_failed_repair_required"
+              ? "Four-lane live preflight failed closed; scheduling contract repair is required"
+              : textTableCalibrationStatus.calibration_phase ===
             "targeted_scouting_four_lane_prep_dry_run_completed_lane_1_live_ready"
               ? "Four-lane targeted scouting dry prep complete; Lane 1 is ready for separate live authorization"
               : textTableCalibrationStatus.calibration_phase ===
@@ -894,6 +897,17 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "targeted_scouting_four_lane_staggered_live_preflight_failed_repair_required" ? (
+            <>
+              All four immutable 500-target queues and lock hashes passed, but no
+              hosted search started. Exact T+0/T+8/T+16/T+24 starts conflict with
+              the simultaneous-lane prohibition for the established sequential
+              one-request-per-target scout. The next authorization must choose
+              either completion-gated sequential lanes or explicitly permitted
+              staggered overlap. Candidate sources remain zero and global analysis
+              readiness remains closed.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "targeted_scouting_four_lane_prep_dry_run_completed_lane_1_live_ready" ? (
             <>
               Four candidate-only scouting lanes of 500 targets each passed

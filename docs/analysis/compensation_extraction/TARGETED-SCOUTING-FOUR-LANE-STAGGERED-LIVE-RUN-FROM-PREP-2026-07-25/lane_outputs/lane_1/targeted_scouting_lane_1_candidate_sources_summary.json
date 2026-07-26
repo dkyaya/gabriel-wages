@@ -1,0 +1,8 @@
+{
+  "candidate_source_count": 0,
+  "failure_code": "fixed_stagger_conflicts_with_no_simultaneous_lane_execution",
+  "lane_id": "lane_1",
+  "live_attempted": false,
+  "locked_target_count": 500,
+  "status": "not_started_preflight_failed"
+}

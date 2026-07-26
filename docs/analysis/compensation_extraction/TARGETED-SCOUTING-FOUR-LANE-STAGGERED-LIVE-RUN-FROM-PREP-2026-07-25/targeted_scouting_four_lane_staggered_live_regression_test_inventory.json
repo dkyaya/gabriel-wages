@@ -1,0 +1,14 @@
+{
+  "expected_tests": 62,
+  "focus": [
+    "immutable queue hashes",
+    "exact 500-row lane scopes",
+    "exact stagger metadata",
+    "no lane overlap contract",
+    "zero live calls after failed preflight",
+    "candidate-only status",
+    "partial-output fail closed",
+    "dashboard global readiness false"
+  ],
+  "suite": "scripts/test_targeted_scouting_four_lane_staggered_live.py"
+}

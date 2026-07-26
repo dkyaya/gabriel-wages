@@ -1045,6 +1045,23 @@ TARGETED_SCOUTING_FOUR_LANE_PREP_SUMMARY_PATH = (
 TARGETED_SCOUTING_FOUR_LANE_PREP_INVARIANTS_PATH = (
     TARGETED_SCOUTING_FOUR_LANE_PREP_DIR / "targeted_scouting_four_lane_prep_invariant_checks.json"
 )
+TARGETED_SCOUTING_FOUR_LANE_STAGGERED_LIVE_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "TARGETED-SCOUTING-FOUR-LANE-STAGGERED-LIVE-RUN-FROM-PREP-2026-07-25"
+)
+TARGETED_SCOUTING_FOUR_LANE_STAGGERED_LIVE_DECISION_PATH = (
+    TARGETED_SCOUTING_FOUR_LANE_STAGGERED_LIVE_DIR
+    / "targeted_scouting_four_lane_staggered_live_decision.json"
+)
+TARGETED_SCOUTING_FOUR_LANE_STAGGERED_LIVE_PREFLIGHT_PATH = (
+    TARGETED_SCOUTING_FOUR_LANE_STAGGERED_LIVE_DIR
+    / "targeted_scouting_four_lane_staggered_live_preflight_checks.json"
+)
+TARGETED_SCOUTING_FOUR_LANE_STAGGERED_LIVE_INVARIANTS_PATH = (
+    TARGETED_SCOUTING_FOUR_LANE_STAGGERED_LIVE_DIR
+    / "targeted_scouting_four_lane_staggered_live_invariant_checks.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -2840,6 +2857,50 @@ def targeted_scouting_four_lane_prep_status() -> tuple[bool, dict[str, Any]]:
     return True, decision
 
 
+def targeted_scouting_four_lane_staggered_live_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize only the complete, no-call, fail-closed preflight package."""
+    required = (
+        TARGETED_SCOUTING_FOUR_LANE_STAGGERED_LIVE_DECISION_PATH,
+        TARGETED_SCOUTING_FOUR_LANE_STAGGERED_LIVE_PREFLIGHT_PATH,
+        TARGETED_SCOUTING_FOUR_LANE_STAGGERED_LIVE_INVARIANTS_PATH,
+        TARGETED_SCOUTING_FOUR_LANE_STAGGERED_LIVE_DIR
+        / "targeted_scouting_four_lane_staggered_live_preflight_report.md",
+        TARGETED_SCOUTING_FOUR_LANE_STAGGERED_LIVE_DIR
+        / "next_targeted_scouting_four_lane_repair_prompt.md",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    decision = read_json(TARGETED_SCOUTING_FOUR_LANE_STAGGERED_LIVE_DECISION_PATH)
+    preflight = read_json(TARGETED_SCOUTING_FOUR_LANE_STAGGERED_LIVE_PREFLIGHT_PATH)
+    invariants = read_json(TARGETED_SCOUTING_FOUR_LANE_STAGGERED_LIVE_INVARIANTS_PATH)
+    if not (
+        decision.get("task_id")
+        == "TARGETED-SCOUTING-FOUR-LANE-STAGGERED-LIVE-RUN-FROM-PREP-2026-07-25"
+        and decision.get("decision")
+        == "targeted_scouting_four_lane_staggered_live_preflight_failed"
+        and decision.get("completion_status") == "preflight_failed_no_live_execution"
+        and decision.get("locked_target_count") == 2000
+        and decision.get("lane_counts")
+        == {"lane_1": 500, "lane_2": 500, "lane_3": 500, "lane_4": 500}
+        and decision.get("live_hosted_search_ran") is False
+        and decision.get("model_backed_scouting_ran") is False
+        and decision.get("lane_runs_completed") == 0
+        and decision.get("candidate_source_count") == 0
+        and decision.get("candidate_review_ready") is False
+        and decision.get("repair_required") is True
+        and decision.get("global_analysis_readiness") is False
+        and preflight.get("all_input_integrity_checks_passed") is True
+        and preflight.get("schedule_check_passed") is False
+        and preflight.get("preflight_passed") is False
+        and preflight.get("hosted_search_calls") == 0
+        and preflight.get("model_api_calls") == 0
+        and invariants.get("all_invariants_passed") is True
+        and invariants.get("partial_outputs_cannot_masquerade_as_complete") is True
+    ):
+        raise ValueError("targeted scouting four-lane live preflight failure fails dashboard gates")
+    return True, decision
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -3574,6 +3635,10 @@ def build_analysis_readiness(
         targeted_scouting_four_lane_prep_completed,
         targeted_scouting_four_lane_prep_decision,
     ) = targeted_scouting_four_lane_prep_status()
+    (
+        targeted_scouting_four_lane_staggered_live_completed,
+        targeted_scouting_four_lane_staggered_live_decision,
+    ) = targeted_scouting_four_lane_staggered_live_status()
     if scale_1000_targeted_qa_completed and (
         scale_1000_targeted_qa_decision.get("qa_pass") is not True
         or scale_1000_targeted_qa_decision.get(
@@ -3620,6 +3685,9 @@ def build_analysis_readiness(
     return {
         "metadata": metadata,
         "overall_status": (
+            "targeted_scouting_four_lane_staggered_live_preflight_failed_repair_required_global_analysis_closed"
+            if targeted_scouting_four_lane_staggered_live_completed
+            else
             "targeted_scouting_four_lane_prep_dry_run_completed_lane_1_live_ready_global_analysis_closed"
             if targeted_scouting_four_lane_prep_completed
             else
@@ -4263,6 +4331,17 @@ def build_analysis_readiness(
                 "targeted_scouting_lane_1_live_ready": (
                     bool(targeted_scouting_four_lane_prep_decision.get("lane_1_live_ready_next", False))
                     if targeted_scouting_four_lane_prep_completed else False
+                ),
+                "targeted_scouting_four_lane_staggered_live_preflight_failed": targeted_scouting_four_lane_staggered_live_completed,
+                "targeted_scouting_four_lane_staggered_live_decision": (
+                    targeted_scouting_four_lane_staggered_live_decision.get("decision")
+                    if targeted_scouting_four_lane_staggered_live_completed else None
+                ),
+                "targeted_scouting_four_lane_live_calls": 0,
+                "targeted_scouting_four_lane_candidate_sources": 0,
+                "targeted_scouting_four_lane_repair_required": (
+                    bool(targeted_scouting_four_lane_staggered_live_decision.get("repair_required", False))
+                    if targeted_scouting_four_lane_staggered_live_completed else False
                 ),
                 "gabriel_claim_rating_global_analysis_readiness": False,
                 "limited_qualitative_usage_registry_review_global_analysis_readiness": False,
@@ -8175,9 +8254,16 @@ def build_text_table_calibration_status_summary(
             targeted_scouting_four_lane_prep_completed,
             targeted_scouting_four_lane_prep_decision,
         ) = targeted_scouting_four_lane_prep_status()
+        (
+            targeted_scouting_four_lane_staggered_live_completed,
+            targeted_scouting_four_lane_staggered_live_decision,
+        ) = targeted_scouting_four_lane_staggered_live_status()
         return {
             **metadata,
             "calibration_phase": (
+                "targeted_scouting_four_lane_staggered_live_preflight_failed_repair_required"
+                if targeted_scouting_four_lane_staggered_live_completed
+                else
                 "targeted_scouting_four_lane_prep_dry_run_completed_lane_1_live_ready"
                 if targeted_scouting_four_lane_prep_completed
                 else
@@ -9352,6 +9438,21 @@ def build_text_table_calibration_status_summary(
             "targeted_scouting_lane_1_live_ready": (
                 bool(targeted_scouting_four_lane_prep_decision.get("lane_1_live_ready_next", False))
                 if targeted_scouting_four_lane_prep_completed else False
+            ),
+            "targeted_scouting_four_lane_staggered_live_preflight_failed": targeted_scouting_four_lane_staggered_live_completed,
+            "targeted_scouting_four_lane_staggered_live_decision": (
+                targeted_scouting_four_lane_staggered_live_decision.get("decision")
+                if targeted_scouting_four_lane_staggered_live_completed else None
+            ),
+            "targeted_scouting_four_lane_staggered_live_path": (
+                relative(TARGETED_SCOUTING_FOUR_LANE_STAGGERED_LIVE_DIR)
+                if targeted_scouting_four_lane_staggered_live_completed else None
+            ),
+            "targeted_scouting_four_lane_live_calls": 0,
+            "targeted_scouting_four_lane_candidate_sources": 0,
+            "targeted_scouting_four_lane_repair_required": (
+                bool(targeted_scouting_four_lane_staggered_live_decision.get("repair_required", False))
+                if targeted_scouting_four_lane_staggered_live_completed else False
             ),
             "gabriel_claim_rating_global_analysis_readiness": False,
             "limited_qualitative_usage_registry_review_global_analysis_readiness": False,
