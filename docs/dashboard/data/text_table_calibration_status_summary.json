@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-26T04:00:54Z",
+  "generated_at": "2026-07-26T04:36:10Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -80,7 +80,7 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "calibration_phase": "compensation_extraction_final_provisional_package_materialized_qa_pass",
+  "calibration_phase": "compensation_extraction_final_provisional_schema_readiness_review_completed_hold",
   "latest_calibration_id": "TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24",
   "latest_calibration_review_id": "TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24",
   "latest_adjudication_prep_id": "TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24",
@@ -146,7 +146,7 @@
   "compensation_extraction_1000_conflict_group_count": 82,
   "compensation_extraction_1000_unresolved_conflict_rate": 0.00164745,
   "compensation_extraction_1000_base_nonbase_contamination_count": 0,
-  "scale_beyond_1000_recommendation": "separate_schema_and_analysis_readiness_review",
+  "scale_beyond_1000_recommendation": "run_separately_authorized_schema_repair_prompt_then_repeat_analysis_readiness_review",
   "remaining_readable_parse_text_extraction_allowed": false,
   "remaining_parse_text_selection_count": 826,
   "remaining_parse_text_unique_hash_count": 826,
@@ -187,6 +187,10 @@
   "final_provisional_package_materialized": true,
   "final_provisional_package_path": "docs/analysis/compensation_extraction/COMPENSATION-EVIDENCE-FINAL-PROVISIONAL-MERGE-2026-07-25",
   "final_provisional_merge_allowed": false,
+  "final_provisional_schema_readiness_review_completed": true,
+  "final_provisional_schema_readiness_decision": "schema_readiness_hold_schema_repairs_required",
+  "final_provisional_schema_readiness_review_path": "docs/analysis/compensation_extraction/COMPENSATION-EVIDENCE-FINAL-PROVISIONAL-PACKAGE-SCHEMA-READINESS-REVIEW-2026-07-25",
+  "analysis_facing_promotion_allowed": false,
   "prior_auto_adjudication_gate_id": "TEXT-TABLE-AUTO-GABRIEL-GATE2-REFINEMENT-2026-07-25",
   "auto_adjudication_method": "automated_bounded_rendered_image_plus_text_layout_gabriel_compensation_evidence_adjudication",
   "auto_gate_case_count": 150,
@@ -309,15 +313,15 @@
   "visual_qa_exact_gate_agreement_rate": 0.444444,
   "likely_signal_visual_confirmation_rate": 0.7625,
   "wrong_page_rate": 0.0,
-  "extraction_decision": "final_provisional_package_materialized_qa_pass",
+  "extraction_decision": "schema_readiness_hold_schema_repairs_required",
   "five_hundred_doc_extraction_allowed": false,
   "smaller_extraction_pilot_allowed": false,
   "five_hundred_doc_compensation_extraction_allowed": true,
   "smaller_compensation_extraction_pilot_allowed": false,
-  "next_recommendation": "separate_schema_and_analysis_readiness_review",
+  "next_recommendation": "run_separately_authorized_schema_repair_prompt_then_repeat_analysis_readiness_review",
   "manual_review_status": "packet_prepared_not_reviewed",
-  "wage_extraction_status": "final_provisional_package_materialized_qa_pass_not_analysis_ready",
-  "qualitative_extraction_status": "final_provisional_package_materialized_qa_pass_not_analysis_ready",
+  "wage_extraction_status": "final_provisional_schema_readiness_hold_repairs_required",
+  "qualitative_extraction_status": "final_provisional_schema_readiness_hold_repairs_required",
   "ingestion_status": "not_started",
   "codify_status": "not_started",
   "wage_gap_analysis_status": "not_started",
@@ -334,10 +338,10 @@
   "adjudication_rendered_page_count": 785,
   "adjudication_rendered_bytes": 106889932,
   "caveats": [
-    "The final provisional package contains five separate byte-identical ledgers; it is not a final analysis dataset.",
-    "All 1,826 unique readable parse-text identities remain covered; OCR-later documents remain excluded.",
-    "Both residual groups remain explicitly unresolved at a 0.1049 percent rate, with 14 duplicate-provenance rows and five newly canonicalized duplicate observations preserved.",
-    "Duplicate observation IDs, invalid bounded page pointers, and base/non-base contamination remain zero.",
-    "No GABRIEL/API call, extraction, selection, URL access, download, OCR, ingestion, codification, wage-gap calculation, regression, or causal analysis occurred; analysis readiness remains false."
+    "Schema readiness review held analysis-facing promotion even though immutable package integrity remains passed.",
+    "Critical blockers are missing raw retained hashes, matched city-unit-cycle/occupation keys, non-normalized quantitative values and dates, duplicate non-base lineage headers, and incomplete self-contained provenance.",
+    "All 371 active mixed joins validate, but 50 active qualitative rows retain inactive mixed keys and 20 retain five missing historical keys; these require explicit derived membership semantics.",
+    "Both residual groups remain explicitly unresolved and must be quarantined from future analysis views without changing provisional rows.",
+    "Non-base compensation remains a separate companion lane; analysis readiness, promotion, ingestion, codification, wage-gap analysis, regression, and causal analysis remain closed."
   ]
 }

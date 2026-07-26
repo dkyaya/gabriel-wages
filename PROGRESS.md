@@ -6,6 +6,33 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-26 (Final provisional schema readiness held for lossless repairs)
+
+**Did**
+- Started from clean tracked `02a239d8b8529a27258b127d4fd49f304b0da989`, preserving the unrelated untracked rendered-page directory and root `package-lock.json`.
+- Added a read-only schema/join auditor and 11 focused offline tests. Reverified all five package hashes/counts without changing the package or any corrected/durable ledger.
+- Audited required identifiers, field completeness, active/inactive semantics, mixed membership, duplicate/canonical provenance, non-base routing, reference/exclusion semantics, and both residual conflicts.
+- Confirmed all 371 active mixed rows have valid counts/members/cases/keys, all common row IDs and observation pointers are complete for the quantitative/qualitative/non-base lanes, duplicate IDs remain zero, and 14 duplicate-provenance rows plus five canonicalizations remain intact.
+- Produced the review report, readiness decision, blocker matrix, join/provenance audit, validation record, result/status docs, and a future lossless schema-repair prompt.
+- Updated dashboard generation/data/frontend/docs, handoff, and `next_task.md` to show `compensation_extraction_final_provisional_schema_readiness_review_completed_hold` with analysis readiness false.
+
+**Decisions and why**
+- Decision is `schema_readiness_hold_schema_repairs_required`. Package integrity passes, but analytical identity, value normalization, time/cycle/matching, provenance, current-status, and mixed-history contracts are not sufficient for promotion.
+- The 4,733 active non-base observations remain a companion dataset, never a default base-wage input. The two residual groups remain unchanged and must be quarantined from future analysis views.
+- The next task is a separately authorized, nonmutating schema repair followed by another readiness review; no automatic promotion is permitted.
+
+**Surprises/breakage**
+- The non-base CSV repeats two provenance header names. Both copies currently agree on every row, so the issue is losslessly repairable, but common dictionary readers can silently overwrite one occurrence.
+- All active mixed rows validate, but 50 active qualitative rows retain keys to 16 inactive mixed rows and 20 rows retain five absent historical keys. These are provenance references and require an explicit derived membership status.
+- Contract-period fields are blank on every active quantitative, qualitative, and non-base row; raw retained hashes, matched-set/cycle IDs, and controlled occupation classes are absent from the lane schemas.
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Eleven focused review tests, five hash checks, dashboard generation/frontend build, repository validation, 60 ingestion tests, coverage audit, protected-input checks, secret scan, and diff hygiene passed.
+
+**Next steps**
+1. Obtain separate authorization before running the prepared lossless schema-repair prompt.
+2. Preserve raw values/rows and add validated identity, provenance, matching, parsing, active-status, membership-status, and quarantine views.
+3. Keep package mutation, OCR, extraction, ingestion, codification, analysis datasets, wage gaps, regressions, and causal claims closed.
+
 ## 2026-07-25 (Final provisional compensation package materialized; analysis closed)
 
 **Did**

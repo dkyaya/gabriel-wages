@@ -1,0 +1,60 @@
+{
+  "task_id": "COMPENSATION-EVIDENCE-FINAL-PROVISIONAL-PACKAGE-SCHEMA-READINESS-REVIEW-2026-07-25",
+  "review_method": "read_only_schema_join_provenance_audit",
+  "package_decision": "final_provisional_package_materialized_qa_pass",
+  "schema_readiness_decision": "schema_readiness_hold_schema_repairs_required",
+  "package_integrity_pass": true,
+  "schema_readiness_pass": false,
+  "final_analysis_ready": false,
+  "analysis_facing_promotion_allowed": false,
+  "schema_repair_prompt_created": true,
+  "future_prompt": "next_schema_repair_prompt.md",
+  "approved_next_action": "separately_authorized_nonmutating_schema_repair_and_analysis_view_preparation",
+  "five_ledger_sha256_checks_passed": 5,
+  "five_ledger_sha256_checks_required": 5,
+  "input_output_hash_sets_match": true,
+  "package_ledgers_modified": false,
+  "schemas_remain_separate": true,
+  "case_count": 1826,
+  "active_row_counts": {
+    "quantitative": 1907,
+    "qualitative": 1954,
+    "mixed": 371,
+    "non_base_wage": 4733,
+    "reference_and_exclusion": 345
+  },
+  "critical_blocker_ids": [
+    "B01",
+    "B02",
+    "B03",
+    "B04",
+    "B10"
+  ],
+  "major_blocker_ids": [
+    "B05",
+    "B06",
+    "B07",
+    "B09"
+  ],
+  "quarantine_blocker_ids": [
+    "B08"
+  ],
+  "mixed_join_integrity_pass": true,
+  "active_mixed_join_count": 371,
+  "active_qualitative_rows_referencing_inactive_mixed_rows": 50,
+  "active_qualitative_rows_referencing_missing_historical_mixed_keys": 20,
+  "unique_missing_historical_mixed_keys": 5,
+  "duplicate_observation_id_count": 0,
+  "duplicate_provenance_row_count": 14,
+  "newly_canonicalized_duplicate_count": 5,
+  "unresolved_conflict_group_count": 2,
+  "unresolved_conflict_treatment": "quarantine_from_future_analysis_views_preserve_in_provisional_and_exception_tables",
+  "non_base_wage_treatment": "retain_as_separate_companion_dataset_not_base_wage_input",
+  "ocr_later_documents_included": false,
+  "ingestion_allowed": false,
+  "codify_allowed": false,
+  "wage_gap_analysis_allowed": false,
+  "regression_allowed": false,
+  "causal_analysis_allowed": false,
+  "next_recommendation": "run_separately_authorized_schema_repair_prompt_then_repeat_analysis_readiness_review"
+}

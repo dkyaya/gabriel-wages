@@ -1,21 +1,23 @@
-# Next task: separate schema and analysis-readiness review
+# Next task: lossless provisional schema repair
 
-The final provisional package has been materialized and passed its package
-integrity gates at:
+The final package schema review decision is
+`schema_readiness_hold_schema_repairs_required`. Package integrity passed, but
+analysis-facing promotion remains blocked.
 
-`docs/analysis/compensation_extraction/COMPENSATION-EVIDENCE-FINAL-PROVISIONAL-MERGE-2026-07-25/`
+The next task requires separate explicit authorization and must follow:
 
-The next task should independently review whether the five still-separate
-provisional schemas are suitable for a future analysis-facing promotion. It
-should inspect schema contracts, join cardinality, provisional/inactive-row
-handling, duplicate/canonical semantics, the two explicit unresolved groups,
-and safe treatment of non-base compensation. It must issue an explicit
-analysis-readiness decision rather than assuming that package QA implies
-analytic validity.
+`docs/analysis/compensation_extraction/COMPENSATION-EVIDENCE-FINAL-PROVISIONAL-PACKAGE-SCHEMA-READINESS-REVIEW-2026-07-25/next_schema_repair_prompt.md`
 
-Do not ingest or run `gabriel.codify` during that review. Do not create a final
-analysis dataset, calculate wage gaps, run regressions, or make causal claims.
-Keep OCR-later documents untouched. URLs, downloads, OCR, new extraction,
-document selection, GABRIEL/API, scouts, source review, verification, and
-mutation of the provisional package or its corrected source ledgers remain
-prohibited unless separately authorized by a later task.
+The repair must be nonmutating and rollback-safe. It should create unique
+non-base lineage columns, deterministic content-hash/provenance and matched
+city-unit-cycle bridges, raw-versus-normalized quantitative value contracts,
+one derived current-active/current-QA contract, explicit mixed membership
+statuses, and exception/quarantine views. It must preserve every original
+row, raw value, ID, inactive record, canonical link, duplicate-provenance row,
+bounded pointer, and both unresolved conflict groups.
+
+Do not ingest, run `gabriel.codify`, create an analysis-facing dataset,
+calculate wage gaps, run regressions, or make causal claims. Keep OCR-later
+documents untouched. URLs, downloads, OCR, extraction, selection,
+GABRIEL/API, scouts, source review, verification, and mutation of the package
+or durable ledgers remain prohibited.

@@ -1,0 +1,79 @@
+{
+  "task_id": "COMPENSATION-EVIDENCE-FINAL-PROVISIONAL-PACKAGE-SCHEMA-READINESS-REVIEW-2026-07-25",
+  "audit_result": "join_integrity_pass_provenance_and_analysis_view_repairs_required",
+  "package_ledgers_modified": false,
+  "hash_verification": {
+    "ledgers_checked": 5,
+    "ledgers_passed": 5,
+    "input_output_hash_sets_match": true
+  },
+  "row_reconciliation": {
+    "quantitative": {"source": 2044, "active": 1907, "inactive": 137},
+    "qualitative": {"source": 1954, "active": 1954, "inactive": 0},
+    "mixed": {"source": 387, "active": 371, "inactive": 16},
+    "non_base_wage": {"source": 4746, "active": 4733, "inactive": 13},
+    "reference_and_exclusion": {"source": 345, "active": 345, "inactive": 0}
+  },
+  "identity_audit": {
+    "unique_document_identity_count": 1826,
+    "case_index_row_count": 1826,
+    "document_metadata_inconsistency_count": 0,
+    "case_to_multiple_document_identity_count": 0,
+    "raw_retained_content_hash_present": false,
+    "opaque_hash_derived_identity_count": 1826,
+    "matched_set_id_present": false,
+    "negotiation_cycle_id_present": false,
+    "controlled_occupation_class_present": false
+  },
+  "active_identifier_completeness": {
+    "quantitative": "1907/1907 common IDs and bounded pointers",
+    "qualitative": "1954/1954 common IDs and bounded pointers",
+    "mixed": "371/371 common IDs; evidence pointers inherited through members",
+    "non_base_wage": "4733/4733 common IDs and bounded pointers",
+    "reference_and_exclusion": "345/345 common IDs; 314/345 bounded pointers"
+  },
+  "mixed_join_audit": {
+    "active_join_rows": 371,
+    "declared_member_count_mismatches": 0,
+    "missing_active_join_members": 0,
+    "inactive_members_in_active_joins": 0,
+    "case_id_mismatches": 0,
+    "member_join_key_mismatches": 0,
+    "active_quantitative_rows_referencing_inactive_mixed_rows": 0,
+    "active_quantitative_rows_referencing_missing_mixed_keys": 0,
+    "active_qualitative_rows_referencing_inactive_mixed_rows": 50,
+    "inactive_mixed_keys_referenced_by_active_qualitative_rows": 16,
+    "active_qualitative_rows_referencing_missing_historical_mixed_keys": 20,
+    "unique_missing_historical_mixed_keys": 5,
+    "interpretation": "active mixed joins are valid; non-active and missing keys in qualitative rows are historical provenance and require an explicit derived membership status"
+  },
+  "duplicate_and_canonical_audit": {
+    "duplicate_observation_id_count": 0,
+    "duplicate_provenance_row_count": 14,
+    "newly_canonicalized_duplicate_count": 5,
+    "canonical_links_preserved": true
+  },
+  "non_base_lineage_header_audit": {
+    "duplicate_header_names": {
+      "source_quantitative_observation_id": 2,
+      "source_mixed_join_key": 2
+    },
+    "source_quantitative_observation_id_populated_rows_per_copy": 134,
+    "source_mixed_join_key_populated_rows_per_copy": 85,
+    "value_disagreement_count": 0,
+    "status": "lossless_repair_possible_but_required_before_analysis_reader_use"
+  },
+  "unresolved_conflict_audit": {
+    "group_count": 2,
+    "member_observation_count": 5,
+    "resolution_ids": [
+      "qares1826_98591102083229343fecc71f",
+      "qares1826_3dded7aaf73536d0a8f5842f"
+    ],
+    "all_members_remain_active": true,
+    "treatment": "quarantine_from_analysis_views_preserve_rows_and_conflict_register"
+  },
+  "non_base_treatment": "separate_companion_dataset_not_base_wage_input",
+  "reference_exclusion_treatment": "audit_and_control_dataset_not_outcome_input",
+  "analysis_readiness": false
+}

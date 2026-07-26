@@ -66,6 +66,23 @@ extraction nor a smaller pilot is authorized. GABRIEL saw bounded page
 packets only; no final wage values, URLs/downloads, OCR, extraction,
 ingestion, codification, or wage-gap analysis occurred.
 
+## Final provisional schema readiness — 2026-07-26
+
+The immutable five-ledger provisional package remains integrity-valid, but a
+separate schema review held analysis-facing promotion. Five hashes and counts
+still pass, all 371 active mixed joins validate, duplicate provenance remains
+preserved, and the two residual groups remain explicit. Analysis readiness is
+still false.
+
+Critical repairs are needed before promotion: raw retained hashes,
+city-unit-cycle/matched-set and controlled occupation keys, normalized
+quantitative value/date semantics, unique non-base lineage headers, and
+self-contained provenance. Fifty qualitative rows retain keys to inactive
+mixed rows and 20 retain five missing historical keys; these must receive
+explicit historical membership status. Non-base compensation remains a
+separate companion lane. The next permitted action is a separately authorized
+lossless schema-repair task, not ingestion, codification, or analysis.
+
 ## Hub sections
 
 The dashboard is organized around what has been collected, what is current, and what is forthcoming:

@@ -565,6 +565,27 @@ COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_MERGE_LEDGER_PATHS = (
     COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_MERGE_DIR
     / "ledgers/reference_and_exclusion/final_provisional_reference_exclusion_ledger.csv",
 )
+COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_SCHEMA_REVIEW_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "COMPENSATION-EVIDENCE-FINAL-PROVISIONAL-PACKAGE-SCHEMA-READINESS-REVIEW-2026-07-25"
+)
+COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_SCHEMA_REVIEW_DECISION_PATH = (
+    COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_SCHEMA_REVIEW_DIR
+    / "compensation_evidence_analysis_readiness_decision.json"
+)
+COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_SCHEMA_REVIEW_AUDIT_PATH = (
+    COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_SCHEMA_REVIEW_DIR
+    / "compensation_evidence_join_provenance_audit.json"
+)
+COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_SCHEMA_REVIEW_BLOCKERS_PATH = (
+    COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_SCHEMA_REVIEW_DIR
+    / "compensation_evidence_analysis_readiness_blocker_matrix.csv"
+)
+COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_SCHEMA_REPAIR_PROMPT_PATH = (
+    COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_SCHEMA_REVIEW_DIR
+    / "next_schema_repair_prompt.md"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -857,6 +878,46 @@ def final_provisional_package_status() -> tuple[bool, dict[str, Any], dict[str, 
     ):
         raise ValueError("final provisional package fails dashboard gates")
     return True, decision, manifest
+
+
+def final_provisional_schema_review_status() -> tuple[bool, dict[str, Any]]:
+    required = (
+        COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_SCHEMA_REVIEW_DECISION_PATH,
+        COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_SCHEMA_REVIEW_AUDIT_PATH,
+        COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_SCHEMA_REVIEW_BLOCKERS_PATH,
+        COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_SCHEMA_REPAIR_PROMPT_PATH,
+        COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_SCHEMA_REVIEW_DIR
+        / "compensation_evidence_final_provisional_schema_review.md",
+    )
+    completed = all(path.exists() for path in required)
+    if not completed:
+        return False, {}
+    decision = read_json(
+        COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_SCHEMA_REVIEW_DECISION_PATH
+    )
+    if not (
+        decision.get("task_id")
+        == "COMPENSATION-EVIDENCE-FINAL-PROVISIONAL-PACKAGE-SCHEMA-READINESS-REVIEW-2026-07-25"
+        and decision.get("schema_readiness_decision")
+        == "schema_readiness_hold_schema_repairs_required"
+        and decision.get("package_integrity_pass") is True
+        and decision.get("schema_readiness_pass") is False
+        and decision.get("final_analysis_ready") is False
+        and decision.get("analysis_facing_promotion_allowed") is False
+        and decision.get("package_ledgers_modified") is False
+        and decision.get("schemas_remain_separate") is True
+        and int(decision.get("five_ledger_sha256_checks_passed", 0)) == 5
+        and int(decision.get("five_ledger_sha256_checks_required", 0)) == 5
+        and int(decision.get("unresolved_conflict_group_count", 0)) == 2
+        and decision.get("ocr_later_documents_included") is False
+        and decision.get("ingestion_allowed") is False
+        and decision.get("codify_allowed") is False
+        and decision.get("wage_gap_analysis_allowed") is False
+        and decision.get("regression_allowed") is False
+        and decision.get("causal_analysis_allowed") is False
+    ):
+        raise ValueError("final provisional schema review fails dashboard gates")
+    return True, decision
 
 
 def build_reports_index_layer(
@@ -1501,6 +1562,10 @@ def build_analysis_readiness(
         final_package_decision,
         final_package_manifest,
     ) = final_provisional_package_status()
+    (
+        final_schema_review_completed,
+        final_schema_review_decision,
+    ) = final_provisional_schema_review_status()
     if scale_1000_targeted_qa_completed and (
         scale_1000_targeted_qa_decision.get("qa_pass") is not True
         or scale_1000_targeted_qa_decision.get(
@@ -1547,7 +1612,9 @@ def build_analysis_readiness(
     return {
         "metadata": metadata,
         "overall_status": (
-            "final_provisional_package_materialized_qa_pass_analysis_closed"
+            "final_provisional_schema_readiness_hold_repairs_required_analysis_closed"
+            if final_schema_review_completed
+            else "final_provisional_package_materialized_qa_pass_analysis_closed"
             if final_package_materialized
             else "provisional_final_merge_prompt_prepared_not_run_analysis_closed"
             if final_merge_prompt_prepared
@@ -1632,7 +1699,9 @@ def build_analysis_readiness(
             "wage_extraction_stage": {
                 "available": extraction_completed,
                 "display_status": (
-                    "final_provisional_package_materialized_qa_pass_not_analysis_ready"
+                    "final_provisional_schema_readiness_hold_repairs_required"
+                    if final_schema_review_completed
+                    else "final_provisional_package_materialized_qa_pass_not_analysis_ready"
                     if final_package_materialized
                     else "final_provisional_merge_prompt_prepared_not_run_not_analysis_ready"
                     if final_merge_prompt_prepared
@@ -1720,7 +1789,9 @@ def build_analysis_readiness(
                 ),
                 "scale_beyond_1000_recommendation": scale_1000_decision.get(
                     "scale_beyond_1000_recommendation"
-                ) if not scale_1000_targeted_qa_completed else final_package_decision.get(
+                ) if not scale_1000_targeted_qa_completed else final_schema_review_decision.get(
+                    "next_recommendation"
+                ) if final_schema_review_completed else final_package_decision.get(
                     "next_recommendation"
                 ) if final_package_materialized else final_merge_prompt_prep_summary.get(
                     "next_recommendation"
@@ -1774,6 +1845,14 @@ def build_analysis_readiness(
                     final_package_decision.get("decision")
                     if final_package_materialized else None
                 ),
+                "final_provisional_schema_readiness_review_completed": (
+                    final_schema_review_completed
+                ),
+                "final_provisional_schema_readiness_decision": (
+                    final_schema_review_decision.get("schema_readiness_decision")
+                    if final_schema_review_completed else None
+                ),
+                "analysis_facing_promotion_allowed": False,
             },
             "regression_stage": {
                 "available": False,
@@ -5586,10 +5665,16 @@ def build_text_table_calibration_status_summary(
             final_package_decision,
             final_package_manifest,
         ) = final_provisional_package_status()
+        (
+            final_schema_review_completed,
+            final_schema_review_decision,
+        ) = final_provisional_schema_review_status()
         return {
             **metadata,
             "calibration_phase": (
-                "compensation_extraction_final_provisional_package_materialized_qa_pass"
+                "compensation_extraction_final_provisional_schema_readiness_review_completed_hold"
+                if final_schema_review_completed
+                else "compensation_extraction_final_provisional_package_materialized_qa_pass"
                 if final_package_materialized
                 else "compensation_extraction_final_provisional_merge_prompt_prepared"
                 if final_merge_prompt_prepared
@@ -5921,7 +6006,9 @@ def build_text_table_calibration_status_summary(
                 if scale_1000_materialized else None
             ),
             "scale_beyond_1000_recommendation": (
-                final_package_decision.get("next_recommendation")
+                final_schema_review_decision.get("next_recommendation")
+                if final_schema_review_completed
+                else final_package_decision.get("next_recommendation")
                 if final_package_materialized
                 else final_merge_prompt_prep_summary.get("next_recommendation")
                 if final_merge_prompt_prepared
@@ -6095,6 +6182,18 @@ def build_text_table_calibration_status_summary(
                 if final_package_materialized else None
             ),
             "final_provisional_merge_allowed": False,
+            "final_provisional_schema_readiness_review_completed": (
+                final_schema_review_completed
+            ),
+            "final_provisional_schema_readiness_decision": (
+                final_schema_review_decision.get("schema_readiness_decision")
+                if final_schema_review_completed else None
+            ),
+            "final_provisional_schema_readiness_review_path": (
+                relative(COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_SCHEMA_REVIEW_DIR)
+                if final_schema_review_completed else None
+            ),
+            "analysis_facing_promotion_allowed": False,
             "prior_auto_adjudication_gate_id": (
                 "TEXT-TABLE-AUTO-GABRIEL-GATE2-REFINEMENT-2026-07-25"
                 if gate3_completed
@@ -6246,7 +6345,9 @@ def build_text_table_calibration_status_summary(
                 else float(decision["wrong_page_rate"])
             ),
             "extraction_decision": (
-                final_package_decision.get("decision")
+                final_schema_review_decision.get("schema_readiness_decision")
+                if final_schema_review_completed
+                else final_package_decision.get("decision")
                 if final_package_materialized
                 else final_merge_prompt_prep_summary.get("status")
                 if final_merge_prompt_prepared
@@ -6290,7 +6391,9 @@ def build_text_table_calibration_status_summary(
                 else False
             ),
             "next_recommendation": (
-                final_package_decision.get("next_recommendation")
+                final_schema_review_decision.get("next_recommendation")
+                if final_schema_review_completed
+                else final_package_decision.get("next_recommendation")
                 if final_package_materialized
                 else final_merge_prompt_prep_summary.get("next_recommendation")
                 if final_merge_prompt_prepared
@@ -6321,7 +6424,9 @@ def build_text_table_calibration_status_summary(
                 )
             ),
             "wage_extraction_status": (
-                "final_provisional_package_materialized_qa_pass_not_analysis_ready"
+                "final_provisional_schema_readiness_hold_repairs_required"
+                if final_schema_review_completed
+                else "final_provisional_package_materialized_qa_pass_not_analysis_ready"
                 if final_package_materialized
                 else "provisional_final_merge_prompt_prepared_not_run_not_analysis_ready"
                 if final_merge_prompt_prepared
@@ -6343,7 +6448,9 @@ def build_text_table_calibration_status_summary(
                 if extraction_completed else "not_started"
             ),
             "qualitative_extraction_status": (
-                "final_provisional_package_materialized_qa_pass_not_analysis_ready"
+                "final_provisional_schema_readiness_hold_repairs_required"
+                if final_schema_review_completed
+                else "final_provisional_package_materialized_qa_pass_not_analysis_ready"
                 if final_package_materialized
                 else "provisional_final_merge_prompt_prepared_not_run_not_analysis_ready"
                 if final_merge_prompt_prepared
@@ -6428,6 +6535,15 @@ def build_text_table_calibration_status_summary(
                 else 0
             ),
             "caveats": (
+                [
+                    "Schema readiness review held analysis-facing promotion even though immutable package integrity remains passed.",
+                    "Critical blockers are missing raw retained hashes, matched city-unit-cycle/occupation keys, non-normalized quantitative values and dates, duplicate non-base lineage headers, and incomplete self-contained provenance.",
+                    "All 371 active mixed joins validate, but 50 active qualitative rows retain inactive mixed keys and 20 retain five missing historical keys; these require explicit derived membership semantics.",
+                    "Both residual groups remain explicitly unresolved and must be quarantined from future analysis views without changing provisional rows.",
+                    "Non-base compensation remains a separate companion lane; analysis readiness, promotion, ingestion, codification, wage-gap analysis, regression, and causal analysis remain closed.",
+                ]
+                if final_schema_review_completed
+                else
                 [
                     "The final provisional package contains five separate byte-identical ledgers; it is not a final analysis dataset.",
                     "All 1,826 unique readable parse-text identities remain covered; OCR-later documents remain excluded.",

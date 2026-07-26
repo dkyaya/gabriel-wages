@@ -6,6 +6,33 @@ Last updated: `2026-07-25`
 
 ---
 
+## 2026-07-26 — Final provisional schema review held analysis promotion
+
+### Current State
+
+- **Authority/start:** review began at clean tracked `02a239d8b8529a27258b127d4fd49f304b0da989`. It was read-only and did not authorize promotion, ingestion, codification, or analysis.
+- **Integrity:** all five package SHA-256 values and source/active counts still pass; package ledgers and upstream corrected ledgers are unchanged; schemas remain separate.
+- **Decision:** [the readiness decision](compensation_extraction/COMPENSATION-EVIDENCE-FINAL-PROVISIONAL-PACKAGE-SCHEMA-READINESS-REVIEW-2026-07-25/compensation_evidence_analysis_readiness_decision.json) is `schema_readiness_hold_schema_repairs_required`. Analysis readiness and analysis-facing promotion remain false.
+- **Critical gaps:** no raw retained hash, matched-set ID, negotiation-cycle ID, or controlled occupation class in the lanes; contract-period fields are universally blank; numeric fields contain raw ranges/prose/formulas/units; source provenance is not self-contained; non-base lineage headers repeat.
+- **Joins:** all 371 active mixed rows validate. Fifty active qualitative rows retain references to 16 inactive mixed rows, while 20 retain five absent historical keys. Future views must distinguish active membership from historical provenance.
+- **Evidence lanes:** quantitative values require raw-preserving normalization; qualitative mechanisms require a verbatim/QA contract; non-base remains a separate companion dataset; reference/exclusion remains control-only.
+- **Residuals:** both conflict groups remain explicit; their five observations must be quarantined from analysis views without changing provisional rows.
+- **Dashboard:** phase is `compensation_extraction_final_provisional_schema_readiness_review_completed_hold`; analysis readiness remains false.
+- **Boundary:** no GABRIEL/API, extraction, selection, URL/search, download, OCR, scout, source review, verification, ingestion, codification, wage-gap work, regression, causal analysis, fetch, pull, or remote inspection occurred.
+
+### Interpretation
+
+The evidence package is a sound immutable source layer, but not an analysis
+table. Its deficiencies are repairable through deterministic, nonmutating
+schema work where durable metadata supports one-to-one bridges. Missing values
+or verbatim evidence must be quarantined rather than inferred.
+
+### Next Move
+
+Follow [next_task.md](../../next_task.md) only after separate authorization.
+Run the prepared lossless schema-repair prompt, then repeat independent
+analysis-readiness review. Do not ingest, codify, or analyze.
+
 ## 2026-07-25 — Final provisional package materialized; analysis readiness remains false
 
 ### Current State

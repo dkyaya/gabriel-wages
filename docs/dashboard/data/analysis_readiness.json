@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": "0.1.0",
-    "generated_at": "2026-07-26T04:00:54Z",
+    "generated_at": "2026-07-26T04:36:10Z",
     "data_vintage": "2026-07-23",
     "source_files": [
       "docs/analysis/national_scout_coverage_state.csv",
@@ -82,7 +82,7 @@
       "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
     ]
   },
-  "overall_status": "final_provisional_package_materialized_qa_pass_analysis_closed",
+  "overall_status": "final_provisional_schema_readiness_hold_repairs_required_analysis_closed",
   "current_inputs": {
     "national_queue_available": true,
     "national_coverage_available": true,
@@ -139,7 +139,7 @@
     },
     "wage_extraction_stage": {
       "available": true,
-      "display_status": "final_provisional_package_materialized_qa_pass_not_analysis_ready",
+      "display_status": "final_provisional_schema_readiness_hold_repairs_required",
       "observation_count": 1907,
       "qualitative_mechanism_observation_count": 1954,
       "qa_status": "pass",
@@ -149,7 +149,7 @@
       "scale_1000_targeted_qa_completed": true,
       "scale_1000_allowed": false,
       "scale_1000_live_started": true,
-      "scale_beyond_1000_recommendation": "separate_schema_and_analysis_readiness_review",
+      "scale_beyond_1000_recommendation": "run_separately_authorized_schema_repair_prompt_then_repeat_analysis_readiness_review",
       "remaining_readable_parse_text_extraction_allowed": false,
       "remaining_readable_parse_text_live_started": true,
       "remaining_readable_parse_text_schema_valid_case_count": 826,
@@ -161,7 +161,10 @@
       "final_provisional_merge_prompt_prepared": true,
       "final_provisional_merge_ran": true,
       "final_provisional_package_materialized": true,
-      "final_provisional_package_decision": "final_provisional_package_materialized_qa_pass"
+      "final_provisional_package_decision": "final_provisional_package_materialized_qa_pass",
+      "final_provisional_schema_readiness_review_completed": true,
+      "final_provisional_schema_readiness_decision": "schema_readiness_hold_schema_repairs_required",
+      "analysis_facing_promotion_allowed": false
     },
     "regression_stage": {
       "available": false,

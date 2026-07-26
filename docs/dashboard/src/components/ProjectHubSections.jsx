@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "compensation_extraction_final_provisional_schema_readiness_review_completed_hold"
+              ? "Package integrity passed; schema repairs required before analysis promotion"
+              : textTableCalibrationStatus.calibration_phase ===
             "compensation_extraction_final_provisional_package_materialized_qa_pass"
               ? "Final provisional package materialized; analysis remains closed"
               : textTableCalibrationStatus.calibration_phase ===
@@ -819,6 +822,18 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "compensation_extraction_final_provisional_schema_readiness_review_completed_hold" ? (
+            <>
+              The independent schema review preserved all five package ledgers and verified every
+              hash, count, active mixed join, duplicate-provenance row, bounded pointer, and
+              residual conflict. Analysis-facing promotion remains blocked: raw retained hashes,
+              city-unit-cycle matching keys, normalized value/date semantics, unique non-base
+              lineage headers, and self-contained provenance require a lossless schema repair.
+              Non-base compensation remains a companion lane, both residual groups remain
+              quarantined, and analysis readiness, ingestion, codification, wage-gap work, and
+              regression remain false.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "compensation_extraction_final_provisional_package_materialized_qa_pass" ? (
             <>
               The final provisional package now contains five separate ledgers copied
