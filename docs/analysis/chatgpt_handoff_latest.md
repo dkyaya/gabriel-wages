@@ -8615,3 +8615,10 @@ Use the gold set to draft and test exact v10 prompt language against the 11 hand
 ## Next Move
 
 Follow [next_task.md](../../next_task.md) only after separate authorization. The next bounded task may open only the already-retained local readable PDFs at the 1,954 recorded pages to capture short exact spans from the text layer. It must not use OCR, URLs, downloads, GABRIEL/API, new selection, broad extraction, ingestion, codification, promotion, or analysis.
+# 2026-07-26 — Limited exact-span qualitative promotion completed
+
+Decision: `limited_exact_span_qualitative_promotion_complete_limited_usage_review_allowed`.
+
+The new provisional promotion layer retains all 759 exact-span rows with explicit eligibility and quarantine fields. Counts reconcile at 643 limited-use eligible, 116 restricted, 453 exact-cycle, 438 controlled-occupation, 77 exact matched-set, and 56 strict primary matched-design rows. The 614 ambiguous and 581 unavailable rows remain navigation-only; quantitative, non-base, reference/control, and two unresolved groups/five observations remain separate.
+
+Global analysis readiness remains false. The next permissible step is the separately authorized review prompt in the promotion output directory. Do not run analysis, ingestion, codification, wage-gap calculations, regressions, or causal interpretation.

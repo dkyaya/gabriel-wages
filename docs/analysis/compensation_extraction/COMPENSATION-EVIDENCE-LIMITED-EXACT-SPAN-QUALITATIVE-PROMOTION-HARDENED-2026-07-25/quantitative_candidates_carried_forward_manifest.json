@@ -1,0 +1,10 @@
+{
+  "analysis_readiness": false,
+  "candidate_rows": 862,
+  "candidate_sha256": "eac6af7f123162192bd671173e28f32899f90050304053429812cb11bea7952e",
+  "candidate_source": "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages/docs/analysis/compensation_extraction/COMPENSATION-EVIDENCE-QUALITATIVE-EVIDENCE-CONTRACT-FOLLOWUP-2026-07-25/quantitative_analysis_view_candidate_evidence_contract_followup.csv",
+  "exception_rows": 1045,
+  "exception_sha256": "4482409deee67d18ebec4e5a56f4922e9d6d2b067eaa1dcbf7a996d60f97d401",
+  "exception_source": "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages/docs/analysis/compensation_extraction/COMPENSATION-EVIDENCE-QUALITATIVE-EVIDENCE-CONTRACT-FOLLOWUP-2026-07-25/quantitative_exception_ledger_evidence_contract_followup.csv",
+  "separate_from_qualitative_promotion": true
+}

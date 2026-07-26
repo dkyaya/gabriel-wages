@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "compensation_extraction_limited_exact_span_qualitative_promotion_completed_usage_review_allowed"
+              ? "Limited exact-span qualitative layer promoted with explicit restrictions; usage review may proceed"
+              : textTableCalibrationStatus.calibration_phase ===
             "compensation_extraction_pipeline_hardening_complete_limited_promotion_allowed"
               ? "Readiness pipeline hardened; limited qualitative promotion prompt may proceed"
               : textTableCalibrationStatus.calibration_phase ===
@@ -846,6 +849,17 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "compensation_extraction_limited_exact_span_qualitative_promotion_completed_usage_review_allowed" ? (
+            <>
+              The provisional promoted view preserves all 759 exact-span rows with row-level
+              eligibility and quarantine fields: 643 rows support limited qualitative use,
+              116 exact-span rows remain restricted, and 56 satisfy the complete strict matched
+              city-cycle design. The 614 ambiguous and 581 unavailable rows remain separate and
+              navigation-only. Quantitative, non-base, reference/control, and unresolved-conflict
+              lanes remain separate. A separately authorized usage review is the next allowed
+              step; global analysis readiness remains false.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "compensation_extraction_pipeline_hardening_complete_limited_promotion_allowed" ? (
             <>
               The accelerator verified immutable package and repair hashes, consolidated the

@@ -750,6 +750,27 @@ COMPENSATION_EXTRACTION_PIPELINE_HARDENING_ACCELERATOR_SCOPE_PATH = (
     COMPENSATION_EXTRACTION_PIPELINE_HARDENING_ACCELERATOR_DIR
     / "analysis_readiness_scope_recommendation.json"
 )
+COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_PROMOTION_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "COMPENSATION-EVIDENCE-LIMITED-EXACT-SPAN-QUALITATIVE-PROMOTION-HARDENED-2026-07-25"
+)
+COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_PROMOTION_DECISION_PATH = (
+    COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_PROMOTION_DIR
+    / "limited_exact_span_qualitative_promotion_decision.json"
+)
+COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_PROMOTION_MANIFEST_PATH = (
+    COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_PROMOTION_DIR
+    / "limited_exact_span_qualitative_promotion_manifest.json"
+)
+COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_PROMOTION_AUDIT_PATH = (
+    COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_PROMOTION_DIR
+    / "limited_exact_span_qualitative_promotion_audit.json"
+)
+COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_PROMOTION_INVARIANTS_PATH = (
+    COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_PROMOTION_DIR
+    / "limited_exact_span_qualitative_promotion_invariant_checks.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -1533,6 +1554,97 @@ def pipeline_hardening_readiness_accelerator_status() -> tuple[bool, dict[str, A
     return True, decision
 
 
+def limited_exact_span_qualitative_promotion_status() -> tuple[bool, dict[str, Any]]:
+    required = (
+        COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_PROMOTION_DECISION_PATH,
+        COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_PROMOTION_MANIFEST_PATH,
+        COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_PROMOTION_AUDIT_PATH,
+        COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_PROMOTION_INVARIANTS_PATH,
+        COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_PROMOTION_DIR
+        / "limited_exact_span_qualitative_promoted_view.csv",
+        COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_PROMOTION_DIR
+        / "limited_exact_span_qualitative_row_eligibility.csv",
+        COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_PROMOTION_DIR
+        / "limited_exact_span_qualitative_quarantine_ledger.csv",
+        COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_PROMOTION_DIR
+        / "ambiguous_unavailable_qualitative_navigation_preserved.csv",
+        COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_PROMOTION_DIR
+        / "next_limited_qualitative_usage_review_prompt.md",
+    )
+    completed = all(path.exists() for path in required)
+    if not completed:
+        return False, {}
+    decision = read_json(COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_PROMOTION_DECISION_PATH)
+    manifest = read_json(COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_PROMOTION_MANIFEST_PATH)
+    audit = read_json(COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_PROMOTION_AUDIT_PATH)
+    invariants = read_json(COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_PROMOTION_INVARIANTS_PATH)
+    scopes = decision.get("scope_counts", {})
+    expected = {
+        "exact_span_input": 759,
+        "promoted_view": 759,
+        "limited_contract_eligible": 643,
+        "restricted_or_quarantined_exact": 116,
+        "cycle_analysis_eligible": 453,
+        "occupation_comparison_eligible": 438,
+        "matched_set_eligible": 77,
+        "primary_matched_city_cycle_eligible": 56,
+        "typed_mechanism_eligible": 643,
+        "ambiguous_navigation": 614,
+        "unavailable_navigation": 581,
+        "navigation_only_total": 1195,
+    }
+    promoted_rows = read_csv(
+        COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_PROMOTION_DIR
+        / "limited_exact_span_qualitative_promoted_view.csv"
+    )
+    eligibility_rows = read_csv(
+        COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_PROMOTION_DIR
+        / "limited_exact_span_qualitative_row_eligibility.csv"
+    )
+    quarantine_rows = read_csv(
+        COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_PROMOTION_DIR
+        / "limited_exact_span_qualitative_quarantine_ledger.csv"
+    )
+    navigation_rows = read_csv(
+        COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_PROMOTION_DIR
+        / "ambiguous_unavailable_qualitative_navigation_preserved.csv"
+    )
+    if not (
+        decision.get("task_id")
+        == "COMPENSATION-EVIDENCE-LIMITED-EXACT-SPAN-QUALITATIVE-PROMOTION-HARDENED-2026-07-25"
+        and decision.get("decision")
+        == "limited_exact_span_qualitative_promotion_complete_limited_usage_review_allowed"
+        and decision.get("global_analysis_readiness") is False
+        and decision.get("global_analysis_facing_promotion") is False
+        and decision.get("limited_usage_review_allowed_next") is True
+        and decision.get("limited_usage_review_requires_separate_authorization") is True
+        and int(decision.get("package_sha256_checks_passed", 0)) == 5
+        and int(decision.get("immutable_tracked_inputs_verified", 0)) == 36
+        and scopes == expected
+        and manifest.get("scope_counts") == expected
+        and manifest.get("global_analysis_readiness") is False
+        and manifest.get("forbidden_actions_performed") == []
+        and manifest.get("immutable_inputs_modified") is False
+        and audit.get("all_invariants_passed") is True
+        and audit.get("global_analysis_readiness") is False
+        and int(audit.get("candidate_contamination_count", -1)) == 0
+        and int(audit.get("pdf_pages_accessed", -1)) == 0
+        and int(audit.get("ocr_later_accessed", -1)) == 0
+        and invariants.get("all_invariants_passed") is True
+        and len(promoted_rows) == 759
+        and len(eligibility_rows) == 759
+        and len(quarantine_rows) == 116
+        and len(navigation_rows) == 1195
+        and all(row.get("evidence_contract_tier") == "exact_span_coded_candidate" for row in promoted_rows)
+        and all(row.get("eligible_for_limited_qualitative_use") == "false" for row in navigation_rows)
+        and all(row.get("navigation_only") == "true" for row in navigation_rows)
+        and decision.get("forbidden_actions_performed") == []
+        and decision.get("immutable_inputs_modified") is False
+    ):
+        raise ValueError("limited exact-span qualitative promotion fails dashboard gates")
+    return True, decision
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -2211,6 +2323,10 @@ def build_analysis_readiness(
         pipeline_hardening_accelerator_completed,
         pipeline_hardening_accelerator_decision,
     ) = pipeline_hardening_readiness_accelerator_status()
+    (
+        limited_qualitative_promotion_completed,
+        limited_qualitative_promotion_decision,
+    ) = limited_exact_span_qualitative_promotion_status()
     if scale_1000_targeted_qa_completed and (
         scale_1000_targeted_qa_decision.get("qa_pass") is not True
         or scale_1000_targeted_qa_decision.get(
@@ -2257,7 +2373,9 @@ def build_analysis_readiness(
     return {
         "metadata": metadata,
         "overall_status": (
-            "pipeline_hardening_complete_limited_promotion_allowed_global_analysis_closed"
+            "limited_exact_span_qualitative_promotion_complete_usage_review_allowed_global_analysis_closed"
+            if limited_qualitative_promotion_completed
+            else "pipeline_hardening_complete_limited_promotion_allowed_global_analysis_closed"
             if pipeline_hardening_accelerator_completed
             else "limited_exact_span_qualitative_readiness_pass_with_blockers_promotion_prompt_allowed_analysis_closed"
             if limited_exact_span_readiness_completed
@@ -2360,7 +2478,11 @@ def build_analysis_readiness(
             "wage_extraction_stage": {
                 "available": extraction_completed,
                 "display_status": (
-                    "final_provisional_schema_repairs_partial_bounded_followup_required"
+                    "limited_exact_span_qualitative_promotion_completed_usage_review_only_global_analysis_closed"
+                    if limited_qualitative_promotion_completed
+                    else "pipeline_hardening_complete_limited_promotion_allowed_global_analysis_closed"
+                    if pipeline_hardening_accelerator_completed
+                    else "final_provisional_schema_repairs_partial_bounded_followup_required"
                     if final_schema_repair_completed
                     else "final_provisional_schema_readiness_hold_repairs_required"
                     if final_schema_review_completed
@@ -2632,6 +2754,32 @@ def build_analysis_readiness(
                     if pipeline_hardening_accelerator_completed else False
                 ),
                 "pipeline_hardening_analysis_readiness": False,
+                "limited_exact_span_qualitative_promotion_completed": limited_qualitative_promotion_completed,
+                "limited_exact_span_qualitative_promotion_decision": (
+                    limited_qualitative_promotion_decision.get("decision")
+                    if limited_qualitative_promotion_completed else None
+                ),
+                "limited_exact_span_qualitative_promoted_count": (
+                    int(limited_qualitative_promotion_decision.get("scope_counts", {}).get("promoted_view", 0))
+                    if limited_qualitative_promotion_completed else None
+                ),
+                "limited_exact_span_qualitative_limited_eligible_count": (
+                    int(limited_qualitative_promotion_decision.get("scope_counts", {}).get("limited_contract_eligible", 0))
+                    if limited_qualitative_promotion_completed else None
+                ),
+                "limited_exact_span_qualitative_restricted_count": (
+                    int(limited_qualitative_promotion_decision.get("scope_counts", {}).get("restricted_or_quarantined_exact", 0))
+                    if limited_qualitative_promotion_completed else None
+                ),
+                "limited_exact_span_qualitative_primary_matched_count": (
+                    int(limited_qualitative_promotion_decision.get("scope_counts", {}).get("primary_matched_city_cycle_eligible", 0))
+                    if limited_qualitative_promotion_completed else None
+                ),
+                "limited_exact_span_qualitative_usage_review_allowed": (
+                    bool(limited_qualitative_promotion_decision.get("limited_usage_review_allowed_next", False))
+                    if limited_qualitative_promotion_completed else False
+                ),
+                "limited_exact_span_qualitative_global_analysis_readiness": False,
                 "analysis_facing_promotion_allowed": False,
             },
             "regression_stage": {
@@ -6481,10 +6629,16 @@ def build_text_table_calibration_status_summary(
             pipeline_hardening_accelerator_completed,
             pipeline_hardening_accelerator_decision,
         ) = pipeline_hardening_readiness_accelerator_status()
+        (
+            limited_qualitative_promotion_completed,
+            limited_qualitative_promotion_decision,
+        ) = limited_exact_span_qualitative_promotion_status()
         return {
             **metadata,
             "calibration_phase": (
-                "compensation_extraction_pipeline_hardening_complete_limited_promotion_allowed"
+                "compensation_extraction_limited_exact_span_qualitative_promotion_completed_usage_review_allowed"
+                if limited_qualitative_promotion_completed
+                else "compensation_extraction_pipeline_hardening_complete_limited_promotion_allowed"
                 if pipeline_hardening_accelerator_completed
                 else "compensation_extraction_limited_exact_span_qualitative_readiness_review_completed_pass_with_blockers"
                 if limited_exact_span_readiness_completed
@@ -7237,6 +7391,48 @@ def build_text_table_calibration_status_summary(
                 if pipeline_hardening_accelerator_completed else False
             ),
             "pipeline_hardening_analysis_readiness": False,
+            "limited_exact_span_qualitative_promotion_completed": limited_qualitative_promotion_completed,
+            "limited_exact_span_qualitative_promotion_decision": (
+                limited_qualitative_promotion_decision.get("decision")
+                if limited_qualitative_promotion_completed else None
+            ),
+            "limited_exact_span_qualitative_promotion_path": (
+                relative(COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_PROMOTION_DIR)
+                if limited_qualitative_promotion_completed else None
+            ),
+            "limited_exact_span_qualitative_promoted_count": (
+                int(limited_qualitative_promotion_decision.get("scope_counts", {}).get("promoted_view", 0))
+                if limited_qualitative_promotion_completed else None
+            ),
+            "limited_exact_span_qualitative_limited_eligible_count": (
+                int(limited_qualitative_promotion_decision.get("scope_counts", {}).get("limited_contract_eligible", 0))
+                if limited_qualitative_promotion_completed else None
+            ),
+            "limited_exact_span_qualitative_restricted_count": (
+                int(limited_qualitative_promotion_decision.get("scope_counts", {}).get("restricted_or_quarantined_exact", 0))
+                if limited_qualitative_promotion_completed else None
+            ),
+            "limited_exact_span_qualitative_navigation_only_count": (
+                int(limited_qualitative_promotion_decision.get("scope_counts", {}).get("navigation_only_total", 0))
+                if limited_qualitative_promotion_completed else None
+            ),
+            "limited_exact_span_qualitative_primary_matched_count": (
+                int(limited_qualitative_promotion_decision.get("scope_counts", {}).get("primary_matched_city_cycle_eligible", 0))
+                if limited_qualitative_promotion_completed else None
+            ),
+            "limited_exact_span_qualitative_cycle_eligible_count": (
+                int(limited_qualitative_promotion_decision.get("scope_counts", {}).get("cycle_analysis_eligible", 0))
+                if limited_qualitative_promotion_completed else None
+            ),
+            "limited_exact_span_qualitative_occupation_eligible_count": (
+                int(limited_qualitative_promotion_decision.get("scope_counts", {}).get("occupation_comparison_eligible", 0))
+                if limited_qualitative_promotion_completed else None
+            ),
+            "limited_exact_span_qualitative_usage_review_allowed": (
+                bool(limited_qualitative_promotion_decision.get("limited_usage_review_allowed_next", False))
+                if limited_qualitative_promotion_completed else False
+            ),
+            "limited_exact_span_qualitative_global_analysis_readiness": False,
             "bounded_pdf_text_span_capture_completed": bounded_pdf_text_span_capture_completed,
             "bounded_pdf_text_span_capture_decision": (
                 bounded_pdf_text_span_capture_decision.get("decision")
@@ -7480,7 +7676,9 @@ def build_text_table_calibration_status_summary(
                 else False
             ),
             "next_recommendation": (
-                "seek_separate_authorization_to_run_hardened_limited_qualitative_promotion_prompt"
+                "seek_separate_authorization_to_run_limited_qualitative_usage_review"
+                if limited_qualitative_promotion_completed
+                else "seek_separate_authorization_to_run_hardened_limited_qualitative_promotion_prompt"
                 if pipeline_hardening_accelerator_completed
                 else "seek_separate_authorization_to_run_limited_exact_span_qualitative_promotion_prompt"
                 if limited_exact_span_readiness_completed
@@ -7544,7 +7742,9 @@ def build_text_table_calibration_status_summary(
                 )
             ),
             "wage_extraction_status": (
-                "pipeline_hardening_quantitative_862_candidates_1045_exceptions_preserved_analysis_closed"
+                "limited_qualitative_promotion_quantitative_862_candidates_1045_exceptions_separate_analysis_closed"
+                if limited_qualitative_promotion_completed
+                else "pipeline_hardening_quantitative_862_candidates_1045_exceptions_preserved_analysis_closed"
                 if pipeline_hardening_accelerator_completed
                 else "limited_exact_span_readiness_review_quantitative_candidates_preserved_analysis_closed"
                 if limited_exact_span_readiness_completed
@@ -7584,7 +7784,9 @@ def build_text_table_calibration_status_summary(
                 if extraction_completed else "not_started"
             ),
             "qualitative_extraction_status": (
-                "pipeline_hardening_limited_contract_643_strict_matched_56_prompt_only_analysis_closed"
+                "limited_exact_span_promotion_759_rows_643_limited_116_restricted_1195_navigation_usage_review_only_analysis_closed"
+                if limited_qualitative_promotion_completed
+                else "pipeline_hardening_limited_contract_643_strict_matched_56_prompt_only_analysis_closed"
                 if pipeline_hardening_accelerator_completed
                 else "limited_exact_span_readiness_pass_with_blockers_759_exact_85_matched_prompt_only_analysis_closed"
                 if limited_exact_span_readiness_completed

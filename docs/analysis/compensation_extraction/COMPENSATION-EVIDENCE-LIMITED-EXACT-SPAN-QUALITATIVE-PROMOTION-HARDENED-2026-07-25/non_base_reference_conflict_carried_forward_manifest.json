@@ -1,0 +1,13 @@
+{
+  "conflict_sha256": "dcead3280d7bdb9b7d2f93debc536fd72dd60cf209d4b7f8e9fd8ca797a1eec7",
+  "conflicts_quarantined": true,
+  "non_base_companion_only": true,
+  "non_base_companion_rows": 4733,
+  "non_base_sha256": "e93ab79afd1956d9b736c6fa0d823f4013a543042241b7bc1dbe7d6359cecb92",
+  "reference_control_only": true,
+  "reference_control_rows": 345,
+  "reference_sha256": "38e37f11dbfb927ce47aaded6559bf74402142e26d9194461822dd7e2868663a",
+  "separate_from_qualitative_promotion": true,
+  "unresolved_conflict_groups": 2,
+  "unresolved_conflict_observations": 5
+}

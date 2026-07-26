@@ -1,0 +1,37 @@
+{
+  "all_invariants_passed": true,
+  "checks": {
+    "ambiguous_unavailable_not_in_coded_output": true,
+    "carried_lanes_separate": true,
+    "conflicts_quarantined": true,
+    "eligibility_scope_counts_reconcile": true,
+    "exact_span_input_is_759": true,
+    "five_package_hashes_pass": true,
+    "future_prompt_phase_boundary_complete": true,
+    "global_analysis_readiness_false": true,
+    "historical_mixed_not_active": true,
+    "immutable_inputs_match_authorized_baseline": true,
+    "navigation_only_total_is_1195": true,
+    "no_forbidden_payload_fields": true,
+    "no_pdf_or_ocr_access": true,
+    "other_not_typed_eligible": true,
+    "partial_outputs_cannot_claim_complete": true,
+    "promoted_view_accounts_for_all_exact_rows": true,
+    "span_hash_offset_pointer_preserved": true
+  },
+  "schema_version": "limited_exact_span_qualitative_promotion_v1",
+  "scope_counts": {
+    "ambiguous_navigation": 614,
+    "cycle_analysis_eligible": 453,
+    "exact_span_input": 759,
+    "limited_contract_eligible": 643,
+    "matched_set_eligible": 77,
+    "navigation_only_total": 1195,
+    "occupation_comparison_eligible": 438,
+    "primary_matched_city_cycle_eligible": 56,
+    "promoted_view": 759,
+    "restricted_or_quarantined_exact": 116,
+    "typed_mechanism_eligible": 643,
+    "unavailable_navigation": 581
+  }
+}

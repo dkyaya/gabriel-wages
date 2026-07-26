@@ -1,0 +1,9 @@
+blocker_id,lane,row_count,status,downstream_treatment,blocks_global_readiness
+LP-QA-001,exact_span,116,restricted_exact_span,retained in promoted view; excluded from limited coded use,true
+LP-QA-002,qualitative_navigation,614,ambiguous_navigation_only,not coded evidence,true
+LP-QA-003,qualitative_navigation,581,unavailable_navigation_only,not coded evidence,true
+LP-CY-001,cycle,190,limited_eligible_without_exact_cycle,exclude from cycle analyses,true
+LP-OC-001,occupation,205,limited_eligible_without_controlled_occupation,exclude from occupation comparison,true
+LP-MT-001,matching,566,limited_eligible_without_exact_matched_set,exclude from matched-set use,true
+LP-QN-001,quantitative,1045,separate_quantitative_exceptions,not used in qualitative promotion,true
+LP-CF-001,conflict,5,two_groups_quarantined,not used in qualitative promotion,true

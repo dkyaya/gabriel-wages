@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": "0.1.0",
-    "generated_at": "2026-07-26T14:53:43Z",
+    "generated_at": "2026-07-26T15:10:14Z",
     "data_vintage": "2026-07-23",
     "source_files": [
       "docs/analysis/national_scout_coverage_state.csv",
@@ -82,7 +82,7 @@
       "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
     ]
   },
-  "overall_status": "pipeline_hardening_complete_limited_promotion_allowed_global_analysis_closed",
+  "overall_status": "limited_exact_span_qualitative_promotion_complete_usage_review_allowed_global_analysis_closed",
   "current_inputs": {
     "national_queue_available": true,
     "national_coverage_available": true,
@@ -139,7 +139,7 @@
     },
     "wage_extraction_stage": {
       "available": true,
-      "display_status": "final_provisional_schema_repairs_partial_bounded_followup_required",
+      "display_status": "limited_exact_span_qualitative_promotion_completed_usage_review_only_global_analysis_closed",
       "observation_count": 1907,
       "qualitative_mechanism_observation_count": 1954,
       "qa_status": "pass",
@@ -199,6 +199,14 @@
       "pipeline_hardening_strict_matched_eligible_count": 56,
       "pipeline_hardening_limited_promotion_allowed": true,
       "pipeline_hardening_analysis_readiness": false,
+      "limited_exact_span_qualitative_promotion_completed": true,
+      "limited_exact_span_qualitative_promotion_decision": "limited_exact_span_qualitative_promotion_complete_limited_usage_review_allowed",
+      "limited_exact_span_qualitative_promoted_count": 759,
+      "limited_exact_span_qualitative_limited_eligible_count": 643,
+      "limited_exact_span_qualitative_restricted_count": 116,
+      "limited_exact_span_qualitative_primary_matched_count": 56,
+      "limited_exact_span_qualitative_usage_review_allowed": true,
+      "limited_exact_span_qualitative_global_analysis_readiness": false,
       "analysis_facing_promotion_allowed": false
     },
     "regression_stage": {

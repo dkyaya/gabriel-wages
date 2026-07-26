@@ -1,0 +1,10 @@
+{
+  "new_failure_modes": 30,
+  "new_test_script": "scripts/test_compensation_evidence_limited_exact_span_qualitative_promotion.py",
+  "predecessor_test_scripts": [
+    "scripts/test_compensation_evidence_pipeline_hardening_readiness_accelerator.py",
+    "scripts/test_compensation_evidence_limited_exact_span_qualitative_readiness_review.py",
+    "scripts/test_compensation_evidence_qualitative_evidence_contract_followup.py"
+  ],
+  "schema_version": "limited_exact_span_qualitative_promotion_v1"
+}

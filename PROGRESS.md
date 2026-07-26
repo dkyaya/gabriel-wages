@@ -11006,3 +11006,10 @@ safety units unmatched: 3
 -
 
 -->
+# 2026-07-26 — Hardened limited exact-span qualitative promotion
+
+- Promoted a rollback-safe provisional 759-row exact-span qualitative view with explicit eligibility and quarantine fields; 643 rows are limited-use eligible and 116 remain restricted.
+- Preserved 614 ambiguous and 581 unavailable rows as a separate 1,195-row navigation-only file. Preserved quantitative (862 candidates/1,045 exceptions), non-base (4,733), reference/control (345), and two unresolved groups/five observations as separate manifests.
+- Reconciled exact-cycle, controlled-occupation, exact matched-set, and strict primary counts at 453, 438, 77, and 56. Global analysis readiness remains false; only a separately authorized limited usage review is allowed next.
+- Added a fail-closed promotion runner, 30-mode adversarial failure matrix, focused regression suite, dashboard gates, future prompt, and relay/phase-boundary contracts. No PDFs/pages, OCR, models, extraction, selection, ingestion, codification, wage-gap, regression, or causal work ran.
+- Coverage snapshot: 64 contracts, 19 cities, 28 healthy matched pairs (10 exact-cycle, 18 overlap-cycle), 2 exploratory adjacent matches, and 6 unmatched safety units.
