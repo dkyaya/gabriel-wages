@@ -1,34 +1,37 @@
-# Next task: targeted cumulative 1,000-case routing and conflict QA
+# Next task: freeze and run the remaining readable parse-text provisional extraction
 
-The frozen cumulative extraction is complete at 1,000/1,000 strict-valid
-cases. Do not run new extraction and do not change selected identities.
+The cumulative 1,000-document targeted QA passed. The corrected shadow layer
+has zero duplicate observation IDs, zero invalid page pointers, zero unresolved
+base/non-base contamination, two explicit unresolved conflict groups, and a
+0.1647% conflict rate. A future provisional extraction over the remaining
+unique readable parse-text pool is authorized.
 
-Use only:
+Inventory before selection:
 
-- `compensation_extraction_1000_conflict_review.csv`;
-- the cumulative provisional quantitative/non-base/mixed ledgers;
-- existing bounded evidence pointers and local retained artifacts.
+- durable parse-text detection rows: 1,828;
+- unique durable content hashes: 1,826;
+- frozen 1,000-document selected hashes: 1,000;
+- remaining rows outside the frozen selection: 827;
+- remaining unique retained readable content hashes: 826;
+- remaining units: 418 police / 202 fire / 207 non-safety;
+- remaining states/DC: 48;
+- remaining priorities: 430 p1 / 392 p2 / 5 p3.
 
-Review the 151 unresolved rows/groups:
+The next run should:
 
-1. Resolve 126 active quantitative records flagged by the stricter cumulative
-   non-base scan. Classify each as `retain_quantitative_base_wage`,
-   `route_to_non_base_wage`, `split_quant_and_non_base_components`,
-   `reference_only`, or `insufficient_evidence_needs_review`.
-2. Resolve or retain explicitly the 25 under-specified quantitative conflict
-   groups. Do not invent missing step, rank, classification, or effective-date
-   distinctions.
-3. Preserve the nine already canonicalized duplicate observations and every
-   provenance row.
-4. Write corrected cumulative shadow ledgers; never overwrite the current
-   provisional cumulative ledgers.
-5. Recompute integrity QA. Further provisional scale is eligible only if
-   duplicate IDs and invalid pointers remain zero, base/non-base contamination
-   is zero, unresolved conflict rate remains at most 2%, and matching remains
-   intact.
+1. freeze one identity per remaining unique retained readable content hash and
+   explain the single duplicate-hash row without silently selecting it twice;
+2. preserve the corrected 1,000-document shadow ledgers as a no-call seed;
+3. integrate the targeted-QA routing rules before any live request;
+4. preserve city × unit × negotiation-cycle identity and matched non-safety
+   opportunities;
+5. run a no-call packet dry run and strict representative preflight before any
+   GABRIEL/API use;
+6. extract only newly frozen remaining identities in resumable lanes;
+7. materialize a new cumulative provisional layer and stop before final merge;
+8. recompute duplicate, page-pointer, conflict, base/non-base, and matching QA.
 
-Default to no GABRIEL/API. Any model use would require a separately bounded and
-explicitly authorized QA-only preflight. Continue to prohibit URLs, hosted
-search, downloads, OCR, scouts, source review, verification, ingestion,
-`gabriel.codify`, final analysis merge, wage-gap work, regressions, and durable
-upstream-ledger mutation.
+Continue to prohibit URLs, hosted search, downloads, OCR, scouts, source
+review, verification, ingestion, `gabriel.codify`, final analysis merge,
+wage-gap work, regressions, and durable upstream-ledger mutation. No remaining
+document was selected or extracted by the targeted-QA task itself.

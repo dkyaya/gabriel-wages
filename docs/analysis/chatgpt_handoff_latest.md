@@ -6,6 +6,38 @@ Last updated: `2026-07-25`
 
 ---
 
+## 2026-07-25 — Cumulative 1,000-document targeted QA passed
+
+### Current State
+
+- **Authority/start:** work began at clean tracked `b15e73f005094765f9ead14dc0b9f9ec7cf6339f`. The original cumulative 1,000-document ledgers, all durable/Gate/500/seed QA inputs, the unrelated root `package-lock.json`, and local adjudication renders remain unchanged and outside the corrected output directory.
+- **Scope:** the 215-row review ledger reconciled to exactly 151 unresolved rows/groups: 126 possible base/non-base records plus 25 under-specified conflict groups. GABRIEL/API was not used and no new extraction or selection ran.
+- **Routing:** all 126 possible contamination records are resolved: 5 confirmed base-salary cells retained, 120 routed to non-base wage, 1 reference-only, 0 split, and 0 insufficient. Conflict resolution additionally routed 11 records to non-base wage and one promotional-exam percentage to reference while retaining the actual promotion-pay rule.
+- **Conflicts:** 23/25 groups are resolved: 7 classification/rank, 5 effective-period, 6 schedule-cell, and 5 non-base misroute. Two under-specified groups remain explicit. Revised rate is 0.1647%, below 2%.
+- **Corrected shadows:** [the result](compensation_extraction_1000_targeted_qa_result_2026-07-25.md) reports 1,214 active quantitative, 1,464 qualitative-mechanism, 256 mixed, 2,889 non-base-wage, and 175 reference/exclusion records. Original IDs, bounded pointers, joins, and nine canonicalized duplicate observations remain traceable.
+- **QA/decision:** duplicate observation IDs, invalid page pointers, and unresolved base/non-base contamination are zero; matching remains 363 police / 237 fire / 400 non-safety. [The decision](compensation_extraction/COMPENSATION-EVIDENCE-EXTRACTION-1000DOC-TARGETED-QA-2026-07-25/compensation_extraction_1000_recomputed_decision.json) is `remaining_readable_parse_text_extraction_allowed`.
+- **Dashboard:** phase is `compensation_extraction_1000_targeted_qa_completed`; corrected counts and the pass gate are displayed, while analysis readiness remains false.
+- **Boundary:** no URL/hosted search, download/redownload, OCR, scout, source review, verification, new extraction, selection, GABRIEL/API call, ingestion, codification, final merge, wage-gap work, regression, upstream-ledger mutation, remote inspection, fetch, or pull occurred. No full text/table, raw prompt/response, encoded image, or secret was retained.
+
+### Interpretation
+
+The stricter cumulative routing problem is resolved without hiding ambiguity.
+Five lexical false positives were genuine base salary cells; 131 quantitative
+records overall were provenance-routed to non-base evidence, and two were
+routed to reference. The remaining two conflict groups are explicit and small
+enough to satisfy the predeclared gate. The corrected layer is still
+provisional and separate from analysis inputs.
+
+### Next Move
+
+Follow [next_task.md](../../next_task.md). The durable detection inventory has
+827 unselected rows representing 826 unique retained readable content hashes:
+418 police, 202 fire, and 207 non-safety across 48 states/DC. Freeze one
+identity per unique hash, preserve the corrected 1,000-case shadows as a
+no-call seed, dry-run and preflight bounded packets, then extract only the newly
+frozen remaining identities resumably. Stop before final merge and recompute
+full cumulative QA.
+
 ## 2026-07-25 — Longevity case resolved; cumulative 1,000-case QA requires targeted routing review
 
 ### Current State

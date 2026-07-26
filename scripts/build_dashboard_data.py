@@ -427,6 +427,39 @@ COMPENSATION_EXTRACTION_1000_DECISION_PATH = (
     COMPENSATION_EXTRACTION_1000_DIR
     / "compensation_extraction_1000_decision_report.json"
 )
+COMPENSATION_EXTRACTION_1000_TARGETED_QA_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "COMPENSATION-EVIDENCE-EXTRACTION-1000DOC-TARGETED-QA-2026-07-25"
+)
+COMPENSATION_EXTRACTION_1000_TARGETED_QA_DECISION_PATH = (
+    COMPENSATION_EXTRACTION_1000_TARGETED_QA_DIR
+    / "compensation_extraction_1000_recomputed_decision.json"
+)
+COMPENSATION_EXTRACTION_1000_TARGETED_QA_SUMMARY_PATH = (
+    COMPENSATION_EXTRACTION_1000_TARGETED_QA_DIR
+    / "compensation_extraction_1000_targeted_qa_summary.json"
+)
+COMPENSATION_EXTRACTION_1000_TARGETED_QA_QUANT_PATH = (
+    COMPENSATION_EXTRACTION_1000_TARGETED_QA_DIR
+    / "quantitative_extraction_ledger_qa_corrected.csv"
+)
+COMPENSATION_EXTRACTION_1000_TARGETED_QA_QUAL_PATH = (
+    COMPENSATION_EXTRACTION_1000_TARGETED_QA_DIR
+    / "qualitative_mechanism_extraction_ledger_qa_corrected.csv"
+)
+COMPENSATION_EXTRACTION_1000_TARGETED_QA_MIXED_PATH = (
+    COMPENSATION_EXTRACTION_1000_TARGETED_QA_DIR
+    / "mixed_extraction_ledger_qa_corrected.csv"
+)
+COMPENSATION_EXTRACTION_1000_TARGETED_QA_NONBASE_PATH = (
+    COMPENSATION_EXTRACTION_1000_TARGETED_QA_DIR
+    / "non_base_wage_compensation_ledger_qa_corrected.csv"
+)
+COMPENSATION_EXTRACTION_1000_TARGETED_QA_REFERENCE_PATH = (
+    COMPENSATION_EXTRACTION_1000_TARGETED_QA_DIR
+    / "reference_exclusion_ledger_qa_corrected.csv"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -1172,6 +1205,39 @@ def build_analysis_readiness(
     scale_1000_materialized = (
         scale_1000_decision.get("cumulative_materialization_completed") is True
     )
+    scale_1000_targeted_qa_completed = all(path.exists() for path in (
+        COMPENSATION_EXTRACTION_1000_TARGETED_QA_DECISION_PATH,
+        COMPENSATION_EXTRACTION_1000_TARGETED_QA_SUMMARY_PATH,
+        COMPENSATION_EXTRACTION_1000_TARGETED_QA_QUANT_PATH,
+        COMPENSATION_EXTRACTION_1000_TARGETED_QA_QUAL_PATH,
+        COMPENSATION_EXTRACTION_1000_TARGETED_QA_MIXED_PATH,
+        COMPENSATION_EXTRACTION_1000_TARGETED_QA_NONBASE_PATH,
+        COMPENSATION_EXTRACTION_1000_TARGETED_QA_REFERENCE_PATH,
+    ))
+    scale_1000_targeted_qa_decision = (
+        read_json(COMPENSATION_EXTRACTION_1000_TARGETED_QA_DECISION_PATH)
+        if scale_1000_targeted_qa_completed else {}
+    )
+    scale_1000_targeted_qa_summary = (
+        read_json(COMPENSATION_EXTRACTION_1000_TARGETED_QA_SUMMARY_PATH)
+        if scale_1000_targeted_qa_completed else {}
+    )
+    if scale_1000_targeted_qa_completed and (
+        scale_1000_targeted_qa_decision.get("qa_pass") is not True
+        or scale_1000_targeted_qa_decision.get(
+            "remaining_readable_parse_text_extraction_allowed"
+        ) is not True
+        or int(scale_1000_targeted_qa_decision.get(
+            "review_rows_or_groups_processed", 0
+        )) != 151
+        or int(scale_1000_targeted_qa_decision.get(
+            "unresolved_base_non_base_contamination_count", -1
+        )) != 0
+        or float(scale_1000_targeted_qa_decision.get(
+            "unresolved_quantitative_conflict_rate", 1
+        )) > 0.02
+    ):
+        raise ValueError("cumulative 1,000-document targeted QA fails readiness gates")
     extraction_decision = (
         read_json(COMPENSATION_EXTRACTION_500_TARGETED_QA_DECISION_PATH)
         if targeted_qa_completed
@@ -1202,7 +1268,9 @@ def build_analysis_readiness(
     return {
         "metadata": metadata,
         "overall_status": (
-            "provisional_1000_compensation_extraction_materialized_qa_blocked"
+            "provisional_1000_compensation_extraction_targeted_qa_pass_remaining_parse_text_authorized"
+            if scale_1000_targeted_qa_completed
+            else "provisional_1000_compensation_extraction_materialized_qa_blocked"
             if scale_1000_materialized
             else "provisional_1000_compensation_extraction_live_incomplete_499_of_500"
             if scale_1000_attempted
@@ -1272,7 +1340,9 @@ def build_analysis_readiness(
             "wage_extraction_stage": {
                 "available": extraction_completed,
                 "display_status": (
-                    "cumulative_1000_materialized_integrity_qa_blocked"
+                    "cumulative_1000_targeted_qa_pass_remaining_parse_text_authorized"
+                    if scale_1000_targeted_qa_completed
+                    else "cumulative_1000_materialized_integrity_qa_blocked"
                     if scale_1000_materialized
                     else "cumulative_1000_live_incomplete_499_of_500_no_materialization"
                     if scale_1000_attempted
@@ -1283,27 +1353,40 @@ def build_analysis_readiness(
                     else "planned_after_scout_checkpoint_and_verification"
                 ),
                 "observation_count": (
-                    int(scale_1000_decision["quantitative_observation_count"])
+                    int(scale_1000_targeted_qa_summary[
+                        "corrected_quantitative_active_observation_count"
+                    ])
+                    if scale_1000_targeted_qa_completed
+                    else int(scale_1000_decision["quantitative_observation_count"])
                     if scale_1000_materialized
                     else extraction_quant_count if extraction_completed else None
                 ),
                 "qualitative_mechanism_observation_count": (
-                    int(scale_1000_decision["qualitative_mechanism_observation_count"])
+                    int(scale_1000_targeted_qa_summary[
+                        "corrected_qualitative_active_observation_count"
+                    ])
+                    if scale_1000_targeted_qa_completed
+                    else int(scale_1000_decision["qualitative_mechanism_observation_count"])
                     if scale_1000_materialized
                     else extraction_qual_count if extraction_completed else None
                 ),
                 "qa_status": (
-                    scale_1000_decision.get("qa_status")
+                    scale_1000_targeted_qa_decision.get("qa_status")
+                    if scale_1000_targeted_qa_completed
+                    else scale_1000_decision.get("qa_status")
                     if scale_1000_materialized
                     else extraction_decision.get("qa_status")
                 ),
                 "scale_1000_recommendation": extraction_decision.get(
                     "scale_1000_recommendation"
-                ) if not scale_1000_attempted else scale_1000_decision.get(
+                ) if not scale_1000_attempted else scale_1000_targeted_qa_decision.get(
+                    "decision"
+                ) if scale_1000_targeted_qa_completed else scale_1000_decision.get(
                     "decision"
                 ),
                 "analysis_ready": False,
                 "targeted_qa_completed": targeted_qa_completed,
+                "scale_1000_targeted_qa_completed": scale_1000_targeted_qa_completed,
                 "scale_1000_allowed": extraction_decision.get(
                     "scale_1000_allowed", False
                 ) if not scale_1000_attempted else False,
@@ -1312,6 +1395,13 @@ def build_analysis_readiness(
                 ),
                 "scale_beyond_1000_recommendation": scale_1000_decision.get(
                     "scale_beyond_1000_recommendation"
+                ) if not scale_1000_targeted_qa_completed else scale_1000_targeted_qa_decision.get(
+                    "next_recommendation"
+                ),
+                "remaining_readable_parse_text_extraction_allowed": bool(
+                    scale_1000_targeted_qa_decision.get(
+                        "remaining_readable_parse_text_extraction_allowed", False
+                    )
                 ),
             },
             "regression_stage": {
@@ -4528,6 +4618,17 @@ def build_text_table_calibration_status_summary(
         scale_1000_selection_summary: dict[str, Any] = {}
         scale_1000_packet_summary: dict[str, Any] = {}
         scale_1000_materialized = False
+        scale_1000_targeted_qa_completed = all(path.exists() for path in (
+            COMPENSATION_EXTRACTION_1000_TARGETED_QA_DECISION_PATH,
+            COMPENSATION_EXTRACTION_1000_TARGETED_QA_SUMMARY_PATH,
+            COMPENSATION_EXTRACTION_1000_TARGETED_QA_QUANT_PATH,
+            COMPENSATION_EXTRACTION_1000_TARGETED_QA_QUAL_PATH,
+            COMPENSATION_EXTRACTION_1000_TARGETED_QA_MIXED_PATH,
+            COMPENSATION_EXTRACTION_1000_TARGETED_QA_NONBASE_PATH,
+            COMPENSATION_EXTRACTION_1000_TARGETED_QA_REFERENCE_PATH,
+        ))
+        scale_1000_targeted_qa_decision: dict[str, Any] = {}
+        scale_1000_targeted_qa_summary: dict[str, Any] = {}
         if extraction_completed:
             extraction_decision = read_json(
                 COMPENSATION_EXTRACTION_500_DECISION_PATH
@@ -4730,10 +4831,103 @@ def build_text_table_calibration_status_summary(
                 raise ValueError(
                     "provisional 1,000-document incomplete live run fails dashboard gates"
                 )
+        if scale_1000_targeted_qa_completed:
+            scale_1000_targeted_qa_decision = read_json(
+                COMPENSATION_EXTRACTION_1000_TARGETED_QA_DECISION_PATH
+            )
+            scale_1000_targeted_qa_summary = read_json(
+                COMPENSATION_EXTRACTION_1000_TARGETED_QA_SUMMARY_PATH
+            )
+            qa1000_rows = {
+                "quantitative": read_csv(
+                    COMPENSATION_EXTRACTION_1000_TARGETED_QA_QUANT_PATH
+                ),
+                "qualitative": read_csv(
+                    COMPENSATION_EXTRACTION_1000_TARGETED_QA_QUAL_PATH
+                ),
+                "mixed": read_csv(
+                    COMPENSATION_EXTRACTION_1000_TARGETED_QA_MIXED_PATH
+                ),
+                "nonbase": read_csv(
+                    COMPENSATION_EXTRACTION_1000_TARGETED_QA_NONBASE_PATH
+                ),
+                "reference": read_csv(
+                    COMPENSATION_EXTRACTION_1000_TARGETED_QA_REFERENCE_PATH
+                ),
+            }
+            qa1000_active = {
+                lane: sum(
+                    row.get("active_in_qa_corrected_lane") == "true"
+                    for row in rows
+                )
+                for lane, rows in qa1000_rows.items()
+            }
+            expected_qa1000_active = {
+                "quantitative": int(scale_1000_targeted_qa_summary[
+                    "corrected_quantitative_active_observation_count"
+                ]),
+                "qualitative": int(scale_1000_targeted_qa_summary[
+                    "corrected_qualitative_active_observation_count"
+                ]),
+                "mixed": int(scale_1000_targeted_qa_summary[
+                    "corrected_mixed_active_case_count"
+                ]),
+                "nonbase": int(scale_1000_targeted_qa_summary[
+                    "corrected_non_base_wage_active_observation_count"
+                ]),
+                "reference": int(scale_1000_targeted_qa_summary[
+                    "corrected_reference_exclusion_active_count"
+                ]),
+            }
+            if (
+                scale_1000_targeted_qa_decision.get("task_id")
+                != "COMPENSATION-EVIDENCE-EXTRACTION-1000DOC-TARGETED-QA-2026-07-25"
+                or scale_1000_targeted_qa_decision.get("qa_pass") is not True
+                or scale_1000_targeted_qa_decision.get("integrity_qa_pass") is not True
+                or scale_1000_targeted_qa_decision.get("decision")
+                != "remaining_readable_parse_text_extraction_allowed"
+                or scale_1000_targeted_qa_decision.get(
+                    "remaining_readable_parse_text_extraction_allowed"
+                ) is not True
+                or int(scale_1000_targeted_qa_decision.get(
+                    "review_rows_or_groups_processed", 0
+                )) != 151
+                or int(scale_1000_targeted_qa_decision.get(
+                    "base_non_base_routing_record_count", 0
+                )) != 126
+                or int(scale_1000_targeted_qa_decision.get(
+                    "unresolved_base_non_base_contamination_count", -1
+                )) != 0
+                or int(scale_1000_targeted_qa_decision.get(
+                    "unresolved_conflict_group_count", -1
+                )) != 2
+                or float(scale_1000_targeted_qa_decision.get(
+                    "unresolved_quantitative_conflict_rate", 1
+                )) > 0.02
+                or int(scale_1000_targeted_qa_decision.get(
+                    "duplicate_observation_id_count", -1
+                )) != 0
+                or int(scale_1000_targeted_qa_decision.get(
+                    "invalid_observation_page_count", -1
+                )) != 0
+                or scale_1000_targeted_qa_decision.get(
+                    "matched_representation_intact"
+                ) is not True
+                or scale_1000_targeted_qa_decision.get(
+                    "corrected_ledgers_provisional_and_separate"
+                ) is not True
+                or scale_1000_targeted_qa_decision.get("gabriel_api_used") is not False
+                or qa1000_active != expected_qa1000_active
+            ):
+                raise ValueError(
+                    "cumulative 1,000-document targeted QA fails dashboard gates"
+                )
         return {
             **metadata,
             "calibration_phase": (
-                "compensation_extraction_1000_materialized_qa_blocked"
+                "compensation_extraction_1000_targeted_qa_completed"
+                if scale_1000_targeted_qa_completed
+                else "compensation_extraction_1000_materialized_qa_blocked"
                 if scale_1000_materialized
                 else "compensation_extraction_1000_live_incomplete_499_of_500"
                 if scale_1000_attempted
@@ -4772,8 +4966,25 @@ def build_text_table_calibration_status_summary(
                 if extraction_completed else None
             ),
             "latest_compensation_extraction_qa_id": (
-                "COMPENSATION-EVIDENCE-EXTRACTION-500DOC-TARGETED-QA-2026-07-25"
+                "COMPENSATION-EVIDENCE-EXTRACTION-1000DOC-TARGETED-QA-2026-07-25"
+                if scale_1000_targeted_qa_completed
+                else "COMPENSATION-EVIDENCE-EXTRACTION-500DOC-TARGETED-QA-2026-07-25"
                 if targeted_qa_completed else None
+            ),
+            "compensation_extraction_1000_targeted_qa_review_count": (
+                int(scale_1000_targeted_qa_decision.get(
+                    "review_rows_or_groups_processed", 0
+                )) if scale_1000_targeted_qa_completed else 0
+            ),
+            "compensation_extraction_1000_targeted_qa_routing_counts": (
+                scale_1000_targeted_qa_decision.get(
+                    "base_non_base_resolution_counts", {}
+                ) if scale_1000_targeted_qa_completed else {}
+            ),
+            "compensation_extraction_1000_targeted_qa_conflict_counts": (
+                scale_1000_targeted_qa_decision.get(
+                    "conflict_resolution_counts", {}
+                ) if scale_1000_targeted_qa_completed else {}
             ),
             "targeted_qa_review_rows_processed": (
                 int(targeted_qa_decision.get("review_rows_processed", 0))
@@ -4811,40 +5022,62 @@ def build_text_table_calibration_status_summary(
                 if extraction_completed else {}
             ),
             "quantitative_observation_count": (
-                int(scale_1000_decision["quantitative_observation_count"])
+                int(scale_1000_targeted_qa_summary[
+                    "corrected_quantitative_active_observation_count"
+                ])
+                if scale_1000_targeted_qa_completed
+                else int(scale_1000_decision["quantitative_observation_count"])
                 if scale_1000_materialized
                 else int(targeted_qa_summary["corrected_quantitative_active_observation_count"])
                 if targeted_qa_completed
                 else len(extraction_quant) if extraction_completed else 0
             ),
             "qualitative_mechanism_observation_count": (
-                int(scale_1000_decision["qualitative_mechanism_observation_count"])
+                int(scale_1000_targeted_qa_summary[
+                    "corrected_qualitative_active_observation_count"
+                ])
+                if scale_1000_targeted_qa_completed
+                else int(scale_1000_decision["qualitative_mechanism_observation_count"])
                 if scale_1000_materialized
                 else int(targeted_qa_summary["corrected_qualitative_active_observation_count"])
                 if targeted_qa_completed
                 else len(extraction_qual) if extraction_completed else 0
             ),
             "mixed_case_count": (
-                int(scale_1000_decision["mixed_case_count"])
+                int(scale_1000_targeted_qa_summary[
+                    "corrected_mixed_active_case_count"
+                ])
+                if scale_1000_targeted_qa_completed
+                else int(scale_1000_decision["mixed_case_count"])
                 if scale_1000_materialized
                 else int(targeted_qa_summary["corrected_mixed_active_case_count"])
                 if targeted_qa_completed
                 else len(extraction_mixed) if extraction_completed else 0
             ),
             "non_base_wage_observation_count": (
-                int(scale_1000_decision["non_base_wage_observation_count"])
+                int(scale_1000_targeted_qa_summary[
+                    "corrected_non_base_wage_active_observation_count"
+                ])
+                if scale_1000_targeted_qa_completed
+                else int(scale_1000_decision["non_base_wage_observation_count"])
                 if scale_1000_materialized
                 else int(targeted_qa_summary["corrected_non_base_wage_active_observation_count"])
                 if targeted_qa_completed
                 else len(extraction_nonbase) if extraction_completed else 0
             ),
             "reference_exclusion_case_count": (
-                int(scale_1000_decision["reference_exclusion_case_count"])
+                int(scale_1000_targeted_qa_summary[
+                    "corrected_reference_exclusion_active_count"
+                ])
+                if scale_1000_targeted_qa_completed
+                else int(scale_1000_decision["reference_exclusion_case_count"])
                 if scale_1000_materialized
                 else len(extraction_reference) if extraction_completed else 0
             ),
             "compensation_extraction_qa_status": (
-                scale_1000_decision.get("qa_status")
+                scale_1000_targeted_qa_decision.get("qa_status")
+                if scale_1000_targeted_qa_completed
+                else scale_1000_decision.get("qa_status")
                 if scale_1000_materialized
                 else targeted_qa_decision.get("qa_status")
                 if targeted_qa_completed
@@ -4858,7 +5091,9 @@ def build_text_table_calibration_status_summary(
                 if extraction_completed else 0
             ),
             "scale_1000_recommendation": (
-                scale_1000_decision.get("scale_beyond_1000_recommendation")
+                scale_1000_targeted_qa_decision.get("next_recommendation")
+                if scale_1000_targeted_qa_completed
+                else scale_1000_decision.get("scale_beyond_1000_recommendation")
                 if scale_1000_materialized
                 else targeted_qa_decision.get("scale_1000_recommendation")
                 if targeted_qa_completed
@@ -4928,16 +5163,31 @@ def build_text_table_calibration_status_summary(
                 if scale_1000_materialized else None
             ),
             "compensation_extraction_1000_unresolved_conflict_rate": (
-                float(scale_1000_decision.get("unresolved_quantitative_conflict_rate", 0))
+                float(scale_1000_targeted_qa_decision.get(
+                    "unresolved_quantitative_conflict_rate", 0
+                ))
+                if scale_1000_targeted_qa_completed
+                else float(scale_1000_decision.get("unresolved_quantitative_conflict_rate", 0))
                 if scale_1000_materialized else None
             ),
             "compensation_extraction_1000_base_nonbase_contamination_count": (
-                int(scale_1000_decision.get("base_non_base_wage_contamination_count", 0))
+                int(scale_1000_targeted_qa_decision.get(
+                    "unresolved_base_non_base_contamination_count", 0
+                ))
+                if scale_1000_targeted_qa_completed
+                else int(scale_1000_decision.get("base_non_base_wage_contamination_count", 0))
                 if scale_1000_materialized else None
             ),
             "scale_beyond_1000_recommendation": (
-                scale_1000_decision.get("scale_beyond_1000_recommendation")
+                scale_1000_targeted_qa_decision.get("next_recommendation")
+                if scale_1000_targeted_qa_completed
+                else scale_1000_decision.get("scale_beyond_1000_recommendation")
                 if scale_1000_attempted else None
+            ),
+            "remaining_readable_parse_text_extraction_allowed": (
+                bool(scale_1000_targeted_qa_decision.get(
+                    "remaining_readable_parse_text_extraction_allowed", False
+                )) if scale_1000_targeted_qa_completed else False
             ),
             "prior_auto_adjudication_gate_id": (
                 "TEXT-TABLE-AUTO-GABRIEL-GATE2-REFINEMENT-2026-07-25"
@@ -5090,7 +5340,9 @@ def build_text_table_calibration_status_summary(
                 else float(decision["wrong_page_rate"])
             ),
             "extraction_decision": (
-                scale_1000_decision.get("decision")
+                scale_1000_targeted_qa_decision.get("decision")
+                if scale_1000_targeted_qa_completed
+                else scale_1000_decision.get("decision")
                 if scale_1000_attempted
                 else targeted_qa_decision.get("decision")
                 if targeted_qa_completed
@@ -5122,7 +5374,9 @@ def build_text_table_calibration_status_summary(
                 else False
             ),
             "next_recommendation": (
-                scale_1000_decision.get("next_recommendation")
+                scale_1000_targeted_qa_decision.get("next_recommendation")
+                if scale_1000_targeted_qa_completed
+                else scale_1000_decision.get("next_recommendation")
                 if scale_1000_attempted
                 else "targeted_conflict_and_non_base_wage_qa_before_1000"
                 if extraction_completed
@@ -5141,7 +5395,9 @@ def build_text_table_calibration_status_summary(
                 )
             ),
             "wage_extraction_status": (
-                "provisional_1000_materialized_integrity_qa_blocked"
+                "provisional_1000_targeted_qa_pass_remaining_parse_text_authorized"
+                if scale_1000_targeted_qa_completed
+                else "provisional_1000_materialized_integrity_qa_blocked"
                 if scale_1000_materialized
                 else "provisional_1000_live_incomplete_499_of_500_no_cumulative"
                 if scale_1000_attempted
@@ -5149,7 +5405,9 @@ def build_text_table_calibration_status_summary(
                 if extraction_completed else "not_started"
             ),
             "qualitative_extraction_status": (
-                "provisional_1000_materialized_integrity_qa_blocked"
+                "provisional_1000_targeted_qa_pass_remaining_parse_text_authorized"
+                if scale_1000_targeted_qa_completed
+                else "provisional_1000_materialized_integrity_qa_blocked"
                 if scale_1000_materialized
                 else "provisional_1000_live_incomplete_499_of_500_no_cumulative"
                 if scale_1000_attempted
@@ -5220,6 +5478,15 @@ def build_text_table_calibration_status_summary(
                 else 0
             ),
             "caveats": (
+                [
+                    "The cumulative 1,000-document targeted QA passed and authorizes only a future provisional run over the remaining unique readable parse-text documents.",
+                    "The corrected cumulative shadow ledgers remain provisional and are not final analysis inputs.",
+                    "Two under-specified quantitative conflict groups remain explicit; their 0.1647 percent rate is below the 2 percent gate.",
+                    "No new extraction, GABRIEL/API call, URL access, OCR, ingestion, codification, wage-gap calculation, or regression occurred during targeted QA.",
+                    "Future extraction must preserve the corrected base/non-base routing rules and stop before any final merge.",
+                ]
+                if scale_1000_targeted_qa_completed
+                else
                 [
                     "The 1,000-document selection and bounded packets are frozen, but live extraction did not start because the representative preflight failed strict semantic schema.",
                     "The corrected 500-document targeted-QA ledgers remain the latest valid provisional extraction layer.",

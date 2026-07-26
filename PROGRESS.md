@@ -6,6 +6,33 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-25 (Cumulative 1,000-document targeted QA passed; remaining readable pool authorized)
+
+**Did**
+- Started from clean tracked `b15e73f005094765f9ead14dc0b9f9ec7cf6339f`, preserving the unrelated untracked root `package-lock.json` and local adjudication renders. Reconciled the 215-row cumulative review ledger into exactly 151 unresolved items: 126 possible base/non-base routing records and 25 conflict groups.
+- Added a deterministic, offline 1,000-case targeted-QA resolver and nine focused regression tests. The resolver preserves all source rows, original observation IDs, bounded pointers, canonical duplicate provenance, and mixed join keys while writing only separate corrected shadow ledgers.
+- Used bounded local text-layer checks where structured fields were insufficient. No OCR or full page/table text artifact was created. All 126 routing records were resolved: 5 retained as confirmed base salary cells, 120 routed to non-base wage, 1 routed to reference-only, 0 split, and 0 left insufficient.
+- Resolved 23 of 25 conflict groups: 7 distinct classification/rank, 5 distinct effective period, 6 distinct schedule cell, and 5 non-base misroutes. Two genuinely under-specified groups remain explicit.
+- Materialized corrected cumulative shadows with 1,214 active quantitative observations, 1,464 qualitative mechanisms, 256 mixed cases, 2,889 non-base observations, and 175 reference/exclusion rows. Existing nine canonicalized duplicate observations remain preserved.
+- Recomputed QA at zero duplicate observation IDs, zero invalid bounded page pointers, zero unresolved base/non-base contamination, a 0.1647% unresolved conflict rate, and intact 363 police / 237 fire / 400 non-safety representation.
+- Updated generated dashboard data, analysis readiness, the existing extraction card, dashboard documentation, result/status docs, handoff, and `next_task.md` to show `compensation_extraction_1000_targeted_qa_completed`.
+
+**Decisions and why**
+- Decision is `remaining_readable_parse_text_extraction_allowed`. Every integrity gate passes and the two retained conflict groups remain well below the 2% threshold; the next run may target the remaining unique readable parse-text pool provisionally.
+- The corrected outputs remain shadow ledgers, not final analysis inputs. Reroutes are explicit provenance-preserving records; no source cumulative ledger was overwritten.
+- GABRIEL/API was not needed. Bounded local structured and text-layer evidence was sufficient, and unresolved ambiguity was retained rather than guessed.
+
+**Surprises/breakage**
+- Five certification/premium-word records were genuine base-salary schedule cells and were retained after bounded-page confirmation; lexical routing alone would have incorrectly demoted them.
+- The durable detection inventory has 827 unselected rows but only 826 unique content hashes, so the next selection must explain and deduplicate one repeated content hash.
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Focused tests, dashboard generation/frontend build, repository validation, 60 ingestion tests, coverage audit, protected-state/hash checks, and diff hygiene passed.
+
+**Next steps**
+1. Freeze the remaining 826 unique retained readable content hashes, preserving corrected 1,000-case shadows as a no-call seed and resolving the duplicate-hash identity deterministically.
+2. Require a no-call packet dry run and strict representative preflight before a bounded resumable provisional extraction of only the remaining identities.
+3. Keep final merge, ingestion, codification, wage-gap work, regression, URL access, download, and OCR closed.
+
 ## 2026-07-25 (Longevity case resolved; cumulative 1,000-case layer materialized on QA hold)
 
 **Did**

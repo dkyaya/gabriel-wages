@@ -192,19 +192,19 @@ The dashboard builder writes:
 - `reports_index.json`
 
 The text/table calibration layer currently reports
-`compensation_extraction_1000_materialized_qa_blocked`. A one-case longevity
-contract passed preflight and live validation, completed the frozen new cohort
-at 500/500, and left corrected-seed model calls at zero. The cumulative
-provisional layer now covers 1,000 identities and contains 1,347 active
-quantitative observations, 1,464 qualitative-mechanism observations, 272 mixed
-cases, 2,758 non-base-wage observations, and 173 reference/exclusion cases.
-Packet, page-pointer, identity, and matching checks pass; duplicate observation
-IDs are zero. The unresolved conflict rate is 1.8560%, below 2%, but integrity
-QA fails because a stricter cumulative scan identified 126 active seed
-quantitative records with possible non-base-wage signals. Those records require
-targeted routing QA before further scale. Analysis readiness remains false.
-No URL access, download, OCR, ingestion, codification, wage-gap calculation, or
-regression occurred.
+`compensation_extraction_1000_targeted_qa_completed`. The deterministic
+cumulative QA pass processed all 151 unresolved routing rows/groups without a
+new extraction or GABRIEL/API call. It resolved all 126 possible base/non-base
+routing records and 23 of 25 under-specified conflict groups. The corrected
+provisional shadow layer contains 1,214 active quantitative observations,
+1,464 qualitative-mechanism observations, 256 mixed cases, 2,889 non-base-wage
+observations, and 175 reference/exclusion records. Duplicate observation IDs,
+invalid bounded page pointers, and unresolved base/non-base contamination are
+zero. Two conflict groups remain explicit; their 0.1647% rate is below the 2%
+gate. Integrity QA passes, so a future provisional extraction run over the
+remaining unique readable parse-text documents is authorized. Analysis
+readiness remains false, and no URL access, download, OCR, ingestion,
+codification, wage-gap calculation, or regression occurred.
 
 Review the printed totals and diffs before committing. In particular, candidate-positive plus parseable-empty municipalities must equal scout-covered municipalities, and transport/failure-only results must remain outside successful coverage.
 
