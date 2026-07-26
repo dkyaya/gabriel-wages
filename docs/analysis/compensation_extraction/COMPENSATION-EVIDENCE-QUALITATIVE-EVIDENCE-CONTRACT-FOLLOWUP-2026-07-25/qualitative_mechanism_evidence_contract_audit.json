@@ -1,0 +1,33 @@
+{
+  "analysis_readiness": false,
+  "carried_forward": {
+    "conflicts": 2,
+    "non_base": 4733,
+    "quantitative_candidate": 862,
+    "quantitative_exception": 1045,
+    "reference": 345,
+    "unresolved_conflict_groups": 2,
+    "unresolved_conflict_observations": 5
+  },
+  "exact_candidate_contamination_count": 0,
+  "full_coded_qualitative_view_created": false,
+  "full_page_text_persisted": false,
+  "historical_qa_fields_preserved": true,
+  "immutable_input_hashes_passed": 19,
+  "input_signature": "055ab6c84d23579f56f10b8aac28dcd83822e2525c89682a42e58df5ee177eea",
+  "limited_exact_span_candidate_created": true,
+  "non_target_pages_accessed": 0,
+  "ocr_later_accessed": 0,
+  "pdf_pages_accessed": 0,
+  "qualitative_rows": 1954,
+  "schema_version": "qualitative_evidence_contract_v1",
+  "span_qa_fields_preserved": true,
+  "task_id": "COMPENSATION-EVIDENCE-QUALITATIVE-EVIDENCE-CONTRACT-FOLLOWUP-2026-07-25",
+  "tier_counts": {
+    "ambiguous_exact_span_navigation": 614,
+    "exact_span_coded_candidate": 759,
+    "unavailable_span_navigation": 581
+  },
+  "tier_counts_reconcile": true,
+  "unique_qualitative_observation_ids": 1954
+}

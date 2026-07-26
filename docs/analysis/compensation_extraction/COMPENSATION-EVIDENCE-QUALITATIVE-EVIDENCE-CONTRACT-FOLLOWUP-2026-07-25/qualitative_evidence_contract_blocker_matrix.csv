@@ -1,0 +1,6 @@
+blocker_id,lane,issue,contract_treatment,next_action
+QEC01,qualitative,614 ambiguous exact-span rows,navigation_only,Keep separate; bounded repair may revisit without weakening exact QA.
+QEC02,qualitative,581 unavailable/unverified rows,navigation_only,Keep separate; no coded use without exact unique evidence.
+QEC03,qualitative,Full lane is only 759/1954 exact verified,limited_review_only,Separate review may assess limited exact-span candidate tier; full readiness prohibited.
+QEC04,quantitative,1045 quantitative exceptions,carried_forward,Remain outside mechanically safe quantitative candidates.
+QEC05,conflict,Two groups/five observations unresolved,quarantined,Preserve explicit quarantine; do not guess.

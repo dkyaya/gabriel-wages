@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "compensation_extraction_qualitative_evidence_contract_limited_review_allowed_exact_span_only"
+              ? "Qualitative evidence contract built; limited exact-span readiness review may proceed"
+              : textTableCalibrationStatus.calibration_phase ===
             "compensation_extraction_bounded_qualitative_span_disambiguation_partial_additional_repair_required"
               ? "Bounded qualitative span disambiguation improved exact QA; navigation-only blockers remain"
               : textTableCalibrationStatus.calibration_phase ===
@@ -837,6 +840,16 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "compensation_extraction_qualitative_evidence_contract_limited_review_allowed_exact_span_only" ? (
+            <>
+              The qualitative evidence contract reconciles all 1,954 mechanism rows into three
+              disjoint provisional tiers: 759 exact-span coded candidates, 614 ambiguous-span
+              navigation rows, and 581 unavailable-span navigation rows. Only the exact tier may
+              enter a separately authorized limited readiness review; the other tiers remain
+              navigation-only. No PDFs were reopened, all carried-forward lanes are byte-identical,
+              and analysis readiness and promotion remain false.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "compensation_extraction_bounded_qualitative_span_disambiguation_partial_additional_repair_required" ? (
             <>
               The exact-only follow-up preserved all 455 prior verified spans and reviewed 1,499

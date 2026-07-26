@@ -1,0 +1,25 @@
+{
+  "bugs_discovered_and_fixed": [
+    "Materialization initially required the future-review prompt before the reporting step created it; validation now distinguishes the pre-report and complete-output phases and revalidates after report creation."
+  ],
+  "focused_test_count_at_materialization": 37,
+  "offline_only": true,
+  "predecessor_test_count": 32,
+  "required_failure_modes": [
+    "immutable_input_hash_mismatch",
+    "wrong_tier_count",
+    "duplicate_observation_id",
+    "exact_span_hash_corruption",
+    "exact_span_offset_corruption",
+    "ambiguous_candidate_contamination",
+    "unavailable_candidate_contamination",
+    "historical_qa_overwrite",
+    "full_page_text_column",
+    "carried_file_drift",
+    "analysis_readiness_true",
+    "wrong_future_prompt",
+    "forbidden_output_boundary"
+  ],
+  "schema_version": "qualitative_evidence_contract_v1",
+  "test_script": "scripts/test_compensation_evidence_qualitative_evidence_contract_followup.py"
+}

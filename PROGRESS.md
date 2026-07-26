@@ -6,6 +6,28 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-26 (Qualitative evidence contract built; limited exact-span review allowed)
+
+**Did**
+- Started from clean tracked `e08035d32ee89cd7a7c88406742c193a85fed483`; left the known rendered-pages directory and root `package-lock.json` untouched.
+- Reverified 19 immutable inputs and partitioned all 1,954 qualitative rows into 759 exact-span coded candidates, 614 ambiguous navigation rows, and 581 unavailable navigation rows, with zero overlap or loss.
+- Preserved the full navigation schema plus separate historical `qa_status`, span QA, hashes, offsets, pointers, IDs, and provenance. Added explicit tier eligibility, use-scope, reason, and review-status fields.
+- Byte-copied 862 quantitative candidates, 1,045 exceptions, 4,733 non-base companion rows, 345 reference/control rows, and the two-group/five-observation conflict quarantine.
+- Added 37 focused evidence-contract tests and reran all 32 predecessor disambiguation tests.
+
+**Decisions**
+- Decision is `qualitative_evidence_contract_limited_review_allowed_exact_span_only`. A separately authorized readiness review may assess only the 759-row exact tier; full qualitative readiness and promotion remain false.
+- Ambiguous and unavailable tiers remain navigation-only. Exact textual traceability is not causal proof or analysis readiness.
+
+**Surprises/breakage**
+- Initial materialization stopped closed because the validator required the future prompt before the reporting step created it. The partial new directory was removed, validation was split into pre-report and complete-output phases, regression tests were added, and clean rematerialization passed.
+
+**Corpus snapshot**
+- `contracts=64`, `discourse=0`, `coverage=64`, `cities=19`; 28 healthy matched pairs (10 exact-cycle, 18 overlap-cycle), two exploratory adjacent matches, and six unmatched safety units.
+
+**Next steps**
+- Run the limited exact-span analysis-readiness review in `next_task.md` only after new explicit authorization. Preserve the 614 ambiguous and 581 unavailable rows as navigation-only and keep analysis readiness false.
+
 ## 2026-07-26 (Bounded qualitative span disambiguation partial; navigation blockers remain)
 
 **Did**

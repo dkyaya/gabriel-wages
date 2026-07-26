@@ -6,6 +6,26 @@ Last updated: `2026-07-26`
 
 ---
 
+## 2026-07-26 — Qualitative evidence contract supports a limited exact-span-only review
+
+### Current State
+
+- **Authority/start:** work began at clean tracked `e08035d32ee89cd7a7c88406742c193a85fed483` and used only the immutable disambiguation outputs.
+- **Decision:** `qualitative_evidence_contract_limited_review_allowed_exact_span_only`; analysis readiness and promotion remain false, but a separate limited exact-span-only readiness review is now allowed.
+- **Contract:** all 1,954 qualitative rows reconcile into 759 exact-span coded candidates, 614 ambiguous navigation rows, and 581 unavailable navigation rows. No ambiguous/unavailable row enters the candidate tier.
+- **Preservation:** observation/case/source/detection IDs, content and PDF hashes, page pointers, mechanism fields, historical QA, span QA, offsets, and lineage are retained. No PDF or page was accessed.
+- **Carry-forward:** 862 quantitative candidates, 1,045 exceptions, 4,733 non-base companion rows, 345 reference/control rows, and two conflict groups/five observations are byte-identical to their approved predecessors.
+- **Hardening:** 37 focused contract tests and 32 predecessor disambiguation tests pass. One ordering defect was found: the initial materializer validated the future prompt before creating it. The run stopped closed; phase-aware validation and regression coverage fixed the defect.
+- **Boundary:** no URL/search, PDF access, OCR, images, GABRIEL/API, extraction, selection, scout, source review, verification, ingestion, codification, wage-gap work, regression, causal analysis, fetch, pull, or remote inspection occurred.
+
+### Interpretation
+
+The tiered contract is explicit enough for a review to assess a *limited* exact-span candidate lane without contaminating it with unresolved evidence. This is permission to review, not permission to promote or analyze.
+
+### Next Move
+
+Follow [next_task.md](../../next_task.md) only after separate authorization. Review the 759 exact candidates; keep the 614 ambiguous and 581 unavailable rows navigation-only and analysis readiness false.
+
 ## 2026-07-26 — Bounded qualitative span disambiguation improved exact QA; follow-up still required
 
 ### Current State

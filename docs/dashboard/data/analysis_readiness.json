@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": "0.1.0",
-    "generated_at": "2026-07-26T13:16:22Z",
+    "generated_at": "2026-07-26T13:50:10Z",
     "data_vintage": "2026-07-23",
     "source_files": [
       "docs/analysis/national_scout_coverage_state.csv",
@@ -82,7 +82,7 @@
       "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
     ]
   },
-  "overall_status": "bounded_qualitative_span_disambiguation_partial_additional_repair_analysis_closed",
+  "overall_status": "qualitative_evidence_contract_limited_review_allowed_exact_span_only_analysis_closed",
   "current_inputs": {
     "national_queue_available": true,
     "national_coverage_available": true,
@@ -179,6 +179,13 @@
       "bounded_qualitative_span_disambiguation_exact_qa_count": 759,
       "bounded_qualitative_span_disambiguation_ambiguous_count": 614,
       "bounded_qualitative_span_disambiguation_unavailable_count": 581,
+      "qualitative_evidence_contract_completed": true,
+      "qualitative_evidence_contract_decision": "qualitative_evidence_contract_limited_review_allowed_exact_span_only",
+      "qualitative_evidence_contract_exact_candidate_count": 759,
+      "qualitative_evidence_contract_ambiguous_navigation_count": 614,
+      "qualitative_evidence_contract_unavailable_navigation_count": 581,
+      "qualitative_evidence_contract_repeat_review_scope": "limited_exact_span_only",
+      "qualitative_evidence_contract_analysis_readiness": false,
       "analysis_facing_promotion_allowed": false
     },
     "regression_stage": {

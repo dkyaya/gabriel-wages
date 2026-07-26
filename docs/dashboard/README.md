@@ -82,7 +82,7 @@ The current phase is `compensation_extraction_bounded_pdf_text_span_capture_part
 
 ## Bounded qualitative-span disambiguation follow-up — 2026-07-26
 
-The current phase is `compensation_extraction_bounded_qualitative_span_disambiguation_partial_additional_repair_required`. The exact-only follow-up preserved all 455 prior verified spans without reaccessing their pages and reviewed the frozen 891 ambiguous plus 608 unavailable rows on 1,011 approved pages across 700 hash-verified PDFs. Deterministic structured-field and exact-token rules resolved 277 ambiguous and 27 unavailable rows, raising unique exact QA spans to 759. The remaining 614 ambiguous and 581 unavailable rows stay navigation-only, so no coded qualitative analysis view exists and analysis readiness remains false. All 32 focused tests pass; OCR-later, image, non-target, and page-text persistence counts remain zero.
+The current phase is `compensation_extraction_qualitative_evidence_contract_limited_review_allowed_exact_span_only`. The evidence contract reconciles all 1,954 qualitative mechanism rows into three mutually exclusive provisional tiers: 759 exact-span coded candidates, 614 ambiguous-span navigation rows, and 581 unavailable-span navigation rows. Only the exact tier may be assessed in a separately authorized limited readiness review; the other tiers remain navigation-only. No PDFs were reopened, carried-forward quantitative/non-base/reference/conflict files remain byte-identical, and analysis readiness and promotion remain false.
 
 ## Final provisional schema readiness — 2026-07-26
 

@@ -1,0 +1,58 @@
+{
+  "analysis_facing_promotion_allowed": false,
+  "analysis_readiness": false,
+  "carried_forward": {
+    "conflicts": 2,
+    "non_base": 4733,
+    "quantitative_candidate": 862,
+    "quantitative_exception": 1045,
+    "reference": 345,
+    "unresolved_conflict_groups": 2,
+    "unresolved_conflict_observations": 5
+  },
+  "coded_qualitative_output": "provisional_exact_span_candidate_only",
+  "decision": "qualitative_evidence_contract_limited_review_allowed_exact_span_only",
+  "forbidden_actions_performed": [],
+  "full_qualitative_readiness": false,
+  "generated_at": "2026-07-26T13:46:40.781003Z",
+  "input_signature": "055ab6c84d23579f56f10b8aac28dcd83822e2525c89682a42e58df5ee177eea",
+  "invariants": {
+    "all_invariants_passed": true,
+    "checks": {
+      "all_1954_rows_accounted_for": true,
+      "ambiguous_rows_candidate_ineligible": true,
+      "analysis_readiness_false": true,
+      "carried_outputs_byte_identical": true,
+      "exact_candidate_rows_all_unique_span_qa": true,
+      "forbidden_page_text_columns_absent": true,
+      "future_prompt_matches_limited_review_decision": true,
+      "historical_qa_preserved_separately": true,
+      "no_duplicate_observation_ids": true,
+      "pdf_pages_accessed_zero": true,
+      "source_schema_preserved": true,
+      "tier_counts_reconcile": true,
+      "unavailable_rows_candidate_ineligible": true
+    },
+    "schema_version": "qualitative_evidence_contract_v1",
+    "tier_counts": {
+      "ambiguous_exact_span_navigation": 614,
+      "exact_span_coded_candidate": 759,
+      "unavailable_span_navigation": 581
+    }
+  },
+  "next_prompt": "next_analysis_readiness_review_prompt.md",
+  "next_recommendation": "run_separately_authorized_limited_exact_span_analysis_readiness_review",
+  "pdf_pages_accessed": 0,
+  "prior_or_durable_ledgers_mutated": false,
+  "repeat_analysis_readiness_review_allowed": true,
+  "repeat_review_scope": "limited_exact_span_only",
+  "schema_version": "qualitative_evidence_contract_v1",
+  "task_id": "COMPENSATION-EVIDENCE-QUALITATIVE-EVIDENCE-CONTRACT-FOLLOWUP-2026-07-25",
+  "tier_counts": {
+    "ambiguous_exact_span_navigation": 614,
+    "exact_span_coded_candidate": 759,
+    "unavailable_span_navigation": 581
+  },
+  "tier_counts_reconcile": true,
+  "tier_total": 1954
+}

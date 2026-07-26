@@ -1,0 +1,24 @@
+{
+  "all_invariants_passed": true,
+  "checks": {
+    "all_1954_rows_accounted_for": true,
+    "ambiguous_rows_candidate_ineligible": true,
+    "analysis_readiness_false": true,
+    "carried_outputs_byte_identical": true,
+    "exact_candidate_rows_all_unique_span_qa": true,
+    "forbidden_page_text_columns_absent": true,
+    "future_prompt_matches_limited_review_decision": true,
+    "historical_qa_preserved_separately": true,
+    "no_duplicate_observation_ids": true,
+    "pdf_pages_accessed_zero": true,
+    "source_schema_preserved": true,
+    "tier_counts_reconcile": true,
+    "unavailable_rows_candidate_ineligible": true
+  },
+  "schema_version": "qualitative_evidence_contract_v1",
+  "tier_counts": {
+    "ambiguous_exact_span_navigation": 614,
+    "exact_span_coded_candidate": 759,
+    "unavailable_span_navigation": 581
+  }
+}
