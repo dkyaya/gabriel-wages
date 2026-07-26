@@ -1,0 +1,77 @@
+{
+  "active_row_counts": {
+    "mixed": 371,
+    "non_base_wage": 4733,
+    "qualitative": 1954,
+    "quantitative": 1907,
+    "reference_and_exclusion": 345
+  },
+  "all_output_ledgers_byte_identical": true,
+  "base_non_base_wage_contamination_count": 0,
+  "case_count": 1826,
+  "codify_allowed": false,
+  "content_hash_coverage_method": "opaque_document_identity_derived_from_retained_hash_plus_independent_review_attestation",
+  "duplicate_observation_id_count": 0,
+  "duplicate_provenance_row_count": 14,
+  "final_analysis_ready": false,
+  "generated_at": "2026-07-26T03:55:22Z",
+  "historical_mixed_key_provenance_count": 5,
+  "ingestion_allowed": false,
+  "input_sha256": {
+    "readable_parse_text_1826_mixed_ledger_qa_corrected.csv": "a204061a4ca4bbfd3512bf964d689fe385dfd71fac93589a4bb9b59e64eb9192",
+    "readable_parse_text_1826_non_base_wage_ledger_qa_corrected.csv": "84df35187461392ea9699660ea86317250a33979e6ff2b4f9256a49b1d9e0ea2",
+    "readable_parse_text_1826_qualitative_mechanism_ledger_qa_corrected.csv": "d22a4015da83da7d0195e430ef30d475b3678c17696e7a835d6d09bce1a1e0d5",
+    "readable_parse_text_1826_quantitative_ledger_qa_corrected.csv": "7e275b8c45f0d4b77e01249d978fe17862fd3f8d552bf0f4ef77ed0bb3616c86",
+    "readable_parse_text_1826_reference_exclusion_ledger_qa_corrected.csv": "2a33987b8f54048d8a397fc7d9a917dafd2dbcf8b7b74a20de8c2642a886e3a1"
+  },
+  "invalid_bounded_page_pointer_count": 0,
+  "merge_data_input_count": 5,
+  "merge_data_inputs": [
+    "readable_parse_text_1826_quantitative_ledger_qa_corrected.csv",
+    "readable_parse_text_1826_qualitative_mechanism_ledger_qa_corrected.csv",
+    "readable_parse_text_1826_mixed_ledger_qa_corrected.csv",
+    "readable_parse_text_1826_non_base_wage_ledger_qa_corrected.csv",
+    "readable_parse_text_1826_reference_exclusion_ledger_qa_corrected.csv"
+  ],
+  "merge_method": "immutable_five_ledger_byte_copy_package_promotion",
+  "newly_canonicalized_duplicate_count": 5,
+  "ocr_later_documents_excluded": true,
+  "output_sha256": {
+    "ledgers/mixed/final_provisional_mixed_join_ledger.csv": "a204061a4ca4bbfd3512bf964d689fe385dfd71fac93589a4bb9b59e64eb9192",
+    "ledgers/non_base_wage/final_provisional_non_base_wage_ledger.csv": "84df35187461392ea9699660ea86317250a33979e6ff2b4f9256a49b1d9e0ea2",
+    "ledgers/qualitative/final_provisional_qualitative_mechanism_ledger.csv": "d22a4015da83da7d0195e430ef30d475b3678c17696e7a835d6d09bce1a1e0d5",
+    "ledgers/quantitative/final_provisional_quantitative_ledger.csv": "7e275b8c45f0d4b77e01249d978fe17862fd3f8d552bf0f4ef77ed0bb3616c86",
+    "ledgers/reference_and_exclusion/final_provisional_reference_exclusion_ledger.csv": "2a33987b8f54048d8a397fc7d9a917dafd2dbcf8b7b74a20de8c2642a886e3a1"
+  },
+  "regression_allowed": false,
+  "schemas_remain_separate": true,
+  "source_family_counts": {
+    "arbitration_award": 10,
+    "cba": 1717,
+    "factfinding": 2,
+    "memorandum_or_settlement": 20,
+    "ordinance_or_policy": 19,
+    "wage_schedule_or_compensation_plan": 58
+  },
+  "source_ledgers_mutated": false,
+  "source_row_counts": {
+    "mixed": 387,
+    "non_base_wage": 4746,
+    "qualitative": 1954,
+    "quantitative": 2044,
+    "reference_and_exclusion": 345
+  },
+  "state_count": 51,
+  "task_id": "COMPENSATION-EVIDENCE-FINAL-PROVISIONAL-MERGE-2026-07-25",
+  "unique_readable_content_hash_count": 1826,
+  "unit_type_counts": {
+    "fire": 439,
+    "non_safety": 607,
+    "police": 780
+  },
+  "unresolved_conflict_group_count": 2,
+  "unresolved_quantitative_conflict_rate": 0.00104877,
+  "wage_gap_analysis_allowed": false,
+  "wasco_record_boundary_repair_count": 1,
+  "working_out_of_classification_reroute_count": 3
+}

@@ -6,6 +6,32 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-25 (Final provisional compensation package materialized; analysis closed)
+
+**Did**
+- Started from clean tracked `acfc1e817aa8b3fc32d108ccaf33d1c38d7f50d5`, preserving unrelated untracked adjudication renders and root `package-lock.json`. Re-read and followed the prepared prompt under the user's separate explicit merge authorization.
+- Added a fail-closed package runner and 14 focused offline tests. The runner accepts exactly five corrected inputs, validates immutable hashes/counts/IDs/pointers/provenance/joins/conflicts, requires explicit authorization plus no-ingestion/no-codify/no-analysis flags, and has no network, OCR, model, extraction, or ingestion path.
+- Passed a no-write dry run, then copied all five ledgers byte-for-byte into a fresh staging directory, validated the staged package, atomically published it, and reopened it for complete post-publication validation.
+- Built a non-analytic 1,826-row case index, a two-row explicit conflict register, input/output hash files, manifest, reconciliation summary/report, validation, and decision. Five schemas remain separate; no cross-schema row concatenation occurred.
+- Reconciled 2,044 / 1,907 quantitative source/active rows, 1,954 / 1,954 qualitative, 387 / 371 mixed, 4,746 / 4,733 non-base wage, and 345 / 345 reference/exclusion. All five input/output hashes match exactly.
+- Preserved 14 duplicate-provenance rows, five newly canonicalized duplicates, three working-out-of-classification reroutes, the Wasco shadow repair, five historical mixed-key provenance references, and both explicitly unresolved groups. Duplicate IDs, invalid pointers, and contamination remain zero.
+- Updated dashboard generation/data, the existing extraction card, dashboard documentation, result/status docs, handoff, and `next_task.md` to show `compensation_extraction_final_provisional_package_materialized_qa_pass` while keeping analysis readiness false.
+
+**Decisions and why**
+- Decision is `final_provisional_package_materialized_qa_pass`. The operation was a byte-copy package promotion, not an extraction, transformation, ingestion, codification, or analytical merge.
+- The next action is a separate schema and analysis-readiness review. Package QA does not authorize ingestion, codification, wage-gap analysis, or regression.
+
+**Surprises/breakage**
+- Five historical qualitative mixed-key references point to mixed records deactivated in prior QA. They remain valid provenance fields but are not active mixed joins; the package preserves them byte-for-byte and validates all active mixed joins independently.
+- The five approved ledgers do not expose raw content-hash values; they expose opaque document identities deterministically derived from the frozen retained hashes. The case index preserves those identities, while the independent review supplies the 1,826-unique-hash coverage attestation without adding evidence rows.
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Focused package tests, dashboard generation/frontend build, repository validation, 60 ingestion tests, coverage audit, independent post-build reconciliation, protected-input checks, secret scan, and diff hygiene passed.
+
+**Next steps**
+1. Run a separately authorized schema and analysis-readiness review of the five provisional lanes and their join semantics.
+2. Keep the two residual groups explicit and preserve inactive/duplicate provenance during any later promotion.
+3. Keep ingestion, codification, final analysis, wage-gap work, regression, OCR, URLs, downloads, and new extraction closed.
+
 ## 2026-07-25 (Final provisional merge prompt prepared; merge not run)
 
 **Did**

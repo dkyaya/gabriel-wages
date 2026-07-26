@@ -192,20 +192,20 @@ The dashboard builder writes:
 - `reports_index.json`
 
 The text/table calibration layer currently reports
-`compensation_extraction_final_provisional_merge_prompt_prepared`. A fail-closed
-future merge prompt now locks the five corrected 1,826-case shadow ledgers and
-their SHA-256 values, requires a no-write dry run and complete reconciliation,
-keeps quantitative, qualitative, mixed, non-base-wage, and
-reference/exclusion schemas separate, and preserves both explicitly unresolved
-conflict groups. The underlying independent review and corrected counts remain
-unchanged: 1,907 active quantitative observations, 1,954 qualitative mechanism
+`compensation_extraction_final_provisional_package_materialized_qa_pass`. The
+authorized package-level merge verified and copied the five corrected shadow
+ledgers byte-for-byte into five separate provisional lanes. The package
+contains 1,907 active quantitative observations, 1,954 qualitative mechanism
 observations, 371 mixed cases, 4,733 non-base-wage observations, and 345
-reference/exclusion cases. No merge or merged package was created. All 1,826
-unique readable parse-text hashes remain covered, OCR-later documents remain
-untouched, and analysis readiness is false. A separate explicit user
-authorization is required before the prompt may be run. No GABRIEL/API call,
-new extraction, selection, URL access, download, OCR, ingestion, codification,
-wage-gap calculation, or regression occurred.
+reference/exclusion cases. Input/output SHA-256 values match; duplicate
+observation IDs, invalid bounded pointers, and base/non-base contamination are
+zero; all 14 duplicate-provenance rows and both explicitly unresolved groups
+remain. All 1,826 readable content identities remain covered and OCR-later
+documents remain untouched. The package is not a final analysis dataset:
+analysis readiness remains false, and a separate schema/analysis-readiness
+review is next. No GABRIEL/API call, new extraction, selection, URL access,
+download, OCR, ingestion, codification, wage-gap calculation, or regression
+occurred.
 
 Review the printed totals and diffs before committing. In particular, candidate-positive plus parseable-empty municipalities must equal scout-covered municipalities, and transport/failure-only results must remain outside successful coverage.
 

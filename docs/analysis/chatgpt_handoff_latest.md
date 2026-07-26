@@ -6,6 +6,33 @@ Last updated: `2026-07-25`
 
 ---
 
+## 2026-07-25 — Final provisional package materialized; analysis readiness remains false
+
+### Current State
+
+- **Authority/start:** work began at clean tracked `acfc1e817aa8b3fc32d108ccaf33d1c38d7f50d5` under a new explicit user authorization to execute the prepared prompt.
+- **Method:** the new runner performed immutable five-ledger package promotion. A no-write dry run passed; staged files were verified, atomically published, and reopened. All five output ledgers are byte-for-byte and SHA-256 identical to the corrected inputs.
+- **Package:** [the output directory](compensation_extraction/COMPENSATION-EVIDENCE-FINAL-PROVISIONAL-MERGE-2026-07-25/) contains five separate ledgers plus a non-analytic case index, conflict register, manifest, hashes, reconciliation, validation, and decision.
+- **Counts:** source/active rows are 2,044/1,907 quantitative, 1,954/1,954 qualitative, 387/371 mixed, 4,746/4,733 non-base wage, and 345/345 reference/exclusion. The package covers 1,826 opaque content-hash-derived identities with the independent 1,826-unique-hash attestation.
+- **QA:** duplicate IDs 0; invalid pointers 0; contamination 0; duplicate provenance 14; new canonical duplicates 5; reroutes 3; Wasco repair 1; unresolved groups 2 at 0.1049%. All active mixed joins resolve; five inherited historical mixed-key provenance references remain byte-preserved.
+- **Decision:** `final_provisional_package_materialized_qa_pass`. The package is provisional, not a final analysis dataset. Analysis readiness, ingestion, codification, wage-gap analysis, and regression remain false.
+- **Dashboard:** phase is `compensation_extraction_final_provisional_package_materialized_qa_pass`; the next recommendation is `separate_schema_and_analysis_readiness_review`.
+- **Boundary:** no GABRIEL/API, extraction, selection, URL/search, download, OCR, scout, source review, verification, ingestion, codification, wage-gap work, regression, causal analysis, fetch, pull, or remote inspection occurred.
+
+### Interpretation
+
+The evidence is now packaged without changing any approved row or collapsing
+schemas. Package integrity is complete, but analytic validity has not been
+adjudicated. In particular, inactive-row semantics, mixed-lane joins,
+non-base-wage treatment, and the two explicit residual groups require a
+separate analysis-readiness decision.
+
+### Next Move
+
+Follow [next_task.md](../../next_task.md). Run a separately authorized schema
+and analysis-readiness review only. Do not ingest, codify, merge into final
+analysis data, calculate gaps, or run regressions.
+
 ## 2026-07-25 — Final provisional merge prompt prepared; execution not authorized
 
 ### Current State

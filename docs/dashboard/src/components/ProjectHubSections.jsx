@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "compensation_extraction_final_provisional_package_materialized_qa_pass"
+              ? "Final provisional package materialized; analysis remains closed"
+              : textTableCalibrationStatus.calibration_phase ===
             "compensation_extraction_final_provisional_merge_prompt_prepared"
               ? "Final provisional merge prompt prepared; merge remains authorization-gated"
               : textTableCalibrationStatus.calibration_phase ===
@@ -816,6 +819,17 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "compensation_extraction_final_provisional_package_materialized_qa_pass" ? (
+            <>
+              The final provisional package now contains five separate ledgers copied
+              byte-for-byte from the approved corrected shadows. All five input/output hashes,
+              1,826 case identities, source and active counts, bounded pointers, duplicate
+              provenance, mixed joins, reroutes, and the Wasco repair reconcile. Both residual
+              conflict groups remain explicitly unresolved. This is a provisional package only:
+              OCR-later documents remain excluded, and ingestion, codification, and analysis
+              readiness remain false pending a separate schema/analysis-readiness review.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "compensation_extraction_final_provisional_merge_prompt_prepared" ? (
             <>
               A fail-closed future merge prompt now names the five corrected shadow ledgers and

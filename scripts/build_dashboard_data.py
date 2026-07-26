@@ -540,6 +540,31 @@ COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_MERGE_PROMPT_PREP_SUMMARY_PATH = (
     COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_MERGE_PROMPT_PREP_DIR
     / "compensation_evidence_final_provisional_merge_prompt_prep_summary.json"
 )
+COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_MERGE_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "COMPENSATION-EVIDENCE-FINAL-PROVISIONAL-MERGE-2026-07-25"
+)
+COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_MERGE_DECISION_PATH = (
+    COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_MERGE_DIR
+    / "final_provisional_decision.json"
+)
+COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_MERGE_MANIFEST_PATH = (
+    COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_MERGE_DIR
+    / "final_provisional_merge_manifest.json"
+)
+COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_MERGE_LEDGER_PATHS = (
+    COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_MERGE_DIR
+    / "ledgers/quantitative/final_provisional_quantitative_ledger.csv",
+    COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_MERGE_DIR
+    / "ledgers/qualitative/final_provisional_qualitative_mechanism_ledger.csv",
+    COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_MERGE_DIR
+    / "ledgers/mixed/final_provisional_mixed_join_ledger.csv",
+    COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_MERGE_DIR
+    / "ledgers/non_base_wage/final_provisional_non_base_wage_ledger.csv",
+    COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_MERGE_DIR
+    / "ledgers/reference_and_exclusion/final_provisional_reference_exclusion_ledger.csv",
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -768,6 +793,70 @@ def read_json(path: Path) -> dict[str, Any]:
     if not isinstance(payload, dict):
         raise ValueError(f"Expected a JSON object in {relative(path)}")
     return payload
+
+
+def final_provisional_package_status() -> tuple[bool, dict[str, Any], dict[str, Any]]:
+    required = (
+        COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_MERGE_DECISION_PATH,
+        COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_MERGE_MANIFEST_PATH,
+        COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_MERGE_DIR
+        / "final_provisional_case_index.csv",
+        COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_MERGE_DIR
+        / "final_provisional_conflict_register.csv",
+        *COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_MERGE_LEDGER_PATHS,
+    )
+    completed = all(path.exists() for path in required)
+    if not completed:
+        return False, {}, {}
+    decision = read_json(COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_MERGE_DECISION_PATH)
+    manifest = read_json(COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_MERGE_MANIFEST_PATH)
+    input_hashes = decision.get("input_sha256", {})
+    output_hashes = decision.get("output_sha256", {})
+    if not (
+        decision.get("task_id")
+        == "COMPENSATION-EVIDENCE-FINAL-PROVISIONAL-MERGE-2026-07-25"
+        and decision.get("decision")
+        == "final_provisional_package_materialized_qa_pass"
+        and decision.get("qa_pass") is True
+        and decision.get("package_materialized") is True
+        and decision.get("all_output_ledgers_byte_identical") is True
+        and decision.get("schemas_remain_separate") is True
+        and decision.get("source_ledgers_mutated") is False
+        and decision.get("final_analysis_ready") is False
+        and decision.get("ingestion_allowed") is False
+        and decision.get("codify_allowed") is False
+        and decision.get("wage_gap_analysis_allowed") is False
+        and decision.get("regression_allowed") is False
+        and int(decision.get("merge_data_input_count", 0)) == 5
+        and len(input_hashes) == len(output_hashes) == 5
+        and set(input_hashes.values()) == set(output_hashes.values())
+        and decision.get("source_row_counts") == {
+            "mixed": 387,
+            "non_base_wage": 4746,
+            "qualitative": 1954,
+            "quantitative": 2044,
+            "reference_and_exclusion": 345,
+        }
+        and decision.get("active_row_counts") == {
+            "mixed": 371,
+            "non_base_wage": 4733,
+            "qualitative": 1954,
+            "quantitative": 1907,
+            "reference_and_exclusion": 345,
+        }
+        and int(decision.get("case_count", 0)) == 1826
+        and int(decision.get("unique_readable_content_hash_count", 0)) == 1826
+        and int(decision.get("duplicate_observation_id_count", -1)) == 0
+        and int(decision.get("duplicate_provenance_row_count", 0)) == 14
+        and int(decision.get("invalid_bounded_page_pointer_count", -1)) == 0
+        and int(decision.get("base_non_base_wage_contamination_count", -1)) == 0
+        and int(decision.get("unresolved_conflict_group_count", 0)) == 2
+        and decision.get("ocr_later_documents_excluded") is True
+        and manifest.get("package_status")
+        == "final_provisional_package_materialized_qa_pass"
+    ):
+        raise ValueError("final provisional package fails dashboard gates")
+    return True, decision, manifest
 
 
 def build_reports_index_layer(
@@ -1407,6 +1496,11 @@ def build_analysis_readiness(
         ) is True
     ):
         raise ValueError("final provisional merge prompt prep fails dashboard gates")
+    (
+        final_package_materialized,
+        final_package_decision,
+        final_package_manifest,
+    ) = final_provisional_package_status()
     if scale_1000_targeted_qa_completed and (
         scale_1000_targeted_qa_decision.get("qa_pass") is not True
         or scale_1000_targeted_qa_decision.get(
@@ -1453,7 +1547,9 @@ def build_analysis_readiness(
     return {
         "metadata": metadata,
         "overall_status": (
-            "provisional_final_merge_prompt_prepared_not_run_analysis_closed"
+            "final_provisional_package_materialized_qa_pass_analysis_closed"
+            if final_package_materialized
+            else "provisional_final_merge_prompt_prepared_not_run_analysis_closed"
             if final_merge_prompt_prepared
             else "provisional_readable_parse_text_1826_independent_review_pass_merge_prompt_allowed"
             if readable_1826_independent_review_completed
@@ -1536,7 +1632,9 @@ def build_analysis_readiness(
             "wage_extraction_stage": {
                 "available": extraction_completed,
                 "display_status": (
-                    "final_provisional_merge_prompt_prepared_not_run_not_analysis_ready"
+                    "final_provisional_package_materialized_qa_pass_not_analysis_ready"
+                    if final_package_materialized
+                    else "final_provisional_merge_prompt_prepared_not_run_not_analysis_ready"
                     if final_merge_prompt_prepared
                     else "cumulative_readable_parse_text_1826_independent_review_pass_merge_prompt_only_not_analysis_ready"
                     if readable_1826_independent_review_completed
@@ -1622,7 +1720,9 @@ def build_analysis_readiness(
                 ),
                 "scale_beyond_1000_recommendation": scale_1000_decision.get(
                     "scale_beyond_1000_recommendation"
-                ) if not scale_1000_targeted_qa_completed else final_merge_prompt_prep_summary.get(
+                ) if not scale_1000_targeted_qa_completed else final_package_decision.get(
+                    "next_recommendation"
+                ) if final_package_materialized else final_merge_prompt_prep_summary.get(
                     "next_recommendation"
                 ) if final_merge_prompt_prepared else readable_1826_independent_review_decision.get(
                     "next_recommendation"
@@ -1668,7 +1768,12 @@ def build_analysis_readiness(
                     )
                 ),
                 "final_provisional_merge_prompt_prepared": final_merge_prompt_prepared,
-                "final_provisional_merge_ran": False,
+                "final_provisional_merge_ran": final_package_materialized,
+                "final_provisional_package_materialized": final_package_materialized,
+                "final_provisional_package_decision": (
+                    final_package_decision.get("decision")
+                    if final_package_materialized else None
+                ),
             },
             "regression_stage": {
                 "available": False,
@@ -5476,10 +5581,17 @@ def build_text_table_calibration_status_summary(
             ) is True
         ):
             raise ValueError("final provisional merge prompt prep fails dashboard gates")
+        (
+            final_package_materialized,
+            final_package_decision,
+            final_package_manifest,
+        ) = final_provisional_package_status()
         return {
             **metadata,
             "calibration_phase": (
-                "compensation_extraction_final_provisional_merge_prompt_prepared"
+                "compensation_extraction_final_provisional_package_materialized_qa_pass"
+                if final_package_materialized
+                else "compensation_extraction_final_provisional_merge_prompt_prepared"
                 if final_merge_prompt_prepared
                 else "compensation_extraction_readable_parse_text_1826_independent_bounded_review_completed"
                 if readable_1826_independent_review_completed
@@ -5533,7 +5645,9 @@ def build_text_table_calibration_status_summary(
                 if extraction_completed else None
             ),
             "latest_compensation_extraction_qa_id": (
-                "COMPENSATION-EVIDENCE-FINAL-PROVISIONAL-MERGE-PROMPT-PREP-2026-07-25"
+                "COMPENSATION-EVIDENCE-FINAL-PROVISIONAL-MERGE-2026-07-25"
+                if final_package_materialized
+                else "COMPENSATION-EVIDENCE-FINAL-PROVISIONAL-MERGE-PROMPT-PREP-2026-07-25"
                 if final_merge_prompt_prepared
                 else "COMPENSATION-EVIDENCE-READABLE-PARSE-TEXT-1826-INDEPENDENT-BOUNDED-REVIEW-2026-07-25"
                 if readable_1826_independent_review_completed
@@ -5807,7 +5921,17 @@ def build_text_table_calibration_status_summary(
                 if scale_1000_materialized else None
             ),
             "scale_beyond_1000_recommendation": (
-                remaining_parse_text_decision.get("next_recommendation")
+                final_package_decision.get("next_recommendation")
+                if final_package_materialized
+                else final_merge_prompt_prep_summary.get("next_recommendation")
+                if final_merge_prompt_prepared
+                else readable_1826_independent_review_decision.get(
+                    "next_recommendation"
+                )
+                if readable_1826_independent_review_completed
+                else readable_1826_targeted_qa_decision.get("next_recommendation")
+                if readable_1826_targeted_qa_completed
+                else remaining_parse_text_decision.get("next_recommendation")
                 if remaining_parse_text_attempted
                 else scale_1000_targeted_qa_decision.get("next_recommendation")
                 if scale_1000_targeted_qa_completed
@@ -5964,7 +6088,12 @@ def build_text_table_calibration_status_summary(
                 relative(COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_MERGE_PROMPT_PATH)
                 if final_merge_prompt_prepared else None
             ),
-            "final_provisional_merge_ran": False,
+            "final_provisional_merge_ran": final_package_materialized,
+            "final_provisional_package_materialized": final_package_materialized,
+            "final_provisional_package_path": (
+                relative(COMPENSATION_EXTRACTION_FINAL_PROVISIONAL_MERGE_DIR)
+                if final_package_materialized else None
+            ),
             "final_provisional_merge_allowed": False,
             "prior_auto_adjudication_gate_id": (
                 "TEXT-TABLE-AUTO-GABRIEL-GATE2-REFINEMENT-2026-07-25"
@@ -6117,7 +6246,9 @@ def build_text_table_calibration_status_summary(
                 else float(decision["wrong_page_rate"])
             ),
             "extraction_decision": (
-                final_merge_prompt_prep_summary.get("status")
+                final_package_decision.get("decision")
+                if final_package_materialized
+                else final_merge_prompt_prep_summary.get("status")
                 if final_merge_prompt_prepared
                 else readable_1826_independent_review_decision.get("decision")
                 if readable_1826_independent_review_completed
@@ -6159,7 +6290,9 @@ def build_text_table_calibration_status_summary(
                 else False
             ),
             "next_recommendation": (
-                final_merge_prompt_prep_summary.get("next_recommendation")
+                final_package_decision.get("next_recommendation")
+                if final_package_materialized
+                else final_merge_prompt_prep_summary.get("next_recommendation")
                 if final_merge_prompt_prepared
                 else readable_1826_independent_review_decision.get("next_recommendation")
                 if readable_1826_independent_review_completed
@@ -6188,7 +6321,9 @@ def build_text_table_calibration_status_summary(
                 )
             ),
             "wage_extraction_status": (
-                "provisional_final_merge_prompt_prepared_not_run_not_analysis_ready"
+                "final_provisional_package_materialized_qa_pass_not_analysis_ready"
+                if final_package_materialized
+                else "provisional_final_merge_prompt_prepared_not_run_not_analysis_ready"
                 if final_merge_prompt_prepared
                 else "provisional_readable_parse_text_1826_independent_review_pass_merge_prompt_only_not_analysis_ready"
                 if readable_1826_independent_review_completed
@@ -6208,7 +6343,9 @@ def build_text_table_calibration_status_summary(
                 if extraction_completed else "not_started"
             ),
             "qualitative_extraction_status": (
-                "provisional_final_merge_prompt_prepared_not_run_not_analysis_ready"
+                "final_provisional_package_materialized_qa_pass_not_analysis_ready"
+                if final_package_materialized
+                else "provisional_final_merge_prompt_prepared_not_run_not_analysis_ready"
                 if final_merge_prompt_prepared
                 else "provisional_readable_parse_text_1826_independent_review_pass_merge_prompt_only_not_analysis_ready"
                 if readable_1826_independent_review_completed
@@ -6291,6 +6428,15 @@ def build_text_table_calibration_status_summary(
                 else 0
             ),
             "caveats": (
+                [
+                    "The final provisional package contains five separate byte-identical ledgers; it is not a final analysis dataset.",
+                    "All 1,826 unique readable parse-text identities remain covered; OCR-later documents remain excluded.",
+                    "Both residual groups remain explicitly unresolved at a 0.1049 percent rate, with 14 duplicate-provenance rows and five newly canonicalized duplicate observations preserved.",
+                    "Duplicate observation IDs, invalid bounded page pointers, and base/non-base contamination remain zero.",
+                    "No GABRIEL/API call, extraction, selection, URL access, download, OCR, ingestion, codification, wage-gap calculation, regression, or causal analysis occurred; analysis readiness remains false.",
+                ]
+                if final_package_materialized
+                else
                 [
                     "Independent bounded review passed 27 checks across the two unresolved groups, three working-out-of-classification reroutes, one Wasco repair, five new duplicate canonicalizations, 14 duplicate-provenance rows, and ledger/dashboard consistency.",
                     "Both residual groups remain explicitly unresolved; their 0.1049 percent rate stays below the 2 percent gate without inventing rank, step, cell, or effective-period distinctions.",
