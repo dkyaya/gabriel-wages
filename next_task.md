@@ -1,28 +1,25 @@
-# Next task: independent bounded review before any final provisional merge
+# Next task: prepare the final provisional merge prompt only
 
-The deterministic 1,826-case targeted conflict QA passed. It resolved 35 of 37
-queued groups, retained two as explicitly unresolved, reduced the unresolved
-rate to 0.1049%, and produced separate corrected provisional shadow ledgers
-with zero duplicate IDs, invalid page pointers, or base/non-base contamination.
+The independent bounded review passed and permits preparation of a future
+final provisional merge prompt. It did not authorize or perform the merge.
 
-The next run should be a bounded independent review, not extraction. It should:
+The next task should draft a fail-closed merge prompt that:
 
-1. inspect the two remaining unresolved conflict groups using only their stored
-   structured fields and bounded local page pointers;
-2. verify the provenance-preserving reroute of the three temporary
-   working-out-of-classification premium observations;
-3. verify the one logical Wasco non-base-wage record reconstructed in the
-   shadow ledger from a pre-existing embedded-newline CSV record split;
-4. confirm all five newly canonicalized duplicate observations and all prior
-   duplicate provenance remain intact;
-5. compare shadow-ledger counts and hashes to the targeted-QA decision;
-6. leave any unresolved ambiguity explicit rather than inventing schedule-cell,
-   rank, step, pay-band, or effective-date distinctions; and
-7. produce a separate authorization decision before any final provisional
-   merge, ingestion, or codification.
+1. names the five corrected 1,826-case shadow ledgers as the only merge inputs;
+2. verifies their recorded SHA-256 values before any action;
+3. preserves all observation IDs, duplicate/canonical links, provenance,
+   bounded page pointers, mixed join keys, active flags, and the two explicitly
+   unresolved conflict groups;
+4. keeps quantitative, qualitative, mixed, non-base-wage, and
+   reference/exclusion schemas separate rather than collapsing them;
+5. defines a provisional merged package distinct from `data/`, `corpus/`,
+   ingestion inputs, codified outputs, and final analysis datasets;
+6. includes a dry-run, row/count/hash reconciliation, rollback-safe output
+   directory, and explicit stop-before-ingestion/codification rule; and
+7. requires separate user authorization before running the merge prompt.
 
-Do not select documents, run extraction, call GABRIEL/API by default, or touch
-OCR-later documents. Continue to prohibit URLs, hosted search, downloads, OCR,
-scouts, source review, verification, ingestion, `gabriel.codify`, final
-analysis merge, wage-gap work, regressions, causal analysis, and durable
-upstream-ledger mutation.
+Do not perform the merge in the prompt-preparation task. Continue to prohibit
+URLs, hosted search, downloads, OCR, new extraction, document selection,
+GABRIEL/API, scouts, source review, verification, ingestion,
+`gabriel.codify`, wage-gap work, regression, causal analysis, and mutation of
+durable or prior provisional ledgers. OCR-later documents remain out of scope.

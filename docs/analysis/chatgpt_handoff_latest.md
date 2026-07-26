@@ -6,6 +6,34 @@ Last updated: `2026-07-25`
 
 ---
 
+## 2026-07-25 — Readable parse-text 1,826 independent bounded review passed
+
+### Current State
+
+- **Authority/start:** work began at clean tracked `f28c7f285d84b34643dedd8684835a6f71a98822`. The unrelated untracked rendered-page directory and root `package-lock.json` remained outside scope.
+- **Method:** [the independent ledger](compensation_extraction/COMPENSATION-EVIDENCE-READABLE-PARSE-TEXT-1826-INDEPENDENT-BOUNDED-REVIEW-2026-07-25/readable_parse_text_1826_independent_bounded_review_ledger.csv) contains 27 checks: two unresolved groups, three reroute observations, one Wasco repair, five newly canonicalized duplicates, 14 duplicate-provenance rows, and two consistency checks. The review used structured fields and only four bounded local pages; no GABRIEL/API, extraction, or selection occurred.
+- **Residual groups:** both remain explicitly unresolved. The Papillion page contains aggregate fiscal-impact estimates rather than employee wage cells. The Salem page contains a rank schedule, but the stored observations omit enough rank/effective-period structure that no safe record mapping is available.
+- **Routing and repair:** all three working-out-of-classification quantitative observations are inactive and linked to active non-base shadows with the same case/page provenance. The Wasco corrected shadow contains one logical record; the malformed cumulative source remains byte-for-byte unchanged.
+- **Duplicates:** all five newly canonicalized duplicate observations and all 14 duplicate-provenance rows retain unique IDs and valid canonical targets.
+- **Counts/QA:** corrected active counts remain 1,907 quantitative, 1,954 qualitative mechanisms, 371 mixed, 4,733 non-base wage, and 345 reference/exclusion. Duplicate IDs, invalid page pointers, and contamination are zero; unresolved rate is 0.1049%; all input hashes passed.
+- **Decision:** [the decision](compensation_extraction/COMPENSATION-EVIDENCE-READABLE-PARSE-TEXT-1826-INDEPENDENT-BOUNDED-REVIEW-2026-07-25/readable_parse_text_1826_independent_bounded_review_decision.json) is `independent_review_pass_final_provisional_merge_prompt_allowed`. It permits prompt preparation only; the merge itself and analysis remain unauthorized.
+- **Dashboard:** phase is `compensation_extraction_readable_parse_text_1826_independent_bounded_review_completed`; all 1,826 readable hashes remain covered, OCR-later documents remain untouched, and analysis readiness is false.
+- **Boundary:** no URL/search, download, OCR, scout, source review, verification, extraction, GABRIEL/API, ingestion, codification, final merge, wage-gap work, regression, fetch, pull, or remote inspection occurred.
+
+### Interpretation
+
+The small residual risk surface has been independently reconciled. The two
+unresolved groups are documented evidence limitations, not hidden integrity
+errors, and their rate is well below the 2% gate. The corrected shadows remain
+provisional; the next task may prepare a merge prompt but must not execute it.
+
+### Next Move
+
+Follow [next_task.md](../../next_task.md). Draft a fail-closed final provisional
+merge prompt that names the five corrected shadow ledgers and immutable hashes,
+preserves all IDs/provenance/unresolved flags, and requires separate user
+authorization before execution. Do not merge, ingest, codify, or analyze.
+
 ## 2026-07-25 — Readable parse-text 1,826 targeted conflict QA passed
 
 ### Current State

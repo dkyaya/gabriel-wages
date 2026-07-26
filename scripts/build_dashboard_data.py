@@ -510,6 +510,23 @@ COMPENSATION_EXTRACTION_READABLE_1826_TARGETED_QA_LEDGER_PATHS = (
     COMPENSATION_EXTRACTION_READABLE_1826_TARGETED_QA_DIR
     / "readable_parse_text_1826_reference_exclusion_ledger_qa_corrected.csv",
 )
+COMPENSATION_EXTRACTION_READABLE_1826_INDEPENDENT_REVIEW_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "COMPENSATION-EVIDENCE-READABLE-PARSE-TEXT-1826-INDEPENDENT-BOUNDED-REVIEW-2026-07-25"
+)
+COMPENSATION_EXTRACTION_READABLE_1826_INDEPENDENT_REVIEW_DECISION_PATH = (
+    COMPENSATION_EXTRACTION_READABLE_1826_INDEPENDENT_REVIEW_DIR
+    / "readable_parse_text_1826_independent_bounded_review_decision.json"
+)
+COMPENSATION_EXTRACTION_READABLE_1826_INDEPENDENT_REVIEW_SUMMARY_PATH = (
+    COMPENSATION_EXTRACTION_READABLE_1826_INDEPENDENT_REVIEW_DIR
+    / "readable_parse_text_1826_independent_bounded_review_summary.json"
+)
+COMPENSATION_EXTRACTION_READABLE_1826_INDEPENDENT_REVIEW_LEDGER_PATH = (
+    COMPENSATION_EXTRACTION_READABLE_1826_INDEPENDENT_REVIEW_DIR
+    / "readable_parse_text_1826_independent_bounded_review_ledger.csv"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -1308,6 +1325,49 @@ def build_analysis_readiness(
         and readable_1826_targeted_qa_decision.get("ocr_later_documents_untouched") is True
     ):
         raise ValueError("readable parse-text 1,826 targeted conflict QA fails dashboard gates")
+    readable_1826_independent_review_completed = all(path.exists() for path in (
+        COMPENSATION_EXTRACTION_READABLE_1826_INDEPENDENT_REVIEW_DECISION_PATH,
+        COMPENSATION_EXTRACTION_READABLE_1826_INDEPENDENT_REVIEW_SUMMARY_PATH,
+        COMPENSATION_EXTRACTION_READABLE_1826_INDEPENDENT_REVIEW_LEDGER_PATH,
+    ))
+    readable_1826_independent_review_decision = (
+        read_json(COMPENSATION_EXTRACTION_READABLE_1826_INDEPENDENT_REVIEW_DECISION_PATH)
+        if readable_1826_independent_review_completed else {}
+    )
+    if readable_1826_independent_review_completed and not (
+        readable_1826_independent_review_decision.get("independent_review_pass") is True
+        and readable_1826_independent_review_decision.get("decision")
+        == "independent_review_pass_final_provisional_merge_prompt_allowed"
+        and readable_1826_independent_review_decision.get(
+            "final_provisional_merge_prompt_allowed"
+        ) is True
+        and readable_1826_independent_review_decision.get(
+            "final_provisional_merge_allowed"
+        ) is False
+        and readable_1826_independent_review_decision.get("final_analysis_ready") is False
+        and int(readable_1826_independent_review_decision.get(
+            "unresolved_conflict_groups_reviewed", 0
+        )) == 2
+        and int(readable_1826_independent_review_decision.get(
+            "duplicate_observation_id_count", -1
+        )) == 0
+        and int(readable_1826_independent_review_decision.get(
+            "invalid_observation_page_count", -1
+        )) == 0
+        and int(readable_1826_independent_review_decision.get(
+            "base_non_base_wage_contamination_count", -1
+        )) == 0
+        and float(readable_1826_independent_review_decision.get(
+            "unresolved_quantitative_conflict_rate", 1
+        )) <= 0.02
+        and readable_1826_independent_review_decision.get(
+            "all_unique_readable_parse_text_documents_covered"
+        ) is True
+        and readable_1826_independent_review_decision.get(
+            "ocr_later_documents_untouched"
+        ) is True
+    ):
+        raise ValueError("readable parse-text 1,826 independent review fails dashboard gates")
     if scale_1000_targeted_qa_completed and (
         scale_1000_targeted_qa_decision.get("qa_pass") is not True
         or scale_1000_targeted_qa_decision.get(
@@ -1354,7 +1414,9 @@ def build_analysis_readiness(
     return {
         "metadata": metadata,
         "overall_status": (
-            "provisional_readable_parse_text_1826_targeted_conflict_qa_pass"
+            "provisional_readable_parse_text_1826_independent_review_pass_merge_prompt_allowed"
+            if readable_1826_independent_review_completed
+            else "provisional_readable_parse_text_1826_targeted_conflict_qa_pass"
             if readable_1826_targeted_qa_completed
             else "provisional_readable_parse_text_1826_materialized_qa_pass"
             if remaining_parse_text_materialized
@@ -1433,7 +1495,9 @@ def build_analysis_readiness(
             "wage_extraction_stage": {
                 "available": extraction_completed,
                 "display_status": (
-                    "cumulative_readable_parse_text_1826_targeted_conflict_qa_pass_provisional_not_analysis_ready"
+                    "cumulative_readable_parse_text_1826_independent_review_pass_merge_prompt_only_not_analysis_ready"
+                    if readable_1826_independent_review_completed
+                    else "cumulative_readable_parse_text_1826_targeted_conflict_qa_pass_provisional_not_analysis_ready"
                     if readable_1826_targeted_qa_completed
                     else "cumulative_readable_parse_text_1826_materialized_qa_pass_targeted_qa_before_final_merge"
                     if remaining_parse_text_materialized
@@ -1515,7 +1579,9 @@ def build_analysis_readiness(
                 ),
                 "scale_beyond_1000_recommendation": scale_1000_decision.get(
                     "scale_beyond_1000_recommendation"
-                ) if not scale_1000_targeted_qa_completed else readable_1826_targeted_qa_decision.get(
+                ) if not scale_1000_targeted_qa_completed else readable_1826_independent_review_decision.get(
+                    "next_recommendation"
+                ) if readable_1826_independent_review_completed else readable_1826_targeted_qa_decision.get(
                     "next_recommendation"
                 ) if readable_1826_targeted_qa_completed else remaining_parse_text_decision.get(
                     "next_recommendation"
@@ -1547,6 +1613,14 @@ def build_analysis_readiness(
                 ),
                 "readable_parse_text_1826_targeted_conflict_qa_completed": (
                     readable_1826_targeted_qa_completed
+                ),
+                "readable_parse_text_1826_independent_bounded_review_completed": (
+                    readable_1826_independent_review_completed
+                ),
+                "final_provisional_merge_prompt_allowed": bool(
+                    readable_1826_independent_review_decision.get(
+                        "final_provisional_merge_prompt_allowed", False
+                    )
                 ),
             },
             "regression_stage": {
@@ -5273,10 +5347,64 @@ def build_text_table_calibration_status_summary(
             and readable_1826_targeted_qa_decision.get("gabriel_api_used") is False
         ):
             raise ValueError("readable parse-text 1,826 targeted conflict QA fails dashboard gates")
+        readable_1826_independent_review_completed = all(path.exists() for path in (
+            COMPENSATION_EXTRACTION_READABLE_1826_INDEPENDENT_REVIEW_DECISION_PATH,
+            COMPENSATION_EXTRACTION_READABLE_1826_INDEPENDENT_REVIEW_SUMMARY_PATH,
+            COMPENSATION_EXTRACTION_READABLE_1826_INDEPENDENT_REVIEW_LEDGER_PATH,
+        ))
+        readable_1826_independent_review_decision = (
+            read_json(COMPENSATION_EXTRACTION_READABLE_1826_INDEPENDENT_REVIEW_DECISION_PATH)
+            if readable_1826_independent_review_completed else {}
+        )
+        if readable_1826_independent_review_completed and not (
+            readable_1826_independent_review_decision.get("task_id")
+            == "COMPENSATION-EVIDENCE-READABLE-PARSE-TEXT-1826-INDEPENDENT-BOUNDED-REVIEW-2026-07-25"
+            and readable_1826_independent_review_decision.get("independent_review_pass") is True
+            and readable_1826_independent_review_decision.get("decision")
+            == "independent_review_pass_final_provisional_merge_prompt_allowed"
+            and readable_1826_independent_review_decision.get(
+                "final_provisional_merge_prompt_allowed"
+            ) is True
+            and readable_1826_independent_review_decision.get(
+                "final_provisional_merge_allowed"
+            ) is False
+            and readable_1826_independent_review_decision.get("final_analysis_ready") is False
+            and int(readable_1826_independent_review_decision.get(
+                "independent_review_item_count", 0
+            )) == 27
+            and int(readable_1826_independent_review_decision.get(
+                "unresolved_conflict_groups_reviewed", 0
+            )) == 2
+            and int(readable_1826_independent_review_decision.get(
+                "unresolved_conflict_groups_preserved", 0
+            )) == 2
+            and int(readable_1826_independent_review_decision.get(
+                "duplicate_observation_id_count", -1
+            )) == 0
+            and int(readable_1826_independent_review_decision.get(
+                "invalid_observation_page_count", -1
+            )) == 0
+            and int(readable_1826_independent_review_decision.get(
+                "base_non_base_wage_contamination_count", -1
+            )) == 0
+            and float(readable_1826_independent_review_decision.get(
+                "unresolved_quantitative_conflict_rate", 1
+            )) <= 0.02
+            and readable_1826_independent_review_decision.get(
+                "all_unique_readable_parse_text_documents_covered"
+            ) is True
+            and readable_1826_independent_review_decision.get(
+                "ocr_later_documents_untouched"
+            ) is True
+            and readable_1826_independent_review_decision.get("gabriel_api_used") is False
+        ):
+            raise ValueError("readable parse-text 1,826 independent review fails dashboard gates")
         return {
             **metadata,
             "calibration_phase": (
-                "compensation_extraction_readable_parse_text_1826_targeted_conflict_qa_completed"
+                "compensation_extraction_readable_parse_text_1826_independent_bounded_review_completed"
+                if readable_1826_independent_review_completed
+                else "compensation_extraction_readable_parse_text_1826_targeted_conflict_qa_completed"
                 if readable_1826_targeted_qa_completed
                 else "compensation_extraction_readable_parse_text_1826_materialized_qa_pass"
                 if remaining_parse_text_materialized
@@ -5326,7 +5454,9 @@ def build_text_table_calibration_status_summary(
                 if extraction_completed else None
             ),
             "latest_compensation_extraction_qa_id": (
-                "COMPENSATION-EVIDENCE-EXTRACTION-READABLE-PARSE-TEXT-1826-TARGETED-CONFLICT-QA-2026-07-25"
+                "COMPENSATION-EVIDENCE-READABLE-PARSE-TEXT-1826-INDEPENDENT-BOUNDED-REVIEW-2026-07-25"
+                if readable_1826_independent_review_completed
+                else "COMPENSATION-EVIDENCE-EXTRACTION-READABLE-PARSE-TEXT-1826-TARGETED-CONFLICT-QA-2026-07-25"
                 if readable_1826_targeted_qa_completed
                 else "COMPENSATION-EVIDENCE-EXTRACTION-1000DOC-TARGETED-QA-2026-07-25"
                 if scale_1000_targeted_qa_completed
@@ -5725,6 +5855,30 @@ def build_text_table_calibration_status_summary(
             "readable_parse_text_1826_targeted_conflict_qa_completed": (
                 readable_1826_targeted_qa_completed
             ),
+            "readable_parse_text_1826_independent_bounded_review_completed": (
+                readable_1826_independent_review_completed
+            ),
+            "readable_parse_text_1826_independent_review_item_count": (
+                int(readable_1826_independent_review_decision.get(
+                    "independent_review_item_count", 0
+                )) if readable_1826_independent_review_completed else 0
+            ),
+            "readable_parse_text_1826_independent_unresolved_groups_reviewed": (
+                int(readable_1826_independent_review_decision.get(
+                    "unresolved_conflict_groups_reviewed", 0
+                )) if readable_1826_independent_review_completed else 0
+            ),
+            "readable_parse_text_1826_independent_unresolved_groups_preserved": (
+                int(readable_1826_independent_review_decision.get(
+                    "unresolved_conflict_groups_preserved", 0
+                )) if readable_1826_independent_review_completed else 0
+            ),
+            "final_provisional_merge_prompt_allowed": bool(
+                readable_1826_independent_review_decision.get(
+                    "final_provisional_merge_prompt_allowed", False
+                )
+            ),
+            "final_provisional_merge_allowed": False,
             "prior_auto_adjudication_gate_id": (
                 "TEXT-TABLE-AUTO-GABRIEL-GATE2-REFINEMENT-2026-07-25"
                 if gate3_completed
@@ -5876,7 +6030,9 @@ def build_text_table_calibration_status_summary(
                 else float(decision["wrong_page_rate"])
             ),
             "extraction_decision": (
-                readable_1826_targeted_qa_decision.get("decision")
+                readable_1826_independent_review_decision.get("decision")
+                if readable_1826_independent_review_completed
+                else readable_1826_targeted_qa_decision.get("decision")
                 if readable_1826_targeted_qa_completed
                 else remaining_parse_text_decision.get("decision")
                 if remaining_parse_text_attempted
@@ -5914,7 +6070,9 @@ def build_text_table_calibration_status_summary(
                 else False
             ),
             "next_recommendation": (
-                readable_1826_targeted_qa_decision.get("next_recommendation")
+                readable_1826_independent_review_decision.get("next_recommendation")
+                if readable_1826_independent_review_completed
+                else readable_1826_targeted_qa_decision.get("next_recommendation")
                 if readable_1826_targeted_qa_completed
                 else remaining_parse_text_decision.get("next_recommendation")
                 if remaining_parse_text_attempted
@@ -5939,7 +6097,9 @@ def build_text_table_calibration_status_summary(
                 )
             ),
             "wage_extraction_status": (
-                "provisional_readable_parse_text_1826_targeted_conflict_qa_pass_not_analysis_ready"
+                "provisional_readable_parse_text_1826_independent_review_pass_merge_prompt_only_not_analysis_ready"
+                if readable_1826_independent_review_completed
+                else "provisional_readable_parse_text_1826_targeted_conflict_qa_pass_not_analysis_ready"
                 if readable_1826_targeted_qa_completed
                 else "provisional_readable_parse_text_1826_materialized_qa_pass_targeted_qa_before_final_merge"
                 if remaining_parse_text_materialized
@@ -5955,7 +6115,9 @@ def build_text_table_calibration_status_summary(
                 if extraction_completed else "not_started"
             ),
             "qualitative_extraction_status": (
-                "provisional_readable_parse_text_1826_targeted_conflict_qa_pass_not_analysis_ready"
+                "provisional_readable_parse_text_1826_independent_review_pass_merge_prompt_only_not_analysis_ready"
+                if readable_1826_independent_review_completed
+                else "provisional_readable_parse_text_1826_targeted_conflict_qa_pass_not_analysis_ready"
                 if readable_1826_targeted_qa_completed
                 else "provisional_readable_parse_text_1826_materialized_qa_pass_targeted_qa_before_final_merge"
                 if remaining_parse_text_materialized
@@ -6034,6 +6196,15 @@ def build_text_table_calibration_status_summary(
                 else 0
             ),
             "caveats": (
+                [
+                    "Independent bounded review passed 27 checks across the two unresolved groups, three working-out-of-classification reroutes, one Wasco repair, five new duplicate canonicalizations, 14 duplicate-provenance rows, and ledger/dashboard consistency.",
+                    "Both residual groups remain explicitly unresolved; their 0.1049 percent rate stays below the 2 percent gate without inventing rank, step, cell, or effective-period distinctions.",
+                    "All 1,826 unique readable parse-text hashes remain covered in corrected provisional shadow ledgers; OCR-later documents remain untouched.",
+                    "A final provisional merge prompt may now be prepared, but no merge occurred and analysis readiness remains false.",
+                    "No GABRIEL/API call, new extraction, selection, URL access, download, OCR, ingestion, codification, final merge, wage-gap calculation, or regression occurred.",
+                ]
+                if readable_1826_independent_review_completed
+                else
                 [
                     "All 1,826 unique readable parse-text hashes remain covered in corrected provisional shadow ledgers; this is not a final analysis dataset.",
                     "Targeted conflict QA resolved 35 of 37 groups and left two explicitly unresolved; the revised rate is 0.1049 percent.",

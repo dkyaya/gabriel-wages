@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": "0.1.0",
-    "generated_at": "2026-07-26T03:09:37Z",
+    "generated_at": "2026-07-26T03:29:32Z",
     "data_vintage": "2026-07-23",
     "source_files": [
       "docs/analysis/national_scout_coverage_state.csv",
@@ -82,7 +82,7 @@
       "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
     ]
   },
-  "overall_status": "provisional_readable_parse_text_1826_targeted_conflict_qa_pass",
+  "overall_status": "provisional_readable_parse_text_1826_independent_review_pass_merge_prompt_allowed",
   "current_inputs": {
     "national_queue_available": true,
     "national_coverage_available": true,
@@ -139,7 +139,7 @@
     },
     "wage_extraction_stage": {
       "available": true,
-      "display_status": "cumulative_readable_parse_text_1826_targeted_conflict_qa_pass_provisional_not_analysis_ready",
+      "display_status": "cumulative_readable_parse_text_1826_independent_review_pass_merge_prompt_only_not_analysis_ready",
       "observation_count": 1907,
       "qualitative_mechanism_observation_count": 1954,
       "qa_status": "pass",
@@ -149,13 +149,15 @@
       "scale_1000_targeted_qa_completed": true,
       "scale_1000_allowed": false,
       "scale_1000_live_started": true,
-      "scale_beyond_1000_recommendation": "independent_review_before_final_provisional_merge",
+      "scale_beyond_1000_recommendation": "prepare_final_provisional_merge_prompt_only",
       "remaining_readable_parse_text_extraction_allowed": false,
       "remaining_readable_parse_text_live_started": true,
       "remaining_readable_parse_text_schema_valid_case_count": 826,
       "remaining_readable_parse_text_unresolved_case_count": 0,
       "remaining_readable_parse_text_cumulative_materialized": true,
-      "readable_parse_text_1826_targeted_conflict_qa_completed": true
+      "readable_parse_text_1826_targeted_conflict_qa_completed": true,
+      "readable_parse_text_1826_independent_bounded_review_completed": true,
+      "final_provisional_merge_prompt_allowed": true
     },
     "regression_stage": {
       "available": false,

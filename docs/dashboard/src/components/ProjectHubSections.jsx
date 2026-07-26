@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "compensation_extraction_readable_parse_text_1826_independent_bounded_review_completed"
+              ? "Independent bounded review passed; final merge prompt may be prepared"
+              : textTableCalibrationStatus.calibration_phase ===
             "compensation_extraction_readable_parse_text_1826_targeted_conflict_qa_completed"
               ? "Readable parse-text targeted conflict QA passed; provisional layer remains analysis-closed"
               : textTableCalibrationStatus.calibration_phase ===
@@ -810,6 +813,23 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "compensation_extraction_readable_parse_text_1826_independent_bounded_review_completed" ? (
+            <>
+              Independent bounded review passed {formatNumber(
+                textTableCalibrationStatus.readable_parse_text_1826_independent_review_item_count,
+              )} checks. Both residual conflict groups were reviewed and remain explicitly unresolved; the corrected provisional layer still contains {formatNumber(
+                textTableCalibrationStatus.quantitative_observation_count,
+              )} active quantitative observations, {formatNumber(
+                textTableCalibrationStatus.qualitative_mechanism_observation_count,
+              )} qualitative mechanisms, {formatNumber(
+                textTableCalibrationStatus.mixed_case_count,
+              )} mixed cases, {formatNumber(
+                textTableCalibrationStatus.non_base_wage_observation_count,
+              )} non-base-wage observations, and {formatNumber(
+                textTableCalibrationStatus.reference_exclusion_case_count,
+              )} reference/exclusion cases. Duplicate IDs, invalid page pointers, and base/non-base contamination remain zero. A final provisional merge prompt may be prepared, but no merge occurred and analysis readiness remains false.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "compensation_extraction_readable_parse_text_1826_targeted_conflict_qa_completed" ? (
             <>
               Targeted QA processed {formatNumber(

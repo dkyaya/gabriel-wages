@@ -6,6 +6,32 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-25 (Readable parse-text 1,826 independent bounded review passed)
+
+**Did**
+- Started from clean tracked `f28c7f285d84b34643dedd8684835a6f71a98822`, preserving unrelated untracked adjudication renders and root `package-lock.json`. All targeted-QA corrected shadows and upstream cumulative inputs passed pre/post SHA-256 checks.
+- Added a deterministic independent-review runner and ten focused offline tests. The 27-row review ledger covers two residual conflicts, three working-out-of-classification reroutes, one Wasco shadow repair, five new duplicate canonicalizations, all 14 duplicate-provenance rows, and two consistency checks.
+- Independently rendered and inspected only the four bounded local pages needed for the two unresolved groups, the working-out-of-classification rule, and the Wasco repair. No OCR or whole-document review occurred.
+- Kept both residual groups explicitly unresolved: one page contains aggregate fiscal-impact estimates rather than employee wage cells; the other has a real rank schedule but insufficient stored rank/effective-period structure for safe record mapping.
+- Verified the three quantitative source records are inactive and linked one-to-one to active non-base shadows; verified the Wasco source hash is unchanged and the corrected shadow has one logical reconstructed record with preserved ID/pointer.
+- Reconciled the unchanged corrected counts at 1,907 quantitative, 1,954 qualitative mechanisms, 371 mixed cases, 4,733 non-base wage, and 345 reference/exclusion. Duplicate IDs, invalid pointers, and contamination remain zero; the unresolved rate remains 0.1049%.
+- Updated the generated dashboard data, analysis readiness, existing extraction card, dashboard documentation, result/status docs, handoff, and `next_task.md` to show `compensation_extraction_readable_parse_text_1826_independent_bounded_review_completed`.
+
+**Decisions and why**
+- Decision is `independent_review_pass_final_provisional_merge_prompt_allowed`. All review gates pass without inventing distinctions; all 1,826 readable hashes remain covered and OCR-later documents remain untouched.
+- Only preparation of a future final provisional merge prompt is authorized. The merge itself, ingestion, codification, and analysis remain closed; analysis readiness remains false.
+
+**Surprises/breakage**
+- The bounded rank-schedule page is visually clear, but the stored records are not sufficiently keyed to its rank/date cells. Preserving ambiguity is safer than retroactively assigning those fields.
+- No new integrity defect was found. The Wasco and working-out-of-classification corrections reconcile independently.
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Independent-review tests, legacy extraction tests, dashboard generation/frontend build, repository validation, 60 ingestion tests, coverage audit, protected hashes, and diff hygiene passed.
+
+**Next steps**
+1. Prepare a fail-closed final provisional merge prompt naming only the five corrected shadow ledgers and their hashes.
+2. Require separate user authorization before executing any merge; preserve all IDs, joins, provenance, active flags, and unresolved groups.
+3. Keep OCR-later documents, ingestion, codification, wage-gap work, regression, URL access, downloads, and new extraction closed.
+
 ## 2026-07-25 (Readable parse-text 1,826 targeted conflict QA passed)
 
 **Did**

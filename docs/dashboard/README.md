@@ -192,17 +192,20 @@ The dashboard builder writes:
 - `reports_index.json`
 
 The text/table calibration layer currently reports
-`compensation_extraction_readable_parse_text_1826_targeted_conflict_qa_completed`.
-Deterministic targeted QA processed all 37 unresolved quantitative conflict
-groups, resolved 35, and retained two as explicitly unresolved. The corrected
+`compensation_extraction_readable_parse_text_1826_independent_bounded_review_completed`.
+An independent bounded review passed 27 checks covering both residual conflict
+groups, the three working-out-of-classification reroutes, the Wasco shadow-only
+record repair, five new duplicate canonicalizations, all 14 duplicate-provenance
+rows, and ledger/dashboard consistency. Both residual groups remain explicitly
+unresolved. The corrected
 provisional shadow layer now contains 1,907 active quantitative observations,
 1,954 qualitative mechanism observations, 371 mixed cases, 4,733 non-base-wage
 observations, and 345 reference/exclusion cases. The revised unresolved
 conflict rate is 0.1049%; duplicate observation IDs, invalid page pointers,
 and base/non-base contamination remain zero. All 1,826 unique readable
 parse-text hashes remain covered and OCR-later documents remain untouched.
-This is still provisional: no final merge occurred and analysis readiness is
-false. No GABRIEL/API call, new extraction, selection, URL access, download,
+This is still provisional: a final merge prompt may be prepared, but no final
+merge occurred and analysis readiness is false. No GABRIEL/API call, new extraction, selection, URL access, download,
 OCR, ingestion, codification, wage-gap calculation, or regression occurred.
 
 Review the printed totals and diffs before committing. In particular, candidate-positive plus parseable-empty municipalities must equal scout-covered municipalities, and transport/failure-only results must remain outside successful coverage.

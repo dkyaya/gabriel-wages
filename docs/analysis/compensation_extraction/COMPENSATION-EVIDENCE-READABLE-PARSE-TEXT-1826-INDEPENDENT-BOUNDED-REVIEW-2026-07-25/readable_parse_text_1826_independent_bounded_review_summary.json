@@ -1,0 +1,73 @@
+{
+  "all_input_hashes_preserved": true,
+  "all_unique_readable_parse_text_documents_covered": true,
+  "base_non_base_wage_contamination_count": 0,
+  "corrected_input_sha256": {
+    "readable_parse_text_1826_mixed_ledger_qa_corrected.csv": "a204061a4ca4bbfd3512bf964d689fe385dfd71fac93589a4bb9b59e64eb9192",
+    "readable_parse_text_1826_non_base_wage_ledger_qa_corrected.csv": "84df35187461392ea9699660ea86317250a33979e6ff2b4f9256a49b1d9e0ea2",
+    "readable_parse_text_1826_qualitative_mechanism_ledger_qa_corrected.csv": "d22a4015da83da7d0195e430ef30d475b3678c17696e7a835d6d09bce1a1e0d5",
+    "readable_parse_text_1826_quantitative_ledger_qa_corrected.csv": "7e275b8c45f0d4b77e01249d978fe17862fd3f8d552bf0f4ef77ed0bb3616c86",
+    "readable_parse_text_1826_recomputed_decision.json": "80ef3abf8e9552f8e2364cabe0a1adf0887e0c1afbf4ef97b50b6fa8b3a56321",
+    "readable_parse_text_1826_reference_exclusion_ledger_qa_corrected.csv": "2a33987b8f54048d8a397fc7d9a917dafd2dbcf8b7b74a20de8c2642a886e3a1",
+    "readable_parse_text_1826_targeted_conflict_qa_report.md": "e0acaa2cf58ac181ecaab20d23615b1914ff7bca8336eb4c9f019326afac2805",
+    "readable_parse_text_1826_targeted_conflict_qa_resolutions.csv": "efd465ee3c172f72a2232f8104b1bf96e767d0a4fc7d7a299cd2f423c0745aa9",
+    "readable_parse_text_1826_targeted_conflict_qa_summary.json": "c6880d7a6a0670377462b73446cca5241fd2195d5896c6febe04fe16822e4361",
+    "readable_parse_text_1826_targeted_conflict_qa_validation_2026-07-25.md": "fa337e784780f4c5b9b29188c3856dab3c47876e50a33f614619631461187ccf"
+  },
+  "corrected_ledgers_provisional_and_separate": true,
+  "corrected_mixed_active_case_count": 371,
+  "corrected_non_base_wage_active_observation_count": 4733,
+  "corrected_qualitative_active_observation_count": 1954,
+  "corrected_quantitative_active_observation_count": 1907,
+  "corrected_reference_exclusion_active_count": 345,
+  "cumulative_case_count": 1826,
+  "cumulative_quantitative_conflict_group_count": 130,
+  "cumulative_unique_content_hash_count": 1826,
+  "dashboard_analysis_readiness_false": true,
+  "duplicate_observation_id_count": 0,
+  "duplicate_provenance_rows_verified": 14,
+  "gabriel_api_used": false,
+  "generated_at": "2026-07-26T03:25:16Z",
+  "independent_review_item_count": 27,
+  "invalid_observation_page_count": 0,
+  "matched_representation_intact": true,
+  "new_document_selection": false,
+  "new_extraction_run": false,
+  "newly_canonicalized_duplicate_observations_verified": 5,
+  "ocr_later_documents_untouched": true,
+  "review_method": "independent_deterministic_structured_and_bounded_local_page_review",
+  "source_type_counts": {
+    "arbitration_award": 10,
+    "cba": 1717,
+    "factfinding": 2,
+    "memorandum_or_settlement": 20,
+    "ordinance_or_policy": 19,
+    "wage_schedule_or_compensation_plan": 58
+  },
+  "state_count": 51,
+  "task_id": "COMPENSATION-EVIDENCE-READABLE-PARSE-TEXT-1826-INDEPENDENT-BOUNDED-REVIEW-2026-07-25",
+  "unit_type_counts": {
+    "fire": 439,
+    "non_safety": 607,
+    "police": 780
+  },
+  "unresolved_conflict_groups_preserved": 2,
+  "unresolved_conflict_groups_reviewed": 2,
+  "unresolved_group_outcomes": {
+    "remain_explicitly_unresolved": 2
+  },
+  "unresolved_quantitative_conflict_group_count": 2,
+  "unresolved_quantitative_conflict_rate": 0.00104877,
+  "upstream_cumulative_input_sha256": {
+    "cumulative_readable_parse_text_mixed_ledger.csv": "976dd15581bef510b4c2386e9a3017ac2ba939bcfd4d1eef061555cfcf428ec0",
+    "cumulative_readable_parse_text_non_base_wage_ledger.csv": "6a278a56accd4d97cb8a4618a0e346c19e1702cc0fc9560ce9c15c582500000c",
+    "cumulative_readable_parse_text_qualitative_mechanism_ledger.csv": "4063367e6b6be59e726e3177ea489c509eb3b95e87c8d5c05163cb76cd1721ec",
+    "cumulative_readable_parse_text_quantitative_ledger.csv": "a9b7e50ba97b444f47e16170027cb55038282e578c54aac80129a037ccdd1078",
+    "cumulative_readable_parse_text_reference_exclusion_ledger.csv": "67c59ca4b550215539e2021b02fd7ed70673e2a9660c89cbc91810d78a520d34",
+    "remaining_parse_text_conflict_review.csv": "59f9422928b487374ae1a7a30a18ac466ad6b4606b53865a87608ec8557d45e8",
+    "remaining_parse_text_cumulative_summary.json": "da426a002d653a175280ad169ee3c1ff511ba04eb5dbd29232e4c648118a1a4c",
+    "remaining_parse_text_decision_report.json": "7a3908513dfdc904eef354ee8819b9bba94c3486af677ed17b4543c829f1204e"
+  },
+  "wasco_record_boundary_repairs_verified": 1,
+  "working_out_of_classification_records_verified": 3
+}

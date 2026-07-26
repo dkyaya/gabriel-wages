@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-26T03:09:37Z",
+  "generated_at": "2026-07-26T03:29:32Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -80,13 +80,13 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "calibration_phase": "compensation_extraction_readable_parse_text_1826_targeted_conflict_qa_completed",
+  "calibration_phase": "compensation_extraction_readable_parse_text_1826_independent_bounded_review_completed",
   "latest_calibration_id": "TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24",
   "latest_calibration_review_id": "TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24",
   "latest_adjudication_prep_id": "TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24",
   "latest_auto_adjudication_gate_id": "TEXT-TABLE-AUTO-GABRIEL-GATE3-COMPENSATION-EVIDENCE-2026-07-25",
   "latest_compensation_extraction_id": "COMPENSATION-EVIDENCE-EXTRACTION-REMAINING-PARSE-TEXT-826-2026-07-25",
-  "latest_compensation_extraction_qa_id": "COMPENSATION-EVIDENCE-EXTRACTION-READABLE-PARSE-TEXT-1826-TARGETED-CONFLICT-QA-2026-07-25",
+  "latest_compensation_extraction_qa_id": "COMPENSATION-EVIDENCE-READABLE-PARSE-TEXT-1826-INDEPENDENT-BOUNDED-REVIEW-2026-07-25",
   "compensation_extraction_1000_targeted_qa_review_count": 151,
   "compensation_extraction_1000_targeted_qa_routing_counts": {
     "reference_only": 1,
@@ -176,6 +176,12 @@
   "readable_parse_text_1826_targeted_conflict_resolved_count": 35,
   "readable_parse_text_1826_targeted_conflict_unresolved_count": 2,
   "readable_parse_text_1826_targeted_conflict_qa_completed": true,
+  "readable_parse_text_1826_independent_bounded_review_completed": true,
+  "readable_parse_text_1826_independent_review_item_count": 27,
+  "readable_parse_text_1826_independent_unresolved_groups_reviewed": 2,
+  "readable_parse_text_1826_independent_unresolved_groups_preserved": 2,
+  "final_provisional_merge_prompt_allowed": true,
+  "final_provisional_merge_allowed": false,
   "prior_auto_adjudication_gate_id": "TEXT-TABLE-AUTO-GABRIEL-GATE2-REFINEMENT-2026-07-25",
   "auto_adjudication_method": "automated_bounded_rendered_image_plus_text_layout_gabriel_compensation_evidence_adjudication",
   "auto_gate_case_count": 150,
@@ -298,15 +304,15 @@
   "visual_qa_exact_gate_agreement_rate": 0.444444,
   "likely_signal_visual_confirmation_rate": 0.7625,
   "wrong_page_rate": 0.0,
-  "extraction_decision": "readable_parse_text_1826_targeted_conflict_qa_passed",
+  "extraction_decision": "independent_review_pass_final_provisional_merge_prompt_allowed",
   "five_hundred_doc_extraction_allowed": false,
   "smaller_extraction_pilot_allowed": false,
   "five_hundred_doc_compensation_extraction_allowed": true,
   "smaller_compensation_extraction_pilot_allowed": false,
-  "next_recommendation": "independent_review_before_final_provisional_merge",
+  "next_recommendation": "prepare_final_provisional_merge_prompt_only",
   "manual_review_status": "packet_prepared_not_reviewed",
-  "wage_extraction_status": "provisional_readable_parse_text_1826_targeted_conflict_qa_pass_not_analysis_ready",
-  "qualitative_extraction_status": "provisional_readable_parse_text_1826_targeted_conflict_qa_pass_not_analysis_ready",
+  "wage_extraction_status": "provisional_readable_parse_text_1826_independent_review_pass_merge_prompt_only_not_analysis_ready",
+  "qualitative_extraction_status": "provisional_readable_parse_text_1826_independent_review_pass_merge_prompt_only_not_analysis_ready",
   "ingestion_status": "not_started",
   "codify_status": "not_started",
   "wage_gap_analysis_status": "not_started",
@@ -323,10 +329,10 @@
   "adjudication_rendered_page_count": 785,
   "adjudication_rendered_bytes": 106889932,
   "caveats": [
-    "All 1,826 unique readable parse-text hashes remain covered in corrected provisional shadow ledgers; this is not a final analysis dataset.",
-    "Targeted conflict QA resolved 35 of 37 groups and left two explicitly unresolved; the revised rate is 0.1049 percent.",
-    "Duplicate observation IDs, invalid page pointers, and base/non-base contamination remain zero; five newly canonicalized duplicate observations retain provenance.",
-    "Three temporary working-out-of-classification premium records were routed to non-base wage, and one pre-existing embedded-newline CSV record was repaired only in the shadow copy.",
-    "No GABRIEL/API call, new extraction, selection, URL access, download, OCR, ingestion, codification, final merge, wage-gap calculation, or regression occurred; analysis readiness remains false."
+    "Independent bounded review passed 27 checks across the two unresolved groups, three working-out-of-classification reroutes, one Wasco repair, five new duplicate canonicalizations, 14 duplicate-provenance rows, and ledger/dashboard consistency.",
+    "Both residual groups remain explicitly unresolved; their 0.1049 percent rate stays below the 2 percent gate without inventing rank, step, cell, or effective-period distinctions.",
+    "All 1,826 unique readable parse-text hashes remain covered in corrected provisional shadow ledgers; OCR-later documents remain untouched.",
+    "A final provisional merge prompt may now be prepared, but no merge occurred and analysis readiness remains false.",
+    "No GABRIEL/API call, new extraction, selection, URL access, download, OCR, ingestion, codification, final merge, wage-gap calculation, or regression occurred."
   ]
 }
