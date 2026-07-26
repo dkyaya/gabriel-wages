@@ -6,6 +6,27 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-26 (Pipeline hardening complete; limited promotion allowed)
+
+**Did**
+- Reverified five package hashes and 12 frozen repair/review inputs; created eight byte-identical accelerated provisional views without mutating source or durable ledgers.
+- Consolidated 17 readiness/control entries into a master registry and 27 reusable synthetic failure modes covering spans, page/hash guards, CSV lineage, mixed joins, lane separation, quantitative values, metadata, dashboard, relay, prompt, checkpoints, immutability, and phase transitions.
+- Added 48 fail-closed tests and reusable stage, preflight, dashboard, relay, and prompt contracts. Simulated future scope without promoting data.
+
+**Decisions**
+- Decision is `pipeline_hardening_complete_limited_promotion_allowed`. The next step may be a separately authorized limited qualitative promotion, while global readiness remains false.
+- Simulation counts are 759 exact evidence rows, 643 conservative limited-contract rows, 453 exact-cycle, 438 controlled-occupation, 77 matched-set, and 56 strict matched-intersection rows.
+
+**Surprises/breakage**
+- The first materialization stopped closed because future-prompt phrase validation was case-sensitive. The validator now requires every phrase case-insensitively, with regression coverage.
+- The first dashboard fixture assumed a nonexistent `stage_gates` nesting and left a file handle open. It now validates the real overall status and wage-stage promotion gate and closes the handle deterministically.
+
+**Corpus snapshot**
+- `contracts=64`, `discourse=0`, `coverage=64`, `cities=19`; 28 healthy matched pairs (10 exact-cycle, 18 overlap-cycle), two exploratory adjacent matches, and six unmatched safety units.
+
+**Next steps**
+- Run the hardened limited-promotion prompt only after new explicit authorization. Keep 614 ambiguous, 581 unavailable, 467 cycle, 368 occupation, 1,045 quantitative-exception, and five conflict observations explicit; keep global readiness false.
+
 ## 2026-07-26 (Limited exact-span qualitative readiness passed with restrictions)
 
 **Did**

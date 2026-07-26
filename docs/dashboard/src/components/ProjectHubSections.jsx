@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "compensation_extraction_pipeline_hardening_complete_limited_promotion_allowed"
+              ? "Readiness pipeline hardened; limited qualitative promotion prompt may proceed"
+              : textTableCalibrationStatus.calibration_phase ===
             "compensation_extraction_limited_exact_span_qualitative_readiness_review_completed_pass_with_blockers"
               ? "Limited exact-span qualitative readiness review passed with documented restrictions"
               : textTableCalibrationStatus.calibration_phase ===
@@ -843,6 +846,18 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "compensation_extraction_pipeline_hardening_complete_limited_promotion_allowed" ? (
+            <>
+              The accelerator verified immutable package and repair hashes, consolidated the
+              readiness blockers, and hardened failure, prompt, relay, checkpoint, lane, and
+              dashboard guards. The simulation identifies 643 conservative limited-contract
+              qualitative rows and 56 rows satisfying the full strict matched-design metadata
+              intersection. The 614 ambiguous and 581 unavailable rows remain navigation-only;
+              467 cycle, 368 occupation, 1,045 quantitative-exception, and five residual-conflict
+              observations remain quarantined. A separately authorized limited promotion is the
+              next allowed step; global analysis readiness remains false.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "compensation_extraction_limited_exact_span_qualitative_readiness_review_completed_pass_with_blockers" ? (
             <>
               The 759-row exact-span tier passed literal-span, identity, and provenance checks,

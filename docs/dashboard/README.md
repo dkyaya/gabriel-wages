@@ -88,6 +88,10 @@ The current phase is `compensation_extraction_qualitative_evidence_contract_limi
 
 The current phase is `compensation_extraction_limited_exact_span_qualitative_readiness_review_completed_pass_with_blockers`. All 759 exact-span candidates pass literal-span, identity, page-pointer, and provenance checks, and a future separately authorized limited promotion prompt may be considered. The review does not mark the lane or project analysis-ready: 93 exact-span rows remain `needs_review`, 226 lack an exact cycle, 239 lack a controlled occupation, 16 retain historical mixed memberships, and only 85 have exact matched-set support for the primary city-by-cycle design. The 614 ambiguous and 581 unavailable rows remain navigation-only. Quantitative, non-base, reference/control, and the two unresolved conflict groups/five observations remain separate and provisional.
 
+## Compensation-evidence pipeline hardening accelerator — 2026-07-26
+
+The current phase is `compensation_extraction_pipeline_hardening_complete_limited_promotion_allowed`. The accelerator reverified five package hashes and 12 frozen repair/review inputs, consolidated 17 readiness/control entries in a master blocker registry, and registered 27 reusable adversarial failure modes. Eight accelerated outputs are byte-identical provisional copies of their approved predecessors. The no-promotion simulation identifies 643 conservative limited-contract qualitative rows and 56 rows in the full strict matched-design metadata intersection. The 614 ambiguous and 581 unavailable qualitative rows, 467 cycle identities, 368 occupation identities, 1,045 quantitative exceptions, and two unresolved groups/five observations remain explicit. A separately authorized limited qualitative promotion is allowed next, while global analysis readiness remains false.
+
 ## Final provisional schema readiness — 2026-07-26
 
 The immutable five-ledger provisional package remains integrity-valid, but a

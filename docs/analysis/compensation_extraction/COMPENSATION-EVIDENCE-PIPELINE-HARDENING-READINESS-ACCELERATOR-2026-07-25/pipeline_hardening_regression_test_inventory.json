@@ -1,0 +1,13 @@
+{
+  "new_fixture_count": 27,
+  "new_test_script": "scripts/test_compensation_evidence_pipeline_hardening_readiness_accelerator.py",
+  "predecessor_test_scripts": [
+    "scripts/test_compensation_evidence_qualitative_evidence_contract_followup.py",
+    "scripts/test_compensation_evidence_limited_exact_span_qualitative_readiness_review.py",
+    "scripts/test_compensation_evidence_bounded_local_pdf_text_layer_span_capture.py",
+    "scripts/test_compensation_evidence_bounded_qualitative_span_disambiguation_followup.py",
+    "scripts/test_compensation_evidence_bounded_schema_repair_followup.py",
+    "scripts/test_compensation_evidence_final_provisional_schema_repair.py"
+  ],
+  "schema_version": "compensation_pipeline_readiness_accelerator_v1"
+}

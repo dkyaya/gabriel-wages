@@ -1,0 +1,13 @@
+scope_id,row_count,eligibility_rule,permitted_future_use,supports_limited_qualitative_promotion,quarantined_or_navigation_only
+limited_exact_span_evidence,759,literal evidence review universe,provisional_exact_span_only,yes,no
+limited_contract_eligible,643,exact span plus current QA/mechanism/mixed contract,future limited promotion candidate,yes,no
+city_cycle_supported,453,limited-contract rows with exact cycle,cycle-scoped descriptive use only,yes,no
+occupation_comparison_supported,438,limited-contract rows with controlled occupation,occupation-scoped descriptive use only,yes,no
+matched_set_supported,77,limited-contract rows with exact matched-set support,matched-design candidate,yes,no
+strict_primary_matched_intersection,56,all limited/cycle/occupation/matching gates,strict primary matched candidate,yes,no
+qualitative_navigation_only,1195,ambiguous or unavailable exact span,navigation only,no,yes
+quantitative_mechanical_candidates,862,mechanically safe parse only,separate future quantitative review,no,no
+quantitative_exceptions,1045,unsafe/incomplete normalization,quarantined,no,yes
+non_base_companion,4733,non-base compensation,companion only,no,no
+reference_control,345,reference/exclusion,control only,no,yes
+unresolved_conflict_observations,5,two unresolved groups,quarantined,no,yes

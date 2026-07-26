@@ -1,0 +1,29 @@
+{
+  "analysis_readiness": false,
+  "deterministic_repairs_available": 4,
+  "global_blocker_classes": 10,
+  "lane_counts": {
+    "conflict": 1,
+    "cycle_matching": 2,
+    "dashboard": 1,
+    "duplicate_lineage": 1,
+    "future_prompt": 1,
+    "non_base": 1,
+    "occupation": 2,
+    "provenance": 1,
+    "qualitative_span": 3,
+    "quantitative": 2,
+    "reference_control": 1,
+    "relay": 1
+  },
+  "quarantined_registry_rows": 9,
+  "registry_rows": 17,
+  "schema_version": "compensation_pipeline_readiness_accelerator_v1",
+  "severity_counts": {
+    "control": 5,
+    "critical": 2,
+    "informational": 5,
+    "major": 5
+  },
+  "task_id": "COMPENSATION-EVIDENCE-PIPELINE-HARDENING-READINESS-ACCELERATOR-2026-07-25"
+}

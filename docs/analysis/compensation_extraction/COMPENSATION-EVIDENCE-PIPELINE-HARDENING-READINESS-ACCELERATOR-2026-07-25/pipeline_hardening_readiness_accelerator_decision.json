@@ -1,0 +1,87 @@
+{
+  "analysis_facing_dataset_created": false,
+  "analysis_readiness": false,
+  "analysis_readiness_review_allowed_next": false,
+  "blocker_registry_rows": 17,
+  "blocker_severity_counts": {
+    "control": 5,
+    "critical": 2,
+    "informational": 5,
+    "major": 5
+  },
+  "bugs_discovered_and_fixed": [
+    "Future-prompt hard-constraint validation was unintentionally case-sensitive; it now validates case-insensitively while requiring every phrase.",
+    "The dashboard regression fixture assumed a nonexistent stage_gates nesting; it now validates the actual overall analysis-closed status and wage-stage promotion flag, and closes the registry file handle deterministically."
+  ],
+  "decision": "pipeline_hardening_complete_limited_promotion_allowed",
+  "failure_fixture_count": 27,
+  "forbidden_actions_performed": [],
+  "generated_at": "2026-07-26T14:50:26.395910Z",
+  "immutable_input_hashes_passed": 17,
+  "input_signature": "20ec2b955307f6a36f8ffbd26a4af449e291d7b9e01682a1cc4dcb8ceab24a41",
+  "invariants": {
+    "all_invariants_passed": true,
+    "checks": {
+      "accelerated_outputs_byte_identical": true,
+      "all_qualitative_tiers_reconcile": true,
+      "ambiguity_not_in_coded_evidence": true,
+      "analysis_readiness_false": true,
+      "dashboard_global_readiness_false": true,
+      "five_package_hashes_pass": true,
+      "future_prompt_contract_complete": true,
+      "no_full_page_text_persisted": true,
+      "no_pdf_or_ocr_access": true,
+      "non_base_separate": true,
+      "package_and_prior_outputs_immutable": true,
+      "phase_transition_contract_enforced": true,
+      "quantitative_exceptions_not_promoted": true,
+      "reference_control_only": true,
+      "relay_schema_contract_complete": true,
+      "unresolved_conflicts_quarantined": true
+    },
+    "schema_version": "compensation_pipeline_readiness_accelerator_v1"
+  },
+  "lane_counts": {
+    "conflict_groups": 2,
+    "conflict_observations": 5,
+    "controlled_occupations": 1458,
+    "cycle_exact": 1359,
+    "cycle_quarantine": 467,
+    "matched_documents": 203,
+    "matched_groups": 91,
+    "non_base": 4733,
+    "occupation_quarantine": 368,
+    "qualitative_ambiguous": 614,
+    "qualitative_exact": 759,
+    "qualitative_unavailable": 581,
+    "quantitative_candidates": 862,
+    "quantitative_exceptions": 1045,
+    "reference": 345
+  },
+  "limited_promotion_allowed_next": true,
+  "limited_promotion_scope": "exact_span_qualitative_only_with_row_level_eligibility",
+  "next_prompt": "next_limited_qualitative_promotion_prompt.md",
+  "next_recommendation": "seek_separate_authorization_to_run_limited_qualitative_promotion_prompt",
+  "ocr_later_accessed": 0,
+  "package_sha256_checks_passed": 5,
+  "pdf_pages_accessed": 0,
+  "remaining_evidence_and_schema_blockers": [
+    "1195 qualitative navigation-only rows",
+    "467 cycle quarantines",
+    "368 occupation quarantines",
+    "1045 quantitative exceptions",
+    "two unresolved groups/five observations"
+  ],
+  "remaining_system_hardening_blockers": [],
+  "schema_version": "compensation_pipeline_readiness_accelerator_v1",
+  "scope_counts": {
+    "controlled_occupation_eligible": 438,
+    "exact_cycle_eligible": 453,
+    "exact_span_evidence_universe": 759,
+    "limited_contract_eligible": 643,
+    "matched_set_eligible": 77,
+    "strict_primary_matched_eligible": 56
+  },
+  "source_or_durable_ledgers_mutated": false,
+  "task_id": "COMPENSATION-EVIDENCE-PIPELINE-HARDENING-READINESS-ACCELERATOR-2026-07-25"
+}

@@ -1,0 +1,22 @@
+{
+  "all_invariants_passed": true,
+  "checks": {
+    "accelerated_outputs_byte_identical": true,
+    "all_qualitative_tiers_reconcile": true,
+    "ambiguity_not_in_coded_evidence": true,
+    "analysis_readiness_false": true,
+    "dashboard_global_readiness_false": true,
+    "five_package_hashes_pass": true,
+    "future_prompt_contract_complete": true,
+    "no_full_page_text_persisted": true,
+    "no_pdf_or_ocr_access": true,
+    "non_base_separate": true,
+    "package_and_prior_outputs_immutable": true,
+    "phase_transition_contract_enforced": true,
+    "quantitative_exceptions_not_promoted": true,
+    "reference_control_only": true,
+    "relay_schema_contract_complete": true,
+    "unresolved_conflicts_quarantined": true
+  },
+  "schema_version": "compensation_pipeline_readiness_accelerator_v1"
+}

@@ -6,6 +6,26 @@ Last updated: `2026-07-26`
 
 ---
 
+## 2026-07-26 — Pipeline hardening complete; limited qualitative promotion prompt allowed
+
+### Current State
+
+- **Authority/start:** began at clean tracked `9767732798f4d5a9e0cb08c1edefee45dbccdae0`; no package, repair, span, evidence-contract, readiness, extraction, QA, source, or durable ledger changed.
+- **Decision:** `pipeline_hardening_complete_limited_promotion_allowed`; global analysis readiness remains false, but a separately authorized limited qualitative promotion is allowed next.
+- **Integrity:** five package hashes plus 12 current repair/review hashes pass. Eight accelerated views are byte-identical copies. No PDF/page, OCR, model, URL, extraction, selection, ingestion, codification, or analysis action occurred.
+- **Registry/hardening:** 17 master blocker/control rows, 27 reusable failure fixtures, 48 focused tests, and reusable stage/preflight/relay/dashboard contracts are in place.
+- **Simulation:** 759 exact evidence rows; 643 conservative limited-contract; 453 exact-cycle; 438 controlled-occupation; 77 matched-set; 56 strict matched-intersection.
+- **Residual blockers:** 614 ambiguous and 581 unavailable qualitative rows, 467 cycle identities, 368 occupation identities, 1,045 quantitative exceptions, and two unresolved groups/five observations.
+- **Carry-forward:** 862 quantitative candidates, 4,733 non-base companion rows, and 345 reference/control rows remain separate and provisional.
+
+### Interpretation
+
+The pipeline-level guardrails are now reusable and the limited qualitative path is sufficiently bounded for promotion planning. This does not make the promoted layer or project globally analysis-ready.
+
+### Next Move
+
+Use [next_task.md](../../next_task.md) only after explicit authorization. Run the complete hardened limited-promotion prompt, preserve all quarantines and lane boundaries, and keep global readiness false.
+
 ## 2026-07-26 — Limited exact-span qualitative readiness passed with documented blockers
 
 ### Current State

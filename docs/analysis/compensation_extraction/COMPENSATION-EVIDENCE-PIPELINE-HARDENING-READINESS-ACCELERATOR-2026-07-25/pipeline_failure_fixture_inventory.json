@@ -1,0 +1,171 @@
+{
+  "all_synthetic": true,
+  "contains_full_page_text": false,
+  "fixture_count": 27,
+  "fixtures": [
+    {
+      "expected_result": "must_remain_navigation_only",
+      "failure_mode": "ambiguous_span",
+      "fixture_id": "FX001",
+      "lane": "qualitative_span"
+    },
+    {
+      "expected_result": "must_remain_navigation_only",
+      "failure_mode": "unavailable_span",
+      "fixture_id": "FX002",
+      "lane": "qualitative_span"
+    },
+    {
+      "expected_result": "no_ocr_fallback",
+      "failure_mode": "no_text_layer",
+      "fixture_id": "FX003",
+      "lane": "pdf_guard"
+    },
+    {
+      "expected_result": "reject_unresolved_ambiguity",
+      "failure_mode": "multiple_identical_spans",
+      "fixture_id": "FX004",
+      "lane": "qualitative_span"
+    },
+    {
+      "expected_result": "fail_closed",
+      "failure_mode": "forbidden_page_access",
+      "fixture_id": "FX005",
+      "lane": "pdf_guard"
+    },
+    {
+      "expected_result": "fail_closed",
+      "failure_mode": "ocr_later_attempted_access",
+      "fixture_id": "FX006",
+      "lane": "pdf_guard"
+    },
+    {
+      "expected_result": "fail_closed",
+      "failure_mode": "wrong_content_hash",
+      "fixture_id": "FX007",
+      "lane": "provenance"
+    },
+    {
+      "expected_result": "fail_closed_or_quarantine",
+      "failure_mode": "missing_retained_pdf_path",
+      "fixture_id": "FX008",
+      "lane": "provenance"
+    },
+    {
+      "expected_result": "fail_closed",
+      "failure_mode": "full_page_text_leakage",
+      "fixture_id": "FX009",
+      "lane": "privacy_storage"
+    },
+    {
+      "expected_result": "fail_closed",
+      "failure_mode": "duplicate_qualitative_observation_id",
+      "fixture_id": "FX010",
+      "lane": "identity"
+    },
+    {
+      "expected_result": "fail_closed",
+      "failure_mode": "span_hash_offset_corruption",
+      "fixture_id": "FX011",
+      "lane": "qualitative_span"
+    },
+    {
+      "expected_result": "position_parse_and_assert_agreement",
+      "failure_mode": "duplicate_non_base_lineage_header",
+      "fixture_id": "FX012",
+      "lane": "non_base"
+    },
+    {
+      "expected_result": "quoted_round_trip_only",
+      "failure_mode": "embedded_newline_csv_record",
+      "fixture_id": "FX013",
+      "lane": "csv_integrity"
+    },
+    {
+      "expected_result": "never_treat_as_active",
+      "failure_mode": "mixed_historical_join",
+      "fixture_id": "FX014",
+      "lane": "mixed"
+    },
+    {
+      "expected_result": "reject_from_base_outcome",
+      "failure_mode": "non_base_wage_misroute",
+      "fixture_id": "FX015",
+      "lane": "lane_separation"
+    },
+    {
+      "expected_result": "quarantine_no_scalar_coercion",
+      "failure_mode": "quantitative_range",
+      "fixture_id": "FX016",
+      "lane": "quantitative"
+    },
+    {
+      "expected_result": "quarantine_no_scalar_coercion",
+      "failure_mode": "quantitative_formula_pair_multiplier_hours",
+      "fixture_id": "FX017",
+      "lane": "quantitative"
+    },
+    {
+      "expected_result": "quarantine",
+      "failure_mode": "missing_cycle",
+      "fixture_id": "FX018",
+      "lane": "cycle_matching"
+    },
+    {
+      "expected_result": "quarantine",
+      "failure_mode": "conflicting_cycle",
+      "fixture_id": "FX019",
+      "lane": "cycle_matching"
+    },
+    {
+      "expected_result": "quarantine",
+      "failure_mode": "missing_occupation",
+      "fixture_id": "FX020",
+      "lane": "occupation"
+    },
+    {
+      "expected_result": "quarantine",
+      "failure_mode": "conflicting_occupation",
+      "fixture_id": "FX021",
+      "lane": "occupation"
+    },
+    {
+      "expected_result": "fail_closed",
+      "failure_mode": "dashboard_false_readiness",
+      "fixture_id": "FX022",
+      "lane": "dashboard"
+    },
+    {
+      "expected_result": "fail_closed",
+      "failure_mode": "relay_missing_inspection_fields",
+      "fixture_id": "FX023",
+      "lane": "relay"
+    },
+    {
+      "expected_result": "fail_closed",
+      "failure_mode": "future_prompt_missing_hard_constraints",
+      "fixture_id": "FX024",
+      "lane": "future_prompt"
+    },
+    {
+      "expected_result": "fail_closed",
+      "failure_mode": "stage_attempts_phase_jump",
+      "fixture_id": "FX025",
+      "lane": "stage_contract"
+    },
+    {
+      "expected_result": "fail_closed",
+      "failure_mode": "partial_checkpoint_claims_complete",
+      "fixture_id": "FX026",
+      "lane": "checkpoint"
+    },
+    {
+      "expected_result": "fail_closed",
+      "failure_mode": "carried_file_hash_drift",
+      "fixture_id": "FX027",
+      "lane": "immutability"
+    }
+  ],
+  "schema_version": "compensation_pipeline_readiness_accelerator_v1",
+  "test_script": "scripts/test_compensation_evidence_pipeline_hardening_readiness_accelerator.py"
+}

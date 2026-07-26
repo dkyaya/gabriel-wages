@@ -1,0 +1,22 @@
+{
+  "analysis_readiness": false,
+  "analysis_readiness_review_allowed_next": false,
+  "decision": "pipeline_hardening_complete_limited_promotion_allowed",
+  "global_readiness_blockers": [
+    "1195 qualitative navigation-only rows",
+    "467 cycle quarantines",
+    "368 occupation quarantines",
+    "1045 quantitative exceptions",
+    "two unresolved groups/five observations"
+  ],
+  "limited_promotion_allowed_next": true,
+  "limited_promotion_scope": "exact_span_qualitative_only_with_row_level_eligibility",
+  "scope_counts": {
+    "controlled_occupation_eligible": 438,
+    "exact_cycle_eligible": 453,
+    "exact_span_evidence_universe": 759,
+    "limited_contract_eligible": 643,
+    "matched_set_eligible": 77,
+    "strict_primary_matched_eligible": 56
+  }
+}

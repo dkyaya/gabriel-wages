@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": "0.1.0",
-    "generated_at": "2026-07-26T14:34:24Z",
+    "generated_at": "2026-07-26T14:53:43Z",
     "data_vintage": "2026-07-23",
     "source_files": [
       "docs/analysis/national_scout_coverage_state.csv",
@@ -82,7 +82,7 @@
       "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
     ]
   },
-  "overall_status": "limited_exact_span_qualitative_readiness_pass_with_blockers_promotion_prompt_allowed_analysis_closed",
+  "overall_status": "pipeline_hardening_complete_limited_promotion_allowed_global_analysis_closed",
   "current_inputs": {
     "national_queue_available": true,
     "national_coverage_available": true,
@@ -192,6 +192,13 @@
       "limited_exact_span_qualitative_primary_matched_supported_count": 85,
       "limited_exact_span_qualitative_future_prompt_allowed": true,
       "limited_exact_span_qualitative_analysis_readiness": false,
+      "pipeline_hardening_accelerator_completed": true,
+      "pipeline_hardening_accelerator_decision": "pipeline_hardening_complete_limited_promotion_allowed",
+      "pipeline_hardening_failure_fixture_count": 27,
+      "pipeline_hardening_limited_contract_eligible_count": 643,
+      "pipeline_hardening_strict_matched_eligible_count": 56,
+      "pipeline_hardening_limited_promotion_allowed": true,
+      "pipeline_hardening_analysis_readiness": false,
       "analysis_facing_promotion_allowed": false
     },
     "regression_stage": {
