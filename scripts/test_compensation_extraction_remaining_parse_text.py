@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import shutil
 import tempfile
 import unittest
 from pathlib import Path
@@ -29,6 +30,33 @@ def page(
         nonbase=nonbase,
         reference=reference,
     )
+
+
+def education_certification_response() -> dict[str, object]:
+    return {
+        "case_disposition": "non_base_wage",
+        "page_relationship": "exact_evidence_page",
+        "quantitative_observations": [],
+        "qualitative_observations": [],
+        "non_base_wage_observations": [
+            {
+                "page_number": 37,
+                "non_base_wage_type": "education_or_certification",
+                "value_text": "$500",
+                "effective_date": "",
+                "eligibility_or_implementation_rule": (
+                    "Eligible employees holding the listed certification."
+                ),
+                "confidence": "high",
+                "reason_code": "CERTIFICATION_NON_BASE",
+            }
+        ],
+        "confidence": "high",
+        "reason_codes": ["CERTIFICATION_NON_BASE"],
+        "short_rationale": (
+            "The bounded evidence supports certification incentive pay only."
+        ),
+    }
 
 
 class RemainingParseTextTests(unittest.TestCase):
@@ -166,12 +194,206 @@ class RemainingParseTextTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "non-base compensation"):
             base.validate_response(json.dumps(value), {1})
 
+    def test_education_certification_onecase_rejects_base_quantitative(self) -> None:
+        value = education_certification_response()
+        value["case_disposition"] = "quantitative_ready"
+        value["non_base_wage_observations"] = []
+        value["quantitative_observations"] = [
+            {
+                "page_number": 37,
+                "compensation_type": "other",
+                "occupation_unit_classification_rank": (
+                    "education certification incentive"
+                ),
+                "rate_value": "$500",
+                "salary_value": "",
+                "hourly_rate": "",
+                "annual_salary": "",
+                "pay_band": "",
+                "step": "",
+                "grade": "",
+                "percentage_increase": "",
+                "effective_date": "",
+                "currency_or_unit": "USD",
+                "confidence": "high",
+                "reason_code": "CERTIFICATION_PAY",
+            }
+        ]
+        with self.assertRaisesRegex(ValueError, "non-base compensation"):
+            base.validate_education_certification_onecase_response(
+                json.dumps(value), {37}
+            )
+
+    def test_education_certification_onecase_accepts_nonbase_only(self) -> None:
+        parsed = base.validate_education_certification_onecase_response(
+            json.dumps(education_certification_response()), {37}
+        )
+        self.assertEqual(parsed["case_disposition"], "non_base_wage")
+        self.assertEqual(parsed["quantitative_observations"], [])
+        self.assertEqual(
+            parsed["non_base_wage_observations"][0]["non_base_wage_type"],
+            "education_or_certification",
+        )
+
     def test_materialization_refuses_partial_826(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
             with self.assertRaisesRegex(RuntimeError, "all 826"):
                 remaining.materialize_cumulative(
                     Path(temp), [], [], {}, Path(temp)
                 )
+
+    def test_frozen_remaining_selection_hash_is_unchanged(self) -> None:
+        output = (
+            remaining.ROOT
+            / "docs/analysis/compensation_extraction"
+            / remaining.OUTPUT_ID
+        )
+        self.assertEqual(
+            base.sha_file(output / "remaining_parse_text_selection_manifest.csv"),
+            remaining.FROZEN_REMAINING_SELECTION_SHA256,
+        )
+
+    def test_onecase_modes_send_only_unresolved_and_preserve_825(self) -> None:
+        source = (
+            remaining.ROOT
+            / "docs/analysis/compensation_extraction"
+            / remaining.OUTPUT_ID
+        )
+        selection = remaining.load_selection(source)
+        unresolved = remaining.EDUCATION_CERTIFICATION_ONECASE_ID
+        packet_map = {
+            unresolved: [
+                base.PagePacket(
+                    page=37,
+                    role="candidate",
+                    text="Certification incentive pay for eligible employees.",
+                    image="",
+                    wage=1,
+                    numeric=1,
+                    table=0,
+                    qual=0,
+                    nonbase=3,
+                    reference=False,
+                )
+            ]
+        }
+        parsed = education_certification_response()
+
+        def result_for(requests, _key, parallel=1):
+            self.assertEqual(parallel, 1)
+            self.assertEqual(len(requests), 1)
+            self.assertEqual(requests[0].row["extraction_case_id"], unresolved)
+            self.assertEqual(
+                requests[0].row["_education_certification_onecase_contract"],
+                "yes",
+            )
+            return [
+                base.Result(
+                    unresolved,
+                    "success",
+                    "req_mock",
+                    json.dumps(parsed),
+                    parsed,
+                    0.1,
+                    10,
+                    10,
+                    20,
+                    "",
+                    "",
+                    "prompt_hash",
+                    100,
+                    0,
+                    0,
+                )
+            ]
+
+        with tempfile.TemporaryDirectory() as temp:
+            output = Path(temp)
+            for name in (
+                "remaining_parse_text_selection_manifest.csv",
+                "remaining_parse_text_case_results.jsonl",
+                "remaining_parse_text_request_metadata.csv",
+                "remaining_parse_text_timing.csv",
+            ):
+                shutil.copy2(source / name, output / name)
+            checkpoint = output / "remaining_parse_text_case_results.jsonl"
+            stored_before_onecase = remaining.load_remaining_checkpoint(output)
+            stored_before_onecase.pop(unresolved)
+            remaining.write_remaining_checkpoint(output, stored_before_onecase)
+            metadata_before_onecase = [
+                row for row in base.read_csv(
+                    output / "remaining_parse_text_request_metadata.csv"
+                )
+                if "education_certification_onecase" not in row["request_phase"]
+            ]
+            timing_before_onecase = [
+                row for row in base.read_csv(
+                    output / "remaining_parse_text_timing.csv"
+                )
+                if "education_certification_onecase" not in row["request_phase"]
+            ]
+            base.write_csv(
+                output / "remaining_parse_text_request_metadata.csv",
+                base.METADATA_FIELDS,
+                metadata_before_onecase,
+            )
+            base.write_csv(
+                output / "remaining_parse_text_timing.csv",
+                base.TIMING_FIELDS,
+                timing_before_onecase,
+            )
+            checkpoint_sha = base.sha_file(checkpoint)
+            with mock.patch.object(base, "call_gabriel", side_effect=result_for):
+                self.assertEqual(
+                    remaining.preflight_remaining_education_certification_onecase(
+                        output, selection, packet_map, "redacted"
+                    ),
+                    0,
+                )
+                self.assertEqual(base.sha_file(checkpoint), checkpoint_sha)
+                marker = base.read_json(
+                    output / ".remaining_onecase_preflight_passed.json"
+                )
+                self.assertEqual(marker["seed_case_calls"], 0)
+                self.assertEqual(marker["stored_remaining_cases_resent"], 0)
+                self.assertEqual(
+                    marker["selection_sha256"],
+                    remaining.FROZEN_REMAINING_SELECTION_SHA256,
+                )
+                with mock.patch.object(
+                    remaining,
+                    "materialize_cumulative",
+                    return_value={"decision": {"qa_pass": True}},
+                ) as materialize:
+                    self.assertEqual(
+                        remaining.live_remaining_education_certification_onecase(
+                            output,
+                            selection,
+                            [],
+                            packet_map,
+                            output,
+                            "redacted",
+                        ),
+                        0,
+                    )
+                    materialize.assert_called_once()
+            completed = remaining.load_remaining_checkpoint(output)
+            self.assertEqual(len(completed), 826)
+            self.assertIn(unresolved, completed)
+            dedicated = base.read_csv(
+                output / "remaining_parse_text_onecase_request_metadata.csv"
+            )
+            self.assertEqual(len(dedicated), 2)
+            self.assertEqual(
+                {row["extraction_case_id"] for row in dedicated}, {unresolved}
+            )
+            self.assertEqual(
+                [row["request_phase"] for row in dedicated],
+                [
+                    "preflight_remaining_education_certification_onecase",
+                    "live_remaining_education_certification_onecase",
+                ],
+            )
 
     def test_preflight_failure_does_not_create_live_scope(self) -> None:
         rows = [

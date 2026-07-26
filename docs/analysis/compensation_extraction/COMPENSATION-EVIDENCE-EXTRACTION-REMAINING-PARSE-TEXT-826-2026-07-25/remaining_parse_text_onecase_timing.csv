@@ -1,0 +1,3 @@
+request_phase,extraction_case_id,started_at,finished_at,local_packet_seconds,gabriel_elapsed_seconds,request_status
+preflight_remaining_education_certification_onecase,cexrem_4a267735daf6729f5c4e4835,,2026-07-26T02:34:09Z,0.000000,4.625951,success
+live_remaining_education_certification_onecase,cexrem_4a267735daf6729f5c4e4835,,2026-07-26T02:36:47Z,0.000000,4.661723,success

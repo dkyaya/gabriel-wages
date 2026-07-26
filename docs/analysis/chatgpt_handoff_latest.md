@@ -6,6 +6,26 @@ Last updated: `2026-07-25`
 
 ---
 
+## 2026-07-25 — All 1,826 unique readable parse-text hashes materialized; targeted conflict QA next
+
+### Current State
+
+- **Authority/start:** work began at clean tracked `16c33b1cba79db0b99a90e353aab53538ab44a52`. Durable/Gate/prior extraction/targeted-QA inputs remained unchanged; unrelated untracked renders and root `package-lock.json` stayed outside scope.
+- **One-case contract:** the runner now rejects education/certification-only evidence from base quantitative observations and accepts it only in the explicit non-base array. Focused offline tests cover the routing contract, exact call scope, zero seed calls, no resend of 825 stored cases, frozen hash, and 826/826 materialization gate.
+- **Authorized calls:** the exact Hartland case `cexrem_4a267735daf6729f5c4e4835` passed one bounded preflight and one bounded live request. Selection SHA-256 remains `43b768fba4e3d122727d2cbf9614885922a55be5f2bd1afd37d36f47a4695d81`; seed calls and stored-case resends are both zero.
+- **Cumulative layer:** [the decision](compensation_extraction/COMPENSATION-EVIDENCE-EXTRACTION-REMAINING-PARSE-TEXT-826-2026-07-25/remaining_parse_text_decision_report.json) is `readable_parse_text_provisional_extraction_completed_qa_pass`. All 1,826 unique readable hashes are schema-valid. Active records: 1,910 quantitative, 1,954 qualitative mechanism, 371 mixed cases, 4,730 non-base wage, and 345 reference/exclusion.
+- **QA:** duplicate observation IDs 0; invalid bounded page pointers 0; base/non-base contamination 0; 130 quantitative conflict groups total, 37 unresolved, rate 1.9372%; matched 780 police / 439 fire / 607 non-safety representation intact. QA passes but targeted QA is required before final provisional merge.
+- **Dashboard:** phase is `compensation_extraction_readable_parse_text_1826_materialized_qa_pass`; analysis readiness remains false.
+- **Boundary:** all unique readable parse-text documents are covered and OCR-later documents remain untouched. No URL/search, download, OCR, scout, source review, verification, ingestion, codification, final merge, wage-gap work, regression, upstream-ledger mutation, fetch, pull, or remote inspection occurred. No full text/table, raw prompt/response, encoded image, or secret was retained.
+
+### Interpretation
+
+The one-case routing problem is resolved without broad re-extraction, and the cumulative provisional readable layer passes its defined integrity gate. It is not analysis-ready: the 37 under-specified conflict groups remain reviewable provenance records and should be adjudicated before any final provisional merge. No more readable parse-text extraction is needed.
+
+### Next Move
+
+Follow [next_task.md](../../next_task.md). Run deterministic targeted QA on exactly the 37 unresolved conflict groups, using existing structured fields and bounded local evidence pointers. Write separate corrected shadow ledgers; preserve provenance; default to no GABRIEL; and stop before final merge, ingestion, or codification.
+
 ## 2026-07-25 — Remaining readable parse-text run stopped at 825/826
 
 ### Current State

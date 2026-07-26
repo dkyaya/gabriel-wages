@@ -867,3 +867,5 @@ live_remaining,cexrem_8ffb0372469bc6f5fb511516,,2026-07-26T02:05:04Z,0.000000,18
 live_remaining,cexrem_4a267735daf6729f5c4e4835,,2026-07-26T02:05:22Z,0.000000,17.975896,schema_invalid
 live_remaining,cexrem_4a267735daf6729f5c4e4835,,2026-07-26T02:05:39Z,0.000000,17.685055,schema_invalid
 live_remaining,cexrem_4a267735daf6729f5c4e4835,,2026-07-26T02:05:53Z,0.000000,13.195791,schema_invalid
+preflight_remaining_education_certification_onecase,cexrem_4a267735daf6729f5c4e4835,,2026-07-26T02:34:09Z,0.000000,4.625951,success
+live_remaining_education_certification_onecase,cexrem_4a267735daf6729f5c4e4835,,2026-07-26T02:36:47Z,0.000000,4.661723,success

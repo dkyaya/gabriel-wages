@@ -1,9 +1,11 @@
 # Remaining readable parse-text dashboard status note
 
-The dashboard phase is `compensation_extraction_remaining_parse_text_live_incomplete_825_of_826`.
+The dashboard phase is `compensation_extraction_readable_parse_text_1826_materialized_qa_pass`.
 
-The card reports the frozen 826 unique-hash selection, 7/7 strict-valid preflight, 825 strict-valid live cases after 861 bounded attempts, one unresolved education/certification-routing case, and zero corrected-seed model calls. It explicitly states that cumulative 1,826-case materialization and QA did not run.
+The card reports 1,826/1,826 unique readable parse-text hashes covered at 100% case-level schema validity. It shows 1,910 active quantitative observations, 1,954 qualitative mechanisms, 371 mixed cases, 4,730 non-base-wage observations, and 345 reference/exclusion cases.
 
-The corrected cumulative 1,000-document targeted-QA shadow layer remains the latest complete valid provisional evidence. Its 1,214 quantitative, 1,464 qualitative-mechanism, 256 mixed, 2,889 non-base-wage, and 175 reference/exclusion counts remain displayed as prior valid-layer counts, not as results from the incomplete remaining batch.
+The exact Hartland education/certification case passed one bounded preflight and one bounded live request. The corrected 1,000-case seed received zero calls and none of the 825 already-valid remaining cases was resent. The frozen remaining selection SHA-256 remains `43b768fba4e3d122727d2cbf9614885922a55be5f2bd1afd37d36f47a4695d81`.
 
-Analysis readiness remains false. The next recommendation is `resolve_only_the_remaining_education_certification_routing_case`. No final merge, ingestion, codification, wage-gap analysis, or regression is authorized.
+Integrity QA passes with zero duplicate observation IDs, invalid page pointers, or base/non-base contamination. The 37 unresolved quantitative conflict groups have a 1.9372% rate, below the 2% gate; targeted conflict QA is still required before any final provisional merge.
+
+Analysis readiness remains false. OCR-later documents remain untouched. Final merge, ingestion, codification, wage-gap analysis, and regression are not authorized.

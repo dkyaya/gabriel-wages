@@ -1,30 +1,16 @@
-# Next task: resolve one remaining education/certification routing case
+# Next task: targeted QA for the cumulative 1,826-case readable parse-text layer
 
-The remaining readable parse-text selection is frozen at 826 unique hashes.
-Seven-path preflight passed, and 825 cases are preserved as strict-valid
-resumable results. One case remains invalid after ten bounded attempts:
-`cexrem_4a267735daf6729f5c4e4835`, Village of Hartland, Wisconsin police CBA.
-Every response incorrectly placed education/certification compensation in the
-base quantitative array.
+All 1,826 unique durable readable parse-text hashes are covered in a cumulative provisional layer. Integrity QA passes, but 37 under-specified quantitative conflict groups remain explicit at a 1.9372% rate. Perform targeted QA before any final provisional merge.
 
 The next run should:
 
-1. preserve selection SHA-256
-   `43b768fba4e3d122727d2cbf9614885922a55be5f2bd1afd37d36f47a4695d81`;
-2. preserve the corrected 1,000-document seed with zero GABRIEL calls;
-3. preserve the exact 825-case checkpoint without resending any stored case;
-4. add a one-case contract requiring non-base disposition, empty quantitative
-   observations, and education/certification evidence only in the non-base
-   array when that is the only visible compensation family;
-5. prove the contract with offline regression tests;
-6. run one bounded preflight and, only if it passes, one live request for the
-   unresolved case alone;
-7. if strict-valid, append the case, materialize the cumulative provisional
-   1,826-hash lanes, and run duplicate, page-pointer, conflict,
-   base/non-base-contamination, matching, and provenance QA;
-8. stop before final merge and require targeted QA if any integrity gate fails.
+1. use `remaining_parse_text_conflict_review.csv` as the frozen review source;
+2. review exactly the 37 `insufficient_evidence_needs_review` conflict groups using existing structured fields and bounded local evidence pointers only;
+3. classify each as a distinct schedule cell, distinct effective period, distinct classification/rank, duplicate/same observation, non-base-wage misroute, true unresolved conflict, or insufficient evidence;
+4. preserve all observation IDs, canonical duplicate provenance, case identities, mixed join keys, and page pointers;
+5. write corrected cumulative shadow ledgers without overwriting the current provisional ledgers;
+6. recompute duplicate-ID, page-pointer, conflict-rate, base/non-base, representation, and provenance QA;
+7. keep unresolved groups explicit when bounded evidence cannot resolve them;
+8. stop before final merge and require a separate authorization decision for any downstream ingestion or codification.
 
-Do not send the seed or 825 stored cases. Continue to prohibit URLs, hosted
-search, downloads, OCR, scouts, source review, verification, ingestion,
-`gabriel.codify`, final analysis merge, wage-gap work, regressions, and durable
-upstream-ledger mutation.
+Do not select documents or run extraction. Default to no GABRIEL/API calls. Continue to prohibit URLs, hosted search, downloads, OCR, scouts, source review, verification, ingestion, `gabriel.codify`, final analysis merge, wage-gap work, regressions, and durable upstream-ledger mutation. OCR-later documents remain outside this layer.

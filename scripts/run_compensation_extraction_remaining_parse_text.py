@@ -20,10 +20,19 @@ from run_compensation_extraction_targeted_qa import (
 
 ROOT = Path(__file__).resolve().parents[1]
 TASK_ID = "COMPENSATION-EVIDENCE-EXTRACTION-REMAINING-PARSE-TEXT-826-2026-07-25"
+ONECASE_TASK_ID = (
+    "COMPENSATION-EVIDENCE-EXTRACTION-REMAINING-PARSE-TEXT-"
+    "ONECASE-EDUCATION-CERT-RESOLUTION-2026-07-25"
+)
 OUTPUT_ID = "COMPENSATION-EVIDENCE-EXTRACTION-REMAINING-PARSE-TEXT-826-2026-07-25"
 EXPECTED_NEW = 826
 EXPECTED_SEED = 1000
 EXPECTED_CUMULATIVE = 1826
+EXPECTED_STORED_BEFORE_ONECASE = 825
+EDUCATION_CERTIFICATION_ONECASE_ID = "cexrem_4a267735daf6729f5c4e4835"
+FROZEN_REMAINING_SELECTION_SHA256 = (
+    "43b768fba4e3d122727d2cbf9614885922a55be5f2bd1afd37d36f47a4695d81"
+)
 
 SEED_DIR = ROOT / (
     "docs/analysis/compensation_extraction/"
@@ -666,6 +675,212 @@ def preflight(
     return 0 if passed else 2
 
 
+def load_remaining_checkpoint(output: Path) -> dict[str, dict[str, Any]]:
+    checkpoint = output / "remaining_parse_text_case_results.jsonl"
+    if not checkpoint.is_file():
+        raise RuntimeError("remaining readable checkpoint is missing")
+    stored: dict[str, dict[str, Any]] = {}
+    for line in checkpoint.read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
+        item = json.loads(line)
+        case_id = item["extraction_case_id"]
+        if case_id in stored:
+            raise RuntimeError("remaining checkpoint contains a duplicate case ID")
+        stored[case_id] = item["result"]
+    return stored
+
+
+def write_remaining_checkpoint(
+    output: Path, stored: dict[str, dict[str, Any]]
+) -> None:
+    (output / "remaining_parse_text_case_results.jsonl").write_text(
+        "\n".join(
+            json.dumps(
+                {"extraction_case_id": case_id, "result": stored[case_id]},
+                sort_keys=True,
+            )
+            for case_id in sorted(stored)
+        )
+        + ("\n" if stored else ""),
+        encoding="utf-8",
+    )
+
+
+def education_certification_onecase_context(
+    output: Path,
+    selection: list[dict[str, str]],
+    packet_map: dict[str, list[base.PagePacket]],
+) -> tuple[
+    dict[str, str], list[base.PagePacket], dict[str, dict[str, Any]], str
+]:
+    selection_path = output / "remaining_parse_text_selection_manifest.csv"
+    selection_sha = base.sha_file(selection_path)
+    if selection_sha != FROZEN_REMAINING_SELECTION_SHA256:
+        raise RuntimeError("frozen remaining selection hash changed")
+    selection_ids = {row["extraction_case_id"] for row in selection}
+    if (
+        len(selection) != EXPECTED_NEW
+        or len(selection_ids) != EXPECTED_NEW
+        or len({row["content_hash"] for row in selection}) != EXPECTED_NEW
+    ):
+        raise RuntimeError("frozen remaining selection is no longer exact")
+    stored = load_remaining_checkpoint(output)
+    missing = selection_ids - set(stored)
+    if (
+        len(stored) != EXPECTED_STORED_BEFORE_ONECASE
+        or missing != {EDUCATION_CERTIFICATION_ONECASE_ID}
+        or not set(stored).issubset(selection_ids)
+    ):
+        raise RuntimeError("one-case mode requires the exact 825-case checkpoint")
+    metadata = base.read_csv(output / "remaining_parse_text_request_metadata.csv")
+    if any(row["extraction_case_id"] not in selection_ids for row in metadata):
+        raise RuntimeError("prior request metadata contains a non-frozen case")
+    prior_valid_ids = {
+        row["extraction_case_id"]
+        for row in metadata
+        if row["request_phase"] == "live_remaining"
+        and row["schema_valid"] == "true"
+    }
+    if prior_valid_ids != set(stored):
+        raise RuntimeError("checkpoint and prior strict-valid request IDs differ")
+    row = next(
+        item
+        for item in selection
+        if item["extraction_case_id"] == EDUCATION_CERTIFICATION_ONECASE_ID
+    )
+    pages = packet_map.get(EDUCATION_CERTIFICATION_ONECASE_ID, [])
+    if (
+        not pages
+        or len(pages) > 6
+        or sum(len(page.text) for page in pages) > 6000
+        or any(len(page.text) > 1500 for page in pages)
+    ):
+        raise RuntimeError("one-case packet violates frozen bounded limits")
+    checkpoint_sha = base.sha_file(
+        output / "remaining_parse_text_case_results.jsonl"
+    )
+    return row, pages, stored, checkpoint_sha
+
+
+def append_remaining_onecase_request_artifacts(
+    output: Path, result: base.Result, request: base.Request
+) -> None:
+    metadata_row = base.result_metadata(result, request)
+    timing_row = {
+        "request_phase": request.phase,
+        "extraction_case_id": result.case_id,
+        "started_at": "",
+        "finished_at": base.now(),
+        "local_packet_seconds": "0.000000",
+        "gabriel_elapsed_seconds": f"{result.elapsed:.6f}",
+        "request_status": result.status,
+    }
+    metadata_path = output / "remaining_parse_text_request_metadata.csv"
+    timing_path = output / "remaining_parse_text_timing.csv"
+    metadata = base.read_csv(metadata_path)
+    timing = base.read_csv(timing_path)
+    if any(
+        row["request_phase"] == request.phase
+        for row in metadata
+    ):
+        raise RuntimeError("one-case phase was already recorded")
+    metadata.append(metadata_row)
+    timing.append(timing_row)
+    base.write_csv(metadata_path, base.METADATA_FIELDS, metadata)
+    base.write_csv(timing_path, base.TIMING_FIELDS, timing)
+    dedicated_metadata_path = (
+        output / "remaining_parse_text_onecase_request_metadata.csv"
+    )
+    dedicated_timing_path = output / "remaining_parse_text_onecase_timing.csv"
+    dedicated_metadata = (
+        base.read_csv(dedicated_metadata_path)
+        if dedicated_metadata_path.is_file()
+        else []
+    )
+    dedicated_timing = (
+        base.read_csv(dedicated_timing_path)
+        if dedicated_timing_path.is_file()
+        else []
+    )
+    dedicated_metadata.append(metadata_row)
+    dedicated_timing.append(timing_row)
+    base.write_csv(
+        dedicated_metadata_path, base.METADATA_FIELDS, dedicated_metadata
+    )
+    base.write_csv(dedicated_timing_path, base.TIMING_FIELDS, dedicated_timing)
+
+
+def preflight_remaining_education_certification_onecase(
+    output: Path,
+    selection: list[dict[str, str]],
+    packet_map: dict[str, list[base.PagePacket]],
+    key: str,
+) -> int:
+    row, pages, stored, checkpoint_sha_before = (
+        education_certification_onecase_context(output, selection, packet_map)
+    )
+    request_row = dict(row)
+    request_row["_education_certification_onecase_contract"] = "yes"
+    request = base.Request(
+        request_row,
+        pages,
+        "preflight_remaining_education_certification_onecase",
+    )
+    results = base.call_gabriel([request], key, parallel=1)
+    if (
+        len(results) != 1
+        or results[0].case_id != EDUCATION_CERTIFICATION_ONECASE_ID
+    ):
+        raise RuntimeError("one-case preflight returned unexpected scope")
+    result = results[0]
+    append_remaining_onecase_request_artifacts(output, result, request)
+    checkpoint_sha_after = base.sha_file(
+        output / "remaining_parse_text_case_results.jsonl"
+    )
+    if (
+        checkpoint_sha_after != checkpoint_sha_before
+        or len(stored) != EXPECTED_STORED_BEFORE_ONECASE
+    ):
+        raise RuntimeError("one-case preflight modified the 825-case checkpoint")
+    passed = result.status == "success" and result.parsed is not None
+    report = f"""# Remaining education/certification one-case preflight
+
+- Case: `{EDUCATION_CERTIFICATION_ONECASE_ID}`
+- Request count: 1
+- Result: `{result.status}`
+- Strict education/certification contract valid: `{'true' if passed else 'false'}`
+- Packet pages: {len(pages)}
+- Packet text characters: {sum(len(page.text) for page in pages)}
+- Existing remaining-case checkpoint preserved: 825 / 825
+- Corrected 1,000-document seed calls: 0
+- Previously valid remaining cases resent: 0
+- Raw prompt/response saved: false
+
+The contract requires education/certification compensation to remain outside
+base quantitative observations. This preflight does not materialize lanes.
+"""
+    (output / "remaining_parse_text_onecase_preflight_report.md").write_text(
+        report, encoding="utf-8"
+    )
+    base.write_json(
+        output / ".remaining_onecase_preflight_passed.json",
+        {
+            "task_id": ONECASE_TASK_ID,
+            "passed": passed,
+            "case_id": EDUCATION_CERTIFICATION_ONECASE_ID,
+            "request_count": 1,
+            "schema_valid_count": int(passed),
+            "seed_case_calls": 0,
+            "stored_remaining_cases_resent": 0,
+            "selection_sha256": FROZEN_REMAINING_SELECTION_SHA256,
+            "checkpoint_sha256": checkpoint_sha_before,
+            "completed_at": base.now(),
+        },
+    )
+    return 0 if passed else 2
+
+
 def write_new_lanes(
     output: Path,
     selection: list[dict[str, str]],
@@ -790,6 +1005,8 @@ def materialize_cumulative(
     packet_rows: list[dict[str, str]],
     results: dict[str, dict[str, Any]],
     seed_dir: Path,
+    *,
+    task_id: str = TASK_ID,
 ) -> dict[str, Any]:
     if len(results) != EXPECTED_NEW or set(results) != {
         row["extraction_case_id"] for row in selection
@@ -1000,7 +1217,14 @@ def materialize_cumulative(
         and hash_count == EXPECTED_CUMULATIVE
     )
     metadata = base.read_csv(output / "remaining_parse_text_request_metadata.csv")
-    live_rows = [row for row in metadata if row["request_phase"] == "live_remaining"]
+    live_rows = [
+        row
+        for row in metadata
+        if row["request_phase"] in {
+            "live_remaining",
+            "live_remaining_education_certification_onecase",
+        }
+    ]
     live_valid_ids = {
         row["extraction_case_id"] for row in live_rows if row["schema_valid"] == "true"
     }
@@ -1020,7 +1244,7 @@ def materialize_cumulative(
         else "readable_parse_text_extraction_targeted_qa_required"
     )
     decision = {
-        "task_id": TASK_ID,
+        "task_id": task_id,
         "generated_at": base.now(),
         "decision": decision_name,
         "qa_status": "pass" if integrity_pass else "fail",
@@ -1028,7 +1252,10 @@ def materialize_cumulative(
         "integrity_qa_pass": integrity_pass,
         "corrected_1000_seed_count": EXPECTED_SEED,
         "seed_gabriel_calls": 0,
+        "cumulative_materialization_completed": True,
+        "cumulative_case_count": case_count,
         "remaining_selection_count": len(selection),
+        "selection_count": len(selection),
         "remaining_unique_hash_count": len({row["content_hash"] for row in selection}),
         "cumulative_unique_case_count": case_count,
         "cumulative_unique_content_hash_count": hash_count,
@@ -1038,10 +1265,30 @@ def materialize_cumulative(
         ),
         "new_case_schema_valid_count": len(results),
         "new_case_schema_valid_rate": round(len(results) / EXPECTED_NEW, 6),
+        "schema_valid_new_case_count": len(results),
+        "schema_valid_new_case_rate": round(len(results) / EXPECTED_NEW, 6),
         "live_request_attempt_count": len(live_rows),
+        "live_case_attempt_count": len(live_rows),
         "live_schema_valid_unique_case_count": len(live_valid_ids),
         "preflight_case_count": 7,
         "preflight_schema_valid_count": 7,
+        "preflight_schema_valid_rate": 1.0,
+        "unresolved_new_case_count": 0,
+        "unresolved_new_case_ids": [],
+        "onecase_preflight_schema_valid": (
+            task_id == ONECASE_TASK_ID
+        ),
+        "onecase_live_schema_valid": task_id == ONECASE_TASK_ID,
+        "onecase_total_request_count": 2 if task_id == ONECASE_TASK_ID else 0,
+        "onecase_education_certification_case_id": (
+            EDUCATION_CERTIFICATION_ONECASE_ID
+            if task_id == ONECASE_TASK_ID
+            else ""
+        ),
+        "previously_valid_remaining_cases_resent": 0,
+        "frozen_remaining_selection_sha256": (
+            FROZEN_REMAINING_SELECTION_SHA256
+        ),
         "packet_compliant": packet_compliant,
         "packet_rows": len(packet_rows),
         "duplicate_observation_id_count": duplicate_ids,
@@ -1286,11 +1533,118 @@ def live(
     return 0 if materialized["decision"]["qa_pass"] else 2
 
 
+def live_remaining_education_certification_onecase(
+    output: Path,
+    selection: list[dict[str, str]],
+    packet_rows: list[dict[str, str]],
+    packet_map: dict[str, list[base.PagePacket]],
+    seed_dir: Path,
+    key: str,
+) -> int:
+    marker_path = output / ".remaining_onecase_preflight_passed.json"
+    if not marker_path.is_file():
+        raise RuntimeError("one-case live mode requires one-case preflight")
+    marker = base.read_json(marker_path)
+    if (
+        marker.get("task_id") != ONECASE_TASK_ID
+        or marker.get("passed") is not True
+        or marker.get("case_id") != EDUCATION_CERTIFICATION_ONECASE_ID
+        or int(marker.get("request_count", 0)) != 1
+        or int(marker.get("schema_valid_count", 0)) != 1
+        or int(marker.get("seed_case_calls", -1)) != 0
+        or int(marker.get("stored_remaining_cases_resent", -1)) != 0
+        or marker.get("selection_sha256")
+        != FROZEN_REMAINING_SELECTION_SHA256
+    ):
+        raise RuntimeError("one-case preflight marker is invalid")
+    row, pages, stored, checkpoint_sha = (
+        education_certification_onecase_context(output, selection, packet_map)
+    )
+    if checkpoint_sha != marker.get("checkpoint_sha256"):
+        raise RuntimeError("825-case checkpoint changed after one-case preflight")
+    dedicated_metadata_path = (
+        output / "remaining_parse_text_onecase_request_metadata.csv"
+    )
+    dedicated_metadata = base.read_csv(dedicated_metadata_path)
+    if (
+        len(dedicated_metadata) != 1
+        or dedicated_metadata[0]["request_phase"]
+        != "preflight_remaining_education_certification_onecase"
+        or dedicated_metadata[0]["extraction_case_id"]
+        != EDUCATION_CERTIFICATION_ONECASE_ID
+        or dedicated_metadata[0]["schema_valid"] != "true"
+    ):
+        raise RuntimeError("one-case request history is not preflight-only")
+    request_row = dict(row)
+    request_row["_education_certification_onecase_contract"] = "yes"
+    request = base.Request(
+        request_row,
+        pages,
+        "live_remaining_education_certification_onecase",
+    )
+    results = base.call_gabriel([request], key, parallel=1)
+    if (
+        len(results) != 1
+        or results[0].case_id != EDUCATION_CERTIFICATION_ONECASE_ID
+    ):
+        raise RuntimeError("one-case live request returned unexpected scope")
+    result = results[0]
+    append_remaining_onecase_request_artifacts(output, result, request)
+    if result.status != "success" or result.parsed is None:
+        base.write_json(
+            output / "remaining_parse_text_decision_report.json",
+            {
+                "task_id": ONECASE_TASK_ID,
+                "generated_at": base.now(),
+                "decision": "onecase_live_schema_invalid",
+                "qa_status": "not_run",
+                "selection_count": EXPECTED_NEW,
+                "schema_valid_new_case_count": EXPECTED_STORED_BEFORE_ONECASE,
+                "unresolved_new_case_count": 1,
+                "unresolved_new_case_ids": [
+                    EDUCATION_CERTIFICATION_ONECASE_ID
+                ],
+                "onecase_preflight_schema_valid": True,
+                "onecase_live_schema_valid": False,
+                "onecase_total_request_count": 2,
+                "seed_gabriel_calls": 0,
+                "previously_valid_remaining_cases_resent": 0,
+                "frozen_remaining_selection_sha256": (
+                    FROZEN_REMAINING_SELECTION_SHA256
+                ),
+                "cumulative_materialization_completed": False,
+                "final_merge_allowed": False,
+                "ingestion_allowed": False,
+                "codify_allowed": False,
+            },
+        )
+        return 2
+    stored[EDUCATION_CERTIFICATION_ONECASE_ID] = result.parsed
+    if len(stored) != EXPECTED_NEW:
+        raise RuntimeError("one-case result did not complete the 826-case cohort")
+    write_remaining_checkpoint(output, stored)
+    materialized = materialize_cumulative(
+        output,
+        selection,
+        packet_rows,
+        stored,
+        seed_dir,
+        task_id=ONECASE_TASK_ID,
+    )
+    return 0 if materialized["decision"]["qa_pass"] else 2
+
+
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--mode",
-        choices=("freeze_remaining_selection", "preflight_remaining", "live_remaining"),
+        choices=(
+            "freeze_remaining_selection",
+            "preflight_remaining",
+            "live_remaining",
+            "preflight_remaining_education_certification_onecase",
+            "live_remaining_education_certification_onecase",
+        ),
         required=True,
     )
     parser.add_argument("--output-dir", type=Path, required=True)
@@ -1342,6 +1696,16 @@ def main(argv: list[str] | None = None) -> int:
         if not args.preflight_representative_cases:
             raise ValueError("representative preflight flag required")
         return preflight(output, selection, packet_map, key)
+    if args.mode == "preflight_remaining_education_certification_onecase":
+        return preflight_remaining_education_certification_onecase(
+            output, selection, packet_map, key
+        )
+    if args.mode == "live_remaining_education_certification_onecase":
+        if not args.resume:
+            raise ValueError("one-case live mode requires --resume")
+        return live_remaining_education_certification_onecase(
+            output, selection, packet_rows, packet_map, seed_dir, key
+        )
     if not args.resume:
         raise ValueError("live remaining mode requires --resume")
     return live(output, selection, packet_rows, packet_map, seed_dir, key, True)

@@ -1,16 +1,25 @@
-# Remaining readable parse-text QA report
+# Remaining readable parse-text cumulative QA report
 
-Status: `not_run_live_incomplete_schema_invalid`.
+- Integrity QA: `pass`
+- Corrected 1,000-document seed reused without GABRIEL: 1,000
+- New schema-valid cases: 826 / 826
+- Cumulative readable hashes/cases: 1826 / 1826
+- Packet compliance: `true`
+- Invalid bounded observation pointers: 0
+- Duplicate observation IDs: 0
+- Newly canonicalized exact structured duplicates: 5
+- Quantitative conflict groups: 130
+- Unresolved quantitative conflict groups: 37
+- Unresolved quantitative conflict rate: 1.9372%
+- Base/non-base contamination: 0
+- Active quantitative observations: 1910
+- Active qualitative mechanisms: 1954
+- Active mixed cases: 371
+- Active non-base-wage observations: 4730
+- Reference/exclusion cases: 345
+- Decision: `readable_parse_text_provisional_extraction_completed_qa_pass`
+- Targeted QA before final merge: `true`
 
-The live checkpoint contains 825 of 826 frozen new cases. Cumulative materialization is an all-or-nothing operation, so duplicate-ID, bounded-page-pointer, quantitative-conflict, base/non-base-contamination, and matched-representation QA were not computed for a partial cohort.
-
-The sole unresolved case is `cexrem_4a267735daf6729f5c4e4835`. Its ten responses were rejected because education/certification compensation appeared in the base quantitative array. No response was coerced or fabricated.
-
-The following required complete-run artifacts were deliberately not produced:
-
-- five `lanes_new` extraction ledgers;
-- five cumulative readable parse-text ledgers;
-- `remaining_parse_text_conflict_review.csv`;
-- cumulative observation, conflict, contamination, duplicate, or page-pointer counts.
-
-The corrected 1,000-document targeted-QA shadow ledgers remain the latest complete valid provisional extraction layer. The 825-case checkpoint is resumable intermediate state only and is not analysis-ready.
+The cumulative outputs cover every unique durable readable parse-text hash and
+remain provisional and separate from final analysis inputs. This task stops
+before final merge, ingestion, codification, wage-gap analysis, or regression.

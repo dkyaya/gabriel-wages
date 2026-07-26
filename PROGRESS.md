@@ -6,6 +6,32 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-25 (Hartland education/certification case resolved; all 1,826 readable hashes materialized)
+
+**Did**
+- Started from clean tracked `16c33b1cba79db0b99a90e353aab53538ab44a52`, preserving unrelated untracked local adjudication renders and root `package-lock.json`. Reconfirmed the frozen remaining selection SHA-256, exact 825-case checkpoint, sole missing Hartland case, corrected 1,000-case seed, packet caps, and configured GABRIEL credential presence without exposing values.
+- Added an education/certification-only response contract and focused regression coverage. The contract rejects education/certification evidence from base quantitative observations, permits it only in non-base observations, requires the correct case disposition, and never fabricates base or qualitative records.
+- Passed the exact one-case preflight 1/1 and live request 1/1 for `cexrem_4a267735daf6729f5c4e4835`. The frozen selection hash remained `43b768fba4e3d122727d2cbf9614885922a55be5f2bd1afd37d36f47a4695d81`; the seed received zero calls and no stored remaining case was resent.
+- Appended the strict-valid case to complete 826/826, then materialized cumulative provisional ledgers for all 1,826 unique readable hashes: 1,910 active quantitative observations, 1,954 qualitative mechanisms, 371 mixed cases, 4,730 non-base observations, and 345 reference/exclusion cases.
+- Recomputed QA at zero duplicate observation IDs, zero invalid bounded page pointers, zero base/non-base contamination, intact 780 police / 439 fire / 607 non-safety representation, and 37 unresolved conflict groups at 1.9372%.
+- Updated the generated dashboard data, analysis readiness, existing extraction card, dashboard documentation, result/status docs, handoff, and `next_task.md` to show `compensation_extraction_readable_parse_text_1826_materialized_qa_pass`.
+
+**Decisions and why**
+- Integrity QA passes and all unique readable parse-text documents are covered. The current outputs remain provisional and separate from final analysis inputs.
+- Targeted QA is required before any final provisional merge because 37 conflict groups remain explicit and the 1.9372% rate, while under the 2% gate, is close to the threshold.
+- OCR-later documents remain untouched. No further readable parse-text extraction, final merge, ingestion, codification, or analysis is authorized by this task.
+
+**Surprises/breakage**
+- The narrow one-case contract resolved in one preflight and one live request after ten failures under the general prompt, confirming that the blocker was response routing rather than missing local evidence.
+- Cumulative integrity QA passed immediately after materialization, but the full 1,826-case scan surfaced 37 under-specified conflict groups that should be resolved before a final provisional merge.
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Offline tests, dashboard generation/frontend build, repository validation, ingestion tests, coverage audit, protected-state checks, metadata safety checks, and diff hygiene passed.
+
+**Next steps**
+1. Run deterministic targeted QA on the 37 unresolved conflict groups, using bounded local evidence pointers and separate corrected shadow ledgers.
+2. Preserve every observation ID, canonical duplicate relationship, mixed join key, page pointer, and source provenance; leave genuinely unresolved groups explicit.
+3. Continue to prohibit final merge, ingestion, codification, wage-gap work, regression, URL access, download, and OCR.
+
 ## 2026-07-25 (Remaining readable parse-text extraction stopped at 825/826)
 
 **Did**

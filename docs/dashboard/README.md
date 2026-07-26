@@ -192,18 +192,18 @@ The dashboard builder writes:
 - `reports_index.json`
 
 The text/table calibration layer currently reports
-`compensation_extraction_remaining_parse_text_live_incomplete_825_of_826`.
-The final readable parse-text batch froze 826 unique hashes from 827 remaining
-durable rows and passed a seven-path preflight. GABRIEL produced 825
-strict-valid case results after 861 bounded attempts while the corrected
-1,000-case seed received zero calls. One Hartland, Wisconsin police case
-remains invalid because education/certification compensation was repeatedly
-placed in the base quantitative array. The run stopped fail-closed: no
-cumulative 1,826-case ledgers or QA metrics were materialized. The corrected
-1,000-case targeted-QA shadows remain the latest complete valid provisional
-layer. Analysis readiness remains false, and no URL access, download, OCR,
-ingestion, codification, final merge, wage-gap calculation, or regression
-occurred.
+`compensation_extraction_readable_parse_text_1826_materialized_qa_pass`.
+The exact Hartland education/certification case passed one bounded preflight
+and one bounded live request, completing the frozen remaining cohort at
+826/826 without resending the corrected 1,000-case seed or 825 stored cases.
+The cumulative provisional layer now covers all 1,826 unique readable
+parse-text hashes at 100% case-level schema validity. Integrity QA passes with
+zero duplicate IDs, invalid page pointers, or base/non-base contamination.
+Thirty-seven under-specified quantitative conflict groups remain explicit at a
+1.9372% rate, so targeted conflict QA is required before any final provisional
+merge. Analysis readiness remains false. OCR-later documents remain untouched,
+and no URL access, download, OCR, ingestion, codification, final merge,
+wage-gap calculation, or regression occurred.
 
 Review the printed totals and diffs before committing. In particular, candidate-positive plus parseable-empty municipalities must equal scout-covered municipalities, and transport/failure-only results must remain outside successful coverage.
 

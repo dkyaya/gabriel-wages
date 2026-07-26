@@ -583,6 +583,9 @@ def prompt(row: dict[str, str], pages: list[PagePacket]) -> str:
     }
     retry_hint = row.get("_nonbase_retry_hint", "")
     longevity_onecase = row.get("_longevity_onecase_contract") == "yes"
+    education_certification_onecase = (
+        row.get("_education_certification_onecase_contract") == "yes"
+    )
     retry_instruction = (
         " A prior strict-validation attempt detected the non-base family "
         f"'{retry_hint}' inside a quantitative item for this same bounded packet. "
@@ -615,6 +618,29 @@ def prompt(row: dict[str, str], pages: list[PagePacket]) -> str:
         if longevity_onecase
         else ""
     )
+    education_certification_instruction = (
+        " ONE-CASE EDUCATION/CERTIFICATION CONTRACT: This request is limited "
+        "to the frozen education/certification-routing case. Treat visible "
+        "education, degree, credential, certification, training, or related "
+        "incentive pay as non-base compensation only. Never place its amount, "
+        "eligibility rule, percentage, schedule, label, or reason code in "
+        "quantitative_observations. Set quantitative_observations to []. If "
+        "the bounded pages contain only education/certification compensation, "
+        "return case_disposition non_base_wage, qualitative_observations [], "
+        "and at least one non_base_wage_observations item with "
+        "non_base_wage_type education_or_certification. If a genuine "
+        "compensation-setting mechanism is separately and explicitly visible, "
+        "it may appear in qualitative_observations and the disposition must be "
+        "qualitative_ready, while education/certification evidence remains "
+        "only in non_base_wage_observations. Do not create or infer base wage, "
+        "salary, hourly rate, step, grade, pay band, or percentage-increase "
+        "observations. Do not fabricate a qualitative mechanism to avoid the "
+        "non_base_wage disposition. If the supplied pages do not support this "
+        "contract, return a schema-valid non-ready result; the local contract "
+        "will fail closed."
+        if education_certification_onecase
+        else ""
+    )
     return (
         "Extract provisional compensation evidence only from this bounded local page packet. "
         "Return separate quantitative, qualitative-mechanism, and non-base-wage observation arrays. "
@@ -629,6 +655,7 @@ def prompt(row: dict[str, str], pages: list[PagePacket]) -> str:
         "A reference page without its target is reference_only. All page numbers must be among supplied pages. Summaries must be concise paraphrases, not quotations. Return strict JSON only."
         + retry_instruction
         + onecase_instruction
+        + education_certification_instruction
         + "\n"
         f"BOUNDED_PACKET={json.dumps(packet, separators=(',', ':'))}"
     )
@@ -702,6 +729,32 @@ def validate_longevity_onecase_response(
     return value
 
 
+def validate_education_certification_onecase_response(
+    raw: str, allowed_pages: set[int]
+) -> dict[str, Any]:
+    """Enforce the frozen one-case education/certification response contract."""
+    value = validate_response(raw, allowed_pages)
+    if value["quantitative_observations"]:
+        raise ValueError(
+            "education/certification one-case quantitative observations must be empty"
+        )
+    nonbase = value["non_base_wage_observations"]
+    if not nonbase or not any(
+        item["non_base_wage_type"] == "education_or_certification"
+        for item in nonbase
+    ):
+        raise ValueError(
+            "education/certification one-case requires a matching non-base observation"
+        )
+    qualitative = value["qualitative_observations"]
+    expected_disposition = "qualitative_ready" if qualitative else "non_base_wage"
+    if value["case_disposition"] != expected_disposition:
+        raise ValueError(
+            "education/certification one-case disposition does not match evidence arrays"
+        )
+    return value
+
+
 @dataclass
 class Request:
     row: dict[str, str]
@@ -764,7 +817,11 @@ async def _call(requests: list[Request], key: str, parallel: int, timeout: float
                 raw = str(getattr(response, "output_text", "") or ""); usage = getattr(response, "usage", None)
                 try:
                     validator = (
-                        validate_longevity_onecase_response
+                        validate_education_certification_onecase_response
+                        if req.row.get(
+                            "_education_certification_onecase_contract"
+                        ) == "yes"
+                        else validate_longevity_onecase_response
                         if req.row.get("_longevity_onecase_contract") == "yes"
                         else validate_response
                     )

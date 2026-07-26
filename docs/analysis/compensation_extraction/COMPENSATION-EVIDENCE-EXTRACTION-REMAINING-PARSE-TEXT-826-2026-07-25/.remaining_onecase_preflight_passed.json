@@ -1,0 +1,12 @@
+{
+  "case_id": "cexrem_4a267735daf6729f5c4e4835",
+  "checkpoint_sha256": "28eda60ae60001289dab4608de656bd39061384f37d3af5af1b2a829741e97cf",
+  "completed_at": "2026-07-26T02:34:09Z",
+  "passed": true,
+  "request_count": 1,
+  "schema_valid_count": 1,
+  "seed_case_calls": 0,
+  "selection_sha256": "43b768fba4e3d122727d2cbf9614885922a55be5f2bd1afd37d36f47a4695d81",
+  "stored_remaining_cases_resent": 0,
+  "task_id": "COMPENSATION-EVIDENCE-EXTRACTION-REMAINING-PARSE-TEXT-ONECASE-EDUCATION-CERT-RESOLUTION-2026-07-25"
+}
