@@ -476,6 +476,12 @@ def audit() -> dict[str, Any]:
             "issue": "analysis_provenance_fields_are_not_self_contained_in_lane_schemas",
             "observed": True,
         },
+        {
+            "blocker_id": "B11",
+            "severity": "major",
+            "issue": "reference_and_exclusion_rows_are_control_records_not_outcomes",
+            "observed": len(tables["reference_and_exclusion"].active_rows()),
+        },
     ]
 
     result = {

@@ -124,6 +124,10 @@ class SchemaReadinessReviewTests(unittest.TestCase):
         )
         self.assertFalse(self.result["final_analysis_ready"])
         self.assertEqual(self.result["future_prompt"], "next_schema_repair_prompt.md")
+        self.assertEqual(
+            {blocker["blocker_id"] for blocker in self.result["blockers"]},
+            {f"B{number:02d}" for number in range(1, 12)},
+        )
 
     def test_ocr_and_forbidden_stages_remain_closed(self) -> None:
         self.assertFalse(self.result["ocr_later_documents_included"])
