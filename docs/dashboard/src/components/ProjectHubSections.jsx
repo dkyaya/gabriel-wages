@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "compensation_extraction_final_provisional_merge_prompt_prepared"
+              ? "Final provisional merge prompt prepared; merge remains authorization-gated"
+              : textTableCalibrationStatus.calibration_phase ===
             "compensation_extraction_readable_parse_text_1826_independent_bounded_review_completed"
               ? "Independent bounded review passed; final merge prompt may be prepared"
               : textTableCalibrationStatus.calibration_phase ===
@@ -813,6 +816,16 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "compensation_extraction_final_provisional_merge_prompt_prepared" ? (
+            <>
+              A fail-closed future merge prompt now names the five corrected shadow ledgers and
+              their immutable SHA-256 values. It requires a dry run, separate schemas, full
+              provenance preservation, and retention of both explicitly unresolved conflict
+              groups. No merge or merged package was created; all 1,826 readable hashes remain
+              covered, OCR-later documents remain untouched, and analysis readiness remains false
+              until a separately authorized task runs and validates the provisional merge.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "compensation_extraction_readable_parse_text_1826_independent_bounded_review_completed" ? (
             <>
               Independent bounded review passed {formatNumber(

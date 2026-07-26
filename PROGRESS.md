@@ -6,6 +6,29 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-25 (Final provisional merge prompt prepared; merge not run)
+
+**Did**
+- Started from clean tracked `30fc55db984e7a4de8837e6534b327a87a42403c`, preserving unrelated untracked adjudication renders and root `package-lock.json`. Confirmed the independent-review decision authorizes prompt preparation only and still forbids the merge.
+- Recomputed the five corrected shadow-ledger SHA-256 values and matched all five to the independent-review record. Drafted a self-contained future Codex prompt naming those five files as the only row-bearing inputs.
+- Required a separate future authorization, no-write dry run, pre-write hash/count/ID reconciliation, rollback-safe staging, atomic publication, and five separate byte-identical evidence ledgers rather than a cross-schema concatenation.
+- Locked preservation of observation/case/original IDs, duplicate/canonical links and 14 provenance rows, active flags, bounded page pointers, mixed join keys, source/detection IDs, content hashes, representation metadata, the Wasco shadow repair, three reroutes, five new canonical duplicates, and both explicitly unresolved conflict groups.
+- Updated generated dashboard inputs, the existing extraction card, dashboard documentation, result/status docs, handoff, and `next_task.md` to show `compensation_extraction_final_provisional_merge_prompt_prepared`.
+
+**Decisions and why**
+- Prompt preparation is complete, but no final provisional merge or package materialization occurred. Separate explicit user authorization remains mandatory before executing the prepared prompt.
+- Analysis readiness remains false. The future package, if authorized, must remain provisional, preserve five schemas, and stop before ingestion or codification.
+
+**Surprises/breakage**
+- None. The independent-review hashes and all five current corrected-ledger hashes matched exactly; no ledger repair or mutation was needed.
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Focused prompt-contract checks, dashboard generation/frontend build, repository validation, 60 ingestion tests, coverage audit, protected-input hashes, secret scan, and diff hygiene passed.
+
+**Next steps**
+1. Await a separate explicit user authorization before running the prepared final provisional merge prompt.
+2. If authorized, execute its dry-run and reconciliation gates before any package materialization; keep the two residual groups explicit and all five schemas separate.
+3. Keep OCR-later documents, ingestion, codification, analysis readiness, wage-gap work, regression, URL access, downloads, and new extraction closed.
+
 ## 2026-07-25 (Readable parse-text 1,826 independent bounded review passed)
 
 **Did**

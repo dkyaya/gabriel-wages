@@ -6,6 +6,31 @@ Last updated: `2026-07-25`
 
 ---
 
+## 2026-07-25 — Final provisional merge prompt prepared; execution not authorized
+
+### Current State
+
+- **Authority/start:** work began at clean tracked `30fc55db984e7a4de8837e6534b327a87a42403c`. The independent decision remains `independent_review_pass_final_provisional_merge_prompt_allowed`: it permits prompt preparation but not execution.
+- **Prompt:** [the future merge prompt](compensation_extraction/COMPENSATION-EVIDENCE-FINAL-PROVISIONAL-MERGE-PROMPT-PREP-2026-07-25/compensation_evidence_final_provisional_merge_prompt_2026-07-25.md) is self-contained and fail-closed. It requires a new explicit user authorization, dry run, exact five-file SHA-256 verification, complete reconciliation, rollback-safe staging, and atomic publication.
+- **Inputs/schemas:** only the corrected quantitative, qualitative, mixed, non-base-wage, and reference/exclusion shadow ledgers may contribute rows. The prompt keeps them as five separate byte-identical evidence tables; it does not collapse schemas.
+- **Preservation:** all IDs, canonical/duplicate relations, provenance rows, active flags, page pointers, join keys, source/detection IDs, content hashes, representation metadata, the Wasco repair, reroutes, duplicate canonicalizations, and the two explicit unresolved groups are locked.
+- **Boundary:** no merge or merged package was created. No GABRIEL/API, extraction, selection, URL/search, download, OCR, scout, source review, verification, ingestion, codification, wage-gap work, regression, causal analysis, fetch, pull, or remote inspection occurred.
+- **Dashboard:** phase is `compensation_extraction_final_provisional_merge_prompt_prepared`; all 1,826 readable hashes remain covered, OCR-later documents remain untouched, and analysis readiness is false.
+
+### Interpretation
+
+The next operation is intentionally blocked on a new user authorization. The
+prepared prompt is the executable specification for a future provisional
+package promotion, not evidence that the package already exists and not an
+authorization for ingestion, codification, or analysis.
+
+### Next Move
+
+Follow [next_task.md](../../next_task.md). Await a separate explicit request to
+run the prepared prompt. If authorized, preserve its exact input hashes and
+fail-closed dry-run gates; stop before ingestion/codification and keep analysis
+readiness false.
+
 ## 2026-07-25 — Readable parse-text 1,826 independent bounded review passed
 
 ### Current State
