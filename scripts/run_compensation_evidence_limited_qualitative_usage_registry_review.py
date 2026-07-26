@@ -200,6 +200,7 @@ def validate_dashboard_state(calibration: dict[str, Any], readiness: dict[str, A
     allowed_phases = {
         "compensation_extraction_limited_qualitative_usage_layer_acceptance_registered_registry_review_prompt_allowed",
         "compensation_extraction_limited_qualitative_usage_registry_review_pass_registry_acceptance_prompt_allowed",
+        "compensation_extraction_limited_qualitative_usage_registry_acceptance_registered_strategy_prompt_allowed",
     }
     if phase not in allowed_phases:
         raise RuntimeError("Dashboard phase is inconsistent with the registry-only chain")
@@ -209,6 +210,7 @@ def validate_dashboard_state(calibration: dict[str, Any], readiness: dict[str, A
     if readiness.get("overall_status") not in {
         "limited_qualitative_usage_layer_acceptance_registered_registry_review_only_global_analysis_closed",
         "limited_qualitative_usage_registry_review_pass_registry_acceptance_prompt_allowed_global_analysis_closed",
+        "limited_qualitative_usage_registry_acceptance_registered_strategy_only_global_analysis_closed",
     }:
         raise RuntimeError("Dashboard overall registry state is inconsistent")
     if '"global_analysis_readiness": true' in readiness_text:

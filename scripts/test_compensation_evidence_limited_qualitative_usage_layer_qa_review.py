@@ -320,6 +320,7 @@ class MaterializedReviewTests(unittest.TestCase):
             "compensation_extraction_limited_qualitative_usage_layer_qa_review_pass_acceptance_prompt_allowed",
             "compensation_extraction_limited_qualitative_usage_layer_acceptance_registered_registry_review_prompt_allowed",
             "compensation_extraction_limited_qualitative_usage_registry_review_pass_registry_acceptance_prompt_allowed",
+            "compensation_extraction_limited_qualitative_usage_registry_acceptance_registered_strategy_prompt_allowed",
         })
         self.assertFalse(calibration["limited_qualitative_usage_layer_qa_global_analysis_readiness"])
         self.assertIn("global_analysis_closed", readiness["overall_status"])

@@ -6,6 +6,27 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-26 (Limited qualitative usage registry accepted)
+
+**Did**
+- Reverified the registry-review authorization, 14 immutable registry-review inputs, two dashboard baseline contracts, candidate-ID/layer/schema hashes, every registered scope count, and zero contamination.
+- Created registry-acceptance metadata only: zero evidence rows, zero analysis outputs, and no ledger changes.
+- Preserved the 643-row accepted scope, 116 restricted rows, 1,195 navigation-only rows, 56-row non-analytic strict-primary manifest, and every quantitative/non-base/reference/conflict lane separately.
+- Added 73 registry-acceptance tests across 36 adversarial modes. All 561 focused tests and 60 ingestion tests passed.
+
+**Decisions**
+- Decision is `limited_qualitative_usage_registry_acceptance_registered`. A separately authorized pipeline-stage strategy review may run next; no pipeline stage is authorized by this acceptance.
+- Global/full qualitative readiness, analysis-facing promotion, statistics, ingestion, codification, wage-gap, regression, and causal work remain closed.
+
+**Surprises/breakage**
+- Six predecessor materialized-output tests and the registry-review dashboard validator correctly rejected the new descendant phase until their explicit fail-closed allowlists were extended. The repair added only the exact acceptance state and retained every readiness, scope, and non-analysis assertion.
+
+**Corpus snapshot**
+- `contracts=64`, `discourse=0`, `coverage=64`, `cities=19`; 28 healthy matched pairs (10 exact-cycle, 18 overlap-cycle), two exploratory adjacent matches, and six unmatched safety units.
+
+**Next steps**
+- Seek separate authorization for `next_pipeline_stage_strategy_prompt.md`. Review strategy only; do not execute a pipeline stage, create evidence or analysis output, or change readiness.
+
 ## 2026-07-26 (Limited qualitative usage registry review passed)
 
 **Did**

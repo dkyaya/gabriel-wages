@@ -241,6 +241,7 @@ class MaterializedOutputTests(unittest.TestCase):
                 "compensation_extraction_limited_qualitative_usage_layer_qa_review_pass_acceptance_prompt_allowed",
                 "compensation_extraction_limited_qualitative_usage_layer_acceptance_registered_registry_review_prompt_allowed",
                 "compensation_extraction_limited_qualitative_usage_registry_review_pass_registry_acceptance_prompt_allowed",
+                "compensation_extraction_limited_qualitative_usage_registry_acceptance_registered_strategy_prompt_allowed",
             },
         )
         self.assertEqual(dashboard["qualitative_evidence_contract_repeat_review_scope"], "limited_exact_span_only")
@@ -257,6 +258,7 @@ class MaterializedOutputTests(unittest.TestCase):
                 "limited_qualitative_usage_layer_qa_pass_acceptance_prompt_allowed_global_analysis_closed",
                 "limited_qualitative_usage_layer_acceptance_registered_registry_review_only_global_analysis_closed",
                 "limited_qualitative_usage_registry_review_pass_registry_acceptance_prompt_allowed_global_analysis_closed",
+                "limited_qualitative_usage_registry_acceptance_registered_strategy_only_global_analysis_closed",
             },
         )
         self.assertIn("analysis_closed", readiness["overall_status"])

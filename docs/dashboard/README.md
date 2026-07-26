@@ -102,6 +102,8 @@ The current phase is `compensation_extraction_limited_qualitative_usage_layer_ac
 
 The current phase is `compensation_extraction_limited_qualitative_usage_registry_review_pass_registry_acceptance_prompt_allowed`. The accepted 643-row limited qualitative registry passed its metadata-only consistency review. Candidate-ID, layer-file, and schema hashes and all registered scope counts reconcile; restricted, navigation, and external-lane contamination remains zero; and the 56-row strict-primary manifest remains narrow and non-analytic. The review created no evidence rows or analysis outputs. A separately authorized registry-acceptance step may run next; global readiness, full qualitative readiness, and analysis-facing promotion remain false.
 
+The current phase is `compensation_extraction_limited_qualitative_usage_registry_acceptance_registered_strategy_prompt_allowed`. The reviewed 643-row limited qualitative registry is accepted as internally consistent metadata. Candidate-ID, layer-file, schema, scope, contamination, dashboard, and forbidden-action checks pass; the 56-row strict-primary manifest remains narrow and non-analytic; and acceptance created no evidence rows or analysis outputs. A separately authorized pipeline-stage strategy prompt may run next, but it may recommend rather than execute a future stage. Global readiness, full qualitative readiness, and analysis-facing promotion remain false.
+
 ## Final provisional schema readiness — 2026-07-26
 
 The immutable five-ledger provisional package remains integrity-valid, but a

@@ -6,6 +6,25 @@ Last updated: `2026-07-26`
 
 ---
 
+## 2026-07-26 — Limited qualitative usage registry accepted
+
+### Current State
+
+- **Authority/start:** began at clean tracked `f6c66ede5c60025ed8cad46db100d292baddee63`; 14 registry-review artifacts and two dashboard baseline contracts passed direct verification.
+- **Decision:** `limited_qualitative_usage_registry_acceptance_registered`; only a separately authorized pipeline-stage strategy review may run next. Global/full qualitative readiness and analysis-facing promotion remain false.
+- **Hashes/scope:** candidate-ID SHA-256 `0365d38babf9d4000295a3326c8cfc77b92f8a7ad1f2f1117d0cb40f1613b91b`, layer SHA-256 `cf29690a7687401960804a714d0bdfb0a24407eee10ba70695ee5487a60fcbc5`, and schema SHA-256 `3c31d1d663cde730d198184444c6b77591cc186411c9714ea0086f2135d8533a` pass. Registered scope is 643 rows; contamination is zero; strict-primary remains 56 and non-analytic.
+- **Boundary:** zero evidence rows and zero analysis outputs were created. Restricted 116, navigation 1,195, quantitative 862/1,045, non-base 4,733, reference/control 345, and two conflicts/five observations remain separate.
+- **Hardening:** 73 new tests plus 488 predecessor tests pass. Dashboard/repository builds, schema validation, 60 ingestion tests, coverage audit, diff checks, partial-output guards, and idempotent resume pass.
+- **Forbidden actions:** no PDF/page, URL/download, OCR, model/GABRIEL, extraction, selection, ingestion run, codification, descriptive/inferential statistics, wage-gap, regression, or causal work occurred; no upstream ledger changed.
+
+### Interpretation
+
+Registry acceptance certifies metadata consistency only. It neither expands evidence nor authorizes analysis or any pipeline stage. Mechanism language remains evidence of wording, not wage effects.
+
+### Next Move
+
+Use `next_pipeline_stage_strategy_prompt.md` only after separate authorization. The task may compare bounded next-stage options and produce an authorization-gated prompt; it must not execute any stage, create evidence or analysis output, or change readiness.
+
 ## 2026-07-26 — Limited qualitative usage registry review passed
 
 ### Current State

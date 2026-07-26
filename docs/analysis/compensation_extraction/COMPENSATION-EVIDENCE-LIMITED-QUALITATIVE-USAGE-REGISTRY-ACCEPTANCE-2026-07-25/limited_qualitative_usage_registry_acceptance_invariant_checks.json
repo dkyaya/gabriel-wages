@@ -1,0 +1,39 @@
+{
+  "all_invariants_passed": true,
+  "checks": {
+    "all_registered_scope_counts_reconciled": true,
+    "all_required_inputs_present_and_immutable": true,
+    "analysis_facing_promotion_false": true,
+    "analysis_outputs_created_zero": true,
+    "candidate_id_set_hash_reverified": true,
+    "dashboard_registry_acceptance_state_consistent": true,
+    "evidence_rows_created_zero": true,
+    "full_qualitative_readiness_false": true,
+    "future_prompt_preserves_constraints_and_phase_boundaries": true,
+    "global_analysis_readiness_false": true,
+    "immutable_inputs_unmodified": true,
+    "layer_hash_reverified": true,
+    "partial_outputs_cannot_claim_complete": true,
+    "registry_review_decision_authorizes_acceptance": true,
+    "registry_review_is_review_only": true,
+    "restricted_navigation_external_contamination_zero": true,
+    "schema_hash_reverified": true,
+    "strict_primary_56_and_non_analytic": true
+  },
+  "schema_version": "limited_qualitative_usage_registry_acceptance_v1",
+  "scope_counts": {
+    "accepted_usage_layer_rows": 643,
+    "ambiguous_navigation_rows": 614,
+    "navigation_only_rows": 1195,
+    "non_base_companion": 4733,
+    "quantitative_candidates": 862,
+    "quantitative_exceptions": 1045,
+    "reference_control": 345,
+    "restricted_exact_span_rows": 116,
+    "strict_primary_manifest_rows": 56,
+    "unavailable_navigation_rows": 581,
+    "unresolved_conflict_groups": 2,
+    "unresolved_conflict_observations": 5
+  },
+  "task_id": "COMPENSATION-EVIDENCE-LIMITED-QUALITATIVE-USAGE-REGISTRY-ACCEPTANCE-2026-07-25"
+}

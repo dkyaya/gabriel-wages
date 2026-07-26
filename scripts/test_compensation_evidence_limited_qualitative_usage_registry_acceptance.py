@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Adversarial tests for the limited qualitative usage registry review."""
+"""Adversarial tests for limited qualitative usage registry acceptance."""
 
 from __future__ import annotations
 
 import copy
+import csv
 import json
 import subprocess
 import sys
@@ -11,41 +12,35 @@ import tempfile
 import unittest
 from pathlib import Path
 
-import run_compensation_evidence_limited_qualitative_usage_registry_review as runner
+import run_compensation_evidence_limited_qualitative_usage_registry_acceptance as runner
 
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = runner.DEFAULT_OUTPUT_DIR
 
 
-class RegistryReviewPreflightTests(unittest.TestCase):
+class RegistryAcceptancePreflightTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.hashes, cls.source = runner.verify_inputs()
 
-    def test_14_direct_input_contract_entries(self):
-        self.assertEqual(len(self.hashes), 14)
+    def test_16_direct_input_contract_entries(self):
+        self.assertEqual(len(self.hashes), 16)
 
-    def test_12_immutable_acceptance_inputs(self):
-        self.assertEqual(len(runner.ACCEPTANCE_INPUTS), 12)
+    def test_14_immutable_review_inputs(self):
+        self.assertEqual(len(runner.REVIEW_INPUTS), 14)
 
     def test_two_dashboard_contract_inputs(self):
         self.assertEqual(len(runner.DASHBOARD_INPUTS), 2)
 
     def test_authorized_commit_is_ancestor(self):
-        result = subprocess.run(
-            ["git", "merge-base", "--is-ancestor", runner.BASELINE_COMMIT, "HEAD"], cwd=ROOT,
-        )
+        result = subprocess.run(["git", "merge-base", "--is-ancestor", runner.BASELINE_COMMIT, "HEAD"], cwd=ROOT)
         self.assertEqual(result.returncode, 0)
 
-    def test_acceptance_decision_authorizes_review(self):
-        runner.validate_acceptance_authorization(self.source["decision"])
+    def test_review_decision_authorizes_acceptance(self):
+        runner.validate_review_authorization(self.source["decision"])
 
-    def test_acceptance_manifest_registration_only(self):
-        self.assertTrue(self.source["manifest"]["registration_only"])
-        self.assertFalse(self.source["manifest"]["contains_evidence_rows"])
-
-    def test_candidate_id_hash_authorized(self):
+    def test_candidate_hash_authorized(self):
         self.assertEqual(self.source["hash_audit"]["observed_candidate_id_set_sha256"], runner.AUTHORIZED_ID_HASH)
 
     def test_layer_hash_authorized(self):
@@ -60,22 +55,28 @@ class RegistryReviewPreflightTests(unittest.TestCase):
     def test_contamination_zero(self):
         self.assertEqual(self.source["scope_audit"]["restricted_navigation_external_contamination_count"], 0)
 
-    def test_acceptance_created_no_evidence(self):
+    def test_review_created_no_evidence(self):
         self.assertEqual(self.source["scope_audit"]["evidence_rows_created"], 0)
 
-    def test_acceptance_created_no_analysis(self):
+    def test_review_created_no_analysis(self):
         self.assertEqual(self.source["scope_audit"]["analysis_outputs_created"], 0)
 
-    def test_dashboard_registry_state_is_closed(self):
+    def test_review_forbidden_audit_passes(self):
+        self.assertTrue(self.source["forbidden"]["all_forbidden_action_checks_passed"])
+
+    def test_review_invariants_pass(self):
+        self.assertTrue(self.source["invariants"]["all_invariants_passed"])
+
+    def test_dashboard_registry_state_closed(self):
         runner.validate_dashboard_state(self.source["calibration"], self.source["readiness"])
 
-    def test_source_future_prompt_is_complete(self):
-        text = (runner.ACCEPTANCE_DIR / "next_limited_qualitative_usage_registry_review_prompt.md").read_text(encoding="utf-8")
+    def test_source_future_prompt_complete(self):
+        text = (runner.REVIEW_DIR / "next_limited_qualitative_usage_registry_acceptance_prompt.md").read_text(encoding="utf-8")
         runner.validate_prompt(text, runner.SOURCE_PROMPT_REQUIRED)
 
     def test_dry_run_writes_nothing(self):
         with tempfile.TemporaryDirectory(dir=ROOT / "docs/analysis") as tmp:
-            out = Path(tmp) / "registry-review"
+            out = Path(tmp) / "registry-acceptance"
             result = subprocess.run(
                 [sys.executable, str(Path(runner.__file__)), "--dry-run", "--output-dir", str(out)],
                 cwd=ROOT, capture_output=True, text=True, check=True,
@@ -87,12 +88,11 @@ class RegistryReviewPreflightTests(unittest.TestCase):
             self.assertFalse(out.exists())
 
 
-class RegistryReviewGuardrailTests(unittest.TestCase):
+class RegistryAcceptanceGuardrailTests(unittest.TestCase):
     def good_decision(self):
         return {
-            "decision": runner.acceptance.DECISION,
-            "record_type": "acceptance_registration_only",
-            "registry_review_prompt_allowed_next": True,
+            "decision": runner.review.DECISION, "record_type": "registry_review_only",
+            "registry_acceptance_prompt_allowed_next": True,
             "evidence_rows_created": 0, "analysis_outputs_created": 0,
             "global_analysis_readiness": False,
         }
@@ -113,37 +113,43 @@ class RegistryReviewGuardrailTests(unittest.TestCase):
             "evidence_rows_created": 0, "analysis_outputs_created": 0,
         }
 
+    def good_acceptance(self):
+        return {
+            "record_type": "registry_acceptance_only", "registered_accepted_rows": 643,
+            "candidate_id_set_sha256": runner.AUTHORIZED_ID_HASH,
+            "evidence_rows_created": 0, "analysis_outputs_created": 0,
+            "global_analysis_readiness": False, "full_qualitative_readiness": False,
+        }
+
     def changed(self, record, key, value):
-        altered = copy.deepcopy(record)
-        altered[key] = value
-        return altered
+        altered = copy.deepcopy(record); altered[key] = value; return altered
 
-    def test_good_authorization_passes(self):
-        runner.validate_acceptance_authorization(self.good_decision())
+    def test_good_review_authorization_passes(self):
+        runner.validate_review_authorization(self.good_decision())
 
-    def test_wrong_acceptance_decision_fails(self):
+    def test_wrong_review_decision_fails(self):
         with self.assertRaisesRegex(RuntimeError, "does not authorize"):
-            runner.validate_acceptance_authorization(self.changed(self.good_decision(), "decision", "hold"))
+            runner.validate_review_authorization(self.changed(self.good_decision(), "decision", "hold"))
 
-    def test_non_registration_acceptance_fails(self):
-        with self.assertRaisesRegex(RuntimeError, "registration-only"):
-            runner.validate_acceptance_authorization(self.changed(self.good_decision(), "record_type", "evidence"))
+    def test_non_review_only_fails(self):
+        with self.assertRaisesRegex(RuntimeError, "review-only"):
+            runner.validate_review_authorization(self.changed(self.good_decision(), "record_type", "evidence"))
 
-    def test_prompt_not_allowed_fails(self):
+    def test_acceptance_not_allowed_fails(self):
         with self.assertRaisesRegex(RuntimeError, "did not allow"):
-            runner.validate_acceptance_authorization(self.changed(self.good_decision(), "registry_review_prompt_allowed_next", False))
+            runner.validate_review_authorization(self.changed(self.good_decision(), "registry_acceptance_prompt_allowed_next", False))
 
-    def test_acceptance_evidence_rows_fail(self):
+    def test_review_evidence_rows_fail(self):
         with self.assertRaisesRegex(RuntimeError, "evidence rows"):
-            runner.validate_acceptance_authorization(self.changed(self.good_decision(), "evidence_rows_created", 1))
+            runner.validate_review_authorization(self.changed(self.good_decision(), "evidence_rows_created", 1))
 
-    def test_acceptance_analysis_outputs_fail(self):
+    def test_review_analysis_outputs_fail(self):
         with self.assertRaisesRegex(RuntimeError, "analysis outputs"):
-            runner.validate_acceptance_authorization(self.changed(self.good_decision(), "analysis_outputs_created", 1))
+            runner.validate_review_authorization(self.changed(self.good_decision(), "analysis_outputs_created", 1))
 
-    def test_acceptance_global_readiness_fails(self):
+    def test_review_global_readiness_fails(self):
         with self.assertRaisesRegex(RuntimeError, "readiness"):
-            runner.validate_acceptance_authorization(self.changed(self.good_decision(), "global_analysis_readiness", True))
+            runner.validate_review_authorization(self.changed(self.good_decision(), "global_analysis_readiness", True))
 
     def test_good_hash_contract_passes(self):
         runner.validate_hash_contract(self.good_hash())
@@ -162,7 +168,7 @@ class RegistryReviewGuardrailTests(unittest.TestCase):
 
     def test_false_hash_flag_fails(self):
         with self.assertRaisesRegex(RuntimeError, "failed hash"):
-            runner.validate_hash_contract(self.changed(self.good_hash(), "layer_sha256_match", False))
+            runner.validate_hash_contract(self.changed(self.good_hash(), "schema_sha256_match", False))
 
     def test_good_scope_passes(self):
         runner.validate_scope_contract(self.good_scope())
@@ -172,18 +178,23 @@ class RegistryReviewGuardrailTests(unittest.TestCase):
         with self.assertRaisesRegex(RuntimeError, "scope counts"):
             runner.validate_scope_contract(bad)
 
+    def test_restricted_count_drift_fails(self):
+        bad = self.good_scope(); bad["observed_counts"]["restricted_exact_span_rows"] = 115
+        with self.assertRaisesRegex(RuntimeError, "scope counts"):
+            runner.validate_scope_contract(bad)
+
     def test_navigation_count_drift_fails(self):
         bad = self.good_scope(); bad["observed_counts"]["navigation_only_rows"] = 1194
         with self.assertRaisesRegex(RuntimeError, "scope counts"):
             runner.validate_scope_contract(bad)
 
-    def test_strict_primary_count_drift_fails(self):
+    def test_primary_count_drift_fails(self):
         bad = self.good_scope(); bad["observed_counts"]["strict_primary_manifest_rows"] = 55
         with self.assertRaisesRegex(RuntimeError, "scope counts"):
             runner.validate_scope_contract(bad)
 
-    def test_carried_lane_count_drift_fails(self):
-        bad = self.good_scope(); bad["observed_counts"]["non_base_companion"] = 4732
+    def test_carried_count_drift_fails(self):
+        bad = self.good_scope(); bad["observed_counts"]["quantitative_exceptions"] = 1044
         with self.assertRaisesRegex(RuntimeError, "scope counts"):
             runner.validate_scope_contract(bad)
 
@@ -191,27 +202,48 @@ class RegistryReviewGuardrailTests(unittest.TestCase):
         with self.assertRaisesRegex(RuntimeError, "contamination"):
             runner.validate_scope_contract(self.changed(self.good_scope(), "restricted_navigation_external_contamination_count", 1))
 
-    def test_registry_evidence_rows_fail(self):
+    def test_acceptance_evidence_rows_fail(self):
         with self.assertRaisesRegex(RuntimeError, "evidence rows"):
             runner.validate_scope_contract(self.changed(self.good_scope(), "evidence_rows_created", 1))
 
-    def test_registry_analysis_outputs_fail(self):
+    def test_acceptance_analysis_outputs_fail(self):
         with self.assertRaisesRegex(RuntimeError, "analysis outputs"):
             runner.validate_scope_contract(self.changed(self.good_scope(), "analysis_outputs_created", 1))
 
-    def test_baseline_dashboard_passes(self):
-        runner.validate_dashboard_state(
-            {"calibration_phase": "compensation_extraction_limited_qualitative_usage_layer_acceptance_registered_registry_review_prompt_allowed", "analysis_facing_promotion_allowed": False},
-            {"overall_status": "limited_qualitative_usage_layer_acceptance_registered_registry_review_only_global_analysis_closed"},
-        )
+    def test_good_acceptance_record_passes(self):
+        runner.validate_acceptance_record(self.good_acceptance())
 
-    def test_descendant_dashboard_passes(self):
+    def test_non_acceptance_record_fails(self):
+        with self.assertRaisesRegex(RuntimeError, "acceptance-only"):
+            runner.validate_acceptance_record(self.changed(self.good_acceptance(), "record_type", "evidence"))
+
+    def test_acceptance_row_count_fails(self):
+        with self.assertRaisesRegex(RuntimeError, "row count"):
+            runner.validate_acceptance_record(self.changed(self.good_acceptance(), "registered_accepted_rows", 642))
+
+    def test_acceptance_hash_fails(self):
+        with self.assertRaisesRegex(RuntimeError, "hash"):
+            runner.validate_acceptance_record(self.changed(self.good_acceptance(), "candidate_id_set_sha256", "bad"))
+
+    def test_acceptance_evidence_creation_fails(self):
+        with self.assertRaisesRegex(RuntimeError, "evidence"):
+            runner.validate_acceptance_record(self.changed(self.good_acceptance(), "evidence_rows_created", 1))
+
+    def test_acceptance_analysis_creation_fails(self):
+        with self.assertRaisesRegex(RuntimeError, "analysis"):
+            runner.validate_acceptance_record(self.changed(self.good_acceptance(), "analysis_outputs_created", 1))
+
+    def test_acceptance_readiness_fails(self):
+        with self.assertRaisesRegex(RuntimeError, "readiness"):
+            runner.validate_acceptance_record(self.changed(self.good_acceptance(), "global_analysis_readiness", True))
+
+    def test_baseline_dashboard_passes(self):
         runner.validate_dashboard_state(
             {"calibration_phase": "compensation_extraction_limited_qualitative_usage_registry_review_pass_registry_acceptance_prompt_allowed", "analysis_facing_promotion_allowed": False},
             {"overall_status": "limited_qualitative_usage_registry_review_pass_registry_acceptance_prompt_allowed_global_analysis_closed"},
         )
 
-    def test_registry_acceptance_dashboard_passes(self):
+    def test_descendant_dashboard_passes(self):
         runner.validate_dashboard_state(
             {"calibration_phase": "compensation_extraction_limited_qualitative_usage_registry_acceptance_registered_strategy_prompt_allowed", "analysis_facing_promotion_allowed": False},
             {"overall_status": "limited_qualitative_usage_registry_acceptance_registered_strategy_only_global_analysis_closed"},
@@ -221,28 +253,28 @@ class RegistryReviewGuardrailTests(unittest.TestCase):
         with self.assertRaisesRegex(RuntimeError, "phase"):
             runner.validate_dashboard_state(
                 {"calibration_phase": "analysis_ready", "analysis_facing_promotion_allowed": False},
-                {"overall_status": "limited_qualitative_usage_layer_acceptance_registered_registry_review_only_global_analysis_closed"},
+                {"overall_status": "limited_qualitative_usage_registry_review_pass_registry_acceptance_prompt_allowed_global_analysis_closed"},
             )
 
     def test_dashboard_promotion_fails(self):
         with self.assertRaisesRegex(RuntimeError, "promotion"):
             runner.validate_dashboard_state(
-                {"calibration_phase": "compensation_extraction_limited_qualitative_usage_layer_acceptance_registered_registry_review_prompt_allowed", "analysis_facing_promotion_allowed": True},
-                {"overall_status": "limited_qualitative_usage_layer_acceptance_registered_registry_review_only_global_analysis_closed"},
+                {"calibration_phase": "compensation_extraction_limited_qualitative_usage_registry_review_pass_registry_acceptance_prompt_allowed", "analysis_facing_promotion_allowed": True},
+                {"overall_status": "limited_qualitative_usage_registry_review_pass_registry_acceptance_prompt_allowed_global_analysis_closed"},
             )
 
-    def test_dashboard_overall_status_fails(self):
+    def test_dashboard_overall_fails(self):
         with self.assertRaisesRegex(RuntimeError, "overall"):
             runner.validate_dashboard_state(
-                {"calibration_phase": "compensation_extraction_limited_qualitative_usage_layer_acceptance_registered_registry_review_prompt_allowed", "analysis_facing_promotion_allowed": False},
+                {"calibration_phase": "compensation_extraction_limited_qualitative_usage_registry_review_pass_registry_acceptance_prompt_allowed", "analysis_facing_promotion_allowed": False},
                 {"overall_status": "analysis_ready"},
             )
 
-    def test_dashboard_embedded_global_readiness_true_fails(self):
+    def test_dashboard_embedded_readiness_true_fails(self):
         with self.assertRaisesRegex(RuntimeError, "global"):
             runner.validate_dashboard_state(
-                {"calibration_phase": "compensation_extraction_limited_qualitative_usage_layer_acceptance_registered_registry_review_prompt_allowed", "analysis_facing_promotion_allowed": False},
-                {"overall_status": "limited_qualitative_usage_layer_acceptance_registered_registry_review_only_global_analysis_closed", "global_analysis_readiness": True},
+                {"calibration_phase": "compensation_extraction_limited_qualitative_usage_registry_review_pass_registry_acceptance_prompt_allowed", "analysis_facing_promotion_allowed": False},
+                {"overall_status": "limited_qualitative_usage_registry_review_pass_registry_acceptance_prompt_allowed_global_analysis_closed", "global_analysis_readiness": True},
             )
 
     def test_future_prompt_case_insensitive_passes(self):
@@ -250,12 +282,12 @@ class RegistryReviewGuardrailTests(unittest.TestCase):
 
     def test_future_prompt_missing_constraint_fails(self):
         with self.assertRaisesRegex(RuntimeError, "missing"):
-            runner.validate_prompt("registry acceptance only", runner.FUTURE_PROMPT_REQUIRED)
+            runner.validate_prompt("pipeline-stage strategy only", runner.FUTURE_PROMPT_REQUIRED)
 
-    def test_relay_complete_fields_pass(self):
+    def test_relay_complete_passes(self):
         runner.validate_relay_metadata({field: "present" for field in runner.RELAY_REQUIRED})
 
-    def test_relay_missing_field_fails(self):
+    def test_relay_missing_fails(self):
         with self.assertRaisesRegex(RuntimeError, "missing"):
             runner.validate_relay_metadata({"commit_hash": "x"})
 
@@ -268,37 +300,33 @@ class RegistryReviewGuardrailTests(unittest.TestCase):
 
     def test_output_guard_rejects_tmp(self):
         with self.assertRaisesRegex(RuntimeError, "docs/analysis"):
-            runner.output_guard(ROOT / "tmp" / "bad-registry-review-output")
+            runner.output_guard(ROOT / "tmp" / "bad-registry-acceptance-output")
 
 
-@unittest.skipUnless(OUTPUT.is_dir(), "registry-review output not materialized")
-class MaterializedRegistryReviewTests(unittest.TestCase):
+@unittest.skipUnless(OUTPUT.is_dir(), "registry-acceptance output not materialized")
+class MaterializedRegistryAcceptanceTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.hashes, _ = runner.verify_inputs()
         cls.signature = runner.input_signature(cls.hashes)
         runner.validate_complete_output(OUTPUT, cls.signature)
-        cls.decision = runner.read_json(OUTPUT / "limited_qualitative_usage_registry_review_decision.json")
-        cls.hash_audit = runner.read_json(OUTPUT / "limited_qualitative_usage_registry_hash_audit.json")
-        cls.scope = runner.read_json(OUTPUT / "limited_qualitative_usage_registry_scope_audit.json")
-        cls.invariants = runner.read_json(OUTPUT / "limited_qualitative_usage_registry_review_invariant_checks.json")
+        cls.decision = runner.read_json(OUTPUT / "limited_qualitative_usage_registry_acceptance_decision.json")
+        cls.hash_audit = runner.read_json(OUTPUT / "limited_qualitative_usage_registry_acceptance_hash_audit.json")
+        cls.scope = runner.read_json(OUTPUT / "limited_qualitative_usage_registry_acceptance_scope_audit.json")
+        cls.invariants = runner.read_json(OUTPUT / "limited_qualitative_usage_registry_acceptance_invariant_checks.json")
 
     def test_all_required_outputs_exist(self):
         self.assertTrue(all((OUTPUT / name).is_file() for name in runner.REQUIRED_OUTPUTS))
 
-    def test_decision_is_pass(self):
+    def test_decision_registered(self):
         self.assertEqual(self.decision["decision"], runner.DECISION)
 
-    def test_output_is_registry_review_only(self):
-        self.assertEqual(self.decision["record_type"], "registry_review_only")
+    def test_output_is_registry_acceptance_only(self):
+        self.assertEqual(self.decision["record_type"], "registry_acceptance_only")
 
-    def test_candidate_hash_verified(self):
+    def test_all_hashes_verified(self):
         self.assertEqual(self.hash_audit["observed_candidate_id_set_sha256"], runner.AUTHORIZED_ID_HASH)
-
-    def test_layer_hash_verified(self):
         self.assertEqual(self.hash_audit["observed_layer_sha256"], runner.AUTHORIZED_LAYER_HASH)
-
-    def test_schema_hash_verified(self):
         self.assertEqual(self.hash_audit["observed_schema_sha256"], runner.AUTHORIZED_SCHEMA_HASH)
 
     def test_registered_rows_643(self):
@@ -311,16 +339,13 @@ class MaterializedRegistryReviewTests(unittest.TestCase):
         self.assertEqual(self.decision["strict_primary_manifest_rows"], 56)
 
     def test_carried_counts_stable(self):
-        self.assertEqual(self.decision["counts"]["quantitative_candidates"], 862)
-        self.assertEqual(self.decision["counts"]["quantitative_exceptions"], 1045)
-        self.assertEqual(self.decision["counts"]["non_base_companion"], 4733)
-        self.assertEqual(self.decision["counts"]["reference_control"], 345)
-        self.assertEqual(self.decision["counts"]["unresolved_conflict_observations"], 5)
+        counts = self.decision["counts"]
+        self.assertEqual((counts["quantitative_candidates"], counts["quantitative_exceptions"]), (862, 1045))
+        self.assertEqual((counts["non_base_companion"], counts["reference_control"]), (4733, 345))
+        self.assertEqual(counts["unresolved_conflict_observations"], 5)
 
-    def test_no_evidence_rows_created(self):
+    def test_no_evidence_or_analysis_created(self):
         self.assertEqual(self.decision["evidence_rows_created"], 0)
-
-    def test_no_analysis_outputs_created(self):
         self.assertEqual(self.decision["analysis_outputs_created"], 0)
 
     def test_readiness_and_promotion_closed(self):
@@ -331,16 +356,22 @@ class MaterializedRegistryReviewTests(unittest.TestCase):
     def test_all_invariants_passed(self):
         self.assertTrue(self.invariants["all_invariants_passed"])
 
-    def test_future_prompt_complete(self):
-        text = (OUTPUT / "next_limited_qualitative_usage_registry_acceptance_prompt.md").read_text(encoding="utf-8")
+    def test_scope_matrix_contains_no_evidence_identifiers(self):
+        with (OUTPUT / "limited_qualitative_usage_registry_acceptance_scope_matrix.csv").open(newline="", encoding="utf-8") as handle:
+            reader = csv.DictReader(handle)
+            fields = set(reader.fieldnames or [])
+            rows = list(reader)
+        self.assertNotIn("qualitative_observation_id", fields)
+        self.assertNotIn("span_text", fields)
+        self.assertEqual(len(rows), 11)
+
+    def test_future_strategy_prompt_complete(self):
+        text = (OUTPUT / "next_pipeline_stage_strategy_prompt.md").read_text(encoding="utf-8")
         runner.validate_prompt(text, runner.FUTURE_PROMPT_REQUIRED)
 
     def test_resume_is_idempotent(self):
         before = {name: runner.sha256(OUTPUT / name) for name in runner.REQUIRED_OUTPUTS}
-        result = subprocess.run(
-            [sys.executable, str(Path(runner.__file__)), "--resume"], cwd=ROOT,
-            capture_output=True, text=True, check=True,
-        )
+        result = subprocess.run([sys.executable, str(Path(runner.__file__)), "--resume"], cwd=ROOT, capture_output=True, text=True, check=True)
         self.assertEqual(json.loads(result.stdout)["writes"], 0)
         after = {name: runner.sha256(OUTPUT / name) for name in runner.REQUIRED_OUTPUTS}
         self.assertEqual(before, after)

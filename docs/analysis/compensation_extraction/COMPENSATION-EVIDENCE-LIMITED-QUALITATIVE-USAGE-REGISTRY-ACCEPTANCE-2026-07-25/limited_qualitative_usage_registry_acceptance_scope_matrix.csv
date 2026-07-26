@@ -1,0 +1,12 @@
+scope,registered_count,acceptance_status,allowed_reference,restriction
+accepted_usage_layer,643,verified,registry_accepted_reference_only,no analysis or effect inference
+restricted_exact_span,116,verified,quarantine_metadata_only,excluded from accepted coded scope
+ambiguous_navigation,614,verified,navigation_only,not coded evidence
+unavailable_navigation,581,verified,navigation_only,not coded evidence
+navigation_only_total,1195,verified,navigation_only,not coded evidence
+strict_primary_manifest,56,verified,narrow_non_analytic_manifest,no statistics or causal use
+quantitative_candidates,862,verified,separate_manifest_only,not qualitative evidence
+quantitative_exceptions,1045,verified,separate_exception_manifest,not qualitative evidence
+non_base_companion,4733,verified,separate_companion_manifest,not a base-wage outcome
+reference_control,345,verified,separate_control_manifest,not outcome evidence
+unresolved_conflict_observations,5,verified,quarantined_in_two_groups,unresolved; no guessing
