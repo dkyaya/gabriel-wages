@@ -80,6 +80,10 @@ The dashboard phase is `compensation_extraction_bounded_span_residual_repair_blo
 
 The current phase is `compensation_extraction_bounded_pdf_text_span_capture_partial_additional_repair_required`. A hardened, page-scoped local PDF text-layer run hashed 788 retained readable PDFs and accessed exactly 1,223 approved pages for all 1,954 qualitative rows. It used no OCR, images, models, URLs, downloads, or non-target pages and saved no page text. The run captured 1,346 exact single-line literal substrings: 455 unique-candidate QA passes and 891 explicitly ambiguous matches; 608 rows had no safe literal match. Because 1,499 rows are not yet coded-analysis sufficient, no coded qualitative analysis view was created. The navigation view records span status, historical QA is preserved separately from span QA, and analysis readiness remains false.
 
+## Bounded qualitative-span disambiguation follow-up — 2026-07-26
+
+The current phase is `compensation_extraction_bounded_qualitative_span_disambiguation_partial_additional_repair_required`. The exact-only follow-up preserved all 455 prior verified spans without reaccessing their pages and reviewed the frozen 891 ambiguous plus 608 unavailable rows on 1,011 approved pages across 700 hash-verified PDFs. Deterministic structured-field and exact-token rules resolved 277 ambiguous and 27 unavailable rows, raising unique exact QA spans to 759. The remaining 614 ambiguous and 581 unavailable rows stay navigation-only, so no coded qualitative analysis view exists and analysis readiness remains false. All 32 focused tests pass; OCR-later, image, non-target, and page-text persistence counts remain zero.
+
 ## Final provisional schema readiness — 2026-07-26
 
 The immutable five-ledger provisional package remains integrity-valid, but a

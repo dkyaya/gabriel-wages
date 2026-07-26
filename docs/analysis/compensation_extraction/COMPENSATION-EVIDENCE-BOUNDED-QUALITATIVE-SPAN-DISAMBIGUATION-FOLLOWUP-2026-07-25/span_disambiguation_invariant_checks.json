@@ -1,0 +1,19 @@
+{
+  "all_invariants_passed": true,
+  "checks": {
+    "all_1954_rows_accounted_for": true,
+    "all_offsets_length_consistent": true,
+    "all_span_hashes_valid": true,
+    "all_span_lengths_valid": true,
+    "all_stored_spans_single_line": true,
+    "analysis_readiness_false": true,
+    "no_duplicate_observation_ids": true,
+    "no_page_text_columns": true,
+    "non_target_page_access_count_zero": true,
+    "ocr_later_access_count_zero": true,
+    "only_approved_pages_accessed": true,
+    "page_text_persisted_count_zero": true,
+    "previously_verified_455_preserved": true
+  },
+  "schema_version": "bounded_qualitative_span_disambiguation_v1"
+}

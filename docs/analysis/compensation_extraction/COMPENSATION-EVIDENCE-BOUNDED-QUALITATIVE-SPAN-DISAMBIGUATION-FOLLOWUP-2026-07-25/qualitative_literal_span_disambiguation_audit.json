@@ -1,0 +1,31 @@
+{
+  "action_counts": {
+    "preserved_prior_verified": 455,
+    "remains_ambiguous": 614,
+    "remains_unavailable": 581,
+    "resolved_to_exact_verified": 304
+  },
+  "ambiguous_rows_resolved": 277,
+  "ambiguous_rows_still_ambiguous": 614,
+  "analysis_readiness": false,
+  "coded_qualitative_analysis_view_created": false,
+  "extraction_runs": 0,
+  "final_status_counts": {
+    "exact_verified": 759,
+    "span_ambiguous_multiple_candidates": 614,
+    "span_unavailable_or_unverified": 581
+  },
+  "full_page_text_saved": false,
+  "model_calls": 0,
+  "new_document_selection_runs": 0,
+  "ocr_used": false,
+  "previously_verified_spans_preserved": 455,
+  "prior_ambiguous_rows": 891,
+  "prior_unavailable_rows": 608,
+  "rows_reviewed": 1499,
+  "schema_version": "bounded_qualitative_span_disambiguation_v1",
+  "task_id": "COMPENSATION-EVIDENCE-BOUNDED-QUALITATIVE-SPAN-DISAMBIGUATION-FOLLOWUP-2026-07-25",
+  "total_exact_unique_qa_spans": 759,
+  "unavailable_rows_resolved": 27,
+  "unavailable_rows_still_unavailable": 581
+}

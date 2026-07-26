@@ -1,0 +1,6 @@
+blocker_id,area,status,affected_count,boundary
+D01,ambiguous_spans,partial,614,Equally plausible exact target-page spans remain navigation-only.
+D02,unavailable_spans,partial,581,No strict exact structured/token candidate; no fuzzy inference.
+D03,residual_cycles,carried_forward_quarantine,467,No metadata inference.
+D04,residual_occupations,carried_forward_quarantine,368,No occupation inference.
+D05,unresolved_quantitative_conflicts,quarantined,5,Two groups/five observations preserved.

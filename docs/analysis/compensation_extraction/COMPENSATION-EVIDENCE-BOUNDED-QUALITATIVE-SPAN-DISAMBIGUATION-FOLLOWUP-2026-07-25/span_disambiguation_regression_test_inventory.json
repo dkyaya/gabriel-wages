@@ -1,0 +1,25 @@
+{
+  "bugs_discovered_and_fixed": [],
+  "focused_test_count_at_materialization": 32,
+  "offline_only": true,
+  "required_failure_mode_count": 15,
+  "required_failure_modes": [
+    "prior_verified_hash_or_offset_mismatch",
+    "repeated_anchor_unique_context",
+    "repeated_anchor_equal_context",
+    "unavailable_no_exact_tokens",
+    "fuzzy_or_paraphrased_candidate",
+    "cross_page_candidate",
+    "full_page_text_leakage",
+    "non_target_page_access",
+    "ocr_later_document",
+    "wrong_pdf_hash",
+    "checkpoint_schema_mismatch",
+    "partial_checkpoint",
+    "idempotent_rerun",
+    "duplicate_observation_id",
+    "multiline_span"
+  ],
+  "schema_version": "bounded_qualitative_span_disambiguation_v1",
+  "test_script": "scripts/test_compensation_evidence_bounded_qualitative_span_disambiguation_followup.py"
+}

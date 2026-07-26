@@ -1,0 +1,17 @@
+{
+  "checkpoint_complete": true,
+  "checkpoint_new_row_count": 1499,
+  "checkpoint_reused_row_count": 0,
+  "input_signature": "795479f3819528278878d1ee5d17fd9189d45289ce848e7215aee433c1e319eb",
+  "non_target_page_access_count": 0,
+  "ocr_later_access_count": 0,
+  "page_text_persisted_count": 0,
+  "previously_verified_rows_not_reaccessed": 455,
+  "qualitative_review_row_page_access_count": 1499,
+  "rendered_image_access_count": 0,
+  "review_row_count": 1499,
+  "unique_approved_review_page_count": 1011,
+  "unique_pages_accessed_this_run": 1011,
+  "unique_review_pages_accounted_for": 1011,
+  "unique_review_pdf_count": 700
+}

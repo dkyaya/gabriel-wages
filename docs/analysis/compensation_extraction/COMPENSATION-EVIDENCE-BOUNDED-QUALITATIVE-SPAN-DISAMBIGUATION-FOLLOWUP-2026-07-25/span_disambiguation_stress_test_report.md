@@ -1,0 +1,3 @@
+# Span disambiguation stress test report
+
+The 32-test focused suite covers prior-span immutability, safe and unsafe repeated anchors, unavailable rows, fuzzy/paraphrase rejection, cross-page rejection, full-page leakage, approved-page enforcement, OCR-later rejection, wrong hashes, checkpoint schema and resume behavior, idempotency, duplicate IDs, materialized carry-forward identity, and analysis-readiness=false. No implementation defect was discovered in this follow-up. Two initial positive-path fixtures consisted entirely of the proposed span and correctly triggered the existing full-page-leakage guard; the fixtures were corrected by adding unrelated page context without weakening the guard.

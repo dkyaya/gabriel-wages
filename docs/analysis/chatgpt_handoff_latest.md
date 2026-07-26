@@ -6,6 +6,27 @@ Last updated: `2026-07-26`
 
 ---
 
+## 2026-07-26 — Bounded qualitative span disambiguation improved exact QA; follow-up still required
+
+### Current State
+
+- **Authority/start:** work began at clean tracked `f891aea59d129ec533ee781088cf844bbe37811e` under the same page-scoped local PDF text-layer boundary.
+- **Decision:** `bounded_qualitative_span_disambiguation_partial_additional_repair_needed`; analysis readiness, promotion, and repeat readiness review remain false.
+- **Frozen scope:** all 455 prior verified spans were preserved without page reaccess. Review covered exactly 891 ambiguous and 608 unavailable rows.
+- **Access:** 700 retained PDFs were hash-verified and 1,011 approved pages accessed. OCR-later, non-target, invalid-pointer, rendered-image, and page-text persistence counts are zero.
+- **Results:** 277 ambiguous and 27 unavailable rows were resolved through exact structured-field or exact-token rules. Unique exact QA spans rose to 759; 614 remain ambiguous and 581 unavailable. No coded qualitative view exists.
+- **Hardening:** 32 tests pass across safe/unsafe repeated anchors, unavailable rows, fuzzy/paraphrase and cross-line rejection, full-page leakage, prior-span immutability, hash/offset integrity, checkpoint reuse, page guards, carry-forward hashes, and analysis-readiness=false.
+- **Carry-forward:** cycles/matching remain 1,359 exact / 203 matched documents / 91 groups / 467 quarantined; occupations remain 1,458 controlled / 239 non-safety subclasses / 368 quarantined. Quantitative remains 862/1,045; non-base/reference remains 4,733/345; two residual conflict groups/five observations remain quarantined.
+- **Boundary:** no URL/search, download, OCR, images, GABRIEL/API, extraction, selection, scout, source review, verification run, ingestion, codification, wage-gap work, regression, causal analysis, fetch, pull, or remote inspection occurred.
+
+### Interpretation
+
+The disambiguation layer materially improves exact evidence support while preserving a strict navigation-only boundary for unresolved rows. The remaining 1,195 rows are evidence-contract blockers, not system-integrity failures.
+
+### Next Move
+
+Follow [next_task.md](../../next_task.md) only after separate authorization. Preserve all 759 verified spans and review only the 614 ambiguous plus 581 unavailable rows. Keep analysis readiness false.
+
 ## 2026-07-26 — Hardened bounded PDF text-layer span capture completed partially
 
 ### Current State

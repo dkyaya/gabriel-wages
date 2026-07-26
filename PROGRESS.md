@@ -6,6 +6,29 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-26 (Bounded qualitative span disambiguation partial; navigation blockers remain)
+
+**Did**
+- Started from clean tracked `f891aea59d129ec533ee781088cf844bbe37811e`; left the known rendered-pages directory and root `package-lock.json` untouched.
+- Frozen-hash preflight preserved all 455 verified spans and limited review to exactly 891 ambiguous plus 608 unavailable rows. The runner hashed 700 retained PDFs and accessed 1,011 approved target pages.
+- Exact structured-field and exact-token rules resolved 277 ambiguous and 27 unavailable rows, raising unique exact QA spans to 759. Another 614 remain ambiguous and 581 unavailable.
+- Added 32 adversarial tests for repeated anchors, unavailable rows, fuzzy/cross-line rejection, full-page leakage, prior-span immutability, hashes/offsets, checkpoint reuse, page boundaries, carry-forward identity, and readiness status.
+- Byte-preserved 862 quantitative candidates, 1,045 exceptions, 4,733 non-base companion rows, 345 reference/control rows, and the two-group/five-observation conflict quarantine.
+
+**Decisions**
+- Decision is `bounded_qualitative_span_disambiguation_partial_additional_repair_needed`. No coded qualitative analysis view was created because 1,195 rows remain ambiguous or unavailable.
+- Analysis readiness, promotion, ingestion, codification, wage-gap work, regression, and causal analysis remain false.
+
+**Surprises/breakage**
+- The deterministic pass safely resolved 304 rows without fuzzy matching, inference, OCR, images, models, or cross-page context.
+- No implementation defect was found. Two positive-path test fixtures initially consisted entirely of the candidate span and correctly triggered the existing full-page-leakage guard; the fixtures were corrected by adding unrelated page context without weakening the guard.
+
+**Corpus snapshot**
+- `contracts=64`, `discourse=0`, `coverage=64`, `cities=19`; 28 healthy matched pairs (10 exact-cycle, 18 overlap-cycle), two exploratory adjacent matches, and six unmatched safety units.
+
+**Next steps**
+- Run only the separately authorized follow-up in `next_task.md`. Preserve all 759 exact QA spans and keep the 614 ambiguous plus 581 unavailable rows navigation-only unless another exact, page-scoped rule safely resolves them.
+
 ## 2026-07-26 (Bounded PDF text-layer span capture hardened; partial follow-up required)
 
 **Did**

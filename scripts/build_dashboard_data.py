@@ -670,6 +670,27 @@ COMPENSATION_EXTRACTION_BOUNDED_PDF_TEXT_SPAN_CAPTURE_INVARIANTS_PATH = (
     COMPENSATION_EXTRACTION_BOUNDED_PDF_TEXT_SPAN_CAPTURE_DIR
     / "span_capture_invariant_checks.json"
 )
+COMPENSATION_EXTRACTION_BOUNDED_SPAN_DISAMBIGUATION_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "COMPENSATION-EVIDENCE-BOUNDED-QUALITATIVE-SPAN-DISAMBIGUATION-FOLLOWUP-2026-07-25"
+)
+COMPENSATION_EXTRACTION_BOUNDED_SPAN_DISAMBIGUATION_DECISION_PATH = (
+    COMPENSATION_EXTRACTION_BOUNDED_SPAN_DISAMBIGUATION_DIR
+    / "bounded_qualitative_span_disambiguation_followup_decision.json"
+)
+COMPENSATION_EXTRACTION_BOUNDED_SPAN_DISAMBIGUATION_AUDIT_PATH = (
+    COMPENSATION_EXTRACTION_BOUNDED_SPAN_DISAMBIGUATION_DIR
+    / "qualitative_literal_span_disambiguation_audit.json"
+)
+COMPENSATION_EXTRACTION_BOUNDED_SPAN_DISAMBIGUATION_PAGE_SUMMARY_PATH = (
+    COMPENSATION_EXTRACTION_BOUNDED_SPAN_DISAMBIGUATION_DIR
+    / "bounded_span_disambiguation_page_access_summary.json"
+)
+COMPENSATION_EXTRACTION_BOUNDED_SPAN_DISAMBIGUATION_INVARIANTS_PATH = (
+    COMPENSATION_EXTRACTION_BOUNDED_SPAN_DISAMBIGUATION_DIR
+    / "span_disambiguation_invariant_checks.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -1196,6 +1217,56 @@ def bounded_pdf_text_span_capture_status() -> tuple[bool, dict[str, Any]]:
         and decision.get("forbidden_actions_performed") == []
     ):
         raise ValueError("bounded PDF text-layer span capture fails dashboard gates")
+    return True, decision
+
+
+def bounded_span_disambiguation_status() -> tuple[bool, dict[str, Any]]:
+    required = (
+        COMPENSATION_EXTRACTION_BOUNDED_SPAN_DISAMBIGUATION_DECISION_PATH,
+        COMPENSATION_EXTRACTION_BOUNDED_SPAN_DISAMBIGUATION_AUDIT_PATH,
+        COMPENSATION_EXTRACTION_BOUNDED_SPAN_DISAMBIGUATION_PAGE_SUMMARY_PATH,
+        COMPENSATION_EXTRACTION_BOUNDED_SPAN_DISAMBIGUATION_INVARIANTS_PATH,
+        COMPENSATION_EXTRACTION_BOUNDED_SPAN_DISAMBIGUATION_DIR
+        / "bounded_qualitative_span_disambiguation_followup_validation_2026-07-25.md",
+        COMPENSATION_EXTRACTION_BOUNDED_SPAN_DISAMBIGUATION_DIR
+        / "next_bounded_schema_repair_followup_prompt.md",
+    )
+    completed = all(path.exists() for path in required)
+    if not completed:
+        return False, {}
+    decision = read_json(COMPENSATION_EXTRACTION_BOUNDED_SPAN_DISAMBIGUATION_DECISION_PATH)
+    audit = decision.get("qualitative_span_disambiguation", {})
+    pages = decision.get("page_access", {})
+    invariants = decision.get("invariants", {})
+    if not (
+        decision.get("task_id")
+        == "COMPENSATION-EVIDENCE-BOUNDED-QUALITATIVE-SPAN-DISAMBIGUATION-FOLLOWUP-2026-07-25"
+        and decision.get("decision")
+        == "bounded_qualitative_span_disambiguation_partial_additional_repair_needed"
+        and decision.get("analysis_readiness") is False
+        and decision.get("analysis_facing_promotion_allowed") is False
+        and decision.get("repeat_analysis_readiness_review_allowed") is False
+        and decision.get("prior_span_capture_outputs_mutated") is False
+        and decision.get("package_or_prior_repair_or_durable_ledgers_mutated") is False
+        and int(decision.get("package_sha256_checks_passed", 0)) == 5
+        and int(audit.get("rows_reviewed", 0)) == 1499
+        and int(audit.get("previously_verified_spans_preserved", 0)) == 455
+        and int(audit.get("ambiguous_rows_resolved", 0)) == 277
+        and int(audit.get("ambiguous_rows_still_ambiguous", 0)) == 614
+        and int(audit.get("unavailable_rows_resolved", 0)) == 27
+        and int(audit.get("unavailable_rows_still_unavailable", 0)) == 581
+        and int(audit.get("total_exact_unique_qa_spans", 0)) == 759
+        and audit.get("coded_qualitative_analysis_view_created") is False
+        and int(pages.get("unique_review_pdf_count", 0)) == 700
+        and int(pages.get("unique_approved_review_page_count", 0)) == 1011
+        and int(pages.get("unique_review_pages_accounted_for", 0)) == 1011
+        and int(pages.get("ocr_later_access_count", -1)) == 0
+        and int(pages.get("non_target_page_access_count", -1)) == 0
+        and int(pages.get("page_text_persisted_count", -1)) == 0
+        and invariants.get("all_invariants_passed") is True
+        and decision.get("forbidden_actions_performed") == []
+    ):
+        raise ValueError("bounded qualitative span disambiguation fails dashboard gates")
     return True, decision
 
 
@@ -1861,6 +1932,10 @@ def build_analysis_readiness(
         bounded_pdf_text_span_capture_completed,
         bounded_pdf_text_span_capture_decision,
     ) = bounded_pdf_text_span_capture_status()
+    (
+        bounded_span_disambiguation_completed,
+        bounded_span_disambiguation_decision,
+    ) = bounded_span_disambiguation_status()
     if scale_1000_targeted_qa_completed and (
         scale_1000_targeted_qa_decision.get("qa_pass") is not True
         or scale_1000_targeted_qa_decision.get(
@@ -1907,7 +1982,9 @@ def build_analysis_readiness(
     return {
         "metadata": metadata,
         "overall_status": (
-            "bounded_pdf_text_span_capture_partial_additional_repair_analysis_closed"
+            "bounded_qualitative_span_disambiguation_partial_additional_repair_analysis_closed"
+            if bounded_span_disambiguation_completed
+            else "bounded_pdf_text_span_capture_partial_additional_repair_analysis_closed"
             if bounded_pdf_text_span_capture_completed
             else "bounded_span_residual_repair_blocked_missing_text_support_analysis_closed"
             if bounded_span_residual_repair_completed
@@ -2094,7 +2171,9 @@ def build_analysis_readiness(
                 ),
                 "scale_beyond_1000_recommendation": scale_1000_decision.get(
                     "scale_beyond_1000_recommendation"
-                ) if not scale_1000_targeted_qa_completed else bounded_pdf_text_span_capture_decision.get(
+                ) if not scale_1000_targeted_qa_completed else bounded_span_disambiguation_decision.get(
+                    "next_recommendation"
+                ) if bounded_span_disambiguation_completed else bounded_pdf_text_span_capture_decision.get(
                     "next_recommendation"
                 ) if bounded_pdf_text_span_capture_completed else bounded_span_residual_repair_decision.get(
                     "next_recommendation"
@@ -2192,6 +2271,23 @@ def build_analysis_readiness(
                 "bounded_pdf_text_span_capture_ambiguous_count": (
                     int(bounded_pdf_text_span_capture_decision.get("qualitative_span_capture", {}).get("ambiguous_exact_span_count", 0))
                     if bounded_pdf_text_span_capture_completed else None
+                ),
+                "bounded_qualitative_span_disambiguation_completed": bounded_span_disambiguation_completed,
+                "bounded_qualitative_span_disambiguation_decision": (
+                    bounded_span_disambiguation_decision.get("decision")
+                    if bounded_span_disambiguation_completed else None
+                ),
+                "bounded_qualitative_span_disambiguation_exact_qa_count": (
+                    int(bounded_span_disambiguation_decision.get("qualitative_span_disambiguation", {}).get("total_exact_unique_qa_spans", 0))
+                    if bounded_span_disambiguation_completed else None
+                ),
+                "bounded_qualitative_span_disambiguation_ambiguous_count": (
+                    int(bounded_span_disambiguation_decision.get("qualitative_span_disambiguation", {}).get("ambiguous_rows_still_ambiguous", 0))
+                    if bounded_span_disambiguation_completed else None
+                ),
+                "bounded_qualitative_span_disambiguation_unavailable_count": (
+                    int(bounded_span_disambiguation_decision.get("qualitative_span_disambiguation", {}).get("unavailable_rows_still_unavailable", 0))
+                    if bounded_span_disambiguation_completed else None
                 ),
                 "analysis_facing_promotion_allowed": False,
             },
@@ -6026,10 +6122,16 @@ def build_text_table_calibration_status_summary(
             bounded_pdf_text_span_capture_completed,
             bounded_pdf_text_span_capture_decision,
         ) = bounded_pdf_text_span_capture_status()
+        (
+            bounded_span_disambiguation_completed,
+            bounded_span_disambiguation_decision,
+        ) = bounded_span_disambiguation_status()
         return {
             **metadata,
             "calibration_phase": (
-                "compensation_extraction_bounded_pdf_text_span_capture_partial_additional_repair_required"
+                "compensation_extraction_bounded_qualitative_span_disambiguation_partial_additional_repair_required"
+                if bounded_span_disambiguation_completed
+                else "compensation_extraction_bounded_pdf_text_span_capture_partial_additional_repair_required"
                 if bounded_pdf_text_span_capture_completed
                 else "compensation_extraction_bounded_span_residual_repair_blocked_missing_text_support"
                 if bounded_span_residual_repair_completed
@@ -6639,6 +6741,47 @@ def build_text_table_calibration_status_summary(
                 int(bounded_span_residual_repair_decision.get("occupation", {}).get("revised_non_safety_subclass_count", 0))
                 if bounded_span_residual_repair_completed else None
             ),
+            "bounded_qualitative_span_disambiguation_completed": bounded_span_disambiguation_completed,
+            "bounded_qualitative_span_disambiguation_decision": (
+                bounded_span_disambiguation_decision.get("decision")
+                if bounded_span_disambiguation_completed else None
+            ),
+            "bounded_qualitative_span_disambiguation_path": (
+                relative(COMPENSATION_EXTRACTION_BOUNDED_SPAN_DISAMBIGUATION_DIR)
+                if bounded_span_disambiguation_completed else None
+            ),
+            "bounded_qualitative_span_disambiguation_rows_reviewed": (
+                int(bounded_span_disambiguation_decision.get("qualitative_span_disambiguation", {}).get("rows_reviewed", 0))
+                if bounded_span_disambiguation_completed else None
+            ),
+            "bounded_qualitative_span_disambiguation_prior_verified_preserved": (
+                int(bounded_span_disambiguation_decision.get("qualitative_span_disambiguation", {}).get("previously_verified_spans_preserved", 0))
+                if bounded_span_disambiguation_completed else None
+            ),
+            "bounded_qualitative_span_disambiguation_ambiguous_resolved": (
+                int(bounded_span_disambiguation_decision.get("qualitative_span_disambiguation", {}).get("ambiguous_rows_resolved", 0))
+                if bounded_span_disambiguation_completed else None
+            ),
+            "bounded_qualitative_span_disambiguation_ambiguous_remaining": (
+                int(bounded_span_disambiguation_decision.get("qualitative_span_disambiguation", {}).get("ambiguous_rows_still_ambiguous", 0))
+                if bounded_span_disambiguation_completed else None
+            ),
+            "bounded_qualitative_span_disambiguation_unavailable_resolved": (
+                int(bounded_span_disambiguation_decision.get("qualitative_span_disambiguation", {}).get("unavailable_rows_resolved", 0))
+                if bounded_span_disambiguation_completed else None
+            ),
+            "bounded_qualitative_span_disambiguation_unavailable_remaining": (
+                int(bounded_span_disambiguation_decision.get("qualitative_span_disambiguation", {}).get("unavailable_rows_still_unavailable", 0))
+                if bounded_span_disambiguation_completed else None
+            ),
+            "bounded_qualitative_span_disambiguation_total_exact_qa": (
+                int(bounded_span_disambiguation_decision.get("qualitative_span_disambiguation", {}).get("total_exact_unique_qa_spans", 0))
+                if bounded_span_disambiguation_completed else None
+            ),
+            "bounded_qualitative_span_disambiguation_page_count": (
+                int(bounded_span_disambiguation_decision.get("page_access", {}).get("unique_review_pages_accounted_for", 0))
+                if bounded_span_disambiguation_completed else None
+            ),
             "bounded_pdf_text_span_capture_completed": bounded_pdf_text_span_capture_completed,
             "bounded_pdf_text_span_capture_decision": (
                 bounded_pdf_text_span_capture_decision.get("decision")
@@ -6824,7 +6967,9 @@ def build_text_table_calibration_status_summary(
                 else float(decision["wrong_page_rate"])
             ),
             "extraction_decision": (
-                bounded_pdf_text_span_capture_decision.get("decision")
+                bounded_span_disambiguation_decision.get("decision")
+                if bounded_span_disambiguation_completed
+                else bounded_pdf_text_span_capture_decision.get("decision")
                 if bounded_pdf_text_span_capture_completed
                 else bounded_span_residual_repair_decision.get("decision")
                 if bounded_span_residual_repair_completed
@@ -6878,7 +7023,12 @@ def build_text_table_calibration_status_summary(
                 else False
             ),
             "next_recommendation": (
-                bounded_pdf_text_span_capture_decision.get(
+                bounded_span_disambiguation_decision.get(
+                    "next_recommendation",
+                    "run_bounded_followup_for_remaining_ambiguous_or_unavailable_spans",
+                )
+                if bounded_span_disambiguation_completed
+                else bounded_pdf_text_span_capture_decision.get(
                     "next_recommendation",
                     "run_bounded_followup_for_ambiguous_or_unavailable_literal_spans",
                 )
@@ -6931,7 +7081,9 @@ def build_text_table_calibration_status_summary(
                 )
             ),
             "wage_extraction_status": (
-                "bounded_pdf_text_span_capture_quantitative_candidates_preserved_analysis_closed"
+                "bounded_span_disambiguation_quantitative_candidates_preserved_analysis_closed"
+                if bounded_span_disambiguation_completed
+                else "bounded_pdf_text_span_capture_quantitative_candidates_preserved_analysis_closed"
                 if bounded_pdf_text_span_capture_completed
                 else "bounded_span_residual_repair_quantitative_candidates_preserved_analysis_closed"
                 if bounded_span_residual_repair_completed
@@ -6963,7 +7115,9 @@ def build_text_table_calibration_status_summary(
                 if extraction_completed else "not_started"
             ),
             "qualitative_extraction_status": (
-                "bounded_pdf_text_span_capture_partial_navigation_only_455_exact_qa_891_ambiguous_608_unmatched"
+                "bounded_span_disambiguation_partial_navigation_only_759_exact_qa_614_ambiguous_581_unavailable"
+                if bounded_span_disambiguation_completed
+                else "bounded_pdf_text_span_capture_partial_navigation_only_455_exact_qa_891_ambiguous_608_unmatched"
                 if bounded_pdf_text_span_capture_completed
                 else "bounded_span_residual_repair_navigation_only_no_retained_text_payload"
                 if bounded_span_residual_repair_completed

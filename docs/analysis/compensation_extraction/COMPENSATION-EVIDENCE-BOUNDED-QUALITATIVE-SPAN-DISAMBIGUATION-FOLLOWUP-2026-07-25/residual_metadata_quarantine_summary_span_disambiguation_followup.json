@@ -1,0 +1,11 @@
+{
+  "analysis_readiness": false,
+  "qualitative_span_unavailable_or_unverified_count": 1954,
+  "quantitative_exception_count": 1045,
+  "residual_cycle_identity_count_after": 467,
+  "residual_cycle_identity_count_before": 571,
+  "residual_non_safety_identity_count_after": 368,
+  "residual_non_safety_identity_count_before": 535,
+  "unresolved_conflict_group_count": 2,
+  "unresolved_conflict_member_observation_count": 5
+}

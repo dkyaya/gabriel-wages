@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "compensation_extraction_bounded_qualitative_span_disambiguation_partial_additional_repair_required"
+              ? "Bounded qualitative span disambiguation improved exact QA; navigation-only blockers remain"
+              : textTableCalibrationStatus.calibration_phase ===
             "compensation_extraction_bounded_pdf_text_span_capture_partial_additional_repair_required"
               ? "Bounded PDF text-layer capture hardened; literal spans remain partially QA-ready"
               : textTableCalibrationStatus.calibration_phase ===
@@ -834,6 +837,16 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "compensation_extraction_bounded_qualitative_span_disambiguation_partial_additional_repair_required" ? (
+            <>
+              The exact-only follow-up preserved all 455 prior verified spans and reviewed 1,499
+              ambiguous or unavailable rows on 1,011 approved pages across 700 retained PDFs.
+              It resolved 277 ambiguous and 27 unavailable rows, raising unique exact QA spans to
+              759. Another 614 rows remain ambiguous and 581 unavailable, so the qualitative lane
+              remains navigation-only. OCR-later, rendered-image, non-target, and page-text
+              persistence counts are zero; analysis readiness remains false.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "compensation_extraction_bounded_pdf_text_span_capture_partial_additional_repair_required" ? (
             <>
               The hardened local text-layer run accessed exactly 1,223 approved pages across 788

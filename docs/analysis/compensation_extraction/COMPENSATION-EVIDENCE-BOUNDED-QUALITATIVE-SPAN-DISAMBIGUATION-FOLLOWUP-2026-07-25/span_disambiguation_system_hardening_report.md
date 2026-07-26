@@ -1,0 +1,3 @@
+# Span disambiguation system hardening report
+
+The follow-up freezes prior hashes and the 455 verified rows, approves only the page set for the remaining 1,499 rows, and accepts new spans only as exact, short, single-line target-page substrings. Candidate ranking uses exact structured-field matches and exact token identity; edit distance, fuzzy matching, paraphrase, cross-page context, OCR, images, and models are absent. A unique candidate or a score margin of at least four is required. Checkpoints contain spans and provenance only, carry a schema/input signature, and cannot masquerade as complete until all review IDs are present.

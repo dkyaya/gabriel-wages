@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": "0.1.0",
-    "generated_at": "2026-07-26T06:17:25Z",
+    "generated_at": "2026-07-26T13:16:22Z",
     "data_vintage": "2026-07-23",
     "source_files": [
       "docs/analysis/national_scout_coverage_state.csv",
@@ -82,7 +82,7 @@
       "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
     ]
   },
-  "overall_status": "bounded_pdf_text_span_capture_partial_additional_repair_analysis_closed",
+  "overall_status": "bounded_qualitative_span_disambiguation_partial_additional_repair_analysis_closed",
   "current_inputs": {
     "national_queue_available": true,
     "national_coverage_available": true,
@@ -149,7 +149,7 @@
       "scale_1000_targeted_qa_completed": true,
       "scale_1000_allowed": false,
       "scale_1000_live_started": true,
-      "scale_beyond_1000_recommendation": "run_bounded_followup_for_ambiguous_or_unavailable_literal_spans",
+      "scale_beyond_1000_recommendation": null,
       "remaining_readable_parse_text_extraction_allowed": false,
       "remaining_readable_parse_text_live_started": true,
       "remaining_readable_parse_text_schema_valid_case_count": 826,
@@ -174,6 +174,11 @@
       "bounded_pdf_text_span_capture_decision": "bounded_pdf_text_layer_span_capture_partial_additional_repair_needed",
       "bounded_pdf_text_span_capture_exact_qa_count": 455,
       "bounded_pdf_text_span_capture_ambiguous_count": 891,
+      "bounded_qualitative_span_disambiguation_completed": true,
+      "bounded_qualitative_span_disambiguation_decision": "bounded_qualitative_span_disambiguation_partial_additional_repair_needed",
+      "bounded_qualitative_span_disambiguation_exact_qa_count": 759,
+      "bounded_qualitative_span_disambiguation_ambiguous_count": 614,
+      "bounded_qualitative_span_disambiguation_unavailable_count": 581,
       "analysis_facing_promotion_allowed": false
     },
     "regression_stage": {
