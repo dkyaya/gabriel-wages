@@ -192,18 +192,18 @@ The dashboard builder writes:
 - `reports_index.json`
 
 The text/table calibration layer currently reports
-`compensation_extraction_readable_parse_text_1826_materialized_qa_pass`.
-The exact Hartland education/certification case passed one bounded preflight
-and one bounded live request, completing the frozen remaining cohort at
-826/826 without resending the corrected 1,000-case seed or 825 stored cases.
-The cumulative provisional layer now covers all 1,826 unique readable
-parse-text hashes at 100% case-level schema validity. Integrity QA passes with
-zero duplicate IDs, invalid page pointers, or base/non-base contamination.
-Thirty-seven under-specified quantitative conflict groups remain explicit at a
-1.9372% rate, so targeted conflict QA is required before any final provisional
-merge. Analysis readiness remains false. OCR-later documents remain untouched,
-and no URL access, download, OCR, ingestion, codification, final merge,
-wage-gap calculation, or regression occurred.
+`compensation_extraction_readable_parse_text_1826_targeted_conflict_qa_completed`.
+Deterministic targeted QA processed all 37 unresolved quantitative conflict
+groups, resolved 35, and retained two as explicitly unresolved. The corrected
+provisional shadow layer now contains 1,907 active quantitative observations,
+1,954 qualitative mechanism observations, 371 mixed cases, 4,733 non-base-wage
+observations, and 345 reference/exclusion cases. The revised unresolved
+conflict rate is 0.1049%; duplicate observation IDs, invalid page pointers,
+and base/non-base contamination remain zero. All 1,826 unique readable
+parse-text hashes remain covered and OCR-later documents remain untouched.
+This is still provisional: no final merge occurred and analysis readiness is
+false. No GABRIEL/API call, new extraction, selection, URL access, download,
+OCR, ingestion, codification, wage-gap calculation, or regression occurred.
 
 Review the printed totals and diffs before committing. In particular, candidate-positive plus parseable-empty municipalities must equal scout-covered municipalities, and transport/failure-only results must remain outside successful coverage.
 

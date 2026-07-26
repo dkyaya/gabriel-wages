@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "compensation_extraction_readable_parse_text_1826_targeted_conflict_qa_completed"
+              ? "Readable parse-text targeted conflict QA passed; provisional layer remains analysis-closed"
+              : textTableCalibrationStatus.calibration_phase ===
             "compensation_extraction_readable_parse_text_1826_materialized_qa_pass"
               ? "All readable parse-text evidence materialized; targeted conflict QA remains"
               : textTableCalibrationStatus.calibration_phase ===
@@ -807,6 +810,29 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "compensation_extraction_readable_parse_text_1826_targeted_conflict_qa_completed" ? (
+            <>
+              Targeted QA processed {formatNumber(
+                textTableCalibrationStatus.readable_parse_text_1826_targeted_conflict_qa_review_count,
+              )} conflict groups, resolving {formatNumber(
+                textTableCalibrationStatus.readable_parse_text_1826_targeted_conflict_resolved_count,
+              )} and retaining {formatNumber(
+                textTableCalibrationStatus.readable_parse_text_1826_targeted_conflict_unresolved_count,
+              )} as explicitly unresolved. The corrected provisional layer contains {formatNumber(
+                textTableCalibrationStatus.quantitative_observation_count,
+              )} active quantitative observations, {formatNumber(
+                textTableCalibrationStatus.qualitative_mechanism_observation_count,
+              )} qualitative mechanisms, {formatNumber(
+                textTableCalibrationStatus.mixed_case_count,
+              )} mixed cases, {formatNumber(
+                textTableCalibrationStatus.non_base_wage_observation_count,
+              )} non-base-wage observations, and {formatNumber(
+                textTableCalibrationStatus.reference_exclusion_case_count,
+              )} reference/exclusion cases. The unresolved conflict rate is {formatPercent(
+                100 * textTableCalibrationStatus.remaining_parse_text_unresolved_conflict_rate,
+              )}; duplicate IDs, invalid page pointers, and base/non-base contamination remain zero. All 1,826 readable hashes remain covered, but no final provisional merge occurred and analysis readiness remains false.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "compensation_extraction_readable_parse_text_1826_materialized_qa_pass" ? (
             <>
               The provisional cumulative layer now covers {formatNumber(

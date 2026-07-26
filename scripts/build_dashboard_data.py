@@ -485,6 +485,31 @@ COMPENSATION_EXTRACTION_REMAINING_DECISION_PATH = (
     COMPENSATION_EXTRACTION_REMAINING_DIR
     / "remaining_parse_text_decision_report.json"
 )
+COMPENSATION_EXTRACTION_READABLE_1826_TARGETED_QA_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "COMPENSATION-EVIDENCE-EXTRACTION-READABLE-PARSE-TEXT-1826-TARGETED-CONFLICT-QA-2026-07-25"
+)
+COMPENSATION_EXTRACTION_READABLE_1826_TARGETED_QA_DECISION_PATH = (
+    COMPENSATION_EXTRACTION_READABLE_1826_TARGETED_QA_DIR
+    / "readable_parse_text_1826_recomputed_decision.json"
+)
+COMPENSATION_EXTRACTION_READABLE_1826_TARGETED_QA_SUMMARY_PATH = (
+    COMPENSATION_EXTRACTION_READABLE_1826_TARGETED_QA_DIR
+    / "readable_parse_text_1826_targeted_conflict_qa_summary.json"
+)
+COMPENSATION_EXTRACTION_READABLE_1826_TARGETED_QA_LEDGER_PATHS = (
+    COMPENSATION_EXTRACTION_READABLE_1826_TARGETED_QA_DIR
+    / "readable_parse_text_1826_quantitative_ledger_qa_corrected.csv",
+    COMPENSATION_EXTRACTION_READABLE_1826_TARGETED_QA_DIR
+    / "readable_parse_text_1826_qualitative_mechanism_ledger_qa_corrected.csv",
+    COMPENSATION_EXTRACTION_READABLE_1826_TARGETED_QA_DIR
+    / "readable_parse_text_1826_mixed_ledger_qa_corrected.csv",
+    COMPENSATION_EXTRACTION_READABLE_1826_TARGETED_QA_DIR
+    / "readable_parse_text_1826_non_base_wage_ledger_qa_corrected.csv",
+    COMPENSATION_EXTRACTION_READABLE_1826_TARGETED_QA_DIR
+    / "readable_parse_text_1826_reference_exclusion_ledger_qa_corrected.csv",
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -1263,6 +1288,26 @@ def build_analysis_readiness(
             "cumulative_materialization_completed", False
         )
     )
+    readable_1826_targeted_qa_completed = all(path.exists() for path in (
+        COMPENSATION_EXTRACTION_READABLE_1826_TARGETED_QA_DECISION_PATH,
+        COMPENSATION_EXTRACTION_READABLE_1826_TARGETED_QA_SUMMARY_PATH,
+        *COMPENSATION_EXTRACTION_READABLE_1826_TARGETED_QA_LEDGER_PATHS,
+    ))
+    readable_1826_targeted_qa_decision = (
+        read_json(COMPENSATION_EXTRACTION_READABLE_1826_TARGETED_QA_DECISION_PATH)
+        if readable_1826_targeted_qa_completed else {}
+    )
+    if readable_1826_targeted_qa_completed and not (
+        readable_1826_targeted_qa_decision.get("qa_pass") is True
+        and readable_1826_targeted_qa_decision.get("final_analysis_ready") is False
+        and int(readable_1826_targeted_qa_decision.get("review_group_count", 0)) == 37
+        and int(readable_1826_targeted_qa_decision.get("duplicate_observation_id_count", -1)) == 0
+        and int(readable_1826_targeted_qa_decision.get("invalid_observation_page_count", -1)) == 0
+        and int(readable_1826_targeted_qa_decision.get("base_non_base_wage_contamination_count", -1)) == 0
+        and float(readable_1826_targeted_qa_decision.get("unresolved_quantitative_conflict_rate", 1)) <= 0.02
+        and readable_1826_targeted_qa_decision.get("ocr_later_documents_untouched") is True
+    ):
+        raise ValueError("readable parse-text 1,826 targeted conflict QA fails dashboard gates")
     if scale_1000_targeted_qa_completed and (
         scale_1000_targeted_qa_decision.get("qa_pass") is not True
         or scale_1000_targeted_qa_decision.get(
@@ -1309,7 +1354,9 @@ def build_analysis_readiness(
     return {
         "metadata": metadata,
         "overall_status": (
-            "provisional_readable_parse_text_1826_materialized_qa_pass"
+            "provisional_readable_parse_text_1826_targeted_conflict_qa_pass"
+            if readable_1826_targeted_qa_completed
+            else "provisional_readable_parse_text_1826_materialized_qa_pass"
             if remaining_parse_text_materialized
             else "provisional_remaining_parse_text_live_incomplete_825_of_826"
             if remaining_parse_text_attempted
@@ -1386,7 +1433,9 @@ def build_analysis_readiness(
             "wage_extraction_stage": {
                 "available": extraction_completed,
                 "display_status": (
-                    "cumulative_readable_parse_text_1826_materialized_qa_pass_targeted_qa_before_final_merge"
+                    "cumulative_readable_parse_text_1826_targeted_conflict_qa_pass_provisional_not_analysis_ready"
+                    if readable_1826_targeted_qa_completed
+                    else "cumulative_readable_parse_text_1826_materialized_qa_pass_targeted_qa_before_final_merge"
                     if remaining_parse_text_materialized
                     else "remaining_parse_text_live_incomplete_825_of_826_no_cumulative_materialization"
                     if remaining_parse_text_attempted
@@ -1404,7 +1453,11 @@ def build_analysis_readiness(
                     else "planned_after_scout_checkpoint_and_verification"
                 ),
                 "observation_count": (
-                    int(remaining_parse_text_decision[
+                    int(readable_1826_targeted_qa_decision[
+                        "corrected_quantitative_active_observation_count"
+                    ])
+                    if readable_1826_targeted_qa_completed
+                    else int(remaining_parse_text_decision[
                         "quantitative_observation_count"
                     ])
                     if remaining_parse_text_materialized
@@ -1417,7 +1470,11 @@ def build_analysis_readiness(
                     else extraction_quant_count if extraction_completed else None
                 ),
                 "qualitative_mechanism_observation_count": (
-                    int(remaining_parse_text_decision[
+                    int(readable_1826_targeted_qa_decision[
+                        "corrected_qualitative_active_observation_count"
+                    ])
+                    if readable_1826_targeted_qa_completed
+                    else int(remaining_parse_text_decision[
                         "qualitative_mechanism_observation_count"
                     ])
                     if remaining_parse_text_materialized
@@ -1430,7 +1487,9 @@ def build_analysis_readiness(
                     else extraction_qual_count if extraction_completed else None
                 ),
                 "qa_status": (
-                    remaining_parse_text_decision.get("qa_status")
+                    readable_1826_targeted_qa_decision.get("qa_status")
+                    if readable_1826_targeted_qa_completed
+                    else remaining_parse_text_decision.get("qa_status")
                     if remaining_parse_text_attempted
                     else scale_1000_targeted_qa_decision.get("qa_status")
                     if scale_1000_targeted_qa_completed
@@ -1456,7 +1515,9 @@ def build_analysis_readiness(
                 ),
                 "scale_beyond_1000_recommendation": scale_1000_decision.get(
                     "scale_beyond_1000_recommendation"
-                ) if not scale_1000_targeted_qa_completed else remaining_parse_text_decision.get(
+                ) if not scale_1000_targeted_qa_completed else readable_1826_targeted_qa_decision.get(
+                    "next_recommendation"
+                ) if readable_1826_targeted_qa_completed else remaining_parse_text_decision.get(
                     "next_recommendation"
                 ) if remaining_parse_text_attempted else scale_1000_targeted_qa_decision.get(
                     "next_recommendation"
@@ -1483,6 +1544,9 @@ def build_analysis_readiness(
                     remaining_parse_text_decision.get(
                         "cumulative_materialization_completed", False
                     )
+                ),
+                "readable_parse_text_1826_targeted_conflict_qa_completed": (
+                    readable_1826_targeted_qa_completed
                 ),
             },
             "regression_stage": {
@@ -5183,10 +5247,38 @@ def build_text_table_calibration_status_summary(
                 raise ValueError(
                     "remaining readable parse-text incomplete live run fails dashboard gates"
                 )
+        readable_1826_targeted_qa_completed = all(path.exists() for path in (
+            COMPENSATION_EXTRACTION_READABLE_1826_TARGETED_QA_DECISION_PATH,
+            COMPENSATION_EXTRACTION_READABLE_1826_TARGETED_QA_SUMMARY_PATH,
+            *COMPENSATION_EXTRACTION_READABLE_1826_TARGETED_QA_LEDGER_PATHS,
+        ))
+        readable_1826_targeted_qa_decision = (
+            read_json(COMPENSATION_EXTRACTION_READABLE_1826_TARGETED_QA_DECISION_PATH)
+            if readable_1826_targeted_qa_completed else {}
+        )
+        if readable_1826_targeted_qa_completed and not (
+            readable_1826_targeted_qa_decision.get("task_id")
+            == "COMPENSATION-EVIDENCE-EXTRACTION-READABLE-PARSE-TEXT-1826-TARGETED-CONFLICT-QA-2026-07-25"
+            and readable_1826_targeted_qa_decision.get("qa_pass") is True
+            and readable_1826_targeted_qa_decision.get("final_analysis_ready") is False
+            and int(readable_1826_targeted_qa_decision.get("review_group_count", 0)) == 37
+            and int(readable_1826_targeted_qa_decision.get("targeted_resolved_group_count", 0)) == 35
+            and int(readable_1826_targeted_qa_decision.get("targeted_unresolved_group_count", 0)) == 2
+            and int(readable_1826_targeted_qa_decision.get("duplicate_observation_id_count", -1)) == 0
+            and int(readable_1826_targeted_qa_decision.get("invalid_observation_page_count", -1)) == 0
+            and int(readable_1826_targeted_qa_decision.get("base_non_base_wage_contamination_count", -1)) == 0
+            and float(readable_1826_targeted_qa_decision.get("unresolved_quantitative_conflict_rate", 1)) <= 0.02
+            and readable_1826_targeted_qa_decision.get("matched_representation_intact") is True
+            and readable_1826_targeted_qa_decision.get("ocr_later_documents_untouched") is True
+            and readable_1826_targeted_qa_decision.get("gabriel_api_used") is False
+        ):
+            raise ValueError("readable parse-text 1,826 targeted conflict QA fails dashboard gates")
         return {
             **metadata,
             "calibration_phase": (
-                "compensation_extraction_readable_parse_text_1826_materialized_qa_pass"
+                "compensation_extraction_readable_parse_text_1826_targeted_conflict_qa_completed"
+                if readable_1826_targeted_qa_completed
+                else "compensation_extraction_readable_parse_text_1826_materialized_qa_pass"
                 if remaining_parse_text_materialized
                 else "compensation_extraction_remaining_parse_text_live_incomplete_825_of_826"
                 if remaining_parse_text_attempted
@@ -5234,7 +5326,9 @@ def build_text_table_calibration_status_summary(
                 if extraction_completed else None
             ),
             "latest_compensation_extraction_qa_id": (
-                "COMPENSATION-EVIDENCE-EXTRACTION-1000DOC-TARGETED-QA-2026-07-25"
+                "COMPENSATION-EVIDENCE-EXTRACTION-READABLE-PARSE-TEXT-1826-TARGETED-CONFLICT-QA-2026-07-25"
+                if readable_1826_targeted_qa_completed
+                else "COMPENSATION-EVIDENCE-EXTRACTION-1000DOC-TARGETED-QA-2026-07-25"
                 if scale_1000_targeted_qa_completed
                 else "COMPENSATION-EVIDENCE-EXTRACTION-500DOC-TARGETED-QA-2026-07-25"
                 if targeted_qa_completed else None
@@ -5295,7 +5389,11 @@ def build_text_table_calibration_status_summary(
                 if extraction_completed else {}
             ),
             "quantitative_observation_count": (
-                int(remaining_parse_text_decision[
+                int(readable_1826_targeted_qa_decision[
+                    "corrected_quantitative_active_observation_count"
+                ])
+                if readable_1826_targeted_qa_completed
+                else int(remaining_parse_text_decision[
                     "quantitative_observation_count"
                 ])
                 if remaining_parse_text_materialized
@@ -5310,7 +5408,11 @@ def build_text_table_calibration_status_summary(
                 else len(extraction_quant) if extraction_completed else 0
             ),
             "qualitative_mechanism_observation_count": (
-                int(remaining_parse_text_decision[
+                int(readable_1826_targeted_qa_decision[
+                    "corrected_qualitative_active_observation_count"
+                ])
+                if readable_1826_targeted_qa_completed
+                else int(remaining_parse_text_decision[
                     "qualitative_mechanism_observation_count"
                 ])
                 if remaining_parse_text_materialized
@@ -5325,7 +5427,11 @@ def build_text_table_calibration_status_summary(
                 else len(extraction_qual) if extraction_completed else 0
             ),
             "mixed_case_count": (
-                int(remaining_parse_text_decision["mixed_case_count"])
+                int(readable_1826_targeted_qa_decision[
+                    "corrected_mixed_active_case_count"
+                ])
+                if readable_1826_targeted_qa_completed
+                else int(remaining_parse_text_decision["mixed_case_count"])
                 if remaining_parse_text_materialized
                 else int(scale_1000_targeted_qa_summary[
                     "corrected_mixed_active_case_count"
@@ -5338,7 +5444,11 @@ def build_text_table_calibration_status_summary(
                 else len(extraction_mixed) if extraction_completed else 0
             ),
             "non_base_wage_observation_count": (
-                int(remaining_parse_text_decision[
+                int(readable_1826_targeted_qa_decision[
+                    "corrected_non_base_wage_active_observation_count"
+                ])
+                if readable_1826_targeted_qa_completed
+                else int(remaining_parse_text_decision[
                     "non_base_wage_observation_count"
                 ])
                 if remaining_parse_text_materialized
@@ -5353,7 +5463,11 @@ def build_text_table_calibration_status_summary(
                 else len(extraction_nonbase) if extraction_completed else 0
             ),
             "reference_exclusion_case_count": (
-                int(remaining_parse_text_decision[
+                int(readable_1826_targeted_qa_decision[
+                    "corrected_reference_exclusion_active_count"
+                ])
+                if readable_1826_targeted_qa_completed
+                else int(remaining_parse_text_decision[
                     "reference_exclusion_case_count"
                 ])
                 if remaining_parse_text_materialized
@@ -5366,7 +5480,9 @@ def build_text_table_calibration_status_summary(
                 else len(extraction_reference) if extraction_completed else 0
             ),
             "compensation_extraction_qa_status": (
-                remaining_parse_text_decision.get("qa_status")
+                readable_1826_targeted_qa_decision.get("qa_status")
+                if readable_1826_targeted_qa_completed
+                else remaining_parse_text_decision.get("qa_status")
                 if remaining_parse_text_attempted
                 else scale_1000_targeted_qa_decision.get("qa_status")
                 if scale_1000_targeted_qa_completed
@@ -5378,7 +5494,11 @@ def build_text_table_calibration_status_summary(
                 if extraction_completed else None
             ),
             "compensation_extraction_conflict_groups": (
-                int(remaining_parse_text_decision.get(
+                int(readable_1826_targeted_qa_decision.get(
+                    "cumulative_quantitative_conflict_group_count", 0
+                ))
+                if readable_1826_targeted_qa_completed
+                else int(remaining_parse_text_decision.get(
                     "quantitative_conflict_group_count", 0
                 ))
                 if remaining_parse_text_materialized
@@ -5560,19 +5680,50 @@ def build_text_table_calibration_status_summary(
                 )) if remaining_parse_text_materialized else 0
             ),
             "remaining_parse_text_unresolved_conflict_group_count": (
-                int(remaining_parse_text_decision.get(
+                int(readable_1826_targeted_qa_decision.get(
+                    "unresolved_quantitative_conflict_group_count", 0
+                ))
+                if readable_1826_targeted_qa_completed
+                else int(remaining_parse_text_decision.get(
                     "unresolved_quantitative_conflict_group_count", 0
                 )) if remaining_parse_text_materialized else 0
             ),
             "remaining_parse_text_unresolved_conflict_rate": (
-                float(remaining_parse_text_decision.get(
+                float(readable_1826_targeted_qa_decision.get(
+                    "unresolved_quantitative_conflict_rate", 0
+                ))
+                if readable_1826_targeted_qa_completed
+                else float(remaining_parse_text_decision.get(
                     "unresolved_quantitative_conflict_rate", 0
                 )) if remaining_parse_text_materialized else None
             ),
             "remaining_parse_text_base_nonbase_contamination_count": (
-                int(remaining_parse_text_decision.get(
+                int(readable_1826_targeted_qa_decision.get(
+                    "base_non_base_wage_contamination_count", 0
+                ))
+                if readable_1826_targeted_qa_completed
+                else int(remaining_parse_text_decision.get(
                     "base_non_base_wage_contamination_count", 0
                 )) if remaining_parse_text_materialized else None
+            ),
+            "readable_parse_text_1826_targeted_conflict_qa_review_count": (
+                int(readable_1826_targeted_qa_decision.get("review_group_count", 0))
+                if readable_1826_targeted_qa_completed else 0
+            ),
+            "readable_parse_text_1826_targeted_conflict_resolution_counts": (
+                readable_1826_targeted_qa_decision.get("targeted_resolution_counts", {})
+                if readable_1826_targeted_qa_completed else {}
+            ),
+            "readable_parse_text_1826_targeted_conflict_resolved_count": (
+                int(readable_1826_targeted_qa_decision.get("targeted_resolved_group_count", 0))
+                if readable_1826_targeted_qa_completed else 0
+            ),
+            "readable_parse_text_1826_targeted_conflict_unresolved_count": (
+                int(readable_1826_targeted_qa_decision.get("targeted_unresolved_group_count", 0))
+                if readable_1826_targeted_qa_completed else 0
+            ),
+            "readable_parse_text_1826_targeted_conflict_qa_completed": (
+                readable_1826_targeted_qa_completed
             ),
             "prior_auto_adjudication_gate_id": (
                 "TEXT-TABLE-AUTO-GABRIEL-GATE2-REFINEMENT-2026-07-25"
@@ -5725,7 +5876,9 @@ def build_text_table_calibration_status_summary(
                 else float(decision["wrong_page_rate"])
             ),
             "extraction_decision": (
-                remaining_parse_text_decision.get("decision")
+                readable_1826_targeted_qa_decision.get("decision")
+                if readable_1826_targeted_qa_completed
+                else remaining_parse_text_decision.get("decision")
                 if remaining_parse_text_attempted
                 else scale_1000_targeted_qa_decision.get("decision")
                 if scale_1000_targeted_qa_completed
@@ -5761,7 +5914,9 @@ def build_text_table_calibration_status_summary(
                 else False
             ),
             "next_recommendation": (
-                remaining_parse_text_decision.get("next_recommendation")
+                readable_1826_targeted_qa_decision.get("next_recommendation")
+                if readable_1826_targeted_qa_completed
+                else remaining_parse_text_decision.get("next_recommendation")
                 if remaining_parse_text_attempted
                 else scale_1000_targeted_qa_decision.get("next_recommendation")
                 if scale_1000_targeted_qa_completed
@@ -5784,7 +5939,9 @@ def build_text_table_calibration_status_summary(
                 )
             ),
             "wage_extraction_status": (
-                "provisional_readable_parse_text_1826_materialized_qa_pass_targeted_qa_before_final_merge"
+                "provisional_readable_parse_text_1826_targeted_conflict_qa_pass_not_analysis_ready"
+                if readable_1826_targeted_qa_completed
+                else "provisional_readable_parse_text_1826_materialized_qa_pass_targeted_qa_before_final_merge"
                 if remaining_parse_text_materialized
                 else "remaining_parse_text_live_incomplete_825_of_826_no_cumulative"
                 if remaining_parse_text_attempted
@@ -5798,7 +5955,9 @@ def build_text_table_calibration_status_summary(
                 if extraction_completed else "not_started"
             ),
             "qualitative_extraction_status": (
-                "provisional_readable_parse_text_1826_materialized_qa_pass_targeted_qa_before_final_merge"
+                "provisional_readable_parse_text_1826_targeted_conflict_qa_pass_not_analysis_ready"
+                if readable_1826_targeted_qa_completed
+                else "provisional_readable_parse_text_1826_materialized_qa_pass_targeted_qa_before_final_merge"
                 if remaining_parse_text_materialized
                 else "remaining_parse_text_live_incomplete_825_of_826_no_cumulative"
                 if remaining_parse_text_attempted
@@ -5875,6 +6034,15 @@ def build_text_table_calibration_status_summary(
                 else 0
             ),
             "caveats": (
+                [
+                    "All 1,826 unique readable parse-text hashes remain covered in corrected provisional shadow ledgers; this is not a final analysis dataset.",
+                    "Targeted conflict QA resolved 35 of 37 groups and left two explicitly unresolved; the revised rate is 0.1049 percent.",
+                    "Duplicate observation IDs, invalid page pointers, and base/non-base contamination remain zero; five newly canonicalized duplicate observations retain provenance.",
+                    "Three temporary working-out-of-classification premium records were routed to non-base wage, and one pre-existing embedded-newline CSV record was repaired only in the shadow copy.",
+                    "No GABRIEL/API call, new extraction, selection, URL access, download, OCR, ingestion, codification, final merge, wage-gap calculation, or regression occurred; analysis readiness remains false.",
+                ]
+                if readable_1826_targeted_qa_completed
+                else
                 [
                     "All 1,826 unique readable parse-text hashes are covered in a cumulative provisional layer; this is not a final analysis dataset.",
                     "The exact Hartland education/certification case passed one bounded preflight and one bounded live request; the 1,000-case seed and 825 stored remaining cases received zero repeat calls.",

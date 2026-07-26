@@ -6,6 +6,33 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-25 (Readable parse-text 1,826 targeted conflict QA passed)
+
+**Did**
+- Started from clean tracked `61814d18363e682f86e464d22f0a4836d43b307a`, preserving unrelated untracked local adjudication renders and root `package-lock.json`. Confirmed all required cumulative artifacts and the exact 37-group unresolved scope.
+- Added a deterministic targeted-conflict resolver and focused regression tests. The pass uses existing structured fields plus single bounded local page checks only, writes separate corrected shadows, preserves IDs/pointers/joins/provenance, and makes no model or extraction call.
+- Resolved 35 groups: 11 distinct schedule cells, 10 distinct effective periods, 13 distinct classification/rank groups, and one working-out-of-classification non-base misroute. Two inherited under-specified groups remain explicit.
+- Routed three temporary working-out-of-classification premium observations out of active base quantitative evidence and into provenance-linked non-base shadow records.
+- Detected and repaired only in the shadow copy one pre-existing embedded-newline CSV record split affecting a Wasco non-base observation; the original cumulative file remains byte-for-byte unchanged.
+- Recomputed corrected active counts at 1,907 quantitative, 1,954 qualitative mechanisms, 371 mixed cases, 4,733 non-base wage, and 345 reference/exclusion. Duplicate IDs, invalid page pointers, and base/non-base contamination are zero; the unresolved rate is 0.1049%.
+- Updated generated dashboard data, analysis readiness, the existing extraction card, dashboard documentation, result/status docs, handoff, and `next_task.md` to show `compensation_extraction_readable_parse_text_1826_targeted_conflict_qa_completed`.
+
+**Decisions and why**
+- Targeted conflict QA passes. All 1,826 unique readable hashes remain covered, matched police/fire/non-safety representation remains intact, and OCR-later documents remain untouched.
+- The corrected outputs remain provisional shadow ledgers. No final provisional merge, ingestion, codification, or analysis is authorized; analysis readiness remains false.
+- The next safe action is an independent bounded audit of the two unresolved groups, three reroutes, five canonicalized duplicates, and the shadow-only CSV record-boundary repair before a separate merge-authorization decision.
+
+**Surprises/breakage**
+- A source CSV record with an embedded newline had been split into two physical rows, causing a naïve active count of 4,729 instead of the documented 4,730. Rejoining that one logical record in the shadow ledger reconciled the baseline without mutating the source.
+- Bounded page structure resolved 15 new ambiguous groups cleanly; only the two previously under-specified seed groups remain unresolved.
+
+**Corpus snapshot:** 64 contracts | 19 cities | 28 healthy matched pairs (10 exact, 18 overlap) | 2 exploratory adjacent pairs | 6 unmatched safety units. Focused and legacy extraction tests, dashboard generation/frontend build, repository validation, 60 ingestion tests, coverage audit, protected-input hashes, and diff hygiene passed.
+
+**Next steps**
+1. Independently review the two unresolved groups and verify the three non-base reroutes using bounded local evidence only.
+2. Audit the shadow-only Wasco record-boundary repair and duplicate provenance, then issue a separate final-provisional-merge authorization decision.
+3. Keep ingestion, codification, wage-gap work, regression, URL access, download, OCR, and OCR-later documents closed.
+
 ## 2026-07-25 (Hartland education/certification case resolved; all 1,826 readable hashes materialized)
 
 **Did**

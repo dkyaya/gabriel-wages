@@ -6,6 +6,35 @@ Last updated: `2026-07-25`
 
 ---
 
+## 2026-07-25 — Readable parse-text 1,826 targeted conflict QA passed
+
+### Current State
+
+- **Authority/start:** work began at clean tracked `61814d18363e682f86e464d22f0a4836d43b307a`. Upstream cumulative and durable ledgers remained read-only; unrelated untracked renders and root `package-lock.json` stayed outside scope.
+- **Scope/method:** [the resolution ledger](compensation_extraction/COMPENSATION-EVIDENCE-EXTRACTION-READABLE-PARSE-TEXT-1826-TARGETED-CONFLICT-QA-2026-07-25/readable_parse_text_1826_targeted_conflict_qa_resolutions.csv) covers exactly 37 unresolved conflict groups. The resolver is deterministic and offline, using structured fields and only single bounded local pages where needed. No GABRIEL/API, extraction, or selection occurred.
+- **Resolutions:** 35 groups resolved and two remain explicit. Targeted counts are 11 distinct schedule cells, 10 effective-period groups, 13 classification/rank groups, one non-base misroute, and two insufficient-evidence groups.
+- **Routing:** three working-out-of-classification premium observations were deactivated from the base quantitative shadow and recreated as provenance-linked non-base records. No active base/non-base contamination remains.
+- **Shadow repair:** one pre-existing embedded-newline defect had split a Wasco non-base observation across two physical CSV records. The corrected shadow rejoins that single logical record while preserving the original observation ID and pointer; source hashes are unchanged.
+- **Corrected layer:** [the decision](compensation_extraction/COMPENSATION-EVIDENCE-EXTRACTION-READABLE-PARSE-TEXT-1826-TARGETED-CONFLICT-QA-2026-07-25/readable_parse_text_1826_recomputed_decision.json) is `readable_parse_text_1826_targeted_conflict_qa_passed`. Active counts: 1,907 quantitative, 1,954 qualitative mechanisms, 371 mixed cases, 4,733 non-base wage, and 345 reference/exclusion.
+- **QA:** duplicate observation IDs 0; invalid bounded page pointers 0; base/non-base contamination 0; unresolved groups 2 / 1,907 = 0.1049%; matched 780 police / 439 fire / 607 non-safety representation intact; five newly canonicalized duplicates and all 14 duplicate-provenance rows preserved.
+- **Dashboard:** phase is `compensation_extraction_readable_parse_text_1826_targeted_conflict_qa_completed`; analysis readiness remains false.
+- **Boundary:** all 1,826 unique readable hashes remain covered and OCR-later documents remain untouched. No URL/search, download, OCR, scout, source review, verification, extraction, GABRIEL/API, ingestion, codification, final merge, wage-gap work, regression, fetch, pull, or remote inspection occurred.
+
+### Interpretation
+
+The predeclared targeted conflict gate passes decisively, and no unresolved
+integrity defect remains. The two retained groups are explicit bounded-evidence
+limitations rather than hidden conflicts. The shadow outputs are still not a
+final analysis input: a separate independent audit and explicit merge decision
+are required.
+
+### Next Move
+
+Follow [next_task.md](../../next_task.md). Independently inspect the two
+remaining groups and verify the three reroutes, five newly canonicalized
+duplicates, and the Wasco shadow-only record-boundary repair. Do not merge,
+ingest, codify, or analyze without separate authorization.
+
 ## 2026-07-25 — All 1,826 unique readable parse-text hashes materialized; targeted conflict QA next
 
 ### Current State
