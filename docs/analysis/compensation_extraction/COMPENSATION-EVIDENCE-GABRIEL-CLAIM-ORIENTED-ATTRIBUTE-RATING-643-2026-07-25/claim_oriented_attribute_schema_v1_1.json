@@ -1,0 +1,957 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "attribute_ratings": {
+      "additionalProperties": false,
+      "properties": {
+        "automatic_raise_mechanism": {
+          "additionalProperties": false,
+          "properties": {
+            "attribute_present": {
+              "type": "boolean"
+            },
+            "claim_boundary": {
+              "maxLength": 300,
+              "minLength": 1,
+              "type": "string"
+            },
+            "claim_relevance": {
+              "enum": [
+                "direct_text_claim",
+                "documentary_mechanism_claim",
+                "provisional_causal_candidate",
+                "context_only",
+                "not_claim_ready"
+              ],
+              "type": "string"
+            },
+            "direction_of_pressure": {
+              "enum": [
+                "safety_advantage",
+                "non_safety_advantage",
+                "gap_narrowing",
+                "neutral_or_unclear",
+                "not_applicable"
+              ],
+              "type": "string"
+            },
+            "evidence_strength": {
+              "enum": [
+                "strong",
+                "moderate",
+                "weak",
+                "not_supported"
+              ],
+              "type": "string"
+            },
+            "reason_code": {
+              "maxLength": 80,
+              "minLength": 1,
+              "pattern": "^[a-z][a-z0-9_]{0,79}$",
+              "type": "string"
+            },
+            "supporting_quote": {
+              "maxLength": 500,
+              "type": "string"
+            }
+          },
+          "required": [
+            "attribute_present",
+            "direction_of_pressure",
+            "evidence_strength",
+            "claim_relevance",
+            "reason_code",
+            "supporting_quote",
+            "claim_boundary"
+          ],
+          "type": "object"
+        },
+        "bargaining_power_signal": {
+          "additionalProperties": false,
+          "properties": {
+            "attribute_present": {
+              "type": "boolean"
+            },
+            "claim_boundary": {
+              "maxLength": 300,
+              "minLength": 1,
+              "type": "string"
+            },
+            "claim_relevance": {
+              "enum": [
+                "direct_text_claim",
+                "documentary_mechanism_claim",
+                "provisional_causal_candidate",
+                "context_only",
+                "not_claim_ready"
+              ],
+              "type": "string"
+            },
+            "direction_of_pressure": {
+              "enum": [
+                "safety_advantage",
+                "non_safety_advantage",
+                "gap_narrowing",
+                "neutral_or_unclear",
+                "not_applicable"
+              ],
+              "type": "string"
+            },
+            "evidence_strength": {
+              "enum": [
+                "strong",
+                "moderate",
+                "weak",
+                "not_supported"
+              ],
+              "type": "string"
+            },
+            "reason_code": {
+              "maxLength": 80,
+              "minLength": 1,
+              "pattern": "^[a-z][a-z0-9_]{0,79}$",
+              "type": "string"
+            },
+            "supporting_quote": {
+              "maxLength": 500,
+              "type": "string"
+            }
+          },
+          "required": [
+            "attribute_present",
+            "direction_of_pressure",
+            "evidence_strength",
+            "claim_relevance",
+            "reason_code",
+            "supporting_quote",
+            "claim_boundary"
+          ],
+          "type": "object"
+        },
+        "base_wage_direct_value": {
+          "additionalProperties": false,
+          "properties": {
+            "attribute_present": {
+              "type": "boolean"
+            },
+            "claim_boundary": {
+              "maxLength": 300,
+              "minLength": 1,
+              "type": "string"
+            },
+            "claim_relevance": {
+              "enum": [
+                "direct_text_claim",
+                "documentary_mechanism_claim",
+                "provisional_causal_candidate",
+                "context_only",
+                "not_claim_ready"
+              ],
+              "type": "string"
+            },
+            "direction_of_pressure": {
+              "enum": [
+                "safety_advantage",
+                "non_safety_advantage",
+                "gap_narrowing",
+                "neutral_or_unclear",
+                "not_applicable"
+              ],
+              "type": "string"
+            },
+            "evidence_strength": {
+              "enum": [
+                "strong",
+                "moderate",
+                "weak",
+                "not_supported"
+              ],
+              "type": "string"
+            },
+            "reason_code": {
+              "maxLength": 80,
+              "minLength": 1,
+              "pattern": "^[a-z][a-z0-9_]{0,79}$",
+              "type": "string"
+            },
+            "supporting_quote": {
+              "maxLength": 500,
+              "type": "string"
+            }
+          },
+          "required": [
+            "attribute_present",
+            "direction_of_pressure",
+            "evidence_strength",
+            "claim_relevance",
+            "reason_code",
+            "supporting_quote",
+            "claim_boundary"
+          ],
+          "type": "object"
+        },
+        "fiscal_constraint_signal": {
+          "additionalProperties": false,
+          "properties": {
+            "attribute_present": {
+              "type": "boolean"
+            },
+            "claim_boundary": {
+              "maxLength": 300,
+              "minLength": 1,
+              "type": "string"
+            },
+            "claim_relevance": {
+              "enum": [
+                "direct_text_claim",
+                "documentary_mechanism_claim",
+                "provisional_causal_candidate",
+                "context_only",
+                "not_claim_ready"
+              ],
+              "type": "string"
+            },
+            "direction_of_pressure": {
+              "enum": [
+                "safety_advantage",
+                "non_safety_advantage",
+                "gap_narrowing",
+                "neutral_or_unclear",
+                "not_applicable"
+              ],
+              "type": "string"
+            },
+            "evidence_strength": {
+              "enum": [
+                "strong",
+                "moderate",
+                "weak",
+                "not_supported"
+              ],
+              "type": "string"
+            },
+            "reason_code": {
+              "maxLength": 80,
+              "minLength": 1,
+              "pattern": "^[a-z][a-z0-9_]{0,79}$",
+              "type": "string"
+            },
+            "supporting_quote": {
+              "maxLength": 500,
+              "type": "string"
+            }
+          },
+          "required": [
+            "attribute_present",
+            "direction_of_pressure",
+            "evidence_strength",
+            "claim_relevance",
+            "reason_code",
+            "supporting_quote",
+            "claim_boundary"
+          ],
+          "type": "object"
+        },
+        "gap_narrowing_signal": {
+          "additionalProperties": false,
+          "properties": {
+            "attribute_present": {
+              "type": "boolean"
+            },
+            "claim_boundary": {
+              "maxLength": 300,
+              "minLength": 1,
+              "type": "string"
+            },
+            "claim_relevance": {
+              "enum": [
+                "direct_text_claim",
+                "documentary_mechanism_claim",
+                "provisional_causal_candidate",
+                "context_only",
+                "not_claim_ready"
+              ],
+              "type": "string"
+            },
+            "direction_of_pressure": {
+              "enum": [
+                "safety_advantage",
+                "non_safety_advantage",
+                "gap_narrowing",
+                "neutral_or_unclear",
+                "not_applicable"
+              ],
+              "type": "string"
+            },
+            "evidence_strength": {
+              "enum": [
+                "strong",
+                "moderate",
+                "weak",
+                "not_supported"
+              ],
+              "type": "string"
+            },
+            "reason_code": {
+              "maxLength": 80,
+              "minLength": 1,
+              "pattern": "^[a-z][a-z0-9_]{0,79}$",
+              "type": "string"
+            },
+            "supporting_quote": {
+              "maxLength": 500,
+              "type": "string"
+            }
+          },
+          "required": [
+            "attribute_present",
+            "direction_of_pressure",
+            "evidence_strength",
+            "claim_relevance",
+            "reason_code",
+            "supporting_quote",
+            "claim_boundary"
+          ],
+          "type": "object"
+        },
+        "implementation_or_retroactivity_advantage": {
+          "additionalProperties": false,
+          "properties": {
+            "attribute_present": {
+              "type": "boolean"
+            },
+            "claim_boundary": {
+              "maxLength": 300,
+              "minLength": 1,
+              "type": "string"
+            },
+            "claim_relevance": {
+              "enum": [
+                "direct_text_claim",
+                "documentary_mechanism_claim",
+                "provisional_causal_candidate",
+                "context_only",
+                "not_claim_ready"
+              ],
+              "type": "string"
+            },
+            "direction_of_pressure": {
+              "enum": [
+                "safety_advantage",
+                "non_safety_advantage",
+                "gap_narrowing",
+                "neutral_or_unclear",
+                "not_applicable"
+              ],
+              "type": "string"
+            },
+            "evidence_strength": {
+              "enum": [
+                "strong",
+                "moderate",
+                "weak",
+                "not_supported"
+              ],
+              "type": "string"
+            },
+            "reason_code": {
+              "maxLength": 80,
+              "minLength": 1,
+              "pattern": "^[a-z][a-z0-9_]{0,79}$",
+              "type": "string"
+            },
+            "supporting_quote": {
+              "maxLength": 500,
+              "type": "string"
+            }
+          },
+          "required": [
+            "attribute_present",
+            "direction_of_pressure",
+            "evidence_strength",
+            "claim_relevance",
+            "reason_code",
+            "supporting_quote",
+            "claim_boundary"
+          ],
+          "type": "object"
+        },
+        "market_or_comparability_pressure": {
+          "additionalProperties": false,
+          "properties": {
+            "attribute_present": {
+              "type": "boolean"
+            },
+            "claim_boundary": {
+              "maxLength": 300,
+              "minLength": 1,
+              "type": "string"
+            },
+            "claim_relevance": {
+              "enum": [
+                "direct_text_claim",
+                "documentary_mechanism_claim",
+                "provisional_causal_candidate",
+                "context_only",
+                "not_claim_ready"
+              ],
+              "type": "string"
+            },
+            "direction_of_pressure": {
+              "enum": [
+                "safety_advantage",
+                "non_safety_advantage",
+                "gap_narrowing",
+                "neutral_or_unclear",
+                "not_applicable"
+              ],
+              "type": "string"
+            },
+            "evidence_strength": {
+              "enum": [
+                "strong",
+                "moderate",
+                "weak",
+                "not_supported"
+              ],
+              "type": "string"
+            },
+            "reason_code": {
+              "maxLength": 80,
+              "minLength": 1,
+              "pattern": "^[a-z][a-z0-9_]{0,79}$",
+              "type": "string"
+            },
+            "supporting_quote": {
+              "maxLength": 500,
+              "type": "string"
+            }
+          },
+          "required": [
+            "attribute_present",
+            "direction_of_pressure",
+            "evidence_strength",
+            "claim_relevance",
+            "reason_code",
+            "supporting_quote",
+            "claim_boundary"
+          ],
+          "type": "object"
+        },
+        "non_base_compensation_signal": {
+          "additionalProperties": false,
+          "properties": {
+            "attribute_present": {
+              "type": "boolean"
+            },
+            "claim_boundary": {
+              "maxLength": 300,
+              "minLength": 1,
+              "type": "string"
+            },
+            "claim_relevance": {
+              "enum": [
+                "direct_text_claim",
+                "documentary_mechanism_claim",
+                "provisional_causal_candidate",
+                "context_only",
+                "not_claim_ready"
+              ],
+              "type": "string"
+            },
+            "direction_of_pressure": {
+              "enum": [
+                "safety_advantage",
+                "non_safety_advantage",
+                "gap_narrowing",
+                "neutral_or_unclear",
+                "not_applicable"
+              ],
+              "type": "string"
+            },
+            "evidence_strength": {
+              "enum": [
+                "strong",
+                "moderate",
+                "weak",
+                "not_supported"
+              ],
+              "type": "string"
+            },
+            "reason_code": {
+              "maxLength": 80,
+              "minLength": 1,
+              "pattern": "^[a-z][a-z0-9_]{0,79}$",
+              "type": "string"
+            },
+            "supporting_quote": {
+              "maxLength": 500,
+              "type": "string"
+            }
+          },
+          "required": [
+            "attribute_present",
+            "direction_of_pressure",
+            "evidence_strength",
+            "claim_relevance",
+            "reason_code",
+            "supporting_quote",
+            "claim_boundary"
+          ],
+          "type": "object"
+        },
+        "non_safety_constraint_signal": {
+          "additionalProperties": false,
+          "properties": {
+            "attribute_present": {
+              "type": "boolean"
+            },
+            "claim_boundary": {
+              "maxLength": 300,
+              "minLength": 1,
+              "type": "string"
+            },
+            "claim_relevance": {
+              "enum": [
+                "direct_text_claim",
+                "documentary_mechanism_claim",
+                "provisional_causal_candidate",
+                "context_only",
+                "not_claim_ready"
+              ],
+              "type": "string"
+            },
+            "direction_of_pressure": {
+              "enum": [
+                "safety_advantage",
+                "non_safety_advantage",
+                "gap_narrowing",
+                "neutral_or_unclear",
+                "not_applicable"
+              ],
+              "type": "string"
+            },
+            "evidence_strength": {
+              "enum": [
+                "strong",
+                "moderate",
+                "weak",
+                "not_supported"
+              ],
+              "type": "string"
+            },
+            "reason_code": {
+              "maxLength": 80,
+              "minLength": 1,
+              "pattern": "^[a-z][a-z0-9_]{0,79}$",
+              "type": "string"
+            },
+            "supporting_quote": {
+              "maxLength": 500,
+              "type": "string"
+            }
+          },
+          "required": [
+            "attribute_present",
+            "direction_of_pressure",
+            "evidence_strength",
+            "claim_relevance",
+            "reason_code",
+            "supporting_quote",
+            "claim_boundary"
+          ],
+          "type": "object"
+        },
+        "parity_or_internal_equity_signal": {
+          "additionalProperties": false,
+          "properties": {
+            "attribute_present": {
+              "type": "boolean"
+            },
+            "claim_boundary": {
+              "maxLength": 300,
+              "minLength": 1,
+              "type": "string"
+            },
+            "claim_relevance": {
+              "enum": [
+                "direct_text_claim",
+                "documentary_mechanism_claim",
+                "provisional_causal_candidate",
+                "context_only",
+                "not_claim_ready"
+              ],
+              "type": "string"
+            },
+            "direction_of_pressure": {
+              "enum": [
+                "safety_advantage",
+                "non_safety_advantage",
+                "gap_narrowing",
+                "neutral_or_unclear",
+                "not_applicable"
+              ],
+              "type": "string"
+            },
+            "evidence_strength": {
+              "enum": [
+                "strong",
+                "moderate",
+                "weak",
+                "not_supported"
+              ],
+              "type": "string"
+            },
+            "reason_code": {
+              "maxLength": 80,
+              "minLength": 1,
+              "pattern": "^[a-z][a-z0-9_]{0,79}$",
+              "type": "string"
+            },
+            "supporting_quote": {
+              "maxLength": 500,
+              "type": "string"
+            }
+          },
+          "required": [
+            "attribute_present",
+            "direction_of_pressure",
+            "evidence_strength",
+            "claim_relevance",
+            "reason_code",
+            "supporting_quote",
+            "claim_boundary"
+          ],
+          "type": "object"
+        },
+        "rank_or_specialization_premium": {
+          "additionalProperties": false,
+          "properties": {
+            "attribute_present": {
+              "type": "boolean"
+            },
+            "claim_boundary": {
+              "maxLength": 300,
+              "minLength": 1,
+              "type": "string"
+            },
+            "claim_relevance": {
+              "enum": [
+                "direct_text_claim",
+                "documentary_mechanism_claim",
+                "provisional_causal_candidate",
+                "context_only",
+                "not_claim_ready"
+              ],
+              "type": "string"
+            },
+            "direction_of_pressure": {
+              "enum": [
+                "safety_advantage",
+                "non_safety_advantage",
+                "gap_narrowing",
+                "neutral_or_unclear",
+                "not_applicable"
+              ],
+              "type": "string"
+            },
+            "evidence_strength": {
+              "enum": [
+                "strong",
+                "moderate",
+                "weak",
+                "not_supported"
+              ],
+              "type": "string"
+            },
+            "reason_code": {
+              "maxLength": 80,
+              "minLength": 1,
+              "pattern": "^[a-z][a-z0-9_]{0,79}$",
+              "type": "string"
+            },
+            "supporting_quote": {
+              "maxLength": 500,
+              "type": "string"
+            }
+          },
+          "required": [
+            "attribute_present",
+            "direction_of_pressure",
+            "evidence_strength",
+            "claim_relevance",
+            "reason_code",
+            "supporting_quote",
+            "claim_boundary"
+          ],
+          "type": "object"
+        },
+        "safety_advantage_signal": {
+          "additionalProperties": false,
+          "properties": {
+            "attribute_present": {
+              "type": "boolean"
+            },
+            "claim_boundary": {
+              "maxLength": 300,
+              "minLength": 1,
+              "type": "string"
+            },
+            "claim_relevance": {
+              "enum": [
+                "direct_text_claim",
+                "documentary_mechanism_claim",
+                "provisional_causal_candidate",
+                "context_only",
+                "not_claim_ready"
+              ],
+              "type": "string"
+            },
+            "direction_of_pressure": {
+              "enum": [
+                "safety_advantage",
+                "non_safety_advantage",
+                "gap_narrowing",
+                "neutral_or_unclear",
+                "not_applicable"
+              ],
+              "type": "string"
+            },
+            "evidence_strength": {
+              "enum": [
+                "strong",
+                "moderate",
+                "weak",
+                "not_supported"
+              ],
+              "type": "string"
+            },
+            "reason_code": {
+              "maxLength": 80,
+              "minLength": 1,
+              "pattern": "^[a-z][a-z0-9_]{0,79}$",
+              "type": "string"
+            },
+            "supporting_quote": {
+              "maxLength": 500,
+              "type": "string"
+            }
+          },
+          "required": [
+            "attribute_present",
+            "direction_of_pressure",
+            "evidence_strength",
+            "claim_relevance",
+            "reason_code",
+            "supporting_quote",
+            "claim_boundary"
+          ],
+          "type": "object"
+        },
+        "strike_or_no_strike_constraint": {
+          "additionalProperties": false,
+          "properties": {
+            "attribute_present": {
+              "type": "boolean"
+            },
+            "claim_boundary": {
+              "maxLength": 300,
+              "minLength": 1,
+              "type": "string"
+            },
+            "claim_relevance": {
+              "enum": [
+                "direct_text_claim",
+                "documentary_mechanism_claim",
+                "provisional_causal_candidate",
+                "context_only",
+                "not_claim_ready"
+              ],
+              "type": "string"
+            },
+            "direction_of_pressure": {
+              "enum": [
+                "safety_advantage",
+                "non_safety_advantage",
+                "gap_narrowing",
+                "neutral_or_unclear",
+                "not_applicable"
+              ],
+              "type": "string"
+            },
+            "evidence_strength": {
+              "enum": [
+                "strong",
+                "moderate",
+                "weak",
+                "not_supported"
+              ],
+              "type": "string"
+            },
+            "reason_code": {
+              "maxLength": 80,
+              "minLength": 1,
+              "pattern": "^[a-z][a-z0-9_]{0,79}$",
+              "type": "string"
+            },
+            "supporting_quote": {
+              "maxLength": 500,
+              "type": "string"
+            }
+          },
+          "required": [
+            "attribute_present",
+            "direction_of_pressure",
+            "evidence_strength",
+            "claim_relevance",
+            "reason_code",
+            "supporting_quote",
+            "claim_boundary"
+          ],
+          "type": "object"
+        },
+        "weak_or_no_claim_support": {
+          "additionalProperties": false,
+          "properties": {
+            "attribute_present": {
+              "type": "boolean"
+            },
+            "claim_boundary": {
+              "maxLength": 300,
+              "minLength": 1,
+              "type": "string"
+            },
+            "claim_relevance": {
+              "enum": [
+                "direct_text_claim",
+                "documentary_mechanism_claim",
+                "provisional_causal_candidate",
+                "context_only",
+                "not_claim_ready"
+              ],
+              "type": "string"
+            },
+            "direction_of_pressure": {
+              "enum": [
+                "safety_advantage",
+                "non_safety_advantage",
+                "gap_narrowing",
+                "neutral_or_unclear",
+                "not_applicable"
+              ],
+              "type": "string"
+            },
+            "evidence_strength": {
+              "enum": [
+                "strong",
+                "moderate",
+                "weak",
+                "not_supported"
+              ],
+              "type": "string"
+            },
+            "reason_code": {
+              "maxLength": 80,
+              "minLength": 1,
+              "pattern": "^[a-z][a-z0-9_]{0,79}$",
+              "type": "string"
+            },
+            "supporting_quote": {
+              "maxLength": 500,
+              "type": "string"
+            }
+          },
+          "required": [
+            "attribute_present",
+            "direction_of_pressure",
+            "evidence_strength",
+            "claim_relevance",
+            "reason_code",
+            "supporting_quote",
+            "claim_boundary"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "automatic_raise_mechanism",
+        "bargaining_power_signal",
+        "market_or_comparability_pressure",
+        "rank_or_specialization_premium",
+        "implementation_or_retroactivity_advantage",
+        "fiscal_constraint_signal",
+        "parity_or_internal_equity_signal",
+        "non_base_compensation_signal",
+        "base_wage_direct_value",
+        "safety_advantage_signal",
+        "non_safety_constraint_signal",
+        "gap_narrowing_signal",
+        "strike_or_no_strike_constraint",
+        "weak_or_no_claim_support"
+      ],
+      "type": "object"
+    },
+    "attribute_taxonomy_version": {
+      "const": "v1.1",
+      "type": "string"
+    },
+    "evidence_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "no_final_causal_claim": {
+      "const": true,
+      "type": "boolean"
+    },
+    "no_wage_gap_claim": {
+      "const": true,
+      "type": "boolean"
+    },
+    "overall_evidence_quality": {
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ],
+      "type": "string"
+    },
+    "primary_attribute": {
+      "enum": [
+        "automatic_raise_mechanism",
+        "bargaining_power_signal",
+        "market_or_comparability_pressure",
+        "rank_or_specialization_premium",
+        "implementation_or_retroactivity_advantage",
+        "fiscal_constraint_signal",
+        "parity_or_internal_equity_signal",
+        "non_base_compensation_signal",
+        "base_wage_direct_value",
+        "safety_advantage_signal",
+        "non_safety_constraint_signal",
+        "gap_narrowing_signal",
+        "strike_or_no_strike_constraint",
+        "weak_or_no_claim_support"
+      ],
+      "type": "string"
+    },
+    "scout_priority_signal": {
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "evidence_id",
+    "attribute_taxonomy_version",
+    "attribute_ratings",
+    "primary_attribute",
+    "overall_evidence_quality",
+    "scout_priority_signal",
+    "no_wage_gap_claim",
+    "no_final_causal_claim"
+  ],
+  "type": "object"
+}

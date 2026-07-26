@@ -1,0 +1,2 @@
+stage,started_at_utc,elapsed_seconds,input_rows,resumed_valid_rows,new_request_attempts,valid_rows,quarantine_rows,parallel,timeout_seconds,max_attempts
+live,2026-07-26T19:16:51.262119+00:00,1921.730212,643,38,783,608,35,4,120.0,2

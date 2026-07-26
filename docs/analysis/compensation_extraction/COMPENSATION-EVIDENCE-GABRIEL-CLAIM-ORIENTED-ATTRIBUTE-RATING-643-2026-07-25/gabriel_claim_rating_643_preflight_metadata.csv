@@ -1,0 +1,10 @@
+evidence_id,stage,attempt,request_id,backend,model,status,schema_valid,input_chars,input_tokens,output_tokens,total_tokens,elapsed_seconds,error_type,error_code,raw_prompt_saved,raw_response_saved
+qualitative:lobs_01fde53ca68eab05b472dac3,preflight,1,resp_0f7b981892c69a47006a66543b2e048197b18dbd9fbd4dbb7b,huit_openai_responses_direct_sdk,gpt-5.4-nano,success,true,4474,3043,1022,4065,7.396691,,,false,false
+qualitative:lobs_002c1605061ebac04849affa,preflight,1,resp_0c80b44c3fb98714006a66543b2d88819687f3dd85ba847a36,huit_openai_responses_direct_sdk,gpt-5.4-nano,success,true,4476,3040,1121,4161,7.831489,,,false,false
+qualitative:lobs_0243e0cd2d60f9c9fd4c0959,preflight,1,resp_0ad7db3978e0bcb4006a66543b38288196823356dc87d54a41,huit_openai_responses_direct_sdk,gpt-5.4-nano,success,true,4515,3052,1540,4592,10.151945,,,false,false
+qualitative:lobs_028611b71918af6461eeb646,preflight,1,resp_058c86eb34e3c1f7006a6654424dd88194a3375f0cef65f81a,huit_openai_responses_direct_sdk,gpt-5.4-nano,success,true,4448,3028,957,3985,14.281208,,,false,false
+qualitative:lobs_0061e768a4924ce0613c5725,preflight,1,resp_0de6dde1531f5aa2006a665442e6388197864a6e8aa718f276,huit_openai_responses_direct_sdk,gpt-5.4-nano,success,true,4462,3040,1030,4070,14.561060,,,false,false
+qualitative:lobs_20851a55680ee9e68dda3ab1,preflight,1,resp_0d95f3fd7ce35b34006a665445442881958dfb4959bd27ffd1,huit_openai_responses_direct_sdk,gpt-5.4-nano,success,false,4478,3046,1642,4688,20.527998,StrictValidationError,supporting_quote_not_exact_substring,false,false
+qualitative:lobs_4b7fa2ac4dc2c0441ed90118,preflight,1,resp_0b19594c7105108d006a6654495da48196ad5292b69e083762,huit_openai_responses_direct_sdk,gpt-5.4-nano,success,true,4484,3042,1655,4697,24.727626,,,false,false
+qualitative:lobs_420384d7d8c13d1f4c3f1cf6,preflight,1,resp_07cd4714a76a5aca006a665449a1588190a3b4d5cad638b09a,huit_openai_responses_direct_sdk,gpt-5.4-nano,success,true,4406,3031,956,3987,21.041471,,,false,false
+qualitative:lobs_20851a55680ee9e68dda3ab1,preflight,2,resp_0e4dd012f3cf19c3006a665453e38081958a008be275345e23,huit_openai_responses_direct_sdk,gpt-5.4-nano,success,true,4621,3076,1734,4810,11.105836,,,false,false

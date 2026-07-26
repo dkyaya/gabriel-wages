@@ -756,6 +756,12 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "compensation_extraction_gabriel_claim_rating_643_completed_with_quarantine"
+              ? "Bounded GABRIEL claim rating completed; 35 rows remain quarantined"
+              : textTableCalibrationStatus.calibration_phase ===
+            "compensation_extraction_gabriel_claim_rating_643_completed_summary_review_allowed"
+              ? "Bounded GABRIEL claim rating completed; summary review may proceed"
+              : textTableCalibrationStatus.calibration_phase ===
             "compensation_extraction_claim_oriented_phase_closed_gabriel_claim_rating_ready"
               ? "Claim-oriented compensation phase closed; bounded GABRIEL claim rating may proceed"
               : textTableCalibrationStatus.calibration_phase ===
@@ -873,6 +879,24 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "compensation_extraction_gabriel_claim_rating_643_completed_with_quarantine" ? (
+            <>
+              The bounded v1.1 GABRIEL run processed exactly 643 authorized exact-span
+              qualitative rows. It produced 608 schema-valid, exact-quote-verified ratings
+              and retained 35 rows in explicit quarantine after bounded retries. No row was
+              silently dropped. A bounded quarantine repair is next; cross-row statistics,
+              wage effects, wage gaps, regressions, final causal claims, and global analysis
+              readiness remain closed.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
+          "compensation_extraction_gabriel_claim_rating_643_completed_summary_review_allowed" ? (
+            <>
+              The bounded v1.1 GABRIEL run produced schema-valid, exact-quote-verified
+              ratings for all 643 authorized rows. A separately authorized documentary
+              summary review may proceed. Wage effects, wage gaps, regressions, final causal
+              claims, and global analysis readiness remain closed.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "compensation_extraction_claim_oriented_phase_closed_gabriel_claim_rating_ready" ? (
             <>
               The claim-oriented QA/rating phase is closed with all 8,939 records assigned to

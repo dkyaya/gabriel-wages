@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": "0.1.0",
-    "generated_at": "2026-07-26T18:03:52Z",
+    "generated_at": "2026-07-26T19:21:37Z",
     "data_vintage": "2026-07-23",
     "source_files": [
       "docs/analysis/national_scout_coverage_state.csv",
@@ -82,7 +82,7 @@
       "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
     ]
   },
-  "overall_status": "claim_oriented_phase_closed_gabriel_claim_rating_ready_global_analysis_closed",
+  "overall_status": "gabriel_claim_rating_643_completed_with_quarantine_global_analysis_closed",
   "current_inputs": {
     "national_queue_available": true,
     "national_coverage_available": true,
@@ -241,6 +241,12 @@
       "gabriel_claim_rating_ready": true,
       "gabriel_claim_rating_ready_rows": 643,
       "claim_oriented_global_analysis_readiness": false,
+      "gabriel_claim_rating_643_completed": true,
+      "gabriel_claim_rating_643_decision": "gabriel_claim_rating_643_completed_with_quarantine",
+      "gabriel_claim_rating_643_valid_rows": 608,
+      "gabriel_claim_rating_643_quarantine_rows": 35,
+      "gabriel_claim_rating_summary_review_allowed": false,
+      "gabriel_claim_rating_global_analysis_readiness": false,
       "limited_qualitative_usage_registry_review_global_analysis_readiness": false,
       "limited_qualitative_usage_layer_acceptance_global_analysis_readiness": false,
       "limited_qualitative_usage_layer_qa_global_analysis_readiness": false,

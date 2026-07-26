@@ -963,6 +963,23 @@ COMPENSATION_EXTRACTION_CLAIM_ORIENTED_PHASE_CLOSE_TAXONOMY_PATH = (
     COMPENSATION_EXTRACTION_CLAIM_ORIENTED_PHASE_CLOSE_DIR
     / "claim_oriented_attribute_taxonomy_machine_readable.json"
 )
+COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_643_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "COMPENSATION-EVIDENCE-GABRIEL-CLAIM-ORIENTED-ATTRIBUTE-RATING-643-2026-07-25"
+)
+COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_643_DECISION_PATH = (
+    COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_643_DIR
+    / "gabriel_claim_rating_643_decision.json"
+)
+COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_643_SUMMARY_PATH = (
+    COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_643_DIR
+    / "gabriel_claim_oriented_attribute_ratings_643_summary.json"
+)
+COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_643_INVARIANTS_PATH = (
+    COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_643_DIR
+    / "gabriel_claim_rating_643_invariant_checks.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -2451,6 +2468,69 @@ def claim_oriented_phase_close_status() -> tuple[bool, dict[str, Any]]:
     return True, decision
 
 
+def gabriel_claim_rating_643_status() -> tuple[bool, dict[str, Any]]:
+    """Fail closed unless the bounded 643-row rating output reconciles."""
+    required = (
+        COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_643_DECISION_PATH,
+        COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_643_SUMMARY_PATH,
+        COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_643_INVARIANTS_PATH,
+        COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_643_DIR
+        / "gabriel_claim_rating_643_dry_run_summary.json",
+        COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_643_DIR
+        / "gabriel_claim_rating_643_preflight_report.md",
+        COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_643_DIR
+        / "gabriel_claim_oriented_attribute_ratings_643.csv",
+        COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_643_DIR
+        / "gabriel_claim_oriented_attribute_rating_quarantine.csv",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    decision = read_json(COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_643_DECISION_PATH)
+    summary = read_json(COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_643_SUMMARY_PATH)
+    invariants = read_json(COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_643_INVARIANTS_PATH)
+    valid_rows = read_csv(
+        COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_643_DIR
+        / "gabriel_claim_oriented_attribute_ratings_643.csv"
+    )
+    quarantine_rows = read_csv(
+        COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_643_DIR
+        / "gabriel_claim_oriented_attribute_rating_quarantine.csv"
+    )
+    accepted_decisions = {
+        "gabriel_claim_rating_643_completed_summary_review_allowed",
+        "gabriel_claim_rating_643_completed_with_quarantine",
+    }
+    valid_count = len(valid_rows)
+    quarantine_count = len(quarantine_rows)
+    prompt_name = (
+        "next_gabriel_claim_rating_summary_review_prompt.md"
+        if decision.get("decision")
+        == "gabriel_claim_rating_643_completed_summary_review_allowed"
+        else "next_gabriel_claim_rating_repair_prompt.md"
+    )
+    if not (
+        decision.get("task_id")
+        == "COMPENSATION-EVIDENCE-GABRIEL-CLAIM-ORIENTED-ATTRIBUTE-RATING-643-2026-07-25"
+        and decision.get("decision") in accepted_decisions
+        and decision.get("attribute_taxonomy_version") == "v1.1"
+        and decision.get("gabriel_api_ran") is True
+        and decision.get("preflight_passed") is True
+        and decision.get("input_rows") == 643
+        and decision.get("valid_rating_rows") == valid_count
+        and decision.get("quarantine_rows") == quarantine_count
+        and valid_count + quarantine_count == 643
+        and decision.get("global_analysis_readiness") is False
+        and decision.get("no_wage_gap_or_final_causal_claims") is True
+        and summary == decision
+        and invariants.get("all_invariants_passed") is True
+        and (
+            COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_643_DIR / prompt_name
+        ).exists()
+    ):
+        raise ValueError("GABRIEL claim rating 643 fails dashboard gates")
+    return True, decision
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -3165,6 +3245,10 @@ def build_analysis_readiness(
         claim_oriented_phase_close_completed,
         claim_oriented_phase_close_decision,
     ) = claim_oriented_phase_close_status()
+    (
+        gabriel_claim_rating_643_completed,
+        gabriel_claim_rating_643_decision,
+    ) = gabriel_claim_rating_643_status()
     if scale_1000_targeted_qa_completed and (
         scale_1000_targeted_qa_decision.get("qa_pass") is not True
         or scale_1000_targeted_qa_decision.get(
@@ -3211,7 +3295,14 @@ def build_analysis_readiness(
     return {
         "metadata": metadata,
         "overall_status": (
-            "claim_oriented_phase_closed_gabriel_claim_rating_ready_global_analysis_closed"
+            (
+                "gabriel_claim_rating_643_completed_summary_review_allowed_global_analysis_closed"
+                if gabriel_claim_rating_643_decision.get("decision")
+                == "gabriel_claim_rating_643_completed_summary_review_allowed"
+                else "gabriel_claim_rating_643_completed_with_quarantine_global_analysis_closed"
+            )
+            if gabriel_claim_rating_643_completed
+            else "claim_oriented_phase_closed_gabriel_claim_rating_ready_global_analysis_closed"
             if claim_oriented_phase_close_completed
             else "final_qa_categorization_closed_gabriel_attribute_ready_global_analysis_closed"
             if final_qa_categorization_completed
@@ -3756,6 +3847,24 @@ def build_analysis_readiness(
                     if claim_oriented_phase_close_completed else 0
                 ),
                 "claim_oriented_global_analysis_readiness": False,
+                "gabriel_claim_rating_643_completed": gabriel_claim_rating_643_completed,
+                "gabriel_claim_rating_643_decision": (
+                    gabriel_claim_rating_643_decision.get("decision")
+                    if gabriel_claim_rating_643_completed else None
+                ),
+                "gabriel_claim_rating_643_valid_rows": (
+                    int(gabriel_claim_rating_643_decision.get("valid_rating_rows", 0))
+                    if gabriel_claim_rating_643_completed else 0
+                ),
+                "gabriel_claim_rating_643_quarantine_rows": (
+                    int(gabriel_claim_rating_643_decision.get("quarantine_rows", 0))
+                    if gabriel_claim_rating_643_completed else 0
+                ),
+                "gabriel_claim_rating_summary_review_allowed": (
+                    bool(gabriel_claim_rating_643_decision.get("summary_review_allowed", False))
+                    if gabriel_claim_rating_643_completed else False
+                ),
+                "gabriel_claim_rating_global_analysis_readiness": False,
                 "limited_qualitative_usage_registry_review_global_analysis_readiness": False,
                 "limited_qualitative_usage_layer_acceptance_global_analysis_readiness": False,
                 "limited_qualitative_usage_layer_qa_global_analysis_readiness": False,
@@ -7646,10 +7755,21 @@ def build_text_table_calibration_status_summary(
             claim_oriented_phase_close_completed,
             claim_oriented_phase_close_decision,
         ) = claim_oriented_phase_close_status()
+        (
+            gabriel_claim_rating_643_completed,
+            gabriel_claim_rating_643_decision,
+        ) = gabriel_claim_rating_643_status()
         return {
             **metadata,
             "calibration_phase": (
-                "compensation_extraction_claim_oriented_phase_closed_gabriel_claim_rating_ready"
+                (
+                    "compensation_extraction_gabriel_claim_rating_643_completed_summary_review_allowed"
+                    if gabriel_claim_rating_643_decision.get("decision")
+                    == "gabriel_claim_rating_643_completed_summary_review_allowed"
+                    else "compensation_extraction_gabriel_claim_rating_643_completed_with_quarantine"
+                )
+                if gabriel_claim_rating_643_completed
+                else "compensation_extraction_claim_oriented_phase_closed_gabriel_claim_rating_ready"
                 if claim_oriented_phase_close_completed
                 else "compensation_extraction_final_qa_categorization_phase_closed_gabriel_attribute_analysis_ready"
                 if final_qa_categorization_completed
@@ -8705,6 +8825,28 @@ def build_text_table_calibration_status_summary(
                 if claim_oriented_phase_close_completed else 0
             ),
             "claim_oriented_global_analysis_readiness": False,
+            "gabriel_claim_rating_643_completed": gabriel_claim_rating_643_completed,
+            "gabriel_claim_rating_643_decision": (
+                gabriel_claim_rating_643_decision.get("decision")
+                if gabriel_claim_rating_643_completed else None
+            ),
+            "gabriel_claim_rating_643_path": (
+                relative(COMPENSATION_EXTRACTION_GABRIEL_CLAIM_RATING_643_DIR)
+                if gabriel_claim_rating_643_completed else None
+            ),
+            "gabriel_claim_rating_643_valid_rows": (
+                int(gabriel_claim_rating_643_decision.get("valid_rating_rows", 0))
+                if gabriel_claim_rating_643_completed else 0
+            ),
+            "gabriel_claim_rating_643_quarantine_rows": (
+                int(gabriel_claim_rating_643_decision.get("quarantine_rows", 0))
+                if gabriel_claim_rating_643_completed else 0
+            ),
+            "gabriel_claim_rating_summary_review_allowed": (
+                bool(gabriel_claim_rating_643_decision.get("summary_review_allowed", False))
+                if gabriel_claim_rating_643_completed else False
+            ),
+            "gabriel_claim_rating_global_analysis_readiness": False,
             "limited_qualitative_usage_registry_review_global_analysis_readiness": False,
             "limited_qualitative_usage_layer_acceptance_global_analysis_readiness": False,
             "limited_qualitative_usage_layer_qa_global_analysis_readiness": False,

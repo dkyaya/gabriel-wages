@@ -318,13 +318,21 @@ class MaterializedClaimPhaseTests(unittest.TestCase):
 
     def test_dashboard_phase_is_claim_rating_ready_only(self):
         calibration = read_json(runner.ROOT / "docs/dashboard/data/text_table_calibration_status_summary.json")
-        self.assertEqual(calibration["calibration_phase"], "compensation_extraction_claim_oriented_phase_closed_gabriel_claim_rating_ready")
+        self.assertIn(calibration["calibration_phase"], {
+            "compensation_extraction_claim_oriented_phase_closed_gabriel_claim_rating_ready",
+            "compensation_extraction_gabriel_claim_rating_643_completed_summary_review_allowed",
+            "compensation_extraction_gabriel_claim_rating_643_completed_with_quarantine",
+        })
         self.assertTrue(calibration["gabriel_claim_rating_ready"])
         self.assertFalse(calibration["analysis_facing_promotion_allowed"])
 
     def test_dashboard_global_analysis_remains_closed(self):
         readiness = read_json(runner.ROOT / "docs/dashboard/data/analysis_readiness.json")
-        self.assertEqual(readiness["overall_status"], "claim_oriented_phase_closed_gabriel_claim_rating_ready_global_analysis_closed")
+        self.assertIn(readiness["overall_status"], {
+            "claim_oriented_phase_closed_gabriel_claim_rating_ready_global_analysis_closed",
+            "gabriel_claim_rating_643_completed_summary_review_allowed_global_analysis_closed",
+            "gabriel_claim_rating_643_completed_with_quarantine_global_analysis_closed",
+        })
         self.assertNotIn('"global_analysis_readiness": true', json.dumps(readiness, sort_keys=True).casefold())
 
 

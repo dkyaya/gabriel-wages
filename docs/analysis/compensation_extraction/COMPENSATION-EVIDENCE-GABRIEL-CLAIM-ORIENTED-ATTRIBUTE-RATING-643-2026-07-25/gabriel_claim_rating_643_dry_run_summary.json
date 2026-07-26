@@ -1,0 +1,83 @@
+{
+  "attribute_count": 14,
+  "attribute_taxonomy_version": "v1.1",
+  "candidate_id_set_hash_verified": true,
+  "candidate_id_set_sha256": "0365d38babf9d4000295a3326c8cfc77b92f8a7ad1f2f1117d0cb40f1613b91b",
+  "completed_at_utc": "2026-07-26T18:32:51.780564+00:00",
+  "gabriel_api_called": false,
+  "global_analysis_readiness": false,
+  "input_row_count": 643,
+  "manifest_sha256": "5993d89931fc9e816b60e607f4acb8a467bb587a3bf28390ed1922aae65c6fb6",
+  "non_ready_rows_included": 0,
+  "preflight_coverage": {
+    "automatic_raise": {
+      "present_in_manifest": true,
+      "selected_evidence_id": "qualitative:lobs_01fde53ca68eab05b472dac3"
+    },
+    "bargaining_settlement": {
+      "present_in_manifest": true,
+      "selected_evidence_id": "qualitative:lobs_002c1605061ebac04849affa"
+    },
+    "difficult_weak": {
+      "present_in_manifest": true,
+      "selected_evidence_id": "qualitative:lobs_420384d7d8c13d1f4c3f1cf6"
+    },
+    "fiscal_constraint": {
+      "present_in_manifest": true,
+      "selected_evidence_id": "qualitative:lobs_20851a55680ee9e68dda3ab1"
+    },
+    "implementation_timing": {
+      "present_in_manifest": true,
+      "selected_evidence_id": "qualitative:lobs_0061e768a4924ce0613c5725"
+    },
+    "market_comparability": {
+      "present_in_manifest": true,
+      "selected_evidence_id": "qualitative:lobs_0243e0cd2d60f9c9fd4c0959"
+    },
+    "parity_equity": {
+      "present_in_manifest": true,
+      "selected_evidence_id": "qualitative:lobs_4b7fa2ac4dc2c0441ed90118"
+    },
+    "rank_specialization": {
+      "present_in_manifest": true,
+      "selected_evidence_id": "qualitative:lobs_028611b71918af6461eeb646"
+    },
+    "strike_no_strike": {
+      "present_in_manifest": false,
+      "selected_evidence_id": null
+    }
+  },
+  "preflight_selected_rows": 8,
+  "raw_prompts_saved": 0,
+  "raw_responses_saved": 0,
+  "required_input_resolutions": {
+    "category_specific_manifest_summaries.json": "verified_prior_lite_relay_fallback_no_upstream_mutation",
+    "claim_oriented_attribute_codebook_v1.json": "primary_input_directory",
+    "claim_oriented_attribute_codebook_v1.md": "primary_input_directory",
+    "claim_oriented_attribute_schema_contract.json": "primary_input_directory",
+    "claim_oriented_attribute_taxonomy_brief.md": "primary_input_directory",
+    "claim_oriented_attribute_taxonomy_machine_readable.json": "primary_input_directory",
+    "claim_oriented_evidence_category_registry_summary.json": "primary_input_directory",
+    "claim_oriented_phase_close_decision.json": "primary_input_directory",
+    "claim_oriented_phase_close_invariant_checks.json": "primary_input_directory",
+    "claim_oriented_phase_close_stress_test_report.md": "primary_input_directory",
+    "claim_oriented_phase_close_summary.md": "primary_input_directory",
+    "claim_oriented_phase_close_validation_2026-07-25.md": "primary_input_directory",
+    "claims_not_supported_or_not_allowed.md": "primary_input_directory",
+    "evidence_to_claim_bridge_registry.csv": "primary_input_directory",
+    "evidence_to_claim_bridge_summary.json": "primary_input_directory",
+    "future_gabriel_claim_rating_prompt_template.md": "primary_input_directory",
+    "gabriel_claim_rating_ready_evidence_manifest.csv": "primary_input_directory",
+    "provisional_claims_needing_more_data.md": "primary_input_directory",
+    "provisional_claims_supported_by_current_evidence.md": "primary_input_directory",
+    "source_evidence_rating_preflight_checklist.md": "primary_input_directory",
+    "source_evidence_rating_schema.json": "primary_input_directory",
+    "source_evidence_rating_schema.md": "primary_input_directory"
+  },
+  "rollback_safe_output": true,
+  "rows_with_evidence_id": 643,
+  "rows_with_supplied_evidence_span": 643,
+  "stage": "dry_run",
+  "task_id": "COMPENSATION-EVIDENCE-GABRIEL-CLAIM-ORIENTED-ATTRIBUTE-RATING-643-2026-07-25",
+  "unique_evidence_id_count": 643
+}

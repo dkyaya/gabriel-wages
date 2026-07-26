@@ -1,0 +1,120 @@
+{
+  "attribute_labels_are_causal_proof": false,
+  "attribute_taxonomy_version": "v1.1",
+  "attributes": [
+    {
+      "attribute_id": "automatic_raise_mechanism",
+      "definition": "Raises occur automatically through COLA, CPI, step, seniority, schedule, or contract formula.",
+      "exclusion_rule": "Exclude a one-time discretionary increase without an automatic rule."
+    },
+    {
+      "attribute_id": "bargaining_power_signal",
+      "definition": "Text shows union bargaining, arbitration, settlement, memorandum, factfinding, or negotiated leverage affecting pay.",
+      "exclusion_rule": "Do not infer bargaining power from the mere existence of a CBA."
+    },
+    {
+      "attribute_id": "market_or_comparability_pressure",
+      "definition": "Pay is justified by market comparison, peer municipalities, recruitment, retention, or competitiveness.",
+      "exclusion_rule": "Do not infer market pressure from a wage schedule alone."
+    },
+    {
+      "attribute_id": "rank_or_specialization_premium",
+      "definition": "Pay differs by rank, certification, classification, specialty, hazard, assignment, or role.",
+      "exclusion_rule": "Titles without stated compensation differentiation are insufficient."
+    },
+    {
+      "attribute_id": "implementation_or_retroactivity_advantage",
+      "definition": "Text gives favorable effective dates, retroactivity, staged increases, delayed or accelerated implementation, or other timing terms that may affect compensation.",
+      "exclusion_rule": "Do not assign advantage from a date alone without comparative support."
+    },
+    {
+      "attribute_id": "fiscal_constraint_signal",
+      "definition": "Text cites budget limits, affordability, funding, fiscal crisis, tax limits, or municipal finance constraints.",
+      "exclusion_rule": "Do not infer a fiscal constraint from government authorship alone."
+    },
+    {
+      "attribute_id": "parity_or_internal_equity_signal",
+      "definition": "Text uses parity, compression, internal equity, or alignment with other employees or units.",
+      "exclusion_rule": "Equal percentages alone do not establish parity language."
+    },
+    {
+      "attribute_id": "non_base_compensation_signal",
+      "definition": "Text concerns overtime, stipend, longevity, certification, healthcare, pension, leave, equipment, reimbursement, or other non-base compensation.",
+      "exclusion_rule": "Do not treat non-base compensation as base-wage evidence."
+    },
+    {
+      "attribute_id": "base_wage_direct_value",
+      "definition": "Text directly reports base wage, hourly rate, salary, step, grade, pay band, percentage raise, or effective date.",
+      "exclusion_rule": "Do not infer, annualize, or coerce a value not directly stated."
+    },
+    {
+      "attribute_id": "safety_advantage_signal",
+      "definition": "Text suggests a mechanism that may advantage police, fire, or safety compensation relative to non-safety.",
+      "exclusion_rule": "A safety occupation label without comparative mechanism language is insufficient."
+    },
+    {
+      "attribute_id": "non_safety_constraint_signal",
+      "definition": "Text suggests non-safety pay is constrained, standardized, delayed, weaker, or less differentiated.",
+      "exclusion_rule": "A non-safety occupation label alone is insufficient."
+    },
+    {
+      "attribute_id": "gap_narrowing_signal",
+      "definition": "Text suggests parity, equity, compression relief, shared raises, or another mechanism that may narrow safety/non-safety differences.",
+      "exclusion_rule": "Do not claim an actual narrowed gap without an approved quantitative comparison."
+    },
+    {
+      "attribute_id": "strike_or_no_strike_constraint",
+      "definition": "Text discusses strike rights, no-strike clauses, work stoppage restrictions, essential-service limits, strike or slowdown penalties, labor-peace clauses, or arbitration/factfinding substitutes for strike leverage.",
+      "exclusion_rule": "Do not infer direction; use neutral_or_unclear unless the supplied text states direction."
+    },
+    {
+      "attribute_id": "weak_or_no_claim_support",
+      "definition": "Evidence is too weak for claim support in this phase and carries a specific reason code.",
+      "exclusion_rule": "Do not use when another attribute is clearly supported by the exact span."
+    }
+  ],
+  "controlled_values": {
+    "claim_relevance": [
+      "direct_text_claim",
+      "documentary_mechanism_claim",
+      "provisional_causal_candidate",
+      "context_only",
+      "not_claim_ready"
+    ],
+    "direction_of_pressure": [
+      "safety_advantage",
+      "non_safety_advantage",
+      "gap_narrowing",
+      "neutral_or_unclear",
+      "not_applicable"
+    ],
+    "evidence_strength": [
+      "strong",
+      "moderate",
+      "weak",
+      "not_supported"
+    ],
+    "overall_evidence_quality": [
+      "high",
+      "medium",
+      "low"
+    ],
+    "scout_priority_signal": [
+      "high",
+      "medium",
+      "low"
+    ]
+  },
+  "global_analysis_readiness": false,
+  "migration_from": "v1",
+  "migration_note": "Adds only strike_or_no_strike_constraint; the other 13 attribute IDs and meanings remain stable.",
+  "required_rating_fields": [
+    "attribute_present",
+    "direction_of_pressure",
+    "evidence_strength",
+    "claim_relevance",
+    "reason_code",
+    "supporting_quote",
+    "claim_boundary"
+  ]
+}

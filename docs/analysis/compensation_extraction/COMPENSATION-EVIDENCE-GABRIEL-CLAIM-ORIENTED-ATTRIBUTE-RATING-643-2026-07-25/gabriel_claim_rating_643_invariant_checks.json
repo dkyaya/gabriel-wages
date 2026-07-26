@@ -1,0 +1,24 @@
+{
+  "all_invariants_passed": true,
+  "checks": {
+    "all_positive_attributes_have_reason_codes": true,
+    "all_positive_quotes_exact_substrings": true,
+    "all_valid_rows_have_14_attributes": true,
+    "candidate_id_hash_matches": true,
+    "controlled_values_valid": true,
+    "cross_row_statistics_not_computed": true,
+    "global_analysis_readiness_false": true,
+    "input_count_is_643": true,
+    "no_duplicate_evidence_ids": true,
+    "no_final_causal_claims": true,
+    "no_raw_prompts_or_responses_saved": true,
+    "no_wage_gap_claims": true,
+    "only_ready_exact_span_rows_input": true,
+    "partial_outputs_cannot_masquerade_as_complete": true,
+    "preflight_passed_before_live": true,
+    "strike_no_strike_attribute_present_in_schema": true,
+    "valid_plus_quarantine_reconciles_to_643": true
+  },
+  "schema_version": "gabriel_claim_oriented_attribute_rating_v1_1",
+  "task_id": "COMPENSATION-EVIDENCE-GABRIEL-CLAIM-ORIENTED-ATTRIBUTE-RATING-643-2026-07-25"
+}

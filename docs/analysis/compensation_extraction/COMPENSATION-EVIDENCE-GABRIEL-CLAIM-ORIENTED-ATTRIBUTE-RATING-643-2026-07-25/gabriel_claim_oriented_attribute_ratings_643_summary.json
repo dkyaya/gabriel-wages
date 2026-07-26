@@ -1,0 +1,66 @@
+{
+  "attribute_rating_summary": {
+    "attribute_count_per_valid_row": 14,
+    "cross_row_distribution_computed": false
+  },
+  "attribute_taxonomy_version": "v1.1",
+  "backend": "huit_openai_responses_direct_sdk",
+  "bugs_discovered_and_fixed": [
+    "weak_or_no_claim_support positive diagnostics were incorrectly rejected for their required not_claim_ready relevance",
+    "weak_or_no_claim_support allowed strength/direction combinations were narrower than the published v1.1 controlled schema",
+    "upstream dashboard descendant validators did not recognize the bounded GABRIEL completion phases"
+  ],
+  "claim_relevance_summary": {
+    "controlled_values": [
+      "direct_text_claim",
+      "documentary_mechanism_claim",
+      "provisional_causal_candidate",
+      "context_only",
+      "not_claim_ready"
+    ],
+    "cross_row_distribution_computed": false
+  },
+  "cross_row_attribute_direction_strength_claim_relevance_statistics_computed": false,
+  "decision": "gabriel_claim_rating_643_completed_with_quarantine",
+  "direction_of_pressure_summary": {
+    "controlled_values": [
+      "safety_advantage",
+      "non_safety_advantage",
+      "gap_narrowing",
+      "neutral_or_unclear",
+      "not_applicable"
+    ],
+    "cross_row_distribution_computed": false
+  },
+  "evidence_strength_summary": {
+    "controlled_values": [
+      "strong",
+      "moderate",
+      "weak",
+      "not_supported"
+    ],
+    "cross_row_distribution_computed": false
+  },
+  "gabriel_api_ran": true,
+  "global_analysis_readiness": false,
+  "input_rows": 643,
+  "model": "gpt-5.4-nano",
+  "no_wage_gap_or_final_causal_claims": true,
+  "positive_exact_quote_pass_count": 691,
+  "preflight_passed": true,
+  "preflight_rows": 8,
+  "preflight_schema_valid_rate": 1.0,
+  "quarantine_rows": 35,
+  "schema_valid_rate": 0.9455676516329704,
+  "schema_version": "gabriel_claim_oriented_attribute_rating_v1_1",
+  "strike_or_no_strike_attribute_result": {
+    "attribute_present_in_v1_1_contract": true,
+    "cross_row_distribution_computed": false,
+    "fabricated_preflight_case": false,
+    "representative_keyword_row_present_in_input_manifest": false
+  },
+  "summary_policy": "Only completion, reconciliation, and QA counts are reported; substantive cross-row distributions are reserved for the separately authorized summary review.",
+  "summary_review_allowed": false,
+  "task_id": "COMPENSATION-EVIDENCE-GABRIEL-CLAIM-ORIENTED-ATTRIBUTE-RATING-643-2026-07-25",
+  "valid_rating_rows": 608
+}
