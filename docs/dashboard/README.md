@@ -104,6 +104,8 @@ The current phase is `compensation_extraction_limited_qualitative_usage_registry
 
 The current phase is `compensation_extraction_limited_qualitative_usage_registry_acceptance_registered_strategy_prompt_allowed`. The reviewed 643-row limited qualitative registry is accepted as internally consistent metadata. Candidate-ID, layer-file, schema, scope, contamination, dashboard, and forbidden-action checks pass; the 56-row strict-primary manifest remains narrow and non-analytic; and acceptance created no evidence rows or analysis outputs. A separately authorized pipeline-stage strategy prompt may run next, but it may recommend rather than execute a future stage. Global readiness, full qualitative readiness, and analysis-facing promotion remain false.
 
+The current phase is `compensation_extraction_final_qa_categorization_phase_closed_gabriel_attribute_analysis_ready`. The current QA/debugging/categorization phase is closed: all 8,939 considered lane records have exactly one practical primary category. The final registry contains 643 GABRIEL-attribute-ready exact-span rows, 862 limited documentary rows, 614 navigation-only rows, 5,078 companion/context rows, 121 quarantined rows, and 1,621 phase write-offs. A concise 13-attribute taxonomy is ready for a separately authorized bounded GABRIEL assignment run over the 643-row manifest only. Global analysis readiness, quantitative wage claims, wage gaps, regressions, and causal claims remain closed.
+
 ## Final provisional schema readiness — 2026-07-26
 
 The immutable five-ledger provisional package remains integrity-valid, but a

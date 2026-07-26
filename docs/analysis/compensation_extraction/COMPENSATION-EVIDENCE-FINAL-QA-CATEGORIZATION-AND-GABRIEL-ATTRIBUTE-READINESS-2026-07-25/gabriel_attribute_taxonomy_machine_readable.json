@@ -1,0 +1,78 @@
+{
+  "assignment_mode": "multi_label_exact_evidence_only",
+  "attributes": [
+    {
+      "attribute_id": "cola_or_cpi",
+      "definition": "Pay is tied to CPI, COLA, inflation, or a cost-of-living adjustment.",
+      "output_type": "boolean"
+    },
+    {
+      "attribute_id": "step_or_seniority",
+      "definition": "Pay changes by step, seniority, service time, or progression schedule.",
+      "output_type": "boolean"
+    },
+    {
+      "attribute_id": "rank_or_classification",
+      "definition": "Pay differs by rank, title, classification, grade, or job class.",
+      "output_type": "boolean"
+    },
+    {
+      "attribute_id": "across_the_board_raise",
+      "definition": "Pay increases apply broadly across employees or a bargaining unit.",
+      "output_type": "boolean"
+    },
+    {
+      "attribute_id": "percentage_raise",
+      "definition": "The document states a percentage raise or percentage wage adjustment.",
+      "output_type": "boolean"
+    },
+    {
+      "attribute_id": "market_or_comparability",
+      "definition": "Pay is linked to a market study, peer comparison, recruitment, or retention.",
+      "output_type": "boolean"
+    },
+    {
+      "attribute_id": "parity_or_internal_equity",
+      "definition": "Pay is linked to parity, internal equity, compression, or alignment with another group.",
+      "output_type": "boolean"
+    },
+    {
+      "attribute_id": "bargaining_or_settlement",
+      "definition": "Pay is described through CBA, settlement, memorandum, arbitration, or factfinding terms.",
+      "output_type": "boolean"
+    },
+    {
+      "attribute_id": "implementation_timing",
+      "definition": "Pay depends on effective dates, retroactivity, schedules, or contract periods.",
+      "output_type": "boolean"
+    },
+    {
+      "attribute_id": "fiscal_constraint",
+      "definition": "Pay is linked to budgets, funding, affordability, or municipal fiscal limits.",
+      "output_type": "boolean"
+    },
+    {
+      "attribute_id": "non_base_compensation",
+      "definition": "Evidence concerns benefits, overtime, stipends, longevity, leave, healthcare, pension, reimbursement, or equipment.",
+      "output_type": "boolean"
+    },
+    {
+      "attribute_id": "reference_only",
+      "definition": "Evidence points elsewhere or supplies navigation/context rather than coded evidence.",
+      "output_type": "boolean"
+    },
+    {
+      "attribute_id": "not_useful_for_attribute_analysis",
+      "definition": "Evidence lacks enough support for attribute classification in this phase; a reason code is required.",
+      "output_type": "boolean"
+    }
+  ],
+  "causal_interpretation_allowed": false,
+  "prohibited_labels": [
+    "null",
+    "no_good"
+  ],
+  "required_reason_code_when_not_useful": true,
+  "schema_version": "gabriel_compensation_attribute_taxonomy_v1",
+  "wage_effect_interpretation_allowed": false
+}

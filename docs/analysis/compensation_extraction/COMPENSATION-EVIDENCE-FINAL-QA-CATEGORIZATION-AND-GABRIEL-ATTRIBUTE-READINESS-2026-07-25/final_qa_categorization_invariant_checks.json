@@ -1,0 +1,35 @@
+{
+  "all_invariants_passed": true,
+  "category_counts": {
+    "companion_context_only": 5078,
+    "gabriel_attribute_ready": 643,
+    "limited_documentary_claim_ready": 862,
+    "navigation_only": 614,
+    "quarantined": 121,
+    "write_off_this_phase": 1621
+  },
+  "checks": {
+    "all_8939_considered_records_have_one_category": true,
+    "all_direct_inputs_present_and_immutable": true,
+    "category_counts_reconcile": true,
+    "causal_and_wage_gap_claims_forbidden": true,
+    "claim_permissions_fail_closed": true,
+    "conflict_observations_quarantined": true,
+    "dashboard_global_readiness_false": true,
+    "evidence_ids_unique": true,
+    "future_prompt_preserves_phase_boundaries": true,
+    "gabriel_ready_643_exact_span_only": true,
+    "idempotent_resume_supported": true,
+    "no_full_page_text_or_raw_model_payload": true,
+    "non_base_and_reference_remain_context_only": true,
+    "package_sha256_5_of_5": true,
+    "partial_outputs_cannot_claim_complete": true,
+    "quantitative_exceptions_not_promoted": true,
+    "registry_acceptance_authorizes_phase_close": true,
+    "taxonomy_forbids_vague_null_no_good": true,
+    "taxonomy_has_13_controlled_attributes": true,
+    "weak_evidence_not_forced_ready": true
+  },
+  "schema_version": "compensation_evidence_final_qa_categorization_v1",
+  "task_id": "COMPENSATION-EVIDENCE-FINAL-QA-CATEGORIZATION-AND-GABRIEL-ATTRIBUTE-READINESS-2026-07-25"
+}

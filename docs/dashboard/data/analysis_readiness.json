@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": "0.1.0",
-    "generated_at": "2026-07-26T16:53:49Z",
+    "generated_at": "2026-07-26T17:10:08Z",
     "data_vintage": "2026-07-23",
     "source_files": [
       "docs/analysis/national_scout_coverage_state.csv",
@@ -82,7 +82,7 @@
       "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
     ]
   },
-  "overall_status": "limited_qualitative_usage_registry_acceptance_registered_strategy_only_global_analysis_closed",
+  "overall_status": "final_qa_categorization_closed_gabriel_attribute_ready_global_analysis_closed",
   "current_inputs": {
     "national_queue_available": true,
     "national_coverage_available": true,
@@ -139,7 +139,7 @@
     },
     "wage_extraction_stage": {
       "available": true,
-      "display_status": "limited_qualitative_usage_registry_acceptance_registered_strategy_only_global_analysis_closed",
+      "display_status": "final_qa_categorization_closed_gabriel_attribute_ready_global_analysis_closed",
       "observation_count": 1907,
       "qualitative_mechanism_observation_count": 1954,
       "qa_status": "pass",
@@ -228,6 +228,11 @@
       "limited_qualitative_usage_registry_acceptance_decision": "limited_qualitative_usage_registry_acceptance_registered",
       "limited_qualitative_usage_pipeline_stage_strategy_prompt_allowed": true,
       "limited_qualitative_usage_registry_acceptance_global_analysis_readiness": false,
+      "final_qa_categorization_phase_closed": true,
+      "final_qa_categorization_decision": "final_qa_phase_closed_gabriel_attribute_analysis_ready",
+      "gabriel_attribute_analysis_ready": true,
+      "gabriel_attribute_analysis_ready_rows": 643,
+      "final_qa_categorization_global_analysis_readiness": false,
       "limited_qualitative_usage_registry_review_global_analysis_readiness": false,
       "limited_qualitative_usage_layer_acceptance_global_analysis_readiness": false,
       "limited_qualitative_usage_layer_qa_global_analysis_readiness": false,

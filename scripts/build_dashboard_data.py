@@ -917,6 +917,31 @@ COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REGISTRY_ACCEPTANCE_INVARIANTS
     COMPENSATION_EXTRACTION_LIMITED_QUALITATIVE_USAGE_REGISTRY_ACCEPTANCE_DIR
     / "limited_qualitative_usage_registry_acceptance_invariant_checks.json"
 )
+COMPENSATION_EXTRACTION_FINAL_QA_CATEGORIZATION_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "COMPENSATION-EVIDENCE-FINAL-QA-CATEGORIZATION-AND-GABRIEL-ATTRIBUTE-READINESS-2026-07-25"
+)
+COMPENSATION_EXTRACTION_FINAL_QA_CATEGORIZATION_DECISION_PATH = (
+    COMPENSATION_EXTRACTION_FINAL_QA_CATEGORIZATION_DIR
+    / "final_qa_categorization_phase_close_decision.json"
+)
+COMPENSATION_EXTRACTION_FINAL_QA_CATEGORIZATION_REGISTRY_SUMMARY_PATH = (
+    COMPENSATION_EXTRACTION_FINAL_QA_CATEGORIZATION_DIR
+    / "compensation_evidence_final_category_registry_summary.json"
+)
+COMPENSATION_EXTRACTION_FINAL_QA_CATEGORIZATION_INVARIANTS_PATH = (
+    COMPENSATION_EXTRACTION_FINAL_QA_CATEGORIZATION_DIR
+    / "final_qa_categorization_invariant_checks.json"
+)
+COMPENSATION_EXTRACTION_FINAL_QA_CATEGORIZATION_TAXONOMY_PATH = (
+    COMPENSATION_EXTRACTION_FINAL_QA_CATEGORIZATION_DIR
+    / "gabriel_attribute_taxonomy_machine_readable.json"
+)
+COMPENSATION_EXTRACTION_FINAL_QA_CATEGORIZATION_CLAIM_SUMMARY_PATH = (
+    COMPENSATION_EXTRACTION_FINAL_QA_CATEGORIZATION_DIR
+    / "evidence_claim_type_registry_summary.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -2277,6 +2302,66 @@ def limited_qualitative_usage_registry_acceptance_status() -> tuple[bool, dict[s
     return True, decision
 
 
+def final_qa_categorization_status() -> tuple[bool, dict[str, Any]]:
+    """Fail closed unless final QA categorization is reconciled and globally closed."""
+    required = (
+        COMPENSATION_EXTRACTION_FINAL_QA_CATEGORIZATION_DECISION_PATH,
+        COMPENSATION_EXTRACTION_FINAL_QA_CATEGORIZATION_REGISTRY_SUMMARY_PATH,
+        COMPENSATION_EXTRACTION_FINAL_QA_CATEGORIZATION_INVARIANTS_PATH,
+        COMPENSATION_EXTRACTION_FINAL_QA_CATEGORIZATION_TAXONOMY_PATH,
+        COMPENSATION_EXTRACTION_FINAL_QA_CATEGORIZATION_CLAIM_SUMMARY_PATH,
+        COMPENSATION_EXTRACTION_FINAL_QA_CATEGORIZATION_DIR / "next_gabriel_attribute_analysis_prompt.md",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    decision = read_json(COMPENSATION_EXTRACTION_FINAL_QA_CATEGORIZATION_DECISION_PATH)
+    registry = read_json(COMPENSATION_EXTRACTION_FINAL_QA_CATEGORIZATION_REGISTRY_SUMMARY_PATH)
+    invariants = read_json(COMPENSATION_EXTRACTION_FINAL_QA_CATEGORIZATION_INVARIANTS_PATH)
+    taxonomy = read_json(COMPENSATION_EXTRACTION_FINAL_QA_CATEGORIZATION_TAXONOMY_PATH)
+    claims = read_json(COMPENSATION_EXTRACTION_FINAL_QA_CATEGORIZATION_CLAIM_SUMMARY_PATH)
+    expected = {
+        "gabriel_attribute_ready": 643,
+        "limited_documentary_claim_ready": 862,
+        "navigation_only": 614,
+        "companion_context_only": 5078,
+        "quarantined": 121,
+        "write_off_this_phase": 1621,
+    }
+    attribute_ids = [item.get("attribute_id") for item in taxonomy.get("attributes", [])]
+    if not (
+        decision.get("task_id")
+        == "COMPENSATION-EVIDENCE-FINAL-QA-CATEGORIZATION-AND-GABRIEL-ATTRIBUTE-READINESS-2026-07-25"
+        and decision.get("decision") == "final_qa_phase_closed_gabriel_attribute_analysis_ready"
+        and decision.get("phase_closed") is True
+        and decision.get("gabriel_attribute_analysis_ready") is True
+        and decision.get("gabriel_attribute_analysis_ready_rows") == 643
+        and decision.get("category_counts") == expected
+        and decision.get("considered_records") == 8939
+        and decision.get("global_analysis_readiness") is False
+        and decision.get("full_qualitative_readiness") is False
+        and decision.get("analysis_facing_promotion_allowed") is False
+        and decision.get("package_sha256_checks_passed") == 5
+        and decision.get("model_calls") == 0
+        and decision.get("wage_gap_calculations") == 0
+        and decision.get("regressions") == 0
+        and decision.get("causal_claims_made") == 0
+        and registry.get("considered_records") == 8939
+        and registry.get("category_counts") == expected
+        and registry.get("one_primary_category_per_record") is True
+        and registry.get("duplicate_evidence_ids") == 0
+        and registry.get("global_analysis_readiness") is False
+        and invariants.get("all_invariants_passed") is True
+        and len(attribute_ids) == 13
+        and len(attribute_ids) == len(set(attribute_ids))
+        and not {"null", "no_good"}.intersection(attribute_ids)
+        and claims.get("allowed_now") == 2
+        and claims.get("not_allowed") == 4
+        and claims.get("global_analysis_readiness") is False
+    ):
+        raise ValueError("final QA categorization fails dashboard gates")
+    return True, decision
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -2983,6 +3068,10 @@ def build_analysis_readiness(
         limited_qualitative_usage_registry_acceptance_completed,
         limited_qualitative_usage_registry_acceptance_decision,
     ) = limited_qualitative_usage_registry_acceptance_status()
+    (
+        final_qa_categorization_completed,
+        final_qa_categorization_decision,
+    ) = final_qa_categorization_status()
     if scale_1000_targeted_qa_completed and (
         scale_1000_targeted_qa_decision.get("qa_pass") is not True
         or scale_1000_targeted_qa_decision.get(
@@ -3029,7 +3118,9 @@ def build_analysis_readiness(
     return {
         "metadata": metadata,
         "overall_status": (
-            "limited_qualitative_usage_registry_acceptance_registered_strategy_only_global_analysis_closed"
+            "final_qa_categorization_closed_gabriel_attribute_ready_global_analysis_closed"
+            if final_qa_categorization_completed
+            else "limited_qualitative_usage_registry_acceptance_registered_strategy_only_global_analysis_closed"
             if limited_qualitative_usage_registry_acceptance_completed
             else "limited_qualitative_usage_registry_review_pass_registry_acceptance_prompt_allowed_global_analysis_closed"
             if limited_qualitative_usage_registry_review_completed
@@ -3146,7 +3237,9 @@ def build_analysis_readiness(
             "wage_extraction_stage": {
                 "available": extraction_completed,
                 "display_status": (
-                    "limited_qualitative_usage_registry_acceptance_registered_strategy_only_global_analysis_closed"
+                    "final_qa_categorization_closed_gabriel_attribute_ready_global_analysis_closed"
+                    if final_qa_categorization_completed
+                    else "limited_qualitative_usage_registry_acceptance_registered_strategy_only_global_analysis_closed"
                     if limited_qualitative_usage_registry_acceptance_completed
                     else "limited_qualitative_usage_registry_review_pass_registry_acceptance_only_global_analysis_closed"
                     if limited_qualitative_usage_registry_review_completed
@@ -3526,6 +3619,20 @@ def build_analysis_readiness(
                     if limited_qualitative_usage_registry_acceptance_completed else False
                 ),
                 "limited_qualitative_usage_registry_acceptance_global_analysis_readiness": False,
+                "final_qa_categorization_phase_closed": final_qa_categorization_completed,
+                "final_qa_categorization_decision": (
+                    final_qa_categorization_decision.get("decision")
+                    if final_qa_categorization_completed else None
+                ),
+                "gabriel_attribute_analysis_ready": (
+                    bool(final_qa_categorization_decision.get("gabriel_attribute_analysis_ready", False))
+                    if final_qa_categorization_completed else False
+                ),
+                "gabriel_attribute_analysis_ready_rows": (
+                    int(final_qa_categorization_decision.get("gabriel_attribute_analysis_ready_rows", 0))
+                    if final_qa_categorization_completed else 0
+                ),
+                "final_qa_categorization_global_analysis_readiness": False,
                 "limited_qualitative_usage_registry_review_global_analysis_readiness": False,
                 "limited_qualitative_usage_layer_acceptance_global_analysis_readiness": False,
                 "limited_qualitative_usage_layer_qa_global_analysis_readiness": False,
@@ -7408,10 +7515,16 @@ def build_text_table_calibration_status_summary(
             limited_qualitative_usage_registry_acceptance_completed,
             limited_qualitative_usage_registry_acceptance_decision,
         ) = limited_qualitative_usage_registry_acceptance_status()
+        (
+            final_qa_categorization_completed,
+            final_qa_categorization_decision,
+        ) = final_qa_categorization_status()
         return {
             **metadata,
             "calibration_phase": (
-                "compensation_extraction_limited_qualitative_usage_registry_acceptance_registered_strategy_prompt_allowed"
+                "compensation_extraction_final_qa_categorization_phase_closed_gabriel_attribute_analysis_ready"
+                if final_qa_categorization_completed
+                else "compensation_extraction_limited_qualitative_usage_registry_acceptance_registered_strategy_prompt_allowed"
                 if limited_qualitative_usage_registry_acceptance_completed
                 else "compensation_extraction_limited_qualitative_usage_registry_review_pass_registry_acceptance_prompt_allowed"
                 if limited_qualitative_usage_registry_review_completed
@@ -8407,6 +8520,32 @@ def build_text_table_calibration_status_summary(
                 if limited_qualitative_usage_registry_acceptance_completed else False
             ),
             "limited_qualitative_usage_registry_acceptance_global_analysis_readiness": False,
+            "final_qa_categorization_phase_closed": final_qa_categorization_completed,
+            "final_qa_categorization_decision": (
+                final_qa_categorization_decision.get("decision")
+                if final_qa_categorization_completed else None
+            ),
+            "final_qa_categorization_path": (
+                relative(COMPENSATION_EXTRACTION_FINAL_QA_CATEGORIZATION_DIR)
+                if final_qa_categorization_completed else None
+            ),
+            "final_qa_categorization_considered_records": (
+                int(final_qa_categorization_decision.get("considered_records", 0))
+                if final_qa_categorization_completed else None
+            ),
+            "final_qa_categorization_category_counts": (
+                final_qa_categorization_decision.get("category_counts")
+                if final_qa_categorization_completed else None
+            ),
+            "gabriel_attribute_analysis_ready": (
+                bool(final_qa_categorization_decision.get("gabriel_attribute_analysis_ready", False))
+                if final_qa_categorization_completed else False
+            ),
+            "gabriel_attribute_analysis_ready_rows": (
+                int(final_qa_categorization_decision.get("gabriel_attribute_analysis_ready_rows", 0))
+                if final_qa_categorization_completed else 0
+            ),
+            "final_qa_categorization_global_analysis_readiness": False,
             "limited_qualitative_usage_registry_review_global_analysis_readiness": False,
             "limited_qualitative_usage_layer_acceptance_global_analysis_readiness": False,
             "limited_qualitative_usage_layer_qa_global_analysis_readiness": False,
@@ -8655,7 +8794,9 @@ def build_text_table_calibration_status_summary(
                 else False
             ),
             "next_recommendation": (
-                "seek_separate_authorization_to_run_pipeline_stage_strategy_review"
+                "seek_separate_authorization_to_run_bounded_gabriel_attribute_analysis"
+                if final_qa_categorization_completed
+                else "seek_separate_authorization_to_run_pipeline_stage_strategy_review"
                 if limited_qualitative_usage_registry_acceptance_completed
                 else "seek_separate_authorization_to_run_limited_qualitative_usage_registry_acceptance"
                 if limited_qualitative_usage_registry_review_completed
@@ -8733,7 +8874,9 @@ def build_text_table_calibration_status_summary(
                 )
             ),
             "wage_extraction_status": (
-                "limited_qualitative_promotion_quantitative_862_candidates_1045_exceptions_separate_analysis_closed"
+                "final_qa_categorization_quantitative_862_documentary_1040_written_off_5_conflict_quarantine_analysis_closed"
+                if final_qa_categorization_completed
+                else "limited_qualitative_promotion_quantitative_862_candidates_1045_exceptions_separate_analysis_closed"
                 if limited_qualitative_promotion_completed
                 else "pipeline_hardening_quantitative_862_candidates_1045_exceptions_preserved_analysis_closed"
                 if pipeline_hardening_accelerator_completed
@@ -8775,7 +8918,9 @@ def build_text_table_calibration_status_summary(
                 if extraction_completed else "not_started"
             ),
             "qualitative_extraction_status": (
-                "limited_qualitative_usage_registry_acceptance_registered_643_rows_zero_contamination_strategy_only_analysis_closed"
+                "final_qa_categorization_phase_closed_643_gabriel_attribute_ready_614_navigation_121_quarantine_1621_writeoff_global_analysis_closed"
+                if final_qa_categorization_completed
+                else "limited_qualitative_usage_registry_acceptance_registered_643_rows_zero_contamination_strategy_only_analysis_closed"
                 if limited_qualitative_usage_registry_acceptance_completed
                 else "limited_qualitative_usage_registry_review_pass_643_rows_zero_contamination_registry_acceptance_only_analysis_closed"
                 if limited_qualitative_usage_registry_review_completed

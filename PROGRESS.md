@@ -6,6 +6,27 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-26 (Compensation-evidence QA categorization phase closed)
+
+**Did**
+- Reverified the accepted 643-ID hash, 21 immutable direct inputs, five package-ledger hashes, dashboard closure, and all carried lane counts.
+- Assigned all 8,939 considered records to exactly one phase-close category: 643 GABRIEL-ready, 862 limited documentary, 614 navigation-only, 5,078 companion/context, 121 quarantined, and 1,621 written off.
+- Preserved weak evidence conservatively: 116 restricted spans and five conflicts quarantined; 581 unavailable spans and 1,040 non-conflict quantitative exceptions written off; non-base/reference lanes remain context only.
+- Added a 13-attribute taxonomy, exact-evidence schema, claim-permission registry, 74 focused tests across 48 adversarial modes, dashboard gates, and a separately authorization-gated GABRIEL prompt. All 455 focused tests and 60 ingestion tests passed.
+
+**Decisions**
+- Decision is `final_qa_phase_closed_gabriel_attribute_analysis_ready`. The QA/debugging/categorization phase is closed; a bounded GABRIEL attribute-assignment run over 643 exact spans may be separately authorized next.
+- Global/full qualitative readiness, analysis-facing promotion, quantitative wage claims, wage gaps, regressions, and causal claims remain closed. Scouting restart is not recommended now.
+
+**Surprises/breakage**
+- The registry-review validator and three older materialized-output tests correctly rejected the new descendant phase until their exact closed-state allowlists were extended. No evidence, count, readiness, claim-permission, or phase-boundary assertion was weakened.
+
+**Corpus snapshot**
+- `contracts=64`, `discourse=0`, `coverage=64`, `cities=19`; 28 healthy matched pairs (10 exact-cycle, 18 overlap-cycle), two exploratory adjacent matches, and six unmatched safety units.
+
+**Next steps**
+- Seek separate authorization for `next_gabriel_attribute_analysis_prompt.md`. Use only the 643 exact-span manifest; run no source access, statistics, wage-gap, regression, or causal work, and keep global readiness false.
+
 ## 2026-07-26 (Limited qualitative usage registry accepted)
 
 **Did**

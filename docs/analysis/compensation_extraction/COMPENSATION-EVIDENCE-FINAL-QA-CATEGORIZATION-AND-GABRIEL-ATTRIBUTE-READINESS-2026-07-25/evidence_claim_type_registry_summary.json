@@ -1,0 +1,11 @@
+{
+  "allowed_now": 2,
+  "allowed_now_claim_types": [
+    "evidence_existence_claim",
+    "documentary_mechanism_claim"
+  ],
+  "claim_types": 7,
+  "future_separate_review_required": 1,
+  "global_analysis_readiness": false,
+  "not_allowed": 4
+}

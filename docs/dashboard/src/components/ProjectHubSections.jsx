@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "compensation_extraction_final_qa_categorization_phase_closed_gabriel_attribute_analysis_ready"
+              ? "Compensation-evidence QA phase closed; bounded GABRIEL attribute analysis may proceed"
+              : textTableCalibrationStatus.calibration_phase ===
             "compensation_extraction_limited_qualitative_usage_registry_acceptance_registered_strategy_prompt_allowed"
               ? "Limited qualitative usage registry accepted; pipeline-stage strategy review may proceed"
               : textTableCalibrationStatus.calibration_phase ===
@@ -867,6 +870,17 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "compensation_extraction_final_qa_categorization_phase_closed_gabriel_attribute_analysis_ready" ? (
+            <>
+              The QA/debugging/categorization phase is closed with 8,939 records assigned to
+              exactly one category: 643 GABRIEL-ready exact-span rows, 862 limited documentary
+              rows, 614 navigation-only rows, 5,078 companion/context rows, 121 quarantined
+              rows, and 1,621 phase write-offs. The 13-attribute taxonomy is ready for a
+              separately authorized bounded GABRIEL run over the 643-row manifest. Global
+              analysis readiness, wage-gap analysis, regressions, and causal claims remain
+              closed.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "compensation_extraction_limited_qualitative_usage_registry_acceptance_registered_strategy_prompt_allowed" ? (
             <>
               The reviewed 643-row literal mechanism-language registry is accepted as valid

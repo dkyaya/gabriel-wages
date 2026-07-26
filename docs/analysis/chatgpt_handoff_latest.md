@@ -6,6 +6,26 @@ Last updated: `2026-07-26`
 
 ---
 
+## 2026-07-26 — Compensation-evidence QA categorization phase closed
+
+### Current State
+
+- **Authority/start:** began at clean tracked `02d3710fcb6a47816a0429ac6be243c33fb6bb8c`; 21 immutable direct inputs, five package ledgers, and two dashboard contracts passed verification.
+- **Decision:** `final_qa_phase_closed_gabriel_attribute_analysis_ready`; the QA/debugging/categorization phase is closed. A separately authorized bounded GABRIEL attribute-assignment run may use only 643 exact-span rows. Global/full qualitative readiness and analysis-facing promotion remain false.
+- **Final categories:** 8,939 records reconcile exactly: 643 GABRIEL-ready, 862 limited documentary, 614 navigation-only, 5,078 companion/context, 121 quarantined, and 1,621 written off.
+- **Triage:** 116 restricted exact spans and five conflict observations remain quarantined. All 581 unavailable spans and 1,040 non-conflict quantitative exceptions are written off for this phase. All 4,733 non-base and 345 reference/control rows remain companion context.
+- **Taxonomy/claims:** 13 concise multi-label attributes with exact-evidence schema. Evidence-existence and bounded documentary-mechanism claims are allowed now; later descriptive patterns require separate review; quantitative wage, wage-gap, causal-candidate, and causal claims remain prohibited.
+- **Hardening:** 74 new tests plus 381 required predecessor tests pass. Dashboard/repository builds, validation, 60 ingestion tests, coverage audit, diff checks, partial-output guards, and idempotent resume pass.
+- **Forbidden actions:** no PDF/page, URL/download, OCR, model/GABRIEL, extraction, selection, ingestion run, codification, descriptive/inferential statistics, wage-gap, regression, or causal work occurred; no upstream ledger changed.
+
+### Interpretation
+
+This is a practical phase close, not a claim that the evidence is perfect. Weak rows are explicitly quarantined, navigational, contextual, or written off. The 643-row manifest is ready for attribute measurement only; GABRIEL output will not be causal proof or global analysis readiness.
+
+### Next Move
+
+Use `next_gabriel_attribute_analysis_prompt.md` only after separate authorization. The run must use supplied exact spans only, validate structured model outputs, quarantine failures, and produce no statistics, wage gaps, regressions, or causal claims.
+
 ## 2026-07-26 — Limited qualitative usage registry accepted
 
 ### Current State

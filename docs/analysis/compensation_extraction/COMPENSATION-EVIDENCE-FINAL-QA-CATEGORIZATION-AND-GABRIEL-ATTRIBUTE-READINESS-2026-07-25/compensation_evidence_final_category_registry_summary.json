@@ -1,0 +1,28 @@
+{
+  "category_counts": {
+    "companion_context_only": 5078,
+    "gabriel_attribute_ready": 643,
+    "limited_documentary_claim_ready": 862,
+    "navigation_only": 614,
+    "quarantined": 121,
+    "write_off_this_phase": 1621
+  },
+  "considered_records": 8939,
+  "duplicate_evidence_ids": 0,
+  "gabriel_ready_excludes_navigation_quarantine_writeoff": true,
+  "global_analysis_readiness": false,
+  "input_signature": "2b7aaaecd414f7176aca60cb2f03d68a832a4375dd1b2222a75b7cb7ae55b0b9",
+  "lane_counts": {
+    "non_base_companion": 4733,
+    "qualitative_exact": 759,
+    "qualitative_navigation": 1195,
+    "quantitative_candidate": 862,
+    "quantitative_exception": 1045,
+    "reference_control": 345
+  },
+  "one_primary_category_per_record": true,
+  "schema_version": "compensation_evidence_final_qa_categorization_v1",
+  "task_id": "COMPENSATION-EVIDENCE-FINAL-QA-CATEGORIZATION-AND-GABRIEL-ATTRIBUTE-READINESS-2026-07-25",
+  "unresolved_conflict_groups": 2,
+  "unresolved_conflict_observations": 5
+}

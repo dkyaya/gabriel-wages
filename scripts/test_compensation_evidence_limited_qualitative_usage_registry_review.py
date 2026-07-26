@@ -217,6 +217,12 @@ class RegistryReviewGuardrailTests(unittest.TestCase):
             {"overall_status": "limited_qualitative_usage_registry_acceptance_registered_strategy_only_global_analysis_closed"},
         )
 
+    def test_final_qa_phase_close_dashboard_passes(self):
+        runner.validate_dashboard_state(
+            {"calibration_phase": "compensation_extraction_final_qa_categorization_phase_closed_gabriel_attribute_analysis_ready", "analysis_facing_promotion_allowed": False},
+            {"overall_status": "final_qa_categorization_closed_gabriel_attribute_ready_global_analysis_closed"},
+        )
+
     def test_wrong_dashboard_phase_fails(self):
         with self.assertRaisesRegex(RuntimeError, "phase"):
             runner.validate_dashboard_state(

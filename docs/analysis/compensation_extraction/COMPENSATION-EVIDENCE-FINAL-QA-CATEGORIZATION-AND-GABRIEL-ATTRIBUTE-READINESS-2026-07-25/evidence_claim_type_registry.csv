@@ -1,0 +1,8 @@
+claim_type,current_status,allowed_evidence_categories,authorized_action,restriction
+evidence_existence_claim,allowed_now,all_phase_close_categories,report audited registry existence and reconciliation counts,no effect or representativeness inference
+documentary_mechanism_claim,allowed_now,gabriel_attribute_ready|limited_documentary_claim_ready,state what a verified document span or bounded structured record says,no wage-effect or causal inference
+limited_descriptive_pattern_claim,future_separate_review_required,none_in_this_task,none,requires later approved descriptive computation
+quantitative_wage_claim,not_allowed,none,none,quantitative layer not separately accepted
+wage_gap_claim,not_allowed,none,none,wage-gap analysis closed
+causal_candidate_claim,not_allowed,none,none,later hypothesis labeling requires separate authorization
+causal_claim,not_allowed,none,none,separate evidence and causal-claim QA required

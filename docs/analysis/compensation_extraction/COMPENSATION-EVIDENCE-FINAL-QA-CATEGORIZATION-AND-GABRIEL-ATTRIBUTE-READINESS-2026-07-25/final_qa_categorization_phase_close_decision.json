@@ -1,0 +1,53 @@
+{
+  "allowed_claim_types_now": [
+    "evidence_existence_claim",
+    "documentary_mechanism_claim"
+  ],
+  "analysis_facing_promotion_allowed": false,
+  "attribute_taxonomy_size": 13,
+  "category_counts": {
+    "companion_context_only": 5078,
+    "gabriel_attribute_ready": 643,
+    "limited_documentary_claim_ready": 862,
+    "navigation_only": 614,
+    "quarantined": 121,
+    "write_off_this_phase": 1621
+  },
+  "causal_claims_made": 0,
+  "codification_runs": 0,
+  "considered_records": 8939,
+  "decision": "final_qa_phase_closed_gabriel_attribute_analysis_ready",
+  "descriptive_statistics_computed": false,
+  "extraction_runs": 0,
+  "full_qualitative_readiness": false,
+  "gabriel_attribute_analysis_ready": true,
+  "gabriel_attribute_analysis_ready_rows": 643,
+  "gabriel_attribute_analysis_requires_separate_authorization": true,
+  "generated_at": "2026-07-26T17:06:04.827817Z",
+  "global_analysis_readiness": false,
+  "immutable_direct_inputs_verified": 21,
+  "immutable_inputs_modified": false,
+  "inferential_statistics_computed": false,
+  "ingestion_runs": 0,
+  "input_signature": "2b7aaaecd414f7176aca60cb2f03d68a832a4375dd1b2222a75b7cb7ae55b0b9",
+  "model_calls": 0,
+  "network_calls": 0,
+  "next_prompt": "next_gabriel_attribute_analysis_prompt.md",
+  "not_yet_allowed_claim_types": [
+    "limited_descriptive_pattern_claim",
+    "quantitative_wage_claim",
+    "wage_gap_claim",
+    "causal_candidate_claim",
+    "causal_claim"
+  ],
+  "ocr_later_accessed": 0,
+  "package_sha256_checks_passed": 5,
+  "pdf_pages_accessed": 0,
+  "phase_closed": true,
+  "regressions": 0,
+  "schema_version": "compensation_evidence_final_qa_categorization_v1",
+  "scouting_restart_recommended": false,
+  "selection_runs": 0,
+  "task_id": "COMPENSATION-EVIDENCE-FINAL-QA-CATEGORIZATION-AND-GABRIEL-ATTRIBUTE-READINESS-2026-07-25",
+  "wage_gap_calculations": 0
+}

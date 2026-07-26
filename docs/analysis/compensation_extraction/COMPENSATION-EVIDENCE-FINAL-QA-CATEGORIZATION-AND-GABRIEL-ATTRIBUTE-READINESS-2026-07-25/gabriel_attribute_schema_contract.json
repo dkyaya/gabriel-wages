@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "invariants": {
+    "causal_claims_allowed": false,
+    "evidence_quote_must_equal_or_be_exact_substring_of_supplied_span": true,
+    "not_useful_requires_reason_code": true,
+    "wage_effect_claims_allowed": false
+  },
+  "properties": {
+    "attribute_assignments": {
+      "additionalProperties": false,
+      "properties": {
+        "across_the_board_raise": {
+          "type": "boolean"
+        },
+        "bargaining_or_settlement": {
+          "type": "boolean"
+        },
+        "cola_or_cpi": {
+          "type": "boolean"
+        },
+        "fiscal_constraint": {
+          "type": "boolean"
+        },
+        "implementation_timing": {
+          "type": "boolean"
+        },
+        "market_or_comparability": {
+          "type": "boolean"
+        },
+        "non_base_compensation": {
+          "type": "boolean"
+        },
+        "not_useful_for_attribute_analysis": {
+          "type": "boolean"
+        },
+        "parity_or_internal_equity": {
+          "type": "boolean"
+        },
+        "percentage_raise": {
+          "type": "boolean"
+        },
+        "rank_or_classification": {
+          "type": "boolean"
+        },
+        "reference_only": {
+          "type": "boolean"
+        },
+        "step_or_seniority": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "cola_or_cpi",
+        "step_or_seniority",
+        "rank_or_classification",
+        "across_the_board_raise",
+        "percentage_raise",
+        "market_or_comparability",
+        "parity_or_internal_equity",
+        "bargaining_or_settlement",
+        "implementation_timing",
+        "fiscal_constraint",
+        "non_base_compensation",
+        "reference_only",
+        "not_useful_for_attribute_analysis"
+      ],
+      "type": "object"
+    },
+    "evidence_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "evidence_quote": {
+      "maxLength": 500,
+      "minLength": 1,
+      "type": "string"
+    },
+    "qa_status": {
+      "enum": [
+        "exact_evidence_supported",
+        "not_useful_with_reason",
+        "quarantined_model_output"
+      ],
+      "type": "string"
+    },
+    "reason_codes": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    }
+  },
+  "required": [
+    "evidence_id",
+    "attribute_assignments",
+    "reason_codes",
+    "evidence_quote",
+    "qa_status"
+  ],
+  "title": "GABRIEL compensation attribute assignment",
+  "type": "object"
+}
