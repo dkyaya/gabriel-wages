@@ -1,0 +1,39 @@
+{
+  "active_qualitative_navigation_rows": 1954,
+  "bounded_packet_manifest_audit": {
+    "packet_1000": {
+      "path": "docs/analysis/compensation_extraction/COMPENSATION-EVIDENCE-EXTRACTION-1000DOC-2026-07-25/compensation_extraction_1000_packet_manifest.csv",
+      "populated_text_payload_cell_count": 0,
+      "row_count": 5767,
+      "sha256": "8a8253d7bb1dfcff59f7d5592df34e8b329a6f9d3a2ae16d7fc5c8a0cf211343",
+      "text_payload_fields_present": []
+    },
+    "packet_500": {
+      "path": "docs/analysis/compensation_extraction/COMPENSATION-EVIDENCE-EXTRACTION-500DOC-2026-07-25/compensation_extraction_500_packet_manifest.csv",
+      "populated_text_payload_cell_count": 0,
+      "row_count": 2843,
+      "sha256": "484e8059d2f0bc6d883ac2f6d206cae5cb388cc9e5f20be132abcf1f82a9ef68",
+      "text_payload_fields_present": []
+    },
+    "packet_remaining": {
+      "path": "docs/analysis/compensation_extraction/COMPENSATION-EVIDENCE-EXTRACTION-REMAINING-PARSE-TEXT-826-2026-07-25/remaining_parse_text_packet_manifest.csv",
+      "populated_text_payload_cell_count": 0,
+      "row_count": 4610,
+      "sha256": "f6699c7ae0fbc1a979a503b8ebc5cba2bed16c072f35306707a3283c46b8dd81",
+      "text_payload_fields_present": []
+    }
+  },
+  "coded_qualitative_analysis_view_created": false,
+  "exact_bounded_page_pointer_match_count": 1954,
+  "extraction_runs": 0,
+  "literal_span_capture_attempted_row_count": 1954,
+  "literal_span_captured_count": 0,
+  "literal_span_exact_substring_qa_pass_count": 0,
+  "model_calls": 0,
+  "navigation_view_created": true,
+  "ocr_runs": 0,
+  "pdfs_opened": 0,
+  "result": "blocked_no_retained_bounded_page_text_payload",
+  "retained_bounded_text_payload_count": 0,
+  "span_unavailable_or_unverified_count": 1954
+}

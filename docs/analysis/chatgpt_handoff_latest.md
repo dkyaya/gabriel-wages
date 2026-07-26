@@ -8498,3 +8498,20 @@ safety units unmatched: 3
 ### Recommended Next Codex Run At This Point
 
 Use the gold set to draft and test exact v10 prompt language against the 11 hand-coded rows, with special attention to keeping grievance-arbitration boilerplate near `0` to `1_25` and keeping Boston BTU negative despite its strong peer-wage content.
+# 2026-07-26 — Bounded qualitative-span repair blocked on missing retained page text
+
+## Current State
+
+- **Authority/start:** work began at clean tracked `579cf0f6fa1e9c8803a9ddec7ed00e9902aa88fa`. The known untracked rendered-page directory and root `package-lock.json` remained outside scope.
+- **Integrity:** five package hashes, current follow-up anchors, packet manifests, and durable-input hashes pass. No package, prior repair, current follow-up, durable, or packet input changed.
+- **Qualitative evidence:** all 1,954 pointers match retained packet pages, but the manifests have no page-text payload. Literal-span capture and exact-substring QA both remain 0; no coded mechanism view exists and navigation-only is preserved.
+- **Cycle/matching:** exact-cycle identities rise from 1,255 to 1,359; matched coverage rises from 188 documents/84 groups to 203 documents/91 groups. Four hundred sixty-seven identities remain cycle-quarantined.
+- **Occupation:** controlled non-safety subclasses rise from 72 to 239; 368 remain quarantined.
+- **Other lanes:** 862 quantitative candidates, 1,045 exceptions, 4,733 non-base companion rows, 345 reference/control rows, and two unresolved groups/five observations are byte-preserved.
+- **Decision:** `bounded_span_metadata_repair_blocked_missing_bounded_text_or_span_support`. Analysis readiness, promotion, and repeat readiness review remain false.
+- **Dashboard:** phase is `compensation_extraction_bounded_span_residual_repair_blocked_missing_text_support`.
+- **Boundary:** no GABRIEL/API, extraction, selection, URL/search, download, PDF opening, OCR, ingestion, codification, wage-gap work, regression, causal analysis, fetch, pull, or remote inspection occurred.
+
+## Next Move
+
+Follow [next_task.md](../../next_task.md) only after separate authorization. The next bounded task may open only the already-retained local readable PDFs at the 1,954 recorded pages to capture short exact spans from the text layer. It must not use OCR, URLs, downloads, GABRIEL/API, new selection, broad extraction, ingestion, codification, promotion, or analysis.

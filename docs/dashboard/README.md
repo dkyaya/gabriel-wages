@@ -74,6 +74,10 @@ The dashboard now reports the rollback-safe schema-repair layer as `compensation
 
 The bounded follow-up phase is `compensation_extraction_bounded_schema_followup_partial_additional_repair_required`. It establishes 1,255 exact full-date cycle bridges, 188 documents in 84 exact-period matched groups, 72 controlled non-safety subclasses, and retrieval provenance for all 1,826 identities. Exact-token parsing raises mechanically safe quantitative candidates to 862 while leaving 1,045 explicit exceptions. The immutable package and prior shadows remain unchanged. Qualitative evidence is still navigation-only because no dedicated literal spans exist, so analysis readiness and promotion remain false pending separately authorized bounded span/residual-metadata repair.
 
+## Bounded qualitative-span and residual-metadata repair — 2026-07-26
+
+The dashboard phase is `compensation_extraction_bounded_span_residual_repair_blocked_missing_text_support`. All 1,954 qualitative evidence pointers match retained packet-manifest page records, but those manifests retain metadata and counts rather than page-text payloads. Under the task's no-PDF/no-extraction boundary, zero literal spans could pass exact-substring QA, so no coded qualitative analysis view was created. Exact structured cycle notes raise supported cycle identities to 1,359 and matched coverage to 203 documents across 91 exact-period groups. Exact controlled unit-label rules raise established non-safety subclasses to 239; 467 cycle identities and 368 non-safety identities remain quarantined. The quantitative 862/1,045 candidate/exception split, non-base companion lane, reference/control lane, and two unresolved groups/five observations remain unchanged. Analysis readiness and promotion remain false pending separately authorized bounded local text-layer span capture.
+
 ## Final provisional schema readiness — 2026-07-26
 
 The immutable five-ledger provisional package remains integrity-valid, but a

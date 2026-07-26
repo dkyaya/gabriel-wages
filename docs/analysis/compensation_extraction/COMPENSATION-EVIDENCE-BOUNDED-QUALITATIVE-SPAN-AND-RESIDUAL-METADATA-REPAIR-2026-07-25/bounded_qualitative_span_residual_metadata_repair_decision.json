@@ -1,0 +1,143 @@
+{
+  "analysis_facing_promotion_allowed": false,
+  "analysis_readiness": false,
+  "bounded_packet_manifests_mutated": false,
+  "current_followup_outputs_mutated": false,
+  "cycle_matching": {
+    "cycle_note_field_is_explicit_structured_metadata": true,
+    "document_identity_count": 1826,
+    "exact_full_dates_only": true,
+    "filename_or_title_inference_used": false,
+    "new_exact_cycle_count": 104,
+    "pdf_or_url_text_used": false,
+    "prior_conflicts_deterministically_disambiguated_count": 11,
+    "prior_exact_cycle_count": 1255,
+    "prior_matched_set_document_count": 188,
+    "residual_identity_scope_count": 571,
+    "revised_cycle_quarantine_count": 467,
+    "revised_exact_cycle_count": 1359,
+    "revised_matched_set_document_count": 203,
+    "revised_matched_set_group_count": 91,
+    "status_counts": {
+      "established_exact_cycle_note_disambiguation_of_prior_conflict": 11,
+      "established_single_exact_pair_from_explicit_cycle_metadata": 93,
+      "preserved_prior_exact_cycle": 1255,
+      "quarantined_multiple_residual_exact_pairs": 3,
+      "quarantined_no_exact_full_date_pair_in_bounded_structured_metadata": 441,
+      "quarantined_prior_conflict_not_deterministically_disambiguated": 23
+    }
+  },
+  "decision": "bounded_span_metadata_repair_blocked_missing_bounded_text_or_span_support",
+  "durable_ledgers_mutated": false,
+  "forbidden_actions_performed": [],
+  "generated_at": "2026-07-26T05:46:40Z",
+  "next_prompt": "next_bounded_schema_repair_followup_prompt.md",
+  "next_recommendation": "seek_separate_authorization_for_bounded_local_pdf_text_layer_span_capture",
+  "non_base_wage": {
+    "active_companion_count": 4733,
+    "base_wage_outcome_eligible_count": 0,
+    "original_other_count": 904,
+    "other_disposition_counts": {
+      "deterministic_reason_or_value_keyword": 389,
+      "insufficient_structured_support": 374,
+      "multiple_deterministic_keyword_families": 141
+    }
+  },
+  "occupation": {
+    "bounded_or_explicit_structured_evidence_only": true,
+    "controlled_vocabulary": [
+      "clerical_admin",
+      "fire",
+      "library",
+      "nurse_health",
+      "other",
+      "parks_rec",
+      "police",
+      "public_works",
+      "sanitation",
+      "teacher",
+      "transit"
+    ],
+    "document_identity_count": 1826,
+    "generic_explicit_employee_labels_map_to": "other",
+    "government_name_inference_used": false,
+    "new_non_safety_subclass_count": 167,
+    "prior_controlled_occupation_count": 1291,
+    "prior_non_safety_subclass_count": 72,
+    "residual_non_safety_scope_count": 535,
+    "revised_controlled_occupation_count": 1458,
+    "revised_non_safety_quarantine_count": 368,
+    "revised_non_safety_subclass_count": 239,
+    "status_counts": {
+      "established_single_explicit_residual_structured_label_rule": 167,
+      "preserved_prior_controlled_class": 1291,
+      "quarantined_multiple_controlled_residual_labels": 1,
+      "quarantined_no_explicit_controlled_residual_label": 367
+    }
+  },
+  "ocr_later_documents_included": false,
+  "package_ledgers_mutated": false,
+  "package_sha256_checks_passed": 5,
+  "prior_repair_outputs_mutated": false,
+  "qualitative_span_capture": {
+    "active_qualitative_navigation_rows": 1954,
+    "bounded_packet_manifest_audit": {
+      "packet_1000": {
+        "path": "docs/analysis/compensation_extraction/COMPENSATION-EVIDENCE-EXTRACTION-1000DOC-2026-07-25/compensation_extraction_1000_packet_manifest.csv",
+        "populated_text_payload_cell_count": 0,
+        "row_count": 5767,
+        "sha256": "8a8253d7bb1dfcff59f7d5592df34e8b329a6f9d3a2ae16d7fc5c8a0cf211343",
+        "text_payload_fields_present": []
+      },
+      "packet_500": {
+        "path": "docs/analysis/compensation_extraction/COMPENSATION-EVIDENCE-EXTRACTION-500DOC-2026-07-25/compensation_extraction_500_packet_manifest.csv",
+        "populated_text_payload_cell_count": 0,
+        "row_count": 2843,
+        "sha256": "484e8059d2f0bc6d883ac2f6d206cae5cb388cc9e5f20be132abcf1f82a9ef68",
+        "text_payload_fields_present": []
+      },
+      "packet_remaining": {
+        "path": "docs/analysis/compensation_extraction/COMPENSATION-EVIDENCE-EXTRACTION-REMAINING-PARSE-TEXT-826-2026-07-25/remaining_parse_text_packet_manifest.csv",
+        "populated_text_payload_cell_count": 0,
+        "row_count": 4610,
+        "sha256": "f6699c7ae0fbc1a979a503b8ebc5cba2bed16c072f35306707a3283c46b8dd81",
+        "text_payload_fields_present": []
+      }
+    },
+    "coded_qualitative_analysis_view_created": false,
+    "exact_bounded_page_pointer_match_count": 1954,
+    "extraction_runs": 0,
+    "literal_span_capture_attempted_row_count": 1954,
+    "literal_span_captured_count": 0,
+    "literal_span_exact_substring_qa_pass_count": 0,
+    "model_calls": 0,
+    "navigation_view_created": true,
+    "ocr_runs": 0,
+    "pdfs_opened": 0,
+    "result": "blocked_no_retained_bounded_page_text_payload",
+    "retained_bounded_text_payload_count": 0,
+    "span_unavailable_or_unverified_count": 1954
+  },
+  "quantitative": {
+    "candidate_count": 862,
+    "exception_count": 1045,
+    "raw_or_normalized_values_modified": false
+  },
+  "quarantine": {
+    "analysis_readiness": false,
+    "qualitative_span_unavailable_or_unverified_count": 1954,
+    "quantitative_exception_count": 1045,
+    "residual_cycle_identity_count_after": 467,
+    "residual_cycle_identity_count_before": 571,
+    "residual_non_safety_identity_count_after": 368,
+    "residual_non_safety_identity_count_before": 535,
+    "unresolved_conflict_group_count": 2,
+    "unresolved_conflict_member_observation_count": 5
+  },
+  "reference_and_exclusion": {
+    "active_control_count": 345,
+    "analysis_outcome_eligible_count": 0
+  },
+  "repeat_analysis_readiness_review_allowed": false,
+  "task_id": "COMPENSATION-EVIDENCE-BOUNDED-QUALITATIVE-SPAN-AND-RESIDUAL-METADATA-REPAIR-2026-07-25"
+}

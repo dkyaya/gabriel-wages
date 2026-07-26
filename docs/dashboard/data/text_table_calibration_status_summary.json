@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-26T05:22:10Z",
+  "generated_at": "2026-07-26T05:47:00Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -80,7 +80,7 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "calibration_phase": "compensation_extraction_bounded_schema_followup_partial_additional_repair_required",
+  "calibration_phase": "compensation_extraction_bounded_span_residual_repair_blocked_missing_text_support",
   "latest_calibration_id": "TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24",
   "latest_calibration_review_id": "TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24",
   "latest_adjudication_prep_id": "TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24",
@@ -205,6 +205,13 @@
   "bounded_schema_followup_retrieval_count": 1826,
   "bounded_schema_followup_quantitative_candidate_count": 862,
   "bounded_schema_followup_quantitative_exception_count": 1045,
+  "bounded_span_residual_repair_completed": true,
+  "bounded_span_residual_repair_decision": "bounded_span_metadata_repair_blocked_missing_bounded_text_or_span_support",
+  "bounded_span_residual_repair_path": "docs/analysis/compensation_extraction/COMPENSATION-EVIDENCE-BOUNDED-QUALITATIVE-SPAN-AND-RESIDUAL-METADATA-REPAIR-2026-07-25",
+  "bounded_span_literal_capture_count": 0,
+  "bounded_span_exact_cycle_count": 1359,
+  "bounded_span_matched_document_count": 203,
+  "bounded_span_non_safety_subclass_count": 239,
   "analysis_facing_promotion_allowed": false,
   "prior_auto_adjudication_gate_id": "TEXT-TABLE-AUTO-GABRIEL-GATE2-REFINEMENT-2026-07-25",
   "auto_adjudication_method": "automated_bounded_rendered_image_plus_text_layout_gabriel_compensation_evidence_adjudication",
@@ -328,15 +335,15 @@
   "visual_qa_exact_gate_agreement_rate": 0.444444,
   "likely_signal_visual_confirmation_rate": 0.7625,
   "wrong_page_rate": 0.0,
-  "extraction_decision": "bounded_schema_followup_partial_additional_bounded_repair_needed",
+  "extraction_decision": "bounded_span_metadata_repair_blocked_missing_bounded_text_or_span_support",
   "five_hundred_doc_extraction_allowed": false,
   "smaller_extraction_pilot_allowed": false,
   "five_hundred_doc_compensation_extraction_allowed": true,
   "smaller_compensation_extraction_pilot_allowed": false,
-  "next_recommendation": "run_separately_authorized_bounded_qualitative_span_and_residual_metadata_repair",
+  "next_recommendation": "seek_separate_authorization_for_bounded_local_pdf_text_layer_span_capture",
   "manual_review_status": "packet_prepared_not_reviewed",
-  "wage_extraction_status": "bounded_schema_followup_partial_quantitative_candidates_provisional_analysis_closed",
-  "qualitative_extraction_status": "bounded_schema_followup_navigation_only_literal_span_capture_required",
+  "wage_extraction_status": "bounded_span_residual_repair_quantitative_candidates_preserved_analysis_closed",
+  "qualitative_extraction_status": "bounded_span_residual_repair_navigation_only_no_retained_text_payload",
   "ingestion_status": "not_started",
   "codify_status": "not_started",
   "wage_gap_analysis_status": "not_started",
@@ -353,10 +360,10 @@
   "adjudication_rendered_page_count": 785,
   "adjudication_rendered_bytes": 106889932,
   "caveats": [
-    "The bounded follow-up improves provisional schema bridges but does not make the package analysis-ready.",
-    "Exact full-date cycles are supported for 1,255 identities and 188 documents in 84 exact-period matched groups; 571 cycle identities remain missing or ambiguous.",
-    "Seventy-two non-safety subclasses were assigned by a single explicit controlled label rule; 535 remain quarantined. Retrieval date, method, source corpus, cite, and artifact provenance are supported for all 1,826 identities.",
-    "Exact-token parsing increases mechanically safe quantitative candidates to 862 while preserving raw and prior normalized fields; 1,045 active exceptions and both unresolved groups/five members remain quarantined.",
-    "Qualitative evidence remains a 1,954-row navigation view because dedicated literal spans are absent; non-base remains companion-only, reference/exclusion remains control-only, and analysis readiness remains false."
+    "The bounded span repair matched all 1,954 qualitative pointers to retained packet pages, but the packet manifests contain no page-text payload; zero literal spans were captured and no coded qualitative view was created.",
+    "Exact structured cycle notes raise supported cycles to 1,359 identities and matched coverage to 203 documents in 91 exact-period groups; 467 cycle identities remain quarantined.",
+    "Controlled explicit unit labels raise non-safety subclasses to 239; 368 non-safety identities remain quarantined.",
+    "The 862 quantitative candidates, 1,045 exceptions, 4,733 non-base companion rows, 345 reference/control rows, and two unresolved groups/five observations are preserved without coercion or promotion.",
+    "A separately authorized bounded local PDF text-layer span-capture task is required; analysis readiness remains false."
   ]
 }

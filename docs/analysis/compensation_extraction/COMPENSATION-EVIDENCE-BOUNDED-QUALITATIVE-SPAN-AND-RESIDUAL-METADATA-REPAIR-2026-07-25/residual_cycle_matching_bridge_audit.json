@@ -1,0 +1,24 @@
+{
+  "cycle_note_field_is_explicit_structured_metadata": true,
+  "document_identity_count": 1826,
+  "exact_full_dates_only": true,
+  "filename_or_title_inference_used": false,
+  "new_exact_cycle_count": 104,
+  "pdf_or_url_text_used": false,
+  "prior_conflicts_deterministically_disambiguated_count": 11,
+  "prior_exact_cycle_count": 1255,
+  "prior_matched_set_document_count": 188,
+  "residual_identity_scope_count": 571,
+  "revised_cycle_quarantine_count": 467,
+  "revised_exact_cycle_count": 1359,
+  "revised_matched_set_document_count": 203,
+  "revised_matched_set_group_count": 91,
+  "status_counts": {
+    "established_exact_cycle_note_disambiguation_of_prior_conflict": 11,
+    "established_single_exact_pair_from_explicit_cycle_metadata": 93,
+    "preserved_prior_exact_cycle": 1255,
+    "quarantined_multiple_residual_exact_pairs": 3,
+    "quarantined_no_exact_full_date_pair_in_bounded_structured_metadata": 441,
+    "quarantined_prior_conflict_not_deterministically_disambiguated": 23
+  }
+}

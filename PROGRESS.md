@@ -6,6 +6,29 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-26 (Bounded qualitative-span repair blocked by missing retained text payloads)
+
+**Did**
+- Started from clean tracked `579cf0f6fa1e9c8803a9ddec7ed00e9902aa88fa`; left the known untracked rendered-pages directory and root `package-lock.json` untouched.
+- Added a deterministic offline runner and seven focused tests. A no-write dry run revalidated five immutable package hashes, current follow-up anchors, packet manifests, durable inputs, and the 1,954-row qualitative / 1,826-identity boundaries.
+- Reconciled all 1,954 qualitative evidence pointers to retained packet pages. No packet manifest contains a bounded page-text payload, so zero spans passed exact-substring QA and no coded qualitative view was created.
+- Established 104 additional exact cycles from explicit full-date cycle metadata, raising exact cycles to 1,359 and matched coverage to 203 documents across 91 groups. Established 167 additional controlled non-safety labels, raising non-safety subclasses to 239.
+- Byte-preserved 862 quantitative candidates, 1,045 exceptions, 4,733 non-base companion rows, 345 reference/control rows, and the two-group/five-observation conflict quarantine.
+
+**Decisions**
+- Decision is `bounded_span_metadata_repair_blocked_missing_bounded_text_or_span_support`. Analysis readiness, promotion, and repeat readiness review remain false.
+- The next step requires separate authorization for bounded local PDF text-layer span capture on recorded pages. No URL, download, OCR, model call, new selection, extraction expansion, ingestion, codification, or analysis is authorized.
+
+**Surprises/breakage**
+- Existing packet manifests retain complete pointer/count metadata but intentionally no page text, making literal-span verification impossible within the present no-PDF boundary.
+- Explicit cycle notes safely disambiguated 11 formerly conflicting identities; 467 cycle identities and 368 non-safety identities remain quarantined.
+
+**Corpus snapshot**
+- `contracts=64`, `discourse=0`, `coverage=64`, `cities=19`; 28 healthy matched pairs (10 exact-cycle, 18 overlap-cycle), two exploratory adjacent matches, and six unmatched safety units.
+
+**Next steps**
+- Follow `next_task.md` only after separate authorization. Keep all immutable packages, repaired shadows, durable ledgers, raw values, and quarantines read-only; capture only short exact spans from the already-retained local text layer on recorded pages, with no OCR or model calls.
+
 ## 2026-07-26 (Bounded schema-repair follow-up partial; literal spans still required)
 
 **Did**

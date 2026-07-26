@@ -1,0 +1,7 @@
+blocker_id,area,status,affected_count,resolution_or_boundary
+S01,qualitative_literal_spans,blocked_missing_retained_bounded_text_payload,1954,"All page pointers match retained packet manifests, but no manifest retains page text; PDFs/models/extraction are prohibited."
+S02,residual_cycle_and_matching,partial,467,Only one exact full-date pair in explicit cycle metadata is accepted; all remaining absent/multiple pairs stay quarantined.
+S03,residual_non_safety_occupation,partial,368,Only one exact controlled unit-label rule is accepted; ambiguous or unsupported labels stay quarantined.
+S04,quantitative_normalization,carried_forward_partial,1045,"Raw values and the 862/1,045 candidate/exception split are byte-preserved; no coercion occurred."
+S05,residual_conflicts,quarantined,5,Two groups/five observations remain explicitly outside candidates.
+S06,non_base_and_reference,separated,5078,Non-base remains companion-only and reference/exclusion remains control-only.

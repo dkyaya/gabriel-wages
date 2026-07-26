@@ -1,0 +1,32 @@
+{
+  "bounded_or_explicit_structured_evidence_only": true,
+  "controlled_vocabulary": [
+    "clerical_admin",
+    "fire",
+    "library",
+    "nurse_health",
+    "other",
+    "parks_rec",
+    "police",
+    "public_works",
+    "sanitation",
+    "teacher",
+    "transit"
+  ],
+  "document_identity_count": 1826,
+  "generic_explicit_employee_labels_map_to": "other",
+  "government_name_inference_used": false,
+  "new_non_safety_subclass_count": 167,
+  "prior_controlled_occupation_count": 1291,
+  "prior_non_safety_subclass_count": 72,
+  "residual_non_safety_scope_count": 535,
+  "revised_controlled_occupation_count": 1458,
+  "revised_non_safety_quarantine_count": 368,
+  "revised_non_safety_subclass_count": 239,
+  "status_counts": {
+    "established_single_explicit_residual_structured_label_rule": 167,
+    "preserved_prior_controlled_class": 1291,
+    "quarantined_multiple_controlled_residual_labels": 1,
+    "quarantined_no_explicit_controlled_residual_label": 367
+  }
+}

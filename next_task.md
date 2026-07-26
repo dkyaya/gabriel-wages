@@ -1,11 +1,19 @@
-# Next task: bounded qualitative span and residual metadata repair
+# Next task: separately authorized bounded local text-layer qualitative span capture
 
-The bounded schema follow-up decision is
-`bounded_schema_followup_partial_additional_bounded_repair_needed`. Analysis
-readiness, promotion, ingestion, codification, and analysis remain closed.
+Do not run this task without a new explicit user authorization.
 
-The next task requires separate explicit authorization and must follow:
+The current decision is `bounded_span_metadata_repair_blocked_missing_bounded_text_or_span_support`. All 1,954 qualitative evidence pointers match retained packet-manifest page records, but the manifests contain no page-text payload. Analysis readiness, promotion, ingestion, and analysis remain closed.
 
-`docs/analysis/compensation_extraction/COMPENSATION-EVIDENCE-BOUNDED-SCHEMA-REPAIR-FOLLOWUP-2026-07-25/next_bounded_schema_repair_followup_prompt.md`
+The next task may use only the already-retained readable local PDFs and only the exact page pointers recorded for the 1,954 active qualitative navigation rows. It may extract a short bounded page-text window sufficient to locate a literal mechanism span. It must:
 
-The task may capture literal qualitative evidence spans only from already-retained bounded parse-text artifacts with exact substring and page-pointer QA. It may revisit remaining cycle and non-safety occupation gaps only where existing structured fields provide explicit support. It must not open URLs or PDFs, download, run OCR, select or extract documents, call GABRIEL/API, ingest, codify, promote data, calculate wage gaps, run regressions, or make causal claims. Preserve every input hash, raw and normalized value, duplicate/canonical link, mixed-membership status, non-base/reference separation, quarantine row, and both residual conflict groups. Keep analysis readiness false.
+- open no URL and download nothing;
+- run no OCR and include no OCR-later document;
+- call no GABRIEL/API or other model;
+- select no new document and run no compensation extraction batch;
+- capture only exact verbatim substrings with page-pointer, observation/case/source/detection IDs, retained hash, start/end offsets, length, SHA-256, and QA status;
+- preserve mechanism fields without interpreting, paraphrasing, or pre-coding them;
+- reject every span not literally present on the recorded page;
+- preserve the 862 quantitative candidates, 1,045 exceptions, 4,733 non-base companion rows, 345 reference/control rows, and two unresolved groups/five observations;
+- keep 467 residual cycle identities and 368 residual non-safety identities quarantined unless explicit structured evidence deterministically resolves them;
+- stop before analysis-facing promotion, ingestion, codification, wage-gap calculation, regression, or causal analysis;
+- keep analysis readiness false pending a later separately authorized review.

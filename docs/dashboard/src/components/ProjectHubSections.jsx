@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "compensation_extraction_bounded_span_residual_repair_blocked_missing_text_support"
+              ? "Bounded residual repair improved metadata; literal spans remain blocked by missing retained text payloads"
+              : textTableCalibrationStatus.calibration_phase ===
             "compensation_extraction_bounded_schema_followup_partial_additional_repair_required"
               ? "Bounded schema follow-up improved coverage; literal-span and residual repair still required"
               : textTableCalibrationStatus.calibration_phase ===
@@ -828,6 +831,19 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "compensation_extraction_bounded_span_residual_repair_blocked_missing_text_support" ? (
+            <>
+              All 1,954 qualitative page pointers reconcile to retained bounded packet records,
+              but those manifests contain no page-text payload, so zero literal spans were
+              accepted and the qualitative lane remains navigation-only. Exact structured cycle
+              notes raise supported cycles to 1,359 identities and matched coverage to 203
+              documents in 91 groups; explicit controlled unit labels raise non-safety subclasses
+              to 239. The 862 quantitative candidates, 1,045 exceptions, non-base companion lane,
+              reference/control lane, and two residual conflict groups remain preserved. Analysis
+              readiness and promotion remain closed pending separately authorized bounded local
+              text-layer span capture.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "compensation_extraction_bounded_schema_followup_partial_additional_repair_required" ? (
             <>
               The bounded follow-up establishes exact cycles for 1,255 identities, 188 documents
