@@ -98,6 +98,8 @@ The current phase is `compensation_extraction_limited_exact_span_qualitative_usa
 
 The current phase is `compensation_extraction_limited_qualitative_usage_layer_materialized_qa_review_allowed`. The rollback-safe layer contains exactly the 643 authorized literal exact-span mechanism rows, with a matching authorization ID-set hash and explicit non-analytic, non-causal usage contracts. The 116 restricted exact-span rows remain quarantined, all 1,195 ambiguous/unavailable rows remain navigation-only, and the 56 strict primary matched city-cycle rows remain a narrow manifest rather than an analysis result. Quantitative, non-base, reference/control, and unresolved-conflict lanes remain separate. A separately authorized layer QA review is allowed next; global analysis readiness remains false.
 
+The current phase is `compensation_extraction_limited_qualitative_usage_layer_qa_review_pass_acceptance_prompt_allowed`. Independent QA verified all 643 authorized rows, the authorization/file/schema hashes, exact span hashes and offsets, bounded pointers, provenance, historical/current QA, row restrictions, and closed causal status. Restricted, ambiguous, unavailable, quantitative, non-base, reference/control, and conflict contamination counts are zero. The 56-row strict primary subset remains a narrow non-analytic manifest. A separately authorized acceptance/registration record may be prepared next; no statistics or analysis were performed, and global analysis readiness remains false.
+
 ## Final provisional schema readiness — 2026-07-26
 
 The immutable five-ledger provisional package remains integrity-valid, but a

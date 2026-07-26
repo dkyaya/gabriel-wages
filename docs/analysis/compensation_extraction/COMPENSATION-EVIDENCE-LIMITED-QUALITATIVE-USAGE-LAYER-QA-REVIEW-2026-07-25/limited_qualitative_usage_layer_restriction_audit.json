@@ -1,0 +1,16 @@
+{
+  "all_restriction_checks_passed": true,
+  "analysis_results_computed": false,
+  "analysis_status_not_analyzed_count": 643,
+  "causal_claims_closed_count": 643,
+  "controlled_occupation_eligible_rows": 438,
+  "exact_cycle_eligible_rows": 453,
+  "exact_period_matched_set_eligible_rows": 77,
+  "global_analysis_readiness": false,
+  "limited_use_eligible_count": 643,
+  "required_prohibited_use_contract_count": 643,
+  "rows_reviewed": 643,
+  "schema_version": "limited_qualitative_usage_layer_qa_review_v1",
+  "strict_primary_manifest_rows": 56,
+  "task_id": "COMPENSATION-EVIDENCE-LIMITED-QUALITATIVE-USAGE-LAYER-QA-REVIEW-2026-07-25"
+}

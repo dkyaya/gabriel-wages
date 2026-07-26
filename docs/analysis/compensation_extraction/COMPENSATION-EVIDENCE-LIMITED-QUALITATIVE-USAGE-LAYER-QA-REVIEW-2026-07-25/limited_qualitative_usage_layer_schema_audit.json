@@ -1,0 +1,12 @@
+{
+  "all_schema_checks_passed": true,
+  "column_count": 113,
+  "duplicate_header_count": 0,
+  "exact_approved_schema_match": true,
+  "forbidden_analysis_or_page_payload_fields": [],
+  "missing_required_row_fields": [],
+  "row_count": 643,
+  "schema_version": "limited_qualitative_usage_layer_qa_review_v1",
+  "task_id": "COMPENSATION-EVIDENCE-LIMITED-QUALITATIVE-USAGE-LAYER-QA-REVIEW-2026-07-25",
+  "unique_qualitative_observation_ids": 643
+}

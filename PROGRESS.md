@@ -6,6 +6,27 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-26 (Limited qualitative usage layer passed QA; acceptance prompt allowed)
+
+**Did**
+- Reverified 20 committed usage-layer inputs, the inherited five-package hash chain, the 643-row file and schema hashes, and the authorization ID-set SHA-256 without source-document or external access.
+- Independently checked 643/643 literal span hashes/offsets/pointers, identities, provenance, historical/current QA, current-active status, use restrictions, non-analysis status, and closed causal status.
+- Confirmed zero restricted, ambiguous/unavailable, quantitative, non-base, reference/control, and unresolved-conflict contamination. Preserved the 56-row strict-primary subset as a narrow non-analytic manifest.
+- Added five independent audits, scope and blocker contracts, 65 new adversarial tests, dashboard fail-closed gates, and an authorization-gated acceptance/registration prompt. All 360 focused tests and 60 ingestion tests passed.
+
+**Decisions**
+- Decision is `limited_qualitative_usage_layer_qa_pass_acceptance_prompt_allowed`. A future task may create only a separately authorized rollback-safe acceptance/registration record.
+- No analysis, promotion, ingestion, codification, wage-gap, regression, treatment-effect, or causal work is authorized. Global and full qualitative readiness remain false.
+
+**Surprises/breakage**
+- The first reporting pass stopped closed because the future prompt grouped extraction and selection restrictions while its validator required standalone phrases. The generator and regression coverage now require both exact prohibitions; the incomplete attempt could not validate as complete.
+
+**Corpus snapshot**
+- `contracts=64`, `discourse=0`, `coverage=64`, `cities=19`; 28 healthy matched pairs (10 exact-cycle, 18 overlap-cycle), two exploratory adjacent matches, and six unmatched safety units.
+
+**Next steps**
+- Seek separate authorization for `next_limited_qualitative_usage_layer_acceptance_prompt.md`. Create only an acceptance/registration record; keep every evidence lane immutable and global readiness false.
+
 ## 2026-07-26 (Limited qualitative usage layer materialized; QA review allowed)
 
 **Did**

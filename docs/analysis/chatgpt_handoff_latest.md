@@ -6,6 +6,26 @@ Last updated: `2026-07-26`
 
 ---
 
+## 2026-07-26 — Limited qualitative usage layer passed QA; acceptance prompt allowed
+
+### Current State
+
+- **Authority/start:** began at clean tracked `b6f97c0e172c7d285438aa4038eac8e7a9aa27cb`; 20 immutable usage-layer inputs and the inherited package/repair/promotion hash chain passed.
+- **Decision:** `limited_qualitative_usage_layer_qa_pass_acceptance_prompt_allowed`; only a separately authorized acceptance/registration record is allowed next. Global/full qualitative readiness remains false.
+- **Hash and schema:** the authorized, manifested, and observed 643-ID sets share SHA-256 `0365d38babf9d4000295a3326c8cfc77b92f8a7ad1f2f1117d0cb40f1613b91b`; layer-file and schema hashes match.
+- **QA:** all 643 rows pass literal-span hash/offset, bounded-pointer, identity, provenance, historical/current QA, current-active, restriction, non-analysis, and closed-causality checks.
+- **Separation:** restricted and navigation contamination are zero; all external-lane contamination counts are zero. The 56-row strict-primary manifest remains non-analytic. Quantitative 862/1,045, non-base 4,733, reference/control 345, and two conflicts/five observations remain separate.
+- **Hardening:** 65 new tests and 295 predecessor tests pass; dashboard/repository builds, validation, 60 ingestion tests, coverage audit, diff checks, partial-output guards, and idempotent resume pass.
+- **Boundary:** no PDF/page, URL/download, OCR, model/GABRIEL, extraction, selection, ingestion run, codification, descriptive/inferential statistics, wage-gap, regression, treatment-effect, or causal work occurred; no upstream ledger changed.
+
+### Interpretation
+
+The limited layer is mechanically trustworthy for registration as a restricted evidence resource. Acceptance would record this state; it would not create analysis permission or make mechanism language evidence of wage effects.
+
+### Next Move
+
+Use the QA directory's `next_limited_qualitative_usage_layer_acceptance_prompt.md` only after separate authorization. The next task must remain acceptance/registration only and preserve global readiness=false.
+
 ## 2026-07-26 — Limited qualitative usage layer materialized; QA review allowed
 
 ### Current State

@@ -303,7 +303,10 @@ class MaterializedUsageLayerTests(unittest.TestCase):
     def test_dashboard_phase_and_readiness_are_fail_closed(self):
         calibration = runner.read_json(ROOT / "docs/dashboard/data/text_table_calibration_status_summary.json")
         readiness = runner.read_json(ROOT / "docs/dashboard/data/analysis_readiness.json")
-        self.assertEqual(calibration["calibration_phase"], "compensation_extraction_limited_qualitative_usage_layer_materialized_qa_review_allowed")
+        self.assertIn(calibration["calibration_phase"], {
+            "compensation_extraction_limited_qualitative_usage_layer_materialized_qa_review_allowed",
+            "compensation_extraction_limited_qualitative_usage_layer_qa_review_pass_acceptance_prompt_allowed",
+        })
         self.assertFalse(calibration["limited_qualitative_usage_layer_global_analysis_readiness"])
         self.assertIn("global_analysis_closed", readiness["overall_status"])
         self.assertFalse(readiness["stage_availability"]["wage_extraction_stage"]["analysis_facing_promotion_allowed"])

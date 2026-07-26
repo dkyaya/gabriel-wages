@@ -1,0 +1,15 @@
+scope,expected_count,observed_count,reconciliation_status,treatment
+usage_layer,643,643,pass,limited qualitative evidence only
+restricted_exact_span,116,116,pass,quarantine metadata only
+ambiguous_navigation,614,614,pass,navigation only
+unavailable_navigation,581,581,pass,navigation only
+navigation_total,1195,1195,pass,navigation only
+strict_primary_manifest,56,56,pass,narrow non-analytic manifest
+exact_cycle_eligible,453,453,pass,cycle-aware evidence review only
+controlled_occupation_eligible,438,438,pass,occupation-aware evidence review only
+exact_period_matched_set_eligible,77,77,pass,matched-set evidence review only
+quantitative_candidates,862,862,pass,separate manifest
+quantitative_exceptions,1045,1045,pass,separate manifest
+non_base_companion,4733,4733,pass,companion-only manifest
+reference_control,345,345,pass,control-only manifest
+unresolved_conflict_observations,5,5,pass,quarantined manifest

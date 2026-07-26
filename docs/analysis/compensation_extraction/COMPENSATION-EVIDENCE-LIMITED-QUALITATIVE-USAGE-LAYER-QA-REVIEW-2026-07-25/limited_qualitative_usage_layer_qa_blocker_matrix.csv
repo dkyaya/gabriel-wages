@@ -1,0 +1,7 @@
+blocker_id,lane,row_count,severity,qa_result,residual_status,blocks_acceptance_registration,blocks_global_readiness,next_action
+ULQA-B01,restricted_exact_span,116,major,correctly_excluded,quarantined,false,true,retain_quarantine
+ULQA-B02,ambiguous_navigation,614,critical,correctly_excluded,navigation_only,false,true,retain_navigation_only
+ULQA-B03,unavailable_navigation,581,critical,correctly_excluded,navigation_only,false,true,retain_navigation_only
+ULQA-B04,strict_primary_design,56,scope_limit,narrow_manifest_verified,non_analytic,false,true,do_not_infer_power_or_effects
+ULQA-B05,quantitative_exceptions,1045,critical,separate_manifest_verified,exception_lane,false,true,retain_separate
+ULQA-B06,unresolved_conflicts,5,critical,two_groups_preserved,quarantined,false,true,retain_explicit_quarantine

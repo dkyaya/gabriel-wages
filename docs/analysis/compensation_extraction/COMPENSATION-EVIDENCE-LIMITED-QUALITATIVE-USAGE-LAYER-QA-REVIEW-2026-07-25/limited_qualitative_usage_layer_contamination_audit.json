@@ -1,0 +1,18 @@
+{
+  "all_contamination_checks_passed": true,
+  "all_external_lanes_manifest_only": true,
+  "ambiguous_or_unavailable_contamination_count": 0,
+  "non_base_contamination_count": 0,
+  "non_base_manifest_rows": 4733,
+  "quantitative_contamination_count": 0,
+  "quantitative_exception_manifest_rows": 1045,
+  "quantitative_manifest_rows": 862,
+  "reference_control_contamination_count": 0,
+  "reference_control_manifest_rows": 345,
+  "restricted_exact_span_contamination_count": 0,
+  "schema_version": "limited_qualitative_usage_layer_qa_review_v1",
+  "task_id": "COMPENSATION-EVIDENCE-LIMITED-QUALITATIVE-USAGE-LAYER-QA-REVIEW-2026-07-25",
+  "unresolved_conflict_contamination_count": 0,
+  "unresolved_conflict_manifest_groups": 2,
+  "unresolved_conflict_manifest_rows": 5
+}

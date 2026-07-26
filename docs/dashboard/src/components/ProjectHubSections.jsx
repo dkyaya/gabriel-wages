@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "compensation_extraction_limited_qualitative_usage_layer_qa_review_pass_acceptance_prompt_allowed"
+              ? "Limited qualitative usage layer passed QA; acceptance registration may proceed"
+              : textTableCalibrationStatus.calibration_phase ===
             "compensation_extraction_limited_qualitative_usage_layer_materialized_qa_review_allowed"
               ? "Limited qualitative usage layer materialized; bounded QA review may proceed"
               : textTableCalibrationStatus.calibration_phase ===
@@ -855,6 +858,17 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "compensation_extraction_limited_qualitative_usage_layer_qa_review_pass_acceptance_prompt_allowed" ? (
+            <>
+              The independent QA review verified all 643 authorized literal exact-span rows,
+              their authorization, file and schema hashes, provenance, historical/current QA,
+              restrictions, and closed causal status. Restricted and navigation contamination
+              remain zero; the 56-row strict primary subset remains a narrow non-analytic
+              manifest. Quantitative, non-base, reference/control, and conflict lanes remain
+              separate. A separately authorized acceptance/registration record is the next
+              allowed step; no analysis was performed and global readiness remains false.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "compensation_extraction_limited_qualitative_usage_layer_materialized_qa_review_allowed" ? (
             <>
               The rollback-safe usage layer contains exactly 643 authorized, unique, literal
