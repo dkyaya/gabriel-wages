@@ -1,0 +1,18 @@
+{
+  "all_invariants_passed": true,
+  "checks": {
+    "759_exact_rows_valid_unique_and_current_active": true,
+    "all_21_input_hashes_pass": true,
+    "ambiguous_unavailable_candidate_contamination_zero": true,
+    "analysis_readiness_false": true,
+    "carried_forward_files_hash_stable": true,
+    "dashboard_global_analysis_readiness_must_remain_false": true,
+    "forbidden_payload_fields_absent": true,
+    "historical_qa_and_span_qa_separate": true,
+    "no_pdf_or_page_access": true,
+    "no_promotion_or_analysis_dataset_created": true,
+    "tier_counts_reconcile_to_1954": true,
+    "two_groups_five_observations_quarantined": true
+  },
+  "schema_version": "limited_exact_span_qualitative_readiness_review_v1"
+}

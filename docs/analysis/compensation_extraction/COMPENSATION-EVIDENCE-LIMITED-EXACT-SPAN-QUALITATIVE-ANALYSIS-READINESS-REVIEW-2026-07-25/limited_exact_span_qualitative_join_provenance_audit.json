@@ -1,0 +1,25 @@
+{
+  "controlled_occupation_complete": 520,
+  "controlled_occupation_missing": 239,
+  "cycle_missing_or_ambiguous": 226,
+  "exact_cycle_supported": 533,
+  "exact_matched_set_supported": 85,
+  "historical_mixed_memberships_not_active_joins": 16,
+  "identity_bridge_complete": 759,
+  "limitations": [
+    "Exact span proves literal traceability, not construct validity or causal effect.",
+    "Rows lacking exact cycle, controlled occupation, or exact matched-set support require restricted use or quarantine.",
+    "Historical mixed memberships cannot be treated as active joins."
+  ],
+  "mixed_membership_status": {
+    "active": 381,
+    "historical_inactive": 15,
+    "historical_missing": 1,
+    "none": 362
+  },
+  "provenance_complete": 759,
+  "residual_conflict_groups_quarantined": 2,
+  "residual_conflict_observations_quarantined": 5,
+  "result": "pass_with_explicit_join_and_matching_restrictions",
+  "task_id": "COMPENSATION-EVIDENCE-LIMITED-EXACT-SPAN-QUALITATIVE-ANALYSIS-READINESS-REVIEW-2026-07-25"
+}

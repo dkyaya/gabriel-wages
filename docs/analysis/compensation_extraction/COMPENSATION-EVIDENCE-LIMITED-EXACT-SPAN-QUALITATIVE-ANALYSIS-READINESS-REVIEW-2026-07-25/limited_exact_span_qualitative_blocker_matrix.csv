@@ -1,0 +1,10 @@
+blocker_id,severity,affected_rows,issue,treatment,promotion_gate
+LQ01,scope,1195,Ambiguous or unavailable span,navigation_only,excluded_from_limited_exact_span_promotion
+LQ02,major,93,Historical/current QA needs review,quarantine,row_level_review_required
+LQ03,major,226,Exact cycle missing or ambiguous,restrict_or_quarantine,not_eligible_for_cycle_analysis
+LQ04,major,239,Controlled occupation missing,restrict_or_quarantine,not_eligible_for_occupation_comparison
+LQ05,major,674,No exact matched-set support,descriptive_or_navigation_only,excluded_from_primary_matched_design
+LQ06,major,16,Historical mixed membership,preserve_not_active_join,must_not_join_as_active
+LQ07,major,8,Mechanism type other,quarantine_from_typed_mechanism_analysis,subtype_review_required
+LQ08,major,4,No structured mechanism detail beyond label/span,quarantine_from_coded_measurement,contract_detail_required
+LQ09,quarantine,5,Two unresolved quantitative conflict groups,preserve_separate_quarantine,never_join_into_qualitative_promotion

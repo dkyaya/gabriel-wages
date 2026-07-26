@@ -229,15 +229,21 @@ class MaterializedOutputTests(unittest.TestCase):
 
     def test_analysis_readiness_dashboard_false(self):
         dashboard = json.loads((ROOT / "docs/dashboard/data/text_table_calibration_status_summary.json").read_text())
-        self.assertEqual(
+        self.assertIn(
             dashboard["calibration_phase"],
-            "compensation_extraction_qualitative_evidence_contract_limited_review_allowed_exact_span_only",
+            {
+                "compensation_extraction_qualitative_evidence_contract_limited_review_allowed_exact_span_only",
+                "compensation_extraction_limited_exact_span_qualitative_readiness_review_completed_pass_with_blockers",
+            },
         )
         self.assertEqual(dashboard["qualitative_evidence_contract_repeat_review_scope"], "limited_exact_span_only")
         readiness = json.loads((ROOT / "docs/dashboard/data/analysis_readiness.json").read_text())
-        self.assertEqual(
+        self.assertIn(
             readiness["overall_status"],
-            "qualitative_evidence_contract_limited_review_allowed_exact_span_only_analysis_closed",
+            {
+                "qualitative_evidence_contract_limited_review_allowed_exact_span_only_analysis_closed",
+                "limited_exact_span_qualitative_readiness_pass_with_blockers_promotion_prompt_allowed_analysis_closed",
+            },
         )
         self.assertIn("analysis_closed", readiness["overall_status"])
 

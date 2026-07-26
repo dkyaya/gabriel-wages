@@ -6,6 +6,26 @@ Convention per entry: what we did, decisions made (and why), surprises/breakage,
 
 ---
 
+## 2026-07-26 (Limited exact-span qualitative readiness passed with restrictions)
+
+**Did**
+- Reverified 21 immutable evidence-contract inputs and all 1,954 tier identities without PDF/page access. All 759 exact candidates pass span hash/offset, page-pointer, current-active, identity, and provenance checks; the 614 ambiguous and 581 unavailable rows remain navigation-only.
+- Added a deterministic review runner and 37 fail-closed tests for hash drift, tier contamination, duplicate IDs, missing provenance, invalid span/pointer/hash state, forbidden payloads, carried-lane drift, conflict drift, and unsafe readiness escalation.
+- Preserved 862 quantitative candidates, 1,045 exceptions, 4,733 non-base companion rows, 345 reference/control rows, and two unresolved groups/five observations.
+
+**Decisions**
+- Decision is `limited_exact_span_qualitative_readiness_pass_with_blockers_documented`. A separately authorized limited promotion prompt is allowed for the exact tier only; global/full qualitative readiness remains false.
+- Promotion-time restrictions must cover 93 needs-review rows, 226 missing/ambiguous cycles, 239 missing controlled occupations, 16 historical mixed memberships, eight `other` mechanisms, four rows without structured mechanism detail, and the fact that only 85 rows have exact matched-set support.
+
+**Surprises/breakage**
+- No integrity or implementation defect was found. The exact-span contract is mechanically sound, while its analytical scope is materially narrower than its 759-row count suggests.
+
+**Corpus snapshot**
+- `contracts=64`, `discourse=0`, `coverage=64`, `cities=19`; 28 healthy matched pairs (10 exact-cycle, 18 overlap-cycle), two exploratory adjacent matches, and six unmatched safety units.
+
+**Next steps**
+- Run the limited promotion prompt only after new explicit authorization. Preserve row-level restrictions, all lane boundaries, and analysis readiness=false.
+
 ## 2026-07-26 (Qualitative evidence contract built; limited exact-span review allowed)
 
 **Did**

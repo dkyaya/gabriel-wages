@@ -1,0 +1,58 @@
+{
+  "ambiguous_navigation_count": 614,
+  "ambiguous_unavailable_treatment": "navigation_only_not_coded_evidence",
+  "analysis_facing_promotion_performed": false,
+  "analysis_readiness": false,
+  "carried_forward": {
+    "conflict_observations": 5,
+    "conflicts": 2,
+    "non_base": 4733,
+    "quantitative_candidate": 862,
+    "quantitative_exception": 1045,
+    "reference": 345
+  },
+  "decision": "limited_exact_span_qualitative_readiness_pass_with_blockers_documented",
+  "exact_candidate_qa_pass_count": 759,
+  "exact_span_candidate_count": 759,
+  "forbidden_actions_performed": [],
+  "full_qualitative_readiness": false,
+  "future_limited_promotion_prompt_allowed": true,
+  "future_limited_promotion_scope": "exact_span_tier_only_with_row_level_restrictions",
+  "generated_at": "2026-07-26T14:31:59.252308Z",
+  "input_or_durable_ledgers_mutated": false,
+  "input_signature": "2eed5dc9448392e6707f66804debacb4fe2fedce8af18c2d704b4706f54631de",
+  "invariants": {
+    "all_invariants_passed": true,
+    "checks": {
+      "759_exact_rows_valid_unique_and_current_active": true,
+      "all_21_input_hashes_pass": true,
+      "ambiguous_unavailable_candidate_contamination_zero": true,
+      "analysis_readiness_false": true,
+      "carried_forward_files_hash_stable": true,
+      "dashboard_global_analysis_readiness_must_remain_false": true,
+      "forbidden_payload_fields_absent": true,
+      "historical_qa_and_span_qa_separate": true,
+      "no_pdf_or_page_access": true,
+      "no_promotion_or_analysis_dataset_created": true,
+      "tier_counts_reconcile_to_1954": true,
+      "two_groups_five_observations_quarantined": true
+    },
+    "schema_version": "limited_exact_span_qualitative_readiness_review_v1"
+  },
+  "join_provenance_audit_result": "pass_with_explicit_join_and_matching_restrictions",
+  "next_prompt": "next_limited_qualitative_analysis_facing_promotion_prompt.md",
+  "next_recommendation": "seek_separate_authorization_to_run_limited_exact_span_qualitative_promotion_prompt",
+  "primary_matched_design_supported_rows": 85,
+  "row_level_restrictions": {
+    "controlled_occupation_missing": 239,
+    "cycle_missing_or_ambiguous": 226,
+    "historical_mixed_membership": 16,
+    "mechanism_type_other": 8,
+    "missing_structured_mechanism_detail": 4,
+    "needs_review": 93
+  },
+  "schema_version": "limited_exact_span_qualitative_readiness_review_v1",
+  "task_id": "COMPENSATION-EVIDENCE-LIMITED-EXACT-SPAN-QUALITATIVE-ANALYSIS-READINESS-REVIEW-2026-07-25",
+  "tier_counts_reconcile": true,
+  "unavailable_navigation_count": 581
+}

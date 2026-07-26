@@ -6,6 +6,25 @@ Last updated: `2026-07-26`
 
 ---
 
+## 2026-07-26 — Limited exact-span qualitative readiness passed with documented blockers
+
+### Current State
+
+- **Authority/start:** review began at clean tracked `593d5e8b7dc1b7a383c1d2f869ae36faf06cca47` and performed no PDF/page access or promotion.
+- **Decision:** `limited_exact_span_qualitative_readiness_pass_with_blockers_documented`; a future limited-promotion prompt is allowed only after separate authorization. Global and full qualitative analysis readiness remain false.
+- **Integrity:** 21/21 immutable hashes passed. All 759 exact rows are unique, current-active, provenance-complete, and valid for span hash/offset/page-pointer QA. The 614 ambiguous plus 581 unavailable rows remain navigation-only with zero candidate contamination.
+- **Restrictions:** 93 rows remain `needs_review`, 226 lack exact cycle support, 239 lack controlled occupation, 16 have historical mixed memberships, eight have mechanism type `other`, four lack structured mechanism detail, and only 85 have exact matched-set support.
+- **Carry-forward:** 862 quantitative candidates, 1,045 exceptions, 4,733 non-base companion rows, 345 reference/control rows, and two unresolved groups/five observations remain separate and hash-stable.
+- **Hardening:** 37 focused tests cover hashes, IDs, tiers, provenance, span/pointer integrity, forbidden payloads, conflict preservation, output boundaries, prompt selection, idempotency, and readiness=false.
+
+### Interpretation
+
+The exact tier has a defensible literal-evidence and provenance contract, but it is not a homogeneous analysis sample. Any future promotion must expose eligibility and quarantine fields and reserve primary matched-design use for exact matched-set-supported rows.
+
+### Next Move
+
+Use [next_task.md](../../next_task.md) only after separate authorization. Do not promote ambiguous/unavailable rows or mark analysis readiness true.
+
 ## 2026-07-26 — Qualitative evidence contract supports a limited exact-span-only review
 
 ### Current State

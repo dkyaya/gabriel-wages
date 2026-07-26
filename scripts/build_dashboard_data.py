@@ -708,6 +708,27 @@ COMPENSATION_EXTRACTION_QUALITATIVE_EVIDENCE_CONTRACT_INVARIANTS_PATH = (
     COMPENSATION_EXTRACTION_QUALITATIVE_EVIDENCE_CONTRACT_DIR
     / "qualitative_evidence_contract_invariant_checks.json"
 )
+COMPENSATION_EXTRACTION_LIMITED_EXACT_SPAN_READINESS_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "COMPENSATION-EVIDENCE-LIMITED-EXACT-SPAN-QUALITATIVE-ANALYSIS-READINESS-REVIEW-2026-07-25"
+)
+COMPENSATION_EXTRACTION_LIMITED_EXACT_SPAN_READINESS_DECISION_PATH = (
+    COMPENSATION_EXTRACTION_LIMITED_EXACT_SPAN_READINESS_DIR
+    / "limited_exact_span_qualitative_readiness_decision.json"
+)
+COMPENSATION_EXTRACTION_LIMITED_EXACT_SPAN_READINESS_CONTRACT_AUDIT_PATH = (
+    COMPENSATION_EXTRACTION_LIMITED_EXACT_SPAN_READINESS_DIR
+    / "limited_exact_span_qualitative_contract_audit.json"
+)
+COMPENSATION_EXTRACTION_LIMITED_EXACT_SPAN_READINESS_JOIN_AUDIT_PATH = (
+    COMPENSATION_EXTRACTION_LIMITED_EXACT_SPAN_READINESS_DIR
+    / "limited_exact_span_qualitative_join_provenance_audit.json"
+)
+COMPENSATION_EXTRACTION_LIMITED_EXACT_SPAN_READINESS_INVARIANTS_PATH = (
+    COMPENSATION_EXTRACTION_LIMITED_EXACT_SPAN_READINESS_DIR
+    / "limited_exact_span_readiness_invariant_checks.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -1357,6 +1378,69 @@ def qualitative_evidence_contract_status() -> tuple[bool, dict[str, Any]]:
         and len(read_csv(combined_path)) == 1954
     ):
         raise ValueError("qualitative evidence contract fails dashboard gates")
+    return True, decision
+
+
+def limited_exact_span_qualitative_readiness_status() -> tuple[bool, dict[str, Any]]:
+    required = (
+        COMPENSATION_EXTRACTION_LIMITED_EXACT_SPAN_READINESS_DECISION_PATH,
+        COMPENSATION_EXTRACTION_LIMITED_EXACT_SPAN_READINESS_CONTRACT_AUDIT_PATH,
+        COMPENSATION_EXTRACTION_LIMITED_EXACT_SPAN_READINESS_JOIN_AUDIT_PATH,
+        COMPENSATION_EXTRACTION_LIMITED_EXACT_SPAN_READINESS_INVARIANTS_PATH,
+        COMPENSATION_EXTRACTION_LIMITED_EXACT_SPAN_READINESS_DIR
+        / "limited_exact_span_qualitative_readiness_review_summary.md",
+        COMPENSATION_EXTRACTION_LIMITED_EXACT_SPAN_READINESS_DIR
+        / "limited_exact_span_qualitative_blocker_matrix.csv",
+        COMPENSATION_EXTRACTION_LIMITED_EXACT_SPAN_READINESS_DIR
+        / "limited_exact_span_readiness_validation_report.md",
+        COMPENSATION_EXTRACTION_LIMITED_EXACT_SPAN_READINESS_DIR
+        / "next_limited_qualitative_analysis_facing_promotion_prompt.md",
+    )
+    completed = all(path.exists() for path in required)
+    if not completed:
+        return False, {}
+    decision = read_json(COMPENSATION_EXTRACTION_LIMITED_EXACT_SPAN_READINESS_DECISION_PATH)
+    contract = read_json(COMPENSATION_EXTRACTION_LIMITED_EXACT_SPAN_READINESS_CONTRACT_AUDIT_PATH)
+    join = read_json(COMPENSATION_EXTRACTION_LIMITED_EXACT_SPAN_READINESS_JOIN_AUDIT_PATH)
+    invariants = read_json(COMPENSATION_EXTRACTION_LIMITED_EXACT_SPAN_READINESS_INVARIANTS_PATH)
+    restrictions = decision.get("row_level_restrictions", {})
+    carried = decision.get("carried_forward", {})
+    if not (
+        decision.get("task_id")
+        == "COMPENSATION-EVIDENCE-LIMITED-EXACT-SPAN-QUALITATIVE-ANALYSIS-READINESS-REVIEW-2026-07-25"
+        and decision.get("decision")
+        == "limited_exact_span_qualitative_readiness_pass_with_blockers_documented"
+        and decision.get("analysis_readiness") is False
+        and decision.get("full_qualitative_readiness") is False
+        and decision.get("analysis_facing_promotion_performed") is False
+        and decision.get("future_limited_promotion_prompt_allowed") is True
+        and decision.get("future_limited_promotion_scope")
+        == "exact_span_tier_only_with_row_level_restrictions"
+        and int(decision.get("exact_span_candidate_count", 0)) == 759
+        and int(decision.get("ambiguous_navigation_count", 0)) == 614
+        and int(decision.get("unavailable_navigation_count", 0)) == 581
+        and decision.get("tier_counts_reconcile") is True
+        and int(decision.get("exact_candidate_qa_pass_count", 0)) == 759
+        and int(decision.get("primary_matched_design_supported_rows", 0)) == 85
+        and int(restrictions.get("needs_review", 0)) == 93
+        and int(restrictions.get("cycle_missing_or_ambiguous", 0)) == 226
+        and int(restrictions.get("controlled_occupation_missing", 0)) == 239
+        and int(restrictions.get("historical_mixed_membership", 0)) == 16
+        and int(carried.get("quantitative_candidate", 0)) == 862
+        and int(carried.get("quantitative_exception", 0)) == 1045
+        and int(carried.get("non_base", 0)) == 4733
+        and int(carried.get("reference", 0)) == 345
+        and int(carried.get("conflicts", 0)) == 2
+        and int(carried.get("conflict_observations", 0)) == 5
+        and contract.get("tier_counts_reconcile") is True
+        and int(contract.get("exact_candidate_contamination_count", -1)) == 0
+        and int(contract.get("pdf_or_page_access_count", -1)) == 0
+        and join.get("result") == "pass_with_explicit_join_and_matching_restrictions"
+        and invariants.get("all_invariants_passed") is True
+        and decision.get("forbidden_actions_performed") == []
+        and decision.get("input_or_durable_ledgers_mutated") is False
+    ):
+        raise ValueError("limited exact-span qualitative readiness review fails dashboard gates")
     return True, decision
 
 
@@ -2030,6 +2114,10 @@ def build_analysis_readiness(
         qualitative_evidence_contract_completed,
         qualitative_evidence_contract_decision,
     ) = qualitative_evidence_contract_status()
+    (
+        limited_exact_span_readiness_completed,
+        limited_exact_span_readiness_decision,
+    ) = limited_exact_span_qualitative_readiness_status()
     if scale_1000_targeted_qa_completed and (
         scale_1000_targeted_qa_decision.get("qa_pass") is not True
         or scale_1000_targeted_qa_decision.get(
@@ -2076,7 +2164,9 @@ def build_analysis_readiness(
     return {
         "metadata": metadata,
         "overall_status": (
-            "qualitative_evidence_contract_limited_review_allowed_exact_span_only_analysis_closed"
+            "limited_exact_span_qualitative_readiness_pass_with_blockers_promotion_prompt_allowed_analysis_closed"
+            if limited_exact_span_readiness_completed
+            else "qualitative_evidence_contract_limited_review_allowed_exact_span_only_analysis_closed"
             if qualitative_evidence_contract_completed
             else "bounded_qualitative_span_disambiguation_partial_additional_repair_analysis_closed"
             if bounded_span_disambiguation_completed
@@ -2407,6 +2497,24 @@ def build_analysis_readiness(
                     if qualitative_evidence_contract_completed else None
                 ),
                 "qualitative_evidence_contract_analysis_readiness": False,
+                "limited_exact_span_qualitative_readiness_review_completed": limited_exact_span_readiness_completed,
+                "limited_exact_span_qualitative_readiness_decision": (
+                    limited_exact_span_readiness_decision.get("decision")
+                    if limited_exact_span_readiness_completed else None
+                ),
+                "limited_exact_span_qualitative_exact_candidate_count": (
+                    int(limited_exact_span_readiness_decision.get("exact_span_candidate_count", 0))
+                    if limited_exact_span_readiness_completed else None
+                ),
+                "limited_exact_span_qualitative_primary_matched_supported_count": (
+                    int(limited_exact_span_readiness_decision.get("primary_matched_design_supported_rows", 0))
+                    if limited_exact_span_readiness_completed else None
+                ),
+                "limited_exact_span_qualitative_future_prompt_allowed": (
+                    bool(limited_exact_span_readiness_decision.get("future_limited_promotion_prompt_allowed", False))
+                    if limited_exact_span_readiness_completed else False
+                ),
+                "limited_exact_span_qualitative_analysis_readiness": False,
                 "analysis_facing_promotion_allowed": False,
             },
             "regression_stage": {
@@ -6248,10 +6356,16 @@ def build_text_table_calibration_status_summary(
             qualitative_evidence_contract_completed,
             qualitative_evidence_contract_decision,
         ) = qualitative_evidence_contract_status()
+        (
+            limited_exact_span_readiness_completed,
+            limited_exact_span_readiness_decision,
+        ) = limited_exact_span_qualitative_readiness_status()
         return {
             **metadata,
             "calibration_phase": (
-                "compensation_extraction_qualitative_evidence_contract_limited_review_allowed_exact_span_only"
+                "compensation_extraction_limited_exact_span_qualitative_readiness_review_completed_pass_with_blockers"
+                if limited_exact_span_readiness_completed
+                else "compensation_extraction_qualitative_evidence_contract_limited_review_allowed_exact_span_only"
                 if qualitative_evidence_contract_completed
                 else "compensation_extraction_bounded_qualitative_span_disambiguation_partial_additional_repair_required"
                 if bounded_span_disambiguation_completed
@@ -6940,6 +7054,36 @@ def build_text_table_calibration_status_summary(
                 if qualitative_evidence_contract_completed else None
             ),
             "qualitative_evidence_contract_analysis_readiness": False,
+            "limited_exact_span_qualitative_readiness_review_completed": limited_exact_span_readiness_completed,
+            "limited_exact_span_qualitative_readiness_decision": (
+                limited_exact_span_readiness_decision.get("decision")
+                if limited_exact_span_readiness_completed else None
+            ),
+            "limited_exact_span_qualitative_readiness_path": (
+                relative(COMPENSATION_EXTRACTION_LIMITED_EXACT_SPAN_READINESS_DIR)
+                if limited_exact_span_readiness_completed else None
+            ),
+            "limited_exact_span_qualitative_exact_candidate_count": (
+                int(limited_exact_span_readiness_decision.get("exact_span_candidate_count", 0))
+                if limited_exact_span_readiness_completed else None
+            ),
+            "limited_exact_span_qualitative_ambiguous_navigation_count": (
+                int(limited_exact_span_readiness_decision.get("ambiguous_navigation_count", 0))
+                if limited_exact_span_readiness_completed else None
+            ),
+            "limited_exact_span_qualitative_unavailable_navigation_count": (
+                int(limited_exact_span_readiness_decision.get("unavailable_navigation_count", 0))
+                if limited_exact_span_readiness_completed else None
+            ),
+            "limited_exact_span_qualitative_primary_matched_supported_count": (
+                int(limited_exact_span_readiness_decision.get("primary_matched_design_supported_rows", 0))
+                if limited_exact_span_readiness_completed else None
+            ),
+            "limited_exact_span_qualitative_future_prompt_allowed": (
+                bool(limited_exact_span_readiness_decision.get("future_limited_promotion_prompt_allowed", False))
+                if limited_exact_span_readiness_completed else False
+            ),
+            "limited_exact_span_qualitative_analysis_readiness": False,
             "bounded_pdf_text_span_capture_completed": bounded_pdf_text_span_capture_completed,
             "bounded_pdf_text_span_capture_decision": (
                 bounded_pdf_text_span_capture_decision.get("decision")
@@ -7183,7 +7327,9 @@ def build_text_table_calibration_status_summary(
                 else False
             ),
             "next_recommendation": (
-                "run_separately_authorized_limited_exact_span_analysis_readiness_review"
+                "seek_separate_authorization_to_run_limited_exact_span_qualitative_promotion_prompt"
+                if limited_exact_span_readiness_completed
+                else "run_separately_authorized_limited_exact_span_analysis_readiness_review"
                 if qualitative_evidence_contract_completed
                 else bounded_span_disambiguation_decision.get(
                     "next_recommendation",
@@ -7243,7 +7389,9 @@ def build_text_table_calibration_status_summary(
                 )
             ),
             "wage_extraction_status": (
-                "qualitative_evidence_contract_quantitative_candidates_preserved_analysis_closed"
+                "limited_exact_span_readiness_review_quantitative_candidates_preserved_analysis_closed"
+                if limited_exact_span_readiness_completed
+                else "qualitative_evidence_contract_quantitative_candidates_preserved_analysis_closed"
                 if qualitative_evidence_contract_completed
                 else "bounded_span_disambiguation_quantitative_candidates_preserved_analysis_closed"
                 if bounded_span_disambiguation_completed
@@ -7279,7 +7427,9 @@ def build_text_table_calibration_status_summary(
                 if extraction_completed else "not_started"
             ),
             "qualitative_extraction_status": (
-                "qualitative_evidence_contract_limited_exact_span_candidate_759_ambiguous_614_unavailable_analysis_closed"
+                "limited_exact_span_readiness_pass_with_blockers_759_exact_85_matched_prompt_only_analysis_closed"
+                if limited_exact_span_readiness_completed
+                else "qualitative_evidence_contract_limited_exact_span_candidate_759_ambiguous_614_unavailable_analysis_closed"
                 if qualitative_evidence_contract_completed
                 else "bounded_span_disambiguation_partial_navigation_only_759_exact_qa_614_ambiguous_581_unavailable"
                 if bounded_span_disambiguation_completed

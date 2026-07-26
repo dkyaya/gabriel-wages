@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "compensation_extraction_limited_exact_span_qualitative_readiness_review_completed_pass_with_blockers"
+              ? "Limited exact-span qualitative readiness review passed with documented restrictions"
+              : textTableCalibrationStatus.calibration_phase ===
             "compensation_extraction_qualitative_evidence_contract_limited_review_allowed_exact_span_only"
               ? "Qualitative evidence contract built; limited exact-span readiness review may proceed"
               : textTableCalibrationStatus.calibration_phase ===
@@ -840,6 +843,17 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "compensation_extraction_limited_exact_span_qualitative_readiness_review_completed_pass_with_blockers" ? (
+            <>
+              The 759-row exact-span tier passed literal-span, identity, and provenance checks,
+              but it is not globally analysis-ready. A future, separately authorized promotion
+              prompt may prepare only this tier with row-level restrictions: 93 needs-review
+              rows, 226 cycle-missing or ambiguous rows, 239 rows without controlled occupation,
+              and 16 historical mixed memberships remain restricted. Only 85 rows have exact
+              matched-set support for the primary city-by-cycle design. The 614 ambiguous and
+              581 unavailable rows remain navigation-only; analysis readiness remains false.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "compensation_extraction_qualitative_evidence_contract_limited_review_allowed_exact_span_only" ? (
             <>
               The qualitative evidence contract reconciles all 1,954 mechanism rows into three

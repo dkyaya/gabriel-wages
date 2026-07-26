@@ -1,0 +1,81 @@
+{
+  "exact_candidate_contamination_count": 0,
+  "exact_candidate_qa_pass_count": 759,
+  "exact_candidate_rows": 759,
+  "forbidden_payload_fields_present": [],
+  "full_qualitative_readiness": false,
+  "global_analysis_readiness": false,
+  "historical_and_span_qa_separate": true,
+  "immutable_input_hashes_passed": 21,
+  "metrics": {
+    "controlled_occupation_complete": 520,
+    "controlled_occupation_missing": 239,
+    "current_active_rows": 759,
+    "current_qa_status": {
+      "needs_review": 93,
+      "provisional_unverified": 666
+    },
+    "cycle_missing_or_ambiguous": 226,
+    "exact_candidate_rows": 759,
+    "exact_candidate_span_qa_pass": 759,
+    "exact_cycle_supported": 533,
+    "exact_matched_set_supported": 85,
+    "historical_mixed_memberships": 16,
+    "historical_qa_status": {
+      "needs_review": 93,
+      "provisional_unverified": 666
+    },
+    "identity_bridge_complete": 759,
+    "mechanism_type_counts": {
+      "CPI_or_COLA_indexing": 35,
+      "arbitration_or_factfinding_reasoning": 21,
+      "certification_or_education_incentive": 17,
+      "collective_bargaining_agreement_terms": 59,
+      "comparability_or_market_study": 27,
+      "fiscal_constraint_or_budget_logic": 13,
+      "implementation_or_effective_date_logic": 385,
+      "longevity_or_service_based_pay": 24,
+      "memorandum_or_settlement_terms": 3,
+      "other": 8,
+      "parity_or_internal_equity": 2,
+      "rank_or_classification_differentiation": 30,
+      "step_movement_or_seniority": 122,
+      "wage_reopener_or_future_negotiation": 13
+    },
+    "mechanism_type_other_rows": 8,
+    "mixed_membership_status": {
+      "active": 381,
+      "historical_inactive": 15,
+      "historical_missing": 1,
+      "none": 362
+    },
+    "provenance_complete": 759,
+    "rows_without_structured_mechanism_detail": 4,
+    "source_corpus_counts": {
+      "causal": 759
+    },
+    "source_type_counts": {
+      "arbitration_award": 7,
+      "cba": 694,
+      "memorandum_or_settlement": 16,
+      "ordinance_or_policy": 12,
+      "wage_schedule_or_compensation_plan": 30
+    },
+    "states_represented": 40,
+    "unit_counts": {
+      "fire": 187,
+      "non_safety": 267,
+      "police": 305
+    }
+  },
+  "pdf_or_page_access_count": 0,
+  "schema_version": "limited_exact_span_qualitative_readiness_review_v1",
+  "task_id": "COMPENSATION-EVIDENCE-LIMITED-EXACT-SPAN-QUALITATIVE-ANALYSIS-READINESS-REVIEW-2026-07-25",
+  "tier_counts": {
+    "ambiguous_exact_span_navigation": 614,
+    "exact_span_coded_candidate": 759,
+    "unavailable_span_navigation": 581
+  },
+  "tier_counts_reconcile": true,
+  "tier_total": 1954
+}
