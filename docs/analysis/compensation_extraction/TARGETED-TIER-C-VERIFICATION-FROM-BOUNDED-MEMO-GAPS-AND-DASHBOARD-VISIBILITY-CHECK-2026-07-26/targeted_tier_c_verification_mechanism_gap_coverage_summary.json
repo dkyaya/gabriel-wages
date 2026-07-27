@@ -1,0 +1,16 @@
+{
+  "coverage_boundary": "verification only; no documentary or causal claim",
+  "queue_by_mechanism": {
+    "fiscal_constraint_signal": 250,
+    "market_or_comparability_pressure": 150,
+    "non_safety_constraint_signal": 300,
+    "strike_or_no_strike_constraint": 300
+  },
+  "verified_by_mechanism": {
+    "fiscal_constraint_signal": 145,
+    "market_or_comparability_pressure": 92,
+    "non_safety_constraint_signal": 142,
+    "strike_or_no_strike_constraint": 177
+  },
+  "verified_source_lead_count": 556
+}

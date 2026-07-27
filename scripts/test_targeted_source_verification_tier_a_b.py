@@ -218,11 +218,11 @@ class TierABVerificationTests(unittest.TestCase):
         calibration = mod.read_json(ROOT / "docs/dashboard/data/text_table_calibration_status_summary.json")
         self.assertEqual(
             readiness["overall_status"],
-            "bounded_internal_mechanism_linkage_claim_memo_completed_tier_c_verification_recommended_global_analysis_closed",
+            "targeted_tier_c_verification_completed_source_review_ready_dashboard_visible_global_analysis_closed",
         )
         self.assertEqual(
             calibration["calibration_phase"],
-            "bounded_internal_mechanism_linkage_claim_memo_completed_tier_c_verification_recommended",
+            "targeted_tier_c_verification_completed_source_review_ready_dashboard_visible",
         )
         self.assertTrue(calibration["targeted_source_verification_completed"])
         self.assertEqual(calibration["targeted_source_verified_source_lead_count"], 429)

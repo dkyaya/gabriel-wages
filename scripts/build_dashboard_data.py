@@ -1284,6 +1284,19 @@ BOUNDED_INTERNAL_MECHANISM_LINKAGE_CLAIM_MEMO_INVARIANTS_PATH = (
     BOUNDED_INTERNAL_MECHANISM_LINKAGE_CLAIM_MEMO_DIR
     / "bounded_internal_mechanism_linkage_claim_memo_invariant_checks.json"
 )
+TARGETED_TIER_C_VERIFICATION_FROM_MEMO_GAPS_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "TARGETED-TIER-C-VERIFICATION-FROM-BOUNDED-MEMO-GAPS-AND-DASHBOARD-VISIBILITY-CHECK-2026-07-26"
+)
+TARGETED_TIER_C_VERIFICATION_FROM_MEMO_GAPS_DECISION_PATH = (
+    TARGETED_TIER_C_VERIFICATION_FROM_MEMO_GAPS_DIR
+    / "targeted_tier_c_verification_decision.json"
+)
+TARGETED_TIER_C_VERIFICATION_FROM_MEMO_GAPS_INVARIANTS_PATH = (
+    TARGETED_TIER_C_VERIFICATION_FROM_MEMO_GAPS_DIR
+    / "targeted_tier_c_verification_invariant_checks.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -4132,6 +4145,112 @@ def bounded_internal_mechanism_linkage_claim_memo_status() -> tuple[bool, dict[s
     return True, decision, metadata
 
 
+def targeted_tier_c_verification_from_memo_gaps_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize only the completed 1,000-row gap-directed Tier C verification."""
+    directory = TARGETED_TIER_C_VERIFICATION_FROM_MEMO_GAPS_DIR
+    required = (
+        TARGETED_TIER_C_VERIFICATION_FROM_MEMO_GAPS_DECISION_PATH,
+        TARGETED_TIER_C_VERIFICATION_FROM_MEMO_GAPS_INVARIANTS_PATH,
+        directory / "targeted_tier_c_verification_lock.json",
+        directory / "targeted_tier_c_verification_locked_queue.csv",
+        directory / "targeted_tier_c_verification_results.csv",
+        directory / "targeted_tier_c_verification_results_summary.json",
+        directory / "targeted_tier_c_verification_retained_verified_sources_summary.json",
+        directory / "targeted_tier_c_verification_mechanism_gap_coverage_summary.json",
+        directory / "targeted_tier_c_verification_city_cycle_unit_coverage_summary.json",
+        directory / "targeted_tier_c_verification_geographic_region_coverage_summary.json",
+        directory / "next_targeted_tier_c_source_review_download_prompt.md",
+        directory / "next_task.md",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    decision = read_json(TARGETED_TIER_C_VERIFICATION_FROM_MEMO_GAPS_DECISION_PATH)
+    invariants = read_json(TARGETED_TIER_C_VERIFICATION_FROM_MEMO_GAPS_INVARIANTS_PATH)
+    lock = read_json(directory / "targeted_tier_c_verification_lock.json")
+    results_path = directory / "targeted_tier_c_verification_results.csv"
+    queue_path = directory / "targeted_tier_c_verification_locked_queue.csv"
+    results = read_csv(results_path)
+    queue = read_csv(queue_path)
+    summary = read_json(directory / "targeted_tier_c_verification_results_summary.json")
+    mechanism = read_json(directory / "targeted_tier_c_verification_mechanism_gap_coverage_summary.json")
+    geography = read_json(directory / "targeted_tier_c_verification_geographic_region_coverage_summary.json")
+    expected_statuses = {
+        "blocked_by_transport": 14,
+        "duplicate": 3,
+        "unavailable": 322,
+        "verified_source_lead": 556,
+        "weak_or_needs_review": 4,
+        "wrong_period": 57,
+        "wrong_unit": 44,
+    }
+    expected_mechanisms = {
+        "fiscal_constraint_signal": 145,
+        "market_or_comparability_pressure": 92,
+        "non_safety_constraint_signal": 142,
+        "strike_or_no_strike_constraint": 177,
+    }
+    expected_regions = {
+        "District of Columbia / Federal district": 0,
+        "Midwest": 96,
+        "Northeast": 276,
+        "South": 156,
+        "Unknown": 0,
+        "West": 28,
+    }
+    zero_fields = (
+        "get_requests", "response_bodies_read", "documents_downloaded", "pdf_pages_accessed",
+        "ocr_runs", "model_api_calls", "source_review_runs", "rows_extracted", "rows_rated",
+        "ingestion_runs", "codification_runs", "wage_gap_calculations", "regressions",
+        "treatment_effect_estimates", "population_prevalence_claims", "national_claims",
+        "final_causal_claims", "durable_ledger_merges", "external_geography_lookups",
+        "invented_geography_fields",
+    )
+    if not (
+        decision.get("task_id") == "TARGETED-TIER-C-VERIFICATION-FROM-BOUNDED-MEMO-GAPS-AND-DASHBOARD-VISIBILITY-CHECK-2026-07-26"
+        and decision.get("decision") == "targeted_tier_c_verification_completed_source_review_ready_dashboard_visible"
+        and decision.get("completion_status") == "completed_gap_directed_head_only_tier_c_verification"
+        and decision.get("verification_queue_count") == 1000 and len(queue) == len(results) == 1000
+        and decision.get("tier_counts") == {"tier_c": 1000}
+        and decision.get("mechanism_queue_counts") == {
+            "strike_or_no_strike_constraint": 300,
+            "non_safety_constraint_signal": 300,
+            "fiscal_constraint_signal": 250,
+            "market_or_comparability_pressure": 150,
+        }
+        and decision.get("verification_status_counts") == expected_statuses
+        and summary.get("verification_status_counts") == expected_statuses
+        and decision.get("verified_source_lead_count") == 556
+        and mechanism.get("verified_by_mechanism") == expected_mechanisms
+        and geography.get("verified_by_region") == expected_regions
+        and geography.get("verified_state_count") == 38
+        and geography.get("verified_city_state_pair_count") == 356
+        and geography.get("external_geography_lookups") == 0
+        and geography.get("invented_geography_fields") == 0
+        and lock.get("queue_count") == 1000
+        and lock.get("queue_sha256") == hashlib.sha256(queue_path.read_bytes()).hexdigest()
+        and all(row.get("priority_tier") == "tier_c" for row in results)
+        and all(row.get("download_status") == "not_downloaded" for row in results)
+        and all(row.get("extraction_status") == "not_extracted" for row in results)
+        and all(row.get("rating_status") == "not_rated" for row in results)
+        and all(row.get("causal_status") == "not_causal_evidence" for row in results)
+        and decision.get("source_review_download_ready_next") is True
+        and decision.get("repair_needed") is False
+        and decision.get("repo_cleanup_recommended_next") is False
+        and decision.get("http_method") == "HEAD"
+        and all(decision.get(field) == 0 for field in zero_fields)
+        and decision.get("global_analysis_readiness") is False
+        and invariants.get("all_invariants_passed") is True
+        and invariants.get("exactly_1000_selected_tier_c_candidates_verified") is True
+        and invariants.get("tier_a_b_d_repair_deprioritized_prior_excluded_rows_absent") is True
+        and invariants.get("no_weak_padding") is True
+        and invariants.get("deterministic_region_mapping_only") is True
+        and invariants.get("no_geography_invented") is True
+        and invariants.get("global_analysis_readiness_false") is True
+    ):
+        raise ValueError("gap-directed Tier C verification package fails dashboard gates")
+    return True, decision
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -4923,6 +5042,10 @@ def build_analysis_readiness(
         bounded_internal_mechanism_linkage_claim_memo_decision,
         bounded_internal_mechanism_linkage_claim_memo_metadata,
     ) = bounded_internal_mechanism_linkage_claim_memo_status()
+    (
+        targeted_tier_c_verification_from_memo_gaps_completed,
+        targeted_tier_c_verification_from_memo_gaps_decision,
+    ) = targeted_tier_c_verification_from_memo_gaps_status()
     if scale_1000_targeted_qa_completed and (
         scale_1000_targeted_qa_decision.get("qa_pass") is not True
         or scale_1000_targeted_qa_decision.get(
@@ -4969,6 +5092,9 @@ def build_analysis_readiness(
     return {
         "metadata": metadata,
         "overall_status": (
+            "targeted_tier_c_verification_completed_source_review_ready_dashboard_visible_global_analysis_closed"
+            if targeted_tier_c_verification_from_memo_gaps_completed
+            else
             "bounded_internal_mechanism_linkage_claim_memo_completed_tier_c_verification_recommended_global_analysis_closed"
             if bounded_internal_mechanism_linkage_claim_memo_completed
             else
@@ -5954,15 +6080,45 @@ def build_analysis_readiness(
                 ),
                 "bounded_internal_mechanism_linkage_claim_memo_tier_c_verification_recommended_next": (
                     bool(bounded_internal_mechanism_linkage_claim_memo_decision.get("tier_c_verification_recommended_next", False))
-                    if bounded_internal_mechanism_linkage_claim_memo_completed else False
+                    if bounded_internal_mechanism_linkage_claim_memo_completed
+                    and not targeted_tier_c_verification_from_memo_gaps_completed else False
                 ),
                 "bounded_internal_mechanism_linkage_claim_memo_path": (
                     bounded_internal_mechanism_linkage_claim_memo_metadata.get("memo_path")
                     if bounded_internal_mechanism_linkage_claim_memo_completed else None
                 ),
+                "bounded_internal_mechanism_linkage_claim_memo_dashboard_metadata_path": (
+                    relative(BOUNDED_INTERNAL_MECHANISM_LINKAGE_CLAIM_MEMO_DIR / "bounded_internal_mechanism_linkage_claim_memo_dashboard_metadata.json")
+                    if bounded_internal_mechanism_linkage_claim_memo_completed else None
+                ),
                 "bounded_internal_mechanism_linkage_claim_memo_geographic_metadata_path": (
                     bounded_internal_mechanism_linkage_claim_memo_metadata.get("geographic_metadata_path")
                     if bounded_internal_mechanism_linkage_claim_memo_completed else None
+                ),
+                "bounded_internal_mechanism_linkage_claim_memo_geographic_report_path": (
+                    relative(BOUNDED_INTERNAL_MECHANISM_LINKAGE_CLAIM_MEMO_DIR / "bounded_internal_mechanism_linkage_claim_memo_geographic_coverage.md")
+                    if bounded_internal_mechanism_linkage_claim_memo_completed else None
+                ),
+                "targeted_tier_c_verification_from_memo_gaps_completed": targeted_tier_c_verification_from_memo_gaps_completed,
+                "targeted_tier_c_verification_from_memo_gaps_decision": (
+                    targeted_tier_c_verification_from_memo_gaps_decision.get("decision")
+                    if targeted_tier_c_verification_from_memo_gaps_completed else None
+                ),
+                "targeted_tier_c_verification_queue_count": (
+                    int(targeted_tier_c_verification_from_memo_gaps_decision.get("verification_queue_count", 0))
+                    if targeted_tier_c_verification_from_memo_gaps_completed else 0
+                ),
+                "targeted_tier_c_verified_source_lead_count": (
+                    int(targeted_tier_c_verification_from_memo_gaps_decision.get("verified_source_lead_count", 0))
+                    if targeted_tier_c_verification_from_memo_gaps_completed else 0
+                ),
+                "targeted_tier_c_verification_status_counts": (
+                    targeted_tier_c_verification_from_memo_gaps_decision.get("verification_status_counts", {})
+                    if targeted_tier_c_verification_from_memo_gaps_completed else {}
+                ),
+                "targeted_tier_c_source_review_download_ready_next": (
+                    bool(targeted_tier_c_verification_from_memo_gaps_decision.get("source_review_download_ready_next", False))
+                    if targeted_tier_c_verification_from_memo_gaps_completed else False
                 ),
                 "gabriel_claim_rating_global_analysis_readiness": False,
                 "limited_qualitative_usage_registry_review_global_analysis_readiness": False,
@@ -9932,9 +10088,16 @@ def build_text_table_calibration_status_summary(
             bounded_internal_mechanism_linkage_claim_memo_decision,
             bounded_internal_mechanism_linkage_claim_memo_metadata,
         ) = bounded_internal_mechanism_linkage_claim_memo_status()
+        (
+            targeted_tier_c_verification_from_memo_gaps_completed,
+            targeted_tier_c_verification_from_memo_gaps_decision,
+        ) = targeted_tier_c_verification_from_memo_gaps_status()
         return {
             **metadata,
             "calibration_phase": (
+                targeted_tier_c_verification_from_memo_gaps_decision.get("decision")
+                if targeted_tier_c_verification_from_memo_gaps_completed
+                else
                 bounded_internal_mechanism_linkage_claim_memo_decision.get("decision")
                 if bounded_internal_mechanism_linkage_claim_memo_completed
                 else
@@ -11577,8 +11740,16 @@ def build_text_table_calibration_status_summary(
                 bounded_internal_mechanism_linkage_claim_memo_metadata.get("memo_path")
                 if bounded_internal_mechanism_linkage_claim_memo_completed else None
             ),
+            "bounded_internal_mechanism_linkage_claim_memo_dashboard_metadata_path": (
+                relative(BOUNDED_INTERNAL_MECHANISM_LINKAGE_CLAIM_MEMO_DIR / "bounded_internal_mechanism_linkage_claim_memo_dashboard_metadata.json")
+                if bounded_internal_mechanism_linkage_claim_memo_completed else None
+            ),
             "bounded_internal_mechanism_linkage_claim_memo_geographic_metadata_path": (
                 bounded_internal_mechanism_linkage_claim_memo_metadata.get("geographic_metadata_path")
+                if bounded_internal_mechanism_linkage_claim_memo_completed else None
+            ),
+            "bounded_internal_mechanism_linkage_claim_memo_geographic_report_path": (
+                relative(BOUNDED_INTERNAL_MECHANISM_LINKAGE_CLAIM_MEMO_DIR / "bounded_internal_mechanism_linkage_claim_memo_geographic_coverage.md")
                 if bounded_internal_mechanism_linkage_claim_memo_completed else None
             ),
             "bounded_internal_mechanism_linkage_claim_memo_scope": (
@@ -11603,7 +11774,33 @@ def build_text_table_calibration_status_summary(
             ),
             "bounded_internal_mechanism_linkage_claim_memo_tier_c_verification_recommended_next": (
                 bool(bounded_internal_mechanism_linkage_claim_memo_decision.get("tier_c_verification_recommended_next", False))
-                if bounded_internal_mechanism_linkage_claim_memo_completed else False
+                if bounded_internal_mechanism_linkage_claim_memo_completed
+                and not targeted_tier_c_verification_from_memo_gaps_completed else False
+            ),
+            "targeted_tier_c_verification_from_memo_gaps_completed": targeted_tier_c_verification_from_memo_gaps_completed,
+            "targeted_tier_c_verification_from_memo_gaps_decision": (
+                targeted_tier_c_verification_from_memo_gaps_decision.get("decision")
+                if targeted_tier_c_verification_from_memo_gaps_completed else None
+            ),
+            "targeted_tier_c_verification_from_memo_gaps_path": (
+                relative(TARGETED_TIER_C_VERIFICATION_FROM_MEMO_GAPS_DIR)
+                if targeted_tier_c_verification_from_memo_gaps_completed else None
+            ),
+            "targeted_tier_c_verification_queue_count": (
+                int(targeted_tier_c_verification_from_memo_gaps_decision.get("verification_queue_count", 0))
+                if targeted_tier_c_verification_from_memo_gaps_completed else 0
+            ),
+            "targeted_tier_c_verified_source_lead_count": (
+                int(targeted_tier_c_verification_from_memo_gaps_decision.get("verified_source_lead_count", 0))
+                if targeted_tier_c_verification_from_memo_gaps_completed else 0
+            ),
+            "targeted_tier_c_verification_status_counts": (
+                targeted_tier_c_verification_from_memo_gaps_decision.get("verification_status_counts", {})
+                if targeted_tier_c_verification_from_memo_gaps_completed else {}
+            ),
+            "targeted_tier_c_source_review_download_ready_next": (
+                bool(targeted_tier_c_verification_from_memo_gaps_decision.get("source_review_download_ready_next", False))
+                if targeted_tier_c_verification_from_memo_gaps_completed else False
             ),
             "gabriel_claim_rating_global_analysis_readiness": False,
             "limited_qualitative_usage_registry_review_global_analysis_readiness": False,

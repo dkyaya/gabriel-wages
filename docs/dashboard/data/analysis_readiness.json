@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": "0.1.0",
-    "generated_at": "2026-07-27T04:40:20Z",
+    "generated_at": "2026-07-27T13:03:53Z",
     "data_vintage": "2026-07-23",
     "source_files": [
       "docs/analysis/national_scout_coverage_state.csv",
@@ -82,7 +82,7 @@
       "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
     ]
   },
-  "overall_status": "bounded_internal_mechanism_linkage_claim_memo_completed_tier_c_verification_recommended_global_analysis_closed",
+  "overall_status": "targeted_tier_c_verification_completed_source_review_ready_dashboard_visible_global_analysis_closed",
   "current_inputs": {
     "national_queue_available": true,
     "national_coverage_available": true,
@@ -438,9 +438,25 @@
           "WA": 14
         }
       },
-      "bounded_internal_mechanism_linkage_claim_memo_tier_c_verification_recommended_next": true,
+      "bounded_internal_mechanism_linkage_claim_memo_tier_c_verification_recommended_next": false,
       "bounded_internal_mechanism_linkage_claim_memo_path": "docs/analysis/compensation_extraction/BOUNDED-INTERNAL-MECHANISM-LINKAGE-CLAIM-MEMO-2026-07-26/bounded_internal_mechanism_linkage_claim_memo.md",
+      "bounded_internal_mechanism_linkage_claim_memo_dashboard_metadata_path": "docs/analysis/compensation_extraction/BOUNDED-INTERNAL-MECHANISM-LINKAGE-CLAIM-MEMO-2026-07-26/bounded_internal_mechanism_linkage_claim_memo_dashboard_metadata.json",
       "bounded_internal_mechanism_linkage_claim_memo_geographic_metadata_path": "docs/analysis/compensation_extraction/BOUNDED-INTERNAL-MECHANISM-LINKAGE-CLAIM-MEMO-2026-07-26/bounded_internal_mechanism_linkage_claim_memo_geographic_coverage_summary.json",
+      "bounded_internal_mechanism_linkage_claim_memo_geographic_report_path": "docs/analysis/compensation_extraction/BOUNDED-INTERNAL-MECHANISM-LINKAGE-CLAIM-MEMO-2026-07-26/bounded_internal_mechanism_linkage_claim_memo_geographic_coverage.md",
+      "targeted_tier_c_verification_from_memo_gaps_completed": true,
+      "targeted_tier_c_verification_from_memo_gaps_decision": "targeted_tier_c_verification_completed_source_review_ready_dashboard_visible",
+      "targeted_tier_c_verification_queue_count": 1000,
+      "targeted_tier_c_verified_source_lead_count": 556,
+      "targeted_tier_c_verification_status_counts": {
+        "blocked_by_transport": 14,
+        "duplicate": 3,
+        "unavailable": 322,
+        "verified_source_lead": 556,
+        "weak_or_needs_review": 4,
+        "wrong_period": 57,
+        "wrong_unit": 44
+      },
+      "targeted_tier_c_source_review_download_ready_next": true,
       "gabriel_claim_rating_global_analysis_readiness": false,
       "limited_qualitative_usage_registry_review_global_analysis_readiness": false,
       "limited_qualitative_usage_layer_acceptance_global_analysis_readiness": false,

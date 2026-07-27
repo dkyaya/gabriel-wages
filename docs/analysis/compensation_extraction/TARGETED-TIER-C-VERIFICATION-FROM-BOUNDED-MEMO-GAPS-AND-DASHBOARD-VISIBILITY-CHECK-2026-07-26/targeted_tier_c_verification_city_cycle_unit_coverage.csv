@@ -1,0 +1,945 @@
+state,municipality,derived_region,unit_type,contract_or_document_period,queue_count,verified_source_lead_count,mechanism_families,coverage_status
+AL,Alabaster,South,safety_and_non_safety_bargaining_units,2014-2024 (archive item; period not specified in locator),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+AL,Alabaster,South,safety_and_non_safety_bargaining_units,2014-2024 (attachment published/available within municipal meeting system timeframe; exact labor cycle not specified in locator),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+AL,Alabaster,South,safety_and_non_safety_bargaining_units,2014-2024 (document index; period not specified in locator),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+AL,Cullman,South,non_safety_municipal_units,"FY2021 budget cycle / pay period beginning October 1, 2021 (inferred from council-style “effective pay period beginning” language)",1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+AL,Cullman,South,non_safety_municipal_units,"Pay plan effective October 1, 2022 (inferred from minutes reference to “become effective for the pay period beginning October 1st, 2022”)",1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+AL,Cullman,South,non_safety_municipal_units,"Pay plan effective October 1, 2023 (inferred from council-style “effective on the 1st day of October” / “pay period” language)",1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+AL,Fairhope,South,non_safety_municipal_units,2019 budget (explicitly describes compensation/merit pool and promotions),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+AL,Fairhope,South,non_safety_municipal_units,Resolution adopted 04 March 2022 (mentions Compensation and Job Classification Plan + Grade Order Sheet and grade of pay for positions),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+AL,Hartselle,South,safety_and_non_safety_compensation_units,(page states) Current Pay Plan as of October 2025 (not a 2014-2024 dated series on-page),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+AL,Jacksonville,South,safety_and_non_safety_compensation_units,2014-2024 target window,2,1,market_or_comparability_pressure,verified_locator_metadata_only
+AL,Millbrook,South,safety_and_non_safety_compensation_units,document dated/published 2019-08 (benefits summary; compensation-related terms may be referenced indirectly),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+AL,Millbrook,South,safety_and_non_safety_compensation_units,index page containing agenda entries (includes an example: “RESOLUTION 26-38 Amending Resolution 14-01. Personnel Policy.”),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+AL,Mountain Brook,South,non_safety_municipal_units,"fiscal year ended September 30, 2016 (document includes longevity pay plan provisions referencing 2016 and 2015)",1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+AL,Prichard,South,non_safety_municipal_units,2014-2024 (document contains jurisdiction-effective entries; Prichard non-public safety referenced for specific effective dates),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+AR,Bryant,South,non_safety_municipal_units,2018 budget book (target window: 2014-2024),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+AR,Bryant,South,non_safety_municipal_units,2019 budget book (target window: 2014-2024),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+AR,Bryant,South,non_safety_municipal_units,2020 budget book (target window: 2014-2024),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+AR,El Dorado,South,safety_and_non_safety_compensation_units,2014-2024 (searchable archive; exact document years need follow-up),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+AR,El Dorado,South,safety_and_non_safety_compensation_units,2019-02-26 publication (pay raise ordinance context; exact effective dates need follow-up),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+AR,Hot Springs,South,non_safety_comparator,"2024-2025 (""24.25"" in title/locator)",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+AR,Hot Springs,South,non_safety_comparator,"2024-2025 school year (listed as Classified Salary Schedules, 2024-2025)",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+AR,North Little Rock,South,non_safety_comparator,"Effective Jan 1, 2016 through Dec 31, 2016; then auto-renew unless modified/terminated with 60 days notice (per document language)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+AR,Siloam Springs,South,non_safety_municipal_units,2015 (budget year),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+AR,Siloam Springs,South,non_safety_municipal_units,2016 (budget year; workbook includes personnel schedule tables),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+AR,Siloam Springs,South,non_safety_municipal_units,2024 (budget year),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+AR,Van Buren,South,non_safety_municipal_units,2019 Budget (fiscal-year framing in budget document),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+AR,Van Buren,South,non_safety_municipal_units,2022-2023 Budget (resolution dated 12-08-2022; proposed budget worksheet referencing 2023),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+AR,Van Buren,South,non_safety_municipal_units,"Ongoing code provisions; includes ordinance updates such as Ord. No. 13-2024 (May 28, 2024) referenced within compensation sections",1,1,fiscal_constraint_signal,verified_locator_metadata_only
+AR,West Memphis,South,non_safety_municipal_units,2016 (report archive item),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+AR,West Memphis,South,non_safety_municipal_units,FY2024 (budget archive item),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+AZ,Bullhead City,West,safety_and_non_safety_bargaining_units,"July 1, 2024–June 30, 2027",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+AZ,Coolidge,West,non_safety_municipal_units,Fiscal Year 2017,1,1,fiscal_constraint_signal,verified_locator_metadata_only
+AZ,El Mirage,West,safety_and_non_safety_bargaining_units,Expires on/around June 30 (exact year/term not confirmed from locator snippet),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+AZ,El Mirage,West,safety_and_non_safety_bargaining_units,Referenced arbitration decision: December 2021 (MOU referenced; contract dates not confirmed in the locator result),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+AZ,Eloy,West,non_safety_municipal_units,FY 2021–2022 (tentative budget),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+AZ,Eloy,West,non_safety_municipal_units,FY 2022–2023 (final budget),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+AZ,Prescott Valley,West,safety_and_non_safety_bargaining_units,2014-2024 target window,1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+AZ,Prescott Valley,West,safety_and_non_safety_bargaining_units,Fiscal Year 2022-23 (explicitly referenced in the snippet),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+CA,Elk Grove,West,non_safety_comparator,"Salary schedule file includes effective and revised dates (e.g., effective 7/13/2025; revised 12/14/2025 shown in search snippet)",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+CA,Elk Grove,West,non_safety_comparator,Unrepresented Compensation Policy effective for unrepresented employees (as authorized in staff report/resolution packet); city-wide salary schedule adopted in FY2026-27 context,1,1,non_safety_constraint_signal,verified_locator_metadata_only
+CA,Elk Grove,West,non_safety_comparator,"Unrepresented Employees Compensation Policy effective from July 1, 2023 through June 30, 2027 (per linked agenda item context)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+CA,Garden Grove,West,non_safety_comparator,"2018 (effective March 14, 2018 per document header)",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+CA,Garden Grove,West,non_safety_comparator,2022 (effective 07/09/2022 per document context),1,1,non_safety_constraint_signal,verified_locator_metadata_only
+CA,Los Banos,West,non_safety_comparator,"July 1, 2024 – June 30, 2027",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+CA,Santa Cruz,West,non_safety_comparator,Expected to include 2024–(term not confirmed from lead search result snippet),1,1,non_safety_constraint_signal,verified_locator_metadata_only
+CO,Denver,West,non_safety_comparator,"In full force and effect until December 31, 2022 (effective/term language appears in document snippet)",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+CO,Fruita,West,safety_and_non_safety_compensation_units,"2024 Budget overview (meeting dated Sept 26, 2023)",1,1,market_or_comparability_pressure,verified_locator_metadata_only
+CO,Fruita,West,safety_and_non_safety_compensation_units,Market-Based Pay Plan created in 2019; first implemented in 2020 (agenda item supporting documentation),1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+CO,Littleton,West,non_safety_comparator,2023-2026 (per document title),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+CO,Wheat Ridge,West,safety_and_non_safety_bargaining_units,2023-2024-2025,1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+CT,Cheshire,Northeast,safety_and_non_safety_bargaining_units,Expedited arbitration award dated 2024-03-08; issue refers to period commencing 1/1/2024 (per award cover text),1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+CT,East Hartford,Northeast,safety_and_non_safety_bargaining_units,"July 1, 2019 through June 30, 2022",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+CT,Ellington,Northeast,safety_and_non_safety_compensation_units,"July 1, 2022 - June 30, 2025",1,1,market_or_comparability_pressure,verified_locator_metadata_only
+CT,Ellington,Northeast,safety_and_non_safety_compensation_units,"July 1, 2023 - June 30, 2026",1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+CT,Enfield,Northeast,safety_and_non_safety_bargaining_units,2022-2025 (contract period as indicated by title),1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+CT,Farmington,Northeast,non_safety_municipal_units,FY2014/2015,1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+CT,Glastonbury,Northeast,safety_and_non_safety_bargaining_units,"Arbitration awards compilation issue (2014 Issue No. 1); includes an entry for Glastonbury City of & Glastonbury Police Officers Association (date shown in source index: Aug. 10, 2012; docket shown in source index: 2012–A–0032)",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+CT,Groton,Northeast,safety_and_non_safety_bargaining_units,"July 1, 2016–June 30, 2020 (CBA referenced within the decision)",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+CT,Groton,Northeast,safety_and_non_safety_bargaining_units,"Unspecified on landing page; contains links to various CBA periods (some outside 2014–2024, but likely includes relevant time-window documents via related documents listing/archived items)",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+CT,Guilford,Northeast,non_safety_municipal_units,2016–2020 (per file name; agreement period not fully revalidated here),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+CT,Guilford,Northeast,non_safety_municipal_units,"Effective July 1, 2018 through June 30, 2021 (per document excerpt)",1,1,fiscal_constraint_signal,verified_locator_metadata_only
+CT,Hamden,Northeast,safety_and_non_safety_bargaining_units,2014-07-01 to 2022-06-30,1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+CT,Hamden,Northeast,safety_and_non_safety_bargaining_units,2022-07-01 to 2025-06-30,1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+CT,New Milford,Northeast,safety_and_non_safety_bargaining_units,"July 1, 2023 – June 30, 2027",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+CT,Newington,Northeast,safety_and_non_safety_bargaining_units,(Newington labor contracts page indicates AFSCME Contract 2021-2024),1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+CT,Newington,Northeast,safety_and_non_safety_bargaining_units,"July 1, 2021 – June 30, 2026",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+CT,Newington,Northeast,safety_and_non_safety_bargaining_units,multiple (includes contracts covering parts of 2014-2024),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+CT,Newtown,Northeast,safety_and_non_safety_bargaining_units,FY 2024–2027 (PDF noted on page); specific contract(s) also referenced by title,1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+CT,Newtown,Northeast,safety_and_non_safety_bargaining_units,"Includes entries covering at least 2024–2028 (e.g., “Final Police Department Contract 2024-28”)",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+CT,Newtown,Northeast,safety_and_non_safety_bargaining_units,Paraeducators contract: 7-1-22 to 6-30-25 (explicitly shown on the page snippet),1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+CT,North Haven,Northeast,non_safety_municipal_units,"Four-year agreement (retroactive and effective pay increases described; article dated Feb 13, 2014)",1,1,fiscal_constraint_signal,verified_locator_metadata_only
+CT,Plainville,Northeast,safety_and_non_safety_compensation_units,"July 1, 2023 — June 30, 2026",1,1,market_or_comparability_pressure,verified_locator_metadata_only
+CT,Plainville,Northeast,safety_and_non_safety_compensation_units,RFP issued for study (associated timeframe not explicitly fixed in the page snippet),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+CT,Ridgefield,Northeast,non_safety_municipal_units,2014-2024 target window,1,1,fiscal_constraint_signal,verified_locator_metadata_only
+CT,Seymour,Northeast,safety_and_non_safety_compensation_units,"Includes wage increases effective retroactively/starting July 1, 2023 and July 1, 2024 (full term not extracted)",1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+CT,Seymour,Northeast,safety_and_non_safety_compensation_units,"Language indicates agreement entered into effective July 1, 2017 (full term not extracted)",1,1,market_or_comparability_pressure,verified_locator_metadata_only
+CT,Southington,Northeast,safety_and_non_safety_bargaining_units,2023–2027,1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+CT,Southington,Northeast,safety_and_non_safety_bargaining_units,7/1/2021–6/30/2025,1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+CT,Stonington,Northeast,non_safety_municipal_units,2022-2025,1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+CT,Stonington,Northeast,non_safety_municipal_units,"referenced expirations June 30, 2019 (and other listed dates)",1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+CT,Stratford,Northeast,safety_and_non_safety_bargaining_units,"2022-2026 contract (effective July 1, 2022 to June 30, 2026) (as referenced in award)",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+CT,Stratford,Northeast,safety_and_non_safety_bargaining_units,"Multiple contract periods listed on page (e.g., Fire: 7/1/2022–6/30/2026; Police: 7/1/2021–6/30/2025) (as shown on page)",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+CT,Tolland,Northeast,safety_and_non_safety_compensation_units,2014-2024 target window,1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+CT,Trumbull,Northeast,safety_and_non_safety_bargaining_units,2019-2023,1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+CT,Trumbull,Northeast,safety_and_non_safety_bargaining_units,2022-2026,1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+CT,Trumbull,Northeast,safety_and_non_safety_bargaining_units,2023-2027,1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+CT,Vernon,Northeast,safety_and_non_safety_bargaining_units,2014-2024 (article references a Connecticut statutory arbitration dispute; exact award/contract dates not captured in the search snippet),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+CT,Vernon,Northeast,safety_and_non_safety_bargaining_units,2014-2024 (listed agreements may include this window),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+CT,Westport,Northeast,safety_and_non_safety_bargaining_units,"Successor CBA negotiation culminating in arbitration award (award dated March 20, 2012; court decision in 2014)",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+CT,Windham,Northeast,non_safety_municipal_units,2024 to 2027,1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+CT,Windham,Northeast,non_safety_municipal_units,contract expiration listed as 6/30/2024 (municipal employees),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+CT,Windham,Northeast,non_safety_municipal_units,tentative/approved proposed CBA(s) adopted on 2024-05-21 (exact successor terms not visible in search snippet),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+DE,Seaford,South,non_safety_comparator,"July 1, 1997 – June 30, 2000 (CBA provisions incorporated into successor/remand decision)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+DE,Seaford,South,non_safety_comparator,"July 1, 1997 – June 30, 2000 (agreement term explicitly referenced)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+DE,Seaford,South,non_safety_comparator,"July 1, 1997 – June 30, 2000 (prior CBA term referenced)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+DE,Wilmington,South,non_safety_comparator,2023 (document indicates '2023 BASE SALARY STRUCTURE - STEPS'; effective dates not confirmed in the snippet),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+FL,Cape Coral,South,non_safety_comparator,"October 1, 2024 through September 30, 2026",3,0,non_safety_constraint_signal,no_verified_tier_c_lead
+FL,Coconut Creek,South,non_safety_comparator,"December 8, 2022 - September 30, 2025",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+FL,Coconut Creek,South,non_safety_comparator,"October 1, 2022 through September 30, 2025",2,0,non_safety_constraint_signal,no_verified_tier_c_lead
+FL,Doral,South,non_safety_comparator,"CBA term covering Oct 1, 2022 to Sep 30, 2025 (exact dates to be confirmed inside PDF)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+FL,Eustis,South,non_safety_comparator,10/1/2024 – 9/30/2027 (as stated in snippet),1,1,non_safety_constraint_signal,verified_locator_metadata_only
+FL,Eustis,South,non_safety_comparator,"Effective October 1, 2024 to September 30, 2027 (as stated in snippet)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+FL,Eustis,South,non_safety_comparator,"Effective through September 30, 2027 (term described as three-year period; snippet also references 10/1/2024 wage increase)",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+FL,Fort Pierce,South,non_safety_comparator,"October 1, 2024 to September 30, 2027",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+FL,Haines City,South,non_safety_comparator,"through September 30, 2024 (other operative duration terms not verified in scout stage)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+FL,Hialeah,South,non_safety_comparator,"October 1, 2023 - September 30, 2026",2,1,non_safety_constraint_signal,verified_locator_metadata_only
+FL,Jupiter,South,non_safety_comparator,Unclear (prompt indicates FY 2026-2028 pay provisions and effective dates tied to Oct 1),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+FL,Leesburg,South,non_safety_comparator,2023-2026 (with 2024-2025 reopeners),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+FL,Melbourne,South,non_safety_comparator,2015–2018,1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+FL,Melbourne,South,non_safety_comparator,2018–2021,1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+FL,Melbourne,South,non_safety_comparator,2021–2024,1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+FL,Miami Gardens,South,non_safety_comparator,"Effective October 1, 2022 through September 30, 2025",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+FL,Miramar,South,non_safety_comparator,2021-2024 (expected cycle aligns with 10/01/2021–09/30/2024),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+FL,New Port Richey,South,non_safety_comparator,Fiscal Years 2024-2025; 2025-2026; 2026-2027,1,1,non_safety_constraint_signal,verified_locator_metadata_only
+FL,Niceville,South,non_safety_comparator,"July 1, 2023 through June 30, 2026",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+FL,Niceville,South,non_safety_comparator,Master Contract 2024-2027 (page indicates the 24-27 contract is available),1,1,non_safety_constraint_signal,verified_locator_metadata_only
+FL,North Miami,South,non_safety_comparator,"October 1, 2021 through September 30, 2024",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+FL,Ocala,South,non_safety_comparator,"October 1, 2025 through September 30, 2028",2,0,non_safety_constraint_signal,no_verified_tier_c_lead
+FL,Opa-locka,South,non_safety_comparator,"Operative period between April 1, 2020 and the start of the first full pay period in December 2020",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+FL,Opa-locka,South,non_safety_comparator,"Operative period between April 1, 2020 and the start of the first full pay period in December 2020 (as referenced in the notice)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+FL,Palm Bay,South,non_safety_comparator,10/01/2021 - 9/30/2024,1,1,non_safety_constraint_signal,verified_locator_metadata_only
+FL,Palm Bay,South,non_safety_comparator,10/1/21 - 09/30/24,1,1,non_safety_constraint_signal,verified_locator_metadata_only
+FL,Palm Beach Gardens,South,non_safety_comparator,2023-2025,1,1,non_safety_constraint_signal,verified_locator_metadata_only
+FL,Palmetto,South,non_safety_comparator,"2012 to September 30, 2013",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+FL,Pembroke Pines,South,non_safety_comparator,Implied by context to match the 2019–2022 CBA cycle (General Employees),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+FL,Pembroke Pines,South,non_safety_comparator,"October 1, 2019 through September 30, 2022",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+FL,Pompano Beach,South,non_safety_comparator,"October 1, 2022 through September 30, 2025 (referenced within the ordinance)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+FL,Port Orange,South,non_safety_comparator,2019-2022 (term per filename/title; exact dates not extracted),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+FL,Sanford,South,non_safety_comparator,"Effective starting January 1, 2022 forward; used as part of overall CBA until further notice / until amended into future CBAs (per visible lead text)",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+FL,Sanford,South,non_safety_comparator,Includes language indicating MOU relates to amending the CBA and is effective as part of the overall CBA integration (visible lead is oriented to CBA-related amendment context),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+FL,St. Augustine,South,non_safety_comparator,"October 1, 2024 through September 30, 2025 (referenced negotiation cycle)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+FL,Tarpon Springs,South,non_safety_comparator,FY 2024-2026,1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+FL,West Park,South,safety_and_non_safety_compensation_units,Not determined (document published ~6.7 years ago; contains comparative classification/compensation tables referencing West Park),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+FL,Winter Garden,South,non_safety_comparator,"October 1, 2024 to September 30, 2027",3,1,non_safety_constraint_signal,verified_locator_metadata_only
+FL,Winter Haven,South,non_safety_comparator,10-01-2022 to 09-30-2025 (as shown in filename; operative details not scout-verified),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+FL,Winter Haven,South,non_safety_comparator,"CBA expires September 30, 2024 (operative duration start/end terms not fully scout-verified)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+GA,Americus,South,safety_and_non_safety_compensation_units,Likely prior-year study referenced in 2019 article (exact period not specified in snippet),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+GA,Atlanta,South,non_safety_comparator,unclear,1,1,non_safety_constraint_signal,verified_locator_metadata_only
+GA,Buford,South,non_safety_municipal_units,Fiscal Year 2014,1,1,fiscal_constraint_signal,verified_locator_metadata_only
+GA,Calhoun,South,non_safety_municipal_units,FY2016 budget document (2016 budget),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+GA,Cartersville,South,non_safety_municipal_units,FY2014 (City budget report; includes personnel/pay and budgeted expenditure context),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+GA,Cartersville,South,non_safety_municipal_units,FY2022-2023 (City budget PDF),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+GA,College Park,South,safety_and_non_safety_compensation_units,2014-2024 target window,1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+GA,Conyers,South,non_safety_municipal_units,Annual Budget • Fiscal Year 2020-2021 (plus related FY schedule shown in snippet),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+GA,Conyers,South,non_safety_municipal_units,Fiscal Year (document shows “PAY & CLASSIFICATION PLAN” / “Employee Pay Scale”; FY appears within the document),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+GA,Conyers,South,non_safety_municipal_units,"Fiscal Year 2016-2017 (annual budget, FY cycle)",1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+GA,Covington,South,safety_and_non_safety_compensation_units,2015 (personnel policy compilation),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+GA,Decatur,South,non_safety_municipal_units,2018-2019,1,1,fiscal_constraint_signal,verified_locator_metadata_only
+GA,Forest Park,South,non_safety_municipal_units,2014-2024 target window,2,1,fiscal_constraint_signal,verified_locator_metadata_only
+GA,Holly Springs,South,non_safety_municipal_units,FY2016 budget,1,1,fiscal_constraint_signal,verified_locator_metadata_only
+GA,Kingsland,South,non_safety_municipal_units,Fiscal Year 2013-14 budget adoption (City budget report labeled FY2014),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+GA,Kingsland,South,non_safety_municipal_units,Fiscal Year 2015-16 budget cycle (document labeled FY2016),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+GA,Kingsland,South,non_safety_municipal_units,Fiscal Year 2023-24 budget cycle (document labeled FY2024),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+GA,Marietta,South,safety_and_non_safety_bargaining_units,2014-2024 target window,1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+GA,Marietta,South,safety_and_non_safety_bargaining_units,2018 (article date),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+GA,St. Marys,South,non_safety_municipal_units,FY2018 budget document,1,1,fiscal_constraint_signal,verified_locator_metadata_only
+GA,Sugar Hill,South,non_safety_municipal_units,Fiscal Year 2014 budget,1,1,fiscal_constraint_signal,verified_locator_metadata_only
+GA,Sugar Hill,South,non_safety_municipal_units,Fiscal Year 2019 budget,1,1,fiscal_constraint_signal,verified_locator_metadata_only
+GA,Villa Rica,South,non_safety_municipal_units,2024-08-20 (meeting packet date in filename),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+ID,Boise City,West,non_safety_comparator,"October 1, 2022 through September 30, 2024",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+ID,Boise City,West,non_safety_comparator,"October 1, 2022 through September 30, 2026",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+IL,Addison,Midwest,non_safety_comparator,2015-2018,1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+IL,Algonquin,Midwest,safety_and_non_safety_bargaining_units,"May 1, 2018 – April 30, 2022",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+IL,Algonquin,Midwest,safety_and_non_safety_bargaining_units,"May 1, 2021 – April 30, 2025",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+IL,Antioch,Midwest,safety_and_non_safety_bargaining_units,2020–2024,2,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+IL,Antioch,Midwest,safety_and_non_safety_bargaining_units,2024 (renewal/extension action referenced),1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+IL,Bremen,Midwest,safety_and_non_safety_bargaining_units,2015 meeting minutes referencing Bremen District 228 matter (exact bargaining cycle not visible from snippet),1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+IL,Bremen,Midwest,safety_and_non_safety_bargaining_units,"unfair labor practice charge with events in 2024 (filed Aug 22, 2024; meeting March 7, 2024)",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+IL,Buffalo Grove,Midwest,non_safety_comparator,"Inferred cycle: May 1, 2024 through April 30, 2026 (from document label “2024-2026”; exact dates not extracted)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+IL,Buffalo Grove,Midwest,non_safety_comparator,"May 1, 2023 through April 30, 2025 (as labeled in result snippet)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+IL,Capital,Midwest,safety_and_non_safety_bargaining_units,"Issued Feb 24, 2020 (interest arbitration award within 2014-2024 window)",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+IL,Cicero,Midwest,non_safety_comparator,"July 1, 2019 - June 30, 2024",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+IL,Decatur,Midwest,safety_and_non_safety_bargaining_units,2017-2022,1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+IL,Downers Grove,Midwest,safety_and_non_safety_bargaining_units,2024-2027,1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+IL,Downers Grove,Midwest,safety_and_non_safety_bargaining_units,May 2023 - April 2026,1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+IL,Edwardsville,Midwest,safety_and_non_safety_bargaining_units,2024-2027 (listed on page),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+IL,Frankfort,Midwest,safety_and_non_safety_bargaining_units,"effective May 1, 2022 through April 30, 2026",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+IL,Franklin Park,Midwest,non_safety_municipal_units,"Covering the period from August 1, 2013 through April 30, 2017",1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+IL,Galesburg City,Midwest,safety_and_non_safety_bargaining_units,2021-01-01 to 2023-12-31 (amended effective 2023-10-16 per cover page text),1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+IL,Hanover,Midwest,safety_and_non_safety_bargaining_units,2015-2017,1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+IL,Hanover,Midwest,safety_and_non_safety_bargaining_units,2017-2021,1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+IL,Hanover,Midwest,safety_and_non_safety_bargaining_units,2022-2025 (per hosted agreement title block),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+IL,Lake Villa,Midwest,safety_and_non_safety_bargaining_units,2016 (10-month bargaining failure context; strike called off after this period),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+IL,Lansing,Midwest,non_safety_comparator,Effective: 5/1/2021 through 4/30/2025 (auto-renewal language year-to-year unless modified),1,1,non_safety_constraint_signal,verified_locator_metadata_only
+IL,Lockport,Midwest,safety_and_non_safety_bargaining_units,2019-2023,1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+IL,Lockport,Midwest,safety_and_non_safety_bargaining_units,2023-2027,2,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+IL,Mattoon,Midwest,non_safety_comparator,"2022/2023 Compensation Plan (effective May 1, 2022 per ordinance text)",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+IL,McHenry,Midwest,safety_and_non_safety_bargaining_units,"Successor agreement execution authorized for May 1, 2025 through April 30, 2029 (packet also references the immediately-preceding contract context)",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+IL,Mokena,Midwest,non_safety_municipal_units,FY 2013/2014 budget materials (FY14Budget.pdf; within 2014 target window),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+IL,Montgomery,Midwest,non_safety_comparator,"Successor collective bargaining agreement history referencing expiry April 30, 2010 (full duration not confirmed in lead snippet)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+IL,Mount Prospect,Midwest,non_safety_comparator,2024–2029 (PDF labeled as MPESPA CBA 2024–2029),1,1,non_safety_constraint_signal,verified_locator_metadata_only
+IL,Naperville,Midwest,safety_and_non_safety_bargaining_units,"January 1, 2020 – December 31, 2024",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+IL,Naperville,Midwest,safety_and_non_safety_bargaining_units,"January 1, 2021 – December 31, 2025",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+IL,Naperville,Midwest,safety_and_non_safety_bargaining_units,"Retroactive term to January 1, 2021 – December 31, 2025",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+IL,O'Fallon,Midwest,non_safety_municipal_units,"Fiscal Year 2021 (May 1, 2020–April 30, 2021)",1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+IL,Oak Park,Midwest,safety_and_non_safety_bargaining_units,1/1/2024–12/31/2026 (as indicated by file name),2,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+IL,Oswego,Midwest,non_safety_comparator,2022-2025 (contains time overlapping expected 2022-2024),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+IL,Park Ridge,Midwest,non_safety_comparator,"July 19, 2024 through November 15, 2027",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+IL,Park Ridge,Midwest,non_safety_comparator,"May 1, 2023 to April 30, 2027 (per document title/coverage)",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+IL,Peoria City,Midwest,safety_and_non_safety_bargaining_units,"January 1, 2013 through December 31, 2016 (document is titled 2013-2016)",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+IL,Peoria City,Midwest,safety_and_non_safety_bargaining_units,"January 1, 2015 through December 31, 2018",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+IL,St. Clair,Midwest,safety_and_non_safety_bargaining_units,2016 arbitration award (exact effective start/end not captured in lead snippet),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+IL,Stickney,Midwest,safety_and_non_safety_bargaining_units,Case decision in 2016 (appeals judgment referencing arbitration award entered under the CBA context; arbitration-related timing not asserted here),1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+IL,Thornton,Midwest,safety_and_non_safety_bargaining_units,"May 1, 2024 through April 30, 2026",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+IL,Westchester,Midwest,safety_and_non_safety_compensation_units,Fiscal Year 2022 (expected within 2014-2024 target window),1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+IL,Zion,Midwest,non_safety_municipal_units,2021–2024 (document title; specific start/end dates need confirmation within the CBA),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+IL,Zion,Midwest,non_safety_municipal_units,Fiscal year 2019–2020 referenced for compensation-related adjustments (MOU/addendum context),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+IL,Zion,Midwest,non_safety_municipal_units,"May 1, 2018 through April 30, 2021 (referenced in minutes)",1,1,fiscal_constraint_signal,verified_locator_metadata_only
+IN,Centre,Midwest,safety_and_non_safety_compensation_units,2021 Budget Order (Amended),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+IN,Logansport,Midwest,non_safety_municipal_units,2023,1,1,fiscal_constraint_signal,verified_locator_metadata_only
+IN,New Albany,Midwest,safety_and_non_safety_bargaining_units,2015-01-05 council meeting (minutes document; CBA period not specified in lead),1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+IN,New Albany,Midwest,safety_and_non_safety_bargaining_units,2022-04-19 grievance hearing (minutes document; contract period not specified in lead),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+IN,New Albany,Midwest,safety_and_non_safety_bargaining_units,2024-09-19 council packet (budget packet; arbitration award period not specified in lead),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+KY,Fort Thomas,South,safety_and_non_safety_compensation_units,Ordinance O-03-2024 (described as 24/25 Pay Classification Plan in minutes),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+KY,Fort Thomas,South,safety_and_non_safety_compensation_units,"Ordinance O-05-2024 (effective on September 1, 2024 per document snippet)",1,1,market_or_comparability_pressure,verified_locator_metadata_only
+KY,Fort Thomas,South,safety_and_non_safety_compensation_units,Ordinance O-08-2017 (2017-2018 Fiscal Year per snippet),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+KY,Glasgow,South,safety_and_non_safety_compensation_units,2014-2024 target window,1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+KY,Mount Washington,South,non_safety_municipal_units,2014-2024 target window,1,1,fiscal_constraint_signal,verified_locator_metadata_only
+KY,Mount Washington,South,non_safety_municipal_units,"Fiscal Year July 1, 2024 through June 30, 2025",1,1,fiscal_constraint_signal,verified_locator_metadata_only
+KY,Shepherdsville,South,safety_and_non_safety_compensation_units,"Term beginning July 1, 2023; ending June 30, 2025 (within expected 2014-2024 window overlap via July 1, 2023 portion)",1,1,market_or_comparability_pressure,verified_locator_metadata_only
+KY,Winchester,South,non_safety_municipal_units,FY2018 budget,1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+KY,Winchester,South,non_safety_municipal_units,FY2024 budget,1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+LA,Gonzales,South,safety_and_non_safety_compensation_units,Fiscal Year 2022-2023,1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+LA,Hammond,South,non_safety_comparator,"Fiscal Year 2006/07; pay grid effective July 1, 2006",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+LA,Hammond,South,non_safety_comparator,Pay plan referenced as contained in ordinance No. 00-2628 (civil service) and ordinance No. 00-2692 (unclassified) (operative term details for 2006 comparator likely determined via those ordinance numbers),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+MA,Arlington,Northeast,non_safety_comparator,"Effective July 1, 2018 through June 30, 2021",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+MA,Arlington,Northeast,non_safety_comparator,"July 1, 2018 — June 30, 2021",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+MA,Arlington,Northeast,non_safety_comparator,"Wage increase effective July 1, 2018; agreements valid through June 30, 2021 (term stated as July 1, 2018–June 30, 2021 in award matching context)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+MA,Billerica,Northeast,safety_and_non_safety_bargaining_units,2014-2024 target window,1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+MA,Braintree Town,Northeast,non_safety_comparator,Index/overview; includes references to Town of Braintree arbitration/CERB decisions with dates (full MOA/CBA period not reproduced here),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+MA,Braintree Town,Northeast,non_safety_comparator,"Issued January 20, 2016 (CBA referenced; full contract term not reproduced in lead snippet)",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+MA,Braintree Town,Northeast,non_safety_comparator,"Narrative references contract negotiations and “On January 20, 2016, the arbitrator issued his award” (full CBA/MOA period not reproduced in snippet)",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+MA,Brookline,Northeast,safety_and_non_safety_bargaining_units,2016–2019 (successor agreement period per document title),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+MA,Brookline,Northeast,safety_and_non_safety_bargaining_units,"Effective July 1, 2020 through June 30, 2023 (per arbitration award cover text/heading)",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+MA,Brookline,Northeast,safety_and_non_safety_bargaining_units,"Effective July 1, 2021 through June 30, 2024",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+MA,Canton,Northeast,non_safety_municipal_units,Appropriation context for FY2019,1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+MA,Concord,Northeast,non_safety_municipal_units,"FY2023 (town fiscal year ending June 30, 2023); includes non-union salary adjustment history table referencing 2014+",1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+MA,Concord,Northeast,non_safety_municipal_units,"FY2024 (town fiscal year ending June 30, 2024); pay plan references step increase & merit pay plan established prior to July 1, 2023",1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+MA,Concord,Northeast,non_safety_municipal_units,Plan recommended for general market-based increase effective 7/1/2023 (supporting FY2024 compensation framework),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+MA,Danvers,Northeast,safety_and_non_safety_bargaining_units,Not stated in lead listing (source appears to be a multi-year/continuing fiscal-year contract; target window inferred),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+MA,Dartmouth,Northeast,safety_and_non_safety_bargaining_units,2024-05-09 (meeting minutes; specific contract/award period not provided in lead),1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+MA,Dartmouth,Northeast,safety_and_non_safety_bargaining_units,"April 6, 2015 (as indicated by related case identifier listing on referenced index page; exact award period not provided in lead)",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+MA,Dracut,Northeast,safety_and_non_safety_bargaining_units,2014-2024 target window,3,2,strike_or_no_strike_constraint,verified_locator_metadata_only
+MA,East Bridgewater,Northeast,safety_and_non_safety_compensation_units,2022-2025 (MOA) (overlaps 2014-2024 window through 2022-2024),1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+MA,Easton,Northeast,non_safety_municipal_units,2017-07-01 to 2019-06-30,1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+MA,Easton,Northeast,non_safety_municipal_units,2018-07-01 to 2021-06-30,1,1,fiscal_constraint_signal,verified_locator_metadata_only
+MA,Fall River,Northeast,non_safety_comparator,multiple (site lists current/prior agreements),1,1,non_safety_constraint_signal,verified_locator_metadata_only
+MA,Falmouth,Northeast,safety_and_non_safety_bargaining_units,"July 1, 2021–June 30, 2022 and July 1, 2022–June 30, 2025 (includes FY23–FY25 coverage spanning 2014–2024 target window)",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+MA,Foxborough,Northeast,non_safety_municipal_units,"Contract dated July 1, 2021 to June 30, 2022 (referenced in Annual Town Meeting articles)",1,1,fiscal_constraint_signal,verified_locator_metadata_only
+MA,Foxborough,Northeast,non_safety_municipal_units,"Referenced fiscal years 2023, 2024, 2025 (DPW contract cost items)",1,1,fiscal_constraint_signal,verified_locator_metadata_only
+MA,Georgetown,Northeast,non_safety_comparator,2015–2018 (document appears as “2015-2018 Georgetown CBA - Draft” per locator context),1,1,non_safety_constraint_signal,verified_locator_metadata_only
+MA,Georgetown,Northeast,non_safety_comparator,7-1-2014 to 6-30-2017,1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+MA,Hanover,Northeast,safety_and_non_safety_compensation_units,"July 1, 2014 to June 30, 2016",1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+MA,Hingham,Northeast,non_safety_municipal_units,"Effective July 1, 2022 through June 30, 2025 (per document title/term conventions)",1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+MA,Hingham,Northeast,non_safety_municipal_units,July 2020 through June 2023 (per document title),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+MA,Hingham,Northeast,non_safety_municipal_units,Warrant context for salary adjustments effective across 2017-2019 (explicitly references salary scale increases by effective dates),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+MA,Holliston,Northeast,safety_and_non_safety_compensation_units,"July 1, 2014 to June 30, 2017",1,1,market_or_comparability_pressure,verified_locator_metadata_only
+MA,Lexington,Northeast,safety_and_non_safety_bargaining_units,JLMC procedural docket references case dated in the minutes: JLM-22-9686 (voted to hold a Section 1(3)(a) hearing),1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+MA,Lexington,Northeast,safety_and_non_safety_bargaining_units,JLMC procedural docket references case: JLM-17-5796 (minutes dated 2017-06-22),1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+MA,Lynn,Northeast,non_safety_comparator,7/1/2014 to 6/30/2017,1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+MA,Mashpee,Northeast,safety_and_non_safety_compensation_units,"Police Unit B Sergeants MOA series shown as 2014-2017, 2017-2020, 2020-2023, with later MOAs through 2023-2026; page also lists DPW Unit B Contract 2023-2026 and other salary-table periods (page aggregation)",1,1,market_or_comparability_pressure,verified_locator_metadata_only
+MA,Methuen,Northeast,non_safety_comparator,unknown (visible year evidence not extracted from PDF during scout stage),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+MA,Middleborough,Northeast,non_safety_municipal_units,2021-2024,3,3,fiscal_constraint_signal,verified_locator_metadata_only
+MA,Milton,Northeast,safety_and_non_safety_bargaining_units,JLMC proceeding context around 2022-2024 interest arbitration/impasse process,1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+MA,Milton,Northeast,safety_and_non_safety_bargaining_units,"July 1, 2019 to June 30, 2022",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+MA,Milton,Northeast,safety_and_non_safety_bargaining_units,"July 1, 2022 to June 30, 2025",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+MA,Natick,Northeast,safety_and_non_safety_bargaining_units,FY 2024 - FY 2027,1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+MA,Needham,Northeast,safety_and_non_safety_bargaining_units,Within 2014-2024 (exact term not captured from search snippet),2,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+MA,Newton,Northeast,non_safety_comparator,"September 1, 2015 – August 31, 2018",2,0,non_safety_constraint_signal,no_verified_tier_c_lead
+MA,North Andover,Northeast,safety_and_non_safety_bargaining_units,DLR case number indicates 2016 filing context (case 16-5559).,1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+MA,Norwood,Northeast,safety_and_non_safety_bargaining_units,FY2015–FY2017 (PDF labeled FY15-17),1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+MA,Norwood,Northeast,safety_and_non_safety_bargaining_units,FY2018–FY2020 (PDF labeled FY18-FY20),1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+MA,Norwood,Northeast,safety_and_non_safety_bargaining_units,FY2022–FY2024 (PDF labeled FY22-FY24),1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+MA,Plymouth,Northeast,safety_and_non_safety_bargaining_units,"2014 (interest arbitration award listed: JLM-12-2229; Aug 6, 2014)",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+MA,Plymouth,Northeast,safety_and_non_safety_bargaining_units,Around 2019 (MUP-19-7473),1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+MA,Rehoboth,Northeast,safety_and_non_safety_compensation_units,2014-2024 target window,1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+MA,Rehoboth,Northeast,safety_and_non_safety_compensation_units,FY24-FY26 for Dispatchers funding (w/ FY24 retro); FY25 first year funding of a 3-year agreement for Patrolmen/Superior Officers,1,1,market_or_comparability_pressure,verified_locator_metadata_only
+MA,Rockland,Northeast,non_safety_municipal_units,2023-2025,1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+MA,Rockland,Northeast,non_safety_municipal_units,FY23 to FY25,1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+MA,Rockland,Northeast,non_safety_municipal_units,FY23-25,1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+MA,Scituate,Northeast,non_safety_municipal_units,FY 2014,1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+MA,Scituate,Northeast,non_safety_municipal_units,FY 2019,1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+MA,Scituate,Northeast,non_safety_municipal_units,FY 2020,1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+MA,Somerset,Northeast,non_safety_municipal_units,2014-2024 target window,1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+MA,Somerville,Northeast,non_safety_comparator,"July 1, 2010 – June 30, 2013",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+MA,Stoneham,Northeast,non_safety_municipal_units,Document (Chapter 10 Personnel); revision/date shown as 10/2024 (from filename/context),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+MA,Stoneham,Northeast,non_safety_municipal_units,FY2021 budget book (target-window overlap),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+MA,Stoughton,Northeast,safety_and_non_safety_bargaining_units,JLMC Section 3(a) hearing notice/record for JLM-19-7737 (specific contract period not extracted here),1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+MA,Stoughton,Northeast,safety_and_non_safety_bargaining_units,JLMC Section 3(a) interest arbitration process timeframe around JLM-19-7737 (period not extracted here),1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+MA,Swampscott,Northeast,safety_and_non_safety_compensation_units,"July 1, 2018 through June 30, 2021",2,0,market_or_comparability_pressure,no_verified_tier_c_lead
+MA,Tewksbury,Northeast,safety_and_non_safety_bargaining_units,2014-2024 target window,2,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+MA,Uxbridge,Northeast,safety_and_non_safety_compensation_units,"July 1, 2021 – June 30, 2024",1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+MA,Wakefield,Northeast,safety_and_non_safety_bargaining_units,FY18 to FY20 CBAs; FY21 to FY26,1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+MA,Wellesley,Northeast,safety_and_non_safety_bargaining_units,"July 1, 2020 (term end not extracted; verify within document if needed)",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+MA,Wellesley,Northeast,safety_and_non_safety_bargaining_units,"July 1, 2023 (term end not extracted; verify within document if needed)",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+MA,Wilbraham,Northeast,safety_and_non_safety_compensation_units,2023-2026 (signed; overlaps 2014-2024 window via 2023-2024),1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+MA,Worcester,Northeast,non_safety_comparator,"July 1, 2017 - June 30, 2020",2,2,non_safety_constraint_signal,verified_locator_metadata_only
+MD,Bowie,South,non_safety_comparator,"July 1, 2019 - June 30, 2024",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+MD,Frederick,South,non_safety_comparator,"Fiscal Years 2021, 2022, 2023, and 2024 (pay scale Appendix A referenced as FY2021–FY2024)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+ME,Augusta,Northeast,non_safety_comparator,"July 1, 2022 to June 30, 2025 (duration clause requires verification in full document)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+ME,Augusta,Northeast,non_safety_comparator,"July 1, 2022–June 30, 2025 (duration clause requires verification in full document)",2,1,non_safety_constraint_signal,verified_locator_metadata_only
+ME,Brewer,Northeast,non_safety_comparator,"2021-2024 (expires June 30, 2024)",2,1,non_safety_constraint_signal,verified_locator_metadata_only
+ME,Caribou,Northeast,non_safety_comparator,"January 1, 2026 through December 31, 2028 (extension/changes to CBA stated in MOA)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+ME,Portland,Northeast,non_safety_comparator,PAE Contract listed as 2025-2028 (district bargaining calendar),1,1,non_safety_constraint_signal,verified_locator_metadata_only
+ME,Scarborough,Northeast,non_safety_municipal_units,2014-2024 target window,2,2,fiscal_constraint_signal,verified_locator_metadata_only
+ME,Scarborough,Northeast,non_safety_municipal_units,Three-year contract (ratified in late 2021; pay mechanism described as 2.5% wage increase every other year),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+MI,Antwerp,Midwest,safety_and_non_safety_compensation_units,Document indicates 2022 (CVTRS-2022); specific payroll-year coverage not confirmed,1,1,market_or_comparability_pressure,verified_locator_metadata_only
+MI,Bath charter,Midwest,safety_and_non_safety_compensation_units,2025 budget (Public Hearing Adoption dated 12/02/2024 per document header),1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+MI,Bath charter,Midwest,safety_and_non_safety_compensation_units,Budget worksheet (Adopted 12/02/2019; shows 2017-2019 actual/budget columns and forward budget column shown in document),1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+MI,Bath charter,Midwest,safety_and_non_safety_compensation_units,FY 2024 budget (Adopted 12/04/2023),1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+MI,Bloomfield charter,Midwest,safety_and_non_safety_bargaining_units,"April 1, 2020 to March 31, 2026",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+MI,Brownstown charter,Midwest,safety_and_non_safety_bargaining_units,Effective Date: 01-01-2023 (successor); Expiration Date: 12-31-2022 shown in MERC packet summary,1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+MI,Clinton charter,Midwest,safety_and_non_safety_bargaining_units,2016-2021 (expires/term appears within title/filename),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+MI,Coldwater,Midwest,non_safety_comparator,"Effective July 1, 2024 – June 30, 2027",2,1,non_safety_constraint_signal,verified_locator_metadata_only
+MI,Comstock charter,Midwest,safety_and_non_safety_compensation_units,2021-01-01 through 2021-12-31 (agreement term language) + referenced rate schedule Exhibit I,1,1,market_or_comparability_pressure,verified_locator_metadata_only
+MI,Delta charter,Midwest,safety_and_non_safety_bargaining_units,2022 (CBA; effective/expiration not extracted),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+MI,Delta charter,Midwest,safety_and_non_safety_bargaining_units,Memorandum of Understanding 2022-2 (effective Feb. 2022; end date not extracted),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+MI,Delta charter,Midwest,safety_and_non_safety_bargaining_units,Tentative Agreement (08-11-2023 date appears in packet; full effective/expiration not extracted),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+MI,Eastpointe,Midwest,non_safety_comparator,"Effective July 1, 2023 through June 30, 2026",2,1,non_safety_constraint_signal,verified_locator_metadata_only
+MI,Grand Blanc charter,Midwest,safety_and_non_safety_bargaining_units,Case dated 2016 (CU14 C-020; docket references 14-006843-MERC),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+MI,Grand Blanc charter,Midwest,safety_and_non_safety_bargaining_units,Case dated 2016 (CU16 C-012; docket 16-005998-MERC),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+MI,Grand Rapids,Midwest,non_safety_comparator,2019-2022,2,0,non_safety_constraint_signal,no_verified_tier_c_lead
+MI,Grand Rapids,Midwest,non_safety_comparator,"July 1, 2019 through June 30, 2022",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+MI,Grosse Pointe Woods,Midwest,non_safety_comparator,"Collective Bargaining Agreement referenced: July 1, 2022 to June 30, 2026; MOA dated Oct. 2025 and in effect from fully signed/ executed date",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+MI,Grosse Pointe Woods,Midwest,non_safety_comparator,"Four (4) year contract: July 1, 2022 through June 30, 2026",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+MI,Independence charter,Midwest,safety_and_non_safety_bargaining_units,"Decision and Order issued December 17, 2021 (representation petition context)",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+MI,Kalamazoo,Midwest,non_safety_comparator,2018-2021 (signed; likely contains wage schedule format and automatic renewal provisions to inform comparator searching for the 2022-2026 successor),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+MI,Meridian charter,Midwest,safety_and_non_safety_bargaining_units,2014-2016 (as referenced in board minutes),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+MI,Meridian charter,Midwest,safety_and_non_safety_bargaining_units,2017-2019 (compulsory arbitration / ratified contract referenced within packet),1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+MI,Northville,Midwest,safety_and_non_safety_bargaining_units,Includes references to IAFF CBA expiration on 2016-03-31; TPOAM CBA expiration on 2018-12-31; Teamsters CBA expiration on 2018-12-31,1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+MI,Oxford charter,Midwest,non_safety_municipal_units,"Adopted March 11, 2014 (with later updates noted)",1,1,fiscal_constraint_signal,verified_locator_metadata_only
+MI,Plainfield charter,Midwest,safety_and_non_safety_bargaining_units,"January 1, 2022 to December 31, 2026",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+MI,Portage,Midwest,non_safety_comparator,"Effective July 1, 2024 through June 30, 2027",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+MI,Saginaw charter,Midwest,safety_and_non_safety_bargaining_units,"2014-2017 (entered July 1, 2014; document labeled '2014 through 2017')",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+MI,White Lake charter,Midwest,safety_and_non_safety_bargaining_units,"January 1, 2022 through December 31, 2026",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+MN,Anoka,Midwest,non_safety_comparator,Operative period unclear from lead snippet; file name shows 12-31-2026; earlier 2022–2024 cycle referenced by related city materials,1,1,non_safety_constraint_signal,verified_locator_metadata_only
+MN,Apple Valley,Midwest,non_safety_comparator,2020-2021,1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+MN,Brainerd,Midwest,non_safety_comparator,"1/1/2025 to 12/31/2027 (wages sections include 2025, 2026, 2027)",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+MN,Brainerd,Midwest,non_safety_comparator,ratification of 2025–2027 contract terms (referencing arbitration award/wage resolution),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+MN,Brainerd,Midwest,non_safety_comparator,"successor labor agreement 1/1/2025–12/31/2027 (wage provisions referenced for 1/1/25, 7/1/25, 1/1/26, 1/1/27)",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+MN,Eden Prairie,Midwest,non_safety_comparator,"Effective July 1, 2023 through June 30, 2025",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+MO,Belton,Midwest,non_safety_comparator,2024-2025,1,1,non_safety_constraint_signal,verified_locator_metadata_only
+MO,Belton,Midwest,non_safety_comparator,2024-2027 (referenced as a labor agreement to be amended),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+MO,Gladstone,Midwest,non_safety_comparator,2023-2026,1,1,non_safety_constraint_signal,verified_locator_metadata_only
+MO,Lee's Summit,Midwest,non_safety_comparator,2022-2025 (with contingent alignment through 2026 suggested by target window),1,1,non_safety_constraint_signal,verified_locator_metadata_only
+MO,St. Charles,Midwest,non_safety_comparator,"effective later of date stated / Article 9.05 or ordinance effectiveness; operative period text observed as ending Dec 31, 2022 (start year not confirmed from accessible pages)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+MO,Wentzville,Midwest,non_safety_comparator,"Effective October 28, 2016 (contract period/duration not established from search snippet)",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+MT,Anaconda-Deer Lodge County,West,non_safety_comparator,"August 1, 2021 through July 31, 2023",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+MT,Anaconda-Deer Lodge County,West,non_safety_comparator,From 9/1/2021 to 8/31/2023 (as indicated by file title),1,1,non_safety_constraint_signal,verified_locator_metadata_only
+MT,Anaconda-Deer Lodge County,West,non_safety_comparator,"Not explicitly confirmed from snippet (document appears dated/entered May 24, 2022)",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+MT,Havre,West,non_safety_comparator,Index for firefighter factfinding/arbitration awards (category page),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+MT,Havre,West,non_safety_comparator,"Index listing for the Dec 22, 2020 factfinding recommendation",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+MT,Havre,West,non_safety_comparator,"Negotiated interests covering FY 2018-2019 (and FY 2019-2020); duration proposals reference expiration June 30, 2019",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+NC,Elizabeth City,South,non_safety_municipal_units,Revision PDF (published/posted within last ~1.1 years per search snippet; no explicit FY stated in lead),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NC,Elizabeth City,South,non_safety_municipal_units,Updated/posted 2025-06-23 (manual); pay plan administration language present,1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NC,Havelock,South,safety_and_non_safety_compensation_units,FY 2014-2015,1,1,market_or_comparability_pressure,verified_locator_metadata_only
+NC,Havelock,South,safety_and_non_safety_compensation_units,FY 2020-2021,1,1,market_or_comparability_pressure,verified_locator_metadata_only
+NC,Henderson,South,safety_and_non_safety_compensation_units,"FY 2018-2019 (with Public Safety Pay Schedule Phase Five, FY2019)",1,1,market_or_comparability_pressure,verified_locator_metadata_only
+NC,Henderson,South,safety_and_non_safety_compensation_units,FY 2024 (with pay schedule revision effective 7/1/23),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+NC,Henderson,South,safety_and_non_safety_compensation_units,FY 2025 (contains Public Safety Schedule revised 7/1/23 which falls within target window boundary),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+NC,Hendersonville,South,safety_and_non_safety_compensation_units,FY22-23 (budget adopted for the fiscal year),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+NC,Hendersonville,South,safety_and_non_safety_compensation_units,FY23-24 (budget adopted for the fiscal year),1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+NC,Hope Mills,South,non_safety_municipal_units,2014-2024 (collection page pointing to multiple adopted budget PDFs),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NC,Hope Mills,South,non_safety_municipal_units,2014-2024 (report context references the Town’s Pay Plan policy and salary administration practices; landing page),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+NC,Hope Mills,South,non_safety_municipal_units,FY 2016-2017,1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+NC,Kinston,South,non_safety_municipal_units,FY15-16 adopted budget (includes FY16 official adopted budget ordinance),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+NC,Kinston,South,non_safety_municipal_units,FY18-19 adopted budget (Official Budget Ordinance included),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+NC,Kinston,South,non_safety_municipal_units,FY23-24 adopted budget,1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+NC,Knightdale,South,non_safety_municipal_units,FY2025 (Budget Ordinance 24-06-18-001 Attachment B; Effective 07/01/2024),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+NC,Knightdale,South,non_safety_municipal_units,FY2025 (Limited Service Position Classification Plan; Effective 07/01/2024),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NC,Lenoir,South,non_safety_municipal_units,"Fiscal Year July 1, 2014 – June 30, 2015",1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NC,Lenoir,South,non_safety_municipal_units,"Fiscal Year July 1, 2018 – June 30, 2019",1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NC,Lenoir,South,non_safety_municipal_units,"Fiscal Year July 1, 2020 – June 30, 2021",1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NC,Lewisville,South,safety_and_non_safety_compensation_units,Fiscal Year 2020-2021 (budget ordinance; includes Appendix B Salary Ranges by Pay Grade),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+NC,Lewisville,South,safety_and_non_safety_compensation_units,Proposed Budget 2019-2020 (by line item),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+NC,Mebane,South,non_safety_municipal_units,"FY2020-2021 budget cycle (pay plan adopted each year with the budget; packet dated Jan 6, 2020)",1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NC,Mebane,South,non_safety_municipal_units,"FY2020-2021 budget ordinance cycle (packet dated Jun 1, 2020)",1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NC,Mebane,South,non_safety_municipal_units,FY2023-2024 budget cycle (recommended budget document),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NC,Morganton,South,non_safety_municipal_units,"Fiscal Year 2021/2022 (July 01, 2021 – June 30, 2022)",1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+NC,Stallings,South,safety_and_non_safety_compensation_units,2018-07-09 (document date; pay plan development phase),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+NC,Stallings,South,safety_and_non_safety_compensation_units,2018-09-10 (study scope; implementation timing not determined here),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+NC,Weddington,South,safety_and_non_safety_compensation_units,FY2014-2019 (forecast/plan section shown),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+NC,Weddington,South,safety_and_non_safety_compensation_units,FY2017 budget approval context (referenced in July 2016 journal),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+NE,North Platte,Midwest,non_safety_comparator,"Oct 1, 2024 through Sep 30, 2027 (term stated in agenda)",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+NH,Concord,Northeast,non_safety_comparator,1/1/2025–12/31/2026,1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+NH,Concord,Northeast,non_safety_comparator,1/1/2025–12/31/2027,1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+NH,Durham,Northeast,safety_and_non_safety_compensation_units,"January 1, 2016 through December 31, 2020 (ratification item references this DPFFA unit contract period)",1,1,market_or_comparability_pressure,verified_locator_metadata_only
+NH,Durham,Northeast,safety_and_non_safety_compensation_units,"January 1, 2022 through December 31, 2024",1,1,market_or_comparability_pressure,verified_locator_metadata_only
+NH,Exeter,Northeast,safety_and_non_safety_compensation_units,2019-2022,1,1,market_or_comparability_pressure,verified_locator_metadata_only
+NH,Exeter,Northeast,safety_and_non_safety_compensation_units,2022-2024,1,1,market_or_comparability_pressure,verified_locator_metadata_only
+NH,Goffstown,Northeast,non_safety_municipal_units,2019 budget discussion (annual report),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NH,Goffstown,Northeast,non_safety_municipal_units,Proposed 2025 adjustment; references wage matrix implementation on 07/01/2024,1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NH,Hooksett,Northeast,safety_and_non_safety_compensation_units,07/01/2024-06/30/2027,1,1,market_or_comparability_pressure,verified_locator_metadata_only
+NH,Hooksett,Northeast,safety_and_non_safety_compensation_units,Referenced contract period(s) include 2016-2017 and related NEPBA negotiation context (document labeled 2014-2015).,1,1,market_or_comparability_pressure,verified_locator_metadata_only
+NH,Hooksett,Northeast,safety_and_non_safety_compensation_units,Referenced: 07/01/2017-06/30/2020,1,1,market_or_comparability_pressure,verified_locator_metadata_only
+NH,Hudson,Northeast,non_safety_municipal_units,"July 1, 2020 — June 30, 2024 (as indicated by agreement headings/wage schedule sections)",1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NH,Londonderry,Northeast,non_safety_municipal_units,"2016 report section detailing ratification/extension cost items across multiple FY years (e.g., FY 2017–FY 2020 shown in the report excerpt)",1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NH,Nashua,Northeast,non_safety_comparator,"July 1, 2022 — June 30, 2026",2,0,non_safety_constraint_signal,no_verified_tier_c_lead
+NH,Salem,Northeast,safety_and_non_safety_bargaining_units,2018-2023,1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+NH,Salem,Northeast,safety_and_non_safety_bargaining_units,2022-2026,1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+NH,Salem,Northeast,safety_and_non_safety_bargaining_units,4-1-2023 to 3-31-2028,1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+NJ,Barnegat,Northeast,non_safety_municipal_units,"Five (5) year agreement; contract absent since December 31, 2014 (resolution dated Nov 16, 2015)",1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NJ,Barnegat,Northeast,non_safety_municipal_units,"Four (4) year agreement (resolution dated Jan 1, 2020)",1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NJ,Barnegat,Northeast,non_safety_municipal_units,"Four (4) year agreement (resolution dated Jan 1, 2024)",1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NJ,Bayonne,Northeast,non_safety_comparator,Not stated in snippet; expected to include a wage schedule/contract terms relevant to Bayonne employment (needs period confirmation),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+NJ,Bernards,Northeast,safety_and_non_safety_bargaining_units,"Agreement effective January 1, 2020 (per resolution context; expiration/term details referenced in the document)",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NJ,Bernards,Northeast,safety_and_non_safety_bargaining_units,"Memorandum of Agreement dated December 28, 2023; Union contracts for period starting January 1, 2024",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NJ,Bloomfield,Northeast,safety_and_non_safety_bargaining_units,2018 (resolution list for 2018; includes 5/21/18 settlement agreement reference),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NJ,Bridgewater,Northeast,safety_and_non_safety_bargaining_units,2017-08-10 GC report (references litigation involving expired vs successor collective negotiations agreement hiatus),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NJ,Bridgewater,Northeast,safety_and_non_safety_bargaining_units,Biennial report (published content; retrieve within 2014-2024 window as relevant during follow-up),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NJ,Burlington,Northeast,non_safety_municipal_units,2020 municipal budget (municipal user friendly budget),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NJ,Burlington,Northeast,non_safety_municipal_units,2022 municipal budget (municipal user friendly budget),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NJ,Burlington,Northeast,non_safety_municipal_units,2024 municipal budget (municipal user friendly budget),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NJ,Cedar Grove,Northeast,safety_and_non_safety_compensation_units,2023-2026 (as named in filename/title of attachment URL),1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+NJ,City of Orange,Northeast,safety_and_non_safety_bargaining_units,"Reported reference to City of Orange Township arbitration-related matter (noting “City of Orange Twp., 2019 …” within the biennial report)",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NJ,Cranford,Northeast,non_safety_municipal_units,2020-2022 (as labeled in attachment name),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+NJ,Delran,Northeast,non_safety_municipal_units,CY 2014 municipal budget cycle (introduced for CY 2014),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NJ,Delran,Northeast,non_safety_municipal_units,CY 2020 municipal budget cycle (presentation),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NJ,Denville,Northeast,safety_and_non_safety_compensation_units,Confidential Salary Ordinance labeled 2022–2025 (salary/conditions for employees not governed by collective bargaining).,1,1,market_or_comparability_pressure,verified_locator_metadata_only
+NJ,Denville,Northeast,safety_and_non_safety_compensation_units,"Salary ordinance tied to MOA signed Sep 22, 2021; includes salary schedule beginning 1/1/2022 and additional effective dates through the document period label (2022-2025).",1,1,market_or_comparability_pressure,verified_locator_metadata_only
+NJ,Deptford,Northeast,safety_and_non_safety_bargaining_units,2014-2024 target window,1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+NJ,East Orange,Northeast,non_safety_comparator,2022–2027 (stated in locator title),1,1,non_safety_constraint_signal,verified_locator_metadata_only
+NJ,East Orange,Northeast,non_safety_comparator,"July 1, 2018 – June 30, 2023 (stated in lead snippet)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+NJ,Edison,Northeast,safety_and_non_safety_bargaining_units,2014 arbitration-related proceeding referenced,1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NJ,Egg Harbor,Northeast,safety_and_non_safety_bargaining_units,Appears to be fact-finding related to an impasse; likely within 2014-2024 window (document age suggests mid-2010s).,1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NJ,Egg Harbor,Northeast,safety_and_non_safety_bargaining_units,Meeting notice dated 2014-08-14; references SN-2013-029 & SN-2013-030,1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NJ,Egg Harbor,Northeast,safety_and_non_safety_bargaining_units,PERC synopsis published 2014-08-14; docket numbers SN-2013-029 & SN-2013-030 (time window plausibly within 2013-2014),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NJ,Fair Lawn,Northeast,non_safety_comparator,"July 1, 2023 through June 30, 2026",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+NJ,Fairview,Northeast,non_safety_comparator,"Memorandum of Understanding term: January 1, 2024 through December 31, 2026 (as referenced as attached to the resolution)",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+NJ,Freehold,Northeast,safety_and_non_safety_bargaining_units,"January 1, 2022 through December 31, 2026",3,3,strike_or_no_strike_constraint,verified_locator_metadata_only
+NJ,Galloway,Northeast,safety_and_non_safety_bargaining_units,2014-2024 target window,2,2,strike_or_no_strike_constraint,verified_locator_metadata_only
+NJ,Glassboro,Northeast,non_safety_comparator,"Includes “Transp Aides MOA Copy of Glassboro 25-28 MOA to BOE 1-20-26” / aligns to July 1, 2025–June 30, 2028 salary-guide years",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+NJ,Glassboro,Northeast,non_safety_comparator,Salary guide covering the GEA MOA period (document content indicates 2025-2028 alignment; filename appears as base year guide),1,1,non_safety_constraint_signal,verified_locator_metadata_only
+NJ,Hamilton,Northeast,safety_and_non_safety_bargaining_units,"Three-year contract beginning January 1, 2019 (end year not captured in snippet)",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NJ,Harrison,Northeast,safety_and_non_safety_compensation_units,"Effective January 1 for 2016, 2017, 2018, 2019, 2020 (salary schedule years listed)",1,1,market_or_comparability_pressure,verified_locator_metadata_only
+NJ,Hopewell,Northeast,safety_and_non_safety_compensation_units,"January 1, 2016 - December 31, 2018",1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+NJ,Howell,Northeast,safety_and_non_safety_bargaining_units,2014-2024 target window,2,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+NJ,Irvington,Northeast,safety_and_non_safety_bargaining_units,inferred: 2016-2017 (interest arbitration award lifecycle referenced in snippet: initial award July 2016; remand; decision Jan 2017),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NJ,Irvington,Northeast,safety_and_non_safety_bargaining_units,"inferred: agreement effective dates referenced around late 2017 to later enforcement period (snippet includes October 1, 2017 reference)",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+NJ,Lacey,Northeast,safety_and_non_safety_bargaining_units,interest arbitration award listing entry (exact period not confirmed here),1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+NJ,Lacey,Northeast,safety_and_non_safety_bargaining_units,referenced resolution dated in 2015 (per excerpted lines; exact CBA period not confirmed here),1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+NJ,Lakewood,Northeast,safety_and_non_safety_bargaining_units,2014 (meeting/minutes; resolution authorizing execution of a CBA),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NJ,Livingston,Northeast,safety_and_non_safety_bargaining_units,2014 (report date); specific labor cycle period not specified in locator/snippet,1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+NJ,Livingston,Northeast,safety_and_non_safety_bargaining_units,Not specified (case references PERC docket SN-2013-071 and P.E.R.C. No. 2014-66),1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+NJ,Livingston,Northeast,safety_and_non_safety_bargaining_units,Not specified (references P.E.R.C. No. 2014-66),1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+NJ,Lodi,Northeast,non_safety_comparator,2025-2029,2,2,non_safety_constraint_signal,verified_locator_metadata_only
+NJ,Lodi,Northeast,non_safety_comparator,"January 1, 2025 to December 31, 2029 (stated in document snippet)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+NJ,Long Branch,Northeast,non_safety_comparator,2023-2026,1,1,non_safety_constraint_signal,verified_locator_metadata_only
+NJ,Long Branch,Northeast,non_safety_comparator,"JULY 1, 2023 – JUNE 30, 2026",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+NJ,Lower,Northeast,non_safety_municipal_units,January 2024 - December 2026,1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NJ,Lower,Northeast,non_safety_municipal_units,"MOA economic/non-economic retroactivity to Agreement effective 1/1/24 (replacement for existing CBA expiring Dec 31, 2023)",1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NJ,Lower,Northeast,non_safety_municipal_units,contract period not extracted (document hosted as 'Spvr.pdf'),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NJ,Lyndhurst,Northeast,non_safety_municipal_units,Adopted Budget: 2016 (fiscal year),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NJ,Mahwah,Northeast,non_safety_municipal_units,Ordinance year 2024; CBA referenced: calendar years 2022–2026,1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+NJ,Mahwah,Northeast,non_safety_municipal_units,Ordinance year 2025; CBA referenced: calendar years 2022–2026,2,0,fiscal_constraint_signal,no_verified_tier_c_lead
+NJ,Manchester,Northeast,safety_and_non_safety_bargaining_units,2013-2014 (arbitration-related grievance; synopsis dated 2014-01-30),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NJ,Manchester,Northeast,safety_and_non_safety_bargaining_units,2013-2014 (unit clarification matter; synopsis dated 2014-04-24),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NJ,Maplewood,Northeast,non_safety_municipal_units,"Dated April 10, 2023 (agenda packet context)",1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+NJ,Middlesex,Northeast,non_safety_comparator,2021-2024 (attachment filename indicates “FINAL MEA 2021 2024 Agreement.pdf”),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+NJ,Middlesex,Northeast,non_safety_comparator,2021-2024 (attachment filename indicates “PBA Contract 2021 2024”),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+NJ,Millburn,Northeast,non_safety_municipal_units,2024-2028,1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NJ,Millburn,Northeast,non_safety_municipal_units,Ordinance 2599-22 (Salary Ordinance) — years 2021-2025,1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NJ,Monroe,Northeast,safety_and_non_safety_bargaining_units,2014-2024 (award periods vary; table used to find Monroe Township specific dockets within target window),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NJ,Monroe,Northeast,safety_and_non_safety_bargaining_units,2023-2026 (MOA ratified in packet; overlaps 2024 target window),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NJ,Montclair,Northeast,safety_and_non_safety_bargaining_units,2020-2026,1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+NJ,Montgomery,Northeast,non_safety_municipal_units,Ordinance #19-1602 (2019 Salary & Wage Plan),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+NJ,Montgomery,Northeast,non_safety_municipal_units,Ordinance #24-1732 (2024 Salary & Wage Plan / replacing and repealing ordinance #24-1732 as referenced in later agenda materials),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+NJ,Montville,Northeast,non_safety_municipal_units,2016 to 2017,1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+NJ,Montville,Northeast,non_safety_municipal_units,2019-2020,1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+NJ,Montville,Northeast,non_safety_municipal_units,"2023 (amendment to WC salary/wage ordinance for those hired after Jan 1, 2022)",1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+NJ,Moorestown,Northeast,non_safety_municipal_units,"Memorandum of Agreement covering January 1, 2013 through December 31, 2018 (successor agreement; successor continuation into 2014-2016)",1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NJ,Moorestown,Northeast,non_safety_municipal_units,"Successor collective bargaining agreement negotiations referencing expiration on December 31, 2018 and subsequent amendment/coverage starting January 1, 2019 (as indicated by document snippet)",1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+NJ,Moorestown,Northeast,non_safety_municipal_units,"Three-year labor agreement for January 1, 2014 through December 31, 2016",1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NJ,Mount Olive,Northeast,safety_and_non_safety_bargaining_units,Not specified in lead (Appellate decision dated 2025; refers to CNA/arbitration context involving Mount Olive police officers),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NJ,Mount Olive,Northeast,safety_and_non_safety_bargaining_units,Not specified in lead (PERC synopsis PDF dated 2022-05-26; Docket No. SN-2022-022),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NJ,Mount Olive,Northeast,safety_and_non_safety_bargaining_units,Not specified in lead (PERC synopsis dated 2010-09-23; may reference settlement/interest arbitration award procedural history),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NJ,New Providence,Northeast,non_safety_comparator,"January 1, 2012 through December 31, 2014",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+NJ,Newark,Northeast,non_safety_comparator,2010-2015 (includes 2013-2015 years),1,1,non_safety_constraint_signal,verified_locator_metadata_only
+NJ,Newark,Northeast,non_safety_comparator,"January 1, 2015 through December 31, 2018 (successor agreement window starts 2015)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+NJ,Newark,Northeast,non_safety_comparator,"July 1, 2011 - June 30, 2015",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+NJ,Ocean,Northeast,safety_and_non_safety_bargaining_units,"January 1, 2016 through December 31, 2017",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NJ,Ocean,Northeast,safety_and_non_safety_bargaining_units,"January 1, 2020 through December 31, 2023",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NJ,Pemberton,Northeast,non_safety_municipal_units,2021-2024 (agreement period reflected in file title),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NJ,Pemberton,Northeast,non_safety_municipal_units,CY 2024 (salary ordinance proposed for 2024),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NJ,Plainsboro,Northeast,non_safety_municipal_units,Not stated on request excerpt (needs follow-on within 2014-2024 window),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+NJ,Ramsey,Northeast,non_safety_comparator,"January 1, 2022 through December 31, 2025",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+NJ,Ramsey,Northeast,non_safety_comparator,"January 1, 2024 through December 31, 2025",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+NJ,Randolph,Northeast,non_safety_municipal_units,2014-2024 window (landing page for agreements; includes 2024 RTEA and PERC non-police/fire summary items),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NJ,Randolph,Northeast,non_safety_municipal_units,2024 (PERC non-police and fire collective negotiations agreement summary form),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NJ,Randolph,Northeast,non_safety_municipal_units,"Effective January 1, 2024 (agreement document within 2024-2026 cycle)",1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NJ,Ridgefield Park,Northeast,non_safety_comparator,2019-01-01 to 2024-12-31 (most recent agreement cited in the opinion),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+NJ,Ridgefield Park,Northeast,non_safety_comparator,unclear,1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+NJ,Robbinsville,Northeast,safety_and_non_safety_compensation_units,"In force from origination date of EMS service until December 31, 2026 (per document text)",1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+NJ,South Brunswick,Northeast,safety_and_non_safety_bargaining_units,2014-2024 target window,3,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NJ,South Orange Village,Northeast,non_safety_municipal_units,"effective January 1, 2023 until subsequently amended",1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+NJ,Teaneck,Northeast,safety_and_non_safety_bargaining_units,2022-2026,1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NJ,Voorhees,Northeast,safety_and_non_safety_bargaining_units,2014-2024 target window,1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+NJ,Washington,Northeast,safety_and_non_safety_bargaining_units,2014-2024 target window,1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+NJ,West Deptford,Northeast,non_safety_municipal_units,"Ordinance #2014-03 (2014 salaries and compensation of officials and employees) — referenced within Jan 16, 2014 meeting minutes",1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NJ,West Deptford,Northeast,non_safety_municipal_units,"Ordinance #O-2016-21 (2016 salaries and compensation of officers and employees) — referenced within Oct 19, 2016 minutes",1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NJ,West Milford,Northeast,non_safety_municipal_units,12-31-2014 (sidebar; referenced as 2014),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NJ,West Milford,Northeast,non_safety_municipal_units,2015-2019,1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NJ,West Orange,Northeast,safety_and_non_safety_bargaining_units,2012-2014 (referenced in arbitration award context),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NJ,West Orange,Northeast,safety_and_non_safety_bargaining_units,"January 1, 2014 through December 31, 2017",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+NJ,West Windsor,Northeast,safety_and_non_safety_bargaining_units,Arbitration award related to police/fire bargaining after cap expired (published/linked from GFOA of NJ news page),1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+NJ,Willingboro,Northeast,safety_and_non_safety_bargaining_units,"January 1, 2021 - December 31, 2025",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+NJ,Willingboro,Northeast,safety_and_non_safety_bargaining_units,"January 1, 2023 - December 31, 2027",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+NJ,Willingboro,Northeast,safety_and_non_safety_bargaining_units,"January 1, 2024 - December 31, 2028",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+NJ,Woodland Park,Northeast,non_safety_comparator,"Years 2021, 2022, 2023, 2024 and 2025 (as stated for Ordinance 21-07)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+NJ,Woolwich,Northeast,safety_and_non_safety_compensation_units,"Year 2024 (effective “As of January 1, 2024” per the ordinance structure)",1,1,market_or_comparability_pressure,verified_locator_metadata_only
+NM,Albuquerque,West,non_safety_comparator,"References agreements effective September 30, 2017–June 30, 2018 and other timeframes; also references Albuquerque Police Officers Association through June 30, 2020",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+NM,Hobbs,West,non_safety_comparator,"July 1, 2022 through June 30, 2025 (and/or related continuation/amendment context; see packet)",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+NM,Hobbs,West,non_safety_comparator,"July 1, 2022 through June 30, 2027 (as referenced within the packet)",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+NV,Carson,West,non_safety_comparator,"July 1, 2023 through June 30, 2027",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+NY,Albany,Northeast,non_safety_comparator,2015-2018 (overlaps expected 2016-2022 successor window partially),1,1,non_safety_constraint_signal,verified_locator_metadata_only
+NY,Beekman,Northeast,safety_and_non_safety_compensation_units,"January 1, 2021–December 31, 2023 (referenced) and amended/extended to January 1, 2024–December 31, 2027 (referenced in MOA text)",1,1,market_or_comparability_pressure,verified_locator_metadata_only
+NY,Beekman,Northeast,safety_and_non_safety_compensation_units,"Manual adopted effective January 1, 2016 (per referenced description in search snippets)",1,1,market_or_comparability_pressure,verified_locator_metadata_only
+NY,Bethlehem,Northeast,safety_and_non_safety_bargaining_units,"Arbitration findings statement tied to PERB case A2015-004 (award referenced as October 16, 2015)",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+NY,Bethlehem,Northeast,safety_and_non_safety_bargaining_units,"Arbitration opinion/award dated October 16, 2015 (CBA sections 11.1 and 20.2 referenced)",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+NY,Bethlehem,Northeast,safety_and_non_safety_bargaining_units,"Article date Oct 23, 2015; references an arbitration outcome",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NY,Buffalo,Northeast,non_safety_comparator,"Board book references CBA expired June 30, 2022 and notes current CBA covers July 1, 2019 through June 30, 2025 (per snippet; not extracted here)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+NY,Buffalo,Northeast,non_safety_comparator,"Includes language effective July 1, 2017 (successor/term details not extracted here)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+NY,Buffalo,Northeast,non_safety_comparator,MOA labeled for 2025 successor period (exact start/end dates not extracted here),1,1,non_safety_constraint_signal,verified_locator_metadata_only
+NY,Chili,Northeast,safety_and_non_safety_bargaining_units,Agreement dated 1st day of January 2017 (successor agreement period not fully determined from lead snippet),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NY,Cicero,Northeast,safety_and_non_safety_bargaining_units,01.01.2022–12.31.2025 (as listed on the Town’s agreements page),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NY,Cicero,Northeast,safety_and_non_safety_bargaining_units,Includes PBA contract 01.01.2023–12.31.2027; CSEA Highway Agreement 01.01.2022–12.31.2025 (page also lists other agreements outside 2014-2024),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NY,Clay,Northeast,safety_and_non_safety_bargaining_units,2014-2024 target window,1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NY,Colonie,Northeast,safety_and_non_safety_bargaining_units,2014-2018 filter context shown on the index page (exact award year not confirmed in snippet),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NY,Dryden,Northeast,safety_and_non_safety_compensation_units,"Mentions current labor agreement effective June 1, 2013 to May 31, 2016 (as described in the study)",1,1,market_or_comparability_pressure,verified_locator_metadata_only
+NY,Elmira,Northeast,non_safety_comparator,"January 1, 2024 through December 31, 2027",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+NY,Fishkill,Northeast,non_safety_municipal_units,2014 (budget year),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NY,Fishkill,Northeast,non_safety_municipal_units,2016 (budget year),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NY,Freeport,Northeast,non_safety_comparator,Award issued/dated (within document): 1976-10-26; wages operative dates not confirmed in scout view,1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+NY,Geddes,Northeast,safety_and_non_safety_compensation_units,"O&T: 2019-2022; PBA: Jan 1, 2022 through Dec 31, 2023 (per document text snippet)",1,1,market_or_comparability_pressure,verified_locator_metadata_only
+NY,Glenville,Northeast,safety_and_non_safety_bargaining_units,"Jan 1, 2017 through Dec 31, 2021",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+NY,Glenville,Northeast,safety_and_non_safety_bargaining_units,"Jan 1, 2019 through Dec 31, 2023",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+NY,Glenville,Northeast,safety_and_non_safety_bargaining_units,"Jan 1, 2022 through Dec 31, 2024",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+NY,Greece,Northeast,safety_and_non_safety_bargaining_units,Compulsory interest arbitration decision and award (PERB No. IA91-004 per the page content),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NY,Greece,Northeast,safety_and_non_safety_bargaining_units,Interest arbitration award (covers period commencing 1/1/1998 through 12/31/2000 per the award on the page),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NY,Guilderland,Northeast,safety_and_non_safety_bargaining_units,01/01/2025–12/31/2027,1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+NY,Halfmoon,Northeast,non_safety_municipal_units,2022 fiscal year budget (adopted),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+NY,Harrison,Northeast,safety_and_non_safety_bargaining_units,CBA Memorandum of Agreement — term not shown in search snippet,1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+NY,Islip,Northeast,safety_and_non_safety_bargaining_units,"January 1, 2014 – December 31, 2016",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NY,Islip,Northeast,safety_and_non_safety_bargaining_units,"January 1, 2017 – December 31, 2020",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NY,Islip,Northeast,safety_and_non_safety_bargaining_units,"January 1, 2021 – December 31, 2024",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NY,Jamestown,Northeast,non_safety_comparator,2022-2024,1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+NY,Jamestown,Northeast,non_safety_comparator,2022-2025 (with appendix salary schedules covering 2016-2021 per document snippet),1,1,non_safety_constraint_signal,verified_locator_metadata_only
+NY,Jamestown,Northeast,non_safety_comparator,Not a single contract (directory/index),1,1,non_safety_constraint_signal,verified_locator_metadata_only
+NY,Lackawanna,Northeast,non_safety_comparator,2013 City Council communications referencing Chapter 36-19 wage schedule/classification (context around non-bargaining-unit wage schedule changes),1,1,non_safety_constraint_signal,verified_locator_metadata_only
+NY,Lackawanna,Northeast,non_safety_comparator,Adopted 3-17-2009; § 36-19 Wage schedule and classification (non-safety comparator wage schedule framework),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+NY,Lackawanna,Northeast,non_safety_comparator,Article V effective date/renewal provisions (effective/retroactive language present within the eCode360 article set),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+NY,Lancaster,Northeast,safety_and_non_safety_bargaining_units,2014-2018 (award listing window); case received 10/5/2015,1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NY,Lockport,Northeast,non_safety_municipal_units,2017 (with wage increase schedule through 2024 and beyond indicated),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NY,Lockport,Northeast,non_safety_municipal_units,"2023 update (implied coverage into subsequent years, including effective dates)",1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NY,Lockport,Northeast,non_safety_municipal_units,Through Dec. 2026,1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NY,Manlius,Northeast,safety_and_non_safety_bargaining_units,2023 trial basis side agreement (referenced as prior to 2023 contract negotiations),1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+NY,Manlius,Northeast,safety_and_non_safety_bargaining_units,"Appears to cover Jan 1, 2021 through Dec 31, 2023 (as shown in the hosted document text snippet)",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NY,Manlius,Northeast,safety_and_non_safety_bargaining_units,Interest arbitration award following a wage re-opener impasse (1987),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NY,Middletown,Northeast,non_safety_comparator,"January 1, 2023 - December 31, 2027",2,0,non_safety_constraint_signal,no_verified_tier_c_lead
+NY,Milton,Northeast,non_safety_municipal_units,2014 (audit reference label 2014M-357; report issued in 2015),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NY,Milton,Northeast,non_safety_municipal_units,Policy/Handbook (updated 2024-09-25),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+NY,Montgomery,Northeast,non_safety_municipal_units,"Explicit salary increase reference: “after the probation period ends the salary will increase by $1.00 per hour in addition to any possible pay raises that Town employees may receive on January 1, 2018.” (document date not captured in the lead snippet)",1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+NY,Moreau,Northeast,safety_and_non_safety_compensation_units,"Comparative salary schedule columns include Adopted 2018, Adopted 2019, Adopted 2020, Adopted 2021, Adopted 2022, Adopted 2023 (document year 2024 adopted budget)",1,1,market_or_comparability_pressure,verified_locator_metadata_only
+NY,Mount Pleasant,Northeast,safety_and_non_safety_bargaining_units,"Fact-finder recommendation content references wage changes effective July 1, 2016 with additional wage schedule through January 2020 (as shown on the page)",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+NY,Mount Pleasant,Northeast,safety_and_non_safety_bargaining_units,Impose-process listing page; underlying record includes Declaration of Impasse in 2014 and fact-finding within the 2016 period,1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NY,Mount Pleasant,Northeast,safety_and_non_safety_bargaining_units,"Successor negotiations for CBA expired on December 31, 2010 and continued in effect; Declaration of Impasse filed August 21, 2014; fact-finding appointed April 27, 2016",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NY,New Castle,Northeast,non_safety_municipal_units,11/2021–12/31/2027 (as indicated by document filename),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+NY,New Castle,Northeast,non_safety_municipal_units,2022 tentative budget document,1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+NY,New Castle,Northeast,non_safety_municipal_units,2024 tentative budget document (file indicates 2024; working version),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+NY,New Hartford,Northeast,non_safety_municipal_units,Calendar year 2017 (Non-union Benefits and Compensation; also mileage rate policy language for FY 2017),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NY,New Hartford,Northeast,non_safety_municipal_units,Calendar year 2024 (2024 Salary Schedule),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NY,New Rochelle,Northeast,non_safety_comparator,"January 1, 2021 through December 31, 2026",2,2,non_safety_constraint_signal,verified_locator_metadata_only
+NY,New Windsor,Northeast,safety_and_non_safety_bargaining_units,2014-2024 target window,2,2,strike_or_no_strike_constraint,verified_locator_metadata_only
+NY,Newburgh,Northeast,safety_and_non_safety_bargaining_units,2014-2018 (indexed by received fiscal year on PERB awards page),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NY,Newburgh,Northeast,safety_and_non_safety_bargaining_units,2019-2023 (award PDF dated 9/9/20; case number IA2017-009),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NY,Niagara Falls,Northeast,non_safety_comparator,"Retroactive to May 19, 2021 (MOA terms described in document; references effective CBA dates)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+NY,North Greenbush,Northeast,safety_and_non_safety_compensation_units,"PERB Case No. IA2003-010; M2002-284 (older than the requested window, but may include wage/benefit classification and comparability rationale useful for method/structure)",1,1,market_or_comparability_pressure,verified_locator_metadata_only
+NY,North Greenbush,Northeast,safety_and_non_safety_compensation_units,Received 10/2/2012 (award listing; may cover a contract cycle around the early/mid 2010s),1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+NY,Ogden,Northeast,non_safety_municipal_units,"Effective Oct 23, 2024 through Dec 31, 2025 (MOA extension within ongoing labor agreement context)",1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+NY,Ogden,Northeast,non_safety_municipal_units,"Jan 1, 2022 through Dec 31, 2025 (agreement term referenced)",1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+NY,Olean,Northeast,non_safety_comparator,"Begins: July 1, 2021; Ends: June 30, 2025",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+NY,Olean,Northeast,non_safety_comparator,"Begins: September 1, 2020; Ends: August 31, 2025",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+NY,Olean,Northeast,non_safety_comparator,"MOA referenced in minutes (exact MOA start/end not extracted here); meeting date: Jan 25, 2022",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+NY,Owego,Northeast,non_safety_municipal_units,Audit (2018) referencing employee/payroll documentation (exact period not identified in lead snippet),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NY,Owego,Northeast,non_safety_municipal_units,Discussion includes 2014-2016 budget context (per lead snippet),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NY,Peekskill,Northeast,non_safety_comparator,"Includes January 1, 2006 through December 31, 2009 (and indicates agreement running to 2010); relevant overlap with 2009–2010 target years",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+NY,Poughkeepsie,Northeast,safety_and_non_safety_bargaining_units,Case No. IA93-036 (year received appears to be ~1993; outside requested 2014-2024 window),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NY,Poughkeepsie,Northeast,safety_and_non_safety_bargaining_units,PERB Case No. M2010-266 (fact-finding; outside requested 2014-2024 window),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NY,Rome,Northeast,non_safety_comparator,2013 (MOA),1,1,non_safety_constraint_signal,verified_locator_metadata_only
+NY,Rotterdam,Northeast,safety_and_non_safety_bargaining_units,Union contracts table listing contract expiration dates (CSEA and PBA) and noting police/CSEA contracts not approved until Oct 2023,1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+NY,Rye,Northeast,safety_and_non_safety_bargaining_units,2014-2024 target window,3,3,strike_or_no_strike_constraint,verified_locator_metadata_only
+NY,Salina,Northeast,safety_and_non_safety_bargaining_units,Not stated in snippet; document dated 2025-05-14 (case identifier E-2676 referenced),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NY,Saugerties,Northeast,non_safety_municipal_units,"2015 Adopted Budget (approved as of Aug 31, 2014)",1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NY,Saugerties,Northeast,non_safety_municipal_units,"2019 Adopted Budget (approved as of Aug 31, 2018)",1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+NY,Saugerties,Northeast,non_safety_municipal_units,"2022 Combined Adopted Budget (as of June 30, 2021)",1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+NY,Smithtown,Northeast,safety_and_non_safety_bargaining_units,Effective Date: 2015-07-01; Expiration Date: 2024-06-30,1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NY,Southold,Northeast,non_safety_municipal_units,2014-2024 (access point to specific CBA documents/periods),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NY,Southold,Northeast,non_safety_municipal_units,2024 (budget year; supports fiscal constraint/pay plan context across 2014-2024 research window),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NY,Southold,Northeast,non_safety_municipal_units,"includes explicit compensation mechanism; snippet indicates force through December 31, 2016",1,1,fiscal_constraint_signal,verified_locator_metadata_only
+NY,Stony Point,Northeast,safety_and_non_safety_compensation_units,"Memorandum of Agreement commencing January 1, 2014 for four (4) years (successor CBA period referenced by meeting minutes)",1,1,market_or_comparability_pressure,verified_locator_metadata_only
+NY,Stony Point,Northeast,safety_and_non_safety_compensation_units,"Wage increases Memorandum of Agreement (successor/supplemental wage MOA referenced; current PBA CBA noted as expired Dec 31, 2017)",1,1,market_or_comparability_pressure,verified_locator_metadata_only
+NY,Sweden,Northeast,safety_and_non_safety_compensation_units,"2014 (salary schedule set via resolution dated January 2, 2014)",1,1,market_or_comparability_pressure,verified_locator_metadata_only
+NY,Thompson,Northeast,safety_and_non_safety_compensation_units,2014-2024 target window,1,1,market_or_comparability_pressure,verified_locator_metadata_only
+NY,Tonawanda,Northeast,safety_and_non_safety_bargaining_units,2016-2018 (referenced standoff; exact PERB report period not extracted),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NY,Tonawanda,Northeast,safety_and_non_safety_bargaining_units,2019-2023 (from listing page segment; exact award period not extracted),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NY,Union,Northeast,safety_and_non_safety_bargaining_units,"Impasse arising from CBA expiration Dec 31, 2012; bargaining began Jan 2013 (as indicated in the PDF text preview snippet)",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NY,Utica,Northeast,non_safety_comparator,Table lists contract expiration dates including 03/31/2018 for CSEA Local 1000 and Teamsters Local 182 (wage/schedule not extracted here),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+NY,Warwick,Northeast,safety_and_non_safety_bargaining_units,2014-2018 (indexed as such by PERB; case received 7/17/2015; Case Number: IA2014-008),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NY,Webster,Northeast,safety_and_non_safety_bargaining_units,"Effective May 19, 2023; agreement period through December 31, 2026 (per document title/contents context)",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+NY,Webster,Northeast,safety_and_non_safety_bargaining_units,"January 1, 2023 – December 31, 2026",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+NY,Webster,Northeast,safety_and_non_safety_bargaining_units,"January 1, 2024 – December 31, 2026",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+NY,West Seneca,Northeast,safety_and_non_safety_bargaining_units,2014-2024 target window,1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NY,West Seneca,Northeast,safety_and_non_safety_bargaining_units,2017 to 2020 (Part 1),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NY,West Seneca,Northeast,safety_and_non_safety_bargaining_units,"Effective January 1, 2020 to December 31, 2022",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+NY,White Plains,Northeast,non_safety_comparator,1975-1976,2,2,non_safety_constraint_signal,verified_locator_metadata_only
+NY,White Plains,Northeast,non_safety_comparator,1976 (entry indicates year; contract cycle not stated in lead),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+OH,Beavercreek,Midwest,non_safety_comparator,"January 1, 2024 to December 31, 2026 (overlaps requested 2025–2027 period for years 2025–2026 only)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+OH,Boardman,Midwest,safety_and_non_safety_bargaining_units,Conciliation Award (issued in/for 2013 proceedings; successor agreement period likely 2014–2016),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+OH,Brookville,Midwest,non_safety_comparator,Document dated 07/25/2022; effective/term dates not confirmed in lead metadata,1,1,non_safety_constraint_signal,verified_locator_metadata_only
+OH,Brookville,Midwest,non_safety_comparator,"July 1, 2020 through June 30, 2023 (overlaps Jan 1, 2021 through June 30, 2022)",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+OH,Brookville,Midwest,non_safety_comparator,"Pay schedule effective pay period including July 1, 2021 (within expected window); broader agreement period not confirmed in lead metadata",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+OH,Bucyrus,Midwest,non_safety_comparator,2023-25 (tentative; overlaps 2024),1,1,non_safety_constraint_signal,verified_locator_metadata_only
+OH,Clear Creek,Midwest,safety_and_non_safety_bargaining_units,2021-2023,1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+OH,Cleveland,Midwest,non_safety_comparator,2025-2028,2,2,non_safety_constraint_signal,verified_locator_metadata_only
+OH,Deerfield,Midwest,safety_and_non_safety_bargaining_units,CBA associated with SERB Case 19-MED-06-0577 (contract document in SERB Contracts repository; dated/period details inside record),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+OH,Deerfield,Midwest,safety_and_non_safety_bargaining_units,"Conciliation award issued May 30, 2014 for SERB No. 2013-MED-10-1321",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+OH,Delhi,Midwest,safety_and_non_safety_bargaining_units,Contract dated 1st day of January 2017 (URL indicates 16-MED-10-1225),1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+OH,Delhi,Midwest,safety_and_non_safety_bargaining_units,"MOU dated and effective December 18, 2019; referenced as attached to parties’ CBA (PDF hosted under 19-MED-10-1139 addendums)",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+OH,Dublin,Midwest,non_safety_comparator,"January 1, 2023 – December 31, 2025",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+OH,Findlay,Midwest,non_safety_comparator,"2016-2018 wage schedule revision context; tied to the City of Findlay OPBA collective bargaining agreement period (Jan 1, 2016–Dec 31, 2018) per surrounding materials",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+OH,Franklin,Midwest,safety_and_non_safety_bargaining_units,"Effective January 1, 2021 through June 30, 2023 (per document header)",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+OH,Franklin,Midwest,safety_and_non_safety_bargaining_units,Not fully confirmed from snippet alone (SERB contract PDF; target window is 2014-2024).,1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+OH,Genoa,Midwest,safety_and_non_safety_bargaining_units,2021-2023,1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+OH,Groveport,Midwest,non_safety_comparator,"July 1, 2022 through June 30, 2024",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+OH,Hillsboro,Midwest,non_safety_comparator,"Contract set to expire December 31, 2021 (term details not fully specified in search snippet)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+OH,Jackson,Midwest,safety_and_non_safety_bargaining_units,"Effective Sep 1, 2021 to Aug 31, 2024 (document references parties’ collective bargaining agreement period)",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+OH,Loveland,Midwest,non_safety_comparator,"Effective May 5, 2020 through May 1, 2023",2,2,non_safety_constraint_signal,verified_locator_metadata_only
+OH,Mentor-on-the-Lake,Midwest,non_safety_comparator,"June 25, 2016 to June 24, 2019 (wage re-opener effective June 25, 2018)",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+OH,Miami,Midwest,non_safety_comparator,"Effective July 1, 2022 through June 30, 2025",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+OH,Mount Healthy,Midwest,non_safety_comparator,"July 1, 2021 through June 30, 2022",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+OH,Munroe Falls,Midwest,non_safety_comparator,"Effective upon ratification; remains in full force and effect until June 30, 2023",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+OH,Norwich,Midwest,safety_and_non_safety_bargaining_units,"January 1, 2022 through December 31, 2024 (per document header visible in locator snippet)",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+OH,Perry,Midwest,safety_and_non_safety_bargaining_units,2015 (fact-finding report in the 2015 directory; bargaining-cycle period not extracted),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+OH,Riverside,Midwest,non_safety_comparator,"2022-2025 (amended by Board of Education on July 28, 2022)",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+OH,Springboro,Midwest,non_safety_comparator,"2019-2021 (amendment text indicates revisions through June 30, 2021)",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+OH,Springboro,Midwest,non_safety_comparator,2021 (posting references R-20-36 for year 2021; associated with employee pay ranges/wage scale index adjustment),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+OH,Washington,Midwest,safety_and_non_safety_bargaining_units,"Effective March 1, 2019 through February 28, 2022",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+OH,Willard,Midwest,non_safety_comparator,"Effective July 1, 2017 through June 30, 2020",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+OH,Willard,Midwest,non_safety_comparator,"Effective July 1, 2019 through June 30, 2022",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+OH,Willard,Midwest,non_safety_comparator,"Effective July 1, 2021 through June 30, 2024",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+OK,Bethany,South,non_safety_municipal_units,FY 2014,1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+OK,Bethany,South,non_safety_municipal_units,FY 2022 General Pay Plan (referenced within agenda packet),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+OK,Bethany,South,non_safety_municipal_units,FY 2024 General Pay Plan (referenced within agenda),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+OK,Claremore,South,non_safety_municipal_units,2019/2020 (collective bargaining agreement referenced),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+OK,Claremore,South,non_safety_municipal_units,2021/2022 (collective bargaining agreement referenced),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+OK,Claremore,South,non_safety_municipal_units,FY-17 / 2017/2018 (collective bargaining agreement referenced),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+OK,Jenks,South,safety_and_non_safety_bargaining_units,"Effective July 1, 2023 to (not including) July 1, 2025 (per “ARTICLE 32 DURATION OF AGREEMENT” shown in agenda file excerpt)",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+OK,Midwest City,South,non_safety_comparator,FY 2024-2025 (as referenced in the 07/23/2024 agenda),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+OK,Midwest City,South,non_safety_comparator,FY 2024/2025 (as labeled 2024-25),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+OK,Midwest City,South,non_safety_comparator,"Through June 30, 2025 (within the 2024-dated packet)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+OK,Moore,South,non_safety_comparator,2025-2026 (negotiated contract and procedural agreement),1,1,non_safety_constraint_signal,verified_locator_metadata_only
+OK,Owasso,South,non_safety_comparator,2024-2025 (FY 2024-25),1,1,non_safety_constraint_signal,verified_locator_metadata_only
+OK,Owasso,South,non_safety_comparator,2024-2025 (negotiated agreement document),1,1,non_safety_constraint_signal,verified_locator_metadata_only
+OK,Owasso,South,non_safety_comparator,Effective 7-1-24 through 6-30-25 (Fiscal Year 2024-25),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+OK,Ponca City,South,non_safety_municipal_units,2019-20,1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+OK,Ponca City,South,non_safety_municipal_units,2020-21,1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+OK,Ponca City,South,non_safety_municipal_units,FY 2018,1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+OR,Corvallis,West,non_safety_comparator,2018-2023 contract (exact term dates not captured in search snippet),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+OR,Corvallis,West,non_safety_comparator,"Effective July 1, 2023 through June 30, 2026",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+PA,Allentown,Northeast,non_safety_comparator,2023 (MOU exhibit for Paraprofessional Summer Scholar Rate),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+PA,Allentown,Northeast,non_safety_comparator,"Document dated June 23, 2022 (exact contract term not stated in locator snippet)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+PA,Allentown,Northeast,non_safety_comparator,"Term of July 1, 2021 to June 30, 2024 (referenced for Exhibit B approval)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+PA,Amity,Northeast,safety_and_non_safety_compensation_units,2014-2024 target window,2,1,market_or_comparability_pressure,verified_locator_metadata_only
+PA,Bensalem,Northeast,safety_and_non_safety_bargaining_units,2014-2024 target window,1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+PA,Bristol,Northeast,safety_and_non_safety_bargaining_units,2020 (June 2020 disciplinary action; arbitration upheld in hearings described in PDF),1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+PA,Caln,Northeast,safety_and_non_safety_compensation_units,"January 1, 2018 to December 31, 2022 (per audit text)",1,1,market_or_comparability_pressure,verified_locator_metadata_only
+PA,Cheltenham,Northeast,safety_and_non_safety_bargaining_units,Contract terms shown on the page (includes years spanning 2014-2024),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+PA,Cheltenham,Northeast,safety_and_non_safety_bargaining_units,Opinion date appears to fall within 2014-2024 window (2018 in URL/path and snippet),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+PA,Chester,Northeast,non_safety_comparator,Chapter 9 plan document (published/hosted 2024-11); references 'Teamsters CBA' and indicates it is between the City and the Teamsters as amended,1,1,non_safety_constraint_signal,verified_locator_metadata_only
+PA,Chester,Northeast,non_safety_comparator,"Financial recovery plan dated 2016-08-12; includes agreement-expiration information (e.g., FOP and Firefighters Local 1400 expire 12/31/2016 as indicated in the excerpt)",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+PA,Chester,Northeast,non_safety_comparator,"Recovery plan document (published/dated 2020-08-20) referencing prior/expiring agreements (e.g., FOP/Firefighters expire 12/31/2016 as noted in the document excerpt)",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+PA,Cranberry,Northeast,safety_and_non_safety_bargaining_units,"Successor negotiations following CBA expired December 31, 2024 (fact-finding in 2025)",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+PA,Cranberry,Northeast,safety_and_non_safety_bargaining_units,three-year collective bargaining agreement (ratification announced April 2014; successor period not explicitly confirmed in snippet),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+PA,East Norriton,Northeast,safety_and_non_safety_compensation_units,"December 31, 2019 audit financial statement period",1,1,market_or_comparability_pressure,verified_locator_metadata_only
+PA,East Norriton,Northeast,safety_and_non_safety_compensation_units,"December 31, 2023 audit financial statement period",1,1,market_or_comparability_pressure,verified_locator_metadata_only
+PA,East Norriton,Northeast,safety_and_non_safety_compensation_units,FY2024 financial statements period (document labeled FY2024),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+PA,Emmaus,Northeast,non_safety_comparator,2019-2023 (MOA amendment; Exhibit referenced in filename),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+PA,Emmaus,Northeast,non_safety_comparator,unclear (site indicates contracts/salary scales; specific dates not visible from search snippet),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+PA,Ephrata,Northeast,non_safety_comparator,2024-2025 (within target window); schedule references multi-year CBA context in snippet,1,1,non_safety_constraint_signal,verified_locator_metadata_only
+PA,Ephrata,Northeast,non_safety_comparator,Contains links to collective bargaining agreements and pay schedules (individual linked documents may cover portions of 2023-2027),1,1,non_safety_constraint_signal,verified_locator_metadata_only
+PA,Falls,Northeast,safety_and_non_safety_bargaining_units,"2010-era unfair labor practice proceedings (May 10, 2010 charge; proposed decision/order document)",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+PA,Falls,Northeast,safety_and_non_safety_bargaining_units,"arbitration award referenced as Jan. 5, 2022; dispute involves disciplinary matter ending with a reduced suspension",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+PA,Falls,Northeast,safety_and_non_safety_bargaining_units,"references January 5, 2022 arbitration award (successor/dispute context tied to 2022); hearing/charge filed July 28, 2023",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+PA,Franconia,Northeast,safety_and_non_safety_compensation_units,2023-10-16 (minutes referencing prior police collective bargaining agreement),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+PA,Franconia,Northeast,safety_and_non_safety_compensation_units,2024-12-16 (agenda item referencing extension),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+PA,Franconia,Northeast,safety_and_non_safety_compensation_units,Not specified (chapter contains salaries/compensation as set from time to time),1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+PA,Hatfield,Northeast,non_safety_municipal_units,Budget year 2024 (approved 12/20/2023),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+PA,Haverford,Northeast,safety_and_non_safety_bargaining_units,2014-2024 target window,1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+PA,Haverford,Northeast,safety_and_non_safety_bargaining_units,"effective January 1, 2024 through December 31, 2024 (referenced within 2024 BOC materials)",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+PA,Limerick,Northeast,non_safety_municipal_units,Audited Financial Statements (FY 2021),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+PA,Lower Allen,Northeast,non_safety_municipal_units,Audit period: 2015-01-01 to 2018-12-31,1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+PA,Lower Allen,Northeast,non_safety_municipal_units,Document/publication dated 2019-06-26 (audit/report package context for non-uniformed pension plan),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+PA,Lower Allen,Northeast,non_safety_municipal_units,Document/publication dated 2025-04-02 (audit/report package including Non-Uniformed Pension Plan governed by Ordinance 2015-01 and related agreements),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+PA,Lower Makefield,Northeast,safety_and_non_safety_bargaining_units,Not within 2014–2024 on the agenda item itself (execution referenced; use as lead to locate prior agreements in 2014–2024),1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+PA,Lower Merion,Northeast,safety_and_non_safety_bargaining_units,2016-2019,1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+PA,Lower Merion,Northeast,safety_and_non_safety_bargaining_units,2017-2020,1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+PA,Lower Merion,Northeast,safety_and_non_safety_bargaining_units,2020-2022,1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+PA,Lower Paxton,Northeast,safety_and_non_safety_bargaining_units,2014-2024 target window,1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+PA,Lower Paxton,Northeast,safety_and_non_safety_bargaining_units,Reference to prior arbitration award (year not confirmed within lead snippet; appears discussed in 2014 testimony),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+PA,Lower Southampton,Northeast,non_safety_municipal_units,2014-2024 target window,3,1,fiscal_constraint_signal,verified_locator_metadata_only
+PA,Manheim,Northeast,safety_and_non_safety_bargaining_units,Police CBA effective 1/1/2023–12/31/2025; Firefighters agreement effective 9/23/2024–12/31/2027 (as described in the audit report),1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+PA,Manor,Northeast,non_safety_municipal_units,2014-2024 target window,1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+PA,McCandless,Northeast,safety_and_non_safety_bargaining_units,2014-2024 target window,2,2,strike_or_no_strike_constraint,verified_locator_metadata_only
+PA,Middletown,Northeast,safety_and_non_safety_bargaining_units,2014-2024 (entry likely within broader historical range; exact award/decision date not specified in locator snippet),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+PA,Middletown,Northeast,safety_and_non_safety_bargaining_units,2015 (final order year; underlying negotiation/arbitration/impasse period not specified in locator snippet),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+PA,Millcreek,Northeast,safety_and_non_safety_bargaining_units,"November 7, 2016 arbitration award referenced",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+PA,Millcreek,Northeast,safety_and_non_safety_bargaining_units,References successor agreement / arbitration-informed bargaining timeline (2020 opinion),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+PA,New Hanover,Northeast,safety_and_non_safety_compensation_units,2024 fee schedule draft,1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+PA,Newberry,Northeast,safety_and_non_safety_compensation_units,"Mentions CBA coverage periods: Jan 1, 2014–Dec 31, 2016; Jan 1, 2017–Dec 31, 2020 (and earlier 2011–2013); audit report date 04/25/2019",1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+PA,Newberry,Northeast,safety_and_non_safety_compensation_units,"Ordinance no. 437 (Act 49 of 2024) — references “CBA governs on wages, hours, and terms and conditions of employment” (contract years not enumerated in snippet)",1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+PA,Northampton,Northeast,safety_and_non_safety_bargaining_units,Contract listed: 1/1/2016–12/31/2020,1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+PA,Patton,Northeast,safety_and_non_safety_compensation_units,Budget year 2023 (mentions police pay governed by CBA; non-uniform merit increase noted),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+PA,Pine,Northeast,safety_and_non_safety_compensation_units,1/1/2021 through 12/31/2024 (CBA term described),1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+PA,Pittsburgh,Northeast,non_safety_comparator,"wage determination includes dated effective wage amounts (e.g., effective Feb 1, 2016; Feb 1, 2017; Feb 1, 2018 shown in snippet)",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+PA,Pottstown,Northeast,non_safety_comparator,2017/2016 context shown on the document listing (exact bargaining period not stated in snippet),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+PA,Pottstown,Northeast,non_safety_comparator,"Contract expired Dec 31, 2018; negotiations carried over into 2019 (per page snippet)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+PA,Radnor,Northeast,safety_and_non_safety_bargaining_units,"Contains publicly listed resolutions including CBA extension/adoption periods (e.g., through Dec 31, 2028; and beginning Jan 1, 2024 through Dec 31, 2028 per listing text)",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+PA,Reading,Northeast,non_safety_comparator,"Effective January 1, 2023 and expiring December 31, 2026 (retroactive provisions referenced)",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+PA,Ridley,Northeast,safety_and_non_safety_bargaining_units,2022-2024 (as referenced: “2022 through 2024 Ridley Township Police FOP”),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+PA,Ridley,Northeast,safety_and_non_safety_bargaining_units,Not explicitly stated in snippet; referenced as a police collective bargaining agreement with wage increase/residency/medical benefit modifications (dated within the referenced packet),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+PA,Scott,Northeast,safety_and_non_safety_compensation_units,Budget year 2021,1,1,market_or_comparability_pressure,verified_locator_metadata_only
+PA,Shaler,Northeast,non_safety_municipal_units,2014 (order document in 2014 PLRB orders folder),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+PA,Shaler,Northeast,non_safety_municipal_units,"July 1, 2023 to June 30, 2028 (CBA term stated in the minutes)",1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+PA,Spring,Northeast,safety_and_non_safety_bargaining_units,"Made as of January 1, 2020; also references a prior contract dated January 1, 2014 (expired December 31, 2019)",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+PA,Springfield,Northeast,non_safety_municipal_units,2016-2020 (document); CBA-related wage increases referenced for at least 2015 within narrative,1,1,fiscal_constraint_signal,verified_locator_metadata_only
+PA,State College,Northeast,non_safety_comparator,07/01/2023 - 06/30/2028,2,2,non_safety_constraint_signal,verified_locator_metadata_only
+PA,State College,Northeast,non_safety_comparator,2022 - 2027,1,1,non_safety_constraint_signal,verified_locator_metadata_only
+PA,Stroud,Northeast,non_safety_municipal_units,02/04/2020 (publication/date visible in locator),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+PA,Susquehanna,Northeast,safety_and_non_safety_bargaining_units,2023-01-01 to 2025-12-31,1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+PA,Susquehanna,Northeast,safety_and_non_safety_bargaining_units,2024-01-01 to 2026-12-31,1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+PA,Swatara,Northeast,safety_and_non_safety_bargaining_units,"Representation/certification matter referenced around incumbent agreement in its fourth year (petition filed January 30, 2018; NOC June 4, 2018; final order likely 2018 cycle)",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+PA,Tredyffrin,Northeast,safety_and_non_safety_bargaining_units,Not stated (fact finding listed without dates on resume snippet),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+PA,Upper Allen,Northeast,non_safety_municipal_units,"FY ended December 31, 2021 (ACFR coverage)",1,1,fiscal_constraint_signal,verified_locator_metadata_only
+PA,Upper Dublin,Northeast,safety_and_non_safety_bargaining_units,"Hearing: January 13, 2015; Case No. ACT 88-14-37-E (fact-finding window spanning 2014-2015)",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+PA,Upper Dublin,Northeast,safety_and_non_safety_bargaining_units,"Report date: June 30, 2014 (Act 88 impasse / fact-finding window within 2014)",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+PA,Upper Gwynedd,Northeast,safety_and_non_safety_compensation_units,2014-2024 target window,1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+PA,Upper Macungie,Northeast,safety_and_non_safety_bargaining_units,"CBA and Act 111 interest arbitration referenced in opinion; the interest arbitration award referenced in related procedural history is dated Jan 24, 2011 with retroactive effective period through Dec 31, 2013 (as described in search snippets for related decisions)",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+PA,Upper Macungie,Northeast,safety_and_non_safety_bargaining_units,"May 1, 2017 through April 30, 2020 (current CBA term referenced on page)",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+PA,Upper Macungie,Northeast,safety_and_non_safety_bargaining_units,Three-year term (exact dates not visible in search snippet; described as “this agreement will have a term of three years”),1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+PA,Upper Merion,Northeast,safety_and_non_safety_bargaining_units,Contract years 2023 through 2027 (Police CBA amendment via MOU referenced),1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+PA,Upper Moreland,Northeast,non_safety_municipal_units,Budget year 2024,1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+PA,Upper Moreland,Northeast,non_safety_municipal_units,Collective Bargaining Agreement (exact contract term/expiration not captured in the minutes excerpt shown by the crawl),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+PA,Upper Moreland,Northeast,non_safety_municipal_units,"Four-year collective bargaining contract term; minutes state expiration on December 31, 2020",1,1,fiscal_constraint_signal,verified_locator_metadata_only
+PA,Upper Providence,Northeast,non_safety_municipal_units,2020 fiscal year budget,1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+PA,Upper Providence,Northeast,non_safety_municipal_units,Five-year plan shown with compensation line items across 2015-2020 (per snippet text),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+PA,Warminster,Northeast,safety_and_non_safety_bargaining_units,"petition filed Oct 26, 2017; hearing continued to Apr 20, 2018 (from document metadata/heading)",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+PA,Warminster,Northeast,safety_and_non_safety_bargaining_units,"unfair labor practice charge filed Apr 14, 2016; allegations between Mar 4 and Mar 6, 2016 (from document heading/summary)",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+PA,Warwick,Northeast,non_safety_municipal_units,2019 budget (document),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+PA,Warwick,Northeast,non_safety_municipal_units,2020 budget (worksheets document),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+PA,Warwick,Northeast,non_safety_municipal_units,2021 budget (worksheets document),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+PA,Washington,Northeast,safety_and_non_safety_compensation_units,"Contract term referenced as effective January 1, 2020 until December 31, 2024",1,1,market_or_comparability_pressure,verified_locator_metadata_only
+PA,Whitehall,Northeast,safety_and_non_safety_bargaining_units,"Audit period stated as January 1, 2015 to December 31, 2018; arbitration scheduling reference April 29, 2020",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+PA,Whitehall,Northeast,safety_and_non_safety_bargaining_units,"Term beginning January 1, 2017; expiring December 31, 2019",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+PA,Whitehall,Northeast,safety_and_non_safety_bargaining_units,"Three-year contract calls out pay changes for 2014, 2015, 2016 (ratified Nov 2013)",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+PA,Whitemarsh,Northeast,non_safety_municipal_units,2022 (financial statements year),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+PA,Whitpain,Northeast,non_safety_municipal_units,Schedule of contributions references years including 2014–2016 (per report snippet),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+PA,Wilkes-Barre,Northeast,non_safety_comparator,2023-2026 (referenced as the applicable Collective Bargaining Agreement),2,0,non_safety_constraint_signal,no_verified_tier_c_lead
+PA,York,Northeast,safety_and_non_safety_bargaining_units,Fact-finding report document (case PERA-F-13-325-E; in 2014 fact-finding document folder),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+PA,York,Northeast,safety_and_non_safety_bargaining_units,Final Order (case PF-C-17-63-E; in 2018 final-orders folder),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+PA,York,Northeast,safety_and_non_safety_bargaining_units,Proposed Decision and Order (case PF-C-22-48-E; in 2023 proposed-orders folder),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+RI,Coventry,Northeast,safety_and_non_safety_bargaining_units,"September 1, 2012 — August 31, 2015",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+RI,Cumberland,Northeast,safety_and_non_safety_bargaining_units,2014-2024 (listing may link to multiple contract periods),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+RI,Johnston,Northeast,safety_and_non_safety_bargaining_units,Expires 06/30/2022 (CBA period in document),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+RI,Johnston,Northeast,safety_and_non_safety_bargaining_units,Listed contract end 06/30/2022 (CBA period in document),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+RI,North Kingstown,Northeast,safety_and_non_safety_bargaining_units,2010 expired CBA context; litigation references multiple negotiation/arbitration periods around 2011-2013,1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+RI,North Kingstown,Northeast,safety_and_non_safety_bargaining_units,Contract expiring 4/30/2022 (per filename),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+RI,North Kingstown,Northeast,safety_and_non_safety_bargaining_units,Contract period ending 6/30/2021 (per filename),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+RI,North Providence,Northeast,safety_and_non_safety_bargaining_units,CBA term not fully stated in search snippet; embedded within the PDF contract.,1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+RI,North Providence,Northeast,safety_and_non_safety_bargaining_units,"Search snippet indicates the contract term begins July 1, 2015 and ends on a June 30 date (year not fully shown in snippet).",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+RI,Portsmouth,Northeast,safety_and_non_safety_compensation_units,2014–2017,1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+RI,Smithfield,Northeast,non_safety_municipal_units,Appears entered in 2017 (effective year visible in locator/snippet); specific end date not confirmed here,1,1,fiscal_constraint_signal,verified_locator_metadata_only
+RI,Tiverton,Northeast,safety_and_non_safety_compensation_units,"Police Department — contract July 1, 2018 to June 30, 2021 (tentative agreement referenced within report)",1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+RI,West Warwick,Northeast,safety_and_non_safety_bargaining_units,2021-2024,3,3,strike_or_no_strike_constraint,verified_locator_metadata_only
+SC,Anderson,South,safety_and_non_safety_bargaining_units,Unknown (agenda item in 2023; may reference designation/MOA for bargaining units),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+SC,Clemson,South,non_safety_municipal_units,2014-2024 target window,1,1,fiscal_constraint_signal,verified_locator_metadata_only
+SC,Easley,South,non_safety_municipal_units,Annual budget documents (2014-2024 range; to be selected from page list),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+SC,Easley,South,non_safety_municipal_units,FY 2018-2019 (operating budget),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+SC,Easley,South,non_safety_municipal_units,FY 2019-2020 (as implied by FY 2020 budget document),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+SC,Port Royal,South,safety_and_non_safety_compensation_units,2023-2024 (accounting period shown through 6/30/2024),1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+SC,Tega Cay,South,safety_and_non_safety_compensation_units,2023–2024 (Budget Summary document),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+SC,Tega Cay,South,safety_and_non_safety_compensation_units,Fiscal Year 2014–2015 (FY2014–2015; budget year described in document),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+SC,Tega Cay,South,safety_and_non_safety_compensation_units,Fiscal Year 2014–2015 (document describes budget year and appropriations sections),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+SC,West Columbia,South,non_safety_municipal_units,FY 2019-2020 budget (ordinance; as listed in City of West Columbia document center),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+TN,Arlington,South,safety_and_non_safety_compensation_units,Expected period target: 2014-2024 (annual budgets); specific years/documents not visible in captured listing,1,1,market_or_comparability_pressure,verified_locator_metadata_only
+TN,Arlington,South,safety_and_non_safety_compensation_units,Municipal code (versions/sections may apply across multiple years; 2014-2024 applicability needs confirmation per section revision dates),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+TN,Arlington,South,safety_and_non_safety_compensation_units,Updated in 2022 (Community Profile document); Town Budget table shows FY2025-2026 amount (period coverage not guaranteed for 2014-2024),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+TN,Memphis,South,non_safety_comparator,"2022-2025 (page indicates 2022-2025 MOU availability; target window: July 1, 2022 through June 30, 2025)",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+TN,Memphis,South,non_safety_comparator,"Effective July 1, 2022 (document pay plan snapshot; comparator window requested: July 1, 2022 through June 30, 2025)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+TN,Memphis,South,non_safety_comparator,"Effective July 1, 2023 (document pay plan snapshot; comparator window requested: July 1, 2022 through June 30, 2025)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+TN,Nashville-Davidson County,South,non_safety_comparator,"Effective July 1, 2023 (pay plan adopted via RS2023-2197)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+TN,Nashville-Davidson County,South,non_safety_comparator,"Effective July 1, 2023 (pay plan for Board of Health employees)",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+TN,Nolensville,South,safety_and_non_safety_compensation_units,FY2023-2024 (budget book); attached pay scale schedules for general government and public safety,1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+TN,Portland,South,safety_and_non_safety_compensation_units,"2024 (RFP posted for a compensation study; solicitation deadline Feb 27, 2024)",1,1,market_or_comparability_pressure,verified_locator_metadata_only
+TN,Portland,South,safety_and_non_safety_compensation_units,"Effective January 1, 2024 (Ordinance No. 23-58; Personnel Manual – 2024)",1,1,market_or_comparability_pressure,verified_locator_metadata_only
+TN,Spring Hill,South,non_safety_comparator,"Local Agreement (expiration mentioned as April 30, 2028; operative/effective date terms mentioned without extracting full details in scout phase)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+TN,Springfield,South,non_safety_municipal_units,FY 2020-2021 (budget book),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+TX,Abilene,South,non_safety_comparator,CB-2630 compensation study / plan development (timeframe not explicitly a 2024-2029 CBA),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+TX,Abilene,South,non_safety_comparator,FY 2024-2025 (fiscal year operating budget),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+TX,Alamo,South,non_safety_municipal_units,FY 2023-2024 budget document,1,1,fiscal_constraint_signal,verified_locator_metadata_only
+TX,Alice,South,non_safety_municipal_units,ADOPTED BUDGET FY 2021–2022,1,1,fiscal_constraint_signal,verified_locator_metadata_only
+TX,Alice,South,non_safety_municipal_units,FY 2019–2020 adopted budget (labeled “2020 ADOPTED BUDGET”),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+TX,Alice,South,non_safety_municipal_units,FY 2024–2025 proposed budget (includes FY24 content),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+TX,Allen,South,non_safety_comparator,"Effective: October 5, 2024 (end date not shown in search snippet)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+TX,Allen,South,non_safety_comparator,"October 1, 2024 through September 30, 2028 (as indicated in search snippet)",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+TX,Alvin,South,safety_and_non_safety_bargaining_units,2017/18 (budget text references pay plan based on Collective Bargaining Agreement),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+TX,Alvin,South,safety_and_non_safety_bargaining_units,"FY2023 (budget text references CBA end date and renewal timing); current CBA ends September 30, 2022; renewal effective October 1, 2022 (FY23)",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+TX,Amarillo,South,non_safety_comparator,Effective term referenced as expiring 09/30/2024 (Meet & Confer agreement covering 2021–2024 timeframe),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+TX,Amarillo,South,non_safety_comparator,Meet & Confer agreement effective commencement noted in council discussion as 10/01/2021; expires 09/30/2024 (3-year term referenced),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+TX,Balch Springs,South,non_safety_municipal_units,"FY 2023 (City budget; includes compensation/pay plan elements for non-safety positions, where applicable)",1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+TX,Balch Springs,South,non_safety_municipal_units,FY 2024 (proposed budget workshop materials; may reference compensation/pay plan structure),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+TX,Beeville,South,safety_and_non_safety_compensation_units,Ongoing policy (document revision timing not fully inferred from search snippet),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+TX,Bellaire,South,safety_and_non_safety_compensation_units,FY 2024 (adopted budget; contains effective FY 2024 pay plan content),1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+TX,Brownwood,South,non_safety_municipal_units,FY 2021/2022 (budget message supporting proposed annual budget),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+TX,Brownwood,South,non_safety_municipal_units,FY 2022/2023 (proposed budget document),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+TX,Buda,South,safety_and_non_safety_compensation_units,FY 2022 (adopted budget),1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+TX,Buda,South,safety_and_non_safety_compensation_units,FY 2024 (adopted budget; specific internal pay-plan sections may cover step/incentive timing),1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+TX,Canyon,South,safety_and_non_safety_compensation_units,Fiscal Year 2014-2015,1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+TX,Canyon,South,safety_and_non_safety_compensation_units,Fiscal Year 2018-2019,1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+TX,Canyon,South,safety_and_non_safety_compensation_units,Fiscal Year 2019-2020,1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+TX,Corinth,South,non_safety_municipal_units,2016–2017,1,1,fiscal_constraint_signal,verified_locator_metadata_only
+TX,Corinth,South,non_safety_municipal_units,2019–20,1,1,fiscal_constraint_signal,verified_locator_metadata_only
+TX,Corinth,South,non_safety_municipal_units,2020–21,1,1,fiscal_constraint_signal,verified_locator_metadata_only
+TX,Del Rio,South,safety_and_non_safety_bargaining_units,"October 1, 2021 – September 30, 2024",1,0,strike_or_no_strike_constraint,no_verified_tier_c_lead
+TX,Denton,South,non_safety_comparator,2024–25,1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+TX,Dumas,South,safety_and_non_safety_compensation_units,2017-2018 Annual Budget (Wage & Salary Schedule effective 10/1/2015),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+TX,Dumas,South,safety_and_non_safety_compensation_units,2018-2019 Final Budget (Wage & Salary Schedule effective 10/1/2018),1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+TX,Dumas,South,safety_and_non_safety_compensation_units,2020-2021 Final Budget (Wage & Salary Schedule effective 10/1/2020),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+TX,El Paso,South,non_safety_comparator,"September 1, 2023 through August 31, 2027",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+TX,Forney,South,safety_and_non_safety_bargaining_units,"To expire September 30, 2024 (meet & confer period referenced by the council item)",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+TX,Frisco,South,non_safety_comparator,Portions effective 07/01/2024 (document adopted 07/16/2024); FY24 comparator targeting inferred,1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+TX,Glenn Heights,South,non_safety_municipal_units,FY 2023-2024,1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+TX,Harlingen,South,non_safety_comparator,FY 2021-2022 thru FY 2023-2024,1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+TX,Hereford,South,safety_and_non_safety_compensation_units,10/01/2022-09/30/2023,1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+TX,Hereford,South,safety_and_non_safety_compensation_units,FY ending 09/30/2024 (fiscal year budget PDF),1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+TX,Hewitt,South,safety_and_non_safety_compensation_units,Annual Budget FY 2023-2024,2,0,market_or_comparability_pressure,no_verified_tier_c_lead
+TX,Hewitt,South,safety_and_non_safety_compensation_units,Annual Budget FY 2024-2025,1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+TX,Hidalgo,South,safety_and_non_safety_compensation_units,Chapter 8 (Policies and Procedures); labeled final CCP chapter document (112018),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+TX,Hidalgo,South,safety_and_non_safety_compensation_units,"Effective January 1, 2024 (Law Enforcement Pay Plan - Salary Table)",1,1,market_or_comparability_pressure,verified_locator_metadata_only
+TX,Hidalgo,South,safety_and_non_safety_compensation_units,Salary schedules (multiple years/tables available; includes Law Enforcement Step and Grade Pay Plan),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+TX,Horizon City,South,non_safety_municipal_units,FY2016 Operating Budget,1,1,fiscal_constraint_signal,verified_locator_metadata_only
+TX,Horizon City,South,non_safety_municipal_units,FY2021 Operating Budget,1,1,fiscal_constraint_signal,verified_locator_metadata_only
+TX,Jacksonville,South,safety_and_non_safety_compensation_units,2014-2024 target window (study solicitation; specific term not shown in lead snippet),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+TX,Kerrville,South,non_safety_municipal_units,FY2022 (approved budget document),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+TX,Kerrville,South,non_safety_municipal_units,FY2023 (approved budget document),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+TX,Kerrville,South,non_safety_municipal_units,FY2024 (approved budget document),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+TX,La Marque,South,non_safety_municipal_units,Fiscal Year 2016-2017,1,1,fiscal_constraint_signal,verified_locator_metadata_only
+TX,La Marque,South,non_safety_municipal_units,Fiscal Year 2018-2019,1,1,fiscal_constraint_signal,verified_locator_metadata_only
+TX,La Marque,South,non_safety_municipal_units,Fiscal Year 2019-2020,1,1,fiscal_constraint_signal,verified_locator_metadata_only
+TX,Lakeway,South,non_safety_municipal_units,FY2019/FY2020 pay plan implementation context; mechanism includes annual COLA and merit distribution (effective references to 10/1 and merit/anniversary timing),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+TX,Lakeway,South,non_safety_municipal_units,"Not explicitly stated in locator/snippet; appears to describe the adopted salary schedule mechanics (ranges, steps, midpoint/step gaps, step increment rate)",1,1,fiscal_constraint_signal,verified_locator_metadata_only
+TX,Lewisville,South,non_safety_comparator,Current fiscal year pay plans (includes broadband/salary by agreement link targets),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+TX,Lewisville,South,non_safety_comparator,FY 2025-2026 (effective 10/01/2025; updated 03/12/2026),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+TX,Live Oak,South,safety_and_non_safety_compensation_units,2018/19 (Approved Budget),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+TX,Live Oak,South,safety_and_non_safety_compensation_units,2023/24 (Approved Budget),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+TX,Lockhart,South,safety_and_non_safety_compensation_units,Ordinance discussion (step pay plan revision) tied to classification changes and personnel rank adjustments (within 2018 council packet),1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+TX,Lufkin,South,safety_and_non_safety_bargaining_units,"Effective Oct 1, 2022 through Sep 30, 2024",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+TX,Manor,South,non_safety_municipal_units,FY 2018-2019,1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+TX,Manor,South,non_safety_municipal_units,Unspecified (handbook section; contains explicit compensation mechanisms),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+TX,Marshall,South,non_safety_municipal_units,2018 Budget (PDF) — fiscal year budget document (exact FY label TBD),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+TX,Marshall,South,non_safety_municipal_units,"2024 ANNUAL BUDGET (PDF) — City of Marshall, Texas (Version 1 indicates 1/26/2024 draft timing)",1,1,fiscal_constraint_signal,verified_locator_metadata_only
+TX,Mercedes,South,safety_and_non_safety_compensation_units,2024-07-13 meeting minutes (exact compensation schedule contents not extracted),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+TX,Mineral Wells,South,safety_and_non_safety_compensation_units,Fiscal Year 2015-2016,1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+TX,Mineral Wells,South,safety_and_non_safety_compensation_units,Fiscal Year 2017-2018,1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+TX,Missouri City,South,non_safety_comparator,"2023 pay plan update for non-civil service (referenced in memo as May 7, 2023 effective in related agenda items)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+TX,Missouri City,South,non_safety_comparator,"Effective May 5, 2024 (civil service pay changes referenced in memo)",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+TX,Missouri City,South,non_safety_comparator,"Effective May 5, 2024 (pay plan update for non-civil service)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+TX,Palmview,South,safety_and_non_safety_compensation_units,FY24-25 (budget document labeled FY24-25),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+TX,Pampa,South,safety_and_non_safety_compensation_units,"2018-19 budget document; pay plan section states “Effective October 1, 2015” and “Revised Effective October 1, 2018” (as shown in the pay-plan table area)",1,1,market_or_comparability_pressure,verified_locator_metadata_only
+TX,Paris,South,non_safety_municipal_units,2015-2016 fiscal period (budget document),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+TX,Paris,South,non_safety_municipal_units,2017-2018 fiscal period (ordinance adopting budget),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+TX,Rosenberg,South,non_safety_comparator,"FY ended Sep 30, 2024 (ACFR 2024)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+TX,Saginaw,South,non_safety_municipal_units,FY 2022-2023 (budget highlights and pay plan/step increase proposals referenced in packet),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+TX,Saginaw,South,non_safety_municipal_units,FY 2024-2025 (proposed budget),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+TX,Saginaw,South,non_safety_municipal_units,Proposed pay plan / compensation philosophy effective date tied to resolution (document published for 2024 work plan; explicit mechanism language for annual COLA and step increases),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+TX,San Antonio,South,non_safety_comparator,FY 2024,1,1,non_safety_constraint_signal,verified_locator_metadata_only
+TX,San Antonio,South,non_safety_comparator,FY 2025,1,1,non_safety_constraint_signal,verified_locator_metadata_only
+TX,San Antonio,South,non_safety_comparator,FY 2026,1,1,non_safety_constraint_signal,verified_locator_metadata_only
+TX,San Benito,South,non_safety_municipal_units,"Approved May 15, 2018",1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+TX,San Benito,South,non_safety_municipal_units,FY 2014-2015,1,1,fiscal_constraint_signal,verified_locator_metadata_only
+TX,San Marcos,South,non_safety_comparator,2025/2026 certificated salary schedule (effective date described on page/file),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+TX,San Marcos,South,non_safety_comparator,"July 1, 2024 – June 30, 2026 (as indicated by source locator metadata)",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+TX,San Marcos,South,non_safety_comparator,"Two-year term beginning July 1, 2024 through June 30, 2026 (as referenced on the page)",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+TX,Seabrook,South,safety_and_non_safety_compensation_units,2014-2024 target window,1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+TX,Seabrook,South,safety_and_non_safety_compensation_units,2023-24 (referenced via Police Compensation Plan 2023-24),1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+TX,Seagoville,South,non_safety_municipal_units,FY 2014,1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+TX,Seagoville,South,non_safety_municipal_units,FY 2019,1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+TX,Seagoville,South,non_safety_municipal_units,FY 2020,1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+TX,Texas City,South,non_safety_comparator,"October 1, 2024 through September 30, 2026",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+TX,Texas City,South,non_safety_comparator,"October 1, 2024 through September 30, 2026 (per document title text/snippet)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+TX,Tomball,South,safety_and_non_safety_compensation_units,2023 (study scope/engagement materials),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+TX,Trophy Club,South,safety_and_non_safety_compensation_units,Approved 2/12/2024,1,1,market_or_comparability_pressure,verified_locator_metadata_only
+TX,Trophy Club,South,safety_and_non_safety_compensation_units,Approved 8/26/2024,1,1,market_or_comparability_pressure,verified_locator_metadata_only
+TX,Waco,South,non_safety_comparator,"2014–2015 extended through January 30, 2016",2,0,non_safety_constraint_signal,no_verified_tier_c_lead
+TX,Weslaco,South,non_safety_comparator,2019-2021,1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+UT,Cottonwood Heights,West,safety_and_non_safety_bargaining_units,2014-2024 target window,1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+UT,Cottonwood Heights,West,safety_and_non_safety_bargaining_units,Board packet dated 02/16/2021 (no specific CBA/arbitration period identified in locator),1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+UT,Cottonwood Heights,West,safety_and_non_safety_bargaining_units,"Policy dated/“Policy distributed: December 7, 2022” (effective context not otherwise specified in locator)",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+UT,Magna metro,West,safety_and_non_safety_bargaining_units,"June 1, 2023 through May 31, 2027",1,1,strike_or_no_strike_constraint,verified_locator_metadata_only
+VA,Colonial Heights,South,non_safety_municipal_units,FY 2024 year-end update / compensation discussion (general employees pay adjustment referenced),1,0,fiscal_constraint_signal,no_verified_tier_c_lead
+VA,Front Royal,South,safety_and_non_safety_compensation_units,2014-2024 target window (handbook; publication/last-updated timing may fall inside or near the window),1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+VA,Manassas Park,South,safety_and_non_safety_compensation_units,FY 2017 budget deliberations (referenced in minutes),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+VA,Norfolk,South,non_safety_comparator,"FY 2021 (Effective July 1, 2020)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+VA,Portsmouth,South,non_safety_comparator,"2017 (agreement effective date stated as 1st day of April 2017, per document header)",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+VA,Radford,South,safety_and_non_safety_compensation_units,"FY 2017 pay scale (attachment) / RFP dated Feb 1, 2017 (with addendum Feb 8, 2017 shown in related doc)",1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+VA,Radford,South,safety_and_non_safety_compensation_units,"RFP #2017-HR-01 (Feb 1, 2017 issuance; addendum Feb 8, 2017 referenced in related attachment/doc)",1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+VA,Vienna,South,safety_and_non_safety_compensation_units,2014-2024 target window,1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+VA,Vienna,South,safety_and_non_safety_compensation_units,FY 2022-2023,1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+VA,Waynesboro,South,non_safety_municipal_units,2014-2024 relevant governing code sections (period not confirmed here),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+VA,Waynesboro,South,non_safety_municipal_units,Fiscal year budgets within 2014-2024 window (specific FY period not selected here),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+VA,Williamsburg,South,safety_and_non_safety_compensation_units,FY 2018 (CAFR narrative about study implementation effects),1,1,market_or_comparability_pressure,verified_locator_metadata_only
+VA,Williamsburg,South,safety_and_non_safety_compensation_units,FY 2018 budget (implementation year referenced),1,0,market_or_comparability_pressure,no_verified_tier_c_lead
+VT,Colchester,Northeast,non_safety_municipal_units,not specified in the search snippet; historical archive entry (likely within 2014–2024 window),1,1,fiscal_constraint_signal,verified_locator_metadata_only
+VT,South Burlington,Northeast,non_safety_comparator,2021-2022 (from file title),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+WA,Milton,West,non_safety_comparator,City budget mentions wage increases tied to a labor agreement (annualized; year-specific references),1,1,non_safety_constraint_signal,verified_locator_metadata_only
+WA,Milton,West,non_safety_comparator,City budget references a 'new labor agreement' with wage increases for 2026 (year-specific),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+WA,Tacoma,West,non_safety_comparator,"January 1, 2013 to December 31, 2016 (includes 2015-2016)",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+WA,Tacoma,West,non_safety_comparator,"January 1, 2015 to December 31, 2016",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+WA,Tacoma,West,non_safety_comparator,"January 1, 2015 to December 31, 2018 (includes 2015-2016)",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+WI,Beaver Dam,Midwest,non_safety_comparator,"Successor collective bargaining agreement covering negotiations after the prior agreement expired Dec. 31, 2004; successor bargaining described as 2005-06",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+WI,Beloit,Midwest,non_safety_comparator,"2023-2025 (Effective 1/1/2023; salary/wage appendix labeled 1/1/2023, 1/1/2024, 1/1/2025)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+WI,Berlin,Midwest,non_safety_comparator,"Agreement expired June 30, 1989; negotiations covering 1989-1990 and 1990-1991 (per award summary context)",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+WI,Berlin,Midwest,non_safety_comparator,Unknown from lead snippet (award document likely contains the contract period and any wage/salary schedule references),1,1,non_safety_constraint_signal,verified_locator_metadata_only
+WI,De Pere,Midwest,non_safety_comparator,"January 1, 2024 through December 31, 2026 (plus renewal language)",1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+WI,Edgerton,Midwest,non_safety_comparator,"Contract term stated in document (run from July 1, 1988 through June 30, 1999).",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+WI,Greenfield,Midwest,non_safety_comparator,2024-2026 (FY25-FY26 referenced in filename),1,1,non_safety_constraint_signal,verified_locator_metadata_only
+WI,Madison,Midwest,non_safety_comparator,"January 1, 2016 to December 31, 2016",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+WI,Madison,Midwest,non_safety_comparator,"January 1, 2017 to December 31, 2017",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+WI,Madison,Midwest,non_safety_comparator,"March 10, 2014 to December 31, 2018",1,1,non_safety_constraint_signal,verified_locator_metadata_only
+WI,Menasha,Midwest,non_safety_comparator,"January 1, 2019 – December 31, 2020",2,2,non_safety_constraint_signal,verified_locator_metadata_only
+WI,Menomonee Falls,Midwest,non_safety_comparator,2023-2024,1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+WI,Menomonee Falls,Midwest,non_safety_comparator,Mentions wage proposals across 2022-2025 and Menomonee Falls 2024 settlement (exact contract period not extracted here),1,1,non_safety_constraint_signal,verified_locator_metadata_only
+WI,Milwaukee,Midwest,non_safety_comparator,2018-2019 (document shown as “18-19” and includes effective pay-period language for 2019),1,0,non_safety_constraint_signal,no_verified_tier_c_lead
+WI,New Richmond,Midwest,non_safety_comparator,unclear,1,1,non_safety_constraint_signal,verified_locator_metadata_only
+WI,Onalaska,Midwest,non_safety_comparator,2023-2025,2,0,non_safety_constraint_signal,no_verified_tier_c_lead

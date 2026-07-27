@@ -1,0 +1,30 @@
+{
+  "blocked_by_transport_count": 14,
+  "discourse_only_count": 0,
+  "downloads": 0,
+  "duplicate_count": 3,
+  "global_analysis_readiness": false,
+  "pdf_page_accesses": 0,
+  "raw_headers_saved": 0,
+  "response_bodies_saved": 0,
+  "tier_counts": {
+    "tier_c": 1000
+  },
+  "unavailable_count": 322,
+  "verification_error_count": 0,
+  "verification_queue_count": 1000,
+  "verification_status_counts": {
+    "blocked_by_transport": 14,
+    "duplicate": 3,
+    "unavailable": 322,
+    "verified_source_lead": 556,
+    "weak_or_needs_review": 4,
+    "wrong_period": 57,
+    "wrong_unit": 44
+  },
+  "verified_source_lead_count": 556,
+  "weak_or_needs_review_count": 4,
+  "wrong_period_count": 57,
+  "wrong_source_family_count": 0,
+  "wrong_unit_count": 44
+}

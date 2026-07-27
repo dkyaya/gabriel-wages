@@ -1,0 +1,72 @@
+{
+  "candidate_review_decision_passed": true,
+  "dashboard_memo_metadata_rebuild_required_before_commit": true,
+  "deterministic_preflight_passed": true,
+  "downloads_allowed": false,
+  "get_requests_allowed": false,
+  "global_analysis_readiness": false,
+  "head_only": true,
+  "live_network_preflight_passed": true,
+  "live_probe_results": [
+    {
+      "attempts": 1,
+      "candidate_id": "TS4L-10b7727bbb7f61fcb277",
+      "http_response_observed": true,
+      "outcome": "unavailable",
+      "raw_body_saved": false,
+      "raw_headers_saved": false,
+      "status_code": 404
+    },
+    {
+      "attempts": 1,
+      "candidate_id": "TS4L-128e7a0428111f26e6a3",
+      "http_response_observed": true,
+      "outcome": "verified_source_lead",
+      "raw_body_saved": false,
+      "raw_headers_saved": false,
+      "status_code": 200
+    },
+    {
+      "attempts": 1,
+      "candidate_id": "TS4L-13dee3ba7e4e39857528",
+      "http_response_observed": true,
+      "outcome": "verified_source_lead",
+      "raw_body_saved": false,
+      "raw_headers_saved": false,
+      "status_code": 200
+    },
+    {
+      "attempts": 1,
+      "candidate_id": "TS4L-365cffc258271b820e47",
+      "http_response_observed": true,
+      "outcome": "verified_source_lead",
+      "raw_body_saved": false,
+      "raw_headers_saved": false,
+      "status_code": 200
+    },
+    {
+      "attempts": 1,
+      "candidate_id": "TS4L-484ebea358aa6b0d2b62",
+      "http_response_observed": true,
+      "outcome": "verified_source_lead",
+      "raw_body_saved": false,
+      "raw_headers_saved": false,
+      "status_code": 200
+    }
+  ],
+  "locked_queue_count": 1000,
+  "memo_decision_passed": true,
+  "ocr_allowed": false,
+  "pdf_page_access_allowed": false,
+  "preflight_passed": true,
+  "prior_verification_exclusions_excluded": true,
+  "queue_count_within_300_1000": true,
+  "queue_hash_locked": true,
+  "response_body_reads_allowed": false,
+  "rollback_safe_output": true,
+  "secrets_saved": false,
+  "source_review_extraction_rating_ingestion_codification_allowed": false,
+  "statistics_wage_gap_regression_treatment_effect_final_causal_work_allowed": false,
+  "tier_a_b_d_repair_deprioritized_excluded": true,
+  "tier_c_pool_count": 2703
+}

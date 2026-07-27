@@ -1,0 +1,1 @@
+Decision: `targeted_tier_c_verification_completed_source_review_ready_dashboard_visible`. Gap-directed Tier C queue: 1,000; verified leads: 556. HEAD-only verification; no document download, extraction, rating, or analysis. Global analysis readiness remains false.

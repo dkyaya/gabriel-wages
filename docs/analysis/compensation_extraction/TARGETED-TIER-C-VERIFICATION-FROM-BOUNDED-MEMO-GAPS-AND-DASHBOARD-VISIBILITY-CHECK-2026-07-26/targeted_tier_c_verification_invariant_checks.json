@@ -1,0 +1,16 @@
+{
+  "all_invariants_passed": true,
+  "deterministic_region_mapping_only": true,
+  "exactly_1000_selected_tier_c_candidates_verified": true,
+  "exclusions_preserved": true,
+  "global_analysis_readiness_false": true,
+  "head_only_no_get_body_pdf_ocr_or_download": true,
+  "no_geography_invented": true,
+  "no_model_ingestion_codification_quantitative_or_causal_work": true,
+  "no_source_review_or_durable_merge": true,
+  "no_weak_padding": true,
+  "partial_outputs_cannot_masquerade_as_complete": true,
+  "queue_and_results_reconcile": true,
+  "tier_a_b_d_repair_deprioritized_prior_excluded_rows_absent": true,
+  "verified_rows_not_downloaded_extracted_rated_or_causal": true
+}

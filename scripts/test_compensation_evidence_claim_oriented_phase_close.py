@@ -342,6 +342,7 @@ class MaterializedClaimPhaseTests(unittest.TestCase):
         "quantitative_to_qualitative_mechanism_linkage_513_completed_claim_review_ready",
         "mechanism_linkage_claim_review_268_completed_claim_memo_allowed",
         "bounded_internal_mechanism_linkage_claim_memo_completed_tier_c_verification_recommended",
+        "targeted_tier_c_verification_completed_source_review_ready_dashboard_visible",
         })
         self.assertTrue(calibration["gabriel_claim_rating_ready"])
         self.assertFalse(calibration["analysis_facing_promotion_allowed"])
@@ -372,6 +373,7 @@ class MaterializedClaimPhaseTests(unittest.TestCase):
         "quantitative_to_qualitative_mechanism_linkage_513_completed_claim_review_ready_global_analysis_closed",
         "mechanism_linkage_claim_review_268_completed_claim_memo_allowed_global_analysis_closed",
         "bounded_internal_mechanism_linkage_claim_memo_completed_tier_c_verification_recommended_global_analysis_closed",
+        "targeted_tier_c_verification_completed_source_review_ready_dashboard_visible_global_analysis_closed",
         })
         self.assertNotIn('"global_analysis_readiness": true', json.dumps(readiness, sort_keys=True).casefold())
 

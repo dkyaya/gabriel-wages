@@ -1,0 +1,7 @@
+derived_region,queue_count,verified_source_lead_count,state_count,city_state_pair_count,geography_source
+Northeast,500,276,9,170,existing_candidate_state_city_fields_static_mapping
+Midwest,154,96,8,73,existing_candidate_state_city_fields_static_mapping
+South,303,156,12,95,existing_candidate_state_city_fields_static_mapping
+West,43,28,9,18,existing_candidate_state_city_fields_static_mapping
+District of Columbia / Federal district,0,0,0,0,existing_candidate_state_city_fields_static_mapping
+Unknown,0,0,0,0,existing_candidate_state_city_fields_static_mapping

@@ -1,0 +1,23 @@
+{
+  "external_geography_lookups": 0,
+  "invented_geography_fields": 0,
+  "queue_by_region": {
+    "District of Columbia / Federal district": 0,
+    "Midwest": 154,
+    "Northeast": 500,
+    "South": 303,
+    "Unknown": 0,
+    "West": 43
+  },
+  "unknown_region_verified_count": 0,
+  "verified_by_region": {
+    "District of Columbia / Federal district": 0,
+    "Midwest": 96,
+    "Northeast": 276,
+    "South": 156,
+    "Unknown": 0,
+    "West": 28
+  },
+  "verified_city_state_pair_count": 356,
+  "verified_state_count": 38
+}

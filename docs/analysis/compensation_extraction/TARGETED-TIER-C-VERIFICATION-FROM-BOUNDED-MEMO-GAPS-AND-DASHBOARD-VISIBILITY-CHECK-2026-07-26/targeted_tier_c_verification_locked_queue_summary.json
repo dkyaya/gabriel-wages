@@ -1,0 +1,33 @@
+{
+  "lane_counts": {
+    "lane_1": 300,
+    "lane_2": 300,
+    "lane_3": 250,
+    "lane_4": 150
+  },
+  "locked_queue_count": 1000,
+  "mechanism_counts": {
+    "fiscal_constraint_signal": 250,
+    "market_or_comparability_pressure": 150,
+    "non_safety_constraint_signal": 300,
+    "strike_or_no_strike_constraint": 300
+  },
+  "minimum_gap_score": 96,
+  "quality_counts": {
+    "verification_ready_low": 578,
+    "verification_ready_medium": 422
+  },
+  "region_counts": {
+    "Midwest": 154,
+    "Northeast": 500,
+    "South": 303,
+    "West": 43
+  },
+  "repair_or_deprioritized_rows": 0,
+  "tier_a_b_d_rows": 0,
+  "tier_c_pool_count": 2703,
+  "tier_counts": {
+    "tier_c": 1000
+  },
+  "weak_padding_used": false
+}

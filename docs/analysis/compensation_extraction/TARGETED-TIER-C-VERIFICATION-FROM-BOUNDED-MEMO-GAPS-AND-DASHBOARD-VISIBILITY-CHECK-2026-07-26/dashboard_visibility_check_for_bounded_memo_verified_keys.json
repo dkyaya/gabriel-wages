@@ -1,0 +1,15 @@
+{
+  "current_dashboard_phase": "targeted_tier_c_verification_completed_source_review_ready_dashboard_visible",
+  "global_analysis_readiness_false": true,
+  "local_dashboard_data_rebuilt": true,
+  "local_production_build_exists": true,
+  "memo_dashboard_metadata_path_present": true,
+  "memo_decision_present": true,
+  "memo_exact_same_source_pairs_268": true,
+  "memo_geographic_summary_or_path_present": true,
+  "memo_geography_path_present": true,
+  "memo_linked_qualitative_records_90": true,
+  "memo_linked_quantitative_rows_208": true,
+  "memo_path_present": true,
+  "memo_stage_phase_or_lineage_present": true
+}

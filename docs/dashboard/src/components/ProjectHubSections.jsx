@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "targeted_tier_c_verification_completed_source_review_ready_dashboard_visible"
+              ? "Gap-directed Tier C verification complete; source review/download is ready"
+              : textTableCalibrationStatus.calibration_phase ===
             "bounded_internal_mechanism_linkage_claim_memo_completed_tier_c_verification_recommended"
               ? "Bounded internal mechanism-linkage memo complete; targeted Tier C verification is recommended"
               : textTableCalibrationStatus.calibration_phase ===
@@ -938,6 +941,26 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "targeted_tier_c_verification_completed_source_review_ready_dashboard_visible" ? (
+            <>
+              Gap-directed HTTP HEAD verification processed {formatNumber(
+                textTableCalibrationStatus.targeted_tier_c_verification_queue_count,
+              )} selected Tier C candidates and retained {formatNumber(
+                textTableCalibrationStatus.targeted_tier_c_verified_source_lead_count,
+              )} verified source leads. The bounded internal memo remains visible with {formatNumber(
+                textTableCalibrationStatus.bounded_internal_mechanism_linkage_claim_memo_scope?.exact_same_source_linked_pair_count,
+              )} exact same-source pairs, {formatNumber(
+                textTableCalibrationStatus.bounded_internal_mechanism_linkage_claim_memo_scope?.linked_quantitative_row_count,
+              )} quantitative rows, and {formatNumber(
+                textTableCalibrationStatus.bounded_internal_mechanism_linkage_claim_memo_scope?.linked_qualitative_record_count,
+              )} qualitative records. Verified Tier C leads remain not downloaded, not extracted,
+              not rated, and non-causal. Global readiness remains closed. Memo: {" "}
+              <code>{textTableCalibrationStatus.bounded_internal_mechanism_linkage_claim_memo_path}</code>;
+              {" "}dashboard metadata: <code>{textTableCalibrationStatus.bounded_internal_mechanism_linkage_claim_memo_dashboard_metadata_path}</code>;
+              {" "}geographic metadata: <code>{textTableCalibrationStatus.bounded_internal_mechanism_linkage_claim_memo_geographic_metadata_path}</code>;
+              {" "}geographic report: <code>{textTableCalibrationStatus.bounded_internal_mechanism_linkage_claim_memo_geographic_report_path}</code>.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "bounded_internal_mechanism_linkage_claim_memo_completed_tier_c_verification_recommended" ? (
             <>
               The bounded internal memo covers {formatNumber(
@@ -958,8 +981,12 @@ export function VerificationPipeline({
               global readiness, wage-gap estimates, effect estimates, and final causal claims remain closed.
               Detailed memo metadata is recorded at {" "}
               <code>{textTableCalibrationStatus.bounded_internal_mechanism_linkage_claim_memo_path}</code>
+              {" "}with dashboard metadata at {" "}
+              <code>{textTableCalibrationStatus.bounded_internal_mechanism_linkage_claim_memo_dashboard_metadata_path}</code>
               {" "}and geographic metadata at {" "}
-              <code>{textTableCalibrationStatus.bounded_internal_mechanism_linkage_claim_memo_geographic_metadata_path}</code>.
+              <code>{textTableCalibrationStatus.bounded_internal_mechanism_linkage_claim_memo_geographic_metadata_path}</code>,
+              {" "}with the geographic report at {" "}
+              <code>{textTableCalibrationStatus.bounded_internal_mechanism_linkage_claim_memo_geographic_report_path}</code>.
             </>
           ) : textTableCalibrationStatus.calibration_phase ===
           "mechanism_linkage_claim_review_268_completed_claim_memo_allowed" ? (

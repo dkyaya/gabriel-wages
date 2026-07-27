@@ -1,0 +1,26 @@
+{
+  "causal_status": "not_causal_evidence",
+  "download_status": "not_downloaded",
+  "durable_merge_count": 0,
+  "extraction_status": "not_extracted",
+  "lane_counts": {
+    "lane_1": 142,
+    "lane_2": 177,
+    "lane_3": 145,
+    "lane_4": 92
+  },
+  "mechanism_counts": {
+    "fiscal_constraint_signal": 145,
+    "market_or_comparability_pressure": 92,
+    "non_safety_constraint_signal": 142,
+    "strike_or_no_strike_constraint": 177
+  },
+  "rating_status": "not_rated",
+  "region_counts": {
+    "Midwest": 96,
+    "Northeast": 276,
+    "South": 156,
+    "West": 28
+  },
+  "retained_verified_source_leads": 556
+}

@@ -1,0 +1,22 @@
+{
+  "mechanism_quotas": {
+    "fiscal_constraint_signal": 250,
+    "market_or_comparability_pressure": 150,
+    "non_safety_constraint_signal": 300,
+    "strike_or_no_strike_constraint": 300
+  },
+  "no_weak_padding": true,
+  "non_cba_or_special_source_signal_count": 706,
+  "not_selected_count": 1703,
+  "quantitative_linkage_signal_count": 705,
+  "region_counts": {
+    "Midwest": 154,
+    "Northeast": 500,
+    "South": 303,
+    "West": 43
+  },
+  "same_city_or_tier1_count": 809,
+  "selected_count": 1000,
+  "selection_method": "fixed_gap_quota_then_deterministic_gap_score",
+  "tier_c_pool_count": 2703
+}

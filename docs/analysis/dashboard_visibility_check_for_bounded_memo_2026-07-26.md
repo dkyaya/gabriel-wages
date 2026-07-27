@@ -1,0 +1,1 @@
+Local dashboard data and `docs/dashboard/dist/index.html` contain or point to the bounded memo decision, scope, metadata, and geography. Global analysis readiness remains false. External visibility may still be subject to Pages deployment timing or browser cache after push.

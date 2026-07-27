@@ -1,0 +1,11 @@
+{
+  "focus": [
+    "immutable gap-directed Tier C scope",
+    "HEAD-only verification",
+    "static geography",
+    "dashboard memo visibility",
+    "closed downstream statuses",
+    "idempotent resume"
+  ],
+  "suite": "scripts/test_targeted_tier_c_verification_from_bounded_memo_gaps.py"
+}

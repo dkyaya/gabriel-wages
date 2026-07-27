@@ -1,0 +1,43 @@
+{
+  "candidate_id_set_sha256": "c7b3313363267e6999bd50a613a60b00f790f83b87da382506d1f9a6fc45a789",
+  "global_analysis_readiness": false,
+  "immutable_input_hashes": {
+    "docs/analysis/compensation_extraction/BOUNDED-INTERNAL-MECHANISM-LINKAGE-CLAIM-MEMO-2026-07-26/bounded_internal_mechanism_linkage_claim_memo.md": "ef5ff56666032edec51069e876f65963fb71f399de60a2ec7994f9dc64d6dc84",
+    "docs/analysis/compensation_extraction/BOUNDED-INTERNAL-MECHANISM-LINKAGE-CLAIM-MEMO-2026-07-26/bounded_internal_mechanism_linkage_claim_memo_dashboard_metadata.json": "7f16e15b4efd58d9aa2a29a0c2880f234e396482dd195d1053c41bdecde064ec",
+    "docs/analysis/compensation_extraction/BOUNDED-INTERNAL-MECHANISM-LINKAGE-CLAIM-MEMO-2026-07-26/bounded_internal_mechanism_linkage_claim_memo_decision.json": "dc8558ee22a8f0d50274a8b2161506354d1b7cc2dca7cdf8fb8456daf7717842",
+    "docs/analysis/compensation_extraction/BOUNDED-INTERNAL-MECHANISM-LINKAGE-CLAIM-MEMO-2026-07-26/bounded_internal_mechanism_linkage_claim_memo_geographic_coverage.md": "3ecb9bae78a8f6ee909df7585b72040bae6c3ce1c3f2555b0828b123db66fe1d",
+    "docs/analysis/compensation_extraction/BOUNDED-INTERNAL-MECHANISM-LINKAGE-CLAIM-MEMO-2026-07-26/bounded_internal_mechanism_linkage_claim_memo_geographic_coverage_summary.json": "eb8971a6d38e1bc59d667ed166c4c74e2da026d94beeb8fcea379f5edfe1afb5",
+    "docs/analysis/compensation_extraction/BOUNDED-INTERNAL-MECHANISM-LINKAGE-CLAIM-MEMO-2026-07-26/bounded_internal_mechanism_linkage_claim_memo_invariant_checks.json": "7cca4550b27de77cac1b2023520495b1aeae3eeda9106b4ea7c367c4f2dfcad7",
+    "docs/analysis/compensation_extraction/BOUNDED-INTERNAL-MECHANISM-LINKAGE-CLAIM-MEMO-2026-07-26/bounded_internal_mechanism_linkage_claim_memo_next_phase_recommendation.md": "ecc9e9e8aa9921ccef4d3a2482a8a801d4be329eddf4c820be2ed3ee81be1052",
+    "docs/analysis/compensation_extraction/BOUNDED-INTERNAL-MECHANISM-LINKAGE-CLAIM-MEMO-2026-07-26/bounded_internal_mechanism_linkage_claim_memo_summary.md": "d1efc3d35f568b664df43bd4bce3e9168526824af08a5a6d361005f30c3a994f",
+    "docs/analysis/compensation_extraction/BOUNDED-INTERNAL-MECHANISM-LINKAGE-CLAIM-MEMO-2026-07-26/bounded_internal_mechanism_linkage_claim_memo_tier_c_verification_plan.md": "b868c0300bfb3b0f6ea591af6fef56974983a86282d97f53bfa5ae99bbc0deaa",
+    "docs/analysis/compensation_extraction/BOUNDED-INTERNAL-MECHANISM-LINKAGE-CLAIM-MEMO-2026-07-26/bounded_internal_mechanism_linkage_claim_memo_validation_2026-07-26.md": "574311f7801e918046c606dd7a046330d4701dbbb987c1e1789a6e04671c12f4",
+    "docs/analysis/compensation_extraction/TARGETED-SCOUTING-FOUR-LANE-CANDIDATE-REVIEW-2026-07-26/targeted_scouting_four_lane_candidate_city_cycle_unit_review_summary.json": "ac19dfb16a84eaae1bcde6062112cc76354e8680400612be27f5f682c3e7c85c",
+    "docs/analysis/compensation_extraction/TARGETED-SCOUTING-FOUR-LANE-CANDIDATE-REVIEW-2026-07-26/targeted_scouting_four_lane_candidate_deduplication_report.md": "5507966f9fee0f897d26e9c2c1b3ebb56c7cb337b3240dc5d9b3ac1392662843",
+    "docs/analysis/compensation_extraction/TARGETED-SCOUTING-FOUR-LANE-CANDIDATE-REVIEW-2026-07-26/targeted_scouting_four_lane_candidate_mechanism_coverage_review_summary.json": "3a827bdb7e07f2d734e9cce165bba25b43492faf2939c6bdc8e565cf67a13fca",
+    "docs/analysis/compensation_extraction/TARGETED-SCOUTING-FOUR-LANE-CANDIDATE-REVIEW-2026-07-26/targeted_scouting_four_lane_candidate_quality_scores.csv": "4797b538040b40a528b1ae624bda0e141dc93df25c523df52083b186da196420",
+    "docs/analysis/compensation_extraction/TARGETED-SCOUTING-FOUR-LANE-CANDIDATE-REVIEW-2026-07-26/targeted_scouting_four_lane_candidate_quality_summary.json": "1524f75877afd8f4e7c66ddd8997911d7fe92da2df5b5995188bcd0737b49d33",
+    "docs/analysis/compensation_extraction/TARGETED-SCOUTING-FOUR-LANE-CANDIDATE-REVIEW-2026-07-26/targeted_scouting_four_lane_candidate_review_decision.json": "06d0e9add7c5e4591553a35abf13da59b452e92bd91d6c545516f8618e5e956c",
+    "docs/analysis/compensation_extraction/TARGETED-SCOUTING-FOUR-LANE-CANDIDATE-REVIEW-2026-07-26/targeted_scouting_four_lane_candidate_review_invariant_checks.json": "ebc3498ed17d7b34a8d0488f34150cb65037defe2b54ada368dd160bf182de22",
+    "docs/analysis/compensation_extraction/TARGETED-SCOUTING-FOUR-LANE-CANDIDATE-REVIEW-2026-07-26/targeted_scouting_four_lane_candidate_review_scope_summary.json": "cbee564c4ac87432bb460fecc3b3997fe4fe74aa945977c2716ef69005e9ab09",
+    "docs/analysis/compensation_extraction/TARGETED-SCOUTING-FOUR-LANE-CANDIDATE-REVIEW-2026-07-26/targeted_scouting_four_lane_candidate_review_summary.md": "2fcf522dd34ecd1a1042ee8ff63979ae94ee0b17183635d066eef3fba93600d5",
+    "docs/analysis/compensation_extraction/TARGETED-SCOUTING-FOUR-LANE-CANDIDATE-REVIEW-2026-07-26/targeted_scouting_four_lane_candidate_review_validation_2026-07-26.md": "a57e0db7f7267e0c5fa9dfa8c93fe1338567d77bbcc06ff9768e389016234596",
+    "docs/analysis/compensation_extraction/TARGETED-SCOUTING-FOUR-LANE-CANDIDATE-REVIEW-2026-07-26/targeted_scouting_four_lane_verification_priority_tiers.csv": "e7f615ec6169c4dc4b7bc094cfffd5dc93ed55a89ea37b052402cecf85143298",
+    "docs/analysis/compensation_extraction/TARGETED-SCOUTING-FOUR-LANE-CANDIDATE-REVIEW-2026-07-26/targeted_scouting_four_lane_verification_priority_tiers_summary.json": "39fe7def06e9a60b5e0cc65ced578130966e16e043ff968698e1afb9e2b5fa2a",
+    "docs/analysis/compensation_extraction/TARGETED-SCOUTING-FOUR-LANE-CANDIDATE-REVIEW-2026-07-26/targeted_scouting_four_lane_verification_ready_queue.csv": "197963f7dbf7c50856723bfc597fe72caf3c1f236aabc9d40891771ef7b92916",
+    "docs/analysis/compensation_extraction/TARGETED-SCOUTING-FOUR-LANE-CANDIDATE-REVIEW-2026-07-26/targeted_scouting_four_lane_verification_ready_queue_summary.json": "21981d296f35388c240c1eb702f327870c24b610de42c54bb81994aed14c8892",
+    "docs/analysis/compensation_extraction/TARGETED-SOURCE-VERIFICATION-TIER-A-B-FROM-FOUR-LANE-CANDIDATE-REVIEW-2026-07-26/targeted_source_verification_tier_a_b_results.csv": "92b16ee1d2a2782e0eb7888b2dcad3ff65cfebeaa108453368d9c363da1f2785"
+  },
+  "input_commit": "fb3ec0769d913f8af99136b608b125dd53013d66",
+  "mechanism_quotas": {
+    "fiscal_constraint_signal": 250,
+    "market_or_comparability_pressure": 150,
+    "non_safety_constraint_signal": 300,
+    "strike_or_no_strike_constraint": 300
+  },
+  "minimum_gap_score": 96,
+  "queue_count": 1000,
+  "queue_sha256": "b7ef6e237135e1fc58264c781cfc56f1cf8c6adb61fb23aaec25044da13277b9",
+  "task_id": "TARGETED-TIER-C-VERIFICATION-FROM-BOUNDED-MEMO-GAPS-AND-DASHBOARD-VISIBILITY-CHECK-2026-07-26",
+  "tier_c_pool_count": 2703
+}
