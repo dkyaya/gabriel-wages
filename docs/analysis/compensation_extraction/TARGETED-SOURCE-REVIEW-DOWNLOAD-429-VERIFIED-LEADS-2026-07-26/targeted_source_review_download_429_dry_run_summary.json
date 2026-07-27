@@ -1,0 +1,13 @@
+{
+  "all_live_status_not_started": true,
+  "downloads_completed": 0,
+  "dry_run_rows": 429,
+  "global_analysis_readiness": false,
+  "live_get_requests": 0,
+  "model_api_calls": 0,
+  "no_call_dry_run": true,
+  "ocr_runs": 0,
+  "pdf_pages_accessed": 0,
+  "retention_path_inside_task_output": true,
+  "text_extraction_runs": 0
+}

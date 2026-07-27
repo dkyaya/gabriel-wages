@@ -1129,6 +1129,27 @@ TARGETED_SOURCE_VERIFICATION_TIER_A_B_INVARIANTS_PATH = (
     TARGETED_SOURCE_VERIFICATION_TIER_A_B_DIR
     / "targeted_source_verification_tier_a_b_invariant_checks.json"
 )
+TARGETED_SOURCE_REVIEW_DOWNLOAD_429_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "TARGETED-SOURCE-REVIEW-DOWNLOAD-429-VERIFIED-LEADS-2026-07-26"
+)
+TARGETED_SOURCE_REVIEW_DOWNLOAD_429_DECISION_PATH = (
+    TARGETED_SOURCE_REVIEW_DOWNLOAD_429_DIR
+    / "targeted_source_review_download_429_decision.json"
+)
+TARGETED_SOURCE_REVIEW_DOWNLOAD_429_RESULTS_SUMMARY_PATH = (
+    TARGETED_SOURCE_REVIEW_DOWNLOAD_429_DIR
+    / "targeted_source_review_download_429_results_summary.json"
+)
+TARGETED_SOURCE_REVIEW_DOWNLOAD_429_RETAINED_SUMMARY_PATH = (
+    TARGETED_SOURCE_REVIEW_DOWNLOAD_429_DIR
+    / "targeted_source_review_download_429_retained_sources_summary.json"
+)
+TARGETED_SOURCE_REVIEW_DOWNLOAD_429_INVARIANTS_PATH = (
+    TARGETED_SOURCE_REVIEW_DOWNLOAD_429_DIR
+    / "targeted_source_review_download_429_invariant_checks.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -3201,6 +3222,81 @@ def targeted_source_verification_tier_a_b_status() -> tuple[bool, dict[str, Any]
     return True, decision
 
 
+def targeted_source_review_download_429_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize only the complete, bounded 429-lead retained-source package."""
+    required = (
+        TARGETED_SOURCE_REVIEW_DOWNLOAD_429_DECISION_PATH,
+        TARGETED_SOURCE_REVIEW_DOWNLOAD_429_RESULTS_SUMMARY_PATH,
+        TARGETED_SOURCE_REVIEW_DOWNLOAD_429_RETAINED_SUMMARY_PATH,
+        TARGETED_SOURCE_REVIEW_DOWNLOAD_429_INVARIANTS_PATH,
+        TARGETED_SOURCE_REVIEW_DOWNLOAD_429_DIR / "targeted_source_review_download_429_lock.json",
+        TARGETED_SOURCE_REVIEW_DOWNLOAD_429_DIR / "targeted_source_review_download_429_results.csv",
+        TARGETED_SOURCE_REVIEW_DOWNLOAD_429_DIR / "targeted_source_review_download_429_retained_sources.csv",
+        TARGETED_SOURCE_REVIEW_DOWNLOAD_429_DIR / "retained_sources_manifest.csv",
+        TARGETED_SOURCE_REVIEW_DOWNLOAD_429_DIR / "next_targeted_pdf_readiness_text_layer_prompt.md",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    decision = read_json(TARGETED_SOURCE_REVIEW_DOWNLOAD_429_DECISION_PATH)
+    results_summary = read_json(TARGETED_SOURCE_REVIEW_DOWNLOAD_429_RESULTS_SUMMARY_PATH)
+    retained_summary = read_json(TARGETED_SOURCE_REVIEW_DOWNLOAD_429_RETAINED_SUMMARY_PATH)
+    invariants = read_json(TARGETED_SOURCE_REVIEW_DOWNLOAD_429_INVARIANTS_PATH)
+    results = read_csv(TARGETED_SOURCE_REVIEW_DOWNLOAD_429_DIR / "targeted_source_review_download_429_results.csv")
+    retained = read_csv(TARGETED_SOURCE_REVIEW_DOWNLOAD_429_DIR / "targeted_source_review_download_429_retained_sources.csv")
+    retained_dir = TARGETED_SOURCE_REVIEW_DOWNLOAD_429_DIR / "retained_sources"
+    controlled = {
+        "retained_downloaded_source", "unavailable_on_get", "blocked_by_transport",
+        "duplicate_file_hash", "wrong_content_type", "oversized_for_this_pass",
+        "weak_or_needs_review", "source_review_error",
+    }
+    if not (
+        decision.get("task_id") == "TARGETED-SOURCE-REVIEW-DOWNLOAD-429-VERIFIED-LEADS-2026-07-26"
+        and decision.get("decision") == "targeted_source_review_download_429_completed_pdf_readiness_ready"
+        and decision.get("completion_status") == "completed_bounded_source_review_download"
+        and decision.get("locked_download_queue_count") == 429
+        and decision.get("retained_downloaded_source_count") == 387
+        and decision.get("pdf_text_layer_readiness_ready_next") is True
+        and decision.get("tier_c_verification_recommended_next") is False
+        and decision.get("pdf_pages_accessed") == 0
+        and decision.get("text_extraction_runs") == 0
+        and decision.get("ocr_runs") == 0
+        and decision.get("rating_runs") == 0
+        and decision.get("ingestion_runs") == 0
+        and decision.get("codification_runs") == 0
+        and decision.get("durable_ledger_merges") == 0
+        and decision.get("global_analysis_readiness") is False
+        and results_summary.get("result_rows") == 429
+        and results_summary.get("retained_downloaded_source_count") == 387
+        and retained_summary.get("retained_source_count") == 387
+        and retained_summary.get("extraction_status") == "not_extracted"
+        and retained_summary.get("rating_status") == "not_rated"
+        and retained_summary.get("ingestion_status") == "not_ingested"
+        and retained_summary.get("codification_status") == "not_codified"
+        and retained_summary.get("causal_status") == "not_causal_evidence"
+        and retained_summary.get("global_analysis_readiness") is False
+        and len(results) == 429
+        and len(retained) == 387
+        and all(row.get("verification_status") == "verified_source_lead" for row in results)
+        and all(row.get("priority_tier") in {"tier_a", "tier_b"} for row in results)
+        and all(row.get("source_review_download_status") in controlled for row in results)
+        and all(row.get("source_review_download_status") == "retained_downloaded_source" for row in retained)
+        and all(row.get("extraction_status") == "not_extracted" for row in retained)
+        and all(row.get("rating_status") == "not_rated" for row in retained)
+        and all(row.get("ingestion_status") == "not_ingested" for row in retained)
+        and all(row.get("codification_status") == "not_codified" for row in retained)
+        and all(row.get("causal_status") == "not_causal_evidence" for row in retained)
+        and all(row.get("global_analysis_readiness") == "false" for row in retained)
+        and all((ROOT / row.get("local_retained_path", "")).is_file() for row in retained)
+        and all((ROOT / row.get("local_retained_path", "")).parent == retained_dir for row in retained)
+        and invariants.get("all_invariants_passed") is True
+        and invariants.get("only_verified_source_leads_entered") is True
+        and invariants.get("no_pdf_page_text_extraction_or_ocr") is True
+        and invariants.get("global_analysis_readiness_false") is True
+    ):
+        raise ValueError("targeted 429-lead source-review/download package fails dashboard gates")
+    return True, decision
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -3951,6 +4047,10 @@ def build_analysis_readiness(
         targeted_source_verification_tier_a_b_completed,
         targeted_source_verification_tier_a_b_decision,
     ) = targeted_source_verification_tier_a_b_status()
+    (
+        targeted_source_review_download_429_completed,
+        targeted_source_review_download_429_decision,
+    ) = targeted_source_review_download_429_status()
     if scale_1000_targeted_qa_completed and (
         scale_1000_targeted_qa_decision.get("qa_pass") is not True
         or scale_1000_targeted_qa_decision.get(
@@ -3997,6 +4097,9 @@ def build_analysis_readiness(
     return {
         "metadata": metadata,
         "overall_status": (
+            "targeted_source_review_download_429_completed_pdf_readiness_ready_global_analysis_closed"
+            if targeted_source_review_download_429_completed
+            else
             "targeted_source_verification_tier_a_b_completed_source_review_ready_global_analysis_closed"
             if targeted_source_verification_tier_a_b_completed
             else
@@ -4726,6 +4829,31 @@ def build_analysis_readiness(
                 "targeted_source_verification_tier_c_recommended_next": (
                     bool(targeted_source_verification_tier_a_b_decision.get("tier_c_verification_recommended_next", False))
                     if targeted_source_verification_tier_a_b_completed else False
+                ),
+                "targeted_source_review_download_completed": targeted_source_review_download_429_completed,
+                "targeted_source_review_download_decision": (
+                    targeted_source_review_download_429_decision.get("decision")
+                    if targeted_source_review_download_429_completed else None
+                ),
+                "targeted_source_review_download_locked_count": (
+                    int(targeted_source_review_download_429_decision.get("locked_download_queue_count", 0))
+                    if targeted_source_review_download_429_completed else 0
+                ),
+                "targeted_source_review_download_retained_count": (
+                    int(targeted_source_review_download_429_decision.get("retained_downloaded_source_count", 0))
+                    if targeted_source_review_download_429_completed else 0
+                ),
+                "targeted_source_review_download_status_counts": (
+                    targeted_source_review_download_429_decision.get("status_counts", {})
+                    if targeted_source_review_download_429_completed else {}
+                ),
+                "targeted_pdf_text_layer_readiness_ready_next": (
+                    bool(targeted_source_review_download_429_decision.get("pdf_text_layer_readiness_ready_next", False))
+                    if targeted_source_review_download_429_completed else False
+                ),
+                "targeted_source_review_download_tier_c_recommended_next": (
+                    bool(targeted_source_review_download_429_decision.get("tier_c_verification_recommended_next", False))
+                    if targeted_source_review_download_429_completed else False
                 ),
                 "gabriel_claim_rating_global_analysis_readiness": False,
                 "limited_qualitative_usage_registry_review_global_analysis_readiness": False,
@@ -8654,9 +8782,16 @@ def build_text_table_calibration_status_summary(
             targeted_source_verification_tier_a_b_completed,
             targeted_source_verification_tier_a_b_decision,
         ) = targeted_source_verification_tier_a_b_status()
+        (
+            targeted_source_review_download_429_completed,
+            targeted_source_review_download_429_decision,
+        ) = targeted_source_review_download_429_status()
         return {
             **metadata,
             "calibration_phase": (
+                "targeted_source_review_download_429_completed_pdf_readiness_ready"
+                if targeted_source_review_download_429_completed
+                else
                 "targeted_source_verification_tier_a_b_completed_source_review_ready"
                 if targeted_source_verification_tier_a_b_completed
                 else
@@ -9941,6 +10076,35 @@ def build_text_table_calibration_status_summary(
             "targeted_source_verification_tier_c_recommended_next": (
                 bool(targeted_source_verification_tier_a_b_decision.get("tier_c_verification_recommended_next", False))
                 if targeted_source_verification_tier_a_b_completed else False
+            ),
+            "targeted_source_review_download_completed": targeted_source_review_download_429_completed,
+            "targeted_source_review_download_decision": (
+                targeted_source_review_download_429_decision.get("decision")
+                if targeted_source_review_download_429_completed else None
+            ),
+            "targeted_source_review_download_path": (
+                relative(TARGETED_SOURCE_REVIEW_DOWNLOAD_429_DIR)
+                if targeted_source_review_download_429_completed else None
+            ),
+            "targeted_source_review_download_locked_count": (
+                int(targeted_source_review_download_429_decision.get("locked_download_queue_count", 0))
+                if targeted_source_review_download_429_completed else 0
+            ),
+            "targeted_source_review_download_retained_count": (
+                int(targeted_source_review_download_429_decision.get("retained_downloaded_source_count", 0))
+                if targeted_source_review_download_429_completed else 0
+            ),
+            "targeted_source_review_download_status_counts": (
+                targeted_source_review_download_429_decision.get("status_counts", {})
+                if targeted_source_review_download_429_completed else {}
+            ),
+            "targeted_pdf_text_layer_readiness_ready_next": (
+                bool(targeted_source_review_download_429_decision.get("pdf_text_layer_readiness_ready_next", False))
+                if targeted_source_review_download_429_completed else False
+            ),
+            "targeted_source_review_download_tier_c_recommended_next": (
+                bool(targeted_source_review_download_429_decision.get("tier_c_verification_recommended_next", False))
+                if targeted_source_review_download_429_completed else False
             ),
             "gabriel_claim_rating_global_analysis_readiness": False,
             "limited_qualitative_usage_registry_review_global_analysis_readiness": False,

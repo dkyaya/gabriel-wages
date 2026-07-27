@@ -1,0 +1,32 @@
+{
+  "by_content_type": {
+    "application/pdf": 349,
+    "text/html": 38
+  },
+  "by_lane": {
+    "lane_1": 105,
+    "lane_2": 127,
+    "lane_3": 33,
+    "lane_4": 122
+  },
+  "by_mechanism": {
+    "fiscal_constraint_signal": 33,
+    "market_or_comparability_pressure": 122,
+    "non_safety_constraint_signal": 105,
+    "strike_or_no_strike_constraint": 127
+  },
+  "by_tier": {
+    "tier_a": 46,
+    "tier_b": 341
+  },
+  "causal_status": "not_causal_evidence",
+  "codification_status": "not_codified",
+  "extraction_status": "not_extracted",
+  "files_integrity_checked": 387,
+  "global_analysis_readiness": false,
+  "ingestion_status": "not_ingested",
+  "rating_status": "not_rated",
+  "retained_directory": "docs/analysis/compensation_extraction/TARGETED-SOURCE-REVIEW-DOWNLOAD-429-VERIFIED-LEADS-2026-07-26/retained_sources",
+  "retained_source_count": 387,
+  "total_retained_bytes": 978700187
+}

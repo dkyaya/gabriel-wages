@@ -1,0 +1,60 @@
+{
+  "candidate_id_set_hash_matches_lock": true,
+  "global_analysis_readiness": false,
+  "locked_queue_rows": 429,
+  "maximum_concurrency": 8,
+  "maximum_file_bytes": 26214400,
+  "maximum_retries_per_candidate": 1,
+  "model_api_calls": 0,
+  "ocr_runs": 0,
+  "only_verified_source_leads": true,
+  "pdf_page_accesses": 0,
+  "preflight_passed": true,
+  "preflight_probe_count": 4,
+  "preflight_probes": [
+    {
+      "bytes_read": 4096,
+      "candidate_id": "TS4L-0598ecac2f25d6416ba6",
+      "content_type_hint": "application/pdf",
+      "http_status": 206,
+      "raw_headers_saved": false,
+      "retained_file_written": false,
+      "supported_signature_or_type": true
+    },
+    {
+      "bytes_read": 513,
+      "candidate_id": "TS4L-05593b01b76714aabcf0",
+      "content_type_hint": "text/html",
+      "http_status": 403,
+      "raw_headers_saved": false,
+      "retained_file_written": false,
+      "supported_signature_or_type": true
+    },
+    {
+      "bytes_read": 4096,
+      "candidate_id": "TS4L-0206dacab0872e3b594a",
+      "content_type_hint": "application/pdf",
+      "http_status": 206,
+      "raw_headers_saved": false,
+      "retained_file_written": false,
+      "supported_signature_or_type": true
+    },
+    {
+      "bytes_read": 4096,
+      "candidate_id": "TS4L-01a7712cb526edb5c6eb",
+      "content_type_hint": "text/html",
+      "http_status": 200,
+      "raw_headers_saved": false,
+      "retained_file_written": false,
+      "supported_signature_or_type": true
+    }
+  ],
+  "queue_hash_matches_lock": true,
+  "retained_directory_inside_task_output": true,
+  "text_extraction_runs": 0,
+  "tier_counts": {
+    "tier_a": 50,
+    "tier_b": 379
+  },
+  "verification_decision_allows_download": true
+}

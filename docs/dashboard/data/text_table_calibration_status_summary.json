@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-27T01:35:39Z",
+  "generated_at": "2026-07-27T01:52:48Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -80,7 +80,7 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "calibration_phase": "targeted_source_verification_tier_a_b_completed_source_review_ready",
+  "calibration_phase": "targeted_source_review_download_429_completed_pdf_readiness_ready",
   "latest_calibration_id": "TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24",
   "latest_calibration_review_id": "TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24",
   "latest_adjudication_prep_id": "TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24",
@@ -413,6 +413,21 @@
   },
   "targeted_source_review_download_ready_next": true,
   "targeted_source_verification_tier_c_recommended_next": false,
+  "targeted_source_review_download_completed": true,
+  "targeted_source_review_download_decision": "targeted_source_review_download_429_completed_pdf_readiness_ready",
+  "targeted_source_review_download_path": "docs/analysis/compensation_extraction/TARGETED-SOURCE-REVIEW-DOWNLOAD-429-VERIFIED-LEADS-2026-07-26",
+  "targeted_source_review_download_locked_count": 429,
+  "targeted_source_review_download_retained_count": 387,
+  "targeted_source_review_download_status_counts": {
+    "blocked_by_transport": 3,
+    "duplicate_file_hash": 1,
+    "oversized_for_this_pass": 11,
+    "retained_downloaded_source": 387,
+    "unavailable_on_get": 2,
+    "weak_or_needs_review": 25
+  },
+  "targeted_pdf_text_layer_readiness_ready_next": true,
+  "targeted_source_review_download_tier_c_recommended_next": false,
   "gabriel_claim_rating_global_analysis_readiness": false,
   "limited_qualitative_usage_registry_review_global_analysis_readiness": false,
   "limited_qualitative_usage_layer_acceptance_global_analysis_readiness": false,

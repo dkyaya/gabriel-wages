@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en-US" xml:lang="en-US">
+<head>
+	<meta charset="utf-8" />
+	<title>Huron Charter Township - Document Center</title>
+	<link id="favicon" rel="icon" href="https://i.civicweb.net/Global/Images/icon.png" type="image/png" />
+	<link rel="apple-touch-icon" href="https://i.civicweb.net/Global/Images/MobileIcons/ic-icon-57.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="https://i.civicweb.net/Global/Images/MobileIcons/ic-icon-72.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="https://i.civicweb.net/Global/Images/MobileIcons/ic-icon-76.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="https://i.civicweb.net/Global/Images/MobileIcons/ic-icon-114.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="https://i.civicweb.net/Global/Images/MobileIcons/ic-icon-144.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="https://i.civicweb.net/Global/Images/MobileIcons/ic-icon-152.png">
+
+	<meta name="application-name" content="Huron Charter Township - Document Center" />
+	<meta name="msapplication-tooltip" content="Start - Huron Charter Township - Document Center" />
+	<meta name="msapplication-TileColor" content="#ffffff" />
+	<meta name="msapplication-TileImage" content="https://i.civicweb.net/Global/Images/MobileIcons/ic-icon-144.png" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="HandheldFriendly" content="true" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="app-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+	<meta name="apple-touch-fullscreen" content="YES" />
+
+	<link href="/css/bootstrap?v=ezB7utSrfQLa3fGnkbhzBYKNJLNUZ04S5XeulqGSfec1" rel="stylesheet"/>
+
+	<link href="/css/kendo/kendoui?v=0OIdVFEw_KD7VNXS7BXdz6-AVuFaIL_fAdnzLD5b2QM1" rel="stylesheet"/>
+
+	
+	<link href="/css/bootstrap/override?v=LSFU99MXgVOn_hBQy6QrysI3Ong3f_Yo62lVkXhCJag1" rel="stylesheet"/>
+
+	<link href="/css/main?v=NPiMONeC-Oasn5NYxoHzwnRNhhJHKwMExpYTsKdZxVA1" rel="stylesheet"/>
+
+	<link href="//code.jquery.com/ui/1.13.3/themes/smoothness/jquery-ui.css" rel="stylesheet"/>
+
+	<link id="CustomColor" rel="Stylesheet" type="text/css" href="/Global/CustomStyleHandler.axd?Type=8&amp;Culture=en-US">
+	<script src="/bundles/jquery?v=5bKV9x183rmlW4VvTyYFaroMFJ3un7w-xE4R9wzSQXc1"></script>
+
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+	
+</head>
+<body class="default">
+	<div class="layout">
+				<header class="layout-section">
+					<div id="menuHeader">
+						<nav id="HeaderContainer"> <div id="MenuContainer">
+<div class="row-fluid">
+<div class="navbar navbar-inverse">
+<div class="container-fluid">
+<div id="header-search" class="search pull-left" data-placement="right"><input name="search-textbox" type="search" id="search-textbox" placeholder="Search" class="search-text-box" aria-labelledby="searchBtn" /><button id="searchBtn" type="button" class="search-button background-color glyphicon glyphicon-search glyphbutton" onclick="return Global.Controls.HeaderMenus.instance.OnSearchButtonClick();" aria-label="Search"></button></div>
+<button value="Quick Menu" type="button" class="navbar-toggle navbar-left" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"> </span><span class="icon-bar"> </span><span class="icon-bar"></span><span class="sr-only" style='color:white; background-color:black'>Quick Menu</span></button>
+<div class="navbar-collapse collapse">
+<div class="nav pull-left"><ul style='list-style: none;padding-left: 0;'>
+</ul></div>
+<ul id="header-menu" class="nav navbar-nav pull-right">
+<li><a id="header-portal" href="/Portal">Portal</a></li>
+<li><a id="header-filepro-link" href="/filepro/documents">Document Center</a></li>
+<li><a class="user-sign-in" href="/user/signin">Sign In</a></li></ul></div></div></div></div></div></nav>
+
+					</div>
+				</header>
+			<div class="layout-section layout-section-fill content">
+				<div class="layout">
+
+					<div class="row layout-section layout-section-fill">
+						
+
+						<main class="col-md-12 col-sm-12 layout main" role="main">
+							<div class="layout-section layout-section-fill">
+								<a class="container-document-quickview document-quickview hidden" href="#" onclick="CivicWeb.Common.QuickViews.closeQuickView(event);">
+	Close
+</a>
+	<div class="document-quickview hidden portal-header background-color">
+		<div id="quickview-header-container" class="background-color" style="height: auto; overflow: hidden;">
+			<div class="menu" style="margin-right: 1em; max-width: 45%; float: right; text-align: right;">
+				<ul class="main-level">
+					<li id="PrintDocument" class="hidden"><a href="#"><em class="glyphicon glyphicon-print" style="margin-right: 0.4em;"></em><span>Print</span></a></li>
+					<li id="OpenFullPdfMenuItem"><a href="#"><em class="glyphicon glyphicon-file" style="margin-right: 0.4em;"></em><span>Open Full Pdf</span></a></li>
+					<li id="PrintNotes" class="hidden"><a href="#" title="Click to print agenda with notes"><em class="glyphicon glyphicon-print" style="margin: 0 0.4em 0 0;"></em><span>Print Notes</span></a></li>
+					<li id="VideoLink" class="hidden"><a href="#" target="_blank"><em class="glyphicon glyphicon-facetime-video" style="margin: 0 0.4em 0 0;"></em><span>Show Video</span></a></li>
+					<li><a id="FullScreen" href="#" target="_blank" title="Open document in new window"><em class="glyphicon glyphicon-new-window icon-white" style="margin-right: 0.4em;"></em><span>New Window</span></a></li>
+					<li id="CloseQuickViewMenuItem">
+						<a onclick="CivicWeb.Common.QuickViews.closeQuickView(event);" href="#" class="glyphicon glyphicon-remove icon-white" style="cursor: pointer; font-size: 1.5em; vertical-align: sub;" title="Press Esc to close"></a>
+					</li>
+				</ul>
+			</div>
+			<div id="agenda-notes-enabled-message" class="alert alert-info hidden" style="position: absolute; right: 2px; top: 34px;">
+				<em class="glyphicon glyphicon-info-sign"></em>
+				Web AgendaNotes enabled. Click Headings/Items/Recommendations/Attachments to add/edit a note.
+			</div>
+			<span id="QuickViewDocumentIcon" style="float: left; margin: 0.4em 0.2em 0 0.2em;"></span>
+			<div id="quickview-document-containter" style="float: left; white-space: nowrap; max-width: 35%;">
+				<span id="QuickViewDocumentName" class="quickview-document-name"></span>
+			</div>
+			<div id="FavoriteMediaShare" class="quickview-document-options">
+				<a id="EditDetails" role="button" class="edit-node-icon edit-quickview-icon cw-fp-icon-edit-disabled" style="margin-top: 0.4em;" href=""><span class="hidden">Edit</span></a>
+				<a id="QuickViewFavorite" tabindex="0" role="button" class='favorite-icon cw-fp-icon-star' title="Favorite - Click to add or remove from your Favorites folder" style="margin-top: 0.4em; margin-left: 0.25em; float: left;" data-type='remove'></a>
+				<span id="social-media-share-quick-view-span">	<div id="social-media-share-quick-view" data-state="collapsed" class="social-media-share hidden background-color">
+		<div class="inner" title="Share Link" data-container="body" role="button" tabindex="0"></div>
+		<ul>
+							<li class="facebook">
+					<a title="Share with Facebook" data-container="body" data-type="facebook" href="#"></a>
+				</li>
+							<li class="twitter">
+					<a title="Share with Twitter" data-container="body" data-type="twitter" href="#"></a>
+				</li>
+							<li class="linkedin">
+					<a title="Share with LinkedIn" data-container="body" data-type="linkedin" href="#"></a>
+				</li>
+							<li class="link">
+					<a title="Share links" data-container="body" data-type="link" href="#"></a>
+				</li>
+		</ul>
+	</div>
+</span>
+			</div>
+			<div id="CoverPreviewLabel" style="text-transform: uppercase; font-weight: bold; margin-top: 0.7em; vertical-align: top; display: inline-block; position: absolute; left: 50%; transform: translateX(-50%);">Cover Preview</div>
+		</div>
+
+		<table style="width: 100%; empty-cells: show; border-spacing: 0; border-collapse: collapse;" role="presentation">
+			<tr>
+				<td id="previousQuickViewCell" class="navigation" role="button">
+					<div id="previousQuickView" tabindex="0" class="background-color-hover quickview-previous-div" title="Previous Document">&lsaquo;</div>
+				</td>
+				<td id="documentQuickViewCell" style="text-align: center; vertical-align: top;">
+					<div class="document-quickview-content"></div>
+				</td>
+				<td id="nextQuickViewCell" class="navigation quickview-next-cell" role="button">
+					<div id="nextQuickView" tabindex="0" class="background-color-hover quickview-next-div" title="Next Document">&rsaquo;</div>
+				</td>
+			</tr>
+		</table>
+
+	</div>
+
+
+<div class="content-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="document-control-bar row">
+				<div id="document-control-bar-left">
+
+				</div>
+				<div id="document-control-bar-right">
+					<div id="file-pro-sort" class="document-control-bar-button background-color-hover">
+						<div id="file-pro-sort-label" title="Sort Options" class="btn dropdown-toggle" data-toggle="dropdown">
+							<span id="file-pro-sort-label-span">Sort </span>
+							<span class="caret"></span>
+						</div>
+						<ul class="dropdown-menu file-pro-document-sort">
+							<li>
+								<fieldset id="file-pro-sort-dropdown">
+									<legend>Sort Options:</legend>
+									<input type="radio" id="sort-option-default" value="Order" title="Default" name="sortField" />
+									<label for="sort-option-default" title="Default Order ">Default</label>
+									<br />
+									<input type="radio" id="sort-option-name" value="Title" title="Name" name="sortField" />
+									<label for="sort-option-name" title="Sort by Names">Name</label>
+									<br />
+									<input type="radio" id="sort-option-lastmodified" value="DateUpdated" title="Sort by last Modified Date" name="sortField" />
+									<label for="sort-option-lastmodified" title="Sort by last Modified Date">Last Modified</label>
+									<br />
+									<input type="radio" id="sort-option-size" value="FileSizeInBytes" title="Sort by Folder/File Size" name="sortField" />
+									<label for="sort-option-size" title="Sort by Folder/File Size">Size</label>
+									<hr />
+									<div><span>Order: </span></div>
+									<input type="radio" id="sort-option-ascending" value="Ascending" title="A to Z - Ascending" name="sortOption" />
+									<label for="sort-option-ascending">A to Z - Ascending</label>
+									<br />
+									<input type="radio" id="sort-option-descending" value="Descending" title="Z to A - Descending" name="sortOption" />
+									<label for="sort-option-descending">Z to A - Descending</label>
+									<br />
+									<div class="button-row">
+										<button id="edit-default-order" class="button edit-default-order background-color-hover" >Apply Sort</button>
+									</div>
+								</fieldset>
+
+							</li>
+						</ul>
+					</div>
+					<div id="file-pro-list-view" data-viewtype="list" class="document-control-bar-button background-color-hover"><a id="file-pro-list-view-icon" title="Switch to view documents in a list" class="cw-fp-icon-view-list"></a></div>
+						<div id="file-pro-list-view-preview" data-viewtype="preview" class="document-control-bar-button background-color-hover"><a id="file-pro-list-view-preview-icon" title="Switch to list view with a preview pane" class="cw-fp-icon-view-preview"></a></div>
+					<div id="file-pro-list-view-thumbnails" data-viewtype="thumbnails" class="document-control-bar-button background-color-hover"><a id="file-pro-list-view-thumbnails-icon" title="Switch to a view with thumbnails for documents" class="cw-fp-icon-view-thumbnail"></a></div>
+				</div>
+				<nav id="document-bread-crumbs" class="bread-crumbs document-list-bread-crumbs"></nav>
+			</div>
+			<div id="horizontal-splitter">
+				<div class="left-pane">
+					<div id="document-list-view-headers" class="row header-space-below" style="position: relative; overflow: hidden;">
+						<div class="pane-title pane-title-left document-list-view-header-name text-left ">
+							<input type="checkbox" id="document-list-select-all" title="Select All (Used for deleting)" style="margin-left:0.45em" aria-labelledby="column-header-link-name" />
+							<a id="column-header-link-name" data-sort="none" data-field="Title" title="Sort by Names">Name</a>
+						</div>
+						<div class="pane-title document-list-view-header-modified">
+								<a id="column-header-link-modified" data-sort="none" data-field="DateUpdated" title="Sort by last Modified Date">
+									Modified
+								</a>
+						</div>
+						<div class="document-list-view-header-size pane-title">
+							<a id="column-header-link-size" data-sort="none" data-field="FileSizeInBytes" title="Sort by Folder/File Size">Size</a>
+						</div>
+							<div id="order-saved-message" class="notification  notification-success hidden" >
+		<span class="notification-icon cw-icon-success"></span>
+		<span class="notification-text">
+Order Saved		</span>
+	</div>
+
+					</div>
+					<div id="document-list-container" class="document-list-container">
+						<div id="drag-scroll-up" class="drag-scroll hidden"></div>
+						<div id="parent-folder" data-selected="false" data-id="10120">
+							<span class="document-list-view-name">
+								<span class="cw-icon-folder-lg" title="Folder" style="float:left"></span>
+								<div class="parent-folder-label" style="display: inline-block;">
+										<span>Police Chief Contract</span>
+								</div>
+								<div id="document-parent-options" class="document-options-container document-parent-options hidden">
+
+										<span id="document-parent-favorite" role="button" tabindex="0" class="favorite-icon cw-fp-icon-star-disabled" data-type="add" title="Favorites - Add to your favorites folder to find faster later on"></span>
+										<div id="document-parent-share" data-state="collapsed" class="social-media-share hidden background-color">
+		<div class="inner" title="Share Link" data-container="body" role="button" tabindex="0"></div>
+		<ul>
+							<li class="facebook">
+					<a title="Share with Facebook" data-container="body" data-type="facebook" href="#"></a>
+				</li>
+							<li class="twitter">
+					<a title="Share with Twitter" data-container="body" data-type="twitter" href="#"></a>
+				</li>
+							<li class="linkedin">
+					<a title="Share with LinkedIn" data-container="body" data-type="linkedin" href="#"></a>
+				</li>
+							<li class="link">
+					<a title="Share links" data-container="body" data-type="link" href="#"></a>
+				</li>
+		</ul>
+	</div>
+
+								</div>
+							</span>
+							<span class="document-list-view-modified">13 Jul 2016</span>
+							<span class="document-list-view-size">177.9 KB</span>
+						</div>
+							<div id="favorite-folder" class="document-list-view NoPrint">
+							</div>
+						<div id="document-list-view" class="document-list-view k-widget k-treeview" data-role="treeview">
+								<ul class="k-group k-treeview-lines" role="group">
+										<li role="treeitem" class="k-item">
+											<div class="k-mid">
+												<span class="k-checkbox" role="presentation"><span class="k-icon k-i-expand"></span></span>
+												<span class="k-in">
+													<div class="document-list-view-documents" id="10123" data-id="10123" data-parentid="10120" data-order="1" data-type="document" data-title="Director of Public Safety Job Description">
+														<span class="document-list-view-name">
+															<div class="document-link-container">
+																	<em class="icon-file-pdf-24" title="Director of Public Safety Job Description"></em>																<a class="document-link" href="/document/10123" >
+																	Director of Public Safety Job Description
+																</a>
+															</div>
+															<span class="favorite-icon hidden cw-fp-icon-star-disabled" data-type="add" title="Favorites - Add to your favorites folder to find faster later on"></span>
+														</span>
+														<span class="document-list-view-modified">2016-07-13</span>
+														<span class="document-list-view-size">49.4 KB</span>
+													</div>
+												</span>
+											</div>
+										</li>
+										<li role="treeitem" class="k-item">
+											<div class="k-mid">
+												<span class="k-checkbox" role="presentation"><span class="k-icon k-i-expand"></span></span>
+												<span class="k-in">
+													<div class="document-list-view-documents" id="10122" data-id="10122" data-parentid="10120" data-order="2" data-type="document" data-title="Police Chief Contract 7-13-16">
+														<span class="document-list-view-name">
+															<div class="document-link-container">
+																	<em class="icon-file-pdf-24" title="Police Chief Contract 7-13-16"></em>																<a class="document-link" href="/document/10122" >
+																	Police Chief Contract 7-13-16
+																</a>
+															</div>
+															<span class="favorite-icon hidden cw-fp-icon-star-disabled" data-type="add" title="Favorites - Add to your favorites folder to find faster later on"></span>
+														</span>
+														<span class="document-list-view-modified">2016-07-13</span>
+														<span class="document-list-view-size">64.2 KB</span>
+													</div>
+												</span>
+											</div>
+										</li>
+										<li role="treeitem" class="k-item">
+											<div class="k-mid">
+												<span class="k-checkbox" role="presentation"><span class="k-icon k-i-expand"></span></span>
+												<span class="k-in">
+													<div class="document-list-view-documents" id="10121" data-id="10121" data-parentid="10120" data-order="3" data-type="document" data-title="Police Chief - Salary Recommendations">
+														<span class="document-list-view-name">
+															<div class="document-link-container">
+																	<em class="icon-file-pdf-24" title="Police Chief - Salary Recommendations"></em>																<a class="document-link" href="/document/10121" >
+																	Police Chief - Salary Recommendations
+																</a>
+															</div>
+															<span class="favorite-icon hidden cw-fp-icon-star-disabled" data-type="add" title="Favorites - Add to your favorites folder to find faster later on"></span>
+														</span>
+														<span class="document-list-view-modified">2016-07-13</span>
+														<span class="document-list-view-size">64.2 KB</span>
+													</div>
+												</span>
+											</div>
+										</li>
+								</ul>
+						</div>
+						<div id="drag-scroll-down" class="drag-scroll hidden"></div>
+						<div id="sort-processing" class="hidden">
+							<div style="left: 50%;position: fixed;top: 20%;padding: 0.5em;border: 1px solid black;border-radius: 3px;background-color: rgb(255, 255, 255);margin-left: -42.5px;width: 105px; z-index: 1001;">
+								<div class="loader"></div>
+								<div style="vertical-align: top; margin: 0.3em 5px; display: inline-block; color:#595959; background-color:#FFFFFF">Loading</div>
+							</div>
+							<div class="popup-modal-background" style="height: 100%; width: 100%; top: 15%;"></div>
+						</div>
+					</div>
+				</div>
+				<div class="right-pane">
+					<div id="document-preview-view-headers" class="row hidden">
+						<div>
+							<div class="col-md-12">
+								<div class="pane-title document-preview-view-header">
+									<div id="document-preview-options" class="document-preview-options text-left">
+										<span id="document-preview-edit" style="float: left;" class="edit-node-icon cw-fp-icon-edit-disabled hidden" title="Edit"></span>
+										<span id="document-preview-favorite" class="favorite-icon hidden cw-fp-icon-star-disabled" data-type="add" title="Favorite - Click to add or remove from your Favorites folder"></span>
+											<div id="document-preivew-share" data-state="collapsed" class="social-media-share hidden background-color">
+		<div class="inner" title="Share Link" data-container="body" role="button" tabindex="0"></div>
+		<ul>
+							<li class="facebook">
+					<a title="Share with Facebook" data-container="body" data-type="facebook" href="#"></a>
+				</li>
+							<li class="twitter">
+					<a title="Share with Twitter" data-container="body" data-type="twitter" href="#"></a>
+				</li>
+							<li class="linkedin">
+					<a title="Share with LinkedIn" data-container="body" data-type="linkedin" href="#"></a>
+				</li>
+							<li class="link">
+					<a title="Share links" data-container="body" data-type="link" href="#"></a>
+				</li>
+		</ul>
+	</div>
+
+									</div>
+										<span class="DownloadDocumentPreviewPane" style="display: none;"><a href="#" style="font-weight: normal; color: white;">Download Original</a></span>
+																		<div id="document-preview-print" style="float: right;margin: 0.1em 0.8em;" class="hidden">
+										<a href="#" style="color: white; font-weight: normal;">
+											<em class="glyphicon glyphicon-print"></em>
+											Print
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="document-preview-view" class="document-preview-view hidden">
+						<iframe id="document-preview" class="document-preview-iframe"></iframe>
+						<div id="document-folder-view-documents" class="folder-preview-folder-info" style="width:50%;"></div>
+					</div>
+					<div id="folder-content-list-view-container" class="document-list-container">
+						<div id="folder-content-list-view" class="document-list-view hidden"></div>
+					</div>
+				</div>
+			</div>
+			<div id="document-thumbnail-view-header" class="hidden">
+				<hr />
+			</div>
+			<div id="document-thumbnail-view" role="tree" title="Thumbnail View" class="document-tumbnail-view hidden">
+			</div>
+
+
+
+			<div id="social-media-control" class="hidden">
+					<div id="" data-state="collapsed" class="social-media-share hidden background-color">
+		<div class="inner" title="Share Link" data-container="body" role="button" tabindex="0"></div>
+		<ul>
+							<li class="facebook">
+					<a title="Share with Facebook" data-container="body" data-type="facebook" href="#"></a>
+				</li>
+							<li class="twitter">
+					<a title="Share with Twitter" data-container="body" data-type="twitter" href="#"></a>
+				</li>
+							<li class="linkedin">
+					<a title="Share with LinkedIn" data-container="body" data-type="linkedin" href="#"></a>
+				</li>
+							<li class="link">
+					<a title="Share links" data-container="body" data-type="link" href="#"></a>
+				</li>
+		</ul>
+	</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="upload-permission-required-window" class="hidden">
+		<div id="upload-permission-required-notification" class="notification  notification-warning hidden" >
+		<span class="notification-icon cw-icon-warning"></span>
+		<span class="notification-text">
+		</span>
+	</div>
+
+	<div class="button-row">
+		<button class="button button-short background-color-hover" id="permissions-contact-administrator-button" title="Contact the administrator to request additional permissions"><span class="text">Contact Administrator</span></button>
+		<button class="button button-short background-color-hover" id="upload-permission-required-close-button" title=""><span class="text">Close</span></button>
+	</div>
+</div>
+
+	<div id="confirmation-window" class="hidden">
+		<div class="confirmation-body">
+			<div id="confirmation-content"></div>
+			<div class="confirmation-commands">
+				<div id="confirmation-password-container">
+					<label for="confirmation-password">Confirm Password</label>
+					<input id="confirmation-password" type="password" title="Password" data-trigger="hover" />
+				</div>
+				<div class="button-row">
+					<button id="confirmation-confirm-button" class="button background-color-hover">Confirm Password</button>
+					<button id="confirmation-cancel-button" class="button background-color-hover">Cancel</button>
+				</div>
+					<div id="confirmation-result" class="notification  notification-warning hidden" >
+		<span class="notification-icon cw-icon-warning"></span>
+		<span class="notification-text">
+The password that you entered is not correct.  Please enter the correct password.		</span>
+	</div>
+
+			</div>
+		</div>
+	</div>
+
+
+
+
+							</div>
+						</main>
+					</div>
+						<header id="custom-header" class="layout-section">
+							
+		<div class="PublicCustomHeaderBorder">
+			<link id="CustomStyle" rel="Stylesheet" type="text/css" href="/Global/CustomStyleHandler.axd?Type=1&amp;Culture=en-US" />
+			<div id="Header" class="PublicHeader NoPrint" runat="server">
+				
+				<div class="PublicHeaderLayer2">
+				</div>
+				<div class="PublicHeaderLogoContainer">
+					<div id="HeaderLogoTextContainer" class="PublicHeaderLogoText" runat="server">Document<span class="HeaderLogoTextItalic">Center</span></div>
+				</div>
+				<div class="PublicMenuContainer">
+					<div class="PublicMenu">
+						<div class="PublicMenuBackground">
+						</div>
+					</div>
+				</div>
+				<div class="PublicHeaderInformation">
+					<div class="PublicHeaderOrganization">
+						<span>Huron Charter Township</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+							<noscript><span class="notification notification-warning">Your Javascript is turned off, without it, this site will not operate as intended.</span></noscript>
+						</header>
+				</div>
+			</div>
+				<footer class="layout-section layout-alternate-basis footer">
+					<div class="left-middle">
+						<a href="http://www.icompasstech.com/" title="iCompass - A Diligent Brand" target="_blank">&copy; iCompass - A Diligent Brand 2026</a>
+					</div>
+				</footer>
+		</div>
+	<div id="sign-in" role="form" class="layout-full hidden" data-popup="True" data-url="" data-close="False">
+		<div class="layout-full layout-column sign-in">
+			<div class="layout-section layout-golden layout-pane layout-separator layout-full sign-in-credentials">
+				<div class="sign-in-content center-top">
+					<div class="sign-in-logo">
+						<img src="/images/iCompass_DIL_logo.svg" style="max-height:100px;" alt="iCompass - A Diligent Brand" />
+					</div>
+					<div class="sign-in-organization">
+						Huron Charter Township
+					</div>
+					<form id="sign-in-form" class="sign-in-form" action="/user/signin" method="post">
+						<div class="sign-in-section">
+							<div class="hidden">
+								<label for="sign-in-user-name">User name</label>
+							</div>
+							<input id="sign-in-user-name" name="username" type="text" placeholder="User name" title="User name" autocapitalize="off" />
+						</div>
+						<div class="sign-in-section">
+							<div class="hidden">
+								<label for="sign-in-password">Password</label>
+							</div>
+							<input id="sign-in-password" name="password" type="password" placeholder="Password" title="Password" autocapitalize="off" />
+						</div>
+						<div class="sign-in-section">
+							<button id="sign-in-button" class="button button-full button-important">Sign In</button>
+						</div>
+						<div class="sign-in-section layout-column">
+							<div class="layout-section layout-middle">
+								<input id="sign-in-remember-me" type="checkbox" /><label for="sign-in-remember-me">Remember me next time.</label>
+							</div>
+							<div class="layout-section layout-section-fill layout-right layout-middle">
+								<a href="/user/resetpassword">Forgot password?</a>
+							</div>
+						</div>
+						<div class="sign-in-section hidden">
+								<div id="sign-in-warning-message" class="notification  notification-warning hidden" >
+		<span class="notification-icon cw-icon-warning"></span>
+		<span class="notification-text">
+		</span>
+	</div>
+
+						</div>
+					</form>
+				</div>
+			</div>
+				<div class="layout-section layout-section-fill layout-full sign-in-marketing">
+						<iframe id="marketing-frame" title="Product Information" src="about:blank"></iframe>
+				</div>
+		</div>
+	</div>
+	<input type="hidden" value="Document" id="controllerName" />
+	<input type="hidden" value="List" id="actionName" />
+	<script src="/bundles/jqueryui?v=b9SMBqeErhV01znmDbMWKyTZhf4LXCikbUm4F0vnVqM1"></script>
+<script src="/js/header?v=BEwVfRdxfCslNlSnXhpMpRRwSl0iV85im7jK1vlrzVw1"></script>
+<script type="text/javascript">jQuery(document).ready(function ($) {Global.Controls.HeaderMenus.createInstance({"selectLanguageLabelText":"Select Language: ","searchingText":"Searching","selectedCulture":"en-US","availableCultures":[{"name":"en-US","nativeName":"English (United States)"}],"impersonatePublicUser":false,"purchasedVideo":false,"module":"DocumentCenter","entityId":10120,"recycleBin":false,"feedbackData":{"BrowserData":{"Browser":"Unknown","Browser Version":"0.0"},"UserData":{"UserName":"","FullName":"Public User","Email":"developers@icompasstech.com"},"PageData":{"Url":"http://hurontownshipmi.civicweb.net/filepro/documents/10120/"},"AgendaFree":false,"FullSupport":false,"Localization":{"notificationUpgradeRequestSent":"Thank you for your upgrade request. Our sales department will contact you with next steps.","buttonRequestingUpgrade":"Requesting Upgrade","faq":"AgendaFree FAQ","optionHighPrioritySupport":"High - 30 minute email response or call 1-800-260-7409 (2:30 AM to 1:00 PM)","optionHighPrioritySupportUnpurchased":"High - 30 minute email response or by phone (2:30 AM to 1:00 PM)"}},"signInLocalization":{"labelLogOn":"Sign In","pleaseEnterAUserNameWarningMessageText":"Please enter a user name.","pleaseEnterAPasswordWarningMessageText":"Please enter a password.","invalidUserNameOrPasswordWarningMessageText":"Your login attempt was not successful. Please try again.","notificationLoginDuplicateEmails":"This site contains duplicate emails please use your user name.","lockedOutMinutesWarningMessageText":"Due to too many failed attempts to log on, your account has been locked for the next {0} minutes.","lockedOutMinuteWarningMessageText":"Due to too many failed attempts to log on, your account has been locked for the next minute.","lockedOutSecondsWarningMessageText":"Due to too many failed attempts to log on, your account has been locked for the next {1} seconds.","lockedOutSecondWarningMessageText":"Due to too many failed attempts to log on, your account has been locked for the next second.","passwordExpiredWarningMessageText":"Your password has expired. Please contact a system administrator in order to update your password.","signInButtonLabelText":"Sign In","signingInButtonLabelText":"Signing In"}});
+});</script>
+
+	<script src="/bundles/modernizr?v=6_E8bAsjohm8fKGxr16w1WmwO01WiZ6Q7YVeHYmnveY1"></script>
+
+	<script src="/bundles/jqueryui?v=b9SMBqeErhV01znmDbMWKyTZhf4LXCikbUm4F0vnVqM1"></script>
+
+	<script src="/js/kendo/kendoui?v=9IfldLoPBpSWXsssxSW4xuYyi20eVE7PpZWTBA1WMDo1"></script>
+
+	<script src="/js/common/all?v=87uBylIGnZIoRoEmHdN7KKuQ12CwdgrZv85ik7oYpyY1"></script>
+
+	
+	<script src="/js/document/list?v=HN1dl7l9C-ZFwyuChyVNliDwMEI6Rgj3Ah4BspkTkPQ1"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function ()
+		{
+			CivicWeb.Documents.DocumentOperations.createInstance({"localization":{"nameColumnHeaderText":"Name","modifiedColumnHeaderText":"Modified","lastModifiedLabel":"Last Modified","sizeColumnHeaderText":"Size","untitledDocumentName":"Untitled","folderLabel":"Folder","deletedText":"Deleted","makingPubliclyAvailableWarningMessageText":"Are you sure that you want to make this available to all?","groupToolTipText":"Group","groupHasNoMembersLabelText":"This group has no members","userToolTipText":"User","processingToolTipText":"Processing","invalidPassword":"The password that you entered is not correct.  Please enter the correct password.","noPermissionToDelete":"You do not have permission to delete these documents/folders","createFolderHeaderText":"Create a new folder","createButtonText":"Create","confirmDeleteHeaderText":"Confirm Deletion","confirmRestoreHeaderText":"Confirm Restore","creatingNotificationText":"Creating","creatingSucceededNotificationText":"Folder Successfully Created","savingSucceededNotificationText":"Saved.","savingFailedNotificationText":"Saving failed.","savingErroredNotificationText":"An error occurred during saving.","deletingSucceededNotificationText":"Deleted.","deletingFailedNotificationText":"Deletion failed.","deletingText":"Deleting","savingText":"Saving","saveOrderText":"Save Order","confirmPasswordText":"Confirm Password","systemGlobalUpload":"Upload","noDocumentsInFolderWarning":"No documents in this folder","newWindow":"New Window","clickToDownLoadDocument":"Click to down load document","toolTipClicktoOpenLoadFullPDF":"Click to Open Full PDF","loadingInProgress":"Loading...","favoriteLabel":"Favorite","editFolder":"Edit","editToolTipText":"Edit","retoringSucceededNotificationText":"Restored.","retoringFailedNotificationText":"Restoring failed.","retsoringText":"Restoring","cancelButtonText":"Cancel","continueButtonText":"Continue","closeButtonText":"Close","homeLinkText":"Home","homeLinkToolTip":"Home Folder","recycleBinLabel":"Recycle Bin","favoritesLabel":"Favorite","favoritesStarToolTip":"Favorites - Add to your favorites folder to find faster later on","acceptLinkText":"Accept","renameLinkText":"Rename","flagAsRecordLabel":"Flag as Potential Record? ","formFieldLabelClassifyAsRecord":"Classify as Record? ","securityLockOutWarningMessageText":"The current security settings will prevent you from accessing this in the future.  Do you wish to continue?","folderPageToolTip":"Folder Page","openCaseFileToolTip":"Open Case File","closedCaseFileToolTip":"Closed Case File","securedFolderToolTip":"Secured Folder","favoritesFolderLabel":"Favorites","favoritesFolderToolTip":"Favorites Folder - click the star on any document or folder for fast access in your favorites","flagAsAgendaLabel":"Flag as an Agenda? ","agendaNotesCollapseImgToolTip":"Collapse","agendaNotesExpandImgToolTip":"Expand","agendaNotesDeleteBtnToolTip":"Delete this note","agendaNotesHeaderText":"AgendaNotes","agendaNotesEnableToolTip":"Click to enable AgendaNotes","agendaNotesDisableToolTip":"Disable AgendaNotes","agendaNotesDeleteCookiesWarning":"Your notes are saved in this browser. Clearing your cookies will remove all your notes","savedNotification":"Saved","documentOrderingModeEnabled":"Ordering Mode Enabled","documentOrderingModeDisabled":"Ordering Mode Disabled","documentEnableOrderingMode":"Enable Ordering Mode","documentDisableOrderingMode":"Disable Ordering Mode","selectToolTip":"Select","lastModifiedToolTip":"Last Modified on ","dateDeletedToolTip":"Deleted on","deletedByToolTip":"Deleted By","sizeToolTip":"Size","ascendingToolTip":"Ascending","descendingToolTip":"Descending","titleRequiredWarningMessageText":"Please enter a title.","saveToTop":"Save to the top of the list","saveToBottom":"Save to the bottom of the list","loadingDocumentOrderText":"Loading","warningSaveToTopAppliesToDefaultOrder":"Only applies to default order  (when not sorted by “Name”, “Modified” or “Size”, current order set to {0})","toolTipPreviewFolderContent":"Shows contents of a selected folder in the preview area","toolTipHidePreviewFolderContent":"Hides contents of a selected folder in preview area","bookmarkListRadioLabel":"Share link as displayed on the page","bookmarkDisplayRadioLabel":"Share link to this document only","copyLinkMessage":"Copy","documentsUploadSelectedFolderWarning":"Please select only one folder to upload documents to","publicUserAndAllInternalUsersText":"Public and all Internal Users","titlePermissionRequired":"Permission Required","warningMessageUpdatePermissionsRequiredToCreateFolder":"You do not have permission to create a sub-folder within the selected folder. Please select a different folder.","warningMessageUpdatePermissionsRequiredToUploadDocument":"You do not have permission to add a document to the selected folder. Please select a different folder.","warningMessageUploadDocumentsFolderPermissions":"You do not have permissions to upload documents to this folder.","audioVideoLabel":"Video","showAudioVideoLabel":"Show Video","hideAudioVideoLabel":"Hide Video","hideLabel":"Hide","decreaseAudioVideoSizeLabel":"Descrease Video Size","increaseAudioVideoSizeLabel":"Increase Video Size","orderSavedText":"Order Saved","warningDocumentSizeUploadLimit":"This file is larger than 500 MB in size and exceeds the upload size limit.","movingDocumentsText":"Moving","labelNoAccess":"No Access","labelAllowedAccess":"Allowed Access","pagerLocalization":{"linkFirst":"First","linkPrevious":"Previous","linkNext":"Next","linkLast":"Last"},"lessSecureCheckText":"The document you are moving is not publicly accessible but the destination is, continue?","labelMoveDocumentPermissionsOptions":"To move and UPDATE permissions click Yes<br/>To move but NOT UPDATE permissions click No","labelDocumentPermissionsDestinationDifference":"The following documents/folders have different permissions than the destination folder","moveDocumentPermissionsYesNoLocalization":{"titleYesNoConfirmation":"Permissions","buttonYes":"Yes","toolTipYes":"Move and UPDATE permissions to match the destination folder","buttonNo":"No","toolTipNo":"Move but DO NOT UPDATE permissions","buttonCancel":"Cancel","toolTipCancel":"Cancel"},"labelPublic":"Public","labelPrivate":"Private"},"documentSelectorArguments":{"localization":{"titleSelectLocation":"Select Location","titleSelectDocument":"Select Document","formFieldLabelSort":"Sort: ","optionDefault":"Default","optionRelevance":"Relevance","optionName":"Name","placeholderSearch":"Search","toolTipSearchDocumentsAndFolders":"<div class=\"text-left\">Search for matching documents and folders<ul class=\"compact\"><li><strong>Exact</strong> keyword or phrase use double quotes (&quot;search example&quot;).</li><li><strong>Not</strong> containing any of these words use '-'  (-example)</li></ul></div>","toolTipSearchFolders":"<div class=\"text-left\">Search for matching folders<ul class=\"compact\"><li><strong>Exact</strong> keyword or phrase use double quotes (&quot;search example&quot;).</li><li><strong>Not</strong> containing any of these words use '-'  (-example)</li></ul></div>","toolTipFolder":"Folder","pagerLocalization":{"linkFirst":"First","linkPrevious":"Previous","linkNext":"Next","linkLast":"Last"}},"orderFieldId":199,"titleFieldId":192,"currentUserSort":{"DocumentSortField":"","DocumentSortOrder":"","IncludePublicDocuments":false}},"contactAdministratorArguments":{"localization":{"titleContactAdministrator":"Contact Administrator","formFieldLabelAdministrativeUsers":"Administrative Users: ","warningMessageUserNameRequired":"Please enter a user name.","formFieldLabelSubject":"Subject: ","defaultPermissionsContactAdministratorSubject":"[Selected Admin - Full Name], I do not have permission to upload attachments to iCompass Document Center.","defaultPermissionsContactAdministratorBody":"Hello [Selected Admin - Full Name],<br /><br />I do not have permission to upload attachments to a folder in iCompass Document Center. Can you please add me, Public User, to the following folder:<br /><br /><a href=\"http://hurontownshipmi.civicweb.net/filepro/document/{0}?tab=security\">{1}</a><br /><br /><a href=\"http://hurontownshipmi.civicweb.net/filepro/documents/{0}\">View Folder Content</a><br /><br />Thank you,<br />Public User","buttonSend":"Send","buttonCancel":"Cancel","buttonSending":"Sending","buttonValidating":"Validating","warningMessageSelectAnAdministrativeUser":"Please select an administrative user","warningMessageSubjectRequired":"Please enter a subject","warningMessageBodyRequired":"Please enter a body.","notificationSendSucceeded":"Your message was sent successfully","notificationSendFailed":"Your message was not able to be delivered","notificationSendErrored":"An error occurred while trying to send your message"},"kendoEditorLocalization":{"defaultFont":"Arial","defaultFontSize":"11pt","imageBrowserMessages":{"dropFilesHere":"Drop files here"}},"isPermissions":true},"documentId":10120,"previewId":null,"attachmentUrl":null,"currentUserId":2,"documentPath":"Agenda Item Report Tracker\\AIR Attachments\\2016\\July\\Police Chief Contract","documentParentIds":[4975,4976,7820,10119,10120],"initialDocumentList":[{"Id":10123,"Title":"Director of Public Safety Job Description","NaturalSortTitle":"Director of Public Safety Job Description","Description":"","UrlFriendlyFileName":"","Folder":false,"MeetingId":0,"ViewAllowed":false,"UpdateAllowed":false,"DeleteAllowed":false,"Children":[],"HasChildren":false,"Path":"","FileFormat":"pdf","Extension":"","FileSizeInBytes":50607,"FileSize":"49.4 KB","Order":1,"ParentId":10120,"AttachedToItemId":0,"ItemsAttachedTo":0,"DateUpdated":"2016-07-13","DateUpdatedFormatted":"13 Jul 2016","PublicReleaseDelayDateString":"","AgendaCover":"","Thumbnails":"","ContentUrl":"/document/10123","Deleted":false,"DeletedBy":"","FullScreenUrl":null,"Favorite":false,"CaseFile":false,"OpenCaseFile":false,"OpenSplitScreen":false,"FolderPageExists":false,"HasAccess":true,"Stitchable":false,"PasswordProtected":false,"Searchable":false,"IsPublic":true,"TotalDocuments":3,"OcrStatus":0},{"Id":10122,"Title":"Police Chief Contract 7-13-16","NaturalSortTitle":"Police Chief Contract 0000000000000000000000000000000000000007-0000000000000000000000000000000000000013-0000000000000000000000000000000000000016","Description":"","UrlFriendlyFileName":"","Folder":false,"MeetingId":0,"ViewAllowed":false,"UpdateAllowed":false,"DeleteAllowed":false,"Children":[],"HasChildren":false,"Path":"","FileFormat":"pdf","Extension":"","FileSizeInBytes":65759,"FileSize":"64.2 KB","Order":2,"ParentId":10120,"AttachedToItemId":0,"ItemsAttachedTo":0,"DateUpdated":"2016-07-13","DateUpdatedFormatted":"13 Jul 2016","PublicReleaseDelayDateString":"","AgendaCover":"","Thumbnails":"","ContentUrl":"/document/10122","Deleted":false,"DeletedBy":"","FullScreenUrl":null,"Favorite":false,"CaseFile":false,"OpenCaseFile":false,"OpenSplitScreen":false,"FolderPageExists":false,"HasAccess":true,"Stitchable":false,"PasswordProtected":false,"Searchable":false,"IsPublic":true,"TotalDocuments":3,"OcrStatus":0},{"Id":10121,"Title":"Police Chief - Salary Recommendations","NaturalSortTitle":"Police Chief - Salary Recommendations","Description":"","UrlFriendlyFileName":"","Folder":false,"MeetingId":0,"ViewAllowed":false,"UpdateAllowed":false,"DeleteAllowed":false,"Children":[],"HasChildren":false,"Path":"","FileFormat":"pdf","Extension":"","FileSizeInBytes":65763,"FileSize":"64.2 KB","Order":3,"ParentId":10120,"AttachedToItemId":0,"ItemsAttachedTo":0,"DateUpdated":"2016-07-13","DateUpdatedFormatted":"13 Jul 2016","PublicReleaseDelayDateString":"","AgendaCover":"","Thumbnails":"","ContentUrl":"/document/10121","Deleted":false,"DeletedBy":"","FullScreenUrl":null,"Favorite":false,"CaseFile":false,"OpenCaseFile":false,"OpenSplitScreen":false,"FolderPageExists":false,"HasAccess":true,"Stitchable":false,"PasswordProtected":false,"Searchable":false,"IsPublic":true,"TotalDocuments":3,"OcrStatus":0}],"expandedDocumentsParentIds":{},"documentReorderAllowed":false,"initialViewMode":null,"sortField":null,"sortOption":null,"openSplitScreen":true,"canUpdatePortalItems":false,"canMakeAvailableToAll":false,"showPublicOnlyItemsForAllUsers":true,"users":null,"selectedUsers":null,"groups":null,"selectedGroups":null,"canUpdate":false,"canCreate":false,"canDelete":false,"canControl":false,"simplePermissions":false,"currentFolderUpdateAllowed":false,"loadFolderPage":false,"isLoggedIn":false,"purchasedVideo":false,"youTube":false,"audioOnly":false,"currentUserSort":{"DocumentSortField":"","DocumentSortOrder":"","IncludePublicDocuments":false},"includePublicDocuments":false,"thirdPartyDocumentSourceTypes":[],"documentRecycleBinView":false,"canPurge":false,"canRestore":null,"setAlphaOrder":false,"agendaNotesLiteEnabled":false,"isFreemium":false,"fromWidget":false,"purchasedRms":false,"classifyAsRecord":false,"classifyArguements":{"localization":{"titleClassifyRecords":"Classify Records","columnHeaderTitle":"Title","columnHeaderClassification":"Classification","columnHeaderDestructionDate":"Destruction Date","columnHeaderEdit":"Edit","buttonSaveAndClose":"Save and Close","toolTipSaveAndClose":"Save and Close","buttonCancel":"Cancel","toolTipCancel":"Cancel"},"classificationFieldId":159,"destructionDateFieldId":400,"setDestructionDate":false,"dateFormat":"dd MMM yyyy"},"moveToTop":true,"displaySetup":false,"roleSetupOptions":null});
+			CivicWeb.Documents.DocumentListPage.createInstance({"localization":{"nameColumnHeaderText":"Name","modifiedColumnHeaderText":"Modified","lastModifiedLabel":"Last Modified","sizeColumnHeaderText":"Size","untitledDocumentName":"Untitled","folderLabel":"Folder","deletedText":"Deleted","makingPubliclyAvailableWarningMessageText":"Are you sure that you want to make this available to all?","groupToolTipText":"Group","groupHasNoMembersLabelText":"This group has no members","userToolTipText":"User","processingToolTipText":"Processing","invalidPassword":"The password that you entered is not correct.  Please enter the correct password.","noPermissionToDelete":"You do not have permission to delete these documents/folders","createFolderHeaderText":"Create a new folder","createButtonText":"Create","confirmDeleteHeaderText":"Confirm Deletion","confirmRestoreHeaderText":"Confirm Restore","creatingNotificationText":"Creating","creatingSucceededNotificationText":"Folder Successfully Created","savingSucceededNotificationText":"Saved.","savingFailedNotificationText":"Saving failed.","savingErroredNotificationText":"An error occurred during saving.","deletingSucceededNotificationText":"Deleted.","deletingFailedNotificationText":"Deletion failed.","deletingText":"Deleting","savingText":"Saving","saveOrderText":"Save Order","confirmPasswordText":"Confirm Password","systemGlobalUpload":"Upload","noDocumentsInFolderWarning":"No documents in this folder","newWindow":"New Window","clickToDownLoadDocument":"Click to down load document","toolTipClicktoOpenLoadFullPDF":"Click to Open Full PDF","loadingInProgress":"Loading...","favoriteLabel":"Favorite","editFolder":"Edit","editToolTipText":"Edit","retoringSucceededNotificationText":"Restored.","retoringFailedNotificationText":"Restoring failed.","retsoringText":"Restoring","cancelButtonText":"Cancel","continueButtonText":"Continue","closeButtonText":"Close","homeLinkText":"Home","homeLinkToolTip":"Home Folder","recycleBinLabel":"Recycle Bin","favoritesLabel":"Favorite","favoritesStarToolTip":"Favorites - Add to your favorites folder to find faster later on","acceptLinkText":"Accept","renameLinkText":"Rename","flagAsRecordLabel":"Flag as Potential Record? ","formFieldLabelClassifyAsRecord":"Classify as Record? ","securityLockOutWarningMessageText":"The current security settings will prevent you from accessing this in the future.  Do you wish to continue?","folderPageToolTip":"Folder Page","openCaseFileToolTip":"Open Case File","closedCaseFileToolTip":"Closed Case File","securedFolderToolTip":"Secured Folder","favoritesFolderLabel":"Favorites","favoritesFolderToolTip":"Favorites Folder - click the star on any document or folder for fast access in your favorites","flagAsAgendaLabel":"Flag as an Agenda? ","agendaNotesCollapseImgToolTip":"Collapse","agendaNotesExpandImgToolTip":"Expand","agendaNotesDeleteBtnToolTip":"Delete this note","agendaNotesHeaderText":"AgendaNotes","agendaNotesEnableToolTip":"Click to enable AgendaNotes","agendaNotesDisableToolTip":"Disable AgendaNotes","agendaNotesDeleteCookiesWarning":"Your notes are saved in this browser. Clearing your cookies will remove all your notes","savedNotification":"Saved","documentOrderingModeEnabled":"Ordering Mode Enabled","documentOrderingModeDisabled":"Ordering Mode Disabled","documentEnableOrderingMode":"Enable Ordering Mode","documentDisableOrderingMode":"Disable Ordering Mode","selectToolTip":"Select","lastModifiedToolTip":"Last Modified on ","dateDeletedToolTip":"Deleted on","deletedByToolTip":"Deleted By","sizeToolTip":"Size","ascendingToolTip":"Ascending","descendingToolTip":"Descending","titleRequiredWarningMessageText":"Please enter a title.","saveToTop":"Save to the top of the list","saveToBottom":"Save to the bottom of the list","loadingDocumentOrderText":"Loading","warningSaveToTopAppliesToDefaultOrder":"Only applies to default order  (when not sorted by “Name”, “Modified” or “Size”, current order set to {0})","toolTipPreviewFolderContent":"Shows contents of a selected folder in the preview area","toolTipHidePreviewFolderContent":"Hides contents of a selected folder in preview area","bookmarkListRadioLabel":"Share link as displayed on the page","bookmarkDisplayRadioLabel":"Share link to this document only","copyLinkMessage":"Copy","documentsUploadSelectedFolderWarning":"Please select only one folder to upload documents to","publicUserAndAllInternalUsersText":"Public and all Internal Users","titlePermissionRequired":"Permission Required","warningMessageUpdatePermissionsRequiredToCreateFolder":"You do not have permission to create a sub-folder within the selected folder. Please select a different folder.","warningMessageUpdatePermissionsRequiredToUploadDocument":"You do not have permission to add a document to the selected folder. Please select a different folder.","warningMessageUploadDocumentsFolderPermissions":"You do not have permissions to upload documents to this folder.","audioVideoLabel":"Video","showAudioVideoLabel":"Show Video","hideAudioVideoLabel":"Hide Video","hideLabel":"Hide","decreaseAudioVideoSizeLabel":"Descrease Video Size","increaseAudioVideoSizeLabel":"Increase Video Size","orderSavedText":"Order Saved","warningDocumentSizeUploadLimit":"This file is larger than 500 MB in size and exceeds the upload size limit.","movingDocumentsText":"Moving","labelNoAccess":"No Access","labelAllowedAccess":"Allowed Access","pagerLocalization":{"linkFirst":"First","linkPrevious":"Previous","linkNext":"Next","linkLast":"Last"},"lessSecureCheckText":"The document you are moving is not publicly accessible but the destination is, continue?","labelMoveDocumentPermissionsOptions":"To move and UPDATE permissions click Yes<br/>To move but NOT UPDATE permissions click No","labelDocumentPermissionsDestinationDifference":"The following documents/folders have different permissions than the destination folder","moveDocumentPermissionsYesNoLocalization":{"titleYesNoConfirmation":"Permissions","buttonYes":"Yes","toolTipYes":"Move and UPDATE permissions to match the destination folder","buttonNo":"No","toolTipNo":"Move but DO NOT UPDATE permissions","buttonCancel":"Cancel","toolTipCancel":"Cancel"},"labelPublic":"Public","labelPrivate":"Private"},"documentSelectorArguments":{"localization":{"titleSelectLocation":"Select Location","titleSelectDocument":"Select Document","formFieldLabelSort":"Sort: ","optionDefault":"Default","optionRelevance":"Relevance","optionName":"Name","placeholderSearch":"Search","toolTipSearchDocumentsAndFolders":"<div class=\"text-left\">Search for matching documents and folders<ul class=\"compact\"><li><strong>Exact</strong> keyword or phrase use double quotes (&quot;search example&quot;).</li><li><strong>Not</strong> containing any of these words use '-'  (-example)</li></ul></div>","toolTipSearchFolders":"<div class=\"text-left\">Search for matching folders<ul class=\"compact\"><li><strong>Exact</strong> keyword or phrase use double quotes (&quot;search example&quot;).</li><li><strong>Not</strong> containing any of these words use '-'  (-example)</li></ul></div>","toolTipFolder":"Folder","pagerLocalization":{"linkFirst":"First","linkPrevious":"Previous","linkNext":"Next","linkLast":"Last"}},"orderFieldId":199,"titleFieldId":192,"currentUserSort":{"DocumentSortField":"","DocumentSortOrder":"","IncludePublicDocuments":false}},"contactAdministratorArguments":{"localization":{"titleContactAdministrator":"Contact Administrator","formFieldLabelAdministrativeUsers":"Administrative Users: ","warningMessageUserNameRequired":"Please enter a user name.","formFieldLabelSubject":"Subject: ","defaultPermissionsContactAdministratorSubject":"[Selected Admin - Full Name], I do not have permission to upload attachments to iCompass Document Center.","defaultPermissionsContactAdministratorBody":"Hello [Selected Admin - Full Name],<br /><br />I do not have permission to upload attachments to a folder in iCompass Document Center. Can you please add me, Public User, to the following folder:<br /><br /><a href=\"http://hurontownshipmi.civicweb.net/filepro/document/{0}?tab=security\">{1}</a><br /><br /><a href=\"http://hurontownshipmi.civicweb.net/filepro/documents/{0}\">View Folder Content</a><br /><br />Thank you,<br />Public User","buttonSend":"Send","buttonCancel":"Cancel","buttonSending":"Sending","buttonValidating":"Validating","warningMessageSelectAnAdministrativeUser":"Please select an administrative user","warningMessageSubjectRequired":"Please enter a subject","warningMessageBodyRequired":"Please enter a body.","notificationSendSucceeded":"Your message was sent successfully","notificationSendFailed":"Your message was not able to be delivered","notificationSendErrored":"An error occurred while trying to send your message"},"kendoEditorLocalization":{"defaultFont":"Arial","defaultFontSize":"11pt","imageBrowserMessages":{"dropFilesHere":"Drop files here"}},"isPermissions":true},"documentId":10120,"previewId":null,"attachmentUrl":null,"currentUserId":2,"documentPath":"Agenda Item Report Tracker\\AIR Attachments\\2016\\July\\Police Chief Contract","documentParentIds":[4975,4976,7820,10119,10120],"initialDocumentList":[{"Id":10123,"Title":"Director of Public Safety Job Description","NaturalSortTitle":"Director of Public Safety Job Description","Description":"","UrlFriendlyFileName":"","Folder":false,"MeetingId":0,"ViewAllowed":false,"UpdateAllowed":false,"DeleteAllowed":false,"Children":[],"HasChildren":false,"Path":"","FileFormat":"pdf","Extension":"","FileSizeInBytes":50607,"FileSize":"49.4 KB","Order":1,"ParentId":10120,"AttachedToItemId":0,"ItemsAttachedTo":0,"DateUpdated":"2016-07-13","DateUpdatedFormatted":"13 Jul 2016","PublicReleaseDelayDateString":"","AgendaCover":"","Thumbnails":"","ContentUrl":"/document/10123","Deleted":false,"DeletedBy":"","FullScreenUrl":null,"Favorite":false,"CaseFile":false,"OpenCaseFile":false,"OpenSplitScreen":false,"FolderPageExists":false,"HasAccess":true,"Stitchable":false,"PasswordProtected":false,"Searchable":false,"IsPublic":true,"TotalDocuments":3,"OcrStatus":0},{"Id":10122,"Title":"Police Chief Contract 7-13-16","NaturalSortTitle":"Police Chief Contract 0000000000000000000000000000000000000007-0000000000000000000000000000000000000013-0000000000000000000000000000000000000016","Description":"","UrlFriendlyFileName":"","Folder":false,"MeetingId":0,"ViewAllowed":false,"UpdateAllowed":false,"DeleteAllowed":false,"Children":[],"HasChildren":false,"Path":"","FileFormat":"pdf","Extension":"","FileSizeInBytes":65759,"FileSize":"64.2 KB","Order":2,"ParentId":10120,"AttachedToItemId":0,"ItemsAttachedTo":0,"DateUpdated":"2016-07-13","DateUpdatedFormatted":"13 Jul 2016","PublicReleaseDelayDateString":"","AgendaCover":"","Thumbnails":"","ContentUrl":"/document/10122","Deleted":false,"DeletedBy":"","FullScreenUrl":null,"Favorite":false,"CaseFile":false,"OpenCaseFile":false,"OpenSplitScreen":false,"FolderPageExists":false,"HasAccess":true,"Stitchable":false,"PasswordProtected":false,"Searchable":false,"IsPublic":true,"TotalDocuments":3,"OcrStatus":0},{"Id":10121,"Title":"Police Chief - Salary Recommendations","NaturalSortTitle":"Police Chief - Salary Recommendations","Description":"","UrlFriendlyFileName":"","Folder":false,"MeetingId":0,"ViewAllowed":false,"UpdateAllowed":false,"DeleteAllowed":false,"Children":[],"HasChildren":false,"Path":"","FileFormat":"pdf","Extension":"","FileSizeInBytes":65763,"FileSize":"64.2 KB","Order":3,"ParentId":10120,"AttachedToItemId":0,"ItemsAttachedTo":0,"DateUpdated":"2016-07-13","DateUpdatedFormatted":"13 Jul 2016","PublicReleaseDelayDateString":"","AgendaCover":"","Thumbnails":"","ContentUrl":"/document/10121","Deleted":false,"DeletedBy":"","FullScreenUrl":null,"Favorite":false,"CaseFile":false,"OpenCaseFile":false,"OpenSplitScreen":false,"FolderPageExists":false,"HasAccess":true,"Stitchable":false,"PasswordProtected":false,"Searchable":false,"IsPublic":true,"TotalDocuments":3,"OcrStatus":0}],"expandedDocumentsParentIds":{},"documentReorderAllowed":false,"initialViewMode":null,"sortField":null,"sortOption":null,"openSplitScreen":true,"canUpdatePortalItems":false,"canMakeAvailableToAll":false,"showPublicOnlyItemsForAllUsers":true,"users":null,"selectedUsers":null,"groups":null,"selectedGroups":null,"canUpdate":false,"canCreate":false,"canDelete":false,"canControl":false,"simplePermissions":false,"currentFolderUpdateAllowed":false,"loadFolderPage":false,"isLoggedIn":false,"purchasedVideo":false,"youTube":false,"audioOnly":false,"currentUserSort":{"DocumentSortField":"","DocumentSortOrder":"","IncludePublicDocuments":false},"includePublicDocuments":false,"thirdPartyDocumentSourceTypes":[],"documentRecycleBinView":false,"canPurge":false,"canRestore":null,"setAlphaOrder":false,"agendaNotesLiteEnabled":false,"isFreemium":false,"fromWidget":false,"purchasedRms":false,"classifyAsRecord":false,"classifyArguements":{"localization":{"titleClassifyRecords":"Classify Records","columnHeaderTitle":"Title","columnHeaderClassification":"Classification","columnHeaderDestructionDate":"Destruction Date","columnHeaderEdit":"Edit","buttonSaveAndClose":"Save and Close","toolTipSaveAndClose":"Save and Close","buttonCancel":"Cancel","toolTipCancel":"Cancel"},"classificationFieldId":159,"destructionDateFieldId":400,"setDestructionDate":false,"dateFormat":"dd MMM yyyy"},"moveToTop":true,"displaySetup":false,"roleSetupOptions":null});
+			//$('.search-text-box').focus();
+		});
+	</script>
+
+	<style type="text/css">
+		.k-state-selected {	/*DXImageTransform to eliminate bugs in IE7 and IE8 */	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);	background: none;		/*Change only the color*/	background-color: rgb(25, 120, 200);}
+		.k-state-selected { color: white; }
+		.k-state-selected a { color: white; }
+		.k-state-selected a.k-link { color: white; }
+		.k-state-selected a.k-link:hover { color: inherit; }
+	</style>
+
+	<script type="text/javascript" defer="defer">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-7652396-1'], ['_setDomainName', '.civicweb.net']);
+		_gaq.push(['_trackPageview']);
+
+		(function ()
+		{
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' === document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+</body>
+</html>

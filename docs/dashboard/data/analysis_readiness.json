@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": "0.1.0",
-    "generated_at": "2026-07-27T01:35:39Z",
+    "generated_at": "2026-07-27T01:52:48Z",
     "data_vintage": "2026-07-23",
     "source_files": [
       "docs/analysis/national_scout_coverage_state.csv",
@@ -82,7 +82,7 @@
       "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
     ]
   },
-  "overall_status": "targeted_source_verification_tier_a_b_completed_source_review_ready_global_analysis_closed",
+  "overall_status": "targeted_source_review_download_429_completed_pdf_readiness_ready_global_analysis_closed",
   "current_inputs": {
     "national_queue_available": true,
     "national_coverage_available": true,
@@ -293,6 +293,20 @@
       },
       "targeted_source_review_download_ready_next": true,
       "targeted_source_verification_tier_c_recommended_next": false,
+      "targeted_source_review_download_completed": true,
+      "targeted_source_review_download_decision": "targeted_source_review_download_429_completed_pdf_readiness_ready",
+      "targeted_source_review_download_locked_count": 429,
+      "targeted_source_review_download_retained_count": 387,
+      "targeted_source_review_download_status_counts": {
+        "blocked_by_transport": 3,
+        "duplicate_file_hash": 1,
+        "oversized_for_this_pass": 11,
+        "retained_downloaded_source": 387,
+        "unavailable_on_get": 2,
+        "weak_or_needs_review": 25
+      },
+      "targeted_pdf_text_layer_readiness_ready_next": true,
+      "targeted_source_review_download_tier_c_recommended_next": false,
       "gabriel_claim_rating_global_analysis_readiness": false,
       "limited_qualitative_usage_registry_review_global_analysis_readiness": false,
       "limited_qualitative_usage_layer_acceptance_global_analysis_readiness": false,

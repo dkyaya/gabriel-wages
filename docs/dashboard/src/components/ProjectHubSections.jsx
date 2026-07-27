@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "targeted_source_review_download_429_completed_pdf_readiness_ready"
+              ? "Targeted source review/download complete; bounded PDF and text-layer readiness is next"
+              : textTableCalibrationStatus.calibration_phase ===
             "targeted_source_verification_tier_a_b_completed_source_review_ready"
               ? "Tier A+B targeted source verification complete; bounded source review/download is ready"
               : textTableCalibrationStatus.calibration_phase ===
@@ -906,6 +909,23 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "targeted_source_review_download_429_completed_pdf_readiness_ready" ? (
+            <>
+              The bounded download stage reconciled{" "}
+              {formatNumber(
+                textTableCalibrationStatus.targeted_source_review_download_locked_count,
+              )}
+              {" "}locked verified leads and retained{" "}
+              {formatNumber(
+                textTableCalibrationStatus.targeted_source_review_download_retained_count,
+              )}
+              {" "}unique supported source files. Files were streamed and
+              hashed without opening PDF pages, extracting text, running OCR,
+              or rating evidence. They remain uningested, uncodified, and
+              non-causal. A separately gated PDF/text-layer readiness review is
+              next; global analysis readiness remains closed.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "targeted_source_verification_tier_a_b_completed_source_review_ready" ? (
             <>
               HEAD-only locator and metadata verification reconciled{ " "}

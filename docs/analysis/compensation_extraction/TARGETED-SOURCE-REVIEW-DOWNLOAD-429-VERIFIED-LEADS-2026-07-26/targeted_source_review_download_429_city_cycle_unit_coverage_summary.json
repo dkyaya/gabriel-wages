@@ -1,0 +1,7 @@
+{
+  "city_cycle_unit_groups": 415,
+  "coverage_boundary": "Retained sources are not ingested contracts and do not update durable city coverage.",
+  "distinct_city_state_pairs_with_retained_source": 279,
+  "groups_with_retained_source": 375,
+  "groups_without_retained_source": 40
+}

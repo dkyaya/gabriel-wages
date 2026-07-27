@@ -1,0 +1,19 @@
+{
+  "excluded_nonverified_rows": 342,
+  "global_analysis_readiness": false,
+  "lane_counts": {
+    "lane_1": 117,
+    "lane_2": 145,
+    "lane_3": 36,
+    "lane_4": 131
+  },
+  "locked_queue_rows": 429,
+  "only_verified_source_leads": true,
+  "repair_or_deprioritized_rows": 0,
+  "tier_c_rows": 0,
+  "tier_counts": {
+    "tier_a": 50,
+    "tier_b": 379
+  },
+  "tier_d_rows": 0
+}

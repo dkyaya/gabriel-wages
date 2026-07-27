@@ -1,0 +1,36 @@
+{
+  "candidate_id_set_sha256": "e8f685062dc39eb9bd139c6fb9c32a9976fffcd2306ce166a6adc87cd6a1f15b",
+  "download_status": "not_started",
+  "global_analysis_readiness": false,
+  "immutable_input_hashes": {
+    "targeted_source_verification_tier_a_b_city_cycle_unit_coverage_summary.json": "73ffaca09b1efcb198592bc0705b7b5d036945cf3ccfcbd3dddc9a71f03e3999",
+    "targeted_source_verification_tier_a_b_decision.json": "1ff6adcc9f0d93fbd0e48a49bcf016ae1d2f74ccc7621c0808515b2e9c539fe2",
+    "targeted_source_verification_tier_a_b_dry_run_summary.json": "13e176d3e93b1f6e21955132bae6b7d646579926ca9fa2409c9a6fc4e035e0b2",
+    "targeted_source_verification_tier_a_b_exclusion_summary.json": "188e7debe0e66161e03e23839f3c3265b2180b65dfff65b9cd601aedb070672c",
+    "targeted_source_verification_tier_a_b_invariant_checks.json": "3607673b2e9360756b32ac756438d1cb0469970c27e5e9c22701415b8932cedc",
+    "targeted_source_verification_tier_a_b_locked_queue_summary.json": "f071d9233cc50b4dd09bb45aeb488fa6c2371b63a2bb4eb3c19a4128687e8c37",
+    "targeted_source_verification_tier_a_b_mechanism_coverage_summary.json": "ac2588edfda5a150b340fe28fd41556ea2397c20167358477c715bc166e014f1",
+    "targeted_source_verification_tier_a_b_preflight_report.md": "9b27d7e3a072bf9ea39a192cbcee85ce5d42afc1efb1dbe2a9ccf60f138cfce5",
+    "targeted_source_verification_tier_a_b_results.csv": "92b16ee1d2a2782e0eb7888b2dcad3ff65cfebeaa108453368d9c363da1f2785",
+    "targeted_source_verification_tier_a_b_results_summary.json": "3b6a5c445d61879f5b8da236dd36c587dd749d183d403f4dded7f799dc57c194",
+    "targeted_source_verification_tier_a_b_retained_verified_sources.csv": "032a84bcebc8bb4a48a5278d3687a38ca2c12099d5e68493fd99b532046ee0f6",
+    "targeted_source_verification_tier_a_b_retained_verified_sources_summary.json": "8c05048282d51174f12fe1b2bf753fe5796046c1a0dbe262d38f7fbabcca265d",
+    "targeted_source_verification_tier_a_b_summary.md": "a6d27d6fc58fd6225ae1a5dc82d6ff1a9c1d8137ca8bbba9cdfe417ceedd85c5",
+    "targeted_source_verification_tier_a_b_validation_2026-07-26.md": "c66552518dd6f5041394d0db6beadfb1c16e6fca62424bb8bf2715ee9910768e"
+  },
+  "input_commit": "03c728630dfaaafd027ed222bc7120769eec1a58",
+  "lane_counts": {
+    "lane_1": 117,
+    "lane_2": 145,
+    "lane_3": 36,
+    "lane_4": 131
+  },
+  "queue_rows": 429,
+  "queue_sha256": "83f99b2265190f9eeade8095d4a547deaecbc0e5b558a160609b7a24b6afa708",
+  "retained_directory": "docs/analysis/compensation_extraction/TARGETED-SOURCE-REVIEW-DOWNLOAD-429-VERIFIED-LEADS-2026-07-26/retained_sources",
+  "task_id": "TARGETED-SOURCE-REVIEW-DOWNLOAD-429-VERIFIED-LEADS-2026-07-26",
+  "tier_counts": {
+    "tier_a": 50,
+    "tier_b": 379
+  }
+}

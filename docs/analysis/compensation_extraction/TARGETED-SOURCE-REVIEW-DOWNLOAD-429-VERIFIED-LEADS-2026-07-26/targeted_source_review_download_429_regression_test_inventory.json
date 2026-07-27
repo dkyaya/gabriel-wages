@@ -1,0 +1,14 @@
+{
+  "focus": [
+    "immutable 429-row lock",
+    "bounded GET streaming",
+    "task-local retention",
+    "file hash integrity",
+    "duplicate and unsupported-type quarantine",
+    "no PDF-page or extraction access",
+    "downstream closure",
+    "dashboard closure",
+    "idempotent resume"
+  ],
+  "suite": "scripts/test_targeted_source_review_download_429.py"
+}

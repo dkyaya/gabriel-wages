@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>We’ve moved to Readington.gov</title>
+
+  <style>
+    :root {
+      --shade: rgba(0,0,0,0.58);
+      --card: rgba(255,255,255,0.92);
+      --text: #111;
+      --muted: rgba(17,17,17,0.72);
+      --btn: #0b5fff;
+      --btn-hover: #0847c2;
+      --radius: 16px;
+    }
+
+    html, body { height: 100%; margin: 0; }
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: #000;
+      color: var(--text);
+    }
+
+    .bg { position: fixed; inset: 0; z-index: 0; }
+    .bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: blur(1px) saturate(0.92) brightness(0.95);
+      transform: scale(1.02);
+    }
+    .shade { position: absolute; inset: 0; background: var(--shade); }
+
+    .wrap {
+      position: relative;
+      z-index: 2;
+      min-height: 100%;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+    }
+
+    .card {
+      width: min(680px, 100%);
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+      padding: 28px 26px;
+      text-align: center;
+    }
+
+    h1 { margin: 0 0 10px; font-size: clamp(20px, 2.3vw, 30px); }
+    p { margin: 0 0 10px; font-size: 16px; }
+    .muted { color: var(--muted); font-size: 14px; }
+
+    .row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .btn {
+      padding: 12px 16px;
+      border-radius: 12px;
+      background: var(--btn);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 650;
+      min-width: 180px;
+    }
+    .btn:hover { background: var(--btn-hover); }
+
+    .link { color: #0b5fff; font-weight: 700; }
+  </style>
+</head>
+
+<body>
+  <div class="bg" aria-hidden="true">
+    <picture>
+      <source media="(max-width: 600px)" srcset="assets/oldsite-640.jpg">
+      <source media="(max-width: 1024px)" srcset="assets/oldsite-1024.jpg">
+      <source media="(max-width: 1600px)" srcset="assets/oldsite-1440.jpg">
+      <img src="assets/oldsite-1920.jpg" alt="">
+    </picture>
+    <div class="shade"></div>
+  </div>
+
+  <main class="wrap">
+    <section class="card" role="status" aria-live="polite">
+      <h1>We’ve moved our website to <span class="link">Readington.gov</span>.</h1>
+      <p>Please update your bookmarks.</p>
+      <p>You will be redirected in <strong><span id="count">10</span> seconds</strong>.</p>
+
+      <div class="row">
+        <a class="btn" href="https://www.readington.gov/">Go to Readington.gov now</a>
+        <div class="muted">If you are not redirected automatically, use the button above.</div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      let remaining = 10;
+      const count = document.getElementById('count');
+      const target = "https:\/\/www.readington.gov\/";
+
+      setInterval(() => {
+        remaining--;
+        if (count) count.textContent = Math.max(remaining, 0);
+        if (remaining <= 0) window.location.replace(target);
+      }, 1000);
+    })();
+  </script>
+</body>
+</html>
