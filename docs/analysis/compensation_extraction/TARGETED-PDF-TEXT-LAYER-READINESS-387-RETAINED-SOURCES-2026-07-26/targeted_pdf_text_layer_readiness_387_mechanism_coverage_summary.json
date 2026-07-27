@@ -1,0 +1,46 @@
+{
+  "by_mechanism": {
+    "fiscal_constraint_signal": {
+      "bounded_text_extraction_ready_count": 23,
+      "corrupt_or_unreadable_count": 0,
+      "html_text_later_count": 0,
+      "needs_review_count": 0,
+      "ocr_later_or_defer_count": 9,
+      "oversized_for_text_pass_count": 1,
+      "parse_text_layer_later_count": 23,
+      "retained_source_count": 33
+    },
+    "market_or_comparability_pressure": {
+      "bounded_text_extraction_ready_count": 104,
+      "corrupt_or_unreadable_count": 1,
+      "html_text_later_count": 9,
+      "needs_review_count": 4,
+      "ocr_later_or_defer_count": 12,
+      "oversized_for_text_pass_count": 1,
+      "parse_text_layer_later_count": 95,
+      "retained_source_count": 122
+    },
+    "non_safety_constraint_signal": {
+      "bounded_text_extraction_ready_count": 88,
+      "corrupt_or_unreadable_count": 0,
+      "html_text_later_count": 6,
+      "needs_review_count": 4,
+      "ocr_later_or_defer_count": 10,
+      "oversized_for_text_pass_count": 3,
+      "parse_text_layer_later_count": 82,
+      "retained_source_count": 105
+    },
+    "strike_or_no_strike_constraint": {
+      "bounded_text_extraction_ready_count": 106,
+      "corrupt_or_unreadable_count": 0,
+      "html_text_later_count": 17,
+      "needs_review_count": 5,
+      "ocr_later_or_defer_count": 13,
+      "oversized_for_text_pass_count": 3,
+      "parse_text_layer_later_count": 89,
+      "retained_source_count": 127
+    }
+  },
+  "coverage_boundary": "Readiness classifications are not extracted, rated, ingested, codified, causal, or analysis-ready evidence.",
+  "mechanism_count": 4
+}

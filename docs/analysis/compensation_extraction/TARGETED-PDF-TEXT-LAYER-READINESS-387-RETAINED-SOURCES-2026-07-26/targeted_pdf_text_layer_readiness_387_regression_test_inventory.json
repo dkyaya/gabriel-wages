@@ -1,0 +1,16 @@
+{
+  "coverage": [
+    "exact retained scope and immutable input hashes",
+    "file path-size-hash integrity",
+    "PDF metadata and bounded text-layer signal controls",
+    "HTML bounded structure readiness",
+    "separate PDF and HTML lanes",
+    "preserved prior exclusions",
+    "closed downstream statuses",
+    "no network, OCR, rendering, saved text, model, or durable merge",
+    "dashboard global-readiness closure",
+    "idempotent resume",
+    "partial-output fail-closed"
+  ],
+  "focused_suite": "scripts/test_targeted_pdf_text_layer_readiness_387.py"
+}

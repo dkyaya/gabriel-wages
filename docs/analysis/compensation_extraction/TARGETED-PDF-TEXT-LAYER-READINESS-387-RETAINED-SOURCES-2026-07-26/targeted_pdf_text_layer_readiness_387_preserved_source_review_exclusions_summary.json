@@ -1,0 +1,12 @@
+{
+  "duplicate_hash_group_count": 1,
+  "excluded_rows_entering_readiness_queue": 0,
+  "preserved_exclusion_count": 42,
+  "status_counts": {
+    "blocked_by_transport": 3,
+    "duplicate_file_hash": 1,
+    "oversized_for_this_pass": 11,
+    "unavailable_on_get": 2,
+    "weak_or_needs_review": 25
+  }
+}

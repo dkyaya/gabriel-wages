@@ -1,0 +1,18 @@
+{
+  "encrypted_or_locked_count": 8,
+  "maximum_probe_pages_per_pdf": 3,
+  "ocr_runs": 0,
+  "page_count_available": 349,
+  "pdf_render_runs": 0,
+  "pdf_rows": 349,
+  "readiness_status_counts": {
+    "needs_review": 8,
+    "ocr_later_or_defer": 44,
+    "oversized_for_text_pass": 8,
+    "parse_text_layer_later": 289
+  },
+  "saved_document_text_rows": 0,
+  "text_layer_hint_false_count": 44,
+  "text_layer_hint_true_count": 289,
+  "total_pages_metadata_only": 20118
+}

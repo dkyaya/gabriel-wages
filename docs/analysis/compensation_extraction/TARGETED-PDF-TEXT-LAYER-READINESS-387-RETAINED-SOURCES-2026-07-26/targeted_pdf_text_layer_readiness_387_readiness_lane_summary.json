@@ -1,0 +1,21 @@
+{
+  "all_rows_reconciled": true,
+  "bounded_text_extraction_ready_count": 321,
+  "global_analysis_readiness": false,
+  "lane_manifest_files": {
+    "corrupt_or_unreadable": "targeted_pdf_text_layer_readiness_387_corrupt_or_unreadable.csv",
+    "html_text_later": "targeted_pdf_text_layer_readiness_387_html_text_later.csv",
+    "needs_review": "targeted_pdf_text_layer_readiness_387_needs_review.csv",
+    "ocr_later_or_defer": "targeted_pdf_text_layer_readiness_387_ocr_later_or_defer.csv",
+    "oversized_for_text_pass": "targeted_pdf_text_layer_readiness_387_oversized_for_text_pass.csv",
+    "parse_text_layer_later": "targeted_pdf_text_layer_readiness_387_parse_text_layer_later.csv"
+  },
+  "readiness_status_counts": {
+    "corrupt_or_unreadable": 1,
+    "html_text_later": 32,
+    "needs_review": 13,
+    "ocr_later_or_defer": 44,
+    "oversized_for_text_pass": 8,
+    "parse_text_layer_later": 289
+  }
+}

@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "targeted_pdf_text_layer_readiness_387_completed_text_extraction_ready"
+              ? "Targeted PDF/text-layer readiness complete; bounded local extraction is ready"
+              : textTableCalibrationStatus.calibration_phase ===
             "targeted_source_review_download_429_completed_pdf_readiness_ready"
               ? "Targeted source review/download complete; bounded PDF and text-layer readiness is next"
               : textTableCalibrationStatus.calibration_phase ===
@@ -909,6 +912,24 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "targeted_pdf_text_layer_readiness_387_completed_text_extraction_ready" ? (
+            <>
+              The local-only readiness review reconciled{" "}
+              {formatNumber(
+                textTableCalibrationStatus.targeted_pdf_text_layer_readiness_queue_count,
+              )}
+              {" "}retained files. The approved future extraction lanes contain{" "}
+              {formatNumber(
+                (textTableCalibrationStatus.targeted_pdf_text_layer_readiness_status_counts?.parse_text_layer_later || 0) +
+                  (textTableCalibrationStatus.targeted_pdf_text_layer_readiness_status_counts?.html_text_later || 0),
+              )}
+              {" "}files; OCR-later, oversized, corrupt, and needs-review files remain
+              explicitly excluded. No URL, download, OCR, rendering, saved
+              document text, evidence extraction, rating, ingestion, or
+              codification occurred. A separately authorized bounded text-layer
+              extraction is next; global analysis readiness remains closed.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "targeted_source_review_download_429_completed_pdf_readiness_ready" ? (
             <>
               The bounded download stage reconciled{" "}

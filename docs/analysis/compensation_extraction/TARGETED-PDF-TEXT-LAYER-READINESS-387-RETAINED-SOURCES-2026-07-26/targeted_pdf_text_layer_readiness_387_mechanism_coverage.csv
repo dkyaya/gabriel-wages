@@ -1,0 +1,5 @@
+target_mechanism_family,retained_source_count,parse_text_layer_later_count,html_text_later_count,ocr_later_or_defer_count,corrupt_or_unreadable_count,oversized_for_text_pass_count,needs_review_count,bounded_text_extraction_ready_count
+fiscal_constraint_signal,33,23,0,9,0,1,0,23
+market_or_comparability_pressure,122,95,9,12,1,1,4,104
+non_safety_constraint_signal,105,82,6,10,0,3,4,88
+strike_or_no_strike_constraint,127,89,17,13,0,3,5,106

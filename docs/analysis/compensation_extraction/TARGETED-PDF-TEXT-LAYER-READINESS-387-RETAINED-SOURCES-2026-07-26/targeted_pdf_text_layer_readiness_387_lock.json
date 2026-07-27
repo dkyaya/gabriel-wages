@@ -1,0 +1,38 @@
+{
+  "content_type_counts": {
+    "application/pdf": 349,
+    "text/html": 38
+  },
+  "duplicate_summary_lineage": "committed retained_sources_duplicate_hash_groups.csv and exclusion summary; supplementary relay summary available",
+  "global_analysis_readiness": false,
+  "immutable_input_hashes": {
+    "retained_sources_duplicate_hash_groups.csv": "7f4e25c7b5f0247961f0253e8346940c6257669f30c95d074f36f3f4252edf77",
+    "retained_sources_hash_manifest.csv": "cd2b15e06620f70c9aa4792afbc64ea821225c0d5c1da3807b72dcc2ecc460d9",
+    "retained_sources_manifest.csv": "c2364ac16f0b6083a54fdbfd477d695f2a9bf29bf8fd9e82e3b0d6bd07dcad1a",
+    "targeted_source_review_download_429_city_cycle_unit_coverage_summary.json": "4f869ce4410e3da5bff51f49db22b9050b98f51c83f080bfe914250840a76049",
+    "targeted_source_review_download_429_decision.json": "3890251c2ab014c227f310ff75379bd3df6b72b13c9147e4fb528a9199870fa1",
+    "targeted_source_review_download_429_exclusion_summary.json": "d84d9a96abd909b56e033608979fbb5ea25b3c51ae1a3f5cf6836b461ea976ba",
+    "targeted_source_review_download_429_invariant_checks.json": "8d6dd072a7d46e8b462b32b69768e5487b8b0d9cd3a256980d53ea1239ad4227",
+    "targeted_source_review_download_429_locked_queue_summary.json": "40730b18dc29d8dd3e0630eae935202e4ec549a4bf3911235bc849f95c8d0c70",
+    "targeted_source_review_download_429_mechanism_coverage_summary.json": "c7b9cb5618dbd307acefcd1068274a7922985a73e0da7fa234d8bd53629bdfb2",
+    "targeted_source_review_download_429_results.csv": "1195ec4c6f99b4a19ee32b2cf1e2c919b458fd87a34b3dd4fcc32a761e77b049",
+    "targeted_source_review_download_429_retained_sources.csv": "27b9dbfceb88c0383d84c0f06c99b7492e0e9bc64c4714a5018480e74a6541bd",
+    "targeted_source_review_download_429_retained_sources_summary.json": "c4472db52b88a8bac43c5df33033a5b51b5afcf6a1f7304aff143e99b5997451",
+    "targeted_source_review_download_429_summary.md": "c30f74ec65f8f23df598604af5b472c29019a52e50c5e1d60724bc4be6e4f71c",
+    "targeted_source_review_download_429_validation_2026-07-26.md": "a175b08e9e78787d2e48d24b9ffd93c620f26a9374d3dd93fb6156c1dded5535"
+  },
+  "input_commit": "d39fdd79595905178314d5455cd0bd7602329592",
+  "inspection_status": "not_started",
+  "lane_counts": {
+    "lane_1": 105,
+    "lane_2": 127,
+    "lane_3": 33,
+    "lane_4": 122
+  },
+  "locked_queue_count": 387,
+  "preserved_exclusion_count": 42,
+  "queue_sha256": "387e27e307cf42c18aaf35a4beb7e0d7d7f853eed1c8ea6257f15e5a032bc276",
+  "retained_file_integrity_pass_count": 387,
+  "retained_source_id_set_sha256": "9168c07fad90ff2c79cd3fcc46deb7dc9e583f3ba40b06bcf624ed5f203b10cb",
+  "task_id": "TARGETED-PDF-TEXT-LAYER-READINESS-387-RETAINED-SOURCES-2026-07-26"
+}

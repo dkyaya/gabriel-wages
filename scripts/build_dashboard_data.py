@@ -1150,6 +1150,23 @@ TARGETED_SOURCE_REVIEW_DOWNLOAD_429_INVARIANTS_PATH = (
     TARGETED_SOURCE_REVIEW_DOWNLOAD_429_DIR
     / "targeted_source_review_download_429_invariant_checks.json"
 )
+TARGETED_PDF_TEXT_LAYER_READINESS_387_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "TARGETED-PDF-TEXT-LAYER-READINESS-387-RETAINED-SOURCES-2026-07-26"
+)
+TARGETED_PDF_TEXT_LAYER_READINESS_387_DECISION_PATH = (
+    TARGETED_PDF_TEXT_LAYER_READINESS_387_DIR
+    / "targeted_pdf_text_layer_readiness_387_decision.json"
+)
+TARGETED_PDF_TEXT_LAYER_READINESS_387_RESULTS_SUMMARY_PATH = (
+    TARGETED_PDF_TEXT_LAYER_READINESS_387_DIR
+    / "targeted_pdf_text_layer_readiness_387_results_summary.json"
+)
+TARGETED_PDF_TEXT_LAYER_READINESS_387_INVARIANTS_PATH = (
+    TARGETED_PDF_TEXT_LAYER_READINESS_387_DIR
+    / "targeted_pdf_text_layer_readiness_387_invariant_checks.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -3297,6 +3314,82 @@ def targeted_source_review_download_429_status() -> tuple[bool, dict[str, Any]]:
     return True, decision
 
 
+def targeted_pdf_text_layer_readiness_387_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize only the complete local-only 387-file readiness package."""
+    required = (
+        TARGETED_PDF_TEXT_LAYER_READINESS_387_DECISION_PATH,
+        TARGETED_PDF_TEXT_LAYER_READINESS_387_RESULTS_SUMMARY_PATH,
+        TARGETED_PDF_TEXT_LAYER_READINESS_387_INVARIANTS_PATH,
+        TARGETED_PDF_TEXT_LAYER_READINESS_387_DIR / "targeted_pdf_text_layer_readiness_387_lock.json",
+        TARGETED_PDF_TEXT_LAYER_READINESS_387_DIR / "targeted_pdf_text_layer_readiness_387_results.csv",
+        TARGETED_PDF_TEXT_LAYER_READINESS_387_DIR / "targeted_pdf_text_layer_readiness_387_pdf_results.csv",
+        TARGETED_PDF_TEXT_LAYER_READINESS_387_DIR / "targeted_pdf_text_layer_readiness_387_html_results.csv",
+        TARGETED_PDF_TEXT_LAYER_READINESS_387_DIR / "targeted_pdf_text_layer_readiness_387_parse_text_layer_later.csv",
+        TARGETED_PDF_TEXT_LAYER_READINESS_387_DIR / "targeted_pdf_text_layer_readiness_387_html_text_later.csv",
+        TARGETED_PDF_TEXT_LAYER_READINESS_387_DIR / "targeted_pdf_text_layer_readiness_387_preserved_source_review_exclusions.csv",
+        TARGETED_PDF_TEXT_LAYER_READINESS_387_DIR / "next_targeted_text_layer_extraction_prompt.md",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    decision = read_json(TARGETED_PDF_TEXT_LAYER_READINESS_387_DECISION_PATH)
+    summary = read_json(TARGETED_PDF_TEXT_LAYER_READINESS_387_RESULTS_SUMMARY_PATH)
+    invariants = read_json(TARGETED_PDF_TEXT_LAYER_READINESS_387_INVARIANTS_PATH)
+    results = read_csv(TARGETED_PDF_TEXT_LAYER_READINESS_387_DIR / "targeted_pdf_text_layer_readiness_387_results.csv")
+    pdf_rows = read_csv(TARGETED_PDF_TEXT_LAYER_READINESS_387_DIR / "targeted_pdf_text_layer_readiness_387_pdf_results.csv")
+    html_rows = read_csv(TARGETED_PDF_TEXT_LAYER_READINESS_387_DIR / "targeted_pdf_text_layer_readiness_387_html_results.csv")
+    exclusions = read_csv(TARGETED_PDF_TEXT_LAYER_READINESS_387_DIR / "targeted_pdf_text_layer_readiness_387_preserved_source_review_exclusions.csv")
+    controlled = {
+        "parse_text_layer_later", "html_text_later", "ocr_later_or_defer",
+        "corrupt_or_unreadable", "oversized_for_text_pass", "needs_review",
+        "readiness_error",
+    }
+    counts = decision.get("readiness_status_counts", {})
+    if not (
+        decision.get("task_id") == "TARGETED-PDF-TEXT-LAYER-READINESS-387-RETAINED-SOURCES-2026-07-26"
+        and decision.get("decision") == "targeted_pdf_text_layer_readiness_387_completed_text_extraction_ready"
+        and decision.get("completion_status") == "completed_bounded_local_readiness_review"
+        and decision.get("retained_readiness_queue_count") == 387
+        and decision.get("pdf_retained_count") == 349
+        and decision.get("html_retained_count") == 38
+        and counts.get("parse_text_layer_later") == 289
+        and counts.get("html_text_later") == 32
+        and sum(int(value) for value in counts.values()) == 387
+        and decision.get("bounded_text_layer_extraction_ready_next") is True
+        and decision.get("repair_needed") is False
+        and decision.get("tier_c_verification_recommended_next") is False
+        and decision.get("url_opens") == 0
+        and decision.get("downloads") == 0
+        and decision.get("ocr_runs") == 0
+        and decision.get("pdf_render_runs") == 0
+        and decision.get("full_text_extraction_runs") == 0
+        and decision.get("evidence_span_extraction_runs") == 0
+        and decision.get("rating_runs") == 0
+        and decision.get("model_api_calls") == 0
+        and decision.get("ingestion_runs") == 0
+        and decision.get("codification_runs") == 0
+        and decision.get("durable_ledger_merges") == 0
+        and decision.get("global_analysis_readiness") is False
+        and summary.get("result_rows") == 387
+        and summary.get("bounded_text_extraction_ready_count") == 321
+        and len(results) == 387 and len(pdf_rows) == 349 and len(html_rows) == 38
+        and len(exclusions) == 42
+        and all(row.get("source_review_download_status") == "retained_downloaded_source" for row in results)
+        and all(row.get("readiness_status") in controlled for row in results)
+        and all(row.get("extraction_status") == "not_extracted" for row in results)
+        and all(row.get("rating_status") == "not_rated" for row in results)
+        and all(row.get("ingestion_status") == "not_ingested" for row in results)
+        and all(row.get("codification_status") == "not_codified" for row in results)
+        and all(row.get("causal_status") == "not_causal_evidence" for row in results)
+        and all(row.get("global_analysis_readiness") == "false" for row in results)
+        and invariants.get("all_invariants_passed") is True
+        and invariants.get("prior_exclusions_preserved_and_excluded") is True
+        and invariants.get("no_url_download_ocr_render_full_text_evidence_or_model_work") is True
+        and invariants.get("global_analysis_readiness_false") is True
+    ):
+        raise ValueError("targeted 387-file PDF/text-layer readiness package fails dashboard gates")
+    return True, decision
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -4051,6 +4144,10 @@ def build_analysis_readiness(
         targeted_source_review_download_429_completed,
         targeted_source_review_download_429_decision,
     ) = targeted_source_review_download_429_status()
+    (
+        targeted_pdf_text_layer_readiness_387_completed,
+        targeted_pdf_text_layer_readiness_387_decision,
+    ) = targeted_pdf_text_layer_readiness_387_status()
     if scale_1000_targeted_qa_completed and (
         scale_1000_targeted_qa_decision.get("qa_pass") is not True
         or scale_1000_targeted_qa_decision.get(
@@ -4097,6 +4194,9 @@ def build_analysis_readiness(
     return {
         "metadata": metadata,
         "overall_status": (
+            "targeted_pdf_text_layer_readiness_387_completed_text_extraction_ready_global_analysis_closed"
+            if targeted_pdf_text_layer_readiness_387_completed
+            else
             "targeted_source_review_download_429_completed_pdf_readiness_ready_global_analysis_closed"
             if targeted_source_review_download_429_completed
             else
@@ -4854,6 +4954,27 @@ def build_analysis_readiness(
                 "targeted_source_review_download_tier_c_recommended_next": (
                     bool(targeted_source_review_download_429_decision.get("tier_c_verification_recommended_next", False))
                     if targeted_source_review_download_429_completed else False
+                ),
+                "targeted_pdf_text_layer_readiness_completed": targeted_pdf_text_layer_readiness_387_completed,
+                "targeted_pdf_text_layer_readiness_decision": (
+                    targeted_pdf_text_layer_readiness_387_decision.get("decision")
+                    if targeted_pdf_text_layer_readiness_387_completed else None
+                ),
+                "targeted_pdf_text_layer_readiness_queue_count": (
+                    int(targeted_pdf_text_layer_readiness_387_decision.get("retained_readiness_queue_count", 0))
+                    if targeted_pdf_text_layer_readiness_387_completed else 0
+                ),
+                "targeted_pdf_text_layer_readiness_status_counts": (
+                    targeted_pdf_text_layer_readiness_387_decision.get("readiness_status_counts", {})
+                    if targeted_pdf_text_layer_readiness_387_completed else {}
+                ),
+                "targeted_bounded_text_layer_extraction_ready_next": (
+                    bool(targeted_pdf_text_layer_readiness_387_decision.get("bounded_text_layer_extraction_ready_next", False))
+                    if targeted_pdf_text_layer_readiness_387_completed else False
+                ),
+                "targeted_pdf_text_layer_repair_needed": (
+                    bool(targeted_pdf_text_layer_readiness_387_decision.get("repair_needed", False))
+                    if targeted_pdf_text_layer_readiness_387_completed else False
                 ),
                 "gabriel_claim_rating_global_analysis_readiness": False,
                 "limited_qualitative_usage_registry_review_global_analysis_readiness": False,
@@ -8786,9 +8907,16 @@ def build_text_table_calibration_status_summary(
             targeted_source_review_download_429_completed,
             targeted_source_review_download_429_decision,
         ) = targeted_source_review_download_429_status()
+        (
+            targeted_pdf_text_layer_readiness_387_completed,
+            targeted_pdf_text_layer_readiness_387_decision,
+        ) = targeted_pdf_text_layer_readiness_387_status()
         return {
             **metadata,
             "calibration_phase": (
+                "targeted_pdf_text_layer_readiness_387_completed_text_extraction_ready"
+                if targeted_pdf_text_layer_readiness_387_completed
+                else
                 "targeted_source_review_download_429_completed_pdf_readiness_ready"
                 if targeted_source_review_download_429_completed
                 else
@@ -10105,6 +10233,35 @@ def build_text_table_calibration_status_summary(
             "targeted_source_review_download_tier_c_recommended_next": (
                 bool(targeted_source_review_download_429_decision.get("tier_c_verification_recommended_next", False))
                 if targeted_source_review_download_429_completed else False
+            ),
+            "targeted_pdf_text_layer_readiness_completed": targeted_pdf_text_layer_readiness_387_completed,
+            "targeted_pdf_text_layer_readiness_decision": (
+                targeted_pdf_text_layer_readiness_387_decision.get("decision")
+                if targeted_pdf_text_layer_readiness_387_completed else None
+            ),
+            "targeted_pdf_text_layer_readiness_path": (
+                relative(TARGETED_PDF_TEXT_LAYER_READINESS_387_DIR)
+                if targeted_pdf_text_layer_readiness_387_completed else None
+            ),
+            "targeted_pdf_text_layer_readiness_queue_count": (
+                int(targeted_pdf_text_layer_readiness_387_decision.get("retained_readiness_queue_count", 0))
+                if targeted_pdf_text_layer_readiness_387_completed else 0
+            ),
+            "targeted_pdf_text_layer_readiness_status_counts": (
+                targeted_pdf_text_layer_readiness_387_decision.get("readiness_status_counts", {})
+                if targeted_pdf_text_layer_readiness_387_completed else {}
+            ),
+            "targeted_bounded_text_layer_extraction_ready_next": (
+                bool(targeted_pdf_text_layer_readiness_387_decision.get("bounded_text_layer_extraction_ready_next", False))
+                if targeted_pdf_text_layer_readiness_387_completed else False
+            ),
+            "targeted_pdf_text_layer_repair_needed": (
+                bool(targeted_pdf_text_layer_readiness_387_decision.get("repair_needed", False))
+                if targeted_pdf_text_layer_readiness_387_completed else False
+            ),
+            "targeted_pdf_text_layer_tier_c_recommended_next": (
+                bool(targeted_pdf_text_layer_readiness_387_decision.get("tier_c_verification_recommended_next", False))
+                if targeted_pdf_text_layer_readiness_387_completed else False
             ),
             "gabriel_claim_rating_global_analysis_readiness": False,
             "limited_qualitative_usage_registry_review_global_analysis_readiness": False,

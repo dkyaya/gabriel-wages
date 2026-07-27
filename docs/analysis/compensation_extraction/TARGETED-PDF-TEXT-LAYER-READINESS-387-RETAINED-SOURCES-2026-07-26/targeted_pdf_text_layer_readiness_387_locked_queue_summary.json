@@ -1,0 +1,17 @@
+{
+  "content_type_counts": {
+    "application/pdf": 349,
+    "text/html": 38
+  },
+  "global_analysis_readiness": false,
+  "lane_counts": {
+    "lane_1": 105,
+    "lane_2": 127,
+    "lane_3": 33,
+    "lane_4": 122
+  },
+  "locked_queue_count": 387,
+  "only_retained_downloaded_sources": true,
+  "prior_excluded_rows_in_queue": 0,
+  "tier_c_or_d_rows": 0
+}

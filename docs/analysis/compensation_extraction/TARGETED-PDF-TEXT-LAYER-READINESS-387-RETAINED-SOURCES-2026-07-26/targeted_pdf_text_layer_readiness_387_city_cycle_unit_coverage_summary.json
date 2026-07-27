@@ -1,0 +1,7 @@
+{
+  "city_cycle_unit_groups": 375,
+  "coverage_boundary": "Readiness outputs do not update durable city coverage.",
+  "distinct_city_state_pairs": 279,
+  "groups_with_bounded_text_extraction_ready_source": 314,
+  "groups_without_bounded_text_extraction_ready_source": 61
+}
