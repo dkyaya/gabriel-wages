@@ -1,0 +1,54 @@
+{
+  "ambiguous_span_record_count": 225,
+  "codification_runs": 0,
+  "dashboard_declutter_completed": true,
+  "dashboard_map_filter": "total_scout_coverage_only",
+  "decision": "dashboard_declutter_map_correction_tier_c_text_span_completed_rating_ready",
+  "downloads": 0,
+  "durable_ledger_merges": 0,
+  "evidence_span_rating_ready_next": true,
+  "extraction_status_counts": {
+    "extracted_ok": 378
+  },
+  "future_dashboard_update_requirement_recorded": true,
+  "global_analysis_readiness": false,
+  "html_extraction_count": 61,
+  "ingestion_runs": 0,
+  "map_data_date": "2026-07-27",
+  "model_api_calls": 0,
+  "ocr_runs": 0,
+  "pdf_extraction_count": 317,
+  "pdf_render_runs": 0,
+  "positive_span_counts_by_lane": {
+    "lane_1": 12,
+    "lane_2": 91,
+    "lane_3": 2,
+    "lane_4": 54
+  },
+  "positive_span_counts_by_mechanism": {
+    "fiscal_constraint_signal": 2,
+    "market_or_comparability_pressure": 54,
+    "non_safety_constraint_signal": 12,
+    "strike_or_no_strike_constraint": 91
+  },
+  "positive_span_counts_by_region": {
+    "Midwest": 50,
+    "Northeast": 44,
+    "South": 60,
+    "West": 5
+  },
+  "positive_span_record_count": 159,
+  "rating_candidate_count": 159,
+  "rating_runs": 0,
+  "span_extracted_source_count": 52,
+  "span_extraction_queue_count": 378,
+  "span_status_counts": {
+    "ambiguous_span": 225,
+    "no_span_or_weak": 101,
+    "span_extracted": 52
+  },
+  "task_id": "DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27",
+  "text_extraction_queue_count": 378,
+  "total_span_record_count": 384,
+  "url_opens": 0
+}

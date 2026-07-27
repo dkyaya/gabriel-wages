@@ -1,0 +1,5467 @@
+12-17-2017
+1154-01
+17-MED-03-0238
+K36143
+
+MASTER AGREEMENT CONTRACT
+BETWEEN THE
+WILLARD BOARD OF EDUCATION
+AND THE
+WILLARD EDUCATION ASSOCIATION
+
+EFFECTIVE JULY 1, 2017 THROUGH JUNE 30, 2020
+
+11222602v3
+
+TABLE OF CONTENTS
+PAGE
+ARTICLE I – NEGOTIATIONS AGREEMENT.............................................................................1
+1.01
+1.02
+1.03
+1.04
+1.05
+1.06
+
+DEFINITION OF “DAY” ........................................................................................1
+CALCULATION OF DAYS ...................................................................................1
+RECOGNITION ...................................................................................................1
+PRINCIPLES OF NEGOTIATIONS ......................................................................1
+AREAS FOR DISCUSSION AND AGREEMENT .................................................2
+PROCEDURES FOR CONDUCTING NEGOTIATIONS.......................................2
+
+ARTICLE II – GRIEVANCE PROCEDURE .................................................................................6
+2.01
+2.02
+2.03
+
+DEFINITIONS ......................................................................................................6
+GENERAL PROCEDURES..................................................................................6
+PROCEDURAL STEPS .......................................................................................7
+
+ARTICLE III – SALARY/COMPENSATION .................................................................................9
+3.01
+3.02
+3.03
+3.04
+3.05
+3.06
+3.07
+3.08
+3.09
+3.10
+3.11
+3.12
+3.13
+
+SALARY SCHEDULE ..........................................................................................9
+EXPERIENCE CREDIT........................................................................................9
+STRS PICK-UP (Salary Reduction Method).........................................................9
+SALARY PAYMENT ..........................................................................................10
+EXTRACURRICULAR .......................................................................................10
+PAYROLL DEDUCTIONS/FAIR SHARE FEE....................................................10
+ATTENDANCE INCENTIVE...............................................................................12
+CURRICULUM WORK.......................................................................................13
+PAYMENT FOR COLLEGE REIMBURSEMENT ...............................................13
+SEVERANCE PAY.............................................................................................13
+TRAVEL EXPENSE ...........................................................................................14
+TUTORS............................................................................................................14
+MIGRANT SUMMER SCHOOL TEACHERS .....................................................14
+
+ARTICLE IV – INSURANCE PROGRAM ..................................................................................15
+4.01
+4.02
+4.03
+4.04
+4.05
+4.06
+4.07
+4.08
+4.09
+4.10
+4.11
+
+HOSPITALIZATION ...........................................................................................15
+PRESCRIPTION INSURANCE ..........................................................................15
+DENTAL INSURANCE.......................................................................................15
+VISION INSURANCE.........................................................................................15
+PAYMENT OF INSURANCE PREMIUMS..........................................................15
+LIFE INSURANCE .............................................................................................16
+OTHER INSURANCE PROVISIONS .................................................................16
+SECTION 125 ACCOUNT .................................................................................16
+OPTIONAL HDHP MEDICAL INSURANCE PLAN .............................................16
+INSURANCE COMMITTEE ...............................................................................16
+HURON-ERIE SCHOOL EMPLOYEE INSURANCE ASSOCIATION
+(HESE) WORKING SPOUSE COVERAGE........................................................16
+
+ARTICLE V – ABSENCE/LEAVES............................................................................................19
+5.01
+
+11222602v3
+
+ASSAULT LEAVE ..............................................................................................19
+
+i
+
+5.02
+5.03
+5.04
+5.05
+5.06
+5.07
+5.08
+5.09
+5.10
+5.11
+5.12
+
+ASSOCIATION LEAVE ......................................................................................19
+EXTRACURRICULAR LEAVE ...........................................................................20
+FAMILY AND MEDICAL LEAVE ........................................................................20
+INJURY LEAVE .................................................................................................21
+MATERNITY/PARENTAL LEAVE ......................................................................21
+PERSONAL LEAVE...........................................................................................22
+PERSONAL LEAVE CONVERSION AND/OR CARRYOVER ............................23
+PROFESSIONAL LEAVE/CONFERENCES.......................................................23
+REASONS FOR LEAVE OF ABSENCE.............................................................24
+SICK LEAVE (Bereavement included) ...............................................................25
+ADOPTION LEAVE............................................................................................25
+
+ARTICLE VI – EMPLOYMENT PRACTICES ............................................................................26
+6.01
+6.02
+6.03
+6.04
+6.05
+6.06
+6.07
+6.08
+6.09
+6.10
+6.11
+6.12
+
+MENTOR TEACHER PROGRAMS/RESIDENT EDUCATOR PROGRAM .........26
+NON-RENEWAL OF LIMITED CONTRACTS ....................................................27
+REDUCTION IN FORCE....................................................................................28
+LAYOFF.............................................................................................................30
+TEACHER CONTRACTS/CONTINUING CONTRACTS ....................................31
+FBI / BCII (BACKGROUND) CHECK .................................................................31
+TEACHER EVALUATION ..................................................................................32
+SCHOOL COUNSELOR EVALUATION.............................................................37
+TEACHER TRANSFER......................................................................................42
+PROFESSIONAL DEVELOPMENT COMMITTEE .............................................43
+PROFESSIONAL CONDUCT ............................................................................44
+REHIRE OF RETIRED TEACHERS...................................................................46
+
+ARTICLE VII – WORKING CONDITIONS .................................................................................47
+7.01
+7.02
+7.03
+7.04
+7.05
+7.06
+7.07
+7.08
+7.09
+7.10
+7.11
+7.12
+7.13
+7.14
+
+ACADEMIC FREEDOM .....................................................................................47
+ASSOCIATION RIGHTS AND RESPONSIBILITIES ..........................................47
+CLASS SIZE ......................................................................................................49
+EMPLOYEES RIGHT OF ACCESS TO PERSONNEL FILES ............................49
+INFORMATION..................................................................................................49
+SCHOOL CALENDAR .......................................................................................50
+TEACHING HOURS/WORKDAY .......................................................................51
+CLASSROOM INCLUSION AND IEPS ..............................................................51
+LABOR MANAGEMENT COMMITTEE ..............................................................52
+TEACHER SCHOOL YEAR ...............................................................................52
+SCHOOL IMPROVEMENT COMMITTEE ..........................................................53
+VIRTUAL LEARNING ACADEMY ......................................................................53
+DRESS CODE ...................................................................................................54
+PRE-EMPLOYMENT DRUG TESTING..............................................................54
+
+ARTICLE VIII – DURATION AND EFFECT OF AGREEMENT..................................................55
+8.01
+8.02
+8.03
+
+11222602v3
+
+CONTRARY TO LAW PROVISION....................................................................55
+ENTIRE AGREEMENT ......................................................................................55
+DURATION OF AGREEMENT...........................................................................56
+
+ii
+
+APPENDIX A
+
+Grievance Report Form................................................................................57
+
+APPENDIX B-1
+
+Salary Schedule 2017-2018 .........................................................................61
+
+APPENDIX B-2
+
+Salary Schedule 2018-2019 .........................................................................62
+
+APPENDIX B-3
+
+Salary Schedule 2019-2020 .........................................................................63
+
+APPENDIX C
+
+Extracurricular Salary Schedule ...................................................................64
+
+APPENDIX D-1
+
+Personal Leave Form ...................................................................................67
+
+APPENDIX D-2
+
+Personal Leave Conversion and/or Carryover Form.....................................68
+
+APPENDIX E
+
+Teacher Evaluation Instrument.....................................................................69
+
+APPENDIX F
+
+Professional Development Hours Verification Form .....................................70
+
+APPENDIX G
+
+Medical Insurance Plan ................................................................................71
+
+Letter of Concurrence ...............................................................................................................73
+Memorandum of Understanding……………………………………………………………………… 74
+
+11222602v3
+
+iii
+
+ARTICLE I – NEGOTIATIONS AGREEMENT
+1.01
+
+DEFINITION OF “DAY”
+For the purposes of clarification, the following definitions of “day” shall apply throughout
+the Agreement.
+A.
+B.
+C.
+D.
+
+1.02
+
+Calendar Day: Monday through Sunday inclusive
+Day: Calendar day
+Workday: Day teachers are expected/scheduled to work
+School Day: Day students are in attendance
+
+CALCULATION OF DAYS
+In computing any period of time specified by the terms of this Agreement, the date of the
+act or event from which the designated period of time begins to run shall not be included.
+The last day of the period so computed shall be included.
+
+1.03
+
+RECOGNITION
+The Willard City Board of Education (hereinafter referred to as the "Board") recognizes
+the Willard Education Association, an affiliate of the Ohio Education Association and the
+National Education Association, hereinafter referred to as the "Association" or the "WEA"
+as the sole and exclusive bargaining representative for all the full and part time
+certificated personnel hired under a regular teaching contract in the district for the
+purposes of negotiating and representing bargaining unit members with respect to
+salary, hours, and terms and conditions of employment. Substitutes who work less than
+one hundred twenty (120) consecutive days, aides, confidential employees, classified
+employees, and administrative supervisory staff are specifically excluded from the
+bargaining unit. Supervisory staff is defined as those employees serving under an
+administrative contract and who have the authority to hire, transfer, suspend, lay-off,
+recall, promote, discharge, assign, reward, or discipline other public employees; to
+responsibly direct them; to adjust their grievances; or to effectively recommend such
+action if the exercise of that authority is not of a merely routine or clerical nature, but
+requires the use of independent judgment.
+
+1.04
+
+PRINCIPLES OF NEGOTIATIONS
+Attaining the objectives of the educational program of the Willard City School District
+requires mutual understanding and cooperation among the Board of Education,
+Superintendent of schools, and the educational staff. Therefore, free and open
+exchange of views is desirable and necessary in the negotiations process.
+"Good-Faith" negotiations requires that the Association and the Board be willing to react
+to each other's proposals. If a proposal is unacceptable to one of the parties, that party
+is obligated to give its reasons. "Good-Faith" requires both parties to recognize
+negotiations as a shared process.
+
+11222602v3
+
+1.05
+
+AREAS FOR DISCUSSION AND AGREEMENT
+The "Good-Faith" process constitutes an agreement to attempt to reach mutual
+understanding regarding subjects which are mandatory subjects of bargaining.
+Negotiations shall be limited to wages, hours, terms, and other conditions of employment
+and the continuation, modification, or deletion of an existing provision of the collective
+bargaining agreement.
+The Association may be consulted on policy matters, but policy adoption is a Board
+responsibility and not a negotiable item. The Board and the Association recognize that
+the Board is the legally constituted body responsible for determination of policies
+covering all aspects of the Willard School System. The Board recognizes that it must
+operate in accordance with all statutory provisions of the state, and such other rules and
+regulations as are promulgated by the Department of Education in accordance with such
+statutes. The Board cannot reduce, negotiate, or delegate its legal responsibilities.
+
+1.06
+
+PROCEDURES FOR CONDUCTING NEGOTIATIONS
+A.
+
+Notification
+If either of the parties desires to commence bargaining on salaries or other
+matters of mutual concern, it shall notify the other party, in writing, of its intent to
+bargain at least ninety (90), but no more than one hundred twenty-five (125),
+days prior to the expiration of the contract. Notification, in writing, from the
+Association shall be served on the Superintendent; and from the Board shall be
+served on the president of the Association. If neither party serves such written
+notice during the above-mentioned time period, the contract between the parties
+shall be deemed to be extended for one (1) additional year.
+
+B.
+
+11222602v3
+
+Negotiation Meetings
+1.
+
+Within fifteen (15) school days of written notification of intent to bargain,
+an initial meeting shall be held between the parties. All proposals shall be
+exchanged, in writing, by the Association and the Board at this first
+meeting. No new proposals shall be submitted by either party after the
+initial meeting unless by mutual agreement.
+
+2.
+
+The Willard Board of Education and the Willard Education Association
+agree that all sections of the existing Master Agreement between the
+Willard Board of Education and the Willard Education Association which
+are not re-negotiated shall be included in the Master Agreement.
+
+3.
+
+Original proposals shall be written and in language suitable for inclusion
+in the final agreement. Topical listings of items proposed for negotiations
+shall constitute a clear failure of compliance and may be disregarded.
+
+4.
+
+Meetings shall be scheduled with the least interruption of work schedules.
+All meetings, including mediation, shall be in executive session unless
+otherwise mutually agreed upon by both parties. Other rules for
+conducting negotiations procedures which are deemed necessary and not
+
+2
+
+covered by this procedure shall be discussed and agreed upon at the first
+meeting.
+C.
+
+D.
+
+E.
+
+Negotiation Time Limits
+1.
+
+Either party may call for a caucus of up to thirty (30) minutes unless
+extended by mutual agreement.
+
+2.
+
+Bargaining sessions shall last a maximum of three (3) hours unless
+extended by mutual agreement.
+
+3.
+
+Items under negotiation must be resolved to the mutual satisfaction of
+both parties within sixty (60) calendar days of the first scheduled meeting.
+However, if both parties agree, extensions of time for negotiations may be
+granted. If no agreement is reached, the Disagreement Procedure
+outlined in this document shall be implemented.
+
+4.
+
+Any time limits established under this article may be modified by mutual
+agreement of both parties.
+
+5.
+
+"Days" means calendar days unless otherwise specified.
+
+Representation
+1.
+
+Each team shall limit its representation to three (3) members unless
+otherwise agreed upon at the first meeting. Each team shall designate
+one (1) chief spokesperson who shall be responsible for signing any
+tentative agreements. In addition, each team may admit two (2)
+observers to negotiating sessions. The observers shall adhere to all rules
+of protocol adopted at the first negotiations meeting and contained within
+this agreement, shall maintain the executive session nature of meetings,
+and shall not participate in discussion at the bargaining table.
+
+2.
+
+Either party may call upon consultants at the expense of the requesting
+party. Such consultants may be used in the negotiating meetings as
+team members or for the purpose of providing information pertinent to
+negotiations.
+
+Information
+The parties agree during negotiations to provide each other, upon reasonable
+request and within a reasonable time, regularly and routinely prepared
+information for development and evaluation of proposals. Access to such
+information in such form as it exists constitutes compliance with this provision,
+and neither party is obligated to develop data or information not in existence or to
+re-work, re-draft, summarize, compute, or otherwise develop data or information
+in other than its existing form.
+
+11222602v3
+
+3
+
+F.
+
+G.
+
+H.
+
+While Negotiations Are in Process
+1.
+
+During any phase of negotiations, including mediation, there will be no
+public releases of information to the media unless agreed upon by both
+parties. In such instances that releases are agreed upon said releases
+shall be in writing, and both parties shall approve of the release prior to its
+dissemination. Both parties may issue progress reports to their members
+so as to keep their members informed with respect to the progress of
+negotiations.
+
+2.
+
+It shall be the responsibility of both parties to inform their respective
+members that all progress reports are confidential and any information
+derived from such reports shall not be disclosed to the general public.
+
+Agreement
+1.
+
+When final agreement is reached through negotiations, the outcome shall
+be reduced to writing and submitted to the Association for ratification.
+Following ratification by the Association, the agreement shall be
+submitted to the Board. Upon official adoption by the Board, the
+agreement shall be signed by both parties.
+
+2.
+
+The Association shall be responsible for the typing of the final negotiated
+agreement. The parties shall each proofread and approve the agreement
+before and after printing. The Association shall be responsible for the
+duplication and distribution of the contract to the Board, to the
+Administration, and to all bargaining unit members.
+
+Disagreement
+In the event an agreement is not reached by negotiations after full consideration
+of proposals and counterproposals, or within forty-five (45) days prior to the
+expiration of the contract, either of the parties shall have the option of declaring
+impasse. Upon the declaration of impasse, the parties shall jointly request the
+appointment of a mediator from the staff of the Federal Mediation and
+Conciliation Service. The mediator shall meet with the representatives of the
+parties either jointly or separately, and shall take such steps as he/she deems
+appropriate to persuade the parties to resolve their differences and to effect a
+mutually acceptable agreement.
+The period of mediation shall last for a maximum of thirty (30) days or until the
+expiration of the contract, whichever is later, unless an extension of time is
+agreed to by both parties. Should the parties be unable to reach agreement as
+the result of this mediation process, the impasse provisions of this collective
+bargaining agreement shall be deemed exhausted and members of the
+bargaining unit may exercise their right to strike pursuant to Ohio Revised Code
+Chapter 4117, provided that all relevant provisions of Chapter 4117 and the
+administrative rules thereunder have been complied with.
+The parties agree that the mediation process as outlined above shall constitute a
+mutually agreed upon dispute settlement procedure that supersedes the statutory
+
+11222602v3
+
+4
+
+procedures set forth in ORC 4117.14. The parties further agree that this
+mediation process shall be utilized for bargaining leading to a successor contract
+as well as for any in-term bargaining which may occur during the life of the
+Collective Bargaining Agreement between the parties, subject to ORC 4117.18
+unless specifically agreed otherwise.
+
+11222602v3
+
+5
+
+ARTICLE II – GRIEVANCE PROCEDURE
+2.01
+
+DEFINITIONS
+A grievance is a claim of a teacher or group of teachers that the bargained contract has
+been misinterpreted, violated, misapplied, or infringed upon.
+The term "grievant" or "aggrieved" shall include any and all members of the bargaining
+unit or any group of members of the bargaining unit.
+A day as used in this procedure shall mean a school day.
+
+2.02
+
+GENERAL PROCEDURES
+Rights of Grievant: A grievant may appear on his own behalf or may be represented at
+any and all steps of the grievance procedure by the bargaining agent, or by any other
+person of the aggrieved's choice, except that the aggrieved may not be represented by
+an officer or employee of any teachers' organization other than the recognized
+bargaining agent.
+A grievant shall have the right to present a claim in accordance with the procedure
+described herein, free from interference, coercion, discrimination, or reprisal, except that
+it shall be subject to the right of the bargaining agent to be present at the settlement and
+offer testimony provided that the settlement is not inconsistent with the terms of the
+agreement.
+No grievance may be submitted to arbitration without the consent of the bargaining
+agent.
+Any grievance may be dealt with by the grievant seeking redress with the immediate
+supervisor; however, this informal procedure does not preclude the filing of any
+grievance at the formal level.
+Any grievance not settled at an informal level shall be reduced to writing (see Appendix
+A) and shall state the alleged violation, misapplication, infringement, or misinterpretation,
+and the relief sought.
+The fact that a grievant files a grievance shall not be recorded in the grievant's personal
+file, or in any file used in the transfer, assignment, or promotion process, nor shall such
+fact be used in any recommendation for re-employment or recommendation for other
+employment, nor shall the grievant be placed in jeopardy or be the subject for reprisal or
+discrimination for having followed or utilized this grievance procedure.
+Time limits specified herein are considered maximum; however, they may be extended
+by written agreement of the parties. If the grievance is not filed in a timely fashion or
+advanced to the next step by the grievant in a timely manner, it shall be deemed waived.
+If the Board or its agent fails to meet the timelines, the grievance shall advance to the
+next step.
+
+11222602v3
+
+6
+
+2.03
+
+PROCEDURAL STEPS
+Informal Step
+If a grievant believes there is a basis for a grievance, the grievant shall first discuss the
+matter with an immediate supervisor in an effort to resolve the problem informally.
+Step 1
+If the grievance is not resolved within five (5) days of such informal meeting, the
+aggrieved may present a formal claim to their immediate supervisor by submitting a
+grievance report form (see Appendix A). The grievance must be filed within sixty (60)
+days (calendar) of the event in dispute. Within five (5) days of receipt of the grievance,
+the immediate supervisor shall meet with the aggrieved and the aggrieved's
+representative (s), if elected by the aggrieved, in an effort to resolve the matter. The
+immediate supervisor shall indicate his/her disposition of the grievance within five (5)
+days after such meeting by completing the report form and returning it to the aggrieved.
+If such disposition is not timely returned, the grievance would be advanced to the next
+step.
+Step 2
+If the aggrieved is not satisfied with the disposition of the grievance in Step 1, the
+grievant shall complete the grievance report form, Step 2, and submit the grievance to
+the Superintendent within five (5) days of receipt of the disposition notice. Within five (5)
+days of receipt, the Superintendent and/or designated representative shall meet with the
+grievant and/or his/her representative to resolve the matter. Within five (5) days of this
+meeting, the Superintendent shall indicate, in writing, his disposition of the grievance by
+completing his portion of Step 2 and forwarding it to the aggrieved. The bargaining
+agent shall be notified, in writing, of said disposition. If such disposition is not timely
+returned, the grievance would be advanced to the next step.
+Step 3
+If the aggrieved is not satisfied with the disposition of the grievance at Step 2, the
+grievance may be appealed, in writing, to the Board of Education. The Superintendent
+shall place the matter on the agenda for the next regular meeting of the Board of
+Education.
+The aggrieved employee (s) shall have the right to be represented at such meeting by
+counsel and/or by a representative of his/her employee organization.
+The Board of Education shall act upon such appeal no later than its next regular
+meeting. The Board of Education act shall be based upon the recommendation of the
+Superintendent and the arguments presented by or on the behalf of the employee(s).
+Copies of the final action and supporting reasons shall be sent to the employee(s),
+Superintendent, and building principal.
+
+11222602v3
+
+7
+
+Step 4
+If the aggrieved, with concurrence of the bargaining agent, is not satisfied with the
+disposition of the grievance at Step 3, it may, within ten (10) days, submit the grievance
+to arbitration by the American Arbitration Association whose rules and regulations shall
+likewise govern the proceedings. The arbitrator may not add to, alter, or delete from the
+terms of the negotiated items. The arbitrator shall have all power and remedies, within
+lawful statutes, to render an award which shall be final and binding to all parties. In
+cases where the arbitrability of an issue is questioned, the matter of arbitrability shall be
+ruled upon by the arbitrator in an expedited fashion prior to a ruling by the arbitrator on
+the merits of the issue. The cost for the services of the arbitrator will be borne by the
+losing party, either the Board of Education or the bargaining agent.
+
+11222602v3
+
+8
+
+ARTICLE III – SALARY/COMPENSATION
+3.01
+
+SALARY SCHEDULE
+Effective July 1, 2017, the base salary shall be $35,357 (see Appendix B-1). Effective
+July 1, 2018, the base salary shall be $35,799 (see Appendix B-2). Effective July 1,
+2019, the base salary shall be $36,246 (see Appendix B-3).
+
+3.02
+
+EXPERIENCE CREDIT
+A newly hired teacher must be granted a year of experience on the salary schedule for
+each full year of teaching experience or military service, to a maximum of five (5) years.
+Credit for years of experience beyond five (5) years shall be within the Board's
+discretion.
+
+3.03
+
+STRS PICK-UP (Salary Reduction Method)
+A.
+
+The Board agrees to STRS "pick-up" utilizing the salary reduction method.
+Contributions to the State Teachers Retirement System will be paid on behalf of
+the employees in the bargaining unit, at no cost to the Board, under the following
+terms and conditions:
+1.
+
+The amount to be "picked-up" on behalf of each employee shall be a
+percentage of the employee's gross annual compensation which equals
+the rate established by STRS as required employee contributions. The
+employee's annual compensation shall be reduced, at no cost to the
+Board, by an amount equal to the amount "picked-up" by the Board for
+the purpose of state and federal tax only.
+
+2.
+
+The pick-up percentage shall apply uniformly to all members of the
+bargaining unit as a condition of employment.
+
+3.
+
+No employee covered by this provision shall have the option to elect a
+wage increase or other benefit in lieu of the employer pick-up.
+Payment of all paid leaves, sick leave, personal leave, and severance
+including unemployment and workers' compensation, shall be based on
+the employee's daily gross pay prior to reduction as basis (ex: gross pay
+divided by the number of days worked).
+
+B.
+
+Each employee will be responsible for compliance with Internal Revenue salary
+exclusion allowance regulations, with respect to the "pick-up" in combination with
+other tax deferred compensation plans.
+
+C.
+
+If the foregoing "pick-up" provisions are nullified by subsequent Internal Revenue
+Service rulings, Ohio Attorney General Opinions, or other governing regulations,
+the Board will be held harmless and this article of agreement shall be declared
+null and void. The Board shall then return to the former method of employer and
+employee retirement system contributions as soon as is necessary.
+
+11222602v3
+
+9
+
+3.04
+
+SALARY PAYMENT
+All bargaining unit employees shall be paid in twenty-six (26) payments. Pay will be
+direct deposited every other Friday. In the event a pay day falls on a holiday, pay will be
+direct deposited in advance of Friday.
+On occasion twenty-seven (27) payments may be implemented to prevent a three or four
+week lapse between payroll direct deposits. The WEA will receive advance notice of the
+necessity to utilize the twenty-seven (27) pay option.
+
+3.05
+
+EXTRACURRICULAR
+All persons other than head coaches will start at a level commensurate with their
+experience in the area of specialization to a maximum of one-half (1/2) or the midpoint of
+the range. Head coaches will be placed on the extracurricular schedule at the discretion
+of the Board of Education.
+The compensation for each position shall be based upon a percentage (see Appendix C)
+of $35,357 for the contract. Each eligible position will move one (1) percentage point
+automatically each year until the midpoint is reached. After the midpoint is reached,
+movement on the schedule will occur at the rate of one (1) percentage point for each
+three (3) years experience in a specific extracurricular position, since July 1, 1995. Merit
+and/or performance may cause a percentage increase after the midpoint is reached in
+which case a new three (3) year period will begin.
+The high school athletic director and assistant athletic director shall confer with their
+respective principals in regards to evaluation of assignments when appropriate.
+Extra duties will be paid per schedule. Pay will start with your first check and be divided
+by the twenty-six (26) pays.
+Additional extracurricular positions may be requested during the school year if needs
+arise. The proper procedure would be requesting additional help to the building
+principal. The building principal will send the request and his recommendation to the
+Superintendent of schools. The Superintendent will then recommend to the Board of
+Education whether or not to add the position. If the Board's decision is negative, the
+assignment may be considered again through the negotiations procedure.
+
+3.06
+
+PAYROLL DEDUCTIONS/FAIR SHARE FEE
+A.
+
+Payroll Deductions
+Deductions from the regular salary will be the applicable taxes in accordance
+with the employee's claim for exemption and retirement. Hospitalization, savings
+bonds, association dues or fees, income protection insurance, savings account
+deductions, annuities, mutual funds, and FCPE contributions can be deducted, if
+so directed, in writing, by the employee. If, for any reason, the Board fails to
+make a dues deduction for any employee, it shall make that deduction from the
+employee's next pay.
+
+11222602v3
+
+10
+
+B.
+
+Right to Fair Share Fee
+1.
+
+Payroll Deduction of Fair Share Fee
+The Board shall deduct from the pay of members of the bargaining unit
+who elect not to become or to remain members of the Willard Education
+Association a fair share fee for the Association's representation of such
+non-members during the term of this contract. No non-member filing a
+timely demand shall be required to subsidize partisan political or
+ideological causes not germane to the Association's work in the realm of
+collective bargaining.
+
+2.
+
+Notification of the Amount of Fair Share Fee
+Notice of the amount of the annual fair share fee, which shall not be more
+than 100% of the unified dues of the Association, shall be transmitted by
+the Association to the Treasurer of the Board on or about September 15
+of each year during the term of this contract for the purpose of
+determining amounts to be payroll-deducted, and the Board agrees to
+promptly transmit all amounts deducted to the Association.
+
+3.
+
+Schedule of Fair Share Fee Deductions
+a.
+
+All Fair Share Fee Payors
+Payroll deduction of such fair share fees shall begin at the second
+payroll period in January except that no fair share fee deductions
+shall be made for bargaining unit members employed after
+October 31 until the second paycheck, which period shall be the
+required probationary period of newly employed bargaining unit
+members.
+
+b.
+
+Upon Termination of Membership During the Membership Year
+The Treasurer of the Board shall, upon notification from the
+Association that a member has terminated membership,
+commence the deduction of the fair share fee with respect to the
+former member, and the amount of the fee yet to be deducted
+shall be the annual fair share fee less the amount previously paid
+through payroll deduction.
+
+4.
+
+Transmittal of Deductions
+The Board further agrees to accompany each such transmittal with a list
+of names of the bargaining unit members for whom all such fair share fee
+deductions were made, the period covered, and the amounts deducted
+for each.
+
+11222602v3
+
+11
+
+5.
+
+Procedure for Rebate
+The Association represents to the Board that an internal rebate procedure
+has been established in accordance with Section 4117.09 (C) of the
+Revised Code and that a procedure for challenging the amount of the
+representation fee has been established and will be given to each
+member of the bargaining unit who does not join the Association and that
+such procedure and notice shall be in compliance with all applicable state
+and federal laws and the constitutions of the United States and the State
+of Ohio.
+
+6.
+
+Entitlement to Rebate
+Upon timely demand, non-members may apply to the Association for an
+advance reduction/rebate of the fair share pursuant to the internal
+procedure adopted by the Association.
+
+7.
+
+Indemnification of Employer
+The Association on behalf of itself and the OEA and NEA agrees to
+indemnify the Board for any cost or liability incurred as a result of the
+implementation and enforcement of this provision provided that:
+
+3.07
+
+a.
+
+The Board shall give ten (10) days written notice of any claim
+made or action filed against the employer by a non-member for
+which indemnification may be claimed.
+
+b.
+
+The Association shall reserve the right to designate counsel to
+represent and defend the employer.
+
+c.
+
+The Board agrees to: 1) give full and complete cooperation and
+assistance to the Association and its counsel at all levels of the
+proceedings, 2) permit the Association or its affiliates to intervene
+as a party if it so desires, and/or 3) to not oppose the Association
+or its affiliates' application to file brief amicus curiae in the action.
+
+d.
+
+The Board acted in good faith compliance with the fair share fee
+provision of this agreement; however, there shall be no
+indemnification of the Board if the Board intentionally or willfully
+fails to apply (except due to court order) or misapplies such fair
+share fee provision herein.
+
+ATTENDANCE INCENTIVE
+Each bargaining unit member shall receive one (1) day's pay if he/she uses one (1) day
+or less of sick leave during the contract year. The payment shall be made at the time of
+the first pay period in July and shall be based upon the bargaining unit member's daily
+rate of pay.
+An employee shall lose his/her right to this attendance incentive if he/she uses any
+deduct days during a school year.
+
+11222602v3
+
+12
+
+Each bargaining unit member shall receive two (2) days’ pay if he/she uses zero (0)
+days of personal leave, sick leave and dock days during the contract year. The payment
+shall be made at the time of the first pay period in July and shall be based upon the
+bargaining unit member’s daily rate of pay.
+Payment for any days of unused personal leave will eliminate any balance of personal
+leave.
+3.08
+
+CURRICULUM WORK
+Employees who participate in textbook selection committees, course of study revisions
+and/or preparation, and various other types of curriculum related work shall be
+compensated at the rate of twenty-five dollars ($25.00) per hour for all scheduled time
+worked on days which are not on the school calendar as required workdays (e.g.,
+weekends, holidays, and summer) or beyond the regular workday.
+
+3.09
+
+PAYMENT FOR COLLEGE REIMBURSEMENT
+A teaching employee who earns college credit shall be reimbursed to a maximum of
+three hundred fifty dollars ($350.00) per semester hour (tuition only) or a maximum of
+two hundred dollars ($200.00) per quarter hour (tuition only). A maximum of nine (9)
+semester hours or fourteen (14) quarter hours may be applied for and encumbered
+during one calendar year. Hours reimbursed must be graduate hours and reflect an outof-pocket expense to the employee. An "Application for Reimbursement for College
+Credit" must be submitted and approved by the Superintendent prior to the start of the
+scheduled class. Undergraduate course work in areas of educational need and/or
+subjects may be reimbursed at the discretion of the Superintendent.
+Within two (2) weeks of providing evidence that the coursework has been satisfactorily
+completed and an official college transcript has been filed along with proof of payment in
+the Superintendent's office, payment will be made.
+
+3.10
+
+SEVERANCE PAY
+The Willard Board of Education shall grant severance pay to all certified personnel under
+the following provisions:
+1.
+
+The employee's effective date of retirement with the State Teachers
+Retirement System (STRS) has been substantiated, and the Willard City
+Board of Education has made the last payment in his/her name to STRS.
+
+2.
+
+Employees shall receive severance pay based on twenty-five percent
+(25%) of accumulated sick days.
+
+3.
+
+Payment will be based on the employee's rate of pay at the time of
+retirement from the Willard City Schools.
+In the event of the death of an employee who meets the qualifications of
+the STRS for retirement, the severance payment shall be paid to the
+employee's estate.
+
+11222602v3
+
+13
+
+3.11
+
+TRAVEL EXPENSE
+Employees of the Board of Education shall be paid at rate of fifty-five cents (55¢) per
+mile for travel expenses incurred while conducting school business authorized by the
+Superintendent.
+
+3.12
+
+TUTORS
+Students may be tutored by bargaining unit members for academic credit if approved by
+the school principal and the Superintendent. If the bargaining unit member is tutoring,
+he/she will be paid at the rate listed in Appendix C, Extracurricular Salary Schedule.
+Such tutoring shall be instruction performed outside school hours.
+Tutoring to help the student who is having difficulty in an academic subject is a matter
+between the parent and teacher.
+Tutors for the above must be approved by the Superintendent. Tutors must be qualified
+and certified/licensed in the specific area.
+
+3.13
+
+MIGRANT SUMMER SCHOOL TEACHERS
+Notification of openings for migrant summer school teachers will be made available to all
+district personnel annually.
+Migrant summer school rate beginning in 2018:
+The following step pay rate will be used to recognize the experience of the teacher in
+this program:
+Years 0-5
+Years 6-10
+Years 11+
+
+$23.50
+$25.00
+$26.50
+
+The years must be consecutive to qualify for a higher rate based on experience. These
+rates are contingent on the continued receipt of state/federal migrant funding.
+
+11222602v3
+
+14
+
+ARTICLE IV – INSURANCE PROGRAM
+4.01
+
+HOSPITALIZATION
+Subject to the provisions of Section 4.05 below, the Willard Board of Education will
+provide for each eligible full-time member of the bargaining unit, hospitalization and
+major medical insurance, which includes an HUR/SOS $200.00 penalty. Each
+bargaining unit member will be provided single coverage if they so desire and meet the
+insurance carrier's term of eligibility. Family coverage will be provided only to those
+eligible bargaining unit members with dependents who do not have family coverage
+through their spouse. It is the responsibility of the bargaining unit member to contact the
+Superintendent or his designated representative if he/she wishes family coverage.
+Employees may elect to receive twenty-five percent (25%) of the current single premium
+in lieu of participating in the hospitalization insurance program upon providing proof of
+other insurance coverage that is not through the Health Insurance Marketplace.
+Payment is to be made the first pay in July. Employees are not eligible for this payment
+in lieu if they are covered by insurance provided by the Board or any other member of
+the health insurance consortium of which the District is a member.
+
+4.02
+
+PRESCRIPTION INSURANCE
+Subject to the provisions of Section 4.05 below, the Board will provide prescription
+insurance coverage for each member of the bargaining unit.
+Employees may elect to receive twenty-five percent (25%) of the current single premium
+in lieu of participating in the prescription insurance program upon providing proof of other
+insurance coverage that is not through the Health Insurance Marketplace. Payment is to
+be made the first pay in July. Employees are not eligible for this payment in lieu if they
+are covered by insurance provided by the Board or any other member of the health
+insurance consortium of which the District is a member.
+
+4.03
+
+DENTAL INSURANCE
+Subject to the provisions of Section 4.05 below, the Board shall provide family dental
+insurance for bargaining unit members.
+
+4.04
+
+VISION INSURANCE
+Subject to the provisions of Section 4.05 below, the Board shall provide Vision insurance
+for bargaining unit members.
+
+4.05
+
+PAYMENT OF INSURANCE PREMIUMS
+Effective July 1, 2001, the Board will pay ninety percent (90%) per month and
+employees will pay ten percent (10%) per month for any premium costs.
+Employees are encouraged to tax shelter all insurance premium payments via an
+employee-funded Section 125 Flexible Spending Account.
+
+11222602v3
+
+15
+
+4.06
+
+LIFE INSURANCE
+The Board will provide each certified employee with a forty-five thousand dollar
+($45,000.00) term life policy which includes accidental death and dismemberment.
+
+4.07
+
+OTHER INSURANCE PROVISIONS
+Those certified/licensed employees who teach less than full time and who were
+employed after September 1, 1983, shall have the option of having all insurance paid on
+a prorated basis. Certified/licensed employees working less than half time will be
+charged seventy-five percent (75%) of premium of all insurance desired.
+Certified/licensed employees working less than full time will be charged fifty percent
+(50%) of premium of all insurance desired. Certified/licensed employees working less
+than full time, who are currently receiving insurance benefits equal to full-time
+employees, shall continue to receive said benefits on the same basis as regular full-time
+employees.
+
+4.08
+
+SECTION 125 ACCOUNT
+A Section 125 Flexible Spending Account shall be available to each employee.
+Participation in such account shall be at the option of each individual employee.
+Participation shall be by payroll deduction, with all administrative and handling cost
+charged by the carrier being the responsibility of the employee(s). Full explanation of
+this program shall be the sole responsibility of the WEA.
+
+4.09
+
+OPTIONAL HDHP MEDICAL INSURANCE PLAN
+The Board will offer an optional HDHP Medical Insurance Plan. For those employees
+who choose this option the Board will contribute two hundred and fifty dollars ($250) to a
+Health Savings Account for the employee.
+
+4.10
+
+INSURANCE COMMITTEE
+The Association and the Board agree to establish an Insurance Committee to determine
+if there are changes that should be considered to the insurance program for the next
+negotiations time period.
+This Committee will also be responsible for studying any changes imposed by the state
+and the potential impact thereof.
+The Association will select the Association representatives to this Committee and the
+Superintendent will select the Administrative representatives. There will be equal
+representation from the Association and the Administration.
+
+4.11
+
+HURON-ERIE SCHOOL EMPLOYEE INSURANCE ASSOCIATION (HESE) WORKING
+SPOUSE COVERAGE
+If an employee’s spouse is eligible to participate, as a current employee, self-employed
+individual (other than a sole proprietor) in a business or organization (e.g., partner,
+member), or retiree in group health insurance and/or prescription drug insurance
+sponsored by his/her employer, business, organization, or any retirement plan, the
+
+11222602v3
+
+16
+
+spouse must enroll for coverage in such employer, business, organization, or retirement
+plan sponsored group insurance coverage(s) no later than August 1, 2007.
+This requirement does not apply to any spouse who:
+•
+
+Works less than 20 hours per week and is required to pay more than 50% of the
+single premium to participate in his/her employer’s, business’s, organization’s, or
+retirement plan’s group health insurance coverage and/or prescription drug
+insurance.
+
+•
+
+Is employed by another Huron-Erie School Employee Insurance Association
+(HESE) district, provided the spouse does not receive any available payment (or
+any other form of remuneration) from that HESE district for waiving health
+insurance and/or prescription drug insurance coverage.
+
+Upon the spouse’s enrollment in any such employer, business, organization, or
+retirement plan sponsored group insurance coverage, that coverage will become the
+primary payor of benefits and the coverage sponsored by HESE will become the
+secondary payor of benefits according to the primary plan’s Coordination of Benefits and
+participation rules.
+Any spouse who fails to enroll in any group insurance coverage sponsored by his/her
+employer, business, organization, or any retirement plan, as required by this section,
+shall be ineligible for benefits under such group insurance coverage sponsored by
+HESE.
+It is the employee’s responsibility to advise the HESE Health Benefit Plan (the “Plan”)
+immediately (and not later than 30 days after any change in eligibility) if the employee’s
+spouse becomes eligible to participate in group health insurance and/or prescription
+drug insurance sponsored by his/her employer, business, organization, or retirement
+plan after August 1, 2007. Upon becoming eligible, the employee’s spouse must enroll
+in any group health insurance and/or prescription drug insurance sponsored by his/her
+employer, business, organization, or retirement plan unless he/she is exempt from this
+requirement in accordance with the exemptions stated in this section.
+Every employee whose spouse participates in HESE’s group health insurance coverage
+and/or prescription drug insurance coverage shall complete and submit to the Plan, upon
+request, a written certification verifying whether his/her spouse is eligible to participate in
+group health insurance coverage and/or prescription drug insurance coverage
+sponsored by the spouse’s employer, business, organization, or any retirement plan. If
+any employee fails to complete and submit the certification form by the required date,
+such employee’s spouse will be removed immediately from all group health insurance
+and/or prescription drug insurance coverages sponsored by HESE.
+Additional
+documentation may be required.
+If you submit false information, or fail to timely advise the Plan of a change in your
+spouse’s eligibility for employer (or business, organization, or retirement plan) sponsored
+group health insurance and/or prescription drug insurance, and such false information or
+such failure by you results in the Plan providing benefits to which your spouse is not
+entitled, you will be personally liable to the Plan for reimbursement of benefits and
+expenses, including attorneys’ fees and costs, incurred by the Plan. Any amount to be
+
+11222602v3
+
+17
+
+reimbursed by you may be deducted from the benefits to which you would otherwise be
+entitled. In addition, your spouse will be terminated immediately from group health
+insurance and/or prescription drug insurance coverage under the Plan. If you submit
+false information, you may be subject to disciplinary action, up to and including
+termination of employment.
+
+11222602v3
+
+18
+
+ARTICLE V – ABSENCE/LEAVES
+5.01
+
+ASSAULT LEAVE
+Notwithstanding the provisions of Section 3319.141 of the Ohio Revised Code, the
+Board will grant assault leave to cover employees absent due to physical disability
+resulting from assault under the following conditions.
+Any certified/licensed teacher who must be absent from his/her duties due to physical
+disability resulting from an assault while teaching or in school related activities, on or off
+school premises, before, during, or after school hours, will be paid his/her full scheduled
+compensation for the period of such absence. Assault shall be defined as an unlawful
+attempt to do bodily injury to a teacher. Before assault leave will be granted, the teacher
+shall furnish to the Superintendent, a written, signed statement describing the
+circumstances and events surrounding the assault, including the location and time of the
+assault, names and addresses of witnesses (if known), and a physician's statement as to
+the nature of the disability and its possible duration. The Superintendent shall review the
+statement and make any further investigation he/she deems advisable. Should the
+injury render the teacher incapable of performing his/her duties for a period of more than
+five (5) days, then a medical examination may be made by a physician selected by the
+Board of Education, at the expense of the Board of Education. Any injury that would be
+presumed to be of a permanent nature (at least twelve (12) months duration) would
+require the teacher to apply for disability retirement.
+
+5.02
+
+ASSOCIATION LEAVE
+A.
+
+One (1) hour will be scheduled during the general staff meeting at the beginning
+of the school year for the Association to conduct business.
+
+B.
+
+The Board shall provide the Association with an allowance of eight (8) absence
+days for the specific purpose of conducting Association business. Further, the
+Association may purchase an additional four (4) days at the substitute teacher
+pay rate in effect on date leave is taken plus the retirement costs to the Board
+based on said payment. Association leave shall be subject to the following
+conditions and provisions:
+
+11222602v3
+
+1.
+
+All expenses or costs beyond substitute pay for the annual allowance of
+days shall be the responsibility of the individual(s) and/or Association.
+
+2.
+
+Request(s) for use of Association leave shall be submitted to the
+Superintendent on the Association leave form at least five (5) days in
+advance for approval and in order to obtain a substitute teacher. This
+request shall have the Association president's signature of approval
+before being submitted to the Superintendent.
+
+3.
+
+Association leave shall be separate and apart from personal leave,
+professional leave, and extracurricular leave, and shall not be reflected in
+any individual personal accumulation. In the same respect, professional
+leave and extracurricular leave shall not be used for Association business
+or in lieu of Association leave.
+
+19
+
+5.03
+
+EXTRACURRICULAR LEAVE
+Extracurricular leave may be used in lieu of, but not in addition to, professional leave. All
+extracurricular persons may use two (2) days of professional leave for clinics of their
+choice and expenses will be paid by the Board of Education on the same basis as
+professional leave. Expenses for state tournaments will be paid by the athletic
+department governed by the approval of the high school principal. Substitute expense
+will be paid for by the Board of Education. Personal leave will be used by coaches.
+Expenses, with the exception of mileage, for the head coach will be paid for any
+tournament that involves a Willard student as a participant and absence will not be
+charged against professional or personal leave. Extracurricular leave must be requested
+and will be reimbursed the same as professional leave.
+
+5.04
+
+FAMILY AND MEDICAL LEAVE
+The parties agree to abide by the terms and provisions of the federal Family and Medical
+Leave Act of 1993. All benefits guaranteed by the Act will be provided to employees
+covered by this Agreement and shall be in addition to any other benefits provided herein.
+Furthermore, the benefits of the FMLA are not intended to supersede or diminish any
+other leave provisions contained in this Agreement.
+Family and Medical Leave will be granted up to twelve (12) weeks in any continuous
+twelve (12) month period for the following reason(s):
+1.
+2.
+3.
+4.
+
+Birth of a child
+Adoption of a child or placement of a foster child
+To provide care for a sick spouse, child (biological, adopted, or legal ward), or
+parent
+To address the individual employee's own serious health condition
+
+Definition of Serious Health Condition: An illness, injury, impairment, physical or mental
+condition that involves:
+A.
+B.
+
+Inpatient care in a hospital, hospice, or residential medical facility
+Continuing treatment by a health care provider
+
+Providing the employee has worked twelve (12) months and at least 1,250 hours of
+compensated time in the prior year, hospitalization, prescription, dental, and life
+insurance benefits will be continued at the employee's current level. Failure to return to
+work will require the employee to pay back the premiums paid by the Board during the
+absence.
+At least thirty (30) days notice, in the event of a "foreseeable" leave (example: childbirth)
+shall be submitted, in writing, to the Superintendent. If due to a family member or the
+employee's own serious health condition and "foreseeable" based on planned medical
+treatment, the employee shall give thirty (30) days notice or as soon as practical. The
+employee shall make all reasonable efforts to schedule treatment so as not to unduly
+disrupt operations of the district.
+Leave may be taken "intermittently" or "reduced time" except for Number 1 and 2 above,
+when medically necessary. The employee may, however, be temporarily transferred to
+
+11222602v3
+
+20
+
+an available alternate position with equivalent pay or benefits which may better serve the
+district during the recurring periods of leave.
+When a husband and a wife are employed by the Willard City Schools, an aggregate
+level of leave shall commence and be limited to twelve (12) weeks in any continuous
+twelve (12) month period if leave is taken for childbirth, adoption of a child, or placement
+of a foster child.
+A Family and Medical Leave Request form (3430.01F1) must be submitted to the
+Superintendent prior to the leave being granted. Family and medical leave is unpaid
+leave with previously defined benefits paid by the Board of Education for the duration of
+leave. The Board of Education may require certification by a physician.
+Return to work rules following a family or medical leave shall be governed by the Family
+and Medical Leave Act of 1993.
+Any alleged violation(s) of the Family and Medical Leave Act may be processed as a
+grievance utilizing the provisions contained herein; however, pursuit of such grievance
+shall not prevent an employee from otherwise enforcing his/her rights under FMLA as
+provided by law.
+5.05
+
+INJURY LEAVE
+In the event of an injury to an employee in the course of duty, the injured employee shall
+elect whether:
+1.
+2.
+
+to receive paid injury leave until workmen's compensation benefits begin
+to receive sick leave.
+
+The election, once made, shall not be changed. Injury leave shall not be charged to sick
+leave. As soon as practicable, the principal shall be notified. A written statement of all
+facts of the injury shall be submitted to the principal or immediate supervisor. If the
+employee received medical attention, a certificate from a licensed physician stating
+effect and duration shall be presented to the principal or immediate supervisor as soon
+as practicable. Injury leave cannot be accumulated.
+5.06
+
+MATERNITY/PARENTAL LEAVE
+Leaves of absence, without pay, for maternity/paternity reasons shall be granted
+teachers, upon proper application, by the Board, subject to the restrictions stated herein
+as follows:
+It is agreed that the teacher who becomes pregnant may continue to work provided that
+she is physically able and the rights of the pregnant employee will be pursuant to law.
+Further, the pregnant teacher wishing to take a leave of absence (child bearing) shall do
+so by written request.
+The teacher wishing to take a leave of absence for the purpose of childcare shall request
+such leave within two (2) weeks of the date of birth of the child or of the date of adoption
+of the child. The Board shall approve leave of absence requests for childcare purposes
+for up to a maximum of one (1) year.
+
+11222602v3
+
+21
+
+The teacher on leave of absence shall notify the Superintendent, in writing, of his/her
+intent to return to employment with the school district by March 1 of the school year
+previous to the school year he/she intends to return.
+Upon receipt of notification from the teacher of intent to return to work at the conclusion
+of the leave, a determination shall be made by administration if a vacancy is available.
+In the absence of a vacancy, a teacher with less seniority may be released from
+employment.
+While the teacher is on leave, there shall be no accrual of seniority.
+5.07
+
+PERSONAL LEAVE
+A.
+
+Teachers shall be granted three (3) unrestricted days of absence during each
+school year without loss of salary to transact personal business or to attend to
+affairs of a personal nature which cannot be conducted outside the regular
+school day. No personal leave may be used during the first and last five (5) days
+of the school year. Exceptions may be granted at the discretion of the
+Superintendent, who will discuss and consider the circumstances in making
+his/her decision, upon the teacher’s request.
+
+B.
+
+Personal leave will not be deducted from sick leave.
+
+C.
+
+Personal leave cannot be used for leave which would otherwise be available
+through sick leave. Misuse of personal leave will result in an appropriate deduct
+in pay. Teachers requesting personal leave on the day before or after district
+holiday or vacation break must comply with provisions 1 and 3 of Section D
+below even if the request is submitted prior to five (5) school days before the
+expected absence.
+
+D.
+
+An employee must submit a written request to his/her principal (see Appendix D1) for personal leave at least five (5) school days in advance of the taking of
+personal leave. The principal shall initial the request and forward to the
+Superintendent’s office. All requests must be approved, in writing, by the
+Superintendent of schools or his designee.
+If five (5) school days advance notice is not given, the following shall apply:
+
+E.
+
+1.
+
+An explanation for the reason for the use of the personal day, and
+
+2.
+
+An explanation as to why five (5) school days notice was not given.
+
+3.
+
+Failure to provide the aforementioned explanations may constitute
+grounds for denial of the leave request.
+
+Requests for personal leave may be limited as to use on a specific date by the
+following formula:
+Assignment
+
+Number of Teachers
+
+Middle School/High School (6-12)
+Elementary (PK-5)
+
+11222602v3
+
+22
+
+five (5)
+five (5)
+
+Teachers who work on both sides of the building may use any of the available
+ten (10) openings. The Superintendent shall approve or deny the request on a
+first application for use basis. The Superintendent may increase at his/her
+discretion the number of approved leaves in the event of an emergency.
+5.08
+
+PERSONAL LEAVE CONVERSION AND/OR CARRYOVER
+A.
+
+A teacher may carry over one (1) unused personal day per contract year up to a
+maximum of two (2) carry-over personal days. These carry-over days added to
+the three (3) personal days granted on a yearly basis will give the employee a
+potential maximum of four (4) personal days. (See Appendix D-2)
+
+B.
+
+A teacher may choose the option A from above or he/she may choose one of the
+following options:
+1.
+
+Convert two (2) unused personal leave days to sick leave.
+
+2.
+
+Carry over one (1) unused personal leave day to the next school year as
+personal leave and convert one (1) unused personal leave day to sick
+leave.
+
+Each teacher will be responsible for notifying the Treasurer’s office with regard to
+options 1 and 2 by the last teacher workday. If the teacher does not notify the
+Board by the last teacher workday, the leave will be carried over as per Section
+A.
+The potential maximum for personal leave accumulation remains at four (4). Sick
+leave may be accumulated to the maximum permitted by this Agreement.
+5.09
+
+PROFESSIONAL LEAVE/CONFERENCES
+Employees will be granted three (3) days to attend at least one (1) academic or two (2)
+extracurricular professional meetings that contribute to the educational program or
+extracurricular program. Teachers may request professional training to cover the costs
+of online courses and other non-traditional academic/professional meetings. One
+course/meeting equals one day of professional leave. There will be no reimbursement
+for meals or mileage for an on-line course. A written request should be submitted well
+enough in advance to allow the principal to secure a qualified substitute, if necessary.
+Final approval of all requests will be made by the Superintendent. If any request is
+denied, a written reason will be noted on the request form.
+Reimbursement will be made for expenses upon presentation to the Treasurer of the
+appropriate receipts and forms for all expenses. Meals, lodging, registration, mileage,
+and parking are allowable expenses as follows:
+a)
+
+11222602v3
+
+Lodging expense is not to exceed ninety dollars ($90.00) for a single occupancy;
+one hundred ten dollars ($110.00) for a double occupancy; and one hundred
+twenty-five dollars ($125.00) for a triple occupancy.
+
+23
+
+b)
+
+Meals will be reimbursed to a maximum of thirty dollars ($30.00) per day when
+attending an all-day conference. When attending a conference that lasts less
+than a full day, meals will be reimbursed up to a maximum of fifteen dollars
+($15.00).
+
+c)
+
+Transportation mileage shall be reimbursed at the rate of fifty-five cents (55¢) per
+mile, to a maximum of one hundred dollars ($100.00).
+
+d)
+
+Registration fee will be limited to two hundred dollars ($200.00).
+
+Professional meetings include national, state, regional, district education meetings
+and/or workshops, and visitations. Extent of professional leave will be governed by each
+year's appropriation and budget. Substitute teachers will be paid by the Board of
+Education for all professional meetings approved.
+Each teacher may be given time during the school year to observe teaching methods
+and procedures. These assignments shall be made under the guidance and direction of
+the principal and Superintendent.
+A written report of the professional day shall be made to the principal and
+Superintendent before expenses will be paid.
+Each teacher may use one (1) night lodging, and if no expenses are requested for the
+next day, then only one (1) day professional leave will be charged. Additional nights'
+lodging must have prior approval of the Superintendent. No overnight trips will be
+approved unless necessary to attend the conference.
+5.10
+
+REASONS FOR LEAVE OF ABSENCE
+School employees may, with the approval of the Board of Education, secure a leave of
+absence for the following reasons:
+1.
+2.
+3.
+4.
+5.
+6.
+
+Personal Illness
+Disability
+Educational or Professional Advancement
+Maternity
+Military Service (as provided in ORC 3319.14)
+Child Care (including adoption)
+
+A leave of absence for illness or disability will require a signed statement from the
+attending physician stating approximately the length of the absence.
+Any approved unpaid leave, except family and medical leave, of more than ten (10)
+calendar days, will require the employee to begin paying for hospitalization, prescription,
+and dental benefits on a monthly basis. Providing that a leave is a "COBRA" qualifying
+event, the employee may make application to the insurance carrier to maintain medical
+benefits.
+
+11222602v3
+
+24
+
+5.11
+
+SICK LEAVE (Bereavement included)
+A.
+
+Each full-time bargaining unit member shall receive one and one-fourth (1 1/4)
+days sick leave per month of service, or a total of fifteen (15) days per year. All
+new employees without prior sick leave from another Ohio school district shall be
+granted five (5) days of sick leave credit with the effective date of their contracts.
+Sick leave shall accumulate for members of the bargaining unit to a maximum of
+two hundred sixty (260) days.
+
+B.
+
+New bargaining unit members shall receive credit for sick leave previously
+accumulated in any elementary or secondary school chartered by the State
+Department of Education including licensed parochial schools or similar
+institutions or public agencies in Ohio. It will be the responsibility of the individual
+to supply the Treasurer with the address of the former employer to secure a
+certified record of the accumulated sick leave from the former employer.
+
+C.
+
+Sick leave hours may be used to cover personal illness, injury, pregnancy,
+exposure to contagious disease which could be communicated to other
+employees, medical appointments, and illness in the immediate family.
+Employee's immediate family for this policy shall include spouse, children, father,
+mother, brother, sister, in-laws, grandparents, grandchildren, aunts, uncles,
+nieces, nephews, or other persons who have assumed similar positions
+regardless of residence.
+
+D.
+
+Bereavement information: Sick leave hours may be used to cover a death in the
+immediate family. Employee’s immediate family for this policy shall include
+spouse, children, father, mother, brother, sister, in-laws, grandparents,
+grandchildren, aunts, uncles, nieces, nephews, or other persons who have
+assumed similar positions regardless of residence.
+Should a situation arise where the above definition does not include any
+individual for whom an employee wishes bereavement leave, he/she may
+request leave approval from the Superintendent.
+
+5.12
+
+ADOPTION LEAVE
+A bargaining unit member adopting a child may be granted up to six (6) weeks of paid
+sick leave from accumulated sick leave. Additional unpaid leave may be available under
+FMLA (Family Medical Leave Act).
+
+11222602v3
+
+25
+
+ARTICLE VI – EMPLOYMENT PRACTICES
+6.01
+
+MENTOR TEACHER PROGRAMS/RESIDENT EDUCATOR PROGRAM
+A.
+
+Lead Mentor
+A bargaining unit member or administrator employed by the District who does not
+perform evaluations of any current Resident Educators, designated by the
+Superintendent with input from the Association, who is responsible for managing
+the District’s Resident Educator Program. The final authority for appointing the
+Lead Mentor rests with the Superintendent.
+Responsibilities and qualifications will be based on rules, regulations and
+guidelines established by ODE and the Ohio Revised Code. The Lead Mentor
+must have completed all training required by ODE to serve as a Resident
+Educator Mentor. The Lead Mentor will work with principals to assign a Mentor
+for each Resident Educator.
+The Lead Mentor will meet with each Resident Educator Mentor and Resident
+Educator once every three (3) weeks after the student day throughout the school
+year. Each meeting will last approximately thirty (30) minutes. The first ten (10)
+minutes of the meeting will be with the Resident Educators and the Resident
+Educator Mentors. Building administrators may join the meeting following the
+first ten (10) minutes.
+The Lead Mentor will be a bargaining unit member. He/she will be issued a
+supplemental contract with a pay range of 16%-25% of the supplemental base
+salary. If there are no Resident Educators in a given school year, then no
+supplemental contract will be awarded. If there is no bargaining unit member
+who accepts the position of Lead Mentor, the Superintendent may appoint an
+administrator to the position.
+
+B.
+
+Resident Educator Mentor
+Resident Educator Mentors will be issued a supplemental contract in the pay
+range of 5%-10% of the supplemental base salary for the entire school year. The
+position will consist of two (2) six (6) month periods of July 1 through December
+31 and January 1 through June 30. The supplemental pay will be prorated for
+each of the two (2) six (6) month periods. One (1) extended day will be given to
+each Resident Educator and his/her Mentor during each six (6) month period. All
+required training that must be conducted outside the school day will be through
+the use of extended days. Each Resident Educator and his/her Mentor will
+receive one full day of release time each grading period to be used for
+observations and collaboration related to the Resident Educator program. The
+release days for a Resident Educator and his/her mentor do not necessarily have
+to coincide. Any additional release days must be approved by the building
+principal.
+
+11222602v3
+
+26
+
+6.02
+
+NON-RENEWAL OF LIMITED CONTRACTS
+A.
+
+B.
+
+11222602v3
+
+The non-renewal of a limited contract of a bargaining unit member who has
+taught in the district for four (4) or more years shall be pursuant to the following
+procedure:
+1.
+
+Prior to the non-renewal of a bargaining unit member's contract who has
+taught in the district for four (4) or more years, the affected individual shall
+be advised by the evaluating administrator of the deficiencies forming the
+grounds of the administrator's recommendation for non-renewal. The
+bargaining unit member shall be given a reasonable opportunity to correct
+such performance prior to non-renewal of his/her contract.
+
+2.
+
+When the Superintendent intends to recommend the non-renewal of an
+employee's limited contract, the employee shall be given a written
+statement describing the circumstances that led to the Superintendent's
+recommendation at least ten (10) days, of which a minimum of three (3)
+shall be school days, prior to any official Board action being taken upon
+the Superintendent's recommendation.
+
+3.
+
+An employee who is notified that his/her contract will be recommended for
+non-renewal shall have the right to request, through the Superintendent, a
+meeting with the Board of Education. Such meeting shall occur prior to
+Board action on the Superintendent's recommendation of non-renewal.
+At this meeting, the employee shall be entitled to Association
+representation.
+
+4.
+
+Neither the Superintendent's recommendation nor the Board's action to
+non-renew shall be without just cause.
+
+5.
+
+Notice of the Board's intent to non-renew the limited contract of a
+bargaining unit member shall be provided in writing by June 1 either by
+personal service upon the teacher or by certified mail, return receipt
+requested.
+
+6.
+
+The non-renewal of a limited contract shall be subject to the grievance
+procedure and such grievance shall be filed at Step 4 of the grievance
+procedure. The grievant shall be entitled to immediate reinstatement/reemployment under the appropriate contract if there is any violation of the
+procedures contained herein or if the non-renewal was without just cause.
+
+7.
+
+The procedures outlined above supersede the procedures set forth in
+ORC 3319.11 specifically as they pertain to the non-renewal of limited
+contracts.
+
+8.
+
+Teachers in their fourth (4th) year during the 2017-2018 school year would
+have just cause.
+
+For teachers who have taught in the district for less than four (4) years, the nonrenewal of a limited contract shall be governed by the procedures set forth in
+ORC 3319.11.
+
+27
+
+C.
+6.03
+
+Supplemental contracts are excluded from the provisions of this section.
+
+REDUCTION IN FORCE
+A reasonable reduction of instructional staff members may be made in the event that a
+reduction becomes necessary as a result of a decreased enrollment of pupils, return to
+duty of regular teachers after leaves of absence, or by reason of suspension of schools
+or territorial changes affecting the district, or lack of funds. When such reduction is
+deemed necessary, the reduction will be made in accordance with the following
+provisions:
+1.
+
+Prior to proceeding with an anticipated staff reduction, the Association president
+shall be notified by the Superintendent of schools of the Board's intent to
+consider a staff reduction. A meeting shall be held between representatives of
+the Association and representatives of the Board to review appropriate data
+indicating a need for a reduction in staff. The parties shall discuss why the
+reduction is deemed necessary, what teaching fields are to be affected, the
+extent of the anticipated reduction, and the possible effects of said reduction.
+Also, at this meeting, the Association will be provided with a seniority list of all
+bargaining unit members.
+
+2.
+
+The seniority list shall be prepared by listing all teachers according to continuous
+service in the district within all areas of certification/licensure. Those on
+continuing contract shall be listed first according to continuous service in the
+district; then those on limited contracts shall be listed by continuous service in the
+district. The list shall include the date of initial employment (continuous) for each
+employee. Teachers using any Board-approved leave of absence shall not lose
+the seniority held prior to the leave, nor shall they gain additional seniority for the
+time on leave, i.e., a leave of absence shall not break an employee's continuous
+employment. If ties occur in seniority, regarding years of service, the teacher
+with the earliest date of board action to employ will be considered most senior. If
+ties still remain, the ties will be broken by the flip of a coin if and when such
+becomes necessary in order to implement a staff reduction.
+
+3.
+
+Any reduction in staff will first be accomplished through attrition insofar as it is
+possible to do so, i.e., the number of persons affected by a reduction in staff will
+be kept to a minimum by not employing replacements for employees who retire
+or resign or by not replacing individuals who are non-renewed. If further
+reductions are necessary, the Board shall proceed to suspend contracts in
+accordance with the recommendation of the Superintendent of schools who shall,
+within each teaching field affected, give preference to teachers on continuing
+contracts. Within each teaching field affected the teacher with the lowest rating
+on his/her evaluation will be the teacher whose contract is suspended. If two (2)
+or more teachers have comparable evaluations, layoff will occur in reverse order
+of seniority. Any reduction in force shall proceed using the following procedures
+and criteria.
+a.
+
+11222602v3
+
+Bargaining unit members shall be placed in one (1) of four (4) groups for
+the purpose of a reduction in force.
+
+28
+
+Group One shall be comprised of all members who have not
+received a final summative evaluation rating in the District;
+
+ii.
+
+Group Two shall be comprised of all members who were rated
+Ineffective on their evaluation using the calculation set forth below;
+
+iii.
+
+Group Three shall be comprised of all members who were rated
+Developing on their evaluation using the calculation set forth
+below;
+
+iv.
+
+Group Four shall be comprised of all members who were rated
+Skilled or Accomplished on their evaluation using the calculation
+set forth below.
+
+b.
+
+Any reduction in force shall begin with members in Group One, followed
+by Group Two, then Group Three, and then Group Four.
+
+c.
+
+The teacher’s final summative rating will be used to determine into which
+group the teacher is placed. Teachers shall be placed in Groups Two
+through Four based upon an average of the three (3) most recent
+summative ratings calculated as follows:
+
+d.
+
+e.
+
+11222602v3
+
+i.
+
+i.
+
+Ratings of Accomplished shall equal four (4) points;
+
+ii.
+
+Ratings of Skilled shall equal three (3) points;
+
+iii.
+
+Ratings of Developing shall equal two (2) points;
+
+iv.
+
+Ratings of Ineffective shall equal one (1) point.
+
+The sum of the teacher’s most recent three (3) years shall be added
+together, divided by three (3), and rounded to the nearest whole number
+to find the “average” rating. (If the number ends with less than 0.5 it will
+round down and if the number ends with 0.5 or greater it will round up.)
+The teacher shall then be placed in the appropriate Group based on
+his/her average rating.
+i.
+
+Teachers who are rated Accomplished and who are not evaluated
+every year, shall be deemed to be Accomplished for the years in
+which they are not evaluated.
+
+ii.
+
+Teachers who are rated Skilled and who are not evaluated every
+year, shall be deemed to be Skilled for the years in which they are
+not evaluated.
+
+iii.
+
+Teachers who have fewer than three (3) years of evaluations
+(excluding those rated Accomplished and Skilled as described
+above) will receive zero (0) points for those years for which they
+have no evaluation rating.
+
+The order of reductions within each Group shall be:
+
+29
+
+6.04
+
+i.
+
+Members under limited contracts beginning with the least senior;
+and then,
+
+ii.
+
+Members under continuing contracts beginning with the least
+senior.
+
+iii.
+
+No preference shall be given to any member based on seniority,
+except when deciding between members who have comparable
+evaluations. Evaluation ratings within the same Group will be
+considered comparable with each other.
+
+4.
+
+Teachers whose continuing contracts are suspended shall have the right of
+restoration to continuing service status in reverse order of layoff, if and when
+teaching positions become vacant or are created for which any of such teachers
+are or become qualified. After restoration of teachers with continuing contracts,
+those on limited contracts shall also be restored in the manner described above.
+Restoration rights for teachers whose limited contracts were suspended shall
+commence upon the effective date of suspension and shall continue through the
+next three (3) full school years, unless removed from the recall list as stated
+below. For teachers with continuing contracts, restoration rights shall continue
+until the teacher is returned to a teaching position or removed from the recall list
+as stated below.
+
+5.
+
+A teacher whose contract is suspended shall be placed on a recall list stating
+years of continuous service to the district, subject(s) certified/licensed to teach,
+and type of contract held prior to suspension. A teacher on the recall list shall be
+offered a contract for a position for which he/she is certificated/licensed (or can
+become certificated/licensed) as positions become available and in inverse order
+- last discharged, first recalled. No teacher new to the district will be employed
+until all properly certificated/licensed teachers on the recall list have been offered
+a contract for a vacant position. The refusal of a recall to a part-time position
+shall not result in the teacher being removed from the recall list, unless the
+teacher was employed part-time prior to the layoff. A refusal of a recall to a fulltime position shall result in a teacher being removed from the recall list. Recall
+notices shall be sent to the last address on file with the Board. Teachers shall be
+responsible for updating the Board on any change of address.
+
+6.
+
+Insurance coverages provided to the certified/licensed staff may be continued by
+the teacher whose contract has been suspended under this provision, at his/her
+own cost, for the time period required by federal law.
+
+LAYOFF
+Reductions in force that are effectuated by financial reasons shall be subject to
+arbitration using the services of the American Arbitration Association.
+The Board or bargaining unit may choose to use the expedited arbitration service of the
+American Arbitration Association. The party choosing to use the expedited service shall
+be responsible for the additional expense of said service.
+
+11222602v3
+
+30
+
+6.05
+
+6.06
+
+TEACHER CONTRACTS/CONTINUING CONTRACTS
+A.
+
+As a general rule, a teacher new to the system will be given a one-year limited
+contract and upon a satisfactory completion of the year's work, a second limited
+contract of one (1) to three (3) years may be granted to a qualified degree
+teacher. Part-time teachers will receive one (1) year contracts.
+
+B.
+
+Eligibility for and the granting of continuing contracts shall be governed by
+Revised Code Section 3319.11, except as noted herein. If a teacher becomes
+eligible for a continuing contract in the year his/her limited contract expires, or if a
+teacher becomes eligible for a continuing contract during the term of a multi-year
+contract, he/she may request consideration for a continuing contract. In both
+cases the following procedure shall be followed:
+1.
+
+The teacher is required to inform the Treasurer in writing of his/her
+request to be considered for a continuing contract no later than
+September 1 of the year he/she wishes to be considered for a continuing
+contract. The Treasurer will take the necessary actions to notify the
+immediate supervisor (for evaluation purposes) and the Superintendent.
+
+2.
+
+The teacher must submit a valid certificate or other appropriate
+verification to the Superintendent by March 1 of the year in which the
+teacher is requesting consideration for a continuing contract.
+
+3.
+
+The Board of Education, prior to June 1, shall at a regular meeting
+consider on individual merit the teacher’s request.
+
+4.
+
+If the Board rejects the request or fails to take action on the request, it
+shall be based on reason(s) that have been identified in the evaluation
+process between the employee and his/her evaluator(s). If the teacher is
+not granted a continuing contract, the teacher will receive a one-year
+contract for the next school year, unless non-renewal proceedings were
+properly instigated during the contract year in question.
+
+C.
+
+Teachers who are not to be re-employed shall be notified in writing on or before
+June 1. If a teacher does not desire re-employment, he/she should notify the
+Board, in writing, at the earliest possible date, preferably not later than May 31.
+Final deadline is July 10.
+
+D.
+
+Notice of annual salary will be given by the Treasurer no later than July 1.
+
+FBI / BCII (BACKGROUND) CHECK
+Any current licensed professional staff member shall be required to undergo a criminal
+record check upon renewal of any license, certificate, or permit. In the case of a
+professional staff member holding a permanent teaching certificate, such criminal
+background check shall occur no less than every five (5) years on or before September
+5 of the fifth year.
+
+11222602v3
+
+31
+
+Bargaining unit employees will be responsible for a total of twenty dollars ($20.00) for
+the combined cost of the BCI / FBI checks. The Willard Board of Education is
+responsible for the remaining costs associated with the background check.
+6.07
+
+TEACHER EVALUATION
+A.
+
+Evaluation Procedure Defined
+The evaluation procedure established in this agreement shall conform to the
+framework for the evaluation of teachers developed pursuant to Section
+3319.112 of the Ohio Revised Code. Each completed evaluation will result in the
+assignment of a teacher effectiveness rating. The teacher effectiveness rating
+shall be derived from a summative evaluation where 50% of the overall
+evaluation is based on student growth measures as provided for in this
+agreement and 50% of the overall evaluation is based on a teacher’s
+performance rating as provided for in this agreement.
+
+B.
+
+Purpose
+The purposes of teacher evaluation are:
+
+C.
+
+1.
+
+To serve as a tool to advance the professional development of teachers.
+
+2.
+
+To improve instruction.
+
+3.
+
+To assist teachers and administrators in identifying and developing best
+educational practices in order to provide the greatest opportunity for
+student learning and achievement.
+
+Application
+The teacher evaluation procedure contained in this agreement applies to the
+following employees in the District:
+
+D.
+
+11222602v3
+
+1.
+
+Teachers working under a license issued under Chapter 3319 of the
+Revised Code or working under a professional or permanent certificate
+issued under former Section 3319.222 of the Revised Code who spend at
+least 50% of their time providing student instruction.
+
+2.
+
+The evaluation of other bargaining unit personnel will comply with the
+same procedures and documents except without the student growth
+component.
+
+Schedule for Evaluation
+1.
+
+Each teacher shall be evaluated at least once each school year.
+
+2.
+
+Each evaluation shall consist of at least two (2) formal observations and
+at least two (2) classroom walkthroughs.
+
+32
+
+3.
+
+The evaluation shall be completed no later than the first day of May and
+the teacher being evaluated shall receive a written report of the results of
+this evaluation not later than the tenth day of May.
+
+4.
+
+Notwithstanding paragraph 1, the Board may evaluate each teacher who
+received a rating of Accomplished on the teacher’s most recent
+evaluation conducted under this article once every three school years, so
+long as the teacher’s student academic growth measure, for the most
+recent school year for which data is available, is average or higher, as
+determined by the department of education. In that case, the triennial
+evaluation shall be completed by the first day of May of the applicable
+school year, and the teacher shall receive a written report of the results of
+the evaluation by the tenth day of May of that school year. In any year
+that a teacher is not formally evaluated pursuant to this Article as a result
+of receiving a rating of Accomplished on the teacher’s most recent
+evaluation, an individual qualified to evaluate a teacher under Article
+6.07(I) shall conduct at least one formal observation of the teacher and
+hold at least one conference with the teacher.
+
+5.
+
+Notwithstanding paragraph 1, the Board may evaluate each teacher who
+received a rating of Skilled on the teacher’s most recent evaluation
+conducted under this article once every two school years, so long as the
+teacher’s student academic growth measure, for the most recent school
+year for which data is available, is average or higher, as determined by
+the department of education. In that case, the biennial evaluation shall be
+completed by the first day of May of the applicable school year, and the
+teacher shall receive a written report of the results of the evaluation by
+the tenth day of May of that school year. In any year that a teacher is not
+formally evaluated pursuant to this Article as a result of receiving a rating
+of Skilled on the teacher’s most recent evaluation, an individual qualified
+to evaluate a teacher under Article 6.07(I) shall conduct at least one
+formal observation of the teacher and hold at least one conference with
+the teacher.
+
+6.
+
+Notwithstanding paragraph 1, the Board may elect not to conduct an
+evaluation of a teacher who meets one of the following requirements:
+
+7.
+
+11222602v3
+
+a.
+
+The teacher was on leave from the School District for fifty percent
+(50%) or more of the school year, as calculated by the Board.
+
+b.
+
+The teacher has submitted notice of retirement and that notice has
+been accepted by the Board not later than the first day of
+December of the school year in which the evaluation is otherwise
+scheduled to be conducted.
+
+Notwithstanding the foregoing, teachers in their first three (3) years of
+employment with the Board will be evaluated each year. Nothing
+contained herein shall affect the Board’s ability to evaluate a teacher in
+accordance with Article 6.07(F)(1)(b) or those teachers who have
+requested consideration for a continuing contract under 6.05(B).
+
+33
+
+E.
+
+F.
+
+Criteria for Performance Assessment
+1.
+
+A teacher’s performance shall be assessed based on criteria set forth in
+the Evaluation Instrument, Appendix F, of this contract.
+
+2.
+
+All monitoring or observation of the work performance of a teacher shall
+be conducted openly and with full knowledge of the teacher.
+
+Observations
+1.
+
+2.
+
+G.
+
+a.
+
+A minimum of two (2) formal observations, at least fifteen (15)
+school days apart, shall be conducted to support each
+performance assessment. A formal observation shall last a
+minimum of thirty (30) minutes. A teacher shall receive written
+documentation/feedback after the completion of each formal
+observation. Such documentation shall be supplied within five (5)
+school days.
+
+b.
+
+If the Board has entered into a limited contract or extended limited
+contract with the teacher pursuant to Section 3319.11 of the
+Revised Code, the Board shall perform a minimum of three formal
+observations during the evaluation cycle in any school year in
+which the Board may wish to declare its intention not to reemploy
+the teacher pursuant to ORC 3319.11. Any member in the final
+year of a limited contract or extended limited contract shall be
+observed three (3) times with at least fifteen (15) school days
+between the observations.
+
+c.
+
+A teacher may request a formal observation at any time in addition
+to those required by this procedure which may then be held.
+
+Observation Conference
+a.
+
+The initial formal observation may be preceded by a conference
+between the evaluator and the teacher in order for the teacher to
+explain plans and objectives for the work situation to be observed.
+Subsequent observations may be preceded by a conference.
+
+b.
+
+A post-observation conference shall be held within five (5) school
+days after each formal observation.
+
+c.
+
+The teacher shall have the right to provide additional information
+during the post-conference in order to clarify any issue that could
+impact the observation. The evaluator will consider any relevant
+information in order to determine if any changes are appropriate.
+
+Walkthroughs
+1.
+
+11222602v3
+
+Schedule of Observations
+
+An informal observation/classroom walkthrough is a:
+
+34
+
+•
+•
+•
+2.
+
+An informal observation/classroom walkthrough is not a(n):
+•
+•
+•
+•
+
+H.
+
+Tool to inform evaluation that provides the opportunity to gather
+evidence of instruction over a series of short classroom visits;
+Process for giving targeted evidenced-based feedback to teachers;
+and
+Means for evaluators to visit classrooms more frequently and more
+purposefully.
+
+Formal observation;
+“Gotcha” opportunity for supervisors or evaluators;
+Isolated event; or
+Shortcut to the observation protocol required as part of the teacher
+evaluation process.
+
+3.
+
+All teachers benefit from informal classroom observations. Informal
+observations should not last more than 10 minutes. All walkthroughs
+should include written documentation returned to the teacher in a timely
+manner.
+
+4.
+
+Informal classroom observations should be consistent and frequent.
+Evaluators should make an effort to observe teachers at varying times of
+the day and/or instructional period.
+
+5.
+
+Although there may be no predetermined focus established (because of
+no preconference), the evaluator will find a focus based on the instruction,
+events, or discussions that are occurring in the classroom. A focus may
+also occur based upon past conferences and the need for follow-up
+observations.
+
+6.
+
+Follow-up communication to informal classroom observations is a critical
+component. Follow-up will often be in writing and the teacher will be
+provided an opportunity to submit written comments on the observation
+form. The evaluator may also offer resources to help teachers refine their
+practice.
+
+7.
+
+Teachers may identify instructional periods for the evaluator to observe
+as a means for the evaluator to collect evidence related to a specific
+focus the teacher and evaluator may be working on.
+
+8.
+
+Data collected as evidence of teacher practice may be quantitative,
+qualitative, or a combination of both. Accuracy is essential to ensure the
+credibility of the process and the evaluator.
+
+Finalization of Evaluation
+1.
+
+Written Report
+Before the evaluation cycle is final, and no later than May 10, a copy of
+the performance rubric and formal written evaluation report shall be given
+
+11222602v3
+
+35
+
+to the teacher and a conference may be held between the teacher and
+the evaluator upon request.
+2.
+
+I.
+
+J.
+
+11222602v3
+
+Completion of Evaluation Process
+a.
+
+The summative evaluation of a teacher shall be based upon
+student growth measures and performance that is assessed
+during the walkthroughs and observations. The evaluation shall
+acknowledge the performance strengths of the teacher evaluated
+as well as performance deficiencies, if any. The evaluation report
+shall be signed by the evaluator and the teacher to verify
+notification to the teacher that the evaluation will be placed in the
+teacher’s personnel file, but the teacher’s signature should not be
+construed as evidence that the teacher agrees with the contents
+of the evaluation report.
+
+b.
+
+The teacher shall have the right to make a written response to the
+evaluation and to have it attached to the evaluation report to be
+placed in the teacher’s personnel file. A copy, signed by both
+parties, may be retained by the teacher.
+
+Evaluators
+1.
+
+An evaluator must be a credentialed person listed in R.C. 3319.111(D).
+
+2.
+
+The person who is responsible for assessing a teacher’s performance
+shall be:
+a.
+
+Generally a District administrator or an ESC employee contracted
+by the District who is working in the District.
+
+b.
+
+In the event a teacher performs work under the supervision of
+more than one supervisor, one evaluator shall be designated.
+
+Student Learning Objectives (SLOs) Committee
+1.
+
+A committee consisting of four teachers and three administrators (one of
+whom must be the person completing the evaluation) must approve all
+SLOs.
+
+2.
+
+The interval of instruction should generally be the length of the course.
+
+3.
+
+The teacher must completely fill out the SLO application which must
+contain all seven components of an SLO; it must be submitted to the
+committee prior to the first Friday after the first Tuesday of the school
+year.
+
+4.
+
+The classes being tested must have a minimum of 15 students.
+
+5.
+
+The teacher must use at least two SLOs and no more than four SLOs.
+
+36
+
+6.
+
+The test being used for the SLO must be approved by the committee.
+
+7.
+
+The final results of the SLO must be reported to the evaluator prior to May
+1.
+
+8.
+
+Once approved the SLO may not be changed without approval from the
+committee.
+
+9.
+
+The following SLO cycle must be followed:
+a.
+b.
+c.
+d.
+
+10.
+
+K.
+
+6.08
+
+SLO approval
+Mid-course Check-in
+Final review of SLO Attainment and Scoring
+Discussion of the Summative Rating and Impact on Practice.
+
+It is strongly encouraged that teachers who teach the same subjects use
+the same assessments when they are appropriate and in no case should
+a single teacher create an assessment. Teachers are encouraged to
+collaborate throughout the SLO development process.
+
+Evaluation Committee
+1.
+
+A committee will be established to recommend any modifications to the
+evaluation procedure contained in the negotiated agreement and to
+develop and implement training that the committee deems necessary.
+The committee will address the school counselor issues where
+necessary.
+
+2.
+
+The committee shall be comprised of three (3) Association members
+appointed by the Association President and three (3) administrators
+appointed by the Superintendent.
+
+3.
+
+The committee will establish the ground rules by which it will operate.
+
+4.
+
+An update on OTES will be provided by the committee prior to October 1
+when changes have been made to the framework.
+
+SCHOOL COUNSELOR EVALUATION
+A.
+
+11222602v3
+
+The purpose of the Ohio School Counselor Evaluation System (OSCES) is to:
+1.
+
+Serve as a tool to advance the professional learning and practice of
+school counselors individually and collectively in the District.
+
+2.
+
+Assist counselors and administrators in identifying and developing
+educational best practices in order to provide the greatest opportunity for
+the academic achievement, social and emotional development, and
+career planning of students.
+
+37
+
+B.
+
+Evaluator Qualifications and Roles
+In the event a counselor performs work under the supervision of more than one
+(1) supervisor, a single supervisor shall be designated as the evaluating
+supervisor responsible for aspects of the OSCES including conducting of
+observations, review of metrics, and the assignment of the final summative
+rating.
+
+C.
+
+D.
+
+11222602v3
+
+Criteria for Counselor Evaluation
+1.
+
+A counselor’s evaluation, including all observations and summative
+evaluations, shall be assessed based on the Ohio Standards for School
+Counselors and the School Counselor Evaluation Rubric, as published by
+ODE.
+
+2.
+
+All monitoring or observation of the work performance of a counselor,
+when deemed appropriate, shall be conducted openly and with the full
+knowledge of the counselor.
+
+3.
+
+All results and conclusions of a counselor evaluation must be
+documented and supported by evidence.
+
+Evaluation Process
+1.
+
+No school counselor shall be subject to more than one (1) evaluation
+cycle per school year.
+
+2.
+
+The final summative evaluation shall be completed no later than the first
+(1st) day of May, and the counselor being evaluated shall receive the final
+summative evaluation document not later than the tenth (10th) day of
+May.
+
+3.
+
+The Board of Education may evaluate a counselor receiving a rating of
+“Accomplished” once every three (3) years so long as the metric of
+student outcomes is, for the most recent school year for which data is
+available, “Skilled” or higher on the evaluation rubric.
+
+4.
+
+The Board of Education may evaluate a counselor receiving a rating of
+“Skilled” once every two (2) years as long as the metric of student
+outcomes is, for the most recent school year for which data is available,
+“Skilled” or higher on the evaluation rubric.
+
+5.
+
+In any year in which a counselor will not be formally evaluated, as a result
+of having previously received a rating of Accomplished or Skilled, the
+assigned evaluator shall conduct one (1) formal observation of the
+counselor and hold one (1) post-observation conference with the
+counselor. And, at the request of the counselor, one (1) formal
+observation pre-conference will also be held. The formal observation
+process shall be held in compliance with the provisions of this Contract.
+
+38
+
+6.
+
+E.
+
+Notwithstanding the foregoing, counselors in their first three (3) years of
+employment with the Board will be evaluated each year. Likewise, every
+counselor in the final year of a limited contract and every counselor who
+has requested consideration for a continuing contract will be evaluated.
+
+Informal Observations
+1.
+
+An informal observation is a walkthrough of non-confidential activities
+during unannounced times. Such observations shall be documented on
+the form produced by ODE and will focus on one (1) or more of the
+following components:
+•
+•
+•
+•
+•
+•
+
+F.
+
+11222602v3
+
+Comprehensive School Counseling Program Plan
+Direct Services for Academic, Career and Social/Emotional
+Development
+Indirect Services: Partnerships and Referrals
+Evaluation and Data
+Leadership and Advocacy
+Professional Responsibility, Knowledge and Growth
+
+2.
+
+The walkthrough shall be at least ten (10) consecutive minutes, but not
+more than twenty (20) consecutive minutes in duration. The walkthrough
+must be of sufficient duration to allow the evaluator to assess the focus of
+the walkthrough.
+
+3.
+
+The counselor shall be provided a copy of the informal observation form,
+within five (5) working days of the observation, including all anecdotal
+documents relative to the walkthrough.
+
+Formal Observations
+1.
+
+A minimum of two (2) formal observations shall be conducted to support
+the final summative evaluation. All formal observations shall last a
+minimum of thirty (30) consecutive minutes and will take place between
+September 1 and April 30. There will be a minimum of fifteen (15) school
+days between the first two (2) formal observations.
+
+2.
+
+If, after the second formal observation, a counselor's performance is
+found deficient to the extent that adverse personnel action may result, a
+minimum of one (1) additional observation shall be conducted.
+
+3.
+
+If the Board has entered into a limited contract or extended limited
+contract with a counselor pursuant to section 3319.11 of the Ohio
+Revised Code, the Board shall perform a minimum of three (3) formal
+observations during the evaluation cycle in any school year in which the
+Board may wish to declare its intention not to re-employ a counselor
+pursuant to division (B), (C)(3), (D), or (E) of that section.
+
+4.
+
+If requested by the counselor, each formal observation may be preceded
+by a conference between the evaluator and the counselor, in order for the
+
+39
+
+counselor to explain the plans and objectives for the work situation to be
+observed.
+
+G.
+
+11222602v3
+
+5.
+
+A post-observation conference shall be held no more than five (5) working
+days following the observation. The conference shall be used to inform
+the counselor if observed practices are aligned with the expectations that
+are identified in the professional growth or improvement plan and give the
+counselor the opportunity to provide additional evidence of performance.
+
+6.
+
+The evaluator shall consider and cite evidence gathered from a variety of
+sources in addition to the observation when completing the counselor
+evaluation rubric. Sources of evidence include: professional growth and
+improvement plans, conferences (pre, post, etc.), formal and informal
+observations during the evaluation cycle, and any evidence provided by
+the counselor.
+
+7.
+
+A counselor may request a formal observation at any time in addition to
+those required by this procedure.
+
+Finalization of the Evaluation Cycle
+1.
+
+Each evaluation will result in a final summative rating of “Accomplished,”
+“Skilled,” “Developing,” or “Ineffective.” The final summative rating is
+based on a holistic review of all seven (7) dimensions of the Ohio School
+Counselor Evaluation System. The score shall not be weighted in such a
+way that one (1) area of the evaluation has a higher importance than any
+other. The evaluation shall acknowledge the performance strengths and
+performance deficiencies, if any, of the counselor evaluated. The
+evaluator shall note the data used to support the conclusions reached in
+the formal evaluation report. No later than May 10, the evaluation report
+shall be signed by the evaluator and then signed by the counselor to
+verify notification that the evaluation will be placed on file. The counselor's
+signature should not be construed as evidence that the counselor agrees
+with the contents of the evaluation report.
+
+2.
+
+Before the evaluation is considered complete, a copy of the formal written
+evaluation report shall be given to the counselor and a conference shall
+be held between the counselor and the evaluator.
+
+3.
+
+The final summative evaluation shall be an accurate reflection of all
+informal and formal observations, professional growth or improvement
+plans, Metric(s) of Student Outcomes, and evidence provided by the
+counselor.
+
+4.
+
+The counselor shall have the right to make a written response to the
+evaluation and to have it attached to the evaluation report to be placed in
+the counselor's personnel file.
+
+40
+
+H.
+
+I.
+
+Professional Growth Plans
+1.
+
+Counselors with a summative evaluation rating of Accomplished will
+develop a self-directed professional growth plan, for the next school year.
+
+2.
+
+Counselors with a summative evaluation rating of Skilled or Developing
+shall develop a professional growth plan collaboratively with their
+credentialed evaluator for the next school year. Counselors with a
+Developing rating will have their professional growth plan approved by
+their evaluator.
+
+3.
+
+Professional growth plans for a school year shall be developed not later
+than September 1 of each school year and shall be one academic year in
+duration.
+
+4.
+
+Professional growth plans shall describe the specific performance
+expectations, resources, and assistance to be provided.
+
+Professional Improvement Plans
+1.
+
+A professional improvement plan is a clearly articulated assistance
+program used for a counselor who has a final summative rating of
+“Ineffective” on their most recent final summative evaluation.
+Administration will assign the credentialed evaluator for the evaluation
+cycle and approve the improvement plan as set forth in this agreement.
+
+2.
+
+The professional improvement plan shall include:
+
+3.
+
+J.
+
+a.
+
+Specific measurable performance expectations, resources and
+assistance to be provided; and,
+
+b.
+
+A desired level of performance that is expected and a reasonable
+time period to correct deficiencies; and,
+
+c.
+
+Professional Development opportunities that will be provided by
+the Board, upon approval of the Superintendent.
+
+Improvement plans for the next school year shall be developed not later
+than September 1 of each school year and shall be one (1) academic
+year in duration.
+
+Personnel Action Requirements
+The evaluation procedure contained in this agreement shall not be used in any
+decision concerning the assignment, reassignment, contract status, non-renewal,
+termination, reduction or recall of any counselor prior to September 1, 2017.
+
+K.
+
+Professional Development
+1.
+
+11222602v3
+
+Annually the Board may provide professional development and financial
+resources to continue and accelerate each counselor’s professional
+
+41
+
+growth and improvement and to provide support to counselors who are
+placed on a Professional Improvement Plan.
+2.
+L.
+
+6.09
+
+An update on the evaluation will be provided by the Evaluation Committee
+when changes have been made to the evaluation framework.
+
+The Association and the Board shall bargain all items materially impacting the
+terms and conditions of employment for the Ohio School Counselor Evaluation
+System in accordance with the rules set forth in Ohio Revised Code 4117.
+
+TEACHER TRANSFER
+A.
+
+Voluntary Transfer (Teacher Initiated)
+1.
+
+All members of the bargaining unit shall have the opportunity to apply for
+newly created, certified/licensed positions and/or existing job openings.
+
+2.
+
+These positions shall be provided by list to all members of the bargaining
+unit monthly during the school year. If a vacancy occurs during the
+summer months when time is a critical factor in filling vacancies, the
+Superintendent shall notify directly by mail and/or telephone service all
+employed staff that are certified/licensed for the position that is vacant or
+that is anticipated to be vacant. Notification shall also be made to the
+Association president.
+
+3.
+
+The list/notification so provided will specify for each position:
+a.
+b.
+c.
+
+the grade level and/or subject area
+any known salary differentials
+building
+
+It is recognized that all building assignments are tentative and that a
+change in building specifications will entitle the teacher to withdraw
+his/her application.
+
+B.
+
+11222602v3
+
+4.
+
+Applications for positions must be submitted to the Superintendent of
+schools within five (5) school days.
+
+5.
+
+The final decision on teacher assignment rests with the Superintendent of
+schools.
+
+Necessary Transfers
+1.
+
+Teachers will not be involuntarily transferred from one position to another
+without first having an opportunity for a conference with the
+Superintendent of schools, and being notified, in writing, at the earliest
+possible time before the effective date of transfer.
+
+2.
+
+A teacher transferred because a position is closed may file a written
+request to return to that position if it is reopened.
+
+42
+
+6.10
+
+3.
+
+When involuntary transfers are made, teachers affected shall receive
+notice of open positions. Such teachers may submit a written request
+listing, in order of preference, those open positions to which they feel they
+possess the necessary certification/licensure and qualifications and to
+which they would like to be transferred.
+
+4.
+
+A teacher subject to involuntary transfer shall be placed in another
+teaching position.
+
+5.
+
+The final decision on teacher assignments rests with the Superintendent
+of schools.
+
+PROFESSIONAL DEVELOPMENT COMMITTEE
+A.
+
+Purpose
+A Local Professional Development Committee (LPDC) shall be established to
+oversee and review professional development plans for course work, continuing
+education units, and/or other equivalent activities. In addition, the LPDC shall be
+responsible for scheduling, planning, and providing appropriate professional
+development activities for certificated/licensed employees. Such activities shall
+be in keeping with the mission statement of the school district and the needs of
+the teachers and students. The LPDC shall have no authority to alter the terms
+of this Collective Bargaining Agreement nor any individual's employment
+contracts.
+
+B.
+
+Term of Office
+The term of office for members serving on the Committee shall be two (2) years.
+Terms shall be staggered. One-half (1/2) of the initial appointments shall be for
+three (3) years to facilitate the staggered terms.
+
+C.
+
+Committee Composition and Selection
+1.
+
+The Committee shall be comprised of five (5) members as follows:
+three (3) teachers
+two (2) administrators.
+
+D.
+
+2.
+
+The teacher members shall be appointed by the WEA president. The
+administrator members shall be appointed by the Superintendent.
+
+3.
+
+In the event of a vacancy, the Committee member shall be replaced in
+accordance with 2 above.
+
+Committee Guidelines
+The LPDC shall be responsible for establishing the guidelines by which the
+Committee is to function. These guidelines should include, but not necessarily
+be limited to, the following:
+
+11222602v3
+
+43
+
+E.
+
+F.
+
+G.
+
+1.
+
+A set of bylaws governing its operation, subject to statute and provisions
+herein. Decisions shall be made by majority vote of the Committee
+members present and voting, including the selection of the chairperson.
+
+2.
+
+The criteria that will be used to determine whether or not an Individual
+Professional Development Plan (IPDP) will be approved, as well as the
+procedures for assessing the extent to which a staff member's IPDP has
+been accomplished.
+
+Training
+1.
+
+Members of the LPDC shall be afforded the opportunity to attend training
+on the purpose, responsibilities, functioning, and legal requirements of
+LDPC’s.
+
+2.
+
+LPDC training for Committee members shall constitute appropriate
+“equivalent activities” for purposes of the Committee members own
+individual development plans if they so decide by majority vote.
+
+Meetings and Compensation
+1.
+
+The LPDC shall meet as often as the members deem necessary to
+complete their work. Not later than September 10 each year, the
+Committee shall post in each building their meeting schedule. Additional
+meetings may be scheduled as necessary.
+
+2.
+
+Each teacher member shall be paid eighteen dollars ($18.00) per hour for
+up to forty (40) hours annually for committee work performed outside the
+regular workday or work year.
+
+Appeals Process
+Within thirty (30) days of publication of the Ohio State Department of Education
+regulations/guidelines on LPDC appeals, the WEA and the Board shall meet to
+bargain the appeals procedure which will herein apply.
+
+6.11
+
+PROFESSIONAL CONDUCT
+The Association and the Board agree that all employees should exhibit appropriate
+conduct in accordance with established policies of the Willard City Schools. Should
+disciplinary measures be necessary, employees are guaranteed the following procedural
+rights. These measures are designed to encourage appropriate conduct and ensure that
+staff members adhere to the standards established by the Willard Board of Education, as
+well as to provide due process rights for teachers.
+All disciplinary actions will be conducted in a fair and consistent manner. Nothing herein
+shall preclude the Administration from issuing more than one (1) warning or written
+reprimand. Based upon the severity of the situation, deviation from the procedural order
+may be warranted. Disputes over application of these procedures shall be subject to the
+negotiated grievance procedure.
+
+11222602v3
+
+44
+
+Step One: NOTIFICATION Written notification of the problem with expected corrective
+action. Appropriate administrative help will be offered.
+This warning is to be written by the building principal with a
+copy being issued to the teacher and a copy provided to
+the Superintendent.
+A copy will be placed in the
+employee’s personnel file.
+Step Two: REPRIMAND
+
+A written reprimand shall be made by the building principal.
+It shall include a copy of previous warning(s) and
+corrective action to be taken. Appropriate administrative
+help will be offered. A copy will be issued to the teacher
+and a copy provided to the Superintendent. A copy will be
+placed in the employee’s personnel file.
+
+Step Three: SUSPENSION A one (1) day suspension from work with or without a
+corresponding loss of pay may be given by the
+Superintendent. Copies of the written notice shall be
+provided to the building principal, placed in the employee’s
+personnel file, and to the Treasurer of the Board of
+Education.
+Step Four: SUSPENSION
+
+A three (3) day suspension from work with or without a
+corresponding loss of pay may be given by the
+Superintendent. Copies of the written notice shall be
+provided to the building principal, placed in the employee’s
+personnel file, and to the Treasurer of the Board of
+Education.
+
+DUE PROCESS FOR SUSPENSION
+Due process for suspensions shall consist of the following:
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+
+Written notification of the nature of the offense;
+Opportunity for the teacher to have a conference with the building
+principal (if applicable);
+Opportunity for a just cause hearing before the Superintendent;
+Right of representation at such hearing by an individual of his/her choice;
+Written disposition by the Superintendent within five (5) workdays of the
+date of the conference.
+Written appeal by the teacher to meet with the Board within seven (7)
+days of the written disposition of the Superintendent; and
+Meeting with the Board within thirty (30) days of written appeal. The
+Board shall have the authority to modify or vacate the Superintendent’s
+disposition. All hearings related to suspensions shall be in executive
+session.
+
+FILES
+After three (3) years, a warning or written reprimand on file shall not be the basis of
+future disciplinary action provided there has been no reoccurrence of the offense in the
+subsequent three (3) years.
+
+11222602v3
+
+45
+
+6.12
+
+REHIRE OF RETIRED TEACHERS
+A.
+
+A retiree, with ten (10) or more years of service in a public, private, or parochial
+school accredited by the State of Ohio and public school experience accredited
+by a State Department of Education, shall be paid at the ten-year salary step
+level of the BS column. A retiree with less than ten (10) years of service in a
+public, private, or parochial school accredited by the State of Ohio and public
+school experience accredited by a State Department of Education, shall be paid
+at the actual salary step level of experience of the BS column and will advance
+up to ten (10) years. The retiree will not advance past ten (10) years on the
+salary schedule based on additional years of service or additional training so long
+as employed by the Board. This section shall expressly supersede Chapter 3317
+of the Ohio Revised Code. A retiree may be hired on a part-time basis, in which
+case salary shall be prorated based upon a full workday.
+
+B.
+
+A retiree shall receive a one-year limited teaching contract which shall expire
+automatically at the end of the stated term. No notice of non-renewal is required.
+Continuation of the employment of a retiree through offering new one-year limited
+contracts which automatically expire shall be at the election of the Board and
+upon recommendation of the Superintendent. A retiree is not eligible for a
+continuing teaching contract regardless of years of employment as a retiree with
+the Board.
+The parties specifically waive all rights for such employees pursuant to ORC
+§§3319.11 and 3319.111. Other provisions of the Negotiated Agreement and
+ORC §3313.53 are waived with respect to retiree eligibility for supplemental
+contracts, which shall only be offered to a retiree at the Superintendent’s
+discretion.
+
+C.
+
+A retiree shall accumulate and may use sick leave but shall not be entitled to
+severance pay upon conclusion of employment as a retiree. The district may
+advance a re-employed teacher up to five (5) days sick leave.
+
+D.
+
+A retiree is entitled to participate in insurances provided to bargaining unit
+members only by paying the full cost of such insurances.
+
+E.
+
+A retiree shall not accumulate seniority in the bargaining unit, and has no right of
+recall in the event of a reduction in force.
+
+F.
+
+The Board and the Association expressly intend that this article supersede any
+differing or inconsistent terms of the Negotiated Agreement or provisions of the
+Ohio Revised Code which pertain to teacher employment, including but not
+limited to, terms, provisions and statutes pertaining to teacher salary and salary
+schedule advancement, contract status, duration of contract, procedural
+requirements for contract non-renewal, evaluation requirements related to
+teacher contract non-renewal, reduction in force, seniority and severance pay,
+and regardless of whether such terms or provisions are specifically cited herein.
+
+G.
+
+Any provisions of the Negotiated Agreement governing mentorship shall not
+apply to a retiree.
+
+11222602v3
+
+46
+
+ARTICLE VII – WORKING CONDITIONS
+7.01
+
+ACADEMIC FREEDOM
+A.
+
+Academic Freedom will be guaranteed to professional staff members in order to
+create in the classroom an atmosphere of freedom which permits students to
+raise questions dealing with critical issues of the time and which maintains an
+environment conducive to the study, investigation, presentation and interpretation
+of facts which stress the interplay of ideas. The professional staff member is
+responsible for exercising his/her judgment in selection of educational
+methodology and/or selecting for discussion those relevant issues which he/she
+may deem to be of value to the maturity and understanding of the students
+involved.
+
+B.
+
+The private life of a professional staff member is not within the appropriate
+concern or attention of the Board except as it may directly prevent the
+professional staff member from properly performing his/her assigned functions.
+
+C.
+
+Each teacher is the final authority in evaluating students in his/her charge with
+respect to grades. It is understood that all grading and evaluating of students
+must comply with all relevant Board policy and with the Administrative policies
+and procedures as stated in the teacher's handbook of the respective buildings.
+A change of any student's grade, either in an individual grading period or final
+grade, without the teacher's written consent, will occur only if it is demonstrated
+that the grade was given to the teacher and shall include, in writing, the reason(s)
+for the change.
+If the teacher objects to said change, he/she shall appeal the change to the
+building principal. If still not satisfied, the teacher may appeal to the Board of
+Education through its designee, the Superintendent of schools.
+The final resolution is the responsibility of the Superintendent of schools. The
+Superintendent shall notify, in writing, the building principal and teacher of his/her
+decision and shall give written reason(s) for the decision.
+Any grievance(s) regarding Section 7.01, subsection C, is restricted to procedural
+compliance.
+Any issues/complaints regarding Section 7.01, subsection A, shall be restricted
+to consideration by the Labor Management Committee. The issue/complaint
+shall be presented to the Labor Management Committee for discussion and final
+resolution.
+
+7.02
+
+ASSOCIATION RIGHTS AND RESPONSIBILITIES
+A.
+
+11222602v3
+
+Inasmuch as the Association is recognized as the sole organization representing
+the teachers, the Board recognizes that in order to effectively represent and
+communicate with its members, certain services are necessary.
+
+47
+
+B.
+
+The Board therefore authorizes the Association the following rights as the only
+representative of the certified/licensed staff.
+1.
+
+To use the facilities of any building for meetings, without fee, upon
+notification of the administrator in charge of such building. Permission to
+use such facilities shall be given as long as it does not interfere with any
+previously authorized activity in said building.
+
+2.
+
+To use Board owned equipment including computers, calculators,
+duplicating equipment, and audio-visual equipment at times which do not
+interfere with the operation of the school system. Any expendable
+supplies, such as paper, will be supplied by the Association. If Board
+supplies are used, the Association shall notify the Board of such use, and
+shall reimburse the Board accordingly. The Association shall pay for
+damage to equipment which occurs during Association use, except for
+damage from normal wear and tear.
+
+3.
+
+To use the school internet, email system and the inter-school mail system
+in the schools' offices to distribute Association bulletins, newsletters, or
+other circulars.
+
+4.
+
+To use bulletin boards in teacher lounges or workrooms to disseminate
+information to teachers.
+
+5.
+
+To use telephones in any building to carry out Association business. Any
+fees or toll call charges shall be paid by the Association through use of
+credit cards or collect calls. These calls are not to be made at a time that
+interferes with duties assigned by the Board and Administration.
+
+6.
+
+All employees shall be provided one (1) copy of the teacher personnel
+directory.
+
+7.
+
+The Board shall provide the Association with the name(s), address(es),
+and telephone number(s) of newly hired certified/licensed staff, providing
+the newly hired employee agrees. The Association may participate in the
+new teacher orientation program.
+
+8.
+
+The Association president shall receive a copy of the Board agenda.
+The Association shall receive a copy of the Board's record of
+proceedings.
+The Association shall have on-line access to existing policies and all
+subsequent updates.
+
+11222602v3
+
+48
+
+7.03
+
+CLASS SIZE
+A.
+
+It is recognized by the Association and the Board that pupil-teacher ratio is an
+important aspect of an effective educational program. The Board agrees to the
+following maximums for class size:
+K-2
+3-4
+5-6
+7 - 12
+
+24 students
+26 students
+28 students
+30 students
+
+B.
+
+If a class exceeds the maximum, a teacher may request a meeting of the Class
+Size Committee, which will consist of the building principal, the teacher, and an
+Association representative. The Committee will make a recommendation to the
+Superintendent, who will act on the recommendation.
+
+C.
+
+Should the class size exceed the above stated limits, the Superintendent may
+take one (1) of the following actions:
+1.
+
+assign a daily voluntary community aide
+
+2.
+
+assign a daily educational aide
+
+NOTE: Times to be set by the Superintendent with the amount of time increasing
+in proportion to the number of students in excess of the above maximum.
+
+7.04
+
+D.
+
+Prior to the implementation of "inclusion" the parties shall meet to discuss the
+effects of such implementation.
+
+E.
+
+Administrative action may be taken when two or more non-English speaking
+students are in a grade level. The grade level teacher(s) and building principal
+will make a recommendation to the Superintendent, who may act on the
+recommendation.
+
+EMPLOYEES RIGHT OF ACCESS TO PERSONNEL FILES
+All employees shall have the right of access to their personnel file compiled by the
+school district upon request to the Superintendent. As provided by law, each employee
+shall have the right to question items placed there by the school district.
+
+7.05
+
+INFORMATION
+Upon request, the following information will be furnished to the WEA president:
+1.
+
+Salary grid of all employees represented by the WEA.
+
+2.
+
+Class Size Data:
+a.
+b.
+
+3.
+
+11222602v3
+
+actual for each semester
+projections - when prepared
+
+New Employee List (address and building assignment)
+49
+
+7.06
+
+4.
+
+Sick Leave Data
+
+5.
+
+Personal Leave Data
+
+6.
+
+July Tax Budget
+
+7.
+
+Annual Appropriations
+
+8.
+
+Year-end Treasurer's Report by Detailed Fund/Function/Object Number
+
+9.
+
+Monthly Treasurer's Report - Same format as above
+
+10.
+
+SM-1 and SM-2's
+
+11.
+
+Amended Certificates of Estimated Resources
+
+12.
+
+Membership Data
+
+SCHOOL CALENDAR
+The following procedure will be followed in the adoption of the school calendar:
+1.
+
+A Calendar Committee will be established by either the Board of Education, the
+Association, or both parties to develop calendars in January of each school year.
+
+2.
+
+The establishment of the Committee shall be by mutual agreement of both
+parties.
+
+3.
+
+The Committee will submit to the Superintendent the proposed calendars for
+review and to be typed into format.
+
+4.
+
+Any necessary changes brought about by the Superintendent's review will be
+directed to the Committee for modification.
+
+5.
+
+The Association will submit the calendars for a vote and direct the results to the
+Superintendent.
+
+6.
+
+Any changes in the adopted calendar shall, when practicable, be made after
+consultation with the president of WEA.
+
+7.
+
+Any days made up as a result of ORC 3319.08 (after the first five (5) calamity
+days), in order to meet the teacher school year set forth in Article 7.10, will be
+made up according to an ordered list of dates provided at the time of the
+calendar adoption. The decision whether to use blizzard bags to make-up a
+maximum of three (3) days after the first five (5) calamity days will be made each
+year. Any days made up through the use of blizzard bags will count toward the
+teachers’ school year set forth in Article 7.10.
+
+8.
+
+Adoption of an official school calendar shall be at the discretion of the Board of
+Education.
+
+11222602v3
+
+50
+
+7.07
+
+TEACHING HOURS/WORKDAY
+A.
+
+Teachers shall be on duty in accordance with the school calendar.
+Teachers having supplemental contract for extended service shall work such
+additional days as are required by such contracts.
+
+B.
+
+The normal school day shall be seven and one-half (7 1/2) continuous hours,
+including a lunch period of no less than thirty (30) consecutive minutes.
+
+C.
+
+Applicable state minimum standards regarding teachers non-pupil contact time or
+periods shall be observed by the Board. Each full-time secondary and junior high
+teacher shall be provided a daily conference period equal to at least forty-five
+(45) minutes in length during the actual teaching day.
+Full-time elementary teachers shall have two hundred (200) minutes of
+conference time each week including specials.
+
+7.08
+
+D.
+
+Teachers assigned to substitute using any of the conference time referred to in
+paragraph C above are entitled to compensation at the rate of eighteen dollars
+($18.00) per period. Teachers that volunteer to substitute shall not receive
+additional compensation. For purposes of this provision, a period shall equal
+forty-five (45) minutes. The eighteen dollar ($18.00) rate will be prorated if more
+or less than a period.
+
+E.
+
+Teachers shall not lose any salary on days school is closed due to inclement
+weather or public utility curtailment. However, such days as are designated for
+make-up days due to the closing of schools shall not call for additional
+compensation excepting only to the extent that total days of duty for a teacher
+may not exceed that provided in his/her contract and/or the applicable school
+calendar except as otherwise provided by law.
+
+F.
+
+In the absence of the regular teacher, a qualified substitute teacher will be
+obtained whenever practicable.
+
+CLASSROOM INCLUSION AND IEPS
+A.
+
+A special education teacher must be involved in the development and revisions
+of, and must sign, any IEP for which he/she is to be held responsible.
+
+B.
+
+At least one (1) regular education teacher should be involved in the development
+and revisions of each student's IEP. Regular education teachers shall be invited
+on a voluntary basis but shall not be required to attend IEP conferences outside
+the workday. It is understood that the terms of the IEP must be followed by all
+teachers who provide services to such students.
+
+C.
+
+No bargaining unit member who is not a certificated/licensed school nurse shall
+be required to administer medication or to perform medical or custodial care
+services. Bargaining unit members may administer first aid as is appropriate.
+
+11222602v3
+
+51
+
+D.
+
+Teachers who service any student(s) whose education is directed by an IEP or a
+Section 504 Plan shall be notified prior to the first day of school of the students'
+name(s) and required classroom modifications. Teachers of students newly
+enrolled shall be notified as soon as possible.
+The determination of the size of classes shall take into consideration any
+extraordinary demands on physical space, teacher contact, and/or teacher
+supervision.
+
+7.09
+
+LABOR MANAGEMENT COMMITTEE
+The Board and the Association, desiring to foster better day-to-day communications, and
+to achieve and maintain a mutually beneficial relationship through the use of a
+continuing communications program to effectively maintain stable labor-management
+relations and avoid controversies have formed a Labor-Management Committee (LMC).
+At the start of each school year the Association president and the Superintendent shall
+establish a schedule of regular Labor Management Committee meetings. Additional
+meetings may be scheduled at the request of either party.
+A tentative agenda for each meeting shall be jointly prepared by the Association
+president and the Superintendent. These meetings shall not be used to adjust
+grievances, alter terms of this agreement or an individual's employment contract, nor to
+abridge management rights.
+Chairmanship of the meetings shall alternate between the parties.
+Minutes shall be prepared for each meeting of the Labor Management Committee and
+shall be distributed to all administrators, Board members, and bargaining unit members.
+
+7.10
+
+TEACHER SCHOOL YEAR
+The teacher school year shall consist of 183 days, to be divided as follows:
+178
+2
+3
+183
+
+student instruction
+parent-teacher conferences (or equivalent)
+meetings and in-service
+total
+
+Effective with the 2000-2001 school year, the teacher school year shall be lengthened by
+one day, with appropriate additional compensation of each teacher’s per diem rate. The
+purpose of this additional day shall be for professional development activities.
+The professional development day shall be earned in one (1) hour increments by
+teachers individually attending professional development activities outside the regular
+workday. This day shall be considered seven (7) hours in length. Part-time employees
+shall be required to earn professional development hours in direct proportion to their
+regular contract day.
+The Board will provide the opportunity for teachers to satisfy all of their voucher hours
+requirements for an entire school year in a single day prior to the start of the school year.
+
+11222602v3
+
+52
+
+Attendance at this opportunity is voluntary. Those teachers who choose to attend will
+satisfy the yearly voucher hours requirement in this single day. Those teachers who
+choose not to attend this one-day opportunity must satisfy the voucher hours
+requirement on their own time outside the regular contracted day.
+All earned hours must be documented on the form found in Appendix G. For the
+purpose of calculating earned hours, the year shall begin June 1 and end May 30.
+Hours earned during one year may not be carried over into the following year.
+Teachers who wish to attend other professional development activities not offered by the
+Board may do so subject to the following restrictions:
+1.
+
+The program relates to the teacher’s subject area or approved Individual
+Professional Development Plan (IPDP); or the teacher has received
+advance approval from the teacher’s assigned building principal.
+
+2.
+
+The teacher must bring evidence of completion of the activity and
+verification of the length of the program (e.g., certificate of completion or
+signature of presenter).
+
+Teachers are expected to fulfill the seven (7) hour requirement. While the Board will
+maintain records showing each teacher’s earned hours, it is each teacher’s responsibility
+to account for the time to ensure completion of the requirement.
+Failure to earn the seven (7) hours will result in a corresponding loss of pay, to be
+deducted from the teacher’s final paycheck of the contract year. Similar adjustments in
+pay will be made in the event that a teacher leaves the district before May 30 without
+completing the requirement.
+Failure to earn the required hours may be reflected in the teacher’s evaluation; however,
+the teacher shall not be subject to discipline on that basis.
+No teacher may use sick leave or personal leave to substitute for professional
+development hours, unless the teacher has been on a long-term Board-approved leave.
+7.11
+
+SCHOOL IMPROVEMENT COMMITTEE
+Any school Improvement Committee that is created as a result of the implementation of
+ESEA shall consist of teachers on a voluntary basis, an administrator from each building,
+and the Superintendent or his/her designee. Decisions of the Committee will be made
+by consensus and no SIP will be implemented without the mutual agreement of the WEA
+and the Superintendent. Compensation for work on the Committee will follow the
+guidelines set forth under the Professional Development Committee.
+
+7.12
+
+VIRTUAL LEARNING ACADEMY
+A.
+
+Teachers providing Virtual Learning Academy (VLA) services are required to be
+qualified/certified to teach in the grade/subject area that s/he will supervise.
+
+B.
+
+VLA assignments will be offered to the “teacher of record” first. If the teacher of
+record declines the assignment, the assignment will be posted for five (5)
+
+11222602v3
+
+53
+
+calendar days. The assignment will be offered to other teachers, in order of
+seniority, from among those teachers who respond to the posting.
+
+7.13
+
+C.
+
+Once a teacher has been assigned two (2) students, any additional students
+must first be offered to other teachers, in order of seniority, before any teacher
+may be assigned more than two (2) students. There will be no reduction in the
+employment status of teachers because of the implementation of the VLA.
+
+D.
+
+Certified teachers who work with students who are approved for VLA will be paid
+$175.00 if the student completes all of the lessons for the class. If the student
+completes some, but not all of the lessons for the class, then the teacher will
+receive a proportionate amount of the $175.00 based on the number of lessons
+completed compared to the total number of lessons that were available (e.g., if
+the student completes 50% of the number of available lessons, then the teacher
+will receive 50% of $175.00 or $87.50). Teachers whose students complete the
+entire VLA lesson cycle will receive an additional $35.00 (i.e., $175.00 plus
+$35.00, or $210.00 total).
+
+E.
+
+VLA instructors will submit a student completion report which will indicate the
+number of assignments completed by the student, in order to receive
+compensation. By way of example: student completed 18/18 lessons or student
+completed 32/36 lessons.
+
+DRESS CODE
+Dress should reflect a level of professionalism which enhances the learning climate of
+the building. It is important that a teacher’s dress sets a tone and helps to establish the
+teacher as a role model for students. Thus, overly casual dress will be prohibited.
+Some teaching positions may dictate the style of dress. For example, physical
+education teachers are permitted to wear clothing conducive to the teaching of physical
+activity. Exceptions can be made for “dress down days,” fundraising activities, and
+special events as deemed by the Principal.
+
+7.14
+
+PRE-EMPLOYMENT DRUG TESTING
+The Board may implement pre-employment drug testing for illegal substances. The cost
+of the program shall be borne by the Board. Testing will be conducted by a stateapproved, certified, and licensed drug testing company.
+
+11222602v3
+
+54
+
+ARTICLE VIII – DURATION AND EFFECT OF AGREEMENT
+8.01
+
+8.02
+
+CONTRARY TO LAW PROVISION
+A.
+
+Except as specifically set forth in Section 4117.10 (A) of the Ohio Revised Code,
+this contract supersedes and prevails over all statutes of the State of Ohio and all
+policies, rules, and regulations of the Board and/or Administration. However,
+should the State Employment Relations Board or any court of competent
+jurisdiction determine, after all appeals or times for appeal have been exhausted,
+that any provision herein is unlawful, such provision shall be null and void, but all
+other provisions of this contract shall remain in full force and effect. Within thirty
+(30) workdays, the parties shall meet to negotiate a replacement provision for
+any declared to be unlawful. To be valid, a replacement provision must be
+properly ratified and signed by each party.
+
+B.
+
+If, during the term of this agreement, there is a change in any applicable state or
+federal law, including changes brought about through the implementation of
+ESEA, or valid rule or regulation adopted by a federal agency or a state agency
+pursuant thereto, which would invalidate any provision of this agreement, the
+parties will meet to negotiate any necessary change in the agreement relative to
+the affected provision within sixty (60) days by demand of either party.
+
+C.
+
+If the parties cannot reach agreement with regard to 8.01 (B), either party may
+request the outstanding issues arising from changes noted in 8.01 (B) be
+presented for fact finding using the services of the Federal Mediation and
+Conciliation Service (FMCS) or the State Employment Relations Board (SERB).
+If the Fact Finding Report is rejected by either party, the parties will continue with
+the Dispute Resolution Procedure as outlined in Article I (1.04 [H]).
+
+ENTIRE AGREEMENT
+The parties acknowledge that during the negotiations which resulted in this agreement,
+each had the unlimited right and opportunity to make demands and proposals on any
+subject within the scope of bargaining. The understandings and agreements arrived at
+by the parties after the exercise of the right and opportunity are set forth herein, and the
+parties agree that this agreement constitutes the entire contract between them and
+settles all demands and issues on all matters within the scope of bargaining.
+Except as otherwise specifically provided in the written provisions of this agreement, the
+Board of Education has the sole and exclusive right to make all decisions relevant to the
+conduct and management of the schools as prescribed by law.
+
+11222602v3
+
+55
+
+8.03
+
+DURATION OF AGREEMENT
+All provisions of this agreement, unless specifically indicated otherwise, shall become
+effective July 1, 2017, and shall remain in full force and effect through June 30, 2020,
+both dates inclusive.
+
+WILLARD EDUCATION ASSOCIATION OEA/NEA
+
+WILLARD BOARD OF EDUCATION
+
+&)_
+
+fit .tf'
+IH-17
+~BO~~~R~D~P~~~s=ID=E~N~T~=----=DATE
+
+\1-Dl- :wn
+DATE
+
+/)
+
+,,~~
+~
+11 -at-!"?
+/f\J Wol•nONEEMB~
+1
+
+i
+
+.·
+
+.•
+
+k
+
+•
+
+·
+
+r
+
+J)ERINTENDENT
+
+~~LJI-/-17
+
+r £1j/;;tll-n
+
+TR . SURER
+
+NEGOTIATIONS TEAM MEMBER
+
+AGENT OF RECORD FOR SERB
+
+11222602v3
+
+c:: Q .Ar- .
+
+56
+
+APPENDIX A
+PAGE 1 of 4
+GRIEVANCE REPORT FORM
+Date of Occurrence
+
+Informal Discussion Date
+LEVEL ONE
+
+Submit to immediate supervisor after five (5) school days have elapsed since an informal
+discussion with supervisor.
+Aggrieved Person(s):
+
+Building
+
+Date submitted to immediate supervisor:
+
+20
+
+STATEMENT OF GRIEVANCE
+(Include section of contract violated)
+
+GRIEVANCE RELIEF SOUGHT
+(To be completed by grievant)
+
+Signature of Aggrieved Person(s)
+*************************************************************************************************************
+Date of Formal Meeting
+REPLY TO LEVEL ONE GRIEVANCE
+(To be returned to grievant within five (5) school days after formal meeting with grievant.)
+RESPONSE OF SUPERVISOR AND REASONS THEREFORE
+
+20
+Signature (Supervisor)
+Date of Disposition
+---------------------------------------------------------------------------------------------------------------------------------Aggrieved Response (Check One)
+Decision Accepted
+Decision to be Advanced
+Deadline Expired
+
+Signature of Aggrieved Person(s)
+20
+Date of Disposition
+
+11222602v3
+
+57
+
+APPENDIX A
+PAGE 2 of 4
+GRIEVANCE REPORT FORM
+LEVEL TWO
+Submit to Superintendent within five (5) school days after receiving disposition notice of Level One.
+Aggrieved Person(s):
+
+Building
+
+Date submitted to Superintendent:
+
+20
+
+STATEMENT OF GRIEVANCE
+(Include section of contract violated)
+
+GRIEVANCE RELIEF SOUGHT
+(To be completed by grievant)
+
+Signature of Aggrieved Person(s)
+*************************************************************************************************************
+REPLY TO LEVEL TWO GRIEVANCE
+(To be returned to grievant within five (5) school days after formal meeting with grievant.)
+
+20
+Superintendent
+
+Date of Disposition
+
+20
+Notification to Bargaining Agent
+----------------------------------------------------------------------------------------------------------------------------------------Aggrieved Response (Check One)
+Decision Accepted
+Decision to be Advanced
+Deadline Expired
+
+Signature of Aggrieved Person(s)
+20
+Date of Disposition
+
+11222602v3
+
+58
+
+APPENDIX A
+PAGE 3 of 4
+GRIEVANCE REPORT FORM
+
+LEVEL THREE
+To be placed on the agenda of the next regularly scheduled Board of Education meeting.
+Aggrieved Person(s):
+
+Building
+STATEMENT OF GRIEVANCE
+(Include section of contract violated)
+
+GRIEVANCE RELIEF SOUGHT
+(To be completed by grievant)
+
+Signature of Aggrieved Person(s)
+*************************************************************************************************************
+NOTE: The aggrieved person(s) shall have the right to be represented at the Board of
+Education meeting by counsel and/or by a representative of his/her employee organization. If
+the aggrieved, with concurrence of the bargaining agent, is not satisfied with the disposition of
+the grievance at the completion of Level Three, the grievance may, within ten (10) school days,
+be submitted to the American Arbitration Association for binding arbitration.
+
+11222602v3
+
+59
+
+APPENDIX A
+PAGE 4 of 4
+
+DECISION OF THE BOARD OF EDUCATION
+
+Date of Hearing
+
+20
+
+Date of Final Disposition of Grievance
+
+20
+
+Decision of Board of Education and Reasons Therefore:
+
+Signature, President, Board of Education
+Willard City Schools
+
+*************************************************************************************************************
+
+NOTE: The Superintendent shall submit copies of the final disposition of this grievance to the
+aggrieved, principal, Willard Education Association, Willard Board of Education, and a copy
+retained by the Superintendent.
+
+11222602v3
+
+60
+
+Appendix B-1
+WILLARD CITY SCHOOL DISTRICT
+SALARY SCHEDULE
+2017-2018 SCHOOL YEAR
+
+B.S.
+
+150 Hours
+B.S.+12
+
+B.S.+24
+
+M.A.
+
+M.A.+15
+
+MA+30
+
+$35,357
+1.00
+$36,771
+1.04
+$38,186
+1.08
+$39,600
+1.12
+$41,014
+1.16
+$42,428
+1.20
+$44,196
+1.25
+$45,964
+1.30
+$47,732
+1.35
+$49,500
+1.40
+$51,268
+1.45
+$53,036
+1.50
+$54,803
+1.55
+$56,571
+1.60
+$58,339
+1.65
+$60,107
+1.70
+$61,875
+1.75
+$63,643
+1.80
+
+$36,771
+1.04
+$38,186
+1.08
+$39,600
+1.12
+$41,014
+1.16
+$42,428
+1.20
+$44,196
+1.25
+$45,964
+1.30
+$47,732
+1.35
+$49,500
+1.40
+$51,268
+1.45
+$53,036
+1.50
+$54,803
+1.55
+$56,571
+1.60
+$58,339
+1.65
+$60,107
+1.70
+$61,875
+1.75
+$63,643
+1.80
+$65,410
+1.85
+
+$38,186
+1.08
+$39,600
+1.12
+$41,014
+1.16
+$42,428
+1.20
+$44,196
+1.25
+$45,964
+1.30
+$47,732
+1.35
+$49,500
+1.40
+$51,268
+1.45
+$53,036
+1.50
+$54,803
+1.55
+$56,571
+1.60
+$58,339
+1.65
+$60,107
+1.70
+$61,875
+1.75
+$63,643
+1.80
+$65,410
+1.85
+$67,178
+1.90
+
+$39,600
+1.12
+$41,014
+1.16
+$42,428
+1.20
+$44,196
+1.25
+$45,964
+1.30
+$47,732
+1.35
+$49,500
+1.40
+$51,268
+1.45
+$53,036
+1.50
+$54,803
+1.55
+$56,571
+1.60
+$58,339
+1.65
+$60,107
+1.70
+$61,875
+1.75
+$63,643
+1.80
+$65,410
+1.85
+$67,178
+1.90
+$68,946
+1.95
+
+$41,014
+1.16
+$42,428
+1.20
+$44,196
+1.25
+$45,964
+1.30
+$47,732
+1.35
+$49,500
+1.40
+$51,268
+1.45
+$53,036
+1.50
+$54,803
+1.55
+$56,571
+1.60
+$58,339
+1.65
+$60,107
+1.70
+$61,875
+1.75
+$63,643
+1.80
+$65,410
+1.85
+$67,178
+1.90
+$68,946
+1.95
+$70,714
+2.00
+
+$42,428
+1.20
+$44,196
+1.25
+$45,964
+1.30
+$47,732
+1.35
+$49,500
+1.40
+$51,268
+1.45
+$53,036
+1.50
+$54,803
+1.55
+$56,571
+1.60
+$58,339
+1.65
+$60,107
+1.70
+$61,875
+1.75
+$63,643
+1.80
+$65,410
+1.85
+$67,178
+1.90
+$68,946
+1.95
+$70,714
+2.00
+$72,482
+2.05
+
+*Step 24
+
+$64,243
+
+$66,010
+
+$67,778
+
+$69,546
+
+$71,314
+
+$73,082
+
+**Step 26
+
+$64,843
+
+$66,610
+
+$68,378
+
+$70,146
+
+$71,914
+
+$73,682
+
+Step 0
+Step 1
+Step 2
+Step 3
+Step 4
+Step 5
+Step 6
+Step 7
+Step 8
+Step 9
+Step 10
+Step 11
+Step 12
+Step 13
+Step 14
+Step 16
+Step 18
+Step 20
+
+*$600 added to Step 20 to create Step 24.
+**$600 added to Step 24 to create Step 26.
+All hours past degree must be graduate.
+
+11222602v3
+
+61
+
+Appendix B-2
+WILLARD CITY SCHOOL DISTRICT
+SALARY SCHEDULE
+2018-2019 SCHOOL YEAR
+
+B.S.
+
+150 Hours
+B.S.+12
+
+B.S.+24
+
+M.A.
+
+M.A.+15
+
+MA+30
+
+$35,799
+1.00
+$37,231
+1.04
+$38,663
+1.08
+$40,095
+1.12
+$41,527
+1.16
+$42,959
+1.20
+$44,749
+1.25
+$46,539
+1.30
+$48,329
+1.35
+$50,119
+1.40
+$51,909
+1.45
+$53,699
+1.50
+$55,488
+1.55
+$57,278
+1.60
+$59,068
+1.65
+$60,858
+1.70
+$62,648
+1.75
+$64,438
+1.80
+
+$37,231
+1.04
+$38,663
+1.08
+$40,095
+1.12
+$41,527
+1.16
+$42,959
+1.20
+$44,749
+1.25
+$46,539
+1.30
+$48,329
+1.35
+$50,119
+1.40
+$51,909
+1.45
+$53,699
+1.50
+$55,488
+1.55
+$57,278
+1.60
+$59,068
+1.65
+$60,858
+1.70
+$62,648
+1.75
+$64,438
+1.80
+$66,228
+1.85
+
+$38,663
+1.08
+$40,095
+1.12
+$41,527
+1.16
+$42,959
+1.20
+$44,749
+1.25
+$46,539
+1.30
+$48,329
+1.35
+$50,119
+1.40
+$51,909
+1.45
+$53,699
+1.50
+$55,488
+1.55
+$57,278
+1.60
+$59,068
+1.65
+$60,858
+1.70
+$62,648
+1.75
+$64,438
+1.80
+$66,228
+1.85
+$68,018
+1.90
+
+$40,095
+1.12
+$41,527
+1.16
+$42,959
+1.20
+$44,749
+1.25
+$46,539
+1.30
+$48,329
+1.35
+$50,119
+1.40
+$51,909
+1.45
+$53,699
+1.50
+$55,488
+1.55
+$57,278
+1.60
+$59,068
+1.65
+$60,858
+1.70
+$62,648
+1.75
+$64,438
+1.80
+$66,228
+1.85
+$68,018
+1.90
+$69,808
+1.95
+
+$41,527
+1.16
+$42,959
+1.20
+$44,749
+1.25
+$46,539
+1.30
+$48,329
+1.35
+$50,119
+1.40
+$51,909
+1.45
+$53,699
+1.50
+$55,488
+1.55
+$57,278
+1.60
+$59,068
+1.65
+$60,858
+1.70
+$62,648
+1.75
+$64,438
+1.80
+$66,228
+1.85
+$68,018
+1.90
+$69,808
+1.95
+$71,598
+2.00
+
+$42,959
+1.20
+$44,749
+1.25
+$46,539
+1.30
+$48,329
+1.35
+$50,119
+1.40
+$51,909
+1.45
+$53,699
+1.50
+$55,488
+1.55
+$57,278
+1.60
+$59,068
+1.65
+$60,858
+1.70
+$62,648
+1.75
+$64,438
+1.80
+$66,228
+1.85
+$68,018
+1.90
+$69,808
+1.95
+$71,598
+2.00
+$73,388
+2.05
+
+*Step 24
+
+$65,038
+
+$66,828
+
+$68,618
+
+$70,408
+
+$72,198
+
+$73,988
+
+**Step 26
+
+$65,638
+
+$67,428
+
+$69,218
+
+$71,008
+
+$72,798
+
+$74,588
+
+Step 0
+Step 1
+Step 2
+Step 3
+Step 4
+Step 5
+Step 6
+Step 7
+Step 8
+Step 9
+Step 10
+Step 11
+Step 12
+Step 13
+Step 14
+Step 16
+Step 18
+Step 20
+
+*$600 added to Step 20 to create Step 24.
+**$600 added to Step 24 to create Step 26.
+All hours past degree must be graduate.
+
+11222602v3
+
+62
+
+Appendix B-3
+WILLARD CITY SCHOOL DISTRICT
+SALARY SCHEDULE
+2019-2020 SCHOOL YEAR
+
+B.S.
+
+150 Hours
+B.S.+12
+
+B.S.+24
+
+M.A.
+
+M.A.+15
+
+MA+30
+
+$36,246
+1.00
+$37,696
+1.04
+$39,146
+1.08
+$40,596
+1.12
+$42,045
+1.16
+$43,495
+1.20
+$45,308
+1.25
+$47,120
+1.30
+$48,932
+1.35
+$50,744
+1.40
+$52,557
+1.45
+$54,369
+1.50
+$56,181
+1.55
+$57,994
+1.60
+$59,806
+1.65
+$61,618
+1.70
+$63,431
+1.75
+$65,243
+1.80
+
+$37,696
+1.04
+$39,146
+1.08
+$40,596
+1.12
+$42,045
+1.16
+$43,495
+1.20
+$45,308
+1.25
+$47,120
+1.30
+$48,932
+1.35
+$50,744
+1.40
+$52,557
+1.45
+$54,369
+1.50
+$56,181
+1.55
+$57,994
+1.60
+$59,806
+1.65
+$61,618
+1.70
+$63,431
+1.75
+$65,243
+1.80
+$67,055
+1.85
+
+$39,146
+1.08
+$40,596
+1.12
+$42,045
+1.16
+$43,495
+1.20
+$45,308
+1.25
+$47,120
+1.30
+$48,932
+1.35
+$50,744
+1.40
+$52,557
+1.45
+$54,369
+1.50
+$56,181
+1.55
+$57,994
+1.60
+$59,806
+1.65
+$61,618
+1.70
+$63,431
+1.75
+$65,243
+1.80
+$67,055
+1.85
+$68,867
+1.90
+
+$40,596
+1.12
+$42,045
+1.16
+$43,495
+1.20
+$45,308
+1.25
+$47,120
+1.30
+$48,932
+1.35
+$50,744
+1.40
+$52,557
+1.45
+$54,369
+1.50
+$56,181
+1.55
+$57,994
+1.60
+$59,806
+1.65
+$61,618
+1.70
+$63,431
+1.75
+$65,243
+1.80
+$67,055
+1.85
+$68,867
+1.90
+$70,680
+1.95
+
+$42,045
+1.16
+$43,495
+1.20
+$45,308
+1.25
+$47,120
+1.30
+$48,932
+1.35
+$50,744
+1.40
+$52,557
+1.45
+$54,369
+1.50
+$56,181
+1.55
+$57,994
+1.60
+$59,806
+1.65
+$61,618
+1.70
+$63,431
+1.75
+$65,243
+1.80
+$67,055
+1.85
+$68,867
+1.90
+$70,680
+1.95
+$72,492
+2.00
+
+$43,495
+1.20
+$45,308
+1.25
+$47,120
+1.30
+$48,932
+1.35
+$50,744
+1.40
+$52,557
+1.45
+$54,369
+1.50
+$56,181
+1.55
+$57,994
+1.60
+$59,806
+1.65
+$61,618
+1.70
+$63,431
+1.75
+$65,243
+1.80
+$67,055
+1.85
+$68,867
+1.90
+$70,680
+1.95
+$72,492
+2.00
+$74,304
+2.05
+
+*Step 24
+
+$65,843
+
+$67,655
+
+$69,467
+
+$71,280
+
+$73,092
+
+$74,904
+
+**Step 26
+
+$66,443
+
+$68,255
+
+$70,067
+
+$71,880
+
+$73,692
+
+$75,504
+
+Step 0
+Step 1
+Step 2
+Step 3
+Step 4
+Step 5
+Step 6
+Step 7
+Step 8
+Step 9
+Step 10
+Step 11
+Step 12
+Step 13
+Step 14
+Step 16
+Step 18
+Step 20
+
+*$600 added to Step 20 to create Step 24.
+**$600 added to Step 24 to create Step 26.
+All hours past degree must be graduate.
+
+11222602v3
+
+63
+
+APPENDIX C
+PAGE 1 of 3
+WILLARD CITY SCHOOLS
+EXTRACURRICULAR SALARY SCHEDULE
+Note: All computed on base of $35,357
+ATHLETICS
+
+(RANGE)
+
+Athletic Director
+Assistant Athletic Director
+Athletic Trainer
+
+22- 25
+12- 15
+1- 8
+
+Head Football Coach
+Assistant (4)
+Freshman (3)
+Middle School
+Assistant (2)
+
+16- 25
+9- 18
+7- 16
+6- 15
+5- 14
+
+Head Basketball Coach
+Assistant (2)
+Freshman
+8th Grade
+7th Grade
+
+16- 25
+9- 18
+7- 16
+6- 15
+6- 15
+
+Head Track Coach
+Assistant (4)
+Middle School
+Assistant (4)
+Track Meet Attendant
+
+11- 20
+6- 15
+6- 15
+4- 13
+0.5
+
+Head Wrestling Coach
+Assistant
+Middle School (2)
+
+13- 22
+7- 16
+5- 14
+
+Head Baseball Coach
+Assistant (2)
+
+10- 19
+6- 15
+
+Golf Coach
+Assistant Golf Coach Girls and Boys
+
+7- 16
+4- 13
+
+Head Cross Country Coach
+Assistant
+
+7- 16
+4- 13
+
+Head Tennis Coach
+Assistant
+
+7- 16
+4- 13
+
+Head Swimming Coach
+Assistant
+
+7- 16
+4- 13
+
+11222602v3
+
+64
+
+APPENDIX C
+PAGE 2 of 3
+
+Fall Head Cheerleader Advisor
+Fall Assistant
+Fall Middle School
+
+(RANGE)
+5- 14
+3- 12
+3- 12
+
+Winter Head Cheerleader Advisor
+Winter Assistant
+Winter Middle School
+
+5- 14
+3- 12
+3- 12
+
+Head Volleyball Coach
+Assistant
+Middle School (2)
+
+16- 25
+9- 18
+6- 15
+
+Head Softball Coach
+Assistant (2)
+
+10- 19
+6- 15
+
+FINE ARTS
+Instrumental Director
+Assistant
+
+11- 20
+7- 16
+
+High School/Middle School Vocal
+Elementary Vocal
+
+9- 18
+5- 7
+
+Orchestra Director
+
+9- 18
+
+Majorette Instructor
+
+1- 4
+
+Flag Instructor
+
+4- 7
+
+Theatre Director
+Assistant
+
+9- 18
+5- 14
+
+Art Club Advisor
+Middle School Art Club
+Elementary School Art Club
+
+2
+2
+2
+
+SCHOLASTIC
+Academic Challenge Advisor
+High School (2)
+Middle School (2)
+Power of Pen (2)
+Middle School Newspaper
+Annual Director (Yearbook) (2)
+Middle School Yearbook
+
+6- 15
+4- 6
+2
+3
+5- 14
+4
+
+General Service
+
+11222602v3
+
+2
+
+65
+
+APPENDIX C
+PAGE 3 of 3
+(RANGE)
+Class Advisors
+Freshman
+Sophomore
+Junior (2)
+Senior (2)
+
+1
+2
+3
+3
+
+Student Council
+High School (2)
+Middle School
+
+3
+3
+
+National Honor Society (HS)
+
+4
+
+Building Head
+
+7- 12
+
+Department Chairperson
+High School (including Music K-12)
+Middle School--Science, Social Studies, Math, Language Arts
+
+2%
+1%
+
+Team Leader—5th Grade, 6th Grade, 7th Grade,
+8th Grade, 7th/8th Grade
+
+2%
+
+Lead Mentor
+Resident Educator Mentor
+Mentor Teacher
+
+16%-25%
+5%-10%
+$200.00
+
+FFA Advisor
+
+11
+
+Tutor
+
+11222602v3
+
+$25.00/hour
+
+66
+
+APPENDIX D-1
+PREPARE IN DUPLICATE
+
+CERTIFIED/LICENSED STAFF MEMBER
+PERSONAL LEAVE FORM
+WILLARD CITY SCHOOLS
+WILLARD, OHIO
+
+Date of Request
+I request
+
+days of personal leave to be granted on
+
+I hereby certify that these matters cannot be conducted at times other than during my regularly
+scheduled workday. This leave would not otherwise be available through sick leave. Misuse of
+personal leave will result in an appropriate deduct in pay.
+If this request extends a vacation/holiday and/or is requested less than five (5) school days in
+advance of the date the leave is requested, please provide explanation below. Other personal
+leave requests do not require explanation.
+No personal leave may be used during the first and last five (5) days of the school year.
+Exceptions may be granted at the discretion of the Superintendent.
+
+Signature of Employee
+
+Signature of Principal
+
+Superintendent
+
+Date
+
+Approved
+Disapproved
+
+11222602v3
+
+67
+
+APPENDIX D-2
+PERSONAL LEAVE CONVERSION AND/OR CARRYOVER FORM
+WILLARD CITY SCHOOLS
+WILLARD, OHIO
+Choose one of the options below. Submit this completed and signed form to Cyndi Shoup,
+Treasurer. Failure to complete this form might result in personal days being accumulated
+according to Section 5.08 A.
+_____ I wish to convert two unused personal leave days into two sick days.
+_____ I wish to convert one unused personal leave day into one sick day.
+_____ I wish to roll over one personal day to accumulate a total of four personal days for the
+next school year.
+_____ I have two personal leave days left at the end of the school year. I elect to carry one
+over to a personal day for a total of four days and convert one to a sick day.
+
+Teacher’s Name
+
+Date
+Please Print Legibly
+
+Signature
+
+11222602v3
+
+68
+
+APPENDIX E
+
+The OTES model shall be the evaluation instrument and forms approved and provided
+by the Ohio Department of Education. The Board of Education shall utilize eTPES for
+all evaluations for teachers evaluated pursuant to Article 6.07.
+
+11222602v3
+
+69
+
+APPENDIX F
+
+PROFESSIONAL DEVELOPMENT HOURS
+VERIFICATION FORM
+
+Teacher’s Name
+Building Assignment
+I have completed the following professional development activity:
+Title:
+Location:
+Length (hours):
+Signature:
+Date:
+Principal’s signature (if required **)
+Teachers shall forward one (1) copy of this completed form to the building principal and retain
+one (1) copy for the teacher’s own records.
+** If the activity does not apply to the teacher’s subject area or approved IPDP, the building
+principal’s signature is also required, in advance of attending the activity.
+For verification of activities not sponsored by the Board, attach statement or certificate of
+completion, or submit with presenter’s signature below.
+*************************************************************************************
+I verify that__________________________________ completed the above-named activity and
+that the length of the program was _____ hours.
+Presenter’s Signature:
+Date:
+
+11222602v3
+
+70
+
+APPENDIX G
+
+O
+
+MEDICAL
+MUTUAL.
+
+Huron-Erie School Employee
+Insurance Association
+Ideal Plan{Non-Grandfathered)
+
+Benefits
+
+Network
+
+Benefit Period
+Dependent Age Llmil
+Blood Pint Deductible
+Overall Annual Benefit Period Maximum
+Benefit Period Deductible - SinCJie/Famllv1
+Coinsurance
+Coinsurance Out-of-Pocket Maximum
+(Excluding Deductible)- Single/Family
+Coinsurance Out-<.~f-Pocket Maximum
+(Including Deductible)- Sln~amily
+Maximum Coinsurance Out-of-Pocket (COOP)7
+(Including deductible, coinsurance out-ofpocke~ maximum and copays)- Single/Family
+Effective 01/01/14
+PhvslclaniOfflce Services
+Office Vfsft (Illness/Injury) 2.1
+Urgent Care Office Visit 2, 7
+I
+Preventive Services
+Preventive Services, In accordance with
+federal laW'
+Routine Physical Exams
+Well Child Care Services Including Exam ,
+Roullne Vision, Routine Hearing Exams,
+Well Child Care Immunizations and Laboratory
+Tests (Birth to age 21- Unllmlted)
+Roulfne Mammogram (One per benefit period}
+Routine Pap Test (One per benefit period)
+Routine Prostate Specific Antigen (PSA)
+Routine Endoscopies
+All Routine X-rays, Medical Tests and
+Laboratorv Tests
+Outpatient Services
+Surnical Services
+DfaQnoslic Services
+Physical & Occupational Therapy- Facility and
+Professional (40 visits combined per benefit
+period)
+Chiropractic Therapy- Professional Only
+(12 visits per bene Ill period\
+Speech Therapy - Facility and Professional
+(20 visits per benefit Qeriod)
+Cardiac Rehabilitation
+Emergency use of an Emergency Room 3•1
+
+II
+
+MEDICAl
+
+I
+
+Non-Network
+
+Janua!Y 151 through December 31•t
+
+26
+Rem oval UJ:!On End of Month
+0 olnts
+Unlimited
+
+$500 I $1 000
+90%
+
+$500 I $1 000
+80%
+
+$500 I $'1,000
+
+$1 ,000 I $2,000
+
+$1 ,000 I $2,000
+
+$1,500 I $3,000
+
+$1,000 I $2,000
+
+$ '1,500 I $3,000
+
+$20 copay, then 100%
+
+$20 COP.!Y.. then '100%
+
+I
+
+•..
+
+$20 copav, then 80%
+$20 capay , then 80%
+
+100%
+
+80% after deductible
+
+100%
+
+$20 capay, then 80%
+$20 capay, then 80%
+
+100%
+
+100%
+100%
+100%
+100%
+100%
+
+80% not subiect to deductible
+80% not subject to deductible
+80% nol subject to deductibl e
+80% not subject to deduclible
+80% not sUbject to deducUble
+
+90% after deductible
+90% after deductible
+90% afteJ deductible
+
+80% after deductible
+80% after deductible
+80% after deductible
+
+50% after deductible
+
+50% after deductible
+
+90% after deductible
+
+80% afler deductible
+
+90% after deductible
+80% alter deductible
+$75 capay, then 100%
+
+J~~n-Emergency use of an Emergen cY. Rm 4·7
+
+$75 cop_ey,j!len 90%
+
+HESE I fd~l Plo11/ Nl'lii -Grond rnlh&-<;cl/ COOP
+
+11222602v3
+
+~'1l.l1tr~
+PPO
+
+71
+
+!
+
+$75 CO!)ay1 then 80%
+
+Benefits
+
+m
+
+Netwo rk
+
+II
+
+Non-Network
+
+Inpatient Facility
+Semi-Private Room and Board - Including
+90% after deductible
+80% after deductible
+Ancillaries (365 days per in-hospital benefit
+perio'd 5)
+80% after deductible
+90% after deductible
+Maternity
+Skilled Nursing Facility (Two days available for
+90% after deductible
+80% after deductible
+each unused in-hos_pjtal day)
+Human Organ Transplants
+90% after deductible
+80% after deductible
+Additional Services
+Allergy Testing and Treatments
+90% after deductible
+80% after deductible
+Ambulance- air if medically_necessary
+90% a fter deductible
+80% after deductible
+Durable Medical Equipment
+90% after deductible
+90% after deductible
+80% after deductible
+Home Healthcare
+90% after deductible
+80% after deductible
+Hospice Services
+80% after deductible
+90% after deductible
+Private Duty Nurslnq
+Mental Health and Substance Abuse- Federal Mental Health Parity
+Inpatient Mental Heallh and Substance
+Benefits paid are based on corresponding medical benefits
+Abuse Services
+Outpatient Mental Health and Substance
+Abuse Services
+Note:
+
+.
+
+Services requiring a copayment are not subject to the single/family deductible.
+Deductible and coinsurance expenses Incurred for services by a non-network provider will alsO'apply to the
+network deductible and coinsurance out-of-pocket limits. Deductible and coinsurance expenses Incurred for
+services by a network provider will also apply to the non-network deductible and coinsurance out-of pocket
+limits.
+Non-Contracting and Facility Other Providers will pay the same as Non-Network.
+Benefits will be determined based on Medical Mutual's medical and administrative policies and procedures.
+This document Is only a partial listing of benefits. This Is not a contract of Insurance. No person other than an
+otncer of Medical Mutual may agree, orally or In writing, to change the benefits listed here. The contract or
+certificate will contain the complete listing of covered services.
+In certain Instances, Medical Mutual's payment may not equal the percentage listed above. However, the
+covered person's coinsurance will always be based on the lesser of the provider's billed charges or Medical
+Mutual's negotiated rate with the provider.
+
+1 Maxlmum family deductible. Member deductible Is the same as single deductible. 4lh quarter carryover applies.
+2"fhe office visit copay applies to the cost of the offlce visit only.
+3Copay waived if admitted. The copay applies to room charges only. All other covered charges are not subject to deductible.
+4
+Copay waived If admitted. The copay applies to room charges only. All other covered charges are subject to deductible and
+coinsurance.
+6An in-hospital benefit period Is a period of lime beginning when the member enters a hospital and ending when he/she has
+been out for 90 consecutive days.
+8 Prevenllve services lndude evidence-based services that have a rating of "A" or ·s· in the United States Preventive Services
+Task Force, routine Immunizations and other screenings, as provided for in the Patient Protection and Affordable Care Act.
+7COOP- Coinsurance Out-of-Pocket Maximum -After deductible is met, copays will accumulate to coinsurance limits.
+Once coinsurance maximum has been met, all network services will pay at 100%.
+
+II ESE / ldeall'lnn/ Non-Gmndfnthered I COOP
+
+11222602v3
+
+72
+
+Letter of Concurrence
+By And Between
+The Willard Board of Education
+And
+The Willard Education Association OEA/NEA
+This Letter of Concurrence is entered into this 18th day of May 2009.
+WHEREAS, the Willard Education Association and the Willard Board of Education
+mutually agree that parent/teacher contact concerning student performance is an
+essential part of a quality education experience; and
+WHEREAS, the Board and Association agree that timely reporting of student
+performance is a key factor in fostering parental support for student achievement; and
+WHEREAS, the Board and Association agree that Internet posting of student grades,
+while a valuable tool for communication with parents, raises questions of student
+privacy and teacher/District liability;
+NOW, THEREFORE, the WEA and the Willard Board of Education mutually agree to
+support and/or encourage the following:
+1.
+
+The Board and the Association agree to require all teachers to post grades using
+the appropriate grading system (i.e., “progress book”) to the Internet/computer
+system in a timely manner.
+
+2.
+
+The Board and Association agree that communication with parents is vital. It is
+suggested that teachers communicate to parents, situations that may occur that
+would hinder grades being posted in a timely manner.
+
+3.
+
+The Board and the Association agree that persons other than the classroom
+teacher will not share grading information with parents, or other persons
+authorized to access such information, which is not currently and/or normally
+available online for parental access.
+
+4.
+
+The Board will make every effort to notify parents that grading information
+available online may not be current due to various mitigating circumstances.
+
+5.
+
+The Board and the Association acknowledge that access to PIN is an issue of
+privacy. Teachers will not have access to parental PINs and cannot be held
+responsible for loss, theft, or unauthorized distribution of said numbers.
+
+11222602v3
+
+73
+
+MJ·MOI\ANI)UM ~)F IINOHI ~TANDING
+RF.fiAROIN<Y OTP.S llVAWATIUNS
+This Mcmor~l\dilll\ ni'I.Jode>"""din~ (hcrcjnoRer "MOIJ'') IS emer~ lnlo ~y o·ncl l>eiwccn
+Ibe WIIIQ•d t' IIy Sc ll<loll)lsll'l~ ~''"I'd ol' ~du i!IU IM ~herelha 1\er UJe "Uoon.l") and U1.< Wlll!'"l
+
+lWuC111Ion A!suolu;lon (hercln;lllcr "WM">.
+WIIEREA~. lilt BINIIII lllld iho wnA Kit rmliios w II Ne~ulinlcd A~leCiu<l•l (l'miu.nul llic
+"Agti.1\'mc nl"') whh <~Jftclivv tluh<llllf July I, 20 17 tluuu~h .Juno 30, 20ZO mid
+
+WURUF.AS, Ani\lc VI, Sa~inn h.07 nr1~ A8-rccmcn1 addrcs~\l!i lhc.OfP.S teacher
+l::v:thJ111iOfl PI'OCCUfl,li'Ci •30(~
+
+Nuw- f'tlt~Ht;Folt H. In ctm1utln.:ataou ot the- nnal1t11J f)(Oiaai~CJtuWI dbhH»IIoat.H ~mttt•laK-'il
+heroin unJ other gondROO vnlucablc consatl~uttiuu, the t-ufll"tcncy vf whtuh i11 huroby
+nr knowl~lac:CI, tl10 Ao1-rd und tho \VEA agree to the fhllnwing term"
+
+l'ursuanlto Ohio R.::.vised Code '33 19,111, Teacher Evaluotio11 l'rocedures., -;1ny reacher
+wbo J~ fto(Jullc:d to eompk-tl' an SLO mA)• c-hoo.!lc Ui do a rnmbnum ol' Otll' OJ' Jhay choose.
+li., dn f'llO(c. tlll:IIJ Olit!1
+
+2, Tl1<•>• ''l1~11~c> will be ufftcllw r,r the 20 1 7·1~ duough 201 i/·20 >thuul ytm•.
+3. 1l1is constitutes the onlii'Ca~rwmeul between tho Oo:ml .,nd dw WRA regunhug the:
+i~>su~ outlined heroin. There ~rc nn (lthc:r wrhton or verbal (ll(rcc mcnt~, un(flm't~nrllngor
+01'S I'I'Bngcn~cnt! bctwoon ll\e r a!lles regu.rdlug the lss'ue_s OltHiued he-.>etn. Any
+nml.•ndmcm to H1la MOU mu.slbc ht Wl'ilJits ht1d !'.i~ncd b} bl3tb JUI.Il ies.
+
+<I l ho WJJAmttl lhc llo.~ J;nv. l<lVIOW<tl ihlli MliU 11/ltli lheil• te[>t<'jOuiAII~u•, titl\li,,lilll•l
+Ill l ~tii\Ji llild C<lililliiOII<i. Rta ~ultiiiiMily cnlcrl11a Jill• Moll. nnd r.11oh ;lgn111.dr)" lo
+Ihi< M\')11r<pJa.onl• dmt he or •hu "'"tho llllihorliy 10 enicr in1o lhL< MOU on hchnlf ol
+hi• or h<r pony
+Wlllol'll l'.d IICIIilon Assodollon
+
+W;Untd Cl1y School Di!<IJ'ic113 ~a.J of
+lUI.UC(llh)rt
+
+BYI
+
+~~ 11 , ~
+
+11BIQ:~tJ~l!l.__ _ _ __
+llY :
+
+Ow•.~---------------------
+
+11222602v3
+
+74
+
+NOTES
+
+11222602v3
+
+75

@@ -1,0 +1,7 @@
+{
+  "city_cycle_unit_groups": 368,
+  "coverage_boundary": "Task-local extraction outputs do not mutate durable city coverage.",
+  "distinct_city_state_pairs": 271,
+  "groups_with_extracted_ok_text": 368,
+  "groups_with_positive_span": 51
+}

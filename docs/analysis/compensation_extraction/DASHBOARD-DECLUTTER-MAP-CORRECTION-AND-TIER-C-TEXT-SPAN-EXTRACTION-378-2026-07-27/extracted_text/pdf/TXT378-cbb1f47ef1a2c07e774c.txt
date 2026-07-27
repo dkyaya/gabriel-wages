@@ -1,0 +1,378 @@
+14
+
+BASE YEAR
+2024-25
+
+Glassboro Transp Aides
+
+Salary Guide
+Step
+L1Y1
+L1Y2
+L2Y3
+L2Y4
+L3Y5
+L3Y6
+L4 Top 7+
+
+Hourly
+20.13
+20.13
+21.64
+21.64
+23.00
+23.00
+23.75
+
+Scattergram
+Step
+Hourly
+0
+L1Y1
+1,701.04
+L1Y2
+3,402.09
+L2Y3
+1,701.02
+L2Y4
+850.51
+L3Y5
+L3Y6
+L4 Top 7+
+3,685.47
+Totals
+11,340.13
+Percent
+100.00%
+
+Guide Cost
+Step
+0
+L1Y1
+L1Y2
+L2Y3
+L2Y4
+L3Y5
+L3Y6
+L4 Top 7+
+Total
+Average
+1%
+
+NJEA Research:GY
+
+34,242
+68,484
+36,810
+18,405
+87,530
+
+Total
+1,701.04
+3,402.09
+1,701.02
+850.51
+3,685.47
+11,340.13
+
+Percent
+15.00%
+30.00%
+15.00%
+7.50%
+32.50%
+100.00%
+
+Hourly
+34,242
+68,484
+36,810
+18,405
+87,530
+245,471
+21.65
+2,455
+
+Transp Aides MOA Copy of Glassboro 25-28 MOA to BOE 1-20-26
+
+15
+
+YEAR 1
+2025-26
+
+Glassboro Transp Aides
+
+Salary Guide
+Step
+0
+L1Y1
+L1Y2
+L2Y3
+L2Y4
+L3Y5
+L3Y6
+L4 Top 7+
+
+Hourly
+20.42
+20.42
+21.93
+21.93
+23.29
+23.29
+24.04
+
+Scattergram
+Step
+Hourly
+0
+L1Y1
+L1Y2
+1,701.04
+L2Y3
+3,402.09
+L2Y4
+1,701.02
+L3Y5
+850.51
+L3Y6
+L4 Top 7+
+3,685.47
+Totals
+11,340.13
+Percent
+100.00%
+
+Guide Cost
+Step
+0
+L1Y1
+L1Y2
+L2Y3
+L2Y4
+L3Y5
+L3Y6
+L4 Top 7+
+Total
+2024-25
+Difference
+% Increase
+
+NJEA Research:GY
+
+0
+
+Total
+1,701.04
+3,402.09
+1,701.02
+850.51
+3,685.47
+11,340.13
+
+Percent
+15.00%
+30.00%
+15.00%
+7.50%
+32.50%
+100.00%
+
+Hourly
+34,735
+74,608
+37,303
+19,808
+88,599
+255,053
+245,471
+9,582
+3.90%
+
+Transp Aides MOA Copy of Glassboro 25-28 MOA to BOE 1-20-26
+
+16
+
+YEAR 2
+2026-27
+
+Glassboro Transp Aides
+
+Salary Guide
+Step
+0
+L1Y1
+L1Y2
+L2Y3
+L2Y4
+L3Y5
+L3Y6
+L4 Top 7+
+
+Hourly
+20.87
+20.87
+22.38
+22.38
+23.73
+23.73
+24.49
+
+Scattergram
+Step
+Hourly
+0
+L1Y1
+L1Y2
+L2Y3
+1,701.04
+L2Y4
+3,402.09
+L3Y5
+1,701.02
+L3Y6
+850.51
+L4 Top 7+
+3,685.47
+Totals
+11,340.13
+Percent
+100.00%
+
+Guide Cost
+Step
+0
+L1Y1
+L1Y2
+L2Y3
+L2Y4
+L3Y5
+L3Y6
+L4 Top 7+
+Total
+2025-26
+Difference
+% Increase
+
+NJEA Research:GY
+
+0
+
+Total
+1,701.04
+3,402.09
+1,701.02
+850.51
+3,685.47
+11,340.13
+
+Percent
+15.00%
+30.00%
+15.00%
+7.50%
+32.50%
+100.00%
+
+Hourly
+38,069
+76,139
+40,365
+20,183
+90,257
+265,013
+255,053
+9,960
+3.90%
+
+Transp Aides MOA Copy of Glassboro 25-28 MOA to BOE 1-20-26
+
+17
+
+YEAR 3
+2027-28
+
+Glassboro Transp Aides
+
+Salary Guide
+Step
+0
+L1Y1
+L1Y2
+L2Y3
+L2Y4
+L3Y5
+L3Y6
+L4 Top 7+
+
+Hourly
+21.32
+21.32
+22.83
+22.83
+24.18
+24.18
+24.94
+
+Scattergram
+Step
+Hourly
+0
+L1Y1
+L1Y2
+L2Y3
+L2Y4
+1,701.04
+L3Y5
+3,402.09
+L3Y6
+1,701.02
+L4 Top 7+
+4,535.98
+Totals
+11,340.13
+Percent
+100.00%
+
+Guide Cost
+Step
+0
+L1Y1
+L1Y2
+L2Y3
+L2Y4
+L3Y5
+L3Y6
+L4 Top 7+
+Total
+2026-27
+Difference
+% Increase
+
+NJEA Research:GY
+
+Total
+1,701.04
+3,402.09
+1,701.02
+4,535.98
+11,340.13
+
+Percent
+15.00%
+30.00%
+15.00%
+40.00%
+100.00%
+
+Hourly
+38,835
+82,262
+41,131
+113,127
+275,355
+265,013
+10,342
+3.90%
+
+Transp Aides MOA Copy of Glassboro 25-28 MOA to BOE 1-20-26

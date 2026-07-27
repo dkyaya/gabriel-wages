@@ -1,0 +1,25 @@
+{
+  "all_spans_exact_substrings_offsets_and_hashes_valid": true,
+  "ambiguous_span_record_count": 225,
+  "positive_source_count": 52,
+  "positive_span_counts_by_lane": {
+    "lane_1": 12,
+    "lane_2": 91,
+    "lane_3": 2,
+    "lane_4": 54
+  },
+  "positive_span_counts_by_mechanism": {
+    "fiscal_constraint_signal": 2,
+    "market_or_comparability_pressure": 54,
+    "non_safety_constraint_signal": 12,
+    "strike_or_no_strike_constraint": 91
+  },
+  "positive_span_counts_by_region": {
+    "Midwest": 50,
+    "Northeast": 44,
+    "South": 60,
+    "West": 5
+  },
+  "positive_span_record_count": 159,
+  "total_span_record_count": 384
+}

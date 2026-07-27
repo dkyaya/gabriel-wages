@@ -1,0 +1,14 @@
+{
+  "all_artifacts_inside_task_output": true,
+  "causal_status": "not_causal_evidence",
+  "codification_status": "not_codified",
+  "extracted_ok_artifact_count": 378,
+  "global_analysis_readiness": false,
+  "html_artifact_count": 61,
+  "ingestion_status": "not_ingested",
+  "pdf_artifact_count": 317,
+  "rating_status": "not_rated",
+  "saved_text_artifact_count": 378,
+  "total_extracted_characters": 28726441,
+  "total_extracted_text_bytes": 28855970
+}

@@ -1,0 +1,378 @@
+IN THE COMMONWEALTH COURT OF PENNSYLVANIA
+Fraternal Order of Police,
+Lodge #5 and Arthur Herder
+v.
+City of Philadelphia
+Appeal of: Arthur Herder
+BEFORE:
+
+:
+:
+:
+:
+:
+:
+:
+:
+
+No. 520 C.D. 2017
+Argued: March 8, 2018
+
+HONORABLE ROBERT SIMPSON, Judge
+HONORABLE ANNE E. COVEY, Judge
+HONORABLE CHRISTINE FIZZANO CANNON, Judge
+
+OPINION
+BY JUDGE SIMPSON
+
+FILED: April 4, 2018
+
+In this grievance arbitration matter, Arthur Herder (Grievant) appeals
+an order of the Court of Common Pleas of Philadelphia County (trial court)1 that
+denied Grievant’s petition to intervene and to vacate a grievance arbitration award
+issued under the statute known as the Policemen and Firemen Collective Bargaining
+Act,2 more commonly referred to as Act 111. The award concluded that the City of
+Philadelphia (City) had just cause to terminate Grievant for conduct unbecoming an
+officer. The trial court agreed with the City and Grievant’s union, the Fraternal
+Order of Police, Lodge No. 5 (Union), that in accord with the parties’ collective
+bargaining agreement (CBA), and their longstanding practices, only City and the
+Union, as the parties to the CBA, have standing to initiate arbitration or appeal an
+adverse arbitration award.
+1
+
+The Honorable Linda A. Carpenter presided.
+
+2
+
+See Act of June 24, 1968, P.L. 237, as amended, 43 P.S. §§217.1-217.10.
+
+Grievant contends the trial court erred in determining he lacked
+standing to bring his petition to intervene and to vacate the arbitration award. In
+response, the City and the Union assert: Grievant cannot challenge an arbitration
+award as an intervenor where neither the City nor the Union instituted an action in
+the trial court in which Grievant could intervene; Grievant cannot challenge an
+arbitration award as a plaintiff or petitioner where he is neither a party to the CBA
+nor authorized by the CBA to initiate arbitration; and, even assuming, for sake of
+argument, that Grievant had standing to challenge the arbitration award, his
+challenge did not raise any issues reviewable under Act 111’s narrow certiorari
+standard. For the reasons that follow, we affirm.
+
+I. Background
+The City hired Grievant as a police officer in 1993. Since 2006, the
+City suspended Grievant on three occasions. Grievant received a 30-day suspension
+in 2007 for vandalizing his wife’s vehicle. In 2012, the City twice suspended
+Grievant for abusing his authority while off duty. The City also twice transferred
+Grievant for threatening behavior toward his coworkers.
+In January 2015, the City Police Department’s Office of Internal Affairs
+(OIA) learned of a road rage incident in Cheltenham Township, a neighboring
+municipality.
+
+During the incident, Grievant allegedly exited his vehicle and
+
+threatened two high school seniors who blew their horn at Grievant for passing their
+car in the opposing traffic lane and then making a left turn before they could do so.
+Grievant stopped his vehicle, walked up to the driver’s window, cursed at him, and
+
+2
+
+threatened to “put bullet holes in him.” See Arbitrator’s Award (Award), 10/14/16,
+at 5; Reproduced Record (R.R.) at 36. When returning to his vehicle, Grievant lifted
+his shirt to reveal a handgun. Id. Grievant then made a shooting gesture toward the
+driver with his thumb and index finger. Id.
+
+The two students reported the incident to their school police officer and
+the Cheltenham Police Department. They accurately reported Grievant’s license
+plate number and described him and his vehicle. At the time of the incident, Grievant
+was on injury leave.
+OIA performed its own investigation and determined that “more likely
+than not” Grievant engaged in the misconduct as alleged. Award at 6; R.R. at 37.
+OIA presented its findings to the Police Board of Inquiry (Board), which found
+Grievant guilty of “conduct unbecoming” under four sections of the Department’s
+Disciplinary Code.3
+
+The Board recommended a 120-day suspension (30-day
+
+suspension without pay on each of the four charges). Id. However, the Police
+Commissioner terminated Grievant’s employment.
+
+3
+
+The Office of Internal Affairs found Grievant guilty of violating the following Sections
+of Article I (“Conduct Unbecoming”) of the Police Department’s Disciplinary Code: (1) 1-§00110 (unspecified); (2) 1-§009-10 (lying or attempting to deceive regarding a material fact during
+the course of a Departmental investigation); (3) 1-§021-10 (any incident, conduct, or course of
+conduct which indicates that an employee has little or no regard for his/her responsibility as a
+member of the Police Department); and, (4) 1-§026-10 (engaging in any action that constitutes the
+commission of a felony or misdemeanor which carries a potential sentence of more than (1) year).
+Each of these charges provide for a possible maximum penalty of dismissal for a first offense. See
+Reproduced Record (R.R.) at 143-47.
+
+3
+
+Thereafter, the Union filed a grievance, which the City denied. The
+Union demanded arbitration. In April 2016, Arbitrator James M. Darby (Arbitrator)
+conducted a hearing at which the parties presented their evidence and arguments.
+The Union argued that the City failed to establish just cause for Grievant’s
+termination. In an October 2016 decision, Arbitrator found, based on the totality of
+the evidence presented, that more likely than not Grievant engaged in the alleged
+conduct. See Award at 14-15; R.R. at 45-46. Arbitrator also determined Grievant’s
+actions constituted “conduct unbecoming” under three sections of the Department’s
+Disciplinary Code.4 Award at 15; R.R. at 46. Taking into consideration Grievant’s
+prior disciplinary history, Arbitrator determined Grievant had notice that the City
+had just cause to terminate his employment based upon another incident of conduct
+unbecoming an officer.
+
+In November 2016, Grievant filed a petition to intervene and vacate the
+arbitration award with the trial court. In accord with a rule to show cause, the City
+and the Union filed responses in opposition to Grievant’s petition. On December
+30, 2016, the trial court entered an order denying Grievant’s petition to intervene
+and vacate. Grievant timely appealed to the Superior Court, which transferred the
+appeal here.
+
+In an opinion in support of its order, the trial court observed that Section
+XXI of the parties’ 2014-17 CBA (R.R. at 112-13), governing grievance and
+Arbitrator found Grievant violated the following “Conduct Unbecoming” sections of the
+Disciplinary Code: (1) 1-§001-10 (unspecified); (2) 1-§021-10 (any incident, conduct, or course
+of conduct which indicates that an employee has little or no regard for his/her responsibility as a
+member of the Police Department); and, (3) 1-§026-10 (engaging in any action that constitutes the
+commission of a felony or misdemeanor which carries a potential sentence of more than (1) year).
+4
+
+4
+
+arbitration procedure, does not specify who has the right to demand arbitration, or
+to appeal an adverse arbitration award. Nonetheless, the trial court agreed with the
+City and the Union that such authority rests solely with the exclusive parties to the
+CBA, which are the City and the Union. In determining Grievant lacked standing to
+bring the petition to intervene, the trial court reasoned:
+The courts of this Commonwealth have long held
+that the ‘meaning of the CBA is governed by its language’
+and that the parties’ intention in entering into the CBA is
+the ‘paramount consideration.’ [See Ray v. Brookville
+Sch. Dist., 19 A.3d 29, 33 (Pa. Cmwlth. 2011)
+(citing Kozura v. Tulpehocken Area Sch. Dist., 791 A.2d
+1169 (Pa. 2002) and Hutchinson v. Sunbeam Coal Corp.,
+519 A.2d 385 (Pa. 1986))]. The City and the [Union] rely
+upon the history of interest arbitration awards, entered
+pursuant to [Act 111], as evidenced by the parties’ intent
+that the [Union] have the exclusive authority to challenge
+a grievance arbitration award. The grievance and
+arbitration procedure was first introduced in the 19821984 Award and the parties further referenced the 19881990 Award and the 2004-2008 Award. Specifically, the
+2004-2008 Interest Arbitration Award recognizes the
+[Union] as the ‘exclusive collective bargaining
+representative’ of uniformed members of the police force.
+Additionally, the City and the [Union] cite to the
+longstanding practice between the parties as
+demonstrative of their intention that individual grievants
+not have the authority to pursue arbitration or appeal an
+adverse arbitration award.
+Tr. Ct., Slip Op., 6/20/17, at 3; R.R. at 4.
+
+The trial court further noted that Commonwealth Court precedent
+supports the City’s and the Union’s position. Citing Ray and Krenzelak v. CanonMcMillan School District, 566 A.2d 346 (Pa. Cmwlth. 1989), the trial court observed
+
+5
+
+that generally, CBAs invest only the parties to the contract, here the Union and the
+City, with the authority to initiate arbitration and to decide whether to appeal an
+adverse arbitration award. To that end, the trial court recognized the underlying
+policy consideration that allowing individual union members to appeal an adverse
+arbitration award would lead to chaos and a breakdown in the collective bargaining
+scheme. Instead of being able to rely on the arbitration of employee grievances by
+the union, the affected employers would face a constant threat of litigation by
+individual employees dissatisfied with the arbitration result.
+
+Therefore, in accord with Ray and Krenzelak, the trial court determined
+Grievant did not have standing to file his petition to intervene and vacate the
+arbitration award.
+
+II. Discussion
+Grievant contends the trial court erred or abused its discretion by not
+granting him leave to intervene under Pennsylvania Rules of Civil Procedure Nos.
+2326-30 governing intervention. Although not a named party to the arbitration
+proceeding between the City and the Union, Grievant asserts he, as the sole grievant,
+was a necessary party to the proceeding. Rule No. 2327(4) provides: “At any time
+during the pendency of an action, a person not a party thereto shall be permitted to
+intervene therein subject to these rules if …. (4) the determination of such action
+may affect any legally enforceable interest of such person whether or not such person
+may be bound by a judgment in the action.” (Emphasis added.)
+
+6
+
+Grievant argues the trial court mistakenly relied on the CBA, rather
+than Rule No. 2327, and held that he could not intervene because he was not a party
+to the CBA. In particular, Grievant asserts the trial court erred in citing our decisions
+in Ray and Krenzelak, which acknowledged that in Kozura, the Supreme Court held
+that when a CBA expressly authorized an individual union member to initiate
+arbitration, that member may appeal an adverse arbitration award. In short, Grievant
+maintains that Kozura trumps Ray and Krenzelak.
+
+In reviewing the circumstances in the present case, Grievant asserts the
+CBA does not address who may initiate arbitration, and thus appeal an arbitration
+award. Therefore, Grievant maintains, the Rules of Civil Procedure control and
+require that he be granted leave to intervene. Alternatively, if the CBA controls,
+Grievant argues he is entitled to intervene under Kozura because the language of the
+CBA does not address who may initiate arbitration or appeal an arbitration award.
+
+We disagree.
+
+As a general principle, a union, not its individual
+
+members, controls the appeal of an arbitration award. Ray; Krenzelak. As an
+exception, if the contractual language of the CBA provides individual union
+members with a personal right to seek arbitration, a union member may appeal an
+adverse arbitration result if the union does not appeal. Kozura. In Kozura, the CBA
+expressly authorized an individual union member to initiate arbitration, and it gave
+that individual the right to choose his representative at all stages of the grievance
+and arbitration process. In light of these provisions, the Supreme Court determined
+that Kozura, as an employee, not the union, controlled the decision of whether to
+appeal an adverse arbitration award.
+
+7
+
+In contrast, the CBA in Ray authorized an individual union member to
+submit a grievance through the first three steps of the grievance process: Level 1
+(Principal); Level 2 (Superintendent); Level 3 (School Board). However, only the
+union could initiate arbitration under Level 4.
+
+Distinguishing Kozura, we noted in Ray that unlike the contract in
+Kozura, the CBA did not authorize the union member to initiate arbitration.
+Although Ray had the right to represent herself in an arbitration appeal, the CBA
+granted the union the exclusive right to initiate arbitration and thus the exclusive
+right to determine whether to appeal the arbitration award.
+
+Similarly, in Bonifate v. Ringgold School District, 961 A.2d 246 (Pa.
+Cmwlth. 2008), the CBA provided that the union, not its individual members, could
+refer a grievance to binding arbitration. Because the union controlled whether a
+matter proceeded to arbitration, we determined that Bonifate did not have the right
+to decide to arbitrate the grievance; therefore, he did not have the ability to appeal
+the arbitration award to the common pleas court.
+In Krenzelak, we addressed a different situation where the language of
+the CBA did not specify who could appeal an arbitration award. We also recognized
+that the Public Employe Relations Act (PERA),5 which the CBA incorporated, did
+not clearly specify who may appeal an arbitration award. However, noting that
+Krenzelak, as an individual union member, was not a party to the arbitration
+proceeding, we determined he did not have standing to appeal the arbitrator’s
+5
+
+Act of July 23, 1970, P.L. 563, as amended, 43 P.S. §§1101.101-1101.2201.
+
+8
+
+decision. Citing McCluskey v. Department of Transportation, 391 A.2d 45 (Pa.
+Cmwlth. 1978), overruled on other grounds by Official Court Reporters of Court of
+Common Pleas of Philadelphia County v. Pennsylvania Labor Relations Board, 467
+A.2d 311 (Pa. 1983), we determined that if the CBA does not specify who may
+appeal an arbitration decision, and the employer and the union were the only parties
+to the arbitration, they were the only parties with standing to appeal an arbitrator’s
+award.
+
+Turning to the facts here, we note that only the City and the Union are
+parties to the CBA. Nonetheless, the CBA does not explicitly state whether a person
+other than the Union or the City may initiate a grievance or request arbitration. The
+parties’ current grievance and arbitration procedures are similar to those initially
+incorporated in the 1982-84 Interest Arbitration Award (R.R. at 209-10). These
+procedures were continued in the 1988-90 Interest Arbitration Award (R.R. at 226),
+the 2004-08 Interest Arbitration Award (R.R. at 189), and, most recently in the 201417 CBA (R.R. at 112-13), which is applicable here.
+In explaining the current grievance procedure, a representative from the
+Union stated in a declaration, and a representative from the City stated in an
+affidavit, that for the last 30 years, without exception, only the Union or the City
+may demand arbitration under the grievance arbitration procedure in the CBA. See
+R.R. at 162-63, 229-30. A court may use evidence of past practices between the
+parties to interpret a CBA. Shippensburg Area Educ. Ass’n v. Shippensburg Area
+Sch. Dist., 400 A.2d 1331 (Pa. Cmwlth. 1979).
+
+9
+
+Given the parties’ longstanding contractual interpretation and practice
+of limiting the right to demand arbitration to the City and Union as the exclusive
+parties to the CBA, and the trial court’s reliance on our decisions in Ray and
+Krenzelak, we discern no error or abuse of discretion by the trial court in determining
+that Grievant lacked standing to file his petition in the trial court. The longstanding
+contractual interpretation and practice of the City and the Union demonstrated their
+intent, as the exclusive parties to the CBA, not to authorize individual union
+members to purse arbitration or appeal an arbitration award. Tr. Ct., Slip Op., at 3;
+R.R. at 4.
+
+Further, because the City and the Union did not petition to appeal or
+vacate the arbitration award, there was no pending appeal or civil action in which
+Grievant could intervene. Therefore, the Rules of Civil Procedure are inapplicable
+and did not afford Grievant a separate means to intervene or petition to vacate the
+arbitration award.
+As noted above, a party is permitted to intervene in a pending “action”
+if “the determination of such action may affect any legally enforceable interest of
+such person whether or not such person may be bound by a judgment in the action.”
+Pa. R.C.P. No. 2327(4) (emphasis added). Under the Rules governing intervention,
+the term “action means any civil action or proceeding brought in or appealed to any
+court of record which is subject to these rules.” Pa. R.C.P. No. 2326 (emphasis
+added). Further, all actions shall be prosecuted by and in the name of the real party
+in interest (subject to exceptions not applicable here). Pa. R.C.P. No. 2002(a). Also,
+
+10
+
+any act, other than a verification, may be performed by a party’s attorney. Pa. R.C.P.
+No. 1002.
+Here, Grievant’s petition in the trial court listed the Union as the
+plaintiff and the City as the defendant. However, the Union opposed the petition,
+and therefore obviously did not authorize Grievant’s attorney to file the petition on
+the Union’s behalf. Pa. R.C.P. No. 1002. Thus, Grievant’s contention (that the
+language of the CBA does not control and that the Rules governing intervention
+provide him a right to intervene to appeal) fails. Ray.
+
+As an additional matter, the City presents an alternative argument that
+even assuming that Grievant had standing to challenge the arbitration award, his
+challenge did not raise any issues reviewable under the court’s narrow certiorari
+review of Act 111 grievance arbitration awards. See Town of McCandless v.
+McCandless Police Officers Ass’n, 901 A.2d 991 (Pa. 2006) (narrow certiorari
+review applicable to grievance arbitration appeals under Act 111 allows inquiry into
+only four areas: (1) jurisdiction of the arbitrator, (2) regularity of the proceedings,
+(3) whether the arbitrator exceeded his powers, and, (4) whether constitutional rights
+were violated). Therefore, a reviewing court is bound by an arbitrator’s findings of
+disputed facts, even if the court disagrees with them.
+As such, Grievant cannot challenge Arbitrator’s findings of fact or
+conclusions of law as erroneous. As discussed above, Arbitrator determined that
+based on the totality of the evidence and circumstances, it was more likely than not
+that Grievant engaged in the incident. Award at 14-15; R.R. at 45-46. Arbitrator
+
+11
+
+further determined that Grievant, based on his prior discipline, had notice that
+another proven incident of conduct unbecoming an officer could result in
+termination of employment. Award at 15; R.R. at 46. Consequently, even assuming
+Grievant had standing to petition to intervene and vacate the arbitration award, his
+disagreement with Arbitrator’s findings and conclusions cannot serve as the basis
+for an appeal. McCandless. As such, the trial court’s denial of Grievant’s petition
+to intervene and vacate the arbitration award could also be affirmed on this
+alternative ground.
+
+III. Conclusion
+For the above reasons, we discern no error or abuse of discretion by the
+trial court in denying Grievant’s petition to intervene and vacate the arbitration
+award. Accordingly, we affirm.
+
+ROBERT SIMPSON, Judge
+
+12
+
+IN THE COMMONWEALTH COURT OF PENNSYLVANIA
+Fraternal Order of Police,
+Lodge #5 and Arthur Herder
+v.
+City of Philadelphia
+Appeal of: Arthur Herder
+
+:
+:
+:
+:
+:
+:
+:
+:
+
+No. 520 C.D. 2017
+
+ORDER
+AND NOW, this 4th day of April, 2018, the order of the Court of
+Common Pleas of Philadelphia County is AFFIRMED.
+
+ROBERT SIMPSON, Judge

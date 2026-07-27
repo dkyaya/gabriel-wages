@@ -24,3 +24,7 @@ Use the strongest profile where judgment or system design is material, and reser
 | Tiny documentation cleanup only | Low / GPT-5.4 |
 
 The profile assignment does not relax any gate. In particular, a smoke preflight and a live scout remain distinct authorized actions.
+
+## Standing dashboard update requirement
+
+Every future task prompt must include the reusable block in `dashboard_update_requirement.md`. After every task, update dashboard/status/docs with substantive new information unless there is genuinely no update to provide; in that case, explicitly state why no update was needed. Dashboard changes must keep global analysis readiness false unless separately authorized and must not imply wage gaps, regressions, treatment effects, national prevalence, or final causal claims.

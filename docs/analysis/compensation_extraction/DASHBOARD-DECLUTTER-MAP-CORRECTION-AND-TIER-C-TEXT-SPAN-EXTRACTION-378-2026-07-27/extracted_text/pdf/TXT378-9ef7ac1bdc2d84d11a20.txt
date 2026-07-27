@@ -1,0 +1,539 @@
+IN THE COMMONWEALTH COURT OF PENNSYLVANIA
+Ohio Township Police Association,
+Appellant
+v.
+Ohio Township
+BEFORE:
+
+:
+:
+:
+:
+: No. 1695 C.D. 2024
+: Argued: November 6, 2025
+:
+
+HONORABLE ANNE E. COVEY, Judge
+HONORABLE MICHAEL H. WOJCIK, Judge
+HONORABLE BONNIE BRIGANCE LEADBETTER, Senior Judge
+
+OPINION BY JUDGE WOJCIK
+
+FILED: January 7, 2026
+
+The Ohio Township Police Association (Union) appeals from the
+November 16, 2024 order of the Allegheny County Court of Common Pleas (trial
+court) which upheld the Arbitration Award issued by Marc A. Winters (Arbitrator)
+in favor of Ohio Township1 (the Township). The Arbitrator concluded that the
+Township correctly declined to place Khalid Aladdin (Officer) on administrative
+duty under Section 2 of Act 59,2 44 Pa. C.S. §7203(c), pending a return-to-work
+determination for his alleged struggle with post-traumatic stress disorder (PTSD).3
+Further, however, the Arbitrator determined that the Township lawfully removed
+Officer from service with the Township by granting him an honorable discharge
+
+1
+
+While not joined in this action, the Ohio Township Police Department also serves a
+number of neighboring municipalities, including Aleppo Township, Ben Avon Heights Borough,
+Emsworth Borough, Kilbuck Township, Neville Township, and Sewickley Hills Borough.
+2
+
+3
+
+Act of July 14, 2020, P.L. 624, No. 59, 44 Pa. C.S. §§7201-7204.
+
+Act 59 defines PTSD as it is defined in the American Psychiatric Association’s Diagnostic
+and Statistical Manual of Mental Disorders, 5th edition. See 44 Pa. C.S. §7202.
+
+under the Police Tenure Act.4 Before this Court, the Union argues, inter alia, that
+the Arbitrator exceeded his jurisdiction by reaching the honorable discharge issue
+because it was beyond the scope of the Union’s grievance. We agree.
+I. Background
+As it concerns grievances, the Collective Bargaining Agreement (CBA)
+between the Township’s Police Department and its Union provides the following:
+“A grievance is hereby defined as . . . a complaint by an officer, group of officers,
+entire shift of officers or the entire police force regarding the meaning, interpretation
+or application of any provision of this Agreement . . . .” Reproduced Record (R.R.)
+at 6a. The CBA also formalizes the procedure for filing a grievance:
+STEP I – Any police officer who believes he has a
+grievance may submit his grievance in writing to the
+Chairman of the Grievance Committee of the Police
+Department. Such grievance shall be submitted within
+two (2) weeks of the day on which the matter giving rise
+to the grievance occurred.
+STEP II – The grievance filed with the Grievance
+Committee shall be submitted to the Chief of Police (or
+person in charge of Police if there is no Chief) for
+adjustment and settlement within two (2) weeks. The
+Chief of Police (or person in charge of Police) shall render
+his decision in writing within two (2) weeks of said
+adjustment and settlement.
+STEP III – The grievance filed with Grievance Committee
+shall be submitted to the Township Manager for
+adjustment and settlement within two weeks (2). The
+Township Manager shall render his decision in writing
+within two (2) weeks of said adjustment and settlement.
+
+4
+
+Act of June 15, 1951, P.L. 658, as amended, 53 P.S. §§811-816.
+
+2
+
+STEP IV – The Grievance Committee may, within two (2)
+weeks thereafter, appeal the decision of the Township
+Manager to the Board of Supervisors. The Board of
+Township Supervisors shall render a decision withing one
+(1) week of their next regularly scheduled monthly
+meeting of the Board of Supervisors.
+R.R. at 7a. Should these procedures fail to settle the dispute, the CBA dictates that
+the grievance shall proceed to binding arbitration when “the party seeking arbitration
+gives written notice to the other party of such desire.” Id. at 7a-8a.
+The instant grievances, or lack thereof, arise from Officer’s service with
+the Township as a police officer, which began in a part-time capacity around January
+of 2020. See, e.g., Arbitrator’s Hearing, 11/9/23, Notes of Testimony (N.T.) at 178.
+Based on the record before us, it appears that Officer served the Township without
+issue until January 10, 2023, when the Union’s president, Robert Patsilevas,
+requested a meeting with Joseph Hanny, the Township’s Chief of Police, on
+Officer’s behalf. Id., N.T. at 15. At the meeting, Patsilevas and Officer related to
+Chief Hanny that Officer had begun experiencing a number of mental health issues
+which Officer believed was the result of PTSD, such as communicating with a voice
+in his head that he referred to as “Zoey.” See id., 15-16, 115-16. “Zoey” was not
+purely an auditory hallucination as Officer had at times described what she looked
+like. See, e.g., id., N.T. at 136-37. Troublingly, “Zoey” directed Officer to hurt
+himself. Id.
+At the same time, Officer expressed to Chief Hanny that he was
+becoming very agitated at work with others and while on call, so agitated that he
+was possibly looking to “act out.” Arbitrator’s Hearing, N.T. at 17-18. Officer,
+however, related that “acting out” would mean ignoring the subject of his call or
+leaving work altogether. Id. At the conclusion of the meeting, Chief Hanny directed
+Officer to take the time he needed off from work and informed Officer that the
+3
+
+Township would be in contact with him once Chief Hanny figured out what the
+appropriate next steps were. Id. at 17-18. In the meantime, Chief Hanny began
+receiving information concerning Officer’s condition and behavior from others
+within the Township’s Police Department. One police officer related that Officer
+“wanted to find somebody black on Neville Island, on the island, and start a race
+war, that he was just having so many issues and wanted to act out towards that.” Id.
+at 19-20; see also id., N.T. at 229-31. Chief Hanny eventually learned from a report
+that Officer had once expressed becoming so angry during a funeral procession that
+he made 15 traffic stops in a 45-minute span for the purpose of provoking a fight.
+Id., N.T. at 115-16.
+Following
+
+a
+
+Fitness
+
+for
+
+Duty
+
+evaluation
+
+conducted
+
+by
+
+neuropsychologist Glen Getz, Ph.D., on January 25, 2023, the Township placed
+Officer on short-term disability leave. R.R. at 120a. In his report, Dr. Getz noted
+that Officer presented a peculiar case: while Dr. Getz did not doubt that officer was
+experiencing some psychiatric symptoms, Officer appeared to be over-reporting or
+exaggerating the severity of his symptoms compared to those “described by people
+with genuine, severe psychopathology.” R.R. at 205a. Dr. Getz conceded that this
+was perhaps explainable by Officer’s language barrier, as Officer was born in Iraq
+and grew up there during the Iraq War. Officer later lived in Egypt and Syria before
+immigrating to the United States as an adult. Thus, he possibly misinterpreted some
+of Dr. Getz’s questions. Id. at 204a-05a. Dr. Getz therefore warned that between
+the language barrier, the unique impact of a police officer’s role on public safety,
+and the possibility that Officer over-reported his symptoms, the results of his report
+should be read with caution. Id. at 205a. In any case, whether his symptoms were
+as severe as Officer claimed or whether he exercised poor judgment in over4
+
+reporting his symptoms, Dr. Getz concluded that: (1) Officer posed a risk of harming
+himself or others; (2) Officer could not safely perform the essential functions of his
+position; (3) Officer should receive 90-120 days off of work to obtain appropriate
+treatments before being re-evaluated; (4) Officer should receive an increased level
+of care, such as an intensive outpatient program or partial hospitalization; and (5)
+Officer should receive another Fitness for Duty evaluation before returning to work.
+Id. at 206a-07a.
+On March 23, 2023, Lisa DeWitt, a nurse practitioner by whom Officer
+had been treated, cleared Officer to return to work without restrictions. R.R. at 59a.
+At this point, Officer contends that he requested to be placed on administrative duty
+under Act 59 while he awaited a determination to be placed on active duty. See
+Union’s Brief at 9. In any event, Chief Hanny explained that Officer would have to
+undergo another Fitness for Duty evaluation with Dr. Getz on April 11, 2023. R.R.
+at 57a-58a, 120a.
+This time, Dr. Getz concluded that Officer would not pose a safety risk
+to himself or others if he returned to work; that cognitive, psychiatric or substance
+use problems would not prevent Officer from performing the essential functions of
+his job; and Dr. Getz no longer recommended further time off from work. R.R. at
+126a-28a. While noting that the swift cessation of Officer’s psychiatric symptom
+was “atypical,” especially with “limited” outpatient treatment, Dr. Getz observed
+that this tended to confirm his earlier opinion that Officer’s symptoms were overreported or exaggerated. Id. at 126a. Importantly, in an addendum, Dr. Getz also
+opined that Officer did not suffer from PTSD. Id. at 130a.
+While not in the record, Chief Hanny appears to have denied Officer’s
+request to be placed on administrative duty under Act 59. The Union grieved the
+5
+
+denial in a letter dated May 12, 2023,5 requesting that he be placed on administrative
+duty with full-pay, backdated to April 6, 2023. R.R. at 35a. In pertinent part, Chief
+Hanny’s response denying the Union’s grievance explained that Dr. Getz’s reports
+indicated that Officer was not suffering from PTSD and that whatever mental health
+issues Officer had been suffering from were far outside the scope of Act 59, such
+that Officer was not entitled to be placed on administrative duty. Id. at 37a. The
+Union avers that on June 8, 2023, “the parties agreed to waive the additional
+grievance procedure steps and proceed immediately to arbitration on the Township’s
+refusal to assign Officer [] to Act 59 administrative or full-time duty and pay him
+his salary.” Union’s Brief at 11.
+However, in a letter dated June 6, 2023, the Township sent Officer a
+Loudermill6 notice explaining that it was seeking to honorably discharge Officer
+from service under the Police Tenure Act. The notice indicated the hearing would
+take place on June 8, 2023. R.R. at 132a. Yet, the Township sent another Loudermill
+notice to Officer on July 14, 2023, for the same purpose. Id. at 134a.
+The Arbitrator conducted a hearing on November 9, 2023, at which
+Officer, Chief Hanny, Dr. Getz, and another Township police officer testified. At
+the beginning of the hearing, the Arbitrator remarked: “I think I know what the issues
+are. We’ll find out.” Arbitrator’s Hearing, N.T. at 9. The Township’s Solicitor
+
+5
+
+In the Union’s view, this denial also served as a violation of Article XV of the CBA (nondiscrimination). R.R. at 35a. The Union would later assert Chief Hanny possessed a bias against
+mental illness because Chief Hanny had expressed that Officer’s eventual dismissal was a foregone
+conclusion given his psychiatric symptoms and his personal “disagreement” with Act 59. See,
+e.g., Arbitrator’s Hearing, N.T. at 87-88, 91-95; R.R. at 167a-68a.
+6
+
+Referring to Cleveland Board of Education v. Loudermill, 470 U.S. 532 (1985) (requiring
+a public employee to be given notice and an opportunity to respond to any charges leveled against
+him in a formal hearing before being terminated).
+
+6
+
+proffered the grievance documents as the Township’s Exhibit D during the direct
+examination of Chief Hanny. The Solicitor observed that the Union was grieving
+the Township’s denial of Officer’s request to be placed on administrative duty under
+Act 59 and Chief Hanny agreed that the subject of the grievance related to the same.
+Id., N.T. at 31-32. Then, the Solicitor began asking the Chief questions about the
+second Loudermill notice (proffered as the Township’s Exhibit E), like whether the
+Township voted to proceed with an honorable discharge under the Police Tenure
+Act. Chief Hanny stated that the Township’s Board of Supervisors did vote to
+discharge Officer. Id., N.T. at 31-32, 104.
+On cross-examination, the Union’s counsel (Union Counsel) asked
+Chief Hanny if any notice beyond that of the Loudermill hearing had been given to
+Officer. In other words, did the Township ever notify Officer of its decision to
+honorably discharge him? See Arbitrator’s Hearing, N.T. at 105-07. Chief Hanny
+deferred to the Township’s Solicitor who intervened. Id. He stated: “Under the
+[Police] Tenure Act . . . you have to give [the officer] notice and the right to a
+hearing and [Officer] chose to proceed with arbitration. That’s what we are doing
+today. I don’t understand the questioning.” Id., N.T. at 107. When Union Counsel
+asked the Chief whether he knew of the effective date of Officer’s termination, the
+Solicitor objected: “[W]e treated [Union Counsel’s] response to the [second
+Loudermill notice] as an indication that she was proceeding to arbitration on that
+issue rather than a hearing before the supervisors. So that’s what we’re doing today.”
+Id., N.T. at 108. Whatever Union Counsel’s response was, it is not contained in
+either the Original or Reproduced Record. Further complicating matters, Union
+Counsel then asked Chief Hanny whether a letter she marked as July 14, 2023
+indicated that Officer opted to proceed to arbitration on an unspecified issue. Due
+7
+
+to the Solicitor’s interruption, the Chief never answered the question and Union
+Counsel moved on to a different exhibit. Id., N.T. at 108-09. The only letter marked
+July 14, 2023 in the Original or Reproduced Record is the second Loudermill notice.
+To the extent that his testimony is relevant at this stage of the
+proceedings, Dr. Getz once again offered that he found his first examination of
+Officer difficult because he believed Officer was over reporting his symptoms, but
+that in both instances, he found that Officer did not suffer from PTSD. Arbitrator’s
+Hearing, N.T. at 137-41,147, 150.7
+The Arbitrator rendered his decision on February 29, 2024, identifying,
+without explanation, the following issues for his resolution: “Whether the Township
+was within [its] rights to remove [Officer] from service with an honorable discharge
+or whether the Township was required to place [Officer] on administrative duty with
+pay pending return to full duty. If not and if so, what shall the remedy be?”
+Arbitrator’s Award at 4. Concerning Officer’s request to be placed on administrative
+leave, the Arbitrator reasoned that Officer did not present any testimony or evidence
+that tended to suggest that he suffered from PTSD, while Dr. Getz affirmatively
+testified that Officer did not suffer from PTSD. Relying on this evidence, the
+Arbitrator concluded that the Township’s obligations under Act 59 8 were not
+
+7
+
+For his part, Officer categorically denied ever relating to a fellow officer that he was
+hoping to pull over a Black driver to incite a racially motivated incident. Arbitrator’s Hearing,
+N.T. at 215. He also testified that he did not recall telling one of his health care providers that he
+pulled over 15 drivers during a 45-minute period due to his anger. Id.
+8
+
+Section 2 of Act 59 provides:
+A law enforcement officer shall be assigned to administrative duty
+if the law enforcement officer:
+
+(Footnote continued on next page…)
+8
+
+triggered and Officer was not entitled to be placed on administrative duty. Id. at 6.
+Concerning the honorable discharge9 issue, the Arbitrator found the Township’s
+action to be reasonable in light of the extreme risk posed by Officer’s psychiatric
+symptoms and the relatively non-extensive medical attention Officer received to
+treat the same. Id. at 7-8. Thus, the Arbitrator denied the Union’s grievance without
+explaining his rationale for reaching the honorable discharge issue.
+On March 24, 2024, the Township sent Officer a letter of termination
+wherein it explained that it had “officially” terminated Officer’s employment as of
+March 4, 2024 – only a few days after the Arbitrator issued his award. R.R. at 48a.
+In a letter dated March 27, 2024, the Union forwarded the Petition to Vacate it had
+filed in trial court and grieved the Township’s decision to terminate Officer’s
+employment. Id. at 208a. In response, the Township stated that the honorable
+(1) fails to undergo a mental health evaluation for
+[PTSD] when required under subsection (a); or
+(2) is experiencing symptoms of [PTSD] under
+subsection (a) and whom the licensed physician has
+not yet determined is able to resume full duties under
+subsection (b).
+44 Pa. C.S. §7203(c). Subsection (a) obligates a law enforcement agency to provide an evaluation
+for PTSD upon the law enforcement officer’s request; upon recommendation of a supervisor; or
+within 30 days of an incident involving lethal force. Id. §7203(a).
+9
+
+Section 2 of the Police Tenure Act provides in relevant part:
+No person employed as a regular full time police officer in any
+police department of any township of the second class . . . shall be
+suspended, removed or reduced in rank except for the following
+reasons: (1) physical or mental disability affecting his ability to
+continue in service in which case the person shall receive an
+honorable discharge from service . . . .
+
+53 P.S. §812.
+
+9
+
+discharge issue had been duly adjudicated by the Arbitrator, such that the Township
+believed the Union’s only remaining avenue for relief lies with its appeal in the trial
+court. Id. at 210a.
+In the trial court, which denied the Union’s Petition to Vacate, the
+Union asserted that the Arbitrator had exceeded his jurisdiction by reaching the
+honorable discharge issue and that the hearing had failed to comport with due
+process. In the trial court’s estimation, the Union’s argument on this point was
+“chock full o[f] flawed and erroneous factual predicates.” Trial Court’s Pa.R.A.P.
+1925(a) Op. at 6. For example, the trial court faulted the Union for suggesting that
+it could not challenge Officer’s termination given that he never had notice of the
+board of supervisor’s vote as Officer had ample opportunity to voice that objection
+at the Arbitrator’s hearing. Id. at 6-7. To the extent that the issue related to due
+process, the trial court considered it “preposterous” that the Union or Officer would
+have been unaware that the honorable discharge issue would be addressed at the
+Arbitrator’s hearing because Officer received the second Loudermill notice. Id. at
+5. In any case, the trial court believed that reaching the honorable discharge issue
+was logical because of the “interplay” between Act 59 and the Police Tenure Act.
+Id. The Union filed a timely notice of appeal in this Court thereafter.
+II. Issues
+Before this Court, the Union once again asserts that, in reaching the
+honorable discharge issue, the Arbitrator (1) exceeded his jurisdiction; and (2)
+frustrated Officer’s due process rights.
+
+10
+
+III. Discussion
+As our Supreme Court has explained, “[g]rievance arbitration is not
+specifically mentioned in Act 111[,10] as its language speaks only to the resolution
+of disputes arising from ‘the collective bargaining process,’ i.e., interest arbitration.”
+Northern Berks Regional Police Commission v. Berks County Fraternal Order of
+Police, Lodge #71, 230 A.3d 1022, 1033 (Pa. 2020). However, as held in Chirico v.
+Board of Supervisors for Newton Township, 470 A.2d 470, 474-75 (Pa. 1983), the
+scope of appellate review we employ in interest arbitration applies equally to
+grievance arbitration11 – notwithstanding Act 111’s preclusion of appeals. North
+Berks Regional Police Commission, 230 A.3d at 1033; see also 43 P.S. §217.7(a).
+As such, “the scope of review applicable to Act 111 grievance
+arbitration appeals is settled: narrow certiorari review, which allows the [C]ourt to
+inquire into only four areas, obtains.” Town of McCandless v. McCandless Police
+Officers Association, 901 A.2d 991, 997 (Pa. 2006). The four areas our inquiry may
+enter upon include: (1) the jurisdiction of the arbitrator; (2) the regularity of the
+proceedings; (3) whether the arbitrator exceeded her authority; and (4) whether there
+has been a deprivation of constitutional rights. City of Philadelphia v. Fraternal
+Order of Police, Lodge No. 5, 768 A.2d 291, 295 (Pa. 2001).
+[I]f the question of arbitrability turns upon a pure question
+of law or upon the application of law to undisputed facts,
+appellate review is plenary; but if arbitrability depends
+10
+
+Act of June 24, 1968, P.L. 237, No. 111, as amended, 43 P.S. §§ 217.1-217.12.
+
+11
+
+See Michael G. Lutz Lodge No. 5, of Fraternal Order of Police v. City of Philadelphia,
+129 A.3d 1221, 1226 (Pa. 2015) (“Interest arbitration is, in essence, the process by which the
+parties, through a neutral arbitrator or panel, create a collective bargaining agreement. This
+process may be contrasted with grievance arbitration, in which the parties dispute the proper
+interpretation or application of provisions contained in an existing collective bargaining
+agreement.”).
+
+11
+
+upon fact-finding or an interpretation of the CBA, ‘the
+extreme deference standard’ governing Act 111 awards
+controls. In the latter instance the court is bound by the
+arbitrator's determination, even though it may be
+manifestly unreasonable.
+Town of McCandless, 901 A.2d at 995. An arbitrator exceeds his jurisdiction when
+he addresses issues not properly submitted to him. Borough of State College v.
+Borough of State College Police Association, 303 A.3d 248, 255 (Pa. Cmwlth. 2023)
+(citing City of Philadelphia v. Fraternal Order of Police, Lodge No. 5, 181 A.3d 485
+(Pa. Cmwlth. 2018)).
+The Union advances a succinct argument on this point: although the
+Union grieved the Township’s refusal to place Officer on administrative duty under
+Act 59, the Arbitrator nevertheless opined on the honorable discharge issue. Union’s
+Brief at 21. Thus, the Union believes, the Arbitrator exceeded his jurisdiction by
+reaching an issue not submitted to him, nor one that the Union could have submitted
+to the Arbitrator given that the Township had not notified Officer of the result of the
+board of supervisors’ vote. Id.
+Like the trial court below, the Township sharply disagrees with this
+argument. The Township offers a variety of rationales for explaining how this issue
+was submitted to the Arbitrator: (1) Officer had to know of his termination because
+he received the July 14, 2023 notice of the second Loudermill hearing; (2) neither
+the Union nor Officer objected to the Arbitrator’s jurisdiction at the November 9,
+2023 hearing, and the Union did not raise the issue in a post-hearing brief; (3) the
+denial of administrative duty was “functionally identical” to the honorable discharge
+issue; and (4) but for the July 14, 2023 Loudermill notice, “there would be no inciting
+event for a grievance.” Township’s Brief at 15-19.
+
+12
+
+Here, the record before this Court supports that the Union submitted a
+single issue to the Arbitrator: whether the Township violated the CBA’s prohibition
+against discrimination in denying Officer’s request to be placed on administrative
+duty under Act 59. See R.R. at 35a-37a. The Arbitrator therefore plainly exceeded
+his jurisdiction by reaching the issue of honorable discharge. Likewise, neither the
+Township nor the trial court have offered a single cogent rationale for concluding
+that the Arbitrator possessed jurisdiction over the matter.
+First, we are perplexed by the Townships’ suggestion – and the trial
+court’s endorsement of the same – that notice of a Loudermill hearing is somehow
+tantamount to notice of termination. The July 14, 2023 Loudermill notice did
+nothing to inform Officer or the Union of whether he had been honorably discharged
+from service, it only did that which it was designed to do: inform Officer that a
+Loudermill hearing on the subject of honorable discharge would take place. Further,
+this argument is all the more confusing given the procedural history that followed
+the Arbitrator’s Award, namely, the Township’s March 24, 2024 notice of
+termination.
+Indeed, as the Union has argued, without notice of the Township’s
+formal action concerning Officer’s termination, it is difficult to conceive of how the
+Union would have complied with the CBA’s requirement to provide the Township
+with written notice of the Union’s desire to refer the matter for arbitration. R.R. at
+7a-8a. The only plausible argument on this point would be that, following the July
+14, 2023 letter, the Union and Officer waived the Loudermill hearing and the CBA
+procedures to proceed to arbitration as alluded to at the hearing. See Arbitrator’s
+Hearing, N.T. at 108-09. But none of the alleged exhibits discussed therein are
+contained in the record before us, and, curiously, the Township ceased pursuing that
+13
+
+argument beyond the hearing. The Township’s post-hearing brief to the Arbitrator
+observes that its Exhibit D contains the Act 59 grievance request, but asserts only
+that the second Loudermill notice conferred the jurisdiction over the honorable
+discharge issue upon the Arbitrator. R.R. at 187a-88a. The same is true concerning
+the Township’s briefs in the trial court, id. at 266a-67a, and its brief in this Court.
+For whatever reason, then, the Township appears to have abandoned this argument.
+Relatedly, the Solicitor’s and Union Counsel’s exchange on this subject
+at the Arbitrator’s hearing disposes of the Township’s second argument. However,
+even if the issue of the Arbitrator’s jurisdiction was not as pervasive as it was
+throughout the proceedings, “[t]he issue of subject-matter jurisdiction cannot be
+waived and may be raised by the parties or by the court sua sponte.” Borough of
+Gettysburg v. Teamsters Local No. 776, 103 A.3d 389, 397 (Pa. Cmwlth. 2014)
+(quotations omitted). Still, our reading of the transcript indicates that Union Counsel
+was challenging the scope of the proceeding by questioning Chief Hanny as to
+whether the Township had actually taken any action, or informed Officer of the
+same, that could serve to initiate a grievance relating to an honorable discharge. See
+Arbitrator’s Hearing, N.T. at 105-07. The Union also pressed its argument that no
+formal Township action existed for Officer to grieve in its post-hearing brief to the
+Arbitrator, see, e.g., R.R. at 172a n.22 (“The grievance in this case was filed on May
+12, 2023, months before the Township argues its board or council acted.”), and
+explicitly challenged the Arbitrator’s jurisdiction over the issue in its Petition to
+Vacate and its brief to the trial court, see R.R. at 237a-38a, 256a-57a. It is also worth
+noting that the Union may have formally objected to the Arbitrator’s jurisdiction
+over the issue had the Arbitrator clearly defined the issues at the beginning of the
+
+14
+
+hearing. Again, see Arbitrator’s Hearing, N.T. at 9 (“I think I know what the issues
+are. We’ll find out.”).
+To the extent the Township argues that the administrative duty and
+honorable discharge issues are “functionally identical,” we observe that our Supreme
+Court has stated that an interest arbitration panel “may speak to an issue if it is
+reasonably subsumed within the issues properly before [it].” Michael G. Lutz Lodge
+No. 5, of Fraternal Order of Police v. City of Philadelphia, 129 A.3d 1221, 1231
+(Pa. 2015). Still, it is not entirely clear that this precedent applies in grievance
+arbitrations,12 and, in any case, the issues reached by the Arbitrator are neither
+functionally identical nor is one reasonably subsumed by the other.
+While both Act 59 and the Police Tenure Act contemplate an officer’s
+fitness for active service, the former ensures continued service in an administrative
+capacity while the latter provides for, inter alia, discharge. So too, the former’s
+process is largely insular; the PTSD examination might be prompted by the officer
+himself or the police chief and the decision to place the officer on administrative
+duty depends upon a medical professional’s opinion. See 44 Pa. C.S. §7203.
+Whereas the Police Tenure Act requires notice, a hearing, and a vote by the
+appointing authority, among other processes. See 53 P.S. §814. Regardless, even
+where there is shared subject matter, both pieces of legislation operate independently
+of one another. That is, contrary to the trial court’s suggestion, there is no interplay
+between Act 59 and the Police Tenure Act. If an officer were to request an
+examination for PTSD and to be placed on administrative duty, but the evaluation
+did not render a PTSD diagnosis, no provision in either act would compel the
+municipality to seek discharge or a reduction in rank under the Police Tenure Act.
+
+12
+
+But see Borough of State College, 303 A.3d at 257.
+
+15
+
+Hence, the issues are not functionally identical – and the Police Tenure Act is
+certainly not subsumed by Act 59 – such that the Arbitrator had jurisdiction beyond
+the single issue submitted to him.
+The Township’s final argument fares no better. Indeed, it was the
+Township who proffered Exhibit D at the Arbitrator’s hearing. Exhibit D contained
+Officer’s request to be placed on administrative duty and the Township’s denial, i.e.,
+the grievance documents that initiated the arbitration in the first place. Arbitrator’s
+Hearing, N.T. at 31-32; R.R. at 35a-37a. Because the issue of jurisdiction is
+dispositive, we need not reach the Union’s due process arguments but note that the
+Union’s argument on this point shares significant overlap with the jurisdiction issue
+anyway.13
+IV. Conclusion
+Accordingly, the trial court’s order is REVERSED in part and the
+matter is REMANDED to vacate the Arbitrator’s award to the extent he exceeded
+his jurisdiction.
+
+MICHAEL H. WOJCIK, Judge
+
+13
+
+Given the seriousness of this matter’s factual background, we must stress that we have
+not undertaken this decision lightly. Indeed, in many respects, we commend the Township and
+Chief Hanny’s dedication to treating an officer’s mental illness while also ensuring the public’s
+protection. But Act 111 arbitration panels are “bodies of temporary jurisdiction convened to
+respond quickly with absolute finality to a specific labor conflict, and then disperse.” City of
+Philadelphia v. Fraternal Order of Police, Lodge No. 5 (Jason Breary), 985 A.2d 1259, 1266 (Pa.
+2009) (emphasis added). Given the record before us, however, we must conclude that the
+Arbitrator only had jurisdiction to address the Act 59 issues.
+
+16
+
+IN THE COMMONWEALTH COURT OF PENNSYLVANIA
+Ohio Township Police Association,
+
+:
+:
+:
+:
+: No. 1695 C.D. 2024
+:
+:
+
+Appellant
+v.
+Ohio Township
+
+ORDER
+AND NOW, this 7th day of January, 2026, the November 16, 2024
+Order of the Allegheny County Court of Common Pleas is REVERSED in part and
+REMANDED to vacate the February 29, 2024 arbitration award to the extent
+consistent with the foregoing Opinion.
+Jurisdiction relinquished.
+
+__________________________________
+MICHAEL H. WOJCIK, Judge

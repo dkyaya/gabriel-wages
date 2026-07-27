@@ -1,0 +1,737 @@
+IN THE COMMONWEALTH COURT OF PENNSYLVANIA
+City of Pittsburgh,
+Appellant
+v.
+Pittsburgh Joint Collective Bargaining
+Committee (Seddon, Hlakonik,
+Semplice and Chubarov, grievants)
+BEFORE:
+
+:
+:
+:
+:
+:
+:
+:
+:
+
+No. 848 C.D. 2019
+Submitted: October 13, 2020
+
+HONORABLE ANNE E. COVEY, Judge
+HONORABLE J. ANDREW CROMPTON, Judge
+HONORABLE BONNIE BRIGANCE LEADBETTER, Senior Judge
+
+OPINION NOT REPORTED
+MEMORANDUM OPINION
+BY JUDGE COVEY
+
+FILED: November 9, 2020
+
+The City of Pittsburgh (City) appeals from the Allegheny County
+Common Pleas Court’s (trial court) June 20, 2019 order affirming an arbitration
+award concerning grievances the Pittsburgh Joint Collective Bargaining Committee
+(Union) filed on behalf of Harold Seddon (Seddon), Stephen Hlakonik (Hlakonik),
+Marc Semplice (Semplice), and Dana Chubarov (Chubarov) (collectively,
+Grievants). The Arbitrator found the grievances of Seddon and Hlakonik to be
+arbitrable even though they were not filed in writing, and directed the City to rescind
+the disciplinary action imposed on all four Grievants based on the Arbitrator’s
+conclusion that Grievants did not engage in a “wildcat strike,” work stoppage, or
+interruption or impeding of work in violation of Section 4(E) of the Collective
+Bargaining Agreement (CBA) between the City and the Union, nor were Grievants
+
+insubordinate and the City did not have just cause for imposing the discipline.1 Upon
+review, we affirm.
+The City and the Union are parties to a CBA, effective from January 1,
+2018, through December 31, 2023.
+
+Reproduced Record (R.R.) at 121a-198a.
+
+Grievants were covered by the CBA for their employment with the City’s
+Department of Public Works (DPW); Seddon and Hlakonik are members of
+Laborers Local Union 1058 (Laborers), and Semplice and Chubarov are members
+of Teamsters Local Union 249 (Teamsters).
+
+Arbitration Decision and Award
+
+(Arbitration Decision), December 23, 2018, at 29; R.R. at 80a.
+
+Facts
+On February 21, 2018, Grievants were working an overnight shift from
+10:00 p.m. to 6:00 a.m. “cold patching” potholes on Brownsville Road in the City.
+Arbitration Decision at 15; R.R. at 66a. About midway through their shift, foreman
+David Suchy (Foreman Suchy) told Grievants that more patching material was
+needed to complete the work during their shift. Id. at 29-30; R.R. at 80a-81a.
+A dispute arose as to whether Grievants would complete their shift or
+Foreman Suchy would permit them to stop working and go home because they did
+not feel well. Id. at 31; R.R. at 81a. Grievants ultimately left the work site after a
+break and three of them - Hlakonik, Semplice, and Chubarov – around the same
+time, sent Foreman Suchy text messages informing Foreman Suchy that they were
+
+Section 4(E) of the CBA (“Responsibilities of the Parties”) states, in pertinent part:
+“During the term of this Agreement there shall be no strikes, work stoppages, or interruption or
+impeding of work.” Reproduced Record at 129a.
+1
+
+2
+
+leaving and would be using their individual personal time for the remainder of the
+shift. Id. at 30; R.R. at 81a.
+The next day, the City issued Notices of Possible Disciplinary Action
+to Grievants, and after an investigation, suspended them for five days without pay.
+Arbitration Decision at 30; R.R. at 81a. The Teamsters filed written grievances with
+the City on behalf of Semplice and Chubarov. Id. The Laborers raised grievances
+with the City on behalf of Seddon and Hlakonik, but they were not formally filed in
+writing. Id. The grievance process failed to resolve the dispute and the matter went
+to arbitration. Id. In addition to the merits of the dispute, the City raised the issue
+of whether Seddon and Hlakonik’s grievances were eligible for arbitration, since,
+although the grievances proceeded through the grievance process, their original
+grievances were not in writing. Id. An Arbitrator held a hearing on October 23,
+2018. Id. at 14; R.R. at 65a.
+
+Arbitrator Hearing
+Seddon, a 19-year employee, testified that he told Foreman Suchy at
+the beginning of his shift that he did not feel well; he did not refuse to work, and
+later during the shift again informed Foreman Suchy that he did not feel well and
+“felt nauseated[,]” that he was going home, and that he would use personal time for
+his absence. Arbitration Decision at 18; R.R. at 69a. Seddon stated that Foreman
+Suchy advised him that if he did not want to work anymore, “then to [expletive] off.”
+Id.; R.R. at 69a. In addition, Seddon explained that although he told Foreman Suchy
+he was leaving because he did not feel well, he did not refuse to work nor did he tell
+the other Grievants to abandon the jobsite and follow him; Seddon also noted that
+Foreman Suchy never notified him when he left that he needed a doctor’s note. Id.
+3
+
+at 19; R.R. at 70a. Seddon reported that he went back to the office, filled out
+paperwork, went home, took over-the-counter medication, went to sleep, and
+returned to work the next day. Id. at 18; R.R. at 69a.
+Hlakonik, a 16-year employee, explained in a written statement that he
+and the others laid eight tons of patch in four hours during their shift, then discussed
+how they all were not feeling well and thought it might be a “flu bug.” Id. at 5, 1819; R.R. at 56a, 69a-70a. When Foreman Suchy told them to get more patching
+material they discussed how it might be better to stop, go home for medicine and
+rest, and “hit it again the next night, which all [Grievants] did. I recall no refusal not
+to continue work. [Foreman] Suchy was aware of how we all were feeling and said
+‘if that’s how you guys are feeling, just go home.’” Id. at 5; R.R. at 56a.
+In his testimony, Hlakonik stated that he did not feel well about midway
+through the shift. Arbitration Decision at 19; R.R. at 70a. Hlakonik talked with
+Seddon and they discussed taking a quarter of a day of leave, but did not talk to the
+other Grievants or try to influence them to leave. Id. Hlakonik then told Foreman
+Suchy he wanted to leave with Seddon because he also was not feeling well. Id.
+Hlakonik reported that Foreman Suchy did not instruct him to stay, he did not ask
+for a doctor’s note, or tell him he would face discipline if he left; instead Foreman
+Suchy told him[,] “I do not give a [expletive] what you do.” Id. Hlakonik sent a
+text at 3:21 a.m. to Foreman Suchy and informed him he was leaving. Id. at 33-36;
+R.R. at 84a-87a. Hlakonik went to the office, went home, and returned to work the
+next day. Id. at 19; R.R. at 70a.
+Chubarov, a 12-year employee, testified that she had already been out
+sick twice that month, but was trying to “suck it up” that night. Id. at 21; R.R. at
+72a. Chubarov was in her truck after the break when Foreman Suchy came up to the
+4
+
+door, scaring her, and asked her if she was getting another load of patching material
+or “going home with the rest of the crew.” Id. Chubarov testified that she did not
+discuss leaving with the others; Foreman Suchy did not tell her to get a doctor’s note
+or that she would be disciplined if she left; Chubarov believed she was given the
+option to leave and did so because she did not feel well. Id. at 21-22; R.R. at 72a73a. As she had done before without incident, Chubarov sent Foreman Suchy a text
+to tell him she was taking personal time off for the rest of the shift. Id. at 22; R.R.
+at 73a.
+Semplice, a 10-year employee, explained in his written statement that
+“I was exhausted due to working a lot of overtime that week. I was helping shovel
+asphalt and the fumes from the vehicle were making me lightheaded and nauseous.”
+Arbitration Decision at 6; R.R. at 57a. When Semplice told Foreman Suchy he felt
+ill, Foreman Suchy responded that “if we could not finish [the work that evening]
+that we should go home. At that point, I went home sick with the rest of the crew.”
+Id.
+In his testimony, Semplice stated that he volunteered to work as a
+laborer on the shift that night. Id. at 20; R.R. at 71a. He noticed that Chubarov did
+not feel well at the beginning of work. Id. Semplice testified that he started the shift
+feeling normal, but the weather was warm and he was sweating from the work; after
+a few hours, he did not feel well either. Id. at 20; R.R. at 71a. Semplice explained
+that after a break, he talked with Foreman Suchy, who gave him the choice to either
+go home sick or continue working; Foreman Suchy did not tell him he needed a
+doctor’s note or that he would be subject to discipline if he left. Id. Semplice
+reported that he went back to the office, completed paperwork, and sent Foreman
+Suchy a text that he was going home sick. Id. Semplice further testified that he went
+5
+
+home, took fluids, went to bed, and returned to work the next day. Id. at 20-21; R.R.
+at 71a-72a.
+Foreman Suchy related that at about 1:30 a.m., after a break, he
+proceeded as if he and Grievants were going to continue working and he told
+Chubarov to get more patching material. Arbitration Decision at 15; R.R. at 66a.
+Foreman Suchy explained that Semplice and Seddon did not ask permission to leave,
+but rather told him they were not working anymore that night and were going to use
+personal time for the rest of the shift. Id. He stated that he got text messages from
+three of the Grievants that they were taking half days for the rest of the shift. Id.
+Foreman Suchy testified that none of the Grievants looked sick or told him they did
+not feel well. Id. at 15-16; R.R. at 66a-67a. He acknowledged, however, that “he
+cannot stop anyone from taking time [the worker] has available,” and that employees
+have left in the past by sending text messages or calling and have not been
+disciplined. Id. at 15-16; R.R. at 66a-67a. Foreman Suchy confirmed that did not
+tell Grievants they could be disciplined if they left. Id.
+Philip Ameris, Jr., a staff representative for the Laborers (Union
+Representative Ameris), acknowledged at the October 2018 hearing that no written
+grievance for either Seddon or Hlakonik appeared to have been made. Union
+Representative Ameris further testified that even though no written grievance was
+filed, in the past the City responded to and addressed non-written grievances and
+that the City did not raise the issue here throughout the grievance process. Id. at 1718; R.R. at 68a-69a.
+After considering the evidence, the Arbitrator found that despite the
+lack of a formal written grievance in the cases of Seddon and Hlakonik, the City did
+not raise the issue in a timely manner and had a history of accepting verbal
+6
+
+grievances; therefore, those two matters were arbitrable and eligible for a
+determination on the merits. Id. at 31-35; R.R. at 82a-86a. The Arbitrator found in
+favor of Grievants on the merits and ordered the City to rescind the five-day
+suspensions, which the Arbitrator found had been imposed without just cause. Id.
+at 32-39; R.R. at 83a-90a.
+The City appealed to the trial court, which affirmed the Arbitrator’s
+award. The City appealed to this Court, raising the following issues:
+1. The Arbitrator ignored the written terms of the [CBA]
+when she ruled on the merits of unwritten grievances by
+the Union for [] Seddon and [] Hlakonik over the City’s
+objections.
+2. The Arbitrator ignored the written terms of the [CBA]
+when she ruled directly contrary to the section of the
+contract that addresses when the City can require a
+[d]octor’s certificate.
+3. The Arbitrator abused her discretion by engaging in
+conclusory and contradictory remarks saying there was
+“no evidence” and that the record was “devoid of
+evidence” (that [Grievants] engaged in any concerted
+work stoppage) despite her findings of fact based on
+undisputed Union testimony and stipulated Exhibits.
+City Br. at 15, 23, 28.
+
+Discussion
+The law is well established that appellate review of a grievance
+arbitration award is conducted pursuant to the highly deferential two-part essence
+test based on the reasoning that “[a]n arbitrator’s award must be sustained ‘if it is
+based on anything that can be gleaned as the ‘essence’ of the [collective bargaining
+7
+
+agreement].’” Pa. State Sys. of Higher Educ. v. Ass’n of Pa. State Coll. & Univ.
+Faculties, 98 A.3d 5, 14 (Pa. Cmwlth. 2014) (quoting Am. Fed’n of State, Cty. &
+Mun. Emps., Dist. Council 84, AFL–CIO v. City of Beaver Falls, 459 A.2d 863, 865
+(Pa. Cmwlth. 1983)). The test is administered as follows:
+‘First, the court shall determine if the issue as properly
+defined is within the terms of the collective bargaining
+agreement. Second, if the issue is embraced by the
+agreement, and thus, appropriately before the arbitrator,
+the arbitrator’s award will be upheld if the arbitrator’s
+interpretation can rationally be derived from the collective
+bargaining agreement.’ [State Sys. of Higher Educ.
+(Cheyney Univ.) v. State Coll. & Univ. Pro. Ass’n (PSEANEA)], 743 A.2d [405,] 413 [(Pa. 1999)]. We explained:
+‘That is to say, a court will only vacate an arbitrator’s
+award where the award indisputably and genuinely is
+without foundation in, or fails to logically flow from, the
+collective bargaining agreement.’ Id.
+Westmoreland Intermediate Unit #7 v. Westmoreland Intermediate Unit #7
+Classroom Assistants Educ. Support Pers. Ass’n, PSEA/NEA, 939 A.2d 855, 863
+(Pa. 2007). “The essence test does not permit this Court to vacate an arbitrator’s
+award even if we disagree with the arbitrator’s interpretation of the [collective
+bargaining agreement].” Am. Fed’n of State, Cnty., & Mun. Emps., Dist. Council 87
+v. Cnty. of Lackawanna, 102 A.3d 1285, 1290 (Pa. Cmwlth. 2014). This means that
+the reviewing court may not disregard the arbitrator’s findings of fact and credibility
+determinations, which are considered final. See Pa. State Police v. Pa. State
+Troopers’ Ass’n (Keyes), 54 A.3d 129 (Pa. Cmwlth. 2012).
+“The essence test is an exceptionally deferential standard, because
+binding arbitration is a highly favored method of dispute resolution.” Dep’t of Corr.,
+State Corr. Inst. at Forest v. Pa. State Corr. Officers Ass’n, 173 A.3d 854, 858 (Pa.
+8
+
+Cmwlth. 2017). The party challenging an arbitration award bears the “burden of
+proving the award does not draw its essence from the [collective bargaining
+agreement].” Pa. State Sys. of Higher Educ., 98 A.3d at 14.
+
+Procedural Arbitrability
+The City first argues that Seddon and Hlakonik’s grievances were not
+arbitrable. The City contends that the Arbitrator erred in finding their grievances,
+which were not commenced using the standard written format set forth in the CBA,
+were eligible for arbitration on the merits. The City asserts that the Arbitrator
+wrongly disregarded language in Section 5 of the CBA (“Grievance Procedure”) that
+requires grievances advancing beyond the relatively informal Step I phase to be
+submitted for Step II in writing on a standard grievance form. The CBA further
+provides that an appeal to Step III must also be in writing. CBA at 12; R.R. at 132a.
+The City contends that because Seddon and Hlakonik’s grievances were not
+originally submitted in writing, the Arbitrator did not have subject matter jurisdiction
+to consider and rule on the merits of their cases because Section 6 of the CBA
+(“Arbitration”) states: “Any grievance processed in accordance with” Section 5 may
+be appealed to arbitration. City Br. at 10-12.
+The City maintains that while all grievances must be considered during
+the grievance process even if they are procedurally noncompliant, a noncompliant
+grievance may not proceed to arbitration due to its procedural flaws and any waiver
+by the City must have been express and not implied by its failure to raise the issue
+at the first instance when the matter proceeded to Step II. Because the Arbitrator
+here elected to hear Seddon and Hlakonik’s grievances despite their noncompliance
+with the CBA terms requiring a written form, the City argues the Arbitrator violated
+9
+
+Section 6 of the CBA, which provides that an arbitrator may not “add to, subtract
+from, modify, or disregard” any terms or provisions of the CBA. City Br. at 10-12,
+15-23.
+The Union responds that the Arbitrator was within her authority to
+consider the City’s past practices of processing non-written grievances and that
+doing so did not amount to a unilateral disregard or modification of the CBA terms
+concerning written grievances. Union Br. at 11-12.
+“The arbitrator has sole and exclusive jurisdiction to hear disputes . . .,
+including the dispute as to whether the grievances . . . are arbitrable.” Abington
+Heights Sch. Dist. v. Pa. Labor Rels. Bd., 709 A.2d 990, 994 (Pa. Cmwlth. 1998).
+The arbitrability of Seddon and Hlakonik’s grievances clearly meets the first step in
+the essence test as it is expressly addressed within the CBA’s terms. The inquiry
+thus turns on the second step, whether the Arbitrator’s conclusion that the grievances
+were arbitrable may be rationally derived from the CBA.
+Our Supreme Court has explained:
+Under the second prong, we ask whether the award itself
+can rationally be derived from the [collective bargaining
+agreement]. Here, again, we emphasize that the parties to
+a [collective bargaining agreement] have agreed to allow
+the arbitrator to give meaning to their agreement and
+fashion appropriate remedies for ‘unforeseeable
+contingencies.’ [United Steelworkers of Am. v.] Warrior
+& Gulf Navigation Co., 363 U.S. [574,] 578-79 [(1960)]. .
+. . The words of the [collective bargaining agreement] are
+not ‘the exclusive source of rights and duties.’ Id. . . . The
+arbitrator is authorized to make findings of fact to inform
+his interpretation of the [collective bargaining agreement].
+United Paperworkers [Int’l] Union, AFL-CIO v. Misco,
+Inc., 484 U.S. 29, 38 . . . (1987) (Misco).
+
+10
+
+Accordingly, even though an arbitrator is not permitted to
+ignore the [collective bargaining agreement’s] plain
+language in fashioning an award, the arbitrator’s
+understanding of the plain language must prevail. A
+reviewing court ‘should not reject an award on the ground
+that the arbitrator misread the contract.’ Misco, 484 U.S.
+at 38[.] . . . The law is clear that an arbitrator’s award must
+draw its essence from the [collective bargaining
+agreement]. It need not [] reflect the narrowest possible
+reading of the [collective bargaining agreement’s] plain
+language. Even if a court’s interpretation of the [collective
+bargaining agreement] is entirely different than the
+arbitrator’s, the award must be upheld so long as it
+rationally derives from the [collective bargaining
+agreement].
+Millcreek Twp. Sch. Dist. v. Millcreek Twp. Educ. Support Pers. Ass’n, 210 A.3d
+993, 1006 (Pa. 2019) (citations omitted).
+In addressing this issue, the Court must determine whether the
+Arbitrator erred in considering the City’s past practice of accepting and litigating
+grievances presented verbally, which it also did here initially for Seddon and
+Hlakonik, and finding these grievances arbitrable on the merits. Generally, “a past
+practice cannot be used where it is proscribed or conflicts with the language of the
+current collective bargaining agreement.” Dep’t of Corr. v. Pa. State Corr. Officers
+Ass’n, 38 A.3d 975, 982 (Pa. Cmwlth. 2011). However, our Supreme Court has
+stated that an arbitrator’s award may draw its essence from the collective bargaining
+agreement if the arbitrator’s “interpretation can in any rational way be derived from
+the agreement, viewed in light of its language, its context, and any other indicia of
+the parties’ intention.” Danville Area Sch. Dist. v. Danville Area Educ. Ass’n,
+PSEA/NEA, 754 A.2d 1255, 1260 (Pa. 2000) (emphasis added) (quoting Cheyney
+Univ., 743 A.2d at 411).
+11
+
+Thus, an arbitrator is not necessarily confined to the express terms of a
+collective bargaining agreement and, when appropriate, may have latitude to
+consider evidence outside the four corners of the agreement.
+[U]nlike the trial court setting in which the judge will
+admit extraneous evidence for the jury’s consideration
+only after a determination that a contract is ambiguous, the
+distinction between ambiguous and unambiguous
+agreements is of no evidentiary significance in the labor
+arbitration context.
+United Sch. Dist. v. United Educ. Ass’n, 782 A.2d 40, 44-45 (Pa. Cmwlth. 2001).2
+In Danville Area School District, our Supreme Court expounded:
+More specifically with regard to past practice, as stated in
+Frank and Edna Asper Elkouri’s seminal work on
+arbitration, How Arbitration Works[:]
+Unquestionably custom and past practice
+constitute one of the most significant factors
+in labor-management arbitration. Evidence
+of custom and past practice may be
+introduced for any of the following major
+purposes: (1) to provide the basis for rules
+governing matters not included in the written
+contract; (2) to indicate the proper
+interpretation of ambiguous contract
+language; or (3) to support allegations that
+clear language of a written contract has been
+amended by mutual action or agreement.
+Elkouri and Elkouri, How Arbitration Works 437 (4th ed.
+1988).
+2
+
+See also United Steelworkers of Am. v. Warrior & Gulf Navigation Co., 363 U.S. 574,
+581-82 (1960) (“The labor arbitrator’s source of law is not confined to the express provisions of
+the contract, as the industrial common law - the practices of the industry and the shop - is equally
+a part of the collective bargaining agreement although not expressed in it.”).
+
+12
+
+Danville Area Sch. Dist., 754 A.2d at 1260 n.2. To this point, in Millcreek Township
+School District, our Supreme Court reinstated an arbitrator’s “reading of the
+[collective bargaining agreement] that was informed by his understanding of the
+parties’ history and the context” of their dispute. Id. at 1006.
+Here, the CBA sets forth agreed-upon procedures for written
+grievances. Step I requires only that the employee “discuss it” with his or her
+supervisor. CBA at 12; R.R. at 132a. But escalation to Step II “shall be presented
+in writing . . . on a standard grievance form” to the superintendent or a designated
+representative of the bureau in which the employee works, and “[a] grievance is
+deemed to be filed when the employee first submits it in writing on a standard
+grievance form.” CBA at 12-13; R.R. at 132a-33a. Further processing to Step III is
+to be accomplished by means of a “written appeal.” CBA at 13-14; R.R. at 133a34a.
+If the matter remains in dispute, arbitration is the next step. The CBA
+states: “Any grievance that has been processed in accordance with the provisions of
+[Section 5 of the CBA], but not satisfactorily settled shall be submitted to arbitration
+. . . .” CBA at 17; R.R. at 137a. The City asks that these provisions be strictly
+construed in this matter in order to block Seddon and Hlakonik’s grievances from
+arbitration on the merits.
+However, the introductory paragraph of Section 5 of the CBA also
+states: “[A]ny time limit or written format provided in the grievance procedure may
+be changed by mutual agreement of the parties . . . . The parties agree that no
+grievance will be accepted unless submitted on this form unless the parties agree
+otherwise.” CBA at 12; R.R. at 132a.
+
+13
+
+Thus, the question before the Arbitrator was whether the City’s failure
+to oppose Seddon and Hlakonik’s unwritten grievances for procedural
+noncompliance at Step II of the grievance process, both in the past and here,
+amounted to a tacit or implied “agreement” that their grievances could proceed to
+arbitration. As such, the Arbitrator considered the unrefuted testimony of Union
+Representative Ameris who testified that the City did not object to Seddon and
+Hlakonik’s unwritten grievances at Step II, and had not objected in the past to
+processing verbal grievances in other cases. Arbitration Decision at 17-18; R.R. at
+68a-69a. Based on this testimony, the Arbitrator concluded that in light of the City’s
+failure to object at the outset of the process here, and its past practice of litigating
+unwritten grievances “on numerous occasions,” there was no procedural bar to the
+arbitrability of these claims. Arbitration Decision at 31-32, 34-35; R.R. at 82a-83a,
+85a-86a.
+This Court concludes that the Arbitrator’s determination of arbitrability
+with regard to Seddon and Hlakonik’s grievances is rationally derived from the
+CBA. The City’s argument that the writing requirements in Section 5 of the CBA
+should be strictly construed here against Seddon and Hlakonik is belied by its past
+practice of accepting and litigating verbal grievances, but also by the language
+contained in Section 5 of the CBA that the procedural requirements may be amended
+by agreement of the parties, and nothing in the CBA states that such agreement must
+be express. The narrowest reading of the CBA is also not required. See Millcreek
+Twp. Sch. Dist. Thus, the City’s practice of accepting and litigating verbal or
+otherwise informal grievances in the past and here, by not objecting at Step II,
+indicates tacit or implied agreement that the written requirements for grievances
+need not always be followed.
+14
+
+Moreover, contrary to the City’s assertions, the Arbitrator did not
+neglect, modify, or disregard the terms of the CBA when she found Seddon and
+Hlakonik’s grievances arbitrable on the merits. Her decision to consider the merits
+of their grievances meets the requirements of the essence test: it is encompassed
+within the terms of the CBA and is rationally derived from those terms.3
+
+Medical Documentation
+The City next argues that on the merits of Grievants’ cases, the
+Arbitrator erred in not finding that Grievants’ failure to provide medical
+documentation for their asserted illnesses on the night of the incident violated the
+CBA. Section 12(E)(3) of the CBA (“Sickness and Accident Leave”) states: “A
+[d]octor’s certificate only may be required for an absence from work due to sickness
+for four (4) or more consecutive workdays, or when the City believes the absence
+from work to be the result of abuse.” CBA at 41; R.R. at 161a. The City maintains
+that in light of Foreman Suchy’s testimony that none of the Grievants looked sick or
+told him they were sick during their shift, the City reasonably suspected Grievants
+had committed sick leave abuse and therefore was within its authority to seek
+medical documentation after the fact, and that Grievants’ noncompliance with the
+request violated the CBA. City Br. at 23-28.
+The Union responds that the City improperly asks this Court to
+substitute its own evidentiary determinations and conclusions outside of
+longstanding judicial deference to arbitrators’ factual determinations and contract
+The City’s related assertion that the Arbitrator did not have contractual subject matter
+jurisdiction or legal power over this dispute beyond determining arbitrability in the first instance
+also fails. In light of the Arbitrator’s supported and rational conclusion that Seddon and Hlakonik’s
+grievances were in fact arbitrable, to then conclude that she lacked authority to actually decide the
+merits would be nonsensical.
+3
+
+15
+
+interpretations. The Union points to the Arbitrator’s conclusion that Grievants’
+departure from work and use of their personal leave time in lieu of working the rest
+of their shift that night was justified under and rationally derived from the CBA.
+Section 12(D)(2) of the CBA states: “Personal [l]eave time off must be requested in
+writing on a form provided by the City at least seventy-two (72) hours in advance of
+the time requested unless due to sudden illness or emergency.” Union Br. at 12-15;
+CBA at 38-39; R.R. at 158a-59a.
+The Arbitrator considered the testimony of Grievants as well as that of
+Foreman Suchy, and effectively found Grievants more credible. The Arbitrator
+concluded that Seddon “was not feeling well and informed his [f]oreman he was
+leaving work and using time he had available. . . . The [f]oreman did not instruct []
+Seddon that he needed a doctor’s excuse to return to work the next day.” Arbitrator’s
+Decision at 33; R.R. 84a. Similarly, the Arbitrator found that Hlakonik
+was not feeling well and wanted to leave work. . . . He
+was not instructed when he left early [that] he needed to
+return to work with a doctor’s slip or that he needed 72
+hours of notice before he took time off from work. . . . The
+language of the CBA did not require him to produce a
+doctor’s slip based on the circumstances.
+Id. at 35-36; R.R. at 86a-87a.
+Likewise, the Arbitrator determined that Semplice “left work because
+he was not feeling well. . . . He had time available to cover his absence. He was not
+told when he initially left [that] a doctor’s slip would be required to cover his
+absence.” Id. at 37-38; R.R. at 88a-89a. The Arbitrator also found that Chubarov
+left work because “she did not feel well. . . . She was not told she failed to give a
+72-hour notice or initially that a doctor[’s] slip was required because of the CBA
+requirements of one of sick abuse or high frequency.” Id. at 38-39; R.R. at 89a-90a.
+16
+
+The resolution of this issue is also subject to the essence test. A
+reviewing court may not second guess the arbitrator’s factual and credibility
+determinations, but may only inquire whether the issue and the arbitrator’s decision
+derive rationally from the CBA. See Millcreek Twp. Sch. Dist.; Pa. State Sys. of
+Higher Educ. (Cheyney Univ.); Danville Area Sch. Dist.
+This Court notes that the Arbitrator did not specifically address the
+City’s CBA Section 12(E)(3) claims concerning Grievants’ alleged “abuse” of sick
+time, but it is clear from the Arbitrator’s Decision that she rejected them in light of
+finding that Grievants had not violated Section 12(D)(2) of the CBA when they used
+available personal sick time to cover the rest of their shifts that night. The sick time
+issue is clearly encompassed within the CBA’s terms, whether in Section 12(D)(2)
+or Section 12(E)(3) of the CBA. CBA at 38-39, 41; R.R. at 158a-59a, 161a. The
+Arbitrator expressly determined that Grievants complied with the former, and tacitly
+found they had not violated the latter. Thus, there is no question that the issue meets
+the first step of the essence test.
+The Court must next consider whether the Arbitrator’s conclusion that
+the City did not have just cause for disciplining Grievants for not providing doctors’
+notes either before or after their absences is also rationally derived from the CBA
+and meets the second step of the essence test. The Arbitrator evaluated and weighed
+the evidence, including testimony from Grievants and the City’s witnesses, and
+expressly found that Grievants’ illnesses constituted valid and non-abusive use of
+personal leave time on an ad hoc basis without 72 hours of notice, which is permitted
+by the personal leave time provision in Section 12(D)(2) of the CBA.
+
+The
+
+Arbitrator’s finding of non-violation of that section of the CBA certainly arises
+rationally from the CBA’s terms. The Arbitrator’s conclusion that the City did not
+17
+
+have just cause for disciplining Grievants for not providing doctors’ notes either
+before or after their absences is rationally derived from the CBA and meets the
+second step of the essence test.
+To the City’s argument that Grievants’ actions may nevertheless have
+violated the sick leave section of the CBA, this Court is constrained to note that the
+Arbitrator found Grievants’ conduct acceptable under the personal leave section, and
+there is no basis in our precedent to reverse an arbitrator’s award based on “cherry
+picking” of a given CBA. See Johnson v. Pa. Nat’l Ins. Cos., 594 A.2d 296, 299
+(Pa. 1991) (“As such, it seems inequitable to permit appellee to pick and choose
+those contract provisions she prefers while not granting that same latitude to the
+named insured.”).
+This Court agrees with the Union that, in essence, the City is
+challenging the sufficiency of the evidence upon which the Arbitrator made certain
+conclusions. The Arbitrator’s decision was entirely based upon findings of fact and
+credibility determinations and satisfied the standards of the highly deferential
+essence test. Accordingly, there is no basis for this Court to step in.
+
+Work Stoppage or Wildcat Strike
+Next, the City argues that the Arbitrator wrongly concluded that
+Grievants did not engage in a concerted work stoppage or wildcat strike.4 The City
+points to: Hlakonik’s statement that he and Seddon discussed how they both did not
+feel well and decided to “call it quits” and use personal leave time for the remainder
+of the shift; Semplice’s statement that Grievants agreed they were not feeling well
+The City provides the definition of “wildcat strike” as a work stoppage that occurs without
+approval of union leadership and in violation of a no-strike collective bargaining agreement
+provision. City Br. at 6 (citing https://definitions.uslegal.com/w/wildcat-strike/).
+4
+
+18
+
+and would send Foreman Suchy a text advising him that they were taking personal
+time for the rest of the shift; and Foreman Suchy’s testimony that Grievants did not
+appear sick to him or tell him they did not feel well until he received same-time texts
+from three of them advising him they were not returning. City Br. at 28-31 (citing
+Arbitrator’s Decision at 15, 19-23).
+The City adds that even if Grievants did not conspire to stop working
+that night, discipline was warranted even if they all coincidentally decided to leave
+work because both the Public Employe Relations Act (PERA)5 and the CBA prohibit
+public employees from refusing to work.
+
+City Br. at 32-33 (citing Section
+
+1201(b)(7) of PERA, 43 P.S. § 1101.1201(b)(7) (“Unfair practices by public
+employers and employe organizations; acts prohibited”); Section 4 of the CBA
+(“Responsibilities of the Parties”)).
+The Union responds that the Arbitrator clearly credited Grievants’
+testimony that they concurrently felt or became ill during their shift, that they did
+not conspire to create a work stoppage or wildcat strike, that they were told by
+Foreman Suchy that they could stay or go home, and that Foreman Suchy never
+advised them if they left they would be subject to disciplinary action. Union Br. at
+13-17.
+Concerning the first step of the essence test, the question of whether
+Grievants engaged in an improper work stoppage or wildcat strike or, as the
+Arbitrator found, left work due to legitimate illnesses, is clearly encompassed within
+the CBA’s terms. This issue comes within any one of the following sections: Section
+3 of the CBA (“Management”), which states that the City “shall have the right to
+manage and direct the working forces including the right to schedule and assign
+5
+
+Act of July 23, 1970, P.L. 563, as amended, 43 P.S. §§ 1101.101-1101.2301.
+
+19
+
+work to be performed” but that the City may not impose discipline except for “just
+cause”; Section 4 of the CBA (“Responsibility of the Parties”), which states “there
+shall be no strikes, work stoppages, or interruption or impeding of work”; or Section
+12(D)(2) of the CBA, which governs personal leave time. CBA at 8-9, 39; R.R. at
+128a-29a, 159a.
+The Arbitrator’s conclusion that there was no improper work stoppage
+or wildcat strike here also meets the second step of the essence test as her decision
+is rationally derived from the CBA’s terms. The Arbitrator evaluated and weighed
+the evidence, including testimony from Grievants and the City’s witnesses, and
+expressly found that Grievants’ actions did not rise to the level of a wildcat strike or
+other improper work stoppage prohibited by the CBA.
+Regarding Seddon, the Arbitrator concluded: “There was not just cause
+to discipline this grievant,” “he did not act insubordinate[,]” and “while [Grievants]
+may have discussed that [] Seddon was leaving work, there was no evidence [that]
+his action constituted a concerted activity such as a wildcat strike.” Arbitrator’s
+Decision at 33; R.R. at 33a.
+Concerning Hlakonik, the Arbitrator concluded: “[T]he City did not
+have just cause to discipline this grievant,” he “was not insubordinate because he
+was not told to stay on the job,” his “actions of leaving work early did not constitute
+a wildcat strike. He did not encourage others to leave work” but rather “only
+discussed he was leaving early with [Seddon].” Id. at 36; R.R. at 87a.
+Likewise, the Arbitrator found Semplice “did not act insubordinate” as
+he was told by Foreman Suchy that he had the choice to leave. Id. at 37; R.R. at 88a.
+Moreover, “the evidence is devoid of proof he convinced other employees to leave
+work early to cause a wildcat strike. . . . [Semplice] left work because he was not
+20
+
+feeling well. . . . He had time available to cover his absence.” Id. at 37-38; R.R. at
+88a-89a.
+Finally, the Arbitrator concluded that Chubarov’s actions of leaving
+work when given the option to do so by Foreman Suchy “do not rise to the level of
+her being disciplined in this matter.” Id. at 39; R.R. at 90a. She discussed with the
+others that “they needed to tell the [f]oreman individually [that] they planned to
+leave” after he gave them the option to do so, but this did not mean she “conspired
+to leave early to cause a wildcat strike.” Id.
+The Arbitrator clearly credited Grievants’ testimony over that of
+Foreman Suchy and made her determinations within her understanding of the CBA
+terms “just cause,” and “strikes, work stoppages, or interruption or impeding of
+work.” CBA at 8-9; R.R. at 128a-29a. Credibility determinations are within the sole
+province of the arbitrator and are beyond the scope of our review. Keyes. Thus,
+there is no basis for this Court to disturb the Arbitrator’s conclusions. This Court
+therefore concludes that the Arbitrator’s determination that Grievants’ actions did
+not rise to a strike or other improper work stoppage or impediment of work, and the
+City did not have just cause to impose discipline, met the essence test.
+
+Public Policy Exception
+The City argues that even if the Arbitrator’s award meets the essence
+test, it should be set aside under the public policy exception. The City maintains that
+Grievants’ leaving the job in mid-shift undermines public safety and welfare and that
+affirming the Arbitrator’s decision will “incentivize public servants to hold the
+public hostage to their whims.” City Br. at 33-37. The Union responds that the facts
+here do not rise to meet the very narrow circumstances in which the public policy
+21
+
+exception is warranted because the Arbitrator correctly found that Grievants did not
+engage in illegal work stoppage, but rather took permissible personal leave time.
+Union Br. at 15-17.
+“In cases where a court finds that the essence test is satisfied, the court
+may then consider whether the award violates a well-defined and dominant public
+policy of the Commonwealth.” Pa. State Sys. of Higher Educ., Lock Haven Univ. v.
+Ass’n of Pa. State Coll. & Univ. Faculties, 193 A.3d 486, 498 (Pa. Cmwlth. 2018),
+appeal denied, 203 A.3d 980 (Pa. 2019). The public policy exception requires
+satisfaction of the following three-part test:
+First, the nature of the conduct leading to the discipline
+must be identified. Second, we must determine if that
+conduct implicates a public policy which is ‘well-defined,
+dominant, and ascertained by reference to the laws and
+legal precedents and not from general considerations of
+supposed public interests.’ . . . Third, we must determine
+if the arbitrator’s award poses an unacceptable risk that it
+will undermine the implicated policy and cause the public
+employer to breach its lawful obligations or public duty,
+given the particular circumstances at hand and the factual
+findings of the arbitrator.
+Id. (quoting Neshaminy Sch. Dist. v. Neshaminy Fed’n of Tchrs., 171 A.3d 334, 338
+(Pa. Cmwlth. 2017) (en banc)).6 “The burden of establishing a violation of public
+policy rests on the party asserting the public policy exception.” Id. “Whether the
+6
+
+We note that in Millcreek Township School District, our Supreme Court considered the
+public policy exception in the context of whether a school district’s issuance of requests for
+proposals to outside custodial work companies violated its collective bargaining agreement with
+its custodial workers’ union. 210 A.3d at 1006. In that context, the Court adjusted the test slightly
+to consider whether the arbitrator’s remedy of barring the school district from using outside
+custodial contractors violated public policy. The Court implied, however, that in the context of
+employee discipline grievances, the extant test focusing on the nature of the underlying conduct
+leading to the discipline remained in effect. Id. at 1010-11.
+
+22
+
+public policy exception to the essence test applies in a given case is a question of
+law subject to plenary, de novo review.” Id.
+Here, the City asserts that the well-defined, dominant public policy is
+that wildcat strikes and illegal work stoppages by public workers undermines public
+safety and welfare. If Grievants’ conduct amounted to a wildcat strike or other
+illegal work stoppage, it could possibly undermine public policy and cause the City
+to breach its duty to ensure public works, such as street repairs, are completed.
+However, the Court must consider “the particular circumstances at hand
+and the factual findings of the arbitrator,” who heard and observed the witnesses.
+Pa. State Sys. of Higher Educ., 98 A.3d at 15. The Arbitrator’s evaluation of the
+evidence, including the conflicting statements of Grievants and Foreman Suchy, led
+her to conclude that Grievants genuinely did not feel well, reported this to Foreman
+Suchy, got his permission to leave (however grudgingly), and properly used their
+personal leave time to account for their absence from the rest of their shift. The
+Arbitrator did not find their conduct amounted to a wildcat strike or any other
+improper, insubordinate, or concerted work stoppage. Arbitrator’s Decision at 3339.
+As discussed above, this case rests almost entirely on the respective
+witnesses’ credibility.
+
+The Court therefore remains constrained to accept the
+
+Arbitrator’s factual determination that Grievants’ conduct in leaving work early due
+to their asserted illnesses was not an illegal strike or work stoppage, but legitimate,
+and permitted by the CBA’s personal leave provisions. Accordingly, the Court must
+also conclude that the legitimate nature of this conduct does not violate the public
+policy against wildcat strikes or improper work stoppages, and that the Arbitrator’s
+award in Grievants’ favor does not lead to an unacceptable risk or force the City to
+23
+
+breach its lawful obligations or public duty. As such, the Arbitrator’s award does
+not implicate the public policy exception to the essence test.
+
+Conclusion
+Because the City has failed to establish that the Arbitrator’s award does
+not draw its essence from the CBA and does not violate a well-defined and dominant
+public policy of the Commonwealth, the trial court’s order is affirmed.
+
+__________________________________
+ANNE E. COVEY, Judge
+
+Judge Fizzano Cannon did not participate in the decision in this case.
+
+24
+
+IN THE COMMONWEALTH COURT OF PENNSYLVANIA
+City of Pittsburgh,
+Appellant
+v.
+Pittsburgh Joint Collective Bargaining
+Committee (Seddon, Hlakonik,
+Semplice and Chubarov, grievants)
+
+:
+:
+:
+:
+:
+:
+:
+:
+
+No. 848 C.D. 2019
+
+ORDER
+
+AND NOW, this 9th day of November, 2020, the Allegheny County
+Common Pleas Court’s June 20, 2019 order is AFFIRMED.
+
+__________________________________
+ANNE E. COVEY, Judge

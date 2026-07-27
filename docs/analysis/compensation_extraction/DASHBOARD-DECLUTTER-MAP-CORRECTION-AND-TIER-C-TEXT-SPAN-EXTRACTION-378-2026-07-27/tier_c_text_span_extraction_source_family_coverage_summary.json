@@ -1,0 +1,78 @@
+{
+  "by_group": {
+    "cba_or_arbitration_award_or_factfinding_or_impasse_record": {
+      "ambiguous_span_source_count": 38,
+      "extracted_ok_count": 100,
+      "no_span_or_weak_source_count": 37,
+      "positive_span_record_count": 88,
+      "span_extracted_source_count": 25,
+      "span_queue_count": 100,
+      "text_extraction_queue_count": 100
+    },
+    "cba_or_arbitration_award_or_factfinding_or_impasse_record (interest arbitration award)": {
+      "ambiguous_span_source_count": 0,
+      "extracted_ok_count": 1,
+      "no_span_or_weak_source_count": 0,
+      "positive_span_record_count": 3,
+      "span_extracted_source_count": 1,
+      "span_queue_count": 1,
+      "text_extraction_queue_count": 1
+    },
+    "cba_or_arbitration_award_or_factfinding_or_impasse_record (restraint of binding grievance arbitration synopsis)": {
+      "ambiguous_span_source_count": 1,
+      "extracted_ok_count": 1,
+      "no_span_or_weak_source_count": 0,
+      "positive_span_record_count": 0,
+      "span_extracted_source_count": 0,
+      "span_queue_count": 1,
+      "text_extraction_queue_count": 1
+    },
+    "cba_or_arbitration_award_or_factfinding_or_impasse_record (township document likely referencing bargaining unit terms and/or related proceedings)": {
+      "ambiguous_span_source_count": 1,
+      "extracted_ok_count": 1,
+      "no_span_or_weak_source_count": 0,
+      "positive_span_record_count": 0,
+      "span_extracted_source_count": 0,
+      "span_queue_count": 1,
+      "text_extraction_queue_count": 1
+    },
+    "cba_or_arbitration_award_or_factfinding_or_impasse_record (unit/representation decision synopsis; may affect bargaining power)": {
+      "ambiguous_span_source_count": 1,
+      "extracted_ok_count": 1,
+      "no_span_or_weak_source_count": 0,
+      "positive_span_record_count": 0,
+      "span_extracted_source_count": 0,
+      "span_queue_count": 1,
+      "text_extraction_queue_count": 1
+    },
+    "cba_or_budget_pay_plan_with_explicit_compensation_mechanism": {
+      "ambiguous_span_source_count": 84,
+      "extracted_ok_count": 94,
+      "no_span_or_weak_source_count": 8,
+      "positive_span_record_count": 2,
+      "span_extracted_source_count": 2,
+      "span_queue_count": 94,
+      "text_extraction_queue_count": 94
+    },
+    "cba_or_compensation_study_or_classification_study_or_wage_schedule": {
+      "ambiguous_span_source_count": 23,
+      "extracted_ok_count": 68,
+      "no_span_or_weak_source_count": 28,
+      "positive_span_record_count": 54,
+      "span_extracted_source_count": 17,
+      "span_queue_count": 68,
+      "text_extraction_queue_count": 68
+    },
+    "collective_bargaining_agreement_or_moa_or_wage_schedule": {
+      "ambiguous_span_source_count": 77,
+      "extracted_ok_count": 112,
+      "no_span_or_weak_source_count": 28,
+      "positive_span_record_count": 12,
+      "span_extracted_source_count": 7,
+      "span_queue_count": 112,
+      "text_extraction_queue_count": 112
+    }
+  },
+  "coverage_boundary": "Operational extraction coverage only; not prevalence, wage effects, or causal evidence.",
+  "group_count": 8
+}

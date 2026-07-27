@@ -1,0 +1,3198 @@
+Case 22-13032-amc
+
+Doc 583
+
+Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 1 of 53
+
+Desc Main
+
+THE BANKRUPTCY COURT HAS NOT APPROVED A DISCLOSURE STATEMENT
+TO ACCOMPANY THIS PLAN. THE DISTRIBUTION OF THIS PLAN AND ANY
+PROPOSED DISCLOSURE STATEMENT IS NOT INTENDED TO BE, AND SHOULD
+NOT BE CONSTRUED AS, A SOLICITATION OF VOTES ON THIS PLAN. THE
+CITY OF CHESTER RESERVES THE RIGHT TO MODIFY, AMEND, SUPPLEMENT,
+RESTATE OR WITHDRAW THIS PLAN, A DISCLOSURE STATEMENT AND ANY
+ANCILLARY DOCUMENTS AT ANY TIME.
+IN THE UNITED STATES BANKRUPTCY COURT
+FOR THE EASTERN DISTRICT OF PENNSYLVANIA
+In re:
+CITY OF CHESTER, PENNSYLVANIA,
+Debtor.
+
+:
+:
+:
+:
+:
+:
+:
+
+Chapter 9
+Case No. 22-13032
+Judge Ashely M. Chan
+
+PLAN FOR THE ADJUSTMENT OF DEBTS OF THE CITY OF CHESTER
+BALLARD SPAHR LLP
+Tobey M. Daluz (PA Bar No. 60685)
+Margaret A. Vesper (PA Bar No. 329793)
+1735 Market Street, 51st Floor
+Philadelphia, PA 19103
+Tel: (215) 864-8148
+Email: daluzt@ballardspahr.com
+vesperm@ballardspahr.com
+-andMatthew G. Summers*
+Laurel D. Roglen*
+Nicholas J. Brannick*
+919 N. Market Street, 11th Floor
+Wilmington, DE 19801
+Tel: (302) 252-4465
+Email: summersm@ballardspahr.com
+roglenl@ballardspahr.com
+brannickn@ballardspahr.com
+(*Admitted pro hac vice)
+Counsel for the City of Chester
+
+Case 22-13032-amc
+
+Doc 583
+
+Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 2 of 53
+
+Desc Main
+
+TABLE OF CONTENTS
+Page
+INTRODUCTION ................................................................................................................................ 1
+ARTICLE I DEFINED TERMS, RULES OF INTERPRETATION AND COMPUTATION OF TIME................ 1
+A.
+Defined Terms. ......................................................................................................... 1
+B.
+Rules of Interpretation and Computation of Time. ................................................ 15
+1.
+Rules of Interpretation. ............................................................................. 15
+2.
+Computation of Time. ............................................................................... 15
+ARTICLE II CLASSIFICATION OF CLAIMS; CRAMDOWN; EXECUTORY CONTRACTS AND
+UNEXPIRED LEASES................................................................................................. 15
+A.
+Unclassified Claims. ............................................................................................... 16
+1.
+Administrative Claims. ............................................................................. 16
+a.
+Bar Dates for Administrative Claims............................................ 16
+i.
+General Bar Date Provisions. ............................................ 16
+ii.
+Ordinary Course Claims ................................................... 17
+iii.
+No Modification of Bar Date Order. ................................. 17
+B.
+Classified Claims. ................................................................................................... 17
+1.
+Designation of Classes. ............................................................................. 17
+2.
+Subordination; Reservation of Rights to Reclassify Claims ..................... 17
+3.
+Treatment of Claims ................................................................................. 18
+a.
+Class 1 – Series 2021 DVRPC Notes Claim................................. 18
+i.
+Allowance. ........................................................................ 18
+ii.
+Treatment. ......................................................................... 18
+b.
+Class 2 – Other Secured Claims.................................................... 18
+c.
+Class 3 – MMO Claim .................................................................. 18
+i.
+Allowance. ........................................................................ 18
+ii.
+Treatment. ......................................................................... 18
+d.
+Class 4 – Retiree Pension Claim. .................................................. 19
+i.
+Allowance. ........................................................................ 19
+ii.
+Treatment. ......................................................................... 19
+e.
+Class 5 - OPEB Claim................................................................... 19
+i.
+Allowance. ........................................................................ 19
+ii.
+Treatment. ......................................................................... 19
+f.
+Class 6 – FOP Claim. .................................................................... 19
+i.
+Allowance. ........................................................................ 19
+ii.
+Treatment. ......................................................................... 19
+g.
+Class 7 – IAFF Claim. .................................................................. 19
+i.
+Allowance. ........................................................................ 19
+ii.
+Treatment. ......................................................................... 19
+h.
+Class 8 - Teamsters Claim. ........................................................... 20
+i.
+Allowance. ........................................................................ 20
+ii.
+Treatment. ......................................................................... 20
+i.
+Class 9 – Reassessment Tax Appeal Claim. ................................. 20
+i.
+Allowance. ........................................................................ 20
+ii.
+Treatment. ......................................................................... 20
+i
+
+Case 22-13032-amc
+
+Doc 583
+
+Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 3 of 53
+
+Desc Main
+
+j.
+
+C.
+D.
+
+Class 10 – Tort Claims.................................................................. 20
+i.
+Allowance. ........................................................................ 20
+ii.
+Treatment. ......................................................................... 20
+k.
+Class 11 – Convenience Claims.................................................... 21
+i.
+Treatment. ......................................................................... 21
+l.
+Class 12 – Pension Spiking Claims. ............................................. 21
+i.
+Treatment. ......................................................................... 21
+m.
+Class 13 – General Unsecured Claims. ......................................... 21
+i.
+Allowance. ........................................................................ 21
+ii.
+Treatment. ......................................................................... 21
+n.
+Class 14 – Subordinated Claims. .................................................. 21
+i.
+Treatment. ......................................................................... 21
+Confirmation Without Acceptance by All Impaired Classes. ................................ 22
+Treatment of Executory Contracts and Unexpired Leases. .................................... 22
+1.
+Rejection. .................................................................................................. 22
+2.
+Rejection of Ancillary Agreements. ......................................................... 22
+3.
+Assumption of Identified Executory Contracts and Unexpired
+Leases. ....................................................................................................... 22
+4.
+Payments Related to the Assumption of Executory Contracts and
+Unexpired Leases. ..................................................................................... 23
+5.
+Contracts and Leases Entered Into After the Petition Date. ..................... 23
+6.
+Rejection Damages Bar Date. ................................................................... 23
+7.
+Preexisting Obligations to the City Under Rejected Executory
+Contracts and Unexpired Leases. .............................................................. 24
+8.
+Insurance Policies. .................................................................................... 24
+
+ARTICLE III CONFIRMATION OF PLAN ......................................................................................... 24
+A.
+Conditions Precedent to the Effective Date. .......................................................... 24
+B.
+Waiver of Conditions to the Effective Date. .......................................................... 25
+C.
+Effect of Nonoccurrence of Conditions to the Effective Date. .............................. 25
+D.
+Effect of Confirmation of the Plan. ........................................................................ 25
+1.
+Dissolution of Retiree Committee. ........................................................... 25
+2.
+Preservation of Rights of Action by the City. ........................................... 26
+3.
+Comprehensive Settlement of Claims and Controversies. ........................ 26
+4.
+Discharge of Claims. ................................................................................. 26
+a.
+Complete Satisfaction, Discharge and Release. ............................ 26
+b.
+Discharge. ..................................................................................... 26
+5.
+Exculpation. .............................................................................................. 27
+6.
+Injunction. ................................................................................................. 27
+7.
+Debtor’s Releases...................................................................................... 28
+8.
+Voluntary Release by Holders of Claims.................................................. 29
+E.
+Effectiveness of the Plan. ....................................................................................... 30
+F.
+Binding Effect of Plan. ........................................................................................... 30
+ARTICLE IV MEANS FOR IMPLEMENTATION OF THE PLAN .......................................................... 30
+A.
+Request for Proposals Regarding Stormwater Assets, Water Assets & Sewer
+Assets .................................................................................................................... 30
+B.
+Stormwater Assets .................................................................................................. 31
+ii
+
+Case 22-13032-amc
+
+C.
+D.
+
+E.
+F.
+G.
+H.
+I.
+J.
+K.
+L.
+M.
+N.
+
+Doc 583
+
+Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 4 of 53
+
+Desc Main
+
+1.
+Dissolution. ............................................................................................... 31
+2.
+Funded Debt of SAC. ................................................................................ 31
+3.
+Management of Stormwater Assets........................................................... 32
+Sewer Assets ........................................................................................................... 32
+Water Assets ........................................................................................................... 32
+1.
+Dissolution. ............................................................................................... 32
+2.
+Funded Debt of CWA. .............................................................................. 32
+3.
+Operation of Water Assets and Management. ........................................... 33
+Retiree Pension Benefits. ........................................................................................ 33
+OPEB Benefits........................................................................................................ 33
+FOP CBA................................................................................................................ 33
+IAFF CBA. ............................................................................................................. 33
+Teamsters CBA....................................................................................................... 33
+Cancellation of Series 2017 Bonds and Series 2017 Bonds Documents. ............... 33
+Rejection or Termination of Contribution Agreement. ........................................... 34
+Release of Liens. .................................................................................................... 34
+Assumption of Indemnification Obligations. ......................................................... 34
+Payment of Workers’ Compensation Claims. ........................................................ 34
+
+ARTICLE V PROVISIONS REGARDING DISTRIBUTIONS UNDER THE PLAN .................................... 35
+A.
+Appointment of Disbursing Agent. ........................................................................ 35
+B.
+Distributions on Account of Allowed Claims. ....................................................... 35
+C.
+Record Date for Distributions. ............................................................................... 35
+D.
+Means of Cash Payments. ...................................................................................... 36
+E.
+Selection of Distribution Dates for Allowed Claims.............................................. 36
+F.
+Limitations on Amounts to Be Distributed to Holders of Allowed Claims
+Otherwise Insured. ................................................................................................ 36
+G.
+City’s Rights of Setoff Preserved. .......................................................................... 36
+H.
+Delivery of Distributions and Undeliverable or Unclaimed Distributions............. 37
+1.
+Delivery of Distributions Generally.......................................................... 37
+2.
+De Minimis Distributions. ........................................................................ 37
+3.
+Undeliverable or Unclaimed Distributions. .............................................. 37
+4.
+Time Bar to Cash Payment Rights. ........................................................... 37
+I.
+Other Provisions Applicable to Distributions in All Classes. ................................ 37
+1.
+No Postpetition Interest............................................................................. 37
+2.
+Compliance with Tax Requirements. ........................................................ 38
+3.
+Allocation of Distributions. ...................................................................... 38
+4.
+Surrender of Instruments........................................................................... 38
+ARTICLE VI PROCEDURES FOR RESOLVING DISPUTED CLAIMS................................................... 39
+A.
+Treatment of Disputed Claims. .............................................................................. 39
+1.
+General. ..................................................................................................... 39
+2.
+Tort Claims, Reassessment Tax Appeal Claims and Indirect
+Employee Indemnity Claims..................................................................... 39
+B.
+Disputed Claims Reserve. ...................................................................................... 40
+C.
+Objections to Claims............................................................................................... 41
+1.
+Authority to Prosecute, Settle and Compromise. ...................................... 41
+2.
+Expungement or Adjustment of Claims Without Objection. .................... 41
+iii
+
+Case 22-13032-amc
+
+3.
+
+Doc 583
+
+Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 5 of 53
+
+Desc Main
+
+Extension of Claims Objection Bar Date. ................................................. 41
+
+ARTICLE VII RETENTION OF JURISDICTION ................................................................................. 41
+ARTICLE VIII MISCELLANEOUS PROVISIONS .............................................................................. 43
+A.
+Plan Supplements. .................................................................................................. 43
+B.
+Modification of the Plan. ........................................................................................ 43
+C.
+Revocation of the Plan. .......................................................................................... 43
+D.
+Severability of Plan Provisions. ............................................................................. 43
+E.
+Effectuating Documents and Transactions. ............................................................ 44
+F.
+Plan Controls. ......................................................................................................... 44
+G.
+Notice of the Effective Date. .................................................................................. 44
+H.
+Governing Law. ...................................................................................................... 44
+I.
+Request for Waiver of Automatic Stay of Confirmation Order. ............................ 45
+J.
+Term of Existing Injunctions and Stays. ................................................................ 45
+K.
+Service of Documents ............................................................................................ 45
+
+iv
+
+Case 22-13032-amc
+
+Doc 583
+
+Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 6 of 53
+
+Desc Main
+
+TABLE OF EXHIBITS
+
+Exhibit
+
+Title
+
+[•]
+
+Plan Supplement
+
+[•]
+
+Assumed Executory Contracts and Unexpired Leases
+
+[•]
+
+Retained Causes of Action
+
+v
+
+Case 22-13032-amc
+
+Doc 583
+
+Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 7 of 53
+
+Desc Main
+
+INTRODUCTION1
+The City of Chester, Pennsylvania (the “City”) proposes the following plan (this “Plan”)
+for the adjustment of its debts pursuant to and in accordance with chapter 9 of the United States
+Bankruptcy Code. This Plan is submitted pursuant to Section 263 of Act 47 and Section 941 of
+the Bankruptcy Code in order to avoid the unknown effect or impact to the City of, among other
+things, disincorporation of the City pursuant to Sections 431-439 of Act 47 if the City is unable
+to confirm a plan that adjusts its debts. This Plan, if approved by the Bankruptcy Court, shall
+constitute an amendment to the Recovery Plan but shall not be subject to review or approval by
+any other court, as set forth in Act 47.
+The City has not completed its review to determine which Executory Contracts and
+Unexpired Leases the City may seek to assume or reject. Although the default under this Plan is
+the rejection of all Executory Contracts and Unexpired Leases, contract and lease counterparties
+should rely on the Plan Supplement, to be filed at a later date, to determine whether their
+Executory Contract or Unexpired Lease will be assumed or rejected by the City.
+A discussion of the City’s organizational structure, operations, capital structure and
+events leading to the commencement of the City’s Chapter 9 Case, as well as a summary
+description of the Plan, risk factors and other related matters, is included in the Disclosure
+Statement. Other agreements and documents, which have been or will be filed with the
+Bankruptcy Court, are referenced in the Plan or the Disclosure Statement and are available for
+review.
+The City encourages all of its creditors and other parties in interest to read the Plan, the
+Disclosure Statement and the other material that has been approved for use in soliciting votes on
+the Plan before casting a vote to accept or reject the Plan.
+ARTICLE I
+DEFINED TERMS, RULES OF INTERPRETATION AND COMPUTATION OF TIME
+A.
+
+Defined Terms.
+
+Capitalized terms used in the Plan have the meaning given in this Section. Any term that
+is not defined in this Section, but that is issued in the Bankruptcy Code or Bankruptcy Rules,
+shall have the meaning given in the Bankruptcy Code or Bankruptcy Rules.
+1.
+“Act 47” means the Municipalities Financial Recovery Act of 1987, P.L. 246, No.
+47; 53 P.S. §§ 11701.101 et seq.
+2.
+“Administrative Claim” means a Claim against the City arising on or after the
+Petition Date and prior to the Effective Date for a cost or expense of administration related to the
+Chapter 9 Case that is entitled to priority or superpriority under sections 364(c)(1), 503(b) or
+507(b)(2) of the Bankruptcy Code, including: (a) Claims, pursuant to section 503(b)(9) of the
+Bankruptcy Code, for the value of goods received by the City in the 20 days immediately prior to
+1
+
+Capitalized terms used in this Introduction are defined in Section I.A below.
+
+1
+
+Case 22-13032-amc
+
+Doc 583
+
+Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 8 of 53
+
+Desc Main
+
+the Petition Date and sold to the City in the ordinary course of the City’s operations, and (b) any
+Allowed Claims for reclamation under section 546(c)(1) of the Bankruptcy Code or section 2-702
+of the Uniform Commercial Code; provided that no claim for professional fees or any other costs
+or expenses incurred by any unofficial creditors committee or any member thereof shall be
+considered an Administrative Claim.
+3.
+“Administrative Code” means Part One of the Codified Ordinances of the City of
+Chester, as the same may have been amended from time to time.
+4.
+
+“Affiliate” shall have the meaning set forth in section 101(2) of the Bankruptcy
+
+Code.
+5.
+“Allowed Claim” means: (a) a Claim, proof of which has been timely Filed by the
+applicable Bar Date (or for which Claim under express terms of the Plan, the Bankruptcy Code or
+a Final Order of the Bankruptcy Court, a proof of Claim is not required to be Filed); (b) a Claim
+allowed pursuant to the Plan or a Final Order of the Bankruptcy Court; (c) a Claim designated as
+allowed in a stipulation or agreement between the City and the Holder of the Claim that is Filed;
+provided that with respect to any Claim described in clause (a) above, such Claim shall be
+considered allowed only if and to the extent that (x) no objection to the allowance thereof has been
+Filed within the applicable period of time fixed by the Plan, the Bankruptcy Code, the Bankruptcy
+Rules or the Bankruptcy Court, or (y) if an objection is so Filed, the Claim shall have been allowed
+by a Final Order. Notwithstanding anything to the contrary herein, no Claim of any Entity subject
+to section 502(d) of the Bankruptcy Code shall be deemed to be an Allowed Claim unless and until
+such Entity pays in full the amount that it owes the City. “Allow” and “Allowing” shall have
+correlative meanings.
+6.
+“Ballot” means the ballot upon which a Holder of an Impaired Claim entitled to
+vote shall cast its vote to accept or reject the Plan and make certain elections provided for in the
+Plan.
+7.
+“Bankruptcy Code” means title 11 of the United States Code, 11 U.S.C. §§ 101 et
+seq. as now in effect or hereafter amended.
+8.
+“Bankruptcy Court” means the United States Bankruptcy Court for the Eastern
+District of Pennsylvania having jurisdiction over the Chapter 9 Case, and, to the extent of the
+withdrawal of any reference under 28 U.S.C. § 157 or the Standing Order of Reference pursuant
+to § 151 of title 28 of the United States Code, the District Court.
+9.
+“Bankruptcy Rules” means, collectively, the Federal Rules of Bankruptcy
+Procedure and the general, local and chambers rules of the Bankruptcy Court, as now in effect or
+hereafter amended, as applicable to the Chapter 9 Case.
+10.
+“Bar Date” means the applicable bar date by which a proof of Claim must be or
+must have been Filed, as established by an order of the Bankruptcy Court, including a Bar Date
+Order and the Confirmation Order.
+
+2
+
+Case 22-13032-amc
+
+Doc 583
+
+Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 9 of 53
+
+Desc Main
+
+11.
+“Bar Date Order” means any order of the Bankruptcy Court establishing Bar Dates
+for Filing proofs of Claim in the Chapter 9 Case, including the Order Approving the Motion of the
+City of Chester, Pursuant to Sections 105, 501, and 503 of the Bankruptcy Code and Bankruptcy
+Rules 2002 and 3003(c), for Entry of an Order Establishing Bar Dates for Filing Proofs of Claim
+and Approving Form and Manner of Notice Thereof (Docket No. 475), entered by the Bankruptcy
+Court on the docket of the Chapter 9 Case on November 3, 2023, as it may be amended,
+supplemented or otherwise modified.
+12.
+“Business Day” means any day, other than a Saturday, Sunday or “legal holiday”
+(as defined in Bankruptcy Rule 9006(a)).
+13.
+
+“Cash” means legal tender of the United States of America and equivalents thereof.
+
+14.
+“Causes of Action” means, without limitation, any and all actions, causes of action,
+controversies, liabilities, obligations, rights, suits, damages, judgments, claims and demands
+whatsoever, whether known or unknown, reduced to judgment, liquidated or unliquidated, fixed
+or contingent, matured or unmatured, disputed or undisputed, secured or unsecured, assertable
+directly or derivatively, existing or hereafter arising, in law, equity or otherwise, based in whole
+or in part upon any act or omission or other event occurring prior to the Effective Date, including
+without limitation (a) claims and causes of action under sections 502(d), 510, 544, 545, 547, 548,
+549(a), 549(c), 549(d), 550, 551 and 553 of the Bankruptcy Code and (b) any other avoidance or
+similar claims or actions under the Bankruptcy Code or under similar or related state or federal
+statutes or common law, and, in the case of each Cause of Action, the proceeds thereof, whether
+received by judgment, settlement or otherwise.
+15.
+“CBA” means a collective bargaining agreement between the City and the FOP,
+IAFF or Teamsters which were properly accepted by the union and the City and publicly approved
+by the City in accordance with Pennsylvania law. A “CBA” includes any amendment or additional
+amendment to such CBA through a collectively bargained memorandum of understanding,
+memorandum of agreement, side letter or interest arbitration award between the applicable parties
+and arising from or related to such collective bargaining agreements, all of which were properly
+accepted by the union and the City and publicly approved by the City in accordance with
+Pennsylvania law.
+16.
+“Chapter 9 Case” means the bankruptcy case commenced by the City under chapter
+9 of the Bankruptcy Code, captioned as In re City of Chester, Pennsylvania, Case No. 22-13032
+(Bankr. E.D. Pa.), and currently pending before the Bankruptcy Court.
+17.
+“City” means the City of Chester, a home rule city of the third class located in
+Delaware County, Pennsylvania.
+18.
+“City Charter” means the City’s Home Rule Charter, which became effective
+January 7, 1981, as modified.
+19.
+
+“City Council” means the duly-elected City Council of the City.
+
+3
+
+Case 22-13032-amc
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 10 of 53
+
+Desc Main
+
+20.
+“Claim” means a claim, as defined in section 101(5) of the Bankruptcy Code,
+against the City.
+21.
+“Claims and Balloting Agent” means Donlin, Recano & Company, Inc., in its
+capacity as Bankruptcy Court-appointed claims and balloting agent for the Chapter 9 Case.
+22.
+“Claims Objection Bar Date” means the deadline for objecting to a Claim, which
+shall be on the date that is the latest of (a) 180 days after the Effective Date, subject to extension
+by an order of the Bankruptcy Court, (b) 90 days after the Filing of a proof of Claim for such Claim
+and, (c) such other period of limitation as may be specifically fixed by an order of the Bankruptcy
+Court, which other period may be set without notice to Holders of Claims.
+23.
+“Claims Register” means the official register of Claims maintained by the Claims
+and Balloting Agent.
+24.
+
+“Class” means a class of Claims, as described in Section II.B.
+
+25.
+
+“Commonwealth” means the Commonwealth of Pennsylvania.
+
+26.
+
+“Commonwealth Court” means the Commonwealth Court of Pennsylvania.
+
+27.
+“Confirmation” means entry of the Confirmation Order by the Bankruptcy Court
+on the docket of the Chapter 9 Case.
+28.
+“Confirmation Date” means the date on which the Bankruptcy Court enters the
+Confirmation Order on the docket in the Chapter 9 Case, within the meaning of Bankruptcy Rules
+5003 and 9021.
+29.
+“Confirmation Hearing” means the hearing held by the Bankruptcy Court on
+Confirmation of the Plan, as such hearing may be continued.
+30.
+“Confirmation Order” means the order of the Bankruptcy Court confirming the Plan
+pursuant to section 943 of the Bankruptcy Code, as it may be subsequently amended, supplemented
+or otherwise modified, and § 706(a)(9) of Act 47 (53 P.S. § 11701.706(a)(9)).
+31.
+“Contribution Agreement” means the Contribution Agreement dated as of February
+15, 2009 between the City and Delaware County.
+32.
+“Contribution Agreement Claim” means any Claim of Delaware County arising
+from and related to the Contribution Agreement, including but not limited to Claim Number 53 on
+the Claims Register (as may be amended).
+33.
+“Convenience Claim” means a Claim that would otherwise be a General Unsecured
+Claim that is: (a) an Allowed Claim in an amount less than or equal to $1,000.00; or (b) in an
+amount that has been reduced to $1,000.00 pursuant to an election made by the Holder of such
+Claim; provided that, where any portion(s) of a single Claim has been transferred, (y) the amount
+
+4
+
+Case 22-13032-amc
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 11 of 53
+
+Desc Main
+
+of all such portions will be aggregated to determine whether a Claim qualifies as a Convenience
+Claim and for purposes of the Convenience Claim election, and (z) unless all transferees make the
+Convenience Claim election on the applicable Ballots, the Convenience Claim election will not be
+recognized for such Claim. Convenience Claims shall not include Series 2017 Bond Claims, any
+Contribution Agreement Claim, the DCED Act 47 Loan Claim, OPEB Claim, or Retiree Pension
+Claim, Pension Spiking Claim or Subordinated Claim.
+34.
+“Cure Amount Claim” means a Claim based upon the City’s defaults under an
+Executory Contract or Unexpired Lease at the time such contract or lease is assumed by the City
+under section 365 of the Bankruptcy Code to the extent such Claim is required to be cured by
+section 365 of the Bankruptcy Code.
+35.
+
+“CWA” means the Chester Water Authority.
+
+36.
+“DCED” means the Pennsylvania Department of Community and Economic
+Development.
+37.
+“DCED Act 47 Loan Claim” means the Claim of the Commonwealth, acting
+through DCED, arising from the City’s obligations under the DCED Act 47 Loan and DCED Act
+47 Note.
+38.
+“DCED Act 47 Loan” means the loan provided by the Commonwealth, acting
+through DCED, to the City on or about January 13, 2017 pursuant to Act 47 and evidenced by that
+certain Loan Agreement between the Commonwealth, acting through DCED, and the City bearing
+Contract #L160489994.
+39.
+“DCED Act 47 Note” means the note executed by the City in favor of the
+Commonwealth, acting through DCED, dated January 13, 2017 evidencing the DCED Act 47
+Loan.
+40.
+
+“Delaware County” means the County of Delaware, Pennsylvania.
+
+41.
+Authority.
+
+“DELCORA” means the Delaware County Regional Water Quality Control
+
+42.
+
+“Disbursing Agent” means the disbursing agent(s) appointed pursuant to Section
+
+V.A.
+43.
+“Disclosure Statement” means the disclosure statement (including all exhibits and
+schedules thereto or referenced therein) that relates to the Plan and has been prepared and
+distributed by the City and approved by the Bankruptcy Court in the Disclosure Statement Order,
+as the same may be amended, supplemented or otherwise modified.
+44.
+“Disclosure Statement Order” means the Order Approving Disclosure Statement
+(Docket No. [•]), entered by the Bankruptcy Court on the docket of the Chapter 9 Case [•],
+approving the Disclosure Statement as containing adequate information pursuant to section 1125
+
+5
+
+Case 22-13032-amc
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 12 of 53
+
+Desc Main
+
+of the Bankruptcy Code, as it may have been subsequently amended, supplemented or otherwise
+modified.
+45.
+
+“Disputed Claim” means any Claim that is not Allowed.
+
+46.
+“Distribution” means any initial or subsequent payment or transfer made on account
+of an Allowed Claim under or in connection with the Plan.
+47.
+
+“Distribution Date” means any date on which a Distribution is made.
+
+48.
+
+“Distribution Record Date” means 5:00 p.m., Eastern Time, on the Confirmation
+
+Date.
+49.
+“District Court” means the United States District Court for the Eastern District of
+Pennsylvania.
+50.
+“Document Website” means the internet site address [•], at which the Plan, the
+Disclosure Statement, Plan Supplement and all Filed Exhibits to the Plan shall be available to any
+party in interest and the public, free of charge.
+51.
+“DROP” means any Deferred Retirement Option Plan, which is a method of
+distributing pension benefits while an employee temporarily remains employed by and working
+for the City as provided by the terms of any City Pension Plan.
+52.
+“Effective Date” means the Business Day, as determined by the City, on which
+each applicable condition contained in Section III.A has been satisfied or waived.
+53.
+
+“Entity” shall have the meaning set forth in section 101(15) of the Bankruptcy
+
+Code.
+54.
+“Environmental Law” means any law in effect at the relevant date or for the relevant
+period relating to the protection of human health and safety or the environment or natural resources
+(including air, surface water, groundwater, drainage basins, catchment basins, drinking water and
+drinking water supply, wetlands, streams, ponds, sediment, soil, land surfaces or subsurface strata,
+and plant and animal life), and including, any law relating to releases of or exposure to Hazardous
+Materials or the handling, generation, treatment, transportation, storage, use, arrangement for
+disposal or disposal, manufacture, distribution, formulation, packaging or labeling of Hazardous
+Materials.
+55.
+“Estate” means the City’s bankruptcy estate created pursuant to section 541 of the
+Bankruptcy Code.
+56.
+“Exculpated Parties” means (i) the Receiver, all professionals retained by the
+Receiver, and all professionals retained by the City related to the Chapter 9 Case, including but
+not limited to: The Kapoor Company; Ballard Spahr LLP; PFM Group Consulting LLC; Herbert
+Rowland & Grubic, Inc.; Hangley Aronchick Segal Pudlin & Schiller; Campbell Durrant P.C.;
+
+6
+
+Case 22-13032-amc
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 13 of 53
+
+Desc Main
+
+Conrad Siegel; Bennett, Bricklin & Saltzburg LLC; Fox Chase Advisors, LLC; Shilvosky M.
+Buffaloe Consulting & Resources, LLC; and, any Receiver-approved subcontractors retained by
+the foregoing professionals; (ii) the members of the Retiree Committee and its professionals;
+(iii) the Mayor and the members of City Council serving on the Effective Date; and (iv) [•]. For
+the avoidance of doubt, Exculpated Parties shall not include any Mayor or member of City Council
+who served during the Chapter 9 Cases but was not the Mayor or a Member of City Council on
+the Effective Date or any professional retained by City Council, any Mayor or member of City
+Council during the Chapter 9 Cases without the approval of the Receiver.
+57.
+“Executory Contract” means a contract to which the City is a party that is subject
+to assumption, assumption and assignment, or rejection under section 365 of the Bankruptcy Code.
+58.
+“Exhibits” means, collectively, the documents listed on the “Table of Exhibits”
+included herein, all of which will be made available on the Document Website once they are Filed.
+The City reserves the right, in accordance with the terms hereof, to modify, amend, supplement,
+restate or withdraw any of the Exhibits after they are Filed and shall promptly make such changes
+available on the Document Website.
+59.
+“Face Amount” means either (a) the full stated amount claimed by the Holder of
+such Claim in any proof of Claim Filed by the Bar Date or otherwise deemed timely Filed under
+applicable law, if the proof of Claim specifies only a liquidated amount, or (b) the amount of the
+Claim (i) acknowledged by the City in any objection Filed to such Claim, (ii) estimated by the
+Bankruptcy Court for such purpose pursuant to section 502(c) of the Bankruptcy Code, or
+(iii) proposed by City, if (A) no proof of Claim has been Filed by the Bar Date or has otherwise
+been deemed timely Filed under applicable law, or (B) the proof of Claim specifies an unliquidated
+amount (in whole or in part).
+60.
+“File,” “Filed,” or “Filing” means file, filed or filing with the Bankruptcy Court or
+the Claims and Balloting Agent, as applicable, in the Chapter 9 Case.
+61.
+“Final Order” means an order or judgment of the Bankruptcy Court, or any other
+court of competent jurisdiction, as entered on the docket in the Chapter 9 Case or the docket of
+any other court of competent jurisdiction, that has not been reversed, stayed, modified or amended,
+and as to which the time to appeal or seek certiorari or move, under Bankruptcy Rule 9023 or Rule
+59 of the Federal Rules of Civil Procedure, for a new trial, reargument or rehearing has expired,
+and no appeal or petition for certiorari or other proceedings for a new trial, reargument or rehearing
+has been timely taken, or as to which any appeal that has been taken or any petition for certiorari
+that has been timely filed has been withdrawn or resolved by the highest court to which the order
+or judgment was appealed or from which certiorari was sought or the new trial, reargument or
+rehearing shall have been denied or resulted in no modification of such order; provided that the
+possibility that a motion under Rule 60 of the Federal Rules of Civil Procedure, or any analogous
+rule under the Bankruptcy Rules, may be filed shall not prevent such order from being a Final
+Order.
+62.
+“Fiscal Year” means a fiscal year for the City, commencing on January 1 of a year
+and ending on December 31 of the same year.
+
+7
+
+Case 22-13032-amc
+
+63.
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 14 of 53
+
+Desc Main
+
+“FOP” means the Fraternal Order of Police, Lodge No. 19.
+
+64.
+“FOP CBA” means the CBA between the City and the FOP as amended or modified
+through the Effective Date, which was properly accepted by the union and the City and publicly
+approved by the City in accordance with Pennsylvania law.
+65.
+“FOP Claim” means the Claim of the FOP, including any claim filed by the FOP
+on behalf of any individual FOP member arising from or related to any grievance or grievance
+arbitration proceeding asserted under the FOP CBA, the Police and Fire Collective Bargaining
+Act, 43 P.S. §§ 217.1 et seq. or the Pennsylvania Labor Relations Act, 43 P.S. §§ 211.1 et seq.
+66.
+“General Fund” means the primary governmental fund and the chief operating fund
+of the City, which fund accounts for several of the City’s primary services, including police, fire,
+public works, and community services.
+67.
+“General Unsecured Claim” means any Claim that is not an Administrative Claim,
+a Convenience Claim, a Secured Claim, a Subordinated Claim, or otherwise separately Classified.
+For the avoidance of doubt, Tort Claims, Indirect Employee Indemnity Claims, Section 1983
+Claims, Series 2017 Bond Claims, any Contribution Agreement Claim and the DCED Act 47 Loan
+Claim are General Unsecured Claims.
+68.
+“Hazardous Material” means any substance, material or waste, to the extent the
+presence and amount of which is limited or regulated by any governmental unit under any
+applicable Environmental Law, including petroleum and its by-products, asbestos, and any
+material or substance, and including, any material or substance which is defined as a “hazardous
+waste,” “hazardous substance,” “hazardous material,” “restricted hazardous waste,” “industrial
+waste,” “solid waste,” “contaminant,” “pollutant,” “toxic waste” or “toxic substance” or “special
+waste” under the Bevill Amendment to the federal Resource Conservation and Recovery Act, or
+otherwise regulated under any provision of Environmental Law.
+69.
+
+“Holder” means an Entity holding a Claim.
+
+70.
+“IAFF” means the Chester City Fire Fighters Association, Local 1400, International
+Association of Fire Fighters.
+71.
+“IAFF CBA” means the CBA between the City and the IAFF as amended or
+modified through the Effective Date, which was properly accepted by the union and the City and
+publicly approved by the City in accordance with Pennsylvania law.
+72.
+“IAFF Claim” means any Claim of the IAFF including any claim filed by the IAFF
+on behalf of any individual IAAF member arising from or related to a grievance or grievance
+arbitration proceeding asserted under the IAAF CBA, the Police and Fire Collective Bargaining
+Act, 43 P.S. §§ 217.1 et seq. or the Pennsylvania Labor Relations Act, 43 P.S. §§ 211.1 et seq.
+
+8
+
+Case 22-13032-amc
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 15 of 53
+
+Desc Main
+
+73.
+“Impaired” means, with respect to a Class or a Claim, that such Class or Claim is
+impaired within the meaning of section 1124 of the Bankruptcy Code.
+74.
+“Indirect Employee Indemnity Claim” means any Claim against an employee or
+former employee of the City with respect to which such employee has an Allowed Claim against
+the City for indemnification or payment or advancement of defense costs based upon, arising under
+or related to any agreement, commitment or other obligation, whether evidenced by contract,
+agreement, rule, regulation, ordinance, statute or law, excluding any Claim as to which the City
+has denied any obligation to defend or indemnify such employee or former employee of the City.
+75.
+“Liabilities” means any and all claims, obligations, suits, judgments, damages,
+demands, debts, rights, derivative claims, causes of action and liabilities, whether liquidated or
+unliquidated, fixed or contingent, matured or unmatured, known or unknown, foreseen or
+unforeseen, arising in law, equity or otherwise, that are based in whole or in part on any act, event,
+injury, omission, transaction, agreement, employment, exposure or other occurrence taking place
+on or prior to the Effective Date.
+76.
+
+“Lien” shall have the meaning set forth in section 101(37) of the Bankruptcy Code.
+
+77.
+“List of Creditors” means the List of Creditors Pursuant to Section 924 of the
+Bankruptcy Code and Bankruptcy Rule 1007 (Docket No. 1-3), attached to the Petition (Docket
+No. 1), Filed by the City on November 10, 2022, as such list, summaries or schedules may be
+amended, restated, supplemented or otherwise modified.
+78.
+
+“Mayor” means the duly-elected Mayor of the City.
+
+79.
+“Mediation” means any mediation between the City and any party conducted
+pursuant to the Order (I) Appointing a Judicial Mediator, (II) Referring Certain Matters to
+Mandatory Mediation, and (III) Granting Related Relief (Docket No. 139), entered by the
+Bankruptcy Court on December 16, 2022.
+80.
+“MMO” means the minimum municipal obligation payable to a Pension Plan
+pursuant to the Municipal Pension Plan Funding Standard and Recovery Act of December 17,
+1984, P.L. 1005, No. 205, 53 P.S. §§ 895.301-.307 and 16 Pa. Code §§ 201 et seq.
+81.
+“MMO Claim” means a Claim for unpaid MMO owed by the City to a Pension Plan
+or to the Pension Board for the benefit of any Pension Plan.
+82.
+“OEPP” means the Officers and Employees Pension Plan, as established in the
+Article 145 of the Administrative Code and the Teamsters CBA.
+83.
+“OPEB Benefits” means, collectively, post-retirement health, vision, dental, life
+and death benefits provided to retired employees of the City and their surviving beneficiaries
+pursuant to, a CBA, or any other authority or agreements which were properly accepted by the
+union and the City and publicly approved by the City in accordance with Pennsylvania law.
+
+9
+
+Case 22-13032-amc
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 16 of 53
+
+Desc Main
+
+84.
+“OPEB Claim” means any Claim (other than a Retiree Pension Claim) against the
+City for OPEB Benefits held by an individual who is lawfully and properly receiving OPEB
+Benefits that were lawfully authorized by the City as of the Effective Date and any eligible
+surviving beneficiaries of such individual, including, but not limited to, Claim Nos. 55, 59 and 61
+on the Claims Register filed by the Retiree Committee, as may be further amended.
+85.
+“Other Secured Claim” means a Secured Claim that is not otherwise separately
+classified and treated under the Plan.
+86.
+
+“Pension Board” means the City of Chester Aggregated Pension Board.
+
+87.
+
+“Pension Plan” means the PPP, OEPP or PFPP.
+
+88.
+“Pension Spiking” means the inclusion of any form of compensation in a pension
+calculation, or changing the period of time over which a pension benefit is calculated, to artificially
+inflate the compensation in the time immediately preceding retirement to create a larger pension
+benefit than would otherwise result if the calculation and the form of compensation included in
+that calculation was performed and implemented properly and in accordance with applicable law
+and the terms of the properly approved pension plan documents.
+89.
+“Pension Spiking Claims” means any Claim of any current or former member of
+the FOP, IAFF or Teamsters arising from the recalculation of pension benefits under the applicable
+Pension Plan due to the improper calculation of pension benefits through Pension Spiking. The
+Pension Spiking Claims include, but are not limited to, any grievance filed by the FOP on behalf
+of PPP participants whose benefits have been or may be recalculated as a result of pension spiking
+and any Claim filed by the FOP on behalf of any member of the FOP related to the recalculation
+of any pension benefit including, but not limited to, any portion of Claim No. 68 on the Claims
+Register filed by the FOP, as may be amended, that asserts a Pension Spiking Claim.
+90.
+
+“Petition Date” means November 10, 2022.
+
+91.
+“PFPP” means the Paid Firemen’s Pension Plan established under the Third Class
+City Code, 11 P.S. §§ 14319-14328, Article 147 of the Administrative Code and the IAFF CBA.
+92.
+“Plan” means this plan of adjustment and all Exhibits attached hereto or referenced
+herein, as the same may be amended, restated, supplemented or otherwise modified.
+93.
+“Plan Supplement” means any supplement to the Plan containing Exhibits that were
+not Filed as of the date of the entry of the Disclosure Statement Order.
+94.
+“PPP” means the Police Pension Plan established under the Third Class City Code,
+11 P.S. §§ 14319-14328, Article 143 of the Administrative Code and the FOP CBA.
+95.
+“Pro Rata” means, when used with reference to a distribution of property to Holders
+of Allowed Claims in a particular Class or other specified group of Claims, proportionately so that
+with respect to a particular Allowed Claim in such Class or in such group, the ratio of: (a)(i) the
+
+10
+
+Case 22-13032-amc
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 17 of 53
+
+Desc Main
+
+amount of property to be distributed on account of such Claim to (ii) the amount of such Claim, is
+the same as the ratio of (b)(i) the amount of property to be distributed on account of all Allowed
+Claims in such Class or group of Claims to (ii) the amount of all Allowed Claims in such Class or
+group of Claims. Until all Disputed Claims in a Class or other specified group of Claims are
+resolved, Disputed Claims shall be treated as Allowed Claims in their Face Amount for purposes
+of calculating a Pro Rata distribution of property to holders of Allowed Claims in such Class or
+group of Claims.
+96.
+“Reassessment Tax Appeal Claim” a Claim arising from an appeal by an owner of
+real property within the City of the assessed value of real property within the City for purposes of
+taxation following the reassessment of real property within the City conducted by Delaware
+County, Pennsylvania, adopted by the City in 2021 and as to which the automatic stay was
+modified by the Order Approving the Motion of City of Chester Pursuant to Section 362(d)(1) of
+the Bankruptcy Code for Entry of an Order Modifying the Automatic Stay to Permit Certain
+Appeals of City Property Tax Assessments to Proceed in the Ordinary Course (Docket No. 473)
+entered on November 3, 2023.
+97.
+“Receiver” means Michael T. Doweary, as the duly-appointed receiver for the City
+under Chapter 7 of Act 47.
+98.
+“Recovery Plan” means the Recovery Plan submitted by the Receiver to the
+Commonwealth Court pursuant to Act 47 and initially confirmed by the Commonwealth Court on
+or about October 19, 2020, as modified by approval of the Commonwealth Court on June 7, 2021,
+and as further modified by approval of the Commonwealth Court on January 31, 2023.
+99.
+“Reinstated” means (a) leaving unaltered the legal, equitable and contractual rights
+to which a Claim entitles the Holder or (b) notwithstanding any contractual provision or applicable
+law that entitles the Holder of such Claim to demand or receive accelerated payment of such Claim
+after the occurrence of a default, (i) the cure of any such default other than a default of a kind
+specified in section 365(b)(2) of the Bankruptcy Code or of a kind that section 365(b)(2) of the
+Bankruptcy Code expressly does not require to be cured; (ii) the reinstatement of the maturity of
+such Claim as such maturity existed before such default; (iii) compensation of the Holder of such
+Claim for any damages incurred as a result of any reasonable reliance by such Holder on such
+contractual provision or such applicable law; (iv) if such Claim arises from any failure to perform
+a nonmonetary obligation other than a default arising from failure to operate a nonresidential real
+property lease subject to section 365(b)(1)(A) of the Bankruptcy Code, compensation of the Holder
+of such Claim for any actual pecuniary loss incurred by such Holder as a result of such failure; and
+(v) not otherwise altering the legal, equitable or contractual rights to which such Claim entitles the
+Holder. “Reinstate” and “Reinstatement” shall have correlative meanings.
+100. “Related Entity” means, with respect to any Entity, such Entity’s Affiliates,
+predecessors, successors and assigns (whether by operation of law or otherwise), and with respect
+to any of the foregoing their respective present and former Affiliates and each of their respective
+current and former officials, officers, directors, employees, managers, attorneys, advisors and
+professionals, each acting in such capacity, and any Entity claiming by or through any of them
+
+11
+
+Case 22-13032-amc
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 18 of 53
+
+Desc Main
+
+(including their respective officials, officers, directors, employees, managers, advisors and
+professionals).
+101. “Released Parties” means the Receiver and his employees, attorneys, agents,
+financial advisers, accountants, actuaries, consultants, other retained professionals and all current
+and former affiliates, predecessors, successors, assigns, parents and subsidiaries of the foregoing.
+102. “Retiree Pension Benefits” means pension (including disability) benefits provided
+to retired and disabled employees of the City and their surviving beneficiaries pursuant to the
+Administrative Code, a CBA, a Pension Plan document, applicable law or any other authority or
+agreements.
+103. “Retiree Pension Claim” means any Claim (other than an OPEB Claim) of any
+current recipient of Retiree Pension Benefits arising from the modification of any Retiree Pension
+Benefits effectuated through any agreement between the City and the Retiree Committee or under
+the terms of the Plan, including, but not limited to, Claim Nos. 57, 58 and 60 on the Claims Registry
+filed by the Retiree Committee, as may be amended.
+104. “Retiree Committee” means the official committee of retired employees first
+appointed by the United States Trustee in the Chapter 9 Case on February 6, 2023 (Docket No.
+215), as augmented on March 17, 2023 (Docket No. 271), as such committee may be reconstituted,
+solely in its capacity as such.
+105. “Retiree Committee Professionals” means those professionals retained by the
+Retiree Committee to render services in connection with the Chapter 9 Case that seek payment of
+compensation and reimbursement of expenses from the City for post-petition services, solely in
+their capacity as such.
+106. “Reversionary Interest” means the City’s reversionary interest in the Sewer Assets
+established in the Sewer Agreement.
+107.
+108.
+amended.
+
+“SAC” means the Stormwater Authority of the City of Chester.
+“Section 115” means section 115 of the Internal Revenue Code of 1986, as
+
+109. “Section 1983 Claim” means any Claim against the City, its current or former
+employees or both asserted under 42 U.S.C. § 1983 that arose on or prior to the Petition Date.
+110. “Secured Claim” means a Claim that is secured by a Lien on property in which the
+City has an interest or that is subject to valid setoff under section 553 of the Bankruptcy Code, to
+the extent of the value of the Claim Holder’s interest in the City’s interest in such property or to
+the extent of the amount subject to valid setoff, as applicable, as determined pursuant to section
+506 of the Bankruptcy Code.
+
+12
+
+Case 22-13032-amc
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 19 of 53
+
+Desc Main
+
+111. “Series 2017 Bonds” means the Guaranteed Revenue Bonds, Series A of 2017 and
+Guaranteed Revenue Bonds, Series B of 2017 issued by the City pursuant to the Indenture of Trust
+dated as of August 1, 2017 between the City and U.S. Bank National Association.
+112. “Series 2017 Bonds Claim” means the any Claim asserted on behalf of any Holder
+of the Series 2017 Bonds, including but not limited to Claim No. 56 on the Claims Register.
+113. “Series 2017 Bonds Documents” means all documents associated with the Series
+2017 Bonds, including, but not limited to any notes, indenture of trust, side letters, opinion letters,
+UCC-1 financing statements, or UCC-3 financing statement amendments or continuations.
+114. “Series 2021 DVRPC Notes” means the Promissory Note, 2021 A Series and
+Promissory Note, 2021 B Series issued by the City to Delaware County on August 20, 2021 in the
+principal amount of $750,000.
+115. “Series 2021 DVRPC Notes Claim” means any Claim against the City arising under
+or evidenced by the DVRPC Notes, including but not limited to Claim No. 54 on the Claims
+Register, as may be amended.
+116. “Sewer Agreement” means the Agreement of Sale and Service between the City
+and DELCORA dated February 12, 1973.
+117. “Sewer Assets” means the assets constituting and necessary for the operation of the
+City’s sewer system, including, inter alia, the sewer collection and conveyance assets, including
+lines, laterals, mains, interceptors, force mains, valves, pumps, machinery, equipment, inventory,
+franchises, licenses, permits, and accounts receivable, as well as certain related real property
+interests (including improvements thereon and thereto), personal property and tangible and
+intangible assets, but shall not include the Treatment Plant and those facilities in the Collection
+System (each as defined in the Sewer Agreement) specified in section 2(d) of the Sewer
+Agreement.
+118. “Solicitation Date” means the date by which the Claims and Balloting Agent shall
+have mailed or otherwise issued materials soliciting votes regarding the Plan to Holders of Claims
+pursuant to the Solicitation Procedures Order.
+119. “Solicitation Procedures Order” means the Order (I) Establishing Solicitation,
+Voting, and Related Procedures, (II) Scheduling Confirmation Hearing, (III) Establishing Notice
+and Objection Procedures for Confirmation of Plan of Adjustment, and (IV) Granting Related
+Relief (Docket No. [•]), entered by the Bankruptcy Court on the docket of the Chapter 9 Case on
+[•].
+120. “Standing Order of Reference” means the Order entered by the District Court on
+July 25, 1984 referring cases under the Bankruptcy Code to the Bankruptcy Court, as amended by
+the Order of Reference entered on November 8, 1990.
+
+13
+
+Case 22-13032-amc
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 20 of 53
+
+Desc Main
+
+121. “Stormwater Assets” means the system for the collection, management,
+transportation, and disposition of stormwater within the City, and all other assets currently owned,
+held, managed, or operated by the Stormwater Authority of the City of Chester.
+122. “Subordinated Claim” means a Claim of the kind described in sections 726(a)(3) or
+726(a)(4) of the Bankruptcy Code or Claims subordinated under sections 510(b) or 510(c) of the
+Bankruptcy Code.
+123. “Tax” means: (a) any net income, alternative or add-on minimum, gross income,
+gross receipts, gross margins, sales, use, stamp, real estate transfer, mortgage recording, ad
+valorem, value added, transfer, franchise, profits, license, property, payroll, employment,
+unemployment, occupation, disability, excise, severance, withholding, environmental or other tax,
+assessment or charge of any kind whatsoever (together in each instance with any interest, penalty,
+addition to tax or additional amount) imposed by any federal, state, local or foreign taxing
+authority; or (b) any liability for payment of any amounts of the foregoing types as a result of being
+a member of an affiliated, consolidated, combined or unitary group, or being a transferee or
+successor or a party to any agreement or arrangement whereby liability for payment of any such
+amounts is determined by reference to the liability of any other Entity.
+124.
+
+“Teamsters” means Teamsters Local 107 (f/k/a Teamsters Local 312).
+
+125. “Teamsters CBA” means the CBA between the City and the Teamsters as amended
+or modified through the Effective Date which was properly accepted by the union and the City and
+publicly approved by the City in accordance with Pennsylvania law.
+126. “Teamsters Claim” means the Claim of the Teamsters, including any claim filed by
+the Teamsters on behalf of any individual Teamsters member arising from or related to any
+grievance or grievance arbitration proceeding against the City asserted under the Teamsters CBA
+or the Pennsylvania Labor Relations Act, 43 P.S. §§ 211.1 et seq.
+127. “Tort Claim” means any Claim that arises out of allegations of personal injury or
+wrongful death that arose on or before the Petition Date including any Section 1983 Claim.
+128. “Unexpired Lease” means a lease to which the City is a party that is subject to
+assumption, assumption and assignment, or rejection under section 365 of the Bankruptcy Code.
+129. “Unimpaired” means, with respect to a Class or a Claim, that such Class or Claim
+is not Impaired.
+130. “United States Trustee” means the Office of the United States Trustee for the
+Eastern District of Pennsylvania.
+131. “Voting Deadline” means the deadline fixed by the Bankruptcy Court in the
+Disclosure Statement Order for submitting Ballots to accept or reject the Plan in accordance with
+section 1126 of the Bankruptcy Code.
+
+14
+
+Case 22-13032-amc
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 21 of 53
+
+Desc Main
+
+132. “Water Assets” means the certain water source rights, raw water conveyance,
+treatment, treated water conveyance, storage and distribution systems currently maintained by the
+CWA, including, but not limited to, the Octoraro water reservoir located in southeastern Lancaster
+County, water treatment plants, transportation and distribution facilities, pipes, pumping stations,
+storage tanks, real property interests, personal property, tangible and intangible assets, good will
+and all system related authorizations, permits, plans, licenses and approvals related thereto.
+B.
+
+Rules of Interpretation and Computation of Time.
+1.
+
+Rules of Interpretation.
+
+For purposes of the Plan, unless otherwise provided herein: (a) whenever from the context
+it is appropriate, each term, whether stated in the singular or the plural, shall include both the
+singular and the plural and pronouns stated in the masculine, feminine or neuter gender shall
+include the masculine, feminine and neuter gender; (b) any reference herein to a contract, lease,
+instrument, release, indenture or other agreement or document being in a particular form or on
+particular terms and conditions means that such document shall be substantially in such form or
+substantially on such terms and conditions; (c) any reference herein to an existing document or
+Exhibit Filed or to be Filed shall mean such document or Exhibit, as it may have been or may be
+amended, restated, supplemented or otherwise modified pursuant to the Plan, the Confirmation
+Order or otherwise; (d) any reference to an Entity as a Holder of a Claim includes that Entity’s
+successors, assigns and Affiliates; (e) all references to Sections or Exhibits are references to
+Sections and Exhibits of or to the Plan; (f) the words “herein,” “hereunder,” “hereof” and “hereto”
+refer to the Plan in its entirety rather than to a particular portion of the Plan; (g) captions and
+headings to Articles and Sections are inserted for convenience of reference only and are not
+intended to be a part of or to affect the interpretation of the Plan; (h) the words “include” and
+“including,” and variations thereof, shall not be deemed to be terms of limitation, and shall be
+deemed to be followed by the words “without limitation”; and (i) the rules of construction set
+forth in section 102 of the Bankruptcy Code shall apply to the extent not inconsistent with any
+other provision of this Section.
+2.
+
+Computation of Time.
+
+In computing any period of time prescribed or allowed by the Plan, the provisions of
+Bankruptcy Rule 9006(a) shall apply.
+ARTICLE II
+CLASSIFICATION OF CLAIMS; CRAMDOWN;
+EXECUTORY CONTRACTS AND UNEXPIRED LEASES
+Pursuant to sections 1122 and 1123 of the Bankruptcy Code, Claims are classified under the
+Plan for all purposes, including voting, Confirmation and Distribution. In accordance with section
+1123(a)(1) of the Bankruptcy Code, Administrative Claims, as described in Section II.A, have not
+been classified and thus are excluded from the Classes described in Section II.B. A Claim shall be
+deemed classified in a particular Class only to the extent that the Claim qualifies within the
+description of that Class and shall be deemed classified in a different Class to the extent that any
+remainder of such Claim qualifies within the description of such other Class. Notwithstanding the
+15
+
+Case 22-13032-amc
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 22 of 53
+
+Desc Main
+
+foregoing, in no event shall any Holder of an Allowed Claim be entitled to receive payments or
+Distributions under the Plan that, in the aggregate, exceed the Allowed amount of such Holder’s
+Claim.
+A.
+
+Unclassified Claims.
+1.
+
+Administrative Claims.
+
+Except as specified in this Section, and subject to the bar date provisions herein, unless
+otherwise agreed by the Holder of an Administrative Claim and the City, or ordered by the
+Bankruptcy Court, each Holder of an Allowed Administrative Claim will receive, in full
+satisfaction of such Allowed Administrative Claim, Cash in an amount equal to such Allowed
+Administrative Claim either: (1) on the Effective Date or as soon as reasonably practicable
+thereafter; or (2) if the Administrative Claim is not Allowed as of the Effective Date, 30 days after
+the date on which such Administrative Claim becomes an Allowed Claim.
+Claims of professionals retained and paid by the City and approved by the Receiver and
+the claims of the Retiree Committee for professional fees shall be Administrative Claims, subject
+to a determination of reasonableness under section 943(b)(3) of the Bankruptcy Code. The Claims
+of The Kapoor Company., Ballard Spahr LLP, PFM Group Consulting LLC, Herbert, Rowland &
+Grubic, Inc., Conrad Siegel, Campbell Durrant P.C., Fox Chase Advisors, LLC, and Shilvosky M.
+Buffaloe Consulting & Resources, LLC are not Administrative Claims and are not subject to a
+determination of reasonableness under section 943(b)(3) of the Bankruptcy Code to the extent paid
+by DCED. The claims of any other party and their professionals who have appeared in the Chapter
+9 Case are not Administrative Claims.
+Unless otherwise agreed to by the City and the Internal Revenue Service (“IRS”), any
+portion of any Claim filed by the IRS entitled to treatment as an Administrative Claim under
+section 503(b)(1)(B) of the Bankruptcy Code will be paid in full on the Effective Date. Unless
+otherwise agreed by the City and the IRS, any portion of any Claim filed by the IRS that is not
+entitled to treatment as an Administrative Claim shall be treated as a General Unsecured Claim.
+The City reserves the right to dispute all or any portion of any Claim filed by the IRS.
+a.
+
+Bar Dates for Administrative Claims.
+i.
+
+General Bar Date Provisions.
+
+Except as otherwise provided in Section II.A.1.a.ii or in a Bar Date Order or other order of
+the Bankruptcy Court, unless previously Filed, requests for payment of Administrative Claims
+must be Filed and served on the City no later than 45 days after the Effective Date. Holders of
+Administrative Claims that are required to File and serve a request for payment of such
+Administrative Claims and that do not File and serve such a request by the applicable Bar Date
+will be forever barred from asserting such Administrative Claims against the City or its property,
+and such Administrative Claims will be deemed discharged as of the Effective Date. Objections to
+such requests must be Filed and served on the City and the requesting party by the later of (i) 150
+days after the Effective Date, (ii) 60 days after the Filing of the applicable request for payment of
+Administrative Claims or (iii) such other period of limitation as may be specifically fixed by a
+16
+
+Case 22-13032-amc
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 23 of 53
+
+Desc Main
+
+Final Order for objecting to such Administrative Claims. The foregoing procedures shall be
+specified in the Confirmation Order and the notice of entry of the Confirmation Order and served
+on all parties in interest.
+ii.
+
+Ordinary Course Claims
+
+Holders of Claims based on Liabilities incurred by the City after the Petition Date in the
+ordinary course of its operations will not be required to File or serve any request for payment or
+application for allowance of such Claims. Such Claims will be paid by the City, pursuant to the
+terms and conditions of the particular transaction giving rise to such Claims, without further action
+by the Holders of such Claims or further action or approval of the Bankruptcy Court.
+iii.
+
+No Modification of Bar Date Order.
+
+The Plan does not modify any other Bar Date Order, including Bar Dates for Claims
+entitled to administrative priority under section 503(b)(9) of the Bankruptcy Code.
+B.
+
+Classified Claims.
+1.
+
+Designation of Classes.
+
+The following table designates the Classes and specifies whether such Classes are Impaired
+or Unimpaired by the Plan.
+Class
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+2.
+
+Description
+Series 2021 DVRPC Notes Claim
+Other Secured Claims
+MMO Claim
+Retiree Pension Claim
+OPEB Claim
+FOP Claim
+IAFF Claim
+Teamsters Claim
+Reassessment Tax Appeal Claims
+Tort Claims
+Convenience Claims
+Pension Spiking Claims
+General Unsecured Claims
+Subordinated Claims
+
+Impairment
+Unimpaired/Deemed to Accept
+Unimpaired/Deemed to Accept
+Impaired/Voting
+Impaired/Voting
+Impaired/Voting
+Impaired/Voting
+Impaired/Voting
+Impaired/Voting
+Impaired/Voting
+Impaired/Voting
+Impaired/Voting
+Impaired/Voting
+Impaired/Deemed to Reject
+Impaired/Deemed to Reject
+
+Subordination; Reservation of Rights to Reclassify Claims
+
+The allowance, classification and treatment of Allowed Claims and the respective
+Distributions and treatments specified in the Plan take into account the relative priority and rights
+of the Claims in each Class and all contractual, legal and equitable subordination rights relating
+thereto, whether arising under general principles of equitable subordination, section 510(b) of the
+Bankruptcy Code or otherwise. Except as expressly set forth herein, consistent with section 510(a)
+17
+
+Case 22-13032-amc
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 24 of 53
+
+Desc Main
+
+of the Bankruptcy Code, nothing in the Plan shall, or shall be deemed to, modify, alter or otherwise
+affect any right of a Holder of a Claim to enforce a subordination agreement against any Entity
+other than the City to the same extent that such agreement is enforceable under applicable
+nonbankruptcy law. Pursuant to section 510 of the Bankruptcy Code, the City reserves the right to
+reclassify any Disputed Claim in accordance with any applicable contractual, legal or equitable
+subordination.
+3.
+
+Treatment of Claims
+a.
+
+Class 1 – Series 2021 DVRPC Notes Claim
+i.
+
+Allowance.
+
+On the Effective Date, the DVRPC Notes Claim shall be deemed Allowed in the
+amount of $[•].
+ii.
+Treatment.
+In the City’s sole discretion, on the Effective Date the Series 2021 DVRPC Notes
+Claim shall be paid in full or the Series 2021 DVRPC Notes shall be Reinstated, unless the Holder
+of the Series 2021 DVRPC Notes Claim agrees to different treatment of such Claim. If the Series
+2021 DVRPC Notes are Reinstated, any Claims for fees, costs and expenses under the Series 2021
+DVRPC Notes shall be added to the principal amount of the Series 2021 DVRPC Claims and paid
+during the remaining term of the Series 2021 DVRPC Notes.
+b.
+
+Class 2 – Other Secured Claims
+
+In the City’s sole discretion, on the Effective Date, each Holder of an Allowed
+Other Secured Claim shall have its Allowed Other Secured Claim Reinstated or paid in full, unless
+such Holder agrees to a different treatment of such Claim. If any Other Unsecured Claim is
+Reinstated, any Claims for fees, costs and expenses shall be added to the principal amount of the
+Other Unsecured Claim and paid during the remaining term of the Other Unsecured Claim.
+c.
+
+Class 3 – MMO Claim
+i.
+
+Allowance.
+
+The MMO Claim shall be Allowed in an aggregate amount equal to the sum of $[•].
+ii.
+
+Treatment.
+
+The treatment of the MMO Claim will be as set forth in the Plan Supplement or in
+accordance with any resolution that may be reached with the Retiree Committee.
+
+18
+
+Case 22-13032-amc
+
+d.
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 25 of 53
+
+Desc Main
+
+Class 4 – Retiree Pension Claim.
+i.
+
+Allowance.
+
+The Retiree Pension Claim shall be Allowed in an aggregate amount equal to the
+sum of $[•].
+ii.
+
+Treatment.
+
+The treatment of the Retiree Pension Claim will be as set forth in the Plan
+Supplement or in accordance with any resolution that may be reached with the Retiree Committee.
+e.
+
+Class 5 - OPEB Claim
+i.
+
+Allowance.
+
+The OPEB Claim shall be Allowed in an aggregate amount equal to the sum of $[•].
+ii.
+
+Treatment.
+
+The treatment of the OPEB Claim will be as set forth in the Plan Supplement or in
+accordance with any resolution that may be reached with the Retiree Committee.
+f.
+
+Class 6 – FOP Claim.
+i.
+
+Allowance.
+
+The FOP Claim shall be Allowed in an aggregate amount equal to the sum of $[•].
+ii.
+
+Treatment.
+
+The FOP Claim shall receive the treatment set forth in the Plan Supplement or as
+otherwise may be agreed by the parties.
+g.
+
+Class 7 – IAFF Claim.
+i.
+
+Allowance.
+
+The IAFF Claim shall be Allowed in an aggregate amount equal to the sum of $[•].
+ii.
+
+Treatment.
+
+The IAFF Claim shall receive the treatment set forth in the Plan Supplement or as
+otherwise may be agreed by the parties.
+
+19
+
+Case 22-13032-amc
+
+h.
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 26 of 53
+
+Desc Main
+
+Class 8 - Teamsters Claim.
+i.
+
+Allowance.
+
+The Teamsters Claim shall be Allowed in an aggregate amount equal to the sum of
+$[•].
+ii.
+
+Treatment.
+
+The Teamsters Claim shall receive the treatment set forth in the Plan Supplement
+or as otherwise may be agreed by the parties.
+i.
+
+Class 9 – Reassessment Tax Appeal Claim.
+i.
+
+Allowance.
+
+A Reassessment Tax Appeal Claim shall be an Allowed Reassessment Tax Appeal
+Claim in the amount set forth in: (a) a stipulation between the City and any Holder of a
+Reassessment Tax Appeal Claim; (b) a judgment entered by the Delaware County Court of
+Common Pleas from which no appeal is taken by the City or any other taxing authority; or, (c) a
+timely proof of claim filed by the Holder to which no objection has been timely filed by the City.
+ii.
+
+Treatment.
+
+If Class 9 votes to accept the Plan, each Holder of an Allowed Reassessment Tax
+Appeal Claim will be entitled to a property tax refund in the amount that is the lesser of: (a) the
+amount of any property tax refund to which the Holder of an Allowed Reassessment Tax Appeal
+Claim is otherwise entitled under applicable non-bankruptcy law; (b) 25% of the amount of any
+property tax refund to which the Holder of an Allowed Reassessment Tax Appeal Claim is
+otherwise entitled under applicable non-bankruptcy law; or, (c) $5,000.00, which amount may be
+deducted from the Holder’s property tax liability owed to the City in tax years 202[•] and 202[•]
+in equal installments.
+If Class 9 votes to reject the Plan all Allowed Reassessment Tax Appeal Claims
+will be treated as General Unsecured Claims.
+j.
+
+Class 10 – Tort Claims.
+i.
+
+Allowance.
+
+All Tort Claims to which a timely objection is not filed pursuant to Section VI of
+the Plan or as to which any such objection is overruled by the Court or resolved by agreement of
+the City and the Holder of the Tort Claim shall be Allowed.
+ii.
+
+Treatment.
+
+Allowed Tort Claims shall be treated as General Unsecured Claims for all amounts
+up to the City’s self-insured retention or deductible under any applicable insurance policy, net of
+20
+
+Case 22-13032-amc
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 27 of 53
+
+Desc Main
+
+any defense costs incurred by the City and applied to the self-insured retention or deductible.
+Holders of Allowed Tort Claims in excess of the City’s self-insured retention or deductible under
+any applicable insurance policy may pursue the amount of such claim in excess of the City’s selfinsured retention or deductible plus any exhausted portion of the City’s self-insured retention from
+any insurance providing an applicable insurance policy. If the City does not have an insurance
+policy applicable to a Tort Claim, such Tort Claim shall be treated as a General Unsecured Claim
+for the full amount of such Claim.
+k.
+
+Class 11 – Convenience Claims.
+i.
+
+Treatment.
+
+Each Holder of an Allowed Convenience Claim, in full satisfaction of such Allowed
+Claim, shall receive Cash equal to the lesser of the amount of the Allowed Claim or $1,000 on or
+as soon as reasonably practicable after the Effective Date, unless such Holder agrees to a different
+treatment of such Claim.
+l.
+
+Class 12 – Pension Spiking Claims.
+i.
+
+Treatment.
+
+The Pension Spiking Claims shall receive the treatment set forth in the Plan
+Supplement or as otherwise may be agreed by the parties.
+m.
+
+Class 13 – General Unsecured Claims.
+i.
+
+Allowance.
+
+All General Unsecured Claims to which a timely objection is not filed pursuant to
+Section VI of the Plan or as to which any such objection is overruled by the Court or resolved by
+agreement of the City and the Holder of the General Unsecured Claim shall be Allowed.
+ii.
+
+Treatment.
+
+Each Allowed General Unsecured Claim shall be cancelled, discharged and
+extinguished without any distribution on account of such General Unsecured Claim.
+n.
+
+Class 14 – Subordinated Claims.
+i.
+
+Treatment.
+
+Each Subordinated Claim shall be cancelled, discharged and extinguished without
+any distribution on account of such Subordinated Claim.
+
+21
+
+Case 22-13032-amc
+
+C.
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 28 of 53
+
+Desc Main
+
+Confirmation Without Acceptance by All Impaired Classes.
+
+The City requests Confirmation under section 1129(b) of the Bankruptcy Code in
+the event that any impaired Class does not accept or is deemed not to accept the Plan pursuant to
+section 1126 of the Bankruptcy Code. The Plan shall constitute a motion for such relief.
+D.
+
+Treatment of Executory Contracts and Unexpired Leases.
+1.
+
+Rejection.
+
+Except as otherwise provided in the Plan, in any contract, instrument, release or
+other agreement or document entered into in connection with the Plan or in a Final Order of the
+Bankruptcy Court, or as requested in any motion Filed by the City on or prior to the Effective Date,
+on the Effective Date, pursuant to section 365 of the Bankruptcy Code, the City will be deemed to
+reject all Executory Contracts and Unexpired Leases to which it is a party. Entry of the
+Confirmation Order shall constitute approval of rejection of all Executory Contracts and
+Unexpired Leases, unless assumed or assumed and assigned by the City. Any Claims arising from
+the rejection of an Executory Contract or Unexpired Lease pursuant to the Plan shall be treated
+as Class 13 Claims (General Unsecured Claims), subject to the provisions of section 502 of the
+Bankruptcy Code.
+2.
+
+Rejection of Ancillary Agreements.
+
+Each Executory Contract and Unexpired Lease rejected pursuant to Section II.D.1
+will include any modifications, amendments, supplements, restatements or other agreements made
+directly or indirectly by any agreement, instrument or other document that in any manner affects
+such Executory Contract or Unexpired Lease, unless any such modification, amendment,
+supplement, restatement or other agreement is assumed pursuant to Section II.D.3.
+3.
+
+Assumption of Identified Executory Contracts and Unexpired Leases.
+
+The Confirmation Order will constitute an order of the Bankruptcy Court approving
+the assumption of Executory Contracts and Unexpired Leases identified for assumption on Exhibit
+[•] or in the Plan Supplement as of the Effective Date, except for Executory Contracts or Unexpired
+Leases that (a) have been rejected pursuant to a Final Order of the Bankruptcy Court, (b) are subject
+to a pending motion for reconsideration or appeal of an order authorizing the rejection of such
+Executory Contract or Unexpired Lease, (c) are subject to a motion to reject such Executory
+Contract or Unexpired Lease Filed on or prior to the Effective Date, or (d) are designated for
+rejection in accordance with the last sentence of this paragraph. An order of the Bankruptcy Court
+(which may be the Confirmation Order) entered on or prior to the Confirmation Date will specify
+the procedures for providing notice to each party whose Executory Contract or Unexpired Lease
+is being assumed pursuant to the Plan of: (w) the Executory Contract or Unexpired Lease being
+assumed; (x) the Cure Amount Claim, if any, that the City believes it would be obligated to pay in
+connection with such assumption; (y) any assignment of an Executory Contract or Unexpired
+Lease; and (z) the procedures for such party to object to the assumption of the applicable Executory
+Contract or Unexpired Lease, the amount of the proposed Cure Amount Claim or any assignment
+of an Executory Contract or Unexpired Lease. If an objection to a proposed assumption,
+
+22
+
+Case 22-13032-amc
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 29 of 53
+
+Desc Main
+
+assumption and assignment or Cure Amount Claim is not resolved in favor of the City, the
+applicable Executory Contract or Unexpired Lease may be designated by the City for rejection,
+which shall be deemed effective as of the Effective Date.
+The City reserves its right, at any time on or prior to the Effective Date, to amend
+Exhibit [•] or the Plan Supplement to add or delete any Executory Contract or Unexpired Lease
+therefrom. The City will provide notice of any amendments to Exhibit [•] or the Plan Supplement
+to the parties to the Executory Contracts or Unexpired Leases affected thereby and to the parties
+on the then-applicable service list in the Chapter 9 Case. Listing a contract or lease on Exhibit [•]
+or the Plan Supplement shall not constitute an admission by the City that such contract or lease is
+an Executory Contract or Unexpired Lease or that the City has any liability thereunder.
+4.
+
+Payments Related to the Assumption of Executory Contracts and Unexpired
+Leases.
+
+To the extent that such Claims constitute monetary defaults, the Cure Amount
+Claims associated with each Executory Contract or Unexpired Lease to be assumed pursuant to
+the Plan will be satisfied, pursuant to section 365(b)(1) of the Bankruptcy Code, at the option of
+the City: (a) by payment of the Cure Amount Claim in Cash on the Effective Date or (b) on such
+other terms as are agreed to by the parties to such Executory Contract or Unexpired Lease. If there
+is a dispute regarding: (x) the amount of any Cure Amount Claim, (y) the ability of the City or
+any assignee to provide “adequate assurance of future performance” (within the meaning of
+section 365 of the Bankruptcy Code) under the contract or lease to be assumed or (z) any other
+matter pertaining to the assumption of such contract or lease, the payment of any Cure Amount
+Claim required by section 365(b)(1) of the Bankruptcy Code will be made within 30 days
+following the entry of a Final Order resolving the dispute and approving the assumption.
+5.
+
+Contracts and Leases Entered Into After the Petition Date.
+
+Contracts, leases and other agreements entered into after the Petition Date by the
+City, including (a) any Executory Contracts or Unexpired Leases assumed by the City and (b) any
+settlement agreement or CBA, will be performed by the City in the ordinary course of its
+operations. Accordingly, such contracts and leases (including any assumed Executory Contracts
+or Unexpired Leases) will survive and remain unaffected by entry of the Confirmation Order.
+6.
+
+Rejection Damages Bar Date.
+
+Except as otherwise provided in a Final Order of the Bankruptcy Court approving
+the rejection of an Executory Contract or Unexpired Lease, Claims arising out of the rejection of
+an Executory Contract or Unexpired Lease must be Filed with the Bankruptcy Court and served
+upon counsel to the City on or before the later of: (a) 45 days after the Effective Date; or (b) 45
+days after such Executory Contract or Unexpired Lease is rejected pursuant to a Final Order
+entered after the Effective Date. Any Claims not Filed within such applicable time periods will be
+forever barred from receiving a Distribution from, and shall not be enforceable against, the City.
+
+23
+
+Case 22-13032-amc
+
+7.
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 30 of 53
+
+Desc Main
+
+Preexisting Obligations to the City Under Rejected Executory Contracts and
+Unexpired Leases.
+
+Pursuant to section 365(g) of the Bankruptcy Code, rejection of any Executory
+Contract or Unexpired Lease pursuant to the Plan or otherwise shall constitute a breach of such
+contract or lease and not a termination thereof, and all obligations owing to the City under such
+contract or lease as of the date of such breach shall remain owing to the City upon rejection.
+Notwithstanding any applicable non-bankruptcy law to the contrary, the City expressly reserves
+and does not waive any right to receive, or any continuing obligation of a non-City party to provide,
+warranties, indemnifications or continued maintenance obligations on goods previously
+purchased, or services previously received, by the City from non-City parties to rejected Executory
+Contracts or Unexpired Leases, and any such rights shall remain vested in the City as of the
+Effective Date.
+8.
+
+Insurance Policies.
+
+From and after the Effective Date, each of the City’s insurance policies (other than
+welfare benefits insurance policies) in existence as of or prior to the Effective Date shall be
+reinstated and continue in full force and effect in accordance with their terms and, to the extent
+applicable, shall be deemed assumed by the City pursuant to section 365 of the Bankruptcy Code
+and Section II.D.3. Nothing contained herein shall constitute or be deemed a waiver of any Causes
+of Action that the City may hold against any Entity, including any insurer under any of the City’s
+insurance policies.
+ARTICLE III
+CONFIRMATION OF PLAN
+A.
+
+Conditions Precedent to the Effective Date.
+
+The Effective Date will not occur, and the Plan will not be consummated, unless
+and until the City has determined that all of following conditions have been satisfied or waived in
+accordance with Section III.B:
+1. The Bankruptcy Court shall have entered the Confirmation Order in form and
+substance satisfactory to the City.
+2. The Bankruptcy Court shall have entered an order (which may be included in the
+Confirmation Order) approving and authorizing the City to take all actions necessary or
+appropriate to implement the Plan, including the transactions contemplated by the Plan and the
+implementation and consummation of the contracts, instruments, settlements, releases and other
+agreements or documents entered into or delivered in connection with the Plan.
+3.
+
+The Confirmation Order shall not be stayed in any respect.
+
+4. All actions and all contracts, instruments, settlements, releases and other
+agreements or documents necessary to implement the terms and provisions of the Plan are
+effected or executed and delivered, as applicable, in form and substance satisfactory to the City.
+24
+
+Case 22-13032-amc
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 31 of 53
+
+Desc Main
+
+5. All authorizations, consents and regulatory approvals, if any, required in
+connection with the consummation of the Plan have been obtained and not revoked, including all
+consents and approvals required to carry out the terms of any settlement agreement or CBA.
+6. Any legislation that must be passed by the Commonwealth legislature to effect any
+term of the Plan shall have been enacted.
+7. The Plan and all Exhibits shall have been Filed and shall not have been materially
+amended, altered or modified from the Plan as confirmed by the Confirmation Order, unless such
+material amendment, alteration or modification has been made in accordance with Section
+VIII.B.
+8. The Effective Date shall have occurred within 180 days of the entry of the
+Confirmation Order, unless the City requests an extension of such deadline and such deadline is
+extended by the Bankruptcy Court.
+B.
+
+Waiver of Conditions to the Effective Date.
+
+The conditions to the Effective Date set forth in Section III.A may be waived in
+whole or part at any time by the City in its sole and absolute discretion, except for those conditions
+set forth in Section III.A.1-3, which conditions cannot be waived.
+C.
+
+Effect of Nonoccurrence of Conditions to the Effective Date.
+
+If each of the conditions to the Effective Date is not satisfied, or duly waived in
+accordance with Section III.B, then, before the time that each of such conditions has been satisfied
+and upon notice to such parties in interest as the Bankruptcy Court may direct, the City may File
+a motion requesting that the Bankruptcy Court vacate the Confirmation Order; provided, however,
+that, notwithstanding the Filing of such motion, the Confirmation Order may not be vacated if each
+of the conditions to the Effective Date is satisfied before the Bankruptcy Court enters an order
+granting such motion. If the Confirmation Order is vacated pursuant to this Section III.C: (1) the
+Plan will be null and void in all respects, including with respect to (a) the discharge of Claims
+pursuant to section 944(b) of the Bankruptcy Code, (b) the assumptions, assignments or rejections
+of Executory Contracts and Unexpired Leases pursuant to Section II.D, and (c) the releases
+described in Section III.D.6; and (2) nothing contained in the Plan, nor any action taken or not
+taken by the City with respect to the Plan, the Disclosure Statement or the Confirmation Order,
+will be or will be deemed to be (a) a waiver or release of any Claims by or against the City, (b) an
+admission of any sort by the City or any other party in interest or (c) prejudicial in any manner the
+rights of the City or any other party in interest.
+D.
+
+Effect of Confirmation of the Plan.
+1.
+
+Dissolution of Retiree Committee.
+
+On the Effective Date, the Retiree Committee, to the extent not previously
+dissolved or disbanded, will dissolve and disband, and the members of the Retiree Committee and
+25
+
+Case 22-13032-amc
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 32 of 53
+
+Desc Main
+
+their respective professionals will cease to have any role arising from or related to the Chapter 9
+Case.
+2.
+
+Preservation of Rights of Action by the City.
+
+Except as otherwise provided in the Plan or in any contract, instrument, release or
+other agreement entered into or delivered in connection with the Plan, in accordance with section
+1123(b)(3)(B) of the Bankruptcy Code, the City will retain and may enforce any claims, demands,
+rights, defenses and Causes of Action that it may hold against any Entity, to the extent not
+expressly released under the Plan or pursuant to any Final Order of the Bankruptcy Court. A
+nonexclusive schedule of currently pending actions and claims brought by the City is attached as
+Exhibit [•]. The City’s inclusion of, or failure to include, any right of action or claim on Exhibit
+[•] shall not be deemed an admission, denial or waiver of any claims, demands, rights or Causes
+of Action that the City may hold against any Entity, and all Entities are hereby notified that the
+City intends to preserve all such claims, demands, rights or Causes of Action.
+3.
+
+Comprehensive Settlement of Claims and Controversies.
+
+Pursuant to Bankruptcy Rule 9019 and in consideration for the distributions and
+other benefits provided under the Plan, the provisions of the Plan will constitute a good faith
+compromise and settlement of all claims or controversies relating to the rights that a Holder of a
+Claim may have with respect to any Allowed Claim or any Distribution to be made pursuant to the
+Plan on account of any Allowed Claim. The entry of the Confirmation Order will constitute the
+Bankruptcy Court’s approval, as of the Effective Date, of the compromise or settlement of all such
+claims or controversies and the Bankruptcy Court’s finding that all such compromises or
+settlements are (a) in the best interests of the City, its property and Claim Holders and (b) fair,
+equitable and reasonable.
+4.
+
+Discharge of Claims.
+a.
+
+Complete Satisfaction, Discharge and Release.
+
+Except as provided in the Plan or in the Confirmation Order, the rights afforded
+under the Plan and the treatment of Claims under the Plan will be in exchange for and in complete
+satisfaction, discharge and release of all Claims arising on or before the Effective Date, including
+any interest accrued on Claims from and after the Petition Date. Except as provided in the Plan or
+in the Confirmation Order, Confirmation will, as of the Effective Date, discharge the City from all
+Claims or other debts that arose on or before the Effective Date, and all debts of the kind specified
+in section 502(g), 502(h) or 502(i) of the Bankruptcy Code, whether or not (i) a proof of Claim
+based on such debt is Filed or deemed Filed pursuant to section 501 of the Bankruptcy Code, (ii)
+a Claim based on such debt is allowed pursuant to section 502 of the Bankruptcy Code or (iii) the
+Holder of a Claim based on such debt has accepted the Plan.
+b.
+
+Discharge.
+
+In accordance with Section III.D.4.a, except as expressly provided otherwise in the
+Plan or the Confirmation Order, the Confirmation Order will be a judicial determination, as of the
+Effective Date, of a discharge of all debts of the City, pursuant to sections 524(a)(1), 524(a)(2) and
+26
+
+Case 22-13032-amc
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 33 of 53
+
+Desc Main
+
+944(b) of the Bankruptcy Code, and such discharge will void any judgment obtained against the
+City at any time, to the extent that such judgment relates to a discharged debt; provided that such
+discharge will not apply to debts specifically exempted from discharge under the Plan.
+5.
+
+Exculpation.
+
+From and after the Effective Date, to the fullest extent permitted under applicable
+law and except as expressly set forth in this Section, neither the City, its Related Entities (including
+the members of the City Council, the Mayor and the Receiver), to the extent a claim arises from
+actions taken by such Related Entity in its capacity as a Related Entity of the City, the Exculpated
+Parties nor the Released Parties shall have or incur any liability to any person or Entity for any act
+or omission in connection with, relating to or arising out of the City’s restructuring efforts and the
+Chapter 9 Case, including the authorization given to file the Chapter 9 Case, the formulation,
+preparation, negotiation, dissemination, consummation, implementation, confirmation or approval
+(as applicable) of the Plan, the property to be distributed under the Plan, the settlements
+implemented under the Plan, the Exhibits, the Plan Supplement, the Disclosure Statement, any
+contract, instrument, release or other agreement or document provided for or contemplated in
+connection with the consummation of the transactions set forth in the Plan or the management or
+operation of the City; provided, however, that the foregoing provisions shall not affect the liability
+of the City, its Related Entities, the Released Parties and the Exculpated Parties that otherwise
+would result from any such act or omission to the extent that such act or omission is determined
+in a Final Order to have constituted gross negligence or willful misconduct or any act or omission
+occurring before the Petition Date. The City, its Related Entities (with respect to actions taken by
+such Related Entities in their capacities as Related Entities of the City), the Released Parties and
+the Exculpated Parties shall be entitled to rely upon the advice of counsel and financial advisors
+with respect to their duties and responsibilities under, or in connection with, the Chapter 9 Case,
+the administration thereof and the Plan.
+The Exculpated Parties have, and upon Consummation of the Plan shall be deemed
+to have, participated in good faith and in compliance with the applicable laws with regard to the
+solicitation of votes and distribution of consideration pursuant to the Plan and, therefore, are not,
+and on account of such distributions shall not be, liable at any time for the violation of any
+applicable law, rule, or regulation governing the solicitation of acceptances or rejections of the
+Plan or such distributions made pursuant to the Plan.
+For the avoidance of doubt, this Section shall not relieve any Exculpated Party from
+the obligation to perform any act required to effectuate the Plan, including but not limited to any
+act directed by the Receiver to be undertaken.
+6.
+
+Injunction.
+
+On the Effective Date, except as otherwise provided herein or in the
+Confirmation Order,
+a.
+all Entities that have been, are or may be holders of Claims against the
+City or Indirect Employee Indemnity Claims, along with their Related Entities, shall be
+permanently enjoined from taking any of the following actions against or affecting the City
+
+27
+
+Case 22-13032-amc
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 34 of 53
+
+Desc Main
+
+or its property, the Released Parties or their respective property and the Related Entities of
+each of the foregoing, with respect to such claims (other than actions brought to enforce any
+rights or obligations under the Plan and appeals, if any, from the Confirmation Order):
+1.
+commencing, conducting or continuing in any manner, directly
+or indirectly, any suit, action or other proceeding of any kind against or affecting the City
+or its property, including all suits, actions and proceedings that are pending as of the
+Effective Date, which must be withdrawn or dismissed with prejudice unless such suit,
+action or proceeding asserts a Tort Claim, Indirect Employee Indemnity Claim or
+Reassessment Tax Appeal Claim, the amount of which Claim is to be liquidated pursuant
+to Section VI.A.2);
+2.
+enforcing, levying, attaching, collecting or otherwise recovering
+by any manner or means, directly or indirectly, any judgment, award, decree or order
+against the City or its property;
+3.
+creating, perfecting or otherwise enforcing in any manner,
+directly or indirectly, any encumbrance of any kind against the City or its property;
+4.
+asserting any setoff, right of subrogation or recoupment of any
+kind, directly or indirectly, against any obligation due the City or its property;
+5.
+proceeding in any manner in any place whatsoever that does not
+conform to or comply with the provisions of the Plan or the settlements set forth herein to
+the extent such settlements have been approved by the Bankruptcy Court in connection
+with Confirmation of the Plan; and
+6.
+taking any actions to interfere with the implementation or
+consummation of the Plan.
+b.
+No Person or Entity may commence or pursue a Claim or Cause of
+Action of any kind against the City, its Related Entities, the Exculpated Parties or the
+Released Parties, as applicable, that relates to or is reasonably likely to relate to any act or
+omission in connection with, relating to, or arising out of a Claim or Cause of Action subject
+to Section III.D.6 without the Bankruptcy Court (i) first determining, after notice and a
+hearing, that such Claim or Cause of Action represents a colorable Claim of any kind, and
+(ii) specifically authorizing such Person or Entity to bring such Claim or Cause of action
+against the City, a Related Entity, an Exculpated Party or a Released Party.
+7.
+
+Debtor’s Releases.
+
+On and after the Effective Date, in exchange for good and valuable consideration,
+the adequacy of which is confirmed, the City and its Estate, on behalf of itself and its respective
+successors, assigns, and representatives, and any and all other Entities who may purport to assert
+any Cause of Action, directly or derivatively, by, or through, for or because of the City or its Estate,
+is hereby deemed conclusively, absolutely, unconditionally, irrevocably, and forever to have
+released, waived and discharged each Released Party, from any and all claims and Causes of
+Action, including any Avoidance Actions, asserted or assertable on behalf of the City or its Estate,
+28
+
+Case 22-13032-amc
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 35 of 53
+
+Desc Main
+
+whether liquidated or unliquidated, fixed or contingent, accrued or unaccrued, known or unknown,
+foreseen or unforeseen, matured or unmatured, existing or hereafter arising in Law, equity,
+contract, tort, or under any federal or state statutory or common law, or any applicable
+international, foreign, or domestic law, rule, statute, regulation, treaty, right, duty, requirement, or
+otherwise, that the City, its Estate or its administrators, successors, assigns, managers, accountants,
+attorneys, representatives, consultants, agents, and any other Persons claiming under or through
+them would have been legally entitled to assert in their own right (whether individually or
+collectively) or on behalf of the Holder of any Claim or other Person based on or relating to, or in
+any manner arising from, in whole or in part, the City, its Estate, the Chapter 9 Case, any settlement
+agreement or CBA, any other transaction contemplated by the Plan or effectuated during the
+Chapter 9 Case, the Mediation, the restructuring or discharge of any Claim, in all cases upon any
+act or omission, transaction, agreement, event or other occurrence taking place on or before the
+Effective Date.
+8.
+
+Voluntary Release by Holders of Claims.
+
+Without limiting any other applicable provisions of, or releases contained in, the
+Plan or any contracts, instruments, releases, agreements or documents to be entered into or
+delivered in connection with the Plan, as of the Effective Date, in consideration for the obligations
+of the City under the Plan and the consideration and other contracts, instruments, releases,
+agreements or documents to be entered into or delivered in connection with the Plan each Holder
+of a Claim that (i) votes in favor of the Plan, (ii) votes to reject the Plan and fails to opt out of this
+section of the Plan, or (iii) fails to vote regarding the Plan and fails to opt out of this section of the
+Plan, to the fullest extent permissible under law, will be deemed to forever release, waive and
+discharge (which release will be in addition to the release and discharge of Claims otherwise
+provided herein and under the Confirmation Order and the Bankruptcy Code):
+1.
+all Liabilities in any way relating to the City, the Chapter 9 Case
+(including the authorization given to file the Chapter 9 Case), the Plan, the Exhibits, the Plan
+Supplement, or the Disclosure Statement, in each case that such Holder has, had or may have
+against the City or its current and former officials, officers, directors, employees, managers,
+attorneys, advisors and professionals, each acting in such capacity, including the Receiver in his
+capacity as Receiver; provided further, for the avoidance of doubt, that any person or entity
+designated to manage the Chapter 9 Case for the City after the Receiver’s term is terminated,
+whether such person or entity acts as an employee, advisor or contractor to the City or acts as an
+employee, agent, contractor or appointee of the State under any applicable state law, shall be
+treated the same as an employee of the City hereunder; and
+2.
+all Liabilities in any way relating to (A) Claims that are
+compromised, settled or discharged under or in connection with the Plan, (B) the Chapter 9 Case
+(including the authorization given to file the Chapter 9 Case), (C) the Plan, (D) the Exhibits, (E) the
+Plan Supplement, (F) the Disclosure Statement, or (G) [•], in each case that such holder has, had
+or may have against the City, the City’s Related Entities, and the Released Parties; provided,
+however, that the foregoing provisions shall not affect the liability of the City, its Related Entities
+and the Released Parties that otherwise would result from any act or omission to the extent that act
+or omission subsequently is determined in a Final Order to have constituted gross negligence or
+willful misconduct; and; provided, further, that nothing in this Section shall release (i) the City’s
+29
+
+Case 22-13032-amc
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 36 of 53
+
+Desc Main
+
+obligations under the Plan or (ii) any defenses that any party may have against the City, its Related
+Entities, or the Released Parties; and
+E.
+
+Effectiveness of the Plan.
+
+The Plan shall become effective on the Effective Date. Any actions required to be
+taken on the Effective Date shall take place and shall be deemed to have occurred simultaneously,
+and no such action shall be deemed to have occurred prior to the taking of any other such action.
+F.
+
+Binding Effect of Plan.
+
+Pursuant to section 944(a) of the Bankruptcy Code, on and after the Effective Date,
+the provisions of the Plan shall bind all Holders of Claims, and their respective successors and
+assigns, whether or not the Claim of any such Holder is Impaired under the Plan and whether or not
+such Holder has accepted the Plan. The releases and settlements effected under the Plan will be
+operative, and subject to enforcement by the Bankruptcy Court, from and after the Effective Date,
+including pursuant to the injunctive provisions of the Plan. Once approved, the compromises and
+settlements embodied in the Plan, along with the treatment of any associated Allowed Claims, shall
+not be subject to any collateral attack or other challenge by any Entity in any court or other forum.
+As such, any Entity that opposes the terms of any compromise and settlement set forth in the Plan
+must (1) challenge such compromise and settlement prior to Confirmation of the Plan and (2)
+demonstrate appropriate standing to object and that the subject compromise and settlement does not
+meet the standards governing bankruptcy settlements under Bankruptcy Rule 9019 and other
+applicable law.
+ARTICLE IV
+MEANS FOR IMPLEMENTATION OF THE PLAN
+A.
+
+Request for Proposals Regarding Stormwater Assets, Water Assets & Sewer Assets
+
+On or prior to the Confirmation Date, the City shall have issued a request for proposals from
+third-parties to acquire, manage or operate (1) the Stormwater Assets, (2) the Water Assets, and
+(3) the Sewer Assets or the City’s Reversionary Interest in the Sewer Assets (each and collectively,
+the “RFP Process”). If DELCORA has ceased operating, either through dissolution by Delaware
+County or the sale of its assets to any third-party, and the City has retaken possession of any Sewer
+Assets (through its Reversionary Interest), such Sewer Assets shall be subjected to the RFP Process.
+If Delaware County has dissolved DELCORA, at Delaware County’s election, additional assets of
+DELCORA other than the City’s Sewer Assets may be included in the RFP Process. If DELCORA
+continues to own and operate the Sewer Assets at the commencement of the RFP Process, then the
+City will accept proposals for the acquisition of only the City’s Reversionary Interest.
+The RFP Process shall be conducted in accordance with applicable law and directed by the
+Receiver pursuant to the authority provided to the Receiver under Act 47 and the Recovery Plan.
+All proposals regarding the proposed sale, lease, disposition or other form of
+monetization of Stormwater Assets, Water Assets and/or Sewer Assets (collectively, the “RFP
+Assets”) shall provide that the RFP Assets will remain publicly-owned. Particular attention
+
+30
+
+Case 22-13032-amc
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 37 of 53
+
+Desc Main
+
+will be given to public authorities or other public entities interested in a merger or other
+combination, or in acquiring the RFP Assets. Applicants will be encouraged to provide
+proposals that provide, among other things:
+•
+
+•
+•
+•
+•
+•
+•
+
+B.
+
+A regional approach to the operation of the RFP Assets by parties who are qualified to
+acquire, own and operate such RFP Assets or interested in taking advantage of one or
+more regional approaches to the management of a Municipal Separate Storm Sewer
+System (MS4) requirements and a willingness to potentially manage the stormwater
+requirements of interested municipalities or townships with stormwater, sewer and/or
+water systems or assets within, adjacent to or in regional proximity to the RFP Assets.
+The ability of the proposal to minimize the impact on future rates and ratepayers,
+particularly those within the City.
+The retention of public sector jobs.
+Compliance with all applicable laws addressing the assumption, defeasance, repayment,
+prepayment and/or redemption of outstanding indebtedness related to the RFP Assets.
+A focus on obtaining all required governmental approvals including but not limited to
+compliance with all Environmental Laws, consent orders, permits, and minimizing the
+environmental impact on the City and the community.
+A proposed governance structure that is fair to ratepayers served by the authority.
+The retention by the City of a reversionary interest in the RFP Assets that would
+preclude any proposed subsequent re-sale, lease, assignment, disposition or alienation
+by the selected applicant to a private or non-governmental person or entity without the
+City’s prior written consent which the City may withhold in its sole and absolute
+discretion.
+
+Stormwater Assets
+1.
+
+Dissolution.
+
+On the Effective Date, pursuant to the Pennsylvania Municipality Authorities Act,
+53 Pa.C.S. §§ 5601-5623, (a) the legal existence of the SAC will be terminated, (b) all Stormwater
+Assets shall automatically revert to the City by force of Commonwealth law, (c) SAC’s
+outstanding liabilities shall be paid, repaid, prepaid, redeemed, defeased or assumed, and (d) the
+Stormwater Assets shall be subjected to the RFP Process. The Board of Directors of SAC shall
+be dissolved and neither SAC nor its Board of Directors shall have any further authority over the
+Stormwater Assets.
+2.
+
+Funded Debt of SAC.
+
+The funded debt of SAC will be addressed in accordance with (a) the Pennsylvania
+Municipality Authorities Act, 53 Pa.C.S. §§ 5601-5623, (b) all applicable federal and state rules
+and regulations applicable to publicly-owned water treatment and distribution systems and (c) the
+express terms of such funded debt.
+On or before the Effective Date, the City shall ensure that each form of outstanding
+stormwater indebtedness shall either be (i) assumed in full by the entity acquiring, leasing or
+
+31
+
+Case 22-13032-amc
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 38 of 53
+
+Desc Main
+
+otherwise taking ownership and/or operation of the Stormwater Assets or (ii) otherwise paid, repaid,
+defeased, prepaid or redeemed in full.
+3.
+
+Management of Stormwater Assets.
+
+The Stormwater Assets shall be operated in accordance with any agreement between
+the City and the party selected through the RFP Process. Management and governance of the
+Stormwater Assets shall be at the sole discretion of the City and in accordance with applicable law.
+C.
+
+Sewer Assets
+
+If DELCORA has ceased operating the Sewer Assets prior to the Effective Date,
+either through dissolution by Delaware County or the sale of its assets to any third-party, and the
+City has retaken possession of the Sewer Assets through its Reversionary Interest), the Sewer Assets
+shall be subjected to the RFP Process. If Delaware County has dissolved DELCORA, at Delaware
+County’s election, additional assets of DELCORA other than the City’s Sewer Assets may be
+included in the RFP Process with the consent of, or at the direction of, Delaware County.
+Prior to the Effective Date, the City shall have commenced an action before the
+Bankruptcy Court seeking the following relief: (i) identification of the assets subject to the
+Reversionary Interest, and at the City’s election, the value of the Reversionary Interest or the Sewer
+Assets; (ii) an order, consistent with the Bankruptcy Court’s Order Granting the Motion of Debtor
+Pursuant to Section 362 of the Bankruptcy Code for Entry of an Order Enforcing the Automatic
+Stay of Proceedings Pending Before the Pennsylvania Public Utility Commission (Docket No. 351)
+entered on May 23, 2023, finding that the execution of that certain Asset Purchase Agreement
+dated as of September 17, 2019 by and among DELCORA and Aqua Pennsylvania Wastewater,
+Inc. (as may have been amended), unequivocally violates the anti-assignment provision in § 16.3
+of the Sewer Agreement and that the transaction contemplated thereby triggers the City’s
+Reversionary Interest under the Sewer Agreement; and, (iii) compensating the City and its residents
+for all damages caused by, and other adverse host community impacts resulting from, DELCORA’s
+sewage conveyance and treatment operations within the City. Nothing herein is intended to limit
+the claims and causes of action or the damages that may be asserted against DELCORA by the City.
+D.
+
+Water Assets
+1.
+
+Dissolution.
+
+On the Effective Date, pursuant to the Pennsylvania Municipality Authorities Act,
+53 Pa.C.S. §§ 5601-5623 and the decision of the Pennsylvania Commonwealth Court in In re
+Chester Water Authority Trust, 263 A.3d 689 (Pa. Commw. Ct. 2021), appeal granted, 276 A.3d
+203 (Pa. 2022) (stayed), (a) the legal existence of CWA will be terminated, (b) all Water Assets
+shall revert to the City by force of Commonwealth law, (c) CWA’s outstanding liabilities shall be
+paid, repaid, prepaid, redeemed, defeased or assumed, and (d) the Water Assets shall be subjected
+to the RFP Process. The Board of Directors of CWA shall be dissolved and neither CWA nor its
+Board of Directors shall have any further authority over the Water Assets. The Receiver reserves
+the right to commence or remove to the Bankruptcy Court any litigation regarding the dissolution
+of CWA and the reversion of its assets to the City.
+32
+
+Case 22-13032-amc
+
+2.
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 39 of 53
+
+Desc Main
+
+Funded Debt of CWA.
+
+The funded debt of CWA will be addressed in accordance with Pennsylvania
+Municipality Authorities Act, 53 Pa.C.S. §§ 5601-5623, and all applicable federal and state rules
+and regulations applicable to publicly-owned water treatment and distribution systems.
+On or before the Effective Date, the City shall ensure that each form of outstanding
+water indebtedness shall either be (i) assumed in full by the entity acquiring, leasing or otherwise
+taking ownership and/or operation of the Water Assets or (ii) otherwise paid, repaid, defeased,
+prepaid or redeemed in full.
+3.
+
+Operation of Water Assets and Management.
+
+The Water Assets shall be operated in accordance with any agreement between the
+City and the party selected through the RFP Process. Management and governance of the Water
+Assets shall be at the sole discretion of the City and in accordance with applicable law.
+E.
+
+Retiree Pension Benefits.
+
+On the Effective Date, the Retiree Pension Benefits shall be modified as set forth in
+the Plan Supplement or otherwise agreed by the City and Retiree Committee.
+F.
+
+OPEB Benefits.
+
+On the Effective Date, the OPEB Benefits shall be modified as set forth the Plan
+Supplement or otherwise agreed by the City and Retiree Committee.
+G.
+
+FOP CBA.
+
+On the Effective Date, the FOP CBA shall be modified as set forth the Plan
+Supplement or otherwise agreed by the City and FOP.
+H.
+
+IAFF CBA.
+
+On the Effective Date, the IAFF CBA shall be modified as set forth the Plan
+Supplement or otherwise agreed by the City and IAFF.
+I.
+
+Teamsters CBA.
+
+On the Effective Date, the Teamsters CBA shall be modified as set forth the Plan
+Supplement or otherwise agreed by the City and Teamsters.
+J.
+
+Cancellation of Series 2017 Bonds and Series 2017 Bonds Documents.
+
+On the Effective Date, the Series 2017 Bonds and Series 2017 Bonds Documents
+will be deemed automatically cancelled, terminated and of no further force or effect against the City
+without any further act or action under any applicable agreement, law, regulation, order or rule, and
+
+33
+
+Case 22-13032-amc
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 40 of 53
+
+Desc Main
+
+the obligations of the parties to the City, as applicable, under the Series 2017 Bonds and Series 2017
+Bonds Documents shall be, or deemed to be, fully discharged and cancelled.
+K.
+
+Rejection or Termination of Contribution Agreement.
+
+On the Effective Date, (i) if the Contribution Agreement is an executory contract it
+shall be deemed rejected pursuant to Section II.D, or (ii) if the Contribution Agreement is not an
+executory contract it will be deemed automatically cancelled, terminated and of no further force or
+effect against the City without any further act or action under any applicable agreement, law,
+regulation, order or rule, and the obligations of the parties to the City, as applicable, under the
+Contribution Agreement and any related document shall be discharged.
+L.
+
+Release of Liens.
+
+Except as otherwise provided in the Plan or in any contract, instrument, release or
+other agreement or document entered into or delivered in connection with the Plan, or where a
+Claim is Reinstated, on the Effective Date, all Liens against the City’s property will be deemed
+fully released and discharged, and all of the right, title and interest of any holder of such Liens,
+including any rights to any collateral thereunder, will revert to the City. As of the Effective Date,
+(1) the holders of such Liens will be authorized and directed to release any collateral or other
+property of the City (including any cash collateral) held by such Holder and to take such actions as
+may be requested by the City to evidence the release of such Lien, including the execution, delivery,
+filing or recording of such releases as may be requested by the City, and (2) the City shall be
+authorized to execute and file on behalf of creditors Form UCC-3 termination statements or such
+other forms as may be necessary or appropriate to implement the provisions of this Section.
+M.
+
+Assumption of Indemnification Obligations.
+
+Notwithstanding anything otherwise to the contrary in the Plan, nothing in the Plan
+shall discharge or impair the obligations of the City as provided in the City Charter of the City,
+Administrative Code or other organizational documents, resolutions, employment contracts,
+applicable as of the Petition Date to indemnify, defend, reimburse, exculpate, advance fees and
+expenses to, or limit the liability of officers and employees of the City (consistent with the
+injunction provisions of Section III.D.6 and including the members of the City Council, the Mayor
+and the Receiver) and their Related Entities, in each case to the extent such Entities were acting
+in such capacity, against any claims or causes of action whether direct or derivative, liquidated or
+unliquidated, foreseen or unforeseen, asserted or unasserted; provided that this Section shall be
+read in conjunction with the provisions for Indirect Employee Indemnity Claims set forth in
+Section VI.A.2. For the avoidance of doubt, this Section does not obligate the City to pay any
+professional fees incurred by any current or former Mayor or member of City Council during the
+Chapter 9 Case without the Receiver’s approval and any such obligation is subject to the discharge
+provided under Section III.D.4.
+N.
+
+Payment of Workers’ Compensation Claims.
+
+From and after the Effective Date, (a) the City will continue to administer (either
+directly or through a third party administrator) and pay all valid claims for benefits and liabilities
+34
+
+Case 22-13032-amc
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 41 of 53
+
+Desc Main
+
+for which the City is responsible under applicable State workers’ compensation law, regardless of
+when the applicable injuries were incurred, in accordance with the City’s prepetition practices and
+procedures and governing State workers’ compensation law, and (b) nothing in the Plan shall
+discharge, release or relieve the City from any current or future liability under applicable State
+workers’ compensation law. The City reserves the right to challenge the validity of any claim for
+benefits or liabilities arising under applicable State workers’ compensation law.
+ARTICLE V
+PROVISIONS REGARDING DISTRIBUTIONS UNDER THE PLAN
+A.
+
+Appointment of Disbursing Agent.
+
+The City may act as Disbursing Agent or may employ or contract with other Entities
+to act as the Disbursing Agent or to assist in or make the Distributions required by the Plan. Any
+Disbursing Agent appointed by the City will serve without bond. Other than as specifically set
+forth in the Plan, the Disbursing Agent shall make all Distributions required to be made under the
+Plan.
+B.
+
+Distributions on Account of Allowed Claims.
+
+Except as otherwise provided in the Plan, on the Effective Date or as soon as
+practicable thereafter (or if a Claim is not an Allowed Claim on the Effective Date, on the date that
+such a Claim becomes an Allowed Claim, or as soon as reasonably practicable thereafter), each
+Holder of an Allowed Claim shall receive from the Disbursing Agent the Distributions that the
+Plan provides for Allowed Claims in the applicable Class. In the event that any payment or act
+under the Plan is required to be made or performed on a date that is not a Business Day, then the
+making of such payment or the performance of such act may be completed on the next succeeding
+Business Day, but shall be deemed to have been completed as of the required date. If and to the
+extent that there are Disputed Claims, Distributions on account of any such Disputed Claims shall
+be made pursuant to the provisions set forth in Section VI. Except as otherwise provided in the
+Plan, Holders of Claims shall not be entitled to interest, dividends or accruals on the Distributions
+provided for in the Plan, regardless of whether such Distributions are delivered on or at any time
+after the Effective Date. Notwithstanding anything to the contrary in the Plan, no Holder of an
+Allowed Claim shall, on account of such Allowed Claim, receive a Distribution in excess of the
+Allowed amount of such Claim.
+C.
+
+Record Date for Distributions.
+
+Neither the City nor any Disbursing Agent will have any obligation to recognize
+the transfer of, or the sale of any participation in, any Claim that occurs after the close of business
+on the Distribution Record Date, and will be entitled for all purposes herein to recognize and
+distribute only to those Holders of Allowed Claims (including Holders of Claims that become
+Allowed after the Distribution Record Date) that are Holders of such Claims, or participants
+therein, as of the close of business on the Distribution Record Date. The City and any Disbursing
+Agent shall instead be entitled to recognize and deal for all purposes under the Plan with only those
+record Holders stated on the official Claims Register as of the close of business on the Distribution
+Record Date.
+35
+
+Case 22-13032-amc
+
+D.
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 42 of 53
+
+Desc Main
+
+Means of Cash Payments.
+
+Except as otherwise specified herein, all Cash payments made pursuant to the Plan
+shall be in U.S. currency and made by check drawn on a domestic bank selected by the Disbursing
+Agent or, at the option of the Disbursing Agent, by wire transfer, electronic funds transfer or ACH
+from a domestic bank selected by the Disbursing Agent.
+E.
+
+Selection of Distribution Dates for Allowed Claims.
+
+Except where the Plan requires the making of a Distribution on account of a
+particular Allowed Claim within a particular time, the Disbursing Agent shall have the authority
+to select Distribution Dates that, in the judgment of the Disbursing Agent, provide Holders of
+Allowed Claims with payments as quickly as reasonably practicable while limiting the costs
+incurred in the distribution process. Upon the selection of a Distribution Date by the Disbursing
+Agent, the Disbursing Agent shall File a notice of such Distribution Date that provides information
+regarding the Distribution to be made.
+F.
+
+Limitations on Amounts to Be Distributed to Holders of Allowed Claims Otherwise
+Insured.
+
+No Distributions under the Plan shall be made on account of an Allowed Claim that
+is payable pursuant to one of the City’s insurance policies until the Holder of such Allowed Claim
+has exhausted all remedies with respect to such insurance policy. To the extent that one or more
+of the City’s insurance carriers agrees to satisfy a Claim in full, then immediately upon such
+agreement such Claim may be expunged without a Claims objection having to be Filed and without
+any further notice or any action, order or approval of the Bankruptcy Court. Nothing in the Plan,
+including this Section, shall constitute a waiver of any claims, obligations, suits, judgments,
+damages, demands, debts, rights, Causes of Action or liabilities that any Entity may hold against
+any other Entity, including the City’s insurance carriers, other than the City.
+G.
+
+City’s Rights of Setoff Preserved.
+
+Notwithstanding anything to the contrary in the Plan, pursuant to section 553 of the
+Bankruptcy Code or otherwise applicable non-bankruptcy law, the City may set off against any
+Allowed Claim and the Distributions to be made pursuant to the Plan on account of such Allowed
+Claim the claims, rights and Causes of Action of any nature that the City may assert against the
+Holder of such Claim; provided, however, that neither the failure to effect a setoff nor the
+allowance of any Claim pursuant to the terms of the Plan shall constitute a waiver or release by
+the City of any claims, rights and Causes of Action that the City may assert against such Holder,
+all of which are expressly preserved.
+
+36
+
+Case 22-13032-amc
+
+H.
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 43 of 53
+
+Desc Main
+
+Delivery of Distributions and Undeliverable or Unclaimed Distributions.
+1.
+
+Delivery of Distributions Generally.
+
+Distributions to Holders of Allowed Claims shall be made at the addresses set forth
+in the City's records unless such addresses are superseded by proofs of Claim or transfers of Claim
+Filed pursuant to Bankruptcy Rule 3001.
+2.
+
+De Minimis Distributions.
+
+No distribution shall be made by the Disbursing Agent on account of an Allowed
+Claim if the amount to be distributed to the specific Holder of an Allowed Claim on the applicable
+Distribution Date has an economic value of less than $25.00.
+3.
+
+Undeliverable or Unclaimed Distributions.
+
+In the event that any Distribution to any Holder is returned as undeliverable, no
+Distribution to such Holder shall be made unless and until the Disbursing Agent has determined
+the then-current address of such Holder, at which time such Distribution shall be made to such
+Holder without interest.
+Any Holder of an Allowed Claim that does not claim an undeliverable or
+unclaimed Distribution within six months after the date such Distribution is first made or
+attempted to be made shall be deemed to have forfeited its claim to such Distribution and
+shall be forever barred and enjoined from asserting any such claim against the City or its
+property. In such cases, any Cash held by the City on account of such undeliverable or unclaimed
+Distributions shall become the property of the City free of any restrictions thereon and
+notwithstanding any federal or state escheat laws to the contrary. Nothing contained in the Plan
+shall require any Disbursing Agent to attempt to locate any Holder of an Allowed Claim.
+4.
+
+Time Bar to Cash Payment Rights.
+
+Checks issued in respect of Allowed Claims shall be null and void if not negotiated
+within 90 days after the date of issuance thereof. Requests for reissuance of any check shall be
+made to the Disbursing Agent by the Holder of the Allowed Claim to whom such check originally
+was issued within 180 days after the date of the original check issuance. After such date, the Claim
+of any Holder to the amount represented by such voided check shall be released and forever barred
+from assertion against the City and its property.
+I.
+
+Other Provisions Applicable to Distributions in All Classes.
+1.
+
+No Postpetition Interest.
+
+Except as otherwise specifically provided for in the Plan, or required by applicable
+bankruptcy law, the City shall have no obligation to pay any amount that constitutes or is
+attributable to interest on an Allowed Claim accrued after the Petition Date and no Holder of a
+Claim shall be entitled to be paid any amount that constitutes or is attributable to interest accruing
+
+37
+
+Case 22-13032-amc
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 44 of 53
+
+Desc Main
+
+on or after the Petition Date on any Claim without regard to the characterization of such amounts
+in any document or agreement or to whether such amount has accrued for federal income tax
+purposes. Any such amount that constitutes or is attributable to interest that has been accrued and
+has not been paid by the City shall be cancelled as of the Effective Date for federal income tax
+purposes.
+2.
+
+Compliance with Tax Requirements.
+
+In connection with the Plan and all instruments issued in connection therewith and
+distributed thereon, the City and any Disbursing Agent shall comply with all Tax withholding and
+reporting requirements imposed on it by any governmental unit, and all Distributions under the
+Plan shall be subject to such withholding and reporting requirements. All such amounts withheld
+and paid to the appropriate governmental unit shall be treated as if made directly to the Holder of
+an Allowed Claim. The City and the Disbursing Agent shall be authorized to take any actions that
+they determine, in their reasonable discretion, to be necessary or appropriate to comply with such
+withholding and reporting requirements, including withholding Distributions pending receipt of
+information necessary to facilitate such Distributions, or establishing any other mechanisms they
+believe are reasonable and appropriate.
+Notwithstanding any other provision of the Plan, each Entity receiving or deemed
+to receive a Distribution pursuant to the Plan shall have sole and exclusive responsibility for the
+satisfaction and payment of any Tax imposed on such Entity on account of such Distribution,
+including income, withholding and other Tax obligations. The City has the right, but not the
+obligation, to refuse, or to direct a Disbursing Agent to refuse, to make a Distribution until a Holder
+of an Allowed Claim has made arrangements satisfactory to the City and any Disbursing Agent
+for payment of any such Tax obligations. The City may require, as a condition to making a
+Distribution, that the Holder of an Allowed Claim provide the City or any Disbursing Agent with
+a completed Form W-8, W-9 or other Tax information, certifications and supporting
+documentation, as applicable.
+If the City makes such a request and the Holder of an Allowed Claim fails to comply
+before the date that is 180 days after the initial request is made, the amount of such Distribution
+shall irrevocably revert to the City and any Claim in respect of such Distribution shall be released
+and forever barred from assertion against the City and its property.
+3.
+
+Allocation of Distributions.
+
+All Distributions to Holders of Allowed Claims that have components of principal
+and interest shall be deemed to apply first to the principal amount of such Claim until such
+principal amount is paid in full, and then the remaining portion of such Distributions, if any, shall
+be deemed to apply to any applicable accrued interest included in such Claim to the extent interest
+is payable under the Plan.
+4.
+
+Surrender of Instruments.
+
+As a condition to participation under this Plan, the Holder of a note, debenture or
+other evidence of indebtedness of the City that desires to receive the property to be distributed on
+38
+
+Case 22-13032-amc
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 45 of 53
+
+Desc Main
+
+account of an Allowed Claim based on such note, debenture or other evidence of indebtedness
+shall surrender such note, debenture or other evidence of indebtedness to the City or its designee
+(unless such Holder's Claim will not be Impaired by the Plan, in which case such surrender shall
+not be required), and shall execute and deliver such other documents as are necessary to effectuate
+the Plan; provided, however, that, if a claimant is a Holder of a note, debenture or other evidence
+of indebtedness for which no physical certificate was issued to the Holder but which instead is
+held in book-entry form pursuant to a global security held by the Depository Trust Company or
+other securities depository or custodian thereof, there shall be no requirement of surrender. In the
+City’s sole discretion, if no surrender of a note, debenture or other evidence of indebtedness
+occurs and the Holder of Claim does not provide an affidavit and indemnification agreement, in
+form and substance reasonably satisfactory to the City, that such note, debenture or other evidence
+of indebtedness was lost, then no distribution may be made to such Holder in respect of the Claim
+based on such note, debenture or other evidence of indebtedness.
+ARTICLE VI
+PROCEDURES FOR RESOLVING DISPUTED CLAIMS
+A.
+
+Treatment of Disputed Claims.
+1.
+
+General.
+
+No Claim shall become an Allowed Claim unless and until such Claim is deemed
+Allowed under the Plan or the Bankruptcy Code, or the Bankruptcy Court has entered a Final Order
+(including the Confirmation Order) allowing such Claim. Notwithstanding any other provision of
+the Plan, no payments or Distributions shall be made on account of a Disputed Claim until such
+Claim becomes an Allowed Claim. Without limiting the foregoing in any way, no partial payments
+and no partial Distributions will be made with respect to a disputed, contingent or unliquidated
+Claim, or with respect to any Claim for which a proof of Claim has been Filed but not Allowed,
+until the resolution of such disputes or estimation or liquidation of such Claim by settlement or by
+Final Order.
+2.
+
+Tort Claims, Reassessment Tax Appeal Claims and Indirect Employee
+Indemnity Claims.
+
+At the City’s option, any unliquidated Tort Claim, Reassessment Tax Appeal Claim
+or Indirect Employee Indemnity Claim (as to which a proof of Claim was timely Filed in the
+Chapter 9 Case) not resolved pursuant to a Final Order of the Bankruptcy Court will be determined
+and liquidated in the administrative or judicial tribunal(s) in which it is pending on the Effective
+Date (subject to the City’s right to seek removal or transfer of venue) or, if no action was pending
+on the Effective Date, in an administrative or judicial tribunal of appropriate jurisdiction that (a)
+has personal jurisdiction over the parties, (b) has subject matter jurisdiction over the Tort Claim,
+Reassessment Tax Appeal Claim or Indirect Employee Indemnity Claim and (c) is a proper venue.
+The City may exercise the above option by service upon the holder of the applicable Tort Claim,
+Reassessment Tax Appeal Claim or Indirect Employee Indemnity Claim of a notice informing
+such holder that the City has exercised such option. Upon the City’s service of such notice, the
+automatic stay imposed pursuant to sections 362 and 922 of the Bankruptcy Code or, after the
+Effective Date, the injunction set forth at Section III.D.6, will be deemed modified, without the
+39
+
+Case 22-13032-amc
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 46 of 53
+
+Desc Main
+
+necessity for further Bankruptcy Court approval or any further action by the City, solely to the
+extent necessary to allow the parties to determine or liquidate the Tort Claim in the applicable
+administrative or judicial tribunal(s). If the City does not serve such a notice upon a holder of a
+Tort Claim, Reassessment Tax Appeal Claim or Indirect Employee Indemnity Claim by the Claims
+Objection Bar Date, such holder may file a motion with the Bankruptcy Court no later than 30
+days after the Claims Objection Bar Date seeking relief from the discharge injunction imposed
+pursuant to Section III.D.6 in order to liquidate and determine its Claim, which right and the
+deadline for exercising such right shall be set forth in the notice of entry of the Confirmation Order.
+Any Tort Claim, Reassessment Tax Appeal Claim or Indirect Employee Indemnity
+Claim determined and liquidated pursuant to a judgment obtained in accordance with this Section
+and applicable non-bankruptcy law that is no longer appealable or subject to review will be deemed
+an Allowed Claim, provided that only the amount of such Allowed Tort Claim or Indirect
+Employee Indemnity Claim that is not satisfied from proceeds of insurance payable to the Holder
+of such Allowed Tort Claim or Indirect Employee Indemnity Claim will be treated as an Allowed
+Claim for the purposes of distributions under the Plan and subject to the terms of the Plan.
+Distributions on account of any such Allowed Tort Claim or Indirect Employee Indemnity Claim
+shall be made in accordance with the Plan. Nothing contained in this Section will constitute or be
+deemed a waiver of any claim, right or Cause of Action that the City may have against any Entity
+in connection with or arising out of any Tort Claim, Reassessment Tax Appeal Claim or Indirect
+Employee Indemnity Claim, including any rights under section 157(b)(5) of title 28 of the United
+States Code. All claims, demands, rights, defenses and Causes of Action that the City may have
+against any Entity in connection with or arising out of any Tort Claim, Reassessment Tax Appeal
+Claim or Indirect Employee Indemnity Claim are expressly retained and preserved.
+B.
+
+Disputed Claims Reserve.
+
+On and after the Effective Date, until such time as all Disputed Claims have been
+compromised and settled or determined by Final Order and before making any Distributions,
+consistent with and subject to section 1123(a)(4) of the Bankruptcy Code, the City shall establish
+and maintain a reserve of property equal to (1) the Distributions to which Holders of Disputed
+Claims would be entitled under the Plan if such Disputed Claims were Allowed Claims in the Face
+Amount of such Disputed Claims or (2) such lesser amount as required by an order of the
+Bankruptcy Court. On the first Distribution Date that is at least 30 days (or such fewer days as may
+be agreed to by the City in its sole discretion) after the date on which a Disputed Claim becomes an
+Allowed Claim, the Disbursing Agent shall remit to the Holder of such Allowed Claim any
+Distributions such Holder would have been entitled to under the Plan on account of such Allowed
+Claim had such Claim been Allowed as of the Effective Date. If a Disputed Claim is disallowed
+by Final Order, the property reserved on account shall become available for Distribution to the
+Holders of Allowed Claims within the Class(es) entitled to receive such property. Each Holder of
+a Disputed Claim that ultimately becomes an Allowed Claim will have recourse only to the assets
+held in the disputed claims reserve and not to any other assets held by the City, its property or any
+property previously distributed on account of any Allowed Claim.
+
+40
+
+Case 22-13032-amc
+
+C.
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 47 of 53
+
+Desc Main
+
+Objections to Claims.
+1.
+
+Authority to Prosecute, Settle and Compromise.
+
+The City’s rights to object to, oppose and defend against all Claims on any basis
+are fully preserved. As of the Effective Date, only the City shall have the authority to File, settle,
+compromise, withdraw or litigate to judgment objections to Claims. Any objections to Claims shall
+be Filed no later than the Claims Objection Bar Date. On and after the Effective Date, the City
+may settle or compromise any Disputed Claim or any objection or controversy relating to any
+Claim without any further notice or any action, order or approval of the Bankruptcy Court.
+2.
+
+Expungement or Adjustment of Claims Without Objection.
+
+Any Claim that has been paid, satisfied or superseded shall be expunged from the
+Claims Register by the Claims and Balloting Agent at the request of the City, and any Claim that
+has been amended by the Holder of such Claim shall be adjusted on the Claims Register by the
+Claims and Balloting Agent at the request of the City, without the Filing of an objection and
+without any further notice or any action, order or approval of the Bankruptcy Court.
+3.
+
+Extension of Claims Objection Bar Date.
+
+Upon motion by the City to the Bankruptcy Court, the City may request, and the
+Bankruptcy Court may grant, an extension to the Claims Objection Bar Date generally or with
+respect to specific Claims. Any extension granted by the Bankruptcy Court shall not be considered
+to be a modification to the Plan under section 1127 of the Bankruptcy Code.
+ARTICLE VII
+RETENTION OF JURISDICTION
+Pursuant to sections 105(c), 945 and 1142(b) of the Bankruptcy Code and notwithstanding
+entry of the Confirmation Order and the occurrence of the Effective Date, the Bankruptcy Court
+will retain exclusive jurisdiction over all matters arising out of, and related to, the Chapter 9 Case
+and the Plan to the fullest extent permitted by law, including, among other things, jurisdiction to:
+A.
+Allow, disallow, estimate, determine, liquidate, reduce, classify, re-classify,
+estimate or establish the priority or secured or unsecured status of any Claim, including the
+resolution of any request for payment of any Administrative Claim and the resolution of any and
+all objections to the amount, allowance, priority or classification of Claims;
+B. Confirm the terms as written of any CBAs adopted by the City pursuant to the terms
+of the Plan, which agreements are incorporated as part of the Plan (it being understood that the
+enforcement, interpretation and resolution of disputes of the terms of the contracts shall proceed
+under applicable state law);
+C. Resolve any matters related to the assumption, assignment or rejection of any
+Executory Contract or Unexpired Lease and to hear, determine and, if necessary, liquidate any
+Claims arising therefrom, including claims for payment of any cure amount;
+
+41
+
+Case 22-13032-amc
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 48 of 53
+
+Desc Main
+
+D. Ensure that Distributions to Holders of Allowed Claims are accomplished pursuant
+to the provisions of the Plan;
+E.
+Adjudicate, decide or resolve any motions, adversary proceedings, contested or
+litigated matters and any other matters, and grant or deny any applications involving the City
+that may be pending on the Effective Date or brought thereafter;
+F.
+Enter such orders as may be necessary or appropriate to implement or consummate
+the provisions of the Plan and all contracts, instruments, releases and other agreements or
+documents entered into or delivered in connection with the Plan, the Disclosure Statement or
+the Confirmation Order;
+G. Resolve any cases, controversies, suits or disputes that may arise in connection with
+the consummation, interpretation or enforcement of the Plan or any contract, instrument, release
+or other agreement or document that is entered into or delivered pursuant to the Plan or any
+Entity's rights arising from or obligations incurred in connection with the Plan or such
+documents;
+H. Approve any modification of the Plan or approve any modification of the
+Confirmation Order or any contract, instrument, release or other agreement or document created
+in connection with the Plan or the Confirmation Order, or remedy any defect or omission or
+reconcile any inconsistency in any order, the Plan, the Confirmation Order or any contract,
+instrument, release or other agreement or document created in connection with the Plan or the
+Confirmation Order, or enter any order in aid of confirmation pursuant to sections 945 and
+1142(b) of the Bankruptcy Code, in such manner as may be necessary or appropriate to
+consummate the Plan;
+I.
+Issue injunctions, enforce the injunctions contained in the Plan and the Confirmation
+Order, enter and implement other orders or take such other actions as may be necessary or
+appropriate to restrain interference by any Entity with consummation, implementation or
+enforcement of the Plan or the Confirmation Order;
+J.
+Adjudicate, decide or resolve any matters relating to the City’s compliance with the
+Plan and the Confirmation Order consistent with section 945 of the Bankruptcy Code;
+K. Enter and implement such orders as are necessary or appropriate if the
+Confirmation Order is for any reason or in any respect modified, stayed, reversed, revoked or
+vacated or Distributions pursuant to the Plan are enjoined or stayed;
+L.
+Determine any other matters that may arise in connection with or relate to the Plan,
+the Disclosure Statement, the Confirmation Order or any contract, instrument, release or other
+agreement or document entered into or delivered in connection with the Plan, the Disclosure
+Statement or the Confirmation Order;
+
+42
+
+Case 22-13032-amc
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 49 of 53
+
+Desc Main
+
+M. Enforce or clarify any orders previously entered by the Bankruptcy Court in the
+Chapter 9 Case;
+N. Enter a final decree closing the Chapter 9 Case pursuant to section 945(b) of the
+Bankruptcy Code; and
+O. Hear any other matter over which the Bankruptcy Court has jurisdiction under the
+provisions of the Bankruptcy Code and the Bankruptcy Rules subject to any limits on the
+Bankruptcy Court’s jurisdiction and powers under sections 903 and 904 of the Bankruptcy Code.
+ARTICLE VIII
+MISCELLANEOUS PROVISIONS
+A.
+
+Plan Supplements.
+
+All Plan Supplements not previously filed will be Filed no later than ten days before
+the Confirmation Hearing.
+B.
+
+Modification of the Plan.
+
+Subject to section 942 and 1127(d) of the Bankruptcy Code, the City may alter,
+amend or modify the Plan or the Exhibits at any time prior to or after the Confirmation Date but
+prior to the substantial consummation of the Plan. A Holder of a Claim that has accepted the Plan
+shall be deemed to have accepted the Plan as altered, amended or modified so long as the proposed
+alteration, amendment or modification does not materially and adversely change the treatment of
+the Claim of such Holder.
+C.
+
+Revocation of the Plan.
+
+The City reserves the right to revoke or withdraw the Plan prior to the Confirmation
+Date. If the City revokes or withdraws the Plan, or if the Confirmation Date does not occur, then
+the Plan shall be null and void in all respects, and nothing contained in the Plan, nor any action
+taken or not taken by the City with respect to the Plan, the Disclosure Statement or the
+Confirmation Order, shall be or shall be deemed to be: (1) a waiver or release of any claims by or
+against the City; (2) an admission of any sort by the City or any other party in interest, or (3)
+prejudicial in any manner to the rights of the City or any other party in interest.
+D.
+
+Severability of Plan Provisions.
+
+If any term or provision of the Plan is held by the Bankruptcy Court to be invalid,
+void or unenforceable, the Bankruptcy Court, in each case at the election of and with the consent
+of the City, shall have the power to alter and interpret such term or provision to make it valid or
+enforceable to the maximum extent practicable, consistent with the original purpose of the term or
+provision held to be invalid, void or unenforceable, and such term or provision shall then be
+applicable as altered or interpreted. Notwithstanding any such holding, alteration or interpretation,
+the remainder of the terms and provisions of the Plan shall remain in full force and effect and shall
+in no way be affected, impaired or invalidated by such holding, alteration or interpretation. The
+
+43
+
+Case 22-13032-amc
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 50 of 53
+
+Desc Main
+
+Confirmation Order shall constitute a judicial determination and shall provide that each term and
+provision of the Plan, as it may have been altered or interpreted in accordance with the foregoing,
+is: (1) valid and enforceable pursuant to its terms; (2) integral to the Plan and may not be deleted
+or modified without the City’s consent; and (3) non-severable and mutually dependent.
+E.
+
+Effectuating Documents and Transactions.
+
+The City is authorized to execute, deliver, File or record such contracts, instruments,
+releases and other agreements or documents and take such actions as may be necessary or
+appropriate to effectuate, implement and further evidence the terms and conditions of the Plan and
+any notes or securities issued pursuant to the Plan. All such actions shall be deemed to have occurred
+and shall be in effect pursuant to applicable non-bankruptcy law and the Bankruptcy Code, without
+any requirement of further action by the City Council, the Receiver, the Mayor or any employees
+or officers of the City. On the Effective Date, the appropriate employees and officers of the City
+are authorized and directed to execute and deliver the agreements, documents and instruments
+contemplated by the Plan, and to take any other actions as may be necessary or advisable to
+effectuate the provisions and intent of the Plan, in the name and on behalf of the City.
+F.
+
+Plan Controls.
+
+In the event and to the extent that any provision of the Plan is inconsistent with the
+provisions of the Disclosure Statement, the provisions of the Plan shall control and take
+precedence. Consistent with section 706(a)(9) of Act 47, confirmation of the Plan shall be
+considered a modification of the Recovery Plan not subject to judicial review under section 709
+of Act 49. In the event of any inconsistency between the Plan and the Recovery Plan, the Plan
+shall control
+G.
+
+Notice of the Effective Date.
+
+On or before ten Business Days after occurrence of the Effective Date, the City shall
+mail or cause to be mailed to all Holders of Claims a notice that informs such Holders of (1) entry
+of the Confirmation Order; (2) the occurrence of the Effective Date; (3) the assumption and
+rejection of Executory Contracts and Unexpired Leases pursuant to the Plan, as well as the deadline
+for the filing of Claims arising from such rejection; (4) the deadline for the filing of Administrative
+Claims; and (5) such other matters as the City deems to be appropriate.
+H.
+
+Governing Law.
+
+Unless (1) a rule of law or procedure is supplied by federal law (including the
+Bankruptcy Code and Bankruptcy Rules) or (2) otherwise specifically stated herein or in any
+contract, articles or certificates of incorporation, bylaws, codes of regulation, ordinance, similar
+constituent documents, instrument, release or other agreement or document entered into or
+delivered in connection with the Plan, the laws of the Commonwealth of Pennsylvania, without
+giving effect to the principles of conflict of laws, shall govern the rights, obligations, construction
+and implementation of the Plan and any contract, articles or certificates of incorporation, bylaws,
+codes of regulation, similar constituent documents, instrument, release or other agreement or
+document entered into or delivered in connection with the Plan.
+44
+
+Case 22-13032-amc
+
+I.
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 51 of 53
+
+Desc Main
+
+Request for Waiver of Automatic Stay of Confirmation Order.
+
+The Plan shall serve as a motion seeking a waiver of the automatic stay of the
+Confirmation Order imposed by Bankruptcy Rule 3020(e). Any objection to this request for waiver
+shall be Filed and served on the parties listed in Section VIII.K on or before the Voting Deadline.
+J.
+
+Term of Existing Injunctions and Stays.
+
+All injunctions or stays provided for in the Chapter 9 Case under sections 105,
+362 or 922 of the Bankruptcy Code, or otherwise, and in existence on the Confirmation Date,
+shall remain in full force and effect until the Effective Date.
+K.
+
+Service of Documents
+
+Any pleading, notice or other document required by the Plan or the Confirmation
+Order to be served on or delivered to (1) the City and (2) the Retiree Committee must be sent by
+overnight delivery service, facsimile transmission, courier service or messenger to:
+1. The City
+Tobey M. Daluz
+Margaret A. Vesper
+Ballard Spahr LLP
+1735 Market Street, 51st Floor
+Philadelphia, PA 19103
+Tel: (215) 864-8148
+Email: daluzt@ballardspahr.com
+vesperm@ballardspahr.com
+Matthew G. Summers
+Laurel D. Roglen
+Nicholas J. Brannick
+Ballard Spahr LLP
+919 N. Market Street, 11th Floor
+Wilmington, DE 19801
+Tel: (302) 252-4465
+Email: summersm@ballardspahr.com
+roglenl@ballardspahr.com
+brannickn@ballardspahr.com
+Counsel for the City of Chester
+2. The Retiree Committee
+Robert D. Gordon
+Christopher W. Carty
+Christopher Halm
+45
+
+Case 22-13032-amc
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 52 of 53
+
+Elizabeth Plowman
+Herrick, Feinstein LLP
+Two Park Avenue
+New York, NY 10016
+Tel: (212) 592-1400
+Email: rgordon@herrick.com
+ccarty@herrick.com
+chalm@herrick.com
+eplowman@herrick.com
+William J. Burnett
+Flaster/Greenberg P.C.
+1717 Arch Street, Suite 3300
+Philadelphia, PA 19103
+Tel: (215) 279-9383
+Email: william.burnett@flastergreenberg.com
+Counsel to the Retiree Committee
+
+46
+
+Desc Main
+
+Case 22-13032-amc
+
+Dated:
+
+Doc 583 Filed 08/26/24 Entered 08/26/24 12:01:51
+Document
+Page 53 of 53
+
+August 26, 2024
+
+Desc Main
+
+Respectfully submitted,
+The City of Chester, Pennsylvania
+By: /s/ Michael T. Doweary
+Name: Michael T. Doweary
+Title: Receiver for the City of Chester,
+Pennsylvania
+BALLARD SPAHR LLP
+/s/ Tobey M. Daluz
+Tobey M. Daluz (PA Bar No. 60685)
+Margaret A. Vesper (PA Bar No. 329793)
+1735 Market Street, 51st Floor
+Philadelphia, PA 19103
+Tel: (215) 864-8148
+Email: daluzt@ballardspahr.com
+vesperm@ballardspahr.com
+-andMatthew G. Summers*
+Laurel D. Roglen*
+Nicholas J. Brannick*
+919 N. Market Street, 11th Floor
+Wilmington, DE 19801
+Tel: (302) 252-4465
+Email: summersm@ballardspahr.com
+roglenl@ballardspahr.com
+brannickn@ballardspahr.com
+(*Admitted pro hac vice)
+Counsel for the City of Chester
+
+47

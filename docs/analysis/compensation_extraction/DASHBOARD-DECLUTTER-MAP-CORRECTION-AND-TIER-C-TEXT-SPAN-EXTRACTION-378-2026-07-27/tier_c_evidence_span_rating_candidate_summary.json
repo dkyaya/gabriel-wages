@@ -1,0 +1,26 @@
+{
+  "allowed_next_stage": "separately_authorized_exact_span_rating_review",
+  "by_lane": {
+    "lane_1": 12,
+    "lane_2": 91,
+    "lane_3": 2,
+    "lane_4": 54
+  },
+  "by_mechanism": {
+    "fiscal_constraint_signal": 2,
+    "market_or_comparability_pressure": 54,
+    "non_safety_constraint_signal": 12,
+    "strike_or_no_strike_constraint": 91
+  },
+  "by_region": {
+    "Midwest": 50,
+    "Northeast": 44,
+    "South": 60,
+    "West": 5
+  },
+  "causal_ready": false,
+  "currently_rated": false,
+  "global_analysis_readiness": false,
+  "rating_candidate_count": 159,
+  "rating_candidate_source_count": 52
+}

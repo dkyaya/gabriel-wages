@@ -1,0 +1,42 @@
+{
+  "by_group": {
+    "fiscal_constraint_signal": {
+      "ambiguous_span_source_count": 84,
+      "extracted_ok_count": 94,
+      "no_span_or_weak_source_count": 8,
+      "positive_span_record_count": 2,
+      "span_extracted_source_count": 2,
+      "span_queue_count": 94,
+      "text_extraction_queue_count": 94
+    },
+    "market_or_comparability_pressure": {
+      "ambiguous_span_source_count": 23,
+      "extracted_ok_count": 68,
+      "no_span_or_weak_source_count": 28,
+      "positive_span_record_count": 54,
+      "span_extracted_source_count": 17,
+      "span_queue_count": 68,
+      "text_extraction_queue_count": 68
+    },
+    "non_safety_constraint_signal": {
+      "ambiguous_span_source_count": 77,
+      "extracted_ok_count": 112,
+      "no_span_or_weak_source_count": 28,
+      "positive_span_record_count": 12,
+      "span_extracted_source_count": 7,
+      "span_queue_count": 112,
+      "text_extraction_queue_count": 112
+    },
+    "strike_or_no_strike_constraint": {
+      "ambiguous_span_source_count": 41,
+      "extracted_ok_count": 104,
+      "no_span_or_weak_source_count": 37,
+      "positive_span_record_count": 91,
+      "span_extracted_source_count": 26,
+      "span_queue_count": 104,
+      "text_extraction_queue_count": 104
+    }
+  },
+  "coverage_boundary": "Operational extraction coverage only; not prevalence, wage effects, or causal evidence.",
+  "group_count": 4
+}

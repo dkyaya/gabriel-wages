@@ -1,0 +1,785 @@
+COMMONWEALTH OF PENNSYLVANIA
+Pennsylvania Labor Relations Board
+FALLS TOWNSHIP POLICE ASSOCIATION
+v.
+FALLS TOWNSHIP (BUCKS)
+
+:
+:
+:
+:
+:
+:
+
+Case No. PF-C-23-68-E
+
+PROPOSED DECISION AND ORDER
+On July 28, 2023, the Falls Township Police Association (Association or
+Union) filed a charge of unfair labor practices with the Pennsylvania Labor
+Relations Board (Board) against Falls Township (Township or Employer),
+alleging that the Township violated Section 6(1)(a) and (e) of the
+Pennsylvania Labor Relations Act (PLRA), as read with Act 111, by refusing to
+comply with a January 5, 2022 arbitration award regarding Police Officer
+Stephanie Metterle.
+On August 21, 2023, the Secretary of the Board issued a Complaint and
+Notice of Hearing, directing a hearing on September 28, 2023, if necessary.
+The hearing was initially continued to December 1, 2023, at the Township’s
+request and without objection by the Union. On November 30, 2023, the
+hearing was continued indefinitely based on the representation that the
+parties had reached a tentative resolution of the dispute underlying the
+charge. However, on August 26, 2024, the Union requested that the matter be
+relisted for hearing, which was subsequently scheduled for October 1, 2024.
+The hearing ensued on October 1, 2024, at which time the parties were
+afforded a full opportunity to present testimony, cross-examine witnesses and
+introduce documentary evidence. The Union filed a post-hearing brief in
+support of its position on January 21, 2025. The Township filed a posthearing brief in support of its position on January 22, 2025.
+The Hearing Examiner, on the basis of the testimony presented at the
+hearing and from all other matters and documents of record, makes the
+following:
+FINDINGS OF FACT
+1.
+The Township is a public employer and political subdivision under
+Act 111 as read in pari materia with the PLRA. (N.T. 5)
+2.
+The Association is a labor organization under Act 111 as read in
+pari materia with the PLRA. (N.T. 5)
+3.
+The Association is the exclusive bargaining representative for a
+unit of police employes at the Township. (Union Exhibit 2)
+4.
+The Association and the Township were parties to a collective
+bargaining agreement (CBA) effective January 1, 2018 to December 31, 2022.
+(Union Exhibit 2)
+5.
+Stephanie Metterle began working at Falls Township as a police
+officer in October 2009. She was terminated from her position in October
+2020, which the Association challenged through the contractual grievance
+procedure. (N.T. 13; Union Exhibit 1)
+
+6.
+The parties litigated the grievance before Arbitrator Thomas
+McGonnell, who ultimately issued an award on January 5, 2022, which provided
+in relevant part as follows:
+The discharge was not supported by just cause. The discharge is
+reduced to a thirty (30) day suspension. The Township is ordered
+to reinstate the Grievant to her former position; restore her
+seniority; and make her whole for any loss of wages (minus the
+30-day suspension), benefits, and other emoluments of employment
+flowing from the discharge. The Township is ordered to adjust
+the Grievant’s disciplinary records to reflect the altered
+discipline. I will retain jurisdiction for ninety (90) days for
+the purpose of addressing any issues relating to remedy. Should
+either or both parties raise an issue or issues during that
+ninety (90) day period, I will then retain ongoing jurisdiction
+on that issue or issues until the issue(s) is resolved or a
+supplemental award is issued...
+(N.T. 13-15; Union Exhibit 1)
+7.
+On February 4, 2022, the Township filed a Petition to Vacate the
+Arbitration Award in the Bucks County Court of Common Pleas. (N.T. 15, 70)
+8.
+On April 21, 2023, the Bucks County Court of Common Pleas issued
+an Order, denying the Petition to Vacate the Arbitration Award. (N.T. 70)
+9.
+On May 18, 2023, the Township filed a Notice of Appeal to the
+Commonwealth Court. (N.T. 70)
+10.
+On December 20, 2023, the Township reinstated Officer Metterle to
+her position as a police officer. (N.T. 15)
+11.
+On May 10, 2024, the Commonwealth Court circulated an opinion and
+order, denying the Township’s appeal. (N.T. 70)
+12.
+The parties stipulated and agreed that the attorneys were
+engaging in settlement discussions about this case until September 6, 2024.
+(N.T. 71)
+13.
+On September 18, 2024, the Township issued a check to Officer
+Metterle, purporting to cover the backpay amount due pursuant to the
+arbitration award. Officer Metterle did not cash the check because she did
+not believe it to be the correct amount due. (N.T. 16; Township Exhibit 2)
+14.
+Officer Metterle testified that she earned overtime pay prior to
+her termination by the Township. She identified as Union Exhibits 3(a),
+3(b), 3(c), 3(d), and 3(e) a series of printouts detailing the overtime wages
+she earned in 2016, 2017, 2018, 2019, and 2020, respectively. (N.T. 18-21;
+Union Exhibits 3(a), 3(b), 3(c), 3(d), 3(e))
+15.
+Officer Metterle earned 377 hours of overtime in 2016, 617 hours
+of overtime in 2017, 415.5 hours of overtime in 2018, 54.25 hours of overtime
+in 2019, and 146.25 hours of overtime in 2020. (N.T. 22-23; Union Exhibits
+3(a), 3(b), 3(c), 3(d), 3(e))
+16.
+Officer Metterle testified that she had a reduction in her
+overtime hours in 2019 because she became pregnant and eventually had a
+2
+
+child. She explained that she reached a point in her pregnancy in October
+2018 where she was put on light duty because of the risk, during which she
+was not able to earn overtime. She then eventually went into preterm labor
+and had her first daughter on April 26, 2019, at which point she took a leave
+of absence to care for her daughter. She returned to work in September 2019
+without restrictions. However, she described how her overtime hours were
+again reduced in 2020 due to the Covid-19 pandemic and the corresponding
+closures. She went off work again due to a Covid protocol in July 2020 and
+never returned to work. She was placed on administrative leave until her
+termination in October 2020 and was unable to earn overtime hours. (N.T. 2325)
+17.
+Officer Metterle had a second child on September 10, 2021, which
+was after her termination. She was not planning on having a second child
+prior to her discharge. She created her plan to have her second child after
+she was terminated. She testified that she was heavily influenced to do so
+by her termination. She described how she was not working at that point, and
+her family knew the grievance process would take some time. She explained
+how she decided with her family to have a second child then. She testified
+that she would not have had a second child in 2021 had she not been
+discharged. (N.T. 25-26)
+18.
+Officer Metterle testified that the father of her children is
+Officer Raymond Fanelli, who also works at the Township. She described how
+she was able to take off work on FMLA leave right after the birth of her
+first child. She was out for four months and returned to work on September
+1, 2019. Officer Fanelli did not take FMLA leave at that time because she
+did, and she was able to care for the baby. (N.T. 26-27)
+19.
+Officer Metterle testified that she and Officer Fanelli had an au
+pair living with them prior to her termination. She explained how the au
+pair lived in their house and served as their full-time babysitter. She
+indicated that they had to let their au pair go after the termination because
+they did not need childcare anymore since she was no longer employed. She
+testified that they would have remained in the au pair program had she not
+been terminated. (N.T. 27-28) 1
+20.
+Officer Metterle testified that she receives paid time off as a
+Township police officer, which includes vacation, personal, holiday, and
+Kelly time. She has not had any of those forms of leave restored to her bank
+for the time she spent off work due to the termination. (N.T. 28-29)
+21.
+Officer Metterle had $85,294 in her pension when she was
+terminated. She withdrew those funds from her pension in 2021, but did not
+pay taxes on them. She rolled those funds into another plan initially. She
+eventually cashed in her pension in 2022 and paid $21,323 in federal taxes
+and penalties as a result. (N.T. 29-34, 42; Union Exhibit 4, 5, 6)
+22.
+Officer Metterle testified that she cashed in her pension in 2022
+because she did not have any income and needed to pay her mortgage. She
+would not have withdrawn her pension if she had not been terminated. She had
+never withdrawn money from her pension account prior to her termination.
+(N.T. 34-35)
+Officer Metterle’s specific au pair was from Austria and would have had only
+so much time remaining on her visa. (N.T. 27-28).
+
+1
+
+3
+
+23.
+Officer Metterle testified that she made monthly payments to the
+Township to maintain her health insurance after she was terminated. She
+eventually found a job at Access Healthcare in February 2023. She resigned
+from that position after she got notice the Township was returning her to
+work there in December 2023. She received health insurance through Access
+Healthcare, which had substantially higher copays and out-of-pocket expenses.
+She also had to contribute $330 per month at Access Healthcare. She did not
+have to make contributions for health insurance at the Township. (N.T. 3537)
+24.
+Officer Metterle testified that she has paid out-of-pocket
+medical expenses since she was terminated by the Township. She paid $125.00
+out of pocket for treatment at a dermatologist, which she would not have had
+to pay if she was still covered under the Township’s medical insurance. She
+also received a bill for $984.70 from Capital Health Medical Center, which
+she had not paid at the time of the hearing. She explained that this bill
+has been submitted to collections. She described how she would not have had
+to pay for this bill if she was still covered under the Township’s medical
+insurance because she had been treating there for 11 years and had never
+received a bill for such high out-of-pocket costs, even though both of her
+children were delivered there. (N.T. 37-40; Union Exhibit 7, 8)
+25.
+On cross-examination, Officer Metterle testified that, when she
+was reinstated, none of her credentials were still active. She had to work
+in the office, while not in uniform, doing four years of legal updates,
+retraining in CPR and first aid, firearms, and MPOETC certifications. As a
+result, she was not out on the road for three or four months, and was unable
+to work overtime. (N.T. 52-53)
+26.
+The Township submitted wage calculations purporting to be the
+make-whole remedy due to Officer Metterle. The Township took an offset for
+$102,078.57, which includes the $85,294 in pension contributions she withdrew
+following her termination, in addition to the interest portion to pay those
+pension contributions back. 2 The Township calculated the overtime due by
+using an average of Metterle’s overtime hours per year from October 2018
+through October 2020. (N.T. 67-69; Township Exhibit 2, 3)
+DISCUSSION
+In its charge, the Union alleged that the Township violated Section
+6(1)(a) and (e) of the PLRA 3 by failing to comply with the January 5, 2022
+arbitration award. Specifically, the Union maintains that the Township
+undercompensated Officer Metterle with regard to her overtime earnings
+because the Township only took into account two years of those earnings when
+it calculated the backpay award. In addition, the Union argues that the
+Township violated the PLRA and Act 111 by failing to make Officer Metterle
+whole for the federal taxes and penalties she was forced to incur when she
+withdrew her pension funds in 2022. The Union further contends that the
+The parties agree that the Township properly offset the $85,294 in pension
+contributions, but disagree regarding the interest portion on that amount.
+(N.T. 67-69).
+3 Section 6(1) of the PLRA provides that “[i]t shall be an unfair labor
+practice for an employer (a) To interfere with, restrain or coerce employes
+in the exercise of the rights guaranteed in this act...(e) To refuse to
+bargain collectively with the representatives of his employes, subject to the
+provisions of section seven (a) of this act.” 43 P.S. § 211.6.
+2
+
+4
+
+Township failed to make Officer Metterle whole for out-of-pocket medical
+expenses and accrued leave, which she would have earned but-for the discharge
+in 2020. The Township, for its part, submits that the charge should be
+dismissed because it was prematurely filed, or in the alternative, untimely
+filed within the PLRA’s six-week limitations period. The Township also
+asserts that the charge should be dismissed because the Township complied
+with the January 5, 2022 award and has made Officer Metterle whole for all
+the compensation she was due pursuant thereto.
+In cases where refusal to comply with an arbitration award is alleged,
+the Board’s inquiry is limited to first determining if an award exists,
+second if the appeal procedure available to the aggrieved party has been
+exhausted, and third if the party has failed to comply with the provisions of
+the arbitrator’s decision. PSSU v. Commonwealth of Pennsylvania, 17 PPER ¶
+17154 (Final Order, 1986). Eventual compliance, determined to be untimely,
+violates the PLRA. Fraternal Order of Police Lodge 5 v. City of
+Philadelphia, 41 PPER 123 (Proposed Decision and Order, 2010) citing
+Fraternal Order of Police, Lodge 5 v. City of Philadelphia, 38 PPER 72
+(Proposed Decision and Order, 2007). The burden of proof is on the charging
+party to show by substantial and legally credible evidence that the
+respondent has not complied with the arbitration award. Id. citing St.
+Joseph’s Hospital v. PLRB, 323 A.2d 106 (Pa. 1977). The Board may not review
+the merits of the award or substitute its judgment for that of the
+arbitrator. Id. citing City of Duquesne, 5 PPER 117 (Final Order, 1974).
+If, upon review of the award as a whole, the Board is unable to discern the
+intent of the arbitrator and the award is therefore ambiguous, the Board will
+dismiss an unfair practice charge alleging noncompliance with the award.
+AFSCME Local 197 v. City of Philadelphia, Office of Housing & Community
+Development, 24 PPER ¶ 24052 (Final Order, 1993).
+Section 9(e) of the PLRA provides that “[n]o petition or charge shall
+be entertained which relates to acts which occurred or statements which were
+made more than six weeks prior to the filing of the petition or charge.” 43
+P.S. § 211.9(e). As a general matter, the nature of the unfair practice
+claim alleged frames the limitations period for that cause of action. Upper
+Gwynedd Township Police Dept. v. Upper Gwynedd Township, 32 PPER § 32101
+(Final Order, 2001). For a refusal to bargain a change in terms and
+conditions of employment, notice to the union of the implementation of the
+challenged policy or directive triggers the statute of limitations. Harmar
+Township Police Wage and Policy Committee v. Harmar Township, 33 PPER § 33025
+(Final Order, 2001). Implementation is the date when the directive becomes
+operational and serves to guide the conduct of employes, even though no
+employes may have been disciplined or corrected for failure to abide by the
+directive. Id. Mere statement of future intent to engage in activity, which
+arguably would constitute an unfair labor practice, does not constitute an
+unfair labor practice for engaging in that activity. Upper Gwynedd Township,
+at 264. The Board will dismiss a charge as prematurely filed where the
+complainant files the charge prior to actual implementation. City of
+Allentown, 19 PPER § 19120 (Final Order, 1988).
+As detailed above, the Township argues that the Union’s charge of
+unfair labor practices should be dismissed because it was prematurely filed
+on July 29, 2023, which was allegedly prior to the exhaustion of appeals.
+The Township reasons that, since it appealed the arbitration award to the
+Commonwealth Court, the appeals did not exhaust until 30 days after May 10,
+2024, when the Commonwealth Court eventually denied the Township’s Petition
+to Vacate and no further appeals were taken. The Township cites PLRB v.
+5
+
+Commonwealth of Pennsylvania, 387 A.2d 475 (Pa. 1978) as support for its
+position. However, the Township’s argument ignores a long line of Board
+precedent indicating that the arbitration award became enforceable once it
+was affirmed by the Common Pleas Court on April 21, 2023.
+In FOP Lodge 5 v. City of Philadelphia, 39 PPER 9 (Final Order, 2008),
+the Board addressed the same argument, which was advanced by the city
+employer in that case. In rejecting the city employer’s argument, the Board
+opined as follows:
+The City’s reliance on PLRB v. Commonwealth is misplaced given
+that the state of the law has changed since the Supreme Court
+issued that decision. PLRB v. Commonwealth involved repealed
+provisions of the Rules of Judicial Administration governing
+appeals of arbitration awards, under which arbitration awards
+were stayed pending each level of appellate review. As the Board
+held in Fraternal Order of Police, Lodge No. 5 v. City of
+Philadelphia, 32 PPER ¶ 32102 (Final Order, 2001):
+The Supreme Court’s 1978 decision in PLRB v. Commonwealth, supra,
+was fully consistent with then existing Rules of Appellate
+Procedure, which provided for an automatic supersedeas for
+political subdivisions appealing arbitration awards...to the
+Commonwealth Court. It was therefore logical for the Court to
+instruct the Board to wait until the aggrieved employer’s appeal
+procedures were exhausted in the arbitration arena. To opine
+otherwise and permit the order of compliance at an earlier stage,
+would thereby violate the automatic supersedeas.
+However, in 1987 the Rules of Appellate Procedure were amended
+and the amendment to Rule 1736 fundamentally altered the
+protections provided to employers by the Supreme Court in PLRB v.
+Commonwealth, supra. Pa.R.A.P. 1736 provides as follows:
+(a)
+
+General Rule.
+
+No security shall be required of...
+
+(1)
+
+Any political subdivision...except in any case in which a
+common pleas court has affirmed an arbitration award in a
+grievance or similar personnel matter...
+
+(b)
+
+Supersedeas Automatic. Unless otherwise ordered pursuant
+to this chapter the taking of an appeal by any party specified
+in Subdivision (a) of this rule shall operate as a supersedeas
+in favor of such party.
+
+The note following the rule more fully explains the amendment:
+The 1987 amendment eliminates the automatic supersedeas for
+political subdivisions on appeals from the common pleas court
+where that court has affirmed an arbitration award in a grievance
+or similar personnel matter.
+Thus, once an arbitration award has been affirmed by a common
+pleas court, the award becomes enforceable. The aggrieved
+employer has been stripped of its ability to delay compliance
+with the award by seeking further redress in subsequent appeals.
+The Commonwealth Court explained that Pa.R.A.P. 1736(a)(2)
+6
+
+“expressly negates an automatic supersedeas for a political
+subdivision in an appeal from an arbitration award.”
+Commonwealth Dept. of the Auditor General v. AFSCME, Council 13,
+573 A.2d 233, 234 (Pa. Cmwlth. 1990). See also...Cheltenham Twp.
+Police Ass’n v. Cheltenham Twp., 21 PPER ¶ 21026 (Final Order,
+1989); City of Philadelphia, Office of Housing and Community
+Development v. AFSCME, Local 1971, 37 Pa.D.&C. 4th 116 (Phila.
+County Common Pleas, 1996); Crawford County v. AFSCME, Council
+85, 27 PPER ¶ 27117 (Crawford County Common Pleas, 1996)(where
+arbitration award affirmed by common pleas, application for a
+stay denied; while appellate court could ultimately reverse
+arbitrator, no irreparable harm in requiring employer to comply
+with award).
+...
+As regards appeals by political subdivisions from arbitration
+awards, the Board’s research has disclosed no Board decisions
+where the Board has stayed enforcement of an award following a
+common pleas affirmance of the award, pending further appeal in
+Commonwealth Court. To the extent that there may be any post1987 Board final orders that withhold enforcement of affirmed
+arbitration awards pending a second level of appellate review in
+reliance on PLRB v. Commonwealth, supra, the Board will no longer
+adhere to them as precedent. To find otherwise would defeat the
+purpose of the changes to Pa.R.A.P. 1736 and would occasion
+unwarranted delay in the timely enforcement of arbitration awards
+which remain on appeal under the narrow scope of judicial review
+of arbitration awards.
+City of Philadelphia, 32 PPER at 266-267. Since City of
+Philadelphia, the Board has consistently entertained unfair labor
+practice charges to enforce arbitration awards pending appellate
+review in Commonwealth Court. E.g., Somerset Area Education
+Ass’n v. Somerset Area School District, 37 PPER 1 (Final Order,
+2005)...
+The Board’s policy of enforcing arbitration awards on appeal is
+consistent with the current rules of appellate procedure, and the
+policies and purposes of Act 111 and the PLRA. Indeed, prompt
+enforcement of arbitration awards, both grievance and interest
+awards, furthers the purposes and policies of Act 111 and the
+PLRA. As was recognized by the Pennsylvania Supreme Court in its
+landmark decision concerning Act 111 interest arbitration:
+An arbitration panel is a temporary “one shot” institution,
+convened to respond to a specific conflict. Once it reaches a
+decision it is disbanded and its members disperse. Its
+resolution of the dispute must be sure and swift, and much of its
+effectiveness would be lost if the mandate of its decision could
+be delayed indefinitely through protracted litigation.
+(Citations omitted).
+City of Philadelphia, 39 PPER at 30-31.
+In this case, the record shows that the January 5, 2022 arbitration
+award was affirmed by the Common Pleas Court on April 21, 2023. As a result,
+7
+
+the award became enforceable by the Union as of April 21, 2023, pursuant to
+Board law. The Township did not have an automatic supersedeas after April
+21, 2023, and there is no evidence that the Township either sought or
+obtained a stay at any point thereafter.
+Therefore, the Union’s attempt to
+enforce the award by filing the instant charge on July 28, 2023 was ripe and
+not premature, as alleged by the Township. Accordingly, the Township’s
+argument in this regard must be rejected.
+The Township’s argument that the charge was untimely filed is similarly
+unavailing. While the Union waited for more than six weeks following the
+expiration of the 30-day appeal period after Common Pleas affirmed on April
+21, 2023, the Township stipulated and agreed that the attorneys were engaging
+in settlement discussions about this case until September 6, 2024. In fact,
+the Township’s attorney admitted in his opening statement during the October
+1, 2024 hearing that “[t]he parties had [] good faith negotiations about the
+amount of back pay and other issues due to her [sic]. It was, about a few
+weeks ago, the parties, I guess, agreed to disagree. And at that point,
+there’s a dispute over the amount.” (N.T. 8). This evidence of ongoing
+negotiations shows that the Union reasonably believed the Township would
+comply with the award, all the way up until September 2024. There is no
+evidence that the Township refused to comply with, or made its intent known,
+that it would not implement the award, more than six weeks prior to the
+filing date of July 28, 2023. To the contrary, the record shows only that
+the parties were engaging in settlement discussions and had good faith
+negotiations regarding how the Township could comply until September 2024. 4
+As such, the record supports a finding that the Township essentially
+acknowledged its responsibility to implement the award through September
+2024, thereby tolling the limitations period through that date. Accordingly,
+it must be concluded that the Union’s July 28, 2023 charge was timely filed.
+See Susquehanna Regional Police Ass’n v. Susquehanna Regional Police Dept.,
+31 PPER ¶ 31064 (Final Order, 2000)(citing Crawford Central School District,
+618 A.2d 1202 (Pa. Cmwlth. 1992))(charge filed seven months after arbitration
+award was timely filed within PERA’s four-month limitations period where the
+parties communicated about implementation and calculations, requested a
+remedial award, and the employer acknowledged its responsibility to implement
+the award for five months following issuance of the award); Wyoming Borough
+Police Dept. v. Wyoming Borough, 43 PPER 22 (Final Order, 2011)(statute of
+limitations does not necessarily accrue immediately upon issuance of an
+arbitration award; but is tolled during a period of negotiations where
+employer gives assurances of its attempt to comply); IBEW Local 81 v.
+Scranton Housing Authority, 33 PPER ¶ 33134 (Final Order, 2002)(limitations
+period begins to run when union knows, or should know, that employer will not
+be complying with award, such as where the employer takes a “firm and
+unyielding stance” regarding its obligation to comply with the award).
+Turning to the merits of the charge, the Union contends that the
+Township refused to comply with the January 5, 2022 award because the
+Township has failed to make Officer Metterle whole. Specifically, the Union
+maintains that the Township’s make-whole remedy failed to include the proper
+overtime wages, federal taxes and penalties on her pension withdrawal, out of
+pocket medical expenses, and accrued leave. Of course, the Township submits
+that it has properly calculated the make-whole remedy and provided Officer
+Metterle with everything she was due pursuant to the make-whole award.
+While an attorney’s statements during the hearing typically cannot be used
+as evidence or testimony, the instant statements represent a party admission,
+which is binding on the Township.
+4
+
+8
+
+The parties do not contest that an award exists. Nor does the record
+show that the award has not yet become enforceable. As previously set forth
+above, the award became enforceable once the Common Pleas Court affirmed on
+April 21, 2023. Thus, the only question then, is whether the Township has
+failed to comply with the provisions of the arbitrator’s decision. The
+arbitrator’s award provides, in relevant part as follows:
+The discharge was not supported by just cause. The discharge is
+reduced to a thirty (30) day suspension. The Township is ordered
+to reinstate the Grievant to her former position; restore her
+seniority; and make her whole for any loss of wages (minus the
+30-day suspension), benefits, and other emoluments of employment
+flowing from the discharge. The Township is ordered to adjust
+the Grievant’s disciplinary records to reflect the altered
+discipline...
+(Union Exhibit 1). The dispute here essentially boils down to what the
+proper make-whole remedy would be.
+First of all, however, it must be noted that the Township did not issue
+a check purporting to constitute the make-whole remedy until September 18,
+2024, which was approximately 17 months after the Common Pleas Court affirmed
+the award on April 21, 2023. What is more, the Township did not even
+reinstate Officer Metterle to her position until December 2023, some eight
+months following the Common Pleas affirmance. Thus, even if the Township had
+issued the proper make-whole remedy on September 18, 2024, the Township still
+committed an unfair labor practice because it did not comply with the award
+in a reasonable period of time. Indeed, it cannot be seriously contended
+that 17 months was a reasonable period for compliance by issuing the backpay.
+Nor does the Township even make such an argument. In the same vein, it
+cannot be seriously disputed that eight months was an unreasonable period of
+time for the Township to reinstate Officer Metterle. The Township should
+have reinstated her within 30 days of April 21, 2023. As a result, the
+Township must be found in violation of Act 111 and the PLRA based on the
+timeliness of its payment and reinstatement of Officer Metterle, regardless
+of whether the payment properly made her whole.
+In addition, the Union has also sustained its burden of proving that
+the Township refused to comply with the award by failing to include all the
+money and benefits due pursuant thereto. In AFSCME DC 47, Local 2186 v. City
+of Philadelphia, 54 PPER 10 (Proposed Decision and Order, 2022), the Board’s
+hearing examiner rejected the city’s argument that an arbitrator’s award,
+which provided for make-whole relief, permitted the city to exclude overtime
+earnings where the record showed that the grievant regularly worked overtime
+prior to her separation from the city. The examiner recognized that the
+Board has long held that an arbitrator’s make-whole remedy includes the
+payment of overtime in such cases, even if the award does not expressly
+direct such a payment, citing FOP Lodge 5 v. City of Philadelphia, 30 PPER ¶
+30105 (Proposed Decision and Order, 1999), 30 PPER ¶ 30204 (Final Order,
+1999), and specifically directed the city to pay her average overtime amount
+across the five years of wages submitted during the hearing. Yet, for some
+reason, in this case, the Township claims that it was only required to
+include the average of Officer Metterle’s overtime wages for two years
+instead of the five years of available records. The Township offers no
+justification for this, aside from generally citing to Teamsters Local 776 v.
+Borough of Gettysburg, 54 PPER 17 (Proposed Decision and Order, 2022) and FOP
+9
+
+Lodge 5 v. City of Philadelphia, 30 PPER 30204 (Final Order, 1999). But
+these cases do not provide for a limit of two years in calculating an
+employe’s overtime earnings for purposes of a make-whole award. Rather, the
+evidence of record was simply based on two years of calculations. As Hearing
+Examiner Marino observed in Borough of Gettysburg “the Board has recognized
+that make-whole arbitration awards clearly seek and intend to place the
+employe in the same economic position [she] would have been in had the
+employe not been unlawfully terminated.” 54 PPER at 82. Likewise, Hearing
+Examiner Marino further cited City of Philadelphia, supra, and noted that,
+“[i]n its make-whole awards, the NLRB will compute back pay on the basis of a
+forty-hour week plus the adjusted average overtime hours worked by each
+employe.” (emphasis in original).
+Here, the record shows that Officer Metterle had significant overtime
+earnings for the years of 2016, 2017, and 2018, which was then reduced for
+the years of 2019 and 2020. The Township’s decision to only include the
+average overtime earnings for the last two years, which were coincidentally
+her lowest, of course, in calculating the backpay due, only served to
+artificially deflate her earnings and provide the Township with a windfall.
+The record shows that Officer Metterle had reduced overtime hours in 2019
+because of pregnancy and childbirth. The record also shows that she had
+reduced overtime hours in 2020 because of Covid-19 closures and her eventual
+administrative suspension and termination. Inclusion of only those two years
+in calculating her overtime earnings due pursuant to the make-whole award
+does not place Officer Metterle in the same economic position she would have
+been in had she not been unlawfully terminated. Therefore, the Township will
+be directed to pay Officer Metterle her average overtime hours across the
+five years of wages submitted during the hearing, which represents a much
+more accurate depiction of her earnings, and which is consistent with the
+Board’s process of remedial relief. AFSCME DC 47, Local 2186 v. City of
+Philadelphia, 54 PPER 10 (Proposed Decision and Order, 2022); See also
+Fraternal Order of Police Lodge 5 v. City of Philadelphia, 41 PPER 181
+(Proposed Decision and Order, 2010) wherein the hearing examiner held that
+the City should look at the overtime paid to the affected bargaining unit
+employe for working special events in the preceding years, and average that
+amount in computing his overtime. (citing City of Philadelphia, 30 PPER ¶
+30204 (Final Order, 1999)(the Board adopted the Federal standard for the
+computation of back pay, including overtime, as set forth in Ellis & Watts
+Products, 143 NLRB 1269 (1963), enf’d 344 F.2d 67 (6th Cir. 1965)).
+Next, the record shows that the Township also failed to comply with the
+January 5, 2022 award by taking an offset for $102,078.57, representing the
+$85,293.73 pension withdrawal, as well as $16,784.84 in interest that would
+have accrued on those funds. The Union does not dispute that the Township
+was entitled to offset the $85,293.73 for the pension withdrawal. However,
+the Union asserts that the Township was responsible for the interest on that
+amount, along with the $21,323 in taxes and penalties that Officer Metterle
+was forced to incur when she withdrew those funds in 2022. The Township
+counters that Officer Metterle did not have to roll over her pension
+contributions to an IRA, and that the Township has no authority over how much
+money she owes to the IRS from when she ultimately withdrew those funds. The
+Township further claims that Officer Metterle is responsible for repaying the
+contributions that she withdrew, as well as the interest that would have
+accrued, in order to get back on the Township’s pension. Unfortunately for
+the Township, however, the record shows that Officer Metterle was forced to
+withdraw her pension funds in 2022 to pay her mortgage. She would not have
+been forced to withdraw those funds and to pay taxes and penalties on them if
+10
+
+not for the Township’s unlawful termination. The Board and its hearing
+examiners routinely direct employers to include pension contributions as part
+of a make-whole remedy. AFSCME DC 47, Local 2186 v. City of Philadelphia, 54
+PPER 10 (Proposed Decision and Order, 2022); FOP Lodge 5 v. City of
+Philadelphia, 54 PPER 37 (Proposed Decision and Order, 2022); Teamsters Local
+776 v. Borough of Gettysburg, 54 PPER 17 (Proposed Decision and Order, 2022);
+Corry Area Education Ass’n v. Corry Area School District, 38 PPER 155 (Final
+Order, 2007). There is no meaningful difference between employer
+contributions to an employe’s pension and the interest that would have
+accrued on the employe’s contributions to the pension during the period of
+her unlawful discharge.
+In Corry Area School District, the Board opined that “a cash payment
+equal to a lost pension contribution does not come close to compensating the
+loss of contributions into a statutorily-regulated pension, which impact on a
+retirement date or ultimate pension benefit.” Not only has the Township here
+failed to make a cash payment to Officer Metterle for the interest that would
+have accrued on her pension during the time of her unlawful discharge, but
+also, the Township has actually taken an offset against that accrued interest
+from the make-whole remedy it owes her, which clearly impacts on her eventual
+retirement date or ultimate pension benefit. The Board certainly would not
+permit the Township to simply pay Officer Metterle directly for the cash
+value of the interest that would have accrued on her pension. Why then the
+Township thinks it could permissibly take an offset for that amount is a
+mystery. Furthermore, the Board noted in Corry that its “method of
+calculating backpay offsets interim earnings from the employer’s backpay
+liability in calendar quarter increments, and is designed to make employes
+whole for lost wages, as well as taking into consideration matters such as
+tax implications and periodic wages adjustments.” Thus, the interest that
+would have accrued on Officer Metterle’s pension contributions and the taxes
+and penalties she incurred from withdrawing those funds were part of the
+Township’s liability for the January 5, 2022 make-whole award.
+In Wyoming Borough Police Dept. v. Wyoming Borough, 43 PPER 22 (Final
+Order, 2011), the Board recognized that longevity increases, out-of-pocket
+medical expenses, holiday pay, accrued leave, and interest are typical
+components of make-whole relief. Indeed, out-of-pocket medical expenses that
+would have otherwise been covered by the employer’s health insurance policy
+must be reimbursed to make the employe whole. Id. The record here shows
+that Officer Metterle incurred out-of-pocket medical expenses for treatment
+that would have been covered under the Township’s medical insurance had she
+not been unlawfully discharged. In fact, one of her bills had unfortunately
+been submitted to collections at the time of the hearing. The Township
+offers no reason or justification for why it has not made her whole with
+regard to these expenses. The Township’s post-hearing brief is devoid of any
+arguments contradicting its liability on this point. The January 5, 2022
+make-whole award clearly encompasses such relief. Therefore, the Township
+will be directed to pay these expenses to remedy this clear violation of the
+PLRA.
+Finally, in Wyoming Borough, the Board held that reimbursement for
+holiday pay and accrued leave is in accordance with the applicable collective
+bargaining agreement. Thus, an employe who would not otherwise be paid for
+unused leave under the applicable CBA upon resignation, would not be entitled
+to such a payout for leave under the Board’s remedial make-whole relief. Id.
+The Township contends that Officer Metterle was not entitled payment for her
+accrued leave because the award does not mention leave time. However, the
+11
+
+National Labor Relations Board Compliance Manual provides in Section 10536.1
+that “[b]ackpay awards are intended to make whole the person who has suffered
+from a violation for earnings and other compensation lost as a result of that
+violation.” Further, the National Board’s Compliance Manual provides in
+Section 10540.1 that “[g]ross backpay must take into account all benefits and
+forms of compensation that [an employe] would have earned from employment,
+had there not been an unlawful action. All forms of wages, including
+overtime, premiums, tips, bonus payments, and commissions, are to be
+considered in determining backpay.” (Emphasis added) 5. This Board
+specifically adopted and approved the use of the National Board’s Compliance
+Manual in Corry Area Education Ass’n v. Corry Area School District, 38 PPER
+155 (Final Order, 2007). Accrued leave is a benefit and form of compensation
+that Officer Metterle would have earned from her employment had there not
+been an unlawful termination. Therefore, it is of no consequence whether the
+award specifically mentions accrued leave or not. What is more, the
+Township’s argument that leave time is accrued under the contract only by
+those who are working is without merit. While the CBA generally provides in
+Articles 23 and 24 for the accrual of leave by those employes who are
+working, the Township conveniently ignores the fact that Officer Metterle
+would have been working had the Township not unlawfully discharged her. The
+Union also persuasively notes how those provisions are devoid of any “use it
+or lose it” clause, such that employes are prevented from preserving the
+value of their accrued leave from year-to-year. Instead, Article 23, Section
+2 provides for employes to be paid the cash value of holidays that they are
+unable to use due to illness, injury, or duty requirements, while Article 24
+permits employes to be paid for any unused vacation days at the end of the
+year if the employe was unable to take those vacation days for unusual
+circumstances. (Union Exhibit 2). Thus, it is irrelevant whether Officer
+Metterle receives pay for her accrued leave on top of weeks for which she
+receives her regular working pay because she was entitled to be paid for that
+unused leave time pursuant to the CBA. 6 Accordingly, the Township will be
+further directed to include her accrued leave as part of the make-whole
+relief.
+CONCLUSIONS
+The hearing examiner, therefore, after due consideration of the
+foregoing and the record as a whole, concludes and finds as follows:
+1.
+The Township is a public employer and political subdivision under
+Act 111 as read in pari materia with the PLRA.
+2.
+The Association is a labor organization under Act 111 as read in
+pari materia with the PLRA.
+3.
+
+The Board has jurisdiction over the parties hereto.
+
+5 The National Board uses the term gross back pay to describe the amount owed
+to an employe prior to an offset for interim earnings or unemployment
+compensation. Likewise, the National Board uses net back pay to describe the
+amount owed to an employe following such an offset. This distinction is not
+relevant to the outcome here, as this Board clearly allows public employers
+to take an offset for interim earnings and unemployment compensation that an
+employe may have received during the back pay period, which the Township has
+already done.
+6 Significantly, Officer Metterle did not resign from her position either like
+the employe at issue in Wyoming Borough.
+
+12
+
+4.
+The Township has committed unfair labor practices in violation of
+Section 6(1)(a) and (e) of the PLRA.
+ORDER
+In view of the foregoing and in order to effectuate the policies of the
+PLRA and Act 111, the examiner
+HEREBY ORDERS AND DIRECTS
+that the Township shall
+1.
+Cease and desist from interfering with, restraining or coercing
+employes in the exercise of the rights guaranteed in the PLRA and Act 111;
+2.
+Cease and desist from refusing to bargain with the
+representatives of its employes;
+3.
+Take the following affirmative action which the examiner finds
+necessary to effectuate the policies of the PLRA and Act 111:
+(a)
+Immediately comply with the January 5, 2022 arbitration award by
+tendering full backpay to Officer Metterle for her lost overtime wages from
+her discharge in October 2020 to her reinstatement in December 2023, minus 30
+days, by using an average of all five years of her overtime earnings
+submitted at the hearing in this matter, along with all other benefits or
+emoluments of employment she was entitled to pursuant to the award, including
+but not limited to her out-of-pocket medical expenses, pension contributions
+and interest accrued thereon, taxes and penalties she incurred, and all of
+the leave she would have accrued under the CBA had it not been for her
+unlawful discharge, together with six (6%) percent per annum interest;
+(b)
+Post a copy of this Decision and Order within five (5) days from
+the effective date hereof in a conspicuous place readily accessible to the
+bargaining unit employes and have the same remain so posted for a period of
+ten (10) consecutive days;
+(c)
+Furnish to the Board within twenty (20) days of the date hereof
+satisfactory evidence of compliance with this Decision and Order by
+completion and filing of the attached Affidavit of Compliance; and
+Union.
+
+(d)
+
+Serve a copy of the attached Affidavit of Compliance upon the
+IT IS HEREBY FURTHER ORDERED AND DIRECTED
+
+that in the absence of any exceptions filed with the Board pursuant to 34 Pa.
+Code § 95.98(a) within twenty days of the date hereof, this decision and
+order shall be final.
+
+13
+
+SIGNED, DATED AND MAILED at Harrisburg, Pennsylvania, this 4th day of
+March, 2025.
+PENNSYLVANIA LABOR RELATIONS BOARD
+
+/s/ John Pozniak______________
+John Pozniak, Hearing Examiner
+
+14
+
+COMMONWEALTH OF PENNSYLVANIA
+Pennsylvania Labor Relations Board
+FALLS TOWNSHIP POLICE ASSOCIATION
+v.
+FALLS TOWNSHIP (BUCKS)
+
+:
+:
+:
+:
+:
+:
+
+Case No. PF-C-23-68-E
+
+AFFIDAVIT OF COMPLIANCE
+The Township hereby certifies that it has ceased and desisted from its
+violations of Section 6(1)(a) and (e) of the Pennsylvania Labor Relations
+Act; that it has immediately complied with the January 5, 2022 arbitration
+award by tendering full backpay to Officer Metterle for her lost overtime
+wages from her discharge in October 2020 to her reinstatement in December
+2023, minus 30 days, by using an average of all five years of her overtime
+earnings submitted at the hearing in this matter, along with all other
+benefits or emoluments of employment she was entitled to pursuant to the
+award, including but not limited to her out-of-pocket medical expenses,
+pension contributions and interest accrued thereon, taxes and penalties she
+incurred, and all of the leave she would have accrued under the CBA had it
+not been for her unlawful discharge, together with six (6%) percent per annum
+interest; that it has posted a copy of the Proposed Decision and Order as
+directed therein; and that it has served an executed copy of this affidavit
+on the Union at its principal place of business.
+_______________________________
+Signature/Date
+_______________________________
+Title
+SWORN AND SUBSCRIBED TO before me
+the day and year first aforesaid.
+_________________________________
+Signature of Notary Public
+
+15

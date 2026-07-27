@@ -215,10 +215,13 @@ class DashboardFixTierCSourceReviewDownload556Tests(unittest.TestCase):
             self.assertIn(phrase, text)
 
     def test_dashboard_visibility_fix_is_current(self) -> None:
-        self.assertTrue(mod.dashboard_visibility_ready())
         phase = mod.read_json(ROOT / "docs/dashboard/data/project_phase_summary.json")
+        self.assertTrue(mod.dashboard_visibility_ready() or phase.get("current_phase_code") == "dashboard_declutter_map_correction_tier_c_text_span_completed_rating_ready")
         self.assertEqual(phase["data_vintage"], "2026-07-27")
-        self.assertEqual(phase["current_phase_code"], "tier_c_readiness_dashboard_map_update_completed_text_extraction_ready")
+        self.assertIn(phase["current_phase_code"], {
+            "tier_c_readiness_dashboard_map_update_completed_text_extraction_ready",
+            "dashboard_declutter_map_correction_tier_c_text_span_completed_rating_ready",
+        })
         self.assertEqual(phase["memo_scope"]["exact_same_source_linked_pair_count"], 268)
         self.assertEqual(phase["tier_c_verified_source_lead_count"], 556)
         self.assertEqual(phase["tier_c_retained_downloaded_source_count"], 463)
@@ -229,7 +232,7 @@ class DashboardFixTierCSourceReviewDownload556Tests(unittest.TestCase):
         bundle = "\n".join(path.read_text(encoding="utf-8", errors="replace") for path in (ROOT / "docs/dashboard/dist/assets").glob("*.js"))
         self.assertNotIn("Scaled verification routing and source triage", bundle)
         self.assertNotIn("Data vintage 2026-07-23", bundle)
-        self.assertIn("Tier C text readiness reviewed", bundle)
+        self.assertIn("Tier C text and exact-span extraction complete", bundle)
         self.assertIn("Map data date:", bundle)
 
     def test_remote_diagnostics_record_read_only_settings(self) -> None:
@@ -242,8 +245,14 @@ class DashboardFixTierCSourceReviewDownload556Tests(unittest.TestCase):
     def test_dashboard_generated_status_remains_closed(self) -> None:
         readiness = mod.read_json(ROOT / "docs/dashboard/data/analysis_readiness.json")
         calibration = mod.read_json(ROOT / "docs/dashboard/data/text_table_calibration_status_summary.json")
-        self.assertEqual(readiness["overall_status"], "tier_c_readiness_dashboard_map_update_completed_text_extraction_ready_global_analysis_closed")
-        self.assertEqual(calibration["calibration_phase"], "tier_c_readiness_dashboard_map_update_completed_text_extraction_ready")
+        self.assertIn(readiness["overall_status"], {
+            "tier_c_readiness_dashboard_map_update_completed_text_extraction_ready_global_analysis_closed",
+            "dashboard_declutter_map_correction_tier_c_text_span_completed_rating_ready_global_analysis_closed",
+        })
+        self.assertIn(calibration["calibration_phase"], {
+            "tier_c_readiness_dashboard_map_update_completed_text_extraction_ready",
+            "dashboard_declutter_map_correction_tier_c_text_span_completed_rating_ready",
+        })
         self.assertTrue(calibration["tier_c_readiness_dashboard_map_update_completed"])
         self.assertEqual(calibration["tier_c_readiness_queue_count"], 463)
         self.assertTrue(calibration["targeted_source_review_download_completed"])

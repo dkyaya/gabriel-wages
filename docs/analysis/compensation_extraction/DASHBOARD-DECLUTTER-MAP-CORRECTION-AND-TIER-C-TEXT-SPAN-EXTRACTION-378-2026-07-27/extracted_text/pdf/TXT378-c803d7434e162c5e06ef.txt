@@ -1,0 +1,1323 @@
+BEFORE THE ARBITRATOR
+
+In the Matter of the Arbitration of a Dispute Between
+GENERAL TEAMSTERS UNION, LOCAL 662,
+AFFILIATED WITH THE
+INTERNATIONAL BROTHERHOOD OF TEAMSTERS, AFL-CIO
+and
+SCHOOL DISTRICT OF NEW RICHMOND,
+NEW RICHMOND, WISCONSIN
+Case 50
+No. 60182
+MA-11555
+
+Appearances:
+Ms. Jill M. Hartley, Previant, Goldberg, Uelmen, Gratz, Miller & Brueggeman, S.C.,
+Attorneys at Law, 1555 North RiverCenter Drive, Suite 202, P.O. Box 12993, Milwaukee,
+Wisconsin 53212, for General Teamsters Union, Local 662, affiliated with the International
+Brotherhood of Teamsters, AFL-CIO, referred to below as the Union.
+Ms. Kathryn J. Prenn, Weld, Riley, Prenn & Ricci, S.C., Davis & Kuelthau, S.C., Attorneys at
+Law, P.O. Box 1030, Eau Claire, Wisconsin 54702-1030, for School District of New Richmond,
+New Richmond, Wisconsin, referred to below as the District, or as the Employer.
+ARBITRATION AWARD
+The Union and the District are parties to a collective bargaining agreement which was in
+effect at all times relevant to this proceeding and which provides for the final and binding
+arbitration of certain disputes. The parties jointly requested that the Wisconsin Employment
+Relations Commission appoint Richard B. McLaughlin, a member of its staff, to serve as
+Arbitrator to resolve a grievance filed on behalf of Rick Spinks, who is referred to below as the
+Grievant. Hearing on the matter was held on November 7, 2001, and on February 12 and 13,
+2002, in New Richmond, Wisconsin. No transcript was made of the hearing. The parties filed
+briefs and reply briefs by April 23, 2002.
+
+6401
+
+Page 2
+MA-11555
+ISSUES
+The parties stipulated the following issues for decision:
+Did the District have just cause to terminate the Grievant?
+If so, what is the appropriate remedy?
+RELEVANT CONTRACT PROVISIONS
+ARTICLE 5
+SENIORITY
+Section 1. Seniority. For purposes of this Agreement, seniority shall be
+determined by length of continuous regular employment with the District in this
+bargaining unit. Seniority status shall not be lost for reasons of vacation, leave of
+absence, temporary layoff due to lack of work, or other economic reasons,
+conscription or reserve military service, illness, accident or any other reason
+mutually agreed upon.
+...
+Section 3. Loss of Seniority. Seniority shall be forfeited if:
+(a)
+
+An employee is absent due to illness or accident for more than one
+(1) year and did not secure a leave of absence.
+...
+
+(c)
+
+The employee quits or is terminated for just cause.
+...
+ARTICLE 9
+
+DISCIPLINE AND DISCHARGE
+Section 1. The Employer will not discipline, suspend, or discharge an employee
+without just cause.
+
+Page 3
+MA-11555
+
+Section 2.
+1.2.3.4.-
+
+The normal disciplinary procedure is:
+Verbal warning
+Written warning
+Suspension
+Discharge
+
+The above procedure need not be followed in cases of serious misconduct.
+The number of warnings or length of suspension shall be determined by the
+Employer in accordance with the gravity of the violation, misconduct, or
+dereliction involved, taking into consideration that such steps are intended to be
+corrective measures.
+...
+ARTICLE 24
+LEAVE OF ABSENCE
+Section 1. Sick Leave. An employee who misses work due to illness or accident
+for up to sixty (60) days shall be considered on leave of absence and shall be
+required to provide Employer with written documentation of inability to work and
+expected date of return. Any employee who anticipates being absent for more than
+one (1) year shall obtain a written leave of absence from the Employer by the
+eighth (8th) month to be accompanied by a doctor’s certificate of inability to
+perform duties, and explaining why employee cannot reasonably be expected to
+return to work. Failure to comply with this Section will result in loss of seniority.
+Section 2. Any employee desiring a leave of absence from his/her employment for
+more than seven (7) days (other than that referred to in Section 1), shall secure
+written permission from both the Local Union and the Employer. Failure to
+comply with this provision shall result in the complete loss of seniority rights.
+BACKGROUND
+Dr. Jim Wold, the Employer’s District Administrator, issued a letter of termination to
+the Grievant dated May 9, 2001, which states:
+
+Page 4
+MA-11555
+In a letter dated May 18, 2000, you were advised that your medical leave time
+would be counted toward the time to which you were entitled under the state
+and federal Family Medical Leave laws, a maximum of 12 weeks. Those 12
+weeks have expired. In addition you have exhausted your accrued vacation and
+sick leave.
+According to your most recent medical report, you are still subject to
+significant work restrictions. Based on the District's review of that
+information, the District has determined that there is no work available within
+those restrictions. Therefore, since you have exhausted your available leave,
+this letter is to advise you that your employment with the District will be
+terminated effective May 10, 2001.
+Your name will, however, be placed on a preferential rehire list should your
+medical condition improve and should there be a position for which you are
+qualified. Thank you for your years of service to the School District of New
+Richmond. We wish you well in the years ahead.
+The Union filed a grievance on May 11.
+At the November 7, 2001 hearing, the District added additional bases for the
+termination, asserting newly discovered evidence. After discussion, the parties agreed to hear
+the entire matter as a single grievance. Wold summarized the discussion in a letter to the
+Union dated November 8, 2001, which states:
+This letter confirms that the District advised Mr. Spinks during the
+November 7, 2001, session with Arbitrator McLaughlin that his employment
+with the District was being terminated for two reasons, each of which the
+District believes independently supports termination.
+The first reason is that the District has verified that Mr. Spinks was convicted of
+a felony on August 31, 1989, for the manufacture/delivery of cannabis in an
+amount greater than 500 grams. Yet, when Mr. Spinks applied for employment
+with the District on December 2, 1992, he stated on the application form filed
+with the District that he had not been convicted of a felony within the last seven
+years.
+The second independent reason for termination is that the District has
+determined that Mr. Spinks misrepresented the circumstances of his knee injury
+on or about September 12, 1999, and that his worker's compensation claim
+arising out of that injury is fraudulent in that the injury did not occur while at
+work.
+
+Page 5
+MA-11555
+This letter will also confirm that the District has agreed to waive both of these
+additional independent causes of termination directly to arbitration and to
+consolidate them with the case currently pending before Arbitrator McLaughlin.
+The background unique to each basis for the termination will be set forth separately, with
+undisputed matters prefacing an overview of witness testimony.
+The District employed the Grievant as a full-time Custodian from December 22, 1992
+until his discharge. Prior to December 22, 1992, the Grievant worked as a part-time
+Custodian for the District. While employed as a full-time Custodian, the Grievant filed twelve
+Worker’s Compensation (WC) claims. In August of 1994, the Grievant injured his back. In
+August of 1995, he underwent a “Functional Capacities Evaluation” (FCE) that determined he
+had limitations on his ability to bend, kneel, lift and carry. The Grievant experienced varying
+levels of restrictions due to his back from this time until his discharge.
+The Knee Injury
+Sometime in August or September of 1999, the Grievant injured his left knee and foot.
+The Grievant worked Sunday overtime on September 12, 1999, and left a voicemail message
+for his supervisor, Jerry Davis, that he had stepped into a hole and twisted his left knee and
+foot. He reported to work on September 14, and consulted a physician on September 15. On
+his doctor’s instructions, he did not return to work. On September 15, he filed a written work
+injury report on that stated the injury occurred at “East Side High School” while he was
+“taking out broken chairs.”
+The injury did not improve, and the Grievant went to a specialist, A. Hamid Khan, who
+determined the Grievant had “sustained some ligament and cartilage damage.” Kahn placed
+him in a leg brace, and informed him to take four weeks off from anything other than sit-down
+work prior to another evaluation. The Grievant did not return to work, and learned at the
+subsequent evaluation that he would undergo knee surgery. The surgery took place on
+October 28, 1999. In a letter to Davis dated November 16, Kahn released the Grievant for
+light duty. On Kahn’s recommendation the District placed the Grievant in a work hardening
+program summarized in a November 16 letter from Kahn to Davis that states:
+...
+He should not keel, squat, pivot, climb, crawl, stand and or walk for long
+periods of time. He should be allowed to ambulate & sit during his work hours.
+He may, at times, need to apply ice to the left knee. He will continue with
+physical therapy and will be evaluated again on/or about 12/2/99 at which time
+his restrictions will be addressed. Work hardening hours:
+
+Page 6
+MA-11555
+11/17/99 through 11/23/99 2 hours/day
+11/24/99 through 11/30/99 3 hours/day
+12/1/99 through 12/7/99 4 hours/day
+12/8/99 through 12/14/99 5 hours/day
+12/15/99 through 12/21/99 6 hours/day
+12/22/99 through 12/28/99 7 hours/day
+12/29/99 through 01/01/00 8 hours/day
+The schedule listed above will be in effect as long as the patient is able to
+tolerate his work duties. As previously noted he will be checked again on
+12/2/99 and any changes in his activity levels will be addressed at that time.
+...
+The Grievant continued to experience pain. The District, unconvinced he could return to the
+full-time requirements of his job, requested the Grievant to undergo an FCE. The FCE, dated
+January 26, 2000, states the following:
+Activity
+12 “ to waist lift -- 46”
+Waist to eye level lift -- 72”
+Two handed carrying
+One handed carrying
+Pushing
+Pulling
+Sitting
+Standing
+Work arms over head-standing
+Work bent over-standing/stooping
+Work kneeling
+Work bent over-sitting
+Work squatting/crouching
+Work arms over head-supine
+Climbing stairs
+Repetitive squatting
+Walking
+Crawling
+Climbing a ladder
+Repetitive trunk rotation-standing
+Repetitive trunk rotation-sitting
+
+N = Never
+
+Abilities
+38 lbs (Occas.)
+62 lbs (Occas.)
+68 lbs (Occas.)
+55 lbs (Occas.)
+50 lbs (Occas.)
+50 lbs (Occas.)
+F
+O
+O
+O
+O
+O
+N
+F
+O
+N
+F
+F
+N
+N
+F
+
+O=Occasionally
+
+Job Demand
+75 lbs
+25 lbs
+50 lbs
+25 lbs
+10 lbs
+10 lbs
+N
+C
+O
+F
+O
+O
+N
+N
+RARE
+O
+C
+O
+O
+F
+O
+
+F= Frequently
+
+C=Constantly
+
+Match?
+No
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+No
+Yes
+No
+Yes
+Yes
+Yes
+Yes
+Yes
+No
+No
+Yes
+No
+No
+Yes
+
+Page 7
+MA-11555
+The District permitted the Grievant to return to work. He continued to experience knee
+problems, however, and his last shift of work occurred on March 22, 2000.
+The Grievant underwent a second surgical procedure on his knee that necessitated an
+extended rehabilitation. In a letter to the Grievant dated May 18, 2000, Brian Johnston, the
+District’s Director of Fiscal & Building Operations informed the Grievant that his continuing
+absence from work “is being considered an approved leave under the federal and state Family
+and Medical Leave Act.”
+In a letter to the Grievant dated December 20, 2000, Johnston addressed the Grievant’s
+“Medical Leave/Employment Status” thus:
+...
+The District’s records indicate that your eighth month of continued leave
+occurred on or about November 23, 2000. As of this date, the District has not
+received nor acted upon a request from you for a leave of absence. It is the
+District’s understanding that your absence will exceed the one-year limit. If that
+is the case, you have failed to comply with the eight-month timeline set forth in
+Article 24, Section 1, and as a result of that failure, your seniority will have
+been lost and your employment relationship with the District will have been
+severed.
+Before taking any final action in this regard, the District wishes to provide you
+the opportunity to present any evidence you may have which would indicate that
+your absence will not exceed the one-year limit. If you have such information,
+that documentation must be provided to the District Office within seven calendar
+days of the date of this letter. If no such information is provided, it will be the
+District’s understanding that you will be unable to return to work within the
+one-year timeline.
+...
+After receiving this letter, the Grievant gave the District the following note, dated “Oct 24
+2000”, that states:
+To whom it may concern I Rick Spinks am letting the district know that I do not
+anticipate being off more then a year. But at any time I find that I’ll exceed the
+one year I’ll let the district know at that time if this is not sufficient please let
+me know.
+
+Page 8
+MA-11555
+The Grievant and Johnston met sometime after this, and the Grievant gave Johnston a copy of
+a document entitled “Rehabilitation Protocol For Opening Wedge Proximal Tibial Osteotomy
+With Allograft Bone Graft.” The protocol stated Robert LaPrade as the doctor, and was a
+form document that covered the goal of the surgery and gave an overview of the standard postoperative rehabilitation procedure. The protocol anticipated “return to full low impact
+activities as tolerated” five to six months after the surgery.
+Johnston responded to the Grievant in a letter dated January 16, 2001, which states:
+Upon review of your documentation I find the doctors information leads me to
+the conclusion that you will be off for more than one year. If you are unable to
+return to your normal duties within the one year timeline I will recommend to
+the board that the contract language be followed and that your employment with
+the district be terminated.
+On January 25, LaPrade issued a “Work Restrictions/Report of Workability” form that noted
+the Grievant needed crutches, and should not work through March 15. In a letter to the
+Grievant dated February 23, Johnston stated that “I would expect you to return to work on or
+before March 23rd, 2001.” The Grievant obtained a work release from LaPrade dated
+March 15 that released him to work without restriction beyond “ice at breaks as needed” and
+“No repetitive outstretched reaching.”
+The District doubted whether the March 15 release established the Grievant was capable
+of returning to work. Johnston placed the Grievant on paid administrative leave effective
+March 23, and scheduled an FCE exam for the Grievant. The Grievant performed the exam
+on April 27. The FCE report, dated May 2 and signed by Gwen K. Jensen, a physical
+therapist, states the following:
+
+Activity
+Floor to waist lift (46”)
+Waist to shoulder level lift (69”)
+Two handed carrying
+One handed carrying- Right
+Pushing
+Pulling
+Sitting
+Standing
+Work arms over head-standing
+Work bent over-standing/stooping
+Work kneeling
+
+Abilities
+62 lbs (Occas.)
+82 lbs (Occas.)
+82 lbs (Occas.)
+55 lbs (Occas.)
+95 lbs (Occas.)
+83 lbs (Occas.)
+F
+F
+F
+O
+C
+
+Job Demand
+75 lbs
+25 lbs
+50 lbs
+50 lbs
+10 lbs
+10 lbs
+O
+F
+O
+F
+O
+
+Match?
+No
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+No
+Yes
+
+Page 9
+MA-11555
+
+Work bent over-sitting
+Work squatting/crouching
+Work arms over head-supine
+Climbing stairs
+Repetitive squatting
+Walking
+Crawling
+Climbing a ladder
+Repetitive trunk rotation-standing
+Repetitive trunk rotation-sitting
+
+N = Never
+
+O=Occasionally
+
+F
+O
+C
+F
+F
+F
+F
+F
+F
+F
+
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+
+O
+O
+N
+O
+O
+F
+O
+O
+F
+O
+
+F= Frequently
+
+C=Constantly
+
+Johnston provided the job description that was used as the basis for these conclusions. The
+position description then in effect for Custodian demanded a lifting requirement of fifty
+pounds. Jensen added the following “Impressions and Recommendations:”
+1.
+
+2.
+
+3.
+
+According to job description for Custodian . . . Mr. Spinks’ tolerances
+for low level lifting (floor to waist) and for stooping did not meet job
+requirements. Participation in a short term aggressive work hardening
+program may assist Mr. Spinks in increasing tolerance for these activities
+to meet job demands.
+Several activities in the mobility section were heart rate limited and may
+be indicative of reduced cardiovascular endurance and deconditioning.
+An aggressive work hardening program would also promote overall
+reconditioning through aerobic strengthening activities.
+Mr. Spinks reported low back pain as his primary symptom during
+testing. Work hardening participation may also be beneficial in assisting
+Mr. Spinks in learning techniques to manage symptoms related to
+performance of functional activities.
+
+After consideration of the FCE, the District determined to issue the termination letter. The
+background sketched to this point is undisputed. The balance of the background is best set
+forth as an overview of witness testimony.
+James Ohlfs
+In the summer and fall of 1999, Ohlfs and the Grievant worked the same shift as
+Custodians. During the summer, they worked from 6:00 a.m. until 3:00 p.m. With the start
+of the school year, each moved to the 3:00 p.m. until 11:00 p.m. shift.
+
+Page 10
+MA-11555
+Ohlfs testified that on a Monday during the summer, the Grievant came into work with
+his leg noticeably swollen. During a morning break, the Grievant sought to ice it. The
+swelling in the left knee area was so bad that the Grievant could not raise his pants over the
+knee, and had to drop his pants to ice it. The Grievant stated that the injury occurred when
+someone pushed him during a grueling basketball game the prior weekend. Ohlfs was
+“absolutely” sure this incident occurred while they worked the day shift, most probably in
+August. The swelling continued for “quite a long time” after this.
+Sometime shortly after the start of the school year, the Grievant stated that he had
+stepped in a hole near a dumpster at the back of the high school building. Ohlfs was familiar
+with the hole, which was caused by washout from a downspout. The Grievant stated that he
+had stepped in the hole while carrying broken chairs to the dumpster. The injured area was the
+same as that Ohlfs had observed the Grievant icing during the summer. Ohlfs was
+unconvinced that the Grievant had stepped in the hole, but did not report the incident until the
+subject came up in a conversation with Davis, well after the injury.
+Ernest Spinks
+Ernest Spinks, referred to below as Spinks, is a mechanical engineer, and the
+Grievant’s brother. Spinks testified that the Grievant’s wife phoned him during an altercation
+between the Grievant and his daughter on September 9, 1999. The Grievant’s wife told him
+that the Grievant had attacked their daughter. In a phone conversation sometime after this, the
+Grievant informed Spinks that he had injured his knee during the altercation. Perhaps two
+weeks later, Spinks visited the Grievant, and noticed the knee was still swollen. Sometime
+between September 9 and this visit, the Grievant informed Spinks that he was going to see if
+the hole near the dumpster had been filled. If not, he would report that he had stepped in it
+and injured his knee. He knew another employee had fallen in the hole, and thought this
+would create a sufficiently plausible account for the injury to permit him to collect WC
+benefits. He repeated this story to Spinks in a phone conversation sometime after Spinks
+visited the Grievant’s home. Spinks was unsure when the Grievant filed a WC claim, but
+thought these conversations preceded the filing.
+Spinks knew well before his brother’s felony conviction that the Grievant was selling
+drugs. The Grievant openly admitted it, claiming to have made a sale of over two hundred
+pounds of marijuana. Spinks informed a friend, who is a manager in the FBI, of the matter.
+The agent asked Spinks to assist in an investigation. Spinks did so, accompanying the Grievant
+to Arizona to purchase drugs, then informing law enforcement of the transaction.
+The Grievant informed Spinks that he could have passed the final FCE he took, but
+held back on the exercises that affected his back. He knew he risked “shooting himself in the
+foot”, but did not want to expose himself to heavier duties, such as shoveling snow, if returned
+
+Page 11
+MA-11555
+to work. The back injury was a pre-existing condition, and he thought he needed only to
+“pass” the portions of the test relating to the knee injury.
+Spinks acknowledged that he and the Grievant had differences regarding the sale of
+their mother’s home in West Virginia during the summer of 2001. The sale predated Spinks’
+contact with the District concerning his brother’s felony conviction and the WC claim. He
+acknowledged that he and his brother do not share a friendly relationship, but added that this
+was “not on my choice.”
+Brian Johnston
+Johnston serves as the District’s Director of Fiscal and Building Operations. He noted
+that after perhaps two weeks in the 1999 work hardening program, the Grievant complained of
+knee pain, and stopped working. The District’s WC insurance carrier requested the January,
+2000 FCE.
+The Grievant and Johnston met regarding his condition sometime after Johnston issued
+the December 20, 2000 letter. The Grievant supplied Johnston the handwritten note and the
+rehabilitation protocol summarized above.
+Johnston noted to the Grievant that his
+rehabilitation appeared to require more than the year permitted under Article 24. The Grievant
+did not comment, and offered no insight on when the second surgery had occurred or when the
+rehabilitation could be expected to be complete.
+Johnston continued to follow through regarding the one-year leave, and was
+“surprised” to receive the LaPrade’s general work release dated March 15, 2001. LaPrade’s
+January 26 report increased Johnston’s skepticism regarding the quick recovery, and prompted
+Johnston, in a letter dated March 21, to put the Grievant on paid administrative leave and
+direct another FCE. The FCE exam took place in late April, and was the third appointment.
+The reluctance of one of the Grievant’s physician’s to provide a release of certain information
+put off one appointment, and the Grievant cancelled another.
+After receiving the final FCE, Johnston and Wold concluded that the Grievant could not
+return to work within one year. Johnston did not discuss the matter with the Grievant. The
+District discharged the only other employee who missed more than one year of work.
+Johnston acknowledged that the District had worked with the Grievant’s back restrictions. It
+modified his duties to exclude vacuuming, snow removal and certain bathroom cleaning duties.
+These duties had to be assigned to other employees. The District faces hundreds of thousands
+of dollars in budget cuts, and no longer has the ability to carry an employee incapable of
+performing all of a position’s duties.
+
+Page 12
+MA-11555
+Johnston supplied the job description used by Jensen in the final FCE. It lists the
+relevant lifting requirement at fifty pounds. In a phone conversation with Jensen, Johnston
+supplied the weight demands noted in the table set forth above. Johnston thought the seventyfive pound entry reflected the current demands of the position, which demands the lifting of
+lunch tables weighing at least seventy pounds.
+Spinks approached him sometime before the WC hearing to assert that his brother’s
+claim was bogus. Johnston considered the Grievant’s injury record to reflect a “moving
+target.” The Grievant never seemed to improve. Rather, the nature of his injuries would
+change. In his view, it was always difficult to figure out what he could do and what he could
+not. The Grievant’s WC file is perhaps one and one-half inches thick.
+Jerry Davis
+Davis is the direct supervisor of custodial staff. The Custodian job description states
+twenty-nine “Essential Functions.” The Grievant was incapable of performing the following of
+those functions:
+...
+3.
+6.
+9.
+11.
+20.
+25.
+26.
+27.
+
+Shovel, plow, and sand walks, driveways, parking areas, and steps, as
+appropriate. . . .
+Scrub, clean down, and disinfect toilet floors and clean drinking
+fountains and sinks (as) needed. . . .
+Assist with loading and unloading of trucks. . . .
+Perform such yard keeping chores as grass cutting, tree trimming, and
+the like, as necessary, to maintain the school grounds in a safe and
+attractive condition. . . .
+Move furniture or equipment within buildings as requested for various
+activities. . . .
+Load, transport, and unload hot lunch storage containers.
+Transport mail and deliveries between buildings.
+Assist food service staff in maintaining well-organized freezer and
+storage areas. . . .
+
+Beyond this, the Grievant could not perform any duty demanding bending and stooping. These
+limitations were evident from the time of the Grievant’s back injury as well as during the work
+hardening program in November of 1999. The work hardening program consisted of the
+Grievant performing lighter duties taken from other custodial employees. The Grievant left the
+program, but did return to work between January and March of 2000. He did try to do his job
+and did improve somewhat during this period. He could, on some days, do his work, but
+
+Page 13
+MA-11555
+could not on a consistent basis perform all of the required duties. He complained often of
+knee pain, stated he could not stand for eight hours, and could not bend or squat. He left work
+in mid-March of 2000.
+On March 15, 2001, the Grievant met with Davis at 9:00 a.m., prior to an appointment
+with LaPrade at 10:00 a.m. They discussed what he needed to be able to accomplish to return
+to work. Davis’ notes of that meeting read thus:
+He stated that he is coming back to work no matter what. He is not going to
+(lose) his job. He also stated that he cannot stand 8 hrs. a day, his leg hurts too
+much. He said his leg muscles are sore.
+He asked when his year is up and when he had to be back to work. He stated he
+would be back with a Dr. slip saying he could go back to work on that day,
+implying that he will tell the Dr. what to do instead of the Dr. making the
+decision??
+The following day, the Grievant gave Davis the release stated above. Davis asked how he got
+it and the Grievant responded that after being informed his job was in the balance, LaPrade
+responded that he did not want to cost the Grievant his job.
+Two other employees successfully completed work hardening programs after injuries.
+The only other employee to miss more than one year was discharged. Davis has responded to
+budget restrictions by reducing the full time equivalent custodial positions at the high school
+from 4.5 to 4.0.
+Davis does not believe the Grievant injured his knee at work in mid-September of 1999.
+He stated he saw the Grievant limping for two to three weeks prior to September 15, although
+he could not recall which leg he limped on. He overheard the Grievant complaining about a
+rough basketball game on break on a Monday. Davis acknowledged, on cross-examination,
+that he was out of the District from September 3 through September 12. He thought the
+District had attempted to work with the Grievant’s restrictions as long as possible, but could
+not continue to do so. Three other employees complained about having to perform the
+Grievant’s duties, and the District is not staffed to indefinitely allow it to farm out the duties he
+cannot perform.
+Sarah Canfield
+Canfield is the Grievant’s daughter, and a Unit Administrator in the National Guard.
+On September 9, 1999, she and her father had a fight, “a push and shove kind of thing” that
+lasted about ten minutes. She may have hit his knee at some point, but not enough to injure it.
+
+Page 14
+MA-11555
+She and her mother left home for a while, then returned. She did not see her father limp, and
+was not aware of any injury to his knee until he injured it several days later, when he informed
+her that he had hurt it at work.
+She acknowledged that the fight left her with a black eye, and that she consulted a
+specialist regarding it. Her brothers and father play basketball competitively. The Grievant
+played in “3 on 3” tournaments that summer, typically on weekends. She could not recall her
+father complaining about a basketball injury. She denied that she or her mother spoke with
+Spinks as a confidant. Neither like him, and Canfield does not speak to him. She
+acknowledged the police were called, and that she filed a written statement regarding the
+incident. She noted she was upset at the time of the statement, dated September 15, 1999, and
+thought it might be somewhat exaggerated. The statement reads thus:
+. . . I heard my brother crying and asking my dad why he had hit him. I knew
+right away that he was going to hit my brother again – which he has done in the
+past. My brother was running from him and I stepped in front of him & told
+him to stop it. He said “get out of my way or I’ll hit you.” I said no – you hit
+me I’ll throw this hot chocolate at you.” He hit me & then I threw the hot
+chocolate at him. Then he started hitting me in the head back and forth . . .
+The statement notes that the fight continued outside of the house, where she again attempted to
+get between the Grievant and her brother. She and the Grievant then confronted each other by
+her car. The statement alleges he hit her in the head, punched her in the stomach and kneed
+her in the crotch before the incident ended.
+The Grievant
+The Grievant noted that the back injury in 1994 was to his lower back. Prior to the
+injury, he worked at an elementary school that had predominately carpeted floors. Vacuuming
+hurt his lower back. At roughly the same time as the injury, he successfully posted to a
+position at the High School, which has tile floors. To his knowledge, the District made no
+accommodations regarding the back injury. The move to the High School effectively
+addressed the back injury. He could not perform heavy snow removal. He could effectively
+lift, unless he had to stoop to do so. This meant the only lifting he could not do was of objects
+closer than two feet to floor level. Beyond these, he could not perform repetitive vacuuming.
+At no point from the time of his back injury did any District representative ask him for an
+unrestricted release to work.
+On September 12, 1999, he worked a Sunday, from 7:30 a.m. until 2:00 p.m. A
+church group used the High School. To prepare the facility, he turned the alarm system off,
+then went to open the choir and band rooms, and to turn lights on. While doing so, he noted
+
+Page 15
+MA-11555
+two cracked chairs. He decided to take them to a dumpster at the rear of the building. He left
+the building through an unlit entry near the science lab, with the two chairs over his left
+shoulder. The dumpsters were located along the same wall as the door he exited through,
+roughly fifty feet away. Between the lab doorway and the dumpster was the downspout that
+had a roughly one foot wide and one foot deep area of washed out ground surrounding it. He
+was, at the time, unaware of the hole. The day was sunny, but he was looking straight ahead
+and did not see the hole before his left foot dropped into it. He did not experience any pain
+immediately, but the right knee hurt more as the day wore on. At sometime between 8:30 and
+9:00 a.m., he called Davis, leaving a voice mail concerning the incident.
+He reported for work the next day, and the knee was “a little sore.” He told other
+workers of the accident. The more he worked, the more pain he felt. He attempted to work
+on September 14, but by the end of the day was limping badly. The following day he went to
+his doctor, who found nothing broken, but told him to take a week off and come back for
+another exam. As noted above, the knee did not get better and required surgery.
+Spinks returned to work, and was able to successfully perform his duties as before,
+after a period of work hardening. He submitted to the FCE in January of 2000, and returned
+to work. Swelling and pain in his knee, however, led his physician to prescribe further
+surgery. A dispute between his physician and the District’s WC insurer put the surgery off for
+a period of time.
+He acknowledged Johnston had informed him of the one-year period set by Article 24
+well before he issued the December 20 letter. The Grievant, however, never anticipated that
+the rehabilitation would take the time it did. After receiving the December 20 letter, he gave
+the October 24 note to the District receptionist, and was surprised the District had not received
+it in October. He kept the District informed of his progress after each visit to the doctor. He
+did require crutches for some time, but was off of them well before March 15, 2001.
+As of March 15, 2001, the knee was effectively healed. He did not have full flexibility
+in the joint, and could not bend as deeply as before the injury, but outside of swelling when the
+knee was worked too hard, it was functional. He did not influence LaPrade’s opinion on
+March 15, but did tell him of the need for him to return to all of his duties on a full-time basis
+or lose his job. He gave LaPrade’s release to Davis, who agreed that he should be ready to
+work the following Monday or Tuesday. He had no further discussions with District
+representatives prior to being placed on administrative leave and being asked to undergo
+another FCE.
+He noted at the first FCE that the 75 pound lifting requirement did not match the job
+description’s requirement of fifty pounds. The evaluator consulted Johnston, noted the absence
+of a physician’s release, and the first appointment thus ended. The final FCE noted that the
+
+Page 16
+MA-11555
+Grievant was out of shape, but a subsequent stress test demonstrates that this concern has no
+bearing on his ability to work.
+The Grievant denied showing his knee to Ohlfs, and denied telling anyone he suffered it
+during a basketball game. He denied telling his brother that he made a bogus WC claim to
+cover his absence, or manipulated the FCE results. He has long term disability insurance, and
+did not need to worry about pay during the rehabilitation. He did inform his brother that he
+hurt the knee by stepping in a hole at work.
+Spinks, with one of their brothers, sold their mother’s home in West Virginia in June of
+2001, then misappropriated the proceeds. The Grievant holds power of attorney for their
+mother, and made formal complaints to officials in West Virginia regarding Spinks’ actions.
+Spinks has complained to Wisconsin officials about the Grievant’s care for their mother. The
+relationship has broken down over these issues, and the Grievant and one other brother are
+suing Spinks and the other brother over their handling of their mother’s property.
+The Employment Application
+The Grievant first worked for the District as a part-time Custodian in October of 1990. In
+1992, a full-time District Custodian suffered a stroke, and when it became apparent he could not
+return to work, the District started the hiring process to fill the position. The Grievant applied for
+the opening, completing a four-page written application form dated December 2, 1992. The first
+page of the four page application form directed applicants to give a “Yes” or “No” response to a
+series of questions, including the following: “Have you been convicted of a felony within the last
+7 years?” The Grievant’s application includes an “x” in a box adjacent to the “No” response.
+The original four page application form is in the possession of the hearing examiner in the WC
+proceeding. The copy submitted into evidence in the arbitration proceeding includes only the first
+and third pages. This reflects that the form is a two page form, copied on both sides of each page,
+while the copy made for the arbitration hearing is a one sided copy of the two page form. The
+fourth page of the form states the signature line for an applicant.
+In September of 1988, the Grand Jury for Cook County, Illinois indicted the Grievant for
+possession of more than five hundred grams of cannabis with intent to deliver. This resulted in a
+judgment, dated August 31, 1989, based on a finding of guilt. The judgment, signed by the
+Grievant, placed him on probation for four years, assessed him $2,500 in fines and court costs,
+and directed him to perform five-hundred hours of community service.
+After an interview process, the Board approved hiring the Grievant as a full-time
+custodian. A memo from Johnston to the Board dated December 15, 1992 states his formal
+recommendation that the Board hire the Grievant to fill the full-time vacancy.
+
+Page 17
+MA-11555
+Brian Johnston
+Johnston started his position with the District on November 16, 1992. At the time of his
+hire, Thomas Kleppe was the District’s Superintendent and Johnston’s immediate supervisor.
+Mark Christianson was Johnston’s predecessor.
+Spinks supplied Johnston copies of Cook County Circuit Court records establishing the
+Grievant’s felony conviction on the first day of the arbitration hearing. Spinks had informed
+Johnston earlier that his brother had a criminal record, but Johnston informed him the District
+could find no documentation of his allegation. Spinks responded by supplying the court
+documents. Johnston had also received, via an interdepartmental mail envelope, an inmate ID
+card for the Grievant. Johnston does not know who mailed him the card, but he did give it to a
+law firm to determine its origin. The Grievant ultimately asked for the ID card, and Johnston
+returned it to him. The Grievant did not mention what it was.
+On redirect examination, Johnston stated that Christianson’s last day with the District was
+October 9, 1992. Johnson produced a letter from Kleppe to Christianson dated August 24, 1992,
+that states:
+This is to officially notify you that at their August 17, 1992 meeting the Board of
+Education approved your resignation. Per our discussions your last day on the job
+will be October 9, 1992. . . .
+Johnston recommended, by written memo dated December 15, 1992, that the Board hire the
+Grievant to fill the full-time vacancy. Neither Kleppe nor Christianson played any role in the hire
+of the Grievant to fill the full-time vacancy. Kleppe formally stated a recommendation at a Board
+meeting, but did not interview applicants for the vacancy. Johnston interviewed five to seven
+applicants before determining to recommend the Grievant. Johnston developed the application
+form filled out by the Grievant for the full-time opening. He did so because the form used by the
+District prior to his involvement asked applicants for their age and marital status which Johnston
+felt was a violation of state and federal law. The “No” response to the felony question was
+completed when Johnston reviewed the application. Breault never asserted to Johnston that the
+Grievant had been convicted of any crime. The District and Breault have a long history of conflict
+that predates Breault’s termination.
+Roger Breault
+Breault is a building engineer for the Osceola Medical Center, and worked for the District
+from 1978 through 2000 as a Custodian. From 1986 through 1995, he worked as a Leadman. He
+was, throughout his employment, a member of the bargaining unit and he served the Union as a
+Steward and as a member of its bargaining team. At the time the Grievant applied for full-time
+
+Page 18
+MA-11555
+employment, Breault, as Leadman, played a role in the hiring process. At that time, applications
+would go to the main office, then would be routed to Christianson and Breault, who would meet
+with other District employees and conduct interviews with the applicants.
+The Grievant came to Breault to discuss his application for full-time employment. Breault
+reviewed the four page form with him. The Grievant advised Breault that he was on probation for
+a felony and was concerned with the impact this might have on his application. Breault did not
+think the Grievant had made a response to the printed question concerning a conviction for a
+felony. They discussed the matter, and specifically the Grievant’s prior experience with the
+District as a part-time employee. Breault informed the Grievant that he would take his application
+to the administration building and discuss the matter with Christianson and Kleppe. They asked
+Breault about the quality of the Grievant’s work. Breault responded that the Grievant was a good
+worker, then checked with another school district for which the Grievant worked on a part time
+basis to verify his opinion. Breault informed Kleppe and Christianson that the Grievant was on
+probation for a drug-related offense, but was willing to refer them to his probation officer for a
+reference. Breault left the application with Christianson and Kleppe. They interviewed the
+applicants, and ultimately recommended to the Board that the Grievant fill the vacant full-time
+position. Breault could not recall being on the interview panel.
+When asked if he had filled in the “No” response to the printed application form’s question
+regarding a felony conviction, Breault responded “not that I am aware of.” He added that there
+was “no doubt” in his mind that he had spoken with Kleppe and Christianson regarding the
+Grievant’s application. Sometime in 1995 the District terminated the Leadman position, created a
+Maintenance Mechanic position and moved Breault to a custodial position. The Union
+unsuccessfully grieved the matter, including Breault’s desire to fill the Maintenance Mechanic
+position. The District terminated Breault in 2000 because he was off work for more than one
+year. At the time of hearing Breault and the District were in litigation over the termination.
+The Grievant
+The Grievant discussed the felony question on the application form with his probation
+officer, who recommended that he discuss the matter with the District. The Grievant approached
+Breault, informing him that he was on probation for “possession of marijuana.” Breault advised
+him that Breault would take the matter to the administration. Breault did not take the application
+with him. Breault ultimately informed the Grievant that the District had no problem with the
+conviction, and that it was no one’s business in the District beyond those who needed to know.
+Breault then asked him what he wanted Breault to do, and he responded that he wanted Breault to
+complete the answer to the felony question so that the Grievant would not be put in a position of
+lying. Breault said “I’ll mark it” and did so.
+
+Page 19
+MA-11555
+On December 22, 1992, the Board of Education hired him. Prior to his hire, Kleppe
+interviewed him as one of the top three applicants at the District’s old Board Room. He noted that
+he learned of the vacancy by word of mouth, which is how part-timers then were advised of fulltime openings. Johnston never interviewed him. Christianson was the Business Manager at all
+times during his hire. At a going-away breakfast at a local café, Christianson and Kleppe noted
+that there had been stiff competition for the openings, and Kleppe welcomed the Grievant to the
+District.
+Sometime in 2001, the Grievant lost an inmate ID card that he had in a briefcase. The
+briefcase was stolen from the Teachers’ Lounge. He kept the ID card as a constant reminder that
+“I messed up.” Johnston called the Grievant and advised him that he had received the card in an
+inter-departmental mail envelope.
+On cross-examination, the Grievant stated that until he saw the Cook County Circuit Court
+documentation at hearing, he had thought his sentence rested on a charge of possession not on
+possession with intent to sell. He did not dispute the accuracy of the court documents. He has
+never discussed the felony with Johnston.
+Further facts may be set forth in the DISCUSSION section below.
+THE PARTIES’ POSITIONS
+The District’s Brief
+After a review of the evidence, the District contends that the Grievant had been off work
+for nearly fourteen months as of the date of his discharge. Under Article 24, Section 1, the
+District thus had just cause to terminate, since he had failed to obtain the required written leave of
+absence. Article 5, Section 3 underscores this conclusion.
+In its letter of December 20, 2000, the District afforded the Grievant “the opportunity to
+present any evidence that his absence would not exceed the one-year limit.” The Grievant
+responded with a post-dated handwritten note and a physician’s protocol. Neither undermines the
+District’s action to terminate. The protocol in fact affirms that the Grievant could not be expected
+to return to work within the contractual time limits. Nor will events following the District’s letter
+support a challenge to the termination. The March 15, 2001 work release confirms that the
+Grievant could not perform the necessary duties of his job. The April 27, 2001 FCE supports
+this, as does the Grievant’s physician’s June 1, 2001 statement. At all points in his injury history,
+the Grievant has presented a “moving target” to the District.
+
+Page 20
+MA-11555
+An examination of the evidence affords reason to believe the Grievant manipulated the
+results of his rehabilitation documentation. The District’s lengthy attempts to rehabilitate the
+Grievant had no effect. The District’s financial position precludes “carrying” an employee who
+cannot perform all the duties of a position. Beyond this, the District terminated the only other
+custodian who took a medical leave exceeding one year, and “has no duty to continue to provide .
+. . light duty assignments.”
+Significantly, the Grievant’s claim to have been injured at work on September 12, 1999,
+cannot be credited. Ohlfs’ testimony establishes that the Grievant was injured off the job, well
+before his report of a workplace accident. Davis’ testimony confirms this. The Grievant’s
+brother’s testimony establishes that the Grievant lied on the injury report. Significantly, none of
+these witnesses, unlike the Grievant, had “anything to gain by shading the truth.” The falsification
+of the District’s injury report and the WC claim constitute cause for immediate termination as a
+matter of common sense as well as arbitration precedent.
+Nor is this the sole falsification warranting summary termination. The Grievant lied on his
+employment application, by checking “no” to answer whether he had been convicted of a felony.
+At the first day of hearing, the District learned that the Grievant had been convicted “of a felony
+on August 31, 1989, in Cook County, Illinois, for the possession of cannabis with intent to
+deliver.” The Grievant’s attempt to explain this lie “were incredible.” The lie “was not just any
+lie,” since the Grievant attempted to obscure that he was a convicted drug dealer, a crime of selfevident significance to the operation of a school district.
+Arbitration precedent establishes that the District was well within its rights to terminate the
+Grievant without benefit of progressive discipline. It necessarily follows “that the Arbitrator
+(should) dismiss the grievance in its entirety.”
+The Union’s Brief
+After a review of the evidence, the Union argues that the District based the discharge
+on the assertion that it had no work within the Grievant’s physical restrictions. Since the
+evidence establishes that it had such work available, the discharge cannot stand. The evidence
+establishes that the Grievant’s physical restrictions had improved “as compared to those he had
+worked under for the previous five to six years.” The 1995 FCE established notable
+limitations on his ability to work. In spite of this, the District returned him to full-time work
+as a custodian in 1995. After a back injury in 1997, the Grievant was again returned to work
+even though he had suffered permanent restrictions to his ability to work. He worked at the
+essentially the same duties from 1995 through the date of his discharge. The District’s failure
+to inform him at any time during this period that he was at risk of termination dooms its claim
+to have just cause for the termination.
+
+Page 21
+MA-11555
+The remaining bases for discharge turn on allegations of a severity demanding proof
+beyond a reasonable doubt to support summary termination. Arbitration precedent establishes
+that allegations of “moral turpitude, such as dishonesty or falsification . . . generally require
+the criminal standard of proof.”
+The evidence fails to establish that the District proved that the Grievant “intended by
+his answers on the application to defraud or deceive the District.” That the District failed to
+provide the complete employment application dooms its case standing alone. Among the
+missing pages is that containing the Grievant’s signature. Beyond this, the Grievant informed
+his Leadman of the dilemma the application posed regarding his felony. The evidence
+establishes that the Grievant notified his Leadman of the conviction, who informed District
+administrators. Breault did not specifically advise the Grievant how to fill out the application,
+but he did inform the then incumbent Superintendent and Business Manager, who informed
+Breault that they would consider the matter. At most, this establishes that the Grievant filled
+out the form incorrectly, and neither attempted “to hide anything from the District” nor
+intentionally misrepresented his criminal background.
+A detailed examination of the evidence fails to discredit either Breault’s or the
+Grievant’s testimony. Even if the Grievant falsified the application, the District did not
+demonstrate that it suffered any harm, and thus “discharge was too harsh and (the Grievant)
+should be reinstated and made whole.” The evidence fails to even “suggest that (the Grievant)
+was a poor employee or that he was dishonest with regard to any other aspect of his
+employment.” That Johnston was aware that the Grievant had a prison I.D. card roughly a
+year before the termination establishes the difficulty of concluding that the District felt the
+Grievant had been improperly hired.
+Even assuming the evidence establishes the need for discipline, arbitration precedent
+requires that the reasonableness of the discipline be reviewed. The evidence establishes that
+discharge is too harsh a penalty. That the Grievant feared the impact of the conviction is
+understandable, and should not obscure that he afforded the District eight years of full-time
+employment “without incident.”
+The evidence will not establish that the Grievant falsified any injury claim. The District
+supplied two theories to establish he did not suffer the injury at work. It proved neither.
+Ohlfs’ testimony is vague regarding when he observed swelling around the Grievant’s knee.
+Beyond this, it fails to undercut the Grievant’s claim to have injured the knee by stepping in a
+hole during work hours. Davis’ testimony is even less reliable concerning the date of the
+injury since he claimed to have observed the Grievant limping at work when Davis was in fact
+at a fishing tournament. Nor is the assertion that the Grievant injured his knee during an
+altercation with his daughter any more credible. The testimony of the Grievant’s brother is
+“completely incredible” and not reconcilable to reliable evidence, such as that of the
+
+Page 22
+MA-11555
+Grievant’s daughter. Nor will an assessment of the “incentive to lie” support the District’s
+views. That attributed to the Grievant is entirely speculative, but the Grievant’s brother’s
+incentive to lie to cover up his wrongful handling of their mother’s financial affairs is proven.
+The Union concludes that the discharge lacks just cause. As the appropriate remedy,
+the Grievant “must be reinstated immediately and made whole for all lost wages and benefits
+suffered as a result.”
+The District’s Reply Brief
+The evidence establishes that, if anything, the District “can be faulted for trying too
+hard to work with the grievant over the course of several years and through multiple and
+various injuries.” The evidence indicates “that during the grievant’s last two years of
+employment he was off work nearly as much as he was on the job.” Thus, there is no support
+for an assertion that the Grievant worked since 1995 in the same position without warning that
+his employment was at risk. Rather, he “did not work at all for his last fourteen months of
+employment” and he learned no later than December 20, 2000, that his job was at risk.
+The evidence establishes that the Grievant set a “moving target” by which he
+manipulated tests to establish just enough capability to work without having to perform onerous
+tasks. Whatever “the grievant’s true physical capabilities may be” the District had a right to
+rely on the April, 2001 FCE, which establishes that he could not perform significant parts of
+his job.
+Arbitration precedent will not support the Union’s assertion that the basis for the
+discharge must be proven beyond a reasonable doubt. In any event, the evidence establishes
+that the Grievant falsified his employment application. Nor is his intent relevant. Even if it is,
+his deliberate checking of a “no” response to a question regarding prior felony convictions
+establishes all that is necessary for just cause.
+A detailed review of the testimony affords no support for the Union’s defense. The
+Grievant’s testimony regarding the employment application is incredible and stands in marked
+contrast to Johnston’s. Breault’s testimony, even if credited, fails to reliably demonstrate that
+the District administration knew anything regarding the conviction. Nor does arbitration
+precedent require the District to prove harm from the falsification. Johnston attempted,
+without success, to determine why the Grievant had a prison I.D. card. The Grievant afforded
+no assistance on the point.
+The evidence establishes that “discharge is not too harsh.”
+appropriate penalty.”
+
+Rather, it “is the
+
+Page 23
+MA-11555
+The Union’s Reply Brief
+The District cannot credibly assert that the Article 24 supports the discharge, since it
+failed to make this claim at the time of the discharge. Even if the claim can be considered, it
+lacks merit. The Grievant never anticipated being off work as long as he was. Thus, he was
+under no obligation to supply the District the written notice the District claims was untimely
+filed. The contention masks that the District had no evident basis to issue the December 20,
+2000, letter, and that the letter itself misstates the requirements of Article 24.
+To the extent the District lacked faith in the Grievant’s physician’s statement releasing
+him to work without restriction, it failed to demonstrate its faith had a factual basis. It refused
+to let him return to work, placing him on administrative leave. In any event, the termination
+letter fully states the basis for discharge, and the stated basis does not include Article 24,
+Section 1. To conclude otherwise violates fundamental concepts of due process.
+The District’s assertion that the April 27, 2001 FCE establishes that the Grievant could
+not perform his job is false. At most the FCE establishes a minimal difference “between (the
+Grievant’s) ability and the stated job demand.” No other documentation supports District
+claims that the Grievant could not perform effectively as a full-time employee. The assertion
+that the District permitted the Grievant to work “for four to five years with the thought that he
+would eventually recover and be able to return to his regular job is disingenuous.” In fact, the
+Grievant was in better condition in April of 2001 than he had been in years.
+It follows that the discharge is “without just cause.” The Grievant “must be reinstated
+immediately and made whole.”
+DISCUSSION
+The issue on the merit of the grievance is stipulated, but requires some discussion. It
+presumes the termination is disciplinary, while the operation of Article 24, Section 1 arguably
+is not.
+As the Union points out, Article 24, Section 1 does not, standing alone, support the
+discharge. The section is procedural, and the evidence does not establish that the District
+demanded strict compliance with it. The District acknowledged granting the Grievant a leave
+in Johnston’s letter of May 18, 2000. His letter of December 20 cites Article 24, Section 1,
+but does not demand strict compliance with it. Rather, it affords the Grievant an opportunity
+to comply within “seven calendar days”. In any event, the final sentence of Article 24,
+Section 1 does not in itself extinguish seniority. Rather, it highlights the operation of
+Article 5, Section 3(a). Under that section the Grievant “forfeited” his seniority if he was
+absent “for more than one year” and “did not secure a leave of absence.” Johnston’s
+
+Page 24
+MA-11555
+December 20, 2000 letter establishes that the District did not extend the leave beyond one year.
+The letters of January 16 and February 23, 2001 underscore this, whether or not they demand
+strict compliance with Article 24, Section 1. The decision not to grant a leave beyond one year
+terminated the Grievant’s seniority under Article 5, Section 3(a). The reasonableness of that
+decision is source of the dispute. On this record, the plainly disciplinary assertion that the
+Grievant misrepresented the cause of his knee injury and the existence of his felony record is
+indistinguishable from the decision to deny a leave exceeding one year. Thus, the discussion
+below follows the stipulated issue and treats each basis for the termination as discipline.
+In my opinion, when the parties do not stipulate the standards defining just cause, two
+elements define it. First, the employer must establish conduct by the Grievant in which it has a
+disciplinary interest. Second, the employer must establish that the discipline imposed
+reasonably reflects its interest.
+The procedural background is somewhat tortuous, but the District asserts three areas of
+conduct in which it has a disciplinary interest. As noted above, two are plainly disciplinary as
+stated in Wold’s November 7, 2001 letter. The first is that the Grievant misrepresented fact on
+his employment application. The second is that he misrepresented the cause of his knee injury.
+As noted above, the third is less plainly disciplinary, and traces from Johnston’s letters of
+May 18 and December 20, 2000 through the termination letter. It is that the Grievant was
+absent for work beyond one year without an approved leave of absence.
+That the District has a disciplinary interest in a truthful response from the Grievant
+regarding his felony record demands little discussion. The District has an interest in the
+Grievant’s conviction for possessing, with the intent to deliver, a significant amount of drugs,
+if only to consider its impact on its policies and on its students. Beyond this, the District has a
+disciplinary interest in employee misrepresentation of fact.
+The evidence establishes that the Grievant misrepresented fact on the employment
+application. The Grievant’s and Breault’s testimony together form the defense to the District’s
+allegations. That testimony does not stand in the absence of refutation and is not reconcilable
+to established fact.
+Their accounts fail to establish an internally consistent account of the application
+process. Breault’s account leaves the application, perhaps completed, perhaps not, in either
+Christianson’s or Kleppe’s hands. The Grievant’s account leaves the application in the
+Grievant’s hands, with the felony question unanswered until after Breault’s consultation with
+the administration, when Breault completed it.
+The incompatibility of these accounts on this point is compelling. Under the Grievant’s
+view, he did not answer the felony question to avoid lying and its complications. Breault’s
+testimony does not support this and manifests the same reluctance to assume responsibility for
+
+Page 25
+MA-11555
+the misrepresentation.
+This shared unwillingness to state personal responsibility for
+completing the form establishes that they understood the fraudulent nature of the act. It
+undermines the credibility of their accounts, and magnifies the significance of other conflicts.
+For example, the Grievant testified that Breault participated in the interview process. This is
+consistent with Johnston’s recall, but not Breault’s.
+Beyond this, the accounts fail to establish a plausible explanation of why the form was
+filled out with a “No” response to the felony question. Breault’s account implies the form was
+filled out by one or both of the departing administrators. It affords no insight on why they
+would do so. Its claim to plausibility is that they discussed the Grievant’s work and agreed the
+conviction should not stand in the way of his hire. Assuming they were willing to hire the
+Grievant in spite of the conviction, why would they misrepresent fact to do so? The Grievant’s
+account affords no greater insight. Under either view, the administrators effectively authorized
+a fraudulent statement of fact to permit the Grievant an interview. Why the administrators
+would authorize the misrepresentation of fact to permit an interview is troublesome, for it
+assumes the existence of other applicants. Presumably, need for applicants does not account
+for the misrepresentation. Principle is no better an explanation. Why would the “principled”
+administrators authorize a lie, then pass on the risk of the lie? It is of some significance that
+both Breault’s and the Grievant’s accounts assert that the Grievant never addressed the matter
+with the administrators who actively advanced his interests. Each thus fails to account for how
+the “conspirators” developed the bond that warranted misrepresenting fact.
+In sum, without regard to conflicting evidence, Breault’s and the Grievant’s accounts
+establish their active involvement in an effort to misrepresent material fact on the Grievant’s
+application.
+Other evidence establishes the incredibility of their accounts. It is undisputed that the
+Board hired the Grievant in late December of 1992. The Grievant’s account has the hiring
+process wired at least in part by a Business Manager who left the District in October of 1992.
+It denies any role to Johnston, who supplied, in mid-December, the written recommendation
+that the Board acted on. Johnston’s account is reconcilable to the documentary evidence,
+including the date of the application form. The Grievant’s and Breault’s are not.
+Other bases cited by the parties to guide the determination of the credibility of witness
+testimony do not offer meaningful assistance. The District points to Breault’s history of
+difficulties with it. Without determining the merit of that conflict, it is unpersuasive to
+conclude anything other than the District and Breault had differences. The record in this case
+affords no basis for anything beyond speculation on the merit of the conflict.
+
+Page 26
+MA-11555
+The District’s inability to supply the complete application form has no determinative
+bearing on this issue. The Grievant does not dispute that he signed the form, or that it
+contained a material misrepresentation of fact. Rather, he disputes his responsibility for it.
+Standard indicators of credibility such as the demeanor of witnesses underscore the conclusions
+reached above.
+In sum, the record establishes that the Grievant, at a minimum, engineered the
+misrepresentation of fact on his employment application. In my opinion, whether Breault or
+the Grievant completed the form is inconsequential. His active and causal role establishes the
+existence of conduct in which the District has a disciplinary interest.
+The evidence on the second basis for the discharge is sufficiently troubling that the
+District acknowledges it is probably impossible to determine when and how the Grievant
+injured his knee. There is no evident basis to discredit Ohlfs’ testimony, and sound reason to
+credit it. He has no evident interest to lie, and no evident malice toward the Grievant. The
+lack of detail in his testimony does not undercut his credibility. However, he did wait a
+considerable time to come forward. In any event, his testimony affords little clarity on when
+the injury occurred. Was the Grievant obviously limping around the District for a month
+waiting for a chance to fake an injury? Davis’ testimony affords some corroboration to Ohlfs,
+but affords no more clarity on when the injury occurred. Beyond this, Davis testified that he
+observed swelling in the Grievant’s knee during a period of time he later acknowledged he was
+absent from the District. Spinks’ testimony complicates this milieu. Spinks had difficulty
+dating the conversations during which he alleges his brother informed him of his intent to lie
+about stepping into a hole. His testimony puts the conversations well past the date the Grievant
+made the injury report with the District, which undercuts his assertion that the Grievant spoke
+to him prior to making a bogus claim. However, the Grievant did file a WC injury report in
+late October which is consistent with Spinks’ recall of the timing of the conversations.
+Canfield’s testimony arguably corroborates Spinks’ by establishing the incident that gave rise
+to the conversations that led to the Grievant’s admissions. However, it undercuts the account
+to the extent she is credited, since she denies her mother would speak to Spinks. Beyond this,
+it clouds the attempt to isolate the time of injury, since the District implies the knee injury may
+have occurred at that point. These complications are a pale reflection of the difficulty of
+sorting out the conflicting interests of the Grievant and his brothers.
+The Grievant’s testimony affords little greater insight. The accident occurred on a
+Sunday when the Grievant was working alone. It is difficult to understand why he chose that
+Sunday to remove the chairs, why he chose his path to the dumpster, or how on a sunny
+morning he could not see a one foot wide and one foot deep hole.
+
+Page 27
+MA-11555
+On balance, the record is sufficiently opaque that reliable conclusions are difficult, if
+possible, regarding when and how he injured his knee. This conclusion makes it arguably
+impossible to conclude that the District has proven that he misrepresented the source of the
+injury. The “arguably” reflects that definitive conclusions on this point are not necessary to
+evaluate the District’s discharge decision. The record developed concerning the reporting and
+treatment of the injury has a direct and significant bearing on the final asserted basis for the
+discharge, and this precludes the need to make a definitive conclusion on when or how the
+Grievant injured his knee. For purposes of this record, this means the District has not proven
+that the Grievant misrepresented the source of the injury.
+As touched upon above, the third reason for the discharge turns on the reasonableness
+of the District’s decision not to extend the Grievant’s leave beyond one year. Whether or not
+the Grievant misrepresented the cause of his knee injury, his conduct during the leave bears
+directly on this reason. Johnston testified that the Grievant presented a “moving target”
+regarding the reporting and treatment of the knee injury.
+The record supports Johnston’s view. The point is subtle, but significant. The
+determination of a lie poses a vexing point. This is true on many levels, including when a
+fixed “truth” is definable. For example, the Grievant’s back injury either does or does not
+cause him sufficient pain to limit his activities. Only the Grievant can know this. His
+testimony is evidence, or an assertion of the truth. Other evidence can exist such as Spinks’
+statement that the Grievant admitted he held back on the test to avoid strenuous assignments.
+The determination of which account to credit, and thus take for “true” is one level of difficulty
+even when a fixed “truth” is at issue. Another level of difficulty is that perception inevitably
+colors “truth.” For example, the Grievant, perceiving past back pain could hold back on a test
+due to perceived symptoms of the past pain. If this perception is inaccurate in the sense that he
+could have performed the test without re-injury, his testimony would be “true” in the sense
+that he stated an honest perception, but “not true” in the sense that the perception does not
+correspond to physical reality.
+The record in this case poses both levels of difficulty and more. Davis stated that he
+thought the Grievant tried to rehabilitate. Davis also stated that the Grievant lied about the
+cause of the knee injury. Johnston’s point on the “moving target” nature of the Grievant’s
+conduct is subtle in the sense that it does not turn on whether the Grievant “lied” in the
+“misrepresentation of known fact” sense.
+Rather, it asserts that whether based on
+misrepresentation or perception, the Grievant’s conduct during and after the knee injury is
+uncooperative and unhelpful. This is a significant point regarding the provision of a leave
+beyond one year. Article 24, Section 1 need not demand the automatic extinguishment of the
+Grievant’s seniority to put his employment at risk, since it and Article 5, Section 3 demand
+that the District authorize leave beyond one year to permit the Grievant to keep his
+
+Page 28
+MA-11555
+employment status. It is unnecessary to determine whether the Grievant “lied” in the
+“misrepresentated fact” sense to conclude his conduct did not warrant the extension of a leave.
+The evidence establishes a manipulative and unhelpful course of conduct from the
+Grievant. This is true from the time of his application for employment. Crediting his account
+establishes that he approached Breault, the most likely District employee of influence who
+could be expected to be sympathetic. He informed Breault that he was on probation for the
+drug related offense of “possession.” The Grievant’s assertion that he was unaware that the
+offense was possession with intent to deliver is not credible. Even if he was not aware of the
+charge as a technical matter, he was aware of the offense and it is apparent he said no more
+than necessary to secure Breault’s involvement. His assertion that he did not complete the
+form, but let Breault complete the answer to the felony question is similarly remarkable.
+Whether or not the account is true, it sets a tone underlying the Grievant’s conduct and
+testimony. His responses were calculated, and became detailed to the degree necessary to
+achieve a desired result or to respond to specific, contrary fact.
+This pattern is evident throughout the course of the knee injury. In testimony, the
+Grievant asserted he was able to work a full-duty eight hour shift during the work hardening
+effort of November and December of 1999. He similarly asserted he worked essentially as
+before the injury after the January 2000 FCE. This underscores his general contention that his
+work effort was consistently high without assistance from the District and was diminished only
+by pain. This supports his post-termination desire to prove fitness for work. However, it
+offers little insight on why he terminated the 1999 work hardening program, or went off work
+in March of 2000. It is not reconcilable to Davis’ perception of his work performance and has
+no persuasive support in the documentary evidence of the injury and rehabilitation. Nor is his
+testimony internally consistent on details. On direct examination, he generally asserted that he
+neither required nor received light duty except in rare response to a direct order from a
+physician. However, when pressed on specifics on cross-examination, he acknowledged that
+he was unable to vacuum as a repetitive activity, perform tasks that involved deep bending or
+stooping, or shovel anything heavier than a “medium” snowfall. This reflects a consistent
+tendency in his testimony to make a general assertion, then back away from it as required
+when confronted with specific evidence.
+This tendency is manifested in his conduct to secure a leave beyond one year.
+Johnston’s December 20, 2000 letter notified him that his employment was in jeopardy, but
+allowed him to respond. The Grievant responded by supplying the handwritten note dated
+October 24, 2000, and a form stating a general rehabilitation protocol. The Grievant’s
+assertion that he supplied the District this note prior to receipt of Johnston’s letter is incredible,
+since it responds to Johnston’s citation of Article 24, Section 1.
+
+Page 29
+MA-11555
+Even if the assertion is credited, the note and the document supplied with it are
+significant for how little they offer. The handwritten note does not seek a leave, and the
+documentation says nothing of his condition. Article 24, Section 1 demands “written
+documentation of inability to work and expected date of return” for injury based absences of
+“up to sixty (60) days.” It further demands a “written leave of absence from the Employer”
+by the eighth month of an absence, and documentation “of inability to perform duties” as well
+as an explanation of why an injured employee “cannot reasonably be expected to return to
+work.” The Grievant’s response falls far short of the detail demanded, and thus manifests a
+continuing pattern of offering only sufficient detail to secure a personally desired result.
+Johnston emphasized his intention to terminate the leave at one year in a letter of
+January 16, 2001. The Grievant supplied a report of workability dated January 25, 2001, that
+noted he needed crutches and should not work through March 15. In late February, Johnston
+confirmed that the one-year leave would end March 23. On March 15, the Grievant supplied a
+work release. His testimony acknowledges he was, at best, sufficiently healed to try to work.
+More to the point, his response underscores the pattern noted above. When forced, he acted to
+the degree necessary to secure a desired result. His testimony asserts that he was progressing
+steadily through rehabilitation and had no idea it would take more than one year. The absence
+of unprompted documentation of this effort is noteworthy. His conduct affords no reason to
+believe he would have responded at all absent Johnston’s prompting.
+Against this background, Johnston’s conclusion that the Grievant afforded a “moving
+target” is reasonable, whether or not the Grievant misrepresented the cause of any specific
+injury. As a factual matter, the District has never afforded a leave exceeding one year. It has
+required other employees to successfully complete work hardening. As a contractual matter,
+Article 24, Section 1 and Article 5, Section 3 establish that extending a leave of absence
+beyond one year is a significant act of discretion. The Grievant’s injury history is significant,
+and his attempt to document his rehabilitation effort is fitful at best. Nothing in the evidence
+establishes that the Grievant, through his work record prior to the knee injury or through his
+rehabilitation effort earned the exercise of discretion from the District that he asserts as his
+right in this proceeding. The District has undergone a partial layoff at its high school. Its
+conclusion that it could not afford to carry the Grievant beyond one year cannot be dismissed
+as unreasonable under any view of the facts.
+That the Grievant secured a work release prior to the completion of the one year period
+does not alter this conclusion. Johnston’s skepticism regarding the release is reasonable, and
+the Grievant’s testimony acknowledges that his healing was incomplete. The final FCE at best
+establishes that he was capable of work hardening after the one year leave expired.
+
+Page 30
+MA-11555
+In sum, the District has a proven disciplinary interest in the first and third asserted
+bases for the discharge. The analysis thus turns to whether discharge reasonably reflects this
+proven interest.
+The two asserted bases of discharge are similar in the sense that they turn on a pattern
+of manipulation, if not misrepresentation, of fact. The misrepresentation of fact on the
+employment application is, in my view, egregious. The felony is for conduct directly bearing
+on the provision of educational services. That a school district has a significant interest in
+assessing the significance of a conviction for possession of drugs with the intent to deliver for
+an employee assigned or assignable to a school facility demands, in my view, no proof of
+actual harm. This is not to say the District could not choose to hire the Grievant, knowing his
+record. Rather, it underscores the need to know and the egregious nature of the Grievant’s
+conduct in masking the fact. The conviction could have served as a basis to make the hire, if
+the District concluded it made no difference or served to set an appropriate example. The
+Grievant chose not to risk that possibility. Under Article 9, Section 2, the progressive
+discipline procedure “need not be followed in cases of serious misconduct.” Misrepresentation
+of an application form is conduct that cannot be corrected in the sense of Article 9, Section 2.
+Standing alone, the misconduct arguably warrants discharge.
+The conduct does not, however, stand alone. Even if the Grievant did not misrepresent
+the source of the knee injury, his conduct reflects no more than an effort to manipulate the
+leave of absence process. He took no unprompted effort to secure the written leave required
+for an absence exceeding one year. When prompted, he first responded with documentation
+that does not meet the demands of Article 24, Section 1. When again prompted as the one year
+period ended, the Grievant responded with a general release of debatable worth. The District
+was under no contractual or factual compulsion to grant the Grievant a leave exceeding one
+year. The evidence establishes that its conclusion that the Grievant presented them a “moving
+target” regarding his injuries was reasonable, as was its conclusion that it could not afford to
+carry the Grievant beyond one year. Against this background, the discharge determination was
+reasonable and thus consistent with Article 5, Section 3 and Article 9, Sections 1 and 2.
+Before closing, it is appropriate tie this conclusion more closely to the Union’s
+arguments. Those arguments have persuasive force. The strength of the Union’s case is that
+the District, contrary to the assertions of the May 9, 2001 discharge letter, had work within the
+Grievant’s restrictions. The May 2, 2001 FCE appears an improvement over that of
+January 26, 2000, which appears an improvement over the 1995 FCE. Johnston’s raising of
+the weight limitation for the May 2, 2001 FCE over that stated in the job description supports
+the assertion that the District wanted the final FCE to justify an already made decision to
+terminate rather than to evaluate the Grievant’s ability to perform his job.
+
+Page 31
+MA-11555
+The difficulty with the Union’s argument is that it ignores events following the letter of
+termination, which are significant under the stipulation to address all of the asserted bases for
+the discharge. It is evident that Johnston doubted the Grievant’s sincerity well before evidence
+surfaced of the Grievant’s falsification of his employment application or of possible
+misrepresentation of the cause of the knee injury. The termination letter turned solely on the
+District’s attempt to enforce a one year limit to the leave of absence. The more plainly
+disciplinary bases for the discharge emerged after this.
+More to the point, Article 24, Section 1 and Article 5, Section 3(a) establish that the
+provision of a leave beyond one year is a contractually significant exercise of discretion. The
+strength of the Union’s argument is eroded by the Grievant’s conduct. The difficulty of
+determining the cause of the Grievant’s knee injury cannot obscure that his conduct regarding
+the employment application and his conduct to secure a leave beyond one year are marred by
+an evident effort to manipulate and to misrepresent fact. Work within the Grievant’s
+restrictions outside of a one year leave is not a matter of right. The District’s actions were
+reasonable and thus authorized by Articles 5 and 9.
+AWARD
+The District did have just cause to terminate the Grievant.
+The grievance is, therefore, denied.
+Dated at Madison, Wisconsin, this 8th day of July, 2002.
+
+Richard B. McLaughlin /s/
+Richard B. McLaughlin, Arbitrator
+
+RBM/gjc
+6401.doc

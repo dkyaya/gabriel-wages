@@ -1,0 +1,42 @@
+{
+  "by_group": {
+    "Midwest": {
+      "ambiguous_span_source_count": 42,
+      "extracted_ok_count": 73,
+      "no_span_or_weak_source_count": 14,
+      "positive_span_record_count": 50,
+      "span_extracted_source_count": 17,
+      "span_queue_count": 73,
+      "text_extraction_queue_count": 73
+    },
+    "Northeast": {
+      "ambiguous_span_source_count": 98,
+      "extracted_ok_count": 169,
+      "no_span_or_weak_source_count": 56,
+      "positive_span_record_count": 44,
+      "span_extracted_source_count": 15,
+      "span_queue_count": 169,
+      "text_extraction_queue_count": 169
+    },
+    "South": {
+      "ambiguous_span_source_count": 69,
+      "extracted_ok_count": 114,
+      "no_span_or_weak_source_count": 26,
+      "positive_span_record_count": 60,
+      "span_extracted_source_count": 19,
+      "span_queue_count": 114,
+      "text_extraction_queue_count": 114
+    },
+    "West": {
+      "ambiguous_span_source_count": 16,
+      "extracted_ok_count": 22,
+      "no_span_or_weak_source_count": 5,
+      "positive_span_record_count": 5,
+      "span_extracted_source_count": 1,
+      "span_queue_count": 22,
+      "text_extraction_queue_count": 22
+    }
+  },
+  "coverage_boundary": "Operational extraction coverage only; not prevalence, wage effects, or causal evidence.",
+  "group_count": 4
+}

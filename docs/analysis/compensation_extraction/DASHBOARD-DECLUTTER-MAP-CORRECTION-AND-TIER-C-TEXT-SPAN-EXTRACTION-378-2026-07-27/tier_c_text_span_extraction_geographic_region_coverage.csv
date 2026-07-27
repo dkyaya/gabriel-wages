@@ -1,0 +1,5 @@
+derived_region,text_extraction_queue_count,extracted_ok_count,span_queue_count,span_extracted_source_count,ambiguous_span_source_count,no_span_or_weak_source_count,positive_span_record_count
+Midwest,73,73,73,17,42,14,50
+Northeast,169,169,169,15,98,56,44
+South,114,114,114,19,69,26,60
+West,22,22,22,1,16,5,5

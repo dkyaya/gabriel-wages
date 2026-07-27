@@ -1330,6 +1330,19 @@ TIER_C_DASHBOARD_MAP_STATE_COVERAGE_PATH = (
 TIER_C_DASHBOARD_MAP_DATE_PATH = (
     TIER_C_READINESS_DASHBOARD_MAP_UPDATE_DIR / "dashboard_map_data_date.json"
 )
+DASHBOARD_DECLUTTER_TIER_C_TEXT_SPAN_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27"
+)
+DASHBOARD_DECLUTTER_TIER_C_TEXT_SPAN_DECISION_PATH = (
+    DASHBOARD_DECLUTTER_TIER_C_TEXT_SPAN_DIR
+    / "dashboard_declutter_map_correction_tier_c_text_span_extraction_decision.json"
+)
+DASHBOARD_DECLUTTER_TIER_C_TEXT_SPAN_INVARIANTS_PATH = (
+    DASHBOARD_DECLUTTER_TIER_C_TEXT_SPAN_DIR
+    / "dashboard_declutter_map_correction_tier_c_text_span_extraction_invariant_checks.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -1365,6 +1378,8 @@ REQUIRED_PATHS = [
     TIER_C_READINESS_DASHBOARD_MAP_UPDATE_INVARIANTS_PATH,
     TIER_C_DASHBOARD_MAP_STATE_COVERAGE_PATH,
     TIER_C_DASHBOARD_MAP_DATE_PATH,
+    DASHBOARD_DECLUTTER_TIER_C_TEXT_SPAN_DECISION_PATH,
+    DASHBOARD_DECLUTTER_TIER_C_TEXT_SPAN_INVARIANTS_PATH,
 ]
 OPTIONAL_PATHS = [
     CLAIM_REGISTER_PATH,
@@ -4419,6 +4434,38 @@ def tier_c_readiness_dashboard_map_update_status() -> tuple[bool, dict[str, Any]
     return True, decision
 
 
+def dashboard_declutter_tier_c_text_span_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize only the completed immutable 378-file text/span package."""
+    required = (
+        DASHBOARD_DECLUTTER_TIER_C_TEXT_SPAN_DECISION_PATH,
+        DASHBOARD_DECLUTTER_TIER_C_TEXT_SPAN_INVARIANTS_PATH,
+        DASHBOARD_DECLUTTER_TIER_C_TEXT_SPAN_DIR / "tier_c_text_layer_extraction_378_results_summary.json",
+        DASHBOARD_DECLUTTER_TIER_C_TEXT_SPAN_DIR / "tier_c_evidence_span_extraction_results_summary.json",
+        DASHBOARD_DECLUTTER_TIER_C_TEXT_SPAN_DIR / "tier_c_evidence_span_rating_candidate_summary.json",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    decision = read_json(DASHBOARD_DECLUTTER_TIER_C_TEXT_SPAN_DECISION_PATH)
+    invariants = read_json(DASHBOARD_DECLUTTER_TIER_C_TEXT_SPAN_INVARIANTS_PATH)
+    if not (
+        decision.get("decision") == "dashboard_declutter_map_correction_tier_c_text_span_completed_rating_ready"
+        and decision.get("text_extraction_queue_count") == 378
+        and decision.get("pdf_extraction_count") == 317
+        and decision.get("html_extraction_count") == 61
+        and decision.get("extraction_status_counts") == {"extracted_ok": 378}
+        and decision.get("span_extraction_queue_count") == 378
+        and decision.get("span_extracted_source_count") == 52
+        and decision.get("positive_span_record_count") == 159
+        and decision.get("rating_candidate_count") == 159
+        and decision.get("dashboard_map_filter") == "total_scout_coverage_only"
+        and decision.get("map_data_date") == "2026-07-27"
+        and decision.get("global_analysis_readiness") is False
+        and invariants.get("all_invariants_passed") is True
+    ):
+        raise ValueError("dashboard declutter/Tier C text-span package fails dashboard gates")
+    return True, decision
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -4726,6 +4773,7 @@ def build_state_summary(
                 "state": state,
                 "state_name": STATE_NAMES[state],
                 "municipality_universe": universe,
+                "total_scout_coverage_count": covered,
                 "scout_coverage_count": covered,
                 "scout_coverage_rate": percent(covered, universe),
                 "candidate_positive_count": candidate_positive,
@@ -4768,9 +4816,9 @@ def build_state_summary(
                 "tier_c_deferred_or_review_count": as_int(tier_c.get("tier_c_deferred_or_review_count")),
                 "tier_c_region": tier_c.get("derived_region") or None,
                 "map_color_metric": {
-                    "field": "evidence_readiness_score",
-                    "value": score,
-                    "scale": "0_to_100_operational_triage_only",
+                    "field": "total_scout_coverage_count",
+                    "value": covered,
+                    "scale": "state_total_scout_covered_municipality_count",
                 },
                 "short_state_narrative": narrative,
                 "printable_report_data": {
@@ -4797,8 +4845,8 @@ def build_state_summary(
         "metadata": {
             **metadata,
             "map_data_date": tier_c_map_date["map_data_date"],
-            "current_map_layer": "tier_c_retained_source_and_text_readiness_coverage",
-            "current_map_layer_boundary": "Operational retained/readiness metadata only; not representative and not a wage or causal result.",
+            "current_map_layer": "total_scout_coverage_only",
+            "current_map_layer_boundary": "Total local scout coverage only; not national representativeness and not a wage or causal result.",
             "global_analysis_readiness": False,
         },
         "metric_definition": {
@@ -4809,7 +4857,8 @@ def build_state_summary(
                 "and 10 for prior claim-registry context. It is not evidence strength "
                 "and cannot make a state claim-ready."
             ),
-            "map_color_metric": "evidence_readiness_score",
+            "total_scout_coverage_count": "Count of municipalities with a parseable local scout outcome in the committed coverage ledger.",
+            "map_color_metric": "total_scout_coverage_count",
         },
         "totals": {
             "states_and_dc": len(states),
@@ -5339,6 +5388,10 @@ def build_analysis_readiness(
         tier_c_readiness_dashboard_map_update_completed,
         tier_c_readiness_dashboard_map_update_decision,
     ) = tier_c_readiness_dashboard_map_update_status()
+    (
+        dashboard_declutter_tier_c_text_span_completed,
+        dashboard_declutter_tier_c_text_span_decision,
+    ) = dashboard_declutter_tier_c_text_span_status()
     if scale_1000_targeted_qa_completed and (
         scale_1000_targeted_qa_decision.get("qa_pass") is not True
         or scale_1000_targeted_qa_decision.get(
@@ -5385,7 +5438,9 @@ def build_analysis_readiness(
     return {
         "metadata": metadata,
         "overall_status": (
-            "tier_c_readiness_dashboard_map_update_completed_text_extraction_ready_global_analysis_closed"
+            "dashboard_declutter_map_correction_tier_c_text_span_completed_rating_ready_global_analysis_closed"
+            if dashboard_declutter_tier_c_text_span_completed
+            else "tier_c_readiness_dashboard_map_update_completed_text_extraction_ready_global_analysis_closed"
             if tier_c_readiness_dashboard_map_update_completed
             else
             "dashboard_fix_and_tier_c_download_completed_pdf_readiness_ready_dashboard_fixed_global_analysis_closed"
@@ -6474,6 +6529,23 @@ def build_analysis_readiness(
                     bool(tier_c_readiness_dashboard_map_update_decision.get("bounded_text_layer_extraction_ready_next", False))
                     if tier_c_readiness_dashboard_map_update_completed else False
                 ),
+                "dashboard_declutter_tier_c_text_span_completed": dashboard_declutter_tier_c_text_span_completed,
+                "dashboard_declutter_tier_c_text_span_decision": (
+                    dashboard_declutter_tier_c_text_span_decision.get("decision")
+                    if dashboard_declutter_tier_c_text_span_completed else None
+                ),
+                "tier_c_text_extraction_queue_count": (
+                    int(dashboard_declutter_tier_c_text_span_decision.get("text_extraction_queue_count", 0))
+                    if dashboard_declutter_tier_c_text_span_completed else 0
+                ),
+                "tier_c_positive_exact_span_count": (
+                    int(dashboard_declutter_tier_c_text_span_decision.get("positive_span_record_count", 0))
+                    if dashboard_declutter_tier_c_text_span_completed else 0
+                ),
+                "tier_c_evidence_span_rating_ready_next": (
+                    bool(dashboard_declutter_tier_c_text_span_decision.get("evidence_span_rating_ready_next", False))
+                    if dashboard_declutter_tier_c_text_span_completed else False
+                ),
                 "tier_c_dashboard_map_data_date": (
                     tier_c_readiness_dashboard_map_update_decision.get("map_data_date")
                     if tier_c_readiness_dashboard_map_update_completed else None
@@ -6915,6 +6987,9 @@ def build_project_phase_summary(
         and tier_c_readiness_invariants.get("all_invariants_passed") is True
     ):
         raise ValueError("current dashboard phase requires completed Tier C readiness/map update")
+    text_span_completed, text_span = dashboard_declutter_tier_c_text_span_status()
+    if not text_span_completed:
+        raise ValueError("current dashboard phase requires completed Tier C text/span extraction")
     mechanism = read_json(
         TARGETED_TIER_C_VERIFICATION_FROM_MEMO_GAPS_DIR
         / "targeted_tier_c_verification_mechanism_gap_coverage_summary.json"
@@ -6926,10 +7001,10 @@ def build_project_phase_summary(
     return {
         **metadata,
         "data_vintage": "2026-07-27",
-        "stage": "tier_c_text_readiness_complete_bounded_extraction_transition",
-        "current_phase": "Tier C text readiness reviewed; bounded extraction ready next",
-        "current_phase_code": tier_c_readiness["decision"],
-        "current_evidence_status": "bounded_co_location_documentary_scaffold_only",
+        "stage": "tier_c_text_and_exact_span_extraction_complete_bounded_rating_transition",
+        "current_phase": "Tier C text and exact-span extraction complete; bounded rating ready next",
+        "current_phase_code": text_span["decision"],
+        "current_evidence_status": "bounded_unrated_exact_documentary_spans_and_colocation_scaffolds_only",
         "global_analysis_readiness": False,
         "wage_gap_estimates_available": False,
         "final_causal_claims_available": False,
@@ -6965,11 +7040,20 @@ def build_project_phase_summary(
         "tier_c_octet_stream_count": tier_c_readiness["octet_stream_count"],
         "map_data_date": tier_c_readiness["map_data_date"],
         "dashboard_map_includes_latest_tier_c_numbers": tier_c_readiness["dashboard_map_updated"],
+        "dashboard_map_filter": "total_scout_coverage_only",
+        "tier_c_text_extraction_queue_count": text_span["text_extraction_queue_count"],
+        "tier_c_text_extracted_ok_count": text_span["extraction_status_counts"]["extracted_ok"],
+        "tier_c_span_extraction_queue_count": text_span["span_extraction_queue_count"],
+        "tier_c_span_extracted_source_count": text_span["span_extracted_source_count"],
+        "tier_c_positive_exact_span_count": text_span["positive_span_record_count"],
+        "tier_c_ambiguous_span_record_count": text_span["ambiguous_span_record_count"],
+        "tier_c_no_span_or_weak_source_count": text_span["span_status_counts"]["no_span_or_weak"],
+        "tier_c_rating_candidate_count": text_span["rating_candidate_count"],
         "future_scout_default": "broad_state_by_state_geographic_and_source_family_diverse",
         "mechanism_targeted_scouting_role": "secondary_gap_filling_after_broad_scans",
         "current_report_title": "Bounded Internal Mechanism-Linkage Claim Memo",
         "current_report_path": wage_stage["bounded_internal_mechanism_linkage_claim_memo_path"],
-        "current_operational_report_path": "docs/analysis/dashboard_deployment_fix_and_tier_c_source_review_download_556_result_2026-07-27.md",
+        "current_operational_report_path": "docs/analysis/dashboard_declutter_map_correction_tier_c_text_span_extraction_result_2026-07-27.md",
         "next_task": "bounded Tier C text-layer extraction over the 378 readiness-approved files",
         "checkpoint_target_scout_covered": SCOUT_CHECKPOINT_TARGET,
         "current_scout_covered": covered,
@@ -7018,17 +7102,17 @@ def build_project_phase_summary(
             "default to broad state-by-state scanning with geographic and source-family "
             "balance; use mechanism-targeted scouting only as secondary gap-filling."
         ),
-        "next_phase": "bounded Tier C text-layer extraction",
+        "next_phase": "bounded Tier C exact evidence-span rating",
         "next_phase_sequence": [
-            "lock only the parse-text-layer-later and HTML-text-later manifests",
-            "extract local machine-readable text with exact retained-source lineage",
-            "keep PDF and HTML extraction lanes explicit",
-            "exclude every deferred, oversized, noisy, corrupt, and review-needed row",
-            "preserve the broad geographic/source-family strategy for the next scout wave",
+            "lock only the 159 exact positive Tier C span candidates",
+            "rate exact spans without source-document, URL, PDF, or full-text access",
+            "exclude ambiguous and no-span/weak source outcomes",
+            "preserve verbatim spans, offsets, hashes, and full lineage",
+            "keep every claim bounded and global analysis readiness false",
         ],
         "regressions_status": "Deferred",
         "last_updated_commit": CURRENT_SOURCE_ACCOUNTING_COMMIT,
-        "last_updated_context": "tier_c_text_readiness_reviewed_dashboard_map_dated_extraction_ready",
+        "last_updated_context": "dashboard_decluttered_total_scout_map_tier_c_text_and_span_extraction_rating_ready",
         "future_live_controls": [
             "stronger preflight gate",
             "compact prompts",
@@ -7039,7 +7123,7 @@ def build_project_phase_summary(
         ],
         "caveats": [
             "Historical discovery and candidate-queue panels are preserved as labeled historical context.",
-            "The 463 retained Tier C files are not extracted, rated, ingested, codified, causal, or analysis-ready.",
+            "The 378 extracted Tier C text artifacts and 159 positive exact spans are not rated, ingested, codified, causal, or analysis-ready.",
             "The bounded memo supports documentary co-location scaffolds only.",
             "Wage gaps have not been calculated.",
             "Regressions, treatment-effect estimates, national prevalence claims, and final causal claims are unavailable.",
@@ -10535,10 +10619,16 @@ def build_text_table_calibration_status_summary(
             tier_c_readiness_dashboard_map_update_completed,
             tier_c_readiness_dashboard_map_update_decision,
         ) = tier_c_readiness_dashboard_map_update_status()
+        (
+            dashboard_declutter_tier_c_text_span_completed,
+            dashboard_declutter_tier_c_text_span_decision,
+        ) = dashboard_declutter_tier_c_text_span_status()
         return {
             **metadata,
             "calibration_phase": (
-                tier_c_readiness_dashboard_map_update_decision.get("decision")
+                dashboard_declutter_tier_c_text_span_decision.get("decision")
+                if dashboard_declutter_tier_c_text_span_completed
+                else tier_c_readiness_dashboard_map_update_decision.get("decision")
                 if tier_c_readiness_dashboard_map_update_completed
                 else
                 dashboard_fix_tier_c_source_review_download_556_decision.get("decision")
@@ -12305,6 +12395,19 @@ def build_text_table_calibration_status_summary(
             "tier_c_bounded_text_extraction_ready_next": (
                 bool(tier_c_readiness_dashboard_map_update_decision.get("bounded_text_layer_extraction_ready_next", False))
                 if tier_c_readiness_dashboard_map_update_completed else False
+            ),
+            "dashboard_declutter_tier_c_text_span_completed": dashboard_declutter_tier_c_text_span_completed,
+            "tier_c_text_extracted_ok_count": (
+                int(dashboard_declutter_tier_c_text_span_decision.get("extraction_status_counts", {}).get("extracted_ok", 0))
+                if dashboard_declutter_tier_c_text_span_completed else 0
+            ),
+            "tier_c_positive_exact_span_count": (
+                int(dashboard_declutter_tier_c_text_span_decision.get("positive_span_record_count", 0))
+                if dashboard_declutter_tier_c_text_span_completed else 0
+            ),
+            "tier_c_evidence_span_rating_ready_next": (
+                bool(dashboard_declutter_tier_c_text_span_decision.get("evidence_span_rating_ready_next", False))
+                if dashboard_declutter_tier_c_text_span_completed else False
             ),
             "tier_c_dashboard_map_data_date": (
                 tier_c_readiness_dashboard_map_update_decision.get("map_data_date")

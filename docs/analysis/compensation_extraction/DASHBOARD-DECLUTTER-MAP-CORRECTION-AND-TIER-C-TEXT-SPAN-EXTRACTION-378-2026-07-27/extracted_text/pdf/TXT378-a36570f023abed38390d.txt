@@ -1,0 +1,2309 @@
+General Fund
+Account Number
+Income
+01-301-100
+01-301-200
+01-301-400
+01-301-600
+
+Account Title
+
+2021 Budget
+
+Real Estate Taxes-Current Year
+Real Estate Taxes-Prior Year
+Real Estate Taxes-Delinquent
+Real Estate Taxes-Interim
+Total 301 Real Estate Taxes
+
+2,765,000.00
+485.00
+13,095.00
+6,790.00
+2,785,370.00
+
+01-310-100
+01-310-200
+01-310-500
+01-310-600
+
+Real Estate Transfer Taxes
+Earned Income Tax
+Local Service Tax
+Admissions Taxes
+Total 310 Local Tax Enabling Act Taxes
+
+468,000.00
+3,038,750.00
+182,280.00
+29,700.00
+3,718,730.00
+
+01-321-700
+01-321-800
+01-321-900
+01-321-902
+
+Amusement Permits
+Cable Television Franchise
+Other Licenses & Permits
+Contractors Registration
+Total 321 Business Licenses and Permits
+
+260.00
+346,500.00
+1,200.00
+9,000.00
+356,960.00
+
+01-322-820
+
+Road Encroachment Permits
+Total 322 Non-Business Licenses & Permits
+
+3,000.00
+3,000.00
+
+01-331-000
+01-331-100
+01-331-120
+
+Fines
+Alarm Fines
+Ordinance Violation Fines
+Total 331 Fines
+
+44,000.00
+2,000.00
+1,000.00
+47,000.00
+
+01-341-000
+
+Interest Earnings
+Total 341 Interest Earnings
+
+57,000.00
+57,000.00
+
+01-342-000
+01-342-100
+
+Rent-Water & Sewer Authority
+Rent-Land
+Total 342 Rents and Royalties
+
+48,000.00
+250.00
+48,250.00
+
+01-355-010
+01-355-080
+01-355-090
+01-355-130
+
+Utilities Real Estate Tax
+Alcoholic Beverage Tax
+Recycling Grant
+Foreign Fire Ins Prem Tax
+Total 355 State Shared Revenues
+
+7,000.00
+1,950.00
+28,000.00
+121,000.00
+157,950.00
+
+01-357-050
+
+State Aid-Pension Plans
+Total 357 Local Government Units Capital
+
+252,000.00
+252,000.00
+
+01-361-300
+01-361-330
+01-361-340
+01-361-350
+01-361-400
+01-361-500
+
+Zoning Permits
+Subdiv/L.D. Filing Fees
+Zoning Hearing Board Fees
+Admin Charges
+Registrations
+Sale of Maps, Ordinances, Fingerprinting
+Total 361 General Government
+
+50,000.00
+40,000.00
+12,000.00
+30,000.00
+7,300.00
+500.00
+139,800.00
+
+01-362-110
+01-362-112
+01-362-400
+01-362-401
+01-362-450
+01-362-452
+01-362-453
+
+Sale of Copies of Accident Rep
+Fines-Parking Tickets
+Building Permits
+Building Re-Inspection
+Occupancy Permits
+Fire Inspection-Annual
+Fire Inspector Re-Inspection
+Total 362 Public Safety
+
+3,000.00
+200.00
+250,000.00
+750.00
+60,000.00
+24,000.00
+500.00
+338,450.00
+
+01-379-010
+01-379-011
+
+Police Contr Serv/Reimbursemen
+Pub Works Contr Serv Reimb
+Total 379 Contracted Service Revenue
+
+20,000.00
+100.00
+20,100.00
+
+01-387-000
+
+Contribution-Developer
+Total 387 Contributions and Donations
+
+10,000.00
+10,000.00
+
+01-391-100
+
+Sale of General Fixed Assets
+Total 391 Proceeds of General Fixed Asset
+
+10,000.00
+10,000.00
+
+01-399-000
+
+Cash Balance Forward
+Total 399 Cash Balance Forward
+
+Total Income
+Expense
+01-400-110
+01-400-112
+
+01-401-112
+01-401-113
+01-401-114
+01-401-115
+01-401-140
+01-401-190
+01-401-191
+01-401-200
+01-401-238
+01-401-320
+01-401-325
+
+10,730,000.00
+10,730,000.00
+18,674,610.00
+
+Salaries & Wages-Supervisors
+Seminar Expense-Supervisors
+Total 400 Legislative Body
+
+9,750.00
+800.00
+10,550.00
+
+Seminar/Meeting Exp-Manager
+Seminar-Admin Support, Finance
+Employee Recog/Meeting Expense
+Personnel Testing & Evaluation
+Personnel Services/Salary
+Finance Dept Ins-Health/Life
+Adm Dept Ins-Health/Life/Disb
+Office Supplies
+Admin Uniform Expense
+Communication Expense
+Postage
+
+1,500.00
+2,000.00
+1,000.00
+300.00
+382,100.00
+38,000.00
+64,000.00
+4,000.00
+2,000.00
+8,500.00
+3,500.00
+
+01-401-340
+01-401-341
+01-401-350
+01-401-421
+01-401-450
+01-401-500
+01-401-800
+
+Advertising
+Printing
+Officials' Bond Premium
+Dues/Memberships
+Contract Services Maint/Repair
+Newsletter Expense
+Vehicle Expense
+Total 401 Executive
+
+7,000.00
+500.00
+2,400.00
+5,000.00
+10,000.00
+5,500.00
+1,000.00
+538,300.00
+
+01-402-110
+
+Auditing Services
+Total 402 Financial Administration
+
+20,500.00
+20,500.00
+
+01-403-110
+01-403-111
+01-403-112
+01-403-200
+01-403-350
+
+Salary-Tax Collector
+Salary-Keystone EIT
+Salary-Keystone LST
+Tax Collector-Print & Postage
+Tax Collector's Bond Premium
+Total 403 Tax Collection
+
+51,150.00
+45,000.00
+3,200.00
+2,400.00
+1,600.00
+103,350.00
+
+01-404-100
+01-404-311
+01-404-312
+01-404-313
+01-404-314
+
+Solicitor
+Legal-Personnel
+Ordinances & Resolutions
+Legal Escrow Fees
+Litigation
+Total 404 Law
+
+25,000.00
+12,000.00
+4,000.00
+3,000.00
+6,000.00
+50,000.00
+
+01-407-200
+01-407-310
+01-407-450
+
+Minor Hardware/Software
+Automated Payroll Service
+Contract Ser-Software/Hardware
+Total 407 Data Processing
+
+17,000.00
+6,000.00
+17,000.00
+40,000.00
+
+01-408-310
+01-408-313
+01-408-618
+
+Engineer
+Engineering Escrow Fees
+Engineer-Township Projects
+Total 408 Engineer
+
+30,000.00
+5,000.00
+65,000.00
+100,000.00
+
+01-409-200
+01-409-230
+01-409-250
+01-409-251
+01-409-255
+01-409-360
+01-409-450
+
+Township Building-Materials &
+Heating Fuel-Guinea Lane
+Township Building-Maint & Repa
+EMS Building- Maint & Repair
+Pub Works Bldg-Maint & Repair
+Township Building-Fuel
+Contracted Serv-Twp Bldg
+Total 409 General Government Buildings
+
+5,000.00
+2,000.00
+35,000.00
+1,500.00
+7,000.00
+30,000.00
+30,000.00
+110,500.00
+
+01-410-100
+01-410-112
+
+Animal Control Officer
+Bike Patrol/Community Policing
+
+15,000.00
+1,000.00
+
+01-410-114
+01-410-130
+01-410-140
+01-410-190
+01-410-191
+01-410-200
+01-410-201
+01-410-202
+01-410-230
+01-410-238
+01-410-239
+01-410-240
+01-410-242
+01-410-259
+01-410-260
+01-410-261
+01-410-262
+01-410-270
+01-410-316
+01-410-320
+01-410-322
+01-410-342
+01-410-370
+01-410-450
+
+Emergency Response Team
+Salaries & Wages-Uniformed
+Salaries & Wages- Non-Uniform
+Police Dept Ins-Health/Life/Di
+Police NU Ins-Health/Life/Disb
+Office Supplies 2
+Postage 2
+Meeting Expense
+Vehicle Expense-Gasoline
+Clothing & Uniforms
+Clothing/Uniform-Crossing Guar
+Clothing Maintenance
+Operating Supplies
+Operating Equipment-Cert
+Operating Equipment-Police
+Office Equipment-Police
+Firearms Rep/Repair
+Technology
+Training & Evaluation
+Communication Exp-Repairs
+Mobile Expense
+Printing 2
+Vehicles-Repair & Maintenance
+Contracted Serv-Maint & Repair
+Total 410 Police
+
+5,000.00
+2,145,000.00
+95,000.00
+510,000.00
+27,000.00
+2,500.00
+500.00
+250.00
+25,000.00
+15,000.00
+600.00
+2,000.00
+4,750.00
+3,500.00
+7,000.00
+1,000.00
+1,000.00
+25,000.00
+15,000.00
+12,500.00
+3,500.00
+500.00
+23,000.00
+31,000.00
+2,971,600.00
+
+01-411-300
+01-411-302
+01-411-303
+01-411-304
+01-411-322
+01-411-450
+01-411-500
+01-411-800
+
+Fire Inspector Expenses
+Manuals/Dues/Subscriptions
+Fire Prevention Prog/Materials
+Emergency Management/QRS
+Mobile Phone Expense
+Firefighter Incentive & Retent
+Foreign Fire Ins Premium Tax
+Vehicle Expense 2
+Total 411 Fire
+
+43,000.00
+325.00
+500.00
+6,000.00
+350.00
+10,000.00
+121,000.00
+500.00
+181,675.00
+
+01-412-540
+
+Contributions & Grants
+Total 412 Ambulance/ Rescue
+
+5,000.00
+5,000.00
+
+01-413-210
+01-413-450
+
+Code Enforcement Expenses
+Contracted ServicesTotal 413 Protective Inspection
+
+1,850.00
+115,000.00
+116,850.00
+
+01-414-100
+01-414-110
+01-414-111
+01-414-190
+
+ZHB Member Salaries
+P/Z Salaries
+Meeting Expense
+PZ Dept Ins-Health/Life/Disb
+
+950.00
+217,000.00
+150.00
+98,000.00
+
+01-414-200
+01-414-270
+01-414-300
+01-414-314
+01-414-420
+01-414-451
+01-414-501
+01-414-700
+01-414-800
+
+Supplies
+Technology
+Other Services/Charges-Court
+ZHB Legal Services
+Planning Seminars/Dues
+Credit Card Fees
+Household Hazardous Contrib
+Records Management
+Vehicle Expense 3
+Total 414 Planning and Zoning
+
+500.00
+3,000.00
+400.00
+12,000.00
+1,500.00
+800.00
+2,000.00
+4,000.00
+500.00
+340,800.00
+
+01-430-112
+01-430-114
+01-430-120
+01-430-190
+01-430-200
+01-430-238
+01-430-260
+01-430-316
+01-430-320
+01-430-322
+01-430-327
+01-430-450
+
+Seminar/Education/Hwy
+Employee Recognition
+Salaries & Wages
+Highway Dept Ins-Health/Life/D
+Office Supplies
+Uniforms & Safety Equipment
+Small Tools & Minor Equipment
+Training/Evaluation/Hwy
+Highway Communication
+Highway Mobile Phone
+Equipment Repair & Maintenance
+Contracted Services
+Total 430 Highway Maintenance- General
+
+250.00
+150.00
+444,000.00
+175,000.00
+600.00
+7,500.00
+12,000.00
+500.00
+3,000.00
+950.00
+60,000.00
+5,000.00
+708,950.00
+
+01-432-000
+
+Highway Maintenance-Snow/Ice
+Total 432 Highway Maintenance- Snow/ Ice
+
+100,000.00
+100,000.00
+
+01-433-000
+01-433-010
+01-433-250
+01-433-600
+
+Traffic Lights-Peco
+Highway Maint-Street Signs
+Traffic Signals Maint/Repair
+School Zone Lights
+Total 433 Highway Maint- Street Sign
+
+4,000.00
+3,000.00
+6,000.00
+1,500.00
+14,500.00
+
+01-434-000
+01-434-250
+
+Street Lighting-Peco
+Street Lighting Maint/Repair
+Total 434 Highway Maintenance- Lights
+
+38,000.00
+30,000.00
+68,000.00
+
+01-436-000
+
+Highway Maint-Storm Sewers
+Total 436 Highway Maintenance- Storm
+
+50,000.00
+50,000.00
+
+01-437-200
+
+Repair of Trails
+Total 437 Repair of Trails
+
+90,000.00
+90,000.00
+
+01-438-000
+01-438-231
+01-438-232
+
+Highway Maint-Roads & Bridges
+Highway Fuel
+Diesel Fuel
+
+107,000.00
+10,000.00
+15,000.00
+
+Total 438 Highway Maintenance Construction
+
+132,000.00
+
+01-446-000
+
+Storm Water Mgmt-Flood Control
+Total 446 Storm Water Mgmt. Flood Control
+
+10,000.00
+10,000.00
+
+01-459-100
+01-459-530
+
+Historic/Millbrook Society
+Community Program Contribution
+Total 459 Historial Society
+
+5,000.00
+1,500.00
+6,500.00
+
+01-461-710
+
+Conservation Easement
+Total 461 Community Development
+
+164,000.00
+164,000.00
+
+01-484-000
+
+Workers Comp Insurance
+Total 484 Workers Compensation
+
+98,000.00
+98,000.00
+
+01-485-000
+
+Unemploy Comp-Employer's Contr
+Total 485 Unemployment Compensation
+
+10,000.00
+10,000.00
+
+01-486-157
+01-486-158
+01-486-159
+01-486-160
+01-486-161
+01-486-162
+01-486-351
+
+Post Ret Health Oblig-OPEB
+457 Plan-Matching Pension
+Police Pension Plan Contribut
+NU Emp DB Pension Plan Contrib
+FICA(Social Sec)-Employer Cont
+NU Emp DC Pension Plan Contrib
+Package Policy Insurance
+Total 486 Insurance Premiums
+
+64,000.00
+76,000.00
+492,700.00
+42,100.00
+280,000.00
+51,000.00
+92,000.00
+1,097,800.00
+
+01-492-000
+01-492-030
+
+Transfer to General Obligation Fund
+Transfer to Capital Project Fund
+Total 492 Interfund Operating Transfers
+
+2,450,000.00
+375,000.00
+2,825,000.00
+
+Total Expense
+Net Income
+
+9,963,875.00
+8,710,735.00
+
+Capital Projects Fund
+Account Number
+Income
+30-341-000
+
+Account Title
+
+30-392-010
+
+Transfer From General Fund
+Total 392 Interfund Operating Transfers
+
+375,000.00
+375,000.00
+
+30-399-000
+
+Cash Balance Forward
+Total 399 Cash Balance Forward
+
+35,000.00
+35,000.00
+410,120.00
+
+Administrative Furniture
+Total 401 Executive
+
+18,000.00
+18,000.00
+
+30-409-452
+
+Capital Improvements Municipal
+Total 409 General Gov Building & Plant
+
+250,500.00
+250,500.00
+
+30-410-745
+30-410-746
+
+Police Vehicle
+Watchguard MVR
+Total 410 Police
+
+57,000.00
+21,000.00
+78,000.00
+
+30-430-400
+
+Public Works Projects
+Total 430 Public Works
+
+61,500.00
+61,500.00
+408,000.00
+2,120.00
+
+Total Income
+Expense
+30-401-747
+
+Total Expense
+Net Income
+
+Interest Earnings
+Total 341 Interest Earnings
+
+2021 Budget
+120.00
+120.00
+
+Parks & Recreation Fund
+Account Number
+37-301-100
+37-301-200
+37-301-400
+37-301-600
+
+Account Title
+Real Estate Taxes-Current Year
+Real Estate Taxes-Prior Year
+Real Estate Taxes-Delinquent
+Real Estate Taxes-Interim
+Total 301 Real Estate Taxes
+
+37-341-000
+
+Interest Earnings
+Total 341 Interest Earnings
+
+37-360-001
+37-360-002
+37-360-004
+37-360-005
+37-360-801
+37-360-810
+37-360-820
+37-360-830
+
+Summer Camp-Teen
+Summer Camp-Youth Day Camp
+Arts Programs
+Sports Programs
+Field Usage Fee
+Park Usage Fee
+Excursion/Ticket Sales
+Special Events Permits
+Total 360 Culture- Recreation
+
+25,500.00
+57,750.00
+16,500.00
+35,000.00
+7,500.00
+4,500.00
+13,500.00
+300.00
+160,550.00
+
+37-387-100
+37-387-200
+37-387-300
+37-387-500
+
+Contribution-Developer
+Movies in the Park
+Seasonal Celebrations
+Lewy Body Walk
+Total 387 Contrib & Donations Private
+
+45,000.00
+3,400.00
+4,050.00
+8,500.00
+60,950.00
+
+37-399-000
+
+Cash Balance Forward
+Total 399 Cash Balance Forward
+
+360,000.00
+360,000.00
+815,591.00
+
+Total Income
+Expense
+37-403-110
+
+2021 Budget
+230,000.00
+194.00
+1,552.00
+485.00
+232,231.00
+1,860.00
+1,860.00
+
+Salary-Tax Collector
+Total 403 Tax Collector
+
+4,262.00
+4,262.00
+
+37-407-200
+
+Minor Hardware/ Technology
+Total 407 Data Processing
+
+1,000.00
+1,000.00
+
+37-450-450
+37-450-820
+
+Contracted Services
+Excursion/Ticket Sales
+Total 450 Park & Recreation Other
+
+6,200.00
+13,500.00
+19,700.00
+
+37-451-112
+37-451-113
+37-451-320
+
+Seminars/Education
+Meeting Expense
+Communication/Phones
+
+1,000.00
+100.00
+1,600.00
+
+37-451-400
+37-451-421
+37-451-451
+
+Office Supplies
+Dues/Subscriptions
+Credit Card Fees
+Total 451 Administration
+
+600.00
+250.00
+4,800.00
+8,350.00
+
+37-452-002
+37-452-004
+37-452-005
+37-452-101
+
+Summer Camp-Youth Day Camp
+Arts Programs
+Sports Programs
+Summer/Teen Camp Salaries
+Total 452 Participant Recreation
+
+13,875.00
+8,250.00
+20,000.00
+32,000.00
+74,125.00
+
+37-453-200
+
+Movies in the Park
+Total 453 Spectator Recreation
+
+4,300.00
+4,300.00
+
+37-454-100
+37-454-140
+37-454-150
+37-454-200
+37-454-202
+37-454-203
+37-454-204
+37-454-205
+37-454-300
+
+Park Salaries/Maintenance
+Salary-Park Admin/Programs
+Park Employees Benefits
+Maintenance & Repair of Equip
+Playground/ Park Maintenance/Repair
+Vehicle/Equip Maint & Repair
+Landscape/Field/Facility Maint
+Sanitation/Portable Toilets
+Peco-Parks
+Total 454 Parks
+
+67,000.00
+141,000.00
+7,000.00
+35,000.00
+16,500.00
+2,000.00
+28,000.00
+3,200.00
+6,500.00
+306,200.00
+
+37-457-300
+37-457-500
+
+Seasonal Celebrations
+Lewy Body Walk
+Total 457 Civic & Military Celebrations
+
+4,050.00
+8,500.00
+12,550.00
+430,487.00
+385,104.00
+
+Total Expense
+Net Income
+
+Park & Rec Capital
+Account Number
+38-301-100
+38-301-200
+38-301-400
+38-301-600
+
+Account Title
+Real Estate Taxes-Current Year
+Real Estate Taxes-Prior Year
+Delinquent Taxes
+Real Estate Taxes-Interim
+
+2021 Budget
+230,000.00
+194.00
+1,552.00
+485.00
+
+Total 301 Real Property Taxes
+
+232,231.00
+
+38-341-000
+
+Interest Earnings
+Total 341 Interest Earnings
+
+1,860.00
+1,860.00
+
+38-387-100
+
+Contribution-Developer
+Total 387 Contributions/ Donations
+
+10,000.00
+10,000.00
+
+38-399-000
+
+Cash Balance Forward
+Total 399 Cash Balance
+
+495,000.00
+495,000.00
+739,091.00
+
+Salary-Tax Collector
+Total 403 Tax Collector
+
+4,262.00
+4,262.00
+
+Total Income
+Expense
+38-403-110
+
+38-452-701
+38-452-746
+Total Expense
+Net Income
+
+Parks & Rec Capital Construct
+Parks & Rec Equipment Purchase
+Total 452 Park & Recreation Capital
+
+208,500.00
+15,000.00
+223,500.00
+227,762.00
+511,329.00
+
+Road Machinery Fund
+Account Number
+04-301-100
+04-301-200
+04-301-400
+04-301-600
+
+Account Title
+Real Estate Taxes-Current Year
+Real Estate Taxes-Prior Year
+Real Estate Taxes-Delinquent
+Real Estate Taxes-Interim
+Total 301 Real Estate Taxes
+
+04-341-000
+
+Interest Earnings
+Total 341 Interest Earnings
+
+04-399-000
+
+Cash Balance Forward
+Total 399 Cash Balance Forward
+
+11,700.00
+11,700.00
+127,815.00
+
+Salary-Tax Collector
+Total 403 Tax Collector
+
+2,132.00
+2,132.00
+2,132.00
+125,683.00
+
+Total Income
+Expense
+04-401-110
+Total Expense
+Net Income
+
+2021 Budget
+115,600.00
+97.00
+242.50
+145.50
+116,085.00
+30.00
+30.00
+
+Highway Aid Fund
+Account Number
+35-341-000
+
+Account Title
+Interest Earnings
+Total 341 Interest Earnings
+
+35-355-030
+35-355-050
+
+State Turnback (Liquid Fuels)
+Motor Vehicle Fuel Taxes
+Total 355 State Shared Revenue
+
+5,280.00
+421,000.00
+426,280.00
+
+35-399-000
+
+Cash Balance Forward
+Total 399 Cash Balance Forward
+
+88,650.00
+88,650.00
+516,130.00
+
+Highway Construction-Roads
+Total 439 Hwy Construction & Rebuilding
+
+485,000.00
+485,000.00
+485,000.00
+31,130.00
+
+Total Income
+Expense
+35-439-000
+Total Expense
+Net Income
+
+2021 Budget
+1,200.00
+1,200.00
+
+Firehouse Funds
+Account Number
+Income
+03-301-100
+03-301-200
+03-301-400
+03-301-600
+
+Account Title
+Real Estate Taxes-Current Year
+Real Estate Taxes-Prior Year
+Real Estate Taxes-Delinquent
+Real Estate Taxes-Interim
+Total 301 Real Estate Taxes
+
+171,900.00
+194.00
+1,552.00
+485.00
+174,131.00
+
+03-341-000
+
+Interest Earnings
+Total 341 Interest Earnings
+
+2,040.00
+2,040.00
+
+03-399-000
+03-399-001
+
+Cash Balance Forward-WFC
+Cash Balance Forward-HFC
+Total 399 Cash Balance Forward
+
+Total Income
+Current Income
+Expense
+03-401-110
+
+03-411-200
+03-411-300
+03-411-740
+03-411-840
+Total Expense
+Net Income
+
+Salary-Tax Collector
+Total 401 Executive
+Operating Expenses-Warwick
+Operating Expenses-Hartsville
+Capital Purchases-Warwick
+Capital Purchases-Hartsville
+Total 411 Fire
+
+2021 Budget
+
+646,600.00
+13,400.00
+660,000.00
+836,171.00
+176,171.00
+
+3,200.00
+3,200.00
+88,200.00
+5,200.00
+74,800.00
+5,200.00
+173,400.00
+176,600.00
+659,571.00
+
+General Obligation Fund
+Account Number
+Income
+15-392-010
+
+Account Title
+Transfer from General Fund
+Total Transfer
+
+2,450,000.00
+2,450,000.00
+
+15-399-000
+
+Cash Balance Forward
+Total 399 Cash Balance Forward
+
+387,000.00
+387,000.00
+2,837,000.00
+
+Principal-Note 2011
+Principal-Note 2014
+Principal-Radio Country Loan
+Principal-Note 2015
+Total 471 Debt Principal
+
+486,760.00
+101,240.00
+62,600.00
+2,186,400.00
+2,837,000.00
+2,837,000.00
+-
+
+Total Income
+Expense
+15-471-060
+15-471-065
+15-471-070
+15-471-075
+Total Expense
+Net Income
+
+2021 Budget
+
+Capital Reserve Fund
+Account Number
+Income
+43-341-000
+
+Account Title
+
+43-399-000
+
+Cash Balance Forward
+Total 399 Cash Balance Forward
+
+Total Income
+Expense
+43-492-010
+43-492-030
+Total Expense
+Net Income
+
+Interest Earnings
+Total 341 Interest Earnings
+
+Transfer to General Fund
+Transfer to Capital Projects
+Total 492 Interfund Operating Transfers
+
+2021 Budget
+900.00
+900.00
+223,300.00
+223,300.00
+224,200.00
+
+224,200.00
+
+Worksheet for the 2021 Budget
+
+GENERAL FUND
+REVENUES
+REAL ESTATE TAXES
+01.301.100 – REAL ESTATE TAXES - CURRENT YEAR
+15.25 mills total: 12.0 mills for General Fund revenue
+The real estate tax rate expressed as a per mill (amount of tax per thousand currency units of property
+value), which is also known as a millage rate or mill levy. (A mill is also one-thousandth of a dollar.) To
+calculate the property tax, multiply the assessed value of the property by the mill rate and then divide
+by 1,000. For example, a property with an assessed value of $40,000 located in Warwick with a mill rate
+of 15.25 mills would have a local real estate tax bill of $610 per year.
+01.301.200 – REAL ESTATE TAXES - PRIOR YEAR
+01.301.400 – REAL ESTATE -DELINQUENT
+Delinquent RE Taxes owed based on actual collections
+01.301.600 – REAL ESTATE TAX - INTERIM
+Based on history and economic conditions of housing industry, along with anticipated development
+LOCAL TAX ENABLING ACT TAXES
+01.310.100 – REAL ESTATE TRANSFER TAX
+Number reflects YTD actual and ongoing flat real estate re-sales.
+01.310.200 – EARNED INCOME TAX
+Collected by Keystone Tax Collectors at a 1.34% collection rate- Remains primary source of operational
+funding.
+01.310.500 – LOCAL SERVICE TAX
+Tax paid by those employed in the boundaries of Warwick Township, collected at a 1.75% fee rate by
+Keystone Tax Collectors.
+01.310.600 – ADMISSION TAXES
+Equals 5% of 40% of all greens fees, 5% of other amusement admissions, including ice rink and
+swimming pool public admissions.
+BUSINESS LICENSES & PERMITS
+01.321.700 – AMUSEMENT PERMITS
+For permits required for amusement devices.
+01.321.800 – CABLE TV FRANCHISE
+Revenue per franchise agreements with cable companies.
+
+Worksheet for the 2021 Budget
+
+GENERAL FUND
+01.321.900 – OTHER LICENSES & PERMITS
+Solicitation permits.
+01.321.902 – CONTRACTORS’ REGISTRATION
+Registration of commercial contractors and new construction contractors.
+NON-BUSINESS LICENSES AND PERMITS
+01.322.820 – ROAD ENCROACHMENT PERMITS
+Permit fees for right-of-way openings and/or replacement projects.
+FINES
+01.331.000 – FINES
+Police department fines.
+01.331.100 – FIRE ALARM FINES
+Penalty collected by police for excessive false alarm calls to one building.
+01.331.120 – ORDINANCE VIOLATION FINES
+Code enforcement fines such as failure to remove snow, lack of permits, property maintenance or other
+ordinance violations.
+INTEREST EARNINGS
+01.341.000 – INTEREST EARNINGS
+Interest incurred from current interest rates. Purchased C/Ds with funds available to invest.
+C/D @ $245,000.00---rate @ 1.70% ---Due 02/10/21
+C/D @ $245,000.00---rate @ 1.60% ---Due 02/10/21
+
+RENTS & ROYALTIES
+01.342.000 – RENTS
+Water & Sewer Authority – Rent paid by Water & Sewer Authority for use of third floor; five-year lease
+for period 1/1/19-12/31/23 @ $4,000 per month.
+01.342.100 – RENT – LAND
+Fees paid to farm open space.
+STATE SHARED REVENUES & ENTITLEMENTS
+01.355.010 – UTILITIES REAL ESTATE TAX
+Amount the state refunds to local government for PECO line.
+
+Worksheet for the 2021 Budget
+
+GENERAL FUND
+01.355.080 – ALCOHOL BEVERAGE TAX
+Based on liquor permits in the Township. Also includes any transfers of permits during the year
+Warwick Tavern @ $300
+Randazzo Pizza @ $150
+Outback @ $300
+
+2160 York Rd. Inc. @ $300 (Jamison Pour House)
+Bucks Golf Mgt. @ $300 (The Bucks Club)
+Neshaminy Valley Golf Club @ $150
+Heritage Creek Dev. -Golf Course @ $300
+
+01.355.090 – RECYCLING REIMBURSEMENT
+State Grant minus the cost of consultants to process.
+01.355.130 – FOREIGN FIRE INSURANCE TAX
+State aid to fire companies. This is sent to WFC upon receipt.
+LOCAL GOVERNMENT UNITS CAPITAL & OPERATING GRANTS
+01.357.050 – STATE AID PENSION
+State contribution to employee pensions.
+sworn officers = 2 units each
+FT eligible non-uniform =1 unit each
+GENERAL CHARGES FOR SERVICES PLANNING & ZONING
+01.361.300 – ZONING PERMITS
+This includes zoning only permits or the portions of permits that require zoning determination.
+01.361.330 – SUBDIVISION FILING FEES
+Subdivision and land developments fees.
+01.361.340 – ZONING HEARING BOARD FEES
+Fees to cover actual costs for ZHB members, advertisement, postings, administration, staff time and
+stenographer.
+01.361.350 – ADMIN CHARGES FOR DEVELOPERS
+Reflects current and projected development.
+01.361.400 – REGISTRATIONS
+Revenue from deed registrations, tenant registrations, and on-lot sewage disposal systems
+01.361.500 – SALE OF MAPS CODES & ORDINANCES
+Sale of maps, ordinances, copies and fingerprinting service. Including Right to Know requests.
+PUBLIC SAFETY CHARGES FOR SERVICES – POLICE
+01.362.110 – SALE OF ACCIDENT REPORTS
+Fee charged for copy of police department accident reports.
+
+Worksheet for the 2021 Budget
+
+GENERAL FUND
+01.362.112 – FINES, PARKING TICKETS
+Fines for parking violations.
+01.362.400 – BUILDING PERMITS
+Fees for building, plumbing, electrical, mechanical and grading permits.
+01.362.401 – BUILDING RE-INSPECTIONS
+Fees for re-inspection following a failed or ‘no-show’ building inspection.
+01.362.450 – OCCUPANCY PERMITS
+Fees for occupancy permits when properties change use or occupancy.
+01.362.452 – FIRE INSPECTION- ANNUAL
+Fee for annual nonresidential fire inspections performed by the Fire Inspector. Based on the number of
+businesses in the township, multiplied by the applicable fees in the fee schedule.
+01.362.453 – FIRE INSPECTOR RE-INSPECTIONS
+Fees for re-inspection following a failed or ‘no-show’ fire inspection.
+CONTRACTED SERVICE REVENUE
+01.379.010 – CONTRACTED POLICE SERVICE REVENUE
+Use of Police services on a contractual basis, including special events, undercover narcotic investigations
+and DUI checkpoints. Includes reimbursement from school district for a portion of crossing guard costs.
+01.379.011 – PUBLIC WORKS CONTRACTED SERVICE REVENUE
+Use of Public Works services on a contractual basis according to the fee schedule.
+CONTRIBUTIONS AND DONATIONS
+01.387.000 – DEVELOPER CONTRIBUTIONS
+Fees-in-lieu-of sidewalks and curbs related to land development project.
+PROCEEDS AND GENERAL FIXED ASSETS
+01.391.100 – SALES OF GENERAL FIXED ASSETS
+Proceeds from a sale of township vehicles and equipment.
+CASH BALANCE FORWARD
+01.399.000 – CASH BALANCE FORWARD
+Estimated fund balance as of 12/31/2020 which includes committed funds of $1,660,000 that are held
+as developer’s escrows, reserved invested funds of $1,903,000 and unreserved funds of $6,993,000.
+
+Worksheet for the 2021 Budget
+
+GENERAL FUND
+EXPENDITURES
+LEGISLATIVE BODY
+01.400.110 – SALARIES & WAGES/SUPERVISORS
+Wages for Board of Supervisors members set by the State based on Township population.
+01.400.112 – SEMINAR EXPENSE/SUPERVISORS
+Attendance at BCATO and PSATS and related dues for elected official organizations. Annual subscription
+for Sharefile for board meeting packets and file storage.
+EXECUTIVE BRANCH AND ADMINISTRATIVE PERSONNEL
+01.401.112 – SEMINAR EXPENSE MANAGER
+PELRAS, PSATS, BCATO, APMM, ICMA education conferences, and other various professional seminars.
+Includes cost of membership to professional organizations.
+01.401.113 – SEMINAR EXPENSE, ADMINISTRATIVE SUPPORT, FINANCE DEPT.
+Seminar/training expense for Managers Executive Secretary and finance employees. Anticipates Finance
+Directors attendance to GFOA. Notary renewal in 2023.
+01.401.114 – EMPLOYEE RECOGNITION AND TEAM INCENTIVES
+Meetings and incentives for employees as well as annual celebration for employees and volunteers.
+01.401.115 – PERSONNEL TESTING AND EVALUATION
+Costs for testing and evaluating new hires and current employees.
+01.401.140 – PERSONNEL SERVICES/SALARY
+Salaries for Administrative (2 FT) and Finance (2FT and 1 PT)
+01.401.190 – FINANCE DEPT INSURANCE
+Health/Dental/Life for 2 FT employees.
+01.401.191 – ADMIN. INSURANCE
+Health/Dental/Life/LTD/STD for 2 FT employees.
+01.401.200 – OFFICE SUPPLIES
+General shared office supplies along with administration and finance departments.
+01.401.238 – ADMIN UNIFORM EXPENSE
+Uniform clothing for staff in administration and finance departments.
+01.401.320 – COMMUNICATION EXPENSE
+Cost of phone system (landline) service provided by Verizon and Thompson Network.
+01.401.325 – POSTAGE
+Cost of postage for postage machine.
+
+Worksheet for the 2021 Budget
+
+GENERAL FUND
+01.401.340 – ADVERTISING
+Cost of legal advertisements as required by the Second-Class Township Code.
+01.401.341 – PRINTING
+Costs of printing; including envelopes.
+01.401.350 – OFFICIALS’ BOND PREMIUM
+Treasurers bond for $3 million.
+01.401.421 – DUES/MEMBERSHIP
+Bucks County Consortium
+Public Works State & County
+International City Management Association
+Association of Pennsylvania Municipal Managers
+PA Employment Labor Relations Association
+PA league of Cities and Municipalities
+01.401.450 – CONTRACT SERVICES (MAINTENANCE/REPAIR)
+Costs for copier, shredding, lease of postage machine and water cooler services.
+01.401.500 – NEWSLETTER EXPENSE
+Four editions of the Within Warwick newsletter. Including postage and informational mailings as
+needed, along with the cost of the Post Office bulk mailing permit.
+01.401.800 – VEHICLE EXPENSE
+Maintenance/repair costs for manager vehicle including routine inspections and maintenance.
+FINANCIAL ADMINISTRATION AND TAX COLLECTION
+01.402.110 – AUDITING SERVICES
+Costs for Bee, Bergvall and Company to perform annual audit/financial statements.
+01.403.110 – TAX COLLECTOR SALARY
+Portion of $65,000 salary set by resolution until 2021.
+01.403.111 – TAX COLLECTOR EARNED INCOME TAX
+Keystone Collections Group: 1.34% commission rate. Appointed by TCC per Act 32.
+01.403.112 – TAX COLLECTOR LOCAL SERVICE TAX
+Keystone Collections Group: 1.75% commission rate.
+01.403.200 – TAX COLLECTOR’S PRINT & POSTAGE
+Cost of printing and postage for tax bills.
+01.403.350 – TAX COLLECTOR’S BOND
+Cost of Tax Collector’s Bond. Next renewal for four-year term will be paid in 2021 for 2022.
+
+Worksheet for the 2021 Budget
+
+GENERAL FUND
+LAW
+01.404.100 – SOLICITOR (TOWNSHIP)
+General legal matters, attendance at meetings, and real estate matters.
+01.404.311 – LEGAL LABOR ATTORNEY
+Personnel legal matters.
+01.404.312 – ORDINANCES AND RESOLUTIONS
+Legal review/drafting of ordinances and resolutions. Including administrative costs for ordinance
+adoption.
+01.404.313 – LEGAL ESCROW FEES
+Legal fees incurred and invoiced to property owner/developer’s escrow account.
+01.404.314 – LITIGATION
+Legal costs of litigation.
+DATA PROCESSING
+01.407.200 – MINOR HARDWARE/SOFTWARE MAINTENANCE
+Replacement/purchase of computers, printers, accessories, and office equipment for administration,
+finance, parks & recreation and public works. Including annual software support fees.
+01.407.310 – AUTOMATED PAYROLL SERVICE
+01.407.450 – CONTRACT SERVICES FOR IT
+Contracted costs for IT services including 2 local servers, ~20 workstations, firewall support, Adobe Pro,
+remote updates, backups, and general technology support.
+TOWNSHIP ENGINEER
+01.408.310 – ENGINEER
+Costs for monthly retainer which includes attendance to scheduled meetings and responding to resident
+complaints. General engineering and engineering reviews as needed for regular business. Reviews for
+permits are recaptured through the permit fees.
+01.408.313 – ENGINEER ESCROW FEES
+Engineer fees incurred and invoiced to property owner’s escrow account.
+01.408.618 – ENGINEER- TOWNSHIP PROJECTS
+Cost for engineering of township projects, road improvement projects, drainage projects, grant
+administration, and other projects as assigned. NPDES TMDL/MS4 plan development and annual
+reporting as required by DEP.
+
+Worksheet for the 2021 Budget
+
+GENERAL FUND
+GENERAL GOVERNMENT BUILDINGS AND PLANT
+01.409.200 – TOWNSHIP BLDGS. MATERIALS AND SUPPLIES
+Supplies for Township and Public Works buildings, including paper supplies and trash bags.
+01.409.230 – HEATING FUEL GUINEA LANE
+Cost of heating fuel at public works facility.
+01.409.250 – TOWNSHIP BLDG. MAINT./REPAIR
+Township building maintenance and repair. Including roofing, siding, generator, HVAC, electrical,
+plumbing repairs, and general construction, as needed.
+01.409.251 – EMS BUILDING MAINT./REPAIR
+EMS building maintenance, alarm monitoring, and repair needs that not covered through lease
+agreement.
+01.409.255 - PUBLIC WORKS BLDG. MAINT./REPAIR
+Public Works facility maintenance and repair needs. Including roofing, siding, generator, HVAC,
+electrical, plumbing repairs, and general construction, as needed.
+01.409.360 – TOWNSHIP BLDGS. FUEL
+Cost of heating fuel at township building.
+01.409.450 – CONTRACTED SERVICES
+Trash removal
+Exterminator
+Elevator Maintenance
+Security System
+Cleaning Services
+Fire Alarm System Testing
+Fire Extinguisher Annual Inspection
+POLICE
+01.410.100 – ANIMAL CONTROL OFFICER
+Subcontract with Warminster Township to pick up animals of all types and place in facility in
+Warminster. Reflects new agreement with weighted percentages for each municipality utilizing this
+service.
+01.410.112 – COMMUNITY POLICING / BIKE PATROL
+Costs for bike and equipment repairs, Youth Aid Panel, community signs and promotional items.
+01.410.114 – SPECIAL RESPONSE TEAM
+Townships share of special response team program with other Central Bucks communities and
+necessary equipment.
+
+Worksheet for the 2021 Budget
+
+GENERAL FUND
+01.410.130 – SALARIES AND WAGES
+This includes 3.25% increase (per Collective Bargaining) in salary for sworn officers plus overtime,
+training time, court costs and other salary items required by CBA.
+01.410.140 – SALARIES NON-UNIFORMED
+This item includes 1 FT and 1 PT (shared with P&Z) clerical, school crossing guards and anticipates 3%
+increase, depending on performance.
+01.410.190 – EMPLOYEE BENEFITS (SWORN)
+Health/Dental/Life/Disb: Aetna HMO 10/20 per contract.
+01.410.191- POLICE BENEFITS (CLERICAL)
+Health/Dental/Life: Aetna HMO 10/20 (1 employee)
+01.410.200 – OFFICE SUPPLIES
+Office supplies police department.
+01.410.201 – POSTAGE
+Share of postage machine costs located in Administration.
+01.410.202 – MEETING EXPENSE
+Costs of police department meetings.
+01.410.230 – VEHICLE GASOLINE
+Gasoline for police vehicles.
+01.410.238 – CLOTHING & UNIFORMS
+Replacement items for sworn officers including bullet proof vests.
+01.410.239 – CLOTHING & UNIFORMS- CROSSING GUARD
+Replacement items for crossing guards.
+01.410.240 – UNIFORM MAINTENANCE
+Police uniform dry cleaning, per CBA contract.
+01.410.242 – OPERATING SUPPLIES AND OTHER SERVICES
+Medical Supply Kits, Flares, Fire Extinguishers, Ammunition, Reference Materials
+01.410.259 – OPERATING EQUIPMENT CERTIFY
+Costs to:
+Certify Vehicles – Speedometers
+Certify Equipment – Radar and Taser Equipment
+Certifications from inspection stations
+01.410.260 – OPERATING EQUIPMENT
+Operational equipment
+
+Worksheet for the 2021 Budget
+
+GENERAL FUND
+01.410.261 – OFFICE EQUIPMENT
+Office equipment needed including monitors and printers
+01.410.262 – FIREARMS REPAIR/REPLACE
+Replacement and repair of firearms.
+01.410.270 – TECHNOLOGY
+IT services for Police Department and hardware/software maintenance and replacement.
+01.410.316 – TRAINING & EVALUATION
+Mandatory and elective police training. Anticipates training for new officers in 2021.
+01.410.320 – COMMUNICATIONS EXPENSE/REPAIRS
+Monthly internet, telephone voice and fax lines including necessary repairs.
+01.410.322 – MOBILE PHONE EXPENSE
+Verizon mobile phones and air cards for administrative and supervisory officers.
+01.410.342 – PRINTING AND ADVERTISEMENT
+Including:
+Letterhead
+Parking tickets
+Warning cards
+01.410.370 – POLICE VEHICLE MAINT/REPAIR
+Police vehicle maintenance and repairs.
+01.410.450 – CONTRACTED SERVICES
+Shredding, copier, annual software support fees.
+FIRE
+01.411.300 – FIRE INSPECTOR SALARY
+FT Fire Inspector Salary.
+01.411.302 – MANUALS/DUES/ SUBSCRIPTIONS
+Includes various books, dues and biennial subscriptions (NFPA).
+01.411.303 – FIRE PREVENTION PROGRAM MATERIALS
+Fire prevent materials for FM to use at schools/nonprofits for fire prevention presentations.
+01.411.304 – EMERGENCY MANAGEMENT QRS
+Costs of equipment and training for QRS program.
+01.411.322 – MOBILE EXPENSE
+Mobile phone for Fire Inspector.
+
+Worksheet for the 2021 Budget
+
+GENERAL FUND
+01.411.450 – FIREFIGHTER INCENTIVE & RETENTION
+Funding for WFC recruitment and retention program.
+01.411.500 – FOREIGN FIRE INS PREMIUM TAX
+State funds disbursed to WFC.
+01.411.800 – VEHICLE EXPENSE
+Maintenance and repair of Fire Inspector vehicle (2020 Ford Escape).
+01.412.540 – AMBULANCE/ RESCUE
+Annual building maintenance contribution to local emergency ambulance service.
+CODE ENFORCEMENT/PROTECTIVE INSPECTIONS
+01.413.210 – CODE ENFORCEMENT EXPENSES
+Includes updated codebook editions and supplements for Building Inspector, Fire Inspector, Zoning
+Officer and Code Enforcement Officers. Includes dues related to sustaining/acquiring certification for
+Township inspection staff. Miscellaneous expenses to perform code enforcement.
+01.413.450 – CONTRACT SERV BLDG INSPECT FEES
+Cost of third-party building inspection service.
+PLANNING/ZONING
+01.414.100 – ZHB MEMBER SALARIES
+ZHB members compensated at $35/hearing.
+01.414.110 – PZ DEPARTMENT SALARIES
+Salary of Department Head, Zoning Officer, 1 FT clerical, 1 shared clerical with public works and PT
+clerical shared with police.
+01.414.111 – MEETING EXPENSES
+Costs of PAAZO meetings, department meetings and /or other Township related meetings.
+01.414.190 – PZ DEPARTMENT EMPLOYEE BENEFITS
+Health/Dental/Life/Disb: Aetna HMO 10/20
+01.414.200 – SUPPLIES
+Office supplies for Planning and Zoning department
+01.414.270 – TECHNOLOGY
+Includes any software or hardware replacements, upgrades, or purchases as needed. Includes BS&A
+Building Department and Fire Inspector software.
+01.414.300 – OTHER SERVICES/CHARGES
+Relating to court citations filed with District Justice.
+
+Worksheet for the 2021 Budget
+
+GENERAL FUND
+01.414.314 – ZHB LEGAL SERVICES
+Costs of ZHB solicitor and stenographer.
+01.414.420 – PLANNING SEMINARS & DUES
+To attend seminars relating to planning, zoning, building, fire, personnel management, labor law and
+other related topics. Notary renewal in 2023.
+01.414.451 – CREDIT CARD FEES
+Bank fees for credit card acceptance at front desk; offset by 3% surcharge charged for credit card usage.
+01.414.501 – HOUSEHOLD HAZARDOUS CONTRIBUTION
+Amount determined by County for participation for our residents.
+01.414.700 – RECORDS MANAGEMENT
+Code book updates as ordinances are adopted.
+01.414.800 – VEHICLE EXPENSE
+Mileage reimbursement for Planning and Zoning employees using personal vehicles for Township
+activities and maintenance on code enforcement vehicle. (2008 Escape)
+HIGHWAY MAINTENANCE GENERAL (PUBLIC WORKS DEPARTMENT)
+01.430.112 – MANAGEMENT SEMINAR/EDUCATION
+Seminar and training for Public Works Director.
+01.430.114 – EMPLOYEE RECOGNITION
+Employee recognition, including meals for employees during extended call outs.
+01.430.120 – SALARIES & WAGES
+For maintenance employees, Public Works Director and PT administrative assistant. Amount includes
+anticipated amount of PTO buy back. Includes two seasonal landscaping employees for 20 weeks each.
+01.430.190 – HIGHWAY EMPLOYEE BENEFITS
+Health/Dental/Life/Disb: Aetna HMO 10/20
+01.430.200 – OFFICE SUPPLIES
+Office supplies for Public Works department.
+01.430.238 – UNIFORMS & SAFETY EQUIPMENT
+Uniform purchases and cleaning for maintenance employees. Purchases of necessary safety equipment
+including ANSI III reflective coats, vests, and work boots per contract.
+01.430.260 – SMALL TOOLS & MINOR EQUIPMENT
+Small or minor equipment such as chainsaws, string trimmers, drills, tools, shop supplies, and computers
+with support.
+
+Worksheet for the 2021 Budget
+
+GENERAL FUND
+01.430.316 – TRAINING/EVALUATION HIGHWAY EMPLOYEES
+Training for Public Works department maintenance employees.
+01.430.320 – HIGHWAY COMMUNICATION
+Cost of two landlines. One for security system and one for fax.
+01.430.322 – HIGHWAY MOBILE PHONE
+PW mobile phones.
+01.430.327 – EQUIPMENT MAINT./REPAIR
+Vehicle and equipment maintenance and repair.
+01.430.450 – CONTRACTED SERVICES
+Contracted services including: copier lease, water cooler, exterminator, alarm monitoring and fuel tank
+cleaning service contracts.
+HIGHWAY MAINTENANCE – SNOW AND ICE REMOVAL
+01.432.000 – WINTER MAINTENANCE
+Township roads snow and ice removal. Including costs of supplemental plow and snow removal
+contractors along with road salt.
+HIGHWAY MAINTENANCE – STREET SIGNS & TRAFFIC SIGNALS
+01.433.000 – TRAFFIC LIGHTS – ELECTRIC
+Cost of electricity provided to traffic lights.
+01.433.010 – HIGHWAY MAINTENANCE – STREET SIGNS
+New and replacement streets signs, as needed.
+01.433.250 – TRAFFIC SIGNAL MAINT./REPAIR
+In addition to the regular maintenance and repairs, we are mandated by PADOT Permits to annually
+inspect the following intersections:
+Bristol & Tulip
+Tulip & York
+York & Meyer
+York & Almshouse
+York & Kendarbren
+York & Mill
+York & Ridge
+York & Deer Run
+Land & Almshouse
+Guinea & Almshouse
+Bristol and Valley View
+
+Worksheet for the 2021 Budget
+
+GENERAL FUND
+01.433.600 – SCHOOL ZONE LIGHTING MAINT./REPAIR
+Maintenance and repair of school zone lights. Including annual cost to certify school zones at $150.00
+per zone.
+This includes: Warwick Elementary
+Jamison Elementary
+Bridge Valley Elementary
+Maintenance of new lights is $1200 every 5 years. Two lights in 2024, six in 2025.
+HIGHWAY MAINTENANCE – LIGHTS
+01.434.000 – STREET LIGHTING
+Cost of electricity for streetlights.
+01.434.250 – STREET LIGHTING MAINT./REPAIR
+Street lighting maintenance and repair. Includes the systematic updating of streetlights with LED light
+fixtures, new glass, pole sleeves and bases.
+HIGHWAY MAINTENANCE – STORM
+01.436.000 – MAINTENANCE OF STORM SEWERS/INLETS
+Includes both general maintenance of storm sewers and new State/Federal requirements based on
+TMDL’s (total max. daily load). Ongoing pipe and/or inlet top replacements throughout township. Basin
+low flow channel maintenance. Storm sewer pipe sealing, as needed.
+HIGHWAY MAINTENANCE – REPAIR
+01.437.200 – REPAIR OF TRAILS
+Repair and construction of township owned asphalt or stone trails.
+01.438.000 – MAINTENANCE/REPAIR OF ROADS AND BRIDGES
+Repairs of roads and bridges, and contracted road work completed that is above the cost of liquid fuels
+reimbursement. Includes guiderail installations, curbing and all non-contracted work related to road
+construction.
+01.438.231 – GAS FUEL COSTS FOR VEHICLES/EQUIPMENT
+Gasoline costs for Public Works vehicles and equipment.
+01.438.232 – DIESEL FUEL COSTS FOR VEHICLES/EQUIPMENT
+Diesel fuel for Public Works fleet of vehicles.
+01.446.000 – STORMWATER MANAGEMENT/FLOOD CONTROL
+Work related to meet MS4 requirements. Including fee for EPA Clean Water Act.
+HISTORICAL SOCIETY
+01.459.100 – HISTORIC/MILLBROOK SOCIETY
+Amount to pay P&C insurance for Moland House and incidental costs/work on property by Twp.
+
+Worksheet for the 2021 Budget
+
+GENERAL FUND
+01.459.530 – COMMUNITY PROGRAM CONTRIBUTION
+Grant to assist various programs for Township resident enrichment.
+COMMUNITY DEVELOPMENT
+01.461.710 – CONSERVATION EASEMENT
+Possible purchase of conservation easement on farmland to preserve open space in the township.
+WORKERS COMPENSATION INSURANCE
+01.484.000 – WORKERS COMPENSATION
+Workers compensation insurance premium with the exception of parks & recreation and fire company.
+01.485.000 – UNEMPLOYMENT COMPENSATION INSURANCE
+Payroll tax based on taxable wage base multiplied by contribution rate.
+INSURANCE PREMIUMS
+01.486.157 – POST RET. HEALTH OBLIG. (OPEB)
+Funding needed to cover post-retirement healthcare obligations for 2021 and annual Actuary costs.
+01.486.158 – 457 PLAN- MATCH CONTRIBUTION
+Township Match to 457 Plan for employees hired prior to benefit change.
+01.486.159 – POLICE PENSION FUND CONTRIBUTION
+Minimum Municipal Obligation.
+01.486.160 – NU EMP PENSION PLAN CONTRIBUTION
+Minimum Municipal Obligation to Defined Benefit Pension Plan for employees hired prior to 9/9/2013.
+Changed from defined benefit to defined contribution for new hires and current employees who
+“opted” in. (01.486.162)
+01.486.161 – FICA (SOCIAL SECURITY)
+Employer’s contribution.
+01.486.162 – NU EMP DEFINED CONTRIBUTION PENSION PLAN CONTRIBUTION
+Minimum Municipal Obligation to 401 A Plan for employees in Defined Contribution Plan - Changed
+from defined benefit defined contribution for new hires effective 9/9/13, and current employees who
+“opted” in. Township provides 6% of salary as contribution to pension annually.
+01.486.351 – PACKAGE POLICY INSURANCE – PROPERTY AND CASUALTY COVERAGE
+Insurance premium for all properties and assets.
+INTERFUND OPERATING TRANSFERS
+01.492.000 – TRANSFER TO GENERAL OBLIGATION BOND FUND
+Transfer to pay balances of remaining loans.
+
+Worksheet for the 2021 Budget
+
+GENERAL FUND
+01.492.030 – TRANSFER TO CAPITAL PROJECTS FUND
+Transfer for budgeted capital projects.
+
+Worksheet for the 2021 Budget
+CAPITAL PROJECTS FUND
+INCOME
+
+30.341.000 – INTEREST EARNINGS
+Interest incurred from current interest rates
+
+INTERFUND OPERATING TRANSFERS
+30.392.010 – TRANSFER FROM GENERAL FUND
+Current year funding of Capital Projects
+
+CASH BALANCE FORWARD
+30.399.000 – CASH BALANCE FORWARD
+Estimated fund balance as of 12/31/2020
+
+EXPENDITURES
+EXECUTIVE
+30.401.747 – ADMINISTRATIVE FURNITURE
+Replacement of individual offices in administrative office and main meeting room chairs.
+
+GENERAL GOVERNMENT BUILDING AND PLANT
+30.409.452 – CAPITAL IMPROVEMENTS MUNICIPAL
+Replacement of shingled roof on municipal building- $65,000
+Replacement of meeting room carpet- $10,500
+Replacement of remaining original HVAC units of municipal building- $175,000
+
+POLICE
+30.410.745 – POLICE VEHICLE
+One Police Responder Hybrid Explorer including transfer of equipment and upfitting
+30.410.746 – TECHNOLOGY
+Replacement of in-car dash camera system, (3) cameras
+
+Worksheet for the 2021 Budget
+CAPITAL PROJECTS FUND
+PUBLIC WORKS
+30.430.400 – PUBLIC WORKS PROJECTS
+Completion of traffic light battery backup system- $10,500
+Hampton Chase Rear Parking Lot Paving- $48,000
+GPS unit and mapping system- $3,000
+
+Worksheet for the 2021 Budget
+PARKS & RECREATION FUND
+REVENUES
+REAL PROPERTY TAXES
+37.301 – REAL ESTATE TAXES
+1.0 mill
+Interest Earnings
+37.341.000 – INTEREST EARNINGS
+Interest incurred from current interest rates
+CULTURE – RECREATION
+37.360.001 – SUMMER CAMP – TEEN
+Revenue from three weeks of Teen Camp
+37.360.002 – SUMMER CAMP – YOUTH DAY CAMP
+Revenue from full day camps offered at Bridge Valley Elementary School
+37.360.004 – ARTS PROGRAMS
+Non-sport related program revenue such as children dancing, science camps, babysitting workshops,
+Let’s Get Messy, Children Making Music, art programs, kids night out events, and any other non-sport
+programs.
+37.360.005 – SPORTS PROGRAMS
+Payments from all sports-based programs and contracted sports camps.
+37.360.801 – FIELD USAGE FEE
+Application fee for field use from user groups to use township courts/fields
+Warrington Soccer
+Warriors Lacrosse Inc.
+Warrington Warwick AA Softball
+Robert Weller
+37.360.810 – PARK USAGE FEE
+Revenue from community room and pavilion rentals.
+37.360.820 – EXCURSION/TICKET SALES
+Tickets to recreation sold through PRPS and tickets sold through movie theatres.
+37.360.830 – SPECIAL EVENTS PERMITS
+Revenue from Special Permit Applications.
+
+Worksheet for the 2021 Budget
+PARKS & RECREATION FUND
+CONTRIB. & DONATIONS PRIVT. SOURCE
+37.387.100- DEVELOPER CONTRIBUTIONS
+Active and common open space fees-in-lieu of and fees-in-lieu of tree replacement.
+37.387.200 – CONCERTS & MOVIES
+Sponsorship received, as well as, revenue from concession sales at the concerts and movies.
+37.387.300 – SEASONAL CELEBRATIONS
+Sponsorship special events held throughout the year.
+37.387.500 – LEWY BODY WALK
+Revenue from the Lewy Body Walk.
+CASH BALANCE FORWARD
+37.399.000 – CASH BALANCE FORWARD
+Estimated fund balance as of 12/31/2020
+
+EXPENDITURES
+TAX COLLECTOR
+37.403.110 – SALARY – TAX COLLECTOR
+Portion of salary set by resolution.
+DATA PROCESSING
+37.407.200 – MINOR HARDWARE/ TECHNOLOGY
+Purchase- replacement of computers, printers, software and accessories for parks and recreation
+department.
+PARK & RECREATION OTHER
+37.450.450 – CONTRACTED SERVICES
+Contracted services, including: copier lease, fax, recreation software fees, and web certification.
+37.450.820 – EXCURSION/TICKET SALES
+Cost of purchasing discounted movie, amusement park and ski resort tickets.
+ADMINISTRATION
+37.451.112 – SEMINARS/EDUCATION
+Seminars and education, including attendance at PRPS conference
+
+Worksheet for the 2021 Budget
+PARKS & RECREATION FUND
+37.451.113 – MEETING EXPENSE
+Meeting expenses for hosting meetings/training opportunities.
+37.451.320 – COMMUNICATIONS/PHONES
+Mobile phone expenses.
+37.451.400 – OFFICE SUPPLIES
+Office supplies for the Parks and Recreation department.
+37.451.421 – DUES/SUBSCRIPTIONS
+Membership to the State and Parks and Recreation Association (PRPS) as well as the County
+organization.
+37.451.451 – CREDIT CARD FEES
+Fees for online registration (over 90% of all registrations) and credit card acceptance at front desk.
+PARTICIPANT RECREATION
+37.452.001 – SUMMER TEEN CAMP
+Expenses for three weeks of teen camp (excluding salaries)
+37.452.002 – SUMMER CAMP YOUTH DAY CAMP
+Expenses for day camp (excluding salaries)
+37.452.004 – ART PROGRAMS
+Expenses associated with arts related programs. Instructor fees, supplies, learning materials, etc.
+37.452.005 – SPORTS PROGRAMS
+Expenses associated with sports related programs. Instructors fees, materials, and maintenance.
+37.452.101 – SUMMER/TEEN CAMP SALARIES
+Salaries for staff of Day Camp and Teen Camp.
+SPECTATOR RECREATION
+37.453.200 – MOVIES IN THE PARK
+Cost of entertainment and refreshments for sale at these events. Including movie rentals.
+PARKS
+37.454.100 – PARK SALARIES/MAINTENANCE
+One FT maintenance employee
+37.454.140 – SALARY – PARK ADMIN/PROGRAMS
+Salaries for Director and Program Coordinator.
+
+Worksheet for the 2021 Budget
+PARKS & RECREATION FUND
+37.454.150 – PARK EMPLOYEE BENEFITS
+3 FT employees. Health/Dental/RX/Life and Workers Comp.
+37.454.200 – MAINTENANCE & REPAIR OF EQUIP.
+Maintenance and repair of park equipment including mowers, restrooms, courts, and fields. Purchase of
+pet waste removal bags.
+37.454.202 – PLAYGROUND/MAINTENANCE/REPAIR
+Includes routine repairs to playground equipment and upkeep. Includes court repairs $5,000 and wood
+carpet $10,000.
+37.454.203 – VEHICLE/EQUIP. MAINTENANCE & REPAIR
+Used for vehicle/truck inspections and maintenance.
+37.454.204 – LANDSCAPE/FIELDS/FACILITY MAINT.
+All contacted services to the athletic fields for pest management, fertilization, etc.
+Maintenance of open space including trees.
+37.454.205 – SANITATION/PORTABLE TOILETS
+Seasonal portable toilets throughout the parks system.
+37.454.300 – PECO – PARKS
+Cost of electricity for all township parks.
+CIVIC AND MILITARY CELEBRATIONS
+37.457.300 – SEASONAL CELEBRATIONS
+Costs associated a variety of celebrations and recycling event held throughout the year.
+37.457.500 – LEWY BODY WALK
+Costs associated with Lewy Body that will be recovered with donations and fees.
+
+Worksheet for the 2021 Budget
+PARKS & RECREATION CAPITAL FUND
+
+REVENUE
+
+INCOME
+38.301 - REAL ESTATE TAXES
+1.0 mill
+38.341.010 – INTEREST EARNINGS
+Interest incurred from current interest rates.
+38.387.100 – CONTRIBUTIONS- DEVELOPER
+Contributions from developers and sponsors for park improvements.
+CASH BALANCE FORWARD
+38.399.000 – CASH BALANCE FORWARD
+Estimated fund balance as of 12/31/2020
+
+EXPENDITURES
+TAX COLLECTOR
+38.403.110 – TAX COLLECTOR
+Portion of salary allocated from millage
+38.452.701 – PARK & REC. CAPITAL CONSTRUCTION
+1. Memorial Park Topsoil- $86,000
+2. Jamison Hunt Tennis & Basketball Court Refurbish- $90,000
+3. Lee Drive Playground- $25,000
+4. Memorial Park Brick Bench- $7,500
+
+38.452.746 – PARK & REC. EQUIPMENT PURCHASE
+Replacement of zero turn mower
+
+Worksheet for the 2021 Budget
+ROAD MACHINERY FUND
+
+REVENUES
+REAL PROPERTY TAXES
+04.301 – REAL ESTATE TAXES
+.50 mills
+INTEREST EARNINGS
+04.341.000 – INTEREST EARNINGS
+Reflects lower bank balance
+CASH BALANCE FORWARD
+04.399.000 – CASH BALANCE FORWARD
+Estimated fund balance as of 12/31/2020
+
+EXPENDITURES
+04.401.110 – TAX COLLECTOR
+Portion of salary allocated from millage
+
+Worksheet for the 2021 Budget
+HIGHWAY AID FUND
+
+REVENUE
+INTEREST EARNINGS
+35.341.000 – INTEREST EARNINGS
+Interest incurred from current interest rates
+STATE SHARED REVENUES AND ENTITLEMENT
+35.355.030 – LIQUID FUELS
+State turn back to maintain local roads
+35.355.050 – MOTOR VEHICLE FUEL TAXES
+State taxes collected for roads
+CASH BALANCE FORWARD
+35.399.000 – CASH BALANCE FORWARD
+Estimated fund balance as of 12/31/2020
+EXPENDITURES
+35.439.000 – HIGHWAY CONSTRUCTION ROADS
+Funds utilized for the Roadway Improvements proposed and completed within the Township annually.
+Additional costs over Liquid Fuels reimbursement will be paid out of General Fund Highway
+Maintenance.
+2021 PROPOSED ROAD PROGRAM IMPROVEMENTS
+Jamison Hunt: Coralberry, Spearmint, Spruce, Snowdrop, Honeysuckle,
+Magnolia & Blueberry
+Edge mill, base repair & leveling
+Curb repair
+Install 1.5” Overlay
+ADA ramps
+Street markings
+
+$142,870
+
+Creekwood Estates: Lee and Dillie
+Edge mill, base repair & leveling
+Install 1.5” Overlay
+Street markings
+
+$187,582
+
+Deer Run: Fawn and Doe
+Edge mill, base repair
+
+$ 93,640
+
+Worksheet for the 2021 Budget
+HIGHWAY AID FUND
+Install 1.5” Overlay
+Curb repair
+ADA ramps
+Dark Hollow Rd: Park to Almshouse
+Edge mill, base repair
+Install 1.5” Overlay
+Curb repair
+
+$ 15,225
+
+Watson Road
+Edge mill, base repair & leveling
+Install 1.5” Overlay
+Curb repair
+ADA ramps
+
+$ 82,105
+
+Mill Road (Add/Alt)
+Edge mill, base repair & leveling
+Install 1.5” Overlay
+Street markings
+Curb repair
+ADA ramps
+
+$170,900
+
+Worksheet for the 2021 Budget
+FIREHOUSE AND EQUIPMENT FUND
+
+REVENUE
+
+REAL PROPERTY TAXES
+03.301 – REAL ESTATE TAXES CURRENT YEAR
+.75 Mills collected for operations – 94% to WFC, 6% to HFC
+03.341.000 – INTEREST EARNINGS
+Interest incurred from current interest rates
+CASH BALANCE FORWARD
+03.399.000 – CASH BALANCE FORWARD
+Estimated fund balance as of 12/31/2020
+
+EXPENDITURES
+
+EXECUTIVE
+03.401.110 – TAX COLLECTOR
+Portion of salary allocated from millage.
+FIRE
+03.411.200 – OPERATING EXPENSES – WARWICK
+Insurance costs (Commercial Property, A&D), operating supplies, utilities, repairs/maintenance and
+professional services.
+03.411.300 – OPERATING EXPENSES – HARTSVILLE
+HFC uses designated funds for firefighter physicals.
+03.411.740 – CAPITAL PURCHASES – WARWICK
+Includes loan payments for equipment and annual payment of 30 year, no interest loan to Warwick
+Township Fire Company #1 for building mortgage.
+03.411.840 – CAPITAL PURCHASES – HARTSVILLE
+Includes machinery and equipment.
+NOTE: STATE AID TO FIRE COMPANIES IS NOT IN THIS BUDGET BUT IS IN THE GENERAL FUND BUDGET
+AS REQUIRED BY ACT 205. This can be seen on revenue line item 01.355.130 and expenditure line item
+01.411.500. The State regulates and audits the use of these funds directly with the WFC.
+
+Worksheet for the 2021 Budget
+GENERAL OBLIGATION BOND FUND
+
+REVENUE
+REAL PROPERTY TAXES
+15.301 – REAL ESTATE TAXES
+Millage has been reassigned to General Fund to be used towards the balance of outstanding debt.
+INTERFUND TRANSFERS
+15.393.010 – TRANSFER FROM GENERAL FUND
+Balance of outstanding debt needed to completed loan obligations.
+
+CASH BALANCE FORWARD
+15.399.000 – CASH BALANCE FORWARD
+Estimated fund balance as of 12/31/2020.
+EXPENDITURES
+
+15.471.000 DEBIT PRINCIPAL
+$2,677,000 2.28% G.O. Note Series 2011—This Note is the result of refinancing the 2006 Bond. Principal
+Balance due as of 1/1/21 is $486,760.
+$300,000 2.7% G.O. Note 2014—Borrowing for Open Space purchases. Principal Balance due as of
+1/1/21 is $101,240.
+$211,093.46 1.5% Installment Promissory Note 2014 (County Loan) — This note is for Police Radio
+System purchase. Principal Balance due as of 1/1/21 is $62,600.
+$5,015,000 2.07% G.O. Note Series 2015—This Note is the result of refinancing the 2003 Bond, the 2008
+Bank Loan, and 2010 Bond. Principal Balance due as of 1/1/21 is $2,186,400.
+
+Worksheet for the 2021 Budget
+CAPITAL RESERVE FUND
+REVENUE
+INTEREST EARNING
+43.341.000 – INTEREST EARNING
+Interest incurred from current interest rates
+CASH BALANCE FORWARD
+43.399.000 – CASH BALANCE FORWARD
+Estimated fund balance as of 12/31/2020
+EXPENDITURES
+
+Capital Reserve Balances as of September 30, 2020:
+McKeon/Mearns Rd. Widening
+
+$ 2,453
+
+Various Detention Basins
+
+$137,754
+
+Coggiola Improvements
+
+$ 16,494
+
+Ivyland Industrial PK Improvements/PECO
+
+$ 23,841
+
+Various Septic Agreements
+
+$ 36,639
+
+Pizzo Sewer Agreement
+
+$ 5,154
+
+Disbursement Account
+
+$
+
+Capital Reserves as of September 30, 2020
+
+$223,261
+
+926

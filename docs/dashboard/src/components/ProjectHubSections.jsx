@@ -18,11 +18,11 @@ export function ProjectOrientation({ totals, priorityTotals, report, phase }) {
     <section className="project-orientation" aria-label="Collected current and forthcoming project status">
       <article>
         <p className="eyebrow">Current operation</p>
-        <h2>Tier C text readiness complete</h2>
+        <h2>Tier C text and exact-span extraction complete</h2>
         <p>
-          {formatNumber(phase.tier_c_retained_downloaded_source_count)} retained Tier C files were reviewed;
-          {" "}{formatNumber(phase.tier_c_text_extraction_ready_count)} enter only a separately authorized
-          extraction queue. They remain unextracted, unrated, and outside global analysis readiness.
+          {formatNumber(phase.tier_c_text_extracted_ok_count)} approved files produced task-local text artifacts;
+          {" "}{formatNumber(phase.tier_c_positive_exact_span_count)} exact positive spans remain unrated and
+          outside global analysis readiness.
         </p>
       </article>
       <article>
@@ -36,10 +36,10 @@ export function ProjectOrientation({ totals, priorityTotals, report, phase }) {
       </article>
       <article>
         <p className="eyebrow">Next authorized stage</p>
-        <h2>Bounded Tier C text-layer extraction</h2>
+        <h2>Bounded Tier C exact-span rating</h2>
         <p>
-          Extract local machine-readable text from the 378 readiness-approved files only. OCR, evidence
-          rating, ingestion, and analysis remain outside that next phase.
+          Review only the 159 exact positive span candidates. Source-document access, rerunning extraction,
+          ingestion, and analysis remain outside that next phase.
         </p>
       </article>
     </section>
@@ -53,10 +53,10 @@ export function ProjectPhasePanel({ phase }) {
       <div className="section-heading">
         <div>
           <p className="eyebrow">Project phase</p>
-          <h2 id="project-phase-title">Tier C text readiness reviewed; bounded extraction ready next</h2>
+          <h2 id="project-phase-title">Tier C text and exact-span extraction complete; bounded rating ready next</h2>
         </div>
         <StatusPill tone="verified">
-          {formatNumber(phase.tier_c_retained_downloaded_source_count)} retained
+          {formatNumber(phase.tier_c_positive_exact_span_count)} exact spans
         </StatusPill>
       </div>
 
@@ -73,8 +73,8 @@ export function ProjectPhasePanel({ phase }) {
       <div className="phase-metrics">
         <div><span>Verified Tier C leads</span><strong>{formatNumber(phase.tier_c_verified_source_lead_count)}</strong></div>
         <div><span>Retained sources</span><strong>{formatNumber(phase.tier_c_retained_downloaded_source_count)}</strong></div>
-        <div><span>Text-extraction ready</span><strong>{formatNumber(phase.tier_c_text_extraction_ready_count)}</strong></div>
-        <div><span>Same-source pairs</span><strong>{formatNumber(phase.memo_scope.exact_same_source_linked_pair_count)}</strong></div>
+        <div><span>Text artifacts</span><strong>{formatNumber(phase.tier_c_text_extracted_ok_count)}</strong></div>
+        <div><span>Exact positive spans</span><strong>{formatNumber(phase.tier_c_positive_exact_span_count)}</strong></div>
         <div><span>Wage-gap estimates</span><strong>None</strong></div>
         <div><span>Global readiness</span><strong>False</strong></div>
       </div>
@@ -82,19 +82,19 @@ export function ProjectPhasePanel({ phase }) {
       <div className="phase-next">
         <div>
           <p className="eyebrow">Current transition</p>
-          <h3>Extract only the readiness-approved local text layers</h3>
+          <h3>Rate only the preserved exact positive spans</h3>
         </div>
         <ol>
-          <li>Lock the 317 PDF and 61 HTML readiness-approved rows</li>
-          <li>Preserve exact file-hash and source lineage</li>
-          <li>Keep PDF and HTML extraction lanes separate</li>
-          <li>Exclude all 85 deferred/review rows</li>
-          <li>Save only task-local extracted text for later review</li>
+          <li>Lock the 159 exact positive span candidates</li>
+          <li>Preserve span text, offsets, hashes, and lineage</li>
+          <li>Exclude 225 ambiguous spans and 101 no-span/weak sources</li>
+          <li>Do not reopen source documents or rerun extraction</li>
+          <li>Keep every interpretation bounded and provisional</li>
         </ol>
-        <StatusPill tone="future">Extraction separately authorized</StatusPill>
+        <StatusPill tone="future">Rating separately authorized</StatusPill>
       </div>
       <p className="panel-note">
-        Retention is not extraction or evidence rating. The bounded memo is documentary/co-location
+        Text and span extraction are not evidence rating. The bounded memo is documentary/co-location
         scaffolding only; global analysis readiness, wage-gap estimates, and final causal claims remain false.
       </p>
     </section>
@@ -263,8 +263,8 @@ export function VerificationPipeline({
   const stages = [
     ["Verified Tier C lead", formatNumber(phase.tier_c_verified_source_lead_count), "Completed", "scout"],
     ["Retained Tier C source", formatNumber(phase.tier_c_retained_downloaded_source_count), "Completed", "verified"],
-    ["PDF/HTML text readiness", formatNumber(phase.tier_c_text_extraction_ready_count), "Completed", "verified"],
-    ["Text-layer extraction", "Not run", "Next", "future"],
+    ["Text-layer extraction", formatNumber(phase.tier_c_text_extracted_ok_count), "Completed", "verified"],
+    ["Exact positive spans", formatNumber(phase.tier_c_positive_exact_span_count), "Rating next", "future"],
     ["Global analysis-ready evidence", "False", "Closed", "future"],
   ];
 
@@ -273,9 +273,9 @@ export function VerificationPipeline({
       <div className="section-heading">
         <div>
           <p className="eyebrow">Current evidence pipeline</p>
-          <h2 id="verification-title">From verified Tier C leads to bounded text readiness</h2>
+          <h2 id="verification-title">From verified Tier C leads to unrated exact spans</h2>
         </div>
-        <StatusPill tone="verified">Readiness complete; extraction next</StatusPill>
+        <StatusPill tone="verified">Extraction complete; rating next</StatusPill>
       </div>
 
       <div className="verification-flow">
@@ -292,14 +292,14 @@ export function VerificationPipeline({
       <div className="verification-callout">
         <div>
           <p className="eyebrow">Current operational handoff</p>
-          <h3>Run bounded Tier C text-layer extraction</h3>
+          <h3>Run bounded Tier C exact-span rating</h3>
         </div>
         <p>
           The targeted Tier C verification retained {formatNumber(phase.tier_c_verified_source_lead_count)} verified
           leads, and bounded GET/source review retained {formatNumber(phase.tier_c_retained_downloaded_source_count)}
-          source files. Readiness approved {formatNumber(phase.tier_c_text_extraction_ready_count)} files for a
-          separately authorized local extraction pass. OCR, rating, ingestion, codification, wage-gap analysis,
-          and causal analysis have not run on this scope.
+          source files. Local non-OCR extraction produced {formatNumber(phase.tier_c_text_extracted_ok_count)} text
+          artifacts and {formatNumber(phase.tier_c_positive_exact_span_count)} exact positive spans. Rating,
+          ingestion, codification, wage-gap analysis, and causal analysis have not run on this scope.
         </p>
       </div>
       <div className="verification-callout">
@@ -1942,14 +1942,20 @@ export function ReportsLibrary({ reportsIndex, reportAssets }) {
             </a>
           </article>
         ))}
+        <article className="report-card">
+          <div className="report-card-topline"><span>Current operations</span><span>2026-07-27</span></div>
+          <h3>Tier C text and exact-span extraction result</h3>
+          <p>
+            The bounded local pass extracted 378 text artifacts and preserved 159 exact positive spans from
+            52 sources. The spans remain unrated and globally analysis-closed.
+          </p>
+          <a className="primary-link" href="https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/dashboard_declutter_map_correction_tier_c_text_span_extraction_result_2026-07-27.md" target="_blank" rel="noreferrer">Open current extraction result</a>
+        </article>
         <article className="report-card report-card-planned">
           <div className="report-card-topline"><span>Forthcoming</span><span>Next authorized stage</span></div>
-          <h3>Tier C bounded text-layer extraction report</h3>
-          <p>
-            Planned reporting home for task-local machine-readable text from only the 378 readiness-approved
-            PDF/HTML rows, with every deferred and prior-excluded row held outside the scope.
-          </p>
-          <StatusPill tone="future">Not yet available</StatusPill>
+          <h3>Bounded Tier C exact-span rating report</h3>
+          <p>Planned review home for only the 159 exact positive span candidates, with ambiguous and no-span/weak outcomes excluded.</p>
+          <StatusPill tone="future">Rating not yet run</StatusPill>
         </article>
       </div>
       <p className="panel-note">{reportsIndex.disclaimer}</p>
@@ -1999,15 +2005,15 @@ export function NextStepsPanel({ priority, phase }) {
       <div className="section-heading">
         <div>
           <p className="eyebrow">Next steps</p>
-          <h2 id="next-steps-title">Extract the approved Tier C text layers</h2>
+          <h2 id="next-steps-title">Rate the preserved exact Tier C spans</h2>
         </div>
         <StatusPill tone="scout">PI-aligned strategy</StatusPill>
       </div>
       <div className="next-step-grid">
         <article className="recommended-step">
           <span>Immediate</span>
-          <h3>Run bounded local text extraction over 378 approved files</h3>
-          <p>Use only 317 parse-text-layer PDF rows and 61 HTML-text rows. Keep the lanes separate and preserve every hash and source-lineage field.</p>
+          <h3>Run bounded rating over 159 exact positive spans</h3>
+          <p>Use only the preserved exact substring records. Keep ambiguous and no-span/weak outcomes excluded, and preserve every offset, hash, and source-lineage field.</p>
         </article>
         <article>
           <span>Completed input scope</span>
@@ -2022,7 +2028,7 @@ export function NextStepsPanel({ priority, phase }) {
       </div>
       <p className="panel-note">
         Historical discovery tiers remain available above for provenance only. The current operational next task is
-        bounded Tier C text-layer extraction. Global analysis readiness remains false.
+        bounded Tier C exact-span rating. Global analysis readiness remains false.
       </p>
     </section>
   );

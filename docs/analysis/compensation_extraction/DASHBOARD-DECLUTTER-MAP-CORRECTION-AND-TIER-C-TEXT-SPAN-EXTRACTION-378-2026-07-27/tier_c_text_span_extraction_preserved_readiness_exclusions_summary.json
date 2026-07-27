@@ -1,0 +1,16 @@
+{
+  "preserved_exclusions_entering_text_or_span_queue": 0,
+  "prior_source_review_exclusion_count": 93,
+  "readiness_exclusion_count": 85,
+  "status_counts": {
+    "readiness_review:needs_review": 19,
+    "readiness_review:ocr_later_or_defer": 57,
+    "readiness_review:oversized_for_text_pass": 9,
+    "source_review_download:blocked_by_transport": 3,
+    "source_review_download:duplicate_file_hash": 1,
+    "source_review_download:oversized_for_this_pass": 18,
+    "source_review_download:unavailable_on_get": 5,
+    "source_review_download:weak_or_needs_review": 66
+  },
+  "total_preserved_exclusion_count": 178
+}

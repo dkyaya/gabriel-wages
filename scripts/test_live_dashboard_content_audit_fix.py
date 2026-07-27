@@ -60,7 +60,10 @@ class LiveDashboardContentAuditFixTests(unittest.TestCase):
         self.assertEqual(self.phase["memo_scope"]["exact_same_source_linked_pair_count"], 268)
         self.assertEqual(self.phase["memo_scope"]["linked_quantitative_row_count"], 208)
         self.assertEqual(self.phase["memo_scope"]["linked_qualitative_record_count"], 90)
-        self.assertEqual(self.phase["current_evidence_status"], "bounded_co_location_documentary_scaffold_only")
+        self.assertIn(self.phase["current_evidence_status"], {
+            "bounded_co_location_documentary_scaffold_only",
+            "bounded_unrated_exact_documentary_spans_and_colocation_scaffolds_only",
+        })
         self.assertTrue(self.phase["pdf_text_layer_readiness_ready_next"])
         self.assertFalse(self.phase["global_analysis_readiness"])
         self.assertFalse(self.phase["wage_gap_estimates_available"])
@@ -96,8 +99,8 @@ class LiveDashboardContentAuditFixTests(unittest.TestCase):
             self.assertNotIn(phrase, source)
         for phrase in (
             "Current bounded evidence and retained-source status",
-            "Bounded Tier C text-layer extraction",
-            "Current Tier C operational coverage",
+            "Bounded rating of 159 exact Tier C spans",
+            "Total scout coverage",
             "Historical candidate queue",
         ):
             self.assertIn(phrase, source)
@@ -107,11 +110,11 @@ class LiveDashboardContentAuditFixTests(unittest.TestCase):
         self.assertEqual(len(bundles), 1)
         bundle = bundles[0].read_text(encoding="utf-8")
         for phrase in (
-            "Tier C readiness reviewed",
-            "378 approved files",
+            "Tier C text and exact-span extraction complete",
+            "159 exact positive spans",
             "Open current evidence memo",
             "Historical candidate queue",
-            "Extract the approved Tier C text layers",
+            "Rate the preserved exact Tier C spans",
         ):
             self.assertIn(phrase, bundle)
         self.assertNotIn("Authorize the first scaled verification round", bundle)
@@ -128,14 +131,10 @@ class LiveDashboardContentAuditFixTests(unittest.TestCase):
 
     def test_historical_sections_are_explicit(self) -> None:
         source = (ROOT / "docs/dashboard/src/components/ProjectNavigation.jsx").read_text(encoding="utf-8")
-        for label in (
-            "Historical coverage",
-            "Historical priority tiers",
-            "Historical operations",
-            "Historical candidate queue",
-            "Historical state yield",
-        ):
-            self.assertIn(label, source)
+        self.assertIn("Historical archive", source)
+        app = (ROOT / "docs/dashboard/src/App.jsx").read_text(encoding="utf-8")
+        self.assertIn('id="historical-archive"', app)
+        self.assertIn("Historical pipeline archive", app)
 
     def test_forbidden_actions_remain_zero(self) -> None:
         for key in (

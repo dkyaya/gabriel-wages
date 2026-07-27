@@ -1,0 +1,12 @@
+{
+  "current_map_filter": "total_scout_coverage_only",
+  "current_phase": "Tier C text and exact-span extraction complete; bounded rating ready next",
+  "final_causal_claims_available": false,
+  "global_analysis_readiness": false,
+  "positive_exact_span_count": 159,
+  "positive_source_count": 52,
+  "rating_candidate_count": 159,
+  "regression_or_treatment_effect_estimates_available": false,
+  "text_artifact_count": 378,
+  "wage_gap_estimates_available": false
+}

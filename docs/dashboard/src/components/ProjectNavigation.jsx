@@ -1,16 +1,12 @@
 const SECTIONS = [
   ["overview", "Overview"],
-  ["project-phase", "Project phase"],
-  ["geography", "Historical coverage"],
-  ["priorities", "Historical priority tiers"],
-  ["operations", "Historical operations"],
-  ["candidate-queue", "Historical candidate queue"],
-  ["verification", "Verification"],
-  ["state-yield", "Historical state yield"],
+  ["geography", "Scout coverage map"],
+  ["project-phase", "Current phase"],
+  ["verification", "Pipeline"],
   ["reports", "Reports"],
-  ["methodology", "Definitions"],
-  ["descriptive-analysis", "Analysis plan"],
-  ["next-steps", "Next steps"],
+  ["next-steps", "Next task"],
+  ["descriptive-analysis", "Limits"],
+  ["historical-archive", "Historical archive"],
 ];
 
 export function ProjectNavigation({ open, onToggle, onNavigate }) {

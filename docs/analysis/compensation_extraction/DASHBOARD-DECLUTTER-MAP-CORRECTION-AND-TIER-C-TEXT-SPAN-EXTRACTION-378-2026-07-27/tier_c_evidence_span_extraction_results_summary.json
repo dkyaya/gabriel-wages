@@ -1,0 +1,41 @@
+{
+  "ambiguous_span_record_count": 225,
+  "codification_runs": 0,
+  "downloads": 0,
+  "durable_ledger_merges": 0,
+  "global_analysis_readiness": false,
+  "ingestion_runs": 0,
+  "model_api_calls": 0,
+  "ocr_runs": 0,
+  "pdf_render_runs": 0,
+  "positive_source_count": 52,
+  "positive_span_counts_by_lane": {
+    "lane_1": 12,
+    "lane_2": 91,
+    "lane_3": 2,
+    "lane_4": 54
+  },
+  "positive_span_counts_by_mechanism": {
+    "fiscal_constraint_signal": 2,
+    "market_or_comparability_pressure": 54,
+    "non_safety_constraint_signal": 12,
+    "strike_or_no_strike_constraint": 91
+  },
+  "positive_span_counts_by_region": {
+    "Midwest": 50,
+    "Northeast": 44,
+    "South": 60,
+    "West": 5
+  },
+  "positive_span_record_count": 159,
+  "rating_candidate_count": 159,
+  "rating_runs": 0,
+  "source_result_rows": 378,
+  "span_status_counts": {
+    "ambiguous_span": 225,
+    "no_span_or_weak": 101,
+    "span_extracted": 52
+  },
+  "total_span_record_count": 384,
+  "url_opens": 0
+}

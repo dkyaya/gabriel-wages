@@ -1,0 +1,11070 @@
+2025
+BUDGET
+1000 LAUREL STREET, MILTON, WA 98354
+
+WWW.CITYOFMILTON.NET
+
+TABLE OF CONTENTS
+INTRODUCTION
+Mayor's Budget Message ---------------------------------------------------------------------------------------------------------------------------------------- 1
+City of Milton Elected Officials and Administration ----------------------------------------------------------------------------------------------- 6
+City Organizational Chart ----------------------------------------------------------------------------------------------------------------------------------------- 7
+Budget Development Process --------------------------------------------------------------------------------------------------------------------------------- 8
+Budget Calendar ------------------------------------------------------------------------------------------------------------------------------------------------------ 9
+Budget Principles ----------------------------------------------------------------------------------------------------------------------------------------------------- 10
+City-wide Budget Summary ------------------------------------------------------------------------------------------------------------------------------------- 12
+Wage Scale --------------------------------------------------------------------------------------------------------------------------------------------------------------- 13
+Indirect Cost Allocation -------------------------------------------------------------------------------------------------------------------------------------------- 14
+Interfund Activity ------------------------------------------------------------------------------------------------------------------------------------------------------ 19
+GENERAL FUND
+General Fund Summary ------------------------------------------------------------------------------------------------------------------------------------------- 21
+General Fund Revenue Detail --------------------------------------------------------------------------------------------------------------------------------- 22
+Expenditure Budget by Department
+City Council ------------------------------------------------------------------------------------------------------------------------------------------------------- 25
+Judicial/Municipal Court ---------------------------------------------------------------------------------------------------------------------------------- 26
+Mayor & Executive -------------------------------------------------------------------------------------------------------------------------------------------- 27
+Finance ------------------------------------------------------------------------------------------------------------------------------------------------------------- 28
+Legal Services --------------------------------------------------------------------------------------------------------------------------------------------------- 29
+Other Administration & Personnel ------------------------------------------------------------------------------------------------------------------ 30
+Facilities & Central Services ---------------------------------------------------------------------------------------------------------------------------- 31
+Photo Enforcement ------------------------------------------------------------------------------------------------------------------------------------------ 32
+Building ------------------------------------------------------------------------------------------------------------------------------------------------------------- 33
+Planning ------------------------------------------------------------------------------------------------------------------------------------------------------------ 34
+Culture & Recreation ---------------------------------------------------------------------------------------------------------------------------------------- 35
+Park Facilities --------------------------------------------------------------------------------------------------------------------------------------------------- 36
+Other & Non-Expenditures ------------------------------------------------------------------------------------------------------------------------------- 37
+Transfers Out ---------------------------------------------------------------------------------------------------------------------------------------------------- 38
+Asset Replacement & Capital Reserve Fund -------------------------------------------------------------------------------------------------- 39
+Rainy Day Fund ------------------------------------------------------------------------------------------------------------------------------------------------- 40
+Criminal Justice Fund --------------------------------------------------------------------------------------------------------------------------------------- 41
+SPECIAL REVENUE FUNDS
+101 - Street Fund ----------------------------------------------------------------------------------------------------------------------------------------------------- 46
+105 - Drug Seizure Fund ----------------------------------------------------------------------------------------------------------------------------------------- 49
+116 - Community Events Fund ------------------------------------------------------------------------------------------------------------------------------- 50
+130 - Real Estate Excise Tax 1 Fund ---------------------------------------------------------------------------------------------------------------------- 51
+131 - Real Estate Excise Tax 2 Fund ---------------------------------------------------------------------------------------------------------------------- 52
+140 - Traffic Impact Fees Fund ------------------------------------------------------------------------------------------------------------------------------- 53
+150 - Parks Impact Fees Fund -------------------------------------------------------------------------------------------------------------------------------- 54
+City of Milton, Washington
+
+2025 Budget
+
+CAPITAL PROJECTS FUND
+310 - Capital Improvement Fund ---------------------------------------------------------------------------------------------------------------------------- 55
+ENTERPRISE FUNDS
+401 - Electric Utility Fund ---------------------------------------------------------------------------------------------------------------------------------------- 58
+402 - Electric Capital Improvement Fund -------------------------------------------------------------------------------------------------------------- 62
+409 - Electric Asset Replacement Fund ----------------------------------------------------------------------------------------------------------------- 64
+403 - Water Utility Fund ------------------------------------------------------------------------------------------------------------------------------------------ 65
+404 - Water Capital Improvement Fund ----------------------------------------------------------------------------------------------------------------- 70
+405 - Water Asset Replacement Fund ------------------------------------------------------------------------------------------------------------------- 73
+406 - Stormwater Utility Fund --------------------------------------------------------------------------------------------------------------------------------- 74
+407 - Stormwater Capital Improvement Fund ------------------------------------------------------------------------------------------------------- 77
+408 - Stormwater Asset Replacement Fund ---------------------------------------------------------------------------------------------------------- 79
+INTERNAL SERVICE FUNDS
+501 - Vehicle Repair & Maintenance Fund ------------------------------------------------------------------------------------------------------------ 80
+503 - Information Technology Fund ----------------------------------------------------------------------------------------------------------------------- 81
+SUPPLEMENTARY INFORMATION
+Budget Ordinance ---------------------------------------------------------------------------------------------------------------------------------------------------- 82
+Glossary -------------------------------------------------------------------------------------------------------------------------------------------------------------------- 85
+
+City of Milton, Washington
+
+2025 Budget
+
+Introduction
+
+MAYOR'S BUDGET MESSAGE
+Dear City Councilmembers,
+We are pleased to submit for your consideration the 2025 proposed annual budget for the City of Milton.
+Proposed 2025 expenditures and other uses, including interfund transfers out, compared to 2024 budgeted
+amounts are as follows:
+
+Fund
+GENERAL FUND
+General Fund
+Asset Replacement Fund
+Rainy Day Fund
+Criminal Justice Fund
+
+2024
+Amended
+Budget
+
+2025
+Proposed
+Budget
+
+Increase/
+(Decrease)
+
+Percentage
+Change
+
+6,780,752
+174,241
+4,541,965
+
+8,076,143
+307,200
+4,815,836
+
+1,295,391
+132,959
+273,871
+
+19.1%
+76.3%
+0.0%
+6.0%
+
+SPECIAL REVENUE FUNDS
+Street Fund
+Drug Seizure Fund
+Community Events Fund
+Real Estate Excise Tax 1 Fund
+Real Estate Excise Tax 2 Fund
+Traffic Impact Fees Fund
+Parks Impact Fees Fund
+
+620,053
+25,000
+40,645
+100,000
+100,000
+600,000
+-
+
+560,697
+25,000
+42,095
+300,000
+300,000
+1,700,000
+50,000
+
+(59,356)
+1,450
+200,000
+200,000
+1,100,000
+50,000
+
+-9.6%
+0.0%
+3.6%
+200.0%
+200.0%
+183.3%
+0.0%
+
+CAPITAL PROJECTS FUND
+Capital Improvement Fund
+
+6,249,502
+
+2,446,913
+
+(3,802,589)
+
+-60.8%
+
+ENTERPRISE FUNDS
+Electric Utility Fund
+Electric Capital Improvement Fund
+Electric Asset Replacement Fund
+Water Utility Fund
+Water Capital Improvement Fund
+Water Asset Replacement Fund
+Stormwater Utility Fund
+Stormwater Capital Improvement Fund
+Stormwater Asset Replacement Fund
+
+6,292,844
+2,669,487
+352,026
+3,606,666
+2,113,090
+182,026
+1,395,365
+238,196
+101,724
+
+6,322,301
+2,296,108
+65,000
+3,838,913
+2,560,660
+177,000
+1,447,337
+418,196
+121,800
+
+29,457
+(373,379)
+(287,026)
+232,247
+447,570
+(5,026)
+51,972
+180,000
+20,076
+
+0.5%
+-14.0%
+-81.5%
+6.4%
+21.2%
+-2.8%
+3.7%
+75.6%
+19.7%
+
+INTERNAL SERVICE FUNDS
+Vehicle Repair & Maintenance Fund
+Information Technology Fund
+
+298,225
+345,409
+
+305,575
+351,122
+
+7,350
+5,713
+
+2.5%
+1.7%
+
+36,827,216
+
+36,527,896
+
+(299,320)
+
+-0.8%
+
+TOTAL
+City of Milton, Washington
+
+1
+
+2025 Budget
+
+Introduction
+Estimated 2025 revenues and other sources, including interfund transfers in, compared to 2024 budgeted
+amounts are as follows:
+
+Fund
+GENERAL FUND
+General Fund
+Asset Replacement Fund
+Rainy Day Fund
+Criminal Justice Fund
+
+2024
+Amended
+Budget
+
+2025
+Proposed
+Budget
+
+Increase/
+(Decrease)
+
+Percentage
+Change
+
+6,170,408
+127,096
+53,681
+4,135,420
+
+7,139,986
+649,700
+66,474
+4,397,123
+
+969,578
+522,604
+12,793
+261,703
+
+15.7%
+411.2%
+23.8%
+6.3%
+
+SPECIAL REVENUE FUNDS
+Street Fund
+Drug Seizure Fund
+Community Events Fund
+Real Estate Excise Tax 1 Fund
+Real Estate Excise Tax 2 Fund
+Traffic Impact Fees Fund
+Parks Impact Fees Fund
+
+606,382
+32,045
+180,000
+181,400
+116,200
+15,100
+
+576,085
+32,380
+183,800
+184,900
+143,900
+15,800
+
+(30,297)
+335
+3,800
+3,500
+27,700
+700
+
+-5.0%
+0.0%
+1.0%
+2.1%
+1.9%
+23.8%
+4.6%
+
+CAPITAL PROJECTS FUND
+Capital Improvement Fund
+
+4,089,428
+
+2,414,800
+
+(1,674,628)
+
+-41.0%
+
+ENTERPRISE FUNDS
+Electric Utility Fund
+Electric Capital Improvement Fund
+Electric Asset Replacement Fund
+Water Utility Fund
+Water Capital Improvement Fund
+Water Asset Replacement Fund
+Stormwater Utility Fund
+Stormwater Capital Improvement Fund
+Stormwater Asset Replacement Fund
+
+6,361,825
+482,714
+191,549
+3,354,989
+454,679
+101,805
+1,199,300
+149,860
+31,840
+
+6,413,848
+541,743
+205,561
+3,786,183
+508,992
+121,996
+1,305,501
+275,314
+40,730
+
+52,023
+59,029
+14,012
+431,194
+54,313
+20,191
+106,201
+125,454
+8,890
+
+0.8%
+12.2%
+7.3%
+12.9%
+11.9%
+19.8%
+8.9%
+83.7%
+27.9%
+
+INTERNAL SERVICE FUNDS
+Vehicle Repair & Maintenance Fund
+Information Technology Fund
+
+298,225
+325,409
+
+305,575
+351,122
+
+7,350
+25,713
+
+2.5%
+7.9%
+
+28,659,355
+
+29,661,513
+
+1,002,158
+
+3.5%
+
+TOTAL
+
+City of Milton, Washington
+
+2
+
+2025 Budget
+
+Introduction
+Total proposed expenditures for 2025 are 0.8% lower than the previous year. This is primarily due to
+decreased expenditures in the Capital Improvement Fund as well as in the Electric Capital and Asset
+Replacement Funds. These decreases total ($4,462,994), with the largest decrease of ($3,802,589) in the
+Capital Improvement Fund. Budget decreases in these funds reflect the efforts made in 2024 and planned
+for 2025 to continue and complete capital projects that have already been initiated.
+General Fund expenditures increased a total of $1,295,391, or 19.1%. Of this amount, $756,697 is a result
+of increased Transfers Out to other funds. Transfers Out to the Criminal Justice Fund for Police Department
+operations increased by $250,000, and a $500,000 transfer to the Asset Replacement & Capital Reserve
+Fund is budgeted to begin accumulating funds to acquire property for parks, open space and City facilities
+when opportunities arise.
+There are also combined increased expenditures of $440,950 in the Judicial/Municipal Court and Photo
+Enforcement Departments, primarily due to implementation of an automated traffic safety camera program in
+2025. This program will improve traffic and pedestrian safety throughout the City with an emphasis on school
+speed zones, park speed zones, and intersections of two or more arterials. Increased expenditures in the
+Judicial/Municipal Court Department largely reflect increases in contracts with the Milton Municipal Court
+Judge and the City of Puyallup to process cases related to the new program.
+The indirect cost allocation plan was updated for the 2025 Budget as well. Wage and benefit allocations are
+based on the results of formal time studies performed in 2024. These updated allocations are the primary
+source of modest increases in various departments including City Council, Mayor & Executive, and Legal
+Services. The Facilities & Central Services Department also includes an increase of $20,000 to retain grant
+consulting services for research and assistance with various grant opportunities for the City.
+In the Criminal Justice Fund, expenditures increased a total of $273,871, or 6%. Much of this increase is
+associated with wages and benefits. In accordance with the Milton Police Guild labor agreement, wages
+increased by the Consumer Price Index (CPI-U) of 3.8%. Increases to Jail and Animal Control Services also
+contributed to total increased expenditures in this fund.
+The City's labor agreement with non-uniformed and non-exempt employees also provides for wage increases
+equal to the CPI-U of 3.8% in 2025. Exempt employee wages have been increased by 3.8% as well. As in
+previous years, wages for all employees have been budgeted at the top step of each pay range, and benefits
+have been budgeted at the highest applicable rates for all employees. These changes affected wages and
+benefits in all operating funds.
+A few of the remaining larger expenditure increases are in the Water Utility Fund and Asset Replacement &
+Capital Reserve Fund. The Asset Replacement & Capital Reserve Fund increased by $132,959 for various
+scheduled vehicle and equipment replacements. The Water Utility Fund increased by $232,247, primarily due
+to increases in Supplies and Services expenditures including Utility Tax, Excise Tax, Public Utilities, and
+Allocated Operating Expenditures. Salaries and Wages, Personnel Benefits, and Transfers Out also include
+moderate increases.
+
+City of Milton, Washington
+
+3
+
+2025 Budget
+
+Introduction
+Transfers Out from the Real Estate Excise Tax, Traffic Impact Fees, and Parks Impact Fees Funds increased by
+a combined total of $1,550,000 as well. These transfers are used to support projects in the Capital
+Improvement Fund. Many of the larger Capital Improvement Fund projects address priorities expressed by the
+City Council and residents such as sidewalk maintenance and construction, traffic calming, and park
+improvements. These projects include:
+City-wide Parks Improvements
+Playground Equipment
+City-wide Traffic Calming Program
+Sidewalk Missing Links
+
+$
+233,065
+$
+357,512
+$
+256,841
+$ 1,027,202
+
+The Water and Stormwater Capital Funds increased by a combined total of $627,570. As noted previously,
+the City intends to focus on continuing and completing capital projects that have already been initiated. A few
+of these larger projects include:
+New Deep Well
+Juniper Street Water Main
+Oak Street Storm Improvements
+
+$ 1,000,000
+$
+950,000
+$
+200,000
+
+Total proposed revenues for 2025 are 3.5% higher than the previous year. Total revenues increased by
+$1,002,158, primarily due to increased revenues in the General Fund of $969,578. Much of this increase is
+due to the new automated traffic safety camera program the City will be implementing in 2025. Revenues
+associated with this new program are estimated at $1,256,193 for 2025. Excess revenues will be used to
+support other governmental functions to be determined by the City Council through the budget process.
+Also in the General Fund, property taxes and sales taxes have been budgeted at 1% over projected amounts
+for 2024. Utility taxes and investment earnings have been adjusted according to current trends.
+A few of the remaining larger revenue increases are in the Asset Replacement & Capital Reserve Fund,
+Criminal Justice Fund, and Water Utility Fund. Revenues increased by a combined total of $784,307 in the
+Asset Replacement & Capital Reserve Fund and Criminal Justice Fund, primarily due to increased Transfers In
+from the General Fund. Revenues in the Water Utility Fund increased by 12.9% as a result of rate increases.
+Water Sales in the Water Utility Fund have been increased by 12.0% of 2023 Actual amounts, and Storm
+Drainage Fees in the Stormwater Utility Fund have been increased by 25% of 2023 Actual amounts. These
+increases were established through the Water Utility rate study completed in 2023 and the Stormwater Utility
+rate study completed in 2024. Electric Sales in the Electric Utility Fund have been increased by 4.6% of 2023
+Actual amounts. This increase, per Milton Municipal Code, is equal to the previous year's CPI-U. Revenues in
+the Electric, Water and Stormwater Capital Improvement and Asset Replacement Funds are increased as a
+result of these rate increases as well.
+
+City of Milton, Washington
+
+4
+
+2025 Budget
+
+Introduction
+There are also two funds with revenue decreases, the Street Fund and the Capital Improvement Fund.
+Revenues in the Street Fund are decreased due to reduced Transfers In from the General Fund as a result of
+debt elimination. One Public Works Trust Fund loan was paid off in 2022, and the remaining Public Works
+Trust Fund loans were paid off in 2024. Decreased revenues in the Capital Improvement Fund are largely a
+result of the drawing down of Transportation Improvement Fund grant funds as ongoing projects are
+completed, including the SR 99/Porter Way Intersection and the Street Overlays projects.
+Several capital improvement projects have been completed or initiated in 2024. The SR 99/Porter Way
+Intersection project is scheduled to be completed by the end of 2024. This project will add much-needed
+capacity to the intersection and pedestrian improvements along Porter Way. The Street Overlays project is
+also scheduled to be completed by the end of 2024. This project will repair and resurface various streets
+including large portions of Milton Way, one of the City's major arterials. Installation of gateway signs at
+multiple entrances to the City was completed in 2024 as well.
+In addition, playground equipment was upgraded at Olympic View Park in 2024, and a renovation of Hill Tower
+Park is scheduled for 2025. The sports fields at Milton Community Park were also renovated, and
+construction will begin on the Milton Community Park Outdoor Meeting Venue project near the end of 2024. A
+renovation of the Milton Activity Center was completed as well, installing new flooring, windows, ceiling tiles,
+lighting, and paint to create an updated venue for City activities and private rentals.
+City programs and events continued and expanded in 2024 as well. The City held its traditional annual events
+including Milton Days, Craft Bazaar, Santa Parade and National Night Out, while also continuing newer events
+like Touch-a-Truck, Community Yard Sale and Trunk-or-Treat. Activities like Wednesday Morning Chats, Family
+Story Time and Pinochle continued in 2024, and the City expanded its programming by adding activities like
+Line Dancing, Crafting in the MAC, and Sock Hop Senior Prom.
+Development revenues were also higher than expected in 2023. This trend has continued into 2024, and the
+City is currently experiencing strong growth in new business and residential development throughout the
+community. We look forward to continuing these important activities, improvements and accomplishments in
+the coming year.
+Sincerely,
+
+Shanna Styron Sherrell, Mayor
+
+City of Milton, Washington
+
+5
+
+2025 Budget
+
+Introduction
+
+ELECTED OFFICIALS
+Term Expires:
+Shanna Styron Sherrell
+
+Mayor
+
+December 31, 2025
+
+Steve Whitaker
+
+Councilmember - Position 1
+
+December 31, 2025
+
+Bruce White
+
+Councilmember - Position 2
+
+December 31, 2025
+
+Steve Peretti
+
+Councilmember - Position 3
+
+December 31, 2025
+
+Tim Ceder
+
+Councilmember - Position 4
+
+December 31, 2027
+
+Dave Strader
+
+Councilmember - Position 5
+
+December 31, 2025
+
+Frances Hall
+
+Councilmember - Position 6
+
+December 31, 2027
+
+Bob Whalen
+
+Councilmember - Position 7
+
+December 31, 2027
+
+ADMINISTRATIVE STAFF
+Tony Hernandez
+
+Police Chief
+
+Dustin Madden
+
+Public Works Director
+
+Michelle Robbecke
+
+Interim Finance Director
+
+Angelie Stahlnecker
+
+Planning Manager
+
+Trisha Summers
+
+City Clerk/Human Resources Manager
+
+City of Milton, Washington
+
+6
+
+2025 Budget
+
+Introduction
+
+ORGANIZATIONAL CHART
+
+Milton Citizens
+Mayor
+
+City Council
+
+Legal
+Services
+
+Public
+Works
+Director
+
+Finance
+
+City Clerk /
+Human
+Resources
+
+Public Works
+
+Planning
+Manager
+
+Community
+Outreach
+
+Police Chief
+
+Community &
+Economic
+Development
+
+Police
+Department
+
+Emergency
+Management
+
+Building
+Department
+
+Information
+Technology
+Management
+
+Fire Prevention
+Services
+
+Electric Utility
+
+Streets
+
+Water Utility
+
+Facilities
+
+Court Services
+
+Stormwater
+Utility
+
+Parks Services
+
+Jail Services
+
+Asset
+Management
+
+Fleet
+
+Dispatch
+Services
+
+W
+
+City of Milton, Washington
+
+Interagency
+Response
+
+7
+
+2025 Budget
+
+Introduction
+
+BUDGET DEVELOPMENT PROCESS
+The budget includes the financial planning and legal authority to obligate public funds. Additionally, the
+budget provides policy direction by the City Council to the staff and community.
+The budget serves four functions:
+It is a Policy Document
+The budget functions as a policy document in that the decisions made within the budget will reflect the
+general principles or plans that guide the actions taken for the future. As a policy document, the budget
+makes specific attempts to link desired goals and policy direction to the actual day-to-day activities of the City
+staff.
+It is an Operational Guide
+The budget of the City reflects its operation. Activities of each City department or program have been planned,
+formalized and described in the following sections. This process will help to maintain an understanding of the
+various operations of the City and how they relate to each other and to the attainment of the policy issues and
+goals of the City Council.
+It is a Link with the General Public
+The budget provides a unique opportunity to allow and encourage public review of City operations. The budget
+describes the activities of the City, the purposes of those activities, future implications, and the direct
+relationship to citizens.
+It is a Legally Required Financial Planning Tool
+Preparing and adopting a budget is a state law requirement of all cities as stated in Title 35A of the Revised
+Code of Washington (RCW). The budget must be adopted as a balanced budget and must be in place prior to
+the beginning of the City’s fiscal year. The budget is the legal authority to expend public funds and controls
+those expenditures by limiting the amount of appropriation at the fund level. The revenues of the City are
+estimated, along with available cash carry-forward, to determine funds available.
+The City of Milton operates on a calendar-year basis. The City utilizes an incremental budgeting approach that
+assumes, for most functions of government, that the current year’s budget is indicative of the base required
+for the following year. Any increases are incremental and based on need defined by budget policies, emerging
+issues, Council goals and available resources.
+
+City of Milton, Washington
+
+8
+
+2025 Budget
+
+Introduction
+
+BUDGET CALENDAR
+August 2, 2024
+
+Preliminary budget estimates due from directors
+
+October 14, 2024
+
+Preliminary budget presentation to City Council
+
+November 4, 2024
+
+Public hearing on revenue sources
+First reading on tax levy
+
+November 12, 2024
+
+Updated preliminary budget presentation to City Council
+(if needed)
+
+November 18, 2024
+
+First public hearing/reading of final budget
+Second reading on tax levy
+
+December 2, 2024
+
+Second public hearing/adoption of final budget
+
+After the budget is adopted, the City enters a budget implementation and monitoring stage. Throughout the
+year, expenditures are monitored by the Finance Department and department directors to ensure that funds
+are within the approved budget. As requried by RCW 35A.33.140, the Finance Director provides the City
+Council with quarterly reports to keep them current with the City's financial condition.
+The Mayor is authorized to transfer budgeted amounts within a fund, however, any revisions that alter the
+total expenditures of a fund, or that affect the number of authorized employee positions, position titles, salary
+ranges or other conditions of employment must be approved by the City Council.
+When the City Council determines that it is in the best interest of the City to increase or decrease the
+appropriation for a fund, it may do so by ordinance adopted by the City Council.
+
+City of Milton, Washington
+
+9
+
+2025 Budget
+
+Introduction
+
+BUDGET PRINCIPLES
+General Principles
+Department directors have primary responsibility for formulating budget proposals in line with City
+Council and Mayor directions, and for implementing them once they are approved.
+The Finance Department is responsible for coordinating the overall preparation and administration of
+the City’s budget. This function is fulfilled in compliance with applicable State of Washington statutes
+governing local government budgeting practices.
+The Finance Department assists department staff in identifying budget problems, formulating solutions
+and alternatives, and implementing any necessary corrective actions.
+Interfund charges will be based on recovery of costs associated with providing those services.
+Budget adjustments requiring City Council approval will occur through the ordinance process at the
+fund level prior to the end of the fiscal year.
+The City’s budget presentation will be directed at displaying the City’s services plan in a Council/Citizen
+friendly format.
+Minimum Fund Balances
+Enterprise Funds - the targeted budgeted ending fund balance for utility operations funds shall equal
+at least 25% of budgeted operating expenditures.
+General Fund - the targeted budgeted ending fund balance for the General Fund shall equal at least
+8% of budgeted operating expenditures.
+Rainy Day Fund - the targeted budgeted ending fund balance for the Rainy Day Fund shall equal at
+least 10% of budgeted operating expenditures of the General Fund. Use of the Rainy Day Fund shall
+be approved by Council through the budget process for temporary, unanticipated, one-time
+expenditures. If the balance in the Rainy Day Fund falls below the 10% target, the balance should be
+increased by at least one percent per year until the 10% target is met again.
+Capital Asset Replacement and Improvement Funds
+Enterprise Funds - 7% of the monthly charges for electric, water and stormwater shall be transferred
+into the related capital improvement funds and 3% of the same monthly charges shall be transferred
+into the related asset replacement funds.
+
+City of Milton, Washington
+
+10
+
+2025 Budget
+
+Introduction
+General Government - 2% of General Fund operating revenues shall be transferred into the Asset
+Replacement Fund for necessary replacement and/or acquisition of assets for General Fund
+departments and funds supported by the General Fund.
+Basis of Accounting
+Annual appropriated budgets are adopted for all funds on the cash basis of accounting.
+Budgets are adopted at the fund level that constitutes legal authority for expenditures. Annual
+appropriations lapse at the end of the fiscal period.
+The General Fund is the primary fund of the City. It accounts for all financial resources except those
+required or elected to be accounted for in another fund. The City also reports three General Fund
+subsidiary funds:
+Asset Replacement Fund
+Rainy Day Fund
+
+Criminal Justice Fund
+
+Special Revenue Funds account for revenue sources that are legally restricted or designated to
+finance certain activities. Special revenue funds include:
+Street Fund
+Drug Seizure Fund
+Community Events Fund
+
+Real Estate Excise Tax 1 Fund
+Real Estate Excise Tax 2 Fund
+Traffic Impact Fees Fund
+Parks Impact Fees Fund
+
+Capital Projects Funds account for financial resources which are designated for the acquisition or
+construction of general government capital projects. The city maintains one capital project fund:
+Capital Improvement Fund
+Enterprise Funds account for operations that provide goods or services to the general public and are
+supported primarily by user charges. Enterprise funds include:
+Electric Utility Operations Fund
+Electric Capital Improvement Fund
+Electric Asset Replacement Fund
+Water Utility Operations Fund
+Water Capital Improvement Fund
+Water Asset Replacement Fund
+
+Stormwater Utility Operations Fund
+Stormwater Capital Improvement Fund
+Stormwater Asset Replacement Fund
+
+Internal Service Funds account for operations that provide goods or services to other departments or
+funds of the City. Internal service funds include:
+Vehicle Repair & Maintenance Fund
+City of Milton, Washington
+
+11
+
+Information Technology Fund
+2025 Budget
+
+Introduction
+
+CITY-WIDE BUDGET SUMMARY
+Projected
+
+Fund
+
+Net Increase
+
+Projected
+
+Beginning
+
+Revenues
+
+Interfund
+
+Expenditures
+
+Interfund
+
+(Decrease)
+
+Ending
+
+Fund
+
+and Other
+
+Transfers
+
+and Other
+
+Transfers
+
+in Fund
+
+Fund
+
+Balance
+
+Sources
+
+In
+
+Uses
+
+Out
+
+Balance
+
+Balance
+
+GENERAL FUND
+General Fund
+
+5,055,962
+
+7,139,986
+
+-
+
+2,964,569
+
+5,111,574
+
+(936,158)
+
+4,119,805
+
+Asset Replacement Fund
+
+230,514
+
+6,900
+
+642,800
+
+307,200
+
+-
+
+342,500
+
+573,014
+
+Rainy Day Fund
+
+613,925
+
+11,100
+
+55,374
+
+-
+
+-
+
+66,474
+
+680,399
+
+Criminal Justice Fund
+
+463,395
+
+397,123
+
+4,000,000
+
+4,815,836
+
+-
+
+(418,713)
+
+44,682
+
+Street Fund
+
+15,510
+
+176,085
+
+400,000
+
+560,697
+
+-
+
+15,388
+
+30,898
+
+Drug Seizure Fund
+
+28,245
+
+-
+
+-
+
+25,000
+
+-
+
+(25,000)
+
+3,245
+
+SPECIAL REVENUE FUNDS
+
+Community Events Fund
+
+23,619
+
+18,980
+
+13,400
+
+42,095
+
+-
+
+(9,715)
+
+13,904
+
+Real Estate Excise Tax 1 Fund
+
+494,738
+
+183,800
+
+-
+
+-
+
+300,000
+
+(116,200)
+
+378,538
+
+Real Estate Excise Tax 2 Fund
+
+444,612
+
+184,900
+
+-
+
+-
+
+300,000
+
+(115,100)
+
+329,512
+
+Traffic Impact Fees Fund
+
+1,738,566
+
+143,900
+
+-
+
+-
+
+1,700,000
+
+(1,556,100)
+
+182,466
+
+Parks Impact Fees Fund
+
+97,169
+
+15,800
+
+-
+
+-
+
+50,000
+
+(34,200)
+
+62,969
+
+144,976
+
+64,800
+
+2,350,000
+
+2,446,913
+
+-
+
+(32,113)
+
+112,863
+
+1,953,253
+
+CAPITAL PROJECTS FUND
+Capital Improvement Fund
+ENTERPRISE FUNDS
+Electric Utility Fund
+
+1,861,706
+
+6,413,848
+
+-
+
+5,707,097
+
+615,204
+
+91,547
+
+Electric Capital Improvement Fund
+
+4,619,928
+
+111,100
+
+430,643
+
+2,296,108
+
+-
+
+(1,754,365)
+
+2,865,563
+
+Electric Asset Replacement Fund
+
+963,277
+
+21,000
+
+184,561
+
+65,000
+
+-
+
+140,561
+
+1,103,838
+
+Water Utility Fund
+
+2,428,871
+
+3,786,183
+
+-
+
+3,477,925
+
+360,988
+
+(52,730)
+
+2,376,141
+
+Water Capital Improvement Fund
+
+2,208,399
+
+256,300
+
+252,692
+
+2,560,660
+
+-
+
+(2,051,668)
+
+156,731
+650,080
+
+Water Asset Replacement Fund
+
+705,084
+
+13,700
+
+108,296
+
+177,000
+
+-
+
+(55,004)
+
+Stormwater Utility Fund
+
+213,583
+
+1,305,501
+
+-
+
+1,322,237
+
+125,100
+
+(141,836)
+
+71,747
+
+Stormwater Capital Improvement Fund
+
+523,401
+
+187,744
+
+87,570
+
+418,196
+
+-
+
+(142,882)
+
+380,519
+
+Stormwater Asset Replacement Fund
+
+142,906
+
+3,200
+
+37,530
+
+121,800
+
+-
+
+(81,070)
+
+61,836
+
+INTERNAL SERVICE FUNDS
+Vehicle Repair & Maintenance Fund
+Information Technology Fund
+TOTAL
+
+City of Milton, Washington
+
+70
+
+305,575
+
+-
+
+305,575
+
+-
+
+-
+
+70
+
+104,343
+
+351,122
+
+-
+
+351,122
+
+-
+
+-
+
+104,343
+
+23,122,799
+
+21,098,647
+
+8,562,866
+
+27,965,030
+
+8,562,866
+
+(6,866,384)
+
+16,256,416
+
+12
+
+2025 Budget
+
+Introduction
+
+WAGE SCALE
+Full Time Employees
+Maintenance Worker I
+Public Works Field Administrative Assistant
+Police Administrative Assistant
+Finance Administrative Assistant
+Deputy City Clerk
+Community Outreach Coordinator
+Finance Technician I
+Permit Technician
+Maintenance Worker II
+Public Works Administrative Assistant II
+Finance Technician II
+Mechanic
+Public Works Coordinator
+All City Equipment Operator
+Building Inspector
+Maintenance Worker III - Lead
+Water Quality Specialist
+GIS Coordinator
+Utility Supervisor
+Journey Electric Lineman
+Journey Electric Lineman - Lead
+Electric Utility Supervisor
+Uniformed Personnel
+Police Officer
+Police Corporal
+Police Sergeant
+Detective
+Exempt Positions
+Police Chief
+Assistant Police Chief
+Finance Director
+City Clerk/Human Resources Manager
+Public Works Director
+Public Works Project Manager
+City Engineer
+Stormwater Compliance Inspector
+Planning Manager
+Part-Time Employees
+Civil Service Secretary
+Temporary Employees - Administrative
+Temporary Employees - Building Inspector
+Seasonal Public Works Crew
+Elected Officials (Non FTE)
+Mayor
+City Council
+FTE Summary
+Total Regular Full-Time Employees
+Total Part-Time Employees
+
+City of Milton, Washington
+
+2025
+4.00
+1.00
+1.00
+1.00
+1.00
+1.00
+2.00
+1.00
+3.00
+1.00
+1.00
+1.00
+1.00
+1.00
+1.00
+2.00
+1.00
+1.00
+1.00
+1.00
+1.00
+1.00
+
+IBEW
+Grade
+13
+
+Monthly
+STEP A
+STEP B
+STEP C
+STEP D
+STEP E
+$
+4,750 $
+4,995 $
+5,243 $
+5,502 $
+5,778
+
+14
+
+$
+
+4,995
+
+$
+
+5,243
+
+$
+
+5,502
+
+$
+
+5,778
+
+$
+
+6,070
+
+16
+
+$
+
+5,502
+
+$
+
+5,778
+
+$
+
+6,070
+
+$
+
+6,370
+
+$
+
+6,685
+
+17
+
+$
+
+5,778
+
+$
+
+6,070
+
+$
+
+6,370
+
+$
+
+6,685
+
+$
+
+7,021
+
+19
+
+$
+
+6,370
+
+$
+
+6,685
+
+$
+
+7,021
+
+$
+
+7,372
+
+$
+
+7,742
+
+23
+28
+29
+30
+
+$
+$
+
+$
+$
+
+1.00
+1.00
+1.00
+1.00
+1.00
+1.00
+1.00
+1.00
+1.00
+
+$
+$
+$
+$
+$
+$
+$
+$
+$
+
+143,543
+126,715
+120,755
+99,959
+132,607
+81,089
+115,305
+88,861
+94,885
+
+150 hrs
+
+0.70
+
+$
+$
+$
+$
+
+21.56
+24.49
+31.24
+22.04
+
+1.00
+7.00
+
+$
+$
+
+6,000
+400
+
+8,129 $
+8,534 $
+8,963
+10,412 $
+10,933 $
+11,480
+---------------$
+11,480 $
+12,055 $
+12,657
+STEP A
+STEP B
+STEP C
+$
+7,614 $
+7,977 $
+8,355
+$
+7,614 $
+7,977 $
+8,355
+-----$
+10,056 $
+10,538
+$
+7,614 $
+7,977 $
+8,355
+Annual Salary Range
+---------------------------------------------------------------------------------------------------------------------------------------Hourly Range
+------------------------------------------------------------Monthly
+-------------------------------
+
+$
+$
+$
+$
+
+8.00
+2.00
+2.00
+2.00
+
+7,742
+9,916
+-----$
+10,933
+Academy
+$
+7,271
+----------$
+7,271
+
+1,500 hrs
+
+9,412
+12,055
+12,657
+13,291
+STEP D
+$
+8,754
+$
+8,754
+$
+11,048
+$
+8,754
+$
+$
+$
+$
+$
+$
+$
+$
+$
+
+175,156
+151,677
+167,279
+121,396
+166,400
+109,090
+140,018
+108,010
+139,164
+
+---------------$
+26.98
+-----------
+
+Seattle-Tacoma-Bellevue Consumer Price Index (CPI-U)
+June 2023 - June 2024
+3.8%
+
+52.00
+0.70
+
+13
+
+2025 Budget
+
+Introduction
+
+INDIRECT COST ALLOCATION
+Indirect cost allocation is a method to determine and assign the cost of central services to the internal users
+of those services. Cost allocation enables the City to more accurately account for the complete cost of the
+services it provides.
+Indirect costs include central services costs related to information technology, accounting, human resources,
+facilities operating and maintenance costs, and other general and administrative expenses.
+Cost allocation plans share indirect costs across programs, activities, funds and departments. The term
+“allocation” implies that there is no precise method for charging indirect costs, however, cost allocations
+should be designed to provide a consistent, reasonable and equitable means to allocate costs.
+An indirect cost allocation plan is intended to charge restricted funds for a fair and equitable portion of central
+services costs. The City has two fund types that are eligible for indirect cost allocation – special revenue funds
+and business-type funds.
+Special revenue funds must be at least partially funded by an externally restricted or internally designated
+revenue source, however, the special revenue funds can be, and are, subsidized by the General Fund.
+Therefore, there is no benefit to be had by including the special revenue funds in the indirect cost allocation
+plan as increasing expenditures in those funds would simply increase the amount of General Fund subsidy
+required.
+In contrast, the City’s business-type funds must be self-supporting and cannot receive General Fund support in
+the form of subsidization or services provided at no charge. An indirect cost allocation plan is the appropriate
+way to charge business-type funds for services provided by the General Fund. The City’s current business-type
+funds subject to allocation are Water Operations, Electric Operations, Stormwater Operations, Information
+Technology and Vehicle Repair & Maintenance. Utility capital improvement and asset replacement funds are
+excluded from allocation.
+The indirect cost allocation plan is developed based on the principle that costs will be split between general
+government activities (those pertaining to the General Fund and special revenue funds) and business-type
+activities. Business-type activities will be further allocated by fund, based on the criteria described below.
+General government activities will remain in the General Fund.
+Costs to be Allocated
+The following central services costs are subject to allocation:
+Wages, benefits, supplies, training, equipment, etc. associated with:
+City Clerk/Human Resources Manager
+Deputy City Clerk
+Community Outreach Coordinator
+Finance Department
+City of Milton, Washington
+
+14
+
+2025 Budget
+
+Introduction
+Building and maintenance costs:
+City Hall
+Finance Department
+Audit costs
+Insurance
+City-wide technology
+Mayor and City Council costs
+
+Activities and Measurement Criteria
+The activities on which to base allocations and the measurement criteria for those activities are identified in
+the following table.
+Activities
+
+Measurement Criteria
+
+(tracked during 2024 time study)
+Payroll
+
+Full-time Equivalent Employees - 2024 Budget
+
+Human Resources
+
+Full-time Equivalent Employees - 2024 Budget
+
+Accounts Payable
+
+Non-wage Expenses - 2024 Budget
+
+City Council (including meetings/prep/communication)
+
+Number of Agenda Items - 2022 Actual
+
+Payment Processing
+
+Number of Payments - 2022 Actual
+
+Utility Billing
+
+Number of Invoices - 2022 Actual
+
+Insurance
+
+Total Expenses - 2024 Budget
+
+City-wide Technology
+
+Time Study Results
+
+Public Records
+
+Total Expenses - 2024 Budget
+
+Vehicle Maintenance and Repairs
+
+Time Study Results
+
+Budget Monitoring - City-wide
+
+Total Expenses - 2024 Budget
+
+Meetings and Admin Time - City-wide
+
+Total Expenses - 2024 Budget
+
+Meetings and Admin Time - Utilities
+
+Number of Invoices - 2022 Actual
+
+Meetings and Admin Time - Public Safety
+
+Time Study Results
+
+Wellness Program
+
+Full-time Equivalent Employees - 2024 Budget
+
+Budget and Accounting Procedures
+Costs allocated from the General Fund will be shown on separate line items as negative expenditures. Costs
+allocated to business-type funds will be shown as separate expenditure line items.
+The Finance Director will monitor budget to actual amounts for the costs included in the cost allocation plan. If
+there is a variance of greater than 15% between budgeted and annual costs, then a one-time adjustment will
+be made as close to the end of the year as is practical.
+
+City of Milton, Washington
+
+15
+
+2025 Budget
+
+Introduction
+Wage and Benefit Allocations
+Wage and benefit allocations are based on the results of formal time studies performed in 2024. Time
+studies are valid for three years. The existing allocations will remain valid for budget years 2025, 2026 and
+2027. Time studies should be performed again in 2027 for use in the 2028 budget.
+Wage and benefit allocation percentages and amounts for the City Council and the Mayor are included in the
+following tables, however, the City Council and the Mayor do not receive any employment benefits. These
+amounts represent mandatory employment taxes including Paid Family and Medical Leave, WA Cares Fund,
+Workers' Compensation, Social Security and Medicare.
+Wage and Benefit Allocation Percentages
+Fund
+Position
+
+General
+
+Criminal
+
+Electric
+
+Water
+
+Justice
+
+Utility
+
+Utility
+
+Stormwater Information
+Utility
+
+Technology
+
+Vehicle
+Repair
+
+Total
+
+City Council
+City Council
+
+79.43%
+
+0.00%
+
+3.83%
+
+10.45%
+
+4.63%
+
+0.83%
+
+0.83%
+
+100.00%
+
+79.43%
+
+0.00%
+
+3.83%
+
+10.45%
+
+4.63%
+
+0.83%
+
+0.83%
+
+100.00%
+
+Mayor & Executive
+Mayor
+City Clerk/HR Manager
+
+58.35%
+
+0.00%
+
+16.93%
+
+16.51%
+
+6.12%
+
+0.60%
+
+1.49%
+
+100.00%
+
+Deputy City Clerk
+
+60.56%
+
+0.00%
+
+19.23%
+
+14.07%
+
+4.43%
+
+0.80%
+
+0.91%
+
+100.00%
+
+Community Outreach
+
+61.86%
+
+0.00%
+
+19.61%
+
+12.61%
+
+3.62%
+
+1.60%
+
+0.70%
+
+100.00%
+
+Finance
+Finance Director
+
+38.73%
+
+0.00%
+
+30.80%
+
+20.68%
+
+7.84%
+
+1.07%
+
+0.88%
+
+100.00%
+
+Finance Technician II
+
+44.22%
+
+0.00%
+
+23.13%
+
+20.96%
+
+9.73%
+
+0.54%
+
+1.42%
+
+100.00%
+
+Finance Technician I
+
+0.00%
+
+0.00%
+
+39.94%
+
+33.80%
+
+26.26%
+
+0.00%
+
+0.00%
+
+100.00%
+
+Finance Technician I
+
+4.37%
+
+0.00%
+
+38.81%
+
+32.32%
+
+24.31%
+
+0.10%
+
+0.09%
+
+100.00%
+
+Finance Admin Assistant
+
+7.88%
+
+0.00%
+
+38.47%
+
+30.98%
+
+22.28%
+
+0.25%
+
+0.14%
+
+100.00%
+
+City of Milton, Washington
+
+16
+
+2025 Budget
+
+Introduction
+Wage Allocation Amounts
+Fund
+Position
+
+General
+
+Criminal
+
+Electric
+
+Water
+
+Justice
+
+Utility
+
+Utility
+
+Stormwater Information
+Utility
+
+Technology
+
+Vehicle
+Repair
+
+Total
+
+City Council
+City Council
+
+26,688
+
+-
+
+1,287
+
+3,511
+
+1,556
+
+279
+
+279
+
+33,600
+
+Total City Council
+
+26,688
+
+-
+
+1,287
+
+3,511
+
+1,556
+
+279
+
+279
+
+33,600
+
+Mayor & Executive
+Mayor
+
+57,190
+
+-
+
+2,758
+
+7,522
+
+3,334
+
+598
+
+598
+
+72,000
+
+City Clerk/HR Manager
+
+73,264
+
+-
+
+21,257
+
+20,730
+
+7,684
+
+753
+
+1,871
+
+125,559
+
+Deputy City Clerk
+
+45,570
+
+-
+
+14,470
+
+10,587
+
+3,333
+
+602
+
+685
+
+75,247
+
+Community Outreach
+
+46,548
+
+-
+
+14,756
+
+9,488
+
+2,724
+
+1,204
+
+527
+
+75,247
+
+Total Mayor & Executive
+
+222,572
+
+-
+
+53,241
+
+48,327
+
+17,075
+
+3,157
+
+3,681
+
+348,053
+
+170,477
+
+Finance
+Finance Director
+
+66,026
+
+-
+
+52,507
+
+35,255
+
+13,365
+
+1,824
+
+1,500
+
+Finance Technician II
+
+36,592
+
+-
+
+19,140
+
+17,345
+
+8,052
+
+447
+
+1,175
+
+82,751
+
+Finance Technician I
+
+-
+
+-
+
+31,218
+
+26,418
+
+20,525
+
+-
+
+-
+
+78,161
+
+Finance Technician I
+
+3,288
+
+-
+
+29,203
+
+24,320
+
+18,293
+
+75
+
+68
+
+75,247
+
+Finance Admin Assistant
+
+5,929
+
+-
+
+28,948
+
+23,312
+
+16,765
+
+188
+
+105
+
+75,247
+
+Total Finance
+
+111,835
+
+-
+
+161,016
+
+126,650
+
+77,000
+
+2,534
+
+2,848
+
+481,883
+
+Total
+
+361,095
+
+-
+
+215,544
+
+178,488
+
+95,631
+
+5,970
+
+6,808
+
+863,536
+
+Benefit Allocation Amounts
+Fund
+Position
+
+General
+
+Criminal
+
+Electric
+
+Water
+
+Justice
+
+Utility
+
+Utility
+
+Stormwater Information
+Utility
+
+Technology
+
+Vehicle
+Repair
+
+Total
+
+City Council
+City Council
+
+2,386
+
+-
+
+115
+
+314
+
+139
+
+25
+
+25
+
+3,004
+
+Total City Council
+
+2,386
+
+-
+
+115
+
+314
+
+139
+
+25
+
+25
+
+3,004
+
+4,971
+
+-
+
+240
+
+653
+
+290
+
+52
+
+52
+
+6,258
+55,005
+
+Mayor & Executive
+Mayor
+City Clerk/HR Manager
+
+32,096
+
+-
+
+9,312
+
+9,081
+
+3,366
+
+330
+
+820
+
+Deputy City Clerk
+
+28,085
+
+-
+
+8,918
+
+6,526
+
+2,054
+
+371
+
+422
+
+46,376
+
+Community Outreach
+
+28,688
+
+-
+
+9,094
+
+5,848
+
+1,679
+
+742
+
+325
+
+46,376
+
+Total Mayor & Executive
+
+93,840
+
+-
+
+27,564
+
+22,108
+
+7,389
+
+1,495
+
+1,619
+
+154,015
+
+Finance Director
+
+24,256
+
+-
+
+19,289
+
+12,952
+
+4,910
+
+670
+
+551
+
+62,628
+
+Finance
+Finance Technician II
+
+21,071
+
+-
+
+11,021
+
+9,988
+
+4,636
+
+257
+
+677
+
+47,650
+
+Finance Technician I
+
+-
+
+-
+
+18,720
+
+15,843
+
+12,308
+
+-
+
+-
+
+46,871
+
+Finance Technician I
+
+2,027
+
+-
+
+17,999
+
+14,988
+
+11,274
+
+46
+
+42
+
+46,376
+
+Finance Admin Assistant
+
+3,654
+
+-
+
+17,841
+
+14,367
+
+10,333
+
+116
+
+65
+
+46,376
+
+Total Finance
+
+51,008
+
+-
+
+84,870
+
+68,138
+
+43,461
+
+1,089
+
+1,335
+
+249,901
+
+Total
+
+147,234
+
+-
+
+112,549
+
+90,560
+
+50,989
+
+2,609
+
+2,979
+
+406,920
+
+City of Milton, Washington
+
+17
+
+2025 Budget
+
+Introduction
+Other Operating Expenditures Cost Allocations
+Costs other than wages and benefits are allocated based on blended results of time studies and budgeted
+operating expenditures.
+
+Other Operating Expenditures Allocation Percentages
+Fund
+Function
+City Council
+
+General
+80.26%
+
+Electric
+
+Water
+
+Stormwater
+
+Vehicle
+
+Utility
+
+Utility
+
+Utility
+
+Repair
+
+3.83%
+
+10.45%
+
+4.63%
+
+0.83%
+
+Total
+100.00%
+
+Mayor & Executive
+
+66.01%
+
+14.90%
+
+13.41%
+
+4.70%
+
+0.98%
+
+100.00%
+
+Finance
+
+19.43%
+
+34.23%
+
+27.75%
+
+18.08%
+
+0.51%
+
+100.00%
+
+Legal Services
+
+45.70%
+
+29.13%
+
+18.74%
+
+5.38%
+
+1.05%
+
+100.00%
+
+Other Admin & Personnel
+
+62.87%
+
+9.37%
+
+17.50%
+
+7.95%
+
+2.31%
+
+100.00%
+
+Facilities & Central Services
+
+40.14%
+
+25.64%
+
+21.37%
+
+12.13%
+
+0.72%
+
+100.00%
+
+Other Operating Expenditures Allocation Amounts
+Fund
+Function
+
+General
+
+Electric
+
+Water
+
+Stormwater
+
+Vehicle
+
+Utility
+
+Utility
+
+Utility
+
+Repair
+
+Total
+
+City Council
+
+28,051
+
+1,339
+
+3,652
+
+1,618
+
+290
+
+34,950
+
+Mayor & Executive
+
+29,808
+
+6,728
+
+6,056
+
+2,122
+
+443
+
+45,157
+
+Finance
+
+28,535
+
+50,271
+
+40,754
+
+26,553
+
+749
+
+146,862
+
+Legal Services
+
+53,926
+
+34,373
+
+22,113
+
+6,348
+
+1,239
+
+117,999
+
+Other Admin & Personnel
+
+20,621
+
+3,073
+
+5,740
+
+2,608
+
+758
+
+32,800
+
+Facilities & Central Services
+
+186,762
+
+119,297
+
+99,429
+
+56,438
+
+3,350
+
+465,276
+
+Total
+
+347,703
+
+215,081
+
+177,744
+
+95,687
+
+6,829
+
+843,044
+
+City of Milton, Washington
+
+18
+
+2025 Budget
+
+Introduction
+
+INTERFUND ACTIVITY
+Information Technology
+Interfund charges for services in the Information Technology Fund are based on full-time equivalent employee
+counts. The allocation is as follows:
+
+Function
+Mayor & Executive
+Finance
+Facilities & Central Services
+Building
+Planning
+Park Facilities
+Street Fund
+Criminal Justice Fund
+Electric Utility Fund
+Water Utility Fund
+Stormwater Utility Fund
+Vehicle Repair & Maintenance Fund
+Total
+
+FTE
+3.00
+5.00
+1.29
+2.10
+1.44
+1.00
+2.17
+17.00
+4.93
+8.92
+3.93
+1.22
+52.00
+
+Percentage
+5.77%
+9.62%
+2.48%
+4.04%
+2.77%
+1.92%
+4.17%
+32.69%
+9.48%
+17.15%
+7.56%
+2.35%
+100.00%
+
+Allocation
+20,257
+33,762
+8,711
+14,180
+9,723
+6,752
+14,653
+114,790
+33,289
+60,230
+26,537
+8,238
+351,122
+
+Vehicle Repair & Maintenance
+Interfund charges for services in the Vehicle Repair & Maintenance Fund are based on actual costs incurred
+during the year.
+Interfund Rentals
+Interfund rental revenue is recorded in the Electric Utility Fund to reflect the use of space by the Water Utility
+Fund and Stormwater Utility Fund.
+Interfund rental revenue is also recorded in the Stormwater Utility Fund to reflect use of the vactor truck by
+other funds.
+
+City of Milton, Washington
+
+19
+
+2025 Budget
+
+Introduction
+Interfund Transfers
+Budgeted interfund transfers are as follows:
+2025
+Budget
+
+Transfers Out
+Fund
+
+Transfers In
+Fund
+
+Description
+
+142,800
+
+General Fund
+
+Asset Replacement Fund
+
+Asset replacement and capital improvements
+
+500,000
+
+General Fund
+
+Asset Replacement Fund
+
+Future property acquisition
+
+400,000
+
+General Fund
+
+Street Fund
+
+Subsidize Street Fund operations
+
+55,374
+
+General Fund
+
+Rainy Day Fund
+
+Maintain target ending fund balance
+
+4,000,000
+
+General Fund
+
+Criminal Justice Fund
+
+Subsidize Police Department operations
+
+13,400
+
+General Fund
+
+Community Events Fund
+
+Staffing costs associated with Milton Days
+
+300,000
+
+Real Estate Excise Tax 1
+
+Capital Improvement Fund
+
+Eligible capital improvements
+
+300,000
+
+Real Estate Excise Tax 2
+
+Capital Improvement Fund
+
+Eligible capital improvements
+
+1,700,000
+
+Traffic Impact Fees Fund
+
+Capital Improvement Fund
+
+Eligible capital improvements
+
+50,000
+
+Parks Impact Fees Fund
+
+Capital Improvement Fund
+
+Eligible capital improvements
+
+430,643
+
+Electric Utility Fund
+
+Electric Capital
+Improvement Fund
+
+Electric Utility capital improvements
+
+184,561
+
+Electric Utility Fund
+
+Electric Asset
+Replacement Fund
+
+Electric Utility asset replacement
+
+252,692
+
+Water Utility Fund
+
+Water Capital
+Improvement Fund
+
+Water Utility capital improvements
+
+108,296
+
+Water Utility Fund
+
+Water Asset
+Replacement Fund
+
+Water Utility asset replacement
+
+87,570
+
+Stormwater Utility Fund
+
+Stormwater Capital
+Improvement Fund
+
+Stormwater Utility capital improvements
+
+37,530
+
+Stormwater Utility Fund
+
+Stormwater Asset
+Replacement Fund
+
+Stormwater Utility asset replacement
+
+8,562,866
+
+Total
+
+City of Milton, Washington
+
+20
+
+2025 Budget
+
+General Fund
+
+GENERAL FUND SUMMARY
+2024 to 2025
+Budget Comparison
+Increase/(Decrease)
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+Beginning Fund Balance
+
+4,180,812
+
+5,127,454
+
+5,127,454
+
+5,055,962
+
+Revenues and Other Sources
+Property Taxes
+Sales Taxes
+Utility and Other Taxes
+Licenses and Permits
+Intergovernmental Revenues
+Charges for Services
+Fines and Forfeitures
+Miscellaneous Revenues
+Other and Non-Revenues
+Total Revenues and Other Sources
+
+1,575,397
+2,398,381
+1,366,283
+396,602
+109,340
+1,050,082
+69,291
+207,423
+6,145
+7,178,944
+
+1,569,981
+2,452,774
+1,362,883
+334,250
+625
+277,650
+59,745
+101,500
+11,000
+6,170,408
+
+1,595,378
+2,044,218
+1,369,759
+1,050,450
+83,125
+325,520
+61,200
+167,610
+11,000
+6,708,260
+
+1,611,332
+2,064,660
+1,410,191
+338,950
+218,020
+1,317,393
+168,440
+11,000
+7,139,986
+
+41,351
+(388,114)
+47,308
+4,700
+(625)
+(59,630)
+1,257,648
+66,940
+969,578
+
+3%
+-16%
+3%
+1%
+-100%
+-21%
+2105%
+66%
+0%
+16%
+
+Expenditures and Other Uses
+City Council
+Judicial/Municipal Court
+Mayor & Executive
+Finance
+Legal Services
+Other Admin & Personnel
+Facilities & Central Services
+Photo Enforcement
+Building
+Planning
+Culture & Recreation
+Park Facilities
+Other & Non-Expenditures
+Transfers Out
+Total Expenditures and Other Uses
+
+28,369
+362,317
+177,026
+74,810
+22,112
+(982)
+155,348
+586,909
+636,468
+20,516
+287,103
+(6,791)
+3,889,097
+6,232,302
+
+51,817
+364,800
+275,995
+164,193
+34,672
+12,704
+198,029
+371,625
+564,009
+41,000
+326,031
+21,000
+4,354,877
+6,780,752
+
+51,817
+364,800
+275,995
+164,193
+34,672
+12,704
+198,029
+371,625
+564,009
+41,000
+326,031
+20,000
+4,354,877
+6,779,752
+
+57,125
+589,800
+346,220
+191,378
+53,927
+20,621
+186,762
+215,950
+383,520
+524,095
+41,000
+334,171
+20,000
+5,111,574
+8,076,143
+
+5,308
+225,000
+70,225
+27,185
+19,255
+7,917
+(11,267)
+215,950
+11,895
+(39,914)
+8,140
+(1,000)
+756,697
+1,295,391
+
+10%
+62%
+25%
+17%
+56%
+62%
+-6%
+0%
+3%
+-7%
+0%
+2%
+-5%
+17%
+19%
+
+946,642
+
+(610,344)
+
+(71,492)
+
+(936,158)
+
+5,127,454
+
+4,517,110
+
+5,055,962
+
+4,119,805
+
+82%
+
+67%
+
+75%
+
+51%
+
+Net Change in Fund Balance
+Ending Fund Balance
+Fund Balance as a Percentage
+of Expenditures
+City of Milton, Washington
+
+21
+
+Amount
+
+Percentage
+
+2025 Budget
+
+General Fund
+
+GENERAL FUND REVENUES
+DETAIL
+Account
+
+Title
+
+Revenues and Other Sources
+Taxes
+311 10 00 001 Property Tax - Pierce County
+311 10 01 001 Property Tax - King County
+311 10 02 001 Parks Levy - King County
+313 11 00 001 Local Sales Tax
+313 17 10 001 Parks Sales Tax
+313 31 00 000 Hotel/Motel Tax
+316 41 00 000 Electric Utility Tax
+316 42 00 000 Water Utility Tax
+316 43 00 000 Gas Utility Tax
+316 44 00 000 Sewer Utility Tax
+316 46 00 000 Cable TV Utility Tax
+316 47 00 000 Telephone Utility Tax
+316 48 00 000 Stormwater Utility Tax
+316 49 00 000 Solid Waste Utility Tax
+316 81 00 000 Gambling Tax
+318 12 00 000 Parking Tax
+Total Taxes
+Licenses and Permits
+321 99 00 000 Business Licenses
+321 99 10 000 Home Occupation Permits
+322 10 00 000 Building Permits
+322 10 00 007 Building Permit Technology Fees
+322 10 01 000 Demo Permits
+322 10 02 000 Sign Permits
+322 10 04 000 Plumbing and Mechanical Permits
+322 10 05 000 Fire Alarm Permits
+322 10 05 002 Fire Plan Reviews/Services
+322 90 20 000 Miscellaneous Permits
+Total Licenses and Permits
+
+City of Milton, Washington
+
+22
+
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+1,257,730
+291,141
+26,526
+2,300,152
+93,496
+4,733
+373,573
+292,719
+116,825
+152,589
+113,652
+70,160
+91,350
+139,460
+14,605
+1,350
+5,340,061
+
+1,287,027
+253,234
+29,720
+2,352,128
+96,603
+4,043
+381,039
+289,516
+115,946
+145,412
+116,494
+79,085
+92,520
+126,896
+15,925
+50
+5,385,638
+
+1,270,307
+294,052
+31,019
+1,945,007
+94,431
+4,780
+376,309
+307,485
+115,946
+152,589
+102,590
+70,862
+101,331
+126,896
+14,751
+1,000
+5,009,355
+
+1,283,010
+296,993
+31,329
+1,964,457
+95,375
+4,828
+384,426
+324,889
+115,946
+154,115
+102,590
+71,571
+112,590
+128,165
+14,899
+1,000
+5,086,183
+
+86,782
+228,679
+12,978
+2,503
+7,723
+49,438
+2,025
+6,424
+50
+396,602
+
+75,000
+600
+200,000
+8,500
+2,000
+7,500
+30,000
+3,000
+7,500
+150
+334,250
+
+80,000
+300
+875,000
+45,000
+2,000
+7,500
+30,000
+3,000
+7,500
+150
+1,050,450
+
+80,000
+300
+200,000
+8,500
+2,000
+7,500
+30,000
+3,000
+7,500
+150
+338,950
+
+2025 Budget
+
+General Fund
+DETAIL
+Account
+
+2023
+Actual
+
+Title
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+Revenues and Other Sources (Continued)
+Intergovernmental Revenues
+334 01 20 000 State Grants from Other Judicial Agencies
+334 04 20 000 State Grants from Dept of Commerce
+337 00 00 001 Local Grants and Other Payments
+Total Intergovernmental Revenues
+
+14,505
+92,500
+2,335
+109,340
+
+625
+625
+
+82,500
+625
+83,125
+
+-
+
+Charges for Services
+341 33 02 000 Warrant Costs
+341 33 03 000 Deferred Prosecution Fees
+341 33 06 000 Information Technology Fees
+341 62 00 000 Photocopies - Municipal Court
+341 81 00 000 Photocopies
+342 33 00 000 Adult Probation Services
+342 33 00 001 Record Check Fees
+342 33 00 002 Sentence Compliance Monitoring
+342 33 00 003 Conviction Fees
+342 37 00 000 Booking Fees
+345 81 01 000 Subdivision Fees
+345 81 02 000 Variance/Conditional Use Fees
+345 81 04 000 Commercial/Industrial Development Fees
+345 81 05 000 Boundary Adjustments
+345 81 06 000 Pre-Application Meetings
+345 83 10 000 Plan Reviews
+345 83 20 000 Plan Check/Land Use Fees
+345 89 00 000 Other Planning & Development Fees
+345 89 00 001 Other Planning & Development Admin Fees
+347 60 00 000 Program Fees - Fitness Classes
+Total Charges for Services
+
+2,142
+1,204
+312
+9
+173
+2,494
+562
+11,826
+79
+87
+8,719
+11,109
+1,800
+9,217
+732,100
+5,850
+253,436
+6,513
+2,450
+1,050,082
+
+5,000
+1,000
+500
+50
+100
+300
+1,000
+17,400
+300
+300
+3,600
+2,400
+7,500
+900
+8,300
+100,000
+2,500
+120,000
+5,000
+1,500
+277,650
+
+3,000
+1,000
+500
+20
+100
+300
+600
+11,800
+200
+300
+3,600
+2,400
+26,200
+900
+8,300
+100,000
+2,500
+158,800
+5,000
+325,520
+
+3,000
+1,000
+500
+20
+100
+300
+600
+11,800
+200
+300
+3,600
+2,400
+7,500
+900
+8,300
+100,000
+2,500
+70,000
+5,000
+218,020
+
+City of Milton, Washington
+
+23
+
+2025 Budget
+
+General Fund
+DETAIL
+Account
+
+2023
+Actual
+
+Title
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+Revenues and Other Sources (Continued)
+Fines and Forfeitures
+352 30 00 000 Mandatory Insurance Admin Fees
+353 10 00 000 Traffic Infraction Penalties
+353 10 00 001 Traffic Infraction Penalties - Photo Enforcement
+353 70 00 000 Local/JIS Account
+354 00 00 000 Disabled Parking Penalties
+355 20 00 000 DUI Penalties
+355 80 00 000 Criminal Traffic Penalties
+356 50 00 000 Investigative Fund Assessments
+356 90 00 000 Other Non-Traffic Penalties
+357 33 00 000 Public Defender Fees
+357 35 00 000 Court Interpreter Cost
+357 37 00 000 Court Cost Recoupments
+359 10 00 000 Other Penalties
+Total Fines and Forfeitures
+
+74
+30,212
+634
+1,175
+4,314
+7,869
+1,278
+9,842
+4,406
+3,239
+2,967
+3,281
+69,291
+
+100
+30,000
+45
+300
+4,800
+10,000
+1,700
+2,000
+3,500
+1,800
+2,300
+3,200
+59,745
+
+100
+30,000
+100
+300
+4,800
+10,000
+1,700
+2,000
+3,500
+3,200
+2,300
+3,200
+61,200
+
+100
+30,000
+1,256,193
+100
+300
+4,800
+10,000
+1,700
+2,000
+3,500
+3,200
+2,300
+3,200
+1,317,393
+
+Miscellaneous Revenues
+361 10 00 001 Investment Earnings
+361 40 01 001 Interest - Local Sales Tax
+361 40 02 001 Interest - Other
+361 40 03 001 Interest - Municipal Court
+362 00 01 000 Facility Rentals
+362 00 02 000 East Pierce Fire & Rescue Lease
+369 80 00 000 Cash Over/Short
+369 81 01 000 Cash Over/Short - Municipal Court
+369 91 00 000 Miscellaneous Revenue
+Total Miscellaneous Revenues
+
+141,197
+6,953
+869
+6,748
+19,130
+20,143
+(100)
+12,483
+207,423
+
+36,800
+6,000
+10,000
+19,500
+22,100
+7,100
+101,500
+
+105,900
+6,000
+7,000
+19,500
+22,100
+10
+7,100
+167,610
+
+105,900
+6,000
+7,000
+19,500
+22,940
+7,100
+168,440
+
+4,900
+2,261
+(1,016)
+6,145
+
+5,000
+5,000
+1,000
+11,000
+
+5,000
+5,000
+1,000
+11,000
+
+5,000
+5,000
+1,000
+11,000
+
+7,178,944
+
+6,170,408
+
+6,708,260
+
+7,139,986
+
+Other and Non-Revenues
+382 10 00 000 Facility Rental Deposits
+382 10 00 001 Developer Deposits
+389 90 00 000 Miscellaneous Non-Revenues
+Total Other and Non-Revenues
+Total Revenues and Other Sources
+
+City of Milton, Washington
+
+24
+
+2025 Budget
+
+CITY COUNCIL
+
+General Fund
+
+The City Council, or Legislative Department of the City, accounts for the cost of providing effective elective
+representation to the citizens of the City. The seven-member Council makes policy decisions for the City and
+is accountable to Milton citizens by determining how resources are allocated, the appropriate levels of
+services, and establishing goals and policies for the City.
+
+Account
+511 30 41 000
+511 60 10 000
+511 60 20 000
+511 60 31 000
+511 60 41 000
+511 60 41 002
+511 60 43 000
+511 60 49 002
+511 60 49 003
+
+2023
+Actual
+
+Title
+Official Publications/Code Publishing
+Salaries and Wages
+Allocated Salaries and Wages
+Personnel Benefits
+Allocated Personnel Benefits
+Office and Operating Supplies
+Professional Services
+Advertising
+Travel
+Misc/Training & Registrations
+Misc/Outside Printing
+Allocated Operating Expenditures
+
+4,285
+33,600
+(9,401)
+2,751
+(807)
+164
+5,219
+1,866
+163
+200
+(9,671)
+28,369
+
+Total City Council
+
+City of Milton, Washington
+
+25
+
+2024
+Budget
+8,000
+33,600
+(9,401)
+2,944
+(824)
+450
+12,000
+1,400
+7,500
+5,350
+200
+(9,402)
+51,817
+
+2024
+Projected
+8,000
+33,600
+(9,401)
+2,944
+(824)
+450
+12,000
+1,400
+7,500
+5,350
+200
+(9,402)
+51,817
+
+2025
+Budget
+8,000
+33,600
+(6,912)
+3,004
+(618)
+450
+12,000
+1,400
+7,500
+5,400
+200
+(6,899)
+57,125
+
+2025 Budget
+
+JUDICIAL/MUNICIPAL COURT
+
+General Fund
+
+The Judicial/Municipal Court Department is used to account for expenditures of the Milton Municipal Court.
+The Milton Municipal Court is a court of limited jurisdiction, hearing cases involving alleged violations of City
+ordinances and State misdemeanor statutes, traffic and parking infractions. The City currently contracts with
+the City of Puyallup for court services.
+In 2025, the City will be implementing an automated traffic safety camera program. Increased expenditures
+for this department in 2025 largely reflect increases in contracts with the Milton Municipal Court Judge and
+the City of Puyallup to process cases related to this new program.
+
+Account
+
+Title
+
+512 50 31 000 Office and Operating Supplies
+512 50 41 000 Professional Services
+512 50 41 003 Municipal Court Services
+512 50 43 000 Judge's Travel
+512 50 49 001 Misc/Dues & Memberships
+512 50 49 002 Misc/Training & Registrations
+Total Judicial/Municipal Court
+
+City of Milton, Washington
+
+26
+
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+23
+81,820
+279,974
+500
+362,317
+
+800
+83,000
+280,000
+300
+400
+300
+364,800
+
+800
+83,000
+280,000
+300
+400
+300
+364,800
+
+800
+133,000
+455,000
+300
+400
+300
+589,800
+
+2025 Budget
+
+MAYOR & EXECUTIVE
+
+General Fund
+
+The Mayor & Executive Department is accountable to the City Council for the operational results of the
+organization, effective support of elected officials in achieving their goals, fulfillment of the statutory
+requirements of the City, implementation of City Council policies, and providing for a communication linkage
+between citizens, the City Council, City departments, and other government agencies. Positions in this
+department include the Mayor, City Clerk/Human Resources Manager, Deputy City Clerk and Community
+Outreach Coordinator. The Deputy City Clerk position was added to this department in 2024 to address
+increased workload.
+
+Account
+
+Title
+
+513 10 10 000
+
+Salaries and Wages
+Allocated Salaries and Wages
+513 10 20 000 Personnel Benefits
+Allocated Personnel Benefits
+513 10 31 000 Office and Operating Supplies
+513 10 35 000 Small Tools and Equipment
+513 10 41 000 Other Services and Charges
+513 10 41 001 Professional Services - IT
+513 10 41 002 Advertising
+513 10 42 000 Communication
+513 10 43 000 Travel
+513 10 45 000 Operating Rentals and Leases
+513 10 48 000 Repairs and Maintenance
+513 10 49 000 Miscellaneous
+513 10 49 001 Misc/Dues & Memberships
+513 10 49 002 Misc/Training & Registrations
+513 10 49 003 Misc/Outside Printing
+Allocated Operating Expenditures
+Total Mayor & Executive
+
+City of Milton, Washington
+
+27
+
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+252,117
+(104,626)
+67,184
+(52,065)
+1,977
+1,225
+9,898
+199
+3,900
+1,289
+4,092
+52
+556
+745
+(9,517)
+177,026
+
+338,452
+(163,710)
+149,731
+(79,080)
+2,000
+5,000
+2,000
+18,774
+200
+3,300
+2,900
+4,100
+1,000
+300
+750
+2,745
+500
+(12,967)
+275,995
+
+338,452
+(163,710)
+147,331
+(79,080)
+2,000
+5,000
+2,000
+18,774
+200
+3,300
+2,900
+6,500
+1,000
+300
+750
+2,745
+500
+(12,967)
+275,995
+
+348,052
+(125,480)
+154,015
+(60,175)
+2,000
+2,500
+2,000
+20,257
+200
+3,300
+3,200
+6,500
+1,000
+300
+750
+2,650
+500
+(15,349)
+346,220
+
+2025 Budget
+
+FINANCE
+
+General Fund
+
+The Finance Department is responsible for ensuring sound financial management of all City operations,
+safekeeping of City assets, budget development, financial statement preparation, debt administration and
+investing. Major functions include payroll, accounts payable, and utility billing.
+A Finance Administrative Assistant position was added to this department in 2024 to address increased
+workload.
+
+Account
+514 20 10 000
+514 20 11 000
+514 20 20 000
+514 20 31 000
+514 20 35 000
+514 20 41 000
+514 20 41 001
+514 20 41 002
+514 20 41 003
+514 20 42 000
+514 20 43 000
+514 20 45 000
+514 20 48 000
+514 20 49 000
+514 20 49 001
+514 20 49 002
+514 20 49 003
+514 40 41 003
+
+Title
+Salaries and Wages
+Overtime
+Allocated Salaries and Wages
+Personnel Benefits
+Allocated Personnel Benefits
+Office and Operating Supplies
+Small Tools and Equipment
+Professional Services
+Professional Services - IT
+Advertising
+State Auditor's Office Services
+Communication
+Travel
+Operating Rentals and Leases
+Repairs and Maintenance
+Miscellaneous
+Misc/Dues & Memberships
+Misc/Training & Registrations
+Misc/Outside Printing
+Election And Voter Costs
+Allocated Operating Expenditures
+
+Total Finance
+
+City of Milton, Washington
+
+28
+
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+360,017
+1,322
+(304,027)
+117,316
+(153,690)
+4,815
+1,498
+87,458
+19,797
+1,600
+3,162
+4,419
+705
+585
+460
+125
+34,512
+(105,264)
+74,810
+
+463,437
+4,000
+(372,006)
+243,138
+(198,872)
+3,500
+1,000
+35,000
+31,289
+1,000
+28,000
+4,000
+1,000
+1,000
+500
+500
+200
+3,340
+200
+28,000
+(114,033)
+164,193
+
+463,437
+4,000
+(372,006)
+241,138
+(198,872)
+5,500
+1,000
+35,000
+31,289
+1,000
+28,000
+4,000
+1,000
+1,000
+500
+500
+200
+3,340
+200
+28,000
+(114,033)
+164,193
+
+477,883
+4,000
+(370,048)
+249,900
+(198,892)
+5,500
+1,000
+35,000
+33,762
+1,000
+30,000
+4,000
+1,000
+1,000
+500
+500
+200
+3,200
+200
+30,000
+(118,327)
+191,378
+
+2025 Budget
+
+LEGAL SERVICES
+
+General Fund
+
+The City currently contracts for all legal services, including general legal counsel and related services.
+Services include advising the Council, Mayor and Directors as well as representing the City in litigation and
+preparing legislation for consideration by the Council.
+
+Account
+
+Title
+
+515 41 41 000
+515 41 41 002
+
+City Attorney (External)
+Labor Attorney (External)
+Allocated Operating Expenditures
+Total Legal Services
+
+City of Milton, Washington
+
+29
+
+2023
+Actual
+
+2024
+Budget
+
+91,287
+11,153
+(80,328)
+22,112
+
+105,000
+10,000
+(80,328)
+34,672
+
+2024
+Projected
+105,000
+10,000
+(80,328)
+34,672
+
+2025
+Budget
+105,000
+13,000
+(64,073)
+53,927
+
+2025 Budget
+
+OTHER ADMIN & PERSONNEL
+
+General Fund
+
+The Other Admin & Personnel Department accounts for employee safety, wellness and recognition as well as
+other minor personnel related items, including unemployment benefits and AWC's Workers' Comp Retro
+Program fees.
+
+Account
+
+Title
+
+517 30 49 000
+517 60 49 001
+517 78 20 004
+517 90 31 000
+517 90 31 001
+517 90 31 003
+517 90 43 000
+
+FSA Plan Fees
+Misc/Dues & Memberships
+Unemployment Benefits
+Supplies - Employee Wellness
+Supplies - Employee Recognition
+Supplies - Safety Committee
+Travel - Employee Wellness
+Allocated Operating Expenditures
+Total Other Admin & Personnel
+
+City of Milton, Washington
+
+30
+
+2023
+Actual
+
+2024
+Budget
+
+600
+10,605
+1,334
+217
+253
+(13,991)
+(982)
+
+1,000
+10,500
+12,000
+600
+2,395
+200
+(13,991)
+12,704
+
+2024
+Projected
+1,200
+12,800
+9,400
+600
+2,395
+300
+(13,991)
+12,704
+
+2025
+Budget
+1,200
+14,000
+12,000
+600
+1,700
+3,000
+300
+(12,179)
+20,621
+
+2025 Budget
+
+FACILITIES & CENTRAL SERVICES
+
+General Fund
+
+The Facilities & Central Services Department accounts for support activities that benefit the entire
+organization. Department expenditures primarily include facilities maintenance for the City Hall complex as
+well as city-wide insurance premiums. Facilities maintenance includes maintaining, repairing, cleaning and
+protecting all general property. Responsibilities include custodial, general maintenance, pest control, small
+repairs and coordination of significant repair projects. Costs are allocated to other funds based on the
+indirect cost plan.
+In 2025, a Professional Services budget of $20,000 has been added to retain grant consulting services for
+research and assistance with various grant opportunities for the City.
+
+Account
+
+Title
+
+518 30 10 000
+518 30 11 000
+518 30 20 000
+518 30 20 002
+518 30 31 000
+518 30 32 000
+518 30 35 000
+518 30 41 000
+518 30 41 001
+518 30 42 000
+518 30 43 000
+518 30 45 000
+518 30 47 000
+518 30 48 000
+518 30 48 001
+518 30 48 002
+518 30 49 000
+518 30 49 001
+518 30 49 002
+518 80 42 000
+518 90 41 000
+518 90 46 000
+518 90 49 001
+
+Salaries and Wages
+Overtime
+Personnel Benefits
+Uniforms
+Office and Operating Supplies
+Fuel
+Small Tools and Equipment
+Professional Services
+Professional Services - IT
+Communication
+Travel
+Operating Rentals and Leases
+Public Utilities
+Repairs and Maintenance
+Vehicle Repairs and Maintenance
+Facility Repairs and Maintenance
+Miscellaneous
+Misc/Dues & Memberships
+Misc/Training & Registrations
+Communication
+Professional Services
+Insurance
+Misc/Dues & Memberships
+Allocated Operating Expenditures
+Total Facilities & Central Services
+
+City of Milton, Washington
+
+31
+
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+145,186
+92
+43,788
+2,650
+17,941
+2,083
+4,675
+15,683
+9,403
+1,591
+35
+3,507
+6,198
+7,500
+7,837
+21,779
+71
+159
+628
+763
+886
+74,871
+20,231
+(232,209)
+155,348
+
+148,947
+64,336
+2,100
+15,000
+3,500
+5,000
+15,000
+8,073
+1,200
+100
+2,600
+3,700
+5,000
+5,000
+25,000
+2,000
+200
+300
+500
+92,987
+19,500
+(222,014)
+198,029
+
+148,947
+51,345
+3,100
+15,000
+3,500
+5,000
+18,000
+8,073
+1,200
+100
+3,500
+3,700
+5,000
+7,800
+25,000
+2,000
+200
+300
+500
+96,278
+21,500
+(222,014)
+198,029
+
+157,347
+66,948
+3,100
+15,000
+3,500
+5,000
+18,000
+8,711
+1,200
+100
+3,500
+3,700
+5,000
+7,800
+25,000
+2,000
+200
+300
+500
+20,000
+96,870
+21,500
+(278,514)
+186,762
+
+2025 Budget
+
+PHOTO ENFORCEMENT
+
+General Fund
+
+The Photo Enforcement Department is used to account for expenditures of the City's automated traffic safety
+camera program. This program will improve traffic and pedestrian safety throughout the City with an
+emphasis on school speed zones, park speed zones, and intersections of two or more arterials.
+The automated traffic safety camera program will be initiated in 2025, so the revenues and expenditures
+presented reflect six months of activity. The portion of judicial and municipal court expenditures related to the
+new program are presented to clearly display total revenues and expenditures associated with the program.
+Total judicial and municipal court expenditures, including those associated with the automated traffic safety
+camera program, are presented in the Judicial/Municipal Court Department.
+The City has contracted with an external vendor to assist with infrastructure installation, system operation,
+and infraction issuance. Excess revenues will be used to support other governmental functions to be
+determined by the City Council through the budget process.
+
+Account
+
+2023
+Actual
+
+Title
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+Photo Enforcement Revenues and Other Sources
+353 10 00 001 Traffic Infraction Penalties - Photo Enforcement
+Total Photo Enforcement Revenues and Other Sources
+
+-
+
+-
+
+-
+
+1,256,193
+1,256,193
+
+Photo Enforcement Expenditures and Other Uses
+512 50 41 000 Judicial Services
+512 50 41 003 Municipal Court Services
+521 70 41 000 Professional Services - Photo Enforcement
+Total Photo Enforcement Expenditures and Other Uses
+
+-
+
+-
+
+-
+
+50,000
+140,500
+215,950
+406,450
+
+Net Revenues
+
+-
+
+-
+
+-
+
+849,743
+
+City of Milton, Washington
+
+32
+
+2025 Budget
+
+BUILDING
+
+General Fund
+
+The Building Department accounts for the cost of providing building services for the City, including building
+plan reviews, permits, and building/construction inspections. Department staff review building permit
+applications and issue building permits pursuant to the International Building Code (IBC). This department is
+also responsible for providing information and direction to the public, builders, architects and engineers
+related to buildings including mechanical, plumbing, electrical, and general construction, and related to sites
+including environmental and fire safety. Staff is also responsible for reviewing and inspecting developments
+to ensure they conform with all applicable codes.
+
+Account
+558 50 10 000
+558 50 20 000
+558 50 20 002
+558 50 31 000
+558 50 32 000
+558 50 35 000
+558 50 41 000
+558 50 41 001
+558 50 41 002
+558 50 42 000
+558 50 43 000
+558 50 45 000
+558 50 47 000
+558 50 48 000
+558 50 48 001
+558 50 49 000
+558 50 49 001
+558 50 49 002
+Total Building
+
+Title
+Salaries and Wages
+Personnel Benefits
+Uniforms
+Office and Operating Supplies
+Fuel
+Small Tools and Equipment
+Professional Services
+Professional Services - IT
+Advertising
+Communication
+Travel
+Operating Rentals and Leases
+Public Utilities
+Repairs and Maintenance
+Vehicle Repairs and Maintenance
+Miscellaneous
+Misc/Dues & Memberships
+Misc/Training & Registrations
+
+City of Milton, Washington
+
+33
+
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+69,028
+24,852
+1,286
+108
+66
+467,776
+13,867
+50
+1,216
+509
+269
+952
+5,821
+105
+350
+654
+586,909
+
+191,789
+105,304
+200
+3,000
+600
+500
+40,000
+22,142
+1,800
+2,000
+250
+1,000
+200
+1,000
+300
+1,540
+371,625
+
+91,789
+44,554
+200
+3,000
+600
+500
+200,000
+22,142
+50
+1,800
+2,000
+250
+1,000
+200
+1,000
+1,000
+1,540
+371,625
+
+199,029
+109,061
+200
+2,000
+600
+500
+40,000
+23,180
+1,800
+2,000
+250
+1,000
+200
+1,000
+1,000
+1,700
+383,520
+
+2025 Budget
+
+PLANNING
+
+General Fund
+
+The Planning Department is responsible for the City's land use and construction code compliance services.
+This department is also responsible for the development and administration of long-range plans to achieve
+the growth and development of the City as well as the State Growth Management Act. The Planning
+Department works in conjunction with the Planning Commission, City Council and Administration, and is
+dedicated primarily to drafting public land use policy, compliance, and inter-jurisdictional planning efforts.
+This department is also responsible for preparing and publishing all legal notices required for land use related
+permits. These notices are typically provided via newspaper and household mailing to fulfill various
+notification requirements.
+
+Account
+
+Title
+
+558 60 10 000
+558 60 20 000
+558 60 31 000
+558 60 32 000
+558 60 35 000
+558 60 41 000
+558 60 41 001
+558 60 41 002
+558 60 41 003
+558 60 42 000
+558 60 43 000
+558 60 45 000
+558 60 47 000
+558 60 48 000
+558 60 49 000
+558 60 49 001
+558 60 49 002
+558 60 49 003
+558 60 49 004
+Total Planning
+
+Salaries And Wages
+Personnel Benefits
+Office and Operating Supplies
+Fuel
+Small Tools and Equipment
+Professional Services
+Professional Services - IT
+Advertising
+Professional Services - Applicant Pass Through
+Communication
+Travel
+Operating Rentals and Leases
+Public Utilities
+Repairs and Maintenance
+Miscellaneous
+Misc/Dues & Memberships
+Misc/Training & Registrations
+Misc/Outside Printing
+Misc/Planning Commission Exp
+
+City of Milton, Washington
+
+34
+
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+124,505
+45,642
+508
+349
+131,015
+9,958
+6,183
+314,128
+1,316
+760
+316
+780
+30
+175
+696
+107
+636,468
+
+186,765
+79,183
+1,000
+100
+500
+120,000
+11,811
+8,000
+150,000
+1,000
+1,700
+250
+800
+200
+100
+300
+1,200
+100
+1,000
+564,009
+
+186,765
+79,183
+1,000
+100
+500
+120,000
+11,811
+8,000
+150,000
+1,000
+1,700
+250
+800
+200
+100
+300
+1,200
+100
+1,000
+564,009
+
+193,908
+81,414
+1,000
+100
+500
+120,000
+12,523
+8,000
+100,000
+1,000
+1,700
+250
+800
+200
+100
+300
+1,200
+100
+1,000
+524,095
+
+2025 Budget
+
+CULTURE & RECREATION
+
+General Fund
+
+The Culture & Recreation Department is used to account for expenditures related to various programs and
+activities hosted by the City for the benefit of residents and the community as well as the maintenance and
+operation of the Milton Activity Center and Community Building.
+
+Account
+
+2023
+Actual
+
+Title
+
+Cultural and Recreational Activities
+571 10 31 000 Office and Operating Supplies
+571 10 41 000 Professional Services
+571 10 49 000 Miscellaneous
+Cultural and Recreational Facilities
+575 50 10 000 Salaries and Wages
+575 50 11 000 Overtime
+575 50 20 000 Personnel Benefits
+575 50 31 000 Office and Operating Supplies
+575 50 41 000 Professional Services
+575 50 42 000 Communication
+575 50 44 002 Taxes on Building Rentals
+575 50 47 000 Public Utilities - Community Bldg
+575 50 47 002 Public Utilities - Activity Center
+575 50 48 000 Repairs and Maintenance - Community Bldg
+575 50 48 002 Repairs and Maintenance - Activity Center
+575 50 49 000 Misc/Other Exp - Community Bldg
+575 50 49 002 Misc/Other Exp - Activity Center
+Total Culture & Recreation
+
+City of Milton, Washington
+
+35
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+-
+
+14,000
+10,000
+1,000
+
+14,000
+10,000
+1,000
+
+14,000
+10,000
+1,000
+
+556
+4
+6,438
+3,646
+276
+359
+363
+9,020
+(289)
+23
+120
+20,516
+
+800
+200
+1,000
+1,000
+300
+300
+1,000
+8,000
+1,000
+2,000
+100
+300
+41,000
+
+600
+200
+200
+1,000
+1,000
+300
+300
+1,000
+8,000
+1,000
+2,000
+100
+300
+41,000
+
+800
+200
+1,000
+1,000
+300
+300
+1,000
+8,000
+1,000
+2,000
+100
+300
+41,000
+
+2025 Budget
+
+PARK FACILITIES
+
+General Fund
+
+The Park Facilities Department accounts for costs to maintain the City's parks, trails, and open spaces. Work
+includes specific maintenance and repair of 2.5 miles of the Interurban Trail, in addition to all other public
+spaces within the City. The City does not have any staff dedicated full-time to parks. Staff is shared with
+other departments, and all work performed by this group is prioritized to address safety and high community
+use areas. Mowing of the parks has been outsourced to a private company. This has freed up staff to focus
+on maintenance and other high-priority issues. This outsourcing has reduced the level of maintenance
+needed for the City's mowers and other equipment as well.
+
+Account
+
+Title
+
+576 80 10 000 Salaries and Wages
+576 80 11 000 Overtime
+576 80 20 000 Personnel Benefits
+576 80 20 002 Uniforms
+576 80 31 000 Office and Operating Supplies
+576 80 32 000 Fuel
+576 80 35 000 Small Tools and Equipment
+576 80 41 000 Professional Services
+576 80 41 001 Professional Services - IT
+576 80 41 002 Advertising
+576 80 42 000 Communication
+576 80 43 000 Travel
+576 80 45 000 Operating Rentals and Leases
+576 80 47 000 Public Utilities
+576 80 48 000 Repairs and Maintenance
+576 80 48 001 Equipment Repairs and Maintenance
+576 80 49 000 Miscellaneous
+576 80 49 001 Misc/Dues & Memberships
+576 80 49 002 Misc/Training & Registrations
+576 80 49 004 Misc/Park Board Exp
+Total Park Facilities
+
+City of Milton, Washington
+
+36
+
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+102,411
+160
+29,873
+1,770
+10,388
+2,318
+2,073
+74,879
+7,374
+44
+1,435
+19
+7,829
+33,598
+1,701
+10,164
+405
+64
+532
+66
+287,103
+
+111,167
+49,806
+1,200
+11,000
+3,500
+3,000
+79,000
+9,058
+100
+1,000
+500
+5,500
+29,000
+5,000
+15,000
+500
+700
+1,000
+326,031
+
+111,167
+46,906
+1,800
+11,000
+3,500
+3,000
+79,000
+9,058
+100
+1,000
+500
+7,800
+29,000
+5,000
+15,000
+500
+700
+1,000
+326,031
+
+113,909
+51,810
+1,800
+11,000
+3,500
+3,000
+79,000
+9,552
+100
+1,000
+500
+7,800
+29,000
+5,000
+15,000
+500
+700
+1,000
+334,171
+
+2025 Budget
+
+OTHER & NON-EXPENDITURES
+
+General Fund
+
+Other & Non-Expenditures include miscellaneous items that are not related to the City's primary functions,
+including the disbursement of pass-through funds which are offset by Non-Revenues.
+
+Account
+
+2023
+Actual
+
+Title
+
+524 60 00 000 Enforcement of Codes and Regulations
+582 10 00 000 Refund of Facility Rental Deposits
+582 10 00 001 Refund of Developer Deposits
+589 90 00 000 Miscellaneous Non-Expenditures
+589 90 00 999 Payroll Clearing
+Total Other & Non-Expenditures
+
+City of Milton, Washington
+
+4,900
+31,592
+(43,283)
+(6,791)
+
+37
+
+2024
+Budget
+1,000
+5,000
+5,000
+5,000
+5,000
+21,000
+
+2024
+Projected
+5,000
+5,000
+5,000
+5,000
+20,000
+
+2025
+Budget
+5,000
+5,000
+5,000
+5,000
+20,000
+
+2025 Budget
+
+TRANSFERS OUT
+
+General Fund
+
+Transfers Out are used to reflect General Fund support of other funds. The most significant operating
+subsidies are provided to the Criminal Justice Fund for Police Department operations and the Street Fund for
+street maintenance. Transfers to the Community Events Fund are budgeted to cover the costs of wages and
+benefits associated with staff time spent on the Milton Days event. Transfers to the Asset Replacement Fund
+are equivalent to two percent of budgeted General Fund revenues. These transfers are dedicated to the
+purchase of general government assets and capital projects.
+The 2025 Budget also includes a transfer out to the Rainy Day Fund equal to 10% of the fund's 2023 Actual
+Ending Fund Balance. The Rainy Day Fund is used to hold funds for future use in case of emergency or
+economic downturn. In 2025, a $500,000 transfer to the Asset Replacement Fund is budgeted as well to
+begin accumulating funds to acquire property for parks, open space and City facilities when opportunities
+arise.
+Account
+
+Title
+
+597 00 00 004
+597 00 01 004
+597 01 07 001
+597 10 10 001
+597 10 20 001
+597 11 60 001
+
+Transfers Out - Asset Replacement Fund
+Transfers Out - Property Acquisition
+Transfers Out - Criminal Justice Fund
+Transfers Out - Street Fund
+Transfers Out - Rainy Day Fund
+Transfers Out - Community Events Fund
+Transfers Out - Water Capital Fund (ARPA)
+Total Transfers Out
+
+City of Milton, Washington
+
+38
+
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+115,577
+3,450,000
+260,000
+48,133
+15,387
+3,889,097
+
+122,396
+3,750,000
+420,000
+49,081
+13,400
+4,354,877
+
+122,396
+3,750,000
+420,000
+49,081
+13,400
+4,354,877
+
+142,800
+500,000
+4,000,000
+400,000
+55,374
+13,400
+5,111,574
+
+2025 Budget
+
+ASSET REPLACEMENT FUND
+
+General Fund
+
+The Asset Replacement and Capital Reserve Fund represents amounts dedicated to the purchase of general
+government assets and capital projects. Amounts included in this fund's budget represent the portion
+allocated to general government functions only. Amounts allocated to non-general government functions are
+included in the Electric, Water and Stormwater Asset Replacement Funds.
+Funding includes a transfer from the General Fund equivalent to two percent of budgeted General Fund
+revenues.
+The City would prefer to replace vehicles with electric and hybrid options whenever possible in future years,
+and intends to continue researching the feasibility of incorporating these types of vehicles into the City's fleet.
+In 2025, a $500,000 transfer from the General Fund is budgeted to begin accumulating funds to acquire
+property for parks, open space and City facilities when opportunities arise.
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+Beginning Fund Balance
+
+395,038
+
+256,900
+
+256,900
+
+230,514
+
+Revenues and Other Sources
+333 16 70 004 Federal Indirect Dept of Justice JAG Grant
+361 10 00 004 Investment Earnings
+395 10 00 004 Sales of Capital Assets
+395 20 00 004 Compensation for Loss of Capital Assets
+397 20 20 004 Transfers In - General Fund
+397 20 30 004 Transfers In - General Fund (Property Acquisition)
+Total Revenues and Other Sources
+
+38,893
+9,187
+10,408
+70,301
+115,577
+244,366
+
+4,700
+122,396
+127,096
+
+6,900
+5,298
+122,396
+134,594
+
+6,900
+142,800
+500,000
+649,700
+
+Expenditures and Other Uses
+594 21 64 004
+Replace Police Vehicles
+Replace Vehicle #17 - 1999 Single Axle Trailer
+Replace Vehicle #18 - 1980 Tandem Axle Trailer
+Replace Vehicle #20 - 2006 Chevrolet Truck
+Replace Vehicle #36 - 2005 Chevrolet Truck
+Replace Vehicle #49 - 1995 Dump Truck
+New 2024 Freightliner Dump Truck
+Replace Vehicle #32 - 2008 Ford F250 Truck
+Replace Vehicle #40 - 2008 Ford F250 Truck
+Replace Vehicle #48 - 2001 Dump Truck
+Replace Vehicle #51 - 2012 Chevrolet Truck
+Total Expenditures and Other Uses
+
+351,593
+30,911
+382,504
+
+140,000
+1,500
+1,500
+4,000
+15,000
+12,241
+174,241
+
+138,800
+1,500
+1,500
+4,640
+14,540
+160,980
+
+160,000
+14,200
+16,000
+105,000
+12,000
+307,200
+
+Net Change in Fund Balance
+
+(138,138)
+
+(47,145)
+
+(26,386)
+
+342,500
+
+Ending Fund Balance
+
+256,900
+
+209,755
+
+230,514
+
+573,014
+
+Account
+
+City of Milton, Washington
+
+Title
+
+39
+
+2025 Budget
+
+RAINY DAY FUND
+
+General Fund
+
+The Rainy Day Fund is used to hold funds for future use in case of emergency or economic downturn. The
+target for this fund is to maintain an ending fund balance equal to at least 10% of budgeted General Fund
+operating expenditures. Use of the Rainy Day Fund shall be approved by the City Council through the budget
+process for temporary, unanticipated, one-time expenditures. If the balance in the Rainy Day Fund falls below
+the 10% target, the balance should be increased by at least one percent per year until the 10% target is met
+again. The 2025 Budget includes a transfer in from the General Fund equal to 10% of the 2023 Actual
+Ending Fund Balance.
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+Beginning Fund Balance
+
+490,808
+
+553,744
+
+553,744
+
+613,925
+
+Revenues and Other Sources
+361 10 00 103 Investment Earnings
+397 10 20 103 Transfers In - General Fund
+Total Revenues and Other Sources
+
+14,803
+48,133
+62,936
+
+4,600
+49,081
+53,681
+
+11,100
+49,081
+60,181
+
+11,100
+55,374
+66,474
+
+-
+
+-
+
+-
+
+-
+
+Net Change in Fund Balance
+
+62,936
+
+53,681
+
+60,181
+
+66,474
+
+Ending Fund Balance
+
+553,744
+
+607,425
+
+613,925
+
+680,399
+
+8.89%
+
+8.96%
+
+9.06%
+
+8.42%
+
+Account
+
+Title
+
+Expenditures and Other Uses
+597 00 01 103 Transfers Out - General Fund
+Total Expenditures and Other Uses
+
+Fund Balance as a Percentage of General Fund Expenditures
+
+City of Milton, Washington
+
+40
+
+2025 Budget
+
+CRIMINAL JUSTICE FUND
+
+General Fund
+
+The Criminal Justice Fund accounts for expenditures of the Milton Police Department.
+The Police Department is dedicated to excellence as a world class public safety agency. We are committed to
+establishing an environment in which members of the department and community thrive. We seek to be a
+catalyst for positive change through persistent, personalized and cost-effective use of public safety resources.
+By embracing the values of pride, professionalism and integrity, we remain committed to maintaining the
+public trust.
+Administration Division. The Administration Division is staffed by both sworn officers and civilian employees.
+This division is comprised of the Police Chief, an Assistant Police Chief and a Police Administrative Assistant.
+Patrol Division. The Patrol Division is the backbone of the Milton Police Department, as they are available
+twenty-four hours a day, seven days a week. The Patrol Division has the responsibility of being the first
+responders to all calls for police service in the City. The Patrol Division is comprised of Patrol Sergeants,
+Patrol Corporals and Patrol Officers.
+Detective Division. The Detective Division investigates an array of serious offenses such as aggravated
+assault, aggravated battery, stalking, kidnapping, attempted murder, homicide, arsons with injury or death,
+missing and vulnerable persons, firearm offenses and traffic fatalities. These cases require more time than a
+Patrol Officer can commit and may last several days or even months. Detectives also have specialized
+training.
+In a bid to share resources and capabilities with nearby law enforcement agencies to protect life and property,
+the cities of Bonney Lake, Buckley, Dupont, Fife, Fircrest, Gig Harbor, Lakewood, Milton, Orting, Puyallup,
+Sumner, and the Town of Steilacoom entered into an interlocal agreement for joint cooperation. This
+agreement has been in place since 2005, and provides a multi-agency team of investigators and support
+resources designed to provide quality investigative assistance to the City of Milton such as:
+Crime Response Unit Specialty Team comprised of individual officers organized to provide quality
+investigative assistance for major incidents.
+Major Law Enforcement Operations Response Team, which will assist in the event of an actual or suspected
+emergency which requires extraordinary and/or specialty expertise, or a major crime incident which
+demands specialty expertise, or where additional resources are needed for effective resolution.
+Tactical Response Team comprised of individual officers to respond to situations which require additional or
+extraordinary tactical equipment or expertise.
+Metro Collision Response Team comprised of individual officers of the member agencies organized to
+respond to and investigate serious injury, fatality, or officer involved collisions occurring within our
+jurisdiction.
+
+City of Milton, Washington
+
+41
+
+2025 Budget
+
+CRIMINAL JUSTICE FUND
+
+General Fund
+
+Growth in calls for service, the need for additional personnel to comply with best business practices, and an
+increase in the City's day and night population have all placed significant demands on the City's resources. In
+addition, existing personnel salaries and benefits continue to increase through contract periods. The Milton
+Police Department will continue to do its best to provide the highest level of services to the citizens of Milton
+with the resources available.
+2024 to 2025
+Budget Comparison
+Increase/(Decrease)
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+332,372
+
+571,049
+
+571,049
+
+463,395
+
+Revenues and Other Sources
+Taxes
+Licenses and Permits
+Intergovernmental Revenues
+Charges for Services
+Miscellaneous Revenues
+Transfers In
+Total Revenues and Other Sources
+
+225,223
+1,454
+208,635
+1,422
+4,935
+3,450,000
+3,891,669
+
+232,533
+3,600
+145,637
+2,650
+1,000
+3,750,000
+4,135,420
+
+223,076
+1,800
+173,634
+2,550
+2,820
+3,750,000
+4,153,880
+
+225,307
+1,800
+166,966
+2,550
+500
+4,000,000
+4,397,123
+
+(7,226)
+(1,800)
+21,329
+(100)
+(500)
+250,000
+261,703
+
+-3%
+-50%
+15%
+-4%
+-50%
+7%
+6%
+
+Expenditures and Other Uses
+Salaries and Wages
+Personnel Benefits
+Supplies and Services
+Capital Expenditures
+Total Expenditures and Other Uses
+
+1,816,203
+671,597
+1,115,924
+49,268
+3,652,992
+
+2,245,415
+1,057,959
+1,238,591
+4,541,965
+
+2,245,415
+767,959
+1,241,730
+6,430
+4,261,534
+
+2,326,239
+1,146,619
+1,342,978
+4,815,836
+
+80,824
+88,660
+104,387
+273,871
+
+4%
+8%
+8%
+0%
+6%
+
+Net Change in Fund Balance
+
+238,677
+
+(406,545)
+
+(107,654)
+
+(418,713)
+
+Ending Fund Balance
+
+571,049
+
+164,504
+
+463,395
+
+44,682
+
+Beginning Fund Balance
+
+City of Milton, Washington
+
+42
+
+Amount
+
+Percentage
+
+2025 Budget
+
+CRIMINAL JUSTICE FUND
+
+General Fund
+
+DETAIL
+Account
+
+Title
+
+Beginning Fund Balance
+Revenues and Other Sources
+Taxes
+313 71 00 000 Criminal Justice Sales and Use Tax
+Licenses and Permits
+322 30 00 000 Animal Permits
+322 90 10 000 Alarm Permits
+Intergovernmental Revenues
+333 16 70 000 Federal Indirect Dept of Justice JAG Grant
+335 04 01 107 Legislative One-time Allocations
+336 06 20 000 Criminal Justice - High Crime
+336 06 21 000 Criminal Justice - Violent Crimes/Population
+336 06 26 000 Criminal Justice - Special Programs
+336 06 51 000 DUI and Other Criminal Justice Assistance
+336 06 94 000 Liquor Excise Tax
+336 06 95 000 Liquor Board Profits
+337 00 00 107 Local Grants and Other Payments
+Charges for Services
+341 95 00 000 Legal Services
+342 36 00 000 Housing/Monitoring of Prisoners
+342 50 00 000 DUI Emergency Response
+Miscellaneous Revenues
+359 10 00 107 False Alarm Fees
+369 10 00 107 Sale of Surplus
+369 20 00 107 Unclaimed Cash & Sales of Unclaimed Property
+395 20 00 107 Compensation for Loss of Capital Assets
+Transfers In
+397 00 10 107 Transfers In - General Fund
+Total Revenues and Other Sources
+
+City of Milton, Washington
+
+43
+
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+332,372
+
+571,049
+
+571,049
+
+463,395
+
+225,223
+
+232,533
+
+223,076
+
+225,307
+
+1,329
+125
+
+3,000
+600
+
+1,500
+300
+
+1,500
+300
+
+41,580
+10,000
+17,168
+11,099
+602
+60,965
+66,481
+740
+
+3,312
+11,765
+1,000
+63,009
+65,798
+753
+
+28,250
+3,312
+11,765
+1,000
+63,009
+65,798
+500
+
+28,250
+3,502
+12,257
+1,000
+57,433
+64,524
+-
+
+20
+237
+1,165
+
+200
+450
+2,000
+
+100
+450
+2,000
+
+100
+450
+2,000
+
+367
+4,568
+-
+
+1,000
+-
+
+500
+2,100
+220
+
+500
+-
+
+3,450,000
+3,891,669
+
+3,750,000
+4,135,420
+
+3,750,000
+4,153,880
+
+4,000,000
+4,397,123
+
+2025 Budget
+
+CRIMINAL JUSTICE FUND
+
+General Fund
+
+DETAIL
+Account
+
+Title
+
+Expenditures and Other Uses
+Law Enforcement
+521 20 10 000 Salaries and Wages
+521 20 11 000 Overtime
+521 20 20 000 Personnel Benefits
+521 20 20 002 Uniforms
+521 20 31 000 Office and Operating Supplies
+521 20 31 001 Ammunition
+521 20 31 002 Public Safety Supplies
+521 20 31 004 Emergency Response Supplies
+521 20 31 005 Property and Evidence Supplies
+521 20 31 006 K-9 Supplies
+521 20 32 000 Fuel
+521 20 35 000 Small Tools and Equipment
+521 20 35 001 Firearms
+521 20 35 005 Volunteer Program Equipment
+521 20 35 006 Metro Services Program Equipment
+521 20 36 000 Small Assets - IT
+521 20 41 000 Professional Services
+521 20 41 001 Professional Services - IT
+521 20 41 002 Advertising
+521 20 41 003 Professional Services - K-9
+521 20 42 000 Communication
+521 20 42 001 Radio Communications
+521 20 43 000 Travel
+521 20 45 000 Operating Rentals and Leases
+521 20 46 000 Insurance
+521 20 47 000 Public Utilities
+521 20 48 000 Repairs and Maintenance
+521 20 48 001 Vehicle Repairs and Maintenance
+521 20 48 002 Facility Repairs and Maintenance
+521 20 48 004 Radio Repairs and Maintenance
+521 20 49 000 Miscellaneous
+521 20 49 001 Misc/Dues & Memberships
+521 20 49 003 Misc/Outside Printing
+521 20 49 005 Pierce County Alcohol Program Fees
+521 30 31 000 Crime Prevention Supplies
+521 40 49 002 Misc/Training & Registrations
+594 21 60 107 Capital Expenditures
+
+City of Milton, Washington
+
+44
+
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+1,679,753
+136,450
+623,011
+48,586
+16,054
+7,051
+2,857
+1,567
+54,237
+30,265
+19,428
+33
+9,767
+7,868
+61,722
+101,919
+1,324
+2,652
+20,364
+21,704
+101
+6,698
+128,280
+9,219
+673
+98,369
+11,727
+1,709
+2,042
+252
+2,554
+4,073
+18,612
+49,268
+
+2,045,415
+200,000
+1,022,959
+35,000
+20,000
+5,000
+6,000
+5,000
+1,200
+70,000
+11,500
+10,000
+2,000
+10,000
+10,000
+53,500
+116,384
+1,500
+10,000
+20,000
+22,000
+5,000
+8,000
+159,319
+10,000
+4,500
+67,000
+4,000
+20,000
+1,500
+7,000
+2,100
+2,500
+8,000
+20,253
+-
+
+2,045,415
+200,000
+722,959
+45,000
+20,000
+10,000
+6,000
+5,000
+1,200
+5,000
+70,000
+11,500
+10,000
+10,000
+10,000
+53,500
+116,384
+1,500
+5,000
+22,000
+22,000
+1,000
+8,000
+164,958
+10,000
+1,000
+67,000
+4,000
+20,000
+1,500
+7,000
+2,100
+2,500
+8,000
+20,253
+6,430
+
+2,126,239
+200,000
+1,101,619
+45,000
+20,000
+20,000
+6,000
+5,000
+1,200
+5,000
+70,000
+15,000
+10,000
+10,000
+10,000
+53,500
+124,790
+1,500
+5,000
+22,000
+23,100
+1,000
+8,000
+165,973
+10,000
+1,000
+67,000
+4,000
+20,000
+1,500
+7,000
+2,100
+2,500
+8,000
+25,000
+-
+
+2025 Budget
+
+CRIMINAL JUSTICE FUND
+
+General Fund
+
+DETAIL
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+237,850
+
+262,750
+
+262,750
+
+270,000
+
+179,259
+
+200
+2,000
+200,000
+
+200
+2,000
+200,000
+
+200
+2,000
+250,000
+
+-
+
+5,000
+
+5,000
+
+5,000
+
+55,694
+3,652,992
+
+75,385
+4,541,965
+
+75,385
+4,261,534
+
+90,615
+4,815,836
+
+Net Change in Fund Balance
+
+238,677
+
+(406,545)
+
+(107,654)
+
+(418,713)
+
+Ending Fund Balance
+
+571,049
+
+164,504
+
+463,395
+
+44,682
+
+Account
+
+Title
+
+Expenditures and Other Uses (Continued)
+Dispatch
+522 20 41 107 Dispatch Services
+Jail
+523 20 31 000 Court Work Crew Supplies
+523 60 41 000 Electronic Home Monitoring
+523 60 41 107 Jail Services
+Emergency Management
+525 60 41 107 Emergency Management Services
+Animal Control
+554 30 41 107 Animal Control Services
+Total Expenditures and Other Uses
+
+City of Milton, Washington
+
+45
+
+2025 Budget
+
+STREET
+
+Fund 101
+
+The Street Fund is used to account for activities to maintain public infrastructure by effectively administering
+and managing the design, engineering, construction, environmental compliance, and maintenance of Cityowned streets, transportation systems, roadway shoulders, landscape strips, sidewalks, traffic signals, and
+other assets.
+There are five primary programs in the Street Division, including Pavement Management, Street Lights, Safety,
+Sidewalk/Right of Way Maintenance, and Winter De-icing and Plowing. The City’s street crew performs routine
+maintenance limited to filling potholes and minor repairs. A limited amount of asphalt patching is contracted
+out each year, primarily focused on patching small areas of pavement that are approaching failure and
+experiencing extensive cracking and settling. Current funding levels for this program are not adequate to
+provide for preventive pavement maintenance, only routine maintenance at the most basic level is done
+throughout the year.
+The Safety Program includes cleaning and repair of street signs, guardrails, and all other traffic control
+devices within the City. Maintenance and repairs to traffic signals is currently handled by Pierce County or, on
+state routes, by the Washington State Department of Transportation.
+Cleaning of sidewalks, maintaining landscaping, and mowing roadway shoulders is covered under the
+Sidewalk/Right of Way Maintenance Program.
+De-icing and plowing is performed as needed by the City’s street crew during inclement weather. The Winter
+De-icing and Plowing Program is not inclusive of all City streets, and only focuses on pre-determined primary
+and secondary routes through town.
+Financing the programs and activities of the Street Fund has been very challenging over the past several
+years. The fund receives shared monies from the Motor Vehicle Fuel Tax, but this distribution is based on
+population, so the City receives a minimal amount each year. Unfortunately, this distribution is not enough to
+cover the annual expenditures of this fund. To make up for the shortfall between current program revenues
+and current operational expenditures, the City transfers General Fund monies to the Street Fund annually to
+subsidize the programs. Budgeting for some street-related projects is included in the Capital Improvement
+Fund.
+Debt service expenditures in this fund will be eliminated in 2025. One Public Works Trust Fund loan was paid
+off in 2022, and the remaining Public Works Trust Fund loans were paid off in 2024.
+
+City of Milton, Washington
+
+46
+
+2025 Budget
+
+STREET
+
+Fund 101
+2024 to 2025
+Budget Comparison
+Increase/(Decrease)
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+Amount
+
+Percentage
+
+Beginning Fund Balance
+
+50,286
+
+28,698
+
+28,698
+
+15,510
+
+Revenues and Other Sources
+Licenses and Permits
+Intergovernmental Revenues
+Charges for Services
+Miscellaneous Revenues
+Transfers In
+Total Revenues and Other Sources
+
+48,649
+172,289
+2,753
+260,000
+483,691
+
+5,100
+170,117
+1,000
+10,165
+420,000
+606,382
+
+5,100
+170,250
+11,515
+420,000
+606,865
+
+5,100
+170,285
+700
+400,000
+576,085
+
+168
+(1,000)
+(9,465)
+(20,000)
+(30,297)
+
+0%
+0%
+-100%
+-93%
+-5%
+-5%
+
+Expenditures and Other Uses
+Salaries and Wages
+Personnel Benefits
+Supplies and Services
+Miscellaneous Expenditures
+Debt Service
+Total Expenditures and Other Uses
+
+190,138
+65,375
+180,454
+1,005
+68,307
+505,279
+
+215,485
+111,877
+221,022
+3,700
+67,969
+620,053
+
+215,485
+110,916
+221,983
+3,700
+67,969
+620,053
+
+221,884
+116,949
+218,164
+3,700
+560,697
+
+6,399
+5,072
+(2,858)
+(67,969)
+(59,356)
+
+3%
+5%
+-1%
+0%
+-100%
+-10%
+
+Net Change in Fund Balance
+
+(21,588)
+
+(13,671)
+
+(13,188)
+
+15,388
+
+Ending Fund Balance
+
+28,698
+
+15,027
+
+15,510
+
+30,898
+
+DETAIL
+Account
+
+2023
+Actual
+
+Title
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+Beginning Fund Balance
+
+50,286
+
+28,698
+
+28,698
+
+15,510
+
+Revenues and Other Sources
+322 40 10 000 Street Permits
+322 40 10 001 Street Permit Technology Fees
+336 00 71 000 Multimodal Transportation
+336 00 87 000 Motor Vehicle Fuel Tax
+337 00 00 001 Local Grants and Other Payments
+345 83 10 101 Plan Review
+361 10 00 101 Investment Earnings
+369 91 00 101 Miscellaneous Revenue
+395 20 00 101 Compensation for Loss of Capital Assets
+397 00 01 101 Transfers In - General Fund
+Total Revenues and Other Sources
+
+48,649
+11,290
+160,999
+953
+1,800
+260,000
+483,691
+
+5,000
+100
+11,155
+158,962
+1,000
+100
+10,065
+420,000
+606,382
+
+5,000
+100
+11,155
+158,962
+133
+700
+750
+10,065
+420,000
+606,865
+
+5,000
+100
+11,119
+159,166
+700
+400,000
+576,085
+
+City of Milton, Washington
+
+47
+
+2025 Budget
+
+STREET
+
+Fund 101
+
+DETAIL
+Account
+
+Title
+
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+186,423
+969
+2,746
+63,236
+2,139
+39,442
+4,290
+4,371
+9,167
+11,491
+2,113
+198
+5,670
+22,893
+19,794
+29,862
+82
+638
+8,922
+
+197,985
+15,000
+2,500
+110,777
+1,100
+33,000
+5,000
+3,000
+15,000
+19,180
+1,800
+500
+6,000
+30,000
+40,065
+30,000
+500
+2,500
+9,000
+
+197,985
+15,000
+2,500
+108,816
+2,100
+33,000
+5,000
+3,000
+15,000
+19,180
+1,800
+500
+6,000
+30,000
+40,065
+30,000
+500
+2,500
+9,000
+
+204,384
+15,000
+2,500
+114,849
+2,100
+33,000
+5,000
+3,000
+30,000
+20,253
+1,800
+500
+6,000
+30,000
+20,000
+30,000
+500
+2,500
+9,000
+
+Expenditures and Other Uses
+Street Maintenance
+542 30 10 000 Salaries and Wages
+542 30 11 000 Overtime
+542 30 15 000 On Call Pay
+542 30 20 000 Personnel Benefits
+542 30 20 002 Uniforms
+542 30 31 000 Office and Operating Supplies
+542 30 32 000 Fuel
+542 30 35 000 Small Tools and Equipment
+542 30 41 000 Professional Services
+542 30 41 001 Professional Services - IT
+542 30 42 000 Communication
+542 30 43 000 Travel
+542 30 45 000 Operating Rentals and Leases
+542 30 47 000 Public Utilities
+542 30 48 000 Repairs and Maintenance
+542 30 48 001 Equipment Repairs and Maintenance
+542 30 49 000 Miscellaneous
+542 30 49 002 Misc/Training & Registrations
+542 63 31 000 Street Lighting Supplies
+Street Maintenance Administration
+542 90 41 000 Professional Services
+542 90 41 002 Advertising
+542 90 46 000 Insurance
+542 90 49 001 Misc/Dues & Memberships
+542 90 49 002 Misc/Training & Registrations
+542 90 49 003 Misc/Outside Printing
+Debt Service
+591 95 78 000 Debt Service Principal
+592 95 83 001 Debt Service Interest
+Total Expenditures and Other Uses
+
+359
+21,882
+285
+-
+
+1,000
+300
+27,177
+300
+200
+200
+
+1,000
+300
+28,138
+300
+200
+200
+
+1,000
+300
+28,311
+300
+200
+200
+
+67,631
+676
+505,279
+
+67,631
+338
+620,053
+
+67,631
+338
+620,053
+
+560,697
+
+Net Change in Fund Balance
+
+(21,588)
+
+(13,671)
+
+(13,188)
+
+15,388
+
+Ending Fund Balance
+
+28,698
+
+15,027
+
+15,510
+
+30,898
+
+City of Milton, Washington
+
+48
+
+2025 Budget
+
+DRUG SEIZURE
+
+Fund 105
+
+The Drug Seizure Fund is used to account for revenues from seizures and forfeitures. These monies are used
+to offset training and equipment costs of the Police Department. To ensure that criminals do not benefit
+financially from their illegal acts, federal law provides that profits from drug-related crimes, as well as property
+used to facilitate certain crimes, are subject to forfeiture to the City.
+
+Account
+
+2023
+Actual
+
+Title
+
+Beginning Fund Balance
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+28,245
+
+28,245
+
+28,245
+
+28,245
+
+Revenues and Other Sources
+369 30 00 000 Confiscated and Forfeited Property
+Total Revenues and Other Sources
+
+-
+
+-
+
+-
+
+-
+
+Expenditures and Other Uses
+521 20 31 105 Office and Operating Supplies
+521 20 41 105 Professional Services
+521 20 48 105 Repairs and Maintenance
+521 20 49 105 Miscellaneous
+521 40 49 105 Misc/Training & Registrations
+Total Expenditures and Other Uses
+
+-
+
+25,000
+25,000
+
+-
+
+25,000
+25,000
+
+Net Change in Fund Balance
+
+-
+
+(25,000)
+
+-
+
+(25,000)
+
+28,245
+
+3,245
+
+28,245
+
+3,245
+
+Ending Fund Balance
+
+City of Milton, Washington
+
+49
+
+2025 Budget
+
+COMMUNITY EVENTS
+
+Fund 116
+
+The Community Events Fund is used to account for revenues and expenditures associated with annual Milton
+Days, Craft Bazaar and Santa Parade events. Salaries and benefits costs will be subsidized by transfers from
+the General Fund as needed and as approved during the budget process.
+
+Account
+
+2023
+Actual
+
+Title
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+Beginning Fund Balance
+
+29,316
+
+28,534
+
+28,534
+
+23,619
+
+Revenues and Other Sources
+347 90 10 000 Milton Days - Vendor Fees
+347 90 20 000 Craft Bazaar - Vendor Fees
+367 00 10 000 Milton Days - Donations
+367 00 20 000 Craft Bazaar - Donations
+367 00 30 000 Santa Parade - Donations
+397 00 01 116 Transfers In - General Fund
+Total Revenues and Other Sources
+
+5,875
+1,800
+9,050
+340
+15,387
+32,452
+
+6,645
+1,800
+10,000
+100
+100
+13,400
+32,045
+
+6,350
+2,530
+13,350
+50
+50
+13,400
+35,730
+
+6,350
+2,530
+10,000
+50
+50
+13,400
+32,380
+
+Expenditures and Other Uses
+573 91 10 000 Milton Days - Salaries and Wages
+573 91 20 000 Milton Days - Personnel Benefits
+573 91 31 000 Milton Days - Supplies
+573 91 32 000 Milton Days - Fuel
+573 91 41 000 Milton Days - Professional Services
+573 91 41 002 Milton Days - Advertising
+573 91 45 000 Milton Days - Rentals
+573 91 49 000 Milton Days - Miscellaneous Exp
+573 92 31 000 Craft Bazaar - Supplies
+573 92 41 000 Craft Bazaar - Professional Services
+573 92 41 002 Craft Bazaar - Advertising
+573 92 45 000 Craft Bazaar - Rentals
+573 92 49 000 Craft Bazaar - Miscellaneous Exp
+573 93 31 000 Santa Parade - Supplies
+573 93 41 000 Santa Parade - Professional Services
+573 93 49 000 Santa Parade - Miscellaneous Exp
+Total Expenditures and Other Uses
+
+12,527
+2,860
+2,803
+6,865
+1,987
+5,061
+110
+436
+30
+220
+335
+33,234
+
+10,900
+2,500
+2,400
+100
+10,500
+2,000
+8,100
+595
+300
+300
+300
+450
+200
+1,300
+600
+100
+40,645
+
+10,900
+2,500
+2,400
+100
+10,500
+2,000
+8,100
+595
+300
+300
+300
+450
+200
+1,300
+600
+100
+40,645
+
+10,900
+2,500
+2,650
+100
+11,550
+3,000
+8,250
+595
+300
+300
+300
+450
+200
+650
+300
+50
+42,095
+
+(782)
+
+(8,600)
+
+(4,915)
+
+(9,715)
+
+28,534
+
+19,934
+
+23,619
+
+13,904
+
+Net Change in Fund Balance
+Ending Fund Balance
+
+City of Milton, Washington
+
+50
+
+2025 Budget
+
+REAL ESTATE EXCISE TAX 1
+
+Fund 130
+
+The Real Estate Excise Tax (REET) is a tax on the sale of real estate, usually paid by the seller. REET is
+collected by the County and distributed to the State and the appropriate local government. In 1982, cities
+and counties were authorized to impose an additional 0.25% to finance capital improvements (RCW
+82.46.010). This is commonly referred to as REET 1 or the "first quarter percent".
+REET 1 funding can be utilized to fund capital projects that are listed in the capital facilities plan element of
+the City's comprehensive plan. Capital projects are defined as those public works projects of a local
+government for planning, acquisition, construction, reconstruction, repair, replacement, rehabilitation, or
+improvement of streets, roads, highways, sidewalks, street and road lighting systems, traffic signals, bridges,
+domestic water systems, storm and sanitary sewer systems, parks, recreational facilities, law enforcement
+facilities, fire protection facilities, trails, libraries, administrative facilities, judicial facilities, river flood control
+projects, and technology infrastructure that is integral to the capital project.
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+Beginning Fund Balance
+
+527,187
+
+295,938
+
+295,938
+
+494,738
+
+Revenues and Other Sources
+318 34 01 000 Real Estate Excise Taxes (REET 1) - Pierce County
+318 34 02 000 Real Estate Excise Taxes (REET 1) - King County
+361 10 00 130 Investment Earnings
+Total Revenues and Other Sources
+
+133,394
+23,647
+11,710
+168,751
+
+150,000
+25,000
+5,000
+180,000
+
+265,000
+25,000
+8,800
+298,800
+
+150,000
+25,000
+8,800
+183,800
+
+Expenditures and Other Uses
+597 03 10 130 Transfers Out - Capital Improvement Fund
+Total Expenditures and Other Uses
+
+400,000
+400,000
+
+100,000
+100,000
+
+100,000
+100,000
+
+300,000
+300,000
+
+Net Change in Fund Balance
+
+(231,249)
+
+80,000
+
+198,800
+
+(116,200)
+
+Ending Fund Balance
+
+295,938
+
+375,938
+
+494,738
+
+378,538
+
+Account
+
+City of Milton, Washington
+
+Title
+
+51
+
+2025 Budget
+
+REAL ESTATE EXCISE TAX 2
+
+Fund 131
+
+The Real Estate Excise Tax (REET) is a tax on the sale of real estate, usually paid by the seller. REET is
+collected by the County and distributed to the State and the appropriate local government. In 1990, cities
+and counties were authorized to impose an additional 0.25% to finance capital improvements (RCW
+82.46.035). This is commonly referred to as REET 2 or the "second quarter percent".
+REET 2 funding can be utilized to fund capital projects that are listed in the capital facilities plan element of
+the City's comprehensive plan. Capital projects are defined as those public works projects of a local
+government for planning, acquisition, construction, reconstruction, repair, replacement, rehabilitation, or
+improvement of streets, roads, highways, sidewalks, street and road lighting systems, traffic signals, bridges,
+domestic water systems, and storm and sanitary sewer systems as well as planning, construction,
+reconstruction, repair, rehabilitation, or improvement of parks.
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+Beginning Fund Balance
+
+674,420
+
+244,712
+
+244,712
+
+444,612
+
+Revenues and Other Sources
+318 35 01 000 Real Estate Excise Taxes (REET 2) - Pierce County
+318 35 02 000 Real Estate Excise Taxes (REET 2) - King County
+361 10 00 131 Investment Earnings
+Total Revenues and Other Sources
+
+133,394
+23,647
+13,251
+170,292
+
+150,000
+25,000
+6,400
+181,400
+
+265,000
+25,000
+9,900
+299,900
+
+150,000
+25,000
+9,900
+184,900
+
+Expenditures and Other Uses
+597 03 10 131 Transfers Out - Capital Improvement Fund
+Total Expenditures and Other Uses
+
+600,000
+600,000
+
+100,000
+100,000
+
+100,000
+100,000
+
+300,000
+300,000
+
+Net Change in Fund Balance
+
+(429,708)
+
+81,400
+
+199,900
+
+(115,100)
+
+Ending Fund Balance
+
+244,712
+
+326,112
+
+444,612
+
+329,512
+
+Account
+
+City of Milton, Washington
+
+Title
+
+52
+
+2025 Budget
+
+TRAFFIC IMPACT FEES
+
+Fund 140
+
+Impact fees are one-time charges assessed against a new development project to help pay for new or
+expanded public facilities that will directly address the increased demand for services created by that
+development. Impact fees may only be imposed for "system improvements", or public capital facilities that
+are designed to provide service to the community at large, are reasonably related to the new development,
+and will benefit the new development.
+Traffic impact fees must be used for public streets and roads that are addressed by the capital facilities plan
+element of the City's comprehensive plan adopted under the Growth Management Act.
+
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+2,097,402
+
+2,087,166
+
+2,087,166
+
+1,738,566
+
+Revenues and Other Sources
+345 85 00 000 Traffic Impact Fees
+361 10 00 140 Investment Earnings
+Total Revenues and Other Sources
+
+231,217
+58,547
+289,764
+
+100,000
+16,200
+116,200
+
+207,500
+43,900
+251,400
+
+100,000
+43,900
+143,900
+
+Expenditures and Other Uses
+597 03 10 140 Transfers Out - Capital Improvement Fund
+Total Expenditures and Other Uses
+
+300,000
+300,000
+
+600,000
+600,000
+
+600,000
+600,000
+
+1,700,000
+1,700,000
+
+Net Change in Fund Balance
+
+(10,236)
+
+(483,800)
+
+(348,600)
+
+(1,556,100)
+
+2,087,166
+
+1,603,366
+
+1,738,566
+
+182,466
+
+Account
+
+Title
+
+Beginning Fund Balance
+
+Ending Fund Balance
+
+City of Milton, Washington
+
+53
+
+2025 Budget
+
+PARKS IMPACT FEES
+
+Fund 150
+
+Impact fees are one-time charges assessed against a new development project to help pay for new or
+expanded public facilities that will directly address the increased demand for services created by that
+development. Impact fees may only be imposed for "system improvements", or public capital facilities that
+are designed to provide service to the community at large, are reasonably related to the new development,
+and will benefit the new development.
+Parks impact fees must be used for publicly owned parks, open space, and recreation facilities that are
+addressed by the capital facilities plan element of the City's comprehensive plan adopted under the Growth
+Management Act.
+
+Account
+
+2023
+Actual
+
+Title
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+Beginning Fund Balance
+
+7,189
+
+81,369
+
+81,369
+
+97,169
+
+Revenues and Other Sources
+345 85 00 150 Parks Impact Fees
+361 10 00 150 Investment Earnings
+Total Revenues and Other Sources
+
+73,164
+1,016
+74,180
+
+15,000
+100
+15,100
+
+15,000
+800
+15,800
+
+15,000
+800
+15,800
+
+-
+
+-
+
+-
+
+50,000
+50,000
+
+Net Change in Fund Balance
+
+74,180
+
+15,100
+
+15,800
+
+(34,200)
+
+Ending Fund Balance
+
+81,369
+
+96,469
+
+97,169
+
+62,969
+
+Expenditures and Other Uses
+597 03 10 150 Transfers Out - Capital Improvement Fund
+Total Expenditures and Other Uses
+
+City of Milton, Washington
+
+54
+
+2025 Budget
+
+CAPITAL IMPROVEMENT
+
+Fund 310
+
+The Capital Improvement Fund supports the City's transportation, parks and facility improvements. Projects
+are funded by transfers in from the Traffic Impact Fees, Parks Impact Fees, and Real Estate Excise Tax Funds
+as well as various State and Federal funding programs.
+2025 projects include the following:
+City Hall Retrofit
+$123,490
+This budget item is for continued improvements to the City Hall complex to modernize and improve the
+appearance and performance of the facilities.
+City-wide Parks Improvements
+$233,065
+This budget item is for various City park improvements which may include irrigation, tree planting, lighting,
+benches, and parking.
+Community Park Outdoor Meeting Venue
+$250,000
+This budget item is to construct an outdoor meeting venue at the Milton Community Park to provide a
+covered, well-ventilated space for City meetings and gatherings as well as other community events. This
+project will be partially funded with Coronavirus Local Fiscal Recovery Funds from the American Rescue Plan
+Act (ARPA).
+Playground Equipment
+$357,512
+This budget item is for the continued repair and replacement of playground equipment at City parks to ensure
+safety compliance and usability.
+City-wide Traffic Calming Program
+$256,841
+This budget item is to install physical design and other measures, such as speed humps, traffic circles, and
+speed readers, in residential neighborhoods to improve the safety of motorists and pedestrians.
+Miscellaneous Street Overlay
+$100,000
+This budget item is to improve pavement condition by asphalt patching, crack sealing and spot removal and
+replacement.
+Miscellaneous Striping and Markings
+$78,964
+This budget item is for the City's line striping and raised pavement markings. This is part of an annual
+program to keep pavement markings up to current standards at various locations throughout the City.
+Sidewalk Missing Links
+$1,027,202
+This budget item is for installation of new sidewalks as well as replacement and repair of failing sidewalk
+sections at various locations throughout the City. Project locations include, but are not limited to, Oak Street
+from 11th to 17th, 27th Avenue north of Milton Way, 23rd Avenue, Porter Way near the Interurban Trail, and
+Milton Way from 20th Street East to Porter Way.
+
+City of Milton, Washington
+
+55
+
+2025 Budget
+
+CAPITAL IMPROVEMENT
+
+Fund 310
+
+City-wide Transportation Beautifications
+$19,839
+This budget item is to improve the appearance of the City's transportation system by installing decorative
+banners on poles, taking measures for litter prevention, planting trees, and installing flower beds and
+stamped concrete for crosswalks.
+
+City of Milton, Washington
+
+56
+
+2025 Budget
+
+CAPITAL IMPROVEMENT
+
+Fund 310
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+Beginning Fund Balance
+
+1,165,350
+
+2,387,604
+
+2,387,604
+
+144,976
+
+Revenues and Other Sources
+311 10 02 310 King Co Parks Levy - Interurban Trail Extension
+333 20 20 104 DOT Grant - Interurban Trail Extension
+334 03 80 155 TIB Grant - SR 99/Porter Way
+334 03 80 191 TIB Grant - Street Overlays
+361 10 00 310 Investment Earnings
+367 00 00 310 Developer Contributions
+367 00 00 310 Developer Contributions - SR 99/Porter Way
+395 10 00 310 Right of Way Vacation Proceeds
+397 01 30 310 Transfers In - REET 1 Fund
+397 01 31 310 Transfers In - REET 2 Fund
+397 01 40 310 Transfers In - Traffic Impact Fee Fund
+397 15 00 310 Transfers In - Parks Impact Fee Fund
+Total Revenues and Other Sources
+
+326,348
+53,102
+365,449
+400,000
+600,000
+300,000
+2,044,899
+
+140,000
+346,000
+2,255,043
+511,185
+12,200
+25,000
+100,000
+100,000
+600,000
+4,089,428
+
+144,000
+2,255,043
+511,185
+39,800
+25,000
+2,500
+100,000
+100,000
+600,000
+3,777,528
+
+39,800
+25,000
+300,000
+300,000
+1,700,000
+50,000
+2,414,800
+
+121,006
+20,355
+12,794
+62,808
+32,795
+170,173
+384,160
+18,554
+822,645
+
+50,000
+323,490
+333,065
+150,000
+342,314
+387,512
+206,841
+232,405
+88,964
+2,406,685
+511,185
+1,127,202
+50,000
+39,839
+6,249,502
+
+50,000
+200,000
+100,000
+150,000
+5,000
+30,000
+50,000
+232,405
+50,000
+4,371,566
+511,185
+200,000
+50,000
+20,000
+6,020,156
+
+123,490
+233,065
+250,000
+357,512
+256,841
+100,000
+78,964
+1,027,202
+19,839
+2,446,913
+
+Net Change in Fund Balance
+
+1,222,254
+
+(2,160,074)
+
+(2,242,628)
+
+(32,113)
+
+Ending Fund Balance
+
+2,387,604
+
+227,530
+
+144,976
+
+112,863
+
+Account
+
+Title
+
+Expenditures and Other Uses
+542 30 41 190 Street Condition Assessment
+594 18 61 143 City Hall Retrofit
+594 76 60 010 City-wide Parks Improvements
+594 76 60 176 Community Park Outdoor Meeting Venue
+594 76 62 163 Interurban Trail Extension - Parks Levy/DOT Grant
+594 76 65 118 Playground Equipment
+595 30 63 159 City-wide Traffic Calming Program
+595 42 63 122 Misc Street Overlay
+595 42 63 136 Misc Striping & Markings
+595 42 63 155 SR 99/Porter Way Intersection - TIB Grant
+595 42 63 191 Street Overlays - TIB Grant
+595 61 63 162 Sidewalk Missing Links
+595 64 60 188 City Gateways/Wayfinding
+595 70 63 139 City-wide Transportation Beautifications
+Total Expenditures and Other Uses
+
+City of Milton, Washington
+
+57
+
+2025 Budget
+
+ELECTRIC UTILITY
+
+Fund 401
+
+The Electric Utility is a division of the Public Works Department and was established to provide a safe and
+reliable electric system to the citizens of Milton. Electricity is provided by the Bonneville Power Administration
+(BPA) and delivered to the City at the substation located along Fife Way.
+The Electric Utility Fund is an enterprise fund that operates like a business. The primary source of revenue for
+this fund is through the sale of electricity to customers. Expenditures from this fund include administration as
+well as maintenance and operations of the utility. Administrative functions include monthly customer billing,
+planning, coordination with BPA, and participation in other electric related organizations. Maintenance and
+operations activities include regular maintenance and repair of poles, transformers, vaults, and distribution
+lines. In addition, transfers are made out of this fund to support the Electric Capital Improvement Fund and
+the Electric Asset Replacement Fund.
+2024 to 2025
+Budget Comparison
+Increase/(Decrease)
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+779,140
+
+1,768,313
+
+1,768,313
+
+1,861,706
+
+Revenues and Other Sources
+Licenses and Permits
+Charges for Services
+Fines and Forfeitures
+Miscellaneous Revenues
+Total Revenues and Other Sources
+
+5,304
+5,964,009
+30,887
+176,872
+6,177,072
+
+1,500
+6,191,625
+30,000
+138,700
+6,361,825
+
+1,500
+6,086,773
+30,000
+160,300
+6,278,573
+
+Expenditures and Other Uses
+Salaries and Wages
+Personnel Benefits
+Supplies and Services
+Miscellaneous Expenditures
+Transfers Out
+Total Expenditures and Other Uses
+
+782,375
+263,662
+3,483,453
+80,339
+578,070
+5,187,899
+
+955,338
+424,834
+4,181,759
+118,750
+612,163
+6,292,844
+
+989,173
+
+Beginning Fund Balance
+
+Net Change in Fund Balance
+Ending Fund Balance
+Fund Balance as a Percentage
+of Expenditures
+
+City of Milton, Washington
+
+Amount
+
+Percentage
+
+1,500
+6,222,048
+30,000
+160,300
+6,413,848
+
+30,423
+21,600
+52,023
+
+0%
+0%
+0%
+16%
+1%
+
+885,338
+386,834
+4,189,581
+121,750
+601,677
+6,185,180
+
+956,994
+426,924
+4,201,429
+121,750
+615,204
+6,322,301
+
+1,656
+2,090
+19,670
+3,000
+3,041
+29,457
+
+0%
+0%
+0%
+3%
+0%
+0%
+
+68,981
+
+93,393
+
+91,547
+
+1,768,313
+
+1,837,294
+
+1,861,706
+
+1,953,253
+
+34%
+
+29%
+
+30%
+
+31%
+
+58
+
+2025 Budget
+
+ELECTRIC UTILITY
+
+Fund 401
+
+DETAIL
+Account
+
+Title
+
+Beginning Fund Balance
+Revenues and Other Sources
+322 12 00 000 Electrical Permits
+343 30 00 000 Electric Sales
+343 30 25 000 Charges for Services - Equipment
+343 30 30 000 Charges for Services - Labor
+343 30 35 000 Pole Rental Agreements
+343 30 40 000 Charges for Services - Parts
+343 30 45 000 Charges for Services - Overhead
+343 39 00 000 Connection Charges
+345 83 10 401 Plan Review
+359 31 00 000 Penalties
+361 10 00 401 Investment Earnings
+362 00 00 401 Interfund Rentals
+367 01 00 000 BPA Incentives - Customers
+367 02 00 000 BPA Incentives - City
+369 10 00 401 Sale of Surplus
+369 91 00 401 Miscellaneous Revenue
+Total Revenues and Other Sources
+
+City of Milton, Washington
+
+59
+
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+779,140
+
+1,768,313
+
+1,768,313
+
+1,861,706
+
+5,304
+5,881,499
+4,732
+24,900
+26,222
+4,643
+21,975
+38
+30,887
+47,007
+30,000
+62,449
+40,066
+1,418
+(4,068)
+6,177,072
+
+1,500
+6,121,625
+5,000
+20,000
+15,000
+20,000
+5,000
+5,000
+30,000
+8,700
+30,000
+65,000
+15,000
+20,000
+6,361,825
+
+1,500
+6,016,773
+5,000
+20,000
+15,000
+20,000
+5,000
+5,000
+30,000
+35,300
+30,000
+65,000
+15,000
+15,000
+6,278,573
+
+1,500
+6,152,048
+5,000
+20,000
+15,000
+20,000
+5,000
+5,000
+30,000
+35,300
+30,000
+65,000
+15,000
+15,000
+6,413,848
+
+2025 Budget
+
+ELECTRIC UTILITY
+
+Fund 401
+
+DETAIL
+Account
+
+Title
+
+Expenditures and Other Uses
+Administration
+533 10 10 000 Salaries and Wages
+Allocated Salaries and Wages
+533 10 20 000 Personnel Benefits
+Allocated Personnel Benefits
+533 10 31 000 Office and Operating Supplies
+533 10 32 000 Fuel
+533 10 35 000 Small Tools and Equipment
+533 10 41 000 Professional Services
+533 10 41 001 Professional Services - IT
+533 10 41 002 Advertising
+533 10 42 000 Communication
+533 10 43 000 Travel
+533 10 44 001 Utility Tax
+533 10 44 002 Electric Excise Tax
+533 10 45 000 Operating Rentals and Leases
+533 10 46 000 Insurance
+533 10 49 000 Miscellaneous
+533 10 49 001 Misc/Dues & Memberships
+533 10 49 002 Misc/Training & Registrations
+533 10 49 003 Misc/Outside Printing
+Allocated Operating Expenditures
+
+City of Milton, Washington
+
+60
+
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+55,718
+185,271
+22,166
+90,056
+483
+88,371
+25,917
+1,422
+9,992
+596
+358,269
+230,431
+4,420
+70,826
+271
+2,918
+491
+20,193
+200,561
+
+154,671
+235,691
+68,390
+121,005
+1,000
+100
+1,000
+85,000
+33,851
+800
+9,000
+1,000
+367,297
+225,000
+3,500
+87,963
+1,000
+5,000
+1,500
+17,000
+201,348
+
+84,671
+235,691
+28,390
+121,005
+1,000
+100
+1,000
+85,000
+33,851
+800
+9,000
+1,000
+361,006
+230,000
+4,500
+91,076
+1,000
+5,000
+1,500
+20,000
+201,348
+
+160,573
+215,544
+70,346
+112,549
+1,000
+100
+1,000
+85,000
+36,289
+800
+9,000
+1,000
+369,123
+230,000
+4,500
+91,636
+1,000
+5,000
+1,500
+20,000
+215,081
+
+2025 Budget
+
+ELECTRIC UTILITY
+
+Fund 401
+
+DETAIL
+Account
+
+Title
+
+Expenditures and Other Uses (Continued)
+Operations
+533 50 10 000 Salaries and Wages
+533 50 11 000 Overtime
+533 50 15 000 On Call Pay
+533 50 20 000 Personnel Benefits
+533 50 20 002 Uniforms
+533 50 31 000 Office and Operating Supplies
+533 50 32 000 Fuel
+533 50 33 000 BPA - Electricity for Resale
+533 50 34 000 Supplies for Resale
+533 50 35 000 Small Tools and Equipment
+533 50 35 001 Machinery and Equipment
+533 50 41 000 Professional Services
+533 50 41 002 Advertising
+533 50 42 000 Communication
+533 50 43 000 Travel
+533 50 45 000 Operating Rentals and Leases
+533 50 47 000 Public Utilities
+533 50 48 000 Repairs and Maintenance
+533 50 48 001 Vehicle Repairs and Maintenance
+533 50 48 002 Facility Repairs and Maintenance
+533 50 49 000 Miscellaneous
+533 50 49 001 Misc/Dues & Memberships
+533 50 49 002 Misc/Training & Registrations
+533 50 49 004 BPA Incentive Program - Customers
+533 50 49 005 BPA Incentive Program - City
+Transfers Out
+597 40 20 401 Transfers Out - Capital Improvements
+597 40 90 401 Transfers Out - Asset Replacement
+Total Expenditures and Other Uses
+Net Change in Fund Balance
+Ending Fund Balance
+
+City of Milton, Washington
+
+61
+
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+488,155
+13,857
+39,374
+138,936
+12,504
+45,013
+8,331
+2,230,056
+56,642
+9,179
+1,650
+57,989
+121
+2,490
+5,467
+1,698
+20,192
+8,480
+40,946
+3,911
+32
+26
+1,864
+54,544
+-
+
+504,976
+25,000
+35,000
+225,439
+10,000
+65,000
+10,500
+2,900,000
+20,000
+32,200
+10,000
+35,000
+200
+5,000
+4,000
+5,000
+20,000
+3,000
+50,000
+5,000
+250
+4,000
+10,000
+65,000
+15,000
+
+504,976
+25,000
+35,000
+225,439
+12,000
+65,000
+10,500
+2,900,000
+20,000
+32,200
+10,000
+40,000
+200
+5,000
+4,000
+5,000
+20,000
+3,000
+50,000
+5,000
+250
+4,000
+10,000
+65,000
+15,000
+
+520,877
+25,000
+35,000
+232,029
+12,000
+65,000
+10,500
+2,900,000
+20,000
+19,200
+10,000
+40,000
+200
+5,000
+4,000
+5,000
+20,000
+3,000
+50,000
+5,000
+250
+4,000
+10,000
+65,000
+15,000
+
+404,649
+173,421
+5,187,899
+
+428,514
+183,649
+6,292,844
+
+421,174
+180,503
+6,185,180
+
+430,643
+184,561
+6,322,301
+
+989,173
+
+68,981
+
+93,393
+
+91,547
+
+1,768,313
+
+1,837,294
+
+1,861,706
+
+1,953,253
+
+2025 Budget
+
+ELECTRIC CAPITAL
+
+Fund 402
+
+This fund was established to separate Electric Utility capital improvements from regular administration,
+maintenance and operations activities. The intent is to have resources available when needs arise. Seven
+percent of Electric Sales revenue is contributed to this fund each year.
+2025 projects include the following:
+Substation
+$1,654,294
+Electrical substation design, surveying, geotechnical investigations, studies and services, and permitting as
+well as the creation of plans, specifications and estimates, construction management, and construction
+engineering services.
+Miscellaneous Cable Replacement
+$50,000
+This budget item is for the purchase of electrical cable as needed to replace aging and failing segments of
+cable at various locations throughout the City.
+Pole Replacement Project
+$231,652
+This budget item is for inspection and treatment of electrical poles as well as the purchase and installation of
+new poles as needed to replace aging and failing poles at various locations throughout the City.
+Tree Trimming
+$63,886
+This budget item is to provide funding for the trimming of trees to reduce outages caused by wind storms.
+This is part of the Electric Utility's effort to continue to provide a reliable electric system.
+Meter Replacement Project
+$40,329
+This budget item is for the equipment and staff time needed for the Electric Utility's continued effort to
+implement a totally automated meter reading and control system.
+Resiliency Improvements
+$100,000
+This budget item is for planning and design needs associated with increasing resiliency of existing grid system
+loop transmission and distribution tie upgrades.
+
+City of Milton, Washington
+
+62
+
+2025 Budget
+
+ELECTRIC CAPITAL
+
+Fund 402
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+4,545,948
+
+4,686,980
+
+4,686,980
+
+4,619,928
+
+Revenues and Other Sources
+361 10 00 402 Investment Earnings
+367 00 00 402 System Development Charges
+397 40 10 402 Transfers In - Operations
+Total Revenues and Other Sources
+
+134,845
+39,420
+404,649
+578,914
+
+44,200
+10,000
+428,514
+482,714
+
+101,100
+10,000
+421,174
+532,274
+
+101,100
+10,000
+430,643
+541,743
+
+Expenditures and Other Uses
+594 33 60 124 Substation
+594 33 62 126 Miscellaneous Cable Replacement
+594 33 62 138 Pole Replacement Project
+594 33 62 142 Tree Trimming
+594 33 64 123 Meter Replacement Project
+Pole Inspection and Treatment
+Resiliency Improvements
+591 33 72 000 Revenue Bond Principal
+592 33 82 000 Revenue Bond Interest
+Total Expenditures and Other Uses
+
+129,841
+41,806
+87,319
+16,211
+105,263
+57,442
+437,882
+
+1,654,294
+300,000
+171,652
+133,886
+70,329
+80,000
+100,000
+105,263
+54,063
+2,669,487
+
+300,000
+20,000
+70,000
+50,000
+105,263
+54,063
+599,326
+
+1,654,294
+50,000
+231,652
+63,886
+40,329
+100,000
+105,263
+50,684
+2,296,108
+
+Net Change in Fund Balance
+
+141,032
+
+(2,186,773)
+
+(67,052)
+
+(1,754,365)
+
+4,686,980
+
+2,500,207
+
+4,619,928
+
+2,865,563
+
+Account
+
+Title
+
+Beginning Fund Balance
+
+Ending Fund Balance
+
+City of Milton, Washington
+
+63
+
+2025 Budget
+
+ELECTRIC ASSET REPLACEMENT
+
+Fund 409
+
+The Electric Asset Replacement Fund was established to provide for replacement of assets such as rolling
+stock, major equipment, and technology upgrades. The intent is to have resources available when needs
+arise.
+Amounts included in this fund's budget represent the portion allocated to electric utility functions only.
+Amounts allocated to non-electric utility functions are included in the Asset Replacement and Capital Reserve
+Fund, a subsidiary fund of the General Fund, and the Water and Stormwater Asset Replacement Funds.
+Three percent of Electric Sales revenue is contributed to this fund each year.
+
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+Beginning Fund Balance
+
+881,030
+
+1,043,768
+
+1,043,768
+
+963,277
+
+Revenues and Other Sources
+361 10 00 409 Investment Earnings
+395 10 00 409 Sales of Capital Assets
+397 40 10 409 Transfers In - Operations
+Total Revenues and Other Sources
+
+27,955
+173,421
+201,376
+
+7,900
+183,649
+191,549
+
+21,000
+66
+180,503
+201,569
+
+21,000
+184,561
+205,561
+
+Expenditures and Other Uses
+594 33 64 409 Replace Vehicle #17 - 1999 Single Axle Trailer
+594 33 64 409 Replace Vehicle #18 - 1980 Tandem Axle Trailer
+594 33 64 409 Replace Vehicle #20 - 2006 Chevrolet Truck
+594 33 64 409 Replace Vehicle #29 - 2004 Ford Truck
+594 33 64 409 Replace Vehicle #49 - 1995 Dump Truck
+594 33 64 409 New Altec Bucket Truck
+594 33 64 409 New 2024 Freightliner Dump Truck
+594 33 64 409 Replace Vehicle #48 - 2001 Dump Truck
+594 33 64 409 Asset Replacement
+Total Expenditures and Other Uses
+
+38,638
+38,638
+
+1,500
+1,500
+17,000
+80,000
+150,000
+52,026
+50,000
+352,026
+
+1,500
+1,500
+19,720
+72,700
+186,640
+282,060
+
+15,000
+50,000
+65,000
+
+Net Change in Fund Balance
+
+162,738
+
+(160,477)
+
+(80,491)
+
+140,561
+
+1,043,768
+
+883,291
+
+963,277
+
+1,103,838
+
+Account
+
+Title
+
+Ending Fund Balance
+
+City of Milton, Washington
+
+64
+
+2025 Budget
+
+WATER UTILITY
+
+Fund 403
+
+The Water Utility is a division of the Public Works Department and was established to provide, operate, and
+maintain a quality water supply for customers inside and outside of the City that effectively and economically
+meets or exceeds all federal and state drinking water regulations.
+The Water Utility Fund is an enterprise fund that operates like a business. The primary source of revenue for
+this fund is through the sale of water to customers. Expenditures from this fund include administration as
+well as maintenance and operations of the utility. Administrative functions include monthly customer billing,
+planning, coordination with the Department of Health, working with hydrogeologists and legal counsel to
+protect the City's water sources, and participation in other water related organizations. Maintenance and
+operations activities include regular maintenance and repair of wells, pump stations, valves, water mains,
+distribution lines and hydrants. In addition, transfers are made out of this fund to support the Water Capital
+Improvement Fund and the Water Asset Replacement Fund.
+2024 to 2025
+Budget Comparison
+Increase/(Decrease)
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+Beginning Fund Balance
+
+2,171,000
+
+2,437,074
+
+2,437,074
+
+2,428,871
+
+Revenues and Other Sources
+Licenses and Permits
+Intergovernmental Revenues
+Charges for Services
+Fines and Forfeitures
+Miscellaneous Revenues
+Other and Non-Revenues
+Total Revenues and Other Sources
+
+5,106
+3,301,762
+25,356
+77,848
+1,170
+3,411,242
+
+5,000
+3,297,989
+20,000
+31,200
+800
+3,354,989
+
+5,000
+363
+3,499,797
+25,300
+61,700
+1,000
+3,593,160
+
+Expenditures and Other Uses
+Salaries and Wages
+Personnel Benefits
+Supplies and Services
+Miscellaneous Expenditures
+Debt Service
+Transfers Out
+Total Expenditures and Other Uses
+
+801,430
+318,017
+1,475,186
+38,628
+193,000
+318,907
+3,145,168
+
+1,056,943
+564,732
+1,419,607
+47,200
+196,500
+321,684
+3,606,666
+
+266,074
+
+Net Change in Fund Balance
+Ending Fund Balance
+Fund Balance as a Percentage
+of Expenditures
+City of Milton, Washington
+
+Amount
+
+Percentage
+
+5,000
+3,693,183
+25,300
+61,700
+1,000
+3,786,183
+
+395,194
+5,300
+30,500
+200
+431,194
+
+0%
+0%
+12%
+27%
+98%
+25%
+13%
+
+986,943
+536,862
+1,490,358
+49,050
+196,500
+341,650
+3,601,363
+
+1,088,639
+587,366
+1,558,370
+49,050
+194,500
+360,988
+3,838,913
+
+31,696
+22,634
+138,763
+1,850
+(2,000)
+39,304
+232,247
+
+3%
+4%
+10%
+4%
+-1%
+12%
+6%
+
+(251,677)
+
+(8,203)
+
+(52,730)
+
+2,437,074
+
+2,185,397
+
+2,428,871
+
+2,376,141
+
+77%
+
+61%
+
+67%
+
+62%
+
+65
+
+2025 Budget
+
+WATER UTILITY
+
+Fund 403
+
+DETAIL
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+Beginning Fund Balance
+
+2,171,000
+
+2,437,074
+
+2,437,074
+
+2,428,871
+
+Revenues and Other Sources
+322 13 00 000 Water Permits
+337 00 00 403 Local Grants and Other Payments
+343 40 10 000 Water Sales
+343 40 10 001 Meter Rentals
+343 40 14 000 Certificates of Water Availability - In City
+343 40 15 000 Certificates of Water Availability - Outside City
+343 40 35 000 Reservoir Antenna Rentals
+343 49 00 000 Connection Charges
+343 83 10 403 Plan Review
+359 90 00 000 Penalties
+361 10 00 403 Investment Earnings
+369 10 00 403 Sale of Surplus
+369 91 00 403 Miscellaneous Revenue
+382 10 00 403 Water Permit Deposits
+Total Revenues and Other Sources
+
+5,106
+3,223,110
+357
+8,364
+918
+30,663
+38,275
+75
+25,356
+65,585
+2,183
+10,080
+1,170
+3,411,242
+
+5,000
+3,216,839
+150
+10,000
+5,000
+31,000
+35,000
+20,000
+20,200
+2,500
+8,500
+800
+3,354,989
+
+5,000
+363
+3,416,497
+300
+10,000
+5,000
+33,000
+35,000
+25,300
+49,200
+2,500
+10,000
+1,000
+3,593,160
+
+5,000
+3,609,883
+300
+10,000
+5,000
+33,000
+35,000
+25,300
+49,200
+2,500
+10,000
+1,000
+3,786,183
+
+Account
+
+City of Milton, Washington
+
+Title
+
+66
+
+2025 Budget
+
+WATER UTILITY
+
+Fund 403
+
+DETAIL
+Account
+
+Title
+
+Expenditures and Other Uses
+Administration
+534 10 10 000 Salaries and Wages
+Allocated Salaries and Wages
+534 10 20 000 Personnel Benefits
+Allocated Personnel Benefits
+534 10 20 002 Uniforms
+534 10 31 000 Office and Operating Supplies
+534 10 32 000 Fuel
+534 10 35 000 Small Tools and Equipment
+534 10 41 000 Professional Services
+534 10 41 001 Professional Services - IT
+534 10 42 000 Communication
+534 10 43 000 Travel
+534 10 44 001 Utility Tax
+534 10 44 002 Water Excise Tax
+534 10 45 000 Operating Rentals and Leases
+534 10 46 000 Insurance
+534 10 48 000 Repairs and Maintenance
+534 10 49 000 Miscellaneous
+534 10 49 001 Misc/Dues & Memberships
+534 10 49 002 Misc/Training & Registrations
+534 10 49 003 Misc/Outside Printing
+Allocated Operating Expenditures
+
+City of Milton, Washington
+
+67
+
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+58,885
+133,512
+23,721
+64,142
+485
+58,375
+43,908
+10,283
+596
+292,719
+163,832
+4,370
+81,469
+25
+285
+454
+20,193
+141,643
+
+157,421
+170,839
+69,517
+87,153
+1,000
+200
+500
+40,000
+64,820
+10,000
+1,000
+289,516
+150,000
+3,500
+101,181
+1,500
+2,000
+2,000
+18,700
+142,190
+
+87,421
+170,839
+39,517
+87,153
+30
+1,000
+200
+500
+45,000
+64,820
+10,000
+1,000
+307,485
+165,000
+5,000
+104,763
+1,500
+2,000
+2,000
+20,200
+142,190
+
+163,427
+178,488
+71,504
+90,560
+1,000
+200
+500
+45,000
+69,230
+10,000
+1,000
+324,889
+165,000
+5,000
+105,407
+1,500
+2,000
+2,000
+20,200
+177,744
+
+2025 Budget
+
+WATER UTILITY
+
+Fund 403
+
+DETAIL
+Account
+
+Title
+
+Expenditures and Other Uses (Continued)
+Operations
+534 50 10 000 Salaries and Wages
+534 50 11 000 Overtime
+534 50 15 000 On Call Pay
+534 50 20 000 Personnel Benefits
+534 50 20 002 Uniforms
+534 50 31 000 Office and Operating Supplies
+534 50 31 001 Office and Operating Supplies - Meters
+534 50 32 000 Fuel
+534 50 35 000 Small Tools and Equipment
+534 50 35 001 Machinery and Equipment
+534 50 41 000 Professional Services
+534 50 41 002 Advertising
+534 50 41 114 Water Comprehensive Plan Professional Svcs
+534 50 42 000 Communication
+534 50 43 000 Travel
+534 50 45 000 Operating Rentals and Leases
+534 50 47 000 Public Utilities
+534 50 48 000 Repairs and Maintenance
+534 50 48 001 Vehicle Repairs And Maintenance
+534 50 49 000 Miscellaneous
+534 50 49 001 Misc/Dues & Memberships
+534 50 49 002 Misc/Training & Registrations
+534 50 49 003 Misc/Outside Printing
+
+City of Milton, Washington
+
+68
+
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+548,726
+17,472
+42,835
+215,959
+14,195
+84,688
+51,905
+17,050
+6,880
+2,505
+9,183
+1,264
+5,487
+1,135
+38,099
+3,163
+8,101
+46,695
+1,130
+9,691
+5,264
+-
+
+670,683
+20,000
+38,000
+395,962
+12,100
+99,000
+40,000
+14,000
+15,000
+25,000
+500
+3,000
+5,000
+6,500
+40,000
+6,000
+10,000
+40,000
+2,000
+10,000
+10,000
+150
+
+670,683
+20,000
+38,000
+395,962
+14,200
+99,000
+40,000
+17,000
+15,000
+25,000
+500
+5,000
+6,500
+40,000
+6,000
+10,000
+46,700
+2,000
+10,000
+10,000
+150
+
+688,724
+20,000
+38,000
+411,102
+14,200
+99,000
+40,000
+17,000
+25,000
+25,000
+500
+5,000
+6,500
+40,000
+6,000
+10,000
+46,700
+2,000
+10,000
+10,000
+150
+
+2025 Budget
+
+WATER UTILITY
+
+Fund 403
+
+DETAIL
+Account
+
+Title
+
+Expenditures and Other Uses (Continued)
+Water Quality
+534 51 31 000 Office and Operating Supplies
+534 51 32 000 Fuel
+534 51 35 000 Small Tools and Equipment
+534 51 35 001 Machinery and Equipment
+534 51 41 000 Professional Services
+534 51 42 000 Communication
+534 51 43 000 Travel
+534 51 47 001 Public Utilities
+534 51 48 000 Repairs and Maintenance
+534 51 48 001 Vehicle Repairs And Maintenance
+534 51 49 001 Misc/Dues & Memberships
+534 51 49 002 Misc/Training & Registrations
+534 51 49 003 Misc/Outside Printing
+Non-Expenditures
+582 10 00 403 Refund of Water Permit Deposits
+Debt Service
+591 34 72 000 Revenue Bond Principal
+592 34 83 000 Revenue Bond Interest
+Transfers Out
+597 40 40 403 Transfers Out - Capital Improvements
+597 40 50 403 Transfers Out - Asset Replacement
+Total Expenditures and Other Uses
+Net Change in Fund Balance
+Ending Fund Balance
+
+City of Milton, Washington
+
+69
+
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+104,520
+6,180
+3,115
+1,348
+22,855
+243,124
+20,209
+584
+697
+
+70,000
+2,000
+2,500
+2,000
+27,500
+200
+500
+180,000
+22,000
+3,500
+200
+500
+850
+
+70,000
+2,000
+3,500
+2,000
+27,500
+200
+500
+200,000
+22,000
+3,500
+200
+500
+1,200
+
+70,000
+2,000
+3,500
+2,000
+27,500
+200
+500
+200,000
+22,000
+3,500
+200
+500
+1,200
+
+305
+
+800
+
+800
+
+800
+
+130,000
+63,000
+
+140,000
+56,500
+
+140,000
+56,500
+
+145,000
+49,500
+
+223,235
+95,672
+3,145,168
+
+225,179
+96,505
+3,606,666
+
+239,155
+102,495
+3,601,363
+
+252,692
+108,296
+3,838,913
+
+266,074
+
+(251,677)
+
+(8,203)
+
+(52,730)
+
+2,437,074
+
+2,185,397
+
+2,428,871
+
+2,376,141
+
+2025 Budget
+
+WATER CAPITAL
+
+Fund 404
+
+This fund was established to separate Water Utility capital improvements from regular administration,
+maintenance and operations activities. The intent is to have resources available when needs arise. Seven
+percent of Water Sales revenue is contributed to this fund each year.
+2025 projects include the following:
+Miscellaneous Pump Station Component Upgrades
+$100,000
+This project will continue to replace failing components at the City's pump stations to ensure uninterrupted
+delivery of treated water to customers. The City's pump stations are aging and need upgrades every year.
+This project will also upgrade treatment systems with on-site chlorine generation.
+Fire Hydrant/Gate Valve Upgrades
+$26,358
+This project will replace pumper ports on fire hydrants with 5" Storz quick connect adapters for faster
+response times and to meet the standards of East Pierce Fire & Rescue. The project will also replace aging
+and failing hydrants in the City's distribution system.
+Miscellaneous Well Rehabilitation
+$50,000
+This budget item is to investigate and, if necessary, rehabilitate wells within the City as issues arise.
+Miscellaneous Service Line Replacements/Connections
+$60,000
+This project will entail tying over service lines to new mains in areas where the City currently has multiple
+mains in the roadway. This is a proactive approach to abandon older failing water mains.
+New Deep Well
+$1,000,000
+This project will develop an additional water supply source at the 18th Street Court site near the 2 MG
+Reservoir and Booster Pump Station site. Project costs include design, engineering, and equipping a new well
+and well building. This project will utilize Coronavirus Local Fiscal Recovery Funds from the American Rescue
+Plan Act (ARPA) for eligible expenditures.
+Pump Station Building Upgrades
+$45,000
+This project replaces failing roof and gutter systems at four pump station facilities located throughout the
+City’s Water Utility District. Current asphalt shingle roofs have surpassed their anticipated life cycle and are in
+need of replacement. To reduce future maintenance costs and adequately protect pump station components
+within these structures, this project will replace asphalt shingle roofs with metal roofs.
+Miscellaneous Security Upgrades
+$23,924
+Security is a very important aspect of operating a reliable and dependable water system. This budget item
+provides for the purchase and installation of equipment necessary to monitor and issue alarms when a
+security concern arises regarding the City's water system.
+Miscellaneous Water Main Replacements/Upgrades
+$45,378
+This project includes repair and replacement of aging and failing water pipes at various locations throughout
+the City.
+
+City of Milton, Washington
+
+70
+
+2025 Budget
+
+WATER CAPITAL
+
+Fund 404
+
+Juniper Street Water Main Replacement
+$950,000
+This project will replace 1,318 linear feet of existing undersized 4-inch pipe, increase fire flow availability by
+eliminating pressure and velocity constraints, and create looping in the system.
+Miscellaneous Technology Upgrades
+$10,000
+This project upgrades the City's Sensus software system to streamline operations, and installs new technology
+upgrades in the field. These technology upgrades were not available when the original infrastructure was
+installed. The upgrades will also provide the ability to monitor water pressure and temperature at designated
+areas in the system, and receive alerts when conditions are not within set parameters.
+Decommission of Wells #1, #4, #9
+$50,000
+Wells #1, #4 and #9 are no longer in use and will be properly decommissioned by a licensed contractor.
+Wells that are not properly decommissioned provide a direct channel for contaminants to seep into aquifers.
+These wells were abandoned years ago for various reasons such as loss of production or cost-prohibitive
+repairs.
+Porter Way Water Main Improvements
+$200,000
+This project is for repair and replacement of critical Water Utility infrastructure parallel to Porter Way below
+Interstate 5. The existing water main failed in 2024. This main is critical for adequate fire flow west of
+Interstate 5, and will remain isolated until design and permitting is complete and construction funds can be
+sourced. Fire flow is currently supported by the sole remaining Interstate 5 undercrossing and the intertie
+with an adjacent water purveyor. The amount budgeted in 2025 is for design and permitting only.
+
+City of Milton, Washington
+
+71
+
+2025 Budget
+
+WATER CAPITAL
+
+Fund 404
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+3,261,472
+
+2,367,944
+
+2,367,944
+
+2,208,399
+
+75,126
+259,759
+14,840
+200,000
+223,235
+772,960
+
+29,500
+200,000
+225,179
+454,679
+
+56,300
+200,000
+239,155
+495,455
+
+56,300
+200,000
+252,692
+508,992
+
+Expenditures and Other Uses
+594 34 60 135 Well #5 Replacement
+594 34 60 150 Misc Pump Station Component Upgrades
+594 34 60 166 Fire Hydrant/Gate Valve Upgrades
+594 34 60 173 Misc Well Rehabilitation
+594 34 60 174 Misc Service Line Replacements/Connections
+594 34 60 175 New Deep Well
+594 34 60 178 Well #12 Rehabilitation
+594 34 60 181 Storage Facility Improvements
+594 34 60 193 Pump Station Building Upgrades
+594 34 63 130 Misc Security Upgrades
+594 34 63 160 Misc Water Main Replacements/Upgrades
+594 34 63 185 City-wide Leak Detection
+594 34 63 189 Juniper Street Water Main Replacement
+594 34 63 192 Misc Technology Upgrades
+594 34 66 127 Water Tank Demolition
+Decommission of Wells #1, #4, #9
+Porter Way Water Main Improvements
+Total Expenditures and Other Uses
+
+427,539
+50,625
+13,642
+120,647
+52,594
+835,219
+2,359
+12,430
+26,812
+124,621
+1,666,488
+
+210,941
+35,000
+36,358
+54,353
+50,000
+1,300,000
+4,566
+32,570
+50,000
+33,924
+55,378
+20,000
+150,000
+20,000
+10,000
+50,000
+2,113,090
+
+5,000
+35,000
+10,000
+80,000
+20,000
+300,000
+2,000
+5,000
+50,000
+10,000
+10,000
+17,000
+100,000
+10,000
+1,000
+655,000
+
+100,000
+26,358
+50,000
+60,000
+1,000,000
+45,000
+23,924
+45,378
+950,000
+10,000
+50,000
+200,000
+2,560,660
+
+Net Change in Fund Balance
+
+(893,528)
+
+(1,658,411)
+
+(159,545)
+
+(2,051,668)
+
+Ending Fund Balance
+
+2,367,944
+
+709,533
+
+2,208,399
+
+156,731
+
+Account
+
+Title
+
+Beginning Fund Balance
+Revenues and Other Sources
+361 10 00 404 Investment Earnings
+367 00 00 404 System Development Charges
+395 20 00 404 Compensation for Loss of Capital Assets
+Transfers In - General Fund (ARPA)
+397 40 30 404 Transfers In - Operations
+Total Revenues and Other Sources
+
+City of Milton, Washington
+
+72
+
+2025 Budget
+
+WATER ASSET REPLACEMENT
+
+Fund 405
+
+The Water Asset Replacement Fund was established to provide for replacement of assets such as rolling
+stock, major equipment, and technology upgrades. The intent is to have resources available when needs
+arise.
+Amounts included in this fund's budget represent the portion allocated to water utility functions only.
+Amounts allocated to non-water utility functions are included in the Asset Replacement and Capital Reserve
+Fund, a subsidiary fund of the General Fund, and the Electric and Stormwater Asset Replacement Funds.
+Three percent of Water Sales revenue is contributed to this fund each year.
+
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+Beginning Fund Balance
+
+593,795
+
+669,161
+
+669,161
+
+705,084
+
+Revenues and Other Sources
+361 10 00 405 Investment Earnings
+395 10 00 405 Sales of Capital Assets
+397 40 30 405 Transfers In - Operations
+Total Revenues and Other Sources
+
+18,333
+95,672
+114,005
+
+5,300
+96,505
+101,805
+
+13,700
+608
+102,495
+116,803
+
+13,700
+108,296
+121,996
+
+Expenditures and Other Uses
+594 34 64 405 Replace Vehicle #17 - 1999 Single Axle Trailer
+594 34 64 405 Replace Vehicle #18 - 1980 Tandem Axle Trailer
+594 34 64 405 Replace Vehicle #20 - 2006 Chevrolet Truck
+594 34 64 405 Replace Vehicle #36 - 2005 Chevrolet Truck
+594 34 64 405 Replace Vehicle #49 - 1995 Dump Truck
+594 34 64 405 New 2024 Freightliner Dump Truck
+594 34 64 405 Replace Vehicle #40 - 2008 Ford F250 Truck
+594 34 64 405 Replace Vehicle #48 - 2001 Dump Truck
+594 34 64 405 Replace Vehicle #51 - 2012 Chevrolet Truck
+594 34 64 405 Asset Replacement
+Total Expenditures and Other Uses
+
+38,639
+38,639
+
+1,500
+1,500
+17,000
+60,000
+52,026
+50,000
+182,026
+
+1,500
+1,500
+19,720
+58,160
+80,880
+
+64,000
+15,000
+48,000
+50,000
+177,000
+
+Net Change in Fund Balance
+
+75,366
+
+(80,221)
+
+35,923
+
+(55,004)
+
+Ending Fund Balance
+
+669,161
+
+588,940
+
+705,084
+
+650,080
+
+Account
+
+City of Milton, Washington
+
+Title
+
+73
+
+2025 Budget
+
+STORMWATER UTILITY
+
+Fund 406
+
+The Stormwater Utility is a division of the Public Works Department and was established to provide, operate
+and maintain a stormwater system with a focus on minimizing damage from severe storms by improving flood
+protection and improving the quality of stormwater runoff to meet the requirements of the Department of
+Ecology's National Pollutant Discharge Elimination System (NPDES) Phase II permit.
+The Stormwater Utility Fund is an enterprise fund that operates like a business. The primary source of
+revenue for this fund is through the payment of monthly stormwater fees. Expenditures from this fund include
+administration as well as maintenance and operations of the utility. Administrative functions include monthly
+customer billing, planning, coordination with the Department of Ecology, and participation in other stormwater
+related organizations. Maintenance and operations activities include regular maintenance and repair of catch
+basins, manholes, storm pipes, ditches, culverts, bioswales, underground detention vaults, and detention
+ponds. In addition, transfers are made out of this fund to support the Stormwater Capital Improvement Fund
+and the Stormwater Asset Replacement Fund.
+A rate study was completed in 2024, and rate increases were adopted for the next five years in an effort to
+maintain fund balance.
+2024 to 2025
+Budget Comparison
+Increase/(Decrease)
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+384,155
+
+297,013
+
+297,013
+
+213,583
+
+Revenues and Other Sources
+Licenses and Permits
+Intergovernmental Revenues
+Charges for Services
+Fines and Forfeitures
+Miscellaneous Revenues
+Total Revenues and Other Sources
+
+1,408
+1,003,466
+5,735
+88,858
+1,099,467
+
+2,600
+1,153,000
+6,700
+37,000
+1,199,300
+
+2,600
+36,463
+1,128,781
+6,700
+45,200
+1,219,744
+
+Expenditures and Other Uses
+Salaries and Wages
+Personnel Benefits
+Supplies and Services
+Miscellaneous Expenditures
+Transfers Out
+Total Expenditures and Other Uses
+
+335,862
+159,535
+569,873
+22,369
+98,970
+1,186,609
+
+540,091
+276,433
+449,441
+26,600
+102,800
+1,395,365
+
+Net Change in Fund Balance
+
+(87,142)
+
+Ending Fund Balance
+
+Beginning Fund Balance
+
+Fund Balance as a Percentage
+of Expenditures
+City of Milton, Washington
+
+Amount
+
+Percentage
+
+2,600
+1,251,001
+6,700
+45,200
+1,305,501
+
+98,001
+8,200
+106,201
+
+0%
+0%
+8%
+0%
+22%
+9%
+
+450,091
+216,453
+493,540
+30,500
+112,590
+1,303,174
+
+523,428
+269,929
+498,380
+30,500
+125,100
+1,447,337
+
+(16,663)
+(6,504)
+48,939
+3,900
+22,300
+51,972
+
+-3%
+-2%
+11%
+15%
+22%
+4%
+
+(196,065)
+
+(83,430)
+
+(141,836)
+
+297,013
+
+100,948
+
+213,583
+
+71,747
+
+25%
+
+7%
+
+16%
+
+5%
+
+74
+
+2025 Budget
+
+STORMWATER UTILITY
+
+Fund 406
+
+DETAIL
+Account
+
+Title
+
+Beginning Fund Balance
+Revenues and Other Sources
+322 10 03 000 Clearing/Grading Permits
+322 15 00 000 Storm Permits
+337 00 00 406 Local Grants and Other Payments
+337 31 02 406 King County Flood Control District Grant
+343 10 00 000 Storm Drainage Fees
+345 83 10 406 Plan Review
+359 90 00 406 Penalties
+361 10 00 406 Investment Earnings
+362 00 00 406 Equipment and Vehicle Charges (Internal)
+362 00 01 406 Storm Facility Rental
+369 40 00 406 Judgments and Settlements
+369 91 00 406 Miscellaneous Revenue
+Total Revenues and Other Sources
+Expenditures and Other Uses
+Administration
+531 10 10 000 Salaries and Wages
+Allocated Salaries and Wages
+531 10 20 000 Personnel Benefits
+Allocated Personnel Benefits
+531 10 20 002 Uniforms
+531 10 31 000 Office and Operating Supplies
+531 10 32 000 Fuel
+531 10 35 000 Small Tools and Equipment
+531 10 41 000 Professional Services
+531 10 41 001 Professional Services - IT
+531 10 41 002 Advertising
+531 10 42 000 Communication
+531 10 43 000 Travel
+531 10 44 001 Utility Tax
+531 10 44 002 Stormwater Excise Tax
+531 10 45 000 Operating Rentals and Leases
+531 10 46 000 Insurance
+531 10 48 000 Repairs and Maintenance
+531 10 49 000 Miscellaneous
+531 10 49 001 Misc/Dues & Memberships
+531 10 49 002 Misc/Training & Registrations
+531 10 49 003 Misc/Outside Printing
+Allocated Operating Expenditures
+City of Milton, Washington
+
+75
+
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+384,155
+
+297,013
+
+297,013
+
+213,583
+
+678
+730
+1,000,801
+2,665
+5,735
+10,451
+21,515
+30,000
+17,414
+9,478
+1,099,467
+
+2,000
+600
+1,153,000
+6,700
+4,000
+28,000
+5,000
+1,199,300
+
+2,000
+600
+155
+36,308
+1,125,901
+2,880
+6,700
+7,800
+28,000
+9,400
+1,219,744
+
+2,000
+600
+1,251,001
+6,700
+7,800
+28,000
+9,400
+1,305,501
+
+123,157
+87,900
+52,520
+47,137
+704
+137,701
+25,794
+739
+4,158
+337
+91,350
+17,756
+2,490
+29,305
+1,955
+7,784
+308
+10,180
+103,878
+
+220,816
+125,115
+103,251
+64,283
+2,500
+350
+500
+40,000
+33,593
+200
+3,500
+1,000
+92,520
+16,000
+2,000
+36,396
+500
+200
+12,000
+1,500
+8,500
+104,282
+
+170,816
+125,115
+73,251
+64,283
+20
+2,500
+350
+500
+50,000
+33,593
+200
+3,500
+1,000
+101,331
+19,000
+3,000
+37,684
+500
+200
+12,000
+1,500
+10,200
+104,282
+
+229,272
+95,631
+106,266
+50,989
+2,500
+350
+500
+50,000
+35,537
+200
+3,500
+1,000
+112,590
+19,000
+3,000
+37,916
+500
+200
+12,000
+1,500
+10,200
+95,687
+2025 Budget
+
+STORMWATER UTILITY
+
+Fund 406
+
+DETAIL
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+124,018
+787
+54,271
+5,607
+31,492
+13,822
+2,429
+66
+13,065
+82
+2,015
+1,414
+6,496
+8,854
+1,962
+72,009
+2,298
+16
+1,783
+
+192,160
+2,000
+102,899
+6,000
+22,000
+11,000
+5,000
+15,000
+100
+3,000
+1,000
+6,500
+9,000
+3,500
+40,000
+100
+300
+4,000
+
+152,160
+2,000
+72,899
+6,000
+22,000
+11,000
+5,000
+15,000
+100
+3,000
+1,000
+6,500
+9,000
+3,500
+60,000
+2,300
+300
+4,000
+
+196,525
+2,000
+106,674
+6,000
+22,000
+11,000
+5,000
+15,000
+100
+3,000
+1,000
+6,500
+9,000
+3,500
+60,000
+2,300
+300
+4,000
+
+69,279
+29,691
+1,186,609
+
+71,960
+30,840
+1,395,365
+
+78,813
+33,777
+1,303,174
+
+87,570
+37,530
+1,447,337
+
+Net Change in Fund Balance
+
+(87,142)
+
+(196,065)
+
+(83,430)
+
+(141,836)
+
+Ending Fund Balance
+
+297,013
+
+100,948
+
+213,583
+
+71,747
+
+Account
+
+Title
+
+Expenditures and Other Uses (Continued)
+Operations
+531 30 10 000 Salaries and Wages
+531 30 11 000 Overtime
+531 30 20 000 Personnel Benefits
+531 30 20 002 Uniforms
+531 30 31 000 Office and Operating Supplies
+531 30 32 000 Fuel
+531 30 35 000 Small Tools and Equipment
+531 30 36 000 Small Assets - IT
+531 30 41 000 Professional Services
+531 30 41 002 Advertising
+531 30 42 000 Communication
+531 30 43 000 Travel
+531 30 45 000 Operating Rentals and Leases
+531 30 47 000 Public Utilities
+531 30 48 000 Repairs and Maintenance
+531 30 48 001 Vehicle Repairs and Maintenance
+531 30 49 000 Miscellaneous
+531 30 49 001 Misc/Dues & Memberships
+531 30 49 002 Misc/Training & Registrations
+Transfers Out
+597 04 07 406 Transfers Out - Capital Improvements
+597 40 80 406 Transfers Out - Asset Replacement
+Total Expenditures and Other Uses
+
+City of Milton, Washington
+
+76
+
+2025 Budget
+
+STORMWATER CAPITAL
+
+Fund 407
+
+This fund was established to separate Stormwater Utility capital improvements from regular administration,
+maintenance and operations activities. The intent is to have resources available when needs arise. Seven
+percent of Storm Drainage Fees revenue is contributed to this fund each year.
+2025 projects include the following:
+Invasive Plant Species Removal
+$30,000
+Invasive plant species are an increasing problem in the City. This project will use an integrated approach to
+invasive species management. Knotweed will be removed systematically by specialists, and other noxious
+and invasive weeds will be controlled by staff or professionals as needed. Mechanical, chemical, and
+preventative measures will all be used to control these dangerous plants.
+City-wide Ditch/Culvert Projects
+$88,196
+This budget item is for repair and construction of ditches and culverts at various locations throughout the City.
+Oak Street Storm Improvements
+$200,000
+The ditches on the north side of 15th Avenue experience high stormwater flows. They are also in close
+proximity to parking and access to Milton Community Park. This project will install pipes and catch basins in
+place of ditches to control the flow of water down the hill while simultaneously providing much needed parking
+for Milton Community Park.
+Porter Way Culvert
+$100,000
+This project will expand the existing storm culvert below Porter Way adjacent to Juniper Street. The expanded
+culvert will reduce flood potential to West Milton Park, support water quality goals, and allow the City to build
+the last remaining stretch of sidewalk between 5th Avenue and the Interurban Trail. The amount budgeted in
+2025 is for design and permitting only. The sidewalk portion of this project will be included in the Capital
+Improvement Fund as part of the Sidewalk Missing Links project.
+
+City of Milton, Washington
+
+77
+
+2025 Budget
+
+STORMWATER CAPITAL
+
+Fund 407
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+Beginning Fund Balance
+
+328,030
+
+465,932
+
+465,932
+
+523,401
+
+Revenues and Other Sources
+334 03 10 179 Dept of Ecology Grant - Storm Capacity
+TIB Grant - Porter Way Culvert
+361 10 00 407 Investment Earnings
+397 04 06 407 Transfers In - Operations
+Total Revenues and Other Sources
+
+57,634
+10,989
+69,279
+137,902
+
+75,000
+2,900
+71,960
+149,860
+
+30,456
+8,200
+78,813
+117,469
+
+99,544
+80,000
+8,200
+87,570
+275,314
+
+-
+
+50,000
+128,196
+60,000
+238,196
+
+20,000
+40,000
+60,000
+
+30,000
+88,196
+200,000
+100,000
+418,196
+
+Net Change in Fund Balance
+
+137,902
+
+(88,336)
+
+57,469
+
+(142,882)
+
+Ending Fund Balance
+
+465,932
+
+377,596
+
+523,401
+
+380,519
+
+Account
+
+Title
+
+Expenditures and Other Uses
+594 31 60 005 Invasive Plant Species Removal
+594 31 63 133 City-wide Ditch/Culvert Projects
+Oak Street Storm Improvements
+Porter Way Culvert
+Total Expenditures and Other Uses
+
+City of Milton, Washington
+
+78
+
+2025 Budget
+
+STORMWATER ASSET REPLACEMENT Fund 408
+The Stormwater Asset Replacement Fund was established to provide for replacement of assets such as rolling
+stock, major equipment, and technology upgrades. The intent is to have resources available when needs
+arise.
+Amounts included in this fund's budget represent the portion allocated to stormwater utility functions only.
+Amounts allocated to non-stormwater utility functions are included in the Asset Replacement and Capital
+Reserve Fund, a subsidiary fund of the General Fund, and the Electric and Water Asset Replacement Funds.
+Three percent of Storm Drainage Fees revenue is contributed to this fund each year.
+
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+Beginning Fund Balance
+
+120,776
+
+122,721
+
+122,721
+
+142,906
+
+Revenues and Other Sources
+334 03 10 157 Dept of Ecology Grant - Street Sweeping
+361 10 00 408 Investment Earnings
+395 10 00 408 Sales of Capital Assets
+397 40 60 408 Transfers In - Operations
+Total Revenues and Other Sources
+
+14,346
+4,274
+29,691
+48,311
+
+1,000
+30,840
+31,840
+
+3,200
+128
+33,777
+37,105
+
+3,200
+37,530
+40,730
+
+Expenditures and Other Uses
+594 31 64 408 Replace Vehicle #17 - 1999 Single Axle Trailer
+594 31 64 408 Replace Vehicle #18 - 1980 Tandem Axle Trailer
+594 31 64 408 Replace Vehicle #20 - 2006 Chevrolet Truck
+594 31 64 408 Replace Vehicle #49 - 1995 Dump Truck
+594 31 64 408 New 2024 Freightliner Dump Truck
+594 31 64 408 Replace Vehicle #32 - 2008 Ford F250 Truck
+594 31 64 408 Replace Vehicle #48 - 2001 Dump Truck
+594 31 64 408 Asset Replacement
+Total Expenditures and Other Uses
+
+46,366
+46,366
+
+1,500
+1,500
+12,000
+36,724
+50,000
+101,724
+
+1,500
+1,500
+13,920
+16,920
+
+56,800
+15,000
+50,000
+121,800
+
+Net Change in Fund Balance
+
+1,945
+
+(69,884)
+
+20,185
+
+(81,070)
+
+122,721
+
+52,837
+
+142,906
+
+61,836
+
+Account
+
+Title
+
+Ending Fund Balance
+
+City of Milton, Washington
+
+79
+
+2025 Budget
+
+VEHICLE REPAIR & MAINTENANCE
+
+Fund 501
+
+The Vehicle Repair and Maintenance Fund is an Internal Service Fund that was established to account for
+repair and maintenance of the City's fleet of vehicles, excluding the Police Department. Revenue to this fund
+is collected by assessing the other funds for the labor and equipment used to service vehicles from the
+different departments. Expenditures are tracked by vehicle and department, and primarily include in-house
+wages and benefits for the City's mechanic as well as parts for repair and maintenance of the City's fleet.
+Other expenditures include repair and maintenance services for which the City does not have the equipment
+or specialized expertise.
+Account
+
+2023
+Actual
+
+Title
+
+Beginning Fund Balance
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+70
+
+70
+
+70
+
+70
+
+Revenues and Other Sources
+348 10 00 501 Charges for Services - Labor (Internal)
+348 20 00 501 Charges for Services - Parts (Internal)
+Total Revenues and Other Sources
+
+214,889
+1,450
+216,339
+
+297,225
+1,000
+298,225
+
+297,132
+1,000
+298,132
+
+304,575
+1,000
+305,575
+
+Expenditures and Other Uses
+548 30 10 000 Salaries and Wages
+548 30 11 000 Overtime
+Allocated Salaries and Wages
+548 30 20 000 Personnel Benefits
+Allocated Personnel Benefits
+548 30 20 002 Uniforms
+548 30 31 000 Office and Operating Supplies
+548 30 32 000 Fuel
+548 30 34 000 Parts
+548 30 35 000 Small Tools and Equipment
+548 30 35 001 Machinery and Equipment
+548 30 41 000 Professional Services
+548 30 41 001 Professional Services - IT
+548 30 42 000 Communication
+548 30 43 000 Travel
+548 30 45 000 Operating Rentals and Leases
+548 30 46 000 Insurance
+548 30 48 000 Repairs and Maintenance
+548 30 49 000 Miscellaneous
+548 30 49 002 Misc/Training & Registrations
+Allocated Operating Expenditures
+Total Expenditures and Other Uses
+
+94,615
+1,210
+4,950
+51,316
+2,484
+2,131
+15,556
+8,121
+8,017
+4,461
+133
+6,038
+1,329
+1,743
+292
+8,120
+408
+49
+468
+4,898
+216,339
+
+102,251
+2,000
+6,092
+61,610
+3,087
+1,800
+20,000
+2,000
+5,000
+15,000
+2,000
+1,000
+7,635
+1,500
+500
+250
+10,085
+50,000
+500
+1,000
+4,915
+298,225
+
+102,251
+2,000
+6,092
+61,610
+3,087
+2,100
+20,000
+3,000
+15,000
+5,000
+1,000
+7,635
+1,500
+500
+500
+10,442
+50,000
+500
+1,000
+4,915
+298,132
+
+104,355
+2,000
+6,808
+63,760
+2,979
+2,100
+20,000
+3,000
+15,000
+5,000
+1,000
+8,238
+1,500
+500
+500
+10,506
+50,000
+500
+1,000
+6,829
+305,575
+
+-
+
+-
+
+-
+
+-
+
+70
+
+70
+
+70
+
+70
+
+Net Change in Fund Balance
+Ending Fund Balance
+
+City of Milton, Washington
+
+80
+
+2025 Budget
+
+INFORMATION TECHNOLOGY
+
+Fund 503
+
+The Information Technology Fund is an Internal Service Fund that was established to account for city-wide
+technology needs. Revenue to this fund is collected by assessing the other funds for operating expenditures
+related to technology that serve the entire City. Expenditures are primarily for contracted information
+technology support services, software licenses and subscriptions, equipment and other professional services.
+
+2023
+Actual
+
+2024
+Budget
+
+2024
+Projected
+
+2025
+Budget
+
+Beginning Fund Balance
+
+138,550
+
+104,343
+
+104,343
+
+104,343
+
+Revenues and Other Sources
+348 10 00 503 IT Services (Internal)
+Total Revenues and Other Sources
+
+247,456
+247,456
+
+325,409
+325,409
+
+325,409
+325,409
+
+351,122
+351,122
+
+Expenditures and Other Uses
+Allocated Salaries and Wages
+Allocated Personnel Benefits
+518 80 31 000 Office and Operating Supplies
+518 80 35 000 Small Tools and Equipment
+518 80 36 002 Equipment - IT
+518 80 41 001 Professional Services - IT
+518 80 42 503 Communication
+518 80 46 000 Insurance
+518 80 49 002 Misc/Training & Registrations
+518 80 49 004 Software Licenses/Subscriptions
+594 18 60 503 Capital Expenditures - IT
+Total Expenditures and Other Uses
+
+6,421
+2,743
+27,349
+112,679
+5,119
+2,722
+1,426
+75,631
+47,573
+281,663
+
+7,380
+3,248
+200
+10,000
+60,000
+135,000
+5,300
+3,381
+1,500
+99,400
+20,000
+345,409
+
+7,380
+3,248
+200
+1,881
+45,000
+135,000
+8,300
+3,500
+1,500
+99,400
+20,000
+325,409
+
+5,970
+2,609
+200
+10,000
+45,000
+149,000
+8,300
+3,643
+1,500
+104,900
+20,000
+351,122
+
+Net Change in Fund Balance
+
+(34,207)
+
+(20,000)
+
+-
+
+-
+
+Ending Fund Balance
+
+104,343
+
+84,343
+
+104,343
+
+104,343
+
+Account
+
+City of Milton, Washington
+
+Title
+
+81
+
+2025 Budget
+
+Supplementary Information
+
+City of Milton, Washington
+
+82
+
+2025 Budget
+
+Supplementary Information
+
+City of Milton, Washington
+
+83
+
+2025 Budget
+
+Supplementary Information
+
+City of Milton, Washington
+
+84
+
+2025 Budget
+
+Supplementary Information
+
+GLOSSARY
+Appropriation - A legal authorization granted by the City Council to make expenditures and to incur obligations
+for a specific purpose.
+Assessed Valuation - The valuation set upon real estate and certain personal property by the County Assessor
+as a basis for levying property taxes.
+Authorized Positions - Employee positions, which are authorized in the adopted budget, to be filled during the
+year.
+BARS - The Budgeting, Accounting and Reporting System for accounting prescribed by the Washington State
+Auditor’s Office.
+Bond - A long-term promise to repay a specified amount (the face amount of the bond) on a particular date
+(the maturity date). The most common types of bonds are general obligation and revenue bonds. Bonds are
+primarily used to finance capital projects.
+Budget - A plan of financial activity for a specified period of time (fiscal year or biennium) indicating all
+planned revenues and expenditures for the budget period.
+Capital Improvement - Expenditures related to acquisition, expansion or rehabilitation of an element of the
+government’s physical site; sometimes referred to as infrastructure.
+Capital Outlay - Fixed assets that have a value of $5,000 or more and have a useful economic life of more
+than one year.
+Capital Project - Major construction, acquisition, or renovation activities which add value to a government’s
+physical assets or significantly increase their useful life, also called capital improvements.
+Capital Projects Fund - A fund created to account for all resources and expenditures used for the acquisition
+of capital assets except those financed by enterprise funds.
+Contractual Services - Services rendered to a government by private firms, individuals, or other governmental
+agencies.
+Debt Service - Payment of interest and principal on borrowed money according to a predetermined payment
+schedule.
+Department - The basic unit of service responsibility, encompassing a broad mandate of related service
+responsibilities.
+Enterprise Fund - A type of proprietary fund in which the direct beneficiaries pay for all costs of the fund
+through fees.
+City of Milton, Washington
+
+85
+
+2025 Budget
+
+Supplementary Information
+Expenditure - Charges incurred (whether paid immediately or unpaid) for operations, maintenance, interest or
+other charges.
+Face Value - The amount of principal that must be paid at maturity for a bond issue.
+Fiscal Year - A twelve-month period designated as the operating year for accounting and budgeting purposes
+in an organization.
+Full-time Equivalent Position (FTE) - A full-time or part-time position converted to the decimal equivalent of a
+full-time position based on 2,080 hours per year. For example, a part-time person working 20 hours per week
+would be the equivalent of 0.5 of a full-time position.
+Fund - A fiscal entity with revenues and expenditures that are segregated for the purpose of carrying out a
+specific purpose or activity.
+GAAP - Generally Accepted Accounting Principles are uniform minimum standards for financial accounting and
+recording, encompassing the conventions, rules, and procedures that define accepted accounting principles.
+GASB - Governmental Accounting Standards Board, established in 1985, is the current standard- setting
+board for governmental GAAP.
+General Fund - The principal operating fund of the City used for general governmental operations. Taxes and
+fees that generally have no restriction on their use support this fund.
+General Obligation (G.O.) Bonds - Bonds backed by the full faith, credit and taxing power of the governmental
+entity.
+Indirect Cost - A cost necessary for the functioning of the organization as a whole, but which cannot be
+identified with a specific product, function or activity.
+Infrastructure - The physical assets of a government including streets, water, sewer, public buildings, and
+parks.
+Interfund Transfers - The movement of monies between funds of the same governmental entity.
+Internal Service Fund - A type of proprietary fund that accounts for goods and services provided to other units
+of the government. Payments from the benefiting units are intended to fund the costs of providing services.
+LEOFF - Law Enforcement Officers and Fire Fighters retirement system of the State that provides coverage for
+public safety employees.
+Levy - To impose taxes for the support of the governmental activities.
+Levy Rate - The property tax percentage rate used in computing the property tax amount to be paid.
+
+City of Milton, Washington
+
+86
+
+2025 Budget
+
+Supplementary Information
+Long-term Debt - Debt with a maturity of more than one year after the date of issuance.
+Operating Budget - The portion of the budget that pertains to daily operations that provide basic
+governmental services.
+Ordinance - A formal legislative enactment by the City Council. If it is not in conflict with any higher form of
+law, such as a statute or constitutional provision, it has the full force and effect of law within the boundaries
+of the municipality to which it applies.
+PERS - Public Employees’ Retirement System is the State system for public employment retirement applicable
+for employees other than police officers and fire fighters.
+Proprietary Funds - A group of funds that account for the activities of the City that are of a proprietary or
+business character. Also see “Enterprise Fund.”
+Resolution - A special or temporary order of a legislative body requiring less legal formality than an ordinance
+or statute.
+Resources - Total amounts available for appropriation including estimated revenues, fund transfers, and
+beginning balances.
+Revenue - Sources of income financing the operations of government.
+Revenue Bonds - Bonds sold by the City that are secured only by the revenues of a particular system.
+Special Revenue Funds - General government funds for which the source of monies is legally restricted or
+designated to a specific purpose.
+Taxes - Compulsory charges levied by a government for the purpose of financing services performed for the
+common benefit. This term does not include specific charges made against particular persons or property for
+current or permanent benefits such as special assessments. Neither does the term include charges for
+services rendered only to those who pay, for example, water service charges.
+User Charges - The payment of fees for direct receipt of a public service by the party who benefits from the
+service.
+
+City of Milton, Washington
+
+87
+
+2025 Budget

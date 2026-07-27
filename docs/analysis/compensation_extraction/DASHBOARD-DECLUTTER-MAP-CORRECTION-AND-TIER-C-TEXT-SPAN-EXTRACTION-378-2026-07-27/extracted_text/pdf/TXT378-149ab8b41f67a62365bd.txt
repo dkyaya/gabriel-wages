@@ -1,0 +1,7340 @@
+TOWN OF COLCHESTER, VERMONT
+AUDIT REPORT
+JUNE 30, 2011
+
+TOWN OF COLCHESTER, VERMONT
+AUDIT REPORT
+TABLE OF CONTENTS
+JUNE 30, 2011
+
+Page #
+Independent Auditor’s Report
+
+1-2
+
+Management’s Discussion and Analysis
+
+3-14
+
+Basic Financial Statements:
+
+Statement of Net Assets
+
+Exhibit A
+
+15
+
+Statement of Activities
+
+Exhibit B
+
+16
+
+Balance Sheet
+
+Exhibit C
+
+17
+
+Statement of Revenues, Expenditures and Changes
+in Fund Balances
+
+Exhibit D
+
+18
+
+Reconciliation of the Statement of Revenues,
+Expenditures and Changes in Fund Balances
+of Governmental Funds to the Statement of Activities
+
+Exhibit E
+
+19
+
+Statement of Revenue, Expenditures and Changes
+in Fund Balance - Budget and Actual - General Fund
+
+Exhibit F
+
+20
+
+Statement of Net Assets
+
+Exhibit G
+
+21
+
+Statement of Revenues, Expenses and Changes
+in Fund Net Assets
+
+Exhibit H
+
+22
+
+Governmental Funds:
+
+Proprietary Funds:
+
+TOWN OF COLCHESTER, VERMONT
+AUDIT REPORT
+TABLE OF CONTENTS
+JUNE 30, 2011
+
+Page #
+Statement of Cash Flows
+
+Exhibit I
+
+23
+
+Exhibit J
+
+24
+
+Fiduciary Funds:
+
+Statement of Fiduciary Net Assets
+
+Notes to the Financial Statements
+
+25-53
+
+Schedule of Revenue, Expenditures and Changes
+in Fund Balance - Budget and Actual - General Fund
+
+Schedule 1
+
+54-64
+
+Combining Balance Sheet - Nonmajor Governmental Funds
+
+Schedule 2
+
+65
+
+Combining Schedule of Revenues, Expenditures and
+Changes in Fund Balances - Nonmajor Governmental Funds
+
+Schedule 3
+
+66
+
+Combining Balance Sheet – Nonmajor Special Revenue Funds
+
+Schedule 4
+
+67
+
+Combining Schedule of Revenues, Expenditures and
+Changes in Fund Balances – Nonmajor Special Revenue Funds
+
+Schedule 5
+
+68
+
+Combining Balance Sheet – Nonmajor Capital Projects Funds
+
+Schedule 6
+
+69
+
+Combining Schedule of Revenues, Expenditures and
+Changes in Fund Balances – Nonmajor Capital Projects Funds
+
+Schedule 7
+
+70
+
+Report on Internal Control Over Financial Reporting
+and on Compliance and Other Matters Based on an
+Audit of Financial Statements Performed in
+Accordance with “Government Auditing Standards”
+
+71-72
+
+Independent Auditor's Report
+Selectboard
+Town of Colchester
+Colchester, Vermont 05446
+We have audited the accompanying financial statements of the governmental activities,
+the business-type activities, each major fund, and the aggregate remaining fund information of the Town
+of Colchester, Vermont as of and for the year ended June 30, 2011, which collectively comprise the
+City’s basic financial statements as listed in the table of contents. These financial statements are the
+responsibility of the Town of Colchester, Vermont’s management. Our responsibility is to express
+opinions on these financial statements based on our audit.
+We conducted our audit in accordance with auditing standards generally accepted in the
+United States of America and the standards applicable to financial audits contained in Government
+Auditing Standards, issued by the Comptroller General of the United States. Those standards require that
+we plan and perform the audit to obtain reasonable assurance about whether the financial statements are
+free of material misstatement. An audit includes examining, on a test basis, evidence supporting the
+amounts and disclosures in the financial statements. An audit also includes assessing the accounting
+principles used and the significant estimates made by management, as well as evaluating the overall
+financial statement presentation. We believe that our audit provides a reasonable basis for our opinions.
+In our opinion, the financial statements referred to above present fairly, in all material
+respects, the respective financial position of the governmental activities, the business-type activities,
+each major fund, and the aggregate remaining fund information of the Town of Colchester, Vermont, as
+of June 30, 2011, and the respective changes in financial position, and, where applicable, cash flows
+thereof and the respective budgetary comparison for the General Fund for the year then ended in
+conformity with accounting principles generally accepted in the United States of America.
+As described in Note IV.H. to the financial statements, the Town of Colchester, Vermont
+adopted the provisions of Governmental Accounting Standards Board (GASB) Statement No. 54, “Fund
+Balance Reporting and Governmental Fund Type Definitions”.
+Information included under Management’s Discussion and Analysis is not a required part
+of the basic financial statements but is supplementary information required by the Governmental
+Accounting Standards Board. We have applied certain limited procedures, which consisted principally
+of inquiries of management regarding methods of measurement and presentation of the required
+supplementary information. However, we did not audit the information and express no opinion on it.
+
+(1)
+
+Town of Colchester, Vermont
+
+Our audit was conducted for the purpose of forming opinions on the financial statements
+that collectively comprise the Town of Colchester, Vermont’s basic financial statements. The Schedule
+of Revenue, Expenditures and Changes in Fund Balance – Budget and Actual - General Fund and
+combining fund financial statements are presented for purposes of additional analysis and are not a
+required part of the basic financial statements. These schedules have not been subjected to the auditing
+procedures applied in the audit of the basic financial statements and, we do not express an opinion on
+them.
+In accordance with Government Auditing Standards, we have also issued our report dated
+February 8, 2012, on our consideration of the Town of Colchester, Vermont’s internal control over
+financial reporting and on our tests of its compliance with certain provisions of laws, regulations,
+contracts, and grant agreements and other matters. The purpose of that report is to describe the scope of
+our testing of internal control over financial reporting and compliance and the results of that testing, and
+not to provide an opinion on internal control over financial reporting or on compliance. That report is an
+integral part of an audit performed in accordance with “Government Auditing Standards” and should be
+considered in assessing the results of our audit.
+
+February 8, 2012
+Montpelier, Vermont
+Vt Lic. #92-000180
+
+(2)
+
+TOWN OF COLCHESTER, VERMONT
+MANAGEMENT DISCUSSION AND ANALYSIS
+
+As management of the Town of Colchester (The Town), we offer readers of the Town’s
+financial statements this narrative overview and analysis of the financial activities for the
+fiscal year ended June 30, 2011. The purpose of the management discussion and analysis
+is to (a) assist the reader in focusing on significant financial issues, (b) provide an
+overview of the Town’s financial activity, (c) identify changes in the Town’s financial
+position (its ability to address the next and subsequent years’ challenges), (d) identify any
+material deviations from the financial plan (the approved budget), and (e) identify
+individual fund issues or concerns.
+FINANCIAL HIGHLIGHTS
+Government-wide Statements (refer to Exhibits A and B)
+The assets of the Town of Colchester exceeded its liabilities at the close of the fiscal year
+by $32,006,868 net assets). Of this amount $7,842,298 (unrestricted net assets) may be
+used by the various funds of the Town to meet its ongoing obligations to its citizens and
+creditors and $590,375 represent resources that are subject to external restrictions on how
+they may be used.
+• The Town’s total governmental net assets increased by $1,527,792. There was a
+increase in Capital Grants and Contributions of more than $602,000. The Town
+also received $323,724 for our Integrated Water Resources Grant from the
+Environmental Protection Agency.
+• Net Assets of Business-Type Activities increased due primarily to the addition of
+the Recreation Program Fund to this category. This addition increased Net Assets
+by $218,161. The Town of Colchester received $1,202,800 in grants from the
+Environmental Protection Agency for the Town’s share of the South Burlington
+wastewater expansion upgrade.
+Fund Financial Statements (refer to Exhibit C and Footnote 4H)
+• Governmental funds include the General, Special Revenue, Capital Projects,
+Permanent and Debt Service funds.
+• As of the close of the current fiscal year, the Town’s governmental funds reported
+combined ending fund balances of $6,483,941, a decrease of $633,030 in
+comparison with the prior year. This is primarily due to expenditures for large
+capital projects which included the Campus Road Connector and the Holy Cross
+Rd bike path totaling over $996,000. Other Governmental Funds experiences a
+decrease in ending fund balance because the Recreation Program Fund became a
+Proprietary Fund in fiscal year 2011.
+• General Fund expenditures were under budget by over $437,748 due to lower
+salaries and benefits primarily in the Police Department as a result of several
+officers being deployed.
+• GASB 54 changed the way fund balances are categorized. This change is more
+fully explained in footnote 4H. The total Fund Balance on June 30, 2011 was
+$6,483,941. Of this amount only $1,127,157 or 17% was unassigned. The
+remainder has been assigned or restricted for various purposes, including
+$1,964,534 for the upgrade of the Police facility.
+
+(3)
+
+TOWN OF COLCHESTER, VERMONT
+MANAGEMENT DISCUSSION AND ANALYSIS
+OVERVIEW OF THE FINANCIAL STATEMENTS
+
+Required Components of Annual Financial Report
+Figure 1
+Audit
+Management’s Discussion and Analysis
+
+Government-wide
+Financial Statements
+Exhibits A & B
+
+Basic Financial Statements
+
+Fund Financial
+Statements
+Exhibits C - J
+
+Notes to the
+Financial Statements
+
+Summary
+
+Detail
+
+Major Features of the Town of Colchester’s Government-wide & Fund Financial Statements
+Figure 2
+Government-wide
+Statements
+
+Scope
+
+Fund Statements
+Government Funds
+The activities of the Town
+that are not proprietary or
+fiduciary, such as finance,
+planning & zoning, police,
+parks
+
+Entire Town government
+(except fiduciary funds)
+
+Required Financial
+Statements
+
+-Statement of Net Assets
+-Statement of Activities
+
+-Balance Sheet
+-Statement of Revenues,
+Expenditures & Changes in
+Fund Balances
+
+Accounting Basis &
+Measurement Focus
+
+Accrual accounting &
+economic resources focus
+
+Modified accrual
+accounting & current
+financial resources focus
+
+Type of Asset/Liability
+Information
+
+All assets & liabilities, both
+financial & capital, and
+short-term & long-term
+
+Type of Inflow/Outflow
+Information
+
+All revenues & expenses
+during year, regardless of
+when cash is received or
+paid
+
+(4)
+
+Only assets expected to be
+used up & liabilities that
+come due during the year
+or soon thereafter, no
+capital assets included
+Revenues or expenditures
+for which cash is received
+or goods or services have
+been received & payment is
+due during or soon after
+year end.
+
+Fund Statements
+Proprietary Funds
+Activities the Town
+operates similar to private
+businesses, the sewer
+system
+-Balance Sheet
+-Statement of Revenues,
+Expenses & Changes in
+Net Assets
+-Statement of Cash Flows
+Accrual accounting &
+economic resources focus
+All assets & liabilities, both
+financial & capital, &
+short-term & long-term
+
+All revenues & expenses
+during the year, regardless
+of when cash is received or
+paid
+
+TOWN OF COLCHESTER, VERMONT
+MANAGEMENT DISCUSSION AND ANALYSIS
+The following tables, graphs and analysis discuss the financial position and changes to the
+financial position for the Town as a whole as of and for the years ended June 30, 2011 and
+2010. The 2010 amounts have been reclassified due to the change in the Recreation
+Program Fund from a governmental activity to a business-type activity.
+Town of Colchester’s Net Assets
+Figure 3
+Business-Type
+Governmental Activities
+Activities
+Current & Other
+Assets
+Capital Assets
+
+%
+Change
+
+Total
+
+2011
+
+2010
+
+2011
+
+2010
+
+2011
+
+2010
+
+$8,984,618
+
+$8,483,589
+
+$6,373,047
+
+$5,768,559
+
+$15,357,665
+
+$14,252,148
+
+7.7%
+
+25,405,562
+
+24.189,009
+
+3,461,823
+
+3,611,795
+
+28,867,385
+
+27,800,804
+
+3.8%
+
+34,390,180
+
+32,672,598
+
+9,834,870
+
+9,380,354
+
+44,225,050
+
+42,052,952
+
+5.2%
+
+7,532,760
+
+7,460,808
+
+2,590,106
+
+2,589,038
+
+10,122,866
+
+10,049,846
+
+.7%
+
+1,433,391
+
+1,315,553
+
+661,925
+
+403,771
+
+2,095,316
+
+1,719,324
+
+21.9%
+
+Total Liabilities
+
+8,966,151
+
+8,776,361
+
+3,252,031
+
+2,992,809
+
+12,218,182
+
+11,769,170
+
+3.8%
+
+Net Assets:
+Invested in
+Capital Assets, net
+of related debt
+Restricted
+
+20,744,756
+
+19,110,055
+
+2,829,439
+
+2,900,363
+
+23,574,195
+
+22,010,418
+
+7.1%
+
+583,775
+
+527,648
+
+6,600
+
+6,600
+
+590,375
+
+534,248
+
+10.5%
+
+Unrestricted
+
+4,095,498
+
+4,258,534
+
+3,746,800
+
+3,480,582
+
+7,842,298
+
+7,739,116
+
+1.3%
+
+$25,424,029
+
+$23,896,237
+
+6,582,839
+
+$6,387,545
+
+$32,006,868
+
+$30,283,782
+
+5.7%
+
+Total Assets
+Noncurrent
+Liabilities
+Outstanding
+Other Liabilities
+
+Total Net Assets
+
+Net assets may serve over time as one useful indicator of a government’s financial
+condition. By far the largest portion of the Town’s net assets (74%) reflects its investment
+in capital assets (e.g., land, buildings, machinery, equipment and infrastructure (roads,
+bridges, etc) less any related debt used to acquire those assets that is still outstanding. The
+Town uses these capital assets to provide services to citizens; consequently, these assets
+are not available for future spending. Although the Town’s investment in its capital assets
+is reported net of the outstanding related debt, the resources needed to repay that debt must
+be provided by other sources, since the capital assets cannot be used to liquidate these
+liabilities.
+Almost 100% of the Town’s cash and Certificates of Deposit are insured or collateralized
+by U.S. Government securities or General Obligation Vermont Municipal notes or bonds.
+
+Changes in Net Assets
+The chart below is a presentation of Exhibit B that illustrates the components of the
+revenue sources and expenditures areas of the government wide Statement of Activities.
+
+(5)
+
+TOWN OF COLCHESTER, VERMONT
+MANAGEMENT DISCUSSION AND ANALYSIS
+
+Town of Colchester Change in Net Assets
+Figure 4
+Governmental Activities
+2011
+
+2010
+
+$1,105,798
+
+Business-Type Activities
+
+Total
+
+% Chg
+
+2011
+
+2010
+
+2011
+
+2010
+
+$894,021
+
+$1,418,959
+
+$1,334,459
+
+$2,524,757
+
+$2,228,480
+
+13.3%
+
+725,088
+
+1,321,734
+
+1,202,800
+
+0
+
+1,927,888
+
+1,321,734
+
+75.9%
+
+919,232
+
+317,232
+
+0
+
+0
+
+919,232
+
+317,232
+
+190%
+
+10,367,269
+
+10,275,112
+
+0
+
+0
+
+10,367,269
+
+10,275,112
+
+0.9%
+2.4%
+
+Revenues:
+Program Revenues:
+Charges for
+Services
+Operating Grants &
+Contributions
+Capital Grants &
+Contributions
+General Revenues:
+Property Taxes
+Other
+
+532,470
+
+480,750
+
+257,751
+
+290,793
+
+790,221
+
+771,543
+
+13,649,857
+
+13,288,849
+
+2,879,510
+
+1,625,252
+
+16,529,367
+
+14,914,101
+
+General Government
+
+2,560,900
+
+2,622,268
+
+0
+
+0
+
+2,560,900
+
+2,622,268
+
+(2.3%)
+
+Public Safety
+
+4,720,444
+
+4,621,130
+
+0
+
+0
+
+4,720,444
+
+4,621,130
+
+2.1%
+
+Public Works
+Community
+Development
+Culture & Recreation
+Interest on LongTerm Debt
+Wastewater
+
+2,987,940
+
+2,858,943
+
+0
+
+0
+
+2,987,940
+
+2,858,943
+
+4.3%
+
+183,714
+
+582,263
+
+0
+
+0
+
+183,714
+
+582,263
+
+(68.4%)
+
+1,391,182
+
+1,293,643
+
+572,226
+
+484,266
+
+1,963,408
+
+1,777,909
+
+21.7%
+
+277,885
+
+295,980
+
+0
+
+0
+
+277,885
+
+295,980
+
+(6.1%)
+
+0
+
+0
+
+2,111,990
+
+820,396
+
+2,111,990
+
+820,396
+
+227.2%
+
+Total Expenses
+
+12,122,065
+
+12,274,227
+
+2,684,216
+
+1,304,662
+
+14,806,281
+
+13,578,889
+
+9.0%
+
+Increase in Net Assets
+
+1,527,792
+
+1,014,622
+
+195,294
+
+320,590
+
+1,723,086
+
+1,335,212
+
+29.0%
+
+Net Assets, July 1
+
+23,896,237
+
+22,881,615
+
+6,387,545
+
+6,066,955
+
+30,283,782
+
+28,948,570
+
+4.5%
+
+Net Assets, June 30
+
+25,424,029
+
+$23,896,237
+
+$6,582,839
+
+$6,387,545
+
+$32,006,868
+
+$30,283,782
+
+5.7%
+
+Total Revenues
+Expenses:
+
+Governmental activities
+Key elements in the changes in revenue are as follows:
+• The property tax rate increased 0.5% over last year
+• Property taxes financed approximately 85% of General Fund expenses and the
+remainder of the cost was paid by those who directly benefited from programs
+offered and by other governments and organizations that subsidized certain
+programs with operating grants and contributions. In FY 2010 property taxes
+financed 81% of General Fund expenses.
+• Interest, penalties and tax sale charges were over $33,754 more than budgeted.
+• Payments in Lieu of Taxes were $86,947 over budget. This is due to the State of
+Vermont payment exceeding expectations.
+• Overall, actual General Fund revenues were higher than last year by about
+$383,542 or 3.7%. This is primarily due to increased property tax revenue.
+
+(6)
+
+TOWN OF COLCHESTER, VERMONT
+MANAGEMENT DISCUSSION AND ANALYSIS
+
+Figure 5 shows the changes in types of revenues between fiscal year 2010 and 2011.
+Property taxes are the largest source of revenues. In FY 11, Charges for Services provided
+only 8.1% of revenue, while Grants and Contributions comprised almost 12.0 % of
+revenues in FY 11or a combined total of 20.1%. The combination of these two categories
+was 22.3% of revenues in 2010.
+
+Figure 6 compares the changes in functional or program expenses between 2010 and 2011.
+This graph shows how the Town spends its revenue. In FY 11, Public Safety comprises
+39% of the spending, followed by Public Works with 25% and General Government with
+21% of the total spending. Culture & Recreation includes the Library and the Recreation
+Department and represents 11% of the expenses.
+
+(7)
+
+TOWN OF COLCHESTER, VERMONT
+MANAGEMENT DISCUSSION AND ANALYSIS
+Figure 7 shows how Charges for Services and Grants and Contributions contribute to the
+payment of functional expenses. This chart indicates that program revenues do not support
+program expenses requiring property taxes to pay for the bulk of the expenses, with the
+exception of Community Development.
+Governmental Activities
+Revenues & Expenses by Type
+Figure 7
+$6,000,000
+$4,000,000
+$2,000,000
+$0
+General
+Government
+
+Public Safety
+Revenues
+
+Public Works
+
+Culture &
+Recreation
+
+Expenses
+
+Business-type activities (Wastewater and Recreation Funds):
+• The Recreation Program Fund was added to Business-Type activities in 2011.
+Revenues exceeded expenses by $11,508.
+• Charges for services in the Wastewater Fund were $836,481, compared with
+$795,196 in fiscal year 2010.
+• Business type activities represent about 20.6% of total net assets.
+• Included in operating expenses is depreciation expense in the amount of $149,972.
+• The user rate in the Wastewater Fund was not changed in FY 11.
+
+Financial Analysis of the Town’s Funds
+As noted earlier, the Town of Colchester uses fund accounting to ensure and demonstrate
+compliance with finance-related legal requirements.
+
+(8)
+
+TOWN OF COLCHESTER, VERMONT
+MANAGEMENT DISCUSSION AND ANALYSIS
+
+Governmental Funds. The focus of the Town’s governmental funds is to provide
+information on near-term inflows, outflows, and balances of usable resources. Such
+information is useful in assessing the Town’s financing requirements. Specifically,
+unassigned fund balance can be a useful measure of a government’s net resources available
+for spending at the end of the fiscal year. Unassigned fund balance provides a reserve for
+emergencies, enables the Select Board to stabilize tax rates, and provides working capital
+from which to pay Town bills between tax collection due dates.
+The General Fund is the chief operating fund of the Town of Colchester. A key financial
+statistic to evaluating the financial strength of the Town is the level of the General Fund
+unassigned fund balance as a percent of total revenues or expenditures. Typically, this
+balance should be 5 to 15 percent of annual revenues or expenditures.
+•
+•
+•
+
+At the end of the current fiscal year, the unassigned fund balance of the General
+Fund was $1,231,421 and $42,422 was nonspendable for inventory and prepaid
+expenses and $446,916 was assigned to reduce property taxes in fiscal year 2012.
+The unassigned General Fund fund balance at June 30, 2011 was 12% of total
+General Fund expenditures.
+Total governmental fund balances totaled $6,483,941 in 2011 and $7,335,278 in
+2010.
+
+In addition to the General Fund, the Town maintains other funds including the capital
+project funds maintained to provide infrastructure improvements in the Town, funds for
+grants received by the Town and funds for special revenues received by the Town.
+The Town operates a Septic Revolving Loan Fund to provide financial assistance for the
+upgrade of failing on-site septic systems. The Town has approved loans to 18 individuals
+or families as of June 30, 2010.
+Proprietary Funds (Wastewater and Recreation Program Funds)
+Business-type activities increased the Town’s net assets of the Wastewater and Recreation
+Program Funds by about $195,294 or about 3.1%. Total Net Assets at June 30, 2011 were
+$6,582,839 compared with $6,387,545 as of June 30, 2010.
+General Fund Budgetary Highlights:
+The FY 2011 General Fund budget totaling $10,776,711 increased 3.6% over FY 10. The
+budget increase between FY 09 and FY 10 was 3.3%. Salaries and benefits made up
+about 66% of the General Fund budget.
+
+(9)
+
+TOWN OF COLCHESTER, VERMONT
+MANAGEMENT DISCUSSION AND ANALYSIS
+Figure 9 shows the percent change in the General Fund budget for the last 9 years.
+
+Actual revenues in the General Fund were higher than budgeted by $88,580 and actual
+expenditures were lower than budgeted by $437,748. The FY 11 budget planned for
+deficit spending of $341,600, but the General Fund ended with a surplus of $184,728.
+Some of the key factors contributing to this surplus include:
+Revenue Variances
+• The largest budget variances were from additional funds received from the State of
+Vermont for Payment in Lieu of Taxes (PILOT). We received over $86,947 more
+than budgeted.
+• Revenue from ambulance fees exceeded the budget by over $3,987 however,
+Rescue expenses exceeded revenues by about $184,792. In FY 10, rescue expenses
+exceeded revenues by $120,006.
+• Actual property tax revenues were approximately $58,000 less than budgeted in FY
+11.
+Expenditure Variances
+• The Select Board budget was under budget by $51,922 primarily due to the Select
+Board Contingency of $50,000 not spent this year.
+• Salaries were under budget by almost $345,939 due to unfilled positions and
+officers serving in the National Guard.
+• Employee benefits were under budget by about $297,000 primarily due to lower
+retirement and social security costs due to lower salaries and health insurance cost
+was lower than budget by $297,000. Health insurance rates increased by only
+about 2.5% in 2011. Essentially all employees participate in a High Deductible
+insurance plan coupled with a Health Savings account. The deductible is $2,250
+for single plans and $4,500 for 2-person and family plans.
+
+(10)
+
+TOWN OF COLCHESTER, VERMONT
+MANAGEMENT DISCUSSION AND ANALYSIS
+
+•
+
+•
+•
+
+The Selectboard approved unbudgeted transfers to other funds totaling $219,066 at
+year end. The largest amount, $150,000, was for repairs to park infrastructure. The
+remaining $69,066 was for various capital purchases or repairs not able to be
+completed by June 30, 2011.
+Gasoline was over budget by $17,278 due to an increase in gasoline prices since the
+date the budget was determined.
+Overtime was over budget by $30,165, partially due to the significant snow
+removal effort during the winter.
+
+Capital Assets
+The Town of Colchester’s investment in capital assets for its governmental and business–
+type activities as of June 30, 2011, totaled $28,867,385 (net of accumulated depreciation).
+These assets include buildings, roads and bridges, land, machinery and equipment, park
+facilities, and vehicles. The Town is not required to retroactively report infrastructure
+assets under GASB 34, due to the size of its budget. The Town has elected to report only
+infrastructure assets put into operation beginning July 1, 2003, but may choose at a later
+date to inventory all existing infrastructure assets as of June 30, 2003 and include them in
+the Town financial statements.
+Major capital asset transactions during the year include the following additions (there were
+no significant demolitions or disposals):
+• Equipment and vehicles increases were $528,179. The largest additions were
+two dump trucks for about $257,000.
+• The Town received $124,787 in equipment from grant sources.
+• Construction in Progress increased by approximately $1,223,400 due primarily
+to work on the Holy Cross Rd bike path and the Campus Road connector.
+• Other paving projects were completed valued at 515,567.
+A table that shows the values of the Town’s capital assets net of depreciation is shown
+below. Additional information can be found in Note 4D of this report.
+Town of Colchester Capital Assets (net of depreciation)
+Figure 10
+Governmental Activities
+
+Business-Type Activities
+
+Total
+
+% Change
+
+2011
+
+2010
+
+2011
+
+2010
+
+2011
+
+2010
+
+Land
+
+$2,104,936
+
+$2,104,936
+
+132,568
+
+$132,568
+
+$2,237,504
+
+$2,237,504
+
+0.0%
+
+Construction in Progress
+
+2,269,893
+
+1,046,464
+
+0
+
+2,269,893
+
+1,046,464
+
+116.9%
+
+721,282
+
+755,454
+
+0
+
+721,282
+
+755,454
+
+(4.5%)
+
+5,530,528
+
+5,617,610
+
+0
+
+5,530,528
+
+5,617,610
+
+1.6%
+
+753,668
+
+688,129
+
+0
+
+753,668
+
+688,129
+
+9.5%
+
+Vehicles
+
+1,975,705
+
+1,983,489
+
+0
+
+1,975,705
+
+1,983,489
+
+(0.4%)
+
+Infrastructure
+
+12,049,550
+
+11,992,927
+
+0
+
+12,049,550
+
+11,992,927
+
+0.5%
+
+Land Improvements
+Buildings & Improvements
+Equipment & Furniture
+
+Plant & Equipment
+Total
+
+0
+
+0
+
+3,329,255
+
+3,479,227
+
+3,329,255
+
+3,479,227
+
+(4.3%)
+
+$25,405,562
+
+$24,189,009
+
+$3,461,823
+
+$3,611,795
+
+$28,867,385
+
+$27,800,804
+
+3.8%
+
+(11)
+
+TOWN OF COLCHESTER, VERMONT
+MANAGEMENT DISCUSSION AND ANALYSIS
+
+Debt Administration
+There was no new borrowing in the governmental funds or in the business-type fund in
+Fiscal Year 2011.
+Town of Colchester's Outstanding Debt
+Figure 11
+Governmental Activities
+General Obligation
+Bonds
+Special Assessment
+Debt with Government
+Commitment
+Total
+
+Business-Type Debt
+
+%
+Change
+
+Total
+
+2011
+
+2010
+
+2011
+
+2010
+
+2011
+
+2010
+
+$6,842,065
+0
+
+$7,277,495
+0
+
+$632,384
+1,945,000
+
+$711,432
+2,085,000
+
+$7,474,449
+1,945,000
+
+$7,988,927
+2,085,000
+
+-6.4%
+-6.7%
+
+$6,842,065
+
+$7,277,495
+
+$2,577,384
+
+$2,796,432
+
+$9,419,449
+
+$10,073,927
+
+-6.5%
+
+The Town has received authorization for six $150,000 revolving loan fund bonds for the
+purpose of loaning funds to upgrade failed septic systems. For the year ended June 30,
+2011, the Town requested $0 in reimbursement from the State of Vermont.
+Figure 12 indicates the Town’s debt service requirements through 2028, after which all
+current debt will be retired. Additional information regarding the Town’s long-term debt
+can be found in note 4G of this report.
+
+Economic Factors and Next Year’s Budgets and Rates
+• The Colchester Grand List is made up of primarily residential properties, forcing
+more of the tax burden on homeowners, rather than commercial enterprises. Figure
+13 indicates the 14 year trend in the commercial and residential property tax
+payments. For FY 10 and FY 11, 76% and 75.4% respectively of property tax
+revenues come from residential properties.
+
+(12)
+
+TOWN OF COLCHESTER, VERMONT
+MANAGEMENT DISCUSSION AND ANALYSIS
+
+Commercial Vs Residential Property Taxes
+Figure 13
+
+100.0%
+80.0%
+60.0%
+40.0%
+20.0%
+0.0%
+FY
+98
+
+FY
+99
+
+FY
+00
+
+FY
+01
+
+FY
+02
+
+FY
+03
+
+% Residential Property Taxes
+
+FY
+04
+
+FY
+05
+
+FY
+06
+
+FY
+07
+
+FY
+08
+
+FY
+09
+
+FY
+10
+
+FY
+11
+
+% Commercial Property Taxes
+
+•
+
+The Municipal Grand List value for the Town was $14,028,401 as of the beginning
+of FY 11. This was an increase of 1.04% over the prior fiscal year. Since 1970 the
+Town of Colchester’s Grand List has grown from $172,670 to $14,028,401.
+
+•
+
+The Town of Colchester approved a General Fund budget for 2012 in the amount
+of $10,823,924. This represents an increase of 0.4% over the previous year.
+The municipal tax rate decreased by 27.3% to $0.5370 due to reappraisal. The
+reappraisal also had the effect of increasing the Grand List from $14,028,401 to
+$19,567,941.
+In FY 11, about 45% of the budget is for public safety services. In FY 12, public
+safety will represent 46% of the budget.
+
+•
+•
+
+(13)
+
+TOWN OF COLCHESTER, VERMONT
+MANAGEMENT DISCUSSION AND ANALYSIS
+•
+•
+•
+•
+
+Public Works represents about 19% of the General Fund budget in both FY 11 and
+FY 12.
+Parks & Recreation and the Library represent about 12% of the General Fund
+budget in FY 11 and 11% of the budget in FY 12.
+71.6% of the General Fund budget is for salaries and benefits in FY 11 and in FY
+12 it represents 70.8% of the budget.
+Overall, there was a 4.1% increase in salaries and benefits over the FY 2010
+budget, primarily due to a 16% increase in the budget for health insurance.
+
+Figure 15 depicts how the Town spends its General Fund budget.
+FY 12 Expenditures by Function
+Figure 15
+Other
+16%
+
+Town Clerk, Planning
+& Zoning
+8%
+
+Public Works
+19%
+
+Parks, Rec & Library
+11%
+
+Public Safety
+46%
+
+Performance Measures
+Beginning in Fiscal Year 2007, each department committed to at least one measurable
+performance goal in addition to the normal departmental goals for the upcoming year. The
+purpose of this effort is to allow the public more insight into the efforts of each department
+to improve or become more efficient each year. Please visit the Colchester web site and
+click on the Town Budget tab in the Finance Department section to see the goals that have
+been set. The web address is www.colchestervt.gov.
+Requests for Information
+This report is designed to provide an overview of the Town of Colchester’s finances for
+those with an interest in this area. Questions concerning any of the information found in
+this report or requests for additional information should be directed to the Chief Financial
+Officer, Town of Colchester, PO Box 55, Colchester, VT 05446.
+
+(14)
+
+Exhibit A
+TOWN OF COLCHESTER, VERMONT
+STATEMENT OF NET ASSETS
+JUNE 30, 2011
+
+Governmental
+Activities
+
+Business-type
+Activities
+
+Total
+
+ASSETS
+Cash
+Investments
+Receivables (Net of Allowance for
+Uncollectibles)
+Notes Receivable
+Internal Balances
+Prepaid Expenses
+Inventories
+Capital Assets
+Land
+Construction in Progress
+Other Capital Assets (Net of
+Accumulated Depreciation)
+
+$
+
+Total Assets
+
+5,991,441
+2,018,883
+
+$
+
+2,940,796
+296,217
+
+$
+
+8,932,237
+2,315,100
+
+1,146,396
+231,250
+(445,774)
+4,123
+38,299
+
+2,682,453
+0
+445,774
+0
+7,807
+
+3,828,849
+231,250
+0
+4,123
+46,106
+
+2,104,936
+2,269,893
+
+132,568
+0
+
+2,237,504
+2,269,893
+
+21,030,733
+
+3,329,255
+
+24,359,988
+
+34,390,180
+
+9,834,870
+
+44,225,050
+
+755,066
+251,163
+104,707
+299,589
+22,866
+
+515,682
+23,148
+111,951
+0
+11,144
+
+1,270,748
+274,311
+216,658
+299,589
+34,010
+
+435,431
+7,097,329
+
+224,048
+2,366,058
+
+659,479
+9,463,387
+
+8,966,151
+
+3,252,031
+
+12,218,182
+
+20,744,756
+
+2,829,439
+
+23,574,195
+
+91,050
+127,773
+364,952
+4,095,498
+
+0
+0
+6,600
+3,746,800
+
+91,050
+127,773
+371,552
+7,842,298
+
+LIABILITIES
+Accounts Payable
+Accrued Payroll and Benefits Payable
+Deferred Revenue
+Due to Others
+Accrued Interest Payable
+Noncurrent Liabilities:
+Due within One Year
+Due in More than One Year
+Total Liabilities
+NET ASSETS
+Invested in Capital Assets, Net of Related Debt
+Restricted for:
+Cemetery Funds:
+Nonexpendable
+Expendable
+Other
+Unrestricted
+Total Net Assets
+
+$
+
+25,424,029
+
+The accompanying notes are an integral part of this financial statement.
+(15)
+
+$
+
+6,582,839
+
+$
+
+32,006,868
+
+Exhibit B
+TOWN OF COLCHESTER, VERMONT
+STATEMENT OF ACTIVITIES
+FOR THE YEAR ENDED JUNE 30, 2011
+Net (Expense) Revenue and
+Changes in Net Assets
+
+Program Revenues
+
+Expenses
+Functions/Programs:
+Governmental Activities:
+General Government
+Public Safety
+Public Works
+Community Development
+Culture and Recreation
+Interest on Long-Term Debt
+
+$
+
+Total Governmental Activities
+
+$
+
+548,085
+523,602
+5,110
+6,130
+22,871
+0
+
+$
+
+93,690
+51,885
+505,371
+16,158
+57,984
+0
+
+Capital
+Grants and
+Contributions
+
+$
+
+0
+237,254
+663,603
+0
+18,375
+0
+
+Governmental
+Activities
+
+$
+
+(1,919,125)
+(3,907,703)
+(1,813,856)
+(161,426)
+(1,291,952)
+(277,885)
+
+Business-Type
+Activities
+
+$
+
+Total
+
+0
+0
+0
+0
+0
+0
+
+$ (1,919,125)
+(3,907,703)
+(1,813,856)
+(161,426)
+(1,291,952)
+(277,885)
+
+12,122,065
+
+1,105,798
+
+725,088
+
+919,232
+
+(9,371,947)
+
+0
+
+(9,371,947)
+
+2,111,990
+572,226
+
+836,481
+582,478
+
+1,202,800
+0
+
+0
+0
+
+0
+0
+
+(72,709)
+10,252
+
+(72,709)
+10,252
+
+2,684,216
+
+1,418,959
+
+1,202,800
+
+0
+
+0
+
+(62,457)
+
+(62,457)
+
+919,232
+
+(9,371,947)
+
+(62,457)
+
+(9,434,404)
+
+10,367,269
+140,504
+236,176
+114,210
+38,456
+4,380
+(1,256)
+
+0
+0
+0
+256,495
+0
+0
+1,256
+
+10,367,269
+140,504
+236,176
+370,705
+38,456
+4,380
+0
+
+10,899,739
+
+257,751
+
+11,157,490
+
+Change in Net Assets
+
+1,527,792
+
+195,294
+
+1,723,086
+
+Net Assets - July 1, 2010, As Reclassified/Restated
+
+23,896,237
+
+6,387,545
+
+30,283,782
+
+6,582,839
+
+$ 32,006,868
+
+Business-Type Activities:
+Wastewater
+Recreation
+Total Business-Type Activities
+Total
+
+2,560,900
+4,720,444
+2,987,940
+183,714
+1,391,182
+277,885
+
+Operating
+Grants and
+Contributions
+
+Charges for
+Services
+
+$
+
+14,806,281
+
+$
+
+2,524,757
+
+$
+
+1,927,888
+
+$
+
+General Revenues:
+Property Taxes
+Interest and Penalties on Delinquent Taxes
+Payment in Lieu of Taxes
+Unrestricted Investment Earnings
+Other Revenues
+Gain on Sale of Equipment
+Transfers
+Total General Revenues
+
+Net Assets - June 30, 2011
+
+$
+
+The accompanying notes are an integral part of this financial statement.
+(16)
+
+25,424,029
+
+$
+
+Exhibit C
+TOWN OF COLCHESTER, VERMONT
+BALANCE SHEET
+GOVERNMENTAL FUNDS
+JUNE 30, 2011
+
+General
+Fund
+
+Capital
+Projects
+Fund
+
+Reserve
+Fund
+
+Community
+Development
+Fund
+
+Other
+Governmental
+Funds
+
+$ 2,055,967
+1,866,838
+
+$ 2,316,474
+0
+
+$ 1,110,296
+0
+
+462,634
+
+645,303
+
+0
+
+0
+
+36,504
+
+1,955
+
+1,146,396
+
+0
+0
+4,123
+38,299
+
+0
+724,187
+0
+0
+
+0
+452,903
+0
+0
+
+0
+0
+0
+0
+
+0
+55,433
+0
+0
+
+231,250
+13,081
+0
+0
+
+231,250
+1,245,604
+4,123
+38,299
+
+$ 4,427,861
+
+$ 3,685,964
+
+$ 1,563,199
+
+$
+
+72,628
+
+$
+
+152,440
+
+$
+
+773,904
+
+$
+
+10,675,996
+
+$
+
+$
+
+$
+
+$
+
+270
+0
+0
+0
+0
+
+$
+
+40,344
+275
+0
+108,123
+0
+
+$
+
+7,876
+0
+114,503
+231,250
+0
+
+$
+
+755,066
+251,163
+1,691,378
+1,194,859
+299,589
+
+Grant
+Fund
+
+Total
+Governmental
+Funds
+
+ASSETS
+Cash
+Investments
+Receivables (Net of Allowance for
+Uncollectibles)
+Notes Receivable (Net of Allowance for
+Uncollectibles)
+Due from Other Funds
+Prepaid Expenses
+Inventories
+Total Assets
+
+$
+
+72,628
+0
+
+$
+
+60,503
+0
+
+$
+
+375,573
+152,045
+
+$
+
+5,991,441
+2,018,883
+
+LIABILITIES
+Liabilities:
+Accounts Payable
+Accrued Payroll and Benefits Payable
+Due to Other Funds
+Deferred Revenue
+Due to Others
+
+262,764
+250,888
+1,576,875
+316,986
+299,589
+
+317,382
+0
+0
+538,500
+0
+
+126,430
+0
+0
+0
+0
+
+Total Liabilities
+
+2,707,102
+
+855,882
+
+126,430
+
+270
+
+148,742
+
+353,629
+
+4,192,055
+
+Fund Balances/(Deficit):
+Nonspendable
+Restricted
+Assigned
+Unassigned
+
+42,422
+0
+446,916
+1,231,421
+
+0
+1,964,534
+865,548
+0
+
+0
+0
+1,436,769
+0
+
+0
+72,358
+0
+0
+
+0
+3,698
+0
+0
+
+93,050
+431,351
+138
+(104,264)
+
+135,472
+2,471,941
+2,749,371
+1,127,157
+
+1,720,759
+
+2,830,082
+
+1,436,769
+
+72,358
+
+3,698
+
+420,275
+
+6,483,941
+
+$ 4,427,861
+
+$ 3,685,964
+
+$ 1,563,199
+
+Total Fund Balances/(Deficit)
+Total Liabilities and Fund Balances
+
+$
+
+72,628
+
+$
+
+152,440
+
+$
+
+773,904
+
+Amounts Reported for Governmental Activities in the Statement of Net Assets are Different Because:
+Capital Assets Used in Governmental Activities are not Financial Resources and, Therefore, are not Reported in the Funds.
+
+25,405,562
+
+Other Assets are not Available to Pay for Current-Period Expenditures, and, Therefore, are Deferred in the Funds.
+
+1,090,152
+
+Long-Term and Accrued Liabilities, Including Bonds Payable, are not Due or Payable in the Current Period and, Therefore, are Not Reported in the Funds.
+
+(7,555,626)
+
+Net Assets of Governmental Activities
+
+$
+
+The accompanying notes are an integral part of this financial statement.
+(17)
+
+25,424,029
+
+Exhibit D
+TOWN OF COLCHESTER, VERMONT
+STATEMENT OF REVENUES, EXPENDITURES AND CHANGES IN FUND BALANCES
+GOVERNMENTAL FUNDS
+FOR THE YEAR ENDED JUNE 30, 2011
+
+Capital
+Projects
+Fund
+
+General
+Fund
+REVENUES:
+Property Taxes
+Penalties and Interest
+Payment in Lieu of Taxes
+Intergovernmental Revenues
+Impact Fees
+Contributions and Donations
+Charges for Services
+Investment Income
+Licenses and Permits
+Loan Repayments
+Other Revenues
+
+$
+
+Total Revenues
+
+8,722,456
+140,504
+236,176
+445,652
+0
+0
+649,173
+54,516
+219,064
+0
+56,150
+
+$
+
+Community
+Development
+Fund
+
+Reserve
+Fund
+
+526,065
+0
+0
+140,595
+0
+0
+22,381
+10,361
+0
+0
+540
+
+$
+
+61,500
+0
+0
+58,276
+0
+70,371
+84,691
+17,717
+0
+0
+0
+
+$
+
+0
+0
+0
+29,181
+0
+0
+0
+540
+0
+0
+62
+
+Grant
+Fund
+$
+
+0
+0
+0
+515,181
+0
+0
+0
+571
+0
+0
+0
+
+$
+
+Other
+Governmental
+Funds
+
+Total
+Governmental
+Funds
+
+994,397
+0
+0
+5,425
+18,375
+24,238
+11,639
+30,505
+0
+6,719
+0
+
+$ 10,304,418
+140,504
+236,176
+1,194,310
+18,375
+94,609
+767,884
+114,210
+219,064
+6,719
+56,752
+
+10,523,691
+
+699,942
+
+292,555
+
+29,783
+
+515,752
+
+1,091,298
+
+13,153,021
+
+2,195,444
+4,507,134
+2,094,746
+103,357
+1,098,313
+
+181
+0
+20,098
+0
+33,071
+
+257,254
+7,165
+0
+0
+5,432
+
+0
+0
+0
+29,121
+0
+
+1,975
+0
+323,724
+58,360
+54,770
+
+0
+1,640
+1,494
+50,684
+37,278
+
+2,454,854
+4,515,939
+2,440,062
+241,522
+1,228,864
+
+23,315
+0
+0
+0
+
+30,810
+0
+1,705,780
+0
+
+18,724
+133,483
+0
+0
+
+0
+0
+0
+0
+
+0
+39,898
+0
+28,432
+
+0
+0
+172,447
+41,129
+
+72,849
+173,381
+1,878,227
+69,561
+
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+435,431
+278,485
+
+435,431
+278,485
+
+Total Expenditures
+
+10,022,309
+
+1,789,940
+
+422,058
+
+29,121
+
+507,159
+
+1,018,588
+
+13,789,175
+
+Excess/(Deficiency) of Revenues
+Over Expenditures
+
+501,382
+
+(1,089,998)
+
+(129,503)
+
+662
+
+8,593
+
+72,710
+
+(636,154)
+
+Other Financing Sources/(Uses):
+Proceeds from Sale of Equipment
+Transfers In
+Transfers Out
+
+0
+0
+(316,654)
+
+0
+195,810
+0
+
+0
+172,451
+0
+
+0
+0
+0
+
+0
+0
+0
+
+4,380
+10,000
+(62,863)
+
+4,380
+378,261
+(379,517)
+
+Total Other Financing
+Sources/(Uses)
+
+(316,654)
+
+195,810
+
+172,451
+
+0
+
+0
+
+(48,483)
+
+3,124
+
+Net Change in Fund Balances
+
+184,728
+
+(894,188)
+
+42,948
+
+662
+
+8,593
+
+24,227
+
+(633,030)
+
+1,536,031
+
+3,724,270
+
+1,393,821
+
+71,696
+
+(4,895)
+
+396,048
+
+7,116,971
+
+EXPENDITURES:
+Current:
+General Government
+Public Safety
+Public Works
+Community Development
+Culture & Recreation
+Capital:
+General Government
+Public Safety
+Public Works
+Culture & Recreation
+Debt Service:
+Principal
+Interest
+
+Fund Balances/(Deficit) - July 1, 2010
+Fund Balances/(Deficit) - June 30, 2011
+
+$
+
+1,720,759
+
+$
+
+2,830,082
+
+$
+
+The accompanying notes are an integral part of this financial statement.
+(18)
+
+1,436,769
+
+$
+
+72,358
+
+$
+
+3,698
+
+$
+
+420,275
+
+$
+
+6,483,941
+
+Exhibit E
+TOWN OF COLCHESTER, VERMONT
+RECONCILIATION OF THE STATEMENT OF REVENUES,
+EXPENDITURES AND CHANGES IN FUND BALANCES OF
+GOVERNMENTAL FUNDS TO THE STATEMENT OF ACTIVITIES
+FOR THE YEAR ENDED JUNE 30, 2011
+
+Amounts reported for governmental activities in the statement of activities (Exhibit B) are
+different because:
+Net change in fund balances - total government funds (Exhibit D)
+
+$
+
+(633,030)
+
+Governmental funds report capital outlays as expenditures. However, in the statement
+of activities, the cost ($2,194,018) of those assets is allocated over their estimated useful
+lives and reported as depreciation expense ($1,016,860). This is the amount by which capital
+outlays exceeded depreciation in the current period.
+
+1,177,158
+
+The net effect of various transactions involving capital assets (i.e., sales, trade-ins, donations)
+is to Increase net assets.
+
+39,395
+
+Revenues reported in the funds from prior year deferred revenues are not reported as
+revenues in the statement of activities.
+
+(322,679)
+
+Revenues in the statement of activities that do not provide current financial resources
+are not reported as revenues in the funds.
+
+858,902
+
+The issuance of long-term debt (e.g., bonds, leases) provides current financial
+resources to governmental funds, while the repayment of the principal of long-term
+debt ($435,431) consumes the current financial resources of governmental funds. Neither
+transaction, however, has any effect on net assets. This amount is the net effect
+of these differences in the treatment of long-term debt and related items.
+
+435,431
+
+The issuance of loans receivable ($50,684) consumes current financial resources of governmental
+funds, while the repayment of the principal of loans receivable ($6,719) provides current financial
+resources to governmental funds. Neither transaction, however, has any effect on net assets.
+This amount is the net effect of these differences in the treatment of loans receivable.
+
+43,965
+
+Some expenses reported in the statement of activities do not require the use of
+current financial resources and, therefore, are not reported as expenditures in
+governmental funds.
+
+(71,350)
+
+Change in net assets of governmental activities (Exhibit B)
+
+The accompanying notes are an integral part of this financial statement.
+(19)
+
+$
+
+1,527,792
+
+Exhibit F
+TOWN OF COLCHESTER, VERMONT
+STATEMENT OF REVENUE, EXPENDITURES AND CHANGES IN FUND BALANCE
+BUDGET AND ACTUAL
+GENERAL FUND
+FOR THE YEAR ENDED JUNE 30, 2011
+
+Original
+Budget
+Revenue:
+Real Estate Taxes
+Licenses and Permits
+Charges for Services
+State Aid Highway
+Payments in Lieu of Taxes
+Current Use Payment
+Support Payments
+School Payment
+Interest
+Miscellaneous
+Grant Income
+Act 60 and Act 68 Reimbursement
+Sewer Fund Contribution
+Reserve Fund Contribution
+
+$ 8,890,231
+235,850
+701,589
+182,023
+75,000
+12,650
+57,772
+34,146
+55,000
+8,000
+20,000
+31,850
+101,000
+30,000
+
+Total Revenue
+Expenditures:
+Administration
+Public Safety
+Public Works, Highway and Garage
+Stormwater
+Buildings
+Health
+Parks
+Recreation
+Library
+Cemetery
+Intergovernmental
+Total Expenditures
+Excess/(Deficiency) of Revenue
+Over Expenditures
+
+$
+
+Final
+Budget
+
+Amendments
+$
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+$
+
+8,890,231
+235,850
+701,589
+182,023
+75,000
+12,650
+57,772
+34,146
+55,000
+8,000
+20,000
+31,850
+101,000
+30,000
+
+Variance
+Favorable
+(Unfavorable)
+
+Actual
+$
+
+8,862,960
+219,064
+686,035
+181,647
+161,947
+15,862
+58,367
+34,342
+54,516
+68,442
+25,000
+54,509
+101,000
+0
+
+$
+
+(27,271)
+(16,786)
+(15,554)
+(376)
+86,947
+3,212
+595
+196
+(484)
+60,442
+5,000
+22,659
+0
+(30,000)
+
+10,435,111
+
+0
+
+10,435,111
+
+10,523,691
+
+88,580
+
+2,282,764
+4,879,485
+1,839,113
+151,576
+100,129
+45,766
+337,143
+320,446
+585,274
+26,410
+208,605
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+2,282,764
+4,879,485
+1,839,113
+151,576
+100,129
+45,766
+337,143
+320,446
+585,274
+26,410
+208,605
+
+2,164,948
+4,562,722
+1,810,250
+148,892
+103,271
+45,650
+330,802
+439,056
+533,521
+17,845
+182,006
+
+117,816
+316,763
+28,863
+2,684
+(3,142)
+116
+6,341
+(118,610)
+51,753
+8,565
+26,599
+
+10,776,711
+
+0
+
+10,776,711
+
+10,338,963
+
+437,748
+
+(341,600)
+
+184,728
+
+(341,600)
+
+$
+
+0
+
+$
+
+Fund Balance - July 1, 2010
+
+1,536,031
+
+Fund Balance - June 30, 2011
+
+$
+
+The accompanying notes are an integral part of this financial statement.
+(20)
+
+1,720,759
+
+$
+
+526,328
+
+Exhibit G
+TOWN OF COLCHESTER, VERMONT
+STATEMENT OF NET ASSETS
+PROPRIETARY FUNDS
+JUNE 30, 2011
+
+Major Fund
+
+Non-Major
+Fund
+
+Wastewater
+Fund
+
+Recreation
+Program
+Fund
+
+Total
+
+ASSETS
+Current Assets:
+Cash
+Investments
+Receivables (Net of Allowance for
+Uncollectible Accounts)
+Special Assessment Receivable - Current Portion
+Due from Other Funds
+Inventory
+
+$
+
+Total Current Assets
+Noncurrent Assets:
+Special Assessment Receivable - Long-Term Portion
+Capital Assets
+Land
+Plant and Equipment
+Accumulated Depreciation
+Total Noncurrent Assets
+Total Assets
+
+2,940,796
+296,217
+
+$
+
+0
+0
+
+$
+
+2,940,796
+296,217
+
+737,453
+145,000
+68,491
+7,807
+
+0
+0
+377,283
+0
+
+737,453
+145,000
+445,774
+7,807
+
+4,195,764
+
+377,283
+
+4,573,047
+
+1,800,000
+
+0
+
+1,800,000
+
+132,568
+6,197,553
+(2,868,298)
+
+0
+0
+0
+
+132,568
+6,197,553
+(2,868,298)
+
+5,261,823
+
+0
+
+5,261,823
+
+$
+
+9,457,587
+
+$
+
+377,283
+
+$
+
+9,834,870
+
+$
+
+504,252
+129
+0
+11,144
+
+$
+
+11,430
+23,019
+111,951
+0
+
+$
+
+515,682
+23,148
+111,951
+11,144
+
+LIABILITIES
+Current Liabilities:
+Accounts Payable
+Accrued Payroll and Benefits Payable
+Deferred Revenue
+Accrued Interest Payable
+Special Assessment Debt with Governmental Commitment Due within One Year
+General Obligation Bonds Payable - Due Within One Year
+
+145,000
+79,048
+
+0
+0
+
+145,000
+79,048
+
+739,573
+
+146,400
+
+885,973
+
+0
+1,800,000
+
+12,722
+0
+
+12,722
+1,800,000
+
+553,336
+
+0
+
+553,336
+
+Total Noncurrent Liabilities
+
+2,353,336
+
+12,722
+
+2,366,058
+
+Total Liabilities
+
+3,092,909
+
+159,122
+
+3,252,031
+
+2,829,439
+6,600
+3,528,639
+
+0
+0
+218,161
+
+2,829,439
+6,600
+3,746,800
+
+6,364,678
+
+218,161
+
+6,582,839
+
+Total Current Liabilities
+Noncurrent Liabilities:
+Compensated Absences
+Special Assessment Debt With Governmental Commitment Due in More Than One Year
+General Obligation Bonds Payable - Due in More Than One Year
+
+NET ASSETS
+Investment in Capital Assets, Net of Related Debt
+Restricted
+Unrestricted
+Total Net Assets
+Total Liabilities and Net Assets
+
+$
+
+The accompanying notes are an integral part of this financial statement.
+(21)
+
+9,457,587
+
+$
+
+377,283
+
+$
+
+9,834,870
+
+Exhibit H
+TOWN OF COLCHESTER, VERMONT
+STATEMENT OF REVENUES, EXPENSES AND
+CHANGES IN FUND NET ASSETS
+PROPRIETARY FUNDS
+FOR THE YEAR ENDED JUNE 30, 2011
+
+OPERATING REVENUES:
+Charges for Services
+
+Major Fund
+
+Non-Major
+Fund
+
+Wastewater
+Fund
+
+Recreation
+Program
+Fund
+
+$
+
+836,481
+
+Total Operating Revenues
+
+$
+
+582,478
+
+Total
+
+$
+
+1,418,959
+
+836,481
+
+582,478
+
+1,418,959
+
+403,366
+101,000
+4,607
+5,244
+37,691
+27,041
+36,512
+6,033
+0
+149,972
+
+0
+0
+439,396
+0
+0
+0
+0
+22,802
+110,028
+0
+
+403,366
+101,000
+444,003
+5,244
+37,691
+27,041
+36,512
+28,835
+110,028
+149,972
+
+771,466
+
+572,226
+
+1,343,692
+
+65,015
+
+10,252
+
+75,267
+
+NONOPERATING REVENUES (EXPENSES):
+Grant Reimbursement
+Interest Income on Debt Service Special Assessment
+Investment Income
+Grant Expense
+Interest Expense
+
+1,202,800
+201,930
+54,565
+(1,202,800)
+(137,724)
+
+0
+0
+0
+0
+0
+
+1,202,800
+201,930
+54,565
+(1,202,800)
+(137,724)
+
+Total Nonoperating Revenues (Expenses)
+
+118,771
+
+0
+
+118,771
+
+183,786
+
+10,252
+
+194,038
+
+0
+0
+
+32,066
+(30,810)
+
+32,066
+(30,810)
+
+0
+
+1,256
+
+1,256
+
+183,786
+
+11,508
+
+195,294
+
+6,180,892
+
+206,653
+
+6,387,545
+
+OPERATING EXPENSES:
+Sewage Treatment
+Administration Costs
+Salaries and Benefits
+Insurances
+Chemicals
+Repairs and Maintenance
+Utilities
+General Expense
+Program Expenses
+Depreciation
+Total Operating Expenses
+Operating Income
+
+Net Income before Transfers
+Other Financing Sources/(Uses)
+Transfer In
+Transfer Out
+Total Other Financing Sources/(Uses)
+Change in Net Assets
+Total Net Assets - July 1, 2010, As Reclassified
+Total Net Assets - June 30, 2011
+
+$
+
+6,364,678
+
+The accompanying notes are an integral part of this financial statement.
+(22)
+
+$
+
+218,161
+
+$
+
+6,582,839
+
+Exhibit I
+TOWN OF COLCHESTER, VERMONT
+STATEMENT OF CASH FLOWS
+PROPRIETARY FUNDS
+FOR THE YEAR ENDED JUNE 30, 2011
+
+Cash Flows From Operating Activities:
+Receipts from Customers and Users
+Payments to Suppliers
+Payments for Interfund Services
+Payments for Wages and Benefits
+
+$
+
+Major
+Fund
+
+Non-Major
+Fund
+
+Wastewater
+Fund
+
+Recreation
+Program
+Fund
+
+Total
+
+584,595
+(131,625)
+0
+(432,782)
+
+$ 1,433,309
+(627,029)
+(101,000)
+(437,376)
+
+848,714
+(495,404)
+(101,000)
+(4,594)
+
+$
+
+Net Cash Provided by Operating Activities
+
+247,716
+
+20,188
+
+267,904
+
+Cash Flows From Noncapital Financing Activities:
+Proceeds of Grant Income
+Grant Expense
+Net Transfers In/(Out)
+Net Change in Due To/From Other Funds
+
+758,949
+(758,949)
+0
+40,744
+
+0
+0
+1,256
+(21,444)
+
+758,949
+(758,949)
+1,256
+19,300
+
+40,744
+
+(20,188)
+
+20,556
+
+140,000
+(219,048)
+(138,524)
+
+0
+0
+0
+
+140,000
+(219,048)
+(138,524)
+
+(217,572)
+
+0
+
+(217,572)
+
+256,495
+1,461,926
+
+0
+0
+
+256,495
+1,461,926
+
+1,718,421
+
+0
+
+1,718,421
+
+Net Increase in Cash
+
+1,789,309
+
+0
+
+1,789,309
+
+Cash - July 1, 2010
+
+1,151,487
+
+0
+
+1,151,487
+$ 2,940,796
+
+Net Cash Provided/(Used) by Noncapital Financing Activities
+Cash Flows From Capital and Related Financing Activities:
+Special Assessments Received
+Principal Paid on Long-Term Notes and Bonds
+Interest Paid on Long-Term Notes and Bonds
+Net Cash Provided/(Used) by Capital and
+Related Financing Activities
+Cash Flows From Investing Activities:
+Receipt of Interest and Dividends
+Net Decrease in Investments
+Net Cash Provided by Investing Activities
+
+Cash - June 30, 2011
+
+$
+
+2,940,796
+
+$
+
+0
+
+$
+
+65,015
+149,972
+12,233
+(4,787)
+25,270
+13
+0
+0
+
+$
+
+10,252
+0
+0
+0
+1,205
+5,546
+2,117
+1,068
+
+$
+
+75,267
+149,972
+12,233
+(4,787)
+26,475
+5,559
+2,117
+1,068
+
+$
+
+247,716
+
+$
+
+20,188
+
+$
+
+267,904
+
+Adjustments to Reconcile Operating Income to Net Cash
+Provided by Operating Activities:
+Operating Income
+Depreciation
+Decrease in Accounts Receivable
+Increase in Inventory
+Increase in Accounts Payable
+Increase in Accrued Payroll
+Increase in Deferred Revenue
+Increase in Compensated Absences
+Net Cash Provided by Operating Activities
+The accompanying notes are an integral part of this financial statement.
+(23)
+
+Exhibit J
+TOWN OF COLCHESTER, VERMONT
+STATEMENT OF FIDUCIARY NET ASSETS
+FIDUCIARY FUNDS
+JUNE 30, 2011
+
+Agency
+Funds
+ASSETS
+Cash
+
+$
+
+Total Assets
+
+26,697
+26,697
+
+LIABILITIES
+Due to Others
+
+26,697
+
+Total Liabilities
+
+26,697
+
+Net Assets
+
+$
+
+The accompanying notes are an integral part of this financial statement.
+(24)
+
+0
+
+TOWN OF COLCHESTER, VERMONT
+NOTES TO THE FINANCIAL STATEMENTS
+JUNE 30, 2011
+
+The Town of Colchester, Vermont, (herein the "Town") operates under a Selectboard-Manager form
+of government and provides the following services as authorized by its charter: public safety, library,
+highways and streets, sanitation, health and social services, culture and recreation,
+community/economic development, public improvements, planning and zoning, wastewater treatment
+and general administrative services.
+1. SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES
+The accounting policies adopted by the Town of Colchester, Vermont (the “Town”) conform to
+generally accepted accounting principles (GAAP) as applicable to governmental entities. The
+Governmental Accounting Standards Board (GASB) is the accepted standard-setting body for
+establishing accounting and financial reporting principles. The following is a summary of the more
+significant accounting policies employed in the preparation of these financial statements.
+1A. The Financial Reporting Entity
+This report includes all of the funds of the Town of Colchester, Vermont. The reporting entity
+consists of the primary government; organizations for which the primary government is financially
+accountable; and other organizations for which the nature and significance of their relationship with
+the primary government are such that their exclusion would cause the reporting entity’s financial
+statements to be misleading or incomplete. Component units are legally separate organizations for
+which the elected officials of the primary government are financially accountable. The primary
+government is financially accountable if it appoints a voting majority of the organization’s governing
+body and it is able to impose its will on that organization or there is a potential for the organization to
+provide specific financial benefits to or burdens on the primary government. The primary government
+may be financially accountable if an organization is fiscally dependent on the primary government.
+Based on these criteria, there are no other entities that should be combined with the financial
+statements of the Town.
+1B. Basis of Presentation
+The accounts of the Town are organized and operated on the basis of fund accounting. A fund is an
+independent fiscal and accounting entity with a separate set of self-balancing accounts which comprise
+its assets, liabilities, fund equity, revenues, and expenditures or expenses, as appropriate. Government
+resources are allocated to and accounted for in individual funds based upon the purposes for which
+they are spent and the means by which spending activities are controlled.
+The basic financial statements of the Town include both government-wide statements and fund
+financial statements. The focus of the government-wide statements is on reporting the operating
+results and financial position of the Town as a whole and present a longer-term view of the Town’s
+finances. The focus of the fund financial statements is on reporting on the operating results and
+financial position of the most significant funds of the Town and present a shorter-term view of how
+operations were financed and what remains available for future spending.
+
+(25)
+
+TOWN OF COLCHESTER, VERMONT
+NOTES TO THE FINANCIAL STATEMENTS
+JUNE 30, 2011
+
+Government-wide Statements: The statement of net assets and the statement of activities display
+information about the primary government, the Town. These statements include the financial
+activities of the overall government, except for fiduciary activities. Eliminations have been made to
+minimize the double counting of activities between funds. These statements distinguish between the
+governmental and business-type activities of the Town. Governmental activities generally are
+financed through taxes, intergovernmental revenues, and other nonexchange transactions. Businesstype activities are financed in whole or in part by fees charged to external parties.
+The statement of activities presents a comparison between direct expenses and program revenues for
+each function of the Town’s governmental activities and for each segment of the Town ’s businesstype activities. Direct expenses are those that are specifically associated with a program or function
+and, therefore, are clearly identifiable to a particular function or program. Program revenues include
+(a) charges paid by the recipients of goods or services offered by the programs and (b) grants and
+contributions that are restricted to meeting the operational or capital requirements of a particular
+program. Revenues that are not classified as program revenues, including all taxes, are presented as
+general revenues.
+Fund Financial Statements: The fund financial statements provide information about the Town’s
+funds, including fiduciary funds. Separate statements for each fund category – governmental,
+proprietary and fiduciary – are presented. The emphasis of fund financial statements is on major
+governmental and enterprise funds, each displayed in a separate column. All remaining governmental
+and enterprise funds are aggregated and reported as nonmajor funds.
+The Town reports on the following major governmental funds:
+General Fund – This is the Town’s main operating fund. It accounts for all financial resources
+of the Town, except those required to be accounted for in another fund.
+Capital Projects Fund – This fund accounts for the capital projects of the Town.
+Reserve Fund – This fund accounts for the Town’s capital spending reserves for various areas
+like library renovations, technology and communications.
+Community Development Fund – This fund accounts for the Town’s community development
+activity.
+Grant Fund – This fund account for the Town’s various grant activities.
+The Town reports on the following major enterprise fund:
+Wastewater Fund – This fund accounts for the wastewater activities of the Town.
+Proprietary fund operating revenues, such as charges for services, result from exchange transactions
+associated with the principal activity of the fund. Exchange transactions are those in which each party
+receives and gives up essentially equal values. Nonoperating revenues, such as subsidies and
+investment earnings, result from nonexchange transactions or ancillary activities.
+
+(26)
+
+TOWN OF COLCHESTER, VERMONT
+NOTES TO THE FINANCIAL STATEMENTS
+JUNE 30, 2011
+
+Additionally, the Town reports the following fund types:
+Agency Funds – These funds account for monies maintained for Developer Escrow deposits.
+1C. Measurement Focus
+The accounting and financial reporting treatment applied to a fund is determined by its measurement
+focus. Government-wide and proprietary fund financial statements are reported using the economic
+resources measurement focus. This means that all assets and liabilities associated with the operation
+of these funds (whether current or noncurrent) are included on the balance sheet (or statement of net
+assets). Equity (i.e., net total assets) is segregated into invested in capital assets, net of related debt;
+restricted net assets; and unrestricted net assets. Operating statements present increases (i.e.,
+revenues) and decreases (i.e., expenses) in net total assets.
+Governmental fund financial statements are reported using the current financial resources
+measurement focus. This means that only current assets and current liabilities are generally reported
+on their balance sheets. Their reported fund balances (net current assets) are considered a measure of
+available spendable resources, and are segregated into nonspendable; restricted; committed; assigned
+and unassigned amounts. Operating statements of these funds present increases (i.e., revenues and
+other financing sources) and decreases (i.e., expenditures and other financing uses) in net current
+assets. Accordingly, they are said to present a summary of sources and uses of available spendable
+resources during a period.
+1D. Basis of Accounting
+Basis of accounting refers to when revenues and expenditures or expenses are recognized in the
+accounts and reported in the financial statements. Basis of accounting relates to the timing of the
+measurements made, regardless of the measurement focus applied.
+The government-wide and proprietary fund financial statements are reported using the accrual basis of
+accounting. Revenues are recorded when earned and expenses are recorded at the time the liabilities
+are incurred, regardless of when the related cash flow takes place. Nonexchange transactions, in
+which the Town gives (or receives) value without directly receiving (or giving) equal value in
+exchange, include property taxes, grants, entitlements, and donations. On the accrual basis, revenue
+from property taxes is recognized in the fiscal year for which the taxes are levied. Revenue from
+grants, entitlements, and donations is recognized in the fiscal year in which all eligibility requirements
+have been satisfied.
+
+(27)
+
+TOWN OF COLCHESTER, VERMONT
+NOTES TO THE FINANCIAL STATEMENTS
+JUNE 30, 2011
+
+Governmental funds are reported using the modified accrual basis of accounting. Under this method,
+revenues are recognized when measurable and available. “Measurable” means the amount of the
+transaction can be determined, and “available” means the amount is collectible within the current
+period or soon enough thereafter to be used to pay liabilities of the current period. The Town
+considers all revenues reported in governmental funds to be available if the revenues are collected
+within sixty days after year-end. Expenditures are recorded when the related fund liability is incurred,
+except for principal and interest on general long-term debt, certain compensated absences and other
+long-term liabilities which are recognized when the obligations are expected to be liquidated or are
+funded with expendable available financial resources.
+General capital asset acquisitions are reported as expenditures in governmental funds. Proceeds of
+general long-term debt and acquisitions under capital leases are reported as other financing sources.
+Under the terms of grant agreements, the Town funds certain programs by a combination of specific
+cost-reimbursement grants and general revenues. Thus, when program expenses are incurred, there
+are both restricted and unrestricted net assets available to finance the program. It is the Town’s policy
+to first apply cost-reimbursement grant resources to such programs, followed by general revenues.
+Expenditure driven grants are recognized as revenue when the qualifying expenditures have been
+incurred and other grant requirements have been met.
+The government-wide and proprietary fund financial statements follow Financial Accounting
+Standards Board (FASB) Statements and Interpretations issued on or before November 30, 1989;
+Accounting Principles Board (APB) Opinions; and Accounting Research Bulletins, unless those
+pronouncements conflict with GASB pronouncements.
+As permitted under Statement of
+Governmental Accounting Standards No. 20, the Town has elected not to apply FASB Statements and
+Interpretations issued after November 30, 1989.
+1E. Use of Estimates
+The presentation of financial statements in conformity with generally accepted accounting principles
+requires management to make estimates and assumptions that affect the reported amounts of assets
+and liabilities and disclosure of contingent assets and liabilities at the date of the financial statements
+and the reported amounts of revenues and expenses during the reporting period. Actual results could
+differ from those estimates.
+1F. Assets, Liabilities and Equity
+1F a. Cash
+Cash balances of most Town funds are deposited with and invested by the Town Treasurer. The Town
+considers all short-term investments of ninety (90) days or less to be cash equivalents.
+
+(28)
+
+TOWN OF COLCHESTER, VERMONT
+NOTES TO THE FINANCIAL STATEMENTS
+JUNE 30, 2011
+
+1F b. Investments
+The Town invests in investments as allowed by State Statute. Investments with readily determinable
+fair values are reported at their fair values on the financial statements. Unrealized gains and losses are
+included in revenue.
+1F c. Receivables
+Receivables are shown net of an allowance for uncollectible accounts for the estimated losses that will
+be incurred in the collection of the receivables. The estimated losses are based on the judgment of
+management and a review of the current status of existing receivables.
+1F d. Internal Balances
+Activity between funds that are representative of lending/borrowing arrangements outstanding at the
+end of the fiscal year are referred to as either “due to/from other funds” (i.e., the current portion of
+interfund loans) or “advances to/from other funds” (i.e., the non-current portion of interfund loans).
+All other outstanding balances between funds are reported as “due to/from other funds”. Any residual
+balances outstanding between the governmental activities and business-type activities are reported in
+the government-wide financial statements as “internal balances”.
+1F e. Inventories and Prepaid Expenses
+Inventory quantities are determined by physical count and are valued at the lower of cost or market.
+Inventories in the Governmental Funds consist of vehicle fuel, sand, salt and gravel.
+Certain payments to vendors reflect costs that are applicable to future accounting periods and are
+recorded as prepaid expenses.
+Reported inventories and prepaid expenses of governmental funds in the fund financial statements are
+offset by a nonspendable fund balance as these are not in spendable form.
+1F f. Capital Assets
+Capital assets are reported at actual cost or estimated historical cost based on appraisals or deflated
+current replacement cost if purchased or constructed. Contributed assets are recorded at their
+estimated fair value at the time received. Major outlays for capital assets and improvements are
+capitalized as constructed. Interest incurred during the construction phase for proprietary fund capital
+assets is reflected in the capitalized value of the asset constructed, net of any interest earned on the
+invested proceeds during the same period. Interest is not capitalized during the construction phase of
+capital assets used in governmental activities. The cost of normal maintenance and repairs that do not
+add to the value of the asset or materially extend the assets’ lives are not capitalized. Infrastructure
+assets are reported starting with the fiscal year ended June 30, 2004. The Town has elected to not
+report major general infrastructure assets retroactively.
+
+(29)
+
+TOWN OF COLCHESTER, VERMONT
+NOTES TO THE FINANCIAL STATEMENTS
+JUNE 30, 2011
+
+Depreciable capital assets reported in the government-wide and proprietary fund financial statements
+are depreciated in order that the cost of these assets will be charged to expenses over their estimated
+service lives, generally using the straight-line method of calculating depreciation.
+Capitalization thresholds (the dollar values above which asset acquisitions are added to the capital
+asset accounts) and estimated useful lives of capital assets are as follows:
+
+Land
+Land Improvements
+Buildings and Building Improvements
+Vehicles
+Infrastructure
+Equipment
+Furniture
+Wastewater Plant and Equipment
+
+Capitalization
+Threshold
+
+Estimated
+Service Life
+
+10,000
+10,000
+10,000
+5,000
+10,000
+5,000
+5,000
+10,000
+
+N/A
+30-50 Years
+25-125 Years
+7-30 Years
+5-50 Years
+4-10 Years
+5-10 Years
+10-50 Years
+
+$
+$
+$
+$
+$
+$
+$
+$
+
+The Town does not capitalize its Library books because the books are considered a collection.
+Capital assets are not reported in the governmental fund financial statements. Capital outlays in these
+funds are recorded as expenditures in the year they are incurred.
+1F g. Compensated Absences
+It is the policy of the Town of Colchester to permit employees to accumulate earned but unused
+vacation benefits up to two-hundred eighty (280) hours for most Town employees except up to two
+hundred forty (240) hours for police officers. Town employees can accumulate unused sick benefits.
+Members of the Police union are not entitled to a payout of sick benefits upon separation from service.
+Prior to 2004, the AFSCME union members and non-union members were allowed to accumulate up
+to one-thousand twenty-four (1024) hours of sick time. The maximum amount allowed to accumulate
+was limited to four-hundred eighty hours (480) for non-union members as of July 1, 2003 and new
+AFSCME union members as of February 1, 2004. Employees hired prior to 2004 that had
+accumulated more than these hours were allowed to put the additional hours in a sick bank. These
+hours can be used, but only after the four-hundred eighty hours (480) have been used, and then only at
+the discretion of the Town Manager. The Town is liable for up to one-third of unused sick benefits
+upon termination prior to reaching age 62 or up to one-half after reaching age 62. The accrual for
+unused compensated absences, based on current pay rates, is recorded in the government-wide and
+proprietary fund financial statements. The liability for unused compensated absences is not reported
+in the governmental fund financial statements. Payments for unused compensated absences are
+recorded as expenditures in the year they are paid.
+
+(30)
+
+TOWN OF COLCHESTER, VERMONT
+NOTES TO THE FINANCIAL STATEMENTS
+JUNE 30, 2011
+
+1F h. Long-term Liabilities
+Long-term liabilities include bonds payable, capital leases and other obligations such as compensated
+absences and Community Development loans due to the State. Long-term liabilities are reported in
+the government-wide and proprietary fund financial statements. Governmental fund financial
+statements do not include any long-term liabilities as those statements use the current financial
+resources measurement focus and only include current assets and liabilities on their balance sheets.
+1F i. Fund Equity
+Fund Balances are classified based upon any restrictions that have been placed on those balances or
+any tentative plans management may have made for those balances.
+Net assets of governmental funds are classified as nonspendable (not in spendable form or legally
+required to remain intact); restricted (constraints on the use of resources are either externally imposed
+by creditors, grantors, or donors, or imposed by law through enabling legislation); committed
+(constraints on the use of resources are imposed by formal action of the voters; assigned (reflecting the
+Board of Selectmen’s intended use of the resources); and unassigned.
+2.
+
+EXPLANATION OF DIFFERENCES BETWEEN GOVERNMENTAL FUND
+AND GOVERNMENT-WIDE STATEMENTS
+
+Governmental Fund financial statements are presented using the current financial resources
+measurement focus and the modified accrual basis of accounting, while government-wide financial
+statements are presented using the economic resources measurement focus and the accrual basis of
+accounting. These differences in the measurement focus and basis of accounting lead to differences
+between the governmental fund financial statements and the government-wide financial statements as
+follows:
+Long-term revenue differences arise because governmental funds report revenues only when they are
+considered “available”, whereas government-wide statements report revenues when they are earned.
+Long-term expense differences arise because governmental funds report expenditures (including
+interest) using the modified accrual basis of accounting, whereas government-wide statements report
+expenses using the accrual basis of accounting.
+Capital-related differences arise because governmental funds report capital outlays as current period
+expenditures, whereas government-wide statements report depreciation as an expense. Further,
+governmental funds report the proceeds from the sale of capital assets as another financing source,
+whereas government-wide statements report the gain or loss from the sale of capital assets as revenue
+or expense.
+Long-term debt transaction differences arise because governmental funds report bond proceeds as
+other financing sources and principal payments as expenditures, whereas government-wide statements
+report those transactions as increases and decreases in liabilities, respectively.
+
+(31)
+
+TOWN OF COLCHESTER, VERMONT
+NOTES TO THE FINANCIAL STATEMENTS
+JUNE 30, 2011
+
+2A. Governmental Funds Balance Sheet and the Statement of Net Assets
+The differences between the governmental funds balance sheet and government-wide statement of net
+assets are as follows:
+Balance
+Sheet
+
+Long-term
+Revenues/
+Expenses
+
+Capital
+Related
+Items
+
+Long-term
+Debt
+Transactions
+
+Elimination
+of Interfund
+Balances
+
+Statement of
+Net Assets
+
+ASSETS
+Cash
+Investments
+Receivables
+Notes Receivable
+Due From Other Funds
+Prepaid Expenses
+Inventories
+Capital Assets
+
+$
+
+Total Assets
+
+5,991,441 $
+2,018,883
+1,146,396
+231,250
+1,245,604
+4,123
+38,299
+0
+
+0 $
+0
+0
+0
+0
+0
+0
+0
+
+0 $
+0
+0
+0
+0
+0
+0
+25,405,562
+
+0 $
+0
+0
+0
+0
+0
+0
+0
+
+0 $
+0
+0
+0
+(1,691,378)
+0
+0
+0
+
+5,991,441
+2,018,883
+1,146,396
+231,250
+(445,774)
+4,123
+38,299
+25,405,562
+
+10,675,996
+
+0
+
+25,405,562
+
+0
+
+(1,691,378)
+
+34,390,180
+
+LIABILITIES
+Accounts Payable
+Accrued Payroll and
+Benefits Payable
+Due to Other Funds
+Deferred Revenue
+Due to Others
+Accrued Interest Payable
+Noncurrent Liabilities
+
+755,066
+
+0
+
+0
+
+0
+
+0
+
+755,066
+
+251,163
+1,691,378
+1,194,859
+299,589
+0
+0
+
+0
+0
+(1,090,152)
+0
+22,866
+690,695
+
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+6,842,065
+
+0
+(1,691,378)
+0
+0
+0
+0
+
+251,163
+0
+104,707
+299,589
+22,866
+7,532,760
+
+Total Liabilities
+
+4,192,055
+
+(376,591)
+
+0
+
+6,842,065
+
+(1,691,378)
+
+8,966,151
+
+NET ASSETS
+Invested in Capital Assets
+Other
+
+0
+6,483,941
+
+0
+376,591
+
+25,405,562
+0
+
+(4,660,806)
+(2,181,259)
+
+0
+0
+
+20,744,756
+4,679,273
+
+6,483,941 $
+
+376,591 $
+
+25,405,562 $
+
+(6,842,065) $
+
+0 $
+
+25,424,029
+
+Total Net Assets
+
+$
+
+(32)
+
+TOWN OF COLCHESTER, VERMONT
+NOTES TO THE FINANCIAL STATEMENTS
+JUNE 30, 2011
+
+2B. Governmental Funds Statement of Revenues, Expenditures and Changes in Fund Balances
+and the Statement of Activities
+The differences between the governmental funds statement of revenues, expenditures and changes in
+fund balances and government-wide statement of activities are as follows:
+Statement of
+Revenue,
+Expenditures
+and Changes in
+Fund Balances
+REVENUES
+Property Taxes
+Penalties and Interest
+Payment In Lieu of Taxes
+Intergovernmental
+Revenues
+Impact Fees
+Contributions and
+Donations
+Charges for Services
+Investment Income
+Licenses and Permits
+Loan Repayments
+Other Revenues
+Operating Grants &
+Contributions
+Capital Grants &
+Contributions
+Proceeds/Gain on Sale
+of Equipment
+Transfers from Other
+Funds
+
+$
+
+Total Revenues
+EXPENDITURES
+General Government
+Public Safety
+Public Works
+Community Development
+Culture and Recreation
+Capital
+Debt Service:
+Principal
+Interest
+Transfers to Other Funds
+Total Expenditures
+Net Change for the Year
+
+$
+
+Long-term
+Revenues/
+Expenses
+
+Capital
+Related
+Items
+
+Long-term
+Debt
+Transactions
+
+Reclassifications
+and Elimination
+of Interfund
+Activity
+
+10,304,418 $
+140,504
+236,176
+
+62,851 $
+0
+0
+
+0 $
+0
+0
+
+0 $
+0
+0
+
+1,194,310
+18,375
+
+451,625
+0
+
+0
+0
+
+0
+0
+
+(1,645,935)
+(18,375)
+
+0
+0
+
+94,609
+767,884
+114,210
+219,064
+6,719
+56,752
+
+0
+21,747
+0
+0
+(6,719)
+0
+
+79,620
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+
+(174,229)
+316,167
+
+(18,296)
+
+0
+1,105,798
+114,210
+0
+0
+38,456
+
+0
+
+0
+
+0
+
+0
+
+725,088
+
+725,088
+
+0
+
+0
+
+0
+
+0
+
+919,232
+
+919,232
+
+4,380
+
+0
+
+0
+
+0
+
+0
+
+4,380
+
+378,261
+
+0
+
+0
+
+0
+
+(378,261)
+
+0
+
+13,535,662
+
+529,504
+
+79,620
+
+0
+
+(493,673)
+
+13,651,113
+
+2,454,854
+4,515,939
+2,440,062
+241,522
+1,228,864
+2,194,018
+
+14,752
+31,258
+19,607
+(51,646)
+7,295
+0
+
+109,544
+173,247
+619,271
+0
+155,023
+(2,194,018)
+
+0
+0
+0
+0
+0
+0
+
+(18,250)
+0
+(91,000)
+(6,162)
+0
+0
+
+2,560,900
+4,720,444
+2,987,940
+183,714
+1,391,182
+0
+
+435,431
+278,485
+379,517
+
+0
+(600)
+0
+
+0
+0
+0
+
+(435,431)
+0
+0
+
+0
+0
+(378,261)
+
+0
+277,885
+1,256
+
+14,168,692
+
+20,666
+
+(1,136,933)
+
+(435,431)
+
+(493,673)
+
+12,123,321
+
+508,838 $
+
+1,216,553 $
+
+435,431 $
+
+(633,030) $
+
+(33)
+
+0 $
+0
+0
+
+Statement of
+Activities
+
+(219,064)
+
+0 $
+
+10,367,269
+140,504
+236,176
+
+1,527,792
+
+TOWN OF COLCHESTER, VERMONT
+NOTES TO THE FINANCIAL STATEMENTS
+JUNE 30, 2011
+
+3. STEWARDSHIP, COMPLIANCE AND ACCOUNTABILITY
+3A. Budgetary Information
+Budgets are approved at the annual Town Meeting in March. Budget changes within a department,
+which do not change the total expenditures, require approval of the Town Manager. Budget changes
+between departments, which do not change the total expenditures, require Selectboard approval.
+Voter approval is required before expenditures exceed 102% of the voter approved budget.
+3B. Budgeted Deficit
+The Town budgeted a current year’s deficit of $341,600 in the General Fund in order to utilize a
+portion of previous years surplus. This amount is reflected as a budgeted deficiency of revenue over
+expenditures in Exhibit F.
+3C. Reclassification/Restatement of Fund Balances and Net Assets
+The Town adopted the provisions of Governmental Accounting Standards Board (GASB) Statement
+No. 54, “Fund Balance Reporting and Governmental Fund Type Definitions”. As a result of adopting
+this standard, one (1) fund previously reported as a Special Revenue Fund no longer qualified under
+the new definition, and therefore, is now reported in another fund type. The reclassification is as
+follows:
+
+Fund Balance/Net Assets – June 30, 2010 –
+As Originally Reported
+
+Other
+Governmental
+Funds
+
+Other
+Enterprise
+Funds
+
+$ 614,355
+
+$
+
+(218,307)
+
+218,307
+
+0
+
+(11,654)
+
+$ 396,048
+
+$ 206,653
+
+Reclassification:
+Recreation Program Fund
+Restatement:
+Accrual of Recreation Program
+Fund Compensated Absences
+Due to a Change in Accounting Principle
+Fund Balance/Net Assets – June 30, 2010 –
+As Reclassified/Restated
+
+0
+
+As a result of reclassifying the Recreation Program Fund from a Special Revenue Fund to an
+Enterprise Fund, the beginning net assets for the Governmental Activities was decreased by $206,653
+from $24,102,890 to $23,896,237 and the beginning net assets for the business-type activities was
+increased by $206,653 from $6,180,892 to $6,387,545.
+
+(34)
+
+TOWN OF COLCHESTER, VERMONT
+NOTES TO THE FINANCIAL STATEMENTS
+JUNE 30, 2011
+
+4. DETAILED NOTES ON ALL FUNDS
+4A. Cash and Investments
+Cash and Investments at June 30, 2011 consisted of the following:
+
+Demand Deposits with Financial Institutions
+Cash on Hand
+Total Cash
+
+$
+
+8,952,345
+6,589
+8,958,934
+
+Certificates of Deposit
+U.S. Treasury Strips
+Corporate Bonds
+Mutual Funds - Equities
+Stocks
+
+1,902,023
+296,217
+30,667
+78,129
+8,064
+
+Total Investments
+
+2,315,100
+
+Total Cash and Investments
+
+$ 11,274,034
+
+There are five (5) certificates of deposit ranging from $35,185 to $1,000,000 with maturity dates all
+within the next year. The interest rates range from .54% to 3.39%.
+The investment policy of the Town, excluding funds under the control of the Cemetery
+Commissioners, is to ensure safety, liquidity and yield, in that order of priority. The Treasurer may
+invest in certificates of deposit, repurchase agreements and bank money market accounts. Investments
+in other instruments require prior approval of the Selectboard. The policy also indicates that all
+holdings are to be insured or collateralized. The Selectboard has approved the Town’s holdings.
+Custodial Credit Risk
+Custodial credit risk for deposits is the risk that, in the event of the failure of a depository financial
+institution, a government will not be able to recover its deposits or will not be able to recover
+collateral securities that are in the possession of an outside party. The custodial credit risk for
+investments is the risk that, in the event of failure of the county-party (e.g. broker-dealer) to a
+transaction, a government will not be able to recover the value of its investments or collateral
+securities that are in possession of another party. The Town does not have any policy to limit its
+exposure to custodial credit risk. The mutual funds, stocks, corporate bonds and U.S. Treasury Strips
+are not exposed to custodial credit risk because they are in the name of the Town. The table below
+shows the custodial credit risk of the Town’s deposits and certificates of deposit.
+
+(35)
+
+TOWN OF COLCHESTER, VERMONT
+NOTES TO THE FINANCIAL STATEMENTS
+JUNE 30, 2011
+
+Book
+Balance
+Insured - FDIC/SIPC
+Uninsured, Collateralized by U.S. Government
+Securities and/or General Obligation Vermont
+Municipal Notes and Bonds Held by the Bank's
+Trust Department with a Security Interest granted to
+the Town or Irrevocable Standby Letter of Credit
+Uninsured, Uncollateralized
+
+$
+
+Bank
+Balance
+
+727,640
+
+$
+
+878,101
+
+10,117,951
+8,777
+
+10,456,534
+8,777
+
+$ 10,854,368
+
+$ 11,343,412
+
+The difference between the book balance and the bank balance is due to reconciling items such as
+deposits in transit and outstanding checks.
+Deposits are comprised of the following:
+Demand Deposits with Financial Institutions
+Certificates of Deposit
+
+$ 8,952,345
+1,902,023
+$10,854,368
+
+Interest Rate Risk
+Interest rate risk is the risk that changes in market interest rates will adversely affect the fair value of
+an investment. Generally, the longer the maturity of an investment, the greater the sensitivity of its
+fair value to changes in market interest rates. The Town’s certificates of deposit are not subject to
+interest rate risk disclosure. The Town’s policy does not limit it’s exposure to interest rate risk.
+Information about the sensitivity of the fair values of the Town’s investments to market interest rate
+fluctuations is provided by the following table that shows the distribution of the Town’s investments
+by maturity. Mutual funds are shown at their weighted average maturity (if available) and the U.S.
+Treasury Strips and corporate bonds are shown at their actual maturity.
+
+Investment Type
+Mutual Funds
+U.S. Treasury Strips
+Corporate Bonds
+Total
+
+Less Than
+1 Year
+$
+0
+35,988
+0
+
+$
+
+$
+
+$
+
+35,988
+
+Remaining Maturity
+1 to 5
+5 to 10
+Years
+Years
+0 $
+0
+139,679
+120,550
+0
+30,667
+
+Not
+Available
+$ 78,129 $
+0
+0
+
+Total
+78,129
+296,217
+30,667
+
+139,679
+
+$
+
+405,013
+
+(36)
+
+$
+
+151,217
+
+78,129 $
+
+TOWN OF COLCHESTER, VERMONT
+NOTES TO THE FINANCIAL STATEMENTS
+JUNE 30, 2011
+Credit Risk
+Generally, credit risk is the risk that an issuer of an investment will not fulfill its obligation to the
+holder of the investment. This is measured by the assignment of a rating by a nationally recognized
+statistical rating organization. The U.S. Treasury Strips are exempt from this analysis. The mutual
+funds are open-ended and are therefore excluded from the credit risk analysis.
+Standard and Poor’s Rating
+As of June 30, 2011 –
+Corporate Bonds
+AA+
+A-
+
+$10,937
+19,730
+
+Total
+
+$30,667
+
+Concentration of Credit Risk
+Concentration of credit risk is the risk that a large percentage of the Town’s investments are held
+within one security. The Town does not have any limitations on the amount that can be invested in
+any one issuer. The Town has $9,528, (31%), of their corporate bonds invested in Goldman Sachs
+Group, Inc., $10,937, (36%), of their corporate bonds invested in General Electric Capital
+Corporation, and $10,202, (33%), of their corporate bonds invested in Bank of America Corporation.
+4B. Receivables
+Receivables at June 30, 2011, as reported in the statement of net assets, net of applicable allowances
+for uncollectible accounts, are as follows:
+Governmental
+Activities
+Delinquent Taxes
+$
+298,503 $
+Penalties and Interest
+48,323
+Ambulance Receivables
+91,168
+Accounts Receivable
+43,078
+Due from Other Governments
+700,324
+Billed Services
+0
+Unbilled Services
+0
+Special Assessments - Current Portion *
+0
+Grant Reimbursement
+0
+Special Assessments - Long-Term
+Portion *
+0
+Allowance for Doubtful Accounts
+(35,000)
+$
+1,146,396 $
+
+*
+
+Business-Type
+Activities
+0 $
+0
+0
+0
+0
+10,328
+283,274
+145,000
+443,851
+
+Total
+298,503
+48,323
+91,168
+43,078
+700,324
+10,328
+283,274
+145,000
+443,851
+
+1,800,000
+0
+2,682,453 $
+
+1,800,000
+(35,000)
+3,828,849
+
+The special assessments receivable represents money that will be received by the Town from
+sewer customers to pay specific sewer bonds described in Note 4G.
+(37)
+
+TOWN OF COLCHESTER, VERMONT
+NOTES TO THE FINANCIAL STATEMENTS
+JUNE 30, 2011
+
+4C. Notes Receivable
+Notes Receivable are as follows:
+Note Receivable - Holy Cross Senior Housing Partnership,
+Principal and Interest Payments Deferred until October, 2017,
+Interest at 1%, Monthly Principal and Interest Payments of
+$1,380 due thereafter until October 31, 2037
+
+$ 300,000
+
+Note Receivable - Champlain Housing Trust Corporation,
+0% Interest, Principal Balloon Payment due August 30, 2021,
+Collateralized by 3rd Mortgage on Land and Premises at
+1302 Ethan Allen Drive
+
+190,000
+
+Note Receivable - Champlain Housing Trust Corporation, 0%
+Interest, Deferred Until August, 2036
+
+65,778
+
+Note Receivable – Brookside Partnership, Principal and
+Interest Payments Deferred until January 2039, Interest
+at 4.46%
+
+240,000
+
+Notes Receivable – Nineteen Loans to Residents for On-Site
+Sewage Disposal Systems and Potable Water Service,
+Interest at 3%, Principal and Interest Due Monthly Over
+Twenty (20) Years, Secured by Liens on Properties,
+Repayment of the Income from the Loans will be
+Used to Pay the Related Septic Improvement
+Loan Program Bonds Described in Note 4G
+
+231,250
+
+Total Notes Receivable
+
+1,027,028
+
+Plus: Accrued Interest on Notes Receivable
+
+19,531
+
+Less: Discount on Notes Receivable at Three (3) to
+Five (5) Percent
+
+(246,091)
+
+Less: Allowance for Doubtful Notes and
+Accrued Interest Receivable
+
+(569,218)
+
+Net Notes Receivable
+
+$ 231,250
+
+(38)
+
+TOWN OF COLCHESTER, VERMONT
+NOTES TO THE FINANCIAL STATEMENTS
+JUNE 30, 2011
+4D. Capital Assets
+Capital asset activity for the year ended June 30, 2011 was as follows:
+
+Beginning
+Balance
+Governmental Activities
+Capital Assets, Not Being Depreciated:
+Land
+Construction in Progress
+Total Capital Assets, Not Being Depreciated
+Capital Assets, Being Depreciated:
+Land Improvements
+Buildings and Building Improvements
+Equipment and Furniture
+Vehicles
+Infrastructure
+Totals
+Less Accumulated Depreciation for:
+Land Improvements
+Buildings and Building Improvements
+Equipment and Furniture
+Vehicles
+Infrastructure
+Totals
+Total Capital Assets, Being Depreciated
+Governmental Activities Capital Assets, Net
+
+Business-Type Activities
+Capital Assets, Not Being Depreciated:
+Land
+Total Capital Assets, Not Being Depreciated
+
+$
+
+$
+
+$
+
+Decreases
+
+Ending
+Balance
+
+2,104,936 $
+1,046,464
+3,151,400
+
+0 $
+1,533,309
+1,533,309
+
+0 $
+309,880
+309,880
+
+2,104,936
+2,269,893
+4,374,829
+
+1,303,835
+6,958,405
+1,351,487
+3,255,490
+13,441,110
+26,310,327
+
+0
+44,054
+207,531
+320,648
+515,567
+1,087,800
+
+0
+0
+29,185
+208,040
+0
+237,225
+
+1,303,835
+7,002,459
+1,529,833
+3,368,098
+13,956,677
+27,160,902
+
+548,381
+1,340,795
+663,358
+1,272,001
+1,448,183
+5,272,718
+21,037,609
+24,189,009 $
+
+34,172
+131,136
+125,644
+266,964
+458,944
+1,016,860
+70,940
+1,604,249 $
+
+0
+0
+12,837
+146,572
+0
+159,409
+77,816
+387,696 $
+
+582,553
+1,471,931
+776,165
+1,392,393
+1,907,127
+6,130,169
+21,030,733
+25,405,562
+
+Beginning
+Balance
+
+Increases
+
+132,568 $
+132,568
+
+Capital Assets, Being Depreciated:
+Plant and Equipment
+10 Years
+25 Years
+30 Years
+40 Years
+50 Years
+Totals
+
+7,807
+1,159,789
+18,075
+323,679
+4,688,203
+6,197,553
+
+Less Accumulated Depreciation for:
+Plant and Equipment
+Totals
+Total Capital Assets, Being Depreciated
+Business-Type Activities Capital Assets, Net
+
+2,718,326
+2,718,326
+3,479,227
+3,611,795 $
+
+$
+
+Increases
+
+(39)
+
+Decreases
+
+Ending
+Balance
+
+0 $
+0
+
+0 $
+0
+
+132,568
+132,568
+
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+
+7,807
+1,159,789
+18,075
+323,679
+4,688,203
+6,197,553
+
+0
+0
+0
+0 $
+
+2,868,298
+2,868,298
+3,329,255
+3,461,823
+
+149,972
+149,972
+(149,972)
+(149,972) $
+
+TOWN OF COLCHESTER, VERMONT
+NOTES TO THE FINANCIAL STATEMENTS
+JUNE 30, 2011
+
+Depreciation was charged as follows:
+
+Governmental Activities:
+General Government
+Public Works
+Public Safety
+Culture & Recreation
+
+$
+
+109,544
+579,046
+173,247
+155,023
+
+Business - Type Activities:
+Wastewater
+
+Total Depreciation Expense Business-Type Activities
+$ 149,972
+
+Total Depreciation Expense Governmental Activities
+$ 1,016,860
+
+4E. Interfund Balances and Transfers
+The composition of interfund balances at June 30, 2011, is as follows:
+
+Fund
+
+Due from
+Other Funds
+
+Due to
+Other Funds
+
+General Fund
+Capital Projects Fund
+Reserve Fund
+Grant Fund
+Other Governmental Funds
+Wastewater Fund
+Recreation Program Fund
+
+$
+
+0
+724,187
+452,903
+55,433
+13,081
+68,491
+377,283
+
+$ 1,576,875
+0
+0
+0
+114,503
+0
+0
+
+Total
+
+$
+
+1,691,378
+
+$ 1,691,378
+
+(40)
+
+$ 149,972
+
+TOWN OF COLCHESTER, VERMONT
+NOTES TO THE FINANCIAL STATEMENTS
+JUNE 30, 2011
+Interfund transfers during the year ended June 30, 2011 were as follows:
+
+Transfer From
+
+Transfer To
+$
+
+Amount
+
+Purpose
+
+150,000
+
+Repairs to Park
+Infrastructure
+
+General Fund
+
+Capital Projects Fund
+
+General Fund
+
+Capital Projects Fund
+
+15,000
+
+Replace Siding on
+Senior Center
+
+General Fund
+
+Reserve Fund
+
+54,000
+
+General Fund
+
+Reserve Fund
+
+4,000
+
+General Fund
+
+Reserve Fund
+
+4,000
+
+To Fund Reappraisal
+Reserve
+Transfer for Police
+Radios
+Painting and
+Landscaping to Library
+
+General Fund
+
+Reserve Fund
+
+10,300
+
+General Fund
+
+Reserve Fund
+
+7,200
+
+General Fund
+
+Reserve Fund
+
+14,000
+
+General Fund
+
+Reserve Fund
+
+16,088
+
+General Fund
+
+Recreation Program Fund
+
+32,066
+
+General Fund
+
+Heritage Project Fund
+
+6,000
+
+Transfer for Marine
+Safety Grant
+Senior Center
+Renovations
+Subsidize Project
+
+General Fund
+
+Recreation Acquisition and Development Fund
+
+4,000
+
+Budgeted Transfer
+
+Recreation Program Fund
+
+Capital Projects Fund
+
+30,810
+
+Capital Equipment Fund
+
+Reserve Fund
+
+62,863
+
+Subsidize Senior Center
+Project
+Reallocate Reserve
+Balance
+
+Total
+
+$
+
+Rescue Capital
+Equipment funding
+Tech Rescue Equipment
+Funding
+Transfer to Complete
+Tech Rescue Garage
+
+410,327
+
+4F. Deferred Revenue
+Deferred Revenue in the General Fund consists of $266,547 of delinquent taxes, penalty and interest
+on taxes and $31,099 of ambulance receivables that were not collected within sixty (60) days after
+year-end as these would not be available to liquidate current liabilities. It also includes $11,856 of
+prepaid taxes and $7,484 of other prepaid fees. Total deferred revenue in the General Fund is
+$316,986.
+Deferred Revenue in the Capital Projects Fund consist of $538,500 of grant receivables not collected
+within sixty (60) days after year-end as these would not be available to liquidate current liabilities.
+Deferred Revenue in the Grant Fund consist of $22,756 of grant receivables not collected within sixty
+(60) days after year-end as these would not be available to liquidate current liabilities and $85,367 of
+grant monies advanced to the Town for various purposes that was not spent as of June 30, 2011. Total
+deferred revenue in the Grant Fund is $108,123.
+(41)
+
+TOWN OF COLCHESTER, VERMONT
+NOTES TO THE FINANCIAL STATEMENTS
+JUNE 30, 2011
+
+Deferred Revenue in the Other Governmental Funds consists of $231,250 of loans receivable not
+collected within sixty (60) days after year-end as these would not be available to liquidate current
+liabilities.
+Deferred Revenue in the Recreation Program Fund consists of $111,951 of recreation fees received in
+advance. This revenue will be earned when the recreation programs are provided.
+4G. Long-term Liabilities
+The Town issues general obligation bonds to provide resources for the acquisition and construction of
+major capital facilities and to refund prior issues. General obligation bonds have been issued for both
+general governmental and proprietary activities. Bonds are reported in governmental activities if the
+debt is expected to be repaid from general governmental revenues and in business-type activities if the
+debt is expected to be repaid from proprietary fund revenues.
+General obligation bonds are direct obligations and pledge the full faith and credit of the Town . New
+bonds generally are issued as 10 to 20 year bonds. Refunding bonds are issued for various terms
+based on the debt service of the debt refunded.
+The State of Vermont offers a number of no-interest revolving loan programs to utilize for
+predetermined purposes. The Town has borrowed money from the Vermont Special Environmental
+Revolving Fund for sewer projects, public works projects, and to fund a septic system improvement
+loan program.
+Long-Term liabilities outstanding as of June 30, 2011 were as follows:
+Beginning
+Balance
+July 1, 2010
+
+Additions
+
+Deletions
+
+Ending
+Balance
+June 30, 2011
+
+$
+
+0
+
+$ 10,778
+
+$ 21,552
+
+0
+
+49,642
+
+645,339
+
+Governmental Activities
+Bond Payable - State of Vermont
+Special Environmental Revolving
+Loan Fund, Malletts Bay Sewer
+Study, 0% Interest, Principal Payments
+of $10,778 Due Annually from April 1,
+2004 through April 1, 2013
+$
+
+32,330
+
+Bond Payable - State of Vermont
+Special Environmental Revolving Loan
+Fund, Belwood Drainage Project,
+0% Interest, Principal Payments of $49,642
+Due Annually from October 1, 2004
+through December 1, 2023
+694,981
+
+(42)
+
+TOWN OF COLCHESTER, VERMONT
+NOTES TO THE FINANCIAL STATEMENTS
+JUNE 30, 2011
+
+Beginning
+Balance
+July 1, 2010
+
+Additions
+
+Deletions
+
+Ending
+Balance
+June 30, 2011
+
+$ 131,107
+
+$
+
+0
+
+$ 6,551
+
+$ 124,556
+
+Bond Payable - State of Vermont
+Special Environmental Revolving
+Loan Fund, Septic System
+Improvement Loan Program, Authorized
+To $150,000, $69,204 Remaining, Interest
+at 2%, Annual Principal and Interest
+Payments of $4,941 Due each
+April through 2028
+74,078
+
+0
+
+3,460
+
+70,618
+
+Bond Payable – Vermont Municipal
+Bond Bank, Municipal Building,
+Principal Payments of $310,000 Due on
+December 1 Through 2027, Various
+Interest Rates Ranging from 3.865% to
+4.665%, Interest Paid Semi- Annually
+on June 1 and December 1
+5,520,000
+
+0
+
+310,000
+
+5,210,000
+
+Bond Payable – Vermont Municipal
+Bond Bank, Bayside Property Purchase,
+Principal Payments of $55,000 Due on
+December 1 Through 2024, Various
+Interest Rates Ranging from 1.87%
+to 5.09%, Interest Paid Semi-Annually
+on June 1 and December 1
+825,000
+
+0
+
+55,000
+
+770,000
+
+0
+
+$ 435,431
+
+$6,842,065
+
+Bond Payable - State of Vermont
+Special Environmental Revolving
+Loan Fund, Septic System
+Improvement Loan Program,
+Interest at 2%, Annual Principal
+and Interest Payments of $9,174
+Due each April through 2027
+
+Total Notes and Bonds Payable Governmental Activities
+
+$7,277,496
+
+(43)
+
+$
+
+TOWN OF COLCHESTER, VERMONT
+NOTES TO THE FINANCIAL STATEMENTS
+JUNE 30, 2011
+
+Beginning
+Balance
+July 1, 2010
+
+Additions
+
+Deletions
+
+Ending
+Balance
+June 30, 2011
+
+$
+
+0
+
+$ 80,000
+
+$1,160,000
+
+Business-Type Activities
+Bond Payable - Vermont Municipal
+Bond Bank, Sewer System Expansion,
+Annual Principal Payments Ranging
+from $60,000 to $155,000 on
+December 1 through 2020, Various
+Interest Rates Ranging from 6.9%
+to 7.0%, Interest Paid Semi-Annually
+on June 1 and December 1
+$1,240,000
+Bond Payable - Vermont Municipal
+Bond Bank, Sewer System Expansion,
+Principal Payments Ranging from
+$35,000 to $90,000 on December 1
+through 2021, Various Interest Rates
+Ranging from 6.875% to 7.0%,
+Interest Paid Semi- Annually on
+June 1 and December 1
+
+770,000
+
+0
+
+45,000
+
+725,000
+
+Bond Payable - Vermont Municipal
+Bond Bank, Sewer System Expansion,
+Principal Payments Ranging from
+$10,000 to $15,000 Due Annually on
+December 1 through 2014, Various
+Interest Rates Ranging from 5.53% to
+6.2%, Interest Paid Semi-Annually on
+June 1 and December 1
+
+75,000
+
+0
+
+15,000
+
+60,000
+
+Bond Payable - State of Vermont
+Special Environmental Revolving
+Loan Fund, Sewer System - Breezy
+Acres Trailer Park, 0% Interest,
+$79,048 Principal Payments Due
+Annually in July until 2019
+
+711,432
+
+0
+
+79,048
+
+632,384
+
+Total Business-Type Activities
+
+$2,796,432
+
+0
+
+$219,048
+
+$2,577,384
+
+(44)
+
+$
+
+TOWN OF COLCHESTER, VERMONT
+NOTES TO THE FINANCIAL STATEMENTS
+JUNE 30, 2011
+
+Changes in all long-term liabilities during the year were as follows:
+Beginning
+Balance
+Governmental Activities
+General Obligation Bonds
+Compensated Absences
+Due to State
+Total Governmental Activities
+Long-term Liabilities
+Business-type Activities
+Special Assessment Debt with
+Governmental Commitment
+General Obligation Bonds Payable
+Compensated Absences
+Total Business-type Activities
+Long-Term Liabilities
+
+*
+
+Additions
+
+Ending
+Balance
+
+Reductions
+
+Due Within
+One Year
+
+$
+
+7,277,496
+$
+578,545 *
+40,171
+
+0 $
+72,187
+0
+
+435,431 $
+0
+208
+
+6,842,065 $
+650,732
+39,963
+
+435,431
+0
+0
+
+$
+
+7,896,212
+
+$
+
+72,187 $
+
+435,639 $
+
+7,532,760 $
+
+435,431
+
+$
+
+2,085,000
+$
+711,432
+11,654 *
+
+0 $
+0
+1,068
+
+140,000 $
+79,048
+0
+
+1,945,000 $
+632,384
+12,722
+
+145,000
+79,048
+0
+
+$
+
+2,808,086
+
+1,068 $
+
+219,048 $
+
+2,590,106 $
+
+224,048
+
+$
+
+The beginning balance for the Governmental Activities and Business-Type Activities have been
+restated due to a change in accounting principle as discussed in Note 3C. The governmental
+activities beginning balance decreased by $11,654 and the business-type activities increased by
+$11,654.
+
+As part of the Town’s community development loan program that was originally funded by the State of
+Vermont, the Town is required to repay the State based on loan repayments. The agreement requires
+the Town to repay one-half of the annual repayments to the State of Vermont up to a cumulative total
+of $80,000. The current balance is $39,963.
+Compensated Absences are paid by the applicable fund where the employee is charged.
+Debt service requirements to maturity are as follows:
+Year Ending
+June 30
+2012
+2013
+2014
+2015
+2016
+2017-2021
+2022-2026
+2027-2029
+
+Governmental Activities
+Principal
+Interest
+435,631
+263,711
+435,831
+248,619
+425,265
+233,246
+425,478
+217,648
+425,695
+201,829
+2,106,882
+766,654
+1,958,696
+345,526
+628,587
+28,895
+
+Business-Type Activities
+Principal
+Interest
+224,048
+128,750
+234,048
+118,480
+239,048
+107,714
+254,048
+96,251
+249,048
+84,401
+1,287,144
+222,168
+90,000
+3,094
+0
+0
+
+Total
+
+$ 6,842,065
+
+$ 2,577,384
+
+$ 2,306,128
+
+(45)
+
+$
+
+760,858
+
+TOWN OF COLCHESTER, VERMONT
+NOTES TO THE FINANCIAL STATEMENTS
+JUNE 30, 2011
+
+4H. Fund Balances
+The Town adopted the provisions of Governmental Accounting Standards Board (GASB) Statement
+No. 54, “Fund Balance Reporting and Governmental Fund Type Definitions”.
+GASB Statement No. 34, as amended by GASB Statement No. 54, requires fund balances reported on
+the governmental fund balance sheet to be classified using a hierarchy based primarily on the extent to
+which a government is bound to honor constraints on the specific purposes for which amounts in those
+funds can be spent.
+Governmental fund balances are to be classified as: nonspendable (not in spendable form or legally
+required to remain intact); restricted (constraints on the use of resources are either externally imposed
+by creditors, grantors or donors, or imposed by law through enabling legislation); committed
+(constraints on the use of resources are imposed by formal action of the voters); assigned (reflecting the
+Selectboard’s intended use of the resources); and unassigned.
+This statement is also designed to improve the usefulness of fund balance information by clarifying
+certain parts of the definitions of governmental fund types that have led to confusion. It makes clear,
+for example, that special revenue funds are created only to report a revenue source (or sources) that is
+restricted or committed to a specified purpose, and that the revenue source should constitute a
+substantial portion of the resources reported in that fund. Special revenue funds cannot be used to
+accumulate funds that are not restricted or committed. These amounts will have to be reflected in the
+General Fund. The Town did change one (1) of the governmental funds as disclosed in Note 3.C.,
+therefore, there was a reclassification of the fund balances.
+Information about amounts set aside for emergencies is very important to financial statement users.
+Because of the importance associated with these balances, Statement 54 clarifies how rainy-day
+amounts can be reported by treating stabilization arrangements as a specified purpose. Consequently,
+amounts constrained to stabilization will be reported as restricted or committed fund balance in the
+General Fund if they meet the other criteria for those classifications. However, stabilization is regarded
+as a specified purpose only if the circumstances or conditions that signal the need for stabilization (a)
+are identified in sufficient detail and (b) are not expected to occur routinely. Governments are required
+to disclose in the notes key information about their stabilization arrangements, including the authority
+by which they were established, provisions for additions to the stabilization amount, and circumstances
+under which those amounts may be spent. The Town does not have any stabilization arrangements.
+Some governments create stabilization-like arrangements by establishing formal minimum fund
+balance policies. Because users are interested in information about those minimum fund balance
+policies and how governments comply with them, governments are required to explain their minimum
+fund balance policies, if they have them, in notes to the financial statements. The Town does not have
+any minimum fund balance polices.
+
+(46)
+
+TOWN OF COLCHESTER, VERMONT
+NOTES TO THE FINANCIAL STATEMENTS
+JUNE 30, 2011
+
+Under Statement 54, governments are required to disclose their accounting policies that indicate the
+order in which restricted, committed, assigned, and unassigned amounts are spent, in circumstances
+when expenditure is made for a purpose for which amounts are available in multiple fund balance
+classifications. When expenditures are incurred for purposes for which both restricted and unrestricted
+amounts are available, it is the Town’s policy to first consider restricted amounts to have been spent,
+followed by committed, assigned, and finally unassigned amounts.
+In addition, governments also are required to disclose the purpose for each major special revenue fund
+– identifying which specific revenues and other resources are authorized to be reported in each. The
+purpose and specific revenues are described in the following section.
+The fund balances in the following funds are nonspendable as follows:
+Nonspendable Fund Balances
+Nonspendable General Fund Prepaid Expenses
+Nonspendable General Fund Inventories
+Nonspendable Cemetery Fund Principal
+Nonspendable Burnham Memorial Library Fund Principal
+Total Nonspendable Fund Balances
+
+$ 4,123
+38,299
+91,050
+2,000
+$135,472
+
+The fund balances in the following funds are restricted as follows:
+Restricted Fund Balances
+Major Funds
+Capital Projects Fund:
+Restricted for Facilities Upgrade Expansion by
+Bond Proceeds
+Community Development Fund:
+Restricted for Community Development by
+Grant Agreements (Source of Revenue is Grant Revenue)
+
+$1,964,534
+
+72,358
+
+Grant Fund:
+Restricted for Grant Expenses by Grant Agreements
+(Source of Revenue is Grant Revenue)
+
+(47)
+
+3,698
+
+TOWN OF COLCHESTER, VERMONT
+NOTES TO THE FINANCIAL STATEMENTS
+JUNE 30, 2011
+
+Non-Major Funds
+Restricted for Police Expenses by Grant Agreement
+(Source of Revenue is Grant Revenue)
+Restricted for Cemetery Expenses by Trust Agreement –
+Expendable Portion (Source of Revenue is
+Donations)
+Restricted for Heritage Project by Donations
+(Source of Revenue is Donations)
+Restricted for Recreation Acquisition and Development
+By Impact Fees (Source of Revenue is Impact Fees)
+Restricted for Burnham Memorial Library by
+Trust Agreement – Expendable Portion
+Total Restricted Fund Balances
+
+$ 209,461
+
+127,773
+2,281
+85,490
+6,346
+$2,471,941
+
+The fund balances in the following funds are assigned as follows:
+Assigned Fund Balances
+Major Funds:
+General Fund:
+Assigned to Reduce Property Taxes in
+Fiscal Year 2012
+Capital Projects Fund:
+Assigned for Future Capital Projects
+
+$ 446,916
+
+865,548
+
+Reserve Fund:
+Assigned for Reserve Fund Expenses for
+Reappraisal, Technology, Restoration of
+Records and Public Safety Capital Items
+
+1,436,769
+
+Non-Major Funds:
+Debt Service Fund:
+Assigned for Debt Service
+
+138
+
+Total Assigned Fund Balances
+
+$2,749,371
+
+The unassigned deficit of $35,552 in the Revolving Loan Fund will be funded with future proceeds of
+long-term debt.
+The unassigned deficit of $68,712 in the Capital Equipment Fund will be funded with future property
+taxes.
+(48)
+
+TOWN OF COLCHESTER, VERMONT
+NOTES TO THE FINANCIAL STATEMENTS
+JUNE 30, 2011
+
+4I. Restricted and Designated Net Assets
+The restricted net assets of the Town as of June 30, 2011 consisted of the following:
+Governmental Activities:
+Community Development by Grant Agreements
+Grant Expenses by Grant Agreements
+Law Enforcement by Grant Agreements
+Cemetery Trust Agreements - Non-Expendable
+Cemetery Trust Agreements - Expendable
+Heritage Project by Donations
+Recreation Acquisition/Development by Impact Fees
+Burnham Library by Donations – Non-Expendable
+Burnham Library by Donations - Expendable
+Revolving Loans by Grant Agreement
+Total Governmental Activities
+Business-type Activities/Proprietary Fund:
+Breezy Acres Sewer Trust Agreement
+Total Business-type Activities/Proprietary Fund
+
+$ 32,395
+26,454
+209,461
+91,050
+127,773
+2,281
+85,490
+2,000
+6,346
+525
+$583,775
+
+$
+
+6,600
+
+$
+
+6,600
+
+The designated net assets of the Town as of June 30, 2011 consisted of the following:
+Proprietary Fund:
+Designated to Upgrade South Burlington Plant
+
+$494,381
+
+5. OTHER INFORMATION
+5A. PENSION
+The Town offers a 401(a) pension plan to all full time employees, except police officers, with one (1)
+year of service with 100% vesting after five (5) years of service. This plan qualifies, according to the
+Internal Revenue Service, as a defined contribution pension plan for governmental organizations
+exempt from income taxes. The Town contributes 7% of each employee’s base pay. Employees
+contribute 1% of their base pay. The International City/County Management Association administers
+the Plan. The total payroll for the year was $5,645,561 while the covered payroll was $2,906,100.
+Pension expense for the year ended June 30, 2011 was $203,428.
+The Police Officers are covered by the State of Vermont Municipal Employees Retirement System
+(VMERS) Group C Plan, a defined benefit plan. Under this plan, employees contribute 9% of their
+gross salary and the Town contributes 6%, except for the three (3) highest ranking officers who
+contribute 8%, while the Town contributes 7%.
+
+(49)
+
+TOWN OF COLCHESTER, VERMONT
+NOTES TO THE FINANCIAL STATEMENTS
+JUNE 30, 2011
+
+The Town of Colchester pays all costs accrued each year for the plan. The premise of this plan is to
+provide a retirement plan covering municipal employees at a uniform state-wide contribution rate based
+upon an actuarial valuation of all State of Vermont municipal employees. Activity in this plan is done
+in the aggregate, not by municipality. Due to the nature of this pension plan, net assets available for
+benefits as well as present value of vested and nonvested plan benefits by municipality are not
+determinable. Covered payroll for this plan was $1,742,946. Pension expense for the year was
+$113,292.
+Additional information regarding the State of Vermont Municipal Employees Retirement System is
+available upon request from the State of Vermont.
+The Town also offers its employees a deferred compensation plan in accordance with Internal Revenue
+Code Section 457. The Town is the administrator of the plan. The plan permits employees to defer a
+portion of their salary until future years. Deferred compensation is not available to employees until
+termination, retirement, death, or unforeseeable emergency. The Town has no liability for losses under
+this plan, but does have the duty of due care that would be required of an ordinary prudent investor.
+All of the investments are self-directed by each employee.
+5B. PROPERTY TAXES
+The Town is responsible for assessing and collecting its own property taxes, as well as education
+property taxes for the State. Property taxes are assessed based on property valuations as of April 1, the
+approved budgets and the State education property tax liability. Taxes are collected three (3) times per
+year. During the tax year ended June 30, 2011, taxes became due and payable on August 15, 2010,
+November 15, 2010 and March 15, 2011. The Town assesses an 8% penalty of delinquent taxes and
+interest is assessed at 1% per month. Unpaid taxes become an enforceable lien on the property and
+such properties are subject to tax sale. The tax rates for 2011 are as follows:
+Residential
+
+Non-Residential
+
+Education
+Town
+
+1.6517
+.7387
+
+1.9363
+.7387
+
+Total Tax Rate/per $100
+of Assessed Valuation
+
+2.3904
+
+2.6750
+
+5C. CONTINGENT LIABILITIES
+The Town is a participating member in the Chittenden Solid Waste District (CSWD). The Town could
+be subject to a portion of the District’s debt if the District experiences financial problems.
+
+(50)
+
+TOWN OF COLCHESTER, VERMONT
+NOTES TO THE FINANCIAL STATEMENTS
+JUNE 30, 2011
+
+5D. RISK MANAGEMENT
+The Town is exposed to various risks of loss related to torts; theft of, damage to, and destruction of
+assets; errors and omissions; injuries to employees; and natural disasters. The Town maintains
+insurance coverage through the Vermont League of Cities and Towns Property and Casualty
+Intermunicipal Fund, Inc. covering each of those risks of loss. Management believes such coverage is
+sufficient to preclude any significant uninsured losses to the Town. Settled claims have not exceeded
+this coverage in any of the past three fiscal years. The Town must remain a member for a minimum of
+one year and may withdraw from the Fund after that time by giving sixty days notice. Fund
+underwriting and ratesetting policies have been established after consultation with actuaries. Fund
+members are subject to a supplemental assessment in the event of deficiencies. If the assets of the
+Fund were to be exhausted, members would be responsible for the Fund’s liabilities.
+The Town is also a member of the Vermont League of Cities and Towns Unemployment Insurance
+Trust. The Unemployment Trust is a nonprofit corporation formed to provide unemployment coverage
+for Vermont municipalities and is owned by the participating members. The agreement does not permit
+the Unemployment Trust to make additional assessments to its members.
+5E. LANDFILL TRUST
+On November 30, 1990, the Town created a trust for the benefit of the State of Vermont Agency of
+Natural Resources to provide funds for the closure and post-closure costs of the Colchester landfill.
+The “Colchester Landfill Vertical Expansion Trust” was created to provide post-closure costs for
+twenty (20) years and required distributions to the landfill’s owners totaling $150,000. Any funds
+remaining after the distributions and all monitoring costs have been paid will be distributed to the
+Town upon termination of the Trust. The Trust may be terminated by written agreement of the Town,
+the Trustees and the Secretary of the Vermont Agency of Natural Resources. The balance remaining in
+the Trust at June 30, 2011 is approximately $27,688.
+5F. ENDOWMENT FUND
+On May 5, 1997, the Burnham Memorial Library created an endowment at the Vermont Community
+Foundation. In doing so, the ownership of the funds passed to the Vermont Community Foundation
+with the stipulation that the Foundation pay to the Library an amount, determined on an annual basis, to
+be not less than 5% of the value of the funds as of the end of the previous year. Payments are to be
+made at least semiannually. The contributions are not reflected on the balance sheet of the Town. In
+2011, the Library contributed another $2,095 to the Foundation. The balance of the Endowment Fund
+at June 30, 2011 is $44,836.
+
+(51)
+
+TOWN OF COLCHESTER, VERMONT
+NOTES TO THE FINANCIAL STATEMENTS
+JUNE 30, 2011
+
+5G. LAND LEASE
+In August, 1994, the Town of Colchester entered into a land lease agreement with Homestead Design,
+Inc. The Town will lease land which is adjacent to the Town’s offices to Homestead Design, Inc. for
+thirty (30) years. The Town will receive lease payments from Homestead Design, Inc. for thirty (30)
+years. The agreement provides for the construction of a building, which will in turn be rented to a
+medical center. Homestead Design, Inc. will collect these rent payments. At the end of the thirty (30)
+year agreement, the building will become property of the Town. The Town will then begin to receive
+the rental payments from the medical center. A purchase price option is written into the lease whereby
+the Town can buy the building at a price calculated by applying a 7.15% discount rate to the future cash
+flows. The current purchase price is $1,062,896.
+The schedule of future land lease receipts is as follows:
+2012
+2013
+2014
+2015
+2016
+Thereafter
+
+$ 22,996
+23,629
+24,279
+24,946
+25,632
+232,131
+$ 353,613
+
+5H. COMMITMENTS AND CONTINGENCIES
+The Town has entered into a two year employment agreement with an employee through June 30,
+2013. The agreement stipulates the amount of benefits to be provided and conditions of employment or
+termination.
+The Town has an agreement with the City of South Burlington, Vermont to assist in upgrading South
+Burlington’s wastewater treatment facility. This agreement provides capacity rights to the Town of
+Colchester in exchange for approximately $8,000,000 (current estimate). The City of South Burlington
+anticipates issuing twenty year bonds to provide the funding for this project and will then bill the Town
+of Colchester for its proportionate share of the total project costs. The Town of Colchester plans to pay
+for these improvements from a combination of cash reserves, grants and rate adjustments. The Town
+of Colchester has substantially used all of its previous capacity allocation and future development
+within the Town is dependent on this project.
+
+(52)
+
+TOWN OF COLCHESTER, VERMONT
+NOTES TO THE FINANCIAL STATEMENTS
+JUNE 30, 2011
+
+During fiscal year 2009, the Town signed a contract with an engineer to complete various septic related
+activities in the Town. The project will be over four years. The Town will pay for 75% of the project
+with a federal EPA grant of $1,200,000 and 25% with local funds of $400,000.
+The Town of Colchester voters have approved borrowing up to $750,000 from the State of Vermont
+Special Environmental Loan Fund to be used for low interest Septic System Improvement Loans for
+Colchester residents. As of June 30, 2011, the Town has drawn $230,796 of this amount and repaid
+$35,622 leaving a balance owed of $195,174.
+At the March, 2011 Town meeting, the voters of the Town of Colchester authorized the Town to enter
+into a lease/purchase agreement for up to $500,000 to upgrade the Town’s street lights to LED lights.
+This work will take place in the summer of 2012.
+
+(53)
+
+Schedule 2
+TOWN OF COLCHESTER, VERMONT
+NONMAJOR GOVERNMENTAL FUNDS
+COMBINING BALANCE SHEET
+JUNE 30, 2011
+
+Special
+Revenue
+Funds
+
+Capital
+Projects
+Funds
+
+Permanent
+Fund
+Burnham
+Memorial
+Library
+Fund
+
+Debt
+Service
+Fund
+
+Total
+
+ASSETS
+Cash
+Investments
+Receivables (Net of
+Allowance for Doubtful Accounts)
+Notes Receivable (Net of Allowance for
+Doubtful Accounts)
+Due From Other Funds
+Total Assets
+
+$
+
+274,084
+152,045
+
+$
+
+92,885
+0
+
+$
+
+0
+0
+
+$
+
+8,604
+0
+
+$
+
+375,573
+152,045
+
+1,955
+
+0
+
+0
+
+0
+
+1,955
+
+231,250
+9,356
+
+0
+2,939
+
+0
+138
+
+0
+648
+
+231,250
+13,081
+
+$
+
+668,690
+
+$
+
+95,824
+
+$
+
+138
+
+$
+
+9,252
+
+$
+
+773,904
+
+$
+
+6,875
+35,552
+231,250
+
+$
+
+95
+78,951
+0
+
+$
+
+0
+0
+0
+
+$
+
+906
+0
+0
+
+$
+
+7,876
+114,503
+231,250
+
+LIABILITIES AND FUND BALANCES
+Liabilities:
+Accounts Payable
+Due to Other Funds
+Deferred Revenue
+Total Liabilities
+
+273,677
+
+79,046
+
+0
+
+906
+
+353,629
+
+Fund Balances/(Deficit):
+Nonspendable
+Restricted
+Assigned
+Unassigned
+
+91,050
+339,515
+0
+(35,552)
+
+0
+85,490
+0
+(68,712)
+
+0
+0
+138
+0
+
+2,000
+6,346
+0
+0
+
+93,050
+431,351
+138
+(104,264)
+
+395,013
+
+16,778
+
+138
+
+8,346
+
+420,275
+
+Total Fund Balances/(Deficit)
+Total Liabilities and Fund Balances
+
+$
+
+668,690
+
+$
+
+95,824
+
+See Disclaimer in the accompanying Independent Auditor's Report.
+(65)
+
+$
+
+138
+
+$
+
+9,252
+
+$
+
+773,904
+
+Schedule 3
+TOWN OF COLCHESTER, VERMONT
+NONMAJOR GOVERNMENTAL FUNDS
+COMBINING SCHEDULE OF REVENUES, EXPENDITURES AND
+CHANGES IN FUND BALANCES
+FOR THE YEAR ENDED JUNE 30, 2011
+
+Special
+Revenue
+Funds
+
+Permanent
+Fund
+Burnham
+Memorial
+Library
+Fund
+
+Capital
+Projects
+Funds
+
+Debt
+Service
+Fund
+
+294,596
+0
+18,375
+0
+0
+3,501
+0
+
+$ 699,801
+0
+0
+0
+0
+0
+0
+
+66,254
+
+316,472
+
+699,801
+
+8,771
+
+1,091,298
+
+1,155
+0
+27,957
+50,684
+
+485
+1,494
+0
+0
+
+0
+0
+0
+0
+
+0
+0
+9,321
+0
+
+1,640
+1,494
+37,278
+50,684
+
+0
+0
+
+172,447
+41,129
+
+0
+0
+
+0
+0
+
+172,447
+41,129
+
+10,011
+4,104
+
+0
+0
+
+425,420
+274,381
+
+0
+0
+
+435,431
+278,485
+
+93,911
+
+215,555
+
+699,801
+
+9,321
+
+1,018,588
+
+Excess/(Deficiency) of Revenues
+Over Expenditures
+
+(27,657)
+
+100,917
+
+0
+
+(550)
+
+72,710
+
+Other Financing Sources/(Uses):
+Proceeds from Sale of Equipment
+Transfers in
+Transfers out
+
+0
+6,000
+0
+
+4,380
+4,000
+(62,863)
+
+0
+0
+0
+
+0
+0
+0
+
+4,380
+10,000
+(62,863)
+
+6,000
+
+(54,483)
+
+0
+
+0
+
+(48,483)
+
+Net Change in Fund Balances
+
+(21,657)
+
+46,434
+
+0
+
+(550)
+
+24,227
+
+Fund Balances/(Deficit) - July 1, 2010
+
+416,670
+
+(29,656)
+
+138
+
+8,896
+
+396,048
+
+Revenues:
+Property Taxes
+Intergovernmental Revenues
+Impact Fees
+Donations
+Charges for Services
+Investment Income
+Loan Repayments
+
+$
+
+Total Revenues
+Expenditures:
+Current Expenditures
+Public Safety
+Public Works
+Culture & Recreation
+Community Development
+Capital Outlay:
+Public Works
+Culture & Recreation
+Debt Service:
+Principal
+Interest
+Total Expenditures
+
+Total Other Financing Sources/(Uses)
+
+Fund Balances - June 30, 2011
+
+$
+
+0
+5,425
+0
+24,238
+2,870
+27,002
+6,719
+
+395,013
+
+$
+
+$
+
+16,778
+
+See Disclaimer in the accompanying Independent Auditor's Report.
+(66)
+
+$
+
+138
+
+$
+
+$
+
+0
+0
+0
+0
+8,769
+2
+0
+
+8,346
+
+Total
+$
+
+$
+
+994,397
+5,425
+18,375
+24,238
+11,639
+30,505
+6,719
+
+420,275
+
+Schedule 4
+TOWN OF COLCHESTER, VERMONT
+NONMAJOR SPECIAL REVENUE FUNDS
+COMBINING BALANCE SHEET
+JUNE 30, 2011
+
+Revolving
+Loan
+Fund
+
+Police
+Special
+Revenue
+Fund
+
+0
+0
+
+$ 209,461
+0
+
+0
+
+0
+
+1,955
+
+0
+
+1,955
+
+231,250
+0
+
+0
+0
+
+0
+200
+
+0
+9,156
+
+231,250
+9,356
+
+$
+
+231,250
+
+$ 209,461
+
+$
+
+218,823
+
+$
+
+9,156
+
+$
+
+668,690
+
+$
+
+0
+35,552
+231,250
+
+$
+
+$
+
+0
+0
+0
+
+$
+
+6,875
+0
+0
+
+$
+
+6,875
+35,552
+231,250
+
+Heritage
+Project
+Fund
+
+Cemetery
+Fund
+
+Total
+
+ASSETS
+Cash
+Investments
+Receivables (Net of
+Allowance for Doubtful Accounts)
+Notes Receivable (Net of Allowance
+for Doubtful Accounts)
+Due From Other Funds
+Total Assets
+
+$
+
+$
+
+64,623
+152,045
+
+$
+
+0
+0
+
+$
+
+274,084
+152,045
+
+LIABILITIES AND FUND BALANCES
+Liabilities:
+Accounts Payable
+Due to Other Funds
+Deferred Revenue
+
+0
+0
+0
+
+Total Liabilities
+
+266,802
+
+0
+
+0
+
+6,875
+
+273,677
+
+Fund Balances/(Deficits):
+Nonspendable
+Restricted
+Unassigned
+
+0
+0
+(35,552)
+
+0
+209,461
+0
+
+91,050
+127,773
+0
+
+0
+2,281
+0
+
+91,050
+339,515
+(35,552)
+
+(35,552)
+
+209,461
+
+218,823
+
+2,281
+
+395,013
+
+231,250
+
+$ 209,461
+
+Total Fund Balances/(Deficits)
+Total Liabilities and Fund Balances
+
+$
+
+See Disclaimer in the accompanying Independent Auditor's Report.
+(67)
+
+$
+
+218,823
+
+$
+
+9,156
+
+$
+
+668,690
+
+Schedule 5
+TOWN OF COLCHESTER, VERMONT
+NONMAJOR SPECIAL REVENUE FUNDS
+COMBINING SCHEDULE OF REVENUES, EXPENDITURES AND
+CHANGES IN FUND BALANCES
+FOR THE YEAR ENDED JUNE 30, 2011
+
+Police
+Special
+Revenue
+Fund
+
+Revolving
+Loan
+Fund
+Revenues:
+Intergovernmental Revenues
+Donations
+Charges for Services
+Investment Income
+Loan Repayments
+
+$
+
+Total Revenues
+
+0
+0
+0
+4,163
+6,719
+
+$
+
+Heritage
+Project
+Fund
+
+Cemetery
+Fund
+
+5,425
+0
+0
+3,086
+0
+
+$
+
+0
+0
+2,870
+19,753
+0
+
+$
+
+Total
+
+0
+24,238
+0
+0
+0
+
+$
+
+5,425
+24,238
+2,870
+27,002
+6,719
+
+10,882
+
+8,511
+
+22,623
+
+24,238
+
+66,254
+
+0
+0
+50,684
+
+1,155
+0
+0
+
+0
+0
+0
+
+0
+27,957
+0
+
+1,155
+27,957
+50,684
+
+10,011
+4,104
+
+0
+0
+
+0
+0
+
+0
+0
+
+10,011
+4,104
+
+Total Expenditures
+
+64,799
+
+1,155
+
+0
+
+27,957
+
+93,911
+
+Excess/(Deficiency) of Revenues Over
+Expenditures
+
+(53,917)
+
+7,356
+
+22,623
+
+(3,719)
+
+(27,657)
+
+0
+
+0
+
+0
+
+6,000
+
+6,000
+
+Total Other Financing
+Sources
+
+0
+
+0
+
+0
+
+6,000
+
+6,000
+
+Net Change in Fund Balances
+
+(53,917)
+
+7,356
+
+22,623
+
+2,281
+
+(21,657)
+
+Fund Balances - July 1, 2010
+
+18,365
+
+202,105
+
+196,200
+
+0
+
+416,670
+
+Expenditures:
+Current Expenditures
+Public Safety
+Culture & Recreation
+Community Development
+Debt Service:
+Principal
+Interest
+
+Other Financing Sources:
+Transfers In
+
+Fund Balances/(Deficit) - June 30, 2011
+
+$
+
+(35,552)
+
+$
+
+209,461
+
+See Disclaimer in the accompanying Independent Auditor's Report.
+(68)
+
+$
+
+218,823
+
+$
+
+2,281
+
+$
+
+395,013
+
+Schedule 6
+TOWN OF COLCHESTER, VERMONT
+NONMAJOR CAPITAL PROJECTS FUNDS
+COMBINING BALANCE SHEET
+JUNE 30, 2011
+
+Recreation
+Acquisition and
+Development
+Fund
+
+Capital
+Equipment
+Fund
+
+Total
+
+ASSETS
+Cash
+Due From Other Funds
+
+$
+
+82,551
+2,939
+
+$
+
+10,334
+0
+
+$
+
+92,885
+2,939
+
+Total Assets
+
+$
+
+85,490
+
+$
+
+10,334
+
+$
+
+95,824
+
+$
+
+0
+0
+
+$
+
+95
+78,951
+
+$
+
+95
+78,951
+
+LIABILITIES AND FUND BALANCES
+Liabilities:
+Accounts Payable
+Due To Other Funds
+Total Liabilities
+
+0
+
+79,046
+
+79,046
+
+Fund Balances/(Deficit):
+Restricted
+Unassigned
+
+85,490
+0
+
+0
+(68,712)
+
+85,490
+(68,712)
+
+85,490
+
+(68,712)
+
+16,778
+
+Total Fund Balances/(Deficit)
+Total Liabilities and Fund Balances
+
+$
+
+85,490
+
+See Disclaimer in the accompanying Independent Auditor's Report.
+(69)
+
+$
+
+10,334
+
+$
+
+95,824
+
+Schedule 7
+TOWN OF COLCHESTER, VERMONT
+NONMAJOR CAPITAL PROJECTS FUNDS
+COMBINING SCHEDULE OF REVENUES, EXPENDITURES AND
+CHANGES IN FUND BALANCES
+FOR THE YEAR ENDED JUNE 30, 2011
+
+Recreation
+Acquisition and
+Development
+Fund
+Revenues:
+Property Taxes
+Impact Fees
+Investment Income
+
+$
+
+Total Revenues
+
+0
+18,375
+1,672
+
+Capital
+Equipment
+Fund
+$
+
+294,596
+0
+1,829
+
+Total
+$
+
+294,596
+18,375
+3,501
+
+20,047
+
+296,425
+
+316,472
+
+Expenditures:
+Public Safety
+Public Works
+Capital Outlay:
+Public Works
+Culture and Recreation
+
+0
+488
+
+485
+1,006
+
+485
+1,494
+
+0
+8,626
+
+172,447
+32,503
+
+172,447
+41,129
+
+Total Expenditures
+
+9,114
+
+206,441
+
+215,555
+
+Excess of Revenues
+Over Expenditures
+
+10,933
+
+89,984
+
+100,917
+
+Other Financing Sources/(Uses):
+Proceeds from Sale of Equipment
+Transfers In
+Transfers out
+
+0
+4,000
+0
+
+4,380
+0
+(62,863)
+
+4,380
+4,000
+(62,863)
+
+Total Other Financing
+Sources/(Uses)
+
+4,000
+
+(58,483)
+
+(54,483)
+
+Net Change in Fund Balances
+
+14,933
+
+31,501
+
+46,434
+
+Fund Balances/(Deficit) - July 1, 2010
+
+70,557
+
+(100,213)
+
+(29,656)
+
+Fund Balances/(Deficit) - June 30, 2011
+
+$
+
+85,490
+
+See Disclaimer in the accompanying Independent Auditor's Report.
+(70)
+
+$
+
+(68,712)
+
+$
+
+16,778
+
+Report on Internal Control Over Financial Reporting and
+on Compliance and Other Matters Based on an Audit of
+Financial Statements Performed in Accordance with
+“Government Auditing Standards”
+Selectboard
+Town of Colchester
+Colchester, Vermont 05446
+We have audited the financial statements of the governmental activities, the businesstype activities, each major fund and the aggregate remaining fund information of the Town of
+Colchester, Vermont as of and for the year ended June 30, 2011, which collectively comprise the
+Town of Colchester, Vermont’s basic financial statements and have issued our report thereon dated
+February 8, 2012. We conducted our audit in accordance with auditing standards generally
+accepted in the United States of America and the standards applicable to financial audits contained
+in “Government Auditing Standards”, issued by the Comptroller General of the United States.
+Internal Control Over Financial Reporting
+In planning and performing the audit, we considered the Town of Colchester,
+Vermont’s internal control over financial reporting as a basis for designing our audit procedures for
+the purpose of expressing our opinion on the financial statements, but not for the purpose of
+expressing an opinion on the effectiveness of the Town of Colchester, Vermont’s internal control
+over financial reporting. Accordingly, we do not express an opinion on the effectiveness of the
+Town of Colchester, Vermont’s internal control over financial reporting.
+A deficiency in internal control exists when the design or operation of a control does
+not allow management or employees, in the normal course of performing their assigned functions,
+to prevent or detect and correct misstatements on a timely basis. A material weakness is a
+deficiency, or a combination of deficiencies, in internal control such that there is a reasonable
+possibility that a material misstatement of the Town of Colchester, Vermont’s financial statements
+will not be prevented, or detected and corrected on a timely basis.
+Our consideration of internal control over financial reporting was for the limited
+purpose described in the first paragraph of this section and was not designed to identify all
+deficiencies in internal control over financial reporting that might be deficiencies, significant
+deficiencies or material weaknesses and therefore, there can be no assurance that all deficiencies,
+significant deficiencies, or material weaknesses have been identified. In addition, because of
+inherent limitations in internal control, including the possibility of management override of
+controls, misstatements due to error or fraud may occur and not be detected by such controls. We
+did not identify any deficiencies in internal control over financial reporting that we consider to be
+material weaknesses, as defined previously.
+
+(71)
+
+Town of Colchester, Vermont
+
+-2-
+
+Compliance and Other Matters
+As part of obtaining reasonable assurance about whether the Town of Colchester,
+Vermont’s financial statements are free of material misstatement, we performed tests of its
+compliance with certain provisions of laws, regulations, contracts, and grant agreements,
+noncompliance with which could have a direct and material effect on the determination of financial
+statement amounts. However, providing an opinion on compliance with those provisions was not
+an objective of our audit, and accordingly, we do not express such an opinion. The results of our
+tests disclosed no instances of noncompliance or other matters that are required to be reported under
+“Government Auditing Standards”.
+This report is intended solely for the information and use of management, federal
+awarding agencies and pass-through entities and is not intended to be and should not be used by
+anyone other than these specified parties.
+
+February 8, 2012
+Montpelier, Vermont
+Vt Lic. #92-000180
+
+(72)

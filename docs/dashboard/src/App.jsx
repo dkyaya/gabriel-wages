@@ -17,7 +17,6 @@ import pdfReadinessStatus from "../data/pdf_readiness_status_summary.json";
 import textTableDetectionStatus from "../data/text_table_detection_status_summary.json";
 import textTableCalibrationStatus from "../data/text_table_calibration_status_summary.json";
 import reportsIndex from "../data/reports_index.json";
-import tierCMapSummary from "../data/tier_c_map_summary.json";
 import piProgressReportPdf from "../reports/pi_progress_report_source_discovery_2026-07-22.pdf?url";
 import { AnalysisReadinessPanel } from "./components/AnalysisReadinessPanel.jsx";
 import { CandidateQueueCards } from "./components/CandidateQueueCards.jsx";
@@ -150,10 +149,10 @@ function App() {
             <p className="eyebrow">HBS municipal labor evidence project</p>
             <h1>Gabriel Wages project hub</h1>
             <p className="header-deck">
-              Tier C readiness reviewed {formatNumber(projectPhaseSummary.tier_c_retained_downloaded_source_count)}
-              {" "}retained files; {formatNumber(projectPhaseSummary.tier_c_text_extraction_ready_count)} are queued only
-              for a separately authorized bounded text-layer extraction. The evidence remains a bounded
-              documentary/co-location scaffold; no wage gaps or causal findings are available.
+              Tier C text extraction completed for {formatNumber(projectPhaseSummary.tier_c_text_extracted_ok_count)}
+              {" "}readiness-approved files. Deterministic review preserved {formatNumber(projectPhaseSummary.tier_c_positive_exact_span_count)}
+              {" "}exact positive spans for a separately authorized bounded rating stage. These spans remain unrated;
+              no wage gaps or causal findings are available.
             </p>
           </div>
           <div className="header-status">
@@ -180,20 +179,20 @@ function App() {
               </div>
                 <div className="checkpoint-label">
                   <span>Next authorized stage</span>
-                  <strong>Bounded Tier C text-layer extraction</strong>
+                  <strong>Bounded rating of 159 exact Tier C spans</strong>
                 </div>
             </div>
 
             <div className="headline-grid" aria-label="National headline metrics">
               <MetricCard
-                label="Retained Tier C sources"
-                value={formatNumber(projectPhaseSummary.tier_c_retained_downloaded_source_count)}
-                note="Downloaded and reviewed; not extracted or rated"
+                label="Tier C text artifacts"
+                value={formatNumber(projectPhaseSummary.tier_c_text_extracted_ok_count)}
+                note="Extracted locally without OCR; not rated or ingested"
               />
               <MetricCard
-                label="Verified Tier C leads"
-                value={formatNumber(projectPhaseSummary.tier_c_verified_source_lead_count)}
-                note="The locked source-review queue"
+                label="Positive exact spans"
+                value={formatNumber(projectPhaseSummary.tier_c_positive_exact_span_count)}
+                note={`${formatNumber(projectPhaseSummary.tier_c_span_extracted_source_count)} sources · exact substring/offset/hash checks passed`}
               />
               <MetricCard
                 label="Same-source linked pairs"
@@ -210,8 +209,8 @@ function App() {
             <div className="hub-caveat" role="note">
               <strong>Bounded evidence status only.</strong>
               <span>
-                Retained files are not extracted, rated, ingested, codified, causal, or analysis-ready. The memo
-                supports documentary co-location scaffolds, not normalized comparisons or causal conclusions.
+                Extracted text and exact spans are not rated, ingested, codified, causal, or analysis-ready. The
+                current corpus supports only bounded documentary scaffolds, not normalized comparisons or causal conclusions.
               </span>
             </div>
 
@@ -223,43 +222,19 @@ function App() {
             />
           </section>
 
-          <ProjectPhasePanel phase={projectPhaseSummary} />
-
           <section className="hub-section-group" id="geography" aria-label="Coverage map and state status">
             <div className="hub-section-intro">
-              <p className="eyebrow">Current Tier C operational coverage</p>
-              <h2>Dated retained-source and text-readiness map</h2>
-              <p>The default layer shows current Tier C retained sources and bounded text readiness. Earlier scout metrics remain available in the selector as clearly historical provenance.</p>
+              <p className="eyebrow">Total scout coverage</p>
+              <h2>A simple answer to “where have we scouted?”</h2>
+              <p>This is the dashboard’s only map layer. Tier C, mechanism, source-family, readiness, extraction, and rating details live in pipeline cards and reports below.</p>
             </div>
             <div className="map-and-panel">
-              <NationalMap states={stateSummary.states} selectedCode={selected.state} onSelect={chooseState} mapDataDate={stateSummary.metadata.map_data_date} coverageSummary={tierCMapSummary} />
+              <NationalMap states={stateSummary.states} selectedCode={selected.state} onSelect={chooseState} mapDataDate={stateSummary.metadata.map_data_date} />
               <StateDetailPanel state={selected} queue={selectedQueue} onOpenReport={openReport} />
             </div>
           </section>
 
-          <PriorityTiersPanel priority={prioritySummary} statePriority={statePrioritySummary} />
-
-          <ScoutOperationsPanel
-            operations={scoutOperations}
-            runtime={scoutRuntimeTrends}
-            parallelStatus={parallelScoutStatus}
-          />
-
-          <section className="hub-section-group" id="candidate-queue" aria-labelledby="candidate-queue-title">
-            <div className="hub-section-intro">
-              <p className="eyebrow">Historical candidate queue</p>
-              <h2 id="candidate-queue-title">Archived source-discovery inventory</h2>
-              <p>
-                These counts document the earlier discovery pipeline. They are not the current Tier C retained-source
-                scope and do not override the 463-source readiness queue shown above.
-              </p>
-            </div>
-            <div className="two-column">
-              <CoverageFunnel data={coverageFunnel} />
-              <CandidateQueueCards data={candidateSummary} />
-            </div>
-            <QueueTable rows={candidateSummary.by_state} onSelect={chooseState} />
-          </section>
+          <ProjectPhasePanel phase={projectPhaseSummary} />
 
           <VerificationPipeline
             candidateSummary={candidateSummary}
@@ -273,15 +248,34 @@ function App() {
             textTableCalibrationStatus={textTableCalibrationStatus}
           />
 
-          <StateYieldPanel yieldData={scoutYieldByState} operations={scoutOperations} />
-
           <ReportsLibrary reportsIndex={reportsIndex} reportAssets={REPORT_ASSETS} />
-
-          <MethodologyDefinitions />
 
           <AnalysisReadinessPanel data={analysisReadiness} phase={projectPhaseSummary} />
 
           <NextStepsPanel priority={prioritySummary} phase={projectPhaseSummary} />
+
+          <details className="historical-archive" id="historical-archive">
+            <summary>
+              <span>Historical pipeline archive</span>
+              <small>Priority tiers, scouting operations, archived candidate queue, and state yield</small>
+            </summary>
+            <div className="historical-archive-content">
+              <PriorityTiersPanel priority={prioritySummary} statePriority={statePrioritySummary} />
+              <ScoutOperationsPanel operations={scoutOperations} runtime={scoutRuntimeTrends} parallelStatus={parallelScoutStatus} />
+              <section className="hub-section-group" id="candidate-queue" aria-labelledby="candidate-queue-title">
+                <div className="hub-section-intro">
+                  <p className="eyebrow">Historical candidate queue</p>
+                  <h2 id="candidate-queue-title">Archived source-discovery inventory</h2>
+                  <p>These counts document the earlier discovery pipeline; they are not the current text/span scope.</p>
+                </div>
+                <div className="two-column"><CoverageFunnel data={coverageFunnel} /><CandidateQueueCards data={candidateSummary} /></div>
+                <QueueTable rows={candidateSummary.by_state} onSelect={chooseState} />
+              </section>
+              <StateYieldPanel yieldData={scoutYieldByState} operations={scoutOperations} />
+            </div>
+          </details>
+
+          <MethodologyDefinitions />
 
           <DataLimitations
             metadata={{

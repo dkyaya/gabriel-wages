@@ -1,0 +1,12 @@
+{
+  "geographic_interpretation": "where_local_scouting_has_run_only",
+  "global_analysis_readiness": false,
+  "map_data_date": "2026-07-27",
+  "map_filter_count": 1,
+  "municipality_universe": 35589,
+  "national_representativeness": false,
+  "only_map_filter": "total_scout_coverage_count",
+  "states_and_dc": 51,
+  "states_and_dc_with_scout_coverage": 51,
+  "total_scout_covered_municipalities": 2436
+}

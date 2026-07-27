@@ -1,0 +1,18 @@
+{
+  "collapsed_historical_sections": [
+    "priorities",
+    "operations",
+    "candidate-queue",
+    "state-yield"
+  ],
+  "current_sections": [
+    "overview",
+    "geography",
+    "project-phase",
+    "verification",
+    "reports",
+    "descriptive-analysis",
+    "next-steps"
+  ],
+  "historical_content_must_not_override_current_phase": true
+}

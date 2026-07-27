@@ -1,0 +1,687 @@
+COMMONWEALTH OF PENNSYLVANIA
+Pennsylvania Labor Relations Board
+FOP WHITE ROSE LODGE 15
+v.
+CITY OF YORK
+
+:
+:
+:
+:
+:
+
+Case No. PF-C-22-48-E
+
+PROPOSED DECISION AND ORDER
+On September 16, 2022, the Fraternal Order of Police White Rose Lodge
+15 (FOP or Union) filed a charge of unfair labor practices with the
+Pennsylvania Labor Relations Board (Board) against the City of York (City or
+Employer), alleging that the City violated Section 6(1)(a) and (c) of the
+Pennsylvania Labor Relations Act (PLRA), as read with Act 111, by issuing
+discipline to Sergeant Benjamin Praster on August 12, 2022, in retaliation
+for his protected activity. On November 9, 2022, the Secretary of the Board
+issued a Complaint and Notice of Hearing, assigning the charge to
+conciliation for the purpose of resolving the matters in dispute through
+mutual agreement of the parties, and directing a hearing on January 26, 2023,
+if necessary.
+The hearing ensued, as scheduled, on January 26, 2023, at which time
+the parties were afforded a full opportunity to present testimony, crossexamine witnesses and introduce documentary evidence. The parties each filed
+separate post-hearing briefs in support of their respective positions on
+April 24, 2023.
+The Hearing Examiner, on the basis of the testimony presented at the
+hearing and from all other matters and documents of record, makes the
+following:
+FINDINGS OF FACT
+1.
+The City is a public employer and political subdivision under Act
+111 as read in pari materia with the PLRA. (N.T. 7)
+2.
+The FOP is a labor organization under Act 111 as read in pari
+materia with the PLRA. (N.T. 7-8)
+3.
+The FOP is the exclusive bargaining representative for a unit of
+police employes at the City. (N.T. 12-13; City Exhibit 12)
+4.
+The FOP and the City are parties to a collective bargaining
+agreement (CBA) effective January 1, 2019, through December 31, 2022, with
+yearly extensions thereafter. (City Exhibit 12)
+5.
+Benjamin Praster has been a police officer for the City for
+approximately 12 years. He currently serves as a Sergeant and as the night
+shift supervisor. He has also served as the FOP President since February
+2022. (N.T. 12-13)
+6.
+By email dated June 23, 2022, the City’s Police Commissioner
+Michael Muldrow addressed the City’s Mayor and Council, as well as all sworn
+police officers and police civilian employes, and indicated in relevant part
+the following:
+
+To: Our City Leadership
+While I realize everyone is busy (and you don’t always have time
+to attend our updates, or read the things we put out), and I know
+we (like every other community) have had some incidents and some
+losses that shook us to the core;
+I wanted to take a second and make sure to share some “good news”
+(i.e., the kind of news that doesn’t make headlines, and people
+don’t always feel the need to post, share, or discuss)...[sic]
+While everyone may not always agree with our “direction,” and ANT
+[sic] loss of life will always be too much, the facts are:
+When it comes to the comprehensive strategies (for attempting to
+curb “Gun Violence”), at a time when the Nation is seeing a 30%
+Rise...[sic]
+Thanks to the comprehensive direction this community has
+committed to...[sic]
+*Including:
+-the GVI program
+-to include bringing the “Credible Messenger” program (under
+Tiffany Lowe) online
+-Youth Outreach Initiatives
+-in field Mental Health services and resources
+-Public Service Campaigns
+-Consistent Community Outreach
+-Increase [sic] emphasis on Diverse Hiring (In the Police force,
+in an effort to better reflect the community we’re serving)
+-target focused initiatives like “Operation Scarecrow” and the
+Gun Squad and Taskforce
+-the Expanded [Violence Intervention Unit] Day & Night Teams
+-Detective Bureau that works tirelessly
+-the Patrol Division’s “Guns First” efforts
+-a renewed focus on Partnering with Community Stakeholders
+-a Positive Attitude
+-and Prayer...
+Last Year’s Gun Violence numbers we’re [sic] DOWN from the
+previous years (before this leadership team) by approx [sic] 10%
+And This Year, while Homicides appear to be up, it’s important to
+*Note: 1/4 of them were actually being ruled as “Self-Defense”
+cases, and several aren’t as result [sic] of “Shootings”
+(Domestic violence situations and issues that could occur
+anywhere)...
+With that said, we are actually tracking DOWN for the year, and
+potentially looking at a 24% reduction in overall Gun Violence
+(thus far)
+*ALL while building a “brand” that’s fostering renewed trust,
+faith and confidence in this Department, City Government, and
+this Community.
+2
+
+With this in mind, I would like to take a second to THANK the men
+and women of this Department (who continue to come in, roll with
+the punches, put it all on the line, and do anything and
+everything we ask of them), THANK our partners for taking this
+journey with us, THANK YOU all for allowing me the room to lead
+with my heart (where God, this Department, and this Community
+need me to go), and last but not least – THANK YOU to the
+Community for buying in to what we’re trying to do here.
+I said it before and I’ll say it again, we’re not perfect (no one
+can ever be), but I think it’s apparent that we’re on the right
+track.
+Sincerely,
+Muldrow
+(N.T. 13-14; Union Exhibit 1)(Emphasis & ellipses in original)
+7.
+After receiving Commissioner Muldrow’s email, Praster had a
+discussion with the FOP’s executive board on June 23, 2022. (N.T. 14-15)
+8.
+Praster testified that, during this period, the Commissioner had
+been sending a number of emails similar to his June 23, 2022 communication,
+which had a general theme of what a great job the police department was doing
+and that shootings were down. He described, however, how the City was on
+pace for a record number of homicides. He also explained how the City was
+having staffing issues, which were exacerbated by a number of administrative
+decisions, such that officers were being forced to work overtime every week,
+multiple times per week. He indicated that there was a morale problem in the
+department and that members were frustrated about receiving these emails in
+the face of so many problems. (N.T 15-16)
+9.
+After discussing the issue with the FOP’s executive board,
+Praster decided to respond to Muldrow’s June 23, 2022 email. He drafted a
+response email the next morning and sent it to the FOP’s executive board for
+approval. The FOP’s executive board voted to approve the draft. (N.T. 1617)
+10.
+By email dated June 24, 2022, Praster replied all to Muldrow and
+indicated, in relevant part, the following:
+City Council, Mayor Helfrich and the body of the department,
+I don’t know that I have ever been angrier reading an email than
+I was when I woke up yesterday to this email from the
+commissioner. That may seem a strange reaction to a pretty
+benign puff email. To understand my anger you have to know what
+happened this weekend.
+I was the supervisor for night work this weekend and I came in to
+find my shift in the same state that it has been for the past
+couple months – minimum manpower and a third of those mandated
+officers. On Saturday we had a homicide, the city’s 14 th by my
+count. Not even halfway through the year and already matching
+last year’s homicides.
+3
+
+Next I did what every manpower strapped supervisor does – looked
+for bodies. I told two officers on a detail they’d have to stay
+past their time to help out. One of the officers informed me
+that he was already mandated to work shift overtime in the
+morning and so had to leave. On Saturday day [sic] night there
+was one district car working for the entire City of York. The
+detectives came in and did their investigation and our guys got
+the crime scene shut down just before 7 am. As I was leaving I
+walked past the officer who I tried to mandate the night before.
+This is every weekend in the City now.
+So when I woke up on Thursday to read an email saying that the
+department was doing tons of great work and gun crime is down –
+it was more than I could take. The commissioner has always had a
+loose relationship with the truth when it comes to promoting this
+department but this email is too far. There’s barely a true
+sentence in it. I’ve been a patrol supervisor for the
+commissioner’s entire tenure and I’ve never heard of “Guns
+First.” Last week he had to cut the [Violence Intervention
+Unit]- which was already smaller than it’s been historically –
+and yet the email says it’s expanded. Self defense homicides
+shouldn’t count? A store owner having to shoot a robber to defend
+his property is the ultimate failure of a police department.
+And finally, the department has done an admirable job recruiting
+and hiring a talented diverse group of new officers, but they
+haven’t been treated that way. They came out of the academy, got
+issued hand me down uniforms, had their training cut down and
+were put on the street to work every weekend in a dysfunctional
+patrol division. For all that they’ve hung in and show [sic] up
+everyday [sic] to work, I think the least they’ve earned is for
+you to do the same.
+So I implore you Commissioner Muldrow: On Monday, wakeup put on a
+uniform, come to work, call your staff together and ask them
+“What is wrong and how do we fix it?” I assure you that’s what
+this entire department is waiting for – not another emoji laden
+email telling us everything is fine when it’s clearly not.
+And if you won’t do that City Council and the Mayor should come
+over here and take a closer look at what’s really going wrong in
+their police department.
+Benjamin Praster
+President
+Fraternal Order of Police Lodge 15
+(N.T. 17-18; Union Exhibit 2)
+11.
+Praster sent his June 24, 2022 email response at approximately
+4:00 p.m. and was not at work or performing any duties on behalf of the City.
+(N.T. 18)
+12.
+Praster testified that he sent his June 24, 2022 email response
+because he wanted to make it clear that the presentation that everything was
+fine in the department and that there were no problems was fundamentally
+misleading. He described how there were many problems at the time and how
+4
+
+the FOP had been urging the Commissioner numerous times, beginning in
+February 2022, to take action, but the Commissioner had refused. He
+explained how the FOP felt that they needed to call attention to these issues
+to the Mayor, the City Council, and everyone else on the email chain with the
+hope that it would prompt the Commissioner, the Mayor, or City Council to
+finally take action. (N.T. 19-21, 48)
+13.
+Praster testified that the specific problems the police
+department was having at the time of his email involved staffing and
+manpower. He indicated that the City had removed a number of officers from
+patrol and placed them in specialty assignments, which exacerbated the
+problems and caused officers to be mandated repeatedly nearly every day.
+(N.T. 21-22)
+14.
+Later that day, on June 24, 2022, Captain Matt Leitzel called
+Praster and ordered him to come into the police station, at which time
+Leitzel took Praster’s badge and gun, and placed him on administrative leave
+pending an investigation. Leitzel told Praster he was being placed on
+administrative leave because of his earlier email. (N.T. 23-24)
+15.
+On July 11, 2022, Praster underwent an interview with Inspector
+Michael Davis of the City’s Internal Affairs Division. Praster consented to
+a recording of the interview, which was also subsequently transcribed. (N.T.
+27-28; Union Exhibit 3)
+16.
+During the July 11, 2022 Internal Affairs interview, Praster
+provided Davis with multiple examples of how the content of the
+Commissioner’s June 23, 2022 email was misleading or false. (N.T. 31-32, 3536; Union Exhibit 3)
+17.
+The City did not take any steps to confirm whether the statements
+in Praster’s June 24, 2022 email or during his July 11, 2022 Internal Affairs
+interview were true or false. (N.T. 162-163)
+18.
+By letter dated August 12, 2022, Captain Leitzel indicated to
+Sergeant Praster, in relevant part, the following:
+Dear [Sergeant] Praster:
+This letter is formal notice that, under the Department’s Code of
+Conduct, 1.8.1, you are being charged with the following
+offenses:
+Unbecoming Conduct, General Order 1.8.1.IV.A.2;
+Professional Relations, General Order 1.8.1.IV.B.19; and
+Constructive Criticism, General Order 1.8.1.IV.B.36.
+Your conduct in violating these rules justifies a maximum penalty
+of termination.
+The specific conduct that forms the basis for these charges was
+set forth in the July 15, 2022 Loudermill Notice. Another copy
+is attached. As detailed in the enclosed Loudermill Notice, this
+Notice of Charges addresses your June 24, 2022, email, sent just
+after 4PM, to Police Commissioner Michael Muldrow, as well as to
+all members of City Council, all Sworn and Civilian members of
+the Police Department and Senior Staff of the City
+5
+
+Administration. Your July 20, 2022, Loudermill response claims
+that your conduct is protected based on your position as an FOP
+official. I must disagree.
+The Department’s Code of Conduct defines Unbecoming Conduct as:
+“Conduct unbecoming a member shall include any conduct which has
+a tendency to destroy public respect for police officers or other
+members and confidence in the operation of police services.”
+During your July 11 interview, you admitted that you had thought
+through your response carefully which is why it took more than a
+day for you to send it. In that email, you wrote: “The
+Commissioner has always had a loose relationship with the truth
+when it comes to promoting this department, but this email is too
+far. There’s barely a true sentence in it.” You have called the
+Commissioner a liar in a blast email, not just sent to
+Commissioner Muldrow, but to City Council, all Sworn and Civilian
+members of the Police Department and Senior Staff of the City
+Administration. Such conduct cannot be ignored and does not fall
+within the scope of protected union activity.
+As for the penalty, Commissioner Muldrow has recused himself from
+this process because he was the target of your disrespectful
+slur. After consultation among the remaining members of the
+Department’s Senior Staff, we concluded that, while a lengthy
+suspension without pay is both appropriate and justified, all
+three violations be [sic] consolidated into a 2nd level offense.
+Our hope is that you will recognize your obligation to treat all
+members of this Department, regardless of rank, with dignity and
+respect.
+Pursuant to the Code of Conduct, this Notice of Charges will also
+constitute your Written Reprimand and will remain in your
+personnel file until August 12, 2024. You are reminded that any
+repeat of a level-2 offense within the next two years will
+automatically result in that violation progressing to the next
+level offense...
+(N.T. 37-38; Union Exhibit 4)(Emphasis in original)
+19.
+Praster was not disciplined for making false statements to
+Inspector Davis during his July 11, 2022 interview with the Internal Affairs
+Division. (N.T. 38-39; Union Exhibit 4)
+20.
+Praster testified that, after his June 24, 2022 email, the
+Commissioner took steps to address the problems Praster had been raising. He
+described how the Commissioner held a meeting the next day and started a
+number of initiatives, which included pulling two detectives out of the sex
+crimes unit and returning them to patrol. He also explained how there was an
+initiative to have the Captains redon their uniforms, return to the street,
+and answer calls. (N.T. 44-45)
+21.
+After Praster was disciplined, he attended a labor-management
+meeting with Captain Daniel Lentz, along with FOP Vice President Shawn Wilson
+and FOP Treasurer Kathleen Nice. At the end of the meeting, the parties
+discussed Praster’s June 24, 2022 email, which Lentz indicated was not
+constructive, but rather designed to tear down the Commissioner. Lentz also
+stated that the overall impression of the email was that the Commissioner was
+6
+
+not being truthful, but that the Commissioner’s job was to embellish things
+and put the best face forward for the department. Praster asked Lentz if it
+would have been permissible for him to make the statements in a speech at a
+City Council meeting instead of using email, to which Lentz replied that
+Lentz thought that would be protected speech and not subject to discipline.
+(N.T. 45-47, 96-97)
+DISCUSSION
+The FOP has alleged that the City violated Section 6(1)(a) and (c) of
+the PLRA 1 and Act 111 by issuing discipline to Sergeant Benjamin Praster on
+August 12, 2022, in retaliation for his protected activity. Specifically,
+the FOP contends that Praster engaged in protected, concerted activity when
+he replied all to the Commissioner’s email on June 24, 2022, which was the
+cause of the City’s adverse employment action against Praster. The City, on
+the other hand, contends that it did not violate the PLRA or Act 111, and the
+charge should be dismissed, because Praster’s June 24, 2022 email reply to
+the Commissioner was not protected under the PLRA.
+To establish a violation of Section 6(1)(c) under the PLRA, the
+charging party must show that the employe was engaged in protected activity,
+the employer knew of that protected activity, and there was an adverse
+employment action motivated by anti-union animus. Pennsylvania State
+Troopers Ass’n v. Commonwealth of Pennsylvania, PA State Police, 33 PPER ¶
+33011 (Final Order, 2001). It is the motive for the adverse employment
+action that creates the offense under Section 6(1)(c). PLRB v. Ficon, 254
+A.2d 3 (Pa. 1969). An employer may rebut a claim of discrimination under
+Section 6(1)(c) of the PLRA by proving that the adverse employment action was
+based on valid nondiscriminatory reasons. Duryea Borough Police Dept. v.
+PLRB, 862 A.2d 122 (Pa. Cmwlth. 2004).
+The Board has recognized that, in the absence of direct evidence, it
+will give weight to several factors upon which an inference of unlawful
+motive may be drawn. City of Philadelphia, 26 PPER ¶ 26117 (Proposed
+Decision and Order, 1995). The factors which the Board considers are: the
+entire background of the case, including any anti-union activities by the
+employer; statements of supervisors tending to show their state of mind; the
+failure of the employer to adequately explain the adverse employment action;
+the effect of the adverse action on unionization activities-for example,
+whether leading organizers have been eliminated; the extent to which the
+adversely affected employes engaged in union activities; and whether the
+action complained of was “inherently destructive” of employe rights. City of
+Philadelphia, supra, citing PLRB v. Child Development Council of Centre
+County, 9 PPER ¶ 9188 (Nisi Decision and Order, 1978). Although close timing
+alone is insufficient to support a basis for discrimination, Teamsters Local
+764 v. Montour County, 35 PPER 12 (Final Order, 2004), the Board has long
+held that the timing of an adverse action against an employe engaged in
+protected activity is a legitimate factor to be considered in determining
+anti-union animus. Berks Heim County Home, 13 PPER ¶ 13277 (Final Order,
+1982).
+1 Section 6(1) of the PLRA provides that “[i]t shall be an unfair labor
+practice for an employer: (a) To interfere with, restrain or coerce employes
+in the exercise of the rights guaranteed in this act...(c) By discrimination
+in regard to hire or tenure of employment, or any term or condition of
+employment to encourage or discourage membership in any labor
+organization...43 P.S. § 211.6.
+
+7
+
+In this case, the dispute hinges on whether Praster’s June 24, 2022
+email constitutes protected activity under the PLRA. If so, then the FOP
+must prevail because the City knew about the protected conduct and admittedly
+disciplined Praster for it on August 12, 2022, when it issued him the Notice
+of Charges. If not, then the City must prevail because the FOP will be
+unable to sustain even the first element of the three-part test under Section
+6(1)(c) of the PLRA. 2
+Under Board law, an employe’s criticism of the employer will lose the
+protection of the PLRA only if it is “offensive, defamatory, or opprobrious,”
+and not if it is merely “intemperate, inflammatory, or insulting.”
+Pennsylvania State Troopers Ass’n v. Commonwealth of Pennsylvania,
+Pennsylvania State Police, 41 PPER 33 (Final Order, 2010); PSSU Local 668,
+SEIU v. Washington County, 23 PPER ¶ 23040 (Proposed Decision and Order,
+1992), 23 PPER ¶ 23073 (Final Order, 1992); See also AFSCME District Council
+85, Local 3530 v. Millcreek Township, 31 PPER ¶ 31056 (Final Order, 2000)(an
+employe’s conduct will lose protection where it is so obnoxious or violent as
+to render the employe unfit for service). Statements which are critical of
+management and expressed in the form of an opinion are not defamatory, such
+that the statements lose protection under the Act. Ass’n of Clinton County
+Educators PSEA/NEA v. Keystone Central School District, 53 PPER 74 (Proposed
+Decision and Order, 2022).
+In this case, the FOP has sustained its burden of proving that the City
+violated the PLRA and Act 111 by issuing discipline to Praster in retaliation
+for his protected activity. First of all, Praster engaged in protected,
+concerted activity under the PLRA when he replied to the Commissioner’s email
+on June 24, 2022. The City clearly had knowledge of that protected activity,
+as the City’s non-bargaining unit managerial personnel admittedly received
+the June 24, 2022 email. Likewise, the City took adverse employment action
+that was motivated by protected activity on August 12, 2022 when it issued
+discipline to Praster expressly because of his June 24, 2022 email.
+The City contends that the charge should be dismissed because Praster
+did not engage in any protected, concerted activity under the PLRA. In
+particular, the City argues that Praster called the Commissioner a liar in
+his June 24, 2022 email, which was offensive, defamatory, and opprobrious.
+The City cites PSCOA v. Commonwealth of Pennsylvania, Dept. of Corrections,
+SCI Fayette, 40 PPER 70 (Proposed Decision and Order, 2009) for the
+proposition that insubordinate conduct, in the form of publicly mocking a
+superior officer in the presence of inmates, is not protected activity.
+According to the City, the facts at issue in SCI Fayette mirror the conduct
+here, as Praster was insubordinate to the extent he tried to publicly shame
+the Commissioner and undermine the command structure within the City’s police
+department. The City concludes that Praster’s intent was to call the
+Commissioner a liar in front of a high stakes audience to do maximum damage
+to the Commissioner’s reputation. The City posits that Praster had the
+opportunity to bring his concerns to the biweekly staff meetings with senior
+personnel where the FOP was free to raise issues, but he instead chose to
+reply-all in his June 24, 2022 email. The City’s arguments in this regard
+are unavailing.
+
+The FOP has neither alleged, nor argued that the August 12, 2022 discipline
+was in retaliation for any other alleged protected activity under the PLRA.
+2
+
+8
+
+I am unable to conclude that SCI Fayette is somehow controlling in this
+matter. In SCI Fayette, the Board’s hearing examiner concluded that the
+conduct of a corrections sergeant was insubordinate, and therefore, not
+protected under the Public Employe Relations Act, after the sergeant openly
+mocked and questioned a superior officer’s directive and counseling of
+another employe instead of simply challenging the superior officer’s
+imposition of discipline through the customary grievance procedure. This
+stands in stark contrast to the instant matter where Praster has neither
+questioned, nor implied that the orders and directives of the Commissioner
+should not be followed. While Praster’s June 24, 2022 email may have been
+very critical of the Commissioner’s prior email, it nevertheless retains the
+protection of the PLRA, as it was not offensive, defamatory, or opprobrious.
+The Board has recognized that where an individual employe was
+attempting to enforce a collective bargaining agreement, seeking to induce
+group action, or acting on behalf of a group, when he protested alleged
+conduct by the employer, the activity is protected under Article IV of PERA. 3
+Teamsters Local Union No. 773 v. Stroud Township, 52 PPER 71 (Proposed
+Decision and Order, 2021)(citing Black-Knox Foundry & Mill Machinery, Inc. v.
+NLRB, 646 F.2d 113 (4th Cir. 1981)). The record here shows that Praster was
+undoubtedly acting on behalf of a group of employes when he sent his June 24,
+2022 email reply to the Commissioner. Indeed, the text of the email itself
+and the testimony of Praster during the January 26, 2023 hearing clearly
+evidence an almost desperate tone, imploring the Commissioner to take
+seriously the staffing and manpower complaints of the bargaining unit police
+officers. In fact, the record shows that Praster actually drafted the June
+24, 2022 email reply with the advice and consent of the FOP’s executive
+board. Thus, Praster was acting as President of the FOP and on behalf of the
+bargaining unit members when he drafted and sent his June 24, 2022 reply
+email while he was not at work or performing any of his police duties on
+behalf of the City. As such, the June 24, 2022 email constitutes protected
+concerted activity on its face.
+In arguing that the June 24, 2022 email lost the protections of the
+PLRA, the City focuses on just two sentences, which stated: “The commissioner
+has always had a loose relationship with the truth when it comes to promoting
+this department but this email is too far. There’s barely a true sentence in
+it.” (Union Exhibit 2). The City asserts that this language proves that
+Praster called the Commissioner a liar, such that his June 24, 2022 email
+became defamatory, and therefore, unprotected. Of course, in making this
+argument, the City leaves out the context of the remaining portions of
+Praster’s June 24, 2022 email, including the sentence immediately preceding
+the two set forth above, which the City finds so objectionable. That
+sentence provided as follows: “So when I woke up Thursday to read an email
+3 Section 401 of Article IV provides that “[i]t shall be lawful for public
+employes to organize, form, join or assist in employe organizations or to
+engage in lawful concerted activities for the purpose of collective
+bargaining or other mutual aid and protection or to bargain collectively
+through representatives of their own free choice...” 43 P.S. § 1101.401.
+
+This is substantially similar to Section 5 of the PLRA, which governs this
+matter, and which provides that “Employes shall have the right to selforganization, to form, join or assist labor organizations, to bargain
+collectively through representatives of their own choosing, and to engage in
+concerted activities for the purpose of collective bargaining or other mutual
+aid or protection.” 43 P.S. § 211.5.
+9
+
+saying the department was doing tons of great work and gun crime is down – it
+was more than I could take.” (Union Exhibit 2)(emphasis added). This
+language obviously characterized the Commissioner’s June 23, 2022 email as a
+subjective opinion, to which Praster was about to disagree.
+To that end, Praster’s June 24, 2022 email is replete with subjective
+and opinionated statements. Indeed, the June 24, 2022 email begins with “I
+don’t know that I have ever been angrier reading an email than I was when I
+woke up yesterday to this email from the commissioner. That may seem a
+strange reaction to a pretty benign puff email.” (Union Exhibit 2)(emphasis
+added). That Praster characterized the Commissioner’s email as puffery
+should have immediately put the reader on notice that he was also about to
+disagree with his-perceived exaggerations by the Commissioner. At that
+point, Praster continues on to describe his weekend shifts in a way that
+contradicts the Commissioner’s portrayal of the situation in his June 23,
+2022 email. Then, Praster goes on to question how the Commissioner arrived at
+some of his statistics by asking “[s]elf defense homicides shouldn’t count?”
+As the FOP pointed out at the hearing, Praster never actually accused the
+Commissioner of lying at any point in his June 24, 2022 email. While that is
+certainly one potential implication from the June 24, 2022 email, it can also
+be fairly read to imply that the Commissioner’s email is simply wrong,
+inaccurate, or not fully informed on all the details of how the department is
+operating. The last implication is easily gleaned from the penultimate
+paragraph of the June 24, 2022 email, wherein Praster states: “So I implore
+you Commissioner Muldrow: On Monday, wakeup put on a uniform, come to work,
+call your staff together and ask them ‘What is wrong and how do we fix it?’ I
+assure you that’s what this entire department is waiting for – not another
+emoji laden email telling us everything is fine when it’s clearly not.”
+In any event, the Board has held that questioning the honesty of a
+supervisory or management employe is not beyond the protection of the Public
+Employe Relations Act. PSSU Local 668, SEIU v. Washington County, 23 PPER ¶
+23040 (Proposed Decision and Order, 1992), 23 PPER ¶ 23073 (Final Order,
+1992). 4 In Washington County, the Board found that a union steward’s conduct
+was still protected despite comments that a department director exhibited,
+among numerous other things, “craven and dishonest behavior.” While there
+certainly must be a line between what employes can permissibly say, even when
+their statements are clearly expressed as opinions, and what they cannot
+before losing the protection of the PLRA, I am unable to conclude that
+Praster has crossed it in this case. Even Captain Lentz admitted to Praster
+during their labor-management meeting, that the Commissioner’s job was to
+embellish things and put the best face forward for the department, which only
+confirms the point Praster was making in his June 24, 2022 email reply. 5
+
+4 While this case was decided under the Public Employe Relations Act, the same
+analysis applies to matters falling under the PLRA and Act 111, Pennsylvania
+State Trooper Ass’n, supra, as the language of Section 401 of PERA and
+Section 5 of the PLRA are substantially similar.
+5 Although Lentz denied at the hearing that he told Praster that it would have
+been permissible for Praster to make his statements in a speech to City
+Council instead of using email, (N.T. 148-149), this testimony has not been
+accepted as credible. More importantly though, Lentz did not refute or
+contradict Praster’s credible testimony that Lentz stated that the
+Commissioner’s job was to embellish things and put the best face forward for
+the department.
+
+10
+
+Nor does it matter here that Praster made his comments publicly, as
+alleged by the City. In Joseph Brown v. West Reading Borough, 47 PPER 66
+(Proposed Decision and Order, 2015), the Board’s hearing examiner found that
+the union president’s conduct of speaking in his capacity as president at
+multiple public meetings of the borough’s council, during which he was highly
+critical of individually named borough council members, was nevertheless
+protected concerted activity under the PLRA. The same result must obtain
+here, where FOP President Praster replied-all to the Commissioner’s email on
+June 24, 2022 and included the City’s political leadership. Although Praster
+was certainly critical of the Commissioner in his June 24, 2022 reply email,
+his statements contained therein never reached the level of becoming
+offensive, defamatory, or opprobrious, much less so obnoxious or violent as
+to render him unfit for service. To the contrary, Praster’s June 24, 2022
+email was calculated to address legitimate and substantial Union concerns
+regarding staffing, manpower, and forced overtime, and never crossed the line
+into becoming abusive in any way.
+On this point, Praster credibly and persuasively testified that the
+Commissioner had been sending numerous emails during this period, which were
+similar to his June 23, 2022 email, and which had a general theme of
+portraying how great the police department was doing. Praster convincingly
+described how the bargaining unit members were becoming frustrated about
+receiving these emails while they were facing such significant morale and
+staffing issues. Praster credibly testified that he sent his June 24, 2022
+reply email to make it clear that the Commissioner’s portrayal that
+everything was fine in the department was fundamentally misleading. He even
+described how the FOP had urged the Commissioner multiple times to take
+action, but the Commissioner had refused. As a result, the FOP felt that it
+had to call attention to these issues to the City’s political leadership with
+the hope that doing so would finally prompt the Commissioner or the
+politicians to take action. This is not offensive, abusive, or opprobrious
+conduct. In fact, the June 24, 2022 email was not even intemperate,
+inflammatory, or insulting, which the Board has deemed permissible and still
+worthy of the PLRA’s protection. The FOP was faced with a situation where
+its complaints were being largely ignored or dismissed repeatedly. To
+preclude the FOP from ever going public or over the Commissioner’s head with
+its legitimate complaints under these circumstances would be inimical to the
+purposes of Section 5 of the PLRA. Notably, the FOP’s calculation seemed to
+have the desired effect, at least in part, as the record shows that after
+Praster’s June 24, 2022 email, the Commissioner finally took steps to address
+the problems Praster had repeatedly raised. The City has not separately
+justified its imposition of discipline against Praster by offering any
+potential dual motive here. Accordingly, it must be concluded that the City
+has committed unfair labor practices under Section 6(1)(a) and (c) of the
+PLRA. Therefore, the City will be directed to rescind the August 12, 2022
+discipline and to make Praster whole for any losses he may have suffered as a
+result thereof.
+CONCLUSIONS
+The hearing examiner, therefore, after due consideration of the
+foregoing and the record as a whole, concludes and finds as follows:
+1.
+The City is a public employer and political subdivision under Act
+111 as read in pari materia with the PLRA.
+
+11
+
+2.
+The FOP is a labor organization under Act 111 as read in pari
+materia with the PLRA.
+3.
+
+The Board has jurisdiction over the parties hereto.
+
+4.
+The City has committed unfair labor practices in violation of
+Section 6(1)(a) and (c) of the PLRA and Act 111.
+ORDER
+In view of the foregoing and in order to effectuate the policies of the
+PLRA and Act 111, the examiner
+HEREBY ORDERS AND DIRECTS
+that the City shall
+1.
+Cease and desist from interfering with, restraining or coercing
+employes in the exercise of the rights guaranteed in the PLRA and Act 111;
+2.
+Cease and desist from discriminating in regard to hire or tenure
+of employment or any term or condition of employment to encourage or
+discourage membership in any labor organization;
+3.
+Take the following affirmative action which the examiner finds
+necessary to effectuate the policies of the PLRA and Act 111:
+(a)
+Immediately rescind the August 12, 2022 discipline issued to
+Praster, purge any mention of the discipline from his personnel file, and to
+make Praster whole for any and all losses he may have sustained as a result
+of the City’s unfair labor practices, together with six (6%) percent per
+annum interest;
+(b)
+Post a copy of this Decision and Order within five (5) days from
+the effective date hereof in a conspicuous place readily accessible to the
+bargaining unit employes and have the same remain so posted for a period of
+ten (10) consecutive days;
+(c)
+Furnish to the Board within twenty (20) days of the date hereof
+satisfactory evidence of compliance with this Decision and Order by
+completion and filing of the attached Affidavit of Compliance; and
+(d)
+
+Serve a copy of the attached Affidavit of Compliance upon the Union.
+IT IS HEREBY FURTHER ORDERED AND DIRECTED
+
+that in the absence of any exceptions filed with the Board pursuant to 34 Pa.
+Code § 95.98(a) within twenty days of the date hereof, this decision and
+order shall be final.
+SIGNED, DATED AND MAILED at Harrisburg, Pennsylvania, this 11 th day of
+July, 2023.
+PENNSYLVANIA LABOR RELATIONS BOARD
+/s/ John Pozniak______________
+John Pozniak, Hearing Examiner
+12
+
+COMMONWEALTH OF PENNSYLVANIA
+Pennsylvania Labor Relations Board
+FOP WHITE ROSE LODGE 15
+
+:
+:
+:
+:
+:
+
+v.
+CITY OF YORK
+
+Case No. PF-C-22-48-E
+
+AFFIDAVIT OF COMPLIANCE
+The City of York hereby certifies that it has ceased and desisted from
+its violations of Section 6(1)(a) and (c) of the Pennsylvania Labor Relations
+Act; that it has complied with the Proposed Decision and Order as directed
+therein by immediately rescinding the August 12, 2022 discipline issued to
+Praster, purging any mention of the discipline from his personnel file, and
+by making Praster whole for any and all losses he may have sustained as a
+result of the City’s unfair labor practices, together with six (6%) percent
+per annum interest; that it has posted a copy of the Proposed Decision and
+Order as directed therein; and that it has served an executed copy of this
+affidavit on the Union at its principal place of business.
+
+SWORN AND SUBSCRIBED TO before me
+the day and year first aforesaid.
+
+_______________________________
+Signature/Date
+_______________________________
+Title
+
+_________________________________
+Signature of Notary Public
+
+13

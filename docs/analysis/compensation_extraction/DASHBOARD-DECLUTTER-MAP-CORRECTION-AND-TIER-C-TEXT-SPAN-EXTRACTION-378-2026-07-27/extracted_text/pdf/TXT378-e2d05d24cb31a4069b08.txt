@@ -1,0 +1,7747 @@
+EAST NORRITON TOWNSHIP
+MONTGOMERY COUNTY, PENNSYLVANIA
+FINANCIAL STATEMENTS
+AND SUPPLEMENTAL INFORMATION
+YEAR ENDED DECEMBER 31, 2023
+
+EAST NORRITON TOWNSHIP
+MONTGOMERY COUNTY, PENNSYLVANIA
+December 31, 2023
+
+TABLE OF CONTENTS
+
+Independent Auditors’ Report................................................................................................ 5-7
+Management’s Discussion and Analysis ............................................................................. 8-16
+Basic Financial Statements:
+Government-wide Financial Statements:
+Statement of Net Position ......................................................................................... 17-18
+Statement of Activities.............................................................................................. 19-20
+Fund Financial Statements:
+Balance Sheet - Governmental Funds .............................................................................21
+Reconciliation of the Balance Sheet for Governmental Funds
+to the Statement of Government-wide Net Position ..............................................22
+Statement of Revenues, Expenditures and Changes in Fund
+Balances - Governmental Funds ............................................................................23
+Reconciliation of the Statement of Revenues, Expenditures and Changes in
+Fund Balances of Governmental Funds to the Government-Wide
+Statement of Activities ...........................................................................................24
+Statement of Revenues, Expenditures and Changes in Fund
+Balances - Budget and Actual - General Fund.......................................................25
+Statement of Revenues, Expenditures and Changes in Fund
+Balances - Budget and Actual - Fiscal Recovery Fund ........................................26
+Statement of Revenues, Expenditures and Changes in Fund
+Balances - Budget and Actual - Park and Recreation Capital Fund ......................27
+Statement of Revenues, Expenditures and Changes in Fund
+Statement of Net Position - Proprietary Funds ...............................................................28
+Statement of Revenues, Expenses and Changes in Fund Net
+Position - Proprietary Funds ..................................................................................29
+Statement of Cash Flows - Proprietary Funds ................................................................30
+Statement of Fiduciary Net Position - Fiduciary Funds..................................................31
+Statement of Changes in Fiduciary Net Position - Fiduciary Funds ...............................32
+Notes to Financial Statements ....................................................................................... 33-69
+
+Required Supplementary Information:
+Schedule of Changes in the Net Pension Liability and Related Ratios Police Pension Plan ................................................................................................ 71-72
+Schedule of Contributions - Police Pension Plan ...........................................................73
+Schedule of Changes in the Net Pension Liability and Related Ratios Non Uniformed Pension Plan ................................................................................ 74-75
+Schedule of Contributions - Non Uniformed Pension Plan ............................................76
+Schedule of Changes in the Net OPEB Liability and Related Ratios Police............................................................................................................................77
+Combining and Individual Fund Statements and Schedules:
+Combining Balance Sheet - Nonmajor Governmental Funds.........................................79
+Combining Statement of Revenues, Expenditures and Changes in Fund
+Balances - Nonmajor Governmental Funds ...........................................................80
+Combining Statement of Net Position - Fiduciary Funds ...............................................81
+Combining Statement Changes in Net Position - Fiduciary Funds…....……………….82
+
+936 Easton Rd., PO Box 754, Warrington, PA 18976 │130 Almshouse Rd. Suite 201A, Richboro, PA 18954
+215-343-2727 │ www.bbco-cpa.com
+
+INDEPENDENT AUDITORS’ REPORT
+
+Board of Township Supervisors
+East Norriton Township, Pennsylvania
+Report on the Financial Statements
+Opinions
+We have audited the accompanying financial statements of the governmental activities, the
+business-type activities, each major fund, and the aggregate remaining fund information of the
+East Norriton Township (Township), Pennsylvania, as of and for the year ended December 31,
+2023, and the related notes to the financial statements, which collectively comprise the Township’s
+basic financial statements as listed in the table of contents.
+In our opinion, based on our audit, the financial statements referred to above present fairly, in all
+material respects, the respective financial position of the governmental activities, the business-type
+activities, each major fund, and the aggregate remaining fund information of the Township, as of
+December 31, 2023, and the respective changes in financial position, and, where applicable, cash
+flows thereof and the respective budgetary comparison for the general fund, fiscal recovery, and
+park and recreation fund, for the year then ended in accordance with accounting principles
+generally accepted in the United States of America.
+Basis for Opinions
+We conducted our audit in accordance with auditing standards generally accepted in the United
+States of America. Our responsibilities under those standards are further described in the Auditors’
+Responsibilities for the Audit of the Financial Statements section of our report. We are required to
+be independent of East Norriton Township and to meet our other ethical responsibilities, in
+accordance with the relevant ethical requirements relating to our audit. We believe that the audit
+evidence we have obtained is sufficient and appropriate to provide a basis for our audit opinions.
+Responsibilities of Management for the Financial Statements
+Management is responsible for the preparation and fair presentation of the financial statements in
+accordance with accounting principles generally accepted in the United States of America, and for
+the design, implementation, and maintenance of internal control relevant to the preparation and
+fair presentation of financial statements that are free from material misstatement, whether due to
+fraud or error.
+In preparing the financial statements, management is required to evaluate whether there are
+conditions or events, considered in the aggregate, that raise substantial doubt about the East
+Norriton Township, Pennsylvania’s ability to continue as a going concern for twelve months
+beyond the financial statement date, including any currently known information that may raise
+substantial doubt shortly thereafter.
+
+Auditors’ Responsibilities for the Audit of the Financial Statements
+Our objectives are to obtain reasonable assurance about whether the financial statements as a whole
+are free from material misstatement, whether due to fraud or error, and to issue an auditor’s report
+that includes our opinions. Reasonable assurance is a high level of assurance but is not absolute
+assurance and therefore is not a guarantee that an audit conducted in accordance with generally
+accepted auditing standards will always detect a material misstatement when it exists. The risk of
+not detecting a material misstatement resulting from fraud is higher than for one resulting from
+error, as fraud may involve collusion, forgery, intentional omissions, misrepresentations, or the
+override of internal control. Misstatements are considered material if there is a substantial
+likelihood that, individually or in the aggregate, they would influence the judgment made by a
+reasonable user based on the financial statements.
+In performing an audit in accordance with generally accepted auditing standards, we:
+•
+•
+
+•
+
+•
+•
+
+Exercise professional judgment and maintain professional skepticism throughout the audit.
+Identify and assess the risks of material misstatement of the financial statements, whether
+due to fraud or error, and design and perform audit procedures responsive to those risks.
+Such procedures include examining, on a test basis, evidence regarding the amounts and
+disclosures in the financial statements.
+Obtain an understanding of internal control relevant to the audit in order to design audit
+procedures that are appropriate in the circumstances, but not for the purpose of expressing
+an opinion on the effectiveness of East Norriton Township, Pennsylvania's internal control.
+Accordingly, no such opinion is expressed.
+Evaluate the appropriateness of accounting policies used and the reasonableness of
+significant accounting estimates made by management, as well as evaluate the overall
+presentation of the financial statements.
+Conclude whether, in our judgment, there are conditions or events, considered in the
+aggregate, that raise substantial doubt about East Norriton Township, Pennsylvania's
+ability to continue as a going concern for a reasonable period of time.
+
+We are required to communicate with those charged with governance regarding, among other
+matters, the planned scope and timing of the audit, significant audit findings, and certain internal
+control-related matters that we identified during the audit.
+Required Supplementary Information
+Accounting principles generally accepted in the United States of America require that the
+management’s discussion and the historical trend information be presented to supplement the basic
+financial statements. Such information is the responsibility of management and, although not a
+part of the basic financial statements, is required by the Governmental Accounting Standards
+Board who considers it to be an essential part of financial reporting for placing the basic financial
+statements in an appropriate operational, economic, or historical context. We and other auditors
+have applied certain limited procedures to the required supplementary information in accordance
+with auditing standards generally accepted in the United States of America, which consisted of
+inquiries of management about the methods of preparing the information and comparing the
+information for consistency with management’s responses to our inquiries, the basic financial
+statements, and other knowledge we obtained during our audit of the basic financial statements.
+We do not express an opinion or provide any assurance on the information because the limited
+procedures do not provide us with sufficient evidence to express an opinion or provide any
+assurance.
+
+Supplementary Information
+Our audit was conducted for the purpose of forming opinions on the financial statements that
+collectively comprise the East Norriton Township, Pennsylvania’s basic financial statements. The
+combining and individual nonmajor fund financial statements are presented for purposes of
+additional analysis and are not a required part of the basic financial statements. Such information
+is the responsibility of management and was derived from and relates directly to the underlying
+accounting and other records used to prepare the basic financial statements. The information has
+been subjected to the auditing procedures applied in the audit of the basic financial statements and
+certain additional procedures, including comparing and reconciling such information directly to
+the underlying accounting and other records used to prepare the basic financial statements or to
+the basic financial statements themselves, and other additional procedures in accordance with
+auditing standards generally accepted in the United States of America by us and other auditors. In
+our opinion, based on our audit and the report of the other auditors, the combining and individual
+nonmajor fund financial statements are fairly stated, in all material respects, in relation to the basic
+financial statements as a whole.
+
+Bee, Bergvall and Company, P.C.
+Certified Public Accountants
+Warrington, PA
+June 19, 2024
+
+EAST NORRITON TOWNSHIP
+Management’s Discussion and Analysis
+December 31, 2023
+
+The management discussion and analysis document offers readers of these financial statements a narrative
+overview and analysis of the financial activities of East Norriton Township, Pennsylvania for the fiscal year
+ended December 31, 2023. Readers are encouraged to consider the information here in conjunction with
+the Township’s financial statements, which immediately follow this section.
+The Management Discussion and Analysis is an element of the reporting model adopted by the
+Governmental Accounting Standards Board (“GASB”) in their Statement No. 34, Basic Financial
+Statements – and Management’s Discussion and Analysis – for State and Local Governments, issued June
+1999. Certain comparative information between the current year and the prior year is required to be
+presented in this section.
+Financial Highlights of 2023
+•
+•
+•
+•
+•
+
+•
+•
+•
+
+There were significant increases in infrastructure investments including construction of a
+new multi-purpose building to accommodate the growing number of program offerings
+for Township residents.
+The Township continued its emphasis on financial processes that promote procurement
+efficiencies and helped control spending and create cost savings across all departments and
+funds.
+Overall tax collections experienced another record year totaling $8,879,317, an increase of
+3.1% over 2022 $8,606,757. This was despite significant negative pressures on property
+resale tax revenue which declined 24% due to market increases in mortgage rates.
+Earned Income Tax revenue posted a 7.5% increase over 2022 ($3,614,796 vs $3,361,788)
+indicative of a strong Township labor market.
+2023’s stock market rebound from 2022’s negative performance resulted in annual net
+returns of 11.3% (police) and 9.48% (non-uniformed) for the Township’s two defined
+benefit pension plans. This helped decrease net pension liability to $4,801,035 in 2023
+compared to $7,005,374 in 2022.
+The Township overall debt decreased 26.8% or $2,654,289 as of December 31, 2023.
+The combination of strong revenue and controlled expenses negated the anticipated use of
+fund balance in the General Fund in 2023.
+The Township’s general fund unassigned fund balance rose to $5,535,024 compared to
+2022’s $5,369,408.
+
+Overview of the Financial Statements
+This discussion and analysis document is intended to serve as an introduction to East Norriton Township’s
+basic financial statements. The statements consist of three components: 1) government-wide financial
+statements, 2) fund financial statements, and 3) notes and other required supplementary information. The
+basic financial statements present two different views of the Township through the use of government-wide
+statements and fund financial statements. In addition, this report contains other supplemental information
+that will enhance the reader’s understanding the financial condition of East Norriton Township.
+
+-8-
+
+EAST NORRITON TOWNSHIP
+Management’s Discussion and Analysis
+December 31, 2023
+
+FINANCIAL STATEMENTS
+Figure A-1 illustrates how the various sections of this annual report are arranged and related to each other.
+Each section is described in further detail following Figure A-1.
+Figure A-1
+Organization of the East Norriton Township Annual Financial Report
+
+Management’s
+Discussion
+and Analysis
+
+Basic
+Financial
+Statements
+
+Required
+Supplementary
+Information
+
+Government-wide
+Financial
+Statements
+
+Fund
+Financial
+Statements
+
+Notes to the
+Basic Financial
+Statements
+
+Summary
+
+Detail
+
+BASIC FINANCIAL STATEMENTS. The basic financial statements are comprised of three segments government-wide financial statements, fund financial statements, and notes to the basic financial
+statements.
+GOVERNMENT-WIDE FINANCIAL STATEMENTS. The government-wide statements report
+information about the Township as a whole using accounting methods similar to those used by privatesector companies. Reports provided include 1) the statement of net position and 2) changes in net position
+from operating results.
+The statement of net position reports information on all the Township’s assets and deferred outflows of
+resources and liabilities and deferred inflows of resources with the difference between the two reported as
+net position. Over time, increases or decreases in net position may be a useful indicator of whether the
+financial position of the Township is improving or deteriorating. To assess the Township’s overall financial
+health, you need to consider additional non-financial factors such as changes in the Township’s property
+tax base and the condition of highways and other infrastructures.
+
+-9-
+
+EAST NORRITON TOWNSHIP
+Management’s Discussion and Analysis
+December 31, 2023
+
+The changes in net position from operating results presents information showing how the Township’s net
+position changed during the most recent fiscal year. All changes in net position are reported as soon as
+events occur, regardless of the timing of related cash flows. Accordingly, revenues and expenses are
+reported in this statement for some items that will only result in cash flows in future fiscal periods (e.g., tax
+receivables, uncompensated absences, and accrued payroll).
+In the government-wide financial statements, the Township’s activities are divided into two categories governmental activities and business-type activities. The governmental activities of the Township include
+general government, public safety, public works, parks and recreation, zoning and code enforcement, and
+other public services and are principally supported by taxes and intergovernmental revenue. The businesstype activities of the Township include the sewer revenue fund and are supported entirely or in a large part
+through user fees and charges.
+FUND FINANCIAL STATEMENTS. The fund financial statements provide more detailed information
+about the Township’s funds, focusing on its most significant or ‘major’ funds - not the Township as a whole.
+East Norriton Township, like other local governments, uses fund accounting to track specific sources of
+funding and spending on particular programs as may be required by state law or bond covenants, or to
+control and manage money for particular purposes (such as repaying its long-term debts), or to show that it
+is properly using certain revenues (such as federal grants). All the funds of the Township can be divided
+into three categories: governmental funds, proprietary funds, and fiduciary funds.
+Governmental funds. Most of the Township’s basic services are included in governmental funds which
+generally focus on 1) how cash, and other financial assets that can be readily converted to cash, flow in and
+out and 2) the balances available at the end of the fiscal year. Consequently, the governmental funds
+statements provide a detailed short-term view that helps you determine whether there are more or fewer
+financial resources that can be spent in the near future to finance the Township’s programs. Because this
+information does not encompass the additional long-term focus of the government-wide statements,
+additional information explains the relationship (or differences) between them. East Norriton Township
+maintains nine individual governmental funds, the largest of which is the general fund. Annual budgets are
+adopted for each fund.
+Proprietary funds. Services for which the Township charges a fee are generally reported in the proprietary
+fund statements. Proprietary funds provide the same type of information as the government-wide
+statements, only in more detail. The Township’s enterprise fund is the same as its business-type activities
+but provides more detail and additional information, such as cash flows. East Norriton Township maintains
+a single proprietary fund - the sewer revenue fund - used to track the operations of its sanitary sewer
+collection system.
+Fiduciary funds. The Township is the trustee, or fiduciary, for assets that belong to others, such as the
+pension plans. The Township is responsible for ensuring that the assets reported in these funds are used
+only for their intended purposes and by those to whom the assets belong. The Township excludes these
+activities from the government-wide financial statements because it cannot use these assets to finance its
+operations. Fiduciary fund reporting focuses on net position and changes in net position. The Township’s
+two fiduciary funds are pension trust funds for the police and non-uniformed personnel.
+NOTES AND OTHER REQUIRED SUPPLEMENTAL INFORMATION. The financial statements
+also include notes that explain some of the information in the statements and provide more detailed data.
+The statements are followed by a section of required supplemental information that further explains and
+supports the pension plans of the Township.
+
+-10-
+
+EAST NORRITON TOWNSHIP
+Management’s Discussion and Analysis
+December 31, 2023
+
+Figure A-2 summarizes the major features of the Township’s financial statements, including the portion of
+the Township’s activities they cover and the types of information they contain.
+Figure A-2
+Major Features of the Government-Wide and Fund Financial Statements
+Government-wide
+Statements
+
+Governmental Funds
+
+Fund Financial Statements
+Proprietary Fund
+
+Fiduciary Funds
+
+Scope
+
+Entire Township
+(except Fiduciary
+Funds)
+
+The activities of the
+Township that are
+not proprietary or
+fiduciary
+
+Activities the
+Township operates
+similar to private
+businesses: Sewer
+Revenue Account
+
+Instances in which
+the Township
+administers resources
+on behalf of someone
+else, such as pension
+plans
+
+Required
+financial
+statements
+
+• Statement of Net
+Position
+
+• Balance Sheet
+
+• Statement of Net
+Position
+
+• Statement of
+Fiduciary Net
+Position
+
+• Statement of
+activities
+
+• Statement of
+Revenues,
+Expenditures and
+Changes in Fund
+Balances (Deficit)
+
+• Statement of
+revenues,
+expenses and
+changes in Net
+Position
+
+• Statement of
+Changes in
+Fiduciary Net
+Position
+
+• Statement of cash
+flows
+Accounting
+basis and
+measurement
+focus
+
+Accrual accounting
+and economic
+resources focus
+
+Modified accrual
+accounting and
+current financial
+focus
+
+Accrual accounting
+and economic
+resources focus
+
+Accrual accounting
+and economic
+resources focus
+
+Type of
+asset/liability
+information
+
+All assets and
+liabilities, both
+financial and capital,
+short-term and longterm
+
+Generally, assets
+expected to be used
+up and liabilities that
+come due during the
+year or soon thereafter; no capital
+assets or long-term
+liabilities included
+
+All assets and
+liabilities, both
+financial and capital,
+and short-term and
+long-term
+
+All assets and
+liabilities, both shortterm and long-term;
+funds do not
+currently contain
+capital assets,
+although they can
+
+Type of
+inflow/
+outflow
+information
+
+All revenues and
+expenses during the
+year, regardless of
+when cash is
+received or paid
+
+Revenues for which
+cash is received
+during or soon after
+the end of the year;
+expenditures when
+goods or services
+have been received
+and the related
+liability is due and
+payable
+
+All revenues and
+expenses during the
+year, regardless of
+when cash is
+received or paid
+
+All additions and
+deductions during the
+year, regardless of
+when cash is
+received or paid
+
+-11-
+
+EAST NORRITON TOWNSHIP
+Management’s Discussion and Analysis
+December 31, 2023
+
+GOVERNMENT-WIDE FINANCIAL ANALYSIS
+At the end of the fiscal year, the Township is able to report positive balances of net position, both for the
+government as a whole, as well as for its separate governmental and business-type activities (there are no
+restricted assets in the Township’s business-type activities). As indicated in Figure A-3, the assets and
+deferred outflows of resources for East Norriton Township as a whole exceeded its liabilities and deferred
+inflows of resources at the end of the year by $34,392,929.
+Figure A-3 Condensed Statement of Net Position
+Governmental Activities
+2023
+2022
+Current and Other Assets
+Capital Assets
+Total Assets
+
+$
+
+27,340,944
+12,948,187
+40,289,131
+
+$
+
+28,344,998
+10,963,796
+39,308,794
+
+Business-Type Activities
+2023
+2022
+$
+
+164,062
+164,062
+
+$
+
+Total
+2023
+
+69,507
+69,507
+
+$
+
+27,505,006
+12,948,187
+40,453,193
+
+2022
+$
+
+28,414,505
+10,963,796
+39,378,301
+
+Deferred Outflows of Resources
+
+2,786,254
+
+4,665,801
+
+-
+
+-
+
+2,786,254
+
+4,665,801
+
+Long-Term Liabilities
+Other Liabilities
+Total Liabilities
+
+7,179,975
+530,868
+7,710,843
+
+9,835,813
+647,947
+10,483,760
+
+85,683
+85,683
+
+14,544
+14,544
+
+7,179,975
+616,551
+7,796,526
+
+9,835,813
+662,491
+10,498,304
+
+Deferred Inflows of Resources
+
+1,049,992
+
+501,566
+
+-
+
+-
+
+1,049,992
+
+501,566
+
+Net Position
+Net Investment in Capital Assets
+Restricted
+Unrestricted
+Total Net Position
+
+12,846,720
+926,613
+20,541,217
+34,314,550
+
+10,810,698
+700,941
+21,477,630
+32,989,269
+
+78,379
+78,379
+
+54,963
+54,963
+
+12,846,720
+926,613
+20,619,596
+34,392,929
+
+10,810,698
+700,941
+21,532,593
+33,044,232
+
+$
+
+$
+
+$
+
+$
+
+$
+
+$
+
+Several noteworthy aspects of the Township’s financial operations actively influenced the net position
+numbers for the year including:
+•
+
+The Township’s commitment to infrastructure investment including construction of a new
+multi-purpose building to accommodate the growing number of program offerings for
+Township residents.
+
+•
+
+Positive investment returns for the Township’s two defined benefit pension plans facilitated
+a reduction in long-term pension liabilities.
+
+•
+
+Continued emphasis on, and acceptance of financial processes promoting departmental
+procurement efficiencies and focus on departmental budget monitoring responsibilities.
+
+•
+
+Increased communication emphasizing the Township’s financials and their important
+relationship to the financial health of our residential and business communities.
+
+-12-
+
+EAST NORRITON TOWNSHIP
+Management’s Discussion and Analysis
+December 31, 2023
+
+Figure A-4 Condensed Statement of Changes in Net Position
+Governmental Activities
+2023
+2022
+Revenues:
+Program revenues:
+Charges for services
+$
+1,037,280 $
+999,539
+Operating grants and contributions
+1,048,107
+1,085,683
+Capital grants and contributions
+513,605
+1,530,340
+General revenues:
+Property taxes
+2,650,320
+2,614,079
+6,308,253
+6,075,795
+Other taxes
+Grants and contributions not
+500
+restricted to specific programs
+1,138,199
+464,204
+Investment income and rent
+Miscellaneous
+831,063
+691,021
+Total Revenues
+13,526,827
+13,461,161
+
+Business-Type Activities
+2023
+2022
+
+$
+
+21,002
+10,120
+-
+
+$
+
+6,300
+11,040
+-
+
+Total
+2023
+
+$
+
+1,058,282
+1,058,227
+513,605
+
+2022
+
+$
+
+1,005,839
+1,096,723
+1,530,340
+
+-
+
+-
+
+2,650,320
+6,308,253
+
+2,614,079
+6,075,795
+
+4,446
+35,568
+
+1,804
+57,898
+77,042
+
+1,142,645
+831,063
+13,562,395
+
+500
+466,008
+748,919
+13,538,203
+
+Expenses:
+General government
+Public safety
+Highways and streets
+Culture and recreation
+Miscellaneous
+Debt service interest
+Sewer
+Total Expenses
+
+1,561,425
+5,140,723
+1,156,389
+1,037,607
+3,607,718
+4,360
+12,508,222
+
+1,312,232
+5,091,358
+2,809,035
+804,758
+3,931,567
+11,825
+13,960,775
+
+452,318
+452,318
+
+481,633
+481,633
+
+1,561,425
+5,140,723
+1,156,389
+1,037,607
+3,607,718
+4,360
+452,318
+12,960,540
+
+1,312,232
+5,091,358
+2,809,035
+804,758
+3,931,567
+11,825
+481,633
+14,442,408
+
+Change in Net Position Before Transfers
+and Special Item
+Gain (loss) on sale of assets
+Transfers, Net
+
+1,018,605
+(440,166)
+
+(499,614)
+(700,166)
+
+(416,750)
+440,166
+
+(404,591)
+700,166
+
+601,855
+-
+
+(904,205)
+-
+
+578,439
+
+(1,199,780)
+
+23,416
+
+295,575
+
+601,855
+
+(904,205)
+
+(240,612)
+54,963 $
+
+33,791,074
+34,392,929
+
+33,948,437
+$ 33,044,232
+
+Change in Net Position
+Net Position - Beginning of Year
+Net Position - End of Year
+
+$
+
+33,736,111
+34,314,550
+
+$
+
+34,189,049
+32,989,269
+
+$
+
+54,963
+78,379
+
+$
+
+Governmental activities. East Norriton Township receives the majority of its operating revenues from
+taxes commonly referred to as Act 511 Taxes (Earned Income, Business Privilege, Local Services, and Real
+Estate Transfer Taxes) and Real Estate Taxes. Three of the four Act 511 categories reached milestone highs
+with Earned Income tax collections surpassing $3.6 million. The market increase of mortgage rates resulted
+in a slowdown in property resales and Real Estate Transfer taxes declined compared to 2022. In aggregate,
+Act 511 Tax revenue exceeded original budget projections and rose 3.9% over 2022. Real Estate Tax
+collections remained steady at $2,650,320 compared to 2022’s $2,614,079.
+The Township consistently receives a significant amount of revenues each year in the form of Pennsylvania
+State grants. These annual revenues are Liquid Fuels Grant, Pension State Aid Grant, Recycling
+Performance Grant, and the Fireman’s Relief Fund Grant.
+
+-13-
+
+EAST NORRITON TOWNSHIP
+Management’s Discussion and Analysis
+December 31, 2023
+
+East Norriton Township operates a substantial parks and recreation program throughout the Township. The
+Township typically provides its residents an extensive offering of recreation programs and participation in
+these programs are funded largely through user fees. Additionally, the Township has brought renewed focus
+on its senior citizen population by offering a full range of programs and activities for the population group.
+Continued controlled spending, aggressive tax collection, licenses and permits, improvements, and
+scheduled debt reduction all remain components of a long-term strategy to realize positive fiscal health.
+Business-type activities. Prior to its sale in June 2020, East Norriton Township was the owner and operator
+of a sanitary sewer collection system which provided service to almost five thousand (5,000) Township
+properties. The Township continues to be a member of the East Norriton-Plymouth-Whitpain Joint Sewer
+Authority (“JSA”) which provides 100 percent of the sewer treatment services for the collection system.
+The Sewer Revenue Fund is the Township’s sole proprietary fund and makes up all the business-type
+activities.
+The net position for all business-type activities was $78,379 in 2023 as the Township continued expensing
+costs associated with closing down the sewer collection system. After all costs are reallocated and system
+activities cease, the Township’s business type activities will have ended.
+
+TOWNSHIP FUNDS FINANCIAL ANALYSIS
+Governmental Funds. The East Norriton Township Board of Supervisors annually approves budgets for
+all Township funds and authorizes the associated funding sources. As part of the annual budget process for
+2023, the Board of Supervisors reviewed multi-year financial projections of the Township’s governmental
+funds. Financial reports are reviewed throughout the year and expenditures are approved at each monthly
+public meeting.
+The fund balance for all governmental funds contracted to $26,633,939, a decline from the prior year total
+of $27,410,457. As stated elsewhere, the decrease is attributed largely to significant increases in
+infrastructure spending, particularly construction of the Township’s new multi-purpose building, and in the areas of
+highways and streets, combined with marginal increases in non-grant and contributions revenue for the year.
+The general fund is the chief operating fund of East Norriton Township. East Norriton Township’s fiscal
+policy requires that the Township maintain an available fund balance equal to 16.7 percent of operating
+expenditures, plus transfers out, in case of unforeseen needs or opportunities, in addition to meeting the
+cash flow needs of the Township. The December 31, 2023 fund balance satisfies that policy.
+East Norriton Township maintains various park facilities throughout the Township in addition to providing
+an extensive offering of recreation programs to its residents. Participation in these programs is funded
+through user fees and the parks and recreation fund, along with the parks and recreation capital fund, are
+part of the Township’s governmental funds group.
+Street light and fire protection services are provided by the Township and funded through annual tax
+assessments. Capital projects are also financed through tax assessments. All monies are maintained in
+separate funds as required by law. These funds are classified as non-major governmental funds and
+comprise the remainder of the governmental funds.
+
+-14-
+
+EAST NORRITON TOWNSHIP
+Management’s Discussion and Analysis
+December 31, 2023
+
+Proprietary Funds. As mentioned elsewhere in this discussion, prior to its sale in June 2020, the Township
+maintained a sanitary sewer collection system. The sewer revenue fund is used to manage operating
+expenses and collect fees for the system. The Board of Supervisors reviews and publicly approves this
+fund’s financial reports monthly.
+As of December 31, 2023, the sewer revenue fund total net position was $78,379, a marginal increase from
+the 2022 net position of $54,963. These net position fluctuations should diminish as significant
+expenditures are no longer charged to this fund and revenue collections are limited to accounts with
+declining pre-sale balances.
+CAPITAL ASSETS AND DEBT ADMINISTRATION
+Capital Assets. East Norriton Township’s investment in capital assets for its governmental and businesstype activities rose $1,237,549 to $12,948,187 (net of accumulated depreciation) as of December 31, 2023.
+The Township’s capital assets include roads, land and land improvements, machinery, equipment, and
+vehicles.
+Capital assets are generally acquired through the Township’s capital projects fund, which has a dedicated
+funding source via real estate taxes. Assets are additionally acquired through the use of funds received
+from the Commonwealth of Pennsylvania through its annual allocation of motor vehicle fuel tax monies.
+Figure A-5 summarizes the Township’s capital assets as of December 31, 2023.
+
+Figure A-5 Capital Asset Activity for the year ended December 31, 2023
+Beginning
+Balance
+Non-Depreciable Assets
+Land
+Infrastructure
+Other Capital Assets
+Land improvements
+Buildings and improvements
+Machinery and equipment
+Vehicles
+Less: accumulated depreciation
+on capital assets
+Totals
+
+$
+
+$
+
+2,417,243
+5,090,699
+
+Ending
+Balance
+
+Net Additions
+(Deletions)
+$
+
+-
+
+$
+
+2,417,243
+5,090,699
+
+4,570,457
+2,806,727
+3,552,892
+3,837,621
+
+(143,577)
+1,268,142
+484,459
+(60,760)
+
+4,426,880
+4,074,869
+4,037,351
+3,776,861
+
+(10,565,001)
+
+(310,715)
+
+(10,875,716)
+
+1,237,549
+
+$ 12,948,187
+
+11,710,638
+
+$
+
+-15-
+
+EAST NORRITON TOWNSHIP
+Management’s Discussion and Analysis
+December 31, 2023
+
+Debt Administration. Total non-pension and OPEB related long-term debt for the fell $48,385 at the end of
+2023 compared to year end 2022. The larger portion of this debt are capital leases associated with major
+equipment purchases.
+East Norriton Township’s total debt dropped sharply largely attributable to decreases in net pension
+liabilities occurring as a result of the stock market’s 2023 rebound from 2022’s negative performance. The
+Township’s general obligation bond rating is AA+ from Moody’s Investors Service, and any debt is backed
+by the full faith and credit of the Township.
+Figure A-6 Outstanding Debt Activity for the year ended December 31, 2023
+Beginning
+Balance
+Capital leases
+Compensated absenses
+Net pension liability
+Net OPEB liability
+
+$
+
+$
+
+153,098
+144,404
+7,005,374
+2,584,568
+9,887,444
+
+Additions
+$
+
+$
+
+16,937
+3,065,158
+130,757
+3,212,852
+
+Deletions
+
+Ending
+Balance
+
+$
+
+(51,631) $
+101,467
+(13,691)
+147,650
+(5,269,497)
+4,801,035
+(532,322)
+2,183,003
+$ (5,867,141) $ 7,233,155
+
+FACTORS BEARING ON THE TOWNSHIP’S FUTURE
+As noted earlier, the Township relies mainly on the revenues generated by Act 511 and Real Estate Taxes
+to fund its governmental-type activities. Accordingly, the health and growth of the local economy and tax
+base moving forward will play a significant role in the future financial condition of the Township. Key
+economic indicators for the Township in 2024 will include:
+•
+•
+•
+•
+•
+•
+•
+
+Growth of the residential construction market with additional luxury apartment complexes
+Active business development community focusing on retaining and recruiting businesses
+Continued oversight, management and reform of pension and OPEB liabilities
+Recognition of East Norriton Township as a desirable place to live and work
+Review and reform of the Township’s heath care benefits offerings
+Effective management and use of the Township reserves
+Ability to maintain consistently high tax collection rate
+
+CONTACTING THE TOWNSHIP’S FINANCIAL MANAGEMENT
+This financial report is designed to provide the Township’s citizens, taxpayers, customers, and creditors
+with a general overview of the Township’s finances and to demonstrate the Township’s accountability for
+the money it receives. Questions concerning this report or requests for additional information should be
+directed to the Director of Finance, East Norriton Township, 2501 Stanbridge Street, East Norriton, PA
+19401-1616.
+
+-16-
+
+EAST NORRITON TOWNSHIP
+STATEMENT OF NET POSITION
+December 31, 2023
+
+Governmental
+Activities
+
+Primary Government
+Business-Type
+Activities
+
+Total
+
+ASSETS
+Current Assets
+Cash and cash equivalents
+
+$
+
+25,547,591
+
+$
+
+82,160
+
+$
+
+25,629,751
+
+3,781
+
+(3,781)
+
+1,259,904
+529,668
+
+85,683
+-
+
+1,259,904
+85,683
+529,668
+
+27,340,944
+
+164,062
+
+27,505,006
+
+2,417,243
+5,090,699
+4,426,880
+4,074,869
+4,037,351
+3,776,861
+
+-
+
+2,417,243
+5,090,699
+4,426,880
+4,074,869
+4,037,351
+3,776,861
+
+(10,875,716)
+
+-
+
+(10,875,716)
+
+Total Capital Assets (net)
+
+12,948,187
+
+-
+
+12,948,187
+
+TOTAL ASSETS
+
+40,289,131
+
+164,062
+
+40,453,193
+
+634,007
+2,152,247
+
+-
+
+634,007
+2,152,247
+
+Internal balances
+Taxes receivable
+Sewer rents receivable
+Other receivables
+Total Current Assets
+Capital Assets (net of accumulated depreciation)
+Land
+Infrastructure
+Site improvements
+Buildings and building improvements
+Machinery and equipment
+Vehicles
+Accumulated depreciation
+
+-
+
+DEFERRED OUTFLOWS OF RESOURCES
+Deferred Outflows - OPEB
+Deferred Outflows - Pension
+Total Deferred Outflows of Resources
+
+-17-
+
+$
+
+2,786,254
+
+$
+
+-
+
+$
+
+2,786,254
+
+Primary Government
+Business-Type
+Activities
+
+Governmental
+Activities
+
+LIABILITIES
+Current Liabilities
+Accounts payable
+Payroll and withholding taxes payable
+Unearned revenue
+Capital lease payable, current maturity
+
+$
+
+Total Current Liabilities
+
+169,605
+182,293
+125,790
+53,180
+
+$
+
+85,683
+-
+
+$
+
+Total
+
+169,605
+182,293
+211,473
+53,180
+
+530,868
+
+85,683
+
+616,551
+
+Compensated absences
+
+147,650
+
+-
+
+147,650
+
+Capital lease payable
+
+48,287
+
+-
+
+48,287
+
+Net OPEB liability
+Net pension liability
+
+2,183,003
+
+-
+
+2,183,003
+
+Long-term Liabilities
+
+4,801,035
+
+-
+
+4,801,035
+
+Total Long-term Liabilities
+
+7,179,975
+
+-
+
+7,179,975
+
+TOTAL LIABILITIES
+
+7,710,843
+
+85,683
+
+7,796,526
+
+Deferred Inflows - OPEB
+
+580,686
+
+-
+
+580,686
+
+Deferred Inflows - Pension
+
+469,306
+
+-
+
+469,306
+
+Deferred Inflows - Sewer
+
+-
+
+-
+
+-
+
+DEFERRED INFLOWS OF RESOURCES
+
+Total Deferred Inflows of Resources
+NET POSITION
+Net investment in capital assets
+Restricted
+Unrestricted
+TOTAL NET POSITION
+
+1,049,992
+
+-
+
+1,049,992
+
+12,846,720
+926,613
+
+-
+
+12,846,720
+926,613
+
+20,541,217
+$
+
+34,314,550
+
+78,379
+$
+
+78,379
+
+20,619,596
+$
+
+34,392,929
+
+The notes to the financial statements are an integral part of this statement.
+-18-
+
+EAST NORRITON TOWNSHIP
+STATEMENT OF ACTIVITIES
+For the Year Ended December 31, 2023
+
+Charges for
+Services
+
+Expenses
+Primary Government
+Governmental Activities:
+General government
+Public safety
+Highways and Streets
+Culture and recreation
+Miscellaneous
+Debt service interest
+
+$
+
+Total Governmental Activities
+
+Program Revenues
+Operating
+Capital
+Grants and
+Grants and
+Contributions
+Contributions
+
+1,561,425 $
+5,140,723
+1,156,389
+1,037,607
+3,607,718
+4,360
+
+735,400 $
+131,602
+170,278
+-
+
+11,255 $
+558,558
+478,294
+-
+
+313,605
+200,000
+-
+
+12,508,222
+
+1,037,280
+
+1,048,107
+
+513,605
+
+452,318
+
+21,002
+
+10,120
+
+-
+
+452,318
+
+21,002
+
+10,120
+
+-
+
+12,960,540 $
+
+1,058,282 $
+
+1,058,227 $
+
+513,605
+
+Business -Type Activities
+Sewer operations
+Total Business-Type Activities
+Total Primary Government
+
+$
+
+General Revenues
+Taxes:
+Real estate taxes
+Real estate transfer tax
+Earned income taxes
+Local services taxes
+Business Privilege
+Street light assessment
+Investment income
+Miscellaneous revenues
+Gain on sale of capital assets
+Transfers
+Total General Revenues and Transfers
+Change in Net Position
+Net Position - Beginning, restated
+Net Position - Ending
+
+-19-
+
+Net (Expense) Revenue and
+Changes in Net Position
+Primary Government
+Governmental
+Business-Type
+Activities
+Activities
+
+$
+
+$
+
+$
+
+Total
+
+(814,770) $
+(4,450,563)
+(364,490)
+(667,329)
+(3,607,718)
+(4,360)
+
+-
+
+(814,770)
+(4,450,563)
+(364,490)
+(667,329)
+(3,607,718)
+(4,360)
+
+(9,909,230)
+
+-
+
+(9,909,230)
+
+-
+
+(421,196)
+
+(421,196)
+
+-
+
+(421,196)
+
+(421,196)
+
+(9,909,230)
+
+(421,196)
+
+(10,330,426)
+
+2,650,320
+590,562
+3,614,796
+523,263
+1,500,376
+79,256
+1,138,199
+713,521
+117,542
+(440,166)
+
+4,446
+440,166
+
+2,650,320
+590,562
+3,614,796
+523,263
+1,500,376
+79,256
+1,142,645
+713,521
+117,542
+-
+
+10,487,669
+
+444,612
+
+10,932,281
+
+578,439
+33,736,111
+
+23,416
+54,963
+
+601,855
+33,791,074
+
+34,314,550 $
+
+78,379 $
+
+34,392,929
+
+The notes to the financial statements are an integral part of this statement.
+-20-
+
+EAST NORRITON TOWNSHIP
+BALANCE SHEET - GOVERNMENTAL FUNDS
+December 31, 2023
+
+General
+ASSETS
+Cash and cash equivalents
+Restricted cash
+Taxes receivable
+Other receivables
+
+Fiscal
+Recovery
+
+Park and
+Recreation
+Capital
+
+4,456,921 $
+11,068
+1,026,924
+316,953
+33,070
+
+-
+
+-
+
+-
+
+2,450
+
+$
+
+5,844,936 $
+
+159,827 $
+
+204,580 $
+
+20,005,992 $
+
+928,031 $
+
+27,143,366
+
+$
+
+117,483 $
+182,293
+
+-
+
+1,753 $
+-
+
+38,815 $
+-
+
+11,554 $
+-
+
+169,605
+182,293
+
+Due to other funds
+Unearned revenue
+
+-
+
+125,790
+
+-
+
+31,739
+-
+
+-
+
+31,739
+125,790
+
+Total Liabilities
+
+299,776
+
+125,790
+
+1,753
+
+70,554
+
+11,554
+
+509,427
+
+-
+
+104,709
+14,784
+8,401
+788,583
+-
+
+104,709
+14,784
+18,537
+788,583
+202,827
+34,037
+
+Total Assets
+LIABILITIES
+Accounts
+Interfund payable
+balances
+Accrued payroll and related liabilities
+
+$
+
+4,580 $
+200,000
+
+20,004,029 $
+1,963
+-
+
+911,166 $
+1,700
+12,715
+
+Total
+Governmental
+Funds
+
+$
+
+Interfund
+Due
+from other
+balances
+funds
+
+159,827 $
+-
+
+Other
+Governmental
+Funds
+
+Capital
+Projects
+
+25,536,523
+11,068
+1,030,587
+529,668
+35,520
+
+FUND BALANCES
+Restricted:
+Street light
+Fire
+Culture and recreation
+Highways and streets
+Capital
+General government
+Assigned:
+Capital
+Unassigned
+
+10,136
+-
+
+34,037
+
+202,827
+-
+
+5,535,024
+
+-
+
+-
+
+19,935,438
+-
+
+-
+
+19,935,438
+5,535,024
+
+Total Fund Balances
+
+5,545,160
+
+34,037
+
+202,827
+
+19,935,438
+
+916,477
+
+26,633,939
+
+5,844,936 $
+
+159,827 $
+
+204,580 $
+
+20,005,992 $
+
+928,031 $
+
+27,143,366
+
+Total Liabilities and Fund Balances
+
+$
+
+The notes to the financial statements are an integral part of this statement.
+-21-
+
+EAST NORRITON TOWNSHIP
+RECONCILIATION OF THE BALANCE SHEET FOR GOVERNMENTAL FUNDS TO THE
+STATEMENT OF GOVERNMENT-WIDE NET POSITION
+December 31, 2023
+
+TOTAL GOVERNMENTAL FUND BALANCES
+Capital assets used in governmental activities are not financial resources
+and, therefore, are reported in the funds.
+Cost of capital assets
+Accumulated depreciation
+
+$ 26,633,939
+
+$
+
+23,823,903
+(10,875,716)
+
+12,948,187
+
+Because the focus of governmental funds is on short-term financing,
+some assets will not be available to pay for current-period
+expenditures. Those assets (such as certain receivables) are offset by
+deferred revenues in the governmental funds, and thus are not
+included in fund balance.
+Property tax receivables
+Earned income taxes receivable
+
+62,261
+167,056
+
+229,317
+
+Deferred inflows and outflows or resources related to pensions are applicable
+to future periods and, therefore, are not reported in the funds.
+Deferred OPEB
+Deferred Pension
+
+53,321
+1,682,941
+
+1,736,262
+
+Long term liabilities are not due and payable in the current period and
+therefore, are not reported as liabilities in the funds. Those liabilities
+consist of the following:
+Capital asset financing liabilities
+
+(101,467)
+
+Net OPEB liability
+
+(2,183,003)
+
+Net pension liability
+
+(4,801,035)
+
+Compensated absences
+
+(147,650)
+
+TOTAL NET POSITION OF GOVERNMENTAL ACTIVITIES
+
+(7,233,155)
+$ 34,314,550
+
+The notes to the financial statements are an integral part of this statement.
+-22-
+
+EAST NORRITON TOWNSHIP
+STATEMENT OF REVENUES, EXPENDITURES, AND CHANGES IN FUND BALANCES GOVERNMENTAL FUNDS
+For the Year Ended December 31, 2023
+
+Revenues
+
+Fiscal
+Recovery
+
+General
+
+Taxes:
+Property
+Real estate transfer
+Earned income
+Local service
+Business privilege
+Street light assessment
+Fees, licenses and permits
+Fines and forfeitures
+Investment income
+Intergovernmental revenues
+Charges for services
+Other
+
+$
+
+Total Revenues
+Expenditures
+Current:
+General government
+Public safety
+Highways and streets
+Culture and recreation
+Payroll taxes and employee benefits
+Insurance
+Miscellaneous
+Debt service:
+Principal
+Interest
+
+Capital
+Projects
+
+Other
+Governmental
+Funds
+
+Total
+Governmental
+Funds
+
+1,671,165 $
+590,562
+3,746,229
+523,263
+1,500,376
+1,032,484
+40,951
+182,367
+789,416
+84,985
+398,508
+
+$
+9,533
+31,425
+-
+
+$
+961
+200,000
+6,677
+5,545
+
+346,777 $
+890,555
+14,114
+40,442
+
+609,853 $
+79,256
+54,783
+526,757
+181,651
+-
+
+2,627,795
+590,562
+3,746,229
+523,263
+1,500,376
+79,256
+1,032,484
+40,951
+1,138,199
+1,561,712
+273,313
+444,495
+
+10,560,306
+
+40,958
+
+213,183
+
+1,291,888
+
+1,452,300
+
+13,558,635
+
+1,362,420
+4,745,620
+911,932
+7,000
+3,445,055
+161,387
+1,276
+
+12,354
+-
+
+1,705,427
+-
+
+7,248
+134,164
+68,706
+47,095
+-
+
+414,284
+309,527
+582,601
+-
+
+1,369,668
+5,294,068
+1,302,519
+2,342,123
+3,445,055
+161,387
+1,276
+
+20,254
+1,121
+
+31,377
+3,239
+
+51,631
+4,360
+
+-
+
+Total Expenditures
+
+Park and
+Recreation
+Capital
+
+-
+
+-
+
+10,634,690
+
+12,354
+
+1,705,427
+
+278,588
+
+1,341,028
+
+13,972,087
+
+Excess (Deficiency) of Revenues
+Over Expenditures
+
+(74,384)
+
+28,604
+
+(1,492,244)
+
+1,013,300
+
+111,272
+
+(413,452)
+
+Other Financing Sources (Uses)
+Proceeds from sale of capital assets
+Transfers in
+Transfers out
+
+240,000
+-
+
+(160,000)
+
+1,761,525
+-
+
+22,700
+160,000
+(2,501,691)
+
+54,400
+300,000
+(240,000)
+
+77,100
+2,461,525
+(2,901,691)
+
+240,000
+
+(160,000)
+
+1,761,525
+
+(2,318,991)
+
+114,400
+
+(363,066)
+
+165,616
+5,379,544
+
+(131,396)
+165,433
+
+269,281
+(66,454)
+
+(1,305,691)
+21,241,129
+
+225,672
+690,805
+
+(776,518)
+27,410,457
+
+916,477 $
+
+26,633,939
+
+Total Other Financing Sources (Uses)
+Net Change in Fund Balance
+Fund Balance - Beginning
+Fund Balance - Ending
+
+$
+
+5,545,160 $
+
+34,037 $
+
+202,827 $ 19,935,438 $
+
+The notes to the financial statements are an integral part of this statement.
+-23-
+
+EAST NORRITON TOWNSHIP
+RECONCILIATION OF THE STATEMENT OF REVENUES, EXPENDITURES, AND
+CHANGES IN FUND BALANCES OF GOVERNMENTAL FUNDS TO THE
+GOVERNMENT-WIDE STATEMENT OF ACTIVITIES
+For the Year Ended December 31, 2023
+
+NET CHANGE IN FUND BALANCES - GOVERNMENTAL FUNDS
+Governmental funds report capital outlays as expenditures. However, in
+the statement of activities the cost of those assets is allocated over their
+estimated useful lives and reported as depreciation expense.
+Capital outlay
+Depreciation expense
+
+$
+
+$
+
+1,950,368
+(712,819)
+
+(776,518)
+
+1,237,549
+
+Because some taxes and other receivables will not be collected for several months
+after the Township's year end, they are not considered as "available" revenues
+in the governmental funds, but are considered revenues in the statement
+of activities. These taxes and other receivables are net of corresponding
+amounts due as of the end of the prior year.
+
+(108,908)
+
+The issuance of long-term debt (e.g. bonds, leases) provides current financial
+resources to governmental funds, while the repayment of the principal of
+long-term debt consumes the current financial resources of governmental
+funds. Neither transaction, however, has any effect on net assets. Also,
+governmental funds report the effect of issuance costs, premiums, discounts,
+and similar items when debt is first issued, whereas these amounts are
+deferred and amortized in the statement of activities. This amount is the
+net effect of these differences in the treatment of long-term debt and
+related items.
+Debt issuance
+Repayment of debt
+
+51,631
+
+51,631
+
+Some expenses reported in the statement of activities do not require the use
+of current financial resources and, therefore, are not reported as expenditures
+in governmental funds.
+Net OPEB liability and deferred items
+Net pension liability and deferred items
+Compensated absences
+
+50,228
+127,703
+(3,246)
+
+174,685
+
+CHANGE IN NET POSITION OF GOVERNMENTAL ACTIVITIES
+
+$
+
+578,439
+
+The notes to the financial statements are an integral part of this statement.
+-24-
+
+EAST NORRITON TOWNSHIP
+GENERAL FUND
+STATEMENT OF REVENUES, EXPENDITURES, AND CHANGES IN FUND
+BALANCES - BUDGET AND ACTUAL
+For the Year Ended December 31, 2023
+
+GENERAL FUND
+Budgeted Amounts
+Original
+Final
+ACTUAL
+Revenues
+Taxes
+Property
+Real estate transfer
+Earned income
+Local service
+Business privilege
+Fees, licenses and permits
+Fines and forfeitures
+Investment income
+Intergovernmental revenues
+Charges for services
+Other
+
+$
+
+Total Revenues
+Expenditures
+Current:
+General government
+Public safety
+Highways and streets
+Culture and recreation
+Payroll taxes and employee benefits
+Insurance
+Miscellaneous
+
+1,630,000 $
+500,000
+3,300,000
+430,000
+1,175,000
+1,039,000
+30,500
+27,600
+496,936
+16,500
+371,739
+
+1,630,000
+500,000
+3,300,000
+430,000
+1,175,000
+1,039,000
+30,500
+27,600
+496,936
+16,500
+371,739
+
+9,017,275
+
+9,017,275
+
+10,560,306
+
+1,543,031
+
+1,304,901
+4,615,202
+671,820
+7,000
+3,553,355
+155,193
+
+1,304,901
+4,615,202
+671,820
+7,000
+3,553,355
+155,193
+
+1,362,420
+4,745,620
+911,932
+7,000
+3,445,055
+161,387
+
+(57,519)
+(130,418)
+(240,112)
+108,300
+(6,194)
+
+-
+
+$
+
+$
+
+41,165
+90,562
+446,229
+93,263
+325,376
+(6,516)
+10,451
+154,767
+292,480
+68,485
+26,769
+
+1,276
+
+(1,276)
+
+10,307,471
+
+10,307,471
+
+10,634,690
+
+(327,219)
+
+Excess (Deficiency) of Revenues
+Over Expenditures
+
+(1,290,196)
+
+(1,290,196)
+
+(74,384)
+
+1,215,812
+
+Other Financing Sources (Uses)
+Transfers in
+Transfers out
+
+412,000
+-
+
+412,000
+-
+
+240,000
+-
+
+(172,000)
+-
+
+412,000
+
+412,000
+
+240,000
+
+(172,000)
+
+(878,196)
+878,196
+
+(878,196)
+878,196
+
+165,616
+5,379,544
+
+1,043,812
+
+Total Expenditures
+
+Total Other Financing Sources (Uses)
+Net Change in Fund Balance
+Fund Balance - Beginning
+Fund Balance - Ending
+
+$
+
+-
+
+-
+
+1,671,165
+590,562
+3,746,229
+523,263
+1,500,376
+1,032,484
+40,951
+182,367
+789,416
+84,985
+398,508
+
+Variance with
+Final Budget
+
+$
+
+-
+
+$
+
+5,545,160
+
+The notes to the financial statements are an integral part of this statement.
+-25-
+
+EAST NORRITON TOWNSHIP
+FISCAL RECOVERY FUND
+STATEMENT OF REVENUES, EXPENDITURES, AND CHANGES IN FUND
+BALANCES - BUDGET AND ACTUAL
+For the Year Ended December 31, 2023
+
+FISCAL RECOVERY
+Budgeted Amounts
+Original
+Final
+ACTUAL
+Revenues
+Investment income
+Intergovernmental revenues
+
+$
+
+-
+
+$
+
+-
+
+$
+
+9,533
+31,425
+
+Variance with
+Final Budget
+$
+
+9,533
+31,425
+
+Total Revenues
+
+-
+
+-
+
+40,958
+
+40,958
+
+Expenditures
+Current:
+Highways and streets
+
+-
+
+-
+
+12,354
+
+(12,354)
+
+Total Expenditures
+
+-
+
+-
+
+12,354
+
+(12,354)
+
+Excess (Deficiency) of Revenues
+Over Expenditures
+
+-
+
+-
+
+28,604
+
+28,604
+
+Other Financing Sources (Uses)
+Transfers out
+
+(110,000)
+
+(110,000)
+
+(160,000)
+
+(50,000)
+
+(110,000)
+
+(110,000)
+
+(160,000)
+
+(50,000)
+
+(110,000)
+110,000
+
+(110,000)
+110,000
+
+(131,396)
+165,433
+
+(21,396)
+
+Total Other Financing Sources (Uses)
+Net Change in Fund Balance
+Fund Balance - Beginning
+Fund Balance - Ending
+
+$
+
+-
+
+$
+
+-
+
+$
+
+34,037
+
+The notes to the financial statements are an integral part of this statement.
+-26-
+
+EAST NORRITON TOWNSHIP
+PARK AND RECREATION FUND
+STATEMENT OF REVENUES, EXPENDITURES, AND CHANGES IN FUND
+BALANCES - BUDGET AND ACTUAL
+For the Year Ended December 31, 2023
+
+PARK AND RECREATION FUND
+Budgeted Amounts
+Original
+Final
+ACTUAL
+Revenues
+Investment income
+Intergovernmental revenues
+Charges for services
+Other
+
+$
+
+$
+
+961
+200,000
+6,677
+5,545
+
+Variance with
+Final Budget
+
+$
+453,000
+130,000
+
+453,000
+130,000
+
+$
+
+961
+(253,000)
+6,677
+(124,455)
+
+Total Revenues
+
+583,000
+
+583,000
+
+213,183
+
+(369,817)
+
+Expenditures
+Current:
+Culture and recreation
+
+1,101,000
+
+1,101,000
+
+1,705,427
+
+(604,427)
+
+Total Expenditures
+
+1,101,000
+
+1,101,000
+
+1,705,427
+
+(604,427)
+
+Excess (Deficiency) of Revenues
+Over Expenditures
+
+(518,000)
+
+(518,000)
+
+(1,492,244)
+
+(974,244)
+
+550,000
+-
+
+550,000
+-
+
+1,761,525
+-
+
+1,211,525
+-
+
+550,000
+
+550,000
+
+1,761,525
+
+1,211,525
+
+32,000
+(32,000)
+
+32,000
+(32,000)
+
+269,281
+(66,454)
+
+237,281
+
+Other Financing Sources (Uses)
+Transfers in
+Transfers out
+Total Other Financing Sources (Uses)
+Net Change in Fund Balance
+Fund Balance - Beginning
+Fund Balance - Ending
+
+$
+
+-
+
+$
+
+-
+
+$
+
+202,827
+
+The notes to the financial statements are an integral part of this statement.
+-27-
+
+EAST NORRITON TOWNSHIP
+STATEMENT OF NET POSITION
+PROPRIETARY FUNDS
+December 31, 2023
+
+ASSETS
+Current Assets
+Cash and cash equivalents
+Sewer rents receivable
+Total Assets
+
+LIABILITIES
+Current Liabilities
+Deferred
+Interfundrevenue
+balances
+Due to other funds
+
+Sewer Fund
+$
+
+82,160
+85,683
+
+$
+
+167,843
+
+$
+
+85,683
+3,781
+
+Total Liabilities
+
+89,464
+
+NET POSITION
+Unrestricted
+
+78,379
+
+Total Net Position
+Total Liabilities and Net Position
+
+78,379
+$
+
+167,843
+
+The notes to the financial statements are an integral part of this statement.
+-28-
+
+EAST NORRITON TOWNSHIP
+STATEMENT OF REVENUES, EXPENSES, AND CHANGES IN FUND NET POSITION
+PROPRIETARY FUNDS
+For the Year Ended December 31, 2023
+
+Sewer Fund
+Operating Revenues
+Charges for services
+
+$
+
+Other
+
+21,002
+-
+
+Total Operating Revenues
+
+21,002
+
+Operating Expenses
+Administration
+Contracted services
+
+5,712
+440,166
+
+Salaries and benefits
+Repairs and maintenance
+Supplies
+
+6,440
+-
+
+Utilities
+Depreciation
+
+-
+
+Total Operating Expenses
+
+452,318
+
+Operating Income (Loss)
+
+(431,316)
+
+Nonoperating Revenues (Expense)
+Investment income
+Connection fees
+
+4,446
+10,120
+
+Total Nonoperating Revenues (Expense)
+
+14,566
+
+Income (Loss) before Transfers
+
+(416,750)
+
+Transfers in
+
+440,166
+
+Net transfers
+
+440,166
+
+Changes in Net Position
+Total Net Position - Beginning
+Total Net Position - Ending
+
+23,416
+54,963
+$
+
+78,379
+
+The notes to the financial statements are an integral part of this statement.
+-29-
+
+EAST NORRITON TOWNSHIP
+STATEMENT OF CASH FLOWS - PROPRIETARY FUNDS
+For the Year Ended December 31, 2023
+
+Sewer Fund
+Cash flows from operating activities
+Cash received from customers
+Cash paid to suppliers
+
+$
+
+Net cash provided by (used in) operating activities
+
+21,002
+(463,080)
+(442,078)
+
+Cash flows from non-capital financing activities
+Transfers from other funds
+
+440,165
+440,165
+
+Net cash provided by (used in) non capital financing activities
+Cash flows from capital and related financing activities
+Connection fees
+
+10,120
+
+Net cash provided by (used in) capital and related
+financing activities
+
+10,120
+
+Cash flows from investing activities
+Earnings on investments
+
+4,446
+
+Net cash provided by (used in) investing activities
+
+4,446
+
+Net increase (decrease) in cash and cash equivalents
+Beginning cash and cash equivalents
+Ending cash and cash equivalents
+
+12,653
+69,507
+$
+
+82,160
+
+$
+
+(431,316)
+
+Reconciliation of Net Operating Income (Loss)
+to Net Cash Provided (Used) by Operating Activities
+Net operating income (loss)
+Adjustments to reconcile net operating income (loss)
+to net cash provided by (used in) operating activities
+Changes in assets and liabilities
+(Increase) decrease in receivables
+Increase (decrease) in accounts payables
+Increase (decrease) in due to other funds
+Increase (decrease) in deferred items
+
+(85,683)
+(14,543)
+3,781
+85,683
+
+Net adjustments
+Cash provided by (used in) operating activities
+
+(10,762)
+$
+
+(442,078)
+
+The notes to the financial statements are an integral part of this statement.
+-30-
+
+EAST NORRITON TOWNSHIP
+STATEMENT OF FIDUCIARY NET POSITION - FIDUCIARY FUNDS
+December 31, 2023
+
+Pension
+Trust Funds
+ASSETS
+Cash and cash equivalents
+Investments, at fair value:
+Mutual Funds - Equity
+Mutual Funds - International Equity
+Mutual Funds - Fixed Income
+Mutual Funds - Real Estate
+
+$
+
+Total Investments
+
+Health
+Benefits Fund
+
+Custodial
+Escrow Funds
+
+240,223 $
+
+144,893
+
+20,090,202
+1,524,159
+4,785,268
+243,706
+
+-
+
+-
+
+26,643,335
+
+-
+
+144,893
+
+122,029 $
+
+Total Assets
+
+$
+
+26,765,364 $
+
+240,223 $
+
+LIABILITIES
+Accounts payable
+
+$
+
+128,875 $
+
+-
+
+$
+
+-
+
+Total Liabilities
+
+$
+
+128,875 $
+
+-
+
+$
+
+-
+
+NET POSITION
+Net Position - Restricted for:
+Pension benefits
+
+$
+
+$
+
+-
+
+26,636,489 $
+
+-
+
+Post-employment benefits
+
+-
+
+240,223
+
+-
+
+Developers and/or individuals
+
+-
+
+-
+
+144,893
+
+26,636,489 $
+
+240,223 $
+
+144,893
+
+Total Net Position
+
+$
+
+The notes to the financial statements are an integral part of this statement.
+-31-
+
+EAST NORRITON TOWNSHIP
+STATEMENT OF CHANGES IN FIDUCIARY NET POSITION
+FIDUCIARY FUNDS
+For the Year Ended December 31, 2023
+
+Pension
+Trust Funds
+Additions
+Contributions
+Employee contributions
+Employer contributions
+State aid
+
+$
+
+Developers contributions
+Total Contributions
+
+Health
+Benefits Fund
+
+Custodial
+Escrow Funds
+
+282,538 $
+1,061,036
+448,747
+
+-
+
+-
+
+-
+
+317,576
+
+-
+
+317,576
+
+1,792,321
+
+$
+
+-
+
+Investment Income
+Net appreciation (depreciation) in
+fair value of investments
+
+2,516,031
+
+-
+
+-
+
+Interest and dividend income
+
+638,216
+
+13,497
+
+-
+
+Total investment earnings
+
+3,154,247
+
+13,497
+
+-
+
+Less investment expense
+Net Investment Income
+
+(43,376)
+
+-
+
+-
+
+3,110,871
+
+13,497
+
+-
+
+4,903,192
+
+13,497
+
+317,576
+
+1,688,360
+
+81,716
+
+-
+
+Administrative expenses
+
+20,190
+
+-
+
+-
+
+Escrow distributions
+
+-
+
+-
+
+334,735
+
+Total Additions
+Deductions
+Benefits
+
+Total Deductions
+
+1,708,550
+
+81,716
+
+334,735
+
+Change in Net Position
+
+3,194,642
+
+(68,219)
+
+(17,159)
+
+23,441,847
+
+308,442
+
+162,052
+
+26,636,489 $
+
+240,223 $
+
+144,893
+
+Net Position - Fiduciary:
+Beginning of Year
+End of Year
+
+$
+
+The notes to the financial statements are an integral part of this statement.
+-32-
+
+EAST NORRITON TOWNSHIP
+NOTES TO FINANCIAL STATEMENTS
+DECEMBER 31, 2023
+
+I.
+
+Summary of significant accounting policies
+A.
+
+Reporting entity
+
+East Norriton Township (“the Township”) is a municipal corporation existing and operating
+under the Township code of the Commonwealth of Pennsylvania.
+In evaluating the Township (the primary government) as a reporting entity, all potential
+component units that may or may not fall within the financial accountability of the Township
+have been addressed. Financial accountability is present if the Township appoints a voting
+majority of a component unit’s governing body and has the ability to impose its will on the
+organization or if there is a potential for the organization to provide specific financial benefits
+to, or impose specific financial burdens on, the Township. Based on these criteria, there are no
+organizations or agencies which should be included in the Township’s reporting entity.
+
+B.
+
+Basis of presentation
+
+Entity-wide Financial Statements
+The statement of net position and the statement of activities display information about the
+Township as a whole. These statements distinguish between activities that are governmental
+and those that are considered business-type. These statements exclude fiduciary activities such
+as pension funds.
+The entity-wide financial statements are prepared using the economic resources measurement
+focus and the accrual basis of accounting as further defined under proprietary funds below. This
+is the same approach used in the preparation of the proprietary fund financial statements but
+differs from the manner in which governmental fund financial statements are prepared.
+Therefore, governmental fund financial statements include a reconciliation with brief
+explanations to better identify the relationship between the entity-wide statements and the
+statements of governmental funds.
+The entity-wide statement of activities presents a comparison between expenses and program
+revenues for each different identifiable activity of the business-type activities of the Township
+and for each governmental program. Expenses are those that are specifically associated with a
+service or program and, therefore, are clearly identifiable to a particular function. Program
+revenues include charges paid by the recipients of the goods or services offered by the programs,
+and grants and contributions that are restricted to meeting the operational or capital requirements
+of a particular function. Revenues which are not classified as program revenues are presented
+as general revenues. The comparison of program revenues and expenses identifies the extent to
+which each function is self-financing or draws from the general revenues of the Township.
+
+-33-
+
+EAST NORRITON TOWNSHIP
+NOTES TO FINANCIAL STATEMENTS
+DECEMBER 31, 2023
+
+I.
+
+Summary of significant accounting policies (Continued)
+B.
+
+Basis of presentation (continued)
+
+Internal activity is limited to interfund transfers which are eliminated to avoid "doubling up"
+revenues and expenses. Net position is reported as restricted when constraints placed on net
+position use are either externally imposed by creditors (such as through debt covenants),
+grantors, contributors, or laws or regulations of other governments, or imposed by law through
+constitutional provisions or enabling legislation. The net position restricted for other purposes
+results from special revenue and capital projects funds and the restrictions on their net position
+use.
+Fund Financial Statements
+Fund financial statements report detailed information about the Township. The focus of
+governmental and enterprise fund financial statements is on major funds rather than reporting
+funds by type. Each major fund is presented in a separate column. The three major governmental
+funds are each presented in a single column on the governmental fund financial statements. The
+nonmajor governmental funds are presented in a single column on the governmental fund
+financial statements. Fiduciary fund financial statements are represented by fund type.
+The government reports the following major governmental funds:
+The General Fund is the government’s primary operating fund. It accounts for all
+financial resources of the general government, except those required to be accounted for
+in another fund.
+The Fiscal Recovery Fund is used to account for resources accumulated to be used to fund
+fiscal recovery needs.
+The Park and Recreation Capital Fund is used to account for resources accumulated for
+future park and recreation projects.
+The Capital Projects Fund is used to account for resources accumulated for future
+capital projects.
+The Nonmajor Governmental Funds are used to account for the proceeds of specific revenue
+sources that are restricted to expenditures for specified purposes. Included in these funds are
+the State Highway Aid, Street Lighting, Park and Recreation, Fire Tax and Park and
+Recreation Capital Funds.
+The Township reports the following major proprietary funds. These funds are used to
+account for operations that are organized to be self-supporting through user charges.
+
+-34-
+
+EAST NORRITON TOWNSHIP
+NOTES TO FINANCIAL STATEMENTS
+DECEMBER 31, 2023
+
+I.
+
+Summary of significant accounting policies (Continued)
+C.
+
+Measurement focus, basis of accounting, and financial statement presentation
+The Sewer Fund is used to account for operations related to the collection of wastewater
+and the operation of sewage pumping stations. The sewage is transported to a sewer
+treatment plant jointly owned by East Norriton Township, Plymouth Township, and
+Whitpain Township.
+
+Trust and Custodial Funds - Are used to account for assets held by the Township in a trustee
+or custodial capacity for individuals and/or other funds.
+Pension Trust Funds - These funds are used to account for resources required to be held
+in trust for the members and beneficiaries of the Township's defined benefit pension
+plans - the Police Pension Fund and Non-Uniformed Pension Fund.
+Health Benefit Fund - This fund is used to account for funds set aside to help defray
+the health costs for retired Township police employees.
+Custodial Escrow Fund-This fund is used to account for assets held on behalf of
+individuals and/or developers.
+Governmental Funds
+All governmental funds are accounted for using the modified accrual basis of accounting and
+the current financial resources measurement focus. Under this basis, revenues are recognized
+in the accounting period in which they become measurable and available. Expenditures are
+recognized in the accounting period in which the fund liability is incurred, if measurable.
+Revenue Recognition
+In applying the "susceptible to accrual concept" under the modified accrual basis, revenues
+are considered to be available when they are collectible within the current period or soon
+enough thereafter to pay liabilities of the current period. For this purpose, the government
+considers property tax revenue to be available if collected within 60 days of the end of the
+fiscal period. Revenues for state and federally funded projects are recognized at the time all
+eligibility requirements have been satisfied. Eligibility requirements include timing
+requirements, which specify the year when the resources are required to be used or the year
+when use is first permitted; matching requirements, in which the Township must provide
+local resources to be used for a specified purpose; and expenditure requirements, in which
+the resources are provided to the Township on a reimbursement basis.
+
+-35-
+
+EAST NORRITON TOWNSHIP
+NOTES TO FINANCIAL STATEMENTS
+DECEMBER 31, 2023
+
+I.
+
+Summary of significant accounting policies (Continued)
+C.
+
+Measurement focus, basis of accounting, and financial statement presentation
+(continued)
+
+Other revenues, including certain other charges for services and miscellaneous revenues, are
+recorded as revenue when received in cash because they generally are not measurable until
+actually received.
+Expenditure Recognition
+The measurement focus of governmental fund accounting is on decreases in net financial
+resources (expenditures) rather than expenses. Most expenditures are measurable and are
+recorded when the related fund liability is incurred. However, principal and interest on
+general long-term debt which has not matured are recognized when paid. Further, certain
+governmental fund liabilities and expenditures, such as for compensated absences, are
+recognized to the extent the liabilities mature (come due for payment) each period.
+Allocations of costs, such as depreciation and amortization, are not recognized in the
+governmental funds.
+Proprietary Funds
+Proprietary funds are accounted for using the accrual basis of accounting. These funds
+account for operations that are financed primarily by user charges. The economic resources
+measurement focus concerns determining costs as a means of maintaining the capital
+investment and management control. Revenues are recognized when they are earned, and
+expenses are recognized when they are incurred. Allocations of certain costs, such as
+depreciation, are recorded in proprietary funds. The Township's only proprietary fund is an
+enterprise fund.
+These funds distinguish operating revenues and expenses from nonoperating items.
+Operating revenues and expenses generally result from providing services and producing and
+delivering goods in connection with the proprietary fund's principal ongoing operations. The
+principal operating revenues of the Township's enterprise funds are user fees. Operating
+expenses for the Township's enterprise fund include sewer disposal, salaries, supplies and
+administrative costs, and depreciation. All revenues or expenses not meeting this definition
+are reported as nonoperating revenues and expenses.
+
+-36-
+
+EAST NORRITON TOWNSHIP
+NOTES TO FINANCIAL STATEMENTS
+DECEMBER 31, 2023
+
+I.
+
+Summary of significant accounting policies (Continued)
+C.
+
+Measurement focus, basis of accounting, and financial statement presentation
+(continued)
+
+Fiduciary Funds
+Trust Funds - Trust Funds are used to account for assets held by the Township in a trustee
+capacity. These include the Pension Trust Funds and the Health Benefits Fund. The Pension
+Trust Funds account for the activities of the Police Pension Fund and the Non-Uniformed
+Pension Fund. The Pension Trust Funds and the Health Benefits Fund are accounted for in
+essentially the same manner as proprietary funds since the measurement of the economic
+resources is critical.
+When both restricted and unrestricted resources are available for use, it is the Township’s
+policy to use restricted resources first, then unrestricted resources as needed.
+D.
+
+Assets, liabilities, and net assets or equity
+
+1.
+
+Deposits and investments
+
+The government’s cash and cash equivalents are considered to be cash on hand, demand
+deposits, and short-term investments with original maturities of three months or less from
+the date of acquisition.
+With the exception of Pension Trust Funds, state law allows the government to invest in
+obligations of the United States of America, the Commonwealth of Pennsylvania, or any agency
+or instrumentality of either, which are secured by the full faith and credit of such entity. The
+law also allows for the Government to invest in certificates of deposit of banks, savings and
+loans, and savings banks both within and outside the Commonwealth of Pennsylvania, provided
+such amounts are insured by the Federal Deposit Insurance Corporation (FDIC) or other like
+insurance, and that deposits in excess of such insurance are collateralized by the depository.
+The state also imposes limitations with respect to the amount of investment in certificates of
+deposit to the extent that such deposits may not exceed 20% of a bank’s total capital surplus or
+20% of a savings and loans or savings bank’s assets, net of its liabilities. The government may
+also invest in shares of registered investment companies, provided that investments of the
+Company are authorized investments, as noted above.
+
+-37-
+
+EAST NORRITON TOWNSHIP
+NOTES TO FINANCIAL STATEMENTS
+DECEMBER 31, 2023
+
+I.
+
+Summary of significant accounting policies (Continued)
+D.
+
+Assets, liabilities, and net assets or equity (continued)
+
+1.
+
+Deposits and investments (continued)
+
+The law provides that the government’s Pension Trust Funds may invest in any form or type of
+investment, financial instrument, or financial transaction if determined by the government to be
+prudent.
+Investments for the government are reported at fair value. The Investment Pool operates in
+accordance with appropriate state laws and regulations. The reported value of the pool is the pool’s
+amortized cost-based net asset value per share, which approximates fair value. There are no
+limitations or restrictions on withdrawals.
+2.
+
+Receivables and payables
+
+Outstanding balances between funds are reported as “due to/from other funds”. Any residual
+balances outstanding between the governmental activities and other activities are reported in the
+government-wide financial statements as “internal balances”.
+At December 31, 2023, all trade receivables were deemed to be fully collectible. The property tax
+receivable allowance is immaterial and therefore is not included in outstanding property taxes at
+December 31, 2023.
+Property taxes are levied as of March 1 on property values assessed as of the same date. Taxes
+are billed March 1 and payable under the following terms: a 2% discount March 1 through April
+30; face amount May 1 through July 1; and a 10% penalty after July 1. Any unpaid taxes are
+attached as an enforceable lien on such property as of January 15 of the following year. The
+Township employs an elected tax collector to collect the property tax levied. Property taxes
+collected within sixty days subsequent to December 31, 2023 are recognized as revenue for the year
+ending December 31, 2023.
+3.
+
+Use of estimates
+
+The preparation of the financial statements in conformity with U.S. generally accepted
+accounting principles requires management to make estimates and assumptions that affect the
+reported amounts of assets and liabilities and disclosure of contingent assets and liabilities at the
+date of the financial statements and the reported amounts of revenues and expenditures during
+the reporting period. Actual results could differ from those estimates.
+
+-38-
+
+EAST NORRITON TOWNSHIP
+NOTES TO FINANCIAL STATEMENTS
+DECEMBER 31, 2023
+
+I.
+
+Summary of significant accounting policies (Continued)
+D.
+
+Assets, liabilities, and net assets or equity (continued)
+
+4.
+
+Capital assets
+
+Capital assets, which include property, plant, equipment, and infrastructure assets (e.g., roads,
+bridges, and similar items), are reported in the governmental or business activities columns in
+the government-wide financial statements. Capital assets are defined by the government as
+assets with an initial, individual cost of more than $5,000 (amount not rounded) and an
+estimated useful life in excess of one year. Such assets are recorded at historical cost or
+estimated historical cost if purchased or constructed. Donated capital assets are recorded at
+estimated fair market value at the date of donation.
+The costs of normal maintenance and repairs that do not add to the value of the asset or
+materially extend assets lives are not capitalized. Major outlays for capital assets and
+improvements are capitalized as projects are constructed.
+Property, plant, and equipment of the primary government, as well as its component units, are
+depreciated using the straight-line method over the following estimated useful lives:
+Site improvements
+Sewer system
+Buildings and improvements
+Machinery and equipment
+Vehicles
+
+10-20 years
+5-50 years
+25-50 years
+5-10 years
+5-10 years
+
+Infrastructure
+The Township has adopted the modified approach for valuing its infrastructure, which consists
+of 50.04 miles of roads. The Township completes an annual assessment of pavement conditions
+and maintains all roads at an overall good or better condition level. As a result, infrastructure
+costs have been estimated for the entire roadway system. If the yearly assessment maintains this
+overall condition level, no depreciation will be recorded. Annual maintenance costs for the
+roads will be expensed.
+
+-39-
+
+EAST NORRITON TOWNSHIP
+NOTES TO FINANCIAL STATEMENTS
+DECEMBER 31, 2023
+
+I.
+
+Summary of significant accounting policies (Continued)
+D.
+
+Assets, liabilities, and net assets or equity (continued)
+
+5.
+
+Compensated absences
+
+The Township provides vacation for all full-time employees. Personnel covered by the police
+contract can carryover up to ten days of unused vacation time into the next year, upon written
+request, as well as exchange up to ten days of unused vacation time for paid wages in any
+one calendar year. Non-uniformed personnel can carryover up to five days of unused
+vacation time into the next year, upon written request, as well as exchange up to five days of
+unused vacation time for paid wages in any one calendar year.
+Non-uniformed Township employees accrue up to ten days sick leave per year for a maximum
+of thirty days. Personnel covered by the police contract are entitled to unlimited sick leave.
+6.
+
+Long-term obligations
+
+In the government-wide financial statements, long-term debt and other long-term obligations
+are reported as liabilities in the governmental activities, statement of net assets. If bond
+premiums or discounts exist, they are deferred and amortized over the life of the bonds using
+the straight-line method. Bonds payable are reported net of any applicable bond premium or
+discount. Bond issuance costs are expensed as incurred.
+In the fund financial statements, governmental fund types would recognize bond premiums and
+discounts, as well as bond issuance costs, during the current period. The face amount of debt
+issued is reported as other financing sources. Any premiums received on debt issuances are
+reported as other financing sources while discounts on debt issuances are reported as other
+financing uses. Issuance costs, whether or not withheld from the actual debt proceeds received,
+are reported as debt service expenditures.
+Financed Purchases
+The Township has entered into agreements to finance the purchase of certain equipment.
+The agreements were previously reported as capital lease obligations. The interest expense
+on the lease liability was included within interest on long-term debt. Under the provisions of
+GASB 87, adopted by the Township as of January 1, 2022, these leases are classified as a
+financed purchase. The terminology used for these agreements is the only effect of the
+adoption of GASB 87, as there was no effect on the net position or results of operations of
+the Township.
+
+-40-
+
+EAST NORRITON TOWNSHIP
+NOTES TO FINANCIAL STATEMENTS
+DECEMBER 31, 2023
+
+I.
+
+Summary of significant accounting policies (Continued)
+D.
+
+Assets, liabilities, and net assets or equity (continued)
+
+7.
+
+Deferred outflows/inflows of resources
+
+In addition to assets, the statement of financial position will sometimes report a separate
+section for deferred outflows of resources. This separate financial statement element,
+deferred outflows of resources, represents a consumption of net position that applies to a
+future period(s) and so will not be recognized as an outflow of resources (expense/
+expenditure) until then. In addition to liabilities, the statement of financial position will
+sometimes report a separate section for deferred inflows of resources. This separate financial
+statement element, deferred inflows of resources, represents an acquisition of net position
+that applies to a future period(s) and so will not be recognized as an inflow of resources
+(revenue) until that time.
+The Township has the following items that qualify for reporting in these categories.
+1. Change in assumptions - pension plan and OPEB - is reported in the governmentwide statement. A difference results when assumptions used to prepare the actuarial
+valuation of the pension plan changes. These amounts are deferred and recognized
+in the period that the amounts become available.
+2. Differences between expected and actual experience on pension plan and OPEB
+liability is reported in the government-wide statement. A difference results when
+actual economic or demographic factors differ from expected results. These amounts
+are deferred and recognized in the period that the amounts become available.
+3. Net difference between projected and actual earnings on pension plan investments is
+reported in the government-wide statement of net position. A net difference results
+from the actual earnings in the plan either exceeding or falling short of projected
+earnings. These amounts are deferred and recognized in the period that the amounts
+become available.
+4. OPEB contribution made after the measurement date is reported in the governmentwide statement of net position. The OPEB measurement date is January 1, 2023.
+These amounts are deferred and recognized in the next period.
+
+-41-
+
+EAST NORRITON TOWNSHIP
+NOTES TO FINANCIAL STATEMENTS
+DECEMBER 31, 2023
+
+I.
+
+Summary of significant accounting policies (Continued)
+8.
+
+Net position
+
+In the government-wide financial statements, net position is classified in the following
+categories:
+Net investment in capital assets - This category groups all capital assets, including
+infrastructure, into one component of net assets. Accumulated depreciation and the
+outstanding balances of debt that are attributable to the acquisition, construction or
+improvement of these assets reduce the balance of this category.
+
+Capital assets not being depreciated
+Capital assets being depreciated, net of accumulated depreciation
+Less: long-term outstanding debt
+Net investment in capital assets
+
+Governmental
+
+Business-Type
+
+Activities
+
+Activities
+
+Total
+
+$
+
+2,417,243
+10,530,944
+(101,467)
+
+$
+
+-
+
+$
+
+2,417,243
+10,530,944
+(101,467)
+
+$
+
+12,846,720
+
+$
+
+-
+
+$
+
+12,846,720
+
+Restricted net position - This category presents external restrictions imposed by
+creditors, grantors, contributors or laws or regulations of other governments and
+restrictions imposed by law through constitutional provisions or enabling legislation.
+Unrestricted net position - This category represents net position of the entity, not
+restricted for any project or other purpose.
+9.
+
+Fund balance
+
+Governmental funds report fund balance in classifications based primarily on the extent to
+which the Township is bound to honor constraints on the specific purposes for which
+amounts in the funds can be spent.
+
+-42-
+
+EAST NORRITON TOWNSHIP
+NOTES TO FINANCIAL STATEMENTS
+DECEMBER 31, 2023
+
+I.
+
+Summary of significant accounting policies (Continued)
+D.
+
+Assets, liabilities, and net assets or equity (continued)
+
+9.
+
+Fund balance (continued)
+
+Fund balance for governmental funds consists of the following:
+Nonspendable Fund Balance - Includes amounts that are (a) not in spendable form, or
+(b) legally or contractually required to be maintained intact. The “not in spendable form”
+criterion includes items that are not expected to be converted to cash, for example:
+inventories, prepaid amounts, and long-term notes receivable.
+Restricted Fund Balance - Includes amounts that are restricted for specific purposes
+stipulated by external resources providers, constitutionally or through enabling
+legislation. Restrictions may effectively be changed or lifted only with the consent of
+resource providers.
+Committed Fund Balance - Includes amounts that can only be used for the specific
+purposes determined by a formal action of the Township’s highest level of decisionmaking authority, the Township Board of Supervisors. Commitments may be changed
+or lifted only by the Township taking the same formal action that imposed the constraint
+originally (for example: resolution and ordinance).
+Assigned Fund Balance - Includes amounts intended to be used by the Township for
+specific purposes but do not meet the criteria to be classified as committed. The
+governing body, the Board of Supervisors, has by resolution authorized the Township
+Manager or Finance Director to assign fund balance. The Board may also assign fund
+balance as it does when appropriating fund balance to cover a gap between estimated
+revenue and appropriations in the subsequent year’s appropriated budget. Unlike
+commitments, assignments generally only exist temporarily. In other words, an
+additional action does not normally have to be taken for the removal of an assignment.
+Conversely, as discussed above, an additional action is essential to either remove or
+revise a commitment.
+Unassigned Fund Balance - This residual classification is used for all negative fund
+balances in Special Revenue, Capital Projects, and Debt Service funds; or any residual
+amounts in the General Fund.
+
+-43-
+
+EAST NORRITON TOWNSHIP
+NOTES TO FINANCIAL STATEMENTS
+DECEMBER 31, 2023
+
+I.
+
+Summary of significant accounting policies (Continued)
+D.
+
+Assets, liabilities, and net assets or equity (continued)
+
+9.
+
+Fund balance (continued)
+
+In circumstances when an expenditure is made for a purpose for which amounts are available
+in multiple fund balance classifications, fund balance is depleted in the order of restricted,
+committed, assigned, and unassigned. In all cases, encumbrance amounts have been assigned
+for specific purposes for which resources already have been allocated.
+10.
+
+Subsequent events
+
+The Township has evaluated events and transactions for potential recognition or disclosure
+in the financial statements through the date of this report, which is the date the statements
+were available for release.
+11. Pending Accounting Pronouncements
+GASB has issued statements that will become effective in future years. Management has not
+yet determined the impact of these statements on the financial statements.
+
+II.
+
+Stewardship, compliance, and accountability
+A.
+
+Budgetary information
+
+Annual budgets are adopted on a basis consistent with generally accepted accounting principles
+for all funds of the Township. All annual appropriations lapse at fiscal year-end.
+Prior to November, Board of Supervisors approves a preliminary budget for the upcoming fiscal
+year, reflecting proposed expenditures and the means of financing them. During November,
+the Township holds budget hearings for the purpose of receiving oral and written comments
+from interested parties in regard to the proposed budget for the following year.
+The Township makes available to the public its proposed operating budget for all funds. The
+operating budget includes proposed expenditures and the means of financing them. The Board
+holds public hearings and a final budget must be prepared and adopted no later than December
+31 through the passage of an ordinance. Any budget revisions require the approval of the Board
+of Supervisors. The Board authorized the use of unallocated fund balance in 2023.
+Encumbrance accounting is employed in governmental funds. Encumbrances (e.g., purchase
+orders) outstanding at year end lapse.
+
+-44-
+
+EAST NORRITON TOWNSHIP
+NOTES TO FINANCIAL STATEMENTS
+DECEMBER 31, 2023
+
+II.
+
+Stewardship, compliance, and accountability (Continued)
+A.
+
+Budgetary information (continued)
+
+Excess of Expenditures Over Appropriations - For the year ended December 31, 2023,
+expenditures over appropriations for the General Fund were as follows: General government
+$57,319, Public safety $130,418, Highway and streets $240,112, Insurance $6,194, and
+Miscellaneous $1,276. The over expenditures were covered through revenues in excess of
+budget. For the Fiscal Recovery Fund expenditures over appropriations for Highway and streets
+$12,354. These over expenditures were covered by the fund balance. For the Park and
+Recreation Capital fund expenditures were over appropriations in the Culture and recreation
+category by $604,427. These over expenditures were covered by the transfers in from another
+fund.
+
+III. Detailed notes on all funds
+A.
+
+Taxes
+
+For 2023, the following tax was levied on assessed value of real estate:
+•
+•
+•
+•
+•
+
+1.717 mills for general purposes
+0.326 mills for parks and recreational purposes
+0.030 mills for street light purposes
+0.288 mills for fire purposes
+0.366 mills for capital project purposes
+
+The taxable assessed valuation of property as of January 1, 2023 was $971,168,416.
+Other taxes levied in 2023:
+Real estate transfer tax
+Earned income tax
+Local services tax
+Business privilege tax
+
+.5% of sale price
+.5% of gross income
+$52 per person
+.001 - .0015% of gross receipts
+
+-45-
+
+EAST NORRITON TOWNSHIP
+NOTES TO FINANCIAL STATEMENTS
+DECEMBER 31, 2023
+
+III. Detailed notes on all funds (Continued)
+B.
+
+Deposits and investments
+
+Custodial Credit Risk - Deposits. In the case of deposits, this is the risk that in the event of a
+bank failure, the government’s deposits may not be returned to it. The government’s policy is
+to require their banking institution to provide a letter stating that they follow the Commonwealth
+of Pennsylvania Act 72, where all funds in excess of federal depository insurance limits held by
+the bank are collateralized in public funds secured on a pooled basis.
+As of year-end, the carrying amount of deposits for the governmental and business-type
+activities was $25,629,751 and the bank balance was $25,579,054. Of the bank balance,
+$250,000 was covered by federal depository insurance and $25,449,948 was invested in
+eternally pooled investments, which are not subject to credit risk. Any balances exceeding
+depository insurance are exposed to custodial credit risk because it is uninsured and
+collateralized with securities held by the pledging institution’s trust department or agent, but not
+in the government’s name.
+Investment Pool - The Township has carrying deposits in external investment pools, held with
+PLGIT Bank. These deposits are considered cash equivalents because of their short maturity
+dates and are included in the carrying amount of deposits disclosed above. These deposits are
+not subject to custodial credit risk because they are not evidenced by securities that exist in
+physical or book entry form. The investment in the pool is the same as the value of the pool
+shares and is reported at amortized cost, which approximates fair value PLGIT activities are
+invested directly in a portfolio of securities, which are held by a third-party custodian. The
+Township can withdraw funds from the external investment pool without limitation or fees upon
+adequate notice. The investment pool was rated AAAm by Standard & Poor’s and has average
+maturities of less than 30 days. The Investment Pool operates in accordance with appropriate
+state laws and regulations.
+Custodial Credit Risk - Investments. For an investment, this is the risk that, in the event of a
+failure of the counterparty, the government will not be able to recover the value of its
+investments or collateral securities that are in possession of an outside party. The risks of default
+are eliminated due to the constraints imposed upon allowable investment instruments by the
+Township’s investment policy and through state limitations as discussed in Note I, D, 1.
+
+-46-
+
+EAST NORRITON TOWNSHIP
+NOTES TO FINANCIAL STATEMENTS
+DECEMBER 31, 2023
+
+III. Detailed notes on all funds (Continued)
+B.
+
+Deposits and investments (continued)
+
+At year-end balances were as follows:
+GOVERNMENTAL ACTIVITIES
+Externally Pooled Investments (PLGIT)
+Total Governmental Activities
+FIDUCIARY FUNDS
+Externally Pooled Investments (PLGIT)
+Mutual Funds - Equity
+Mutual Funds - International Equity
+Mutual Funds - Fixed Income
+Mutual Funds - Real Estate
+Total Fiduciary Funds
+
+Amount
+$ 25,499,415
+$ 25,499,415
+
+$
+
+$
+
+393,683
+20,090,202
+1,524,159
+4,785,268
+243,706
+27,037,018
+
+Average
+Rating
+
+Average
+Maturity
+
+AAAm
+
+30 days
+
+AAAm
+not applicable
+not applicable
+not applicable
+not applicable
+
+30 days
+not applicable
+not applicable
+not applicable
+not applicable
+
+Interest Rate Risk. This is the risk that changes in interest rates will adversely affect the fair
+market value of an investment. The Township’s policy regarding its fixed income
+investments generally limits the maximum maturity of a security to ten years. As of
+December 31, 2023, the Township did not have any investments maturing beyond the tenyear period. See above maturities.
+Credit Risk. This is the risk that an issuer or other counterparty to an investment will not fulfill
+its obligations. State law limits the investment of governmental funds as described in Section
+1, Note D. The government does not have a formal investment policy for credit risk. The
+investments in the external investment pool and the money market funds were rated AAAm by
+Standard & Poor’s. See above ratings.
+Concentration of Credit Risk. This is the risk of loss attributed to the magnitude of a
+government’s investment in a single issuer. There were no investments greater than 5% in any
+one single issuer that would be considered a concentration of credit risk for the government.
+
+-47-
+
+EAST NORRITON TOWNSHIP
+NOTES TO FINANCIAL STATEMENTS
+DECEMBER 31, 2023
+
+III. Detailed notes on all funds (Continued)
+B.
+
+Deposits and investments (continued)
+
+Fair Value Measurements: The Township categorizes its fair value measurements within the
+hierarchy established by generally accepted accounting principles. The hierarchy is based on
+the valuation inputs used to measure the fair value of the asset. Level 1 inputs are quoted prices
+in active markets for identical assets; Level 2 inputs are significant other observable inputs;
+Level 3 inputs are significant unobservable inputs. The Township has the following recurring
+fair value measurements as of December 31, 2023:
+Fair Value
+GOVERNMENTAL ACTIVITIES
+Externally Pooled Investments (PLGIT)
+Total Governmental Activities
+FIDUCIARY FUNDS
+Externally Pooled Investments (PLGIT)
+Mutual Funds - Equity
+Mutual Funds - International Equity
+Mutual Funds - Fixed Income
+Mutual Funds - Real Estate
+Total Fiduciary Funds
+
+C.
+
+Level 1
+
+Level 2
+
+$
+
+25,499,415 $
+
+-
+
+$
+
+25,499,415
+
+$
+
+25,499,415 $
+
+-
+
+$
+
+25,499,415
+
+$
+
+393,683 $
+20,090,202
+1,524,159
+4,785,268
+243,706
+
+$
+20,090,202
+1,524,159
+4,785,268
+243,706
+
+393,683
+-
+
+$
+
+27,037,018 $
+
+26,643,335 $
+
+393,683
+
+Receivables and due from other governments
+
+Receivables as of year-end for the government’s individual major funds, non-major funds, and
+proprietary funds, are as follows:
+
+Park & Rec
+Capital
+
+General
+
+Capital
+Projects
+
+Other
+Governmental
+Funds
+
+Sewer
+
+Total
+
+Receivables:
+Taxes receivable
+Other receivable
+Accounts receivable
+Total Receivables
+
+$ 1,026,924
+316,953
+
+$
+
+$ 1,343,877
+
+200,000
+
+$
+
+$
+
+200,000
+
+1,963
+-
+
+$
+
+$
+
+1,963
+
+1,700
+12,715
+
+$
+
+$
+
+14,415
+
+$
+
+-
+
+$ 1,030,587
+529,668
+
+85,683
+
+85,683
+
+85,683
+
+$ 1,645,938
+
+-48-
+
+EAST NORRITON TOWNSHIP
+NOTES TO FINANCIAL STATEMENTS
+DECEMBER 31, 2023
+
+III. Detailed notes on all funds (Continued)
+D.
+
+Capital assets and right of use assets
+
+Capital asset activity for the year ended December 31, 2023 was as follows:
+Beginning
+
+Ending
+
+Balance
+
+Increases
+
+Decreases
+
+Balance
+
+Governmental activities:
+Capital assets, not being depreciated:
+Land
+
+$
+
+Infrastructure
+T otal capital assets, not being depreciated
+
+2,417,243
+
+$
+
+-
+
+$
+
+-
+
+$
+
+2,417,243
+
+5,090,699
+
+-
+
+-
+
+5,090,699
+
+7,507,942
+
+-
+
+-
+
+7,507,942
+
+-
+
+(143,577)
+
+4,426,880
+
+(158,192)
+
+4,074,869
+
+Capital assets, being depreciated:
+Site improvements
+
+4,570,457
+
+Building and improvements
+
+2,806,727
+
+1,426,334
+
+Machinery and equipment
+
+3,552,892
+
+484,459
+
+-
+
+4,037,351
+
+Vehicles
+
+3,837,621
+
+39,575
+
+(100,335)
+
+3,776,861
+
+14,767,697
+
+1,950,368
+
+(402,104)
+
+16,315,961
+
+Site improvements
+
+2,887,174
+
+117,031
+
+(143,577)
+
+2,860,628
+
+Building and improvements
+
+2,609,485
+
+25,690
+
+(158,192)
+
+2,476,983
+
+Machinery and equipment
+
+2,611,151
+
+336,553
+
+-
+
+2,947,704
+
+Vehicles
+
+2,457,191
+
+233,545
+
+(100,335)
+
+2,590,401
+
+T otal accumulated depreciation
+
+10,565,001
+
+712,819
+
+(402,104)
+
+10,875,716
+
+T otal capital assets, being depreciated, net
+
+4,202,696
+
+1,237,549
+
+-
+
+5,440,245
+
+11,710,638
+
+$ 1,237,549
+
+T otal capital assets being depreciated
+Less accumulated depreciation for:
+
+Governmental activities capital assets, net
+
+$
+
+$
+
+Beginning
+
+-
+
+$
+
+12,948,187
+Ending
+
+Depreciation expense was charged to functions/programs as follows:
+Governmental activities:
+General government
+Public safety
+
+$
+
+Highway and streets
+
+135,515
+
+Culture and recreation
+Total depreciation expense-governmental activities
+
+182,180
+78,218
+316,906
+
+$
+
+712,819
+
+-49-
+
+EAST NORRITON TOWNSHIP
+NOTES TO FINANCIAL STATEMENTS
+DECEMBER 31, 2023
+
+III. Detailed notes on all funds (Continued)
+E.
+
+Interfund receivables, payables, and transfers
+
+The composition of interfund balances as of December 31, 2023 are as follows:
+
+General fund
+Capital projects
+Other governmental funds
+Sewer
+Total
+
+Due From
+Due To
+Other Funds
+Other Funds
+$
+33,070 $
+31,739
+2,450
+3,781
+$
+
+35,520 $
+
+35,520
+
+Interfund balances are primarily a result of:
+(1) reimbursement of expenditures
+(2) allocation of wages and benefits
+
+Interfund transfers:
+Transfer in
+General fund
+Capital projects
+Fiscal Recovery
+Park and Recreation Capital
+Other governmental funds
+Sewer
+Total
+
+Transfer out
+
+$
+
+240,000 $
+160,000
+1,761,525
+300,000
+440,166
+
+2,501,691
+160,000
+240,000
+-
+
+$
+
+2,901,691 $
+
+2,901,691
+
+Interfund transfers are primarily a result of:
+(1) to fund capital projects and acquisitions
+
+-50-
+
+EAST NORRITON TOWNSHIP
+NOTES TO FINANCIAL STATEMENTS
+DECEMBER 31, 2023
+
+III. Detailed notes on all funds (Continued)
+F.
+
+Financed Purchases
+
+The Township entered into lease agreements as lessee for financing the acquisition of various
+equipment and vehicles. These lease agreements qualify as capital leases for accounting
+purposes and, therefore, have been recorded at the net present value of future minimum lease
+payments as of the inception date.
+Equipment and vehicles acquired through
+financed purchases
+Less: accumulated depreciation
+
+$
+
+331,856
+(266,540)
+
+Total
+
+$
+
+65,316
+
+The obligations under financing agreements for the purchase of capital assets are
+collateralized by the capital asset. Future minimum payments under these financing liabilities
+are as follows:
+Year Ending
+Principal
+Interest
+December 31,
+Payments
+Payments
+2024
+$
+53,180 $
+4,360 $
+2025
+36,937
+2,811
+2026
+$
+
+Total
+57,540
+39,748
+
+11,350
+
+1,363
+
+12,713
+
+101,467 $
+
+8,534 $
+
+110,001
+
+-51-
+
+EAST NORRITON TOWNSHIP
+NOTES TO FINANCIAL STATEMENTS
+DECEMBER 31, 2023
+
+III. Detailed notes on all funds (Continued)
+G.
+
+Long-term debt
+
+Long-term liability activity for the year ended December 31, 2023 was as follows:
+Beginning
+Balance
+
+Additions
+
+Reductions
+
+Ending
+
+Due Within
+
+Balance
+
+One Year
+
+Governmental activities:
+Capital asset financing liabilities
+
+$
+
+153,098 $
+
+-
+
+$
+
+(51,631) $
+
+101,467 $
+
+53,180
+
+Compensated absences
+
+144,404
+
+16,937
+
+(13,691)
+
+147,650
+
+-
+
+Net pension liability
+
+7,005,374
+
+3,065,158
+
+(5,269,497)
+
+4,801,035
+
+-
+
+Net OPEB liability
+
+2,584,568
+
+130,757
+
+(532,322)
+
+2,183,003
+
+-
+
+9,887,444 $
+
+3,212,852 $
+
+(5,867,141) $
+
+7,233,155 $
+
+Governmental activity
+Long-Term Liabilities
+
+$
+
+53,180
+
+Debt service for finance purchases of capital assets is funded primarily from taxes for
+governmental activities and charges for service in the business type activities. Any liabilities
+for compensated absences or net pension liabilities and OPEB liabilities are generally
+liquidated by the general fund for governmental activities and the sewer fund for businesstype activities.
+The Township is a guarantor on a loan payable by the Norriton Fire Engine Company to the
+Pennsylvania Emergency Management Agency. In 2010. The Fire Engine Company entered
+into a 15-year loan agreement with PEMA, borrowing a principal balance of $150,000 for
+purchase of a fire truck. The Township contributes $11,583 annually to the Company for
+assistance in debt payments. The principal balance of the loan is $19,904 at December 31,
+2023.
+
+IV. Other information
+A.
+
+Risk management
+
+The government is exposed to various risks of loss related to torts; theft of, damage to, and
+destruction of assets; errors and omissions; and natural disasters for which the government
+participates in the Delaware Valley Property & Liability Trust pool, the Delaware Valley
+Workers’ Compensation Trust pool, and the Delaware Valley Health Trust Pool. Settled
+claims from these risks have not exceeded insurance coverage for the past three years. There
+were no significant reductions in insurance coverage from coverage in the prior year.
+
+-52-
+
+EAST NORRITON TOWNSHIP
+NOTES TO FINANCIAL STATEMENTS
+DECEMBER 31, 2023
+
+IV. Other information (Continued)
+A.
+
+Risk management (continued)
+
+The Delaware Valley Property & Liability Trust is a public entity risk pool operated for the
+benefit of the member entities. Trust underwriting and rate-setting policies are established
+after consultation with independent insurance consultants. Any member may withdraw from
+the Trust by giving 150 days written notice to the Executive Committee. The Township paid
+$161,387 in contributions to the Trust for coverage year 2023. The pooling agreement
+permits the pool to make additional assessments to its members. At December 31, 2023, there
+were no additional assessments due or anticipated; instead, the pool declared a dividend of
+which the Township’s share was $5,778.
+The Delaware Valley Workers’ Compensation Trust is a public entity risk pool operated for
+the benefit of approximately 95 member entities. Trust underwriting and rate-setting policies
+are established after consultation with independent insurance consultants. Any member may
+withdraw from the Trust by giving 150 days written notice to the Executive Committee. The
+Township paid $116,126 in contributions to the Trust for coverage year 2023. The Township
+received a refund of $1,255 as a result from a payroll audit of the 2022 coverage year. An
+audit of the 2023 payroll will be performed in 2024. For the year ended December 31, 2023,
+the pool declared a dividend of which the Township’s share was $16,517.
+The Delaware Valley Health Trust is a public entity risk pool operated for the benefit of
+approximately 33 municipalities. Trust underwriting and rate-setting policies are established
+after consultation with independent insurance consultants. Any member may withdraw from
+the Trust by giving 150 days written notice to the Executive Committee. The insurance
+expense for the year ended December 31, 2023 was $1,448,038. There were no additional
+assessments due or anticipated. At December 31, 2023, the pool did not declare a dividend.
+B.
+
+Contingent liabilities and Uncertainties
+
+Amounts received or receivable from grant agencies are subject to audit and adjustments by
+grantor agencies. Any disallowed claims, including amounts already collected, may
+constitute a liability of the applicable funds. The amount, if any, of expenditures that may
+be disallowed by the grantor cannot be determined at this time, although the government
+expects such amounts, if any, to be immaterial.
+In the normal course of business, there are various relatively minor claims and suits pending
+against the Township, none of which materially affect the financial position of the Township.
+
+-53-
+
+EAST NORRITON TOWNSHIP
+NOTES TO FINANCIAL STATEMENTS
+DECEMBER 31, 2023
+
+IV. Other information (Continued)
+C.
+
+Employee retirement systems and pension plans
+
+Plan Description and Membership
+The Township sponsors two single employer defined benefit pension plans, the Non-Uniformed
+Pension Plan and the Police Pension Plan. These plans are reported as Pension Trust Funds in
+the accompanying financial statements and do not issue stand-alone reports. The plans are
+administered by the Township. The most recent valuation was as of January 1, 2023. Details
+below are from the valuation.
+Police Pension Defined Benefit Pension Plan - The plan is a contributory, single employer
+defined benefit plan that covers all full-time uniformed police officers of the Township. All
+full-time members of the Police Force join the plan upon employment.
+Non-Uniformed Defined Benefit Pension Plan - The plan is a contributory, single employer
+defined benefit plan that covers all full-time permanent, non-uniformed employees of the
+Township who join the Plan upon employment. This plan was frozen as of December 31, 2020
+and all new non-uniformed employees hired after that date will enter into a defined contribution
+plan.
+The Pension Plans are governed by the Board of Supervisors who have established a
+Retirement Benefits Advisory Board authorized to make recommendations to the Board in
+its finance and investment-related planning, including review of pension plan finances for
+both the Police Pension Plan and the Non-Uniform Pension Plan. The Retirement Benefits
+Advisory Board consists of five members appointed by the Board of Supervisors. The Board
+meets quarterly for the purpose of reviewing the investment performance with the investment
+manager. The Board of Supervisors has delegated the authority to manage certain plan assets
+to Conrad Siegel Investment Advisors.
+At December 31, 2023, Defined Benefit Pension Plans consisted of the following:
+NonInactive employees (or their beneficiaries)
+currently receiving benefits (1)
+
+Police
+
+Uniformed
+
+27
+
+33
+
+Inactive employees entitled to benefits
+but not yet receiving them
+
+2
+
+5
+
+Active employees
+
+26
+
+20
+
+55
+
+58
+
+0
+
+0
+
+DROP
+
+-54-
+
+EAST NORRITON TOWNSHIP
+NOTES TO FINANCIAL STATEMENTS
+DECEMBER 31, 2023
+
+IV. Other information (Continued)
+C.
+
+Employee retirement systems and pension plans (continued)
+
+Benefits Provided
+Police Pension Defined Benefit Pension Plan: The plan provides retirement, death, and
+disability to the plan members and their beneficiaries. Members who retire at or after age 50
+with 25 years of continuous service are eligible for normal retirement and are entitled to 50
+percent of the average total monthly compensation during the last 36 months of employment.
+If a member continues to work after the normal retirement date, the pension benefit does not
+start until the employee actually retires. The monthly postponed retirement pension benefits is
+the same as the normal benefit amount. All benefits are vested after twelve years of continued
+service. If a participant is totally and permanently disabled in the line of duty he is eligible for
+disability pension. The disability pension is equal to 50% of the member’s monthly salary at
+the time of disability and shall be reduced by any benefits payable under the federal social
+security laws. If a disabled participant dies before he has received disability benefits in an
+amount equal to the total contributions made by him to the pension fund, then the unpaid balance
+shall be paid in a lump sum to his designated beneficiary. Benefit provisions are established
+and amended by Pennsylvania law. Administrative costs of the Plan are financed through
+investment earnings.
+Effective January 1, 2020, a member is eligible for early retirement after completion of 20 years
+of vesting service. The monthly early retirement is equal to the actuarial equivalent of the
+benefit accrued at the early retirement date.
+A Deferred Retirement Option Plan ("DROP") is available to the Township's police officers
+who have fulfilled the age and service requirements of the Police Pension Plan as described
+in the above paragraph. Under the DROP program a participant may elect to defer receipt of
+normal retirement benefits while continuing employment with the Township for a period of
+not less than one year nor more than three years. The monthly pension shall be calculated as
+of the date of participation in the program and shall be accumulated with 4.5 percent annual
+interest and distributed in a lump sum at retirement. At December 31, 2023, the pension plan
+had total DROP account balances of $0 and no accumulated DROP payments payable.
+
+-55-
+
+EAST NORRITON TOWNSHIP
+NOTES TO FINANCIAL STATEMENTS
+DECEMBER 31, 2023
+
+IV. Other information (Continued)
+C.
+
+Employee retirement systems and pension plans (continued)
+
+Non-Uniformed Defined Benefit Pension Plan: The plan provides retirement, death and
+disability benefits to plan members and their beneficiaries. For employees hired before
+August 1, 2014, a member is eligible for normal retirement at or after attainment of age 58
+with ten years of continuous service or after attainment of age 55 and completion of 25 years
+of continuous service. For employees hired on or after August 1, 2014, a member is eligible
+for normal retirement at or after attainment of age 62 with ten years of continuous service.
+For non-management employees, the normal retirement benefit is equal to 1.65% of average
+monthly compensation multiplied by the number of years and months of benefit service
+completed, up to a maximum benefit of sixty (60) percent of average monthly compensation.
+For management employees, the amount of monthly pension is equal to 50% of average
+monthly compensation, based upon the final five years of employment. If a member
+continues to work after the normal retirement date, the pension benefit does not start until
+the employee actual retires. The monthly late retirement pension benefit is equal to the
+benefit accrued to the late retirement date. Members are eligible for early retirement at age
+55 with 10 years of service. The monthly early retirement pension benefit is equal to the
+actuarial equivalent of the accrued benefit amount multiplied by the percentage specified in
+the plan. An active member is eligible for a disability benefit if the member is totally and
+permanently disabled in accordance with the Federal Social Security Act. The disability
+retirement benefit is equal to the accrued retirement benefit amount and shall commence at
+normal retirement date. If a member dies prior to retirement, the member’s designated
+beneficiary will receive a monthly pension equal to 50 percent of the member’s accrued
+pension at the time of his death, payable immediately. Benefit provisions are established and
+amended in accordance with Pennsylvania law. Administrative costs of the Plan are financed
+through investment earnings.
+A Deferred Retirement Option Plan (“DROP”) was previously available to active members.
+The DROP program was frozen as of December 31, 2020 and no longer available to nonuniformed employees who had not entered the program as of December 31, 2020. No nonuniformed employees were able to enter the program on or after January 1, 2021. At
+December 31, 2023, the pension plan had total DROP account balances of $0 and no
+accumulated DROP payments payable.
+Effective January 1, 2021, the Township transitioned from a defined benefit plan to a defined
+contribution plan for all non-uniformed employees hired on or after that date. This is a trust
+management plan with the Township responsible for contributing 5% of eligible employees’
+wages into the plan. All employees continue to have the option to defer wages through the
+Township 457b deferred compensation plan.
+
+-56-
+
+EAST NORRITON TOWNSHIP
+NOTES TO FINANCIAL STATEMENTS
+DECEMBER 31, 2023
+
+IV. Other information (Continued)
+C.
+
+Employee retirement systems and pension plans (continued)
+
+Measurement Focus and Basis of Accounting
+Basis of Accounting: Pension Plan financial statements are prepared using the economic
+resources measurement focus and the accrual basis of accounting. Employer and member
+contributions are recognized as when due pursuant to formal commitments, as well as statutory
+or contractual requirements. Investment income is recognized as revenue when earned.
+Retirement benefits and refunds are recognized when due and payable in accordance with terms
+of the Plan. Other expenses are recognized when the corresponding liabilities are incurred. The
+net appreciation/(depreciation) in fair value of investments is recorded as an increase/(decrease)
+to investment income based on the valuation of investments. The entire expense of Plan
+administration is charged against the earnings of the Plan. Investment earnings are reduced for
+investment management fees, portfolio evaluation, custodial services, and actuarial services, as
+required by State statutes.
+Method Used to Value Investments: Pension Plan investments are reported by the custodian at
+fair value. Investments that do not have an established market value are reported at estimated
+fair value.
+Contributions
+Non-Uniform members and all Police members, contribute 5% of their pay. Interest is credited
+to each member’s account annually at 7% annual interest prior to December 31, 2016 and 4.5%
+interest after January 1, 2017. Contributions are determined on an annual basis. Administrative
+costs and investment costs of the plan are financed through an addition to the Actuarially
+Determined Employer Contribution.
+The Township is required by statute, principally Pennsylvania Act 205, to contribute the
+remaining amounts necessary to finance the Pension Fund. Benefit and contribution provisions
+are established by Pennsylvania law and may be amended only as allowed by Pennsylvania law.
+The Pension Plans funding policy provides for periodic employer contributions at actuarially
+determined rates that, expressed as percentages of annual covered payroll, are sufficient to
+accumulate sufficient assets to pay benefits when due.
+The Township's annual required contribution is equal to its minimum municipal obligation
+("MMO") as calculated in accordance with Pennsylvania law (Act 205 of 1984) less state aid
+and employee contributions deposited in the pension fund during the year. State law requires
+that state aid be used first to fund the plan, then employee contributions and finally general
+Township funds. The Township received state aid, which is recognized as revenue and
+expenses, in the amount of $ 448,747 for the pensions for the year ended December 31, 2023.
+-57-
+
+EAST NORRITON TOWNSHIP
+NOTES TO FINANCIAL STATEMENTS
+DECEMBER 31, 2023
+
+IV. Other information (Continued)
+C.
+
+Employee retirement systems and pension plans (continued)
+
+Investments
+Investment Policy: The pension plan’s policy in regard to the allocation of invested assets is
+established and may be amended by the Township Board of Supervisors. The policy is to pursue
+an investment strategy that reduces risk through the prudent diversification of the portfolio
+across a broad selection of distinct asset classes. The pension plan’s investment policy
+discourages the use of cash equivalents, except for liquidity purposes, and aims to refrain from
+dramatically shifting asset class allocations over short time spans.
+Rate of Return: For the year ended December 31, 2023, the annual money-weighted rate of
+return on Plan investments, net of investment expense was 11.3% for the Police Plan and 9.48%
+for the Non-Uniformed Plan. The money-weighted rate of return expresses investment
+performance, net of investment expense, adjusted for the changing amounts actually invested.
+Net Pension Liability
+The components of the net pension liability of participating entities at December 31, 2023
+were as follows:
+Police
+
+Non-Uniformed
+
+Total pension liability
+Plan fiduciary net position
+
+$
+
+21,917,658 $
+(18,172,711)
+
+9,610,529
+(8,554,441)
+
+Net Pension Liability
+
+$
+
+3,744,947 $
+
+1,056,088
+
+Plan fiduciary net position as a
+percentage of the total pension liability
+
+82.9%
+
+89.0%
+
+Actuarial Assumptions: The total pension liability in the January 1, 2023 actuarial valuation
+was determined using the following economic assumptions, applied to all periods included
+in the measurement:
+Police
+
+Non-Uniformed
+
+Inflation
+Salary Increases
+
+3.00%
+5.00%
+
+3.00%
+5.00%
+
+(average, including inflation)
+
+Investment Rate of Return
+
+7.50%
+
+7.50%
+
+(including inflation)
+
+Postretirement Cost of Living Increase
+
+none
+
+none
+
+-58-
+
+EAST NORRITON TOWNSHIP
+NOTES TO FINANCIAL STATEMENTS
+DECEMBER 31, 2023
+
+IV. Other information (Continued)
+C.
+
+Employee retirement systems and pension plans (continued)
+
+Mortality rates were based on the PubS-2010 Mortality Table including rates for disabled
+retirees and contingent survivors. Incorporate into the table are rates projected generationally
+using Scale MP-2021 to reflect mortality improvements.
+Effective January 1, 2020, a police member is eligible for early retirement after completion of
+20 years of vesting service. The monthly early retirement is equal to the actuarial equivalent of
+the benefit accrued at the early retirement date.
+The actuarial assumptions used in the January 1, 2023 valuation were based on the results of
+an actuarial experience study for the period January 1, 2020 to December 31, 2021.
+The net pension liability for Police was measured as of December 31, 2023 and the total
+pension liability was determined by rolling forward the liabilities from an actuarial valuation
+as of January 1, 2023.
+The long-term expected rate of return on pension plan investments was determined using a
+building-block method in which best-estimate ranges of expected future real rates of return
+(expected returns, net of pension plan investment expense and inflation) are developed for
+each major asset class. These ranges are combined to produce the long-term expected rate
+of return by weighting the expected future real rates of return by the target asset allocation
+percentage and by adding expected inflation. Best estimates of arithmetic real rates of return
+for each major asset class included in the pension plan’s target asset allocation as of January
+1, 2023 as summarized as follows:
+Target
+
+Long-term Expected
+
+Asset Class
+Domestic Equity
+
+Allocation
+42.0%
+
+Real Rate of Return
+5.5%-7.5%
+
+International Equity
+
+15.0%
+
+4.5%-6.5%
+
+Fixed Income
+
+40.0%
+
+1.0%-3.0%
+
+Real Estate
+
+3.0%
+
+4.5%-6.5%
+
+Cash
+
+0.0%
+
+0.00%
+
+-59-
+
+EAST NORRITON TOWNSHIP
+NOTES TO FINANCIAL STATEMENTS
+DECEMBER 31, 2023
+
+IV. Other information (Continued)
+C.
+
+Employee retirement systems and pension plans (continued)
+
+Discount Rate: The discount rate used to measure the total pension liability was 7.5% for
+both the Non-Uniformed and Police Pension Plans. The projection of cash flows used to
+determine the discount rate assumed that contributions from Plan members will be made at
+the current contribution rate and that contributions from employers will be made at
+contractually required rates, actuarially determined. Based on those assumptions, the Plan’s
+fiduciary net position was projected to be available to make all projected future benefit
+payments of active and inactive Plan members. Therefore, the long-term expected rate of
+return on Plan investments was applied to all periods of projected benefit payments to
+determine the total pension liability. The employer’s funding policy requires the full funding
+of the entry age normal cost plus plan expenses, as well as an amortization of the unfunded
+liability. The employer has always met the funding requirements of Pennsylvania law Act
+205 of 1984. Act 205 requires full funding of the entry age normal cost plus plan expenses,
+as well as amortization of the unfunded liability.
+Increase (Decrease)
+Total Pension
+
+Plan Fiduciary
+
+Net Pension
+
+Liability
+
+Net Position
+
+Liability
+
+Police Pension Plan
+Balance at December 31, 2022
+
+$
+
+21,238,693 $
+
+15,904,029 $
+
+5,334,664
+
+Service cost
+
+544,422
+
+-
+
+544,422
+
+Interest
+
+1,569,492
+
+-
+
+1,569,492
+
+Changes for the year:
+
+Change of benefit terms
+Differences between expected and actual experience
+
+-
+
+-
+
+-
+
+(278,163)
+
+-
+
+(278,163)
+
+Change of assumptions
+
+-
+
+Contributions - employer
+Contributions - employee
+
+-
+
+1,116,605
+189,685
+
+(1,116,605)
+(189,685)
+
+Net investment income
+
+-
+
+2,119,178
+
+(2,119,178)
+
+Benefit payments, including refunds of employee contributions
+Administrative expense
+
+(1,156,786)
+-
+
+Other changes
+Net Changes
+Balance at December 31, 2023
+
+$
+
+-
+
+(1,156,786)
+-
+
+-
+
+-
+
+678,965
+
+2,268,682
+
+(1,589,717)
+
+21,917,658 $
+
+18,172,711 $
+
+3,744,947
+
+-60-
+
+EAST NORRITON TOWNSHIP
+NOTES TO FINANCIAL STATEMENTS
+DECEMBER 31, 2023
+
+IV. Other information (Continued)
+C.
+
+Employee retirement systems and pension plans (continued)
+
+Total Pension
+
+Increase (Decrease)
+Plan Fiduciary
+Net Pension
+
+Liability
+Non-Uniformed Pension Plan
+Balance at December 31, 2022
+
+$
+
+Net Position
+
+Liability
+
+9,295,720 $
+
+7,625,010 $
+
+1,670,710
+
+262,199
+
+-
+
+262,199
+
+689,045
+
+-
+
+689,045
+
+-
+
+-
+
+-
+
+(104,861)
+
+-
+
+(104,861)
+
+Change of assumptions
+
+-
+
+-
+
+-
+
+Contributions - employer
+
+-
+
+375,007
+
+(375,007)
+
+Contributions - employee
+
+-
+
+92,853
+
+(92,853)
+
+Net investment income
+
+-
+
+993,145
+
+(993,145)
+
+(531,574)
+
+(531,574)
+
+-
+
+-
+
+-
+
+-
+
+Changes for the year:
+Service cost
+Interest
+Change of benefit terms
+Differences between expected and actual experience
+
+Benefit payments, including refunds of employee contributions
+Administrative expense
+Other changes
+Net Changes
+Balance at December 31, 2023
+
+$
+
+314,809
+
+929,431
+
+(614,622)
+
+9,610,529 $
+
+8,554,441 $
+
+1,056,088
+
+Sensitivity of the Net Pension Liability to Changes in the Discount Rate: The following
+presents the net pension liability of participating entities calculated using the discount rate
+of 7.5 percent, as well as what the net pension liability would be if it were calculated using
+a discount rate that is 1-percentage-point lower (6.5 percent) or 1-percentage-point higher
+(8.5 percent) than the current rate:
+1%
+
+Current
+
+1%
+
+Decrease
+(6.5%)
+
+Discount
+Rate (7.5%)
+
+Increase
+(8.5%)
+
+Net pension liability
+Police
+Non-Uniformed
+
+$
+
+6,433,807 $
+
+3,744,947 $
+
+1,509,613
+
+2,048,029
+
+1,056,088
+
+211,314
+
+-61-
+
+EAST NORRITON TOWNSHIP
+NOTES TO FINANCIAL STATEMENTS
+DECEMBER 31, 2023
+
+IV. Other information (Continued)
+C.
+
+Employee retirement systems and pension plans (continued)
+
+Deferred Outflows and Inflows of Resources: For the year ended December 31, 2023, the
+Township recognized pension expense of $967,159 for Police Pension and $396,750 for
+Non-Uniformed Pension. At December 31, 2023, the Township reported deferred outflows
+of resources and deferred inflows of resources related to pension from the following sources:
+Deferred Outflows
+of Resources
+
+Deferred Inflows
+of Resources
+
+Police Pension
+Differences between expected and actual experience
+
+$
+
+Change in assumptions
+Net difference between projected and actual
+earnings on pension plan investments
+
+$
+93,679
+1,361,278
+
+Total
+Non-Uniformed Pension
+Differences between expected and actual experience
+
+-
+
+$
+
+1,454,957 $
+
+370,775
+
+$
+
+-
+
+98,531
+
+Change in assumptions
+
+$
+
+-
+
+Net difference between projected and actual
+earnings on pension plan investments
+
+697,290
+
+Total
+
+370,775
+-
+
+$
+
+697,290 $
+
+98,531
+
+Amounts reported as deferred outflows of resources and deferred inflows of resources related
+to pensions will be recognized in pension expense as follows:
+Year Ended
+December 31:
+
+Police
+
+388,947 $
+
+169,787
+
+2026
+
+472,447
+551,917
+
+224,614
+289,089
+
+2027
+
+(249,656)
+
+(84,731)
+
+2028
+Thereafter
+
+(39,738)
+
+-
+
+(39,735)
+
+-
+
+1,084,182 $
+
+598,759
+
+2024
+
+$
+
+Non-Uniformed
+
+2025
+
+Total
+
+$
+
+Payable to the Defined Benefit Pension Plans: For the year ended December 31, 2023 there
+were no amounts payable for contributions to the pension plans.
+-62-
+
+EAST NORRITON TOWNSHIP
+NOTES TO FINANCIAL STATEMENTS
+DECEMBER 31, 2023
+
+IV. Other information (Continued)
+D.
+
+Post-retirement benefits
+
+The Township administers a single-employer defined benefit plan to provide for certain
+postretirement healthcare benefits (OPEB) to eligible retired police officers. The Plan was
+established and is governed through Board Resolution and Police Labor Contract, to provide
+post-retirement medical and dental benefits to uniformed and employees. The plan is funded
+on a pay-as-you-go basis and there is no irrevocable trust established for the plan. The most
+recent valuation was as of January 1, 2022.
+The plan does not issue a stand-alone financial report.
+Membership of the plan consisted of the following at December 31, 2023:
+OPEB
+Inactive employees (or their beneficiaries)
+currently receiving benefits
+
+11
+
+Inactive employees entitled to benefits
+but not yet receiving them
+Active employees
+
+0
+28
+39
+
+Eligibility: Police officers are eligible for retiree health care benefits until the retiree is
+eligible for Medicare at the earlier of age 50 with 25 years of service or 20 years of service.
+Benefits Provided: The plan provides medical and dental insurance benefits to eligible
+retirees, spouses, and dependents.
+Insurance for Retirees and Spouse - For retired officers electing coverage prior to January 1,
+2020, the Township agrees to provide one-half the cost of premium for scheduled health
+insurance coverage of the Township's choice (medical, dental, prescription and vision) for a
+retiree and spouse until retiree's Medicare eligibility age, given that the Officer retires under
+the retirement provisions of the East Norriton Township Police Pension Plan (attainment of
+age 50 and completion of 25 years of service). Any officer retired under the disability
+provisions of the pension plan shall have this provision extended to not only the Officer's
+spouse, but also to dependent children. In the event that a retired Officer dies prior to
+attaining Medicare eligibility age, the Township agrees to continue to provide one-half the
+cost of premium for health insurance coverage for the widowed spouse until the deceased
+retiree would have attained Medicare eligibility age.
+
+-63-
+
+EAST NORRITON TOWNSHIP
+NOTES TO FINANCIAL STATEMENTS
+DECEMBER 31, 2023
+
+IV. Other information (Continued)
+D.
+
+Post-retirement benefits (continued)
+
+Effective January 1, 2020, the Township agrees to pay 60% of the cost of premium for scheduled
+health insurance coverage of the Township’s choice (medical, dental, prescription and vision)
+for a retiree and spouse for five years following the date of retirement and then 45% until the
+retiree’s Medicare eligibility age. All Officer’s hired after June 1, 2020 will be provided 40% of
+the cost of premium for scheduled health insurance coverage of the Township’s choice (medical,
+dental, prescription and vision) for a retiree and spouse following the date of retirement until the
+retiree’s Medicare eligibility age.
+Any officer who is eligible for medical insurance through other employment or through his or
+her spouse shall not receive post-retirement health payments.
+Insurance for Dependents of Deceased Employees - The Township agrees to provide health
+insurance coverage of its choice for the spouse and dependent children of an Officer who is
+either killed or dies while employed by the Township, for a period not to exceed five years
+after such death. This insurance shall cease upon the remarriage of the spouse of the deceased
+Officer or expiration of the five-year period, whichever occurs first. If the spouse elects the
+current PPO-1 coverage, the spouse must pay the difference between the PPO-1 premium
+rates and the HMO premium rates.
+Coordination with Medicare Plan benefits pay primary to Medicare.
+Contributions: The Township negotiates the contribution percentage between the Township
+and employees through union contracts and personnel policy. The required contribution rates
+of the employer and the members vary depending on the applicable agreement. The funding
+of these benefits will be covered by annual appropriation by the Township. The Township
+currently contributes enough money to the plan to satisfy current obligations on a pay-asyou-go basis. The costs of administering the plan are paid by the Township. The contribution
+requirements of plan members have been established and may be amended through Board
+Resolution and Police Labor Contracts.
+
+-64-
+
+EAST NORRITON TOWNSHIP
+NOTES TO FINANCIAL STATEMENTS
+DECEMBER 31, 2023
+
+IV. Other information (Continued)
+D.
+
+Post-retirement benefits (continued)
+
+Net OPEB Liability
+The Township’s net OPEB liability was measured as of January 1, 2023, and the total OPEB
+liability used to calculate the net OPEB liability was determined by an actuarial valuation as
+of that date.
+
+Total OPEB liability
+Plan fiduciary net position
+
+$
+
+OPEB
+2,183,003
+-
+
+Net OPEB liability
+
+$
+
+2,183,003
+
+Plan fiduciary net position as a
+percentage of the total OPEB liability
+
+0%
+
+Actuarial Assumptions: The total OPEB liability in the January 1, 2022 actuarial valuation
+was determined using the following economic assumptions, applied to all periods included
+in the measurement:
+OPEB
+Inflation
+
+2.25%
+
+Salary Increases
+
+5.0%
+
+Investment Rate of Return
+Healthcare Cost Trend Rates
+
+4.31% (net of OPEB plan investment expense, including inflation)
+Medical trend rate is 7% in 2023 with 0.5% decrease per year until 5.5%
+in 2026. Rates e gradually decrease from 5.4% in 2027 to 4.1% in 2075
+and later based on the Society of Actuaries Long-Run Medical Cost
+Trend Model.
+
+(including inflation)
+
+Mortality rates were based on the PubS-2010 mortality table, including rates for disabled
+retirees and contingent survivors. Incorporated into the table are rates projected
+generationally using Scale MP-2021 to reflect mortality improvements.
+The actuarial assumptions used in the January 1, 2022 valuation were based on the results of
+an actuarial experience study from the period January 1, 2019 to December 31, 2021.
+
+-65-
+
+EAST NORRITON TOWNSHIP
+NOTES TO FINANCIAL STATEMENTS
+DECEMBER 31, 2023
+
+IV. Other information (Continued)
+D.
+
+Post-retirement benefits (continued)
+
+The net OPEB liability was measured as of December 31, 2023 and the total OPEB liability
+was determined by rolling forward the liabilities from an actuarial valuation as of January 1,
+2022. Significant events or changes in assumptions occurred between the valuation date and
+the fiscal year end: The discount rate increased from 2.25% to 4.31%.
+Discount Rate: The discount rate used to measure the total OPEB liability was 4.31 percent,
+based upon 20-year AA/Aa municipal bond rates, for the plan. No assets have been
+accumulated in an irrevocable trust, so the municipal rate has been applied to all periods.
+Change in Net OPEB Liability
+Increase (Decrease)
+Plan Fiduciary
+Net Position
+
+Total OPEB
+Liability
+OPEB Plan
+Balance at January 1, 2022
+
+$
+
+$
+
+Net OPEB
+Liability
+
+2,584,568 $
+
+-
+
+2,584,568
+
+72,773
+57,984
+
+-
+
+72,773
+57,984
+
+Change of benefit terms
+
+-
+
+-
+
+-
+
+Differences between expected and actual experience
+
+-
+
+-
+
+-
+
+Change of assumptions
+
+(384,108)
+
+-
+
+(384,108)
+
+Contributions - employer
+
+-
+
+-
+
+-
+
+Contributions - employee
+
+-
+
+-
+
+-
+
+Net investment income
+
+-
+
+-
+
+-
+
+(148,214)
+-
+
+-
+
+(148,214)
+-
+
+Changes for the year:
+Service cost
+Interest
+
+Benefit payments, including refunds of employee contributions
+Administrative expense
+Other changes
+Net Changes
+Balance at January 1, 2023
+
+$
+
+-
+
+-
+
+-
+
+(401,565)
+
+-
+
+(401,565)
+
+2,183,003 $
+
+-
+
+$
+
+2,183,003
+
+Sensitivity of the Net OPEB Liability to Changes in the Discount Rate: The following
+presents the net OPEB liability calculated using the discount rate of 4.31 percent, as well as
+what the net OPEB liability would be if it were calculated using a discount rate that is one
+percentage point lower or one percentage point higher than the current rate:
+1%
+Decrease
+(3.31%)
+Net OPEB liability
+
+$
+
+Current
+Discount
+Rate (4.31%)
+
+2,367,996 $
+
+2,183,003 $
+
+1%
+Increase
+(5.31%)
+2,018,330
+
+-66-
+
+EAST NORRITON TOWNSHIP
+NOTES TO FINANCIAL STATEMENTS
+DECEMBER 31, 2023
+
+IV. Other information (Continued)
+D.
+
+Post-retirement benefits (continued)
+
+Sensitivity of the Total OPEB Liability to Changes in the Healthcare Cost Trend Rates: The
+following presents the total OPEB liability of the Township, as well as what the Township’s
+total OPEB liability would be if it were calculated using healthcare cost trend rates 1percentage-point lower or 1-percentage-point higher than the current healthcare cost trend
+rates:
+
+Net OPEB liability
+
+1% Decrease
+
+Healthcare
+
+1% Increase
+
+Valuation
+
+Cost Trend
+
+Valuation
+
+$
+
+Rates
+Valuation Rates
+1,980,101 $ 2,183,003 $
+
+Rates
+2,416,905
+
+OPEB Expense, and Deferred Outflows and Inflows of Resources
+For December 31, 2023, the Township reported the following deferred outflows and inflows
+of resources related to OPEB.
+Deferred Outflows Deferred Inflows
+of Resources
+of Resources
+OPEB Plan
+Differences between expected and actual experience
+Changes in assumptions
+
+$
+
+196,102 $
+269,224
+
+132,141
+448,545
+
+-
+
+-
+
+Net difference between projected and actual
+earnings on OPEB plan investments
+Contributions subsequent to the
+measurement date
+Total
+
+168,681
+$
+
+634,007 $
+
+580,686
+
+-67-
+
+EAST NORRITON TOWNSHIP
+NOTES TO FINANCIAL STATEMENTS
+DECEMBER 31, 2023
+
+IV. Other information (Continued)
+D.
+
+Post-retirement benefits (continued)
+
+Amounts reported as deferred outflows of resources and deferred inflows of resources related
+to OPEB will be recognized in OPEB expense as follows:
+GovernmentalYear Ended
+December 31:
+2024
+
+Activities
+OPEB
+$
+
+2025
+2026
+
+(12,304)
+(12,304)
+(12,304)
+
+2027
+
+(12,304)
+
+2028
+Thereafter
+
+(12,305)
+(53,839)
+
+Total
+
+$
+
+(115,360)
+
+For the year ended December 31, 2023, the actuarial determined expense for the OPEB Plan
+was $118,543.
+E.
+
+Restricted assets
+
+During 1990, proceeds of the Norris City Cemetery Trust were transferred to the Township.
+These monies are to be used for the maintenance, upkeep, and repair of the Norris City
+Cemetery. As of December 31, 2023 general fund assets of $10,545 have been restricted for
+this purpose.
+Escrow cash deposits - The Township acts in a custodial capacity with respect to monies
+deposited with it by developers and others. These monies are held by the Township and used
+to pay legal, engineering, and other fees incurred on behalf of a specific project. Any unused
+deposits are returned to the developer upon completion of the project, except for an
+administrative handling fee. None of the monies received from or expended on behalf of the
+developers are recorded in the revenues or expenses of the Township. At December 31, 2023,
+$144,893 represents the balance of these monies held in escrow.
+
+-68-
+
+EAST NORRITON TOWNSHIP
+NOTES TO FINANCIAL STATEMENTS
+DECEMBER 31, 2023
+
+IV. Other information (Continued)
+F.
+
+Joint Ventures
+
+Under a joint resolution authorized by state statutes, the Township joined Plymouth and
+Whitpain Townships to establish and operate the East Norriton-Plymouth-Whitpain Joint
+Sewer Authority. The Sewer Authority Board is appointed by each of the three-member
+government’s governing body. The rates for user charges are approved by the Sewer Authority
+Board. The legal liability for the general obligation portion of the Sewer Authority’s debt
+remains with the Joint Sewer Authority.
+A complete financial statement is available upon request.
+The Township’s treatment cost provided by the Joint Sewer Authority was $440,166 during the
+year ended December 31, 2023. The Township maintains no equity interest in the Authority;
+however, annual contributions are made to the capital improvement program.
+G.
+
+Opening Net Position
+
+The opening government-wide net position was adjusted as follows:
+
+As reported December 31, 2022
+
+$
+
+Correction
+December 31, 2022 - restated
+
+$
+
+Accumulated
+
+Net
+
+Depreciation
+
+Position
+
+11,311,843
+
+$ 32,989,269
+
+(746,842)
+
+746,842
+
+10,565,001
+
+$ 33,736,111
+
+-69-
+
+REQUIRED
+SUPPLEMENTARY INFORMATION
+
+EAST NORRITON TOWNSHIP
+REQUIRED SUPPLEMENTARY INFORMATION
+SCHEDULE OF CHANGES IN THE NET PENSION LIABILITY
+AND RELATED RATIOS - POLICE PENSION PLAN
+
+2023
+2022
+2021
+2020
+Total pension liability
+Service cost
+$
+544,422 $
+509,457 $
+485,197 $
+405,439
+Interest
+1,569,492
+1,525,441
+1,454,461
+1,402,735
+Changes of benefit terms
+57,420
+Differences between expected and actual experience
+(278,163)
+(180,331)
+Changes of assumptions
+Benefit payments, including refunds of employee contributions
+(1,156,786)
+(1,200,962)
+(955,844)
+(1,483,621)
+Net change in total pension liability
+Total pension liability - beginning
+Total pension liability - ending (a)
+
+678,965
+21,238,693
+
+833,936
+20,404,757
+
+803,483
+19,601,274
+
+381,973
+19,219,301
+
+$ 21,917,658 $ 21,238,693 $ 20,404,757 $ 19,601,274
+
+Plan fiduciary net position
+Contributions - employer
+$ 1,116,605 $ 1,089,695 $ 1,077,942 $
+851,172
+Contributions - employee
+189,685
+173,902
+160,444
+149,277
+Net investment income
+2,119,178
+(2,620,836)
+1,797,548
+1,548,170
+Benefit payments, including refunds of employee contributions
+(1,156,786)
+(1,200,962)
+(955,844)
+(1,483,621)
+Administrative expense
+Other
+Net change in plan fiduciary net position
+
+2,268,682
+
+(2,558,201)
+
+2,080,090
+
+1,064,998
+
+Plan fiduciary net position - beginning
+
+15,904,029
+
+18,462,230
+
+16,382,140
+
+15,317,142
+
+Plan fiduciary net position - ending (b)
+
+$ 18,172,711 $ 15,904,029
+
+$ 18,462,230
+
+$ 16,382,140
+
+Township's net pension liability - ending (a)-(b)
+
+$
+
+$ 1,942,527
+
+$ 3,219,134
+
+90.5%
+
+83.6%
+
+Plan fiduciary net position as a percentage of the total
+pension liability
+Covered payroll
+
+3,744,947 $
+
+5,334,664
+
+82.9%
+
+74.9%
+
+$3,489,497
+
+Net pension liability as a percentage of covered payroll
+
+107.3%
+
+Annual money weighted return, net of investment expenses
+
+11.3%
+
+$
+
+3,367,450 $ 3,223,042 $ 3,021,417
+158.4%
+-14.22%
+
+60.3%
+
+106.5%
+
+10.58%
+
+10.70%
+
+This schedule is presented to illustrate the requirement to show information for 10 years. However, until a full 10year trend is complete, available information is presented.
+Notes to Schedule:
+Changes in benefit terms: None since 1/1/23
+
+-71-
+
+2019
+$
+
+2018
+
+2017
+
+2016
+
+2015
+
+386,132 $
+393,450 $
+374,714 $
+410,899 $
+391,332
+1,393,451
+1,267,245
+1,216,430
+1,104,270
+1,040,841
+(102,565)
+320,087
+(389,307)
+327,874
+418,103
+(767,218)
+(764,914)
+(827,733)
+(539,388)
+(694,180)
+1,237,674
+17,981,627
+
+895,781
+17,085,846
+
+1,501,601
+15,584,245
+
+975,781
+14,608,464
+
+348,686
+14,259,778
+
+$ 19,219,301
+
+$ 17,981,627
+
+$ 17,085,846
+
+$ 15,584,245
+
+$ 14,608,464
+
+$
+
+826,028 $
+133,323
+2,276,113
+(767,218)
+-
+
+715,184 $
+749,645 $
+129,139
+161,049
+(830,858)
+1,471,741
+(764,914)
+(827,733)
+(35,859)
+(34,938)
+-
+
+706,098 $
+147,502
+966,594
+(539,388)
+(5,700)
+-
+
+727,687
+136,620
+(175,723)
+(694,180)
+(8,800)
+600
+
+2,468,246
+
+(787,308)
+
+1,519,764
+
+1,275,106
+
+(13,796)
+
+12,848,896
+
+13,636,204
+
+12,116,440
+
+10,841,334
+
+10,855,130
+
+$ 15,317,142
+
+$ 12,848,896
+
+$ 13,636,204
+
+$ 12,116,440
+
+$ 10,841,334
+
+$ 3,902,159
+
+$ 5,132,731
+
+$ 3,449,642
+
+$ 3,467,805
+
+$ 3,767,130
+
+79.7%
+
+71.5%
+
+79.8%
+
+77.7%
+
+74.2%
+
+$ 2,666,434
+
+$ 2,539,013
+
+$ 2,563,390
+
+$ 3,017,483
+
+$ 2,732,355
+
+146.3%
+
+202.2%
+
+134.6%
+
+114.9%
+
+137.9%
+
+17.50%
+
+-6.14%
+
+12.34%
+
+9.26%
+
+-1.47%
+
+72-
+
+EAST NORRITON TOWNSHIP
+REQUIRED SUPPLEMENTARY INFORMATION
+SCHEDULE OF CONTRIBUTIONS - POLICE PENSION PLAN
+
+Fiscal
+Year Ended
+December 31,
+2014
+2015
+2016
+2017
+2018
+2019
+2020
+2021
+2022
+2023
+
+Actuarially
+Determined
+Contribution
+$
+
+Actual
+Employer
+Contribution
+
+532,716 $
+727,687
+706,098
+729,768
+683,318
+826,028
+844,175
+1,076,887
+1,089,695
+1,116,605
+
+Contribution
+Deficiency
+(Excess)
+
+532,716 $
+727,687
+706,098
+749,645
+715,184
+826,028
+851,172
+1,077,942
+1,089,695
+1,116,605
+
+$
+(19,877)
+(31,866)
+(6,997)
+(1,055)
+-
+
+Covered
+Payroll
+2,549,836
+2,732,355
+3,017,483
+2,563,390
+2,539,013
+2,666,434
+3,021,417
+3,223,042
+3,367,450
+3,489,497
+
+Contribution as
+a Percentage
+of Covered
+Payroll
+20.89%
+26.63%
+23.40%
+29.24%
+28.17%
+30.98%
+28.17%
+33.44%
+32.36%
+32.00%
+
+Notes to Schedule:
+Actuarially determined contribution rates are calculated as of January 1, two years to four years
+prior to the end of the fiscal year in which contributions are reported.
+Methods and assumptions used to determine contribution rates:
+Valuation date
+1/1/2021
+Actuarial cost method
+Entry Age Normal
+Amortization method
+Level Dollar Closed
+Remaining amortization period 6 years
+Asset valuation method
+Smoothed value with a corridor of 80% to 120% of Market Value
+Inflation
+3%
+Salary increases
+5.0%, average, including inflation
+Investment rate of return
+7.5%, net of pension plan investment expense, including inflation
+Retirement age
+It assumes that all members enter the DROP at Normal Retirement Age and
+remain in the DROP for three years
+Mortality
+PubS-2010 mortality table, including rates for disabled retirees and contingent
+survivors. Incorporated into the table are rates projected generationally using
+Scale MP-2020 to reflect mortality improvement
+Changes in benefit terms: None since 1/1/2021
+
+-73-
+
+EAST NORRITON TOWNSHIP
+REQUIRED SUPPLEMENTARY INFORMATION
+SCHEDULE OF CHANGES IN THE NET PENSION LIABILITY AND
+RELATED RATIOS - NON-UNIFORMED PENSION PLAN
+
+2023
+
+2022
+
+2021
+
+2020
+
+Total pension liability
+Service cost
+$
+Interest
+Changes of benefit terms
+Differences between expected and actual experience
+Changes of assumptions
+Benefit payments, including refunds of employee contributions
+
+262,199 $
+689,045
+(104,861)
+(531,574)
+
+301,418 $
+667,965
+(556,898)
+
+287,065 $
+639,377
+647,786
+(114,493)
+(587,822)
+
+157,083
+574,817
+(472,606)
+
+Net change in total pension liability
+Total pension liability - beginning
+
+314,809
+9,295,720
+
+412,485
+8,883,235
+
+871,913
+8,011,322
+
+259,294
+7,752,028
+
+9,610,529 $
+
+9,295,720 $ 8,883,235 $ 8,011,322
+
+Total pension liability - ending (a)
+
+$
+
+Plan fiduciary net position
+Contributions - employer
+$
+Contributions - employee
+Net investment income
+Benefit payments, including refunds of employee contributions
+Administrative expense
+Other
+
+375,007 $
+406,261 $
+92,853
+92,718
+993,145
+(1,204,704)
+(531,574)
+(556,898)
+-
+
+416,357 $ 1,897,737
+95,014
+102,068
+760,046
+640,966
+(587,822)
+(472,606)
+-
+
+Net change in plan fiduciary net position
+
+929,431
+
+(1,262,623)
+
+683,595
+
+Plan fiduciary net position - beginning
+
+2,168,165
+
+7,625,010
+
+8,887,633
+
+8,204,038
+
+6,035,873
+
+Plan fiduciary net position - ending (b)
+
+$
+
+8,554,441 $
+
+7,625,010
+
+$ 8,887,633
+
+$ 8,204,038
+
+Township's net pension liability - ending (a)-(b)
+
+$
+
+1,056,088 $
+
+1,670,710
+
+$
+
+Plan fiduciary net position as a percentage of the total
+pension liability
+Covered payroll
+Net pension liability as a percentage of covered payroll
+Annual money weighted return, net of investment expenses
+
+89.0%
+$
+
+1,856,350 $
+56.9%
+9.48%
+
+82.0%
+
+(4,398) $
+
+(192,716)
+
+100.0%
+
+102.4%
+
+1,777,669 $ 1,729,269 $ 1,880,210
+94.0%
+-13.64%
+
+-0.3%
+
+-10.2%
+
+8.84%
+
+11.00%
+
+Notes to Schedule:
+Changes in benefit terms: Effective 1/1/21, there were changes in plan eligibility, benefit formula, preretirement death benefit,
+vesting and DROP.
+
+This schedule is presented to illustrate the requirement to show information for 10 years. However, until a full 10year trend is complete, available information is presented.
+
+-74-
+
+2019
+
+2018
+
+2017
+
+2016
+
+2015
+
+149,603 $
+559,412
+(16,493)
+223,987
+(733,135)
+
+162,843 $
+540,812
+(644,313)
+
+155,089 $
+528,547
+(130,464)
+270,077
+(512,445)
+
+136,256 $
+505,942
+(519,641)
+
+129,768
+491,548
+(171,363)
+(297,519)
+
+183,374
+7,568,654
+
+59,342
+7,509,312
+
+310,804
+7,198,508
+
+122,557
+7,075,951
+
+152,434
+6,923,517
+
+$ 7,752,028
+
+$ 7,568,654
+
+$ 7,509,312
+
+$ 7,198,508
+
+$ 7,075,951
+
+$
+
+$
+
+383,764 $
+101,957
+910,890
+(733,135)
+-
+
+317,716 $
+97,927
+(344,120)
+(644,313)
+(10,851)
+-
+
+311,370 $
+90,445
+666,868
+(512,445)
+(22,434)
+-
+
+311,980 $
+80,403
+439,232
+(519,641)
+-
+
+315,228
+78,999
+(86,296)
+(297,519)
+(9,200)
+-
+
+663,476
+
+(583,641)
+
+533,804
+
+311,974
+
+1,212
+
+5,372,397
+
+5,956,038
+
+5,422,234
+
+5,110,260
+
+5,109,048
+
+$ 6,035,873
+
+$ 5,372,397
+
+$ 5,956,038
+
+$ 5,422,234
+
+$ 5,110,260
+
+$ 1,716,155
+
+$ 2,196,257
+
+$ 1,553,274
+
+$ 1,776,274
+
+$ 1,965,691
+
+77.9%
+
+71.0%
+
+79.3%
+
+75.3%
+
+72.2%
+
+$ 2,015,008
+
+$ 1,674,814
+
+$ 1,852,610
+
+$ 1,613,204
+
+$ 1,619,489
+
+85.2%
+
+131.1%
+
+83.8%
+
+110.1%
+
+121.4%
+
+17.50%
+
+-8.62%
+
+12.30%
+
+9.25%
+
+-1.53%
+
+75-
+
+EAST NORRITON TOWNSHIP
+REQUIRED SUPPLEMENTARY INFORMATION
+SCHEDULE OF CONTRIBUTIONS - NON-UNIFORMED PENSION PLAN
+
+Fiscal
+Year Ended
+December 31,
+2014
+2015
+2016
+2017
+2018
+2019
+2020
+2021
+2022
+2023
+
+Actuarially
+Determined
+Contribution
+$
+
+Actual
+Employer
+Contribution
+
+225,902 $
+315,228
+311,980
+311,370
+317,716
+383,764
+397,737
+416,357
+406,261
+375,007
+
+Contribution
+Deficiency
+(Excess)
+
+225,902 $
+$
+315,228
+311,980
+311,370
+317,716
+383,764
+1,897,737
+(1,500,000)
+416,357
+406,261
+375,007
+-
+
+Covered
+Payroll
+1,531,039
+1,619,489
+1,613,204
+1,852,610
+1,674,814
+2,015,008
+1,880,210
+1,729,269
+1,777,669
+1,856,350
+
+Contribution as
+a Percentage
+of Covered
+Payroll
+14.75%
+19.46%
+19.34%
+16.81%
+18.97%
+19.05%
+100.93%
+24.08%
+22.85%
+20.20%
+
+Notes to Schedule:
+Actuarially determined contribution rates are calculated as of January 1, two years to four years
+prior to the end of the fiscal year in which contributions are reported.
+Methods and assumptions used to determine contribution rates:
+Valuation date
+1/1/2021
+Actuarial cost method
+Entry Age Normal
+Amortization method
+Level Dollar Closed
+Remaining amortization period 4 years
+Asset valuation method
+Smoothed value with a corridor of 80% to 120% of Market Value
+Inflation
+3%
+Salary increases
+5.0%, average, including inflation
+Investment rate of return
+7.5%, net of pension plan investment expense, including inflation
+Retirement age
+It assumes that all members enter the DROP at Normal Retirement Age and
+remain in the DROP for three years
+Mortality
+PubG-2010 mortality table, including rates for disabled retirees and contingent
+survivors. Incorporated into the table are rates projected generationally using
+Scale MP-2020 to reflect mortality improvement
+Changes in benefit terms: Effective January 1, 2021, there were changes to plan eligibility, benefit formula,
+preretirement death benefit, vesting and DROP
+
+-76-
+
+EAST NORRITON TOWNSHIP
+REQUIRED SUPPLEMENTARY INFORMATION
+SCHEDULE OF CHANGES IN THE NET OPEB LIABILITY
+AND RELATED RATIOS - POLICE
+
+Total OPEB liability
+Service cost
+Interest
+Changes of benefit terms
+Differences between expected and actual experience
+Changes of assumptions
+Benefit payments, including refunds of employee contributions
+
+2023
+
+Measurement Date January 1,
+2022
+2021
+2020
+
+72,773 $
+57,984
+(384,108)
+(148,214)
+
+88,623 $
+46,641
+239,680
+(60,499)
+(126,334)
+
+65,832 $
+68,774
+16,362
+256,383
+(119,347)
+
+71,664 $
+80,673
+(207,653)
+62,536
+(94,705)
+
+(401,565)
+2,584,568
+
+188,111
+2,396,457
+
+288,004
+2,108,453
+
+(87,485)
+2,195,938
+
+(31,296)
+2,227,234
+
+$
+
+2,183,003 $
+
+2,584,568 $
+
+2,396,457 $
+
+2,108,453 $
+
+2,195,938 $ 2,227,234
+
+$
+
+148,214 $
+(148,214)
+-
+
+126,334 $
+(126,334)
+-
+
+119,347 $
+(119,347)
+-
+
+94,705 $
+(94,705)
+-
+
+79,684 $
+(79,684)
+-
+
+75,174
+(75,174)
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+$
+
+Net change in total OPEB liability
+Total OPEB liability - beginning
+Total OPEB liability - ending (a)
+Plan fiduciary net position
+Contributions - employer
+Contributions - employee
+Net investment income
+Benefit payments, including refunds of employee contributions
+Administrative expense
+Other
+Net change in plan fiduciary net position
+Plan fiduciary net position - beginning
+
+-
+
+-
+
+-
+
+Plan fiduciary net position - ending (b)
+
+$
+
+-
+
+$
+
+-
+
+$
+
+Township's net OPEB liability - ending (a)-(b)
+
+$
+
+2,183,003
+
+$
+
+2,584,568
+
+$
+
+Plan fiduciary net position as a percentage of the total
+OPEB liability
+Covered payroll
+Net OPEB liability as a percentage of covered payroll
+
+$
+
+2,396,457
+
+2019
+
+$
+$
+
+2,108,453
+
+2018
+
+74,811 $
+71,381
+(97,804)
+(79,684)
+
+65,499
+77,525
+94,533
+(75,174)
+162,383
+2,064,851
+
+$
+$
+
+0.0%
+
+0.0%
+
+0.0%
+
+0.0%
+
+3,277,995 $
+
+3,363,756 $
+
+3,117,589 $
+
+3,117,589 $
+
+66.6%
+
+76.8%
+
+76.9%
+
+67.6%
+
+-
+
+$
+
+-
+
+2,195,938
+
+$ 2,227,234
+
+0.0%
+
+0.0%
+
+2,930,384 $ 2,930,384
+74.9%
+
+76.0%
+
+Notes to Schedule:
+The discount rate changed from 3.16% to 3.64% in 2018, from 3.64% to 3.26% in 2020, from 3.26% to 1.93% in 2021, from 1.93% to 2.25% in
+2022 and from 2.25% to 4.31% in 2023
+For Officers hired before 6/1/2020, the Township now pays 60% of the premium cost for the first 5 years and 45% thereafter until retiree's
+Medicare eligibly age.
+
+-77-
+
+SUPPLEMENTARY INFORMATION
+
+EAST NORRITON TOWNSHIP
+COMBINING BALANCE SHEET
+NONMAJOR GOVERNMENTAL FUNDS
+December 31, 2023
+
+Special Revenue Funds
+Street Light
+Tax
+ASSETS
+Cash and cash equivalents
+Taxes receivable
+Other receivable
+Due from other funds
+
+Fire
+Tax
+
+Park and
+Recreation
+
+Highway
+Aid
+
+Total
+Nonmajor
+Governmental
+Funds
+
+$
+
+101,397 $
+1,700
+6,792
+-
+
+11,232 $
+3,552
+-
+
+12,677 $
+1,748
+-
+
+785,860 $
+623
+2,450
+
+911,166
+1,700
+12,715
+2,450
+
+$
+
+109,889 $
+
+14,784 $
+
+14,425 $
+
+788,933 $
+
+928,031
+
+$
+
+5,180 $
+-
+
+-
+
+6,024 $
+-
+
+350 $
+-
+
+11,554
+-
+
+Total Liabilities
+
+5,180
+
+-
+
+6,024
+
+350
+
+11,554
+
+FUND BALANCES
+Restricted:
+Street light
+Fire
+Culture and recreation
+Highways and streets
+Unassigned
+
+104,709
+-
+
+14,784
+-
+
+8,401
+-
+
+788,583
+-
+
+104,709
+14,784
+8,401
+788,583
+-
+
+Total Fund Balances
+
+104,709
+
+14,784
+
+8,401
+
+788,583
+
+916,477
+
+109,889 $
+
+14,784 $
+
+14,425 $
+
+788,933 $
+
+928,031
+
+Total Assets
+LIABILITIES
+Accounts payable
+Unearned revenue
+Due to other funds
+
+Total Liabilities
+and Fund Balances
+
+$
+
+$
+
+-79-
+
+EAST NORRITON TOWNSHIP
+COMBINING STATEMENT OF REVENUES, EXPENDITURES, AND
+CHANGES IN FUND BALANCES
+NONMAJOR GOVERNMENTAL FUNDS
+For the Year Ended December 31, 2023
+
+Special Revenue Funds
+Street Light
+Tax
+Revenues
+Taxes:
+Property
+
+$
+
+28,076 $
+
+Fire
+Tax
+
+Park and
+Recreation
+
+Highway
+Aid
+
+Total
+Nonmajor
+Governmental
+Funds
+
+272,879 $
+
+308,898 $
+
+-
+
+-
+
+-
+
+-
+
+6,963
+
+7,790
+
+4,306
+
+35,724
+
+54,783
+
+-
+
+109,811
+18,050
+
+163,601
+
+416,946
+-
+
+526,757
+181,651
+
+114,295
+
+408,530
+
+476,805
+
+452,670
+
+1,452,300
+
+67,556
+-
+
+414,284
+-
+
+582,601
+
+241,971
+-
+
+414,284
+309,527
+582,601
+
+-
+
+-
+
+-
+
+31,377
+3,239
+
+31,377
+3,239
+
+67,556
+
+414,284
+
+582,601
+
+276,587
+
+1,341,028
+
+Excess (Deficiency) of Revenues
+Over Expenditures
+
+46,739
+
+(5,754)
+
+(105,796)
+
+176,083
+
+111,272
+
+Other Financing Sources (Uses)
+Proceeds from sale of assets
+Transfers in
+Transfers out
+
+(50,000)
+
+-
+
+300,000
+(190,000)
+
+54,400
+-
+
+54,400
+300,000
+(240,000)
+
+(50,000)
+
+-
+
+110,000
+
+54,400
+
+114,400
+
+(3,261)
+107,970
+
+(5,754)
+20,538
+
+4,204
+4,197
+
+230,483
+558,100
+
+225,672
+690,805
+
+104,709 $
+
+14,784 $
+
+8,401 $
+
+788,583 $
+
+916,477
+
+Street light assessment
+
+79,256
+
+Investment income
+Intergovernmental revenues
+Charges for services
+Expenditures
+Current:
+Public safety
+Highways and streets
+Culture and recreation
+Debt service
+Principal
+Interest
+Total Expenditures
+
+Total Other Financing Sources (Uses)
+Net Change in Fund Balance
+Fund Balance - Beginning
+Fund Balance - Ending
+
+$
+
+$
+
+609,853
+79,256
+
+-80-
+
+EAST NORRITON TOWNSHIP
+COMBINING STATEMENT OF NET POSITION
+FIDUCIARY FUNDS
+
+Police
+Pension
+Trust Fund
+ASSETS
+Cash and cash equivalents
+Investments, at fair value:
+Mutual Funds - Equity
+Mutual Funds - International Equity
+Mutual Funds - Fixed Income
+Mutual Funds - Real Estate
+
+$
+
+Total Investments
+
+Non-Uniformed
+Pension
+Trust Fund
+
+65,208 $
+
+Non-Uniformed
+Defined Contribution
+
+52,525 $
+
+Total
+
+4,296 $
+
+122,029
+
+13,652,381
+1,037,302
+3,252,193
+165,629
+
+6,407,621
+486,857
+1,526,383
+77,736
+
+30,200
+6,692
+341
+
+20,090,202
+1,524,159
+4,785,268
+243,706
+
+18,107,505
+
+8,498,597
+
+37,233
+
+26,643,335
+
+41,529 $ 26,765,364
+
+Total Assets
+
+$
+
+18,172,713 $
+
+8,551,122 $
+
+LIABILITIES
+Accounts payable
+
+$
+
+54,900 $
+
+73,975 $
+
+-
+
+54,900
+
+73,975
+
+-
+
+128,875
+
+18,117,813
+
+8,477,147
+
+41,529
+
+26,636,489
+
+18,117,813 $
+
+8,477,147 $
+
+41,529 $ 26,636,489
+
+Total Liabilities
+NET POSITION
+Net Position - Restricted for:
+Pension benefits
+Total Net Position
+
+$
+
+$
+
+128,875
+
+-81-
+
+EAST NORRITON TOWNSHIP
+COMBINING STATEMENT OF CHANGES IN NET POSITION
+FIDUCIARY FUNDS
+
+Police
+Pension
+Trust Fund
+Additions
+Contributions
+Employee contributions
+Employer contributions
+State aid
+Total Contributions
+
+Total
+
+189,685 $
+667,858
+448,747
+
+92,853 $
+375,007
+-
+
+$
+18,171
+-
+
+282,538
+1,061,036
+448,747
+
+1,306,290
+
+467,860
+
+18,171
+
+1,792,321
+
+Investment Income
+Net appreciation (depreciation) in
+fair value of investments
+Interest and dividend income
+
+1,712,432
+432,004
+
+800,266
+205,462
+
+3,333
+750
+
+2,516,031
+638,216
+
+Total investment earnings
+
+2,144,436
+
+1,005,728
+
+4,083
+
+3,154,247
+
+Less investment expense
+Net Investment Income
+
+(28,997)
+
+(14,379)
+
+-
+
+(43,376)
+
+2,115,439
+
+991,349
+
+4,083
+
+3,110,871
+
+Total Additions
+
+3,421,729
+
+1,459,209
+
+22,254
+
+4,903,192
+
+Deductions
+Benefits
+Administrative expenses
+
+1,156,786
+4,261
+
+531,574
+15,929
+
+-
+
+1,688,360
+20,190
+
+Total Deductions
+
+1,161,047
+
+547,503
+
+-
+
+1,708,550
+
+Change in Net Position
+
+2,260,682
+
+911,706
+
+22,254
+
+3,194,642
+
+Net Position - Restricted for Pension Benefits:
+Beginning of Year
+
+15,857,131
+
+7,565,441
+
+19,275
+
+23,441,847
+
+18,117,813 $
+
+8,477,147 $
+
+41,529 $
+
+26,636,489
+
+End of Year
+
+$
+
+Non-Uniformed
+Pension
+Non-Uniformed
+Trust Fund
+Defined Contribution
+
+$
+
+-82-

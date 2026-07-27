@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-27T15:57:42Z",
+  "generated_at": "2026-07-27T16:22:09Z",
   "data_vintage": "2026-07-27",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -17,6 +17,8 @@
     "docs/analysis/compensation_extraction/TIER-C-READINESS-AND-DASHBOARD-MAP-UPDATE-WITH-BROAD-SCOUTING-STRATEGY-2026-07-27/tier_c_readiness_dashboard_map_update_invariant_checks.json",
     "docs/analysis/compensation_extraction/TIER-C-READINESS-AND-DASHBOARD-MAP-UPDATE-WITH-BROAD-SCOUTING-STRATEGY-2026-07-27/dashboard_map_state_region_coverage.csv",
     "docs/analysis/compensation_extraction/TIER-C-READINESS-AND-DASHBOARD-MAP-UPDATE-WITH-BROAD-SCOUTING-STRATEGY-2026-07-27/dashboard_map_data_date.json",
+    "docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/dashboard_declutter_map_correction_tier_c_text_span_extraction_decision.json",
+    "docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/dashboard_declutter_map_correction_tier_c_text_span_extraction_invariant_checks.json",
     "docs/analysis/claim_register_2026-07-12.csv",
     "docs/analysis/state_city_claim_map_2026-07-12.csv",
     "docs/analysis/hypothesis_tracker_2026-07-12.csv",
@@ -84,7 +86,7 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "calibration_phase": "tier_c_readiness_dashboard_map_update_completed_text_extraction_ready",
+  "calibration_phase": "dashboard_declutter_map_correction_tier_c_text_span_completed_rating_ready",
   "latest_calibration_id": "TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24",
   "latest_calibration_review_id": "TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24",
   "latest_adjudication_prep_id": "TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24",
@@ -755,6 +757,10 @@
     "parse_text_layer_later": 317
   },
   "tier_c_bounded_text_extraction_ready_next": true,
+  "dashboard_declutter_tier_c_text_span_completed": true,
+  "tier_c_text_extracted_ok_count": 378,
+  "tier_c_positive_exact_span_count": 159,
+  "tier_c_evidence_span_rating_ready_next": true,
   "tier_c_dashboard_map_data_date": "2026-07-27",
   "future_broad_geographic_scouting_strategy_recorded": true,
   "gabriel_claim_rating_global_analysis_readiness": false,

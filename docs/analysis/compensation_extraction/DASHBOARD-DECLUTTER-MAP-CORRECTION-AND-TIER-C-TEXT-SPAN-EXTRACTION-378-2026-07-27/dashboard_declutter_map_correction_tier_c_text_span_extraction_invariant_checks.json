@@ -1,0 +1,20 @@
+{
+  "all_invariants_passed": true,
+  "artifact_paths_hashes_sizes_valid": true,
+  "dashboard_current_report_and_next_task_visible": true,
+  "downstream_statuses_closed": true,
+  "every_span_exact_offsets_hash_valid": true,
+  "future_dashboard_update_requirement_recorded": true,
+  "global_analysis_readiness_false": true,
+  "locked_text_queue_exactly_378": true,
+  "map_data_date_visible": true,
+  "map_filter_total_scout_coverage_only": true,
+  "no_durable_ledger_merge": true,
+  "no_quantitative_comparison_wage_gap_regression_treatment_effect_national_prevalence_or_final_causal_work": true,
+  "no_url_download_ocr_render_model_rating_ingestion_or_codification": true,
+  "only_readiness_approved_tier_c_rows_entered": true,
+  "partial_outputs_cannot_masquerade_as_complete": true,
+  "pdf_html_counts_exactly_317_61": true,
+  "preserved_exclusions_outside_text_and_span_queues": true,
+  "span_queue_uses_extracted_ok_only": true
+}

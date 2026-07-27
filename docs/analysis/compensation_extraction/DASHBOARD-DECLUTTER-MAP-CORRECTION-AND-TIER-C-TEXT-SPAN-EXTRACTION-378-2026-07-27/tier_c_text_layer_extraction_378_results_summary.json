@@ -1,0 +1,48 @@
+{
+  "codification_runs": 0,
+  "downloads": 0,
+  "durable_ledger_merges": 0,
+  "extraction_status_counts": {
+    "extracted_ok": 378
+  },
+  "extraction_status_counts_by_lane": {
+    "lane_1": {
+      "extracted_ok": 112
+    },
+    "lane_2": {
+      "extracted_ok": 104
+    },
+    "lane_3": {
+      "extracted_ok": 94
+    },
+    "lane_4": {
+      "extracted_ok": 68
+    }
+  },
+  "extraction_status_counts_by_mechanism": {
+    "fiscal_constraint_signal": {
+      "extracted_ok": 94
+    },
+    "market_or_comparability_pressure": {
+      "extracted_ok": 68
+    },
+    "non_safety_constraint_signal": {
+      "extracted_ok": 112
+    },
+    "strike_or_no_strike_constraint": {
+      "extracted_ok": 104
+    }
+  },
+  "global_analysis_readiness": false,
+  "html_rows": 61,
+  "ingestion_runs": 0,
+  "model_api_calls": 0,
+  "ocr_runs": 0,
+  "pdf_render_runs": 0,
+  "pdf_rows": 317,
+  "rating_runs": 0,
+  "result_rows": 378,
+  "saved_text_artifact_count": 378,
+  "span_extraction_candidate_count": 378,
+  "url_opens": 0
+}

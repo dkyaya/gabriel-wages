@@ -1,0 +1,807 @@
+Supreme Court
+No. 2013-44-Appeal.
+No. 2013-66-Appeal.
+No. 2013-96-Appeal.
+WC 12-542
+Town of North Kingstown
+
+:
+
+v.
+
+:
+
+International Association of Firefighters,
+Local 1651 AFL-CIO, et al.
+
+:
+:
+
+NOTICE: This opinion is subject to formal revision before
+publication in the Rhode Island Reporter. Readers are requested to
+notify the Opinion Analyst, Supreme Court of Rhode Island,
+250 Benefit Street, Providence, Rhode Island 02903, at Telephone
+222-3258 of any typographical or other formal errors in order that
+corrections may be made before the opinion is published.
+
+Supreme Court
+No. 2013-44-Appeal.
+No. 2013-66-Appeal.
+No. 2013-96-Appeal.
+WC 12-542
+Town of North Kingstown
+
+:
+
+v.
+
+:
+
+International Association of Firefighters,
+Local 1651 AFL-CIO, et al.
+
+:
+:
+
+Present: Suttell, C.J., Goldberg, Flaherty, Robinson, and Indeglia, JJ.
+OPINION
+Justice Indeglia, for the Court. These consolidated appeals arise out of a decision of
+the Superior Court issuing various declaratory and injunctive relief in a highly contested labor
+dispute between the Town of North Kingstown (town) and the North Kingstown Firefighters,
+Local 1651, International Association of Firefighters, AFL-CIO (union). For the reasons set
+forth in this opinion, we affirm in part and reverse in part the decision of the Superior Court.
+I
+Facts and Travel
+A
+The 2010 Expired Collective Bargaining Agreement
+On June 30, 2010, a labor contract that had been in effect between the town and the union
+since July 1, 2007, expired. Prior to the expiration of that agreement, the parties had attempted
+to negotiate a successor contract, but to no avail. Subsequently, an interest arbitration panel was
+convened to set forth the terms of a collective bargaining agreement (CBA) between the parties.
+After thirteen days of hearings and after sifting through 172 exhibits and 357 pages of post-
+
+-1-
+
+hearing briefs, the panel issued an award on August 9, 2011. The panel’s award was retroactive,
+covering the period from July 1, 2010 to June 30, 2011. 1
+One of the more critical and contentious issues that arose during this interest arbitration
+was the town’s proposal to reorganize from a four-platoon structure to a three-platoon structure. 2
+The town made clear at the arbitration that, if allowed to effectuate this reorganization, it would
+not press other of its proposals that would have made structural changes to the operation of the
+fire department. However, the town’s proposal on this issue was rejected by the panel, and the
+award provided for the same work schedule as the prior CBA.
+B
+Implementation of the Three-Platoon Structure and North Kingstown I
+On February 23, 2011, the union wrote to the North Kingstown town manager requesting
+that collective bargaining negotiations commence for a new CBA year 2011-2012 in accordance
+with G.L. 1956 § 28-9.1-6. The parties exchanged a series of communications and eventually on
+October 28, 2011, met to bargain for a successor agreement. Five additional negotiating sessions
+were conducted, but the parties were unable to reach an agreement. Throughout the negotiations,
+the key issue of contention between the parties was the implementation of the three-platoon
+structure and the accompanying twenty-four hours on, forty-eight hours off work schedule. At
+the end of the sessions, no agreement was reached, and no issues were submitted to interest
+arbitration.
+On December 19, 2011, the town wrote to the union indicating that it intended to
+introduce an ordinance to reorganize the fire department. Two subsequent negotiating sessions
+1
+
+The Firefighters Arbitration Act (FFAA or the Act) restricts a panel award to one year. See
+G.L. 1956 § 28-9.1-12.
+2
+To carry out this reorganization, the town set forth a proposal to increase the average workweek
+from forty-two hours to fifty-six hours and to change the schedule to include a twenty-four hour
+on-shift followed by a forty-eight hour off-shift.
+-2-
+
+were conducted. However, no agreement was reached. Then, on January 30, 2012, the town
+council enacted, in amended form, an ordinance that authorized the town’s desired
+implementation of the department reorganization. Another negotiating session was held after
+that, but no agreement was reached.
+On February 28, 2012, the union filed suit in the Washington County Superior Court
+seeking: (1) a declaratory judgment that the ordinance was invalid because it was passed in
+violation of the town charter; (2) a declaratory judgment that the town violated the Firefighters
+Arbitration Act (FFAA or the Act) and the State Labor Relations Act (SLRA); and (3) injunctive
+relief. Prior to issuing a decision on the merits, the Superior Court ordered the parties to engage
+in mediation, which failed to resolve the matter.
+
+On March 11, 2012, the town began
+
+implementing the ordinance, including the three-platoon structure and accompanying schedule.
+On May 23, 2012, the Superior Court issued a written decision declaring that, because
+it was passed in violation of the town charter, the ordinance was invalid. See International
+Association of Firefighters, Local 1651, AFL-CIO v. Town of North Kingstown, WC 2012-127,
+2012 WL 1948338 (R.I. Super. Ct. May 23, 2012) (North Kingstown I). Additionally, the
+Superior Court found that, even if that ordinance had been properly passed, it was still “invalid
+because it conflicts with the FFAA by imposing changes to wages, hours, and terms and
+conditions of employment without first bargaining to agreement or following the FFAA’s
+statutory arbitration procedures.” However, the Superior Court explicitly recognized that:
+“[T]he platoon structure of the Fire Department is a management right that may
+be properly asserted at the expiration of the CBA [and that] [g]oing forward the
+parties may agree to a new CBA that addresses the effects of this management
+change on mandatory bargaining subjects or proceed to interest arbitration, solely
+to determine the effects on mandatory bargaining subjects and not the
+management decision itself.”
+
+-3-
+
+Nevertheless, the court found that “unilateral implementation of changes to wages, hours and
+terms and conditions of employment” was improper.
+C
+North Kingstown II
+Prior to the Superior Court’s decision in North Kingstown I, on February 23, 2012, the
+union wrote to the town manager requesting bargaining for the contract year July 1, 2012
+through June 30, 2013. Additionally, on March 14, 2012, the union filed a demand for interest
+arbitration for the July 1, 2011 through June 30, 2012 contract period and an arbitration panel
+was named (AAA Case 11 390 00469 12) (2011-2012 Arbitration Panel). Also, the union later
+filed a demand for interest arbitration for the July 1, 2012 through June 30, 2013 contract period
+and another arbitration panel was named (AAA Case 11 390 01035 12) (2012-2013 Arbitration
+Panel). On June 14, 2012, the union filed an unfair labor practice (ULP) charge with the State
+Labor Relations Board (SLRB) (ULP-6088). On July 9, 2012, the town filed a demand for
+interest arbitration over the effects of the three-platoon structure reorganization and a third
+arbitration panel was named (AAA Case 11 390 01169 12) (Effects Arbitration Panel). 3 On
+August 2, 2012, the SLRB issued a complaint against the town, alleging that the manner in
+which the town implemented the three-platoon structure violated state law.
+On September 5, 2012, the town filed a verified complaint in the Superior Court seeking
+declarations that:
+(1) the SLRB was without jurisdiction to enforce ULP-6088;
+(2) the town’s actions in implementing the three-platoon structure were lawful;
+(3) jurisdiction to determine the effects of the town’s decision to implement the
+three-platoon structure rests exclusively with the Effects Arbitration Panel;
+3
+
+The town later, on November 5, 2012, withdrew this demand for arbitration.
+-4-
+
+(4) the union waived its right to submit to interest arbitration the unresolved
+issues arising out of the parties’ negotiations for a CBA for the July 1, 2011
+through June 30, 2012 period; and
+(5) the 2011-2012 Arbitration Panel was without jurisdiction to decide any
+unresolved issues between the parties for the July 1, 2011 through June 30, 2012
+period.
+The town also sought to stay the 2011-2012 Arbitration Panel and a declaration that the SLRB
+was without jurisdiction to enforce ULP-6088. On September 24, 2012, the town filed an
+amended complaint and petition to stay arbitrations and sought additional declarations, including
+that:
+(1) the union failed to comply with its obligation under § 28-9.1-13, therefore
+forfeiting its right to collectively bargain as to firefighters’ wages, rates of pay, or
+any other matter requiring appropriation of money by the town for the July 1,
+2011 through June 30, 2012 period;
+(2) the union failed to comply with its obligation under § 28-9.1-13, therefore
+forfeiting its right to collectively bargain as to firefighters’ wages, rates of pay, or
+any other matter requiring appropriation of money by the town for the July 1,
+2012 through June 30, 2013 period;
+(3) the union waived its right to submit to interest arbitration the unresolved
+issues arising out of the parties’ negotiations for a CBA for the July 1, 2012
+through June 30, 2013 period; and
+(4) the 2012-2013 Arbitration Panel was without jurisdiction to decide any
+unresolved issues between the parties for the July 1, 2012 through June 30, 2013
+period.
+The town also sought to stay the 2012-2013 Arbitration Panel.
+At the time these actions were filed, the town was continuing to operate under the threeplatoon structure. The town’s position before the Superior Court was that it had the inherent
+right to reorganize into the three-platoon structure, especially in light of the fact that the CBA
+had expired and the union had failed to request interest arbitration of unresolved issues within
+the time frame delineated by the FFAA as set forth in § 28-9.1-7. Additionally, the town
+
+-5-
+
+contended that the union had forfeited its right to collectively bargain altogether due to the
+union’s failure to comply with the notice provision of § 28-9.1-13.
+Both parties filed memoranda addressing the issues pending before the Superior Court.
+In order to simplify and clarify the issues that needed to be addressed, the Superior Court held a
+conference in accordance with Rule 16 of the Superior Court Rules of Civil Procedure. The
+parties were instructed to agree to the most significant issues that needed to be addressed.
+Pursuant to this instruction, the parties submitted a statement to the Superior Court indicating
+that “the parties agree[d] that the following issues [were] before the Court for decision.”
+
+The
+
+issues presented were:
+(1) Decide the town’s petition/motion to stay the 2011-2012 Arbitration Panel;
+(2) Decide the town’s petition/motion to stay the arbitration of Certain Firefighter
+Grievances;
+(3) Decide the town’s request for a stay of ULP-6088;
+(4) Decide the town’s petition/motion to stay the 2012-2013 Arbitration Panel;
+(5) Decide the town’s request for a declaration that the town’s implementation of
+the three-platoon structure was lawful;
+(6) Decide whether the town bargained with the union to impasse over the effects
+of the three-platoon structure before unilaterally changing the work schedules and
+shifts; and
+(7) If not, decide whether the town has the right to implement a three-platoon
+structure without first bargaining with the union to impasse over the effects of the
+change.
+On December 14, 2012, the Superior Court issued a written decision that addressed some, but not
+all, of the matters presented in the parties’ list of issues. See Town of North Kingstown v.
+International Association of Firefighters, Local 1651, AFL-CIO, WC 2012-542, 2012 WL
+6638703 (R.I. Super. Ct. Dec. 14, 2012) (North Kingstown II).
+
+-6-
+
+By its own terms, the North Kingstown II decision was stayed for thirty days from the
+date of its issuance to afford the parties “the opportunity to either consent to an Order
+implementing [the] Decision or request a stay, or other appropriate relief as may be appropriate
+from the Rhode Island Supreme Court.” No such consent order was presented to the court. On
+February 4, 2013, 4 the Superior Court entered an order setting forth the following five
+declarations issued in the decision:
+“(1) The Town’s actions in implementing unilateral changes to the wages, hours,
+and terms and conditions of employment, were unlawful, in violation of the
+doctrine of election of remedies and the terms of the FFAA.
+(2) The SLRB, and not [the Superior Court], has jurisdiction over the subject
+matter of the Complaint in ULP-6088 insofar as it is necessary to determine
+which terms and conditions have existed between the parties since the expiration
+of the previous CBA.
+(3) The arbitration panel does not have jurisdiction to determine the effects of said
+unilateral changes, as those changes are invalid and must be undone.
+(4) Both the Union and the Town waived their rights to submit unresolved issues
+to interest arbitration under the FFAA, pursuant to R.I. Gen. Laws § 28-9.1-7.
+(5) The interest arbitration panel has no jurisdiction to decide any unresolved
+issues existing between the Town and the Union because interest arbitration—
+pursuant to the terms of the FFAA—was waived by the parties for the fiscal year
+2011-2012.”
+Additionally, the Superior Court ordered the town to reinstate the wages, hours, and other
+terms and conditions of employment that existed prior to the implementation of the three-platoon
+structure, i.e. prior to March 11, 2012. The town timely appealed the issuance of the injunctive
+relief.
+On February 5, 2013, the town moved for a final judgment on paragraphs 1 through 5 of
+the order pursuant to Rule 54(b) of the Superior Court Rules of Civil Procedure. The Superior
+4
+
+Initially, the order was issued with an incorrect caption. The following day, on February 5,
+2013, the order was reissued with the correct caption.
+-7-
+
+Court granted the motion at a hearing the following day, and the town timely appealed to this
+Court, and the union filed a cross-appeal challenging the declaration that the union waived its
+right to interest arbitration. At that same hearing, the hearing justice denied the town’s motion to
+stay the order pending appeal.
+In accordance with Article I, Rule 8 of the Supreme Court Rules of Appellate Procedure,
+the town moved in this Court for a stay of the order pending appeal. We temporarily stayed the
+order. In the interim, the parties entered into appellate mediation, which ultimately proved
+unsuccessful. After oral argument, we granted the town’s motion for a stay. See Town of North
+Kingstown v. International Association of Firefighters, Local 1651, AFL-CIO, 65 A.3d 480, 483
+(R.I. 2013) (mem.) (North Kingstown II Supreme Court Stay). Additionally, we granted the
+parties’ joint motion to remand count 5 of the town’s amended complaint seeking a stay of the
+2012-2013 Arbitration Panel because final judgment had not entered on the count. See id. On
+October 17, 2013, we consolidated the three appeals for review.
+D
+Other Matters Pending
+Prior to argument before this Court, other matters remained pending elsewhere between
+these parties. In particular, on September 27, 2013, the SLRB issued a decision and order in
+ULP-6088 concluding that the town had committed unfair labor practices by failing to bargain in
+good faith and unilaterally implementing its reorganization in violation of the FFAA. See In re
+Rhode Island State Labor Relations Board and the Town of North Kingstown, ULP-6088, 2013
+WL 5755149 (R.I. Lab. Rel. Bd. Sept. 27, 2013). The SLRB ordered the town to, inter alia:
+(1) Immediately restore the firefighters’ schedule, hours of work, and hourly rate
+of pay to that which existed upon the expiration of the 2010-2011 contract year;
+(2) Issue back pay to affected firefighters;
+
+-8-
+
+(3) Pay interest on the back pay;
+(4) Restore all contractually bargained-for benefits to the union that the town had
+unilaterally terminated;
+(5) Participate in interest arbitration for the 2011-2012 fiscal year;
+(6) “[R]estore and then maintain the status quo on all terms and conditions of
+employment that existed in the 2010-2011 collective bargaining agreement;” and
+(7) “[C]ease and desist from unilaterally implementing, at any time henceforth,
+any changes to the wages, rates of pay, hours, working conditions, or other terms
+and conditions of employment of the employees represented by the Union.”
+On September 30, 2013, the SLRB filed a petition to enforce its decision and order in the
+Superior Court.
+The town appealed the SLRB decision and order to the Superior Court. Additionally, the
+town sought to stay the SLRB decision pending that appeal, which was granted by the Superior
+Court. 5
+
+On January 6, 2014, the Superior Court issued a written decision on the town’s
+
+administrative appeal and the SLRB’s petition to enforce. See Town of North Kingstown v.
+Rhode Island State Labor Relations Board, PC 13-4261, WM 13-0516, 2014 WL 185327 (R.I.
+Super. Ct. Jan. 6, 2014) (North Kingstown III). The Superior Court affirmed the SLRB’s
+decision and order and granted the petition to enforce with the exception of the requirement that
+the town participate in interest arbitration for the 2011-2012 fiscal year (paragraph 5) and the
+order that the town “cease and desist from unilaterally implementing, at any time henceforth, any
+changes to the wages, rates of pay, hours, working conditions, or other terms and conditions of
+employment of the employees represented by the Union” (paragraph 7). To avoid potential
+conflict between this Court’s previous stay in North Kingstown II Supreme Court Stay and the
+Superior Court’s decision in North Kingstown III, the Superior Court stayed its own decision
+5
+
+On October 1, 2013, the Presiding Justice of the Superior Court issued an administrative order
+consolidating the matters pending between the parties in the Superior Court.
+-9-
+
+until appropriate resolution from this Court. The town subsequently appealed the decision to this
+Court; however, the matter is not currently before us on this appeal.
+II
+Standard of Review
+“A decision to grant or deny declaratory or injunctive relief is addressed to the sound
+discretion of the trial justice and will not be disturbed on appeal unless the record demonstrates a
+clear abuse of discretion or the trial justice committed an error of law.” Hagenberg v. Avedisian,
+879 A.2d 436, 441 (R.I. 2005). Additionally, we “afford deference to a trial justice’s ‘resolution
+of mixed questions of law and fact.’” Carrozza v. Voccola, 90 A.3d 142, 151 (R.I. 2014)
+(quoting Nye v. Brousseau, 992 A.2d 1002, 1008 (R.I. 2010)). However, “[t]his Court reviews
+questions of law and statutory interpretation de novo * * * [and] is ‘free to affirm on grounds
+other than those relied on by the trial justice.’” Progressive Northern Insurance Co. v. Lyden,
+986 A.2d 231, 233 (R.I. 2010) (quoting Shepard v. Harleysville Worcester Insurance Co., 944
+A.2d 167, 170 (R.I. 2008)).
+III
+Discussion
+A
+The Declarations
+1. The Town’s Actions in Implementing Unilateral Changes
+At the heart of this litigation is the town’s unilateral implementation of a three-platoon
+structure and the effects of that reorganization, including the change to a twenty-four hours on,
+forty-eight hours off schedule. The town has expressed some understandable frustrations over
+the course of these proceedings in its pursuit to cement the implementation of this structure. The
+
+- 10 -
+
+town had vigorously asserted its desire to implement this structure to the arbitration panel that
+issued the 2010-2011 award. Despite the town’s offering to forgo other proposals if it were
+allowed to implement the three-platoon structure, the arbitration panel rejected the proposal.
+Additionally, the Superior Court has suggested that “the platoon structure of the Fire Department
+is a management right.” Yet, the Superior Court found that the town’s implementation of that
+structure was improper.
+As a backdrop to the matter before us, we note that “[w]ith respect to labor law issues,
+this Court has frequently looked to the voluminous body of federal case law for guidance.”
+Town of Burrillville v. Rhode Island State Labor Relations Board, 921 A.2d 113, 120 (R.I.
+2007). In particular, “we have recognized the persuasive force of federal cases which have
+construed the phrase ‘terms and conditions of employment.’” Barrington School Committee v.
+Rhode Island State Labor Relations Board, 120 R.I. 470, 479, 388 A.2d 1369, 1374 (1978).
+The FFAA recognizes firefighters’ “right to bargain collectively * * * as to wages, rates
+of pay, hours, working conditions, and all other terms and conditions of employment.” Section
+28-9.1-4. Additionally, as long as a union complies with applicable notice provisions, the FFAA
+establishes an obligation on a city or town to meet and confer in good faith with the union for
+collective bargaining purposes. See §§ 28-9.1-6; 28-9.1-13. “Read together, these provisions
+establish the obligation of the [city or town] and the [union] * * * to bargain with each other in
+good faith with respect to [wages, rates of pay, hours, working conditions, and all other terms
+and conditions of employment].” Fibreboard Paper Products Corp. v. National Labor Relations
+Board, 379 U.S. 203, 210 (1964) (quoting National Labor Relations Board v. Wooster Division
+of Borg-Warner Corp., 356 U.S. 342, 349 (1958)). However, “[t]he duty is limited to those
+
+- 11 -
+
+subjects,” which, thus, constitute mandatory subjects of collective bargaining. Id. (quoting
+Wooster Division of Borg-Warner Corp., 356 U.S. at 349).
+In contrast, there are certain matters that may not be bargained away by a public
+employer. See Vose v. Rhode Island Brotherhood of Correctional Officers, 587 A.2d 913, 915
+(R.I. 1991). A public employer may not bargain away its statutory duties. See id. Likewise, it is
+“a basic rule of law that [public employers] are not at liberty to bargain away their powers and
+responsibilities with respect to the essence of the[ir] * * * mission.” North Providence School
+Committee v. North Providence Federation of Teachers, Local 920, American Federation of
+Teachers, 945 A.2d 339, 347 (R.I. 2008). Additionally, a public employer is not “empowered to
+delegate to arbitrators * * * [its] statutory obligation[s];” State, Department of Mental Health,
+Retardation, and Hospitals v. Rhode Island Council 94, A.F.S.C.M.E., AFL-CIO, 692 A.2d 318,
+324 (R.I. 1997), or “decision[s] * * * directly related to the essence of [its] * * * mission.” North
+Providence School Committee, 945 A.2d at 347.
+
+This prohibition can even hold true
+
+notwithstanding the fact that action taken related to the employer’s mission or pursuant to a
+statutory obligation may impact something that is otherwise a mandatory subject of collective
+bargaining. Cf. State, Department of Mental Health, Retardation, and Hospitals, 692 A.2d at 324
+(stating that in light of particular statutory duties “the extent to which the [public employer] is
+obligated to arbitrate regarding its * * * employees’ hours of work is not boundless”); Vose, 587
+A.2d at 916 (holding that CBA “shall not be interpreted as restricting the [public employer’s]
+statutory power to order mandatory involuntary overtime”).
+In a related vein, it is well-established that there are certain “managerial decisions, which
+lie at the core of entrepreneurial control” over an organization. Ford Motor Co. v. National
+Labor Relations Board, 441 U.S. 488, 498 (1979) (quoting Fibreboard Paper Products Corp., 379
+
+- 12 -
+
+U.S. at 223 (Stewart, J., concurring)). 6 With respect to these decisions, a “union should [not] be
+able to dictate to the [employer]” because such “matters [are] strictly within the province of
+management.” Barrington School Committee, 120 R.I. at 479, 388 A.2d at 1375. Accordingly,
+the choice itself of whether or not to implement a particular management decision is not subject
+to mandatory bargaining and need not be submitted to arbitration. See Providence Hospital v.
+National Labor Relations Board, 93 F.3d 1012, 1018 (1st Cir. 1996).
+
+This holds true
+
+notwithstanding the fact that such a decision “may have effects—sometimes profound effects—
+upon th[e] [terms and] conditions” of employment. Id.
+Nevertheless, we reiterate “that when, as here, the problem involved concerns both a
+question of management and a term or condition of employment, it is the duty of the [employer]
+to negotiate with the [individuals] involved.” Barrington School Committee, 120 R.I. at 479-80,
+388 A.2d at 1375. That duty, however, is limited to the obligation to negotiate over the effects of
+the decision that is within the prerogative of management. As explained by the First Circuit:
+“[T]here is an important distinction between the right to bargain about a core
+entrepreneurial business decision (a right which a union does not possess) and the
+right to bargain about the effects of that decision on employees within a
+bargaining unit (a right which, depending upon the overall circumstances, a union
+may possess). * * * [Put another way], even when a particular managerial
+decision is not itself a mandatory subject of bargaining, the decision’s forecasted
+6
+
+We are cognizant that much of the federal precedent deals with private-sector cases. However,
+as we have said in the past, “[w]ith respect to labor law issues, this Court has frequently looked
+to the voluminous body of federal case law for guidance.” Town of Burrillville v. Rhode Island
+State Labor Relations Board, 921 A.2d 113, 120 (R.I. 2007). Further, we note that, in
+recognizing the existence of certain decisions as being within the managerial prerogative of a
+public employer, we do not break new ground. See Barrington School Committee v. Rhode
+Island State Labor Relations Board, 120 R.I. 470, 479, 388 A.2d 1369, 1375 (1978) (recognizing
+that there are certain “matters [that are] strictly within the province of management”); see also
+Bargainable or Negotiable Issues in State Public Employment Labor Relations, 84 A.L.R.3d 242,
+255-56 (1978) (“Perhaps the single greatest, and almost universally recognized, limitation on the
+scope of bargaining or negotiation by state public employees is the concept of managerial
+prerogative as it has developed in the public sector.”).
+
+- 13 -
+
+impact on * * * terms and conditions of employment may constitute a mandatory
+subject of collective bargaining.” Providence Hospital, 93 F.3d at 1018.
+It is within this framework that we analyze the propriety of the town’s actions in implementing
+the three-platoon structure.
+At the outset, we acknowledge that what constitutes a management decision “eludes a
+precise description.” Providence Hospital, 93 F.3d at 1018. Rather than setting forth sweeping
+generalizations in this complex area, we believe that making the determination of what
+constitutes a management decision is a “chore [that] is best executed on a case-by-case basis in
+view of the dearth of available guidelines for decision.” Belanger v. Matteson, 115 R.I. 332,
+362, 346 A.2d 124, 141 (1975) (Paolino, J., concurring in part and dissenting in part).
+After review of the record and in light of our consideration of the particular
+circumstances that have given rise to the long and bitter conflict between these parties, we hold
+that the decision to implement the three-platoon structure is a management right of the town.
+This determination finds support among certain decisions from other jurisdictions. 7 See, e.g.,
+State ex rel. Quiring v. Board of Education of Independent School District No. 173, Mountain
+Lake, Minnesota, 623 N.W.2d 634, 640 (Minn. Ct. App. 2001) (holding that reorganization of
+organizational structure is a matter of inherent managerial policy that does not require
+negotiations with bargaining units); Appeal of International Association of Firefighters, AFLCIO Local 1088, 462 A.2d 98, 100 (N.H. 1983) (upholding determination that alteration of fire
+department’s “platoon size was a subject falling solely within management discretion”); Borough
+of Atlantic Highlands v. Atlantic Highlands PBA Local 242, 469 A.2d 80, 85 (N.J. Super. Ct.
+7
+
+Although the terms of the 2007-2010 CBA had expired and its terms do not “fill a gap between
+CBAs,” Arena v. City of Providence, 919 A.2d 379, 392 (R.I. 2007), we nonetheless find support
+for our determination in the fact that the 2007-2010 CBA contained a management rights clause
+in which the town “retain[ed] all other rights and responsibilities inherent in the Town Council,
+Town Manager, Director of Public Safety and the Fire Chief.” This provision went unchanged in
+the 2010-2011 arbitration award.
+- 14 -
+
+App. Div. 1983), certif. den., 475 A.2d 588 (N.J. 1984) (holding that, based on particular facts,
+“issue of shift changes is nonnegotiable”). Nonetheless, while the decision to implement the
+three-platoon structure is a management right, it remains that the effects of that decision are
+subject to the FFAA’s bargaining requirements. See Providence Hospital, 93 F.3d at 1018.
+Still, it is also true that a city or town’s obligation to bargain is predicated on a union’s
+compliance with certain prerequisites. In Town of Tiverton v. Fraternal Order of Police, Lodge #
+23, 118 R.I. 160, 163, 372 A.2d 1273, 1275 (1977), this Court analyzed a provision under the
+Municipal Police Arbitration Act (MPAA) 8 that is identical to a provision in the FFAA. The
+statutes provide that:
+“Whenever wages, rates of pay, or any other matter requiring appropriation of
+money by any city or town are included as a matter of collective bargaining
+conducted under the provisions of this chapter, it is the obligation of the
+bargaining agent to serve written notice of request for collective bargaining on the
+corporate authorities at least one hundred twenty (120) days before the last day on
+which money can be appropriated by the city or town to cover the contract period
+which is the subject of the collective bargaining procedure.” Section 28-9.1-13;
+G.L. 1956 § 28-9.2-13.
+We construed the words “last day on which money can be appropriated,” § 28-9.2-13, to be the
+“day on which the financial town meeting is ordinarily held.” Town of Tiverton, 118 R.I. at 166,
+372 A.2d at 1276. We found unavailing the union’s argument that there were other ad-hoc ways
+in which the town could appropriate money that were separate from the date of the financial
+town meeting, noting that the “statute is clearly designed for the ordinary course of events.” Id.
+Further, we stated that the statute in question operated “like an appeals statute,
+condition[ing] rights thereunder on full compliance with the stated requirements.” Town of
+Tiverton, 118 R.I. at 165, 372 A.2d at 1276. Additionally, we “construe[d] the statute to be
+8
+
+We have construed similar provisions in both acts under the same legal analysis. See City of
+East Providence v. Local 850, International Association of Firefighters, AFL-CIO, 117 R.I. 329,
+331, 366 A.2d 1151, 1152 (1976).
+- 15 -
+
+mandatory,” rather than merely directory. Id. As such, we held that because the union’s notice
+was not timely, “the town was not obliged to negotiate with the [union] on any issues falling
+within the purview of § 28-9.2-13.” Town of Tiverton, 118 R.I. at 166-67, 372 A.2d at 1276.
+Here, the Superior Court justice correctly recognized that it was “clear that the Union did
+not give the required notice prior to the 120-day time frame.” 9 Notwithstanding, he declined to
+find that the union had forfeited its right to bargain over matters requiring the appropriation of
+money. He put particular significance on the fact that the parties actually negotiated after receipt
+of the defective notice. This emphasis was misplaced. In Town of Tiverton, 118 R.I. at 163, 372
+A.2d at 1275, the parties also entered into negotiations after receipt of the union’s defective
+notice. Notwithstanding that fact, we held that the union’s failure to comply with the statutory
+directives was fatal, and that the town could not be compelled to negotiate with the union
+regarding any matter requiring the appropriation of money. Id. at 166-67, 372 A.2d at 1276. We
+discern no legally distinguishable difference from what occurred here. 10 Accordingly, we hold
+that the union’s failure to comply with § 28-9.1-13 vitiated any obligation of the town to bargain
+regarding any matter requiring the appropriation of money.
+9
+
+The union argues that under the town’s charter it is possible to appropriate money in ways other
+than through the approval of the town’s final budget. We rejected this type of argument in Town
+of Tiverton v. Fraternal Order of Police, Lodge # 23, 118 R.I. 160, 166, 372 A.2d 1273, 1276
+(1977). We reject the same here as well. Section 1008 of the town’s ordinances provides that
+the ordinary date for final approval of the town’s budget is the “first Wednesday in May.” In
+2011, the date that was 120 days in advance of the first Wednesday in May was January 4, 2011.
+However, the union did not request bargaining until February 23, 2011, which was over a month
+after the 120-day deadline. Therefore, the union’s request was not timely.
+10
+The union attaches significant weight to our recognition in Town of Tiverton, 118 R.I. at 163,
+372 A.2d at 1275, that the town entered negotiations “[u]nder protest.” In that case, the town
+had already been ordered by the Superior Court to enter into negotiations. Id. Thus, the town’s
+protest in that case should simply be read as acknowledging that the town complied with the
+Superior Court’s order pending appeal to this Court. See id. That fact, however, does not alter
+our analysis and the conclusion that here the town was not obligated to bargain with the union on
+“any issues falling within the purview of [§ 28-9.1-13].” Town of Tiverton, 118 R.I. at 166-67,
+372 A.2d at 1276.
+- 16 -
+
+Our analysis does not end here, however. While the union’s failure to comply with § 289.1-13 removed any obligation the town had to bargain regarding any matter requiring the
+appropriation of money, it still remained that the town was required, upon proper notice, to
+bargain regarding other matters. See § 28-9.1-6. Such bargaining did in fact occur. Section 289.1-7 provides that:
+“In the event that the bargaining agent and the corporate authorities are unable,
+within thirty (30) days from and including the date of their first meeting, to reach
+an agreement on a contract, any and all unresolved issues shall be submitted to
+arbitration.”
+Here, the parties’ first meeting took place on October 28, 2011; therefore, any unresolved issues
+must have been submitted to arbitration within thirty days from that date. The union did not
+demand interest arbitration until March 14, 2012, which was well beyond the thirty-day time
+frame. Accordingly, the hearing justice correctly found that the union failed to timely submit
+any unresolved issues pursuant to § 28-9.1-7.
+The union argues that the parties mutually agreed to extend the period for negotiations.
+In Lime Rock Fire District v. Rhode Island State Labor Relations Board, 673 A.2d 51, 52 (R.I.
+1996), we acknowledged that the parties had expressly “agreed in writing to extend the deadline
+for negotiations.” (Emphasis added.) Thus, we considered the deadline to be thirty days from
+the date to which the parties had expressly agreed to extend their negotiations. Id. at 54. In
+contrast, here the hearing justice found that there was no evidence that the parties expressly
+agreed to either any particular time frame for negotiations or an extension of such a time frame
+to a particular point. We find no error in that determination. Cf. Marshall Contractors, Inc. v.
+Brown University, 692 A.2d 665, 670 (R.I. 1997) (stating that generally “when contract
+negotiations materialize into a mutual understanding and resulting binding contract is ordinarily
+a question of fact for the factfinder”). Without an express agreement to extend the deadline, the
+
+- 17 -
+
+hearing justice was correct in determining that the deadline of § 28-9.1-7 could not be extended.
+See Lime Rock Fire District, 673 A.2d at 54. Therefore, because the union 11 failed to timely
+“submit[ ] unresolved issues to arbitration within the designated period, it has waived its right to
+pursue that remedy.” Id.
+In Lime Rock Fire District, 673 A.2d at 52, the town’s fire district laid off an entire class
+of employees. Without any evidence to the contrary, we assumed that the union complied with §
+28-9.1-13 and timely requested bargaining on matters requiring the appropriation of money.
+Lime Rock Fire District, 673 A.2d at 53. We further assumed that both parties appropriately
+offered proposed changes in contractual provisions during bargaining. Id.; see § 28-9.1-17.
+Further, we recognized that “the status of the fire fighters’ jobs was clearly an unresolved issue
+that could have been * * * brought to arbitration * * *.” Lime Rock Fire District, 673 A.2d at
+54; see § 28-9.1-3(3). However, in light of the union’s failure to timely submit any unresolved
+issues (i.e. provisions regarding “the status of the fire fighters’ jobs”) to arbitration, we did not
+find the fire district’s unilateral action to be unlawful. Lime Rock Fire District, 673 A.2d at 54.
+Additionally, in Lime Rock Fire District, 673 A.2d at 53, we recognized “the significance
+of arbitration in the procedural framework of the FFAA.” Construing § 28-9.1-2(c) and § 289.1-12 together, we noted that “‘the firefighters who are subject to [the FFAA’s] terms shall have
+no right to engage in any work stoppage, slowdown, or strike, the consideration for the provision
+being the right to a resolution of disputed questions’ through the ‘method of arbitration.’” Lime
+Rock Fire District, 673 A.2d at 53 (quoting §§ 28-9.1-2(c) and 28-9.1-12). Failure to avail itself
+of this right exposes a union to potentially drastic outcomes. See id. at 54.
+
+11
+
+The hearing justice also found that the town had waived its purported right to submit
+unresolved issues to arbitration. We discuss that determination infra.
+- 18 -
+
+Here, it is our opinion that the town’s actions in implementing its decision to change to a
+three-platoon structure were lawful under the circumstances before us in this case. We reach this
+determination based on the union’s failure to timely comply with § 28-9.1-13, its failure to
+timely submit unresolved issues to arbitration pursuant to § 28-9.1-7, and our reliance on both
+our own precedent and that of other courts. Critical to this holding is that the union had
+knowledge that the town had proposed to implement the three-platoon structure as early as the
+negotiations and hearings before the arbitration panel for the July 1, 2010 to June 30, 2011
+contract year. Additionally, the union was put on formal notice at least as early as the first
+negotiation session on October 28, 2011, regarding matters pertaining to the 2011-2012 contract
+year, of the town’s proposal to implement the three-platoon structure.
+In Town of Burrillville, 921 A.2d at 116, the town sought to change the procedure for
+police officers’ receipt of injured-on-duty (IOD) benefits. The town and the union discussed the
+contents of the proposed change. Id. at 120. Despite the fact that only approximately one week
+had passed between the time the town informed the union of the proposed change and the
+implementation of the proposed change, we found that the union had “received more than
+adequate notice about the contents of [the] proposed [change], but it failed to request bargaining
+after receiving such notice.” Id. We held that “a union with sufficient notice of a contemplated
+change waives its bargaining rights if it fails to request bargaining prior to the implementation of
+that change.” Id. At that point, the SLRB had already opined that the issue, i.e. receipt of IOD
+benefits, was a “mandatory subject[ ] for bargaining.” Id. at 117. 12 Nevertheless, in light of the
+union’s waiver, we held that the town was free to implement the proposed change. Id. at 121.
+
+12
+
+Because of our determination of waiver, we did not address the town’s argument that receipt
+of IOD benefits was not a mandatory subject of collective bargaining. Town of Burrillville, 921
+A.2d at 121 n.6.
+- 19 -
+
+Here, we note that the union had knowledge of the town’s proposal to implement the
+three-platoon structure during the proceedings leading up to the July 1, 2010 to June 30, 2011
+arbitration award and also that the union failed to timely comply with § 28-9.1-13. It is certainly
+arguable that these facts alone may have justified the town in implementing its decision to
+reorganize in a three-platoon structure. 13 See Town of Burrillville, 921 A.2d at 120; Town of
+Tiverton, 118 R.I. at 166-67, 372 A.2d at 1276. Without doubt, however, because: (1) the union
+had knowledge of the town’s desire to implement the three-platoon structure from the previous
+year’s negotiations; (2) the union failed to timely comply with § 28-9.1-13; (3) the town formally
+proposed the implementation of the three-platoon structure at the October 28, 2011, negotiating
+session; and (4) the union failed to timely submit unresolved issues to interest arbitration
+pursuant to § 28-9.1-7, the town’s implementation of its decision to reorganize in a three-platoon
+structure was lawful. See Town of Burrillville, 921 A.2d at 120; Lime Rock Fire District, 673
+A.2d at 54.
+Moving forward, the town may continue to assert the decision to implement the threeplatoon structure as a management right. The town is not required to bargain with the union
+regarding this decision. See Providence Hospital, 93 F.3d at 1018; see also Fibreboard Paper
+Products Corp., 379 U.S. at 223 (Stewart, J., concurring) (“Nothing the Court holds today should
+be understood as imposing a duty to bargain collectively regarding such managerial decisions,
+which lie at the core of entrepreneurial control.”). Additionally, the town may not be compelled
+13
+
+Conditions precedent to the availability of the binding arbitration mechanism are (1) the timely
+request for bargaining and (2) then the presentment of a particular proposed contractual
+provision during bargaining. See § 28-9.1-3(3) (“Any contractual provision not presented by
+either the bargaining agent or the corporate authority within the thirty (30) day period shall not
+be submitted to arbitration as an unresolved issue * * *.”). Therefore, failing to timely request
+bargaining pursuant to § 28-9.1-13 may, by itself, subject a union to the unilateral
+implementation of matters pertaining to the appropriation of money, including wages, hours, and
+other terms and conditions of employment. See Lime Rock Fire District v. Rhode Island State
+Labor Relations Board, 673 A.2d 51, 54 (R.I. 1996).
+- 20 -
+
+to submit the decision itself to interest arbitration. Cf. Litton Financial Printing Division, a
+Division of Litton Business Systems, Inc. v. National Labor Relations Board, 501 U.S. 190, 20809 (1991) (“Whether or not a company is bound to arbitrate, as well as what issues it must
+arbitrate, is a matter to be determined by the court, and a party cannot be forced to ‘arbitrate the
+arbitrability question.’” quoting AT & T Technologies, Inc. v. Communications Workers of
+America, 475 U.S. 643, 651 (1986)). 14
+Nonetheless, provided that the union complies with the FFAA’s requirements and makes
+timely requests, the town must bargain regarding the effects of its decision to implement the
+three-platoon structure. See §§ 28-9.1-6; 28-9.1-13; Providence Hospital, 93 F.3d at 1018.
+Similarly, provided that the union complies with the FFAA’s requirements and makes timely
+requests, the union may submit unresolved issues regarding the effects of the town’s decision to
+interest arbitration. See §§ 28-9.1-3(3); 28-9.1-6; 28-9.1-7; 28-9.1-13; 28-9.1-17.
+Our determination that, under the particular circumstances of this case, the town was
+justified in unilaterally implementing its decision to reorganize into the three-platoon structure
+renders many of the other issues in this case largely academic. However, for the purpose of
+clarity, we proceed to tie up any loose ends.
+
+14
+
+One manner by which a determination of a management right may be available to a city or
+town is through declaratory relief. Alternatively, in the event an arbitration panel rejects a city or
+town’s assertion of a management right, the city or town may subsequently seek our review of
+the arbitration award by petition for writ of certiorari. See § 28-9.1-15; State, Department of
+Corrections v. Rhode Island Brotherhood of Correctional Officers, 866 A.2d 1241, 1247 (R.I.
+2005) (acknowledging that “[t]he issue of whether a dispute is arbitrable is a question of law that
+this Court reviews de novo”); Woonsocket Teachers’ Guild, Local 951, AFT v. Woonsocket
+School Committee, 770 A.2d 834, 837 (R.I. 2001) (stating that “like subject matter jurisdiction,
+the question of arbitrability may be raised by the parties at any time, or by this Court sua
+sponte”).
+- 21 -
+
+2. The Right to Submit Unresolved Issues to Interest Arbitration
+The hearing justice found that the burden of submitting unresolved issues to interest
+arbitration falls on both unions and public employers. Accordingly, he found that, because no
+issues were timely submitted to interest arbitration, both the union and the town had waived such
+right. The town avers that the right to submit unresolved issues to interest arbitration is a “right
+of labor” that is afforded to firefighters under the FFAA and is not available to public employers.
+We agree with the hearing justice that the union waived its right to submit unresolved
+issues to interest arbitration.
+
+In light of our determination that the town was justified in
+
+implementing the three-platoon structure, however, we find that it is unnecessary for us to weigh
+in on the question of the town’s purported waiver. There may indeed be circumstances where a
+public employer may desire to invoke binding interest arbitration. Whether that is a right that is
+available to public employers under the FFAA, and whether a public employer could waive such
+a right, if available, are “issue[s] for another day in another case.” Berman v. Sitrin, 101 A.3d
+1251, 1269 (R.I. 2014) (quoting Calise v. Curtin, 900 A.2d 1164, 1169 (R.I. 2006)).
+3. and 4. The Interest Arbitration Panel Has No Jurisdiction to Decide Any
+Unresolved Issues between the Parties and Does Not Have Jurisdiction to
+Determine Effects of Unilateral Changes
+The hearing justice found that the 2011-2012 Arbitration Panel did not have jurisdiction
+to determine or resolve any issues between the parties. The first basis for this finding was
+predicated on his determination that the town’s actions must be undone. The second flowed
+from his determination that the parties had waived the right to interest arbitration pursuant to our
+decision in Lime Rock Fire District. We find this second basis dispositive and, therefore, affirm
+the hearing justice’s determination that the 2011-2012 Arbitration Panel does not have any
+jurisdiction to decide any unresolved issues between the parties because of the union’s waiver
+
+- 22 -
+
+pursuant to Lime Rock Fire District. Due to the union’s waiver of its right to demand interest
+arbitration, neither does the 2011-2012 Arbitration Panel have jurisdiction to determine the
+effects of the town’s decision to implement the three-platoon structure.
+5. The SLRB has Jurisdiction over ULP-6088 insofar as it is Necessary to
+Determine Terms and Conditions After Expiration of Previous CBA
+The hearing justice, relying on our decision in Warwick School Committee v. Warwick
+Teachers’ Union, Local 915, 613 A.2d 1273 (R.I. 1992), found that the SLRB, and not the
+Superior Court, had jurisdiction to determine which terms and conditions of employment existed
+between the parties since the expiration of the 2007-2010 CBA. In the abstract, we do not
+disagree with the hearing justice’s reading of Warwick School Committee; 15 however, based on
+our application of our other precedent to the facts of this case, there is nothing for the SLRB to
+determine with respect to the relationship between the parties, at least as far as the July 1, 2011
+through June 30, 2012 period. Had the same series and confluence of events 16 not occurred, the
+town may not have been justified in implementing the three-platoon structure and there may have
+been something for the SLRB to determine.
+
+15
+
+Indeed, in our order issuing a stay in this case, we quoted Warwick School Committee, stating
+that “the Superior Court does not have original jurisdiction of the question to determine what, if
+any, agreement is in force between [management] and [a] union.” Town of North Kingstown v.
+International Association of Firefighters, Local 1651, AFL-CIO, 65 A.3d 480, 482 (R.I. 2013)
+(mem.) (North Kingstown II Supreme Court Stay) (quoting Warwick School Committee v.
+Warwick Teachers’ Union, Local 915, 613 A.2d 1273, 1276 (R.I. 1992)).
+16
+That is: (1) union’s knowledge of town’s desire to implement three-platoon structure from
+prior year’s arbitration proceedings; (2) union’s failure to timely comply with § 28-9.1-13; (3)
+town’s formal proposal of three-platoon structure during bargaining; and (4) union’s failure to
+timely submit unresolved issues to interest arbitration per § 28-9.1-7.
+- 23 -
+
+B
+The Injunction
+In addition to the five declarations, the Superior Court also ordered the town to reinstate
+the wages, hours, and other terms and conditions of employment that existed prior to the
+implementation of the three-platoon structure. Previously, we stayed the injunction pending this
+appeal. North Kingstown II Supreme Court Stay, 65 A.3d at 483. Since we now hold that the
+town was justified in implementing the three-platoon structure, it follows necessarily that the
+injunction should be vacated. Accordingly, we need not reexamine any procedural improprieties
+in issuing the injunction alleged by the town.
+C
+Scope of this Opinion
+The explicit scope of this opinion can only be stretched so far as to review the Superior
+Court decision in North Kingstown II, which, by its own terms, only addressed the 2011-2012
+Arbitration Panel and related declaratory relief. We recognize, however, that there are still
+matters pending between these parties, including unresolved counts on the town’s amended
+complaint filed on September 24, 2012 relating to the 2012-2013 Arbitration Panel. This opinion
+does not address those unresolved counts.
+Nonetheless, we reiterate that “the opinions of this Court speak forthrightly and not by
+suggestion or innuendo * * * [and it is not] the role of the trial justice to attempt to read between
+the lines of our decisions.” Pleasant Management, LLC v. Carrasco, 960 A.2d 216, 223 (R.I.
+2008) (quoting Fracassa v. Doris, 876 A.2d 506, 509 (R.I. 2005)). 17 Thus, to the extent that the
+salient factual circumstances surrounding the 2012-2013 Arbitration Panel parallel those of the
+17
+
+While we may disagree with some of his conclusions, we note that, as a whole, the trial justice
+carried out his judicial role in an admirable manner as he sifted through the issues raised by this
+pell-mell of a protracted litigation.
+- 24 -
+
+2011-2012 Arbitration Panel, the Superior Court need not engage in needless wheel-spinning to
+determine the outcome.
+IV
+Conclusion
+For the reasons set forth in this opinion, we affirm the judgment of the Superior Court in
+part, reverse in part, and remand the papers to the Superior Court.
+
+- 25 -
+
+RHODE ISLAND SUPREME COURT CLERK’S OFFICE
+Clerk’s Office Order/Opinion Cover Sheet
+
+TITLE OF CASE:
+
+Town of North Kingstown v. International Association of
+Firefighters, Local 1651 AFL-CIO, et al.
+
+CASE NO:
+
+No. 2013-44-Appeal.
+No. 2013-66-Appeal.
+No. 2013-96-Appeal.
+WC 12-542
+
+COURT:
+
+Supreme Court
+
+DATE OPINION FILED: January 9, 2015
+JUSTICES:
+
+Suttell, C.J., Goldberg, Flaherty, Robinson, and Indeglia, JJ.
+
+WRITTEN BY:
+
+Associate Justice Gilbert V. Indeglia
+
+SOURCE OF APPEAL:
+
+Providence County Superior Court
+
+JUDGE FROM LOWER COURT:
+Associate Justice Brian P. Stern
+ATTORNEYS ON APPEAL:
+For Town: Daniel K. Kinder, Esq.
+For Union: Elizabeth A. Wiens, Esq.

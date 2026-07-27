@@ -1,0 +1,501 @@
+IN THE COMMONWEALTH COURT OF PENNSYLVANIA
+Berks-Lehigh Regional Police
+Officers Association
+v.
+Upper Macungie Township, Topton
+Borough, Lyons Borough and
+Maxatawny Township
+Petition of: Upper Macungie
+Township
+
+:
+:
+:
+:
+:
+:
+:
+:
+:
+:
+:
+
+No. 786 C.D. 2016
+Argued: December 15, 2016
+
+BEFORE: HONORABLE P. KEVIN BROBSON, Judge
+HONORABLE MICHAEL H. WOJCIK, Judge
+HONORABLE DAN PELLEGRINI, Senior Judge
+OPINION NOT REPORTED
+MEMORANDUM OPINION
+BY JUDGE BROBSON
+
+FILED: January 12, 2017
+
+Petitioner Upper Macungie Township (Township) appeals from an
+order of the Court of Common Pleas of Berks County (trial court), denying the
+Township’s motion for summary judgment. For the reasons that follow, we affirm.
+The undisputed facts are as follows. On January 1, 1991, Maxatawny
+Township, Topton Borough, and Lyons Borough (collectively, “Participants”)
+established the Northeastern Berks Regional Police Commission (the Commission)
+for the stated purpose of increasing the quality and efficiency of police protection
+for the Participants. The effect of the Commission was to establish a unified
+policing district, the Northeastern Berks Regional Police District, which allowed
+
+the Participants’ formerly separate police departments to operate across any of the
+Participants’ municipal boundaries.
+On December 26, 2000, the Participants agreed to amend the
+Commission’s charter to include the Township as an additional participant and to
+rename the Commission the Berks-Lehigh Regional Police Commission.1
+
+On
+
+December 3, 2007, the Commission entered into a collective bargaining agreement
+(CBA) with the Berks-Lehigh Regional Police Officers Association (the
+Association), a duly recognized bargaining unit for fulltime police officers in the
+Berks-Lehigh Regional Police Department (the Department).2 The CBA covered
+the years 2008, 2009, and 2010. On January 24, 2011, the Commission and the
+Association participated in an interest arbitration pursuant to what is commonly
+referred to as the Policemen and Firemen Collective Bargaining Act or Act 111,
+Act of June 24, 1968, P.L. 237, as amended, 43 P.S. §§ 217.1-.10. As a result of
+the January 24, 2011 arbitration, the arbitrators issued an award, providing that the
+Commission and the Association shall enter into a new agreement, which shall be
+effective retroactively from January 1, 2011, until December 31, 2013.
+On March 19, 2012, the Commission held an executive session at
+which the Township moved to withdraw from the Commission effective at the end
+of 2012.3 On April 17, 2012, the Commission voted to close the Department
+
+1
+
+From this point forward in the opinion, the term Participants shall include Upper
+Macungie Township.
+2
+
+The Department is operated by the Commission.
+
+3
+
+In its brief, the Township notes that it voted to withdraw from the Commission at a
+regular public meeting of the Township’s Supervisors, held on November 3, 2011. (Township
+Br. at 5 n.1.)
+
+2
+
+effective December 31, 2012.
+
+As of December 31, 2012, the Commission
+
+disbanded the Department and terminated the employment of all Department
+police officers.
+On May 16, 2012, the Association filed a charge with the
+Pennsylvania Labor Relations Board (PLRB) pursuant to Act 111 and the
+Pennsylvania Labor Relations Act (PLRA),4 alleging that the Commission engaged
+in unfair labor practices by failing to engage in collective bargaining or interest
+arbitration over the impact of the Township’s withdrawal from the Commission
+and the subsequent closure of the Department. By decision dated June 7, 2012, the
+PLRB declined to issue a complaint and dismissed the charge of unfair labor
+practices after determining that the charge was filed prematurely.
+On May 20, 2013, the Association and the Commission participated in
+an arbitration before a panel of three arbitrators to determine the impact of the
+Commission’s decision to disband the Department.5 On April 26, 2014, the panel
+issued an award titled “Act 111 Impact Arbitration Award” (the Award).
+(Reproduced Record (R.R.) at 89a.) The Award purported to be pursuant to
+Section 4(b) of Act 111, 43 P.S. § 217.4(b). The panel framed the issue before it
+as “what is the impact of the Commission’s decision to no longer provide police
+services by disbanding its police department . . . how the impact of that decision
+shall be addressed and what remedies, if any shall be provided.” (R.R. at 89a-90a.)
+
+4
+
+Act of June 1, 1937, P.L. 1168, as amended, 43 P.S. §§ 211.1-.13.
+
+5
+
+At oral argument, counsel for both parties stated that, to the best of their knowledge, the
+Association and the Commission mutually agreed to proceed to arbitration on the impact of the
+Commission’s decision.
+
+3
+
+The Award addressed numerous issues relating to the dissolution of
+the Department, including: (1) reference letter to be given to officers employed as
+of
+
+the
+
+date
+
+of
+
+dissolution,
+
+(2)
+
+ongoing
+
+maintenance
+
+of
+
+personnel
+
+files, (3) cooperation on ongoing arrests and active criminal cases, and (4) recall of
+officers in the event that the Department is re-established on or before
+December 31, 2014. Notably, the Award provided that “[a]ll other proposals of the
+parties regarding the impact of the Commission’s decision to disband its police
+department which are not addressed in this Award have been fully considered by
+the Panel and rejected by a majority of the same.” (R.R. at 92a.) The Award also
+provided that “[t]he Panel shall retain jurisdiction for ninety (90) days from the
+date of this Award for the limited purpose of addressing any issues involving the
+implementation of the terms of the within Award.” (Id.)
+On November 7, 2014, the Association filed a complaint in the trial
+court against the Participants, alleging that the CBA was a valid contract between
+the Participants and the Association and that the Participants breached that contract
+by disbanding the Department prior to the expiration of the CBA on
+December 31, 2013. On December 15, 2015, the Township filed a motion for
+summary judgment in the trial court, arguing that the Association raised the breach
+of contract claim in the Association’s complaint before the May 23, 2013
+arbitration panel and that the Association’s complaint should be dismissed because
+the Award resolved all of the claims therein. The trial court denied the Township’s
+motion for summary judgment without opinion on March 16, 2016.
+On April 12, 2016, the Township petitioned the trial court to amend
+its March 16, 2016 order to include the interlocutory appeal language prescribed
+by 42 Pa. C.S. § 702(b). By order dated April 14, 2016, the trial court denied the
+4
+
+Township’s request to include the interlocutory appeal language.
+
+On
+
+May 16, 2016, the Township petitioned this Court for review of the trial court’s
+denial of the Township’s request to include the interlocutory appeal language.6 On
+June 14, 2016, we granted the Township’s petition for review to consider whether
+the trial court lacked jurisdiction over this matter because the matter was either
+controlled by arbitration or was within the exclusive jurisdiction of the PLRB.7
+The Township argues that the trial court lacks jurisdiction over the
+instant matter because the Award is final and binding and settled all issues raised
+in the Association’s complaint. Alternatively, the Township argues that, even if
+the Award did not settle all issues raised in the Association’s complaint, the
+Association’s claim that the Township breached the CBA effectively alleges that
+the Township engaged in unfair labor practices, which the PLRB has exclusive
+jurisdiction over pursuant to Section 8 of the PLRA, 43 P.S. § 211.8.8
+
+The
+
+6
+
+The Township’s petition to this Court for review of an interlocutory order was made
+pursuant to the official note to Pa. R.A.P. 1311, which provides that:
+Where the administrative agency or lower court refuses to amend its order
+to include the prescribed statement, a petition for review under Chapter 15 of the
+unappealable order of denial is the proper mode of determining whether the case
+is so egregious as to justify prerogative appellate correction of the exercise of
+discretion by the lower tribunal. If the petition for review is granted in such a
+case, the effect . . . is the same as if a petition for permission to appeal had been
+filed and granted, and no separate petition for permission to appeal need be filed.
+7
+
+Because the issue for which we granted review is a question of law, our standard of
+review is de novo and our scope of review is plenary. Cmwlth. v. White, 910 A.2d 648, 650 n.3
+(Pa. 2006); Pa. Waste Indus. Ass’n v. Monroe Cnty. Mun. Waste Mgmt. Auth., 80 A.3d 546, 555
+(Pa. Cmwlth. 2013) (en banc).
+8
+
+Section 8 of the PLRA provides:
+
+The [PLRB] is empowered, as hereinafter provided, to prevent any person
+from engaging in any unfair labor practice listed in section six of this act. This
+
+(Footnote continued on next page…)
+
+5
+
+Association argues that the Award was an impact arbitration award, rather than a
+grievance arbitration award, which neither settled nor purported to settle the
+Association’s breach of contract claim. Further, the Association argues that the
+breach of contract claim does not necessarily allege an unfair labor practice, and,
+therefore, the trial court has original jurisdiction to decide the claim.
+We first address whether the Award finally settled the breach of
+contract claim raised in the Association’s complaint.
+
+In doing so, we must
+
+examine whether the arbitration was an interest arbitration or a grievance
+arbitration within the definitions set forth in the PLRA.
+The Township argues that the Association’s claim involving a breach
+of the CBA is a grievance, which was settled via a final and binding grievance
+arbitration rather than an interest arbitration. The Association argues that the
+Award was an interest arbitration award, which did not settle the breach of contract
+claim for several reasons: (1) the Award itself stated that it was only an interest
+award; (2) the CBA did not provide a specific procedure for resolving grievances
+and, thus, did not provide that the parties should arbitrate any grievances which
+arose; and (3) the Award did not address the Association’s breach of contract
+claim, let alone render a final and binding decision on that claim.
+Our Supreme Court has previously elucidated the distinction between
+an interest and a grievance arbitration:
+
+(continued…)
+power shall be exclusive and shall not be affected by any other means of
+adjustment or prevention that have been or may be established by agreement, law
+or otherwise.
+
+6
+
+“Interest arbitration” is to be distinguished from
+“grievance arbitration.” “Interest arbitration” is the
+arbitration that occurs when the employer and employees
+are unable to agree on the terms of a collective
+bargaining agreement. “Grievance arbitration” is the
+arbitration that occurs when the parties disagree as to the
+interpretation of an existing collective bargaining
+agreement.
+City of Philadelphia v. Int’l Ass’n of Firefighters, Local 22, 999 A.2d 555, 558 n.2
+(Pa. 2010).
+While we agree that an award is not necessarily an interest arbitration
+award simply because “interest arbitration” is written in the header of the
+document, the substance of the Award also supports a conclusion that the Award is
+an interest award and not a grievance award. We first note that the “issues in
+dispute” submitted by the Association prior to the Arbitration did not mention the
+breach of contract claim, but related only to the potential impacts of the dissolution
+on matters such as salary, rank, and benefits of officers. (R.R. at 210a.) Further,
+the relief granted by the Award relates only to issues that may arise between the
+Association and the Participants after the dissolution, rather than whether the
+Participants breached the CBA. Specifically, the Award provides: (1) that officers
+employed as of the date of dissolution shall be given neutral letters of reference
+noting that their employment was terminated due to the dissolution; (2) that
+personnel files for formerly employed officers will be maintained by Maxatawny
+Township; (3) that formerly employed officers will cooperate with ongoing
+criminal trials and previously made arrests; and (4) that any former officer who
+remained employed through December 31, 2012, shall have the right to be recalled
+if the Department is re-established on or before December 31, 2014. Thus, the
+relief addressed in the Award relates only to how the Commission and the
+7
+
+Association will interact after the dissolution, rather than deciding any outstanding
+grievances.
+In arguing that the Award also addressed the Association’s breach of
+contract claim, the Township places great weight on section 5 of the Award, which
+is titled “Remaining Issues.” (R.R. at 92a.) Section 5, however, merely states that
+“[a]ll other proposals of the parties regarding the impact of the Commission’s
+decision to disband its police department which are not addressed in the Award
+have been fully considered by the Panel and rejected by a majority of the same.”
+Id. (emphasis added).
+
+Even if the parties did present arguments on the
+
+Association’s breach of contract claim, the Award is specifically limited to
+addressing the impact of the Commission’s decision rather than any breach or
+violation of the CBA.
+Further, the CBA itself does not call for final and binding arbitration
+in the event a grievance arises. The only reference to a grievance procedure relates
+to discipline of officers: “[a]ny Police Officer discipline imposed by the
+Commission shall be subject to such rules as General Orders, Standard Operating
+Procedures and Policies promulgated by the Commission and/or the Chief of
+Police.” (R.R. at 70a.) Our Supreme Court has previously held that Act 111 does
+not require that grievances and disputes be resolved by binding arbitration. See
+Twp. of Moon v. Police Officers of Twp. of Moon, 498 A.2d 1305 (Pa. 1985). In
+the absence of such an agreement to arbitrate, “the Court of Common Pleas has
+jurisdiction over actions involving claims under collective bargaining agreements.”
+Borough of Philipsburg v. Bloom, 554 A.2d 166, 168 (Pa. Cmwlth. 1989),
+aff’d, 574 A.2d 602 (Pa. 1990). Despite Act 111’s intent to encourage resolution
+of CBA grievances through arbitration, the parties are free to exclude grievances
+8
+
+from the dispute resolution process. West Lampeter Twp. v. Police Officers of W.
+Lampeter
+
+Twp.,
+
+598
+
+A.2d
+
+1049,
+
+1051
+
+(Pa.
+
+Cmwlth.
+
+1991),
+
+appeal
+
+denied, 613 A.2d 562 (Pa. 1992). It is axiomatic that arbitration is a matter of
+contract and that a particular issue cannot be arbitrated absent an agreement
+between the parties. Hazleton Area Sch. Dist. v. Bosak, 671 A.2d 277, 281 (Pa.
+Cmwlth. 1996).
+Having determined that the Award was not final and binding with
+respect to the Association’s breach of contract claim, we now address whether the
+trial court or the PLRB has jurisdiction to decide that issue.
+The Pennsylvania Constitution sets forth the starting point for
+determining what tribunal has jurisdiction over a particular type of claim.
+Article 5, Section 5 of the Pennsylvania Constitution provides “[t]here shall be one
+court of common pleas for each judicial district . . . having unlimited original
+jurisdiction in all cases except as may otherwise be provided by law.” See Cnty. of
+Erie v. Verizon North, Inc., 879 A.2d 357, 363 (Pa. Cmwlth. 2005); 42 Pa.
+C.S. § 931(a).9 Thus, the next step in our analysis is determining whether any law
+vests jurisdiction in another court or agency. Section 8 of the PLRA empowers the
+PLRB “to prevent any person from engaging in any unfair labor practice listed in
+section six of this act.” We have previously held that the PLRA, read in pari
+9
+
+42 Pa. C.S. § 931(a) provides:
+
+(a) General rule - Except where exclusive original jurisdiction of an action or
+proceeding is by statute or by general rule adopted pursuant to
+section 503 (relating to reassignment of matters) vested in another court of this
+Commonwealth, the courts of common pleas shall have unlimited original
+jurisdiction of all actions and proceedings, including all actions and proceedings
+heretofore cognizable by law or usage in the courts of common pleas.
+
+9
+
+materia with Act 111, vests in the PLRB the authority to adjudicate claims
+involving unfair labor practices which arise in relation to a collective bargaining
+agreement. Wilkes-Barre Twp. v. Pa. Labor Relations Bd., 878 A.2d 977, 982 (Pa.
+Cmwlth. 2005).
+While it is clear the Association’s claim relates to an alleged breach of
+the CBA, it does not expressly allege that the Commission engaged in unfair labor
+practices.10 The Township argues that a breach of a CBA is an unfair labor
+practice as a matter of law, or, alternatively, that the PLRB must determine if an
+unfair labor practice exists before jurisdiction reverts to the trial court.
+We do not agree with the Township’s contention that every breach of
+contract claim relating to a CBA is an unfair labor practice as a matter of law. We
+have previously held that such a breach could result in both an unfair labor practice
+and a grievance:
+Where breach of contract is alleged, interpretation of
+collective bargaining agreements typically is for the
+arbitrator under the grievance procedure set forth in the
+parties’ collective bargaining agreement. However, the
+PLRB will review an agreement to determine whether the
+employer clearly has repudiated its provisions because
+such a repudiation may constitute both an unfair labor
+practice and a grievance.
+Pa. State Troopers Ass’n v. Pa. Labor Relations Bd., 761 A.2d 645, 649 (Pa.
+Cmwlth. 2000) (emphasis added) (internal citations omitted). Thus, if a party
+submits a claim to the PLRB alleging an unfair labor practice due to a breach of
+
+10
+
+We recognize that the Association had previously filed a charge of unfair labor
+practices with the PLRB on May 16, 2012. The PLRB, however, dismissed the charge as
+premature, and, presumably, the Association chose not to pursue that charge after the dismissal.
+
+10
+
+contract, the PLRA empowers the PLRB to review the CBA to determine if the
+breach rises to the level of an unfair labor practice. 11 Accordingly, every breach of
+contract claim is not necessarily an unfair labor practice.12
+Additionally, the PLRA does not require that a party must first submit
+a breach of contract claim to the PLRB to determine whether it does, in fact,
+constitute an unfair labor practice. “The PLRB exists to remedy violations of
+statute, i.e., unfair labor practices, and not violations of contract.” AFSCME, Dist.
+Council 47, Local 2187 v. Pa. Labor Relations Bd., 41 A.3d 213, 217 (Pa.
+Cmwlth. 2012). We have held that the PLRB will review a repudiated contract to
+determine if unfair labor practices exist, but we did not hold that it must do so. See
+Pa. State Troopers Ass’n, 761 A.2d at 649. Here, the Association chose not to
+pursue an unfair labor practice claim after the PLRB determined that the charge
+
+11
+
+Section 8(b) of the PLRA provides that “[w]henever it is charged that any person has
+engaged in or is engaging in any such unfair labor practice, the [PLRB], . . . shall have authority
+to issue charges in that respect.” The Association did not attempt to charge in its complaint that
+an unfair labor practice occurred, and, thus, the PLRB has no authority to issue charges on a
+claim that was not raised.
+12
+
+The Township cites Wilkes-Barre Township for the proposition that a breach or
+repudiation of a collective bargaining agreement must also be an unfair labor practice.
+Wilkes-Barre Township, however, is readily distinguishable from the instant case. In
+Wilkes-Barre Township, the township allegedly repudiated a collective bargaining agreement
+with the local police association by enacting an ordinance providing different compensation for
+new hires than the compensation agreed to in the collective bargaining agreement. Willkes-Barre
+Twp., 878 A.2d at 979. The PLRB held that the township committed an unfair labor practice in
+violation of Act 111 by unilaterally altering the collective bargaining agreement. Although
+factually similar in some respects, Wilkes-Barre Township is procedurally distinct on one critical
+point: the association in Wilkes-Barre Township filed a claim alleging unfair labor practices with
+the PLRB rather than filing a complaint in a court of common pleas. Thus, Wilkes-Barre
+Township has no bearing on whether any breach of contract arising out of a CBA constitutes an
+unfair labor practice that must first be submitted to the PLRB.
+
+11
+
+was filed prematurely on June 7, 2012. The Association’s complaint provides, in
+pertinent part:
+24. [The Association] believes and therefore states, that it
+had a valid contract in existence that did not expire until
+the end of 2013.
+25. [The Association] further believes, and therefore
+states, that accordingly, the Defendants have an
+obligation to fund the CBA at least through the end of
+2013.
+26. The Defendants are in breach of their contract with
+[the Association].
+27. As a direct and proximate result of the breach by the
+Defendants, [the Association] has suffered a loss in
+excess of Fifty Thousand Dollars ($50,000).
+(R.R. 6a.) As stated above, not every breach of contract claim related to a CBA is
+an unfair labor practice as a matter of law. Thus, the Association has alleged only
+a breach of contract claim and has sought only relief in the form of compensatory
+damages consistent with a breach of contract claim. Accordingly, the trial court
+has original jurisdiction over the Association’s breach of contract claim.
+
+In
+
+contrast, had the Association alleged an unfair labor practice or sought relief
+consistent with the PLRA, the PLRB would have exclusive jurisdiction over that
+claim.
+
+Pa. State Lodge of the Fraternal Order of Police v. Pa. State
+
+Police, 535 A.2d 270, 271 (Pa. Cmwlth. 1987).
+Contrary to the Township’s assertions, we find no case law to support
+a conclusion that all breach of contract claims relating to a CBA are per se unfair
+labor practices within the exclusive jurisdiction of the PLRB. In fact, our prior
+decisions support a determination that a breach of contract claim which does not
+allege unfair labor practices should be adjudicated using the grievance process set
+forth in the CBA. In the absence of such a grievance process, the courts of
+12
+
+common pleas have original jurisdiction over a breach of contract claim. Thus, the
+Association’s complaint was properly before the trial court.
+Accordingly, the order of the trial court is affirmed.
+
+P. KEVIN BROBSON, Judge
+
+13
+
+IN THE COMMONWEALTH COURT OF PENNSYLVANIA
+Berks-Lehigh Regional Police
+Officers Association
+v.
+Upper Macungie Township, Topton
+Borough, Lyons Borough and
+Maxatawny Township
+Petition of: Upper Macungie
+Township
+
+:
+:
+:
+:
+:
+:
+:
+:
+:
+:
+:
+
+No. 786 C.D. 2016
+
+ORDER
+
+AND NOW, this 12th day of January, 2017, the order of the Court of
+Common Pleas of Berks County, denying Upper Macungie Township’s motion for
+summary judgment, is hereby AFFIRMED.
+
+P. KEVIN BROBSON, Judge

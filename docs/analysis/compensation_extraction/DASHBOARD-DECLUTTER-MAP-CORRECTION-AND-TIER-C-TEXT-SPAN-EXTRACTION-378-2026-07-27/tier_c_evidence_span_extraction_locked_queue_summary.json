@@ -1,0 +1,23 @@
+{
+  "global_analysis_readiness": false,
+  "html_queue_count": 61,
+  "lane_counts": {
+    "lane_1": 112,
+    "lane_2": 104,
+    "lane_3": 94,
+    "lane_4": 68
+  },
+  "locked_queue_count": 378,
+  "mechanism_counts": {
+    "fiscal_constraint_signal": 94,
+    "market_or_comparability_pressure": 68,
+    "non_safety_constraint_signal": 112,
+    "strike_or_no_strike_constraint": 104
+  },
+  "non_extracted_or_preserved_exclusion_rows_in_queue": 0,
+  "only_extracted_ok_local_artifacts": true,
+  "pdf_queue_count": 317,
+  "queue_sha256": "db20bfb8f0efb00c8bbc02689117e5058c68888a210ddad220ac828e59b2e495",
+  "retained_source_id_set_sha256": "9acaf399c3cc62b0d377f54eef2ee8f602d93c52969e2b27c2ef4082f5ed7ccf",
+  "task_id": "DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27"
+}

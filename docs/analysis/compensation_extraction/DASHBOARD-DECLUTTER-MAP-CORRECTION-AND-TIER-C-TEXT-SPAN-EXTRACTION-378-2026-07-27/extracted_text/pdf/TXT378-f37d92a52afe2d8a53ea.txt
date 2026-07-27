@@ -1,0 +1,1758 @@
+Case 2:23-cv-00612-MTL
+
+1
+
+Document 17
+
+Filed 10/13/23
+
+Page 1 of 15
+
+WO
+
+2
+3
+4
+5
+6
+
+IN THE UNITED STATES DISTRICT COURT
+
+7
+
+FOR THE DISTRICT OF ARIZONA
+
+8
+9
+
+Shannon Glynn,
+Plaintiff,
+
+10
+11
+
+v.
+
+12
+
+City of El Mirage, et al.,
+
+13
+
+Defendants.
+
+No. CV-23-00612-PHX-MTL
+ORDER
+
+14
+15
+
+Plaintiff Shannon Glynn alleges that Defendants, the City of El Mirage (the “City”),
+
+16
+
+City Manager Crystal Dyches, Human Resources (“HR”) Director Dawn Kurek, and Fire
+
+17
+
+Chief Michael Long, violated state and federal law when they retaliated against him,
+
+18
+
+resulting in his termination. Defendants move to dismiss Mr. Glynn’s § 1983 claims against
+
+19
+
+the City, Dyches, Kurek, and Long, arguing that he fails to state a facially plausible claim
+
+20
+
+and cannot establish Monell municipal liability. Defendants also move to dismiss Mr.
+
+21
+
+Glynn’s state law claims, alleging that his Notice of Claim fails to comply with
+
+22
+
+A.R.S. § 12-821.01(A). For the reasons stated below, the Court will grant in part, and deny
+
+23
+
+in part, Defendants’ Partial Motion to Dismiss (the “Motion”).
+
+24
+
+I.
+
+BACKGROUND
+
+25
+
+Mr. Glynn has been a firefighter for twenty-six years. (Doc. 10 ¶ 12.) Mr. Glynn
+
+26
+
+worked as a firefighter for the City of Buckeye Fire Department from about January 2005
+
+27
+
+to January 2019. (Id. ¶ 14.) He then applied to work as a firefighter for the City in October
+
+28
+
+2020. (Id. ¶ 15.) In his job application, Mr. Glynn disclosed that he “[w]as terminated by
+
+Case 2:23-cv-00612-MTL
+
+Document 17
+
+Filed 10/13/23
+
+Page 2 of 15
+
+1
+
+the city of Buckeye after being offered an opportunity to resign from a citizen complaint.”
+
+2
+
+(Id. ¶ 18.)
+
+3
+
+Mr. Glynn interviewed with the City Hiring Board, where he explained that his
+
+4
+
+Buckeye Fire Department termination related to an incident involving a former girlfriend
+
+5
+
+and her ex-husband (the “Buckeye Incident”). (Id. ¶¶ 19–20.) He admitted remorse and
+
+6
+
+explained that the incident taught him how to be a better fire service member. (Id. ¶ 21.)
+
+7
+
+The City Hiring Board thanked Mr. Glynn for his honesty and did not ask him questions
+
+8
+
+about the Buckeye Incident. (Id. ¶ 22.) Mr. Glynn participated in two additional interviews
+
+9
+
+with City officials, including Defendant Fire Chief Long. (Id. ¶¶ 23–24.) But the City
+
+10
+
+officials did not ask about the Buckeye Incident at either interview. (Id. ¶ 24.)
+
+11
+
+The City hired Mr. Glynn as a firefighter in March 2021. (Id. ¶ 25.) As a new
+
+12
+
+employee, Mr. Glynn was subject to the City’s one-year probation period policy. (Id.) In
+
+13
+
+October 2021, Mr. Glynn applied for a promotion as a fire engineer for the City, where he
+
+14
+
+again disclosed the Buckeye Incident. (Id. ¶¶ 27–29.) The City promoted Mr. Glynn to fire
+
+15
+
+engineer in November 2021, and he began a new one-year probation period. (Id. ¶ 30.)
+
+16
+
+Throughout his employment with the City’s Fire Department, Mr. Glynn was a
+
+17
+
+member and Vice President of the Northwest Valley Firefighters Association, International
+
+18
+
+Association of Firefighters Local 4361 (the “Local 4361”), a labor union that advocates for
+
+19
+
+employees in the Fire Department. (Id. ¶ 31.) Local 4361’s objectives are to remedy high
+
+20
+
+employee turnover and advocate for firefighter compensation. (Id. ¶¶ 33–34.) Mr. Glynn
+
+21
+
+routinely spoke with officials in the Fire Department and City regarding Local 4361’s
+
+22
+
+objectives and the Memorandum of Understanding (“MOU”) between the City and Local
+
+23
+
+4361. (Id. ¶¶ 32–33.)
+
+24
+
+In August 2022, Mr. Glynn, as Vice President of Local 4361, inquired with the
+
+25
+
+United States Department of Labor regarding firefighter pay because he believed “El
+
+26
+
+Mirage’s practice of averaging firefighters’ overtime pay across several workweeks could
+
+27
+
+be a violation of applicable wage and hour laws.” (Id. ¶ 34.) After Mr. Glynn notified the
+
+28
+
+City that he submitted the inquiry to the Department of Labor, Deputy City Manager Robert
+
+-2-
+
+Case 2:23-cv-00612-MTL
+
+Document 17
+
+Filed 10/13/23
+
+Page 3 of 15
+
+1
+
+Nilles responded approvingly because he was confident he was not violating laws relating
+
+2
+
+to firefighter pay. (Id. ¶ 35.)
+
+3
+
+Mr. Glynn also raised concerns regarding the City making certain payments to
+
+4
+
+firefighters as required by the MOU and a December 2021 arbitration decision
+
+5
+
+(the “Arbitration Decision”). (Id. ¶ 36.) On October 26, 2022, Mr. Glynn met with
+
+6
+
+Defendants Dyches and Kurek, along with non-party Deputy City Manager Nilles, to
+
+7
+
+discuss the turnover and pay issues. (Id. ¶ 37.) At that meeting, Mr. Glynn notified
+
+8
+
+Defendants Dyches and Kurek, and Deputy City Manager Nilles, that although it was not
+
+9
+
+Local 4361’s preference, he sought legal counsel to review the matter and bring a lawsuit.
+
+10
+
+(Id.) Mr. Glynn, in his capacity as Local 4361’s Vice President, then met with other City
+
+11
+
+officials to discuss the Arbitration Decision’s recommendations. (Id. ¶¶ 38–39.)
+
+12
+
+Shortly thereafter, on November 7, 2022, the City terminated Mr. Glynn. (Id. ¶ 40.)
+
+13
+
+At his termination meeting, Defendants Kurek and Long advised Mr. Glynn that he had
+
+14
+
+one week left of his promotional probation and that the City was terminating him “for lying
+
+15
+
+on his employment applications” regarding the Buckeye Incident. (Id. ¶¶ 40–41.) Mr.
+
+16
+
+Glynn “expressed shock in response to the news that he was being terminated” because he
+
+17
+
+“did not lie about his termination from Buckeye” and “volunteered additional information
+
+18
+
+surrounding the circumstances of his [Buckeye] termination” in his applications and
+
+19
+
+interviews with the City. (Id. ¶ 42.) Mr. Glynn alleges that Defendant Long refused to
+
+20
+
+provide him with a copy of the records that the City used to conclude that he lied about the
+
+21
+
+Buckeye Incident. (Id. ¶ 43.) The City explained that because Mr. Glynn was still a
+
+22
+
+probationary employee when he was terminated, he could not appeal his termination
+
+23
+
+through the City’s administrative process. (Id. ¶ 44.)
+
+24
+
+Mr. Glynn then commenced this action against the City, Dyches, Kurek, and Long.
+
+25
+
+(Doc. 10.) In his Complaint, Mr. Glynn asserts § 1983 claims against the City alleging that
+
+26
+
+it violated his First and Fourteenth Amendment rights. (Id. ¶¶ 7, 48–79.) Specifically, he
+
+27
+
+argues that the City’s termination decision was retaliatory against his protected speech
+
+28
+
+activity for Local 4361, and that “Defendants’ stated reason for terminating [his]
+
+-3-
+
+Case 2:23-cv-00612-MTL
+
+Document 17
+
+Filed 10/13/23
+
+Page 4 of 15
+
+1
+
+employment is false and pretextual.” (Id. ¶ 54.) Mr. Glynn contends that Defendants’
+
+2
+
+conduct “unlawfully chills free and open discussion on issues of public importance and
+
+3
+
+intimidates other[s] . . . from similarly engaging in protected speech.” (Id. ¶ 55.) Mr. Glynn
+
+4
+
+also alleges that “the City’s policy and practice of terminating probationary employees
+
+5
+
+‘with or without cause and recourse,’ and without regard to whether such termination
+
+6
+
+would otherwise violate a probationary employee’s constitutional or other guaranteed
+
+7
+
+rights.” (Id. ¶ 57.) Finally, Mr. Glynn argues that because Defendants Long and Kurek
+
+8
+
+“possess the authority to direct, prepare, and review any necessary department-specific
+
+9
+
+policies for the Fire Department,” they are “final policymakers for City policy [regarding]
+
+10
+
+probationary Fire Department employees.” (Id. ¶ 58.)
+
+11
+
+Mr. Glynn raises a § 1983 claim against Defendant Dyches in her individual
+
+12
+
+capacity. (Id. ¶ 8.) Mr. Glynn alleges that Dyches violated his First and Fourteenth
+
+13
+
+Amendment rights because, as the City Manager, she “approves termination decisions by
+
+14
+
+Department Directors during an employee’s probationary periods.” (Id.) Mr. Glynn asserts
+
+15
+
+that Dyches approved his termination after she attended a meeting where he raised Local
+
+16
+
+4361’s staffing and pay issues. (Id. ¶¶ 37, 40.)
+
+17
+
+Mr. Glynn brings § 1983 claims against Defendants Kurek and Long in their official
+
+18
+
+and individual capacities. (Id. ¶¶ 9–10.) He argues that Kurek and Long violated his First
+
+19
+
+and Fourteenth Amendment rights because they advised him of his termination soon after
+
+20
+
+he raised Local 4361’s concerns regarding staffing and pay issues. (Id. ¶¶ 9–10, 37, 40.)
+
+21
+
+Additionally, Mr. Glynn raises a claim under the Fair Labor and Standards Act,
+
+22
+
+29 U.S.C. § 215(a)(3), claiming that Defendants’ decision to terminate him constitutes
+
+23
+
+unlawful retaliation under § 215(a)(3). (Id. ¶¶ 94–100.) Mr. Glynn further alleges that
+
+24
+
+Defendants violated Arizona’s Public Safety Employee Act and Arizona’s Employment
+
+25
+
+Protection Act by terminating him for his protected activity. (Id. ¶¶ 80–93.)
+
+26
+
+See A.R.S. § 23-1411(A); see also A.R.S. §§ 23-1501(A)(3)(c)(i)-(ii).
+
+27
+
+Defendants move to dismiss (1) Mr. Glynn’s § 1983 claims against the City, (2) the
+
+28
+
+§ 1983 claim against Defendant Dyches in her individual capacity, (3) the § 1983 claims
+
+-4-
+
+Case 2:23-cv-00612-MTL
+
+Document 17
+
+Filed 10/13/23
+
+Page 5 of 15
+
+1
+
+against Defendants Long and Kurek in their individual and official capacities, and (4) the
+
+2
+
+Arizona’s Public Safety Employee Act and Arizona’s Employment Protection Act claims
+
+3
+
+as to all Defendants. (Doc. 13.)
+
+4
+
+II.
+
+STANDARD OF REVIEW
+
+5
+
+A complaint must contain “a short and plain statement of the claim showing that the
+
+6
+
+pleader is entitled to relief” such that the defendant is given “fair notice of what
+
+7
+
+the . . . claim is and the grounds upon which it rests.” Bell Atl. Corp. v. Twombly, 550 U.S.
+
+8
+
+545, 555 (2007) (quoting Fed. R. Civ. P. 8(a)(2); Conley v. Gibson, 355 U.S. 41, 47 (1957)).
+
+9
+
+A complaint does not suffice “if it tenders ‘naked assertion[s]’ devoid of ‘further factual
+
+10
+
+enhancement.’” Ashcroft v. Iqbal, 556 U.S. 662, 678 (2009) (quoting Twombly, 550 U.S.
+
+11
+
+at 556). Dismissal under Rule 12(b)(6) “can be based on the lack of a cognizable legal
+
+12
+
+theory or the absence of sufficient facts alleged under a cognizable legal theory.” Balistreri
+
+13
+
+v. Pacifica Police Dep’t, 901 F.2d 696, 699 (9th Cir. 1988).
+
+14
+
+The Court must accept material allegations in a complaint as true and construe them
+
+15
+
+in the light most favorable to the plaintiff. North Star Int’l v. Arizona Corp. Comm’n, 720
+
+16
+
+F.2d 578, 580 (9th Cir. 1983). “Indeed, factual challenges to a plaintiff’s complaint have
+
+17
+
+no bearing on the legal sufficiency of the allegations under Rule 12(b)(6).” See Lee v. City
+
+18
+
+of Los Angeles, 250 F.3d 668, 688 (9th Cir. 2001).
+
+19
+
+III.
+
+DISCUSSION
+
+20
+
+A.
+
+21
+
+Mr. Glynn raises two § 1983 claims. He alleges that Defendants violated his First
+
+22
+
+and Fourteenth Amendment rights to free speech and free association. (Doc. 10 ¶¶ 48–79.)
+
+23
+
+He asserts a Monell claim alleging that the City’s implementation of its official policy
+
+24
+
+regarding the termination of probationary employees caused his constitutional injury.
+
+25
+
+(Id. ¶ 57.) Mr. Glynn also claims Defendants Long and Kurek, who unconstitutionally
+
+26
+
+terminated him, have final policymaking authority over employees at the City’s Fire
+
+27
+
+Department. (Id. ¶ 58.)
+
+28
+
+Federal Claims
+
+Defendants argue that: (1) the claims against the City should be dismissed for failure
+
+-5-
+
+Case 2:23-cv-00612-MTL
+
+Document 17
+
+Filed 10/13/23
+
+Page 6 of 15
+
+1
+
+to satisfy the Monell liability standard; (2) the claims against Defendants Dyches, Kurek,
+
+2
+
+and Long in their individual capacities should be dismissed for failure to plead sufficient
+
+3
+
+factual allegations; and (3) the claims against Defendants Kurek and Long in their official
+
+4
+
+capacities should be dismissed because they are duplicative. (Doc. 13 at 1–8, 15–17.)
+
+5
+
+1.
+
+Monell Claim Against the City
+
+6
+
+In Monell v. Department of Social Services, 436 U.S. 658 (1978), the Supreme Court
+
+7
+
+held that a municipality generally may not be held liable for a § 1983 violation under a
+
+8
+
+theory of respondeat superior for the actions of its subordinates. A plaintiff can raise a
+
+9
+
+Monell claim against a municipality “(1) when ‘implementation of its official policies or
+
+10
+
+established customs inflicts the constitutional injury,’ (2) ‘for acts of omission, when such
+
+11
+
+omissions amount to the local government’s own official policy,’ or (3) ‘when the
+
+12
+
+individual who committed the constitutional tort was an official with final policy-making
+
+13
+
+authority or such an official ratified a subordinate’s unconstitutional decision or action and
+
+14
+
+the basis for it.’” Andrich v. Kostas, 470 F. Supp. 3d 1048, 1063 (D. Ariz. 2020) (internal
+
+15
+
+citation omitted); see also Clouthier v. Cnty. of Contra Costa, 591 F.3d 1232, 1249–50 (9th
+
+16
+
+Cir. 2010). To successfully plead a Monell claim, allegations in a complaint “may not
+
+17
+
+simply recite the elements of a cause of action but must contain sufficient allegations of
+
+18
+
+underlying facts to give fair notice and to enable the opposing party to defend itself
+
+19
+
+effectively.” AE ex rel. Hernandez v. Cnty. of Tulare, 666 F.3d 631, 637 (9th Cir. 2012)
+
+20
+
+(quoting Starr v. Baca, 652 F.3d 1202, 1207 (9th Cir. 2011)).
+
+21
+22
+23
+
+Mr. Glynn asserts two theories in support of his Monell liability claim against the
+City. Both theories, however, rely on conclusory allegations.
+a.
+
+Official Policy Theory
+
+24
+
+To defeat Defendants’ Motion, Mr. Glynn’s Monell violation regarding an official
+
+25
+
+policy theory must (1) identify the challenged policy; (2) explain the policy’s deficiency;
+
+26
+
+(3) explain how the policy caused the plaintiff harm; and (4) explain how the policy
+
+27
+
+amounted to deliberate indifference. See Dougherty v. City of Covina, 654 F.3d 892, 900
+
+28
+
+(9th Cir. 2011); see also Sekerke v. City of Nat’l City, No. 19-CV-1360-LAB (MSB), 2020
+
+-6-
+
+Case 2:23-cv-00612-MTL
+
+Document 17
+
+Filed 10/13/23
+
+Page 7 of 15
+
+1
+
+WL 4435416, at *11 (S.D. Cal. Aug. 3, 2020). First, Mr. Glynn identifies the City’s
+
+2
+
+probationary employee’s termination policy. (Doc. 10 ¶ 45.) The policy states that
+
+3
+
+“[d]uring the probationary period, a newly hired or promoted employee may be terminated
+
+4
+
+at any time by the Department Director with the approval of the City Manager, with or
+
+5
+
+without cause and without recourse.” (Id.) Specifically, Mr. Glynn alleges that his
+
+6
+
+termination decision “was made pursuant to the City’s policy and practice of terminating
+
+7
+
+probationary employees ‘with or without cause and without recourse,’ and without regard
+
+8
+
+to whether such termination would otherwise violate a probationary employee’s
+
+9
+
+constitutional or other guaranteed rights.” (Id. ¶ 57.) But that is where Mr. Glynn’s
+
+10
+
+satisfaction of the Monell standard ends. Other than identifying a policy, Mr. Glynn fails
+
+11
+
+to raise factual allegations to demonstrate (1) the policy’s deficiencies, (2) how those
+
+12
+
+deficiencies were the “moving force” behind his injuries, and (3) that the deficiencies made
+
+13
+
+it obvious that the constitutional injury, his termination, would occur. See Dougherty, 654
+
+14
+
+F.3d at 900.
+
+15
+
+A viable Monell claim must contain factual allegations to support causation between
+
+16
+
+the City’s policy and his purported injury. See City of Los Angeles v. Heller, 475 U.S. 796,
+
+17
+
+799 (1986); see also Sekerke, 2020 WL 4435416, at *12. In Andrich v. Kostas, the plaintiff
+
+18
+
+raised a Monell claim against the City of Phoenix on an official policy theory and identified
+
+19
+
+several police force policies that the City maintained that allegedly inflicted constitutional
+
+20
+
+injuries. 470 F. Supp. 3d at 1064. The court there found the plaintiff’s allegations were
+
+21
+
+conclusory because he failed to raise factual allegations indicating that the policies were
+
+22
+
+the “moving force” behind his injuries. Id.
+
+23
+
+Mr. Glynn’s Monell claim similarly falls short because he relies on conclusory
+
+24
+
+allegations. Mr. Glynn alleges only that his termination decision was made in accordance
+
+25
+
+with the City’s neutral policy “without regard to whether such termination would otherwise
+
+26
+
+violate a probationary employee’s constitutional or other guaranteed rights.”
+
+27
+
+(Doc. 10 ¶¶ 57, 73.) Like the plaintiff in Andrich, Mr. Glynn only asserts a conclusory
+
+28
+
+allegation that the policy resulted in his termination, violating his constitutional rights.
+
+-7-
+
+Case 2:23-cv-00612-MTL
+
+Document 17
+
+Filed 10/13/23
+
+Page 8 of 15
+
+1
+
+Accordingly, this claim lacks any factual allegations that would separate it from the
+
+2
+
+“formulaic recitation of a cause of action’s elements” deemed insufficient by
+
+3
+
+Twombly. See 550 U.S. at 555; see also Dougherty, 654 F.3d at 900.
+
+4
+
+Mr. Glynn’s allegation that the City’s reliance on the probationary policy was
+
+5
+
+pretextual is also conclusory. (Doc. 14 at 4, Doc. 10 ¶ 44.) If the City’s reliance on the
+
+6
+
+policy was “purely pretextual,” then the policy could not have caused Mr. Glynn’s
+
+7
+
+termination and been the “moving force behind [his] injuries.” Andrich, 470 F. Supp. 3d
+
+8
+
+at 1064.
+
+9
+
+Additionally, Mr. Glynn offers no factual allegations to suggest how the City’s at-
+
+10
+
+will termination policy would have resulted in his “unconstitutional” termination,
+
+11
+
+amounting to “deliberate indifference.” See Dougherty, 654 F.3d at 900 (noting that the
+
+12
+
+“deliberate indifference” Monell element is met when a violation of constitutional rights is
+
+13
+
+“obvious”). And in Arizona, the “employment relationship is [presumptively] severable at
+
+14
+
+the pleasure of either the employee or the employer.” A.R.S § 23-1501(A)(2). Therefore,
+
+15
+
+it is unclear how the City’s standard termination policy would result in an unconstitutional
+
+16
+
+retaliatory termination, and Mr. Glynn does not allege otherwise. Without supporting
+
+17
+
+factual allegations, Mr. Glynn has not stated a viable Monell claim against the City on the
+
+18
+
+theory of an unconstitutional implementation of official policy.
+
+19
+
+b.
+
+Final Policy-Making Theory
+
+20
+
+Mr. Glynn’s second Monell theory alleges that Fire Chief Long and HR Director
+
+21
+
+Kurek are “final policymakers for City policy with respect to the termination of
+
+22
+
+probationary employees” because they “possess the authority to direct, prepare, and review
+
+23
+
+any necessary department-specific policies for the Fire Department.” (Doc. 10 ¶ 58.)
+
+24
+
+Courts scrutinize a plaintiff’s final policymaker theory because holding a
+
+25
+
+municipality liable for the decisions of officers without final authority is a prohibited
+
+26
+
+application of respondeat superior against a municipality. Pembaur v. City of Cincinnati,
+
+27
+
+475 U.S. 469, 478 (1986). Municipal liability only attaches where “the decisionmaker
+
+28
+
+possesses final authority to establish municipal policy with respect to the action ordered”
+
+-8-
+
+Case 2:23-cv-00612-MTL
+
+Document 17
+
+Filed 10/13/23
+
+Page 9 of 15
+
+1
+
+and “is responsible for establishing final government policy respecting such activity.” Id.
+
+2
+
+at 482. And the fact that an official “has discretion in the exercise of particular functions
+
+3
+
+does not, without more, give rise to municipal liability based on an exercise of that
+
+4
+
+discretion.” Id.
+
+5
+
+Mr. Glynn alleges that Fire Chief Long and Director Kurek have discretion over
+
+6
+
+Fire Department policy. (Doc. 10 ¶ 45.) This, however, is insufficient to establish a basis
+
+7
+
+for municipal liability because Long and Kurek would have to be responsible for
+
+8
+
+establishing the City’s employment policy. See Jett v. Dallas Indep. Sch. Dist., 491 U.S.
+
+9
+
+701, 737 (1989) (holding that district courts must identify official policymakers based on
+
+10
+
+“state and local positive law”) (internal quotations omitted). But responsibility for
+
+11
+
+establishing the City’s employment policy rests with the City Council under
+
+12
+
+El Mirage, Ariz., Code of Ordinances § 30.01-07. The City Code makes clear that the
+
+13
+
+Council has the authority to enact and modify personnel policies: “[t]he Council may adopt,
+
+14
+
+by resolution, rules and regulations to give effect to this subchapter, which may be
+
+15
+
+modified or changed from time to time, but the rules and regulations shall follow the
+
+16
+
+generally accepted principles of good personnel administration.” Id. at § 30.03.
+
+17
+
+Accordingly, Mr. Glynn failed to plead factual allegations to show that Long and Kurek
+
+18
+
+established the City’s employment policy. See City of St. Louis v. Praprotnik, 485 U.S.
+
+19
+
+112, 126 (1988) (holding that “a federal court would not be justified in assuming that
+
+20
+
+municipal policymaking authority lies somewhere other than where the applicable law
+
+21
+
+purports to put it”).
+
+22
+
+In Gillette v. Delmore, the plaintiff, also a firefighter, raised a Monell claim against
+
+23
+
+the City of Eugene, Oregon under the theory that the fire chief was a final policymaker.
+
+24
+
+979 F.2d 1342, 1350 (9th Cir. 1992). The court recognized that the fire chief had authority
+
+25
+
+to hire and fire personnel. Id. The court, however, determined that the fire chief was not a
+
+26
+
+final policymaker after reviewing the Eugene City Charter because he was not responsible
+
+27
+
+for establishing the City’s employment policy. Id. Mr. Glynn’s final policymaker
+
+28
+
+arguments are nearly identical to the plaintiff’s assertions in Gillette. Like in Gillette, this
+
+-9-
+
+Case 2:23-cv-00612-MTL
+
+Document 17
+
+Filed 10/13/23
+
+Page 10 of 15
+
+1
+
+Court’s review of local law makes clear that Defendants lack authority to make City
+
+2
+
+employment policy. Because the El Mirage Code of Ordinances only grants authority to
+
+3
+
+the City Council to make City employment policy, Long and Kurek are not final
+
+4
+
+policymakers. And because both of Mr. Glynn’s theories to establish Monell liability
+
+5
+
+against the City fail, the § 1983 claim against the City will be dismissed.
+
+6
+
+2.
+
+Claims Against Defendants’ Individual Capacities
+
+7
+
+Mr. Glynn alleges that Defendants Dyches, Kurek, and Long violated § 1983 in their
+
+8
+
+individual capacities by depriving him of his constitutional free speech and association
+
+9
+
+rights under the First and Fourteenth Amendments. (Doc. 10 ¶¶ 8–10, 48–79.) Defendants
+
+10
+
+argue that Mr. Glynn’s § 1983 claims against the individual defendants are not facially
+
+11
+
+plausible. (Doc. 13 at 15–17.)
+
+12
+
+A claim is facially plausible “when the plaintiff pleads factual content that allows
+
+13
+
+the court to draw the reasonable inference that the defendant is liable for the misconduct
+
+14
+
+alleged.” Iqbal, 556 U.S. at 678. And a court must “draw all reasonable inferences in favor
+
+15
+
+of the nonmoving party.” Boquist v. Courtney, 32 F.4th 764, 773 (9th Cir. 2022).
+
+16
+
+To be individually liable under § 1983, Dyches, Kurek, and Long, must be “integral
+
+17
+
+participant[s]” in the alleged deprivation of constitutional rights. See Boyd v. Benton Cnty.,
+
+18
+
+374 F.3d 773, 780 (9th Cir. 2004). This standard prohibits attaching liability to “mere
+
+19
+
+bystander[s]” who had “no role in the unlawful conduct.” Chuman v. Wright, 76 F.3d 292,
+
+20
+
+294–95 (9th Cir. 1996) (holding that individual liability cannot attach where the
+
+21
+
+deprivation of rights results from a “team effort”). However, “integral participation does
+
+22
+
+not require that each [individual’s] actions themselves rise to the level of a constitutional
+
+23
+
+violation.” Boyd, 374 F.3d at 780. Instead, individuals must have “participated in some
+
+24
+
+meaningful way” for § 1983 liability to attach. Id.
+
+25
+
+A defendant, like Long, Kurek, and Dyches, may be held liable as a supervisor under
+
+26
+
+§ 1983 “if there exists either (1) his or her personal involvement in the constitutional
+
+27
+
+deprivation, or (2) a sufficient causal connection between the supervisor’s wrongful
+
+28
+
+conduct and the constitutional violation.” Starr, 652 F.3d at 1207 (quoting Hansen v. Black,
+
+- 10 -
+
+Case 2:23-cv-00612-MTL
+
+Document 17
+
+Filed 10/13/23
+
+Page 11 of 15
+
+1
+
+885 F.2d 642, 646 (9th Cir. 1989)). And in a § 1983 First Amendment employer retaliation
+
+2
+
+case, “causation can be inferred from timing alone where an adverse employment action
+
+3
+
+follows on the heels of protected activity.” Villiarimo v. Aloha Island Air, Inc., 281 F.3d
+
+4
+
+1054, 1065 (9th Cir. 2002).
+
+5
+
+Drawing all reasonable inferences in Mr. Glynn’s favor, and as further explained
+
+6
+
+below, the Court finds that Mr. Glynn pleads sufficient factual allegations to support “a
+
+7
+
+series of acts” that could establish a “causal connection” between Defendants’ wrongful
+
+8
+
+conduct and the constitutional violations. Starr, 652 F.3d at 1207 (quoting Redman v. Cnty.
+
+9
+
+of San Diego, 942 F.2d 1435, 1447 (9th Cir. 1991)).
+
+10
+
+a.
+
+Defendant Dyches
+
+11
+
+Mr. Glynn alleges that “City Manager Dyches approves termination decisions by
+
+12
+
+Department Directors during probationary periods.” (Doc. 10 ¶ 8.) Accordingly, Mr. Glynn
+
+13
+
+claims that “Defendant Dyches approved the decision to terminate Mr. Glynn’s
+
+14
+
+employment.” (Id. ¶ 59.) Mr. Glynn also alleges that Dyches was present at the October
+
+15
+
+26, 2022 meeting where he spoke to City officials regarding the alleged staffing and pay
+
+16
+
+issues. (Id. ¶ 37.) There is a reasonable inference that Dyches approved Mr. Glynn’s
+
+17
+
+November 7, 2022 termination decision “on the heels of” his protected speech activity. See
+
+18
+
+Villiarimo, 281 F.3d at 1065.
+
+19
+
+b.
+
+Defendant Kurek
+
+20
+
+Mr. Glynn also sufficiently alleges Defendant Kurek could have partaken in the
+
+21
+
+termination decision. Mr. Glynn alleged that Kurek was present in the October 26, 2022
+
+22
+
+meeting where the purported protected activity—raising concerns and threatening legal
+
+23
+
+action regarding staffing and pay issues—took place. (Doc. 10 ¶ 37.) Mr. Glynn also
+
+24
+
+explained that Kurek advised him of his termination three days later, on November 7, 2022,
+
+25
+
+for “lying on his employment applications.” (Id. ¶ 40.) Again, drawing all reasonable
+
+26
+
+inferences in Mr. Glynn’s favor, he sufficiently alleged that Kurek could have been an
+
+27
+
+“integral participant” in the alleged constitutional violation because Kurek was present at
+
+28
+
+both meetings.
+
+- 11 -
+
+Case 2:23-cv-00612-MTL
+
+1
+
+c.
+
+Document 17
+
+Filed 10/13/23
+
+Page 12 of 15
+
+Defendant Long
+
+2
+
+Mr. Glynn further alleges that he routinely engaged in protected speech with the
+
+3
+
+Fire Chief, Defendant Long, regarding the pay issues. (Id. ¶ 32.) Mr. Glynn also claims
+
+4
+
+that Long advised him of his termination on November 7, 2022. (Id. ¶ 40.) Mr. Glynn
+
+5
+
+sufficiently alleges that because Long terminated him after conversations regarding pay
+
+6
+
+issues, Long is an “integral participant” in the alleged constitutional injury.
+
+7
+
+Taking the allegations in Mr. Glynn’s Complaint as true, and drawing all reasonable
+
+8
+
+inferences in his favor, it does not appear “beyond doubt” that Mr. Glynn will be unable to
+
+9
+
+prove facts supporting his claims. His § 1983 claims against Defendants in their individual
+
+10
+
+capacities survive the Motion. See Adams v. Johnson, 355 F.3d 1179, 1183 (9th Cir. 2004);
+
+11
+
+see also Boquist, 32 F.4th at 782.
+
+12
+
+3.
+
+Claims Against Defendants’ Official Capacities
+
+13
+
+Mr. Glynn sues Kurek and Long in both their individual and official capacities.
+
+14
+
+(Doc. 10 ¶¶ 9–10.) Mr. Glynn, however, concedes that “the official capacity claims against
+
+15
+
+Defendants Long and Kurek are duplicative and should be dismissed.” (Doc. 14 at 2 n.1.)
+
+16
+
+Accordingly, Mr. Glynn’s official capacity claims against Defendants Kurek and Long will
+
+17
+
+be dismissed.
+
+18
+
+B.
+
+19
+
+Mr. Glynn asserts violations of the Arizona Employment Protection Act,
+
+20
+
+A.R.S § 23-1501, and the Arizona Public Safety Employment Act, A.R.S. § 23-1411(A).
+
+21
+
+Defendants argue that Mr. Glynn’s state law claims should be dismissed for failure to
+
+22
+
+comply with Arizona’s notice of claim requirement under A.R.S. § 12–821.01(A). Even
+
+23
+
+when pursuing state-law claims in federal court, a plaintiff must comply with Arizona’s
+
+24
+
+notice of claim statute, A.R.S. § 12-821.01. It provides:
+
+25
+26
+27
+28
+
+State Law Claims
+
+Persons who have claims against a public entity, public school
+or a public employee shall file claims with the person or
+persons authorized to accept service for the public entity,
+public school or public employee as set forth in the Arizona
+rules of civil procedure within one hundred eighty days after
+the cause of action accrues. The claim shall contain facts
+- 12 -
+
+Case 2:23-cv-00612-MTL
+
+1
+2
+3
+4
+5
+
+Document 17
+
+Filed 10/13/23
+
+Page 13 of 15
+
+sufficient to permit the public entity, public school or public
+employee to understand the basis on which liability is claimed.
+The claim shall also contain a specific amount for which the
+claim can be settled and the facts supporting that amount.
+Any claim that is not filed within one hundred eighty days after
+the cause of action accrues is barred and no action may be
+maintained thereon.
+(emphasis added).
+
+“Claims that do
+
+not comply
+
+with
+
+6
+
+A.R.S. § 12-821.01(A)
+
+7
+
+A.R.S. § 12-821.01.A are statutorily barred.” Deer Valley Unified Sch. Dist. No. 97 v.
+
+8
+
+Houser, 152 P.3d 490, 492 (Ariz. 2007).
+
+9
+
+As emphasized in the statute’s text, claimants must offer a specific dollar amount
+
+10
+
+that will settle the claim if agreed to by the public entity. Id. at 493. Mr. Glynn’s Notice of
+
+11
+
+Claim states that he would settle for “a reasonable lump sum payment of $510,000
+
+12
+
+(inclusive of all economic and emotional distress damages).” (Doc. 10-1 at 7.) In a separate
+
+13
+
+paragraph, he also demands for the City to reimburse him “for his attorneys’ fees incurred
+
+14
+
+in this dispute.” (Id.) But there is no monetary amount specified for the attorneys’ fees.
+
+15
+
+The Court in Bamonte v. City of Mesa, No. CV 06-01860-PHX-NVW, 2007 WL
+
+16
+
+2022011, at *6 (D. Ariz. July 10, 2007), considered this issue on similar facts. There, the
+
+17
+
+notice of claim stated that “Plaintiffs would settle for twenty million dollars ($20,000,000)
+
+18
+
+plus attorneys fees and costs.” Id. The Bamonte court found that while the “$20,000,000 is
+
+19
+
+on its own an unqualified and specific amount . . . the additional demands for unspecified
+
+20
+
+fees and costs introduced uncertainty into the proposed settlement value.” Id.
+
+21
+
+The same is true here. Mr. Glynn’s request for $510,000 is “an unqualified and
+
+22
+
+specified amount.” (Doc. 10-1 at 7.) But Mr. Glynn’s separate demand for an unspecified
+
+23
+
+amount of attorneys’ fees introduces uncertainty to the settlement offer, particularly when
+
+24
+
+those fees could total a substantial amount. (Id.) This uncertainty violates
+
+25
+
+A.R.S § 12-821.01(A), which demands that the claim “contain a specific amount for which
+
+26
+
+the claim can be settled.” And the purpose of Arizona’s notice of claim statute is to “permit
+
+27
+
+the possibility of settlement prior to litigation” and “assist [Defendants] in financial
+
+28
+
+planning and budgeting.” Martineau v. Maricopa Cnty., 86 P.3d 912, 915–916
+
+- 13 -
+
+Case 2:23-cv-00612-MTL
+
+1
+
+Document 17
+
+Filed 10/13/23
+
+Page 14 of 15
+
+(Ariz. Ct. App. 2004).
+
+2
+
+Mr. Glynn argues that he “invited the City to contact his counsel if it had any
+
+3
+
+questions or believed it needed additional information.” (Doc. 14 at 13, Doc. 10-1 at 7.)
+
+4
+
+Defendants, however, are not legally obligated to notify Mr. Glynn of his notice of claim’s
+
+5
+
+deficiencies. See Yahweh v. City of Phoenix, 400 P.3d 445, 447 (Ariz. Ct. App. 2017); see
+
+6
+
+also Backus v. State, 203 P.3d 499, 505 (Ariz. 2009) (noting that public entities are not
+
+7
+
+required to request additional facts when a plaintiff’s notice of claim is deficient).
+
+8
+
+Accordingly, Mr. Glynn’s Notice of Claim does not comply with A.R.S. § 12-821.01(A)
+
+9
+
+because it lacks a specific amount for which his claim can be settled. His state law claims
+
+10
+
+will be dismissed with prejudice.
+
+11
+
+IV.
+
+CONCLUSION
+
+12
+
+Accordingly,
+
+13
+
+IT IS ORDERED granting in part, and denying in part, Defendants’ Motion for
+
+14
+15
+16
+
+Partial Dismissal of Plaintiff’s First Amended Complaint (Doc. 13).
+IT IS FURTHER ORDERED dismissing Plaintiff’s first and second causes of
+action raised under 42 U.S.C. § 1983 against the City without prejudice.
+
+17
+
+IT IS FURTHER ORDERED dismissing Plaintiff’s first and second causes of
+
+18
+
+action raised under 42 U.S.C. § 1983 against Defendants Kurek and Long in their official
+
+19
+
+capacities with prejudice.
+
+20
+
+IT IS FURTHER ORDERED denying Defendants’ Motion with respect to the
+
+21
+
+first and second cause of action raised under 42 U.S.C. § 1983 against Defendants Dyches,
+
+22
+
+Kurek, and Long in their individual capacities.
+
+23
+
+IT IS FURTHER ORDERED dismissing Plaintiff’s state law claims, violations of
+
+24
+
+the Arizona Employment Protection Act and Arizona Public Safety Employee Act, with
+
+25
+
+prejudice.
+
+26
+
+IT IS FURTHER ORDERED that the following claims in the First Amended
+
+27
+
+Complaint (Doc. 10) shall remain: the first and second causes of action raised under 42
+
+28
+
+U.S.C § 1983 against Defendants Dyches, Kurek, and Long in their individual capacities,
+
+- 14 -
+
+Case 2:23-cv-00612-MTL
+
+1
+
+Document 17
+
+Filed 10/13/23
+
+Page 15 of 15
+
+and the final cause of action raised under 29 U.S.C. § 215(a)(3) as to all Defendants.
+
+2
+
+IT IS FINALLY ORDERED granting Plaintiff leave to amend his complaint.
+
+3
+
+Should Plaintiff choose to file a second amended complaint, he must do so no later than 14
+
+4
+
+days from the date of this Order.
+
+5
+
+Dated this 13th day of October, 2023.
+
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+
+- 15 -

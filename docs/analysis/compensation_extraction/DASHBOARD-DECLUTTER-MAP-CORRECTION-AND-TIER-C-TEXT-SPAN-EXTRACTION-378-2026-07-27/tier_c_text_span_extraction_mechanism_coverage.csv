@@ -1,0 +1,5 @@
+target_mechanism_family,text_extraction_queue_count,extracted_ok_count,span_queue_count,span_extracted_source_count,ambiguous_span_source_count,no_span_or_weak_source_count,positive_span_record_count
+fiscal_constraint_signal,94,94,94,2,84,8,2
+market_or_comparability_pressure,68,68,68,17,23,28,54
+non_safety_constraint_signal,112,112,112,7,77,28,12
+strike_or_no_strike_constraint,104,104,104,26,41,37,91

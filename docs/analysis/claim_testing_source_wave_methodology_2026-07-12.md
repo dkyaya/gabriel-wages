@@ -68,3 +68,7 @@ Each claim should end the update as one of: **stronger** (more/better evidence, 
 ## 7. Pointer
 
 Future agents doing source expansion or report planning should read this document first, then `claim_register_2026-07-12.csv` / `hypothesis_tracker_2026-07-12.csv` to pick Step 1, before starting a new state scan. See also the concise pointer in `AGENTS.md`.
+
+## 8. Standing dashboard update requirement
+
+After every task, update dashboard/status/docs with any substantive new information unless there is genuinely no update to provide. If no dashboard update is needed, explicitly report that no update was needed and why. Dashboard updates must preserve global analysis readiness false unless separately authorized, and must not imply wage gaps, regressions, treatment effects, national prevalence, or final causal claims. Reusable prompt language lives in `docs/prompts/dashboard_update_requirement.md`.

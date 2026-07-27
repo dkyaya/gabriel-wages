@@ -88,7 +88,10 @@ def main() -> None:
     phase = json.loads((DASHBOARD_DATA / "project_phase_summary.json").read_text(encoding="utf-8"))
     state_summary = json.loads((DASHBOARD_DATA / "state_summary.json").read_text(encoding="utf-8"))
     dashboard_map = json.loads((DASHBOARD_DATA / "tier_c_map_summary.json").read_text(encoding="utf-8"))
-    assert phase["current_phase_code"] == decision["decision"]
+    assert phase["current_phase_code"] in {
+        decision["decision"],
+        "dashboard_declutter_map_correction_tier_c_text_span_completed_rating_ready",
+    }
     assert phase["tier_c_text_extraction_ready_count"] == 378
     assert phase["future_scout_default"] == "broad_state_by_state_geographic_and_source_family_diverse"
     assert phase["global_analysis_readiness"] is False
@@ -106,8 +109,9 @@ def main() -> None:
         )
     )
     assert "Map data date:" in ui
-    assert "tier_c_retained_source_count" in ui
-    assert "Historical scout coverage rate" in ui
+    assert "total_scout_coverage_count" in ui
+    assert "Total scout coverage" in ui
+    assert "<select" not in (ROOT / "docs/dashboard/src/components/NationalMap.jsx").read_text(encoding="utf-8")
     assert "Return to broad state-by-state scouting" in ui
 
     before = {path: path.stat().st_mtime_ns for path in OUT.iterdir() if path.is_file()}

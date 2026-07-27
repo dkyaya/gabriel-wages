@@ -457,6 +457,16 @@ main > section, .hub-section-group { scroll-margin-top: 82px; }
 
 details { margin-top: 18px; color: #53635d; }
 summary { cursor: pointer; font-weight: 700; color: #2e5148; }
+.historical-archive {
+  margin-top: 28px;
+  padding: 18px 22px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #f5f5f2;
+}
+.historical-archive > summary { display: grid; gap: 4px; font-family: Georgia, "Times New Roman", serif; font-size: 1.12rem; }
+.historical-archive > summary small { color: var(--muted); font-family: inherit; font-size: 0.78rem; font-weight: 500; }
+.historical-archive-content { padding-top: 8px; }
 .queue-table-panel, .readiness-panel, .limitations-panel { margin-top: 18px; }
 .table-wrap { overflow-x: auto; }
 table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }

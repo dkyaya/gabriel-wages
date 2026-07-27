@@ -1,4 +1,3 @@
-import { formatNumber } from "./ui.jsx";
 import { valueBand } from "./mapMetrics.js";
 
 const TILE_POSITIONS = {
@@ -26,7 +25,7 @@ export function StateTileGrid({ states, selectedCode, onSelect, metric, metricKe
             style={{ gridRow: row, gridColumn: column }}
             aria-pressed={state.state === selectedCode}
             aria-label={`${state.state_name}: ${metric.label} ${metric.format(value)}`}
-            title={`${state.state_name}\n${metric.label}: ${metric.format(value)}\nTier C retained: ${formatNumber(state.tier_c_retained_source_count)}\nHistorical scout covered: ${formatNumber(state.scout_coverage_count)}`}
+            title={`${state.state_name}\n${metric.label}: ${metric.format(value)}`}
           >
             <span>{state.state}</span>
             <small>{metric.format(value)}</small>

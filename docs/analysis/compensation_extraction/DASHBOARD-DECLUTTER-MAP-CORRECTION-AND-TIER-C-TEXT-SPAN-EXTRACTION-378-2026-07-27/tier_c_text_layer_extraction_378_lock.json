@@ -1,0 +1,47 @@
+{
+  "global_analysis_readiness": false,
+  "html_queue_count": 61,
+  "immutable_input_hashes": {
+    "dashboard_map_data_date.json": "e5938b752b4f7de7f5e2037634ceb71f0a2c1f8827aec991bf104c5be09acfe0",
+    "dashboard_map_update_with_tier_c_sources_summary.json": "0d8d793735177bce0b5fcf569837b0ddcdf8ad34f508e660e7b110d60537b4e5",
+    "future_broad_geographic_scouting_strategy.json": "3f5906987f6ab00685a68f9fab519c803d21c0cd111d309d3ad013cb2dd3ad3f",
+    "future_broad_geographic_scouting_strategy.md": "d78ec56e57693f3b834c9b195153e13edc9736617acebca6d5877a206f56ae76",
+    "future_source_family_diversification_plan.md": "e958abb650dcfe0fbdd73de340f5874610d6975a9b9fb03ae0f25a7385eaf5b9",
+    "future_state_by_state_scan_plan.md": "666de5a3a325fbc090afbb8742e938dacf00b199c2f7c11bc2a3b7dcb149b771",
+    "tier_c_pdf_text_layer_readiness_463_city_cycle_unit_coverage_summary.json": "f80b54d8f4216ca339c9cae75ab582e17cfa53f876cb5ce2be70e5c96ee05237",
+    "tier_c_pdf_text_layer_readiness_463_file_integrity_summary.json": "dba4c0dd9b1522d3ded39ef026323b21b6fb8c7bb9cf9387275b918966a94e12",
+    "tier_c_pdf_text_layer_readiness_463_geographic_region_coverage_summary.json": "f18f2706fd4cc0e1f2b70ae2992c00f11a00deaf4a083714f4e6969d311742a9",
+    "tier_c_pdf_text_layer_readiness_463_html_text_later.csv": "6d1f958f00a76b7dbc0282b01bd4a5e394276ef4dd7861a438744fbb675d8c34",
+    "tier_c_pdf_text_layer_readiness_463_locked_queue_summary.json": "3fb9d77930b407da9bc35bd8688510082065ac64b34fc93adbfe23eaadcbf8f3",
+    "tier_c_pdf_text_layer_readiness_463_mechanism_coverage_summary.json": "bf8195956b33a6b1ea27e4ec5d3549d44fbbe331c1323a62bf3469db85e8c0b8",
+    "tier_c_pdf_text_layer_readiness_463_parse_text_layer_later.csv": "865842685488324b313dbad78041c2047a031469ca82d6f33dc09d4b0759dbca",
+    "tier_c_pdf_text_layer_readiness_463_results.csv": "aacff87d2bb56fe3b871a7cce21836f67570c9cd6688c9e7e75758070960f723",
+    "tier_c_pdf_text_layer_readiness_463_results_summary.json": "3255b3a52a95c7eb2ca2ad56d3b3d53b550807efd751296be13042f20e75ad77",
+    "tier_c_pdf_text_layer_readiness_463_source_family_coverage_summary.json": "0b915215bc063aeea06b3ab2cf03657b71b5db4582465161be9e24455bfb57ba",
+    "tier_c_readiness_dashboard_map_update_decision.json": "88c7514b2c68795b14a57af01ffcc91244e52b41d0eea3ac5cc5a8248fba113f",
+    "tier_c_readiness_dashboard_map_update_invariant_checks.json": "e10825f5f0d4fa25d6794c1572d57fdb9910d49005506edeb1c7c075fb0594f7",
+    "tier_c_readiness_dashboard_map_update_summary.md": "fd658ce64a76910d943462fe8c5da9d4058867dd1498ee009f14b391a3862cb5",
+    "tier_c_readiness_dashboard_map_update_validation_2026-07-27.md": "ad9ee47698ae81bf38587e98d0309838889a8d5102b9cfc412c2f4f3bb5210c4"
+  },
+  "input_commit": "c2cf27078874b4a7d1be9cbdd7412bcaf9f17f94",
+  "lane_counts": {
+    "lane_1": 112,
+    "lane_2": 104,
+    "lane_3": 94,
+    "lane_4": 68
+  },
+  "locked_queue_count": 378,
+  "mechanism_counts": {
+    "fiscal_constraint_signal": 94,
+    "market_or_comparability_pressure": 68,
+    "non_safety_constraint_signal": 112,
+    "strike_or_no_strike_constraint": 104
+  },
+  "pdf_queue_count": 317,
+  "prior_source_review_exclusion_count": 93,
+  "queue_sha256": "fe79a4d3ed4ab97cd2e71d2c7b4f874c5fb424e460e12c4af5acd5c123fa4105",
+  "readiness_exclusion_count": 85,
+  "retained_source_id_set_sha256": "9acaf399c3cc62b0d377f54eef2ee8f602d93c52969e2b27c2ef4082f5ed7ccf",
+  "task_id": "DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27",
+  "text_extraction_status": "not_started"
+}

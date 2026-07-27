@@ -1,0 +1,20 @@
+{
+  "allowed_map_filters": [
+    "total_scout_coverage_count"
+  ],
+  "forbidden_map_filters": [
+    "tier_c",
+    "readiness",
+    "mechanism",
+    "source_family",
+    "rating",
+    "extraction"
+  ],
+  "global_analysis_readiness": false,
+  "map_data_date": "2026-07-27",
+  "map_filter_count": 1,
+  "presentation_toggle_is_not_filter": [
+    "geographic_map",
+    "tile_grid"
+  ]
+}
