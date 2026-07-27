@@ -1,0 +1,27 @@
+{
+  "fiscal_constraint_signal": {
+    "locked_input_count": 1,
+    "valid_rating_count": 1,
+    "quarantine_count": 0
+  },
+  "market_or_comparability_pressure": {
+    "locked_input_count": 70,
+    "valid_rating_count": 59,
+    "quarantine_count": 11
+  },
+  "non_safety_constraint_signal": {
+    "locked_input_count": 16,
+    "valid_rating_count": 10,
+    "quarantine_count": 6
+  },
+  "strike_or_no_strike_constraint": {
+    "locked_input_count": 114,
+    "valid_rating_count": 103,
+    "quarantine_count": 11
+  },
+  "total": {
+    "locked_input_count": 201,
+    "valid_rating_count": 173,
+    "quarantine_count": 28
+  }
+}
