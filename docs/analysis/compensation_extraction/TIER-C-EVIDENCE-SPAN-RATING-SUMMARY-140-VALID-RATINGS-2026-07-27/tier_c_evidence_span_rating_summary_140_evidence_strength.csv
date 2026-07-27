@@ -1,0 +1,5 @@
+dimension,category,count,share_of_140_valid
+evidence_strength,strong,63,0.450000
+evidence_strength,moderate,41,0.292857
+evidence_strength,weak,26,0.185714
+evidence_strength,not_supported,10,0.071429

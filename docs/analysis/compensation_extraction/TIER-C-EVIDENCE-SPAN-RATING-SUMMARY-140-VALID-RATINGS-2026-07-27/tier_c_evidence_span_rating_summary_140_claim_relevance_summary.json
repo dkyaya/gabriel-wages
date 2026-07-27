@@ -1,0 +1,11 @@
+{
+  "counts": {
+    "context_only": 22,
+    "direct_text_claim": 75,
+    "documentary_mechanism_claim": 40,
+    "not_claim_ready": 3,
+    "provisional_causal_candidate": 0
+  },
+  "counts_reconcile": true,
+  "valid_rating_count": 140
+}

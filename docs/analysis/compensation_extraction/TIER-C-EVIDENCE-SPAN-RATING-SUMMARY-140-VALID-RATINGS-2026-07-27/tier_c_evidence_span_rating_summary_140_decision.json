@@ -1,0 +1,87 @@
+{
+  "broad_state_by_state_scouting_after_memo_supplement": true,
+  "claim_relevance_summary": {
+    "context_only": 22,
+    "direct_text_claim": 75,
+    "documentary_mechanism_claim": 40,
+    "not_claim_ready": 3,
+    "provisional_causal_candidate": 0
+  },
+  "claim_summary_candidate_count": 115,
+  "codification_runs": 0,
+  "completion_status": "completed_bounded_valid_tier_c_rating_summary_review",
+  "dashboard_map_data_date": "2026-07-27",
+  "dashboard_map_filter": "total_scout_coverage_only",
+  "dashboard_status_docs_updated": true,
+  "decision": "tier_c_evidence_span_rating_summary_140_completed_memo_supplement_ready",
+  "direction_of_pressure_summary": {
+    "gap_narrowing": 1,
+    "neutral_or_unclear": 108,
+    "non_safety_advantage": 5,
+    "not_applicable": 26,
+    "safety_advantage": 0
+  },
+  "downloads": 0,
+  "evidence_strength_summary": {
+    "moderate": 41,
+    "not_supported": 10,
+    "strong": 63,
+    "weak": 26
+  },
+  "final_causal_claims": 0,
+  "full_extracted_text_accesses": 0,
+  "gabriel_api_model_calls": 0,
+  "global_analysis_readiness": false,
+  "ingestion_runs": 0,
+  "mechanism_summary": {
+    "fiscal_constraint_signal": 2,
+    "market_or_comparability_pressure": 51,
+    "non_safety_constraint_signal": 11,
+    "strike_or_no_strike_constraint": 76
+  },
+  "memo_supplement_ready_next": true,
+  "national_or_population_prevalence_claims": 0,
+  "ocr_runs": 0,
+  "pdf_page_accesses": 0,
+  "pdf_render_runs": 0,
+  "provisional_causal_candidate_hint_summary": {
+    "moderate": 6,
+    "not_supported": 102,
+    "strong": 0,
+    "weak": 32
+  },
+  "quarantine_excluded_count": 19,
+  "quarantine_repair_recommended_next": false,
+  "raw_prompts_saved": 0,
+  "raw_responses_saved": 0,
+  "regressions": 0,
+  "repo_cleanup_recommended_next": false,
+  "rerating_runs": 0,
+  "retained_source_accesses": 0,
+  "support_summaries": {
+    "direct_text_support": {
+      "moderate": 26,
+      "not_supported": 17,
+      "strong": 74,
+      "weak": 23
+    },
+    "documentary_mechanism_support": {
+      "moderate": 40,
+      "not_supported": 13,
+      "strong": 68,
+      "weak": 19
+    },
+    "provisional_causal_candidate_support": {
+      "moderate": 6,
+      "not_supported": 102,
+      "strong": 0,
+      "weak": 32
+    }
+  },
+  "task_id": "TIER-C-EVIDENCE-SPAN-RATING-SUMMARY-140-VALID-RATINGS-2026-07-27",
+  "total_reconciliation": 159,
+  "treatment_effect_estimates": 0,
+  "url_opens": 0,
+  "valid_rating_summary_count": 140,
+  "wage_gap_calculations": 0
+}

@@ -87,10 +87,13 @@ def main() -> None:
     assert complete and dashboard_decision["valid_rating_count"] == 140
     phase = json.loads((ROOT / "docs/dashboard/data/project_phase_summary.json").read_text())
     state = json.loads((ROOT / "docs/dashboard/data/state_summary.json").read_text())
-    assert phase["current_phase_code"] == decision["decision"]
+    assert phase["current_phase_code"] in {
+        decision["decision"],
+        "tier_c_evidence_span_rating_summary_140_completed_memo_supplement_ready",
+    }
     assert phase["tier_c_rating_valid_count"] == 140
     assert phase["tier_c_rating_quarantine_count"] == 19
-    assert phase["next_task"].startswith("bounded summary review")
+    assert phase["next_task"].startswith(("bounded summary review", "bounded Tier C memo supplement"))
     assert phase["global_analysis_readiness"] is False
     assert state["metadata"]["current_map_layer"] == "total_scout_coverage_only"
     assert state["metric_definition"]["map_color_metric"] == "total_scout_coverage_count"

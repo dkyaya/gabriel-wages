@@ -1,0 +1,5 @@
+mechanism_family,valid_rating_count,share_of_140_valid,unique_retained_sources,unique_city_state_pairs,direct_or_documentary_claim_count,context_or_not_ready_count,evidence_strong_or_moderate,evidence_weak_or_not_supported,direct_support_strong_or_moderate,documentary_support_strong_or_moderate,provisional_causal_hint_moderate,provisional_causal_hint_weak,direction_neutral_or_unclear,direction_not_applicable,direction_non_safety_advantage,direction_gap_narrowing,direction_safety_advantage
+strike_or_no_strike_constraint,76,0.542857,25,22,61,15,56,20,55,57,0,5,55,21,0,0,0
+market_or_comparability_pressure,51,0.364286,17,14,43,8,38,13,35,41,6,23,47,3,1,0,0
+non_safety_constraint_signal,11,0.078571,7,7,10,1,9,2,9,9,0,4,5,1,4,1,0
+fiscal_constraint_signal,2,0.014286,2,2,1,1,1,1,1,1,0,0,1,1,0,0,0

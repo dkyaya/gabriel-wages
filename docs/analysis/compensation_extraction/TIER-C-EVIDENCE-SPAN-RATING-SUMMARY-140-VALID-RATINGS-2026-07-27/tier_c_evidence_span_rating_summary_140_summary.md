@@ -1,0 +1,3 @@
+# Tier C evidence-span rating summary — 140 valid ratings
+
+Decision: `tier_c_evidence_span_rating_summary_140_completed_memo_supplement_ready`. This deterministic review includes exactly 140 schema-valid Tier C ratings and excludes all 19 quarantines. The strongest additions are strike/no-strike and dispute resolution (76) and market/comparability pressure (51). Non-safety constraint evidence is useful but thin (11), and fiscal constraint evidence remains extremely thin (2). Direction is neutral or unclear in 108 ratings and not applicable in 26. A bounded Tier C memo supplement is ready next; broad geographic and source-family-diverse scouting should follow. Global analysis readiness remains false.

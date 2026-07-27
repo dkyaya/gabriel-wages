@@ -149,10 +149,9 @@ function App() {
             <p className="eyebrow">HBS municipal labor evidence project</p>
             <h1>Gabriel Wages project hub</h1>
             <p className="header-deck">
-              Bounded Tier C rating is complete for {formatNumber(projectPhaseSummary.tier_c_positive_exact_span_count)}
-              {" "}exact spans: {formatNumber(projectPhaseSummary.tier_c_rating_valid_count)} valid ratings and
-              {" "}{formatNumber(projectPhaseSummary.tier_c_rating_quarantine_count)} quarantined outputs. Summary review is next;
-              no wage gaps or causal findings are available.
+              The bounded Tier C summary covers {formatNumber(projectPhaseSummary.tier_c_rating_summary_valid_count)}
+              {" "}valid exact-span ratings and excludes {formatNumber(projectPhaseSummary.tier_c_rating_summary_quarantine_excluded_count)}
+              {" "}quarantines. A short evidence-memo supplement is next; no wage gaps or causal findings are available.
             </p>
           </div>
           <div className="header-status">
@@ -179,7 +178,7 @@ function App() {
               </div>
                 <div className="checkpoint-label">
                   <span>Next authorized stage</span>
-                  <strong>Summary review of 140 valid Tier C ratings</strong>
+                  <strong>Bounded Tier C evidence-memo supplement</strong>
                 </div>
             </div>
 
@@ -190,9 +189,9 @@ function App() {
                 note="Extracted locally without OCR; not rated or ingested"
               />
               <MetricCard
-                label="Valid Tier C ratings"
-                value={formatNumber(projectPhaseSummary.tier_c_rating_valid_count)}
-                note={`${formatNumber(projectPhaseSummary.tier_c_rating_quarantine_count)} quarantined · 159 total reconciled`}
+                label="Valid ratings summarized"
+                value={formatNumber(projectPhaseSummary.tier_c_rating_summary_valid_count)}
+                note={`${formatNumber(projectPhaseSummary.tier_c_rating_summary_quarantine_excluded_count)} quarantines excluded · 159 total reconciled`}
               />
               <MetricCard
                 label="Same-source linked pairs"
@@ -209,8 +208,8 @@ function App() {
             <div className="hub-caveat" role="note">
               <strong>Bounded evidence status only.</strong>
               <span>
-                Exact-span ratings remain not ingested, codified, causal, final, or analysis-ready. The current
-                corpus supports only bounded documentary summaries and scaffolds, not normalized comparisons or causal conclusions.
+                The Tier C summary remains not ingested, codified, causal, final, or analysis-ready. It supports
+                bounded documentary findings and hypothesis hints only, not normalized comparisons or causal conclusions.
               </span>
             </div>
 

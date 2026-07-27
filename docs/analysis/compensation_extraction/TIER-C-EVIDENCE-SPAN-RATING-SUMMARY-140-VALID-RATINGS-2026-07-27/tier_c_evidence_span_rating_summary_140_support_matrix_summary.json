@@ -1,0 +1,30 @@
+{
+  "overall_support_counts": {
+    "direct_text_support": {
+      "moderate": 26,
+      "not_supported": 17,
+      "strong": 74,
+      "weak": 23
+    },
+    "documentary_mechanism_support": {
+      "moderate": 40,
+      "not_supported": 13,
+      "strong": 68,
+      "weak": 19
+    },
+    "provisional_causal_candidate_support": {
+      "moderate": 6,
+      "not_supported": 102,
+      "strong": 0,
+      "weak": 32
+    }
+  },
+  "provisional_causal_candidate_hints": {
+    "moderate": 6,
+    "not_supported": 102,
+    "strong": 0,
+    "weak": 32
+  },
+  "valid_rating_count": 140,
+  "weak_support_is_not_a_claim": true
+}

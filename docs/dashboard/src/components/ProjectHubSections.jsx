@@ -18,11 +18,10 @@ export function ProjectOrientation({ totals, priorityTotals, report, phase }) {
     <section className="project-orientation" aria-label="Collected current and forthcoming project status">
       <article>
         <p className="eyebrow">Current operation</p>
-        <h2>Tier C exact-span rating complete</h2>
+        <h2>Tier C exact-span rating summary complete</h2>
         <p>
-          {formatNumber(phase.tier_c_rating_valid_count)} of {formatNumber(phase.tier_c_positive_exact_span_count)}
-          {" "}exact spans produced schema-valid bounded ratings; {formatNumber(phase.tier_c_rating_quarantine_count)}
-          {" "}outputs remain quarantined and excluded.
+          {formatNumber(phase.tier_c_rating_summary_valid_count)} schema-valid ratings were summarized;
+          {" "}{formatNumber(phase.tier_c_rating_summary_quarantine_excluded_count)} quarantines remain explicitly excluded.
         </p>
       </article>
       <article>
@@ -36,10 +35,10 @@ export function ProjectOrientation({ totals, priorityTotals, report, phase }) {
       </article>
       <article>
         <p className="eyebrow">Next authorized stage</p>
-        <h2>Bounded Tier C rating summary review</h2>
+        <h2>Bounded Tier C evidence-memo supplement</h2>
         <p>
-          Review only the 140 valid ratings and explicitly exclude all 19 quarantines. Source-document access,
-          rerating, ingestion, and final analysis remain outside that next phase.
+          Use only the completed deterministic summary, preserve all quarantine exclusions, and integrate the
+          documentary additions without reopening sources, rerating, ingestion, or final analysis.
         </p>
       </article>
     </section>
@@ -53,7 +52,7 @@ export function ProjectPhasePanel({ phase }) {
       <div className="section-heading">
         <div>
           <p className="eyebrow">Project phase</p>
-          <h2 id="project-phase-title">Tier C exact-span rating complete; bounded summary review ready next</h2>
+          <h2 id="project-phase-title">Tier C rating summary complete; bounded memo supplement ready next</h2>
         </div>
         <StatusPill tone="verified">
           {formatNumber(phase.tier_c_positive_exact_span_count)} exact spans
@@ -77,6 +76,7 @@ export function ProjectPhasePanel({ phase }) {
         <div><span>Exact positive spans</span><strong>{formatNumber(phase.tier_c_positive_exact_span_count)}</strong></div>
         <div><span>Valid ratings</span><strong>{formatNumber(phase.tier_c_rating_valid_count)}</strong></div>
         <div><span>Quarantined</span><strong>{formatNumber(phase.tier_c_rating_quarantine_count)}</strong></div>
+        <div><span>Summary scope</span><strong>{formatNumber(phase.tier_c_rating_summary_valid_count)}</strong></div>
         <div><span>Wage-gap estimates</span><strong>None</strong></div>
         <div><span>Global readiness</span><strong>False</strong></div>
       </div>
@@ -84,16 +84,16 @@ export function ProjectPhasePanel({ phase }) {
       <div className="phase-next">
         <div>
           <p className="eyebrow">Current transition</p>
-          <h3>Summarize only valid bounded ratings</h3>
+          <h3>Draft a bounded documentary supplement</h3>
         </div>
         <ol>
-          <li>Lock the 140 schema-valid ratings</li>
-          <li>Exclude all 19 quarantined outputs</li>
-          <li>Summarize controlled mechanism, direction, strength, and relevance fields</li>
-          <li>Do not reopen sources, rerate, or use full extracted text</li>
-          <li>Keep every interpretation bounded and provisional</li>
+          <li>Use only the completed 140-valid-rating summary</li>
+          <li>Preserve all 19 quarantine exclusions</li>
+          <li>Integrate strike, market, non-safety, and fiscal documentary additions</li>
+          <li>Keep weak and moderate causal-candidate support labeled only as hints</li>
+          <li>Return to broad state-by-state, source-diverse scouting after the supplement</li>
         </ol>
-        <StatusPill tone="future">Summary review next</StatusPill>
+        <StatusPill tone="future">Memo supplement next</StatusPill>
       </div>
       <p className="panel-note">
         Exact-span rating is not causal proof. The ratings and bounded memo remain documentary scaffolding only;
@@ -267,7 +267,8 @@ export function VerificationPipeline({
     ["Retained Tier C source", formatNumber(phase.tier_c_retained_downloaded_source_count), "Completed", "verified"],
     ["Text-layer extraction", formatNumber(phase.tier_c_text_extracted_ok_count), "Completed", "verified"],
     ["Exact positive spans", formatNumber(phase.tier_c_positive_exact_span_count), "Rated", "verified"],
-    ["Valid bounded ratings", formatNumber(phase.tier_c_rating_valid_count), "Summary next", "future"],
+    ["Valid bounded ratings", formatNumber(phase.tier_c_rating_valid_count), "Summarized", "verified"],
+    ["Valid summary scope", formatNumber(phase.tier_c_rating_summary_valid_count), "Memo next", "future"],
     ["Global analysis-ready evidence", "False", "Closed", "future"],
   ];
 
@@ -276,9 +277,9 @@ export function VerificationPipeline({
       <div className="section-heading">
         <div>
           <p className="eyebrow">Current evidence pipeline</p>
-          <h2 id="verification-title">From verified Tier C leads to bounded exact-span ratings</h2>
+          <h2 id="verification-title">From verified Tier C leads to a bounded rating summary</h2>
         </div>
-        <StatusPill tone="verified">Rating complete; summary next</StatusPill>
+        <StatusPill tone="verified">Summary complete; memo next</StatusPill>
       </div>
 
       <div className="verification-flow">
@@ -295,7 +296,7 @@ export function VerificationPipeline({
       <div className="verification-callout">
         <div>
           <p className="eyebrow">Current operational handoff</p>
-          <h3>Review bounded Tier C exact-span ratings</h3>
+          <h3>Draft a bounded Tier C evidence-memo supplement</h3>
         </div>
         <p>
           The targeted Tier C verification retained {formatNumber(phase.tier_c_verified_source_lead_count)} verified
@@ -303,7 +304,7 @@ export function VerificationPipeline({
           source files. Local non-OCR extraction produced {formatNumber(phase.tier_c_text_extracted_ok_count)} text
           artifacts and {formatNumber(phase.tier_c_positive_exact_span_count)} exact positive spans. Bounded rating
           produced {formatNumber(phase.tier_c_rating_valid_count)} valid outputs and {formatNumber(phase.tier_c_rating_quarantine_count)}
-          quarantines. Ingestion, codification, wage-gap analysis, and causal analysis have not run on this scope.
+          quarantines. The valid-only summary is complete; ingestion, codification, wage-gap analysis, and causal analysis have not run on this scope.
         </p>
       </div>
       <div className="verification-callout">
@@ -1948,18 +1949,18 @@ export function ReportsLibrary({ reportsIndex, reportAssets }) {
         ))}
         <article className="report-card">
           <div className="report-card-topline"><span>Current operations</span><span>2026-07-27</span></div>
-          <h3>Tier C exact-span rating result</h3>
+          <h3>Tier C exact-span rating summary</h3>
           <p>
-            The bounded rating pass produced 140 valid ratings from 159 exact positive spans; 19 outputs are
-            quarantined and excluded. All ratings remain globally analysis-closed.
+            The deterministic summary covers 140 valid ratings and excludes all 19 quarantines. It strengthens
+            documentary strike/no-strike and market/comparability lanes while remaining globally analysis-closed.
           </p>
-          <a className="primary-link" href="https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/tier_c_evidence_span_rating_159_result_2026-07-27.md" target="_blank" rel="noreferrer">Open current rating result</a>
+          <a className="primary-link" href="https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/tier_c_evidence_span_rating_summary_140_result_2026-07-27.md" target="_blank" rel="noreferrer">Open current rating summary</a>
         </article>
         <article className="report-card report-card-planned">
           <div className="report-card-topline"><span>Forthcoming</span><span>Next authorized stage</span></div>
-          <h3>Bounded Tier C rating summary review</h3>
-          <p>Next review home for the 140 valid ratings only, with 19 quarantines explicitly excluded.</p>
-          <StatusPill tone="future">Summary review next</StatusPill>
+          <h3>Bounded Tier C evidence-memo supplement</h3>
+          <p>Next document home for the Tier C additions, using only the completed 140-valid-rating summary.</p>
+          <StatusPill tone="future">Memo supplement next</StatusPill>
         </article>
       </div>
       <p className="panel-note">{reportsIndex.disclaimer}</p>
@@ -2009,15 +2010,15 @@ export function NextStepsPanel({ priority, phase }) {
       <div className="section-heading">
         <div>
           <p className="eyebrow">Next steps</p>
-          <h2 id="next-steps-title">Rate the preserved exact Tier C spans</h2>
+          <h2 id="next-steps-title">Draft the bounded Tier C evidence-memo supplement</h2>
         </div>
         <StatusPill tone="scout">PI-aligned strategy</StatusPill>
       </div>
       <div className="next-step-grid">
         <article className="recommended-step">
           <span>Immediate</span>
-          <h3>Run bounded rating over 159 exact positive spans</h3>
-          <p>Use only the preserved exact substring records. Keep ambiguous and no-span/weak outcomes excluded, and preserve every offset, hash, and source-lineage field.</p>
+          <h3>Integrate the 140-valid-rating summary</h3>
+          <p>Use only the deterministic summary, preserve all 19 quarantine exclusions, and keep weak or moderate causal-candidate support labeled as hypothesis hints rather than findings.</p>
         </article>
         <article>
           <span>Completed input scope</span>
@@ -2032,7 +2033,7 @@ export function NextStepsPanel({ priority, phase }) {
       </div>
       <p className="panel-note">
         Historical discovery tiers remain available above for provenance only. The current operational next task is
-        bounded Tier C exact-span rating. Global analysis readiness remains false.
+        bounded Tier C evidence-memo supplement. Global analysis readiness remains false.
       </p>
     </section>
   );

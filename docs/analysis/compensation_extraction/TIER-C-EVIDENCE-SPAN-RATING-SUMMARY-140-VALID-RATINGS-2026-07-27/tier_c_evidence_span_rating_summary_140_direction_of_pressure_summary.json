@@ -1,0 +1,12 @@
+{
+  "counts": {
+    "gap_narrowing": 1,
+    "neutral_or_unclear": 108,
+    "non_safety_advantage": 5,
+    "not_applicable": 26,
+    "safety_advantage": 0
+  },
+  "counts_reconcile": true,
+  "directional_inference_allowed": false,
+  "valid_rating_count": 140
+}

@@ -1,0 +1,3 @@
+# Next-step recommendation
+
+Decision: `tier_c_evidence_span_rating_summary_140_completed_memo_supplement_ready`. Draft a short bounded Tier C memo supplement before restarting broad scouting. The supplement should integrate the 76 strike/no-strike, 51 market/comparability, 11 non-safety constraint, and 2 fiscal valid ratings into the existing evidence memo while preserving non-directional and non-causal boundaries. Quarantine repair is not materially necessary because 140 valid ratings support interpretation. After the supplement, resume broad state-by-state scanning with explicit geographic and source-family balance; use mechanism-targeted scouting only for secondary gap filling. Repository cleanup is not a material blocker.

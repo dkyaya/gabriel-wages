@@ -93,6 +93,7 @@ def main() -> None:
         "dashboard_declutter_map_correction_tier_c_text_span_completed_rating_ready",
         "tier_c_evidence_span_rating_159_completed_summary_ready",
         "tier_c_evidence_span_rating_159_completed_with_quarantine",
+        "tier_c_evidence_span_rating_summary_140_completed_memo_supplement_ready",
     }
     assert phase["tier_c_text_extraction_ready_count"] == 378
     assert phase["future_scout_default"] == "broad_state_by_state_geographic_and_source_family_diverse"

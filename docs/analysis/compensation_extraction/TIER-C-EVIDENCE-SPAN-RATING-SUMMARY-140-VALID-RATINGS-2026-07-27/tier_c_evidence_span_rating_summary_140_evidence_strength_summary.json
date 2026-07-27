@@ -1,0 +1,10 @@
+{
+  "counts": {
+    "moderate": 41,
+    "not_supported": 10,
+    "strong": 63,
+    "weak": 26
+  },
+  "counts_reconcile": true,
+  "valid_rating_count": 140
+}

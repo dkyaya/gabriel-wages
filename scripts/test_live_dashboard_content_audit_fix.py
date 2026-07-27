@@ -64,6 +64,7 @@ class LiveDashboardContentAuditFixTests(unittest.TestCase):
             "bounded_co_location_documentary_scaffold_only",
             "bounded_unrated_exact_documentary_spans_and_colocation_scaffolds_only",
             "bounded_exact_span_ratings_and_documentary_colocation_scaffolds_only",
+            "bounded_tier_c_rating_summary_and_documentary_colocation_scaffolds_only",
         })
         self.assertTrue(self.phase["pdf_text_layer_readiness_ready_next"])
         self.assertFalse(self.phase["global_analysis_readiness"])
@@ -100,7 +101,7 @@ class LiveDashboardContentAuditFixTests(unittest.TestCase):
             self.assertNotIn(phrase, source)
         for phrase in (
             "Current bounded evidence and retained-source status",
-            "Summary review of 140 valid Tier C ratings",
+            "Bounded Tier C evidence-memo supplement",
             "Total scout coverage",
             "Historical candidate queue",
         ):
@@ -111,11 +112,11 @@ class LiveDashboardContentAuditFixTests(unittest.TestCase):
         self.assertEqual(len(bundles), 1)
         bundle = bundles[0].read_text(encoding="utf-8")
         for phrase in (
-            "Tier C exact-span rating complete",
+            "Tier C exact-span rating summary complete",
             "140 valid ratings",
             "Open current evidence memo",
             "Historical candidate queue",
-            "Review bounded Tier C exact-span ratings",
+            "Draft a bounded Tier C evidence-memo supplement",
         ):
             self.assertIn(phrase, bundle)
         self.assertNotIn("Authorize the first scaled verification round", bundle)

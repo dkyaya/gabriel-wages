@@ -1,0 +1,3 @@
+# Interpretive findings
+
+The Tier C expansion materially strengthens the project’s bounded documentary record in two areas: strike/no-strike and substitute dispute-resolution mechanisms, and market/comparability pressure. It also adds a smaller, useful non-safety constraint lane. Fiscal constraint remains too thin. The evidence is mostly non-directional: 108 ratings are neutral or unclear and 26 are not applicable. Five non-safety-advantage and one gap-narrowing labels are isolated corpus observations, not comparative findings. A short memo supplement can document these additions before the project returns to broad state-by-state, source-family-diverse scouting.

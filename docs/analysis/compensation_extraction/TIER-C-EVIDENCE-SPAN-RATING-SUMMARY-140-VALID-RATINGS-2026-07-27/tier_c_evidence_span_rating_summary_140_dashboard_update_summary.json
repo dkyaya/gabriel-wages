@@ -1,0 +1,11 @@
+{
+  "claim_summary_candidate_count": 115,
+  "current_phase": "Tier C exact-span rating summary complete; bounded memo supplement ready next",
+  "dashboard_updated": true,
+  "decision": "tier_c_evidence_span_rating_summary_140_completed_memo_supplement_ready",
+  "global_analysis_readiness": false,
+  "map_data_date": "2026-07-27",
+  "map_filter": "total_scout_coverage_only",
+  "quarantine_excluded_count": 19,
+  "valid_rating_summary_count": 140
+}

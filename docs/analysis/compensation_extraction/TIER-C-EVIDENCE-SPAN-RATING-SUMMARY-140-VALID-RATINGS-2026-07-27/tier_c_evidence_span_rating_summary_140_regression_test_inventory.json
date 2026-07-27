@@ -1,0 +1,14 @@
+{
+  "coverage": [
+    "140 valid only",
+    "19 quarantine exclusion",
+    "159 reconciliation",
+    "aggregate dimensions",
+    "no-call boundary",
+    "dashboard map contract",
+    "future broad-scout strategy",
+    "idempotent resume",
+    "partial failure"
+  ],
+  "suite": "scripts/test_tier_c_evidence_span_rating_summary_140.py"
+}

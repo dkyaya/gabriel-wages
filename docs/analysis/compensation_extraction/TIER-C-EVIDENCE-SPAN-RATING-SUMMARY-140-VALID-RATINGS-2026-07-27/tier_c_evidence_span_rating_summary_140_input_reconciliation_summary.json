@@ -1,0 +1,53 @@
+{
+  "excluded_quarantine_count": 19,
+  "immutable_input_hashes": {
+    "mechanism_specific_rating_summaries.json": "e1e5c0117eb1c097f2b016d45fec3f0450f142b7111fd8acd32985b79a81ccdc",
+    "tier_c_evidence_span_rating_159_claim_summary_candidate_manifest.csv": "b98781d94c7bc0696043e03e04f7554fdeeeb89464a631654070837456fbd3d1",
+    "tier_c_evidence_span_rating_159_claim_summary_candidate_summary.json": "e543decc25d09b0cdbeeaa14a989f3d3a9e7d84f03469abfc81a5eeda049d65d",
+    "tier_c_evidence_span_rating_159_dashboard_update_summary.json": "b6c2133dcdfbe9304bb51e609ed90202c1c6c7bfdaf285f25b6c3bd020f1e1d3",
+    "tier_c_evidence_span_rating_159_decision.json": "f6394394cac5079ef8f03da9a7a54e5ed9515a218eed72fa8199215073815373",
+    "tier_c_evidence_span_rating_159_locked_queue_summary.json": "68ac1a4ca7078e4f6632c1f4f380b632396dc3a02d969b75f9e634ae6eeec51e",
+    "tier_c_evidence_span_rating_159_quarantine.csv": "acdcf9fae9baa3c45131e1eb76c8cd17477ad3ed0135d8a83243e7c7ac0c35b7",
+    "tier_c_evidence_span_rating_159_quarantine_summary.json": "b69b277880bae0d1195f6d034665bbb6c39d72f2ed56116e402051101234ac8c",
+    "tier_c_evidence_span_rating_159_results_summary.json": "f8ccb979272cedafaacf5910cc5e88b0f306afd946b1559bc770231504b20b45",
+    "tier_c_evidence_span_rating_159_summary.md": "afa76977cea15211c629296a94b62e272d4578c54b5226acd8dbc5a3f1e5916f",
+    "tier_c_evidence_span_rating_159_valid_ratings.csv": "973265a71b421ebe28451283c7694aaeee30d725adc753098903158179398a11",
+    "tier_c_evidence_span_rating_159_validation_2026-07-27.md": "7f3cab90b03ce31d85a2739f848756ef90cba7992879a507937e372be0bc9282"
+  },
+  "locked_input_count": 159,
+  "mechanism_reconciliation": [
+    {
+      "excluded_quarantine_count": 15,
+      "input_count": 91,
+      "mechanism_family": "strike_or_no_strike_constraint",
+      "reconciles": "true",
+      "valid_summary_count": 76
+    },
+    {
+      "excluded_quarantine_count": 3,
+      "input_count": 54,
+      "mechanism_family": "market_or_comparability_pressure",
+      "reconciles": "true",
+      "valid_summary_count": 51
+    },
+    {
+      "excluded_quarantine_count": 1,
+      "input_count": 12,
+      "mechanism_family": "non_safety_constraint_signal",
+      "reconciles": "true",
+      "valid_summary_count": 11
+    },
+    {
+      "excluded_quarantine_count": 0,
+      "input_count": 2,
+      "mechanism_family": "fiscal_constraint_signal",
+      "reconciles": "true",
+      "valid_summary_count": 2
+    }
+  ],
+  "quarantine_span_extraction_ids_sha256": "14abf66bc667021e2f192527c2e38697b057c302f030e4e6872fa37a9576a5dc",
+  "valid_plus_quarantine_reconciles": true,
+  "valid_quarantine_ids_disjoint": true,
+  "valid_span_extraction_ids_sha256": "7e0dea1aba9aacda8ecf340ae3796f7fb8a4b17938d54c0f8e7f3a6ef8578485",
+  "valid_summary_count": 140
+}

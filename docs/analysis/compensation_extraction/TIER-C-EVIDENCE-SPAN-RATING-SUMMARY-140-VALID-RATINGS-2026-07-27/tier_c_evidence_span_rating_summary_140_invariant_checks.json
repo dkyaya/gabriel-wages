@@ -1,0 +1,16 @@
+{
+  "all_19_quarantines_excluded": true,
+  "all_invariants_passed": true,
+  "dashboard_map_total_scout_coverage_only": true,
+  "dashboard_update_requirement_satisfied": true,
+  "global_analysis_readiness_false": true,
+  "mechanism_claim_relevance_strength_direction_and_causal_support_counts_reconcile": true,
+  "no_ingestion_codification_or_statistical_work": true,
+  "no_ocr_or_rendering": true,
+  "no_rerating_or_model_calls": true,
+  "no_url_download_pdf_page_retained_source_or_full_text_access": true,
+  "no_wage_gap_national_population_prevalence_or_final_causal_claims": true,
+  "only_140_valid_ratings_summarized": true,
+  "partial_outputs_cannot_masquerade_as_complete": true,
+  "valid_plus_quarantine_reconciles_to_159": true
+}

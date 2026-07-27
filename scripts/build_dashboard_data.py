@@ -1354,6 +1354,17 @@ TIER_C_EVIDENCE_SPAN_RATING_159_DECISION_PATH = (
 TIER_C_EVIDENCE_SPAN_RATING_159_INVARIANTS_PATH = (
     TIER_C_EVIDENCE_SPAN_RATING_159_DIR / "tier_c_evidence_span_rating_159_invariant_checks.json"
 )
+TIER_C_EVIDENCE_SPAN_RATING_SUMMARY_140_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "TIER-C-EVIDENCE-SPAN-RATING-SUMMARY-140-VALID-RATINGS-2026-07-27"
+)
+TIER_C_EVIDENCE_SPAN_RATING_SUMMARY_140_DECISION_PATH = (
+    TIER_C_EVIDENCE_SPAN_RATING_SUMMARY_140_DIR / "tier_c_evidence_span_rating_summary_140_decision.json"
+)
+TIER_C_EVIDENCE_SPAN_RATING_SUMMARY_140_INVARIANTS_PATH = (
+    TIER_C_EVIDENCE_SPAN_RATING_SUMMARY_140_DIR / "tier_c_evidence_span_rating_summary_140_invariant_checks.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -4513,6 +4524,39 @@ def tier_c_evidence_span_rating_159_status() -> tuple[bool, dict[str, Any]]:
     return True, decision
 
 
+def tier_c_evidence_span_rating_summary_140_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize only the completed 140-valid-rating Tier C summary package."""
+    required = (
+        TIER_C_EVIDENCE_SPAN_RATING_SUMMARY_140_DECISION_PATH,
+        TIER_C_EVIDENCE_SPAN_RATING_SUMMARY_140_INVARIANTS_PATH,
+        TIER_C_EVIDENCE_SPAN_RATING_SUMMARY_140_DIR / "tier_c_evidence_span_rating_summary_140_input_reconciliation_summary.json",
+        TIER_C_EVIDENCE_SPAN_RATING_SUMMARY_140_DIR / "tier_c_evidence_span_rating_summary_140_by_mechanism_summary.json",
+        TIER_C_EVIDENCE_SPAN_RATING_SUMMARY_140_DIR / "next_tier_c_memo_supplement_prompt.md",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    decision = read_json(TIER_C_EVIDENCE_SPAN_RATING_SUMMARY_140_DECISION_PATH)
+    invariants = read_json(TIER_C_EVIDENCE_SPAN_RATING_SUMMARY_140_INVARIANTS_PATH)
+    reconciliation = read_json(
+        TIER_C_EVIDENCE_SPAN_RATING_SUMMARY_140_DIR
+        / "tier_c_evidence_span_rating_summary_140_input_reconciliation_summary.json"
+    )
+    if not (
+        decision.get("decision") == "tier_c_evidence_span_rating_summary_140_completed_memo_supplement_ready"
+        and decision.get("valid_rating_summary_count") == 140
+        and decision.get("quarantine_excluded_count") == 19
+        and decision.get("total_reconciliation") == 159
+        and decision.get("memo_supplement_ready_next") is True
+        and decision.get("dashboard_map_filter") == "total_scout_coverage_only"
+        and decision.get("global_analysis_readiness") is False
+        and reconciliation.get("valid_plus_quarantine_reconciles") is True
+        and reconciliation.get("valid_quarantine_ids_disjoint") is True
+        and invariants.get("all_invariants_passed") is True
+    ):
+        raise ValueError("Tier C 140-valid-rating summary package fails dashboard gates")
+    return True, decision
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -7040,6 +7084,9 @@ def build_project_phase_summary(
     tier_c_rating_completed, tier_c_rating = tier_c_evidence_span_rating_159_status()
     if not tier_c_rating_completed:
         raise ValueError("current dashboard phase requires completed Tier C exact-span rating")
+    tier_c_summary_completed, tier_c_summary = tier_c_evidence_span_rating_summary_140_status()
+    if not tier_c_summary_completed:
+        raise ValueError("current dashboard phase requires completed Tier C rating summary")
     mechanism = read_json(
         TARGETED_TIER_C_VERIFICATION_FROM_MEMO_GAPS_DIR
         / "targeted_tier_c_verification_mechanism_gap_coverage_summary.json"
@@ -7051,10 +7098,10 @@ def build_project_phase_summary(
     return {
         **metadata,
         "data_vintage": "2026-07-27",
-        "stage": "tier_c_exact_span_rating_complete_bounded_summary_review_transition",
-        "current_phase": "Tier C exact-span rating complete; bounded summary review ready next",
-        "current_phase_code": tier_c_rating["decision"],
-        "current_evidence_status": "bounded_exact_span_ratings_and_documentary_colocation_scaffolds_only",
+        "stage": "tier_c_exact_span_rating_summary_complete_memo_supplement_transition",
+        "current_phase": "Tier C rating summary complete; bounded memo supplement ready next",
+        "current_phase_code": tier_c_summary["decision"],
+        "current_evidence_status": "bounded_tier_c_rating_summary_and_documentary_colocation_scaffolds_only",
         "global_analysis_readiness": False,
         "wage_gap_estimates_available": False,
         "final_causal_claims_available": False,
@@ -7104,12 +7151,19 @@ def build_project_phase_summary(
         "tier_c_rating_claim_summary_candidate_count": tier_c_rating["claim_summary_candidate_count"],
         "tier_c_rating_counts_by_mechanism": tier_c_rating["rating_counts_by_mechanism"],
         "tier_c_rating_result_path": "docs/analysis/tier_c_evidence_span_rating_159_result_2026-07-27.md",
+        "tier_c_rating_summary_valid_count": tier_c_summary["valid_rating_summary_count"],
+        "tier_c_rating_summary_quarantine_excluded_count": tier_c_summary["quarantine_excluded_count"],
+        "tier_c_rating_summary_mechanism_counts": tier_c_summary["mechanism_summary"],
+        "tier_c_rating_summary_claim_relevance": tier_c_summary["claim_relevance_summary"],
+        "tier_c_rating_summary_evidence_strength": tier_c_summary["evidence_strength_summary"],
+        "tier_c_rating_summary_direction": tier_c_summary["direction_of_pressure_summary"],
+        "tier_c_rating_summary_result_path": "docs/analysis/tier_c_evidence_span_rating_summary_140_result_2026-07-27.md",
         "future_scout_default": "broad_state_by_state_geographic_and_source_family_diverse",
         "mechanism_targeted_scouting_role": "secondary_gap_filling_after_broad_scans",
         "current_report_title": "Bounded Internal Mechanism-Linkage Claim Memo",
         "current_report_path": wage_stage["bounded_internal_mechanism_linkage_claim_memo_path"],
-        "current_operational_report_path": "docs/analysis/tier_c_evidence_span_rating_159_result_2026-07-27.md",
-        "next_task": "bounded summary review of 140 valid Tier C exact-span ratings with 19 quarantines excluded",
+        "current_operational_report_path": "docs/analysis/tier_c_evidence_span_rating_summary_140_result_2026-07-27.md",
+        "next_task": "bounded Tier C memo supplement using only the 140-valid-rating summary",
         "checkpoint_target_scout_covered": SCOUT_CHECKPOINT_TARGET,
         "current_scout_covered": covered,
         "remaining_to_checkpoint": remaining,
@@ -7157,17 +7211,17 @@ def build_project_phase_summary(
             "default to broad state-by-state scanning with geographic and source-family "
             "balance; use mechanism-targeted scouting only as secondary gap-filling."
         ),
-        "next_phase": "bounded Tier C exact-span rating summary review",
+        "next_phase": "bounded Tier C evidence memo supplement",
         "next_phase_sequence": [
-            "lock only the 140 schema-valid Tier C exact-span ratings",
-            "exclude all 19 quarantined ratings from substantive summaries",
-            "summarize mechanism, direction, evidence-strength, and claim-relevance fields",
-            "preserve exact quotes, scope boundaries, and full lineage",
+            "use only the completed 140-valid-rating deterministic summary",
+            "preserve all 19 quarantine exclusions",
+            "integrate documentary additions without reopening sources or rerating",
+            "keep weak and moderate causal-candidate support labeled only as hints",
             "keep every claim bounded and global analysis readiness false",
         ],
         "regressions_status": "Deferred",
         "last_updated_commit": CURRENT_SOURCE_ACCOUNTING_COMMIT,
-        "last_updated_context": "tier_c_exact_span_rating_complete_summary_review_ready",
+        "last_updated_context": "tier_c_rating_summary_complete_memo_supplement_ready",
         "future_live_controls": [
             "stronger preflight gate",
             "compact prompts",
@@ -7179,6 +7233,7 @@ def build_project_phase_summary(
         "caveats": [
             "Historical discovery and candidate-queue panels are preserved as labeled historical context.",
             "The Tier C stage produced 140 valid bounded exact-span ratings; 19 strict-schema failures are quarantined and excluded.",
+            "The deterministic summary strengthens documentary lanes but does not establish direction, prevalence, wage differences, or effects.",
             "The ratings are not ingested, codified, causal, final, or globally analysis-ready.",
             "The bounded memo supports documentary co-location scaffolds only.",
             "Wage gaps have not been calculated.",

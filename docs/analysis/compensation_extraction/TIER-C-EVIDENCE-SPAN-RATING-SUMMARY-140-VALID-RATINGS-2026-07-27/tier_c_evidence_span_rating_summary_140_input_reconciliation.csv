@@ -1,0 +1,5 @@
+mechanism_family,input_count,valid_summary_count,excluded_quarantine_count,reconciles
+strike_or_no_strike_constraint,91,76,15,true
+market_or_comparability_pressure,54,51,3,true
+non_safety_constraint_signal,12,11,1,true
+fiscal_constraint_signal,2,2,0,true
