@@ -1,0 +1,13 @@
+dimension,category,count,share_of_valid_ratings
+direct_text_support,strong,116,0.670520
+direct_text_support,moderate,21,0.121387
+direct_text_support,weak,13,0.075145
+direct_text_support,not_supported,23,0.132948
+documentary_mechanism_support,strong,115,0.664740
+documentary_mechanism_support,moderate,33,0.190751
+documentary_mechanism_support,weak,11,0.063584
+documentary_mechanism_support,not_supported,14,0.080925
+provisional_causal_candidate_support,strong,0,0.000000
+provisional_causal_candidate_support,moderate,6,0.034682
+provisional_causal_candidate_support,weak,24,0.138728
+provisional_causal_candidate_support,not_supported,143,0.826590

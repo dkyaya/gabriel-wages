@@ -1,0 +1,16 @@
+{
+  "required_cases": [
+    "exact valid and excluded counts",
+    "disjoint valid/quarantine IDs",
+    "pinned immutable hashes",
+    "mechanism and rating reconciliations",
+    "closed downstream statuses",
+    "no forbidden dependencies",
+    "bounded claim language",
+    "dashboard global closure",
+    "future prompt boundaries",
+    "idempotent completed resume",
+    "partial-package failure"
+  ],
+  "suite": "scripts/test_targeted_evidence_span_rating_summary_173.py"
+}

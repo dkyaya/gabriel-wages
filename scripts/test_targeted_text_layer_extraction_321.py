@@ -264,7 +264,16 @@ class TargetedTextLayerExtraction321Tests(unittest.TestCase):
         readiness = json.loads(readiness_path.read_text(encoding="utf-8"))
         calibration = json.loads(calibration_path.read_text(encoding="utf-8"))
         if calibration.get("targeted_text_layer_extraction_completed"):
-            if calibration.get("targeted_evidence_span_rating_completed"):
+            if calibration.get("targeted_evidence_span_rating_summary_completed"):
+                self.assertEqual(
+                    readiness["overall_status"],
+                    "targeted_evidence_span_rating_summary_173_completed_quantitative_triage_recommended_global_analysis_closed",
+                )
+                self.assertEqual(
+                    calibration["calibration_phase"],
+                    "targeted_evidence_span_rating_summary_173_completed_quantitative_triage_recommended",
+                )
+            elif calibration.get("targeted_evidence_span_rating_completed"):
                 self.assertEqual(
                     readiness["overall_status"],
                     "targeted_evidence_span_rating_201_completed_with_quarantine_summary_review_ready_global_analysis_closed",

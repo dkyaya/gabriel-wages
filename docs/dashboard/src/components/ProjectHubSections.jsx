@@ -755,7 +755,10 @@ export function VerificationPipeline({
         <div>
           <p className="eyebrow">Manual calibration</p>
           <h3>
-            {["targeted_evidence_span_rating_201_completed_summary_ready",
+            {textTableCalibrationStatus.calibration_phase ===
+            "targeted_evidence_span_rating_summary_173_completed_quantitative_triage_recommended"
+              ? "Targeted exact-span summary complete; quantitative triage is recommended"
+              : ["targeted_evidence_span_rating_201_completed_summary_ready",
               "targeted_evidence_span_rating_201_completed_with_quarantine"].includes(
               textTableCalibrationStatus.calibration_phase,
             )
@@ -922,7 +925,20 @@ export function VerificationPipeline({
           </h3>
         </div>
         <p>
-          {["targeted_evidence_span_rating_201_completed_summary_ready",
+          {textTableCalibrationStatus.calibration_phase ===
+          "targeted_evidence_span_rating_summary_173_completed_quantitative_triage_recommended" ? (
+            <>
+              The deterministic review summarized {formatNumber(
+                textTableCalibrationStatus.targeted_evidence_span_rating_summary_valid_count,
+              )} valid exact-span ratings and preserved {formatNumber(
+                textTableCalibrationStatus.targeted_evidence_span_rating_summary_excluded_count,
+              )} quarantines as explicit exclusions. Strike/dispute-resolution and
+              market/comparability documentary lanes are strengthened; direction remains
+              predominantly neutral or unclear. Bounded triage of 862 preserved
+              quantitative direct-text rows is recommended next. No model or source-file
+              access occurred, and global analysis readiness remains closed.
+            </>
+          ) : ["targeted_evidence_span_rating_201_completed_summary_ready",
             "targeted_evidence_span_rating_201_completed_with_quarantine"].includes(
             textTableCalibrationStatus.calibration_phase,
           ) ? (

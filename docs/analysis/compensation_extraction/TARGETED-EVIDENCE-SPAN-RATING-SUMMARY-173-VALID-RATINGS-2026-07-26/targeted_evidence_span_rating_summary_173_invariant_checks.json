@@ -1,0 +1,15 @@
+{
+  "all_28_quarantines_explicitly_excluded": true,
+  "all_invariants_passed": true,
+  "claim_language_bounded_to_173_valid_rated_spans": true,
+  "global_analysis_readiness_false": true,
+  "no_download_ocr_or_rendering": true,
+  "no_gabriel_api_model_calls": true,
+  "no_ingestion_or_codification": true,
+  "no_url_pdf_page_retained_file_or_full_text_access": true,
+  "no_wage_gap_regression_treatment_effect_population_national_or_final_causal_work": true,
+  "only_173_valid_ratings_summarized": true,
+  "partial_outputs_cannot_masquerade_as_complete": true,
+  "summary_scope_locked_with_sha256": true,
+  "valid_plus_quarantine_reconciles_to_201": true
+}

@@ -1,0 +1,22 @@
+{
+  "excluded_quarantine_count": 28,
+  "input_hashes": {
+    "mechanism_specific_rating_summary.json": "571d00a77474e088f46133285d04301c746abd9f1801cf7ae86c1340d83af920",
+    "targeted_evidence_span_rating_201_claim_summary_candidate_summary.json": "224ff20a184a8dd44666681407d03d3e4b621dfb1cd0d7249a705d1232f0d120",
+    "targeted_evidence_span_rating_201_decision.json": "d117a05d43fb184672a6b7c58b83d2f899d2e925f1baf618d17f9e256dd26017",
+    "targeted_evidence_span_rating_201_invariant_checks.json": "d73a5c1a9bfc8d2463e990ec213181c3c12acc75aa0eb0853092fdb4ca866609",
+    "targeted_evidence_span_rating_201_locked_queue_summary.json": "d65c5ba739ed20b485df7e5f84616601225363d7261b18e34ff43cba3cde4d7d",
+    "targeted_evidence_span_rating_201_quarantine.csv": "e90d4b0e46eb303660c84b7a15b5b293cd16e5c74bda7abacecd861af03377e3",
+    "targeted_evidence_span_rating_201_quarantine_summary.json": "a1e7c53834c39845fc8c01dc3988c020cd547d42ae5d035847625eb4f4479e41",
+    "targeted_evidence_span_rating_201_results.csv": "86eeec30f7394003b24707123539e5f37b834ae755a71c624e91a184bc124158",
+    "targeted_evidence_span_rating_201_results_summary.json": "69719d494afdf08608868664b6dc3d209380cc1c62b7123fb5f218ecff4114c7",
+    "targeted_evidence_span_rating_201_summary.md": "0055c8de81444fb543bf681e0a1f3e23d3813f2ff1e608d788318f29297ed42c",
+    "targeted_evidence_span_rating_201_valid_ratings.csv": "86eeec30f7394003b24707123539e5f37b834ae755a71c624e91a184bc124158",
+    "targeted_evidence_span_rating_201_validation_2026-07-26.md": "09b82c4f64c19155519b6b821dd6656a7cc3164ed13bc1db74aa9ae531319e14"
+  },
+  "task_id": "TARGETED-EVIDENCE-SPAN-RATING-SUMMARY-173-VALID-RATINGS-2026-07-26",
+  "total_reconciliation": 201,
+  "valid_scope_count": 173,
+  "valid_scope_csv_sha256": "bdc1ab9751d587d91da26cf3ce967fb6cf2dd8c14e5a96663e802b076fd26052",
+  "valid_span_rating_ids_sha256": "ceac297d57bc4fc2f20d7f3a9f3d9e4b5c350acc3d52502142a69c4099a807cf"
+}

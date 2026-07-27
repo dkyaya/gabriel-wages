@@ -1,0 +1,9 @@
+{
+  "excluded_quarantine_count": 28,
+  "explicit_exclusion_from_all_valid_summaries": true,
+  "reason_counts": {
+    "forbidden_final_claim_language": 1,
+    "quote_not_exact_span_substring": 27
+  },
+  "repair_or_rerating_performed": false
+}

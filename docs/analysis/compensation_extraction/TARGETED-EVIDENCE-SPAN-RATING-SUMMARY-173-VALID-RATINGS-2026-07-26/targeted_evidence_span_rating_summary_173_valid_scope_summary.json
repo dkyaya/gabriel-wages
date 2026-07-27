@@ -1,0 +1,8 @@
+{
+  "global_analysis_readiness": false,
+  "quarantined_rows_in_valid_scope": 0,
+  "unique_span_extraction_ids": 173,
+  "unique_span_rating_ids": 173,
+  "valid_rating_count": 173,
+  "valid_scope_csv_sha256": "bdc1ab9751d587d91da26cf3ce967fb6cf2dd8c14e5a96663e802b076fd26052"
+}

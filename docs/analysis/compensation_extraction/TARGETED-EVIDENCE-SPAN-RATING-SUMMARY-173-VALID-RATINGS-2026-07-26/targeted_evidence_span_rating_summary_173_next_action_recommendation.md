@@ -1,0 +1,3 @@
+# Next-action recommendation
+
+Decision: `targeted_evidence_span_rating_summary_173_completed_quantitative_triage_recommended`. The targeted qualitative lanes now contain substantial strike/dispute-resolution and market/comparability text, while direction remains largely unresolved. The most aggressive next move is bounded triage of the preserved 862 quantitative direct-text rows so documentary mechanisms can be mapped to explicit text-grounded pay, rate, and raise records without estimating a wage gap. Tier C verification should remain a later targeted option for fiscal and non-safety gaps. Repository layout remains manageable and is not currently a material blocker. A bounded memo can follow quantitative triage.

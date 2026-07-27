@@ -1,0 +1,6 @@
+dimension,category,count,share_of_valid_ratings
+claim_relevance,direct_text_claim,121,0.699422
+claim_relevance,documentary_mechanism_claim,31,0.179191
+claim_relevance,provisional_causal_candidate,0,0.000000
+claim_relevance,context_only,20,0.115607
+claim_relevance,not_claim_ready,1,0.005780

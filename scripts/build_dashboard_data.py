@@ -1218,6 +1218,19 @@ TARGETED_EVIDENCE_SPAN_RATING_201_INVARIANTS_PATH = (
     TARGETED_EVIDENCE_SPAN_RATING_201_DIR
     / "targeted_evidence_span_rating_201_invariant_checks.json"
 )
+TARGETED_EVIDENCE_SPAN_RATING_SUMMARY_173_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "TARGETED-EVIDENCE-SPAN-RATING-SUMMARY-173-VALID-RATINGS-2026-07-26"
+)
+TARGETED_EVIDENCE_SPAN_RATING_SUMMARY_173_DECISION_PATH = (
+    TARGETED_EVIDENCE_SPAN_RATING_SUMMARY_173_DIR
+    / "targeted_evidence_span_rating_summary_173_decision.json"
+)
+TARGETED_EVIDENCE_SPAN_RATING_SUMMARY_173_INVARIANTS_PATH = (
+    TARGETED_EVIDENCE_SPAN_RATING_SUMMARY_173_DIR
+    / "targeted_evidence_span_rating_summary_173_invariant_checks.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -3664,6 +3677,72 @@ def targeted_evidence_span_rating_201_status() -> tuple[bool, dict[str, Any]]:
     return True, decision
 
 
+def targeted_evidence_span_rating_summary_173_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize only a complete, valid-only, boundary-closed 173-rating summary."""
+    required = (
+        TARGETED_EVIDENCE_SPAN_RATING_SUMMARY_173_DECISION_PATH,
+        TARGETED_EVIDENCE_SPAN_RATING_SUMMARY_173_INVARIANTS_PATH,
+        TARGETED_EVIDENCE_SPAN_RATING_SUMMARY_173_DIR / "targeted_evidence_span_rating_summary_173_lock.json",
+        TARGETED_EVIDENCE_SPAN_RATING_SUMMARY_173_DIR / "targeted_evidence_span_rating_summary_173_valid_scope.csv",
+        TARGETED_EVIDENCE_SPAN_RATING_SUMMARY_173_DIR / "targeted_evidence_span_rating_summary_173_excluded_quarantine.csv",
+        TARGETED_EVIDENCE_SPAN_RATING_SUMMARY_173_DIR / "targeted_evidence_span_rating_summary_173_mechanism_summary.json",
+        TARGETED_EVIDENCE_SPAN_RATING_SUMMARY_173_DIR / "next_quantitative_claim_triage_prompt.md",
+        TARGETED_EVIDENCE_SPAN_RATING_SUMMARY_173_DIR / "next_task.md",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    decision = read_json(TARGETED_EVIDENCE_SPAN_RATING_SUMMARY_173_DECISION_PATH)
+    invariants = read_json(TARGETED_EVIDENCE_SPAN_RATING_SUMMARY_173_INVARIANTS_PATH)
+    lock = read_json(TARGETED_EVIDENCE_SPAN_RATING_SUMMARY_173_DIR / "targeted_evidence_span_rating_summary_173_lock.json")
+    mechanism = read_json(TARGETED_EVIDENCE_SPAN_RATING_SUMMARY_173_DIR / "targeted_evidence_span_rating_summary_173_mechanism_summary.json")
+    valid = read_csv(TARGETED_EVIDENCE_SPAN_RATING_SUMMARY_173_DIR / "targeted_evidence_span_rating_summary_173_valid_scope.csv")
+    excluded = read_csv(TARGETED_EVIDENCE_SPAN_RATING_SUMMARY_173_DIR / "targeted_evidence_span_rating_summary_173_excluded_quarantine.csv")
+    valid_ids = [row.get("span_extraction_id", "") for row in valid]
+    excluded_ids = [row.get("span_extraction_id", "") for row in excluded]
+    if not (
+        decision.get("task_id") == "TARGETED-EVIDENCE-SPAN-RATING-SUMMARY-173-VALID-RATINGS-2026-07-26"
+        and decision.get("decision") == "targeted_evidence_span_rating_summary_173_completed_quantitative_triage_recommended"
+        and decision.get("completion_status") == "completed_bounded_valid_rating_summary_review"
+        and decision.get("valid_rating_count") == 173 and len(valid) == 173
+        and decision.get("excluded_quarantine_count") == 28 and len(excluded) == 28
+        and decision.get("total_reconciliation") == 201
+        and len(valid_ids) == len(set(valid_ids))
+        and len(excluded_ids) == len(set(excluded_ids))
+        and not (set(valid_ids) & set(excluded_ids))
+        and decision.get("mechanism_summary") == {
+            "fiscal_constraint_signal": 1,
+            "market_or_comparability_pressure": 59,
+            "non_safety_constraint_signal": 10,
+            "strike_or_no_strike_constraint": 103,
+        }
+        and mechanism.get("valid_rating_count") == 173
+        and lock.get("valid_scope_count") == 173
+        and lock.get("excluded_quarantine_count") == 28
+        and all(row.get("rating_status") == "rated_valid" for row in valid)
+        and all(row.get("ingestion_status") == "not_ingested" for row in valid)
+        and all(row.get("codification_status") == "not_codified" for row in valid)
+        and all(row.get("causal_status") == "not_causal_evidence" for row in valid)
+        and all(row.get("global_analysis_readiness") == "false" for row in valid)
+        and decision.get("quantitative_direct_text_rows_preserved_for_future_triage") == 862
+        and decision.get("gabriel_api_model_calls") == 0
+        and decision.get("url_opens") == 0 and decision.get("downloads") == 0
+        and decision.get("pdf_page_accesses") == 0 and decision.get("retained_file_accesses") == 0
+        and decision.get("full_extracted_text_accesses") == 0 and decision.get("ocr_runs") == 0
+        and decision.get("pdf_render_runs") == 0 and decision.get("ingestion_runs") == 0
+        and decision.get("codification_runs") == 0 and decision.get("wage_gap_calculations") == 0
+        and decision.get("regressions") == 0 and decision.get("treatment_effect_estimates") == 0
+        and decision.get("population_prevalence_claims") == 0 and decision.get("national_claims") == 0
+        and decision.get("final_causal_claims") == 0
+        and decision.get("global_analysis_readiness") is False
+        and invariants.get("all_invariants_passed") is True
+        and invariants.get("only_173_valid_ratings_summarized") is True
+        and invariants.get("all_28_quarantines_explicitly_excluded") is True
+        and invariants.get("global_analysis_readiness_false") is True
+    ):
+        raise ValueError("targeted 173-rating summary package fails dashboard gates")
+    return True, decision
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -4434,6 +4513,10 @@ def build_analysis_readiness(
         targeted_evidence_span_rating_201_completed,
         targeted_evidence_span_rating_201_decision,
     ) = targeted_evidence_span_rating_201_status()
+    (
+        targeted_evidence_span_rating_summary_173_completed,
+        targeted_evidence_span_rating_summary_173_decision,
+    ) = targeted_evidence_span_rating_summary_173_status()
     if scale_1000_targeted_qa_completed and (
         scale_1000_targeted_qa_decision.get("qa_pass") is not True
         or scale_1000_targeted_qa_decision.get(
@@ -4480,6 +4563,9 @@ def build_analysis_readiness(
     return {
         "metadata": metadata,
         "overall_status": (
+            "targeted_evidence_span_rating_summary_173_completed_quantitative_triage_recommended_global_analysis_closed"
+            if targeted_evidence_span_rating_summary_173_completed
+            else
             "targeted_evidence_span_rating_201_completed_with_quarantine_summary_review_ready_global_analysis_closed"
             if targeted_evidence_span_rating_201_completed
             and targeted_evidence_span_rating_201_decision.get("decision") == "targeted_evidence_span_rating_201_completed_with_quarantine"
@@ -5353,6 +5439,24 @@ def build_analysis_readiness(
                 "targeted_evidence_span_rating_repair_needed": (
                     bool(targeted_evidence_span_rating_201_decision.get("repair_needed", False))
                     if targeted_evidence_span_rating_201_completed else False
+                ),
+                "targeted_evidence_span_rating_summary_completed": targeted_evidence_span_rating_summary_173_completed,
+                "targeted_evidence_span_rating_summary_decision": (
+                    targeted_evidence_span_rating_summary_173_decision.get("decision")
+                    if targeted_evidence_span_rating_summary_173_completed else None
+                ),
+                "targeted_evidence_span_rating_summary_valid_count": (
+                    int(targeted_evidence_span_rating_summary_173_decision.get("valid_rating_count", 0))
+                    if targeted_evidence_span_rating_summary_173_completed else 0
+                ),
+                "targeted_evidence_span_rating_summary_excluded_count": (
+                    int(targeted_evidence_span_rating_summary_173_decision.get("excluded_quarantine_count", 0))
+                    if targeted_evidence_span_rating_summary_173_completed else 0
+                ),
+                "targeted_quantitative_triage_recommended_next": (
+                    targeted_evidence_span_rating_summary_173_completed
+                    and targeted_evidence_span_rating_summary_173_decision.get("decision")
+                    == "targeted_evidence_span_rating_summary_173_completed_quantitative_triage_recommended"
                 ),
                 "gabriel_claim_rating_global_analysis_readiness": False,
                 "limited_qualitative_usage_registry_review_global_analysis_readiness": False,
@@ -9301,9 +9405,16 @@ def build_text_table_calibration_status_summary(
             targeted_evidence_span_rating_201_completed,
             targeted_evidence_span_rating_201_decision,
         ) = targeted_evidence_span_rating_201_status()
+        (
+            targeted_evidence_span_rating_summary_173_completed,
+            targeted_evidence_span_rating_summary_173_decision,
+        ) = targeted_evidence_span_rating_summary_173_status()
         return {
             **metadata,
             "calibration_phase": (
+                targeted_evidence_span_rating_summary_173_decision.get("decision")
+                if targeted_evidence_span_rating_summary_173_completed
+                else
                 targeted_evidence_span_rating_201_decision.get("decision")
                 if targeted_evidence_span_rating_201_completed
                 else
@@ -10780,6 +10891,36 @@ def build_text_table_calibration_status_summary(
             "targeted_evidence_span_rating_repair_needed": (
                 bool(targeted_evidence_span_rating_201_decision.get("repair_needed", False))
                 if targeted_evidence_span_rating_201_completed else False
+            ),
+            "targeted_evidence_span_rating_summary_completed": targeted_evidence_span_rating_summary_173_completed,
+            "targeted_evidence_span_rating_summary_decision": (
+                targeted_evidence_span_rating_summary_173_decision.get("decision")
+                if targeted_evidence_span_rating_summary_173_completed else None
+            ),
+            "targeted_evidence_span_rating_summary_path": (
+                relative(TARGETED_EVIDENCE_SPAN_RATING_SUMMARY_173_DIR)
+                if targeted_evidence_span_rating_summary_173_completed else None
+            ),
+            "targeted_evidence_span_rating_summary_valid_count": (
+                int(targeted_evidence_span_rating_summary_173_decision.get("valid_rating_count", 0))
+                if targeted_evidence_span_rating_summary_173_completed else 0
+            ),
+            "targeted_evidence_span_rating_summary_excluded_count": (
+                int(targeted_evidence_span_rating_summary_173_decision.get("excluded_quarantine_count", 0))
+                if targeted_evidence_span_rating_summary_173_completed else 0
+            ),
+            "targeted_evidence_span_rating_summary_mechanism_summary": (
+                targeted_evidence_span_rating_summary_173_decision.get("mechanism_summary", {})
+                if targeted_evidence_span_rating_summary_173_completed else {}
+            ),
+            "targeted_evidence_span_rating_summary_direction_summary": (
+                targeted_evidence_span_rating_summary_173_decision.get("direction_of_pressure_summary", {})
+                if targeted_evidence_span_rating_summary_173_completed else {}
+            ),
+            "targeted_quantitative_triage_recommended_next": (
+                targeted_evidence_span_rating_summary_173_completed
+                and targeted_evidence_span_rating_summary_173_decision.get("decision")
+                == "targeted_evidence_span_rating_summary_173_completed_quantitative_triage_recommended"
             ),
             "gabriel_claim_rating_global_analysis_readiness": False,
             "limited_qualitative_usage_registry_review_global_analysis_readiness": False,
