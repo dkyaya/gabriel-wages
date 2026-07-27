@@ -1,0 +1,75 @@
+{
+  "candidate_id_set_hash_matches_lock": true,
+  "deterministic_preflight_passed": true,
+  "documents_downloaded": 0,
+  "get_requests_allowed": false,
+  "global_analysis_readiness": false,
+  "head_requests_only": true,
+  "live_network_preflight_passed": true,
+  "live_probe_results": [
+    {
+      "attempts": 1,
+      "candidate_id": "TS4L-4a9cba00da47bbd008a6",
+      "content_type_hint": "application/pdf",
+      "http_response_observed": true,
+      "outcome": "verified_source_lead",
+      "raw_body_saved": false,
+      "raw_headers_saved": false,
+      "status_code": 200
+    },
+    {
+      "attempts": 1,
+      "candidate_id": "TS4L-c02b04de6ef106a65708",
+      "content_type_hint": "application/pdf",
+      "http_response_observed": true,
+      "outcome": "verified_source_lead",
+      "raw_body_saved": false,
+      "raw_headers_saved": false,
+      "status_code": 200
+    },
+    {
+      "attempts": 1,
+      "candidate_id": "TS4L-2e528e2f29ee07b45ad8",
+      "content_type_hint": "application/pdf",
+      "http_response_observed": true,
+      "outcome": "wrong_unit",
+      "raw_body_saved": false,
+      "raw_headers_saved": false,
+      "status_code": 200
+    },
+    {
+      "attempts": 1,
+      "candidate_id": "TS4L-3bce83ddc6608ba09d91",
+      "content_type_hint": "text/html",
+      "http_response_observed": true,
+      "outcome": "unavailable",
+      "raw_body_saved": false,
+      "raw_headers_saved": false,
+      "status_code": 404
+    },
+    {
+      "attempts": 1,
+      "candidate_id": "TS4L-484473bc94e0578dae56",
+      "content_type_hint": "application/pdf",
+      "http_response_observed": true,
+      "outcome": "verified_source_lead",
+      "raw_body_saved": false,
+      "raw_headers_saved": false,
+      "status_code": 200
+    }
+  ],
+  "locked_queue_rows": 771,
+  "maximum_concurrency": 12,
+  "maximum_retries_per_candidate": 1,
+  "model_api_calls": 0,
+  "pdf_pages_accessed": 0,
+  "preflight_passed": true,
+  "queue_hash_matches_lock": true,
+  "response_body_reads_allowed": false,
+  "source_review_runs": 0,
+  "tier_c_d_repair_deprioritized_excluded": true,
+  "tier_counts": {
+    "tier_a": 82,
+    "tier_b": 689
+  }
+}

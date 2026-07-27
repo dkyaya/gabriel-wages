@@ -1,0 +1,7 @@
+{
+  "city_cycle_unit_groups": 739,
+  "coverage_boundary": "Verified source leads are not ingested contracts and do not update durable city coverage.",
+  "distinct_city_state_pairs_with_verified_lead": 307,
+  "groups_with_verified_source_lead": 415,
+  "groups_without_verified_source_lead": 324
+}

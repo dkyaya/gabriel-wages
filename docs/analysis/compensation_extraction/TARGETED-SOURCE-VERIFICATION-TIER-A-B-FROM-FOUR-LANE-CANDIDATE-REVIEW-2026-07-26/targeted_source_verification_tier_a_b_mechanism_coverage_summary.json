@@ -1,0 +1,11 @@
+{
+  "by_mechanism": {
+    "fiscal_constraint_signal": 36,
+    "market_or_comparability_pressure": 131,
+    "non_safety_constraint_signal": 117,
+    "strike_or_no_strike_constraint": 145
+  },
+  "coverage_boundary": "Locator and metadata verification only; not documentary evidence.",
+  "mechanism_families": 4,
+  "verified_source_leads": 429
+}

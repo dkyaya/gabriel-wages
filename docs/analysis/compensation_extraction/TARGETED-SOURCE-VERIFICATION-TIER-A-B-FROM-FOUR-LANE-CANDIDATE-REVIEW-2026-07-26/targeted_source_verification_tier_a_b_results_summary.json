@@ -1,0 +1,45 @@
+{
+  "blocked_by_transport_count": 19,
+  "discourse_only_count": 0,
+  "downloads": 0,
+  "duplicate_count": 0,
+  "global_analysis_readiness": false,
+  "pdf_page_accesses": 0,
+  "raw_headers_saved": 0,
+  "response_bodies_saved": 0,
+  "tier_counts": {
+    "tier_a": 82,
+    "tier_b": 689
+  },
+  "unavailable_count": 243,
+  "verification_error_count": 0,
+  "verification_queue_rows": 771,
+  "verification_status_by_tier": {
+    "tier_a": {
+      "blocked_by_transport": 1,
+      "unavailable": 17,
+      "verified_source_lead": 50,
+      "wrong_period": 8,
+      "wrong_unit": 6
+    },
+    "tier_b": {
+      "blocked_by_transport": 18,
+      "unavailable": 226,
+      "verified_source_lead": 379,
+      "wrong_period": 39,
+      "wrong_unit": 27
+    }
+  },
+  "verification_status_counts": {
+    "blocked_by_transport": 19,
+    "unavailable": 243,
+    "verified_source_lead": 429,
+    "wrong_period": 47,
+    "wrong_unit": 33
+  },
+  "verified_source_lead_count": 429,
+  "weak_or_needs_review_output_count": 19,
+  "wrong_period_count": 47,
+  "wrong_source_family_count": 0,
+  "wrong_unit_count": 33
+}

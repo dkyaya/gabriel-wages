@@ -1,0 +1,13 @@
+{
+  "focus": [
+    "immutable Tier A+B lock",
+    "HEAD-only verification",
+    "bounded transport",
+    "controlled outcomes",
+    "no document retention",
+    "downstream status closure",
+    "dashboard closure",
+    "idempotent resume"
+  ],
+  "suite": "scripts/test_targeted_source_verification_tier_a_b.py"
+}

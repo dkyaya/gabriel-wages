@@ -1,0 +1,5 @@
+# Next task: bounded source review/download preparation
+
+Use only outputs from `TARGETED-SOURCE-VERIFICATION-TIER-A-B-FROM-FOUR-LANE-CANDIDATE-REVIEW-2026-07-26` with decision `targeted_source_verification_tier_a_b_completed_source_review_ready`. Verified source leads remain locator-and-metadata outcomes: not downloaded, not extracted, not rated, not ingested, not codified, and not causal evidence. Preserve the city × bargaining-unit × cycle observation and the causal/discourse two-corpus boundary.
+
+Do not fetch or pull repository state, inspect/configure remotes, run hosted search or model/API analysis, calculate wage gaps, run regressions or treatment-effect estimation, or make causal claims. A separately authorized source-review/download stage may inspect and retain only verified source leads, must quarantine unavailable/wrong-unit/wrong-period/wrong-family/discourse/weak rows, and must not extract, rate, ingest, codify, or mark global analysis readiness true. PDF/page access, document download, and content retention remain forbidden until that separate authorization explicitly defines them.

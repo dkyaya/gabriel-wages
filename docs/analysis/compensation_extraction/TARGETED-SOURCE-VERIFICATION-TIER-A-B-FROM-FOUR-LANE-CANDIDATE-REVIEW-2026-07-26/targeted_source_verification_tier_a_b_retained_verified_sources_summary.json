@@ -1,0 +1,19 @@
+{
+  "candidate_only_lineage_preserved": true,
+  "causal_status": "not_causal_evidence",
+  "download_status": "not_downloaded",
+  "durable_merge_count": 0,
+  "extraction_status": "not_extracted",
+  "lane_counts": {
+    "lane_1": 117,
+    "lane_2": 145,
+    "lane_3": 36,
+    "lane_4": 131
+  },
+  "rating_status": "not_rated",
+  "retained_verified_source_leads": 429,
+  "tier_counts": {
+    "tier_a": 50,
+    "tier_b": 379
+  }
+}

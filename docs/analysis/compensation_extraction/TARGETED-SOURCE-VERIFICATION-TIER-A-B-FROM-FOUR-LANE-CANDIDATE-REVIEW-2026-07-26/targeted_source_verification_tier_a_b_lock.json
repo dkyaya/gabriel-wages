@@ -1,0 +1,28 @@
+{
+  "candidate_id_set_sha256": "33623cfafdced32348a79b77e5f66d731abb1b271138e3681a912e4a43f3eff5",
+  "download_status": "not_downloaded",
+  "global_analysis_readiness": false,
+  "immutable_input_hashes": {
+    "targeted_scouting_four_lane_candidate_city_cycle_unit_review_summary.json": "ac19dfb16a84eaae1bcde6062112cc76354e8680400612be27f5f682c3e7c85c",
+    "targeted_scouting_four_lane_candidate_deduplication_report.md": "5507966f9fee0f897d26e9c2c1b3ebb56c7cb337b3240dc5d9b3ac1392662843",
+    "targeted_scouting_four_lane_candidate_mechanism_coverage_review_summary.json": "3a827bdb7e07f2d734e9cce165bba25b43492faf2939c6bdc8e565cf67a13fca",
+    "targeted_scouting_four_lane_candidate_quality_summary.json": "1524f75877afd8f4e7c66ddd8997911d7fe92da2df5b5995188bcd0737b49d33",
+    "targeted_scouting_four_lane_candidate_review_decision.json": "06d0e9add7c5e4591553a35abf13da59b452e92bd91d6c545516f8618e5e956c",
+    "targeted_scouting_four_lane_candidate_review_invariant_checks.json": "ebc3498ed17d7b34a8d0488f34150cb65037defe2b54ada368dd160bf182de22",
+    "targeted_scouting_four_lane_candidate_review_scope_summary.json": "cbee564c4ac87432bb460fecc3b3997fe4fe74aa945977c2716ef69005e9ab09",
+    "targeted_scouting_four_lane_candidate_review_summary.md": "2fcf522dd34ecd1a1042ee8ff63979ae94ee0b17183635d066eef3fba93600d5",
+    "targeted_scouting_four_lane_candidate_review_validation_2026-07-26.md": "a57e0db7f7267e0c5fa9dfa8c93fe1338567d77bbcc06ff9768e389016234596",
+    "targeted_scouting_four_lane_verification_priority_tiers_summary.json": "39fe7def06e9a60b5e0cc65ced578130966e16e043ff968698e1afb9e2b5fa2a",
+    "targeted_scouting_four_lane_verification_ready_queue.csv": "197963f7dbf7c50856723bfc597fe72caf3c1f236aabc9d40891771ef7b92916",
+    "targeted_scouting_four_lane_verification_ready_queue_summary.json": "21981d296f35388c240c1eb702f327870c24b610de42c54bb81994aed14c8892"
+  },
+  "input_commit": "bc6ef99ab321c05fd0976bd4c08c81da6b8f8321",
+  "queue_rows": 771,
+  "queue_sha256": "55f23cd1b44fe5fc791e4b6c08405a4310d35de09b4b43d85ca62f1c612c3225",
+  "source_review_status": "not_started",
+  "task_id": "TARGETED-SOURCE-VERIFICATION-TIER-A-B-FROM-FOUR-LANE-CANDIDATE-REVIEW-2026-07-26",
+  "tier_counts": {
+    "tier_a": 82,
+    "tier_b": 689
+  }
+}

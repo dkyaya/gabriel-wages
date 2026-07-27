@@ -1104,6 +1104,31 @@ TARGETED_SCOUTING_FOUR_LANE_CANDIDATE_REVIEW_INVARIANTS_PATH = (
     TARGETED_SCOUTING_FOUR_LANE_CANDIDATE_REVIEW_DIR
     / "targeted_scouting_four_lane_candidate_review_invariant_checks.json"
 )
+TARGETED_SOURCE_VERIFICATION_TIER_A_B_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "TARGETED-SOURCE-VERIFICATION-TIER-A-B-FROM-FOUR-LANE-CANDIDATE-REVIEW-2026-07-26"
+)
+TARGETED_SOURCE_VERIFICATION_TIER_A_B_DECISION_PATH = (
+    TARGETED_SOURCE_VERIFICATION_TIER_A_B_DIR
+    / "targeted_source_verification_tier_a_b_decision.json"
+)
+TARGETED_SOURCE_VERIFICATION_TIER_A_B_LOCKED_SUMMARY_PATH = (
+    TARGETED_SOURCE_VERIFICATION_TIER_A_B_DIR
+    / "targeted_source_verification_tier_a_b_locked_queue_summary.json"
+)
+TARGETED_SOURCE_VERIFICATION_TIER_A_B_RESULTS_SUMMARY_PATH = (
+    TARGETED_SOURCE_VERIFICATION_TIER_A_B_DIR
+    / "targeted_source_verification_tier_a_b_results_summary.json"
+)
+TARGETED_SOURCE_VERIFICATION_TIER_A_B_RETAINED_SUMMARY_PATH = (
+    TARGETED_SOURCE_VERIFICATION_TIER_A_B_DIR
+    / "targeted_source_verification_tier_a_b_retained_verified_sources_summary.json"
+)
+TARGETED_SOURCE_VERIFICATION_TIER_A_B_INVARIANTS_PATH = (
+    TARGETED_SOURCE_VERIFICATION_TIER_A_B_DIR
+    / "targeted_source_verification_tier_a_b_invariant_checks.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -3083,6 +3108,99 @@ def targeted_scouting_four_lane_candidate_review_status() -> tuple[bool, dict[st
     return True, decision
 
 
+def targeted_source_verification_tier_a_b_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize only the complete, HEAD-only Tier A+B verification package."""
+    required = (
+        TARGETED_SOURCE_VERIFICATION_TIER_A_B_DECISION_PATH,
+        TARGETED_SOURCE_VERIFICATION_TIER_A_B_LOCKED_SUMMARY_PATH,
+        TARGETED_SOURCE_VERIFICATION_TIER_A_B_RESULTS_SUMMARY_PATH,
+        TARGETED_SOURCE_VERIFICATION_TIER_A_B_RETAINED_SUMMARY_PATH,
+        TARGETED_SOURCE_VERIFICATION_TIER_A_B_INVARIANTS_PATH,
+        TARGETED_SOURCE_VERIFICATION_TIER_A_B_DIR
+        / "targeted_source_verification_tier_a_b_results.csv",
+        TARGETED_SOURCE_VERIFICATION_TIER_A_B_DIR
+        / "targeted_source_verification_tier_a_b_retained_verified_sources.csv",
+        TARGETED_SOURCE_VERIFICATION_TIER_A_B_DIR
+        / "next_targeted_source_review_download_prompt.md",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    decision = read_json(TARGETED_SOURCE_VERIFICATION_TIER_A_B_DECISION_PATH)
+    locked = read_json(TARGETED_SOURCE_VERIFICATION_TIER_A_B_LOCKED_SUMMARY_PATH)
+    results_summary = read_json(TARGETED_SOURCE_VERIFICATION_TIER_A_B_RESULTS_SUMMARY_PATH)
+    retained_summary = read_json(TARGETED_SOURCE_VERIFICATION_TIER_A_B_RETAINED_SUMMARY_PATH)
+    invariants = read_json(TARGETED_SOURCE_VERIFICATION_TIER_A_B_INVARIANTS_PATH)
+    results = read_csv(
+        TARGETED_SOURCE_VERIFICATION_TIER_A_B_DIR
+        / "targeted_source_verification_tier_a_b_results.csv"
+    )
+    retained = read_csv(
+        TARGETED_SOURCE_VERIFICATION_TIER_A_B_DIR
+        / "targeted_source_verification_tier_a_b_retained_verified_sources.csv"
+    )
+    expected_tiers = {"tier_a": 82, "tier_b": 689}
+    controlled_statuses = {
+        "verified_source_lead",
+        "unavailable",
+        "duplicate",
+        "wrong_unit",
+        "wrong_period",
+        "wrong_source_family",
+        "discourse_only",
+        "weak_or_needs_review",
+        "blocked_by_transport",
+        "verification_error",
+    }
+    if not (
+        decision.get("task_id")
+        == "TARGETED-SOURCE-VERIFICATION-TIER-A-B-FROM-FOUR-LANE-CANDIDATE-REVIEW-2026-07-26"
+        and decision.get("decision")
+        == "targeted_source_verification_tier_a_b_completed_source_review_ready"
+        and decision.get("completion_status") == "completed_head_only_source_verification"
+        and decision.get("verification_queue_count") == 771
+        and decision.get("tier_counts") == expected_tiers
+        and decision.get("verified_source_lead_count") == 429
+        and decision.get("source_review_download_ready_next") is True
+        and decision.get("tier_c_verification_recommended_next") is False
+        and decision.get("http_method") == "HEAD"
+        and decision.get("get_requests") == 0
+        and decision.get("documents_downloaded") == 0
+        and decision.get("pdf_pages_accessed") == 0
+        and decision.get("source_review_runs") == 0
+        and decision.get("rows_extracted") == 0
+        and decision.get("rows_rated") == 0
+        and decision.get("durable_ledger_merges") == 0
+        and decision.get("global_analysis_readiness") is False
+        and locked.get("locked_queue_rows") == 771
+        and locked.get("tier_counts") == expected_tiers
+        and locked.get("tier_c_rows") == 0
+        and locked.get("tier_d_rows") == 0
+        and locked.get("repair_or_deprioritized_rows") == 0
+        and results_summary.get("verification_queue_rows") == 771
+        and results_summary.get("verified_source_lead_count") == 429
+        and retained_summary.get("retained_verified_source_leads") == 429
+        and retained_summary.get("download_status") == "not_downloaded"
+        and retained_summary.get("extraction_status") == "not_extracted"
+        and retained_summary.get("rating_status") == "not_rated"
+        and retained_summary.get("causal_status") == "not_causal_evidence"
+        and len(results) == 771
+        and len(retained) == 429
+        and all(row.get("priority_tier") in {"tier_a", "tier_b"} for row in results)
+        and all(row.get("verification_status") in controlled_statuses for row in results)
+        and all(row.get("verification_status") == "verified_source_lead" for row in retained)
+        and all(row.get("download_status") == "not_downloaded" for row in retained)
+        and all(row.get("extraction_status") == "not_extracted" for row in retained)
+        and all(row.get("rating_status") == "not_rated" for row in retained)
+        and all(row.get("causal_status") == "not_causal_evidence" for row in retained)
+        and invariants.get("all_invariants_passed") is True
+        and invariants.get("head_only_no_get_fallback") is True
+        and invariants.get("tier_c_d_repair_deprioritized_excluded") is True
+        and invariants.get("global_analysis_readiness_false") is True
+    ):
+        raise ValueError("Tier A+B targeted source verification package fails dashboard gates")
+    return True, decision
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -3829,6 +3947,10 @@ def build_analysis_readiness(
         targeted_scouting_four_lane_candidate_review_completed,
         targeted_scouting_four_lane_candidate_review_decision,
     ) = targeted_scouting_four_lane_candidate_review_status()
+    (
+        targeted_source_verification_tier_a_b_completed,
+        targeted_source_verification_tier_a_b_decision,
+    ) = targeted_source_verification_tier_a_b_status()
     if scale_1000_targeted_qa_completed and (
         scale_1000_targeted_qa_decision.get("qa_pass") is not True
         or scale_1000_targeted_qa_decision.get(
@@ -3875,6 +3997,9 @@ def build_analysis_readiness(
     return {
         "metadata": metadata,
         "overall_status": (
+            "targeted_source_verification_tier_a_b_completed_source_review_ready_global_analysis_closed"
+            if targeted_source_verification_tier_a_b_completed
+            else
             "targeted_scouting_four_lane_candidate_review_completed_verification_ready_global_analysis_closed"
             if targeted_scouting_four_lane_candidate_review_completed
             else
@@ -4573,7 +4698,35 @@ def build_analysis_readiness(
                     bool(targeted_scouting_four_lane_candidate_review_decision.get("source_verification_ready_next", False))
                     if targeted_scouting_four_lane_candidate_review_completed else False
                 ),
-                "targeted_source_verification_completed": False,
+                "targeted_source_verification_completed": targeted_source_verification_tier_a_b_completed,
+                "targeted_source_verification_decision": (
+                    targeted_source_verification_tier_a_b_decision.get("decision")
+                    if targeted_source_verification_tier_a_b_completed else None
+                ),
+                "targeted_source_verification_queue_count": (
+                    int(targeted_source_verification_tier_a_b_decision.get("verification_queue_count", 0))
+                    if targeted_source_verification_tier_a_b_completed else 0
+                ),
+                "targeted_source_verification_tier_counts": (
+                    targeted_source_verification_tier_a_b_decision.get("tier_counts", {})
+                    if targeted_source_verification_tier_a_b_completed else {}
+                ),
+                "targeted_source_verified_source_lead_count": (
+                    int(targeted_source_verification_tier_a_b_decision.get("verified_source_lead_count", 0))
+                    if targeted_source_verification_tier_a_b_completed else 0
+                ),
+                "targeted_source_verification_status_counts": (
+                    targeted_source_verification_tier_a_b_decision.get("verification_status_counts", {})
+                    if targeted_source_verification_tier_a_b_completed else {}
+                ),
+                "targeted_source_review_download_ready_next": (
+                    bool(targeted_source_verification_tier_a_b_decision.get("source_review_download_ready_next", False))
+                    if targeted_source_verification_tier_a_b_completed else False
+                ),
+                "targeted_source_verification_tier_c_recommended_next": (
+                    bool(targeted_source_verification_tier_a_b_decision.get("tier_c_verification_recommended_next", False))
+                    if targeted_source_verification_tier_a_b_completed else False
+                ),
                 "gabriel_claim_rating_global_analysis_readiness": False,
                 "limited_qualitative_usage_registry_review_global_analysis_readiness": False,
                 "limited_qualitative_usage_layer_acceptance_global_analysis_readiness": False,
@@ -8497,9 +8650,16 @@ def build_text_table_calibration_status_summary(
             targeted_scouting_four_lane_candidate_review_completed,
             targeted_scouting_four_lane_candidate_review_decision,
         ) = targeted_scouting_four_lane_candidate_review_status()
+        (
+            targeted_source_verification_tier_a_b_completed,
+            targeted_source_verification_tier_a_b_decision,
+        ) = targeted_source_verification_tier_a_b_status()
         return {
             **metadata,
             "calibration_phase": (
+                "targeted_source_verification_tier_a_b_completed_source_review_ready"
+                if targeted_source_verification_tier_a_b_completed
+                else
                 "targeted_scouting_four_lane_candidate_review_completed_verification_ready"
                 if targeted_scouting_four_lane_candidate_review_completed
                 else
@@ -9749,7 +9909,39 @@ def build_text_table_calibration_status_summary(
                 bool(targeted_scouting_four_lane_candidate_review_decision.get("source_verification_ready_next", False))
                 if targeted_scouting_four_lane_candidate_review_completed else False
             ),
-            "targeted_source_verification_completed": False,
+            "targeted_source_verification_completed": targeted_source_verification_tier_a_b_completed,
+            "targeted_source_verification_decision": (
+                targeted_source_verification_tier_a_b_decision.get("decision")
+                if targeted_source_verification_tier_a_b_completed else None
+            ),
+            "targeted_source_verification_path": (
+                relative(TARGETED_SOURCE_VERIFICATION_TIER_A_B_DIR)
+                if targeted_source_verification_tier_a_b_completed else None
+            ),
+            "targeted_source_verification_queue_count": (
+                int(targeted_source_verification_tier_a_b_decision.get("verification_queue_count", 0))
+                if targeted_source_verification_tier_a_b_completed else 0
+            ),
+            "targeted_source_verification_tier_counts": (
+                targeted_source_verification_tier_a_b_decision.get("tier_counts", {})
+                if targeted_source_verification_tier_a_b_completed else {}
+            ),
+            "targeted_source_verified_source_lead_count": (
+                int(targeted_source_verification_tier_a_b_decision.get("verified_source_lead_count", 0))
+                if targeted_source_verification_tier_a_b_completed else 0
+            ),
+            "targeted_source_verification_status_counts": (
+                targeted_source_verification_tier_a_b_decision.get("verification_status_counts", {})
+                if targeted_source_verification_tier_a_b_completed else {}
+            ),
+            "targeted_source_review_download_ready_next": (
+                bool(targeted_source_verification_tier_a_b_decision.get("source_review_download_ready_next", False))
+                if targeted_source_verification_tier_a_b_completed else False
+            ),
+            "targeted_source_verification_tier_c_recommended_next": (
+                bool(targeted_source_verification_tier_a_b_decision.get("tier_c_verification_recommended_next", False))
+                if targeted_source_verification_tier_a_b_completed else False
+            ),
             "gabriel_claim_rating_global_analysis_readiness": False,
             "limited_qualitative_usage_registry_review_global_analysis_readiness": False,
             "limited_qualitative_usage_layer_acceptance_global_analysis_readiness": False,

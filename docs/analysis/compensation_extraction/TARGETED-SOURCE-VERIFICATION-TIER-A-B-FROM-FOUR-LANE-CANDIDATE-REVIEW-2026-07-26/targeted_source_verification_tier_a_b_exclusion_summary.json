@@ -1,0 +1,10 @@
+{
+  "excluded_or_deferred_rows": 342,
+  "exclusions_preserved_as_successful_outcomes": true,
+  "status_counts": {
+    "blocked_by_transport": 19,
+    "unavailable": 243,
+    "wrong_period": 47,
+    "wrong_unit": 33
+  }
+}

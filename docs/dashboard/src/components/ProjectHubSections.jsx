@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "targeted_source_verification_tier_a_b_completed_source_review_ready"
+              ? "Tier A+B targeted source verification complete; bounded source review/download is ready"
+              : textTableCalibrationStatus.calibration_phase ===
             "targeted_scouting_four_lane_candidate_review_completed_verification_ready"
               ? "Four-lane candidate review complete; targeted source verification is ready"
               : textTableCalibrationStatus.calibration_phase ===
@@ -903,6 +906,22 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "targeted_source_verification_tier_a_b_completed_source_review_ready" ? (
+            <>
+              HEAD-only locator and metadata verification reconciled{ " "}
+              {formatNumber(
+                textTableCalibrationStatus.targeted_source_verification_queue_count,
+              )}
+              {" "}locked Tier A+B candidates and retained{" "}
+              {formatNumber(
+                textTableCalibrationStatus.targeted_source_verified_source_lead_count,
+              )}
+              {" "}verified source leads. No document body or PDF page was
+              opened or downloaded; retained leads remain unextracted, unrated,
+              and non-causal. A separately authorized bounded source-review and
+              download stage is next; global analysis readiness remains closed.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "targeted_scouting_four_lane_candidate_review_completed_verification_ready" ? (
             <>
               Deterministic metadata review reconciled{" "}

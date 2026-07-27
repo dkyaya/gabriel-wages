@@ -1,0 +1,15 @@
+{
+  "all_invariants_passed": true,
+  "controlled_statuses_only": true,
+  "exclusions_preserved": true,
+  "global_analysis_readiness_false": true,
+  "head_only_no_get_fallback": true,
+  "locked_queue_exactly_771": true,
+  "no_response_body_or_raw_header_persistence": true,
+  "no_source_review_or_durable_merge": true,
+  "partial_outputs_cannot_masquerade_as_complete": true,
+  "results_reconcile_to_locked_queue": true,
+  "tier_c_d_repair_deprioritized_excluded": true,
+  "tier_counts_exact": true,
+  "verified_rows_not_downloaded_extracted_rated_or_causal": true
+}

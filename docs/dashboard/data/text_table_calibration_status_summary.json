@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-27T01:16:07Z",
+  "generated_at": "2026-07-27T01:35:39Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -80,7 +80,7 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "calibration_phase": "targeted_scouting_four_lane_candidate_review_completed_verification_ready",
+  "calibration_phase": "targeted_source_verification_tier_a_b_completed_source_review_ready",
   "latest_calibration_id": "TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24",
   "latest_calibration_review_id": "TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24",
   "latest_adjudication_prep_id": "TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24",
@@ -395,7 +395,24 @@
     "tier_d": 751
   },
   "targeted_source_verification_ready_next": true,
-  "targeted_source_verification_completed": false,
+  "targeted_source_verification_completed": true,
+  "targeted_source_verification_decision": "targeted_source_verification_tier_a_b_completed_source_review_ready",
+  "targeted_source_verification_path": "docs/analysis/compensation_extraction/TARGETED-SOURCE-VERIFICATION-TIER-A-B-FROM-FOUR-LANE-CANDIDATE-REVIEW-2026-07-26",
+  "targeted_source_verification_queue_count": 771,
+  "targeted_source_verification_tier_counts": {
+    "tier_a": 82,
+    "tier_b": 689
+  },
+  "targeted_source_verified_source_lead_count": 429,
+  "targeted_source_verification_status_counts": {
+    "blocked_by_transport": 19,
+    "unavailable": 243,
+    "verified_source_lead": 429,
+    "wrong_period": 47,
+    "wrong_unit": 33
+  },
+  "targeted_source_review_download_ready_next": true,
+  "targeted_source_verification_tier_c_recommended_next": false,
   "gabriel_claim_rating_global_analysis_readiness": false,
   "limited_qualitative_usage_registry_review_global_analysis_readiness": false,
   "limited_qualitative_usage_layer_acceptance_global_analysis_readiness": false,

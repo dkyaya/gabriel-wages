@@ -194,10 +194,10 @@ class CandidateReviewTests(unittest.TestCase):
     def test_dashboard_generated_status_remains_closed(self) -> None:
         readiness = mod.read_json(ROOT / "docs/dashboard/data/analysis_readiness.json")
         calibration = mod.read_json(ROOT / "docs/dashboard/data/text_table_calibration_status_summary.json")
-        self.assertEqual(readiness["overall_status"], "targeted_scouting_four_lane_candidate_review_completed_verification_ready_global_analysis_closed")
-        self.assertEqual(calibration["calibration_phase"], "targeted_scouting_four_lane_candidate_review_completed_verification_ready")
+        self.assertEqual(readiness["overall_status"], "targeted_source_verification_tier_a_b_completed_source_review_ready_global_analysis_closed")
+        self.assertEqual(calibration["calibration_phase"], "targeted_source_verification_tier_a_b_completed_source_review_ready")
         self.assertTrue(calibration["targeted_source_verification_ready_next"])
-        self.assertFalse(calibration["targeted_source_verification_completed"])
+        self.assertTrue(calibration["targeted_source_verification_completed"])
         self.assertFalse(calibration["analysis_facing_promotion_allowed"])
         self.assertNotIn('"global_analysis_readiness": true', json.dumps(readiness, sort_keys=True).casefold())
 

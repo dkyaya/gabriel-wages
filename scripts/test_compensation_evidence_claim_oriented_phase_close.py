@@ -330,6 +330,7 @@ class MaterializedClaimPhaseTests(unittest.TestCase):
             "targeted_scouting_four_lane_staggered_live_preflight_failed_repair_required",
             "targeted_scouting_four_lane_fixed_stagger_live_completed_candidate_review_ready",
             "targeted_scouting_four_lane_candidate_review_completed_verification_ready",
+            "targeted_source_verification_tier_a_b_completed_source_review_ready",
         })
         self.assertTrue(calibration["gabriel_claim_rating_ready"])
         self.assertFalse(calibration["analysis_facing_promotion_allowed"])
@@ -348,6 +349,7 @@ class MaterializedClaimPhaseTests(unittest.TestCase):
             "targeted_scouting_four_lane_staggered_live_preflight_failed_repair_required_global_analysis_closed",
             "targeted_scouting_four_lane_fixed_stagger_live_completed_candidate_review_ready_global_analysis_closed",
             "targeted_scouting_four_lane_candidate_review_completed_verification_ready_global_analysis_closed",
+            "targeted_source_verification_tier_a_b_completed_source_review_ready_global_analysis_closed",
         })
         self.assertNotIn('"global_analysis_readiness": true', json.dumps(readiness, sort_keys=True).casefold())
 

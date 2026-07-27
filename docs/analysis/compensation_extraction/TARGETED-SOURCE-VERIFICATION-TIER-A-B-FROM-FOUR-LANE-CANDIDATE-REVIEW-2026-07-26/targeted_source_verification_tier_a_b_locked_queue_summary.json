@@ -1,0 +1,21 @@
+{
+  "candidate_only_lineage_preserved": true,
+  "lane_counts": {
+    "lane_1": 218,
+    "lane_2": 256,
+    "lane_3": 50,
+    "lane_4": 247
+  },
+  "locked_queue_rows": 771,
+  "quality_counts": {
+    "verification_ready_high": 142,
+    "verification_ready_medium": 629
+  },
+  "repair_or_deprioritized_rows": 0,
+  "tier_c_rows": 0,
+  "tier_counts": {
+    "tier_a": 82,
+    "tier_b": 689
+  },
+  "tier_d_rows": 0
+}
