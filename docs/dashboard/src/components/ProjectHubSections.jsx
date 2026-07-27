@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "mechanism_linkage_claim_review_268_completed_claim_memo_allowed"
+              ? "Exact-source mechanism-linkage claim review complete; bounded claim memo is allowed"
+              : textTableCalibrationStatus.calibration_phase ===
             "quantitative_to_qualitative_mechanism_linkage_513_completed_claim_review_ready"
               ? "Strict quantitative-to-mechanism linkage complete; bounded claim review is ready"
               : textTableCalibrationStatus.calibration_phase ===
@@ -932,6 +935,24 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "mechanism_linkage_claim_review_268_completed_claim_memo_allowed" ? (
+            <>
+              Deterministic review preserved all {formatNumber(
+                textTableCalibrationStatus.mechanism_linkage_claim_review_pair_count,
+              )} exact same-source pairs, covering {formatNumber(
+                textTableCalibrationStatus.mechanism_linkage_claim_review_linked_quantitative_count,
+              )} quantitative rows and {formatNumber(
+                textTableCalibrationStatus.mechanism_linkage_claim_review_linked_qualitative_count,
+              )} qualitative mechanism records. {formatNumber(
+                textTableCalibrationStatus.mechanism_linkage_claim_review_claim_type_counts?.direct_text_colocation_claim,
+              )} are direct co-location claims, {formatNumber(
+                textTableCalibrationStatus.mechanism_linkage_claim_review_claim_type_counts?.documentary_mechanism_value_scaffold,
+              )} are documentary scaffolds, and {formatNumber(
+                textTableCalibrationStatus.mechanism_linkage_claim_review_claim_type_counts?.insufficient_for_claim,
+              )} remain insufficient. No value transformation, outcome comparison, effect estimate,
+              or causal inference occurred; global readiness remains closed.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "quantitative_to_qualitative_mechanism_linkage_513_completed_claim_review_ready" ? (
             <>
               Strict lineage linked {formatNumber(

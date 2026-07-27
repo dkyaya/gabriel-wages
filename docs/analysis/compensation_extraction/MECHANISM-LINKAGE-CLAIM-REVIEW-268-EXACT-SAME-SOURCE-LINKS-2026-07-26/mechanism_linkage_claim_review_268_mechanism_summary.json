@@ -1,0 +1,136 @@
+{
+  "mechanism_count": 11,
+  "rows": [
+    {
+      "direct_text_colocation_claim": 0,
+      "documentary_mechanism_value_scaffold": 31,
+      "insufficient_for_claim": 88,
+      "linked_pair_count": 126,
+      "linked_qualitative_record_count": 40,
+      "linked_quantitative_row_count": 110,
+      "not_allowed": 0,
+      "provisional_mechanism_linkage_claim": 7,
+      "qualitative_mechanism_family": "implementation_or_retroactivity_advantage"
+    },
+    {
+      "direct_text_colocation_claim": 14,
+      "documentary_mechanism_value_scaffold": 47,
+      "insufficient_for_claim": 22,
+      "linked_pair_count": 97,
+      "linked_qualitative_record_count": 31,
+      "linked_quantitative_row_count": 86,
+      "not_allowed": 0,
+      "provisional_mechanism_linkage_claim": 14,
+      "qualitative_mechanism_family": "automatic_raise_mechanism"
+    },
+    {
+      "direct_text_colocation_claim": 1,
+      "documentary_mechanism_value_scaffold": 0,
+      "insufficient_for_claim": 9,
+      "linked_pair_count": 15,
+      "linked_qualitative_record_count": 6,
+      "linked_quantitative_row_count": 15,
+      "not_allowed": 0,
+      "provisional_mechanism_linkage_claim": 5,
+      "qualitative_mechanism_family": "non_base_compensation_signal"
+    },
+    {
+      "direct_text_colocation_claim": 0,
+      "documentary_mechanism_value_scaffold": 0,
+      "insufficient_for_claim": 7,
+      "linked_pair_count": 13,
+      "linked_qualitative_record_count": 6,
+      "linked_quantitative_row_count": 13,
+      "not_allowed": 0,
+      "provisional_mechanism_linkage_claim": 6,
+      "qualitative_mechanism_family": "rank_or_specialization_premium"
+    },
+    {
+      "direct_text_colocation_claim": 0,
+      "documentary_mechanism_value_scaffold": 2,
+      "insufficient_for_claim": 7,
+      "linked_pair_count": 9,
+      "linked_qualitative_record_count": 4,
+      "linked_quantitative_row_count": 9,
+      "not_allowed": 0,
+      "provisional_mechanism_linkage_claim": 0,
+      "qualitative_mechanism_family": "market_or_comparability_pressure"
+    },
+    {
+      "direct_text_colocation_claim": 0,
+      "documentary_mechanism_value_scaffold": 0,
+      "insufficient_for_claim": 5,
+      "linked_pair_count": 5,
+      "linked_qualitative_record_count": 2,
+      "linked_quantitative_row_count": 5,
+      "not_allowed": 0,
+      "provisional_mechanism_linkage_claim": 0,
+      "qualitative_mechanism_family": "bargaining_power_signal"
+    },
+    {
+      "direct_text_colocation_claim": 0,
+      "documentary_mechanism_value_scaffold": 0,
+      "insufficient_for_claim": 3,
+      "linked_pair_count": 3,
+      "linked_qualitative_record_count": 1,
+      "linked_quantitative_row_count": 3,
+      "not_allowed": 0,
+      "provisional_mechanism_linkage_claim": 0,
+      "qualitative_mechanism_family": "fiscal_constraint_signal"
+    },
+    {
+      "direct_text_colocation_claim": 0,
+      "documentary_mechanism_value_scaffold": 0,
+      "insufficient_for_claim": 0,
+      "linked_pair_count": 0,
+      "linked_qualitative_record_count": 0,
+      "linked_quantitative_row_count": 0,
+      "not_allowed": 0,
+      "provisional_mechanism_linkage_claim": 0,
+      "qualitative_mechanism_family": "strike_or_no_strike_constraint"
+    },
+    {
+      "direct_text_colocation_claim": 0,
+      "documentary_mechanism_value_scaffold": 0,
+      "insufficient_for_claim": 0,
+      "linked_pair_count": 0,
+      "linked_qualitative_record_count": 0,
+      "linked_quantitative_row_count": 0,
+      "not_allowed": 0,
+      "provisional_mechanism_linkage_claim": 0,
+      "qualitative_mechanism_family": "non_safety_constraint_signal"
+    },
+    {
+      "direct_text_colocation_claim": 0,
+      "documentary_mechanism_value_scaffold": 0,
+      "insufficient_for_claim": 0,
+      "linked_pair_count": 0,
+      "linked_qualitative_record_count": 0,
+      "linked_quantitative_row_count": 0,
+      "not_allowed": 0,
+      "provisional_mechanism_linkage_claim": 0,
+      "qualitative_mechanism_family": "parity_or_internal_equity_signal"
+    },
+    {
+      "direct_text_colocation_claim": 0,
+      "documentary_mechanism_value_scaffold": 0,
+      "insufficient_for_claim": 0,
+      "linked_pair_count": 0,
+      "linked_qualitative_record_count": 0,
+      "linked_quantitative_row_count": 0,
+      "not_allowed": 0,
+      "provisional_mechanism_linkage_claim": 0,
+      "qualitative_mechanism_family": "gap_narrowing_signal"
+    }
+  ],
+  "strongest_by_pair_count": [
+    "implementation_or_retroactivity_advantage",
+    "automatic_raise_mechanism"
+  ],
+  "unlinked_mechanisms": [
+    "strike_or_no_strike_constraint",
+    "non_safety_constraint_signal",
+    "parity_or_internal_equity_signal",
+    "gap_narrowing_signal"
+  ]
+}

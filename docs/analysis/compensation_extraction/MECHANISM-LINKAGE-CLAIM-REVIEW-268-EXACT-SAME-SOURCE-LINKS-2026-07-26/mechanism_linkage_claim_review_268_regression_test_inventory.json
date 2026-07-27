@@ -1,0 +1,17 @@
+{
+  "required_cases": [
+    "268 exact-source scope",
+    "208 quantitative rows",
+    "90 qualitative records",
+    "exclusion of no-link and invalid rows",
+    "raw-value identity",
+    "claim-boundary identity",
+    "deterministic claim taxonomy",
+    "closed analysis flags",
+    "idempotent resume",
+    "partial-package failure",
+    "dashboard closure",
+    "future prompt boundaries"
+  ],
+  "suite": "scripts/test_mechanism_linkage_claim_review_268.py"
+}

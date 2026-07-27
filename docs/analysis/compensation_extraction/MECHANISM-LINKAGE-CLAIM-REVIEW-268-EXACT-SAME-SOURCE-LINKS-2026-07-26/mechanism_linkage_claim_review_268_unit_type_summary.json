@@ -1,0 +1,37 @@
+{
+  "rows": [
+    {
+      "direct_text_colocation_claim": 6,
+      "documentary_mechanism_value_scaffold": 50,
+      "insufficient_for_claim": 59,
+      "linked_pair_count": 129,
+      "linked_qualitative_record_count": 38,
+      "linked_quantitative_row_count": 95,
+      "not_allowed": 0,
+      "provisional_mechanism_linkage_claim": 14,
+      "unit_type": "police"
+    },
+    {
+      "direct_text_colocation_claim": 0,
+      "documentary_mechanism_value_scaffold": 22,
+      "insufficient_for_claim": 54,
+      "linked_pair_count": 85,
+      "linked_qualitative_record_count": 24,
+      "linked_quantitative_row_count": 65,
+      "not_allowed": 0,
+      "provisional_mechanism_linkage_claim": 9,
+      "unit_type": "fire"
+    },
+    {
+      "direct_text_colocation_claim": 9,
+      "documentary_mechanism_value_scaffold": 8,
+      "insufficient_for_claim": 28,
+      "linked_pair_count": 54,
+      "linked_qualitative_record_count": 28,
+      "linked_quantitative_row_count": 48,
+      "not_allowed": 0,
+      "provisional_mechanism_linkage_claim": 9,
+      "unit_type": "non_safety"
+    }
+  ]
+}

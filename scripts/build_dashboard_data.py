@@ -1258,6 +1258,19 @@ QUANTITATIVE_TO_QUALITATIVE_MECHANISM_LINKAGE_513_INVARIANTS_PATH = (
     QUANTITATIVE_TO_QUALITATIVE_MECHANISM_LINKAGE_513_DIR
     / "quantitative_to_qualitative_mechanism_linkage_513_invariant_checks.json"
 )
+MECHANISM_LINKAGE_CLAIM_REVIEW_268_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "MECHANISM-LINKAGE-CLAIM-REVIEW-268-EXACT-SAME-SOURCE-LINKS-2026-07-26"
+)
+MECHANISM_LINKAGE_CLAIM_REVIEW_268_DECISION_PATH = (
+    MECHANISM_LINKAGE_CLAIM_REVIEW_268_DIR
+    / "mechanism_linkage_claim_review_268_decision.json"
+)
+MECHANISM_LINKAGE_CLAIM_REVIEW_268_INVARIANTS_PATH = (
+    MECHANISM_LINKAGE_CLAIM_REVIEW_268_DIR
+    / "mechanism_linkage_claim_review_268_invariant_checks.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -3917,6 +3930,84 @@ def quantitative_to_qualitative_mechanism_linkage_513_status() -> tuple[bool, di
     return True, decision
 
 
+def mechanism_linkage_claim_review_268_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize only the complete bounded 268-pair exact-source claim review."""
+    directory = MECHANISM_LINKAGE_CLAIM_REVIEW_268_DIR
+    required = (
+        MECHANISM_LINKAGE_CLAIM_REVIEW_268_DECISION_PATH,
+        MECHANISM_LINKAGE_CLAIM_REVIEW_268_INVARIANTS_PATH,
+        directory / "mechanism_linkage_claim_review_268_lock.json",
+        directory / "mechanism_linkage_claim_review_268_scope.csv",
+        directory / "mechanism_linkage_claim_review_268_scope_summary.json",
+        directory / "mechanism_linkage_claim_review_268_mechanism_summary.json",
+        directory / "mechanism_linkage_claim_review_268_unit_type_summary.json",
+        directory / "mechanism_linkage_claim_review_268_source_family_summary.json",
+        directory / "next_claim_memo_drafting_prompt.md",
+        directory / "next_task.md",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    decision = read_json(MECHANISM_LINKAGE_CLAIM_REVIEW_268_DECISION_PATH)
+    invariants = read_json(MECHANISM_LINKAGE_CLAIM_REVIEW_268_INVARIANTS_PATH)
+    lock = read_json(directory / "mechanism_linkage_claim_review_268_lock.json")
+    summary = read_json(directory / "mechanism_linkage_claim_review_268_scope_summary.json")
+    scope_path = directory / "mechanism_linkage_claim_review_268_scope.csv"
+    scope = read_csv(scope_path)
+    expected_claim_types = {
+        "direct_text_colocation_claim": 15,
+        "documentary_mechanism_value_scaffold": 80,
+        "provisional_mechanism_linkage_claim": 32,
+        "insufficient_for_claim": 141,
+        "not_allowed": 0,
+    }
+    zero_fields = (
+        "raw_quantitative_values_changed", "value_normalizations", "value_imputations",
+        "value_annualizations", "wage_level_outcome_comparisons", "wage_gap_calculations",
+        "regressions", "treatment_effect_estimates", "population_prevalence_claims",
+        "national_claims", "final_causal_claims", "gabriel_api_model_calls", "url_opens",
+        "downloads", "pdf_page_accesses", "retained_file_accesses", "full_extracted_text_accesses",
+        "ocr_runs", "pdf_render_runs", "ingestion_runs", "codification_runs",
+        "raw_prompts_saved", "raw_responses_saved",
+    )
+    if not (
+        decision.get("task_id") == "MECHANISM-LINKAGE-CLAIM-REVIEW-268-EXACT-SAME-SOURCE-LINKS-2026-07-26"
+        and decision.get("decision") == "mechanism_linkage_claim_review_268_completed_claim_memo_allowed"
+        and decision.get("completion_status") == "completed_bounded_exact_source_claim_review"
+        and decision.get("claim_review_pair_count") == 268 and len(scope) == 268
+        and decision.get("linked_quantitative_row_count") == 208
+        and len({row.get("quantitative_evidence_id", "") for row in scope}) == 208
+        and decision.get("linked_qualitative_record_count") == 90
+        and len({row.get("qualitative_evidence_id", "") for row in scope}) == 90
+        and decision.get("claim_type_counts") == expected_claim_types
+        and summary.get("claim_type_counts") == expected_claim_types
+        and lock.get("claim_review_pair_count") == 268
+        and lock.get("scope_sha256") == hashlib.sha256(scope_path.read_bytes()).hexdigest()
+        and all(row.get("linkage_status") == "linked" for row in scope)
+        and all(row.get("linkage_confidence") == "exact_same_source" for row in scope)
+        and all(row.get("same_source_match") == "true" for row in scope)
+        and all(row.get("claim_review_status") == "bounded_reviewed" for row in scope)
+        and all(row.get("claim_type") in expected_claim_types for row in scope)
+        and all(row.get(field) == "false" for row in scope for field in (
+            "value_normalized", "value_imputed", "value_annualized", "wage_gap_calculated",
+            "regression_used", "treatment_effect_estimated", "causal_claim_made",
+            "population_or_national_claim_made", "global_analysis_readiness",
+        ))
+        and all(row.get("ingestion_status") == "not_ingested" for row in scope)
+        and all(row.get("codification_status") == "not_codified" for row in scope)
+        and all(row.get("causal_status") == "not_causal_evidence" for row in scope)
+        and all(decision.get(field) == 0 for field in zero_fields)
+        and decision.get("claim_memo_allowed_next") is True
+        and decision.get("global_analysis_readiness") is False
+        and invariants.get("all_invariants_passed") is True
+        and invariants.get("exactly_268_exact_source_pairs_reviewed") is True
+        and invariants.get("no_no_link_weak_unmatched_quarantined_unsupported_or_noncandidate_rows") is True
+        and invariants.get("raw_quantitative_values_preserved_exactly") is True
+        and invariants.get("global_analysis_readiness_false") is True
+    ):
+        raise ValueError("mechanism-linkage 268-pair claim-review package fails dashboard gates")
+    return True, decision
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -4699,6 +4790,10 @@ def build_analysis_readiness(
         quantitative_to_qualitative_mechanism_linkage_513_completed,
         quantitative_to_qualitative_mechanism_linkage_513_decision,
     ) = quantitative_to_qualitative_mechanism_linkage_513_status()
+    (
+        mechanism_linkage_claim_review_268_completed,
+        mechanism_linkage_claim_review_268_decision,
+    ) = mechanism_linkage_claim_review_268_status()
     if scale_1000_targeted_qa_completed and (
         scale_1000_targeted_qa_decision.get("qa_pass") is not True
         or scale_1000_targeted_qa_decision.get(
@@ -4745,6 +4840,9 @@ def build_analysis_readiness(
     return {
         "metadata": metadata,
         "overall_status": (
+            "mechanism_linkage_claim_review_268_completed_claim_memo_allowed_global_analysis_closed"
+            if mechanism_linkage_claim_review_268_completed
+            else
             "quantitative_to_qualitative_mechanism_linkage_513_completed_claim_review_ready_global_analysis_closed"
             if quantitative_to_qualitative_mechanism_linkage_513_completed
             else
@@ -5688,7 +5786,25 @@ def build_analysis_readiness(
                 ),
                 "mechanism_linkage_claim_review_ready_next": (
                     bool(quantitative_to_qualitative_mechanism_linkage_513_decision.get("claim_review_ready_next", False))
-                    if quantitative_to_qualitative_mechanism_linkage_513_completed else False
+                    if quantitative_to_qualitative_mechanism_linkage_513_completed
+                    and not mechanism_linkage_claim_review_268_completed else False
+                ),
+                "mechanism_linkage_claim_review_completed": mechanism_linkage_claim_review_268_completed,
+                "mechanism_linkage_claim_review_decision": (
+                    mechanism_linkage_claim_review_268_decision.get("decision")
+                    if mechanism_linkage_claim_review_268_completed else None
+                ),
+                "mechanism_linkage_claim_review_pair_count": (
+                    int(mechanism_linkage_claim_review_268_decision.get("claim_review_pair_count", 0))
+                    if mechanism_linkage_claim_review_268_completed else 0
+                ),
+                "mechanism_linkage_claim_review_claim_type_counts": (
+                    mechanism_linkage_claim_review_268_decision.get("claim_type_counts", {})
+                    if mechanism_linkage_claim_review_268_completed else {}
+                ),
+                "mechanism_linkage_claim_memo_allowed_next": (
+                    bool(mechanism_linkage_claim_review_268_decision.get("claim_memo_allowed_next", False))
+                    if mechanism_linkage_claim_review_268_completed else False
                 ),
                 "gabriel_claim_rating_global_analysis_readiness": False,
                 "limited_qualitative_usage_registry_review_global_analysis_readiness": False,
@@ -9649,9 +9765,16 @@ def build_text_table_calibration_status_summary(
             quantitative_to_qualitative_mechanism_linkage_513_completed,
             quantitative_to_qualitative_mechanism_linkage_513_decision,
         ) = quantitative_to_qualitative_mechanism_linkage_513_status()
+        (
+            mechanism_linkage_claim_review_268_completed,
+            mechanism_linkage_claim_review_268_decision,
+        ) = mechanism_linkage_claim_review_268_status()
         return {
             **metadata,
             "calibration_phase": (
+                mechanism_linkage_claim_review_268_decision.get("decision")
+                if mechanism_linkage_claim_review_268_completed
+                else
                 quantitative_to_qualitative_mechanism_linkage_513_decision.get("decision")
                 if quantitative_to_qualitative_mechanism_linkage_513_completed
                 else
@@ -11246,7 +11369,37 @@ def build_text_table_calibration_status_summary(
             ),
             "mechanism_linkage_claim_review_ready_next": (
                 bool(quantitative_to_qualitative_mechanism_linkage_513_decision.get("claim_review_ready_next", False))
-                if quantitative_to_qualitative_mechanism_linkage_513_completed else False
+                if quantitative_to_qualitative_mechanism_linkage_513_completed
+                and not mechanism_linkage_claim_review_268_completed else False
+            ),
+            "mechanism_linkage_claim_review_completed": mechanism_linkage_claim_review_268_completed,
+            "mechanism_linkage_claim_review_decision": (
+                mechanism_linkage_claim_review_268_decision.get("decision")
+                if mechanism_linkage_claim_review_268_completed else None
+            ),
+            "mechanism_linkage_claim_review_path": (
+                relative(MECHANISM_LINKAGE_CLAIM_REVIEW_268_DIR)
+                if mechanism_linkage_claim_review_268_completed else None
+            ),
+            "mechanism_linkage_claim_review_pair_count": (
+                int(mechanism_linkage_claim_review_268_decision.get("claim_review_pair_count", 0))
+                if mechanism_linkage_claim_review_268_completed else 0
+            ),
+            "mechanism_linkage_claim_review_linked_quantitative_count": (
+                int(mechanism_linkage_claim_review_268_decision.get("linked_quantitative_row_count", 0))
+                if mechanism_linkage_claim_review_268_completed else 0
+            ),
+            "mechanism_linkage_claim_review_linked_qualitative_count": (
+                int(mechanism_linkage_claim_review_268_decision.get("linked_qualitative_record_count", 0))
+                if mechanism_linkage_claim_review_268_completed else 0
+            ),
+            "mechanism_linkage_claim_review_claim_type_counts": (
+                mechanism_linkage_claim_review_268_decision.get("claim_type_counts", {})
+                if mechanism_linkage_claim_review_268_completed else {}
+            ),
+            "mechanism_linkage_claim_memo_allowed_next": (
+                bool(mechanism_linkage_claim_review_268_decision.get("claim_memo_allowed_next", False))
+                if mechanism_linkage_claim_review_268_completed else False
             ),
             "gabriel_claim_rating_global_analysis_readiness": False,
             "limited_qualitative_usage_registry_review_global_analysis_readiness": False,

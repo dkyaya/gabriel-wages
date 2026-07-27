@@ -267,11 +267,11 @@ class TargetedTextLayerExtraction321Tests(unittest.TestCase):
             if calibration.get("targeted_evidence_span_rating_summary_completed"):
                 self.assertEqual(
                     readiness["overall_status"],
-                    "quantitative_to_qualitative_mechanism_linkage_513_completed_claim_review_ready_global_analysis_closed",
+                    "mechanism_linkage_claim_review_268_completed_claim_memo_allowed_global_analysis_closed",
                 )
                 self.assertEqual(
                     calibration["calibration_phase"],
-                    "quantitative_to_qualitative_mechanism_linkage_513_completed_claim_review_ready",
+                    "mechanism_linkage_claim_review_268_completed_claim_memo_allowed",
                 )
             elif calibration.get("targeted_evidence_span_rating_completed"):
                 self.assertEqual(

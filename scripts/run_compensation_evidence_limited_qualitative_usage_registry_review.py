@@ -223,6 +223,7 @@ def validate_dashboard_state(calibration: dict[str, Any], readiness: dict[str, A
         "targeted_evidence_span_rating_summary_173_completed_quantitative_triage_recommended",
         "quantitative_direct_text_claim_triage_862_completed_mechanism_linkage_ready",
         "quantitative_to_qualitative_mechanism_linkage_513_completed_claim_review_ready",
+        "mechanism_linkage_claim_review_268_completed_claim_memo_allowed",
     }
     if phase not in allowed_phases:
         raise RuntimeError("Dashboard phase is inconsistent with the registry-only chain")
@@ -255,6 +256,7 @@ def validate_dashboard_state(calibration: dict[str, Any], readiness: dict[str, A
         "targeted_evidence_span_rating_summary_173_completed_quantitative_triage_recommended_global_analysis_closed",
         "quantitative_direct_text_claim_triage_862_completed_mechanism_linkage_ready_global_analysis_closed",
         "quantitative_to_qualitative_mechanism_linkage_513_completed_claim_review_ready_global_analysis_closed",
+        "mechanism_linkage_claim_review_268_completed_claim_memo_allowed_global_analysis_closed",
     }:
         raise RuntimeError("Dashboard overall registry state is inconsistent")
     if '"global_analysis_readiness": true' in readiness_text:

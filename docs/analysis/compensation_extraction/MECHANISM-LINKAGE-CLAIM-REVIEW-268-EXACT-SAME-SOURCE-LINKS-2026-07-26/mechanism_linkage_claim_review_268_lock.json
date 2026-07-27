@@ -1,0 +1,27 @@
+{
+  "claim_review_pair_count": 268,
+  "input_hashes": {
+    "docs/analysis/compensation_extraction/QUANTITATIVE-TO-QUALITATIVE-MECHANISM-LINKAGE-513-CANDIDATES-2026-07-26/quantitative_to_qualitative_mechanism_linkage_513_claim_boundaries.md": "d59655eccfc9c945c285c00e6d0142e7f31701ddf7310266b9b0d0479c3b9794",
+    "docs/analysis/compensation_extraction/QUANTITATIVE-TO-QUALITATIVE-MECHANISM-LINKAGE-513-CANDIDATES-2026-07-26/quantitative_to_qualitative_mechanism_linkage_513_claim_review_candidates.md": "bd74cfcf191ecbcc873ed81d961ae07b9bd973cf97b7073684ea2d70a4e44ecc",
+    "docs/analysis/compensation_extraction/QUANTITATIVE-TO-QUALITATIVE-MECHANISM-LINKAGE-513-CANDIDATES-2026-07-26/quantitative_to_qualitative_mechanism_linkage_513_decision.json": "15055b31026e95779d74cee3c7e680a484214414d3fe7f811494c181850e1582",
+    "docs/analysis/compensation_extraction/QUANTITATIVE-TO-QUALITATIVE-MECHANISM-LINKAGE-513-CANDIDATES-2026-07-26/quantitative_to_qualitative_mechanism_linkage_513_exact_same_source_links.csv": "ac53d043c97f6b509840191d753ff5776b0da273d4ea0cfdf5dd32b990d18cc6",
+    "docs/analysis/compensation_extraction/QUANTITATIVE-TO-QUALITATIVE-MECHANISM-LINKAGE-513-CANDIDATES-2026-07-26/quantitative_to_qualitative_mechanism_linkage_513_linkage_coverage_by_mechanism_summary.json": "299ed8cbe645213209ff513ef5a81cf50998ff749a7f4f6a3710d50ae0320e97",
+    "docs/analysis/compensation_extraction/QUANTITATIVE-TO-QUALITATIVE-MECHANISM-LINKAGE-513-CANDIDATES-2026-07-26/quantitative_to_qualitative_mechanism_linkage_513_linkage_coverage_by_source_family_summary.json": "38e5574ab744cb401c69f5ff395f88069094ee50e04582140add89d393b879dc",
+    "docs/analysis/compensation_extraction/QUANTITATIVE-TO-QUALITATIVE-MECHANISM-LINKAGE-513-CANDIDATES-2026-07-26/quantitative_to_qualitative_mechanism_linkage_513_linkage_coverage_by_unit_type_summary.json": "a2910b00359508be178b64c2c44cbf078eb281570d84788dfc7f0dcf89d48536",
+    "docs/analysis/compensation_extraction/QUANTITATIVE-TO-QUALITATIVE-MECHANISM-LINKAGE-513-CANDIDATES-2026-07-26/quantitative_to_qualitative_mechanism_linkage_513_linkage_limits.md": "4000a957a80efaf33751a8408c4a03025ae382a21476eb9ef8b42742274f8343",
+    "docs/analysis/compensation_extraction/QUANTITATIVE-TO-QUALITATIVE-MECHANISM-LINKAGE-513-CANDIDATES-2026-07-26/quantitative_to_qualitative_mechanism_linkage_513_next_data_needed.md": "1b90162ee3d8512c984ac4dc7798fe217324f2532cf9085216b707c33ff019be",
+    "docs/analysis/compensation_extraction/QUANTITATIVE-TO-QUALITATIVE-MECHANISM-LINKAGE-513-CANDIDATES-2026-07-26/quantitative_to_qualitative_mechanism_linkage_513_qual_scope.csv": "b39fb8c78c848d650f0c689cc23ccf56bfb0fb637b2d90352dd88e5413dc20b4",
+    "docs/analysis/compensation_extraction/QUANTITATIVE-TO-QUALITATIVE-MECHANISM-LINKAGE-513-CANDIDATES-2026-07-26/quantitative_to_qualitative_mechanism_linkage_513_qual_scope_summary.json": "0ee6b570e8f515378711001c3cffde0e96e5e87d9e8c19638e1f2fa5e0a590ed",
+    "docs/analysis/compensation_extraction/QUANTITATIVE-TO-QUALITATIVE-MECHANISM-LINKAGE-513-CANDIDATES-2026-07-26/quantitative_to_qualitative_mechanism_linkage_513_quant_scope.csv": "6df28e76ea63e2b71d744d8db1cedabff64b883154c78a9b0a73cabd6bc0f357",
+    "docs/analysis/compensation_extraction/QUANTITATIVE-TO-QUALITATIVE-MECHANISM-LINKAGE-513-CANDIDATES-2026-07-26/quantitative_to_qualitative_mechanism_linkage_513_quant_scope_summary.json": "a9512317fa75d8f69de1970e5a46c3f577a8364f86a2155420e8dc866dba2cf3",
+    "docs/analysis/compensation_extraction/QUANTITATIVE-TO-QUALITATIVE-MECHANISM-LINKAGE-513-CANDIDATES-2026-07-26/quantitative_to_qualitative_mechanism_linkage_513_results.csv": "658561870b889464b77c08c0ec88e19ddadbbcee0d87633c58ea0f62b1443e07",
+    "docs/analysis/compensation_extraction/QUANTITATIVE-TO-QUALITATIVE-MECHANISM-LINKAGE-513-CANDIDATES-2026-07-26/quantitative_to_qualitative_mechanism_linkage_513_results_summary.json": "65d6e1e467e637f237ea1c6d6f828873827cde5f182c6b76db5747d01ddbbaa9",
+    "docs/analysis/compensation_extraction/QUANTITATIVE-TO-QUALITATIVE-MECHANISM-LINKAGE-513-CANDIDATES-2026-07-26/quantitative_to_qualitative_mechanism_linkage_513_summary.md": "532b65a6f8431bddf606db852635d1935b99157ec27ca4a01e291264fc8d2c69",
+    "docs/analysis/compensation_extraction/QUANTITATIVE-TO-QUALITATIVE-MECHANISM-LINKAGE-513-CANDIDATES-2026-07-26/quantitative_to_qualitative_mechanism_linkage_513_unmatched_summary.json": "52bcf193ffe91a0b43d1b32b0eed477c6eb9551a4e7246b860702cc3dca9c2be",
+    "docs/analysis/compensation_extraction/QUANTITATIVE-TO-QUALITATIVE-MECHANISM-LINKAGE-513-CANDIDATES-2026-07-26/quantitative_to_qualitative_mechanism_linkage_513_validation_2026-07-26.md": "092c0913ecf7e27fd4620f0e86b4034f7faf67ce95eb457363b5bc1e762afdcc"
+  },
+  "linked_qualitative_record_count": 90,
+  "linked_quantitative_row_count": 208,
+  "scope_sha256": "d5b745242f572631bac31c0bfd0a5f7e27688779e1eea4af51aa1a45dcc32566",
+  "task_id": "MECHANISM-LINKAGE-CLAIM-REVIEW-268-EXACT-SAME-SOURCE-LINKS-2026-07-26"
+}
