@@ -156,7 +156,7 @@ function App() {
           </div>
           <div className="header-status">
             <StatusPill tone="scout">{projectPhaseSummary.current_phase}</StatusPill>
-            <span>Data vintage {stateSummary.metadata.data_vintage}</span>
+            <span>Data vintage {projectPhaseSummary.data_vintage}</span>
             <a href={piProgressReportPdf} target="_blank" rel="noreferrer">Open current PI report</a>
           </div>
         </header>

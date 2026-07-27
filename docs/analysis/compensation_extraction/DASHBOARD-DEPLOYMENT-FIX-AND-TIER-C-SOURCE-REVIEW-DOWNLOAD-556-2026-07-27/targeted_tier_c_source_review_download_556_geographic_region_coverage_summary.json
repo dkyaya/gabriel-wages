@@ -1,0 +1,14 @@
+{
+  "by_region": {
+    "Midwest": 83,
+    "Northeast": 221,
+    "South": 133,
+    "West": 26
+  },
+  "coverage_boundary": "Carried verification geography only; retained sources are not ingested or analysis ready.",
+  "external_geography_lookups": 0,
+  "invented_geography_fields": 0,
+  "retained_city_state_pair_count": 307,
+  "retained_source_count": 463,
+  "retained_state_count": 37
+}

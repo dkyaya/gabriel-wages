@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "dashboard_fix_and_tier_c_download_completed_pdf_readiness_ready_dashboard_fixed"
+              ? "Dashboard fixed; Tier C sources retained; PDF/text-layer readiness is ready"
+              : textTableCalibrationStatus.calibration_phase ===
             "targeted_tier_c_verification_completed_source_review_ready_dashboard_visible"
               ? "Gap-directed Tier C verification complete; source review/download is ready"
               : textTableCalibrationStatus.calibration_phase ===
@@ -941,6 +944,20 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "dashboard_fix_and_tier_c_download_completed_pdf_readiness_ready_dashboard_fixed" ? (
+            <>
+              Bounded source review processed {formatNumber(
+                textTableCalibrationStatus.targeted_tier_c_source_review_download_queue_count,
+              )} verified Tier C leads and retained {formatNumber(
+                textTableCalibrationStatus.targeted_tier_c_retained_downloaded_source_count,
+              )} source files for later PDF/text-layer readiness. Retained files remain not extracted,
+              not rated, not ingested, not codified, and non-causal; global readiness remains closed.
+              The dashboard now reads the current generated phase rather than the historical scout-phase
+              fallback. Memo: {" "}<code>{textTableCalibrationStatus.bounded_internal_mechanism_linkage_claim_memo_path}</code>;
+              {" "}dashboard metadata: <code>{textTableCalibrationStatus.bounded_internal_mechanism_linkage_claim_memo_dashboard_metadata_path}</code>;
+              {" "}geographic report: <code>{textTableCalibrationStatus.bounded_internal_mechanism_linkage_claim_memo_geographic_report_path}</code>.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "targeted_tier_c_verification_completed_source_review_ready_dashboard_visible" ? (
             <>
               Gap-directed HTTP HEAD verification processed {formatNumber(

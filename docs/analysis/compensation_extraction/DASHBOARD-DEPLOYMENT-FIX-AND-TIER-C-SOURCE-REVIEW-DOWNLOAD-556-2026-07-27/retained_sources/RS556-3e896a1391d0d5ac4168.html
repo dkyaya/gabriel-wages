@@ -1,0 +1,137 @@
+<!DOCTYPE html> 
+<html lang="en-US">
+<head>
+<title>Error 404</title>
+<script type = "text/javascript" src = "thirdparty/jquery.min.js"></script>
+<link rel="stylesheet" href="thirdparty/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script type = "text/javascript" src = "thirdparty/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /* Loop through a collection of all HTML elements: */
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /* Make an HTTP request using the attribute value as the file name: */
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /* Remove the attribute, and call this function once more: */
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      } 
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /* Exit the function: */
+      return;
+    }
+  }
+}
+</script>
+
+				
+      <script type = "text/javascript" language = "javascript">
+            $(document).ready(function(event){
+               $.getJSON('https://tap.cityoftacoma.org/MaintenancePage/api/schedule', function(jd) {
+                $.each(jd.results, function( i, value ) {
+				
+				var body = "<td data-label='Site'>" + jd.results[i].site 
+							+ "</td><td data-label='Type of service'>" + jd.results[i].typeOfService 
+							+ "</td><td data-label='Start date/time'>" + jd.results[i].startDate 
+							+ "</td><td data-label='End date/time'>" + jd.results[i].endDate
+							+ "</td> <td data-label='Impact'>" + jd.results[i].impact 
+							+ "</td><td data-label='Additional Information'>" + jd.results[i].additionalInformation 
+							+ "</td><td data-label='Contact'><p>";
+							
+				if( jd.results[i].contactName != null)
+				{
+					body += jd.results[i].contactName 
+					+"</br>";
+				
+				}
+				
+				if( jd.results[i].contactPhone != null)
+				{
+				
+					body +="<a href='tel:"+jd.results[i].contactPhone+"'>" +jd.results[i].contactPhone+"</a>"
+					+"</br>";
+				
+				}
+				
+				if( jd.results[i].contactEmail != null)
+				{
+					body +="<a href='mailto:"+jd.results[i].contactEmail+"'>" +jd.results[i].contactEmail+"</a>";
+					
+				
+				}
+					
+				
+				
+				$('<tr tabindex ="0">').html(
+					
+					body += "</p></td>").appendTo('#records_table');
+				}
+
+				);
+               });
+            });
+      </script>
+</head>
+<body>
+<div class="container-fluid" style="padding:0;">
+
+
+
+	
+	<div class="App-header alert">
+			<h2 id="whoopsHead" tabindex ="0" class=" text-center">Whoops!</<h2> </br>
+		<img src="plugin4.png" style ="margin-left: auto; margin-right: auto;" alt="Picture of plugin Logo" >
+
+		<h1 tabindex ="0" class=" text-center">ERROR: 404 Not Found </<h1>
+		<h2 tabindex ="0" class= " text-center">The site is either down for maintenance or an error has occurred </<h2>
+
+	</div>
+
+<div class="content">
+<div class="col-xs-12">
+
+	<div class="pull-left">
+		<div   w3-include-html="alert.html" ></div>
+	</div>
+		<h3 tabindex ="0" class="table-primary text-center" style="margin-bottom: 0; padding-bottom: 10px; padding-top: 10px;" tabindex ="0" >Scheduled Maintenance</h3>
+		<hr style="margin-bottom: 0; margin-top: 0;     border-top: 1px solid #000;" >
+	<div class="table-responsive">
+
+	<table id="records_table" class="table responsive-card-table">
+
+			  <thead>
+				
+				<tr tabindex ="0" class="table-primary ">
+
+				  <th scope="col">Site</th>
+				  <th scope="col">Type of service</th>
+				  <th scope="col">Start date/time</th>
+				  <th scope="col">End date/time</th>
+				  <th scope="col">Impact</th>
+				  <th scope="col">Additional Information</th>
+				  <th scope="col">Contact</th>
+				</tr>
+			  </thead>			
+	</table>
+	</div>
+	</div>
+</div>
+	<script>
+		includeHTML();
+	</script>
+</div>		
+</body>

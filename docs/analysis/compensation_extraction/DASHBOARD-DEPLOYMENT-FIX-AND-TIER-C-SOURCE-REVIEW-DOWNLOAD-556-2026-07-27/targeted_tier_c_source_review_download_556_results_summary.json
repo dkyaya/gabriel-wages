@@ -1,0 +1,29 @@
+{
+  "blocked_by_transport_count": 3,
+  "codification_runs": 0,
+  "duplicate_file_hash_count": 1,
+  "durable_ledger_merges": 0,
+  "global_analysis_readiness": false,
+  "ingestion_runs": 0,
+  "locked_queue_rows": 556,
+  "model_api_calls": 0,
+  "ocr_runs": 0,
+  "oversized_for_this_pass_count": 18,
+  "pdf_pages_accessed": 0,
+  "rating_runs": 0,
+  "result_rows": 556,
+  "retained_downloaded_source_count": 463,
+  "status_counts": {
+    "blocked_by_transport": 3,
+    "duplicate_file_hash": 1,
+    "oversized_for_this_pass": 18,
+    "retained_downloaded_source": 463,
+    "unavailable_on_get": 5,
+    "weak_or_needs_review": 66
+  },
+  "text_extraction_runs": 0,
+  "total_retained_bytes": 1083844645,
+  "unavailable_on_get_count": 5,
+  "weak_or_needs_review_count": 66,
+  "wrong_content_type_count": 0
+}

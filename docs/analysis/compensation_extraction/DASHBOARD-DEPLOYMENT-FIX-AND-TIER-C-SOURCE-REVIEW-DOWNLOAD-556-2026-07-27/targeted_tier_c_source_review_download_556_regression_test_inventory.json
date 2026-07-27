@@ -1,0 +1,14 @@
+{
+  "focus": [
+    "immutable 556-row lock",
+    "bounded GET streaming",
+    "task-local retention",
+    "file hash integrity",
+    "duplicate and unsupported-type quarantine",
+    "no PDF-page or extraction access",
+    "downstream closure",
+    "dashboard closure",
+    "idempotent resume"
+  ],
+  "suite": "scripts/test_dashboard_fix_and_tier_c_source_review_download_556.py"
+}

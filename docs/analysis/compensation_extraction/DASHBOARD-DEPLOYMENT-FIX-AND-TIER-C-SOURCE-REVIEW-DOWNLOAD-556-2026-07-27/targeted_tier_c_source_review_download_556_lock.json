@@ -1,0 +1,49 @@
+{
+  "candidate_id_set_sha256": "acb61edc609cda1fcf59fbffe07e8ca2d92cf0d078b6fe7d3c4239760724cad3",
+  "download_status": "not_started",
+  "global_analysis_readiness": false,
+  "immutable_input_hashes": {
+    "targeted_tier_c_verification_city_cycle_unit_coverage_summary.json": "c3489d1886e49f16fba42283396810d788f95e2adbe2a39390eb54d9b1ed6e6c",
+    "targeted_tier_c_verification_decision.json": "0a1753fb056bdf81857a227e4b1ac98e8f871b8f8ca64eea9d18b2211c2f2e90",
+    "targeted_tier_c_verification_dry_run_summary.json": "b5a9d206c4173ecf56881d6c04e5ab55af908ca89b99652722a99d0b0f99b795",
+    "targeted_tier_c_verification_exclusion_summary.json": "8600d0753f92d24b4d6298a4e3f5af98b9eb981df0f68c5b30578ef1a9cceb6a",
+    "targeted_tier_c_verification_gap_priority_summary.json": "6ff82f0610b9d2f850ed18579d61269478a15545dca21396330af521c80a8619",
+    "targeted_tier_c_verification_geographic_region_coverage_summary.json": "1b89ccf011948f0bec8df86cb5717ae6173f738c5cdc92a6a83418e266a4885a",
+    "targeted_tier_c_verification_invariant_checks.json": "055fa203246dd8b867c4800f993235d8c38a6132d020252aef78cf4a3ae0cb8c",
+    "targeted_tier_c_verification_locked_queue_summary.json": "5c855a056245d4a2d4c546cf6b4236ff16f6318818dba4c1f1a821552ce73350",
+    "targeted_tier_c_verification_mechanism_gap_coverage_summary.json": "b89c987cc1c991914f19b534bbc1bb5d3b29378461f24c36a92c635fd958709e",
+    "targeted_tier_c_verification_preflight_report.md": "c841a5828606aeaccc67d8fded483871fb15cc584295cd9345c23f9900934c57",
+    "targeted_tier_c_verification_results.csv": "2e64a2c289fa9333e4814fcbe38e96f0d200ecd2efa429574b9dd1f30614846e",
+    "targeted_tier_c_verification_results_summary.json": "8ed27e844efb126d17423f6fabea1212bbe60c8624d301b05da11ba3b92fde65",
+    "targeted_tier_c_verification_retained_verified_sources.csv": "e3365aa9cf1aa4ff4ae903d9f2bddbf60b8161297c3ae9c62a1d046cb4f9fa2b",
+    "targeted_tier_c_verification_retained_verified_sources_summary.json": "4a51751aa33cae6c3b69caf62458dd511c87f9d08e14a8bb1ad1ae9f0c8f87ef",
+    "targeted_tier_c_verification_summary.md": "4779b2e126aeedac4b0f49c1083e57afa0f40cf0f79fe0462bc65155f1aad6bb",
+    "targeted_tier_c_verification_validation_2026-07-26.md": "a0e7c798b93837f6de1c9cd535aec80b07cf302f3c66e31a2727a299f9af860e"
+  },
+  "input_commit": "24615facf4d2efd18e9976d0ae0033946cf71715",
+  "lane_counts": {
+    "lane_1": 142,
+    "lane_2": 177,
+    "lane_3": 145,
+    "lane_4": 92
+  },
+  "mechanism_counts": {
+    "fiscal_constraint_signal": 145,
+    "market_or_comparability_pressure": 92,
+    "non_safety_constraint_signal": 142,
+    "strike_or_no_strike_constraint": 177
+  },
+  "queue_rows": 556,
+  "queue_sha256": "2f8ef936595ba88f31f9f3b9cd3a73a8d08fed5569b3b3e549db3e49d2202987",
+  "region_counts": {
+    "Midwest": 96,
+    "Northeast": 276,
+    "South": 156,
+    "West": 28
+  },
+  "retained_directory": "docs/analysis/compensation_extraction/DASHBOARD-DEPLOYMENT-FIX-AND-TIER-C-SOURCE-REVIEW-DOWNLOAD-556-2026-07-27/retained_sources",
+  "task_id": "DASHBOARD-DEPLOYMENT-FIX-AND-TIER-C-SOURCE-REVIEW-DOWNLOAD-556-2026-07-27",
+  "tier_counts": {
+    "tier_c": 556
+  }
+}

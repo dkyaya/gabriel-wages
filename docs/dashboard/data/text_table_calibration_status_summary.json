@@ -1,7 +1,7 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-27T13:03:53Z",
-  "data_vintage": "2026-07-23",
+  "generated_at": "2026-07-27T14:46:58Z",
+  "data_vintage": "2026-07-27",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
     "docs/analysis/national_scout_coverage_municipality_2026-07-20.csv",
@@ -80,7 +80,7 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "calibration_phase": "targeted_tier_c_verification_completed_source_review_ready_dashboard_visible",
+  "calibration_phase": "dashboard_fix_and_tier_c_download_completed_pdf_readiness_ready_dashboard_fixed",
   "latest_calibration_id": "TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24",
   "latest_calibration_review_id": "TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24",
   "latest_adjudication_prep_id": "TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24",
@@ -703,7 +703,43 @@
     "wrong_period": 57,
     "wrong_unit": 44
   },
-  "targeted_tier_c_source_review_download_ready_next": true,
+  "targeted_tier_c_source_review_download_ready_next": false,
+  "dashboard_fix_tier_c_source_review_download_556_completed": true,
+  "dashboard_fix_tier_c_source_review_download_556_decision": "dashboard_fix_and_tier_c_download_completed_pdf_readiness_ready_dashboard_fixed",
+  "targeted_tier_c_source_review_download_queue_count": 556,
+  "targeted_tier_c_retained_downloaded_source_count": 463,
+  "targeted_tier_c_source_review_download_status_counts": {
+    "blocked_by_transport": 3,
+    "duplicate_file_hash": 1,
+    "oversized_for_this_pass": 18,
+    "retained_downloaded_source": 463,
+    "unavailable_on_get": 5,
+    "weak_or_needs_review": 66
+  },
+  "targeted_tier_c_retained_by_mechanism": {
+    "fiscal_constraint_signal": 129,
+    "market_or_comparability_pressure": 81,
+    "non_safety_constraint_signal": 126,
+    "strike_or_no_strike_constraint": 127
+  },
+  "targeted_tier_c_retained_by_region": {
+    "Midwest": 83,
+    "Northeast": 221,
+    "South": 133,
+    "West": 26
+  },
+  "targeted_tier_c_retained_by_lane": {
+    "lane_1": 126,
+    "lane_2": 127,
+    "lane_3": 129,
+    "lane_4": 81
+  },
+  "targeted_tier_c_retained_by_content_type": {
+    "application/octet-stream": 1,
+    "application/pdf": 397,
+    "text/html": 65
+  },
+  "targeted_tier_c_pdf_text_layer_readiness_ready_next": true,
   "gabriel_claim_rating_global_analysis_readiness": false,
   "limited_qualitative_usage_registry_review_global_analysis_readiness": false,
   "limited_qualitative_usage_layer_acceptance_global_analysis_readiness": false,

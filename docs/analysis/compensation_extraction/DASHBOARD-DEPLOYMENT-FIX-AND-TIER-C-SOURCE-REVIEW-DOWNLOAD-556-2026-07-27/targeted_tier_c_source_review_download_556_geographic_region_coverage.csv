@@ -1,0 +1,5 @@
+derived_region,download_queue_rows,retained_sources,excluded_or_deferred,retained_bytes,mapping_method
+Midwest,96,83,13,189907422,carried_deterministic_region_from_verified_tier_c_input
+Northeast,276,221,55,298251202,carried_deterministic_region_from_verified_tier_c_input
+South,156,133,23,488224738,carried_deterministic_region_from_verified_tier_c_input
+West,28,26,2,107461283,carried_deterministic_region_from_verified_tier_c_input

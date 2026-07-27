@@ -1,0 +1,29 @@
+{
+  "codification_runs": 0,
+  "completion_status": "completed_bounded_source_review_download",
+  "dashboard_external_visibility_may_depend_on_pages_or_cache": true,
+  "dashboard_repo_level_fix_complete": true,
+  "decision": "dashboard_fix_and_tier_c_download_completed_pdf_readiness_ready_dashboard_fixed",
+  "download_repair_needed": false,
+  "durable_ledger_merges": 0,
+  "global_analysis_readiness": false,
+  "ingestion_runs": 0,
+  "locked_download_queue_count": 556,
+  "model_api_calls": 0,
+  "ocr_runs": 0,
+  "pdf_pages_accessed": 0,
+  "pdf_text_layer_readiness_ready_next": true,
+  "rating_runs": 0,
+  "repo_cleanup_recommended_next": false,
+  "retained_downloaded_source_count": 463,
+  "status_counts": {
+    "blocked_by_transport": 3,
+    "duplicate_file_hash": 1,
+    "oversized_for_this_pass": 18,
+    "retained_downloaded_source": 463,
+    "unavailable_on_get": 5,
+    "weak_or_needs_review": 66
+  },
+  "task_id": "DASHBOARD-DEPLOYMENT-FIX-AND-TIER-C-SOURCE-REVIEW-DOWNLOAD-556-2026-07-27",
+  "text_extraction_runs": 0
+}

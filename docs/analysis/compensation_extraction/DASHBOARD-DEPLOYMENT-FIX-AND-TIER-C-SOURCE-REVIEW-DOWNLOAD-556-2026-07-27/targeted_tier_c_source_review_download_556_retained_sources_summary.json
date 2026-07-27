@@ -1,0 +1,38 @@
+{
+  "by_content_type": {
+    "application/octet-stream": 1,
+    "application/pdf": 397,
+    "text/html": 65
+  },
+  "by_lane": {
+    "lane_1": 126,
+    "lane_2": 127,
+    "lane_3": 129,
+    "lane_4": 81
+  },
+  "by_mechanism": {
+    "fiscal_constraint_signal": 129,
+    "market_or_comparability_pressure": 81,
+    "non_safety_constraint_signal": 126,
+    "strike_or_no_strike_constraint": 127
+  },
+  "by_region": {
+    "Midwest": 83,
+    "Northeast": 221,
+    "South": 133,
+    "West": 26
+  },
+  "by_tier": {
+    "tier_c": 463
+  },
+  "causal_status": "not_causal_evidence",
+  "codification_status": "not_codified",
+  "extraction_status": "not_extracted",
+  "files_integrity_checked": 463,
+  "global_analysis_readiness": false,
+  "ingestion_status": "not_ingested",
+  "rating_status": "not_rated",
+  "retained_directory": "docs/analysis/compensation_extraction/DASHBOARD-DEPLOYMENT-FIX-AND-TIER-C-SOURCE-REVIEW-DOWNLOAD-556-2026-07-27/retained_sources",
+  "retained_source_count": 463,
+  "total_retained_bytes": 1083844645
+}

@@ -1297,6 +1297,19 @@ TARGETED_TIER_C_VERIFICATION_FROM_MEMO_GAPS_INVARIANTS_PATH = (
     TARGETED_TIER_C_VERIFICATION_FROM_MEMO_GAPS_DIR
     / "targeted_tier_c_verification_invariant_checks.json"
 )
+DASHBOARD_FIX_TIER_C_SOURCE_REVIEW_DOWNLOAD_556_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "DASHBOARD-DEPLOYMENT-FIX-AND-TIER-C-SOURCE-REVIEW-DOWNLOAD-556-2026-07-27"
+)
+DASHBOARD_FIX_TIER_C_SOURCE_REVIEW_DOWNLOAD_556_DECISION_PATH = (
+    DASHBOARD_FIX_TIER_C_SOURCE_REVIEW_DOWNLOAD_556_DIR
+    / "dashboard_fix_and_tier_c_source_review_download_556_decision.json"
+)
+DASHBOARD_FIX_TIER_C_SOURCE_REVIEW_DOWNLOAD_556_INVARIANTS_PATH = (
+    DASHBOARD_FIX_TIER_C_SOURCE_REVIEW_DOWNLOAD_556_DIR
+    / "targeted_tier_c_source_review_download_556_invariant_checks.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -4251,6 +4264,103 @@ def targeted_tier_c_verification_from_memo_gaps_status() -> tuple[bool, dict[str
     return True, decision
 
 
+def dashboard_fix_tier_c_source_review_download_556_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize only the completed 556-row Tier C source-review/download package."""
+    directory = DASHBOARD_FIX_TIER_C_SOURCE_REVIEW_DOWNLOAD_556_DIR
+    required = (
+        DASHBOARD_FIX_TIER_C_SOURCE_REVIEW_DOWNLOAD_556_DECISION_PATH,
+        DASHBOARD_FIX_TIER_C_SOURCE_REVIEW_DOWNLOAD_556_INVARIANTS_PATH,
+        directory / "targeted_tier_c_source_review_download_556_lock.json",
+        directory / "targeted_tier_c_source_review_download_556_locked_queue.csv",
+        directory / "targeted_tier_c_source_review_download_556_results.csv",
+        directory / "targeted_tier_c_source_review_download_556_results_summary.json",
+        directory / "targeted_tier_c_source_review_download_556_retained_sources_summary.json",
+        directory / "targeted_tier_c_source_review_download_556_mechanism_coverage_summary.json",
+        directory / "targeted_tier_c_source_review_download_556_city_cycle_unit_coverage_summary.json",
+        directory / "targeted_tier_c_source_review_download_556_geographic_region_coverage_summary.json",
+        directory / "dashboard_current_metadata_visibility_check.json",
+        directory / "next_targeted_tier_c_pdf_text_layer_readiness_prompt.md",
+        directory / "next_task.md",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    decision = read_json(DASHBOARD_FIX_TIER_C_SOURCE_REVIEW_DOWNLOAD_556_DECISION_PATH)
+    invariants = read_json(DASHBOARD_FIX_TIER_C_SOURCE_REVIEW_DOWNLOAD_556_INVARIANTS_PATH)
+    lock = read_json(directory / "targeted_tier_c_source_review_download_556_lock.json")
+    queue_path = directory / "targeted_tier_c_source_review_download_556_locked_queue.csv"
+    queue = read_csv(queue_path)
+    results = read_csv(directory / "targeted_tier_c_source_review_download_556_results.csv")
+    summary = read_json(directory / "targeted_tier_c_source_review_download_556_results_summary.json")
+    retained = read_json(directory / "targeted_tier_c_source_review_download_556_retained_sources_summary.json")
+    mechanism = read_json(directory / "targeted_tier_c_source_review_download_556_mechanism_coverage_summary.json")
+    geography = read_json(directory / "targeted_tier_c_source_review_download_556_geographic_region_coverage_summary.json")
+    visibility = read_json(directory / "dashboard_current_metadata_visibility_check.json")
+    expected_statuses = {
+        "blocked_by_transport": 3,
+        "duplicate_file_hash": 1,
+        "oversized_for_this_pass": 18,
+        "retained_downloaded_source": 463,
+        "unavailable_on_get": 5,
+        "weak_or_needs_review": 66,
+    }
+    expected_mechanisms = {
+        "fiscal_constraint_signal": 129,
+        "market_or_comparability_pressure": 81,
+        "non_safety_constraint_signal": 126,
+        "strike_or_no_strike_constraint": 127,
+    }
+    expected_regions = {"Midwest": 83, "Northeast": 221, "South": 133, "West": 26}
+    expected_lanes = {"lane_1": 126, "lane_2": 127, "lane_3": 129, "lane_4": 81}
+    expected_types = {"application/octet-stream": 1, "application/pdf": 397, "text/html": 65}
+    if not (
+        decision.get("task_id") == "DASHBOARD-DEPLOYMENT-FIX-AND-TIER-C-SOURCE-REVIEW-DOWNLOAD-556-2026-07-27"
+        and decision.get("decision") == "dashboard_fix_and_tier_c_download_completed_pdf_readiness_ready_dashboard_fixed"
+        and decision.get("completion_status") == "completed_bounded_source_review_download"
+        and decision.get("locked_download_queue_count") == 556
+        and len(queue) == len(results) == 556
+        and decision.get("retained_downloaded_source_count") == 463
+        and decision.get("status_counts") == expected_statuses
+        and summary.get("status_counts") == expected_statuses
+        and retained.get("retained_source_count") == 463
+        and retained.get("by_mechanism") == expected_mechanisms
+        and retained.get("by_region") == expected_regions
+        and retained.get("by_lane") == expected_lanes
+        and retained.get("by_content_type") == expected_types
+        and mechanism.get("by_mechanism") == expected_mechanisms
+        and geography.get("by_region") == expected_regions
+        and lock.get("queue_rows") == 556
+        and lock.get("queue_sha256") == hashlib.sha256(queue_path.read_bytes()).hexdigest()
+        and all(row.get("verification_status") == "verified_source_lead" for row in queue)
+        and all(row.get("priority_tier") == "tier_c" for row in queue)
+        and all(row.get("extraction_status") == "not_extracted" for row in results)
+        and all(row.get("rating_status") == "not_rated" for row in results)
+        and all(row.get("ingestion_status") == "not_ingested" for row in results)
+        and all(row.get("codification_status") == "not_codified" for row in results)
+        and all(row.get("causal_status") == "not_causal_evidence" for row in results)
+        and decision.get("dashboard_repo_level_fix_complete") is True
+        and decision.get("pdf_text_layer_readiness_ready_next") is True
+        and decision.get("global_analysis_readiness") is False
+        and invariants.get("all_invariants_passed") is True
+        and invariants.get("locked_queue_exactly_556") is True
+        and invariants.get("only_verified_source_leads_entered") is True
+        and invariants.get("no_pdf_page_text_extraction_or_ocr") is True
+        and invariants.get("global_analysis_readiness_false") is True
+        and visibility.get("all_required_visibility_checks_passed") is True
+        and visibility.get("stale_current_phase_phrase_absent") is True
+        and visibility.get("stale_rendered_data_vintage_absent") is True
+    ):
+        raise ValueError("dashboard fix and Tier C source-review/download package fails dashboard gates")
+    return True, {
+        **decision,
+        "retained_by_mechanism": expected_mechanisms,
+        "retained_by_region": expected_regions,
+        "retained_by_lane": expected_lanes,
+        "retained_by_content_type": expected_types,
+        "retained_state_count": geography.get("retained_state_count"),
+        "retained_city_state_pair_count": geography.get("retained_city_state_pair_count"),
+    }
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -5046,6 +5156,10 @@ def build_analysis_readiness(
         targeted_tier_c_verification_from_memo_gaps_completed,
         targeted_tier_c_verification_from_memo_gaps_decision,
     ) = targeted_tier_c_verification_from_memo_gaps_status()
+    (
+        dashboard_fix_tier_c_source_review_download_556_completed,
+        dashboard_fix_tier_c_source_review_download_556_decision,
+    ) = dashboard_fix_tier_c_source_review_download_556_status()
     if scale_1000_targeted_qa_completed and (
         scale_1000_targeted_qa_decision.get("qa_pass") is not True
         or scale_1000_targeted_qa_decision.get(
@@ -5092,6 +5206,9 @@ def build_analysis_readiness(
     return {
         "metadata": metadata,
         "overall_status": (
+            "dashboard_fix_and_tier_c_download_completed_pdf_readiness_ready_dashboard_fixed_global_analysis_closed"
+            if dashboard_fix_tier_c_source_review_download_556_completed
+            else
             "targeted_tier_c_verification_completed_source_review_ready_dashboard_visible_global_analysis_closed"
             if targeted_tier_c_verification_from_memo_gaps_completed
             else
@@ -6118,7 +6235,45 @@ def build_analysis_readiness(
                 ),
                 "targeted_tier_c_source_review_download_ready_next": (
                     bool(targeted_tier_c_verification_from_memo_gaps_decision.get("source_review_download_ready_next", False))
-                    if targeted_tier_c_verification_from_memo_gaps_completed else False
+                    if targeted_tier_c_verification_from_memo_gaps_completed
+                    and not dashboard_fix_tier_c_source_review_download_556_completed else False
+                ),
+                "dashboard_fix_tier_c_source_review_download_556_completed": dashboard_fix_tier_c_source_review_download_556_completed,
+                "dashboard_fix_tier_c_source_review_download_556_decision": (
+                    dashboard_fix_tier_c_source_review_download_556_decision.get("decision")
+                    if dashboard_fix_tier_c_source_review_download_556_completed else None
+                ),
+                "targeted_tier_c_source_review_download_queue_count": (
+                    int(dashboard_fix_tier_c_source_review_download_556_decision.get("locked_download_queue_count", 0))
+                    if dashboard_fix_tier_c_source_review_download_556_completed else 0
+                ),
+                "targeted_tier_c_retained_downloaded_source_count": (
+                    int(dashboard_fix_tier_c_source_review_download_556_decision.get("retained_downloaded_source_count", 0))
+                    if dashboard_fix_tier_c_source_review_download_556_completed else 0
+                ),
+                "targeted_tier_c_source_review_download_status_counts": (
+                    dashboard_fix_tier_c_source_review_download_556_decision.get("status_counts", {})
+                    if dashboard_fix_tier_c_source_review_download_556_completed else {}
+                ),
+                "targeted_tier_c_retained_by_mechanism": (
+                    dashboard_fix_tier_c_source_review_download_556_decision.get("retained_by_mechanism", {})
+                    if dashboard_fix_tier_c_source_review_download_556_completed else {}
+                ),
+                "targeted_tier_c_retained_by_region": (
+                    dashboard_fix_tier_c_source_review_download_556_decision.get("retained_by_region", {})
+                    if dashboard_fix_tier_c_source_review_download_556_completed else {}
+                ),
+                "targeted_tier_c_retained_by_lane": (
+                    dashboard_fix_tier_c_source_review_download_556_decision.get("retained_by_lane", {})
+                    if dashboard_fix_tier_c_source_review_download_556_completed else {}
+                ),
+                "targeted_tier_c_retained_by_content_type": (
+                    dashboard_fix_tier_c_source_review_download_556_decision.get("retained_by_content_type", {})
+                    if dashboard_fix_tier_c_source_review_download_556_completed else {}
+                ),
+                "targeted_tier_c_pdf_text_layer_readiness_ready_next": (
+                    bool(dashboard_fix_tier_c_source_review_download_556_decision.get("pdf_text_layer_readiness_ready_next", False))
+                    if dashboard_fix_tier_c_source_review_download_556_completed else False
                 ),
                 "gabriel_claim_rating_global_analysis_readiness": False,
                 "limited_qualitative_usage_registry_review_global_analysis_readiness": False,
@@ -6514,9 +6669,10 @@ def build_project_phase_summary(
     *,
     state_rows: list[dict[str, str]],
     queue_rows: list[dict[str, str]],
+    readiness: dict[str, Any],
     metadata: dict[str, Any],
 ) -> dict[str, Any]:
-    """Build the PI-aligned source-discovery checkpoint layer."""
+    """Build the current PI phase while preserving the scout checkpoint context."""
 
     covered = sum(as_int(row["municipalities_scouted"]) for row in state_rows)
     positive = sum(
@@ -6527,10 +6683,47 @@ def build_project_phase_summary(
         for row in state_rows
     )
     remaining = max(SCOUT_CHECKPOINT_TARGET - covered, 0)
+    wage_stage = readiness.get("stage_availability", {}).get("wage_extraction_stage", {})
+    tier_c_completed = wage_stage.get("targeted_tier_c_verification_from_memo_gaps_completed") is True
+    memo_completed = wage_stage.get("bounded_internal_mechanism_linkage_claim_memo_completed") is True
+    source_review_completed = wage_stage.get("dashboard_fix_tier_c_source_review_download_556_completed") is True
+    if not (source_review_completed and tier_c_completed and memo_completed):
+        raise ValueError("current dashboard phase requires complete memo, Tier C verification, and source review")
+    mechanism = read_json(
+        TARGETED_TIER_C_VERIFICATION_FROM_MEMO_GAPS_DIR
+        / "targeted_tier_c_verification_mechanism_gap_coverage_summary.json"
+    )
+    geography = read_json(
+        TARGETED_TIER_C_VERIFICATION_FROM_MEMO_GAPS_DIR
+        / "targeted_tier_c_verification_geographic_region_coverage_summary.json"
+    )
     return {
         **metadata,
-        "stage": "post_scout_checkpoint_transition",
-        "current_phase": "Scaled verification routing and source triage",
+        "data_vintage": "2026-07-27",
+        "stage": "tier_c_source_review_download_pdf_readiness_transition",
+        "current_phase": "Dashboard fixed; Tier C source review complete; PDF/text-layer readiness ready",
+        "current_phase_code": "dashboard_fix_and_tier_c_download_completed_pdf_readiness_ready_dashboard_fixed",
+        "global_analysis_readiness": False,
+        "memo_decision": wage_stage["bounded_internal_mechanism_linkage_claim_memo_decision"],
+        "memo_scope": wage_stage["bounded_internal_mechanism_linkage_claim_memo_scope"],
+        "memo_path": wage_stage["bounded_internal_mechanism_linkage_claim_memo_path"],
+        "memo_dashboard_metadata_path": wage_stage["bounded_internal_mechanism_linkage_claim_memo_dashboard_metadata_path"],
+        "memo_geographic_report_path": wage_stage["bounded_internal_mechanism_linkage_claim_memo_geographic_report_path"],
+        "tier_c_verification_decision": wage_stage["targeted_tier_c_verification_from_memo_gaps_decision"],
+        "tier_c_verified_source_lead_count": wage_stage["targeted_tier_c_verified_source_lead_count"],
+        "tier_c_verified_by_mechanism": mechanism["verified_by_mechanism"],
+        "tier_c_verified_by_region": geography["verified_by_region"],
+        "tier_c_result_path": "docs/analysis/targeted_tier_c_verification_from_bounded_memo_gaps_result_2026-07-26.md",
+        "tier_c_source_review_download_decision": wage_stage["dashboard_fix_tier_c_source_review_download_556_decision"],
+        "tier_c_source_review_download_queue_count": wage_stage["targeted_tier_c_source_review_download_queue_count"],
+        "tier_c_retained_downloaded_source_count": wage_stage["targeted_tier_c_retained_downloaded_source_count"],
+        "tier_c_source_review_download_status_counts": wage_stage["targeted_tier_c_source_review_download_status_counts"],
+        "tier_c_retained_by_mechanism": wage_stage["targeted_tier_c_retained_by_mechanism"],
+        "tier_c_retained_by_region": wage_stage["targeted_tier_c_retained_by_region"],
+        "tier_c_retained_by_lane": wage_stage["targeted_tier_c_retained_by_lane"],
+        "tier_c_retained_by_content_type": wage_stage["targeted_tier_c_retained_by_content_type"],
+        "tier_c_source_review_download_result_path": "docs/analysis/dashboard_deployment_fix_and_tier_c_source_review_download_556_result_2026-07-27.md",
+        "pdf_text_layer_readiness_ready_next": wage_stage["targeted_tier_c_pdf_text_layer_readiness_ready_next"],
         "checkpoint_target_scout_covered": SCOUT_CHECKPOINT_TARGET,
         "current_scout_covered": covered,
         "remaining_to_checkpoint": remaining,
@@ -10092,9 +10285,16 @@ def build_text_table_calibration_status_summary(
             targeted_tier_c_verification_from_memo_gaps_completed,
             targeted_tier_c_verification_from_memo_gaps_decision,
         ) = targeted_tier_c_verification_from_memo_gaps_status()
+        (
+            dashboard_fix_tier_c_source_review_download_556_completed,
+            dashboard_fix_tier_c_source_review_download_556_decision,
+        ) = dashboard_fix_tier_c_source_review_download_556_status()
         return {
             **metadata,
             "calibration_phase": (
+                dashboard_fix_tier_c_source_review_download_556_decision.get("decision")
+                if dashboard_fix_tier_c_source_review_download_556_completed
+                else
                 targeted_tier_c_verification_from_memo_gaps_decision.get("decision")
                 if targeted_tier_c_verification_from_memo_gaps_completed
                 else
@@ -11800,7 +12000,45 @@ def build_text_table_calibration_status_summary(
             ),
             "targeted_tier_c_source_review_download_ready_next": (
                 bool(targeted_tier_c_verification_from_memo_gaps_decision.get("source_review_download_ready_next", False))
-                if targeted_tier_c_verification_from_memo_gaps_completed else False
+                if targeted_tier_c_verification_from_memo_gaps_completed
+                and not dashboard_fix_tier_c_source_review_download_556_completed else False
+            ),
+            "dashboard_fix_tier_c_source_review_download_556_completed": dashboard_fix_tier_c_source_review_download_556_completed,
+            "dashboard_fix_tier_c_source_review_download_556_decision": (
+                dashboard_fix_tier_c_source_review_download_556_decision.get("decision")
+                if dashboard_fix_tier_c_source_review_download_556_completed else None
+            ),
+            "targeted_tier_c_source_review_download_queue_count": (
+                int(dashboard_fix_tier_c_source_review_download_556_decision.get("locked_download_queue_count", 0))
+                if dashboard_fix_tier_c_source_review_download_556_completed else 0
+            ),
+            "targeted_tier_c_retained_downloaded_source_count": (
+                int(dashboard_fix_tier_c_source_review_download_556_decision.get("retained_downloaded_source_count", 0))
+                if dashboard_fix_tier_c_source_review_download_556_completed else 0
+            ),
+            "targeted_tier_c_source_review_download_status_counts": (
+                dashboard_fix_tier_c_source_review_download_556_decision.get("status_counts", {})
+                if dashboard_fix_tier_c_source_review_download_556_completed else {}
+            ),
+            "targeted_tier_c_retained_by_mechanism": (
+                dashboard_fix_tier_c_source_review_download_556_decision.get("retained_by_mechanism", {})
+                if dashboard_fix_tier_c_source_review_download_556_completed else {}
+            ),
+            "targeted_tier_c_retained_by_region": (
+                dashboard_fix_tier_c_source_review_download_556_decision.get("retained_by_region", {})
+                if dashboard_fix_tier_c_source_review_download_556_completed else {}
+            ),
+            "targeted_tier_c_retained_by_lane": (
+                dashboard_fix_tier_c_source_review_download_556_decision.get("retained_by_lane", {})
+                if dashboard_fix_tier_c_source_review_download_556_completed else {}
+            ),
+            "targeted_tier_c_retained_by_content_type": (
+                dashboard_fix_tier_c_source_review_download_556_decision.get("retained_by_content_type", {})
+                if dashboard_fix_tier_c_source_review_download_556_completed else {}
+            ),
+            "targeted_tier_c_pdf_text_layer_readiness_ready_next": (
+                bool(dashboard_fix_tier_c_source_review_download_556_decision.get("pdf_text_layer_readiness_ready_next", False))
+                if dashboard_fix_tier_c_source_review_download_556_completed else False
             ),
             "gabriel_claim_rating_global_analysis_readiness": False,
             "limited_qualitative_usage_registry_review_global_analysis_readiness": False,
@@ -12845,6 +13083,9 @@ def main() -> int:
 
     timestamp = generated_at()
     data_vintage = max(row.get("last_updated", "") for row in state_rows)
+    tier_c_completed, _ = targeted_tier_c_verification_from_memo_gaps_status()
+    if tier_c_completed:
+        data_vintage = max(data_vintage, "2026-07-27")
     source_paths = REQUIRED_PATHS + OPTIONAL_PATHS
     metadata = base_metadata(
         timestamp=timestamp,
@@ -12905,6 +13146,7 @@ def main() -> int:
     project_phase_summary = build_project_phase_summary(
         state_rows=state_rows,
         queue_rows=queue_rows,
+        readiness=readiness,
         metadata=metadata,
     )
     parallel_scout_status = build_parallel_scout_status(

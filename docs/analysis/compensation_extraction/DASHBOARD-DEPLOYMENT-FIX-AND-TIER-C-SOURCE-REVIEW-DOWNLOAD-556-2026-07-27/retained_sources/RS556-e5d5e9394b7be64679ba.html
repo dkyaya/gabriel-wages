@@ -1,0 +1,2143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+<!-- Google Tag Manager for GA4 -->
+				<script>(function(w,d,s,l,i){w.GAMeasurementID='G-2Q7Q70CDVV';w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+				})(window,document,'script','cpDataLayerGA4','GTM-K73C5PS');</script>
+				<!-- End Google Tag Manager for GA4 -->
+				<script type='text/javascript'>
+					var enableTelemetry = 'false'
+					var aiConfig = {
+					instrumentationKey: '1cde048e-3185-4906-aa46-c92a7312b60f'						
+					}
+					var appInsights = window.appInsights || function (a) { function b(a) { c[a] = function () { var b = arguments; c.queue.push(function () { c[a].apply(c, b) }) } } var c = { config: a }, d = document, e = window; setTimeout(function () { var b = d.createElement('script'); b.src = a.url || 'https://js.monitor.azure.com/scripts/a/ai.0.js', d.getElementsByTagName('script')[0].parentNode.appendChild(b) }); try { c.cookie = d.cookie } catch (a) { } c.queue = []; for (var f = ['Event', 'Exception', 'Metric', 'PageView', 'Trace', 'Dependency']; f.length;)b('track' + f.pop()); if (b('setAuthenticatedUserContext'), b('clearAuthenticatedUserContext'), b('startTrackEvent'), b('stopTrackEvent'), b('startTrackPage'), b('stopTrackPage'), b('flush'), !a.disableExceptionTracking) { f = 'onerror', b('_' + f); var g = e[f]; e[f] = function (a, b, d, e, h) { var i = g && g(a, b, d, e, h); return !0 !== i && c['_' + f](a, b, d, e, h), i } } return c }(aiConfig);
+					window.appInsights = appInsights, appInsights.queue && 0 === appInsights.queue.length;
+					// Add telemetry initializer
+					appInsights.queue.push(function() {
+						appInsights.context.addTelemetryInitializer(function(envelope) {
+							var telemetryItem = envelope.data.baseData;
+							// To check the telemetry item’s type:
+							if (!false)
+							{
+								//If the telemetry is not enabled, we still want to capture Google map custom event, so only allow that
+								if (envelope.name.indexOf('.Event') == -1)
+									return false;
+							}
+						});
+					});						
+					appInsights.trackPageView();
+				</script>
+	<script>
+		function populateAntiForgery(token) {
+			var input = document.createElement("input");
+			input.name = "__RequestVerificationToken";
+			input.type = "hidden";
+			input.value = token;
+			var absPat = /^https?:\/\/|^\/\//i;
+			var forms = document.getElementsByTagName("form");
+			for (var i = 0; i < forms.length; i++) {
+				if (forms[i].method == "post" &&
+					!forms[i].querySelector('[name="__RequestVerificationToken"]') &&
+					!absPat.test(forms[i].getAttribute("action"))) {
+					forms[i].appendChild(input.cloneNode());
+				}
+			}
+		}
+
+		function getAntiForgeryToken(callback, error) {
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "/antiforgery");
+			xhr.addEventListener("load", function() {
+				try {
+					if (this.status !== 200) {
+						throw Error("Invalid status. Could not retrieve antiforgery token.");
+		}
+					var obj = JSON.parse(this.responseText);
+					callback(obj.token);
+				} catch (e) {
+					typeof error === "function" && error(e);
+				}
+			});
+			xhr.send();
+		}
+
+		getAntiForgeryToken(function(token) {
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded" 
+				|| document.readyState === "interactive") {
+				populateAntiForgery(token);
+				return;
+			}
+			document.addEventListener("DOMContentLoaded", function() {
+				populateAntiForgery(token);
+			}, false);
+		}, console.error);
+			</script>
+			
+
+	<script type="text/javascript">
+		window.departmentHeader = {};
+		window.pageSectionTracker = {};
+		window.isResponsiveEnabled = true;
+		window.isRemoveSetHeights= true;
+		if (window.isRemoveSetHeights) {
+			document.documentElement.className += ' removeSetHeights';
+		}
+		window.mainMenuMediaQuery = 'screen and (max-width: 40em)';
+		window.isMobileBrowserIncludingTablets = false;
+		window.fixedResponsiveMenu = false;
+		window.fullWidthResponsiveMenu = true;
+		window.responsiveMenuHeight = '';
+		window.responsiveMenuFontSize = '';
+		window.isContentAdvisor = false;
+		(function () {
+			window.setSizeCookie = function () {
+				document.cookie = "dpi=" + window.devicePixelRatio + "; path=/";
+				document.cookie = "viewportWidth=" + window.innerWidth + "; path=/";
+				document.cookie = "viewportHeight=" + window.innerHeight + "; path=/";
+				if (screen && screen.width && screen.height) {
+					document.cookie = "screenWidth=" + screen.width + "; path=/";
+					document.cookie = "screenHeight=" + screen.height + "; path=/";
+				}
+				document.cookie = "responsiveGhost=1; path=/";
+			};
+
+			setSizeCookie();
+		}());
+	</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script async src="https://docaccess.com/docbox.js"></script>
+	
+	<meta name="category0" content="Home" />
+<meta name="category1" content="Departments" />
+<meta name="category2" content="Human Resources" />
+<meta name="category3" content="Union Contracts/Agreements &amp; Salary Tables" />
+
+	
+	<meta name="theme-color" content="rgb(150, 50, 64)">
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+		<title>Union Contracts/Agreements &amp; Salary Tables | Mashpee, MA</title>
+
+		<meta name="description" content="">
+			<script src="/Assets/Scripts/jQuery/jquery-3.7.1.min.js"></script>
+	<script src="/Assets/Scripts/jQuery/jquery-migrate-3.5.2.min.js" type="text/javascript"></script>
+	
+
+	<!--[if IE 6]><script language="JavaScript" type="text/javascript"> var isie6 = true; </script><![endif]-->
+	<!--[if IE 7]><script language="JavaScript" type="text/javascript"> var isie7 = true; </script><![endif]-->
+	<!--[if IE 8]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<!--[if IE 9]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<script type="text/javascript"><!--
+	var intCountryCode = 840;
+	var order = '';
+//--></script>
+	
+<link href="/-681783051.css" rel="stylesheet" type="text/css" />	<link href="/-2140275272.css" rel="stylesheet" type="text/css" />	<link href="/982612607.css" rel="stylesheet" type="text/css" />
+
+	<link rel="stylesheet" type="text/css" href="/Assets/Styles/Print.css" media="print">
+	<script type="text/javascript">
+		window.Pages = window.Pages || {};
+		// FrontEnd RWD initialization
+		window.Pages.rwdReady = $.Deferred();
+		window.Pages.toolBarDeferred = $.Deferred();
+		window.Pages.rwdSetupComplete = $.Deferred();
+		window.Pages.megaMenuLoaded = $.Deferred();
+		window.Pages.angularToolbarComplete = $.Deferred();
+		window.Pages.frontEndToolbarComplete = $.Deferred();
+	</script>
+	<!--CPHeadContent-->
+	<script src="/739942322.js" type="text/javascript"></script>
+	
+	
+	
+	
+
+
+
+
+	<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/App_Themes/ie8.css"><![endif]-->
+	<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/App_Themes/ie7.css"><![endif]-->
+	<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="/App_Themes/ie6.css"><![endif]-->
+	<!--[if lt IE 9]><script type="text/javascript" src="/Scripts/html5.js"></script><![endif]-->
+
+	<script type="text/javascript">
+		setEditorVariables(false, 840);
+		function getPrintPreviewType() { return 0; } function printPreview() {pPreview(getPrintPreviewType()); }
+	</script>
+	<script src="/Assets/Scripts/AlpineJS/3.14.1/alpine.min.js" type="text/javascript" defer="defer"></script>
+</head>
+<body class="wide " >
+
+    <script>jQuery(document).click(function (event) {
+	var target = jQuery(event.target);
+	if (target.attr('src') && target.parents('.image').length && target.parents('.widget').length) {
+		var text = target.attr('title');
+		
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Image',
+				eventAction: 'Image - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.is('button') || target.hasClass('button') || target.parents().hasClass('button')) {
+		var text = "";
+		if (target.parents('.button')[0]) {
+			text = target.parents('.button').first().text();
+		} else if (target.text().length) {
+			text = target.text();
+		} else if (target.attr('title').length) {
+			text = target.attr('title');
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Button',
+				eventAction: 'Button - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetCustomHtml').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Custom Html',
+				eventAction: 'Custom Html Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.editor').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Editor',
+				eventAction: 'Editor Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.GraphicLinks').length) {
+		var text = "";
+		var targetGraphicLink = target;
+		if (target.hasClass('widgetGraphicLinksLink')) {
+			targetGraphicLink = jQuery(target.children()[0]);
+		}
+		if (targetGraphicLink.hasClass('text')) {
+			text = targetGraphicLink.text();
+		} else if (targetGraphicLink.attr('src').length) {
+			if (targetGraphicLink.attr('alt').length) {
+				text = targetGraphicLink.attr('alt');
+			} else {
+				text = targetGraphicLink.attr('src');
+			}
+		} else {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Graphic Links',
+				eventAction: 'Graphic Link - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.InfoAdvanced').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Info Advanced',
+				eventAction: 'Info Advanced Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.list').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'List',
+				eventAction: 'List Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.megaMenuItem').length || target.parents('.topMenuItem').length) {
+		var megaMenuText = jQuery('.topMenuItem.mouseover').find('span').text();
+		var breadCrumbs = [];
+		jQuery('.breadCrumbs > li').each(function () {
+			 breadCrumbs.push(this.textContent);
+		});
+		var pageTitle = breadCrumbs.join('>');
+		var subTitleText = target.parents('.megaMenuItem').children('.widgetTitle').children().text();
+		var text = "";
+		if (pageTitle) {
+			text += pageTitle + " | ";
+		} else {
+			text += document.title + ' - ';
+		}
+		if (target.text() == "" && megaMenuText == "") {
+			text += "N/A";
+		} else if (target.text().length && megaMenuText.length) {
+			if (megaMenuText == target.text()) {
+				text += megaMenuText;
+			} else {
+				text += megaMenuText + " - " + subTitleText + " - " + target.text();
+			}
+		} else if (target.text() == "") {
+			text += megaMenuText;
+		} else {
+			text += target.text();
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Mega Menu',
+				eventAction: 'Mega Menu : ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetNewsFlash').length && target.parents('.widgetItem').length) {
+		var text = jQuery(target.parents('.widgetItem')[0]).find('.widgetTitle').children().text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'News Flash',
+				eventAction: 'News Flash - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.hasClass('widgetQuickLinksLink') || target.find('.widgetQuickLinksLink').length) {
+		var text = target.text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Quick Links',
+				eventAction: 'Quick Links - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.attr('src') && target.parents('.cpSlideshow').length) {
+		var text = target.attr('title');
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Slideshow',
+				eventAction: 'Slideshow - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetText').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Text',
+				eventAction: 'Text Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+});</script>
+	<div id="popoverModal" class="cp-PopOver cp-PopOver--modal cp-AdminWrap" style="position: fixed; display: none;">
+	<div class="cp-PopOver-header">
+		<h3 class="cp-PopOver-title"></h3>
+		<button class="cp-Btn cp-PopOver-close" onclick="closePopOverModal(event)">
+			<svg class="cp-Icon--close" alt="close" title="close">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconClose"></use>
+			</svg>
+		</button>
+	</div>
+	<div id="cpPopOverBody" class="cp-PopOver-body">
+		<form id="cpPopOverForm" name="cpPopOverForm" novalidate></form>
+	</div>
+	<div id="cpPopOverFooter" class="cp-PopOver-footer">
+		<div class="cp-BtnGroup" id="actionButtons">
+			<!-- Action buttons will be dynamically added here -->
+		</div>
+	</div>
+</div>
+    <div id="fb-root"></div>
+<div id=skipToContentLinks>
+<a href="#ccc6109a0a-efb8-43ff-857f-e319d1a6d205" target="_self" class="skipToContentLink">Skip to Main Content</a>
+</div>
+    <form id="frmReferenceFormForTelerikEditorDialogs"></form>
+
+        <input type="hidden" id="GoogleMapsKey" value="AIzaSyDWUuE-ifkbhxblF920N8MjpBdTg1Wt784" />
+
+
+
+    <input type="hidden" id="cpcDomain" value="https://cp-civicplusuniversity2.civicplus.com">
+    <input type="hidden" id="hdnStructureID" value="8" />
+    <input type="hidden" id="hdnContentCollectionID" value="edd6bbfc-4d95-4db0-9345-406ef599a3e4" />
+    <input type="hidden" id="hdnWorkingCopyID" value="00000000-0000-0000-0000-000000000000" />
+    <input type="hidden" id="hdnThemeID" value="21" />
+    <input type="hidden" id="pageIsFrontEnd" value="true" />
+    <input type="hidden" id="pageModuleID" />
+    <input type="hidden" id="pagePageID" value="4634" />
+
+    <div id="stickyPlaceholder"></div>
+    <div id="outer-wrap" class="outer-wrap">
+        <div id="inner-wrap" class="inner-wrap">
+                <div id="divToolbars" class="cpToolbars newCP mui-fixed" style="">
+                    
+
+
+
+<!-- Begin Signed Out Bar -->
+<div class="cpToolbar user public">
+    <div class="inner selfClear">
+        <p class="dropdown"><a href="/MyAccount/ProfileCreate" class="myConnections" id="signedOutToolbarCreateProfileButton">Create a Website Account</a> <span class="welcomeMessage">- Manage notification subscriptions, save form progress and more. &nbsp;&nbsp;</span></p>
+        <ul class="nav secondary">
+	        <li><a href="/MyAccount" class="button" id="loggedOutToolbarSignInButton">Website Sign In</a></li>
+        </ul>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#signedOutToolbarCreateProfileButton').click(function (event) {
+            event.preventDefault();
+            window.location.href = '/MyAccount/ProfileCreate?from=url&url=/&dn=' + window.location.origin;
+        });
+
+			
+				$('#loggedOutToolbarSignInButton').click(function (event) {
+					event.preventDefault();
+					window.location.href = '/MyAccount/?from=url&url=' + encodeURIComponent(window.location.href.replace(window.location.origin, '')) + '&dn=' + window.location.host;
+				});
+			
+
+		if ('False' == 'True') {
+            $('#loggedOutToolbarSignInButton').hide();
+		}
+    })
+</script>
+<!-- End Signed Out Bar -->
+
+                </div>
+            <div id="bodyWrapper">
+                <div id="mainNavHolderMobile" class="mainNavHolderMobile"></div>
+                
+<div data-cpRole="structuralContainer" id="bodyContainerTS">
+<!-- Header Container --><header data-cpRole="structuralContainer" id="headerContainerTS">
+<div class="siteWrap" id="flexHeaderTS"><div data-cpRole="banner" id="bannerLogoTS" class="bannerLogoTS empty">
+
+
+
+
+				<a id="bannerLogoTS-66" style="			display: block; text-align: center;
+" class="bannerObject" href="/" target="_self"><img alt="Mashpee MA Home Page" class="bannerObject" height="75" src="/ImageRepository/Document?documentID=235" width="215" /></a>
+</div><nav data-cpRole="nav" id="mainNav" class="siteNav mainNav" role="navigation">
+<ol id="mainNavMenu" data-parent="1" class="rootNavMenu" role="menu"><!--
+--><li id="MainItem1195" class="topMenuItem" role="none" data-pageid="1195" data-displaymegamenu="False"><!--
+			--><!--
+			--> <a role = "menuitem"  aria-haspopup=true aria-expanded='false' aria-controls="ParentMainItem1195" id = "mainNavDiscoverMashpee" class="navMainItem mainNavItem mainNavItem1 " href="/1195/Discover-Mashpee" target = "_self" >   Discover Mashpee  </a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem1196" class="topMenuItem" role="none" data-pageid="1196" data-displaymegamenu="False"><!--
+			--><!--
+			--> <a role = "menuitem"  aria-haspopup=true aria-expanded='false' aria-controls="ParentMainItem1196" id = "mainNavDepartments" class="navMainItem mainNavItem mainNavItem2 " href="/1196/Departments" target = "_self" >   Departments  </a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem1197" class="topMenuItem" role="none" data-pageid="1197" data-displaymegamenu="False"><!--
+			--><!--
+			--> <a role = "menuitem"  aria-haspopup=true aria-expanded='false' aria-controls="ParentMainItem1197" id = "mainNavBoardsCommittees" class="navMainItem mainNavItem mainNavItem3 " href="/1197/Boards-Committees" target = "_self" >   Boards &amp; Committees  </a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem1193" class="topMenuItem" role="none" data-pageid="1193" data-displaymegamenu="False"><!--
+			--><!--
+			--> <a role = "menuitem"  aria-haspopup=true aria-expanded='false' aria-controls="ParentMainItem1193" id = "mainNavOpenforBusiness" class="navMainItem mainNavItem mainNavItem4 " href="/1193/Open-for-Business" target = "_self" >   Open for Business  </a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem1192" class="topMenuItem" role="none" data-pageid="1192" data-displaymegamenu="False"><!--
+			--><!--
+			--> <a role = "menuitem"  aria-haspopup=true aria-expanded='false' aria-controls="ParentMainItem1192" id = "mainNavVisitors" class="navMainItem mainNavItem mainNavItem5 " href="/1192/Visitors" target = "_self" >   Visitors  </a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem1194" class="topMenuItem" role="none" data-pageid="1194" data-displaymegamenu="False"><!--
+			--><!--
+			--> <a role = "menuitem"  aria-haspopup=true aria-expanded='false' aria-controls="ParentMainItem1194" id = "mainNavFindItFast" class="navMainItem mainNavItem mainNavItem6 " href="/1194/Find-It-Fast" target = "_self" >   Find It Fast  </a>			<!--
+			--><!--
+			--></li><!---->
+</ol>
+
+
+	<script type="text/javascript">
+		(function () {
+			function setupMenu() {
+				const menuID = 'mainNavMenu';
+				const menuType = MAIN_MENU;
+
+				//setup menu manager properties for main menu
+				if (!menuManager.mobileMainNav && true)
+					menuManager.adjustMainItemsWidth('#' + menuID);
+				menuManager.isMainMenuEditable = false;
+				menuManager.mainMenuMaxSubMenuLevels = 4;
+				menuManager.setMOMMode(2, menuType);
+
+				//Init main menu
+				const setupDraggable = menuManager.isMainMenuEditable;
+				const urlToGetHiddenMenus = '/Pages/MenuMain/HiddenMainSubMenus?pageID=1&moduleID=&themeID=21&menuContainerID=mainNav';
+
+				menuManager.setupMenu(menuID, 'mainNav', menuType, setupDraggable, urlToGetHiddenMenus);
+				menuManager.mainMenuInit = true;
+				menuManager.mainMenuTextResizer = true;
+				if (1.00 > 0)
+					menuManager.mainMenuTextResizerRatio = 1.00;
+				if (window.isResponsiveEnabled)
+					menuManager.mainMenuReady.resolve();
+
+			}
+
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded"
+				|| document.readyState === "interactive") {
+				setupMenu();
+				return;
+			}
+
+			document.addEventListener("DOMContentLoaded", setupMenu);
+		})();
+	</script>
+
+
+<aside data-cpRole="megaMenu" id="megaMenu" class="megaMenu" style="display: none;"><input type="hidden" id="megaMenuPopupDirection" value="0"><input type="hidden" id="megaMenuWidthReference" value="0"></aside></nav></div>
+</header><!-- Banner --><div data-cpRole="structuralContainer" id="bannerContainerTS" class="noOverflowTS">
+<div data-cpRole="banner" id="banner1"><div data-cpRole="structuralContainer" id="bannerSizingTS">
+<div data-cpRole="structuralContainer" id="bannerSearchTS">
+<div class="siteWrap2"><div data-cpRole="contentContainer" id="searchTS">	<div id="cc3a688680-8d2a-407c-9a79-2346375459af" data-containerid="3a688680-8d2a-407c-9a79-2346375459af" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="" data-widgetcontainerid="27a496da-2a8f-4c19-98bc-ef1d817bfdfe">				
+	<div class="row nest first last wide">
+	
+	<div class="inner col col24 first last id83a4aff4-248c-4f73-bfe9-1f9b25c3854c" style="" data-widgetcontainerid="83a4aff4-248c-4f73-bfe9-1f9b25c3854c">	
+<div data-widget-id="cd659bc7-654b-4dd5-8032-4b1d9f2f0df3" data-widget-controller-path="/Layout/WidgetSearch">
+	
+	<script defer type="text/javascript" src="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.js"></script>
+	<script defer src="/Areas/Layout/Assets/Scripts/Search.js" type="text/javascript"></script>
+	<script defer type="text/javascript">
+
+		$(document).ready(function () {
+			try {
+				// Minimum characters required before performing a search/autocomplete
+				var minPrefixLength = 3;
+				var autoCompleteDebounceDelay = 500;
+				var searchFieldSelector = "#searchField" + 'cd659bc7-654b-4dd5-8032-4b1d9f2f0df3';
+				var checkboxSelector = "#ysnSearchOnlyDept" + 'cd659bc7-654b-4dd5-8032-4b1d9f2f0df3';
+				var buttonSelector = ".widgetSearchButton" + 'cd659bc7-654b-4dd5-8032-4b1d9f2f0df3';
+				var autoCompleteCache = {};
+				var autoCompleteCacheKeys = [];
+				var autoCompleteCacheLimit = 25;
+				var currentAutoCompleteRequest = null;
+				var currentAutoCompleteRequestKey = null;
+				var autoCompleteDebounceTimer = null;
+				var autoCompleteDebounceKey = null;
+				var pendingAutoCompleteResponses = [];
+
+				function normalizeAutoCompleteTerm(term) {
+					return $.trim((term || "") + "").replace(/\s+/g, " ");
+				}
+
+				function shouldSearch(term) {
+					return normalizeAutoCompleteTerm(term).length >= minPrefixLength;
+				}
+
+				function getAutoCompleteUrl() {
+					return '/Search/AutoComplete' + ($(checkboxSelector).is(':checked') || false? '?departmentId=0' : '');
+				}
+
+				function getAutoCompleteCacheKey(requestUrl, term) {
+					return requestUrl + "|" + term.toLowerCase();
+				}
+
+				function cacheAutoCompleteResult(cacheKey, data) {
+					if (!Object.prototype.hasOwnProperty.call(autoCompleteCache, cacheKey)) {
+						autoCompleteCacheKeys.push(cacheKey);
+						if (autoCompleteCacheKeys.length > autoCompleteCacheLimit) {
+							delete autoCompleteCache[autoCompleteCacheKeys.shift()];
+						}
+					}
+					autoCompleteCache[cacheKey] = data;
+				}
+
+				function respondToPendingAutoComplete(data) {
+					var responses = pendingAutoCompleteResponses;
+					pendingAutoCompleteResponses = [];
+					for (var i = 0; i < responses.length; i++) {
+						responses[i](data);
+					}
+				}
+
+				function cancelPendingAutoComplete() {
+					clearTimeout(autoCompleteDebounceTimer);
+					autoCompleteDebounceKey = null;
+					if (currentAutoCompleteRequest != null) {
+						currentAutoCompleteRequest.abort();
+						currentAutoCompleteRequest = null;
+					}
+					currentAutoCompleteRequestKey = null;
+					respondToPendingAutoComplete([]);
+				}
+
+				function createWidgetAutoCompleteSource(options) {
+					return function (request, response) {
+						var term = normalizeAutoCompleteTerm(request.term);
+						if (!options.shouldSearch(term)) {
+							response([]);
+							return;
+						}
+
+						var requestUrl = options.url();
+						var cacheKey = getAutoCompleteCacheKey(requestUrl, term);
+						if (Object.prototype.hasOwnProperty.call(autoCompleteCache, cacheKey)) {
+							response(autoCompleteCache[cacheKey]);
+							if (options.success) {
+								options.success(autoCompleteCache[cacheKey]);
+							}
+							return;
+						}
+
+						if (currentAutoCompleteRequestKey === cacheKey || autoCompleteDebounceKey === cacheKey) {
+							pendingAutoCompleteResponses.push(response);
+							return;
+						}
+
+						cancelPendingAutoComplete();
+						autoCompleteDebounceKey = cacheKey;
+						pendingAutoCompleteResponses.push(response);
+						autoCompleteDebounceTimer = setTimeout(function () {
+							autoCompleteDebounceKey = null;
+							currentAutoCompleteRequestKey = cacheKey;
+							currentAutoCompleteRequest = $.ajax({
+								url: requestUrl,
+								dataType: "json",
+								timeout: options.timeout,
+								data: {
+									term: term,
+								},
+								success: function (data) {
+									if (currentAutoCompleteRequestKey === cacheKey) {
+										cacheAutoCompleteResult(cacheKey, data);
+										respondToPendingAutoComplete(data);
+										if (options.success) {
+											options.success(data);
+										}
+									}
+								},
+								error: function (xmlhttprequest, textstatus, message) {
+									if (textstatus === "abort") {
+										return;
+									}
+
+									if (options.error) {
+										options.error(xmlhttprequest, textstatus, message);
+									}
+
+									respondToPendingAutoComplete([]);
+								},
+								complete: function (xmlhttprequest) {
+									if (currentAutoCompleteRequest === xmlhttprequest) {
+										currentAutoCompleteRequest = null;
+										currentAutoCompleteRequestKey = null;
+									}
+								}
+							});
+						}, options.delay);
+					};
+				}
+
+				// click handler for search buttons
+				$(buttonSelector).click(function (e) {
+					e.preventDefault();
+					var $btn = $(this);
+					var $field = $btn.siblings(".widgetSearchBox");
+					var term = $field.val() + "";
+					if (!shouldSearch(term)) {
+						// do nothing until user types enough characters
+						$field.focus();
+						return;
+					}
+
+					if ($(checkboxSelector).is(':checked') || false)
+					{
+						doWidgetSearch($.trim(term), Number(0));
+					}
+					else {
+						doWidgetSearch($.trim(term), 0);
+					}
+				});
+
+				// enter key handler for the search field
+				$(searchFieldSelector).keypress(function (e) {
+					var code = e.which || e.keyCode;
+					if (code === 13) {
+						e.preventDefault();
+						var $this = $(this);
+						var term = $this.val() + "";
+						if (!shouldSearch(term)) {
+							// do nothing until user types enough characters
+							$this.focus();
+							return false;
+						}
+
+						if ($(checkboxSelector).is(':checked') || false) {
+							doWidgetSearch($.trim(term), Number(0));
+						} else {
+							doWidgetSearch($.trim(term), 0);
+						}
+						return false;
+					}
+					return true;
+				});
+
+				// autocomplete: set minLength and guard source
+				if (true) {
+					var $searchField = $(searchFieldSelector).autocomplete({
+						minLength: minPrefixLength,
+						source: createWidgetAutoCompleteSource({
+							delay: autoCompleteDebounceDelay,
+							timeout: 10000,
+							shouldSearch: shouldSearch,
+							url: getAutoCompleteUrl,
+							success: function () {
+								$('.autoCompleteError').remove();
+							},
+							error: function (xmlhttprequest, textstatus, message) {
+								if (textstatus === "timeout") {
+									if ($(searchFieldSelector).siblings('.autoCompleteError').length == 0)
+										$('<span class="autoCompleteError"><p class="alert error">Search autocomplete is currently not responding. Please try again later.</p></span>').insertAfter($(searchFieldSelector));
+								}
+							}
+						}),
+						html: true,
+						delay: 0,
+						select: function (event, ui) {
+							$(this).val(ui.item.value);
+							$(this).next().click();
+						}
+					});
+
+					$searchField.data("ui-autocomplete")._renderItem = function (ul, item) {
+						return $("<li class=\"itemList\"></li>")
+							.data("ui-autocomplete-item", item)
+							.append("<a>" + item.label + "</a>")
+							.appendTo(ul);
+					};
+				}
+
+				// keep searchBtnApplyQuery consistent with prefix rule
+				window.searchBtnApplyQuery = function() {
+					var $field = $(searchFieldSelector);
+					var term = $field.val() + "";
+					if (shouldSearch(term)) {
+						// update href for the icon/button (if present)
+						var btn = document.getElementById("btnSearchIcon");
+						if (btn) btn.href = "/Search?searchPhrase=" + encodeURIComponent($.trim(term));
+					} else {
+						var btn = document.getElementById("btnSearchIcon");
+						if (btn) btn.href = "#";
+					}
+				};
+			}
+			catch(e) {} //we're going to eat this error. Autocomplete won't work but we dont wan't to break anything else on the page.
+		});
+	</script>
+
+	<section id="widgetPreviewSearch" class="widget widgetSearch skin62 widgetOptionSet37" style="display: block;" aria-label="Search">
+				<!-- For the button right and inside -->
+		<div class="widgetBody buttonRightInside">
+			<input class="widgetSearchBox widgetSearchBoxcd659bc7-654b-4dd5-8032-4b1d9f2f0df3" cp5ph="true" id="searchFieldcd659bc7-654b-4dd5-8032-4b1d9f2f0df3" name="searchField" onchange="searchBtnApplyQuery();" placeholder="Search..." type="text" value="" />
+						<a href="/Search/Results" id="btnSearchIcon" class="widgetSearchButton widgetSearchButtoncd659bc7-654b-4dd5-8032-4b1d9f2f0df3" role="button"><img alt="Search" class="imageHover" data-hover="/ImageRepository/Document?documentID=230" data-image="/ImageRepository/Document?documentID=231" src="/ImageRepository/Document?documentID=231" /></a>
+
+			<label class="searchLabel" aria-hidden="true" for="searchFieldcd659bc7-654b-4dd5-8032-4b1d9f2f0df3">Search</label>
+		</div>
+
+	</section>
+
+
+<style scoped>
+	  
+		.widgetSearch ::-webkit-input-placeholder {
+		color: rgba(34, 34, 34, 1);
+	  }
+		.widgetSearch :-moz-placeholder { /* Firefox 18- */
+	   color: rgba(34, 34, 34, 1);
+	}
+		.widgetSearch ::-moz-placeholder {  /* Firefox 19+ */
+	   color: rgba(34, 34, 34, 1);
+	}
+	.widgetSearch :-ms-input-placeholder {
+	   color: rgba(34, 34, 34, 1);
+	}
+	
+
+	.widgetSearch .widgetBody .widgetSearchBoxcd659bc7-654b-4dd5-8032-4b1d9f2f0df3
+	{
+		color: rgba(34, 34, 34, 1);
+		background: rgba(255, 255, 255, 1);
+border: 6px solid rgba(255, 255, 255, 0.3);
+background-clip: padding-box;
+border-radius: 10px;
+height: 84px;
+font-family: Roboto Condensed;
+font-size: 1.1em;
+padding: 0 90px 0 20px;
+	}
+	.widgetSearch .widgetBody .widgetSearchButtoncd659bc7-654b-4dd5-8032-4b1d9f2f0df3
+	{
+		margin: 14px 14px 0 0;
+	}
+	.widgetSearch .widgetSearch-onlyDeptcd659bc7-654b-4dd5-8032-4b1d9f2f0df3
+	{
+		display: inline-block;
+		color: #333;
+		
+		
+		 padding-top: 10px;
+	}
+	#ysnSearchOnlyDeptcd659bc7-654b-4dd5-8032-4b1d9f2f0df3
+	{
+		position: relative;
+		top: .125em;
+	}
+
+</style>
+
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.css">
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.theme.min.css">
+
+
+
+<script type="text/javascript">
+	//Updates search icons href to have the correct queryString
+	function searchBtnApplyQuery() {
+		document.getElementById("btnSearchIcon").href = "/Search?searchPhrase=" + document.getElementById("searchFieldcd659bc7-654b-4dd5-8032-4b1d9f2f0df3").value;
+	}
+</script>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div>
+</div>
+
+
+
+
+		<div id="bannerImagesJSON65" class="hidden"></div>
+		<div id="bannerSlideshowControls_banner1" class="bannerSlideshowControlsNew none " style="display:none">
+			<a id="arrowPrev_banner1" tabindex="0" class="arrowNew prev" aria-label="Banner Arrow Previous"><svg style=" " class=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconSlideshowArrowLeft"></use></svg></a>
+			<a id="arrowNext_banner1" tabindex="0" class="arrowNew next" aria-label="Banner Arrow Next"><svg style=" " class=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconSlideshowArrowRight"></use></svg></a>
+		</div>
+			<script type="text/javascript">
+				$(window).on("load", function () {
+					$.when(window.Pages.rwdSetupComplete)
+						.done(function () {
+							renderExternalBannerSlideshow('banner1',
+								{"BannerOptionID":65,"ThemeID":21,"SlotName":"banner1","Name":"Default","IsDefault":true,"BannerMode":2,"SlideShowSlideTiming":"5","SlideshowTransition":0,"SlideShowTransitionTiming":"1","ImageScale":true,"ImageAlignment":1,"ImageScroll":true,"MuteSound":true,"VideoType":0,"Status":40,"SlideshowControlsPosition":0,"SlideshowControlsAlignment":0,"SlideshowBannerControlsColorScheme":0,"DisplayVideoPauseButton":false,"VideoPauseButtonAlignment":1,"VideoPauseButtonControlsAlignment":0,"VideoPauseButtonStyle":"#FFFFFF","VideoPauseButtonBackgroundStyle":"#000000","VideoPauseButtonAlignmentClass":"alignRight viewport","DisplaySlideshowPauseButton":false,"SlideshowControlsColor":"#FFFFFF","SlideshowControlsBackgroundColor":"#000000","SlideshowPauseButtonClass":"isHidden","BannerImages":[{"BannerImageID":97,"BannerOptionID":65,"FileName":"/ImageRepository/Document?documentID=232","Height":300,"Width":1832,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":1,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""}],"BannerVideos":[{"BannerVideoID":4,"BannerOptionID":65,"VideoFileName":"","ImageFileName":"EmptyBannerBkg202502281457055087.png","IsLink":false,"LinkAddress":null,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","VideoFileID":"00000000-0000-0000-0000-000000000000","ImageFileID":"00000000-0000-0000-0000-000000000000","VideoWidth":0,"VideoHeight":0,"ImageWidth":0,"ImageHeight":0,"LinkedVideoUrl":"","RecordStatus":0,"AltText":null}],"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/"},
+								'/App_Themes/Interior/Images/',
+								'Rotating');
+						});
+				});
+			</script>
+
+</div>
+</div><!-- Content container --><div data-cpRole="structuralContainer" id="mainContainerTS">
+<div class="siteWrap2"><div data-cpRole="structuralContainer" id="mainWrapTS" class="mainWrap" role="main">
+<div data-cpRole="structuralContainer" id="siteSidebarTS" class="siteSidebar">
+<aside data-cpRole="contentContainer" id="sidebarContainer1TS">	<div id="cc7a17ab8a-2804-4644-819c-7712f12ba403" data-containerid="7a17ab8a-2804-4644-819c-7712f12ba403" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside><nav data-cpRole="nav" id="secondaryNav" class="siteNav secondaryNav">
+
+
+
+
+
+	<ol role="menu" id="secondaryMenusecondaryNav" data-parent="1215" class="rootNavMenu accordionNav">
+	<li class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem1281" data-pageid="1281">
+		<div class="accordionNavItem">
+			<a href="/1281/Employment-Opportunities" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Employment Opportunities</a>
+		</div>
+			</li>
+	<li class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem4634" data-pageid="4634">
+		<div class="accordionNavItem">
+			<a href="/4634/Union-ContractsAgreements-Salary-Tables" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Union Contracts/Agreements &amp; Salary Tables</a>
+		</div>
+			</li>
+	<li class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem1282" data-pageid="1282">
+		<div class="accordionNavItem">
+			<a href="/1282/Employee-Benefits" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Employee Benefits</a>
+		</div>
+			</li>
+	<li class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem4666" data-pageid="4666">
+		<div class="accordionNavItem">
+			<a href="/4666/Employee-Forms" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Employee Forms</a>
+		</div>
+			</li>
+	<li class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem1884" data-pageid="1884">
+		<div class="accordionNavItem">
+			<a href="/DocumentCenter/View/1462/family_and_medical_leave" target="_blank" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">FMLA Policy</a>
+		</div>
+			</li>
+	<li class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem4667" data-pageid="4667">
+		<div class="accordionNavItem">
+			<a href="/DocumentCenter/View/4129/Anti-Discrimination-and-Anti-Harassment-Policy-Including-Sexual-Harassment-No-50" target="_blank" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Anti-Discrimination &amp; Anti-Harassment (Including Sexual Harassment) Policy</a>
+		</div>
+			</li>
+
+	</ol>
+
+
+	<script type="text/javascript">
+		(function () {
+			function setupSecondaryMenuProperties() {
+				//setup menu manager properties for secondary menu
+				menuManager.isSideMenuEditable = false;
+				menuManager.sideMenuMaxSubMenuLevels = 4;
+				menuManager.sideMenuHasCustomLinks = false;
+			}
+
+			if (document.readyState === "loading") {
+				document.addEventListener("DOMContentLoaded", setupSecondaryMenuProperties, { once: true });
+				return;
+			}
+
+			setupSecondaryMenuProperties();
+		})();
+	</script>
+
+	<script type="text/javascript">
+		(function () {
+			function setupAccordionSecondaryNav() {
+				var $menuContainer = $('#secondaryNav');
+
+				$menuContainer.find('*[id^="SideItem"]').each(function () {
+					var ids = $('[id="' + this.id + '"]');
+					if (ids.length > 1)
+						$.each(ids, function (index, value) {
+							value.id = value.id + '_' + index;
+						});
+				});
+
+				$menuContainer.find('.hasAccordionChildren .openAccordionNav').off('click.secondaryNav').on('click.secondaryNav', function (e) {
+					e.preventDefault();
+					showHideAccordionMenuForSecondaryNav($(this));
+				});
+
+				$menuContainer.find(".grippy").each(function () {
+					menuManager.setupDraggableElement($(this), SIDE_MENU, '#secondaryNav');
+				});
+
+				$menuContainer.find("li").each(function () {
+					menuManager.setupDroppableAccordionElement($(this), SIDE_MENU);
+				});
+			}
+
+			if (document.readyState === "loading") {
+				document.addEventListener("DOMContentLoaded", setupAccordionSecondaryNav, { once: true });
+				return;
+			}
+
+			setupAccordionSecondaryNav();
+		})();
+	</script>
+
+
+
+</nav><aside data-cpRole="contentContainer" id="sidebarContainer2TS">	<div id="cc914c6cce-aa36-4128-898f-14a03ef6789e" data-containerid="914c6cce-aa36-4128-898f-14a03ef6789e" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside>
+</div><div data-cpRole="structuralContainer" id="outerContentWrapTS" class="outerContentWrap">
+<div data-cpRole="structuralContainer" id="contentWrapTS" class="contentWrap">
+<div data-cpRole="breadCrumbs" id="breadCrumbs" class="breadCrumbContainer">		<ol class="semanticList breadCrumbs">
+			<li><a class="breadCrumb" href="/">Home</a></li><li><a class="breadCrumb" href="/1196/Departments">Departments</a></li><li><a class="breadCrumb" href="/1215/Human-Resources">Human Resources</a></li><li id="currentBCPage" data-pageid="4634"><a href class="breadCrumb" aria-current="page">Union Contracts/Agreements & Salary Tables</a></li>
+		</ol>
+
+	   
+    
+</div><div data-cpRole="mainContentContainer" id="moduleContent">
+	
+	<div id="page" class="moduleContentNew">
+		
+
+	<input id="hdnPageID" name="hdnPageID" type="hidden" value="4634" />
+	<input id="hdnParentID" name="hdnParentID" type="hidden" value="1215" />
+	<input id="hdnVersionID" name="hdnVersionID" type="hidden" value="9271" />
+	<input id="pageMenuTitle" name="pageMenuTitle" type="hidden" value="Union Contracts/Agreements &amp; Salary Tables" />
+	<input id="pageShowFeatureColumn" name="pageShowFeatureColumn" type="hidden" value="False" />
+	<input id="hdnIsLayoutPage" name="hdnIsLayoutPage" type="hidden" value="False" />
+	<input id="hdnPageStatus" name="hdnPageStatus" type="hidden" value="Published" />
+
+				<h1 id="versionHeadLine" class="headline">
+
+Union Contracts/Agreements &amp; Salary Tables		</h1>
+	
+		<div id="ccc6109a0a-efb8-43ff-857f-e319d1a6d205" data-containerid="c6109a0a-efb8-43ff-857f-e319d1a6d205" class="pageContent cpGrid cpGrid24"  data-contentcontainerbreakpoint="30" >
+			
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="" data-widgetcontainerid="8facde17-5f0b-459d-bb42-8df535e4fa70">				
+	<div class="row nest first last wide">
+	
+	<div class="inner col col24 first last id1b1b08dc-59ce-4887-a7a4-b76aba907f5e" style="" data-widgetcontainerid="1b1b08dc-59ce-4887-a7a4-b76aba907f5e">	
+
+
+
+	<section class="widget widgetRelatedDocuments skin62 narrow" id="widgetRelDocfd1abd45-03c6-49ce-9a13-844fe56fe537" data-widgetid="fd1abd45-03c6-49ce-9a13-844fe56fe537" data-sections="[{&quot;Title&quot;:&quot;SEIU Local 888 Clerical Unit A&quot;,&quot;DocumentIDs&quot;:&quot;3922,3925,3926,4931,4939,&quot;,&quot;FolderIds&quot;:&quot;,&quot;,&quot;SortedDocumentIds&quot;:&quot;3922,3926,3925,4931,4939,&quot;},{&quot;Title&quot;:&quot;SEIU Local 888 Clerical Unit B (Dispatchers)&quot;,&quot;DocumentIDs&quot;:&quot;4932,3926,3925,3922,4940,&quot;,&quot;FolderIds&quot;:&quot;,&quot;,&quot;SortedDocumentIds&quot;:&quot;3922,3926,3925,4932,4940,&quot;},{&quot;Title&quot;:&quot;SEIU Local 888 DPW Unit A&quot;,&quot;DocumentIDs&quot;:&quot;3936,3935,3934,3933,3932,4933,4941,&quot;,&quot;FolderIds&quot;:&quot;,&quot;,&quot;SortedDocumentIds&quot;:&quot;3936,3934,3935,3932,3933,4933,4941,&quot;},{&quot;Title&quot;:&quot;SEIU Local 888 DPW Unit B&quot;,&quot;DocumentIDs&quot;:&quot;3963,3962,3961,3960,3959,4934,4942,&quot;,&quot;FolderIds&quot;:&quot;,&quot;,&quot;SortedDocumentIds&quot;:&quot;3963,3962,3961,3960,3959,4934,4942,&quot;},{&quot;Title&quot;:&quot;Personnel Administration Plan&quot;,&quot;DocumentIDs&quot;:&quot;3923,4470,4947,5003,&quot;,&quot;FolderIds&quot;:&quot;,&quot;,&quot;SortedDocumentIds&quot;:&quot;3923,4470,5003,4947,&quot;},{&quot;Title&quot;:&quot;The Mashpee Permanent Firefighters Association Local 2519&quot;,&quot;DocumentIDs&quot;:&quot;4943,5253,&quot;,&quot;FolderIds&quot;:&quot;,&quot;,&quot;SortedDocumentIds&quot;:&quot;5253,4943,&quot;},{&quot;Title&quot;:&quot;MASS C.O.P. Local 324 Unit A Patrol Officers &amp;amp; Detectives&quot;,&quot;DocumentIDs&quot;:&quot;3973,4936,4944,&quot;,&quot;FolderIds&quot;:&quot;,&quot;,&quot;SortedDocumentIds&quot;:&quot;3973,4936,4944,&quot;},{&quot;Title&quot;:&quot;MASS C.O.P. Local 320 Unit B Sergeants&amp;nbsp;&quot;,&quot;DocumentIDs&quot;:&quot;3983,3982,3981,3980,3979,3978,3977,3976,3975,3974,4937,4945,&quot;,&quot;FolderIds&quot;:&quot;,&quot;,&quot;SortedDocumentIds&quot;:&quot;3974,3976,3977,3978,3980,3983,3981,3982,3975,3979,4937,4945,&quot;},{&quot;Title&quot;:&quot;MASS C.O.P. Local 324 Unit C Lieutenants&amp;nbsp;&quot;,&quot;DocumentIDs&quot;:&quot;3990,3989,3988,3987,3986,3985,3984,4938,4946,&quot;,&quot;FolderIds&quot;:&quot;,&quot;,&quot;SortedDocumentIds&quot;:&quot;3984,3987,3989,3990,3988,3985,3986,4938,4946,&quot;}]" data-columncount="1" data-elementqueryclasses='{"wide-narrow":"min-width:25em"}' data-elementquerymatch='matchMultiColumn' data-elementqueryunmatch='unmatchMultiColumn' aria-label="Related Documents">
+			<div id="divRelatedDocuments_fd1abd45-03c6-49ce-9a13-844fe56fe537" class="relatedDocuments">
+		<div class="widgetBody cpGrid cpGrid1">
+			
+<div class="row narrow sortableWidgetTitle">
+        <div class="relatedDocumentsSection selfClear" data-documentids="3922,3925,3926,4931,4939," data-folderids="," data-sorteddocumentids="3922,3926,3925,4931,4939,">
+                    <h4 class="widgetTitle" style="clear:left;">SEIU Local 888 Clerical Unit A</h4>
+
+	<div class=" first last">
+		<ol class="semanticList bullets" style="min-height:8px;">
+					<li class="widgetItem" data-documentid="3922"><a target="_blank" href="/DocumentCenter/View/3922/Clerical_Library_Dispatchers-Chapter-FINAL-EXECUTED-2023-2026" class="fileType pdf" aria-label="Clerical_Library_Dispatchers Chapter FINAL EXECUTED 2023-2026 pdf file">Clerical_Library_Dispatchers Chapter FINAL EXECUTED 2023-2026</a>
+					</li>
+					<li class="widgetItem" data-documentid="3926"><a target="_blank" href="/DocumentCenter/View/3926/Clerical_Library_Dispatchers-Chapter-MOA-8-24-2023" class="fileType pdf" aria-label="Clerical_Library_Dispatchers Chapter MOA 8-24-2023 pdf file">Clerical_Library_Dispatchers Chapter MOA 8-24-2023</a>
+					</li>
+					<li class="widgetItem" data-documentid="3925"><a target="_blank" href="/DocumentCenter/View/3925/Clerical-MOU-07-30-2024" class="fileType pdf" aria-label="Clerical MOU 07-30-2024 pdf file">Clerical MOU 07-30-2024</a>
+					</li>
+					<li class="widgetItem" data-documentid="4931"><a target="_blank" href="/DocumentCenter/View/4931/Clerical-Unit-A-MOA-2026-2029" class="fileType pdf" aria-label="Clerical Unit A MOA 2026-2029 pdf file">Clerical Unit A MOA 2026-2029</a>
+					</li>
+					<li class="widgetItem" data-documentid="4939"><a target="_blank" href="/DocumentCenter/View/4939/Clerical-Unit-A-Salary-Tables-Effective-2026-07-01-through-6-30-29" class="fileType pdf" aria-label="Clerical Unit A Salary Tables Effective 2026-07-01 through 6-30-29 pdf file">Clerical Unit A Salary Tables Effective 2026-07-01 through 6-30-29</a>
+					</li>
+
+		</ol>
+	</div>
+                    </div>
+        <div class="relatedDocumentsSection selfClear" data-documentids="4932,3926,3925,3922,4940," data-folderids="," data-sorteddocumentids="3922,3926,3925,4932,4940,">
+                    <h4 class="widgetTitle" style="clear:left;">SEIU Local 888 Clerical Unit B (Dispatchers)</h4>
+
+	<div class=" first last">
+		<ol class="semanticList bullets" style="min-height:8px;">
+					<li class="widgetItem" data-documentid="3922"><a target="_blank" href="/DocumentCenter/View/3922/Clerical_Library_Dispatchers-Chapter-FINAL-EXECUTED-2023-2026" class="fileType pdf" aria-label="Clerical_Library_Dispatchers Chapter FINAL EXECUTED 2023-2026 pdf file">Clerical_Library_Dispatchers Chapter FINAL EXECUTED 2023-2026</a>
+					</li>
+					<li class="widgetItem" data-documentid="3926"><a target="_blank" href="/DocumentCenter/View/3926/Clerical_Library_Dispatchers-Chapter-MOA-8-24-2023" class="fileType pdf" aria-label="Clerical_Library_Dispatchers Chapter MOA 8-24-2023 pdf file">Clerical_Library_Dispatchers Chapter MOA 8-24-2023</a>
+					</li>
+					<li class="widgetItem" data-documentid="3925"><a target="_blank" href="/DocumentCenter/View/3925/Clerical-MOU-07-30-2024" class="fileType pdf" aria-label="Clerical MOU 07-30-2024 pdf file">Clerical MOU 07-30-2024</a>
+					</li>
+					<li class="widgetItem" data-documentid="4932"><a target="_blank" href="/DocumentCenter/View/4932/Clerical-Unit-B-MOA-2026-2029" class="fileType pdf" aria-label="Clerical Unit B MOA 2026-2029 pdf file">Clerical Unit B MOA 2026-2029</a>
+					</li>
+					<li class="widgetItem" data-documentid="4940"><a target="_blank" href="/DocumentCenter/View/4940/Clerical-Unit-B-Dispatch-Salary-Tables-Effective-2026-07-01-through-6-30-29" class="fileType pdf" aria-label="Clerical Unit B Dispatch Salary Tables Effective 2026-07-01 through 6-30-29 pdf file">Clerical Unit B Dispatch Salary Tables Effective 2026-07-01 through 6-30-29</a>
+					</li>
+
+		</ol>
+	</div>
+                    </div>
+        <div class="relatedDocumentsSection selfClear" data-documentids="3936,3935,3934,3933,3932,4933,4941," data-folderids="," data-sorteddocumentids="3936,3934,3935,3932,3933,4933,4941,">
+                    <h4 class="widgetTitle" style="clear:left;">SEIU Local 888 DPW Unit A</h4>
+
+	<div class=" first last">
+		<ol class="semanticList bullets" style="min-height:8px;">
+					<li class="widgetItem" data-documentid="3936"><a target="_blank" href="/DocumentCenter/View/3936/DPW_Unit-A-Agreement-2023---2026-FINAL" class="fileType pdf" aria-label="DPW_Unit A-Agreement 2023 - 2026 FINAL pdf file">DPW_Unit A-Agreement 2023 - 2026 FINAL</a>
+					</li>
+					<li class="widgetItem" data-documentid="3934"><a target="_blank" href="/DocumentCenter/View/3934/DPW-Unit-A-MOU-10-26-2023" class="fileType pdf" aria-label="DPW Unit A MOU 10-26-2023 pdf file">DPW Unit A MOU 10-26-2023</a>
+					</li>
+					<li class="widgetItem" data-documentid="3935"><a target="_blank" href="/DocumentCenter/View/3935/DPW-Unit-A-MOU-11-15-2023" class="fileType pdf" aria-label="DPW Unit A MOU 11-15-2023 pdf file">DPW Unit A MOU 11-15-2023</a>
+					</li>
+					<li class="widgetItem" data-documentid="3932"><a target="_blank" href="/DocumentCenter/View/3932/DPW-Unit-A-MOU-5-21-2024" class="fileType pdf" aria-label="DPW Unit A MOU 5-21-2024 pdf file">DPW Unit A MOU 5-21-2024</a>
+					</li>
+					<li class="widgetItem" data-documentid="3933"><a target="_blank" href="/DocumentCenter/View/3933/DPW-Unit-A-MOU-7-29-2024" class="fileType pdf" aria-label="DPW Unit A MOU 7-29-2024 pdf file">DPW Unit A MOU 7-29-2024</a>
+					</li>
+					<li class="widgetItem" data-documentid="4933"><a target="_blank" href="/DocumentCenter/View/4933/DPW-Unit-A-MOA-2026-to-2029" class="fileType pdf" aria-label="DPW Unit A MOA 2026 to 2029 pdf file">DPW Unit A MOA 2026 to 2029</a>
+					</li>
+					<li class="widgetItem" data-documentid="4941"><a target="_blank" href="/DocumentCenter/View/4941/DPW-Unit-A-Salary-Tables-Effective-2026-07-01-through-2029-06-30" class="fileType pdf" aria-label="DPW Unit A Salary Tables Effective 2026-07-01 through 2029-06-30 pdf file">DPW Unit A Salary Tables Effective 2026-07-01 through 2029-06-30</a>
+					</li>
+
+		</ol>
+	</div>
+                    </div>
+        <div class="relatedDocumentsSection selfClear" data-documentids="3963,3962,3961,3960,3959,4934,4942," data-folderids="," data-sorteddocumentids="3963,3962,3961,3960,3959,4934,4942,">
+                    <h4 class="widgetTitle" style="clear:left;">SEIU Local 888 DPW Unit B</h4>
+
+	<div class=" first last">
+		<ol class="semanticList bullets" style="min-height:8px;">
+					<li class="widgetItem" data-documentid="3963"><a target="_blank" href="/DocumentCenter/View/3963/DPW-Unit-B-Contract-2023-2026" class="fileType pdf" aria-label="DPW Unit B Contract 2023-2026 pdf file">DPW Unit B Contract 2023-2026</a>
+					</li>
+					<li class="widgetItem" data-documentid="3962"><a target="_blank" href="/DocumentCenter/View/3962/DPW-Unit-B-MOU-10-26-2023" class="fileType pdf" aria-label="DPW Unit B MOU 10-26-2023 pdf file">DPW Unit B MOU 10-26-2023</a>
+					</li>
+					<li class="widgetItem" data-documentid="3961"><a target="_blank" href="/DocumentCenter/View/3961/DPW-Unit-B-MOU-HEO-10-26-2023" class="fileType pdf" aria-label="DPW Unit B MOU HEO 10-26-2023 pdf file">DPW Unit B MOU HEO 10-26-2023</a>
+					</li>
+					<li class="widgetItem" data-documentid="3960"><a target="_blank" href="/DocumentCenter/View/3960/DPW-Unit-B-MOU-12-4-2023" class="fileType pdf" aria-label="DPW Unit B MOU 12-4-2023 pdf file">DPW Unit B MOU 12-4-2023</a>
+					</li>
+					<li class="widgetItem" data-documentid="3959"><a target="_blank" href="/DocumentCenter/View/3959/DPW-Unit-B-MOU-8-2-2024" class="fileType pdf" aria-label="DPW Unit B MOU 8-2-2024 pdf file">DPW Unit B MOU 8-2-2024</a>
+					</li>
+					<li class="widgetItem" data-documentid="4934"><a target="_blank" href="/DocumentCenter/View/4934/DPW-Unit-B-MOA-2026-2029" class="fileType pdf" aria-label="DPW Unit B MOA 2026-2029 pdf file">DPW Unit B MOA 2026-2029</a>
+					</li>
+					<li class="widgetItem" data-documentid="4942"><a target="_blank" href="/DocumentCenter/View/4942/DPW-Unit-B-Salary-Tables-Effective-2026-07-01-through-2029-06-30--Appendix-A" class="fileType pdf" aria-label="DPW Unit B Salary Tables Effective 2026-07-01 through 2029-06-30- Appendix A pdf file">DPW Unit B Salary Tables Effective 2026-07-01 through 2029-06-30- Appendix A</a>
+					</li>
+
+		</ol>
+	</div>
+                    </div>
+        <div class="relatedDocumentsSection selfClear" data-documentids="3923,4470,4947,5003," data-folderids="," data-sorteddocumentids="3923,4470,5003,4947,">
+                    <h4 class="widgetTitle" style="clear:left;">Personnel Administration Plan</h4>
+
+	<div class=" first last">
+		<ol class="semanticList bullets" style="min-height:8px;">
+					<li class="widgetItem" data-documentid="3923"><a target="_blank" href="/DocumentCenter/View/3923/Personnel-Administration-Plan-Agreement-7-1-2024" class="fileType pdf" aria-label="Personnel Administration Plan Agreement 7-1-2024 pdf file">Personnel Administration Plan Agreement 7-1-2024</a>
+					</li>
+					<li class="widgetItem" data-documentid="4470"><a target="_blank" href="/DocumentCenter/View/4470/MOU-DPW-Supervisors-1-9-24" class="fileType pdf" aria-label="MOU DPW Supervisors 1-9-24 pdf file">MOU DPW Supervisors 1-9-24</a>
+					</li>
+					<li class="widgetItem" data-documentid="5003"><a target="_blank" href="/DocumentCenter/View/5003/PAP-B-Salary-Tables-Effective-2026-07-01-through-2029-06-30" class="fileType pdf" aria-label="PAP-B Salary Tables Effective 2026-07-01 through 2029-06-30 pdf file">PAP-B Salary Tables Effective 2026-07-01 through 2029-06-30</a>
+					</li>
+					<li class="widgetItem" data-documentid="4947"><a target="_blank" href="/DocumentCenter/View/4947/PAP-C-Salary-Tables-Effective-2026-07-01-through-2029-06-30" class="fileType pdf" aria-label="PAP-C Salary Tables Effective 2026-07-01 through 2029-06-30 pdf file">PAP-C Salary Tables Effective 2026-07-01 through 2029-06-30</a>
+					</li>
+
+		</ol>
+	</div>
+                    </div>
+        <div class="relatedDocumentsSection selfClear" data-documentids="4943,5253," data-folderids="," data-sorteddocumentids="5253,4943,">
+                    <h4 class="widgetTitle" style="clear:left;">The Mashpee Permanent Firefighters Association Local 2519</h4>
+
+	<div class=" first last">
+		<ol class="semanticList bullets" style="min-height:8px;">
+					<li class="widgetItem" data-documentid="5253"><a target="_blank" href="/DocumentCenter/View/5253/Fire-Consolidated-Contract-2026-2029" class="fileType pdf" aria-label="Fire Consolidated Contract 2026-2029 pdf file">Fire Consolidated Contract 2026-2029</a>
+					</li>
+					<li class="widgetItem" data-documentid="4943"><a target="_blank" href="/DocumentCenter/View/4943/Fire-Salary-Tables-Effective-2026-07-01-through-2029-06-30" class="fileType pdf" aria-label="Fire Salary Tables Effective 2026-07-01 through 2029-06-30 pdf file">Fire Salary Tables Effective 2026-07-01 through 2029-06-30</a>
+					</li>
+
+		</ol>
+	</div>
+                    </div>
+        <div class="relatedDocumentsSection selfClear" data-documentids="3973,4936,4944," data-folderids="," data-sorteddocumentids="3973,4936,4944,">
+                    <h4 class="widgetTitle" style="clear:left;">MASS C.O.P. Local 324 Unit A Patrol Officers &amp; Detectives</h4>
+
+	<div class=" first last">
+		<ol class="semanticList bullets" style="min-height:8px;">
+					<li class="widgetItem" data-documentid="3973"><a target="_blank" href="/DocumentCenter/View/3973/Patrol-Officers-and-Detectives-Unit-A-Contract-2023-2026" class="fileType pdf" aria-label="Patrol Officers and Detectives Unit A Contract 2023-2026 pdf file">Patrol Officers and Detectives Unit A Contract 2023-2026</a>
+					</li>
+					<li class="widgetItem" data-documentid="4936"><a target="_blank" href="/DocumentCenter/View/4936/Patrol-Officers-and-Detectives-Unit-A-MOA-2026-2029" class="fileType pdf" aria-label="Patrol Officers and Detectives Unit A MOA 2026-2029 pdf file">Patrol Officers and Detectives Unit A MOA 2026-2029</a>
+					</li>
+					<li class="widgetItem" data-documentid="4944"><a target="_blank" href="/DocumentCenter/View/4944/Police-Unit-A-Salary-Tables-Effective-2026-07-01-through-2029-06-30-" class="fileType pdf" aria-label="Police Unit A Salary Tables Effective 2026-07-01 through 2029-06-30  pdf file">Police Unit A Salary Tables Effective 2026-07-01 through 2029-06-30 </a>
+					</li>
+
+		</ol>
+	</div>
+                    </div>
+        <div class="relatedDocumentsSection selfClear" data-documentids="3983,3982,3981,3980,3979,3978,3977,3976,3975,3974,4937,4945," data-folderids="," data-sorteddocumentids="3974,3976,3977,3978,3980,3983,3981,3982,3975,3979,4937,4945,">
+                    <h4 class="widgetTitle" style="clear:left;">MASS C.O.P. Local 320 Unit B Sergeants&nbsp;</h4>
+
+	<div class=" first last">
+		<ol class="semanticList bullets" style="min-height:8px;">
+					<li class="widgetItem" data-documentid="3974"><a target="_blank" href="/DocumentCenter/View/3974/Police-Sergeants-Unit-B-Contract-2011-2014" class="fileType pdf" aria-label="Police Sergeants Unit B Contract 2011-2014 pdf file">Police Sergeants Unit B Contract 2011-2014</a>
+					</li>
+					<li class="widgetItem" data-documentid="3976"><a target="_blank" href="/DocumentCenter/View/3976/Police-Sergeants-Unit-B-MOA-2014-2017" class="fileType pdf" aria-label="Police Sergeants Unit B MOA 2014-2017 pdf file">Police Sergeants Unit B MOA 2014-2017</a>
+					</li>
+					<li class="widgetItem" data-documentid="3977"><a target="_blank" href="/DocumentCenter/View/3977/Police-Sergeants-Unit-B-MOA-2017-2020" class="fileType pdf" aria-label="Police Sergeants Unit B MOA 2017-2020 pdf file">Police Sergeants Unit B MOA 2017-2020</a>
+					</li>
+					<li class="widgetItem" data-documentid="3978"><a target="_blank" href="/DocumentCenter/View/3978/Police-Sergeants-Unit-B-MOA-2020-2023" class="fileType pdf" aria-label="Police Sergeants Unit B MOA 2020-2023 pdf file">Police Sergeants Unit B MOA 2020-2023</a>
+					</li>
+					<li class="widgetItem" data-documentid="3980"><a target="_blank" href="/DocumentCenter/View/3980/Police-Sergeants-Unit-B-MOA-Re-Holidays-2021-06-29" class="fileType pdf" aria-label="Police Sergeants Unit B MOA Re Holidays 2021-06-29 pdf file">Police Sergeants Unit B MOA Re Holidays 2021-06-29</a>
+					</li>
+					<li class="widgetItem" data-documentid="3983"><a target="_blank" href="/DocumentCenter/View/3983/Police-Sergeants-Unit-B-MOU-Re-COVID-Comp-Time-2021-07-06" class="fileType pdf" aria-label="Police Sergeants Unit B MOU Re COVID Comp Time 2021-07-06 pdf file">Police Sergeants Unit B MOU Re COVID Comp Time 2021-07-06</a>
+					</li>
+					<li class="widgetItem" data-documentid="3981"><a target="_blank" href="/DocumentCenter/View/3981/Police-Sergeants-Unit-B-MOA-Re-Holidays-2021-07-06" class="fileType pdf" aria-label="Police Sergeants Unit B MOA Re Holidays 2021-07-06 pdf file">Police Sergeants Unit B MOA Re Holidays 2021-07-06</a>
+					</li>
+					<li class="widgetItem" data-documentid="3982"><a target="_blank" href="/DocumentCenter/View/3982/Police-Sergeants-Unit-B-MOU-2021-10-7" class="fileType pdf" aria-label="Police Sergeants Unit B MOU 2021-10-7 pdf file">Police Sergeants Unit B MOU 2021-10-7</a>
+					</li>
+					<li class="widgetItem" data-documentid="3975"><a target="_blank" href="/DocumentCenter/View/3975/Police-Sergeants-Unit-B-MOA-2-7-22" class="fileType pdf" aria-label="Police Sergeants Unit B MOA 2-7-22 pdf file">Police Sergeants Unit B MOA 2-7-22</a>
+					</li>
+					<li class="widgetItem" data-documentid="3979"><a target="_blank" href="/DocumentCenter/View/3979/Police-Sergeants-Unit-B-MOA-2023-2026" class="fileType pdf" aria-label="Police Sergeants Unit B MOA 2023-2026 pdf file">Police Sergeants Unit B MOA 2023-2026</a>
+					</li>
+					<li class="widgetItem" data-documentid="4937"><a target="_blank" href="/DocumentCenter/View/4937/Police-Sergeants-Unit-B-MOA-2026-2029" class="fileType pdf" aria-label="Police Sergeants Unit B MOA 2026-2029 pdf file">Police Sergeants Unit B MOA 2026-2029</a>
+					</li>
+					<li class="widgetItem" data-documentid="4945"><a target="_blank" href="/DocumentCenter/View/4945/Police-Unit-B-Salary-Tables-Effective-2026-07-01-through-2029-06-30" class="fileType pdf" aria-label="Police Unit B Salary Tables Effective 2026-07-01 through 2029-06-30 pdf file">Police Unit B Salary Tables Effective 2026-07-01 through 2029-06-30</a>
+					</li>
+
+		</ol>
+	</div>
+                    </div>
+        <div class="relatedDocumentsSection selfClear" data-documentids="3990,3989,3988,3987,3986,3985,3984,4938,4946," data-folderids="," data-sorteddocumentids="3984,3987,3989,3990,3988,3985,3986,4938,4946,">
+                    <h4 class="widgetTitle" style="clear:left;">MASS C.O.P. Local 324 Unit C Lieutenants&nbsp;</h4>
+
+	<div class=" first last">
+		<ol class="semanticList bullets" style="min-height:8px;">
+					<li class="widgetItem" data-documentid="3984"><a target="_blank" href="/DocumentCenter/View/3984/Police-Unit-C-Contract-2007-2010" class="fileType pdf" aria-label="Police Unit C Contract 2007-2010 pdf file">Police Unit C Contract 2007-2010</a>
+					</li>
+					<li class="widgetItem" data-documentid="3987"><a target="_blank" href="/DocumentCenter/View/3987/Police-Unit-C-MOA-02-13-2012" class="fileType pdf" aria-label="Police Unit C MOA 02-13-2012 pdf file">Police Unit C MOA 02-13-2012</a>
+					</li>
+					<li class="widgetItem" data-documentid="3989"><a target="_blank" href="/DocumentCenter/View/3989/Police-Unit-C-MOA-08-05-2013" class="fileType pdf" aria-label="Police Unit C MOA 08-05-2013 pdf file">Police Unit C MOA 08-05-2013</a>
+					</li>
+					<li class="widgetItem" data-documentid="3990"><a target="_blank" href="/DocumentCenter/View/3990/Police-Unit-C-MOA-09-10-2014" class="fileType pdf" aria-label="Police Unit C MOA 09-10-2014 pdf file">Police Unit C MOA 09-10-2014</a>
+					</li>
+					<li class="widgetItem" data-documentid="3988"><a target="_blank" href="/DocumentCenter/View/3988/Police-Unit-C-MOA-05-21-2018" class="fileType pdf" aria-label="Police Unit C MOA 05-21-2018 pdf file">Police Unit C MOA 05-21-2018</a>
+					</li>
+					<li class="widgetItem" data-documentid="3985"><a target="_blank" href="/DocumentCenter/View/3985/Police-Unit-C-MOA-2020-2023" class="fileType pdf" aria-label="Police Unit C MOA 2020-2023 pdf file">Police Unit C MOA 2020-2023</a>
+					</li>
+					<li class="widgetItem" data-documentid="3986"><a target="_blank" href="/DocumentCenter/View/3986/Police-Unit-C-MOA-2023-2026" class="fileType pdf" aria-label="Police Unit C MOA 2023-2026 pdf file">Police Unit C MOA 2023-2026</a>
+					</li>
+					<li class="widgetItem" data-documentid="4938"><a target="_blank" href="/DocumentCenter/View/4938/Police-Unit-C-MOA-2026-2029" class="fileType pdf" aria-label="Police Unit C MOA 2026-2029 pdf file">Police Unit C MOA 2026-2029</a>
+					</li>
+					<li class="widgetItem" data-documentid="4946"><a target="_blank" href="/DocumentCenter/View/4946/Police-Unit-C-Salary-Tables-Effective-2026-07-01-through-2029-06-30" class="fileType pdf" aria-label="Police Unit C Salary Tables Effective 2026-07-01 through 2029-06-30 pdf file">Police Unit C Salary Tables Effective 2026-07-01 through 2029-06-30</a>
+					</li>
+
+		</ol>
+	</div>
+                    </div>
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        //Remove section heading when it is empty and live edit is off.
+        if ('false' === 'false') {
+            var jqh4Selector = $('#widgetRelDoc' + 'fd1abd45-03c6-49ce-9a13-844fe56fe537').find('div.widgetBody div.row div.relatedDocumentsSection h4.widgetTitle');
+    		if (jqh4Selector.val() == "") {
+    			jqh4Selector
+                    .filter(function () {
+                        return $.trim($(this).text()) === ''
+                    })
+                    .remove();
+            }
+        }
+    });
+</script>
+		</div>
+
+</div>
+
+	</section>
+
+
+<script type="text/javascript">
+    var documentsToInsert = [];
+    var foldersToInsert = [];
+
+    $(document).ready(function () {
+        var hasEditRights = false;        
+        if (window.File && window.FileList && window.FileReader && hasEditRights) {
+            var RelatedDocumentsWidget = 5;
+            makeWidgetAreaDroppable('fd1abd45-03c6-49ce-9a13-844fe56fe537', $('#widgetRelDoc' + 'fd1abd45-03c6-49ce-9a13-844fe56fe537'), RelatedDocumentsWidget, true, RelatedDocumentsCallback);
+        }
+
+		if(hasEditRights)
+    		browserVersionNotCompatibleWithDragDropTextUpdate($('#addFile' + 'fd1abd45-03c6-49ce-9a13-844fe56fe537'), 'Add a new file');
+    });
+
+    function RelatedDocumentsCallback(widgetID, response)
+    {
+        if (window.ContentCollectionInstance.IsWorkingCopy) {
+        	$('#widgetRelDoc' + widgetID).replaceWith(response);            
+            contentUpdated();
+            attachRelatedDocumentsHandlers();            
+        }
+        else {
+            ContentCollectionInstance.reloadContent();
+        }      
+    }
+</script>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+		</div>
+
+	</div>
+
+	
+	<div class="newCP">
+
+	</div>
+</div>
+</div><aside data-cpRole="contentContainer" id="featureColumn" class="secondaryContent">	<div id="cc6406ea91-0b82-4133-8507-006cf4d689e3" data-containerid="6406ea91-0b82-4133-8507-006cf4d689e3" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside>
+</div>
+</div></div>
+</div><!-- GBs --><div data-cpRole="structuralContainer" id="gbsContainerTS">
+<div class="siteWrap2"><div data-cpRole="contentContainer" id="gbsTS">	<div id="ccb1764d33-4dd6-40d4-8a25-e354db407a76" data-containerid="b1764d33-4dd6-40d4-8a25-e354db407a76" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="30">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col8 first" style="" data-widgetcontainerid="ac455788-72a1-46e9-a393-a5060520d727">				
+	<div class="row nest first last wide">
+	
+	<div class="inner col col8 first last id51732ab8-1205-435b-ba1e-5a3226e13d06" style="" data-widgetcontainerid="51732ab8-1205-435b-ba1e-5a3226e13d06">	
+<div data-widget-id="af6ac6cb-a7d5-4b4b-aff9-835be6c19948" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidgetaf6ac6cb-a7d5-4b4b-aff9-835be6c19948" class="widget widgetGraphicLinks skin64 widgetOptionSet4 wide" data-elementqueryclasses='{"wide-narrow":"min-width:20em"}' data-elementquerymatch='matchMultiColumn' data-elementqueryunmatch='unmatchMultiColumn' data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid2 ">
+		<nav class="widgetGraphicLinksNav" aria-labelledby="GraphicLinkHeaderText">
+				<div class="row   wide">
+					<!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="/agendacenter" target="_self" class="fancyButton fancyButton73 " >
+		<span>
+			<span><span class="text">Agendas</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton73.fancyButton:link,.fancyButton73.fancyButton:visited, .fancyButton73div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=228');
+	background-repeat: no-repeat;
+	background-position: center top;
+transition: all .3s ease-in-out;}
+.fancyButton73.fancyButton:hover,.fancyButton73.fancyButton:focus,.fancyButton73.fancyButton:active,.fancyButton73.fancyButton.hover{
+}
+.fancyButton73.fancyButton:link > span,.fancyButton73.fancyButton:visited > span, .fancyButton73div.fancyButton > span{
+}
+.fancyButton73.fancyButton:hover > span,.fancyButton73.fancyButton:focus > span,.fancyButton73.fancyButton:active > span,.fancyButton73.fancyButton.hover > span{
+}
+.fancyButton73.fancyButton .text{
+	color: rgb(34, 34, 34);
+	font-size: 1.1em;
+	font-family: "Roboto";
+	padding-top: 115px;
+	padding-right: 5px;
+	padding-left: 5px;
+	font-weight: 700;
+	text-decoration: none;
+	padding-top: 115px;
+	padding-right: 5px;
+	padding-left: 5px;
+	background-image: url('/ImageRepository/Document?documentID=121');
+	background-repeat: no-repeat;
+	background-position: center 20px ;
+line-height: 1.2;
+background-size: 60px;
+position: relative;
+transition: all .2s ease-in-out;
+}
+.fancyButton73.fancyButton:hover .text,.fancyButton73.fancyButton:focus .text,.fancyButton73.fancyButton:active .text,.fancyButton73.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center 15px ;
+background-size: 70px;
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="/list.aspx" target="_self" class="fancyButton fancyButton74 " >
+		<span>
+			<span><span class="text">Subscribe to News</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton74.fancyButton:link,.fancyButton74.fancyButton:visited, .fancyButton74div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=227');
+	background-repeat: no-repeat;
+	background-position: center top;
+transition: all .3s ease-in-out;}
+.fancyButton74.fancyButton:hover,.fancyButton74.fancyButton:focus,.fancyButton74.fancyButton:active,.fancyButton74.fancyButton.hover{
+}
+.fancyButton74.fancyButton:link > span,.fancyButton74.fancyButton:visited > span, .fancyButton74div.fancyButton > span{
+}
+.fancyButton74.fancyButton:hover > span,.fancyButton74.fancyButton:focus > span,.fancyButton74.fancyButton:active > span,.fancyButton74.fancyButton.hover > span{
+}
+.fancyButton74.fancyButton .text{
+	color: rgb(34, 34, 34);
+	font-size: 1.1em;
+	font-family: "Roboto";
+	padding-top: 115px;
+	padding-right: 5px;
+	padding-left: 5px;
+	font-weight: 700;
+	text-decoration: none;
+	padding-top: 115px;
+	padding-right: 5px;
+	padding-left: 5px;
+	background-image: url('/ImageRepository/Document?documentID=133');
+	background-repeat: no-repeat;
+	background-position: center 20px ;
+line-height: 1.2;
+background-size: 60px;
+position: relative;
+transition: all .2s ease-in-out;
+}
+.fancyButton74.fancyButton:hover .text,.fancyButton74.fancyButton:focus .text,.fancyButton74.fancyButton:active .text,.fancyButton74.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center 15px ;
+background-size: 70px;
+}
+</style>
+
+ </li><!--
+--></ul></div><!--				-->
+				</div>
+			</nav>
+		</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col8" style="" data-widgetcontainerid="9182c2f4-2a5b-471c-bae0-15d805c42ab1">				
+	<div class="row nest first last wide">
+	
+	<div class="inner col col8 first last id17ab6bff-009b-4ab6-aa77-47e352034aaa" style="" data-widgetcontainerid="17ab6bff-009b-4ab6-aa77-47e352034aaa">	
+<div data-widget-id="642c1b24-6749-41eb-8121-8a5dba6be56a" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget642c1b24-6749-41eb-8121-8a5dba6be56a" class="widget widgetGraphicLinks skin64 widgetOptionSet4 wide" data-elementqueryclasses='{"wide-narrow":"min-width:20em"}' data-elementquerymatch='matchMultiColumn' data-elementqueryunmatch='unmatchMultiColumn' data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid2 ">
+		<nav class="widgetGraphicLinksNav" aria-labelledby="GraphicLinkHeaderText">
+				<div class="row   wide">
+					<!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="/1351/Emergency-Alert-Sign-Up" target="_self" class="fancyButton fancyButton75 " >
+		<span>
+			<span><span class="text">Emergency Alert Signup</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton75.fancyButton:link,.fancyButton75.fancyButton:visited, .fancyButton75div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=229');
+	background-repeat: no-repeat;
+	background-position: center top;
+transition: all .3s ease-in-out;}
+.fancyButton75.fancyButton:hover,.fancyButton75.fancyButton:focus,.fancyButton75.fancyButton:active,.fancyButton75.fancyButton.hover{
+}
+.fancyButton75.fancyButton:link > span,.fancyButton75.fancyButton:visited > span, .fancyButton75div.fancyButton > span{
+}
+.fancyButton75.fancyButton:hover > span,.fancyButton75.fancyButton:focus > span,.fancyButton75.fancyButton:active > span,.fancyButton75.fancyButton.hover > span{
+}
+.fancyButton75.fancyButton .text{
+	color: rgb(34, 34, 34);
+	font-size: 1.1em;
+	font-family: "Roboto";
+	padding-top: 115px;
+	padding-right: 5px;
+	padding-left: 5px;
+	font-weight: 700;
+	text-decoration: none;
+	padding-top: 115px;
+	padding-right: 5px;
+	padding-left: 5px;
+	background-image: url('/ImageRepository/Document?documentID=143');
+	background-repeat: no-repeat;
+	background-position: center 20px ;
+line-height: 1.2;
+background-size: 60px;
+position: relative;
+transition: all .2s ease-in-out;
+}
+.fancyButton75.fancyButton:hover .text,.fancyButton75.fancyButton:focus .text,.fancyButton75.fancyButton:active .text,.fancyButton75.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center 15px ;
+background-size: 70px;
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="/1281/Employment-Opportunities" target="_self" class="fancyButton fancyButton76 " >
+		<span>
+			<span><span class="text">Employment</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton76.fancyButton:link,.fancyButton76.fancyButton:visited, .fancyButton76div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=228');
+	background-repeat: no-repeat;
+	background-position: center top;
+transition: all .3s ease-in-out;}
+.fancyButton76.fancyButton:hover,.fancyButton76.fancyButton:focus,.fancyButton76.fancyButton:active,.fancyButton76.fancyButton.hover{
+}
+.fancyButton76.fancyButton:link > span,.fancyButton76.fancyButton:visited > span, .fancyButton76div.fancyButton > span{
+}
+.fancyButton76.fancyButton:hover > span,.fancyButton76.fancyButton:focus > span,.fancyButton76.fancyButton:active > span,.fancyButton76.fancyButton.hover > span{
+}
+.fancyButton76.fancyButton .text{
+	color: rgb(34, 34, 34);
+	font-size: 1.1em;
+	font-family: "Roboto";
+	padding-top: 115px;
+	padding-right: 5px;
+	padding-left: 5px;
+	font-weight: 700;
+	text-decoration: none;
+	padding-top: 115px;
+	padding-right: 5px;
+	padding-left: 5px;
+	background-image: url('/ImageRepository/Document?documentID=127');
+	background-repeat: no-repeat;
+	background-position: center 20px ;
+line-height: 1.2;
+background-size: 60px;
+position: relative;
+transition: all .2s ease-in-out;
+}
+.fancyButton76.fancyButton:hover .text,.fancyButton76.fancyButton:focus .text,.fancyButton76.fancyButton:active .text,.fancyButton76.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center 15px ;
+background-size: 70px;
+}
+</style>
+
+ </li><!--
+--></ul></div><!--				-->
+				</div>
+			</nav>
+		</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col8 last" style="" data-widgetcontainerid="50832d5b-eb31-4f91-a5d7-1e30fa353c3b">				
+	<div class="row nest first last wide">
+	
+	<div class="inner col col8 first last id638ae5f4-db24-45af-a45a-255668624c45" style="" data-widgetcontainerid="638ae5f4-db24-45af-a45a-255668624c45">	
+<div data-widget-id="1603e8aa-0231-4efe-baa0-18f0ddd3f936" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget1603e8aa-0231-4efe-baa0-18f0ddd3f936" class="widget widgetGraphicLinks skin64 widgetOptionSet4 wide" data-elementqueryclasses='{"wide-narrow":"min-width:20em"}' data-elementquerymatch='matchMultiColumn' data-elementqueryunmatch='unmatchMultiColumn' data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid2 ">
+		<nav class="widgetGraphicLinksNav" aria-labelledby="GraphicLinkHeaderText">
+				<div class="row   wide">
+					<!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="/1391/Online-Payments" target="_self" class="fancyButton fancyButton77 " >
+		<span>
+			<span><span class="text">Online Payments</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton77.fancyButton:link,.fancyButton77.fancyButton:visited, .fancyButton77div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=227');
+	background-repeat: no-repeat;
+	background-position: center top;
+transition: all .3s ease-in-out;}
+.fancyButton77.fancyButton:hover,.fancyButton77.fancyButton:focus,.fancyButton77.fancyButton:active,.fancyButton77.fancyButton.hover{
+}
+.fancyButton77.fancyButton:link > span,.fancyButton77.fancyButton:visited > span, .fancyButton77div.fancyButton > span{
+}
+.fancyButton77.fancyButton:hover > span,.fancyButton77.fancyButton:focus > span,.fancyButton77.fancyButton:active > span,.fancyButton77.fancyButton.hover > span{
+}
+.fancyButton77.fancyButton .text{
+	color: rgb(34, 34, 34);
+	font-size: 1.1em;
+	font-family: "Roboto";
+	padding-top: 115px;
+	padding-right: 5px;
+	padding-left: 5px;
+	font-weight: 700;
+	text-decoration: none;
+	padding-top: 115px;
+	padding-right: 5px;
+	padding-left: 5px;
+	background-image: url('/ImageRepository/Document?documentID=135');
+	background-repeat: no-repeat;
+	background-position: center 20px ;
+line-height: 1.2;
+background-size: 60px;
+position: relative;
+transition: all .2s ease-in-out;
+}
+.fancyButton77.fancyButton:hover .text,.fancyButton77.fancyButton:focus .text,.fancyButton77.fancyButton:active .text,.fancyButton77.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center 15px ;
+background-size: 70px;
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="/1630/Forms-Documents" target="_self" class="fancyButton fancyButton78 " >
+		<span>
+			<span><span class="text">Forms</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton78.fancyButton:link,.fancyButton78.fancyButton:visited, .fancyButton78div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=229');
+	background-repeat: no-repeat;
+	background-position: center top;
+transition: all .3s ease-in-out;}
+.fancyButton78.fancyButton:hover,.fancyButton78.fancyButton:focus,.fancyButton78.fancyButton:active,.fancyButton78.fancyButton.hover{
+}
+.fancyButton78.fancyButton:link > span,.fancyButton78.fancyButton:visited > span, .fancyButton78div.fancyButton > span{
+}
+.fancyButton78.fancyButton:hover > span,.fancyButton78.fancyButton:focus > span,.fancyButton78.fancyButton:active > span,.fancyButton78.fancyButton.hover > span{
+}
+.fancyButton78.fancyButton .text{
+	color: rgb(34, 34, 34);
+	font-size: 1.1em;
+	font-family: "Roboto";
+	padding-top: 115px;
+	padding-right: 5px;
+	padding-left: 5px;
+	font-weight: 700;
+	text-decoration: none;
+	padding-top: 115px;
+	padding-right: 5px;
+	padding-left: 5px;
+	background-image: url('/ImageRepository/Document?documentID=129');
+	background-repeat: no-repeat;
+	background-position: center 20px ;
+line-height: 1.2;
+background-size: 60px;
+position: relative;
+transition: all .2s ease-in-out;
+}
+.fancyButton78.fancyButton:hover .text,.fancyButton78.fancyButton:focus .text,.fancyButton78.fancyButton:active .text,.fancyButton78.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center 15px ;
+background-size: 70px;
+}
+</style>
+
+ </li><!--
+--></ul></div><!--				-->
+				</div>
+			</nav>
+		</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div><!-- Footer --><footer data-cpRole="structuralContainer" id="footerContainerTS">
+<div class="siteWrap2"><div data-cpRole="contentContainer" id="footerTS">	<div id="cce1d8ed70-37a3-4c3c-be93-57ec70361cf4" data-containerid="e1d8ed70-37a3-4c3c-be93-57ec70361cf4" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="" data-widgetcontainerid="53a3e5aa-0657-4571-ba50-f63614282fe7">				
+	<div class="row nest first last wide">
+	
+	<div class="inner col col24 first last id7ed3ca8e-2c29-4483-90d1-1c6ac22edad4" style="" data-widgetcontainerid="7ed3ca8e-2c29-4483-90d1-1c6ac22edad4">	
+    <div data-widget-id="1d80801c-ce33-46e2-8c0d-0b83e9b0778c" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdv1d80801c-ce33-46e2-8c0d-0b83e9b0778c" class="widget widgetInfoAdvanced skin65 widgetOptionSet5 wide" data-modulewidgettype="infoAdv" data-elementqueryclasses='{"wide-narrow":"min-width:25em"}' data-elementquerymatch='matchMultiColumn' data-elementqueryunmatch='unmatchMultiColumn' aria-label="Info Advanced">
+			<header class="widgetHeader" id="header1d80801c-ce33-46e2-8c0d-0b83e9b0778c">
+		<div class="">
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row  wide">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p><img src="/ImageRepository/Document?documentId=226" class="fr-dib" alt="Mashpee MA"></p><p><br></p>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdv1d80801c-ce33-46e2-8c0d-0b83e9b0778c .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="" data-widgetcontainerid="32ca7193-3ac9-42c5-bf97-02d9416aa629">				
+	<div class="row nest first last wide">
+	
+	<div class="inner col col24 first last idfc9dec22-5a4c-4580-b109-b684a5155c33" style="" data-widgetcontainerid="fc9dec22-5a4c-4580-b109-b684a5155c33">	
+<div data-widget-id="c44666ec-2f1c-4af4-8e48-1b8629536fe1" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidgetc44666ec-2f1c-4af4-8e48-1b8629536fe1" class="widget widgetGraphicLinks skin68 widgetOptionSet29 wide" data-elementqueryclasses='{"wide-narrow":"min-width:1em"}' data-elementquerymatch='matchMultiColumn' data-elementqueryunmatch='unmatchMultiColumn' data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid1 ">
+		<nav class="widgetGraphicLinksNav" aria-labelledby="GraphicLinkHeaderText">
+				<ul class="semanticList">
+					<!--
+
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.facebook.com/Mashpeema.gov/" target="_self" aria-label="Facebook">
+
+<img src="/ImageRepository/Document?documentID=161" 
+     class="graphicButtonLink" alt="Facebook" 
+     onmouseover="this.src='/ImageRepository/Document?documentID=161'" 
+	onmouseout="this.src='/ImageRepository/Document?documentID=161'"
+     onfocus="this.src='/ImageRepository/Document?documentID=161'" 
+	onblur="this.src='/ImageRepository/Document?documentID=161'"> 
+</a></li><!--
+				-->
+				</ul>
+			</nav>
+		</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="" data-widgetcontainerid="b6af3e7f-f9b0-441b-95b4-e608760bde38">				
+	<div class="row nest first last wide">
+	
+	<div class="inner col col24 first last idcf09cdfb-7f01-4aa2-909a-6bb3e29a0f57" style="" data-widgetcontainerid="cf09cdfb-7f01-4aa2-909a-6bb3e29a0f57">	
+    <div data-widget-id="c0017eb8-16c4-4e1f-81b4-114bae3a06d4" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdvc0017eb8-16c4-4e1f-81b4-114bae3a06d4" class="widget widgetInfoAdvanced skin65 widgetOptionSet30 wide" data-modulewidgettype="infoAdv" data-elementqueryclasses='{"wide-narrow":"min-width:25em"}' data-elementquerymatch='matchMultiColumn' data-elementqueryunmatch='unmatchMultiColumn' aria-label="Info Advanced">
+			<header class="widgetHeader" id="headerc0017eb8-16c4-4e1f-81b4-114bae3a06d4">
+		<div class="">
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid6 ">
+		<div class="row autoWidths center wide">
+					<div class="col col1 first ">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p><strong>Town of Mashpee Massachusetts</strong></p>
+</li>						</ol>
+					</div>
+					<div class="col col1  ">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>Town Hall</p>
+</li>						</ol>
+					</div>
+					<div class="col col1  ">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>16 Great Neck Road North</p>
+</li>						</ol>
+					</div>
+					<div class="col col1  ">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>Mashpee, MA 02649</p>
+</li>						</ol>
+					</div>
+					<div class="col col1  ">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>Phone: (508) 539-1400</p>
+</li>						</ol>
+					</div>
+					<div class="col col1  last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>Hours: Monday - Friday: 8:30 am - 4:30 pm</p>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdvc0017eb8-16c4-4e1f-81b4-114bae3a06d4 .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</footer><!-- Powered By --><div data-cpRole="structuralContainer" id="poweredByContainerTS">
+<div class="siteWrap2"><div data-cpRole="contentContainer" id="linksTS">	<div id="cc04c76903-32c3-4334-8cfc-f8abb7eef28a" data-containerid="04c76903-32c3-4334-8cfc-f8abb7eef28a" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="" data-widgetcontainerid="4ecbf0f9-5181-4769-a47d-677fa2d3d276">				
+	<div class="row nest first last wide">
+	
+	<div class="inner col col24 first last id10cf36b3-7456-4a75-a708-f628ce6d7460" style="" data-widgetcontainerid="10cf36b3-7456-4a75-a708-f628ce6d7460">	
+	<div data-widget-id="31f43d69-acd1-445d-bfde-257d06930795" data-widget-controller-path="/QuickLinks/Widget">
+
+
+
+
+
+
+
+
+	<section id="widgetQuicklink31f43d69-acd1-445d-bfde-257d06930795" class="widget widgetQuickLinks skin66 widgetOptionSet26 narrow" data-modulewidgettype="quickLinks" data-elementqueryclasses='{"wide-narrow":"min-width:25em"}' data-elementquerymatch='matchMultiColumn' data-elementqueryunmatch='unmatchMultiColumn' aria-label="Quick Links">
+			<header class="widgetHeader" id="quickLinksHeader31f43d69-acd1-445d-bfde-257d06930795">
+		<div class="">
+						</div>
+	</header>
+	<div class="widgetBody cpGrid cpGrid5 ">
+        <div class="row autoWidths center narrow">
+				<div class="col col1 first ">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="/" target="_self" >Home</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+				<div class="col col1  ">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="/sitemap" target="_self" >Site Map</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+				<div class="col col1  ">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="/site/accessibility" target="_self" >Accessibility</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+				<div class="col col1  ">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="/site/copyright" target="_self" >Copyright Notices</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+				<div class="col col1  last">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="/site/privacy" target="_self" >Privacy Policy</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+		</div>
+        
+	</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/QuickLinks.aspx</div>
+	</div>
+
+	</section>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div><div data-cpRole="contentContainer" id="poweredByTS">	<div id="cc7cf7ab4c-fb35-4c97-bc36-bb02e534d3ca" data-containerid="7cf7ab4c-fb35-4c97-bc36-bb02e534d3ca" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="" data-widgetcontainerid="e6c1df03-4afe-4b08-8865-863d2dfd574b">				
+	<div class="row nest first last wide">
+	
+	<div class="inner col col24 first last id2577599b-70f7-4de5-a173-721bf5eb66f5" style="" data-widgetcontainerid="2577599b-70f7-4de5-a173-721bf5eb66f5">	
+ 
+	<div data-widget-id='55ce3d4f-943c-42b9-b3ac-4594f61b4bd7' data-moduleName="customHtml" id='widgetCustomHtml55ce3d4f-943c-42b9-b3ac-4594f61b4bd7' class="widget widgetCustomHtml skin67 narrow" >
+	<div class="widgetBody pageStyles" id="widgetBody55ce3d4f-943c-42b9-b3ac-4594f61b4bd7">
+		<div id="customHtml55ce3d4f-943c-42b9-b3ac-4594f61b4bd7"><div><style>
+  /* CP icon */
+  .cpBylineIconTS {
+  }
+  /* CP Text */
+  .cpBylineTextTS,
+  .cpBylineTextTS a:link {
+  }
+
+  .cpBylineTS {
+  }
+  
+  .cpBylineIconTS {
+    fill: currentColor;
+    width: 39px;
+    height: 26px;
+    display: inline;
+    vertical-align: middle;
+  }
+</style>
+
+<div class="widgetItem cpBylineTS">
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100" class="cpBylineIconTS">
+    <path class="c" d="M73.4,23.2h-19v16.7h19c2.8,0,5,2.2,5,5c0,2.8-2.2,5-5,5h-19v28.4h5.5l11.3-11.7h2.2c11.9,0,21.6-9.7,21.6-21.6C95,33,85.3,23.2,73.4,23.2"></path>
+    <path class="p" d="M45.8,66.5H26.6C14.7,66.5,5,56.8,5,44.9C5,33,14.7,23.2,26.6,23.2h19.1v16.7H26.6c-2.8,0-5,2.2-5,5c0,2.8,2.2,5,5,5h19.1V66.5z"></path>
+  </svg>
+  <span class="cpBylineTextTS">Government Websites by <a href="https://connect.civicplus.com/referral">CivicPlus&reg;</a></span>
+</div>
+</div></div>
+	</div>
+	</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div>
+</div>
+
+            </div>
+        </div>
+    </div>
+
+<link href="/745732998.css" rel="stylesheet" type="text/css" />
+
+<div id="SplashMessageWrapper" class="cp-Splash-wrapper">
+	<div role="dialog" aria-labelledby="cp-Splash-title" aria-describedby="editorContentDesc" aria-modal="true" tabindex="-1" id="SplashMessage" class="hidden cp-Splash cp-Splash--modal is-open">
+		<div class="cp-Splash-header">
+			<h2 class="cp-Splash-title" id="cp-Splash-title">Loading</h2>
+			<button class="cp-Splash-Btn cp-Splash-close" aria-label="Close this modal" title="Close this window">
+				<svg id="iconClose" viewBox="0 0 25 25">
+					<polygon style="fill:currentcolor"
+							 points="18.806,6.98 18.075,6.248 12.532,11.792 6.989,6.248 6.257,6.98 11.786,12.508 6.212,18.084 6.943,18.815 12.532,13.224 18.12,18.815 18.851,18.084 13.277,12.508"></polygon>
+				</svg>
+			</button>
+		</div>
+		<div class="cp-Splash-body">
+			<div class="cp-Splash-Prose editorContent fr-view" id="editorContentDesc">
+				<!-- Content from the Froala Editor will go here. -->
+				Loading
+			</div>
+		</div>
+		<div class="cp-Splash-footer">
+			<button class="cp-Splash-Btn cp-Splash-Btn--NoShow">Do Not Show Again</button>
+			<button class="cp-Splash-Btn cp-Splash-Btn--Close">Close</button>
+		</div>
+	</div>
+</div>
+
+<script src="/Assets/Scripts/APIClient.js"></script>
+<script src="/Assets/Mystique/Shared/Scripts/Moment/Moment.min.js"></script>
+<script src="/Assets/Scripts/SplashModal/SplashModalRender.js"></script>
+<script>
+
+		$(document).ready(function () {
+			var filter = {
+				targetId: '4634',
+				targetType: 1
+			}
+
+			new SplashModalRender().triggerRender(filter);
+		});
+</script>
+
+
+	
+	
+	
+	
+
+
+
+	
+
+
+
+
+
+
+    <script src="/-978663714.js" type="text/javascript"></script>
+    <script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-67790781-46", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script><!-- AudioEye --> <script type="text/javascript">!function(){var b=function(){window.__AudioEyeSiteHash="ef27948b778960399b0c40ef3bac95e7";var a=document.createElement("script");a.src="https://wsmcdn.audioeye.com/aem.js";a.type="text/javascript";a.setAttribute("async","");document.getElementsByTagName("body")[0].appendChild(a)};"complete"!==document.readyState?window.addEventListener?window.addEventListener("load",b):window.attachEvent&&window.attachEvent("onload",b):b()}();</script> <!-- End AudioEye -->
+
+
+    <script type="text/javascript">
+        $(function () {
+            document.cookie = "responsiveGhost=0; path=/";
+        });
+        $(window).on("load", function () {
+            $('body').addClass('doneLoading').removeClass('hideContent');
+
+            if ($('#404Content').length > 0)
+                $('div#bodyWrapper').css('padding', '0px');
+        });
+    </script>
+
+    <noscript>
+        <style>
+            body.hideContent {
+                opacity: 1 !important;
+            }
+        </style>
+    </noscript>
+
+        
+<div style="display: none;">
+	<svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+
+		<symbol id="iconArrow--left" viewbox="0 0 25 25">
+			<title>Arrow Left</title>
+			<polygon style="fill:currentcolor" points="18.044,25 19.498,23.545 8.409,12.454 19.408,1.455 17.954,0 5.502,12.452"></polygon>
+		</symbol>
+
+		<symbol id="iconArrow--right" viewbox="0 0 25 25">
+			<title>Arrow Right</title>
+			<polygon style="fill:currentcolor" points="6.957,0 5.502,1.455 16.591,12.546 5.592,23.545 7.047,25 19.498,12.548"></polygon>
+		</symbol>
+
+	</svg>
+</div>
+    <script type="text/javascript">loadCSS('//fonts.googleapis.com/css?family=Roboto:500,500italic,600,600italic,700,700italic,italic,regular|Roboto+Condensed:500,500italic,600,600italic,700,700italic,italic,regular|');</script>
+    
+
+    <div class="hidden activeWidgetSkinComponentsOnPageJson">[]</div>
+        <div style="display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <symbol id="iconSlideshowArrowLeft" viewBox="0 0 22.68 40">
+                    <title>Slideshow Left Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M20,40a2.67,2.67,0,0,1-1.9-.79L.79,21.9a2.68,2.68,0,0,1,0-3.79L18.1.79a2.68,2.68,0,1,1,3.79,3.79L6.47,20,21.89,35.42A2.68,2.68,0,0,1,20,40Z"></path>
+                    </g>
+                </symbol>
+                <symbol id="iconSlideshowArrowRight" viewBox="0 0 22.68 40">
+                    <title>Slideshow Right Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M2.68,0a2.67,2.67,0,0,1,1.9.79L21.89,18.1a2.68,2.68,0,0,1,0,3.79L4.58,39.21A2.68,2.68,0,0,1,.79,35.42L16.21,20,.79,4.58A2.68,2.68,0,0,1,2.68,0Z"></path>
+                    </g>
+                </symbol>
+            </svg>
+        </div>
+    
+	
+
+    <div id="root-picker-outlet"></div>
+</body>
+</html>

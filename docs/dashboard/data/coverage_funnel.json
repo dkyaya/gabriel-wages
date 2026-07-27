@@ -1,8 +1,8 @@
 {
   "metadata": {
     "schema_version": "0.1.0",
-    "generated_at": "2026-07-27T13:03:53Z",
-    "data_vintage": "2026-07-23",
+    "generated_at": "2026-07-27T14:46:58Z",
+    "data_vintage": "2026-07-27",
     "source_files": [
       "docs/analysis/national_scout_coverage_state.csv",
       "docs/analysis/national_scout_coverage_municipality_2026-07-20.csv",

@@ -1,0 +1,21 @@
+{
+  "repository": "dkyaya/gabriel-wages",
+  "default_branch": "main",
+  "repository_visibility": "PUBLIC",
+  "pages_build_type": "workflow",
+  "pages_api_source_branch": "main",
+  "pages_api_source_path": "/",
+  "pages_url": "https://dkyaya.github.io/gabriel-wages/",
+  "workflow_file": ".github/workflows/deploy-dashboard.yml",
+  "workflow_artifact_path": "docs/dashboard/dist",
+  "inspected_workflow_run_id": 30268663334,
+  "inspected_workflow_head_sha": "24615facf4d2efd18e9976d0ae0033946cf71715",
+  "workflow_build_conclusion": "success",
+  "workflow_deploy_conclusion": "success",
+  "latest_pages_deployment_id": 5622927443,
+  "latest_pages_deployment_state": "success",
+  "remote_settings_changed": false,
+  "git_fetch_or_pull_used": false,
+  "credentials_or_headers_saved": false,
+  "diagnosis": "successful current deployment contained a stale current-header data contract"
+}

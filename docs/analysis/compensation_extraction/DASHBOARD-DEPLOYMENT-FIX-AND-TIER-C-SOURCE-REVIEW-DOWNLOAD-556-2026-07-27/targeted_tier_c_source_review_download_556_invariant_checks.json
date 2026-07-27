@@ -1,0 +1,20 @@
+{
+  "all_invariants_passed": true,
+  "controlled_statuses_only": true,
+  "dashboard_current_metadata_not_stale_2026_07_23": true,
+  "deterministic_region_mapping_only": true,
+  "duplicate_file_hashes_detected_and_quarantined": true,
+  "exclusions_preserved": true,
+  "global_analysis_readiness_false": true,
+  "locked_queue_exactly_556": true,
+  "no_durable_ledger_merge": true,
+  "no_geographic_metadata_invented": true,
+  "no_pdf_page_text_extraction_or_ocr": true,
+  "no_rating_ingestion_codification_or_model_analysis": true,
+  "only_verified_source_leads_entered": true,
+  "partial_outputs_cannot_masquerade_as_complete": true,
+  "results_reconcile_to_lock": true,
+  "retained_files_inside_task_directory_and_hash_valid": true,
+  "tier_a_b_d_repair_deprioritized_excluded": true,
+  "unsupported_types_quarantined": true
+}
