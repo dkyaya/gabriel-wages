@@ -4431,16 +4431,82 @@ def build_reports_index_layer(
     if current_count != 1:
         raise ValueError("Report index must contain exactly one current report")
 
+    historical_reports = [
+        {
+            **report,
+            "current": False,
+            "historical": True,
+            "link_label": "Open historical source-discovery report PDF",
+        }
+        for report in reports
+    ]
+    repository_root_url = "https://github.com/dkyaya/gabriel-wages/blob/main/"
+    published_reports = [
+        {
+            "id": "bounded-mechanism-linkage-memo-2026-07-26",
+            "title": "Bounded Internal Mechanism-Linkage Claim Memo",
+            "report_type": "Bounded internal evidence memo",
+            "date": "2026-07-26",
+            "checkpoint": "268 exact same-source linkages; documentary/co-location evidence only",
+            "summary": (
+                "The current evidence memo separates direct-text co-location, documentary "
+                "mechanism-value scaffolds, provisional linkages, and records that remain "
+                "insufficient for claims. It contains no wage-gap estimate or causal finding."
+            ),
+            "tags": ["current", "bounded memo", "co-location", "claim boundaries"],
+            "current": True,
+            "historical": False,
+            "href": repository_root_url + (
+                "docs/analysis/compensation_extraction/"
+                "BOUNDED-INTERNAL-MECHANISM-LINKAGE-CLAIM-MEMO-2026-07-26/"
+                "bounded_internal_mechanism_linkage_claim_memo.md"
+            ),
+            "link_label": "Open current evidence memo",
+            "scope_metrics": [
+                {"label": "same-source pairs", "value": 268},
+                {"label": "quantitative rows", "value": 208},
+                {"label": "qualitative records", "value": 90},
+            ],
+        },
+        {
+            "id": "tier-c-source-review-download-2026-07-27",
+            "title": "Tier C Source Review and Download Result",
+            "report_type": "Current operations report",
+            "date": "2026-07-27",
+            "checkpoint": "463 retained sources; PDF/text-layer readiness ready next",
+            "summary": (
+                "Bounded source review retained 463 files from 556 verified Tier C "
+                "source leads. The files remain unextracted, unrated, and outside "
+                "global analysis readiness."
+            ),
+            "tags": ["Tier C", "retained sources", "readiness", "current operations"],
+            "current": False,
+            "historical": False,
+            "href": repository_root_url + (
+                "docs/analysis/"
+                "dashboard_deployment_fix_and_tier_c_source_review_download_556_result_2026-07-27.md"
+            ),
+            "link_label": "Open Tier C source-review report",
+            "scope_metrics": [
+                {"label": "verified leads", "value": 556},
+                {"label": "retained sources", "value": 463},
+                {"label": "oversized/deferred", "value": 18},
+            ],
+        },
+        *historical_reports,
+    ]
+
     return {
         "schema_version": source_index.get("schema_version", "1.0.0"),
         "generated_at": metadata["generated_at"],
-        "data_vintage": source_index.get("data_vintage", metadata["data_vintage"]),
+        "data_vintage": "2026-07-27",
         "source_file": relative(REPORTS_INDEX_SOURCE_PATH),
-        "reports": reports,
+        "reports": published_reports,
         "disclaimer": (
-            "Reports summarize source-discovery and research-operations status. "
-            "Candidate rows remain unverified leads; no report in this index should "
-            "be interpreted as a wage-gap estimate or causal finding."
+            "The current memo and operations report summarize bounded documentary, "
+            "co-location, verification, and retained-source status. Historical discovery "
+            "reports are labeled historical. No report is a wage-gap estimate, regression, "
+            "treatment effect, national prevalence result, or final causal finding."
         ),
     }
 
@@ -6290,6 +6356,11 @@ def build_analysis_readiness(
             },
         },
         "analyses_available_now": [
+            "bounded internal mechanism-linkage memo: 268 exact same-source co-location pairs",
+            "Tier C verification status: 556 verified source leads",
+            "Tier C source-review status: 463 retained files awaiting PDF/text-layer readiness",
+            "documentary mechanism-value scaffolds with explicit noncausal claim boundaries",
+            "historical discovery coverage and operational queue context",
             "municipal universe and scout coverage rates",
             "candidate yield and parseable-empty rates",
             "connection-failure accounting",
@@ -6302,6 +6373,8 @@ def build_analysis_readiness(
             else []
         ),
         "analyses_not_yet_supported": [
+            "global analysis readiness from the retained Tier C source scope",
+            "text-extracted or rated Tier C evidence",
             "verified source completeness rates across the national queue",
             "structured police, fire, and non-safety wage-gap estimates",
             "causal or mechanism regressions using scout metadata",
@@ -6309,9 +6382,10 @@ def build_analysis_readiness(
             "claim promotion based only on candidate counts",
         ],
         "promotion_gate": (
-            "Do not show wage-gap or regression results until a dedicated, validated "
-            "structured wage input supplies municipality, bargaining unit, occupation, "
-            "cycle, wage concept, provenance, and matched-set identifiers."
+            "The next authorized step is bounded PDF/text-layer readiness over 463 retained "
+            "Tier C files. Do not show wage-gap, regression, treatment-effect, national "
+            "prevalence, or causal results until separately validated matched structured "
+            "evidence supports them."
         ),
     }
 
@@ -6703,7 +6777,11 @@ def build_project_phase_summary(
         "stage": "tier_c_source_review_download_pdf_readiness_transition",
         "current_phase": "Dashboard fixed; Tier C source review complete; PDF/text-layer readiness ready",
         "current_phase_code": "dashboard_fix_and_tier_c_download_completed_pdf_readiness_ready_dashboard_fixed",
+        "current_evidence_status": "bounded_co_location_documentary_scaffold_only",
         "global_analysis_readiness": False,
+        "wage_gap_estimates_available": False,
+        "final_causal_claims_available": False,
+        "regression_or_treatment_effect_estimates_available": False,
         "memo_decision": wage_stage["bounded_internal_mechanism_linkage_claim_memo_decision"],
         "memo_scope": wage_stage["bounded_internal_mechanism_linkage_claim_memo_scope"],
         "memo_path": wage_stage["bounded_internal_mechanism_linkage_claim_memo_path"],
@@ -6724,6 +6802,10 @@ def build_project_phase_summary(
         "tier_c_retained_by_content_type": wage_stage["targeted_tier_c_retained_by_content_type"],
         "tier_c_source_review_download_result_path": "docs/analysis/dashboard_deployment_fix_and_tier_c_source_review_download_556_result_2026-07-27.md",
         "pdf_text_layer_readiness_ready_next": wage_stage["targeted_tier_c_pdf_text_layer_readiness_ready_next"],
+        "current_report_title": "Bounded Internal Mechanism-Linkage Claim Memo",
+        "current_report_path": wage_stage["bounded_internal_mechanism_linkage_claim_memo_path"],
+        "current_operational_report_path": "docs/analysis/dashboard_deployment_fix_and_tier_c_source_review_download_556_result_2026-07-27.md",
+        "next_task": "bounded Tier C PDF/text-layer readiness review over 463 retained sources",
         "checkpoint_target_scout_covered": SCOUT_CHECKPOINT_TARGET,
         "current_scout_covered": covered,
         "remaining_to_checkpoint": remaining,
@@ -6771,23 +6853,17 @@ def build_project_phase_summary(
             "approximately 2,000-covered checkpoint was exceeded. Broad scouting "
             "is paused; begin the documented downstream cycle."
         ),
-        "next_phase": (
-            "Verification, extraction, ingestion, rating, descriptive wage-growth-gap "
-            "analysis, and mechanism-correlation documentation"
-        ),
+        "next_phase": "bounded Tier C PDF/text-layer readiness review",
         "next_phase_sequence": [
-            "verify candidate sources",
-            "extract wage data",
-            "ingest structured observations",
-            "rate source quality and extractability",
-            "analyze descriptive wage-growth gaps",
-            "document correlated wage mechanisms",
-            "add wage-growth-gap map filtering",
-            "decide the most efficient repeat strategy",
+            "lock the 463 retained Tier C source files",
+            "verify local paths, sizes, hashes, and content-type lanes",
+            "classify PDF and HTML text-layer readiness without extraction",
+            "preserve OCR-later, oversized, noisy, corrupt, and review-needed exclusions",
+            "prepare a separately authorized later text-extraction queue",
         ],
         "regressions_status": "Deferred",
         "last_updated_commit": CURRENT_SOURCE_ACCOUNTING_COMMIT,
-        "last_updated_context": "verification_round1_routing_merged",
+        "last_updated_context": "tier_c_source_review_download_completed_pdf_text_layer_readiness_ready",
         "future_live_controls": [
             "stronger preflight gate",
             "compact prompts",
@@ -6797,11 +6873,12 @@ def build_project_phase_summary(
             "one serial accounting merge after combined lane audit",
         ],
         "caveats": [
-            "Candidate rows are unverified.",
+            "Historical discovery and candidate-queue panels are preserved as labeled historical context.",
+            "The 463 retained Tier C files are not extracted, rated, ingested, codified, causal, or analysis-ready.",
+            "The bounded memo supports documentary co-location scaffolds only.",
             "Wage gaps have not been calculated.",
-            "Mechanisms have not been analyzed for correlation with wage-growth gaps.",
-            "Priority tiers are operational scheduling inputs, not findings.",
-            "The checkpoint is a workflow pause point, not an evidentiary threshold.",
+            "Regressions, treatment-effect estimates, national prevalence claims, and final causal claims are unavailable.",
+            "Global analysis readiness remains false.",
         ],
     }
 

@@ -5,7 +5,7 @@ const STAGE_LABELS = {
   verification_stage: "Source verification",
   ingestion_stage: "Ingestion",
   codified_stage: "Codified evidence",
-  wage_extraction_stage: "Wage extraction",
+  wage_extraction_stage: "Bounded evidence / text readiness",
   regression_stage: "Regression results",
 };
 
@@ -14,15 +14,15 @@ export function AnalysisReadinessPanel({ data, phase }) {
     <section className="panel readiness-panel hub-section" id="descriptive-analysis" aria-labelledby="readiness-title">
       <div className="section-heading">
         <div>
-          <p className="eyebrow">Future analysis capability</p>
-          <h2 id="readiness-title">Descriptive Wage-Gap Analysis, Planned</h2>
+          <p className="eyebrow">Analysis boundary</p>
+          <h2 id="readiness-title">Documentary evidence advanced; global analysis remains closed</h2>
         </div>
-        <StatusPill tone="future">Available after verification and extraction</StatusPill>
+        <StatusPill tone="future">Global analysis readiness false</StatusPill>
       </div>
 
       <div className="stage-grid">
         {Object.entries(data.stage_availability).map(([key, stage]) => {
-          const current = key === "scout_stage";
+          const current = key === "wage_extraction_stage";
           const priorContext = key === "codified_stage" && stage.available;
           return (
             <article className={`stage-card ${current ? "stage-current" : "stage-future"}`} key={key}>
@@ -48,24 +48,24 @@ export function AnalysisReadinessPanel({ data, phase }) {
 
       <div className="regression-lock" role="note">
         <div>
-          <p className="eyebrow">Planned dashboard capability</p>
-          <h3>Wage-growth gap percentage</h3>
+          <p className="eyebrow">Not yet available</p>
+          <h3>Wage-growth gap analysis remains outside the current scope</h3>
         </div>
         <div>
           <ul>
-            <li>Calculate safety wage growth minus matched non-safety wage growth within comparable municipality/time windows.</li>
-            <li>Add a map layer and filtering by wage-growth gap percentage.</li>
-            <li>Document mechanisms correlated with higher or lower descriptive gaps.</li>
-            <li>Keep regressions deferred until much later.</li>
+            <li>The current memo reports bounded same-source co-location scaffolds only.</li>
+            <li>The 463 retained Tier C sources have not been text-extracted or rated.</li>
+            <li>No normalized wage comparison, descriptive wage gap, regression, or treatment effect is available.</li>
+            <li>Final causal and national prevalence claims remain unavailable.</li>
           </ul>
           <p>{data.promotion_gate}</p>
         </div>
       </div>
 
       <p className="panel-note">
-        No wage-growth gaps have been calculated and no mechanism relationship has been analyzed.
-        This work begins only after the approximately {formatNumber(phase.checkpoint_target_scout_covered)}-covered
-        checkpoint and validated source verification/extraction.
+        The current operational next step is bounded PDF/text-layer readiness review over
+        {" "}{formatNumber(phase.tier_c_retained_downloaded_source_count)} retained Tier C sources. Readiness is
+        not extraction and will not make these files globally analysis-ready.
       </p>
 
       <details>

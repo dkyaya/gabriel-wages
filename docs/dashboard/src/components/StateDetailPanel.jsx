@@ -7,18 +7,18 @@ export function StateDetailPanel({ state, queue, onOpenReport }) {
     <aside className="panel state-panel" aria-live="polite" aria-labelledby="state-panel-title">
       <div className="section-heading">
         <div>
-          <p className="eyebrow">Selected state</p>
+          <p className="eyebrow">Selected state · historical discovery</p>
           <h2 id="state-panel-title">{state.state_name}</h2>
         </div>
-        <button className="report-button no-print" onClick={onOpenReport}>Open report</button>
+        <button className="report-button no-print" onClick={onOpenReport}>Open historical state report</button>
       </div>
 
       <div className="status-row">
         <StatusPill tone={hasCoverage ? "scout" : "future"}>
           {hasCoverage ? "Scout coverage recorded" : "Scout not started"}
         </StatusPill>
-        <StatusPill tone="future">Not yet verified</StatusPill>
-        <StatusPill tone="future">Not yet ingested</StatusPill>
+        <StatusPill tone="calibration">Historical snapshot</StatusPill>
+        <StatusPill tone="future">Not a current evidence view</StatusPill>
       </div>
 
       <div className="state-metrics">

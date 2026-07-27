@@ -1,0 +1,33 @@
+{
+  "current_evidence_status": "bounded co-location/documentary scaffold only",
+  "current_major_phase": "Tier C source review/download complete; PDF/text-layer readiness ready next",
+  "current_report_href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/compensation_extraction/BOUNDED-INTERNAL-MECHANISM-LINKAGE-CLAIM-MEMO-2026-07-26/bounded_internal_mechanism_linkage_claim_memo.md",
+  "current_report_id": "bounded-mechanism-linkage-memo-2026-07-26",
+  "data_vintage": "2026-07-27",
+  "final_causal_claims_available": false,
+  "global_analysis_readiness": false,
+  "historical_sections": [
+    "Coverage",
+    "Priority tiers",
+    "Operations",
+    "Candidate queue",
+    "State yield",
+    "historical state reports"
+  ],
+  "memo_scope": {
+    "exact_same_source_linked_pairs": 268,
+    "linked_qualitative_records": 90,
+    "linked_quantitative_rows": 208
+  },
+  "next_task": "bounded Tier C PDF/text-layer readiness review over 463 retained sources",
+  "regression_or_treatment_effect_estimates_available": false,
+  "tier_c_retained_source_count": 463,
+  "tier_c_verified_by_mechanism": {
+    "fiscal_constraint_signal": 145,
+    "market_or_comparability_pressure": 92,
+    "non_safety_constraint_signal": 142,
+    "strike_or_no_strike_constraint": 177
+  },
+  "tier_c_verified_source_lead_count": 556,
+  "wage_gap_estimates_available": false
+}

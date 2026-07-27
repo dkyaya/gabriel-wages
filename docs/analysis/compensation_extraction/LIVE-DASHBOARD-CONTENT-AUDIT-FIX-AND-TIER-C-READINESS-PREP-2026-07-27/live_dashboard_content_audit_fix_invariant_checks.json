@@ -1,0 +1,23 @@
+{
+  "dashboard_current_phase_correct": true,
+  "dashboard_current_report_is_bounded_memo": true,
+  "dashboard_global_analysis_readiness_false": true,
+  "dashboard_historical_sections_labeled": true,
+  "downloads_not_rerun": true,
+  "future_prompt_preserves_readiness_boundaries": true,
+  "idempotent_rerun_safe": true,
+  "no_geographic_metadata_fabrication": true,
+  "no_ingestion_or_codification": true,
+  "no_model_or_rating": true,
+  "no_normalization_imputation_annualization_or_comparison": true,
+  "no_ocr": true,
+  "no_pdf_page_access": true,
+  "no_text_extraction": true,
+  "no_wage_gap_regression_treatment_effect_national_or_causal_work": true,
+  "partial_outputs_cannot_masquerade_as_complete": true,
+  "prior_package_required_inputs_present": true,
+  "retained_files_not_opened_or_parsed": true,
+  "retained_files_on_disk_reconcile_to_463": true,
+  "retained_summary_reconciles_to_463": true,
+  "source_review_queue_reconciles_to_556": true
+}

@@ -7,8 +7,8 @@ export function CoverageFunnel({ data }) {
     <article className="panel" aria-labelledby="funnel-title">
       <div className="section-heading">
         <div>
-          <p className="eyebrow">Coverage funnel</p>
-          <h2 id="funnel-title">From universe to likely sets</h2>
+          <p className="eyebrow">Historical discovery funnel</p>
+          <h2 id="funnel-title">Archived universe-to-lead context</h2>
         </div>
       </div>
 
@@ -30,7 +30,7 @@ export function CoverageFunnel({ data }) {
       </div>
 
       <details>
-        <summary>Future evidence stages</summary>
+        <summary>Historical pipeline projections</summary>
         <dl className="future-stage-list">
           {data.future_funnel.map((stage) => (
             <div key={stage.stage}><dt>{stage.label}</dt><dd><StageValue value={stage.value} /></dd></div>

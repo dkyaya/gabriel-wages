@@ -19,8 +19,8 @@ export function PrintableStateReport({ state, queue, metadata, limitations, onBa
             <StatusPill tone={state.scout_coverage_count ? "scout" : "future"}>
               {state.scout_coverage_count ? "Scout stage" : "Not yet scouted"}
             </StatusPill>
-            <StatusPill tone="future">Not yet verified</StatusPill>
-            <StatusPill tone="future">Not yet ingested</StatusPill>
+            <StatusPill tone="calibration">Historical discovery snapshot</StatusPill>
+            <StatusPill tone="future">Not a current evidence view</StatusPill>
           </div>
         </header>
 
@@ -32,7 +32,7 @@ export function PrintableStateReport({ state, queue, metadata, limitations, onBa
         </section>
 
         <section className="report-section">
-          <h2>Current status</h2>
+          <h2>Historical discovery status</h2>
           <p>{state.printable_report_data.narrative}</p>
           <p className="report-caveat"><strong>Status boundary:</strong> {state.printable_report_data.status_caveat}</p>
         </section>
@@ -40,7 +40,7 @@ export function PrintableStateReport({ state, queue, metadata, limitations, onBa
         <section className="report-section">
           <h2>Candidate queue</h2>
           <table className="report-table">
-            <thead><tr><th scope="col">Measure</th><th scope="col">Current count</th><th scope="col">Interpretation</th></tr></thead>
+            <thead><tr><th scope="col">Measure</th><th scope="col">Snapshot count</th><th scope="col">Interpretation</th></tr></thead>
             <tbody>
               <tr><th scope="row">Candidate rows</th><td>{formatNumber(state.candidate_rows)}</td><td>Unverified scout leads</td></tr>
               <tr><th scope="row">High priority</th><td>{formatNumber(queue?.high_priority_rows ?? state.high_priority_queue_count)}</td><td>Later-verification scheduling</td></tr>
@@ -65,9 +65,9 @@ export function PrintableStateReport({ state, queue, metadata, limitations, onBa
           <div>
             <h2>Evidence stages</h2>
             <ul className="report-stage-list">
-              <li><strong>Scout:</strong> {state.scout_coverage_count ? "current discovery output available" : "not started in current national coverage"}</li>
-              <li><strong>Verification:</strong> not yet available project-wide</li>
-              <li><strong>Ingestion:</strong> not yet available in dashboard data</li>
+              <li><strong>Scout:</strong> {state.scout_coverage_count ? "historical discovery output available" : "not started in this historical snapshot"}</li>
+              <li><strong>Current project phase:</strong> use the main dashboard overview; this state appendix is historical.</li>
+              <li><strong>Ingestion:</strong> not represented as current evidence in this historical appendix</li>
               <li><strong>Wage analysis:</strong> unavailable pending verified, extracted matched-cycle data</li>
             </ul>
           </div>

@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-27T14:46:58Z",
+  "generated_at": "2026-07-27T15:17:28Z",
   "data_vintage": "2026-07-27",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -83,7 +83,11 @@
   "stage": "tier_c_source_review_download_pdf_readiness_transition",
   "current_phase": "Dashboard fixed; Tier C source review complete; PDF/text-layer readiness ready",
   "current_phase_code": "dashboard_fix_and_tier_c_download_completed_pdf_readiness_ready_dashboard_fixed",
+  "current_evidence_status": "bounded_co_location_documentary_scaffold_only",
   "global_analysis_readiness": false,
+  "wage_gap_estimates_available": false,
+  "final_causal_claims_available": false,
+  "regression_or_treatment_effect_estimates_available": false,
   "memo_decision": "bounded_internal_mechanism_linkage_claim_memo_completed_tier_c_verification_recommended",
   "memo_scope": {
     "claim_type_counts": {
@@ -154,6 +158,10 @@
   },
   "tier_c_source_review_download_result_path": "docs/analysis/dashboard_deployment_fix_and_tier_c_source_review_download_556_result_2026-07-27.md",
   "pdf_text_layer_readiness_ready_next": true,
+  "current_report_title": "Bounded Internal Mechanism-Linkage Claim Memo",
+  "current_report_path": "docs/analysis/compensation_extraction/BOUNDED-INTERNAL-MECHANISM-LINKAGE-CLAIM-MEMO-2026-07-26/bounded_internal_mechanism_linkage_claim_memo.md",
+  "current_operational_report_path": "docs/analysis/dashboard_deployment_fix_and_tier_c_source_review_download_556_result_2026-07-27.md",
+  "next_task": "bounded Tier C PDF/text-layer readiness review over 463 retained sources",
   "checkpoint_target_scout_covered": 2000,
   "current_scout_covered": 2436,
   "remaining_to_checkpoint": 0,
@@ -187,20 +195,17 @@
     }
   ],
   "checkpoint_pause_rule": "Active: the user-approved aggressive round was merged and the approximately 2,000-covered checkpoint was exceeded. Broad scouting is paused; begin the documented downstream cycle.",
-  "next_phase": "Verification, extraction, ingestion, rating, descriptive wage-growth-gap analysis, and mechanism-correlation documentation",
+  "next_phase": "bounded Tier C PDF/text-layer readiness review",
   "next_phase_sequence": [
-    "verify candidate sources",
-    "extract wage data",
-    "ingest structured observations",
-    "rate source quality and extractability",
-    "analyze descriptive wage-growth gaps",
-    "document correlated wage mechanisms",
-    "add wage-growth-gap map filtering",
-    "decide the most efficient repeat strategy"
+    "lock the 463 retained Tier C source files",
+    "verify local paths, sizes, hashes, and content-type lanes",
+    "classify PDF and HTML text-layer readiness without extraction",
+    "preserve OCR-later, oversized, noisy, corrupt, and review-needed exclusions",
+    "prepare a separately authorized later text-extraction queue"
   ],
   "regressions_status": "Deferred",
   "last_updated_commit": "98ad608",
-  "last_updated_context": "verification_round1_routing_merged",
+  "last_updated_context": "tier_c_source_review_download_completed_pdf_text_layer_readiness_ready",
   "future_live_controls": [
     "stronger preflight gate",
     "compact prompts",
@@ -210,10 +215,11 @@
     "one serial accounting merge after combined lane audit"
   ],
   "caveats": [
-    "Candidate rows are unverified.",
+    "Historical discovery and candidate-queue panels are preserved as labeled historical context.",
+    "The 463 retained Tier C files are not extracted, rated, ingested, codified, causal, or analysis-ready.",
+    "The bounded memo supports documentary co-location scaffolds only.",
     "Wage gaps have not been calculated.",
-    "Mechanisms have not been analyzed for correlation with wage-growth gaps.",
-    "Priority tiers are operational scheduling inputs, not findings.",
-    "The checkpoint is a workflow pause point, not an evidentiary threshold."
+    "Regressions, treatment-effect estimates, national prevalence claims, and final causal claims are unavailable.",
+    "Global analysis readiness remains false."
   ]
 }

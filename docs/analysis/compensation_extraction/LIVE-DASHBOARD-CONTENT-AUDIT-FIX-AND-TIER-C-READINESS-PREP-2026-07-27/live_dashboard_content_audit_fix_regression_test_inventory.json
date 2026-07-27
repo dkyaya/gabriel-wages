@@ -1,0 +1,16 @@
+{
+  "new_test": "scripts/test_live_dashboard_content_audit_fix.py",
+  "predecessor_tests": [
+    "scripts/test_dashboard_fix_and_tier_c_source_review_download_556.py",
+    "scripts/test_targeted_tier_c_verification_from_bounded_memo_gaps.py",
+    "scripts/test_bounded_internal_mechanism_linkage_claim_memo.py"
+  ],
+  "required_repository_checks": [
+    ".venv/bin/python -m py_compile scripts/build_dashboard_data.py",
+    ".venv/bin/python scripts/build_dashboard_data.py",
+    "npm --prefix docs/dashboard run build",
+    ".venv/bin/python scripts/validate.py",
+    ".venv/bin/python ingest/test_pipeline.py",
+    "git diff --check"
+  ]
+}

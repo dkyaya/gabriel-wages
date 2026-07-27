@@ -12,8 +12,8 @@ export function CandidateQueueCards({ data }) {
     <article className="panel" aria-labelledby="queue-cards-title">
       <div className="section-heading">
         <div>
-          <p className="eyebrow">Candidate queue</p>
-          <h2 id="queue-cards-title">Later-verification workload</h2>
+          <p className="eyebrow">Historical candidate queue</p>
+          <h2 id="queue-cards-title">Archived discovery workload</h2>
         </div>
         <span className="quiet-label">{formatNumber(data.totals.candidate_rows)} total rows</span>
       </div>

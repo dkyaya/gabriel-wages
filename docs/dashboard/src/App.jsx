@@ -37,7 +37,7 @@ import {
   VerificationPipeline,
 } from "./components/ProjectHubSections.jsx";
 import { StateDetailPanel } from "./components/StateDetailPanel.jsx";
-import { MetricCard, StatusPill, formatNumber, formatPercent } from "./components/ui.jsx";
+import { MetricCard, StatusPill, formatNumber } from "./components/ui.jsx";
 
 const DEFAULT_STATE = "CA";
 const REPORT_ASSETS = {
@@ -57,8 +57,8 @@ function QueueTable({ rows, onSelect }) {
     <section className="panel queue-table-panel" aria-labelledby="queue-table-title">
       <div className="section-heading">
         <div>
-          <p className="eyebrow">Queue by active state</p>
-          <h2 id="queue-table-title">Where later review is concentrated</h2>
+          <p className="eyebrow">Historical queue by state</p>
+          <h2 id="queue-table-title">Where the archived discovery queue was concentrated</h2>
         </div>
         <span className="quiet-label">Scheduling workload, not source quality</span>
       </div>
@@ -110,6 +110,7 @@ function App() {
   );
   const selectedQueue = candidateSummary.by_state.find((item) => item.state === selected.state);
   const currentReport = reportsIndex.reports.find((report) => report.current) ?? reportsIndex.reports[0];
+  const currentReportHref = currentReport.href ?? REPORT_ASSETS[currentReport.id];
 
   function chooseState(code) {
     window.location.hash = `/state/${code}`;
@@ -139,8 +140,6 @@ function App() {
   }
 
   const totals = stateSummary.totals;
-  const nationalCoverageRate = (100 * totals.scout_covered_municipalities) / totals.municipality_universe;
-
   return (
     <>
       <a className="skip-link" href="#overview">Skip to project overview</a>
@@ -150,14 +149,17 @@ function App() {
             <p className="eyebrow">HBS municipal labor evidence project</p>
             <h1>Gabriel Wages project hub</h1>
             <p className="header-deck">
-              A permanent view of what has been collected, what the current evidence supports, and what must happen
-              next. Candidate rows remain unverified source leads; this hub does not report wage gaps or causal findings.
+              Tier C source review retained {formatNumber(projectPhaseSummary.tier_c_retained_downloaded_source_count)}
+              {" "}sources from {formatNumber(projectPhaseSummary.tier_c_verified_source_lead_count)} verified leads.
+              The evidence remains a bounded documentary/co-location scaffold; no wage gaps or causal findings are available.
             </p>
           </div>
           <div className="header-status">
             <StatusPill tone="scout">{projectPhaseSummary.current_phase}</StatusPill>
             <span>Data vintage {projectPhaseSummary.data_vintage}</span>
-            <a href={piProgressReportPdf} target="_blank" rel="noreferrer">Open current PI report</a>
+            <a href={currentReportHref} target="_blank" rel="noreferrer">
+              {currentReport.link_label ?? "Open current evidence memo"}
+            </a>
           </div>
         </header>
 
@@ -172,42 +174,42 @@ function App() {
             <div className="overview-heading">
               <div>
                 <p className="eyebrow">Overview</p>
-                <h2 id="overview-title">National source-discovery status</h2>
+                <h2 id="overview-title">Current bounded evidence and retained-source status</h2>
               </div>
               <div className="checkpoint-label">
-                <span>Active project checkpoint</span>
-                <strong>Scale to approximately {formatNumber(projectPhaseSummary.checkpoint_target_scout_covered)} covered</strong>
+                <span>Next authorized stage</span>
+                <strong>Bounded Tier C PDF/text-layer readiness review</strong>
               </div>
             </div>
 
             <div className="headline-grid" aria-label="National headline metrics">
               <MetricCard
-                label="Municipal universe"
-                value={formatNumber(totals.municipality_universe)}
-                note="Municipal and township governments in scope"
+                label="Retained Tier C sources"
+                value={formatNumber(projectPhaseSummary.tier_c_retained_downloaded_source_count)}
+                note="Downloaded and reviewed; not extracted or rated"
               />
               <MetricCard
-                label="Scout covered"
-                value={formatNumber(totals.scout_covered_municipalities)}
-                note={`${formatPercent(nationalCoverageRate)} of the national universe`}
+                label="Verified Tier C leads"
+                value={formatNumber(projectPhaseSummary.tier_c_verified_source_lead_count)}
+                note="The locked source-review queue"
               />
               <MetricCard
-                label="Candidate rows"
-                value={formatNumber(totals.candidate_rows)}
-                note="Unverified source-discovery leads"
+                label="Same-source linked pairs"
+                value={formatNumber(projectPhaseSummary.memo_scope.exact_same_source_linked_pair_count)}
+                note={`${formatNumber(projectPhaseSummary.memo_scope.linked_quantitative_row_count)} quantitative rows · ${formatNumber(projectPhaseSummary.memo_scope.linked_qualitative_record_count)} qualitative records`}
               />
               <MetricCard
-                label="Failure-only"
-                value={formatNumber(totals.failed_scout_municipalities)}
-                note="Outside successful coverage; separate retry lane"
+                label="Global analysis readiness"
+                value="False"
+                note="No wage-gap, regression, treatment-effect, or final causal result"
               />
             </div>
 
             <div className="hub-caveat" role="note">
-              <strong>Source-discovery status only.</strong>
+              <strong>Bounded evidence status only.</strong>
               <span>
-                Candidate rows are unverified source leads. Municipality coverage is not verified-source coverage,
-                scouting tiers are operational priorities, and no wage-gap or causal claim is displayed.
+                Retained files are not extracted, rated, ingested, codified, causal, or analysis-ready. The memo
+                supports documentary co-location scaffolds, not normalized comparisons or causal conclusions.
               </span>
             </div>
 
@@ -215,6 +217,7 @@ function App() {
               totals={totals}
               priorityTotals={prioritySummary.totals}
               report={currentReport}
+              phase={projectPhaseSummary}
             />
           </section>
 
@@ -222,9 +225,9 @@ function App() {
 
           <section className="hub-section-group" id="geography" aria-label="Coverage map and state status">
             <div className="hub-section-intro">
-              <p className="eyebrow">Coverage and geography</p>
-              <h2>Explore state-level discovery progress</h2>
-              <p>Use the map to compare operational coverage, queue volume, and readiness—not substantive outcomes.</p>
+              <p className="eyebrow">Historical discovery coverage</p>
+              <h2>Archived state-level source-discovery context</h2>
+              <p>This map preserves the July discovery inventory for provenance. It is historical operational context, not the current evidence phase or a substantive outcome.</p>
             </div>
             <div className="map-and-panel">
               <NationalMap states={stateSummary.states} selectedCode={selected.state} onSelect={chooseState} />
@@ -242,11 +245,11 @@ function App() {
 
           <section className="hub-section-group" id="candidate-queue" aria-labelledby="candidate-queue-title">
             <div className="hub-section-intro">
-              <p className="eyebrow">Candidate queue</p>
-              <h2 id="candidate-queue-title">Unverified leads awaiting coordinated review</h2>
+              <p className="eyebrow">Historical candidate queue</p>
+              <h2 id="candidate-queue-title">Archived source-discovery inventory</h2>
               <p>
-                The queue counts candidate rows, not municipalities or usable contracts. One municipality can contribute
-                several possible documents, pages, duplicates, or context-only leads.
+                These counts document the earlier discovery pipeline. They are not the current Tier C retained-source
+                scope and do not override the 463-source readiness queue shown above.
               </p>
             </div>
             <div className="two-column">
@@ -279,20 +282,24 @@ function App() {
           <NextStepsPanel priority={prioritySummary} phase={projectPhaseSummary} />
 
           <DataLimitations
-            metadata={stateSummary.metadata}
+            metadata={{
+              ...stateSummary.metadata,
+              generated_at: projectPhaseSummary.generated_at,
+              data_vintage: projectPhaseSummary.data_vintage,
+            }}
             metricDefinition={stateSummary.metric_definition.evidence_readiness_score}
           />
         </main>
 
         <footer>
           <div>
-            <p>Generated {stateSummary.metadata.generated_at}. Discovery data vintage {stateSummary.metadata.data_vintage}.</p>
-            <p>Scout candidates are not yet verified, ingested, or claim-supporting evidence.</p>
+            <p>Generated {projectPhaseSummary.generated_at}. Current project data vintage {projectPhaseSummary.data_vintage}.</p>
+            <p>{projectPhaseSummary.current_phase}. Global analysis readiness remains false.</p>
           </div>
           <div className="footer-links">
             <button type="button" onClick={() => navigateToSection("overview")}>Back to overview</button>
-            <a href={piProgressReportPdf} target="_blank" rel="noreferrer">
-              PI Source-Discovery Progress Report PDF
+            <a href={currentReportHref} target="_blank" rel="noreferrer">
+              {currentReport.link_label ?? currentReport.title}
             </a>
           </div>
         </footer>

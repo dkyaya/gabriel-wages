@@ -1,0 +1,49 @@
+{
+  "by_content_type": {
+    "application/octet-stream": 1,
+    "application/pdf": 397,
+    "text/html": 65
+  },
+  "by_lane": {
+    "lane_1": 126,
+    "lane_2": 127,
+    "lane_3": 129,
+    "lane_4": 81
+  },
+  "by_mechanism": {
+    "fiscal_constraint_signal": 129,
+    "market_or_comparability_pressure": 81,
+    "non_safety_constraint_signal": 126,
+    "strike_or_no_strike_constraint": 127
+  },
+  "by_region": {
+    "Midwest": 83,
+    "Northeast": 221,
+    "South": 133,
+    "West": 26
+  },
+  "causal_status": "not_causal_evidence",
+  "city_cycle_unit_groups": 535,
+  "codification_status": "not_codified",
+  "downloads_rerun": 0,
+  "extraction_status": "not_extracted",
+  "files_opened_or_parsed": 0,
+  "global_analysis_readiness": false,
+  "groups_with_retained_source": 447,
+  "ingestion_status": "not_ingested",
+  "input_task_decision": "dashboard_fix_and_tier_c_download_completed_pdf_readiness_ready_dashboard_fixed",
+  "model_api_calls": 0,
+  "ocr_runs": 0,
+  "pdf_pages_accessed": 0,
+  "rating_status": "not_rated",
+  "readiness_boundary": "Review paths, hashes, type, size, and text-layer eligibility only; do not extract text, open PDF pages, render, or OCR.",
+  "readiness_review_ready_next": true,
+  "retained_city_state_pair_count": 307,
+  "retained_directory": "docs/analysis/compensation_extraction/DASHBOARD-DEPLOYMENT-FIX-AND-TIER-C-SOURCE-REVIEW-DOWNLOAD-556-2026-07-27/retained_sources",
+  "retained_file_count_on_disk": 463,
+  "retained_source_count": 463,
+  "retained_state_count": 37,
+  "source_review_queue_count": 556,
+  "text_extraction_runs": 0,
+  "total_retained_bytes": 1083844645
+}

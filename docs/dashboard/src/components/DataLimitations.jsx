@@ -13,7 +13,7 @@ export function DataLimitations({ metadata, metricDefinition }) {
       <div className="status-legend">
         <div><StatusPill tone="scout">Scout</StatusPill><span>Parseable discovery output; leads remain unverified.</span></div>
         <div><StatusPill tone="calibration">Calibration</StatusPill><span>Bounded prior review; not project-wide verification.</span></div>
-        <div><StatusPill tone="verified">Verified</StatusPill><span>Reserved for a future dedicated verification ledger.</span></div>
+        <div><StatusPill tone="verified">Verified / retained</StatusPill><span>Bounded source identity or local-file status; still not extracted, rated, causal, or analysis-ready.</span></div>
         <div><StatusPill tone="ingested">Ingested</StatusPill><span>Reserved for sources that pass canonical provenance gates.</span></div>
         <div><StatusPill tone="future">Unavailable</StatusPill><span>No validated dashboard input exists for this stage.</span></div>
         <div><StatusPill tone="failure">Failed attempt</StatusPill><span>Infrastructure outcome tracked outside scout coverage.</span></div>

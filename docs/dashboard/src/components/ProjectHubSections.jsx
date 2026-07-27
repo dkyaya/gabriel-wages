@@ -13,31 +13,33 @@ function decimal(value, digits = 1) {
   return value === null || value === undefined ? "Not available" : Number(value).toFixed(digits);
 }
 
-export function ProjectOrientation({ totals, priorityTotals, report }) {
+export function ProjectOrientation({ totals, priorityTotals, report, phase }) {
   return (
     <section className="project-orientation" aria-label="Collected current and forthcoming project status">
       <article>
-        <p className="eyebrow">Collected</p>
-        <h2>National discovery infrastructure</h2>
+        <p className="eyebrow">Current operation</p>
+        <h2>Tier C source review complete</h2>
         <p>
-          {formatNumber(totals.scout_covered_municipalities)} municipalities have a successful parseable scout
-          outcome and {formatNumber(totals.candidate_rows)} URL-bearing candidate leads are queued.
+          {formatNumber(phase.tier_c_retained_downloaded_source_count)} sources were retained from
+          {" "}{formatNumber(phase.tier_c_verified_source_lead_count)} verified Tier C leads. They remain
+          unextracted, unrated, and outside global analysis readiness.
         </p>
       </article>
       <article>
-        <p className="eyebrow">Current</p>
-        <h2>{report.checkpoint}</h2>
+        <p className="eyebrow">Current evidence memo</p>
+        <h2>{report.title}</h2>
         <p>
-          The dashboard is frozen at the latest merged checkpoint. Priority tiers cover the full
-          {` ${formatNumber(priorityTotals.municipality_universe)}-government`} universe.
+          The bounded memo covers {formatNumber(phase.memo_scope.exact_same_source_linked_pair_count)} exact
+          same-source pairs, {formatNumber(phase.memo_scope.linked_quantitative_row_count)} quantitative rows,
+          and {formatNumber(phase.memo_scope.linked_qualitative_record_count)} qualitative records.
         </p>
       </article>
       <article>
-        <p className="eyebrow">Forthcoming</p>
-        <h2>Verify, extract, and build matched evidence</h2>
+        <p className="eyebrow">Next authorized stage</p>
+        <h2>Tier C PDF/text-layer readiness review</h2>
         <p>
-          The approximately 2,000-covered checkpoint is exceeded. Broad scouting is paused while
-          the project begins the downstream verification and extraction cycle.
+          Review the 463 retained files for safe local text-layer extraction eligibility. This next step
+          does not run extraction, OCR, evidence rating, or analysis.
         </p>
       </article>
     </section>
@@ -51,17 +53,17 @@ export function ProjectPhasePanel({ phase }) {
       <div className="section-heading">
         <div>
           <p className="eyebrow">Project phase</p>
-          <h2 id="project-phase-title">Post-Checkpoint Verification Routing</h2>
+          <h2 id="project-phase-title">Tier C retained sources ready for text-layer readiness review</h2>
         </div>
-        <StatusPill tone="scout">
-          {formatNumber(phase.current_scout_covered)} of {formatNumber(phase.checkpoint_target_scout_covered)}
+        <StatusPill tone="verified">
+          {formatNumber(phase.tier_c_retained_downloaded_source_count)} retained
         </StatusPill>
       </div>
 
-      <div className="phase-progress" aria-label={`${progress}% of the scout-coverage checkpoint reached`}>
+      <div className="phase-progress" aria-label="Historical scout-coverage checkpoint reached">
         <div className="phase-progress-label">
-          <strong>{formatNumber(phase.current_scout_covered)} scout-covered</strong>
-          <span>{phase.progress_percentage}% of the approximately {formatNumber(phase.checkpoint_target_scout_covered)} checkpoint; target exceeded by {formatNumber(phase.checkpoint_margin)}</span>
+          <strong>Historical discovery checkpoint complete</strong>
+          <span>{formatNumber(phase.current_scout_covered)} scout-covered; preserved as provenance rather than current-stage evidence</span>
         </div>
         <div className="phase-progress-track" aria-hidden="true">
           <span style={{ width: `${progress}%` }} />
@@ -69,30 +71,30 @@ export function ProjectPhasePanel({ phase }) {
       </div>
 
       <div className="phase-metrics">
-        <div><span>Checkpoint margin</span><strong>+{formatNumber(phase.checkpoint_margin)}</strong></div>
-        <div><span>Broad scouting</span><strong>Paused</strong></div>
-        <div><span>Candidate leads</span><strong>{formatNumber(phase.current_candidate_queue_rows)}</strong></div>
-        <div><span>Candidate-positive</span><strong>{formatNumber(phase.current_candidate_positive_municipalities)}</strong></div>
-        <div><span>Failure-only lane</span><strong>{formatNumber(phase.current_failure_only_municipalities)}</strong></div>
+        <div><span>Verified Tier C leads</span><strong>{formatNumber(phase.tier_c_verified_source_lead_count)}</strong></div>
+        <div><span>Retained sources</span><strong>{formatNumber(phase.tier_c_retained_downloaded_source_count)}</strong></div>
+        <div><span>Same-source pairs</span><strong>{formatNumber(phase.memo_scope.exact_same_source_linked_pair_count)}</strong></div>
+        <div><span>Wage-gap estimates</span><strong>None</strong></div>
+        <div><span>Global readiness</span><strong>False</strong></div>
       </div>
 
       <div className="phase-next">
         <div>
           <p className="eyebrow">Current transition</p>
-          <h3>Begin the downstream evidence cycle</h3>
+          <h3>Assess the retained Tier C files without extracting them</h3>
         </div>
         <ol>
-          <li>Verification</li>
-          <li>Extraction</li>
-          <li>Ingestion</li>
-          <li>Source rating</li>
-          <li>Descriptive analysis</li>
+          <li>Lock 463 retained files</li>
+          <li>Verify file hashes and types</li>
+          <li>Classify text-layer readiness</li>
+          <li>Preserve deferred/OCR-later exclusions</li>
+          <li>Prepare a later extraction queue</li>
         </ol>
-        <StatusPill tone="future">Regressions deferred</StatusPill>
+        <StatusPill tone="future">Extraction not started</StatusPill>
       </div>
       <p className="panel-note">
-        Candidate rows remain unverified, the checkpoint is a workflow pause point rather than an
-        evidentiary threshold, and ordinary discovery remains separate from failure-only retries.
+        Retention is not extraction or evidence rating. The bounded memo is documentary/co-location
+        scaffolding only; global analysis readiness, wage-gap estimates, and final causal claims remain false.
       </p>
     </section>
   );
@@ -115,10 +117,10 @@ export function PriorityTiersPanel({ priority, statePriority }) {
     <section className="panel hub-section" id="priorities" aria-labelledby="priority-tier-title">
       <div className="section-heading">
         <div>
-          <p className="eyebrow">Scouting priority tiers</p>
-          <h2 id="priority-tier-title">Current priorities while discovery is paused</h2>
+          <p className="eyebrow">Historical scouting priority tiers</p>
+          <h2 id="priority-tier-title">Archived discovery scheduling context</h2>
         </div>
-        <StatusPill tone="calibration">Operational heuristic</StatusPill>
+        <StatusPill tone="calibration">Historical operational heuristic</StatusPill>
       </div>
 
       <div className="priority-summary-strip">
@@ -178,10 +180,10 @@ export function ScoutOperationsPanel({ operations, runtime, parallelStatus }) {
     <section className="panel hub-section" id="operations" aria-labelledby="operations-title">
       <div className="section-heading">
         <div>
-          <p className="eyebrow">Scout operations</p>
-          <h2 id="operations-title">A faster, bounded, auditable workflow</h2>
+          <p className="eyebrow">Historical scout operations</p>
+          <h2 id="operations-title">Archived discovery-wave performance</h2>
         </div>
-        <StatusPill tone="scout">Latest wave complete</StatusPill>
+        <StatusPill tone="calibration">Historical context</StatusPill>
       </div>
 
       <div className="operations-metrics">
@@ -258,34 +260,21 @@ export function VerificationPipeline({
     verificationStatus.live_verification_status ===
     "round2_3x1000_remainder_collected_not_merged";
   const stages = [
-    ["Candidate lead", formatNumber(candidateRows), "Collected", "scout"],
-    [
-      "Verified-source routing",
-      routingMerged ? formatNumber(verificationStatus.rows_verified_routing_total) : "Not started project-wide",
-      fullRouting ? "Full queue routed" : routingMerged ? "Round 1 merged" : "Next gate",
-      routingMerged ? "scout" : "future",
-    ],
-    ["Ingested source", "Not integrated", "Future", "future"],
-    ["Codified evidence", "Prior corpus separate", "Future", "calibration"],
-    ["Analysis-ready evidence", "Not available", "Future", "future"],
+    ["Verified Tier C lead", formatNumber(phase.tier_c_verified_source_lead_count), "Completed", "scout"],
+    ["Retained Tier C source", formatNumber(phase.tier_c_retained_downloaded_source_count), "Completed", "verified"],
+    ["PDF/text-layer readiness", "Not run", "Next", "future"],
+    ["Text extraction and rating", "Not run", "Separate phase", "future"],
+    ["Global analysis-ready evidence", "False", "Closed", "future"],
   ];
 
   return (
     <section className="panel hub-section" id="verification" aria-labelledby="verification-title">
       <div className="section-heading">
         <div>
-          <p className="eyebrow">Verification pipeline</p>
-          <h2 id="verification-title">From discovered lead to analysis-ready evidence</h2>
+          <p className="eyebrow">Current evidence pipeline</p>
+          <h2 id="verification-title">From verified Tier C leads to retained-source readiness</h2>
         </div>
-        <StatusPill tone={routingMerged ? "scout" : "future"}>
-          {round2Collected
-            ? "Round 2 remainder collected; merge pending"
-            : fullRouting
-              ? "Full candidate URL routing merged"
-            : routingMerged
-              ? "Round 1 3×750 routing merged"
-              : "Live path ready; verification not started"}
-        </StatusPill>
+        <StatusPill tone="verified">Source review complete; readiness next</StatusPill>
       </div>
 
       <div className="verification-flow">
@@ -301,43 +290,14 @@ export function VerificationPipeline({
 
       <div className="verification-callout">
         <div>
-          <p className="eyebrow">Next phase after scale-up</p>
-          <h3>Verify, extract, ingest, rate, and analyze descriptively</h3>
+          <p className="eyebrow">Current operational handoff</p>
+          <h3>Run bounded Tier C PDF/text-layer readiness review</h3>
         </div>
         <p>
-          {routingMerged ? (
-            <>
-              {fullRouting ? (
-                <>
-                  Round 1 routed {formatNumber(verificationStatus.round1_rows_verified_routing_total)}
-                  {" "}rows and Round 2 routed {formatNumber(verificationStatus.round2_rows_verified_routing_total)}
-                  {" "}rows. Together they cover {formatNumber(verificationStatus.rows_verified_routing_total)}
-                  {" "}/ {formatNumber(verificationStatus.total_url_bearing_candidate_rows)} candidate URLs;
-                  {" "}{formatPercent(verificationStatus.cumulative_reachable_or_reused_rate)}
-                  {" "}were reachable or reused.
-                </>
-              ) : (
-                <>
-                  Round 1 routed {formatNumber(verificationStatus.rows_verified_routing_total)} candidate rows:
-                  {" "}{formatPercent(verificationStatus.reachable_or_reused_rate)} were reachable or reused.
-                </>
-              )}
-              {round2Collected ? (
-                <>
-                  {" "}Round 2 has {formatNumber(verificationStatus.round2_terminal_rows)} terminal,
-                  audited outcomes ({formatPercent(verificationStatus.round2_reachable_or_reused_rate)}
-                  reachable or reused), but those outcomes are not yet in the durable routing ledger.
-                </>
-              ) : null}
-              Ingestion, employer/unit content review, wage extraction, and wage-gap analysis have not started.
-            </>
-          ) : (
-            <>
-              Live verification is implemented behind bounded fetch limits. The complete{" "}
-              {formatNumber(verificationStatus.total_url_bearing_candidate_rows)}-row backlog is mapped,
-              but no candidate URL has been opened yet.
-            </>
-          )}
+          The targeted Tier C verification retained {formatNumber(phase.tier_c_verified_source_lead_count)} verified
+          leads, and bounded GET/source review retained {formatNumber(phase.tier_c_retained_downloaded_source_count)}
+          source files. The next review may inspect file metadata and text-layer readiness only. Extraction, OCR,
+          rating, ingestion, codification, wage-gap analysis, and causal analysis have not run on this scope.
         </p>
       </div>
       <div className="verification-callout">
@@ -753,7 +713,7 @@ export function VerificationPipeline({
       </div>
       <div className="verification-callout">
         <div>
-          <p className="eyebrow">Manual calibration</p>
+          <p className="eyebrow">Current downstream status</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
             "dashboard_fix_and_tier_c_download_completed_pdf_readiness_ready_dashboard_fixed"
@@ -1875,7 +1835,7 @@ export function VerificationPipeline({
         </p>
       </div>
       <p className="panel-note">
-        <strong>{routingMerged ? "Remaining routing estimate:" : "Coverage plan:"}</strong>{" "}
+        <strong>Historical URL-routing context:</strong>{" "}
         {routingMerged
           ? fullRouting
             ? `No URL-bearing queue identities remain unrouted. The next step is content relevance and extraction-readiness triage, not another broad URL-routing round. The ${verificationStatus.future_bulk_verification_profile} profile is reserved for future queues with new unrouted identities.`
@@ -1895,8 +1855,8 @@ export function StateYieldPanel({ yieldData, operations }) {
     <section className="panel hub-section" id="state-yield" aria-labelledby="state-yield-title">
       <div className="section-heading">
         <div>
-          <p className="eyebrow">State yield and learning</p>
-          <h2 id="state-yield-title">Observed discovery yield, with sample warnings</h2>
+          <p className="eyebrow">Historical state yield and learning</p>
+          <h2 id="state-yield-title">Archived discovery yield, with sample warnings</h2>
         </div>
         <span className="quiet-label">Minimum {yieldData.leaderboard_minimum_successful_scouts} successful scouts</span>
       </div>
@@ -1939,29 +1899,37 @@ export function ReportsLibrary({ reportsIndex, reportAssets }) {
         {reportsIndex.reports.map((report) => (
           <article className="report-card" key={report.id}>
             <div className="report-card-topline">
-              <span>{report.report_type}</span>
+              <span>{report.current ? "Current · " : report.historical ? "Historical · " : ""}{report.report_type}</span>
               <time dateTime={report.date}>{report.date}</time>
             </div>
             <h3>{report.title}</h3>
             <p className="report-checkpoint">{report.checkpoint}</p>
             <p>{report.summary}</p>
-            <div className="report-metrics">
-              <span><strong>{formatNumber(report.metrics_snapshot.scout_covered)}</strong> covered</span>
-              <span><strong>{formatNumber(report.metrics_snapshot.candidate_queue_rows)}</strong> leads</span>
-              <span><strong>{formatNumber(report.metrics_snapshot.tier1_eligible)}</strong> Tier 1</span>
-            </div>
+            {report.scope_metrics ? (
+              <div className="report-metrics">
+                {report.scope_metrics.map((metric) => (
+                  <span key={metric.label}><strong>{formatNumber(metric.value)}</strong> {metric.label}</span>
+                ))}
+              </div>
+            ) : (
+              <div className="report-metrics">
+                <span><strong>{formatNumber(report.metrics_snapshot.scout_covered)}</strong> covered</span>
+                <span><strong>{formatNumber(report.metrics_snapshot.candidate_queue_rows)}</strong> leads</span>
+                <span><strong>{formatNumber(report.metrics_snapshot.tier1_eligible)}</strong> Tier 1</span>
+              </div>
+            )}
             <div className="tag-list">{report.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
-            <a className="primary-link" href={reportAssets[report.id]} target="_blank" rel="noreferrer">
-              Open report PDF
+            <a className="primary-link" href={report.href ?? reportAssets[report.id]} target="_blank" rel="noreferrer">
+              {report.link_label ?? "Open report PDF"}
             </a>
           </article>
         ))}
         <article className="report-card report-card-planned">
-          <div className="report-card-topline"><span>Forthcoming</span><span>After PI decision</span></div>
-          <h3>Verification pilot report</h3>
+          <div className="report-card-topline"><span>Forthcoming</span><span>Next authorized stage</span></div>
+          <h3>Tier C PDF/text-layer readiness report</h3>
           <p>
-            Planned reporting home for verified-source conversion, provenance, unit/source classification,
-            matched-cycle potential, and ingestion readiness.
+            Planned reporting home for file/hash reconciliation, text-layer eligibility, PDF/HTML lanes,
+            and explicit deferred or OCR-later exclusions across the 463 retained sources.
           </p>
           <StatusPill tone="future">Not yet available</StatusPill>
         </article>
@@ -1980,6 +1948,9 @@ export function MethodologyDefinitions() {
     ["Failure-only", "A request without a usable result, retained outside successful coverage for possible retry."],
     ["Priority tier", "A deterministic research-operations ranking used to schedule future scouting."],
     ["Verified source", "A lead whose employer, unit, provenance, dates, type, access, and relevance have been checked."],
+    ["Retained source", "A downloaded, hashed local file that has passed bounded source review. It is not extracted, rated, or analysis-ready."],
+    ["Bounded co-location scaffold", "A same-source pairing of quantitative direct text and qualitative mechanism evidence; it does not establish causation or a wage gap."],
+    ["Text-layer readiness", "A file-level eligibility review for a later extraction pass. It does not itself extract text or run OCR."],
     ["Analysis-ready", "Matched city-cycle safety/non-safety evidence with validated wage fields and provenance."],
   ];
 
@@ -2010,30 +1981,30 @@ export function NextStepsPanel({ priority, phase }) {
       <div className="section-heading">
         <div>
           <p className="eyebrow">Next steps</p>
-          <h2 id="next-steps-title">Transition from discovery to verified evidence</h2>
+          <h2 id="next-steps-title">Review the retained Tier C text layers</h2>
         </div>
         <StatusPill tone="scout">PI-aligned strategy</StatusPill>
       </div>
       <div className="next-step-grid">
         <article className="recommended-step">
           <span>Immediate</span>
-          <h3>Authorize the first scaled verification round</h3>
-          <p>The first 750 candidate rows are locked across three 250-row lanes. Run live verification only under separate authorization, then audit before any serial ledger merge.</p>
+          <h3>Run bounded PDF/text-layer readiness over 463 retained sources</h3>
+          <p>Verify paths, hashes, content type, readability, and local text-layer eligibility. Keep PDF and HTML lanes separate and defer OCR-later or unsafe files explicitly.</p>
         </article>
         <article>
-          <span>Checkpoint reached</span>
-          <h3>{formatNumber(phase.current_scout_covered)} scout-covered municipalities</h3>
-          <p>The target is exceeded by {formatNumber(phase.checkpoint_margin)}. Do not run another broad discovery wave without explicit authorization.</p>
+          <span>Completed input scope</span>
+          <h3>{formatNumber(phase.tier_c_retained_downloaded_source_count)} retained sources</h3>
+          <p>These came from {formatNumber(phase.tier_c_verified_source_lead_count)} verified Tier C leads. The completed source-review/download outputs are immutable inputs and will not be rerun.</p>
         </article>
         <article>
-          <span>Downstream cycle</span>
-          <h3>Run the downstream cycle</h3>
-          <p>Verify, extract, ingest, rate sources, calculate descriptive gaps only from validated matched data, and document mechanism correlations. Regressions come later.</p>
+          <span>Boundary after readiness</span>
+          <h3>Authorize extraction separately</h3>
+          <p>Readiness may prepare a later extraction queue, but it must not open PDF pages, render images, run OCR, rate evidence, ingest, codify, or calculate wage gaps.</p>
         </article>
       </div>
       <p className="panel-note">
-        {formatNumber(priority.totals.tier_1_eligible)} ordinary Tier 1 municipalities remain eligible;
-        {" "}{formatNumber(priority.totals.failure_only_retry_targets)} failure-only targets remain in a separate lane.
+        Historical discovery tiers remain available above for provenance only. The current operational next task is
+        Tier C PDF/text-layer readiness, and global analysis readiness remains false.
       </p>
     </section>
   );

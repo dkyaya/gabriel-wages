@@ -1,9 +1,73 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-27T14:46:58Z",
-  "data_vintage": "2026-07-22",
+  "generated_at": "2026-07-27T15:17:28Z",
+  "data_vintage": "2026-07-27",
   "source_file": "docs/dashboard/reports/reports_index.json",
   "reports": [
+    {
+      "id": "bounded-mechanism-linkage-memo-2026-07-26",
+      "title": "Bounded Internal Mechanism-Linkage Claim Memo",
+      "report_type": "Bounded internal evidence memo",
+      "date": "2026-07-26",
+      "checkpoint": "268 exact same-source linkages; documentary/co-location evidence only",
+      "summary": "The current evidence memo separates direct-text co-location, documentary mechanism-value scaffolds, provisional linkages, and records that remain insufficient for claims. It contains no wage-gap estimate or causal finding.",
+      "tags": [
+        "current",
+        "bounded memo",
+        "co-location",
+        "claim boundaries"
+      ],
+      "current": true,
+      "historical": false,
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/compensation_extraction/BOUNDED-INTERNAL-MECHANISM-LINKAGE-CLAIM-MEMO-2026-07-26/bounded_internal_mechanism_linkage_claim_memo.md",
+      "link_label": "Open current evidence memo",
+      "scope_metrics": [
+        {
+          "label": "same-source pairs",
+          "value": 268
+        },
+        {
+          "label": "quantitative rows",
+          "value": 208
+        },
+        {
+          "label": "qualitative records",
+          "value": 90
+        }
+      ]
+    },
+    {
+      "id": "tier-c-source-review-download-2026-07-27",
+      "title": "Tier C Source Review and Download Result",
+      "report_type": "Current operations report",
+      "date": "2026-07-27",
+      "checkpoint": "463 retained sources; PDF/text-layer readiness ready next",
+      "summary": "Bounded source review retained 463 files from 556 verified Tier C source leads. The files remain unextracted, unrated, and outside global analysis readiness.",
+      "tags": [
+        "Tier C",
+        "retained sources",
+        "readiness",
+        "current operations"
+      ],
+      "current": false,
+      "historical": false,
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/dashboard_deployment_fix_and_tier_c_source_review_download_556_result_2026-07-27.md",
+      "link_label": "Open Tier C source-review report",
+      "scope_metrics": [
+        {
+          "label": "verified leads",
+          "value": 556
+        },
+        {
+          "label": "retained sources",
+          "value": 463
+        },
+        {
+          "label": "oversized/deferred",
+          "value": 18
+        }
+      ]
+    },
     {
       "id": "pi-source-discovery-2026-07-22",
       "title": "Gabriel Wages Source-Discovery Progress Report",
@@ -20,7 +84,7 @@
         "scout operations",
         "verification planning"
       ],
-      "current": true,
+      "current": false,
       "created_commit": "c3bdbc7",
       "metrics_snapshot": {
         "scout_covered": 794,
@@ -30,8 +94,10 @@
         "failure_only": 20,
         "tier1_eligible": 1227,
         "tier2_eligible": 3478
-      }
+      },
+      "historical": true,
+      "link_label": "Open historical source-discovery report PDF"
     }
   ],
-  "disclaimer": "Reports summarize source-discovery and research-operations status. Candidate rows remain unverified leads; no report in this index should be interpreted as a wage-gap estimate or causal finding."
+  "disclaimer": "The current memo and operations report summarize bounded documentary, co-location, verification, and retained-source status. Historical discovery reports are labeled historical. No report is a wage-gap estimate, regression, treatment effect, national prevalence result, or final causal finding."
 }

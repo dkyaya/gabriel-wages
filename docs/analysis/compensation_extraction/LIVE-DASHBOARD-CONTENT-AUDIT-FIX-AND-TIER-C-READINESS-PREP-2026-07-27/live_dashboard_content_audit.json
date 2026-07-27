@@ -1,0 +1,43 @@
+{
+  "inspection_date": "2026-07-27",
+  "live_pre_fix_inspection": {
+    "asset_name": "assets/index-DLWhoUXv.js",
+    "current_metadata_present": [
+      "2026-07-27",
+      "Tier C",
+      "PDF/text-layer readiness",
+      "463",
+      "556",
+      "268",
+      "208",
+      "90"
+    ],
+    "diagnosis": "The header/date layer was current, but several rendered component strings and the current-report link still came from the historical discovery phase.",
+    "public_html_read": true,
+    "public_javascript_bundle_read": true,
+    "rendered_browser_accessibility_tree_available": false,
+    "rendered_browser_limitation": "The in-app browser backend exposed no active browser. Public HTML and its deployed JavaScript asset were inspected directly instead.",
+    "stale_current_framing_present": [
+      "candidate rows remain unverified",
+      "Open current PI report",
+      "Authorize the first scaled verification round",
+      "National source-discovery status",
+      "Current priorities while discovery is paused"
+    ]
+  },
+  "local_post_fix_inspection": {
+    "current_contract_markers_present": true,
+    "sections_audited": 14,
+    "stale_current_markers_absent": true,
+    "vite_bundle": "index-Djg63QHI.js",
+    "vite_index_exists": true
+  },
+  "post_push_live_inspection": {
+    "asset_name": null,
+    "current_contract_markers_present": null,
+    "stale_current_markers_absent": null,
+    "status": "pending_until_plain_git_push_and_pages_deployment"
+  },
+  "public_url": "https://dkyaya.github.io/gabriel-wages/",
+  "task_id": "LIVE-DASHBOARD-CONTENT-AUDIT-FIX-AND-TIER-C-SOURCE-REVIEW-DOWNLOAD-556-2026-07-27"
+}

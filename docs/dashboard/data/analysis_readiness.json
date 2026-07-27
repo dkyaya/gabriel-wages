@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": "0.1.0",
-    "generated_at": "2026-07-27T14:46:58Z",
+    "generated_at": "2026-07-27T15:17:28Z",
     "data_vintage": "2026-07-27",
     "source_files": [
       "docs/analysis/national_scout_coverage_state.csv",
@@ -508,6 +508,11 @@
     }
   },
   "analyses_available_now": [
+    "bounded internal mechanism-linkage memo: 268 exact same-source co-location pairs",
+    "Tier C verification status: 556 verified source leads",
+    "Tier C source-review status: 463 retained files awaiting PDF/text-layer readiness",
+    "documentary mechanism-value scaffolds with explicit noncausal claim boundaries",
+    "historical discovery coverage and operational queue context",
     "municipal universe and scout coverage rates",
     "candidate yield and parseable-empty rates",
     "connection-failure accounting",
@@ -517,11 +522,13 @@
     "provisional compensation-extraction QA diagnostics"
   ],
   "analyses_not_yet_supported": [
+    "global analysis readiness from the retained Tier C source scope",
+    "text-extracted or rated Tier C evidence",
     "verified source completeness rates across the national queue",
     "structured police, fire, and non-safety wage-gap estimates",
     "causal or mechanism regressions using scout metadata",
     "confidence levels for national substantive claims",
     "claim promotion based only on candidate counts"
   ],
-  "promotion_gate": "Do not show wage-gap or regression results until a dedicated, validated structured wage input supplies municipality, bargaining unit, occupation, cycle, wage concept, provenance, and matched-set identifiers."
+  "promotion_gate": "The next authorized step is bounded PDF/text-layer readiness over 463 retained Tier C files. Do not show wage-gap, regression, treatment-effect, national prevalence, or causal results until separately validated matched structured evidence supports them."
 }
