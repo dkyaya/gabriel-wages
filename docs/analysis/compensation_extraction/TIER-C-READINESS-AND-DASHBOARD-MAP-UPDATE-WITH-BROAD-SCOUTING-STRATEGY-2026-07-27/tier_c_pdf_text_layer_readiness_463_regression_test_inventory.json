@@ -1,0 +1,9 @@
+{
+  "coverage": [
+    "readiness manifests",
+    "PDF/HTML lane separation",
+    "octet-stream conservative routing",
+    "no OCR/render/extraction"
+  ],
+  "focused_suite": "scripts/test_tier_c_readiness_dashboard_map_update.py"
+}

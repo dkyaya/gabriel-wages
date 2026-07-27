@@ -1,0 +1,18 @@
+{
+  "content_type_counts": {
+    "application/octet-stream": 1,
+    "application/pdf": 397,
+    "text/html": 65
+  },
+  "global_analysis_readiness": false,
+  "lane_counts": {
+    "lane_1": 126,
+    "lane_2": 127,
+    "lane_3": 129,
+    "lane_4": 81
+  },
+  "locked_queue_count": 463,
+  "only_retained_downloaded_sources": true,
+  "prior_excluded_rows_in_queue": 0,
+  "tier_a_b_or_d_rows": 0
+}

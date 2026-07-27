@@ -1,0 +1,87 @@
+{
+  "bounded_text_extraction_ready_count": 378,
+  "downloads": 0,
+  "durable_ledger_merges": 0,
+  "evidence_span_extraction_runs": 0,
+  "full_text_extraction_runs": 0,
+  "global_analysis_readiness": false,
+  "html_bounded_structure_probes": 65,
+  "html_rows": 65,
+  "model_api_calls": 0,
+  "ocr_runs": 0,
+  "octet_stream_rows": 1,
+  "pdf_bounded_text_signal_probes": 374,
+  "pdf_pages_metadata_counted": 397,
+  "pdf_render_runs": 0,
+  "pdf_rows": 397,
+  "readiness_status_counts": {
+    "html_text_later": 61,
+    "needs_review": 19,
+    "ocr_later_or_defer": 57,
+    "oversized_for_text_pass": 9,
+    "parse_text_layer_later": 317
+  },
+  "readiness_status_counts_by_lane": {
+    "lane_1": {
+      "html_text_later": 13,
+      "needs_review": 3,
+      "ocr_later_or_defer": 10,
+      "oversized_for_text_pass": 1,
+      "parse_text_layer_later": 99
+    },
+    "lane_2": {
+      "html_text_later": 28,
+      "needs_review": 7,
+      "ocr_later_or_defer": 14,
+      "oversized_for_text_pass": 2,
+      "parse_text_layer_later": 76
+    },
+    "lane_3": {
+      "html_text_later": 12,
+      "needs_review": 7,
+      "ocr_later_or_defer": 24,
+      "oversized_for_text_pass": 4,
+      "parse_text_layer_later": 82
+    },
+    "lane_4": {
+      "html_text_later": 8,
+      "needs_review": 2,
+      "ocr_later_or_defer": 9,
+      "oversized_for_text_pass": 2,
+      "parse_text_layer_later": 60
+    }
+  },
+  "readiness_status_counts_by_mechanism": {
+    "fiscal_constraint_signal": {
+      "html_text_later": 12,
+      "needs_review": 7,
+      "ocr_later_or_defer": 24,
+      "oversized_for_text_pass": 4,
+      "parse_text_layer_later": 82
+    },
+    "market_or_comparability_pressure": {
+      "html_text_later": 8,
+      "needs_review": 2,
+      "ocr_later_or_defer": 9,
+      "oversized_for_text_pass": 2,
+      "parse_text_layer_later": 60
+    },
+    "non_safety_constraint_signal": {
+      "html_text_later": 13,
+      "needs_review": 3,
+      "ocr_later_or_defer": 10,
+      "oversized_for_text_pass": 1,
+      "parse_text_layer_later": 99
+    },
+    "strike_or_no_strike_constraint": {
+      "html_text_later": 28,
+      "needs_review": 7,
+      "ocr_later_or_defer": 14,
+      "oversized_for_text_pass": 2,
+      "parse_text_layer_later": 76
+    }
+  },
+  "result_rows": 463,
+  "saved_page_images": 0,
+  "url_opens": 0
+}

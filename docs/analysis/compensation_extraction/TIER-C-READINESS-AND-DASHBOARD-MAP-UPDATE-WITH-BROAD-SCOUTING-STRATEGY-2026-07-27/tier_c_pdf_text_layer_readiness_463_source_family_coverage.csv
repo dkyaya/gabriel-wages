@@ -1,0 +1,10 @@
+source_family,retained_source_count,parse_text_layer_later_count,html_text_later_count,ocr_later_or_defer_count,corrupt_or_unreadable_count,oversized_for_text_pass_count,needs_review_count,bounded_text_extraction_ready_count
+cba_or_arbitration_award_or_factfinding_or_impasse_record,121,72,28,14,0,2,5,100
+cba_or_arbitration_award_or_factfinding_or_impasse_record (factfinding),2,0,0,0,0,0,2,0
+cba_or_arbitration_award_or_factfinding_or_impasse_record (interest arbitration award),1,1,0,0,0,0,0,1
+cba_or_arbitration_award_or_factfinding_or_impasse_record (restraint of binding grievance arbitration synopsis),1,1,0,0,0,0,0,1
+cba_or_arbitration_award_or_factfinding_or_impasse_record (township document likely referencing bargaining unit terms and/or related proceedings),1,1,0,0,0,0,0,1
+cba_or_arbitration_award_or_factfinding_or_impasse_record (unit/representation decision synopsis; may affect bargaining power),1,1,0,0,0,0,0,1
+cba_or_budget_pay_plan_with_explicit_compensation_mechanism,129,82,12,24,0,4,7,94
+cba_or_compensation_study_or_classification_study_or_wage_schedule,81,60,8,9,0,2,2,68
+collective_bargaining_agreement_or_moa_or_wage_schedule,126,99,13,10,0,1,3,112

@@ -1,0 +1,20 @@
+{
+  "all_invariants_passed": true,
+  "controlled_readiness_statuses_only": true,
+  "dashboard_map_includes_latest_tier_c_data": true,
+  "downstream_statuses_closed": true,
+  "file_paths_sizes_hashes_verified": true,
+  "future_broad_geographic_strategy_written": true,
+  "global_analysis_readiness_false": true,
+  "locked_queue_exactly_463": true,
+  "map_data_date_present": true,
+  "no_durable_ledger_merge": true,
+  "no_geographic_metadata_fabrication": true,
+  "no_url_download_ocr_render_full_text_evidence_or_model_work": true,
+  "octet_stream_handled_conservatively": true,
+  "only_retained_tier_c_files_entered": true,
+  "partial_outputs_cannot_masquerade_as_complete": true,
+  "pdf_and_html_lanes_separate": true,
+  "pdf_html_octet_counts_reconcile": true,
+  "prior_exclusions_preserved_and_excluded": true
+}

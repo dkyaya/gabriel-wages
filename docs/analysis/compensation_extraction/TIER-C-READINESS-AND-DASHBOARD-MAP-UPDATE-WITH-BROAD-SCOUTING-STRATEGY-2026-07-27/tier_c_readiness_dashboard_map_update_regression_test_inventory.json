@@ -1,0 +1,16 @@
+{
+  "coverage": [
+    "463-row immutable scope",
+    "397/65/1 lane reconciliation",
+    "file integrity",
+    "bounded local probes",
+    "preserved exclusions",
+    "closed downstream statuses",
+    "current Tier C map layer",
+    "visible map date",
+    "broad geographic scouting strategy",
+    "idempotent resume",
+    "partial-output fail closed"
+  ],
+  "focused_suite": "scripts/test_tier_c_readiness_dashboard_map_update.py"
+}

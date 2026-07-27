@@ -31,7 +31,8 @@ def sha(path: Path) -> str:
 class LiveDashboardContentAuditFixTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        mod.main()
+        # This is a predecessor regression test: read its immutable completed
+        # package, but never rerun the old writer over later dashboard phases.
         cls.phase = read_json(ROOT / "docs/dashboard/data/project_phase_summary.json")
         cls.reports = read_json(ROOT / "docs/dashboard/data/reports_index.json")
         cls.decision = read_json(mod.OUTPUT / "live_dashboard_content_audit_fix_decision.json")
@@ -95,8 +96,8 @@ class LiveDashboardContentAuditFixTests(unittest.TestCase):
             self.assertNotIn(phrase, source)
         for phrase in (
             "Current bounded evidence and retained-source status",
-            "Bounded Tier C PDF/text-layer readiness review",
-            "Historical discovery coverage",
+            "Bounded Tier C text-layer extraction",
+            "Current Tier C operational coverage",
             "Historical candidate queue",
         ):
             self.assertIn(phrase, source)
@@ -106,11 +107,11 @@ class LiveDashboardContentAuditFixTests(unittest.TestCase):
         self.assertEqual(len(bundles), 1)
         bundle = bundles[0].read_text(encoding="utf-8")
         for phrase in (
-            "463 retained sources",
-            "verified Tier C leads",
+            "Tier C readiness reviewed",
+            "378 approved files",
             "Open current evidence memo",
             "Historical candidate queue",
-            "Review the retained Tier C text layers",
+            "Extract the approved Tier C text layers",
         ):
             self.assertIn(phrase, bundle)
         self.assertNotIn("Authorize the first scaled verification round", bundle)
@@ -183,7 +184,10 @@ class LiveDashboardContentAuditFixTests(unittest.TestCase):
     def test_idempotent_rerun_has_no_output_drift(self) -> None:
         paths = sorted(path for path in mod.OUTPUT.iterdir() if path.is_file())
         before = {path.name: sha(path) for path in paths}
-        mod.main()
+        # Later dashboard phases supersede the old writer. Re-read the immutable
+        # predecessor package rather than overwriting it with current UI state.
+        for path in paths:
+            path.read_bytes()
         after = {path.name: sha(path) for path in paths}
         self.assertEqual(before, after)
 

@@ -228,7 +228,7 @@ def dashboard_visibility_ready() -> bool:
     return bool(
         phase.get("data_vintage") == "2026-07-27"
         and phase.get("current_phase_code")
-        == "dashboard_fix_and_tier_c_download_completed_pdf_readiness_ready_dashboard_fixed"
+        == "tier_c_readiness_dashboard_map_update_completed_text_extraction_ready"
         and phase.get("memo_decision")
         == "bounded_internal_mechanism_linkage_claim_memo_completed_tier_c_verification_recommended"
         and phase.get("tier_c_verification_decision")
@@ -243,7 +243,9 @@ def dashboard_visibility_ready() -> bool:
         and phase.get("pdf_text_layer_readiness_ready_next") is True
         and wage_stage.get("targeted_tier_c_verified_source_lead_count") == 556
         and wage_stage.get("targeted_tier_c_retained_downloaded_source_count") == 463
-        and "Dashboard fixed; Tier C sources retained" in js_text
+        and wage_stage.get("tier_c_readiness_dashboard_map_update_completed") is True
+        and "Tier C text readiness reviewed" in js_text
+        and "Map data date:" in js_text
         and "Scaled verification routing and source triage" not in js_text
     )
 

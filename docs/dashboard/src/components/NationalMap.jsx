@@ -3,8 +3,8 @@ import { StateTileGrid } from "./StateTileGrid.jsx";
 import { USChoroplethMap } from "./USChoroplethMap.jsx";
 import { MAP_METRICS, metricForKey, metricMaximum } from "./mapMetrics.js";
 
-export function NationalMap({ states, selectedCode, onSelect }) {
-  const [metricKey, setMetricKey] = useState("scout_coverage_rate");
+export function NationalMap({ states, selectedCode, onSelect, mapDataDate, coverageSummary }) {
+  const [metricKey, setMetricKey] = useState("tier_c_retained_source_count");
   const [mapMode, setMapMode] = useState("geographic");
   const metric = metricForKey(metricKey);
   const max = useMemo(() => metricMaximum(states, metricKey), [states, metricKey]);
@@ -13,8 +13,9 @@ export function NationalMap({ states, selectedCode, onSelect }) {
     <article className="panel map-panel no-print" aria-labelledby="national-map-title">
       <div className="section-heading map-heading">
         <div>
-          <p className="eyebrow">National scout coverage</p>
-          <h2 id="national-map-title">State choropleth</h2>
+          <p className="eyebrow">Current Tier C retained/readiness coverage</p>
+          <h2 id="national-map-title">State operational coverage map</h2>
+          <p className="quiet-label">Map data date: {mapDataDate}</p>
         </div>
         <div className="map-controls">
           <div className="map-mode-toggle" role="group" aria-label="Map view">
@@ -47,7 +48,7 @@ export function NationalMap({ states, selectedCode, onSelect }) {
       </div>
 
       <div className="map-status-note" role="note">
-        <strong>Preliminary discovery view.</strong> Scout coverage is preliminary, candidate rows are unverified, and wage-gap conclusions are not displayed.
+        <strong>Operational coverage only.</strong> Current Tier C retained/readiness counts are not representative evidence. Historical scout metrics remain selectable and clearly labeled. Global analysis readiness is false; wage estimates and causal conclusions are not displayed.
       </div>
 
       {mapMode === "geographic" ? (
@@ -80,6 +81,13 @@ export function NationalMap({ states, selectedCode, onSelect }) {
       </p>
 
       <details className="map-table-fallback">
+        <summary>View Tier C region, source-family, and mechanism totals</summary>
+        <p><strong>Regions:</strong> {Object.entries(coverageSummary.regions).map(([key, value]) => `${key} ${value}`).join(" · ")}</p>
+        <p><strong>Source families:</strong> {Object.entries(coverageSummary.source_families).map(([key, value]) => `${key} ${value}`).join(" · ")}</p>
+        <p><strong>Mechanisms:</strong> {Object.entries(coverageSummary.mechanisms).map(([key, value]) => `${key} ${value}`).join(" · ")}</p>
+      </details>
+
+      <details className="map-table-fallback">
         <summary>View accessible state values</summary>
         <div className="table-wrap compact-table-wrap">
           <table>
@@ -89,7 +97,7 @@ export function NationalMap({ states, selectedCode, onSelect }) {
                 <tr key={state.state}>
                   <th scope="row"><button className="table-state-button" onClick={() => onSelect(state.state)}>{state.state_name}</button></th>
                   <td>{metric.format(state[metricKey] ?? 0)}</td>
-                  <td>{state.scout_coverage_count ? "Scout coverage recorded" : "Not yet scouted"}</td>
+                  <td>{state.tier_c_retained_source_count ? "Tier C retained source represented" : "No retained Tier C source"}</td>
                 </tr>
               ))}
             </tbody>

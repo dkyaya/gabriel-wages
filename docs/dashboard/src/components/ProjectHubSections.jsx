@@ -18,11 +18,11 @@ export function ProjectOrientation({ totals, priorityTotals, report, phase }) {
     <section className="project-orientation" aria-label="Collected current and forthcoming project status">
       <article>
         <p className="eyebrow">Current operation</p>
-        <h2>Tier C source review complete</h2>
+        <h2>Tier C text readiness complete</h2>
         <p>
-          {formatNumber(phase.tier_c_retained_downloaded_source_count)} sources were retained from
-          {" "}{formatNumber(phase.tier_c_verified_source_lead_count)} verified Tier C leads. They remain
-          unextracted, unrated, and outside global analysis readiness.
+          {formatNumber(phase.tier_c_retained_downloaded_source_count)} retained Tier C files were reviewed;
+          {" "}{formatNumber(phase.tier_c_text_extraction_ready_count)} enter only a separately authorized
+          extraction queue. They remain unextracted, unrated, and outside global analysis readiness.
         </p>
       </article>
       <article>
@@ -36,10 +36,10 @@ export function ProjectOrientation({ totals, priorityTotals, report, phase }) {
       </article>
       <article>
         <p className="eyebrow">Next authorized stage</p>
-        <h2>Tier C PDF/text-layer readiness review</h2>
+        <h2>Bounded Tier C text-layer extraction</h2>
         <p>
-          Review the 463 retained files for safe local text-layer extraction eligibility. This next step
-          does not run extraction, OCR, evidence rating, or analysis.
+          Extract local machine-readable text from the 378 readiness-approved files only. OCR, evidence
+          rating, ingestion, and analysis remain outside that next phase.
         </p>
       </article>
     </section>
@@ -53,7 +53,7 @@ export function ProjectPhasePanel({ phase }) {
       <div className="section-heading">
         <div>
           <p className="eyebrow">Project phase</p>
-          <h2 id="project-phase-title">Tier C retained sources ready for text-layer readiness review</h2>
+          <h2 id="project-phase-title">Tier C text readiness reviewed; bounded extraction ready next</h2>
         </div>
         <StatusPill tone="verified">
           {formatNumber(phase.tier_c_retained_downloaded_source_count)} retained
@@ -73,6 +73,7 @@ export function ProjectPhasePanel({ phase }) {
       <div className="phase-metrics">
         <div><span>Verified Tier C leads</span><strong>{formatNumber(phase.tier_c_verified_source_lead_count)}</strong></div>
         <div><span>Retained sources</span><strong>{formatNumber(phase.tier_c_retained_downloaded_source_count)}</strong></div>
+        <div><span>Text-extraction ready</span><strong>{formatNumber(phase.tier_c_text_extraction_ready_count)}</strong></div>
         <div><span>Same-source pairs</span><strong>{formatNumber(phase.memo_scope.exact_same_source_linked_pair_count)}</strong></div>
         <div><span>Wage-gap estimates</span><strong>None</strong></div>
         <div><span>Global readiness</span><strong>False</strong></div>
@@ -81,16 +82,16 @@ export function ProjectPhasePanel({ phase }) {
       <div className="phase-next">
         <div>
           <p className="eyebrow">Current transition</p>
-          <h3>Assess the retained Tier C files without extracting them</h3>
+          <h3>Extract only the readiness-approved local text layers</h3>
         </div>
         <ol>
-          <li>Lock 463 retained files</li>
-          <li>Verify file hashes and types</li>
-          <li>Classify text-layer readiness</li>
-          <li>Preserve deferred/OCR-later exclusions</li>
-          <li>Prepare a later extraction queue</li>
+          <li>Lock the 317 PDF and 61 HTML readiness-approved rows</li>
+          <li>Preserve exact file-hash and source lineage</li>
+          <li>Keep PDF and HTML extraction lanes separate</li>
+          <li>Exclude all 85 deferred/review rows</li>
+          <li>Save only task-local extracted text for later review</li>
         </ol>
-        <StatusPill tone="future">Extraction not started</StatusPill>
+        <StatusPill tone="future">Extraction separately authorized</StatusPill>
       </div>
       <p className="panel-note">
         Retention is not extraction or evidence rating. The bounded memo is documentary/co-location
@@ -262,8 +263,8 @@ export function VerificationPipeline({
   const stages = [
     ["Verified Tier C lead", formatNumber(phase.tier_c_verified_source_lead_count), "Completed", "scout"],
     ["Retained Tier C source", formatNumber(phase.tier_c_retained_downloaded_source_count), "Completed", "verified"],
-    ["PDF/text-layer readiness", "Not run", "Next", "future"],
-    ["Text extraction and rating", "Not run", "Separate phase", "future"],
+    ["PDF/HTML text readiness", formatNumber(phase.tier_c_text_extraction_ready_count), "Completed", "verified"],
+    ["Text-layer extraction", "Not run", "Next", "future"],
     ["Global analysis-ready evidence", "False", "Closed", "future"],
   ];
 
@@ -272,9 +273,9 @@ export function VerificationPipeline({
       <div className="section-heading">
         <div>
           <p className="eyebrow">Current evidence pipeline</p>
-          <h2 id="verification-title">From verified Tier C leads to retained-source readiness</h2>
+          <h2 id="verification-title">From verified Tier C leads to bounded text readiness</h2>
         </div>
-        <StatusPill tone="verified">Source review complete; readiness next</StatusPill>
+        <StatusPill tone="verified">Readiness complete; extraction next</StatusPill>
       </div>
 
       <div className="verification-flow">
@@ -291,13 +292,14 @@ export function VerificationPipeline({
       <div className="verification-callout">
         <div>
           <p className="eyebrow">Current operational handoff</p>
-          <h3>Run bounded Tier C PDF/text-layer readiness review</h3>
+          <h3>Run bounded Tier C text-layer extraction</h3>
         </div>
         <p>
           The targeted Tier C verification retained {formatNumber(phase.tier_c_verified_source_lead_count)} verified
           leads, and bounded GET/source review retained {formatNumber(phase.tier_c_retained_downloaded_source_count)}
-          source files. The next review may inspect file metadata and text-layer readiness only. Extraction, OCR,
-          rating, ingestion, codification, wage-gap analysis, and causal analysis have not run on this scope.
+          source files. Readiness approved {formatNumber(phase.tier_c_text_extraction_ready_count)} files for a
+          separately authorized local extraction pass. OCR, rating, ingestion, codification, wage-gap analysis,
+          and causal analysis have not run on this scope.
         </p>
       </div>
       <div className="verification-callout">
@@ -716,6 +718,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Current downstream status</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "tier_c_readiness_dashboard_map_update_completed_text_extraction_ready"
+              ? "Tier C text readiness complete; bounded extraction is ready"
+              : textTableCalibrationStatus.calibration_phase ===
             "dashboard_fix_and_tier_c_download_completed_pdf_readiness_ready_dashboard_fixed"
               ? "Dashboard fixed; Tier C sources retained; PDF/text-layer readiness is ready"
               : textTableCalibrationStatus.calibration_phase ===
@@ -904,6 +909,19 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "tier_c_readiness_dashboard_map_update_completed_text_extraction_ready" ? (
+            <>
+              Local readiness review reconciled {formatNumber(
+                textTableCalibrationStatus.tier_c_readiness_queue_count,
+              )} retained Tier C files. The later extraction manifests contain {formatNumber(
+                (textTableCalibrationStatus.tier_c_readiness_status_counts?.parse_text_layer_later || 0) +
+                (textTableCalibrationStatus.tier_c_readiness_status_counts?.html_text_later || 0),
+              )} files; all OCR-later, oversized, noisy, and review rows remain excluded.
+              Map data date: {textTableCalibrationStatus.tier_c_dashboard_map_data_date}.
+              No URL, download, OCR, rendering, saved document text, evidence extraction, rating,
+              ingestion, or codification occurred; global analysis readiness remains closed.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "dashboard_fix_and_tier_c_download_completed_pdf_readiness_ready_dashboard_fixed" ? (
             <>
               Bounded source review processed {formatNumber(
@@ -1926,10 +1944,10 @@ export function ReportsLibrary({ reportsIndex, reportAssets }) {
         ))}
         <article className="report-card report-card-planned">
           <div className="report-card-topline"><span>Forthcoming</span><span>Next authorized stage</span></div>
-          <h3>Tier C PDF/text-layer readiness report</h3>
+          <h3>Tier C bounded text-layer extraction report</h3>
           <p>
-            Planned reporting home for file/hash reconciliation, text-layer eligibility, PDF/HTML lanes,
-            and explicit deferred or OCR-later exclusions across the 463 retained sources.
+            Planned reporting home for task-local machine-readable text from only the 378 readiness-approved
+            PDF/HTML rows, with every deferred and prior-excluded row held outside the scope.
           </p>
           <StatusPill tone="future">Not yet available</StatusPill>
         </article>
@@ -1981,15 +1999,15 @@ export function NextStepsPanel({ priority, phase }) {
       <div className="section-heading">
         <div>
           <p className="eyebrow">Next steps</p>
-          <h2 id="next-steps-title">Review the retained Tier C text layers</h2>
+          <h2 id="next-steps-title">Extract the approved Tier C text layers</h2>
         </div>
         <StatusPill tone="scout">PI-aligned strategy</StatusPill>
       </div>
       <div className="next-step-grid">
         <article className="recommended-step">
           <span>Immediate</span>
-          <h3>Run bounded PDF/text-layer readiness over 463 retained sources</h3>
-          <p>Verify paths, hashes, content type, readability, and local text-layer eligibility. Keep PDF and HTML lanes separate and defer OCR-later or unsafe files explicitly.</p>
+          <h3>Run bounded local text extraction over 378 approved files</h3>
+          <p>Use only 317 parse-text-layer PDF rows and 61 HTML-text rows. Keep the lanes separate and preserve every hash and source-lineage field.</p>
         </article>
         <article>
           <span>Completed input scope</span>
@@ -1997,14 +2015,14 @@ export function NextStepsPanel({ priority, phase }) {
           <p>These came from {formatNumber(phase.tier_c_verified_source_lead_count)} verified Tier C leads. The completed source-review/download outputs are immutable inputs and will not be rerun.</p>
         </article>
         <article>
-          <span>Boundary after readiness</span>
-          <h3>Authorize extraction separately</h3>
-          <p>Readiness may prepare a later extraction queue, but it must not open PDF pages, render images, run OCR, rate evidence, ingest, codify, or calculate wage gaps.</p>
+          <span>Future source expansion</span>
+          <h3>Return to broad state-by-state scouting</h3>
+          <p>When scouting resumes, prioritize geographic balance and diverse source families. Preserve mechanism tags after collection; use mechanism-targeted discovery only as secondary gap-filling.</p>
         </article>
       </div>
       <p className="panel-note">
         Historical discovery tiers remain available above for provenance only. The current operational next task is
-        Tier C PDF/text-layer readiness, and global analysis readiness remains false.
+        bounded Tier C text-layer extraction. Global analysis readiness remains false.
       </p>
     </section>
   );

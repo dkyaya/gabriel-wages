@@ -1310,6 +1310,26 @@ DASHBOARD_FIX_TIER_C_SOURCE_REVIEW_DOWNLOAD_556_INVARIANTS_PATH = (
     DASHBOARD_FIX_TIER_C_SOURCE_REVIEW_DOWNLOAD_556_DIR
     / "targeted_tier_c_source_review_download_556_invariant_checks.json"
 )
+TIER_C_READINESS_DASHBOARD_MAP_UPDATE_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "TIER-C-READINESS-AND-DASHBOARD-MAP-UPDATE-WITH-BROAD-SCOUTING-STRATEGY-2026-07-27"
+)
+TIER_C_READINESS_DASHBOARD_MAP_UPDATE_DECISION_PATH = (
+    TIER_C_READINESS_DASHBOARD_MAP_UPDATE_DIR
+    / "tier_c_readiness_dashboard_map_update_decision.json"
+)
+TIER_C_READINESS_DASHBOARD_MAP_UPDATE_INVARIANTS_PATH = (
+    TIER_C_READINESS_DASHBOARD_MAP_UPDATE_DIR
+    / "tier_c_readiness_dashboard_map_update_invariant_checks.json"
+)
+TIER_C_DASHBOARD_MAP_STATE_COVERAGE_PATH = (
+    TIER_C_READINESS_DASHBOARD_MAP_UPDATE_DIR
+    / "dashboard_map_state_region_coverage.csv"
+)
+TIER_C_DASHBOARD_MAP_DATE_PATH = (
+    TIER_C_READINESS_DASHBOARD_MAP_UPDATE_DIR / "dashboard_map_data_date.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -1341,6 +1361,10 @@ REQUIRED_PATHS = [
     SCOUT_YIELD_STATE_PATH,
     SCOUT_YIELD_WAVE_PATH,
     REPORTS_INDEX_SOURCE_PATH,
+    TIER_C_READINESS_DASHBOARD_MAP_UPDATE_DECISION_PATH,
+    TIER_C_READINESS_DASHBOARD_MAP_UPDATE_INVARIANTS_PATH,
+    TIER_C_DASHBOARD_MAP_STATE_COVERAGE_PATH,
+    TIER_C_DASHBOARD_MAP_DATE_PATH,
 ]
 OPTIONAL_PATHS = [
     CLAIM_REGISTER_PATH,
@@ -4361,6 +4385,40 @@ def dashboard_fix_tier_c_source_review_download_556_status() -> tuple[bool, dict
     }
 
 
+def tier_c_readiness_dashboard_map_update_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize only the completed immutable 463-file readiness/map package."""
+    required = (
+        TIER_C_READINESS_DASHBOARD_MAP_UPDATE_DECISION_PATH,
+        TIER_C_READINESS_DASHBOARD_MAP_UPDATE_INVARIANTS_PATH,
+        TIER_C_DASHBOARD_MAP_STATE_COVERAGE_PATH,
+        TIER_C_DASHBOARD_MAP_DATE_PATH,
+        TIER_C_READINESS_DASHBOARD_MAP_UPDATE_DIR / "tier_c_pdf_text_layer_readiness_463_results_summary.json",
+        TIER_C_READINESS_DASHBOARD_MAP_UPDATE_DIR / "future_broad_geographic_scouting_strategy.json",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    decision = read_json(TIER_C_READINESS_DASHBOARD_MAP_UPDATE_DECISION_PATH)
+    invariants = read_json(TIER_C_READINESS_DASHBOARD_MAP_UPDATE_INVARIANTS_PATH)
+    map_date = read_json(TIER_C_DASHBOARD_MAP_DATE_PATH)
+    states = read_csv(TIER_C_DASHBOARD_MAP_STATE_COVERAGE_PATH)
+    if not (
+        decision.get("decision") == "tier_c_readiness_dashboard_map_update_completed_text_extraction_ready"
+        and decision.get("retained_readiness_queue_count") == 463
+        and decision.get("pdf_retained_count") == 397
+        and decision.get("html_retained_count") == 65
+        and decision.get("octet_stream_count") == 1
+        and decision.get("map_data_date") == "2026-07-27"
+        and decision.get("dashboard_map_updated") is True
+        and decision.get("bounded_text_layer_extraction_ready_next") is True
+        and decision.get("global_analysis_readiness") is False
+        and invariants.get("all_invariants_passed") is True
+        and map_date.get("map_data_date") == "2026-07-27"
+        and sum(as_int(row["tier_c_retained_source_count"]) for row in states) == 463
+    ):
+        raise ValueError("Tier C readiness/dashboard-map package fails dashboard gates")
+    return True, decision
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -4493,6 +4551,31 @@ def build_reports_index_layer(
                 {"label": "oversized/deferred", "value": 18},
             ],
         },
+        {
+            "id": "tier-c-text-readiness-map-update-2026-07-27",
+            "title": "Tier C Text Readiness and Dashboard Map Update",
+            "report_type": "Current operations report",
+            "date": "2026-07-27",
+            "checkpoint": "463 retained sources reviewed; 378 ready for bounded text extraction",
+            "summary": (
+                "Local readiness review classified 397 PDFs, 65 HTML artifacts, and one "
+                "octet-stream file without OCR, rendering, or evidence extraction. The "
+                "dashboard map now exposes the dated Tier C retained/readiness layer."
+            ),
+            "tags": ["Tier C", "text readiness", "map date", "broad scouting strategy"],
+            "current": False,
+            "historical": False,
+            "href": repository_root_url + (
+                "docs/analysis/"
+                "tier_c_readiness_dashboard_map_update_result_2026-07-27.md"
+            ),
+            "link_label": "Open Tier C readiness/map report",
+            "scope_metrics": [
+                {"label": "retained sources", "value": 463},
+                {"label": "extraction-ready", "value": 378},
+                {"label": "prior exclusions preserved", "value": 93},
+            ],
+        },
         *historical_reports,
     ]
 
@@ -4564,6 +4647,13 @@ def build_state_summary(
     claim_map_rows: list[dict[str, str]],
     metadata: dict[str, Any],
 ) -> dict[str, Any]:
+    tier_c_map_date = read_json(TIER_C_DASHBOARD_MAP_DATE_PATH)
+    tier_c_state_rows = read_csv(TIER_C_DASHBOARD_MAP_STATE_COVERAGE_PATH)
+    tier_c_by_state = {row["state"]: row for row in tier_c_state_rows}
+    if tier_c_map_date.get("map_data_date") != "2026-07-27":
+        raise ValueError("Tier C dashboard map date must be 2026-07-27")
+    if sum(as_int(row["tier_c_retained_source_count"]) for row in tier_c_state_rows) != 463:
+        raise ValueError("Tier C dashboard map retained-source count must reconcile to 463")
     claim_ids_by_state: dict[str, set[str]] = defaultdict(set)
     for row in claim_rows:
         for state in split_semicolon(row.get("states_in_scope", "")):
@@ -4592,6 +4682,7 @@ def build_state_summary(
         candidate_rows = as_int(row["candidate_rows_total"])
         likely_sets = as_int(row["municipalities_with_likely_triad"])
         high_priority = as_int(row["high_priority_candidate_rows"])
+        tier_c = tier_c_by_state.get(state, {})
         claim_ids = sorted(item for item in claim_ids_by_state[state] if item)
         claim_map_count = claim_map_count_by_state[state]
         has_claim_context = bool(claim_ids or claim_map_count)
@@ -4667,6 +4758,15 @@ def build_state_summary(
                 "claim_mapped_city_count": claim_map_count,
                 "claim_readiness_level": level,
                 "evidence_readiness_score": score,
+                "tier_c_retained_source_count": as_int(tier_c.get("tier_c_retained_source_count")),
+                "tier_c_text_extraction_ready_count": as_int(tier_c.get("tier_c_text_extraction_ready_count")),
+                "tier_c_pdf_count": as_int(tier_c.get("tier_c_pdf_count")),
+                "tier_c_html_count": as_int(tier_c.get("tier_c_html_count")),
+                "tier_c_octet_stream_count": as_int(tier_c.get("tier_c_octet_stream_count")),
+                "tier_c_parse_text_layer_later_count": as_int(tier_c.get("tier_c_parse_text_layer_later_count")),
+                "tier_c_html_text_later_count": as_int(tier_c.get("tier_c_html_text_later_count")),
+                "tier_c_deferred_or_review_count": as_int(tier_c.get("tier_c_deferred_or_review_count")),
+                "tier_c_region": tier_c.get("derived_region") or None,
                 "map_color_metric": {
                     "field": "evidence_readiness_score",
                     "value": score,
@@ -4694,7 +4794,13 @@ def build_state_summary(
 
     active_states = sum(item["scout_coverage_count"] > 0 for item in states)
     return {
-        "metadata": metadata,
+        "metadata": {
+            **metadata,
+            "map_data_date": tier_c_map_date["map_data_date"],
+            "current_map_layer": "tier_c_retained_source_and_text_readiness_coverage",
+            "current_map_layer_boundary": "Operational retained/readiness metadata only; not representative and not a wage or causal result.",
+            "global_analysis_readiness": False,
+        },
         "metric_definition": {
             "evidence_readiness_score": (
                 "Operational dashboard triage score: 20 points for any parseable "
@@ -4731,6 +4837,9 @@ def build_state_summary(
             "verified_sources": None,
             "ingested_sources": None,
             "wage_observations": None,
+            "tier_c_retained_sources": sum(item["tier_c_retained_source_count"] for item in states),
+            "tier_c_text_extraction_ready_sources": sum(item["tier_c_text_extraction_ready_count"] for item in states),
+            "states_with_tier_c_retained_sources": sum(item["tier_c_retained_source_count"] > 0 for item in states),
         },
         "states": states,
     }
@@ -5226,6 +5335,10 @@ def build_analysis_readiness(
         dashboard_fix_tier_c_source_review_download_556_completed,
         dashboard_fix_tier_c_source_review_download_556_decision,
     ) = dashboard_fix_tier_c_source_review_download_556_status()
+    (
+        tier_c_readiness_dashboard_map_update_completed,
+        tier_c_readiness_dashboard_map_update_decision,
+    ) = tier_c_readiness_dashboard_map_update_status()
     if scale_1000_targeted_qa_completed and (
         scale_1000_targeted_qa_decision.get("qa_pass") is not True
         or scale_1000_targeted_qa_decision.get(
@@ -5272,6 +5385,9 @@ def build_analysis_readiness(
     return {
         "metadata": metadata,
         "overall_status": (
+            "tier_c_readiness_dashboard_map_update_completed_text_extraction_ready_global_analysis_closed"
+            if tier_c_readiness_dashboard_map_update_completed
+            else
             "dashboard_fix_and_tier_c_download_completed_pdf_readiness_ready_dashboard_fixed_global_analysis_closed"
             if dashboard_fix_tier_c_source_review_download_556_completed
             else
@@ -6341,6 +6457,31 @@ def build_analysis_readiness(
                     bool(dashboard_fix_tier_c_source_review_download_556_decision.get("pdf_text_layer_readiness_ready_next", False))
                     if dashboard_fix_tier_c_source_review_download_556_completed else False
                 ),
+                "tier_c_readiness_dashboard_map_update_completed": tier_c_readiness_dashboard_map_update_completed,
+                "tier_c_readiness_dashboard_map_update_decision": (
+                    tier_c_readiness_dashboard_map_update_decision.get("decision")
+                    if tier_c_readiness_dashboard_map_update_completed else None
+                ),
+                "tier_c_readiness_queue_count": (
+                    int(tier_c_readiness_dashboard_map_update_decision.get("retained_readiness_queue_count", 0))
+                    if tier_c_readiness_dashboard_map_update_completed else 0
+                ),
+                "tier_c_readiness_status_counts": (
+                    tier_c_readiness_dashboard_map_update_decision.get("readiness_status_counts", {})
+                    if tier_c_readiness_dashboard_map_update_completed else {}
+                ),
+                "tier_c_bounded_text_extraction_ready_next": (
+                    bool(tier_c_readiness_dashboard_map_update_decision.get("bounded_text_layer_extraction_ready_next", False))
+                    if tier_c_readiness_dashboard_map_update_completed else False
+                ),
+                "tier_c_dashboard_map_data_date": (
+                    tier_c_readiness_dashboard_map_update_decision.get("map_data_date")
+                    if tier_c_readiness_dashboard_map_update_completed else None
+                ),
+                "future_broad_geographic_scouting_strategy_recorded": (
+                    bool(tier_c_readiness_dashboard_map_update_decision.get("broad_geographic_scouting_strategy_recorded", False))
+                    if tier_c_readiness_dashboard_map_update_completed else False
+                ),
                 "gabriel_claim_rating_global_analysis_readiness": False,
                 "limited_qualitative_usage_registry_review_global_analysis_readiness": False,
                 "limited_qualitative_usage_layer_acceptance_global_analysis_readiness": False,
@@ -6358,7 +6499,8 @@ def build_analysis_readiness(
         "analyses_available_now": [
             "bounded internal mechanism-linkage memo: 268 exact same-source co-location pairs",
             "Tier C verification status: 556 verified source leads",
-            "Tier C source-review status: 463 retained files awaiting PDF/text-layer readiness",
+            "Tier C readiness status: 463 retained files reviewed; 378 approved only for later bounded text extraction",
+            "dated state/region Tier C retained/readiness map metadata",
             "documentary mechanism-value scaffolds with explicit noncausal claim boundaries",
             "historical discovery coverage and operational queue context",
             "municipal universe and scout coverage rates",
@@ -6382,8 +6524,8 @@ def build_analysis_readiness(
             "claim promotion based only on candidate counts",
         ],
         "promotion_gate": (
-            "The next authorized step is bounded PDF/text-layer readiness over 463 retained "
-            "Tier C files. Do not show wage-gap, regression, treatment-effect, national "
+            "The next authorized step is bounded local text-layer extraction over only 378 "
+            "readiness-approved Tier C files. Do not show wage-gap, regression, treatment-effect, national "
             "prevalence, or causal results until separately validated matched structured "
             "evidence supports them."
         ),
@@ -6763,6 +6905,16 @@ def build_project_phase_summary(
     source_review_completed = wage_stage.get("dashboard_fix_tier_c_source_review_download_556_completed") is True
     if not (source_review_completed and tier_c_completed and memo_completed):
         raise ValueError("current dashboard phase requires complete memo, Tier C verification, and source review")
+    tier_c_readiness = read_json(TIER_C_READINESS_DASHBOARD_MAP_UPDATE_DECISION_PATH)
+    tier_c_readiness_invariants = read_json(TIER_C_READINESS_DASHBOARD_MAP_UPDATE_INVARIANTS_PATH)
+    if not (
+        tier_c_readiness.get("decision")
+        == "tier_c_readiness_dashboard_map_update_completed_text_extraction_ready"
+        and tier_c_readiness.get("retained_readiness_queue_count") == 463
+        and tier_c_readiness.get("global_analysis_readiness") is False
+        and tier_c_readiness_invariants.get("all_invariants_passed") is True
+    ):
+        raise ValueError("current dashboard phase requires completed Tier C readiness/map update")
     mechanism = read_json(
         TARGETED_TIER_C_VERIFICATION_FROM_MEMO_GAPS_DIR
         / "targeted_tier_c_verification_mechanism_gap_coverage_summary.json"
@@ -6774,9 +6926,9 @@ def build_project_phase_summary(
     return {
         **metadata,
         "data_vintage": "2026-07-27",
-        "stage": "tier_c_source_review_download_pdf_readiness_transition",
-        "current_phase": "Dashboard fixed; Tier C source review complete; PDF/text-layer readiness ready",
-        "current_phase_code": "dashboard_fix_and_tier_c_download_completed_pdf_readiness_ready_dashboard_fixed",
+        "stage": "tier_c_text_readiness_complete_bounded_extraction_transition",
+        "current_phase": "Tier C text readiness reviewed; bounded extraction ready next",
+        "current_phase_code": tier_c_readiness["decision"],
         "current_evidence_status": "bounded_co_location_documentary_scaffold_only",
         "global_analysis_readiness": False,
         "wage_gap_estimates_available": False,
@@ -6802,10 +6954,23 @@ def build_project_phase_summary(
         "tier_c_retained_by_content_type": wage_stage["targeted_tier_c_retained_by_content_type"],
         "tier_c_source_review_download_result_path": "docs/analysis/dashboard_deployment_fix_and_tier_c_source_review_download_556_result_2026-07-27.md",
         "pdf_text_layer_readiness_ready_next": wage_stage["targeted_tier_c_pdf_text_layer_readiness_ready_next"],
+        "tier_c_readiness_decision": tier_c_readiness["decision"],
+        "tier_c_readiness_status_counts": tier_c_readiness["readiness_status_counts"],
+        "tier_c_text_extraction_ready_count": (
+            tier_c_readiness["readiness_status_counts"].get("parse_text_layer_later", 0)
+            + tier_c_readiness["readiness_status_counts"].get("html_text_later", 0)
+        ),
+        "tier_c_pdf_retained_count": tier_c_readiness["pdf_retained_count"],
+        "tier_c_html_retained_count": tier_c_readiness["html_retained_count"],
+        "tier_c_octet_stream_count": tier_c_readiness["octet_stream_count"],
+        "map_data_date": tier_c_readiness["map_data_date"],
+        "dashboard_map_includes_latest_tier_c_numbers": tier_c_readiness["dashboard_map_updated"],
+        "future_scout_default": "broad_state_by_state_geographic_and_source_family_diverse",
+        "mechanism_targeted_scouting_role": "secondary_gap_filling_after_broad_scans",
         "current_report_title": "Bounded Internal Mechanism-Linkage Claim Memo",
         "current_report_path": wage_stage["bounded_internal_mechanism_linkage_claim_memo_path"],
         "current_operational_report_path": "docs/analysis/dashboard_deployment_fix_and_tier_c_source_review_download_556_result_2026-07-27.md",
-        "next_task": "bounded Tier C PDF/text-layer readiness review over 463 retained sources",
+        "next_task": "bounded Tier C text-layer extraction over the 378 readiness-approved files",
         "checkpoint_target_scout_covered": SCOUT_CHECKPOINT_TARGET,
         "current_scout_covered": covered,
         "remaining_to_checkpoint": remaining,
@@ -6849,21 +7014,21 @@ def build_project_phase_summary(
             }
         ],
         "checkpoint_pause_rule": (
-            "Active: the user-approved aggressive round was merged and the "
-            "approximately 2,000-covered checkpoint was exceeded. Broad scouting "
-            "is paused; begin the documented downstream cycle."
+            "The current retained wave proceeds downstream. When source expansion resumes, "
+            "default to broad state-by-state scanning with geographic and source-family "
+            "balance; use mechanism-targeted scouting only as secondary gap-filling."
         ),
-        "next_phase": "bounded Tier C PDF/text-layer readiness review",
+        "next_phase": "bounded Tier C text-layer extraction",
         "next_phase_sequence": [
-            "lock the 463 retained Tier C source files",
-            "verify local paths, sizes, hashes, and content-type lanes",
-            "classify PDF and HTML text-layer readiness without extraction",
-            "preserve OCR-later, oversized, noisy, corrupt, and review-needed exclusions",
-            "prepare a separately authorized later text-extraction queue",
+            "lock only the parse-text-layer-later and HTML-text-later manifests",
+            "extract local machine-readable text with exact retained-source lineage",
+            "keep PDF and HTML extraction lanes explicit",
+            "exclude every deferred, oversized, noisy, corrupt, and review-needed row",
+            "preserve the broad geographic/source-family strategy for the next scout wave",
         ],
         "regressions_status": "Deferred",
         "last_updated_commit": CURRENT_SOURCE_ACCOUNTING_COMMIT,
-        "last_updated_context": "tier_c_source_review_download_completed_pdf_text_layer_readiness_ready",
+        "last_updated_context": "tier_c_text_readiness_reviewed_dashboard_map_dated_extraction_ready",
         "future_live_controls": [
             "stronger preflight gate",
             "compact prompts",
@@ -10366,9 +10531,16 @@ def build_text_table_calibration_status_summary(
             dashboard_fix_tier_c_source_review_download_556_completed,
             dashboard_fix_tier_c_source_review_download_556_decision,
         ) = dashboard_fix_tier_c_source_review_download_556_status()
+        (
+            tier_c_readiness_dashboard_map_update_completed,
+            tier_c_readiness_dashboard_map_update_decision,
+        ) = tier_c_readiness_dashboard_map_update_status()
         return {
             **metadata,
             "calibration_phase": (
+                tier_c_readiness_dashboard_map_update_decision.get("decision")
+                if tier_c_readiness_dashboard_map_update_completed
+                else
                 dashboard_fix_tier_c_source_review_download_556_decision.get("decision")
                 if dashboard_fix_tier_c_source_review_download_556_completed
                 else
@@ -12117,6 +12289,31 @@ def build_text_table_calibration_status_summary(
                 bool(dashboard_fix_tier_c_source_review_download_556_decision.get("pdf_text_layer_readiness_ready_next", False))
                 if dashboard_fix_tier_c_source_review_download_556_completed else False
             ),
+            "tier_c_readiness_dashboard_map_update_completed": tier_c_readiness_dashboard_map_update_completed,
+            "tier_c_readiness_dashboard_map_update_decision": (
+                tier_c_readiness_dashboard_map_update_decision.get("decision")
+                if tier_c_readiness_dashboard_map_update_completed else None
+            ),
+            "tier_c_readiness_queue_count": (
+                int(tier_c_readiness_dashboard_map_update_decision.get("retained_readiness_queue_count", 0))
+                if tier_c_readiness_dashboard_map_update_completed else 0
+            ),
+            "tier_c_readiness_status_counts": (
+                tier_c_readiness_dashboard_map_update_decision.get("readiness_status_counts", {})
+                if tier_c_readiness_dashboard_map_update_completed else {}
+            ),
+            "tier_c_bounded_text_extraction_ready_next": (
+                bool(tier_c_readiness_dashboard_map_update_decision.get("bounded_text_layer_extraction_ready_next", False))
+                if tier_c_readiness_dashboard_map_update_completed else False
+            ),
+            "tier_c_dashboard_map_data_date": (
+                tier_c_readiness_dashboard_map_update_decision.get("map_data_date")
+                if tier_c_readiness_dashboard_map_update_completed else None
+            ),
+            "future_broad_geographic_scouting_strategy_recorded": (
+                bool(tier_c_readiness_dashboard_map_update_decision.get("broad_geographic_scouting_strategy_recorded", False))
+                if tier_c_readiness_dashboard_map_update_completed else False
+            ),
             "gabriel_claim_rating_global_analysis_readiness": False,
             "limited_qualitative_usage_registry_review_global_analysis_readiness": False,
             "limited_qualitative_usage_layer_acceptance_global_analysis_readiness": False,
@@ -13136,6 +13333,10 @@ def main() -> int:
     scout_yield_state_rows = read_csv(SCOUT_YIELD_STATE_PATH)
     scout_yield_wave_rows = read_csv(SCOUT_YIELD_WAVE_PATH)
     reports_index_source = read_json(REPORTS_INDEX_SOURCE_PATH)
+    tier_c_map_summary = read_json(
+        TIER_C_READINESS_DASHBOARD_MAP_UPDATE_DIR
+        / "dashboard_map_update_with_tier_c_sources_summary.json"
+    )
     claim_rows = read_csv(CLAIM_REGISTER_PATH) if CLAIM_REGISTER_PATH.exists() else []
     claim_map_rows = (
         read_csv(STATE_CITY_CLAIM_MAP_PATH) if STATE_CITY_CLAIM_MAP_PATH.exists() else []
@@ -13283,6 +13484,7 @@ def main() -> int:
             text_table_calibration_status_summary,
         ),
         write_json("reports_index.json", reports_index),
+        write_json("tier_c_map_summary.json", tier_c_map_summary),
     ]
 
     for warning in warnings:

@@ -1,0 +1,96 @@
+{
+  "by_source_family": {
+    "cba_or_arbitration_award_or_factfinding_or_impasse_record": {
+      "bounded_text_extraction_ready_count": 100,
+      "corrupt_or_unreadable_count": 0,
+      "html_text_later_count": 28,
+      "needs_review_count": 5,
+      "ocr_later_or_defer_count": 14,
+      "oversized_for_text_pass_count": 2,
+      "parse_text_layer_later_count": 72,
+      "retained_source_count": 121
+    },
+    "cba_or_arbitration_award_or_factfinding_or_impasse_record (factfinding)": {
+      "bounded_text_extraction_ready_count": 0,
+      "corrupt_or_unreadable_count": 0,
+      "html_text_later_count": 0,
+      "needs_review_count": 2,
+      "ocr_later_or_defer_count": 0,
+      "oversized_for_text_pass_count": 0,
+      "parse_text_layer_later_count": 0,
+      "retained_source_count": 2
+    },
+    "cba_or_arbitration_award_or_factfinding_or_impasse_record (interest arbitration award)": {
+      "bounded_text_extraction_ready_count": 1,
+      "corrupt_or_unreadable_count": 0,
+      "html_text_later_count": 0,
+      "needs_review_count": 0,
+      "ocr_later_or_defer_count": 0,
+      "oversized_for_text_pass_count": 0,
+      "parse_text_layer_later_count": 1,
+      "retained_source_count": 1
+    },
+    "cba_or_arbitration_award_or_factfinding_or_impasse_record (restraint of binding grievance arbitration synopsis)": {
+      "bounded_text_extraction_ready_count": 1,
+      "corrupt_or_unreadable_count": 0,
+      "html_text_later_count": 0,
+      "needs_review_count": 0,
+      "ocr_later_or_defer_count": 0,
+      "oversized_for_text_pass_count": 0,
+      "parse_text_layer_later_count": 1,
+      "retained_source_count": 1
+    },
+    "cba_or_arbitration_award_or_factfinding_or_impasse_record (township document likely referencing bargaining unit terms and/or related proceedings)": {
+      "bounded_text_extraction_ready_count": 1,
+      "corrupt_or_unreadable_count": 0,
+      "html_text_later_count": 0,
+      "needs_review_count": 0,
+      "ocr_later_or_defer_count": 0,
+      "oversized_for_text_pass_count": 0,
+      "parse_text_layer_later_count": 1,
+      "retained_source_count": 1
+    },
+    "cba_or_arbitration_award_or_factfinding_or_impasse_record (unit/representation decision synopsis; may affect bargaining power)": {
+      "bounded_text_extraction_ready_count": 1,
+      "corrupt_or_unreadable_count": 0,
+      "html_text_later_count": 0,
+      "needs_review_count": 0,
+      "ocr_later_or_defer_count": 0,
+      "oversized_for_text_pass_count": 0,
+      "parse_text_layer_later_count": 1,
+      "retained_source_count": 1
+    },
+    "cba_or_budget_pay_plan_with_explicit_compensation_mechanism": {
+      "bounded_text_extraction_ready_count": 94,
+      "corrupt_or_unreadable_count": 0,
+      "html_text_later_count": 12,
+      "needs_review_count": 7,
+      "ocr_later_or_defer_count": 24,
+      "oversized_for_text_pass_count": 4,
+      "parse_text_layer_later_count": 82,
+      "retained_source_count": 129
+    },
+    "cba_or_compensation_study_or_classification_study_or_wage_schedule": {
+      "bounded_text_extraction_ready_count": 68,
+      "corrupt_or_unreadable_count": 0,
+      "html_text_later_count": 8,
+      "needs_review_count": 2,
+      "ocr_later_or_defer_count": 9,
+      "oversized_for_text_pass_count": 2,
+      "parse_text_layer_later_count": 60,
+      "retained_source_count": 81
+    },
+    "collective_bargaining_agreement_or_moa_or_wage_schedule": {
+      "bounded_text_extraction_ready_count": 112,
+      "corrupt_or_unreadable_count": 0,
+      "html_text_later_count": 13,
+      "needs_review_count": 3,
+      "ocr_later_or_defer_count": 10,
+      "oversized_for_text_pass_count": 1,
+      "parse_text_layer_later_count": 99,
+      "retained_source_count": 126
+    }
+  },
+  "cba_skew_is_tracked_for_future_broad_scouting": true,
+  "source_family_count": 9
+}

@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": "0.1.0",
-    "generated_at": "2026-07-27T15:17:28Z",
+    "generated_at": "2026-07-27T15:57:42Z",
     "data_vintage": "2026-07-27",
     "source_files": [
       "docs/analysis/national_scout_coverage_state.csv",
@@ -14,6 +14,10 @@
       "docs/analysis/scout_yield_learning_by_state_2026-07-22.csv",
       "docs/analysis/scout_yield_learning_by_wave_2026-07-22.csv",
       "docs/dashboard/reports/reports_index.json",
+      "docs/analysis/compensation_extraction/TIER-C-READINESS-AND-DASHBOARD-MAP-UPDATE-WITH-BROAD-SCOUTING-STRATEGY-2026-07-27/tier_c_readiness_dashboard_map_update_decision.json",
+      "docs/analysis/compensation_extraction/TIER-C-READINESS-AND-DASHBOARD-MAP-UPDATE-WITH-BROAD-SCOUTING-STRATEGY-2026-07-27/tier_c_readiness_dashboard_map_update_invariant_checks.json",
+      "docs/analysis/compensation_extraction/TIER-C-READINESS-AND-DASHBOARD-MAP-UPDATE-WITH-BROAD-SCOUTING-STRATEGY-2026-07-27/dashboard_map_state_region_coverage.csv",
+      "docs/analysis/compensation_extraction/TIER-C-READINESS-AND-DASHBOARD-MAP-UPDATE-WITH-BROAD-SCOUTING-STRATEGY-2026-07-27/dashboard_map_data_date.json",
       "docs/analysis/claim_register_2026-07-12.csv",
       "docs/analysis/state_city_claim_map_2026-07-12.csv",
       "docs/analysis/hypothesis_tracker_2026-07-12.csv",
@@ -82,7 +86,7 @@
       "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
     ]
   },
-  "overall_status": "dashboard_fix_and_tier_c_download_completed_pdf_readiness_ready_dashboard_fixed_global_analysis_closed",
+  "overall_status": "tier_c_readiness_dashboard_map_update_completed_text_extraction_ready_global_analysis_closed",
   "current_inputs": {
     "national_queue_available": true,
     "national_coverage_available": true,
@@ -493,6 +497,19 @@
         "text/html": 65
       },
       "targeted_tier_c_pdf_text_layer_readiness_ready_next": true,
+      "tier_c_readiness_dashboard_map_update_completed": true,
+      "tier_c_readiness_dashboard_map_update_decision": "tier_c_readiness_dashboard_map_update_completed_text_extraction_ready",
+      "tier_c_readiness_queue_count": 463,
+      "tier_c_readiness_status_counts": {
+        "html_text_later": 61,
+        "needs_review": 19,
+        "ocr_later_or_defer": 57,
+        "oversized_for_text_pass": 9,
+        "parse_text_layer_later": 317
+      },
+      "tier_c_bounded_text_extraction_ready_next": true,
+      "tier_c_dashboard_map_data_date": "2026-07-27",
+      "future_broad_geographic_scouting_strategy_recorded": true,
       "gabriel_claim_rating_global_analysis_readiness": false,
       "limited_qualitative_usage_registry_review_global_analysis_readiness": false,
       "limited_qualitative_usage_layer_acceptance_global_analysis_readiness": false,
@@ -510,7 +527,8 @@
   "analyses_available_now": [
     "bounded internal mechanism-linkage memo: 268 exact same-source co-location pairs",
     "Tier C verification status: 556 verified source leads",
-    "Tier C source-review status: 463 retained files awaiting PDF/text-layer readiness",
+    "Tier C readiness status: 463 retained files reviewed; 378 approved only for later bounded text extraction",
+    "dated state/region Tier C retained/readiness map metadata",
     "documentary mechanism-value scaffolds with explicit noncausal claim boundaries",
     "historical discovery coverage and operational queue context",
     "municipal universe and scout coverage rates",
@@ -530,5 +548,5 @@
     "confidence levels for national substantive claims",
     "claim promotion based only on candidate counts"
   ],
-  "promotion_gate": "The next authorized step is bounded PDF/text-layer readiness over 463 retained Tier C files. Do not show wage-gap, regression, treatment-effect, national prevalence, or causal results until separately validated matched structured evidence supports them."
+  "promotion_gate": "The next authorized step is bounded local text-layer extraction over only 378 readiness-approved Tier C files. Do not show wage-gap, regression, treatment-effect, national prevalence, or causal results until separately validated matched structured evidence supports them."
 }

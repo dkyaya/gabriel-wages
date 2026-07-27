@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-27T15:17:28Z",
+  "generated_at": "2026-07-27T15:57:42Z",
   "data_vintage": "2026-07-27",
   "source_file": "docs/dashboard/reports/reports_index.json",
   "reports": [
@@ -65,6 +65,38 @@
         {
           "label": "oversized/deferred",
           "value": 18
+        }
+      ]
+    },
+    {
+      "id": "tier-c-text-readiness-map-update-2026-07-27",
+      "title": "Tier C Text Readiness and Dashboard Map Update",
+      "report_type": "Current operations report",
+      "date": "2026-07-27",
+      "checkpoint": "463 retained sources reviewed; 378 ready for bounded text extraction",
+      "summary": "Local readiness review classified 397 PDFs, 65 HTML artifacts, and one octet-stream file without OCR, rendering, or evidence extraction. The dashboard map now exposes the dated Tier C retained/readiness layer.",
+      "tags": [
+        "Tier C",
+        "text readiness",
+        "map date",
+        "broad scouting strategy"
+      ],
+      "current": false,
+      "historical": false,
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/tier_c_readiness_dashboard_map_update_result_2026-07-27.md",
+      "link_label": "Open Tier C readiness/map report",
+      "scope_metrics": [
+        {
+          "label": "retained sources",
+          "value": 463
+        },
+        {
+          "label": "extraction-ready",
+          "value": 378
+        },
+        {
+          "label": "prior exclusions preserved",
+          "value": 93
         }
       ]
     },

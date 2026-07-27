@@ -1,0 +1,24 @@
+{
+  "balance_metrics": [
+    "states_scanned",
+    "regions_scanned",
+    "source_family_counts",
+    "source_family_shares"
+  ],
+  "countrywide_balance_goal": true,
+  "default_future_scout_mode": "broad_geographic_state_by_state",
+  "mechanism_targeted_scouting_role": "secondary_gap_filling_after_broad_scans",
+  "preserve_mechanism_tags_after_collection": true,
+  "source_families": [
+    "CBA",
+    "memorandum_or_MOU",
+    "arbitration_award",
+    "factfinding_report",
+    "salary_ordinance",
+    "wage_schedule",
+    "budget_or_pay_plan",
+    "civil_service_or_HR_pay_plan",
+    "compensation_or_classification_study"
+  ],
+  "track_source_family_skew": true
+}

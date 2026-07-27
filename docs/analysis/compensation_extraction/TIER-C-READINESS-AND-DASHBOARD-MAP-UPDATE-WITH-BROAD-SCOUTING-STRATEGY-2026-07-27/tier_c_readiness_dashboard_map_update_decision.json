@@ -1,0 +1,93 @@
+{
+  "bounded_text_layer_extraction_ready_next": true,
+  "broad_geographic_scouting_strategy_recorded": true,
+  "codification_runs": 0,
+  "completion_status": "completed_bounded_local_readiness_and_dashboard_map_update",
+  "dashboard_map_updated": true,
+  "decision": "tier_c_readiness_dashboard_map_update_completed_text_extraction_ready",
+  "downloads": 0,
+  "durable_ledger_merges": 0,
+  "evidence_span_extraction_runs": 0,
+  "full_text_extraction_runs": 0,
+  "global_analysis_readiness": false,
+  "html_retained_count": 65,
+  "ingestion_runs": 0,
+  "map_data_date": "2026-07-27",
+  "model_api_calls": 0,
+  "ocr_runs": 0,
+  "octet_stream_count": 1,
+  "pdf_render_runs": 0,
+  "pdf_retained_count": 397,
+  "rating_runs": 0,
+  "readiness_status_counts": {
+    "html_text_later": 61,
+    "needs_review": 19,
+    "ocr_later_or_defer": 57,
+    "oversized_for_text_pass": 9,
+    "parse_text_layer_later": 317
+  },
+  "readiness_status_counts_by_lane": {
+    "lane_1": {
+      "html_text_later": 13,
+      "needs_review": 3,
+      "ocr_later_or_defer": 10,
+      "oversized_for_text_pass": 1,
+      "parse_text_layer_later": 99
+    },
+    "lane_2": {
+      "html_text_later": 28,
+      "needs_review": 7,
+      "ocr_later_or_defer": 14,
+      "oversized_for_text_pass": 2,
+      "parse_text_layer_later": 76
+    },
+    "lane_3": {
+      "html_text_later": 12,
+      "needs_review": 7,
+      "ocr_later_or_defer": 24,
+      "oversized_for_text_pass": 4,
+      "parse_text_layer_later": 82
+    },
+    "lane_4": {
+      "html_text_later": 8,
+      "needs_review": 2,
+      "ocr_later_or_defer": 9,
+      "oversized_for_text_pass": 2,
+      "parse_text_layer_later": 60
+    }
+  },
+  "readiness_status_counts_by_mechanism": {
+    "fiscal_constraint_signal": {
+      "html_text_later": 12,
+      "needs_review": 7,
+      "ocr_later_or_defer": 24,
+      "oversized_for_text_pass": 4,
+      "parse_text_layer_later": 82
+    },
+    "market_or_comparability_pressure": {
+      "html_text_later": 8,
+      "needs_review": 2,
+      "ocr_later_or_defer": 9,
+      "oversized_for_text_pass": 2,
+      "parse_text_layer_later": 60
+    },
+    "non_safety_constraint_signal": {
+      "html_text_later": 13,
+      "needs_review": 3,
+      "ocr_later_or_defer": 10,
+      "oversized_for_text_pass": 1,
+      "parse_text_layer_later": 99
+    },
+    "strike_or_no_strike_constraint": {
+      "html_text_later": 28,
+      "needs_review": 7,
+      "ocr_later_or_defer": 14,
+      "oversized_for_text_pass": 2,
+      "parse_text_layer_later": 76
+    }
+  },
+  "repair_needed": false,
+  "retained_readiness_queue_count": 463,
+  "task_id": "TIER-C-READINESS-AND-DASHBOARD-MAP-UPDATE-WITH-BROAD-SCOUTING-STRATEGY-2026-07-27",
+  "url_opens": 0
+}

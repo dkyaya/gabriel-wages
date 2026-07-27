@@ -1,0 +1,13 @@
+{
+  "html_rows": 65,
+  "maximum_probe_bytes_per_html": 262144,
+  "readiness_status_counts": {
+    "html_text_later": 61,
+    "needs_review": 4
+  },
+  "redirect_or_shell_count": 0,
+  "saved_document_text_rows": 0,
+  "text_ready_count": 61,
+  "unreadable_count": 0,
+  "weak_or_noisy_count": 4
+}

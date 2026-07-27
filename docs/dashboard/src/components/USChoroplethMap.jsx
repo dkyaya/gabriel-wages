@@ -160,7 +160,7 @@ export function USChoroplethMap({ states, selectedCode, onSelect, metric, metric
         <text className="dc-label" x="783" y="181" aria-hidden="true">DC</text>
       </svg>
       <p className="geographic-map-caption">
-        Local Census boundaries; Alaska and Hawaii use insets. Hover or focus a state for its exact value. Scout covered: {formatNumber(activeState?.scout_coverage_count)}.
+        Local Census boundaries; Alaska and Hawaii use insets. Hover or focus a state for its exact value. Tier C retained: {formatNumber(activeState?.tier_c_retained_source_count)}; historical scout covered: {formatNumber(activeState?.scout_coverage_count)}.
       </p>
     </div>
   );

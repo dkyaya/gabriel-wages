@@ -1,0 +1,37 @@
+{
+  "global_analysis_readiness": false,
+  "map_data_date": "2026-07-27",
+  "map_update_status": "current_tier_c_retained_and_readiness_layer_generated",
+  "mechanisms": {
+    "fiscal_constraint_signal": 129,
+    "market_or_comparability_pressure": 81,
+    "non_safety_constraint_signal": 126,
+    "strike_or_no_strike_constraint": 127
+  },
+  "readiness_status_counts": {
+    "html_text_later": 61,
+    "needs_review": 19,
+    "ocr_later_or_defer": 57,
+    "oversized_for_text_pass": 9,
+    "parse_text_layer_later": 317
+  },
+  "regions": {
+    "Midwest": 83,
+    "Northeast": 221,
+    "South": 133,
+    "West": 26
+  },
+  "retained_source_count": 463,
+  "source_families": {
+    "cba_or_arbitration_award_or_factfinding_or_impasse_record": 121,
+    "cba_or_arbitration_award_or_factfinding_or_impasse_record (factfinding)": 2,
+    "cba_or_arbitration_award_or_factfinding_or_impasse_record (interest arbitration award)": 1,
+    "cba_or_arbitration_award_or_factfinding_or_impasse_record (restraint of binding grievance arbitration synopsis)": 1,
+    "cba_or_arbitration_award_or_factfinding_or_impasse_record (township document likely referencing bargaining unit terms and/or related proceedings)": 1,
+    "cba_or_arbitration_award_or_factfinding_or_impasse_record (unit/representation decision synopsis; may affect bargaining power)": 1,
+    "cba_or_budget_pay_plan_with_explicit_compensation_mechanism": 129,
+    "cba_or_compensation_study_or_classification_study_or_wage_schedule": 81,
+    "collective_bargaining_agreement_or_moa_or_wage_schedule": 126
+  },
+  "states_represented": 37
+}

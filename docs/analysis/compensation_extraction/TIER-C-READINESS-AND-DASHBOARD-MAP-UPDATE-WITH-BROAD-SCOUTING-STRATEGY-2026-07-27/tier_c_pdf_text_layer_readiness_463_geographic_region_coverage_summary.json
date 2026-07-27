@@ -1,0 +1,48 @@
+{
+  "by_region": {
+    "Midwest": {
+      "bounded_text_extraction_ready_count": 73,
+      "corrupt_or_unreadable_count": 0,
+      "html_text_later_count": 5,
+      "needs_review_count": 0,
+      "ocr_later_or_defer_count": 9,
+      "oversized_for_text_pass_count": 1,
+      "parse_text_layer_later_count": 68,
+      "retained_source_count": 83
+    },
+    "Northeast": {
+      "bounded_text_extraction_ready_count": 169,
+      "corrupt_or_unreadable_count": 0,
+      "html_text_later_count": 33,
+      "needs_review_count": 16,
+      "ocr_later_or_defer_count": 35,
+      "oversized_for_text_pass_count": 1,
+      "parse_text_layer_later_count": 136,
+      "retained_source_count": 221
+    },
+    "South": {
+      "bounded_text_extraction_ready_count": 114,
+      "corrupt_or_unreadable_count": 0,
+      "html_text_later_count": 22,
+      "needs_review_count": 2,
+      "ocr_later_or_defer_count": 12,
+      "oversized_for_text_pass_count": 5,
+      "parse_text_layer_later_count": 92,
+      "retained_source_count": 133
+    },
+    "West": {
+      "bounded_text_extraction_ready_count": 22,
+      "corrupt_or_unreadable_count": 0,
+      "html_text_later_count": 1,
+      "needs_review_count": 1,
+      "ocr_later_or_defer_count": 1,
+      "oversized_for_text_pass_count": 2,
+      "parse_text_layer_later_count": 21,
+      "retained_source_count": 26
+    }
+  },
+  "city_state_pair_count": 307,
+  "geography_from_existing_lineage_only": true,
+  "region_count": 4,
+  "state_count": 37
+}

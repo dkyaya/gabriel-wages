@@ -1,0 +1,40 @@
+{
+  "content_type_counts": {
+    "application/octet-stream": 1,
+    "application/pdf": 397,
+    "text/html": 65
+  },
+  "duplicate_summary_lineage": "committed retained_sources_duplicate_hash_groups.csv and exclusion summary; supplementary relay summary available",
+  "global_analysis_readiness": false,
+  "immutable_input_hashes": {
+    "dashboard_fix_and_tier_c_source_review_download_556_decision.json": "37add16f09bcc45472e4a3f4e8e6d1d28cde26a142726c39af0ba524fa19663c",
+    "dashboard_fix_and_tier_c_source_review_download_556_summary.md": "f8ad5a93355a16ff75a9a457f1557db49e4eae0542d6254c6e76d12952444617",
+    "dashboard_fix_and_tier_c_source_review_download_556_validation_2026-07-27.md": "545a54346737ee28edfbf7e6dd66a618687b05a2a12849706fc664351a3b13a1",
+    "retained_sources_duplicate_hash_groups.csv": "8ad30ab9cd6edb4fdb9728387f6dfb8b9ee310fedfd3d9fcc439b3df47312a85",
+    "retained_sources_hash_manifest.csv": "cc61834a4b26cb0818c02a8dbf03870f568e8723d76c803f24e949f5f3baa74a",
+    "retained_sources_manifest.csv": "0565e86927da0f61778f6784abb0b767e7cc801793db9c94127c4618a97eec88",
+    "targeted_tier_c_source_review_download_556_city_cycle_unit_coverage_summary.json": "a2e4225c52424471cd7d5344a3c5301381b2e8bb89ff216dbc1786f01e88bece",
+    "targeted_tier_c_source_review_download_556_exclusion_summary.json": "da8f76bd21b38011cec1243e026e93cd8ae3af504c5215900450cba830a8e255",
+    "targeted_tier_c_source_review_download_556_geographic_region_coverage_summary.json": "890d174c50a8d4edeb9ab18f804c6916757e694d4db3448eeb1313aec79f26d7",
+    "targeted_tier_c_source_review_download_556_invariant_checks.json": "05854fe39d81bac30c313ec8d4f0e66287b16af52fb6422c6470956c652a4bec",
+    "targeted_tier_c_source_review_download_556_mechanism_coverage_summary.json": "fbed834243bb49cb2e7b2d7bd64027646d095724356b2294e3adc7a4a44801f5",
+    "targeted_tier_c_source_review_download_556_results.csv": "d3a44745a5fa32a528c2a54b808e59a8d6001e7434902040121882c0400f2ca2",
+    "targeted_tier_c_source_review_download_556_results_summary.json": "6df3740af6cce37de38a218f0fbeee7edb351a3e7827ad0b14e4ed536c7c6df9",
+    "targeted_tier_c_source_review_download_556_retained_sources.csv": "8a15d8405e5c7a32382570f392bd5b14b6fc10199c333697a1b2d19dbedf86ee",
+    "targeted_tier_c_source_review_download_556_retained_sources_summary.json": "25eacf5c42f5707cc94fb500033b9258a103d8ca407c26f68cd211f9a68d846d"
+  },
+  "input_commit": "09d6cbcade1c51abc870f7ec029f32c410d392f6",
+  "inspection_status": "not_started",
+  "lane_counts": {
+    "lane_1": 126,
+    "lane_2": 127,
+    "lane_3": 129,
+    "lane_4": 81
+  },
+  "locked_queue_count": 463,
+  "preserved_exclusion_count": 93,
+  "queue_sha256": "812a43928f4ea030cfbf51aa775cd31669a3ab7fac1d8421888269466fac8e17",
+  "retained_file_integrity_pass_count": 463,
+  "retained_source_id_set_sha256": "5c13c1689624175c9f9fac58e72bf3c912b40536e876b68678e1423ad5994779",
+  "task_id": "TIER-C-READINESS-AND-DASHBOARD-MAP-UPDATE-WITH-BROAD-SCOUTING-STRATEGY-2026-07-27"
+}

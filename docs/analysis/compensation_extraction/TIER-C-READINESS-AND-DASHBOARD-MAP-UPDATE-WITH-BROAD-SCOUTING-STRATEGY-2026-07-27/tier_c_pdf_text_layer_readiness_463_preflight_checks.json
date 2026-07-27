@@ -1,0 +1,25 @@
+{
+  "content_type_counts": {
+    "application/octet-stream": 1,
+    "application/pdf": 397,
+    "text/html": 65
+  },
+  "downloads": 0,
+  "evidence_span_extraction_runs": 0,
+  "full_text_extraction_runs": 0,
+  "global_analysis_readiness": false,
+  "locked_queue_count": 463,
+  "maximum_pdf_text_signal_probe_pages": 3,
+  "model_api_calls": 0,
+  "ocr_runs": 0,
+  "pdf_render_runs": 0,
+  "pdfinfo_available": true,
+  "pdftotext_available_for_bounded_signal_only": true,
+  "preflight_passed": true,
+  "prior_excluded_rows_in_queue": 0,
+  "queue_hash_matches_lock": true,
+  "retained_id_hash_matches_lock": true,
+  "saved_page_images": 0,
+  "source_review_decision_allows_readiness": true,
+  "url_opens": 0
+}

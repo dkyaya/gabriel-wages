@@ -17,6 +17,7 @@ import pdfReadinessStatus from "../data/pdf_readiness_status_summary.json";
 import textTableDetectionStatus from "../data/text_table_detection_status_summary.json";
 import textTableCalibrationStatus from "../data/text_table_calibration_status_summary.json";
 import reportsIndex from "../data/reports_index.json";
+import tierCMapSummary from "../data/tier_c_map_summary.json";
 import piProgressReportPdf from "../reports/pi_progress_report_source_discovery_2026-07-22.pdf?url";
 import { AnalysisReadinessPanel } from "./components/AnalysisReadinessPanel.jsx";
 import { CandidateQueueCards } from "./components/CandidateQueueCards.jsx";
@@ -149,9 +150,10 @@ function App() {
             <p className="eyebrow">HBS municipal labor evidence project</p>
             <h1>Gabriel Wages project hub</h1>
             <p className="header-deck">
-              Tier C source review retained {formatNumber(projectPhaseSummary.tier_c_retained_downloaded_source_count)}
-              {" "}sources from {formatNumber(projectPhaseSummary.tier_c_verified_source_lead_count)} verified leads.
-              The evidence remains a bounded documentary/co-location scaffold; no wage gaps or causal findings are available.
+              Tier C readiness reviewed {formatNumber(projectPhaseSummary.tier_c_retained_downloaded_source_count)}
+              {" "}retained files; {formatNumber(projectPhaseSummary.tier_c_text_extraction_ready_count)} are queued only
+              for a separately authorized bounded text-layer extraction. The evidence remains a bounded
+              documentary/co-location scaffold; no wage gaps or causal findings are available.
             </p>
           </div>
           <div className="header-status">
@@ -176,10 +178,10 @@ function App() {
                 <p className="eyebrow">Overview</p>
                 <h2 id="overview-title">Current bounded evidence and retained-source status</h2>
               </div>
-              <div className="checkpoint-label">
-                <span>Next authorized stage</span>
-                <strong>Bounded Tier C PDF/text-layer readiness review</strong>
-              </div>
+                <div className="checkpoint-label">
+                  <span>Next authorized stage</span>
+                  <strong>Bounded Tier C text-layer extraction</strong>
+                </div>
             </div>
 
             <div className="headline-grid" aria-label="National headline metrics">
@@ -225,12 +227,12 @@ function App() {
 
           <section className="hub-section-group" id="geography" aria-label="Coverage map and state status">
             <div className="hub-section-intro">
-              <p className="eyebrow">Historical discovery coverage</p>
-              <h2>Archived state-level source-discovery context</h2>
-              <p>This map preserves the July discovery inventory for provenance. It is historical operational context, not the current evidence phase or a substantive outcome.</p>
+              <p className="eyebrow">Current Tier C operational coverage</p>
+              <h2>Dated retained-source and text-readiness map</h2>
+              <p>The default layer shows current Tier C retained sources and bounded text readiness. Earlier scout metrics remain available in the selector as clearly historical provenance.</p>
             </div>
             <div className="map-and-panel">
-              <NationalMap states={stateSummary.states} selectedCode={selected.state} onSelect={chooseState} />
+              <NationalMap states={stateSummary.states} selectedCode={selected.state} onSelect={chooseState} mapDataDate={stateSummary.metadata.map_data_date} coverageSummary={tierCMapSummary} />
               <StateDetailPanel state={selected} queue={selectedQueue} onOpenReport={openReport} />
             </div>
           </section>

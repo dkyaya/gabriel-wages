@@ -2,15 +2,36 @@ import { formatNumber, formatPercent } from "./ui.jsx";
 
 export const MAP_METRICS = [
   {
+    key: "tier_c_retained_source_count",
+    label: "Tier C retained sources",
+    shortLabel: "retained sources",
+    format: formatNumber,
+    caveat: "Retained Tier C files represented in the bounded readiness queue; not evidence or representativeness.",
+  },
+  {
+    key: "tier_c_text_extraction_ready_count",
+    label: "Tier C text-ready sources",
+    shortLabel: "text-ready sources",
+    format: formatNumber,
+    caveat: "Files approved only for a later bounded text-layer extraction; not yet extracted or rated.",
+  },
+  {
+    key: "tier_c_deferred_or_review_count",
+    label: "Tier C deferred/review sources",
+    shortLabel: "deferred/review sources",
+    format: formatNumber,
+    caveat: "Retained files held outside the later text-extraction queue.",
+  },
+  {
     key: "scout_coverage_rate",
-    label: "Scout coverage rate",
+    label: "Historical scout coverage rate",
     shortLabel: "coverage rate",
     format: formatPercent,
     caveat: "Share of each state's municipal universe with a parseable scout outcome.",
   },
   {
     key: "scout_coverage_count",
-    label: "Scout-covered municipalities",
+    label: "Historical scout-covered municipalities",
     shortLabel: "covered municipalities",
     format: formatNumber,
     caveat: "Parseable candidate-positive or empty scout outcomes; not verification.",
