@@ -11,7 +11,7 @@
   "ocr_runs": 0,
   "pdf_pages_accessed": 0,
   "post_fix_local_bundle_verified": true,
-  "post_push_live_bundle_verified": false,
+  "post_push_live_bundle_verified": true,
   "public_html_and_bundle_inspected": true,
   "rating_runs": 0,
   "regressions_or_treatment_effects": 0,

@@ -33,10 +33,13 @@
     "vite_index_exists": true
   },
   "post_push_live_inspection": {
-    "asset_name": null,
-    "current_contract_markers_present": null,
-    "stale_current_markers_absent": null,
-    "status": "pending_until_plain_git_push_and_pages_deployment"
+    "asset_name": "assets/index-DTmA1rmG.js",
+    "commit": "7503d845509abbbd7e1ad6f57c0fa0b514a1315f",
+    "current_contract_markers_present": true,
+    "historical_date_literal_boundary": "The literal 2026-07-23 remains only in historical round identifiers, not as the current dashboard vintage or phase.",
+    "pages_run_id": 30279335886,
+    "stale_current_markers_absent": true,
+    "status": "verified_after_successful_pages_deployment"
   },
   "public_url": "https://dkyaya.github.io/gabriel-wages/",
   "task_id": "LIVE-DASHBOARD-CONTENT-AUDIT-FIX-AND-TIER-C-SOURCE-REVIEW-DOWNLOAD-556-2026-07-27"

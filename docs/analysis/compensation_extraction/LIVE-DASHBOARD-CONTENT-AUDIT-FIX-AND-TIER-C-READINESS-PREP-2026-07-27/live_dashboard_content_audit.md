@@ -16,4 +16,4 @@ The in-app browser backend did not expose a usable browser, so a rendered access
 - Historical coverage, priority, operations, candidate-queue, and state-yield sections remain available but are labeled historical.
 - The current report link now opens the bounded internal mechanism-linkage claim memo; the July 22 PI report is historical.
 
-Post-push public-bundle verification is recorded separately in the visibility check and push-status output.
+After the main commit was pushed, GitHub Pages run `30279335886` completed successfully. The public asset `assets/index-DTmA1rmG.js` contains the corrected current contract and historical labels. The stale current-facing phrases found in the pre-fix bundle are absent. The literal `2026-07-23` remains only in archived round identifiers, not as the current vintage or phase.

@@ -1,4 +1,5 @@
 {
+  "all_live_visibility_checks_passed": true,
   "all_repo_level_visibility_checks_passed": true,
   "global_analysis_readiness_false": true,
   "historical_sections_explicitly_labeled": true,
@@ -13,5 +14,7 @@
   "local_dashboard_data_rebuilt": true,
   "local_dashboard_frontend_rebuilt": true,
   "local_production_index_exists": true,
-  "post_push_public_bundle_verified": false
+  "pages_deployment_run_id": 30279335886,
+  "post_push_public_bundle_asset": "assets/index-DTmA1rmG.js",
+  "post_push_public_bundle_verified": true
 }

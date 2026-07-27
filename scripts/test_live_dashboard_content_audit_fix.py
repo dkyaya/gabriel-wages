@@ -42,6 +42,7 @@ class LiveDashboardContentAuditFixTests(unittest.TestCase):
         self.assertEqual(self.decision["tier_c_verified_source_lead_count"], 556)
         self.assertEqual(self.decision["tier_c_retained_source_count"], 463)
         self.assertTrue(self.decision["tier_c_pdf_text_layer_readiness_ready_next"])
+        self.assertTrue(self.decision["post_push_live_bundle_verified"])
         self.assertFalse(self.decision["global_analysis_readiness"])
 
     def test_completed_download_is_reconciled_not_rerun(self) -> None:
@@ -114,6 +115,15 @@ class LiveDashboardContentAuditFixTests(unittest.TestCase):
             self.assertIn(phrase, bundle)
         self.assertNotIn("Authorize the first scaled verification round", bundle)
         self.assertNotIn("Open current PI report", bundle)
+
+    def test_post_push_public_bundle_verification_is_recorded(self) -> None:
+        audit = read_json(mod.OUTPUT / "live_dashboard_content_audit.json")
+        live = audit["post_push_live_inspection"]
+        self.assertEqual(live["status"], "verified_after_successful_pages_deployment")
+        self.assertEqual(live["pages_run_id"], 30279335886)
+        self.assertEqual(live["asset_name"], "assets/index-DTmA1rmG.js")
+        self.assertTrue(live["current_contract_markers_present"])
+        self.assertTrue(live["stale_current_markers_absent"])
 
     def test_historical_sections_are_explicit(self) -> None:
         source = (ROOT / "docs/dashboard/src/components/ProjectNavigation.jsx").read_text(encoding="utf-8")

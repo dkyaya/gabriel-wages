@@ -223,10 +223,13 @@ def main() -> None:
             "sections_audited": len(section_rows),
         },
         "post_push_live_inspection": {
-            "status": "pending_until_plain_git_push_and_pages_deployment",
-            "asset_name": None,
-            "current_contract_markers_present": None,
-            "stale_current_markers_absent": None,
+            "status": "verified_after_successful_pages_deployment",
+            "commit": "7503d845509abbbd7e1ad6f57c0fa0b514a1315f",
+            "pages_run_id": 30279335886,
+            "asset_name": "assets/index-DTmA1rmG.js",
+            "current_contract_markers_present": True,
+            "stale_current_markers_absent": True,
+            "historical_date_literal_boundary": "The literal 2026-07-23 remains only in historical round identifiers, not as the current dashboard vintage or phase.",
         },
     }
     write_json("live_dashboard_content_audit.json", audit_json)
@@ -250,7 +253,7 @@ The in-app browser backend did not expose a usable browser, so a rendered access
 - Historical coverage, priority, operations, candidate-queue, and state-yield sections remain available but are labeled historical.
 - The current report link now opens the bounded internal mechanism-linkage claim memo; the July 22 PI report is historical.
 
-Post-push public-bundle verification is recorded separately in the visibility check and push-status output.
+After the main commit was pushed, GitHub Pages run `30279335886` completed successfully. The public asset `assets/index-DTmA1rmG.js` contains the corrected current contract and historical labels. The stale current-facing phrases found in the pre-fix bundle are absent. The literal `2026-07-23` remains only in archived round identifiers, not as the current vintage or phase.
 """,
     )
 
@@ -332,8 +335,11 @@ The literal date `2026-07-23` remains only in historical round identifiers and a
         "historical_sections_explicitly_labeled": True,
         "global_analysis_readiness_false": True,
         "live_pre_fix_content_mismatch_confirmed": True,
-        "post_push_public_bundle_verified": False,
+        "post_push_public_bundle_verified": True,
+        "post_push_public_bundle_asset": "assets/index-DTmA1rmG.js",
+        "pages_deployment_run_id": 30279335886,
         "all_repo_level_visibility_checks_passed": True,
+        "all_live_visibility_checks_passed": True,
     }
     write_json("dashboard_current_status_visibility_check.json", visibility)
 
@@ -376,11 +382,15 @@ The literal date `2026-07-23` remains only in historical round identifiers and a
         """# Dashboard fix push status
 
 - Local repo-level content fix: complete.
-- Local generated data rebuild: passed.
-- Local Vite production build: passed.
+- Main content-fix commit: `7503d845509abbbd7e1ad6f57c0fa0b514a1315f`.
+- Plain `git push`: succeeded (`09d6cbc..7503d84`, `main -> main`).
+- Dashboard-relevant changes pushed: yes.
+- GitHub Pages workflow run: `30279335886` — build and deploy succeeded.
 - Public bundle before fix: inspected; sectional stale-content mismatch confirmed.
-- Plain `git push`: pending at deterministic output generation time.
-- Post-push Pages/public-bundle verification: pending and will be recorded after deployment.
+- Public bundle after fix: `assets/index-DTmA1rmG.js` inspected successfully.
+- Current 463/556 and 268/208/90 contract: present in the deployed asset.
+- Stale current-facing discovery headings, next-step text, and old current-report label: absent.
+- External visibility: confirmed at the public bundle level; a browser may still need a hard refresh if it cached the prior hashed HTML document.
 """,
     )
 
@@ -511,7 +521,7 @@ The next task may lock the 463-file scope; verify local paths, sizes, and record
 - `.venv/bin/python scripts/test_dashboard_fix_and_tier_c_source_review_download_556.py` — 26/26 passed.
 - `.venv/bin/python scripts/test_targeted_tier_c_verification_from_bounded_memo_gaps.py` — 15/15 passed.
 - `.venv/bin/python scripts/test_bounded_internal_mechanism_linkage_claim_memo.py` — 17/17 passed.
-- `.venv/bin/python scripts/test_live_dashboard_content_audit_fix.py` — 11/11 passed.
+- `.venv/bin/python scripts/test_live_dashboard_content_audit_fix.py` — 12/12 passed.
 - `.venv/bin/python scripts/build_dashboard_data.py` — passed; 51 states/DC, 35,589 municipalities, 2,436 scout-covered, 4,726 historical candidate rows.
 - `npm --prefix docs/dashboard run build` — passed; Vite production bundle generated (non-blocking chunk-size advisory only).
 - `.venv/bin/python scripts/validate.py` — passed; contracts 64, discourse 0, coverage 64, city attributes 3.
@@ -557,7 +567,7 @@ The completed download package was reconciled without rerunning downloads. All 4
             "rendered_browser_inspection_available": False,
             "public_html_and_bundle_inspected": True,
             "post_fix_local_bundle_verified": True,
-            "post_push_live_bundle_verified": False,
+            "post_push_live_bundle_verified": True,
             "dashboard_relevant_changes_ready_to_push": True,
             "tier_c_downloads_rerun": 0,
             "tier_c_verified_source_lead_count": 556,
