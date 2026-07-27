@@ -1,0 +1,279 @@
+span_rating_id,span_extraction_id,extracted_text_id,retained_source_id,candidate_id,lane_id,priority_tier,quality_label,source_url_or_locator,source_title,municipality,state,derived_region,unit_type,occupation_group,bargaining_unit_name,contract_or_document_period,inferred_cycle_start,inferred_cycle_end,source_family,target_mechanism_family,local_extracted_text_path,extracted_text_sha256,source_file_sha256,span_text,span_start_offset,span_end_offset,span_sha256,context_before,context_after,extraction_rule_id,extraction_rule_family,span_specificity,rated_mechanism_family,documentary_mechanism_support,direct_text_support,provisional_causal_candidate_support,direction_of_pressure,evidence_strength,claim_relevance,quote_used,quote_exact_substring,reason_code,claim_boundary,no_wage_gap_claim,no_final_causal_claim,rating_status,ingestion_status,codification_status,causal_status,global_analysis_readiness,gabriel_backend,gabriel_model,gabriel_request_id,gabriel_attempt_count,notes
+SPANRTIERC159-c5951691cd76e311cf3df3ec,SPAN378-88ccbda7b400659b57c108f7,TXT378-e86f68e5574c27afc7f8,RS556-00923076d6e9ab75d33f,TS4L-34adae9de58cfce5b4a6,lane_1,tier_c,verification_ready_medium,https://www.chestercity.com/wp-content/uploads/2017/02/FINAL-Financial-Recovery-Plan-for-Chester-08122016.pdf,"Final Financial Recovery Plan for Chester (Chester, PA) — FRP PDF (bargaining unit/costs/expirations table)",Chester,PA,Northeast,non_safety_comparator,City employees (bargaining units referenced; may include non-safety unions),Bargaining units including FOP and IAFF Local 1400 explicitly referenced (other units likely listed in tables),"Financial recovery plan dated 2016-08-12; includes agreement-expiration information (e.g., FOP and Firefighters Local 1400 expire 12/31/2016 as indicated in the excerpt)",,2016-12-31,collective_bargaining_agreement_or_moa_or_wage_schedule,non_safety_constraint_signal,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-e86f68e5574c27afc7f8.txt,0a6a2fadeeaee8c3c2da4684f083340fd7f1695720074ba35ea7fee065ed3c32,11202676ebf58b1284ff045a0e89f3326fcd615021c71103f4bff6989c34ba18,"RECOMMENDATIONS
+WF03 – IMPLEMENT A WAGE FREEZE AND MEASURED WAGE GROWTH
+Responsible Party:
+Mayor, City Council
+2016
+$0",154159,154277,36480d6542fcd8fa01e19b4274b8fee5bbcb598c6e5cd9c0712be5b21d6dac10,"35 Walnut Street, Ste. 300 | Philadelphia, PA 19102 | 215.717.2777 | econsultsolutions.com
+
+MUNICIPALITIES FINANCIAL RECOVERY PLAN FOR THE CITY OF CHESTER
+
+69
+
+","
+
+2017
+$530,000
+
+2018
+$720,000
+
+2019
+$920,000
+
+Target Completion:
+Fourth Quarter 2016
+2020
+$1,130,000
+
+The City should implement a wage freeze for 2017, and sho",NONSAFETY_PAY_FREEZE,pay_freeze,high,non_safety_constraint_signal,strong,strong,not_supported,not_applicable,strong,direct_text_claim,"RECOMMENDATIONS
+WF03 – IMPLEMENT A WAGE FREEZE AND MEASURED WAGE GROWTH
+Responsible Party:
+Mayor, City Council
+2016
+$0",true,explicit_wage_freeze_recommendation,Wage-freeze recommendation (WF03) and measured wage growth; does not specify other constraints or remedies beyond this line,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0ee578c317790275006a6789a906448197a54a5266dc3b38eb,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-1b635a274601dcbfa4f16dc5,SPAN378-237ab0c03cb70ed8e448fe99,TXT378-e86f68e5574c27afc7f8,RS556-00923076d6e9ab75d33f,TS4L-34adae9de58cfce5b4a6,lane_1,tier_c,verification_ready_medium,https://www.chestercity.com/wp-content/uploads/2017/02/FINAL-Financial-Recovery-Plan-for-Chester-08122016.pdf,"Final Financial Recovery Plan for Chester (Chester, PA) — FRP PDF (bargaining unit/costs/expirations table)",Chester,PA,Northeast,non_safety_comparator,City employees (bargaining units referenced; may include non-safety unions),Bargaining units including FOP and IAFF Local 1400 explicitly referenced (other units likely listed in tables),"Financial recovery plan dated 2016-08-12; includes agreement-expiration information (e.g., FOP and Firefighters Local 1400 expire 12/31/2016 as indicated in the excerpt)",,2016-12-31,collective_bargaining_agreement_or_moa_or_wage_schedule,non_safety_constraint_signal,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-e86f68e5574c27afc7f8.txt,0a6a2fadeeaee8c3c2da4684f083340fd7f1695720074ba35ea7fee065ed3c32,11202676ebf58b1284ff045a0e89f3326fcd615021c71103f4bff6989c34ba18,"The City should implement a wage freeze for 2017, and should allow for measured, reasonable
+wage growth in 2018, 2019 and 2020 of 2 percent.
+In addition to hourly and annual wages, the City also makes significant longevity payments to
+employees.",154380,154625,cd446afa94e1b220ebc4e60ac0e7978f2325c01526756daf60fa7a835a57284d,"AGE GROWTH
+Responsible Party:
+Mayor, City Council
+2016
+$0
+
+2017
+$530,000
+
+2018
+$720,000
+
+2019
+$920,000
+
+Target Completion:
+Fourth Quarter 2016
+2020
+$1,130,000
+
+","
+
+TABLE 4.6—LONGEVITY PAY BY UNION, 2012 - 2015
+Union
+
+2012 Actual
+
+2013 Actual
+
+2014 Actual
+
+2015 Actual
+
+FOP
+
+$448,875
+
+$545,864
+
+$537,462
+
+$647,456
+
+IAFF
+
+$3",NONSAFETY_PAY_FREEZE,pay_freeze,high,non_safety_constraint_signal,strong,strong,not_supported,non_safety_advantage,strong,direct_text_claim,"The City should implement a wage freeze for 2017, and should allow for measured, reasonable
+wage growth in 2018, 2019 and 2020 of 2 percent.
+In addition to hourly and annual wages,",true,wage_freeze_and_limited_growth_rate_recommendation,bounded to wage-freeze (2017) and capped 2% growth (2018-2020) recommendation,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_09fca63274bc7ab5006a6789a8f914819385b384bc58db12a1,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-d70fcef87adac196ddfce1da,SPAN378-20f726015ee3980345096877,TXT378-e86f68e5574c27afc7f8,RS556-00923076d6e9ab75d33f,TS4L-34adae9de58cfce5b4a6,lane_1,tier_c,verification_ready_medium,https://www.chestercity.com/wp-content/uploads/2017/02/FINAL-Financial-Recovery-Plan-for-Chester-08122016.pdf,"Final Financial Recovery Plan for Chester (Chester, PA) — FRP PDF (bargaining unit/costs/expirations table)",Chester,PA,Northeast,non_safety_comparator,City employees (bargaining units referenced; may include non-safety unions),Bargaining units including FOP and IAFF Local 1400 explicitly referenced (other units likely listed in tables),"Financial recovery plan dated 2016-08-12; includes agreement-expiration information (e.g., FOP and Firefighters Local 1400 expire 12/31/2016 as indicated in the excerpt)",,2016-12-31,collective_bargaining_agreement_or_moa_or_wage_schedule,non_safety_constraint_signal,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-e86f68e5574c27afc7f8.txt,0a6a2fadeeaee8c3c2da4684f083340fd7f1695720074ba35ea7fee065ed3c32,11202676ebf58b1284ff045a0e89f3326fcd615021c71103f4bff6989c34ba18,"t are not limited to: increases in the benefit formula, enhancements to
+service increments, reductions in the percentage of compensation that members must
+contribute, changes to the definition of compensation that expand the sources of compensation,
+implementation of a Deferred Retirement Option Program where one does not exist,
+implementation of increases for retirees, or adding the ability to purchase years of service.
+Each plan is administered by its own board. Although the members of each board serve without
+compensation, outside vendors (such as actuaries, investment consultants, trustees, investment
+managers and legal counsel) receive compensation for performing various services. Information
+with respect to the c",180325,181053,e0b30b43fb2e87ed56887540b5548992e492ec978a7c712728e29a6524abe471,"ension enhancements for any City employee
+during the life of this Recovery Plan and any extension or amendment to the Plan. Benefits or
+enhancements include, bu","osts associated with utilizing these outside vendors is not available in the
+City’s records.
+The City shall conduct a study comparing the total cost of administ",NONSAFETY_DELAY,delayed_implementation,medium,non_safety_constraint_signal,moderate,moderate,weak,non_safety_advantage,moderate,direct_text_claim,"t are not limited to: increases in the benefit formula, enhancements to
+service increments, reductions in the percentage of compensation that members must
+contribute, changes to th",true,member_contribution_percentage_reduction_listed_in_benefit_changes,explicitly enumerates pension/benefit changes (including reductions in the percentage of compensation members must contribute) rather than a safety constraint or wage-gap result,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0e7dd8efc1000255006a6789a8fc648193887c7f39ac313bbf,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-2fdeafe70e7709c9bca70a47,SPAN378-2cc854178f9901dbc674f03f,TXT378-e86f68e5574c27afc7f8,RS556-00923076d6e9ab75d33f,TS4L-34adae9de58cfce5b4a6,lane_1,tier_c,verification_ready_medium,https://www.chestercity.com/wp-content/uploads/2017/02/FINAL-Financial-Recovery-Plan-for-Chester-08122016.pdf,"Final Financial Recovery Plan for Chester (Chester, PA) — FRP PDF (bargaining unit/costs/expirations table)",Chester,PA,Northeast,non_safety_comparator,City employees (bargaining units referenced; may include non-safety unions),Bargaining units including FOP and IAFF Local 1400 explicitly referenced (other units likely listed in tables),"Financial recovery plan dated 2016-08-12; includes agreement-expiration information (e.g., FOP and Firefighters Local 1400 expire 12/31/2016 as indicated in the excerpt)",,2016-12-31,collective_bargaining_agreement_or_moa_or_wage_schedule,non_safety_constraint_signal,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-e86f68e5574c27afc7f8.txt,0a6a2fadeeaee8c3c2da4684f083340fd7f1695720074ba35ea7fee065ed3c32,11202676ebf58b1284ff045a0e89f3326fcd615021c71103f4bff6989c34ba18,"Implement a Wage Freeze and
+Measured Wage Growth
+Eliminate Longevity Payments
+for New Hires
+Cap Longevity Payments at 7
+Percent of Base Wages
+Change Payroll to Bi-weekly",218646,218815,d6eb7eb25c39b3d6da8d8b3e2b9fe5f5eedfc8b998043729ddbc60be7a50cc16,"ATIONS FOR PUBLIC SAFETY
+Recommendation
+WF01
+Reduce Nonunion Employee
+Complement by 10 Percent
+WF02
+Explore Additional
+Subcontracting Opportunities
+WF03
+
+WF06
+
+","
+
+WF07
+
+Mandate Direct Deposit
+
+WF08
+
+Pay Overtime Rate Only When
+Required by Law
+
+WF09
+
+Do Not Count Paid Leave as
+Hours Worked for Overtime
+Entitlement
+Reduce",NONSAFETY_PAY_FREEZE,pay_freeze,high,non_safety_constraint_signal,strong,strong,not_supported,non_safety_advantage,strong,direct_text_claim,"Implement a Wage Freeze and
+Measured Wage Growth
+Eliminate Longevity Payments
+for New Hires
+Cap Longevity Payments at 7
+Percent of Base Wages
+Change Payroll to Bi-weekly",true,non_safety_pay_constraints_wage_freeze_longevity_cap,Directly proposes wage-freeze/measured wage-growth and constraints on longevity payments plus payroll timing change; not framed as safety-related.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0eaad9d95a34c876006a6789a8f53081978bf4ccb3d227edc1,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-7b211c796eabb42ddb982ab7,SPAN378-b578c879e0cfff4eb2dbda2d,TXT378-53b4aaa4c864ede0ad59,RS556-4b9f832a9e816f04bbf2,TS4L-4db29474cf538ed41b66,lane_1,tier_c,verification_ready_low,https://werc.wi.gov/interest_awards/int31161.pdf,WERC Interest Arbitration Award: Berlin Area School District (Support Staff) – Dec. No. 31161-A,Berlin,WI,Midwest,non_safety_comparator,Support staff (paraprofessionals and custodial/maintenance),Berlin Support Staff Association,Unknown from lead snippet (award document likely contains the contract period and any wage/salary schedule references),,,collective_bargaining_agreement_or_moa_or_wage_schedule,non_safety_constraint_signal,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-53b4aaa4c864ede0ad59.txt,000f83fca088fb3d949eeb03f62e2b4b4acc1dc24c1836204cf3b773039ae8b4,fce76a85acea27bdc94b2d8c68b299a46839443f5d1e63a6e87ca88a8e2c8121,"oyer’s position that the
+Association’s offer does not contribute to the goals of efficiency and effectiveness in supporting the Employer’s true mission—educating students. The Employer asserts that the
+Union’s offer is merely an attempt to bargain a deferred raise into the next contract.
+With respect to health insurance, the Employer asserts that the Association’s offer
+fails to deal with the crisis in the cost of health and dental insurance benefits. It says the
+Association’s proposal bucks the trend of having employees contribute more towards the
+cost of health and dental insurance. On the other hand, the Employer claims its offer improves the percentage paid by the District for part-time employees thro",18233,18947,321a4f0bfb7b7fddba1bc2d80f3f322dd6da0baf4690a064ed726c5b86b28668,"arties are
+approximately $7,000 apart, the Employer says that the Association’s offer builds in another $11,521 with its “one-day” wage schedule. It is the Empl","ugh pro-ration.
+The Employer states that the Association’s proposal on layoff is not workable,
+asking why should there be two systems of bumping—one for custodi",NONSAFETY_DELAY,delayed_implementation,medium,non_safety_constraint_signal,weak,weak,not_supported,neutral_or_unclear,weak,context_only,"oyer’s position that the
+Association’s offer does not contribute to the goals of efficiency and effectiveness in supporting the Employer’s true mission—educating students. The Empl",true,efficiency_effectiveness_mission_deferred_or_nonpay_not_explicit,"Employer critiques union offer on efficiency/mission and framed deferred raise, but span does not explicitly describe a non-safety pay constraint (e.g., freeze/delay/limited progression/standardized schedule) itself.",true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0e1f61d04b6267a2006a6789ab48748190bc9cad405970f5a1,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-957b44004c768bda6d8c3683,SPAN378-33572038174a8df0f0ec0246,TXT378-efd6cd28b379618611af,RS556-7603458f4bfe59b1a1bd,TS4L-7e5468df74ed8dd9c7a2,lane_1,tier_c,verification_ready_low,https://mn.gov/bms/assets/25PN0773%20-%20City%20of%20Brainerd_tcm1075-704999.pdf,BMS Arbitration Award (PDF) — In re Interest Arbitration Between City of Brainerd and Teamsters Local 346 (25PN0773),Brainerd,MN,Midwest,non_safety_comparator,Teamsters Local 346 represented employees (job titles not extracted here),Teamsters Local 346,"1/1/2025 to 12/31/2027 (wages sections include 2025, 2026, 2027)",2025-01-01,2027-12-31,collective_bargaining_agreement_or_moa_or_wage_schedule,non_safety_constraint_signal,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-efd6cd28b379618611af.txt,3779bcb7b733e0126f82080b4a58c043b930554f5e46f10f857728792caa8a03,4b43fe90bf5859ac924da335db7fbb6497770d02a8b42beaf67415da29a387b6,"making this ﬁnding is because of the signiﬁcant compression of wages between the Patrol
+Officers and the Sergeants if the Employer Position was adopted, which would leave only
+7.14 % wage differential between the ﬁrst level Supervisors and the Patrol. The City
+Proposal is in sharp contrast to the past history of wage differential between the Sgt and
+patrol. See for example, the last Interest Arbitration between the Parties, Teamsters Local
+746 v, City of Brainerd, BMS Case 11-PN-6035 by Arbitrator James Reynold w",11380,11898,f94d68ea12d6dab6b8dfd7c8e8fc57fa6a98867b403f7ccc0e58e3aa11277f07,"oth Parties have strong arguments in support of their position but the
+Arbitrator ﬁnd the Union Argument more compelling. The reason that this Arbitrator is
+8
+
+","ho noted why
+the differential is needed:
+“As to the internal comparisons the record shows that the parties have maintained a pay
+relationship between Police Off",NONSAFETY_COMPRESSION,pay_compression,medium,non_safety_constraint_signal,strong,strong,weak,non_safety_advantage,moderate,direct_text_claim,"making this ﬁnding is because of the signiﬁcant compression of wages between the Patrol
+Officers and the Sergeants if the Employer Position was adopted, which would leave only
+7.14",true,wage_compression_conditional_employer_position,"Explicitly states that adopting the Employer Position would cause significant compression of wages between Patrol Officers and Sergeants, reducing the wage differential (used as a rationale).",true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0ab8e2d8fc8acc7f006a6789ab676c81969b5afbb31614f2f0,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-1df34c95eb75d5c11e213f47,SPAN378-075c1c99f62b85ffeaef73a9,TXT378-4cfdb73f0d873ad39fcb,RS556-9fa8711d8082fc9a2258,TS4L-82bb898950b98e447a0d,lane_1,tier_c,verification_ready_medium,https://www.sdea.org/sites/sdea/files/2024-09/hot-springs-classified-24.25-agreement.pdf,Hot Springs Classified 24.25 Agreement (SDEA-hosted PDF),Hot Springs,AR,South,non_safety_comparator,K-12 classified staff (non-safety municipal comparator unit),Hot Springs Classified (bargaining/association agreement),"2024-2025 (""24.25"" in title/locator)",2024-07-01,2025-06-30,collective_bargaining_agreement_or_moa_or_wage_schedule,non_safety_constraint_signal,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-4cfdb73f0d873ad39fcb.txt,4c435249fa38452ff036fa3bff5bda531b43421716c2c8d701ba8ef7d62e9708,0eab5e5763cbd1e114f6665632dbc232190e2755115c59ee386aeed4ad46904f,"A) All new employees covered by this Agreement shall be paid in accordance to the salary schedule adopted
+by the Board of Education as set out in Appendix A.
+B) Current Hot Springs classified staff shall receive a $0.75 per hour pay increase effective June 11, 2024 to
+June 10, 2024, except for persons who had reached the Salary cap. Salary increases are retroactive. In
+addition, the hiring schedule will be increased by $0.25 per hour. In addition, the Salary Cap will be
+increased by $1.05 for all caps. A $.60 (60 cents per hour) differential payment will be given to employees
+working evening shifts. Employees meeting the salary. cap shall receive a one-time $200.00 increase to
+their salary.
+Section 3",62061,62770,fd29055d987696fd1e817d342812888ad1177414b0346f8bca98d45b25c2820b,"is unable to report for work, the employee's
+supervisor may prepare and sign the leave request and/or time card for said employee.
+Section 2
+
+Salary Schedule:
+
+","
+
+Assignments to Different Classification:
+
+If an employee is involuntarily or temporarily assigned to work at least 2 consecutive days or shifts in a
+different",NONSAFETY_PAY_CAP,pay_or_budget_cap,high,non_safety_constraint_signal,strong,strong,weak,neutral_or_unclear,moderate,direct_text_claim,"A) All new employees covered by this Agreement shall be paid in accordance to the salary schedule adopted
+by the Board of Education as set out in Appendix A.
+B) Current Hot Springs",true,salary_schedule_and_pay_terms_standardized_policy_not_safety_constraint,Shows standardized salary schedule and pay/cap framework for new and current staff; does not explicitly state constraint or limitation as a remedy beyond pay terms.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_090eabacb101c689006a6789ab7cec81959a44291983a68338,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-fe6f71f6d7216ecc97a19d4f,SPAN378-7326cf0f3e7d16938fd8c47c,TXT378-288bb9705061a512decc,RS556-ad5d124632c8049e8418,TS4L-8580d57be2bf623c3238,lane_1,tier_c,verification_ready_medium,https://dam.assets.ohio.gov/image/upload/serb.ohio.gov/PDF/Contracts/2021/21-MED-11-1552.pdf,"Master Contract — Groveport Madison Local Board of Education and Groveport Madison Local Education Association (GMLEA), July 1, 2022 through June 30, 2024 (CERTIFICATED SALARY SCHEDULE 2023–2024 shown)",Groveport,OH,Midwest,non_safety_comparator,Certificated school district staff (teacher/instructional unit as implied by GMLEA master contract structure and certificated salary schedule),Groveport Madison Local Education Association (GMLEA),"July 1, 2022 through June 30, 2024",2022-07-01,2024-06-30,collective_bargaining_agreement_or_moa_or_wage_schedule,non_safety_constraint_signal,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-288bb9705061a512decc.txt,f491a632b52f6584b18f731f28715a72b2741be0f85293ec6ac4fb45ddac7bf4,8ca6626e6fcf29f0e9f9115f68a9a9b85ae11fd546129a59b3c094a7422bfb27,"Unit members affected by step freezes will receive their steps back and reinstated to their
+natural progression.",61125,61237,694e326e3d5090a6e16ed9074f1861b408c8cdf6dfa636fcbdd388cb46900a47,".
+
+The parties agree that the base salary, BA-0, using the index schedule in Section (A) will
+increase as follows:
+2022-2023 = 4.0%
+2023-2024 = 3.0%
+19
+
+2.
+C.
+
+","
+
+QUALIFICATIONS
+Employment in the Groveport Madison Local School District as a unit member requires:
+
+D.
+
+1.
+
+A valid educator license as approved by the Ohio ",NONSAFETY_PAY_FREEZE,pay_freeze,high,non_safety_constraint_signal,weak,weak,not_supported,neutral_or_unclear,weak,documentary_mechanism_claim,"Unit members affected by step freezes will receive their steps back and reinstated to their
+natural progression.",true,step_freeze_with_reinstatement_language_no_progression_limit_explained,Only addresses reinstatement after step freezes; does not specify ongoing pay limits beyond freeze context.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0ec09b8f84876803006a6789aed1a081968a349c37b805cbb1,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-a0155dc034d5fe60a0126002,SPAN378-f88403ba6a15a362e5114cd4,TXT378-288bb9705061a512decc,RS556-ad5d124632c8049e8418,TS4L-8580d57be2bf623c3238,lane_1,tier_c,verification_ready_medium,https://dam.assets.ohio.gov/image/upload/serb.ohio.gov/PDF/Contracts/2021/21-MED-11-1552.pdf,"Master Contract — Groveport Madison Local Board of Education and Groveport Madison Local Education Association (GMLEA), July 1, 2022 through June 30, 2024 (CERTIFICATED SALARY SCHEDULE 2023–2024 shown)",Groveport,OH,Midwest,non_safety_comparator,Certificated school district staff (teacher/instructional unit as implied by GMLEA master contract structure and certificated salary schedule),Groveport Madison Local Education Association (GMLEA),"July 1, 2022 through June 30, 2024",2022-07-01,2024-06-30,collective_bargaining_agreement_or_moa_or_wage_schedule,non_safety_constraint_signal,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-288bb9705061a512decc.txt,f491a632b52f6584b18f731f28715a72b2741be0f85293ec6ac4fb45ddac7bf4,8ca6626e6fcf29f0e9f9115f68a9a9b85ae11fd546129a59b3c094a7422bfb27,"At the option of the retiring unit member, payment shall be made in accordance
+with the following provisions:
+Payment shall be made within sixty (60) calendar days of the unit member’s
+effective date of retirement unless the unit member requests, in writing, a deferred
+payment. Such a deferred payment shall be made during the month of January that
+immediately succeeds the expiration of the sixty (60) calendar days mentioned in
+the preceding sentence.
+The unit member may direct that the severance pay be transferred to his/her taxsheltered annuity (TSA) in accordance with Internal Revenue Service regulations
+if the TSA satisfies the existing District requirements applicable to TSAs. The
+District and Treasurer as",110224,110943,6712181832324b3051c29751819f6f70e44280c362006b24a6e26c68590ed263,"e unit members in this school system.
+
+f.
+
+Severance pay shall be paid only once to any unit member. The payment shall be
+subject to all legal deductions.
+
+g.
+
+","sume no liability other than to affect the transfer in
+accordance with the unit member’s direction and have no obligation to advise the
+unit member of applicabl",NONSAFETY_DELAY,delayed_implementation,medium,non_safety_constraint_signal,strong,strong,weak,neutral_or_unclear,moderate,direct_text_claim,"At the option of the retiring unit member, payment shall be made in accordance
+with the following provisions:
+Payment shall be made within sixty (60) calendar days of the unit memb",true,delayed_severance_payment_schedule_constraint,Direct statement of a time-delayed severance payment window (sixty calendar days) with an option for deferred payment; no comparative or safety rationale.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_03d6d495702d8061006a6789bf9b008195943eac8202ef74dd,2,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-699d96d46cc719b3a5cf2ed6,SPAN378-035913c41217400b980cae59,TXT378-cdab67a67e0f166c43fe,RS556-ce3795bdc2de0734fa9f,TS4L-a2a9fd560224156ae93e,lane_1,tier_c,verification_ready_medium,https://seiu73.org/wp-content/uploads/2021/05/Park-Ridge-Park-District-July-19-2024-November-15-2027-1.pdf,"Park Ridge Park District and Service Employees International Union, Local 73 Collective Bargaining Agreement (July 19, 2024 through November 15, 2027)",Park Ridge,IL,Midwest,non_safety_comparator,Park district support staff (custodial/maintenance/related non-safety comparator lead),SEIU Local 73,"July 19, 2024 through November 15, 2027",2024-07-19,2027-11-15,collective_bargaining_agreement_or_moa_or_wage_schedule,non_safety_constraint_signal,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-cdab67a67e0f166c43fe.txt,cd631f9a1215dee014baf9c3d20525c7bd5d083fd24663cc6af19185b18ba905,265250004d64702d6abeba0be256d0524e997bf99a0406351256758b6d97715f,"d., the
+following wage provisions shall apply and the parties shall be restricted to negotiating the
+amounts of pay increases and performance incentive awards, if any.
+Wage Increases
+1.
+If as a result of reopener negotiations, the parties agree to a wage freeze for unit
+Employees, then the parties further agree that all District Employees’ wages will be frozen. The
+preceding sentence shall not apply to any contract or agreement between the District and its
+Executive Director nor shall it prohibit the District from compliance with any minimum wage
+adjustment as required by law.
+2.
+Employee wage increases for the 2021 fiscal year shall be based on their 2020
+performance evaluations and wage range in acco",86465,87176,19b87ca3978c02751ea4a49115b828e56831a43954d6a3e44f449e764fe545e4,"d to conduct wage reopener negotiations as set forth in Article XIII. The
+parties agree that if either party gives notice to reopen under Article XIII, Section ","rdance to the following:
+a. Salary Ranges: For 2021, for Full-Time Employees, the Board of Commissioners
+has approved a 2% increase in the salary ranges over 20",NONSAFETY_PAY_FREEZE,pay_freeze,high,non_safety_constraint_signal,moderate,moderate,not_supported,gap_narrowing,moderate,documentary_mechanism_claim,"d., the
+following wage provisions shall apply and the parties shall be restricted to negotiating the
+amounts of pay increases and performance incentive awards, if any.
+Wage Increas",true,reopener_restricted_negotiation_scope_non_safety_wage_limits,Limits what parties may negotiate during reopener negotiations (scope constrained to pay increases/incentive awards),true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_096f82dc95458b46006a6789b033fc8194bb21f523127fb52b,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-28038631d4f3b6fb2829a103,SPAN378-dd0270df7b07cce7e56daf3f,TXT378-585b6c0d656a13a69ab2,RS556-efe63c962e406b1b8801,TS4L-061275e55166380a5524,lane_1,tier_c,verification_ready_medium,https://lackawannany.gov/wp-content/uploads/2018/03/2013-CM.pdf,Lackawanna City Council meeting materials (2013 CM) — includes “Non Bargaining Unit Veto” referencing Chapter 36-19: Wage Schedule and Classification,Lackawanna,NY,Northeast,non_safety_comparator,Non-bargaining-unit employees (non-safety comparator group),Non-Bargaining-Unit Employees (referenced via Chapter 36-19),2013 City Council communications referencing Chapter 36-19 wage schedule/classification (context around non-bargaining-unit wage schedule changes),2009-08-01,2017-07-31,collective_bargaining_agreement_or_moa_or_wage_schedule,non_safety_constraint_signal,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-585b6c0d656a13a69ab2.txt,9914366111be80c4c3191f8d59611662eaa71652580df76f23f843e1029f8a5f,da97a92e113eef20c697455708c473e50ae4fd4164beab91d60cefb114e9ac01,"Hiring Freeze
+10. To: City Council
+I requested that the Law Department prepare an ordinance implementing a hiring freeze for the
+City of Lackawanna.
+HENRY R. PIROWSKI-COUNCIL PRESIDENT
+Moved by Pirowski seconded by Lewis to receive and file
+Yeas: Noman, Iafallo, Jerge, Lewis, Pirowski",168637,168922,27950b6fe4b7e1f252d379e64156751ad9c7e88ad4796115c2dc92dc327a25cc,"Council.
+HENRY R. PIROWSKI-COUNCIL PRESIDENT
+Moved by Pirowski seconded by Lewis to receive and file
+Yeas: Noman, Iafallo, Jerge, Lewis, Pirowski
+
+Carried 5-0
+
+","
+
+Carried 5-0
+
+Fiscal Outlook
+11. To: City Council
+I requested that the City Comptroller forward a general idea of the present fiscal outlook for the
+general fu",NONSAFETY_PAY_FREEZE,pay_freeze,high,non_safety_constraint_signal,strong,strong,not_supported,neutral_or_unclear,strong,direct_text_claim,"Hiring Freeze
+10. To: City Council
+I requested that the Law Department prepare an ordinance implementing a hiring freeze for the
+City of Lackawanna.
+HENRY R. PIROWSKI-COUNCIL PRESI",true,hiring_freeze_ordinance_requested,Explicit request to implement a hiring freeze ordinance (employment hiring constraint).,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0631c922c969260b006a6789b08f788193b75755972872485f,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."

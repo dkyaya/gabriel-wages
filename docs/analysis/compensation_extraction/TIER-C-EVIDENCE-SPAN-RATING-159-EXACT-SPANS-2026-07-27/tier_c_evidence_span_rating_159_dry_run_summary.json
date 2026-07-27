@@ -1,0 +1,52 @@
+{
+  "candidate_id_set_hash_verified": true,
+  "exact_offset_length_hash_rechecks": 159,
+  "full_extracted_text_reopened": false,
+  "global_analysis_readiness": false,
+  "html_rows": 11,
+  "input_rows": 159,
+  "lane_counts": {
+    "lane_1": 12,
+    "lane_2": 91,
+    "lane_3": 2,
+    "lane_4": 54
+  },
+  "manifest_sha256": "1f250d52c756c4fc80dc72c10fab7b5c3b2d2fb692f1fec30db4b4b93bef8ef2",
+  "mechanism_counts": {
+    "fiscal_constraint_signal": 2,
+    "market_or_comparability_pressure": 54,
+    "non_safety_constraint_signal": 12,
+    "strike_or_no_strike_constraint": 91
+  },
+  "model_api_calls": 0,
+  "model_inputs_limited_to_span_and_bounded_context": true,
+  "nonrating_rows_included": 0,
+  "pdf_rows": 148,
+  "predecessor_exact_substring_checks": 159,
+  "raw_prompts_saved": 0,
+  "raw_responses_saved": 0,
+  "records_sha256": "dad35fea896f001243886e0aab293f72488f5e95e76899caf5fdbc3c37df3848",
+  "region_counts": {
+    "Midwest": 50,
+    "Northeast": 44,
+    "South": 60,
+    "West": 5
+  },
+  "required_input_hashes": {
+    "dashboard_declutter_map_correction_tier_c_text_span_extraction_decision.json": "d74362a7afde99802a3eaabbd9be85c740ba4634acdd0c863020dac683323225",
+    "dashboard_declutter_map_correction_tier_c_text_span_extraction_summary.md": "6acd9ff6e8d5287b066d457d7f59e8d823aec4f0da681ecaef24850ac49d550a",
+    "dashboard_declutter_map_correction_tier_c_text_span_extraction_validation_2026-07-27.md": "d465a5553b86c656a43a0f7bc0686cdb7b64ae7f3274bcfafee3efdf07967e03",
+    "dashboard_map_data_date.json": "f02b35103a77dfc7a62515d30f4e53e3abc855a696e765dce277d8248160ecd2",
+    "dashboard_map_filter_contract.json": "1aa2271a477f490bbde7c6c17012394a3c2eff295ca01dc02d05810dd2d1e5af",
+    "dashboard_map_total_scout_coverage_summary.json": "9d8bd581f7bcaa9a950c45cec464b7df06359a4ec29f8fdcb2d9f5fed831b664",
+    "future_prompt_dashboard_update_requirement.md": "6482b92bad80e343bfe1abef8df1fcd891a57f4143962d63c8784af6064c1f46",
+    "tier_c_evidence_span_claim_boundary_notes.md": "e4ee249952a7c3610e8ae544cf2718f6b4671196c1591df07a97f75f7e49a84e",
+    "tier_c_evidence_span_extraction_results_summary.json": "98b4473b1ec2f9153e5829f407e113ad40bce197602f73f6600eaa5ea60f36ad",
+    "tier_c_evidence_span_rating_candidate_manifest.csv": "1f250d52c756c4fc80dc72c10fab7b5c3b2d2fb692f1fec30db4b4b93bef8ef2",
+    "tier_c_evidence_span_rating_candidate_summary.json": "4a8a7b32dde8fa0cf56885e1ecfedbf028cbe1a54f1fa9ac3bf19b87129a294d",
+    "tier_c_evidence_span_records.csv": "dad35fea896f001243886e0aab293f72488f5e95e76899caf5fdbc3c37df3848",
+    "tier_c_evidence_span_records_summary.json": "c6545066da50e27a00f3f8de86539ea03ec157670f8dc1974a18e055aeb803a5"
+  },
+  "span_id_set_sha256": "8a36c7297823e5db01cc38ead835dbc6437af43a5d82e9d6fbe33650163af49c",
+  "unique_span_ids": 159
+}

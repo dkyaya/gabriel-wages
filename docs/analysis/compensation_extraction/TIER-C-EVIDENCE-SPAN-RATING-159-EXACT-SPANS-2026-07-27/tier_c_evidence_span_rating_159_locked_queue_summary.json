@@ -1,0 +1,26 @@
+{
+  "excluded_rows_included": 0,
+  "html_rows": 11,
+  "lane_counts": {
+    "lane_1": 12,
+    "lane_2": 91,
+    "lane_3": 2,
+    "lane_4": 54
+  },
+  "locked_queue_sha256": "1f250d52c756c4fc80dc72c10fab7b5c3b2d2fb692f1fec30db4b4b93bef8ef2",
+  "mechanism_counts": {
+    "fiscal_constraint_signal": 2,
+    "market_or_comparability_pressure": 54,
+    "non_safety_constraint_signal": 12,
+    "strike_or_no_strike_constraint": 91
+  },
+  "pdf_rows": 148,
+  "region_counts": {
+    "Midwest": 50,
+    "Northeast": 44,
+    "South": 60,
+    "West": 5
+  },
+  "row_count": 159,
+  "unique_span_ids": 159
+}

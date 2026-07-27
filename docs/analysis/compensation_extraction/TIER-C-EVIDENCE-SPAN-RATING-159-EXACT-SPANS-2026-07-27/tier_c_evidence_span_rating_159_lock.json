@@ -1,0 +1,9 @@
+{
+  "global_analysis_readiness": false,
+  "locked_queue_sha256": "1f250d52c756c4fc80dc72c10fab7b5c3b2d2fb692f1fec30db4b4b93bef8ef2",
+  "row_count": 159,
+  "source_manifest_sha256": "1f250d52c756c4fc80dc72c10fab7b5c3b2d2fb692f1fec30db4b4b93bef8ef2",
+  "source_records_sha256": "dad35fea896f001243886e0aab293f72488f5e95e76899caf5fdbc3c37df3848",
+  "span_id_set_sha256": "8a36c7297823e5db01cc38ead835dbc6437af43a5d82e9d6fbe33650163af49c",
+  "task_id": "TIER-C-EVIDENCE-SPAN-RATING-159-EXACT-SPANS-2026-07-27"
+}

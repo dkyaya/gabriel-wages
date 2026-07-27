@@ -1,0 +1,1486 @@
+span_rating_id,span_extraction_id,extracted_text_id,retained_source_id,candidate_id,lane_id,priority_tier,quality_label,source_url_or_locator,source_title,municipality,state,derived_region,unit_type,occupation_group,bargaining_unit_name,contract_or_document_period,inferred_cycle_start,inferred_cycle_end,source_family,target_mechanism_family,local_extracted_text_path,extracted_text_sha256,source_file_sha256,span_text,span_start_offset,span_end_offset,span_sha256,context_before,context_after,extraction_rule_id,extraction_rule_family,span_specificity,rated_mechanism_family,documentary_mechanism_support,direct_text_support,provisional_causal_candidate_support,direction_of_pressure,evidence_strength,claim_relevance,quote_used,quote_exact_substring,reason_code,claim_boundary,no_wage_gap_claim,no_final_causal_claim,rating_status,ingestion_status,codification_status,causal_status,global_analysis_readiness,gabriel_backend,gabriel_model,gabriel_request_id,gabriel_attempt_count,notes
+SPANRTIERC159-0cc1708f3a636916cbd0bb32,SPAN378-188c5ff8ebcec669118838a4,TXT378-fb49415fe300eec6d424,RS556-12e65484e7490fd1ab7c,TS4L-8d289eba35a26bc3994b,lane_4,tier_c,verification_ready_low,https://webgen1files1.revize.com/hendnc/Documents/Departments/Finance/Budget/FY-18-19-Recommended-Budget-final-version-2-May-18.pdf,City of Henderson NC FY-18-19 Recommended Budget (includes Public Safety Pay Schedule Phase Five FY2019),Henderson,NC,South,safety_and_non_safety_compensation_units,Public safety classifications (Police & Fire) and pay schedule tables,,"FY 2018-2019 (with Public Safety Pay Schedule Phase Five, FY2019)",2018,2019,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-fb49415fe300eec6d424.txt,7164c106ce2ad7685daffc738b6d2446bd11d1acb1983afaf8353e0256455648,187d0a6db5b0d82d19a653bb097500b821c093ba47c791400f5d63e06b52895f,"Major Accomplishments:
+o Phase IV of Pay Classification Study was funded as well as an additional increase for Fire and
+Police.
+o Renovation of Fire Station #2 has been completed and work continues on the old Municipal
+Building.
+o Several demolitions of city/county owned properties, including the former Abagayles Bookstore
+o MAKO opened a facility in Henderson with the city and county participating in incentives.
+o City’s Fund Balance remained very positive and well above minimum requirements.
+o Community Outreach Program started along with Community Wide Advisory Committee.
+o Urban Homesteading Program started.",40536,41155,0b2401a95b0a52658a69eccf4c4500f5ca24cbcf62c6d45c0d92bf3e0afc945c,"tion Facility’s dedication was held and improvements completed.
+o Funding approved for Kerr Lake Regional Water Plant upgrade and expansion for two phases.
+
+•
+
+","
+
+KEY BUDGET ISSUES
+•
+
+Little to no growth in Real and Personal Property values; therefore, limiting funding for needed capital
+projects.
+
+•
+
+Funding for salari",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,moderate,weak,neutral_or_unclear,moderate,direct_text_claim,"Major Accomplishments:
+o Phase IV of Pay Classification Study was funded as well as an additional increase for Fire and
+Police.
+o Renovation of Fire Station #2 has been completed a",true,pay_classification_study_funded_compensation_adjustment_signal,Pay classification study funding and an additional increase (Fire/Police) as a compensation/classification adjustment activity; no explicit peer-market comparison stated.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0a6b9ced20a47869006a678a2e3b18819792b81383a4f60c9a,2,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-2fd0b6be7c8168cbf7d3ede5,SPAN378-893b9d47b6c913068ebd6f1e,TXT378-fb49415fe300eec6d424,RS556-12e65484e7490fd1ab7c,TS4L-8d289eba35a26bc3994b,lane_4,tier_c,verification_ready_low,https://webgen1files1.revize.com/hendnc/Documents/Departments/Finance/Budget/FY-18-19-Recommended-Budget-final-version-2-May-18.pdf,City of Henderson NC FY-18-19 Recommended Budget (includes Public Safety Pay Schedule Phase Five FY2019),Henderson,NC,South,safety_and_non_safety_compensation_units,Public safety classifications (Police & Fire) and pay schedule tables,,"FY 2018-2019 (with Public Safety Pay Schedule Phase Five, FY2019)",2018,2019,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-fb49415fe300eec6d424.txt,7164c106ce2ad7685daffc738b6d2446bd11d1acb1983afaf8353e0256455648,187d0a6db5b0d82d19a653bb097500b821c093ba47c791400f5d63e06b52895f,"Implementation of Phase IV of Pay Study for all departments, including additional increase for Police
+and Fire.",45545,45656,011f652c7a42c20ca3c96bfa89d638cd8c209569b8ea60d08d7ed0f33fa18099,"med in an
+efficient and timely manner.
+
+FY 18 ACCOMPLISHMENTS
+•
+
+Position Replacements: Filled HR Director Position due to the retirement of past Director.
+
+•
+
+","
+
+•
+
+Continued improvement of Fund Balance for all funds. During the FY 17 audit, the unassigned Fund
+Balance equals 50.3% of the fiscal years expenditures usin",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,strong,strong,weak,neutral_or_unclear,moderate,direct_text_claim,"Implementation of Phase IV of Pay Study for all departments, including additional increase for Police
+and Fire.",true,pay_study_and_market_adjustment_signal,Only indicates a pay study and targeted pay increases; no peer/market comparison stated beyond pay study framing.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_092675b5ce5a64f5006a678a1b16988195b069c13b42c9e8ff,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-ac315b77c967685c846984ff,SPAN378-fceab93652d9bd586d04f613,TXT378-fb49415fe300eec6d424,RS556-12e65484e7490fd1ab7c,TS4L-8d289eba35a26bc3994b,lane_4,tier_c,verification_ready_low,https://webgen1files1.revize.com/hendnc/Documents/Departments/Finance/Budget/FY-18-19-Recommended-Budget-final-version-2-May-18.pdf,City of Henderson NC FY-18-19 Recommended Budget (includes Public Safety Pay Schedule Phase Five FY2019),Henderson,NC,South,safety_and_non_safety_compensation_units,Public safety classifications (Police & Fire) and pay schedule tables,,"FY 2018-2019 (with Public Safety Pay Schedule Phase Five, FY2019)",2018,2019,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-fb49415fe300eec6d424.txt,7164c106ce2ad7685daffc738b6d2446bd11d1acb1983afaf8353e0256455648,187d0a6db5b0d82d19a653bb097500b821c093ba47c791400f5d63e06b52895f,"• Pay Study-Phase IV: Managed the implementation of Phase IV of the pay study as well as a second
+increase approved by Council.",48678,48805,b155b40df99dbbb6f9d77f014308c63b930763eb1d44019f06b5f385a6c0ae86,"n Plan for key positions.
+Work with Leadership Team to identify star performers to mentor. Develop customized
+schedule to develop them.
+
+FY 18 ACCOMPLISHMENTS
+
+","
+
+• Improved Employee Morale: Public Council recognition of retiring employees, Holiday luncheon,
+Lunch and Learns and Service Award banquet.
+
+• Work First Inte",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,moderate,not_supported,neutral_or_unclear,moderate,direct_text_claim,"• Pay Study-Phase IV: Managed the implementation of Phase IV of the pay study as well as a second
+increase approved by Council.",true,market_pay_study_phase_iv_council_approved,Only indicates management of a pay study phase and council-approved pay increases; does not explicitly state market/peer comparability.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0671b7916fe50c6b006a678a1b073c819683275e203235280d,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-74f09bcc139109bbb0025b7c,SPAN378-25b8b5e99707e57b904063f0,TXT378-fb49415fe300eec6d424,RS556-12e65484e7490fd1ab7c,TS4L-8d289eba35a26bc3994b,lane_4,tier_c,verification_ready_low,https://webgen1files1.revize.com/hendnc/Documents/Departments/Finance/Budget/FY-18-19-Recommended-Budget-final-version-2-May-18.pdf,City of Henderson NC FY-18-19 Recommended Budget (includes Public Safety Pay Schedule Phase Five FY2019),Henderson,NC,South,safety_and_non_safety_compensation_units,Public safety classifications (Police & Fire) and pay schedule tables,,"FY 2018-2019 (with Public Safety Pay Schedule Phase Five, FY2019)",2018,2019,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-fb49415fe300eec6d424.txt,7164c106ce2ad7685daffc738b6d2446bd11d1acb1983afaf8353e0256455648,187d0a6db5b0d82d19a653bb097500b821c093ba47c791400f5d63e06b52895f,"personnel related expenditures, such as retiree health insurance
+and reserves for incumbent liabilities for accrued vacation and compensatory time, are accounted
+for in this budget department. Additionally, the Fund’s share of the recommended Pay &
+Classification Study is included in this budget.
+The largest expenditure center for the non-departmental budget is the inter-fund transfer. The
+transfer provides for “sending” money from Sewer Fund to the Capital Reserve and CIP funds as
+well as to the General and Water funds for cost allocation.",124564,125110,71b219732c1783664cf903c1b133dfef5550b74c88bc6a80f3066f47cb314196,"s and other expenditures that should not be
+located in an operating budget group. No personnel are assigned to the Non-Departmental
+budget group; however, some ","
+
+WF: Page 2
+
+FY 18-19 BUDGET
+ENTERPRISE FUNDS
+30-680: WATER FUND DEBT SERVICE
+30-680: DEBT SERVICE SUMMARY
+Actual
+16-17
+Long-Term Debt Service- P&I $
+Lease Pur",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,strong,weak,neutral_or_unclear,moderate,documentary_mechanism_claim,"personnel related expenditures, such as retiree health insurance
+and reserves for incumbent liabilities for accrued vacation and compensatory time, are accounted
+for in this budget",true,pay_classification_study_mentioned_in_budget_context,Only indicates inclusion/accounting context for a pay/classification study-related budget item; does not state wage-setting impact.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_046cc4e65db95751006a678a1d57388193bce123057370eaba,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-d2bda535b8b9f4fb7b4ab2ae,SPAN378-486721d7feea6a8daee8ff05,TXT378-c0fbef4574ca6ad030ca,RS556-1435d3b07c0125be1e5e,TS4L-ad2915ff22b44e4b64f9,lane_4,tier_c,verification_ready_low,https://www.hidalgocounty.us/DocumentCenter/View/36562/FINAL-CCP---CHAPTER-8---POLICIES-AND-PROCEDURES-112018,Hidalgo County Classification & Compensation Plan — Chapter 8 (Policies and Procedures) (112018),Hidalgo,TX,South,safety_and_non_safety_compensation_units,General county classifications (non-safety) and plan framework that references Law Enforcement Pay Plan,,Chapter 8 (Policies and Procedures); labeled final CCP chapter document (112018),2018-11-01,2018-12-31,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-c0fbef4574ca6ad030ca.txt,39f996aca87105da643d9e580a62e8fafaf20e9bfdca67dd2272ecbd3575d842,d2f21518c97235bd7e6daaa4cf43bfdebf1b9baffa52885770cb669c403b7a50,"Conduct salary surveys and other studies as appropriate to insure classified salaries are
+competitive with external markets, both private and public sector.",10302,10458,58595462b20dcc72f227175aca1db37222d58053a1bbbc0f59da1907722b54a4,"
+qualifications related to education and experience, and appropriate skill sets with regard to
+knowledge, skills and abilities for the job classification.
+
+4)
+
+","
+
+5)
+
+Revise and update the plan policies and procedures as necessary to improve the administration
+and operation of the Classification and Compensation Plan.
+
+",MARKET_COMPETITIVENESS,pay_competitiveness,high,market_or_comparability_pressure,strong,strong,not_supported,neutral_or_unclear,strong,direct_text_claim,"Conduct salary surveys and other studies as appropriate to insure classified salaries are
+competitive with external markets, both private and public sector.",true,salary_surveys_competitive_external_markets,Only addresses competitiveness via external market surveys/studies for classified salaries; no causal wage-gap claim implied,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_06322a7ff446a0a9006a678a1d5f24819790a34a6d7961ab50,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-baaec1bc54907c0869f068cf,SPAN378-8ad82a5d6abe28adaab33660,TXT378-01f5fa6bf1ee64e0677d,RS556-223d81c3447648a5f6e3,TS4L-7f5501d034232b736a44,lane_4,tier_c,verification_ready_medium,https://comstockmi.gov/wp-content/uploads/2020/12/2021-BP-FINAL.pdf,Comstock Township 2021 budget packet (includes “2021 Township-Police Protection Agreement” and “Police Protect Contract Rate Schedule”/Exhibit I references),Comstock charter,MI,Midwest,safety_and_non_safety_compensation_units,Police / law enforcement services (sheriff’s office deputies; overtime/contract rate schedule referenced),Sheriff’s Office and Deputies (collective bargaining agreement referenced for updates),2021-01-01 through 2021-12-31 (agreement term language) + referenced rate schedule Exhibit I,2021-01-01,2021-12-31,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-01f5fa6bf1ee64e0677d.txt,aacd8861e583d7007700719646410efe511b7cf802968aa3c460805b6d37b3ad,5c1c469765bb2e2f723082e31ffd6969daa22b556d1d9530bd734b169b0282ae,"Compensation shall be set at levels necessary to recruit and retain qualified employees. Salary levels
+are determined by the duties and responsibilities of the particular position, the educational
+requirements for the positions, a comparison to the salary levels for the Township positions, the
+prevailing salary levels for other Township positions, the prevailing salary levels for similar positions
+with other employers within relevant labor markets, the financial condition of the Township and other
+relevant considerations.",150851,151378,d7b165e5d16bd0c71afc2428df7462ad95b0005b8400f288890aa27bd74ec329,"consistent with
+the following principles:
+
+
+Compensation is under the authority of the Board, and shall be annually reviewed and established by
+the Board.
+
+
+
+","
+
+
+
+Benefit levels are determined by the prevailing benefit levels with other employers within relevant
+labor markers, including both cost and value of benefit",MARKET_RECRUITMENT_RETENTION,recruitment_retention,medium,market_or_comparability_pressure,strong,strong,weak,neutral_or_unclear,strong,direct_text_claim,"Compensation shall be set at levels necessary to recruit and retain qualified employees. Salary levels
+are determined by the duties and responsibilities of the particular position,",true,recruit_retain_market_comparability_compensation_language,"Rates compensation to support recruitment/retention, using position duties plus market/comparison criteria elsewhere in the span",true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0bfeb57ed30bdd58006a678a1d630881959594abe304ece0a8,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-1b8cd255665e00bffc68df05,SPAN378-6bfe35bf179bfd4ce9bf43fa,TXT378-4dd5472b647d8eabf593,RS556-23145c62646a3264b58a,TS4L-f29b0add165ec6b6f02d,lane_4,tier_c,verification_ready_low,https://stallingsnc.org/LinkClick.aspx?fileticket=8ts50mP9YLw%3D&portalid=0,"July 9, 2018 — Pay Plan / Classification Plan Development (Town of Stallings)",Stallings,NC,South,safety_and_non_safety_compensation_units,Police/public safety + general municipal positions (classification/pay plan development context),,2018-07-09 (document date; pay plan development phase),2018-07-09,2018-12-31,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-4dd5472b647d8eabf593.txt,e5eb4941de289e4dda4c5c442f198d69b6fa404ef939bb850242e8689a3c098b,b812ac917145a163dad37a6defd74600aa7b270fad0a82130267c8147dc9f7d9,"nager
+Motion: I make the motion to
+approve/deny the Resolution for
+NCDOT Regarding Design Standards
+for U-4714 (Old Monroe Road).
+
+7.
+
+8:45 p.m.
+
+Pay Classification Study Contract
+
+Alex Sewell,
+
+Approve/Deny contract.
+
+Town Manager
+Motion: I make the motion to
+
+approve/deny the Pay Classification
+Study contract.
+8.
+
+9:10 p.m.
+
+FTA Transit Overlay District Grant Letter
+
+Alex Sewell,
+
+Approve/Deny letter.
+
+Town Manager
+Motion: I make the motion to
+approve/deny the FTA Transit
+Overlay District Grant Letter.
+
+9.
+
+9:15 p.m.
+
+Town Manager Contract Update
+
+Alex Sewell,
+
+Approve/Deny Update
+
+Town Manager
+Motion: I make the motion to
+
+approve/deny the First Amendment
+to",2539,3208,e4a13dfb2ded1fbc37736a5eb17ebfe60ee7d4ad2fc8b6159eafe5fcd6fd5afc,"from the public
+D. Close public hearing
+E. Council vote
+6.
+
+8:35 p.m.
+
+Old Monroe Road Design Priorities for NCDOT
+
+Alex Sewell,
+
+Adopt/Deny resolution
+
+Town Ma"," the Town of Stallings Employment
+Agreement with Alex Sewell, Town
+Manager.
+
+10.
+11.
+
+9:25 p.m.
+9:45 p.m.
+
+Closed Session in Pursuant to NCGS 143-
+
+Melanie Cox,",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,moderate,weak,neutral_or_unclear,moderate,documentary_mechanism_claim,"nager
+Motion: I make the motion to
+approve/deny the Resolution for
+NCDOT Regarding Design Standards
+for U-4714 (Old Monroe Road).
+
+7.
+
+8:45 p.m.
+
+Pay Classification Study Contract",true,pay_classification_study_contract_signal_compensation_study,Scope limited to agenda item approving/denying a Pay Classification Study contract.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_03b4d220608421df006a678a1dd3488197aa124f6eb2f1afb0,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-e28760107b828657e8404679,SPAN378-109aeb6d6b9c0adcf9398fbc,TXT378-4dd5472b647d8eabf593,RS556-23145c62646a3264b58a,TS4L-f29b0add165ec6b6f02d,lane_4,tier_c,verification_ready_low,https://stallingsnc.org/LinkClick.aspx?fileticket=8ts50mP9YLw%3D&portalid=0,"July 9, 2018 — Pay Plan / Classification Plan Development (Town of Stallings)",Stallings,NC,South,safety_and_non_safety_compensation_units,Police/public safety + general municipal positions (classification/pay plan development context),,2018-07-09 (document date; pay plan development phase),2018-07-09,2018-12-31,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-4dd5472b647d8eabf593.txt,e5eb4941de289e4dda4c5c442f198d69b6fa404ef939bb850242e8689a3c098b,b812ac917145a163dad37a6defd74600aa7b270fad0a82130267c8147dc9f7d9,"8:45 p.m.
+
+Pay Classification Study Contract
+
+Alex Sewell,
+
+Approve/Deny contract.
+
+Town Manager
+Motion: I make the motion to
+
+approve/deny the Pay Classification
+Study contract.
+8.
+
+9:10 p.m.
+
+FTA Transit Overlay District Grant Letter
+
+Alex Sewell,
+
+Approve/Deny letter.
+
+Town Manager
+Motion: I make the motion to
+approve/deny the FTA Transit
+Overlay District Grant Letter.
+
+9.
+
+9:15 p.m.
+
+Town Manager Contract Update
+
+Alex Sewell,
+
+Approve/Deny Update
+
+Town Manager
+Motion: I make the motion to
+
+approve/deny the First Amendment
+to the Town of Stallings Employment
+Agreement with Alex Sewell, Town
+Manager.
+
+10.
+11.
+
+9:25 p.m.
+9:45 p.m.
+
+Closed Session in Pursuant",2674,3341,2816da0099718380ea90c1bf346f22a5f48845caf3e26158f0a70ffeedbd4e6d,"/Deny resolution
+
+Town Manager
+Motion: I make the motion to
+approve/deny the Resolution for
+NCDOT Regarding Design Standards
+for U-4714 (Old Monroe Road).
+
+7.
+
+"," to NCGS 143-
+
+Melanie Cox,
+
+318.11(a)(6)
+
+Town Attorney
+
+Adjournment
+
+Agenda Item #
+
+Stallings
+315 Stallings Road • Stallings, North Carolina 28104
+
+Planning B",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,strong,weak,neutral_or_unclear,moderate,direct_text_claim,"8:45 p.m.
+
+Pay Classification Study Contract
+
+Alex Sewell,
+
+Approve/Deny contract.
+
+Town Manager
+Motion: I make the motion to
+
+approve/deny the Pay Classification
+Study contract.
+8",true,pay_classification_study_contract_implies_market_comparability_check,Menu item approving/denying a pay classification study contract (no stated wage adjustment).,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0dce12304df85972006a678a1f685081978c5e8f08cfa53ba5,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-903db1a6b62aa07c47008f3a,SPAN378-0bea87a0d4468674fd8fbbd4,TXT378-4dd5472b647d8eabf593,RS556-23145c62646a3264b58a,TS4L-f29b0add165ec6b6f02d,lane_4,tier_c,verification_ready_low,https://stallingsnc.org/LinkClick.aspx?fileticket=8ts50mP9YLw%3D&portalid=0,"July 9, 2018 — Pay Plan / Classification Plan Development (Town of Stallings)",Stallings,NC,South,safety_and_non_safety_compensation_units,Police/public safety + general municipal positions (classification/pay plan development context),,2018-07-09 (document date; pay plan development phase),2018-07-09,2018-12-31,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-4dd5472b647d8eabf593.txt,e5eb4941de289e4dda4c5c442f198d69b6fa404ef939bb850242e8689a3c098b,b812ac917145a163dad37a6defd74600aa7b270fad0a82130267c8147dc9f7d9,"TO: Mayor Dunn; Town Council
+FR: Alex Sewell
+DATE: 7/5/18
+RE: Pay & Classification Study Contract
+Purpose: This memorandum's purpose is to educate the Town Council on the timeline
+for the pay & classification study and request formal approval of the pay & classification
+study contract.
+Background: On May 14, 2018, the Town Council approved by consensus conducting a
+pay and classification study using an outside expert consultant.
+Timeline: The process would start in November with the goal of being completed in
+March 2019 in time for the budget process. Enclosed is a summary overview of the
+process.
+Recommendation: Approve the contract with the N.C. League of Municipalities for a
+comprehensive pay and classification study.",51880,52610,4fb07c36113d941ed1c6aaa8a84aa024c9b27e7bd82d0ed17e69eaaa185e2aee," 2018.
+
+Wyatt Dunn, Mayor
+ATTEST:
+
+Approved as to form:
+
+Erinn Nichols, Town Clerk
+
+Melanie Cox, Town Attorney
+
+Agenda Item #
+
+.41: •4.71
+04,
+
+8tU1111
+
+-->ic-
+
+","
+
+Classification and Pay Study Information
+Conducting a classification and pay study typically takes approximately 2.5 to 4 months, depending on the size of the",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,weak,weak,not_supported,neutral_or_unclear,weak,documentary_mechanism_claim,"TO: Mayor Dunn; Town Council
+FR: Alex Sewell
+DATE: 7/5/18
+RE: Pay & Classification Study Contract
+Purpose: This memorandum's purpose is to educate the Town Council on the timeline
+for the pay & classification study and request formal approval of the pay & classification
+study contract.
+",true,mentions_pay_classification_study_contract_only,Title/intro identifies a pay & classification study contract and timeline; no explicit market/comparability or peer-adjustment language.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_07e2038cf79705c8006a678a1f74448194a705673d57e55a69,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-b4b44e38ace9f998bab6ff0a,SPAN378-d8bdb22c817eacbddeaa3f8f,TXT378-4dd5472b647d8eabf593,RS556-23145c62646a3264b58a,TS4L-f29b0add165ec6b6f02d,lane_4,tier_c,verification_ready_low,https://stallingsnc.org/LinkClick.aspx?fileticket=8ts50mP9YLw%3D&portalid=0,"July 9, 2018 — Pay Plan / Classification Plan Development (Town of Stallings)",Stallings,NC,South,safety_and_non_safety_compensation_units,Police/public safety + general municipal positions (classification/pay plan development context),,2018-07-09 (document date; pay plan development phase),2018-07-09,2018-12-31,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-4dd5472b647d8eabf593.txt,e5eb4941de289e4dda4c5c442f198d69b6fa404ef939bb850242e8689a3c098b,b812ac917145a163dad37a6defd74600aa7b270fad0a82130267c8147dc9f7d9,"Classification and Pay Study Information
+Conducting a classification and pay study typically takes approximately 2.5 to 4 months, depending on the size of the
+organization. The MAPS Group's approach is to make the process as transparent and understandable as possible. We believe
+this is important because a good study can have a negative morale impact if employees misunderstand it or if the study lacks
+credibility with employees.
+We also strongly recommend undertaking a stud",52612,53090,1010c0c404a4f88e140a3dcf2c345e50b6eacae2930d7f1bb959e225102c51f6,"summary overview of the
+process.
+Recommendation: Approve the contract with the N.C. League of Municipalities for a
+comprehensive pay and classification study.
+
+","y only when there is commitment to follow through with funding the
+implementation. The negative impact on morale is significant if a study is not implemented. I",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,weak,moderate,neutral_or_unclear,moderate,documentary_mechanism_claim,"Classification and Pay Study Information
+Conducting a classification and pay study typically takes approximately 2.5 to 4 months, depending on the size of the
+organization. The MAP",true,pay_classification_study_implies_market_comparability,class_and_pay_study_duration; only suggests a market/comparability adjustment study without stating peer comparison or wage setting outcomes,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_079580924a985c66006a678a20c94c8190a89ce3248fe73a7c,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-4185637f56100789fe7bc7a3,SPAN378-df84876d60f44a393ceaae34,TXT378-4dd5472b647d8eabf593,RS556-23145c62646a3264b58a,TS4L-f29b0add165ec6b6f02d,lane_4,tier_c,verification_ready_low,https://stallingsnc.org/LinkClick.aspx?fileticket=8ts50mP9YLw%3D&portalid=0,"July 9, 2018 — Pay Plan / Classification Plan Development (Town of Stallings)",Stallings,NC,South,safety_and_non_safety_compensation_units,Police/public safety + general municipal positions (classification/pay plan development context),,2018-07-09 (document date; pay plan development phase),2018-07-09,2018-12-31,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-4dd5472b647d8eabf593.txt,e5eb4941de289e4dda4c5c442f198d69b6fa404ef939bb850242e8689a3c098b,b812ac917145a163dad37a6defd74600aa7b270fad0a82130267c8147dc9f7d9,"Classification and Pay Study Information
+Conducting a classification and pay study typically takes approximately 2.5 to 4 months, depending on the size of the
+organization. The MAPS Group's approach is to make the process as transparent and understandable as possible. We believe
+this is important because a good study can have a negative morale impact if employees misunderstand it or if the study lacks
+credibility with employees.
+We also strongly recommend undertaking a study only when there is commitment to follow through with",52612,53144,6c2344f8d2336b47b3e1333cd3bb04d2633b510fae7ea28dac975cedb0d5dce4,"summary overview of the
+process.
+Recommendation: Approve the contract with the N.C. League of Municipalities for a
+comprehensive pay and classification study.
+
+"," funding the
+implementation. The negative impact on morale is significant if a study is not implemented. Implementation costs are the greater
+cost, not the fee ",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,weak,weak,neutral_or_unclear,moderate,documentary_mechanism_claim,"Classification and Pay Study Information
+Conducting a classification and pay study typically takes approximately 2.5 to 4 months, depending on the size of the
+organization. The MAP",true,mentions_pay_classification_study_without_explicit_comparison,bounded to the quoted description of a classification and pay study timeline,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_024e9e0a58d3e5d8006a678a20e0048196a6d0c72b943e87d9,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-3b1582dc7942671bb4d7f8fa,SPAN378-ac16a6d89c956621937f0385,TXT378-c9bb7f8599d1091876b3,RS556-38817940233862750e1f,TS4L-d610f6f8fd4712e0cb5d,lane_4,tier_c,verification_ready_low,https://storage.googleapis.com/proudcity/palmviewtx/2024/10/Budget-Book-Final-Draft-FY24-25.pdf,Budget Book FY24-25 — City of Palmview (contains budget lines that may include compensation/salary schedule details),Palmview,TX,South,safety_and_non_safety_compensation_units,Police + Fire (budget line items; potential compensation context) and other city departments,,FY24-25 (budget document labeled FY24-25),,,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-c9bb7f8599d1091876b3.txt,9f857c54b92b39796feff2fa4a2b3b0b3dabe2ddcf3202afc6fc48b808a7184d,0de11eedc3c75eaebd29ed0174e914dbfb78c227c66defc806de0e31cdb602d8,"2. Major Changes & Highlights
+Retirement Benefits
+With the support of the City Council, we were able to increase our retirement match up to two dollars for every dollar from
+an employee, which now reflects a 2:1 match. This will make the city competitive and increase recruitment and retention
+efforts. During our budget workshops we will focus on applying that match retroactively for years of service. This adopted
+budget includes an Updated Service Credit (USC), which the city will coordinate with the Texas Municipal Retirement
+System (TMRS), which will increase eligible employee's retirement benefits based on factors such as years and contributions,
+changes in salary, and changes in the city's retirement plan.",3342,4061,69348d747821dd0a34e8f44da8e52f657df677085b5c252b125f89c6788446f4,"icle V of the Palmview City Charter.
+Each Department continues to have the source of Departmental Authority and Personnel Levels (e.g., Full-Time, Part-Time).
+
+","
+
+Education Pay
+In our prior budget, the city adopted education pay which incentivizes employees at the following levels:
+Associates Degree/60+ hours of college",MARKET_RECRUITMENT_RETENTION,recruitment_retention,medium,market_or_comparability_pressure,strong,strong,moderate,non_safety_advantage,strong,direct_text_claim,"2. Major Changes & Highlights
+Retirement Benefits
+With the support of the City Council, we were able to increase our retirement match up to two dollars for every dollar from
+an emp",true,market_competitiveness_recruitment_retention_via_retirement_match,Retirement match increase intended to enhance city competitiveness for recruiting/retaining employees.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0fbe7338e73fb91b006a678a21a9508194adb688ba67e6f4ae,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-f494ee359cadb95f12efff47,SPAN378-048d17f2b5eff07dc77450ef,TXT378-eb7c9000e38df4b40f2f,RS556-437f557740a8c883525e,TS4L-957765e9621d6c12cca5,lane_4,tier_c,verification_ready_low,https://tppfl.civicweb.net/document/8217/Town%20of%20Pembroke%20Park%20FINAL%20Compensation%20Study_11-.pdf?handle=C5F24F6B7D354540959468F067A8D697,Town of Pembroke Park FINAL Compensation Study (includes West Park entries in a comparative classification/compensation context),West Park,FL,South,safety_and_non_safety_compensation_units,"Municipal job classifications including public safety (e.g., sworn police/firefighter categories shown alongside other classifications)",,Not determined (document published ~6.7 years ago; contains comparative classification/compensation tables referencing West Park),,,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-eb7c9000e38df4b40f2f.txt,e2889dda44f5683e1d1e1093ac14ca9387adca15aeadc3cb399377639fc54ae3,1d3816a1045ede82584363ad5ad9fc72e8b284679cd88e8010e0a6fe536ec746,"Town of Pembroke Park
+Salary Study & Recommended Compensation Plan
+
+Prepared by LagomHR
+Final Report: November 2019
+2019 Town of Pembroke Park Compensation Study
+
+Section 1: Executive Summary
+
+2019 Town of Pembroke Park Compensation Study
+
+Executive Summary
+Overview:
+The following Salary Structure Proposal was prepared by LagomHR for the Town of Pembroke Park. The Salary Structure Proposal
+consists of five (5) major areas:
+1. Executive Summary
+2. Organizational Chart
+3. Survey Results
+4. Salary Structure Proposal Reports
+5. Reco",0,534,93ec0689659d266fd5a7926c7023c761c249cd13e3d920f56b482470ec642c38,,"mmended Implementation Plan
+6. Appendix
+The Town of Pembroke Park was incorporated on December 10, 1957. The total area of the town is 1.6 square miles. Of this",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,moderate,moderate,neutral_or_unclear,moderate,documentary_mechanism_claim,"Town of Pembroke Park
+Salary Study & Recommended Compensation Plan
+
+Prepared by LagomHR
+Final Report: November 2019
+2019 Town of Pembroke Park Compensation Study
+
+Section 1: Execut",true,compensation_study_title_indicates_market_adjustment_context_only,Only the document title/section heading indicating a compensation/salary study for recommended pay; no explicit peer-market or adjustment language in this span.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0fb90d2a446e315f006a678a21e384819699f13a6c1faf15d9,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-b015693b2a13f2453f3ce11e,SPAN378-b0fe6987815dea46a80ad4d5,TXT378-eb7c9000e38df4b40f2f,RS556-437f557740a8c883525e,TS4L-957765e9621d6c12cca5,lane_4,tier_c,verification_ready_low,https://tppfl.civicweb.net/document/8217/Town%20of%20Pembroke%20Park%20FINAL%20Compensation%20Study_11-.pdf?handle=C5F24F6B7D354540959468F067A8D697,Town of Pembroke Park FINAL Compensation Study (includes West Park entries in a comparative classification/compensation context),West Park,FL,South,safety_and_non_safety_compensation_units,"Municipal job classifications including public safety (e.g., sworn police/firefighter categories shown alongside other classifications)",,Not determined (document published ~6.7 years ago; contains comparative classification/compensation tables referencing West Park),,,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-eb7c9000e38df4b40f2f.txt,e2889dda44f5683e1d1e1093ac14ca9387adca15aeadc3cb399377639fc54ae3,1d3816a1045ede82584363ad5ad9fc72e8b284679cd88e8010e0a6fe536ec746,"epared by LagomHR
+Final Report: November 2019
+2019 Town of Pembroke Park Compensation Study
+
+Section 1: Executive Summary
+
+2019 Town of Pembroke Park Compensation Study
+
+Executive Summary
+Overview:
+The following Salary Structure Proposal was prepared by LagomHR for the Town of Pembroke Park. The Salary Structure Proposal
+consists of five (5) major areas:
+1. Executive Summary
+2. Organizational Chart
+3. Survey Results
+4. Salary Structure Proposal Reports
+5. Recommended Implementation Plan
+6. Appendix
+The Town of Pembroke Park was incorporated on December 10, 1957. The total area of the town is 1.6 square miles. Of this area, sixtenth of a mile is lakes. The Town",70,738,158f5a18f555b6ce3486781684c05a1cde6b5e22b5191c571d2b4c0786c86952,"Town of Pembroke Park
+Salary Study & Recommended Compensation Plan
+
+Pr"," is located in southwestern Broward County, bounded on the south by Dade County, on the east by
+Hallandale Beach, and on the west by Miramar, and on the north b",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,weak,weak,neutral_or_unclear,weak,context_only,"epared by LagomHR
+Final Report: November 2019
+2019 Town of Pembroke Park Compensation Study
+
+Section 1: Executive Summary
+
+2019 Town of Pembroke Park Compensation Study
+
+Executive ",true,compensation_study_title_in_exec_summary,Title text indicates a compensation study/report but does not itself state explicit market/peer comparison actions.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0ac19766b6e2ee81006a678a2500108193aa0f30cdb29b2327,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-30905a8b963787ad7fbf55ef,SPAN378-0cd2a77dd9c796e1b7dd745f,TXT378-eb7c9000e38df4b40f2f,RS556-437f557740a8c883525e,TS4L-957765e9621d6c12cca5,lane_4,tier_c,verification_ready_low,https://tppfl.civicweb.net/document/8217/Town%20of%20Pembroke%20Park%20FINAL%20Compensation%20Study_11-.pdf?handle=C5F24F6B7D354540959468F067A8D697,Town of Pembroke Park FINAL Compensation Study (includes West Park entries in a comparative classification/compensation context),West Park,FL,South,safety_and_non_safety_compensation_units,"Municipal job classifications including public safety (e.g., sworn police/firefighter categories shown alongside other classifications)",,Not determined (document published ~6.7 years ago; contains comparative classification/compensation tables referencing West Park),,,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-eb7c9000e38df4b40f2f.txt,e2889dda44f5683e1d1e1093ac14ca9387adca15aeadc3cb399377639fc54ae3,1d3816a1045ede82584363ad5ad9fc72e8b284679cd88e8010e0a6fe536ec746,"dix.
+According to the National League of Cities (NLC), the Commission Form of Government exists today in less than 1% of cities and it
+typically occurs in cities with populations below 100,000. The characteristics include:
+2019 Town of Pembroke Park Compensation Study",2239,2507,a37aac83c305821fe62478d11888888defff2d5878952cd6bf902142ed5015bf," Town Commission” (Town of Pembroke Park Charter Part I Chapter 2 Article III Division 5 Town
+Manager).
+All references in this section may be found in the Appen","
+
+• Voters elect individual commissioners to a small governing board
+• Each commissioner is responsible for one specific aspect, such as fire, police, public wo",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,weak,weak,not_supported,neutral_or_unclear,weak,context_only,"dix.
+According to the National League of Cities (NLC), the Commission Form of Government exists today in less than 1% of cities and it
+typically occurs in cities with populations b",true,nlc_government_form_prevalence_not_market_adjustment,Mentions NLC prevalence of commission-form government; does not state compensation or peer-market adjustment/comparability.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0645c9daa969e5f0006a678a2463b08195adb18468746a4244,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-b719b4383ab499be368572bf,SPAN378-9cb2cac552bffa1d175cdd81,TXT378-eb7c9000e38df4b40f2f,RS556-437f557740a8c883525e,TS4L-957765e9621d6c12cca5,lane_4,tier_c,verification_ready_low,https://tppfl.civicweb.net/document/8217/Town%20of%20Pembroke%20Park%20FINAL%20Compensation%20Study_11-.pdf?handle=C5F24F6B7D354540959468F067A8D697,Town of Pembroke Park FINAL Compensation Study (includes West Park entries in a comparative classification/compensation context),West Park,FL,South,safety_and_non_safety_compensation_units,"Municipal job classifications including public safety (e.g., sworn police/firefighter categories shown alongside other classifications)",,Not determined (document published ~6.7 years ago; contains comparative classification/compensation tables referencing West Park),,,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-eb7c9000e38df4b40f2f.txt,e2889dda44f5683e1d1e1093ac14ca9387adca15aeadc3cb399377639fc54ae3,1d3816a1045ede82584363ad5ad9fc72e8b284679cd88e8010e0a6fe536ec746,"order to
+reach a current market value. After attaining the market value, a comparison was executed in order to determine the discrepancy between
+other similar municipalities and the existing Town of Pembroke Park salary ranges.
+When conducting this salary analysis, the existing salary structure served as the foundation for this project. The compiled market salary
+data and the proposed salary ranges based off the market data were updated using a new model that allows a large salary range for new
+hires, as well as a wide range allowing room for growth up through the cap. The ultimate objective is to encourage long-term
+employment, reduction in turnover, and highly motivated and productive employees.",3919,4625,66dfa6d61276a544e78f9a2ab13a3725348386d2428799efd26e6d1ea1409a51," and current market salary data.
+In an effort to complete this analysis, salary data was gathered for each position housed within the Town and then averaged in ","
+
+Data Sources:
+The Survey Results consist of the mean salaries compiled from municipalities of a similar population size and capital using their data
+between f",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,strong,strong,weak,neutral_or_unclear,strong,direct_text_claim,"order to
+reach a current market value. After attaining the market value, a comparison was executed in order to determine the discrepancy between
+other similar municipalities and th",true,market_comparison_to_similar_municipalities_for_discrepancy,Evidence of using market value and comparisons to similar municipalities to gauge discrepancies; does not show wage-gap size or causal effects.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_069e1e9e8822ab31006a678a24bf788193bdc88de52eeba87f,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-ae4a7e33f03949066237c0c9,SPAN378-a80ab1ab7ba93c0ef9a7ff05,TXT378-eb7c9000e38df4b40f2f,RS556-437f557740a8c883525e,TS4L-957765e9621d6c12cca5,lane_4,tier_c,verification_ready_low,https://tppfl.civicweb.net/document/8217/Town%20of%20Pembroke%20Park%20FINAL%20Compensation%20Study_11-.pdf?handle=C5F24F6B7D354540959468F067A8D697,Town of Pembroke Park FINAL Compensation Study (includes West Park entries in a comparative classification/compensation context),West Park,FL,South,safety_and_non_safety_compensation_units,"Municipal job classifications including public safety (e.g., sworn police/firefighter categories shown alongside other classifications)",,Not determined (document published ~6.7 years ago; contains comparative classification/compensation tables referencing West Park),,,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-eb7c9000e38df4b40f2f.txt,e2889dda44f5683e1d1e1093ac14ca9387adca15aeadc3cb399377639fc54ae3,1d3816a1045ede82584363ad5ad9fc72e8b284679cd88e8010e0a6fe536ec746,"Data Sources:
+The Survey Results consist of the mean salaries compiled from municipalities of a similar population size and capital using their data
+between fiscal years 2018 through 2019. The list of sources requested for the Town of Pembroke Park Salary Study are below.",4627,4899,bc089eb6e47a9fc6563a3840aec2a1638ec4dc253ca4577ea6bb02159653040c," growth up through the cap. The ultimate objective is to encourage long-term
+employment, reduction in turnover, and highly motivated and productive employees.
+
+","
+
+2019 Town of Pembroke Park Compensation Study
+
+Municipality
+Fort Meade
+
+County
+
+Classification Population
+
+Anne Arundel City
+
+Residential
+Homestead
+
+NonNonRes",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,strong,strong,not_supported,neutral_or_unclear,strong,documentary_mechanism_claim,"Data Sources:
+The Survey Results consist of the mean salaries compiled from municipalities of a similar population size and capital using their data
+between fiscal years 2018 throu",true,explicit_peer_salary_comparability_in_method,Methodological description of using comparable municipalities' mean salaries (not an outcome or causal claim).,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_05f1b67bfbd01551006a678a24cdd88190adf06c8981eaaf36,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-4992242d5669e263d4a42661,SPAN378-2fc5c687b8166e1d401e3ba9,TXT378-8016cda0b10e0d340497,RS556-4d4a069f96bdeba62f17,TS4L-dcb62f63681c23623abe,lane_4,tier_c,verification_ready_low,https://webgen1files1.revize.com/hendnc/Documents/Departments/Finance/Budget/Approved%20Budget%20FY%2024.pdf,City of Henderson NC Approved Budget FY 24 (includes Public Safety Schedule revised 7/1/23 for Police and Fire),Henderson,NC,South,safety_and_non_safety_compensation_units,Public safety classifications (Fire & Police) pay schedule tables,,FY 2024 (with pay schedule revision effective 7/1/23),2023,2024,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-8016cda0b10e0d340497.txt,057694e1b3b4fb8c3ca8e57e8fe700c2843ba39bfe28cae9047ce73b977ddbc0,81115edd47b9c2a74c760cee9a018a369fcb8ffdf753a0edc1a5ea8ef724a74d,"Continue to increase tax base and stability of existing housing stock
+Staff retention and competitive salaries
+Fire Station #3
+KLRW Improvements
+Redevelopment",78114,78272,43b53e6c118b45492993a1fc7914bb73ff6ee3b47777df0df16a6132517248e1,"n Animal Control Officer position
+o Renamed E. Winder Street in honor of Mr. Eddie Hicks
+o Approved FY Ending June 30, 2022 Audit
+
+KEY BUDGET ISSUES
+
+
+
+
+
+
+","
+
+GF: Page 4
+
+FY 23-24 BUDGET
+GOVERNMENTAL FUNDS
+10-414: GENERAL FUND CITY ATTORNEY SUMMARY
+10-414: CITY ATTORNEY SUMMARY
+Actual
+Actual
+Budget
+Estimated Request",MARKET_COMPETITIVENESS,pay_competitiveness,high,market_or_comparability_pressure,strong,strong,not_supported,neutral_or_unclear,strong,direct_text_claim,"Continue to increase tax base and stability of existing housing stock
+Staff retention and competitive salaries
+Fire Station #3
+KLRW Improvements
+Redevelopment",true,budget_retention_competitive_salaries_market_signal,Budget section requesting retention via competitive salaries; no wage study details,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0db30d4e91874c86006a678a2709608196a017eeb42c0a40d1,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-8ee245660604d97d6a71a4ff,SPAN378-607b868e7f99ad67091118dd,TXT378-8016cda0b10e0d340497,RS556-4d4a069f96bdeba62f17,TS4L-dcb62f63681c23623abe,lane_4,tier_c,verification_ready_low,https://webgen1files1.revize.com/hendnc/Documents/Departments/Finance/Budget/Approved%20Budget%20FY%2024.pdf,City of Henderson NC Approved Budget FY 24 (includes Public Safety Schedule revised 7/1/23 for Police and Fire),Henderson,NC,South,safety_and_non_safety_compensation_units,Public safety classifications (Fire & Police) pay schedule tables,,FY 2024 (with pay schedule revision effective 7/1/23),2023,2024,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-8016cda0b10e0d340497.txt,057694e1b3b4fb8c3ca8e57e8fe700c2843ba39bfe28cae9047ce73b977ddbc0,81115edd47b9c2a74c760cee9a018a369fcb8ffdf753a0edc1a5ea8ef724a74d,"Coordinate and provide support to a comprehensive city-wide classification and pay
+study that will be conducted by an outside consultant. Study will include review of
+position description questionnaires (PDQs), conducting interviews/focus groups,
+conducting labor market surveys, preparing class specifications, etc.
+To prepare a Request for Proposal (RFP) and receive proposals from consultants that are
+interested in completing a comprehensive classification and pay study for the City of
+Henderson employees.",84313,84824,c6fd07436d579a50925acd7930fd83f3ba351c6ffb45106c15511990001c191e,"d in accordance with the City of Henderson’s policies and
+procedures as well as local, state and federal regulations.
+GOALS & OBJECTIVES
+Goal 1:
+
+Objective 1:
+
+","
+
+Goal 2:
+Objective 1:
+
+Expand the employee wellness program for City employees.
+To expand the wellness program so that it will promote healthy lifestyles and
+e",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,strong,strong,not_supported,neutral_or_unclear,strong,documentary_mechanism_claim,"Coordinate and provide support to a comprehensive city-wide classification and pay
+study that will be conducted by an outside consultant. Study will include review of
+position desc",true,market_comparability_via_classification_and_pay_study,"Market/benchmarking intent via classification and pay study (with labor-market inputs), not evidence of wage outcomes.",true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_05aef8dd7f7911c5006a678a2758108195b97f4e0e156aab41,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-9634a014c8e87b9eac2f1c52,SPAN378-c99b3167cd6616ca06aa54a8,TXT378-8016cda0b10e0d340497,RS556-4d4a069f96bdeba62f17,TS4L-dcb62f63681c23623abe,lane_4,tier_c,verification_ready_low,https://webgen1files1.revize.com/hendnc/Documents/Departments/Finance/Budget/Approved%20Budget%20FY%2024.pdf,City of Henderson NC Approved Budget FY 24 (includes Public Safety Schedule revised 7/1/23 for Police and Fire),Henderson,NC,South,safety_and_non_safety_compensation_units,Public safety classifications (Fire & Police) pay schedule tables,,FY 2024 (with pay schedule revision effective 7/1/23),2023,2024,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-8016cda0b10e0d340497.txt,057694e1b3b4fb8c3ca8e57e8fe700c2843ba39bfe28cae9047ce73b977ddbc0,81115edd47b9c2a74c760cee9a018a369fcb8ffdf753a0edc1a5ea8ef724a74d,"To reach and maintain full sworn officer staffing.
+To work toward competitive wage in order to recruit new officers and retain existing officers.
+Increase in-service training and training in the areas of supervision and command staff.
+Innovatively advertise and recruit a diverse workforce that compliments and projects our values.",105892,106223,cd03267c587456e89df5fa710edebc717309ffaec30e5f069c813ef56fc90552,"nt.
+Continue working closely with the 11th District Attorney’s Office on prosecution and diversion
+strategies.
+
+GOAL 2:
+Objective 1:
+Objective 2:
+Objective 3:
+
+","
+
+GOAL 3:
+Objective 1:
+Objective 2:
+
+Continue to seek resources to address needed CIP purchases.
+Continue the upgrades of agency technology and improve IT suppo",MARKET_COMPETITIVENESS,pay_competitiveness,high,market_or_comparability_pressure,strong,strong,not_supported,neutral_or_unclear,strong,direct_text_claim,"To reach and maintain full sworn officer staffing.
+To work toward competitive wage in order to recruit new officers and retain existing officers.
+Increase in-service training and t",true,competitive_wage_recruit_retain_in_span,Bounded to the explicit “competitive wage” recruitment/retention staffing aims (not broader staffing effects).,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_096aa54a33f5340e006a678a2804c081978e7a9cce7fd1761d,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-1e4792d2997ac8073ec2c20f,SPAN378-190f08917f0608d7e0e262f4,TXT378-8016cda0b10e0d340497,RS556-4d4a069f96bdeba62f17,TS4L-dcb62f63681c23623abe,lane_4,tier_c,verification_ready_low,https://webgen1files1.revize.com/hendnc/Documents/Departments/Finance/Budget/Approved%20Budget%20FY%2024.pdf,City of Henderson NC Approved Budget FY 24 (includes Public Safety Schedule revised 7/1/23 for Police and Fire),Henderson,NC,South,safety_and_non_safety_compensation_units,Public safety classifications (Fire & Police) pay schedule tables,,FY 2024 (with pay schedule revision effective 7/1/23),2023,2024,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-8016cda0b10e0d340497.txt,057694e1b3b4fb8c3ca8e57e8fe700c2843ba39bfe28cae9047ce73b977ddbc0,81115edd47b9c2a74c760cee9a018a369fcb8ffdf753a0edc1a5ea8ef724a74d,"personnel related expenditures, such as retiree health insurance
+and reserves for incumbent liabilities for accrued vacation and compensatory time, are accounted
+for in this budget department. Additionally, the Fund’s share of the recommended Pay &
+Classification Study is included in this budget.",148679,148976,3620844fa9120d81baa068d95f3ee753e6bad80e4bc974ebba7eeef2681b4a8e,"s and other expenditures that should not be
+located in an operating budget group. No personnel are assigned to the Non-Departmental
+budget group; however, some ","
+
+WF: Page 2
+
+FY 23-24 BUDGET
+ENTERPRISE FUNDS
+30-680: WATER FUND DEBT SERVICE
+
+30-680: DEBT SERVICE SUMMARY
+Actual
+21-22
+Long-Term Debt Service- P&I $
+Lease Pu",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,moderate,weak,neutral_or_unclear,moderate,direct_text_claim,"personnel related expenditures, such as retiree health insurance
+and reserves for incumbent liabilities for accrued vacation and compensatory time, are accounted
+for in this budget",true,mentions_pay_classification_study_budget_inclusion,Shows the budget includes a recommended Pay & Classification Study share; does not state peer/wage adjustments or competitive rationale within the span.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_087316eeb3f07bdf006a678a280aa881978a4a3e91a6ec9066,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-5bb554cdc06ff080df36bb0f,SPAN378-72ba0c6079514a9e95372e4c,TXT378-8016cda0b10e0d340497,RS556-4d4a069f96bdeba62f17,TS4L-dcb62f63681c23623abe,lane_4,tier_c,verification_ready_low,https://webgen1files1.revize.com/hendnc/Documents/Departments/Finance/Budget/Approved%20Budget%20FY%2024.pdf,City of Henderson NC Approved Budget FY 24 (includes Public Safety Schedule revised 7/1/23 for Police and Fire),Henderson,NC,South,safety_and_non_safety_compensation_units,Public safety classifications (Fire & Police) pay schedule tables,,FY 2024 (with pay schedule revision effective 7/1/23),2023,2024,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-8016cda0b10e0d340497.txt,057694e1b3b4fb8c3ca8e57e8fe700c2843ba39bfe28cae9047ce73b977ddbc0,81115edd47b9c2a74c760cee9a018a369fcb8ffdf753a0edc1a5ea8ef724a74d,"The Non-Departmental Budget group provides for a better accounting of inter-fund transfers and
+other expenditures that should not be located in an operating budget group. No personnel are
+assigned to the Non-Departmental budget group; however, some personnel related expenditures
+such as retiree health insurance and the fund’s share of the recommended pay and classification
+study are accounted for in this budget department.
+The largest expenditure center for the non-departmental budget is the transfer to the Capital
+Reserve Fund.",176929,177463,7e89e91a851783c665ef7cbddf89d8a1e17f8bfce954722a968b937e9ef8e266,"
+Recommended
+23-24
+$
+45,000
+$
+2,500
+$
+1,200
+20,000
+1,715,000
+39,600
+$
+1,823,300
+
+$
+$
+$
+
+$
+
+Approved
+23-24
+45,000
+2,500
+1,200
+20,000
+1,715,000
+39,600
+1,823,300
+
+","
+
+RW: Page 2
+
+FY 23-24 BUDGET
+ENTERPRISE FUNDS
+64-680: REGIONAL WATER DEBT SERVICE
+64-680: DEBT SERVICE SUMMARY
+Actual
+21-22
+Long-Term Debt Service P&I $
+
+Budge",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,weak,weak,not_supported,neutral_or_unclear,weak,context_only,"The Non-Departmental Budget group provides for a better accounting of inter-fund transfers and
+other expenditures that should not be located in an operating budget group. No person",true,budget_group_accounting_context_only_no_market_adjustment,Non-departmental budget accounting; mentions classification study only as a budgeted item,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_04c203c1efe3247e006a678a29635881948b82838a7807c3a9,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-2923022e35c1c23d34f64444,SPAN378-5165b4f03512cf5ff8285cec,TXT378-dc113283940d40afff8b,RS556-4fd9ba2738171533d881,TS4L-716235bb0d41ff8aecfa,lane_4,tier_c,verification_ready_low,https://www.stallingsnc.org/LinkClick.aspx?fileticket=iaigdMRNbf8%3D&portalid=0,"September 10, 2018 — Pay and Classification Study (Town of Stallings) — Scope of Services",Stallings,NC,South,safety_and_non_safety_compensation_units,Police/public safety + general municipal positions (via classification/pay plan study covering NCLGERS-covered positions),,2018-09-10 (study scope; implementation timing not determined here),2018-09-10,2019-06-30,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-dc113283940d40afff8b.txt,0b1cfd0b49cdbb5bde4e5858c5ca96e848ff92d4ce0c2c20999acf74ab2aecce,4f5055018ab7c89b47e85109c25b1489ac87a448570a2cc3c98fd8352621cab7,"TO: Mayor Dunn; Town Council
+FR: Alex Sewell
+DATE: 7/5/18
+RE: Pay & Classification Study Contract
+Purpose: This memorandum's purpose is to educate the Town Council on the timeline
+for the pay & classification study and request formal approval of the pay & classification
+study contract.
+Background: On May 14, 2018, the Town Council approved by consensus conducting a
+pay and classification study using an outside expert consultant.
+Timeline: The process would start in November with the goal of being completed in
+March 2019 in time for the budget process. Enclosed is a summary overview of the
+process.
+Recommendation: Approve the contract with the N.C. League of Municipalities for a
+comprehensive pay and classification study.",16641,17371,4fb07c36113d941ed1c6aaa8a84aa024c9b27e7bd82d0ed17e69eaaa185e2aee,"sed
+
+Wyatt Dunn, Mayor
+
+Erinn Nichols, Town Clerk
+
+THIS MEMO WAS PULLED FROM THE JULY 9, 2018 AGENDA.
+
+Agenda !tem #
+
+5
+
+40 4.•
+04, lib.
+..4141 „.
+8tallin
+-g§
+
+","
+
+THIS MEMO WAS PULLED FROM THE JULY 9, 2018 AGENDA.
+
+Classification and Pay Study Information
+Conducting a classification and pay study typically takes approxi",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,strong,strong,not_supported,neutral_or_unclear,strong,documentary_mechanism_claim,"TO: Mayor Dunn; Town Council
+FR: Alex Sewell
+DATE: 7/5/18
+RE: Pay & Classification Study Contract
+Purpose: This memorandum's purpose is to educate the Town Council on the timeline
+",true,classification_and_pay_study_contract,Memo header and purpose referring to a pay and classification study contract (market/comparability study context),true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_019335b88c17459f006a678a2af97c8196831cc8db4695c95d,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-a1a94218e6cee85b675040b5,SPAN378-5a97a6bb964f5c1b4a6e91c1,TXT378-dc113283940d40afff8b,RS556-4fd9ba2738171533d881,TS4L-716235bb0d41ff8aecfa,lane_4,tier_c,verification_ready_low,https://www.stallingsnc.org/LinkClick.aspx?fileticket=iaigdMRNbf8%3D&portalid=0,"September 10, 2018 — Pay and Classification Study (Town of Stallings) — Scope of Services",Stallings,NC,South,safety_and_non_safety_compensation_units,Police/public safety + general municipal positions (via classification/pay plan study covering NCLGERS-covered positions),,2018-09-10 (study scope; implementation timing not determined here),2018-09-10,2019-06-30,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-dc113283940d40afff8b.txt,0b1cfd0b49cdbb5bde4e5858c5ca96e848ff92d4ce0c2c20999acf74ab2aecce,4f5055018ab7c89b47e85109c25b1489ac87a448570a2cc3c98fd8352621cab7,"Classification and Pay Study Information
+Conducting a classification and pay study typically takes approximately 2.5 to 4 months, depending on the size of the
+organization. The MAPS Group's approach is to make the process as transparent and understandable as possible. We believe
+this is important because a good study can have a negative morale impact if employees misunderstand it or if the study lacks
+credibility with employees.
+We also strongly recommend undertaking a stud",17425,17903,1010c0c404a4f88e140a3dcf2c345e50b6eacae2930d7f1bb959e225102c51f6,"rove the contract with the N.C. League of Municipalities for a
+comprehensive pay and classification study.
+
+THIS MEMO WAS PULLED FROM THE JULY 9, 2018 AGENDA.
+
+","y only when there is commitment to follow through with funding the
+implementation. The negative impact on morale is significant if a study is not implemented. I",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,weak,weak,not_supported,neutral_or_unclear,weak,context_only,"Classification and Pay Study Information
+Conducting a classification and pay study typically takes approximately 2.5 to 4 months, depending on the size of the
+organization. The MAP",true,explicit_pay_classification_study_initiation_no_comparability_terms,"Supports existence/timing of a pay/classification study, not competitiveness/peer/comparability mechanics",true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0edf5350012be9d7006a678a3428f8819680691551c31ed481,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-c55311f3c0c28111f3b85e7e,SPAN378-8a59d831b2b0ae100c6c912e,TXT378-dc113283940d40afff8b,RS556-4fd9ba2738171533d881,TS4L-716235bb0d41ff8aecfa,lane_4,tier_c,verification_ready_low,https://www.stallingsnc.org/LinkClick.aspx?fileticket=iaigdMRNbf8%3D&portalid=0,"September 10, 2018 — Pay and Classification Study (Town of Stallings) — Scope of Services",Stallings,NC,South,safety_and_non_safety_compensation_units,Police/public safety + general municipal positions (via classification/pay plan study covering NCLGERS-covered positions),,2018-09-10 (study scope; implementation timing not determined here),2018-09-10,2019-06-30,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-dc113283940d40afff8b.txt,0b1cfd0b49cdbb5bde4e5858c5ca96e848ff92d4ce0c2c20999acf74ab2aecce,4f5055018ab7c89b47e85109c25b1489ac87a448570a2cc3c98fd8352621cab7,"Classification and Pay Study Information
+Conducting a classification and pay study typically takes approximately 2.5 to 4 months, depending on the size of the
+organization. The MAPS Group's approach is to make the process as transparent and understandable as possible. We believe
+this is important because a good study can have a negative morale impact if employees misunderstand it or if the study lacks
+credibility with employees.
+We also strongly recommend undertaking a study only when there is commitment to follow through with",17425,17957,6c2344f8d2336b47b3e1333cd3bb04d2633b510fae7ea28dac975cedb0d5dce4,"rove the contract with the N.C. League of Municipalities for a
+comprehensive pay and classification study.
+
+THIS MEMO WAS PULLED FROM THE JULY 9, 2018 AGENDA.
+
+"," funding the
+implementation. The negative impact on morale is significant if a study is not implemented. Implementation costs are the greater
+cost, not the fee ",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,not_supported,not_supported,not_supported,not_applicable,not_supported,context_only,"Classification and Pay Study Information
+Conducting a classification and pay study typically takes approximately 2.5 to 4 months, depending on the size of the
+organization. The MAP",true,no_market_or_comparison_language_present,"Only describes study timing/format, not market/peer comparability or adjustment",true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0cccc188874682d2006a678a3431288197addacc9d392d10b1,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-f5dbc9dff749fac5817a3dc0,SPAN378-d348be3995b795bfbd367900,TXT378-dc113283940d40afff8b,RS556-4fd9ba2738171533d881,TS4L-716235bb0d41ff8aecfa,lane_4,tier_c,verification_ready_low,https://www.stallingsnc.org/LinkClick.aspx?fileticket=iaigdMRNbf8%3D&portalid=0,"September 10, 2018 — Pay and Classification Study (Town of Stallings) — Scope of Services",Stallings,NC,South,safety_and_non_safety_compensation_units,Police/public safety + general municipal positions (via classification/pay plan study covering NCLGERS-covered positions),,2018-09-10 (study scope; implementation timing not determined here),2018-09-10,2019-06-30,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-dc113283940d40afff8b.txt,0b1cfd0b49cdbb5bde4e5858c5ca96e848ff92d4ce0c2c20999acf74ab2aecce,4f5055018ab7c89b47e85109c25b1489ac87a448570a2cc3c98fd8352621cab7,"includes
+meetings and interviews. We usually start with a meeting with management and department heads and go over the process
+and methodology of the study, answer questions, discuss time lines, and identify a list of organizations to include in the salary
+survey. We then have orientation meetings for employees to attend to hear about the process and methodology and ask
+questions. The number of these meetings depends on the size of the workforce. These meetings can be videotaped if not all
+employees are able to attend the scheduled sessions.
+During this trip we also conduct interviews with employees. We interview at least one employee with each different set of duties
+as described on the questionnaires r",18810,19523,cbeee4c8f79ae389cee533740aa7ac700be8ff5424fdca7775a36c0316aae386,"completion on the PDF version is fine as well.
+On-site Meetinqs and Interviews. Once we receive the completed questionnaires, we schedule an on-site visit that ","egardless of job titles. The purpose of the interviews is to make sure we accurately
+understand duties and responsibilities listed on the questionnaires so we c",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,weak,weak,neutral_or_unclear,weak,documentary_mechanism_claim,"includes
+meetings and interviews. We usually start with a meeting with management and department heads and go over the process
+and methodology of the study, answer questions, discu",true,salary_survey_methodology_meetings_no_explicit_peer_wage_language,Only describes study meetings/methodology and setting up the salary survey process; does not explicitly mention peer or market wage adjustment in the quoted text.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_00918a466d9dcad2006a678a342d0c8195bf217b70142a3c64,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-94d01a844cb3ec0fecffe896,SPAN378-a899ef04470f4728ecf2b7fb,TXT378-361047da3f22b0b37bae,RS556-775bc2e5a3d6edbbb95d,TS4L-fa31412318e57d3fa776,lane_4,tier_c,verification_ready_low,https://cms7files.revize.com/manassasparkva/Agendas%20%26%20Minutes/2016/Min%2001192016.pdf,"Manassas Park Governing Body Minutes (Jan 19, 2016) – Public Safety Compensation Study Recommendations for Police and Fire",Manassas Park,VA,South,safety_and_non_safety_compensation_units,Police and Fire (public safety),,FY 2017 budget deliberations (referenced in minutes),2016-07-01,2017-06-30,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-361047da3f22b0b37bae.txt,4895dfd0f3a7af138325e6603a701bbd193a31dae93c00a95704d5b0a6a449a0,1d07b27f661c4bf2600a4ce7175482e96a5f3db7c0b2b93378ee0529bf5ada1d,"Water/Sewer/Customer Service Assistant for City Hall
+Public Safety Compensation Study Recommendations for Police and Fire
+Tiered COLA for employees under $80,000
+Focus on Capital Projects and IT Infrastructure
+Employee Training & Retention
+Strategic Plan Development and Implementation
+Process Efficiency & Automation (Code Enforcement, Agendas, Budget, etc.)",31339,31698,e490321818300748ef229630c9bde67827b12ac6fec058589e3c5fbd69ec0c6b,"Specifically, are there any “must sees” or “do not includes” that we should be
+prepared for. City Manager recommended priorities include:
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+
+","
+
+Mayor Jones stated he did not think that Governing Body had enough information to answer
+the question from the City Manager. Right now they need a lot more in",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,moderate,weak,neutral_or_unclear,moderate,documentary_mechanism_claim,"Water/Sewer/Customer Service Assistant for City Hall
+Public Safety Compensation Study Recommendations for Police and Fire
+Tiered COLA for employees under $80,000
+Focus on Capital P",true,compensation_study_cola_recommendations,Lists compensation-study and COLA recommendations; indicates potential market/competitiveness-oriented adjustment but does not state wage-gap results.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_09d96e1564a52387006a678a342fa48195b3439942931fb4ed,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-738720d2022578713b5c9b0c,SPAN378-dc5d2a0496aad2fb13a30238,TXT378-311027e000b7b3993656,RS556-8291125fe31139fcd192,TS4L-e9ee8938a84d011a69f5,lane_4,tier_c,verification_ready_low,https://www.beevilletx.gov/media/Departments/HumanResources/Employee%20Handbook%20-%20Appendix/Appendix%20R%20-%20Step%20Pay%20Plan%20Policy.pdf,City of Beeville Employee Handbook – Appendix R: Step Pay Plan Policy (PDF),Beeville,TX,South,safety_and_non_safety_compensation_units,City employees (incl. potentially first-responder/public safety and non-safety roles; step-pay administration policy),,Ongoing policy (document revision timing not fully inferred from search snippet),,,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-311027e000b7b3993656.txt,782d6cc742107fd659db5c8afb35a03315c749599ed7342fe15d9f3b35464089,1d105eceea5f011040ef46675f7b55c14f8c22ee275a63b8f19d987ce4f7f655,"II. POLICY:
+The City of Beeville is committed to offering competitive compensation and benefits to attract, retain,
+and motivate its workforce. Salaries will be aligned with the duties and responsibilities of each job title,
+as approved by the City Council.",421,678,b85771697f88d49340777b3fccbbf2a7f9a606779006d5b141fbb77678c49d59,"stration
+that aligns with the City’s goals of attracting, retaining, and motivating employees. This step plan does
+not apply to Civil Service-coded employees.
+
+","
+
+Step Plan and Salary Adjustments:
+1. Step Plan Overview:
+
+
+The City of Beeville utilizes a step plan for salary adjustments.
+
+
+
+Under this plan, employees a",MARKET_COMPETITIVENESS,pay_competitiveness,high,market_or_comparability_pressure,moderate,strong,not_supported,neutral_or_unclear,moderate,direct_text_claim,"II. POLICY:
+The City of Beeville is committed to offering competitive compensation and benefits to attract, retain,
+and motivate its workforce. Salaries will be aligned with the du",true,competitive_compensation_to_attract_retain,Policy commitment to competitive pay/benefits; no explicit peer or study methods,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_060bef58b5290d09006a678a36617881969e490113fe940055,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-ae1187f3ff150ef9bf90f521,SPAN378-c8dbc69c5ddf67fac1d595af,TXT378-cf728e6b1cff06aafd16,RS556-9823ad21ce5b0cc79f21,TS4L-3c0ff810faa400fa8c88,lane_4,tier_c,verification_ready_low,https://www.williamsburgva.gov/Archive.aspx?ADID=59,"City of Williamsburg, Virginia Comprehensive Annual Financial Report (CAFR) — notes FY2018 budget impact from Compensation and Classification Study (incl. Public Safety salary/related expenses)",Williamsburg,VA,South,safety_and_non_safety_compensation_units,Public Safety (Police/Fire) and broader City operations tied to implemented compensation/classification outcomes,,FY 2018 (CAFR narrative about study implementation effects),2017-07-01,2018-06-30,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-cf728e6b1cff06aafd16.txt,6e8560a00d949e0d8af8d10d2f510c94edaee128508d75f82cea25537081145d,1e79f0704b4b2ab339a2a31be24be945c67a26e800ecfad12a98c1662723c1a8,"The City’s FY 2018 budget included $450K in the General Fund to implement a portion of the findings of
+the Compensation and Classification Study. An additional $40K was budgeted to recognize employees
+based on performance as indicated by annual performance evaluation. The employer contribution rate
+during FY 2018 for all full-time employees covered by the Virginia Retirement System was 14.09% of
+salary, with covered employees contributing their 5% share above the employer rate. Healthcare
+premiums for the City’s plan with the Anthem’s Local Choice program administered by the State were
+incurred no increase for FY 2018.
+The following analysis provides additional information on the City’s expenditures by function that changed
+significantly over the prior year.
+",75048,75818,38b046173bf02dbb7ac567a7b02bd3a35146b7fee0c22dd318708799105f3770,"
+-23.71%
+3,848,108
+372.67%
+(56,439)
+-27.66%
+
+$44,868,450
+
+$3,215,828
+
+13
+
+100.00%
+
+7.17%
+
+City of Williamsburg, Virginia
+
+Management’s Discussion and Analysis
+
+","
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+General Government Administration – increased by 1.7% largely due to increased costs in
+various departments, including General Fund Co",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,strong,strong,moderate,neutral_or_unclear,strong,direct_text_claim,"The City’s FY 2018 budget included $450K in the General Fund to implement a portion of the findings of
+the Compensation and Classification Study. An additional $40K was budgeted to",true,comp_class_study_budget_implementation,Budget line items tied to compensation and classification study findings.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0449c590e3f84fae006a678a3717fc81958cc44d8f9f15a8ca,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-e6dd73629f9a083e1ea005de,SPAN378-d97c2b383b74b82f708a5a43,TXT378-cf728e6b1cff06aafd16,RS556-9823ad21ce5b0cc79f21,TS4L-3c0ff810faa400fa8c88,lane_4,tier_c,verification_ready_low,https://www.williamsburgva.gov/Archive.aspx?ADID=59,"City of Williamsburg, Virginia Comprehensive Annual Financial Report (CAFR) — notes FY2018 budget impact from Compensation and Classification Study (incl. Public Safety salary/related expenses)",Williamsburg,VA,South,safety_and_non_safety_compensation_units,Public Safety (Police/Fire) and broader City operations tied to implemented compensation/classification outcomes,,FY 2018 (CAFR narrative about study implementation effects),2017-07-01,2018-06-30,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-cf728e6b1cff06aafd16.txt,6e8560a00d949e0d8af8d10d2f510c94edaee128508d75f82cea25537081145d,1e79f0704b4b2ab339a2a31be24be945c67a26e800ecfad12a98c1662723c1a8,"eased
+607.4K, or 6.1% compared to the previous fiscal year. The majority of the increase related to
+increased salary and related expenses in both the Police Department and the Fire Department as
+a result of the implementation of the Compensation and Classification Study, the addition of one
+new police officer, and overtime. Juvenile detention services are provided by the Middle
+Peninsula Juvenile Detention Commission, which operates the 48-bed Merrimac Center. Days
+used by City kids during FY 2018 totaled 245 compared to 116 last year. Juvenile detention
+costs, which were based on per diems, were $74K compared to $19K last year.
+Public Works – Overall costs were up 3.3% over last year. Streets department was in",76469,77189,ad346215f5ff54d169bfd888e566405322f9910b78bc509053a88732ec9adbdc," This category includes the Police Department, the Fire Department cost for
+correction and detention and several departments. This category of expenditures incr","creased by
+3.4% and stormwater operations increased by 7.5%, both due to increased salary and related
+benefits. Sanitation costs increased 3.8% due to increased",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,moderate,weak,neutral_or_unclear,moderate,documentary_mechanism_claim,"eased
+607.4K, or 6.1% compared to the previous fiscal year. The majority of the increase related to
+increased salary and related expenses in both the Police Department and the Fire",true,explicit_compensation_classification_study_salary_adjustment,Links higher salary/related expenses to implementation of compensation/classification study (market/competitiveness pressure only),true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0793c1fd17536b4a006a678a372d588193b5a1cf74a45d8565,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-c179848c8bbc9ef9f9926811,SPAN378-dbd999e608e2d6523807e530,TXT378-cf728e6b1cff06aafd16,RS556-9823ad21ce5b0cc79f21,TS4L-3c0ff810faa400fa8c88,lane_4,tier_c,verification_ready_low,https://www.williamsburgva.gov/Archive.aspx?ADID=59,"City of Williamsburg, Virginia Comprehensive Annual Financial Report (CAFR) — notes FY2018 budget impact from Compensation and Classification Study (incl. Public Safety salary/related expenses)",Williamsburg,VA,South,safety_and_non_safety_compensation_units,Public Safety (Police/Fire) and broader City operations tied to implemented compensation/classification outcomes,,FY 2018 (CAFR narrative about study implementation effects),2017-07-01,2018-06-30,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-cf728e6b1cff06aafd16.txt,6e8560a00d949e0d8af8d10d2f510c94edaee128508d75f82cea25537081145d,1e79f0704b4b2ab339a2a31be24be945c67a26e800ecfad12a98c1662723c1a8,"ropriation in the amount of
+$61,028 from surplus funds for Impact Insight (service that provides information regarding the impact of
+instructional initiatives), replacement of textbooks, replacement of cafeteria tables, to conduct a
+compensation and salary analysis, and to replace four school buses.
+CAPITAL ASSET AND DEBT ADMINISTRATION
+Capital Assets
+The City of Williamsburg’s total investment in capital assets, including construction in progress, for its
+governmental and business type activities as of June 30, 2018, was $96 million (net of accumulated
+depreciation). This investment in capital assets includes land, buildings, machinery and equipment, and
+recreation and park facilities. Major capital asset",85638,86353,8b866e85a9f18ecaf3a1176421a83fc45a32f9465e0913547cadf25de44a8cc6,"f Schools was 9.46% and, as a result, $186,425 of the surplus was City funds. In October of
+2017, WJCC School Board asked for, and City Council approved, an app","s of the Utility Fund consist of all assets used to provide
+water and sewer services to City residents, including the major investment of the Waller Mill Reserv",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,strong,moderate,neutral_or_unclear,strong,direct_text_claim,"ropriation in the amount of
+$61,028 from surplus funds for Impact Insight (service that provides information regarding the impact of
+instructional initiatives), replacement of text",true,explicit_compensation_and_salary_analysis_appropriation,"Appropriation explicitly mentions conducting a compensation and salary analysis (market/comparability investigation), without stating results or wage effects.",true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_04f336fa42c7dd7e006a678a377a388197960bb73fdd536804,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-e03573b9eecde6961b0138a7,SPAN378-686307daecc398838e072239,TXT378-4798edee319596a95b46,RS556-cf401f0887d05a567ccd,TS4L-84b27e37c7e9a121b7d9,lane_4,tier_c,verification_ready_low,https://mccmeetingspublic.blob.core.usgovcloudapi.net/mntgmrytx-meet-6726444adad54f4bb8c75f8fc47d5a0a/ITEM-Attachment-001-d03e0771bc414d65892ba65afdb04c77.pdf,"Classification and Compensation Study (scope/attachment PDF) — City of Tomball, TX",Tomball,TX,South,safety_and_non_safety_compensation_units,City of Tomball job classifications (incl. police/fire as job families where applicable),,2023 (study scope/engagement materials),,,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-4798edee319596a95b46.txt,e185195a2f79382c2f13da2886ad3f8c8d7a16779319a6636a332be003f03413,be6a6be91fa9f3f45972bc538f4538b45ea833f63d40ed4955c5da94e57602ef,"Classification and Compensation Study
+City of Montgomery, Texas
+
+Paypoint HR, LLC
+695 Santa Maria Lane
+Davidsonville, MD 21035
+(443) 336-4272
+
+Table of Contents
+Management Synopsis .....................................................................................................................................2
+Company Overview and Qualifications ........................................................................................................3
+Principals ....................................................................",0,537,1282c7c388b9cdd7def3e9aeba129905b88c7d65e3244dcb5deb5018cae42376,,"...................................................................................4
+Additional Project Personnel...............................................",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,weak,weak,weak,neutral_or_unclear,weak,documentary_mechanism_claim,"Classification and Compensation Study
+City of Montgomery, Texas
+
+Paypoint HR, LLC
+695 Santa Maria Lane
+Davidsonville, MD 21035
+(443) 336-4272
+
+Table of Contents
+Management Synopsis",true,classification_and_compensation_study_title_page_weak_market_link,Only indicates a classification/compensation study is present; no explicit market/peer/recruitment/competitiveness adjustment stated in the span.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0539dd7e1265f5d9006a678a387484819784e9ca13f1d4ccbf,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-f0de785f5231f979c4d3e2d9,SPAN378-e47f77b69c9ab3b7db44bad5,TXT378-4798edee319596a95b46,RS556-cf401f0887d05a567ccd,TS4L-84b27e37c7e9a121b7d9,lane_4,tier_c,verification_ready_low,https://mccmeetingspublic.blob.core.usgovcloudapi.net/mntgmrytx-meet-6726444adad54f4bb8c75f8fc47d5a0a/ITEM-Attachment-001-d03e0771bc414d65892ba65afdb04c77.pdf,"Classification and Compensation Study (scope/attachment PDF) — City of Tomball, TX",Tomball,TX,South,safety_and_non_safety_compensation_units,City of Tomball job classifications (incl. police/fire as job families where applicable),,2023 (study scope/engagement materials),,,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-4798edee319596a95b46.txt,e185195a2f79382c2f13da2886ad3f8c8d7a16779319a6636a332be003f03413,be6a6be91fa9f3f45972bc538f4538b45ea833f63d40ed4955c5da94e57602ef,"Management Synopsis
+Paypoint HR, LLC is responding to the city of Montgomery’s request for proposals from
+qualified consultants to provide a comprehensive Classification and Compensation Study.
+The purpose of the study is to help the city to be recognized as an employer of choice in the
+area. Paypoint HR will objectively examine the job roles and their placement in the city’s
+hierarchy, the external market’s pay ranges for these same positions, and give
+recommendations for adjustments of the approximately 40 full-time equivalent employees
+as warranted by the findings. The study recommendations will be substantiated using
+quantitative",3991,4632,f435f28bf69bd1f2d7803f3c32a3ae08ab4390811fc306cf0622fdf0deab2e68,"................... 58
+Appendix – Sample PVP Job Description Survey..................................................................................... 59
+
+1
+
+"," evaluations, so that the City may make informed decisions with respect to
+compensation including benefits. It is anticipated the project will take 16 weeks to
+",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,weak,weak,weak,neutral_or_unclear,weak,documentary_mechanism_claim,"Management Synopsis
+Paypoint HR, LLC is responding to the city of Montgomery’s request for proposals from
+qualified consultants to provide a comprehensive Classification and Compen",true,market_study_implied_without_external_market_terms_in_quote,Quote only identifies a classification and compensation study request; explicit external-market/pay-range or peer-comparability language is not present in the quoted text.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_093cb3677db80f60006a678a394388819685d80ce9317f5536,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-e6ce36f02c09200413e5bcf5,SPAN378-cbb1f0c1546873e0a27fd22c,TXT378-4798edee319596a95b46,RS556-cf401f0887d05a567ccd,TS4L-84b27e37c7e9a121b7d9,lane_4,tier_c,verification_ready_low,https://mccmeetingspublic.blob.core.usgovcloudapi.net/mntgmrytx-meet-6726444adad54f4bb8c75f8fc47d5a0a/ITEM-Attachment-001-d03e0771bc414d65892ba65afdb04c77.pdf,"Classification and Compensation Study (scope/attachment PDF) — City of Tomball, TX",Tomball,TX,South,safety_and_non_safety_compensation_units,City of Tomball job classifications (incl. police/fire as job families where applicable),,2023 (study scope/engagement materials),,,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-4798edee319596a95b46.txt,e185195a2f79382c2f13da2886ad3f8c8d7a16779319a6636a332be003f03413,be6a6be91fa9f3f45972bc538f4538b45ea833f63d40ed4955c5da94e57602ef,"Company Overview and Qualifications
+Paypoint HR is an innovative, cost effective, and technologically advanced solution for the
+public sector’s need to provide internally equitable and externally competitive pay plans. We
+are an independent Woman Owned Small Business (WOSB) and have been assisting the
+public sector achieve their pay plan objectives since 2012. Our firm is in Manteo, North
+Carolina and Davidsonville, Maryland, which is in close proximity to the United State Naval
+Academy in Annapolis, Maryland and Washington, DC.
+Our overall approach to the field is unique. Our founding members hail from different
+practice areas related to classification",6809,7470,3fba021f737318fea07399084f9b67bc30c60df182c8a13b24848a87fac425c5,"on Factor Scoring (CFS) system using
+information gathered during the study and provide the city access to the system to help
+place positions in the future.
+
+2
+
+"," and compensation. These specialty fields include
+organizational design, compliance, research analytics, business strategy, and human
+resources. The common deno",MARKET_COMPETITIVENESS,pay_competitiveness,high,market_or_comparability_pressure,moderate,moderate,not_supported,neutral_or_unclear,moderate,direct_text_claim,"Company Overview and Qualifications
+Paypoint HR is an innovative, cost effective, and technologically advanced solution for the
+public sector’s need to provide internally equitable",true,peer_competitive_payplan_equity_competition_signal,"bounded to statement of providing internally equitable pay plans (market/comparability via externally competitive pay plans implied elsewhere in span, not in quote)",true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0997f9e42b053938006a678a3a96988193bc800333cc0fa028,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-a91eded49ac253a9bd82bb1f,SPAN378-7b08f1c9ebfacdf230d9631a,TXT378-4798edee319596a95b46,RS556-cf401f0887d05a567ccd,TS4L-84b27e37c7e9a121b7d9,lane_4,tier_c,verification_ready_low,https://mccmeetingspublic.blob.core.usgovcloudapi.net/mntgmrytx-meet-6726444adad54f4bb8c75f8fc47d5a0a/ITEM-Attachment-001-d03e0771bc414d65892ba65afdb04c77.pdf,"Classification and Compensation Study (scope/attachment PDF) — City of Tomball, TX",Tomball,TX,South,safety_and_non_safety_compensation_units,City of Tomball job classifications (incl. police/fire as job families where applicable),,2023 (study scope/engagement materials),,,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-4798edee319596a95b46.txt,e185195a2f79382c2f13da2886ad3f8c8d7a16779319a6636a332be003f03413,be6a6be91fa9f3f45972bc538f4538b45ea833f63d40ed4955c5da94e57602ef,"ojects meet or exceed client expectations.
+
+Recent Studies
+Organization
+
+Project Title and
+Service Dates
+
+Accomack County, Virginia
+
+Classification & Compensation Study
+2023
+
+City of Bath, Maine
+
+Compensation Study
+2021 – 2022
+
+Town of Berlin, Maryland
+
+Wage Compensation and Classification Study
+2022 – 2023
+
+City of Bellaire, Texas
+
+Classification Study and Total Compensation Study
+2023 – 2024
+
+Belknap County, New Hampshire
+
+Pay and Classification Audit – Consultation Services
+2021 – 2022
+
+City of Brentwood, Missouri
+
+Employee Compensation (Wage and Benefits) and
+Classification Consulting Servies
+2024
+
+City of Broken Arrow, Oklahoma
+
+Classification Study
+2024",20341,21008,3ffcedd774f395a1edd87fd98eefefde27df5e988676a6395e0d7daa5bd81185," Arts, St. John’s College
+
+Ms. Erin Martel has 12 years of experience in working with project teams. Erin has strong
+technical writing skills and has ensured pr","
+
+8
+
+City of Brooklyn Center, Minnesota
+
+Peer Market Survey and Job Salary Analysis
+2024
+
+Bureau County, Illinois
+
+Compensation Plan Study
+2019 – 2020
+
+Town of ",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,moderate,weak,neutral_or_unclear,moderate,documentary_mechanism_claim,"ojects meet or exceed client expectations.
+
+Recent Studies
+Organization
+
+Project Title and
+Service Dates
+
+Accomack County, Virginia
+
+Classification & Compensation Study
+2023
+
+City ",true,compensation_study_listed_without_explicit_peer_comparison,Shows presence of multiple compensation/classification studies (market alignment context) but not explicit peer or wage-adjustment results.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0b8d893d75ccd950006a678a3aa0d88196aa0210856bfe2d27,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-d2ec8f90f1f9957f1941d835,SPAN378-820ba02093a1b61710fcd027,TXT378-4798edee319596a95b46,RS556-cf401f0887d05a567ccd,TS4L-84b27e37c7e9a121b7d9,lane_4,tier_c,verification_ready_low,https://mccmeetingspublic.blob.core.usgovcloudapi.net/mntgmrytx-meet-6726444adad54f4bb8c75f8fc47d5a0a/ITEM-Attachment-001-d03e0771bc414d65892ba65afdb04c77.pdf,"Classification and Compensation Study (scope/attachment PDF) — City of Tomball, TX",Tomball,TX,South,safety_and_non_safety_compensation_units,City of Tomball job classifications (incl. police/fire as job families where applicable),,2023 (study scope/engagement materials),,,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-4798edee319596a95b46.txt,e185195a2f79382c2f13da2886ad3f8c8d7a16779319a6636a332be003f03413,be6a6be91fa9f3f45972bc538f4538b45ea833f63d40ed4955c5da94e57602ef,"cent Studies
+Organization
+
+Project Title and
+Service Dates
+
+Accomack County, Virginia
+
+Classification & Compensation Study
+2023
+
+City of Bath, Maine
+
+Compensation Study
+2021 – 2022
+
+Town of Berlin, Maryland
+
+Wage Compensation and Classification Study
+2022 – 2023
+
+City of Bellaire, Texas
+
+Classification Study and Total Compensation Study
+2023 – 2024
+
+Belknap County, New Hampshire
+
+Pay and Classification Audit – Consultation Services
+2021 – 2022
+
+City of Brentwood, Missouri
+
+Employee Compensation (Wage and Benefits) and
+Classification Consulting Servies
+2024
+
+City of Broken Arrow, Oklahoma
+
+Classification Study
+2024
+
+8
+
+City of Brooklyn Center, Minnesota
+
+Peer M",20387,21055,15addd67cceb52870f6ad19fb45e736389e07c2cd4e2fbb59a61b6ae75133aab," 12 years of experience in working with project teams. Erin has strong
+technical writing skills and has ensured projects meet or exceed client expectations.
+
+Re","arket Survey and Job Salary Analysis
+2024
+
+Bureau County, Illinois
+
+Compensation Plan Study
+2019 – 2020
+
+Town of Centreville, Maryland
+
+Classification and Compe",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,moderate,weak,neutral_or_unclear,moderate,documentary_mechanism_claim,"cent Studies
+Organization
+
+Project Title and
+Service Dates
+
+Accomack County, Virginia
+
+Classification & Compensation Study
+2023
+
+City of Bath, Maine
+
+Compensation Study
+2021 – 2022",true,lists_compensation_and_classification_studies_for_comparability,"Documentary mention of compensation/classification studies, not explicit wage adjustment or outcomes.",true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0aa2c61b3e10d7e8006a678a3b36ec81968af72b9336f61349,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-7ed6e4178df4a08d34c18e58,SPAN378-e62d70a7f7640666916c312d,TXT378-46feab180ca60fe91abf,RS556-e598f3aecbf16334e8ca,TS4L-7b4c6aa9afc761e2d335,lane_4,tier_c,verification_ready_low,https://webgen1files1.revize.com/hendnc/Documents/Departments/Finance/Budget/FY%2025%20Approved%20Budget.pdf,City of Henderson NC FY 25 Approved Budget (includes Public Safety Schedule (Police) revised 7/1/23; includes safety pay schedule structure),Henderson,NC,South,safety_and_non_safety_compensation_units,Public safety classifications (Police) pay schedule tables,,FY 2025 (contains Public Safety Schedule revised 7/1/23 which falls within target window boundary),2023,2025,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-46feab180ca60fe91abf.txt,52b8c73095644eb8505600fe658f085b7e875eba21b08dd41ea4e48735bbc3f6,1ff3681b819f2ec1d6ef3eb171b6f9574ebea9ddaf960314c59fc67e2ff513e6,"EMPLOYEE PAY AND OTHER BENEFITS CONSIDERED IN THE FY 25 BUDGET:
+Personnel - Salaries and wages continue to be a major focus for the City as we are currently engaged in a
+comprehensive pay study. For FY25 a $1,500 bonus is recommended for full time staff.
+Health insurance — The City maintains its association with insurance broker, Mark III, as negotiations
+continue to establish the FY 25 benefits.
+Proposed Monthly Premium per Employee with $5,000 deductible:
+$759.26 – With an HRA offering of $1,500 (after $3,500 met).
+Worker's Compensation - The City has received an estimated premium for Worker's Compensation
+insurance rates from the League of Municipalities which represents a major decrease from FY 24 due to
+lower claim rates.
+BM: Page 4 of 5",7635,8387,ed09dcc874b28434fdb3a8641f1c71ccd879c9406db5b4e9271a1933b39d6146,"lay
+
+•
+
+Water Reclamation – submersible pump, gas detectors, boat
+
+•
+
+Sewer Collections – laptop, core drill, manhole blower
+
+•
+
+Sewer Collection I&I - laptop
+
+","
+
+Debt — Other than the KLRW plant upgrade, which will increase the debt service in the future, and current
+long-term projects already forecasted for years to c",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,moderate,not_supported,neutral_or_unclear,moderate,documentary_mechanism_claim,"EMPLOYEE PAY AND OTHER BENEFITS CONSIDERED IN THE FY 25 BUDGET:
+Personnel - Salaries and wages continue to be a major focus for the City as we are currently engaged in a
+comprehens",true,comprehensive_pay_study_signal_budgeting,Shows a pay study focus for FY25 budgeting; does not specify peer comparison or adjustment outcome.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_07010e35a1dc3b94006a678a3d393c8193a4831fbbc3dfa314,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-10bd0beef6a9220e9ab64304,SPAN378-9a7abb1c6951aa5ad0fbbc14,TXT378-46feab180ca60fe91abf,RS556-e598f3aecbf16334e8ca,TS4L-7b4c6aa9afc761e2d335,lane_4,tier_c,verification_ready_low,https://webgen1files1.revize.com/hendnc/Documents/Departments/Finance/Budget/FY%2025%20Approved%20Budget.pdf,City of Henderson NC FY 25 Approved Budget (includes Public Safety Schedule (Police) revised 7/1/23; includes safety pay schedule structure),Henderson,NC,South,safety_and_non_safety_compensation_units,Public safety classifications (Police) pay schedule tables,,FY 2025 (contains Public Safety Schedule revised 7/1/23 which falls within target window boundary),2023,2025,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-46feab180ca60fe91abf.txt,52b8c73095644eb8505600fe658f085b7e875eba21b08dd41ea4e48735bbc3f6,1ff3681b819f2ec1d6ef3eb171b6f9574ebea9ddaf960314c59fc67e2ff513e6,"Continue to increase tax base and stability of existing housing stock
+Retaining staff and competitive salaries
+Fire Station #3
+IT needs
+Redevelopment
+Economic Development incentives",77332,77513,057f9fd3d457344dcbb5c27da4486ccbdef6b732af960bcd6ad74d2852a9b10d,"ge and involve the youth of the community in the campaign
+ Approved funding to provide signage and other promotional materials
+
+KEY BUDGET ISSUES
+
+
+
+
+
+
+
+","
+
+GF: Page 4
+
+FY 24-25 BUDGET
+GOVERNMENTAL FUNDS
+10-414: GENERAL FUND CITY ATTORNEY SUMMARY
+10-414: CITY ATTORNEY SUMMARY
+Actual
+Actual
+Budget
+Estimated Request",MARKET_COMPETITIVENESS,pay_competitiveness,high,market_or_comparability_pressure,moderate,strong,weak,neutral_or_unclear,moderate,direct_text_claim,Retaining staff and competitive salaries,true,competitive_salaries_retention_budget_goal,budget line item mentioning competitiveness of salaries for retaining staff,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0a93e7874a78e28e006a678a3e1df0819690f51269e55b00ee,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-b8f159fb0b13991e782ab2d1,SPAN378-34fec64b6327686fa30d500e,TXT378-46feab180ca60fe91abf,RS556-e598f3aecbf16334e8ca,TS4L-7b4c6aa9afc761e2d335,lane_4,tier_c,verification_ready_low,https://webgen1files1.revize.com/hendnc/Documents/Departments/Finance/Budget/FY%2025%20Approved%20Budget.pdf,City of Henderson NC FY 25 Approved Budget (includes Public Safety Schedule (Police) revised 7/1/23; includes safety pay schedule structure),Henderson,NC,South,safety_and_non_safety_compensation_units,Public safety classifications (Police) pay schedule tables,,FY 2025 (contains Public Safety Schedule revised 7/1/23 which falls within target window boundary),2023,2025,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-46feab180ca60fe91abf.txt,52b8c73095644eb8505600fe658f085b7e875eba21b08dd41ea4e48735bbc3f6,1ff3681b819f2ec1d6ef3eb171b6f9574ebea9ddaf960314c59fc67e2ff513e6,"Addressing the disparities in hiring salaries for various City departments identified in the City’s
+recent salary study.
+Identifying a location and funding source for the construction of a 3rd Fire Station.
+Finding additional funds for upcoming capital needs related to building and infrastructure.
+Identifying funding sources to further the City’s redevelopment efforts.
+Securing additional funding to complete the Williams/Montgomery Street Park project.
+Implementing the City’s Stormwater Program.",81709,82209,c561c4fae682664d2708cfa71f4789e96d00d9dcde601046f2f58a45c7b6d830,"in federal funding secured by Congressman Don Davis
+for the construction of a new communications tower to assist public safety.
+
+KEY BUDGET ISSUES
+
+
+
+
+
+
+
+","
+
+GF: Page 8
+
+FY 24-25 BUDGET
+GOVERNMENTAL FUNDS
+10-425: GENERAL FUND HUMAN RESOURCES SUMMARY
+
+10-425: HUMAN RESOURCES SUMMARY
+Actual
+Actual
+Budget
+Estimated
+Re",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,strong,strong,not_supported,neutral_or_unclear,strong,direct_text_claim,"Addressing the disparities in hiring salaries for various City departments identified in the City’s
+recent salary study.
+Identifying a location and funding source for the construct",true,salary_study_disparities_hiring_salaries_argument,Budget issue list references a recent salary study to address disparities in hiring salaries; no causal link or wage-gap quantification stated.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_04e0b5299fea23e2006a678a3e98988190ba39640e9e17f6de,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-204406c7185e618db9748920,SPAN378-3ad210cc49be1da9d580b3e0,TXT378-46feab180ca60fe91abf,RS556-e598f3aecbf16334e8ca,TS4L-7b4c6aa9afc761e2d335,lane_4,tier_c,verification_ready_low,https://webgen1files1.revize.com/hendnc/Documents/Departments/Finance/Budget/FY%2025%20Approved%20Budget.pdf,City of Henderson NC FY 25 Approved Budget (includes Public Safety Schedule (Police) revised 7/1/23; includes safety pay schedule structure),Henderson,NC,South,safety_and_non_safety_compensation_units,Public safety classifications (Police) pay schedule tables,,FY 2025 (contains Public Safety Schedule revised 7/1/23 which falls within target window boundary),2023,2025,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-46feab180ca60fe91abf.txt,52b8c73095644eb8505600fe658f085b7e875eba21b08dd41ea4e48735bbc3f6,1ff3681b819f2ec1d6ef3eb171b6f9574ebea9ddaf960314c59fc67e2ff513e6,"To complete compensation and pay study and carry out necessary updates and changes.
+To hire firm to do compensation and pay study and utilize reporting given with completed project
+to move forward with any pay grade and salary changes to stay competitive for the region with
+employee pay and give managers a good foundation for performance reviews and merit increases.",85195,85563,21ae7e3ff2ec7e8ad4d8c610884c3ab25146d275e34b4145c5ff7721ceed2a8e,"RIS system.
+To train Directors and managers on the importance of performance management for reviews and
+implement annual review process.
+
+Goal 6:
+Objective 1:
+
+","
+
+KEY BUDGET ISSUES
+
+
+
+
+
+
+Recruitment: There is difficulty in attracting and retaining employees in some positions due to salaries that are
+not competitive",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,weak,weak,neutral_or_unclear,moderate,documentary_mechanism_claim,"To complete compensation and pay study and carry out necessary updates and changes.
+To hire firm to do compensation and pay study and utilize reporting given with completed project",true,comp_pay_study_for_updates_not_explicit_competitive_in_span,Compensation/pay study and updates to enable pay grade/salary adjustments; does not itself state the competitiveness rationale in the anchored quote.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0cd67321000a4eef006a678a4cc0708196804afc6ff970bb9a,2,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-24de0bff04f3083eb6addf00,SPAN378-da97fb45dbdf6f0f843680d8,TXT378-46feab180ca60fe91abf,RS556-e598f3aecbf16334e8ca,TS4L-7b4c6aa9afc761e2d335,lane_4,tier_c,verification_ready_low,https://webgen1files1.revize.com/hendnc/Documents/Departments/Finance/Budget/FY%2025%20Approved%20Budget.pdf,City of Henderson NC FY 25 Approved Budget (includes Public Safety Schedule (Police) revised 7/1/23; includes safety pay schedule structure),Henderson,NC,South,safety_and_non_safety_compensation_units,Public safety classifications (Police) pay schedule tables,,FY 2025 (contains Public Safety Schedule revised 7/1/23 which falls within target window boundary),2023,2025,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-46feab180ca60fe91abf.txt,52b8c73095644eb8505600fe658f085b7e875eba21b08dd41ea4e48735bbc3f6,1ff3681b819f2ec1d6ef3eb171b6f9574ebea9ddaf960314c59fc67e2ff513e6,"Recruitment: There is difficulty in attracting and retaining employees in some positions due to salaries that are
+not competitive to those of other agencies.
+Training: No real training process in place
+Performance Management/Merit process: No Real process in place or is not being followed
+Records Retention: There is no current system in place and this update will involve technology update for
+records and payroll processing.
+Compensation and Pay Study: Study has not been done in 10 years. New study must be done every 2-3 years
+max to stay competitive.",85594,86150,bd405c78469e49267ee30fad275327ea2dab47cdbe508fd5243074c1e6630107,"tay competitive for the region with
+employee pay and give managers a good foundation for performance reviews and merit increases.
+
+KEY BUDGET ISSUES
+
+
+
+
+
+
+","
+
+GF: Page 10
+
+FY 24-25 BUDGET
+GOVERNMENTAL FUNDS
+10-440: GENERAL FUND FINANCE SUMMARY
+10-440: FINANCE DEPARTMENT SUMMARY
+Actual
+Actual
+21-22
+22-23
+Personnel Se",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,strong,strong,not_supported,neutral_or_unclear,strong,direct_text_claim,"Recruitment: There is difficulty in attracting and retaining employees in some positions due to salaries that are
+not competitive to those of other agencies.
+Training: No real trai",true,market_competition_salaries_other_agencies_recruitment_retention,Recruitment/retention difficulty attributed to non-competitive salaries versus other agencies (not extending to wages quantified).,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_01e1d89085509449006a678a40a3c481939000ebbf7d4c758e,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-6f65bddd4fee4abce52677f5,SPAN378-7e0a5242c26fe0bd5ee262ed,TXT378-8e0691f33db806ef830c,RS556-f9275cf384b5158620e0,TS4L-98bcd6592095d2a8b0f4,lane_4,tier_c,verification_ready_low,https://webgen1files1.revize.com/hendnc/Documents/Departments/Finance/Budget/FY22-23%20Approved%20Budget.pdf,"City of Hendersonville, NC — FY22-23 Approved Budget (includes Pay & Classification / Public Safety schedules)",Hendersonville,NC,South,safety_and_non_safety_compensation_units,"Public safety (e.g., police/fire) and general/all-city classified compensation schedules",,FY22-23 (budget adopted for the fiscal year),2022-07-01,2023-06-30,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-8e0691f33db806ef830c.txt,4b9de7fb8caa9959cf785a97d84ae4aac61675dca3730a97574f5655da82a62e,af3b108b78400572ccf106eb4b1b4a891e640a83f42e4ac717272c5fa817adb1,"Continue to increase tax base and stability of existing housing stock
+Retaining staffing and competitive salaries
+Fire Station #3
+IT needs
+Redevelopment
+KLRW Improvements",84605,84775,34e4403f939e2b3315a69dd92d224b7fedc4b6c9ffb7ffb81504629fb7d06c10,"ddie Hicks
+o Premium Pay increases for employees
+o Economic Incentive with MR Williams
+o Approved FY Ending June 30, 2021 Audit
+KEY BUDGET ISSUES
+
+•
+•
+•
+•
+•
+•
+
+","
+
+GF: Page 4
+
+FY 22-23 BUDGET
+GOVERNMENTAL FUNDS
+10-414: GENERAL FUND CITY ATTORNEY SUMMARY
+10-414: CITY ATTORNEY SUMMARY
+Actual
+Actual
+Budget
+19-20
+20-21
+21-22",MARKET_COMPETITIVENESS,pay_competitiveness,high,market_or_comparability_pressure,moderate,moderate,not_supported,neutral_or_unclear,moderate,documentary_mechanism_claim,"Continue to increase tax base and stability of existing housing stock
+Retaining staffing and competitive salaries
+Fire Station #3
+IT needs
+Redevelopment
+KLRW Improvements",true,market_competitive_salaries_retention_budget_line,budget priority statement for retaining staffing via competitive salaries (no comparison study detail),true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0d6d326244d62f18006a678a4109348195aa89432f23bf71d7,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-dce9cd6bb9c4a58cb5f70090,SPAN378-73916614470c8cbb1b6739dc,TXT378-8e0691f33db806ef830c,RS556-f9275cf384b5158620e0,TS4L-98bcd6592095d2a8b0f4,lane_4,tier_c,verification_ready_low,https://webgen1files1.revize.com/hendnc/Documents/Departments/Finance/Budget/FY22-23%20Approved%20Budget.pdf,"City of Hendersonville, NC — FY22-23 Approved Budget (includes Pay & Classification / Public Safety schedules)",Hendersonville,NC,South,safety_and_non_safety_compensation_units,"Public safety (e.g., police/fire) and general/all-city classified compensation schedules",,FY22-23 (budget adopted for the fiscal year),2022-07-01,2023-06-30,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-8e0691f33db806ef830c.txt,4b9de7fb8caa9959cf785a97d84ae4aac61675dca3730a97574f5655da82a62e,af3b108b78400572ccf106eb4b1b4a891e640a83f42e4ac717272c5fa817adb1,"Maintained a comparable Part 1 Crime Rate to the prior years.
+Obtained close to $500,000 in grant funding to enhance our technological needs as a city and as an agency.
+Successfully proposed and attained competitive salary plan to enhance of recruitment and retention of
+employees.",113318,113599,fdbd11fef6deda93de6a254cb1bd069422a3a2ef75187c4028299cc4906507e5,"omputers.
+Place a repeater within the city limits to ensure public safety and continuous radio contact.
+
+Objective 3:
+Objective 4:
+
+FY22 ACCOMPLISHMENTS
+•
+•
+•
+
+","
+
+KEY BUDGET ISSUES
+• Larger capital items: Includes replacement vehicles and equipment using General Fund monies.
+• Maintenance and Capital Improvements: The P",MARKET_COMPETITIVENESS,pay_competitiveness,high,market_or_comparability_pressure,weak,not_supported,weak,neutral_or_unclear,weak,context_only,"Maintained a comparable Part 1 Crime Rate to the prior years.
+Obtained close to $500,000 in grant funding to enhance our technological needs as a city and as an agency.
+Successfull",true,truncated_quote_missing_competitive_salary_language,Only partial span quoted; market/competitiveness wage-plan wording not included in the anchor.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_09fc75c08c4d54da006a678a41594881909c1c3ccec2ec0960,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-56b6895b7ee04977a52489e5,SPAN378-6b9f78cb8967d80e3de010a1,TXT378-8e0691f33db806ef830c,RS556-f9275cf384b5158620e0,TS4L-98bcd6592095d2a8b0f4,lane_4,tier_c,verification_ready_low,https://webgen1files1.revize.com/hendnc/Documents/Departments/Finance/Budget/FY22-23%20Approved%20Budget.pdf,"City of Hendersonville, NC — FY22-23 Approved Budget (includes Pay & Classification / Public Safety schedules)",Hendersonville,NC,South,safety_and_non_safety_compensation_units,"Public safety (e.g., police/fire) and general/all-city classified compensation schedules",,FY22-23 (budget adopted for the fiscal year),2022-07-01,2023-06-30,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-8e0691f33db806ef830c.txt,4b9de7fb8caa9959cf785a97d84ae4aac61675dca3730a97574f5655da82a62e,af3b108b78400572ccf106eb4b1b4a891e640a83f42e4ac717272c5fa817adb1,"personnel related expenditures, such as retiree health insurance
+and reserves for incumbent liabilities for accrued vacation and compensatory time, are accounted
+for in this budget department. Additionally, the Fund’s share of the recommended Pay &
+Classification Study is included in this budget.",155775,156072,3620844fa9120d81baa068d95f3ee753e6bad80e4bc974ebba7eeef2681b4a8e,"s and other expenditures that should not be
+located in an operating budget group. No personnel are assigned to the Non-Departmental
+budget group; however, some ","
+
+WF: Page 2
+
+FY 22-23 BUDGET
+ENTERPRISE FUNDS
+30-680: WATER FUND DEBT SERVICE
+
+30-680: DEBT SERVICE SUMMARY
+Actual
+20-21
+Long-Term Debt Service- P&I $
+Lease Pu",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,moderate,weak,neutral_or_unclear,moderate,documentary_mechanism_claim,"personnel related expenditures, such as retiree health insurance
+and reserves for incumbent liabilities for accrued vacation and compensatory time, are accounted
+for in this budget",true,pay_classification_study_budget_reference_implies_comparability_assessment,Budgetary inclusion of recommended Pay & Classification Study; does not itself state market/comparability intent or outcomes,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0bb4f9ae1e0b0740006a678a42623481908acaa08b23b4a8ae,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-d6a8062be339bad85d0e3056,SPAN378-5bd4d51c565d47fbdf54f406,TXT378-8e0691f33db806ef830c,RS556-f9275cf384b5158620e0,TS4L-98bcd6592095d2a8b0f4,lane_4,tier_c,verification_ready_low,https://webgen1files1.revize.com/hendnc/Documents/Departments/Finance/Budget/FY22-23%20Approved%20Budget.pdf,"City of Hendersonville, NC — FY22-23 Approved Budget (includes Pay & Classification / Public Safety schedules)",Hendersonville,NC,South,safety_and_non_safety_compensation_units,"Public safety (e.g., police/fire) and general/all-city classified compensation schedules",,FY22-23 (budget adopted for the fiscal year),2022-07-01,2023-06-30,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-8e0691f33db806ef830c.txt,4b9de7fb8caa9959cf785a97d84ae4aac61675dca3730a97574f5655da82a62e,af3b108b78400572ccf106eb4b1b4a891e640a83f42e4ac717272c5fa817adb1,"The Non-Departmental Budget group provides for a better accounting of inter-fund transfers and
+other expenditures that should not be located in an operating budget group. No personnel are
+assigned to the Non-Departmental budget group; however, some personnel related expenditures
+such as retiree health insurance and the fund’s share of the recommended pay and classification
+study are accounted for in this budget department.
+The largest expenditure center for the non-departmental budget is the transfer to the Capital
+Reserve Fund.",184596,185130,7e89e91a851783c665ef7cbddf89d8a1e17f8bfce954722a968b937e9ef8e266,"000
+2,283,700
+
+Recommended
+22-23
+$
+45,000
+$
+2,500
+$
+1,200
+20,000
+2,215,000
+$
+2,283,700
+
+$
+$
+$
+
+$
+
+Approved
+22-23
+45,000
+2,500
+1,200
+20,000
+2,215,000
+2,283,700
+
+","
+
+RW: Page 2
+
+FY 22-23 BUDGET
+ENTERPRISE FUNDS
+64-680: REGIONAL WATER DEBT SERVICE
+64-680: DEBT SERVICE SUMMARY
+Actual
+20-21
+Long-Term Debt Service P&I $
+
+Budge",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,weak,not_supported,neutral_or_unclear,weak,documentary_mechanism_claim,"The Non-Departmental Budget group provides for a better accounting of inter-fund transfers and
+other expenditures that should not be located in an operating budget group. No person",true,mentions_pay_and_classification_study_but_no_market_or_comparison_terms,Only supports that a recommended pay and classification study cost is budgeted; no explicit market/comparability pressure described.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0b4916013d23e8e6006a678a4315748197b6d8f79b00a33451,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-0f95be8dcb25c36bd16e1b8b,SPAN378-1ff1e334ec7a978e2bfe6291,TXT378-8e0691f33db806ef830c,RS556-f9275cf384b5158620e0,TS4L-98bcd6592095d2a8b0f4,lane_4,tier_c,verification_ready_low,https://webgen1files1.revize.com/hendnc/Documents/Departments/Finance/Budget/FY22-23%20Approved%20Budget.pdf,"City of Hendersonville, NC — FY22-23 Approved Budget (includes Pay & Classification / Public Safety schedules)",Hendersonville,NC,South,safety_and_non_safety_compensation_units,"Public safety (e.g., police/fire) and general/all-city classified compensation schedules",,FY22-23 (budget adopted for the fiscal year),2022-07-01,2023-06-30,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-8e0691f33db806ef830c.txt,4b9de7fb8caa9959cf785a97d84ae4aac61675dca3730a97574f5655da82a62e,af3b108b78400572ccf106eb4b1b4a891e640a83f42e4ac717272c5fa817adb1,"receiving a
+salary increase to help retain employees. Mr. Blackmon said not only would employees in the
+Public Works department receive a $1.00 increase, but this would also affect the wastewater and
+water employees.
+Mr. Blackmon said he foresees a salary study coming within the next few years and adjustments
+may be needed at that time.
+Mayor Ellington asked Council if they were satisfied with the budget as proposed, including the
+salary adjustment. The Consensus of those present was that there was no need for future Work
+Sessions and that they felt this was the budget that should be presented for approval at the June
+13, 2022, meeting.
+The Manager reminded Council that until the budget is approved, he is open for discussion on
+any item.
+Mayor Ellington thanked the Manager, Finance Director and staff for all they do and what was
+done to put together the FY 22-23 budget.",315876,316758,ced83f2bcecc74ebccb11f8d3d2499d5641068b4f8121d55bc2ace69a91eec61,"avoid making rash decisions and that the decisions made would be well documented.
+Council Member Burnette asked for verification that the Public Works would be ","
+
+Minute Book 45
+23 May 2022 Budget Work Session #3 Minutes
+Page 3 of 4
+
+ADJOURNMENT
+Council Member Coffey moved for adjournment. Motion seconded by both Counci",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,moderate,weak,neutral_or_unclear,moderate,direct_text_claim,"receiving a
+salary increase to help retain employees. Mr. Blackmon said not only would employees in the
+Public Works department receive a $1.00 increase, but this would also affect",true,retain_employees_salary_adjustment_budgeted_salary_study_signal,salary increase framed as retention support (budget item); does not specify market/peer comparison details,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0e9e63426920578c006a678a4335548195bded4aa9e10325bd,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-9f94052339602e08369d71b0,SPAN378-841702084ee3ecab4a23767a,TXT378-39e4e4cfad2cd0bc567e,RS556-29194719c93d93f4dec7,TS4L-2bad16f6bb01367619cb,lane_4,tier_c,verification_ready_low,https://www.cityofportlandtn.gov/bids.aspx?PRINT=YES&bidID=39,"Bid Postings • Portland, TN • Request for Proposals: Compensation Study for the City of Portland, Tennessee (deadline Feb 27, 2024)",Portland,TN,South,safety_and_non_safety_compensation_units,Citywide (safety and non-safety positions implied by city compensation study),,"2024 (RFP posted for a compensation study; solicitation deadline Feb 27, 2024)",2024-02-27,,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/html/TXT378-39e4e4cfad2cd0bc567e.txt,b5482b7179766a702b2df91b8f74a558b6b6ec42de16d16773d8453e93845d36,13f9aed242b08e8558377fb1bf2290fb4ffbe1b50100422c8184e80d6d8a1155,"Water Restrictions due to D2 Stage Drought
+Read On...
+Create a Website Account - Manage notification subscriptions, save form progress and more.
+Website Sign In
+Search
+Government
+Departments
+Business
+Community
+How Do I?
+Home
+Bid Postings
+Bid Title: Compensation Study PROPOSALS
+Category: Current Bid Opportunities
+Status: Closed
+Description:
+The City of Portland, Tennessee
+Request for Proposals
+REQUEST FOR PROPOSALS
+Sealed proposals for a Compensation Study for the City of Portland, Tennessee will be received in the Portland City Hall Human Resources Office at 100 South Russell, Portland, Tennessee, until 4:30 PM on February 27, 2024.
+Any questions regarding this Request for Proposal should be directed to: Haz",119,836,7db2eebc67c791ab76f9544059b0f1d7c7785620b503aaaac345986781aa5adc,"Bid Postings • Portland, TN • CivicEngage
+Skip to Main Content
+Alert Center
+DROUGHT MANAGEMENT PLAN 4/15/26: Voluntary ","el Johnson at 615/325-6776 ext. 232, or emailed to: .
+All interested consultants/consulting firms are invited to submit a proposal in accordance with the terms ",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,not_supported,not_supported,not_supported,not_applicable,not_supported,context_only,"Water Restrictions due to D2 Stage Drought
+Read On...
+Create a Website Account - Manage notification subscriptions, save form progress and more.
+Website Sign In
+Search
+Government
+D",true,market_pressure_not_in_scope_of_anchored_span,"Anchored quote concerns drought/water restriction notice, not compensation/peer/market adjustment.",true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_07e61cee2e71706d006a678a5062008195a838ecc809bf33d1,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-7894848705a17771a11d9454,SPAN378-86e675a0562cfcfcdc11ca55,TXT378-39e4e4cfad2cd0bc567e,RS556-29194719c93d93f4dec7,TS4L-2bad16f6bb01367619cb,lane_4,tier_c,verification_ready_low,https://www.cityofportlandtn.gov/bids.aspx?PRINT=YES&bidID=39,"Bid Postings • Portland, TN • Request for Proposals: Compensation Study for the City of Portland, Tennessee (deadline Feb 27, 2024)",Portland,TN,South,safety_and_non_safety_compensation_units,Citywide (safety and non-safety positions implied by city compensation study),,"2024 (RFP posted for a compensation study; solicitation deadline Feb 27, 2024)",2024-02-27,,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/html/TXT378-39e4e4cfad2cd0bc567e.txt,b5482b7179766a702b2df91b8f74a558b6b6ec42de16d16773d8453e93845d36,13f9aed242b08e8558377fb1bf2290fb4ffbe1b50100422c8184e80d6d8a1155,"Business
+Community
+How Do I?
+Home
+Bid Postings
+Bid Title: Compensation Study PROPOSALS
+Category: Current Bid Opportunities
+Status: Closed
+Description:
+The City of Portland, Tennessee
+Request for Proposals
+REQUEST FOR PROPOSALS
+Sealed proposals for a Compensation Study for the City of Portland, Tennessee will be received in the Portland City Hall Human Resources Office at 100 South Russell, Portland, Tennessee, until 4:30 PM on February 27, 2024.
+Any questions regarding this Request for Proposal should be directed to: Hazel Johnson at 615/325-6776 ext. 232, or emailed to: .
+All interested consultants/consulting firms are invited to submit a proposal in accordance with the terms and conditions stated in this Re",310,1028,0574ae349effde9de857e640ef459727c950385e46aefe03935d2dc4c21e11d6,"age Drought
+Read On...
+Create a Website Account - Manage notification subscriptions, save form progress and more.
+Website Sign In
+Search
+Government
+Departments
+","quest for Proposal.
+Mike Callis,
+Mayor
+Publication Date/Time:
+2/8/2024 10:00 AM
+Closing Date/Time:
+2/27/2024 4:30 PM
+Return To Main Bid Postings Page
+Live Edit
+",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,strong,strong,moderate,neutral_or_unclear,moderate,documentary_mechanism_claim,"Business
+Community
+How Do I?
+Home
+Bid Postings
+Bid Title: Compensation Study PROPOSALS
+Category: Current Bid Opportunities
+Status: Closed
+Description:
+The City of Portland, Tenness",true,compensation_study_bid_title,Bid notice describing procurement of a Compensation Study (market/comparability investigation context only).,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0c5a6b45a462bfe8006a678a52fae081978a75b517deef464c,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-754aa715ef64acfbe916e7c9,SPAN378-9f2ba53a791a5b903612fb9a,TXT378-824de788e794d4ac4cb2,RS556-3fa77bbb2094f7f176f6,TS4L-2639965333dc4cc67f52,lane_4,tier_c,verification_ready_low,https://jacksonvilletx.org/bids.aspx?bidID=36,"Bid Postings • Compensation and Classification Study (Jacksonville, TX)",Jacksonville,TX,South,safety_and_non_safety_compensation_units,Police and Fire (public safety) / includes classification and compensation study scope,,2014-2024 target window (study solicitation; specific term not shown in lead snippet),,,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/html/TXT378-824de788e794d4ac4cb2.txt,dccd9f70df029ac15b97b8e80016445dcbfa1f999a0b2a2d7b9938580c33d642,e30685dad8bfce4ece4231207f5ee692246059764aa218a84f8cf5c5f8cdb0eb,"Bid Postings • Compensation and Classification Study
+Skip to Main Content
+Search
+Government
+Departments
+Community
+Business
+How Do I...
+Sign up to receive a text message or email when new bids are added!
+Print
+Bid Number: 2020-2021-101-02
+Bid Title: Compensation and Classification Study
+Category: Request for Proposal
+Status: Closed
+Description:
+Request for Proposal
+The City of Jacksonville Texas is seeking proposals from qualified consultants to conduct a compensation and classification study.  The",0,502,7557ac1081edb8441c7fcaf057eb0583c7a925bddcc9ca42e12886ab15aae753,," request for proposal will be available beginning September 11, 2021.
+A copy of the request for proposal packet is available on the City website at www.jacksonv",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,moderate,weak,neutral_or_unclear,moderate,documentary_mechanism_claim,"Bid Postings • Compensation and Classification Study
+Skip to Main Content
+Search
+Government
+Departments
+Community
+Business
+How Do I...
+Sign up to receive a text message or email wh",true,comp_class_study_title_as_market_adjustment_proxy,"Only a bid title/heading about a compensation and classification study; it suggests compensation/structure review but does not explicitly mention market comparison, peer benchmarking, or wage classification methods.",true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0ce0391fb5835dc5006a678a53480c81948b2ad95b900df663,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-a5cf6a73f45bc8c3681e4e81,SPAN378-17a6fe76d24db9f33cca9325,TXT378-824de788e794d4ac4cb2,RS556-3fa77bbb2094f7f176f6,TS4L-2639965333dc4cc67f52,lane_4,tier_c,verification_ready_low,https://jacksonvilletx.org/bids.aspx?bidID=36,"Bid Postings • Compensation and Classification Study (Jacksonville, TX)",Jacksonville,TX,South,safety_and_non_safety_compensation_units,Police and Fire (public safety) / includes classification and compensation study scope,,2014-2024 target window (study solicitation; specific term not shown in lead snippet),,,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/html/TXT378-824de788e794d4ac4cb2.txt,dccd9f70df029ac15b97b8e80016445dcbfa1f999a0b2a2d7b9938580c33d642,e30685dad8bfce4ece4231207f5ee692246059764aa218a84f8cf5c5f8cdb0eb,"2021-101-02
+Bid Title: Compensation and Classification Study
+Category: Request for Proposal
+Status: Closed
+Description:
+Request for Proposal
+The City of Jacksonville Texas is seeking proposals from qualified consultants to conduct a compensation and classification study.  The request for proposal will be available beginning September 11, 2021.
+A copy of the request for proposal packet is available on the City website at www.jacksonvilletx.org, in the office of the city secretary at 315 S. Ragsdale, Jacksonville, TX 75766 or via email upon request.
+Interested firms must submit one copy of their proposal via email to the City at and , no later than 5:00 p.m. CST., on September 30, 2021. Interested parties are sol",226,946,6dd64bca45a3e7c2a1a76ae549fadb00b962f56eab942d499aad1a2a4155a3fc,"Content
+Search
+Government
+Departments
+Community
+Business
+How Do I...
+Sign up to receive a text message or email when new bids are added!
+Print
+Bid Number: 2020-",ely responsible for ensuring that proposals are delivered on time. Proposals received after the due date and time will not be considered. For additional informa,MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,moderate,not_supported,neutral_or_unclear,moderate,direct_text_claim,Bid Title: Compensation and Classification Study,true,compensation_classification_study_request,bid title explicitly signals a compensation/classification study,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0113afd9c08cd002006a678a54973881968c55081d4262c39d,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-d34fd01dc6adf7754921270a,SPAN378-184fcfacbbe5bb029a1f03bd,TXT378-4672c3d460342aae9b68,RS556-65862cffb7a6738252f7,TS4L-9f3d0b2652cde59acb00,lane_4,tier_c,verification_ready_low,https://www.walb.com/2019/08/23/americus-city-council-oks-millage-rate-increase/,"WALB (Aug 23, 2019) — “Americus City Council OKs millage rate increase” referencing a salary compensation study",Americus,GA,South,safety_and_non_safety_compensation_units,City employees (public safety + non-safety implied),,Likely prior-year study referenced in 2019 article (exact period not specified in snippet),2018,2019,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/html/TXT378-4672c3d460342aae9b68.txt,c08f968598ce45b66d8305acb2a8df1cff311f9ff8e095839f80e620d337fd3b,bda31207f64c7d9a63037229fd030389254c4b6fb64c61f20d3b3928f44b1485,"Americus City Council voted Thursday to increase the millage rate.
+The council voted to increase the 2019 millage rate from 10.92 to 13.21.
+Mayor Barry Blount said the increase will cost taxpayers around $1 million.
+Blount said the city had a salary compensation study completed last year. That study showed salaries for city employees were not competitive to other local governments.
+City of Americus Mayor Barry Blount
+“We feel like if you want a qualified workforce, you have to pay for it,” Blount said. “And most of our payroll is involved in public safety, fire, and police, which are two important areas in any local government and in any community.”
+Blount said the city’s millage rate has not increased in the",2024,2742,c6670c9717b4260eae700a2046665158634d0f3dd7d2d301f41e80a8397afc94,"se
+By Meteorologist Bradford Ambrose
+Updated : Aug. 23, 2019 at 7:21 PM EDT
+Share
+Add Us On Google Add as a preferred source on Google
+ALBANY, Ga. (WALB) - The "," last several years.
+Copyright 2019 WALB. All rights reserved.
+Most Read
+Guilty verdict reached in 24 minutes in Lacambria Toomer murder trial
+Lee County family",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,not_supported,not_supported,not_supported,not_applicable,not_supported,context_only,"Americus City Council voted Thursday to increase the millage rate.
+The council voted to increase the 2019 millage rate from 10.92 to 13.21.
+Mayor Barry Blount said the increase wil",true,tax_millage_increase_no_competition_or_comparison_terms,Bounded to millage-rate increase reporting; no explicit competitive/peer/pay-study comparison wording in span.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_09b0d16d3b591b6c006a678a55f144819483c9a507b165c9fc,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."

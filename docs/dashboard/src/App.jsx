@@ -149,9 +149,9 @@ function App() {
             <p className="eyebrow">HBS municipal labor evidence project</p>
             <h1>Gabriel Wages project hub</h1>
             <p className="header-deck">
-              Tier C text extraction completed for {formatNumber(projectPhaseSummary.tier_c_text_extracted_ok_count)}
-              {" "}readiness-approved files. Deterministic review preserved {formatNumber(projectPhaseSummary.tier_c_positive_exact_span_count)}
-              {" "}exact positive spans for a separately authorized bounded rating stage. These spans remain unrated;
+              Bounded Tier C rating is complete for {formatNumber(projectPhaseSummary.tier_c_positive_exact_span_count)}
+              {" "}exact spans: {formatNumber(projectPhaseSummary.tier_c_rating_valid_count)} valid ratings and
+              {" "}{formatNumber(projectPhaseSummary.tier_c_rating_quarantine_count)} quarantined outputs. Summary review is next;
               no wage gaps or causal findings are available.
             </p>
           </div>
@@ -179,7 +179,7 @@ function App() {
               </div>
                 <div className="checkpoint-label">
                   <span>Next authorized stage</span>
-                  <strong>Bounded rating of 159 exact Tier C spans</strong>
+                  <strong>Summary review of 140 valid Tier C ratings</strong>
                 </div>
             </div>
 
@@ -190,9 +190,9 @@ function App() {
                 note="Extracted locally without OCR; not rated or ingested"
               />
               <MetricCard
-                label="Positive exact spans"
-                value={formatNumber(projectPhaseSummary.tier_c_positive_exact_span_count)}
-                note={`${formatNumber(projectPhaseSummary.tier_c_span_extracted_source_count)} sources · exact substring/offset/hash checks passed`}
+                label="Valid Tier C ratings"
+                value={formatNumber(projectPhaseSummary.tier_c_rating_valid_count)}
+                note={`${formatNumber(projectPhaseSummary.tier_c_rating_quarantine_count)} quarantined · 159 total reconciled`}
               />
               <MetricCard
                 label="Same-source linked pairs"
@@ -209,8 +209,8 @@ function App() {
             <div className="hub-caveat" role="note">
               <strong>Bounded evidence status only.</strong>
               <span>
-                Extracted text and exact spans are not rated, ingested, codified, causal, or analysis-ready. The
-                current corpus supports only bounded documentary scaffolds, not normalized comparisons or causal conclusions.
+                Exact-span ratings remain not ingested, codified, causal, final, or analysis-ready. The current
+                corpus supports only bounded documentary summaries and scaffolds, not normalized comparisons or causal conclusions.
               </span>
             </div>
 

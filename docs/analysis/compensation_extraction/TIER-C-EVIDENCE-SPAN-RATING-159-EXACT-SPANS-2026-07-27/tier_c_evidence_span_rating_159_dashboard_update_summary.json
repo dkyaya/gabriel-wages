@@ -1,0 +1,12 @@
+{
+  "claim_summary_candidate_count": 115,
+  "current_phase": "Tier C exact-span rating complete; bounded summary review ready next",
+  "dashboard_updated": true,
+  "decision": "tier_c_evidence_span_rating_159_completed_with_quarantine",
+  "global_analysis_readiness": false,
+  "map_data_date": "2026-07-27",
+  "map_filter": "total_scout_coverage_only",
+  "quarantine_count": 19,
+  "rating_queue_count": 159,
+  "valid_rating_count": 140
+}

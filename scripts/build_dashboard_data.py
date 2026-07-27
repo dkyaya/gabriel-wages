@@ -1343,6 +1343,17 @@ DASHBOARD_DECLUTTER_TIER_C_TEXT_SPAN_INVARIANTS_PATH = (
     DASHBOARD_DECLUTTER_TIER_C_TEXT_SPAN_DIR
     / "dashboard_declutter_map_correction_tier_c_text_span_extraction_invariant_checks.json"
 )
+TIER_C_EVIDENCE_SPAN_RATING_159_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "TIER-C-EVIDENCE-SPAN-RATING-159-EXACT-SPANS-2026-07-27"
+)
+TIER_C_EVIDENCE_SPAN_RATING_159_DECISION_PATH = (
+    TIER_C_EVIDENCE_SPAN_RATING_159_DIR / "tier_c_evidence_span_rating_159_decision.json"
+)
+TIER_C_EVIDENCE_SPAN_RATING_159_INVARIANTS_PATH = (
+    TIER_C_EVIDENCE_SPAN_RATING_159_DIR / "tier_c_evidence_span_rating_159_invariant_checks.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -4466,6 +4477,42 @@ def dashboard_declutter_tier_c_text_span_status() -> tuple[bool, dict[str, Any]]
     return True, decision
 
 
+def tier_c_evidence_span_rating_159_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize only a reconciled, bounded Tier C exact-span rating package."""
+    required = (
+        TIER_C_EVIDENCE_SPAN_RATING_159_DECISION_PATH,
+        TIER_C_EVIDENCE_SPAN_RATING_159_INVARIANTS_PATH,
+        TIER_C_EVIDENCE_SPAN_RATING_159_DIR / "tier_c_evidence_span_rating_159_locked_queue.csv",
+        TIER_C_EVIDENCE_SPAN_RATING_159_DIR / "tier_c_evidence_span_rating_159_valid_ratings.csv",
+        TIER_C_EVIDENCE_SPAN_RATING_159_DIR / "tier_c_evidence_span_rating_159_quarantine.csv",
+        TIER_C_EVIDENCE_SPAN_RATING_159_DIR / "tier_c_evidence_span_rating_159_preflight_checks.json",
+        TIER_C_EVIDENCE_SPAN_RATING_159_DIR / "next_tier_c_evidence_span_rating_summary_prompt.md",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    decision = read_json(TIER_C_EVIDENCE_SPAN_RATING_159_DECISION_PATH)
+    invariants = read_json(TIER_C_EVIDENCE_SPAN_RATING_159_INVARIANTS_PATH)
+    queue = read_csv(TIER_C_EVIDENCE_SPAN_RATING_159_DIR / "tier_c_evidence_span_rating_159_locked_queue.csv")
+    valid = read_csv(TIER_C_EVIDENCE_SPAN_RATING_159_DIR / "tier_c_evidence_span_rating_159_valid_ratings.csv")
+    quarantine = read_csv(TIER_C_EVIDENCE_SPAN_RATING_159_DIR / "tier_c_evidence_span_rating_159_quarantine.csv")
+    if not (
+        decision.get("decision") in {
+            "tier_c_evidence_span_rating_159_completed_summary_ready",
+            "tier_c_evidence_span_rating_159_completed_with_quarantine",
+        }
+        and len(queue) == 159
+        and len(valid) == decision.get("valid_rating_count")
+        and len(quarantine) == decision.get("quarantine_count")
+        and len(valid) + len(quarantine) == 159
+        and decision.get("preflight_passed") is True
+        and decision.get("dashboard_map_filter") == "total_scout_coverage_only"
+        and decision.get("global_analysis_readiness") is False
+        and invariants.get("all_invariants_passed") is True
+    ):
+        raise ValueError("Tier C exact-span rating package fails dashboard gates")
+    return True, decision
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -6990,6 +7037,9 @@ def build_project_phase_summary(
     text_span_completed, text_span = dashboard_declutter_tier_c_text_span_status()
     if not text_span_completed:
         raise ValueError("current dashboard phase requires completed Tier C text/span extraction")
+    tier_c_rating_completed, tier_c_rating = tier_c_evidence_span_rating_159_status()
+    if not tier_c_rating_completed:
+        raise ValueError("current dashboard phase requires completed Tier C exact-span rating")
     mechanism = read_json(
         TARGETED_TIER_C_VERIFICATION_FROM_MEMO_GAPS_DIR
         / "targeted_tier_c_verification_mechanism_gap_coverage_summary.json"
@@ -7001,10 +7051,10 @@ def build_project_phase_summary(
     return {
         **metadata,
         "data_vintage": "2026-07-27",
-        "stage": "tier_c_text_and_exact_span_extraction_complete_bounded_rating_transition",
-        "current_phase": "Tier C text and exact-span extraction complete; bounded rating ready next",
-        "current_phase_code": text_span["decision"],
-        "current_evidence_status": "bounded_unrated_exact_documentary_spans_and_colocation_scaffolds_only",
+        "stage": "tier_c_exact_span_rating_complete_bounded_summary_review_transition",
+        "current_phase": "Tier C exact-span rating complete; bounded summary review ready next",
+        "current_phase_code": tier_c_rating["decision"],
+        "current_evidence_status": "bounded_exact_span_ratings_and_documentary_colocation_scaffolds_only",
         "global_analysis_readiness": False,
         "wage_gap_estimates_available": False,
         "final_causal_claims_available": False,
@@ -7049,12 +7099,17 @@ def build_project_phase_summary(
         "tier_c_ambiguous_span_record_count": text_span["ambiguous_span_record_count"],
         "tier_c_no_span_or_weak_source_count": text_span["span_status_counts"]["no_span_or_weak"],
         "tier_c_rating_candidate_count": text_span["rating_candidate_count"],
+        "tier_c_rating_valid_count": tier_c_rating["valid_rating_count"],
+        "tier_c_rating_quarantine_count": tier_c_rating["quarantine_count"],
+        "tier_c_rating_claim_summary_candidate_count": tier_c_rating["claim_summary_candidate_count"],
+        "tier_c_rating_counts_by_mechanism": tier_c_rating["rating_counts_by_mechanism"],
+        "tier_c_rating_result_path": "docs/analysis/tier_c_evidence_span_rating_159_result_2026-07-27.md",
         "future_scout_default": "broad_state_by_state_geographic_and_source_family_diverse",
         "mechanism_targeted_scouting_role": "secondary_gap_filling_after_broad_scans",
         "current_report_title": "Bounded Internal Mechanism-Linkage Claim Memo",
         "current_report_path": wage_stage["bounded_internal_mechanism_linkage_claim_memo_path"],
-        "current_operational_report_path": "docs/analysis/dashboard_declutter_map_correction_tier_c_text_span_extraction_result_2026-07-27.md",
-        "next_task": "bounded Tier C text-layer extraction over the 378 readiness-approved files",
+        "current_operational_report_path": "docs/analysis/tier_c_evidence_span_rating_159_result_2026-07-27.md",
+        "next_task": "bounded summary review of 140 valid Tier C exact-span ratings with 19 quarantines excluded",
         "checkpoint_target_scout_covered": SCOUT_CHECKPOINT_TARGET,
         "current_scout_covered": covered,
         "remaining_to_checkpoint": remaining,
@@ -7102,17 +7157,17 @@ def build_project_phase_summary(
             "default to broad state-by-state scanning with geographic and source-family "
             "balance; use mechanism-targeted scouting only as secondary gap-filling."
         ),
-        "next_phase": "bounded Tier C exact evidence-span rating",
+        "next_phase": "bounded Tier C exact-span rating summary review",
         "next_phase_sequence": [
-            "lock only the 159 exact positive Tier C span candidates",
-            "rate exact spans without source-document, URL, PDF, or full-text access",
-            "exclude ambiguous and no-span/weak source outcomes",
-            "preserve verbatim spans, offsets, hashes, and full lineage",
+            "lock only the 140 schema-valid Tier C exact-span ratings",
+            "exclude all 19 quarantined ratings from substantive summaries",
+            "summarize mechanism, direction, evidence-strength, and claim-relevance fields",
+            "preserve exact quotes, scope boundaries, and full lineage",
             "keep every claim bounded and global analysis readiness false",
         ],
         "regressions_status": "Deferred",
         "last_updated_commit": CURRENT_SOURCE_ACCOUNTING_COMMIT,
-        "last_updated_context": "dashboard_decluttered_total_scout_map_tier_c_text_and_span_extraction_rating_ready",
+        "last_updated_context": "tier_c_exact_span_rating_complete_summary_review_ready",
         "future_live_controls": [
             "stronger preflight gate",
             "compact prompts",
@@ -7123,7 +7178,8 @@ def build_project_phase_summary(
         ],
         "caveats": [
             "Historical discovery and candidate-queue panels are preserved as labeled historical context.",
-            "The 378 extracted Tier C text artifacts and 159 positive exact spans are not rated, ingested, codified, causal, or analysis-ready.",
+            "The Tier C stage produced 140 valid bounded exact-span ratings; 19 strict-schema failures are quarantined and excluded.",
+            "The ratings are not ingested, codified, causal, final, or globally analysis-ready.",
             "The bounded memo supports documentary co-location scaffolds only.",
             "Wage gaps have not been calculated.",
             "Regressions, treatment-effect estimates, national prevalence claims, and final causal claims are unavailable.",

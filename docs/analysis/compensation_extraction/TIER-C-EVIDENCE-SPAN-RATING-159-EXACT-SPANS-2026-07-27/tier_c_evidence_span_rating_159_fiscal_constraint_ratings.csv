@@ -1,0 +1,90 @@
+span_rating_id,span_extraction_id,extracted_text_id,retained_source_id,candidate_id,lane_id,priority_tier,quality_label,source_url_or_locator,source_title,municipality,state,derived_region,unit_type,occupation_group,bargaining_unit_name,contract_or_document_period,inferred_cycle_start,inferred_cycle_end,source_family,target_mechanism_family,local_extracted_text_path,extracted_text_sha256,source_file_sha256,span_text,span_start_offset,span_end_offset,span_sha256,context_before,context_after,extraction_rule_id,extraction_rule_family,span_specificity,rated_mechanism_family,documentary_mechanism_support,direct_text_support,provisional_causal_candidate_support,direction_of_pressure,evidence_strength,claim_relevance,quote_used,quote_exact_substring,reason_code,claim_boundary,no_wage_gap_claim,no_final_causal_claim,rating_status,ingestion_status,codification_status,causal_status,global_analysis_readiness,gabriel_backend,gabriel_model,gabriel_request_id,gabriel_attempt_count,notes
+SPANRTIERC159-a7523484a014dcabce4b1c2c,SPAN378-fc02d91ca9b3539c2a1ce0b1,TXT378-9d69b5a68e1caa0ccdf9,RS556-c54ad1b9a70c18d1aff2,TS4L-b4b450a55fee20e2a543,lane_3,tier_c,verification_ready_low,https://www.upperprovmcpa.gov/ArchiveCenter/ViewFile/Item/98,Upper Providence Township Five-Year Plan (archived financial plan; includes compensation/payroll-related line items across years),Upper Providence,PA,Northeast,non_safety_municipal_units,Municipal non-safety employees (salary/overtime/other cash compensation budgeting lines),,Five-year plan shown with compensation line items across 2015-2020 (per snippet text),2015,2020,cba_or_budget_pay_plan_with_explicit_compensation_mechanism,fiscal_constraint_signal,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-9d69b5a68e1caa0ccdf9.txt,ac7c9aba64cfa32c0561dfd6e287a9a17ebd3ccc4a42f4dc278894c2e05756ce,a989f9a34f504474990d7d54124afb7b2d032c3c2489502f61a611b182c39b02,"imates together with the Public Works Department and make applicable changes as it proceeds with the
+stormwater management study. Furthermore, any cost saving initiatives the Township implements relative
+to the baseline (e.g., lower across-the-board wage increases) would also reduce the fiscal impact as shown
+below.
+Fiscal Impact
+2023",257404,257740,8eb6918addac210691cadc3979c893cb2467bfaa96178e210199d240e588fab3," by a stormwater fee beginning in 2023 that would otherwise
+have to be paid for by the General Fund. That said, Township management should review these cost
+est","
+
+2024
+
+2025
+
+2026
+
+$1,095,000
+
+$1,117,000
+
+$1,154,000
+
+$1,175,000
+
+Upper Providence Township Five-Year Plan
+Revenue Opportunities
+
+81
+
+Given the estimated fisc",FISCAL_IMPACT,fiscal_impact,medium,fiscal_constraint_signal,strong,strong,not_supported,not_applicable,strong,direct_text_claim,"imates together with the Public Works Department and make applicable changes as it proceeds with the
+stormwater management study. Furthermore, any cost saving initiatives the Towns",true,explicit_fiscal_impact_statement_linked_to_cost_savings_and_wage_increases,Only indicates cost-saving initiatives would reduce the stated fiscal impact; does not establish causality or a final wage-gap effect.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0b38b23db2f6c383006a678a1132e081909ebaccf993076e76,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANRTIERC159-187fdca539688d673548d702,SPAN378-a6b50e8e07a2f56014a7d302,TXT378-31c566eb445e19e57ad5,RS556-e246afca40e7879992fd,TS4L-552569171da779738416,lane_3,tier_c,verification_ready_low,https://www.lakeway-tx.gov/Archive/ViewFile/Item/3711,PowerPoint Presentation — “Salary Schedule” (City of Lakeway) [Archive/ViewFile/Item/3711],Lakeway,TX,South,non_safety_municipal_units,Non-safety municipal employees covered by the citywide salary schedule structure,Non-represented / non-safety schedule structure (not specified as a bargaining unit),"Not explicitly stated in locator/snippet; appears to describe the adopted salary schedule mechanics (ranges, steps, midpoint/step gaps, step increment rate)",,,cba_or_budget_pay_plan_with_explicit_compensation_mechanism,fiscal_constraint_signal,docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/extracted_text/pdf/TXT378-31c566eb445e19e57ad5.txt,2657874a04f0cea6fc31636a5287dfb99d3868e160647ef62f20fe5702a74ae9,0ab82ee1ae7d8bf6d62e9db674bd74477eeb09d4cf95b46195f1ae64019a7100,"Salary Survey Scope
+• Selection of Salary Survey Comparators
+• Selection of Benchmark Positions
+• Market Survey and Analysis of External Competitiveness
+• Discussion of Salary Schedule Design
+• Market-Sensitive Range Recommendations Referencing
+Gathered Survey Data
+• Analysis of Internal Alignment
+• Fiscal Impact of Proposed Salary Plan
+• Cost Modeling Scenarios for Implementation",547,930,1e52bd67eb5239f482d042507bfd1aa5eccc9da31f6e7183c6ec815636cc73bb,"SHORES
+
+2
+
+GEORGETOWN
+
+2
+
+LIBERTY HILL
+
+2
+
+TAYLOR
+
+2
+
+TEMPLE
+
+2
+
+Findings and Recommendations of the
+FY23 Salary Survey
+
+For the City of Lakeway, TX
+July 2023
+
+","
+
+Study Phases
+May
+2023
+
+June
+2023
+
+July
+2023
+
+•
+
+Meet with City Manager and HR Director to discuss project
+timeline and goals
+
+•
+
+Confirm comparator agencies; ",FISCAL_IMPACT,fiscal_impact,medium,fiscal_constraint_signal,weak,weak,not_supported,neutral_or_unclear,weak,context_only,"Salary Survey Scope
+• Selection of Salary Survey Comparators
+• Selection of Benchmark Positions
+• Market Survey and Analysis of External Competitiveness
+• Discussion of Salary Sche",true,scope_mentions_fiscal_impact_but_quote_truncated_no_affordability_funding_terms,Budget/fiscal-impact language appears elsewhere in the span as a bullet ('Fiscal Impact of Proposed Salary Plan') but the anchored quote provided does not include that fiscal term.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_097531cd8efcc6a6006a678a12ba0081959eb66e6f9b5e52c4,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."

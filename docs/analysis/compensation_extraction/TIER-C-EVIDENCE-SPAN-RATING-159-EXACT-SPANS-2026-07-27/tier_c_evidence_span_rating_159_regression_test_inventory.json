@@ -1,0 +1,14 @@
+{
+  "coverage": [
+    "159-only scope",
+    "immutable hashes",
+    "bounded payload",
+    "strict schema",
+    "exact quote",
+    "quarantine reconciliation",
+    "dashboard contract",
+    "idempotent resume",
+    "partial fail closed"
+  ],
+  "focused_suite": "scripts/test_tier_c_evidence_span_rating_159.py"
+}
