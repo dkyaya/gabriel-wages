@@ -269,6 +269,8 @@ def validate_dashboard_state(calibration: dict[str, Any], readiness: dict[str, A
         "targeted_pdf_text_layer_readiness_387_completed_text_extraction_ready",
         "targeted_text_layer_extraction_321_completed_evidence_extraction_ready",
         "targeted_evidence_span_extraction_321_completed_rating_ready",
+        "targeted_evidence_span_rating_201_completed_summary_ready",
+        "targeted_evidence_span_rating_201_completed_with_quarantine",
     }
     if calibration.get("calibration_phase") not in allowed_phases:
         raise RuntimeError("Dashboard phase is inconsistent with phase-close categorization")
@@ -293,6 +295,8 @@ def validate_dashboard_state(calibration: dict[str, Any], readiness: dict[str, A
         "targeted_pdf_text_layer_readiness_387_completed_text_extraction_ready_global_analysis_closed",
         "targeted_text_layer_extraction_321_completed_evidence_extraction_ready_global_analysis_closed",
         "targeted_evidence_span_extraction_321_completed_rating_ready_global_analysis_closed",
+        "targeted_evidence_span_rating_201_completed_summary_ready_global_analysis_closed",
+        "targeted_evidence_span_rating_201_completed_with_quarantine_summary_review_ready_global_analysis_closed",
     }
     if readiness.get("overall_status") not in allowed_overall:
         raise RuntimeError("Dashboard overall status is inconsistent with phase close")

@@ -1,0 +1,15 @@
+{
+  "allowed_next_stage": "bounded_exact_span_rating_summary_review",
+  "by_claim_relevance": {
+    "direct_text_claim": 121,
+    "documentary_mechanism_claim": 31
+  },
+  "by_mechanism": {
+    "fiscal_constraint_signal": 1,
+    "market_or_comparability_pressure": 55,
+    "non_safety_constraint_signal": 10,
+    "strike_or_no_strike_constraint": 86
+  },
+  "candidate_count": 152,
+  "global_analysis_readiness": false
+}

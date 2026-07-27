@@ -1,0 +1,15 @@
+{
+  "all_invariants_passed": true,
+  "ambiguous_no_span_error_and_excluded_rows_rejected": true,
+  "downstream_statuses_closed": true,
+  "every_valid_quote_exact_substring": true,
+  "global_analysis_readiness_false": true,
+  "model_payload_span_and_bounded_context_only": true,
+  "no_ingestion_codification_wage_gap_regression_treatment_effect_final_causal_work": true,
+  "no_url_download_pdf_page_ocr_rendering": true,
+  "only_201_exact_positive_spans_entered": true,
+  "partial_outputs_cannot_masquerade_as_complete": true,
+  "raw_prompts_responses_saved_zero": true,
+  "span_hashes_offsets_revalidated": true,
+  "valid_plus_quarantine_reconciles_to_201": true
+}

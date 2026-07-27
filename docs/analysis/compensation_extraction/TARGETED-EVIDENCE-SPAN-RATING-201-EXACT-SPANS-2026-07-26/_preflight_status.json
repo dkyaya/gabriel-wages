@@ -1,0 +1,19 @@
+{
+  "backend": "huit_openai_responses_direct_sdk",
+  "exact_quote_checks_passed": 7,
+  "global_analysis_readiness": false,
+  "mechanisms_covered": [
+    "fiscal_constraint_signal",
+    "market_or_comparability_pressure",
+    "non_safety_constraint_signal",
+    "strike_or_no_strike_constraint"
+  ],
+  "model": "gpt-5.4-nano",
+  "model_inputs_span_and_bounded_context_only": true,
+  "passed": true,
+  "quarantine_rows": 0,
+  "raw_prompts_saved": 0,
+  "raw_responses_saved": 0,
+  "representative_rows": 7,
+  "schema_valid_rows": 7
+}

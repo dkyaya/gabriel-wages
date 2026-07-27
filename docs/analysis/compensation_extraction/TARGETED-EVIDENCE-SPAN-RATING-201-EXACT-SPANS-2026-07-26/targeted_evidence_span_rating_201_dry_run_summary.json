@@ -1,0 +1,44 @@
+{
+  "candidate_id_set_hash_verified": true,
+  "exact_span_offset_hash_checks": 201,
+  "global_analysis_readiness": false,
+  "input_audit": {
+    "exact_span_offset_hash_checks": 201,
+    "excluded_rows_included": 0,
+    "global_analysis_readiness": false,
+    "html_rows": 0,
+    "input_rows": 201,
+    "mechanism_counts": {
+      "fiscal_constraint_signal": 1,
+      "market_or_comparability_pressure": 70,
+      "non_safety_constraint_signal": 16,
+      "strike_or_no_strike_constraint": 114
+    },
+    "pdf_rows": 201,
+    "rating_candidate_manifest_sha256": "1b35b6a5708b792659aee77cbc62fd5d18482119fb1a65c6f21beb3235546da5",
+    "required_input_hashes": {
+      "targeted_evidence_span_extraction_321_city_cycle_unit_coverage_summary.json": "a4cc65b246bd24f8b23e220daf37dc5b70f3ef353b190070b8e4d914502de381",
+      "targeted_evidence_span_extraction_321_decision.json": "c8bd77d24d4c8dcd52597a639cf8b3b2cd4fcd329d9514ed52040a74ed990751",
+      "targeted_evidence_span_extraction_321_locked_queue_summary.json": "22c1fea80ed59697eeb7457c047dfe161a780fbda7d14d2fa5f0b98f194843b4",
+      "targeted_evidence_span_extraction_321_mechanism_coverage_summary.json": "b8bbefc80dfdff17f5f591f5c514ac283de70ba50283b730d1f8f86b415a295a",
+      "targeted_evidence_span_extraction_321_preserved_text_extraction_exclusions_summary.json": "6be2fb5ba95ec4d321ea0c6f32ba8ac14349f0a4c385730503a461610cb0661d",
+      "targeted_evidence_span_extraction_321_rating_candidate_manifest.csv": "1b35b6a5708b792659aee77cbc62fd5d18482119fb1a65c6f21beb3235546da5",
+      "targeted_evidence_span_extraction_321_rating_candidate_summary.json": "055dab132201da69974f1d9643335475cbc358088f5555e41183552dd52ac3f6",
+      "targeted_evidence_span_extraction_321_span_records.csv": "c0f78bb34b20aecaa563453d1d6eaceeb9614a85699bf582173d048bf5edff9a",
+      "targeted_evidence_span_extraction_321_span_records_summary.json": "8149d549f776402114b3ba7f683a6980f3fb693844cda7aabbe82dbd81da4e54",
+      "targeted_evidence_span_extraction_321_summary.md": "7d369fdd3c1f66924a468f30d646218cfc1bad4b346cd9d3f4e9d5b749307c9d",
+      "targeted_evidence_span_extraction_321_validation_2026-07-26.md": "759cc6bc738e267429fda5cc9b9a82c78e8dec1ff8b08857ff906fa94509cd6d"
+    },
+    "span_id_set_sha256": "1ff439503682be7ef56cb99e3fc271b3286dec4edb9085e89a2f5e818592bfb4",
+    "span_records_manifest_sha256": "c0f78bb34b20aecaa563453d1d6eaceeb9614a85699bf582173d048bf5edff9a",
+    "task_id": "TARGETED-EVIDENCE-SPAN-RATING-201-EXACT-SPANS-2026-07-26",
+    "unique_span_ids": 201
+  },
+  "input_rows": 201,
+  "model_api_calls": 0,
+  "model_inputs_limited_to_span_and_bounded_context": true,
+  "nonrating_rows_included": 0,
+  "raw_prompts_saved": 0,
+  "raw_responses_saved": 0,
+  "unique_span_ids": 201
+}

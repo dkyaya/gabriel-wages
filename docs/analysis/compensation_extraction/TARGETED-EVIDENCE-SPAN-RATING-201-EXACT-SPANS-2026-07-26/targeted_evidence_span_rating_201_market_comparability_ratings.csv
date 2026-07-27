@@ -1,0 +1,1846 @@
+span_rating_id,span_extraction_id,extracted_text_id,retained_source_id,candidate_id,lane_id,priority_tier,quality_label,source_url_or_locator,source_title,municipality,state,unit_type,occupation_group,bargaining_unit_name,contract_or_document_period,inferred_cycle_start,inferred_cycle_end,source_family,target_mechanism_family,local_extracted_text_path,extracted_text_sha256,source_file_sha256,span_text,span_start_offset,span_end_offset,span_sha256,context_before,context_after,extraction_rule_id,extraction_rule_family,span_specificity,rated_mechanism_family,documentary_mechanism_support,direct_text_support,provisional_causal_candidate_support,direction_of_pressure,evidence_strength,claim_relevance,quote_used,quote_exact_substring,reason_code,claim_boundary,no_wage_gap_claim,no_final_causal_claim,rating_status,ingestion_status,codification_status,causal_status,global_analysis_readiness,gabriel_backend,gabriel_model,gabriel_request_id,gabriel_attempt_count,notes
+SPANR201-f8c6aaae3cda12a241f4fc19,SPAN321-354dddcee596928c75b8a497,TXT321-5693b260c4fd82cb814a,RS429-0ed24e3adf9aa2354992,TS4L-604b81012705eb969b1d,lane_4,tier_b,verification_ready_medium,https://www.dewitttownship.gov/AgendaCenter/ViewFile/Minutes/_11132023-416,"DeWitt Charter Township Board Minutes — November 13, 2023 (includes Wage Compensation and Classification Study Final Report; implementation January 1, 2024)",DeWitt charter,MI,safety_and_non_safety_compensation_units,Mixed (non-union/township-wide implementation plus discussion of public safety items and collective bargaining language items referenced in same board packet),POLC Supervisory Division (mentioned in same minutes packet; includes CBA-related wage schedule context elsewhere in packet),"Final Report concluded in 2023; proposed implementation January 1, 2024",2024-01-01,2024-12-31,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-5693b260c4fd82cb814a.txt,3fda06c2e820a6c0a4947eefc27fa4c98340948da22a3490233b1eb84e350279,fd2d83fd75fdb06d677f5cc55af205fb9ec0280e050e3aad15d54392b2c48a5d,"Compensation Commission
+AYES: Fedewa, Ross, Seeger, Stump, Smith, Cramton, Galardi.
+NAYS: None.
+ABSENT: None.
+Motion carried.
+
+Wage Compensation
+and Classification
+Study Final Report
+
+The Manager’s Office has been working with GovHr on a Wage Compensation and
+Classification Study since April of this year. After many conversations and due diligence
+from staff and GovHr, the study has been concluded. The Personnel Committee met on
+October 23rd to discuss a draft study and considerations surrounding implementation.
+Manager Dymczyk recommends implementing all reclassifications, the 60th Percentile
+Pay Ranges, and a 4% COLA. The proposed changes are to be implemente",7725,8394,6e0dd41533b234c4fc180bfb62f18f9d91862fbf25671177e603d8c22237a3e2,"ship data, as well as comparable
+data from other communities.
+Cramton moved, Stump seconded, to receive and concur with the report as
+submitted from the Salary ","d on January
+1, 2024.
+Once implementation is approved, payroll will take steps towards this transition and
+GovHr will conclude the study with a final implementa",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,strong,strong,not_supported,neutral_or_unclear,strong,direct_text_claim,"Wage Compensation
+and Classification
+Study Final Report",true,explicit_wage_compensation_classification_study_final_report,Wage compensation/classification study document reference; no explicit peer-comparability result stated,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_002231871da908c2006a66cc1e3f288195a905ed613320d4fa,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-2f791916660638cdf5c9b60e,SPAN321-eee3babd160c21441edb9040,TXT321-5693b260c4fd82cb814a,RS429-0ed24e3adf9aa2354992,TS4L-604b81012705eb969b1d,lane_4,tier_b,verification_ready_medium,https://www.dewitttownship.gov/AgendaCenter/ViewFile/Minutes/_11132023-416,"DeWitt Charter Township Board Minutes — November 13, 2023 (includes Wage Compensation and Classification Study Final Report; implementation January 1, 2024)",DeWitt charter,MI,safety_and_non_safety_compensation_units,Mixed (non-union/township-wide implementation plus discussion of public safety items and collective bargaining language items referenced in same board packet),POLC Supervisory Division (mentioned in same minutes packet; includes CBA-related wage schedule context elsewhere in packet),"Final Report concluded in 2023; proposed implementation January 1, 2024",2024-01-01,2024-12-31,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-5693b260c4fd82cb814a.txt,3fda06c2e820a6c0a4947eefc27fa4c98340948da22a3490233b1eb84e350279,fd2d83fd75fdb06d677f5cc55af205fb9ec0280e050e3aad15d54392b2c48a5d,"The Manager’s Office has been working with GovHr on a Wage Compensation and
+Classification Study since April of this year. After many conversations and due diligence
+from staff and GovHr, the study has been concluded. The Personnel Committee met on
+October 23rd to discuss a draft study and considerations surrounding implementation.
+Manager Dymczyk recommends implementing all reclassifications, the 60th Percentile
+Pay Ranges, and a 4% COLA. The proposed changes are to be implemented on January
+1, 2024.
+Once implementation is approved, payrol",7909,8455,0b61187f5d6cc3a1a5f0be16588cd448afad1dddafce800228691b918383e21f,"AYES: Fedewa, Ross, Seeger, Stump, Smith, Cramton, Galardi.
+NAYS: None.
+ABSENT: None.
+Motion carried.
+
+Wage Compensation
+and Classification
+Study Final Report
+
+","l will take steps towards this transition and
+GovHr will conclude the study with a final implementation meeting will all staff. We
+estimate that this implementa",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,weak,weak,neutral_or_unclear,weak,documentary_mechanism_claim,Classification Study since April of this year.,true,mentions_wage_comp_classification_study_implying_market_comparability_pressure,Market/comparability pressure grounded only in the stated existence of a wage compensation and classification study; no peer/market comparison details or adjustment rationale in this span.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_04c6243c4d85c48b006a66cc1f1e388197ab54ad10d73900d7,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-1b60e146c9aa0093e452b59b,SPAN321-4cdeb550c4e77a7a01d640ae,TXT321-5693b260c4fd82cb814a,RS429-0ed24e3adf9aa2354992,TS4L-604b81012705eb969b1d,lane_4,tier_b,verification_ready_medium,https://www.dewitttownship.gov/AgendaCenter/ViewFile/Minutes/_11132023-416,"DeWitt Charter Township Board Minutes — November 13, 2023 (includes Wage Compensation and Classification Study Final Report; implementation January 1, 2024)",DeWitt charter,MI,safety_and_non_safety_compensation_units,Mixed (non-union/township-wide implementation plus discussion of public safety items and collective bargaining language items referenced in same board packet),POLC Supervisory Division (mentioned in same minutes packet; includes CBA-related wage schedule context elsewhere in packet),"Final Report concluded in 2023; proposed implementation January 1, 2024",2024-01-01,2024-12-31,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-5693b260c4fd82cb814a.txt,3fda06c2e820a6c0a4947eefc27fa4c98340948da22a3490233b1eb84e350279,fd2d83fd75fdb06d677f5cc55af205fb9ec0280e050e3aad15d54392b2c48a5d,"ds this transition and
+GovHr will conclude the study with a final implementation meeting will all staff. We
+estimate that this implementation will add close to $51,118 of expense to the 2024 Budget.
+Manager Dymczyk provided the Wage Compensation and Classification Study Final
+Report, a copy of the original 2024 Wage Schedule, and the 60th Percentile Proposed Pay
+Ranges.
+Rachel Skaggs from GovHr attended the meeting via ZOOM to present details of the study
+and address any questions. Of particular interest were the 19 comparable communities that
+were selected and weighted based upon their similarity to DeWitt Township. Ms. Skaggs
+and Manager Dymczyk also explained that an all-staff meeting will be held to explain",8478,9198,7b246c3fe21955027f85d18f771e9eaeeea3637cb450d41535fd9b5ae1c40ede,"centile
+Pay Ranges, and a 4% COLA. The proposed changes are to be implemented on January
+1, 2024.
+Once implementation is approved, payroll will take steps towar"," the
+implementation process, and to also outline an appeals process.
+Jamie Boyle, Deputy Treasurer, commented that she has worked at the Township for 26
+years a",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,strong,strong,moderate,neutral_or_unclear,strong,direct_text_claim,"19 comparable communities that
+were selected and weighted based upon their similarity",true,explicit_peer_comparability_weighting_in_wage_study,Study methodology section describing selection/weighting of comparable communities for pay/range setting.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_04e18dd2d1c25c40006a66cc20de50819693a68574946b9127,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-f9144be4a5fbb30254cd8395,SPAN321-fb711e64fdf617513eb609bc,TXT321-5693b260c4fd82cb814a,RS429-0ed24e3adf9aa2354992,TS4L-604b81012705eb969b1d,lane_4,tier_b,verification_ready_medium,https://www.dewitttownship.gov/AgendaCenter/ViewFile/Minutes/_11132023-416,"DeWitt Charter Township Board Minutes — November 13, 2023 (includes Wage Compensation and Classification Study Final Report; implementation January 1, 2024)",DeWitt charter,MI,safety_and_non_safety_compensation_units,Mixed (non-union/township-wide implementation plus discussion of public safety items and collective bargaining language items referenced in same board packet),POLC Supervisory Division (mentioned in same minutes packet; includes CBA-related wage schedule context elsewhere in packet),"Final Report concluded in 2023; proposed implementation January 1, 2024",2024-01-01,2024-12-31,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-5693b260c4fd82cb814a.txt,3fda06c2e820a6c0a4947eefc27fa4c98340948da22a3490233b1eb84e350279,fd2d83fd75fdb06d677f5cc55af205fb9ec0280e050e3aad15d54392b2c48a5d,"bring staffing up to a good level. The Department has
+been extremely busy and Lieutenant Jones called on residents to be vigilant in light of
+recent stolen vehicles and vehicular larcenies.
+Manager Andrew Dymczyk provided updates on the following:
+• Wage study implementation
+• Sewer Board of Appeals meeting
+• Sidewalk repair program
+• Meeting with new East Lansing Manager
+• MAFF Negotiations upcoming
+• Benefits Committee meeting
+• Mechanical / Plumbing inspector resignation
+• City village and township revenue sharing
+• MBS bid opening, interviews, and references
+Trustee Smith was complimentary of the Township newsletter. He also congratulated Fire
+Captain Tom Stone on 30 years with the Township, as well as Detective Derreck Schaberg
+on 25 years with the Police Department.",11897,12679,ccfb2e65876909a24608572f9e7be2723ac006e4140131b1d00600e4cb7dab03,"entary of the recruit program and
+the Department’s first candidate. He also informed the Board that there is potential for a
+couple of lateral hires that would ","
+
+DeWitt Charter Township Board Minutes
+November 13, 2023
+Page 6
+Trustee Seeger reminded the Board that there is an open house at the new Clinton County
+Road Co",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,weak,not_supported,neutral_or_unclear,moderate,documentary_mechanism_claim,• Wage study implementation,true,explicit_wage_study_but_no_competitive_wording,Only the listed item about implementing a wage study; no stated peer/market adjustment rationale in this span.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_00fa2dedebfc0fc4006a66cc20e5b481939855ca31554351bb,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-db9d0d25b6782651f2b6cb5f,SPAN321-aab92fa1e228d33d6175b51e,TXT321-9ce9b8d03eb5439ee9f7,RS429-135641aa2b35e6a985c2,TS4L-0c65caa80dc764fab8b4,lane_4,tier_b,verification_ready_medium,https://play.champds.com/ATT/springhilltn/2022-12/5c8487ed9c66060b9456dacbb1aaa173ec995d94.pdf,"Burris, Thompson & Associates — Proposal for Comprehensive Classification/Compensation Study (dated 2022-12-01; City of Athens, TN listed as prior client)",Athens,TN,safety_and_non_safety_compensation_units,Public safety and other city job classes (classification/compensation study scope likely covers multiple units),,2022-12-01 (proposal date; study proposal),,,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-9ce9b8d03eb5439ee9f7.txt,4a7d0c375c67dc6259e1b26f79f13d0cab5aa64004fd38ad303283d6347e7c41,2524a3aa04dfb00a863944816549e66bb69d00bd2a4e3cb55b811a3a2c0d3908,"Burris, Thompson & Associates
+Proposal for
+
+COMPREHENSIVE
+CLASSIFICATION/COMPENSATION
+STUDY
+for the
+
+City of Spring Hill
+In Response to RFP dated October 17, 2022
+
+December 1, 2022
+
+Burris Thompson
+
+& Associates
+
+Burris, Thompson & Associates
+Contact: Steve Thompson
+3259 Vinemont Drive
+Thompson’s Station, TN 37179-2924
+(615) 500-7931
+e-mail: stevenjthompson@comcast.net
+
+Burris, Thompson & Associates
+Proposal for Comprehensive Classification/Compensation Study December 1, 2022,
+
+Page 2
+
+COMPREHENSIVE CLASSIFICATION/COMPENSATION STUDY
+
+Table of Contents
+
+Transmittal Letter .............",0,591,c15da8eb72546dc592b07be437f91984ed3803e3fa3651b17eb3ef94ae563817,,".......................................................................................... 3
+I. Proposer Qualifications
+
+A. Firm Overview ......................",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,weak,moderate,neutral_or_unclear,moderate,direct_text_claim,"COMPREHENSIVE
+CLASSIFICATION/COMPENSATION
+STUDY",true,compensation_study_title_signal,title indicates a compensation/classification study but does not specify market comparison in this span,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_01a3a32b5bec568b006a66cc2162b08190a93588b651a6b666,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-51ca7f290771fc8bceac642d,SPAN321-342126f9dde79cbdf1ef34ab,TXT321-9ce9b8d03eb5439ee9f7,RS429-135641aa2b35e6a985c2,TS4L-0c65caa80dc764fab8b4,lane_4,tier_b,verification_ready_medium,https://play.champds.com/ATT/springhilltn/2022-12/5c8487ed9c66060b9456dacbb1aaa173ec995d94.pdf,"Burris, Thompson & Associates — Proposal for Comprehensive Classification/Compensation Study (dated 2022-12-01; City of Athens, TN listed as prior client)",Athens,TN,safety_and_non_safety_compensation_units,Public safety and other city job classes (classification/compensation study scope likely covers multiple units),,2022-12-01 (proposal date; study proposal),,,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-9ce9b8d03eb5439ee9f7.txt,4a7d0c375c67dc6259e1b26f79f13d0cab5aa64004fd38ad303283d6347e7c41,2524a3aa04dfb00a863944816549e66bb69d00bd2a4e3cb55b811a3a2c0d3908,"t
+
+Burris, Thompson & Associates
+Proposal for Comprehensive Classification/Compensation Study December 1, 2022,
+
+Page 2
+
+COMPREHENSIVE CLASSIFICATION/COMPENSATION STUDY
+
+Table of Contents
+
+Transmittal Letter ....................................................................................................... 3
+I. Proposer Qualifications
+
+A. Firm Overview ........................................................................................................ 4
+B. Past Clients.............................................................................................................. 5
+C. Project Staff .........................................................",370,1038,a64ef643ad1b4e788836ee18b806babf499a390f252e47611a5560219cf354aa,"s
+
+Burris, Thompson & Associates
+Contact: Steve Thompson
+3259 Vinemont Drive
+Thompson’s Station, TN 37179-2924
+(615) 500-7931
+e-mail: stevenjthompson@comcast.ne","................................................... 5
+D. References.............................................................................................",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,strong,strong,not_supported,neutral_or_unclear,strong,direct_text_claim,Proposal for Comprehensive Classification/Compensation Study,true,explicit_classification_compensation_study_reference,Proposal title indicating a compensation/classification study (no stated market comparison results or causal impact).,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0cb7f59c6d791d74006a66cc23803081979ad304369771ee10,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-021e5e6f6ff7e263176b96a4,SPAN321-69b35de6ed66a53d9e354223,TXT321-9ce9b8d03eb5439ee9f7,RS429-135641aa2b35e6a985c2,TS4L-0c65caa80dc764fab8b4,lane_4,tier_b,verification_ready_medium,https://play.champds.com/ATT/springhilltn/2022-12/5c8487ed9c66060b9456dacbb1aaa173ec995d94.pdf,"Burris, Thompson & Associates — Proposal for Comprehensive Classification/Compensation Study (dated 2022-12-01; City of Athens, TN listed as prior client)",Athens,TN,safety_and_non_safety_compensation_units,Public safety and other city job classes (classification/compensation study scope likely covers multiple units),,2022-12-01 (proposal date; study proposal),,,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-9ce9b8d03eb5439ee9f7.txt,4a7d0c375c67dc6259e1b26f79f13d0cab5aa64004fd38ad303283d6347e7c41,2524a3aa04dfb00a863944816549e66bb69d00bd2a4e3cb55b811a3a2c0d3908,"rences............................................................................................................... 6
+
+II. Proposed Approach to the Compensation Study
+
+A. Study Scope and Objectives ................................................................................... 7
+B. Fact Finding ............................................................................................................ 7
+C. Job Analysis ............................................................................................................ 8
+D. Review Employee Job Title Assignments .............................................................. 9
+E. Identify Market Dat",1099,1767,140b1a5cef5dd9b4296e9338c2c97591efe3c784b37245a4f0ded9c987b5553c,"...................... 5
+C. Project Staff ............................................................................................................ 5
+D. Refe","a Sources ................................................................................. 9
+F. Compile Market Salary Data ....................................",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,moderate,not_supported,neutral_or_unclear,moderate,documentary_mechanism_claim,Identify Market Dat,true,market_salary_data_step_in_compensation_study,Only evidence that the approach includes identifying market data for compensation; no causal or adjustment results stated.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0c0f1efadb7b292d006a66cc23846481909bb53bd6d1c2ad3b,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-704563e251f3fdcdadcdf092,SPAN321-27b2105a04650d76fe2ce941,TXT321-9ce9b8d03eb5439ee9f7,RS429-135641aa2b35e6a985c2,TS4L-0c65caa80dc764fab8b4,lane_4,tier_b,verification_ready_medium,https://play.champds.com/ATT/springhilltn/2022-12/5c8487ed9c66060b9456dacbb1aaa173ec995d94.pdf,"Burris, Thompson & Associates — Proposal for Comprehensive Classification/Compensation Study (dated 2022-12-01; City of Athens, TN listed as prior client)",Athens,TN,safety_and_non_safety_compensation_units,Public safety and other city job classes (classification/compensation study scope likely covers multiple units),,2022-12-01 (proposal date; study proposal),,,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-9ce9b8d03eb5439ee9f7.txt,4a7d0c375c67dc6259e1b26f79f13d0cab5aa64004fd38ad303283d6347e7c41,2524a3aa04dfb00a863944816549e66bb69d00bd2a4e3cb55b811a3a2c0d3908,"Burris, Thompson & Associates
+Proposal for Comprehensive Classification/Compensation Study December 1, 2022,",3495,3603,89ce7e32ec082727465bf2b622dafde233edcc9dbd0ba6a282be9ae26c06b592,"................................................... 17
+Appendix II – Sample Job Analysis Questionnaire .................................................... 19
+
+","
+
+Burris Thompson
+Compensation and
+Talent Management
+Consultants
+& Associates
+
+Page 3
+
+Steve Thompson
+President, Consulting Services
+3259 Vinemont Drive
+Thompso",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,weak,not_supported,neutral_or_unclear,moderate,documentary_mechanism_claim,"Proposal for Comprehensive Classification/Compensation Study December 1, 2022,",true,market_comparison_via_classification_compensation_study,Used only to document that a classification/compensation study was proposed; no claim about wage effects,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0d371b1784e290b6006a66cc23c27c8193b9f3a73ea8326665,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-528a08a26d8d1638113dbb03,SPAN321-5e76060e89ea3f279eb40046,TXT321-9ce9b8d03eb5439ee9f7,RS429-135641aa2b35e6a985c2,TS4L-0c65caa80dc764fab8b4,lane_4,tier_b,verification_ready_medium,https://play.champds.com/ATT/springhilltn/2022-12/5c8487ed9c66060b9456dacbb1aaa173ec995d94.pdf,"Burris, Thompson & Associates — Proposal for Comprehensive Classification/Compensation Study (dated 2022-12-01; City of Athens, TN listed as prior client)",Athens,TN,safety_and_non_safety_compensation_units,Public safety and other city job classes (classification/compensation study scope likely covers multiple units),,2022-12-01 (proposal date; study proposal),,,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-9ce9b8d03eb5439ee9f7.txt,4a7d0c375c67dc6259e1b26f79f13d0cab5aa64004fd38ad303283d6347e7c41,2524a3aa04dfb00a863944816549e66bb69d00bd2a4e3cb55b811a3a2c0d3908,"December 1, 2022
+Rick Stokes
+HR Director
+City of Spring Hill
+199 Town Center Parkway
+Spring Hill, TN 37174
+Dear Rick,
+Burris, Thompson & Associates is pleased to present the enclosed proposal for the
+Comprehensive Classification/Compensation Study for the City of Spring Hill.
+Burris, Thompson & Associates is highly qualified to conduct the Study based on our prior
+work with Spring Hill and extensive public sector compensation consulting experience in
+Tennessee.
+Note that samples of a job description and a study report are not included – would result in
+exceeding RFP stipulated 20 page limit. Additionally, we assume the City has an
+established job description format and it is against our p",3841,4538,2609773ce2178a93e50ea70f46f87c52ef8aece0bff48f540929598691c52f93,"
+Page 3
+
+Steve Thompson
+President, Consulting Services
+3259 Vinemont Drive
+Thompson’s Station, TN 37179-2924
+Phone: (615) 500-7931
+stevenjthompson@comcast.net
+
+","olicy to provide sample reports –
+when provided in the past they were misinterpreted as being indicative of the details of the
+Study approach we would take when",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,moderate,weak,neutral_or_unclear,moderate,direct_text_claim,Comprehensive Classification/Compensation Study for the City of Spring Hill.,true,mentions_classification_compensation_study,"Classifies and compensates via a compensation study for the city (market alignment/comparability context implied, no causal effect stated).",true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0fb63b02c9adb77b006a66cc23e9d88193874afddee582e5a8,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-2400aa45a6cc01b9f0c28c71,SPAN321-2d30cbbceb0391950f6a74b3,TXT321-e81896c5c2b27b3cc331,RS429-1cf60e8b29dbe4551602,TS4L-70c533a0e9abd443f837,lane_4,tier_b,verification_ready_medium,https://agendas.addisontx.gov/docs/2025/CM/20250624_7454/AGENDApacket__06-24-25_0341_7449.pdf,Addison TX City Council agenda packet including 'Existing Pay Plan' table with FY2024 police/fire pay range data,Addison,TX,safety_and_non_safety_compensation_units,Public safety (Firefighter/Paramedic; Police Officer referenced in included pay plan tables),,Agenda packet (2025-06-24) referencing FY2024 pay plan ranges,FY2024 (inferred),FY2024 (inferred),cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-e81896c5c2b27b3cc331.txt,574745b410e510a8c47fc4212176e6ff909437da20753102a0f69cf8212f0d47,e22adc8576dbb9877b1e97b8d5402eec56077aee461616d1ba737ada7f57e135,"Background – Existing Pay Plan
+Current Pay Plan
+Pay ranges are increased annually
+by the market adjustment provided
+to all employees:",14044,14177,9a784cdd5120e8ca5c0d30c0f37d27c11e4be5430e5a874fbc00dfb864ee3d07,"ansition and/or competitive position
+could be advanced.
+• Staff has developed a range of options for Council with these considerations and financial
+impact.
+2
+
+","
+
+o Allows pay plans to remain
+competitive and current
+o Provides for growth of tenured
+employees
+o Progression through the range is
+based on merit increases re",MARKET_ADJUSTMENT,market_adjustment,high,market_or_comparability_pressure,strong,strong,not_supported,neutral_or_unclear,strong,direct_text_claim,"Pay ranges are increased annually
+by the market adjustment provided
+to all employees:",true,explicit_market_adjustment_phrase,Background pay-plan description only; no causal inference,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_016f22b6ba49d8d0006a66cc25a68c819498502ee76a8c130c,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-e0cae3b5a814186510ab7277,SPAN321-1d4c96d9b413105da802ea38,TXT321-44fea28ec6d6dfd9e0af,RS429-251407d41bc1a2f00fd0,TS4L-53cb55b2ec502323e8ee,lane_4,tier_b,verification_ready_medium,https://bellairetx.civicweb.net/document/231703/_p%20style%3D_text-align_justify%3B__Workshop%20to%20disc.pdf?handle=EF86C73AAA394E4CAE4988157DEEC09B,"Bellaire TX CivicWeb Workshop to Discuss (salary ranges; includes ranges for Police, Police hours variants, Communications, Fire)",Bellaire,TX,safety_and_non_safety_compensation_units,"Police, Communications, Fire",,Referenced in 2024 council workshop materials (salary/range workshop; exact effective period not confirmed from search snippet),2024-01-01,2024-12-31,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-44fea28ec6d6dfd9e0af.txt,cc47013912de7b49bc9b4ca6a459c6b545a4f6c7ad260414ad1dc964b3c25879,c9deab1b8096aea6cbf0e2f92c4662b5d3d56ce8884f4dbfac4cdfc0efec1d9c,"BACKGROUND/SUMMARY:
+On October 27, 2023, the City of Bellaire engaged Paypoint HR, LLC (""Paypoint"") to conduct a
+classification study and total compensation study for the City. Paypoint completed the studies and
+will be presenting its findings to City Council for consideration and discussion.",429,722,0e1039349142e910a527d377a5255007111cb2ccd78b3f729ada2badc87acb0c,"by Melanie Glaze, Director of Human Resources.
+
+RECOMMENDATION:
+Melanie Glaze, Director of Human Resources, recommends that City Council conduct the workshop.
+
+","
+
+PREVIOUS COUNCIL ACTION:
+None.
+
+FISCAL IMPACT:
+None.
+
+CITY ATTORNEY REVIEW:
+☐
+
+Yes
+
+☑
+
+No
+
+Page 2 of 30
+
+Compensation Study
+and
+Classification Study
+
+Backgrou",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,moderate,not_supported,neutral_or_unclear,moderate,documentary_mechanism_claim,classification study and total compensation study,true,explicit_compensation_study_peer_comparison_mechanism_implied,Refers to engaging a pay-related classification and compensation study for Council review; does not state market comparisons explicitly.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0c708371a135da9f006a66cc26291c8197b7bb420bbda2c32d,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-b18a5e45191e9693add007e2,SPAN321-30ee73c77cf78be564b416c6,TXT321-44fea28ec6d6dfd9e0af,RS429-251407d41bc1a2f00fd0,TS4L-53cb55b2ec502323e8ee,lane_4,tier_b,verification_ready_medium,https://bellairetx.civicweb.net/document/231703/_p%20style%3D_text-align_justify%3B__Workshop%20to%20disc.pdf?handle=EF86C73AAA394E4CAE4988157DEEC09B,"Bellaire TX CivicWeb Workshop to Discuss (salary ranges; includes ranges for Police, Police hours variants, Communications, Fire)",Bellaire,TX,safety_and_non_safety_compensation_units,"Police, Communications, Fire",,Referenced in 2024 council workshop materials (salary/range workshop; exact effective period not confirmed from search snippet),2024-01-01,2024-12-31,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-44fea28ec6d6dfd9e0af.txt,cc47013912de7b49bc9b4ca6a459c6b545a4f6c7ad260414ad1dc964b3c25879,c9deab1b8096aea6cbf0e2f92c4662b5d3d56ce8884f4dbfac4cdfc0efec1d9c,"y Council for consideration and discussion.
+
+PREVIOUS COUNCIL ACTION:
+None.
+
+FISCAL IMPACT:
+None.
+
+CITY ATTORNEY REVIEW:
+☐
+
+Yes
+
+☑
+
+No
+
+Page 2 of 30
+
+Compensation Study
+and
+Classification Study
+
+Background
+Page 3 of 30
+
+Key reasons the Compensation Study and Classification
+Study were completed.
+ Market Alignment: Ensuring the City’s compensation
+
+structure is in line with industry standards and trends.
+
+ Equity and Fairness: Evaluating internal pay equity to
+
+ensure fairness across all positions and levels within the
+City.
+
+ Retention and Recruitment: Enhancing the ability to
+
+attract and retain top talent by offering competitive
+compensation packages.
+
+ E",679,1347,95f6830abfe011dc46d81ddd7401321bea85504fa721629e325b905b4bb555bc,"aypoint"") to conduct a
+classification study and total compensation study for the City. Paypoint completed the studies and
+will be presenting its findings to Cit","mployee Satisfaction: Addressing concerns regarding
+
+compensation and classification to boost employee
+morale and satisfaction.
+
+Page 4 of 30
+
+Scope of Work
+Cla",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,not_supported,not_supported,not_supported,not_applicable,not_supported,context_only,Council for consideration and discussion.,true,procedural_council_consideration_no_market_term,"Merely notes Council discussion; does not mention market alignment, industry standards, comparability, or competitive compensation.",true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_09953fec46767dc7006a66cc2622488193a3b4e3a21a619f2e,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-e374ef9cc38a9d8c0e3c306e,SPAN321-b9febdaabe993a0c472ab3a4,TXT321-44fea28ec6d6dfd9e0af,RS429-251407d41bc1a2f00fd0,TS4L-53cb55b2ec502323e8ee,lane_4,tier_b,verification_ready_medium,https://bellairetx.civicweb.net/document/231703/_p%20style%3D_text-align_justify%3B__Workshop%20to%20disc.pdf?handle=EF86C73AAA394E4CAE4988157DEEC09B,"Bellaire TX CivicWeb Workshop to Discuss (salary ranges; includes ranges for Police, Police hours variants, Communications, Fire)",Bellaire,TX,safety_and_non_safety_compensation_units,"Police, Communications, Fire",,Referenced in 2024 council workshop materials (salary/range workshop; exact effective period not confirmed from search snippet),2024-01-01,2024-12-31,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-44fea28ec6d6dfd9e0af.txt,cc47013912de7b49bc9b4ca6a459c6b545a4f6c7ad260414ad1dc964b3c25879,c9deab1b8096aea6cbf0e2f92c4662b5d3d56ce8884f4dbfac4cdfc0efec1d9c,"tion and discussion.
+
+PREVIOUS COUNCIL ACTION:
+None.
+
+FISCAL IMPACT:
+None.
+
+CITY ATTORNEY REVIEW:
+☐
+
+Yes
+
+☑
+
+No
+
+Page 2 of 30
+
+Compensation Study
+and
+Classification Study
+
+Background
+Page 3 of 30
+
+Key reasons the Compensation Study and Classification
+Study were completed.
+ Market Alignment: Ensuring the City’s compensation
+
+structure is in line with industry standards and trends.
+
+ Equity and Fairness: Evaluating internal pay equity to
+
+ensure fairness across all positions and levels within the
+City.
+
+ Retention and Recruitment: Enhancing the ability to
+
+attract and retain top talent by offering competitive
+compensation packages.
+
+ Employee Satisfaction: Add",702,1372,19519f223f5f91dfd98c250a92e924469633ef8b56e6a99eae41981a3c4e1471,"classification study and total compensation study for the City. Paypoint completed the studies and
+will be presenting its findings to City Council for considera","ressing concerns regarding
+
+compensation and classification to boost employee
+morale and satisfaction.
+
+Page 4 of 30
+
+Scope of Work
+Classification Study
+ Estab",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,weak,weak,not_supported,neutral_or_unclear,weak,not_claim_ready,tion and discussion.,true,market_competition_discussion_context_only,Only a generic “discussion” reference; no explicit market/comparability mechanism terms in this span.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0de01e3f70f76489006a66cc26804881908329d9b94739bd00,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-55de8c2afe8ff6ea5670eaa6,SPAN321-97f5c358367ad907ab2c684f,TXT321-44fea28ec6d6dfd9e0af,RS429-251407d41bc1a2f00fd0,TS4L-53cb55b2ec502323e8ee,lane_4,tier_b,verification_ready_medium,https://bellairetx.civicweb.net/document/231703/_p%20style%3D_text-align_justify%3B__Workshop%20to%20disc.pdf?handle=EF86C73AAA394E4CAE4988157DEEC09B,"Bellaire TX CivicWeb Workshop to Discuss (salary ranges; includes ranges for Police, Police hours variants, Communications, Fire)",Bellaire,TX,safety_and_non_safety_compensation_units,"Police, Communications, Fire",,Referenced in 2024 council workshop materials (salary/range workshop; exact effective period not confirmed from search snippet),2024-01-01,2024-12-31,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-44fea28ec6d6dfd9e0af.txt,cc47013912de7b49bc9b4ca6a459c6b545a4f6c7ad260414ad1dc964b3c25879,c9deab1b8096aea6cbf0e2f92c4662b5d3d56ce8884f4dbfac4cdfc0efec1d9c,", electronic maintenance
+
+system that the Human Resources Department will use to keep the
+classification system current and equitable.
+
+Scope of Work
+Compensation Study
+Page 5 of 30
+
+• Review current compensation plan and understand current
+
+challenges in recruiting and retaining employees.
+
+• Recommend comparable labor markets, including both
+
+private and public sector employers for total compensation
+(compensation and benefits) study.
+
+• Analyze benefits data to provide a comparison of total
+
+compensation for Bellaire and comparators.
+
+• Recommend an appropriate salary range for each position
+
+based on the classification plan, the compensation survey
+results",1897,2565,eb87d77c1a586b308ab652561f59613e440f11550a87826f1326ea6332cd2b85,"ssification grade methodology and proposed
+
+recommended strategies for the City.
+
+ Draft updated job descriptions.
+ Provide straightforward, easily understood",", and the internal relationships and equality. Prepare a
+new salary structure based on the results of the survey and
+best practices.
+
+Results of Study
+Page 6 of",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,strong,strong,not_supported,neutral_or_unclear,strong,direct_text_claim,challenges in recruiting and retaining employees.,true,explicit_recruitment_retention_and_market_comparators,Compensation Study scope referencing recruitment/retention challenges and market comparability via comparable labor markets,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_07f81b04c98f4a6a006a66cc27e6a48196bd4cad7215078f97,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-5ecb215856267678789e46c5,SPAN321-b005b0bbeb3a7a73cd660f85,TXT321-7221a67b160ac7bf19d4,RS429-3562f188f529e2642700,TS4L-669720ef20a6058e3d34,lane_4,tier_b,verification_ready_medium,https://storage.googleapis.com/proudcity/palmviewtx/uploads/2022/04/Municipal-Budget-2020.pdf,Municipal Budget 2020 — City of Palmview (Employee Salary Schedule section),Palmview,TX,safety_and_non_safety_compensation_units,Public safety (Police and Fire) + other city positions (salary schedule),,Budget document labeled 2020 (contains an Employee Salary Schedule section),,,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-7221a67b160ac7bf19d4.txt,83c0202a38192315dcc734d92fed12fe16b863c8973321fb4ccb3caba859b43a,424f9ae2ca729afc1255c0efc2dd545a5092ddc0160dfd8846e8e9d3f4467886,"es the City job before vesting, the Employee forfeits the right to the
+portion contributed by the City. The City’s estimated cost in contributions to the plan is $180,000 a
+year. 1
+We are proposing a multi-year Salary and Retirement Plan to ensure a competitive salary and fringe
+benefits packet to recruit, retain, and reward employees.
+Proposed Salary & Retirement Plan
+2016-2026
+FISCAL YEAR
+2016
+2017
+2018
+2019
+2020
+2021
+2022
+2023
+…
+2026",61678,62118,ea848b0f60ad9bd3d57570782c02adb7abcc7f266c42f0625387285b02a75a97,"the Employee leaves the City job, is
+vested and leaves the deposits with TMRS, the Employee keeps the right to the full retirement
+benefit. If the Employee leav","
+
+SALARY
+3.0%
+
+RETIREMENT
+1:1
+
+DEPOSIT RATE
+5.0%
+
+1.5:1 or…
+
+6.0%
+
+…
+
+…
+
+…
+2:1
+
+…
+7.0%
+
+3.0%
+3.0%
+3.0%
+
+Please note, this is a proposed plan that will need to b",MARKET_COMPETITIVENESS,pay_competitiveness,high,market_or_comparability_pressure,strong,strong,not_supported,neutral_or_unclear,strong,direct_text_claim,"ensure a competitive salary and fringe
+benefits packet to recruit, retain, and reward employees.",true,market_competitive_recruit_retain_reward_language,Competitiveness framing for recruitment/retention/reward; no wage gap or causal outcome claimed.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_098e2b6a0f6033a3006a66cc2e1d5c8194b8c77b0e332ee7c4,2,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-c4d79f6a1793f18fb9a1ca16,SPAN321-af80d7e82fc871ce8be59e76,TXT321-1da11d7fb74b6dbda38e,RS429-37d509202897eb8b798c,TS4L-a886e0c411c01094fbb0,lane_4,tier_b,verification_ready_medium,https://dam.assets.ohio.gov/image/upload/serb.ohio.gov/PDF/FF_Reports/2024/24-MED-09-1111.pdf,Fact-Finding Report (SERB) — 24-MED-09-1111 (includes Lawrence Township; wage/market-comparability narrative and figures),Lawrence,OH,safety_and_non_safety_compensation_units,"Police (Sergeants) — Lawrence Township (Stark County, OH)",Lawrence Township police bargaining context (fact-finding report format; specific unit may be represented in the report),Fact-finding report dated 2024 (explicit figures and discussion include a multi-year/annual settlement comparison context),,,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-1da11d7fb74b6dbda38e.txt,65b584dcd07adc89b4d2e921cc026b46baac8afdfe5343be05154aefd3de4a26,c6f7fad117ff0182eeb1039c8790eb185ec565ff2233056c3227349aec881742,"third year of the Agreement ($4,978 per officer x4), for a total of $52,869 for the life of the new
+Agreement. That is not a significant amount of money to compensate the Sergeants for their extra
+responsibilities and provide them with a comparable wage as paid in comparable jurisdictions.
+For all of these reasons, the Union’s wage proposals should be recommended.
+The Position of the Township
+The Township proposes current contract language which provides for a 15% rank
+14",24149,24625,ddfac1a80c1083a735a8a911c076dd30c2c655e0e9830dfcea66f64edbb91636,"r of the Agreement ($4,603 per officer, with roll-up included),
+$19,148 for the second year ($4,787 per officer x4, with roll-up included), and $19,912 for the
+","
+
+Ranking
+
+differential.
+The bargaining-unit employees’ competence and worthiness are not at issue.
+
+The
+
+Township very much appreciates the service of these pu",MARKET_COMPARABLE_COMMUNITIES,comparable_communities,medium,market_or_comparability_pressure,strong,strong,weak,neutral_or_unclear,strong,direct_text_claim,provide them with a comparable wage as paid in comparable jurisdictions.,true,wage_comparability_to_other_jurisdictions,"Comparability framing for wages via external jurisdictions, not a quantified wage gap or causal finding.",true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0f61364ea3756b32006a66cc3560ec8190a638dfb6000f37f7,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-8e4e01724542b7c9f04b1fcd,SPAN321-6a6e64dafd4c7c93ebe4db5b,TXT321-1da11d7fb74b6dbda38e,RS429-37d509202897eb8b798c,TS4L-a886e0c411c01094fbb0,lane_4,tier_b,verification_ready_medium,https://dam.assets.ohio.gov/image/upload/serb.ohio.gov/PDF/FF_Reports/2024/24-MED-09-1111.pdf,Fact-Finding Report (SERB) — 24-MED-09-1111 (includes Lawrence Township; wage/market-comparability narrative and figures),Lawrence,OH,safety_and_non_safety_compensation_units,"Police (Sergeants) — Lawrence Township (Stark County, OH)",Lawrence Township police bargaining context (fact-finding report format; specific unit may be represented in the report),Fact-finding report dated 2024 (explicit figures and discussion include a multi-year/annual settlement comparison context),,,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-1da11d7fb74b6dbda38e.txt,65b584dcd07adc89b4d2e921cc026b46baac8afdfe5343be05154aefd3de4a26,c6f7fad117ff0182eeb1039c8790eb185ec565ff2233056c3227349aec881742,"The Township believes the comparable jurisdictions for wage and benefit comparisons
+should be only townships and should not include other cities as argued by the Union. This
+conclusion is based upon the fact that townships generate their revenues differently than cities,
+who can generate additional revenues from income taxes. They, therefore, can afford higher wages
+and benefits. The following are the townships in Stark County and contiguous counties that the
+Township believes to be most comparable to Perry Township:",26696,27218,9c651630afe736be6a488d72bb65e93cbfe45d72ae17597699f1333a5839cd64,"e wage scale
+and was reflected by the Employer as an increase benefiting the Patrol Officers in each year of a step increase and in
+subsequent year wages.
+
+15
+
+","
+
+TOWNSHIPS IN STARK AND CONTIGUOUS COUNTIES
+SORTED BY MAXIMUM ANNUAL RATE
+
+Agency
+Jackson Township
+Copley Township
+Bath Township
+Brimfield Township
+Sagamore Hi",MARKET_COMPARABLE_COMMUNITIES,comparable_communities,medium,market_or_comparability_pressure,strong,strong,weak,neutral_or_unclear,strong,direct_text_claim,comparable jurisdictions for wage and benefit comparisons,true,wage_benefit_comparability_scope_argument,Limited to specifying which jurisdictions to use for wage/benefit comparisons; not evidence of any wage adjustment outcome.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_02fd09288306d19d006a66cc357e708190a53d2ffa3efd9e13,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-081892bbfdbd44a5454edc16,SPAN321-9366309188b3e9e9744b9d1d,TXT321-1da11d7fb74b6dbda38e,RS429-37d509202897eb8b798c,TS4L-a886e0c411c01094fbb0,lane_4,tier_b,verification_ready_medium,https://dam.assets.ohio.gov/image/upload/serb.ohio.gov/PDF/FF_Reports/2024/24-MED-09-1111.pdf,Fact-Finding Report (SERB) — 24-MED-09-1111 (includes Lawrence Township; wage/market-comparability narrative and figures),Lawrence,OH,safety_and_non_safety_compensation_units,"Police (Sergeants) — Lawrence Township (Stark County, OH)",Lawrence Township police bargaining context (fact-finding report format; specific unit may be represented in the report),Fact-finding report dated 2024 (explicit figures and discussion include a multi-year/annual settlement comparison context),,,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-1da11d7fb74b6dbda38e.txt,65b584dcd07adc89b4d2e921cc026b46baac8afdfe5343be05154aefd3de4a26,c6f7fad117ff0182eeb1039c8790eb185ec565ff2233056c3227349aec881742,". The Township recognizes that maintaining
+the current fifteen percent (15%) differential will not cause the Sergeants to be the highest paid
+amongst the Union’s hand-picked comparable jurisdictions, but they will remain being paid above
+the average wage rate, and wage differential of comparable jurisdictions.
+Discussion, Findings and Recommendation
+The Township is currently in excellent financial condition as measured by its healthy
+General Fund carryover balance. There is little argument that the Township can absorb increased
+salaries for its police and recognizes that healthy increases are needed due to the need to recruit
+and retain Police Officers and likewise to advance the salaries of the Sergeants resulting from their
+rank differential, but i",31754,32514,4a5c871cd071a5eeabf8986e562878df610867909ac87db2ef90851e75c48634,"oper market rate.
+The Township can responsibly implement wage increases reflected in the fifteen percent
+(15%) wage differential in each of the next three years","t believes it must be prudent in the amount of any wage increases it agrees
+to give the Police Officers and Sergeants over a three-year period because of limite",MARKET_COMPARABLE_COMMUNITIES,comparable_communities,medium,market_or_comparability_pressure,strong,strong,not_supported,neutral_or_unclear,strong,direct_text_claim,"maintaining
+the current fifteen percent (15%) differential will not cause the Sergeants to be the highest paid
+amongst the Union’s hand-picked comparable jurisdictions",true,hand_picked_comparable_jurisdictions_reference,Comparable-jurisdiction benchmark used to justify sustaining wage differential (not a causation claim).,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0c914cfde42418c0006a66cc44ec048195b939f64393aa398b,2,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-6e39a8a720989b76961d86bd,SPAN321-085a11666c4861a22206568e,TXT321-e1f1bbc7892b75c0698f,RS429-5ae4c771afffd9a33c20,TS4L-2b78cb0b5f05c8511918,lane_4,tier_b,verification_ready_high,https://www.northboroughma.gov/sites/g/files/vyhlif12221/f/uploads/fire_cba_fy23-fy25_final_w_attachments_0.pdf,Northborough MA — Northborough Firefighters Local 3057 CBA (FY23–FY25) (incl. wage schedule/market adjustment tables),Northborough,MA,safety_and_non_safety_compensation_units,Public Safety (Fire) — Firefighters,Northborough Firefighters Local 3057,FY2023–FY2025 (effective wage changes include FY2023/FY2024/FY2025 step and market adjustment tables),2014-01-01,2024-12-31,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-e1f1bbc7892b75c0698f.txt,0feb7b3e2d724e3afa7654a09d26f0224a5237a05c6da88fa7b5b121f92c835f,c08ca74f7c09f82b9a858099089eaf0ee723732ce7b7cd8afb447eb22b91bde6,"t shall be counted towards
+determination of seniority under this Agreement with the exception of Article XXXVII,
+Reductions in Force.
+ARTICLE XVII: WAGES
+A. Increase as follows the hourly wage of each employee as well as all steps of each pay
+grade:
+Market Adjustments as defined below:
+FY2023: Market adjustment as displayed below-",30968,31300,bdb22c559dac5274dea98cd9a5d9c5fe2a83dad4bf2991707647bdcaad81c431," the
+Northborough Fire Department. Additionally for employees hired before July 1, 2019 fifty
+percent (50%) of call service with the Northborough Fire Departmen","
+
+10
+
+Step 1
+Step 2
+Step 3
+Step 4
+Step 5
+
+FY2023 Market Adjustment
+0.25
+0.26
+0.28
+0.29
+0.31
+
+FY2024: Market adjustment as displayed below-
+
+Step 1
+Step 2
+Step 3",MARKET_ADJUSTMENT,market_adjustment,high,market_or_comparability_pressure,strong,strong,not_supported,neutral_or_unclear,strong,direct_text_claim,Market Adjustments as defined below:,true,explicit_market_adjustment_wage_schedule,"Supports presence of market-adjustment wage mechanism; does not state comparisons, peers, or causal effects.",true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0e874a2826fac277006a66cc355ef08190bf36b388df180b6a,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-f81a916a7455df8a909e00f9,SPAN321-d68b60d1776b7ef74e83d04f,TXT321-e1f1bbc7892b75c0698f,RS429-5ae4c771afffd9a33c20,TS4L-2b78cb0b5f05c8511918,lane_4,tier_b,verification_ready_high,https://www.northboroughma.gov/sites/g/files/vyhlif12221/f/uploads/fire_cba_fy23-fy25_final_w_attachments_0.pdf,Northborough MA — Northborough Firefighters Local 3057 CBA (FY23–FY25) (incl. wage schedule/market adjustment tables),Northborough,MA,safety_and_non_safety_compensation_units,Public Safety (Fire) — Firefighters,Northborough Firefighters Local 3057,FY2023–FY2025 (effective wage changes include FY2023/FY2024/FY2025 step and market adjustment tables),2014-01-01,2024-12-31,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-e1f1bbc7892b75c0698f.txt,0feb7b3e2d724e3afa7654a09d26f0224a5237a05c6da88fa7b5b121f92c835f,c08ca74f7c09f82b9a858099089eaf0ee723732ce7b7cd8afb447eb22b91bde6,"of each pay
+grade:
+Market Adjustments as defined below:
+FY2023: Market adjustment as displayed below-
+
+10
+
+Step 1
+Step 2
+Step 3
+Step 4
+Step 5
+
+FY2023 Market Adjustment
+0.25
+0.26
+0.28
+0.29
+0.31
+
+FY2024: Market adjustment as displayed below-
+
+Step 1
+Step 2
+Step 3
+Step 4
+Step 5
+Firefighters:
+Effective 7/1/22
+Effective 7/1/23
+Effective 7/1/24
+
+FY2024 Market Adjustment
+0.26
+0.27
+0.28
+0.30
+0.32
+
+Firefighter Base Pay Increase of 2%
+Firefighter Base Pay Increase of 2%
+Firefighter Base Pay Increase of 2%
+
+Firefighter Wages
+Step 1
+Step 2
+Step 3
+Step 4
+Step 5
+
+FY2023
+$ 25.84
+$ 27.14
+$ 28.48
+$ 30.18
+$ 31.70
+
+11
+
+FY2024
+$ 26.62
+$ 27.96
+$ 29.35
+$ 31.09
+$ 32.66
+
+FY2025
+$
+27",31199,31866,0177f2d95782c5068606fef5a0fbc576727b24143e48fa7630e18b0f4b6cceda,"ent with the exception of Article XXXVII,
+Reductions in Force.
+ARTICLE XVII: WAGES
+A. Increase as follows the hourly wage of each employee as well as all steps ",".15
+$
+28.52
+$
+29.94
+$
+31.71
+$
+33.31
+
+Captains:
+Market Adjustments as defined below:
+FY2023: Market adjustment as displayed belowFY2023 Market Adjustment
+0.33
+St",MARKET_ADJUSTMENT,market_adjustment,high,market_or_comparability_pressure,strong,strong,not_supported,neutral_or_unclear,strong,direct_text_claim,Market Adjustments as defined below:,true,explicit_market_adjustment_language,Wage rate schedule includes explicit “Market Adjustments” term,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_012276f93a2be796006a66cc377c248190aafd20b7eba345bb,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-0e86c58cfd5b0f573a8334f9,SPAN321-03c7fc272f9b7ecb0297c740,TXT321-e1f1bbc7892b75c0698f,RS429-5ae4c771afffd9a33c20,TS4L-2b78cb0b5f05c8511918,lane_4,tier_b,verification_ready_high,https://www.northboroughma.gov/sites/g/files/vyhlif12221/f/uploads/fire_cba_fy23-fy25_final_w_attachments_0.pdf,Northborough MA — Northborough Firefighters Local 3057 CBA (FY23–FY25) (incl. wage schedule/market adjustment tables),Northborough,MA,safety_and_non_safety_compensation_units,Public Safety (Fire) — Firefighters,Northborough Firefighters Local 3057,FY2023–FY2025 (effective wage changes include FY2023/FY2024/FY2025 step and market adjustment tables),2014-01-01,2024-12-31,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-e1f1bbc7892b75c0698f.txt,0feb7b3e2d724e3afa7654a09d26f0224a5237a05c6da88fa7b5b121f92c835f,c08ca74f7c09f82b9a858099089eaf0ee723732ce7b7cd8afb447eb22b91bde6,"ow:
+FY2023: Market adjustment as displayed below-
+
+10
+
+Step 1
+Step 2
+Step 3
+Step 4
+Step 5
+
+FY2023 Market Adjustment
+0.25
+0.26
+0.28
+0.29
+0.31
+
+FY2024: Market adjustment as displayed below-
+
+Step 1
+Step 2
+Step 3
+Step 4
+Step 5
+Firefighters:
+Effective 7/1/22
+Effective 7/1/23
+Effective 7/1/24
+
+FY2024 Market Adjustment
+0.26
+0.27
+0.28
+0.30
+0.32
+
+Firefighter Base Pay Increase of 2%
+Firefighter Base Pay Increase of 2%
+Firefighter Base Pay Increase of 2%
+
+Firefighter Wages
+Step 1
+Step 2
+Step 3
+Step 4
+Step 5
+
+FY2023
+$ 25.84
+$ 27.14
+$ 28.48
+$ 30.18
+$ 31.70
+
+11
+
+FY2024
+$ 26.62
+$ 27.96
+$ 29.35
+$ 31.09
+$ 32.66
+
+FY2025
+$
+27.15
+$
+28.52
+$
+29.94
+$
+31.71
+$
+33.31
+
+Captains:
+Marke",31251,31918,c0e021fe6648f8851447cf25b368cbe3e7c3ad7df09670dcd5998fde3d3f31bc," in Force.
+ARTICLE XVII: WAGES
+A. Increase as follows the hourly wage of each employee as well as all steps of each pay
+grade:
+Market Adjustments as defined bel","t Adjustments as defined below:
+FY2023: Market adjustment as displayed belowFY2023 Market Adjustment
+0.33
+Step 1
+0.34
+Step 2
+0.35
+Step 3
+0.36
+Step 4
+0.36
+Step 5",MARKET_ADJUSTMENT,market_adjustment,high,market_or_comparability_pressure,moderate,moderate,not_supported,neutral_or_unclear,moderate,direct_text_claim,FY2023: Market adjustment as displayed below-,true,explicit_market_adjustment_label_present,"FY2023 market adjustment label and display, not wage outcomes or comparisons beyond the adjustment table",true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0e50b4f6b39a0330006a66cc378bf08197814a9b36b1d296ae,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-7cc6fd08e00519d6c3f13736,SPAN321-a0917d0e992428c941aface0,TXT321-e1f1bbc7892b75c0698f,RS429-5ae4c771afffd9a33c20,TS4L-2b78cb0b5f05c8511918,lane_4,tier_b,verification_ready_high,https://www.northboroughma.gov/sites/g/files/vyhlif12221/f/uploads/fire_cba_fy23-fy25_final_w_attachments_0.pdf,Northborough MA — Northborough Firefighters Local 3057 CBA (FY23–FY25) (incl. wage schedule/market adjustment tables),Northborough,MA,safety_and_non_safety_compensation_units,Public Safety (Fire) — Firefighters,Northborough Firefighters Local 3057,FY2023–FY2025 (effective wage changes include FY2023/FY2024/FY2025 step and market adjustment tables),2014-01-01,2024-12-31,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-e1f1bbc7892b75c0698f.txt,0feb7b3e2d724e3afa7654a09d26f0224a5237a05c6da88fa7b5b121f92c835f,c08ca74f7c09f82b9a858099089eaf0ee723732ce7b7cd8afb447eb22b91bde6,"4: Market adjustment as displayed below-
+
+Step 1
+Step 2
+Step 3
+Step 4
+Step 5
+Firefighters:
+Effective 7/1/22
+Effective 7/1/23
+Effective 7/1/24
+
+FY2024 Market Adjustment
+0.26
+0.27
+0.28
+0.30
+0.32
+
+Firefighter Base Pay Increase of 2%
+Firefighter Base Pay Increase of 2%
+Firefighter Base Pay Increase of 2%
+
+Firefighter Wages
+Step 1
+Step 2
+Step 3
+Step 4
+Step 5
+
+FY2023
+$ 25.84
+$ 27.14
+$ 28.48
+$ 30.18
+$ 31.70
+
+11
+
+FY2024
+$ 26.62
+$ 27.96
+$ 29.35
+$ 31.09
+$ 32.66
+
+FY2025
+$
+27.15
+$
+28.52
+$
+29.94
+$
+31.71
+$
+33.31
+
+Captains:
+Market Adjustments as defined below:
+FY2023: Market adjustment as displayed belowFY2023 Market Adjustment
+0.33
+Step 1
+0.34
+Step 2
+0.35
+Step 3
+0.36
+Step",31398,32064,f2836d48c3af05cb1b83cac3a52edfbc60e8a5885ef0a3fb0c222c4fd0d0b422,"s defined below:
+FY2023: Market adjustment as displayed below-
+
+10
+
+Step 1
+Step 2
+Step 3
+Step 4
+Step 5
+
+FY2023 Market Adjustment
+0.25
+0.26
+0.28
+0.29
+0.31
+
+FY202"," 4
+0.36
+Step 5
+FY2024: Market adjustment as displayed below-
+
+Step 1
+Step 2
+Step 3
+Step 4
+Step 5
+
+Effective 7/1/22
+Effective 7/1/23
+Effective 7/1/24
+
+FY2024 Mar",MARKET_ADJUSTMENT,market_adjustment,high,market_or_comparability_pressure,moderate,moderate,not_supported,neutral_or_unclear,moderate,direct_text_claim,Market adjustment as displayed below-,true,market_adjustment_label_only,Bounds to the label introducing market adjustment figures (no causality or peer-logic stated).,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0daef6f5c8af5960006a66cc378d488197b8b94f5f69640861,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-bfffc4b06d051a1523f14076,SPAN321-7292278451d15d4439f01d54,TXT321-e1f1bbc7892b75c0698f,RS429-5ae4c771afffd9a33c20,TS4L-2b78cb0b5f05c8511918,lane_4,tier_b,verification_ready_high,https://www.northboroughma.gov/sites/g/files/vyhlif12221/f/uploads/fire_cba_fy23-fy25_final_w_attachments_0.pdf,Northborough MA — Northborough Firefighters Local 3057 CBA (FY23–FY25) (incl. wage schedule/market adjustment tables),Northborough,MA,safety_and_non_safety_compensation_units,Public Safety (Fire) — Firefighters,Northborough Firefighters Local 3057,FY2023–FY2025 (effective wage changes include FY2023/FY2024/FY2025 step and market adjustment tables),2014-01-01,2024-12-31,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-e1f1bbc7892b75c0698f.txt,0feb7b3e2d724e3afa7654a09d26f0224a5237a05c6da88fa7b5b121f92c835f,c08ca74f7c09f82b9a858099089eaf0ee723732ce7b7cd8afb447eb22b91bde6,"Captains:
+Market Adjustments as defined below:
+FY2023: Market adjustment as displayed belowFY2023 Market Adjustment
+0.33
+Step 1
+0.34
+Step 2
+0.35
+Step 3
+0.36
+Step 4
+0.36
+Step 5
+FY2024: Market adjustment as displayed below-",31903,32124,8cc005d62dad34ad65906d4ef0e22569fddde60db10df3b66fe4c00571559ab2,"p 4
+Step 5
+
+FY2023
+$ 25.84
+$ 27.14
+$ 28.48
+$ 30.18
+$ 31.70
+
+11
+
+FY2024
+$ 26.62
+$ 27.96
+$ 29.35
+$ 31.09
+$ 32.66
+
+FY2025
+$
+27.15
+$
+28.52
+$
+29.94
+$
+31.71
+$
+33.31
+
+","
+
+Step 1
+Step 2
+Step 3
+Step 4
+Step 5
+
+Effective 7/1/22
+Effective 7/1/23
+Effective 7/1/24
+
+FY2024 Market Adjustment
+0.34
+0.35
+0.36
+0.37
+0.38
+
+Captain Base Pay In",MARKET_ADJUSTMENT,market_adjustment,high,market_or_comparability_pressure,strong,strong,not_supported,neutral_or_unclear,strong,direct_text_claim,Market Adjustments as defined below:,true,explicit_market_adjustment_label,Exact label of market adjustment; no comparison or wage-study results stated in span.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0976b1aac97874c0006a66cc379ef881979210829b8012219b,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-291935ae85552a7bf7032ad1,SPAN321-133b578d17221a66773285ff,TXT321-aa21f9d90e9e5fb29f4c,RS429-68db620565c5ffc8a222,TS4L-49ab66d3fa558f37d11a,lane_4,tier_b,verification_ready_medium,https://mccmeetingspublic.blob.core.usgovcloudapi.net/indpndncia-meet-c00f08ee8cc04df2807c8e4aa300177c/ITEM-Attachment-001-769871a5f26f4d888e9ef42883398aab.pdf,"Meeting packet attachment referencing “City of Americus, Georgia – Classification and Compensation Study” (AutoSolve)",Americus,GA,safety_and_non_safety_compensation_units,Public Safety + Non-Safety (position classifications referenced),,2014-2024 target window (reference indicates 2024 Council Approved / Implementation Completed),2014,2024,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-aa21f9d90e9e5fb29f4c.txt,4881b19758232faddf6ff7fc463b2f4e749f4c0acdf83c7128534d2258bf3280,b5c3dca6491aea9b8a8cb5a7c9f7225b7f56a3b1323914c634747182288a4500,"Request For Proposal:
+Classification and Compensation Study
+City of Independence
+331 1st Street E
+Independence, IA 50644
+Due: 11/20/2025 at 4:00pm.",18,165,f955e200abd13ba48e470acbf87755fb925bdf72c78ec4e5a16c160a50c27826,"Date: 11/18/2025
+
+","
+
+Technical Proposal Submitted By:
+AutoSolve, Inc
+46 Thatcham Drive
+Saint Augustine, Florida 32092
+
+AutoSolve, Inc.
+
+1
+
+Table of Contents
+COVER LETTER..........",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,moderate,not_supported,neutral_or_unclear,moderate,documentary_mechanism_claim,Classification and Compensation Study,true,compensation_classification_study_rfp,RFP title indicates a compensation/classification study; no explicit market comparison described within the span.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_02bac0d7743b88e5006a66cc3929608197924d80de08952143,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-dd5f680ab9accd7cf72c4c14,SPAN321-70109d98b2927c044ea316cd,TXT321-aa21f9d90e9e5fb29f4c,RS429-68db620565c5ffc8a222,TS4L-49ab66d3fa558f37d11a,lane_4,tier_b,verification_ready_medium,https://mccmeetingspublic.blob.core.usgovcloudapi.net/indpndncia-meet-c00f08ee8cc04df2807c8e4aa300177c/ITEM-Attachment-001-769871a5f26f4d888e9ef42883398aab.pdf,"Meeting packet attachment referencing “City of Americus, Georgia – Classification and Compensation Study” (AutoSolve)",Americus,GA,safety_and_non_safety_compensation_units,Public Safety + Non-Safety (position classifications referenced),,2014-2024 target window (reference indicates 2024 Council Approved / Implementation Completed),2014,2024,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-aa21f9d90e9e5fb29f4c.txt,4881b19758232faddf6ff7fc463b2f4e749f4c0acdf83c7128534d2258bf3280,b5c3dca6491aea9b8a8cb5a7c9f7225b7f56a3b1323914c634747182288a4500,"LASSIFICATION EVALUATION ........................................................................... 15
+CLASSIFICATION EVALUATION - EMPLOYEE ENGAGEMENT - INTERNAL EQUITY .................................................. 16
+COMPENSATION EVALUATION – SALARY SURVEY - EXTERNAL EQUITY .............................................................. 17
+BENEFITS SURVEY - EXTERNAL COMPETITION ..................................................................................................... 17
+CLASSIFICATION FRAMEWORK .............................................................................................................................. 18
+EMPLOYEE PAY PLAN MANAGEMENT SYSTEM ..............................",3034,3747,b61a6c8f545f042316bad32e2deb37d5ecf423797ff47091e83a1bff8069ba90,"F ................................................................................................................................ 15
+CURRENT COMPENSATION AND C","....................................................................... 18
+FINAL REPORT, SUMMARY REPORT, SOFTWARE SYSTEM, SYSTEM TRAINING, PRESENT FINDINGS ....",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,moderate,not_supported,neutral_or_unclear,moderate,direct_text_claim,BENEFITS SURVEY - EXTERNAL COMPETITION,true,external_competition_survey_marker,Bounded to the headings referencing an external competition survey; does not show causal or adjustment effects.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0f2749efbcfe3d49006a66cc396f148190bbdfb0328fe71117,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-eeeccd9d11e62c01e0885962,SPAN321-fd1ed739ac4555c9b2ee56b2,TXT321-aa21f9d90e9e5fb29f4c,RS429-68db620565c5ffc8a222,TS4L-49ab66d3fa558f37d11a,lane_4,tier_b,verification_ready_medium,https://mccmeetingspublic.blob.core.usgovcloudapi.net/indpndncia-meet-c00f08ee8cc04df2807c8e4aa300177c/ITEM-Attachment-001-769871a5f26f4d888e9ef42883398aab.pdf,"Meeting packet attachment referencing “City of Americus, Georgia – Classification and Compensation Study” (AutoSolve)",Americus,GA,safety_and_non_safety_compensation_units,Public Safety + Non-Safety (position classifications referenced),,2014-2024 target window (reference indicates 2024 Council Approved / Implementation Completed),2014,2024,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-aa21f9d90e9e5fb29f4c.txt,4881b19758232faddf6ff7fc463b2f4e749f4c0acdf83c7128534d2258bf3280,b5c3dca6491aea9b8a8cb5a7c9f7225b7f56a3b1323914c634747182288a4500,"................................ 20
+REFERENCES ................................................................................................................................................. 21
+REF 1: CITY OF AMERICUS, GEORGIA – CLASSIFICATION AND COMPENSATION STUDY .................................... 21
+REF 2: CITY OF NEW PRAGUE, MINNESOTA - CLASSIFICATION AND COMPENSATION STUDY ............................ 21
+REF 3: TOWN OF ROLESVILLE, NORTH CAROLINA – CLASSIFICATION AND COMPENSATION STUDY ................. 21
+REF 4: ATHENS-CLARKE COUNTY, GEORGIA – FIRE DEPARTMENT CLASSIFICATION AND COMPENSATION
+STUDY ........................................................................................................",4322,5040,4f9479126a06ae1d2bbf911ebe6ed1c32d592a120115b6e7338394c5f3982948,"................... 20
+TIMELINE ................................................................................................................................","............................................................ 21
+REF 5: BRUNSWICK COUNTY, VIGINIA – CLASSIFICATION AND COMPENSATION STUDY .......................",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,moderate,weak,neutral_or_unclear,moderate,documentary_mechanism_claim,CLASSIFICATION AND COMPENSATION STUDY,true,mentions_classification_compensation_studies_peer_benchmarking_context,Bibliographic reference label only; does not state results or wage adjustments.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_01bbfc7a8e05ae18006a66cc44ed348196b217803d48474f22,2,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-b68db7c8823e2b70d3183edc,SPAN321-1190b60bd3fc4c8ea550db90,TXT321-aa21f9d90e9e5fb29f4c,RS429-68db620565c5ffc8a222,TS4L-49ab66d3fa558f37d11a,lane_4,tier_b,verification_ready_medium,https://mccmeetingspublic.blob.core.usgovcloudapi.net/indpndncia-meet-c00f08ee8cc04df2807c8e4aa300177c/ITEM-Attachment-001-769871a5f26f4d888e9ef42883398aab.pdf,"Meeting packet attachment referencing “City of Americus, Georgia – Classification and Compensation Study” (AutoSolve)",Americus,GA,safety_and_non_safety_compensation_units,Public Safety + Non-Safety (position classifications referenced),,2014-2024 target window (reference indicates 2024 Council Approved / Implementation Completed),2014,2024,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-aa21f9d90e9e5fb29f4c.txt,4881b19758232faddf6ff7fc463b2f4e749f4c0acdf83c7128534d2258bf3280,b5c3dca6491aea9b8a8cb5a7c9f7225b7f56a3b1323914c634747182288a4500,"........................................................................... 21
+REF 1: CITY OF AMERICUS, GEORGIA – CLASSIFICATION AND COMPENSATION STUDY .................................... 21
+REF 2: CITY OF NEW PRAGUE, MINNESOTA - CLASSIFICATION AND COMPENSATION STUDY ............................ 21
+REF 3: TOWN OF ROLESVILLE, NORTH CAROLINA – CLASSIFICATION AND COMPENSATION STUDY ................. 21
+REF 4: ATHENS-CLARKE COUNTY, GEORGIA – FIRE DEPARTMENT CLASSIFICATION AND COMPENSATION
+STUDY .................................................................................................................................................................... 21
+REF 5: BRUNSWICK COUNTY, VIGINIA – CLASSIFICATION AND",4439,5157,bf87a3d43ca05aaee4c7b6a6f42da9ea904dcbaad8897ce66159a1d4f3192d0c,"........................................................................... 20
+REFERENCES ......................................................................"," COMPENSATION STUDY .................................... 21
+REF 6: CITY OF RINCON, GEORGIA – CLASSIFICATION AND COMPENSATION STUDY .............................",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,weak,weak,neutral_or_unclear,moderate,documentary_mechanism_claim,CLASSIFICATION AND COMPENSATION STUDY,true,explicit_compensation_study_title_implies_comparability_work,Market/comparability pressure via explicit compensation study referenced; no wage or causal inference.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0b39d2128c0b89b8006a66cc399df0819583d229e8628339cc,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-58f10a98ccbba50cc05c07d7,SPAN321-a0c236ffb9afc2e48fe7d7a5,TXT321-aa21f9d90e9e5fb29f4c,RS429-68db620565c5ffc8a222,TS4L-49ab66d3fa558f37d11a,lane_4,tier_b,verification_ready_medium,https://mccmeetingspublic.blob.core.usgovcloudapi.net/indpndncia-meet-c00f08ee8cc04df2807c8e4aa300177c/ITEM-Attachment-001-769871a5f26f4d888e9ef42883398aab.pdf,"Meeting packet attachment referencing “City of Americus, Georgia – Classification and Compensation Study” (AutoSolve)",Americus,GA,safety_and_non_safety_compensation_units,Public Safety + Non-Safety (position classifications referenced),,2014-2024 target window (reference indicates 2024 Council Approved / Implementation Completed),2014,2024,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-aa21f9d90e9e5fb29f4c.txt,4881b19758232faddf6ff7fc463b2f4e749f4c0acdf83c7128534d2258bf3280,b5c3dca6491aea9b8a8cb5a7c9f7225b7f56a3b1323914c634747182288a4500,"CLASSIFICATION AND COMPENSATION STUDY .................................... 21
+REF 2: CITY OF NEW PRAGUE, MINNESOTA - CLASSIFICATION AND COMPENSATION STUDY ............................ 21
+REF 3: TOWN OF ROLESVILLE, NORTH CAROLINA – CLASSIFICATION AND COMPENSATION STUDY ................. 21
+REF 4: ATHENS-CLARKE COUNTY, GEORGIA – FIRE DEPARTMENT CLASSIFICATION AND COMPENSATION
+STUDY .................................................................................................................................................................... 21
+REF 5: BRUNSWICK COUNTY, VIGINIA – CLASSIFICATION AND COMPENSATION STUDY .................................... 21
+REF 6: CITY OF RINCON, GEORGIA – CLASSIFICATION AND CO",4553,5271,a86a92b79999ddfd26a50dd9754483102ba30ff1751f9c6991e78e705a5ff0ce,"......................................................................................................................... 21
+REF 1: CITY OF AMERICUS, GEORGIA – ","MPENSATION STUDY ........................................ 21
+EXHIBIT A – CITY OF INDEPENDENCE – PROPOSAL SUBMITTAL FORM ........................................",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,moderate,not_supported,neutral_or_unclear,moderate,documentary_mechanism_claim,CLASSIFICATION AND COMPENSATION STUDY,true,compensation_study_label_implies_market_benchmarking_context,Applies only to the listed 'classification and compensation study' items; no explicit market comparison or adjustment described beyond the study title.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0bdd47dad3d64c50006a66cc3b375c81978c76c406ec4e9674,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-4fba2a2f3202daa2c8ffa1a1,SPAN321-12d4ed024f4596efe63f15d2,TXT321-9ae53fd29f08df1b5941,RS429-6ea8fd132f54f2e360a0,TS4L-ac9b90b8cf0807ce53fc,lane_4,tier_b,verification_ready_medium,https://lewisvillenc.net/sites/default/files/uploads/Request%20Documents/lewisville-rfp-pay-study.pdf,"Town of Lewisville, NC RFP: Classification and Compensation Study (Lewisville RFP Pay Study) — dated August 30, 2024",Lewisville,NC,safety_and_non_safety_compensation_units,safety_and_non_safety_compensation_units,,"Request for Proposals (RFP) dated August 30, 2024",2024-08-30,2025-06-30,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-9ae53fd29f08df1b5941.txt,788a66e73e14a89a06243a1cfd586c6131d15e21fb72eba5b54742343b2eade8,d81c1013174096dd4d3c18d101d680ae54bf91c3dc3372d958631382be824d2e,"Town of Lewisville, NC
+Notice of Request for Proposals
+CLASSIFICATION & COMPENSATION
+STUDY SERVICES
+Issue Date:",0,111,37d8903493c2ef4d29e50ec09639f5801bcef1c32d42b385ecd04c69ab883555,,"
+
+August 30, 2024
+
+To:
+
+All Prospective Respondents
+
+From:
+
+Stacy Tolbert, Town Manager
+
+Subject:
+
+Request for Proposals for Classification and Compensation Stu",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,moderate,not_supported,neutral_or_unclear,moderate,documentary_mechanism_claim,"CLASSIFICATION & COMPENSATION
+STUDY SERVICES",true,classification_compensation_study_marker_only,Study-scope header indicating compensation/classification study services (no explicit market/comparability language).,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_068fe1f6f7deeea4006a66cc3bd0f881959959155440346ed9,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-4a61ab99649d3a65744de392,SPAN321-fde5812710dd68d23b9b7dec,TXT321-9ae53fd29f08df1b5941,RS429-6ea8fd132f54f2e360a0,TS4L-ac9b90b8cf0807ce53fc,lane_4,tier_b,verification_ready_medium,https://lewisvillenc.net/sites/default/files/uploads/Request%20Documents/lewisville-rfp-pay-study.pdf,"Town of Lewisville, NC RFP: Classification and Compensation Study (Lewisville RFP Pay Study) — dated August 30, 2024",Lewisville,NC,safety_and_non_safety_compensation_units,safety_and_non_safety_compensation_units,,"Request for Proposals (RFP) dated August 30, 2024",2024-08-30,2025-06-30,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-9ae53fd29f08df1b5941.txt,788a66e73e14a89a06243a1cfd586c6131d15e21fb72eba5b54742343b2eade8,d81c1013174096dd4d3c18d101d680ae54bf91c3dc3372d958631382be824d2e,"Date:
+
+August 30, 2024
+
+To:
+
+All Prospective Respondents
+
+From:
+
+Stacy Tolbert, Town Manager
+
+Subject:
+
+Request for Proposals for Classification and Compensation Study
+
+THE PROJECT
+The Town of Lewisville is seeking proposals from qualified firms to provide classification and
+compensation study services to the Town. We anticipate having a Classification &
+Compensation system that is logical, understandable and equitable.
+We are interested in a process that includes employee engagement in an evaluation of our
+system. The Town’s objectives are to:
+•
+•
+•
+•
+•
+•
+
+Study and evaluate all positions within the Town for purposes of determining proper
+classification and",106,772,e77319b13d9729b69b272564e1328c0660290dc224ecd289cdd917c1d436b4da,"Town of Lewisville, NC
+Notice of Request for Proposals
+CLASSIFICATION & COMPENSATION
+STUDY SERVICES
+Issue "," salary for each employee;
+Standardize and modernize job titles and job descriptions;
+Identify those classes of positions that are exempt and non-exempt in comp",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,weak,weak,weak,neutral_or_unclear,weak,documentary_mechanism_claim,Request for Proposals for Classification and Compensation Study,true,compensation_study_called_for_no_market_comparison_terms,"RFP title references a classification and compensation study, but does not explicitly mention market or peer comparability.",true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0169059537c2cd5c006a66cc3c060c8195a7559bc698ac256d,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-06a5cf3086fa05adf00d7d5e,SPAN321-4f73da4344495304a87c9187,TXT321-9ae53fd29f08df1b5941,RS429-6ea8fd132f54f2e360a0,TS4L-ac9b90b8cf0807ce53fc,lane_4,tier_b,verification_ready_medium,https://lewisvillenc.net/sites/default/files/uploads/Request%20Documents/lewisville-rfp-pay-study.pdf,"Town of Lewisville, NC RFP: Classification and Compensation Study (Lewisville RFP Pay Study) — dated August 30, 2024",Lewisville,NC,safety_and_non_safety_compensation_units,safety_and_non_safety_compensation_units,,"Request for Proposals (RFP) dated August 30, 2024",2024-08-30,2025-06-30,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-9ae53fd29f08df1b5941.txt,788a66e73e14a89a06243a1cfd586c6131d15e21fb72eba5b54742343b2eade8,d81c1013174096dd4d3c18d101d680ae54bf91c3dc3372d958631382be824d2e,"ed in the study to include reasonable dedication of key
+personnel.
+2. Consultant to meet with Town Manager and department heads to explain study and
+process to be used.
+3. Consultant to provide at lease bi-weekly updates to the Town Manager.
+TASK 2: Classification Study
+1. Consultant to review current classification grade methodology and propose
+recommended strategies for the town.
+2. Consultant to conduct interviews and/or job audits with each employee.
+3. Consultant to update job descriptions to uniformly reflect the distinguishing
+characteristics, essential job functions, minimum qualifications (education/experience
+and knowledge/skills/abilities), working conditions (physical demands, work
+environment, and travel requirements), and certification/licenses/registration",2924,3705,5c4f5dd01c5c5029415e68c0f27e3db3fd4da1a989f23b095ed75faadb17bb0a,"s and efficiency.
+TASK 1: Information Meetings
+1. Consultant to schedule an initial meeting with the Town Manager to discuss the process
+and tasks to be perform","
+
+RFP – CLASSIFICATION & COMENSATION STUDY SERVICES
+
+2
+
+4.
+
+5.
+6.
+7.
+8.
+
+requirements for classification as needed. Job descriptions are to be updated for all
+p",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,moderate,moderate,neutral_or_unclear,moderate,documentary_mechanism_claim,TASK 2: Classification Study,true,classification_study_tied_to_grade_methodology_recalibration,Only indicates a planned classification study; no explicit peer/market wage adjustment stated in this span.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0e1c4c75bee005d2006a66cc3c5b748195bd67747529e86ee0,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-106b23e8e82b08e0e4d594dd,SPAN321-65b4249238e9369608f1a620,TXT321-9ae53fd29f08df1b5941,RS429-6ea8fd132f54f2e360a0,TS4L-ac9b90b8cf0807ce53fc,lane_4,tier_b,verification_ready_medium,https://lewisvillenc.net/sites/default/files/uploads/Request%20Documents/lewisville-rfp-pay-study.pdf,"Town of Lewisville, NC RFP: Classification and Compensation Study (Lewisville RFP Pay Study) — dated August 30, 2024",Lewisville,NC,safety_and_non_safety_compensation_units,safety_and_non_safety_compensation_units,,"Request for Proposals (RFP) dated August 30, 2024",2024-08-30,2025-06-30,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-9ae53fd29f08df1b5941.txt,788a66e73e14a89a06243a1cfd586c6131d15e21fb72eba5b54742343b2eade8,d81c1013174096dd4d3c18d101d680ae54bf91c3dc3372d958631382be824d2e,"TASK 3: Compensation Study
+1. Consultant to review current compensation plan (salary grade levels) and understand
+current challenges in recruiting and retaining employees.
+2. Consultant to recommend and identify a consistent and competitive market position
+that the Town can strive to maintain.
+3. Consultant to recommend comparable labor markets, including both private and public
+sector employees for compensation study.
+4. Consultant to recommend appropriate salary range f",4629,5105,36af823a2e7dbddb257c459d276bff287e9bda384224fc73ee5f19b0a7f774ff,"ortunities as deemed appropriate.
+Consultant to submit recommendations for appropriate implementation measures that
+the various departments will need to take.
+
+","or each position based on the
+classification plan, internal relationships and equality. Prepare a new salary structure
+based on best practices.
+5. Consultant to",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,strong,strong,not_supported,neutral_or_unclear,strong,direct_text_claim,identify a consistent and competitive market position,true,compensation_study_competitive_market_position,Supports maintaining competitiveness via market-position recommendation; does not establish causal effect,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_032e986da5f1275d006a66cc3d71b88196a4eeb2fc62d408a4,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-27f6a083952c8c01fd4c449e,SPAN321-f5139edd4e6f5ae08526bce7,TXT321-66464500f3bf6782183d,RS429-75877f6f2bb83306c3e3,TS4L-a5ce737e9deaa462634d,lane_4,tier_b,verification_ready_medium,https://dca.georgia.gov/document/reports/2020munisafetyfinalpdf/download,"2020 Municipal Government Wage and Salary Survey: Public Safety (final) (includes Monroe, GA)",Monroe,GA,safety_and_non_safety_compensation_units,Public Safety (municipal public safety positions),,2020,2020,2020,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-66464500f3bf6782183d.txt,453bd7328583ca17db8783480a683d7c313e4b76bbfba18b8bd1ec1bb46249f5,def37cf4a039813700317ac070d6bc8fc653bb1fe0e74aab8c911cbdb1697444,"2020
+Municipal Wage
+and Salary Survey
+Public Safety
+Positions
+January 2021
+Georgia Department of Community Affairs
+Office of Research
+60 Executive Park South
+Atlanta, Georgia 30329-2231
+404-679-4940",0,198,62f3c4fd88177f1ef2677554d7b0e8c7f300a3d15058b738c4ffdd46266f8b54,,"
+
+Public Safety
+
+County Job Descriptions
+Animal Control Director Performs professional and skilled work in supervising and coordinating work
+activities of other",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,weak,not_supported,weak,neutral_or_unclear,weak,context_only,"Municipal Wage
+and Salary Survey",true,market_comparability_via_wage_survey_title_only,Title/metadata indicating a wage-and-salary survey; no explicit peer/market adjustment language in the span.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0eaea0a3eb537664006a66cc3ee1988190a505bf31700e6092,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-4520a480e003e263913250b2,SPAN321-07826a95223aa5789173b303,TXT321-66464500f3bf6782183d,RS429-75877f6f2bb83306c3e3,TS4L-a5ce737e9deaa462634d,lane_4,tier_b,verification_ready_medium,https://dca.georgia.gov/document/reports/2020munisafetyfinalpdf/download,"2020 Municipal Government Wage and Salary Survey: Public Safety (final) (includes Monroe, GA)",Monroe,GA,safety_and_non_safety_compensation_units,Public Safety (municipal public safety positions),,2020,2020,2020,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-66464500f3bf6782183d.txt,453bd7328583ca17db8783480a683d7c313e4b76bbfba18b8bd1ec1bb46249f5,def37cf4a039813700317ac070d6bc8fc653bb1fe0e74aab8c911cbdb1697444,"staff.
+Chief, Fire Department Plans, directs, organizes, and coordinates the activities of a fire department.
+
+DCA - 2015 County Government Wage and Salary Survey • i - 1
+
+Public Safety
+
+Chief, Police Department Plans, directs, organizes, and coordinates the activities of municipal police
+department in accordance with authority delegated by Mayor and Council.
+Code Enforcement Officer Performs technical level work in ensuring that all codes and ordinances are
+adhered to throughout jurisdiction.
+Communications Director Directs the operations, development, and implementation of policies and
+procedures and the administration and management of the Communicati",2731,3393,a4d52b2329f940f7455c84154d60eba7481e0b692fff35fd74aec450fb515df0,"ies,
+based on legal information and previous law enforcement experience.
+Chief Jailer/Jail Administrator Supervises and coordinates the work activities of jail ","ons
+Department.
+Corporal, Police Department Performs law enforcement and some routine investigative work. May train entrylevel police officers and serve as a le",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,weak,weak,neutral_or_unclear,moderate,documentary_mechanism_claim,DCA - 2015 County Government Wage and Salary Survey,true,mentions_wage_and_salary_survey_for_compensation_benchmarking,only indicates presence of a wage/salary survey; does not directly say pay comparisons affect any specific wages,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0a874022c219c02a006a66cc3ef578819480e1effb61fd17d5,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-474bc41d18c42d54ecdcca18,SPAN321-e597abea91303c1f9bbc36e2,TXT321-66464500f3bf6782183d,RS429-75877f6f2bb83306c3e3,TS4L-a5ce737e9deaa462634d,lane_4,tier_b,verification_ready_medium,https://dca.georgia.gov/document/reports/2020munisafetyfinalpdf/download,"2020 Municipal Government Wage and Salary Survey: Public Safety (final) (includes Monroe, GA)",Monroe,GA,safety_and_non_safety_compensation_units,Public Safety (municipal public safety positions),,2020,2020,2020,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-66464500f3bf6782183d.txt,453bd7328583ca17db8783480a683d7c313e4b76bbfba18b8bd1ec1bb46249f5,def37cf4a039813700317ac070d6bc8fc653bb1fe0e74aab8c911cbdb1697444,"es activities of persons
+involved in rescue, care, and transportation of catastrophe/accident victims.
+
+i - 2 • DCA - 2015 County Government Wage and Salary Survey
+
+Public Safety
+
+Emergency Medical Technician (EMT) Provides emergency care and operates specialized medical equipment before,
+during, and after the transport of patients to
+emergency facilities. This title covers all certification levels including EMTBasic, EMT, Cardiac Technician, and Paramedic.
+Engine Operator/Driver, Fire Department Drives fire fighting vehicle to fire scene and conducts pumping operations to
+assist in fire fighting.
+Evidence Clerk/Technician Responsible for securing, organi",5367,6030,bca718663756e7835879f08136b53be4b0524e9e3cd6e37a54519c9ac4289945," administration, and operation of the county
+emergency management unit.
+Emergency Medical Services Director Directs emergency medical service program, coordinat","zing, and storing crime evidence and/or seized
+property.
+Fire Marshal Plans, manages, and coordinates fire prevention and fire investigation activities
+of the f",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,strong,strong,not_supported,neutral_or_unclear,strong,documentary_mechanism_claim,2015 County Government Wage and Salary Survey,true,wage_and_salary_survey_market_adjustment_proxy,Used only as documentary evidence of a wage/salary survey reference (no causal inference).,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0bff3a6fa1745bed006a66cc4013b08194b93acf9953e202fa,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-00a407a5b062d663621d8700,SPAN321-b6724341d67e850ad27c2d76,TXT321-66464500f3bf6782183d,RS429-75877f6f2bb83306c3e3,TS4L-a5ce737e9deaa462634d,lane_4,tier_b,verification_ready_medium,https://dca.georgia.gov/document/reports/2020munisafetyfinalpdf/download,"2020 Municipal Government Wage and Salary Survey: Public Safety (final) (includes Monroe, GA)",Monroe,GA,safety_and_non_safety_compensation_units,Public Safety (municipal public safety positions),,2020,2020,2020,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-66464500f3bf6782183d.txt,453bd7328583ca17db8783480a683d7c313e4b76bbfba18b8bd1ec1bb46249f5,def37cf4a039813700317ac070d6bc8fc653bb1fe0e74aab8c911cbdb1697444,"and advises prisoner of charges. Also
+assists subordinates in performance of duties during an assigned shift.
+
+DCA - 2015 County Government Wage and Salary Survey • i - 3
+
+Public Safety
+
+Major, Sheriffs Office Directs and coordinates activities of county sheriff's deputies by conducting roll
+call, relaying orders and messages from superiors, and recording information;
+identifies arrested suspects in logbook and advises prisoner of charges. Also
+assists subordinates in performance of duties during an assigned shift.
+Patrol Officer, Police Department Patrols assigned area on foot, using motorcycle, car, or on horseback, to control
+traffic, prevent crimes o",8380,9042,873284718567eeb55c49e8f809055f2e9e6018502f6884e9b7617d91f0b25d00,"police patrol officers by conducting roll
+call, relaying orders and messages from superiors, and recording information;
+identifies arrested suspects in logbook ","r disturbances of peace, and arrest violators.
+Patrol Officer, Sheriffs Office As a member of the county sheriff's office, patrols assigned area on foot, using
+",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,not_supported,not_supported,not_supported,not_applicable,not_supported,context_only,advises prisoner of charges.,true,no_market_or_comparability_wage_comp_reference,Limited to duties of advising prisoners and assisting subordinates; no peer/recruitment/competitiveness/compensation-study language.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_05dfc6acb0d92c2b006a66cc40a5d48193ba72b5dba905322f,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-5c07f2dde31c7e560ccc3f28,SPAN321-d7912ae93ad7478bb534c9ca,TXT321-66464500f3bf6782183d,RS429-75877f6f2bb83306c3e3,TS4L-a5ce737e9deaa462634d,lane_4,tier_b,verification_ready_medium,https://dca.georgia.gov/document/reports/2020munisafetyfinalpdf/download,"2020 Municipal Government Wage and Salary Survey: Public Safety (final) (includes Monroe, GA)",Monroe,GA,safety_and_non_safety_compensation_units,Public Safety (municipal public safety positions),,2020,2020,2020,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-66464500f3bf6782183d.txt,453bd7328583ca17db8783480a683d7c313e4b76bbfba18b8bd1ec1bb46249f5,def37cf4a039813700317ac070d6bc8fc653bb1fe0e74aab8c911cbdb1697444,".
+Warden Directs the administration and operation of employees and inmates at a county
+penal facility.
+
+i - 4 • DCA - 2015 County Government Wage and Salary Survey
+
+Public Safety
+
+ Animal Control Director
+Summary of Data
+Number
+reporting
+
+Group
+
+Average
+
+Highest
+
+Average
+
+Highest
+
+Number of
+full-time
+employees
+
+Minimum entry-level wage**
+
+Maximum wage**
+
+A
+
+2
+
+35,037
+
+38,700
+
+52,529
+
+57,177
+
+2
+
+B
+
+1
+
+36,296
+
+36,296
+
+50,523
+
+50,523
+
+1
+
+C
+
+2
+
+27,914
+
+34,902
+
+39,697
+
+48,506
+
+2
+
+D
+
+3
+
+33,286
+
+37,707
+
+47,986
+
+58,698
+
+3
+
+E
+
+2
+
+24,586
+
+28,371
+
+41,267
+
+43,014
+
+2
+
+Total/Avg
+
+10
+
+31,424
+
+35,195
+
+46,400
+
+51,584
+
+10
+
+**Figures calculated using annual salaries and an",10556,11219,5604d10b5c739c2f81ed9fc4609ff94ad2d0127ac20174d7cd5a1d73b284a501,"iffs Office Responsible for the direction and supervision of law enforcement activities
+performed by a group of deputies during a particular shift or assignment","nualized hourly wages, excluding amounts reported as paid ""Per Occurance"".
+
+Population Group Data
+2019
+Population
+
+Minimum
+entry-level
+wage
+
+Maximum
+wage
+
+Wage
+",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,weak,not_supported,neutral_or_unclear,moderate,documentary_mechanism_claim,DCA - 2015 County Government Wage and Salary Survey,true,wage_and_salary_survey_reference_implies_market_comparison,"Only references a wage and salary survey (market/benchmarks), without stating wage adjustments or comparators.",true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_099d5f0f692ca473006a66cc414ac881979a972a55726dbabc,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-e7e64d8e009570dbc0f66d01,SPAN321-2c6fcfd001ae92b4ef6a68b6,TXT321-3f3f6e80b61ba5988d6a,RS429-920b49d41a0106fa10a0,TS4L-4802e54c7a5ea047ca32,lane_4,tier_b,verification_ready_medium,https://dca.georgia.gov/document/reports/2022surveycitypublicsafetyfinalpdf/download,2022 Municipal Government Wage and Salary Survey (Public Safety) - final PDF (DCA),Tifton,GA,safety_and_non_safety_compensation_units,"Public Safety (e.g., patrol officer, dispatcher, and other public safety classifications within the survey)",,2022,2022-01-01,2022-12-31,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-3f3f6e80b61ba5988d6a.txt,2bb4f1595f96ef20cd48f640d015a5a96077dbf85eff41fa9393276e57f53e80,b98a8cfc5da2cd88890a03cc55c36aa016d1254c9385913a6dc37751ba02ba5b,"2022
+Municipal Wage
+and Salary Survey
+Public Safety
+Positions
+December 2022
+Georgia Department of Community Affairs
+Office of Research
+60 Executive Park South
+Atlanta, Georgia 30329-2231
+404-679-4940",0,199,301ab32e21ed7c6d331729b8e1d277259b086bf4d494dbb8eaa0aeb1a6d1cbd5,,"
+
+Public Safety
+
+Municipal Job Descriptions
+Animal Control Director Performs professional and skilled work in supervising and coordinating work
+activities of ot",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,strong,strong,not_supported,neutral_or_unclear,moderate,documentary_mechanism_claim,"Municipal Wage
+and Salary Survey",true,wage_and_salary_survey_title_implies_market_comparability,Title indicates wage/salary surveying for public safety positions; no explicit peer comparison or adjustment language within span.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_013d01ad0dee1d75006a66cc44ee2c8195a27cc991f3ed6794,2,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-90f2248635f38571339da9d5,SPAN321-ece15cdfdab1775218177779,TXT321-3f3f6e80b61ba5988d6a,RS429-920b49d41a0106fa10a0,TS4L-4802e54c7a5ea047ca32,lane_4,tier_b,verification_ready_medium,https://dca.georgia.gov/document/reports/2022surveycitypublicsafetyfinalpdf/download,2022 Municipal Government Wage and Salary Survey (Public Safety) - final PDF (DCA),Tifton,GA,safety_and_non_safety_compensation_units,"Public Safety (e.g., patrol officer, dispatcher, and other public safety classifications within the survey)",,2022,2022-01-01,2022-12-31,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-3f3f6e80b61ba5988d6a.txt,2bb4f1595f96ef20cd48f640d015a5a96077dbf85eff41fa9393276e57f53e80,b98a8cfc5da2cd88890a03cc55c36aa016d1254c9385913a6dc37751ba02ba5b,"entation of policies and
+procedures and the administration and management of the Communications
+Department.
+
+DCA - 2022 Municipal Government Wage and Salary Survey • i - 1
+
+Public Safety
+
+Corporal, Police Department Performs law enforcement and some routine investigative work. May train entrylevel police officers and serve as a lead officer on special assignments.
+Corrections Officer Supervises inmates in county penal institution in accordance with established
+policies, regulations, and procedures, which may include preparing written
+reports concerning incidences of inmate disturbances or injuries.
+Detention Officer Supervises prisoners in station or jail",2485,3148,47c752fd75f3ab7261093ed7e1f9d6c467923e1f61b01babacdf875558ebf817,"l work in ensuring that all codes and ordinances are
+adhered to throughout jurisdiction.
+Communications Director Directs the operations, development, and implem",", assuming responsibilities for all needs of
+prisoners during detention. May prepare arrest records identifying prisoner and
+charge assigned.
+Dispatcher Operate",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,strong,moderate,not_supported,neutral_or_unclear,strong,documentary_mechanism_claim,Municipal Government Wage and Salary Survey,true,explicit_wage_salary_survey_title_without_effect_claim,Supports that wage/compensation was studied for municipal government pay setting; does not state competitive or pay adjustment outcomes.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0920d4b394dfaf4a006a66cc42569c8193a1d9adf283ca12e8,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-86809b4904563ad79f25c0f2,SPAN321-ce1118a50e98aca08ba96139,TXT321-3f3f6e80b61ba5988d6a,RS429-920b49d41a0106fa10a0,TS4L-4802e54c7a5ea047ca32,lane_4,tier_b,verification_ready_medium,https://dca.georgia.gov/document/reports/2022surveycitypublicsafetyfinalpdf/download,2022 Municipal Government Wage and Salary Survey (Public Safety) - final PDF (DCA),Tifton,GA,safety_and_non_safety_compensation_units,"Public Safety (e.g., patrol officer, dispatcher, and other public safety classifications within the survey)",,2022,2022-01-01,2022-12-31,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-3f3f6e80b61ba5988d6a.txt,2bb4f1595f96ef20cd48f640d015a5a96077dbf85eff41fa9393276e57f53e80,b98a8cfc5da2cd88890a03cc55c36aa016d1254c9385913a6dc37751ba02ba5b,"t, grounds, and hydrants. Note: This is an entry level
+position and does not include Engine Driver.
+
+i - 2 • DCA - 2022 Municipal Government Wage and Salary Survey
+
+Public Safety
+
+Firefighter/EMT Controls and extinquishes fires, protects life and property, maintains fire
+equipment and facilties, and provides emergency care and operates specialized
+medical equipment before, during, and after the transport of patients to
+emergency facilities.
+Investigator/Detective, Police Department Performs investigations in the police department to solve or prevent crimes.
+Examines crime scenes to obtain clues and gather evidence that may lead to a
+conviction.
+Lieutenant",5044,5707,0f0ff1e5facf889c7f2bf09ef9af7b59ae25b0feaf2d06bcfbbb3d6453f6ceee,"ls and extinguishes fires, protects life and property, and maintains
+equipment. Performs assigned duties in maintaining apparatus, quarters,
+buildings, equipmen",", Fire Officer Performs fire fighting responsibilities according to NFPA 1021 and emergency
+care duties. Responsible for the daily operation of a fire station, ",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,weak,weak,neutral_or_unclear,moderate,documentary_mechanism_claim,DCA - 2022 Municipal Government Wage and Salary Survey,true,wage_salary_survey_marker_not_job_term,bounded to the named wage/salary survey reference only; no causal inference,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0b3da369c3a782a8006a66cc47d9e48193a2e72c4042204d54,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-851b4b72084650d5942a0afc,SPAN321-187fb9bee16f13e7d405a362,TXT321-3f3f6e80b61ba5988d6a,RS429-920b49d41a0106fa10a0,TS4L-4802e54c7a5ea047ca32,lane_4,tier_b,verification_ready_medium,https://dca.georgia.gov/document/reports/2022surveycitypublicsafetyfinalpdf/download,2022 Municipal Government Wage and Salary Survey (Public Safety) - final PDF (DCA),Tifton,GA,safety_and_non_safety_compensation_units,"Public Safety (e.g., patrol officer, dispatcher, and other public safety classifications within the survey)",,2022,2022-01-01,2022-12-31,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-3f3f6e80b61ba5988d6a.txt,2bb4f1595f96ef20cd48f640d015a5a96077dbf85eff41fa9393276e57f53e80,b98a8cfc5da2cd88890a03cc55c36aa016d1254c9385913a6dc37751ba02ba5b,"orcement activities
+performed by a group of county police officers during a particular shift or
+assignment.
+
+DCA - 2022 Municipal Government Wage and Salary Survey • i - 3
+
+Public Safety
+
+ Animal Control Director
+Summary of Data
+Number
+reporting
+
+Group
+
+Average
+
+Highest
+
+Average
+
+Highest
+
+Number of
+full-time
+employees
+
+Minimum entry-level wage**
+
+Maximum wage**
+
+A
+
+2
+
+36,013
+
+40,660
+
+53,976
+
+60,070
+
+2
+
+B
+
+1
+
+37,752
+
+37,752
+
+52,562
+
+52,562
+
+1
+
+C
+
+2
+
+29,357
+
+31,990
+
+41,475
+
+45,531
+
+3
+
+D
+
+1
+
+39,146
+
+39,146
+
+54,808
+
+54,808
+
+1
+
+Total/Avg
+
+6
+
+35,567
+
+37,387
+
+50,705
+
+53,243
+
+7
+
+**Figures calculated using annual salaries and annualized hourly wages, excluding am",7830,8493,1f96a25d1967e7e791d74b75a5b7a122ec2d2baa595fd0d28bc732149d012f73,"nt
+safety in the processes of conducting school classes and special events.
+Sergeant, Police Department Responsible for the direction and supervision of law enf","ounts reported as paid ""Per Occurance"".
+
+Population Group Data
+
+Group
+
+Jurisdiction
+
+2021
+Population
+
+Minimum
+entry-level
+wage
+
+Maximum
+wage
+
+Wage
+reported as
+
+",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,strong,strong,not_supported,neutral_or_unclear,strong,documentary_mechanism_claim,Municipal Government Wage and Salary Survey,true,wage_salary_survey_market_comparability_reference,Documentary reference to a wage/ salary survey as evidence of market/comparability-based wage setting; does not show effects or wage differences.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0e9759f189e4906a006a66cc47db608197bd0b6f7d6aece4e9,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-c0c223b18e2ae03677f30e34,SPAN321-0859b7591911c05342bda897,TXT321-3f3f6e80b61ba5988d6a,RS429-920b49d41a0106fa10a0,TS4L-4802e54c7a5ea047ca32,lane_4,tier_b,verification_ready_medium,https://dca.georgia.gov/document/reports/2022surveycitypublicsafetyfinalpdf/download,2022 Municipal Government Wage and Salary Survey (Public Safety) - final PDF (DCA),Tifton,GA,safety_and_non_safety_compensation_units,"Public Safety (e.g., patrol officer, dispatcher, and other public safety classifications within the survey)",,2022,2022-01-01,2022-12-31,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-3f3f6e80b61ba5988d6a.txt,2bb4f1595f96ef20cd48f640d015a5a96077dbf85eff41fa9393276e57f53e80,b98a8cfc5da2cd88890a03cc55c36aa016d1254c9385913a6dc37751ba02ba5b,"* Blank No. of Employees likely indicates position vacancy at time of reporting.
+DCA - 2022 Municipal Government Wage and Salary Survey • 1",9002,9141,3a72c9cee488e3c6fcdc43d1e0137ed457125d3b0f4207e0cf9a453634a01e32,"urly
+
+40
+
+1
+
+C
+
+Perry
+Vidalia
+
+22,029
+10,710
+
+15.38
+26,723.00
+
+21.89
+37,419.00
+
+Hourly
+Annual
+
+40
+40
+
+2
+1
+
+D
+
+Sandersville
+
+5,654
+
+18.82
+
+26.35
+
+Hourly
+
+40
+
+1
+
+","
+
+Public Safety
+
+ Animal Control Officer
+Summary of Data
+Number
+reporting
+
+Group
+
+Average
+
+Highest
+
+Average
+
+Highest
+
+Number of
+full-time
+employees
+
+Minimum en",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,weak,weak,neutral_or_unclear,moderate,documentary_mechanism_claim,Municipal Government Wage and Salary Survey,true,wage_salary_survey_mentioned,evidence of an external wage/compensation survey reference only (no causal or adjustment result stated),true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_007dad0857410f26006a66cc47d9ac81959d2c235730700b93,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-fbc144d80542af476c35ab90,SPAN321-05d055ebff288d76c33f1293,TXT321-c4bbad91f66d2ea23b48,RS429-9dbd9948043f57c31ff8,TS4L-66bba3243693c1d3e51d,lane_4,tier_b,verification_ready_medium,https://www.mtas.tennessee.edu/system/files/mrln/mknowledge/main/Nolensville%20Fire%20Services%20Study.pdf,"MTAS | Nolensville, Tennessee, Fire Services Study (public safety staffing/compensation related recommendations)",Nolensville,TN,safety_and_non_safety_compensation_units,public safety (fire services; may include non-exempt wage/benefit components referenced in study materials),,"Study report (recommendations; not a labor CBA), with projected staffing/wage assumptions described in-report",2012-01-01,2014-12-31,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-c4bbad91f66d2ea23b48.txt,7d98b81533d4ea74bbe6896a170477fd54bc24a28df0818be0fcd319e2449d8f,543aa6f27a30bd6a5d63a94025133f1089ce1de7c5fdbef354a869b0e3616d25,"epartments in Tennessee have a Class 5 ISO rating, and just 128 fire departments
+out of over 732 have a better ISO rating. The Class 5 rating means the NVFD is doing
+the right things to provide good service, and because of this Nolensville residents pay
+competitive rates for property insurance. The Class 9 rating applies to areas within five
+road miles of the fire station but more than 1,000 feet from a fire hydrant. Areas further
+than five road miles from a fire station receive a Class 10 rating. All portions of the
+Town of Nolensville are within the Class 5 rating area.",13874,14452,aa61ee50457b56c078b6caa17408d040bed4e2c25a49e7a45077016aea5f28b5,"rtment (50% of the rating), and water supply (40% of the rating).
+The Class 5 rating is very good (see Figures 1 and 2), as just seventeen percent of all
+fire d","
+
+The University of Tennessee Municipal Technical Advisory Service
+
+5
+
+Public Protection Classification in US
+13,409
+
+14,000
+
+Number of Communities
+
+12,000
+10,0",MARKET_COMPETITIVENESS,pay_competitiveness,high,market_or_comparability_pressure,strong,strong,not_supported,neutral_or_unclear,moderate,direct_text_claim,competitive rates for property insurance.,true,property_insurance_competitive_rate_signal,competitive rates for property insurance tied to ISO Class 5 rating (not wages).,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_029e5ebb1b3787a5006a66cc47df888190b8a05c3f75044e64,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-0a5ec35c5165827664d724a8,SPAN321-70a92e27dcdd20b4de5f5aeb,TXT321-c4bbad91f66d2ea23b48,RS429-9dbd9948043f57c31ff8,TS4L-66bba3243693c1d3e51d,lane_4,tier_b,verification_ready_medium,https://www.mtas.tennessee.edu/system/files/mrln/mknowledge/main/Nolensville%20Fire%20Services%20Study.pdf,"MTAS | Nolensville, Tennessee, Fire Services Study (public safety staffing/compensation related recommendations)",Nolensville,TN,safety_and_non_safety_compensation_units,public safety (fire services; may include non-exempt wage/benefit components referenced in study materials),,"Study report (recommendations; not a labor CBA), with projected staffing/wage assumptions described in-report",2012-01-01,2014-12-31,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-c4bbad91f66d2ea23b48.txt,7d98b81533d4ea74bbe6896a170477fd54bc24a28df0818be0fcd319e2449d8f,543aa6f27a30bd6a5d63a94025133f1089ce1de7c5fdbef354a869b0e3616d25,"The estimated budget was built using average salaries competitive with the local
+market, and by examining the operating budgets of other fire departments. Appendix C
+contains the narrative explanations of the items funded by each line item. The first year
+estimate includes the entire cost of the fire station, fire engine, and required equipment
+for the engine. These costs could be less depending upon whether the town already
+owns suitable land, and the construction materials used for the fire station, but the",35320,35834,b891258cbdcded25ca20759736bd09bd7004eb3f2fa95f844a98e6e2e0a98871,"9
+761,885 779,402
+799,653
+Table 2 – Town of Nolensville Estimated Fire Department Budget
+
+The University of Tennessee Municipal Technical Advisory Service
+
+14
+
+","
+budget is a good estimate to work with. The town can spread the capital costs over
+several years by using bonds, loans, or other long-term funding options.
+The",MARKET_COMPETITIVENESS,pay_competitiveness,high,market_or_comparability_pressure,strong,strong,not_supported,neutral_or_unclear,strong,direct_text_claim,"average salaries competitive with the local
+market, and by examining the operating budgets of other fire departments.",true,competitive_local_market_and_peer_benchmarking_used_for_budget_build,Budget-construction method references competitive local market salaries and comparing to other fire departments' operating budgets; does not provide causal wage evidence.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_034d0833f38b0f29006a66cc4a14dc8193b0fc288821f10e08,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-fb8c7398eae6f5276c5b9e6f,SPAN321-99caf9390e2386974f7ca105,TXT321-7f8df3a9ff186f909999,RS429-abb5730aae663553dcd5,TS4L-411b5f2fb49c4eecee3c,lane_4,tier_b,verification_ready_medium,https://www.cityofhumbletx.gov/site/wp-content/uploads/2024/09/ADOPTED-BUDGET-Final-09.27.24.pdf,"City of Humble, TX — Adopted Budget Final 09.27.24 (FY 2024-2025 Adopted Budget PDF)",Humble,TX,safety_and_non_safety_compensation_units,Police / Fire / Fire Marshal (and other city personnel categories),,"Fiscal Year 2024-2025 (inferred from adopted budget dated 09/27/2024; typically Oct 1, 2024 – Sep 30, 2025)",2024-10-01,2025-09-30,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-7f8df3a9ff186f909999.txt,d619660ae2f5b2cc9be8e6da9f143008cd20bebbfd31658b73f53ab5a326afa0,1db4623f6611baef3e91d90a5e126edd05f5c2e28f5f3dd8e538583e3f75d292,"Pursuant to a position class and compensation study, this budget recommends a 3% cost of
+living adjustment (COLA); the reclassification of 66 of the 103 individual job positions in
+the City; and a reformat of the City’s current grade and step plan to a 21-step system from
+the existing 11-steps. The primary objective is to bring the midpoint of each position’s pay
+grade to the 50th percentile of the existing market, which for the most part has been
+achieved. Those positions not reclassified will b",21282,21783,418bcbc187a627115e7b8af51e6a694338e8c235bdb5ebc85187a8f619111c34,"ards the future as it
+addresses numerous needs and long-overdue improvements throughout the city. The following items are
+highlights of the proposed budget:
+•
+
+","e eligible for performance based step
+increases in addition to the COLA. Front line / non-executive sworn positions in the Police,
+Fire and Fire Marshal Departm",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,strong,moderate,not_supported,neutral_or_unclear,moderate,direct_text_claim,50th percentile of the existing market,true,market_alignment_via_cola_and_reclassification,Market-based pay positioning (50th percentile) mentioned as primary objective for grade midpoints; no causal wage-gap inference.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_09b871a26ab63971006a66cc58f9388190991c0de70608431f,2,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-0ac2755e4dc0515f237ec2c7,SPAN321-22c66fe9ad30a289a14dac0a,TXT321-7f8df3a9ff186f909999,RS429-abb5730aae663553dcd5,TS4L-411b5f2fb49c4eecee3c,lane_4,tier_b,verification_ready_medium,https://www.cityofhumbletx.gov/site/wp-content/uploads/2024/09/ADOPTED-BUDGET-Final-09.27.24.pdf,"City of Humble, TX — Adopted Budget Final 09.27.24 (FY 2024-2025 Adopted Budget PDF)",Humble,TX,safety_and_non_safety_compensation_units,Police / Fire / Fire Marshal (and other city personnel categories),,"Fiscal Year 2024-2025 (inferred from adopted budget dated 09/27/2024; typically Oct 1, 2024 – Sep 30, 2025)",2024-10-01,2025-09-30,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-7f8df3a9ff186f909999.txt,d619660ae2f5b2cc9be8e6da9f143008cd20bebbfd31658b73f53ab5a326afa0,1db4623f6611baef3e91d90a5e126edd05f5c2e28f5f3dd8e538583e3f75d292,"expenditures while
+providing for critical capital improvements and purchases. This budget also addresses our most valuable
+resource that we provide to our residents: our employees. By providing a COLA, enacting the findings of
+the recently completed compensation study and providing for merit-based step increases – the delivery of
+services to our residents will continue to be at the highest of standards and efficiency.
+This Budget represents the culmination of months’ worth of work put in by our department heads and the
+Finance Staff led by Christina Collins and Jessica Dyess, which cannot go unrecognized and celebrated. It
+is a budget that I believe enables the City to continue its path towards re-imagining itself as we approach
+the 100th anniversary of our incorporation and begins to chart a course for our next 100 years.
+Respectfully submitted,",24177,25035,bccab5b1a056c3c4464a569b143bb472ee3e28006d31827476dc387230fdc5a9,"hich drives our conservative approach to budgeted expenditures in the face
+of growing costs. This year’s budget remains balanced between revenues and recurring ","
+
+Jason Stuebe
+City Manager
+
+CITY OF HUMBLE
+ORGANIZATIONAL CHART
+Citizens of
+Humble
+
+Mayor &
+Council
+
+Finance
+
+City
+Secretary
+
+Police
+
+Finance
+Director
+
+City
+Se",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,moderate,not_supported,neutral_or_unclear,moderate,documentary_mechanism_claim,"enacting the findings of
+the recently completed compensation study",true,compensation_study_invoked_for_adjustments,budget justification citing compensation study findings as basis for employee pay adjustments; no causal wage-gap or outcome claim here,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0cd8c1ea09022f7f006a66cc58fa5081968fdb80b568917080,2,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-0cb5668f8ed62c9e87c7ed67,SPAN321-91b57ce249eb7dc64018bce6,TXT321-32d89c4ea6a192d6118d,RS429-bbab66d186419c6d7991,TS4L-1b5f6925a03e4501557f,lane_4,tier_b,verification_ready_medium,https://www.fallschurchva.gov/AgendaCenter/ViewFile/Minutes/_04212023-2499,MINUTES OF COUNCIL WORK SESSION (04/21/2023) — includes “Compensation Study Overview” and “Collective Bargaining Agreement” (AgendaCenter/ViewFile/Minutes/_04212023-2499),Falls Church,VA,safety_and_non_safety_compensation_units,municipal workforce classifications and bargaining context (overview-level lead),,work session minutes dated 2023 (within 2014-2024 window),,,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-32d89c4ea6a192d6118d.txt,57519ed446cb536d6c7235c90695bbe8975e955c956852710994fbe77a414b3d,6103602447a42692158e7e3e5acc7a6a21dd98d380d29f930b7e211ea4b09a55,"a) Compensation Study Overview
+b) FY2024 Budget Priorities
+c) Collective Bargaining Agreement
+d) Legislative Update",564,679,4b4c6a88523d55eb384cad425934f274781db7b40b1cc2c6fc0955145ab60a5b,"indy Mester, Jody Acosta, School Board Chair
+Downs, SB Vice Chair Tate Gould, Dr. Peter Noonan, Kristen Michael, Mechelle Coppock
+TOPICS OF DISCUSSION:
+Agenda
+
+","
+
+MEETING ADJOURNED AT: _10:13 am___
+SIGNATURE OF RECORDER: _Kiran Bawa__
+
+The City of Falls Church is committed to the letter and spirit of the Americans with ",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,moderate,weak,neutral_or_unclear,weak,documentary_mechanism_claim,a) Compensation Study Overview,true,compensation_study_mentioned_only,Merely identifies a compensation study item; does not state peer/market comparisons or market adjustment.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_01b0ecfe0e2aa319006a66cc4c5e048193a1a868ec95f88ed7,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-eaf6d882f2218a02ec602435,SPAN321-00c945a356ddc734e945f99e,TXT321-0f6b02fcef377ec56c13,RS429-bd15c76f562844aee33a,TS4L-8aacdf5bf5638cdda3e4,lane_4,tier_b,verification_ready_medium,https://www.beaufortcountysc.gov/council/committees/finance/agendas/2014/032414-compensation.pdf,"Beaufort County Council Finance Committee Agenda (Mar 24, 2014) - Compensation / FY 2014 Wage and Salary Report (SCAC)",Beaufort,SC,safety_and_non_safety_compensation_units,Mixed job classes (countywide wage/salary report; safety and non-safety may be included),,FY 2014 (wage and salary report referenced in 2014 agenda packet),2014,2014,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-0f6b02fcef377ec56c13.txt,5fd6b854269d271b4913453a542af1594c85037b343d3eed57d286a338be91d4,5c89bab94263a04a17bab84241cfd9602d2ab0df467090ded83cd5fe2811e41a,"AGENDA
+COMPENSATION REVIEW AD HOC COMMITTEE
+Monday, March 24, 2014
+1:00 p.m.
+Large Meeting Room
+Hilton Head Island Branch Library
+11 Beach City Road, Hilton Head Island",452,620,9f17a17443e03ef0d8f06e9b8c51d01d7983905279217f578d938e81f3894f1c,"DMINISTRATION BUILDING
+100 RIBAUT ROAD
+POST OFFICE DRAWER 1228
+BEAUFORT, SOUTH CAROLINA 29901-1228
+TELEPHONE: (843) 255-1000
+FAX: (843) 255-9401
+www.bcgov.net
+
+","
+
+Sub-Committee Members:
+Laura Von Harten, Chairman
+Cynthia Bensch, Vice Chairman
+Stu Rodman
+
+GARY KUBIC
+COUNTY ADMINISTRATOR
+_____________
+BRYAN J. HILL
+DEPUTY",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,weak,moderate,neutral_or_unclear,moderate,documentary_mechanism_claim,COMPENSATION REVIEW AD HOC COMMITTEE,true,compensation_review_committee_signal_for_market_adjustment_review,Compensation review committee agenda item only; no explicit peer/market adjustment details stated in the span.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_03eccccc866bed37006a66cc4cb74c8195b32be0cbe6f194b6,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-f18bd2c5717e2c86172586e3,SPAN321-85f3a84ef557f0d6c2d2f330,TXT321-e2a3c34c3962638427bf,RS429-c8d1a73b5db53bb40074,TS4L-d1d265c5e0754156ef11,lane_4,tier_b,verification_ready_medium,https://dam.assets.ohio.gov/image/upload/serb.ohio.gov/PDF/FF_Reports/2019/19-MED-07-0620.pdf,"Fact-Finding Report (SERB) — City of Monroe, Ohio vs. Monroe Firefighters IAFF Local 3824 (Case 2019-MED-07-0620)",Monroe,OH,safety_and_non_safety_compensation_units,Firefighters (safety),"Monroe Firefighters, IAFF Local 3824",Fact-finding report (case year 2019; wage/comparison discussion tied to contract negotiation),,,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-e2a3c34c3962638427bf.txt,f6300712e7b80cd4a401702c52142b1e14cc3ebcbc26ef9680d330bc78b95553,f5222837af34a10b0dc1162ab127c1f1a2a8bf10bf5691519a9fb9d953a1764f,"Given that the City already pays very competitive wages for its firefighting unit, there is no basis to
+implement higher than average general wage increases. Thus, the Employer’s offer of 2% increases
+is fair and reasonable.
+In addition to the foregoing it is important to note that as of June 2019 the City’s federal
+SAFER grant expired leaving the City with approximately $600K less in funding for Firefighter
+personnel. This deficit in funding already requires that the General Fund be tapped for great",9288,9793,74ca0a2db1647d64c76557627ae829922623e5126749bb77d220b9b6351614f0,"l
+Fire Lieutenant Average
+(excluding Monroe)
+Monroe 2% Proposal
+
+Entry Level
+
+Top Tier
+
+$50,799
+
+$64,534
+
+$46,254
+
+$66,970
+
+$66,655
+
+$72,071
+
+$75,676
+
+$75,676
+
+","er
+transfers going forward than have been necessary in the past to fund firefighting services for the
+City. Although the City currently has a healthy reserve in",MARKET_COMPETITIVENESS,pay_competitiveness,high,market_or_comparability_pressure,strong,strong,not_supported,neutral_or_unclear,strong,direct_text_claim,very competitive wages for its firefighting unit,true,competitive_wage_benchmark_to_justify_increase,Justifies 2% offer by asserting existing pay is already very competitive (market/comparability rationale).,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_01d115126f2a285a006a66cc4d84e08195b373a4e6d670f6d5,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-b3229ddda9cb22119cc98d3c,SPAN321-b77e65a68f186a6f0834c134,TXT321-e2a3c34c3962638427bf,RS429-c8d1a73b5db53bb40074,TS4L-d1d265c5e0754156ef11,lane_4,tier_b,verification_ready_medium,https://dam.assets.ohio.gov/image/upload/serb.ohio.gov/PDF/FF_Reports/2019/19-MED-07-0620.pdf,"Fact-Finding Report (SERB) — City of Monroe, Ohio vs. Monroe Firefighters IAFF Local 3824 (Case 2019-MED-07-0620)",Monroe,OH,safety_and_non_safety_compensation_units,Firefighters (safety),"Monroe Firefighters, IAFF Local 3824",Fact-finding report (case year 2019; wage/comparison discussion tied to contract negotiation),,,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-e2a3c34c3962638427bf.txt,f6300712e7b80cd4a401702c52142b1e14cc3ebcbc26ef9680d330bc78b95553,f5222837af34a10b0dc1162ab127c1f1a2a8bf10bf5691519a9fb9d953a1764f,"recession is a cautionary tale illustrating the need to exercise fiscal restraint in good years in order to
+weather the inevitable bad years.
+The Employer rejects the Union’s proposal for 4% increases across all three years of the
+contract as well as its other proposals to increase wages significantly beyond what is reasonable to
+maintain parity among the City’s safety forces, and well beyond a reasonably competitive wage.
+Furthermore, the City rejects the Union’s additional proposals to increase the rank differential by
+1%, to reinstate FD Medic and FD Intermediate certification pay rates which were eliminated by
+mutual agreement from the contract in a past bargaining cycle, and to increase the working out of
+classification pay rate. All of which are cost increases for the Employer and wage increases for the
+bargaining unit which are not supported by external co",10246,11121,10558f1822d1fb9209a4910b4115ea1845cf21c4fece3b8946cfcbc75ccc0aba,"cent
+5 Table from Employer’s Pre-Hearing Statement
+6 Data from Employer Exhibit 3
+
+SERB Case #2019-MED-07-0620
+
+Fri, 02/21/2020 08:29:07 AM SERB
+
+Page 6 of 22
+
+","mparables.
+2. Article 23: Holidays
+The Employer opposes the Union’s proposal to create “super holiday” language that would
+require the City to pay employees req",MARKET_COMPETITIVENESS,pay_competitiveness,high,market_or_comparability_pressure,strong,strong,weak,neutral_or_unclear,strong,direct_text_claim,"maintain parity among the City’s safety forces, and well beyond a reasonably competitive wage.",true,explicit_parity_and_competitive_wage_language,Employer argues proposed wage increases would exceed what is reasonable to maintain parity and a competitive wage.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_07b419cb1f7a0afa006a66cc4e0374819481fe4b635a2c96c2,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-8d0dc6a4272290e281338239,SPAN321-63f0043863c4f01b6d2c2be8,TXT321-e2a3c34c3962638427bf,RS429-c8d1a73b5db53bb40074,TS4L-d1d265c5e0754156ef11,lane_4,tier_b,verification_ready_medium,https://dam.assets.ohio.gov/image/upload/serb.ohio.gov/PDF/FF_Reports/2019/19-MED-07-0620.pdf,"Fact-Finding Report (SERB) — City of Monroe, Ohio vs. Monroe Firefighters IAFF Local 3824 (Case 2019-MED-07-0620)",Monroe,OH,safety_and_non_safety_compensation_units,Firefighters (safety),"Monroe Firefighters, IAFF Local 3824",Fact-finding report (case year 2019; wage/comparison discussion tied to contract negotiation),,,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-e2a3c34c3962638427bf.txt,f6300712e7b80cd4a401702c52142b1e14cc3ebcbc26ef9680d330bc78b95553,f5222837af34a10b0dc1162ab127c1f1a2a8bf10bf5691519a9fb9d953a1764f,"ollections) and/or the
+Departments’ demographic characteristics (e.g., square miles covered, calls per year, density and
+types of structures).
+To make the best of what has been provided, the Fact Finder has looked at the combined
+data concerning the wage rates of all proposed comparable municipalities. The average entry level
+base wage of the combined comparator group is $54,176 and the average top-level base wage is
+$70,056. Using this combined group of comparators, Monroe’s entry level paramedic wage is 16%
+below average and the top-level paramedic wage is 6% below average. Narrowing the comparator
+group by dropping out population outliers from the Union’s selection – Moraine, Harrison and
+Forest Park, the wage averages for the remaining co",35365,36117,0e1c4df07b5f30eccbe903d55ce61dd62777a1010fb97198a41b11841430e734,". In selecting comparator groups parties should give some consideration to similarity
+of the jurisdictions’ financial characteristics (e.g., tax base, revenue c","mparator group change only slightly and result
+in the same 16% below average disparity at entry level and increases the top level wage disparity by
+an additiona",MARKET_COMPARABLE_COMMUNITIES,comparable_communities,medium,market_or_comparability_pressure,strong,strong,not_supported,neutral_or_unclear,strong,direct_text_claim,"the combined
+data concerning the wage rates of all proposed comparable municipalities",true,comparator_municipal_wage_rates_market_comparability,Documents comparator-based wage-rate comparison for entry/top-level wages using proposed comparable municipalities; does not establish causal mechanism or safety/fiscal constraint.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0362b10f4921b648006a66cc5101408194a00d65c549552955,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-35ce38c8b8e3b3ed1cd428c5,SPAN321-c834d877f5177f0f745d9977,TXT321-ed4b25ed04b6691ed758,RS429-d717bcc3e7fe96bdfbeb,TS4L-a941e4912e55e0f8a56e,lane_4,tier_b,verification_ready_medium,https://www.castlepinesco.gov/wp-content/uploads/2024/03/City-of-Castle-Pines-2024-Annual-Budget.pdf,City of Castle Pines — 2024 Annual Budget (PDF),Castle Pines,CO,safety_and_non_safety_compensation_units,City workforce compensation (and budgeted public-safety-related costs where applicable),,2024 Annual Budget,2024-01-01,2024-12-31,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-ed4b25ed04b6691ed758.txt,cdb38119142947346dc0ac375d3f18a55c502e13fc70efef4ce7611494757774,b07ec56573303da12b22e025cd2f6d19c690894bddbd66ca8fea0835013e0d33,"The City Council supports Great Government, which includes recruiting and retaining quality
+staff, responsive services, strategic planning for a sustainable future, financial stewardship, and
+an investment in the future of the City.
+Strategic Goals:
+• Update City manuals and policies to produce effective and efficient local government services
+• Develop comprehensive and competitive compensation and staffing plans
+• Long-range ﬁscal health
+• Redistrict to reﬂect growth
+• Enhance public safety
+• Adopt a strategic approach to City actions
+2024 Budget Highlights:
+• Recognizing our high-performing staff with market-based compensation - $91,600 (PQ)
+• Update Master Transportation Plan - $75,000 (PQ)
+• Changed the Communication and Engagement Manager position to Communication and
+Engagement Director to recognize the job responsibilities, requ",74711,75559,fb0cc05693e7d38be34bde18480a891d8f1fbb0d6ff25a70c7ff329bc22dcbb0,"s and recreational
+programming - $88,000
+• Increased Community Events Coordinator from 20 to 30 hours per week - $20,200
+
+43
+
+KEY FOCUS AREA: GREAT GOVERNMENT
+
+","irements of this position,
+and expectations of the position - $17,200
+• New full-time maintenance position in the Public Works department - $75,300 (PQ)
+• Scann",MARKET_COMPETITIVENESS,pay_competitiveness,high,market_or_comparability_pressure,strong,strong,moderate,neutral_or_unclear,strong,direct_text_claim,Develop comprehensive and competitive compensation and staffing plans,true,explicit_competitive_compensation_staffing_plans,Wording linking compensation to competitiveness and staffing planning (no causal wage effect stated),true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_04b407d30f714456006a66cc5173248195a1e3b7acf0b565a9,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-6679e3da6259f95d93aa7b6d,SPAN321-a31b20c64ef2ca5ed76e2fea,TXT321-ed4b25ed04b6691ed758,RS429-d717bcc3e7fe96bdfbeb,TS4L-a941e4912e55e0f8a56e,lane_4,tier_b,verification_ready_medium,https://www.castlepinesco.gov/wp-content/uploads/2024/03/City-of-Castle-Pines-2024-Annual-Budget.pdf,City of Castle Pines — 2024 Annual Budget (PDF),Castle Pines,CO,safety_and_non_safety_compensation_units,City workforce compensation (and budgeted public-safety-related costs where applicable),,2024 Annual Budget,2024-01-01,2024-12-31,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-ed4b25ed04b6691ed758.txt,cdb38119142947346dc0ac375d3f18a55c502e13fc70efef4ce7611494757774,b07ec56573303da12b22e025cd2f6d19c690894bddbd66ca8fea0835013e0d33,"ncreasing staff’s compensation to a level commensurate with
+the identified labor market, including performance-based pay increases of up to 4.9%?
+$76,000 salary plus $15,600 related taxes and retirement - various funds
+The results of a comprehensive compensation study and a compensation philosophy were
+presented to the City Council as part of the 2023 budget process. The City Council supported
+the proposed compensation philosophy and the recommended results of the salary study,
+both enhancing the City’s ability to recruit and retain high-quality employees in service of the
+City’s Strategic Plan’s focus areas and goals. Generally, the compensation philosophy states
+that the City will “meet the market” and keep",83957,84675,2272c7005e21606c0495e25ca788b10570bb83ced983fd601d5055ec7eec0f72,"Key Focus Area(s) the proposed budget is in support of, as well as
+Council-Adopted Supporting Policies and Guiding Documents.
+1. Does the City Council support i"," our salary ranges and the compensation of our
+high-performing employees competitive with the market. To do so, market-based salary
+range adjustments (and resul",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,strong,strong,not_supported,neutral_or_unclear,strong,direct_text_claim,meet the market,true,explicit_market_standard,Budget compensation policy to be commensurate with labor market via market-matching; does not quantify wage effects,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0f585380f2ca4c88006a66cc52fdf08196af5b0d46cd5bbf7a,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-32746976df82a6b8878069eb,SPAN321-501bc0baf1b1e24984709a46,TXT321-ed4b25ed04b6691ed758,RS429-d717bcc3e7fe96bdfbeb,TS4L-a941e4912e55e0f8a56e,lane_4,tier_b,verification_ready_medium,https://www.castlepinesco.gov/wp-content/uploads/2024/03/City-of-Castle-Pines-2024-Annual-Budget.pdf,City of Castle Pines — 2024 Annual Budget (PDF),Castle Pines,CO,safety_and_non_safety_compensation_units,City workforce compensation (and budgeted public-safety-related costs where applicable),,2024 Annual Budget,2024-01-01,2024-12-31,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-ed4b25ed04b6691ed758.txt,cdb38119142947346dc0ac375d3f18a55c502e13fc70efef4ce7611494757774,b07ec56573303da12b22e025cd2f6d19c690894bddbd66ca8fea0835013e0d33,"The results of a comprehensive compensation study and a compensation philosophy were
+presented to the City Council as part of the 2023 budget process. The City Council supported
+the proposed compensation philosophy and the recommended results of the salary study,
+both enhancing the City’s ability to recruit and retain high-quality employees in service of the
+City’s Strategic Plan’s focus areas and goals. Generally, the compensation philosophy states
+that the City will “meet the market” and keep our salary ranges and the compensation of our
+high-performing employees competitive with the market. To do so, market-based salary
+range adjustments (and resulting employee compensation) will be evaluated annuall",84176,84888,f1e6288b63fbb92c33e1c2396b4860a53db43c4c0696ed38b6f2001642f56235,"
+the identified labor market, including performance-based pay increases of up to 4.9%?
+$76,000 salary plus $15,600 related taxes and retirement - various funds
+","y, with
+a comprehensive evaluation typically occurring every three to five years. The City’s 2023
+survey found that entities, on average, throughout Colorado ar",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,strong,strong,not_supported,neutral_or_unclear,strong,direct_text_claim,"meet the market” and keep our salary ranges and the compensation of our
+high-performing employees competitive with the market",true,market_competitive_recruit_retain_phrasing,Covers explicit market comparability/competitiveness intent from compensation philosophy; does not quantify wages,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_02c05d34265df0f9006a66cc5b699481979fe157f36ea6cc3e,2,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-3cd3cf25427e173a653802e7,SPAN321-6117e6d3363f708757d4bcbb,TXT321-98c395fb88e0b8c56933,RS429-d9faeebb6d7dce34f63e,TS4L-26680789eee7d320ce8a,lane_4,tier_b,verification_ready_medium,https://uvaldehesperian.com/wp-content/uploads/2022/06/Boardbook-Regular-Meeting-June-20-2022.pdf,"Uvalde CISD Board Meeting Agenda (BoardBook) — June 20, 2022 (PDF)",Uvalde,TX,safety_and_non_safety_compensation_units,Mixed (includes teachers/similar non-safety roles; may include market-based salary plan development comparability language),,2022-2023 (context in salary plan development tables referenced in agenda packet),2021-07-01,2022-06-30,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-98c395fb88e0b8c56933.txt,757364b221c9d2cb0a8ffab5edd4297528a95684f43d30a3a23f7efd8f3e4422,2a56a9b0d9e6c0afd5ae766aba895b3b70b1163f10f45b2bde80a15d6b20bf2a,"Finance:
+128
+A. Consider approval of accounts payable checks for May 2022.
+B. Consider Approval of Renewal of Food Service Management Company
+130
+contract.
+C. Consider Approval of General Fund Budget Amendment #7.
+179
+D. Item of Information on TASB Salary Study.
+180
+E. Item of Information on Budget Workshop #1.
+224
+Items of Division of Curriculum and Instruction:
+A. Consider Approval of the Uvalde Regional Day School Program for the
+225
+Deaf Cooperative Interlocal Agreement.
+B. Consider Approval of the Southwest VI Cooperative Agreement for
+226
+Provision of Services.
+C. Consider Approval of Capturing Kids Hearts Initiative.
+227
+D. Consider Approval of SWTJC Memorandum(s) of Understanding 2022228
+2023.",4323,5033,fb63532c36508a88126dbb5e7fbb474c056eacac42b572f0e3d7c11aca30f7ce,"23
+Schedule.
+126
+D. Consider Approval of Apple Purchase Wave 2.
+E. Consider Approval of Purchase of Interactive Displays.
+127
+Items of Division of Business and ","
+E. Consider Approval of District Of Innovation Renewal Plan.
+267
+268
+Superintendent's Report
+A. Future Board Meetings
+269
+A Closed Session will be held under P",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,strong,weak,neutral_or_unclear,moderate,documentary_mechanism_claim,Item of Information on TASB Salary Study.,true,salary_study_agenda_item,Agenda item referencing a salary study (comparability/market adjustment signal),true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_05fc1a9c036a6418006a66cc534da08194b4cf6f7c98836c28,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-5326079d20e0574280061632,SPAN321-93fe4bcfbe4cdea37abb84e9,TXT321-98c395fb88e0b8c56933,RS429-d9faeebb6d7dce34f63e,TS4L-26680789eee7d320ce8a,lane_4,tier_b,verification_ready_medium,https://uvaldehesperian.com/wp-content/uploads/2022/06/Boardbook-Regular-Meeting-June-20-2022.pdf,"Uvalde CISD Board Meeting Agenda (BoardBook) — June 20, 2022 (PDF)",Uvalde,TX,safety_and_non_safety_compensation_units,Mixed (includes teachers/similar non-safety roles; may include market-based salary plan development comparability language),,2022-2023 (context in salary plan development tables referenced in agenda packet),2021-07-01,2022-06-30,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-98c395fb88e0b8c56933.txt,757364b221c9d2cb0a8ffab5edd4297528a95684f43d30a3a23f7efd8f3e4422,2a56a9b0d9e6c0afd5ae766aba895b3b70b1163f10f45b2bde80a15d6b20bf2a,"ssion of salaries between the job
+categories. The administration expects to present these recommendations to the board in
+July.
+2. ​Process:
+a. Phase I—Data Collection and Preparation
+b. Phase II—Job Market Surveys
+c. Phase III—Build or Align Market-Competitive Pay Structures
+d. Phase IV – Develop Implementation Plan
+e. Phase V—Final Deliverables
+3. ​Fiscal Impact​: The fiscal impact is approximately $10,400 and includes all phases of the
+pay review process. Costs will be paid for by local funds.
+4. ​Recommendation: No action needed
+5. ​Action Required: Information only
+6. Contact: Superintendent",272850,273453,63a28f179baf923c00b9136f7b3915e54523c56e8463890a5f18b89391573786,"ure and/or to
+particular job class categories. The process entails reviewing all job classes and not just
+singular job classes to ensure that there is no compre","
+
+180
+
+Pay Systems Review Draft
+
+Uvalde
+Independent School District
+June 2022
+Luz Cadena
+181
+© 2022 Texas Association of School Boards, Inc. All rights reserved",MARKET_COMPETITIVENESS,pay_competitiveness,high,market_or_comparability_pressure,strong,strong,not_supported,neutral_or_unclear,strong,direct_text_claim,Build or Align Market-Competitive Pay Structures,true,explicit_market_competitive_pay_structures_alignment,only reflects planned market-competitive pay structure building/alignment; not evidence of wage gap magnitude or causal effect,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0f0b222d2daf224c006a66cc552268819393430daeb83b76a5,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-b7ed3e16f41f1aa2efed8cc0,SPAN321-dd986c6624671e3e05451b81,TXT321-0d9f11ffa8ba19cc69a7,RS429-e6b8ec1ac7eaf3c4a597,TS4L-2cf66eb8c412eea6d8e7,lane_4,tier_b,verification_ready_medium,https://www.utah.gov/pmn/files/1013371.pdf,"August 31, 2023 (Utah Public Notice / PMN PDF) — Grantsville Employee Handbook amendment (definitions/compensation + employment classification definitions)",Grantsville,UT,safety_and_non_safety_compensation_units,Public safety (police/fire) and general city employees (classification/compensation referenced),,Amendment date appears to be 2023-08-31 (exact coverage period unknown from snippet),2023-08-31,,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-0d9f11ffa8ba19cc69a7.txt,56f424b1380bdcc05f408be5a93906cf446c3e2bc9396c913fd929172e8c88a5,9abe28b13ce07f64fe0df6faecbb3f869e236b9868b18b7ecac79caa9e48d6f6,"the
+date that the employee receives a raise after the deficiencies have been corrected.
+FACTORS NOT AFFECTING PAY INCREASE: The following factors shall not affect
+eligibility for a pay increase:
+• Pay adjustments resulting from an annual salary and wage survey. • A transfer which does
+not result in a pay increase. • Leave-without-pay for fewer than 30 days. • Military leavewithout-pay necessitated by a draft or reserve call-up because of a national emergency. • A
+period of leave with pay; and • Reclassification to a class code of the same pay range or lower.
+PROMOTION: When an employee is promoted, the rate of pay shall be determined as
+follows:
+• If the salary received in the lower pay range is equal",120096,120806,f63672cd0a3193f3b1f542e0c2b12310e5c52484020b61616239da5f56c27d2e,"son therefore shall be submitted promptly to the employee and the Human
+Resource Manager. The employee’s eligibility date for future raises shall be changed to "," to or below the minimum rate for the
+new range to which promoted, the new rate of pay shall be increased to the minimum rate for
+the new range. • If the salary",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,strong,strong,weak,neutral_or_unclear,strong,direct_text_claim,Pay adjustments resulting from an annual salary and wage survey.,true,salary_wage_survey_factor_not_affecting_pay_increase,Addresses pay eligibility constraints; explicitly mentions salary/wage surveys as a type of pay adjustment excluded from affecting eligibility.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0626039fa50bad5c006a66cc556cf08190bece6c11499c7d57,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-f03b1c37226b3c6a0f81b21f,SPAN321-73681adb9329eb29d2c9d4dc,TXT321-0d9f11ffa8ba19cc69a7,RS429-e6b8ec1ac7eaf3c4a597,TS4L-2cf66eb8c412eea6d8e7,lane_4,tier_b,verification_ready_medium,https://www.utah.gov/pmn/files/1013371.pdf,"August 31, 2023 (Utah Public Notice / PMN PDF) — Grantsville Employee Handbook amendment (definitions/compensation + employment classification definitions)",Grantsville,UT,safety_and_non_safety_compensation_units,Public safety (police/fire) and general city employees (classification/compensation referenced),,Amendment date appears to be 2023-08-31 (exact coverage period unknown from snippet),2023-08-31,,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-0d9f11ffa8ba19cc69a7.txt,56f424b1380bdcc05f408be5a93906cf446c3e2bc9396c913fd929172e8c88a5,9abe28b13ce07f64fe0df6faecbb3f869e236b9868b18b7ecac79caa9e48d6f6,"the
+date that the employee receives a raise after the deficiencies have been corrected.
+FACTORS NOT AFFECTING PAY INCREASE: The following factors shall not affect
+eligibility for a pay increase:
+• Pay adjustments resulting from an annual salary and wage survey. • A transfer which does
+not result in a pay increase. • Leave-without-pay for fewer than 30 days. • Military leavewithout-pay necessitated by a draft or reserve call-up because of a national emergency. • A
+period of leave with pay; and • Reclassification to a class code of the same pay range or lower.
+PROMOTION: When an employee is promoted, the rate of pay shall be determined as
+follows:",123731,124384,2bc005394c08a2999709fa46aea65bd8d8a911a4eaaa7292d5aaac13e3311823,"son therefore shall be submitted promptly to the employee and the Human
+Resource Manager. The employee’s eligibility date for future raises shall be changed to ","
+
+Page 49
+
+• If the salary received in the lower pay range is equal to or below the minimum rate for the
+new range to which promoted, the new rate of pay shall ",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,strong,strong,moderate,neutral_or_unclear,moderate,documentary_mechanism_claim,Pay adjustments resulting from an annual salary and wage survey.,true,excludes_pay_change_otherwise_but_references_salary_wage_survey,states that pay adjustments from an annual salary and wage survey are an exception in eligibility factors for pay increases,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0a53b050a392452d006a66cc55c5d48193a3d23bb6ca341010,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-47287a06239456d228fcf3a7,SPAN321-829df74c3b87147db653024c,TXT321-3f912ac63cbe82fa3a59,RS429-fded4e2b614826d15027,TS4L-fdb88080fa5c608d7319,lane_4,tier_b,verification_ready_high,https://www.castlepinesco.gov/wp-content/uploads/2020/01/2019-12-24-CP-Budget-Book-ONLINE.pdf,City of Castle Pines — 2020 Budget Book (PDF),Castle Pines,CO,safety_and_non_safety_compensation_units,City workforce compensation (and budgeted public-safety-related costs where applicable),,2020 Budget (proposed/adopted budget book; contains 2020 staffing/compensation sections),2020-01-01,2020-12-31,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-3f912ac63cbe82fa3a59.txt,fc9737c16014d46b6fa585cefc8ac6c79371bee0abcf81793ea29165dd9f6f69,db7bf35f066693c303fe7bbaba4fd947c5c69bc8a23c2e201cab2f4f6e6dd6e0,"Council Direction: City Council supports a 3.5% performance-based merit pay increase. Council requested that
+staff perform a compensation study in 2020.",21388,21541,5eedaca24bf386affa74141174dcd4a89f8a79304c23ce149724e554a5364beb,"-based merit pay increase for staff within the City of
+Castle Pines? ($29,700 – General Fund)
+RELATED COUNCIL STRATEGIC OBJECTIVE:
+
+High Performing Operations
+
+","
+
+2
+
+2. 	Does City Council support a General Fund reserve requirement equivalent to 25% of annual General
+Fund operating expenditures (3-months spending capaci",MARKET_WAGE_STUDY,wage_compensation_study,high,market_or_comparability_pressure,moderate,moderate,weak,neutral_or_unclear,moderate,direct_text_claim,staff perform a compensation study in 2020.,true,explicit_compensation_study_request_implies_benchmarking_pressure,Supports that a compensation study was requested; does not explicitly state market/peer benchmarking results or wage competitiveness.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_02835b41dc47c818006a66cc5ffdb88194b9ed853c2bdbb0c3,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."

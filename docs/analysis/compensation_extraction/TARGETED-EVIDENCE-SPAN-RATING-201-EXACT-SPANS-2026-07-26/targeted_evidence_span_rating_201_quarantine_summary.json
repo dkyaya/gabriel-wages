@@ -1,0 +1,8 @@
+{
+  "explicit_exclusion_from_summary": true,
+  "quarantine_count": 28,
+  "reason_counts": {
+    "forbidden_final_claim_language": 1,
+    "quote_not_exact_span_substring": 27
+  }
+}

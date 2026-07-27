@@ -1,0 +1,216 @@
+span_rating_id,span_extraction_id,extracted_text_id,retained_source_id,candidate_id,lane_id,priority_tier,quality_label,source_url_or_locator,source_title,municipality,state,unit_type,occupation_group,bargaining_unit_name,contract_or_document_period,inferred_cycle_start,inferred_cycle_end,source_family,target_mechanism_family,local_extracted_text_path,extracted_text_sha256,source_file_sha256,span_text,span_start_offset,span_end_offset,span_sha256,context_before,context_after,extraction_rule_id,extraction_rule_family,span_specificity,rated_mechanism_family,documentary_mechanism_support,direct_text_support,provisional_causal_candidate_support,direction_of_pressure,evidence_strength,claim_relevance,quote_used,quote_exact_substring,reason_code,claim_boundary,no_wage_gap_claim,no_final_causal_claim,rating_status,ingestion_status,codification_status,causal_status,global_analysis_readiness,gabriel_backend,gabriel_model,gabriel_request_id,gabriel_attempt_count,notes
+SPANR201-826c6195c25be5dcf51e552d,SPAN321-ae31b06146fcec018d341db3,TXT321-fcb4cf2d39c521acb229,RS429-728fa34f79dffe429f1c,TS4L-945864d2fb70ff3ab742,lane_1,tier_b,verification_ready_medium,https://ilrb.illinois.gov/content/dam/soi/en/web/ilrb/arbitration/documents/s-ma-16-015arbaward.pdf,ILRB Arbitration Award (S-MA-16-015 / S-MA-16-131) referencing Collective Bargaining Agreement and Wage Schedule 2015–2017,Addison,IL,non_safety_comparator,non_safety_comparator,,"January 1, 2015 – December 31, 2017 (referenced)",2015,2017,collective_bargaining_agreement_or_moa_or_wage_schedule,non_safety_constraint_signal,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-fcb4cf2d39c521acb229.txt,77a19d9d500b428d0b0fe81ad369154bf1dc8fbd37b04af77a35c59661cb2f54,0a1216e1b6e4ed8ac1b9cdb92dfcc6aec5da5dca9d690b4866feb299f1ece28f,"Department in a bargaining unit position) prior to
+issuance of Arbitrator Bierig’s award, the employee shall
+continue to receive the $300.00 annual payment and the
+employee will be protected by the “salary freeze” clause
+in Paragraph 4 above. Employees who are now active
+paramedics and who were in the original Oak Lawn
+Paramedic Program shall be deemed to have satisfied the
+thirteen (13) year requirement in the paragraph even if
+said employees have been paramedics for less than
+thirteen (13) years. However, if an employee ceases to
+serve as a Paramedic in the Oak Lawn Fire Department
+after completion of twenty (20) years of Paramedic
+service, continues i",59856,60518,34af188e8b38ef3aaa0b40c1d5940f69f9edd0afc4e3e6673839fd7451c79388,"a Paramedic in the Oak Lawn Fire Department
+after completion of thirteen (13) years of Paramedic
+service (but continues in the employ of the Oak Lawn Fire
+
+25
+
+","n the employ of the Oak Lawn Fire
+Department in a bargaining unit position, and provides to
+the Chief a signed, irrevocable letter of resignation in a
+form acce",NONSAFETY_PAY_FREEZE,pay_freeze,high,non_safety_constraint_signal,strong,strong,not_supported,non_safety_advantage,strong,direct_text_claim,protected by the “salary freeze” clause,true,explicit_salary_freeze_clause,Salary freeze protection tied to $300 annual payment and award timing,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_078f3286eb94efbc006a66cbaad9208194bbe6bf988034a207,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-482bc9464058aead257bbeab,SPAN321-f74a25973225ee630d3dba9b,TXT321-fcb4cf2d39c521acb229,RS429-728fa34f79dffe429f1c,TS4L-945864d2fb70ff3ab742,lane_1,tier_b,verification_ready_medium,https://ilrb.illinois.gov/content/dam/soi/en/web/ilrb/arbitration/documents/s-ma-16-015arbaward.pdf,ILRB Arbitration Award (S-MA-16-015 / S-MA-16-131) referencing Collective Bargaining Agreement and Wage Schedule 2015–2017,Addison,IL,non_safety_comparator,non_safety_comparator,,"January 1, 2015 – December 31, 2017 (referenced)",2015,2017,collective_bargaining_agreement_or_moa_or_wage_schedule,non_safety_constraint_signal,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-fcb4cf2d39c521acb229.txt,77a19d9d500b428d0b0fe81ad369154bf1dc8fbd37b04af77a35c59661cb2f54,0a1216e1b6e4ed8ac1b9cdb92dfcc6aec5da5dca9d690b4866feb299f1ece28f,"(but continues in the
+employ of the Oak Lawn Fire Department in
+a bargaining unit position) prior to issuance
+of Arbitrator Bierig’s award, the employee
+shall continue to receive the $300.00 annual
+payment and the employee will be
+protected by the “salary freeze” clause in
+Paragraph 4 above. Employees who are
+now active paramedics and who were in the
+original Oak Lawn Paramedic Program shall
+be deemed to have satisfied the thirteen
+(13) year requirement in the paragraph
+even if said employees have been
+paramedics for less than thirteen (13) years.
+However, if an employee ceases to serve as
+a Paramedic in the Oak Lawn Fire
+Department after completion of twenty (20)
+years of Paramedic service, continues i",333646,334358,8fbe9b451a7f87bc4c582e25cb4c0d33ce4aa793dd0aa158f77e082e2f409334,"edic stipend. If an employee
+ceases ceased to serve as a Paramedic in
+the Oak Lawn Fire Department after
+completion of thirteen (13) years of
+Paramedic service ","n the
+employ of the Oak Lawn Fire Department in
+a bargaining unit position, and provides to
+the Chief a signed, irrevocable letter of
+resignation in a form acce",NONSAFETY_PAY_FREEZE,pay_freeze,high,non_safety_constraint_signal,strong,strong,not_supported,not_applicable,strong,direct_text_claim,"protected by the “salary freeze” clause in
+Paragraph 4 above.",true,explicit_salary_freeze_provision,Only indicates protection via an included salary-freeze clause; does not specify wage effects.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0b370cdb0698d11c006a66cbaad1748197bcefcd629de8abaf,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-339137653b923b12a100d061,SPAN321-0973ad26253f48d69072b0c6,TXT321-fcb4cf2d39c521acb229,RS429-728fa34f79dffe429f1c,TS4L-945864d2fb70ff3ab742,lane_1,tier_b,verification_ready_medium,https://ilrb.illinois.gov/content/dam/soi/en/web/ilrb/arbitration/documents/s-ma-16-015arbaward.pdf,ILRB Arbitration Award (S-MA-16-015 / S-MA-16-131) referencing Collective Bargaining Agreement and Wage Schedule 2015–2017,Addison,IL,non_safety_comparator,non_safety_comparator,,"January 1, 2015 – December 31, 2017 (referenced)",2015,2017,collective_bargaining_agreement_or_moa_or_wage_schedule,non_safety_constraint_signal,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-fcb4cf2d39c521acb229.txt,77a19d9d500b428d0b0fe81ad369154bf1dc8fbd37b04af77a35c59661cb2f54,0a1216e1b6e4ed8ac1b9cdb92dfcc6aec5da5dca9d690b4866feb299f1ece28f,"There are 2 additional benchmarks for paramedic decertification. If an employee ceases to
+serve as a Paramedic after completion of 13 years of paramedic service, the employee continues to
+receive the $300.00 annual payment and the employee is protected by the “salary freeze” clause
+contained in Paragraph 4. After 20 years, a Paramedic may choose to decertify, if he or she provides
+the Chief with a signed irrevocable letter of resignation effective not more than one year from the
+date the employee ceases service as a Paramedic. If the employee provides the requisite notice, he
+or she shall continue to receive all salary, benefits, and stipends as if he had continued to serve as a
+Paramedic until the effective date o",345609,346333,76c48a98eaa28e29b29d184e8e02a9dd07a6148ca2c3f874b1715155c3d8f25c,"the
+paramedic stipend, and his salary remains frozen until the normal pay grade catches up to his
+current salary level. (Jt. Ex. 2 at 55, ¶1-2, at 56-57)
+
+159
+
+","f his resignation. (Jt. Ex. 2 at 57-58, ¶5)
+Next, the Union points out that during negotiations, the Village proposed to change the
+language in Section 7.5 and ",NONSAFETY_PAY_FREEZE,pay_freeze,high,non_safety_constraint_signal,strong,strong,weak,gap_narrowing,strong,direct_text_claim,protected by the “salary freeze” clause,true,salary_freeze_clause_provides_non_safety_constraint,Only indicates protection via a salary-freeze clause after decertification; does not establish any causal effect.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_065e8aa96c768000006a66cbad51748190ae92a6b9c3153bca,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-7c0ff5ccbb67bd25bd52a5b5,SPAN321-bd9a2dcada131f220c5aed30,TXT321-447a400b793402ff1485,RS429-afd4608518bfe5e8f752,TS4L-9352bcad1f5b79be8c34,lane_1,tier_b,verification_ready_medium,https://werc.wi.gov/interest_awards/mia_pre-99_vol_1_of_1/mia27679.pdf,WERC Interest Award (mia27679) – PDF (includes references to Waunakee and 1992 and 1993 successor agreement context),Waunakee,WI,non_safety_comparator,non_safety_comparator,,Successor agreement context for 1992 and 1993 (as indicated by search snippet),1992,1993,collective_bargaining_agreement_or_moa_or_wage_schedule,non_safety_constraint_signal,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-447a400b793402ff1485.txt,f6c2fd324aebd163d772a5efa59ed18af956839c8d8d0026baee942aa1e41dbe,fd1c826709e5ec9fdc9ee840c4dc94bbd596d1cb15a8af376741c64eb0f99c30,"ey agreed to a 6-3 work schedule.
+Vacations were
+adjusted to #reflect the six day work cycle, and officers working on holidays
+were to receive overtime pay under the 1991 Agreement.
+In exchange for
+this reduction in work hours, the Union agreed to a wage freeze. However,
+longevity was increased to a percentage of the wage base.
+Longevity
+commences~ after five years of service with the Village when an employee
+It is in this factual context that the
+reaches the top of the salary schedule.
+parties support
+their respective wage proposals.
+The positions
+of the
+parties and! their arguments are considered under the following statutory
+criteria.
+1
+STATUTORY",2798,3455,ab5d05d7b12120d99895c2d6fd989b17ef9c998af31341186275c94081bcb4d4,"ar period.
+In that
+The parties negotiated
+a one year agreement in 1991.
+agreement,
+the parties agreed to a significant
+reduction
+in the work
+weeklwork
+iyear. Th","
+
+111.77
+
+EMPLOYMENT
+
+CRITERIA
+
+RELATIONS
+...
+
+‘(6) In reaching a decision the arbitrator
+weight to the following factors:
+
+2
+
+shall
+
+give
+
+(a) The lawful autho",NONSAFETY_PAY_FREEZE,pay_freeze,high,non_safety_constraint_signal,strong,strong,not_supported,neutral_or_unclear,strong,direct_text_claim,the Union agreed to a wage freeze.,true,explicit_wage_freeze_under_agreement,Wage freeze as an exchange for reduced work hours; no safety/comparative inference.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0b59fd417e7c48ff006a66cbad73dc8194a7fd312b0591862d,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-c66336d661b2c7c9ca65bfe8,SPAN321-e8927af4fdbd22ff13ec8f08,TXT321-447a400b793402ff1485,RS429-afd4608518bfe5e8f752,TS4L-9352bcad1f5b79be8c34,lane_1,tier_b,verification_ready_medium,https://werc.wi.gov/interest_awards/mia_pre-99_vol_1_of_1/mia27679.pdf,WERC Interest Award (mia27679) – PDF (includes references to Waunakee and 1992 and 1993 successor agreement context),Waunakee,WI,non_safety_comparator,non_safety_comparator,,Successor agreement context for 1992 and 1993 (as indicated by search snippet),1992,1993,collective_bargaining_agreement_or_moa_or_wage_schedule,non_safety_constraint_signal,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-447a400b793402ff1485.txt,f6c2fd324aebd163d772a5efa59ed18af956839c8d8d0026baee942aa1e41dbe,fd1c826709e5ec9fdc9ee840c4dc94bbd596d1cb15a8af376741c64eb0f99c30,"pute. The Union states that its final offer is formulated on the basis of its
+decision to withdraw its proposal to delete the residency requirement from
+the expired 1991 Agreement.
+The Village emphasizes that the Union’s offer
+is related to the 1991 wage freeze agreed to by the parties.
+The Village
+implies that any wage ranking of its police officers will place them below the
+average, in part, because of the wage freeze.
+The Arbitrator gives little weight to the Union’s residency arguments.
+The arguments presented, concerning the cost of real estate and housing in
+the Village of Waunakee in light of the restrictive
+contractual
+residency
+requirement,
+support
+an argument
+to either change the residency
+re",13641,14352,74e592fd6271f7c9450524c288d464655e95cf4ecccdd2e6aa7c6cafb7bb578e," the one to be included in the 1992-1993
+successor Agreement.
+DISCUSSION
+Introduction
+In their arguments, each party emphasizes matters not at issue in this
+dis","quirement to an area outside the bounds of the Village or the elimination
+of the requirement in its entirety. Residency is not an issue in this dispute.
+Accordi",NONSAFETY_PAY_FREEZE,pay_freeze,high,non_safety_constraint_signal,strong,strong,not_supported,not_applicable,strong,direct_text_claim,is related to the 1991 wage freeze agreed to by the parties.,true,explicit_wage_freeze_mention,Explicitly references a prior 1991 wage freeze as the basis/relationship for an offer; does not state constraints beyond the freeze itself.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0cd01ef957dd03a6006a66cbada6e88195a4db7a698b121730,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-0a9e7ca78c0f688f4176a06b,SPAN321-908fd5c3e0d7c0d81cb82f50,TXT321-447a400b793402ff1485,RS429-afd4608518bfe5e8f752,TS4L-9352bcad1f5b79be8c34,lane_1,tier_b,verification_ready_medium,https://werc.wi.gov/interest_awards/mia_pre-99_vol_1_of_1/mia27679.pdf,WERC Interest Award (mia27679) – PDF (includes references to Waunakee and 1992 and 1993 successor agreement context),Waunakee,WI,non_safety_comparator,non_safety_comparator,,Successor agreement context for 1992 and 1993 (as indicated by search snippet),1992,1993,collective_bargaining_agreement_or_moa_or_wage_schedule,non_safety_constraint_signal,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-447a400b793402ff1485.txt,f6c2fd324aebd163d772a5efa59ed18af956839c8d8d0026baee942aa1e41dbe,fd1c826709e5ec9fdc9ee840c4dc94bbd596d1cb15a8af376741c64eb0f99c30,"ed 1991 Agreement.
+The Village emphasizes that the Union’s offer
+is related to the 1991 wage freeze agreed to by the parties.
+The Village
+implies that any wage ranking of its police officers will place them below the
+average, in part, because of the wage freeze.
+The Arbitrator gives little weight to the Union’s residency arguments.
+The arguments presented, concerning the cost of real estate and housing in
+the Village of Waunakee in light of the restrictive
+contractual
+residency
+requirement,
+support
+an argument
+to either change the residency
+requirement to an area outside the bounds of the Village or the elimination
+of the requirement in its entirety. Residency is not an issue in this dispute.
+According",13803,14514,3a0d5568458d73285189ee2718861929670408d944e2987efac76e8a1074661f,"te. The Union states that its final offer is formulated on the basis of its
+decision to withdraw its proposal to delete the residency requirement from
+the expir","ly, the Village did not present any arguments on this subject.
+The premise of the Union’s argument that a larger wage increase will
+serve to offset the increasi",NONSAFETY_PAY_FREEZE,pay_freeze,high,non_safety_constraint_signal,strong,strong,not_supported,neutral_or_unclear,strong,direct_text_claim,1991 wage freeze agreed to by the parties,true,mentions_wage_freeze_as_constraint,Wage ranking/offer is tied to an agreed wage freeze (non-safety pay constraint).,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_03ebfeb0d6ad9ee3006a66cbbcb2888190912b5f340d501c7c,2,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-1fb5ab43d057b78baf749f29,SPAN321-5bdc32461d412de1d246b77f,TXT321-447a400b793402ff1485,RS429-afd4608518bfe5e8f752,TS4L-9352bcad1f5b79be8c34,lane_1,tier_b,verification_ready_medium,https://werc.wi.gov/interest_awards/mia_pre-99_vol_1_of_1/mia27679.pdf,WERC Interest Award (mia27679) – PDF (includes references to Waunakee and 1992 and 1993 successor agreement context),Waunakee,WI,non_safety_comparator,non_safety_comparator,,Successor agreement context for 1992 and 1993 (as indicated by search snippet),1992,1993,collective_bargaining_agreement_or_moa_or_wage_schedule,non_safety_constraint_signal,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-447a400b793402ff1485.txt,f6c2fd324aebd163d772a5efa59ed18af956839c8d8d0026baee942aa1e41dbe,fd1c826709e5ec9fdc9ee840c4dc94bbd596d1cb15a8af376741c64eb0f99c30,"The argument of the Village that the Union’s demand represents an
+attempt to make up for the wage freeze agreed to by the parties in 1991,
+and the Union’s argument that the settlements achieved in 1989 and 1990
+did not keep pace with the increase in the cost of living are given little
+weight by the Arbitrator.
+The two settlements for the three years of 1989
+through 1991 were voluntarily achieved. The wage levels reflected in Chart
+A, which is appended to this Award, reflect that the wage rate paid to
+Waunakee police officers is not the lowest of th",15460,16014,e1691c8468c5025589ebe35b247d63445326a378bdbfe7cd5bbe949d87c28d78," it
+does not demonstrate that wage increases in excess of those provided by
+comparable jurisdictions
+will permit officers to afford housing in the Village.
+
+7
+
+","e comparables, despite the
+1991 agreement to freeze the wage rates in order to put in place a 6-3 work
+schedule.
+The discussion below addresses the issue in dis",NONSAFETY_PAY_FREEZE,pay_freeze,high,non_safety_constraint_signal,strong,strong,not_supported,not_applicable,strong,direct_text_claim,wage freeze agreed to by the parties in 1991,true,explicit_wage_freeze_remedy_constraint,"Explicitly references a wage freeze agreed in 1991 (constraint/remedy limitation), without making a safety or causal wage-gap claim.",true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0967b5954638a365006a66cbaf9e088197965b437ffdb40b36,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-e13c78ad9380833cac12ab12,SPAN321-0d8436ec9b0bbf34a11e643e,TXT321-7124190d48b7efb656be,RS429-ee6c869d501c296a7925,TS4L-1ff9f2e16c7b9d78d284,lane_1,tier_b,verification_ready_medium,https://ilrb.illinois.gov/content/dam/soi/en/web/ilrb/arbitration/documents/s-ma-12-032.pdf,S-MA-12-032 — City of Collinsville — FOP Civilian Unit (includes Appendix/Wage offer; referenced for 2011-2013 collective bargaining agreement),Collinsville,IL,non_safety_comparator,Civilian unit employee group (non-sworn/public safety civilian bargaining unit),FOP Civilian Unit (City of Collinsville),Referenced as part of a 2011-2013 collective bargaining agreement context (document includes wage offer/appendix content),2011-01-01,2013-12-31,collective_bargaining_agreement_or_moa_or_wage_schedule,non_safety_constraint_signal,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-7124190d48b7efb656be.txt,2d0533de451a1348dd52a53fc31e0ebd59ad2bd4f5ec1d3298aa614ed636ad9a,0cee614bb344541c8ae7a4fb58c16c031a6c7f0963f9fd9856ed19c3e6fecd3b,"ofliving. In this case, the cost ofliving strongly favors the Union's position. In 2011, the
+Union agreed to a wage freeze. In that same year, the cost ofliving increased by 2.85%.
+In 2012, the Union seeks a 2.50% wage increase, but the cost of living increased by
+i.74% on average. Thus the real wages of bargaining unit members will have decreased",12321,12670,e0abba35662c61a75a0999c8337190479c6bc16c4541ba200bc1c885b2dac1f4,"nce of the external
+comparables in wage disputes, in favor of a more stable and reliable indicator - the cost
+City of Collinsville - FOP- S-MA-12-032 - Page 6
+
+","
+
+by over 2% as of December 31, 2012, even if the Union's offer for the first year is
+selected. The cost of living for the first 3 months of 2013 increased by i",NONSAFETY_PAY_FREEZE,pay_freeze,high,non_safety_constraint_signal,strong,strong,not_supported,not_applicable,strong,direct_text_claim,Union agreed to a wage freeze.,true,explicit_wage_freeze_constraint_signal,Wage-freeze agreement mentioned as a non-safety pay constraint; no causal wage-gap calculation in this span.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_088fb90b5eed696b006a66cbb022008197984e289d6bf7e789,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-2f7896198825233461d21b69,SPAN321-6b89c2a7d366cb1f89d40bdf,TXT321-7124190d48b7efb656be,RS429-ee6c869d501c296a7925,TS4L-1ff9f2e16c7b9d78d284,lane_1,tier_b,verification_ready_medium,https://ilrb.illinois.gov/content/dam/soi/en/web/ilrb/arbitration/documents/s-ma-12-032.pdf,S-MA-12-032 — City of Collinsville — FOP Civilian Unit (includes Appendix/Wage offer; referenced for 2011-2013 collective bargaining agreement),Collinsville,IL,non_safety_comparator,Civilian unit employee group (non-sworn/public safety civilian bargaining unit),FOP Civilian Unit (City of Collinsville),Referenced as part of a 2011-2013 collective bargaining agreement context (document includes wage offer/appendix content),2011-01-01,2013-12-31,collective_bargaining_agreement_or_moa_or_wage_schedule,non_safety_constraint_signal,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-7124190d48b7efb656be.txt,2d0533de451a1348dd52a53fc31e0ebd59ad2bd4f5ec1d3298aa614ed636ad9a,0cee614bb344541c8ae7a4fb58c16c031a6c7f0963f9fd9856ed19c3e6fecd3b,"arguments based on the 2011 wage freeze. The Union and the City already negotiated for
+2011, and the Union should not receive some sort of credit for the wage settlement in",21347,21519,76a9e32ada61cc23b0274bf71d380771d90a11177b50c319678b41a444523b41,"oney from one provision to another. As explained, those are not valid bases for
+comparison.
+
+Moreover, the arbitrator should reject the Union's effort to make
+
+","
+
+that year. They made the deal they made, and they cannot now renegotiate it, which is
+effectively what they seek to do.
+Accounting for the distinction between",NONSAFETY_PAY_FREEZE,pay_freeze,high,non_safety_constraint_signal,strong,strong,not_supported,not_applicable,moderate,direct_text_claim,2011 wage freeze,true,explicit_wage_freeze_constraint_reference,Only references an existing 2011 wage freeze and opposition to re-credit/renegotiation; does not compare safety vs non-safety or quantify effects.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_0455687aa3adb628006a66cbb21a848197b723212ef81244f5,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."
+SPANR201-7f78da20ec328d4a3a86b0f4,SPAN321-ffec5acea6870598b8a65762,TXT321-7124190d48b7efb656be,RS429-ee6c869d501c296a7925,TS4L-1ff9f2e16c7b9d78d284,lane_1,tier_b,verification_ready_medium,https://ilrb.illinois.gov/content/dam/soi/en/web/ilrb/arbitration/documents/s-ma-12-032.pdf,S-MA-12-032 — City of Collinsville — FOP Civilian Unit (includes Appendix/Wage offer; referenced for 2011-2013 collective bargaining agreement),Collinsville,IL,non_safety_comparator,Civilian unit employee group (non-sworn/public safety civilian bargaining unit),FOP Civilian Unit (City of Collinsville),Referenced as part of a 2011-2013 collective bargaining agreement context (document includes wage offer/appendix content),2011-01-01,2013-12-31,collective_bargaining_agreement_or_moa_or_wage_schedule,non_safety_constraint_signal,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-7124190d48b7efb656be.txt,2d0533de451a1348dd52a53fc31e0ebd59ad2bd4f5ec1d3298aa614ed636ad9a,0cee614bb344541c8ae7a4fb58c16c031a6c7f0963f9fd9856ed19c3e6fecd3b,"volatility in the 2013 rates. The Union suggests that the cost of living should be viewed
+in a longer context, in part to account for the impact of the wage freeze in 2011. The City
+responds that 2011 is not relevant, but that if the arbitrator wants a truly long view, he
+should include the years before 2011, when unit employees were receiving pay increases
+well in excess of the cost of living. Not surprisingly, both parties want the arbitrator to
+account for those portions of the past that favor their positions. The issue before me is
+the 2012-2013 contract, and there is sufficient data available to assess the offers in light",26005,26639,8d0d16f8cc6949662df3fc8b7039e8910fdec99c54f422b9029e890e00fa57ba,"The Midwest Urban Consumers index shows an increase in the cost of living of
+i.8% ~n 2012, and 1.8% through July in 2013, although there has been considerably
+
+","
+
+of the conditions during the contract term.
+The first year of the contract would provide support for the City's position, as it
+exceeds the CPI by 0.2%. To da",NONSAFETY_PAY_FREEZE,pay_freeze,high,non_safety_constraint_signal,moderate,moderate,not_supported,not_applicable,moderate,direct_text_claim,impact of the wage freeze in 2011,true,mentions_wage_freeze_as_non_safety_constraint_signal,Only reflects that the cost-of-living assessment considers a prior wage freeze; does not state any ongoing or binding pay constraint for 2012-2013.,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_04f2939559f6a5f8006a66cbb23780819382ff18da7005b0eb,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."

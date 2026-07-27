@@ -1,0 +1,9 @@
+span_extraction_id,stage,attempt,request_id,backend,model,status,schema_valid,input_chars,span_chars,context_chars,input_tokens,output_tokens,total_tokens,elapsed_seconds,error_type,error_code,raw_prompt_saved,raw_response_saved
+SPAN321-4f86bcce4667e85310f9f339,preflight,1,resp_07b3a4e02262d81c006a66cb7a77a4819380b9b9c0d086262e,huit_openai_responses_direct_sdk,gpt-5.4-nano,success,true,1710,84,320,658,166,824,2.253451,,,false,false
+SPAN321-120e2edfe36aaa24497600d3,preflight,1,resp_045f0483abb8d4e6006a66cb7a7be88196bed00aa4e76c4a05,huit_openai_responses_direct_sdk,gpt-5.4-nano,success,true,2521,895,320,735,339,1074,3.213579,,,false,false
+SPAN321-27b2105a04650d76fe2ce941,preflight,1,resp_0ec0620ff1d4e2b2006a66cb7a7f908196b54b625704368716,huit_openai_responses_direct_sdk,gpt-5.4-nano,success,true,1748,108,320,672,275,947,2.742678,,,false,false
+SPAN321-b77e65a68f186a6f0834c134,preflight,1,resp_03006868dc5da65b006a66cb7c5bb081969e46c2ced39cb686,huit_openai_responses_direct_sdk,gpt-5.4-nano,success,true,2515,875,320,851,254,1105,4.584663,,,false,false
+SPAN321-6b89c2a7d366cb1f89d40bdf,preflight,1,resp_03bab852fdfeb8a2006a66cb7d14f08196aed3d1b0bfd8748d,huit_openai_responses_direct_sdk,gpt-5.4-nano,success,true,1839,172,320,698,331,1029,5.868791,,,false,false
+SPAN321-b025cd80fc87d1df7df365bc,preflight,1,resp_0e791d80c45a1d71006a66cb7d87388197a70f939afa1468aa,huit_openai_responses_direct_sdk,gpt-5.4-nano,success,true,2548,881,320,865,436,1301,6.892432,,,false,false
+SPAN321-5ad78c7baa4ab1af5917bd0a,preflight,1,resp_07bc6f976e9d311c006a66cb7ee5e88190a0a35a3bf2c07606,huit_openai_responses_direct_sdk,gpt-5.4-nano,success,false,2265,633,320,813,251,1064,6.801191,StrictValidationError,quote_not_exact_span_substring,false,false
+SPAN321-5ad78c7baa4ab1af5917bd0a,preflight,2,resp_06f6d93e9e3de81b006a66cb81418c8194ae2b45015ccd2a8a,huit_openai_responses_direct_sdk,gpt-5.4-nano,success,true,2398,633,320,839,287,1126,2.975176,,,false,false

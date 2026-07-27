@@ -1,0 +1,46 @@
+span_rating_id,span_extraction_id,extracted_text_id,retained_source_id,candidate_id,lane_id,priority_tier,quality_label,source_url_or_locator,source_title,municipality,state,unit_type,occupation_group,bargaining_unit_name,contract_or_document_period,inferred_cycle_start,inferred_cycle_end,source_family,target_mechanism_family,local_extracted_text_path,extracted_text_sha256,source_file_sha256,span_text,span_start_offset,span_end_offset,span_sha256,context_before,context_after,extraction_rule_id,extraction_rule_family,span_specificity,rated_mechanism_family,documentary_mechanism_support,direct_text_support,provisional_causal_candidate_support,direction_of_pressure,evidence_strength,claim_relevance,quote_used,quote_exact_substring,reason_code,claim_boundary,no_wage_gap_claim,no_final_causal_claim,rating_status,ingestion_status,codification_status,causal_status,global_analysis_readiness,gabriel_backend,gabriel_model,gabriel_request_id,gabriel_attempt_count,notes
+SPANR201-79a6f662aafc977f9c22550c,SPAN321-5ad78c7baa4ab1af5917bd0a,TXT321-296aa381aeec7d4fd9cd,RS429-a2e45b84b083dce0bb5b,TS4L-65203e774a76590d9aaf,lane_3,tier_b,verification_ready_medium,https://opendoc.cstx.gov/WeblinkPublic/edoc/1116677/FY%202016-2017%20--%20Approved%20Annual%20Budget.pdf?dbid=0&repo=DOCUMENT-SERVER,"FY 2016-2017 — Approved Annual Budget (PDF; Fate, TX)",Fate,TX,non_safety_municipal_units,"municipal employee compensation/pay plan (non-safety), retirement/benefits and salary pool mechanics",,FY 2016-2017,2016,2017,cba_or_budget_pay_plan_with_explicit_compensation_mechanism,fiscal_constraint_signal,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/pdf/TXT321-296aa381aeec7d4fd9cd.txt,ebbe0a71f631399f7159745c25f15ce3b8e2c63faf8e90ad307327fcaf4639c5,5fb8fe2e1061feee1bdadf74f1ba72d44482993586466185663442782e01497b,"Maintaining a competitive pay and benefit structure is one of the central goals of the City. The FY17
+Approved Budget has appropriated funds in the amount of $196,288 for targeted pay increases for sworn
+positions in the Fire Department. This increase is in addition to the 3% adjustment in step pay across the
+entire fire department. This increase brings the pay and benefit structure of the Fire Department into
+competitive range with surrounding fire departments.
+The Fire Department approved FY17 budget includes four SLAs that will promote City Council priorities to
+efficiently, effectively, and strategically place and deliver",93154,93787,4144b1da8acbda080a4d54bb212316c0ac55eb03fbbcbaac2bf169ff8b8d0cb1,") hazardous
+material response.
+
+Incidents Dispatched
+EMS
+
+FIRE
+
+5,772
+4,662
+
+2,179
+
+2012
+
+5,959
+
+5911
+
+4,846
+2,608
+
+2013
+
+2,450
+
+2014
+
+2,489
+
+2015
+
+2665
+
+2016
+
+"," core services and infrastructure that maintains
+citizens’ health, safety and general welfare.
+The first SLA allocates a one-time amount of $27,500 for Communit",FISCAL_APPROPRIATION,appropriation_constraint,medium,fiscal_constraint_signal,moderate,strong,not_supported,not_applicable,moderate,direct_text_claim,"has appropriated funds in the amount of $196,288 for targeted pay increases",true,appropriation_for_targeted_pay_increases,FY17 budget appropriates funds specifically for targeted pay increases for sworn Fire Department positions (appropriation language tied to compensation).,true,true,rated_valid,not_ingested,not_codified,not_causal_evidence,false,huit_openai_responses_direct_sdk,gpt-5.4-nano,resp_08058cebd4ff2f4d006a66cc1dd31c81949df37183a06f3828,1,"Bounded exact-span rating only; not a wage-gap estimate, causal conclusion, or global analysis record."

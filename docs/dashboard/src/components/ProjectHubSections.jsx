@@ -755,7 +755,12 @@ export function VerificationPipeline({
         <div>
           <p className="eyebrow">Manual calibration</p>
           <h3>
-            {textTableCalibrationStatus.calibration_phase ===
+            {["targeted_evidence_span_rating_201_completed_summary_ready",
+              "targeted_evidence_span_rating_201_completed_with_quarantine"].includes(
+              textTableCalibrationStatus.calibration_phase,
+            )
+              ? "Targeted exact-span rating complete; bounded summary review is ready"
+              : textTableCalibrationStatus.calibration_phase ===
             "targeted_evidence_span_extraction_321_completed_rating_ready"
               ? "Targeted exact evidence-span extraction complete; bounded span rating is ready"
               : textTableCalibrationStatus.calibration_phase ===
@@ -917,7 +922,23 @@ export function VerificationPipeline({
           </h3>
         </div>
         <p>
-          {textTableCalibrationStatus.calibration_phase ===
+          {["targeted_evidence_span_rating_201_completed_summary_ready",
+            "targeted_evidence_span_rating_201_completed_with_quarantine"].includes(
+            textTableCalibrationStatus.calibration_phase,
+          ) ? (
+            <>
+              The bounded GABRIEL run rated {formatNumber(
+                textTableCalibrationStatus.targeted_evidence_span_rating_input_count,
+              )}{" "}locked exact spans. {formatNumber(
+                textTableCalibrationStatus.targeted_evidence_span_rating_valid_count,
+              )}{" "}ratings are schema-valid and {formatNumber(
+                textTableCalibrationStatus.targeted_evidence_span_rating_quarantine_count,
+              )}{" "}remain explicit exclusions. Only exact supplied-span quotes
+              passed; no URL, PDF/page, download, OCR, rendering, ingestion, or
+              codification occurred. Ratings are documentary—not wage-gap or causal
+              findings—and global analysis readiness remains closed.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "targeted_evidence_span_extraction_321_completed_rating_ready" ? (
             <>
               The deterministic local review searched {formatNumber(

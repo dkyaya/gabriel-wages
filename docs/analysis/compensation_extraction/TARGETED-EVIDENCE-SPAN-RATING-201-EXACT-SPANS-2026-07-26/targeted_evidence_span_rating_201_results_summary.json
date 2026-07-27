@@ -1,0 +1,71 @@
+{
+  "backend": "huit_openai_responses_direct_sdk",
+  "claim_relevance_summary": {
+    "context_only": 20,
+    "direct_text_claim": 121,
+    "documentary_mechanism_claim": 31,
+    "not_claim_ready": 1
+  },
+  "claim_summary_candidate_count": 152,
+  "codification_runs": 0,
+  "direction_of_pressure_summary": {
+    "gap_narrowing": 1,
+    "neutral_or_unclear": 148,
+    "non_safety_advantage": 1,
+    "not_applicable": 23
+  },
+  "downloads": 0,
+  "evidence_strength_summary": {
+    "moderate": 36,
+    "not_supported": 11,
+    "strong": 110,
+    "weak": 16
+  },
+  "exact_quote_checks_passed": 173,
+  "final_causal_claims": 0,
+  "gabriel_api_model_call_count": 259,
+  "global_analysis_readiness": false,
+  "ingestion_runs": 0,
+  "input_rows": 201,
+  "live_request_count": 251,
+  "model": "gpt-5.4-nano",
+  "ocr_runs": 0,
+  "pdf_page_accesses": 0,
+  "pdf_render_runs": 0,
+  "preflight_passed": true,
+  "preflight_rows": 7,
+  "quarantine_count": 28,
+  "rating_counts_by_mechanism": {
+    "fiscal_constraint_signal": 1,
+    "market_or_comparability_pressure": 59,
+    "non_safety_constraint_signal": 10,
+    "strike_or_no_strike_constraint": 103
+  },
+  "raw_prompts_saved": 0,
+  "raw_responses_saved": 0,
+  "regressions": 0,
+  "schema_valid_rate": 0.860697,
+  "support_summaries": {
+    "direct_text_support": {
+      "moderate": 21,
+      "not_supported": 23,
+      "strong": 116,
+      "weak": 13
+    },
+    "documentary_mechanism_support": {
+      "moderate": 33,
+      "not_supported": 14,
+      "strong": 115,
+      "weak": 11
+    },
+    "provisional_causal_candidate_support": {
+      "moderate": 6,
+      "not_supported": 143,
+      "weak": 24
+    }
+  },
+  "treatment_effect_estimates": 0,
+  "url_opens": 0,
+  "valid_rating_count": 173,
+  "wage_gap_calculations": 0
+}

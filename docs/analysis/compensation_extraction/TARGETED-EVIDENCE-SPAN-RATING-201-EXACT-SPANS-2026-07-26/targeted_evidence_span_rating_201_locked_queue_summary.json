@@ -1,0 +1,15 @@
+{
+  "excluded_rows_included": 0,
+  "html_rows": 0,
+  "locked_queue_sha256": "1b35b6a5708b792659aee77cbc62fd5d18482119fb1a65c6f21beb3235546da5",
+  "mechanism_counts": {
+    "fiscal_constraint_signal": 1,
+    "market_or_comparability_pressure": 70,
+    "non_safety_constraint_signal": 16,
+    "strike_or_no_strike_constraint": 114
+  },
+  "pdf_rows": 201,
+  "row_count": 201,
+  "span_id_set_sha256": "1ff439503682be7ef56cb99e3fc271b3286dec4edb9085e89a2f5e818592bfb4",
+  "unique_span_ids": 201
+}

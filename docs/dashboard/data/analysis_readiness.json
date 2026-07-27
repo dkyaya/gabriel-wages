@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": "0.1.0",
-    "generated_at": "2026-07-27T02:53:15Z",
+    "generated_at": "2026-07-27T03:17:03Z",
     "data_vintage": "2026-07-23",
     "source_files": [
       "docs/analysis/national_scout_coverage_state.csv",
@@ -82,7 +82,7 @@
       "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
     ]
   },
-  "overall_status": "targeted_evidence_span_extraction_321_completed_rating_ready_global_analysis_closed",
+  "overall_status": "targeted_evidence_span_rating_201_completed_with_quarantine_summary_review_ready_global_analysis_closed",
   "current_inputs": {
     "national_queue_available": true,
     "national_coverage_available": true,
@@ -340,6 +340,14 @@
       "targeted_evidence_span_rating_candidate_count": 201,
       "targeted_evidence_span_rating_ready_next": true,
       "targeted_evidence_span_extraction_repair_needed": false,
+      "targeted_evidence_span_rating_completed": true,
+      "targeted_evidence_span_rating_decision": "targeted_evidence_span_rating_201_completed_with_quarantine",
+      "targeted_evidence_span_rating_input_count": 201,
+      "targeted_evidence_span_rating_valid_count": 173,
+      "targeted_evidence_span_rating_quarantine_count": 28,
+      "targeted_evidence_span_rating_claim_candidate_count": 152,
+      "targeted_evidence_span_summary_review_ready_next": true,
+      "targeted_evidence_span_rating_repair_needed": false,
       "gabriel_claim_rating_global_analysis_readiness": false,
       "limited_qualitative_usage_registry_review_global_analysis_readiness": false,
       "limited_qualitative_usage_layer_acceptance_global_analysis_readiness": false,

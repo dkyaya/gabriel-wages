@@ -1,0 +1,16 @@
+{
+  "coverage": [
+    "exact 201 scope",
+    "offset/hash checks",
+    "payload minimization",
+    "strict schema",
+    "exact quote",
+    "claim boundaries",
+    "quarantine reconciliation",
+    "closed downstream statuses",
+    "preflight-before-live",
+    "idempotent resume",
+    "partial fail closed"
+  ],
+  "focused_suite": "scripts/test_targeted_evidence_span_rating_201.py"
+}
