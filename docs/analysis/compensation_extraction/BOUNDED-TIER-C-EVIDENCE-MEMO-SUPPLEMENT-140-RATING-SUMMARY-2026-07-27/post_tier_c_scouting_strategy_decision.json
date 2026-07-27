@@ -1,0 +1,9 @@
+{
+  "dashboard_map_filter": "total_scout_coverage_only",
+  "decision": "broad_state_by_state_source_family_diverse_scouting_is_default_next",
+  "mechanism_targeted_scouting_role": "secondary_gap_filling",
+  "national_representativeness_claim": false,
+  "track_geographic_balance": true,
+  "track_matched_non_safety_opportunities": true,
+  "track_source_family_balance": true
+}

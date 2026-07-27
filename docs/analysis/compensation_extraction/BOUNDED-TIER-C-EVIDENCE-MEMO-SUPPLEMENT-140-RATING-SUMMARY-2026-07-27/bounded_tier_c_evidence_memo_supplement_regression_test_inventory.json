@@ -1,0 +1,16 @@
+{
+  "coverage": [
+    "immutable aggregate inputs",
+    "140/19/159 reconciliation",
+    "quarantine exclusion",
+    "mechanism and claim boundaries",
+    "no-call boundary",
+    "rating-artifact completeness policy",
+    "reconstruction fallback",
+    "dashboard map contract",
+    "broad scout transition",
+    "idempotent resume",
+    "partial package failure"
+  ],
+  "suite": "scripts/test_bounded_tier_c_evidence_memo_supplement.py"
+}

@@ -90,10 +90,11 @@ def main() -> None:
     assert phase["current_phase_code"] in {
         decision["decision"],
         "tier_c_evidence_span_rating_summary_140_completed_memo_supplement_ready",
+        "bounded_tier_c_evidence_memo_supplement_completed_broad_scouting_ready",
     }
     assert phase["tier_c_rating_valid_count"] == 140
     assert phase["tier_c_rating_quarantine_count"] == 19
-    assert phase["next_task"].startswith(("bounded summary review", "bounded Tier C memo supplement"))
+    assert phase["next_task"].startswith(("bounded summary review", "bounded Tier C memo supplement", "broad state-by-state scouting"))
     assert phase["global_analysis_readiness"] is False
     assert state["metadata"]["current_map_layer"] == "total_scout_coverage_only"
     assert state["metric_definition"]["map_color_metric"] == "total_scout_coverage_count"

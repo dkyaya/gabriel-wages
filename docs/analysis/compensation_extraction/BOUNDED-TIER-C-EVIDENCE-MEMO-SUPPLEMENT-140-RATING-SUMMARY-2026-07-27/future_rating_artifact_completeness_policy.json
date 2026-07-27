@@ -1,0 +1,18 @@
+{
+  "minimum_artifacts": [
+    "mechanism_specific_rating_summaries",
+    "claim_relevance_summaries",
+    "evidence_strength_summaries",
+    "direction_of_pressure_summaries",
+    "quarantine_summaries",
+    "reconciliation_summaries",
+    "dashboard_update_summaries",
+    "next_summary_candidate_manifests"
+  ],
+  "missing_non_derivable_artifacts_fail_closed": true,
+  "rating_ledger_mutation_authorized": false,
+  "reconstruct_derivable_missing_artifacts": true,
+  "required_after_every_rating_task": true,
+  "rerating_authorized_by_reconstruction": false,
+  "validate_commit_push_then_continue": true
+}

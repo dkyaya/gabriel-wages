@@ -1,0 +1,22 @@
+{
+  "allowed_only_if_fully_derivable_from_committed_ledgers": true,
+  "continue_after_valid_repair": true,
+  "fail_closed_conditions": [
+    "missing_source_ledger",
+    "hash_drift",
+    "identity_overlap",
+    "non_deterministic_judgment_required",
+    "model_or_source_access_required"
+  ],
+  "repair_commit_required": true,
+  "repair_push_required": true,
+  "required_checks": [
+    "immutable_hashes",
+    "locked_input_count",
+    "valid_plus_quarantine",
+    "identifier_disjointness",
+    "controlled_categories",
+    "predecessor_count_reconciliation"
+  ],
+  "summary_stage_reconstruction_allowed": true
+}

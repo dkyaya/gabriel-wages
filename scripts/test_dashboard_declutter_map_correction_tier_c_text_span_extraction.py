@@ -94,6 +94,7 @@ def main() -> None:
         "tier_c_evidence_span_rating_159_completed_summary_ready",
         "tier_c_evidence_span_rating_159_completed_with_quarantine",
         "tier_c_evidence_span_rating_summary_140_completed_memo_supplement_ready",
+        "bounded_tier_c_evidence_memo_supplement_completed_broad_scouting_ready",
     }
     assert phase["tier_c_text_extracted_ok_count"] == 378
     assert phase["tier_c_positive_exact_span_count"] == 159
@@ -108,7 +109,8 @@ def main() -> None:
     for forbidden in ("tier_c_retained_source_count", "mechanism", "source family", "readiness only"):
         assert forbidden not in map_source
     assert 'id="historical-archive"' in app and "Open current evidence memo" in app
-    assert "Bounded Tier C evidence-memo supplement" in app
+    assert "bounded Tier C evidence-memo supplement" in app
+    assert "Broad state-by-state source scouting" in app
     assert "Global analysis readiness" in app
     for policy in (
         OUT / "future_prompt_dashboard_update_requirement.md",

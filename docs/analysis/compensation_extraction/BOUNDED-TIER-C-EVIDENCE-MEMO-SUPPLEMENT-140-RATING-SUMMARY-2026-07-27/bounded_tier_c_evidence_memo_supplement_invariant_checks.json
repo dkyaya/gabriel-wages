@@ -1,0 +1,20 @@
+{
+  "all_19_quarantines_excluded_as_evidence": true,
+  "all_invariants_passed": true,
+  "authorized_inputs_hash_locked": true,
+  "broad_state_by_state_scouting_ready_next": true,
+  "dashboard_map_total_scout_coverage_only": true,
+  "dashboard_update_requirement_satisfied": true,
+  "future_rating_artifact_completeness_policy_created": true,
+  "future_summary_reconstruction_fallback_created": true,
+  "global_analysis_readiness_false": true,
+  "input_scope_reconciles_to_159": true,
+  "mechanism_claim_strength_direction_and_hint_counts_reconcile": true,
+  "no_ingestion_codification_or_statistical_work": true,
+  "no_model_api_or_rerating": true,
+  "no_ocr_or_rendering": true,
+  "no_url_download_pdf_page_retained_source_or_full_text_access": true,
+  "no_wage_gap_national_population_prevalence_or_final_causal_claims": true,
+  "only_140_valid_rating_summary_used": true,
+  "partial_outputs_cannot_masquerade_as_complete": true
+}

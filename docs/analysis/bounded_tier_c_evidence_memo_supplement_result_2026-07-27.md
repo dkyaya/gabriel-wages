@@ -1,0 +1,3 @@
+# Bounded Tier C evidence memo supplement result — 2026-07-27
+
+The supplement is complete over only the 140-valid-rating aggregate summary, with all 19 quarantines excluded. It adds bounded documentary findings for strike/no-strike and dispute resolution (76), market/comparability (51), non-safety constraint (11), and fiscal constraint (2). Direction remains overwhelmingly neutral, unclear, or not applicable. Broad state-by-state scouting with source-family diversification is ready next. No wage-gap, prevalence, regression, treatment-effect, or final causal result is available; global analysis readiness remains false.

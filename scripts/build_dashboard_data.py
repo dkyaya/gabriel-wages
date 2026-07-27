@@ -1365,6 +1365,17 @@ TIER_C_EVIDENCE_SPAN_RATING_SUMMARY_140_DECISION_PATH = (
 TIER_C_EVIDENCE_SPAN_RATING_SUMMARY_140_INVARIANTS_PATH = (
     TIER_C_EVIDENCE_SPAN_RATING_SUMMARY_140_DIR / "tier_c_evidence_span_rating_summary_140_invariant_checks.json"
 )
+BOUNDED_TIER_C_EVIDENCE_MEMO_SUPPLEMENT_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BOUNDED-TIER-C-EVIDENCE-MEMO-SUPPLEMENT-140-RATING-SUMMARY-2026-07-27"
+)
+BOUNDED_TIER_C_EVIDENCE_MEMO_SUPPLEMENT_DECISION_PATH = (
+    BOUNDED_TIER_C_EVIDENCE_MEMO_SUPPLEMENT_DIR / "bounded_tier_c_evidence_memo_supplement_decision.json"
+)
+BOUNDED_TIER_C_EVIDENCE_MEMO_SUPPLEMENT_INVARIANTS_PATH = (
+    BOUNDED_TIER_C_EVIDENCE_MEMO_SUPPLEMENT_DIR / "bounded_tier_c_evidence_memo_supplement_invariant_checks.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -4557,6 +4568,36 @@ def tier_c_evidence_span_rating_summary_140_status() -> tuple[bool, dict[str, An
     return True, decision
 
 
+def bounded_tier_c_evidence_memo_supplement_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize only the completed aggregate-only Tier C memo supplement."""
+    required = (
+        BOUNDED_TIER_C_EVIDENCE_MEMO_SUPPLEMENT_DECISION_PATH,
+        BOUNDED_TIER_C_EVIDENCE_MEMO_SUPPLEMENT_INVARIANTS_PATH,
+        BOUNDED_TIER_C_EVIDENCE_MEMO_SUPPLEMENT_DIR / "bounded_tier_c_evidence_memo_supplement.md",
+        BOUNDED_TIER_C_EVIDENCE_MEMO_SUPPLEMENT_DIR / "future_rating_artifact_completeness_policy.json",
+        BOUNDED_TIER_C_EVIDENCE_MEMO_SUPPLEMENT_DIR / "future_rating_summary_artifact_reconstruction_fallback.json",
+        BOUNDED_TIER_C_EVIDENCE_MEMO_SUPPLEMENT_DIR / "next_broad_state_by_state_scout_prompt.md",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    decision = read_json(BOUNDED_TIER_C_EVIDENCE_MEMO_SUPPLEMENT_DECISION_PATH)
+    invariants = read_json(BOUNDED_TIER_C_EVIDENCE_MEMO_SUPPLEMENT_INVARIANTS_PATH)
+    if not (
+        decision.get("decision") == "bounded_tier_c_evidence_memo_supplement_completed_broad_scouting_ready"
+        and decision.get("valid_rating_summary_scope") == 140
+        and decision.get("quarantines_excluded") == 19
+        and decision.get("predecessor_scope_reconciled") == 159
+        and decision.get("future_rating_artifact_completeness_policy_created") is True
+        and decision.get("future_summary_reconstruction_fallback_created") is True
+        and decision.get("broad_state_by_state_scouting_ready_next") is True
+        and decision.get("dashboard_map_filter") == "total_scout_coverage_only"
+        and decision.get("global_analysis_readiness") is False
+        and invariants.get("all_invariants_passed") is True
+    ):
+        raise ValueError("bounded Tier C memo supplement package fails dashboard gates")
+    return True, decision
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -4639,6 +4680,32 @@ def build_reports_index_layer(
     repository_root_url = "https://github.com/dkyaya/gabriel-wages/blob/main/"
     published_reports = [
         {
+            "id": "bounded-tier-c-evidence-memo-supplement-2026-07-27",
+            "title": "Bounded Tier C Evidence Memo Supplement",
+            "report_type": "Bounded internal evidence memo supplement",
+            "date": "2026-07-27",
+            "checkpoint": "140 valid aggregate ratings; 19 quarantines excluded",
+            "summary": (
+                "The current supplement closes the targeted Tier C evidence pass with "
+                "bounded documentary additions for strike/no-strike, market/comparability, "
+                "non-safety constraint, and fiscal constraint. Direction remains largely unresolved."
+            ),
+            "tags": ["current", "Tier C", "memo supplement", "claim boundaries"],
+            "current": True,
+            "historical": False,
+            "href": repository_root_url + (
+                "docs/analysis/compensation_extraction/"
+                "BOUNDED-TIER-C-EVIDENCE-MEMO-SUPPLEMENT-140-RATING-SUMMARY-2026-07-27/"
+                "bounded_tier_c_evidence_memo_supplement.md"
+            ),
+            "link_label": "Open current memo supplement",
+            "scope_metrics": [
+                {"label": "valid ratings", "value": 140},
+                {"label": "quarantines excluded", "value": 19},
+                {"label": "claim candidates", "value": 115},
+            ],
+        },
+        {
             "id": "bounded-mechanism-linkage-memo-2026-07-26",
             "title": "Bounded Internal Mechanism-Linkage Claim Memo",
             "report_type": "Bounded internal evidence memo",
@@ -4649,15 +4716,15 @@ def build_reports_index_layer(
                 "mechanism-value scaffolds, provisional linkages, and records that remain "
                 "insufficient for claims. It contains no wage-gap estimate or causal finding."
             ),
-            "tags": ["current", "bounded memo", "co-location", "claim boundaries"],
-            "current": True,
+            "tags": ["parent memo", "bounded memo", "co-location", "claim boundaries"],
+            "current": False,
             "historical": False,
             "href": repository_root_url + (
                 "docs/analysis/compensation_extraction/"
                 "BOUNDED-INTERNAL-MECHANISM-LINKAGE-CLAIM-MEMO-2026-07-26/"
                 "bounded_internal_mechanism_linkage_claim_memo.md"
             ),
-            "link_label": "Open current evidence memo",
+            "link_label": "Open parent evidence memo",
             "scope_metrics": [
                 {"label": "same-source pairs", "value": 268},
                 {"label": "quantitative rows", "value": 208},
@@ -7087,6 +7154,9 @@ def build_project_phase_summary(
     tier_c_summary_completed, tier_c_summary = tier_c_evidence_span_rating_summary_140_status()
     if not tier_c_summary_completed:
         raise ValueError("current dashboard phase requires completed Tier C rating summary")
+    tier_c_supplement_completed, tier_c_supplement = bounded_tier_c_evidence_memo_supplement_status()
+    if not tier_c_supplement_completed:
+        raise ValueError("current dashboard phase requires completed bounded Tier C memo supplement")
     mechanism = read_json(
         TARGETED_TIER_C_VERIFICATION_FROM_MEMO_GAPS_DIR
         / "targeted_tier_c_verification_mechanism_gap_coverage_summary.json"
@@ -7098,10 +7168,10 @@ def build_project_phase_summary(
     return {
         **metadata,
         "data_vintage": "2026-07-27",
-        "stage": "tier_c_exact_span_rating_summary_complete_memo_supplement_transition",
-        "current_phase": "Tier C rating summary complete; bounded memo supplement ready next",
-        "current_phase_code": tier_c_summary["decision"],
-        "current_evidence_status": "bounded_tier_c_rating_summary_and_documentary_colocation_scaffolds_only",
+        "stage": "bounded_tier_c_evidence_memo_supplement_complete_broad_scout_transition",
+        "current_phase": "Tier C evidence memo supplement complete; broad state-by-state scouting ready next",
+        "current_phase_code": tier_c_supplement["decision"],
+        "current_evidence_status": "bounded_tier_c_documentary_memo_supplement_and_colocation_scaffolds_only",
         "global_analysis_readiness": False,
         "wage_gap_estimates_available": False,
         "final_causal_claims_available": False,
@@ -7158,12 +7228,19 @@ def build_project_phase_summary(
         "tier_c_rating_summary_evidence_strength": tier_c_summary["evidence_strength_summary"],
         "tier_c_rating_summary_direction": tier_c_summary["direction_of_pressure_summary"],
         "tier_c_rating_summary_result_path": "docs/analysis/tier_c_evidence_span_rating_summary_140_result_2026-07-27.md",
+        "tier_c_memo_supplement_decision": tier_c_supplement["decision"],
+        "tier_c_memo_supplement_valid_scope": tier_c_supplement["valid_rating_summary_scope"],
+        "tier_c_memo_supplement_quarantines_excluded": tier_c_supplement["quarantines_excluded"],
+        "tier_c_memo_supplement_path": "docs/analysis/compensation_extraction/BOUNDED-TIER-C-EVIDENCE-MEMO-SUPPLEMENT-140-RATING-SUMMARY-2026-07-27/bounded_tier_c_evidence_memo_supplement.md",
+        "tier_c_memo_supplement_result_path": "docs/analysis/bounded_tier_c_evidence_memo_supplement_result_2026-07-27.md",
+        "future_rating_artifact_completeness_policy_created": True,
+        "future_summary_reconstruction_fallback_created": True,
         "future_scout_default": "broad_state_by_state_geographic_and_source_family_diverse",
         "mechanism_targeted_scouting_role": "secondary_gap_filling_after_broad_scans",
-        "current_report_title": "Bounded Internal Mechanism-Linkage Claim Memo",
-        "current_report_path": wage_stage["bounded_internal_mechanism_linkage_claim_memo_path"],
-        "current_operational_report_path": "docs/analysis/tier_c_evidence_span_rating_summary_140_result_2026-07-27.md",
-        "next_task": "bounded Tier C memo supplement using only the 140-valid-rating summary",
+        "current_report_title": "Bounded Tier C Evidence Memo Supplement",
+        "current_report_path": "docs/analysis/compensation_extraction/BOUNDED-TIER-C-EVIDENCE-MEMO-SUPPLEMENT-140-RATING-SUMMARY-2026-07-27/bounded_tier_c_evidence_memo_supplement.md",
+        "current_operational_report_path": "docs/analysis/bounded_tier_c_evidence_memo_supplement_result_2026-07-27.md",
+        "next_task": "broad state-by-state scouting with geographic and source-family balance",
         "checkpoint_target_scout_covered": SCOUT_CHECKPOINT_TARGET,
         "current_scout_covered": covered,
         "remaining_to_checkpoint": remaining,
@@ -7211,17 +7288,17 @@ def build_project_phase_summary(
             "default to broad state-by-state scanning with geographic and source-family "
             "balance; use mechanism-targeted scouting only as secondary gap-filling."
         ),
-        "next_phase": "bounded Tier C evidence memo supplement",
+        "next_phase": "broad state-by-state source scouting",
         "next_phase_sequence": [
-            "use only the completed 140-valid-rating deterministic summary",
-            "preserve all 19 quarantine exclusions",
-            "integrate documentary additions without reopening sources or rerating",
-            "keep weak and moderate causal-candidate support labeled only as hints",
-            "keep every claim bounded and global analysis readiness false",
+            "build locked broad state and municipality inputs",
+            "prioritize matched non-safety opportunities within city and cycle",
+            "track geographic and source-family balance explicitly",
+            "collect diverse document families without requiring a preselected mechanism",
+            "use mechanism-targeted scouting only as secondary gap filling",
         ],
         "regressions_status": "Deferred",
         "last_updated_commit": CURRENT_SOURCE_ACCOUNTING_COMMIT,
-        "last_updated_context": "tier_c_rating_summary_complete_memo_supplement_ready",
+        "last_updated_context": "tier_c_memo_supplement_complete_broad_state_scouting_ready",
         "future_live_controls": [
             "stronger preflight gate",
             "compact prompts",
@@ -7234,6 +7311,7 @@ def build_project_phase_summary(
             "Historical discovery and candidate-queue panels are preserved as labeled historical context.",
             "The Tier C stage produced 140 valid bounded exact-span ratings; 19 strict-schema failures are quarantined and excluded.",
             "The deterministic summary strengthens documentary lanes but does not establish direction, prevalence, wage differences, or effects.",
+            "The Tier C memo supplement integrates aggregate documentary findings only; all 19 quarantines remain excluded.",
             "The ratings are not ingested, codified, causal, final, or globally analysis-ready.",
             "The bounded memo supports documentary co-location scaffolds only.",
             "Wage gaps have not been calculated.",

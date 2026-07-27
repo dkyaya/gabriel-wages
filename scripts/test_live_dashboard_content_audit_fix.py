@@ -65,6 +65,7 @@ class LiveDashboardContentAuditFixTests(unittest.TestCase):
             "bounded_unrated_exact_documentary_spans_and_colocation_scaffolds_only",
             "bounded_exact_span_ratings_and_documentary_colocation_scaffolds_only",
             "bounded_tier_c_rating_summary_and_documentary_colocation_scaffolds_only",
+            "bounded_tier_c_documentary_memo_supplement_and_colocation_scaffolds_only",
         })
         self.assertTrue(self.phase["pdf_text_layer_readiness_ready_next"])
         self.assertFalse(self.phase["global_analysis_readiness"])
@@ -74,8 +75,10 @@ class LiveDashboardContentAuditFixTests(unittest.TestCase):
     def test_current_report_is_memo_and_old_report_is_historical(self) -> None:
         current = [report for report in self.reports["reports"] if report["current"]]
         self.assertEqual(len(current), 1)
-        self.assertEqual(current[0]["id"], "bounded-mechanism-linkage-memo-2026-07-26")
-        self.assertIn("BOUNDED-INTERNAL-MECHANISM-LINKAGE-CLAIM-MEMO", current[0]["href"])
+        self.assertEqual(current[0]["id"], "bounded-tier-c-evidence-memo-supplement-2026-07-27")
+        self.assertIn("BOUNDED-TIER-C-EVIDENCE-MEMO-SUPPLEMENT", current[0]["href"])
+        parent = next(report for report in self.reports["reports"] if report["id"] == "bounded-mechanism-linkage-memo-2026-07-26")
+        self.assertFalse(parent["current"])
         old = next(report for report in self.reports["reports"] if report["id"] == "pi-source-discovery-2026-07-22")
         self.assertFalse(old["current"])
         self.assertTrue(old["historical"])
@@ -101,7 +104,8 @@ class LiveDashboardContentAuditFixTests(unittest.TestCase):
             self.assertNotIn(phrase, source)
         for phrase in (
             "Current bounded evidence and retained-source status",
-            "Bounded Tier C evidence-memo supplement",
+            "bounded Tier C evidence-memo supplement",
+            "Broad state-by-state source scouting",
             "Total scout coverage",
             "Historical candidate queue",
         ):
@@ -112,11 +116,11 @@ class LiveDashboardContentAuditFixTests(unittest.TestCase):
         self.assertEqual(len(bundles), 1)
         bundle = bundles[0].read_text(encoding="utf-8")
         for phrase in (
-            "Tier C exact-span rating summary complete",
-            "140 valid ratings",
-            "Open current evidence memo",
+            "Tier C evidence memo supplement complete",
+            "140 valid aggregate ratings",
+            "Open current memo supplement",
             "Historical candidate queue",
-            "Draft a bounded Tier C evidence-memo supplement",
+            "Broad state-by-state source scouting",
         ):
             self.assertIn(phrase, bundle)
         self.assertNotIn("Authorize the first scaled verification round", bundle)

@@ -1,0 +1,11 @@
+# Next task: broad state-by-state source scouting
+
+Run the next bounded broad geographic/state-by-state scout wave. Broad coverage is the default discovery mode; mechanism-targeted scouting is secondary gap filling after broad scans expose specific holes. Build locked state/city inputs, preserve the city × occupation × cycle unit of observation, and prioritize matched non-safety opportunities. Track geographic balance and source-family balance explicitly.
+
+Seek diverse public local-government document families, including CBAs, MOUs and memoranda, settlement agreements, arbitration awards, factfinding reports, salary ordinances, wage schedules, budget and pay-plan documents, civil-service or HR pay plans, compensation studies, classification studies, and related pay-policy documents. Do not allow CBA-heavy discovery to become an unreported default. Scout outputs remain unverified discovery metadata and must not be treated as retained, extracted, rated, ingested, causal, or analysis-ready evidence.
+
+Post-rating artifact-completeness requirement for every future rating task: before closure, verify mechanism-specific, claim-relevance, evidence-strength, direction-of-pressure, quarantine, reconciliation, dashboard-update, and next-summary-candidate artifacts. If a missing artifact is fully derivable from committed valid/quarantine/results ledgers, reconstruct it deterministically, validate reconciliation, commit and push the repair, and continue. Missing non-derivable artifacts still fail closed. Future summary stages may use this same validated reconstruction fallback without rerating or ledger mutation.
+
+Do not access unauthorized sources, download documents outside a separately locked queue, weaken provenance, merge causal and discourse corpora, ingest, codify, normalize or compare quantitative values, calculate wage gaps, run regressions or treatment effects, make national/population-prevalence/final causal claims, or set global analysis readiness true.
+
+Dashboard update requirement: after the task, update dashboard/status/docs with substantive new information unless there is genuinely no update; if none is needed, state why. Preserve the total-scout-coverage-only map and global analysis readiness false. Do not imply wage gaps, regressions, treatment effects, national prevalence, population prevalence, or final causal claims.

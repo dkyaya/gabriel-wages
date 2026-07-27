@@ -18,10 +18,10 @@ export function ProjectOrientation({ totals, priorityTotals, report, phase }) {
     <section className="project-orientation" aria-label="Collected current and forthcoming project status">
       <article>
         <p className="eyebrow">Current operation</p>
-        <h2>Tier C exact-span rating summary complete</h2>
+        <h2>Tier C evidence memo supplement complete</h2>
         <p>
-          {formatNumber(phase.tier_c_rating_summary_valid_count)} schema-valid ratings were summarized;
-          {" "}{formatNumber(phase.tier_c_rating_summary_quarantine_excluded_count)} quarantines remain explicitly excluded.
+          {formatNumber(phase.tier_c_memo_supplement_valid_scope)} valid aggregate ratings were integrated;
+          {" "}{formatNumber(phase.tier_c_memo_supplement_quarantines_excluded)} quarantines remain explicitly excluded.
         </p>
       </article>
       <article>
@@ -35,10 +35,10 @@ export function ProjectOrientation({ totals, priorityTotals, report, phase }) {
       </article>
       <article>
         <p className="eyebrow">Next authorized stage</p>
-        <h2>Bounded Tier C evidence-memo supplement</h2>
+        <h2>Broad state-by-state source scouting</h2>
         <p>
-          Use only the completed deterministic summary, preserve all quarantine exclusions, and integrate the
-          documentary additions without reopening sources, rerating, ingestion, or final analysis.
+          Resume broad geographic collection, prioritize matched non-safety opportunities, and track source-family
+          balance so targeted mechanism discovery returns to its intended secondary gap-filling role.
         </p>
       </article>
     </section>
@@ -52,7 +52,7 @@ export function ProjectPhasePanel({ phase }) {
       <div className="section-heading">
         <div>
           <p className="eyebrow">Project phase</p>
-          <h2 id="project-phase-title">Tier C rating summary complete; bounded memo supplement ready next</h2>
+          <h2 id="project-phase-title">Tier C memo supplement complete; broad state-by-state scouting ready next</h2>
         </div>
         <StatusPill tone="verified">
           {formatNumber(phase.tier_c_positive_exact_span_count)} exact spans
@@ -84,16 +84,16 @@ export function ProjectPhasePanel({ phase }) {
       <div className="phase-next">
         <div>
           <p className="eyebrow">Current transition</p>
-          <h3>Draft a bounded documentary supplement</h3>
+          <h3>Resume broad, source-diverse discovery</h3>
         </div>
         <ol>
-          <li>Use only the completed 140-valid-rating summary</li>
-          <li>Preserve all 19 quarantine exclusions</li>
-          <li>Integrate strike, market, non-safety, and fiscal documentary additions</li>
-          <li>Keep weak and moderate causal-candidate support labeled only as hints</li>
-          <li>Return to broad state-by-state, source-diverse scouting after the supplement</li>
+          <li>Build locked broad state and municipality inputs</li>
+          <li>Prioritize matched non-safety opportunities within city and cycle</li>
+          <li>Track geographic and source-family balance explicitly</li>
+          <li>Collect diverse document families without requiring a preselected mechanism</li>
+          <li>Use targeted mechanism scouts only for secondary gap filling</li>
         </ol>
-        <StatusPill tone="future">Memo supplement next</StatusPill>
+        <StatusPill tone="future">Broad scouting next</StatusPill>
       </div>
       <p className="panel-note">
         Exact-span rating is not causal proof. The ratings and bounded memo remain documentary scaffolding only;
@@ -268,7 +268,8 @@ export function VerificationPipeline({
     ["Text-layer extraction", formatNumber(phase.tier_c_text_extracted_ok_count), "Completed", "verified"],
     ["Exact positive spans", formatNumber(phase.tier_c_positive_exact_span_count), "Rated", "verified"],
     ["Valid bounded ratings", formatNumber(phase.tier_c_rating_valid_count), "Summarized", "verified"],
-    ["Valid summary scope", formatNumber(phase.tier_c_rating_summary_valid_count), "Memo next", "future"],
+    ["Valid summary scope", formatNumber(phase.tier_c_rating_summary_valid_count), "Memo complete", "verified"],
+    ["Memo supplement scope", formatNumber(phase.tier_c_memo_supplement_valid_scope), "Scouting next", "future"],
     ["Global analysis-ready evidence", "False", "Closed", "future"],
   ];
 
@@ -277,9 +278,9 @@ export function VerificationPipeline({
       <div className="section-heading">
         <div>
           <p className="eyebrow">Current evidence pipeline</p>
-          <h2 id="verification-title">From verified Tier C leads to a bounded rating summary</h2>
+          <h2 id="verification-title">From verified Tier C leads to a bounded memo supplement</h2>
         </div>
-        <StatusPill tone="verified">Summary complete; memo next</StatusPill>
+        <StatusPill tone="verified">Memo complete; broad scouting next</StatusPill>
       </div>
 
       <div className="verification-flow">
@@ -296,7 +297,7 @@ export function VerificationPipeline({
       <div className="verification-callout">
         <div>
           <p className="eyebrow">Current operational handoff</p>
-          <h3>Draft a bounded Tier C evidence-memo supplement</h3>
+          <h3>Resume broad state-by-state source scouting</h3>
         </div>
         <p>
           The targeted Tier C verification retained {formatNumber(phase.tier_c_verified_source_lead_count)} verified
@@ -304,7 +305,8 @@ export function VerificationPipeline({
           source files. Local non-OCR extraction produced {formatNumber(phase.tier_c_text_extracted_ok_count)} text
           artifacts and {formatNumber(phase.tier_c_positive_exact_span_count)} exact positive spans. Bounded rating
           produced {formatNumber(phase.tier_c_rating_valid_count)} valid outputs and {formatNumber(phase.tier_c_rating_quarantine_count)}
-          quarantines. The valid-only summary is complete; ingestion, codification, wage-gap analysis, and causal analysis have not run on this scope.
+          quarantines. The valid-only summary and bounded memo supplement are complete; ingestion, codification,
+          wage-gap analysis, and causal analysis have not run on this scope.
         </p>
       </div>
       <div className="verification-callout">
@@ -1949,18 +1951,18 @@ export function ReportsLibrary({ reportsIndex, reportAssets }) {
         ))}
         <article className="report-card">
           <div className="report-card-topline"><span>Current operations</span><span>2026-07-27</span></div>
-          <h3>Tier C exact-span rating summary</h3>
+          <h3>Bounded Tier C evidence memo supplement</h3>
           <p>
-            The deterministic summary covers 140 valid ratings and excludes all 19 quarantines. It strengthens
-            documentary strike/no-strike and market/comparability lanes while remaining globally analysis-closed.
+            The supplement integrates 140 valid aggregate ratings and excludes all 19 quarantines. It closes the
+            targeted Tier C pass while keeping every finding documentary, bounded, and globally analysis-closed.
           </p>
-          <a className="primary-link" href="https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/tier_c_evidence_span_rating_summary_140_result_2026-07-27.md" target="_blank" rel="noreferrer">Open current rating summary</a>
+          <a className="primary-link" href="https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/compensation_extraction/BOUNDED-TIER-C-EVIDENCE-MEMO-SUPPLEMENT-140-RATING-SUMMARY-2026-07-27/bounded_tier_c_evidence_memo_supplement.md" target="_blank" rel="noreferrer">Open current memo supplement</a>
         </article>
         <article className="report-card report-card-planned">
           <div className="report-card-topline"><span>Forthcoming</span><span>Next authorized stage</span></div>
-          <h3>Bounded Tier C evidence-memo supplement</h3>
-          <p>Next document home for the Tier C additions, using only the completed 140-valid-rating summary.</p>
-          <StatusPill tone="future">Memo supplement next</StatusPill>
+          <h3>Broad state-by-state source scouting</h3>
+          <p>Next discovery phase for geographic balance, matched non-safety opportunities, and source-family diversity.</p>
+          <StatusPill tone="future">Broad scouting next</StatusPill>
         </article>
       </div>
       <p className="panel-note">{reportsIndex.disclaimer}</p>
@@ -2010,15 +2012,15 @@ export function NextStepsPanel({ priority, phase }) {
       <div className="section-heading">
         <div>
           <p className="eyebrow">Next steps</p>
-          <h2 id="next-steps-title">Draft the bounded Tier C evidence-memo supplement</h2>
+          <h2 id="next-steps-title">Resume broad state-by-state source scouting</h2>
         </div>
         <StatusPill tone="scout">PI-aligned strategy</StatusPill>
       </div>
       <div className="next-step-grid">
         <article className="recommended-step">
           <span>Immediate</span>
-          <h3>Integrate the 140-valid-rating summary</h3>
-          <p>Use only the deterministic summary, preserve all 19 quarantine exclusions, and keep weak or moderate causal-candidate support labeled as hypothesis hints rather than findings.</p>
+          <h3>Build the next broad geographic wave</h3>
+          <p>Use locked state and municipality inputs, prioritize matched non-safety opportunities, and report geographic and source-family balance after the wave.</p>
         </article>
         <article>
           <span>Completed input scope</span>
@@ -2033,7 +2035,7 @@ export function NextStepsPanel({ priority, phase }) {
       </div>
       <p className="panel-note">
         Historical discovery tiers remain available above for provenance only. The current operational next task is
-        bounded Tier C evidence-memo supplement. Global analysis readiness remains false.
+        broad state-by-state source scouting. Global analysis readiness remains false.
       </p>
     </section>
   );

@@ -1,0 +1,17 @@
+{
+  "current_phase": "Bounded Tier C evidence memo supplement complete; broad state-by-state scouting ready next",
+  "current_phase_code": "bounded_tier_c_evidence_memo_supplement_completed_broad_scouting_ready",
+  "dashboard_map_data_date": "2026-07-27",
+  "dashboard_map_filter": "total_scout_coverage_only",
+  "dashboard_result_path": "docs/analysis/bounded_tier_c_evidence_memo_supplement_result_2026-07-27.md",
+  "dashboard_updated": true,
+  "final_causal_claims_available": false,
+  "global_analysis_readiness": false,
+  "memo_supplement_path": "docs/analysis/compensation_extraction/BOUNDED-TIER-C-EVIDENCE-MEMO-SUPPLEMENT-140-RATING-SUMMARY-2026-07-27/bounded_tier_c_evidence_memo_supplement.md",
+  "national_or_population_prevalence_claims_available": false,
+  "next_task": "broad state-by-state scouting with source-family diversification",
+  "quarantines_excluded": 19,
+  "regressions_or_treatment_effects_available": false,
+  "valid_rating_summary_scope": 140,
+  "wage_gap_estimates_available": false
+}

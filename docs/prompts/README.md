@@ -28,3 +28,7 @@ The profile assignment does not relax any gate. In particular, a smoke preflight
 ## Standing dashboard update requirement
 
 Every future task prompt must include the reusable block in `dashboard_update_requirement.md`. After every task, update dashboard/status/docs with substantive new information unless there is genuinely no update to provide; in that case, explicitly state why no update was needed. Dashboard changes must keep global analysis readiness false unless separately authorized and must not imply wage gaps, regressions, treatment effects, national prevalence, or final causal claims.
+
+## Standing post-rating artifact requirement
+
+Every future rating prompt and rating-summary prompt must include the reusable completeness and reconstruction rules in `rating_artifact_completeness_requirement.md`. Rating work does not close until the downstream mechanism, claim-relevance, evidence-strength, direction, quarantine, reconciliation, dashboard, and candidate-manifest artifacts exist and reconcile. Fully derivable missing artifacts are reconstructed deterministically from committed ledgers, validated, committed, pushed, and followed by the already-authorized summary work. Non-derivable gaps still fail closed.

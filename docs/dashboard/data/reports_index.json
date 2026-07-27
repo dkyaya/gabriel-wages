@@ -1,9 +1,41 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-27T16:56:43Z",
+  "generated_at": "2026-07-27T17:08:58Z",
   "data_vintage": "2026-07-27",
   "source_file": "docs/dashboard/reports/reports_index.json",
   "reports": [
+    {
+      "id": "bounded-tier-c-evidence-memo-supplement-2026-07-27",
+      "title": "Bounded Tier C Evidence Memo Supplement",
+      "report_type": "Bounded internal evidence memo supplement",
+      "date": "2026-07-27",
+      "checkpoint": "140 valid aggregate ratings; 19 quarantines excluded",
+      "summary": "The current supplement closes the targeted Tier C evidence pass with bounded documentary additions for strike/no-strike, market/comparability, non-safety constraint, and fiscal constraint. Direction remains largely unresolved.",
+      "tags": [
+        "current",
+        "Tier C",
+        "memo supplement",
+        "claim boundaries"
+      ],
+      "current": true,
+      "historical": false,
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/compensation_extraction/BOUNDED-TIER-C-EVIDENCE-MEMO-SUPPLEMENT-140-RATING-SUMMARY-2026-07-27/bounded_tier_c_evidence_memo_supplement.md",
+      "link_label": "Open current memo supplement",
+      "scope_metrics": [
+        {
+          "label": "valid ratings",
+          "value": 140
+        },
+        {
+          "label": "quarantines excluded",
+          "value": 19
+        },
+        {
+          "label": "claim candidates",
+          "value": 115
+        }
+      ]
+    },
     {
       "id": "bounded-mechanism-linkage-memo-2026-07-26",
       "title": "Bounded Internal Mechanism-Linkage Claim Memo",
@@ -12,15 +44,15 @@
       "checkpoint": "268 exact same-source linkages; documentary/co-location evidence only",
       "summary": "The current evidence memo separates direct-text co-location, documentary mechanism-value scaffolds, provisional linkages, and records that remain insufficient for claims. It contains no wage-gap estimate or causal finding.",
       "tags": [
-        "current",
+        "parent memo",
         "bounded memo",
         "co-location",
         "claim boundaries"
       ],
-      "current": true,
+      "current": false,
       "historical": false,
       "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/compensation_extraction/BOUNDED-INTERNAL-MECHANISM-LINKAGE-CLAIM-MEMO-2026-07-26/bounded_internal_mechanism_linkage_claim_memo.md",
-      "link_label": "Open current evidence memo",
+      "link_label": "Open parent evidence memo",
       "scope_metrics": [
         {
           "label": "same-source pairs",

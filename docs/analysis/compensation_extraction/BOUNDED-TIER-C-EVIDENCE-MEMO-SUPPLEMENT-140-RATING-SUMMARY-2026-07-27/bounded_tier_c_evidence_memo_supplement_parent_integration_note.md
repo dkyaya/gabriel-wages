@@ -1,0 +1,3 @@
+# Parent-memo integration note
+
+Append this supplement to the bounded internal mechanism-linkage memo as a later documentary update; do not rewrite the parent memo's 268-pair same-source linkage results. The Tier C ratings strengthen documentary strike/no-strike and market/comparability lanes, add limited non-safety constraint material, and leave fiscal constraint extremely thin. They do not create exact same-source quantitative linkage, change the parent linkage counts, normalize quantitative values, or establish direction or causation. The parent memo remains the current mechanism-value co-location memo; this supplement is its bounded Tier C documentary addendum.

@@ -149,9 +149,9 @@ function App() {
             <p className="eyebrow">HBS municipal labor evidence project</p>
             <h1>Gabriel Wages project hub</h1>
             <p className="header-deck">
-              The bounded Tier C summary covers {formatNumber(projectPhaseSummary.tier_c_rating_summary_valid_count)}
-              {" "}valid exact-span ratings and excludes {formatNumber(projectPhaseSummary.tier_c_rating_summary_quarantine_excluded_count)}
-              {" "}quarantines. A short evidence-memo supplement is next; no wage gaps or causal findings are available.
+              The bounded Tier C evidence-memo supplement integrates {formatNumber(projectPhaseSummary.tier_c_memo_supplement_valid_scope)}
+              {" "}valid aggregate ratings and excludes {formatNumber(projectPhaseSummary.tier_c_memo_supplement_quarantines_excluded)}
+              {" "}quarantines. Broad state-by-state, source-diverse scouting is next; no wage gaps or causal findings are available.
             </p>
           </div>
           <div className="header-status">
@@ -178,7 +178,7 @@ function App() {
               </div>
                 <div className="checkpoint-label">
                   <span>Next authorized stage</span>
-                  <strong>Bounded Tier C evidence-memo supplement</strong>
+                  <strong>Broad state-by-state source scouting</strong>
                 </div>
             </div>
 
@@ -208,7 +208,7 @@ function App() {
             <div className="hub-caveat" role="note">
               <strong>Bounded evidence status only.</strong>
               <span>
-                The Tier C summary remains not ingested, codified, causal, final, or analysis-ready. It supports
+                The Tier C supplement remains not ingested, codified, causal, final, or analysis-ready. It supports
                 bounded documentary findings and hypothesis hints only, not normalized comparisons or causal conclusions.
               </span>
             </div>
