@@ -1,0 +1,4 @@
+unit_type,result_row_count,linked_pair_count,linked_quantitative_row_count,no_link_quantitative_row_count
+fire,158,85,65,73
+non_safety,154,54,48,100
+police,261,129,95,132

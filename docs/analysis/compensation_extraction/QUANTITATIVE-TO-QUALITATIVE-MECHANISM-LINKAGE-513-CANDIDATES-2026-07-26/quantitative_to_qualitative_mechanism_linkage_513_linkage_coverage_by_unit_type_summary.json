@@ -1,0 +1,14 @@
+{
+  "category_count": 3,
+  "dimension": "unit_type",
+  "linked_pair_counts": {
+    "fire": 85,
+    "non_safety": 54,
+    "police": 129
+  },
+  "linked_quantitative_row_counts": {
+    "fire": 65,
+    "non_safety": 48,
+    "police": 95
+  }
+}

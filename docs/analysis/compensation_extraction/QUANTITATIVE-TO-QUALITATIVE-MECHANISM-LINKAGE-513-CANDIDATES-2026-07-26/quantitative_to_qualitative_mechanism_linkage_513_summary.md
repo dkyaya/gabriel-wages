@@ -1,0 +1,3 @@
+# Quantitative-to-qualitative mechanism linkage — 513 candidates
+
+Decision: `quantitative_to_qualitative_mechanism_linkage_513_completed_claim_review_ready`. The locked scopes contain 513 quantitative candidates and 609 supported valid qualitative mechanism records. Strict lineage produced 268 exact same-source pairs covering 208 quantitative rows and 90 qualitative mechanism records; 305 quantitative rows remain unmatched. No city-only, state-only, mechanism-only, weak-context, normalized-value, comparative, wage-gap, statistical, population, national, or causal inference was made. Global analysis readiness remains false.

@@ -1,0 +1,16 @@
+{
+  "all_invariants_passed": true,
+  "exactly_513_quantitative_candidates_linked_or_preserved": true,
+  "global_analysis_readiness_false": true,
+  "no_gabriel_api_model_calls": true,
+  "no_ingestion_or_codification": true,
+  "no_url_pdf_page_retained_file_or_full_text_access": true,
+  "no_value_normalization_imputation_or_annualization": true,
+  "no_wage_gap_regression_treatment_effect_population_national_or_final_causal_work": true,
+  "no_weak_context_links_manufactured": true,
+  "noncandidate_quantitative_rows_excluded": true,
+  "partial_outputs_cannot_masquerade_as_complete": true,
+  "qualitative_quarantines_and_unsupported_rows_excluded": true,
+  "raw_quantitative_values_preserved_exactly": true,
+  "strict_lineage_keys_only": true
+}

@@ -338,7 +338,8 @@ class MaterializedClaimPhaseTests(unittest.TestCase):
             "targeted_evidence_span_rating_201_completed_summary_ready",
             "targeted_evidence_span_rating_201_completed_with_quarantine",
             "targeted_evidence_span_rating_summary_173_completed_quantitative_triage_recommended",
-            "quantitative_direct_text_claim_triage_862_completed_mechanism_linkage_ready",
+        "quantitative_direct_text_claim_triage_862_completed_mechanism_linkage_ready",
+        "quantitative_to_qualitative_mechanism_linkage_513_completed_claim_review_ready",
         })
         self.assertTrue(calibration["gabriel_claim_rating_ready"])
         self.assertFalse(calibration["analysis_facing_promotion_allowed"])
@@ -365,7 +366,8 @@ class MaterializedClaimPhaseTests(unittest.TestCase):
             "targeted_evidence_span_rating_201_completed_summary_ready_global_analysis_closed",
             "targeted_evidence_span_rating_201_completed_with_quarantine_summary_review_ready_global_analysis_closed",
             "targeted_evidence_span_rating_summary_173_completed_quantitative_triage_recommended_global_analysis_closed",
-            "quantitative_direct_text_claim_triage_862_completed_mechanism_linkage_ready_global_analysis_closed",
+        "quantitative_direct_text_claim_triage_862_completed_mechanism_linkage_ready_global_analysis_closed",
+        "quantitative_to_qualitative_mechanism_linkage_513_completed_claim_review_ready_global_analysis_closed",
         })
         self.assertNotIn('"global_analysis_readiness": true', json.dumps(readiness, sort_keys=True).casefold())
 

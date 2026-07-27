@@ -1,0 +1,7 @@
+{
+  "boundary": "unmatched records are preserved; no weak state-only or mechanism-only match was manufactured",
+  "qualitative_records_with_any_link": 90,
+  "quantitative_rows_with_any_link": 208,
+  "unmatched_qualitative_record_count": 519,
+  "unmatched_quantitative_row_count": 305
+}

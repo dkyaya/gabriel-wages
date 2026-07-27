@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "quantitative_to_qualitative_mechanism_linkage_513_completed_claim_review_ready"
+              ? "Strict quantitative-to-mechanism linkage complete; bounded claim review is ready"
+              : textTableCalibrationStatus.calibration_phase ===
             "quantitative_direct_text_claim_triage_862_completed_mechanism_linkage_ready"
               ? "Quantitative direct-text triage complete; bounded mechanism linkage is ready"
               : textTableCalibrationStatus.calibration_phase ===
@@ -929,6 +932,19 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "quantitative_to_qualitative_mechanism_linkage_513_completed_claim_review_ready" ? (
+            <>
+              Strict lineage linked {formatNumber(
+                textTableCalibrationStatus.quantitative_to_qualitative_linked_pair_count,
+              )} exact same-source quantitative/mechanism pairs, covering {formatNumber(
+                textTableCalibrationStatus.quantitative_to_qualitative_linked_quantitative_count,
+              )} quantitative rows. {formatNumber(
+                textTableCalibrationStatus.quantitative_to_qualitative_no_link_count,
+              )} quantitative candidates remain explicit no-link outcomes. No weak contextual
+              match was manufactured; no value transformation, comparison, effect estimate,
+              or causal inference occurred, and global readiness remains closed.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "quantitative_direct_text_claim_triage_862_completed_mechanism_linkage_ready" ? (
             <>
               Deterministic triage preserved all {formatNumber(

@@ -1,0 +1,30 @@
+{
+  "category_count": 11,
+  "dimension": "mechanism",
+  "linked_pair_counts": {
+    "automatic_raise_mechanism": 97,
+    "bargaining_power_signal": 5,
+    "fiscal_constraint_signal": 3,
+    "gap_narrowing_signal": 0,
+    "implementation_or_retroactivity_advantage": 126,
+    "market_or_comparability_pressure": 9,
+    "non_base_compensation_signal": 15,
+    "non_safety_constraint_signal": 0,
+    "parity_or_internal_equity_signal": 0,
+    "rank_or_specialization_premium": 13,
+    "strike_or_no_strike_constraint": 0
+  },
+  "linked_quantitative_row_counts": {
+    "automatic_raise_mechanism": 86,
+    "bargaining_power_signal": 5,
+    "fiscal_constraint_signal": 3,
+    "gap_narrowing_signal": 0,
+    "implementation_or_retroactivity_advantage": 110,
+    "market_or_comparability_pressure": 9,
+    "non_base_compensation_signal": 15,
+    "non_safety_constraint_signal": 0,
+    "parity_or_internal_equity_signal": 0,
+    "rank_or_specialization_premium": 13,
+    "strike_or_no_strike_constraint": 0
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "required_cases": [
+    "513-row quantitative scope",
+    "609-record supported qualitative scope",
+    "quarantine exclusion",
+    "raw-value identity",
+    "strict source-key priority",
+    "no weak inferred links",
+    "closed downstream statuses",
+    "idempotent resume",
+    "partial-package failure",
+    "dashboard global closure",
+    "future prompt boundaries"
+  ],
+  "suite": "scripts/test_quantitative_to_qualitative_mechanism_linkage_513.py"
+}

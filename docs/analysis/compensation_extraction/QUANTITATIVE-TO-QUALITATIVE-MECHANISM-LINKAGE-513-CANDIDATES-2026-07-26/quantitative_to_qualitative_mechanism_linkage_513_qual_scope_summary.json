@@ -1,0 +1,21 @@
+{
+  "legacy_valid_supported_mechanism_records": 447,
+  "mechanism_counts": {
+    "automatic_raise_mechanism": 109,
+    "bargaining_power_signal": 22,
+    "fiscal_constraint_signal": 7,
+    "gap_narrowing_signal": 2,
+    "implementation_or_retroactivity_advantage": 171,
+    "market_or_comparability_pressure": 78,
+    "non_base_compensation_signal": 76,
+    "non_safety_constraint_signal": 10,
+    "parity_or_internal_equity_signal": 9,
+    "rank_or_specialization_premium": 27,
+    "strike_or_no_strike_constraint": 98
+  },
+  "qualitative_scope_count": 609,
+  "qualitative_scope_sha256": "b39fb8c78c848d650f0c689cc23ccf56bfb0fb637b2d90352dd88e5413dc20b4",
+  "targeted_valid_supported_mechanism_records": 162,
+  "unique_qualitative_evidence_ids": 609,
+  "unsupported_or_quarantined_rows_in_scope": 0
+}

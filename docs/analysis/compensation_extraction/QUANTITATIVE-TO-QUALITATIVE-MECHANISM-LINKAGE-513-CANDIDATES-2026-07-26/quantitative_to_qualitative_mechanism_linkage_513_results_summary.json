@@ -1,0 +1,33 @@
+{
+  "linkage_confidence_counts": {
+    "exact_city_cycle_unit_type": 0,
+    "exact_city_unit_cycle": 0,
+    "exact_same_source": 268,
+    "no_link": 305,
+    "weak_context_only": 0
+  },
+  "linkage_result_rows": 573,
+  "linked_pair_count": 268,
+  "linked_pair_counts_by_mechanism": {
+    "automatic_raise_mechanism": 97,
+    "bargaining_power_signal": 5,
+    "fiscal_constraint_signal": 3,
+    "implementation_or_retroactivity_advantage": 126,
+    "market_or_comparability_pressure": 9,
+    "non_base_compensation_signal": 15,
+    "rank_or_specialization_premium": 13
+  },
+  "linked_pair_counts_by_source_family": {
+    "cba": 261,
+    "memorandum_or_settlement": 4,
+    "wage_schedule_or_compensation_plan": 3
+  },
+  "linked_pair_counts_by_unit_type": {
+    "fire": 85,
+    "non_safety": 54,
+    "police": 129
+  },
+  "linked_qualitative_record_count": 90,
+  "linked_quantitative_row_count": 208,
+  "no_link_quantitative_row_count": 305
+}

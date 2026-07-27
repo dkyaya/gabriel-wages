@@ -1245,6 +1245,19 @@ QUANTITATIVE_DIRECT_TEXT_CLAIM_TRIAGE_862_INVARIANTS_PATH = (
     QUANTITATIVE_DIRECT_TEXT_CLAIM_TRIAGE_862_DIR
     / "quantitative_direct_text_claim_triage_862_invariant_checks.json"
 )
+QUANTITATIVE_TO_QUALITATIVE_MECHANISM_LINKAGE_513_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "QUANTITATIVE-TO-QUALITATIVE-MECHANISM-LINKAGE-513-CANDIDATES-2026-07-26"
+)
+QUANTITATIVE_TO_QUALITATIVE_MECHANISM_LINKAGE_513_DECISION_PATH = (
+    QUANTITATIVE_TO_QUALITATIVE_MECHANISM_LINKAGE_513_DIR
+    / "quantitative_to_qualitative_mechanism_linkage_513_decision.json"
+)
+QUANTITATIVE_TO_QUALITATIVE_MECHANISM_LINKAGE_513_INVARIANTS_PATH = (
+    QUANTITATIVE_TO_QUALITATIVE_MECHANISM_LINKAGE_513_DIR
+    / "quantitative_to_qualitative_mechanism_linkage_513_invariant_checks.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -3824,6 +3837,86 @@ def quantitative_direct_text_claim_triage_862_status() -> tuple[bool, dict[str, 
     return True, decision
 
 
+def quantitative_to_qualitative_mechanism_linkage_513_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize only the complete strict-lineage 513-candidate linkage package."""
+    directory = QUANTITATIVE_TO_QUALITATIVE_MECHANISM_LINKAGE_513_DIR
+    required = (
+        QUANTITATIVE_TO_QUALITATIVE_MECHANISM_LINKAGE_513_DECISION_PATH,
+        QUANTITATIVE_TO_QUALITATIVE_MECHANISM_LINKAGE_513_INVARIANTS_PATH,
+        directory / "quantitative_to_qualitative_mechanism_linkage_513_lock.json",
+        directory / "quantitative_to_qualitative_mechanism_linkage_513_quant_scope.csv",
+        directory / "quantitative_to_qualitative_mechanism_linkage_513_qual_scope.csv",
+        directory / "quantitative_to_qualitative_mechanism_linkage_513_results.csv",
+        directory / "quantitative_to_qualitative_mechanism_linkage_513_results_summary.json",
+        directory / "quantitative_to_qualitative_mechanism_linkage_513_unmatched_summary.json",
+        directory / "next_mechanism_linkage_claim_review_prompt.md",
+        directory / "next_task.md",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    decision = read_json(QUANTITATIVE_TO_QUALITATIVE_MECHANISM_LINKAGE_513_DECISION_PATH)
+    invariants = read_json(QUANTITATIVE_TO_QUALITATIVE_MECHANISM_LINKAGE_513_INVARIANTS_PATH)
+    lock = read_json(directory / "quantitative_to_qualitative_mechanism_linkage_513_lock.json")
+    summary = read_json(directory / "quantitative_to_qualitative_mechanism_linkage_513_results_summary.json")
+    quant_path = directory / "quantitative_to_qualitative_mechanism_linkage_513_quant_scope.csv"
+    qual_path = directory / "quantitative_to_qualitative_mechanism_linkage_513_qual_scope.csv"
+    quant = read_csv(quant_path)
+    qual = read_csv(qual_path)
+    results = read_csv(directory / "quantitative_to_qualitative_mechanism_linkage_513_results.csv")
+    raw = {row.get("evidence_id", ""): row.get("raw_value_string", "") for row in quant}
+    zero_fields = (
+        "value_normalizations", "value_imputations", "value_annualizations", "wage_gap_calculations",
+        "wage_level_outcome_comparisons", "regressions", "treatment_effect_estimates",
+        "final_causal_claims", "population_prevalence_claims", "national_claims",
+        "gabriel_api_model_calls", "url_opens", "downloads", "pdf_page_accesses",
+        "retained_file_accesses", "full_extracted_text_accesses", "ocr_runs", "pdf_render_runs",
+        "ingestion_runs", "codification_runs", "raw_prompts_saved", "raw_responses_saved",
+    )
+    if not (
+        decision.get("task_id") == "QUANTITATIVE-TO-QUALITATIVE-MECHANISM-LINKAGE-513-CANDIDATES-2026-07-26"
+        and decision.get("decision") == "quantitative_to_qualitative_mechanism_linkage_513_completed_claim_review_ready"
+        and decision.get("completion_status") == "completed_strict_lineage_mechanism_linkage"
+        and decision.get("quantitative_linkage_candidate_count") == 513 and len(quant) == 513
+        and decision.get("qualitative_scope_count") == 609 and len(qual) == 609
+        and decision.get("linkage_result_rows") == 573 and len(results) == 573
+        and decision.get("linked_pair_count") == 268
+        and decision.get("linked_quantitative_row_count") == 208
+        and decision.get("linked_qualitative_record_count") == 90
+        and decision.get("no_link_quantitative_row_count") == 305
+        and decision.get("linkage_confidence_counts") == {
+            "exact_same_source": 268, "exact_city_unit_cycle": 0,
+            "exact_city_cycle_unit_type": 0, "weak_context_only": 0, "no_link": 305,
+        }
+        and decision.get("claim_review_ready_next") is True
+        and summary.get("linked_pair_count") == 268
+        and lock.get("quantitative_scope_count") == 513 and lock.get("qualitative_scope_count") == 609
+        and lock.get("quantitative_scope_sha256") == hashlib.sha256(quant_path.read_bytes()).hexdigest()
+        and lock.get("qualitative_scope_sha256") == hashlib.sha256(qual_path.read_bytes()).hexdigest()
+        and len(raw) == 513
+        and all(row.get("mechanism_linkage_candidate") == "true" for row in quant)
+        and all(row.get("evidence_strength") != "not_supported" and row.get("rating_status") == "rated_valid" for row in qual)
+        and all(raw.get(row.get("quantitative_evidence_id", "")) == row.get("raw_quantitative_value_string", "") for row in results)
+        and all(row.get(field) == "false" for row in results for field in (
+            "value_normalized", "value_imputed", "value_annualized", "wage_gap_calculated",
+            "regression_used", "treatment_effect_estimated", "causal_claim_made",
+            "population_or_national_claim_made",
+        ))
+        and all(row.get("ingestion_status") == "not_ingested" for row in results)
+        and all(row.get("codification_status") == "not_codified" for row in results)
+        and all(row.get("causal_status") == "not_causal_evidence" for row in results)
+        and all(row.get("global_analysis_readiness") == "false" for row in results)
+        and all(decision.get(field) == 0 for field in zero_fields)
+        and decision.get("global_analysis_readiness") is False
+        and invariants.get("all_invariants_passed") is True
+        and invariants.get("exactly_513_quantitative_candidates_linked_or_preserved") is True
+        and invariants.get("qualitative_quarantines_and_unsupported_rows_excluded") is True
+        and invariants.get("strict_lineage_keys_only") is True
+        and invariants.get("global_analysis_readiness_false") is True
+    ):
+        raise ValueError("quantitative-to-qualitative 513-candidate linkage package fails dashboard gates")
+    return True, decision
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -4602,6 +4695,10 @@ def build_analysis_readiness(
         quantitative_direct_text_claim_triage_862_completed,
         quantitative_direct_text_claim_triage_862_decision,
     ) = quantitative_direct_text_claim_triage_862_status()
+    (
+        quantitative_to_qualitative_mechanism_linkage_513_completed,
+        quantitative_to_qualitative_mechanism_linkage_513_decision,
+    ) = quantitative_to_qualitative_mechanism_linkage_513_status()
     if scale_1000_targeted_qa_completed and (
         scale_1000_targeted_qa_decision.get("qa_pass") is not True
         or scale_1000_targeted_qa_decision.get(
@@ -4648,6 +4745,9 @@ def build_analysis_readiness(
     return {
         "metadata": metadata,
         "overall_status": (
+            "quantitative_to_qualitative_mechanism_linkage_513_completed_claim_review_ready_global_analysis_closed"
+            if quantitative_to_qualitative_mechanism_linkage_513_completed
+            else
             "quantitative_direct_text_claim_triage_862_completed_mechanism_linkage_ready_global_analysis_closed"
             if quantitative_direct_text_claim_triage_862_completed
             else
@@ -5566,7 +5666,29 @@ def build_analysis_readiness(
                 ),
                 "quantitative_mechanism_linkage_ready_next": (
                     bool(quantitative_direct_text_claim_triage_862_decision.get("mechanism_linkage_ready_next", False))
-                    if quantitative_direct_text_claim_triage_862_completed else False
+                    if quantitative_direct_text_claim_triage_862_completed
+                    and not quantitative_to_qualitative_mechanism_linkage_513_completed else False
+                ),
+                "quantitative_to_qualitative_mechanism_linkage_completed": quantitative_to_qualitative_mechanism_linkage_513_completed,
+                "quantitative_to_qualitative_mechanism_linkage_decision": (
+                    quantitative_to_qualitative_mechanism_linkage_513_decision.get("decision")
+                    if quantitative_to_qualitative_mechanism_linkage_513_completed else None
+                ),
+                "quantitative_to_qualitative_linked_pair_count": (
+                    int(quantitative_to_qualitative_mechanism_linkage_513_decision.get("linked_pair_count", 0))
+                    if quantitative_to_qualitative_mechanism_linkage_513_completed else 0
+                ),
+                "quantitative_to_qualitative_linked_quantitative_count": (
+                    int(quantitative_to_qualitative_mechanism_linkage_513_decision.get("linked_quantitative_row_count", 0))
+                    if quantitative_to_qualitative_mechanism_linkage_513_completed else 0
+                ),
+                "quantitative_to_qualitative_no_link_count": (
+                    int(quantitative_to_qualitative_mechanism_linkage_513_decision.get("no_link_quantitative_row_count", 0))
+                    if quantitative_to_qualitative_mechanism_linkage_513_completed else 0
+                ),
+                "mechanism_linkage_claim_review_ready_next": (
+                    bool(quantitative_to_qualitative_mechanism_linkage_513_decision.get("claim_review_ready_next", False))
+                    if quantitative_to_qualitative_mechanism_linkage_513_completed else False
                 ),
                 "gabriel_claim_rating_global_analysis_readiness": False,
                 "limited_qualitative_usage_registry_review_global_analysis_readiness": False,
@@ -9523,9 +9645,16 @@ def build_text_table_calibration_status_summary(
             quantitative_direct_text_claim_triage_862_completed,
             quantitative_direct_text_claim_triage_862_decision,
         ) = quantitative_direct_text_claim_triage_862_status()
+        (
+            quantitative_to_qualitative_mechanism_linkage_513_completed,
+            quantitative_to_qualitative_mechanism_linkage_513_decision,
+        ) = quantitative_to_qualitative_mechanism_linkage_513_status()
         return {
             **metadata,
             "calibration_phase": (
+                quantitative_to_qualitative_mechanism_linkage_513_decision.get("decision")
+                if quantitative_to_qualitative_mechanism_linkage_513_completed
+                else
                 quantitative_direct_text_claim_triage_862_decision.get("decision")
                 if quantitative_direct_text_claim_triage_862_completed
                 else
@@ -11075,7 +11204,49 @@ def build_text_table_calibration_status_summary(
             ),
             "quantitative_mechanism_linkage_ready_next": (
                 bool(quantitative_direct_text_claim_triage_862_decision.get("mechanism_linkage_ready_next", False))
-                if quantitative_direct_text_claim_triage_862_completed else False
+                if quantitative_direct_text_claim_triage_862_completed
+                and not quantitative_to_qualitative_mechanism_linkage_513_completed else False
+            ),
+            "quantitative_to_qualitative_mechanism_linkage_completed": quantitative_to_qualitative_mechanism_linkage_513_completed,
+            "quantitative_to_qualitative_mechanism_linkage_decision": (
+                quantitative_to_qualitative_mechanism_linkage_513_decision.get("decision")
+                if quantitative_to_qualitative_mechanism_linkage_513_completed else None
+            ),
+            "quantitative_to_qualitative_mechanism_linkage_path": (
+                relative(QUANTITATIVE_TO_QUALITATIVE_MECHANISM_LINKAGE_513_DIR)
+                if quantitative_to_qualitative_mechanism_linkage_513_completed else None
+            ),
+            "quantitative_to_qualitative_quant_scope_count": (
+                int(quantitative_to_qualitative_mechanism_linkage_513_decision.get("quantitative_linkage_candidate_count", 0))
+                if quantitative_to_qualitative_mechanism_linkage_513_completed else 0
+            ),
+            "quantitative_to_qualitative_qual_scope_count": (
+                int(quantitative_to_qualitative_mechanism_linkage_513_decision.get("qualitative_scope_count", 0))
+                if quantitative_to_qualitative_mechanism_linkage_513_completed else 0
+            ),
+            "quantitative_to_qualitative_linked_pair_count": (
+                int(quantitative_to_qualitative_mechanism_linkage_513_decision.get("linked_pair_count", 0))
+                if quantitative_to_qualitative_mechanism_linkage_513_completed else 0
+            ),
+            "quantitative_to_qualitative_linked_quantitative_count": (
+                int(quantitative_to_qualitative_mechanism_linkage_513_decision.get("linked_quantitative_row_count", 0))
+                if quantitative_to_qualitative_mechanism_linkage_513_completed else 0
+            ),
+            "quantitative_to_qualitative_no_link_count": (
+                int(quantitative_to_qualitative_mechanism_linkage_513_decision.get("no_link_quantitative_row_count", 0))
+                if quantitative_to_qualitative_mechanism_linkage_513_completed else 0
+            ),
+            "quantitative_to_qualitative_linkage_confidence_counts": (
+                quantitative_to_qualitative_mechanism_linkage_513_decision.get("linkage_confidence_counts", {})
+                if quantitative_to_qualitative_mechanism_linkage_513_completed else {}
+            ),
+            "quantitative_to_qualitative_linkage_mechanism_counts": (
+                quantitative_to_qualitative_mechanism_linkage_513_decision.get("linked_pair_counts_by_mechanism", {})
+                if quantitative_to_qualitative_mechanism_linkage_513_completed else {}
+            ),
+            "mechanism_linkage_claim_review_ready_next": (
+                bool(quantitative_to_qualitative_mechanism_linkage_513_decision.get("claim_review_ready_next", False))
+                if quantitative_to_qualitative_mechanism_linkage_513_completed else False
             ),
             "gabriel_claim_rating_global_analysis_readiness": False,
             "limited_qualitative_usage_registry_review_global_analysis_readiness": False,

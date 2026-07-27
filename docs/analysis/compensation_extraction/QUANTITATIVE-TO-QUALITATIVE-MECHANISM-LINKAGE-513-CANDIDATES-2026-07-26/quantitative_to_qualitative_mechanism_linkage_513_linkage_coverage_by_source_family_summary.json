@@ -1,0 +1,18 @@
+{
+  "category_count": 5,
+  "dimension": "source_family",
+  "linked_pair_counts": {
+    "arbitration_award": 0,
+    "cba": 261,
+    "memorandum_or_settlement": 4,
+    "ordinance_or_policy": 0,
+    "wage_schedule_or_compensation_plan": 3
+  },
+  "linked_quantitative_row_counts": {
+    "arbitration_award": 0,
+    "cba": 201,
+    "memorandum_or_settlement": 4,
+    "ordinance_or_policy": 0,
+    "wage_schedule_or_compensation_plan": 3
+  }
+}

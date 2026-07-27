@@ -194,8 +194,8 @@ class CandidateReviewTests(unittest.TestCase):
     def test_dashboard_generated_status_remains_closed(self) -> None:
         readiness = mod.read_json(ROOT / "docs/dashboard/data/analysis_readiness.json")
         calibration = mod.read_json(ROOT / "docs/dashboard/data/text_table_calibration_status_summary.json")
-        self.assertEqual(readiness["overall_status"], "quantitative_direct_text_claim_triage_862_completed_mechanism_linkage_ready_global_analysis_closed")
-        self.assertEqual(calibration["calibration_phase"], "quantitative_direct_text_claim_triage_862_completed_mechanism_linkage_ready")
+        self.assertEqual(readiness["overall_status"], "quantitative_to_qualitative_mechanism_linkage_513_completed_claim_review_ready_global_analysis_closed")
+        self.assertEqual(calibration["calibration_phase"], "quantitative_to_qualitative_mechanism_linkage_513_completed_claim_review_ready")
         self.assertTrue(calibration["targeted_source_verification_ready_next"])
         self.assertTrue(calibration["targeted_source_verification_completed"])
         self.assertFalse(calibration["analysis_facing_promotion_allowed"])
