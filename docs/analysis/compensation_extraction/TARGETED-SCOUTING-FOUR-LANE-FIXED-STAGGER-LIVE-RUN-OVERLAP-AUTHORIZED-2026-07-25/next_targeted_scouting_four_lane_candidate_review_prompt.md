@@ -1,0 +1,5 @@
+# Next task: four-lane candidate candidate review
+
+Use only candidate-only outputs from `TARGETED-SCOUTING-FOUR-LANE-FIXED-STAGGER-LIVE-RUN-OVERLAP-AUTHORIZED-2026-07-25` with decision `targeted_scouting_four_lane_fixed_stagger_live_completed_candidate_review_ready`. Review candidate quality, duplicates, mechanism targeting, match priority, and coverage accounting. Candidates are not verified sources and must remain unverified, unextracted, unrated, and non-causal until separately authorized.
+
+Do not fetch or pull repository state; inspect or configure remotes; download documents; open PDFs/pages; run OCR; verify sources; select for extraction; extract; ingest; codify; rerate prior evidence; analyze the quantitative lane; calculate wage gaps; run regressions or treatment-effect analysis; or make final causal claims. Do not save raw prompts/responses or secrets. Preserve the two-corpus rule and city-cycle-unit observation unit. Keep global analysis readiness false. Verification, if later authorized, must be a separate phase after candidate review.

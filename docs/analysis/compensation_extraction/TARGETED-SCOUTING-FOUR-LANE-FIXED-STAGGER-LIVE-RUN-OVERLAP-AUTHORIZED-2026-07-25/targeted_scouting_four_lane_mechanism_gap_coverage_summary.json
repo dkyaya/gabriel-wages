@@ -1,0 +1,11 @@
+{
+  "candidate_only": true,
+  "candidate_source_count": 4228,
+  "locked_target_count": 2000,
+  "mechanism_family_counts": {
+    "fiscal_constraint_signal": 1260,
+    "market_or_comparability_pressure": 1212,
+    "non_safety_constraint_signal": 1002,
+    "strike_or_no_strike_constraint": 754
+  }
+}

@@ -1,0 +1,76 @@
+lane_id,scout_target_id,municipality,state,target_rank,skip_reason,live_attempted,candidate_count,notes
+lane_3,TS4-3-c0792ce8683af03e,Pigeon,IN,10,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-34d3de6ab01bc20b,Norwood Park,IL,30,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-03691a41e44d0818,Montgomery,PA,36,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-3e1f8f19b635b213,Galt,CA,42,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-81bb014eafa95918,Le Ray,NY,46,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-ce855be99607039a,Union,IN,50,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-74bafbe0656a89b3,Ardmore,OK,82,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-10f9f7f8ff5098a6,Harris,IN,89,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-d2d0e72aa03e202f,Rockford,KS,92,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-86fd2d797a64501f,Seal Beach,CA,95,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-c3c80764b23c66dd,Niskayuna,NY,136,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-215192ee51fb0c75,Crete,IL,146,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-13e23de41cc98dce,Waxhaw,NC,158,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-6588dea763c86677,Summit,MI,169,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-91a649961cf85a17,Helena,AL,193,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-ddafea4c1150ea6f,Henry,IN,207,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-da395f6b3ff95828,Addison,IN,208,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-7fd65f469a88dc03,Vincennes,IN,218,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-ae3634649ab38ef3,Hampton,IL,229,transport_failure,yes,0,Bounded request failed; no raw response persisted.
+lane_3,TS4-3-82987f409a15b592,Unity,PA,231,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-57e221ae97ab4a7d,Monroe,NY,232,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-c96a31fee1c4e25c,Silver Spring,PA,241,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-2b53ad187cdf39aa,Westchester,IN,242,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-6b96d5d4718a1c04,Sugar Grove,IL,245,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-5bb15fdce8c3332a,Hanover,IN,263,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-53b8654c4ce78d5c,Sandwich,MA,264,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-47a8914a0ac80cd3,Louisville,CO,271,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-e748a986a4375d01,Golden,CO,284,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-c71b8353783af8ce,Crest Hill,IL,294,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-233d1f32790cdc85,Clinton,OH,298,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-56cf16feb7dbe0d5,Green Oak,MI,302,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-2d65177d6c61159e,Lexington,NC,312,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-02c9014a5f814000,Mount Morris,MI,325,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-3b32097bdbce1e7f,Hopkinton,MA,329,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-6ff135c3e9b0e028,Uwchlan,PA,332,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-71501612c5dc5fc2,Agoura Hills,CA,337,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-55b4e5d55c1eba2a,Sudbury,MA,342,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-a961ee60790cfc44,Sycamore,OH,344,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-3fb03b4403d382cc,Centreville,IL,351,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-3940f4263d945532,Lumberton,NC,365,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-82b3d8fe5438ff52,Park,MI,372,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-c33283093fe87780,Hermosa Beach,CA,391,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-d84966cc6de2dd22,Altus,OK,394,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-1f022d1625e4e536,Greene,PA,398,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-061462b07249fa4b,Firestone,CO,399,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-04c1a36b3b8ce57e,Eel,IN,405,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-a80cbb77fa25db54,Plymouth,PA,417,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-c623b6570dfff3e2,Gorham,ME,425,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-7b576727e0bd10ff,Copley,OH,428,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-26d614c0167cd0fb,Windsor,PA,458,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-f6feb72b1593df4c,Madison,IN,460,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-ac8e0ebb74c424e7,Bethel,OH,468,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-fa1c850b68a6b8de,Whitestown,NY,471,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-b65c42e0bbc5a66a,Turtlecreek,OH,476,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-2622aa6cbed7ab2a,Bruno,KS,477,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-4524ab3f1ea86716,Muskegon charter,MI,478,schema_or_response_failure,yes,0,Bounded request failed; no raw response persisted.
+lane_3,TS4-3-c48c74d26d059d6b,Hickory Point,IL,483,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-cc14d9adbea7449d,Cinnaminson,NJ,498,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-46cfae60d99df1e9,Blackberry,IL,499,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_3,TS4-3-c28142f82727b54d,Madison,OH,,duplicate_candidate_locator,yes,0,Candidate locator duplicated an earlier parsed lead; no durable merge occurred.
+lane_3,TS4-3-f28957ff14ce2567,Perry,GA,,duplicate_candidate_locator,yes,0,Candidate locator duplicated an earlier parsed lead; no durable merge occurred.
+lane_3,TS4-3-fe8c0f872d812547,Radcliff,KY,,duplicate_candidate_locator,yes,0,Candidate locator duplicated an earlier parsed lead; no durable merge occurred.
+lane_3,TS4-3-fe8c0f872d812547,Radcliff,KY,,duplicate_candidate_locator,yes,0,Candidate locator duplicated an earlier parsed lead; no durable merge occurred.
+lane_3,TS4-3-1c41a16a81725657,Oxford charter,MI,,duplicate_candidate_locator,yes,0,Candidate locator duplicated an earlier parsed lead; no durable merge occurred.
+lane_3,TS4-3-7792580afe2f9b0f,Yucca Valley,CA,,duplicate_candidate_locator,yes,0,Candidate locator duplicated an earlier parsed lead; no durable merge occurred.
+lane_3,TS4-3-f69079ac4ccf51a9,Upper St. Clair,PA,,duplicate_candidate_locator,yes,0,Candidate locator duplicated an earlier parsed lead; no durable merge occurred.
+lane_3,TS4-3-4b4337a5229d1cf5,Painesville,OH,,duplicate_candidate_locator,yes,0,Candidate locator duplicated an earlier parsed lead; no durable merge occurred.
+lane_3,TS4-3-4b4337a5229d1cf5,Painesville,OH,,duplicate_candidate_locator,yes,0,Candidate locator duplicated an earlier parsed lead; no durable merge occurred.
+lane_3,TS4-3-7f2a1d0a3491ad4c,Brenham,TX,,duplicate_candidate_locator,yes,0,Candidate locator duplicated an earlier parsed lead; no durable merge occurred.
+lane_3,TS4-3-4a632df9c66172fe,Grand Rapids charter,MI,,duplicate_candidate_locator,yes,0,Candidate locator duplicated an earlier parsed lead; no durable merge occurred.
+lane_3,TS4-3-990b958f9e6b8d4d,Shorewood,IL,,duplicate_candidate_locator,yes,0,Candidate locator duplicated an earlier parsed lead; no durable merge occurred.
+lane_3,TS4-3-c4b775ddbdd6f7fc,West Columbia,SC,,duplicate_candidate_locator,yes,0,Candidate locator duplicated an earlier parsed lead; no durable merge occurred.
+lane_3,TS4-3-c4b775ddbdd6f7fc,West Columbia,SC,,duplicate_candidate_locator,yes,0,Candidate locator duplicated an earlier parsed lead; no durable merge occurred.
+lane_3,TS4-3-e147237e371eee82,East St. Louis,IL,,duplicate_candidate_locator,yes,0,Candidate locator duplicated an earlier parsed lead; no durable merge occurred.
+lane_3,TS4-3-96bd0b9788654cca,Scio,MI,,duplicate_candidate_locator,yes,0,Candidate locator duplicated an earlier parsed lead; no durable merge occurred.

@@ -24,6 +24,10 @@ docs/dashboard/dist/
 # policy this formalizes.
 tmp/
 
+# Resumable live-scout checkpoints duplicate finalized candidate registries and
+# redacted request metadata; keep them local and out of durable analysis commits.
+docs/analysis/compensation_extraction/TARGETED-SCOUTING-FOUR-LANE-FIXED-STAGGER-LIVE-RUN-OVERLAP-AUTHORIZED-2026-07-25/checkpoints/
+
 # Corpus full-text storage — UNCOMMENT to keep documents out of git (Option A).
 # Licensed Westlaw/Lexis/Factiva pulls should NOT be committed to a shared remote.
 # corpus/

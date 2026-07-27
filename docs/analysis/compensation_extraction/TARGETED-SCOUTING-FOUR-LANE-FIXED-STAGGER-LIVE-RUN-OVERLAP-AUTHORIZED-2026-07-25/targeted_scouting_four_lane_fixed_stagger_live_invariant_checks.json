@@ -1,0 +1,21 @@
+{
+  "all_invariants_passed": true,
+  "candidate_only_statuses_enforced": true,
+  "controlled_overlap_explicitly_authorized": true,
+  "fixed_stagger_offsets_not_shortened": true,
+  "global_analysis_readiness_false": true,
+  "intra_lane_parallelism_one": true,
+  "lane_locked_counts_500_each": true,
+  "locked_targets_exactly_2000": true,
+  "maximum_lane_workers_four": true,
+  "no_raw_prompts_or_responses_saved": true,
+  "no_simultaneous_t0_start": true,
+  "partial_outputs_cannot_masquerade_as_complete": true,
+  "processed_or_explicitly_skipped_reconciles_by_lane": {
+    "lane_1": true,
+    "lane_2": true,
+    "lane_3": true,
+    "lane_4": true
+  },
+  "queue_and_target_id_hashes_match": true
+}

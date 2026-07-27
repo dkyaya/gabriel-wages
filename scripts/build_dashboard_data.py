@@ -1062,6 +1062,27 @@ TARGETED_SCOUTING_FOUR_LANE_STAGGERED_LIVE_INVARIANTS_PATH = (
     TARGETED_SCOUTING_FOUR_LANE_STAGGERED_LIVE_DIR
     / "targeted_scouting_four_lane_staggered_live_invariant_checks.json"
 )
+TARGETED_SCOUTING_FOUR_LANE_FIXED_STAGGER_LIVE_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "TARGETED-SCOUTING-FOUR-LANE-FIXED-STAGGER-LIVE-RUN-OVERLAP-AUTHORIZED-2026-07-25"
+)
+TARGETED_SCOUTING_FOUR_LANE_FIXED_STAGGER_LIVE_DECISION_PATH = (
+    TARGETED_SCOUTING_FOUR_LANE_FIXED_STAGGER_LIVE_DIR
+    / "targeted_scouting_four_lane_fixed_stagger_live_decision.json"
+)
+TARGETED_SCOUTING_FOUR_LANE_FIXED_STAGGER_LIVE_SUMMARY_PATH = (
+    TARGETED_SCOUTING_FOUR_LANE_FIXED_STAGGER_LIVE_DIR
+    / "targeted_scouting_four_lane_candidate_sources_summary.json"
+)
+TARGETED_SCOUTING_FOUR_LANE_FIXED_STAGGER_LIVE_STARTS_PATH = (
+    TARGETED_SCOUTING_FOUR_LANE_FIXED_STAGGER_LIVE_DIR
+    / "targeted_scouting_four_lane_fixed_stagger_start_times.json"
+)
+TARGETED_SCOUTING_FOUR_LANE_FIXED_STAGGER_LIVE_INVARIANTS_PATH = (
+    TARGETED_SCOUTING_FOUR_LANE_FIXED_STAGGER_LIVE_DIR
+    / "targeted_scouting_four_lane_fixed_stagger_live_invariant_checks.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -2901,6 +2922,71 @@ def targeted_scouting_four_lane_staggered_live_status() -> tuple[bool, dict[str,
     return True, decision
 
 
+def targeted_scouting_four_lane_fixed_stagger_live_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize only the complete candidate-only controlled-overlap package."""
+    required = (
+        TARGETED_SCOUTING_FOUR_LANE_FIXED_STAGGER_LIVE_DECISION_PATH,
+        TARGETED_SCOUTING_FOUR_LANE_FIXED_STAGGER_LIVE_SUMMARY_PATH,
+        TARGETED_SCOUTING_FOUR_LANE_FIXED_STAGGER_LIVE_STARTS_PATH,
+        TARGETED_SCOUTING_FOUR_LANE_FIXED_STAGGER_LIVE_INVARIANTS_PATH,
+        TARGETED_SCOUTING_FOUR_LANE_FIXED_STAGGER_LIVE_DIR
+        / "targeted_scouting_four_lane_candidate_sources.csv",
+        TARGETED_SCOUTING_FOUR_LANE_FIXED_STAGGER_LIVE_DIR
+        / "targeted_scouting_four_lane_fixed_stagger_live_preflight_report.md",
+        TARGETED_SCOUTING_FOUR_LANE_FIXED_STAGGER_LIVE_DIR
+        / "next_targeted_scouting_four_lane_candidate_review_prompt.md",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    decision = read_json(TARGETED_SCOUTING_FOUR_LANE_FIXED_STAGGER_LIVE_DECISION_PATH)
+    summary = read_json(TARGETED_SCOUTING_FOUR_LANE_FIXED_STAGGER_LIVE_SUMMARY_PATH)
+    starts = read_json(TARGETED_SCOUTING_FOUR_LANE_FIXED_STAGGER_LIVE_STARTS_PATH)
+    invariants = read_json(TARGETED_SCOUTING_FOUR_LANE_FIXED_STAGGER_LIVE_INVARIANTS_PATH)
+    candidates = read_csv(
+        TARGETED_SCOUTING_FOUR_LANE_FIXED_STAGGER_LIVE_DIR
+        / "targeted_scouting_four_lane_candidate_sources.csv"
+    )
+    expected_lane_counts = {"lane_1": 500, "lane_2": 500, "lane_3": 500, "lane_4": 500}
+    expected_offsets = {"lane_1": 0, "lane_2": 480, "lane_3": 960, "lane_4": 1440}
+    if not (
+        decision.get("task_id")
+        == "TARGETED-SCOUTING-FOUR-LANE-FIXED-STAGGER-LIVE-RUN-OVERLAP-AUTHORIZED-2026-07-25"
+        and decision.get("decision")
+        == "targeted_scouting_four_lane_fixed_stagger_live_completed_candidate_review_ready"
+        and decision.get("completion_status") == "completed_candidate_only_live_scouting"
+        and decision.get("locked_target_count") == 2000
+        and decision.get("lane_locked_counts") == expected_lane_counts
+        and decision.get("lane_runs_completed") == 4
+        and all(value == "completed" for value in decision.get("lane_status", {}).values())
+        and decision.get("hosted_search_model_backed_scouting_ran") is True
+        and decision.get("model_api_request_count") == 2001
+        and decision.get("candidate_source_count") == len(candidates)
+        and decision.get("candidate_source_count") == summary.get("candidate_source_count")
+        and sum(summary.get("lane_candidate_counts", {}).values()) == len(candidates)
+        and decision.get("candidate_review_ready") is True
+        and decision.get("repair_required") is False
+        and decision.get("controlled_overlap_authorized") is True
+        and decision.get("fixed_stagger_offsets_used") is True
+        and decision.get("raw_prompts_saved") == 0
+        and decision.get("raw_responses_saved") == 0
+        and decision.get("global_analysis_readiness") is False
+        and starts.get("scheduled_offsets_seconds") == expected_offsets
+        and starts.get("actual_offsets_seconds") == expected_offsets
+        and starts.get("controlled_overlap_authorized") is True
+        and starts.get("all_lanes_started_after_required_offset") is True
+        and invariants.get("all_invariants_passed") is True
+        and invariants.get("candidate_only_statuses_enforced") is True
+        and invariants.get("global_analysis_readiness_false") is True
+        and all(row.get("retrieval_status") == "candidate_only" for row in candidates)
+        and all(row.get("verification_status") == "not_verified" for row in candidates)
+        and all(row.get("extraction_status") == "not_extracted" for row in candidates)
+        and all(row.get("rating_status") == "not_rated" for row in candidates)
+        and all(row.get("causal_status") == "not_causal_evidence" for row in candidates)
+    ):
+        raise ValueError("fixed-stagger candidate scouting package fails dashboard gates")
+    return True, decision
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -3639,6 +3725,10 @@ def build_analysis_readiness(
         targeted_scouting_four_lane_staggered_live_completed,
         targeted_scouting_four_lane_staggered_live_decision,
     ) = targeted_scouting_four_lane_staggered_live_status()
+    (
+        targeted_scouting_four_lane_fixed_stagger_live_completed,
+        targeted_scouting_four_lane_fixed_stagger_live_decision,
+    ) = targeted_scouting_four_lane_fixed_stagger_live_status()
     if scale_1000_targeted_qa_completed and (
         scale_1000_targeted_qa_decision.get("qa_pass") is not True
         or scale_1000_targeted_qa_decision.get(
@@ -3685,6 +3775,9 @@ def build_analysis_readiness(
     return {
         "metadata": metadata,
         "overall_status": (
+            "targeted_scouting_four_lane_fixed_stagger_live_completed_candidate_review_ready_global_analysis_closed"
+            if targeted_scouting_four_lane_fixed_stagger_live_completed
+            else
             "targeted_scouting_four_lane_staggered_live_preflight_failed_repair_required_global_analysis_closed"
             if targeted_scouting_four_lane_staggered_live_completed
             else
@@ -4342,6 +4435,23 @@ def build_analysis_readiness(
                 "targeted_scouting_four_lane_repair_required": (
                     bool(targeted_scouting_four_lane_staggered_live_decision.get("repair_required", False))
                     if targeted_scouting_four_lane_staggered_live_completed else False
+                ),
+                "targeted_scouting_four_lane_fixed_stagger_live_completed": targeted_scouting_four_lane_fixed_stagger_live_completed,
+                "targeted_scouting_four_lane_fixed_stagger_live_decision": (
+                    targeted_scouting_four_lane_fixed_stagger_live_decision.get("decision")
+                    if targeted_scouting_four_lane_fixed_stagger_live_completed else None
+                ),
+                "targeted_scouting_four_lane_live_calls": (
+                    int(targeted_scouting_four_lane_fixed_stagger_live_decision.get("model_api_request_count", 0))
+                    if targeted_scouting_four_lane_fixed_stagger_live_completed else 0
+                ),
+                "targeted_scouting_four_lane_candidate_sources": (
+                    int(targeted_scouting_four_lane_fixed_stagger_live_decision.get("candidate_source_count", 0))
+                    if targeted_scouting_four_lane_fixed_stagger_live_completed else 0
+                ),
+                "targeted_scouting_four_lane_candidate_review_ready": (
+                    bool(targeted_scouting_four_lane_fixed_stagger_live_decision.get("candidate_review_ready", False))
+                    if targeted_scouting_four_lane_fixed_stagger_live_completed else False
                 ),
                 "gabriel_claim_rating_global_analysis_readiness": False,
                 "limited_qualitative_usage_registry_review_global_analysis_readiness": False,
@@ -8258,9 +8368,16 @@ def build_text_table_calibration_status_summary(
             targeted_scouting_four_lane_staggered_live_completed,
             targeted_scouting_four_lane_staggered_live_decision,
         ) = targeted_scouting_four_lane_staggered_live_status()
+        (
+            targeted_scouting_four_lane_fixed_stagger_live_completed,
+            targeted_scouting_four_lane_fixed_stagger_live_decision,
+        ) = targeted_scouting_four_lane_fixed_stagger_live_status()
         return {
             **metadata,
             "calibration_phase": (
+                "targeted_scouting_four_lane_fixed_stagger_live_completed_candidate_review_ready"
+                if targeted_scouting_four_lane_fixed_stagger_live_completed
+                else
                 "targeted_scouting_four_lane_staggered_live_preflight_failed_repair_required"
                 if targeted_scouting_four_lane_staggered_live_completed
                 else
@@ -9453,6 +9570,27 @@ def build_text_table_calibration_status_summary(
             "targeted_scouting_four_lane_repair_required": (
                 bool(targeted_scouting_four_lane_staggered_live_decision.get("repair_required", False))
                 if targeted_scouting_four_lane_staggered_live_completed else False
+            ),
+            "targeted_scouting_four_lane_fixed_stagger_live_completed": targeted_scouting_four_lane_fixed_stagger_live_completed,
+            "targeted_scouting_four_lane_fixed_stagger_live_decision": (
+                targeted_scouting_four_lane_fixed_stagger_live_decision.get("decision")
+                if targeted_scouting_four_lane_fixed_stagger_live_completed else None
+            ),
+            "targeted_scouting_four_lane_fixed_stagger_live_path": (
+                relative(TARGETED_SCOUTING_FOUR_LANE_FIXED_STAGGER_LIVE_DIR)
+                if targeted_scouting_four_lane_fixed_stagger_live_completed else None
+            ),
+            "targeted_scouting_four_lane_live_calls": (
+                int(targeted_scouting_four_lane_fixed_stagger_live_decision.get("model_api_request_count", 0))
+                if targeted_scouting_four_lane_fixed_stagger_live_completed else 0
+            ),
+            "targeted_scouting_four_lane_candidate_sources": (
+                int(targeted_scouting_four_lane_fixed_stagger_live_decision.get("candidate_source_count", 0))
+                if targeted_scouting_four_lane_fixed_stagger_live_completed else 0
+            ),
+            "targeted_scouting_four_lane_candidate_review_ready": (
+                bool(targeted_scouting_four_lane_fixed_stagger_live_decision.get("candidate_review_ready", False))
+                if targeted_scouting_four_lane_fixed_stagger_live_completed else False
             ),
             "gabriel_claim_rating_global_analysis_readiness": False,
             "limited_qualitative_usage_registry_review_global_analysis_readiness": False,

@@ -1,0 +1,2 @@
+lane_id,target_mechanism_family,locked_target_count,attempted_target_count,candidate_source_count,skipped_target_count,status
+lane_2,strike_or_no_strike_constraint,500,500,754,245,completed

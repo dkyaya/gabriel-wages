@@ -1,0 +1,132 @@
+lane_id,scout_target_id,municipality,state,target_rank,skip_reason,live_attempted,candidate_count,notes
+lane_1,TS4-1-ab8594900c394513,San Antonio,TX,6,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-4a1e280c7ed373c4,Boston,MA,11,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-4b7176fc4f9b032f,Corpus Christi,TX,17,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-fb169f49b80c8e98,Tallahassee,FL,25,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-dfac63e9b0182cc2,Peoria,AZ,26,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-8dca1993422abb65,Huntington Beach,CA,27,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-6542f6fbc71d7ff5,Brownsville,TX,28,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-bad6784044c57b27,Fort Collins,CO,33,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-c1f4e012d191585f,Killeen,TX,35,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-be66707bee19939b,Savannah,GA,37,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-b96511aa40965c17,Pasadena,TX,38,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-3b52e1ea947b5121,Thornton,CO,39,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-5f7790b738284fb7,Coral Springs,FL,40,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-402ad0e9ff269acb,Broken Arrow,OK,44,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-8baabc693d86926a,Menifee,CA,45,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-534a5997022bc087,Greeley,CO,46,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-7e2c55f0db4b550c,Goodyear,AZ,47,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-331d95d55fd5dc48,Davenport,IA,53,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-a2d8ee79d4555ccd,San Angelo,TX,54,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-d912903d42ecfebc,Plantation,FL,55,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-570f99ffa3c34b3c,Georgetown,TX,56,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-7b104818fbaa3d5a,O'Fallon,MO,57,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-33396eb76ca6e3a0,Lawton,OK,60,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-3ba0d976bc03738b,Baytown,TX,63,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-6239c2149a943ae2,Pharr,TX,67,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-ccfe4a2170d1bea5,Pasco,WA,69,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-32357c06a8a7667e,Woodbury,MN,70,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-90e99e841d93f990,Cedar Park,TX,71,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-f2dffee0030294c1,Lakeville,MN,73,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-f7c180a320e73ad5,Arlington Heights,IL,74,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-bbf1c58955ae0fea,Kyle,TX,91,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-5b6f3d5f4ebf9a73,Council Bluffs,IA,92,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-22e1fab404c020ba,Lake Havasu City,AZ,97,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-e25b92b3e01196cc,Casper,WY,98,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-4ae31befd1e32833,Lancaster,PA,101,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-266b714a620ee6c5,Kentwood,MI,106,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-58b3ba0624cc1ff7,Plain,OH,108,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-4c8a362d3d438185,Normal,IL,109,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-7312bce46ce4ed1a,West New York,NJ,110,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-26add4dbf3da5c40,Troy,NY,111,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-c39e9da2d894f159,Enid,OK,112,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-98e69464d9024892,St. Louis Park,MN,113,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-849f0ff0433716a4,Ocoee,FL,115,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-911261155c9e8c0b,Violet,OH,116,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-76de8616cf5bcda1,Sherman,TX,118,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-e08c36fa4ea37220,Plainfield,IL,119,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-5399eb8df58cb8a1,Wauwatosa,WI,121,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-810a2d2b1142dc58,Blacksburg,VA,124,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-8222478b348b9fde,Greenacres,FL,129,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-7fa5947358617764,Shelton,CT,133,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-3184d76868fd0cd2,New Berlin,WI,138,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-72b1f44a449e7f46,La Porte,TX,150,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-081c8d4405154654,Franklin,WI,156,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-cae0de3dc01a4f12,Holland,MI,158,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-62bea238cfc92e1d,Calumet City,IL,160,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-c64d37171ef0ecfc,Massillon,OH,164,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-0e513c63ed20467f,Fitchburg,WI,165,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-59abf461bda5a26c,Carlsbad,NM,168,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-7ae17cd6269ae5f0,Ballwin,MO,170,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-634951563e484d28,Winter Park,FL,172,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-65ceebef66d2f40e,West Melbourne,FL,174,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-8a9db2ce20918550,Marysville,OH,177,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-68b5a63c069ef9b9,Greenville,MS,181,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-ab372f889408aae4,Dodge City,KS,183,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-be684f1741978f0a,Neenah,WI,184,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-e804d971ab351440,Lebanon,PA,189,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-6c762c513779364d,Stevens Point,WI,193,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-7ac4d06d9ec74080,Rockville Centre,NY,194,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-e4fa0d9c8640e7cf,Morton Grove,IL,204,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-0a66fd5f27b9e5e7,Watertown,WI,210,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-c4b68ca510896f58,Crystal,MN,215,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-f957134d659e2717,Pleasant Prairie,WI,216,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-4e30344d1efa6169,Altoona,IA,217,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-efe371dbfb6587d1,New Castle,PA,218,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-355850059b603c46,Saco,ME,220,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-9ed4928e0cde9083,Zephyrhills,FL,221,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-3ced45a9a2189cfb,South Holland,IL,222,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-53dfb45d128601e8,Port Angeles,WA,224,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-04fd7b19ca4a54ea,Whitehall,OH,225,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-c294439e402dc643,West Chester,PA,227,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-8b72966f52ac1379,Mamaroneck,NY,229,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-19e7db34b736d215,Scarsdale,NY,236,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-26be5f9a088ec97b,Hannibal,MO,239,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-6de758308d9316e4,Bellevue,WI,240,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-2175b272a2fd34c0,Lake Wales,FL,241,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-e177c7609ec05693,Fergus Falls,MN,263,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-44e5ca4f441aab89,Worthington,MN,266,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-e07482e19e7d9dfc,Shorewood,WI,267,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-c09332df59ba06cd,Eatontown,NJ,269,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-11440a9ad995f9ee,East Cleveland,OH,272,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-708b791885128352,Englewood,OH,273,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-1d542512f862aadb,Wilmington,OH,278,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-93d68688a98a79e1,Springdale,OH,283,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-52c21b5b74c063e2,Burlington,WI,284,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-b2b9f5827d66aab0,Reedsburg,WI,287,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-3a0a2c35cb01233e,Portage,WI,288,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-12ceacf519d748f8,Sparta,WI,289,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-0aa3dbe28c94bf5b,Rice Lake,WI,294,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-552bb2d76ffc988c,Cottage Grove,WI,295,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-e3a415e9652ca9de,St. Marys,OH,300,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-27d3c506f6536569,Eaton,OH,301,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-bfc542ebdf982b1a,Rhinelander,WI,302,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-04cce57897f3c1f7,Old Town,ME,306,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-10bdb936069a3270,Obetz,OH,309,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-0a71381009672f38,Kirtland,OH,310,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-c72ccea038db3421,Ada,OH,325,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-02928dd8c9657f36,Lexington-Fayette,KY,336,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-e9cd2fd401738736,Alexandria,VA,352,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-a57f9c2612cd20d3,Victorville,CA,358,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-fbf6c26c3ea27aca,Kent,WA,363,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-7b87a38c134bdaae,Athens-Clarke County,GA,366,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-bc31a782ecb871dd,Sugar Land,TX,376,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-cc3aed5b7a6e272e,Largo,FL,405,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-e46635df35fb662d,Gulfport,MS,419,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-248a097e8d14c5f9,Walnut Creek,CA,422,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-2be199c4a7a6f78d,Bristol,CT,435,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-6705af6f6ea08353,Hempstead,NY,452,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-06d3e7aec7947eee,Tigard,OR,460,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-78f91d5975bc97bc,Oakley,CA,488,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-015447c9af06ed76,Morgan Hill,CA,494,no_high_specificity_candidate,yes,0,Hosted scout returned no usable high-specificity candidate lead.
+lane_1,TS4-1-c563fe0ca6e8ab82,Somerville,MA,,duplicate_candidate_locator,yes,0,Candidate locator duplicated an earlier parsed lead; no durable merge occurred.
+lane_1,TS4-1-c563fe0ca6e8ab82,Somerville,MA,,duplicate_candidate_locator,yes,0,Candidate locator duplicated an earlier parsed lead; no durable merge occurred.
+lane_1,TS4-1-3d169834e5f73034,Maple Grove,MN,,duplicate_candidate_locator,yes,0,Candidate locator duplicated an earlier parsed lead; no durable merge occurred.
+lane_1,TS4-1-a3d387dfacca613a,Eden Prairie,MN,,duplicate_candidate_locator,yes,0,Candidate locator duplicated an earlier parsed lead; no durable merge occurred.
+lane_1,TS4-1-f8445d3da34f3fc9,Rock Springs,WY,,duplicate_candidate_locator,yes,0,Candidate locator duplicated an earlier parsed lead; no durable merge occurred.
+lane_1,TS4-1-2c928bb6f2498aa7,Menasha,WI,,duplicate_candidate_locator,yes,0,Candidate locator duplicated an earlier parsed lead; no durable merge occurred.
+lane_1,TS4-1-c9716565a3514907,Mattoon,IL,,duplicate_candidate_locator,yes,0,Candidate locator duplicated an earlier parsed lead; no durable merge occurred.
+lane_1,TS4-1-db0f25aa4dedebea,Greendale,WI,,duplicate_candidate_locator,yes,0,Candidate locator duplicated an earlier parsed lead; no durable merge occurred.
+lane_1,TS4-1-60448d8fc7c895c0,Woodland Park,NJ,,duplicate_candidate_locator,yes,0,Candidate locator duplicated an earlier parsed lead; no durable merge occurred.
+lane_1,TS4-1-f57796210c1f753f,Delano,CA,,duplicate_candidate_locator,yes,0,Candidate locator duplicated an earlier parsed lead; no durable merge occurred.
+lane_1,TS4-1-040d199dda6908b7,Huber Heights,OH,,duplicate_candidate_locator,yes,0,Candidate locator duplicated an earlier parsed lead; no durable merge occurred.

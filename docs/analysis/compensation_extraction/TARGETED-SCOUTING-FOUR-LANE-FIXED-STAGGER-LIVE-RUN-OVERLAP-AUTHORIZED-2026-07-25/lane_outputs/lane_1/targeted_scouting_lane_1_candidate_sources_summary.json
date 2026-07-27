@@ -1,0 +1,10 @@
+{
+  "candidate_only": true,
+  "candidate_source_count": 1002,
+  "lane_id": "lane_1",
+  "locked_target_count": 500,
+  "processed_target_count": 500,
+  "request_count": 500,
+  "skip_count": 131,
+  "status": "completed"
+}

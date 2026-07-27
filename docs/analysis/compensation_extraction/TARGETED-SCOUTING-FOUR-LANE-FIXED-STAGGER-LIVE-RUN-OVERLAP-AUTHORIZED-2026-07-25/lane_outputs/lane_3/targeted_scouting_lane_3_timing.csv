@@ -1,0 +1,2 @@
+lane_id,scheduled_offset_minutes,scheduled_start_utc,actual_start_utc,actual_finish_utc,start_delay_seconds,elapsed_seconds,request_count,transport_failure_count,status,controlled_overlap_authorized,intra_lane_parallelism,max_orchestrated_lane_workers
+lane_3,16,2026-07-26T21:29:44Z,2026-07-26T21:29:44Z,2026-07-27T00:44:54Z,0.002,11709.715,500,1,completed,yes,1,4

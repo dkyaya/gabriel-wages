@@ -1,0 +1,22 @@
+{
+  "candidate_source_count": 4228,
+  "duplicate_candidate_count": 80,
+  "duplicate_risk_counts": {
+    "low": 1828,
+    "medium": 172
+  },
+  "durable_merge_count": 0,
+  "locked_target_count": 2000,
+  "prior_seen_status_counts": {
+    "known_safety_row_counterpart_target_not_satisfied": 7,
+    "municipality_and_non_safety_lead_seen_mechanism_target_is_new": 172,
+    "municipality_seen_safety_lead_target_unit_not_seen": 321,
+    "not_seen_in_consolidated_prior_scout_or_candidate_ledgers": 1500
+  },
+  "skip_reason_counts": {
+    "duplicate_candidate_locator": 80,
+    "no_high_specificity_candidate": 465,
+    "schema_or_response_failure": 3,
+    "transport_failure": 1
+  }
+}

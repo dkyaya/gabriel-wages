@@ -1,0 +1,13 @@
+{
+  "focus": [
+    "locked queue integrity",
+    "controlled overlap",
+    "fixed offsets",
+    "bounded lane concurrency",
+    "candidate-only status",
+    "no raw persistence",
+    "partial-output fail closed",
+    "global readiness false"
+  ],
+  "suite": "scripts/test_targeted_scouting_four_lane_fixed_stagger_live.py"
+}

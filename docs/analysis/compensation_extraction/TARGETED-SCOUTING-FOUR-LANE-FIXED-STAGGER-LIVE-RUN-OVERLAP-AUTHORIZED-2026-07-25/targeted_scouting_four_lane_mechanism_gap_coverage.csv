@@ -1,0 +1,5 @@
+lane_id,target_mechanism_family,locked_target_count,attempted_target_count,candidate_source_count,skipped_target_count,status
+lane_1,non_safety_constraint_signal,500,500,1002,131,completed
+lane_2,strike_or_no_strike_constraint,500,500,754,245,completed
+lane_3,fiscal_constraint_signal,500,500,1260,75,completed
+lane_4,market_or_comparability_pressure,500,500,1212,98,completed

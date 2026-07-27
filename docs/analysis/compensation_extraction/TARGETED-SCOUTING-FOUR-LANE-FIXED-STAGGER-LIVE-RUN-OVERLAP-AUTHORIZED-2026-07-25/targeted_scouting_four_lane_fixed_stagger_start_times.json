@@ -1,0 +1,23 @@
+{
+  "actual_offsets_seconds": {
+    "lane_1": 0.0,
+    "lane_2": 480.0,
+    "lane_3": 960.0,
+    "lane_4": 1440.0
+  },
+  "actual_starts_utc": {
+    "lane_1": "2026-07-26T21:13:44Z",
+    "lane_2": "2026-07-26T21:21:44Z",
+    "lane_3": "2026-07-26T21:29:44Z",
+    "lane_4": "2026-07-26T21:37:44Z"
+  },
+  "all_lanes_started_after_required_offset": true,
+  "controlled_overlap_authorized": true,
+  "epoch_lane_1_start_utc": "2026-07-26T21:13:44Z",
+  "scheduled_offsets_seconds": {
+    "lane_1": 0,
+    "lane_2": 480,
+    "lane_3": 960,
+    "lane_4": 1440
+  }
+}

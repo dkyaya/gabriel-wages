@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "targeted_scouting_four_lane_fixed_stagger_live_completed_candidate_review_ready"
+              ? "Four-lane fixed-stagger live scouting complete; candidate review is ready"
+              : textTableCalibrationStatus.calibration_phase ===
             "targeted_scouting_four_lane_staggered_live_preflight_failed_repair_required"
               ? "Four-lane live preflight failed closed; scheduling contract repair is required"
               : textTableCalibrationStatus.calibration_phase ===
@@ -897,6 +900,19 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "targeted_scouting_four_lane_fixed_stagger_live_completed_candidate_review_ready" ? (
+            <>
+              All four immutable 500-target lanes completed with exact
+              T+0/T+8/T+16/T+24 starts and explicitly authorized controlled
+              overlap. The run produced{" "}
+              {formatNumber(
+                textTableCalibrationStatus.targeted_scouting_four_lane_candidate_sources,
+              )}
+              {" "}deduplicated candidate-only source leads. Candidates remain
+              unverified, unextracted, unrated, and non-causal; candidate review
+              is next and global analysis readiness remains closed.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "targeted_scouting_four_lane_staggered_live_preflight_failed_repair_required" ? (
             <>
               All four immutable 500-target queues and lock hashes passed, but no
