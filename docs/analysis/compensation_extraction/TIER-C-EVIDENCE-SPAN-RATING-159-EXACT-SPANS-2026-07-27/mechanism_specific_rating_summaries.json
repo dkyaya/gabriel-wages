@@ -1,0 +1,28 @@
+{
+  "fiscal_constraint_signal": {
+    "input_count": 2,
+    "quarantine_count": 0,
+    "valid_rating_count": 2
+  },
+  "input_count": 159,
+  "market_or_comparability_pressure": {
+    "input_count": 54,
+    "quarantine_count": 3,
+    "valid_rating_count": 51
+  },
+  "non_safety_constraint_signal": {
+    "input_count": 12,
+    "quarantine_count": 1,
+    "valid_rating_count": 11
+  },
+  "quarantine_count": 19,
+  "reconciliation_passed": true,
+  "source_decision": "tier_c_evidence_span_rating_159_completed_with_quarantine",
+  "strike_or_no_strike_constraint": {
+    "input_count": 91,
+    "quarantine_count": 15,
+    "valid_rating_count": 76
+  },
+  "valid_plus_quarantine_count": 159,
+  "valid_rating_count": 140
+}
