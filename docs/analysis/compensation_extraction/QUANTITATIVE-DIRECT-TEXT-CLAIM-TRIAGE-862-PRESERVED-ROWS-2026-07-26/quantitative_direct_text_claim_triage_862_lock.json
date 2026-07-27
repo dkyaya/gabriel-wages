@@ -1,0 +1,21 @@
+{
+  "evidence_ids_sha256": "220c5608e755748cc03be12d8412a4adade88cdf41fa43e5d5a9148be46a49fa",
+  "input_hashes": {
+    "docs/analysis/compensation_extraction/COMPENSATION-EVIDENCE-CLAIM-ORIENTED-QA-RATING-AND-GABRIEL-READINESS-FINAL-PHASE-CLOSE-2026-07-25/claim_oriented_evidence_category_registry_summary.json": "0683dc1991c435c48e4042a08a6a0de36282c04fe19723afb0fad0f2a7bf4363",
+    "docs/analysis/compensation_extraction/COMPENSATION-EVIDENCE-CLAIM-ORIENTED-QA-RATING-AND-GABRIEL-READINESS-FINAL-PHASE-CLOSE-2026-07-25/claim_oriented_phase_close_decision.json": "30ac4a135bf05399cccc95ccc0d9c7b763f5b41459a6703d76f5aca985e28f89",
+    "docs/analysis/compensation_extraction/COMPENSATION-EVIDENCE-CLAIM-ORIENTED-QA-RATING-AND-GABRIEL-READINESS-FINAL-PHASE-CLOSE-2026-07-25/evidence_to_claim_bridge_registry.csv": "5333d72a5a3adf33e88412a1dddcd2a34593b851746c6fa818611ec4dbd1cd79",
+    "docs/analysis/compensation_extraction/COMPENSATION-EVIDENCE-CLAIM-ORIENTED-QA-RATING-AND-GABRIEL-READINESS-FINAL-PHASE-CLOSE-2026-07-25/evidence_to_claim_bridge_summary.json": "605a534d1b569597ab371f4cbf45e2559837660ab3972ad2e3df9fbf7b7cf015",
+    "docs/analysis/compensation_extraction/COMPENSATION-EVIDENCE-CLAIM-ORIENTED-QA-RATING-AND-GABRIEL-READINESS-FINAL-PHASE-CLOSE-2026-07-25/quantitative_direct_text_claim_ready_manifest.csv": "eeb7d2f10a337d5958f9b0fc897d28eef69a9fffcfccc4f58f36ca388a4e9c8c",
+    "docs/analysis/compensation_extraction/COMPENSATION-EVIDENCE-PIPELINE-HARDENING-READINESS-ACCELERATOR-2026-07-25/accelerated_quantitative_candidate_view.csv": "eac6af7f123162192bd671173e28f32899f90050304053429812cb11bea7952e",
+    "docs/analysis/compensation_extraction/TARGETED-EVIDENCE-SPAN-RATING-201-EXACT-SPANS-2026-07-26/targeted_evidence_span_rating_201_quarantine.csv": "e90d4b0e46eb303660c84b7a15b5b293cd16e5c74bda7abacecd861af03377e3",
+    "docs/analysis/compensation_extraction/TARGETED-EVIDENCE-SPAN-RATING-SUMMARY-173-VALID-RATINGS-2026-07-26/targeted_evidence_span_rating_summary_173_claims_requiring_more_data.md": "298da4be78624de565a20334cb4829498cf98c46960196b730686ce3d26bd1fa",
+    "docs/analysis/compensation_extraction/TARGETED-EVIDENCE-SPAN-RATING-SUMMARY-173-VALID-RATINGS-2026-07-26/targeted_evidence_span_rating_summary_173_decision.json": "0d2e60f7b9267d3959cc2d3220739ab652ee63a7f5adcaa08bb48ec350c959fd",
+    "docs/analysis/compensation_extraction/TARGETED-EVIDENCE-SPAN-RATING-SUMMARY-173-VALID-RATINGS-2026-07-26/targeted_evidence_span_rating_summary_173_mechanism_summary.json": "a5b98914de51a1dfa8985a36721ab9a28094ab033efaed71cc8b3e26679817af",
+    "docs/analysis/compensation_extraction/TARGETED-EVIDENCE-SPAN-RATING-SUMMARY-173-VALID-RATINGS-2026-07-26/targeted_evidence_span_rating_summary_173_quantitative_triage_considerations.md": "dd999d2dd5d96aa7f4efc8ee590a45da3e3a732a5ecd5a51ad2b579784ec0a83",
+    "docs/analysis/compensation_extraction/TARGETED-EVIDENCE-SPAN-RATING-SUMMARY-173-VALID-RATINGS-2026-07-26/targeted_evidence_span_rating_summary_173_summary.md": "c1108dcdbb79bce2eed4f1cb9069ff9d68feb87bfd71ff915d285bc609c4134c",
+    "docs/analysis/compensation_extraction/TARGETED-EVIDENCE-SPAN-RATING-SUMMARY-173-VALID-RATINGS-2026-07-26/targeted_evidence_span_rating_summary_173_validation_2026-07-26.md": "9a92ff1fd7ca70b22e915c4c0e1191ed7868abfa5c7eca6b95ba44a7059a9dde"
+  },
+  "queue_count": 862,
+  "queue_sha256": "d6de46c1fadde04ecb3b48427dfce5a3262726f410b427c9216b87c84e9ee377",
+  "task_id": "QUANTITATIVE-DIRECT-TEXT-CLAIM-TRIAGE-862-PRESERVED-ROWS-2026-07-26"
+}

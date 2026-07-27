@@ -1,0 +1,7 @@
+source_family,source_type,row_count,direct_text_claim_ready_count,needs_normalization_count,mechanism_linkage_candidate_count,distinct_city_state_pairs
+arbitration_award,arbitration_award,10,1,9,3,4
+cba,cba,680,305,346,490,200
+factfinding,factfinding,1,1,0,0,1
+memorandum_or_settlement,memorandum_or_settlement,19,6,13,14,4
+ordinance_or_policy,ordinance_or_policy,13,0,13,1,4
+wage_schedule_or_compensation_plan,wage_schedule_or_compensation_plan,139,23,112,5,31

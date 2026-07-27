@@ -1,0 +1,54 @@
+{
+  "base_vs_non_base_counts": {
+    "base_wage": 852,
+    "mixed_base_and_non_base": 4,
+    "non_base_compensation": 0,
+    "unclear": 6
+  },
+  "overlapping_value_kind_flag_counts": {
+    "ambiguous_quantitative_text": 0,
+    "annual_salary_value": 231,
+    "base_wage_value": 584,
+    "cola_cpi_value": 6,
+    "effective_date_value": 576,
+    "hourly_rate_value": 209,
+    "not_quantitative_claim_ready": 0,
+    "percentage_raise_value": 411,
+    "premium_stipend_non_base_value": 4,
+    "retroactivity_implementation_value": 0,
+    "salary_schedule_value": 356,
+    "step_rank_grade_value": 320
+  },
+  "primary_value_kind_counts": {
+    "ambiguous_quantitative_text": 0,
+    "annual_salary_value": 187,
+    "base_wage_value": 12,
+    "cola_cpi_value": 6,
+    "effective_date_value": 0,
+    "hourly_rate_value": 193,
+    "not_quantitative_claim_ready": 0,
+    "percentage_raise_value": 401,
+    "premium_stipend_non_base_value": 4,
+    "retroactivity_implementation_value": 0,
+    "salary_schedule_value": 13,
+    "step_rank_grade_value": 46
+  },
+  "value_shape_counts": {
+    "compound_structured_value": 463,
+    "range": 31,
+    "scalar_with_effective_date": 210,
+    "schedule_cell_with_label": 56,
+    "single_stated_value": 102
+  },
+  "value_unit_counts": {
+    "date": 0,
+    "dollars_per_hour": 193,
+    "dollars_per_period": 29,
+    "dollars_per_year": 187,
+    "mixed_or_compound": 0,
+    "percentage": 411,
+    "schedule_cell": 24,
+    "step_or_grade_label": 0,
+    "unknown_or_ambiguous": 18
+  }
+}

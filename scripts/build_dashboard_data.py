@@ -14,6 +14,7 @@ regression metrics are null until dedicated dashboard inputs exist.
 from __future__ import annotations
 
 import csv
+import hashlib
 import json
 import math
 import sys
@@ -1230,6 +1231,19 @@ TARGETED_EVIDENCE_SPAN_RATING_SUMMARY_173_DECISION_PATH = (
 TARGETED_EVIDENCE_SPAN_RATING_SUMMARY_173_INVARIANTS_PATH = (
     TARGETED_EVIDENCE_SPAN_RATING_SUMMARY_173_DIR
     / "targeted_evidence_span_rating_summary_173_invariant_checks.json"
+)
+QUANTITATIVE_DIRECT_TEXT_CLAIM_TRIAGE_862_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "QUANTITATIVE-DIRECT-TEXT-CLAIM-TRIAGE-862-PRESERVED-ROWS-2026-07-26"
+)
+QUANTITATIVE_DIRECT_TEXT_CLAIM_TRIAGE_862_DECISION_PATH = (
+    QUANTITATIVE_DIRECT_TEXT_CLAIM_TRIAGE_862_DIR
+    / "quantitative_direct_text_claim_triage_862_decision.json"
+)
+QUANTITATIVE_DIRECT_TEXT_CLAIM_TRIAGE_862_INVARIANTS_PATH = (
+    QUANTITATIVE_DIRECT_TEXT_CLAIM_TRIAGE_862_DIR
+    / "quantitative_direct_text_claim_triage_862_invariant_checks.json"
 )
 
 SCOUT_CHECKPOINT_TARGET = 2_000
@@ -3743,6 +3757,73 @@ def targeted_evidence_span_rating_summary_173_status() -> tuple[bool, dict[str, 
     return True, decision
 
 
+def quantitative_direct_text_claim_triage_862_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize only a complete, raw-preserving, globally closed 862-row triage."""
+    required = (
+        QUANTITATIVE_DIRECT_TEXT_CLAIM_TRIAGE_862_DECISION_PATH,
+        QUANTITATIVE_DIRECT_TEXT_CLAIM_TRIAGE_862_INVARIANTS_PATH,
+        QUANTITATIVE_DIRECT_TEXT_CLAIM_TRIAGE_862_DIR / "quantitative_direct_text_claim_triage_862_lock.json",
+        QUANTITATIVE_DIRECT_TEXT_CLAIM_TRIAGE_862_DIR / "quantitative_direct_text_claim_triage_862_locked_queue.csv",
+        QUANTITATIVE_DIRECT_TEXT_CLAIM_TRIAGE_862_DIR / "quantitative_direct_text_claim_triage_862_results.csv",
+        QUANTITATIVE_DIRECT_TEXT_CLAIM_TRIAGE_862_DIR / "quantitative_direct_text_claim_triage_862_results_summary.json",
+        QUANTITATIVE_DIRECT_TEXT_CLAIM_TRIAGE_862_DIR / "quantitative_direct_text_claim_triage_862_mechanism_linkage_candidate_summary.json",
+        QUANTITATIVE_DIRECT_TEXT_CLAIM_TRIAGE_862_DIR / "next_quantitative_mechanism_linkage_prompt.md",
+        QUANTITATIVE_DIRECT_TEXT_CLAIM_TRIAGE_862_DIR / "next_task.md",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    decision = read_json(QUANTITATIVE_DIRECT_TEXT_CLAIM_TRIAGE_862_DECISION_PATH)
+    invariants = read_json(QUANTITATIVE_DIRECT_TEXT_CLAIM_TRIAGE_862_INVARIANTS_PATH)
+    lock = read_json(QUANTITATIVE_DIRECT_TEXT_CLAIM_TRIAGE_862_DIR / "quantitative_direct_text_claim_triage_862_lock.json")
+    summary = read_json(QUANTITATIVE_DIRECT_TEXT_CLAIM_TRIAGE_862_DIR / "quantitative_direct_text_claim_triage_862_results_summary.json")
+    linkage = read_json(QUANTITATIVE_DIRECT_TEXT_CLAIM_TRIAGE_862_DIR / "quantitative_direct_text_claim_triage_862_mechanism_linkage_candidate_summary.json")
+    queue_path = QUANTITATIVE_DIRECT_TEXT_CLAIM_TRIAGE_862_DIR / "quantitative_direct_text_claim_triage_862_locked_queue.csv"
+    queue = read_csv(queue_path)
+    results = read_csv(QUANTITATIVE_DIRECT_TEXT_CLAIM_TRIAGE_862_DIR / "quantitative_direct_text_claim_triage_862_results.csv")
+    queue_hash = hashlib.sha256(queue_path.read_bytes()).hexdigest()
+    readiness = decision.get("claim_readiness_counts", {})
+    zero_fields = (
+        "gabriel_api_model_calls", "url_opens", "downloads", "pdf_page_accesses",
+        "retained_file_accesses", "full_extracted_text_accesses", "ocr_runs", "pdf_render_runs",
+        "ingestion_runs", "codification_runs", "wage_gap_calculations", "regressions",
+        "treatment_effect_estimates", "population_prevalence_claims", "national_claims",
+        "final_causal_claims", "imputed_values", "destructively_normalized_values", "annualized_values",
+    )
+    queue_raw = {row.get("evidence_id", ""): row.get("raw_value_string", "") for row in queue}
+    if not (
+        decision.get("task_id") == "QUANTITATIVE-DIRECT-TEXT-CLAIM-TRIAGE-862-PRESERVED-ROWS-2026-07-26"
+        and decision.get("decision") == "quantitative_direct_text_claim_triage_862_completed_mechanism_linkage_ready"
+        and decision.get("completion_status") == "completed_bounded_quantitative_direct_text_triage"
+        and decision.get("input_rows") == 862 and len(queue) == 862 and len(results) == 862
+        and len(queue_raw) == 862
+        and lock.get("queue_count") == 862 and lock.get("queue_sha256") == queue_hash
+        and sum(int(value) for value in readiness.values()) == 862
+        and summary.get("input_rows") == 862 and summary.get("claim_readiness_counts") == readiness
+        and decision.get("mechanism_linkage_candidate_count") == linkage.get("mechanism_linkage_candidate_count")
+        and decision.get("mechanism_linkage_ready_next") is True
+        and decision.get("exact_mechanism_linkages_created") == 0
+        and all(queue_raw.get(row.get("evidence_id", "")) == row.get("raw_value_string", "") for row in results)
+        and all(row.get("raw_value_preserved_exactly") == "true" for row in results)
+        and all(row.get("imputation_used") == "false" for row in results)
+        and all(row.get("destructive_normalization_used") == "false" for row in results)
+        and all(row.get("annualization_performed") == "false" for row in results)
+        and all(row.get("rating_status") == "not_rated" for row in results)
+        and all(row.get("ingestion_status") == "not_ingested" for row in results)
+        and all(row.get("codification_status") == "not_codified" for row in results)
+        and all(row.get("causal_status") == "not_causal_evidence" for row in results)
+        and all(row.get("global_analysis_readiness") == "false" for row in results)
+        and all(decision.get(field) == 0 for field in zero_fields)
+        and decision.get("global_analysis_readiness") is False
+        and invariants.get("all_invariants_passed") is True
+        and invariants.get("exactly_862_preserved_quantitative_rows_triaged") is True
+        and invariants.get("raw_values_preserved_exactly") is True
+        and invariants.get("no_imputation_destructive_normalization_or_annualization") is True
+        and invariants.get("global_analysis_readiness_false") is True
+    ):
+        raise ValueError("quantitative direct-text 862-row triage package fails dashboard gates")
+    return True, decision
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -4517,6 +4598,10 @@ def build_analysis_readiness(
         targeted_evidence_span_rating_summary_173_completed,
         targeted_evidence_span_rating_summary_173_decision,
     ) = targeted_evidence_span_rating_summary_173_status()
+    (
+        quantitative_direct_text_claim_triage_862_completed,
+        quantitative_direct_text_claim_triage_862_decision,
+    ) = quantitative_direct_text_claim_triage_862_status()
     if scale_1000_targeted_qa_completed and (
         scale_1000_targeted_qa_decision.get("qa_pass") is not True
         or scale_1000_targeted_qa_decision.get(
@@ -4563,6 +4648,9 @@ def build_analysis_readiness(
     return {
         "metadata": metadata,
         "overall_status": (
+            "quantitative_direct_text_claim_triage_862_completed_mechanism_linkage_ready_global_analysis_closed"
+            if quantitative_direct_text_claim_triage_862_completed
+            else
             "targeted_evidence_span_rating_summary_173_completed_quantitative_triage_recommended_global_analysis_closed"
             if targeted_evidence_span_rating_summary_173_completed
             else
@@ -5455,8 +5543,30 @@ def build_analysis_readiness(
                 ),
                 "targeted_quantitative_triage_recommended_next": (
                     targeted_evidence_span_rating_summary_173_completed
+                    and not quantitative_direct_text_claim_triage_862_completed
                     and targeted_evidence_span_rating_summary_173_decision.get("decision")
                     == "targeted_evidence_span_rating_summary_173_completed_quantitative_triage_recommended"
+                ),
+                "quantitative_direct_text_claim_triage_completed": quantitative_direct_text_claim_triage_862_completed,
+                "quantitative_direct_text_claim_triage_decision": (
+                    quantitative_direct_text_claim_triage_862_decision.get("decision")
+                    if quantitative_direct_text_claim_triage_862_completed else None
+                ),
+                "quantitative_direct_text_claim_triage_queue_count": (
+                    int(quantitative_direct_text_claim_triage_862_decision.get("input_rows", 0))
+                    if quantitative_direct_text_claim_triage_862_completed else 0
+                ),
+                "quantitative_direct_text_claim_ready_count": (
+                    int(quantitative_direct_text_claim_triage_862_decision.get("claim_readiness_counts", {}).get("direct_text_quantitative_claim_ready", 0))
+                    if quantitative_direct_text_claim_triage_862_completed else 0
+                ),
+                "quantitative_mechanism_linkage_candidate_count": (
+                    int(quantitative_direct_text_claim_triage_862_decision.get("mechanism_linkage_candidate_count", 0))
+                    if quantitative_direct_text_claim_triage_862_completed else 0
+                ),
+                "quantitative_mechanism_linkage_ready_next": (
+                    bool(quantitative_direct_text_claim_triage_862_decision.get("mechanism_linkage_ready_next", False))
+                    if quantitative_direct_text_claim_triage_862_completed else False
                 ),
                 "gabriel_claim_rating_global_analysis_readiness": False,
                 "limited_qualitative_usage_registry_review_global_analysis_readiness": False,
@@ -9409,9 +9519,16 @@ def build_text_table_calibration_status_summary(
             targeted_evidence_span_rating_summary_173_completed,
             targeted_evidence_span_rating_summary_173_decision,
         ) = targeted_evidence_span_rating_summary_173_status()
+        (
+            quantitative_direct_text_claim_triage_862_completed,
+            quantitative_direct_text_claim_triage_862_decision,
+        ) = quantitative_direct_text_claim_triage_862_status()
         return {
             **metadata,
             "calibration_phase": (
+                quantitative_direct_text_claim_triage_862_decision.get("decision")
+                if quantitative_direct_text_claim_triage_862_completed
+                else
                 targeted_evidence_span_rating_summary_173_decision.get("decision")
                 if targeted_evidence_span_rating_summary_173_completed
                 else
@@ -10919,8 +11036,46 @@ def build_text_table_calibration_status_summary(
             ),
             "targeted_quantitative_triage_recommended_next": (
                 targeted_evidence_span_rating_summary_173_completed
+                and not quantitative_direct_text_claim_triage_862_completed
                 and targeted_evidence_span_rating_summary_173_decision.get("decision")
                 == "targeted_evidence_span_rating_summary_173_completed_quantitative_triage_recommended"
+            ),
+            "quantitative_direct_text_claim_triage_completed": quantitative_direct_text_claim_triage_862_completed,
+            "quantitative_direct_text_claim_triage_decision": (
+                quantitative_direct_text_claim_triage_862_decision.get("decision")
+                if quantitative_direct_text_claim_triage_862_completed else None
+            ),
+            "quantitative_direct_text_claim_triage_path": (
+                relative(QUANTITATIVE_DIRECT_TEXT_CLAIM_TRIAGE_862_DIR)
+                if quantitative_direct_text_claim_triage_862_completed else None
+            ),
+            "quantitative_direct_text_claim_triage_queue_count": (
+                int(quantitative_direct_text_claim_triage_862_decision.get("input_rows", 0))
+                if quantitative_direct_text_claim_triage_862_completed else 0
+            ),
+            "quantitative_direct_text_claim_triage_readiness_counts": (
+                quantitative_direct_text_claim_triage_862_decision.get("claim_readiness_counts", {})
+                if quantitative_direct_text_claim_triage_862_completed else {}
+            ),
+            "quantitative_direct_text_claim_triage_value_kind_counts": (
+                quantitative_direct_text_claim_triage_862_decision.get("value_kind_counts", {})
+                if quantitative_direct_text_claim_triage_862_completed else {}
+            ),
+            "quantitative_direct_text_claim_triage_value_unit_counts": (
+                quantitative_direct_text_claim_triage_862_decision.get("value_unit_counts", {})
+                if quantitative_direct_text_claim_triage_862_completed else {}
+            ),
+            "quantitative_direct_text_claim_triage_base_non_base_counts": (
+                quantitative_direct_text_claim_triage_862_decision.get("base_vs_non_base_counts", {})
+                if quantitative_direct_text_claim_triage_862_completed else {}
+            ),
+            "quantitative_mechanism_linkage_candidate_count": (
+                int(quantitative_direct_text_claim_triage_862_decision.get("mechanism_linkage_candidate_count", 0))
+                if quantitative_direct_text_claim_triage_862_completed else 0
+            ),
+            "quantitative_mechanism_linkage_ready_next": (
+                bool(quantitative_direct_text_claim_triage_862_decision.get("mechanism_linkage_ready_next", False))
+                if quantitative_direct_text_claim_triage_862_completed else False
             ),
             "gabriel_claim_rating_global_analysis_readiness": False,
             "limited_qualitative_usage_registry_review_global_analysis_readiness": False,

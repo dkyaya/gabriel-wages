@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": "0.1.0",
-    "generated_at": "2026-07-27T03:42:14Z",
+    "generated_at": "2026-07-27T03:55:55Z",
     "data_vintage": "2026-07-23",
     "source_files": [
       "docs/analysis/national_scout_coverage_state.csv",
@@ -82,7 +82,7 @@
       "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
     ]
   },
-  "overall_status": "targeted_evidence_span_rating_summary_173_completed_quantitative_triage_recommended_global_analysis_closed",
+  "overall_status": "quantitative_direct_text_claim_triage_862_completed_mechanism_linkage_ready_global_analysis_closed",
   "current_inputs": {
     "national_queue_available": true,
     "national_coverage_available": true,
@@ -352,7 +352,13 @@
       "targeted_evidence_span_rating_summary_decision": "targeted_evidence_span_rating_summary_173_completed_quantitative_triage_recommended",
       "targeted_evidence_span_rating_summary_valid_count": 173,
       "targeted_evidence_span_rating_summary_excluded_count": 28,
-      "targeted_quantitative_triage_recommended_next": true,
+      "targeted_quantitative_triage_recommended_next": false,
+      "quantitative_direct_text_claim_triage_completed": true,
+      "quantitative_direct_text_claim_triage_decision": "quantitative_direct_text_claim_triage_862_completed_mechanism_linkage_ready",
+      "quantitative_direct_text_claim_triage_queue_count": 862,
+      "quantitative_direct_text_claim_ready_count": 336,
+      "quantitative_mechanism_linkage_candidate_count": 513,
+      "quantitative_mechanism_linkage_ready_next": true,
       "gabriel_claim_rating_global_analysis_readiness": false,
       "limited_qualitative_usage_registry_review_global_analysis_readiness": false,
       "limited_qualitative_usage_layer_acceptance_global_analysis_readiness": false,

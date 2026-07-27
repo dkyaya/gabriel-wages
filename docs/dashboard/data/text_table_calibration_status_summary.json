@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-27T03:42:14Z",
+  "generated_at": "2026-07-27T03:55:55Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -80,7 +80,7 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "calibration_phase": "targeted_evidence_span_rating_summary_173_completed_quantitative_triage_recommended",
+  "calibration_phase": "quantitative_direct_text_claim_triage_862_completed_mechanism_linkage_ready",
   "latest_calibration_id": "TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24",
   "latest_calibration_review_id": "TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24",
   "latest_adjudication_prep_id": "TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24",
@@ -514,7 +514,50 @@
     "not_applicable": 23,
     "safety_advantage": 0
   },
-  "targeted_quantitative_triage_recommended_next": true,
+  "targeted_quantitative_triage_recommended_next": false,
+  "quantitative_direct_text_claim_triage_completed": true,
+  "quantitative_direct_text_claim_triage_decision": "quantitative_direct_text_claim_triage_862_completed_mechanism_linkage_ready",
+  "quantitative_direct_text_claim_triage_path": "docs/analysis/compensation_extraction/QUANTITATIVE-DIRECT-TEXT-CLAIM-TRIAGE-862-PRESERVED-ROWS-2026-07-26",
+  "quantitative_direct_text_claim_triage_queue_count": 862,
+  "quantitative_direct_text_claim_triage_readiness_counts": {
+    "ambiguous_or_not_claim_ready": 30,
+    "direct_text_quantitative_claim_ready": 336,
+    "needs_normalization_later": 493,
+    "non_base_or_premium_context": 3
+  },
+  "quantitative_direct_text_claim_triage_value_kind_counts": {
+    "ambiguous_quantitative_text": 0,
+    "annual_salary_value": 187,
+    "base_wage_value": 12,
+    "cola_cpi_value": 6,
+    "effective_date_value": 0,
+    "hourly_rate_value": 193,
+    "not_quantitative_claim_ready": 0,
+    "percentage_raise_value": 401,
+    "premium_stipend_non_base_value": 4,
+    "retroactivity_implementation_value": 0,
+    "salary_schedule_value": 13,
+    "step_rank_grade_value": 46
+  },
+  "quantitative_direct_text_claim_triage_value_unit_counts": {
+    "date": 0,
+    "dollars_per_hour": 193,
+    "dollars_per_period": 29,
+    "dollars_per_year": 187,
+    "mixed_or_compound": 0,
+    "percentage": 411,
+    "schedule_cell": 24,
+    "step_or_grade_label": 0,
+    "unknown_or_ambiguous": 18
+  },
+  "quantitative_direct_text_claim_triage_base_non_base_counts": {
+    "base_wage": 852,
+    "mixed_base_and_non_base": 4,
+    "non_base_compensation": 0,
+    "unclear": 6
+  },
+  "quantitative_mechanism_linkage_candidate_count": 513,
+  "quantitative_mechanism_linkage_ready_next": true,
   "gabriel_claim_rating_global_analysis_readiness": false,
   "limited_qualitative_usage_registry_review_global_analysis_readiness": false,
   "limited_qualitative_usage_layer_acceptance_global_analysis_readiness": false,

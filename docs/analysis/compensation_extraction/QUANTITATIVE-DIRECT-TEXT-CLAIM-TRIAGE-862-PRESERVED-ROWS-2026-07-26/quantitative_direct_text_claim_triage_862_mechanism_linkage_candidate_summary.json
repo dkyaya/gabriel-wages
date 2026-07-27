@@ -1,0 +1,22 @@
+{
+  "boundary": "candidate status only; a separately authorized linkage stage is required",
+  "candidate_count_by_claim_readiness": {
+    "direct_text_quantitative_claim_ready": 242,
+    "needs_normalization_later": 268,
+    "non_base_or_premium_context": 3
+  },
+  "candidate_count_by_source_family": {
+    "arbitration_award": 3,
+    "cba": 490,
+    "memorandum_or_settlement": 14,
+    "ordinance_or_policy": 1,
+    "wage_schedule_or_compensation_plan": 5
+  },
+  "candidate_count_by_unit_type": {
+    "fire": 138,
+    "non_safety": 148,
+    "police": 227
+  },
+  "exact_linkage_performed": 0,
+  "mechanism_linkage_candidate_count": 513
+}

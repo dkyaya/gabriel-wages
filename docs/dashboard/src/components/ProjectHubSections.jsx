@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "quantitative_direct_text_claim_triage_862_completed_mechanism_linkage_ready"
+              ? "Quantitative direct-text triage complete; bounded mechanism linkage is ready"
+              : textTableCalibrationStatus.calibration_phase ===
             "targeted_evidence_span_rating_summary_173_completed_quantitative_triage_recommended"
               ? "Targeted exact-span summary complete; quantitative triage is recommended"
               : ["targeted_evidence_span_rating_201_completed_summary_ready",
@@ -926,6 +929,19 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "quantitative_direct_text_claim_triage_862_completed_mechanism_linkage_ready" ? (
+            <>
+              Deterministic triage preserved all {formatNumber(
+                textTableCalibrationStatus.quantitative_direct_text_claim_triage_queue_count,
+              )} raw quantitative rows. {formatNumber(
+                textTableCalibrationStatus.quantitative_direct_text_claim_triage_readiness_counts?.direct_text_quantitative_claim_ready,
+              )} are direct-text claim-ready and {formatNumber(
+                textTableCalibrationStatus.quantitative_mechanism_linkage_candidate_count,
+              )} have complete lineage for a later bounded mechanism-linkage stage.
+              Values needing normalization remain separate; no comparison, model call,
+              wage-gap estimate, or causal analysis occurred, and global readiness is closed.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "targeted_evidence_span_rating_summary_173_completed_quantitative_triage_recommended" ? (
             <>
               The deterministic review summarized {formatNumber(

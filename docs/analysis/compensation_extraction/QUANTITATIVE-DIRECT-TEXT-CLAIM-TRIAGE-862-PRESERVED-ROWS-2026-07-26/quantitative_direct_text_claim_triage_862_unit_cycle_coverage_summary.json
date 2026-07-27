@@ -1,0 +1,8 @@
+{
+  "boundary": "coverage counts describe the preserved 862-row lane only",
+  "distinct_city_state_pairs": 240,
+  "distinct_unit_types": 3,
+  "groups_with_complete_cycle": 190,
+  "groups_with_missing_cycle": 91,
+  "unit_cycle_groups": 281
+}

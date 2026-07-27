@@ -1,0 +1,18 @@
+{
+  "required_cases": [
+    "exact 862-row scope",
+    "one-to-one lineage join",
+    "pinned hashes",
+    "raw value identity",
+    "controlled value classifications",
+    "exclusive readiness reconciliation",
+    "quarantine exclusion",
+    "no forbidden dependencies",
+    "closed downstream statuses",
+    "dashboard global closure",
+    "future prompt boundaries",
+    "idempotent resume",
+    "partial-package failure"
+  ],
+  "suite": "scripts/test_quantitative_direct_text_claim_triage_862.py"
+}

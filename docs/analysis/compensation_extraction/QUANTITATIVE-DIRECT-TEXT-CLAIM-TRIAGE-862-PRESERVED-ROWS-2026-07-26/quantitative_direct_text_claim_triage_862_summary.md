@@ -1,0 +1,3 @@
+# Quantitative direct-text claim triage — 862 preserved rows
+
+Decision: `quantitative_direct_text_claim_triage_862_completed_mechanism_linkage_ready`. Exactly 862 preserved quantitative direct-text rows were deterministically classified with raw value strings unchanged. Direct-text quantitative claim-ready: 336; needs normalization later: 493; non-base/premium context: 3; ambiguous/not ready: 30. Later mechanism-linkage candidates with complete city-unit-cycle-source lineage: 513. No linkage, comparison, normalization, imputation, wage-gap, regression, treatment-effect, population, national, or causal analysis was performed. Global analysis readiness remains false.

@@ -1,0 +1,22 @@
+{
+  "source_corpus_counts": {
+    "causal": 862
+  },
+  "source_family_counts": {
+    "arbitration_award": 10,
+    "cba": 680,
+    "factfinding": 1,
+    "memorandum_or_settlement": 19,
+    "ordinance_or_policy": 13,
+    "wage_schedule_or_compensation_plan": 139
+  },
+  "source_family_type_groups": 6,
+  "source_type_counts": {
+    "arbitration_award": 10,
+    "cba": 680,
+    "factfinding": 1,
+    "memorandum_or_settlement": 19,
+    "ordinance_or_policy": 13,
+    "wage_schedule_or_compensation_plan": 139
+  }
+}

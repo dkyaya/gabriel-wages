@@ -1,0 +1,282 @@
+state,municipality,unit_type,negotiation_cycle_id,row_count,direct_text_claim_ready_count,mechanism_linkage_candidate_count,source_family_count
+AK,Fairbanks,non_safety,cycle_d63a5068ead5c6ee83ed96a0,3,0,2,1
+AK,Ketchikan,fire,cycle_b5878a66fb28c271e922cc19,3,3,3,1
+AL,Vestavia Hills,non_safety,missing_cycle,1,0,0,1
+AR,Hot Springs,fire,missing_cycle,5,0,0,1
+AZ,Mesa,non_safety,missing_cycle,5,5,0,1
+CA,Alhambra,non_safety,cycle_3f0260164126988f0f5fcab5,3,3,3,1
+CA,Bakersfield,fire,cycle_b8879172d5a8eaa496f37e7a,2,2,2,1
+CA,Bakersfield,police,missing_cycle,1,1,0,1
+CA,Bell,police,cycle_0b21b418a79fcef04fe87871,5,5,5,1
+CA,Beverly Hills,non_safety,cycle_3443f8cf4acae03ee8a2867d,1,1,1,1
+CA,Claremont,police,cycle_860396c10a8ff2700795e021,2,2,2,1
+CA,Clearlake,police,cycle_8b2fe2049292c31d89bab79e,2,0,2,1
+CA,Dana Point,non_safety,cycle_65778ecd55b2ce0eb8d8be55,1,1,1,1
+CA,Davis,fire,cycle_17eaa51f41939b133d0d09ee,2,0,2,1
+CA,El Paso de Robles (Paso Robles),non_safety,cycle_210bd065bc64b77566c5c3c2,1,1,1,1
+CA,El Paso de Robles (Paso Robles),police,cycle_210bd065bc64b77566c5c3c2,3,3,3,1
+CA,Encinitas,fire,cycle_a8860c04433b0a3ae607ae79,4,4,4,1
+CA,Encinitas,non_safety,cycle_0560c2ee3deb77262042daad,1,0,1,1
+CA,Fontana,non_safety,cycle_9695b406a0cb1550cfb46b04,3,3,3,1
+CA,Fontana,police,cycle_9695b406a0cb1550cfb46b04,3,3,3,1
+CA,Grass Valley,non_safety,cycle_07acf18d07866eaf10ef1bbb,5,5,5,1
+CA,Huntington Beach,fire,cycle_9bffd07dbbeae73971db28a2,1,1,1,1
+CA,Huntington Beach,police,cycle_69e0cf38a16edc78c48b96ef,1,1,1,1
+CA,La Puente,non_safety,missing_cycle,1,1,0,1
+CA,Laguna Hills,non_safety,cycle_91c6d9213898d9f1b4af567b,5,5,5,1
+CA,Laguna Hills,non_safety,cycle_ca69e7f57cb3cafec3fb2b2f,2,0,2,1
+CA,Lodi,police,cycle_ad1c2552e0e8382e8131aae6,2,0,2,1
+CA,Long Beach,fire,cycle_8818faeebfb835d77dacbb52,3,3,3,1
+CA,Menifee,police,cycle_ce97ace21642f3095ac8d7b4,1,0,1,1
+CA,Merced,fire,cycle_4a191ced3db9a91de15a1812,3,0,3,1
+CA,Merced,police,cycle_c1e671c6f591f2869d14ee7a,1,0,0,1
+CA,Oroville,non_safety,cycle_5f2adc8533bb2628211110c7,3,3,3,1
+CA,Pacific Grove,police,cycle_b004eaaad2180be8bd8d63f5,1,0,1,1
+CA,Palo Alto,police,cycle_7d1d435cce18288e9c9b57f0,2,2,2,1
+CA,Pasadena,police,missing_cycle,3,2,0,1
+CA,Redlands,non_safety,cycle_49232bfe2e3ed0f458a76b75,1,1,1,1
+CA,Redondo Beach,non_safety,cycle_cb0f333d41294a2b3ed76435,2,1,2,1
+CA,Rialto,fire,cycle_5e8320b2387ae34e38e00d75,1,1,1,1
+CA,Rialto,non_safety,cycle_5e8320b2387ae34e38e00d75,1,1,1,1
+CA,Rialto,police,missing_cycle,1,1,0,1
+CA,Richmond,non_safety,cycle_bd98ede491148490ae4ba530,2,2,2,1
+CA,Roseville,fire,cycle_4d99c349df3662af551c907a,1,0,1,1
+CA,San Buenaventura (Ventura),police,cycle_2b83c68a70d798e61d6e01a5,1,0,1,1
+CA,San Gabriel,police,cycle_bd1af9e4d8242e141c468cc0,3,2,2,1
+CA,San Leandro,non_safety,cycle_de67bb84a8f96fe440c89378,4,4,4,1
+CA,San Marcos,fire,cycle_ab7459b2b44c9e80bcbe8cc0,3,0,3,1
+CA,San Mateo,non_safety,cycle_cf2cfe89401e2b7c2b763528,1,0,1,1
+CA,San Pablo,non_safety,cycle_ff8fd7cf5109dba1301a4d86,4,0,4,1
+CA,San Pablo,police,cycle_ff8fd7cf5109dba1301a4d86,5,5,5,1
+CA,San Ramon,police,cycle_facbbfa1e6cd54e37680dba0,2,0,0,1
+CA,Santa Rosa,fire,cycle_71f76d5e5fdd3eea82453b6c,5,5,5,1
+CA,Susanville,police,cycle_8625efdef1416eeb1a689b53,2,2,2,1
+CA,Tustin,non_safety,cycle_806d842408142621690806b5,1,1,1,1
+CA,Walnut Creek,police,missing_cycle,5,0,0,1
+CA,Yorba Linda,non_safety,cycle_d3a150400d6ba1280dd8a043,2,2,2,1
+CA,Yuba City,non_safety,missing_cycle,1,1,0,1
+CA,Yuba City,police,cycle_540238484c41b0775ada31b7,1,0,1,1
+CO,Greeley,police,cycle_b67b1ff3e09025898c33ee24,5,2,5,1
+CO,Pueblo,non_safety,cycle_eabfd5c00076bb86e9494539,1,1,1,1
+CT,Bristol,police,cycle_5c31bbfa64c102dfaeccc89b,1,1,1,1
+CT,New Haven,police,cycle_fe23bb27ad5d4977d44ead4b,1,1,1,1
+DE,Newark,non_safety,cycle_218f3103a5fdcb95d00a28af,3,0,3,1
+DE,Seaford,police,cycle_2390b8ed487d9c350ec52b6d,2,0,2,1
+DE,Wilmington,fire,missing_cycle,5,0,0,1
+FL,Cocoa,fire,cycle_7619187963eb94f1954c79bd,5,0,5,1
+FL,Coconut Creek,police,cycle_2e279c87d93305e1b772f5f5,1,1,1,1
+FL,Delray Beach,non_safety,cycle_49b628c135608f87f0bdcd68,1,0,1,1
+FL,Hallandale Beach,police,cycle_140888160a78c0a58f1952b1,5,5,5,1
+FL,Hollywood,non_safety,missing_cycle,1,1,0,1
+FL,Key West,fire,cycle_f7eac85217e74841ba1a0095,4,4,4,1
+FL,Key West,non_safety,cycle_d674df2a3956c5995f51541a,1,1,1,1
+FL,Oviedo,fire,cycle_3806034894a8b8e8efacbeeb,1,1,1,1
+FL,Oviedo,police,missing_cycle,1,1,0,1
+FL,Palm Springs,non_safety,cycle_8894ea68ee3316c169a0b7db,1,0,1,1
+FL,Pensacola,fire,missing_cycle,2,2,0,1
+GA,Athens-Clarke County,non_safety,missing_cycle,3,0,0,1
+GA,Sandy Springs,non_safety,missing_cycle,3,0,0,1
+HI,Honolulu,fire,cycle_bc0211e1f342d63ff70f3145,4,0,4,1
+IA,Bettendorf,non_safety,cycle_8eb43f8339ab8d4b40133b1b,1,0,1,1
+IA,Des Moines,non_safety,cycle_f87bc0a4725527b39c775e1f,3,3,3,1
+IA,Iowa City,fire,cycle_8b3534cc58080c24ac977d97,1,1,1,1
+IA,Marion,police,cycle_0b713e26815f02dab18cf87f,4,2,4,1
+IA,Urbandale,non_safety,cycle_88d39c0d816dae40e8ee7a5d,2,0,2,1
+ID,Pocatello,non_safety,missing_cycle,5,0,0,1
+IL,Carbondale,police,missing_cycle,4,0,0,1
+IL,East Moline,police,cycle_a54d2193fec9658cd8a67291,5,5,5,1
+IL,East Peoria,fire,missing_cycle,5,0,0,1
+IL,Elgin,fire,cycle_ea1024134db875c98dcec733,5,3,5,1
+IL,Elgin,police,cycle_ea5a2bc56721191ceaa6f161,5,0,5,1
+IL,Glenview,police,missing_cycle,4,4,0,1
+IL,Gurnee,fire,cycle_f873a6295508abe3fa6de7bd,2,1,2,1
+IL,Moline,non_safety,cycle_d2b187bb7ecc67b01e675556,1,1,1,1
+IL,Normal,fire,cycle_6464e85f932346746c654793,4,0,4,1
+IL,Northbrook,non_safety,cycle_322eff3715906e6cdc4d6923,5,5,5,1
+IL,Oak Lawn,non_safety,missing_cycle,1,1,0,1
+IL,Rock Island,fire,cycle_c724ca865c95c7d6d1bc36fd,2,2,2,1
+IL,Rockford,non_safety,cycle_da6074d14d3cad5d409df3a5,1,1,1,1
+IL,Skokie,fire,missing_cycle,5,2,0,1
+IL,South Elgin,police,cycle_e67e38cba4f8df0c02380ae8,1,1,1,1
+IL,Villa Park,fire,cycle_ea691724f95fbf507451d590,1,1,1,1
+IL,Villa Park,non_safety,cycle_5a8baec5fa76443aace97f0b,1,0,1,1
+IN,Carmel,fire,missing_cycle,5,5,0,1
+IN,South Bend,non_safety,missing_cycle,3,1,0,1
+KS,Lawrence,fire,cycle_4105823c52ba1eb29ac76fc8,1,1,1,1
+KY,Lexington-Fayette,non_safety,missing_cycle,3,3,0,1
+LA,Baton Rouge,non_safety,missing_cycle,4,0,0,1
+MA,Attleboro,non_safety,cycle_2b67fdfb3a133ef03689fbdc,3,0,3,1
+MA,Cambridge,non_safety,missing_cycle,4,4,0,1
+MA,Greenfield,fire,missing_cycle,5,0,0,1
+MA,Melrose,non_safety,missing_cycle,5,0,0,1
+MA,New Bedford,fire,missing_cycle,4,4,0,1
+MA,Pittsfield,fire,cycle_c28faad0c7bcd53862eaac60,1,1,1,1
+MA,Pittsfield,non_safety,cycle_0a7d66b139824766f94ac881,1,1,1,1
+MA,Salem,non_safety,missing_cycle,3,3,0,1
+MD,Cambridge,police,missing_cycle,5,0,0,1
+ME,Portland,non_safety,cycle_26a5497c72e6736277f4497d,2,0,2,1
+ME,Portland,police,cycle_d92cff540b4935a004515577,4,4,4,1
+MI,Ann Arbor,non_safety,missing_cycle,1,1,0,1
+MI,Midland,fire,cycle_c5ef0eedd396144af0721b1b,2,0,2,1
+MI,Taylor,police,cycle_32c3f389cb0a340070bb1392,1,1,1,1
+MI,Trenton,police,cycle_7194432180bcbaa987089a06,5,0,5,1
+MI,Ypsilanti,police,cycle_cd00a08b213e8373bbee47c7,4,0,4,1
+MN,Brooklyn Center,non_safety,cycle_6f2c86adc612a022dda11af0,5,0,5,1
+MN,Duluth,non_safety,missing_cycle,7,4,0,1
+MN,Eagan,fire,cycle_fe9802496423b76ec3bd694e,5,0,5,1
+MN,Eagan,police,cycle_89e4623ef9b68e5f2cf365e4,5,0,5,1
+MN,Lino Lakes,non_safety,missing_cycle,5,0,0,1
+MN,Lino Lakes,police,cycle_887ce5ca193d509474d52899,2,2,2,1
+MN,Lino Lakes,police,cycle_ca0338923d07275894cc0910,4,0,4,1
+MN,St. Cloud,police,cycle_6f0df771f721c2777f5399d7,3,0,3,1
+MO,Columbia,police,cycle_6fbcf0be47ed58dec207f351,4,2,4,1
+MO,Gladstone,police,missing_cycle,1,1,0,1
+MO,Nixa,police,missing_cycle,5,0,0,1
+MS,Biloxi,non_safety,missing_cycle,5,0,0,1
+MT,Havre,fire,missing_cycle,1,1,0,1
+MT,Kalispell,non_safety,cycle_b47dd5b28c776ab931264585,1,1,1,1
+NC,Winston-Salem,fire,missing_cycle,5,0,0,1
+NC,Winston-Salem,police,missing_cycle,5,0,0,1
+ND,Fargo,non_safety,missing_cycle,5,0,0,1
+NE,La Vista,non_safety,missing_cycle,3,0,0,1
+NE,Lincoln,police,cycle_6337c4d22482eb9728bfbac5,2,1,1,1
+NE,Papillion,fire,missing_cycle,4,0,0,1
+NE,Papillion,non_safety,cycle_e6e1267244fc2786a0397723,3,3,3,1
+NE,Papillion,police,cycle_39ede8535d470ed597bb5f5c,4,4,4,1
+NE,Scottsbluff,non_safety,missing_cycle,3,0,0,1
+NH,Dover,fire,cycle_ea8c0735de62d409365f59ae,1,1,1,1
+NH,Laconia,non_safety,cycle_472a0348dc141205e3b29b19,1,0,1,1
+NJ,Camden,fire,cycle_0e274d6f3a62b3401818dc38,4,0,2,1
+NJ,Hammonton,police,cycle_2611e6a996b24c112f53549e,1,0,1,1
+NJ,Phillipsburg,non_safety,missing_cycle,5,5,0,1
+NM,Albuquerque,police,cycle_baada80e4ea34b24b220050e,5,0,5,1
+NM,Santa Fe,non_safety,missing_cycle,5,5,0,1
+NV,Fallon,police,cycle_11f4589dbd0bc1f8a66a251c,3,3,3,1
+NV,Henderson,police,cycle_232605c3774c3368887c1219,5,0,5,1
+NV,Henderson,police,cycle_65da8fe44bc50ceadb1219ef,5,5,5,1
+NV,North Las Vegas,fire,cycle_ed3bcadb40b9b63f2e3e0029,1,1,1,1
+NV,Sparks,police,cycle_5a34d37acad71535a5e75836,2,2,2,1
+NY,Batavia,police,missing_cycle,3,0,0,1
+NY,Buffalo,fire,cycle_6e5968354d739f24e146d070,3,3,3,1
+NY,Endicott,non_safety,cycle_7012f483822a62f909a2d7f3,5,5,5,1
+NY,Geneva,fire,cycle_7d420d8fa9c96d517cfc4dd8,5,0,5,1
+NY,Plattsburgh,non_safety,cycle_543784a02183fa27ffa1f094,2,2,2,1
+NY,Rochester,non_safety,cycle_619d01e9e69d9956f64f152c,4,4,4,1
+NY,Rome,police,cycle_d57e1153a9d0c8219cc9af03,4,0,4,1
+NY,Watertown,police,missing_cycle,1,1,0,1
+OH,Akron,fire,cycle_153f657aad94a948b3d638ba,3,0,3,1
+OH,Alliance,fire,cycle_5d7b591ec44091c8360134d6,4,0,4,1
+OH,Barberton,police,cycle_0716adf7ce343c00f7aca7eb,5,0,5,1
+OH,Bedford Heights,police,cycle_d2274c2664c7671ddfb4430b,5,0,5,1
+OH,Bellbrook,police,cycle_c5edabde7a31eb515981e896,3,0,3,1
+OH,Bellevue,police,cycle_1f4e39c016bc3bf6da667cde,3,0,3,1
+OH,Brooklyn,non_safety,cycle_3c31ff3ff6b4a189802d6e28,3,0,3,1
+OH,Canton,non_safety,cycle_57add0d85b642a8c11a73fa1,1,1,1,1
+OH,Cuyahoga Falls,non_safety,cycle_169a43fbda02f238b5d803f0,4,4,4,1
+OH,Dublin,police,cycle_e999f98fbb055134c54c6d66,1,0,0,1
+OH,East Liverpool,police,cycle_70b78b28455d3f8f6546a811,1,0,1,1
+OH,Eastlake,fire,missing_cycle,3,3,0,1
+OH,Euclid,police,cycle_052c1d3f18db88d152271b99,3,3,3,1
+OH,Forest Park,police,cycle_14027f7fb00b76e184e28fc5,4,0,4,1
+OH,Green,non_safety,cycle_0f02bec86c2a7bbc3deb25bc,2,0,2,1
+OH,Greenville,fire,missing_cycle,5,0,0,1
+OH,Greenville,police,missing_cycle,5,0,0,1
+OH,Grove City,police,cycle_6a019648b79c5506ae9d178c,5,0,5,1
+OH,Highland Heights,non_safety,cycle_71599829365bfa5489315756,5,0,5,1
+OH,Huron,police,cycle_e006a4442e66e3afe264f371,3,3,3,1
+OH,Kenton,police,cycle_474e9dc6cc66420d9a72de78,2,2,2,1
+OH,Kettering,fire,cycle_59a6d2588453fe3c4c511ba9,5,0,5,1
+OH,Kettering,non_safety,cycle_8f03ee42c15baa6829bbb828,4,0,4,1
+OH,Lima,non_safety,cycle_e87b68c4dff931713d45674a,3,3,3,1
+OH,Maple Heights,non_safety,cycle_8c916e89336a55b86c22628d,5,0,5,1
+OH,Marietta,police,cycle_59b492166fcd24223453450d,5,0,4,1
+OH,Marion,non_safety,cycle_d37072c38b1107a6ad2c195d,4,0,0,1
+OH,Marion,police,cycle_5123b08e1686067f147a2eb2,2,2,2,1
+OH,Mason,fire,missing_cycle,5,0,0,1
+OH,Middletown,non_safety,cycle_bccdf0cc98b973b242376249,1,1,1,1
+OH,Middletown,police,cycle_548899142c8b30d37f75ef1a,5,0,5,1
+OH,Parma,police,missing_cycle,4,0,0,1
+OH,Parma Heights,non_safety,cycle_99682e7072eb14bdbb7c1fb1,5,0,5,1
+OH,Piqua,non_safety,missing_cycle,1,1,0,1
+OH,Port Clinton,non_safety,missing_cycle,5,0,0,1
+OH,Richmond Heights,police,cycle_b0aeba9f975a95561bf32eaf,5,5,5,1
+OH,Rocky River,non_safety,missing_cycle,3,3,0,1
+OH,Salem,fire,cycle_7af0ad1e675e364e67e43f57,2,2,2,1
+OH,Shaker Heights,fire,cycle_e340f4f6299604f2ba0b4b1c,5,0,5,1
+OH,Shaker Heights,non_safety,cycle_0923c9a3f165015f2848329f,5,0,5,1
+OH,Sharonville,police,missing_cycle,5,0,0,1
+OH,Sidney,fire,cycle_5fcbd1b5fededd0576a122a8,5,0,5,1
+OH,Solon,fire,cycle_4e947eb2ed9b4cb968a1f6ec,1,1,1,1
+OH,Steubenville,police,cycle_220a5527236e0babce210da4,5,0,5,1
+OH,The Village of Indian Hill,police,cycle_c522b745353569818326aaf8,5,2,2,1
+OH,Trenton,police,cycle_5cab3121c9bafbc9b64dcda4,3,3,3,1
+OH,Trotwood,police,cycle_cf2c4c78d375fc551cd94e6e,2,1,2,1
+OH,Upper Arlington,fire,cycle_2b3f92c65d761022e339d4ee,1,0,1,1
+OH,Upper Arlington,police,cycle_0ffb945df1678922f641cb96,1,0,0,1
+OH,Urbana,fire,cycle_77f3a0b96690ed76da6e5baa,2,2,2,1
+OH,Wadsworth,non_safety,cycle_1ffa1b8f31edd656b4f1997c,2,0,2,1
+OH,Wapakoneta,police,cycle_e370eb8cec68f677eea65d02,5,0,5,1
+OH,Warrensville Heights,police,missing_cycle,5,2,0,1
+OH,Wellston,police,missing_cycle,5,0,0,1
+OH,Westlake,police,cycle_1ab85de26bcf2a14434d69fc,5,0,5,1
+OH,Whitehall,fire,cycle_a096cea07c2fc5e466d25a24,5,0,5,1
+OH,Willard,police,missing_cycle,5,0,0,1
+OH,Willoughby,non_safety,missing_cycle,2,0,0,1
+OH,Willoughby,police,missing_cycle,5,0,0,1
+OH,Wilmington,police,missing_cycle,2,2,0,1
+OK,Norman,non_safety,missing_cycle,5,0,0,1
+OR,Brookings,non_safety,cycle_a3fb5c421c502199f092177f,1,1,1,1
+OR,Central Point,non_safety,cycle_ae1752f05741d9cc9608ac8c,1,1,1,1
+OR,Central Point,police,cycle_45679646e9dde7091020cf2e,3,0,2,1
+OR,Corvallis,police,cycle_4b2f13d0e932775ae38ad2a7,1,1,1,1
+OR,Forest Grove,police,cycle_a4e9c254ce50dd6d3e2d4c97,1,0,1,1
+OR,Gresham,fire,cycle_6b50da3eb049eae85a621dfe,1,1,1,1
+OR,La Grande,fire,cycle_bfcdc1bff3bb076de0782d88,5,0,5,1
+OR,La Grande,police,cycle_bfcdc1bff3bb076de0782d88,2,2,2,1
+OR,Lake Oswego,non_safety,cycle_60ec5cd21bcbfc42ef1c3fdb,1,1,1,1
+OR,Lake Oswego,non_safety,missing_cycle,5,0,0,1
+OR,Lebanon,non_safety,cycle_55e7c957c418d8982f206a70,1,1,1,1
+OR,Newport,non_safety,missing_cycle,1,1,0,1
+OR,Pendleton,non_safety,cycle_18743344f008bffae7cd61eb,3,3,3,1
+OR,Roseburg,police,missing_cycle,2,2,0,1
+OR,Seaside,non_safety,cycle_3dd20cb09e76285428363afe,2,2,2,1
+OR,St. Helens,non_safety,cycle_60123fb185ffc19f15d116a9,3,3,3,1
+OR,Stayton,police,missing_cycle,5,0,0,1
+PA,Ephrata,police,cycle_ee6001cd767803549102a881,5,0,5,1
+PA,Harrisburg,fire,missing_cycle,4,0,0,1
+PA,Reading,police,missing_cycle,5,0,0,1
+PA,Scranton,police,cycle_e33c452e345b56362392c5f2,3,2,2,1
+PA,York,fire,cycle_21b9eb1d649ef573597827d7,5,0,5,1
+PA,York,fire,cycle_4948f65017c813617e21bfc7,5,0,5,1
+RI,Warwick,fire,cycle_9b252e0748abe46681a0dd68,1,1,1,1
+TX,Amarillo,police,missing_cycle,5,0,0,1
+TX,Edinburg,fire,missing_cycle,5,0,0,1
+TX,Edinburg,non_safety,missing_cycle,4,4,0,1
+TX,Edinburg,police,missing_cycle,5,0,0,1
+TX,Fort Worth,police,missing_cycle,3,0,0,1
+TX,Georgetown,police,cycle_63de5b24d0f38292bc8dcbb1,1,0,1,1
+UT,Draper,police,missing_cycle,4,0,0,1
+VA,Fredericksburg,non_safety,missing_cycle,5,0,0,1
+WA,Anacortes,non_safety,missing_cycle,4,0,0,1
+WA,Anacortes,police,cycle_f847aff7e1b9519e59bafcf8,5,5,5,1
+WA,Bellingham,non_safety,cycle_a0bbe382112fb93ebcb5b2a4,3,0,3,1
+WA,Bremerton,police,cycle_f9b5e1f3a680824816e99576,3,3,3,1
+WA,Burlington,fire,missing_cycle,4,0,0,1
+WA,Cheney,police,cycle_353510e37f697669f03aa246,2,2,2,1
+WA,Des Moines,police,cycle_6f462d595eaa55a806ee8510,2,0,2,1
+WA,Everett,non_safety,missing_cycle,1,1,0,1
+WA,Everett,police,missing_cycle,2,0,0,1
+WA,Ferndale,police,missing_cycle,5,5,0,1
+WA,Moses Lake,fire,missing_cycle,2,2,0,1
+WA,Moses Lake,police,missing_cycle,1,0,0,1
+WA,Oak Harbor,fire,cycle_d85ca21c46a058987ccc6fb4,5,5,5,1
+WA,Olympia,police,cycle_da7d801aafe64e8dcfbffe2c,4,0,4,1
+WA,Tacoma,non_safety,missing_cycle,3,0,0,1
+WI,Cudahy,fire,cycle_1c461e7bdde88893bf1d1a6b,5,5,5,1
+WI,Janesville,fire,missing_cycle,1,1,0,1
+WI,Janesville,non_safety,missing_cycle,2,2,0,1
+WI,Kenosha,fire,missing_cycle,5,5,0,1
+WI,Milwaukee,fire,cycle_04e28750813954db685de988,3,0,0,1
+WI,Plover,non_safety,missing_cycle,5,0,0,1
+WV,Fairmont,police,missing_cycle,2,0,0,1
+WY,Rawlins,non_safety,missing_cycle,4,0,0,1
