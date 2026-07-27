@@ -1083,6 +1083,27 @@ TARGETED_SCOUTING_FOUR_LANE_FIXED_STAGGER_LIVE_INVARIANTS_PATH = (
     TARGETED_SCOUTING_FOUR_LANE_FIXED_STAGGER_LIVE_DIR
     / "targeted_scouting_four_lane_fixed_stagger_live_invariant_checks.json"
 )
+TARGETED_SCOUTING_FOUR_LANE_CANDIDATE_REVIEW_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "TARGETED-SCOUTING-FOUR-LANE-CANDIDATE-REVIEW-2026-07-26"
+)
+TARGETED_SCOUTING_FOUR_LANE_CANDIDATE_REVIEW_DECISION_PATH = (
+    TARGETED_SCOUTING_FOUR_LANE_CANDIDATE_REVIEW_DIR
+    / "targeted_scouting_four_lane_candidate_review_decision.json"
+)
+TARGETED_SCOUTING_FOUR_LANE_CANDIDATE_REVIEW_SCOPE_PATH = (
+    TARGETED_SCOUTING_FOUR_LANE_CANDIDATE_REVIEW_DIR
+    / "targeted_scouting_four_lane_candidate_review_scope_summary.json"
+)
+TARGETED_SCOUTING_FOUR_LANE_CANDIDATE_REVIEW_READY_PATH = (
+    TARGETED_SCOUTING_FOUR_LANE_CANDIDATE_REVIEW_DIR
+    / "targeted_scouting_four_lane_verification_ready_queue_summary.json"
+)
+TARGETED_SCOUTING_FOUR_LANE_CANDIDATE_REVIEW_INVARIANTS_PATH = (
+    TARGETED_SCOUTING_FOUR_LANE_CANDIDATE_REVIEW_DIR
+    / "targeted_scouting_four_lane_candidate_review_invariant_checks.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -2987,6 +3008,81 @@ def targeted_scouting_four_lane_fixed_stagger_live_status() -> tuple[bool, dict[
     return True, decision
 
 
+def targeted_scouting_four_lane_candidate_review_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize only the complete metadata-only candidate-review package."""
+    required = (
+        TARGETED_SCOUTING_FOUR_LANE_CANDIDATE_REVIEW_DECISION_PATH,
+        TARGETED_SCOUTING_FOUR_LANE_CANDIDATE_REVIEW_SCOPE_PATH,
+        TARGETED_SCOUTING_FOUR_LANE_CANDIDATE_REVIEW_READY_PATH,
+        TARGETED_SCOUTING_FOUR_LANE_CANDIDATE_REVIEW_INVARIANTS_PATH,
+        TARGETED_SCOUTING_FOUR_LANE_CANDIDATE_REVIEW_DIR
+        / "targeted_scouting_four_lane_candidate_quality_summary.json",
+        TARGETED_SCOUTING_FOUR_LANE_CANDIDATE_REVIEW_DIR
+        / "targeted_scouting_four_lane_verification_priority_tiers_summary.json",
+        TARGETED_SCOUTING_FOUR_LANE_CANDIDATE_REVIEW_DIR
+        / "targeted_scouting_four_lane_verification_ready_queue.csv",
+        TARGETED_SCOUTING_FOUR_LANE_CANDIDATE_REVIEW_DIR
+        / "next_targeted_source_verification_prompt.md",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    decision = read_json(TARGETED_SCOUTING_FOUR_LANE_CANDIDATE_REVIEW_DECISION_PATH)
+    scope = read_json(TARGETED_SCOUTING_FOUR_LANE_CANDIDATE_REVIEW_SCOPE_PATH)
+    ready = read_json(TARGETED_SCOUTING_FOUR_LANE_CANDIDATE_REVIEW_READY_PATH)
+    invariants = read_json(TARGETED_SCOUTING_FOUR_LANE_CANDIDATE_REVIEW_INVARIANTS_PATH)
+    queue = read_csv(
+        TARGETED_SCOUTING_FOUR_LANE_CANDIDATE_REVIEW_DIR
+        / "targeted_scouting_four_lane_verification_ready_queue.csv"
+    )
+    expected_lanes = {"lane_1": 1002, "lane_2": 754, "lane_3": 1260, "lane_4": 1212}
+    expected_quality = {
+        "deprioritize_this_phase": 17,
+        "repair_or_review_needed": 737,
+        "verification_ready_high": 142,
+        "verification_ready_low": 2049,
+        "verification_ready_medium": 1283,
+    }
+    expected_tiers = {"tier_a": 82, "tier_b": 689, "tier_c": 2703, "tier_d": 751}
+    if not (
+        decision.get("task_id") == "TARGETED-SCOUTING-FOUR-LANE-CANDIDATE-REVIEW-2026-07-26"
+        and decision.get("decision") == "targeted_scouting_four_lane_candidate_review_completed_verification_ready"
+        and decision.get("completion_status") == "completed_candidate_only_metadata_review"
+        and decision.get("candidate_rows_reviewed") == 4228
+        and decision.get("lane_candidate_counts") == expected_lanes
+        and decision.get("deduped_review_rows") == 4225
+        and decision.get("verification_ready_count") == 3474
+        and decision.get("quality_label_counts") == expected_quality
+        and decision.get("verification_priority_tier_counts") == expected_tiers
+        and decision.get("source_verification_ready_next") is True
+        and decision.get("candidate_repair_needed") is False
+        and decision.get("live_hosted_search_ran") is False
+        and decision.get("model_api_calls") == 0
+        and decision.get("urls_opened") == 0
+        and decision.get("documents_downloaded") == 0
+        and decision.get("sources_verified") == 0
+        and decision.get("rows_extracted") == 0
+        and decision.get("rows_rated") == 0
+        and decision.get("durable_ledger_merges") == 0
+        and decision.get("global_analysis_readiness") is False
+        and scope.get("candidate_rows_reviewed") == 4228
+        and scope.get("candidate_only_rows") == 4228
+        and scope.get("not_verified_rows") == 4228
+        and scope.get("global_analysis_readiness") is False
+        and ready.get("verification_ready_rows") == 3474
+        and ready.get("source_verification_ready_next") is True
+        and len(queue) == 3474
+        and all(row.get("retrieval_status") == "candidate_only" for row in queue)
+        and all(row.get("verification_status") == "not_verified" for row in queue)
+        and all(row.get("verification_priority_tier") in {"tier_a", "tier_b", "tier_c"} for row in queue)
+        and invariants.get("all_invariants_passed") is True
+        and invariants.get("no_live_search_or_model_api_call") is True
+        and invariants.get("no_url_open_or_download") is True
+        and invariants.get("global_analysis_readiness_false") is True
+    ):
+        raise ValueError("four-lane candidate-review package fails dashboard gates")
+    return True, decision
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -3729,6 +3825,10 @@ def build_analysis_readiness(
         targeted_scouting_four_lane_fixed_stagger_live_completed,
         targeted_scouting_four_lane_fixed_stagger_live_decision,
     ) = targeted_scouting_four_lane_fixed_stagger_live_status()
+    (
+        targeted_scouting_four_lane_candidate_review_completed,
+        targeted_scouting_four_lane_candidate_review_decision,
+    ) = targeted_scouting_four_lane_candidate_review_status()
     if scale_1000_targeted_qa_completed and (
         scale_1000_targeted_qa_decision.get("qa_pass") is not True
         or scale_1000_targeted_qa_decision.get(
@@ -3775,6 +3875,9 @@ def build_analysis_readiness(
     return {
         "metadata": metadata,
         "overall_status": (
+            "targeted_scouting_four_lane_candidate_review_completed_verification_ready_global_analysis_closed"
+            if targeted_scouting_four_lane_candidate_review_completed
+            else
             "targeted_scouting_four_lane_fixed_stagger_live_completed_candidate_review_ready_global_analysis_closed"
             if targeted_scouting_four_lane_fixed_stagger_live_completed
             else
@@ -4453,6 +4556,24 @@ def build_analysis_readiness(
                     bool(targeted_scouting_four_lane_fixed_stagger_live_decision.get("candidate_review_ready", False))
                     if targeted_scouting_four_lane_fixed_stagger_live_completed else False
                 ),
+                "targeted_scouting_four_lane_candidate_review_completed": targeted_scouting_four_lane_candidate_review_completed,
+                "targeted_scouting_four_lane_candidate_review_decision": (
+                    targeted_scouting_four_lane_candidate_review_decision.get("decision")
+                    if targeted_scouting_four_lane_candidate_review_completed else None
+                ),
+                "targeted_scouting_four_lane_candidates_reviewed": (
+                    int(targeted_scouting_four_lane_candidate_review_decision.get("candidate_rows_reviewed", 0))
+                    if targeted_scouting_four_lane_candidate_review_completed else 0
+                ),
+                "targeted_scouting_four_lane_verification_ready_candidates": (
+                    int(targeted_scouting_four_lane_candidate_review_decision.get("verification_ready_count", 0))
+                    if targeted_scouting_four_lane_candidate_review_completed else 0
+                ),
+                "targeted_source_verification_ready_next": (
+                    bool(targeted_scouting_four_lane_candidate_review_decision.get("source_verification_ready_next", False))
+                    if targeted_scouting_four_lane_candidate_review_completed else False
+                ),
+                "targeted_source_verification_completed": False,
                 "gabriel_claim_rating_global_analysis_readiness": False,
                 "limited_qualitative_usage_registry_review_global_analysis_readiness": False,
                 "limited_qualitative_usage_layer_acceptance_global_analysis_readiness": False,
@@ -8372,9 +8493,16 @@ def build_text_table_calibration_status_summary(
             targeted_scouting_four_lane_fixed_stagger_live_completed,
             targeted_scouting_four_lane_fixed_stagger_live_decision,
         ) = targeted_scouting_four_lane_fixed_stagger_live_status()
+        (
+            targeted_scouting_four_lane_candidate_review_completed,
+            targeted_scouting_four_lane_candidate_review_decision,
+        ) = targeted_scouting_four_lane_candidate_review_status()
         return {
             **metadata,
             "calibration_phase": (
+                "targeted_scouting_four_lane_candidate_review_completed_verification_ready"
+                if targeted_scouting_four_lane_candidate_review_completed
+                else
                 "targeted_scouting_four_lane_fixed_stagger_live_completed_candidate_review_ready"
                 if targeted_scouting_four_lane_fixed_stagger_live_completed
                 else
@@ -9592,6 +9720,36 @@ def build_text_table_calibration_status_summary(
                 bool(targeted_scouting_four_lane_fixed_stagger_live_decision.get("candidate_review_ready", False))
                 if targeted_scouting_four_lane_fixed_stagger_live_completed else False
             ),
+            "targeted_scouting_four_lane_candidate_review_completed": targeted_scouting_four_lane_candidate_review_completed,
+            "targeted_scouting_four_lane_candidate_review_decision": (
+                targeted_scouting_four_lane_candidate_review_decision.get("decision")
+                if targeted_scouting_four_lane_candidate_review_completed else None
+            ),
+            "targeted_scouting_four_lane_candidate_review_path": (
+                relative(TARGETED_SCOUTING_FOUR_LANE_CANDIDATE_REVIEW_DIR)
+                if targeted_scouting_four_lane_candidate_review_completed else None
+            ),
+            "targeted_scouting_four_lane_candidates_reviewed": (
+                int(targeted_scouting_four_lane_candidate_review_decision.get("candidate_rows_reviewed", 0))
+                if targeted_scouting_four_lane_candidate_review_completed else 0
+            ),
+            "targeted_scouting_four_lane_verification_ready_candidates": (
+                int(targeted_scouting_four_lane_candidate_review_decision.get("verification_ready_count", 0))
+                if targeted_scouting_four_lane_candidate_review_completed else 0
+            ),
+            "targeted_scouting_four_lane_candidate_quality_counts": (
+                targeted_scouting_four_lane_candidate_review_decision.get("quality_label_counts", {})
+                if targeted_scouting_four_lane_candidate_review_completed else {}
+            ),
+            "targeted_scouting_four_lane_verification_priority_tier_counts": (
+                targeted_scouting_four_lane_candidate_review_decision.get("verification_priority_tier_counts", {})
+                if targeted_scouting_four_lane_candidate_review_completed else {}
+            ),
+            "targeted_source_verification_ready_next": (
+                bool(targeted_scouting_four_lane_candidate_review_decision.get("source_verification_ready_next", False))
+                if targeted_scouting_four_lane_candidate_review_completed else False
+            ),
+            "targeted_source_verification_completed": False,
             "gabriel_claim_rating_global_analysis_readiness": False,
             "limited_qualitative_usage_registry_review_global_analysis_readiness": False,
             "limited_qualitative_usage_layer_acceptance_global_analysis_readiness": False,

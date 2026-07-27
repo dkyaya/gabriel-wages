@@ -1,0 +1,22 @@
+{
+  "all_pinned_hashes_match": true,
+  "all_required_inputs_present": true,
+  "input_commit": "d3a2a094b834986037ba051c87a417e0a9712022",
+  "input_hashes": {
+    "lane_outputs/lane_1/targeted_scouting_lane_1_candidate_sources_summary.json": "93f8043071971906150b13d4588885b3db328e3a7b2214341fc6fe7140501550",
+    "lane_outputs/lane_2/targeted_scouting_lane_2_candidate_sources_summary.json": "f090e15e7b218dc37cef4be5be8f3bd6333590b3dc57785b5560b12a58f47f7f",
+    "lane_outputs/lane_3/targeted_scouting_lane_3_candidate_sources_summary.json": "4936c93e3bd82522f4d9e2c692e1e3a1d692aac76375a36263c0060c7c3d2b31",
+    "lane_outputs/lane_4/targeted_scouting_lane_4_candidate_sources_summary.json": "a2e7eb027080e23afe07b7c8043ad45cb515f0885641885e0890d92f438dacb8",
+    "targeted_scouting_four_lane_candidate_only_qa_report.md": "df9c77067aa37da50fa64a1d927cd8c615d67427e5fa2965f2a919d91976369d",
+    "targeted_scouting_four_lane_candidate_sources.csv": "d4e225d6097390e3812dedafa6fcb3711767e58cd8a762534b3c5b34b8483339",
+    "targeted_scouting_four_lane_candidate_sources_summary.json": "ae14626295ff23d71c70f6822f8762bfb6bbb5c0201f964764fa2142096a9954",
+    "targeted_scouting_four_lane_city_cycle_unit_coverage_summary.json": "c952e74cfa7ec79679387b4a1053d7b61f0370b526d962070865807629c77f1e",
+    "targeted_scouting_four_lane_duplicate_prior_seen_summary.json": "901ee3fd7093413631dafdc3db2dca9f5f14569c6c78762851e40016e5e6513e",
+    "targeted_scouting_four_lane_fixed_stagger_live_decision.json": "3a2efd33df0e1a0d8bb57e384f5cf5f6b62bf4bf8496da8d26860d9519be17f1",
+    "targeted_scouting_four_lane_fixed_stagger_live_invariant_checks.json": "ba29d26303afa4913d706529ecb7ffd661c0c4a43d77f30d9d686249bd88b095",
+    "targeted_scouting_four_lane_fixed_stagger_live_summary.md": "8fec5373d529c786e3a3d1f284d0670f5d4e2af535a6ef431d940e115464395a",
+    "targeted_scouting_four_lane_fixed_stagger_live_validation_2026-07-25.md": "0e1d11348435bebc2f45eb7eb96185728e840b5f17e291ebf03a30bef36361a0",
+    "targeted_scouting_four_lane_mechanism_gap_coverage_summary.json": "fff029fff700a9ef3069b8a70395082868fa731a380ee628315cafa14fddb611"
+  },
+  "required_input_count": 14
+}

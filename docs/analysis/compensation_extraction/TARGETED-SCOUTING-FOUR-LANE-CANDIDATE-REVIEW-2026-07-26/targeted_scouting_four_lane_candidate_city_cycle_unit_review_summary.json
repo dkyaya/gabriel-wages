@@ -1,0 +1,8 @@
+{
+  "candidate_rows_with_counterpart_id": 1002,
+  "candidate_rows_with_cycle_year_metadata": 3967,
+  "city_state_unit_groups": 1525,
+  "coverage_status": "candidate_only_not_verified",
+  "distinct_city_state_pairs": 1525,
+  "groups_with_verification_ready_candidate": 1403
+}

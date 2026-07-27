@@ -1,0 +1,14 @@
+{
+  "candidate_rows_reviewed": 4228,
+  "deterministic_metadata_only": true,
+  "quality_label_counts": {
+    "deprioritize_this_phase": 17,
+    "repair_or_review_needed": 737,
+    "verification_ready_high": 142,
+    "verification_ready_low": 2049,
+    "verification_ready_medium": 1283
+  },
+  "score_max": 98,
+  "score_min": 48,
+  "scoring_dimensions": 10
+}

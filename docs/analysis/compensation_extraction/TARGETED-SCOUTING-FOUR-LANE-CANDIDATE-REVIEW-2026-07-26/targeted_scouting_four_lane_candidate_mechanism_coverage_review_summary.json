@@ -1,0 +1,12 @@
+{
+  "by_mechanism": {
+    "fiscal_constraint_signal": 775,
+    "market_or_comparability_pressure": 1081,
+    "non_safety_constraint_signal": 914,
+    "strike_or_no_strike_constraint": 704
+  },
+  "candidate_rows_reviewed": 4228,
+  "interpretation_boundary": "Candidate-locator coverage only; no mechanism evidence was verified.",
+  "mechanism_families": 4,
+  "verification_ready_rows": 3474
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-27T00:52:04Z",
+  "generated_at": "2026-07-27T01:16:07Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -80,7 +80,7 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "calibration_phase": "targeted_scouting_four_lane_fixed_stagger_live_completed_candidate_review_ready",
+  "calibration_phase": "targeted_scouting_four_lane_candidate_review_completed_verification_ready",
   "latest_calibration_id": "TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24",
   "latest_calibration_review_id": "TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24",
   "latest_adjudication_prep_id": "TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24",
@@ -376,6 +376,26 @@
   "targeted_scouting_four_lane_fixed_stagger_live_decision": "targeted_scouting_four_lane_fixed_stagger_live_completed_candidate_review_ready",
   "targeted_scouting_four_lane_fixed_stagger_live_path": "docs/analysis/compensation_extraction/TARGETED-SCOUTING-FOUR-LANE-FIXED-STAGGER-LIVE-RUN-OVERLAP-AUTHORIZED-2026-07-25",
   "targeted_scouting_four_lane_candidate_review_ready": true,
+  "targeted_scouting_four_lane_candidate_review_completed": true,
+  "targeted_scouting_four_lane_candidate_review_decision": "targeted_scouting_four_lane_candidate_review_completed_verification_ready",
+  "targeted_scouting_four_lane_candidate_review_path": "docs/analysis/compensation_extraction/TARGETED-SCOUTING-FOUR-LANE-CANDIDATE-REVIEW-2026-07-26",
+  "targeted_scouting_four_lane_candidates_reviewed": 4228,
+  "targeted_scouting_four_lane_verification_ready_candidates": 3474,
+  "targeted_scouting_four_lane_candidate_quality_counts": {
+    "deprioritize_this_phase": 17,
+    "repair_or_review_needed": 737,
+    "verification_ready_high": 142,
+    "verification_ready_low": 2049,
+    "verification_ready_medium": 1283
+  },
+  "targeted_scouting_four_lane_verification_priority_tier_counts": {
+    "tier_a": 82,
+    "tier_b": 689,
+    "tier_c": 2703,
+    "tier_d": 751
+  },
+  "targeted_source_verification_ready_next": true,
+  "targeted_source_verification_completed": false,
   "gabriel_claim_rating_global_analysis_readiness": false,
   "limited_qualitative_usage_registry_review_global_analysis_readiness": false,
   "limited_qualitative_usage_layer_acceptance_global_analysis_readiness": false,

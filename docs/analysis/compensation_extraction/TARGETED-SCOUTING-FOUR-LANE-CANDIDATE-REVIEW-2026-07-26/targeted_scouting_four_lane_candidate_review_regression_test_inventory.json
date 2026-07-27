@@ -1,0 +1,13 @@
+{
+  "focus": [
+    "immutable scope",
+    "candidate-only status",
+    "deterministic quality scoring",
+    "review deduplication",
+    "verification queue boundaries",
+    "no network or verification",
+    "dashboard closure",
+    "idempotent resume"
+  ],
+  "suite": "scripts/test_targeted_scouting_four_lane_candidate_review.py"
+}

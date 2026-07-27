@@ -1,0 +1,38 @@
+{
+  "candidate_repair_needed": false,
+  "candidate_rows_reviewed": 4228,
+  "completion_status": "completed_candidate_only_metadata_review",
+  "decision": "targeted_scouting_four_lane_candidate_review_completed_verification_ready",
+  "deduped_review_rows": 4225,
+  "documents_downloaded": 0,
+  "durable_ledger_merges": 0,
+  "global_analysis_readiness": false,
+  "lane_candidate_counts": {
+    "lane_1": 1002,
+    "lane_2": 754,
+    "lane_3": 1260,
+    "lane_4": 1212
+  },
+  "live_hosted_search_ran": false,
+  "model_api_calls": 0,
+  "quality_label_counts": {
+    "deprioritize_this_phase": 17,
+    "repair_or_review_needed": 737,
+    "verification_ready_high": 142,
+    "verification_ready_low": 2049,
+    "verification_ready_medium": 1283
+  },
+  "rows_extracted": 0,
+  "rows_rated": 0,
+  "source_verification_ready_next": true,
+  "sources_verified": 0,
+  "task_id": "TARGETED-SCOUTING-FOUR-LANE-CANDIDATE-REVIEW-2026-07-26",
+  "urls_opened": 0,
+  "verification_priority_tier_counts": {
+    "tier_a": 82,
+    "tier_b": 689,
+    "tier_c": 2703,
+    "tier_d": 751
+  },
+  "verification_ready_count": 3474
+}

@@ -1,0 +1,21 @@
+{
+  "candidate_status": "candidate_only_not_verified",
+  "lane_counts": {
+    "lane_1": 914,
+    "lane_2": 704,
+    "lane_3": 775,
+    "lane_4": 1081
+  },
+  "priority_tier_counts": {
+    "tier_a": 82,
+    "tier_b": 689,
+    "tier_c": 2703
+  },
+  "quality_label_counts": {
+    "verification_ready_high": 142,
+    "verification_ready_low": 2049,
+    "verification_ready_medium": 1283
+  },
+  "source_verification_ready_next": true,
+  "verification_ready_rows": 3474
+}

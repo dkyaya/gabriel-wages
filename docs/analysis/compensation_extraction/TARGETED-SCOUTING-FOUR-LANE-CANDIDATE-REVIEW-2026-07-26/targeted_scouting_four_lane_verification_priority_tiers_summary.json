@@ -1,0 +1,13 @@
+{
+  "tier_a_definition": "High-quality Tier 1 city-cycle counterpart candidate with clear overlap metadata.",
+  "tier_b_definition": "High/medium-quality mechanism-specific candidate with strong source-family metadata.",
+  "tier_c_definition": "Lower-priority verification-ready metadata candidate; review after A/B.",
+  "tier_counts_after_review_deduplication": {
+    "tier_a": 82,
+    "tier_b": 689,
+    "tier_c": 2703,
+    "tier_d": 751
+  },
+  "tier_d_definition": "Repair, ambiguous, or deprioritized metadata; retain for audit and do not verify first.",
+  "tier_d_in_verification_ready_queue": 0
+}

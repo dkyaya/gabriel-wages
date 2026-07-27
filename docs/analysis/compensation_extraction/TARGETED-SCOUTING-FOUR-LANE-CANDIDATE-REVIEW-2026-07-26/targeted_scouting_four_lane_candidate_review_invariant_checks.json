@@ -1,0 +1,16 @@
+{
+  "all_candidate_ids_unique": true,
+  "all_invariants_passed": true,
+  "candidate_only_statuses_preserved": true,
+  "candidate_rows_exactly_4228": true,
+  "global_analysis_readiness_false": true,
+  "lane_counts_reconcile": true,
+  "no_durable_ledger_mutation": true,
+  "no_live_search_or_model_api_call": true,
+  "no_url_open_or_download": true,
+  "no_verification_extraction_rating_ingestion_codify": true,
+  "partial_outputs_cannot_masquerade_as_complete": true,
+  "quality_labels_deterministic": true,
+  "verification_queue_excludes_tier_d": true,
+  "verification_queue_not_verified": true
+}

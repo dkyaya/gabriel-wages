@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "targeted_scouting_four_lane_candidate_review_completed_verification_ready"
+              ? "Four-lane candidate review complete; targeted source verification is ready"
+              : textTableCalibrationStatus.calibration_phase ===
             "targeted_scouting_four_lane_fixed_stagger_live_completed_candidate_review_ready"
               ? "Four-lane fixed-stagger live scouting complete; candidate review is ready"
               : textTableCalibrationStatus.calibration_phase ===
@@ -900,6 +903,22 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "targeted_scouting_four_lane_candidate_review_completed_verification_ready" ? (
+            <>
+              Deterministic metadata review reconciled{" "}
+              {formatNumber(
+                textTableCalibrationStatus.targeted_scouting_four_lane_candidates_reviewed,
+              )}
+              {" "}candidate-only leads and placed{" "}
+              {formatNumber(
+                textTableCalibrationStatus.targeted_scouting_four_lane_verification_ready_candidates,
+              )}
+              {" "}in the separately gated verification queue. No locator was
+              opened, no source was verified, and every lead remains
+              unextracted, unrated, and non-causal. Targeted source verification
+              is next; global analysis readiness remains closed.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "targeted_scouting_four_lane_fixed_stagger_live_completed_candidate_review_ready" ? (
             <>
               All four immutable 500-target lanes completed with exact
