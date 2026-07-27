@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-27T21:24:49Z",
+  "generated_at": "2026-07-27T22:54:27Z",
   "data_vintage": "2026-07-27",
   "source_file": "docs/dashboard/reports/reports_index.json",
   "reports": [
@@ -33,6 +33,38 @@
         {
           "label": "claim candidates",
           "value": 115
+        }
+      ]
+    },
+    {
+      "id": "broad-state-4x1000-scout-dry-run-prep-2026-07-27",
+      "title": "Broad State 4x1000 Scout Dry-Run Preparation",
+      "report_type": "Current discovery planning report",
+      "date": "2026-07-27",
+      "checkpoint": "Four locked 1,000-target shards; no live calls",
+      "summary": "The no-call package prepares 4,000 unique unscouted municipalities in four independently runnable and resumable geographic shards. Actual scout coverage remains 2,922 and candidate review is deferred.",
+      "tags": [
+        "broad scout",
+        "4x1000",
+        "dry run",
+        "resumability"
+      ],
+      "current": false,
+      "historical": false,
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/broad_state_4x1000_scout_dry_run_prep_result_2026-07-27.md",
+      "link_label": "Open 4x1000 dry-run planning report",
+      "scope_metrics": [
+        {
+          "label": "planned targets",
+          "value": 4000
+        },
+        {
+          "label": "planned shards",
+          "value": 4
+        },
+        {
+          "label": "actual coverage",
+          "value": 2922
         }
       ]
     },

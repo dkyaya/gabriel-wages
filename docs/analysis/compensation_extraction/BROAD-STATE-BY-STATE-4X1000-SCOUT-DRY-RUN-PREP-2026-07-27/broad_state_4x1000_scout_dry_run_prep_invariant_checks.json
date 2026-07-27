@@ -1,0 +1,16 @@
+{
+  "all_invariants_passed": true,
+  "controlled_shard_ids": true,
+  "dashboard_actual_coverage_2922": true,
+  "dashboard_map_total_scout_coverage_only": true,
+  "each_shard_count_1000": true,
+  "global_analysis_readiness_false": true,
+  "master_count_4000": true,
+  "master_equals_four_shard_union": true,
+  "no_live_or_external_calls": true,
+  "partial_outputs_cannot_masquerade_as_complete": true,
+  "planned_not_counted_as_actual": true,
+  "prior_1205_candidates_preserved": true,
+  "unique_municipalities_4000": true,
+  "weak_duplicate_review_targets_excluded": true
+}

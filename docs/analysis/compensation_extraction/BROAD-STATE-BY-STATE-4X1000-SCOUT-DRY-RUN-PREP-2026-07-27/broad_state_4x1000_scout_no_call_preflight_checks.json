@@ -1,0 +1,21 @@
+{
+  "actual_coverage_before_and_after_prep_2922": true,
+  "api_model_calls": 0,
+  "candidate_review_runs": 0,
+  "direct_sdk_calls": 0,
+  "downloads": 0,
+  "each_shard_count_1000": true,
+  "four_shards_locked": true,
+  "global_analysis_readiness": false,
+  "head_get_requests": 0,
+  "hosted_search_calls": 0,
+  "ingestion_codification_runs": 0,
+  "master_equals_shard_union": true,
+  "master_queue_locked": true,
+  "ocr_render_extraction_rating_runs": 0,
+  "preflight_result": "passed_no_call",
+  "prior_1205_candidate_queue_preserved": true,
+  "source_document_accesses": 0,
+  "url_opens": 0,
+  "weak_duplicate_needs_review_excluded": true
+}

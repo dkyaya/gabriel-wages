@@ -1,0 +1,15 @@
+{
+  "backend_calls": 0,
+  "hosted_search_calls": 0,
+  "master_preview_count": 4000,
+  "model_calls": 0,
+  "preview_contains_sanitized_planning_metadata_only": true,
+  "raw_prompts_saved": 0,
+  "raw_responses_saved": 0,
+  "shard_preview_counts": {
+    "broad_shard_001": 1000,
+    "broad_shard_002": 1000,
+    "broad_shard_003": 1000,
+    "broad_shard_004": 1000
+  }
+}

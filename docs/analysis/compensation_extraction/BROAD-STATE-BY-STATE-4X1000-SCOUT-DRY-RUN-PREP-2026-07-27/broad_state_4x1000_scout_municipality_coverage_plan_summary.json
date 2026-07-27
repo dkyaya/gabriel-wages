@@ -1,0 +1,17 @@
+{
+  "actual_scout_covered_municipalities_after_dry_run_prep": 2922,
+  "cumulative_scout_covered_municipalities_before_wave": 2922,
+  "locked_scout_target_count": 4000,
+  "municipality_coverage_by_shard": {
+    "broad_shard_001": 1000,
+    "broad_shard_002": 1000,
+    "broad_shard_003": 1000,
+    "broad_shard_004": 1000
+  },
+  "new_unique_municipalities_planned_count": 4000,
+  "projected_cumulative_scout_covered_municipalities_after_wave_if_all_parseable": 6922,
+  "source_family_diversification_opportunities_by_municipality": 4000,
+  "unique_municipalities_planned_for_scout_count": 4000,
+  "unique_municipalities_previously_scout_covered_count": 0,
+  "unique_municipalities_targeted_count": 4000
+}

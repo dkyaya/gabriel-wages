@@ -1,0 +1,15 @@
+{
+  "expected_result": "all_pass",
+  "tests": [
+    "no_call_boundary",
+    "master_union_reconciliation",
+    "shard_size_cap",
+    "target_tier_allowlist",
+    "municipality_uniqueness",
+    "coverage_separation",
+    "prior_candidate_preservation",
+    "dashboard_map_contract",
+    "future_prompt_resumability",
+    "idempotent_complete_validation"
+  ]
+}

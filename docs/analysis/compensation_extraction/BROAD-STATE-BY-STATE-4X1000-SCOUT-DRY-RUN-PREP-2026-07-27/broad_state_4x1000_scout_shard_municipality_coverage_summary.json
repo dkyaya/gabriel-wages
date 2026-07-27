@@ -1,0 +1,46 @@
+{
+  "broad_shard_001": {
+    "region_counts": {
+      "Midwest": 261,
+      "Northeast": 179,
+      "South": 336,
+      "West": 224
+    },
+    "state_count": 48,
+    "target_count": 1000,
+    "unique_municipality_count": 1000
+  },
+  "broad_shard_002": {
+    "region_counts": {
+      "Midwest": 261,
+      "Northeast": 179,
+      "South": 336,
+      "West": 224
+    },
+    "state_count": 48,
+    "target_count": 1000,
+    "unique_municipality_count": 1000
+  },
+  "broad_shard_003": {
+    "region_counts": {
+      "Midwest": 260,
+      "Northeast": 179,
+      "South": 336,
+      "West": 225
+    },
+    "state_count": 49,
+    "target_count": 1000,
+    "unique_municipality_count": 1000
+  },
+  "broad_shard_004": {
+    "region_counts": {
+      "Midwest": 260,
+      "Northeast": 179,
+      "South": 336,
+      "West": 225
+    },
+    "state_count": 48,
+    "target_count": 1000,
+    "unique_municipality_count": 1000
+  }
+}

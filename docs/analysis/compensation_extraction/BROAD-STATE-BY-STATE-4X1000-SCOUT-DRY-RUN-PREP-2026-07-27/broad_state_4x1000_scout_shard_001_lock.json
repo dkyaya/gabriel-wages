@@ -1,0 +1,25 @@
+{
+  "input_hashes": {
+    "data/city_coverage.csv": "4fdf135ff3741893f5a4c45edc52a70159adc87598b777dfc4373dd8481249e3",
+    "docs/analysis/compensation_extraction/BROAD-STATE-BY-STATE-SOURCE-SCOUT-WAVE-2026-07-27/broad_state_by_state_source_scout_candidate_review_queue.csv": "e97d5e381152f3f4a021b1f4cd73459b24eb4ad713dde4a8edd85b3ae103f93f",
+    "docs/analysis/compensation_extraction/BROAD-STATE-BY-STATE-SOURCE-SCOUT-WAVE-2026-07-27/broad_state_by_state_source_scout_locked_queue.csv": "d54c0becd9f40655199b44ca1ae63f9b3f85dc21d15a33528980471104cc62d2",
+    "docs/analysis/compensation_extraction/BROAD-STATE-BY-STATE-SOURCE-SCOUT-WAVE-2026-07-27/broad_state_by_state_source_scout_results.csv": "855d061e09090cb364342847684426137b437e3422d604b0906d8ce08157044e",
+    "docs/analysis/compensation_extraction/BROAD-STATE-BY-STATE-SOURCE-SCOUT-WAVE-2026-07-27/broad_state_by_state_source_scout_wave_decision.json": "c8bd7733a021325e29a59323076413e9b0f721ea6f53b1c015b898f724081da5",
+    "docs/analysis/national_municipality_priority_tiers_2026-07-22.csv": "3aa0903987c909e36a23ce4654667ffc3e1083f67aa44657f86a36ba670aa3c0",
+    "docs/analysis/national_municipality_universe.csv": "cf7af977846a7bb3386dbdfa0d92c5f25c53126c47068f254a9dc304fc7cc4bd",
+    "docs/analysis/national_scout_coverage_municipality_2026-07-20.csv": "2339ecc448f0252a5a1d533e458688d7b9e8359a5b6af013784fef4f6847e96c",
+    "docs/analysis/national_scout_coverage_state.csv": "bad2948a2990e91280b510e5d93c1ab29aa65959f83693a641a1e902836e5a21"
+  },
+  "live_status": "not_run",
+  "locked": true,
+  "master_queue_sha256": "5507c81d5f7d9bceeda695f00207ec473f1ebd806cdeb2e6a41ea29c8d5885cb",
+  "queue_path": "docs/analysis/compensation_extraction/BROAD-STATE-BY-STATE-4X1000-SCOUT-DRY-RUN-PREP-2026-07-27/broad_state_4x1000_scout_shard_001_locked_queue.csv",
+  "queue_sha256": "088259886bb0c3f4d5fb82585925c11d579f202fa77dfb63704908dc54df8b2a",
+  "resume_identity_fields": [
+    "scout_target_id",
+    "municipality_id",
+    "shard_id",
+    "shard_sequence"
+  ],
+  "shard_id": "broad_shard_001"
+}

@@ -107,6 +107,7 @@ def main() -> None:
         "tier_c_evidence_span_rating_summary_140_completed_memo_supplement_ready",
         "bounded_tier_c_evidence_memo_supplement_completed_broad_scouting_ready",
         "broad_state_by_state_source_scout_completed_candidate_review_ready",
+        "broad_state_4x1000_scout_dry_run_prep_completed_live_ready",
     }
     assert phase["tier_c_text_extracted_ok_count"] == 378
     assert phase["tier_c_positive_exact_span_count"] == 159

@@ -1,0 +1,15 @@
+{
+  "each_family_present_in_each_shard": true,
+  "mechanism_targeted_default": false,
+  "planned_targets_by_query_family": {
+    "agenda_minutes_pay_policy": 500,
+    "agreements_mous_settlements": 500,
+    "arbitration_factfinding": 500,
+    "broad_multi_source_crosscheck": 500,
+    "budget_pay_plans": 500,
+    "civil_service_hr_personnel": 500,
+    "compensation_classification_studies": 500,
+    "salary_wage_schedules": 500
+  },
+  "query_family_count": 8
+}

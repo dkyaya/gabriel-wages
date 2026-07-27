@@ -1,0 +1,6 @@
+{
+  "cba_inclusive_primary_bundle_share": 0.125,
+  "cba_inclusive_primary_bundle_target_count": 500,
+  "non_cba_or_mixed_primary_query_target_count": 3500,
+  "note": "Planning distribution, not observed candidate-source distribution."
+}

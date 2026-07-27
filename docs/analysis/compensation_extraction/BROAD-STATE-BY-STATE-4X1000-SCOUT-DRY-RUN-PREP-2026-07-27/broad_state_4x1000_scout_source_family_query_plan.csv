@@ -1,0 +1,9 @@
+source_family_query_family,planned_target_count,expected_source_family_hints,sanitized_query_terms,mechanism_targeted_default
+agreements_mous_settlements,500,cba; mou_or_memorandum; settlement_agreement,municipal labor agreements memoranda settlements,false
+arbitration_factfinding,500,arbitration_award; factfinding_report,municipal arbitration awards factfinding reports,false
+salary_wage_schedules,500,salary_ordinance; wage_schedule,municipal salary ordinances wage schedules,false
+budget_pay_plans,500,budget_or_pay_plan,municipal budget compensation pay plans,false
+civil_service_hr_personnel,500,civil_service_or_hr_pay_plan; personnel_policy,municipal civil service HR pay personnel policies,false
+compensation_classification_studies,500,compensation_study; classification_study,municipal compensation classification studies,false
+agenda_minutes_pay_policy,500,agenda_packet_or_minutes; other_local_government_pay_policy,municipal agenda minutes attached pay policy records,false
+broad_multi_source_crosscheck,500,all_controlled_local_government_pay_source_families,official municipal labor pay document source index,false

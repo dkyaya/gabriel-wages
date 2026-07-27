@@ -1,0 +1,15 @@
+{
+  "actual_candidate_rows_before_and_after_prep": 6027,
+  "actual_scout_covered_after_prep": 2922,
+  "actual_scout_covered_before_prep": 2922,
+  "dashboard_updated": true,
+  "global_analysis_readiness": false,
+  "map_data_date": "2026-07-27",
+  "map_filter": "total_scout_coverage_only",
+  "planned_master_targets": 4000,
+  "planned_shards": 4,
+  "planned_targets_added_to_live_map": 0,
+  "planned_targets_per_shard": 1000,
+  "planning_phase": "broad_state_4x1000_scout_dry_run_prep_completed_live_ready",
+  "projected_coverage_if_all_future_live_targets_parseable": 6922
+}

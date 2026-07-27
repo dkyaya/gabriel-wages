@@ -1390,6 +1390,20 @@ BROAD_STATE_SOURCE_SCOUT_INVARIANTS_PATH = (
 BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH = (
     BROAD_STATE_SOURCE_SCOUT_DIR / "broad_state_by_state_source_scout_state_coverage.csv"
 )
+BROAD_STATE_4X1000_PREP_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-BY-STATE-4X1000-SCOUT-DRY-RUN-PREP-2026-07-27"
+)
+BROAD_STATE_4X1000_PREP_DECISION_PATH = (
+    BROAD_STATE_4X1000_PREP_DIR / "broad_state_4x1000_scout_dry_run_prep_decision.json"
+)
+BROAD_STATE_4X1000_PREP_INVARIANTS_PATH = (
+    BROAD_STATE_4X1000_PREP_DIR / "broad_state_4x1000_scout_dry_run_prep_invariant_checks.json"
+)
+BROAD_STATE_4X1000_PREP_MASTER_SUMMARY_PATH = (
+    BROAD_STATE_4X1000_PREP_DIR / "broad_state_4x1000_scout_master_locked_queue_summary.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -4642,6 +4656,52 @@ def broad_state_source_scout_status() -> tuple[bool, dict[str, Any]]:
     return True, decision
 
 
+def broad_state_4x1000_dry_run_prep_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize only the complete no-call 4x1000 planning package."""
+    required = (
+        BROAD_STATE_4X1000_PREP_DECISION_PATH,
+        BROAD_STATE_4X1000_PREP_INVARIANTS_PATH,
+        BROAD_STATE_4X1000_PREP_MASTER_SUMMARY_PATH,
+        BROAD_STATE_4X1000_PREP_DIR / "broad_state_4x1000_scout_master_lock.json",
+        BROAD_STATE_4X1000_PREP_DIR / "next_broad_state_4x1000_live_scout_prompt.md",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    decision = read_json(BROAD_STATE_4X1000_PREP_DECISION_PATH)
+    invariants = read_json(BROAD_STATE_4X1000_PREP_INVARIANTS_PATH)
+    master = read_json(BROAD_STATE_4X1000_PREP_MASTER_SUMMARY_PATH)
+    if not (
+        decision.get("decision")
+        == "broad_state_4x1000_scout_dry_run_prep_completed_live_ready"
+        and decision.get("master_locked_target_count") == 4000
+        and set(decision.get("shard_target_counts", {}).values()) == {1000}
+        and len(decision.get("shard_target_counts", {})) == 4
+        and decision.get("actual_scout_covered_municipalities_before_wave") == 2922
+        and decision.get("actual_scout_covered_municipalities_after_dry_run_prep") == 2922
+        and decision.get("prior_review_eligible_candidates_preserved") == 1205
+        and decision.get("candidate_review_deferred") is True
+        and decision.get("dashboard_map_filter") == "total_scout_coverage_only"
+        and decision.get("dashboard_map_actual_coverage_unchanged") is True
+        and decision.get("global_analysis_readiness") is False
+        and all(
+            decision.get(key) == 0
+            for key in (
+                "hosted_search_calls", "direct_sdk_calls", "api_model_calls",
+                "url_opens", "head_get_requests", "downloads",
+                "source_document_accesses", "candidate_review_runs",
+                "ocr_runs", "render_runs", "text_extractions", "span_extractions",
+                "rating_runs", "ingestion_runs", "codification_runs",
+            )
+        )
+        and master.get("locked_scout_target_count") == 4000
+        and master.get("unique_municipalities_targeted_count") == 4000
+        and master.get("live_status") == "not_run"
+        and invariants.get("all_invariants_passed") is True
+    ):
+        raise ValueError("broad state 4x1000 dry-run prep package fails dashboard gates")
+    return True, decision
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -4858,6 +4918,34 @@ def build_reports_index_layer(
                 ],
             },
         )
+    prep_completed, prep = broad_state_4x1000_dry_run_prep_status()
+    if prep_completed:
+        published_reports.insert(
+            1,
+            {
+                "id": "broad-state-4x1000-scout-dry-run-prep-2026-07-27",
+                "title": "Broad State 4x1000 Scout Dry-Run Preparation",
+                "report_type": "Current discovery planning report",
+                "date": "2026-07-27",
+                "checkpoint": "Four locked 1,000-target shards; no live calls",
+                "summary": (
+                    "The no-call package prepares 4,000 unique unscouted municipalities "
+                    "in four independently runnable and resumable geographic shards. "
+                    "Actual scout coverage remains 2,922 and candidate review is deferred."
+                ),
+                "tags": ["broad scout", "4x1000", "dry run", "resumability"],
+                "current": False,
+                "historical": False,
+                "href": repository_root_url
+                + "docs/analysis/broad_state_4x1000_scout_dry_run_prep_result_2026-07-27.md",
+                "link_label": "Open 4x1000 dry-run planning report",
+                "scope_metrics": [
+                    {"label": "planned targets", "value": prep["master_locked_target_count"]},
+                    {"label": "planned shards", "value": 4},
+                    {"label": "actual coverage", "value": 2922},
+                ],
+            },
+        )
 
     return {
         "schema_version": source_index.get("schema_version", "1.0.0"),
@@ -4935,6 +5023,7 @@ def build_state_summary(
     if sum(as_int(row["tier_c_retained_source_count"]) for row in tier_c_state_rows) != 463:
         raise ValueError("Tier C dashboard map retained-source count must reconcile to 463")
     broad_completed, broad_decision = broad_state_source_scout_status()
+    prep_completed, prep_decision = broad_state_4x1000_dry_run_prep_status()
     broad_by_state: dict[str, dict[str, str]] = {}
     if broad_completed:
         broad_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
@@ -5105,6 +5194,11 @@ def build_state_summary(
             "global_analysis_readiness": False,
             "broad_state_source_scout_included": broad_completed,
             "broad_state_source_scout_decision": broad_decision.get("decision") if broad_completed else None,
+            "broad_state_4x1000_dry_run_prep_included": prep_completed,
+            "broad_state_4x1000_dry_run_prep_decision": prep_decision.get("decision") if prep_completed else None,
+            "broad_state_4x1000_planned_target_count": prep_decision.get("master_locked_target_count") if prep_completed else None,
+            "broad_state_4x1000_planned_targets_added_to_map": 0,
+            "broad_state_4x1000_candidate_review_deferred": prep_decision.get("candidate_review_deferred") if prep_completed else None,
         },
         "metric_definition": {
             "evidence_readiness_score": (
@@ -7261,6 +7355,7 @@ def build_project_phase_summary(
     if not tier_c_supplement_completed:
         raise ValueError("current dashboard phase requires completed bounded Tier C memo supplement")
     broad_scout_completed, broad_scout = broad_state_source_scout_status()
+    prep_completed, prep = broad_state_4x1000_dry_run_prep_status()
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -7284,17 +7379,25 @@ def build_project_phase_summary(
         **metadata,
         "data_vintage": "2026-07-27",
         "stage": (
-            "broad_state_by_state_source_scout_complete_candidate_review_transition"
+            "broad_state_4x1000_scout_dry_run_prep_complete_live_transition"
+            if prep_completed
+            else "broad_state_by_state_source_scout_complete_candidate_review_transition"
             if broad_scout_completed
             else "bounded_tier_c_evidence_memo_supplement_complete_broad_scout_transition"
         ),
         "current_phase": (
-            "Broad state-by-state source discovery complete; candidate review ready next"
+            "Broad state 4x1000 dry-run prep complete; four live shards ready next"
+            if prep_completed
+            else "Broad state-by-state source discovery complete; candidate review ready next"
             if broad_scout_completed
             else "Tier C evidence memo supplement complete; broad state-by-state scouting ready next"
         ),
         "current_phase_code": (
-            broad_scout["decision"] if broad_scout_completed else tier_c_supplement["decision"]
+            prep["decision"]
+            if prep_completed
+            else broad_scout["decision"]
+            if broad_scout_completed
+            else tier_c_supplement["decision"]
         ),
         "current_evidence_status": "bounded_tier_c_documentary_memo_supplement_and_colocation_scaffolds_only",
         "global_analysis_readiness": False,
@@ -7373,15 +7476,32 @@ def build_project_phase_summary(
             "docs/analysis/broad_state_by_state_source_scout_wave_result_2026-07-27.md"
             if broad_scout_completed else None
         ),
+        "broad_state_4x1000_dry_run_prep_completed": prep_completed,
+        "broad_state_4x1000_dry_run_prep_decision": prep.get("decision") if prep_completed else None,
+        "broad_state_4x1000_master_locked_target_count": prep.get("master_locked_target_count") if prep_completed else None,
+        "broad_state_4x1000_shard_target_counts": prep.get("shard_target_counts") if prep_completed else None,
+        "broad_state_4x1000_unique_municipalities_planned": prep.get("unique_municipalities_planned") if prep_completed else None,
+        "broad_state_4x1000_projected_cumulative_if_all_parseable": prep.get("projected_cumulative_if_all_parseable") if prep_completed else None,
+        "broad_state_4x1000_planned_targets_added_to_actual_coverage": 0,
+        "broad_state_4x1000_prior_candidates_preserved": prep.get("prior_review_eligible_candidates_preserved") if prep_completed else None,
+        "broad_state_4x1000_candidate_review_deferred": prep.get("candidate_review_deferred") if prep_completed else None,
+        "broad_state_4x1000_result_path": (
+            "docs/analysis/broad_state_4x1000_scout_dry_run_prep_result_2026-07-27.md"
+            if prep_completed else None
+        ),
         "current_report_title": "Bounded Tier C Evidence Memo Supplement",
         "current_report_path": "docs/analysis/compensation_extraction/BOUNDED-TIER-C-EVIDENCE-MEMO-SUPPLEMENT-140-RATING-SUMMARY-2026-07-27/bounded_tier_c_evidence_memo_supplement.md",
         "current_operational_report_path": (
-            "docs/analysis/broad_state_by_state_source_scout_wave_result_2026-07-27.md"
+            "docs/analysis/broad_state_4x1000_scout_dry_run_prep_result_2026-07-27.md"
+            if prep_completed
+            else "docs/analysis/broad_state_by_state_source_scout_wave_result_2026-07-27.md"
             if broad_scout_completed
             else "docs/analysis/bounded_tier_c_evidence_memo_supplement_result_2026-07-27.md"
         ),
         "next_task": (
-            "bounded candidate review of broad state-by-state discovery metadata"
+            "run broad state 4x1000 live scout one independently resumable shard at a time; candidate review remains deferred"
+            if prep_completed
+            else "bounded candidate review of broad state-by-state discovery metadata"
             if broad_scout_completed
             else "broad state-by-state scouting with geographic and source-family balance"
         ),
@@ -7406,22 +7526,25 @@ def build_project_phase_summary(
         "current_candidate_positive_municipalities": positive,
         "current_failure_only_municipalities": failure_only,
         "next_planned_round": {
-            "round_id": NEXT_PARALLEL_SCOUT_ROUND_ID,
-            "status": "none_broad_scouting_paused",
-            "profile": "none",
-            "lanes": NEXT_ROUND_LANES,
-            "rows_per_lane": NEXT_ROUND_ROWS_PER_LANE,
-            "expected_attempted": NEXT_ROUND_ATTEMPTED,
+            "round_id": "BROAD-STATE-BY-STATE-4X1000-LIVE-SCOUT-2026-07-27" if prep_completed else NEXT_PARALLEL_SCOUT_ROUND_ID,
+            "status": "dry_run_locked_live_not_run" if prep_completed else "none_broad_scouting_paused",
+            "profile": "four_independent_geographic_shards" if prep_completed else "none",
+            "lanes": 4 if prep_completed else NEXT_ROUND_LANES,
+            "rows_per_lane": 1000 if prep_completed else NEXT_ROUND_ROWS_PER_LANE,
+            "expected_attempted": 4000 if prep_completed else NEXT_ROUND_ATTEMPTED,
             "expected_parseable_at_recent_rate": (
-                NEXT_ROUND_EXPECTED_PARSEABLE
+                4000 if prep_completed else NEXT_ROUND_EXPECTED_PARSEABLE
             ),
             "expected_post_round_scout_covered": (
-                NEXT_ROUND_EXPECTED_POST_COVERAGE
+                6922 if prep_completed else NEXT_ROUND_EXPECTED_POST_COVERAGE
             ),
-            "expected_checkpoint_margin": covered - SCOUT_CHECKPOINT_TARGET,
+            "expected_checkpoint_margin": (
+                6922 - SCOUT_CHECKPOINT_TARGET
+                if prep_completed else covered - SCOUT_CHECKPOINT_TARGET
+            ),
             "checkpoint_overshoot_intent": "completed_intentional_user_approved",
             "lane_start_stagger_minutes": 0,
-            "projection_status": "no_additional_round_planned",
+            "projection_status": "conditional_not_actual_coverage" if prep_completed else "no_additional_round_planned",
         },
         "superseded_plans": [
             {
@@ -7471,42 +7594,61 @@ def build_project_phase_summary(
 def build_parallel_scout_status(
     *, state_rows: list[dict[str, str]], metadata: dict[str, Any]
 ) -> dict[str, Any]:
-    """Describe completed parallel work and the post-checkpoint pause."""
+    """Describe completed scout work and any separately locked future shards."""
 
     covered = sum(as_int(row["municipalities_scouted"]) for row in state_rows)
+    broad_completed, broad = broad_state_source_scout_status()
+    if broad_completed:
+        covered += as_int(broad.get("parseable_target_count"))
+    prep_completed, prep = broad_state_4x1000_dry_run_prep_status()
     remaining = max(SCOUT_CHECKPOINT_TARGET - covered, 0)
     return {
         **metadata,
         "stage": "parallel_scout_operations_status",
-        "parallel_mode_status": "aggressive_3x300_completed_accounting_merged",
-        "current_parallel_mode": "three_lane_aggressive_round_successfully_merged",
+        "parallel_mode_status": (
+            "broad_4x1000_dry_run_locked_live_not_run"
+            if prep_completed else "aggressive_3x300_completed_accounting_merged"
+        ),
+        "current_parallel_mode": (
+            "four_independent_geographic_shards_prepared_no_call"
+            if prep_completed else "three_lane_aggressive_round_successfully_merged"
+        ),
         "supported_lanes_initial": 2,
-        "supported_lanes_future": 3,
-        "rows_per_lane": 300,
+        "supported_lanes_future": 4 if prep_completed else 3,
+        "rows_per_lane": 1000 if prep_completed else 300,
         "latest_completed_round_id": PARALLEL_SCOUT_ROUND_ID,
         "current_parallel_round_id": PARALLEL_SCOUT_ROUND_ID,
-        "next_parallel_test": "none_broad_scouting_paused",
-        "aggressive_mode_planned": "completed_checkpoint_exceeded",
+        "next_parallel_test": "broad_shard_001_live_after_separate_external_preflight" if prep_completed else "none_broad_scouting_paused",
+        "aggressive_mode_planned": "four_shards_locked_not_run" if prep_completed else "completed_checkpoint_exceeded",
         "current_scout_covered": covered,
         "target_checkpoint": SCOUT_CHECKPOINT_TARGET,
         "remaining_to_checkpoint": remaining,
-        "planned_round_expected_attempted": NEXT_ROUND_ATTEMPTED,
-        "planned_round_expected_parseable": NEXT_ROUND_EXPECTED_PARSEABLE,
-        "planned_round_expected_post_coverage": covered,
+        "planned_round_expected_attempted": 4000 if prep_completed else NEXT_ROUND_ATTEMPTED,
+        "planned_round_expected_parseable": 4000 if prep_completed else NEXT_ROUND_EXPECTED_PARSEABLE,
+        "planned_round_expected_post_coverage": 6922 if prep_completed else covered,
         "planned_round_expected_checkpoint_margin": (
-            covered - SCOUT_CHECKPOINT_TARGET
+            6922 - SCOUT_CHECKPOINT_TARGET if prep_completed else covered - SCOUT_CHECKPOINT_TARGET
         ),
-        "planned_round_status": "none_broad_scouting_paused",
+        "planned_round_status": "dry_run_locked_live_not_run" if prep_completed else "none_broad_scouting_paused",
+        "planned_shard_target_counts": prep.get("shard_target_counts") if prep_completed else None,
+        "planned_targets_added_to_actual_coverage": 0,
+        "candidate_review_deferred": prep.get("candidate_review_deferred") if prep_completed else None,
         "checkpoint_overshoot_intent": "completed_intentional_user_approved",
         "superseded_round": {
             "round_id": "POST-PI-CHECKPOINT-ROUND-3X160-2026-07-23",
             "status": "superseded_preserved_not_active",
         },
-        "lane_start_stagger_minutes": 8,
+        "lane_start_stagger_minutes": 0 if prep_completed else 8,
         "3x150_expected_attempted": 450,
         "3x300_expected_attempted": 900,
-        "accounting_policy": "serial_merge_after_lane_audit",
-        "lane_export_policy": "lane_local_candidate_exports",
+        "accounting_policy": (
+            "shard_local_checkpoint_then_commit_parseable_actuals_only"
+            if prep_completed else "serial_merge_after_lane_audit"
+        ),
+        "lane_export_policy": (
+            "independent_shard_candidate_exports_no_combined_review"
+            if prep_completed else "lane_local_candidate_exports"
+        ),
         "latest_round": {
             "lanes_completed_merge_eligible": 3,
             "attempted_rows": 900,
@@ -13810,6 +13952,13 @@ def main() -> int:
             BROAD_STATE_SOURCE_SCOUT_DECISION_PATH,
             BROAD_STATE_SOURCE_SCOUT_INVARIANTS_PATH,
             BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH,
+        ]
+    prep_completed, _ = broad_state_4x1000_dry_run_prep_status()
+    if prep_completed:
+        source_paths = source_paths + [
+            BROAD_STATE_4X1000_PREP_DECISION_PATH,
+            BROAD_STATE_4X1000_PREP_INVARIANTS_PATH,
+            BROAD_STATE_4X1000_PREP_MASTER_SUMMARY_PATH,
         ]
     metadata = base_metadata(
         timestamp=timestamp,

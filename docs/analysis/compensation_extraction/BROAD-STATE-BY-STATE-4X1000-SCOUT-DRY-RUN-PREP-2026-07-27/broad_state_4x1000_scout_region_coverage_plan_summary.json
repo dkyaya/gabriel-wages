@@ -1,0 +1,20 @@
+{
+  "actual_before_by_region": {
+    "Midwest": 1033,
+    "Northeast": 448,
+    "South": 674,
+    "West": 767
+  },
+  "planned_by_region": {
+    "Midwest": 1042,
+    "Northeast": 716,
+    "South": 1344,
+    "West": 898
+  },
+  "projected_if_all_parseable_by_region": {
+    "Midwest": 2075,
+    "Northeast": 1164,
+    "South": 2018,
+    "West": 1665
+  }
+}

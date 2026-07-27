@@ -95,7 +95,10 @@ def main() -> None:
     assert completed and dash_decision["decision"] == runner.DECISION
     phase = json.loads((ROOT / "docs/dashboard/data/project_phase_summary.json").read_text())
     state = json.loads((ROOT / "docs/dashboard/data/state_summary.json").read_text())
-    assert phase["current_phase_code"] == runner.DECISION
+    assert phase["current_phase_code"] in {
+        runner.DECISION,
+        "broad_state_4x1000_scout_dry_run_prep_completed_live_ready",
+    }
     assert phase["broad_state_source_scout_locked_target_count"] == 490
     assert phase["global_analysis_readiness"] is False
     assert state["metadata"]["current_map_layer"] == "total_scout_coverage_only"
