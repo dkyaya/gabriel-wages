@@ -100,6 +100,8 @@ class LiveDashboardContentAuditFixTests(unittest.TestCase):
             "Current priorities while discovery is paused",
             "Transition from discovery to verified evidence",
             "Scaled verification routing and source triage",
+            "The 463 retained Tier C sources have not been text-extracted or rated",
+            "bounded PDF/text-layer readiness review over",
         ):
             self.assertNotIn(phrase, source)
         for phrase in (
@@ -108,6 +110,8 @@ class LiveDashboardContentAuditFixTests(unittest.TestCase):
             "Broad state-by-state source scouting",
             "Total scout coverage",
             "Historical candidate queue",
+            "valid ratings were summarized",
+            "Scout coverage is operational discovery metadata",
         ):
             self.assertIn(phrase, source)
 

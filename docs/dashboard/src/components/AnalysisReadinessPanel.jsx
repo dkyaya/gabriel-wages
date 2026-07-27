@@ -5,7 +5,7 @@ const STAGE_LABELS = {
   verification_stage: "Source verification",
   ingestion_stage: "Ingestion",
   codified_stage: "Codified evidence",
-  wage_extraction_stage: "Bounded evidence / text readiness",
+  wage_extraction_stage: "Bounded evidence / Tier C memo supplement",
   regression_stage: "Regression results",
 };
 
@@ -53,8 +53,8 @@ export function AnalysisReadinessPanel({ data, phase }) {
         </div>
         <div>
           <ul>
-            <li>The current memo reports bounded same-source co-location scaffolds only.</li>
-            <li>The 463 retained Tier C sources have not been text-extracted or rated.</li>
+            <li>The parent memo and Tier C supplement report bounded documentary and same-source co-location scaffolds only.</li>
+            <li>{formatNumber(phase.tier_c_text_extracted_ok_count)} Tier C text artifacts were processed into exact spans; {formatNumber(phase.tier_c_rating_summary_valid_count)} valid ratings were summarized and {formatNumber(phase.tier_c_rating_summary_quarantine_excluded_count)} quarantines remain excluded.</li>
             <li>No normalized wage comparison, descriptive wage gap, regression, or treatment effect is available.</li>
             <li>Final causal and national prevalence claims remain unavailable.</li>
           </ul>
@@ -63,9 +63,8 @@ export function AnalysisReadinessPanel({ data, phase }) {
       </div>
 
       <p className="panel-note">
-        The current operational next step is bounded PDF/text-layer readiness review over
-        {" "}{formatNumber(phase.tier_c_retained_downloaded_source_count)} retained Tier C sources. Readiness is
-        not extraction and will not make these files globally analysis-ready.
+        The current operational next step is broad state-by-state source scouting with geographic and source-family
+        balance. Scout coverage is operational discovery metadata and will not make the project globally analysis-ready.
       </p>
 
       <details>
