@@ -1,0 +1,341 @@
+span_extraction_id,extracted_text_id,retained_source_id,candidate_id,lane_id,priority_tier,quality_label,source_url_or_locator,source_title,municipality,state,unit_type,occupation_group,bargaining_unit_name,contract_or_document_period,inferred_cycle_start,inferred_cycle_end,source_family,target_mechanism_family,local_extracted_text_path,extracted_text_sha256,source_file_sha256,span_status,span_status_reason,span_record_count,mechanism_family,span_text,span_start_offset,span_end_offset,span_sha256,context_before,context_after,extraction_rule_id,extraction_rule_family,span_specificity,documentary_claim_support,rating_status,ingestion_status,codification_status,causal_status,global_analysis_readiness,notes
+SRCSPAN321-19e2ab8c4618baeb0387,TXT321-19e2ab8c4618baeb0387,RS429-42f9f73c43a825c2cf74,TS4L-634d30d6b1140190fbca,lane_1,tier_b,verification_ready_medium,https://texascitytx.gov/1107/Salary-Benefits,"Salary & Benefits | Texas City, TX",Texas City,TX,non_safety_comparator,non_safety_comparator,,"October 1, 2024 through September 30, 2026",,,collective_bargaining_agreement_or_moa_or_wage_schedule,non_safety_constraint_signal,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/html/TXT321-19e2ab8c4618baeb0387.txt,abfaf312f1f66d70d2b52a05585f2457526ad3146947e7c139d250ba416acaa8,d2e8aa0fab06fbc44b2ef1ceb6bb6bbf718c5a64342645d53bc2b8a695bd2bb9,no_span_or_weak,no_target_mechanism_keyword_family_found_in_local_extracted_text,0,non_safety_constraint_signal,,,,,,,,,low,not_supported,not_rated,not_ingested,not_codified,not_causal_evidence,false,"Exact extracted-text span only; not a rating, causal finding, or global analysis record."
+SRCSPAN321-2e5f1734ccdde1566a5e,TXT321-2e5f1734ccdde1566a5e,RS429-4b5a7f6a77b9e64deec8,TS4L-4e617afe327acb786e49,lane_1,tier_b,verification_ready_medium,https://cityoflakewood.us/human-resources/collective-bargaining-agreements/,Collective Bargaining Agreements (City of Lakewood) — listing page for CBA/MOAs and salary schedules,Lakewood,WA,non_safety_comparator,City of Lakewood employee bargaining groups and salary schedules (AFSCME primary comparator family),AFSCME (Council 2 AFSCME AFL-CIO Local 1938) — plus other Lakewood bargaining groups listed on page,Page lists multiple contract periods; includes AFSCME 2024-2027 and AFSCME 2022-2023,2022-01-01,2027-12-31,collective_bargaining_agreement_or_moa_or_wage_schedule,non_safety_constraint_signal,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/html/TXT321-2e5f1734ccdde1566a5e.txt,40649644cf8ae946f3167c54f10eeb4d29ff885e68aae1ae39c1f0e43d1de386,bb0d696cd76c875891707ef9dda598bac7ac5bac15f4092f077b1c73fecf2c85,ambiguous_span,generic_or_untied_mechanism_mention_requires_review,1,non_safety_constraint_signal,"AR ZH-CN EN TL FR DE HAW IT JA KM KO LT PL RU SM SO ES TH UK VI
+Close
+Government
+Close
+Lakewood City Council
+Council Agenda Packets and Meeting Schedule
+Boards & Commissions
+Proclamations
+Executive
+Lakewood Municipal Code
+Local Legislators
+Biennial Budget
+City Manager’s Weekly Bulletin
+Government Relations
+Close
+Departments
+Close
+Municipal Court
+City Clerk
+Human Services
+Legal
+City Manager
+Communications
+Parks and Recreation
+Planning and Public Works
+Police
+South Sound Military and Communities Partnership (SSMCP)
+Human Resources & Risk Management
+Finance
+Close
+Residents
+Close
+Explore
+About Lakewood
+The People of Lakewood
+History
+Events
+Activities
+Senior Activity Center
+Parks
+Engage
+News
+Social Me",75,780,651ced017bddfa136d233e9cf098f84f08b95995896aa3ffb40ee01df5d4fb1d,"Collective Bargaining Agreements - City of Lakewood
+Menu
+Language
+Close
+AM ","dia
+Resources
+Report Issues
+MyLakewood311
+Emergency
+West Pierce Emergency Management Coalition
+Police
+Fire
+Schools
+Clover Park School District (K-12)
+Steilacoom",NON_SAFETY_CONSTRAINT_SIGNAL_WEAK,generic_or_untied_mention,low,weak,not_rated,not_ingested,not_codified,not_causal_evidence,false,"Exact extracted-text span only; not a rating, causal finding, or global analysis record."
+SRCSPAN321-9f670e784eb92b1bf1e6,TXT321-9f670e784eb92b1bf1e6,RS429-aac3c9de207685eee8ab,TS4L-1818beaf93ad4bcb2fb2,lane_1,tier_b,verification_ready_medium,https://www.portageea.com/,Portage EA (Portage Public Schools) — 2024-27 Collective Bargaining Agreement (CBA) (searchable),Portage,MI,non_safety_comparator,non_safety_comparator,Portage Education Association (Portage EA),"2024-27 collective bargaining agreement (includes effective period covering July 1, 2024 through June 30, 2027 — likely)",2024-07-01,2027-06-30,collective_bargaining_agreement_or_moa_or_wage_schedule,non_safety_constraint_signal,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/html/TXT321-9f670e784eb92b1bf1e6.txt,80c93e0ab984c140e675865e5ef5dd35015b6e242327ed2d70858d0a20053d74,4d703c69ec6502d94c12c664099e4d9a781765d5afcf1ac83c45bd96fe428bc4,no_span_or_weak,no_target_mechanism_keyword_family_found_in_local_extracted_text,0,non_safety_constraint_signal,,,,,,,,,low,not_supported,not_rated,not_ingested,not_codified,not_causal_evidence,false,"Exact extracted-text span only; not a rating, causal finding, or global analysis record."
+SRCSPAN321-5b5b3713ac8010dee4fb,TXT321-5b5b3713ac8010dee4fb,RS429-bd91661f97190f96dbd0,TS4L-d9128eebf89021e76894,lane_1,tier_b,verification_ready_medium,https://www.cityofutica.com/newsroom/press-releases/contract-agreement-between-city-and-csea-union,CONTRACT AGREEMENT BETWEEN CITY AND CSEA UNION (City of Utica press release page),Utica,NY,non_safety_comparator,CSEA represented municipal employees (non-safety comparator unit context implied by CSEA bargaining),CSEA (Civil Service Employees Association) union (City of Utica negotiations referenced),Four-year agreement retroactive back to 2014 (press release; unit wage/schedule not extracted here),2014-01-01,2018-12-31,collective_bargaining_agreement_or_moa_or_wage_schedule,non_safety_constraint_signal,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/html/TXT321-5b5b3713ac8010dee4fb.txt,b8861f0d28a3186069adf946dd2f2bdc7fa8f54a413e5b2201c83398a233d650,7ec96681c768b7d3f890a94dc5fe7ff42886c2ae6e949720126446965c7f5097,ambiguous_span,generic_or_untied_mechanism_mention_requires_review,1,non_safety_constraint_signal,"nd Policies
+Committee Membership
+Government
+Mayor's Office
+Newsroom
+Board of Ethics
+City Clerk's Office
+Duties
+Frequently Asked Questions
+Forms
+Utica City Code
+Common Council
+Council District Map
+Agendas and Recaps
+Common Council Members
+Comptroller
+Budget Information
+Frequently Asked Questions
+Board of Contract And Supply
+Frequently Asked Questions
+Public Bids
+Corporation Counsel
+Frequently Asked Questions
+Notice of Claim Information Sheet
+Estimate And Apportionment
+Newsroom
+How Do I....?
+Trash Disposal
+Street Cleaning
+Public Works
+Emergency Services
+Animal Control
+Laws and Ordinances
+Contact
+View and Pay Tax Online Guide
+Utica 311 User Guide
+Maps
+Road Assessments
+GIS Maps
+Site Map
+Coronavirus
+Ho",2697,3403,8cbb89ccc2281c4f15c1d77c8a87c11b4cc4a3851b09ff5e469c3c2d4a67f14a,"tificates
+Death Certificates
+Genealogical Services
+Youth Bureau
+Facilities
+Services & Programs
+Links
+Utica Civic Development Corp
+Schedule and Minutes
+Reports a","me
+> Newsroom
+MAYOR PALMIERI ANNOUNCES CONTRACT AGREEMENT BETWEEN CITY AND CSEA UNION
+Mayor Robert Palmieri today announced an agreement has been reached with t",NON_SAFETY_CONSTRAINT_SIGNAL_WEAK,generic_or_untied_mention,low,weak,not_rated,not_ingested,not_codified,not_causal_evidence,false,"Exact extracted-text span only; not a rating, causal finding, or global analysis record."
+SRCSPAN321-b82f98cd524908f6d379,TXT321-b82f98cd524908f6d379,RS429-c107759240c483b0843d,TS4L-9a09c3613e16d8a97593,lane_1,tier_a,verification_ready_high,https://www.somervillema.gov/news/somerville-municipal-employees-association-vote-approve-new-contract,"City of Somerville news: SMEA vote to approve new contract (six-year term for SMEA Units A, B, and D)",Somerville,MA,non_safety_comparator,SMEA covered employees (non-public safety units described in related Mass.gov materials),"Somerville Municipal Employees Association (SMEA) Units A, B, and D","Retroactive to July 1, 2010 – June 30, 2013; and extending through June 30, 2016 (two agreements per unit)",2012-01-01,2015-12-31,collective_bargaining_agreement_or_moa_or_wage_schedule,non_safety_constraint_signal,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/html/TXT321-b82f98cd524908f6d379.txt,344d8357224785b2a97f800546381d2349ded9a4977fb78cd50d70849e12a44c,d652309bed10eab2eedbc944ebfde55d2233001aeff543e94ab17f2a95d24f1c,ambiguous_span,generic_or_untied_mechanism_mention_requires_review,1,non_safety_constraint_signal,"e they were eager to see this contract ratified.""
+For each unit of the union, A, B and D, two agreements were reached, one retroactively covering the time period from July 1, 2010 through June 30 2013, with the second agreement extending through the fiscal year ending June 30, 2016. The agreement also reforms overtime pay and health insurance matters, gives snow removal crews a guaranteed six hour rest within a 24-hour period during snow emergencies, and allows for annual wage increases. The contract also implements routine labor management communication meetings to improve city-wide labor efficiencies. The new agreement also settles the majority of pending legal action between the SMEA and the Ci",3589,4295,eec8f09babcb577b13cf3957b2e01c40b1ca02dc8ca38e1248bea1eeea49281f,uring these negotiations and look forward to working together in the future. I would also thank the Aldermen for their support during the negotiations. I realiz,"ty of Somerville.
+""The City hopes that with the conclusion of these negotiations and the establishment of regular labor-management committee meetings we can, to",NON_SAFETY_CONSTRAINT_SIGNAL_WEAK,generic_or_untied_mention,low,weak,not_rated,not_ingested,not_codified,not_causal_evidence,false,"Exact extracted-text span only; not a rating, causal finding, or global analysis record."
+SRCSPAN321-15db486b2c16d7f9f971,TXT321-15db486b2c16d7f9f971,RS429-fa1350e8a8b491812090,TS4L-7cb2b2f8fe0ac98787d7,lane_1,tier_b,verification_ready_medium,https://eastcentralreporter.com/city-of-mattoon-city-council-met-aug-6,City of Mattoon City Council met Aug. 6 (includes Special Ordinance No. 2024-1917 ratifying AFSCME Council 31 Local 3821 contract renewal),Mattoon,IL,non_safety_comparator,Municipal employees represented by AFSCME Council 31 Local 3821 (non-safety bargaining unit lead),"AFSCME, AFL-CIO, Council 31, Local 3821","Two-year contract renewal dated Aug. 6, 2024 (successor renewal referenced in ordinance text)",2024-08-06,2026-08-05,collective_bargaining_agreement_or_moa_or_wage_schedule,non_safety_constraint_signal,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/html/TXT321-15db486b2c16d7f9f971.txt,787809b095059de7c600fbec3a6fda72060e841d075274b447eb0bd28dc8940b,392d04a9e8c1bfda44060ae3d8c7783a1b2ef4ba339f8b6d2ad6e54782a5ea6f,ambiguous_span,generic_or_untied_mechanism_mention_requires_review,1,non_safety_constraint_signal,"NAGERIAL AND NON-UNION NON-MANAGERIAL EMPLOYEES OF THE MUNICIPALITY
+WHEREAS, a ratified agreement with three of the collective bargaining agreements which represents employees of the municipality has provided a four percent (4%) pay increase for the fiscal year beginning May 1, 2024 and ending April 30, 2025; and
+WHEREAS, the time is now appropriate to also establish rates of pay for the managerial employees and the non-managerial employees not represented by a collective bargaining agreement effective with the fiscal year that begins May 1, 2024.
+NOW, THEREFORE, BE IT ORDAINED by the City Council of the City of Mattoon as follows:
+Section 1. Non-Managerial, Non-Confidential & FLSA Exempt Employee",19604,20310,a08436a7c32cb6c4d57dcbcf0be528d290acf78abc2bbc8dd7c4a03b5a2e6a20,"ior to May 1, 2014 to $58,016.66.
+CITY OF MATTOON, ILLINOIS
+SPECIAL ORDINANCE NO. 2024-1918
+AN ORDINANCE ESTABLISHING THE 2024-2025 COMPENSATION PLAN FOR THE MA",s shall be compensated in accordance with the schedule attached to this ordinance and marked Appendix A. Employees assigned to positions identified on the Sched,NON_SAFETY_CONSTRAINT_SIGNAL_WEAK,generic_or_untied_mention,low,weak,not_rated,not_ingested,not_codified,not_causal_evidence,false,"Exact extracted-text span only; not a rating, causal finding, or global analysis record."
+SRCSPAN321-4a0996a08e2e9b76f0af,TXT321-4a0996a08e2e9b76f0af,RS429-0de376da29a6a149d065,TS4L-42f6787a71e8b19c8dea,lane_2,tier_b,verification_ready_medium,https://www.pa.gov/agencies/dli/programs-services/labor-management-relations/pennsylvania-labor-relations-board/plrb-final-orders/2018-plrb-final-orders,"2018 PLRB Final Orders — Department of Labor and Industry (includes Warminster Township Police Benevolent Association v. Warminster Township, PF-U-17-80-E)",Warminster,PA,safety_and_non_safety_bargaining_units,police,Warminster Township Police Benevolent Association (linked to PF-U-17-80-E final order listing),2018 (final orders page listing; PF-U-17-80-E listed under October 2018),2018,2018,cba_or_arbitration_award_or_factfinding_or_impasse_record,strike_or_no_strike_constraint,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/html/TXT321-4a0996a08e2e9b76f0af.txt,816cb0071ecd7697f609b20c91adc6f313be0abe410e0bfacf7d8c2bcbcf078d,74ae9a7ef61a58f2b8c9e458698d3619c30448232cc9c1084621733a510a7fc2,ambiguous_span,generic_or_untied_mechanism_mention_requires_review,1,strike_or_no_strike_constraint,"mpensation Office of Adjudication (WCOA)
+WCAIS
+Workers' Compensation Claim
+SWIF District Offices
+Workers' Compensation Insurance
+Health Care Services Review
+State Workers' Insurance Fund
+Workers' Compensation Appeals Board
+Labor Management Relations
+Mediation
+General Safety
+Pennsylvania Labor Relations Board
+Industrial Board
+Fee Schedules
+Bureau of Occupational and Industrial Safety
+Labor Law Compliance
+Disability and Vocational Rehabilitation
+Blindness and Visual Services
+ODHH
+Vocational Rehabilitation
+Employment
+CTI at HGAC
+Workplace & Public Safety
+Tier II (PATTS) System
+Make a Payment
+EPCRA FAQs
+Resources
+Claimants, Workers, & Job Seekers
+Unemployment - Claimants
+Workers' Compensation Insurance S",1372,2081,c3e766cb507affeac344bf20efdd4943ceae3e8a5d9b0688c86f82e3cc462c27,"eral Programs
+For Employers
+UC Benefit Appeals
+Unemployment Compensation FAQs
+UC Benefit Secure Chat Registration
+Workers' Compensation
+Publications
+Workers' Co","earch Form
+OVR Resources
+Workforce Development
+Social Security for Public Employees
+For Employers and Educators
+OVR Resources
+Mandatory Postings
+Labor Managemen",STRIKE_OR_NO_STRIKE_CONSTRAINT_WEAK,generic_or_untied_mention,low,weak,not_rated,not_ingested,not_codified,not_causal_evidence,false,"Exact extracted-text span only; not a rating, causal finding, or global analysis record."
+SRCSPAN321-e5a09817b54af75cb78b,TXT321-e5a09817b54af75cb78b,RS429-17597244d8818866a1cf,TS4L-7f9a97ae93a8819b039b,lane_2,tier_b,verification_ready_medium,https://levittownnow.com/2014/07/22/exclusive-officials-working-to-fix-bristol-twp-police-manpower-issues-keep-up-drug-investigations/,"Officials Working to Fix Bristol Twp. Police Manpower Issues (Jul. 22, 2014) — references arbitration case with the township",Bristol,PA,safety_and_non_safety_bargaining_units,police (Act 111 / public safety),Bristol Township police collective bargaining unit (referenced via arbitration case context),2014 (article referencing arbitration outcome affecting police contract terms/costs),2014,,cba_or_arbitration_award_or_factfinding_or_impasse_record,strike_or_no_strike_constraint,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/html/TXT321-e5a09817b54af75cb78b.txt,c37ffa70fcb6abaf2c69b105883f55c1d96608f0e851061991672a43229dffa0,57f1cb6b39e1d4d7528635dd7694061c50bd143d3ed040f547d60e88c8edc7a0,ambiguous_span,generic_or_untied_mechanism_mention_requires_review,1,strike_or_no_strike_constraint,"e at least a dozen more officers.
+Township Manager Bill McCauley told LevittownNow.com recently that due to the lack available funds hiring new officers for the department hasn’t come as of yet.
+The township manager said since the department won its arbitration case with the township,which included across the board raises and no health insurance contributions, the township doesn’t have the money to hire more cops. McCauley said the fact is the township is now operating with a $80 million dollar unfunded debt, which he blamed on employee costs.
+Advertisements
+Law enforcement sources disagreed with McCauley’s explanation and said: “We tried to negotiate with him and he wanted no part of it at all, so we",2682,3392,08b703473cba25f238f2fa26181f7ca5c51143891623731deb4192815dc6765c,"ave shrunk and the perception is that drug-related crime has grown.
+Advertisements
+The department currently has between 55 and 60 sworn officers but used to hav"," had to bring in a labor arbitrator.  The union was more than willing to work with the township on a deal.”
+Members of the public that LevittownNow.com has talk",STRIKE_OR_NO_STRIKE_CONSTRAINT_WEAK,generic_or_untied_mention,low,weak,not_rated,not_ingested,not_codified,not_causal_evidence,false,"Exact extracted-text span only; not a rating, causal finding, or global analysis record."
+SRCSPAN321-fd1f5a21e81c0424e1e9,TXT321-fd1f5a21e81c0424e1e9,RS429-27133b970795bfafcbc5,TS4L-c84e3f49a00a59d530a7,lane_2,tier_b,verification_ready_high,https://magnawaterut.gov/archived-documents,Archived Documents — Magna Water District (includes board agendas/minutes & other posted materials),Magna metro,UT,safety_and_non_safety_bargaining_units,Magna Water District workforce (union and/or collective bargaining references likely embedded across archived board materials),Not specified on landing page,2014-2024 (archive scope spans multiple years; specific contract periods not confirmed from landing page lead),,,cba_or_arbitration_award_or_factfinding_or_impasse_record,strike_or_no_strike_constraint,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/html/TXT321-fd1f5a21e81c0424e1e9.txt,60210a07e6d0021b57d9eaa8a6063c126a8a4ff6f82868480faccbc944916424,e77605bd7e0195d1a785050cded256c9e873467a68d2b06e8ec3543e9383d6fa,no_span_or_weak,no_target_mechanism_keyword_family_found_in_local_extracted_text,0,strike_or_no_strike_constraint,,,,,,,,,low,not_supported,not_rated,not_ingested,not_codified,not_causal_evidence,false,"Exact extracted-text span only; not a rating, causal finding, or global analysis record."
+SRCSPAN321-eca95b4e0562879ffe26,TXT321-eca95b4e0562879ffe26,RS429-522519045e4759655715,TS4L-2b475cdfc6b0388a2571,lane_2,tier_b,verification_ready_medium,https://um-twp-bos-meeting.castos.com/episodes/bos-meeting-june-8-2023,"Upper Merion Board of Supervisors Meetings - BOS Meeting (June 8, 2023) (show notes reference Police CBA MOU 2023-2027)",Upper Merion,PA,safety_and_non_safety_bargaining_units,Police (Act 111-style bargaining context; unit referenced as “Police” in CBA MOU),Police of Upper Merion Township (referenced),Amending current Collective Bargaining Agreement for contract years 2023 through 2027 (term referenced in agenda/item),2023,2027,cba_or_arbitration_award_or_factfinding_or_impasse_record,strike_or_no_strike_constraint,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/html/TXT321-eca95b4e0562879ffe26.txt,7920f84453e3ac92f9c311e9ac8266dd2c58322b93f99c449275e39fd4f2b3ad,1a0cd0f7bedaa53d8bc6fe7e19aa27b2ef9769254514ac522f545b60449f56a6,no_span_or_weak,no_target_mechanism_keyword_family_found_in_local_extracted_text,0,strike_or_no_strike_constraint,,,,,,,,,low,not_supported,not_rated,not_ingested,not_codified,not_causal_evidence,false,"Exact extracted-text span only; not a rating, causal finding, or global analysis record."
+SRCSPAN321-caa9f618361c7949d562,TXT321-caa9f618361c7949d562,RS429-545076f2f39cd0ced7f9,TS4L-c56896186b3e34951ba4,lane_2,tier_b,verification_ready_medium,https://www.firefighternation.com/fire-leadership/elgin-and-firefighters-agree-on-contract/,FireFighterNation: “Elgin and Firefighters Agree on Contract” (mentions impasse/mediation/arbitration context),Elgin,IL,safety_and_non_safety_bargaining_units,Firefighters (IAFF context implied by topic),Elgin firefighters union (not fully specified in the snippet),Mid-2010s (article indicates impasse then settlement; exact contract dates not confirmed here),2014,2016,cba_or_arbitration_award_or_factfinding_or_impasse_record,strike_or_no_strike_constraint,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/html/TXT321-caa9f618361c7949d562.txt,3c8511468e07ce65b4508291d5138cda7eed539e049e1784fee77d305be819c3,d03a5a4af4c405bc90b7d7bcf907c1f1c3472bceb07459dd46fd1b64f5163932,ambiguous_span,generic_or_untied_mechanism_mention_requires_review,1,strike_or_no_strike_constraint,"give the International Association of Firefighters Local 439 a 30-day notice regarding changes – as long as they are not temporary – to the number of personnel on duty for each shift.
+The union will have 30 days to respond.
+After negotiations hit an impasse and mediation failed, the city and the union were preparing for arbitration, but then they successfully settled the contract, said Gail Cohen, Human Resources Director for the city of Elgin.
+The contract allows for long-term emergency services planning while giving firefighters a seat at the table, Fire Chief John Fahy said.
+“The best contract terms are the ones that are mutually agreed to at the bargaining table,” Fahy said. “After many good fa",1196,1903,d39e4544deafe5f16b0c54883d0e0c3a79a8225ee0370d040b86a63fe986f26f,"regarding minimum staffing.
+The contract, approved by the city council without discussion Wednesday night and retroactive to Jan. 1, 2014, states the city will ","ith bargaining sessions, Local 439 and the city achieved such an agreement.”
+Local 439 President Vince Rychtanek didn’t respond to a request for comment.
+Along ",STRIKE_OR_NO_STRIKE_CONSTRAINT_WEAK,generic_or_untied_mention,low,weak,not_rated,not_ingested,not_codified,not_causal_evidence,false,"Exact extracted-text span only; not a rating, causal finding, or global analysis record."
+SRCSPAN321-dc991260b4ffead6e865,TXT321-dc991260b4ffead6e865,RS429-5655252c0176ed5d50a1,TS4L-12682f61a5df8c0f4f31,lane_2,tier_b,verification_ready_medium,https://www.townofguilderland.gov/273/Union-Contracts,Union Contracts (Town of Guilderland) — list of union contract PDFs,Guilderland,NY,safety_and_non_safety_bargaining_units,multiple unions listed (see linked PDFs),Multiple (via linked documents such as UPSEU and PBA),varies by linked PDF (including 2024–2026 for UPSEU; see linked documents),2014 (directory page,2027 (directory page,cba_or_arbitration_award_or_factfinding_or_impasse_record,strike_or_no_strike_constraint,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/html/TXT321-dc991260b4ffead6e865.txt,450797797a2fe5c526bc02ceb22c68d88b050075e4b0d9518450a1185138afef,867a1cf906d87a8180b0be1920d7f74162a9d1ee807da5e9942fdf08d3176a1d,no_span_or_weak,no_target_mechanism_keyword_family_found_in_local_extracted_text,0,strike_or_no_strike_constraint,,,,,,,,,low,not_supported,not_rated,not_ingested,not_codified,not_causal_evidence,false,"Exact extracted-text span only; not a rating, causal finding, or global analysis record."
+SRCSPAN321-43a9cb1a2f2040f8eed2,TXT321-43a9cb1a2f2040f8eed2,RS429-773cefcbf02cb2939f20,TS4L-5a9c67b82e7e68ae1331,lane_2,tier_b,verification_ready_medium,https://levittownnow.com/2014/08/29/bristol-twp-plans-hire-police-officers/,"Bristol Twp. Plans to Hire More Police Officers (Aug. 29, 2014) — references Act 111 Interest Arbitration outcome re: minimum manning",Bristol,PA,safety_and_non_safety_bargaining_units,police (Act 111 / public safety),Bristol Township police collective bargaining unit (referenced via Act 111 Interest Arbitration context),2014 (article referencing arbitration outcome affecting police contract terms),2014,,cba_or_arbitration_award_or_factfinding_or_impasse_record,strike_or_no_strike_constraint,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/html/TXT321-43a9cb1a2f2040f8eed2.txt,0582a6ac80b2b9a52000c112ab54d29dc43bb5ce3cc8a4a73bfb475bdf829608,9113fb1b914a5e08e7fef8cceebcf98e961cc08de34b037b37a64ef8542118b2,ambiguous_span,generic_or_untied_mechanism_mention_requires_review,1,strike_or_no_strike_constraint,"s could begin.
+If only resident safety and reactionary responses are the desires of the Township, then a minimum of 64 Officers would be needed. This number of 64 Officers was a long standing minimum, but the Township fought hard in Act 111 Interest Arbitration to have this provision removed and were victorious, enabling them to lower Police staffing to dangerous levels.
+Advertisements
+In response to residents comments before council about raising police staff levels to 78, McCauley said having a police force that big would be “financially devastating” for the township.
+Bristol Township police have faced staffing problems at periods through the past 50 years, many times funding was blamed for short sta",3034,3745,a09e877826728efff6c101a21f3e8d5c86c676a5766813e74d08937ffc539b2f," to the police department.
+An “adequate” number of Officers would be 67 to 73. Staffing levels would meet minimum goals, but proactive patrols and investigation","ffing.
+Advertisements
+Currently, Bristol Township has about $81 million in unfunded liabilities. The township manager told LevittownNow.com in July that since t",STRIKE_OR_NO_STRIKE_CONSTRAINT_WEAK,generic_or_untied_mention,low,weak,not_rated,not_ingested,not_codified,not_causal_evidence,false,"Exact extracted-text span only; not a rating, causal finding, or global analysis record."
+SRCSPAN321-03c37e422c605d834910,TXT321-03c37e422c605d834910,RS429-94ae681f6f038acba78b,TS4L-a87b8b8449d028cc65e0,lane_2,tier_b,verification_ready_medium,https://maff.org/archives/30-2014/201-macomb-township-fire-fighters-arbitration,MAFF Archives (2014): Macomb Township Fire Fighters Arbitration,Macomb,MI,safety_and_non_safety_bargaining_units,Firefighters (paid-on-call / fire fighters association),Macomb Township Fire Fighters Association (MAFF-represented),"Ratified/term context referenced indirectly via CBA grievance procedure timing (initiated Sept. 5, 2013; arbitration-related litigation covered in 2014 archive entry)",2013-06-30,2017-06-30,cba_or_arbitration_award_or_factfinding_or_impasse_record,strike_or_no_strike_constraint,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/html/TXT321-03c37e422c605d834910.txt,b5a6471e96991c567e2bb7a1e12bb86305e4b7924ba811ab1cec6e8b308b3046,9c88023decd7c0702008ae46e3eb94eb12df2b66a4f41df333c1b7a2c45cc914,ambiguous_span,generic_or_untied_mechanism_mention_requires_review,1,strike_or_no_strike_constraint,"Macomb Township Fire Fighters Arbitration
+About MAFF
+Meet the Board/Staff
+Board Members News
+Business Agents News
+Contact Us
+Services
+Professional
+Legislative
+Financial
+Insurance
+Full Service Representation
+Contracts
+Scholarships
+Health & Safety
+Archives
+Members Only
+Michigan Association of Fire Fighters
+Search ...
+About MAFF
+Meet the Board/Staff
+Board Members News
+Business Agents News
+Contact Us
+Services
+Professional
+Legislative
+Financial
+Insurance
+Full Service Representation
+Contracts",0,491,ee537eb47a7ab420bb5d95e83c55d17d9ff58b4bc960d9ae854babc514723a77,,"
+Scholarships
+Health & Safety
+Archives
+Members Only
+Macomb Township Fire Fighters Arbitration
+MAFF wins lawsuit filed over failure to arbitrate
+Macomb Township ",STRIKE_OR_NO_STRIKE_CONSTRAINT_WEAK,generic_or_untied_mention,low,weak,not_rated,not_ingested,not_codified,not_causal_evidence,false,"Exact extracted-text span only; not a rating, causal finding, or global analysis record."
+SRCSPAN321-471ffde2c2b682216928,TXT321-471ffde2c2b682216928,RS429-960c8d3409236a312742,TS4L-df3fa512e0e25bc6bf1a,lane_2,tier_b,verification_ready_medium,https://www.waterfordmi.gov/333/Union-Management-Personnel-Information,"Union & Management Personnel Information (Waterford, MI) - links to police/dispatcher/fire contracts and TAs",Waterford charter,MI,safety_and_non_safety_bargaining_units,"Index/portal for multiple bargaining units (Police, Dispatcher, Firefighter)","Multiple: Waterford Township Dispatcher Association, MAP-represented units, Professional Firefighters Association (fire contracts referenced by the page)",Contains links indicating: MAP contract 2022-2025; 2016-2018 Dispatchers Contract; Fire Contract-2016-2018 with extensions and Fire Contract 2022-2025 (periods named on the page),2016-01-01,2025-12-31,cba_or_arbitration_award_or_factfinding_or_impasse_record,strike_or_no_strike_constraint,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/html/TXT321-471ffde2c2b682216928.txt,b3fd2caa551c9097e8118c53d16c6e00d8111dc6e5ead4384b4d44d189470867,1dcbd2658a1e6d7686363d07fa1926e0d31184e546797589521fbdd0d7cbfc06,no_span_or_weak,no_target_mechanism_keyword_family_found_in_local_extracted_text,0,strike_or_no_strike_constraint,,,,,,,,,low,not_supported,not_rated,not_ingested,not_codified,not_causal_evidence,false,"Exact extracted-text span only; not a rating, causal finding, or global analysis record."
+SRCSPAN321-fbc998856316613b2246,TXT321-fbc998856316613b2246,RS429-9742dcd0457668d7c5e0,TS4L-d42c88a8a55d50db9039,lane_2,tier_b,verification_ready_medium,https://essexnewsdaily.com/headlne-news/firefighters-union-agrees-not-to-sue-the-township/,"Firefighters’ union agrees not to sue the township (Bloomfield, NJ) — May 27, 2018 (compulsory interest arbitration referenced)",Bloomfield,NJ,safety_and_non_safety_bargaining_units,Firefighters (FMBA Local 19),FMBA Local 19 (referenced as representing majority of Bloomfield Fire Department personnel),"2018 (article published May 27, 2018; references years without a contract and pending compulsory interest arbitration)",,,cba_or_arbitration_award_or_factfinding_or_impasse_record,strike_or_no_strike_constraint,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/html/TXT321-fbc998856316613b2246.txt,a207901f67fc5fdd0f8918faccee0353cca1bc8f6bef40dbfe55844f3d799885,29cf37afd8207c907a18cc4578cbd3be58c834af89a0aaae816a4fb62cf47de8,ambiguous_span,generic_or_untied_mechanism_mention_requires_review,1,strike_or_no_strike_constraint,"greement will prevent a lawsuit by the local against the township.
+According to Township Attorney Michael Parlavecchio in an email, the agreement “will finally and completely resolve all disputes among the parties with respect to Compulsory Interest Arbitration.”
+The lawsuit stemmed from a letter to the township by an attorney for the union which complained of poor working conditions because of alleged actions by Deputy Fire Chief Louis Venezia. A subsequent investigation found many of the allegations unsubstantiated. Louis Venezia is the brother of Mayor Michael Venezia.
+Local 19 had been working for several years without a contract. After making its complaint, the union was notified by the township t",1182,1893,2dfaf48d3c1d2ba83324eee072d7bf6ad5c8bbeaa1372e7cb0dcd52283c66e61,"unanimously approved Monday evening, May 21, an agreement with FMBA Local 19, the union representing the majority of Bloomfield Fire Department personnel. The a",hat it would file for compulsory interest arbitration to resolve the contract dispute. The union then filed a whistle-blower’s lawsuit against the township in J,STRIKE_OR_NO_STRIKE_CONSTRAINT_WEAK,generic_or_untied_mention,low,weak,not_rated,not_ingested,not_codified,not_causal_evidence,false,"Exact extracted-text span only; not a rating, causal finding, or global analysis record."
+SRCSPAN321-92b6921135c4ec9a56e8,TXT321-92b6921135c4ec9a56e8,RS429-a36494c6af205c67d58c,TS4L-1263f090769ff1705a2f,lane_2,tier_b,verification_ready_medium,https://www.cityofypsilanti.com/Archive.aspx?AMID=40,"Archive Center • Collective Bargaining Agreements - Ypsilanti, MI",Ypsilanti charter,MI,safety_and_non_safety_bargaining_units,Multiple units (mix of safety/non-safety possible across AFSCME/POAM entries),"Index of CBAs for multiple bargaining units (e.g., AFSCME, POAM) as listed on the archive page",2014-2024 target window,,,cba_or_arbitration_award_or_factfinding_or_impasse_record,strike_or_no_strike_constraint,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/html/TXT321-92b6921135c4ec9a56e8.txt,2e95a27a16c85dc1d16d33f64070ba29e88728e678239c27c4320a2e44306ab1,10ca90aa003fa12c530e7373596576bffc13ceccfc9b41a4ab7e61ccc911ede5,no_span_or_weak,no_target_mechanism_keyword_family_found_in_local_extracted_text,0,strike_or_no_strike_constraint,,,,,,,,,low,not_supported,not_rated,not_ingested,not_codified,not_causal_evidence,false,"Exact extracted-text span only; not a rating, causal finding, or global analysis record."
+SRCSPAN321-9bff75ff9630633c4ff4,TXT321-9bff75ff9630633c4ff4,RS429-af8a9133ba3232e0ec8f,TS4L-db95eb3b8ab636148dbd,lane_2,tier_b,verification_ready_medium,https://www.georgia.gov,Georgia.gov (state portal entry point for Georgia public-sector labor relations search paths),Marietta,GA,safety_and_non_safety_bargaining_units,state-level labor/collective bargaining administrative records (entry point),,2014-2024 (target window; requires targeted navigation),,,cba_or_arbitration_award_or_factfinding_or_impasse_record,strike_or_no_strike_constraint,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/html/TXT321-9bff75ff9630633c4ff4.txt,e70917f541fc111efe79eed4a7c730e25fcf8be9f34829f14504adbdcafe7cb1,e4422ddebb135c12ad4025b40f1faa5720a736d376613b0ce32068f20722dfed,no_span_or_weak,no_target_mechanism_keyword_family_found_in_local_extracted_text,0,strike_or_no_strike_constraint,,,,,,,,,low,not_supported,not_rated,not_ingested,not_codified,not_causal_evidence,false,"Exact extracted-text span only; not a rating, causal finding, or global analysis record."
+SRCSPAN321-fc0c22a5c2f1cbb43883,TXT321-fc0c22a5c2f1cbb43883,RS429-b7b21a3e8b3125efe40a,TS4L-de9f5497bb7da92e0591,lane_2,tier_b,verification_ready_medium,https://www.northandoverma.gov/182/Documents-Records,"Documents & Records | North Andover, MA (Collective Bargaining Agreements section includes Fire Chief's Agreement; Police Chief's Contract; etc.)",North Andover,MA,safety_and_non_safety_bargaining_units,Fire (public safety management contract listings),Fire Chief's Agreement (listed contract document within the town CBA repository),Includes Fire Chief's Agreement 7-1-2024 – 6-30-2027 (also includes other North Andover labor agreements on the same page),2014-2024 target win,2027-06-30 (end date,cba_or_arbitration_award_or_factfinding_or_impasse_record,strike_or_no_strike_constraint,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/html/TXT321-fc0c22a5c2f1cbb43883.txt,04b140c33b209d94083823d1a93c1254731b1b7cc52451c18db4d08cec5a4781,4975793441cf6831f195011fb097fec7ffc95e652e694248f51fde2c3fbe046d,no_span_or_weak,no_target_mechanism_keyword_family_found_in_local_extracted_text,0,strike_or_no_strike_constraint,,,,,,,,,low,not_supported,not_rated,not_ingested,not_codified,not_causal_evidence,false,"Exact extracted-text span only; not a rating, causal finding, or global analysis record."
+SRCSPAN321-9ba5f89b1d4735f49ecf,TXT321-9ba5f89b1d4735f49ecf,RS429-ba802cd3f87d7031530c,TS4L-ee8390c21fe3041ccf24,lane_2,tier_b,verification_ready_medium,https://www.andoverma.gov/246/Collective-Bargaining-Agreements,"Collective Bargaining Agreements | Andover, MA",Andover,MA,safety_and_non_safety_bargaining_units,multiple bargaining groups (safety and non-safety),,2014-2024 (browse-linked agreement documents),,,cba_or_arbitration_award_or_factfinding_or_impasse_record,strike_or_no_strike_constraint,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/html/TXT321-9ba5f89b1d4735f49ecf.txt,8bd0938db57dc7bae94d18a642bff2cd89c439be83419b968033a0486b8eb79c,9b2a1b1a19285da5578601122d046054e5840395a2cc44882ae4ea20db80d700,no_span_or_weak,no_target_mechanism_keyword_family_found_in_local_extracted_text,0,strike_or_no_strike_constraint,,,,,,,,,low,not_supported,not_rated,not_ingested,not_codified,not_causal_evidence,false,"Exact extracted-text span only; not a rating, causal finding, or global analysis record."
+SRCSPAN321-924f9c37cf290ac7ee51,TXT321-924f9c37cf290ac7ee51,RS429-bbc75c702f9a426b2493,TS4L-86fc9a9b40c3017546c9,lane_2,tier_b,verification_ready_medium,https://townofwindsorct.com/app/uploads/meetings/18/1473969417613830.pdf,"Award of the Arbitration Panel (Connecticut State Board of Mediation and Arbitration) — Town of Windsor v. Teamsters, Local 671 (Case No: 2015-MBA-0207) — Award dated August 30, 2016",Windsor,CT,safety_and_non_safety_bargaining_units,Teamsters (public-sector unit; occupation group not explicitly confirmed from the snippet),"Teamsters, Local 671","2015-MBA-0207 (award dated August 30, 2016)",,,cba_or_arbitration_award_or_factfinding_or_impasse_record,strike_or_no_strike_constraint,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/html/TXT321-924f9c37cf290ac7ee51.txt,939933b0c4a437c4dad39be558c4dbe682f9377275e0d0f0f47b99ab61c417f2,1faf3b4cd8cee83b89dfffe7020c92f20532913747217afea21ea3f2bf13bcf1,no_span_or_weak,no_target_mechanism_keyword_family_found_in_local_extracted_text,0,strike_or_no_strike_constraint,,,,,,,,,low,not_supported,not_rated,not_ingested,not_codified,not_causal_evidence,false,"Exact extracted-text span only; not a rating, causal finding, or global analysis record."
+SRCSPAN321-3a192d2a906cbf519634,TXT321-3a192d2a906cbf519634,RS429-d57944d1baff984a4ee3,TS4L-9460b82039d871d1199a,lane_2,tier_b,verification_ready_medium,https://portal.ct.gov/dol/divisions/mediation-and-arbitration,Connecticut State Board of Mediation and Arbitration (CTDOL) — division portal,Groton,CT,safety_and_non_safety_bargaining_units,Public sector collective bargaining parties (including municipal public safety units),Not a specific Groton unit (mechanism-level portal),Not unit-specific; serves as a gateway to mediation/arbitration processes and related procedures,2014-01-01 (inferred,2024-12-31 (inferred,cba_or_arbitration_award_or_factfinding_or_impasse_record,strike_or_no_strike_constraint,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/html/TXT321-3a192d2a906cbf519634.txt,c71a99449778db5be8ba51928cafb960e030fbda162588d9407eadd5dbe4064a,53a06e364e6dbc7c76744a86101b7bc00ca8f89829032d35ce90077851e94498,ambiguous_span,generic_or_untied_mechanism_mention_requires_review,1,strike_or_no_strike_constraint,"CT State Board of Mediation and Arbitration
+Skip to Content Skip to Chat
+Report an accessibility issue.
+State of Connecticut
+×
+Search
+Language
+Arabic
+Chinese (Simplified)
+Chinese (Traditional)
+English
+French
+German
+Haitian Creole
+Hindi
+Italian
+Korean
+Pashto
+Polish
+Portuguese Brazil
+Russian
+Spanish
+Filipino
+Ukrainian
+Vietnamese
+CT Department of Labor
+CT Department of Labor
+CT Department of Labor
+☰ CT Department of Labor Main Menu
+×
+Close
+⮐
+Back
+⮐
+Back
+Home
+Unemployment
+Jobs",0,477,a1411be9ecdeca70a9c96366713cb91ab8c4ff39046535ffdbc5b3b68efc3663,,"
+Employers
+Employer Wage & Tax Info
+Work Safety
+Services
+Programs
+About
+The Commissioner
+Divisions
+American Job Centers
+Apprenticeships
+Business Engagement
+Bene",STRIKE_OR_NO_STRIKE_CONSTRAINT_WEAK,generic_or_untied_mention,low,weak,not_rated,not_ingested,not_codified,not_causal_evidence,false,"Exact extracted-text span only; not a rating, causal finding, or global analysis record."
+SRCSPAN321-b25898299e7744f01fee,TXT321-b25898299e7744f01fee,RS429-e47c577c53f5e7929762,TS4L-8a29958a381a9c4dbf6c,lane_2,tier_b,verification_ready_medium,https://www.needhamma.gov/4907/2020-Annual-Warrant-Article-Information-,"2020 Annual Warrant Articles | Needham, MA (includes MoA for Needham Police Union and Needham Fire Union)",Needham,MA,safety_and_non_safety_bargaining_units,Police and Fire (Safety),Needham Police Union; Needham Fire Union,Memorandum of Agreement - 7/1/2019 to 6/30/2020 (MoA links for both Police and Fire referenced on page),2019-07-01,2020-06-30,cba_or_arbitration_award_or_factfinding_or_impasse_record,strike_or_no_strike_constraint,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/html/TXT321-b25898299e7744f01fee.txt,270fd82cc9e8360709fdaa9687298258a3e3f5c92bbdc3e4f9d33760b53a32fb,190e83f971f8407e331218afb058b11b279a21cef97a395e299299560a3bdb70,no_span_or_weak,no_target_mechanism_keyword_family_found_in_local_extracted_text,0,strike_or_no_strike_constraint,,,,,,,,,low,not_supported,not_rated,not_ingested,not_codified,not_causal_evidence,false,"Exact extracted-text span only; not a rating, causal finding, or global analysis record."
+SRCSPAN321-90818017f4dd82b46db8,TXT321-90818017f4dd82b46db8,RS429-014d2d743e3a2bb78b67,TS4L-e1eae5f3d2e7c748fb3e,lane_4,tier_b,verification_ready_medium,https://www.potsdamcsd.org/about-us/employment/staff-resources/,"Staff Resources - Potsdam Central School District (includes CSEA contract link(s), teacher contract link(s))",Potsdam,NY,safety_and_non_safety_compensation_units,non-safety (district classified and certificated staff via bargaining units),CSEA (classified staff) and Teacher bargaining group (teacher contract links),Includes contracts with start/end years shown on the page (not determined here),,,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/html/TXT321-90818017f4dd82b46db8.txt,f4a02306fec5e64f0d1a8c241d9c20cce9442963b7a7f85068a855b2d191b9a1,bcee043d565b9996017305c431e7986213b1fa683ef08d3dbc80db7d391f93f9,ambiguous_span,generic_or_untied_mechanism_mention_requires_review,1,market_or_comparability_pressure,"e scope of the school curriculum.
+Operating under the auspices of the Northern New York Community Foundation, the PEOF raises money and grants funds to PCS teachers, staff and students for the enhancement of their work with students, on the basis of competitive proposals.
+The PEOF Advisory Committee, representing a broad cross-section of parents, community leaders, and concerned citizens, is working in close collaboration with PCS teachers and administrators to develop a strong and ongoing system of support for the most creative and successful initiatives that can be provided to Potsdam students.
+Potsdam Educational Opportunities Fund Request For Proposals 2025-26
+Learn more about the Potsdam Education",2235,2946,cf26754a6f3b913cf66e6528bcbf59811cb44c3012816a5a5c0016ac1dc27ec3,PEOF) represents concerned parents and others who have joined to provide Potsdam CSD educators with resources to enhance learning experiences reaching beyond th,"al Opportunities Fund (PEOF) .
+Inspire, prepare, and empower our students to lead fulfilled lives as compassionate, productive and engaged citizens.
+District Of",MARKET_OR_COMPARABILITY_PRESSURE_WEAK,generic_or_untied_mention,low,weak,not_rated,not_ingested,not_codified,not_causal_evidence,false,"Exact extracted-text span only; not a rating, causal finding, or global analysis record."
+SRCSPAN321-9092db5cafee43ab50ca,TXT321-9092db5cafee43ab50ca,RS429-32577d5072424b6350e9,TS4L-1dfede0bdbb13fc5788d,lane_4,tier_b,verification_ready_medium,https://bedfordny.gov/169/Fiscal-and-Governance-Transparency,"Fiscal and Governance Transparency — Town of Bedford, NY (Collective Bargaining Agreements list)",Bedford,NY,safety_and_non_safety_compensation_units,Non-Safety (White Collar / Administrative / Office workers),Bedford White Collar bargaining unit (listed as CBA 2019 to 2022),Listed: Bedford White Collar CBA 2019 to 2022,2019-01-01,2022-12-31,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/html/TXT321-9092db5cafee43ab50ca.txt,1090c0420280c8c06c6c23d3ba915c07203c69f996d6dbfbc9adbbf15514cdc3,1a9c0d622f1d4d3cd1d072b6d5b54a9a55571090e96d47819a89900b78519976,no_span_or_weak,no_target_mechanism_keyword_family_found_in_local_extracted_text,0,market_or_comparability_pressure,,,,,,,,,low,not_supported,not_rated,not_ingested,not_codified,not_causal_evidence,false,"Exact extracted-text span only; not a rating, causal finding, or global analysis record."
+SRCSPAN321-7987c8e3e345ce94fd38,TXT321-7987c8e3e345ce94fd38,RS429-65ef0cb35f257d0fc12f,TS4L-534e7cbfe864a4774cd0,lane_4,tier_b,verification_ready_medium,https://www.barrington.ri.gov/362/Union-Contracts,"Barrington, RI — Union Contracts (links to Police CBA and Fire CBA PDFs)",Barrington,RI,safety_and_non_safety_compensation_units,Safety (Police; Fire) — union-represented employees,Police and Fire collective bargaining units (separate CBA PDFs),2014-2024 window (page is a hub for multiple CBAs; specific contract years vary by linked PDF),,,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/html/TXT321-7987c8e3e345ce94fd38.txt,ff003818a2db7ddaec08d841ba333a49c75a8b0ff6079f7df81fc1de4025a133,6e83ca10af2913c64456f141636fa979d2850b841243ecd9e4aaaac8fdd554b4,no_span_or_weak,no_target_mechanism_keyword_family_found_in_local_extracted_text,0,market_or_comparability_pressure,,,,,,,,,low,not_supported,not_rated,not_ingested,not_codified,not_causal_evidence,false,"Exact extracted-text span only; not a rating, causal finding, or global analysis record."
+SRCSPAN321-f2d9eb3356992fbde4ba,TXT321-f2d9eb3356992fbde4ba,RS429-68fcb1060d1a1f1f42b9,TS4L-681c850100a5a0dde9bf,lane_4,tier_b,verification_ready_medium,https://www.tpoam.net/signed-sealed/signed-and-sealed-2025/,TPOAM — Signed and Sealed 2025 (includes Harper Woods Department of Public Safety local; lists 2024 wage increase details in the page section),Harper Woods,MI,safety_and_non_safety_compensation_units,Public Safety (TPOAM-labeled department unit employees),Harper Woods Department of Public Safety (as labeled on TPOAM page),Local association section on the page includes a 2025–2027/2029-style duration plus wage increases including 2024 (+3%) (per page content),2024-01-01,2027-12-31,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/html/TXT321-f2d9eb3356992fbde4ba.txt,065d8a15df574698ce71495b8693150626847384565030635fbcd40f3f1e1d7f,ecb114dc02af1646752f29eeca10a65778ec70af20536f93e5333a4619e2a226,ambiguous_span,generic_or_untied_mechanism_mention_requires_review,1,market_or_comparability_pressure,"ED AND SEALED 2025 | #2
+Local Association Name:  38th Circuit Court Family Division Juvenile Youth Home Supervisors Association
+Duration: 2 years; January 2025 – December 2026
+WAGE INCREASES
+2025:  +3%
+2026:  +3%
+Compressed wage steps
+Signing Bonus: Retention bonus each year of the contract.
+$1,000 to $2,000 each year, depending on employees years of service.
+Other Important Issues
+Add Juneteenth as a paid holiday.
+Modify health care language, keeping coverage the same.
+Employer increases pension contribution each year from 7% to 9%.
+Funeral leave must be taken two (2) from the date of death.
+Employer increases payment into health savings account to 8%.
+The bargaining team consisted of Austin Wickenh",2669,3378,dc3e25a38f0f057e75f56984bd1adecef5fbf8bc0542bf6114792a878b459ae7,"pay by $100 and another $100 in 2026.
+The bargaining team consisted of Steven Degnan and Josiah Vincent, who were assisted by Business Agent Eric Ronewicz.
+SIGN","iser who was assisted by Business Agent Harry Valentine.
+SIGNED AND SEALED 2025 | #1
+Local Association Name:  Harper Woods Department of Public Safety (TPOAM)
+D",MARKET_OR_COMPARABILITY_PRESSURE_WEAK,generic_or_untied_mention,low,weak,not_rated,not_ingested,not_codified,not_causal_evidence,false,"Exact extracted-text span only; not a rating, causal finding, or global analysis record."
+SRCSPAN321-79b2d030beaa34c37f53,TXT321-79b2d030beaa34c37f53,RS429-8f130e4405892ddb9d0d,TS4L-9f7d576db2622c359b5f,lane_4,tier_b,verification_ready_medium,https://www.festusmo.gov/bids.aspx?PRINT=YES&bidID=4,"Festus, MO — Bid Postings (Pay plan consulting services; includes compensation benchmark/market analysis language; mentions union represented police)",Festus,MO,safety_and_non_safety_compensation_units,Police (union represented) + citywide pay plan consulting context (safety and non-safety),,2014-2024 target window,,,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/html/TXT321-79b2d030beaa34c37f53.txt,e8849bc451cf80d8a0ca4082bedc2a74383abada7c20f55c7f1f5aeb16377d72,4fb93131936bdcb1599afb6d72018344a632130ce598a7664860ba6bb3fe54a0,ambiguous_span,generic_or_untied_mechanism_mention_requires_review,1,market_or_comparability_pressure,"the City’s employee pay plan. The City will review all proposals and conduct interviews with select firms before making a final selection.
+SCOPE OF SERVICES
+Assist with the identification of other organizations to serve as a compensation benchmark.
+Survey the benchmark organizations to obtain their compensation data.
+Develop a new compensation matrix with grades and ranges based upon the benchmark data and internal equity.
+Assist with updating or developing job descriptions for each job.
+Analyze each job to determine its proper status as exempt or non-exempt from overtime pay.
+Recommend preferred practices to assist the City establish an employee performance evaluation process.
+Assist in the deve",1372,2077,8b039a9aac01a31def5816fbbdb684f96665970915b66db1ef31242ea0b20e7f,"URPOSE/OBJECTIVE
+The purpose of this “Request for Proposals” is to obtain the services of a qualified firm to provide assistance with a comprehensive review of ","lopment of a process to determine when long-term or returning part-time employees receive pay increases.
+PROJECT DESCRIPTION
+To the best of our knowledge the Ci",MARKET_OR_COMPARABILITY_PRESSURE_WEAK,generic_or_untied_mention,low,weak,not_rated,not_ingested,not_codified,not_causal_evidence,false,"Exact extracted-text span only; not a rating, causal finding, or global analysis record."
+SRCSPAN321-b0e41fd937f201d03517,TXT321-b0e41fd937f201d03517,RS429-928e32a2e2fe4b365d93,TS4L-832d5707eb3340204703,lane_4,tier_b,verification_ready_medium,https://www.calntownship.org/minutes-boc/archives/05-2018,Caln Township board minutes (archive May 2018) — notes acceptance of Police Bargaining Agreement incl. 2018–2022,Caln,PA,safety_and_non_safety_compensation_units,Police (public safety),Caln Township Police Officers Association (referenced as Police Bargaining Agreement),2018-2022 (as referenced in minutes),2018-01-01,2022-12-31,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/html/TXT321-b0e41fd937f201d03517.txt,5dc6dcfbb719cbf9913ffaed4ed9b60bddb0fb4de315ca1cb3d3b728258f2eff,19c67411f8461c41b4a65519cea5eaf0bdc3f0960108a7ca5f38d8fdad7b0fcb,no_span_or_weak,no_target_mechanism_keyword_family_found_in_local_extracted_text,0,market_or_comparability_pressure,,,,,,,,,low,not_supported,not_rated,not_ingested,not_codified,not_causal_evidence,false,"Exact extracted-text span only; not a rating, causal finding, or global analysis record."
+SRCSPAN321-0e41f49c3a1e70ee114f,TXT321-0e41f49c3a1e70ee114f,RS429-bccc49760203a7dd114d,TS4L-7c5deb01b061012d7e9b,lane_4,tier_b,verification_ready_medium,https://hurontownshipmi.civicweb.net/filepro/documents/10120/,Huron Charter Township - Document Center (Police Chief Contract and related items),Huron charter,MI,safety_and_non_safety_compensation_units,Public Safety / Police administration,"Not specified (employment contract materials, not a union CBA)",Referenced documents dated 2016-07-13 (including “Police Chief Contract 7-13-16”),2016-07-13,,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/html/TXT321-0e41f49c3a1e70ee114f.txt,0dc89acb38083479743e7dbc3fed59978b8ecfd5ba04489c92bcbd8aa283f0d2,b8905c269255f5a0f99326beac94fa08643d4a305f792a58c0e7277ff68b30e3,no_span_or_weak,no_target_mechanism_keyword_family_found_in_local_extracted_text,0,market_or_comparability_pressure,,,,,,,,,low,not_supported,not_rated,not_ingested,not_codified,not_causal_evidence,false,"Exact extracted-text span only; not a rating, causal finding, or global analysis record."
+SRCSPAN321-1c84fe351a43cfdaa5b1,TXT321-1c84fe351a43cfdaa5b1,RS429-e362f8114f1548bbeea9,TS4L-01a7712cb526edb5c6eb,lane_4,tier_b,verification_ready_medium,https://hartselle.org/1279/Human-Resources,Human Resources (City of Hartselle) – employer benefits and HR information hub,Hartselle,AL,safety_and_non_safety_compensation_units,City employees (includes benefits/HR program context that may reference pay plans or compensation policies),,2014-2024 target window,,,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/html/TXT321-1c84fe351a43cfdaa5b1.txt,458c3dba27f691ce6b6959da3969e3c4b363cd586205afbc47684eed5f068363,0969965d3e7228d3cd16eb1af09435d56596f059f5fa4063ae559983d5239af7,no_span_or_weak,no_target_mechanism_keyword_family_found_in_local_extracted_text,0,market_or_comparability_pressure,,,,,,,,,low,not_supported,not_rated,not_ingested,not_codified,not_causal_evidence,false,"Exact extracted-text span only; not a rating, causal finding, or global analysis record."
+SRCSPAN321-90c7a275fdea7622eaf8,TXT321-90c7a275fdea7622eaf8,RS429-ec917adbad420d19f437,TS4L-b1d93d26ac63136a6fa5,lane_4,tier_b,verification_ready_medium,https://www.moberlymo.org/292/Human-Resources,"Human Resources — City of Moberly, MO (HR page listing “Police Officer Agreement (PDF)”)",Moberly,MO,safety_and_non_safety_compensation_units,Police,Not specified on listing page (bargaining unit name not extracted),2014-2024 target window,,,cba_or_compensation_study_or_classification_study_or_wage_schedule,market_or_comparability_pressure,docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/extracted_text/html/TXT321-90c7a275fdea7622eaf8.txt,dab9e529004607fbc222fb59adeb8f4a5aeaecd21c2f89d8be20bb440334a3db,1878313d6b3903dc93448b5e8aea57c45f4bcd120aae433450248811c56df4d9,no_span_or_weak,no_target_mechanism_keyword_family_found_in_local_extracted_text,0,market_or_comparability_pressure,,,,,,,,,low,not_supported,not_rated,not_ingested,not_codified,not_causal_evidence,false,"Exact extracted-text span only; not a rating, causal finding, or global analysis record."

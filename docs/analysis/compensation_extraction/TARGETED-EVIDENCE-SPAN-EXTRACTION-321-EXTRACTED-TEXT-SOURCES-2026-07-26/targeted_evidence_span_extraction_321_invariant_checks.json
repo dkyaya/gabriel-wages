@@ -1,0 +1,17 @@
+{
+  "all_invariants_passed": true,
+  "downstream_statuses_closed": true,
+  "every_positive_span_exact_offsets_hash_valid": true,
+  "generic_mentions_excluded_from_rating_candidates": true,
+  "global_analysis_readiness_false": true,
+  "locked_queue_exactly_321": true,
+  "no_durable_ledger_merge": true,
+  "no_url_download_ocr_render_model_rating_ingestion_or_codification": true,
+  "no_wage_gap_regression_treatment_effect_or_final_causal_work": true,
+  "only_extracted_ok_artifacts_entered": true,
+  "partial_outputs_cannot_masquerade_as_complete": true,
+  "pdf_html_counts_exactly_289_32": true,
+  "pdf_html_lanes_separate": true,
+  "preserved_exclusions_outside_queue": true,
+  "source_statuses_reconcile_to_321": true
+}

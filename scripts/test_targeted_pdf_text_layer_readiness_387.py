@@ -259,8 +259,8 @@ class TargetedPDFTextLayerReadiness387Tests(unittest.TestCase):
     def test_dashboard_generated_status_remains_globally_closed(self) -> None:
         readiness = mod.read_json(ROOT / "docs/dashboard/data/analysis_readiness.json")
         calibration = mod.read_json(ROOT / "docs/dashboard/data/text_table_calibration_status_summary.json")
-        self.assertEqual(readiness["overall_status"], "targeted_text_layer_extraction_321_completed_evidence_extraction_ready_global_analysis_closed")
-        self.assertEqual(calibration["calibration_phase"], "targeted_text_layer_extraction_321_completed_evidence_extraction_ready")
+        self.assertEqual(readiness["overall_status"], "targeted_evidence_span_extraction_321_completed_rating_ready_global_analysis_closed")
+        self.assertEqual(calibration["calibration_phase"], "targeted_evidence_span_extraction_321_completed_rating_ready")
         self.assertTrue(calibration["targeted_pdf_text_layer_readiness_completed"])
         self.assertTrue(calibration["targeted_bounded_text_layer_extraction_ready_next"])
         self.assertFalse(calibration["targeted_pdf_text_layer_repair_needed"])

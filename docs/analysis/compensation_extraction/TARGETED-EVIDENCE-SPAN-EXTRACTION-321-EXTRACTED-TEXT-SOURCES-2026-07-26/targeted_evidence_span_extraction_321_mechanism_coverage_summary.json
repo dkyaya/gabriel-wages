@@ -1,0 +1,38 @@
+{
+  "by_mechanism": {
+    "fiscal_constraint_signal": {
+      "ambiguous_span": 22,
+      "extraction_error": 0,
+      "no_span_or_weak": 0,
+      "positive_span_record_count": 1,
+      "source_count": 23,
+      "span_extracted": 1
+    },
+    "market_or_comparability_pressure": {
+      "ambiguous_span": 48,
+      "extraction_error": 0,
+      "no_span_or_weak": 36,
+      "positive_span_record_count": 70,
+      "source_count": 104,
+      "span_extracted": 20
+    },
+    "non_safety_constraint_signal": {
+      "ambiguous_span": 67,
+      "extraction_error": 0,
+      "no_span_or_weak": 17,
+      "positive_span_record_count": 16,
+      "source_count": 88,
+      "span_extracted": 4
+    },
+    "strike_or_no_strike_constraint": {
+      "ambiguous_span": 43,
+      "extraction_error": 0,
+      "no_span_or_weak": 25,
+      "positive_span_record_count": 114,
+      "source_count": 106,
+      "span_extracted": 38
+    }
+  },
+  "coverage_boundary": "Exact-span counts are collected-corpus documentary signals, not prevalence, wage effects, or causal findings.",
+  "mechanism_count": 4
+}

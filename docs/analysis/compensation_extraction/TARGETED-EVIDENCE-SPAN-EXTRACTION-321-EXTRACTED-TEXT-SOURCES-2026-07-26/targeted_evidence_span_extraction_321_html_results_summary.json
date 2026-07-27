@@ -1,0 +1,9 @@
+{
+  "html_positive_span_record_count": 0,
+  "html_source_rows": 32,
+  "html_span_record_count": 14,
+  "status_counts": {
+    "ambiguous_span": 14,
+    "no_span_or_weak": 18
+  }
+}

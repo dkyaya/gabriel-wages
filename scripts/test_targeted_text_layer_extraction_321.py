@@ -264,14 +264,24 @@ class TargetedTextLayerExtraction321Tests(unittest.TestCase):
         readiness = json.loads(readiness_path.read_text(encoding="utf-8"))
         calibration = json.loads(calibration_path.read_text(encoding="utf-8"))
         if calibration.get("targeted_text_layer_extraction_completed"):
-            self.assertEqual(
-                readiness["overall_status"],
-                "targeted_text_layer_extraction_321_completed_evidence_extraction_ready_global_analysis_closed",
-            )
-            self.assertEqual(
-                calibration["calibration_phase"],
-                "targeted_text_layer_extraction_321_completed_evidence_extraction_ready",
-            )
+            if calibration.get("targeted_evidence_span_extraction_completed"):
+                self.assertEqual(
+                    readiness["overall_status"],
+                    "targeted_evidence_span_extraction_321_completed_rating_ready_global_analysis_closed",
+                )
+                self.assertEqual(
+                    calibration["calibration_phase"],
+                    "targeted_evidence_span_extraction_321_completed_rating_ready",
+                )
+            else:
+                self.assertEqual(
+                    readiness["overall_status"],
+                    "targeted_text_layer_extraction_321_completed_evidence_extraction_ready_global_analysis_closed",
+                )
+                self.assertEqual(
+                    calibration["calibration_phase"],
+                    "targeted_text_layer_extraction_321_completed_evidence_extraction_ready",
+                )
             self.assertTrue(calibration["targeted_evidence_extraction_review_ready_next"])
             self.assertFalse(calibration["targeted_text_layer_extraction_repair_needed"])
             self.assertNotIn('"global_analysis_readiness": true', json.dumps(readiness, sort_keys=True).casefold())

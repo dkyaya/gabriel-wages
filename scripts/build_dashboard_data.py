@@ -1184,6 +1184,23 @@ TARGETED_TEXT_LAYER_EXTRACTION_321_INVARIANTS_PATH = (
     TARGETED_TEXT_LAYER_EXTRACTION_321_DIR
     / "targeted_text_layer_extraction_321_invariant_checks.json"
 )
+TARGETED_EVIDENCE_SPAN_EXTRACTION_321_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "TARGETED-EVIDENCE-SPAN-EXTRACTION-321-EXTRACTED-TEXT-SOURCES-2026-07-26"
+)
+TARGETED_EVIDENCE_SPAN_EXTRACTION_321_DECISION_PATH = (
+    TARGETED_EVIDENCE_SPAN_EXTRACTION_321_DIR
+    / "targeted_evidence_span_extraction_321_decision.json"
+)
+TARGETED_EVIDENCE_SPAN_EXTRACTION_321_RESULTS_SUMMARY_PATH = (
+    TARGETED_EVIDENCE_SPAN_EXTRACTION_321_DIR
+    / "targeted_evidence_span_extraction_321_results_summary.json"
+)
+TARGETED_EVIDENCE_SPAN_EXTRACTION_321_INVARIANTS_PATH = (
+    TARGETED_EVIDENCE_SPAN_EXTRACTION_321_DIR
+    / "targeted_evidence_span_extraction_321_invariant_checks.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -3489,6 +3506,76 @@ def targeted_text_layer_extraction_321_status() -> tuple[bool, dict[str, Any]]:
     return True, decision
 
 
+def targeted_evidence_span_extraction_321_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize only the complete local-only 321-source exact-span package."""
+    required = (
+        TARGETED_EVIDENCE_SPAN_EXTRACTION_321_DECISION_PATH,
+        TARGETED_EVIDENCE_SPAN_EXTRACTION_321_RESULTS_SUMMARY_PATH,
+        TARGETED_EVIDENCE_SPAN_EXTRACTION_321_INVARIANTS_PATH,
+        TARGETED_EVIDENCE_SPAN_EXTRACTION_321_DIR / "targeted_evidence_span_extraction_321_lock.json",
+        TARGETED_EVIDENCE_SPAN_EXTRACTION_321_DIR / "targeted_evidence_span_extraction_321_results.csv",
+        TARGETED_EVIDENCE_SPAN_EXTRACTION_321_DIR / "targeted_evidence_span_extraction_321_span_records.csv",
+        TARGETED_EVIDENCE_SPAN_EXTRACTION_321_DIR / "targeted_evidence_span_extraction_321_pdf_results.csv",
+        TARGETED_EVIDENCE_SPAN_EXTRACTION_321_DIR / "targeted_evidence_span_extraction_321_html_results.csv",
+        TARGETED_EVIDENCE_SPAN_EXTRACTION_321_DIR / "targeted_evidence_span_extraction_321_rating_candidate_manifest.csv",
+        TARGETED_EVIDENCE_SPAN_EXTRACTION_321_DIR / "targeted_evidence_span_extraction_321_preserved_text_extraction_exclusions.csv",
+        TARGETED_EVIDENCE_SPAN_EXTRACTION_321_DIR / "next_targeted_evidence_span_rating_prompt.md",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    decision = read_json(TARGETED_EVIDENCE_SPAN_EXTRACTION_321_DECISION_PATH)
+    summary = read_json(TARGETED_EVIDENCE_SPAN_EXTRACTION_321_RESULTS_SUMMARY_PATH)
+    invariants = read_json(TARGETED_EVIDENCE_SPAN_EXTRACTION_321_INVARIANTS_PATH)
+    results = read_csv(TARGETED_EVIDENCE_SPAN_EXTRACTION_321_DIR / "targeted_evidence_span_extraction_321_results.csv")
+    records = read_csv(TARGETED_EVIDENCE_SPAN_EXTRACTION_321_DIR / "targeted_evidence_span_extraction_321_span_records.csv")
+    pdf_rows = read_csv(TARGETED_EVIDENCE_SPAN_EXTRACTION_321_DIR / "targeted_evidence_span_extraction_321_pdf_results.csv")
+    html_rows = read_csv(TARGETED_EVIDENCE_SPAN_EXTRACTION_321_DIR / "targeted_evidence_span_extraction_321_html_results.csv")
+    candidates = read_csv(TARGETED_EVIDENCE_SPAN_EXTRACTION_321_DIR / "targeted_evidence_span_extraction_321_rating_candidate_manifest.csv")
+    exclusions = read_csv(TARGETED_EVIDENCE_SPAN_EXTRACTION_321_DIR / "targeted_evidence_span_extraction_321_preserved_text_extraction_exclusions.csv")
+    controlled = {"span_extracted", "no_span_or_weak", "ambiguous_span", "extraction_error"}
+    counts = decision.get("span_status_counts", {})
+    if not (
+        decision.get("task_id") == "TARGETED-EVIDENCE-SPAN-EXTRACTION-321-EXTRACTED-TEXT-SOURCES-2026-07-26"
+        and decision.get("decision") == "targeted_evidence_span_extraction_321_completed_rating_ready"
+        and decision.get("completion_status") == "completed_bounded_deterministic_exact_span_extraction"
+        and decision.get("span_extraction_queue_count") == 321
+        and decision.get("pdf_span_extraction_count") == 289
+        and decision.get("html_span_extraction_count") == 32
+        and sum(int(value) for value in counts.values()) == 321
+        and decision.get("positive_span_record_count") == len(candidates)
+        and decision.get("rating_candidate_count") == len(candidates)
+        and decision.get("total_span_record_count") == len(records)
+        and decision.get("evidence_span_rating_ready_next") is True
+        and decision.get("repair_needed") is False
+        and decision.get("tier_c_verification_recommended_next") is False
+        and all(decision.get(key) == 0 for key in (
+            "url_opens", "downloads", "ocr_runs", "pdf_render_runs", "model_api_calls",
+            "rating_runs", "ingestion_runs", "codification_runs", "durable_ledger_merges",
+        ))
+        and decision.get("global_analysis_readiness") is False
+        and summary.get("source_result_rows") == 321
+        and summary.get("pdf_source_rows") == 289
+        and summary.get("html_source_rows") == 32
+        and len(results) == 321 and len(pdf_rows) == 289 and len(html_rows) == 32
+        and len(exclusions) == 108 and len(candidates) > 0
+        and all(row.get("span_status") in controlled for row in results)
+        and all(row.get("span_status") == "span_extracted" for row in candidates)
+        and all(row.get("rating_status") == "not_rated" for row in records)
+        and all(row.get("ingestion_status") == "not_ingested" for row in records)
+        and all(row.get("codification_status") == "not_codified" for row in records)
+        and all(row.get("causal_status") == "not_causal_evidence" for row in records)
+        and all(row.get("global_analysis_readiness") == "false" for row in records)
+        and invariants.get("all_invariants_passed") is True
+        and invariants.get("every_positive_span_exact_offsets_hash_valid") is True
+        and invariants.get("generic_mentions_excluded_from_rating_candidates") is True
+        and invariants.get("preserved_exclusions_outside_queue") is True
+        and invariants.get("no_url_download_ocr_render_model_rating_ingestion_or_codification") is True
+        and invariants.get("global_analysis_readiness_false") is True
+    ):
+        raise ValueError("targeted 321-source evidence-span extraction package fails dashboard gates")
+    return True, decision
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -4251,6 +4338,10 @@ def build_analysis_readiness(
         targeted_text_layer_extraction_321_completed,
         targeted_text_layer_extraction_321_decision,
     ) = targeted_text_layer_extraction_321_status()
+    (
+        targeted_evidence_span_extraction_321_completed,
+        targeted_evidence_span_extraction_321_decision,
+    ) = targeted_evidence_span_extraction_321_status()
     if scale_1000_targeted_qa_completed and (
         scale_1000_targeted_qa_decision.get("qa_pass") is not True
         or scale_1000_targeted_qa_decision.get(
@@ -4297,6 +4388,9 @@ def build_analysis_readiness(
     return {
         "metadata": metadata,
         "overall_status": (
+            "targeted_evidence_span_extraction_321_completed_rating_ready_global_analysis_closed"
+            if targeted_evidence_span_extraction_321_completed
+            else
             "targeted_text_layer_extraction_321_completed_evidence_extraction_ready_global_analysis_closed"
             if targeted_text_layer_extraction_321_completed
             else
@@ -5102,6 +5196,35 @@ def build_analysis_readiness(
                 "targeted_text_layer_extraction_repair_needed": (
                     bool(targeted_text_layer_extraction_321_decision.get("repair_needed", False))
                     if targeted_text_layer_extraction_321_completed else False
+                ),
+                "targeted_evidence_span_extraction_completed": targeted_evidence_span_extraction_321_completed,
+                "targeted_evidence_span_extraction_decision": (
+                    targeted_evidence_span_extraction_321_decision.get("decision")
+                    if targeted_evidence_span_extraction_321_completed else None
+                ),
+                "targeted_evidence_span_extraction_queue_count": (
+                    int(targeted_evidence_span_extraction_321_decision.get("span_extraction_queue_count", 0))
+                    if targeted_evidence_span_extraction_321_completed else 0
+                ),
+                "targeted_evidence_span_extraction_status_counts": (
+                    targeted_evidence_span_extraction_321_decision.get("span_status_counts", {})
+                    if targeted_evidence_span_extraction_321_completed else {}
+                ),
+                "targeted_evidence_span_record_count": (
+                    int(targeted_evidence_span_extraction_321_decision.get("positive_span_record_count", 0))
+                    if targeted_evidence_span_extraction_321_completed else 0
+                ),
+                "targeted_evidence_span_rating_candidate_count": (
+                    int(targeted_evidence_span_extraction_321_decision.get("rating_candidate_count", 0))
+                    if targeted_evidence_span_extraction_321_completed else 0
+                ),
+                "targeted_evidence_span_rating_ready_next": (
+                    bool(targeted_evidence_span_extraction_321_decision.get("evidence_span_rating_ready_next", False))
+                    if targeted_evidence_span_extraction_321_completed else False
+                ),
+                "targeted_evidence_span_extraction_repair_needed": (
+                    bool(targeted_evidence_span_extraction_321_decision.get("repair_needed", False))
+                    if targeted_evidence_span_extraction_321_completed else False
                 ),
                 "gabriel_claim_rating_global_analysis_readiness": False,
                 "limited_qualitative_usage_registry_review_global_analysis_readiness": False,
@@ -9042,9 +9165,16 @@ def build_text_table_calibration_status_summary(
             targeted_text_layer_extraction_321_completed,
             targeted_text_layer_extraction_321_decision,
         ) = targeted_text_layer_extraction_321_status()
+        (
+            targeted_evidence_span_extraction_321_completed,
+            targeted_evidence_span_extraction_321_decision,
+        ) = targeted_evidence_span_extraction_321_status()
         return {
             **metadata,
             "calibration_phase": (
+                "targeted_evidence_span_extraction_321_completed_rating_ready"
+                if targeted_evidence_span_extraction_321_completed
+                else
                 "targeted_text_layer_extraction_321_completed_evidence_extraction_ready"
                 if targeted_text_layer_extraction_321_completed
                 else
@@ -10429,6 +10559,47 @@ def build_text_table_calibration_status_summary(
             "targeted_text_layer_extraction_repair_needed": (
                 bool(targeted_text_layer_extraction_321_decision.get("repair_needed", False))
                 if targeted_text_layer_extraction_321_completed else False
+            ),
+            "targeted_evidence_span_extraction_completed": targeted_evidence_span_extraction_321_completed,
+            "targeted_evidence_span_extraction_decision": (
+                targeted_evidence_span_extraction_321_decision.get("decision")
+                if targeted_evidence_span_extraction_321_completed else None
+            ),
+            "targeted_evidence_span_extraction_path": (
+                relative(TARGETED_EVIDENCE_SPAN_EXTRACTION_321_DIR)
+                if targeted_evidence_span_extraction_321_completed else None
+            ),
+            "targeted_evidence_span_extraction_queue_count": (
+                int(targeted_evidence_span_extraction_321_decision.get("span_extraction_queue_count", 0))
+                if targeted_evidence_span_extraction_321_completed else 0
+            ),
+            "targeted_evidence_span_extraction_pdf_count": (
+                int(targeted_evidence_span_extraction_321_decision.get("pdf_span_extraction_count", 0))
+                if targeted_evidence_span_extraction_321_completed else 0
+            ),
+            "targeted_evidence_span_extraction_html_count": (
+                int(targeted_evidence_span_extraction_321_decision.get("html_span_extraction_count", 0))
+                if targeted_evidence_span_extraction_321_completed else 0
+            ),
+            "targeted_evidence_span_extraction_status_counts": (
+                targeted_evidence_span_extraction_321_decision.get("span_status_counts", {})
+                if targeted_evidence_span_extraction_321_completed else {}
+            ),
+            "targeted_evidence_span_record_count": (
+                int(targeted_evidence_span_extraction_321_decision.get("positive_span_record_count", 0))
+                if targeted_evidence_span_extraction_321_completed else 0
+            ),
+            "targeted_evidence_span_rating_candidate_count": (
+                int(targeted_evidence_span_extraction_321_decision.get("rating_candidate_count", 0))
+                if targeted_evidence_span_extraction_321_completed else 0
+            ),
+            "targeted_evidence_span_rating_ready_next": (
+                bool(targeted_evidence_span_extraction_321_decision.get("evidence_span_rating_ready_next", False))
+                if targeted_evidence_span_extraction_321_completed else False
+            ),
+            "targeted_evidence_span_extraction_repair_needed": (
+                bool(targeted_evidence_span_extraction_321_decision.get("repair_needed", False))
+                if targeted_evidence_span_extraction_321_completed else False
             ),
             "gabriel_claim_rating_global_analysis_readiness": False,
             "limited_qualitative_usage_registry_review_global_analysis_readiness": False,

@@ -218,11 +218,11 @@ class TierABVerificationTests(unittest.TestCase):
         calibration = mod.read_json(ROOT / "docs/dashboard/data/text_table_calibration_status_summary.json")
         self.assertEqual(
             readiness["overall_status"],
-            "targeted_text_layer_extraction_321_completed_evidence_extraction_ready_global_analysis_closed",
+            "targeted_evidence_span_extraction_321_completed_rating_ready_global_analysis_closed",
         )
         self.assertEqual(
             calibration["calibration_phase"],
-            "targeted_text_layer_extraction_321_completed_evidence_extraction_ready",
+            "targeted_evidence_span_extraction_321_completed_rating_ready",
         )
         self.assertTrue(calibration["targeted_source_verification_completed"])
         self.assertEqual(calibration["targeted_source_verified_source_lead_count"], 429)

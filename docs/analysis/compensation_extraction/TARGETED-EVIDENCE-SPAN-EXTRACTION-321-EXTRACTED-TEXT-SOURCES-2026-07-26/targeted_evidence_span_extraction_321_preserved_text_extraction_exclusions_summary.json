@@ -1,0 +1,15 @@
+{
+  "preserved_exclusion_count": 108,
+  "preserved_exclusions_entering_span_queue": 0,
+  "status_counts": {
+    "readiness_review:corrupt_or_unreadable": 1,
+    "readiness_review:needs_review": 13,
+    "readiness_review:ocr_later_or_defer": 44,
+    "readiness_review:oversized_for_text_pass": 8,
+    "source_review_download:blocked_by_transport": 3,
+    "source_review_download:duplicate_file_hash": 1,
+    "source_review_download:oversized_for_this_pass": 11,
+    "source_review_download:unavailable_on_get": 2,
+    "source_review_download:weak_or_needs_review": 25
+  }
+}

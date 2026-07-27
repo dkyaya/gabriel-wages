@@ -1,0 +1,19 @@
+{
+  "all_spans_exact_substrings_offsets_and_hashes_valid": true,
+  "ambiguous_span_record_count": 180,
+  "positive_source_count": 63,
+  "positive_span_counts_by_lane": {
+    "lane_1": 16,
+    "lane_2": 114,
+    "lane_3": 1,
+    "lane_4": 70
+  },
+  "positive_span_counts_by_mechanism": {
+    "fiscal_constraint_signal": 1,
+    "market_or_comparability_pressure": 70,
+    "non_safety_constraint_signal": 16,
+    "strike_or_no_strike_constraint": 114
+  },
+  "positive_span_record_count": 201,
+  "total_span_record_count": 381
+}

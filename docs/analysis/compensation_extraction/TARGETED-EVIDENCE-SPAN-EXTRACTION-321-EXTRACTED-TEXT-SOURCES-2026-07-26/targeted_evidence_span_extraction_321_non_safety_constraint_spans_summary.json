@@ -1,0 +1,7 @@
+{
+  "global_analysis_readiness": false,
+  "mechanism_family": "non_safety_constraint_signal",
+  "positive_span_record_count": 16,
+  "rating_candidate_count": 16,
+  "source_count": 4
+}

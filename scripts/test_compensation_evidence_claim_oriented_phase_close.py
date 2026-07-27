@@ -334,6 +334,7 @@ class MaterializedClaimPhaseTests(unittest.TestCase):
             "targeted_source_review_download_429_completed_pdf_readiness_ready",
             "targeted_pdf_text_layer_readiness_387_completed_text_extraction_ready",
             "targeted_text_layer_extraction_321_completed_evidence_extraction_ready",
+            "targeted_evidence_span_extraction_321_completed_rating_ready",
         })
         self.assertTrue(calibration["gabriel_claim_rating_ready"])
         self.assertFalse(calibration["analysis_facing_promotion_allowed"])
@@ -356,6 +357,7 @@ class MaterializedClaimPhaseTests(unittest.TestCase):
             "targeted_source_review_download_429_completed_pdf_readiness_ready_global_analysis_closed",
             "targeted_pdf_text_layer_readiness_387_completed_text_extraction_ready_global_analysis_closed",
             "targeted_text_layer_extraction_321_completed_evidence_extraction_ready_global_analysis_closed",
+            "targeted_evidence_span_extraction_321_completed_rating_ready_global_analysis_closed",
         })
         self.assertNotIn('"global_analysis_readiness": true', json.dumps(readiness, sort_keys=True).casefold())
 

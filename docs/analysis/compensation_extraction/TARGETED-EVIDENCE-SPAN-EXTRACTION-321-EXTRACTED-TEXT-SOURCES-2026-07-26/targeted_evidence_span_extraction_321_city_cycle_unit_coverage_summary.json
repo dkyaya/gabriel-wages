@@ -1,0 +1,7 @@
+{
+  "city_cycle_unit_groups": 314,
+  "coverage_boundary": "Span outputs do not update durable city coverage.",
+  "distinct_city_state_pairs": 246,
+  "groups_with_positive_span": 63,
+  "groups_without_positive_span": 251
+}

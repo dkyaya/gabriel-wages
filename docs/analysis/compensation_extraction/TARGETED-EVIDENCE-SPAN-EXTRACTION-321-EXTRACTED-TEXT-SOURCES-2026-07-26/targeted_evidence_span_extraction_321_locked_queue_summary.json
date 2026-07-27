@@ -1,0 +1,21 @@
+{
+  "global_analysis_readiness": false,
+  "html_queue_count": 32,
+  "lane_counts": {
+    "lane_1": 88,
+    "lane_2": 106,
+    "lane_3": 23,
+    "lane_4": 104
+  },
+  "locked_queue_count": 321,
+  "mechanism_counts": {
+    "fiscal_constraint_signal": 23,
+    "market_or_comparability_pressure": 104,
+    "non_safety_constraint_signal": 88,
+    "strike_or_no_strike_constraint": 106
+  },
+  "non_extracted_or_excluded_rows_in_queue": 0,
+  "pdf_queue_count": 289,
+  "preserved_exclusions_in_queue": 0,
+  "tier_c_or_d_rows_in_queue": 0
+}

@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "targeted_evidence_span_extraction_321_completed_rating_ready"
+              ? "Targeted exact evidence-span extraction complete; bounded span rating is ready"
+              : textTableCalibrationStatus.calibration_phase ===
             "targeted_text_layer_extraction_321_completed_evidence_extraction_ready"
               ? "Targeted local text-layer extraction complete; bounded evidence-span extraction review is ready"
               : textTableCalibrationStatus.calibration_phase ===
@@ -915,6 +918,18 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "targeted_evidence_span_extraction_321_completed_rating_ready" ? (
+            <>
+              The deterministic local review searched {formatNumber(
+                textTableCalibrationStatus.targeted_evidence_span_extraction_queue_count,
+              )}{" "}extracted-text sources and retained {formatNumber(
+                textTableCalibrationStatus.targeted_evidence_span_record_count,
+              )}{" "}exact documentary spans as separately reviewable rating candidates.
+              Generic or uncertain matches remain ambiguous or no-span/weak. No URL,
+              download, OCR, rendering, model call, rating, ingestion, or codification
+              occurred; global analysis readiness remains closed.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "targeted_text_layer_extraction_321_completed_evidence_extraction_ready" ? (
             <>
               The bounded local extraction processed{" "}

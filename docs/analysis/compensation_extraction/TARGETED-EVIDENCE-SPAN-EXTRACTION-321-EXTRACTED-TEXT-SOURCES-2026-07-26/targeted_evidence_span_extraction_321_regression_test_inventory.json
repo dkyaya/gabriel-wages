@@ -1,0 +1,17 @@
+{
+  "coverage": [
+    "exact 321-source scope",
+    "289/32 PDF/HTML split",
+    "immutable input and artifact hashes",
+    "excluded-row rejection",
+    "exact substring offsets and hashes",
+    "mechanism context gates",
+    "generic mention routing",
+    "bounded spans/context",
+    "closed downstream statuses",
+    "dashboard global closure",
+    "idempotent resume",
+    "partial-output fail-closed"
+  ],
+  "focused_suite": "scripts/test_targeted_evidence_span_extraction_321.py"
+}

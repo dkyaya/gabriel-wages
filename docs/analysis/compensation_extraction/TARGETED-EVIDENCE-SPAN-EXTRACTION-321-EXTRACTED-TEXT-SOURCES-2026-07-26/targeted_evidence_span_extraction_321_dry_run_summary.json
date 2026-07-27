@@ -1,0 +1,15 @@
+{
+  "all_live_status_not_started": true,
+  "downloads": 0,
+  "dry_run_rows": 321,
+  "global_analysis_readiness": false,
+  "html_rows": 32,
+  "model_api_calls": 0,
+  "no_call_dry_run": true,
+  "ocr_runs": 0,
+  "pdf_render_runs": 0,
+  "pdf_rows": 289,
+  "rating_runs": 0,
+  "span_extractions_completed": 0,
+  "url_opens": 0
+}

@@ -1,0 +1,21 @@
+{
+  "all_extracted_text_paths_sizes_hashes_valid": true,
+  "codification_runs": 0,
+  "downloads": 0,
+  "excluded_rows_in_queue": 0,
+  "global_analysis_readiness": false,
+  "html_queue_count": 32,
+  "ingestion_runs": 0,
+  "locked_queue_count": 321,
+  "model_api_calls": 0,
+  "ocr_runs": 0,
+  "pdf_queue_count": 289,
+  "pdf_render_runs": 0,
+  "preflight_passed": true,
+  "preserved_exclusions_outside_queue": 108,
+  "queue_hash_matches_lock": true,
+  "rating_runs": 0,
+  "retained_id_hash_matches_lock": true,
+  "text_layer_extraction_decision_allows_span_review": true,
+  "url_opens": 0
+}
