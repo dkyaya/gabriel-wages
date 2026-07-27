@@ -1,0 +1,3 @@
+# Bounded internal mechanism-linkage claim memo result — 2026-07-26
+
+Decision: `bounded_internal_mechanism_linkage_claim_memo_completed_tier_c_verification_recommended`. The internal memo summarizes 268 exact-source pairs covering 208 quantitative rows, 90 qualitative records, 72 source lineages, 23 states, 64 city-state pairs, and 72 city–unit–cycle groups. It supports bounded co-location/documentary scaffolds only. Targeted Tier C verification is recommended next. Global analysis readiness remains false. Detailed metadata: `docs/analysis/compensation_extraction/BOUNDED-INTERNAL-MECHANISM-LINKAGE-CLAIM-MEMO-2026-07-26/bounded_internal_mechanism_linkage_claim_memo_dashboard_metadata.json`.

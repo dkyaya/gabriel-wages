@@ -1,0 +1,3 @@
+# Bounded internal memo geographic coverage — 2026-07-26
+
+Coverage derives only from the locked memo scope. States: 23. City-state pairs: 64. City–unit–cycle groups: 72. Pair counts: Midwest 109, West 104, Northeast 39, South 16, District of Columbia/federal district 0, Unknown 0. Missing state, city, unit, cycle, source-family, and region fields: 0. Detailed metadata: `docs/analysis/compensation_extraction/BOUNDED-INTERNAL-MECHANISM-LINKAGE-CLAIM-MEMO-2026-07-26/bounded_internal_mechanism_linkage_claim_memo_geographic_coverage_summary.json`. These are locked-scope coverage counts, not population or national prevalence.

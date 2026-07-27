@@ -1,0 +1,18 @@
+{
+  "all_invariants_passed": true,
+  "claim_types_reconcile_15_80_32_141_0": true,
+  "dashboard_metadata_consistent_with_memo": true,
+  "geography_derived_only_from_existing_state_city_unit_cycle_fields": true,
+  "global_analysis_readiness_false": true,
+  "memo_uses_only_locked_268_pair_claim_review": true,
+  "missing_geography_disclosed": true,
+  "no_geographic_metadata_invented": true,
+  "no_ingestion_or_codification": true,
+  "no_model_api_ocr_or_rendering": true,
+  "no_normalization_imputation_annualization_or_outcome_comparison": true,
+  "no_source_document_full_text_url_pdf_page_retained_file_access": true,
+  "no_wage_gap_regression_treatment_effect_population_national_or_final_causal_work": true,
+  "partial_outputs_cannot_masquerade_as_complete": true,
+  "scope_reconciles_268_208_90_72": true,
+  "static_region_mapping_only": true
+}

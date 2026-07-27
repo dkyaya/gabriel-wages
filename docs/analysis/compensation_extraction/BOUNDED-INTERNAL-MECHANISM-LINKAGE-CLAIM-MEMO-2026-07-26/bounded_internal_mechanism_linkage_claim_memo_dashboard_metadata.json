@@ -1,0 +1,99 @@
+{
+  "current_phase": "bounded_internal_mechanism_linkage_claim_memo",
+  "dashboard_status_note_path": "docs/analysis/bounded_internal_mechanism_linkage_claim_memo_dashboard_status_note_2026-07-26.md",
+  "evidence_status": "bounded_exact_source_colocation_and_documentary_scaffold_only",
+  "final_causal_claims": false,
+  "geographic_coverage": {
+    "city_cycle_unit_group_count": 72,
+    "city_state_pair_count": 64,
+    "mapping_method": "deterministic_static_census_style_region_from_existing_state_abbreviation",
+    "missing_geography_counts": {
+      "city": 0,
+      "contract_or_cycle_period": 0,
+      "source_family": 0,
+      "state": 0,
+      "unit_type": 0,
+      "unknown_region": 0
+    },
+    "region_pair_counts": {
+      "District of Columbia / Federal district": 0,
+      "Midwest": 109,
+      "Northeast": 39,
+      "South": 16,
+      "Unknown": 0,
+      "West": 104
+    },
+    "state_count": 23,
+    "state_pair_counts": {
+      "AK": 2,
+      "CA": 48,
+      "CO": 6,
+      "DE": 3,
+      "FL": 12,
+      "IA": 13,
+      "IL": 25,
+      "MA": 1,
+      "ME": 8,
+      "MI": 5,
+      "MN": 15,
+      "MO": 4,
+      "MT": 1,
+      "NE": 3,
+      "NH": 2,
+      "NM": 15,
+      "NV": 6,
+      "NY": 13,
+      "OH": 44,
+      "OR": 12,
+      "PA": 15,
+      "TX": 1,
+      "WA": 14
+    }
+  },
+  "geographic_metadata_path": "docs/analysis/compensation_extraction/BOUNDED-INTERNAL-MECHANISM-LINKAGE-CLAIM-MEMO-2026-07-26/bounded_internal_mechanism_linkage_claim_memo_geographic_coverage_summary.json",
+  "global_analysis_readiness": false,
+  "mechanism_pair_counts": {
+    "automatic_raise_mechanism": 97,
+    "bargaining_power_signal": 5,
+    "fiscal_constraint_signal": 3,
+    "gap_narrowing_signal": 0,
+    "implementation_or_retroactivity_advantage": 126,
+    "market_or_comparability_pressure": 9,
+    "non_base_compensation_signal": 15,
+    "non_safety_constraint_signal": 0,
+    "parity_or_internal_equity_signal": 0,
+    "rank_or_specialization_premium": 13,
+    "strike_or_no_strike_constraint": 0
+  },
+  "memo_decision": "bounded_internal_mechanism_linkage_claim_memo_completed_tier_c_verification_recommended",
+  "memo_path": "docs/analysis/compensation_extraction/BOUNDED-INTERNAL-MECHANISM-LINKAGE-CLAIM-MEMO-2026-07-26/bounded_internal_mechanism_linkage_claim_memo.md",
+  "memo_scope": {
+    "claim_type_counts": {
+      "direct_text_colocation_claim": 15,
+      "documentary_mechanism_value_scaffold": 80,
+      "insufficient_for_claim": 141,
+      "not_allowed": 0,
+      "provisional_mechanism_linkage_claim": 32
+    },
+    "exact_same_source_linked_pair_count": 268,
+    "linked_qualitative_record_count": 90,
+    "linked_quantitative_row_count": 208,
+    "shared_source_lineage_count": 72
+  },
+  "next_recommended_phase": "targeted_tier_c_verification",
+  "regression_or_treatment_effect_estimates": false,
+  "source_family_pair_counts": {
+    "arbitration_award": 0,
+    "cba": 261,
+    "memorandum_or_settlement": 4,
+    "ordinance_or_policy": 0,
+    "wage_schedule_or_compensation_plan": 3
+  },
+  "task_id": "BOUNDED-INTERNAL-MECHANISM-LINKAGE-CLAIM-MEMO-2026-07-26",
+  "unit_type_pair_counts": {
+    "fire": 85,
+    "non_safety": 54,
+    "police": 129
+  },
+  "wage_gap_estimates": false
+}

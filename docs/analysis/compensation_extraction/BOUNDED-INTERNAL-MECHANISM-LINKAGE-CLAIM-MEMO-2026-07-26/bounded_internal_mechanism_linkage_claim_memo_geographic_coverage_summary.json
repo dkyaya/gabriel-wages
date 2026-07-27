@@ -1,0 +1,316 @@
+{
+  "city_cycle_unit_group_count": 72,
+  "city_state_pair_count": 64,
+  "external_lookup_used": false,
+  "linked_pair_count": 268,
+  "major_concentrations": {
+    "california_and_ohio_pair_count": 92,
+    "midwest_and_west_pair_count": 213,
+    "scope_only_not_population_prevalence": true
+  },
+  "mapping_method": "deterministic_static_census_style_region_from_existing_state_abbreviation",
+  "missing_geography_counts": {
+    "city": 0,
+    "contract_or_cycle_period": 0,
+    "source_family": 0,
+    "state": 0,
+    "unit_type": 0,
+    "unknown_region": 0
+  },
+  "region_rows": [
+    {
+      "city_count": 8,
+      "city_cycle_unit_group_count": 10,
+      "linked_pair_count": 39,
+      "linked_qualitative_record_count": 12,
+      "linked_quantitative_row_count": 32,
+      "region": "Northeast",
+      "shared_source_lineage_count": 10,
+      "state_count": 5
+    },
+    {
+      "city_count": 25,
+      "city_cycle_unit_group_count": 28,
+      "linked_pair_count": 109,
+      "linked_qualitative_record_count": 34,
+      "linked_quantitative_row_count": 91,
+      "region": "Midwest",
+      "shared_source_lineage_count": 28,
+      "state_count": 7
+    },
+    {
+      "city_count": 5,
+      "city_cycle_unit_group_count": 5,
+      "linked_pair_count": 16,
+      "linked_qualitative_record_count": 6,
+      "linked_quantitative_row_count": 11,
+      "region": "South",
+      "shared_source_lineage_count": 5,
+      "state_count": 3
+    },
+    {
+      "city_count": 26,
+      "city_cycle_unit_group_count": 29,
+      "linked_pair_count": 104,
+      "linked_qualitative_record_count": 38,
+      "linked_quantitative_row_count": 74,
+      "region": "West",
+      "shared_source_lineage_count": 29,
+      "state_count": 8
+    },
+    {
+      "city_count": 0,
+      "city_cycle_unit_group_count": 0,
+      "linked_pair_count": 0,
+      "linked_qualitative_record_count": 0,
+      "linked_quantitative_row_count": 0,
+      "region": "District of Columbia / Federal district",
+      "shared_source_lineage_count": 0,
+      "state_count": 0
+    },
+    {
+      "city_count": 0,
+      "city_cycle_unit_group_count": 0,
+      "linked_pair_count": 0,
+      "linked_qualitative_record_count": 0,
+      "linked_quantitative_row_count": 0,
+      "region": "Unknown",
+      "shared_source_lineage_count": 0,
+      "state_count": 0
+    }
+  ],
+  "shared_source_lineage_count": 72,
+  "state_count": 23,
+  "state_rows": [
+    {
+      "city_count": 1,
+      "city_cycle_unit_group_count": 1,
+      "linked_pair_count": 2,
+      "linked_qualitative_record_count": 1,
+      "linked_quantitative_row_count": 2,
+      "region": "West",
+      "shared_source_lineage_count": 1,
+      "state": "AK"
+    },
+    {
+      "city_count": 13,
+      "city_cycle_unit_group_count": 14,
+      "linked_pair_count": 48,
+      "linked_qualitative_record_count": 18,
+      "linked_quantitative_row_count": 36,
+      "region": "West",
+      "shared_source_lineage_count": 14,
+      "state": "CA"
+    },
+    {
+      "city_count": 2,
+      "city_cycle_unit_group_count": 2,
+      "linked_pair_count": 6,
+      "linked_qualitative_record_count": 2,
+      "linked_quantitative_row_count": 6,
+      "region": "West",
+      "shared_source_lineage_count": 2,
+      "state": "CO"
+    },
+    {
+      "city_count": 1,
+      "city_cycle_unit_group_count": 1,
+      "linked_pair_count": 3,
+      "linked_qualitative_record_count": 1,
+      "linked_quantitative_row_count": 3,
+      "region": "South",
+      "shared_source_lineage_count": 1,
+      "state": "DE"
+    },
+    {
+      "city_count": 3,
+      "city_cycle_unit_group_count": 3,
+      "linked_pair_count": 12,
+      "linked_qualitative_record_count": 4,
+      "linked_quantitative_row_count": 7,
+      "region": "South",
+      "shared_source_lineage_count": 3,
+      "state": "FL"
+    },
+    {
+      "city_count": 3,
+      "city_cycle_unit_group_count": 3,
+      "linked_pair_count": 13,
+      "linked_qualitative_record_count": 5,
+      "linked_quantitative_row_count": 8,
+      "region": "Midwest",
+      "shared_source_lineage_count": 3,
+      "state": "IA"
+    },
+    {
+      "city_count": 4,
+      "city_cycle_unit_group_count": 5,
+      "linked_pair_count": 25,
+      "linked_qualitative_record_count": 6,
+      "linked_quantitative_row_count": 20,
+      "region": "Midwest",
+      "shared_source_lineage_count": 5,
+      "state": "IL"
+    },
+    {
+      "city_count": 1,
+      "city_cycle_unit_group_count": 1,
+      "linked_pair_count": 1,
+      "linked_qualitative_record_count": 1,
+      "linked_quantitative_row_count": 1,
+      "region": "Northeast",
+      "shared_source_lineage_count": 1,
+      "state": "MA"
+    },
+    {
+      "city_count": 1,
+      "city_cycle_unit_group_count": 2,
+      "linked_pair_count": 8,
+      "linked_qualitative_record_count": 3,
+      "linked_quantitative_row_count": 6,
+      "region": "Northeast",
+      "shared_source_lineage_count": 2,
+      "state": "ME"
+    },
+    {
+      "city_count": 2,
+      "city_cycle_unit_group_count": 2,
+      "linked_pair_count": 5,
+      "linked_qualitative_record_count": 2,
+      "linked_quantitative_row_count": 5,
+      "region": "Midwest",
+      "shared_source_lineage_count": 2,
+      "state": "MI"
+    },
+    {
+      "city_count": 2,
+      "city_cycle_unit_group_count": 3,
+      "linked_pair_count": 15,
+      "linked_qualitative_record_count": 5,
+      "linked_quantitative_row_count": 9,
+      "region": "Midwest",
+      "shared_source_lineage_count": 3,
+      "state": "MN"
+    },
+    {
+      "city_count": 1,
+      "city_cycle_unit_group_count": 1,
+      "linked_pair_count": 4,
+      "linked_qualitative_record_count": 1,
+      "linked_quantitative_row_count": 4,
+      "region": "Midwest",
+      "shared_source_lineage_count": 1,
+      "state": "MO"
+    },
+    {
+      "city_count": 1,
+      "city_cycle_unit_group_count": 1,
+      "linked_pair_count": 1,
+      "linked_qualitative_record_count": 1,
+      "linked_quantitative_row_count": 1,
+      "region": "West",
+      "shared_source_lineage_count": 1,
+      "state": "MT"
+    },
+    {
+      "city_count": 1,
+      "city_cycle_unit_group_count": 1,
+      "linked_pair_count": 3,
+      "linked_qualitative_record_count": 1,
+      "linked_quantitative_row_count": 3,
+      "region": "Midwest",
+      "shared_source_lineage_count": 1,
+      "state": "NE"
+    },
+    {
+      "city_count": 2,
+      "city_cycle_unit_group_count": 2,
+      "linked_pair_count": 2,
+      "linked_qualitative_record_count": 2,
+      "linked_quantitative_row_count": 2,
+      "region": "Northeast",
+      "shared_source_lineage_count": 2,
+      "state": "NH"
+    },
+    {
+      "city_count": 1,
+      "city_cycle_unit_group_count": 1,
+      "linked_pair_count": 15,
+      "linked_qualitative_record_count": 3,
+      "linked_quantitative_row_count": 5,
+      "region": "West",
+      "shared_source_lineage_count": 1,
+      "state": "NM"
+    },
+    {
+      "city_count": 3,
+      "city_cycle_unit_group_count": 3,
+      "linked_pair_count": 6,
+      "linked_qualitative_record_count": 3,
+      "linked_quantitative_row_count": 6,
+      "region": "West",
+      "shared_source_lineage_count": 3,
+      "state": "NV"
+    },
+    {
+      "city_count": 2,
+      "city_cycle_unit_group_count": 2,
+      "linked_pair_count": 13,
+      "linked_qualitative_record_count": 3,
+      "linked_quantitative_row_count": 8,
+      "region": "Northeast",
+      "shared_source_lineage_count": 2,
+      "state": "NY"
+    },
+    {
+      "city_count": 12,
+      "city_cycle_unit_group_count": 13,
+      "linked_pair_count": 44,
+      "linked_qualitative_record_count": 14,
+      "linked_quantitative_row_count": 42,
+      "region": "Midwest",
+      "shared_source_lineage_count": 13,
+      "state": "OH"
+    },
+    {
+      "city_count": 3,
+      "city_cycle_unit_group_count": 5,
+      "linked_pair_count": 12,
+      "linked_qualitative_record_count": 6,
+      "linked_quantitative_row_count": 11,
+      "region": "West",
+      "shared_source_lineage_count": 5,
+      "state": "OR"
+    },
+    {
+      "city_count": 2,
+      "city_cycle_unit_group_count": 3,
+      "linked_pair_count": 15,
+      "linked_qualitative_record_count": 3,
+      "linked_quantitative_row_count": 15,
+      "region": "Northeast",
+      "shared_source_lineage_count": 3,
+      "state": "PA"
+    },
+    {
+      "city_count": 1,
+      "city_cycle_unit_group_count": 1,
+      "linked_pair_count": 1,
+      "linked_qualitative_record_count": 1,
+      "linked_quantitative_row_count": 1,
+      "region": "South",
+      "shared_source_lineage_count": 1,
+      "state": "TX"
+    },
+    {
+      "city_count": 2,
+      "city_cycle_unit_group_count": 2,
+      "linked_pair_count": 14,
+      "linked_qualitative_record_count": 4,
+      "linked_quantitative_row_count": 7,
+      "region": "West",
+      "shared_source_lineage_count": 2,
+      "state": "WA"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "required_cases": [
+    "pinned claim-review inputs",
+    "268/208/90/72 scope reconciliation",
+    "claim-type counts",
+    "deterministic state-region mapping",
+    "23-state and 64-city geography",
+    "missing geography disclosure",
+    "bounded memo language",
+    "closed analysis flags",
+    "dashboard metadata consistency",
+    "idempotent resume",
+    "partial-package failure",
+    "dashboard global closure",
+    "future prompt boundaries"
+  ],
+  "suite": "scripts/test_bounded_internal_mechanism_linkage_claim_memo.py"
+}

@@ -1271,6 +1271,19 @@ MECHANISM_LINKAGE_CLAIM_REVIEW_268_INVARIANTS_PATH = (
     MECHANISM_LINKAGE_CLAIM_REVIEW_268_DIR
     / "mechanism_linkage_claim_review_268_invariant_checks.json"
 )
+BOUNDED_INTERNAL_MECHANISM_LINKAGE_CLAIM_MEMO_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BOUNDED-INTERNAL-MECHANISM-LINKAGE-CLAIM-MEMO-2026-07-26"
+)
+BOUNDED_INTERNAL_MECHANISM_LINKAGE_CLAIM_MEMO_DECISION_PATH = (
+    BOUNDED_INTERNAL_MECHANISM_LINKAGE_CLAIM_MEMO_DIR
+    / "bounded_internal_mechanism_linkage_claim_memo_decision.json"
+)
+BOUNDED_INTERNAL_MECHANISM_LINKAGE_CLAIM_MEMO_INVARIANTS_PATH = (
+    BOUNDED_INTERNAL_MECHANISM_LINKAGE_CLAIM_MEMO_DIR
+    / "bounded_internal_mechanism_linkage_claim_memo_invariant_checks.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -4008,6 +4021,117 @@ def mechanism_linkage_claim_review_268_status() -> tuple[bool, dict[str, Any]]:
     return True, decision
 
 
+def bounded_internal_mechanism_linkage_claim_memo_status() -> tuple[bool, dict[str, Any], dict[str, Any]]:
+    """Recognize only the complete bounded internal exact-source evidence memo."""
+    directory = BOUNDED_INTERNAL_MECHANISM_LINKAGE_CLAIM_MEMO_DIR
+    memo_path = directory / "bounded_internal_mechanism_linkage_claim_memo.md"
+    metadata_path = directory / "bounded_internal_mechanism_linkage_claim_memo_dashboard_metadata.json"
+    geography_path = directory / "bounded_internal_mechanism_linkage_claim_memo_geographic_coverage_summary.json"
+    required = (
+        BOUNDED_INTERNAL_MECHANISM_LINKAGE_CLAIM_MEMO_DECISION_PATH,
+        BOUNDED_INTERNAL_MECHANISM_LINKAGE_CLAIM_MEMO_INVARIANTS_PATH,
+        memo_path,
+        metadata_path,
+        geography_path,
+        directory / "bounded_internal_mechanism_linkage_claim_memo_summary.md",
+        directory / "next_targeted_tier_c_verification_prompt.md",
+        directory / "next_task.md",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}, {}
+
+    decision = read_json(BOUNDED_INTERNAL_MECHANISM_LINKAGE_CLAIM_MEMO_DECISION_PATH)
+    invariants = read_json(BOUNDED_INTERNAL_MECHANISM_LINKAGE_CLAIM_MEMO_INVARIANTS_PATH)
+    metadata = read_json(metadata_path)
+    geography = read_json(geography_path)
+    expected_scope = {
+        "exact_same_source_linked_pair_count": 268,
+        "linked_quantitative_row_count": 208,
+        "linked_qualitative_record_count": 90,
+        "shared_source_lineage_count": 72,
+        "claim_type_counts": {
+            "direct_text_colocation_claim": 15,
+            "documentary_mechanism_value_scaffold": 80,
+            "provisional_mechanism_linkage_claim": 32,
+            "insufficient_for_claim": 141,
+            "not_allowed": 0,
+        },
+    }
+    expected_regions = {
+        "District of Columbia / Federal district": 0,
+        "Midwest": 109,
+        "Northeast": 39,
+        "South": 16,
+        "Unknown": 0,
+        "West": 104,
+    }
+    expected_missing = {
+        "city": 0,
+        "contract_or_cycle_period": 0,
+        "source_family": 0,
+        "state": 0,
+        "unit_type": 0,
+        "unknown_region": 0,
+    }
+    zero_fields = (
+        "raw_quantitative_values_changed", "value_normalizations", "value_imputations",
+        "value_annualizations", "wage_level_outcome_comparisons", "wage_gap_calculations",
+        "regressions", "treatment_effect_estimates", "population_prevalence_claims",
+        "national_claims", "final_causal_claims", "gabriel_api_model_calls", "url_opens",
+        "downloads", "pdf_page_accesses", "retained_file_accesses", "full_extracted_text_accesses",
+        "ocr_runs", "pdf_render_runs", "ingestion_runs", "codification_runs",
+        "raw_prompts_saved", "raw_responses_saved", "external_geography_lookups",
+        "invented_geographic_fields",
+    )
+    if not (
+        decision.get("task_id") == "BOUNDED-INTERNAL-MECHANISM-LINKAGE-CLAIM-MEMO-2026-07-26"
+        and decision.get("decision") == "bounded_internal_mechanism_linkage_claim_memo_completed_tier_c_verification_recommended"
+        and decision.get("completion_status") == "completed_bounded_internal_exact_source_evidence_memo"
+        and decision.get("evidence_status") == "bounded_exact_source_colocation_and_documentary_scaffold_only"
+        and decision.get("memo_scope") == expected_scope
+        and metadata.get("memo_scope") == expected_scope
+        and metadata.get("memo_decision") == decision.get("decision")
+        and metadata.get("task_id") == decision.get("task_id")
+        and metadata.get("current_phase") == "bounded_internal_mechanism_linkage_claim_memo"
+        and metadata.get("evidence_status") == decision.get("evidence_status")
+        and metadata.get("memo_path") == relative(memo_path)
+        and metadata.get("geographic_metadata_path") == relative(geography_path)
+        and geography.get("linked_pair_count") == 268
+        and geography.get("state_count") == 23
+        and geography.get("city_state_pair_count") == 64
+        and geography.get("city_cycle_unit_group_count") == 72
+        and geography.get("shared_source_lineage_count") == 72
+        and geography.get("mapping_method") == "deterministic_static_census_style_region_from_existing_state_abbreviation"
+        and geography.get("external_lookup_used") is False
+        and decision.get("geographic_coverage", {}).get("region_pair_counts") == expected_regions
+        and metadata.get("geographic_coverage", {}).get("region_pair_counts") == expected_regions
+        and decision.get("geographic_coverage", {}).get("missing_geography_counts") == expected_missing
+        and metadata.get("geographic_coverage", {}).get("missing_geography_counts") == expected_missing
+        and decision.get("tier_c_verification_recommended_next") is True
+        and decision.get("quantitative_normalization_recommended_next") is False
+        and decision.get("repo_cleanup_recommended_next") is False
+        and decision.get("revision_recommended_next") is False
+        and metadata.get("next_recommended_phase") == "targeted_tier_c_verification"
+        and metadata.get("global_analysis_readiness") is False
+        and metadata.get("final_causal_claims") is False
+        and metadata.get("wage_gap_estimates") is False
+        and metadata.get("regression_or_treatment_effect_estimates") is False
+        and all(decision.get(field) == 0 for field in zero_fields)
+        and decision.get("global_analysis_readiness") is False
+        and invariants.get("all_invariants_passed") is True
+        and invariants.get("memo_uses_only_locked_268_pair_claim_review") is True
+        and invariants.get("scope_reconciles_268_208_90_72") is True
+        and invariants.get("geography_derived_only_from_existing_state_city_unit_cycle_fields") is True
+        and invariants.get("static_region_mapping_only") is True
+        and invariants.get("missing_geography_disclosed") is True
+        and invariants.get("no_geographic_metadata_invented") is True
+        and invariants.get("dashboard_metadata_consistent_with_memo") is True
+        and invariants.get("global_analysis_readiness_false") is True
+    ):
+        raise ValueError("bounded internal mechanism-linkage claim memo fails dashboard gates")
+    return True, decision, metadata
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -4794,6 +4918,11 @@ def build_analysis_readiness(
         mechanism_linkage_claim_review_268_completed,
         mechanism_linkage_claim_review_268_decision,
     ) = mechanism_linkage_claim_review_268_status()
+    (
+        bounded_internal_mechanism_linkage_claim_memo_completed,
+        bounded_internal_mechanism_linkage_claim_memo_decision,
+        bounded_internal_mechanism_linkage_claim_memo_metadata,
+    ) = bounded_internal_mechanism_linkage_claim_memo_status()
     if scale_1000_targeted_qa_completed and (
         scale_1000_targeted_qa_decision.get("qa_pass") is not True
         or scale_1000_targeted_qa_decision.get(
@@ -4840,6 +4969,9 @@ def build_analysis_readiness(
     return {
         "metadata": metadata,
         "overall_status": (
+            "bounded_internal_mechanism_linkage_claim_memo_completed_tier_c_verification_recommended_global_analysis_closed"
+            if bounded_internal_mechanism_linkage_claim_memo_completed
+            else
             "mechanism_linkage_claim_review_268_completed_claim_memo_allowed_global_analysis_closed"
             if mechanism_linkage_claim_review_268_completed
             else
@@ -5804,7 +5936,33 @@ def build_analysis_readiness(
                 ),
                 "mechanism_linkage_claim_memo_allowed_next": (
                     bool(mechanism_linkage_claim_review_268_decision.get("claim_memo_allowed_next", False))
-                    if mechanism_linkage_claim_review_268_completed else False
+                    if mechanism_linkage_claim_review_268_completed
+                    and not bounded_internal_mechanism_linkage_claim_memo_completed else False
+                ),
+                "bounded_internal_mechanism_linkage_claim_memo_completed": bounded_internal_mechanism_linkage_claim_memo_completed,
+                "bounded_internal_mechanism_linkage_claim_memo_decision": (
+                    bounded_internal_mechanism_linkage_claim_memo_decision.get("decision")
+                    if bounded_internal_mechanism_linkage_claim_memo_completed else None
+                ),
+                "bounded_internal_mechanism_linkage_claim_memo_scope": (
+                    bounded_internal_mechanism_linkage_claim_memo_decision.get("memo_scope", {})
+                    if bounded_internal_mechanism_linkage_claim_memo_completed else {}
+                ),
+                "bounded_internal_mechanism_linkage_claim_memo_geographic_coverage": (
+                    bounded_internal_mechanism_linkage_claim_memo_decision.get("geographic_coverage", {})
+                    if bounded_internal_mechanism_linkage_claim_memo_completed else {}
+                ),
+                "bounded_internal_mechanism_linkage_claim_memo_tier_c_verification_recommended_next": (
+                    bool(bounded_internal_mechanism_linkage_claim_memo_decision.get("tier_c_verification_recommended_next", False))
+                    if bounded_internal_mechanism_linkage_claim_memo_completed else False
+                ),
+                "bounded_internal_mechanism_linkage_claim_memo_path": (
+                    bounded_internal_mechanism_linkage_claim_memo_metadata.get("memo_path")
+                    if bounded_internal_mechanism_linkage_claim_memo_completed else None
+                ),
+                "bounded_internal_mechanism_linkage_claim_memo_geographic_metadata_path": (
+                    bounded_internal_mechanism_linkage_claim_memo_metadata.get("geographic_metadata_path")
+                    if bounded_internal_mechanism_linkage_claim_memo_completed else None
                 ),
                 "gabriel_claim_rating_global_analysis_readiness": False,
                 "limited_qualitative_usage_registry_review_global_analysis_readiness": False,
@@ -9769,9 +9927,17 @@ def build_text_table_calibration_status_summary(
             mechanism_linkage_claim_review_268_completed,
             mechanism_linkage_claim_review_268_decision,
         ) = mechanism_linkage_claim_review_268_status()
+        (
+            bounded_internal_mechanism_linkage_claim_memo_completed,
+            bounded_internal_mechanism_linkage_claim_memo_decision,
+            bounded_internal_mechanism_linkage_claim_memo_metadata,
+        ) = bounded_internal_mechanism_linkage_claim_memo_status()
         return {
             **metadata,
             "calibration_phase": (
+                bounded_internal_mechanism_linkage_claim_memo_decision.get("decision")
+                if bounded_internal_mechanism_linkage_claim_memo_completed
+                else
                 mechanism_linkage_claim_review_268_decision.get("decision")
                 if mechanism_linkage_claim_review_268_completed
                 else
@@ -11399,7 +11565,45 @@ def build_text_table_calibration_status_summary(
             ),
             "mechanism_linkage_claim_memo_allowed_next": (
                 bool(mechanism_linkage_claim_review_268_decision.get("claim_memo_allowed_next", False))
-                if mechanism_linkage_claim_review_268_completed else False
+                if mechanism_linkage_claim_review_268_completed
+                and not bounded_internal_mechanism_linkage_claim_memo_completed else False
+            ),
+            "bounded_internal_mechanism_linkage_claim_memo_completed": bounded_internal_mechanism_linkage_claim_memo_completed,
+            "bounded_internal_mechanism_linkage_claim_memo_decision": (
+                bounded_internal_mechanism_linkage_claim_memo_decision.get("decision")
+                if bounded_internal_mechanism_linkage_claim_memo_completed else None
+            ),
+            "bounded_internal_mechanism_linkage_claim_memo_path": (
+                bounded_internal_mechanism_linkage_claim_memo_metadata.get("memo_path")
+                if bounded_internal_mechanism_linkage_claim_memo_completed else None
+            ),
+            "bounded_internal_mechanism_linkage_claim_memo_geographic_metadata_path": (
+                bounded_internal_mechanism_linkage_claim_memo_metadata.get("geographic_metadata_path")
+                if bounded_internal_mechanism_linkage_claim_memo_completed else None
+            ),
+            "bounded_internal_mechanism_linkage_claim_memo_scope": (
+                bounded_internal_mechanism_linkage_claim_memo_decision.get("memo_scope", {})
+                if bounded_internal_mechanism_linkage_claim_memo_completed else {}
+            ),
+            "bounded_internal_mechanism_linkage_claim_memo_mechanism_pair_counts": (
+                bounded_internal_mechanism_linkage_claim_memo_decision.get("mechanism_pair_counts", {})
+                if bounded_internal_mechanism_linkage_claim_memo_completed else {}
+            ),
+            "bounded_internal_mechanism_linkage_claim_memo_unit_type_pair_counts": (
+                bounded_internal_mechanism_linkage_claim_memo_decision.get("unit_type_pair_counts", {})
+                if bounded_internal_mechanism_linkage_claim_memo_completed else {}
+            ),
+            "bounded_internal_mechanism_linkage_claim_memo_source_family_pair_counts": (
+                bounded_internal_mechanism_linkage_claim_memo_decision.get("source_family_pair_counts", {})
+                if bounded_internal_mechanism_linkage_claim_memo_completed else {}
+            ),
+            "bounded_internal_mechanism_linkage_claim_memo_geographic_coverage": (
+                bounded_internal_mechanism_linkage_claim_memo_decision.get("geographic_coverage", {})
+                if bounded_internal_mechanism_linkage_claim_memo_completed else {}
+            ),
+            "bounded_internal_mechanism_linkage_claim_memo_tier_c_verification_recommended_next": (
+                bool(bounded_internal_mechanism_linkage_claim_memo_decision.get("tier_c_verification_recommended_next", False))
+                if bounded_internal_mechanism_linkage_claim_memo_completed else False
             ),
             "gabriel_claim_rating_global_analysis_readiness": False,
             "limited_qualitative_usage_registry_review_global_analysis_readiness": False,

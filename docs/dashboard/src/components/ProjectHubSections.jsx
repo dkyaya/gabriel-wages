@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "bounded_internal_mechanism_linkage_claim_memo_completed_tier_c_verification_recommended"
+              ? "Bounded internal mechanism-linkage memo complete; targeted Tier C verification is recommended"
+              : textTableCalibrationStatus.calibration_phase ===
             "mechanism_linkage_claim_review_268_completed_claim_memo_allowed"
               ? "Exact-source mechanism-linkage claim review complete; bounded claim memo is allowed"
               : textTableCalibrationStatus.calibration_phase ===
@@ -935,6 +938,30 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "bounded_internal_mechanism_linkage_claim_memo_completed_tier_c_verification_recommended" ? (
+            <>
+              The bounded internal memo covers {formatNumber(
+                textTableCalibrationStatus.bounded_internal_mechanism_linkage_claim_memo_scope?.exact_same_source_linked_pair_count,
+              )} exact same-source pairs, {formatNumber(
+                textTableCalibrationStatus.bounded_internal_mechanism_linkage_claim_memo_scope?.linked_quantitative_row_count,
+              )} quantitative rows, {formatNumber(
+                textTableCalibrationStatus.bounded_internal_mechanism_linkage_claim_memo_scope?.linked_qualitative_record_count,
+              )} qualitative records, and {formatNumber(
+                textTableCalibrationStatus.bounded_internal_mechanism_linkage_claim_memo_scope?.shared_source_lineage_count,
+              )} shared source lineages. Available local metadata covers {formatNumber(
+                textTableCalibrationStatus.bounded_internal_mechanism_linkage_claim_memo_geographic_coverage?.state_count,
+              )} states, {formatNumber(
+                textTableCalibrationStatus.bounded_internal_mechanism_linkage_claim_memo_geographic_coverage?.city_state_pair_count,
+              )} city-state pairs, and {formatNumber(
+                textTableCalibrationStatus.bounded_internal_mechanism_linkage_claim_memo_geographic_coverage?.city_cycle_unit_group_count,
+              )} city-cycle-unit groups. This is bounded co-location and documentary-scaffold evidence only;
+              global readiness, wage-gap estimates, effect estimates, and final causal claims remain closed.
+              Detailed memo metadata is recorded at {" "}
+              <code>{textTableCalibrationStatus.bounded_internal_mechanism_linkage_claim_memo_path}</code>
+              {" "}and geographic metadata at {" "}
+              <code>{textTableCalibrationStatus.bounded_internal_mechanism_linkage_claim_memo_geographic_metadata_path}</code>.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "mechanism_linkage_claim_review_268_completed_claim_memo_allowed" ? (
             <>
               Deterministic review preserved all {formatNumber(
