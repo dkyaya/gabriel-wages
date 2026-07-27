@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-27T17:08:58Z",
+  "generated_at": "2026-07-27T21:24:49Z",
   "data_vintage": "2026-07-27",
   "source_file": "docs/dashboard/reports/reports_index.json",
   "reports": [
@@ -33,6 +33,38 @@
         {
           "label": "claim candidates",
           "value": 115
+        }
+      ]
+    },
+    {
+      "id": "broad-state-source-scout-wave-2026-07-27",
+      "title": "Broad State-by-State Source Scout Wave",
+      "report_type": "Current discovery operations report",
+      "date": "2026-07-27",
+      "checkpoint": "490 locked targets; 486 parseable municipality outcomes",
+      "summary": "The broad geographic and source-family-diverse discovery wave is complete. Candidate locators remain unverified discovery metadata; candidate review is required before reachability verification.",
+      "tags": [
+        "broad scout",
+        "state balance",
+        "source-family diversity",
+        "candidate review"
+      ],
+      "current": false,
+      "historical": false,
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/broad_state_by_state_source_scout_wave_result_2026-07-27.md",
+      "link_label": "Open broad scout operations report",
+      "scope_metrics": [
+        {
+          "label": "locked targets",
+          "value": 490
+        },
+        {
+          "label": "parseable municipalities",
+          "value": 486
+        },
+        {
+          "label": "candidate rows",
+          "value": 1301
         }
       ]
     },

@@ -88,13 +88,25 @@ def main() -> None:
     assert state["metadata"]["current_map_layer"] == "total_scout_coverage_only"
     assert state["metadata"]["map_data_date"] == "2026-07-27"
     assert state["metric_definition"]["map_color_metric"] == "total_scout_coverage_count"
-    assert sum(row["total_scout_coverage_count"] for row in state["states"]) == 2436
+    broad_decision_path = (
+        ROOT
+        / "docs/analysis/compensation_extraction/"
+        "BROAD-STATE-BY-STATE-SOURCE-SCOUT-WAVE-2026-07-27/"
+        "broad_state_by_state_source_scout_wave_decision.json"
+    )
+    broad_completed = broad_decision_path.is_file()
+    broad_decision = json.loads(broad_decision_path.read_text()) if broad_completed else {}
+    expected_scout_coverage = 2436 + (
+        broad_decision["parseable_target_count"] if broad_completed else 0
+    )
+    assert sum(row["total_scout_coverage_count"] for row in state["states"]) == expected_scout_coverage
     assert phase["current_phase_code"] in {
         decision["decision"],
         "tier_c_evidence_span_rating_159_completed_summary_ready",
         "tier_c_evidence_span_rating_159_completed_with_quarantine",
         "tier_c_evidence_span_rating_summary_140_completed_memo_supplement_ready",
         "bounded_tier_c_evidence_memo_supplement_completed_broad_scouting_ready",
+        "broad_state_by_state_source_scout_completed_candidate_review_ready",
     }
     assert phase["tier_c_text_extracted_ok_count"] == 378
     assert phase["tier_c_positive_exact_span_count"] == 159

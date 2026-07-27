@@ -1,0 +1,22 @@
+{
+  "dashboard_map_filter": "total_scout_coverage_only",
+  "diagnosis_category": "A",
+  "direct_url_opens_planned": 0,
+  "downloads_planned": 0,
+  "external_call_attempt_count": 4,
+  "geographic_balance_valid": true,
+  "global_analysis_readiness": false,
+  "mechanism_targeted_search_is_default": false,
+  "one_row_probe_parseable": 1,
+  "queue_count": 490,
+  "queue_locked": true,
+  "raw_prompts_saved": 0,
+  "raw_prompts_to_save": 0,
+  "raw_responses_saved": 0,
+  "raw_responses_to_save": 0,
+  "smoke_gate_passed": true,
+  "source_document_inspections_planned": 0,
+  "source_family_diversification_present": true,
+  "status": "passed",
+  "verification_head_get_planned": 0
+}

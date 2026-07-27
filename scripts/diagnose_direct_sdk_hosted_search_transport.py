@@ -94,6 +94,14 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Write the fixed diagnostic plan without loading credentials or calling the API.",
     )
+    parser.add_argument(
+        "--metadata-only",
+        action="store_true",
+        help=(
+            "Persist no prompt text and no response-text preview. Only bounded "
+            "transport/schema/pass metadata is written."
+        ),
+    )
     return parser.parse_args()
 
 
@@ -252,6 +260,8 @@ def safe_result(
     row: dict[str, Any],
     backend_failure: str | None,
     secret_values: list[str | None],
+    *,
+    metadata_only: bool = False,
 ) -> tuple[dict[str, Any], bool]:
     response_text = str(row.get("Response", "") or "").strip()
     response_preview, response_exposure = sanitize_text(
@@ -279,7 +289,6 @@ def safe_result(
     result = {
         "call_number": call_number,
         "diagnostic_name": item["diagnostic_name"],
-        "prompt": item["prompt"],
         "web_search_enabled": item["web_search_enabled"],
         "status": status,
         "passed": passed,
@@ -292,7 +301,6 @@ def safe_result(
         "response_id": str(row.get("Response IDs", "") or "").strip() or None,
         "response_text_present": bool(response_text),
         "response_text_length": len(response_text),
-        "response_text_preview": response_preview,
         "token_usage_present": any(value is not None for value in token_values.values()),
         **token_values,
         "web_search_source_count": sources_count,
@@ -301,6 +309,9 @@ def safe_result(
         "diagnostic_detail": safe_detail or None,
         "credential_values_logged": False,
     }
+    if not metadata_only:
+        result["prompt"] = item["prompt"]
+        result["response_text_preview"] = response_preview
     return result, response_exposure or exception_exposure or detail_exposure
 
 
@@ -480,7 +491,12 @@ def main() -> int:
             if len(rows) != 1 and backend_failure is None:
                 backend_failure = f"unexpected raw row count: {len(rows)}"
         result, exposure = safe_result(
-            item, item["call_number"], row, backend_failure, secrets
+            item,
+            item["call_number"],
+            row,
+            backend_failure,
+            secrets,
+            metadata_only=args.metadata_only,
         )
         results.append(result)
         secret_exposure_detected = secret_exposure_detected or exposure
@@ -541,6 +557,9 @@ def main() -> int:
         ),
         "secret_exposure_detected": secret_exposure_detected,
         "credential_values_logged": False,
+        "metadata_only": args.metadata_only,
+        "raw_prompts_persisted": not args.metadata_only,
+        "raw_responses_persisted": False,
         "urls_opened_independently": False,
         "scout_accounting_changed": False,
         "queue_coverage_dashboard_corpus_changed": False,

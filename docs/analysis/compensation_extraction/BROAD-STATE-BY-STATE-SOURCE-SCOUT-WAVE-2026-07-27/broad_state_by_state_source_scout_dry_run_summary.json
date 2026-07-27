@@ -1,0 +1,10 @@
+{
+  "external_calls": 0,
+  "mechanism_targeted_discovery_default": false,
+  "mode": "no_call_preview",
+  "queue_sha256": "d54c0becd9f40655199b44ca1ae63f9b3f85dc21d15a33528980471104cc62d2",
+  "raw_prompts_saved": 0,
+  "raw_responses_saved": 0,
+  "source_family_query_hints_per_target": 5,
+  "target_count": 490
+}

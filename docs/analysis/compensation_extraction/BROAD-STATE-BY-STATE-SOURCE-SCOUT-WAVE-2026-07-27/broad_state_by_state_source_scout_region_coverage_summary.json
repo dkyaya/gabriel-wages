@@ -1,0 +1,9 @@
+{
+  "global_analysis_readiness": false,
+  "parseable_by_region": {
+    "Midwest": 123,
+    "Northeast": 88,
+    "South": 158,
+    "West": 117
+  }
+}

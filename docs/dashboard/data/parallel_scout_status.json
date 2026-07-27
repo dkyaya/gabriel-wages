@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-27T17:08:58Z",
+  "generated_at": "2026-07-27T21:24:49Z",
   "data_vintage": "2026-07-27",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -73,7 +73,10 @@
     "docs/analysis/text_table_calibration/TEXT-TABLE-AUTO-GABRIEL-GATE2-REFINEMENT-2026-07-25/auto_gabriel_adjudication_gate_decision.json",
     "docs/analysis/text_table_calibration/TEXT-TABLE-AUTO-GABRIEL-GATE3-COMPENSATION-EVIDENCE-2026-07-25/auto_gabriel_compensation_adjudication_summary.json",
     "docs/analysis/text_table_calibration/TEXT-TABLE-AUTO-GABRIEL-GATE3-COMPENSATION-EVIDENCE-2026-07-25/auto_gabriel_compensation_adjudication_ledger.csv",
-    "docs/analysis/text_table_calibration/TEXT-TABLE-AUTO-GABRIEL-GATE3-COMPENSATION-EVIDENCE-2026-07-25/auto_gabriel_compensation_gate_decision.json"
+    "docs/analysis/text_table_calibration/TEXT-TABLE-AUTO-GABRIEL-GATE3-COMPENSATION-EVIDENCE-2026-07-25/auto_gabriel_compensation_gate_decision.json",
+    "docs/analysis/compensation_extraction/BROAD-STATE-BY-STATE-SOURCE-SCOUT-WAVE-2026-07-27/broad_state_by_state_source_scout_wave_decision.json",
+    "docs/analysis/compensation_extraction/BROAD-STATE-BY-STATE-SOURCE-SCOUT-WAVE-2026-07-27/broad_state_by_state_source_scout_invariant_checks.json",
+    "docs/analysis/compensation_extraction/BROAD-STATE-BY-STATE-SOURCE-SCOUT-WAVE-2026-07-27/broad_state_by_state_source_scout_state_coverage.csv"
   ],
   "warnings": [],
   "limitations": [

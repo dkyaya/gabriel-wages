@@ -3244,6 +3244,17 @@ def _parse_args() -> argparse.Namespace:
         ),
     )
     parser.add_argument(
+        "--sanitized-artifacts-only",
+        action="store_true",
+        help=(
+            "Do not persist prompt previews or raw response text. The live direct-SDK "
+            "response remains in memory only long enough to parse candidate metadata; "
+            "written artifacts are limited to parsed candidates, classified failures, "
+            "timing, aggregate usage, lifecycle metadata, and the existing sanitized log. "
+            "This mode is required for scout waves that prohibit saved raw prompts/responses."
+        ),
+    )
+    parser.add_argument(
         "--direct-sdk-max-retries",
         type=int,
         default=DEFAULT_DIRECT_SDK_MAX_RETRIES,
@@ -3642,7 +3653,11 @@ def main() -> int:
         build_identifier(run_id, row_identifier_token(m)) for m in municipalities
     ]
 
-    prompt_preview_path = write_prompt_preview(out_dir, municipalities, prompts, identifiers)
+    prompt_preview_path: Path | None = None
+    if not args.sanitized_artifacts_only:
+        prompt_preview_path = write_prompt_preview(
+            out_dir, municipalities, prompts, identifiers
+        )
     timing_input_rows = (
         loaded_municipalities if resume_plan is not None else municipalities
     )
@@ -3737,7 +3752,10 @@ def main() -> int:
             if resume_plan
             else None
         ),
-        "prompt_preview_path": str(prompt_preview_path),
+        "prompt_preview_path": str(prompt_preview_path) if prompt_preview_path else None,
+        "sanitized_artifacts_only": args.sanitized_artifacts_only,
+        "raw_prompts_persisted": not args.sanitized_artifacts_only,
+        "raw_responses_persisted": False if args.sanitized_artifacts_only else None,
         "row_timing_path": str(row_timing_path),
         "output_dir": str(out_dir),
         "live_attempted": False,
@@ -3758,7 +3776,10 @@ def main() -> int:
             )
         )
         print(f"DRY RUN — {len(municipalities)} municipality prompts built for state={args.state}")
-        print(f"prompt_preview={prompt_preview_path}")
+        print(
+            "prompt_preview="
+            + (str(prompt_preview_path) if prompt_preview_path else "not_written_sanitized_mode")
+        )
         print(f"row_timing={row_timing_path}")
         if resume_plan_path:
             print(f"resume_plan={resume_plan_path}")
@@ -3857,9 +3878,10 @@ def main() -> int:
         raw_outputs_path = out_dir / "raw_outputs.csv"
         parsed_candidates_path = out_dir / "parsed_candidates.csv"
         failed_parses_path = out_dir / "failed_parses.csv"
-        raw_outputs_path.write_text(
-            df.to_csv(index=False, lineterminator="\n"), encoding="utf-8"
-        )
+        if not args.sanitized_artifacts_only:
+            raw_outputs_path.write_text(
+                df.to_csv(index=False, lineterminator="\n"), encoding="utf-8"
+            )
         write_csv(parsed_candidates_path, [], CANDIDATE_FIELDS)
         write_csv(failed_parses_path, [], FAILED_PARSE_FIELDS)
         metadata.update(
@@ -3867,7 +3889,9 @@ def main() -> int:
                 "live_process_completed": True,
                 "live_failure_reason": "live backend returned zero response rows",
                 "failure_stage": "live_backend_zero_rows",
-                "raw_outputs_path": str(raw_outputs_path),
+                "raw_outputs_path": (
+                    str(raw_outputs_path) if not args.sanitized_artifacts_only else None
+                ),
                 "parsed_candidates_path": str(parsed_candidates_path),
                 "failed_parses_path": str(failed_parses_path),
                 "n_responses": 0,
@@ -3900,7 +3924,10 @@ def main() -> int:
     import pandas as pd  # noqa: E402  (lazy: only needed on the live path)
 
     raw_outputs_path = out_dir / "raw_outputs.csv"
-    raw_outputs_path.write_text(df.to_csv(index=False, lineterminator="\n"), encoding="utf-8")
+    if not args.sanitized_artifacts_only:
+        raw_outputs_path.write_text(
+            df.to_csv(index=False, lineterminator="\n"), encoding="utf-8"
+        )
 
     id_to_muni = {ident: muni for ident, muni in zip(identifiers, municipalities)}
     all_candidates: list[dict] = []
@@ -3914,7 +3941,11 @@ def main() -> int:
             # Fall back to positional match if GABRIEL didn't echo the identifier column.
             continue
         response_text = str(row.get("Response", "") or "")
-        raw_response_ref = f"{raw_outputs_path}#identifier={identifier}"
+        raw_response_ref = (
+            "not_saved_sanitized_artifacts_only"
+            if args.sanitized_artifacts_only
+            else f"{raw_outputs_path}#identifier={identifier}"
+        )
         candidates, failed = parse_response_to_candidates(
             run_id, muni, identifier, response_text, raw_response_ref, gabriel_row=row.to_dict()
         )
@@ -3927,7 +3958,11 @@ def main() -> int:
         # across the whole batch (best-effort; documented as a failure-mode risk).
         for muni, identifier, (_, row) in zip(municipalities, identifiers, df.iterrows()):
             response_text = str(row.get("Response", "") or "")
-            raw_response_ref = f"{raw_outputs_path}#row={identifier}"
+            raw_response_ref = (
+                "not_saved_sanitized_artifacts_only"
+                if args.sanitized_artifacts_only
+                else f"{raw_outputs_path}#row={identifier}"
+            )
             candidates, failed = parse_response_to_candidates(
                 run_id, muni, identifier, response_text, raw_response_ref, gabriel_row=row.to_dict()
             )
@@ -3960,7 +3995,11 @@ def main() -> int:
                     "cost": "",
                     "response_nonempty": "no",
                     "web_sources_nonempty": "no",
-                    "raw_response_ref": str(raw_outputs_path),
+                    "raw_response_ref": (
+                        "not_saved_sanitized_artifacts_only"
+                        if args.sanitized_artifacts_only
+                        else str(raw_outputs_path)
+                    ),
                 }
             )
 
@@ -4003,7 +4042,9 @@ def main() -> int:
 
     metadata.update(
         {
-            "raw_outputs_path": str(raw_outputs_path),
+            "raw_outputs_path": (
+                str(raw_outputs_path) if not args.sanitized_artifacts_only else None
+            ),
             "parsed_candidates_path": str(parsed_candidates_path),
             "failed_parses_path": str(failed_parses_path),
             "candidates_csv_path": str(candidates_out) if candidates_out else None,

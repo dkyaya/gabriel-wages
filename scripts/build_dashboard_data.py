@@ -1376,6 +1376,20 @@ BOUNDED_TIER_C_EVIDENCE_MEMO_SUPPLEMENT_DECISION_PATH = (
 BOUNDED_TIER_C_EVIDENCE_MEMO_SUPPLEMENT_INVARIANTS_PATH = (
     BOUNDED_TIER_C_EVIDENCE_MEMO_SUPPLEMENT_DIR / "bounded_tier_c_evidence_memo_supplement_invariant_checks.json"
 )
+BROAD_STATE_SOURCE_SCOUT_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-BY-STATE-SOURCE-SCOUT-WAVE-2026-07-27"
+)
+BROAD_STATE_SOURCE_SCOUT_DECISION_PATH = (
+    BROAD_STATE_SOURCE_SCOUT_DIR / "broad_state_by_state_source_scout_wave_decision.json"
+)
+BROAD_STATE_SOURCE_SCOUT_INVARIANTS_PATH = (
+    BROAD_STATE_SOURCE_SCOUT_DIR / "broad_state_by_state_source_scout_invariant_checks.json"
+)
+BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH = (
+    BROAD_STATE_SOURCE_SCOUT_DIR / "broad_state_by_state_source_scout_state_coverage.csv"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -4598,6 +4612,36 @@ def bounded_tier_c_evidence_memo_supplement_status() -> tuple[bool, dict[str, An
     return True, decision
 
 
+def broad_state_source_scout_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize only the completed discovery-only broad scout package."""
+    required = (
+        BROAD_STATE_SOURCE_SCOUT_DECISION_PATH,
+        BROAD_STATE_SOURCE_SCOUT_INVARIANTS_PATH,
+        BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH,
+        BROAD_STATE_SOURCE_SCOUT_DIR / "broad_state_by_state_source_scout_candidates.csv",
+        BROAD_STATE_SOURCE_SCOUT_DIR / "next_broad_state_candidate_review_prompt.md",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    decision = read_json(BROAD_STATE_SOURCE_SCOUT_DECISION_PATH)
+    invariants = read_json(BROAD_STATE_SOURCE_SCOUT_INVARIANTS_PATH)
+    if not (
+        decision.get("decision") == "broad_state_by_state_source_scout_completed_candidate_review_ready"
+        and decision.get("locked_target_count") == 490
+        and decision.get("candidate_review_ready_next") is True
+        and decision.get("verification_ready_next") is False
+        and decision.get("dashboard_map_filter") == "total_scout_coverage_only"
+        and decision.get("global_analysis_readiness") is False
+        and decision.get("raw_prompts_saved") == 0
+        and decision.get("raw_responses_saved") == 0
+        and decision.get("direct_url_opens") == 0
+        and decision.get("downloads") == 0
+        and invariants.get("all_invariants_passed") is True
+    ):
+        raise ValueError("broad state source scout package fails dashboard gates")
+    return True, decision
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -4783,6 +4827,37 @@ def build_reports_index_layer(
         },
         *historical_reports,
     ]
+    broad_completed, broad = broad_state_source_scout_status()
+    if broad_completed:
+        published_reports.insert(
+            1,
+            {
+                "id": "broad-state-source-scout-wave-2026-07-27",
+                "title": "Broad State-by-State Source Scout Wave",
+                "report_type": "Current discovery operations report",
+                "date": "2026-07-27",
+                "checkpoint": (
+                    f"{broad['locked_target_count']} locked targets; "
+                    f"{broad['parseable_target_count']} parseable municipality outcomes"
+                ),
+                "summary": (
+                    "The broad geographic and source-family-diverse discovery wave is "
+                    "complete. Candidate locators remain unverified discovery metadata; "
+                    "candidate review is required before reachability verification."
+                ),
+                "tags": ["broad scout", "state balance", "source-family diversity", "candidate review"],
+                "current": False,
+                "historical": False,
+                "href": repository_root_url
+                + "docs/analysis/broad_state_by_state_source_scout_wave_result_2026-07-27.md",
+                "link_label": "Open broad scout operations report",
+                "scope_metrics": [
+                    {"label": "locked targets", "value": broad["locked_target_count"]},
+                    {"label": "parseable municipalities", "value": broad["parseable_target_count"]},
+                    {"label": "candidate rows", "value": broad["candidate_count"]},
+                ],
+            },
+        )
 
     return {
         "schema_version": source_index.get("schema_version", "1.0.0"),
@@ -4859,6 +4934,17 @@ def build_state_summary(
         raise ValueError("Tier C dashboard map date must be 2026-07-27")
     if sum(as_int(row["tier_c_retained_source_count"]) for row in tier_c_state_rows) != 463:
         raise ValueError("Tier C dashboard map retained-source count must reconcile to 463")
+    broad_completed, broad_decision = broad_state_source_scout_status()
+    broad_by_state: dict[str, dict[str, str]] = {}
+    if broad_completed:
+        broad_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
+        if len(broad_rows) != 51:
+            raise ValueError("broad scout state coverage must contain 50 states plus DC")
+        broad_by_state = {row["state"]: row for row in broad_rows}
+        if sum(as_int(row["parseable_new_municipality_count"]) for row in broad_rows) != as_int(
+            broad_decision.get("parseable_target_count")
+        ):
+            raise ValueError("broad scout parseable state coverage does not reconcile")
     claim_ids_by_state: dict[str, set[str]] = defaultdict(set)
     for row in claim_rows:
         for state in split_semicolon(row.get("states_in_scope", "")):
@@ -4880,11 +4966,22 @@ def build_state_summary(
             raise ValueError(f"Unknown state abbreviation in coverage table: {state}")
 
         universe = as_int(row["municipalities_in_universe"])
-        covered = as_int(row["municipalities_scouted"])
-        candidate_positive = as_int(row["municipalities_scouted_with_candidates"])
-        no_candidate = as_int(row["municipalities_scouted_no_candidates"])
-        failure_only = as_int(row["municipalities_scout_attempt_failed_connection"])
-        candidate_rows = as_int(row["candidate_rows_total"])
+        broad = broad_by_state.get(state, {})
+        covered = as_int(row["municipalities_scouted"]) + as_int(
+            broad.get("parseable_new_municipality_count")
+        )
+        candidate_positive = as_int(row["municipalities_scouted_with_candidates"]) + as_int(
+            broad.get("candidate_positive_new_municipality_count")
+        )
+        no_candidate = as_int(row["municipalities_scouted_no_candidates"]) + as_int(
+            broad.get("no_candidate_new_municipality_count")
+        )
+        failure_only = as_int(row["municipalities_scout_attempt_failed_connection"]) + as_int(
+            broad.get("failed_or_stopped_target_count")
+        )
+        candidate_rows = as_int(row["candidate_rows_total"]) + as_int(
+            broad.get("candidate_row_count")
+        )
         likely_sets = as_int(row["municipalities_with_likely_triad"])
         high_priority = as_int(row["high_priority_candidate_rows"])
         tier_c = tier_c_by_state.get(state, {})
@@ -5006,6 +5103,8 @@ def build_state_summary(
             "current_map_layer": "total_scout_coverage_only",
             "current_map_layer_boundary": "Total local scout coverage only; not national representativeness and not a wage or causal result.",
             "global_analysis_readiness": False,
+            "broad_state_source_scout_included": broad_completed,
+            "broad_state_source_scout_decision": broad_decision.get("decision") if broad_completed else None,
         },
         "metric_definition": {
             "evidence_readiness_score": (
@@ -5015,7 +5114,11 @@ def build_state_summary(
                 "and 10 for prior claim-registry context. It is not evidence strength "
                 "and cannot make a state claim-ready."
             ),
-            "total_scout_coverage_count": "Count of municipalities with a parseable local scout outcome in the committed coverage ledger.",
+            "total_scout_coverage_count": (
+                "Count of municipalities with a parseable local scout outcome in the canonical "
+                "coverage ledger plus any completed, committed broad-wave overlay recognized by "
+                "the dashboard's fail-closed package gate."
+            ),
             "map_color_metric": "total_scout_coverage_count",
         },
         "totals": {
@@ -7157,6 +7260,18 @@ def build_project_phase_summary(
     tier_c_supplement_completed, tier_c_supplement = bounded_tier_c_evidence_memo_supplement_status()
     if not tier_c_supplement_completed:
         raise ValueError("current dashboard phase requires completed bounded Tier C memo supplement")
+    broad_scout_completed, broad_scout = broad_state_source_scout_status()
+    if broad_scout_completed:
+        broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
+        covered += as_int(broad_scout["parseable_target_count"])
+        positive += sum(
+            as_int(row["candidate_positive_new_municipality_count"])
+            for row in broad_state_rows
+        )
+        failure_only += as_int(broad_scout["locked_target_count"]) - as_int(
+            broad_scout["parseable_target_count"]
+        )
+    remaining = max(SCOUT_CHECKPOINT_TARGET - covered, 0)
     mechanism = read_json(
         TARGETED_TIER_C_VERIFICATION_FROM_MEMO_GAPS_DIR
         / "targeted_tier_c_verification_mechanism_gap_coverage_summary.json"
@@ -7168,9 +7283,19 @@ def build_project_phase_summary(
     return {
         **metadata,
         "data_vintage": "2026-07-27",
-        "stage": "bounded_tier_c_evidence_memo_supplement_complete_broad_scout_transition",
-        "current_phase": "Tier C evidence memo supplement complete; broad state-by-state scouting ready next",
-        "current_phase_code": tier_c_supplement["decision"],
+        "stage": (
+            "broad_state_by_state_source_scout_complete_candidate_review_transition"
+            if broad_scout_completed
+            else "bounded_tier_c_evidence_memo_supplement_complete_broad_scout_transition"
+        ),
+        "current_phase": (
+            "Broad state-by-state source discovery complete; candidate review ready next"
+            if broad_scout_completed
+            else "Tier C evidence memo supplement complete; broad state-by-state scouting ready next"
+        ),
+        "current_phase_code": (
+            broad_scout["decision"] if broad_scout_completed else tier_c_supplement["decision"]
+        ),
         "current_evidence_status": "bounded_tier_c_documentary_memo_supplement_and_colocation_scaffolds_only",
         "global_analysis_readiness": False,
         "wage_gap_estimates_available": False,
@@ -7237,10 +7362,29 @@ def build_project_phase_summary(
         "future_summary_reconstruction_fallback_created": True,
         "future_scout_default": "broad_state_by_state_geographic_and_source_family_diverse",
         "mechanism_targeted_scouting_role": "secondary_gap_filling_after_broad_scans",
+        "broad_state_source_scout_completed": broad_scout_completed,
+        "broad_state_source_scout_decision": broad_scout.get("decision") if broad_scout_completed else None,
+        "broad_state_source_scout_locked_target_count": broad_scout.get("locked_target_count") if broad_scout_completed else None,
+        "broad_state_source_scout_parseable_target_count": broad_scout.get("parseable_target_count") if broad_scout_completed else None,
+        "broad_state_source_scout_candidate_count": broad_scout.get("candidate_count") if broad_scout_completed else None,
+        "broad_state_source_scout_deduped_candidate_count": broad_scout.get("deduped_candidate_count") if broad_scout_completed else None,
+        "broad_state_source_scout_source_family_distribution": broad_scout.get("source_family_distribution") if broad_scout_completed else None,
+        "broad_state_source_scout_result_path": (
+            "docs/analysis/broad_state_by_state_source_scout_wave_result_2026-07-27.md"
+            if broad_scout_completed else None
+        ),
         "current_report_title": "Bounded Tier C Evidence Memo Supplement",
         "current_report_path": "docs/analysis/compensation_extraction/BOUNDED-TIER-C-EVIDENCE-MEMO-SUPPLEMENT-140-RATING-SUMMARY-2026-07-27/bounded_tier_c_evidence_memo_supplement.md",
-        "current_operational_report_path": "docs/analysis/bounded_tier_c_evidence_memo_supplement_result_2026-07-27.md",
-        "next_task": "broad state-by-state scouting with geographic and source-family balance",
+        "current_operational_report_path": (
+            "docs/analysis/broad_state_by_state_source_scout_wave_result_2026-07-27.md"
+            if broad_scout_completed
+            else "docs/analysis/bounded_tier_c_evidence_memo_supplement_result_2026-07-27.md"
+        ),
+        "next_task": (
+            "bounded candidate review of broad state-by-state discovery metadata"
+            if broad_scout_completed
+            else "broad state-by-state scouting with geographic and source-family balance"
+        ),
         "checkpoint_target_scout_covered": SCOUT_CHECKPOINT_TARGET,
         "current_scout_covered": covered,
         "remaining_to_checkpoint": remaining,
@@ -7255,7 +7399,10 @@ def build_project_phase_summary(
         "full_150_row_waves_to_reach_or_exceed_checkpoint": math.ceil(
             remaining / COORDINATED_WAVE_SIZE
         ),
-        "current_candidate_queue_rows": len(queue_rows),
+        "current_candidate_queue_rows": (
+            len(queue_rows) + as_int(broad_scout.get("candidate_count"))
+            if broad_scout_completed else len(queue_rows)
+        ),
         "current_candidate_positive_municipalities": positive,
         "current_failure_only_municipalities": failure_only,
         "next_planned_round": {
@@ -13657,6 +13804,13 @@ def main() -> int:
     if tier_c_completed:
         data_vintage = max(data_vintage, "2026-07-27")
     source_paths = REQUIRED_PATHS + OPTIONAL_PATHS
+    broad_scout_completed, _ = broad_state_source_scout_status()
+    if broad_scout_completed:
+        source_paths = source_paths + [
+            BROAD_STATE_SOURCE_SCOUT_DECISION_PATH,
+            BROAD_STATE_SOURCE_SCOUT_INVARIANTS_PATH,
+            BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH,
+        ]
     metadata = base_metadata(
         timestamp=timestamp,
         source_paths=source_paths,

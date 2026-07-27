@@ -1,0 +1,13 @@
+{
+  "current_total_candidate_rows": 6027,
+  "current_total_scout_covered_municipalities": 2922,
+  "dashboard_updated": true,
+  "global_analysis_readiness": false,
+  "map_data_date": "2026-07-27",
+  "map_filter": "total_scout_coverage_only",
+  "new_candidate_rows": 1301,
+  "new_parseable_municipalities": 486,
+  "prior_candidate_rows": 4726,
+  "prior_scout_covered_municipalities": 2436,
+  "result_path": "docs/analysis/broad_state_by_state_source_scout_wave_result_2026-07-27.md"
+}

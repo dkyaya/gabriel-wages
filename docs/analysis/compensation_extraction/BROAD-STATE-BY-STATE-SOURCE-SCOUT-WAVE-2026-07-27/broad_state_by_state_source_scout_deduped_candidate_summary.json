@@ -1,0 +1,17 @@
+{
+  "all_candidates_not_verified": true,
+  "candidate_count": 1301,
+  "candidate_quality_tiers": {
+    "duplicate_or_prior_seen": 82,
+    "high_candidate": 164,
+    "low_candidate": 367,
+    "medium_candidate": 313,
+    "out_of_scope": 14,
+    "weak_or_needs_review": 361
+  },
+  "candidate_review_queue_count": 1205,
+  "deduped_candidate_count": 1219,
+  "duplicate_or_prior_seen_count": 82,
+  "global_analysis_readiness": false,
+  "scope": "deduped_new_locator_candidates"
+}

@@ -1,0 +1,16 @@
+{
+  "candidate_count": 1301,
+  "direct_url_opens": 0,
+  "downloads": 0,
+  "failed_target_count": 4,
+  "global_analysis_readiness": false,
+  "live_backend": "direct-sdk",
+  "live_status": "completed",
+  "locked_target_count": 490,
+  "model": "gpt-5.4-nano",
+  "parseable_target_count": 486,
+  "raw_prompts_saved": 0,
+  "raw_responses_saved": 0,
+  "response_rows": 490,
+  "verification_head_get_requests": 0
+}

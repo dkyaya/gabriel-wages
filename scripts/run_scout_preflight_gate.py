@@ -78,7 +78,7 @@ def validate_args(args: argparse.Namespace) -> None:
 
 def plan(args: argparse.Namespace) -> dict[str, Any]:
     calls = [
-        {"call": 1, "name": "no_search_control", "search": False, "prompt": "Reply with OK."},
+        {"call": 1, "name": "no_search_control", "search": False},
         {"call": 2, "name": "hosted_search_trivial_public_query", "search": True},
         {"call": 3, "name": "hosted_search_municipality_style_query", "search": True},
     ]
@@ -124,6 +124,7 @@ def command_preview(args: argparse.Namespace) -> list[list[str]]:
         "--timeout", str(args.timeout),
         "--search-context-size", args.search_context_size,
         "--max-calls", "3",
+        "--metadata-only",
     ]]
     if args.include_one_row_probe:
         commands.append([
@@ -136,6 +137,7 @@ def command_preview(args: argparse.Namespace) -> list[list[str]]:
             "--sleep-between-prompts", "5", "--timeout", "90",
             "--direct-sdk-max-retries", "0",
             "--cost-log-path", str(args.probe_output_dir / "batch_cost_log.csv"),
+            "--sanitized-artifacts-only",
         ])
     return commands
 

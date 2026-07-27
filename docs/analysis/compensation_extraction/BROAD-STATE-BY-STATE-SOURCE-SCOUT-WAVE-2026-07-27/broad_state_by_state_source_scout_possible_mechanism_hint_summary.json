@@ -1,0 +1,10 @@
+{
+  "candidate_rows_with_possible_hints": 703,
+  "hint_counts": {
+    "fiscal_constraint_signal": 39,
+    "market_or_comparability_pressure": 52,
+    "non_safety_constraint_signal": 546,
+    "strike_or_no_strike_constraint": 160
+  },
+  "hints_are_post_discovery_metadata_not_ratings": true
+}

@@ -1,0 +1,5 @@
+region,locked_target_count,parseable_new_municipality_count,candidate_positive_new_municipality_count,no_candidate_new_municipality_count,failed_or_stopped_target_count,candidate_row_count
+Midwest,123,123,100,23,0,304
+Northeast,90,88,87,1,2,312
+South,160,158,144,14,2,377
+West,117,117,108,9,0,308

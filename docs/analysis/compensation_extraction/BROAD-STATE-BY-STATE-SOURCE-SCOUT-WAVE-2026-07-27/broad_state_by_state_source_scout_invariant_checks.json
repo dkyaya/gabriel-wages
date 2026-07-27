@@ -1,0 +1,18 @@
+{
+  "all_invariants_passed": true,
+  "candidate_outputs_discovery_metadata_only": true,
+  "candidate_schema_stable": true,
+  "dashboard_map_total_scout_coverage_only": true,
+  "dashboard_updated": true,
+  "direct_url_open_zero": true,
+  "download_zero": true,
+  "global_analysis_readiness_false": true,
+  "head_get_verification_zero": true,
+  "locked_queue_count_490": true,
+  "partial_outputs_cannot_masquerade_as_complete": true,
+  "raw_prompts_saved_zero": true,
+  "raw_responses_saved_zero": true,
+  "source_family_diversification_explicit": true,
+  "source_review_extraction_rating_ingestion_codification_zero": true,
+  "state_balanced_not_mechanism_targeted": true
+}

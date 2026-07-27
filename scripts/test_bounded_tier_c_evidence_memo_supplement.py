@@ -89,10 +89,15 @@ def main() -> None:
     assert complete and dashboard_decision["decision"] == runner.DECISION
     phase = json.loads((ROOT / "docs/dashboard/data/project_phase_summary.json").read_text())
     state = json.loads((ROOT / "docs/dashboard/data/state_summary.json").read_text())
-    assert phase["current_phase_code"] == runner.DECISION
+    assert phase["current_phase_code"] in {
+        runner.DECISION,
+        "broad_state_by_state_source_scout_completed_candidate_review_ready",
+    }
     assert phase["tier_c_memo_supplement_valid_scope"] == 140
     assert phase["tier_c_memo_supplement_quarantines_excluded"] == 19
-    assert phase["next_task"].startswith("broad state-by-state scouting")
+    assert phase["next_task"].startswith(
+        ("broad state-by-state scouting", "bounded candidate review")
+    )
     assert phase["global_analysis_readiness"] is False
     assert state["metadata"]["current_map_layer"] == "total_scout_coverage_only"
     assert state["metric_definition"]["map_color_metric"] == "total_scout_coverage_count"

@@ -1,0 +1,23 @@
+{
+  "cba_concentration": 0.260049,
+  "cba_count": 317,
+  "deduped_candidate_count": 1219,
+  "non_cba_count": 902,
+  "source_family_distribution": {
+    "agenda_packet_or_minutes": 71,
+    "arbitration_award": 67,
+    "budget_or_pay_plan": 202,
+    "cba": 317,
+    "civil_service_or_hr_pay_plan": 66,
+    "classification_study": 13,
+    "compensation_study": 14,
+    "factfinding_report": 3,
+    "mou_or_memorandum": 93,
+    "other_local_government_pay_policy": 99,
+    "personnel_policy": 61,
+    "salary_ordinance": 9,
+    "settlement_agreement": 4,
+    "unknown_or_needs_review": 41,
+    "wage_schedule": 159
+  }
+}

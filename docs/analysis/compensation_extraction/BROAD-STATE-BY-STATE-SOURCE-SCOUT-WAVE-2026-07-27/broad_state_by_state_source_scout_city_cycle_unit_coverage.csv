@@ -1,0 +1,1086 @@
+state,region,municipality,possible_cycle_or_year,unit_type,candidate_count,verification_status
+AK,West,Cordova,unclear (packet references an approving resolution; no attached full CBA text found in the packet content),non_safety,1,not_verified
+AK,West,Cordova,"unclear (resolution states original effectiveness May 1, 2019–Dec 31, 2021 and continuation through Dec 31, 2023, but does not provide full CBA terms/wage schedule)",non_safety,1,not_verified
+AK,West,Dillingham,"Effective July 1, 2025 (FY2026 salary schedule)",unclear,1,not_verified
+AK,West,Dillingham,"July 1, 2019 through June 30, 2022",unknown,1,not_verified
+AK,West,Dillingham,"July 1, 2022 through June 30, 2025 (effective July 1, 2022; duration clause indicates in effect May 1, 2023 through June 30, 2025)",police,1,not_verified
+AK,West,Dillingham,"July 1, 2025 through June 30, 2028 (wage increases authorized in resolution: 0% on July 1, 2025; 1% on July 1, 2026; 2% on July 1, 2027)",non_safety,1,not_verified
+AK,West,Dillingham,Resolution 2022-25 (personnel regulations attachment; no separate duration clause captured in extracted text),unclear,1,not_verified
+AK,West,Houston,unclear,unclear,2,not_verified
+AK,West,Kotzebue,unclear,non_safety,1,not_verified
+AK,West,Kotzebue,unclear,unclear,4,not_verified
+AK,West,Nome,"January 1, 2022 through December 31, 2024 (operative duration language also references continuation thereafter unless notice to amend; signing/ratification shown as 2022)",police,1,not_verified
+AK,West,Nome,"January 1, 2025 through December 31, 2026",police,1,not_verified
+AK,West,North Pole,unclear,non_safety,1,not_verified
+AK,West,Seward,2026 pay plan (operative year referenced; attached pay plan text not retrievable from this source during scouting),unclear,1,not_verified
+AK,West,Seward,"January 1, 2026 – December 31, 2028",unclear,1,not_verified
+AK,West,Seward,unclear,unclear,1,not_verified
+AK,West,Unalaska,"Jan 1, 2025 – June 30, 2026",fire,1,not_verified
+AK,West,Unalaska,"July 1, 2024 through June 30, 2027",police,1,not_verified
+AK,West,Unalaska,"July 1, 2025 - June 30, 2028",non_safety,1,not_verified
+AK,West,Unalaska,unclear,unclear,2,not_verified
+AK,West,Valdez,unclear,fire,1,not_verified
+AK,West,Wrangell,"July 1, 2017 - June 30, 2020",non_safety,1,not_verified
+AK,West,Wrangell,"July 1, 2021 - June 30, 2024",non_safety,1,not_verified
+AK,West,Wrangell,unclear,unclear,1,not_verified
+AL,South,Alabaster,unclear,non_safety,1,not_verified
+AL,South,Athens,unclear,non_safety,2,not_verified
+AL,South,Athens,unclear,unclear,1,not_verified
+AL,South,Bessemer,unclear,non_safety,1,not_verified
+AL,South,Bessemer,unclear,unclear,1,not_verified
+AL,South,Daphne,unclear,non_safety,3,not_verified
+AL,South,Daphne,unclear,unclear,1,not_verified
+AL,South,Fairhope,unclear,unclear,2,not_verified
+AL,South,Gadsden,unclear,non_safety,1,not_verified
+AL,South,Gadsden,unclear,unclear,1,not_verified
+AL,South,Homewood,unclear,non_safety,1,not_verified
+AL,South,Northport,unclear,non_safety,1,not_verified
+AL,South,Opelika,unclear,unclear,1,not_verified
+AL,South,Pelham,unclear,non_safety,2,not_verified
+AL,South,Pelham,unclear,unclear,2,not_verified
+AR,South,Bella Vista,unclear,non_safety,1,not_verified
+AR,South,Bella Vista,unclear,police,1,not_verified
+AR,South,Bryant,"2022 (ordinance passed May 31, 2022) plus included 2022 approved pay tables (exact pay-table effective period not explicitly stated in the captured text)",fire,1,not_verified
+AR,South,Centerton,"unclear (visible operative text references “effective January 1, 2013” and ordinance years; no CBA duration clause present)",fire,1,not_verified
+AR,South,El Dorado,unclear,unclear,2,not_verified
+AR,South,El Dorado,unknown,unknown,1,not_verified
+AR,South,Jacksonville,unclear,non_safety,2,not_verified
+AR,South,Jacksonville,unclear,police,1,not_verified
+AR,South,Maumelle,unclear (budget year appears to be 2025; no CBA duration clause located),fire,1,not_verified
+AR,South,Maumelle,unclear (rules/regulations document; not a labor CBA; operative period not framed as a contract term in the available snippet),unclear,1,not_verified
+AR,South,Searcy,unclear,non_safety,1,not_verified
+AR,South,Searcy,unclear,unclear,1,not_verified
+AR,South,Siloam Springs,unclear,fire,1,not_verified
+AR,South,Siloam Springs,unclear,non_safety,3,not_verified
+AR,South,Siloam Springs,unclear,police,1,not_verified
+AR,South,Van Buren,unclear,police,1,not_verified
+AR,South,Van Buren,unclear,unclear,1,not_verified
+AR,South,West Memphis,unclear,non_safety,1,not_verified
+AR,South,West Memphis,unclear,unclear,1,not_verified
+AZ,West,Apache Junction,Fiscal Year 2022-2023,non_safety,1,not_verified
+AZ,West,Apache Junction,Fiscal Year 2025-2026,police,1,not_verified
+AZ,West,Apache Junction,Fiscal Year 2026-2027,police,1,not_verified
+AZ,West,Apache Junction,unclear,fire,1,not_verified
+AZ,West,Apache Junction,unclear,non_safety,1,not_verified
+AZ,West,Apache Junction,unclear,police,1,not_verified
+AZ,West,Apache Junction,unclear,unclear,1,not_verified
+AZ,West,Bullhead City,2024-07-01 through 2027-06-30 (term clause); plus potential holdover/successor conditions,police,1,not_verified
+AZ,West,El Mirage,"July 1, 2024 through June 30, 2026",fire,1,not_verified
+AZ,West,El Mirage,"July 1, 2025 through June 30, 2028",police,1,not_verified
+AZ,West,Kingman,unclear,non_safety,1,not_verified
+AZ,West,Kingman,unclear,police,1,not_verified
+AZ,West,Oro Valley,2025–2026,non_safety,1,not_verified
+AZ,West,Oro Valley,"FY 2026–2027 (effective date shown: Town of Oro Valley June 28, 2026)",police,1,not_verified
+AZ,West,Oro Valley,"June 19, 2022–June 30, 2025; July 1, 2025–June 30, 2029",police,1,not_verified
+AZ,West,Oro Valley,unclear,unclear,1,not_verified
+AZ,West,Prescott Valley,FY 2022-23 (operative duration clause not extracted),police,1,not_verified
+AZ,West,Prescott Valley,unclear,non_safety,1,not_verified
+AZ,West,Prescott Valley,unclear,unclear,1,not_verified
+AZ,West,Sahuarita,unclear,non_safety,1,not_verified
+AZ,West,Sahuarita,unclear,police,2,not_verified
+AZ,West,San Luis,unclear,unclear,2,not_verified
+AZ,West,Sierra Vista,FY 23 (operates as fiscal-year pay plans; duration clause text not inspected),non_safety,1,not_verified
+AZ,West,Sierra Vista,unclear,fire,2,not_verified
+AZ,West,Sierra Vista,unclear,police,1,not_verified
+AZ,West,Sierra Vista,unclear,unclear,1,not_verified
+CA,West,Agoura Hills,unclear (no CBA/MOU term identified in accessible snippet),non_safety,1,not_verified
+CA,West,Albany,"FY 2023-24, FY 2024-25, FY 2025-26 (effective 10/13/2025 shown on document)",unclear,1,not_verified
+CA,West,Albany,"January 1, 2024–December 31, 2027",fire,1,not_verified
+CA,West,Albany,"January 2, 2024–September 30, 2026",non_safety,1,not_verified
+CA,West,Albany,"November 1, 2024–October 31, 2028",police,1,not_verified
+CA,West,Chowchilla,"July 1, 2022 through June 30, 2025",non_safety,1,not_verified
+CA,West,Chowchilla,"July 1, 2025 through June 30, 2028",police,1,not_verified
+CA,West,Chowchilla,unclear,non_safety,1,not_verified
+CA,West,Galt,"Effective July 1, 2026 (MOU reference to eff. 7/1/25; no explicit end date in visible salary schedule content)",non_safety,1,not_verified
+CA,West,Galt,"Effective July 1, 2026 (no end date found in document content)",police,1,not_verified
+CA,West,Galt,"July 1, 2025 through June 30, 2027 (term language appears in indexed snippet; full document could not be fetched)",police,1,not_verified
+CA,West,Galt,"July 1, 2025 through June 30, 2028 (term language in side letter)",non_safety,1,not_verified
+CA,West,Galt,"Policy manual revisions; last revision entries include 2025-47, 2025-61, 2025-93, 2026-15, 2026-53",non_safety,1,not_verified
+CA,West,Imperial Beach,"Effective July 1, 2026 – June 30, 2027",non_safety,1,not_verified
+CA,West,Imperial Beach,"July 1, 2025 – June 30, 2027",fire,1,not_verified
+CA,West,Imperial Beach,"July 1, 2025 – June 30, 2027",non_safety,1,not_verified
+CA,West,Imperial Beach,unclear,unknown,1,not_verified
+CA,West,Laguna Beach,Effective 7/1/2025 (and includes sections effective 1/1/2026 for some units); year references are within the salary schedule PDF,non_safety,1,not_verified
+CA,West,Laguna Beach,"Effective January 1, 2025 through June 30, 2027 (modifies EPP payment; “life of the current MOU which expires on June 30, 2027”)",fire,1,not_verified
+CA,West,Laguna Beach,"July 1, 2024 - June 30, 2027",fire,1,not_verified
+CA,West,Laguna Beach,"July 1, 2024 until June 30, 2026",police,1,not_verified
+CA,West,Laguna Beach,"July 1, 2025 – September 30, 2026 (term shown in search snippet; full content could not be retrieved due to access restriction)",non_safety,1,not_verified
+CA,West,Orinda,"July 1, 2025 - June 30, 2029",non_safety,1,not_verified
+CA,West,Orinda,unclear,fire,1,not_verified
+CA,West,Orinda,unclear,non_safety,1,not_verified
+CA,West,Orinda,unclear,police,1,not_verified
+CA,West,Seal Beach,"July 1, 2023 through June 30, 2025 (plus potential extension if both parties concur in writing)",police,1,not_verified
+CA,West,Seal Beach,"June 30, 2023 (expiration visible); start/effective date unclear from accessible snippet",police,1,not_verified
+CA,West,Seal Beach,"Unclear from document (shows effective date January 1, 2021; not a CBA term)",non_safety,1,not_verified
+CA,West,South El Monte,2020-07-01 (effective); 2021-01-01 (salary schedule); 2021-07-01 (effective); 2022-01-01 (part-time effective) (operative dates shown in document),non_safety,1,not_verified
+CA,West,South El Monte,unclear,non_safety,1,not_verified
+CA,West,Yucca Valley,unclear,non_safety,1,not_verified
+CA,West,Yucca Valley,unclear,unknown,1,not_verified
+CO,West,Castle Rock,unclear,non_safety,1,not_verified
+CO,West,Castle Rock,unclear,unclear,1,not_verified
+CO,West,Commerce City,"January 1, 2023 – December 31, 2024",non_safety,1,not_verified
+CO,West,Commerce City,"Two years; expires December 31, 2025 (exact start year not shown in snippet)",police,1,not_verified
+CO,West,Commerce City,unclear,police,1,not_verified
+CO,West,Englewood,"January 1, 2025 – December 31, 2026",non_safety,1,not_verified
+CO,West,Englewood,"January 1, 2025 – December 31, 2026",police,1,not_verified
+CO,West,Englewood,unclear,unclear,1,not_verified
+CO,West,Evans,2026 (pay plan; duration clause not identified),non_safety,1,not_verified
+CO,West,Evans,unclear,unclear,1,not_verified
+CO,West,Fountain,unclear,unclear,2,not_verified
+CO,West,Lafayette,2026 (pay plan year; wage schedule/compensation ranges),non_safety,1,not_verified
+CO,West,Lafayette,"3 years (per chapter term language, per snippet evidence)",fire,1,not_verified
+CO,West,Lafayette,3 years (per ordinance duration clause),police,1,not_verified
+CO,West,Montrose,2010 (operative adoption year; wage/CBA duration unclear),unclear,1,not_verified
+CO,West,Montrose,unclear,non_safety,1,not_verified
+CO,West,Northglenn,"2024 pay plan (effective Dec. 16, 2023) with exhibits listing classification pay ranges for multiple non-safety positions",non_safety,1,not_verified
+CO,West,Northglenn,"2026 pay plan (effective Dec. 12, 2025); step plan for sworn police listed within the adopted pay plan",police,1,not_verified
+CO,West,Parker,2025 (adopted budget year),police,1,not_verified
+CO,West,Parker,2026 (adopted budget year),police,1,not_verified
+CO,West,Parker,unclear,non_safety,1,not_verified
+CO,West,Parker,unclear,unclear,1,not_verified
+CT,Northeast,East Hartford,"July 1, 2021 - June 30, 2025",non_safety,1,not_verified
+CT,Northeast,East Hartford,"July 1, 2021 - June 30, 2025",police,1,not_verified
+CT,Northeast,East Hartford,"July 1, 2022 - June 30, 2026",fire,1,not_verified
+CT,Northeast,East Hartford,unclear,non_safety,1,not_verified
+CT,Northeast,East Hartford,unclear,unclear,1,not_verified
+CT,Northeast,Enfield,"July 1, 2022 - June 30, 2024",police,1,not_verified
+CT,Northeast,Enfield,"July 1, 2022 - June 30, 2025",non_safety,1,not_verified
+CT,Northeast,Enfield,"July 1, 2024 - June 30, 2028",non_safety,1,not_verified
+CT,Northeast,Fairfield,"July 1, 2022 to June 30, 2025",police,1,not_verified
+CT,Northeast,Fairfield,"Through June 30, 2021",fire,1,not_verified
+CT,Northeast,Fairfield,unclear,non_safety,2,not_verified
+CT,Northeast,Greenwich,"July 1, 2021 - June 30, 2024",police,1,not_verified
+CT,Northeast,Greenwich,"Term commencing retroactively July 1, 2023 and terminating June 30, 2026",non_safety,1,not_verified
+CT,Northeast,Greenwich,"Term terminates June 30, 2019 (effective date language references commencement as of approvals; duration clause present)",fire,1,not_verified
+CT,Northeast,Groton,"July 1, 2023 - June 30, 2026",non_safety,2,not_verified
+CT,Northeast,Groton,"July 1, 2025 - June 30, 2029",fire,1,not_verified
+CT,Northeast,Groton,"July 1, 2025 - June 30, 2029",police,1,not_verified
+CT,Northeast,Hamden,2022-2025,fire,1,not_verified
+CT,Northeast,Hamden,2024-2028,non_safety,1,not_verified
+CT,Northeast,Hamden,"July 1, 2024 - June 30, 2028",police,1,not_verified
+CT,Northeast,Hamden,unclear,unclear,1,not_verified
+CT,Northeast,Southington,2021 to 2025 (exact span requires inspection for precise start/end dates),fire,1,not_verified
+CT,Northeast,Southington,"July 1, 2021 to June 30, 2025",police,1,not_verified
+CT,Northeast,Southington,"July 1, 2022 to June 30, 2026",non_safety,1,not_verified
+CT,Northeast,Stratford,7/1/2021-6/30/2025 (visible in document list name; contract text not verified),police,1,not_verified
+CT,Northeast,Stratford,unclear,fire,1,not_verified
+CT,Northeast,Trumbull,2019-2023,police,1,not_verified
+CT,Northeast,Trumbull,2022-2026,fire,1,not_verified
+CT,Northeast,Trumbull,2025-2029,non_safety,1,not_verified
+CT,Northeast,Trumbull,"July 1, 2022 to June 30, 2026",non_safety,1,not_verified
+CT,Northeast,Trumbull,unclear,police,1,not_verified
+CT,Northeast,Wallingford,"2018-2021 (duration specified: July 1, 2018 to June 30, 2021)",police,1,not_verified
+CT,Northeast,Wallingford,"unclear (document shows effective period 'until June 30, ____' and references 1998 / 2003 / 2008, but operative end-year text is not fully legible in extracted lines)",non_safety,1,not_verified
+DE,South,Camden,unclear,police,1,not_verified
+DE,South,Camden,unclear,unclear,1,not_verified
+DE,South,Elsmere,unclear,police,1,not_verified
+DE,South,Elsmere,unclear,unclear,2,not_verified
+DE,South,Harrington,unclear,non_safety,1,not_verified
+DE,South,Harrington,unclear,unclear,1,not_verified
+DE,South,Laurel,unclear,unknown,2,not_verified
+DE,South,Milton,2025 (MOU term/date evidence appears in document but not fully extractable from visible text snippet),police,1,not_verified
+DE,South,Milton,unclear,unclear,1,not_verified
+DE,South,Milton,unclear (code section; not a CBA term),non_safety,1,not_verified
+DE,South,New Castle,"July 1, 2024 through June 30, 2028",police,1,not_verified
+DE,South,New Castle,"July 1, 2026 through June 30, 2031",non_safety,1,not_verified
+DE,South,New Castle,"November 1, 2024 through June 30, 2026",non_safety,1,not_verified
+FL,South,Atlantic Beach,2019-2022 contract (amendment; contract expires 9/30/2022),police,1,not_verified
+FL,South,Atlantic Beach,effective 10/1/2025 - 9/30/2028 (three-year agreement),police,1,not_verified
+FL,South,Florida City,unclear,unclear,2,not_verified
+FL,South,Key Biscayne,2020-2023,police,1,not_verified
+FL,South,Key Biscayne,2020-2023 (referenced),non_safety,1,not_verified
+FL,South,Key Biscayne,"October 1, 2020 through September 30, 2023 (referenced governing CBA term)",fire,1,not_verified
+FL,South,Lake City,"October 1, 2021 through September 30, 2024",police,1,not_verified
+FL,South,Lake City,"October 1, 2023 through September 30, 2026",fire,1,not_verified
+FL,South,Lantana,2023-2026 (operative terms show 10/01/2023–09/30/2026),police,1,not_verified
+FL,South,Lantana,"unclear (contract period referenced, but full operative CBA text not included here)",police,1,not_verified
+FL,South,Miami Springs,FY 2023-24 (effective/operative for the fiscal year; year stated as FY 2023-24 / 10/12/2023 in document),non_safety,1,not_verified
+FL,South,Miami Springs,"Oct 1, 2021 – Sept 30, 2024",police,1,not_verified
+FL,South,Miami Springs,unclear,non_safety,1,not_verified
+FL,South,North Palm Beach,10/1/2021-9/30/2024 (MOU term reference),police,1,not_verified
+FL,South,North Palm Beach,10/1/2024-9/30/2027,police,1,not_verified
+FL,South,North Palm Beach,"Effective Oct 1, 2025 (upon ratification) through Sep 30, 2028",non_safety,1,not_verified
+FL,South,North Palm Beach,Fiscal Year 2025 (FY25),non_safety,1,not_verified
+FL,South,North Palm Beach,In-force under CBA expiring 9/30/2027; MOU effective through 9/30/2027 (per packet attachment),fire,1,not_verified
+FL,South,South Daytona,10/1/2024 through 10/1/2024 (sheet indicates pay grade chart date range entries),non_safety,1,not_verified
+FL,South,South Daytona,"Effective October 1, 2020 through September 30, 2023 (per agreement duration clause text); additionally described as proposed in effect through September 30, 2026 (conflicting visible text within document set)",fire,1,not_verified
+FL,South,South Daytona,"next three years through September 30, 2026 (as stated in memorandum; binding CBA text not shown in the visible document excerpt)",police,1,not_verified
+FL,South,West Park,unclear,unknown,2,not_verified
+GA,South,Albany,unclear,non_safety,1,not_verified
+GA,South,Albany,unclear,unclear,1,not_verified
+GA,South,Alpharetta,unclear,police,1,not_verified
+GA,South,Alpharetta,unclear,unclear,1,not_verified
+GA,South,Brookhaven,"2019 (operative title indicates 'official 2019 list of authorized positions and salary ranges' and the ordinance is dated March 26, 2019; no multi-year duration clause found in excerpt)",police,1,not_verified
+GA,South,Brookhaven,"Unclear (policy manual appears to be effective as of Council Approved July 7, 2015; no contract term)",non_safety,1,not_verified
+GA,South,Dunwoody,unclear,police,2,not_verified
+GA,South,Johns Creek,unclear,unclear,2,not_verified
+GA,South,Johns Creek,unclear,unknown,1,not_verified
+GA,South,Mableton,unclear,non_safety,3,not_verified
+GA,South,Mableton,unclear,unclear,1,not_verified
+GA,South,Marietta,unclear,unclear,2,not_verified
+GA,South,Smyrna,unclear,unclear,2,not_verified
+GA,South,Stonecrest,unclear,unclear,1,not_verified
+GA,South,Stonecrest,unclear (no explicit CBA/MOU term; operative effective date not captured in visible excerpt),non_safety,1,not_verified
+GA,South,Stonecrest,unclear (ordinance adoption year not fully captured in visible excerpt),non_safety,1,not_verified
+GA,South,Stonecrest,unclear (references FY2024 budget; operative pay/classification actions are in Exhibit A which is not visible in excerpt),unclear,1,not_verified
+GA,South,Valdosta,"2016 (operative implementation details referenced, but no full pay/compensation matrices included in this minutes PDF)",unclear,1,not_verified
+GA,South,Valdosta,"Effective Date: May 17, 2021 (procedural policy; not a wage schedule/CBA)",fire,1,not_verified
+GA,South,Valdosta,unclear,non_safety,1,not_verified
+GA,South,Valdosta,unclear,unclear,1,not_verified
+IA,Midwest,Bondurant,unclear,unclear,2,not_verified
+IA,Midwest,Carroll,unclear,unclear,2,not_verified
+IA,Midwest,Fairfield,"2020-2021 (Fiscal Year 2020-2021; effective July 1, 2020 stated)",fire,1,not_verified
+IA,Midwest,Fairfield,"unclear (effective April 1, 2023 stated; no explicit end date found)",police,1,not_verified
+IA,Midwest,Fort Madison,"July 1, 2021 to June 30, 2024",police,1,not_verified
+IA,Midwest,Fort Madison,unclear,fire,2,not_verified
+IA,Midwest,Fort Madison,unclear,unclear,1,not_verified
+IA,Midwest,Grinnell,"July 1, 2024 to June 30, 2027 (operative duration stated in minutes; full CBA text not provided in this PDF)",police,1,not_verified
+IA,Midwest,Grinnell,unclear,non_safety,1,not_verified
+IA,Midwest,Grinnell,unclear (PDF retrieval succeeded but operative year text could not be extracted from tool output),police,1,not_verified
+IA,Midwest,Keokuk,unclear,fire,1,not_verified
+IA,Midwest,Keokuk,unclear,non_safety,1,not_verified
+IA,Midwest,Keokuk,unclear,police,1,not_verified
+IA,Midwest,Keokuk,unclear,unclear,1,not_verified
+IA,Midwest,Le Mars,unclear,police,1,not_verified
+IA,Midwest,Le Mars,unclear,unclear,1,not_verified
+IA,Midwest,Mount Pleasant,unclear,fire,1,not_verified
+IA,Midwest,Mount Pleasant,unclear,non_safety,1,not_verified
+IA,Midwest,Pleasant Hill,"July 1, 2026 through June 30, 2027",non_safety,1,not_verified
+IA,Midwest,Pleasant Hill,"unclear (operate period text not retrievable in current fetch; resolution text indicates 1-year and approval dates, but full duration/term clause not confirmed)",police,1,not_verified
+IA,Midwest,Waverly,unclear,non_safety,1,not_verified
+IA,Midwest,Waverly,unclear,police,1,not_verified
+IA,Midwest,Waverly,unclear,unclear,1,not_verified
+ID,West,Blackfoot,unclear,non_safety,1,not_verified
+ID,West,Blackfoot,unclear,police,1,not_verified
+ID,West,Blackfoot,unclear,unclear,1,not_verified
+ID,West,Chubbuck,unclear,fire,1,not_verified
+ID,West,Chubbuck,unclear,non_safety,1,not_verified
+ID,West,Chubbuck,unclear,unknown,1,not_verified
+ID,West,Garden City,unclear,fire,1,not_verified
+ID,West,Garden City,unclear,non_safety,1,not_verified
+ID,West,Garden City,unclear,police,1,not_verified
+ID,West,Hailey,unclear,non_safety,2,not_verified
+ID,West,Hayden,unclear,non_safety,1,not_verified
+ID,West,Jerome,3-year contract; end date not stated in visible minutes text,fire,1,not_verified
+ID,West,Jerome,"CBA effective Oct 1, 2015 to Sep 30, 2018 (MOU to CBA Addendum A referenced); specific MOU duration/term not separately stated beyond CBA date context",fire,1,not_verified
+ID,West,Jerome,unclear,police,1,not_verified
+ID,West,Jerome,unclear (resolution content indicates pay tables established/updated; operative effective date stated),non_safety,1,not_verified
+ID,West,Middleton,unclear,non_safety,1,not_verified
+ID,West,Payette,unclear,non_safety,1,not_verified
+ID,West,Payette,unclear,police,1,not_verified
+ID,West,Rathdrum,unclear,non_safety,1,not_verified
+ID,West,Sandpoint,2024-10-01 to 2027-09-30 (per TERM OF AGREEMENT; otherwise remains in effect until a new agreement is reached),fire,1,not_verified
+ID,West,Sandpoint,"One-time term ending no longer than July 1, 2025 (MOU term clause references expiration/limit date; effective date is last signature date)",fire,1,not_verified
+ID,West,Sandpoint,unclear,non_safety,1,not_verified
+ID,West,Sandpoint,unclear,police,1,not_verified
+ID,West,Sandpoint,unclear (code language; not a specific wage/policy cycle document),unclear,1,not_verified
+IL,Midwest,Downers Grove,2025 (year-specific compensation/classification artifact),non_safety,1,not_verified
+IL,Midwest,Downers Grove,2026 (manual version),unclear,1,not_verified
+IL,Midwest,Downers Grove,"May 1, 2026 through April 30, 2029",fire,1,not_verified
+IL,Midwest,Maine,unclear,non_safety,2,not_verified
+IL,Midwest,Rockford,"January 1, 2024 through March 31, 2025",non_safety,1,not_verified
+IL,Midwest,Schaumburg,2021-2024 (cover/title indicates 2021-2024; operative duration end-date clause not extracted from visible text during scouting),fire,1,not_verified
+IL,Midwest,Schaumburg,"Effective May 1, 2023 – April 30, 2026 (auto-renewal year-to-year unless terminated/modified with notice at least 60 days prior to April 30)",fire,1,not_verified
+IL,Midwest,Schaumburg,"Effective May 1, 2024 – April 30, 2027 (with year-to-year continuation absent timely termination/modification notice)",police,1,not_verified
+IL,Midwest,Schaumburg,unclear (coversheet excerpt does not state operative multi-year term),non_safety,1,not_verified
+IL,Midwest,Schaumburg,unclear (scouting did not extract award/period dates),police,1,not_verified
+IL,Midwest,Thornton,"May 1, 2024 through April 30, 2026",police,1,not_verified
+IL,Midwest,Thornton,unclear,fire,1,not_verified
+IL,Midwest,Wheeling,"May 1, 2023 to April 30, 2027",police,1,not_verified
+IL,Midwest,Worth,2018 (operative year from title),non_safety,1,not_verified
+IL,Midwest,Worth,2022-2027 (from document title),non_safety,2,not_verified
+IL,Midwest,Worth,2023-2028 (from document title),police,1,not_verified
+IL,Midwest,Worth,2025-2026 (from title),non_safety,1,not_verified
+IL,Midwest,Worth,unclear,non_safety,1,not_verified
+IL,Midwest,Worth,unclear,unclear,1,not_verified
+IN,Midwest,Lawrence,"effective January 1, 2025 (CBA); resolution approval date: October 16, 2024",police,1,not_verified
+IN,Midwest,Lawrence,"wage ordinance effective January 1, 2025",non_safety,1,not_verified
+IN,Midwest,Portage,2021,police,1,not_verified
+IN,Midwest,Warren,unclear,non_safety,1,not_verified
+IN,Midwest,Warren,unclear,police,1,not_verified
+KS,Midwest,Andover,unclear (classification/salary schedule does not present a collective-bargaining duration clause),non_safety,1,not_verified
+KS,Midwest,Andover,unclear (salary administration plan text does not provide a labor-contract duration clause),non_safety,1,not_verified
+KS,Midwest,Arkansas City,,fire,1,not_verified
+KS,Midwest,Arkansas City,,police,1,not_verified
+KS,Midwest,Arkansas City,unclear (effective date stated; no end/expiration in operative sections visible from scout-stage attachment),non_safety,1,not_verified
+KS,Midwest,Arkansas City,unclear (manual adoption/effective date visible; no contract term/expiration visible from scout-stage view),non_safety,1,not_verified
+KS,Midwest,El Dorado,unclear,non_safety,1,not_verified
+KS,Midwest,El Dorado,unclear,police,1,not_verified
+KS,Midwest,Great Bend,unclear,non_safety,1,not_verified
+KS,Midwest,Great Bend,unclear,unclear,2,not_verified
+KS,Midwest,McPherson,unclear,unknown,1,not_verified
+KS,Midwest,McPherson,unknown,unknown,2,not_verified
+KS,Midwest,Ottawa,unclear,non_safety,3,not_verified
+KY,South,Ashland,unclear,non_safety,1,not_verified
+KY,South,Ashland,unclear,police,2,not_verified
+KY,South,Ashland,unclear,unclear,1,not_verified
+KY,South,Danville,2025-2026 (plan period; exact pay schedule coverage details within document),non_safety,1,not_verified
+KY,South,Madisonville,unclear,non_safety,1,not_verified
+KY,South,Madisonville,unclear,police,1,not_verified
+KY,South,Mount Washington,unclear,non_safety,1,not_verified
+KY,South,Mount Washington,unclear,police,1,not_verified
+KY,South,Murray,unclear,non_safety,1,not_verified
+KY,South,Murray,unclear,police,2,not_verified
+KY,South,Paducah,"July 1, 2026 – June 30, 2029",fire,1,not_verified
+KY,South,Paducah,"July 1, 2026 – June 30, 2029",non_safety,1,not_verified
+KY,South,Paducah,"July 1, 2026 – June 30, 2029",police,1,not_verified
+KY,South,Paducah,unclear,unclear,1,not_verified
+KY,South,Radcliff,unclear,fire,1,not_verified
+KY,South,Radcliff,unclear,non_safety,2,not_verified
+KY,South,Radcliff,unclear,police,1,not_verified
+KY,South,Shelbyville,unclear,fire,1,not_verified
+KY,South,Shelbyville,unclear,non_safety,1,not_verified
+KY,South,Shelbyville,unclear,police,1,not_verified
+KY,South,St. Matthews,unclear,police,1,not_verified
+KY,South,St. Matthews,unclear,unclear,2,not_verified
+KY,South,Winchester,"2024-2025 (shown as 2024-2025 salary schedule; effective June 30, 2024)",non_safety,1,not_verified
+KY,South,Winchester,unclear,non_safety,1,not_verified
+LA,South,Baker,unclear,unclear,1,not_verified
+LA,South,Baker,unclear,unknown,1,not_verified
+LA,South,Carencro,unclear,fire,1,not_verified
+LA,South,Carencro,unclear,police,1,not_verified
+LA,South,Carencro,unclear,unclear,1,not_verified
+LA,South,Covington,unclear,unclear,2,not_verified
+LA,South,Crowley,unclear,non_safety,1,not_verified
+LA,South,Crowley,unclear,unclear,1,not_verified
+LA,South,Gonzales,unclear,non_safety,1,not_verified
+LA,South,Gonzales,unclear,unclear,1,not_verified
+LA,South,Gonzales,unclear,unknown,1,not_verified
+LA,South,Mandeville,unclear,non_safety,1,not_verified
+LA,South,Mandeville,unclear,police,1,not_verified
+LA,South,Mandeville,unclear,unclear,1,not_verified
+LA,South,Mandeville,unclear,unknown,1,not_verified
+LA,South,West Monroe,unclear,unclear,2,not_verified
+LA,South,Youngsville,unclear,police,2,not_verified
+LA,South,Zachary,unclear,unclear,2,not_verified
+MA,Northeast,Andover,"July 1, 2019 - June 30, 2022",police,1,not_verified
+MA,Northeast,Andover,"July 1, 2025 - June 30, 2028",fire,1,not_verified
+MA,Northeast,Andover,"July 1, 2025 - June 30, 2028",non_safety,1,not_verified
+MA,Northeast,Andover,"unclear (operative term observed as July 1, 2025 - June 30, 2028; earlier load showed July 1, 2022 - June 30, 2025)",police,1,not_verified
+MA,Northeast,Billerica,unclear,fire,2,not_verified
+MA,Northeast,Billerica,unclear,police,1,not_verified
+MA,Northeast,Brookline,FY25–FY27 (exact start/end dates not fully confirmed from excerpted lines captured),fire,1,not_verified
+MA,Northeast,Brookline,"July 1, 2021–June 30, 2024",non_safety,1,not_verified
+MA,Northeast,Brookline,"July 1, 2023–June 30, 2024; July 1, 2024–June 30, 2027",police,1,not_verified
+MA,Northeast,Brookline,award period unclear (excerpt-only; year shown as 2023),police,1,not_verified
+MA,Northeast,Brookline,unclear,fire,1,not_verified
+MA,Northeast,Brookline,unclear,non_safety,1,not_verified
+MA,Northeast,Chelmsford,FY2023-FY2025,fire,1,not_verified
+MA,Northeast,Chelmsford,FY2026-FY2028,non_safety,1,not_verified
+MA,Northeast,Chelmsford,"June 1, 2026 - May 30, 2029",police,1,not_verified
+MA,Northeast,Chelmsford,unclear,non_safety,1,not_verified
+MA,Northeast,Dartmouth,"2016-2018 (references FY 2016-2018; operative implementation language present, but the actual CBA document not shown in the warrant excerpt)",police,1,not_verified
+MA,Northeast,Dartmouth,FY 2023 and FY 2024 (implementation funding referenced in FY 2025 budget/appropriation language),unclear,1,not_verified
+MA,Northeast,Dartmouth,unclear,unknown,1,not_verified
+MA,Northeast,Dartmouth,unclear (agenda mentions a contract but does not state contract term years in the visible excerpt),fire,1,not_verified
+MA,Northeast,Falmouth,"July 1, 2022 – June 30, 2025",fire,1,not_verified
+MA,Northeast,Falmouth,"July 1, 2024 – June 30, 2027",police,1,not_verified
+MA,Northeast,Falmouth,"July 1, 2025 – June 30, 2027",police,1,not_verified
+MA,Northeast,Falmouth,"July 1, 2025 – June 30, 2028",non_safety,1,not_verified
+MA,Northeast,Falmouth,unclear,non_safety,1,not_verified
+MA,Northeast,Lexington,"July 1, 2022 - June 30, 2025 (FY23-FY25 wage period stated)",fire,1,not_verified
+MA,Northeast,Lexington,"July 1, 2025 - June 30, 2028",non_safety,1,not_verified
+MA,Northeast,Lexington,unclear (FY24-FY26 stated in listing; exact start/end dates not extracted from PDF in this run),police,1,not_verified
+MA,Northeast,Lexington,unclear (award date is in source; operative CBA period not extracted here),non_safety,1,not_verified
+MA,Northeast,Natick,FY 22 - FY 25 (cover/title indicates period; operative duration clause not extracted),police,1,not_verified
+MA,Northeast,Natick,"July 1, 2022 - June 30, 2025",fire,1,not_verified
+MA,Northeast,Natick,"July 1, 2024 to June 30, 2027",non_safety,1,not_verified
+MA,Northeast,Plymouth,"July 1, 2024 – June 30, 2027",fire,1,not_verified
+MA,Northeast,Plymouth,unclear,non_safety,1,not_verified
+MA,Northeast,Plymouth,unclear,police,2,not_verified
+MA,Northeast,Shrewsbury,2010-2017 (compensation adjustment history shown); FY2018 recommendation discussed,unclear,1,not_verified
+MA,Northeast,Shrewsbury,2023-2024,unknown,1,not_verified
+MA,Northeast,Shrewsbury,unclear,non_safety,1,not_verified
+MD,South,Centreville,unclear,non_safety,1,not_verified
+MD,South,Centreville,unclear,unclear,3,not_verified
+MD,South,Cheverly,unclear,non_safety,2,not_verified
+MD,South,Delmar,unclear,police,2,not_verified
+MD,South,Denton,unclear,police,1,not_verified
+MD,South,Denton,unclear,unclear,1,not_verified
+MD,South,Denton,unclear,unknown,2,not_verified
+MD,South,District Heights,unclear,non_safety,1,not_verified
+MD,South,District Heights,unclear,unclear,2,not_verified
+MD,South,Glenarden,FY2025 actual / FY2025 approved / FY2026 approved (no CBA term shown),unclear,1,not_verified
+MD,South,Glenarden,unclear,unclear,3,not_verified
+MD,South,Glenarden,unclear,unknown,1,not_verified
+MD,South,Leonardtown,unclear,non_safety,2,not_verified
+MD,South,Middletown,unclear,unknown,1,not_verified
+MD,South,Poolesville,"May 1, 2022 (effective date); specific wage amounts not provided",non_safety,1,not_verified
+MD,South,Poolesville,unclear,non_safety,1,not_verified
+MD,South,Poolesville,unclear,unclear,1,not_verified
+ME,Northeast,Brunswick,2021-2024,police,1,not_verified
+ME,Northeast,Brunswick,2022-2025,fire,1,not_verified
+ME,Northeast,Brunswick,unclear,unclear,1,not_verified
+ME,Northeast,Falmouth,"July 1, 2023 through June 30, 2026",fire,1,not_verified
+ME,Northeast,Falmouth,"July 1, 2024 through June 30, 2027",police,1,not_verified
+ME,Northeast,Falmouth,unclear,non_safety,1,not_verified
+ME,Northeast,Gorham,"July 1, 2023 – June 30, 2026",police,1,not_verified
+ME,Northeast,Gorham,"July 1, 2024 – June 30, 2027",fire,1,not_verified
+ME,Northeast,Gorham,unclear,non_safety,1,not_verified
+ME,Northeast,Kennebunk,"July 1, 2024 through June 30, 2027",non_safety,1,not_verified
+ME,Northeast,Kennebunk,"July 1, 2025 through June 30, 2028",fire,1,not_verified
+ME,Northeast,Kennebunk,"July 1, 2026 through June 30, 2029",police,1,not_verified
+ME,Northeast,Kennebunk,unclear,non_safety,1,not_verified
+ME,Northeast,Orono,"July 1, 2024 – June 30, 2027",non_safety,1,not_verified
+ME,Northeast,Orono,unclear,fire,1,not_verified
+ME,Northeast,Orono,unclear,non_safety,1,not_verified
+ME,Northeast,Orono,unclear,unknown,1,not_verified
+ME,Northeast,Scarborough,7/1/2024–6/30/2027,fire,1,not_verified
+ME,Northeast,Scarborough,unclear (appears 7/1/2024–6/30/2027 from filename),police,1,not_verified
+ME,Northeast,Scarborough,"unclear (appears date-range in filename, but not OCR-extractable)",non_safety,1,not_verified
+ME,Northeast,Wells,2023-2026,fire,1,not_verified
+ME,Northeast,Wells,2023-2026,non_safety,1,not_verified
+ME,Northeast,Wells,2023-2026,police,1,not_verified
+ME,Northeast,Windham,3.5% 07/01/2025-06/30/2026; 3% 07/01/2026-06/30/2027; 3% 07/01/2027-06/30/2028,fire,1,not_verified
+ME,Northeast,Windham,"Contract Year 1: 07/01/2024-06/30/2025; Contract Year 2: 07/01/2025-06/30/2026; Contract Year 2: 07/01/2026-06/30/2027 (file shows wage scales for 3-year public works contract, though extracted text labels Year 2 in places)",non_safety,1,not_verified
+ME,Northeast,Windham,Contract Year 1: 7/1/2025-6/30/2026; Contract Year 2: 7/1/2026-6/30/2027; Contract Year 3: 7/1/2027-6/30/2028,police,1,not_verified
+ME,Northeast,Windham,"Effective July 1, 2025 through June 30, 2028 (auto-extended for successive 1-year periods unless notice given)",police,1,not_verified
+ME,Northeast,Windham,Pay Scales shown for 7/1/2026 (year not explicitly stated as FY27 duration beyond file naming; operative date shown as 7/1/2026),non_safety,1,not_verified
+ME,Northeast,Windham,unclear (source title indicates 2025-2028 but operative term dates not retrievable via tool due to fetch limitation),fire,1,not_verified
+ME,Northeast,York,"July 1, 2019–June 30, 2022",fire,1,not_verified
+ME,Northeast,York,"July 1, 2022–June 30, 2025",non_safety,1,not_verified
+ME,Northeast,York,"July 1, 2023–June 30, 2026",police,1,not_verified
+ME,Northeast,York,unclear,non_safety,1,not_verified
+MI,Midwest,Canton charter,2026 Wage Scale (embedded within the manual; effective dates require further inspection),non_safety,1,not_verified
+MI,Midwest,Canton charter,"Effective August 1, 2023; patrol officers wage scale described as in effect for a two-year period ending on 10/1/2025 (within broader POAM agreement duration)",police,1,not_verified
+MI,Midwest,Canton charter,"January 1, 2023 - December 31, 2025",non_safety,1,not_verified
+MI,Midwest,Canton charter,"January 1, 2023 - December 31, 2026",police,1,not_verified
+MI,Midwest,Canton charter,"January 1, 2024 - December 31, 2026",non_safety,1,not_verified
+MI,Midwest,Canton charter,"January 1, 2024 - December 31, 2028",fire,1,not_verified
+MI,Midwest,Chesterfield,"January 1, 2020–December 31, 2022",fire,1,not_verified
+MI,Midwest,Chesterfield,"January 1, 2020–December 31, 2022",non_safety,1,not_verified
+MI,Midwest,Chesterfield,"January 1, 2020–December 31, 2022",police,1,not_verified
+MI,Midwest,Chesterfield,"January 1, 2023–December 31, 2025",non_safety,1,not_verified
+MI,Midwest,Clinton charter,"Amended August 25, 2025 (operative text date; full duration not indicated in prompt)",non_safety,1,not_verified
+MI,Midwest,Clinton charter,"April 1, 2021 through March 31, 2026",police,1,not_verified
+MI,Midwest,Clinton charter,"April 1, 2022 to March 31, 2027",fire,1,not_verified
+MI,Midwest,Clinton charter,"April 1, 2024 through March 31, 2028",police,1,not_verified
+MI,Midwest,Georgetown charter,unclear,non_safety,1,not_verified
+MI,Midwest,Macomb,2021-2025,fire,1,not_verified
+MI,Midwest,Macomb,2023-2029,fire,1,not_verified
+MI,Midwest,Macomb,2026-2029,non_safety,1,not_verified
+MI,Midwest,Macomb,unclear,unclear,1,not_verified
+MI,Midwest,Redford charter,04/01/2024 - 03/31/2025,non_safety,1,not_verified
+MI,Midwest,Redford charter,"April 1, 2021 to March 31, 2026",fire,1,not_verified
+MI,Midwest,Redford charter,"April 1, 2024 through March 31, 2029",police,1,not_verified
+MI,Midwest,Shelby charter,2023-01-01 to 2027-12-31,fire,1,not_verified
+MI,Midwest,Shelby charter,unclear,police,1,not_verified
+MI,Midwest,Waterford charter,2008-08-11 policy effective date (no contract term),unclear,1,not_verified
+MI,Midwest,Waterford charter,2022-2025 (year range from document filename/title; operative effective/expiration dates not extracted),fire,1,not_verified
+MI,Midwest,Waterford charter,2022-2025 (year range from filename/title),fire,1,not_verified
+MI,Midwest,Waterford charter,2022-2025 (year range from filename/title; binding status/duration not confirmed from text),fire,1,not_verified
+MI,Midwest,Waterford charter,2022-2025 (year range from filename/title; binding status/duration not confirmed from text),non_safety,1,not_verified
+MI,Midwest,Waterford charter,2023 (operative year not further extracted beyond title),non_safety,1,not_verified
+MI,Midwest,Waterford charter,2023-2026 (year range from title),police,1,not_verified
+MI,Midwest,Waterford charter,2026 (year from title),non_safety,1,not_verified
+MI,Midwest,Waterford charter,"Effective January 1, 2022 - December 31, 2025",police,1,not_verified
+MI,Midwest,West Bloomfield charter,1993-1995,fire,1,not_verified
+MI,Midwest,West Bloomfield charter,2017-unclear,fire,1,not_verified
+MI,Midwest,West Bloomfield charter,2018-2021,police,1,not_verified
+MI,Midwest,West Bloomfield charter,2022-2025,non_safety,1,not_verified
+MI,Midwest,West Bloomfield charter,unclear,police,1,not_verified
+MI,Midwest,Ypsilanti charter,2021-2024,police,1,not_verified
+MI,Midwest,Ypsilanti charter,2022-2026,non_safety,1,not_verified
+MI,Midwest,Ypsilanti charter,"unclear (title suggests 2023-2025, operative dates not extracted)",police,1,not_verified
+MN,Midwest,Big Lake,01/01/2025–12/31/2026 (labor agreement term referenced as “existing labor agreement”),police,1,not_verified
+MN,Midwest,Big Lake,2026 (pay plan year),non_safety,1,not_verified
+MN,Midwest,Cloquet,1/01/24 - 12/31/26,non_safety,3,not_verified
+MN,Midwest,Cloquet,1/01/24-12/31/26,non_safety,1,not_verified
+MN,Midwest,Lake Elmo,2026,non_safety,1,not_verified
+MN,Midwest,Lake Elmo,unclear,unclear,1,not_verified
+MN,Midwest,Mounds View,2023–2025 (operative duration terms not fully captured; depends on attached Exhibit A),non_safety,1,not_verified
+MN,Midwest,Mounds View,"January 1, 2023 to December 31, 2025",police,1,not_verified
+MN,Midwest,Robbinsdale,"January 1, 2024 to December 31, 2025",non_safety,1,not_verified
+MN,Midwest,Robbinsdale,"January 1, 2024 to December 31, 2025",police,1,not_verified
+MN,Midwest,Robbinsdale,"January 1, 2026 to December 31, 2028",police,1,not_verified
+MN,Midwest,Rogers,"January 1, 2023 through December 31, 2025",police,1,not_verified
+MN,Midwest,Sauk Rapids,2024-2026,police,1,not_verified
+MN,Midwest,Sauk Rapids,unclear,non_safety,1,not_verified
+MN,Midwest,Sauk Rapids,unclear,police,2,not_verified
+MN,Midwest,Vadnais Heights,unclear,non_safety,1,not_verified
+MN,Midwest,Waconia,"as of January 1, 2025",non_safety,1,not_verified
+MN,Midwest,Waconia,unclear,non_safety,1,not_verified
+MN,Midwest,Waconia,unclear,unclear,1,not_verified
+MO,Midwest,Carthage,unclear,fire,1,not_verified
+MO,Midwest,Carthage,unclear,unclear,1,not_verified
+MO,Midwest,Grain Valley,2022-2024,police,1,not_verified
+MO,Midwest,Jackson,"3 years from execution (effective date shown as April 20, 2026; term clause states three (3) years from execution; evergreen clause also present)",fire,1,not_verified
+MO,Midwest,Jackson,"Fiscal Year 2026; pay plan effective January 1, 2026 (operative ordinance effective from passage/approval; plan effective 1st day of January, 2026)",non_safety,1,not_verified
+MO,Midwest,Lebanon,2019-2022,non_safety,1,not_verified
+MO,Midwest,Lebanon,2023-2025,fire,1,not_verified
+MO,Midwest,Lebanon,2023-2025,police,1,not_verified
+MO,Midwest,Liberty,unclear,fire,1,not_verified
+MO,Midwest,Liberty,unclear,police,1,not_verified
+MO,Midwest,Liberty,unclear,unclear,1,not_verified
+MO,Midwest,Overland,"July 1, 2025 – July 1, 2028",police,1,not_verified
+MO,Midwest,Overland,"Pay plan for FY 2025/2026; operative effective date stated (January 5, 2026).",non_safety,1,not_verified
+MO,Midwest,Poplar Bluff,unclear,fire,1,not_verified
+MO,Midwest,Poplar Bluff,unclear,non_safety,1,not_verified
+MO,Midwest,Poplar Bluff,unclear,unclear,2,not_verified
+MO,Midwest,Washington,unclear,fire,1,not_verified
+MO,Midwest,Washington,unclear,non_safety,1,not_verified
+MO,Midwest,Washington,unclear,police,1,not_verified
+MS,South,Bay St. Louis,"unclear (salary schedule ordinance adopted Jan 20, 2026; operative effective period described as ""full force and effect thirty (30) days"" after passage; payroll/disbursement timing text refers to Oct 17, 2025 and Oct 3, 2025)",non_safety,1,not_verified
+MS,South,Canton,unclear,non_safety,1,not_verified
+MS,South,Cleveland,unclear,non_safety,1,not_verified
+MS,South,Cleveland,unclear,unclear,2,not_verified
+MS,South,D'Iberville,2024-2025,police,1,not_verified
+MS,South,D'Iberville,FY25-26 (effective 10-10-25 payroll; end date not stated in agenda text),non_safety,1,not_verified
+MS,South,Diamondhead,unclear (PDF attachment not text-inspected successfully),police,1,not_verified
+MS,South,Diamondhead,unclear (operative wage schedule details not text-inspected successfully),non_safety,1,not_verified
+MS,South,Petal,unclear,unknown,2,not_verified
+MS,South,West Point,unclear,unclear,1,not_verified
+MS,South,West Point,unclear,unknown,1,not_verified
+MS,South,Yazoo City,unclear,police,1,not_verified
+MS,South,Yazoo City,unclear,unclear,2,not_verified
+MT,West,Conrad,"unclear (no wage schedule, no contract/CBA term; only governance mechanism)",non_safety,1,not_verified
+MT,West,Conrad,unclear (policy manual; no detected CBA/MOU term in retrieved excerpt),unclear,1,not_verified
+MT,West,Cut Bank,1993 (board order date; operative wage/contract term not provided on index page),unclear,1,not_verified
+MT,West,Cut Bank,unclear (PDF contents could not be fetched to confirm wage/pay plan term),unclear,1,not_verified
+MT,West,Cut Bank,"unclear (meeting summary does not state contract duration/term; likely an approved contract for a specific project, not a CBA)",non_safety,1,not_verified
+MT,West,Deer Lodge,unclear,unclear,3,not_verified
+MT,West,Glasgow,2024 to 2026 (operative duration stated in article text; full executed CBA not located here),police,1,not_verified
+MT,West,Glasgow,Fiscal Year 2025-2026 (operative in agenda text; binding wage/payscale text not confirmed),unclear,1,not_verified
+MT,West,Glasgow,unclear,non_safety,1,not_verified
+MT,West,Libby,"July 2, 2023 – June 29, 2025",police,1,not_verified
+MT,West,Libby,unclear,unclear,1,not_verified
+MT,West,Red Lodge,"July 1, 2020 - June 30, 2023",police,1,not_verified
+MT,West,Red Lodge,unclear,non_safety,1,not_verified
+MT,West,Shelby,unclear,non_safety,1,not_verified
+MT,West,Shelby,unclear,unclear,1,not_verified
+MT,West,Shelby,unclear,unknown,1,not_verified
+MT,West,Stevensville,unclear,non_safety,1,not_verified
+MT,West,Stevensville,unclear,police,2,not_verified
+MT,West,Wolf Point,unclear,unknown,3,not_verified
+NC,South,Apex,unclear,unclear,2,not_verified
+NC,South,Garner,unclear,non_safety,3,not_verified
+NC,South,Garner,unclear,unclear,1,not_verified
+NC,South,Holly Springs,unclear,non_safety,2,not_verified
+NC,South,Holly Springs,unclear,unclear,1,not_verified
+NC,South,Huntersville,2015-11-01 (effective) with amendments through 2019-08-05 (years evidenced; full schedule years unclear),non_safety,1,not_verified
+NC,South,Huntersville,unclear (operative duration clause not retrievable from snippet available),fire,1,not_verified
+NC,South,Indian Trail,unclear,non_safety,1,not_verified
+NC,South,Monroe,unclear,fire,1,not_verified
+NC,South,Monroe,unclear,non_safety,1,not_verified
+NC,South,Monroe,unclear,police,1,not_verified
+NC,South,Mooresville,unclear,non_safety,2,not_verified
+NC,South,Salisbury,unclear,non_safety,2,not_verified
+NC,South,Salisbury,unclear,police,1,not_verified
+NC,South,Salisbury,unclear,unclear,1,not_verified
+ND,Midwest,Apple Creek,unclear,unclear,1,not_verified
+ND,Midwest,Beulah,unclear,non_safety,1,not_verified
+ND,Midwest,Beulah,unclear,police,1,not_verified
+ND,Midwest,Beulah,unclear,unclear,1,not_verified
+ND,Midwest,Devils Lake,unclear,police,1,not_verified
+ND,Midwest,Lincoln,unclear,non_safety,1,not_verified
+ND,Midwest,Lincoln,unclear,police,1,not_verified
+ND,Midwest,Valley City,unclear (operative pay-plan content references 2022 salary schedule update and 2026 COLA/anniversary-step calculations; no explicit multi-year CBA duration found in inspected excerpt),police,1,not_verified
+ND,Midwest,Wahpeton,unclear (budget year and described pay system mechanics; no explicit CBA/MOU duration),unclear,1,not_verified
+ND,Midwest,Wahpeton,unclear (ordinance pages; needs identification of specific salary/wage/classification ordinances),unclear,1,not_verified
+ND,Midwest,Wahpeton,unclear (policy manual; no labor agreement duration clause),unclear,1,not_verified
+ND,Midwest,Watford City,2021 (publication referenced); contract_years=unclear (no CBA/MOA attached in the snippet shown).,unclear,1,not_verified
+ND,Midwest,Watford City,2025 (publication referenced); contract_years=unclear (no CBA/Wage plan attached in this agenda file).,unclear,1,not_verified
+ND,Midwest,Watford City,Unclear (budget packet period shown as 2023 in snippet; no CBA duration/award period provided).,police,1,not_verified
+NE,Midwest,Alliance,"FY 2025-26 (effective October 1, 2025)",non_safety,1,not_verified
+NE,Midwest,Alliance,unclear,police,1,not_verified
+NE,Midwest,Alliance,unclear,unknown,1,not_verified
+NE,Midwest,Blair,unclear,non_safety,1,not_verified
+NE,Midwest,Crete,"Dispute period referenced as July 1, 2013 through June 30, 2014 (court discusses parties’ later stipulation that the period in dispute was October 1, 2012 through September 30, 2013).",police,1,not_verified
+NE,Midwest,Crete,FY22-23 (2022-2023).,non_safety,1,not_verified
+NE,Midwest,Crete,"Post-trial conference and final order issued November 13, 2014 clarifying the earlier September 3, 2014 Findings and Order; pay administration/benefit treatment tied to the previously determined wage order period.",police,1,not_verified
+NE,Midwest,Gering,unclear,police,1,not_verified
+NE,Midwest,Gretna,unclear,non_safety,1,not_verified
+NE,Midwest,Lexington,unclear,non_safety,1,not_verified
+NE,Midwest,Lexington,unclear,police,1,not_verified
+NE,Midwest,Lexington,unclear,unclear,2,not_verified
+NE,Midwest,McCook,unclear,non_safety,1,not_verified
+NE,Midwest,Nebraska City,2017-10-01 to 2019-09-30,police,1,not_verified
+NE,Midwest,Nebraska City,unclear,police,1,not_verified
+NE,Midwest,Nebraska City,unclear,unclear,1,not_verified
+NE,Midwest,Seward,unclear,non_safety,1,not_verified
+NE,Midwest,Seward,unclear,police,1,not_verified
+NE,Midwest,York,"September 22, 2025 through September 30, 2026 (referenced as approval period; contract text not provided in this document)",police,1,not_verified
+NE,Midwest,York,unclear,unclear,1,not_verified
+NH,Northeast,Bedford,1-1-2023 to 12-31-2026 (per document title),non_safety,1,not_verified
+NH,Northeast,Bedford,2026-2028 (per document title),fire,1,not_verified
+NH,Northeast,Bedford,2026-2028 (per document title),police,1,not_verified
+NH,Northeast,Bedford,effective 1/1/2025 (duration not stated in title; operative term not extracted here),non_safety,1,not_verified
+NH,Northeast,Derry,"Ending June 30, 2026 (cover indicates agreement period through that end date)",fire,1,not_verified
+NH,Northeast,Derry,"July 1, 2021 – June 30, 2026",non_safety,1,not_verified
+NH,Northeast,Derry,"July 1, 2024 through June 30, 2027",police,1,not_verified
+NH,Northeast,Derry,unknown,non_safety,1,not_verified
+NH,Northeast,Derry,unknown,unclear,2,not_verified
+NH,Northeast,Exeter,2022–2024 (see document title; duration clause not separately extracted in scout parsing but years indicated by filename/title),non_safety,1,not_verified
+NH,Northeast,Exeter,"July 1, 2022 through July 1, 2026 (ends June 30, 2026 per Duration clause)",police,1,not_verified
+NH,Northeast,Exeter,unclear (filename suggests 2025–2028; operative duration not confirmed from parsed document text),fire,1,not_verified
+NH,Northeast,Exeter,unclear (filename suggests 2025–2028; operative duration not confirmed from parsed document text),police,1,not_verified
+NH,Northeast,Exeter,unclear (index only),unclear,1,not_verified
+NH,Northeast,Exeter,unclear (page describes plan structure; no explicit operative year range captured in scout parsing),non_safety,1,not_verified
+NH,Northeast,Goffstown,2024-2025 (title indicates 2024-2025; full duration clause not inspectable),non_safety,1,not_verified
+NH,Northeast,Goffstown,unclear,unclear,1,not_verified
+NH,Northeast,Goffstown,unclear (file appears to be a specific iteration; duration not accessible due to fetch restriction),fire,1,not_verified
+NH,Northeast,Hampton,"April 1, 2024 to March 31, 2027",non_safety,1,not_verified
+NH,Northeast,Hampton,unclear (only wage-scale content retrieved; agreement duration clause not observed),fire,1,not_verified
+NH,Northeast,Hampton,"unclear (wage scale shows 4/1/2025, 4/1/2026, 4/1/2027; no full CBA duration clause captured in retrieved document excerpt)",police,2,not_verified
+NH,Northeast,Hampton,"unclear (wage scale shows step dates 4/1/2024, 4/1/2025, 4/1/2026; overall agreement duration clause not observed in retrieved excerpt)",fire,1,not_verified
+NH,Northeast,Hudson,"July 1, 2023 — June 30, 2028",police,1,not_verified
+NH,Northeast,Hudson,"July 1, 2024 — June 30, 2027",fire,1,not_verified
+NH,Northeast,Hudson,unclear,non_safety,1,not_verified
+NH,Northeast,Hudson,unclear,police,1,not_verified
+NH,Northeast,Hudson,unclear,unclear,1,not_verified
+NH,Northeast,Londonderry,"July 1, 2022 through June 30, 2027",fire,1,not_verified
+NH,Northeast,Londonderry,"July 1, 2023 through June 30, 2028",police,1,not_verified
+NH,Northeast,Londonderry,"July 1, 2025 through June 30, 2028",non_safety,2,not_verified
+NH,Northeast,Londonderry,unclear,non_safety,1,not_verified
+NH,Northeast,Merrimack,2023 — 2026 (exact dates require verification in full document),fire,1,not_verified
+NH,Northeast,Merrimack,2023 — 2026 (exact dates require verification in full document),non_safety,1,not_verified
+NH,Northeast,Merrimack,2023 — 2027 (exact dates require verification in full document),unknown,1,not_verified
+NH,Northeast,Merrimack,2024 — 2027 (exact effective/end dates require verification in full document),non_safety,1,not_verified
+NH,Northeast,Merrimack,"July 1, 2013 — June 30, 2016",unclear,1,not_verified
+NH,Northeast,Merrimack,"July 1, 2024 — June 30, 2027",police,1,not_verified
+NH,Northeast,Milford,2026-2028 (1 April – 31 March),police,1,not_verified
+NH,Northeast,Salem,2022-2026,police,1,not_verified
+NH,Northeast,Salem,2022-2027,police,1,not_verified
+NH,Northeast,Salem,2024-2027,fire,1,not_verified
+NH,Northeast,Salem,4/1/2023-3/31/2028,non_safety,1,not_verified
+NH,Northeast,Salem,unclear,non_safety,1,not_verified
+NJ,Northeast,Brick,unclear,non_safety,2,not_verified
+NJ,Northeast,Cherry Hill,Arbitration docket IA-95-110; specific contract period/award duration not shown in the synopsis excerpt (operative award period not visible here),police,1,not_verified
+NJ,Northeast,Cherry Hill,"Visible salary years include 2022, 2023, 2024, 2025 for patrolmen/detectives; detectives and superior officers list 2022-2025 values; operative duration clause present but specific contract term years not stated in excerpt",police,1,not_verified
+NJ,Northeast,Edison,2001-2004 (CBA in effect) and award references wage adjustments effective 1/1/2005 through 1/1/2009; exact award document not provided,unclear,1,not_verified
+NJ,Northeast,Edison,2023-2027 (per resolution term clause),fire,1,not_verified
+NJ,Northeast,Edison,2025 (operative salary range ordinance; duration clause not confirmed beyond the ordinance identifier/title),non_safety,1,not_verified
+NJ,Northeast,Edison,unclear (duration clause in source indicates 2023-2027; addendum operative text not fully inspected),police,1,not_verified
+NJ,Northeast,Franklin,unclear (listing snippet indicates extension until 12/31/2029; operative effective/raise language not confirmed via accessible content due to fetch issue),non_safety,1,not_verified
+NJ,Northeast,Franklin,unclear (references CBA negotiated in 2022; set to expire on 12/31/2025; MOA effective 04/16/2023 but no end date for MOA/addendum in visible text),non_safety,1,not_verified
+NJ,Northeast,Hamilton,"January 1, 2020 through December 31, 2024",police,1,not_verified
+NJ,Northeast,Hamilton,"January 1, 2025 to December 31, 2028",non_safety,1,not_verified
+NJ,Northeast,Hamilton,"January 6, 2025 to December 31, 2027",fire,1,not_verified
+NJ,Northeast,Hamilton,unclear,non_safety,1,not_verified
+NJ,Northeast,Lakewood,"effective retroactive to Jan 1, 2018; operative year(s) beyond that unclear",non_safety,1,not_verified
+NJ,Northeast,Lakewood,unclear,non_safety,1,not_verified
+NJ,Northeast,Lakewood,unclear,police,2,not_verified
+NJ,Northeast,Old Bridge,"April 1, 2012 through December 31, 2013 (term stated in cited resolution text)",police,1,not_verified
+NJ,Northeast,Old Bridge,Calendar Year 2025 (title indicates; operative tables not inspected),unclear,1,not_verified
+NJ,Northeast,Old Bridge,MOA 2021-2024 (stated in lead snippet; specific operative wage/classification provisions not inspected),non_safety,1,not_verified
+NJ,Northeast,Old Bridge,unclear,non_safety,1,not_verified
+NJ,Northeast,Toms River,"January 1, 2022 through December 31, 2025",non_safety,1,not_verified
+NJ,Northeast,Toms River,"January 1, 2022 through December 31, 2025",police,1,not_verified
+NJ,Northeast,Toms River,unclear,fire,1,not_verified
+NJ,Northeast,Trenton,unclear,police,1,not_verified
+NJ,Northeast,Woodbridge,unclear,non_safety,1,not_verified
+NJ,Northeast,Woodbridge,unclear,police,1,not_verified
+NM,West,Aztec,unclear,non_safety,1,not_verified
+NM,West,Aztec,unclear,unclear,1,not_verified
+NM,West,Bosque Farms,unclear,non_safety,1,not_verified
+NM,West,Bosque Farms,unclear,police,1,not_verified
+NM,West,Bosque Farms,unclear,unclear,1,not_verified
+NM,West,Bosque Farms,unclear,unknown,1,not_verified
+NM,West,Clayton,unclear,non_safety,1,not_verified
+NM,West,Clayton,unclear,unclear,1,not_verified
+NM,West,Eunice,unclear,non_safety,1,not_verified
+NM,West,Eunice,unclear,unclear,2,not_verified
+NM,West,Rio Communities,unclear,non_safety,2,not_verified
+NM,West,Rio Communities,unclear,unclear,1,not_verified
+NM,West,Santa Rosa,Operative dates shown: Adopted 1/12/21; Effective 1/26/21 (no CBA term language identified).,non_safety,1,not_verified
+NM,West,Tucumcari,unclear,unclear,3,not_verified
+NM,West,Tularosa,unclear,unclear,1,not_verified
+NV,West,Caliente,unclear,non_safety,1,not_verified
+NV,West,Caliente,unclear,unclear,2,not_verified
+NV,West,Carlin,"Effective July 1, 2021; remains until June 30, 2024 (with an opener for wage negotiations before FY 23-24) (per duration clause/label)",non_safety,1,not_verified
+NV,West,Carlin,"July 1, 2018 - June 30, 2021 (per cover/title and duration article)",non_safety,1,not_verified
+NV,West,Carlin,"July 1, 2025 - June 30, 2027 (per file title/label)",police,1,not_verified
+NV,West,Carlin,unclear,fire,1,not_verified
+NV,West,Ely,"July 1, 2021 to June 30, 2022",fire,1,not_verified
+NV,West,Ely,"July 1, 2021 to June 30, 2024",non_safety,1,not_verified
+NV,West,Ely,unclear,fire,1,not_verified
+NV,West,Ely,unclear,police,1,not_verified
+NV,West,Lovelock,2014-2015 (per document title; detailed duration clause text not extracted),police,1,not_verified
+NV,West,Lovelock,2025-2026 (per amendment title; detailed duration clause text not extracted),police,1,not_verified
+NV,West,Lovelock,"Term modified: 12:01 a.m. July 1, 2025 – midnight June 30, 2026 (operative duration text shown in document excerpt)",police,1,not_verified
+NV,West,Wells,"January 1, 2023–December 31, 2025 (with continuation language after Dec 31, 2025 unless amended by notice)",police,1,not_verified
+NV,West,West Wendover,"July 1, 2021 - June 30, 2024",police,1,not_verified
+NV,West,West Wendover,"July 1, 2024 - June 30, 2027",non_safety,1,not_verified
+NV,West,Yerington,"July 1, 2008 – June 30, 2011",non_safety,1,not_verified
+NV,West,Yerington,unclear (operative duration text not retrievable from source via this tool run),police,1,not_verified
+NV,West,Yerington,unclear (order date not requested; contract duration not shown as a negotiated wage term here),police,1,not_verified
+NV,West,Yerington,unclear (source is unreachable/404 in this run),police,1,not_verified
+NY,Northeast,Amherst,2024-2028,non_safety,1,not_verified
+NY,Northeast,Amherst,2025-2028,police,1,not_verified
+NY,Northeast,Amherst,2025-2029,non_safety,1,not_verified
+NY,Northeast,Babylon,2009-01-01 through 2016-12-31 (CBA effective period referenced in opinion),unclear,1,not_verified
+NY,Northeast,Babylon,2017-01-01 through 2022-12-31,non_safety,1,not_verified
+NY,Northeast,Babylon,2017-01-01 through 2024-12-31,non_safety,1,not_verified
+NY,Northeast,Babylon,unclear,unclear,1,not_verified
+NY,Northeast,Brookhaven,2002 to 2011,non_safety,1,not_verified
+NY,Northeast,Brookhaven,2011 to 12/31/2019,non_safety,1,not_verified
+NY,Northeast,Hempstead,"January 1, 2022 through December 31, 2025",non_safety,1,not_verified
+NY,Northeast,Islip,"January 1, 2025 through December 31, 2031",non_safety,1,not_verified
+NY,Northeast,Islip,"unclear (CBAs referenced as in effect Jan 1, 2021 through Dec 31, 2024; grade-change resolution is a contemporaneous wage/grade modification within that CBA period)",non_safety,1,not_verified
+NY,Northeast,North Hempstead,2023-2026 (in URL/title; operative duration clause not inspected),non_safety,1,not_verified
+NY,Northeast,North Hempstead,2023-2026 (stated in link titles; operative wage/term text not inspected),non_safety,1,not_verified
+NY,Northeast,North Hempstead,unclear,unclear,1,not_verified
+NY,Northeast,Oyster Bay,2010-2015,non_safety,1,not_verified
+NY,Northeast,Oyster Bay,unclear (filename suggests 2022-2028),non_safety,1,not_verified
+NY,Northeast,Ramapo,"January 1, 2001 to December 31, 2002",police,1,not_verified
+NY,Northeast,Ramapo,"January 1, 2007 through December 31, 2010",police,1,not_verified
+NY,Northeast,Smithtown,unclear,non_safety,2,not_verified
+NY,Northeast,Smithtown,unclear,unknown,1,not_verified
+OH,Midwest,Anderson,"Jan 1, 2023 – Dec 31, 2025",fire,1,not_verified
+OH,Midwest,Anderson,"Jan 1, 2024 – Dec 31, 2026",non_safety,1,not_verified
+OH,Midwest,Anderson,unclear,unclear,1,not_verified
+OH,Midwest,Beavercreek,2025-2027,police,1,not_verified
+OH,Midwest,Beavercreek,unclear,non_safety,1,not_verified
+OH,Midwest,Cincinnati,2023-2026,fire,1,not_verified
+OH,Midwest,Cincinnati,2024-2027,police,1,not_verified
+OH,Midwest,Cincinnati,2025-2028,non_safety,1,not_verified
+OH,Midwest,Cincinnati,unclear_from_title_only,non_safety,1,not_verified
+OH,Midwest,Cleveland,"2025-2028 (effective Apr 1, 2025 to Mar 31, 2028)",non_safety,1,not_verified
+OH,Midwest,Cleveland,"2025-2028 (effective Apr 1, 2025 to Mar 31, 2028)",police,1,not_verified
+OH,Midwest,Cleveland,2025-2028 (year range indicated by document title/landing listing; operative term not extracted from PDF text in this scout run),fire,1,not_verified
+OH,Midwest,Columbus,2023-2026 (per document labeling/snippet; exact start/end dates require in-document confirmation),fire,1,not_verified
+OH,Midwest,Columbus,2023-2026 (per title/body date range expected; exact start/end dates require in-document confirmation),police,1,not_verified
+OH,Midwest,Columbus,2024-2027 (overlaps anchor cycle 2023-2026 from 2024-2026; exact start/end dates require in-document confirmation),non_safety,1,not_verified
+OH,Midwest,Columbus,unclear,unclear,1,not_verified
+OH,Midwest,Liberty,2021-2022 rate referenced; CBA contract period not stated in the captured item,fire,1,not_verified
+OH,Midwest,Liberty,"June 1, 2016 through May 31, 2019 (explicit in the packet’s MOU WHEREAS clause)",fire,1,not_verified
+OH,Midwest,Liberty,effective for remainder of the current collective bargaining agreement (operative dates not stated in the MOU text itself),fire,1,not_verified
+OH,Midwest,Liberty,unclear from captured excerpt,police,1,not_verified
+OH,Midwest,Miami,"January 1, 2020 through December 31, 2022",police,1,not_verified
+OH,Midwest,Miami,"May 15, 2018 through May 14, 2021 (11:59 pm)",fire,1,not_verified
+OH,Midwest,Toledo,2024–2027 (operative term appears in CBA; wage tables include first full pay periods of January 2025 and January 2026),non_safety,1,not_verified
+OH,Midwest,Toledo,"April 1, 2024 – December 31, 2026 (operative via title/cover)",fire,1,not_verified
+OH,Midwest,Toledo,"April 1, 2024 – December 31, 2026 (operative via title/cover)",police,2,not_verified
+OH,Midwest,Toledo,Includes wage-rate disputes tied to 2024–2026; operative award period is indicated in report (confirm exact award period sections as needed),fire,1,not_verified
+OH,Midwest,Washington,"March 1, 2022 through February 28, 2025",police,1,not_verified
+OH,Midwest,Washington,"Operative while referencing an underlying CBA effective March 1, 2019 through February 28, 2022; MOU dated 07/26/2021",police,1,not_verified
+OK,South,Ardmore,2024-2026,fire,1,not_verified
+OK,South,Ardmore,2024-2026,police,1,not_verified
+OK,South,Ardmore,unclear,non_safety,1,not_verified
+OK,South,Bethany,FY 2025 and FY 2026 (operative pay-plan sections shown; full agreement term not confirmed in extracted text),fire,1,not_verified
+OK,South,Bethany,unclear,non_safety,1,not_verified
+OK,South,Claremore,2021-2022,fire,1,not_verified
+OK,South,Claremore,2021-2022,police,1,not_verified
+OK,South,Claremore,unclear,police,1,not_verified
+OK,South,Del City,unclear,non_safety,1,not_verified
+OK,South,Del City,unclear,police,3,not_verified
+OK,South,Del City,unclear,unclear,1,not_verified
+OK,South,Duncan,1986-07-01 to 1987-06-30 (as described in decision); merit pay arbitration award enforced (award period described by case timeline),fire,1,not_verified
+OK,South,Jenks,unclear,fire,1,not_verified
+OK,South,Jenks,unclear,police,1,not_verified
+OK,South,Mustang,2004 CBA (referenced); operative contract term years unclear here,police,1,not_verified
+OK,South,Mustang,2018-2020,fire,1,not_verified
+OK,South,Mustang,2024-2025 through 2026-2027 (referenced),police,1,not_verified
+OK,South,Mustang,2024-2027,fire,1,not_verified
+OK,South,Mustang,unclear,non_safety,1,not_verified
+OK,South,Ponca City,2010-2011 (CBA mentioned; operative contract text not provided in this source),fire,1,not_verified
+OK,South,Ponca City,2010-2011 (CBA mentioned; operative contract text not provided in this source),police,1,not_verified
+OK,South,Shawnee,2007-2008,police,1,not_verified
+OK,South,Yukon,"Effective July 1, 2026 through midnight June 30, 2028",police,1,not_verified
+OK,South,Yukon,unclear,unclear,1,not_verified
+OR,West,Junction City,unclear,non_safety,1,not_verified
+OR,West,Junction City,unclear,unclear,2,not_verified
+OR,West,Junction City,unclear,unknown,1,not_verified
+OR,West,Philomath,"Effective July 1, 2023 – June 30, 2026 (duration shown in search snippet; full document could not be fetched)",police,1,not_verified
+OR,West,Philomath,"July 1, 2023 – June 30, 2026",non_safety,1,not_verified
+OR,West,Philomath,"July 1, 2025 – June 30, 2026",non_safety,1,not_verified
+OR,West,Sheridan,2025-2027 (operative term stated as 2025–2027; not a labor CBA),unclear,1,not_verified
+OR,West,Sheridan,FY 2022-2023 (referenced in packet text; actual salary schedule pages require verification),non_safety,1,not_verified
+OR,West,Talent,"July 1, 2023 through June 30, 2026",police,1,not_verified
+OR,West,Talent,"July 1, 2023 through June 30, 2026 (from landing-page title only)",non_safety,1,not_verified
+OR,West,Tillamook,unclear,unclear,2,not_verified
+OR,West,Veneta,2025-26 (effective 22-Jun-25; operative schedule),non_safety,1,not_verified
+OR,West,Veneta,unclear,non_safety,1,not_verified
+OR,West,Warrenton,"July 1, 2021 - June 30, 2024",non_safety,1,not_verified
+OR,West,Warrenton,unclear,non_safety,1,not_verified
+OR,West,Winston,unclear,unclear,2,not_verified
+OR,West,Winston,unclear,unknown,1,not_verified
+PA,Northeast,Abington,unclear (MOU term stated: 2022-01-01 to 2031-12-31),non_safety,1,not_verified
+PA,Northeast,Abington,unclear (effective period stated: 2020-01-01 to 2023-12-31),police,1,not_verified
+PA,Northeast,Abington,unclear (page is not a CBA; includes 2026 salary reference),non_safety,1,not_verified
+PA,Northeast,Bensalem,2010-2013 initially; extended/consolidated 2014-2017 (duration stated in PLRB decision record summary),police,1,not_verified
+PA,Northeast,Bensalem,unclear,fire,1,not_verified
+PA,Northeast,Bensalem,unclear,non_safety,1,not_verified
+PA,Northeast,Bensalem,unclear,police,1,not_verified
+PA,Northeast,Bensalem,unclear (signed MOA PDF text could not be extracted/verified via tool),police,1,not_verified
+PA,Northeast,Bristol,"effective January 1, 2020 through December 31, 2025 (operative via cited CBA; exact text of CBA not provided in this document)",police,1,not_verified
+PA,Northeast,Bristol,"unclear (arbitration occurred after March 27, 2000; decision filed Jan. 2, 2003; exact CBA term not stated as a full duration clause in the page snippet)",police,1,not_verified
+PA,Northeast,Haverford,"January 1, 2024 through December 31, 2027",police,1,not_verified
+PA,Northeast,Haverford,"January 1, 2026 through December 31, 2029",non_safety,1,not_verified
+PA,Northeast,Haverford,unclear,non_safety,1,not_verified
+PA,Northeast,Lower Merion,2017-2020,police,1,not_verified
+PA,Northeast,Lower Merion,2020-2022,non_safety,1,not_verified
+PA,Northeast,Lower Merion,2023-2026,non_safety,1,not_verified
+PA,Northeast,Lower Merion,2023-2026,police,1,not_verified
+PA,Northeast,Lower Paxton,"January 1, 2023 through December 31, 2026",police,1,not_verified
+PA,Northeast,Lower Paxton,unclear,non_safety,1,not_verified
+PA,Northeast,Manheim,2023–2027 (referenced as the governing CBA for police discipline consistency),police,1,not_verified
+PA,Northeast,Manheim,"January 1, 2023 - December 31, 2027 (operative replacement period stated in packet text for the referenced current agreement)",police,1,not_verified
+PA,Northeast,Middletown,unclear,non_safety,1,not_verified
+PA,Northeast,Millcreek,2026-2028,fire,1,not_verified
+PA,Northeast,Millcreek,unclear,non_safety,1,not_verified
+PA,Northeast,Upper Darby,"December 31, 2024 (extension referenced; full operative period not shown in this resolution text)",non_safety,1,not_verified
+PA,Northeast,Upper Darby,"January 1, 2021 through December 31, 2025 (from resolution title/whereas clause; wage operative details not visible in retrieved resolution text)",fire,1,not_verified
+PA,Northeast,Upper Darby,"January 1, 2023 through December 31, 2024",non_safety,1,not_verified
+PA,Northeast,Upper Darby,"unclear (resolution states CBA expires Dec 31, 2024; does not show MOA effective period or full operative compensation schedule)",police,1,not_verified
+RI,Northeast,Coventry,"Effective January 1, 2024; expires December 31, 2026",non_safety,1,not_verified
+RI,Northeast,Coventry,"Effective July 1, 2022; expires June 30, 2027",police,1,not_verified
+RI,Northeast,Cumberland,"July 1, 2024 to June 30, 2027",police,1,not_verified
+RI,Northeast,Cumberland,"unclear (ordinance sets pay plan ranges; fiscal-year coverage appears in document, but exact operative period not extracted in scout text excerpt)",non_safety,1,not_verified
+RI,Northeast,Cumberland,unclear (title suggests July 2023 to June 2026; operative duration text not accessible in extracted text output),non_safety,1,not_verified
+RI,Northeast,Johnston,"July 1, 2016 to June 30, 2019",non_safety,1,not_verified
+RI,Northeast,Johnston,"July 1, 2017 to June 30, 2022",fire,1,not_verified
+RI,Northeast,Johnston,"July 1, 2017 to June 30, 2022",police,1,not_verified
+RI,Northeast,Johnston,unclear,non_safety,1,not_verified
+RI,Northeast,Lincoln,"July 1, 2024 - June 30, 2027",police,1,not_verified
+RI,Northeast,Lincoln,unclear,non_safety,1,not_verified
+RI,Northeast,Lincoln,unclear (file indicates expiration 06/30/2022; start/end operative term not confirmed from extracted text),non_safety,1,not_verified
+RI,Northeast,Lincoln,unclear (file indicates expiration 06/30/2022; start/end operative term not confirmed from extracted text),police,1,not_verified
+RI,Northeast,North Kingstown,unclear (PDF text not extractable in scout; filename indicates Exp-6-30-2027),police,1,not_verified
+RI,Northeast,North Kingstown,unclear (PDF text not extractable in scout; filename indicates Exp-6-30-2028),fire,1,not_verified
+RI,Northeast,North Kingstown,unclear (operative duration clause not located in extracted text; filename indicates Exp-6-30-27),non_safety,1,not_verified
+RI,Northeast,North Providence,07.01.2024 – 06.30.2027,police,1,not_verified
+RI,Northeast,North Providence,07.01.2025 – 06.30.2028,fire,1,not_verified
+RI,Northeast,North Providence,07.01.2025 – 06.30.2028,non_safety,1,not_verified
+RI,Northeast,North Providence,unclear,unclear,1,not_verified
+RI,Northeast,Smithfield,2020-07-01 to 2023-06-30,fire,1,not_verified
+RI,Northeast,Smithfield,Ends 2026-06-30; start year unclear (not extracted from PDF body),police,1,not_verified
+RI,Northeast,Smithfield,Ends 2027-06-30; start year unclear (not extracted from PDF body),non_safety,1,not_verified
+RI,Northeast,Smithfield,unclear,non_safety,1,not_verified
+RI,Northeast,South Kingstown,FY 2025-2026,non_safety,1,not_verified
+RI,Northeast,South Kingstown,"July 1, 2022 - June 30, 2025",police,1,not_verified
+RI,Northeast,South Kingstown,"July 1, 2024 - June 30, 2027",fire,1,not_verified
+RI,Northeast,South Kingstown,"July 1, 2024 - June 30, 2027",non_safety,1,not_verified
+RI,Northeast,West Warwick,"JULY 1, 2014 THROUGH JUNE 30, 2019",non_safety,1,not_verified
+RI,Northeast,West Warwick,"JULY 1, 2014 THROUGH JUNE 30, 2019",police,1,not_verified
+RI,Northeast,West Warwick,"JULY 1, 2021 THROUGH JUNE 30, 2024",police,1,not_verified
+RI,Northeast,West Warwick,"JULY 1, 2024 THROUGH JUNE 30, 2027",fire,1,not_verified
+RI,Northeast,Westerly,2013-2016,non_safety,1,not_verified
+RI,Northeast,Westerly,unclear,police,2,not_verified
+SC,South,Aiken,unclear,non_safety,1,not_verified
+SC,South,Aiken,unclear,unclear,2,not_verified
+SC,South,Bluffton,"policy updated 01/2023; applicable operational duration tied to declared emergencies (operational clauses, not a multi-year CBA)",non_safety,1,not_verified
+SC,South,Bluffton,unclear,non_safety,2,not_verified
+SC,South,Florence,unclear,non_safety,2,not_verified
+SC,South,Fort Mill,unclear,non_safety,2,not_verified
+SC,South,Fort Mill,unclear,unclear,1,not_verified
+SC,South,Hilton Head Island,"Fiscal year ending June 30, 2025",non_safety,1,not_verified
+SC,South,Hilton Head Island,unclear,fire,1,not_verified
+SC,South,Hilton Head Island,unclear,police,1,not_verified
+SC,South,Hilton Head Island,unclear (FY2024),non_safety,1,not_verified
+SC,South,Myrtle Beach,unclear,non_safety,1,not_verified
+SC,South,Myrtle Beach,unclear,unclear,2,not_verified
+SC,South,Spartanburg,unclear,fire,1,not_verified
+SC,South,Spartanburg,unclear,non_safety,1,not_verified
+SC,South,Spartanburg,unclear,police,1,not_verified
+SC,South,Spartanburg,unclear,unclear,3,not_verified
+SC,South,Sumter,unclear,non_safety,1,not_verified
+SC,South,Sumter,unclear,police,1,not_verified
+SC,South,Sumter,unclear,unclear,1,not_verified
+SD,Midwest,Canton,unclear,police,2,not_verified
+SD,Midwest,Canton,unclear,unclear,1,not_verified
+SD,Midwest,Dell Rapids,2024 (calendar year),non_safety,1,not_verified
+SD,Midwest,Dell Rapids,unclear,non_safety,2,not_verified
+SD,Midwest,Hartford,unclear,non_safety,2,not_verified
+SD,Midwest,Hot Springs,unclear,non_safety,1,not_verified
+SD,Midwest,Hot Springs,unclear,police,1,not_verified
+SD,Midwest,Lead,"for the year of 2025 (resolution adopted Jan 5, 2026; repeals prior salary/wage resolutions)",police,1,not_verified
+SD,Midwest,Milbank,Jan 2024 (second pay period) through first pay period of 2025 (police certification raises mentioned; no CBA shown),non_safety,1,not_verified
+SD,Midwest,Milbank,Second pay period of January 2025 through first pay period of 2026 (police certification raises mentioned; no CBA shown),non_safety,1,not_verified
+SD,Midwest,Mobridge,unclear,unclear,2,not_verified
+SD,Midwest,North Sioux City,unclear,non_safety,1,not_verified
+SD,Midwest,Summerset,unclear,non_safety,2,not_verified
+TN,South,Brentwood,unclear,non_safety,2,not_verified
+TN,South,Bristol,unclear,non_safety,1,not_verified
+TN,South,Bristol,unclear,police,1,not_verified
+TN,South,Columbia,unclear,unclear,2,not_verified
+TN,South,Dickson,unclear,unclear,1,not_verified
+TN,South,East Ridge,2025 (salary supplement amount referenced); municipal contract term unclear,unclear,1,not_verified
+TN,South,East Ridge,unclear,non_safety,2,not_verified
+TN,South,Goodlettsville,2012 (operative date reference: March 4; full agreement duration not provided),non_safety,1,not_verified
+TN,South,Goodlettsville,unclear,non_safety,2,not_verified
+TN,South,La Vergne,unclear,unclear,2,not_verified
+TN,South,Sevierville,"July 1, 2026–June 30, 2027 (fiscal period stated); operative pay-plan/rate/cycle text not retrieved",unclear,2,not_verified
+TN,South,Shelbyville,unclear,non_safety,1,not_verified
+TN,South,Shelbyville,unclear,unclear,1,not_verified
+TX,South,Converse,FY2024-2025 and FY2025-2026 (operative scope stated; 3-year plan referenced but full 3-year duration not fully evidenced in this single-page ordinance text),non_safety,1,not_verified
+TX,South,Deer Park,unclear,non_safety,1,not_verified
+TX,South,Del Rio,"Period: October 1, 2025 to September 30, 2026 (one-year CBA term with effective date October 1, 2025).",police,1,not_verified
+TX,South,Forney,unclear,fire,1,not_verified
+TX,South,Forney,unclear,non_safety,1,not_verified
+TX,South,Forney,unclear,police,2,not_verified
+TX,South,Forney,unclear,unclear,1,not_verified
+TX,South,Greenville,unclear,police,1,not_verified
+TX,South,Greenville,unclear,unclear,1,not_verified
+TX,South,Lufkin,"October 1, 2022 to September 30, 2024 (duration clause states effective October 1, 2022 and expiration at midnight September 30, 2024)",police,1,not_verified
+TX,South,Lufkin,unclear,fire,1,not_verified
+TX,South,Lufkin,unclear,police,1,not_verified
+TX,South,Sachse,unclear,non_safety,1,not_verified
+TX,South,Sachse,unclear,police,1,not_verified
+TX,South,Sachse,unclear,unclear,1,not_verified
+TX,South,Southlake,"unclear (framework approved Aug 6, 2013; addenda show later effective dates/updates but term length not stated as a contract)",unclear,1,not_verified
+TX,South,Southlake,unclear (shows FY 2026 pay structure; duration beyond effective date not stated in snippet/index),non_safety,1,not_verified
+TX,South,Southlake,unclear (shows FY 2026 pay structure; duration beyond effective date not stated in snippet/index),unclear,1,not_verified
+UT,West,Brigham City,unclear,police,1,not_verified
+UT,West,Brigham City,unclear,unclear,1,not_verified
+UT,West,Clinton,"July 1, 2022 through June 30, 2024 (appointment term stated for City Manager); other compensation terms reference personnel policies",unclear,1,not_verified
+UT,West,Clinton,unclear,non_safety,1,not_verified
+UT,West,Cottonwood Heights,unclear (contains FY 25-26 pay step plan; operative year coverage not otherwise confirmed from page text alone),police,1,not_verified
+UT,West,Cottonwood Heights,unclear (landing page references FY 26-27; attached document link/contents not retrievable for inspection in scout session),police,1,not_verified
+UT,West,Highland,FY2025-2026 (operative context referenced; exact wage exhibits not confirmed from inspected excerpt),non_safety,1,not_verified
+UT,West,Highland,unclear,non_safety,1,not_verified
+UT,West,Highland,unclear,unknown,1,not_verified
+UT,West,Holladay,Fiscal Year 2025 (duration not stated as a multi-year contract),non_safety,1,not_verified
+UT,West,Holladay,Fiscal Year 2026 (duration not stated as a multi-year contract),non_safety,1,not_verified
+UT,West,Holladay,Unclear (code section; operative timeline not provided in snippet),unclear,1,not_verified
+UT,West,Magna metro,unclear,police,1,not_verified
+UT,West,North Ogden,"Term described in slides (e.g., 12-month initial term with renewal/automatic renewal up to 15 consecutive 12-month terms), but this is an interlocal policing services agreement—not an employment CBA",police,1,not_verified
+UT,West,North Ogden,"duration/contract years not applicable (municipal officers compensation increases; operative date June 30, 2024; for FY 2025 budget inclusion per ordinance text)",unclear,1,not_verified
+UT,West,North Ogden,unclear,unknown,1,not_verified
+UT,West,North Salt Lake,"Fiscal Year 2023-2024 (operates beginning July 1, 2023)",non_safety,1,not_verified
+UT,West,North Salt Lake,unclear,non_safety,1,not_verified
+UT,West,North Salt Lake,unclear,unclear,1,not_verified
+UT,West,Payson,unclear,non_safety,1,not_verified
+UT,West,Payson,unclear (document provides an effective date and wage change date but not the full pay plan term/expiration),police,1,not_verified
+UT,West,South Salt Lake,unclear,unclear,2,not_verified
+VA,South,Bristol,unclear,non_safety,1,not_verified
+VA,South,Bristol,unclear,unclear,1,not_verified
+VA,South,Christiansburg,"cover/title or operative date present: pay plan effective July 1, 2026 (duration clause not found in visible excerpt)",non_safety,1,not_verified
+VA,South,Christiansburg,unclear,non_safety,1,not_verified
+VA,South,Christiansburg,"unclear (handbook effective date found: December 10, 2024; duration of provisions not specified)",non_safety,1,not_verified
+VA,South,Christiansburg,"unclear (project timeline described, but binding wage duration/award period not established from visible excerpt)",unclear,1,not_verified
+VA,South,Colonial Heights,unclear,non_safety,1,not_verified
+VA,South,Colonial Heights,unclear,police,1,not_verified
+VA,South,Culpeper,unclear (document labeled FY2027 pay scales; no explicit contract term language located from index snippet),police,1,not_verified
+VA,South,Culpeper,unclear (personnel policies; operative text exists but duration/term not identified from retrieved excerpt),non_safety,1,not_verified
+VA,South,Hopewell,FY-25 (title indicates FY-25; operative pay language requires verification within document),non_safety,1,not_verified
+VA,South,Hopewell,unclear,non_safety,2,not_verified
+VA,South,Hopewell,unclear,unclear,1,not_verified
+VA,South,Manassas Park,unclear (code is updated over time; no single operative pay/salary year provided on landing/index),unclear,1,not_verified
+VA,South,Manassas Park,unclear (no contract term; policy/handbook governance; year appears only as publication/update date),non_safety,1,not_verified
+VA,South,Radford,unclear,police,1,not_verified
+VA,South,Radford,unclear,unclear,1,not_verified
+VA,South,Vienna,FY 25-26 (fiscal-year pay plan; operative period not stated beyond title),non_safety,1,not_verified
+VA,South,Vienna,FY 25-26 (fiscal-year pay plan; operative period not stated beyond title),police,1,not_verified
+VA,South,Vienna,unclear,unclear,1,not_verified
+VA,South,Waynesboro,unclear,non_safety,2,not_verified
+VA,South,Williamsburg,unclear,unclear,1,not_verified
+VT,Northeast,Brattleboro,"July 1, 2022 through June 30, 2023",fire,1,not_verified
+VT,Northeast,Brattleboro,"July 1, 2023 through June 30, 2026",police,1,not_verified
+VT,Northeast,Brattleboro,"June 30, 2026 through July 1, 2029",non_safety,1,not_verified
+VT,Northeast,Brattleboro,unclear,unknown,1,not_verified
+VT,Northeast,Colchester,unclear,police,1,not_verified
+VT,Northeast,Colchester,unclear,unclear,1,not_verified
+VT,Northeast,Essex,2022-2025,police,1,not_verified
+VT,Northeast,Essex,2024-2027,non_safety,1,not_verified
+VT,Northeast,Essex,2025-2028,police,1,not_verified
+VT,Northeast,Hartford,2022-2027 (from title),non_safety,1,not_verified
+VT,Northeast,Hartford,2023-2028 (from title),police,2,not_verified
+VT,Northeast,Hartford,2023-2028 (from title; duration months/day not confirmed),fire,1,not_verified
+VT,Northeast,Hartford,unclear (policy revision dated 2013-12-06; no wage term extracted in this run),unclear,1,not_verified
+VT,Northeast,Hartford,unclear (study date May 2023; operative implementation cycle not confirmed in this run),unclear,1,not_verified
+VT,Northeast,Middlebury,"effective July 1, 2015 through June 30, 2018 (stated in order)",police,1,not_verified
+VT,Northeast,Middlebury,"extension to June 30, 2022 (MOA extension term stated in minutes)",unclear,1,not_verified
+VT,Northeast,Middlebury,unclear,non_safety,1,not_verified
+VT,Northeast,Milton,07/01/21 - 06/30/24 (exact dates in document title),non_safety,1,not_verified
+VT,Northeast,Milton,7/1/24 - 6/30/28 (exact dates in document title),non_safety,1,not_verified
+VT,Northeast,Milton,"Effective July 1, 2014; continues thereafter from year-to-year unless either party gives notice 180 days prior to June 30",police,1,not_verified
+VT,Northeast,Milton,unclear (administrative code; operative procedures rather than a time-bounded CBA term),non_safety,1,not_verified
+VT,Northeast,Milton,unclear from retrieved evidence (filename suggests 7.1.24 effective date; end date not confirmed),unclear,1,not_verified
+VT,Northeast,Springfield,unclear,fire,1,not_verified
+VT,Northeast,Springfield,unclear,non_safety,1,not_verified
+VT,Northeast,Springfield,unclear,police,1,not_verified
+VT,Northeast,Springfield,unclear,unclear,1,not_verified
+VT,Northeast,Williston,"July 1, 2017 through June 30, 2020",police,1,not_verified
+VT,Northeast,Williston,"July 1, 2023 to June 30, 2026",fire,1,not_verified
+VT,Northeast,Williston,Pay bands shown for 7/1/25-6/30/26 (document title/branding indicates FY 2027 pay bands),non_safety,1,not_verified
+VT,Northeast,Williston,"Report dated February 1, 2022 (no labor-contract duration stated)",non_safety,1,not_verified
+WA,West,Airway Heights,unclear,non_safety,1,not_verified
+WA,West,Airway Heights,unclear,unclear,1,not_verified
+WA,West,DuPont,2022-2024,police,1,not_verified
+WA,West,DuPont,2024-2026 (from filename/title),non_safety,1,not_verified
+WA,West,DuPont,"January 1, 2023 - December 31, 2025",fire,1,not_verified
+WA,West,DuPont,unclear,unknown,1,not_verified
+WA,West,Ephrata,"January 1, 2025 through December 31, 2029",non_safety,1,not_verified
+WA,West,Hoquiam,"Effective January 1, 2025 through December 31, 2027 (with language indicating retroactive articles effective January 1, 2025)",fire,1,not_verified
+WA,West,Hoquiam,"Effective January 1, 2026 through December 31, 2028",police,1,not_verified
+WA,West,Orting,"January 1, 2014 through December 31, 2016",police,1,not_verified
+WA,West,Orting,"January 1, 2026 through December 31, 2028",non_safety,1,not_verified
+WA,West,Othello,CBA expiration date referenced as 12.31.19 (operative field entry on the petition form; actual CBA not provided),unclear,1,not_verified
+WA,West,Othello,"contracts expire December 31, 2025 (operative labor-relations statement)",unclear,2,not_verified
+WA,West,Othello,"contracts expire December 31, 2028 (operative labor-relations statement; unit mapping not fully specified in the snippet)",unclear,1,not_verified
+WA,West,Othello,unclear,unknown,1,not_verified
+WA,West,Othello,unclear (no operative term dates for the MOU text visible in snippet),non_safety,1,not_verified
+WA,West,Selah,unclear,non_safety,1,not_verified
+WA,West,Selah,unclear,police,3,not_verified
+WA,West,Snohomish,"December 26, 2022 through December 31, 2025",non_safety,1,not_verified
+WA,West,Snohomish,"January 1, 2026 through December 31, 2028",non_safety,1,not_verified
+WA,West,Snohomish,"January 1, 2026 through December 31, 2028 (staff report describes execution and compensation implementation; binding terms likely in attached/signed CBAs)",unclear,1,not_verified
+WA,West,Stanwood,2019 (schedule effective date in title: 2019-11-25),non_safety,1,not_verified
+WA,West,Stanwood,2020-2025,non_safety,1,not_verified
+WA,West,Stanwood,2020-2026,non_safety,1,not_verified
+WA,West,Stanwood,unclear,non_safety,1,not_verified
+WA,West,Stanwood,unclear,unclear,1,not_verified
+WA,West,Stanwood,unclear,unknown,1,not_verified
+WA,West,Toppenish,"January 1, 2023 through December 31, 2025",police,1,not_verified
+WA,West,Toppenish,"January 1, 2024 through December 31, 2027",non_safety,1,not_verified
+WA,West,Toppenish,"Through 2028 (COLA noted for 2026, 2027, 2028)",police,1,not_verified
+WI,Midwest,Delafield,2018-2020 (stated; no CBA text included),police,1,not_verified
+WI,Midwest,Delafield,2024-2026 (approved/ratified in minutes; full agreement not shown in this minutes PDF),police,1,not_verified
+WI,Midwest,Delafield,2024-2026 (stated for collective bargaining agreement; contract document not included in this agenda PDF),police,1,not_verified
+WI,Midwest,Delafield,unclear,non_safety,1,not_verified
+WI,Midwest,Delafield,unclear (agreement term described as until services completed; not presented as a multi-year pay plan cycle in this agreement excerpt),non_safety,1,not_verified
+WI,Midwest,Grand Chute,unclear,fire,1,not_verified
+WI,Midwest,Grand Chute,unclear,non_safety,1,not_verified
+WI,Midwest,Grand Chute,unclear,police,2,not_verified
+WI,Midwest,Hudson,2017 and 2018 (approval referenced; agreement text not provided in the PDF),police,1,not_verified
+WI,Midwest,Hudson,unclear,non_safety,1,not_verified
+WI,Midwest,Hudson,unclear,unknown,1,not_verified
+WI,Midwest,Hudson,unclear (year not shown in the cited excerpt of the opened PDF),police,1,not_verified
+WI,Midwest,Ledgeview,unclear,fire,1,not_verified
+WI,Midwest,Ledgeview,unclear,non_safety,2,not_verified
+WI,Midwest,Merton,unclear,fire,1,not_verified
+WI,Midwest,Merton,unclear,non_safety,1,not_verified
+WI,Midwest,Merton,unclear,police,1,not_verified
+WI,Midwest,Oconomowoc,1980-1981,non_safety,1,not_verified
+WI,Midwest,Oconomowoc,unclear,fire,1,not_verified
+WI,Midwest,Oconomowoc,unclear,non_safety,1,not_verified
+WI,Midwest,Oconomowoc,unclear,police,2,not_verified
+WI,Midwest,Pewaukee,2024-2025 (operative CBA referenced as '2024-2025'); end date not visible in this excerpt,police,1,not_verified
+WI,Midwest,Pewaukee,2026 (effective date language implied by title; operative duration clause not available due to 404),non_safety,1,not_verified
+WI,Midwest,Pewaukee,unclear,fire,1,not_verified
+WI,Midwest,Sheboygan,unclear (grievance arbitration award; contract term not stated),non_safety,1,not_verified
+WI,Midwest,Sheboygan,unclear (grievance award; operative arbitration period not stated as contract term),fire,1,not_verified
+WI,Midwest,St. Francis,"January 1, 2022 - December 31, 2024",police,1,not_verified
+WI,Midwest,St. Francis,unclear,non_safety,2,not_verified
+WV,South,Bluefield,unclear,unclear,1,not_verified
+WV,South,Bridgeport,unclear,non_safety,1,not_verified
+WV,South,Charles Town,unclear,police,1,not_verified
+WV,South,Charles Town,unclear,unclear,1,not_verified
+WV,South,Dunbar,"effective Oct 16, 1995 to Oct 16, 1998 (operative CBA termination clause as quoted in decision)",police,1,not_verified
+WV,South,Dunbar,unclear,fire,1,not_verified
+WV,South,Dunbar,unclear,non_safety,1,not_verified
+WV,South,Elkins,unclear,non_safety,1,not_verified
+WV,South,Elkins,unclear,unclear,2,not_verified
+WV,South,Hurricane,unclear,police,1,not_verified
+WV,South,Moundsville,unclear,non_safety,2,not_verified
+WV,South,Oak Hill,"July 1, 2023 (operative effective date stated); duration clause for compensation system unclear",unclear,1,not_verified
+WV,South,Oak Hill,unclear,police,1,not_verified
+WV,South,St. Albans,unclear,non_safety,2,not_verified
+WV,South,Vienna,"fiscal year ending June 30, 2027",unclear,1,not_verified
+WV,South,Vienna,unclear,unknown,1,not_verified
+WY,West,Bar Nunn,July 2024 (operative effective date stated; overall multi-year CBA/contract not indicated),non_safety,1,not_verified
+WY,West,Bar Nunn,July 2025 (operative effective date stated; overall multi-year CBA/contract not indicated),non_safety,1,not_verified
+WY,West,Bar Nunn,unclear,unknown,3,not_verified
+WY,West,Buffalo,unclear,fire,3,not_verified
+WY,West,Douglas,unclear,police,1,not_verified
+WY,West,Douglas,unclear,unclear,1,not_verified
+WY,West,Evansville,unclear,fire,1,not_verified
+WY,West,Evansville,unclear,police,1,not_verified
+WY,West,Mills,"Adopted June 1, 2022 (no collective bargaining duration specified)",non_safety,1,not_verified
+WY,West,Mills,"FY 2024-2025 (operatively effective July 1, 2024 to June 30, 2025)",police,1,not_verified
+WY,West,Mills,Unspecified in excerpt (code sections); cites manual of personnel rules and regulations including a pay plan (not provided here as the full pay plan document),unclear,1,not_verified
+WY,West,Powell,unclear,non_safety,1,not_verified
+WY,West,Torrington,unclear,unclear,1,not_verified
+WY,West,Wheatland,unclear,non_safety,1,not_verified
+WY,West,Wheatland,unclear,unclear,1,not_verified

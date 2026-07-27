@@ -1,0 +1,5 @@
+check,status,detail
+transport_diagnostic,A,no-search and two hosted-search checks passed
+one_row_production_probe,passed,parseable=1 candidate_rows=2
+secret_exposure,passed,credential_values_logged=false
+raw_artifacts,passed,raw_prompts=0 raw_responses=0

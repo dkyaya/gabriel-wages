@@ -1,0 +1,14 @@
+{
+  "immutable_input_hashes": {
+    "data/city_coverage.csv": "4fdf135ff3741893f5a4c45edc52a70159adc87598b777dfc4373dd8481249e3",
+    "docs/analysis/compensation_extraction/BOUNDED-TIER-C-EVIDENCE-MEMO-SUPPLEMENT-140-RATING-SUMMARY-2026-07-27/bounded_tier_c_evidence_memo_supplement_decision.json": "919be5d67006a6d319a350dd42f20e758f29de1b10814121fb1b3842fa42c2cb",
+    "docs/analysis/national_scout_candidate_queue_2026-07-20.csv": "d46b8bc3c60cbbda9b2f6f618fc447d1878d610fa1beb0924e7bafd47f965e83",
+    "docs/analysis/national_scout_coverage_municipality_2026-07-20.csv": "2339ecc448f0252a5a1d533e458688d7b9e8359a5b6af013784fef4f6847e96c",
+    "docs/analysis/national_scout_coverage_state.csv": "bad2948a2990e91280b510e5d93c1ab29aa65959f83693a641a1e902836e5a21"
+  },
+  "locked": true,
+  "queue_path": "docs/analysis/compensation_extraction/BROAD-STATE-BY-STATE-SOURCE-SCOUT-WAVE-2026-07-27/broad_state_by_state_source_scout_locked_queue.csv",
+  "queue_sha256": "d54c0becd9f40655199b44ca1ae63f9b3f85dc21d15a33528980471104cc62d2",
+  "row_count": 490,
+  "selection_algorithm": "state alphabetical; unmatched safety-cycle first; population descending; municipality/id tie-break"
+}
