@@ -1,0 +1,17 @@
+{
+  "coverage": [
+    "exact 321-row scope",
+    "289/32 PDF/HTML split",
+    "immutable hashes",
+    "excluded-row rejection",
+    "local-only PDF/HTML extraction",
+    "no OCR/render/network/model",
+    "quality-status controls",
+    "task-local artifact hashes",
+    "closed downstream statuses",
+    "dashboard global closure",
+    "idempotent resume",
+    "partial-output fail-closed"
+  ],
+  "focused_suite": "scripts/test_targeted_text_layer_extraction_321.py"
+}

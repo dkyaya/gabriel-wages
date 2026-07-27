@@ -1,0 +1,3781 @@
+Illinois Labor Relations Board
+
+2020
+ANNUAL REPORT
+
+To the Governor of the State of Illinois, the President of the Illinois Senate, the Speaker of the Illinois
+House, and the Members of the Illinois General Assembly:
+This is the 36th annual report of the Illinois Labor Relations Board (ILRB) giving an overview of decisions
+rendered, statistics of case activity, relevant court decisions, our budget and staffing for the period of July
+1, 2019 through June 30, 2020.
+The ILRB has offices in Springfield and Chicago. The ILRB consists of two panels with five members on
+the State Panel and three members on the Local Panel. The panels hold monthly meetings and meet jointly
+at least twice a year. ILRB meetings are open to the public. Dates and locations can be found at
+www.illinois.gov/ilrb.
+The Illinois Labor Relations Board is grateful to Governor J. B. Pritzker, Mayor Lori E. Lightfoot, and
+Cook County Board President Toni Preckwinkle for giving us the responsibility to help maintain a positive
+relationship between public employers and their employees.
+Sincerely,
+/s/ William E. Lowry
+William E. Lowry
+Chairman
+
+Table of Contents
+Jurisdiction of the Board ..................................................................................................................1
+Funding of the Board .......................................................................................................................2
+Illinois Labor Relations Board Members .........................................................................................3
+Illinois Labor Relations Board Staff ................................................................................................3
+Functions of the Board .....................................................................................................................4
+Petition Management (Representation Cases) ....................................................................4
+Election Petitions .................................................................................................................5
+Majority Interest Petitions....................................................................................................5
+Unfair Labor Practice Charges.............................................................................................6
+Other Issues before the Board ..............................................................................................6
+Mediation/Arbitration Cases ................................................................................................6
+Strike Investigations.............................................................................................................7
+Declaratory Rulings .............................................................................................................7
+Police Decertification Cases ................................................................................................7
+Rulemaking .........................................................................................................................7
+Referrals to other Agencies .................................................................................................8
+Law Library/Contract Repository ........................................................................................8
+Legislative Amendments .....................................................................................................9
+Board and Court Decisions ...........................................................................................................11
+I.
+Representation Issues .............................................................................................11
+II.
+Employer Unfair Labor Practices ..........................................................................13
+III.
+Union Unfair Labor Practices ................................................................................19
+IV.
+Procedural Issues ...................................................................................................22
+General Counsel’s Declaratory Rulings.........................................................................................23
+Interest Arbitration Awards ...........................................................................................................25
+Caseload Statistics .........................................................................................................................28
+Representation Cases Certified ......................................................................................................29
+Unfair Labor Practice Charges Workload......................................................................................29
+Petition Management (Representation) Workload.........................................................................29
+Case Actions in FY 2019 ...............................................................................................................30
+Certifications of Representative.....................................................................................................31
+Certifications of Voluntarily Recognized Representative .............................................................40
+Amendment of Certification ..........................................................................................................41
+Revocations of Prior Certifications ................................................................................................42
+Organizational Chart ......................................................................................................................43
+
+Jurisdiction of the Board
+The Illinois Public Labor Relations Act (Act), 5 ILCS 315 (2014), enacted by Public Act 83-1012, effective July 1,
+1984, and last amended effective December 20, 2019, governs labor relations between most public employers in
+Illinois and their employees, along with the labor organizations that represent these employees. Throughout the State,
+the Illinois Labor Relations Board (ILRB) regulates the designation of employee representatives; the negotiation of
+wages, hours, and other conditions of employment; and resolves or, if necessary, adjudicates labor disputes.
+The State Panel has jurisdiction over public, non-educational employers and employees throughout the State of Illinois.
+Its jurisdiction includes state government, county governments, municipal governments covering populations not in
+excess of two million persons, and the Regional Transportation Authority.
+The Local Panel has jurisdiction over units of local government with a population in excess of two million persons.
+This includes not only the County of Cook and the City of Chicago, but also other county- and city-wide governmental
+entities such as the Forest Preserve District of Cook County, the Metropolitan Water Reclamation District of Greater
+Chicago, the Chicago Housing Authority, the Chicago Transit Authority, and the Chicago Park District.
+Together with the Illinois Educational Labor Relations Act, 115 ILCS 5 (2014), the Act provides comprehensive
+statutory regulation of public sector collective bargaining in Illinois. It has many similarities to the National Labor
+Relations Act, which regulates collective bargaining matters in the private sector, and to the laws of other states that
+regulate collective bargaining in the public sector.
+The Board's duties under the Act include the following:
+1. Rendering determinations on all charges alleging unfair labor practices under the Act, after investigation and, where
+necessary, hearing;
+2. Processing petitions seeking the certification or decertification of collective bargaining representatives of public
+employees, often conducting hearings and elections upon such petitions;
+3. Processing petitions to modify or clarify bargaining units and certifications of bargaining units;
+4. Providing rosters of mediators, fact-finders, and arbitrators to parties covered by the Act in order to assist in
+resolving collective bargaining impasses and grievance disputes.
+5. Conducting emergency investigations of public employee strikes and strike threats, upon demand, to determine
+whether judicial proceedings are warranted to restrain or prevent strike activity imperiling the health and safety of the
+public.
+
+1
+
+Funding of the Board
+The Illinois Labor Relations Board received a budget appropriation of $1,734,000 for Fiscal Year 2020. The ILRB
+received its funding through the General Revenue Fund (GRF). The ILRB had a lump sum rather than line item budget
+for Fiscal Year 2020. The line item figures represented below reflect expenditures for those lines. Figures on each
+line, including the total, were rounded to the nearest dollar.
+FY 2020
+Actual Expenditures
+Regular Positions
+Social Security/Medicare
+Contractual Services
+Travel
+Commodities
+Printing
+Equipment
+Electronic Data Processing
+Telecommunication
+Agency Ops/Lump Sum
+Total
+
+1,131,968
+82,406
+48,652
+4,370
+875
+1,094
+1,097
+70,617
+21,406
+57
+1,362,542
+
+2
+
+Illinois Labor Relations Board Members
+STATE PANEL
+William E. Lowry (Chairman)
+Chicago
+John S. Cronin
+Mokena
+Kendra Cunningham
+Murrayville
+Jose L. Guidino
+Orland Hills
+Thomas Willis
+Addison
+LOCAL PANEL
+Robert M. Gierut (Chairman)
+Darien
+Charles E. Anderson
+Chicago
+Angela C. Thomas
+Chicago
+
+Illinois Labor Relations Board Staff
+EXECUTIVE DIRECTOR
+Kimberly F. Stevens
+
+GENERAL COUNSEL
+Helen J. Kim
+
+PERSONNEL OFFICER
+Carla Stone
+
+ASSOCIATE GENERAL COUNSEL
+Anna Hamburg-Gal
+
+CHIEF FISCAL OFFICER
+Aaron M. Itulya
+
+ADMINISTRATIVE LAW JUDGES
+Donald W. Anderson
+Matthew S. Nagy
+Michelle N. Owen
+Sharon A. Purcell
+
+COMPLIANCE OFFICER/
+INVESTIGATOR/MEDIATOR
+Olivia Campbell
+INVESTIGATOR
+Tiara Mackins
+
+INFORMATION TECHNOLOGY
+Jodi M. Marr
+CASE MANAGER
+Cody Huffines
+3
+
+Functions of the Board
+Case Processing
+The Board has two primary programs, Petition Management (Representation Cases) and Unfair Labor Practice
+Charges. The following briefly describes the types of cases processed by the Board under each program and the
+procedures used to process them. All references to the Board are applicable to either the State or Local Panel.
+
+Petition Management (Representation Cases)
+Petition management (representation) cases can be initiated in several ways. A labor organization seeking recognition
+as the exclusive bargaining representative of a unit of employees in which no other labor organization has attained
+recognition rights has two options: request that the employer voluntarily recognize it or file a representation petition
+with the Board. If another labor organization is already recognized in accordance with the Act to represent the same
+group of employees, a representation petition must be filed with the Board.
+The following types of petitions initiate representation proceedings before the Board:
+•
+
+Representation/Certification Petitions (RC) are filed by employees, a group of employees, or labor
+organizations seeking certification of an exclusive collective bargaining representative for certain positions.
+
+Labor organizations seeking certification as the exclusive bargaining representatives of employees may seek
+certification by filing a petition seeking an election or a Majority Interest Petition. Where a Majority Interest Petition
+is filed, the Board determines whether the labor organization has presented evidence that a non-coerced majority of
+employees in an appropriate unit signed valid cards or petitions indicating they want that labor organization to represent
+them for the purpose of collective bargaining. The Board can then certify the labor organization as the exclusive
+representative without an election.
+In an Election Petition, a labor organization presents evidence that over 30 percent of the employees seek an election
+to determine whether a majority desires representation by the petitioning labor organization. The Board then conducts
+an election to determine the employees’ desires regarding representation.
+•
+•
+•
+
+Employer's Representation Petitions (RM) are filed by employers alleging that one or more labor organizations
+have presented a claim to be recognized as an exclusive collective bargaining representative for a majority of
+the employees in an appropriate unit.
+Voluntary Recognition Requests (VR) are requests for certification of a unit, without an election, where the
+labor organization demonstrates it has a majority showing of interest in an appropriate unit and the employer
+voluntarily recognizes it as the unit's exclusive representative.
+
+•
+
+Decertification Petitions (RD) are filed by employees seeking an election by which they can indicate their
+desire to no longer be represented by the existing exclusive collective bargaining representative.
+
+•
+
+Unit Clarification Petitions (UC) are filed by exclusive collective bargaining representatives or employers
+seeking to clarify or amend an existing bargaining unit through the addition or deletion of a position without
+an election.
+
+•
+
+Petitions to Amend Certification (AC) are filed by exclusive collective bargaining representatives or employers
+seeking to amend a certification because of a change in name or structure.
+
+4
+
+•
+
+Declaration of Disinterest Petitions (DD) are filed by exclusive collective bargaining representatives to declare
+their disinterest in further representation of a bargaining unit.
+
+Upon receipt of a representation petition, the Board provides the employer with a notice to be posted for the benefit of
+affected employees. An investigation is initiated to determine the adequacy of the showing of interest - based on
+employee authorization cards, petitions, or election results - and the appropriateness of the proposed bargaining unit.
+Employees or competing labor organizations may file intervention petitions within specified time limits.
+Petitions are dismissed by the Executive Director when they have been untimely filed, when the bargaining unit is
+clearly inappropriate, when the showing of interest is not adequate, or when the employer and/or employees are not
+covered by the Act.
+
+Election Petitions
+When an election petition is filed, and Board agent determines that the petition is consistent with the Act and its Rules,
+the agent will prepare a stipulation for consent election to be signed by the petitioner, the employer, the labor
+organization seeking to represent the employees, any incumbent, and any timely intervener. Upon approval of the
+Executive Director, a Board agent will hold the election.
+If the investigation of the petition discloses the existence of a question concerning representation, the matter is assigned
+to an administrative law judge who may set it for hearing. Unlike unfair labor practice hearings, representation
+hearings are non-adversarial in nature. Parties may file appeals from the Executive Director's dismissal or file
+exceptions to an administrative law judge's recommended decision and order. The Board hears and rules on all appeals
+and exceptions.
+After an election is conducted, any party may file objections with the Board alleging that the result was not fairly and
+freely chosen by a majority of the employees. If, after investigation and hearing, it is determined that the objections
+are valid, a new election is conducted. If no objections are filed or if the Board determines after investigation or
+hearing that filed objections are not well-founded, the Board either certifies the collective bargaining representative
+that received a majority of the votes cast as the exclusive representative or certifies that the election resulted in no
+representation. Subsequent elections cannot be conducted in the bargaining unit for one year following an election
+that results in a Board certification.
+
+Majority Interest Petitions
+When a majority interest petition is filed, it is investigated to ensure that the labor organization has provided evidence
+that a non-coerced majority of the employees in an appropriate unit want to be represented by it for the purposes of
+collective bargaining. If the employer objects to the petition because it believes that specific positions are not eligible
+to be represented in a bargaining unit (for example, because employees in the positions are supervisors, confidential
+employees, or managerial employees as defined by the Act), the Board will nevertheless certify the labor organization
+as the exclusive representative for the unit if the contested positions are not sufficient to affect the labor organization's
+majority support. Whether the disputed positions should be included in the bargaining unit will be resolved by use of
+the Board's unit clarification procedures.
+If the majority interest petition proposes a bargaining unit that combines both professional and nonprofessional
+employees, the Board will first conduct an election to determine whether both the professional and nonprofessional
+employees want to be represented in a combined unit. If the professional and nonprofessional employees decline to
+be represented in a combined unit, the Board will certify separate professional and nonprofessional units, provided the
+labor organization has demonstrated majority support in each separate unit.
+If a party or individual provides evidence demonstrating a material issue of fact or law that the labor organization's
+majority support was obtained by fraud or through coercion, an administrative law judge will determine whether there
+
+5
+
+is clear and convincing evidence of fraud or coercion. This recommendation can be reviewed by the Board. If the
+Board determines there is clear and convincing evidence of fraud or coercion, it will conduct an election to determine
+majority support for the labor organization in the appropriate unit. If the Board finds that there is not clear and
+convincing evidence of fraud or coercion, the Board will certify the unit based on the labor organization's evidence of
+majority support.
+
+Unfair Labor Practice Charges
+Section 10 of the Act prohibits employers and labor organizations from engaging in certain labor practices. An
+employer, a labor organization, or an employee may file a charge with the Board alleging such unfair labor practices.
+There are two categories of unfair labor practice charges:
+•
+
+A Charge Against Employer (CA) alleges that an employer has violated one of the provisions under Section
+10(a) of the Act; and
+
+•
+
+A Charge Against Labor Organization (CB) alleges that a labor organization has violated one of the provisions
+under Section 10(b) of the Act.
+
+Upon receipt of a charge, the case is assigned to an investigator. If the investigation reveals that there is no basis to
+sustain the charge, the Executive Director dismisses the charge. If, on the other hand, the investigation reveals the
+existence of a dispositive question of law or fact as to whether an unfair labor practice has been committed, the
+Executive Director will issue a complaint and the case will be set for hearing before an administrative law judge. In
+contrast to practices before the National Labor Relations Board, the Board does not perform the prosecutorial function
+once a complaint is issued. Instead, the charging parties or their representatives prosecute unfair labor practice cases.
+Because it does not prosecute, the Board's "issue of law or fact" standard for issuance of a complaint is less strenuous
+than the reasonable cause standard used by the National Labor Relations Board.
+At unfair labor practice charge hearings, charging parties and respondents produce and examine witnesses, adduce
+evidence in support of their positions, and, typically, file written briefs. After considering the record and the parties’
+briefs, the administrative law judge will subsequently issue a recommended decision and order.
+Parties may file appeals from the Executive Director's dismissal or file exceptions to an administrative law judge’s
+recommended decision and order. The Board hears and rules on all appeals and exceptions. Parties aggrieved by
+Board decisions and orders may obtain judicial review in the Illinois Appellate Court. Parties may also seek to enforce
+a Board order in the Illinois Appellate Court.
+In FY2014, the Board designated one of its investigators to function as its in-house mediator. This move allows the
+Board to provide mediation services to parties who have pending claims before the Board.
+
+Other Issues Before the Board
+In addition to cases that fall within the Board’s two major programs, other issues also come before the Board. Below
+is an overview of various other ways the Board facilitates effective bargaining relationships between public employers
+and their employees.
+
+Mediation/Arbitration Cases
+The Board maintains a roster of qualified mediators and arbitrators. Upon request, the Board provides a list of
+mediators or arbitrators (MA) to parties who have reached an impasse in collective bargaining. The Act prohibits
+protective services employees (security employees, peace officers, firefighters) from striking. Disputes over their
+negotiations are subject to mandatory mediation and interest arbitration. Units of non-protective services
+6
+
+employees use mediation in the event of impasse and can use interest arbitration on agreement of the parties or in
+certain instances in negotiating a first contract. The parties may request the Board's roster for other services as
+well, such as fact-finding, grievance arbitration, and grievance mediation, which are provided at the request of
+one or both parties.
+
+Strike Investigations
+If a unit of non-protective services employees engages in a strike that the employer believes presents "a clear and
+present danger to the health and safety of the public," the employer may petition the Board for a strike investigation
+(SI). The Board has 72 hours to determine whether such a clear and present danger exists. The employer may then
+take the Board's findings to Circuit Court to seek to enjoin the work stoppage in a manner that would eliminate the
+danger. When employees have been enjoined from striking pursuant to this procedure, interest arbitration is used to
+resolve the issues in dispute.
+
+Declaratory Rulings
+Employers and labor organizations may also request that the Board's General Counsel issue a declaratory ruling (DR)
+stating whether the Act requires bargaining over a particular subject. Such requests must be made jointly, unless it
+involves a protective services employee unit where a request for interest arbitration has been made.
+
+Police Decertification Cases
+Amendments to Section 6.1 of the Illinois Police Training Act through Public Act 93-0655 instituted a process for the
+decertification of a police officer when it has been proven that, while under oath, he or she has knowingly and willfully
+made false statements as to a material fact going to an element of the offense of murder. There are two situations in
+which the ILRB State Panel may be required to conduct hearings involving alleged police perjury. In the first scenario,
+the Illinois Law Enforcement Training Standards Board (ILETSB) investigates verified complaints of police perjury
+in cases where there has been an acquittal. Following an investigation, ILETSB will forward a report to the Executive
+Director of the ILRB who will review the evidence to determine whether it is sufficient to warrant a hearing before an
+administrative law judge of the ILRB. In these cases, the Executive Director may either issue a non-appealable
+dismissal or order a hearing. In the second scenario, where there has been a finding of guilt on the offense of murder
+but a new trial is granted on direct appeal or a state post-conviction evidentiary hearing is ordered based on a claim of
+police perjury that goes to an element of the offense of murder, a request for hearing is filed directly with the ILRB
+without an investigation by ILETSB. If any of these cases proceed to hearing, an administrative law judge will make
+a recommendation to the ILRB State Panel as to whether certain police officers have committed perjury in homicide
+proceedings such that they should be decertified. The administrative law judge’s decision may be appealed to the
+Board and the Board decision may be further appealed to court.
+
+Rulemaking
+The Board is authorized to promulgate rules and regulations governing its activity. 5 ILCS 315/5(i), (j) & (k) (2012).
+A vote of five of the eight Board members is necessary to enact or amend rules.
+The Board has adopted regulations governing its internal structures (2 Ill. Adm. Code 2500), access to its records (2
+Ill. Adm. Code 2501), general provisions applicable to all Board proceedings (80 Ill. Adm. Code 1200), procedures in
+representation cases (80 Ill. Adm. Code 1210), procedures in unfair labor practice cases (80 Ill. Adm. Code 1220),
+procedures for resolving collective bargaining impasses (80 Ill. Adm. Code 1230), procedures for police decertification
+cases (80 Ill. Adm. Code 1240), and procedures for implementing the gubernatorial designations for exclusion (80 Ill.
+Admin. Code 1300). The Board's rules are available at its offices or on its website at http://www.illinois.gov/ilrb.
+
+7
+
+Referrals to Other Agencies
+The Board spends a considerable amount of time talking to members of the general public who either call or walk into
+the Board's offices seeking information regarding their work-related problems. When, as often happens, a Board agent
+determines that the Board has no jurisdiction to remedy the problem presented by the person, the agent directs the
+person to the appropriate governmental agency.
+
+Law Library/Contract Repository
+Specialized public sector labor relations law libraries are maintained in the Board's Chicago and Springfield offices.
+The libraries contain the Illinois Public Employee Reporter and are open to the public. The Board also serves as the
+repository of public sector collective bargaining agreements for employees under the Board's jurisdiction.
+
+8
+
+Legislative Amendments
+Public Act 101-620
+On December 20, 2019, Governor J.B. Pritzker signed into law Public Act 101-620, amending the Illinois Public Labor
+Relations Act (IPLRA) and the Illinois Educational Labor Relations Act (IELRA) in addition to the Illinois Freedom
+of Information Act. Public Act (FOIA). The IPLRA is amended as follows:
+Section 6:
+• Requires, on a monthly basis, public employers to provide the exclusive representative of public employees
+specific information regarding employees who are members of the represented bargaining unit represented
+by the respective union its represented employees within 10 days of hire of new employees.
+•
+
+Provides that an employer commits an unfair labor practice by improperly disclosing the required
+information. Public Act 101-620 made concurrent changes to FOIA.
+
+•
+
+Grants labor organizations reasonable access to represented employees for grievances and union
+business/meetings without loss of pay or charge to leave time; grants unions affirmative access to facility
+bulletin boards/mailboxes to communicate with represented employees. Employers and unions may agree
+to greater access through collective bargaining.
+
+•
+
+Eliminates the fair share provision.
+
+•
+
+Allows for a period of irrevocability of authorization of membership per agreement of the employer and
+labor organization. Deems the irrevocability period reasonable if period lasts one year, may be
+automatically renewed, and the authorization contains at least an annual 10-day period during which an
+employee may revoke authorization. These provisions apply retroactively and prospectively to claims
+regarding authorization periods.
+
+•
+
+Includes language governing timing and implementation of deductions by the employer. Employees no
+longer represented by a union may elect to continue deductions.
+
+•
+
+Provides all employee requests regarding deductions (authorize, revoke, cancel, change) to be made to the
+exclusive representative unless otherwise agreed by the parties, and requires the exclusive representative
+to transmit such information to the employer. In such cases, the employer shall rely on the provided
+information and process the deductions, and the union shall indemnify the employer.
+Provides an employer’s failure to comply with dues deduction provisions to be a “violation of the duty to
+bargain and an unfair labor practice”.
+
+•
+
+Grants ILRB exclusive jurisdiction over dues disputes under the Act. Provides for the ILRB to escrow
+disputed dues where an exclusive representative does not have an account for the purpose of escrowing
+such disputed dues.
+
+New Section 6.5:
+• Provides statement of defense to liability claims regarding fair share fees collected prior to the United
+States Supreme Court decision in Janus v. AFSCME, Council 31 (June 27, 2018) that applies to existing
+and future claims. Indicates that it is a declaration of existing law.
+9
+
+Section 10:
+• Under new Section 10(a)(8), an employer engages in an unfair labor practice when it interferes with,
+coerces, deters, or discourages public employees from becoming or remaining members of a union,
+authorizing representation by a union, or authorizing dues or fee deductions. This section further prohibits
+an employer from intentionally permitting outside third parties to use the employer’s email/communication
+systems to engage in such conduct. Provides that an employer’s good faith implementation of a policy to
+prohibit such use of communication/email systems is a defense to a ULP charge.
+•
+
+Under new Section 10(a)(9), an employer’s disclosure of employee information under Section 6 is an unfair
+labor practice if the employer knows or should know it will be used to interfere with, coerce, deter, or
+discourage public employees from becoming or remaining members of a union, authorizing representation
+by a union, or authorizing dues or fee deductions.
+
+•
+
+Under new Section 10(d), an employer is prohibited from discouraging union membership or dues
+deductions or otherwise interfere with the relationship between employees and their unions. Employers
+are required to refer all inquiries about union membership to the union, except that the employer may
+communicate with employees about payroll processes and procedures. Employers are also required to
+establish email policies in order to prohibit use of the employer’s email system by outside sources.
+
+10
+
+Board and Court Decisions
+I.
+
+Representation Issues
+
+07/10/19
+ILRB LP
+Confidential Employees
+In American Federation of State, County and Municipal Employees, Council 31 and City of Chicago, 36 PERI ¶ 12
+(IL LRB-LP 2019) (Case No. L-RC-16-035), AFSCME filed a majority interest representation petition seeking to
+represent employees working in the title of Supervisor of Personnel Services (SPS) at various departments within the
+City of Chicago in an existing bargaining unit. The Board accepted the ALJ’s recommended decision and order
+dismissing the petition because the SPSs are confidential employees pursuant to Section 3(c) of the Act. The Board
+agreed with the ALJ that the employees satisfied the authorized access test because the SPS had advanced knowledge
+of contemplated discipline in the normal course of their duties. The Board declined to abandon recent Board precedent
+as urged by AFSCME.
+08/13/19
+ILRB LP
+Managerial Employees
+In International Brotherhood of Teamsters, Local 700 and Chicago Transit Authority, 36 PERI ¶ 36 (IL LRB-LP
+2019) (Case No. L-RC-18-021), the ALJ found that employees working in the classification of Project ManagerConstruction (“Project Manager”) at the Chicago Transit Authority (“CTA”) were not managerial employees
+excluded from bargaining under Section 3(j) of the Act. Applying the traditional managerial test, the ALJ found the
+Project Managers did not engage in executive and management functions because they served as part of a team,
+playing a subordinate and advisory role, and thus lacked the requisite authority and discretion in carrying out their
+duties. The ALJ also determined their recommendations on major policy issues were not generally accepted. The
+Employer filed exceptions contending: (1) the ALJ disregarded the Employer’s evidence demonstrating that the
+Project Managers are predominantly engaged in executive and management functions; (2) improperly relied on the
+testimony of one witness; (3) improperly relied on or distinguished Board precedent; and (4) incorrectly determined
+that Project Managers are public employees because they work as a team and improperly downplayed the significance
+of the Project Managers’ recommendations as to day-to-day operations. The Board rejected the exceptions finding
+that the portions of the record identified by the Employer did not outweigh the evidence relied on by the ALJ and
+therefore did not compel rejection of the ALJ’s recommendations regarding the managerial test. The Board, however,
+modified the RDO to exclude footnote 5 as noted in the Employer’s exceptions.
+
+09/12/19
+ILRB SP
+Confidential Employees
+In American Federation of State County and Municipal Employees, Council 31 and Chief Judge of the Circuit Court
+of Cook County, 36 PERI ¶ 42 (IL LRB-SP 2019) (Case No. S-RC-18-003), the Board adopted the ALJ’s
+Recommended Decision and Order dismissing the majority interest petition filed by Petitioner seeking to represent
+employees in the title Investigator III working in the Cook County Juvenile Temporary Detention Center. Following
+the Board precedent in Ill. Dep’t of Central Mgmt. Servs. (Corrections), 33 PERI ¶ 121 (IL LRB-SP 2017), aff’d sub
+nom. Metro. Alliance of Police, Chapter 294 v. Ill. Labor Relations Bd., State Panel, 2018 Il App (1st) 171322-U
+
+11
+
+(unpublished order), the ALJ determined the Investigator IIIs, who substantiated or unsubstantiated allegations of
+misconduct, were excluded from collective bargaining as confidential employees because they had advanced
+knowledge of discipline. Although the Board found some merit to the AFSCME’s contention that the decision in Ill.
+Dep’t of Central Mgmt. Servs. (Corrections) relied on by the ALJ inappropriately expanded the authorized access test
+to include advanced knowledge of discipline, it adopted the RDO because that decision was affirmed by the Appellate
+Court in an unpublished order and to maintain consistency with the Board’s Local Panel decision in City of Chicago,
+36 PERI ¶ 12 (IL LRB-LP 2019).
+
+10/9/19
+ILRB SP
+Executive Director Election Order/Contract Bar
+In Policemen’s Benevolent and Protective Association—Labor Committee and County of Marion and County Clerk,
+Treasurer, Supervisor of Assessments, Coroner and Sheriff of Marion County, and Laborers International Union of
+North America, 36 PERI ¶ 53 (IL LRB-SP 2019) (Case No. S-RC-19-060), the petitioning union filed a majority
+interest petition seeking to represent employees at various offices within the County of Marion in a bargaining unit
+previously certified by the Board. The incumbent union and the County had bargained two separate collective
+bargaining agreements for the bargaining unit scheduled to expire on different dates. One agreement covered only the
+employees of the County Highway Department and is set to expire on November 30, 2020, two years after the other
+agreement covering the remainder of the bargaining unit which expired on November 30, 2018. The Executive Director
+found no issues of representation exist and ordered an election. She determined the County and the incumbent union
+improperly bargained separate agreements outside the Board’ representation proceedings and that contract bar did not
+apply because the Board does not recognize a separate unit of Highway Department employees. The County appealed
+the order for an election contending the CBA covering the Highway Department employees bars the election, pointing
+to Section 1210.135(a)(1) of the Board’s rules which bars the filing of representation petitions filed outside the
+designated window when a collective bargaining agreement is in effect covering “all or some of the employees in the
+bargaining unit.” The petitioning union responded by contending the current arrangement creates the potential for
+perpetual representation of the bargaining unit due to the staggered expiration dates. The Board found the
+circumstances presented novel issues and notably, raised, at least, an issue of law regarding the effect of the “all or
+some” phrase in Section 1210.135(a)(1) and remanded the case for hearing.
+12/11/2019
+ILRB SP
+Bargaining Unit Appropriateness
+In Laborers’ Int’l Union of North America and County of Clinton (Highway Dep’t), 36 PERI ¶ 88 (IL LRB-SP 2019)
+(Case No. S-RC-19-018), the Laborers’ International Union of North America, Local 773 (Union) filed a majority
+interest petition seeking to represent two employees working as Engineering Technicians in the Clinton County
+(County) Highway Department in a stand-alone bargaining unit. The ALJ found the presumption of inappropriateness
+did not apply because the Union was seeking only a portion of employees who perform similar duties. The ALJ then
+found the petitioned-for stand-alone bargaining unit to be inappropriate under the factors set forth in Section 9(b) of
+the Act. The Board rejected the ALJ’s recommendations with respect to the inappropriateness of the bargaining unit
+and granted the majority interest petition. The Board found the 9(b) factors supported the appropriateness of the
+petitioned for stand-alone unit, noting that the Act and precedent requires the Board to determine an appropriate unit
+for bargaining, not a more or the most appropriate one.
+
+12
+
+II.
+
+Employer Unfair Labor Practices
+
+08/13/19
+ILRB LP
+Repudiation/Modification Under Section 7
+In International Brotherhood of Teamsters, Local 700 and County of Cook and Sheriff of Cook County, 34 PERI ¶ 72
+(IL LRB-LP 2019) (Case No. L-CA-15-042), Local 700 alleged the Employers violated Sections 10(a)(4) and 10(a)(1)
+of the Act when Respondents required unit members—Correctional Officers in the Sheriff’s Department of Corrections
+(DOC)—to pass a Physical Agility Test (PAT) as a condition of transfer to the Sheriff’s Court Services Department
+(CSD). Local 700 alleges the PAT prerequisite to transferring out of DOC repudiated the collective bargaining process
+by refusing to comply with the “Lunch Premium Award” and subsequent related arbitration awards and modified the
+collective bargaining agreement without bargaining in good faith as required by Section 7 of the Act. The ALJ found the
+“Lunch Premium Award,” inter alia, established a process by which unit members could transfer from the Department
+of Corrections unit to the Court Services Department (CSD) bargaining unit which did not include the PAT
+requirement, and that process was later incorporated in the parties’ collective bargaining agreement. This all occurred
+at time when Local 700 represented deputy sheriffs working in DOC as well as CSD. Upon certification of the Illinois
+Fraternal Order of Police Labor Council (IFOP) as exclusive representative of CSD deputies, the Employer negotiated
+a collective bargaining provision with IFOP whereby the PAT requirement would be instituted for any employee
+entering the CSD after September of 2014. A subsequent arbitration award determined the Respondents and Local 700
+had agreed not to use the PAT as a transfer requirement for employees seeking to transfer from DOC into CSD, that
+the Respondents had not amended their agreement with Local 700 so as to implement the PAT requirement, and that,
+rather, the Respondents simply implemented the PAT requirement so as to apply after transferring employees were on
+the CSD payroll as a way of evading the provisions of the Lunch Premium Award and subsequent awards. Based on
+these facts, the ALJ found the Respondents repudiated and unlawfully modified, the collective bargaining agreement
+with Local 700 in violation of Sections 10(a)(4) and 10(a)(1) of the Act.
+The Respondents filed multiple exceptions to the ALJ’s Recommended Decision and Order (RDO), contending, inter
+alia, that because Local 700 was decertified as the representative of the CSD unit and replaced as the bargaining
+representative by the IFOP, it lacked standing to challenge the terms of the bargaining agreement between the
+Respondents and the IFOP and that the arbitrator had no jurisdiction to evaluate the terms of the agreement between
+the Respondents and the IFOP. On consideration of the Respondents’ exceptions, the Board found them to be without
+merit. The Board accepted the ALJ’s recommendations and adopted them as the decision of the Board, determining
+the allegations in the Complaint, as well as the ALJ’s findings, were tailored to the allegations regarding the terms of
+the agreement covering the DOC bargaining unit and that the ALJ had considered the terms of the agreement between
+the Respondents and IFOP only as evidence of the Respondents’ repudiation of their agreement with Local 700.
+Moreover, the Board found that since the IFOP agreement called for DOC employees who transferred to the CSD unit
+but who did not pass the PAT to be returned to the DOC unit, the Local 700 agreement still applied to those returning
+members.
+08/13/19
+ILRB SP
+Default/Grounds for Variance
+In International Association of Fire Fighters, Local 50 and City of Peoria, 36 PERI ¶ 27 (IL LRB-SP 2019) (Case
+No. S-CA-18-160), the ALJ found the Respondent in default for failure to answer the complaint for hearing and thus
+found the allegations of the complaint—that the Respondent violated the Act by failing to give Local 50 a signed copy
+of the memorandum of understanding (MOU) regarding the staffing of 17 machines and by violating the terms of the
+MOU by unilaterally implementing a “brownout” policy—to have been admitted. In response to exceptions filed by
+13
+
+the Respondent, the Board’s State Panel determined that, although the Respondent claimed that it was not aware of
+the complaint until it received the ALJ’s RDO, the grounds for granting a variance from the Board’s rule relating to
+the time for answering a complaint were not present in this case. Citing an extensive list of communications to the
+Respondent and its representative, as listed in the representative’s Notice of Appearance, including issuance by the
+ALJ of an Order to Show Cause to which there was no response by the Respondent, the State Panel found that the
+lack of a response to the complaint and the Order to Show Cause and the lack of persuasiveness of the reasons given
+by the Respondent for this failure to respond warranted the denial of a variance. The matter is pending administrative
+review in the Appellate Court, Third District.
+
+09/12/19
+ILRB LP
+Executive Director’s Dismissal—Retaliation/Joint Employer Status/Definition of Employer
+In Chicago Journeymen Plumbers’ Local 130, U.A., and City of Chicago, 36 PERI ¶ 37(IL LRB-LP 2019) (Case No.
+L-CA-18-072), the Board reversed the Executive Director’s dismissal of a charge filed by Local 130 alleging the City
+of Chicago retaliated against Stanley DeCaluwe for filing a grievance over his discharge from the City by directing
+one of its contractors, NPL Construction, to terminate his employment. The charge was dismissed because the
+Executive Director determined DeCaluwe was not a public employee at the time of the complained of conduct and
+NPL Construction was not a public employer. Local 130 appealed contending the allegations raised issues of fact and
+law regarding NPL Construction’s status as a joint employer. The Board reversed the dismissal observing the charge
+raised several issues of law and fact regarding whether the City blacklisted DeCaluwe, whether City’s direction to
+NPL Construction due to DeCaluwe’s grievance filing constitute an unlawful retaliation, and whether NPL
+Construction itself can be considered an employer under the Act in addition to whether it can be considered a joint
+employer. The Board then remanded the matter for further investigation into the relationship between the City and
+NPL Construction.
+09/12/19
+ILRB LP
+Executive Director’s Dismissal—Nexus/New Allegations on Appeal
+In Bonnie K. Miller-Herron and State of Illinois, Department of Central Management Services (Financial and
+Professional Regulation), 36 PERI ¶ 41 (IL LRB-SP 2019) (Case No. S-CA-19-065), the Board affirmed the
+Executive Director’s dismissal of the charge filed by Bonnier Miller alleging her employer engaged in unfair labor
+practices when it denied her request for a flexible schedule. The Executive Director determined that the available
+evidence failed to indicate the employer took action against Miller because she participated in any activity protected
+by the Act. In affirming the dismissal, the Board declined to consider the new allegations included in Miller’s appeal
+because it found the investigation was designed to illicit information from Miller to substantiate an unfair labor
+practice charge, but Miller failed to provide such information.
+
+09/16/19
+Illinois Appellate Court, First District Rule 23 Unpublished Order Retaliation/Threats/Protected Activity/Use
+of Office Space
+In Erik Slater v. Illinois Labor Relations Board, 2019 IL App (1st) 181007-U, in and unpublished order, the First
+District affirmed the Board’s decision in Erik Slater and Chicago Transit Authority, 34 PERI ¶ 160 (IL LRB-LP)
+(Case No. L-CA-16-017) finding the Chicago Transit Authority engaged in unfair labor practices within the meaning
+
+14
+
+of Sections 10(a)(1) and 10(a)(2) and (1) of the Act. The court affirmed the Board’s findings and conclusions that the
+CTA violated Section 10(a)(1) and 10(a)(2) by threatening and taking several adverse actions against Slater for
+engaging in protected activity but did not violated those sections of the Act when it denied Local 308, and
+consequently Slater, use of office space, finding that such denial not an adverse action because neither Local 308 nor
+Slater had a proprietary interest in the office space.
+10/9/19
+ILRB LP
+Effects Bargaining/Unilateral Change/Layoffs
+In Policemen’s Benevolent Labor Committee and County of Cook and Sheriff of Cook County, 36 PERI ¶ 54 (IL
+LRB-LP 2019) (Case No. L-CA-18-037), the union alleged Respondents implemented the layoff of unit members,
+Lieutenants in the Sheriff’s Department of Corrections, without first bargaining to impasse, the layoff decision and
+its effects. The ALJ found Respondents were not obligated to first bargain the decision to layoff the Lieutenants but
+were obligated to bargain the effects of the layoff. The ALJ found the effects the union wished to bargain included
+the effective date, seniority of the laid off lieutenants, compensatory time, and the assignments of the remaining
+Lieutenants, but Respondents implemented the layoffs before completion of bargaining over these subjects. The ALJ
+thus concluded the Respondents violated Section 10(a)(4) and derivatively, Section 10(a)(1) of the Act. Respondents
+filed exceptions. The Board rejected the ALJ’s recommendations and dismissed the complaint for hearing. The Board
+found Respondents were not obligated to bargain over the effective date of the layoff as the effective date is an
+inevitable consequence of the layoff decision. Regarding the remaining effects the union wished to bargain, the Board
+determined the parties’ collective bargaining agreement indicated the parties had already bargained over seniority and
+compensatory time, and the union waived bargaining over assignments.
+10/9/19
+ILRB LP
+Executive Director’s Dismissal—Retaliation
+In Derek B. Webb and City of Chicago, 36 PERI ¶ 55 (IL LRB-LP 2019) (Case No. L-CA- 19-095), the Executive
+Director dismissed as untimely the charge filed by Derek Webb alleging the City of Chicago committed unfair labor
+practices when it ceased to assign him to the City’s Warrant Desk. The Board affirmed the Executive Director’s
+dismissal regarding the Warrant Desk allegation, but determined that Webb, a pro se litigant, amended his charge
+during the investigation to include allegations that the City retaliated against him by denying overtime opportunities
+because he engaged in protected activity and remanded the case for further investigation into the new allegations.
+10/9/19
+ILRB SP
+Unilateral Change/Retaliation/Amendment to Complaint/Adequate Remedy
+In North Riverside Fire Fighters, Local 2714 and Village of North Riverside, 36 PERI ¶ 56 (IL LRB-SP 2019) (Case
+No. S-CA-18-108), the Board adopted the ALJ’s findings and conclusions that the Village of North Riverside
+committed unfair labor practices in violation of Sections 10(a)(1), 10(a)(2), and 10(a)(4) but modified a portion of the
+remedy. The complaint for hearing alleged the Village unlawfully changed the health insurance of newly-hired
+firefighters during the pendency of impasse resolution proceedings and threatened to retaliate against the newly-hired
+firefighters because the union filed a grievance over the change in their health insurance. The union moved to amend
+the complaint to include the allegation that the Village terminated a probationary firefighter in retaliation for the union
+filing the health insurance grievance and for pursuing the unfair labor practice charge. The ALJ amended the
+
+15
+
+complaint to include the retaliation allegation and concluded the union successfully proved the allegations and
+supported recommending the Village’s conduct violated the Act. Regarding the remedy for the discharge firefighter,
+the ALJ recommend the extension of the probationary period along with backpay and interest. The Board, however,
+determined the extension of the probationary period inadequately remedied the Village’s unlawful conduct because
+merely extending the probationary period would only serve to provide another opportunity to discharge the firefighter.
+Thus, the Board ordered reinstatement as a permanent firefighter with backpay plus interest, finding such remedy
+would best effectuate the purposes of the Act.
+11/18/19
+ILRB LP
+Amended Complaint/Weingarten Rights/Retaliation/Adverse Action/Motive
+In Isis Collins and Chicago Transit Authority, 36 PERI ¶ 70 (IL LRB-LP 2019) (Case No. L-CA-18-049), Charging
+Party, a bus operator with the CTA, alleged the CTA violated the Act when it continued to question Charging Party
+about her on-duty injury after she asked for union representation, threatened her with discipline for requesting union
+representation, and then harassed her by threatening to call the police in retaliation for requesting union representation.
+The ALJ amended the complaint to include allegations regarding Charging Party’s Weingarten rights and then
+determined the CTA violated Section 10(a)(1) when it continued to question her after she invoked her Weingarten
+rights and then retaliated against her for invoking them. The ALJ determined the interview regarding Charging Party’s
+injury on duty was investigatory in nature because her manager advised that false statements given during the interview
+could be used against the Charging Party and the hard drive would be reviewed. The ALJ concluded Charging Party’s
+request for union representation during the interview amounted to her invocation of Weingarten rights. The ALJ next
+found that the CTA unlawfully harassed and intimidated Charging Party by threatening to call the police to have her
+arrested and documenting and reporting her unauthorized presence on CTA property. The Board rejected the ALJ’s
+recommendations that the CTA violated the Act and dismissed the complaint for hearing in its entirety. The Board
+rejected the ALJ’s recommendation to amend the complaint, reasoning the interview at issue was not investigatory in
+nature such that Charging Party’s Weingarten rights were invoked. The Board then rejected the ALJ’s
+recommendations with respect to retaliation, finding the complained of actions did not constitute adverse employment
+actions and even if they could be considered to be adverse actions, there was no causal connection between the alleged
+harassment and Charging Party’ call for union’s assistance.
+12/11/2019
+ILRB SP
+Timeliness/Submission of Permissive Subject/Interest Arbitration
+In Metropolitan Alliance of Police, Bolingbrook Chapter #3 and Village of Bolingbrook (Police Dep’t), 36 PERI ¶ 87
+(IL LRB-SP 2019) (Case No. S-CA-18-092), the Board rejected the ALJ’s recommendation to dismiss the complaint
+for hearing as untimely and remanded the case to the ALJ to issue a supplemental recommended decision and order
+on the merits of complaint’s allegations. The underlying charge alleged the Village engaged in unfair labor practices
+by submitting a permissive subject to an interest arbitrator who selected the Village’s status quo proposal containing
+the permissive subject. The ALJ found the charge untimely based on his determination that the parties’ submission of
+final offers to the interest arbitrator triggered the Act’s six-month limitations period rather than the date of the award
+as argued by Charging Party. The Board, however, relying on the First District’s decision in Skokie Firefighters Union,
+Local 3033 v. Illinois Labor Relations Board, State Panel, et al., 2016 IL App (1st) 152478, found the triggering event
+to be the date the arbitrator issued his award and found the charge timely filed.
+
+16
+
+12/11/2019
+ILRB SP
+Repudiation/Employer Control/Jurisdiction
+In Laborers’ Int’l Union of North America and Alexander County Housing Authority, 36 PERI ¶ 85 (IL LRB-SP 2019)
+(Case No. S-CA-18-007), the Board accepted the ALJ’s Recommended Decision and Order dismissing the complaint
+for hearing that alleged the Employer repudiated its collective bargaining agreement with Charging Party in violation
+of Section 10(a)(4) of the Act. The ALJ found the Employer lacked the requisite control over the decision to abrogate
+the parties’ collective bargaining agreement and decisions regarding the terms and conditions of employment due to
+the U.S. Department of Housing and Urban Development’s takeover of the Employer’s implementation of the HUD’s
+Low Income Housing Program. The Board noted that it lacked authority to find HUD’s actions to have violated the
+Act for the Act’s definition of “public employer” or “employer” does not include federal agencies. Charging Party
+petitioned for administrative review of the Board’s decision. The petition is currently pending before the Illinois
+Appellate Court, Fourth District.
+12/11/19
+ILRB LP
+Executive Director Dismissal/Timeliness/Retaliation
+In Derek Webb and City of Chicago, 36 PERI ¶ 86 (IL LRB-LP 2019) (Case No. L-CA-19-110), Charging Party
+alleged the Employer engaged in unfair labor practices within the meaning of Section 10(a) of the Act by investigating
+him for providing his union with confidential information related to grievances and denying his requests for
+information under the Freedom of Information Act in retaliation for previously serving in union leadership roles. The
+Executive Director dismissed portions of the charge on timeliness grounds and the remainder of the allegations on
+grounds the available evidence failed to support a retaliation claim under either Section 10(a)(1) or Section 10(a)(2)
+of the Act. Upon Charging Party’s appeal, the Board affirmed the Executive Director’s dismissal.
+12/11/19
+ILRB LP
+Unilateral Change/Abeyance
+In Fraternal Order of Police, Lodge #7 and City of Chicago, 36 PERI ¶ 84 (IL LRB-LP 2019) (Case No. L-CA-17034) FOP filed an unfair labor practice charge against the City of Chicago alleging the City unilaterally implemented
+its CR Matrix CR Guidelines in violation of Sections 10(a)(4) and 10(a)(1) of the Act. The ALJ found the City violated
+Sections 10(a)(4) and 10(a)(1) of the Act when it implemented the CR Matrix and Guidelines without first bargaining
+such with the Union. The Board, in consideration of the parties’ ongoing negotiations for a successor agreement and
+at the parties’ request, held the case in further abeyance with directions to the parties to report either the outcome, if
+any, or the status of negotiations on or before November 8, 2020.
+12/17/19
+ILRB LP
+Unilateral Change/Abeyance
+In Fraternal Order of Police, Lodge #7 and City of Chicago (Department of Police), 36 PERI ¶ 91 (IL LRB-LP 2019)
+(Case No. L-CA-16-079), the ALJ found the City did not engage in unfair labor practices by unilaterally implementing
+a policy known as the “Transparency Policy” that provided for the release of video footage in connection with
+investigations into police officer misconduct. The Union filed exceptions and the City filed a response. In light of the
+parties continuing negotiations and at the request of the parties, the Board held the case in further abeyance and directed
+17
+
+parties to report either the outcome, if any, or the status of negotiations on or before November 8, 2020.
+02/6/20
+ILRB SP
+Retaliatory Discharge/Reversal of Dismissal/Issuance of Complaint
+In American Federation of State, County, and Municipal Employees, Council 31, and County of DuPage (DuPage
+Care Center), 36 PERI ¶ 114 (IL LRB-SP 2020) (Case No. S-CA-19-121), the Board’s Executive Director dismissed
+a charge alleging the Employer retaliated against one of its employees by discharging him for serving as a Union
+steward and for threatening to report a nursing supervisor to the Union regarding a dispute resulting from a voluntary
+overtime assignment. The Executive Director dismissed the charge for lack of evidence of the Employer’s unlawful
+motive. She found the Union failed to provide a nexus between the employee’s threat to report the nursing supervisor
+to the Union and his discharge. She also found dismissal warranted because the evidence demonstrated that the
+employee had in fact engaged in the conduct for which the Employer claimed he was discharged, and that the Employer
+would have discharged the employee in the absence of the alleged protected activity. Moreover, the Executive Director
+observed that Charging Party did not allege an independent Section 10(a)(1) claim. Nevertheless, she determined that
+the evidence failed to indicate a violation under either Section 10(a)(1) or 10(a)(2). Upon appeal, the Board reversed
+the dismissal and directed issuance of a complaint for hearing. The Board found the Union raised issues of both fact
+and law as to the elements of a prima facie case on the ultimate issue of whether the employee was discharged because
+of his protected union and concerted activity in violation of Section 10(a)(1) and 10(a)(2) of the Act.
+02/6/20
+ILRB SP
+Unilateral Change/Mandatory Subject/Waiver
+In Policemen’s Benevolent and Protective Association, Unit #5 and Springfield Firefighters, IAFF Local 37, and City
+of Springfield, 36 PERI ¶ 113 (IL LRB-SP 2020) (Case Nos. S-CA-19-046, S-CA-19-066 Consol.), the Board adopted
+the ALJ’s Recommended Decision and Order finding the City violated Sections 10(a)(4) and derivatively, 10(a)(1) of
+the Act when it implemented a rule change approved by the City’s civil service commission which gave preference
+points to promotional candidates for City residency. Applying the Central City test, the ALJ found the use of residency
+preference points in the promotional process concerned a mandatory subject of bargaining and concluded the City was
+obligated to bargain the decision to change the rule. The ALJ further concluded the Charging Parties did not waive
+bargaining over residency preference points. Lastly, the ALJ determined the City unlawfully failed to maintain the
+status quo during the pendency of Section 14 interest arbitration with Charging Parties.
+In adopting the ALJ’s recommendations, the Board rejected the City’s exceptions on both procedural and substantive
+grounds. Procedurally, the Board found one of the City’s exceptions failed to comport with Section 1200.135(b)(2)
+of the Board’s rules because the exception was not supported by citations to the record or authority. The Board also
+noted the City failed to contest many of the ALJ’s findings and determinations forming the basis for his conclusion
+that the City engaged in unfair labor practices and thus, waived those exceptions. The Board then rejected the City’s
+reliance on the Board’s decision in City of Springfield (IBEW et al.), 35 PERI ¶ 15 (IL LRB-SP 2018), in which the
+Board reversed the ALJ’s finding that the City unlawfully changed its accrued vacation payout policy by adopting an
+ordinance. The Board distinguished that case, finding that the parties had the opportunity to bargain, and in some
+cases did so, before the effective date of the ordinance, whereas in the instant case, the rule change became effective
+upon approval by the Commission and there was no indication in the record that Charging Parties were given notice
+of or an opportunity to bargain, or bargained, the proposed change before it was approved by the Commission.
+
+18
+
+03/10/20
+Illinois Appellate Court, First District Rule 23 Unpublished Order
+Retaliation/Motive/Nexus
+In Travis Koester v. Illinois Labor Relations Board, County of Sangamon and Sheriff of Sangamon County, 2020 IL
+App (4th) 180754-U, the Fourth District, in an unpublished order, affirmed the Board’s decision in Travis Koester and
+County of Sangamon and Sheriff of Sangamon County, 35 PERI ¶ 70 (IL LRB-SP 2018) (S-CA-16-133) dismissing
+the complaint for hearing. Charging Party, a member of the Sangamon County Sheriff’s Tactical Response Unit (TRU),
+had alleged the Sangamon County Sheriff removed him from the TRU because he filed grievances in violation of
+Section 10(a)(1) of the Act. The grievances were filed over the promotion of three individuals, two of whom were
+fellow TRU members. Claiming trust among TRU members to be vital to the successful operation of the highly
+specialized law enforcement unit, Respondents removed Charging Party from the unit because the other TRU members
+expressed a lack of trust in the Charging Party due to the nature of the grievances filed. Charging Party’s fellow TRU
+members requested his removal after a meeting with TRU members. The ALJ concluded the Respondent retaliated
+against Charging Party because he filed grievances in violation of Section 10(a)(1) of the Act. The Board rejected the
+ALJ’s recommendation and dismissed the complaint, finding that the Charging Party had not established the requisite
+causation, i.e., that the Charging Party’s filing of the two grievances was the motivating factor in the Sheriff’s decision
+to remove him from the TRU, and finding instead, the evidence supported the conclusion that it was lack of trust in
+Charging Party by his fellow team members that caused his removal from the unit.
+06/19/20
+ILRB LP
+Dismissal/Retaliation
+In Carmen Rentas and County of Cook, Health and Hospital System, 37 PERI ¶ 2 (IL LRB-LP 2020) (Case No. LCA-19-078), Charging Party, an Administrative Assistant IV at the County of Cook’s Stroger Hospital, which is a title
+represented by the Retail, Wholesale, and Department Store, Local 200, filed an unfair labor practice charge which
+alleged that the County retaliated against her because of her race and/or national origin. The Executive Director
+dismissed the charge on grounds that Charging Party failed to allege the County took action against her for engaging
+in activity protected by the Act, noting that the charge appeared to claim the County took action against Charging Party
+because of her gender, national origin, and age. Upon appeal, the Board affirmed the dismissal.
+
+III.
+
+Union Unfair Labor Practices
+
+07/10/19
+ILRB LP
+Executive Director’s Dismissal—Breach of Duty of Fair Representation
+In Glenn E. Jones and Amalgamated Transit Union, Local 241, 36 PERI ¶ 11 (IL LRB- LP) (Case No. L-CB-19020), the Executive Director dismissed a charge alleging that the Respondent Union had engaged in unfair labor
+practices when it allegedly breached its duty of fair representation by failing to seek enforcement on behalf of
+employees in the classification of bus server of the wage provisions of a collective bargaining agreement and by
+pursuing a grievance regarding those wage provisions on behalf of mechanics and car servers, but not bus servers.
+On appeal, the Board affirmed the dismissal because the Charging Party failed to raise issues of fact or law
+necessitating a hearing. In support of its decision, the Board noted it will not second guess a union’s administrative
+decision regarding grievance handling unless there is compelling evidence of intentional misconduct, citing American
+Federation of State, County and Municipal Employees, Council 31 (Jackson), 33 PERI ¶ 34 (IL LRB-SP 2016). With
+respect to the Charging Party’s additional contention that the Union breached its duty of fair representation by
+19
+
+entering into a contract that was unfair to bus servers, the Board declined to accept the Executive Director’s
+determination that part of the charge was untimely but found that the Executive Director correctly determined that the
+Charging Party had raised no issues of fact or law requiring a hearing on the merits as to that contention.
+08/13/19
+ILRB SP
+Timeliness/Breach of Duty of Fair Representation
+In Vincent Clemens and Wauconda Professional Firefighters, International Association of Firefighters, Local 4876,
+36 PERI ¶ 28 (IL LRB-SP) (Case No. S-CB-18-036), the Executive Director dismissed a charge that the Respondent
+Union had engaged in unfair labor practices when it allegedly retaliated against the Charging Party by conspiring
+with the Employer (Wauconda Fire Protection District) to defeat his disability claim before the local pension board
+and by allegedly refusing to represent him in disciplinary matters. The Charging Party alleged that the Union engaged
+in such conduct in retaliation for the Charging Party’s having supported another union during efforts to organize the
+Employer’s fire captains and lieutenants. The Executive Director dismissed the charge on timeliness grounds and
+determined that, even if the charge were timely, it failed to raise issues warranting a hearing. On appeal, the Board
+affirmed the dismissal, finding the Executive Director correctly found the time period began to run on the date that
+the Union filed its petition to intervene in the hearing, rather than on the date of the hearing itself. With respect to the
+Charging Party’s assertion that the Union’s action was a continuing violation, the Board noted that the continuing
+violation doctrine cannot make actionable alleged unlawful conduct occurring outside the limitations period. In regard
+to the merits of the charge, the Board found the available evidence failed to indicate the existence of issues for a
+hearing, noting that although the Charging Party alleged that the Union was motivated against him in light of his
+having encouraged support of a rival union, nothing in the appeal or supporting materials indicated that the Union took
+the allegedly adverse action because of this alleged animus.
+08/16/19
+Illinois Appellate Court, First District Rule 23 Unpublished Order Timeliness/Breach of Duty of Fair
+Representation/Motion for Sanctions
+In Carlo J. Carlotta v. Illinois Labor Relations Board, 2019 IL App (1st) 182002-U, the First District in an
+unpublished order affirmed the Board’s decision in Illinois Council of Police (Carlotta), 35 PERI ¶ 38 (IL LRB-SP
+2018) (Case No. S-CB-18-021) sustaining the dismissal of Carlotta’s charge alleging the Union engaged in intentional
+misconduct by refusing to arbitrate a grievance over his termination from employment. The court affirmed the Board’s
+finding that Carlotta’s appeal lacked merit and the Executive Director properly dismissed the charge.
+10/9/19
+ILRB SP
+Executive Director’s Dismissal—Timeliness/Breach of Duty of Fair Representation/Motion for Sanctions
+In Thomas Tate and Carmelita Terry and Illinois Municipal Police Association #1, 36 PERI ¶ 53 (IL LRB-SP 2019)
+(Case No. S-CB-19-016), the Board affirmed the Executive Director’s dismissal of the charge alleging the union
+breached its duty of fair representation when it withdrew and refused to settle grievances filed by the charging parties
+over their failure to be promoted. The Executive Director dismissed the charge because the available evidence failed
+to raise issues of fact or law for hearing. The charging parties appealed contending the Executive Director did not
+consider their claim that the union refused to settle their promotion grievance not to discriminate against charging
+parties but to work against them so that members of the union leadership would be promoted instead. The Board
+
+20
+
+found no evidence indicating misconduct on the part of the union. The Board also denied the union’s motion for
+sanctions on procedural and substantive grounds.
+11/18/2019
+ILRB LP
+Dismissal/Breach of Duty of Fair Representation/Discrimination/Grievance Handling/Fair Share Status
+In Derek B. Webb and American Federation of State, County, and Municipal Employees, Council 31, 36 PERI ¶ 71
+(IL LRB-LP 2019) (Case No. L-CB-19-038), Charging Party alleged his Union engaged in unfair labor practices within
+the meaning of Section 10(b) of the Act by failing to respond to Charging Party’s inquiries regarding three previously
+filed grievances, refusing to file an unfair labor practice charge against his employer, the City of Chicago, and refusing
+to file additional grievances on his behalf, to retaliate against Charging Party for urging conversion to fair share
+membership instead of full-fledged membership with the Union. The Executive Director dismissed portions of the
+charge on timeliness grounds and the remainder of the allegations on grounds the available evidence failed to raise an
+issue of fact or law to warrant a hearing. Noting that under Board precedent a union is afforded substantial discretion
+in deciding to pursue grievances unless the union is motivated by vindictiveness, discrimination, or enmity, the
+Executive Director observed the Union provided evidence indicating it had “legitimate reasons” for the actions at issue
+and concluded the available evidence failed to indicate a causal connection between Charging Party’s advocacy of fair
+share status. On appeal, the Board affirmed the dismissal.
+01/9/20
+ILRB LP
+Dismissal/Breach of Duty of Fair Representation/Grievance Handling
+In Anthony Weeden and Service Employees International Union, Local 73, 36 PERI ¶ 99 (IL LRB-LP 2020) (Case
+No. L-CB-19-052), Charging Party, an employee of Cook County Facilities Management who is represented by
+Respondent, alleged Respondent engaged in unfair labor practices within the meaning of Section 10(b) of the Act
+when it failed to advance Charging Party’s discharge grievance to arbitration. The Executive Director dismissed the
+charge on grounds the record contained insufficient evidence of Respondent’s intentional misconduct as there was
+scant evidence that Respondent was biased against or harbored any hostility toward Charging Party. Furthermore, the
+Executive Director found Charging Party failed to establish the necessary causal connection between the alleged bias
+and Respondent’s decision not to pursue the grievance. On appeal, the Board affirmed the dismissal. The Board
+declined to consider Charging Party’s evidence of the Union’s alleged animosity because he failed to submit such
+evidence during the investigation and then failed to include such materials along with his appeal, citing Sections
+1220.40(a)(1) and 1200.135(a)(1) of the Board’s rules.
+01/9/20
+ILRB SP
+Dismissal/Timeliness/Breach of Duty of Fair Representation
+In Tonette Elder and American Federation of State, County, and Municipal Employees, Council 31, 36 PERI ¶ 101
+(IL LRB-SP 2020) (Case No. S-CB-19-028), the charge alleged the Union engaged in unfair labor practices when it
+inadequately handled her discharge grievance due to the Union’s bias against her. The Executive Director dismissed
+the charge as untimely and on grounds Charging Party failed to identify any Union bias, hostility or motive against
+Charging Party when it failed to acknowledge or accept documentation of Charging Party’s promotion in handling her
+discharge grievance. The Executive Director also determined Charging Party failed to raise an issue for hearing as to
+Union’s abuse of its discretion in handling grievances. On appeal, the Board affirmed the dismissal for the reasons
+
+21
+
+cited by the Executive Director.
+01/9/20
+ILRB SP
+Dismissal/Breach of Duty of Fair Representation/Dues Payment Status
+In James Cochran and American Federation of State, County, and Municipal Employees, Council 31, 36 PERI ¶ 102
+(IL LRB-SP 2020) (Case No. S-CB-20-008), Charging Party alleged Respondent engaged in unfair labor practices
+when it failed to timely pursue his grievance because he was not a dues-paying member of the Respondent. The
+Executive Director dismissed the charge finding Charging Party failed to identify any evidence Respondent failed to
+pursue his grievance to discriminate against him. The Executive Director noted Charging Party failed to submit
+evidence Respondent processed dues-paying members’ grievances more efficiently than those of non-dues paying
+members and that Charging Party advised Respondent that he did not want the grievance filed when Respondent’s
+steward attempted to file the grievance within the contractual time period. On appeal, the Board affirmed the dismissal
+for the reasons stated by the Executive Director, observing there was no material difference in the way the Executive
+Director construed the basis of the charge—discrimination based on dues payment status—and Charging Party’s
+contention that his charge is based on the failure to fairly represent him due to his “non-paying member” status or his
+status as a “non-fair share paying member.”
+
+IV.
+
+Strike Investigations
+
+7/10/19
+ILRB SP
+Strike Investigation
+In QComm and American Federation of State, County, and Municipal Employees, Council 31, 36 PERI ¶13 (IL LRBSP 2019) (Case No. S-SI-20-001), QComm filed a Petition for Strike Investigation with the State Panel pursuant to
+Section 18 of the Act and Section 1230.190 of the Board's Rules and Regulations, 80 Ill. Admin. Code Sections 1200
+through 1240 (Rules). QComm, an intergovernmental emergency dispatch center, claimed that a strike threatened by
+AFSCME, Council 31, the exclusive representative of a bargaining unit composed of QComm employees performing
+telecommunications duties, constituted a clear and present danger to the health and safety of the public. After an
+investigation and expedited hearing, the Board found that a clear and present danger to the health and safety of the
+public would exist if the employees who are responsible for 911 emergency dispatch duties and perform functions
+that impact public health and safety engaged in a strike. The Board also found there were no available, adequate
+substitutes for the employees at issue in the event of a strike and observed that the parties failed to present any adequate
+compromise that would permit some dispatchers to strike while requiring other dispatchers to remain on the job.
+
+22
+
+General Counsel’s Declaratory Rulings
+S-DR-19-002 City of Litchfield and Illinois Fraternal Order of Police Labor Council, 36 PERI ¶ 22 (IL LRB GC)
+7/24/19
+The Employer filed a unilateral petition seeking a declaratory ruling regarding whether the Union’s
+proposals to include the Patrol Dispatcher position in the recognition clause of the parties’ collective
+bargaining agreement and to maintain reference to the rank of “sergeant” in the collective bargaining
+agreement provision pertaining to hours of work concerned permissive or mandatory subjects of
+bargaining.
+Noting dispatchers are not part of the bargaining unit certified by the Board, the General Counsel
+determined the terms and conditions of employment of non-unit employees are not mandatory
+subjects of bargaining unless those terms and conditions “vitally affect” the terms and conditions of
+employment of unit employees. In addition, the General Counsel observed, the Union’s
+“recommendation” could also be viewed as a proposal to change the scope of the unit, which is a
+permissive subject of bargaining. Regarding the “sergeant” reference in the workday provision of
+the collective bargaining agreement, the General Counsel determined that it was a mandatory subject
+of bargaining because it concerned the hours of a unit employee.
+L-DR-20-002 Fraternal Order of Police, Lodge #7 and City of Chicago (Police Department) Illinois Fraternal Order
+of Police Labor Council, 37 PERI ¶ 47 (IL LRB GC) (October 16, 2020)
+The Union filed a petition seeking a determination on whether the City’s proposal to exclude
+terminations and early, low-level discipline from the grievance process and designate certain safetyrelated arbitration decisions as non-binding, concerned permissive subjects of bargaining. The General
+Counsel declined to defer the petition to the interest arbitration process as urged by the City and found
+the City’s proposal to exclude terminations and early, low-level discipline from the grievance process
+to be permissive subjects of bargaining. The General Counsel also found the City’s proposal to
+designate certain safety-related arbitration decisions as non-binding, to be a mandatory subject of
+bargaining.
+L-DR-21-001 Fraternal Order of Police, Lodge #7 and City of Chicago (Police Department) Illinois Fraternal Order
+of Police Labor Council, 37 PERI ¶ 48 (IL LRB GC) (October 16, 2020)
+The Petition sought a determination as to whether three proposals offered by the City concern
+permissive or mandatory subjects of bargaining. The City had proposed to remove the requirement
+that a complaint against an officer alleging non-criminal conduct be supported by a signed affidavit
+and instead allow for anonymous complaints and to remove the requirement that officers be advised of
+the identity of the complainants prior to officer interrogations/interviews. It also proposed to remove
+the time limits on retentions of officers’ disciplinary record so that the City could retain them
+indefinitely.
+The General Counsel found the City’s proposals to eliminate the affidavit requirement for complaint
+register investigations of non-criminal conduct and to eliminate the obligation to inform officers of the
+complainant’s name prior to the investigation, to be permissive subjects of bargaining but found its
+proposal for the indefinite retention of disciplinary records to be a mandatory subject.
+
+23
+
+L-DR-20-001 Fraternal Order of Police, Lodge #7 and City of Chicago (Police Department) Illinois Fraternal Order
+of Police Labor Council, 37 PERI ¶ 65 (IL LRB GC) (October 30, 2020)
+The Union filed a petition seeking a determination on whether its proposal to exclude terminations and
+early, low-level discipline from the grievance process and designate certain safety-related arbitration
+decisions as non-binding, concerned permissive subjects of bargaining. The General Counsel declined
+to defer the petition to the interest arbitration process as urged by the City and found the City’s proposal
+to exclude terminations and early, low-level discipline from the grievance process to be permissive
+subjects of bargaining. The General Counsel also found the City’s proposal to designate certain safetyrelated arbitration decisions as non-binding, to be a mandatory subject of bargaining.
+
+24
+
+Interest Arbitration Awards
+Following is a list of Interest Arbitration awards. For each award, the ILRB Case number, Arbitrator and date of
+issuance are noted. The issues and whose proposals were adopted follows.
+S-MA-18-341
+
+Village of Oak Lawn and Oak Lawn Professional Firefighters, Local
+3405, IAFF
+Martin H. Malin, #733
+1. Wages/Salaries
+2. Benefit Freeze
+3. Overtime, Overtime Distribution, Working Out of Classification
+4. Minimum Staffing
+5. General Principals
+6. Retiree Medical Benefits
+7. Residency
+8. Paramedic Certification
+9. Retroactivity
+
+7/3/2019
+
+S-MA-17-100
+
+St. Clair County (CENCOM) and Illinois FOP Labor Council
+Mark W. Suardi, #735
+1. Duration - Union's proposal
+2. Wage Increases - Union's proposal
+3. Funeral Leave - Employer's proposal
+
+9/6/2019
+
+S-MA-18-226
+FMCS #: 191019-00680
+
+Village of Shiloh and Illinois FOP Labor Council
+Jerome A. Diekemper, #736
+1. Base pay - Village's proposal
+2. Longevity step pay
+
+10/1/2019
+
+S-MA-19-005
+Arb. Ref.: 19-262
+
+County of McHenry and McHenry County Sheriff and Illinois FOP
+Labor Council
+Edwin H. Benn, #738
+1. Duration
+2. Insurance
+3. Wages
+4. Fair Share
+5. Uniform language
+6. Tentative agreements
+7. Retroactivity
+
+10/21/2019
+
+S-MA-19-203
+
+City of Litchfield and Illinois FOP Labor Council
+Michael Wojcik, #739
+1. Vacation Days - Union's offer
+2. Sick Days Accumulation - Employer's offer
+3. Personal Leave Days - Employer's offer
+4. Wages - Employer's offer
+5. Take-Home Cars - Employer's offer
+
+1/6/2020
+
+25
+
+S-MA-18-084
+
+County of McLean and Sheriff of McLean County and Illinois FOP
+Labor Council
+James A. Murphy, #740
+1. Wages - Employer's final offer
+2. Demotions - Union's final offer as amended
+3. Drug Testing - Union's final offer
+4. Sick Leave - Employer's final offer
+
+2/14/2020
+
+S-MA-18-326
+
+City of Springfield and Policemen's Benevolent and Protective
+Association, Unit #5
+Brian E. Reynolds, #741
+1. Residency - Union's final offer
+2. Wages - City's final offer
+3. Sick Bonus Day Usage - Union's final offer
+
+2/24/2020
+
+S-MA-19-007
+FMCS #: 190521-07339
+
+County of Williamson and Williamson County Sheriff and Illinois
+FOP Labor Council
+Jerome A. Diekemper, #743
+1. Wages - Union's proposal
+2. Tentative agreements
+3. Economic Terms retroactive to 12/1/2018
+
+4/3/2020
+
+S-MA-19-227
+
+City of Wood River and United Steelworkers Local 9189
+Peter R. Meyers, #742
+1. Vacation Buy-Back/Carryover - Union's proposal
+2. Treatment of Workers Compensation Leave for Purposes of
+Premium Pay - Union's proposal
+3. Sick Leave Buy-Back - Union's proposal
+4. Work Schedule - Employers Proposal
+
+4/16/2020
+
+S-MA-18-345
+S-MA-18-346
+FMCS #: 190813-10014
+
+County of Shelby and Sheriff of Shelby County and Illinois FOP
+Labor Council
+Gregory P. Szuter, #745
+1. Base pay, Unit A - Employers final proposal
+2. Base pay, Unit B - Union's final proposal
+3. Insurance premium - Union's final proposal
+
+5/11/2020
+
+S-MA-19-194
+
+City of Highland and Illinois FOP Labor Council
+Matthew W. Finkin, #744
+Wages – City’s offer
+
+5/14/2020
+
+S-MA-19-227
+Supplemental
+
+United Steelworkers Local 9189 and City of Wood River
+Peter R. Meyers, #746
+Insurance, Spouse Rule
+
+6/22/2020
+
+26
+
+S-MA-19-220
+
+City of Sycamore and Illinois FOP Labor Council
+Edwin H. Benn, #747
+1. Duration
+2. Wages
+. Insurance
+4. Reopener
+5. Clothing allowance and equipment
+6. Tentative Agreements
+7. Maintenance of Positions
+8. Retention of Jurisdiction
+
+6/22/2020
+
+L-MA-12-006
+
+City of Chicago (Police Department) and Policemen's Benevolent and
+Protective Association, Unit 156B
+George T. Roumell, #751
+
+6/26/2020
+
+27
+
+Caseload Statistics
+STATE PANEL LOCAL PANEL
+Unfair Labor Practice Charges
+CA
+CB
+
+TOTAL
+
+Total
+
+136
+30
+166
+
+48
+31
+79
+
+184
+61
+245
+
+Total
+
+0
+63
+8
+67
+1
+17
+156
+
+0
+20
+0
+5
+0
+0
+25
+
+0
+83
+8
+72
+1
+17
+181
+
+Total
+
+9
+269
+278
+
+0
+4
+4
+
+9
+273
+282
+
+Declaratory Rulings
+
+0
+
+2
+
+2
+
+Strike Investigations
+
+1
+
+0
+
+1
+
+601
+
+110
+
+711
+
+Representation Cases
+AC
+RC
+RD
+UC
+VR
+DD
+Grievance Arbitration Cases
+Mediation/Arbitration Cases
+
+Total Caseload
+
+CA
+CB
+AC
+RC
+RM
+RD
+UC
+VR
+DD
+DR
+
+-
+
+Unfair Labor Practice Charge Against Employer
+Unfair Labor Practice Charge Against Labor Organization
+Petition to Amend Certification
+Representation/Certification Petition
+Employer Representation Petition
+Decertification Petition
+Unit Clarification Petition
+Petition for Voluntary Recognition Certification
+Declaration of Disinterest Petition
+Declaratory Rulings
+
+28
+
+Representation Cases Certified
+STATE
+PANEL
+
+LOCAL
+PANEL
+
+TOTAL
+
+Labor Organization Prevailed
+“No Representation” Prevailed
+Cases Certified
+
+16
+2
+18
+
+0
+0
+0
+
+16
+2
+18
+
+Number of Units Certified (Majority Interest)
+
+34
+
+23
+
+57
+
+Voluntary Recognized Representatives
+
+1
+
+0
+
+1
+
+Revocation of Prior Certifications
+
+17
+
+0
+
+17
+
+Unfair Labor Practice Charges Workload
+2020
+
+Cases pending start of fiscal year
+
+2019
+396
+
+Charges filed during fiscal year
+
+355
+
+245
+
+Total caseload
+
+751
+
+611
+
+Total cases closed
+
+385
+
+255
+
+366
+
+Petition Management (Representation) Workload
+Petitions pending start of fiscal year
+
+2019
+96
+
+2020
+
+Petitions filed during fiscal year
+
+316
+
+181
+
+Total caseload
+
+412
+
+393
+
+Total cases closed
+
+200
+
+340
+
+29
+
+212
+
+Case Actions in FY 2020
+STATE
+PANEL
+
+LOCAL
+PANEL
+
+TOTAL
+
+8
+4
+3
+15
+
+9
+3
+2
+14
+
+17
+7
+5
+29
+
+(B) With no exceptions filed
+CA
+CB
+RC
+UC
+Total
+
+8
+1
+1
+0
+10
+
+4
+1
+10
+6
+21
+
+12
+2
+11
+6
+31
+
+(C) Strike Investigations
+
+1
+
+0
+
+1
+
+(D) Declaratory Ruling
+
+1
+
+0
+
+1
+
+II. ADMINISTRATIVE DISMISSALS
+(Not appealed to the Board)
+CA
+CB
+RC
+Total
+
+35
+23
+0
+58
+
+40
+34
+1
+75
+
+75
+57
+1
+133
+
+III. CERTIFIED
+AC
+DD
+RC/RM/RD
+UC
+VR
+Total
+
+0
+16
+52
+67
+1
+136
+
+0
+0
+23
+5
+0
+28
+
+0
+16
+75
+72
+1
+164
+
+IV. WITHDRAWALS
+CA
+CB
+RC
+RD
+UC
+Total
+
+95
+10
+11
+6
+154
+276
+
+22
+5
+1
+0
+0
+28
+
+117
+15
+12
+6
+154
+304
+
+I. BOARD DECISIONS
+(A) With exceptions filed
+CA
+CB
+RC
+Total
+
+30
+
+Certifications of Representative
+
+se Name
+
+Labor
+Organization
+
+Date
+Certified
+
+Prevailing
+Party
+
+# of
+Employees
+
+Unit
+Description
+
+City of Chicago
+
+American Federation
+of State, County and
+Municipal Employees,
+Council 31
+
+7/3/2019
+
+AFSCME
+
+12
+
+Add to
+Bargaining Unit #1
+Program Development
+Coordinator
+Code 3899
+
+S-RC-19-055
+
+Illinois Secretary of
+State
+
+Illinois FOP Labor
+Council and
+Policemen’s
+Benevolent Labor
+Committee
+
+7/12/2019
+
+FOP
+
+41
+
+All police officers in
+the following
+classification:
+Capitol Police
+Investigator
+
+S-RC-19-056
+
+Illinois Secretary of
+State
+
+Policemen’s
+Benevolent Labor
+Committee and Int’l
+Brotherhood of
+Teamsters, Local 700
+
+7/12/2019
+
+PBLC
+
+11
+
+All employees in the
+Department of Police in
+the following
+classification:
+Investigator-Sergeant
+
+S-RC-19-066
+
+Majority Interest
+
+Village of Schiller
+Park (Fire
+Department)
+
+Associated Firefighters
+of Illinois, AFFI-IAFF
+
+8/1/2019
+
+AFFI
+
+22
+
+All full-time employees
+in the following titles:
+Firefighter Paramedic;
+Lieutenant Paramedic
+
+S-RC-20-001
+
+Village of Crestwood
+
+Illinois Council of
+Police
+
+8/1/2019
+
+ICOP
+
+53
+
+All part-time police
+officers
+
+S-RC-20-002
+
+Bureau County
+Emergency
+Telephone System
+Board (BuComm)
+
+Illinois FOP Labor
+Council
+
+8/13/2019
+
+FOP
+
+10
+
+All full-time and parttime employees in the
+following titles:
+Telecommunicator;
+Lead
+Telecommunicator
+
+L-RC-18-021
+
+Chicago Transit
+Authority
+
+Int’l Brotherhood of
+Teamsters, Local 700
+
+8/14/2019
+
+Teamsters
+
+7
+
+All full-time employees
+of the Capital
+Construction Division,
+in the following
+classification:
+Project ManagerConstruction
+
+L-RC-19-003
+
+City of Chicago
+(Police Department)
+
+American Federation
+of State, County and
+Municipal Employees
+Council 31
+
+8/14/2019
+
+AFSCME
+
+11
+
+Add to
+Bargaining Unit #3
+Criminal Intelligence
+Analyst
+(Code 9117)
+
+Case No.
+
+Employer
+
+L-RC-19-034
+
+Majority Interest
+
+Majority Interest
+
+Majority Interest
+
+Majority Interest
+
+Majority Interest
+
+31
+
+S-RC-19-063
+
+Village of Rochester
+
+Int’l Union of
+Operating Engineers,
+Local 965
+
+8/21/2019
+
+IUOE
+
+1
+
+Add to S-RC-19-038
+Part-time Seasonal
+Mower
+
+S-RC-20-007
+
+City of Bunker Hill
+
+Laborers Int’l Union of
+North America, Local
+338
+
+8/22/2019
+
+Laborers
+
+6
+
+All full-time and
+regular part-time
+employees in the
+following titles:
+Police Officer;
+Chief of Police; Water
+Clerk;
+Deputy Clerk
+
+S-RC-20-011
+
+City of Springfield
+
+American Federation
+of State, County and
+Municipal Employees
+Council 31
+
+9/4/2019
+
+AFSCME
+
+3
+
+Add to
+S-UC-17-082
+Building Permit
+Assistant
+
+S-RC-19-065
+
+Village of Glenview
+
+Metropolitan Alliance
+of Police, Glenview
+Police Officer Chapter
+156 and Illinois FOP
+Labor Council
+
+9/6/2019
+
+MAP
+
+50
+
+All full-time sworn
+police officers below
+the rank of sergeant
+
+S-RC-20-005
+
+City of Nashville
+
+International Union of
+Operating Engineers,
+Local 148
+
+9/11/2019
+
+IUOE
+
+31
+
+All full-time
+maintenance and
+administrative
+employees in the
+following departments
+and titles:
+Gas: Foreman, Laborer;
+Golf: Greenskeeper;
+Office: Administrative
+Assistant, Billing Clerk,
+Bookkeeper;
+Sewer: Chief Operator,
+Laborer;
+Street: Crew Leader,
+Foreman, Laborer;
+Water: Laborer,
+Operator
+
+S-RC-20-013
+
+City of Bunker Hill
+
+International Union of
+Operating Engineers,
+Local 520
+
+9/11/2019
+
+IUOE
+
+4
+
+All municipality
+workers in the Street,
+Sewer, Water and Park
+Departments
+
+L-RC-19-006
+
+City of Chicago
+
+American Federation
+of State, County and
+Municipal Employees,
+Council 31
+
+9/13/2019
+
+AFSCME
+
+11
+
+Add to AFSCME
+Bargaining Unit #1
+Business Consultant,
+Code 0350;
+Senior Business
+Consultant
+Code 0351
+
+Majority Interest
+
+Majority Interest
+
+Majority Interest
+
+Majority Interest
+
+Majority Interest
+
+Majority Interest
+
+32
+
+S-RC-20-010
+
+Majority Interest
+
+Chief Judge of the
+Circuit Court of Cook
+County
+
+American Federation
+of State, County and
+Municipal Employees,
+Council 31
+
+9/16/2019
+
+AFSCME
+
+5
+
+Add to existing
+S-RC-19-050
+Administrative Analyst
+I
+(Juvenile Temporary
+Detention Center);
+Exclude from
+S-RC-19-050
+PREA Coordinator/
+Administrative Analyst
+I/
+Hearing Officer
+
+L-RC-20-001
+
+County of Cook
+
+Service Employees
+Int’l Union, Local 73
+
+9/19/2019
+
+SEIU
+
+6
+
+Add to
+L-RC-07-018
+Contract Negotiator
+(Purchasing
+Department)
+
+L-RC-20-004
+
+City of Chicago
+
+American Federation
+of State, County and
+Municipal Employees,
+Council 31
+
+9/26/2019
+
+AFSCME
+
+2
+
+Add to existing
+Bargaining Unit #4
+Senior Information
+Analyst (Civilian Office
+of Police
+Accountability).
+
+Majority Interest
+
+Majority Interest
+
+Exclude for existing
+Bargaining Unit #4
+Senior Information
+Analyst
+(Department of
+Innovation and
+Technology)
+S-RC-19-062
+
+County of Lake and
+Sheriff of Lake
+County
+
+Illinois FOP Labor
+Council and Teamsters
+Local 700
+
+9/27/2019
+
+Teamsters
+
+191
+
+Corrections Officer,
+Corrections
+Officer/Maintenance;
+Correctional Support;
+Jail Receptionist;
+Resident Field
+Coordinator
+
+L-RC-20-005
+
+County of Cook
+
+American Federation
+of State, County and
+Municipal Employees,
+Council 31
+
+10/3/2019
+
+AFSCME
+
+7
+
+Add to existing
+L-RC-10-005
+Regional Coordinator,
+Training & Exercise
+Coordinator
+(Homeland Security
+and Emergency
+Management)
+
+L-RC-20-006
+
+County of Cook,
+Health and Hospital
+System
+
+American Federation
+of State, County and
+Municipal Employees,
+Council 31
+
+10/3/2019
+
+AFSCME
+
+2
+
+Add to existing
+Heath Facilities Unit
+Patient Concierge
+(Public Health)
+
+Majority Interest
+
+Majority Interest
+
+33
+
+S-RC-10-015
+
+Town of Cicero
+(Water Department)
+
+Laborers’ Local 1092
+
+10/3/2019
+
+Laborers’
+
+23
+
+All full-time and parttime non-professional
+employees in the
+following titles:
+Inspector; Laborer;
+Meter Reader; Sewer
+Rodder; Station
+Attendant; Vac Truck
+Operator; Water
+Sampler
+
+S-RC-20-009
+
+McHenry County
+Circuit Clerk
+
+American Federation
+of State, County and
+Municipal Employees,
+Council 31 and
+Metropolitan Alliance
+of Police, McHenry
+County Circuit Clerk’s
+Chapter 515
+
+10/15/2019
+
+AFSCME
+
+45
+
+Accounting
+Coordinator;
+Accounting Specialist
+II; Court/Courtroom
+Specialist I;
+Court/Courtroom
+Specialist I-Senior;
+Court/Courtroom
+Specialist II;
+Court/Courtroom
+Specialist III; Lead
+Court/Courtroom
+Specialist
+
+S-RC-20-019
+
+Saline County State’s
+Attorney
+
+Laborers Int’l Union of
+North American, Local
+773
+
+10/15/2019
+
+Laborers
+
+3
+
+Saline County Assistant
+State’s Attorney
+
+L-RC-20-008
+
+County of Cook and
+Sheriff of Cook
+County
+
+Service Employees
+Int’l Union, Local 73
+
+10/23/2019
+
+SEIU
+
+2
+
+Add to existing
+L-RC-16-003 unit
+Quality Review
+Assistant-Records
+
+S-RC-20-021
+
+Homewood
+Flossmoor Park
+District
+
+Int’l Union of
+Operating Engineers,
+Local 399
+
+10/23/2019
+
+IUOE
+
+5
+
+Building and Facility
+Technician
+
+L-RC-20-007
+
+Chicago Transit
+Authority
+
+Int’l Association of
+Machinists and
+Aerospace Workers,
+District Lodge 8
+
+11/5/2019
+
+IAMAW
+
+12
+
+Add to existing
+L-RC-14-008
+Coordinator, Quality
+Improvement-Bus;
+Coordinator, Quality
+Improvement-Facilities;
+Coordinator, Quality
+Improvement-Rail;
+Project Coordinator,
+GIS; Coordinator,
+Engineering-Project
+Planning
+
+Majority Interest
+
+Majority Interest
+
+Majority Interest
+
+Majority Interest
+
+Majority Interest
+
+34
+
+L-RC-20-011
+
+County of Cook,
+Health & Hospital
+System
+
+Service Employees
+Int’l Union, Local 73
+
+11/7/2019
+
+SEIU
+
+40
+
+Add to existing
+L-UC-17-007
+Care Coordinator –
+Brain Injury;
+Care Coordinator –
+Elderly;
+Care Coordinator –
+Social Worker;
+Care Coordinator –
+Disability
+
+L-RC-18-024
+
+Majority Interest
+
+County of Cook,
+Health & Hospital
+System
+
+American Federation
+of State, County and
+Municipal Employees,
+Council 31
+
+11/20/2019
+
+AFSCME
+
+7
+
+Add to existing Health
+Facilities unit
+Patient Access Quality
+Management
+Coordinator; Cashier
+Division Supervisor II
+
+L-RC-19-017
+
+City of Chicago
+
+American Federation
+of State, County and
+Municipal Employees,
+Council 31
+
+11/20/2019
+
+AFSCME
+
+1
+
+Add to existing
+Bargaining Unit #1
+Administrative Services
+Officer IExcluded, Code 1303
+(Family & Support
+Services)
+
+S-RC-20-023
+
+City of Waukegan
+
+Int’l Union of
+Operating Engineers,
+Local 150
+
+11/20/2019
+
+IUOE
+
+1
+
+Add to existing
+S-RC-12-033
+Parking Supervisor
+
+S-RC-20-024
+
+County of Brown
+(Highway
+Department)
+
+Int’l Brotherhood of
+Teamsters, Local 916
+
+11/20/2019
+
+Teamsters
+
+5
+
+Operator,
+Highway Maintenance
+Foreman/Assistant
+County Engineer
+
+S-RC-20-025
+
+Town of Cicero
+(Health Department)
+
+Teamsters, Local 705
+
+11/20/2019
+
+Teamsters
+
+3
+
+Health Inspector
+
+S-RC-20-027
+
+County of Pike
+(Pike County
+Ambulance Service)
+
+Int’l Association of
+Machinists and
+Aerospace Workers,
+District Lodge 9
+
+11/20/2019
+
+IAMAW
+
+12
+
+Emergency Medical
+Technician (EMT),
+Paramedic
+
+L-RC-20-010
+
+Majority Interest
+
+County of Cook and
+Sheriff of Cook
+County
+
+Service Employees
+Int’l Union, Local 73
+
+11/21/2019
+
+SEIU
+
+1
+
+Add to existing
+L-RC-20-008
+Administrative Support
+IV
+
+S-RD-20-005
+
+City of Springfield
+
+Elaine S. Urekar and
+Int’l Brotherhood of
+Electrical Workers,
+Local 193
+
+12/4/2019
+
+No Rep
+
+Majority Interest
+
+Majority Interest
+
+Majority Interest
+
+Majority Interest
+
+Majority Interest
+
+Majority Interest
+
+35
+
+S-RC-20-020
+
+County of Kane and
+Sheriff of Kane
+County
+
+Int’l Brotherhood of
+Teamsters, Local 700
+and Policemen’s
+Benevolent Labor
+Committee
+
+12/6/2019
+
+Teamsters
+
+36
+
+Court Security Officer
+
+S-RC-20-016
+
+County of Livingston
+and Sheriff of
+Livingston County
+
+Illinois Council of
+Police and Illinois FOP
+Labor Council
+
+12/11/2019
+
+FOP
+(Incumbent)
+
+35
+
+All sworn, full-time
+correctional officers in
+the rank of lieutenant
+and below, all sworn,
+full-time court security
+officers, and all fulltime secretaries and any
+full-time office
+manager
+
+S-RC-19-018
+
+County of Clinton
+(Highway
+Department)
+
+Laborers’ Int’l Union
+of North America,
+Local 773
+
+12/12/2019
+
+Laborers
+
+2
+
+All full-time and parttime employees in the
+title of
+Engineer Technician
+
+L-RC-18-030
+
+County of Cook
+(Cook County Public
+Defender)
+
+American Federation
+of State, County and
+Municipal Employees,
+Council 31
+
+12/17/2019
+
+AFSCME
+
+2
+
+Add to L-RC-18-030
+Mitigation Specialist
+
+S-RC-20-031
+
+Majority Interest
+
+Village of Stone Park
+(Fire Department)
+
+Int’l Brotherhood of
+Teamsters, Local 700
+
+1/2/2020
+
+Teamsters
+
+13
+
+All Firefighters and
+Firefighter/Paramedics
+
+L-RC-20-002
+
+City of Chicago
+
+American Federation
+of State, County and
+Municipal Employees,
+Council 31
+
+1/10/2020
+
+AFSCME
+
+1
+
+Add to AFSCME
+Bargaining Unit #1
+Administrative Services
+Officer II
+(Family & Support
+Services)
+Code 1310
+
+S-RC-20-029
+
+Springfield Mass
+Transit District d/b/a
+Sangamon Mass
+Transit District
+
+Amalgamated Transit
+Union, Local 1249
+
+1/16/2020
+
+AFSCME
+
+8
+
+Add to S-RC-19-035
+Dispatcher
+
+L-RC-20-012
+
+County of Cook,
+Cook County Public
+Defender
+
+American Federation
+of State, County and
+Municipal Employees,
+Council 31
+
+1/21/2020
+
+AFSCME
+
+1
+
+Include in S-UC-(S)18-005
+Administrative
+Assistant IV
+
+S-RC-20-033
+
+Village of Harwood
+Heights
+
+American Federation
+of State, County and
+Municipal Employees,
+Council 31
+
+1/21/2020
+
+AFSCME
+
+1
+
+Include in S-RC-20-033
+Community Service
+Officer in the Police
+Department
+
+Majority Interest
+
+Majority Interest
+
+Majority Interest
+
+Majority Interest
+
+Majority Interest
+
+Majority Interest
+
+36
+
+S-RC-20-008
+
+Franklin-Williamson
+Bi-County Health
+Department
+
+American Federation
+of State, County and
+Municipal Employees,
+Council 31
+
+1/21/2020
+
+AFSCME
+
+12
+
+Non-Professional
+Employees
+Billing Clerk;
+Front Desk Clerk;
+H.H. Aide/Billing
+Clerk;
+Home Health Clerk;
+Peer Counselor;
+Public Health Clerk;
+WIC Clerk;
+WIC Clerk/Front Desk
+Clerk
+
+S-RC-20-008
+
+Majority Interest
+
+Franklin-Williamson
+Bi-County Health
+Department
+
+American Federation
+of State, County and
+Municipal Employees,
+Council 31
+
+1/21/2020
+
+AFSCME
+
+18
+
+Professional
+Employees:
+Director of Emergency
+Preparedness;
+Director of Health
+Education;
+Director of Home
+Health;
+Home Health Nurse
+MCH Nurse;
+MCH/Public Health
+Nurse;
+Nursing Supervisor;
+Public Health Nurse;
+Sanitarian;
+Supervisor of
+Environmental Health;
+Supervisor of Home
+Health
+
+L-RC-20-013
+
+City of Chicago
+
+American Federation
+of State, County and
+Municipal Employees,
+Council 31
+
+1/23/2020
+
+AFSCME
+
+2
+
+Add to Bargaining Unit
+#4
+Digital Media
+Coordinator; GIS
+Manager
+
+S-RC-20-004
+
+County of Clinton and
+State’s Attorney,
+Clerk/Recorder,
+Treasurer and
+Supervisor of
+Assessments
+
+Policemen’s
+Benevolent Labor
+Committee
+
+1/23/2020
+
+PBLC
+
+1
+
+Add to S-RC-18-014
+Highway Office
+Manager
+
+S-RC-20-022
+
+State of Illinois,
+Department of Central
+Management Services
+(Corrections)
+
+Illinois State
+Employees
+Association, Laborers
+Int’l Union, Local 2002
+
+1/28/2020
+
+Local 2002
+
+5
+
+Include in VR-207
+Corrections Treatment
+Senior Security
+Supervisor
+Code 09867
+
+S-RC-20-034
+
+City of Waukegan
+(Public Works)
+
+Int’l Union of
+Operating Engineers,
+Local 150
+
+1/29/2020
+
+IUOE
+
+1
+
+Add to S-RC-12-033
+Animal Control
+Coordinator
+
+Majority Interest
+
+Majority Interest
+
+Majority Interest
+
+Majority Interest
+
+Majority Interest
+
+37
+
+S-RC-20-037
+
+Village of Stone Park
+(Fire Department)
+
+Int’l Brotherhood of
+Teamsters, Local 700
+
+1/29/2020
+
+Teamsters
+
+3
+
+All Lieutenant
+Firefighters and
+Lieutenant Firefighter/
+Paramedics
+
+S-RC-20-039
+
+Village of Winnetka
+(Public Works)
+
+Int’l Union of
+Operating Engineers,
+Local 150
+
+1/31/2020
+
+IUOE
+
+21
+
+All regular full-time
+employees in the
+classifications of Fleet
+Mechanic, Refuse
+Collector and
+Maintenance Worker
+
+S-RC-20-040
+
+Bloomingdale
+Township Highway
+Department a/k/a
+Bloomingdale
+Township Road
+District
+
+Int’l Union of
+Operating Engineers,
+Local 399
+
+2/7/2020
+
+IUOE
+
+6
+
+All full-time and
+regular part-time
+Laborers
+
+S-RC-20-41
+
+Village of Cobden
+
+Laborers Int’l Union of
+North America,
+Local 773
+
+2/18/2020
+
+Laborers
+
+3
+
+All full-time Police
+Officers
+
+S-RC-20-046
+
+Village of
+Williamsville
+
+Illinois FOP Labor
+Council
+
+2/26/2020
+
+FOP
+
+3
+
+All full-time sworn
+police officers
+
+S-RC-20-035
+
+Governors State
+University
+(Police Department)
+
+Metropolitan Alliance
+of Police, Governors
+State University Police
+Chapter #717 and
+Illinois FOP Labor
+Council
+
+3/11/2020
+
+MAP
+
+12
+
+All University Civil
+Service Employees in
+the classification of
+Police Officer, Sergeant
+and Police
+Telecommunicator
+
+S-RD-20-007
+
+City of Collinsville
+
+Amanda Guntrum and
+Int’l Union of
+Operating Engineers,
+Local 148B
+
+3/11/2020
+
+No Rep
+
+9
+
+S-RC-19-058
+
+Village of Wauconda
+
+American Federation
+of State, County and
+Municipal Employees,
+Council 31
+
+3/23/2020
+
+AFSCME
+
+1
+
+Add to S-UC-10-021
+Executive
+Administrative
+Assistant
+
+L-RC-19-023
+
+City of Chicago
+
+American Federation
+of State, County and
+Municipal Employees,
+Council 31
+
+3/23/2020
+
+AFSCME
+
+2
+
+Add to
+Bargaining Unit #1
+Assistant Payroll
+Administrator
+Code 0114
+
+S-RC-20-042
+
+Town of Cicero
+
+Illinois FOP Labor
+Council
+
+4/15/2020
+
+FOP
+
+14
+
+Detention Officer
+(Lock Up Keeper);
+Parking Enforcement
+Officer; Parking
+Enforcement
+Supervisor
+
+Majority Interest
+
+Majority Interest
+
+Majority Interest
+
+Majority Interest
+
+Majority Interest
+
+Majority Interest
+
+Majority Interest
+
+38
+
+S-RC-20-051
+
+County of Will and
+Sheriff of Will
+County
+
+Illinois FOP Labor
+Council
+
+4/15/2020
+
+FOP
+
+5
+
+Court Security Officers
+
+S-RC-20-054
+
+Danville Public
+Building Commission
+(Vermillion County
+Emergency
+Communications
+Center)
+
+Communication
+Workers of America
+
+4/17/2020
+
+CWA
+
+11
+
+Full and part-time
+Public Service
+Telecommunicators
+
+L-RC-20-019
+
+City of Chicago
+
+American Federation
+of State, County and
+Municipal Employees,
+Council 31
+
+4/15/2020
+
+AFSCME
+
+1
+
+Add to
+Bargaining Unit #4
+Digital Asset
+Coordinator
+
+S-RC-20-043
+
+Village of Crete
+
+Illinois FOP Labor
+Council and
+Metropolitan Alliance
+of Police, Chapter #36
+
+4/23/2020
+
+FOP
+
+12
+
+All full-time patrol
+officers
+
+S-RC-20-014
+
+State of Illinois,
+Department of State
+Police
+
+Int’l Brotherhood of
+Teamsters, Local 700
+and Troopers Lodge
+No. 41, Fraternal Order
+of Police
+
+4/29/2020
+
+Troopers
+(Incumbent)
+
+105
+
+SUPERVISORY
+UNIT:
+All sworn peace
+officers with the State
+Police Merit Board rank
+of Captain and
+Lieutenant.
+
+S-RC-20-044
+
+City of Hickory Hills
+
+Illinois FOP Labor
+Council and
+Metropolitan Alliance
+of Police, Chapter #246
+
+4/29/2020
+
+FOP
+
+19
+
+All full-time patrol
+officers
+
+S-RC-20-047
+
+Village of Broadview
+
+Illinois Council of
+Police and Illinois FOP
+Labor Council
+
+4/29/2020
+
+ICOP
+
+5
+
+All full-time employees
+in the classification of
+Telecommunicator
+
+S-RC-20-048
+
+Village of Midlothian
+
+Illinois Council of
+Police and Int’l
+Brotherhood of
+Teamsters, Local 700
+
+5/15/2020
+
+ICOP
+
+22
+
+All full-time sworn
+peace officers in the
+titles of police officer
+and detective
+
+S-RC-20-050
+
+City of Braidwood
+
+5/15/2020
+
+PBLC
+
+13
+
+All sworn full-time and
+part-time patrol officers
+below the rank of
+Sergeant
+
+L-RC-20-018
+
+City of Chicago
+
+Policemen’s
+Benevolent Labor
+Committee and Int’l
+Brotherhood of
+Teamsters, Local 700
+American Federation
+of State, County and
+Municipal Employees,
+Council 31
+
+5/19/2020
+
+AFSCME
+
+1
+
+Add to
+Bargaining Unit #3
+Health and Safety
+Analyst
+
+Majority Interest
+
+Majority Interest
+
+Majority Interest
+
+Majority Interest
+
+39
+
+L-RC-20-017
+
+County of Cook
+
+American Federation
+of State, County and
+Municipal Employees,
+Council 31
+
+5/21/2020
+
+AFSCME
+
+1
+
+Add to L-RC-20-017
+CI Manager
+(EMHS Homeland
+Security Department)
+
+S-RC-20-059
+
+Village of Mundelein
+
+Mundelein Firefighters,
+IAFF Local 4786
+
+5/29/2020
+
+IAFF
+
+6
+
+All full-time sworn fire
+department employees
+in the following ranks
+or titles:
+Firefighter/Paramedic;
+Lieutenant/Paramedic.
+
+S-RC-20-057
+
+Majority Interest
+
+Dundee Township
+Highway Department
+
+Int’l Brotherhood of
+Teamsters, Local #330
+
+6/15/2020
+
+Teamsters
+
+6
+
+All full-time and
+regular part-time
+Highway Maintenance
+Operators, Mechanics,
+Foreman and office
+clerical employees
+
+L-RC-19-035
+
+City of Chicago
+
+American Federation
+of State, County and
+Municipal Employees,
+Council 31
+
+6/23/2020
+
+AFSCME
+
+1
+
+Add to
+Bargaining Unit #1
+Staff Assistant
+(Business Affairs and
+Consumer Protection)
+
+S-RC-20-049
+
+City of Wood Dale
+
+Metropolitan Alliance
+of Police, Chapter #339
+and Int’l Brotherhood
+of Teamsters Local 700
+
+6/25/2020
+
+MAP
+
+26
+
+All full-time sworn
+peace officers, assistant
+watch commanders and
+detectives below the
+rank of sergeant
+
+Majority Interest
+
+Majority Interest
+
+Majority Interest
+
+Certification of Voluntarily Recognized Representative
+Case No.
+
+Employer
+
+Labor
+Organization
+
+Certification
+Date
+
+Unit
+Description
+
+S-VR-20-001
+
+County of LaSalle
+(Highway Department)
+
+Laborers Int’l Union of North
+American, Local 393
+
+9/30/2019
+
+Area Foreman; Civil Engineer I, II, III,
+IV; Engineering Technician I, II, III, IV;
+Maintenance Supervisor
+
+40
+
+Revocation of Prior Certifications
+Date
+Revocation
+
+Unit4/
+Description
+
+Int’l Union of Operating
+Engineers, Local 150
+
+7/25/2019
+
+All full-time police officers in the rank
+of patrolman; all full-time police
+officers in the rank of sergeant
+
+St. Clair County Public
+Building Commission
+
+Laborers Int’l Union of North
+American, Local 459
+
+9/17/2019
+
+All regular and full-time employees in
+the following titles: Crew Leader;
+Building Maintenance Worker; Painter;
+Carpenter; Grounds Worker; Utility
+Worker; Shift Operator; Switchboard
+Operator; Parking Garage Attendant
+
+S-DD-20-003
+
+Adams County Circuit
+Clerk
+
+Int’l Association of Machinists
+and Aerospace Workers, Local
+822
+
+9/30/2019
+
+All employees employed by the Adams
+County Circuit Clerk in the titles of
+Administrative Assistant and Chief
+Deputy
+
+S-DD-20-004
+
+County of Adams
+
+Int’l Association of Machinists
+and Aerospace Workers, Local
+822
+
+9/30/2019
+
+All regular full-time and part-time
+employees employed at the Adams
+County Clerk's office in the following
+title: Deputy Clerk; Deputy Clerk/Real
+Estate Tax Specialist
+
+S-DD-20-005
+
+Village of Broadview
+(Department of Public
+Works and Building
+Department)
+
+Service Employees Int’l Union,
+Local 73
+
+11/26/2019
+
+All full-time and part-time employees
+of the Village of Broadview in its
+Department of Public Works and
+Building Department in the following
+classifications: Artisan 3; Artisan 4;
+Building Inspector; Building
+Department Foreman; Laborer 1;
+Mechanic; Public Works Foreman
+
+S-DD-20-006
+
+County of McHenry
+(Valley Hi Nursing and
+Rehabilitation)
+
+Service Employees Int’l Union,
+Local 73
+
+12/9/2019
+
+All full-time and part-time employees
+of the County of McHenry, Valley Hi
+Nursing and Rehabilitation, in the
+following classifications: Activity
+Assistant; Administrative Specialist I;
+Admissions Coordinator; Certified
+Nursing Assistant I; Certified Nursing
+Assistant II; Cook; Custodian; Food
+Service Assistant; Food Service
+Worker; Front Desk Associate;
+Housekeeper; Laundry Worker;
+Medical Records Coordinator; NonCertified Nursing Assistant; Office
+Assistant I; Pool Certified Nursing
+Assistant; Psych-Social Aide
+
+S-DD-20-007
+
+County of McHenry
+(Valley Hi Nursing and
+Rehabilitation)
+
+Service Employees Int’l Union,
+Local 73
+
+12/9/2019
+
+All regular full-time and part-time
+employees of the County of McHenry,
+Valley Hi Nursing and Rehabilitation,
+
+Case No.
+
+Employer
+
+S-DD-20-001
+
+City of Aledo
+(Police Department)
+
+S-DD-20-002
+
+Labor
+Organization
+
+41
+
+in the following titles: Registered
+Nurse; Licensed Practical Nurse
+S-DD-20-008
+
+City of Aledo
+
+Int’l Union of Operating
+Engineers, Local 150
+
+1/31/2019
+
+All full-time and regular part-time
+employees in the following
+classifications: Cemetery Sexton; Gas
+Division Worker; Street Maintenance
+Worker; Water/Wastewater Worker
+
+S-DD-20-009
+
+City of Countryside
+
+Int’l Union of Operating
+Engineers, Local 150
+
+2/5/2020
+
+All employees in the Administrative
+Office in the following titles:
+Accountant; Clerk; Senior Clerk; Code
+Enforcement Officer; Office Clerk
+(part-time); Property Licensing and
+Inspection Officer
+
+S-DD-20-010
+
+Town of Cicero
+
+Service Employees Int’l Union,
+Local 73
+
+3/5/2020
+
+All employees of the Town of Cicero in
+the following titles: Detention Officer
+(Lock Up Keeper); Parking
+Enforcement Officer; Parking
+Enforcement Supervisor.
+
+S-DD-20-011
+
+City of Braidwood
+
+Service Employees Int’l Union,
+Local 73
+
+3/12/2020
+
+All Clerks in Accounting Department,
+Records Clerk in Police Department,
+Water Clerk, Zoning Clerks, Public
+Works Supervisor, Deputy Clerk, Police
+Civilian Supervisor, Communications
+Director, Dispatch Supervisor, Office
+Manager
+
+S-DD-20-012
+
+Village of Jerome
+
+Illinois Fraternal Order of Police
+Labor Council
+
+4/29/2020
+
+All full time sworn police office in the
+classifications or ranks of Patrolman
+and Corporal
+
+S-DD-20-015
+
+City of Quincy
+(Fire Department)
+
+District Lodge 9, Int’l
+Association of Machinists and
+Aerospace Workers
+
+5/6/2020
+
+All full-time and regular part-time
+employees of the City’s Fire
+Department in the following title:
+Assistant Fire Chief
+
+S-DD-20-016
+
+Village of Hudson
+
+Illinois Council of Police
+
+5/12/2020
+
+All part-time sworn peace officers in
+the classification or rank of patrol
+officer
+
+S-DD-20-017
+
+Village of Lisle
+
+International Union of Operating
+Engineers, Local 150
+
+6/17/2020
+
+All full-time and regular part-time
+employees holding the positions of
+Public Works Person and Senior Public
+Works Person
+
+42
+
+Illinois Labor Relations Board
+Organizational Chart
+Joint Panel
+State Panel
+
+Chairman
+William E. Lowry, Jr.
+
+William E. Lowry, Jr., Chairman
+Kendra S. Cunningham, Member
+Jose L. Gudino, Member
+John S. Cronin, Member
+Thomas Willis, Member
+
+Executive Director
+Kimberly F. Stevens
+
+Local Panel
+Robert M. Gierut, Chairman
+Charles E. Anderson, Member
+Angela C. Thomas, Member
+
+General Counsel
+Helen J. Kim
+
+Investigator
+Olivia L. Campbell
+
+Chief Fiscal Officer
+Aaron M. Itulya
+
+Associate General Counsel
+Anna Hamburg-Gal
+
+Investigator
+Tiara L. Mackins
+
+Personnel Officer
+Carla Stone
+
+Administrative Law Judge
+Matthew S. Nagy
+
+Information Tech Officer
+Jodi M. Marr
+
+Administrative Law Judge
+Sharon A. Purcell
+
+Case Manager
+Richard C. Huffines
+
+Administrative Law Judge
+Michelle N. Owen
+
+Administrative Law Judge
+Donald W. Anderson
+
+CHICAGO OFFICE
+160 North LaSalle Street
+Suite S-400
+Chicago, IL 60601
+312-793-6400
+
+SPRINGFIELD OFFICE
+801 South 7th Street
+Suite 1200A
+Springfield, IL 62703
+217-785-3155
+
+WEBSITE
+
+www.illinois.gov/ilrb
+
+Printed by Authority of the State of Illinois
+October 2021

@@ -1,0 +1,7873 @@
+CITY OF MERCEDES, TEXAS
+AUDITED ANNUAL FINANCIAL REPORT
+FOR YEAR ENDED SEPTEMBER 30, 2023
+
+ADRIAN WEBB
+
+CERTIFIED PUBLIC ACCOUNTANT
+
+CITY OF MERCEDES, TEXAS
+For the Year Ended September 30, 2023
+CITY OFFICIALS
+Oscar D. Montoya Sr.
+
+Mayor
+
+Ruben J. Saldana
+
+Mayor Pro-Tem
+
+Jacob C. Howell
+
+Commissioner
+
+Armando Garcia
+
+Commissioner
+
+Joe Martinez
+
+Commissioner
+
+CITY MANAGER
+Alberto Perez
+FINANCE DIRECTOR
+Nereida Perez
+
+i
+
+ADRIAN WEBB, CPA
+Certified Public Accountant
+Edinburg, Texas
+Independent Auditor's Report
+To the City Commission of
+City of Mercedes, Texas
+Opinions
+We have audited the accompanying financial statements of the governmental activities, the business-type
+activities, the aggregate discretely presented component units, each major fund, and the aggregate
+remaining fund information of the City of Mercedes, Texas, as of and for the year ended September 30,
+2023, and the related notes to the financial statements, which collectively comprise the City of Mercedes,
+Texas' basic financial statements as listed in the table of contents.
+In our opinion, the financial statements referred to above present fairly, in all material respects, the
+respective financial position of the governmental activities, the business-type activities, the aggregate
+discretely presented component units, each major fund, and the aggregate remaining fund information of
+the City of Mercedes, Texas, as of September 30, 2023, and the respective changes in financial position,
+and, where applicable, cash flows thereof for the year then ended in accordance with accounting principles
+generally accepted in the United States of America.
+Basis for Opinions
+We conducted our audit in accordance with auditing standards generally accepted in the United States of
+America. Our responsibilities under those standards are further described in the Auditor’s Responsibilities
+for the Audit of the Financial Statements section of our report. We are required to be independent of the
+City of Mercedes, Texas, and to meet our other ethical responsibilities, in accordance with the relevant
+ethical requirements relating to our audit. We believe that the audit evidence we have obtained is sufficient
+and appropriate to provide a basis for our audit opinions.
+Emphasis of Matter – Change of Accounting Principle
+As discussed in the notes to the financial statements, in the year ending September 30, 2023, the City
+adopted new accounting guidance, Governmental Accounting Standards Board (GASB) Statement No. 96,
+Subscription-Based Information Technology Arrangements. Our opinions are not modified with respect to
+this matter.
+Management's Responsibility for the Financial Statements
+Management is responsible for the preparation and fair presentation of these financial statements in
+accordance with accounting principles generally accepted in the United States of America; this includes the
+design, implementation, and maintenance of internal control relevant to the preparation and fair presentation
+of financial statements that are free from material misstatement, whether due to fraud or error.
+In preparing the financial statements, management is required to evaluate whether there are conditions or
+events, considered in the aggregate, that raise substantial doubt about the City of Mercedes, Texas’s ability
+to continue as a going concern for twelve months beyond the financial statement date, including any
+currently known information that may raise substantial doubt shortly thereafter.
+
+3619 W ALBERTA RD, EDINBURG, TX 78539
+
+MEMBER OF AICPA & TSCPA
+
+PHONE (956) 897-1142
+
+Auditor's Responsibility
+Our objectives are to obtain reasonable assurance about whether the financial statements as a whole are free
+from material misstatement, whether due to fraud or error, and to issue an auditor’s report that includes our
+opinions. Reasonable assurance is a high level of assurance but is not absolute assurance and therefore is
+not a guarantee that an audit conducted in accordance with generally accepted auditing standards will
+always detect a material misstatement when it exists. The risk of not detecting a material misstatement
+resulting from fraud is higher than for one resulting from error, as fraud may involve collusion, forgery,
+intentional omissions, misrepresentations, or the override of internal control. Misstatements are considered
+material if there is a substantial likelihood that, individually or in the aggregate, they would influence the
+judgment made by a reasonable user based on the financial statements.
+In performing an audit in accordance with generally accepted auditing standards, we:
+•
+
+Exercise professional judgment and maintain professional skepticism throughout the audit.
+
+•
+
+Identify and assess the risks of material misstatement of the financial statements, whether due to
+fraud or error, and design and perform audit procedures responsive to those risks. Such procedures
+include examining, on a test basis, evidence regarding the amounts and disclosures in the financial
+statements.
+
+•
+
+Obtain an understanding of internal control relevant to the audit in order to design audit procedures
+that are appropriate in the circumstances, but not for the purpose of expressing an opinion on the
+effectiveness of the City of Mercedes, Texas's internal control. Accordingly, no such opinion is
+expressed.
+
+•
+
+Evaluate the appropriateness of accounting policies used and the reasonableness of significant
+accounting estimates made by management, as well as evaluate the overall presentation of the
+financial statements.
+
+•
+
+Conclude whether, in our judgment, there are conditions or events, considered in the aggregate,
+that raise substantial doubt about the City of Mercedes, Texas's ability to continue as a going
+concern for a reasonable period of time.
+
+We are required to communicate with those charged with governance regarding, among other matters, the
+planned scope and timing of the audit, significant audit findings, and certain internal control-related matters
+that we identified during the audit.
+Required Supplementary Information
+Accounting principles generally accepted in the United States of America require that the management’s
+discussion and analysis and budgetary comparison information be presented to supplement the basic
+financial statements. Such information is the responsibility of management and, although not a part of the
+basic financial statements, is required by the Governmental Accounting Standards Board who considers it
+to be an essential part of financial reporting for placing the basic financial statements in an appropriate
+operational, economic, or historical context. We and other auditors have applied certain limited procedures
+to the required supplementary information in accordance with auditing standards generally accepted in the
+United States of America, which consisted of inquiries of management about the methods of preparing the
+information and comparing the information for consistency with management’s responses to our inquiries,
+the basic financial statements, and other knowledge we obtained during our audit of the basic financial
+statements. We do not express an opinion or provide any assurance on the information because the limited
+procedures do not provide us with sufficient evidence to express an opinion or provide any assurance.
+
+PAGE 2
+
+Supplementary Information
+Our audit was conducted for the purpose of forming opinions on the financial statements that collectively
+comprise the City’s basic financial statements. The combining and individual nonmajor fund financial
+statements, and schedule of expenditures of federal awards, as required by Title 2 U.S. Code of Federal
+Regulations, Part 200, Uniform Administrative Requirements, Cost Principles, and Audit Requirements for
+Federal Awards are presented for purposes of additional analysis and are not a required part of the basic
+financial statements.
+The combining and individual nonmajor fund financial statements, and schedule of expenditures of federal
+awards are the responsibility of management and were derived from and relate directly to the underlying
+accounting and other records used to prepare the basic financial statements. Such information has been
+subjected to the auditing procedures applied in the audit of the basic financial statements and certain
+additional procedures, including comparing and reconciling such information directly to the underlying
+accounting and other records used to prepare the basic financial statements or to the basic financial
+statements themselves, and other additional procedures in accordance with auditing standards generally
+accepted in the United States of America. In our opinion, the combining and individual nonmajor fund
+financial statements, and schedule of expenditures of federal awards are fairly stated, in all material
+respects, in relation to the basic financial statements as a whole.
+Other Information Included in the Annual Report and Financial Statements
+Management is responsible for the other information included in the Annual Audit Report and Financial
+Statements. The other information comprises the introductory section but does not include the financial
+statements and our auditor's report thereon. Our opinions on the financial statements do not cover the other
+information, and we do not express an opinion or any form of assurance thereon. In connection with our
+audit of the financial statements, our responsibility is to read the other information and consider whether a
+material inconsistency exists between the other information and the financial statements, or the other
+information otherwise appears to be materially misstated. If, based on the work performed, we conclude
+that an uncorrected material misstatement of the other information exists, we are required to describe it in
+our report.
+Other Reporting Required by Government Auditing Standards
+In accordance with Government Auditing Standards, we have also issued our report dated March 21, 2024,
+on our consideration of the City of Mercedes, Texas' internal control over financial reporting and on our
+tests of its compliance with certain provisions of laws, regulations, contracts, and grant agreements and
+other matters. The purpose of that report is solely to describe the scope of our testing of internal control
+over financial reporting and compliance and the results of that testing, and not to provide an opinion on the
+effectiveness of the City of Mercedes, Texas' internal control over financial reporting or on compliance.
+That report is an integral part of an audit performed in accordance with Government Auditing Standards in
+considering the City of Mercedes, Texas' internal control over financial reporting and compliance.
+
+Adrian Webb
+Certified Public Accountant
+Edinburg, Texas
+March 21, 2024
+
+PAGE 3
+
+CITY OF MERCEDES
+MANAGEMENT’S DISCUSSION AND ANALYSIS
+FOR YEAR ENDED SEPTEMBER 30, 2023
+As management of the City of Mercedes, we offer readers of the City’s financial statements this narrative overview
+and analysis of the financial activities of the City of Mercedes for the fiscal year ended September 30, 2023. We
+encourage readers to consider the information presented here in conjunction with the independent auditors’ report on
+page 1 and the City’s financial statements, which begin on page 9.
+FINANCIAL HIGHLIGHTS
+•
+
+The City’s total net position increased by $6,034,251. Net position from governmental activities increased
+$5,333,355, while net position from business-type activities increased $700,896.
+
+•
+
+Revenues for the City’s business-type charges for services increased from $6,093,605 to $6,714,279 and
+expenses increased from $5,489,667 to $6,512,456.
+
+•
+
+The General Fund ended the year with a fund balance of $9,924,339, a $2,383,583, increase from prior year’s
+balance of $7,540,756.
+
+•
+
+In comparing the General Fund’s final budget to actual, revenues were $1,254,433 more than the final budget,
+and expenditures were $1,711,192 less than final budget. This resulted in a total positive budget to actual
+variance of $2,965,625 not including other financing sources (uses).
+
+OVERVIEW OF THE FINANCIAL STATEMENTS
+This discussion and analysis are intended to serve as an introduction to the City’s basic financial statements. The
+City’s basic financial statements are comprised of three components: 1) government-wide financial statements, 2)
+fund financial statements, and 3) notes to the financial statements. This report also contains required supplementary
+information and other supplementary information in addition to the basic financial statements themselves.
+GOVERNMENT-WIDE FINANCIAL STATEMENTS
+The Statement of Net Position and the Statement of Activities are government-wide financial statements. The
+government-wide financial statements provide information about the activities of the City as a whole and present a
+longer-term view of the City’s finances. These statements include all assets and deferred outflows of resources and
+liabilities and deferred inflows of resources of the City, and the statements are presented on the accrual basis of
+accounting, which is similar to the accounting used by most private-sector companies.
+The Statement of Activities presents information showing how the government’s net position changed during the most
+recent fiscal year. All changes in net position are reported as soon as the underlying event giving rise to the change
+occurs, regardless of the timing of related cash flows. Thus, revenues and expenses are reported in this statement for
+some items that will only result in cash flows in future fiscal periods (e.g., uncollected taxes and earned but unused
+vacation leave).
+Activities of the City as a whole include governmental activities, and business-type activities. Governmental activities
+are those activities, which are financed primarily through taxes and grants.
+Most of the City’s basic services are reported as governmental activities. Business-type activities are those activities
+that are intended to recover all or a significant portion of their costs through user fees and charges. Utility system
+operations are a common example of business-type activities.
+The government-wide financial statements include not only the City itself (known as the primary government), but
+also the Development Corporation of Mercedes (DCM) and the Mercedes Industrial Foundation, Inc., which are
+legally separate entities, and are reported as discretely presented component units. These are other governmental units
+of which the City (the City Commission, acting as a group) can exercise influence. Financial information for
+Development Corporation of Mercedes is reported separately from the financial information presented for the primary
+government itself. The government-wide financial statements can be found on pages 9-10 of this report.
+
+PAGE 4
+
+CITY OF MERCEDES
+MANAGEMENT’S DISCUSSION AND ANALYSIS
+FOR YEAR ENDED SEPTEMBER 30, 2023
+FUND FINANCIAL STATEMENTS
+The fund financial statements begin on page 11-19 and provide detail information about the most significant funds –
+not the City as a whole. Some funds are required to be established by law, bond covenants or by contracts. Still other
+funds are established by the City Commission to assist in managing money that is to be spent for particular purposes.
+The City’s two kinds of funds – governmental and proprietary – use different accounting approaches.
+•
+
+Governmental funds
+Most of the City’s basic services are reported in governmental funds, which focus on how money flows in
+and out of those funds and the balances left at year-end that are available for spending. These funds are
+reported using an accounting method called modified accrual accounting, which measures cash and all other
+financial assets that can be readily converted to cash. The governmental fund statements provide a detailed
+short-term view of the City’s general government operations and the basic services it provides. Governmental
+fund information helps to determine whether there are more or less financial resources that can be spent in
+the near future to finance the City’s programs. We describe the differences between governmental activities
+(reported in the Statement of Net Position and the Statement of Activities) and the governmental funds in
+reconciliation schedules following each of the fund financial statements.
+
+•
+
+Proprietary funds
+The City reports the activities for which it charges users (whether outside customers or other units of the
+City). The proprietary funds use the accrual basis, the same accounting method employed in the Statement
+of Net Position and the Statement of Activities. In fact, the City’s enterprise funds (a component of
+proprietary funds) are the business-type activities reported in the government-wide statements but provide
+more detail and additional information, such as cash flows.
+
+NOTES TO THE FINANCIAL STATEMENTS
+The notes to the financial statements provide additional information that is essential to a full understanding of the data
+provided in the government-wide and fund financial statements. The notes to the financial statements begin on page
+20-54 of this report.
+THE CITY’S FUNDS
+Being that the City is a government entity, it tracks all transactions using fund accounting. What this means is that it
+isolates different types of activity into funds, which it then tracks separately. Each fund essentially becomes its own
+entity, which then interacts with other funds. This allows for separate management of governmental funds, grants,
+enterprise funds (utility fund) and any other restricted funds.
+As a result of this year’s operations, all combined governmental funds, including capital projects and debt service
+funds (as presented in the balance sheet on page 11-12) reported a combined fund balance of $12,747,338 an increase
+of $1,207,869 from the previous year ending September 30, 2023.
+
+PAGE 5
+
+CITY OF MERCEDES
+MANAGEMENT’S DISCUSSION AND ANALYSIS
+FOR YEAR ENDED SEPTEMBER 30, 2023
+GOVERNMENT-WIDE FINANCIAL ANALYSIS
+This analysis focuses on the net position (Table I) and changes in net position (Table II) of the City’s governmental
+and business-type activities.
+Net position of the City’s governmental activities increased from $17,173,073 to $22,506,428. Unrestricted net
+position – the part of net position that can be used to finance day to day operations without constraints from debt
+covenants, legislation or other legal requirements was $9,752,085 as of September 30, 2023.
+In 2023, net position of business-type activities increased from $26,940,158 to $27,641,054. Table I, below illustrates
+a comparative summary of the City’s statement of net position as of September 30, 2023, and 2022.
+Table I
+Governmental Activities
+2023
+2022
+Current Assets
+Capital Assets, Net
+Total Assets
+
+$ 18,680,269
+34,480,492
+53,160,761
+
+$ 18,851,507
+33,848,249
+52,699,756
+
+Deferred Outflows of Resources
+
+3,181,713
+
+1,248,800
+
+Total assets and deferred
+outflows of resources
+
+56,342,474
+
+Other Liabilities
+Long-Term Liabilities
+Total Liabilities
+
+Business-Type Activities
+2023
+2022
+$
+
+Increase
+(Decrease)
+
+2022
+
+$ 21,395,682
+69,225,271
+90,620,954
+
+$ 20,650,610
+68,657,685
+89,308,295
+
+389,465
+
+183,532
+
+3,571,178
+
+1,432,332
+
+2,138,846
+
+53,948,556
+
+37,849,658
+
+36,792,071
+
+94,192,132
+
+90,740,627
+
+3,451,505
+
+5,875,235
+27,609,195
+33,484,430
+
+7,521,212
+27,647,322
+35,168,534
+
+2,150,070
+7,909,805
+10,059,875
+
+1,355,984
+8,357,537
+9,713,521
+
+8,025,305
+35,519,000
+43,544,305
+
+8,877,196
+36,004,859
+44,882,055
+
+(851,891)
+(485,859)
+(1,337,750)
+
+Deferred Inflows of Resources
+
+351,616
+
+1,606,949
+
+148,729
+
+138,392
+
+500,345
+
+1,745,341
+
+(1,244,996)
+
+Net Invested in Capital Assets
+Restricted
+Unrestricted
+Total Net Position
+Total Liabilities, deferred inflows
+of resources and net position
+
+9,931,345
+2,822,998
+9,752,085
+22,506,428
+
+6,300,226
+4,011,157
+6,861,690
+17,173,073
+
+26,779,480
+861,574
+27,641,054
+
+25,360,913
+1,579,245
+26,940,158
+
+36,710,825
+2,822,998
+10,613,659
+50,147,482
+
+31,661,139
+4,011,157
+8,440,935
+44,113,231
+
+5,049,686
+(1,188,159)
+2,172,724
+6,034,251
+
+$ 56,342,474
+
+$ 53,948,556
+
+37,849,658
+
+$ 36,792,071
+
+$ 94,192,132
+
+$ 90,740,627
+
+PAGE 6
+
+$
+
+Totals
+
+1,799,103
+34,809,436
+36,608,539
+
+$
+
+2,715,413
+34,744,779
+37,460,193
+
+2023
+
+$
+
+$
+
+745,072
+567,586
+1,312,659
+
+3,451,505
+
+CITY OF MERCEDES
+MANAGEMENT’S DISCUSSION AND ANALYSIS
+FOR YEAR ENDED SEPTEMBER 30, 2023
+Table II
+
+Revenues
+Program Revenues
+Charges for Services
+Operating Grants and Contributions
+General Revenues
+Property Taxes
+Non Property Taxes
+Franchise Taxes
+Other Revenues
+Investment Earnings
+Miscellaneous
+Total Revenues
+Expenses
+General Government
+Public safety
+Public works
+Highway and Streets
+Health and Welfare
+Culture and Recreation
+Conservation and Development
+Interest on long-term debt
+Utility Services
+Total Expenses
+Increase in net position before
+transfers
+Transfers
+
+Governmental
+2023
+2022
+
+Business-Type
+2023
+2022
+
+2023
+
+Totals
+
+Increase
+(Decrease)
+
+2022
+
+$ 3,365,247
+2,498,663
+
+$ 2,680,856
+1,046,314
+
+$ 6,714,279
+-
+
+$ 6,093,605
+-
+
+$ 10,079,526
+2,498,663
+
+$ 8,774,461
+1,046,314
+
+$
+
+1,305,065
+1,452,349
+
+5,957,425
+6,575,621
+730,045
+907,528
+704,652
+932,025
+21,671,206
+
+5,548,174
+5,923,531
+673,136
+227,270
+113,396
+1,017,952
+17,230,629
+
+20,312
+6,734,591
+
+2,184
+6,095,789
+
+5,957,425
+6,575,621
+730,045
+907,528
+724,964
+932,025
+28,405,797
+
+5,548,174
+5,923,531
+673,136
+227,270
+115,580
+1,017,952
+23,326,418
+
+409,251
+652,090
+56,909
+680,258
+609,384
+(85,927)
+5,079,379
+
+4,088,167
+5,719,104
+502,451
+553,157
+2,142,077
+1,370,963
+700,000
+661,885
+15,737,804
+
+3,826,089
+5,333,917
+575,725
+482,254
+1,875,043
+1,213,693
+805,855
+167,199
+14,279,775
+
+6,512,456
+6,512,456
+
+162,962
+5,326,705
+5,489,667
+
+4,088,167
+5,719,104
+502,451
+553,157
+2,142,077
+1,370,963
+700,000
+661,885
+6,512,456
+22,250,260
+
+3,826,089
+5,333,917
+575,725
+482,254
+
+262,078
+385,187
+(73,274)
+70,903
+
+1,213,693
+968,817
+5,493,904
+17,894,399
+
+157,270
+700,000
+(306,932)
+1,018,552
+4,355,861
+
+5,933,402
+
+2,950,854
+
+222,135
+
+606,122
+
+6,155,537
+
+5,432,019
+
+723,518
+
+(478,761)
+
+(362,580)
+
+478,761
+
+362,580
+
+-
+
+-
+
+-
+
+Change in Net Position
+
+5,454,641
+
+2,588,274
+
+700,896
+
+968,702
+
+6,155,537
+
+3,556,976
+
+2,598,561
+
+Net Position Beginning
+Prior Period Adjustment
+Net Position Ending
+
+17,173,073
+(121,286)
+$ 22,506,428
+
+14,558,060
+26,739
+$ 17,173,073
+
+26,940,158
+$ 27,641,054
+
+25,971,456
+$ 26,940,158
+
+44,113,231
+(121,286)
+$ 50,147,482
+
+71,053,389
+26,739
+$ 44,113,231
+
+(26,940,158)
+(148,025)
+$ 6,034,251
+
+The cost of all governmental activities in the current year was $15,737,804. However, as shown in Table II, the amount
+financed by property and non-property taxes were $5,957,425 and $6,575,621, respectively. The remaining costs were
+paid by those who directly benefited from the programs or by other governments and organizations that subsidized
+certain programs with grants and contributions.
+CAPITAL ASSET AND DEBT ADMINISTRATION
+Capital Assets
+At the end of the fiscal year, the City had $69,225,271 (net of depreciation) invested in capital assets, including
+facilities, land, infrastructure, vehicles, and equipment, as further discussed in Note 2 – Capital Assets. This is an
+increase of $567,586, from the previous fiscal year.
+
+PAGE 7
+
+CITY OF MERCEDES
+MANAGEMENT’S DISCUSSION AND ANALYSIS
+FOR YEAR ENDED SEPTEMBER 30, 2023
+Long-Term Debt
+By the end of the fiscal year, the City had long-term obligations totaling $33,689,367 versus $36,713,589 at the end
+of last year, a decrease of $3,024,222. The following is a summary of long-term obligations:
+
+General obligation debt
+Premium on bonds
+Notes Payable
+Settlement Payable
+Compensated absences
+
+General obligation debt
+Premium on bonds
+Compensated absences
+
+Governmental
+2023
+2022
+$ 19,284,700
+$ 20,878,600
+619,801
+667,581
+343,750
+468,750
+4,920,697
+5,420,697
+324,957
+327,307
+$ 25,493,905
+$ 27,762,935
+
+Increase
+(Decrease)
+$ (1,593,900)
+(47,780)
+(125,000)
+(500,000)
+(2,350)
+$ (2,269,030)
+
+Business-Type
+2023
+2022
+7,965,300
+$
+8,686,400
+209,831
+242,113
+20,331
+22,141
+8,195,462
+$
+8,950,654
+
+Increase
+(Decrease)
+$
+(721,100)
+(32,282)
+(1,810)
+$
+(755,192)
+
+$
+
+$
+
+The City also recognized net pension and OPEB liabilities of $4,388,255 and $290,765, respectively.
+Fitch ratings has reviewed and assigned an A+ rating to the limited tax bonds and certificates of obligation debt.
+Additional information on the City of Mercedes’ long-term debt can be found in Note 2 Detailed Notes on all Funds
+F. Long Term Debt of this report.
+ECONOMIC FACTORS AND NEXT YEAR’S BUDGETS AND RATES
+During the budget process for fiscal year 2023-2022, the City Manager, the City Commission and the Staff, analyzed
+the anticipated needs of the City based on many factors. These factors are drivers and/or indicators of economic growth
+and include new housing and business developments, job growth, increases in commercial construction, decreases in
+federal funding, staffing needs, as well as historical revenue and expenditure trends. As a result of those factors, the
+City increased the tax rate to $0 for fiscal 2023-2022. Total revenues and other financing sources for the City’s General
+Fund for fiscal year 2023-2022 are budgeted at $15,281,900, which is an increase of $2,989,097, over the fiscal year
+2023-2022 budget. Expenditures and other financing uses are budgeted at $15,281,900, which is an increase of
+$2,989,097, over the fiscal year 2023-2022 budget. This is attributed to an increase in public works maintenance and
+non-departmental costs.
+CONTACTING THE CITY’S FINANCIAL MANAGEMENT
+This financial report is designed to provide our citizens, taxpayers, customers, investors, and creditors with a general
+overview of the City of Mercedes’ finances and to show the City’s accountability for the money it receives. If you
+have questions about this report or need additional financial information, contact the City’s Finance Director, at City
+of Mercedes, P.O. Box 837, Mercedes, Texas 78570.
+
+PAGE 8
+
+CITY OF MERCEDES
+STATEMENT OF NET POSITION
+As of September 30, 2023
+
+Exhibit A - 1
+
+Governmental
+Activities
+ASSETS:
+1010 Cash and Cash Equivalents
+1011 Restricted Cash
+1050 Taxes Receivable
+1051 Allowance for Uncollectible Taxes (credit)
+1150 Accounts Receivable, Net
+1260 Due from Other Governments
+1300 Due from Other Funds
+1410 Inventories
+1600 Note Receivable
+Capital Assets
+1791 Capital Assets Not Being Depreciated
+1792 Capital Assets Being Depreciated
+1780 Accumulated Depreciation
+Capital Assets, Net
+
+$
+
+1990 Land Held For Development
+TOTAL ASSETS
+DEFERRED OUTFLOWS OF RESOURCES:
+1991 Deferred Charge for Refunding
+1992 Deferred Outflow Related to Pension Plan
+1993 Deferred Outflow Related to OPEB
+TOTAL DEFERRED OUTFLOWS OF RESOURCES
+TOTAL ASSETS AND DEFERRED OUTFLOWS OF RESOURCES
+LIABILITIES:
+2010 Accounts Payable
+2020 Wages and Salaries Payable
+2030 Compensated Absences Payable
+2100 Due to Component Unit
+2140 Accrued Interest Payable
+2201 Customer Deposits
+2230 Unearned Revenues
+2501 Debt Service - Due Within One Year
+Noncurrent Liabilities:
+2502 Debt Service - Due in More Than One Year
+2560 Unamortized Premiums (Discounts) on Bonds
+2580 Net Pension Liability
+2585 Net OPEB Liability
+
+$
+$
+
+TOTAL LIABILITIES
+DEFERRED INFLOWS OF RESOURCES:
+2602 Deferred Inflow Related to Pension Plan
+2603 Deferred Inflow Related to OPEB
+TOTAL DEFERRED INFLOWS OF RESOURCES
+NET POSITION:
+4001 Net Investment in Capital Assets
+3850 Restricted for Capital Projects
+3860 Restricted for Debt Service
+3870 Restricted for Other Purposes
+3890 Unrestricted
+TOTAL NET POSITION
+TOTAL LIABILITIES, DEFERRED LIABILITIES & NET POSITION
+
+$
+
+Business - Type
+Activities
+
+11,446,458 $
+2,279,104
+2,420,098
+(383,943)
+1,842,325
+272,251
+294,241
+62,599
+220,447
+
+Development
+Corporation of
+Mercedes
+
+Total
+
+1,691,621 $ 13,138,079 $
+281,846
+2,560,950
+2,420,098
+(383,943)
+1,036,187
+2,878,513
+272,251
+(294,241)
+62,599
+220,447
+
+1,025,511
+888,993
+364,127
+832,152
+
+3,842,788
+54,239,106
+(23,601,402)
+34,480,492
+
+658,444
+65,179,067
+(31,092,732)
+34,744,779
+
+4,501,232
+119,418,173
+(54,694,134)
+69,225,271
+
+33,042
+33,042
+
+226,688
+53,160,761
+
+37,460,194
+
+226,688
+90,620,954
+
+3,313,791
+6,457,616
+
+179,521
+2,973,082
+29,110
+
+88,778
+283,124
+17,563
+
+268,299
+3,256,206
+46,673
+
+101,808
+5,211
+
+389,465
+37,849,658
+
+3,571,178
+$ 94,192,132
+
+$
+
+$
+
+$
+
+3,181,713
+56,342,474
+1,070,306
+139,069
+324,957
+601,046
+100,427
+1,872,630
+1,766,800
+
+$
+$
+
+798,142
+9,450
+20,331
+26,663
+558,185
+737,300
+
+1,868,447
+148,519
+345,288
+601,046
+127,090
+558,185
+1,872,630
+2,504,100
+
+107,019
+6,564,635
+1,529
+6,553
+(601,046)
+5,969
+1,180,296
+
+22,782,347
+619,801
+3,941,302
+265,744
+
+7,228,000
+209,831
+446,953
+25,021
+
+30,010,347
+829,632
+4,388,255
+290,765
+
+2,234,188
+127,777
+8,738
+
+33,484,429
+
+10,059,876
+
+43,544,305
+
+2,964,004
+
+255,245
+96,371
+
+125,718
+23,011
+
+380,963
+119,382
+
+57,873
+7,693
+
+351,616
+
+148,729
+
+500,345
+
+65,566
+
+9,931,345
+731,673
+896,035
+1,195,290
+9,752,085
+22,506,428
+
+26,779,480
+861,574
+27,641,054
+
+36,710,825
+731,673
+896,035
+1,195,290
+10,613,659
+50,147,482
+
+1,568,844
+1,966,221
+3,535,065
+
+37,849,658
+
+$ 94,192,132
+
+56,342,474
+
+$
+
+The notes to the financial statements are an integral part of this statement.
+PAGE 9
+
+$
+
+6,564,635
+
+CITY OF MERCEDES
+STATEMENT OF ACTIVITIES
+For the Year Ended September 30, 2023
+
+Functions/Programs
+PRIMARY GOVERNMENT
+Governmental Activities:
+100 General Government
+200 Public Safety
+300 Public Works
+310 Highway and Streets
+400 Health and Welfare
+500 Culture and Recreation
+600 Conservation and Development
+720 Interest on Debt
+Total Governmental Activities
+Business Type Activities:
+10 Water and Sewer Expenses
+Total Business-Type Activities
+TOTAL PRIMARY GOVERNMENT
+
+Charges for
+Services
+
+Expenses
+
+$
+
+4,088,167
+5,719,104
+502,451
+553,157
+2,142,077
+1,370,963
+700,000
+661,885
+
+$
+
+1,649,018
+749,650
+283,811
+682,769
+-
+
+Exhibit B-1
+
+Operating
+Grants and
+Contributions
+
+Governmental Business-Type
+Activities
+Activities
+
+$
+
+$
+
+1,975,395
+296,495
+226,774
+2,498,663
+
+(463,754) $
+(4,672,960)
+(218,640)
+(326,383)
+(1,459,309)
+(1,370,963)
+(700,000)
+(661,885)
+
+-
+
+(9,873,894)
+
+-
+
+Development
+Corporation of
+Mercedes
+
+Total
+
+$
+
+(463,754) $
+(4,672,960)
+(218,640)
+(326,383)
+(1,459,309)
+(1,370,963)
+(700,000)
+(661,885)
+
+-
+
+(9,873,894)
+
+-
+
+15,737,804
+
+3,365,247
+
+6,512,456
+
+6,714,279
+
+-
+
+-
+
+201,823
+
+201,823
+
+-
+
+6,512,456
+
+6,714,279
+
+-
+
+-
+
+201,823
+
+201,823
+
+-
+
+22,250,261
+
+10,079,526
+
+201,823
+
+(9,672,071)
+
+-
+
+2,498,663
+
+(9,873,894)
+
+Component Unit:
+100 General Government
+650 Economic Development and Assistance
+720 Interest on Debt
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+471,632
+485,818
+76,374
+
+Total Component Unit
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+1,033,824
+
+3,549,856
+2,407,569
+6,396,225
+730,045
+179,396
+131,115
+543,205
+73,785
+704,652
+17,045
+166,877
+907,528
+(478,761)
+
+20,312
+478,761
+
+General Revenues:
+5111 Property Taxes, Levied for General Purposes
+5112 Property Taxes, Levied for Debt Service
+5120 General Sales and Use Taxes
+5170 Franchise Tax
+5180 Other Taxes
+5190 Penalty and Interest on Taxes
+5200 Licenses and Permits
+5510 Fines
+5610 Investment Earnings
+5620 Rents and Royalties
+5650 Contributions
+5700 Other Revenue
+7955 Investment Earnings
+7958 Nonoperating Transfers In(Out)
+Total General Revenues and Transfers
+Change in Net Position
+
+15,328,535
+$ 5,454,641
+
+$
+
+2,101,933
+49,997
+-
+
+3,549,856
+2,407,569
+6,396,225
+730,045
+179,396
+131,115
+543,205
+73,785
+704,652
+17,045
+166,877
+907,528
+20,312
+-
+
+499,073
+
+15,827,609
+
+700,896
+
+$ 6,155,537
+
+2,151,930
+$
+
+1,118,106
+
+Net Position - Beginning
+Prior Period Adjustments
+
+$ 17,173,073 $ 26,940,158
+(121,286)
+-
+
+$ 44,113,231 $
+(121,286)
+
+2,416,959
+-
+
+Net Position - Ending
+
+$ 22,506,428
+
+$ 50,147,482
+
+3,535,065
+
+The notes to the financial statements are an integral part of this statement.
+PAGE 10
+
+$ 27,641,054
+
+$
+
+CITY OF MERCEDES
+BALANCE SHEET - GOVERNMENTAL FUNDS
+As of September 30, 2023
+
+General Fund
+ASSETS:
+1010 Cash and Cash Equivalents
+1011 Restricted Cash
+1050 Taxes Receivable
+1051 Allowance for Uncollectible Taxes (credit)
+1150 Accounts Receivable, Net
+1260 Due from Other Governments
+1300 Due from Other Funds
+1410 Inventories
+1990 Land Held For Development
+TOTAL ASSETS
+LIABILITIES:
+2010 Accounts Payable
+2020 Wages and Salaries Payable
+2080 Due to Other Funds
+2100 Due to Component Unit
+2230 Unearned Revenues
+
+Interest and
+Sinking
+
+ARPA
+
+Series 2021
+
+Total Other
+Nonmajor
+Governmental
+Funds
+
+Total
+Governmental
+Funds
+
+$
+
+5,635,508 $
+2,057,009
+(270,059)
+1,809,671
+3,415,320
+62,599
+226,688
+12,936,737
+
+1,831,130
+1,831,130
+
+$
+
+447,851 $
+447,974
+363,090
+(113,884)
+210
+1,145,241
+
+4,071,738
+4,071,738
+
+$
+
+1,291,360
+32,654
+272,251
+97,482
+1,693,748
+
+$
+
+11,446,458
+2,279,104
+2,420,098
+(383,943)
+1,842,325
+272,251
+3,513,013
+62,599
+226,688
+21,678,594
+
+$
+
+670,196
+129,822
+98,449
+601,046
+-
+
+45,547
+1,785,582
+
+$
+
+-
+
+348,361
+3,065,294
+-
+
+$
+
+6,201
+9,247
+55,028
+87,048
+
+$
+
+1,070,306
+139,069
+3,218,772
+601,046
+1,872,630
+
+TOTAL LIABILITIES
+DEFERRED INFLOWS OF RESOURCES:
+
+$
+
+1,499,513
+
+2601 Deferred Resource Inflow - Property Taxes
+2604 Deferred Resource Inflow - EMS
+2605 Deferred Resource Inflow - TIRZ
+TOTAL DEFERRED INFLOWS OF RESOURCES
+FUND BALANCES:
+3445 Non-Spendable
+3480 Restricted for Debt Service
+3490 Restricted for Special Purposes
+3550 Committed for Construction
+3600 Unassigned
+TOTAL FUND BALANCES
+TOTAL LIABILITIES, DEFERRED INFLOWS & FUND
+BALANCES
+
+Exhibit C - 1
+
+$
+
+1,831,130
+
+$
+
+-
+
+3,413,656
+
+157,525
+
+6,901,823
+
+378,039
+1,134,846
+-
+
+-
+
+249,206
+-
+
+-
+
+267,341
+
+627,245
+1,134,846
+267,341
+
+1,512,885
+
+-
+
+249,206
+
+-
+
+267,341
+
+2,029,433
+
+226,688
+9,697,651
+9,924,339
+
+-
+
+896,035
+896,035
+
+658,082
+658,082
+
+1,195,290
+73,591
+1,268,881
+
+226,688
+896,035
+1,195,290
+731,673
+9,697,651
+12,747,338
+
+12,936,737
+
+$
+
+1,831,130
+
+$
+
+1,145,241
+
+The notes to the financial statements are an integral part of this statement.
+PAGE 11
+
+$
+
+4,071,738
+
+$
+
+1,693,748
+
+$
+
+21,678,594
+
+CITY OF MERCEDES
+RECONCILIATION OF THE GOVERNMENTAL FUNDS BALANCE SHEET TO THE
+STATEMENT OF NET POSITION
+As of September 30, 2023
+$
+
+Total Fund Balances - Governmental Funds
+Amounts Reported for governmental activities in the statement of net position are
+different because:
+Long-term note receivables used in governmental activities are not available in the
+current period and therefore not reported in the funds
+1600 Note Receivable
+Total Notes Receivable
+Capital assets used in governmental activities are not financial resources and
+therefore are not reported in governmental funds:
+1791 Capital Assets Not Being Depreciated
+1792 Capital Assets Being Depreciated
+1780 Accumulated Depreciation
+
+Exhibit C - 2
+
+220,447
+220,447
+
+3,842,788
+54,239,106
+(23,601,402)
+
+Total Capital Assets, Net
+Long-term liabilities, including bonds payable, are not due and payable in the
+current period, and, therefore are not reported as liabilities in the funds.
+1991 Deferred Charge for Refunding
+2030 Compensated Absences Payable
+2560 Unamortized Premiums (Discounts) on Bonds
+2501 Debt Service - Due Within One Year
+2502 Debt Service - Due in More Than One Year
+
+12,747,338
+
+34,480,492
+
+179,521
+(324,957)
+(619,801)
+(1,766,800)
+(22,782,347)
+
+Total Long-Term Liabilities
+Some receivables are reported as deferred inflows of resources in the governmental
+2601 Deferred Resource Inflow - Property Taxes
+2604 Deferred Resource Inflow - EMS
+2605 Deferred Resource Inflow - TIRZ
+
+(25,314,384)
+627,245
+1,134,846
+267,341
+
+Total deferred inflows of resources
+
+2,029,433
+
+Interest on long-term debt is not accrued in the governmental funds, but is
+recognized as an expenditure in the funds.
+2140 Accrued Interest Payable
+Total Accrued Interest
+
+(100,427)
+(100,427)
+
+Included in the noncurrent liabilities is the recognition of the City's net pension
+liability required by GASB Statement No. 68, a deferred deferred resource outflow,
+and a deferred inflow. This resulted in a decrease in net position.
+2580 Net Pension Liability
+2602 Deferred Inflow Related to Pension Plan
+1992 Deferred Outflow Related to Pension Plan
+
+(3,941,302)
+(255,245)
+2,973,082
+(1,223,465)
+
+Included in the noncurrent liabilities is the recognition of the City's OPEB liability
+required by GASB Statement No. 75, a deferred resource outflow, and a deferred
+inflow. This resulted in a decrease in net position.
+2585 Net OPEB Liability
+2603 Deferred Inflow Related to OPEB
+1993 Deferred Outflow Related to OPEB
+
+(265,744)
+(96,371)
+29,110
+(333,005)
+
+Net position of governmental activities
+The notes to the financial statements are an integral part of this statement.
+PAGE 12
+
+$
+
+22,506,428
+
+CITY OF MERCEDES
+STATEMENT OF REVENUES, EXPENDITURES, AND CHANGES IN FUND BALANCES GOVERNMENTAL FUNDS
+For the Year Ended September 30, 2023
+
+General Fund
+REVENUES:
+5110
+5120
+5170
+5180
+5190
+5200
+5300
+5400
+5510
+5610
+5620
+5650
+5700
+100
+200
+300
+310
+400
+500
+600
+710
+720
+800
+
+Property Taxes
+General Sales and Use Taxes
+Franchise Tax
+Other Taxes
+Penalty and Interest on Taxes
+Licenses and Permits
+Intergovernmental Revenue and Grants
+Charges for Services
+Fines
+Investment Earnings
+Rents and Royalties
+Contributions
+Other Revenue
+TOTAL REVENUES
+
+$
+
+General Government
+Public Safety
+Public Works
+Highway and Streets
+Health and Welfare
+Culture and Recreation
+Conservation and Development
+Principal on Debt
+Interest on Debt
+Capital Outlay
+
+3,505,718
+6,396,225
+730,045
+84,003
+536,205
+1,036,350
+3,365,247
+73,785
+263,709
+17,045
+528,002
+16,536,333
+
+ARPA
+$
+
+TOTAL EXPENDITURES
+
+$
+
+7912 Sale of Real and Personal Property
+7915 Transfers In
+7958 Nonoperating Transfers In(Out)
+8911 Transfers Out
+TOTAL OTHER FINANCING SOURCES (USES)
+
+13,570,708
+
+939,044
+119,615
+1,058,659
+
+$
+
+4,729
+7,718
+34,864
+
+3,358,282
+5,187,312
+476,951
+527,717
+1,972,565
+1,289,641
+625,000
+133,241
+
+Excess(Deficiency) of Revenues Over(Under)
+Expenditures
+
+Interest and
+Sinking
+
+$
+
+47,312
+
+2,367,832
+47,112
+45,597
+2,460,541
+
+2,281,285
+
+Nonmajor
+Governmental
+Funds
+
+Series 2021
+$
+
+1,593,900
+687,385
+$
+
+Exhibit C - 3
+
+234,852
+350,982
+585,834
+
+$
+
+62
+102,009
+57,041
+2,512,239
+$
+
+2,671,350
+
+$
+
+179,396
+7,000
+523,269
+40,879
+166,877
+28,545
+945,964
+
+Total
+Governmental
+Funds
+$
+
+5,873,550
+6,396,225
+730,045
+179,396
+131,115
+543,205
+2,498,663
+3,365,247
+73,785
+704,652
+17,045
+166,877
+907,528
+21,587,332
+
+423,193
+191,123
+5,055
+5,509
+700,000
+55,522
+
+3,786,267
+5,480,443
+476,951
+527,717
+2,042,378
+1,295,150
+700,000
+2,218,900
+687,385
+2,735,866
+
+1,380,402
+
+18,570,655
+
+2,965,625
+
+1,011,348
+
+179,256
+
+(2,085,517)
+
+(434,438)
+
+1,636,275
+
+50,355
+(632,397)
+(582,043)
+
+(478,761)
+(532,587)
+(1,011,348)
+
+-
+
+532,587
+532,587
+
+632,397
+632,397
+
+50,355
+1,164,984
+(478,761)
+(1,164,984)
+(428,406)
+
+Net Change in Fund Balances
+
+$
+
+2,383,583
+
+$
+
+-
+
+$
+
+179,256
+
+$
+
+(1,552,930) $
+
+197,960
+
+$
+
+1,207,869
+
+Fund Balance - October 1 (Beginning)
+Fund Balance - September 30 (Ending)
+
+$
+$
+
+7,540,756
+9,924,339
+
+$
+$
+
+-
+
+$
+$
+
+716,779
+896,035
+
+$
+$
+
+2,211,012
+658,082
+
+1,070,922
+1,268,881
+
+$
+$
+
+11,539,469
+12,747,338
+
+The notes to the financial statements are an integral part of this statement.
+PAGE 13
+
+$
+$
+
+CITY OF MERCEDES
+Exhibit C - 4
+RECONCILIATION OF THE GOVERNMENTAL FUNDS STATEMENT OF REVENUES, EXPENDITURES,
+AND CHANGES IN FUND BALANCES TO THE STATEMENT OF ACTIVITIES
+For the Year Ended September 30, 2023
+$
+
+Net Change in fund balance - governmental funds
+Amounts reported in the statement of activities are different because:
+Governmental funds report capital outlays as expenditures. However, in the statement of activities,
+the cost of those assets is allocated over their useful lifes as depreciation expense.
+Additions to capital assets
+Depreciation on capital assets
+
+2,735,866
+(1,982,337)
+
+753,529
+
+Repayment of notes receivable are recorded as revenue in the fund statements but reduces the
+notes receivable in the statement of net position.
+
+(28,290)
+
+Repayment of debt principal is an expenditure in the govenmental funds, but the repayment
+reduces long-term liabilities in the statement of net position.
+Principal repayment
+Compensated absences
+
+2,218,900
+2,350
+
+Some expenses reported in the statement of activities do not require the use of current financial
+resources and therefore are not reported as expenditures in governmental funds.
+Amortization of Premium
+Deferred Charge for Refunding
+Accrued Interest Payable
+
+47,780
+(11,040)
+11,968
+
+Because some property taxes, and accounts receivable will not be collected for several months
+after the city's fiscal year end, that are not considered "available" revenues in the governmental
+funds. This represents the change n unavailable revenue from the prior year.
+Property Taxes
+EMS
+
+55,685
+273,057
+
+Included in the noncurrent liabilities is the recognition of the City's net pension liability required
+by GASB Statement No. 68, a deferred resource outflow, and a deferred inflow. This resulted in
+an increase in net position
+Net Pension Liability
+Deferred Inflow Related to Pension Plan
+Deferred Outflow Related to Pension Plan
+
+(2,414,058)
+1,273,452
+2,048,017
+
+Included in the noncurrent liabilities is the recognition of the City's net pension liability required
+by GASB Statement No. 68, a deferred resource outflow, and a deferred inflow. This resulted in
+an increase in net position
+Net OPEB Liability
+Deferred Inflow Related to OPEB
+Deferred Outflow Related to OPEB
+
+137,606
+(18,119)
+(104,064)
+
+Change in Net Position of Governmental Activities
+
+The notes to the financial statements are an integral part of this statement.
+PAGE 14
+
+1,207,869
+
+2,221,250
+
+48,708
+
+328,742
+
+907,411
+
+$
+
+15,423
+5,454,641
+
+CITY OF MERCEDES
+STATEMENT OF NET POSITION - PROPRIETARY FUNDS
+As of September 30, 2023
+
+Exhibit D - 1
+
+Water and Sewer Fund
+ASSETS:
+Current Assets
+1010 Cash and Cash Equivalents
+1011 Restricted Cash
+1150 Accounts Receivable, Net
+1300 Due from Other Funds
+
+$
+
+Total Current Assets
+Noncurrent Assets:
+Capital Assets:
+1791 Capital Assets Not Being Depreciated
+1792 Capital Assets Being Depreciated
+1780 Accumulated Depreciation
+Total Noncurrent Assets
+
+6,088,175
+658,444
+65,179,067
+(31,092,732)
+34,744,779
+
+TOTAL ASSETS
+
+40,832,955
+
+1991 Deferred Charge for Refunding
+1992 Deferred Outflow Related to Pension Plan
+1993 Deferred Outflow Related to OPEB
+TOTAL DEFERRED OUTFLOWS OF RESOURCES
+TOTAL ASSETS AND DEFERRED OUTFLOWS OF RESOURCES
+
+1,691,621
+281,846
+1,036,187
+3,078,520
+
+88,778
+283,124
+17,563
+$
+
+LIABILITIES:
+Current Liabilities:
+2010 Accounts Payable
+2020 Wages and Salaries Payable
+2030 Compensated Absences Payable
+2080 Due to Other Funds
+2140 Accrued Interest Payable
+2201 Customer Deposits
+2501 Debt Service - Due Within One Year
+
+389,465
+41,222,419
+
+798,142
+9,450
+20,331
+3,372,761
+26,663
+558,185
+737,300
+
+Total Current Liabilities
+Noncurrent Liabilities:
+2502 Debt Service - Due in More Than One Year
+2560 Unamortized Premiums (Discounts) on Bonds
+2580 Net Pension Liability
+2585 Net OPEB Liability
+Total Noncurrent Liabilities
+
+5,522,831
+7,228,000
+209,831
+446,953
+25,021
+7,909,805
+
+TOTAL LIABILITIES
+
+13,432,637
+
+DEFERRED INFLOWS OF RESOURCES:
+2602 Deferred Inflow Related to Pension Plan
+2603 Deferred Inflow Related to OPEB
+
+125,718
+23,011
+
+TOTAL DEFERRED INFLOWS OF RESOURCES
+
+148,729
+
+FUND BALANCES:
+4001 Net Investment in Capital Assets
+3890 Unrestricted
+TOTAL FUND BALANCES
+TOTAL LIABILITIES, DEFERRED LIABILITIES & FUND BALANCES
+
+26,569,648
+1,071,405
+27,641,054
+$
+
+The notes to the financial statements are an integral part of this statement.
+PAGE 15
+
+41,222,419
+
+CITY OF MERCEDES
+STATEMENT OF NET POSITION - PROPRIETARY FUNDS
+For the Year Ended September 30, 2023
+
+Exhibit D - 2
+
+Water and Sewer Fund
+REVENUES:
+5401
+5402
+
+Water Revenues
+Sewer Revenues
+TOTAL REVENUES
+
+$
+
+3,800,318
+2,913,961
+6,714,279
+
+EXPENDITURES:
+10
+Water and Sewer Expenses
+
+6,512,456
+
+TOTAL EXPENDITURES
+
+6,512,456
+
+NET INCOME (LOSS) BEFORE NON-OPERATING
+Investment Earnings
+Nonoperating Transfers In(Out)
+TOTAL OTHER FINANCING SOURCES (USES)
+NET INCOME(LOSS)
+Net position, beginning of year
+Net position, ending of year
+
+201,823
+20,312
+478,761
+499,073
+700,896
+26,940,158
+27,641,054
+
+7955
+7958
+
+$
+$
+$
+
+The notes to the financial statements are an integral part of this statement.
+PAGE 16
+
+CITY OF MERCEDES
+STATEMENT OF CASH FLOWS - PROPRIETARY FUNDS
+As of September 30, 2023
+
+Exhibit D - 3
+
+Cash Flows from Operating Activities:
+Cash Received from User Charges
+Cash Payments to Employees for Services
+Cash Payments for Suppliers
+
+$
+
+Net Cash Provided by Operating Activities
+
+6,528,810
+(630,963)
+(4,183,401)
+1,714,447
+
+Cash Flows from Non-Capital Financing Activities:
+Decrease from Due To and Due From
+Operating Transfer In
+Net Cash Provided by Non-Capital Financing Activities
+
+324,706
+478,761
+803,467
+
+Cash Flows from Capital and Related Financing Activities:
+Acquisition of Capital Assets
+Reduction of Debt
+Interest Paid on Long-Term Debt
+
+(1,103,548)
+(721,100)
+(221,722)
+
+Net Cash Provided by (Used for) Capital Related Financing Activities
+
+(2,046,370)
+
+Cash Flows from Investing Activities:
+Interest and Dividends on Investments
+
+20,312
+
+Net Increase in Cash and Cash Equivalents
+
+491,856
+
+Cash and Cash Equivalents at Beginning of Year
+
+917,919
+
+Cash and Cash Equivalents at End of Year
+
+1,409,775
+
+Reconciliation of Operating Income of Net Cash Provided By Operating Activities:
+Operating Income
+Adjustments to Reconcile Operating Income to Net Cash Provided by Operating Activities:
+Depreciation
+Effect of Increases and Decreases in Current Assets and Liabilities:
+Decrease (Increase) in Receivables
+Increase(Decrease) in Accounts Payable
+Increase(Decrease) in Accrued Interest Payable
+Increase(Decrease) in Customer Deposits
+Amortization of Bond Premium
+Amortization of Deferred Charge on Refunding
+Change in Deferred Pension Inflow
+Change in Deferred Pension Outflow
+Change in Net Pension Liability
+Net Cash Provided by Operating Activities
+
+The notes to the financial statements are an integral part of this statement.
+PAGE 17
+
+201,823
+1,468,205
+(185,468)
+89,027
+(2,367)
+51,065
+(16,141)
+7,193
+10,337
+(213,126)
+305,709
+1,714,447
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+Note 1 - Summary of Significant Accounting Policies
+The City of Mercedes, Texas (the “City”) was incorporated in 1909, under Article XI, Section 5
+of the Constitution of the State of Texas. The City operates under a City Commission-Manager
+form of government and provides the following services as authorized by its charter: public safety
+(police and fire), highways and streets, public works, sanitation, health and welfare, culture and
+recreation, education, public improvements, planning and zoning, and general administrative
+services. Other services include utilities such as water, sewer services, and solid waste collection.
+The financial statements of the City have been prepared in conformity with accounting principles
+generally accepted in the United States of America (GAAP) as applied to governmental units. The
+Governmental Accounting Standards Board (GASB) is the accepted standard-body for
+establishing governmental accounting and financial reporting principles. The more significant
+accounting policies used by the City are described below.
+Reporting Entity
+As required by accounting principles generally accepted in the United States of America, these
+financial statements present the City of Mercedes, Texas and its component units, entities for
+which the City is considered to be financially accountable. The component units discussed below
+are included in the City’s reporting entity because of the significance of their operational or
+financial relationships with the City.
+A.
+
+Discretely presented component unit – Discretely presented component units are reported in a
+separate column in the government-wide financial statements to emphasize that they are legally
+separate from the City. Discretely presented component units include the following:
+Development Corporation of Mercedes – This component unit was organized pursuant to the
+Development Corporation Act of 1979, as amended by Section 4A and 4B of the act. It was
+established for the purpose of promoting, assisting, and enhancing economic and industrial
+development within the City of Mercedes and the State of Texas. The City of Mercedes appoints
+seven (7) directors to the Corporation’s Board who in turn designate management. The
+Corporation is authorized to negotiate the issuance of bonds which are payable solely from the
+revenues of said Corporation. The City is not in any event liable for the payment of any obligations
+or agreements created or incurred by the Corporation. Financial information is presented separately
+from the financial information presented for the primary government itself. Separate financial
+statements can be obtained from the Development Corporation of Mercedes, Executive Director.
+
+PAGE 18
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+Note 1 - Summary of Significant Accounting Policies - Continued
+Mercedes Industrial Foundation, Inc. – The non-profit corporation acts as an agent or agency
+empowered to enter into contracts with political subdivisions in Mercedes. Its purpose is to
+encourage, promote, solicit, and assist new or expanding industries to fully utilize the existing
+Mercedes Industrial Park or other appropriate business or industrial sites with the approval of the
+governing body. Seven (7) directors are appointed by the City Commission of Mercedes who
+form the office by the governing board, for cause or at will.
+B. Government-Wide and Fund Financial Statements
+The government-wide financial statements (i.e., the statement of net position and the statement of
+activities) report information on all the nonfiduciary activities of the primary government and its
+component units. For the most part, the effect of interfund activity has been removed from these
+statements. Governmental activities, which normally are supported by taxes and intergovernmental
+revenue, are reported separately from business-type activities, which rely to a significant extent on
+fees and charges for support. Likewise, the primary government is reported separately from certain
+legally separate component units for which the primary government is financially accountable.
+
+Separate financial statements are provided for Governmental Funds and Proprietary Funds, even
+though the latter are excluded from the government-wide financial statements. Major individual
+Governmental Funds and major individual Enterprise Funds are reported as separate columns in
+the fund financial statements.
+Measurement Focus, Basis of Accounting and Financial Statement Presentation
+The government-wide financial statements are reported using the economic resources
+measurement focus and the accrual basis of accounting, as are the Proprietary Fund and Fiduciary
+Fund financial statements. Revenues are recorded when earned and expenses are recorded when a
+liability is incurred, regardless of the timing of related cash flows. Property taxes are recognized
+as revenue in the year for which they are levied. Grants and similar items are recognized as revenue
+as soon as all eligibility requirements imposed by the provider have been met.
+C.
+
+Governmental fund financial statements are reported using the current financial resources
+measurement focus and the modified accrual basis of accounting.
+Revenues are recognized as soon as they are both measurable and available. Revenues are
+considered to be available when they are collectible within the current period or soon enough
+thereafter to pay liabilities of the current period.
+
+PAGE 19
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+Note 1 - Summary of Significant Accounting Policies - Continued
+The city considers revenue to be available if collected within 60 days of the end of the current
+fiscal period. Expenditures generally are recorded when a liability is incurred, as under accrual
+accounting. However, debt service expenditures, as well as expenditures related to compensated
+absences and claims and judgments, are recorded only when payment is due.
+The reconciliations of the Fund Financial Statements to the Government-Wide Financial
+Statements are provided to explain the differences created by the integrated approach of GASB
+Statement No. 34.
+Property taxes, franchise taxes, sales taxes, and interest associated with the current fiscal period
+are all considered to be susceptible to accrual and so have been recognized as revenue of the current
+fiscal period. All other revenue items are considered to be measurable and available only when
+cash is received by the city.
+When both restricted and unrestricted resources are available for use, it is the City’s policy to use
+restricted resources first, then unrestricted resources as they are needed.
+Basis of Presentation
+The accounts of the City are organized based on funds, each of which is considered a separate
+accounting entity. The operations of each fund are accounted for in a separate self-balancing set
+of accounts for its assets, other debits, liabilities, other credits, equity, revenue and expenditures
+or expenses, as appropriate.
+D.
+
+Governmental Funds – Government resources are those through which most governmental
+functions of the City are financed. The acquisition, use, and balances of the City's expendable
+financial resources and the related liabilities (except those accounted for in the proprietary fund
+type) are accounted for through governmental funds. The measurement focus is upon
+determination of changes in financial position, rather than upon net income determination.
+Enterprise Funds – account for operations (1) that are financed and operated in a manner similar
+to private business enterprises. The intent of the governing body is that costs (expenses, including
+depreciation) of providing goods or services to the general public on a continuing basis be financed
+or recovered primarily through user charges; or (2) where the governing body has decided that
+periodic determination of revenues earned, expenses incurred, and/or net income is appropriate for
+capital maintenance, public policy, management control, accountability, or other purposes.
+
+PAGE 20
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+Note 1 - Summary of Significant Accounting Policies - Continued
+Major Governmental Funds
+The City reports the following major Governmental Funds:
+The General Fund — the City’s primary operating fund. It accounts for all the general government,
+except those required to be accounted for in another fund.
+The debt service fund is used to account for the accumulation of resources for, and the payment
+of, general long-term debt principal, interest and related costs. The debt service fund is reported as
+a major fund.
+The capital projects funds are used to account for the acquisition or construction of capital assets.
+The City does not have any major capital projects funds.
+The special revenue funds are used to account for the proceeds of specific revenue sources, other
+than for major capital projects, that are legally restricted to expenditure for specified purposes. The
+American Rescue Plan fund is reported as a major fund.
+Major Proprietary Funds
+The utility fund accounts for the provision of water and sewer services to the residents of the City
+and some residents outside of the city.
+E.
+
+Budgetary Information
+
+Annual budgets are adopted on a basis consistent with generally accepted accounting principles
+for the General Fund and the Water and Sewer (Utility) Fund. The Capital Projects Funds adopt
+project – length budgets. Formal budgetary integration is employed as a management control
+device during the year for the General and Debt Service, as well as for the Water and Sewer
+(Utility) Fund. The American Rescue Plan fund, a major special revenue fund, did not have he
+City Commission accepted the funds by resolution, but no budgetary action was taken
+to the timing of the receipt of the funds.
+Unused appropriations of the above annual budgets lapse at the end of each year. The budget
+amounts shown in the financial statements are the final authorized amounts as revised during the
+year. Budgetary data for Capital Project Funds is budgeted over the life of the respective project
+and not on an annual basis. Therefore, this data is not presented in the accompanying combined
+financial statements. Revisions that alter total expenditures within a department must be approved
+by the City Commission. Therefore, the legal level of budgetary responsibility is at the
+departmental level.
+PAGE 21
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+Note 1 - Summary of Significant Accounting Policies - Continued
+City Management establishes the amount of estimated revenues and other resources available for
+appropriation for the succeeding budget year. City Management submits to the City Commission
+a proposed operating budget for the fiscal year commencing the following October 1. The
+operating fund includes proposed expenditures and the means of financing them. Public hearings
+are conducted at City Hall to obtain taxpayer comments. Prior to October 1, the budget is adopted
+by the City Commission. Expenditures may not legally exceed budgeted appropriations at the
+department level. During the year, several supplementary appropriations were necessary.
+F.
+
+Compliance and Accountability
+
+Finance-Related Legal and Contractual Provisions
+In accordance with GASB statement No. 38, “Certain Financial Statement Note Disclosures”,
+violations of finance related to legal and contractual provisions, if any, are reported below, along
+with actions taken to address such violations.
+The City did not complete its audit of the financial statements within 120 days after year-end as
+required by its bond covenants.
+G.
+
+Assets, Liabilities, Deferred Outflows/Inflows of Resources and Net Position/Fund
+Balance
+i.
+Cash and Cash Equivalents
+The City’s cash and cash equivalents are considered to be cash on hand, demand deposits,
+and short-term investments with original maturities of three months or less from the date of
+acquisition.
+Cash in all funds, including restricted cash, is pooled into common pooled accounts in order
+to maximize investment opportunities. Each fund whose monies are deposited in the pooled
+cash accounts has equity therein, and interest earned on the investment of these monies is
+allocated based upon relative equity at month end. An individual fund’s pooled cash is
+available upon demand and is considered to be “cash equivalents” when preparing these
+financial statements. In addition, any marketable securities not included in the common
+pooled accounts that are purchased with a maturity of ninety days or less are also considered
+to be “cash equivalents”.
+Negative balances incurred in pooled cash at year-end are treated as interfund receivables of
+the General Fund and interfund payables of the deficit fund.
+
+PAGE 22
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+Note 1 - Summary of Significant Accounting Policies – Continued
+ii.
+
+Restricted Assets
+
+Certain assets of the City are classified as restricted assets on the statement of net position
+because their use is limited by law through constitutional provisions or enabling legislation; or
+by restrictions imposed externally by creditors, grantors of other governments. Special
+restricted asset accounts have been established to account for the sources and uses of these
+limited use assets as follows:
+Customer deposit accounts - Deposited in non-interest bearing accounts and refunded
+upon termination of service with the City and satisfaction of all obligations due.
+Bond and capital activities – Includes certain proceeds from issuance of revenue bonds,
+as well as certain resources set aside for the repayment of bonds or future capital activities.
+iii.
+
+Investments
+
+Investments for the City are reported at fair value (generally based on quoted market prices)
+except for the position in the Tex Pool public fund investment pool (Pool). The Pool meets all
+of the specified criteria in Section I50: Investments to qualify to elect to measure their
+investments at amortized cost. Accordingly, the fair value of the City’s position in the pool is
+equal to the value of the pooled shares.
+iv.
+
+Receivables and Payables
+Unbilled receivables – An amount for unbilled revenue is recorded in the Water and Sewer
+(Utility Fund) for services rendered but not yet billed as of the end of the fiscal year. The
+receivable is derived from the cycle billings generated subsequent to fiscal year end and
+prorated for usage in September.
+Allowance for doubtful accounts - Accounts receivable have been reported net of the
+allowance for doubtful accounts. Accounts receivable in excess of 365 days are subject to
+being considered as uncollectible.
+
+v.
+
+Inventories
+
+Inventories are valued at cost using the first-in/first-out (FIFO) method. The cost of inventories
+is recorded as expenditures/expenses when consumed rather than when purchased.
+
+PAGE 23
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+Note 1 - Summary of Significant Accounting Policies – Continued
+vi.
+
+Interfund Activities and Transactions
+
+During the course of operations, numerous transactions occur between individual funds for
+goods provided or services rendered. These receivables and payables are classified as “due
+from other funds” or “due to other funds” within the fund financial statements. Long-term
+borrowings between funds are classified as “advances to other funds” or “advances from other
+funds” in the fund financial statements. These amounts are eliminated in the governmental and
+business-type activities columns of the statement of net position, except for any residual
+balance outstanding between the governmental and business-type activities at the end of the
+fiscal year, which are reported in the government-wide financial statements as internal
+balances.
+Interfund transactions are reflected as services provided, reimbursements, or transfers. Services
+provided, deemed to be at or near market rates, are treated as revenues and
+expenditures/expenses. Reimbursements are when one fund incurs a cost, charges the
+appropriate benefitting fund, and reduces its related cost as a reimbursement. All other as
+transfers. Transfers between governmental or business-type funds are netted as part of the
+reconciliation to the government-wide presentation.
+vii.
+
+Capital Assets
+
+Capital assets, which include property, plant, equipment, and infrastructure assets (e.g., roads,
+bridges, sidewalks, and similar items) are reported in the applicable governmental or businesstype activities columns in the government-wide financial statements and in the fund financial
+statements for proprietary funds. Capital assets are defined by the City as assets with an initial,
+individual cost of $5,000 or more and an estimated useful life in excess of one year. Such assets
+are recorded at historical cost or estimated historical cost if purchased or constructed.
+Donated assets are reflected at their acquisition value at the date of the donation. The costs of
+normal maintenance and repairs that do not add to the value of the asset or materially extend
+asset lives are not capitalized. Improvements are capitalized and depreciated over the
+remaining useful lives of the related capital assets, as applicable. Gains or losses on
+dispositions of capital assets are included in income within the proprietary fund financial
+statements and in the governmental activities and business-type activities columns of the
+government-wide financial statements. In the governmental fund financial statements, only the
+proceeds from the disposition are reported.
+
+PAGE 24
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+Note 1 - Summary of Significant Accounting Policies - Continued
+Within the proprietary fund, interest cost, less interest earned on investments acquired with
+proceeds of related borrowing, is capitalized during the construction of capital projects when
+material. Interest expense is not capitalized on capital assets. Depreciation of capital assets
+used by proprietary funds, including those acquired by contributed capital, is charged as an
+expense against their operations in the fund financial statements as well as the governmentwide financial statements. Depreciation of capital assets used by funds categorized as
+governmental activities is not provided in the fund financial statements, however, is included
+in the gross expense by function in the government-wide statement of activities. Capital assets,
+net of accumulated depreciation, are reported on proprietary fund balance sheets and in both
+the governmental activities and business-type activities column of the government-wide
+statement of net position. Depreciation has been provided over the estimated useful lives using
+the straight-line method. The estimated useful lives are as follows:
+Improvements
+Buildings
+Furniture and Equipment
+Infrastructure
+Water and Sewer System
+
+10 - 25 years
+25 years
+3 - 10 years
+15 - 40 years
+15 - 40 years
+
+The right-to-use lease asset capitalization level is determined by the Board. The term of the
+lease must be the noncancelable period during which the District has the right to use the
+tangible assets of another entity plus any periods in which either the lessee or the lessor has
+the sole option to extend the lease if it is reasonably certain the option will be exercised, plus
+any periods in which either the lessee or the lessor has the sole option to terminate the lease if
+it is reasonably certain the option will not be exercised by that party and must not meet the
+definition of a short-term lease under GASB 87. As of September 30, 2023, the City did not
+have any leases meeting the requirements to be recognized as a right-to-use lease asset.
+viii.
+
+Deferred Outflows/Inflows of Resources
+
+In addition to assets, the statement of financial position will sometimes report a separate section
+for deferred outflows of resources. This separate financial statement element, deferred outflows
+of resources, represents a consumption of net position that applies to a future period(s) and so
+will not be recognized as an outflow of resources (expense/expenditure) until then.
+
+PAGE 25
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+Note 1 - Summary of Significant Accounting Policies – Continued
+The City has three (3) items that qualify for reporting as deferred outflows of resources, the
+deferred amount on refunding, the deferred outflows related to pensions, and the deferred
+outflows related to OPEB, each reported in the government-wide and proprietary funds
+statements of net position. The deferred amount on refunding results from debt refinancing,
+whereby the reacquisition price of the debt instruments exceeds their net carrying amount. The
+deferred amount on refunding is amortized over the shorter of the life of the refunded or
+refunding debt. The deferred outflows related to pensions and OPEB are an aggregate of items
+related to pensions and other post-employment benefits as calculated in accordance with
+GASB Codification Section P20: Pension Activities – Reporting for Benefits Provided through
+Trusts That Meet Specified Criteria. The deferred outflows related to pensions and OPEB will
+be recognized as either pension or OPEB expense or a reduction in the net pension liability or
+OPEB liability in future reporting years.
+In addition to liabilities, the statement of financial position will sometimes report a separate
+section for deferred inflows of resources. This separate financial statement element, deferred
+inflows of resources, represents an acquisition of net position that applies to a future period(s)
+and so will not be recognized as an inflow of resources (revenue) until that time. The City has
+two (2) items that qualify for reporting as deferred inflows of resources. The deferred inflows
+related to pensions and OPEB are an aggregate of items related to pensions and other
+postemployment benefits as calculated in accordance with GASB Codification Section P20:
+Pension Activities – Reporting for Benefits Provided through Trusts That Meet Specified
+Criteria. The deferred inflows related to pensions and OPEB will be recognized as a reduction
+to pension or OPEB expense in future reporting years.
+Unavailable revenue, which arises only under a modified accrual basis of accounting, is
+reported only in the governmental funds balance sheet. The governmental funds report
+unavailable revenues from property taxes. These amounts are deferred and recognized as an
+inflow of resources in the period that the amounts become available.
+ix.
+
+Compensated Absences
+
+Accumulated unpaid compensated absences are accrued when incurred in proprietary funds.
+The liability for governmental funds is recorded only in the governmental activities’ column
+of the government-wide financial statements. Vested or accumulated vacation leave that is
+expected to be liquidated with expendable available financial resources is reported as an
+expenditure and a fund liability of the governmental fund that will pay it. Amounts of vested
+or accumulated vacation leave that are not expected to be liquidated with expendable available
+financial resources are reported in long-term debt. No expenditure is reported for these
+amounts. Vested or accumulated vacation leave of proprietary funds is recorded as an expense
+and liability of those funds as the benefits accrue to employees.
+
+PAGE 26
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+Note 1 - Summary of Significant Accounting Policies - Continued
+In accordance with the provisions of Governmental Accounting Standards Board Statement
+No. 16, Accounting for Compensated Absences, no accrual is recorded for compensated
+absences that are dependent on the performance of future services by employees or when
+payments are dependent on future events outside the control of the employer and employees.
+However, a liability is recognized for that portion of accumulating sick leave benefits that is
+estimated will be taken as “terminal leave” prior to retirement.
+x.
+
+Long-Term Obligations
+
+In the government-wide financial statements and proprietary fund types in the fund financial
+statements, long- term debt and other long-term obligations are reported as liabilities in the
+applicable governmental activities, business-type activities, or proprietary fund type statement
+of net position. Bond premiums and discounts are deferred and amortized over the life of the
+bonds and are recorded as an adjustment to interest expense.
+Bonds payable are reported net of the applicable bond premium or discount. In accordance
+with GASB Codification Section I30: Interest Costs–Imputation, bond issuance costs are
+expensed in the period incurred except for prepaid insurance costs. In the fund financial
+statements, governmental fund types recognize bond premiums and discounts, as well as bond
+issuance costs, during the current period. Premiums received on debt issuances are reported as
+other financing sources and discounts are reported as other financing uses. Issuance costs,
+whether or not withheld from debt proceeds, are reported as debt service expenditures.
+xi.
+
+Pensions
+
+For purposes of measuring the net pension liability, pension related deferred outflows and
+inflows of resources, and pension expense, City specific information about its Fiduciary Net
+Position in the Texas Municipal Retirement System (TMRS) and additions to/deductions from
+the City’s Fiduciary Net Position have been determined on the same basis as they are reported
+by TMRS. For this purpose, plan contributions are recognized in the period that compensation
+is reported for the employee, which is when contributions are legally due. Benefit payments
+and refunds are recognized when due and payable in accordance with the benefit terms.
+Investments are reported at fair value. Information regarding the City’s Total Pension Liability
+is obtained from TMRS through a report prepared for the City by TMRS consulting actuary,
+Gabriel Roeder Smith & Company, in compliance with Governmental Accounting Standards
+Board (GASB) Statement No. 68, Accounting and Financial Reporting for Pensions.
+
+PAGE 27
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+Note 1 - Summary of Significant Accounting Policies – Continued
+xii.
+
+Other Post-Employment Benefits (OPEB)
+
+The fiduciary net position of the Texas Municipal Retirement System (TMRS) Supplemental
+Death Benefit has been determined using the flow of economic resources measurement focus
+and full accrual basis of accounting. This measure is used for purposes of measuring the total
+OPEB liability, deferred outflows of resources related to other postemployment benefits,
+OPEB expense, and information about assets, liabilities, and additions to/deductions from the
+applicable OPEB’s fiduciary net position. Benefit payments are recognized when due and
+payable in accordance with the benefit terms. Information regarding the City’s total OPEB
+liability related to the TMRS Supplemental Death Benefit is obtained from TMRS through a
+report prepared by TMRS consulting actuary, Gabriel Roeder Smith & Company, in
+compliance with Governmental Accounting Standards Board (GASB) Statement No. 75,
+Accounting and Financial Reporting for Postemployment Benefits Other Than Pensions.
+xiii.
+
+Categories and Classification of Fund Equity
+
+Net position flow assumption – Sometimes the City will fund outlays for a particular purpose
+from both restricted (e.g., restricted bond or grant proceeds) and unrestricted resources. In
+order to calculate the amounts to report as restricted – net position and unrestricted – net
+position in the government-wide and proprietary fund financial statements, a flow assumption
+must be made about the order in which the resources are considered to be applied. It is the
+City’s policy to consider restricted – net position to have been depleted before unrestricted –
+net position is applied.
+Fund balance flow assumptions – Sometimes the City will fund outlays for a particular purpose
+from both restricted and unrestricted resources (the total of committed, assigned, and
+unassigned fund balance). To calculate the amounts to report as restricted, committed,
+assigned, and unassigned fund balance in the governmental fund financial statements, a flow
+assumption must be made about the order in which the resources are considered to be applied.
+It is the City’s policy to consider restricted fund balance to have been depleted before using
+any of the components of unrestricted fund balance. Further, when the components of
+unrestricted fund balance can be used for the same purpose, committed fund balance is depleted
+first, followed by assigned fund balance. Unassigned fund balance is applied last.
+Fund balance policies – Fund balance of governmental funds is reported in various categories
+based on the nature of any limitations requiring the use of resources for specific purposes. The
+City itself can establish limitations on the use of resources through either a commitment
+(committed fund balance) or an assignment (assigned fund balance).
+
+PAGE 28
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+Note 1 - Summary of Significant Accounting Policies – Continued
+The provisions of GASB Statement No. 54, Fund Balance Reporting and Governmental Fund
+Type Definitions, specifies the following classifications:
+Non-spendable fund balance – Non-spendable fund balances are amounts that cannot be spent
+because they are either (a) not in spendable form or (b) legally or contractually required to be
+maintained intact.
+Restricted fund balance – Restricted fund balances are restricted when constraints placed on
+the use of resources are either: (a) externally imposed by creditors, grantors, contributors, or
+laws or regulations of other governments; or (b) imposed by law through constitutional
+provisions or enabling legislation.
+Committed fund balance – The committed fund balance classification includes amounts that
+can be used only for the specific purposes determined by a formal action of the City’s highest
+level of decision-making authority. The City commission is the highest level of decisionmaking authority for the City that can, by adoption of an ordinance prior to the end of the fiscal
+year, commit fund balance. Once adopted, the limitation imposed by the ordinance remains in
+place until a similar action is taken (the adoption of another ordinance) to remove or revise the
+limitation.
+Assigned fund balance – Amounts in the assigned fund balance classification are intended to
+be used by the City for specific purposes but do not meet the criteria to be classified as
+committed. The governing commission has by resolution authorized the City Manager and the
+Finance Director to assign fund balance. Unlike commitments, assignments generally only
+exist temporarily. In other words, an additional action does not normally have to be taken for
+the removal of an assignment.
+Unassigned fund balance – Unassigned fund balance is the residual classification for the
+General Fund.
+xiv.
+
+Revenues and Expenditures/Expenses
+
+Program revenues – Amounts reported as program revenues include 1) charges to customers
+or applicants who purchase, use, or directly benefit from goods, services, or privileges provided
+by a given function or segment and 2) grants and contributions (including special assessments)
+that are restricted to meeting the operational or capital requirements of a particular function or
+segment. All taxes, including those dedicated for specific purposes, and other internally
+dedicated resources are reported as general revenues rather than as program revenues.
+
+PAGE 29
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+Note 1 - Summary of Significant Accounting Policies – Continued
+Property taxes – Property taxes attach as an enforceable lien on property as of January 1st.
+Property taxes are levied as of October 1st. The county appraisal district certifies the tax roll
+by July 25th. This tax roll is used by the City to adopt a tax rate by September 1st or soon
+thereafter. The tax bills are mailed on October 1st or soon thereafter and are due and payable
+upon receipt. The billings become delinquent as of February 1 of the following calendar year
+and penalties and interest may be assessed by the City.
+Proprietary funds operating and nonoperating revenues and expenses – Proprietary funds
+distinguish operating revenues and expenses from nonoperating items. Operating revenues and
+expenses generally result from providing services and producing and delivering goods in
+connection with a proprietary fund’s principal ongoing operations. The principal operating
+revenues of the Water and Sewer (Utility) Fund are charges to customers for sales and services.
+Operating expenses for enterprise funds include the cost of sales and services, administrative
+expenses, and depreciation on capital assets. All revenues and expenses not meeting this
+definition are reported as nonoperating revenues and expenses.
+xv.
+
+Use of Estimates
+
+The preparation of financial statements in conformity with generally accepted accounting
+principles requires management to make various estimates. Actual results could differ from
+those estimates.
+xvi.
+Recently Issued and Implemented Accounting Pronouncements
+• GASB Statement No. 96, Subscription‐Based Information Technology Arrangements –
+This statement was issued in May 2020 and provides guidance on the accounting and
+financial reporting for subscription‐based information technology arrangements
+(SBITAs) for government end users (governments). This Statement (1) defines a SBITA;
+(2) establishes that a SBITA results in a right‐to‐use subscription asset, an intangible
+asset, and a corresponding subscription liability; (3) provides the capitalization criteria
+for outlays other than subscription payments, including implementation costs of a
+SBITA; and (4) requires note disclosures regarding a SBITA. To the extent relevant, the
+standards for SBITAs are based on the standards established in Statement No. 87, Leases,
+as amended. This statement is effective for fiscal years beginning after June 15, 2023,
+and all reporting periods thereafter. This Statement has been implemented by the city as
+reflected in the financial statements as of September 30, 2023.
+
+PAGE 30
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+Note 1 - Summary of Significant Accounting Policies – Continued
+•
+
+GASB Statement No. 91, Conduit Debt Obligations – The primary objectives of this
+statement are to provide a single method of reporting conduit debt obligations by
+issuers. and eliminate diversity in practice associated with (1) commitments extended
+by issuers, (2) arrangements associated with conduit debt obligations, and (3) related
+note disclosures. This Statement achieves those objectives by clarifying the existing
+definition of a conduit debt obligation; establishing that a conduit debt obligation is not
+a liability of the issuer; establishing standards for accounting and financial reporting of
+additional commitments and voluntary commitments extended by issuers and
+arrangements associated with conduit debt obligations; and improving required note
+disclosures. The requirements of this Statement are effective for reporting periods
+beginning after December 15, 2021. This Statement has been implemented by the city
+as reflected in the financial statements as of September 30, 2023.
+
+•
+
+GASB Statement No. 89, Accounting for Interest Cost Incurred Before the End of a
+Construction Period – The objectives of this Statement are (1) to enhance the relevance
+and comparability of information about capital assets and the cost of borrowing for a
+reporting period and (2) to simplify accounting for interest cost incurred before the end
+of a construction period. This Statement requires that interest cost incurred before the
+end of a construction period be recognized as an expense in the period in which the
+cost is incurred for financial statements prepared using the economic resources
+measurement focus.
+
+•
+
+GASB Statement No. 93, Interbank offered rates (LIBOR removal and lease
+modifications) – The objective of this Statement is to address those and other
+accounting and financial reporting implications that result from the replacement of an
+interbank offered rate. The requirements of this statement did not apply to the City for
+the current fiscal year.
+
+•
+
+GASB Statement No. 98, The Annual Comprehensive Financial Report – The objective
+of this Statement is to address references in authoritative literature to the term
+comprehensive annual financial report.
+
+•
+
+GASB Statement No. 99, Omnibus 2023 – The objectives of this Statement are to
+enhance comparability in accounting and financial reporting and to improve the
+consistency of authoritative literature by addressing (1) practice issues that have been
+identified during implementation and application of certain GASB Statements and (2)
+accounting and financial reporting for financial guarantees. The requirements of this
+statement did not apply to the City for the current fiscal year.
+
+PAGE 31
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+Note 1 - Summary of Significant Accounting Policies - Continued
+The Governmental Accounting Standards Board has issued a statement that will become effective
+in future years. These statements are as follows:
+•
+
+GASB Statement No. 101, Compensated Absences – This statement requires that liabilities
+for compensated absences be recognized for (1) leave that has not been used and (2) leave
+that has been used but not yet paid in cash or settled through noncash means. A liability
+should be recognized for leave that has not been used if (a) the leave is attributable to
+services already rendered, (b) the leave accumulates, and (c) the leave is more likely than
+not to be used for time off or otherwise paid in cash or settled through noncash means. Leave
+is attributable to services already rendered when an employee has performed the services
+required to earn the leave. Leave that accumulates is carried forward from the reporting
+period in which it is earned to a future reporting period during which it may be used for time
+off or otherwise paid or settled. In estimating the leave that is more likely than not to be
+used or otherwise paid or settled, a government should consider relevant factors such as
+employment policies related to compensated absences and historical information about the
+use or payment of compensated absences. However, leave that is more likely than not to be
+settled through conversion to defined benefit postemployment benefits should not be
+included in a liability for compensated absences. This statement is effective for fiscal years
+beginning after December 15, 2023, and all reporting periods thereafter.
+
+Note 2 – Detail Notes on all Funds
+A. Deposits and Investments
+It is the City’s policy, as well as a requirement in its depository agreement, for deposits
+plus accrued interest thereon to be 102% secured by collateral valued at fair value, less the
+amount of the Federal Deposit Insurance Corporation insurance.
+As of September 30, 2023, the City’s deposits were covered by the federal deposit
+insurance or were secured by collateral held by the City’s agent in the City’s name pursuant
+to the City’s investment policy and its depository agreement.
+
+PAGE 32
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+Note 2 – Detail Notes on all Funds – Continued
+A reconciliation of cash and investments follows:
+
+Description
+Cash and Cash Equivalents
+Restricted cash
+Money Market
+
+Primary Government
+Governmental
+Business-type
+Activities
+Activities
+Total
+$ 11,164,612
+$ 1,691,621
+$ 12,856,233
+2,279,104
+281,846
+2,560,950
+281,846
+281,846
+$ 13,725,562
+$ 1,973,467
+$ 15,699,029
+
+Component
+Unit
+$ 1,025,511
+888,993
+$ 1,914,504
+
+Interest Rate Risk
+The investment policy states that no investment shall exceed two years in maturity. By
+limiting the exposure of its investments by less than two years as reflected in the above
+schedule, the City reduces its risks to the rising interest rates.
+Credit Risk
+As of September 30, 2023, the investments in Texas CLASS external investment pool were
+rated AAAm by Moody’s Investor Service and Standards and Poor’s. The City’s
+investment policy limits authorized investments to certificates of deposits, U.S. Treasuries
+and federal government agencies, direct obligations of the State of Texas or its agencies,
+certain fully collateralized direct repurchase agreements, commercial paper – 270-day
+limit, or any investment allowed under the Public Funds Investment Act with prior
+approval of the City Commission.
+Public Funds Investment Pools
+Texas Cooperative Liquid Assets Securities System Trust (“Texas CLASS”) is an
+investment pool (local government investment pool) for its participants pursuant to Section
+2256.016 of the Public Funds Investment Act, Texas Government Code. Texas CLASS
+reports its financial statements in accordance with Financial Accounting Standards Board
+(FASB) and follows ASC 820 “Fair Value Measurement and Disclosure Requirements” in
+reporting its investments. For pricing and redeeming shares, Texas CLASS maintains a
+stable net asset value (NAV) of $1 per share using the fair value method.
+
+PAGE 33
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+Note 2 – Detail Notes on all Funds – Continued
+For financial reporting purposes, the City and component units reported amounts for
+investment pools of $ 15,699,029 and $ 1,914,504 respectively, in cash and cash
+equivalents on the Statement of Net Position as of September 30, 2023. There were no
+unfunded commitments as of September 30, 2023, and amounts reported in the investment
+pool had a daily redemption frequency and do not require prior notice for redemption.
+B. Receivables
+Receivables as of September 30, 2023, consist of the following:
+Primary Government
+
+Receivables
+Property taxes
+Sales taxes
+Intergovernmental
+Ambulance Fees
+Trade
+Other receivables
+Gross receivables
+Less:Allowance for
+uncollectible
+Net receivables
+
+General Fund
+
+Governmental Funds
+Debt Service
+Non-Major
+Fund
+Funds
+
+$
+
+$
+
+648,099
+1,408,910
+
+Total
+
+$
+
+1,976,409
+402,573
+4,435,991
+
+363,090
+363,090
+
+530,937
+32,654
+563,591
+
+$ 1,011,189
+1,408,910
+530,937
+1,976,409
+435,227
+5,362,672
+
+(1,111,622)
+$ 3,324,369
+
+(113,884)
+249,206
+
+(258,686)
+$ 304,905
+
+(1,484,192)
+$ 3,878,480
+
+$
+
+Business-type
+Activities
+Utility
+Fund
+
+Component
+Unit
+
+$
+
+1,287,660
+1,287,660
+
+$
+
+(251,473)
+1,036,187
+
+(28,327)
+$ 1,196,278
+
+$
+
+364,126
+860,479
+1,224,605
+
+Property tax revenues are recognized when they become available in the fund statements.
+Available includes those property tax receivables expected to be collected within sixty days
+after year end.
+Included in the amount of intergovernmental receivables in the TIF Fund (included in the
+non-major funds column above) is a receivable from County of Hidalgo for tax collections
+generated from the Tax Increment Reinvestment Zone (TIRZ) totaling $526,028. A
+discrepancy between the City and County of Hidalgo exists as to the amount due to the
+City. The City is working with a consultant to assist in resolving this matter. The City has
+taken a conservative approach and has an allowance for uncollectible balances totaling
+$258,686, related to the TIRZ receivable.
+
+PAGE 34
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+Note 2 – Detail Notes on all Funds – Continued
+As an inducement to expand their business operations, the City and component units
+accepted notes from various businesses. These notes are for cash loans that carry various
+interest rates and terms. The interest rates vary by the individual entity and are based on
+individual creditworthiness. Promissory notes exist for the City for various extensions of
+cash funds to the component units.
+These extensions of cash funds are made so the component units could carry out certain
+capital acquisition activities primarily made for furthering economic objectives.
+Notes receivable as of September 30, 2023, consist of the following:
+Description
+Promissory Note VIDA
+De La Garza Bakery
+MD International (Orb-Galvan)
+MD International
+MD International (Galvan)
+First National Bank (Gomez)
+First National Bank (Gomez)
+Mario and Martha Castaneda
+Reybotics, LLC
+Raquel Moreno
+The Grind
+Top Gym
+Valor Fitness LLC
+NTM Ventures LLC
+Martha Carrillo
+Ashley R. Gonzalez
+Total Notes Receivable
+Less: Allowance for Uncollectible
+Total Notes Receivable, Net
+
+Governmental
+Activities
+220,447
+220,447
+$ 220,447
+
+Component
+Unit
+78,007
+103,389
+43,380
+102,094
+16,133
+25,822
+56,066
+145,828
+1,393
+33,670
+24,740
+42,524
+77,448
+68,672
+41,315
+860,479
+(28,327)
+$ 832,152
+
+The City and component unit maintains an allowance for uncollectible for estimated losses
+resulting from the failure of individuals to make required payments. The City and component
+unit review the loans receivable on a periodic basis and make allowances where there is doubt
+as to the collectability of individual balances. In evaluating the collectability of individual
+receivable balances, the City and component unit consider many factors, including the age of
+the balance, the individual’s payment history, their current creditworthiness, and current
+economic trends. As of September 30, 2023, the component unit estimated an allowance for
+uncollectible loans receivable of $28,327.
+PAGE 35
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+C. Redevelopment Assets
+The City and component unit report certain redevelopment assets. At the time of acquisition,
+these properties were purchased to further economic objectives. These investments must be
+reported at net realizable value. As of September 30, 2023, the City and component units
+reported redevelopment assets of $226,688 and $3,313,791 respectively.
+Note 2 – Detail Notes on all Funds – Continued
+D. Capital Assets
+Capital asset activity for the year ended September 30, 2023, is as follows:
+
+Governmental Activities
+Capital Assets not Being Depreciated
+Land
+Construction in progress
+
+Original
+Beginning Balance
+October 1, 2022
+$
+
+Total Capital Assets not Being Depreciated
+
+Prior Period
+Adjustment
+
+1,277,932
+1,231,024
+
+$
+
+-
+
+Restated
+Beginning Balance
+October 1, 2022
+
+Additions
+
+Retirements
+
+Transfers
+
+$
+
+$
+
+$
+
+-
+
+$
+(897,309)
+
+1,277,932
+1,231,024
+
+2,231,141
+
+Ending Balance
+September 30, 2023
+$
+
+1,277,932
+2,564,856
+
+2,508,956
+
+-
+
+2,508,956
+
+2,231,141
+
+-
+
+(897,309)
+
+3,842,788
+
+Capital Assets Being Depreciated
+Buildings
+Vehicles
+Equipment
+Improvements
+Infrastructure
+Total Capital Assets Being Depreciated
+Less Accumulated Depreciation For
+Buildings
+Vehicles
+Equipment
+Improvements
+Infrastructure
+
+14,118,562
+4,611,293
+4,521,322
+4,489,976
+25,496,151
+53,237,304
+
+(13,980)
+(196)
+(2)
+(14,178)
+
+14,118,562
+4,611,293
+4,507,341
+4,489,780
+25,496,149
+53,223,126
+
+209,394
+94,263
+165,583
+35,485
+504,725
+
+(337,198)
+(48,856)
+(386,054)
+
+325,472
+571,837
+897,309
+
+14,118,562
+4,483,489
+4,552,748
+4,980,835
+26,103,471
+54,239,105
+
+(3,800,479)
+(3,368,611)
+(3,024,433)
+(1,373,261)
+(10,545,445)
+
+(18,499)
+(16,396)
+(14,200)
+(6,684)
+(51,329)
+
+(3,781,980)
+(3,352,215)
+(3,010,233)
+(1,366,577)
+(10,494,116)
+
+(287,681)
+(465,508)
+(426,087)
+(185,196)
+(617,865)
+
+337,198
+48,856
+-
+
+-
+
+(4,069,661)
+(3,480,525)
+(3,387,463)
+(1,551,773)
+(11,111,980)
+
+Total Accumulated Depreciation
+Net Capital Assets Being Depreciated
+Governmental Activities - Total Capital Assets, Net
+
+(21,898,011)
+31,339,293
+33,848,249
+
+(107,108)
+(121,286)
+$ (121,286)
+
+$
+
+(22,005,119)
+31,218,006
+33,726,962
+
+(1,982,337)
+(1,477,612)
+$ 753,529
+
+$
+
+386,054
+-
+
+$
+
+$
+
+$
+
+$
+
+$
+
+Business-Type Activities
+Capital Assets not Being Depreciated
+Land
+Construction in progress
+
+$
+
+Total Capital Assets not Being Depreciated
+
+199,100
+157,993
+
+-
+
+199,100
+157,993
+
+312,838
+
+-
+
+897,309
+$
+-
+
+$
+
+$
+
+$
+
+(11,487)
+
+(23,601,402)
+30,637,704
+34,480,492
+
+199,100
+459,344
+
+357,093
+
+-
+
+357,093
+
+312,838
+
+-
+
+(11,487)
+
+658,444
+
+Capital Assets Being Depreciated
+Furniture and equipment
+Water system
+Sewer system
+Total Capital Assets Being Depreciated
+Less Accumulated Depreciation For
+Furniture and equipment
+Water system
+Sewer system
+
+3,508,968
+32,562,656
+28,005,245
+64,076,870
+
+-
+
+3,508,968
+32,562,656
+28,005,245
+64,076,870
+
+182,609
+186,743
+239,018
+608,371
+
+-
+
+-
+
+3,691,577
+32,749,400
+28,244,264
+64,685,241
+
+(1,622,294)
+(15,054,626)
+(12,947,607)
+
+(1,622,294)
+(15,054,626)
+(12,947,607)
+
+(788,325)
+(679,880)
+
+493,826
+
+-
+
+(1,622,294)
+(15,842,951)
+(13,133,661)
+
+Total Accumulated Depreciation
+Net Capital Assets Being Depreciated
+Business-Type Activities - Total Capital Assets, Net
+
+$
+
+(29,624,527)
+34,452,343
+34,809,436
+
+$
+
+-
+
+$
+
+(29,624,527)
+34,452,343
+34,809,436
+
+(1,468,205)
+(859,834)
+$ (546,996)
+
+$
+
+493,826
+493,826
+493,826
+
+$ (11,487)
+
+$
+
+(30,598,906)
+34,086,335
+34,744,779
+
+Total Capital Assets, Net
+
+$
+
+68,657,685
+
+$ (121,286)
+
+$
+
+68,536,398
+
+$ 206,533
+
+$
+
+493,826
+
+$ (11,487)
+
+$
+
+69,225,271
+
+PAGE 36
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+Note 2 – Detail Notes on all Funds – Continued
+For the year ended September 30, 2023, depreciation expense was charged to governmental and
+business-type activities functions of the primary government as follows:
+Governmental Activities:
+General Government
+Public Safety
+Public Works
+Highways and Streets
+Health and welfare
+Culture and Recreation
+Total Depreciation - governmental activities
+
+$
+
+807,090
+569,857
+68,171
+68,011
+266,532
+202,676
+1,982,337
+
+$
+
+Business-Type Activities:
+Water
+Sewer
+Total Depreciation - busines-type activities
+
+$
+
+788,325
+679,880
+1,468,205
+
+$
+
+E. Capital Assets
+
+Activity for the component units (Mercedes Economic Development Corporation and
+Mercedes Industrial Foundation) are as follows:
+
+Governmental Activities
+Capital assets, being depreciated
+Right-to-Use Assets
+Furniture and equipment
+Total capital assets, being depreciated
+
+Beginning
+Balance
+$
+
+Less: Accumulated depreciation
+Furniture and equipment
+Total accumulated depreciation
+Capital assets net
+
+11,885
+11,885
+
+Additions
+$
+
+11,885
+11,885
+$
+
+-
+
+43,290
+43,290
+
+$
+
+10,248
+10,248
+$
+
+33,042
+
+Ending
+Balance
+
+Retirements
+-
+
+$
+
+$
+
+-
+
+43,290
+11,885
+55,175
+22,133
+22,133
+
+$
+
+33,042
+
+Depreciation expense of $10,248 was charged to the economic development services function
+as of September 30, 2023.
+
+PAGE 37
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+Note 2 – Detail Notes on all Funds – Continued
+F. Interfund Receivables and Payables
+Inter-fund balances as of September 30, 2023, consisted of the following individual fund
+receivables and payables:
+Due From
+Other Funds
+
+General Fund:
+Utility Fund
+TIRZ Fund
+Special Revenue Funds
+Debt Service
+Component Unit
+Total General Fund
+
+$
+
+TIRZ Fund:
+General Fund
+Total TIRZ Fund
+
+3,372,761
+42,559
+78,805
+3,494,125
+
+Due To
+Other Funds
+$
+
+757
+97,482
+210
+729,851
+828,300
+
+-
+
+42,559
+42,559
+
+Special Revenue Fund:
+General Fund
+Total Special Revenue Fund
+
+97,482
+97,482
+
+-
+
+Debt Service Fund:
+Enterprise Fund
+General Fund
+Total Debt Service Fund
+
+210
+210
+
+3,065,294
+3,065,294
+
+Capital Projects Fund:
+Utility Fund
+Total Capital Projects Fund
+
+-
+
+12,469
+12,469
+
+Total Governmental Activities
+
+$
+
+3,591,817
+
+$
+
+3,948,622
+
+Enterprise Fund:
+General Fund
+Debt Service Fund
+Total Enterprise Fund
+
+757
+3,077,763
+3,078,520
+
+3,372,761
+3,372,761
+
+Component Unit:
+General Fund
+Total Component Unit
+
+729,851
+729,851
+
+78,805
+78,805
+
+PAGE 38
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+Note 2 – Detail Notes on all Funds – Continued
+On September 30, 2020, the City and the Development Corporation of Mercedes reached an
+agreement of the amounts they would pay each other by March 2023. The City agreed to pay
+the Development Corporation of Mercedes $341,324 and the Development Corporation of
+Mercedes agreed to pay the City $78,805. This resulted in a net amount of $262,519 that the
+City owes the Development Corporation of Mercedes. Additionally, as of September 30, 2023,
+the City owed Development Corporation of Mercedes $364,127 for sales taxes for a total
+amount due to Development Corporation of Mercedes of $ 705,451.
+G. Long-Term Liabilities
+Primary Government
+The City issues general obligation bonds and certificates of obligation to provide funds for the
+acquisition and construction of major capital facilities. Certificates of obligation have been
+issued for general government activities as well as business-type (proprietary) activities.
+Certificates of obligation are direct obligations and pledge the full faith and credit of the City.
+These bonds and certificates generally are used as 25-year serial bonds, with varying amounts
+of principal maturing each year.
+As of September 30, 2023, the City’s governmental long-term debt obligations currently
+outstanding are summarized by the following table:
+
+Governmental Activities
+Bonds Payable
+Series 2013 Public Property Finance Contractual
+Obligations
+Series 2015 Combination Tax and Limited Pledge
+Revenue C.O.
+Series 2015 Obligation Refunding Bonds
+Series 2016 Limited Tax Refunding Bonds
+Series 2018 Combination and Limited Pledge
+Series 2021 Combination Tax and Limited Pledge
+Total Bonds Payable
+Notes Payable
+N/P Development Corporation of Mercedes
+Total Notes Payable
+Other Debt Obligations
+Settlement Payable
+Amortization of Bond Premiums
+Compensated Absences
+Total Other Debt Obligations
+Total Governmental Activities
+
+Interest Rate
+Payable
+
+Amounts
+Original Issue
+
+Maturity
+Date
+
+Balance
+10/1/2022
+
+Increase
+
+Decrease
+
+2.59%
+
+$ 1,020,000
+
+9/30/2028
+
+$ 1,020,000
+
+$
+
+-
+
+$ (160,000)
+
+2.73%
+2.05 -2.42%
+4.00 -4.25%
+3.00 -4.00%
+2.45%
+
+1,685,000
+930,000
+3,042,000
+8,610,000
+8,200,000
+23,487,000
+
+9/30/2030
+9/30/2026
+9/30/2036
+9/30/2038
+9/30/2033
+
+930,000
+1,685,000
+4,123,600
+8,610,000
+4,510,000
+20,878,600
+
+-
+
+0%
+
+1,000,000
+1,000,000
+
+3/30/2026
+
+468,750
+468,750
+5,420,697
+667,581
+327,307
+6,415,585
+$ 27,762,935
+
+PAGE 39
+
+$
+
+Balance
+9/30/2023
+
+Due in
+One Year
+
+860,000
+
+$ 165,000
+
+(225,000)
+(190,000)
+(527,650)
+(395,000)
+(96,250)
+(1,593,900)
+
+705,000
+1,495,000
+3,595,950
+8,215,000
+4,413,750
+19,284,700
+
+230,000
+195,000
+545,950
+405,000
+101,750
+1,642,700
+
+-
+
+(125,000)
+(125,000)
+
+343,750
+343,750
+
+125,000
+125,000
+
+-
+
+(500,000)
+(47,780)
+(2,350)
+(550,130)
+$ (2,269,030)
+
+4,920,697
+619,801
+324,957
+5,865,455
+$ 25,493,905
+
+$ 1,642,700
+
+$
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+Note 2 – Detail Notes on all Funds – Continued
+H. Long-Term Liabilities – Continued
+As of September 30, 2023, the City’s business-type long-term debt obligations currently
+outstanding are summarized by the following table:
+Business-Type Activities
+Bonds Payable
+Series 2006 Combination Tax and Subordinated
+Lien Revenue C.O.
+Series 2013 Utility System Revenue Bonds
+Series 2013 General Obligation Refunding Bonds
+Series 2016 Limited Tax Refunding Bonds
+Series 2021 Combination Tax and Limited Pledge
+Total Bonds Payable
+Other Debt Obligations
+Amortization of Bond Premiums
+Compensated Absences
+Total Other Debt Obligations
+Total Business-Type Activities
+
+1.19-2.18%
+4%
+4.00-4.25%
+2.45%
+
+$
+
+240,000
+1,970,000
+150,000
+2,636,400
+3,690,000
+8,686,400
+
+9/30/2026
+9/30/2033
+9/30/2024
+9/30/2036
+9/30/2033
+
+$
+
+240,000
+1,970,000
+150,000
+2,636,400
+3,690,000
+8,686,400
+
+242,113
+22,141
+264,254
+$ 8,950,654
+
+$
+
+$
+
+-
+
+$
+
+(65,000)
+(165,000)
+(75,000)
+(337,350)
+(78,750)
+(721,100)
+
+-
+
+(32,282)
+(1,810)
+(34,092)
+$ (755,192)
+
+$
+
+175,000
+1,805,000
+75,000
+2,299,050
+3,611,250
+7,965,300
+
+209,831
+20,331
+230,162
+$ 8,195,462
+
+$
+
+65,000
+165,000
+75,000
+349,050
+83,250
+737,300
+
+$ 737,300
+
+As of September 30, 2023, the City’s component unit long-term debt obligations currently
+outstanding are summarized by the following table:
+Component Unit Activities
+Bonds Payable
+Series 2007 sales tax revenue bond
+Total Bonds Payable
+Notes Payable
+N/P USDA
+N/P Office of the Governor
+Valley Telephone Cooperative
+Total Notes Payable
+Other Debt Obligations
+Settlement Payable
+Leases Payable
+Total Other Debt Obligations
+Total Component Unit Activities
+
+4.55%
+
+$ 3,500,000
+3,500,000
+
+8/15/2027
+
+$ 1,225,000
+1,225,000
+
+1.00%
+3.25-5.0%
+Varies
+
+750,000
+1,075,000
+2,000,000
+3,825,000
+
+2/16/2041
+2/1/2025
+3/1/2026
+
+Varies
+3.00%
+
+2,195,882
+43,499
+2,195,882
+9,520,882
+
+11/20/2028
+10/25/2027
+
+Total Debt Obligations
+
+PAGE 40
+
+$
+
+-
+
+$ (225,000)
+(225,000)
+
+$ 1,000,000
+1,000,000
+
+$ 235,000
+235,000
+
+753,250
+299,716
+713,316
+1,766,282
+
+-
+
+(250,000)
+(116,284)
+(25,816)
+(392,100)
+
+503,250
+183,432
+687,500
+1,374,182
+
+250,000
+127,179
+26,074
+403,253
+
+1,529,856
+1,529,856
+4,521,138
+
+43,499
+43,499
+43,499
+
+(522,805)
+(10,248)
+(533,053)
+(1,150,153)
+
+1,007,051
+33,251
+1,040,302
+3,414,484
+
+522,805
+19,239
+542,044
+1,180,297
+
+$ 41,234,727
+
+$ 43,499
+
+$ (4,174,375)
+
+$ 37,103,851
+
+$ 3,560,297
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+Note 2 – Detail Notes on all Funds – Continued
+I. Long-Term Liabilities - Continued
+Note Payable – Governmental Activities
+Governmental activities note payable as of September 30, 2023, is as follows:
+A note dated March 1, 2016, was payable to the Development Corporation of
+Mercedes for $1,000,000. The terms of the note include principal payaments
+of $10,417, beginning April 2018 continuing monthly thereafter until March
+2026, when the entire balance will be due and payable. The note is interest
+free and not secured.
+
+$
+$
+
+343,750
+343,750
+
+Notes Payable – Component Unit
+Governmental activities note payable as of September 30, 2023, is as follows:
+A note dated February 16, 2011, and payable to the USDA for $750,000. The terms of the note
+include principal and interest payments of $30,848, beginning October 2015 and continuing
+regularly thereafter until February 2041 when the entire balance, including principal and interest
+will be due and payable. The interest rate is fixed at 1.00%. The note is secured by funds
+placed in the IRP revolving fund and various collateral obtained as a result of lending activity.
+
+503,250
+
+A note dated January 5, 2015, and payable to the Office of the Governor Economic
+Development and Tourism Division for $1,075,000. The terms of the note include principal and
+interest payments of $10,530 beginning March 1, 2015, and continuing regularly thereafter until
+February 1, 2025, when the entire balance, including principal and interest will be due and
+payable. The interest rate is variable between 3.25% and 5%. The note is secured by a lien
+and security interest in sales and use tax.
+
+183,432
+
+A note dated March 1, 2016, payable to Valley Telephone Cooperative for $2,000,000. The
+terms of the note include principal payments of $20,833 and continuing regularly thereafter until
+March 2026, when the entire balance will be due and payable. The note is secured by 119
+acres owned by the DCM. The notes were used to further economic objectives.
+
+687,500
+$
+
+PAGE 41
+
+1,374,182
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+Note 2 – Detail Notes on all Funds – Continued
+G. Long-Term Liabilities - Continued
+Governmental Activities and Component Unit Settlement Payable
+On November 20, 2018, The City of Mercedes approved Resolution No. 2018-13, which is a
+resolution established for DCM and the City to pay each a portion of a settlement resulting
+from a prior year agreement with a developer. The settlement portion for the City and DCM is
+$6,587,646 and $2,195,882, respectively and is expected to be paid within 10 years. As of
+September 30, 2023, the settlement payable balance for the City and DCM totaled $4,920,697
+and $1,007,051 respectively.
+The annual debt service requirements to maturity for governmental activities long-term debt
+obligations are as follows:
+Year Ending
+September 30,
+2024
+2025
+2026
+2027
+2028
+2029-2033
+2034-2038
+
+Total Bonds Payable
+Principal
+Interest
+1,642,700
+646,465
+1,707,600
+590,705
+1,761,400
+532,710
+1,622,850
+471,909
+1,693,750
+400,750
+7,422,200
+1,262,928
+3,434,200
+348,689
+$ 19,284,700
+$ 4,254,157
+
+Total Notes Payable
+Principal
+Interest
+125,000
+$ 125,000
+93,751
+$ 343,751
+$ -
+
+Total Requirements
+Principal
+Interest
+1,767,700
+646,465
+1,832,600
+590,705
+1,855,151
+532,710
+1,622,850
+471,909
+1,693,750
+400,750
+7,422,200
+1,262,928
+3,434,200
+348,689
+$ 19,628,451
+$ 4,254,157
+
+The annual debt service requirements to maturity for business-type activities long-term debt
+obligations are as follows:
+Year Ending
+September 30,
+2024
+2025
+2026
+2027
+2028
+2029-2033
+2034-2038
+
+Total Bonds Payable
+Principal
+Interest
+$ 737,300
+$ 206,791
+687,400
+187,058
+683,600
+167,305
+697,150
+146,187
+731,250
+123,500
+4,342,800
+296,163
+85,800
+5,553
+$ 7,965,300
+$ 1,132,557
+
+PAGE 42
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+Note 2 – Detail Notes on all Funds – Continued
+G. Long-Term Liabilities - Continued
+The annual debt service requirements to maturity for component units’ long-term debt
+obligations are as follows:
+Year Ending
+September 30,
+2024
+2025
+2026
+2027
+2028
+2029-2033
+2034-2038
+2039-2043
+
+Total Bonds Payable
+Principal
+Interest
+$ 235,000
+$ 45,500
+245,000
+34,808
+255,000
+23,660
+265,000
+12,058
+$ 1,000,000
+$ 116,026
+
+Total Notes Payable
+Principal
+Interest
+$ 403,252
+$ 15,487
+332,588
+5,715
+214,098
+4,250
+26,864
+3,984
+27,132
+3,716
+138,402
+15,838
+145,462
+8,778
+86,384
+1,729
+$ 1,374,182
+$ 59,497
+
+Total Requirements
+Principal
+Interest
+$ 280,500
+$ 60,987
+577,588
+40,523
+469,098
+27,910
+291,864
+16,042
+27,132
+3,716
+138,402
+15,838
+145,462
+8,778
+86,384
+1,729
+$ 2,374,182
+$ 175,523
+
+Changes in Long-Term Debt
+During the year ended September 30, 2023, the following changes occurred in liabilities
+reported in long-term debt:
+
+Governmental Activities
+General obligation debt
+Premium on bonds
+Notes payable
+Settlement payable
+Total governmental activities
+Business-type Activities
+General obligation debt
+Premium on bonds
+Total business-type activities
+Component Unit
+Bonds payable
+Notes payable
+Settlement payable
+Leases payable
+Total Component unit
+
+Balance
+10/1/2022
+$
+
+$
+
+$
+$
+
+$
+
+$
+
+Decrease
+
+Balance
+9/30/2023
+
+-
+
+$ (2,266,680)
+(47,780)
+(125,000)
+(500,000)
+$ (2,939,460)
+
+$ 18,611,920
+619,801
+343,751
+4,920,697
+$ 24,496,169
+
+$
+
+-
+
+$
+
+$
+
+$
+
+Increase
+
+20,878,600
+667,581
+468,751
+5,420,697
+27,435,629
+
+$
+
+8,686,400
+242,113
+8,928,513
+
+$
+
+1,225,000
+1,766,282
+1,529,856
+4,521,138
+
+$
+
+$
+
+$
+
+$
+
+PAGE 43
+
+43,499
+43,499
+
+$
+
+$
+
+(721,100)
+(32,282)
+(753,382)
+
+(225,000)
+(392,100)
+(522,805)
+(10,248)
+$ (1,150,153)
+
+$
+
+$
+
+$
+
+7,965,300
+209,831
+8,175,131
+
+1,000,000
+1,374,182
+1,007,051
+33,251
+3,414,484
+
+Due in
+One Year
+
+$
+
+$
+
+$
+
+$
+
+1,642,700
+1,642,700
+
+737,300
+737,300
+
+235,000
+403,252
+522,805
+19,239
+1,180,296
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+Note 2 – Detail Notes on all Funds – Continued
+G. Long-Term Liabilities - Continued
+Certain general obligation and revenue bonds contain covenants, which among other things,
+requires the city to complete its audit within 120 days of the City’s fiscal year-end. As of
+September 30, 2023, the city was not in compliance with this covenant.
+Note 3 – Defined Benefit – Pension Plan - TMRS
+Plan Description
+The City of Mercedes participates as one of 888 plans in the nontraditional, joint contributory,
+hybrid defined benefit pension plan administered by the Texas Municipal Retirement System
+(TMRS). TMRS is an agency created by the State of Texas and administered in accordance with
+TMRS act, Subtitle G, Title 8, Texas Government Code (the TMRS Act) as an agent multipleemployer retirement system for municipal employees in the State of Texas. The TMRS Act places
+the general administration and management of the System with a six-member Board of Trustees.
+Although the Governor, with the advice and consent of the Senate, appoints the Board, TMRS is
+not fiscally dependent on the State of Texas. TMRS’s defined benefit pension plan is a taxqualified plan under Section 401(a) of the Internal Revenue Code. TMRS issues a publicly
+available comprehensive annual financial report (ACFR) that can be obtained at www.tmrs.com.
+All eligible employees of the City are required to participate in TMRS.
+Benefits Provided
+TMRS provides retirement, disability, and death benefits. Benefit provisions are adopted by the
+governing body of the City, within the options available in the state statutes governing TMRS.
+At retirement, the benefits are calculated as if the sum of the employee’s contributions, with
+interest, and the city-financing monetary credits with interest were used to purchase an annuity.
+Members may choose to receive their retirement benefit in one of seven payment options.
+Members may also choose to receive a portion of their benefit as a partial lump sum distribution
+in an amount equal to 12, 24, or 36 monthly payments, which cannot exceed 75% of the member’s
+deposits and interest.
+
+PAGE 44
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+Note 3 – Defined Benefit – Pension Plan – TMRS – Continued
+Employees covered by benefit terms
+
+Contributions
+The contribution rates for employees in TMRS is 7% of employee gross earnings, and the City
+matching percentages is 200%, both as adopted by the governing body of the City.
+
+Under the state law governing TMRS, the contribution rate for each city is determined annually
+by the actuary, using the Entry Age Normal (EAN) actuarial cost method. The actuarially
+determined rate is the estimated amount necessary to finance the cost of benefits earned by
+employees during the year, with an additional amount to finance any unfunded accrued liability.
+Employees for the City of Mercedes were required to contribute 7.00% of their annual gross
+earnings during the fiscal year. The contribution rates for the city were 15.79% and 15.57% in
+calendar year 2022 and 2023 respectively. The City’s contributions to TMRS for the year ended
+September 30, 2023, were $873,738 and were equal to the required contributions.
+
+PAGE 45
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+Note 3 – Defined Benefit – Pension Plan – TMRS – Continued
+Net Pension Liability
+The City’s Net Pension Liability was measured as of December 31, 2022, and the Total Pension
+Liability used to calculate the Net Pension Liability was determined by an actuarial valuation as
+of that date.
+Schedule of Actuarial Assumptions
+Valuation Date
+Actuarial Cost Method
+Amortization Method
+Remaining Amortization Period
+Asset Valuation Method
+Inflation
+Salary Increase
+Investment Rate of Return
+Retirement Age
+
+Mortality Assumption
+
+Entry Age Normal
+Level Percentage of Payroll, Closed
+14 years
+
+10 Year smoothed market; 12% soft corridor
+2.5%
+3.5% to 11.5% including inflation
+6.75%
+Experience-based table based on rates that are specific
+to the City's plan of benefits. Last updated for the 2019
+valuation pursuant to an experience study of the period
+2014-2018.
+Post-retirement: 2019 Municipal Retirees of Texas
+Mortality Tables. The rates are projected on a fully
+generational basis with scale UMP. Pre-retirement:
+PUB(1) mortality tables, with the Public Safety table
+used for males and the General Employee table used
+for females. The rates are projected on a fully
+generational basis with scale UMP.
+
+PAGE 46
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+Note 3 – Defined Benefit – Pension Plan – TMRS – Continued
+For the purpose of this valuation, the expected rate of return on pension plan investments is 6.75%;
+the municipal bond rate is 1.84% (based on the daily rate closest to but not later than the
+measurement date of the Fidelity 20-Year Municipal GO AA Index). A single discount rate of
+6.75% was used to measure the total pension liability as of December 31, 2022. This single
+discount rate was based on the expected rate of return on pension plan investments of 6.75%.
+Based on the stated assumptions and the projection of cash flows, the City’s fiduciary net position
+and future contributions were sufficient to finance the future benefit payments of the current plan
+members for all projection years. Therefore, the long-term expected rate of return on pension plan
+investments were applied to all periods of the projected benefit payments to determine the total
+pension liability for the City. The projection of cash flows used to determine the single discount
+rate for the City assumed that the funding policy adopted by the TMRS Board will remain in effect
+for all future years. Under this funding policy, the City will finance the unfunded actuarial accrued
+liability over the years remaining for the closed period existing for each base in addition to the
+employer portion of all future benefit accruals (i.e., the employer normal cost).
+Discount Rate
+The discount rate used to measure the total pension liability was 6.75%. The projection of cash
+flows used to determine the discount rate assumed that employee and employer contributions will
+be made at the rates specified in statute Based on that assumption, the pension plan’s Fiduciary
+Net Position was projected to be available to make all projected future benefit payments of current
+active and inactive employees. Therefore, the long-term expected rate of return on pension plan
+investments was applied to all periods of projected benefit payments to determine the total pension
+liability.
+
+PAGE 47
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+Note 3 – Defined Benefit – Pension Plan – TMRS – Continued
+
+Net pension liability allocation:
+City of Mercedes
+Development Corporation of Mercedes
+
+97.10%
+2.90%
+
+$
+$
+
+4,284,170
+127,777
+
+Sensitivity of the Net Pension Liability to Changes in the Discount Rate
+The following presents the net pension liability of the City, calculated using the discount rate of
+6.75%, as well as what the City’s net pension liability would have been if it were calculated using
+a discount rate that is 1 percentage lower (5.75%) or 1 percentage higher (7.75%) that the current
+rate.
+
+PAGE 48
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+Note 3 – Defined Benefit – Pension Plan – TMRS – Continued
+Pension Expense and Deferred Outflows of Resources and Deferred Inflows of Resources
+related to Pensions
+For the year ended September 30, 2023, the City recognized pension expense in the amount of
+$886,060.
+As of September 30, 2023, the City reported deferred outflows of resources and deferred inflows
+of resources related to pensions from the following sources:
+
+$667,961 reported as deferred outflows of resources related to pensions resulting from
+contributions subsequent to measurement date will be recognized as a reduction of the net pension
+liability for the year ending September 30, 2023. Other amounts reported as deferred outflows and
+inflows of resources related to pensions expense as follows:
+
+PAGE 49
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+Note 4 – Other Post Employment Benefits
+Plan Description
+The City also participates in a single-employer, defined benefit group-term life insurance known
+as the Supplemental Death Benefits Fund (SDBF) administered by the Texas Municipal
+Retirement System (TMRS). This is a voluntary program in which the City elected, by ordinance,
+to provide group-term life insurance coverage to both current and retired employees. The City may
+terminate coverage under and discontinue participation in the SDBF by adopting an ordinance
+before November 1 of any year to be effective the following January 1.
+The death benefit for active employees provides a lump-sum payment approximately equal to the
+employee’s annual salary (calculated based on the employee’s actual earnings, for the 12-month
+period preceding the month of death). The death benefit for retirees is considered another postemployment benefit (“OPEB”) and is a fixed amount of $7,500. As the SDBF covers both active
+and retiree participants, with no segregation of assets, the SDBF is considered to be an unfunded
+OPEB plan (i.e., no assets are accumulated).
+Employees Covered by Benefit Terms
+
+PAGE 50
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+Note 4 – Other Post Employment Benefits - Continued
+Actuarial Assumptions and Other Inputs
+The total OPEB liability in the December 31, 2022, actuarial valuation was determined using the
+following actuarial assumptions and other inputs, applied to all periods included in the
+measurement, unless otherwise specified:
+Summary of Actuarial Assumptions:
+Inflation
+Salary Increases
+Discount rate*
+Retirees’ share of benefit related costs
+Administrative expenses
+Mortality rates – service retirees
+Mortality rates – disabled retirees
+
+2.50%
+3.50% to 11.50% including inflation
+1.84%
+$0
+All administrative expenses are paid through the
+Pension Trust and accounted for under
+requirements of GASB No. 68.
+2019 Municipal Retirees of Texas Mortality
+Tables. The rates are projected on a fully
+generational basis scale UMP.
+2019 Municipal Retirees of Texas Mortality
+Tables with a 4-year set forward for males and a 3year set-forward for females. In addition, a 3.5%
+and 3% minimum mortality rate will be applied to
+reflect the impairment for younger members who
+become disabled for males and females,
+respectively. The rages are projected on a fully
+generational basis by Scale UMP to account for
+future mortality improvements subject to floor.
+
+* The discount rate was based on the Fidelity Index’s “20-Year Municipal GO AA Index” rate
+as of December 31, 2022.
+Total OPEB Liability
+Employees for the City of Mercedes were required to contribute 7.00% of their annual gross
+earnings during the fiscal year. The contribution rates for the city were 0.17% and 0.14% in
+calendar 2022 and 2023 respectively. The City’s contributions to TMRS for your ended September
+30, 2023, were $18,594 and were equal to the required Contributions.
+
+PAGE 51
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+Note 4 – Other Post Employment Benefits - Continued
+
+Net OPEB allocation:
+City of Mercedes
+Development Corporation of Mercedes
+
+97.06%
+2.94%
+
+$
+$
+
+288,739
+8,738
+
+Sensitivity of the Total OPEB Liability to Changes in the Discount rate
+The following presents the total OPEB liability of the City, calculated using the discount rate of
+4.05%, as well as what the City’s total OPEB liability would have been if it were calculated using
+a discount rate that is 1 percentage point lower (3.05) or 1 Percentage higher (5.05) than the current
+rate.
+
+PAGE 52
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+Note 4 – Other Post Employment Benefits - Continued
+OPEB Expense and Deferred Outflows of Resources and Deferred Inflows of Resources Related
+to OPEBs
+For the year ended September 30, 2023, the City recognized OPEB expense in the amount of
+$22,621.
+On September 30, 2023, the City reported deferred outflows of resources and deferred inflows of
+resources related to OPEBs from the following sources:
+
+$0 of deferred outflows of resources related to OPEBs resulting from contributions subsequent to
+the measurement date will be recognized as a reduction of the net OPEB liability for the year
+ending September 30, 2023. Other amounts reported as deferred outflows and inflows of resources
+related to OPEBs will be recognized in OPEB expense as follows:
+
+PAGE 53
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+Note 5 – Transfers
+Transfers as of September 30, 2023, consisted of the following:
+Governmental Activities:
+
+Transfers In
+
+General Fund
+ARPA
+Special Revenue Fund
+Local Forfeiture
+Keep Mercedes Beautiful
+TIF Fund
+Series 2021
+Total governemental activities transfers
+
+$
+
+Business-type Activities:
+Utility Fund
+Total business-type transfers
+Total Interfund Transfers
+
+2,398
+5,445
+4,555
+620,000
+532,587
+1,164,984
+
+Transfers Out
+$
+
+478,761
+478,761
+$
+
+1,643,745
+
+632,397
+1,011,348
+1,643,745
+-
+
+$
+
+1,643,745
+
+Note 6 – Commitments and Contingencies
+Grants
+The City participates in several grant programs funded by State and Federal Agencies. These
+programs are subject to compliance by the grantor agencies or their representatives. Audit of all
+these programs included in the year ended September 30, 2023, have been conducted. Accordingly,
+the City's compliance with applicable grant requirements will be established at some future date.
+The amount, if any, of expenditures which may be disallowed by the granting agencies cannot be
+determined at this time although the city expects such amounts, if any, to be immaterial.
+Litigation
+The City is involved in litigation claims against it from time to time that are generally incidental
+to its operations. However, it is the opinion of the City’s management that the City’s liability in
+those cases that are not covered by liability insurance will not be material to the financial
+statements for these contingent liabilities. As of September 30, 2023, the City was a defendant in
+various lawsuits as to which the ultimate resolution and possibility of any unfavorable outcome is
+not yet determinable. At the present time, the City does not anticipate any material losses as a
+result of these lawsuits.
+
+PAGE 54
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+Note 6 – Commitments and Contingencies - Continued
+Economic Incentive Commitments
+The Development Corporation of Mercedes extended economic incentives to the following entities
+as follows as of September 30, 2023:
+Incentives
+Rio Grande Livestock Show
+Bert Ogden
+La Herencia
+Orchard Grove Apartments
+
+Commitment
+$ 300,000
+300,000
+200,000
+450,000
+$ 1,250,000
+
+Paid in
+Previous Years
+$
+200,000
+132,000
+300,000
+$
+632,000
+
+Paid in
+Current Year
+$
+75,000
+300,000
+1,334
+100,000
+$
+476,334
+
+Balance
+Due
+$
+25,000
+66,666
+50,000
+$ 141,666
+
+Note 7 – Risk Management
+The City of Mercedes is exposed to various uncertainties for losses related to intentional and
+unintentional torts; theft of, damage to and destruction of real and personal property; errors-andomissions; catastrophes, and medical claims by employees; job-related illnesses and injuries and
+pollution claims for which the City carries commercial insurance coverage. There have been no
+significant reductions in insurance coverage from the previous year. No negotiated settlements or
+jury awards have exceeded policy limits in any of the past three years. The city is member of an
+intergovernmental risk pool.
+The risk pool is an interlocal non-assessable agency with present unreserved resources in excess
+of $357,000,000 (as of September 30, 2023, the most recently audited financial statements
+completed for the risk pool). Reinsurance is provided by several A- and above rated companies in
+amounts ranging from $10,000,000 to 275,000,000 depending on the type of insurance coverage.
+City management is not aware of any pending or alleged claims that could exceed the policy limits
+of the present insurance coverage.
+
+PAGE 55
+
+City of Mercedes, Texas
+Notes to the Basic Financial Statements
+For the Year Ended September 30, 2023
+Note 8 – Fund Balances
+Fund balances as of September 2023, were summarized by the following table:
+
+Fund Balance
+Nonspendable
+Inventory
+Redevelopment Assets
+Total nonspendable
+
+General Fund
+
+$
+
+62,599
+164,089
+226,688
+
+Bond Series
+2021
+
+Debt Service
+Fund
+
+Other
+Governmental Funds
+
+Total
+Governmental Funds
+
+$
+
+$
+
+$
+
+$
+
+-
+
+-
+
+Restricted
+Special Revenue Fund
+Debt service fund
+Municipal court technology fund
+Local forfeiture fund
+Keep Mercedes Beautiful fund
+Hotel/Motel fund
+TIF fund
+Recreation program fund
+Parks Fund
+Capital Projects P.P.F.C.O. 2013 Series
+Capital Projects Series 2015 C.O.
+Capital Projects Series 2018 Bond
+Capital Projects Series 2021 Bond
+Streets - Right of way
+Total Restricted
+
+-
+
+658,082
+658,082
+
+896,035
+896,035
+
+Assigned
+Library Fund
+Total Assigned
+
+-
+
+-
+
+Unassigned
+General fund
+Total Unassigned
+Total Fund Balance
+
+9,697,651
+9,697,651
+$
+
+9,697,651
+
+$
+
+658,082
+
+$
+
+-
+
+62,599
+164,089
+226,688
+
+9,865
+156,129
+34,707
+1,678
+679,642
+135,783
+3,182
+171,582
+3,673
+2,439
+64,924
+2,555
+1,266,159
+
+9,865
+896,035
+156,129
+34,707
+1,678
+679,642
+135,783
+3,182
+171,582
+3,673
+2,439
+64,924
+658,082
+2,555
+2,820,277
+
+-
+
+2,722
+2,722
+
+2,722
+2,722
+
+-
+
+-
+
+896,035
+
+$
+
+1,268,881
+
+9,697,651
+9,697,651
+$
+
+12,747,338
+
+Note 9 – Prior Period Adjustments
+Description
+Beginning fund balance/net position, as previously
+reported
+
+Amount
+$
+
+To correct errors noted in the capital assets depreciation
+schedule which resulted in accumulated depreciation being
+understated in the prior year.
+Beginning fund balance/net position, as restated
+
+17,173,073
+
+(121,286)
+$
+
+17,051,787
+
+Note 10 – Subsequent Events
+Management has evaluated subsequent events through the date that the financial statements were
+available to be issued, March 19, 2024, and has determined there were no other events other than
+the one listed above that would require disclosure.
+
+PAGE 56
+
+EXHIBIT G-1
+CITY OF MERCEDES
+SCHEDULE OF REVENUES, EXPENDITURES AND CHANGES IN FUND BALANCE BUDGET AND ACTUAL - GENERAL FUND
+FOR THE YEAR ENDED SEPTEMBER 30, 2023
+Actual
+Variance With
+Amounts
+Final Budget
+(GAAP BASIS)
+Positive or
+(Negative)
+
+Data
+Control
+
+Budgeted Amounts
+
+Codes
+
+Original
+
+REVENUES:
+Taxes:
+5110 Property Taxes
+5120 General Sales and Use Taxes
+5170 Franchise Tax
+5190 Penalty and Interest on Taxes
+5200 Licenses and Permits
+5300 Intergovernmental Revenue and Grants
+5400 Charges for Services
+5510 Fines
+5610 Investment Earnings
+5620 Rents and Royalties
+5700 Other Revenue
+5020
+
+$
+
+Total Revenues
+
+EXPENDITURES:
+Current:
+0100 General Government
+0200 Public Safety
+0300 Public Works
+0310 Highways and Streets
+0400 Health and Welfare
+0500 Culture and Recreation
+Debt Service:
+0710 Principal on Debt
+Capital Outlay:
+0800 Capital Outlay
+6030
+
+Total Expenditures
+
+1100 Excess (Deficiency) of Revenues Over (Under)
+Expenditures
+OTHER FINANCING SOURCES (USES):
+7912 Sale of Real and Personal Property
+8911 Transfers Out
+7080
+1200
+
+Total Other Financing Sources (Uses)
+Net Change
+
+0100 Fund Balance - October 1 (Beginning)
+3000 Fund Balance - September 30 (Ending)
+
+$
+
+Final
+
+3,343,522 $
+4,927,428
+680,000
+125,000
+394,000
+18,600
+3,915,460
+67,000
+30,000
+1,780,890
+
+3,343,522
+4,927,428
+680,000
+125,000
+394,000
+18,600
+3,915,460
+67,000
+30,000
+1,780,890
+
+15,281,900
+
+15,281,900
+
+16,536,333
+
+1,254,433
+
+3,475,716
+5,778,492
+534,102
+882,576
+2,055,807
+1,290,633
+
+3,475,716
+5,778,492
+534,102
+882,576
+2,055,807
+1,290,633
+
+3,358,282
+5,187,312
+476,951
+527,717
+1,972,565
+1,289,640
+
+117,434
+591,180
+57,151
+354,859
+83,242
+993
+
+625,000
+
+625,000
+
+625,000
+
+-
+
+639,574
+
+639,574
+
+133,241
+
+506,333
+
+15,281,900
+
+15,281,900
+
+13,570,708
+
+1,711,192
+
+-
+
+-
+
+2,965,625
+
+2,965,625
+
+-
+
+-
+
+50,355
+(632,397)
+
+50,355
+(632,397)
+
+-
+
+-
+
+(582,042)
+
+(582,042)
+
+-
+
+-
+
+2,383,583
+
+2,383,583
+
+-
+
+-
+
+7,540,756
+
+7,540,756
+
+- $
+
+-
+
+The notes to the financial statements are an integral part of this statement.
+57
+
+$
+
+$
+
+3,505,718
+6,396,225
+730,045
+84,003
+536,205
+1,036,350
+3,365,247
+73,785
+263,709
+17,045
+528,001
+
+9,924,339
+
+$
+
+$
+
+162,196
+1,468,797
+50,045
+(40,997)
+142,205
+1,017,750
+(550,213)
+6,785
+233,709
+17,045
+(1,252,889)
+
+9,924,339
+
+CITY OF MERCEDES, TEXAS
+SCHEDULE OF CHANGES IN NET PENSION LIABILITY AND RELATED RATIOS
+FOR THE YEAR ENDED SEPTEMBER 30, 2023
+
+Total Pension Liability
+Service cost
+Interest (on the total pension liability)
+Changes of benefit terms
+Difference between expected and actual experience
+Change of assumputions
+Benefit payments, including refunds of employee contributions
+Net Change in Total Pension Liability
+Total Pension Liability - Beginning
+Total Pension Liability - Ending (a)
+Plan Fiduciary Net Position
+Contributions - employer
+Contributions - employee
+Net investment income
+
+2022
+$
+
+936,213
+1,696,778
+(399,108)
+-
+
+2021
+$
+
+Plan Year Ended December 31,
+2020
+2019
+
+924,643
+1,587,158
+418,406
+-
+
+$
+
+931,185
+1,522,121
+(209,134)
+-
+
+$
+
+814,509
+1,487,612
+(490,403)
+96,939
+
+2018
+$
+
+723,965
+1,447,569
+(398,692)
+-
+
+2017
+$
+
+712,113
+1,398,746
+(478,060)
+-
+
+2016
+$
+
+740,529
+1,332,821
+(236,560)
+-
+
+(1,325,915)
+907,968
+25,332,305
+$ 26,240,274
+
+(1,298,057)
+1,632,150
+23,700,155
+$ 25,332,305
+
+(1,256,720)
+987,452
+22,712,703
+$ 23,700,155
+
+(1,654,784)
+253,873
+22,458,830
+$ 22,712,703
+
+(794,999)
+977,843
+21,480,987
+$ 22,458,830
+
+(1,035,847)
+596,952
+20,884,035
+$ 21,480,987
+
+(655,971)
+1,180,819
+19,703,216
+$ 20,884,035
+
+$
+
+$
+
+$
+
+$
+
+$
+
+$
+
+$
+
+841,132
+378,159
+(1,728,123)
+
+879,935
+368,174
+2,737,517
+
+959,839
+371,413
+1,476,699
+
+827,756
+319,774
+2,675,917
+
+766,842
+288,596
+(526,655)
+
+783,036
+286,977
+2,135,982
+
+789,320
+289,431
+950,023
+
+Benefit payments, including refunds of employee contributions
+Administrative expense
+Other
+Net Change in Plan Fiduciary Net Position
+Plan Fiduciary Net Position - Beginning
+Plan Fiduciary Net Position - Ending (b)
+
+(1,325,915)
+(14,945)
+17,834
+(1,831,858)
+23,660,184
+$ 21,828,327
+
+(1,298,057)
+(12,658)
+87
+2,674,998
+20,985,186
+$ 23,660,184
+
+(1,256,720)
+(9,550)
+(373)
+1,541,308
+19,443,877
+$ 20,985,185
+
+(1,654,784)
+(15,104)
+(454)
+2,153,105
+17,290,773
+$ 19,443,878
+
+(794,999)
+(10,170)
+(531)
+(276,917)
+17,567,690
+$ 17,290,773
+
+(1,035,847)
+(11,068)
+(561)
+2,158,519
+15,409,172
+$ 17,567,691
+
+(655,971)
+(10,722)
+(578)
+1,361,503
+14,047,669
+$ 15,409,172
+
+Net Pension Liability - Ending (a) - (b)
+
+$
+
+$
+
+$
+
+$
+
+$
+
+$
+
+$
+
+Plan Fiduciary Net Position as a Percentage of Total Pension
+Liability
+Covered Payroll
+Net Pension Liability as a Percentage of Covered Payroll
+
+4,411,947
+
+83.19%
+$
+
+5,402,265
+81.67%
+
+1,672,121
+
+93.40%
+$
+
+5,259,629
+31.79%
+
+PAGE 58
+
+2,714,970
+
+88.54%
+$
+
+5,305,900
+51.17%
+
+3,268,825
+
+85.61%
+$
+
+4,568,193
+71.56%
+
+5,168,057
+
+76.99%
+$
+
+4,122,806
+125.35%
+
+3,913,296
+
+81.78%
+$
+
+4,099,672
+95.45%
+
+5,474,863
+
+73.78%
+$
+
+4,134,721
+132.41%
+
+CITY OF MERCEDES, TEXAS
+SCHEDULE OF PENSION CONTRIBUTIONS
+FOR THE YEAR ENDED SEPTEMBER 30, 2023
+Fiscal Year Ended September 30,
+2023
+Actuarially determined contribution
+
+$
+
+Contributions in relation to actuarially determined contribution
+
+2022
+
+841,132
+
+$
+
+(841,132)
+
+876,640
+
+$
+
+(876,640)
+$
+
+-
+
+2020
+
+959,839
+
+$
+
+(959,839)
+-
+
+933,895
+
+$
+
+(933,895)
+$
+
+-
+
+2018
+
+809,721
+
+$
+
+(809,721)
+$
+
+-
+
+2017
+
+783,036
+
+$
+
+(783,036)
+$
+
+-
+
+2016
+
+795,685
+
+$
+
+(795,685)
+$
+
+-
+
+810,771
+(810,771)
+
+$
+
+Covered payroll
+
+$ 5,402,265
+
+$ 5,447,028
+
+$ 5,305,900
+
+$ 4,568,193
+
+$ 4,122,806
+
+$ 4,099,672
+
+$ 4,134,721
+
+$ 4,303,896
+
+15.57%
+
+16.09%
+
+18.09%
+
+20.44%
+
+19.64%
+
+19.10%
+
+19.24%
+
+18.84%
+
+PAGE 59
+
+$
+
+2019
+
+Contribution deficiency (excess)
+
+Contributions as a percentage of covered payroll
+
+-
+
+2021
+
+$
+
+-
+
+Valuation Date:
+
+CITY OF MERCEDES, TEXAS
+Notes to Schedule of Contributions
+Actuarially determined contribution rates are calculated as of
+December 31 and become effective in January 13 months later.
+
+Methods and Assumptions Used to Determine Contribution Rates:
+Actuarial Cost Method
+Entry Age Normal
+Amortization Method
+Level Percentage of Payroll, Closed
+Remaining Amortization Period
+14 years
+Asset Valuation Method
+10 Year smoothed market; 12% soft corridor
+Inflation
+2.5%
+Salary Increases
+3.5% to 11.5% including inflation
+Investment Rate of Return
+6.75%
+Retirement Age
+Experience-based table based on rates that are specific to the City's
+plan of benefits. Last updated for the 2019 valuation pursuant to an
+experience study of the period 2014-2018.
+Mortality
+Post-retirement: 2019 Municipal Retirees of Texas Mortality Tables.
+The rates are pojected on a fully generational basis with scale UMP.
+Pre-retirement: PUB(1) mortality tables, with the Public Safety table
+used for males and the General Employee table used for females. The
+rates are projected on a fully generational basis with scale UMP.
+Other Information:
+
+There were no benefit changes during the year.
+
+PAGE 60
+
+CITY OF MERCEDES, TEXAS
+SCHEDULE OF CHANGES IN TOTAL OPEB LIABILITY AND RELATED RATIOS
+FOR THE YEAR ENDED SEPTEMBER 30, 2023
+
+Plan Year Ended December 31,
+2021
+2020
+2019
+
+2022
+
+Total OPEB Liability
+Service cost
+Interest (on the total OPEB liability)
+Changes of benefit terms
+Difference between expected and actual experience
+Change of assumputions
+Benefit payments, including refunds of employee contributions
+Net Change in Total OPEB Liability
+Total OPEB Liability - Beginning
+Total OPEB Liability - Ending
+
+24,310
+8,280
+(19,830)
+(149,333)
+(7,563)
+(144,136)
+441,613
+$ 297,477
+
+22,616
+8,357
+(6,176)
+13,696
+(6,838)
+31,655
+409,958
+$ 441,613
+
+$
+
+Covered Payroll
+
+$ 5,402,265
+
+$ 5,259,629
+
+5.51%
+
+8.40%
+
+Total OPEB Liability as a Percentage of Covered Payroll
+
+$
+
+PAGE 61
+
+$
+
+14,161
+14,145
+(139,319)
+51,382
+(1,827)
+(61,458)
+375,102
+$ 313,644
+
+$
+
+$ 5,305,900
+
+$ 4,568,193
+
+$ 4,122,806
+
+7.73%
+
+6.87%
+
+9.10%
+
+$
+
+20,162
+8,866
+14,641
+55,292
+(2,653)
+96,308
+313,644
+409,952
+
+$
+
+2018
+
+$
+
+14,018
+8,541
+120,401
+(18,067)
+(1,649)
+123,244
+251,858
+375,102
+
+Valuation Date:
+
+Notes to Schedule of Contributions
+December 31, 2022
+Actuarially determined contribution rates are calculated as of
+December 31, and become effective in January 13 months later.
+
+Methods and Assumptions Used to Determine Contribution Rates:
+2.50%
+Inflation
+3.50% to 11.50% including inflation
+Salary Increases
+2.00%
+Investment Rate of Return
+Retirement Age
+N/A
+Mortality
+Service retirees: 2019 Municipal Retirees of Texas Mortality Tables.
+The rates are projected on a fully generational basis with scale UMP.
+Disabled retirees: 2019 Municipal Retirees of Texas Mortality
+Tables with a 4 year set-forward for males and a 3 year set-forward
+for females. In addition, a 3.5% and 3% minimum mortality rate will
+be applied to reflect the impairment for younger members who
+become disabled for males and females, respectively. The rates are
+projected on a fully generational basis by Scale UMP to account for
+future mortality improvements subject to the floor.
+
+* The Discount rate was based on the Fidelity Index's "20 -year Municipal GO AA Index:" rate as of December 31, 2022.
+
+PAGE 62
+
+CITY OF MERCEDES, TEXAS
+NOTES TO REQUIRED SUPPLEMENTARY INFORMATION
+SEPTEMBER 30, 2023
+Budgetary Information
+Annual budgets are adopted on a basis consistent with accounting principles generally accepted in the
+United States of America for the General Fund and the Water and Sewer (Utility) Fund. The capital project
+funds adopt project length budgets. Formal budgetary integration is employed as a management control
+device during the year for the General and Debt Service, as well as for the Water and Sewer Funds. The
+American Rescue Plan fund, a major special revenue fund, did not have legally adopted budget. The City
+Commission accepted the funds by resolution, but no budgetary action was taken due to the timing of the
+receipt of the funds.
+Unused appropriations of the above annually budgeted amounts lapse at the end of each year. The budget
+amounts shown in the financial statements are the final authorized amounts as revised during the year.
+Budgetary data for Capital Project Funds is budgeted over the life of the respective project and not on an
+annual basis. Therefore, this data is not presented in the accompanying combined financial statements.
+Revisions that alter total expenditures within a department must be approved by the City Commission.
+Therefore, the legal level of budgetary responsibility is at the departmental level.
+City Management establishes the amount of estimated revenues and other resources available for
+appropriation for the succeeding budget year. City Management submits to the City Commission a
+proposed operating budget for the fiscal year commencing the following October 1. The operating fund
+includes proposed expenditures and the means of financing them. Public hearings are conducted at City
+Hall to obtain taxpayer comments. Prior to October 1, the budget is adapted by the City Commission.
+Expenditures may not legally exceed budgeted appropriations at the departmental level. During the year,
+several supplementary appropriations were necessary.
+
+PAGE 63
+
+CITY OF MERCEDES
+COMBINING BALANCE SHEET - NONMAJOR GOVERMENTAL FUNDS
+As of September 30, 2023
+
+Municipal
+Technology
+ASSETS:
+1010 Cash and Cash Equivalents
+1150 Accounts Receivable, Net
+1260 Due from Other Governments
+1300 Due from Other Funds
+TOTAL ASSETS
+
+$
+
+TOTAL ASSETS AND DEFERRED OUTFLOWS OF
+$
+RESOURCES
+LIABILITIES:
+2010 Accounts Payable
+2020 Wages and Salaries Payable
+2080 Due to Other Funds
+2230 Unearned Revenues
+
+$
+
+Special
+Revenue
+
+Library
+
+Keep
+Mercedes
+Beautiful
+
+Local
+Forfeiture
+
+Hotel/Motel
+
+TIRZ
+
+Recreation
+Program
+
+Parks Fund
+
+Total
+Nonmajor
+Special
+Revenue
+Funds
+
+156,364
+156,364
+
+$
+
+2,722
+2,722
+
+$
+
+5,254
+3,424
+97,482
+106,160
+
+$
+
+38,487
+38,487
+
+$
+
+1,678
+1,678
+
+$
+
+654,428
+27,400
+681,828
+
+$ 176,857
+268,827
+445,684
+
+$
+
+3,182
+3,182
+
+$171,582
+171,582
+
+$ 1,205,300
+32,654
+272,251
+97,482
+1,607,688
+
+156,364
+
+$
+
+2,722
+
+$
+
+106,160
+
+$
+
+38,487
+
+$
+
+1,678
+
+$
+
+681,828
+
+$ 445,684
+
+$
+
+3,182
+
+$171,582
+
+$ 1,607,688
+
+235
+-
+
+$
+
+-
+
+$
+
+9,247
+87,048
+
+$
+
+3,780
+-
+
+$
+
+-
+
+$
+
+2,186
+-
+
+$
+
+$
+
+-
+
+$
+
+$
+
+42,559
+-
+
+-
+
+6,201
+9,247
+42,559
+87,048
+
+TOTAL LIABILITIES
+
+235
+
+-
+
+96,295
+
+3,780
+
+-
+
+2,186
+
+42,559
+
+-
+
+-
+
+145,056
+
+DEFERRED INFLOWS OF RESOURCES:
+2605 Deferred Resource Inflow - TIRZ
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+267,341
+
+-
+
+-
+
+267,341
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+267,341
+
+-
+
+-
+
+267,341
+
+156,129
+156,129
+
+2,722
+2,722
+
+9,865
+9,865
+
+34,707
+34,707
+
+1,678
+1,678
+
+679,642
+679,642
+
+135,783
+135,783
+
+3,182
+3,182
+
+171,582
+171,582
+
+1,195,290
+1,195,290
+
+681,828
+
+$ 445,684
+
+3,182
+
+$171,582
+
+$ 1,607,688
+
+TOTAL DEFERRED INFLOWS OF
+RESOURCES
+FUND BALANCES:
+3490 Restricted for Special Purposes
+TOTAL FUND BALANCES
+TOTAL LIABILITIES, DEFERRED LIABILITIES &
+FUND BALANCES
+
+$
+
+156,364
+
+$
+
+2,722
+
+$
+
+106,160
+
+$
+
+PAGE 64
+
+38,487
+
+$
+
+1,678
+
+$
+
+$
+
+CITY OF MERCEDES
+COMBINING BALANCE SHEET - NONMAJOR GOVERMENTAL FUNDS
+As of September 30, 2023
+
+PPFCO Series
+2015
+ASSETS:
+1010 Cash and Cash Equivalents
+
+$
+
+TOTAL ASSETS
+
+3,673
+
+Series 2015 Series 2018
+
+Street
+Maintenance
+
+Total Nonmajor
+Capital Projects
+Fund
+
+$
+
+$
+
+$
+
+3,673
+
+2,439
+
+$
+
+2,439
+
+77,393
+77,393
+
+2,555
+
+86,060
+
+2,555
+
+86,060
+
+2,555
+
+86,060
+
+DEFERRED OUTFLOWS OF RESOURCES:
+TOTAL ASSETS AND DEFERRED OUTFLOWS OF
+RESOURCES
+
+$
+
+LIABILITIES:
+2080 Due to Other Funds
+TOTAL LIABILITIES
+FUND BALANCES:
+3550 Committed for Construction
+TOTAL FUND BALANCES
+TOTAL LIABILITIES, DEFERRED LIABILITIES &
+FUND BALANCES
+
+$
+
+3,673
+
+$
+
+2,439
+
+$
+
+77,393
+
+$
+
+-
+
+-
+
+12,469
+
+-
+
+12,469
+
+-
+
+-
+
+12,469
+
+-
+
+12,469
+
+3,673
+3,673
+
+2,439
+2,439
+
+64,924
+64,924
+
+2,555
+2,555
+
+73,591
+73,591
+
+3,673
+
+PAGE 65
+
+$
+
+2,439
+
+$
+
+77,393
+
+$
+
+2,555
+
+$
+
+86,060
+
+CITY OF MERCEDES
+COMBINING STATEMENT OF REVENUES, EXPENDITURES AND CHANGES IN FUND BALANCE - NONMAJOR GOVERNMENTAL FUNDS
+As of September 30, 2023
+
+REVENUES:
+5180
+5200
+5300
+5610
+5650
+5700
+100
+200
+400
+500
+600
+800
+
+Municipal
+Technology
+
+Urban
+County
+
+Other Taxes
+Licenses and Permits
+Intergovernmental Revenue and Grants
+Investment Earnings
+Contributions
+Other Revenue
+TOTAL REVENUES
+
+7,145
+10,366
+17,511
+
+226,774
+226,774
+
+General Government
+Public Safety
+Health and Welfare
+Culture and Recreation
+Conservation and Development
+Capital Outlay
+
+2,886
+-
+
+TOTAL EXPENDITURES
+
+2,886
+
+Excess(Deficiency) of Revenues Over(Under)
+Expenditures
+$
+7915 Transfers In
+TOTAL OTHER FINANCING SOURCES (USES)
+Net Change in Fund Balances
+$
+Fund Balance - October 1 (Beginning)
+$
+Fund Balance - September 30 (Ending)
+$
+
+Recreation
+Program
+
+Parks Fund
+
+Total Nonmajor
+Special Revenue
+Funds
+
+166,877
+1,486
+168,362
+
+-
+
+7,000
+1,139
+8,139
+
+179,396
+7,000
+523,269
+37,418
+166,877
+27,540
+941,499
+
+132,592
+-
+
+700,000
+-
+
+-
+
+2,057
+-
+
+423,193
+191,123
+5,055
+5,509
+700,000
+55,522
+
+5,055
+
+132,592
+
+700,000
+
+-
+
+2,057
+
+1,380,402
+
+Special
+Revenue
+
+Local
+Forfeiture
+
+Keep Mercedes
+Beautiful
+
+Hotel/Motel
+
+4,314
+4,314
+
+296,495
+296,495
+
+1,412
+9,735
+11,147
+
+500
+500
+
+179,396
+28,861
+208,257
+
+226,774
+-
+
+5,509
+-
+
+58,885
+175,022
+55,522
+
+16,101
+-
+
+5,055
+-
+
+226,774
+
+5,509
+
+289,429
+
+16,101
+
+Library
+
+TIRZ
+
+14,625
+14,625
+
+$
+
+-
+
+$
+
+(1,195) $
+
+7,066
+
+$
+
+(4,953) $
+
+(4,555) $
+
+75,664
+
+$
+
+(531,638) $
+
+-
+
+$
+
+6,082
+
+(438,903)
+
+$
+
+-
+
+$
+
+(1,195) $
+
+2,398
+2,398
+9,464
+
+$
+
+5,445
+5,445
+492
+
+$
+
+4,555
+4,555
+-
+
+$
+
+75,664
+
+$
+
+620,000
+620,000
+88,362
+
+$
+
+-
+
+$
+
+6,082
+
+632,397
+632,397
+193,494
+
+141,504
+156,129
+
+$
+$
+
+-
+
+$
+$
+
+3,917
+2,722
+
+401
+9,865
+
+$
+$
+
+34,215
+34,707
+
+$
+$
+
+1,678
+1,678
+
+$
+$
+
+603,978
+679,642
+
+$
+$
+
+47,421
+135,783
+
+$
+$
+
+3,182
+3,182
+
+$
+$
+
+165,500
+171,582
+
+$
+$
+
+PAGE 66
+
+$
+$
+
+1,001,796
+1,195,290
+
+CITY OF MERCEDES
+COMBINING STATEMENT OF REVENUES, EXPENDITURES AND CHANGES IN FUND BALANCE - NONMAJOR
+GOVERNMENTAL FUNDS
+For the Year Ended September 30, 2023
+
+PPFCO Series
+2015
+REVENUES:
+5610
+Investment Earnings
+5700
+Other Revenue
+TOTAL REVENUES
+
+$
+
+Excess(Deficiency) of Revenues Over(Under)
+Expenditures
+Net Change in Fund Balances
+Fund Balance - October 1 (Beginning)
+Fund Balance - September 30 (Ending)
+
+$
+$
+$
+
+PAGE 67
+
+172
+172
+
+Series
+2015
+$
+
+-
+
+172
+
+-
+
+172
+3,501
+3,673
+
+$
+$ 2,439
+$ 2,439
+
+Series 2018
+
+Street
+Maintenance
+
+Total Nonmajor
+Capital Project
+Funds
+
+$
+
+$
+
+$
+
+3,289
+3,289
+3,289
+
+$
+$
+$
+
+3,289
+61,635
+64,924
+
+1,005
+1,005
+1,005
+
+$
+$
+$
+
+1,005
+1,550
+2,555
+
+3,461
+1,005
+4,466
+4,466
+
+$
+$
+$
+
+4,466
+69,125
+73,591
+
+EXHIBIT C-1
+MERCEDES ECONOMIC DEVELOPMENT CORPORATION
+BALANCE SHEET
+GOVERNMENTAL FUNDS
+SEPTEMBER 30, 2023
+Data
+Control
+
+General
+Fund
+
+Codes
+
+1010
+1011
+1050
+1150
+1260
+1300
+1990
+1000
+
+2010
+2020
+2080
+2090
+2000
+
+ASSETS
+Cash and Cash Equivalents
+Restricted Cash and Cash Equivalents
+Taxes Receivable
+Notes Receivable, Net
+Due from City of Mercedes
+Due from Other Funds
+Redevelopment Assets
+Total Assets
+LIABILITIES
+Accounts Payable
+Wages and Salaries Payable
+Due to Other Funds
+Due to Others
+
+RBEG Grant
+Fund
+
+IRP Loan
+Fund
+
+Total
+Governmental
+Funds
+
+$
+
+1,025,511 $
+287,340
+364,126
+103,389
+341,324
+16,427
+3,313,791
+
+- $
+281,813
+553,078
+5,789
+-
+
+- $
+319,840
+175,685
+-
+
+1,025,511
+888,993
+364,126
+832,152
+341,324
+22,216
+3,313,791
+
+$
+
+5,451,908 $
+
+840,680 $
+
+495,525 $
+
+6,788,113
+
+$
+
+1,529 $
+6,553
+78,805
+
+- $
+-
+
+- $
+22,216
+-
+
+1,529
+6,553
+22,216
+78,805
+
+86,887
+
+-
+
+22,216
+
+109,103
+
+Total Liabilities
+
+3445
+3590
+3600
+
+FUND BALANCES
+Non-spendable Fund Balance
+Restricted Fund Balance
+Unassigned Fund Balance
+
+3,313,791
+341,324
+1,709,907
+
+840,680
+-
+
+473,309
+-
+
+3,313,791
+1,655,313
+1,709,907
+
+3000
+
+Total Fund Balances
+
+5,365,022
+
+840,680
+
+473,309
+
+6,679,011
+
+5,451,909 $
+
+840,680 $
+
+495,525 $
+
+6,788,114
+
+4000 Total Liabilities and Fund Balances
+
+$
+
+68
+
+MERCEDES ECONOMIC DEVELOPMENT CORPORATION
+RECONCILIATION OF THE GOVERNMENTAL FUNDS BALANCE SHEET TO THE
+STATEMENT OF NET POSITION
+SEPTEMBER 30, 2023
+
+EXHIBIT C-2
+
+Total Fund Balances - Governmental Funds
+
+$
+
+6,679,011
+
+Amounts Reported for governmental activities in the statement of net position are different
+because:
+Capital assets used in governmental activities are not financial resources and, therefore, are
+not reported in the funds.
+
+33,042
+
+Long-term receivable due from the City of Mercedes is not available to pay current
+expenditures in the funds.
+
+338,537
+
+Right-to-Use lease liabilities used in governmental activities are not due and payable in the
+current period and, therefore, are not reported in the funds.
+Interest on long-term debt is not accrued in the governmental funds, but is recognized as an
+expenditure in the funds.
+
+(33,251)
+(5,969)
+
+Deferred outflows and (inflows) of resources related to net pension and OPEB Liabilities
+are not recognized in the governmental funds; however, they are recorded in the statement
+of net position under full accrual.
+Pension Outflows
+Pension Inflows
+OPEB Outflows
+OPEB Inflows
+
+101,798
+(57,873)
+5,211
+(7,693)
+
+41,443
+
+(127,777)
+(8,738)
+(3,381,233)
+
+(3,517,748)
+
+Long-term liabilities, including net pension and total OPEB liability are not due and payable
+in the current period and, therefore, are not reported in the funds.
+Net Pension Liability
+Net OPEB Liability
+Bonds and Notes Payable
+
+$
+
+Net position of governmental activities
+
+69
+
+3,535,065
+
+EXHIBIT C-3
+MERCEDES ECONOMIC DEVELOPMENT CORPORATION
+STATEMENT OF REVENUES, EXPENDITURES, AND CHANGES IN FUND BALANCES
+GOVERNMENTAL FUNDS
+FOR THE YEAR ENDED SEPTEMBER 30, 2023
+Data
+Control
+
+General
+Fund
+
+Codes
+
+RBEG Grant
+Fund
+
+Total
+Governmental
+Funds
+
+IRP Loan
+Fund
+
+REVENUES:
+5120 General Sales and Use Taxes
+5300 Intergovernmental Revenue and Grants
+5610 Investment Earnings
+5020
+
+$
+
+Total Revenues
+
+2,101,933
+130,226
+21,500
+
+$
+
+17,660
+
+$
+
+- $
+10,837
+
+2,101,933
+130,226
+49,997
+
+2,253,659
+
+17,660
+
+10,837
+
+2,282,156
+
+483,794
+
+1,850
+
+569
+
+486,213
+
+EXPENDITURES:
+Current:
+0100 General Government
+Conservation and Development:
+0650
+Economic Development and Assistance
+Debt Service:
+0710 Principal on Debt
+0720 Interest on Debt
+
+486,178
+
+-
+
+-
+
+486,178
+
+1,114,089
+75,495
+
+-
+
+25,816
+5,032
+
+1,139,905
+80,527
+
+Total Expenditures
+
+2,159,556
+
+1,850
+
+31,417
+
+2,192,823
+
+94,103
+
+15,810
+
+(20,580)
+
+89,333
+
+20,000
+
+-
+
+-
+
+20,000
+
+20,000
+
+-
+
+-
+
+20,000
+
+114,103
+
+15,810
+
+(20,580)
+
+109,333
+
+5,250,919
+
+824,870
+
+493,889
+
+6,569,678
+
+473,309 $
+
+6,679,011
+
+6030
+
+Excess (Deficiency) of Revenues Over (Under)
+Expenditures
+OTHER FINANCING SOURCES (USES):
+7949 Contributed Property
+1100
+
+7080
+
+Total Other Financing Sources (Uses)
+
+1200
+
+Net Change in Fund Balances
+
+0100
+
+Fund Balance - October 1 (Beginning)
+
+3000
+
+Fund Balance - September 30 (Ending)
+
+$
+
+70
+
+5,365,022
+
+$
+
+840,680
+
+$
+
+MERCEDES ECONOMIC DEVELOPMENT CORPORATION
+EXHIBIT C-4
+RECONCILIATION OF THE GOVERNMENTAL FUNDS STATEMENTS OF REVENUES,
+EXPENDITURES, AND CHANGES IN FUND BALANCES TO THE STATEMENT OF ACTIVITIES
+SEPTEMBER 30, 2023
+Net Change in fund balance - governmental funds
+
+$
+
+109,333
+
+Amounts reported in the statement of activities are different because:
+Repayment of long-term debt principal is an expenditure in the
+governmental funds but reduces the receivable in the statement of net
+position.
+
+1,139,905
+
+Current year right-to-use capital assets and right-to-use lease liabilities are
+expenditures in the fund financial statements, but should be shown as
+increases in capital assets, and decreases in lease liabilities. The net effect
+of removing the 2023 capital outlays is to decrease net position, while the
+net effect of removing the 2023 lease liabilities is to increase net position.
+
+(209)
+
+Repayment of notes receivable from the city are recorded as revenue in the
+governmental funds but reduces the receivable in the statement of net
+position.
+
+(130,226)
+
+Governmental funds do not accrue for interst expense on long-term debt.
+This is the net change in accrued interest payable for the year.
+
+5,082
+
+Under the modified basis of accounting used in governmental funds,
+expenditures are not recognized for transactions that are not normally paid
+with expendable and available financial resources. In the statement of
+activities, however, which is presented in the accrual basis, expenses and
+liabilities are reported regardless of when financial resources are available.
+Net Pension Liability
+Net OPEB Liability
+
+(5,537)
+(242)
+
+(5,779)
+$
+
+Change in net position of governmental activities
+
+71
+
+1,118,106
+
+ADRIAN WEBB, CPA
+Certified Public Accountant
+Edinburg, Texas
+
+Report on Internal Control Over Financial Reporting and on Compliance and Other
+Matters Based on an Audit of Financial Statements Performed in Accordance With
+Government Auditing Standards
+Independent Auditor's Report
+To the City Commission of
+City of Mercedes, Texas
+We have audited, in accordance with the auditing standards generally accepted in the United States of
+America and the standards applicable to financial audits contained in Government Auditing Standards
+issued by the Comptroller General of the United States, the financial statements of the governmental
+activities, the business type activities, the aggregate discretely presented component units, each major fond,
+and the aggregate remaining fund information of the City of Mercedes, Texas, as of and for the year ended
+September 30, 2023, and the related notes to the financial statements, which collectively comprise the City
+of Mercedes, Texas' basic financial statements and have issued our report thereon dated March 21, 2024.
+Internal Control Over Financial Reporting
+In planning and performing our audit of the financial statements, we considered City of Mercedes's internal
+control over financial reporting (internal control) as a basis for designing audit procedures that are
+appropriate in the circumstances for the purpose of expressing our opinions on the financial statements, but
+not for the purpose of expressing an opinion on the effectiveness of City of Mercedes's internal control.
+Accordingly, we do not express an opinion on the effectiveness of City of Mercedes’s internal control.
+A deficiency in internal control exists when the design or operation of a control does not allow management
+or employees, in the normal course of performing their assigned functions, to prevent, or detect and correct,
+misstatements on a timely basis. A material weakness is a deficiency, or a combination of deficiencies, in
+internal control such that there is a reasonable possibility that a material misstatement of the entity's
+financial statements will not be prevented or detected and corrected on a timely basis. A significant
+deficiency is a deficiency, or a combination of deficiencies, in internal control that is less severe than a
+material weakness, yet important enough to merit attention by those charged with governance. We consider
+the deficiencies described in the accompanying schedule of findings and questioned costs as items, 2023001 to be a significant deficiency.
+Our consideration of internal control was for the limited purpose described in the first paragraph of this
+section and was not designed to identify all deficiencies in internal control that might be material
+weaknesses or significant deficiencies and therefore, material weaknesses or significant deficiencies may
+exist that were not identified. Given these limitations, during our audit we did not identify any deficiencies
+in internal control that we consider to be material weaknesses. However, material weaknesses may exist
+that have not been identified.
+
+PAGE 72
+
+Compliance and Other Matters
+As part of obtaining reasonable assurance about whether City of Mercedes’ financial statements are free
+from material misstatement, we performed tests of its compliance with certain provisions of laws,
+regulations, contracts, and grant agreements, noncompliance with which could have a direct and material
+effect on the financial statement. However, providing an opinion on compliance with those provisions was
+not an objective of our audit, and accordingly, we do not express such an opinion. The results of our tests
+disclosed no instances of noncompliance or other matters that are required to be reported under Government
+Auditing Standards.
+City of Mercedes’ Response to Findings
+City of Mercedes, Texas' response to the findings identified in our audit is described in the accompanying
+schedule of findings and questioned costs. City of Mercedes, Texas' response was not subjected to the
+auditing procedures applied in the audit of the financial statements and, accordingly, we express no opinion
+on it.
+Purpose of this Report
+The purpose of this report is solely to describe the scope of our testing of internal control and compliance
+and the result of that testing, and not to provide an opinion on the effectiveness of the entity's internal
+control or on compliance. This report is an integral part of an audit performed in accordance with
+Government Auditing Standards in considering the entity's internal control and compliance. Accordingly,
+this communication is not suitable for any other purpose.
+
+ADRIAN WEBB, CPA
+Certified Public Accountant
+Edinburg, Texas
+March 21, 2024
+
+PAGE 73
+
+ADRIAN WEBB, CPA
+Certified Public Accountant
+Edinburg, Texas
+
+INDEPENDENT AUDITOR’S REPORT ON COMPLIANCE FOR EACH MAJOR
+PROGRAM AND ON INTERNAL CONTROL OVER COMPLIANCE REQUIRED BY THE
+UNIFORM GUIDANCE
+To the City Commission of
+City of Mercedes, Texas
+Report on Compliance for Each Major Federal Program
+We have audited the City of Mercedes, Texas’ compliance with the types of compliance requirements
+described in the OMB Compliance Supplement that could have a direct and material effect on each of the
+City of Mercedes, Texas’ major federal programs for the year ended September 30, 2023. City of Mercedes,
+Texas’ major federal programs are identified in the summary of auditor’s results section of the
+accompanying schedule of findings and questioned costs.
+Management’s Responsibility
+Management is responsible for compliance with federal statutes, regulations, and the terms and conditions
+of its federal awards applicable to its federal programs.
+Auditor’s Responsibility
+Our responsibility is to express an opinion on compliance for each of the City of Mercedes, Texas major
+federal programs based on our audit of the types of compliance requirements referred to above. We
+conducted our audit of compliance in accordance with auditing standards generally accepted in the United
+States of America; the standards applicable to financial audits contained in Government Auditing Standards,
+issued by the Comptroller General of the United States; and the audit requirements of Title 2 U.S. Code of
+Federal Regulations Part 200, Uniform Administrative Requirements, Cost Principles, and Audit
+Requirements for Federal Awards (Uniform Guidance). Those standards and the Uniform Guidance require
+that we plan and perform the audit to obtain reasonable assurance about whether noncompliance with the
+types of compliance requirements referred to above that could have a direct and material effect on a major
+federal program occurred. An audit includes examining, on a test basis, evidence about the City of
+Mercedes, Texas compliance with those requirements and performing such other procedures as we
+considered necessary in the circumstances.
+We believe that our audit provides a reasonable basis for our opinion on compliance for each major federal
+program. However, our audit does not provide a legal determination of the City of Mercedes, Texas
+compliance.
+Opinion on Each Major Federal Program
+In our opinion, the City of Mercedes, Texas, complied, in all material respects, with the types of compliance
+requirements referred to above that could have a direct and material effect on each of its major federal
+programs for the year ended September 30, 2023.
+
+PAGE 74
+
+Report on Internal Control over Compliance
+Management of the City of Mercedes, Texas, is responsible for establishing and maintaining effective
+internal control over compliance with the types of compliance requirements referred to above. In planning
+and performing our audit of compliance, we considered the City of Mercedes, Texas internal control over
+compliance with the types of requirements that could have a direct and material effect on each major federal
+program to determine the auditing procedures that are appropriate in the circumstances for the purpose of
+expressing an opinion on compliance for each major federal program and to test and report on internal
+control over compliance in accordance with the Uniform Guidance, but not for the purpose of expressing
+an opinion on the effectiveness of internal control over compliance. Accordingly, we do not express an
+opinion on the effectiveness of the City of Mercedes, Texas internal control over compliance.
+A deficiency in internal control over compliance exists when the design or operation of a control over
+compliance does not allow management or employees, in the normal course of performing their assigned
+functions, to prevent, or detect and correct, noncompliance with a type of compliance requirement of a
+federal program on a timely basis. A material weakness in internal control over compliance is a deficiency,
+or a combination of deficiencies, in internal control over compliance, such that there is a reasonable
+possibility that material noncompliance with a type of compliance requirement of a federal program will
+not be prevented, or detected and corrected, on a timely basis. A significant deficiency in internal control
+over compliance is a deficiency, or a combination of deficiencies, in internal control over compliance with
+a type of compliance requirement of a federal program that is less severe than a material weakness in
+internal control over compliance, yet important enough to merit attention by those charged with governance.
+Our consideration of internal control over compliance was for the limited purpose described in the first
+paragraph of this section and was not designed to identify all deficiencies in internal control over
+compliance that might be material weaknesses or significant deficiencies. We did not identify any
+deficiencies in internal control over compliance that we consider to be material weaknesses. However,
+material weaknesses may exist that have not been identified.
+The purpose of this report on internal control over compliance is solely to describe the scope of our testing
+of internal control over compliance and the results of that testing based on the requirements of the Uniform
+Guidance. Accordingly, this report is not suitable for any other purpose.
+
+ADRIAN WEBB, CPA
+Edinburg, Texas
+March 21, 2024
+
+PAGE 75
+
+CITY OF MERCEDES, TEXAS
+SCHEDULE OF FINDINGS AND QUESTIONED COSTS
+FOR THE YEAR ENDED SEPTEMBER 30, 2023
+I.
+
+Summary of the Auditor’s Results:
+Financial Section:
+A. The type of report issued:
+Unmodified Opinion
+B. Internal control over financial statements:
+Material Weakness(es) identified?
+
+No
+
+Significant Deficiency(ies) identified which
+were not considered material weaknesses?
+
+Yes
+
+C. Noncompliance material to the financial statements noted.
+
+No
+
+Federal Awards Section:
+D. The type of report issued:
+Unmodified opinion
+E. Internal control over Major Programs:
+Material Weakness(es) identified?
+
+No
+
+Significant Deficiency(ies) identified which
+were not considered material weaknesses?
+
+No
+
+F. Any audit findings disclosed that are required to be reported in
+accordance with the Uniform Guidance?
+
+No
+
+G. Identification of major programs:
+CFDA 21.027 COVID – 19 State and Local Recovery Funds (ARPA)
+H. Dollar threshold to distinguish between type A and type B programs:
+I. Auditee qualifies as a low-risk auditee
+
+PAGE 76
+
+$750,000
+No
+
+CITY OF MERCEDES, TEXAS
+SCHEDULE OF FINDINGS AND QUESTIONED COSTS - CONTINUED
+FOR THE YEAR ENDED SEPTEMBER 30, 2023
+II.
+
+Financial Statement Findings
+
+2023-001 Control Over Fund Accounting Adjustments (Significant Deficiency)
+Criteria:
+Internal controls should be suitably designed and implemented to ensure the accounting for General Fund, Special Revenue
+Funds, Debt Service Fund, and Capital Projects Funds are properly recorded in accordance with generally accepted
+accounting principles.
+Condition:
+We reviewed fund general ledgers as of September 30, 2023, and noted property taxes receivable, allowance for uncollectible
+property taxes, bond payables, due to/due from, and transfers in/out were not properly adjusted to the correct funds. As a
+whole, the net effect of the combined differences was immaterial, but on the fund level, they were considered significant.
+Also, deferred inflows of resources balances were the same as they were at the end of the previous fiscal year. The City is
+currently implementing processes and procedures to ensure the accounting for General Fund, Special Revenue Funds, Debt
+Service Fund, and Capital Projects Funds are properly recorded in accordance with generally accepted accounting principles.
+Cause:
+The City has not fully implemented appropriate processes and procedures to ensure that the above funds are recorded
+properly in accordance with generally accepted accounting principles.
+Repeat Finding:
+2022-001 (Significant Deficiency), 2021-001(previously Material Weakness), 2020-001(previously Material Weakness)
+Effect:
+Account balances related to property taxes receivable, allowance for uncollectible property taxes, bonds payable, due to/due
+from, transfers in/out were not properly adjusted to the correct funds, and GASB 68 and GASB 75 accounts were misstated
+and required adjustments.
+Recommendation:
+The City should keep improving and implementing internal controls to ensure revenues are recognized in accordance with
+generally accepted accounting principles.
+Corrective Action Plan
+See management corrective action plan.
+
+II.
+
+Findings Relating to Federal Awards and Questions Costs.
+None
+
+PAGE 77
+
+CITY OF MERCEDES, TEXAS
+STATUS OF PRIOR YEAR AUDIT FINDINGS
+FOR THE YEAR ENDED SEPTEMBER 30, 2023
+Federal regulations, Title 2 U.S. Code of Federal Regulations Section 200.511 states, "The auditee is responsible for followup and corrective action on all audit findings. As part of this responsibility, the auditee must prepare a summary schedule of
+prior audit findings." The summary schedule of prior audit findings must report the status of the following:
+• All audit findings included in the prior audit's schedule of findings and questioned costs and
+• All audit findings reported in the prior audit's summary schedule of prior audit findings except audit findings
+listed as corrected.
+
+Findings Related to the Financial Statements
+2022-001: Control Over Fund Accounting Adjustments
+Status: Not Corrected, see corrective action plan.
+2022-002: Capital Assets
+Status: Corrected.
+
+PAGE 78
+
+City of Mercedes, Texas
+SCHEDULE OF EXPENDITURES OF FEDERAL & STATE AWARDS
+For the Year Ended September 30, 2023
+Federal/State Grantor/
+Pass Through Grantor/
+Program Title
+
+Federal
+CFDA
+Number
+
+Pass-Through
+Entity Identifying
+Number
+
+Expenditures
+
+Federal Awards
+U.S. Department of Housing and Urban Development
+Passed through Urban County
+Community Development Block Grant 34th Year Entitlement Grant
+
+14.218
+
+B-21-UC-48-0501
+
+$
+
+144,758
+
+U.S. Department of Housing and Urban Development
+Passed through Hidalgo County Urban County
+Community Development Block Grant 35th Year Entitlement Grant
+
+14.218
+
+B-22-UC-48-0501
+
+$
+
+82,016
+
+$
+
+2,088,659
+
+$
+
+95,733
+
+$
+
+2,411,166
+
+U.S. Department of Treasury
+Direct Program
+American Rescue Plan
+
+21.027
+
+Department of Homeland Security
+Passed through the Texas Office of the Governor-Homeland Security
+Grants Division (HSGD)
+Hidalgo OPSG Project-Stonegarden-2021
+
+97.067
+
+Total Expenditures of Federal Awards
+
+79
+
+EMW-2021-SS-00062
+
+CITY OF MERCEDES, TEXAS
+NOTES TO THE SCHEDULE OF EXPENDITURES OF FEDERAL AWARDS
+FOR THE YEAR ENDED SEPTEMBER 30, 2023
+NOTE 1: SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES
+Basis of Presentation
+The accompanying schedule of expenditures of federal awards (the “Schedule”) includes the federal grant
+activity of the City of Mercedes, Texas. The information in the Schedule is presented in accordance with
+the requirements of Title 2 U.S. Code of Federal Regulations (CFR) Part 200, Uniform Administrative
+Requirements, Cost Principles, and Audit Requirements for Federal Awards (“Uniform Guidance”).
+Therefore, some amounts may differ from amounts presented in, or used in the preparation of the basic
+financial statements.
+Expenditures reported on the Schedule are reported on the modified accrual basis of accounting. These
+expenditures are recognized following the cost principles contained in the Uniform Guidance, wherein
+certain types of expenditures are not allowable or are limited as to reimbursement.
+NOTE 2: INDIRECT COST RATE
+The City has elected not to use the 10 percent de minimis indirect cost rate allowed under the Uniform
+Guidance.
+NOTE 3: FEDERAL LOANS AND LOAN GUARANTEES
+During the fiscal year ended September 30, 2023, the City had no outstanding federal loans payable or
+loan guarantees.
+NOTE 4: SUB-RECIPIENTS
+During the fiscal year ended September 30, 2023, the City did not have any sub-recipients.
+NOTE 5: NONCASH AWARDS
+During the fiscal year ended September 30, 2023, the City did not receive any non-cash assistance.
+NOTE 6: FEDERALLY FUNDED INSURANCE
+During the fiscal year ended September 30, 2023, the City had no outstanding federally funded insurance.
+
+PAGE 80
+
+CITY OF MERCEDES, TEXAS
+CORRECTIVE ACTION PLAN
+FOR THE YEAR ENDED SEPTEMBER 30, 2023
+Federal regulations, Title 2 U.S. Code of Federal Regulations §200.511 states, "At the completion of the audit, the auditee
+must prepare, in a document separate from the auditor's findings described in §200.516 Audit findings, a corrective action
+plan to address each audit finding included in the current year auditor's reports."
+
+2022-001 Control Over Fund Accounting Adjustments (Significant Deficiency)
+Corrective Action Plan
+The City is currently working on correcting this finding by ensuring all funds are monitored and reconciled monthly.
+Proposed Completion Date – September 30, 2024
+Contact Person – Nereida Perez, Finance Director
+
+PAGE 81

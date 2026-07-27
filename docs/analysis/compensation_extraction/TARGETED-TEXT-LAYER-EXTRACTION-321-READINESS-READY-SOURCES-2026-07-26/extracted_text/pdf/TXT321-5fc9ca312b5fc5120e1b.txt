@@ -1,0 +1,5797 @@
+STATE OF MICHIGAN
+DEPARTMENT OF LICENSING AND REGULATORY AFFAIRS
+EMPLOYMENT RELATIONS COMMISSION
+In the Matter of the Act 312
+Arbitration Between:
+MERC Case No. D13 F-0608
+TOWNSHIP OF PLYMOUTH
+Public Employer
+-and-
+
+·~"tJ
+
+PLYMOUTH TOWNSHIP FIRE FIGHTERS
+ASSOCIATION, I.A.F.F./LOCAL 1496
+
+rn
+(')
+
+rn
+2
+
+r~~
+
+Labor Organization
+
+0
+
+ACT 312 OPINION AND AWARD
+Micheal J. Falvo, Chairperson
+Elizabeth A. Young, Employer Delegate
+Daniel Phillips, Union Delegate
+
+APPEARANCES:
+FOR THE TOWNSHIP OF PLYMOUTH
+
+FOR THE PLYMOUTH TOWNSHIP
+FIRE FIGHTERS ASSOCIATION, LOCAL 1496
+
+Gregory T. Schultz
+Schultz & Young P.C.
+
+Michael L. O'Hearon
+Michael L. O'Hearon, PLC
+
+Richard M. Reaume, Township Supervisor
+Joann Coobatis, HR Director
+Nancy Conzelman, Township Clerk
+Mark Wendel, Fire Chief
+Joseph Heffernan, Plante & Moran
+Kelley Demiryon, Gallagher Benefit Services
+
+Daniel Atkins, Plymouth Township Fire Dept.
+Nancy Ciccone, Consultant
+Howard Bunsis, Eastern Michigan University
+John Smilnak, Schoolcraft College
+
+Thomas Petroni, Municipal Employees Retirement System
+James Koss, The Tegrit Group
+
+TABLE OF CONTENTS
+Background
+
+3
+
+Statutory Standards
+
+4
+
+Contested Issues and Last Best Offers
+
+6
+
+The Township’s Financial Condition
+
+21
+
+Management Rights – Part Time Firefighters
+
+28
+
+Food Allowance
+
+28
+
+Hazardous Materials Response Team Bonus
+
+30
+
+Overtime
+
+32
+
+Holiday Compensation
+
+35
+
+Physician’s Note For Sick Leave
+
+38
+
+Medical Leave Of Absence
+
+41
+
+Health and Fitness
+
+43
+
+Drug and Alcohol Policy
+
+46
+
+Vacation Accrual
+
+50
+
+Sick Time Accrual
+
+55
+
+Personal Days
+
+57
+
+Retire Health Care Eligibility
+
+58
+
+Pension Issues
+
+65
+
+Pension For New Hires
+
+68
+
+Pension Contribution
+
+71
+
+Pension Multiplier
+
+74
+
+Pension Amortization Period
+
+76
+
+Wages
+
+76
+
+Retiree Life Insurance
+
+78
+
+Recall Rights
+
+79
+
+Order of the Panel
+
+81
+
+
+
+
+2
+
+
+BACKGROUND
+The Plymouth Township Fire Fighters Association is the collective bargaining
+representative for members of the Plymouth Township Fire Department representing all full-time
+employees, including a Fire Inspector and Emergency Program Manager/Training Officer, if any,
+and excluding the Fire Chief, Assistant Fire Chief, office clerical employees and part-paid fire
+fighters.
+The expired collective bargaining agreement covered the period April 1, 2010 to March
+31, 2013.
+Plymouth Township is a charter township of Wayne County. It covers approximately 16
+square miles and the 2010 census was 27, 524. The primary governing body consists of a Board
+of Trustees comprised of three primary elected executives (Supervisor, Treasurer, and Clerk) and
+four additional at-large trustees. All seven members are elected to four-year terms. In addition to
+the union representing firefighters, five other bargaining units represent unionized employees.
+The Police Officers Association of Michigan (POAM) represents two groups: patrol officers and
+dispatchers/police service aides.
+
+The Command Officers Association of Michigan (COAM)
+
+represents police sergeants. Teamsters State County & Municipal Workers Local 214 represents
+employees in the Department of Public Works. The Technical, Professional and Office Workers
+of America (TPOAM) union represents employees in technical, professional and clerical
+classifications.
+The hearing commenced on January 23, 2014 and continued on January 28, January 29,
+February 4, and February 12, 2014. Post-hearing briefs were submitted on April 11, 2014. The
+th
+
+panel met in executive session on June 4, June 11 and June 18 .
+
+
+
+
+3
+
+
+STATUTORY STANDARDS
+Act 312 of 1969, MCL 423.321, as amended by Act 116 of 2011, is intended to
+implement the public policy of the state to provide an alternate, expeditious, effective and binding
+procedure for the resolution of labor disputes involving public safety employees. The legislature
+deemed interest arbitration a requisite to the high morale of public safety employees as well as
+the efficient delivery of public safety services.
+
+Section 9 provides that the panel’s findings,
+
+opinion and order shall be based on the following criteria.
+(a) The financial ability of the unit of government to pay. All of the following shall apply
+to the arbitration panel’s determination of the ability of the unit of government to pay:
+(i)
+The financial impact on the community of any award made by the arbitration
+panel.
+(ii)
+The interests and welfare of the public.
+(iii)
+All liabilities, whether or not they appear on the balance sheet of the unit of
+government.
+(iv)
+Any law of this state or any directive issued under the local government
+accountability act, 2011 PA 4, MCL 141.1501 to 141.1531, that places
+limitations on a unit of government’s expenditures or revenue collection.
+(b) The lawful authority of the employer.
+(c) Stipulations of the parties.
+(d) Comparison of the wages, hours, and conditions of employment of the employees
+involved in the arbitration proceeding with the wages, hours, and conditions of
+employment of other employees performing similar services and with other
+employees in both of the following:
+(i)
+Public employment in comparable communities.
+(ii)
+Private employment in comparable communities.
+(e) Comparison of the wages, hours, and conditions of employment of other employees
+of the unit of government outside of the bargaining unit in question.
+(f) The average consumer prices for goods and services, commonly known as the cost
+of living.
+(g) The overall compensation presently received by the employees, including direct
+wage compensation, vacations, holidays, and other excused time, insurance and
+pensions, medical and hospitalization benefits, the continuity and stability of
+employment, and all other benefits received.
+(h) Changes in any of the foregoing circumstances while the arbitration proceedings are
+pending.
+(i) Other factors that are normally or traditionally taken into consideration in the
+determination of employment through voluntary collective bargaining, mediation,
+fact-finding, arbitration, or otherwise between the parties, in the public service or in
+private employment.
+Public Act 116, which became effective on July 20, 2011, added a significant provision.
+(2) The arbitration panel shall give the financial ability of the local unit of government to
+pay the most significance, if the determination is supported by competent, material, and
+substantial evidence.
+
+
+
+
+4
+
+
+While Public Act 116 makes financial ability to pay the preeminent factor, this must be understood
+along side the Michigan Supreme Court’s explanation that the Legislature did not intend each
+Section 9 factor to be afforded equal weight.
+The Legislature has neither expressly nor implicitly evinced any intention in Act
+312 that each factor in § 9 be accorded equal weight. Instead, the Legislature has
+made their treatment, where applicable, mandatory on the panel through the use
+of the word shall in §§ 8 and 9. In effect then, the § 9 factors provide a
+compulsory checklist to ensure that the arbitrators render an award only after
+taking into consideration those factors deemed relevant by the Legislature and
+codified in § 9. Since the §9 factors are not intrinsically weighted, they cannot of
+themselves provide the arbitrators with answers. It is the panel which must make
+the difficult decision of determining which factors are more important in resolving a
+contested issue under the singular facts of a case, although, of course, all
+1
+“applicable” factors must be considered.
+The reader should not conclude that the failure to discuss every factor on each issue means it
+has not been considered since that is not the case.
+
+The most salient factors pertaining to
+
+particular issues are highlighted. All pertinent factors have been painstakingly considered. It
+should be understood that the word “panel” is used to signify a majority of the panel.
+
+The
+
+concurrence of a panel member in the disposition of a particular issue does not necessarily
+signify that he or she agrees with the chairperson's reasoning or statements.
+None of the panel’s awards will have retroactive effect. The parties initially stipulated that
+all issues are economic issues. Consequently, Section 8 requires the panel to adopt the last offer
+of settlement that more nearly complies with applicable Section 9 factors. The panel unanimously
+agreed to change the designation of two issues to non-economic.
+
+The record contains a
+
+stipulation that issues other than those considered in this hearing have been settled or waived
+and that all uncontested provisions of the prior agreement and any tentative agreements reached
+during negotiations are incorporated into the new agreement.
+At the chairperson’s urging the parties stipulated to a procedure for determining the
+comparable townships. The comparable communities considered by the panel are:
+1.
+2.
+3.
+4.
+
+Canton Township
+Harrison Township
+Independence Township
+Northville Township
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1
+   City of Detroit v. Detroit Police Officers Association, 408 Mich. 410, 484 (1980).
+
+
+
+
+
+5
+
+
+5. Redford Township
+6. West Bloomfield Township
+
+CONTESTED ISSUES AND LAST BEST OFFERS
+The parties initially submitted last best offers on 21 issues. One issue (use of part-time
+and on-call employees) was withdrawn by the Township during the hearing. The last offers of
+settlement for the unresolved issues are shown below with the Township’s listed first.
+
+
+
+
+TOWNSHIP’S LAST BEST OFFERS
+
+
+
+
+TOWNSHIP ISSUES
+1. Management Rights
+a. Use of part-time and on-call employees
+o
+
+Include language in the Agreement which reflects Township’s existing right to
+utilize paid on-call or part-time employees in any capacity
+
+CONTRACT LANGUAGE:
+Article 3, Management Rights Clause – Modify Section G as follows:
+.
+
+G.
+To hire new employees in either a paid on-call, part-time or full-time capacity
+without limit, including for fire suppression, fire prevention, paramedic/ALS services or for
+any combination of these duties; to assign and layoff employees subject to Act 78 (Act 78
+applies to full-time employees only) and this Collective Bargaining Agreement
+2. Food Allowance
+o
+
+Suspend Food Allowance for the life of the Agreement
+
+CONTRACT LANGUAGE:
+Article 5, Wages and Other Benefits – Modify Section F as follows:
+Firefighters and Fire Officers shall be paid an annual food allowance of $775.00 to be
+paid one-half on the second employee payday in the month of September and one-half
+on the second employee payday in the month of March. The Food Allowance shall be
+suspended during the term of the 2013-2016 Agreement.
+Food allowance is paid…
+
+
+
+3. Hazardous Materials Team Bonus
+o
+
+Hazardous Materials Bonus shall not be paid to any employee in any year in
+which the Township is penalized with lack of funds due to lack of participation
+
+CONTRACT LANGUAGE:
+
+
+
+
+6
+
+
+Article 5, Wages and Other Benefits – Modify Section G as follows:
+Employees selected to participate on the Hazardous Materials team shall receive an
+annual bonus of $1,500, paid in the second pay period of January for participation in the
+previous calendar year. An employee who was on the team for less than the entire
+previous calendar year shall receive a pro-rated bonus. Should the Township be
+penalized with any loss of funds based on the lack of employee participation, the bonus
+shall not be paid.
+4. Overtime – Mandatory overtime
+o
+
+Include language in the Agreement providing Township the right to mandate
+overtime for the purpose of equalizing overtime among bargaining unit members.
+
+CONTRACT LANGUAGE
+Article 5, Wages and Other Benefits – Add new Section D.7 to read as follows:
+7.
+The Township has the right to mandate an employee or employees to perform
+overtime for the purpose of equalizing overtime among full time employees.
+5. Holidays
+o
+
+Reduce number of hours paid for a Holiday from 12 hours per day to 8 hours per
+day
+
+CONTRACT LANGUAGE:
+Article 8, Holidays – Modify Section A as follows:
+A.
+The following calendar days, or calendar day customarily celebrated in lieu
+thereof, shall be holidays . . .
+Effective for the term of this Collective Bargaining Agreement, all Firefighters and
+Fire Officers shall receive, in addition to their regular pay, annual holiday pay for twelve
+and a half (12.5) holidays at the rate of 12 8 hours paid at individual employee’s straight
+time rate for each holiday
+...
+6. Retiree Life Insurance
+o
+
+Eliminate language which provides for $2,000 life insurance payment for retirees
+
+CONTRACT LANGUAGE:
+Article 14, Insurance – Modify Section G as follows:
+G.
+The Employer will provide retirees who leave the Fire Department . . . The
+Employer will also provide term life insurance for retirees in an amount not less than
+$2,000.00. A spouse who is divorced from a retiree, or who remarries after a retiree’s
+death, shall only be eligible for those benefits which the spouse would be permitted to
+obtain, by providing the Employer with the premium, under Federal laws regarding
+extended health care coverage. . .
+7. Sick Leave – Note from physician
+o
+
+
+
+
+Reduce the number of consecutive sick days an employee can be off before a
+doctor’s slip is required from 3 to 2
+
+7
+
+
+CONTRACT LANGUAGE:
+Article 12, Sick Leave and Disability Program – Modify Section E as follows:
+When more than After two (2) consecutive sick leave days are taken, a doctor’s
+slip is required prior to the starting time of the next duty day back to work.
+8. Leaves of Absence for medical reasons
+o
+
+Add language to Agreement to provide that an employee who has utilized all
+FMLA and all available sick leave, paid vacation and personal business may
+request an unpaid leave of absence for up to 1 year.
+
+CONTRACT LANGUAGE:
+Article 12, Sick Leave and Disability Program – Add new Section L to read as follows:
+L.
+Employees who have exhausted all FMLA time and who have exhausted all
+available sick leave, paid vacation and personal leave, may request an unpaid leave of
+absence without benefits. The maximum length of such unpaid leave shall be one year,
+which shall include the entire period of time the employee was off work for that particular
+illness or injury.
+9. Health Insurance
+a. PPO Base Plan
+o
+
+Modify PPO Base Plan to include a $1,000 deductible for single coverage and a
+$2,000 deductible for two-person/family coverage with an 80%/20% coinsurance
+with maximum co-pays of $2,500 for single coverage and $5,000 for family
+coverage
+
+b. PPO Prescription Co-Pay
+o
+
+c.
+
+Increase PPO prescription co-pays from $10 for generic prescriptions, $20 for
+formulary brand name prescriptions and $30 for nonformulary brand name
+prescriptions to $10 for generic prescriptions, $40 for formulary brand name
+prescriptions and $80 for nonformulary brand name prescriptions
+
+PPO Emergency Room Co-Pay
+o
+
+Increase PPO Emergency Room Visit Co-Pay from $50 to $150
+
+d. PPO Urgent Care Co-Pay
+o
+
+Increase PPO Urgent Care Co-Pay from $15 to $30
+
+e. PPO Office Visit Co-Pay
+o
+
+Increase PPO Office Visit Co-Pay from $15 to $30
+
+CONTRACT LANGUAGE for issues 9.a, 9.b, 9.c, 9.d and 9.e:
+Article 14, Insurance – Modify Sections C.1 and C.2, add a new Section C.3 (renumber
+remaining provisions) to read:
+
+
+
+
+8
+
+
+1.
+
+a. Prescription co-pay shall be $10.00 generic pharmaceutical, $20.00 brand
+name preferred and $40.00 brand name non preferred for the HMO. In those
+cases . . .
+b. Prescription co-pay shall be $10.00 generic prescriptions, $40.00 formulary
+brand name prescriptions and $80.00 nonformulary brand name prescriptions for
+the PPO.
+
+2.
+
+Office visit co-pay: (HMO: $30.00; PPO: $30.00). (ER Co-pay: (HMO: $100.00;
+PPO: $150.00). (UC Co-pay: (HMO: $35.00; PPO: $30.00).
+
+3.
+
+The PPO plan shall include a $1,000 deductible for each member and a $2,000
+deductible for two or more members with an 80%/20% coinsurance and
+maximum co-pays of $2,500 for each member and $5,000 for two or more
+members.
+
+34.
+
+Insurance Premium Sharing as follows: . . .
+
+45.
+
+Effective April 1, 2008 bargaining unit members . . .
+
+10. Retiree Health Insurance – Eligibility Age
+o
+
+Change eligibility to retiree health insurance so that employee must be at least
+52 years of age at the time of retirement to qualify for retiree health insurance
+
+CONTRACT LANGUAGE:
+Article 14, Insurance - Modify Section G as follows:
+G.
+The Employer will provide retirees who leave the Fire Department after have at
+least twenty- five (25) years of service and who are at least 52 years of age at the time
+the employee retires from the Department, and their spouses, with health insurance
+comparable to that provided full-time employees, including dental, optical and
+prescription drug riders, provided that benefits are coordinated with Medicare, Medicaid,
+and other benefits provided by subsequent employers or spousal employers. . .
+11. Part B Medicare Reimbursement
+Issue WITHDRAWN
+12. Pension
+a. Multiplier/FAC Determination
+o
+
+Modify pension to provide a bridged benefit to include a 2.8% multiplier prior to
+date of award with frozen FAC for that time period and a 2.0 multiplier for service
+beginning on date of award
+
+CONTRACT LANGUAGE
+Article 23, Retirement – Modify Section A as follows:
+A.
+
+
+
+
+Employees hired prior to May 6, 2012 shall be members of the MERS Defined
+Benefit Plan which shall include a 2.8% multiplier, Vest 10, FAC3, 80% max.
+Effective [insert date of Act 312 Arbitration Award], the pension shall consist of a
+bridged benefit with 2.8% for service prior to [insert date of Act 312 Arbitration
+Award], Frozen FAC for that service period, and 2.0% for service beginning
+
+9
+
+
+[insert date of Act 312 Arbitration Award]. The Employer shall be responsible for
+...
+b. Employee Contribution
+o
+
+Modify employee contribution to provide that the employee and the
+Township will share equally in the cost of pension
+
+CONTRACT LANGUAGE
+Article 23, Retirement – Modify Section A as follows:
+A.
+
+Employees hired prior to May 6, 2012 shall be members of the MERS Defined
+Benefit Plan which shall include a 2.8% multiplier, Vest 10, FAC3, 80% max. The
+Employer shall be responsible for contributions to the Plan up to 13.5% of payroll
+as defined by MERS (excludes food and clothing, ALS & EMT bonuses, sick time
+payouts and benefit opt outs). Should the actuarially determined cost of the Plan
+exceed 13.5%, members of the unit will be responsible for all additional
+contributions. Employer contributions shall not exceed 13.5% of MERS payroll,
+the employee remaining responsible for funding any actuarially determined costs
+which exceed 13.5% of payroll. Effective [insert date of Act 312 Arbitration
+Award] the actuarially determined cost of the pension plan shall be split equally
+(50%/50%) between the Township and the employees.
+c. Amortization Period
+o
+
+Reduce amortization period for MERS defined benefit plan to 15 years
+
+CONTRACT LANGUAGE
+Article 23, Retirement – Modify Section A as follows:
+A.
+
+Employees hired prior to May 6, 2012 shall be members of the MERS Defined
+Benefit Plan which shall include . . . Should the actuarially determined cost of the
+Plan exceed 13.5%, members of the unit will be responsible for all additional
+contributions. Employer contributions shall not exceed 13.5% of MERS payroll,
+the employee remaining responsible for funding any actuarially determined costs
+which exceed 13.5% of payroll.
+Effective as soon as possible following the date of the 312 Award, the
+amortization period utilized to compute the annual pension cost shall be 15
+years.
+
+
+
+13. Health and Fitness
+o
+
+Add new article requiring employees to be physically fit to perform their
+job.
+
+CONTRACT LANGUAGE:
+General - New Article entitled Health and Fitness to read:
+A.
+
+
+
+
+Physicals – The Township will provide each employee an annual
+comprehensive physical at the Township’s expense. This physical will be
+provided by a doctor or clinic established by the Township.
+
+10
+
+
+B.
+
+Fitness – All employees within the bargaining unit will maintain a physical
+fitness level necessary to perform in their job. This will include
+demonstrating such conditions by their actual job performance and/or
+completion of the Schoolcraft College Comprehensive Physical Agility
+Test (CPAT).
+Each employee must be physically fit to perform their job. Employee’s
+physical fitness will be reviewed annually by the Township. In the event
+that an employee is deemed physically unfit to perform their job based on
+the criteria detailed above, that employee will be placed on disability.
+The employee may elect to receive a physical from his/her own doctor. In
+the event that employee’s own doctor disagrees with the Township’s
+doctor, the two doctors will agree to a third doctor to examine the
+employee. If the third doctor certifies the employee physically fit to work,
+the employee will be returned to work. The cost of the doctor shall be
+shared equally by the Township and the Union. In the event that the third
+doctor deems the employee physically unfit to perform their job, the
+employee will remain off duty for a period of up to one year. If after one
+year an employee remains unable to perform their job, the employee will
+be separated from employment with the Township.
+
+14. Drug and Alcohol Policy
+o
+
+Modify current drug and alcohol policy in regard to impact of positive test
+result, consistent with current Police Policy, to provide the Township with
+an ability to discipline employees for a positive test
+
+CONTRACT LANGUAGE:
+Replace Section VII of the Drug and Alcohol Policy Attached to the 2010-2013
+Collective Bargaining Agreement as follows:
+VII.
+
+
+
+
+POSITIVE TEST; MANDATORY EMPLOYEE ASSISTANCE AND DISCIPLINE
+A.
+
+An employee who tests positive for illegal controlled or prescription
+substances, or alcohol, shall be required to participate in the Employee
+Assistance Program.
+Employees who successfully complete the
+program to the satisfaction of the program’s director or supervising
+physician shall not be disciplined for their drug use.
+
+B.
+
+Employees who refuse to participate or fail to complete the Employee
+Assistance Program as specified in (A) above, may be disciplined for
+their employment-related drug or alcohol use.
+
+C.
+
+Employees whose drug or alcohol use or prescription drug abuse is
+discovered by the Township in some manner other than by the drug test
+outlined in this policy/article shall be treated as if he/she had tested
+positive under this policy/article.
+
+D.
+
+Notwithstanding any other provision of this policy/article, where an
+employee engages in conduct which, given proof of his/her on-duty,
+impaired state, creates a risk of harm to any person, that employee may
+be disciplined appropriately in addition to being referred to the Employee
+Assistance Program.
+
+11
+
+
+VII.
+
+E.
+
+Notwithstanding any other provision of this Agreement, where an
+impaired employee violates the Rules and Regulations of the
+Department or any provision of the Collective Bargaining Agreement,
+that employee may be disciplined appropriately in addition to being
+referred to the Employee Assistance Program.
+
+F.
+
+The Township shall have the option to conduct as many as four (4)
+random drug tests on an employee who has completed the Employee
+Assistance Program in order to guarantee that the Program has been
+completed successfully. No such random test may be given more than
+two (2) years following the date of the employee’s completion of the
+program. A positive test result under this provision shall have the same
+effect as a positive test result under Section VII (D).
+
+G.
+
+An employee shall have the right to self-referral to the Employee
+Assistance Program no more than once in any three-year period, or
+three times during the employee’s career in the Fire Department. An
+employee may be referred once within their career by the Employer. An
+employee who tests positive after his/her right to utilize the Employee
+Assistance Program has expired under this subsection may be
+disciplined under the Collective Bargaining Agreement. The Township in
+its sole discretion, may permit an employee to avail him/herself of the
+Employee Assistance Program more frequently than provided in this
+subsection.
+
+Penalty
+Violation of any provision of this drug testing policy shall be grounds for disciplinary
+action. Discipline shall be administered in accordance with the Plymouth Township
+Fire Department's Rules and Regulations, and may include discharge from the Fire
+Department. Any discipline issued remains subject to review in accordance with
+the collective bargaining agreement.
+
+15. Layoff and Recall
+o
+
+Incorporate language into Agreement limiting right to recall to two years
+
+CONTRACT LANGUAGE:
+General – Add new Article entitled Layoff and Recall to read:
+Layoff and recall shall be governed by Act 78, except that employees shall remain on a
+layoff list for a period of two years, after which the employee shall no longer be eligible for
+recall.
+
+UNION ISSUES
+1. Duration
+The parties have agreed on a 3-year agreement effective April 1, 2013 through March 31,
+2016.
+
+
+
+
+12
+
+
+2
+
+Wages
+a.
+
+Wages Year 1 (April 1, 2013 to March 31, 2014)
+
+Township’s Position:
+b.
+
+Wages Year 2 (April 1, 2014 to March 31, 2015)
+
+Township’s Position:
+c.
+
+2% wage increase effective date of award.
+
+2% wage increase effective April 1, 2014
+
+Wages Year 3 (April 1, 2015 to March 31, 2016)
+
+Township’s Position:
+
+2% wage increase effective April 1, 2015
+
+CONTRACT LANGUAGE for Union issues 2.a, 2.b and 2.c:
+Article 5, Wages and Other Benefits – Modify Section B as follows:
+B.
+For firefighters the following annual salary schedules, which reflect a 2%
+wage increase on the date of the Award, a 2% increase effective April 1, 2014 and a 2%
+increase effective April 1, 2015 which reflect a 5% wage decrease effective May 14, 2012
+to be reinstated on March 30, 2013, will be effective:
+
+
+
+
+
+
+4/1/2010
+
+
+Start
+  (60%)*
+
+After
+  1
+  Year
+
+(68%)
+
+After
+  2
+  Years
+
+(75%)
+
+After
+  3
+  Years
+
+(82%)
+
+After
+  4
+  Years
+
+(90%)
+
+After
+   5
+   Years
+
+(100%)
+
+
+$38,230.29
+
+$43,327.64
+
+
+5/14/12
+
+
+
+(5%
+
+3/30/2013
+
+decrease)
+   (restoration)
+
+$36,318.78
+   $38,230.29
+
+$41,161.26
+   $43,327.64
+
+
+$47,787.84
+
+
+$45,398.45
+
+
+$47,787.84
+
+
+$52,248.04
+
+
+$49,635.64
+
+
+$52,248.04
+
+
+$57,345.43
+
+
+$54,478.16
+
+
+$57,345.43
+
+
+$63,717.13
+
+
+$60,531.27
+
+
+$63,717.13
+
+
+
+
+
+
+
+
+Start
+
+(60%)*
+
+After
+  1
+  Year
+
+(68%)
+
+After
+  2
+
+
+
+
+
+Date
+  of
+  Award
+
+(2%
+  increase)
+
+$38,994.90
+
+
+4/1/14
+
+(2%
+
+increase)
+
+$39,774.80
+
+
+4/1/15
+
+(2%
+
+increase)
+
+$40,570.30
+
+
+$44,194.19
+
+
+$45,078.07
+
+
+$45,979.63
+
+
+$48,743.60
+
+
+$49,718.47
+
+
+$50,712.84
+
+
+13
+
+
+Years
+
+(75%)
+
+After
+  3
+
+Years
+
+(82%)
+
+After
+  4
+
+Years
+
+(90%)
+
+After
+
+Years
+
+(100%)
+
+
+
+
+
+
+5
+
+
+$53,293.00
+
+
+$54,358.86
+
+
+$55,446.04
+
+
+$58,492.34
+
+
+$59,662.19
+
+
+$60,855.43
+
+
+$64,991.47
+
+
+$66,291.30
+
+
+$67,617.13
+
+
+*Percentage based on annual salary of a firefighter/EMT; year (i.e. “1 year”) means 1
+year from date of hire.
+All new hire firefighters shall be certified in accordance with the Michigan State
+Firefighting Training Council’s mandate for full-time Firefighter/Training Programs. Level
+II Firefighter Training Course and the Conference of Western Wayne Firefighter testing
+Program must be completed before hire. An applicant must possess a State of Michigan
+Paramedic License.
+For Fire Officers the following annual salary schedules, which reflect a 2% wage increase
+on the date of the Award, a 2% increase effective April 1, 2014 and a 2% increase
+effective April 1, 2015 5% wage decrease effective May 14, 2012 to be reinstated on
+March 30, 2013, will be effective:
+
+
+
+
+
+
+
+
+
+
+Lieutenant
+
+Captain
+
+Entry:
+
+After
+
+Months:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Lieutenant
+
+Captain
+
+Entry:
+
+After
+   Six
+
+Months:
+
+
+
+
+
+4/1/2010
+
+
+
+$68,262.48
+
+
+
+$70,138.00
+
+Six
+   $71,745.10
+
+
+Date
+  of
+  Award
+
+(2%
+  increase)
+
+$69,627.73
+
+
+
+$71,540.76
+
+$73,180.00
+
+
+14
+
+
+5/14/12
+
+3/30/13
+
+(5%
+
+(restoration)
+
+decrease)
+
+$64,849.36
+   $68,262.48
+
+
+
+
+
+$66,631.10
+   $70,138.00
+
+$68,157.85
+   $71,745.10
+
+
+4/1/14
+
+(2%
+
+increase)
+
+$71,020.28
+
+
+
+$72,971.58
+
+$74,643.60
+
+
+4/1/15
+
+(2%
+
+increase)
+
+$72,440.69
+
+
+
+$74,431.01
+
+$76,136.47
+
+
+
+
+3. Vacation Accrual
+Township’s Position:
+
+Status Quo
+
+CONTRACT LANGUAGE:
+No change in contract language
+4. Sick Time Accrual
+Township’s Position:
+
+Status Quo
+
+CONTRACT LANGUAGE:
+No change in contract language
+5. Personal Time Accrual
+Township’s Position:
+
+Status Quo
+
+CONTRACT LANGUAGE:
+No change in contract language
+6. Pension Plan Contribution
+Township’s Position:
+o
+
+Modify employee contribution to provide that the employee and the
+Township will share equally in the cost of pension
+
+CONTRACT LANGUAGE:
+See contract language presented in regard to Township issue number 12.b, above which
+includes a 50%/50% employee-Township split on the cost of the pension.
+7. Pension Plan for New Hires
+Township’s Position:
+
+Status Quo
+
+CONTRACT LANGUAGE:
+No change in contract language
+
+UNION’S LAST BEST OFFERS
+UNION ISSUES
+1.
+DURATION31, 2016.
+
+
+
+
+The parties have stipulated to a three (3) year contract expiring on March
+
+15
+
+
+2.
+WAGES- The Union proposes modifying Article 5, Section B of the collective bargaining
+2
+agreement as follows :
+B.
+For firefighters the following annual salary schedules, which reflect a 5% wage
+decrease effective May 14, 2012 to be reinstated on March 30, 2013, will be effective:
+
+
+
+
+
+
+4/1/2010
+
+Date
+  of
+
+Award
+
+(2%
+
+increase)
+
+
+Start
+  (60%)*
+
+
+$38,230.29
+
+$38,994.90
+
+After
+  1
+  Year
+
+$43,327.64
+
+(68%)
+
+$44,194.19
+
+After
+  2
+  Years
+
+$47,787.84
+
+(75%)
+
+$48,743.60
+
+After
+  3
+  Years
+
+$52,248.04
+
+(82%)
+
+$53,293.00
+
+After
+  4
+  Years
+
+$57,345.43
+
+(90%)
+
+$58,492.34
+
+After
+   5
+   Years
+   $63,717.13
+
+(100%)
+
+$64,991.47
+
+
+5/14/12
+
+
+
+(5%
+
+3/30/2013
+
+decrease)
+   (restoration)
+
+4/1/14
+
+4/1/15
+
+(2%
+
+(3%
+
+increase)
+
+increase)
+
+$36,318.78
+   $38,230.29
+
+$39,774.79
+   $40,968.03
+
+$41,161.26
+   $43,327.64
+
+$45,078.08
+   $46,430.42
+
+$45,398.45
+   $47,787.84
+
+$49,718.47
+   $51,210.02
+
+$49,635.64
+   $52,248.04
+
+$54,358.86
+   $55,989.63
+
+$54,478.16
+   $57,345.43
+
+$59,662.18
+   $61,452.05
+
+$60,531.27
+   $63,717.13
+
+$66,291.30
+   $68,280.04
+
+
+
+
+*Percentage based on annual salary of a firefighter/EMT; year (i.e. “1 year”) means 1 year from
+date of hire.
+All new hire firefighters shall be certified in accordance with the Michigan State Firefighting
+Training Council’s mandate for full-time Firefighter/Training Programs. Level II Firefighter
+Training Course and the Conference of Western Wayne Firefighter testing Program must be
+completed before hire. An applicant must possess a State of Michigan Paramedic License.
+For Fire Officers the following annual salary schedules, which reflect a 5% wage decrease
+effective May 14, 2012 to be reinstated on March 30, 2013, will be effective:
+
+
+
+
+4/1/2010
+
+Date
+  of
+
+award
+
+(2%
+
+increase)
+
+
+5/14/12
+
+(5%
+
+decrease)
+
+4/1/14
+
+(2%
+
+increase)
+
+
+3/30/13
+
+(restoration)
+
+4/1/15
+
+(3%
+
+increase)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2
+  The wage schedules are presented to represent the Union’s last offers of across-the-board
+wage increases of 2%; 2%; and 3% in each of the three respective years of the new contract;
+however, “Wages” has been pled as a separate and distinct issue in each year and the Panel is
+requested to rule on each year individually.
+
+
+
+
+
+16
+
+
+Lieutenant
+
+Captain
+
+Entry:
+
+After
+
+Months:
+
+
+$68,262.48
+
+$69,627.73
+
+
+
+$70,138.00
+
+$71,540.76
+
+Six
+   $71,745.10
+
+$73,180.00
+
+
+$64,849.36
+
+$71,020.28
+
+
+
+$66,631.10
+
+$72,971.58
+
+$68,157.85
+
+$74,643.60
+
+
+$68,262.48
+
+$73,150.89
+
+
+
+$70,138.00
+
+$75,160.72
+
+$71,745.10
+
+$76,882.91
+
+
+
+
+
+
+3.
+VACATION ACCRUAL- The Union proposes modifying Article 9, Section A of the
+collective bargaining agreement as follows:
+A.
+Effective January 1, 2015, As as of December 31st of the preceding year, each
+Firefighter or Fire Officer shall earn credit toward a vacation with pay in accordance with the
+following schedule:
+Less than one year
+1-4 years
+5-9 years
+10-12 years
+13-15 years
+Greater than 15 years
+
+3 days
+6 days
+8 days
+10 days
+12 days
+13 days
+
+Effective January 1, 2013 the following schedule shall apply:
+Less than one year
+1-4 years
+5-9 years
+10-15 years
+Greater than 15 years
+
+3 days
+6 days
+8 days
+9 days
+11 days
+
+4.
+SICK TIME ACCRUAL- The Union proposes modifying Article 12, Section A of the
+collective bargaining agreement as follows:
+A.
+Effective April 1, 1994 April 1, 2014, all employees on the payroll the first day of
+the month shall earn twelve (12) twenty four (24) hours sick time leave per month. All unused sick
+hours shall remain in a Sick Time Accumulation Bank. If an employee is off due to sickness or
+injury, he shall have any available sick hours deducted from his Sick Time Accumulation Bank for
+all hours missed due to illness or injury.
+5.
+PERSONAL TIME ACCRUAL- The Union proposes modifying Article 9, Section M of the
+collective bargaining agreement as follows:
+M.
+All Firefighters and Fire Officers shall be allowed time for the conducting of
+personal business without loss of pay or deduction from their sick bank. Commencing January 1,
+1998 January 1, 2014, such time cannot exceed forty-eight (48) hours per calendar year.
+Effective January 1, 2013, such time cannot exceed twenty-four (24) hours per calendar year.
+Requests and approval for personal business time shall not be for less than four (4) hours. Such
+time can be taken at any time subject to the operational needs of the Department, however only
+one employee will be allowed off on personal leave at a time except in an emergency situation.
+Personal time will not be refused on the basis of creating overtime. Absent an emergency
+
+
+
+
+17
+
+
+situation, all requests shall be in writing and approved by the Fire Chief. There will be no banking
+or accumulation of personal business hours from one year to another year, nor will there be any
+compensation paid for unused personal time, however an employee may carry eight (8) hours
+th
+over to the following year but must use these hours before January 5 of that year. Personal
+leave shall not be granted to probationary employees until they have completed six (6) months of
+employment. Effective January 1, 2005 and notwithstanding anything set forth above, personal
+time may be denied any time two employees from the same platoon are on vacation at the same
+time.
+6.
+PENSION PLAN CONTRIBUTIONS- The Union proposes modifying Article 23, Section
+A of the collective bargaining agreement as follows:
+A.
+Employees hired prior to May 6, 2012 shall be members of the MERS Defined
+Benefit Plan which shall include a frozen 2.8% multiplier for service prior to the date of the Act
+312 award in Case No. D13 F-0608 and a 2.5% multiplier thereafter, Vest 10, FAC3, 80% max.
+The Employer shall be responsible for contributions to the Plan up to 13.5% above 10% of payroll
+as defined by MERS (excludes food and clothing, ALS & EMT bonuses, sick time payouts and
+benefit opt outs). Should the actuarially determined cost of the Plan exceed 13.5%, members
+Members of the unit will be responsible for the first 10% of all additional actuarially determined
+required contributions. Employer Employee contributions shall not exceed 13.5% 10% of MERS
+payroll, the employee Employer remaining responsible for funding any actuarially determined
+costs which exceed 13.5% 10% of payroll. The amortization period shall be consistent with that
+prescribed in the MERS plan document or as recommended by MERS as the fiduciary of the plan
+funds.
+7.
+PENSION PLAN FOR NEW HIRES- The Union proposes modifying Article 23, Section B
+of the collective bargaining agreement as follows:
+B.
+Employees hired on or after May 6, 2012 shall participate in the same MERS
+Defined Benefit Plan described in Article 23, Section A, with the same contribution levels except
+that the multiplier shall be 2.0%. a defined contribution plan with John Hancock Life Insurance
+Company. The terms of the Plan Document for this pension plan and any Adoption Agreements
+adopted by the Township shall be controlling as to all matters concerning contributions, eligibility
+and other required matters. The Township shall contribute the following amounts each year to
+the pension plan: fifteen (15%) percent of the employee’s base wages. The employee shall
+make retirement contributions of five (5%) percent of his/her base wages (pre-tax) to the pension
+plan. The employee may contribute up to an additional ten (10%) percent of the employee’s base
+wages (after-tax) each year to the pension plan on a voluntary basis. The following schedule
+shall apply:
+1.
+
+Personal/Individual Contributions: Employees will be
+immediately vested for all individual contributions
+(100% vesting).
+
+2.
+
+Employer/Township Contributions:
+20% vested after completion of one (1) year of plan participation
+40% vested after completion of two (2) years of plan participation
+60% vested after completion of three (3) years of plan participation
+80% vested after completion of four (4) years of plan participation
+100% vested after completion of five (5) years of plan participatio
+
+
+
+
+18
+
+
+TOWNSHIP ISSUES3
+1.
+
+MANAGEMENT RIGHTS
+
+a.
+Use of part-time and on-call employees- The Union proposes modifying Article
+3, Section G of the collective bargaining agreement as follows:
+G.
+To hire new employees in either a paid on-call, part-time or full-time capacity, to
+assign and layoff employees subject to Act 78 (Act 78 applies to full-time employees only) and
+this Collective Bargaining Agreement; provided however, that full-time command officers on duty
+shall retain discretion as to the assignment of duties to paid on-call and part-time employees,
+including but not limited to fire suppression, fire prevention, and/or paramedic/ALS services,
+based upon his/her observation of those employees’ skills, qualifications and training;
+b.
+2.
+
+Withdrawn by Employer during scheduling conference.
+
+FOOD ALLOWANCE- The Union proposes that the status quo be maintained.
+
+3.
+HAZARDOUS MATERIAL TEAM BONUS- The Union proposes that the status quo be
+maintained.
+4.
+
+OVERTIME- The Union proposes that the status quo be maintained.
+
+5.
+
+HOLIDAYS- The Union proposes that the status quo be maintained.
+
+6.
+
+RETIREE LIFE INSURANCE- The Union proposes that the status quo be maintained.
+
+7.
+SICK LEAVE-NOTE FROM PHYSICIAN- The Union proposes that the status quo be
+maintained.
+8.
+LEAVE OF ABSENCE FOR MEDICAL REASONS- The Union proposes modifying
+Article 12 of the collective bargaining agreement by adding new Section L as follows:
+L.
+Employees who have used up all FMLA time and who have exhausted all
+available sick leave, paid vacation, and personal leave, may request and shall be granted an
+unpaid leave of absence without benefits. The maximum length of such unpaid leave shall be
+two (2) years, which shall commence on the date that the unpaid leave is granted.
+9.
+
+ACTIVE EMPLOYEES HEALTH INSURANCEa.
+
+PPO base plan- The Union proposes that the status quo be maintained.
+
+b.
+maintained.
+
+PPO prescription co-pay-
+
+c.
+maintained.
+
+PPO emergency room co-pay-
+
+d.
+
+The Union proposes that the status quo be
+The Union proposes that the status quo be
+
+PPO urgent care co-pay- The Union proposes that the status quo be maintained.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3
+  Numbered to correspond to the Respondent’s Answer to the Petition.
+
+
+
+
+19
+
+
+e.
+
+PPO office visit co-pay- The Union proposes that the status quo be maintained.
+4
+
+10.
+RETIREE HEALTH INSURANCE-ELIGIBILITY - The Union proposes that the status quo
+be maintained.
+11.
+
+Withdrawn by Employer during scheduling conference.
+
+12.
+
+PENSION -
+
+5
+
+a.
+Multiplier/FAC Determination- The Union’s last offer of settlement on this issue is
+contained in the Union’s last offer of settlement for Union Issues 6 & 7.
+b.
+Employee Contribution- The Union’s last offer of settlement on this issue is
+contained in the Union’s last offer of settlement for Union Issues 6 & 7.
+c.
+Amortization Period- The Union’s last offer of settlement on this issue is
+contained in the Union’s last offer of settlement for Union Issue 6.
+13.
+HEALTH AND FITNESS- The Union proposes the following modifications to Article 19 of
+the collective bargaining agreement:
+PHYSICAL EXAMINATION
+PHYSICAL FITNESS AND EXAMINATION
+A.
+The Employer shall, at its expense, provide each Firefighter and Fire Officer with
+an annual physical examination every other year, including, but not limited to, chest x-rays and
+electrocardiograms.
+B.
+The initial examination to be provided shall be given as close as possible to the
+date of hire. The Employer shall receive a statement from the physician as to whether or not the
+employee is capable of performing the duties of a firefighter and the nature of any incapacity.
+C.
+At such time as an employee is determined to be unfit or incapable of performing
+the duties of a firefighter, he will be automatically placed on sick leave, pending a determination,
+pursuant to the provisions of Article 13 to be held within a reasonable time, that the illness or
+injury is found to be job-connected. At such time as the illness or injury is found to be
+   job-­‐
+
+connected,
+   the
+   employee’s
+   sick leave shall be reimbursed and the employee placed on “Onthe- Job Injury”. In the event that the employee’s illness or injury is found to be other than jobconnected, that employee would continue on sick leave until such time as sick leave and accrued
+vacation time is depleted and then that employee would be placed on medical leave of absence,
+without pay, for a maximum period of one (1) year. The employee may qualify for benefits under
+the Employer’s long term disability policy after the necessary elimination period. The applicable
+provisions of Act 78 of Public Acts 1935, as amended, are incorporated herein by reference.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4
+  Respondent’s Answer erroneously labeled this issue “Retiree Health Insurance – Eligibility
+Age”. As discussed in the scheduling conference, the Employer’s issue relates to the age to
+which a member of the bargaining unit must work in order to be eligible for retiree health care –
+NOT the age at which one would be eligible for coverage. As such, the issue has been relabeled
+by the Union to reflect the agreed meaning.
+
+5
+  The Union’s last offers of settlement on these three distinct Employer issues are integrated into
+single redrafts of Article 23, Sections A and B; however, because they are pled by the Employer
+as distinct issues, the Union expects the Panel to rule on each individually, adopting the language
+of the prevailing party on that issue, regardless of the fact that this could yield a “split decision” as
+to the overall draft of any specific contract section.
+
+
+
+
+
+20
+
+
+D.
+All members of the bargaining unit are encouraged to utilize the workout room for
+a minimum of one hour per duty day at a time when it does not conflict with their assigned duties.
+14.
+
+DRUG AND ALCOHOL POLICY- The Union proposes that the status quo be maintained.
+
+15.
+LAYOFF AND RECALL- The Union proposes the creation of a new Article of the
+collective bargaining agreement as follows:
+LAYOFF AND RECALL
+Layoff and recall shall be governed by Act 78, except that laid off employees shall remain
+on a recall list for a period of three (3) years from their date of layoff. Laid off employees who are
+not recalled within three (3) years of their layoff shall remain eligible for employment with the
+Township in different, similar, or identical departments, but shall no longer enjoy recall rights.
+
+THE TOWNSHIP’S FINANCIAL CONDITION
+A number of Act 312 arbitrators have noted that the phrase used in Section 9(a) – “the
+financial ability of the unit of government to pay” – is not self-defining. In one sense it might be
+said that a unit of government necessarily has the financial ability to pay as long as there exists
+sufficient cash flow to meet payroll. That is not the intended meaning. Subsections (i) – (iii)
+require that the panel take account of additional factors: (1) the financial impact on the
+community; (2) the interests and welfare of the public; and (3) all other financial liabilities.
+Exacting consideration of these criteria is imperative since Public Act 116 requires, if supported
+by substantial evidence, that the financial ability of the local unit of government to pay be
+accorded the most significance.
+The Township’s ability to pay case was presented by Joseph C. Heffernan. He is the
+partner in charge of Plante & Moran’s governmental sector professional standards. He has been
+a Certified Public Accountant for over three decades and serves or has served on numerous
+boards and task forces that set accounting standards. The Township retains Plante & Moran to
+audit the annual Comprehensive Annual Financial Report (CAFR) and to give an opinion whether
+the financial information is fairly presented.
+
+Mr. Heffernan stated that the panel’s view of the
+
+Township’s financial position should be based on a number of relevant measures. The latest
+
+
+
+
+21
+
+
+CAFR available at the time of the hearing was the report for the period ending December 31,
+2012.
+The general fund is a chief financial indicator. A fund balance has been compared to an
+individual’s checking account. It is the rollover amount available after expenditures are made
+added to the fund balance from the previous year that may yield a positive or negative number.
+TABLE 1 shows the General Fund Balance in recent years.
+
+TABLE 1 - GENERAL FUND BALANCES -– 2007– 2012
+2007
+2008
+2009
+2010
+2011
+2012
+
+$2,367,857
+$2,426,509
+$2,351,878
+$3,102,764
+$3,466,441
+$3,296,200
+
+The amount in the general fund balance includes funds that are not available to spend
+because there are restrictions on their use or the funds have already been assigned for capital
+improvements. Drug forfeiture funds can only be used for specified law enforcement purposes.
+This accounted for $1,201,775. The amount assigned for capital improvements was $229,762.
+The CAFR shows how net expenses have compared to total general revenue. The net
+expense is calculated by determining the expenses of various functions (general government, fire
+services, dispatch services, building inspections, planning and zoning, community service, and
+interest on long-term debt) and subtracting any program revenue that each of those categories
+bring in. The total general revenue category shows the amount the Township received from
+various sources (property taxes, state-shared revenue, golf course, investment earnings, gain or
+los on sales of assets, and capital grants and contributions.)
+
+The third column shows the
+
+difference with negative numbers placed in parenthesis. Revenue exceeded expenses in only
+one year.
+
+
+
+
+22
+
+
+TABLE 2 - TOWNSHIP NET EXPENSES & TOTAL GENERAL REVENUE
+
+2005
+2006
+2007
+2008
+2009
+2010
+2011
+2012
+
+NET EXPENSES
+
+TOTAL GENERAL REVENUE
+
+CHANGE
+
+($9,569,469)
+($10,383,139)
+($11,422,231)
+($14,206,274)
+($12,621,512)
+($10,908,774)
+($10,081,246)
+($10,321,365)
+
+$8,894,733
+$12,046,153
+$10,929,504
+$10,855,057
+$10,355,567
+$9,940,451
+$9,417,182
+$9,489,465
+
+($674,736)
+$1,663,014
+($492,727)
+($3,351,917)
+($2,265,945)
+($968,323)
+($1,612,817)
+($831,900)
+
+Mr. Heffernan explained that the third column shows “inter-period” equity, an accounting measure
+to determine whether the cost of all services provided by the Township is lesser or greater than
+the amount of revenue the Township receives to pay that cost.
+Public safety services account for approximately 70% of the Township’s expenses. The
+largest expenditure is for police services followed by fire services followed by dispatch services.
+Salaries and fringe benefits account for approximately 85% of expenses in those categories.
+TABLE 3 shows the breakdown between costs for the fire services and program revenue from
+the fire service. The third column shows the amount by which costs exceed revenues. The
+sizeable revenue decline in 2012 resulted from the City of Plymouth terminating a contract with
+the Township to provide fire services.
+TABLE 3 - FIRE SERVICE COSTS AND REVENUES
+
+2005
+2006
+2007
+2008
+2009
+2010
+2011
+2012
+
+EXPENSES
+
+REVENUE
+
+DIFFERENCE
+
+$3,625,384
+$3,580,155
+$4,106,463
+$4,892,427
+$4,742,587
+$4,848,334
+$3,867,588
+$3,689,812
+
+$ 986,341
+$1,044,466
+$1,054,601
+$1,180,589
+$1,032,730
+$1,027,083
+$1,164,927
+$ 138,127
+
+($2,639,043)
+($2,535,689)
+($3,051,862)
+($3,711,838)
+($3,709,857)
+($3,821,251)
+($2,702,661)
+($3,551,685)
+
+The largest source of revenue is property tax. As is true throughout Michigan and the
+nation declines in housing prices have significantly diminished the amount of property taxes
+collected in recent years. TABLE 4 lists the amounts collected from 2005 to 2012.
+
+
+
+
+23
+
+
+TABLE 4 -- PROPERTY TAX REVENUE BY YEAR
+YEAR
+2005
+2006
+2007
+2008
+2009
+2010
+2011
+2012
+
+AMOUNT
+$6,027,556
+$7,644,192
+$7,964,654
+$8,113,054
+$8,052,290
+$7,361,094
+$6,884,658
+$6,847,047
+
+Recent improvements in the housing market do not translate into a commensurate
+increase in property taxes. Under Proposal A of 1994 unless a property is sold or transferred
+property taxes cannot increase on an annual basis more than the rate of inflation as determined
+by the Consumer Price Index (CPI) or five percent, whichever is less. The inflation rate has not
+recently exceeded five percent.
+State shared revenue is the second largest source of revenue. Revenue sharing funds
+are in two categories: constitutional and statutory. The first category consists of a proportionate
+share of state sales and use taxes and is calculated on population.
+
+Northville Township’s
+
+population according to the 2010 census is 27,524. The amount of statutory revenue sharing is
+determined year-to-year by the Legislature and it can reduce non-constitutional revenue sharing if
+the state needs the money for its own budget. The amount of non-constitutional revenue sharing
+is determined by the achievement of specified benchmarks in the Economic Vitality Incentive
+Program (EVIP).
+
+However, Plymouth Township has not been eligible for non-constitutional
+
+revenue sharing since 2010 but it is still required to report EVIP information three times a year.
+The improving state economy resulted in an increase of state revenue sharing for the last three
+years. Mr. Heffernan expects the trend to continue with increases at least at the rate of inflation.
+The state shared revenue in 2012 was approximately $2,000,000.
+Mr. Heffernan explained that for over a decade employers in the private sector have
+been required to show unfunded pension and retiree health care (frequently referred to as OPEB
+– other post-employment benefits) as a liability on their balance sheets. This means that a
+company’s equity position has a subtraction for unfunded legacy costs.
+
+
+
+
+24
+
+
+In government
+
+accounting, as long as the public employer pays the actuarially required contribution, the
+requirement has been to include this information in a footnote. The Governmental Accounting
+Standards Board is in the process of changing this standard.
+
+The Township’s legacy costs
+
+involve retiree health care and defined benefit pensions. The CAFR combines the liabilities of the
+police and fire defined benefit plans. TABLE 5 shows information for the fiscal year ending
+December 31, 2012.
+TABLE 5 -- POLICE & FIRE DEFINED BENEFIT PLAN (2012)
+Annual Pension Cost (APC)
+Percentage of APC contributed
+Actuarial Value of Assets
+Actuarial Accrued Liability (AAL)
+Unfunded Actuarial Accrued Liability (UAAL)
+Funded Ratio
+Covered Payroll
+UUAL as percentage of covered payroll
+
+$554,612
+100%
+$16,794,865
+$22,443,208
+$ 5,648,343
+74.8%
+$4,220,543
+133.8%
+
+The funded ratio in 2010 was 75.9% and it was 77.5% in 2011.
+Unlike the annual funding of the defined benefit plan, Plymouth Township has followed a
+pay-as-you-go system in retiree health care and accrued OPEB liabilities are currently funded at
+zero percent. As of December 31, 2012 the unfunded accrued OPEB liability was $21,475,601.
+Of this amount the Fire Department accounted for approximately 10.3 million, the Police
+Department 6.8 million, and all other employees about 4.4 million.
+In regard to pensions, Mr. Heffernan discussed the difference between an Act 345
+township and Plymouth Township that is not governed by Act 345. Under Act 345 the township is
+permitted to levy a tax that exactly matches required pension contributions. Act 345 must be
+adopted by a majority of voters. On another topic he stated that he is unaware of any municipal
+client that has changed from a defined contribution plan to a defined benefit plan. On crossexamination he conceded that closing a defined benefit plan to new employees who are placed in
+a defined contribution plan can have a very large up front cost.
+In summary, Mr. Heffernan concluded that the Township “should feel good” about being
+able to manage its short-term financial condition but on a long-term basis the Township should
+
+
+
+
+25
+
+
+not feel good at all. The Township’s post-hearing brief concludes on the basis of his testimony
+that Plymouth Township has a serious ability to pay issue.
+The Union’s expert on the Township’s financial condition is Dr. Howard Bunsis.
+
+Dr.
+
+Bunsis is an accounting professor at Eastern Michigan University and holds (among others) the
+Ph.D and J.D. degrees.
+
+Dr. Bunsis summarized his findings in an executive summary. He
+
+concluded:
+•
+
+The Charter Township of Plymouth is in solid financial condition.
+supported by:
+! Very strong bond rating
+! Solid reserves
+! Manageable level of debt
+! General Fund surpluses each year
+
+•
+
+The decline in taxable value of property and property tax revenues has almost completely
+subsided.
+There has been an improvement in the support from the state.
+Legacy costs associated with the fire department are not a significant drain on the
+Township’s resources, as the cash paid each year for these costs is very manageable
+There has been a significant decline in total costs of the fire department when compared
+to general/administrative expenses.
+
+•
+•
+•
+
+This conclusion is
+
+Dr. Bunsis prepared a “balance sheet” (technically called a Statement of Net Assets) for 20092012 that he says demonstrates “the Township is clearly not broke.” The information is shown in
+TABLE 6.
+TABLE 6 - STATEMENT OF NET ASSETS 2009 -2012 (in millions)
+
+2009
+2010
+2011
+2012
+
+TOTAL ASSETS
+
+TOTAL LIABILITIES
+
+NET ASSETS
+
+84.5
+83.8
+84.8
+87.4
+
+26.6 (31%)
+26.6 (32%)
+27.7 (33%)
+29.4 (34%)
+
+58.0 (69%)
+57.2 (68%)
+57.1 (67%)
+58.0 (66%)
+
+Dr. Bunsis testified that another important measure of financial condition is the ratio
+between the fund balance that is unreserved or unassigned for other purposes and total
+expenditures. This is used to demonstrate the adequacy of reserves. The ratio rose has risen
+considerably in the last six years. 12% (2007); 14% (2008); 16% (2009); 25% (2010); 29%
+(2011); and 23% (2012). A ratio between 5% and 15% is considered “okay” and the Township’s
+
+
+
+
+26
+
+
+ratio is higher than that. He stated that this is the main reason that the Township has received
+the “AA” bond rating.
+Dr. Bunsis noted that the Township has diverse revenue sources that show positive
+trends. Home sale prices continue to rise, state shared revenue continues to rise, and building
+permits are being issued at an increased rate.
+Dr. Bunsis conceded that his analysis concentrates more on short-term costs and less on
+legacy costs. He explained his reasoning. Although the defined benefit plan is underfunded the
+underfunding does not need to be paid off today. The combined required payment in 2012 of
+$554,612 for the police and fire defined benefit was 4.9% of total expenditures and the fire part of
+this was less than 2% of annual expenditures. He also testified that the failure to set aside assets
+for OPEB benefits is very common in both the private and public sector and what is most
+significant in assessing ability to pay is the annual cash cost of those benefits.
+In addition to the analysis by Dr. Bunsis, the Union claims that the Township has reaped
+a windfall by not filling vacant positions of nine firefighters on layoff, two retired firefighters, and
+one firefighter who resigned during the term of the last bargaining agreement.
+
+The Union
+
+maintains that the $1,331,694 SAFER grant to hire firefighters has strengthened the Township’s
+ability to pay.
+The Township contends that the testimony by Dr. Bunsis is unconvincing because he has
+never reached the conclusion in an Act 312 that the municipality does not have the ability to pay.
+The Township contends that its expert is more credible because he is the individual responsible
+for reporting on its finances.
+DISCUSSION ON ABILITY TO PAY
+The panel has not attempted to reiterate all of the financial information contained in the
+record. It is too voluminous. The panel has carefully examined all of the information and formed
+its own conclusions rather than adopting the opinions of either expert. The Township’s short-term
+and long-term financial ability to pay has been accorded the greatest weight of all of the Section 9
+factors. One of the Township’s two demands concerning health insurance has been adopted. It
+should be understood that the Union “winning” the pension “multiplier” demand means that
+
+
+
+
+27
+
+
+bargaining unit members will receive substantially less in retirement than they would have earned
+under the pension plan in the expired agreement. Several issues involve no or comparatively
+small costs. Finally, with regard to those issues having the greatest financial consequences, for
+the most part costs incurred from this award are not greater (and sometimes less) than costs
+incurred from the recently negotiated collective bargaining agreement with the POAMDispatchers/PSAs bargaining unit.
+
+The panel finds that the Township has the ability to pay the
+
+cost of the issues decided in this proceeding.
+
+ISSUES
+Management Rights – Part Time Firefighters (Township Issue)
+The Township elected to withdraw this issue from the panel’s consideration.
+
+Food Allowance (Township Issue)
+Bargaining Unit members receive an annual food allowance of $775 in two lump sum
+payments in March and September. The Township proposes to suspend this allowance for the
+term of the agreement and the Union seeks to maintain the status quo.
+No other Township employees receive a food allowance.
+
+Five of the six comparable
+
+townships have a food allowance.
+TABLE 7 – FOOD ALLOWANCE
+Canton Township
+Harrison Township
+Independence Township
+Northville Township
+Redford Township
+W. Bloomfield Township
+AVERAGE
+PLYMOUTH TOWNSHIP
+
+0
+$900
+$700
+$900
+$888
+$599
+$665
+$775
+
+TOWNSHIP’S POSITION ON FOOD ALLOWANCE ISSUE
+The Township seeks to suspend the food allowance for the term of the agreement rather
+than eliminate it. Supervisor Reaume explained that the Township made the demand because
+
+
+
+
+28
+
+
+Canton is a neighboring community and the food allowance was suspended. He stated that the
+Township has limited funds that it can provide for wages and benefits and that this means that an
+improvement in one area may require an offset in another category.
+
+He agreed that employees
+
+on a 24-hour shift need to eat during that time period. Section 9 requires the consideration of
+benefits accorded to other employees and no other employees receive a food allowance.
+UNION’S POSITION ON FOOD ALLOWANCE ISSUE
+If the Township’s demand is granted Article 5, Section 5 would be modified with the
+following addition: “The Food Allowance shall be suspended during the term of the 2013 – 2016
+Agreement.” The term of this agreement is April 1, 2013 to March 31, 2016. Because this benefit
+is paid in arrears the food allowance paid in March 2013 was earned during the term of the
+expired agreement. The same cannot be said, however, for the food allowance payment made to
+bargaining unit members in September 2013 and again in March 2014. The Union is concerned
+with the possibility that the Township would attempt to recoup food allowances already paid
+during the term of the expired agreement.
+
+Such a result would be manifestly injurious to
+
+bargaining unit members.
+DISCUSSION ON FOOD ALLOWANCE ISSUE
+The panel does not believe a discussion of the history of firehouse cooking is necessary.
+Employees who are confined to quarters for 24-hours unless called out to handle an emergency
+are in a class by themselves and cannot be compared to employees who work shorter shifts
+allowing them to eat meals in the customary manner. Although police officers are somewhat
+similar in the sense that eating comes second when their services are needed the comparison
+falls short because their shift is 12-hours. Something persuasive must be established to support
+a fundamental change in a longstanding benefit. That is lacking in this record.
+All of the comparable fire departments have a food allowance. While Canton did agree to
+the temporary suspension sought by the Township, according to the Union, this was a negotiated
+compromise to avoid a 5% pay reduction.
+
+As the Union points out the base salary for a
+
+Firefighter/Medic in Canton Township with 13 years seniority (the average seniority in the
+Plymouth Fire Department) is $9,000 more than in Plymouth. This sizeable salary gap weakens
+
+
+
+
+29
+
+
+the argument that a comparison to Canton is appropriate. The panel notes that the two percent
+pay increase in the first year of the agreement will increase the base pay of a newly hired
+firefighter from $38,230.29 to $38,994.90 but if the Township’s demand is awarded this increase
+of $764.71 would be wiped out by the suspension of the food allowance. The detrimental effect
+would be greater because presumably the employee would need to contribute to a meal fund.
+Based upon the record evidence and the criteria established by Section 9 of Act
+312, a majority of the panel finds that the Union’s demand on food allowance more closely
+corresponds to the applicable Section 9 factors.
+
+Hazardous Materials Response Team Bonus (Township Issue)
+The Township seeks to amend Article 5, Section G, to provide that the annual $1,500
+bonus for participating in the Hazardous Materials Response Team will not be paid in the event
+that the Township “is penalized with any loss of funds based on the lack of employee
+participation.” The Union proposes to maintain the status quo.
+The Plymouth Township Fire Department is a participant in the Western Wayne County
+Mutual Aid Association’s (WWCMMA) Hazardous Materials Response Team (HAZMAT). This
+mutual aid group was formed through an intergovernmental agreement to provide an emergency
+response of trained firefighters to incidents requiring specialized technical skills in order to
+mitigate an incident in a safe and effective manner consistent with nationally recognized
+practices.
+
+It is beyond argument that a multi-agency coordinated response to a potentially
+
+catastrophic event such as the derailment of a train carrying hazardous materials is crucial to the
+protection of life, property and the environment.
+Section 200.4.1 of the intergovernmental agreement provides that “each team member
+shall be released from duty or compensated for all required team responses and training [and] it
+is expected that members attend 100% of all training assignments.” Training is conducted one
+day per month. The municipality is assessed a penalty for non-attendance by its employee.
+The status of member communities whose required members miss three (3)
+training sessions within the calendar year will be reviewed by the Special
+Operations Committee (S.O.C.). The calendar year shall be considered January
+
+
+
+
+30
+
+
+st
+
+st
+
+1 through December 31 of each year. Member communities whose team
+members are absent for more than three (3) monthly training sessions in a
+calendar year will be subject to an assessment of $555 per member per month
+missed beyond the first three (3) meetings. Prior to making such an assessment,
+the SOC will review the circumstances pertaining to the absences and
+6
+recommend action to the Association’s Executive Board.
+In December 2012 the Township was required to pay a $5,000 penalty because the
+designated Fire Department employee did not attend the requisite number of sessions. The
+Township concedes that subsequent to the hearing a prorated portion of the penalty was
+reimbursed but the panel has been unable to determine the exact amount.
+The representative from Plymouth Township attended 5 of 12 meetings in 2012. On four
+occasions he failed to attend for personal reasons (1-day scheduled vacation, 1-day sick children,
+and 2 days “absent” without further explanation). On three other occasions he was working and
+could not be released because of inadequate staffing.
+
+The Township has not disputed the
+
+Union’s assertion concerning those three days.
+TOWNSHIP’S POSITION ON HAZARDOUS MATERIAL RESPONSE TEAM BONUS
+Even though the penalty originally imposed was modified, the Township’s proposal
+should be adopted because an employee whose lack of participation triggers a penalty should not
+receive the bonus.
+
+The obvious intent of the bonus is to reward team members for full
+
+participation and it should not be paid when that participation is lacking. The proper way to look
+at the issue is that the employee is compensated for participation. Focusing on the reason why
+the employee did not attend misses the point.
+UNION’S POSITION ON HAZARDOUS MATERIAL RESPONSE TEAM BONUS
+On its face the Township’s argument may seem reasonable. However, a closer look at
+the underlying facts favors the Union’s position. The testimony established that prior to the layoff
+of nine firefighters the Plymouth Township Fire Department had two representatives on the team
+and there were no attendance issues because one was able to cover for the other.
+
+The
+
+Township’s decision to not replace the second team member created the situation. Supervisor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6
+
+   The panel is informed that the reference to “per member” in this provision is to the member
+community and that no penalty is assessed as long as one representative from the community
+participates in the monthly training session.
+
+
+
+
+
+31
+
+
+Reaume conceded that three of the seven absences resulted from staffing shortages.
+
+The
+
+Township’s proposal opts for a punitive solution to this problem because the full $1,500 bonus
+would be forfeited regardless of the amount of the penalty so that if there were a one-month
+penalty the Township would reap a $945 windfall.
+DISCUSSION ON HAZARDOUS MATERIAL RESPONSE TEAM BONUS
+Even though this issue currently affects only one member of the bargaining unit the panel
+discussed it at length. Each position has merits as well as shortcomings.
+As a signatory to the intergovernmental agreement the Township undertook a contractual
+obligation to release the team member to attend the monthly training. On three occasions the
+absence from training was the result of a management decision.
+
+Additionally, the panel is
+
+hesitant to permanently amend a provision when the identified problem is likely to resolve itself
+because staffing has now increased.
+
+The Union raises the valid concern that the proposal
+
+requires the full bonus to be forfeited even if the penalty is substantially less than $1500.
+The panel appreciates the Township’s concern with the language in the expired
+agreement. The panel is in complete agreement that an employee who absents himself from
+training resulting in the agency being assessed a fine for his non-attendance is not entitled to a
+bonus. The chairperson does not contemplate that the Township would withhold the bonus if the
+reason for non-attendance is that management denied permission to attend.
+Based upon the record evidence and the criteria established by Section 9 of Act
+312, a majority of the panel finds that the Township’s demand on hazardous material team
+bonus more closely corresponds to the applicable Section 9 factors.
+
+Overtime (Township Issue)
+Article 5(D) sets forth a detailed procedure for assigning shift overtime. Two “call-back”
+lists are maintained – one for officers and one for firefighters. If a fire officer is not available to fill
+that position a senior firefighter is called in on overtime.
+
+The article specifies that after the
+
+callback lists have been established they shall be maintained in such a manner so that the person
+with the lowest amount of callback time is at the top of the list. In practice this means that a
+
+
+
+
+32
+
+
+bargaining unit member can decline an overtime assignment even if his name is at the top of the
+list. The Township proposes to modify Article 5(D) with the following sentence: “The Township
+has the right to mandate an employee or employees to perform overtime for the purpose of
+equalizing overtime among full time employees.” The Union proposes to maintain the status quo.
+TABLE 8 shows the number of overtime hours worked during calendar year 2013 by employee.
+
+TABLE 8 - OVERTIME HOURS BY EMPLOYEE IN 2013
+Employee
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+
+Overtime Hours
+5.5
+12.75
+20.25
+88.25
+154.25
+239.75
+415.25
+498.50
+533.75
+571.75
+605.75
+1365.25
+1366.50
+
+TOWNSHIP’S POSITION ON OVERTIME EQUALIZATION
+Under the existing system some employees work virtually no overtime and some others
+work an unreasonable and unsafe number of overtime hours. For example, the 1366.50 hours
+worked by one employee represents 57 extra 24-hour shifts. During the period July 10, 2013 to
+July 19, 2013 that employee worked five consecutive 24-hour shifts, had two days off, and then
+worked another three consecutive 24-hour shifts.
+
+The panel should not ignore the increased
+
+potential for human error by a fatigued employee. The Union’s position that there is no problem
+with the status quo misses that point.
+UNION’S POSITION ON OVERTIME EQUALIZATION
+The issue before the Panel is not whether the Township can order bargaining unit
+members to work overtime in an emergency or at times when no one volunteers. The issue is
+whether, as a means of “equalizing” the amount of overtime worked by each member the
+
+
+
+
+33
+
+
+Township should have the right to order a particular bargaining unit member to work overtime
+despite the fact that another bargaining unit member is willing to work. While some overtime
+opportunities (such as vacations) are foreseeable that is often not the case. Frequently the
+situation arises without notice when someone calls in sick or has a personal emergency. A
+fundamental flaw in the proposal is that it contains no methodology by which the Township will
+determine when a particular member may be ordered to work overtime. The inability to make
+arrangements for child-care or other longstanding commitments could result in a manifest
+hardship because they could be ordered to work with no notice when they least expect it.
+Although Supervisor Reaume claimed that the proposal is intended to apply to foreseeable
+absences that limitation is missing from the proposal.
+For purposes of analysis the employee who worked 20.25 OT hours in TABLE 8 should
+be excluded because he is the fire inspector and is ineligible for shift overtime in the suppression
+division. The average overtime of the remaining 12 employees is 488.1 hours. Six employees
+worked more than the average number of hours while six worked fewer than the average number
+of hours.
+
+This does not support the contention that there is a significant problem with the
+
+assignment of overtime. Before granting the Township’s demand the Union and the panel are
+entitled to answers about how the proposal would work. Some unanswered questions are:
+•
+•
+•
+•
+•
+•
+•
+
+•
+
+How will the Township determine who will be ordered to work overtime?
+Will all six bargaining unit members below the average be susceptible to mandatory
+overtime at the whim of the Employer?
+Will only the member with the lowest number of hours be subject to the mandate?
+Will every member above the average be denied an overtime opportunity arbitrarily?
+Will the mandate be invoked every time there is any imbalance?
+Would the Employer have the right to order bargaining unit members who are on
+scheduled vacations to work overtime?
+If the bargaining unit member was out of town, out of the state, out of the country, or
+simply unreachable when the Employer called him to work an overtime shift, would that
+member be subject to discipline?
+If discipline were not automatic, what would be the standard for determining whether
+discipline should issue
+
+The Township has articulated no credible basis for preferring to pay overtime wages to one
+bargaining unit member rather than another.
+
+
+
+
+34
+
+
+DISCUSSION CONCERNING OVERTIME EQUALIZATION
+Apparently the Township decided that it was in its best interest to pay increased overtime
+as opposed to reducing the number of firefighters that were laid off. The recent recalls and new
+hires will significantly reduce the amount of overtime needed to fill shortages.
+The panel agrees that the Township has a legitimate concern if firefighters work too many
+24-shifts. However, the burden under Act 312 entails more than identifying a situation that merits
+remediation.
+The adoption of the Union’s status quo position is not based on the concern that the Fire
+Chief would equalize overtime in an arbitrary or punitive manner.
+
+The problem is that the panel
+
+cannot grant a proposal without an understanding of how it would work in day-to-day operations.
+Based upon the record evidence and the criteria established by Section 9 of Act
+312, a majority of the panel finds that the Union’s demand on overtime equalization more
+closely corresponds to the applicable Section 9 factors.
+
+Holiday Compensation (Township Issue)
+Article 8(A) of the expired agreement identifies 12 holidays (New Year’s Day, President’s
+Day, Memorial Day, Independence Day, Labor Day, Veteran’s Day, Thanksgiving Day, Day after
+Thanksgiving, Christmas Eve, Christmas Day, New Years Eve, and Martin Luther King Holiday.
+In addition to their regular pay, bargaining unit members receive annual holiday pay at the rate of
+12 hours paid at the straight time rate for each holiday. Good Friday is counted as one-half of a
+holiday. The Township proposes to reduce the 12 hours holiday pay rate to 8 hours.
+TABLE 9 shows the holiday pay received by other Township employees.
+TABLE 9 -- HOLIDAY COMPENSATION FOR TOWNSHIP EMPLOYEES
+UNIT
+Police Officers
+Command Officers
+Dispatchers
+General Employees
+DPW
+Non Union
+Firefighters
+
+
+
+
+HOLIDAY PAY
+12.5 holidays @ 8 hours straight time pay
+12.5 holidays @ 8 hours straight time pay
+12.5 holidays @ 8 hours straight time pay
+12.5 holidays @ 7.5 hours straight time pay
+12.5 holidays @ 8 hours straight time pay
+12.5 holidays @ 8/7.5 hours straight time pay
+12.5 holidays at 12 hours straight time pay
+
+35
+
+
+SHIFT LENGTH
+12 hours
+12 hours
+12 hours
+7.5 hours
+8 hours
+8/7.5 hours
+24 hours
+
+TOWNSHIP’S POSITION ON HOLIDAY COMPENSATION
+The Township’s proposal is intended to bring members of the IAFF bargaining unit in line
+with every other employee in the Township. The disparity that exists today results in bargaining
+unit members receiving 152 hours of holiday pay each year, while other Township employees
+receive either 93.75 or 100 hours of holiday pay annually.
+
+The suggestion that firefighters
+
+deserve more holiday pay because they work 24-hour shifts should be dismissed because it is
+not supported by internal comparables. For example, police and command officers work 12-hour
+shifts and are only paid 8 hours of holiday pay. Holiday pay represents an extra payment that is
+received regardless of whether an employee actually works on the holiday. Thus, there need be
+no correspondence between the length of a shift and the number of hours of holiday pay. Section
+9 explicitly recognizes the significance of equitable treatment among groups of employees.
+UNION’S POSITION ON HOLIDAY COMPENSATION
+Although the Township’s stated rationale for its proposal is to equalize benefits among
+employees, the testimony of its own witness does not support that argument. In response to a
+question on direct examination why the employees represented by TPOAM receive 7.5 hours of
+pay for each paid holidays she responded, “Because that’s the hours they work.” Similarly, she
+testified that non-union employees receive either 8 hours of 7.5 hours of holiday pay depending
+on the number of hours in their shift. When asked on direct examination why firefighters get more
+holiday pay than other Township employees, she inexplicably answered said that she did not
+know the reason. It is odd that she would not apply the same reasoning to firefighters as she
+applied to other Township employees: They get more hours pay because they work more hours
+in a normal workday.
+Police officers and firefighters are the only Township employees who receive less than a
+full day’s pay for each paid holiday.
+
+Police officers receive two-thirds and members of this
+
+bargaining unit receive one-half. However, there is an important point that is often overlooked.
+Although the annual salary of police officers and firefighters are often somewhat in parity the
+hourly rate of firefighters is substantially lower by virtue of the 24-hour shift schedule. The notion
+underlying the Township’s proposal that an hour’s pay is an hour’s pay from one Township
+
+
+
+
+36
+
+
+employee to another is unfounded in reality. The Township is seeking a 33% reduction to holiday
+compensation notwithstanding the fact that its members already receive the lowest proportion of
+a full day’s pay for each of the paid holidays despite having the longest workday.
+DISCUSSION ON HOLIDAY COMPENSATION
+As a preliminary matter, the panel notes that in the last Act 312 the Township prevailed in
+its demand to reduce the number of paid holidays in this bargaining unit from 13 days to 12.5
+days. That panel was convinced that the Township had made the case that a change was
+needed to “place the Union in line with all other employees in the Township.” In this proceeding
+the Township claims an additional concession is necessary in order to accomplish that goal.
+The panel is not writing on a clean slate. Almost a century ago an Associate Justice of
+7
+
+the United States Supreme Court claimed that a page of history is worth a volume of logic. In a
+mature bargaining relationship such as this one the give and take in a long past negotiation that
+led up to an agreement on a particular clause is sometimes unknown and unknowable. The
+panel makes this observation since it is relevant that at one point in the bargaining history the
+Township apparently agreed, or an Act 312 panel was convinced, that a difference in holiday pay
+between firefighters and other Township employees was merited.
+The panel agrees that avoiding substantial disparities in employee benefits is important.
+Employee morale can be adversely affected if there is a perception of unequal treatment.
+However, comparisons among bargaining units must be done cautiously. Ildiko Knott explained
+the point some years ago in a Fact-Finding Report involving the Lenawee County Board of
+Commissioners. (MERC Case No. L92 F-0095, July 5, 1983), p. 8.
+Bargaining units are not identical, nor are their negotiations. Each has a pattern
+of give and take of its own. The negotiation process must be flexible enough to
+recognize both similarities and differences. Neither an equal share nor equal
+sacrifice are necessarily valid ones. Each bargaining unit has its own rationale for
+wages and other determinations in collective bargaining. What one bargaining
+unit might gain or not gain in their negotiations with the County depends upon the
+particular circumstances of the negotiations, their bargaining history and their job
+market. These circumstances cannot be automatically transferred to another
+group. Each group must be judged on objective standards appropriate to that
+group.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7
+  New York Trust Co. v. Eisner, 256 U.S. 345, 349 (1921) (Holmes, J.)
+
+
+
+
+37
+
+
+In the panel’s view the Township’s stated rationale comes up short because it does not
+adequately recognize that each bargaining unit has its own rationale for what it seeks to achieve
+in collective bargaining.
+
+The provisions in the IAFF agreement should be judged on objective
+
+standards appropriate to the firefighting profession.
+
+There are stark differences between
+
+firefighters and other employees with regard to holidays. It is true that other Township employees
+work holidays and police officers do so regularly. But they do not work 24-hour shifts on holidays
+and this may explain why their collective bargaining agreement is different. Depending on how
+the schedule works out, a firefighter could work a 24-hour shift on Christmas two or three years in
+a row.
+
+Even the comparison to police officers works in favor of maintaining the status quo
+
+because an officer assigned to either 12-hour shift will still have the opportunity to spend at least
+some part of the day with family and friends.
+
+Employees in other bargaining units are not
+
+similarly situated and for that reason the Township’s equitable treatment argument is
+unconvincing.
+Based upon the record evidence and the criteria established by Section 9 of Act
+312, a majority of the panel finds that the Union’s demand on holiday compensation more
+closely corresponds to the applicable Section 9 factors.
+
+Physician’s Note for Sick Leave (Township Issue)
+Under the existing language a bargaining unit member is required to produce a “doctor’s
+slip” before returning to work when the employee has called in sick on three consecutive days.
+The Township’s proposal is to change this to two consecutive days. The Union proposes to
+maintain the status quo.
+With one exception all other bargaining agreements in the Township contain the current
+language in the IAFF agreement. The one exception is the TPOAM agreement that requires a
+note after calling off sick for two consecutive days.
+
+Non-represented employees must also
+
+produce a note after two consecutive days. TABLE 10 indicates the requirement in the external
+comparables.
+
+
+
+
+38
+
+
+TABLE 10 - PHYSICIAN’S NOTE REQUIREMENT
+DEPARTMENT
+
+REQUIREMENT
+
+Canton Township
+Harrison Township
+Independence Township
+Northville Township
+Redford Township
+West Bloomfield Township
+
+Note after 2 consecutive days
+Note after 3 consecutive days
+None
+Note after 2 consecutive days
+Note after 2 consecutive days
+None
+
+TOWNSHIP’S POSITION ON PHYSICIAN’S NOTE REQUIREMENT
+Although five of the six internal comparables have language that technically matches the
+current language the unique work schedule of firefighters necessitates a change. The Township
+th
+
+presented evidence that a typical work schedule would have an employee work on January 17 ,
+th
+
+th
+
+January 19 , and then not again until January 24 . Because a note would not be required on
+th
+
+th
+
+rd
+
+January 24 the employee could remain ill from January 17 until January 23 (a full week) and
+would not be required to present a physician’s note upon returning to work – despite an extended
+illness. The Township’s proposal seeks to ensure that employees with extended illnesses are
+able to return to work safely and that employees are not abusing sick time. The Township has a
+legitimate concern that citizens are not unnecessarily exposed to ill employees.
+UNION’S POSITION ON PHYSICIAN’S NOTE REQUIREMENT
+The only testimony offered by the Township’s witness on this issue is that the Township
+and Union had to “talk to” a couple of bargaining unit members concerning the usage of sick time.
+This falls short of demonstrating sick time abuse by bargaining unit members.
+The Union is mildly incredulous at the Township’s paternalistic bend in making this
+proposal. Every member of this bargaining unit is a trained health care professional. They are
+trained to know the difference between mild and common elements, such as a cold, and more
+serious physiological health threats. Bargaining unit members can be trusted to take appropriate
+steps to assure their health before returning to work.
+
+
+
+
+39
+
+
+DISCUSSION ON PHYSICAN’S NOTE REQUIREMENT
+Section 9(i) directs the Panel to take into consideration “factors that are normally taken
+into consideration” in voluntary collective bargaining, fact-finding, and arbitration in the public
+service or private employment.
+
+The predominant (if not universal) viewpoint is that a party
+
+proposing to alter a long-established contractual term needs to convincingly demonstrate that a
+change is necessary.
+Certainly this benchmark has not been met on the basis of abuse of sick time. Article
+12(G) provides that the improper use of sick time may result in disciplinary action and the panel
+cannot justify altering the contract to correct a problem of undefined dimensions without a
+showing that the traditional management tool of progressive discipline has been used but with
+unsatisfactory results.
+
+8
+
+Canton Township, Northville Township, and Redford Township have requirements that
+mirror the Township’s proposal.
+
+There are no contractual requirements for medical
+
+documentation in Independence Township and West Bloomfield Township. The requirement in
+Harrison Township mirrors the Union’s proposal. The record does not disclose whether the three
+townships that require a physician’s note have the same requirement for other employees.
+The Township advances the argument that Fire Department scheduling is unique in
+comparison with other employees and, of course, that is true. A typical schedule is:
+
+9
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8
+   The panel notes that a previous Act 312 panel denied this proposed change and concluded
+“the record evidence does not support any finding that the employees of the fire department are
+abusing sick leave privileges or that the present provisions of the labor agreement were not
+adequate to deal with the single case identified by the Township.” Charter Township of Plymouth
+& Plymouth Township Professional Firefighters Association, Local 1496, MERC Case No. D06 G1169, p. 62 (Ott, July 10, 2008).
+
+
+
+
+9
+  This
+
+is the work schedule for “C shift” for the period February 16 to February 23, 2014.
+Firefighters and fire officers work 56 hours a week based on an average of 52 weeks per year.
+The scheduling methodology is set forth in Article 6(B) which provides:
+All 56 hours per week employees shall work a 24-hour workday beginning at 8:00
+a.m. and terminating at 8:00 a.m. the following day. Each day off shall be 24
+consecutive hours and each employee shall work 3 days in every consecutive 9
+days. The work will be scheduled as W O W O W O O O O (W = Workday; O =
+Off Duty Day).
+
+
+
+
+
+40
+
+
+SUNDAY
+MONDAY
+TUESDAY
+WEDNESDAY
+THURSDAY
+FRIDAY
+SATURDAY
+SUNDAY
+
+WORK
+OFF
+WORK
+OFF
+OFF
+OFF
+OFF
+WORK
+
+The concern that ill employees be medically cleared in appropriate circumstances is
+reasonable. Among other reasons firefighters come into close contact with patients with impaired
+immune systems. However, the record is bereft of any non-theoretical concrete evidence that
+this is a problem in need of correction because sick firefighters are actually returning to work
+before they should do so. On the other hand the Union has convincingly demonstrated that
+granting the demand would impose an unjustified hardship. Expert testimony is not needed to
+understand what everyone knows. Most minor garden-variety ailments last a couple of days.
+
+If
+
+an employee has a cold that starts on Sunday but he feels fine by Wednesday it is questionable
+whether mandating a visit to the clinic on Saturday is a good idea. In the panel’s view granting
+this proposal would impose an unnecessary expense for the employee, create an unwarranted
+drain on the health care system, and not help the Township’s goal of curtailing overtime should
+there be a delay in scheduling an appointment.
+Based upon the record evidence and the criteria established by Section 9 of Act
+312, a majority of the panel finds that the Union’s demand on requiring a physician’s note
+more closely corresponds to the applicable Section 9 factors.
+
+Medical Leave of Absence (Township Issue)
+The expired agreement is silent on what happens when a bargaining unit member is
+unable to return to work after he has utilized all leave time as well as the 12-week leave under the
+federal Family and Medical Leave Act (FMLA). The Township proposes that once an employee
+has exhausted all available leave he may request an unpaid leave of absence that cannot exceed
+one year. Importantly, the Township’s proposal calculates the one-year period by including the
+
+
+
+
+41
+
+
+entire period the employee was off work for the particular illness or injury. The Union is willing to
+agree to a provision that addresses the period an employee is allowed to remain on a leave of
+absence for medical reasons.
+
+Its proposal requires the Township to grant a request for a two-
+
+year unpaid medical leave of absence without benefits, commencing with the date the leave is
+granted.
+TOWNSHIP’S POSITION ON MEDICAL LEAVE OF ABSENCE
+The Township’s proposal exceeds the 12-week FMLA required leave of absence. It is in
+line with the provision of the parties’ agreement which covers the situation when the employee is
+found unfit for duty after the annual physical examination. A one-year limitation is reasonable.
+UNION’S POSITION ON MEDICAL LEAVE OF ABSENCE
+No other bargaining unit within the Township has a collective bargaining agreement with
+a provision that limits its members to a one-year unpaid leave of absence for medical reasons.
+Three of the external comparables have no contractual language governing the maximum length
+of such leaves and the other three all provide the opportunity for unpaid leave in excess of one
+year. The Union’s proposal is clearly supported by the external comparables. The Union asserts
+that its proposal should be adopted because the Township’s proposal starts counting the oneyear from the date the employee was first injured or became ill. It makes no sense that the same
+days a member uses earned sick time could then be double-counted as unpaid leave.
+DISCUSSION ON MEDICAL LEAVE OF ABSENCE
+The parties disagree on the length of the leave of absence, whether the granting of the
+leave should be mandatory or discretionary, and whether the time period should include or
+exclude the entire time the employee was off work for that particular illness or injury. The panel
+finds it unnecessary to discuss the first two points since the third aspect of the Township’s
+proposal is unreasonable.
+Nothing in the record leads the panel to conclude that the Plymouth Township Fire
+Department is unique.
+
+Organizations typically have some employees who never (or almost
+
+never) use a sick day and others at the opposite end of the continuum that have little or no
+banked sick time because they use it frivolously. Employers highly value employees in the first
+
+
+
+
+42
+
+
+category and express appreciation in various ways ranging from congratulatory letters to financial
+incentives such as the partial reimbursement for unused sick time in this contract. As written the
+Township’s proposal would have the counterproductive result that the habitual sick time user
+could get a full year leave of absence and the conscientious employee with perfect attendance
+would end up with a much shorter time to recuperate from an incapacitating illness.
+
+The
+
+likelihood of this scenario occurring is not remote. The Union’s witness on this issue testified that
+he has banked sick time that would carry him through eight months. Under the Township’s
+proposal he would be limited to an unpaid medical leave of absence for only four months but an
+employee who squandered all of his sick time would have a one year medical leave of absence.
+The panel will not authorize that result.
+Based upon the record evidence and the criteria established by Section 9 of Act
+312, a majority of the panel finds that the Union’s demand on medical leaves of absence
+more closely corresponds to the applicable Section 9 factors.
+
+Health & Fitness (Township Issue)
+All issues in this proceeding have been denominated “economic.”
+
+Of course, Section 8
+
+of Act 312, as amended, as to economic issues requires the panel to adopt one or the other last
+offer of settlement. At the suggestion of the chairperson his co-panelists have stipulated that the
+designation of this issue should be changed to “non-economic.”
+In the panel’s view this important matter is not best decided based on the necessarily
+scant record evidence by an arbitrator whose expertise is in matters other than health and fitness.
+The sophistication on both sides of the table was unmistakably evident throughout the hearing
+and I am confident that jointly they can devise a better solution than would result from the
+adoption of either of these proposals.
+Labor Management Committees are not as widely used in the public sector as the private
+sector and that is unfortunate because they have become a mainstay of companies that have
+remained competitive in the marketplace. They are ideal for situations that are complex and
+require study.
+
+
+
+
+In large part they are successful because they foster recognition of mutual
+
+43
+
+
+interests as opposed to the “win-lose” dynamic that can be a characteristic of traditional collective
+bargaining. The benefits of better health and fitness to citizens and fellow firefighters are too
+obvious to require elaboration. The panel notes that the collective bargaining agreement for the
+Canton Township Fire Department contains a jointly negotiated “Employee Fitness Program” and
+the collective bargaining agreement for the Harrison Township Fire Department establishes a
+committee to make recommendations on a health fitness program.
+The chairperson is at liberty to state that the panel unanimously adopts the
+following as its award on this issue.
+A Health & Fitness Labor Management Committee comprised of two members
+designated by the Township and two members designated by the Union shall be
+formed. The committee shall meet no later than 45 days after the date of this
+award and at least three additional times in order to formulate a jointly prepared
+document for presentation to the Township. Meetings shall not be scheduled in a
+manner that imposes overtime costs. Any recommendations by the committee
+shall be advisory only. In the unforeseen circumstance that the committee
+cannot reach agreement on a program, or in the event that the Township does
+not adopt a recommended program in whole or in part, the Committee may be
+discontinued. No grievances shall be filed concerning the work of the committee.
+The panel does not retain jurisdiction.
+
+Health Insurance (Township Issue)
+The Township offers two alternative health insurance plans. The first is a HMO plan
+administered by the Blue Care Network. The other is a PPO administered by Blue Cross/Blue
+Shield of Michigan. If the PPO plan is selected the employee must pay the difference in the
+premiums between the HMO and PPO plans. The Township seeks to make changes in the PPO
+plan but not the HMO plan. At the present time all active Fire Department employees are in the
+HMO plan.
+
+The benefit levels are the same for both active employees and retirees.
+
+Approximately ten retirees are in the PPO plan. Retirees who retired prior to May 6, 2012 do not
+share in the premium cost of either plan. The proposed changes would result in a reduction in
+the cost of the coverage. TABLE 11 shows the current rates and the rates for the PPO plan with
+the requested changes.
+
+
+
+
+44
+
+
+TABLE 11 - CURRENT AND PROPOSED MONTHLY PPO RATES
+
+Single
+Couple
+Family
+Medicare-1 person
+Medicare-2 persons
+
+CURRENT RATES
+
+PROPOSED RATES
+
+$784.67
+$1883.20
+$2354.00
+$857.39
+$1714.78
+
+$532.53
+$1278.08
+$1597.61
+$611.31
+$122.62
+
+The Township proposes the following changes to the PPO plan:
+•
+
+•
+
+•
+•
+•
+
+Modify the base plan to include a $1000 deductible for single coverage (currently $100) and a
+$2000 deductible for two-person coverage (currently ($200) within 80%/20% coinsurance
+with maximum co-pays of $2500 for single coverage and $5000 for family coverage.
+Make the following changes to prescription co-pays
+Generic drugs
+$10 (no change)
+Formulary brand name
+$40 (currently $20)
+Non-Formulary brand name
+$80 (currently $30)
+Increase emergency room visit to $150 (currently $50). Waived if admitted.
+Increase urgent care visit co-pay to $30 (currently $15).
+Increase office visit co-pay to $30 (currently $15).
+TOWNSHIP’S POSITION ON HEALTH INSURANCE CHANGES
+Kelly Demiryan, Account Director for Gallagher Benefit services testified extensively
+
+about the changes. Her testimony established that the proposed increases are in line with typical
+copay and coinsurance requirements.
+
+She offered the same testimony with regard to the
+
+proposed increase for urgent care and office visits from $15 to $30. No changes have been
+made to the PPO plan in the last seven years during a period when the cost of health insurance
+has skyrocketed. Implementation of the Township’s proposal will help it achieve needed health
+care costs savings.
+UNION’S POSITION ON HEALTH INSURANCE CHANGES
+The PPO plan was one of the few economic benefits available to bargaining unit
+members that was unaffected by the last Act 312 award.
+
+The Township’s LBO increases
+
+deductibles tenfold and imposes an 80%/20% coinsurance requirement where none currently
+exists. The proposed costs to bargaining unit members and retirees for prescription drug
+increases equate to 100% for formulary brand names and 166% for non-formulary brand names,
+with all co-pays increasing 100% except emergency room visits which increase 200%. The fact
+
+
+
+
+45
+
+
+that these are fairly standard rates does not change the fact that the proposed increase is
+astronomical. These unacceptably large additional burdens are even more egregious due to the
+fact that the only participants currently in the PPO plan are approximately ten retirees. Retirees
+on fixed incomes will be hit with a completely unforeseen expense. The proposal is a blatant
+attack on retiree benefits that the panel should reject.
+DISCUSSION ON HEALTH INSURANCE CHANGES
+The Union’s brief uses the word “astronomical” and the Township’s brief uses the word
+“skyrocketed” and with regard to health care both words are apt descriptions. Notwithstanding
+the likely hardship on retirees who do not enroll in the HMO plan, the Township, like every other
+public and private employer, must seek ways to address rising costs. Both active members and
+retirees have the option of selecting the HMO plan with the $3000/$6000 deductible paid by the
+Township. There has been no testimony that active members enrolled in the HMO plan are
+dissatisfied. The panel considers it important that a retiree who does not have reasonable access
+(defined as a 30 mile residence of his or her residence) to a physician or hospital that participates
+in the HMO plan is entitled to obtain PPO coverage at HMO rates. The Township’s demand
+recognizes reality.
+Based upon the record evidence and the criteria established by Section 9 of Act
+312, a majority of the panel finds that the Township’s demand concerning health insurance
+more closely corresponds to the applicable Section 9 factors.
+
+Drug & Alcohol Policy
+The collective bargaining agreement between the parties includes, as an attachment, the
+Charter Township of Plymouth Drug Policy. The current policy was proposed by the Township
+and agreed to by the Union in 2005.
+The policy identifies four purposes: to establish and maintain a safe, healthy working
+environment for all employees; to ensure the reputation of the Plymouth Community Fire
+Department and its firefighters as good, responsible citizens worthy of public trust; to reduce the
+incidents of accidental injury to persons or property; and to provide assistance toward
+
+
+
+
+46
+
+
+rehabilitation for any employee who seeks the Fire Department’s help in overcoming any
+addiction, dependence upon, or problem with drugs.
+
+The policy encourages an employee
+
+experiencing substance abuse – with legal or illegal drugs, or alcohol – to voluntarily come
+forward to obtain help through the employee assistance program (EAP). It allows “rehabilitation
+leave” absences and health insurance coverage. Upon successful completion of treatment the
+employee will be returned to active status without reduction of pay or seniority. The Township’s
+proposal would not change any of these provisions.
+The change advocated by the Township concerns Section VII – “Positive Test;
+Mandatory Employee Assistance and Discipline.”
+
+If granted, the seven paragraphs now in
+
+Section VII would be deleted from the policy. Section VII currently states:
+
+
+
+
+A.
+
+An employee who tests positive for illegal controlled or prescription substances,
+or alcohol, shall be required to participate in the Employee Assistance Program.
+Employees who successfully complete the program to the satisfaction of the
+program’s director or supervising physician shall not be disciplined for their drug
+use.
+
+B.
+
+Employees who refuse to participate or fail to complete the Employee Assistance
+Program as specified in (A) above, may be disciplined for their employmentrelated drug or alcohol use.
+
+C.
+
+Employees whose drug or alcohol use or prescription drug abuse is discovered
+by the Township in some manner other than by the drug test outlined in this
+policy/article shall be treated as if he/she had tested positive under this
+policy/article.
+
+D.
+
+Notwithstanding any other provision of this policy/article, where an employee
+engages in conduct which, given proof of his/her on-duty, impaired state, creates
+a risk of harm to any person, that employee may be disciplined appropriately in
+addition to being referred to the Employee Assistance Program.
+
+E.
+
+Notwithstanding any other provision of this Agreement, where an impaired
+employee violates the Rules and Regulations of the Department or any provision
+of the Collective Bargaining Agreement, that employee may be disciplined
+appropriately in addition to being referred to the Employee Assistance Program.
+
+F.
+
+The Township shall have the option to conduct as many as four (4) random drug
+tests on an employee who has completed the Employee Assistance Program in
+order to guarantee that the Program has been completed successfully. No such
+random test may be given more than two (2) years following the date of the
+employee’s completion of the program. A positive test result under this provision
+shall have the same effect as a positive test result under Section VII (D).
+
+G.
+
+An employee shall have the right to self-referral to the Employee Assistance
+Program no more than once in any three-year period, or three times during the
+employee’s career in the Fire Department. An employee may be referred once
+within their career by the Employer. An employee who tests positive after his/her
+
+47
+
+
+right to utilize the Employee Assistance Program has expired under this
+subsection may be disciplined under the Collective Bargaining Agreement. The
+Township in its sole discretion, may permit an employee to avail him/herself of
+the Employee Assistance Program more frequently than provided in this
+subsection.
+The Township proposes to change the caption of Section VII to “Penalty” and replace those
+provisions with the following:
+Violation of any provision of this drug testing policy shall be grounds for disciplinary action.
+Discipline shall be administered in accordance with the Plymouth Township Fire
+Department's Rules and Regulations, and may include discharge from the Fire Department.
+Any discipline issued remains subject to review in accordance with the collective
+bargaining agreement.
+The POAM-Patrol group has agreed to this modification. The Union proposes to maintain the
+status quo.
+TOWNSHIP’S POSITION ON DRUG & ALCOHOL POLICY
+The Township’s proposal would not change existing policy concerning employees who
+seek help for substance abuse problems. Rather, it is intended to correct a problem. Section VII
+as currently written shields a firefighter who tests positive for the use of illegal controlled
+substances or alcohol from discipline provided he successfully completes an Employee
+Assistance Program. This is true even where the illegal substance or alcohol use occurs on duty.
+Particularly given the safety sensitive nature of the job of a firefighter, the current language is
+unacceptable to the Township. The proposed language comports with principles of just cause.
+The Township could not impose discipline without consideration of seniority and disciplinary
+record. The POAM-Patrol agreement is the most relevant internal comparable. Illegal drug and
+alcohol use by a police officer or firefighter creates obvious safety concerns for himself, his
+colleagues and the general public. The Union’s point that the Township proposed this language
+over a decade ago is not significant. Parties to a collective bargaining agreement are free to
+negotiate changes to mandatory terms and conditions of employment after contract expiration,
+irrespective of which party proposed the original language.
+
+
+
+
+48
+
+
+UNION’S POSITION ON DRUG & ALCOHOL POLICY
+The problem is that the Township first misinterprets Section VII and then uses that
+misinterpretation as justification for changing the policy. It is true that subsection A says that
+employees who test positive for drugs and who successfully complete the EAP are not to be
+disciplined. But subsections B, D, E, and F all provide for possible discipline of employees who
+test positive. Substance abuse is a treatable disease. Maintaining the status quo as the Union
+proposes provides a bit of a safety net for employees who find themselves in a challenging
+situation. The availability of the EAP after a positive test could transform a struggling employee’s
+life, enabling him to serve the community admirably for many years thereafter. It makes no
+sense, from a purely economic standpoint, that the Township would be willing to consider
+disposing of employees in whom it has invested so many years of training without so much as an
+attempt to rehabilitate and salvage them.
+DISCUSSION ON DRUG & ALCOHOL POLICY
+The Township is not to be faulted for having cautious attorneys who want to increase the
+likelihood that disciplinary action that may never occur will be upheld if it should occur. Section
+VII is not a model of clarity as proven by the contradictory conclusions reached by experienced
+counsel on the basic question whether a positive test can in the proper circumstances allow the
+imposition of discipline.
+
+It is noteworthy that there has never been the need to figure out the
+
+precise interplay between rehabilitation and discipline in language that a decade ago the
+Township and the Union deemed suitable.
+
+The parties cannot agree on what the current policy
+
+means but the panel is reluctant for that reason alone to adopt a substitute that raises a new set
+of questions. It is not clear that the Township’s proposal would not make the policy internally
+inconsistent because one of the intended purposes is to help firefighters overcome drug
+addiction. The panel is unsure that in view of that purpose the right course is to erase entirely the
+word “assistance” from Section VII.
+
+Since there have been no positive drug tests in this
+
+bargaining unit during the decade the policy has been in place it is most likely that there will be no
+future need to resolve these important but difficult questions.
+
+
+
+
+49
+
+
+Based upon the record evidence and the criteria established by Section 9 of Act
+312, a majority of the panel finds that the Union’s demand on the Drug & Alcohol Policy
+more closely corresponds to the applicable Section 9 factors.
+
+Vacation Accrual (Union Issue)
+Prior to the last Act 312 proceeding members with 10-12 years seniority accrued 10
+vacation days per year, members with 13 to 15 years seniority accrued 12 days, and members
+with more than 15 year seniority accrued the maximum annual vacation accrual of 13 days. The
+award collapsed the first two categories into a new category for members with 10 to 15 years
+seniority and reduced their accrual to 9 days while reducing the maximum accrual for members
+with more than 15 days seniority to 11 days. The Union seeks to restore the previous schedule.
+TABLE 12 is a comparison of the average number of vacation hours of the external
+comparables at 5, 10, 15 and 20 years. Although the record contains the information the panel
+has excluded vacation accrual over 25 years.
+TABLE 12 -- AVERAGE HOURS OF VACATION TIME
+
+10
+
+5 YEARS
+
+10 YEARS
+
+15 YEARS
+
+20 YEARS
+
+25 YEARS
+
+217
+
+277
+
+313
+
+329
+
+333
+
+PLY TWSHP HRS.
+(CURRENT)
+192
+
+216
+
+216
+
+264
+
+264
+
+HRS. UNDER
+AVE (CURRENT)
+
+25
+
+61
+
+97
+
+65
+
+69
+
+PLY TWSHP HRS
+(PROPOSED)
+
+192
+
+240
+
+288
+
+312
+
+312
+
+HRS UNDER
+AVE (PROPOSED)
+
+25
+
+37
+
+25
+
+17
+
+21
+
+AVERAGE HRS
+
+UNION’S POSITION ON VACATION ACCRUAL
+The last Act 312 panel’s opinion on this issue is as follows:
+With the Township’s economic stress its proposal to reduce vacation time
+modestly after 10 years in view of the number of hours worked by members of
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+10
+  Canton combines vacation and personal days.
+
+
+
+
+50
+
+
+the bargaining unit is reasonable. Vacation time along with sick time and
+personal time seems more than needed in relation to the hours worked. No other
+Township bargaining units operate on a 24-hour schedule which makes it unique
+in the Township. After carefully analyzing the evidence and all of the factors in
+section 9 of the Statute, the employers Last Best Offer.
+The Union asserts that the panel’s analysis confused days of work with hours of work.
+Firefighters work 122 24-hour shifts per year meaning that a typical bargaining unit member
+works 2,924 hours per year, while a typical employee working 40 hours per week only works
+2,080 hours per year.
+
+The additional 848 hours is the equivalent of asking these 40-hour
+
+employees to work and additional 21.2 weeks every year. The Union contends that, despite the
+Township’s asserted attempt to “equalize benefits among the various groups internally,” the
+award actually created an even greater disparity between firefighters and other Township
+employees. The Township remains consistently below average among the comparables when it
+comes to vacation accrual. At 10 years of service, the average among comparables is 277 hours
+compared to 216 hours for this bargaining unit.
+
+At 15 years of service the average of the
+
+comparables is 313 hours but Plymouth Township remains at 216.
+
+At the 20-year mark
+
+members of the bargaining unit accrue the maximum available 264 hours of vacation compared
+to the average of 329 hours.
+Comparisons should take account of relevant differences.
+
+Bargaining unit work is
+
+physically demanding, routinely requiring members to wear heavy protective clothing (bunker
+gear) and self-contained breathing apparatus (SCBA) weighing in excess of 50 pounds. They lift
+patients, drag heavy hoses, swing axes, handle heavy equipment like the jaws of life, and must
+be prepared to carry fire and accident victims at a moment’s notice. More significantly, with the
+possible exception of patrol officers, no other Township employees are subjected to having to
+repeatedly witness men, women, and children who are mortally wounded or gravely injured in the
+most horrific ways. Burn victims and victims of motor vehicle accidents suffer some of the most
+painful and disfiguring injuries imaginable. The members of this bargaining unit are the first ones
+on the scene to give aid and comfort to these victims and their distraught families. The mental
+stress and emotional toll this takes on each bargaining unit member makes the availability of
+vacation time and other paid time off a premium benefit, which is not only desirable, but
+
+
+
+
+51
+
+
+necessary for bargaining unit members to continue to effectively do their jobs in a healthy and
+well-adjusted manner.
+The previous Act 312 panel indicated that the Township’s “economic stress” was a factor
+in its decision. There is currently no economic stress to warrant leaving the members of this
+bargaining unit so far behind the comparables. The panel should adopt the Union’s last offer of
+settlement on this issue because on the record as a whole the Section 9 factors support such an
+award.
+TOWNSHIP’S POSITION ON VACATION ACCRUAL
+This is the first of three issues in which the Union seeks to reverse a modification that
+was awarded two years ago in the last Act 312 proceeding. That award is less than two years
+old. It is inappropriate and inefficient for the Union to propose the reversal of an award that is
+less than two years old. Absent some showing of change in circumstances, the 2012 award
+should remain undisturbed.
+The Township justified the proposal to reduce vacation accrual because of the great deal
+of time firefighters already have off each year. Bargaining unit members are typically scheduled
+to work on only approximately 122 days per year. After vacation time, sick time and personal
+time are counted, the number of required work-days per year drops down to approximately 100
+days out of 365 per year. In addition, bargaining unit members are entitled to trade days.
+
+In
+
+short, there is simply no shortage of time away from work for firefighters in the Township. As
+circumstances have not changed since the last Act 312 the Union’s proposal should be denied.
+DISCUSSION ON VACATION ACCRUAL
+Anticipating the counterargument, the Union’s advocate in opening statement disavowed
+that the Union’s objective in this proceeding is to “overturn” the prior Act 312 award setting the
+terms of the agreement that expired on May 21, 2013.
+
+According to his count the Union was
+
+awarded 3 out of 20 issues and it has brought forth only a few in order to achieve a “modicum of
+equity.”
+
+In his opening statement opposing counsel did assert that the Union’s goal is the
+
+“undoing” of the prior Act 312 award that, among other things, brought benefits for firefighters in
+
+
+
+
+52
+
+
+line with police officers and other township employees.
+
+Not surprisingly those themes were
+
+echoed in the post-hearing briefs.
+An arbitration award is not precedential in the sense that a decision by an appellate court
+is precedential and binding in subsequent proceedings. It is not unusual that an arbitrator is
+called upon to consider a prior arbitration award. In grievance arbitration most arbitrators look
+askance at one party’s attempt to “overturn” the decision of another arbitrator because grievance
+arbitration is intended to resolve disagreements and end disputes. Very few arbitrators think that
+the proper course is to decide the grievance as if it were a matter of first impression. More is
+required than the second arbitrator would have ruled differently had she received the case first. If
+the losing party wants a changed result it must be accomplished through negotiations.
+The approach of arbitrators in grievance arbitrations is not quite the same in interest
+arbitrations. The chairperson must assume full responsibility for the outcome on each issue
+based on the record in that proceeding.
+
+The panel cannot agree with the view that it is
+
+inappropriate for either the Union or the Employer to submit a recently decided issue in a
+subsequent Act 312 proceeding. In deciding the disposition of individual issues an arbitration
+panel considers the overall effect of the award and the rejection of an issue may not necessarily
+be for lack of merit but because only so much can be expected to be gained in one round of
+negotiations or one interest arbitration. What is a lower priority in one proceeding might be a high
+priority in the next.
+
+Nor is there any arbitral maxim that a benefit lost during an economic
+
+downturn is permanently lost. Of course, the same is true when an Employer fails to achieve
+some of its bargaining goals. In a sense both parties are seeking to “overturn” (the parties’ term)
+aspects of the last Act 312 because in several demands the Township is seeking to expand upon
+what that panel has already determined is appropriate.
+On the other hand, the panel agrees that findings in a prior Act 312 on the same issue
+should be carefully considered. It is commonplace in Act 312 proceedings that a party will make
+the same demand in successive interest arbitrations and the chances are slim that an issue that
+has been rejected several times will be adopted. The proponent of a previously rejected proposal
+ordinarily has an uphill climb to achieve a different result.
+
+
+
+
+53
+
+
+A recurring debate in this proceeding is whether the comparison between firefighters and
+other city employees should be on the basis of days (the Union’s position) or hours (the
+Township’s position). In the panel’s view it is more complicated than that. Neither is the correct
+answer on all benefit issues. On this issue the Union has articulated several reasons why the
+comparison should be made between firefighters and firefighters, rather than firefighters and
+other employees. However, that point standing alone is inadequate to grant the Union’s proposal.
+The Panel respectfully disagrees with the Township’s rationale, adopted by the previous
+panel, in one respect. The Township correctly observes that when sick time, personal time, and
+vacation time are combined the number of days a firefighter works drops to close to 100 days.
+The previous panel agreed with this reasoning: “Vacation time along with sick time and personal
+time seems more than needed in relation to the hours worked.” Sick time is not in the same
+category as vacation days or personal time days. An employee is not entitled to use a sick day
+unless he or a family member is ill. An employee who takes a sick day when he is not ill is
+subject to discipline. The collective bargaining agreement specifies that abuse of sick time is a
+disciplinary matter. Although neither side provided the data, it is doubtful that the Plymouth
+Township Fire Department is different than other employers. Some employees use no or few sick
+days and some are on the other end of the continuum. Sick time is a valuable benefit but it
+should not be used to determine whether employees have more time off than is needed. In
+addition to that reason the panel finds it significant that the financial condition of the Township
+has improved. The panel has been persuaded that a modest improvement in vacation accrual is
+justified by the Section 9 factors.
+
+The panel would prefer to restore vacation days on an
+
+incremental basis. If it had that option the panel’s award on vacation accrual would be:
+Less then one year
+1-4 years
+5-9 years
+10-12 years
+13-15 years
+15 years or more
+
+3 days
+6 days
+8 days
+9 days
+11 days
+12 days
+
+The panel cannot make that incremental award.
+
+
+
+
+54
+
+
+Based upon the record evidence and the criteria established by Section 9 of Act
+312, a majority of the panel finds that the Union’s demand on vacation accrual more
+closely corresponds to the applicable Section 9 factors.
+
+Sick Time Accrual (Union Issue)
+st
+
+Bargaining unit members earn 12 hours sick time leave per month. On January 1 of
+each year members are paid for one-half of hours in excess of 540 hours and the other one-half
+is credited to a supplemental sick leave bank.
+
+Upon termination of employment one-half of
+
+unused sick leave days (except in the supplemental bank) are paid up to a maximum of 540
+hours. The Union proposes to increase the amount of sick time leave to 24 hours per month.
+TABLE 13 shows the annual sick leave accrual for other Township employees.
+TABLE 13 - ANNUAL SICK LEAVE ACCRUAL
+BARGAINING UNIT
+COAM
+POAM/DISPATCH
+POAM/PATROL
+TPOAM
+TEAMSTERS
+NON-REPRESENTED
+IAFF (Current)
+IAFF (Proposed)
+
+ANNUAL SICK LEAVE ACCRUAL
+96 HOURS
+96 HOURS
+96 HOURS
+90 HOURS
+96 HOURS
+90/96 HOURS
+144 HOURS
+288 HOURS
+
+UNION’S POSITION ON SICK TIME ACCRUAL
+Members of this bargaining unit currently receive 12 hours sick time per month. This is
+one-half of the 24-hour shift. Members in the police patrol and COAM bargaining units receive 8
+hours sick time per month or two-thirds of the 12-hour shift. Township employees on 8-hour
+shifts receive 8 hours sick time each month.
+
+There are occasions when an employee becomes
+
+ill at work and needs to leave but the normal circumstance is that the employee needs a full sick
+time day. One sick day for a firefighter takes two months to earn and that is not the case for any
+other Township employee. Members of this bargaining unit are exposed to sick people on a
+regular basis making it likely that they will need to use more sick time than others. Of the external
+
+
+
+
+55
+
+
+comparables only West Bloomfield Township provides an equivalent sick time accrual. One-half
+of those departments accrue sick time at 24-hours per month.
+TOWNSHIP’S POSITON ON SICK TIME ACCRUAL
+Every other Township employee already receives substantially less sick leave than
+members of the Fire Department.
+
+The Union’s proposal would increase this amount to a
+
+whopping 288 hours, or 12 24-hour shifts per year. This would be three times as many sick leave
+hours as police officers and firefighters certainly do not work three times as many hours. The
+Township provides a supplemental sick bank intended to cover an illness or injury requiring an
+absence of more than two weeks until the employee is eligible for long-term disability.
+DISCUSSION CONCERNING SICK TIME ACCRUAL
+Like others this issue reveals the complexity of comparing 24-hour shifts to 12-hour or 8hour shifts. Under the Township’s way of thinking firefighters already receive more sick time
+hours than other employees and the Union’s demand would make the disparity much worse. To
+the Union’s way of thinking they are treated disadvantageously compared to others because the
+proper measure is days, not hours. This disagreement apparently has been going on a long time.
+Equity considerations aside, the panel is concerned with adopting a proposal without any
+indication of the impact on Township’s finances. Frequent exposure to ill patients is a good
+argument but the panel has no idea if bargaining unit members use more, the same, or fewer sick
+days than other employees. Employees are paid at the start of the year for one-half of sick time
+hours in excess of 540 hours. The proposed increase from 144 hours to 288 hours would affect
+these payouts. The panel declined to adopt the Township’s proposal on overtime equalization
+because it could not discern how it would work and for similar reasons will do the same here.
+Based upon the record evidence and the criteria established by Section 9 of Act
+312, a majority of the panel finds that the Township’s demand on sick time accrual more
+closely corresponds to the applicable Section 9 factors.
+
+
+
+
+56
+
+
+Personal Days (Union issue)
+In each of the other collective bargaining agreements the entitlement to personal days
+(described in some agreements as personal business days) is stated in days, not hours. In this
+agreement the description is in hours, not days. Article 9(M) in pertinent part states:
+All Firefighters and Fire Officers shall be allowed time for the conducting of
+personal business without loss of pay or deduction from their sick bank.
+Commencing January 1, 1998, such time cannot exceed forty-eight (48) hours
+per calendar year. Commencing January 1, 2013, such time cannot exceed (24)
+twenty-four hours per calendar year. Requests and approval for personal
+business time shall not be for less than four (4) hours.
+The reduction resulted from an award of the prior Act 312 panel.
+
+The Union seeks
+
+restoration of 48 hours for personal business days and the Township seeks to maintain the status
+quo.
+UNION’S POSITION ON PERSONAL DAYS
+Members of the patrol and command units work 12-hour shifts. Dispatchers and DPW
+employees work 8-hour shifts. Non-union and general employees work 7.5 hours. All Township
+employees except members of this bargaining unit receive two days per calendar year to attend
+to personal business, except employees in the Teamsters unit hired before November 14, 1966
+who receive three days. Members in this bargaining unit receive an hourly allotment equivalent to
+one normal workday.
+TOWNSHIP’S POSITION ON PERSONAL DAYS
+The Township again maintains that the Union’s attempt to reverse an award contained in
+the 2012 Act 312 should be rejected. The Township’s arguments were obviously persuasive to
+that panel and remain relevant.
+Because of their schedules firefighters have much greater flexibility in attending to
+personal business than other employees who work a Monday through Friday schedule. The
+Township advanced its demand to achieve parity and since nothing has changed the Union’s
+demand should be rejected.
+
+
+
+
+57
+
+
+DISCUSSION ON PERSONAL DAYS
+As concerns attending to one’s personal business, is one day (consisting of one 24-hour
+shift) qualitatively different from two days (comprised of 7.5, 8, or 12 hour shifts)? Should the
+measure be hours (the Township’s position) or days (the Union’s position)?
+
+As previously
+
+stated the panel believes there is not one correct answer that will cover every circumstance.
+During the hearing there was a debate about whether an employee assigned to an 8 or
+12-hour shift is better able to handle a sudden urgent predicament like a failed water heater than
+a firefighter. The Union’s witness maintained that an employee who can return home after an 8
+or even a 12-hour day is better able to address the situation without the need to use a personal
+day. The discussion was illuminating and in the panel’s view demonstrated that persons working
+a shorter shift are usually better able to attend to such matters. The more convincing side of the
+debate is that all Township employees should have two days, not one, to handle – for lack of a
+better term – personal business. Consider the following: a personal day is needed in January to
+deal with the water heater predicament and the newly installed water heater fails in March. All
+Township employees except firefighters could use a personal day on both occasions. However,
+if the firefighter called off on a personal day in January he is disadvantaged on the second
+occasion. Viewed in this manner – which the panel concludes is the sensible manner – the
+Union’s position has merit.
+Based upon the record evidence and the criteria established by Section 9 of Act
+312, a majority of the panel finds that the Union’s demand concerning personal business
+days more closely corresponds to the applicable Section 9 factors.
+
+Retiree Health Insurance Eligibility (Township Issue)
+There was a good deal of testimony and argument in the post-hearing briefs concerning
+this issue. It is one of the most significant issues to both sides and has been discussed at length
+in the panel’s deliberations.
+The expired collective bargaining agreement provides that bargaining unit members who
+attain 25 years of service are eligible for retiree health care, irrespective of age. The Township
+
+
+
+
+58
+
+
+has proposed that employees must be 52 years of age or older at the time of retirement to be
+eligible for retiree health care. To avoid possible misunderstanding it should be made clear that
+the Township’s proposal is not to withhold benefits for the time period between retirement and
+attainment of age 52 (for example, if the employee retired with 25 years of service at age 49). If
+the employee retires after 25 years of service but is younger than 52 on the effective date of
+retirement the employee is permanently disqualified from receiving retiree health care.
+The Township proposal would affect 7 out of the current 13 bargaining unit members who
+remain eligible for employee health care. Of the current employees eligible for retiree health care
+6 are not affected because they will have already attained the age of 52 by the time they have 25
+years of credited service. TABLE 14 shows the current age, current length of service, age at
+pension eligibility, and years the employee would be required to work beyond pension eligibility in
+order to qualify for retiree health care.
+
+TABLE 14 - EFFECT OF TOWNSHIP’S AGE PROPOSAL
+
+EMPLOYEE
+
+1
+2
+3
+4
+5
+6
+7
+
+CURRENT
+AGE
+
+CURRENT YEARS
+OF SERVICE
+
+YEARS TO
+PENSION
+ELIGIBILITY
+
+41
+42
+40
+40
+45
+41
+36
+
+21
+20
+17
+17
+21
+17
+11
+
+4
+5
+8
+8
+4
+8
+14
+
+ADDITIONAL YEARS
+REQUIRED TO REACH
+AGE 52
+
+7
+5
+4
+4
+3
+3
+2
+
+Three of the external comparables – Canton Township, Northville Township, and Redford
+Township – have no age requirement for retiree healthcare. They are like Plymouth Township:
+eligibility for a pension establishes eligibility for retiree health care. West Bloomfield Township
+has a two-tiered system: new hires after January 1, 2011 have a health savings account and
+others are eligible for pension benefits and retiree health care at age 52 irrespective of years of
+service. Independence Township requires that employees have 25 years of service and attain
+the age of 55 for pension benefits and retiree health care.
+
+Likewise, Harrison Township ties
+
+pension and retiree health care eligibility together. For employees hired before July 1, 2011 the
+qualification is 20 years, irrespective of age, or if the sum of years of credited service added to
+
+
+
+
+59
+
+
+age equals 70. None of the external comparables have a defined contribution plan in which the
+age requirement for retiree health care is different from that required to receive a pension benefit.
+There is an age requirement for retiree health care for Township employees with defined
+contribution pension plans. The Teamsters eligibility is either age 55 with 25 years of service or
+age 60 with 10 years of service. Eligibility for employees represented by TPOAM is based on a
+formula (age + years of service = 75) with the additional requirement of age 60 with 20 years of
+service or age 55 with 20 years of service. Non-union employees have the same eligibility as
+employees represented by the TPOAM.
+At the time of the hearing each of the Act 312 eligible bargaining units (COAM, POAM
+Patrol and POAM Dispatcher/PSA) had no age restriction and employees were eligible for the
+pension and retiree health care benefits irrespective of age.
+
+Supervisor Reaume testified that
+
+negotiations were underway with the POAM–Dispatchers/PSA bargaining unit and that achieving
+11
+
+this change is a major objective in those negotiations. Subsequent to the last hearing day
+
+the
+
+parties settled that contract. The new agreement provides that in order to obtain retiree health
+care the employee must have at least 25 years of service and have attained the age of 55. The
+new agreement provides that in lieu of retiree health insurance persons hired after January 1,
+2012 will be enrolled in a health savings account funded by the Township at $50 per month.
+Relatedly, employees hired after May 14, 2014 will have a defined contribution rather than a
+defined benefit pension plan.
+TOWNSHIP’S POSITION ON RETIREE HEALTH INSURANCE ELIGIBILITY
+The Township relies on Township Supervisor Reaume’s testimony that adoption of this
+proposal “[d]efinitely would take care of what’s called the legacy costs or the unfunded liabilities
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+11
+   During its deliberations the panel agreed that unless otherwise stipulated events occurring
+th)
+
+after the last day of hearing (February 12 ) would not be considered. There are two stipulations.
+First, the panel may consider the January 1, 2012 through December 31, 2016 collective
+bargaining agreement between the Township and POAM-Dispatchers/PSAs executed by the
+parties on May 29, 2014. That document is deemed admitted into the record and has been
+marked Panel Exhibit 1. The second stipulation is that the panel may take cognizance that
+subsequent to the last day of hearing the Township added six firefighters either through recall
+from layoff or new hire. Funding for the additional personnel was provided by a SAFER grant
+from the Federal Emergency Management Agency (FEMA). SAFER is an acronym for Staffing
+for Adequate Fire & Emergency Response Grants.
+
+
+
+
+
+60
+
+
+for health care.” The Township’s aim is to decrease its $21.4 million unfunded liability for retiree
+health care that is funded at zero percent.
+
+Although the Union’s financial expert attempted to
+
+downplay this fact by suggesting this level of funding is “very typical” Mr. Heffernan disputed that
+conclusion.
+
+All of the comparable townships have funding for retirement health care.
+
+He
+
+described three of the six as “relatively low” (below ten percent) and three that are “very well
+funded” (two at 50% funded and one at 70% funded). He testified that only 30 to 40 percent of
+municipalities represented by Plante & Moran are zero percent funded.
+The Township’s proposal does not change the 25-year requirement to receive a defined
+benefit pension. This proposal would not affect six persons and the seven who would be affected
+are impacted in varying degrees.
+The savings accomplished by this proposal is critically important to the Township’s future
+financial health and addresses the Township’s ability to pay issue where a major concern exists.
+UNION’S POSITION ON RETIREE HEALTH INSURANCE ELIGIBILITY
+While some savings would be garnered by withholding this valuable benefit from would
+be retirees for a time, the Township’s assertion that it would definitely take care of the legacy
+costs of unfunded retiree healthcare is incorrect. In fact the savings would be negligible in light of
+the magnitude of unfunded liabilities and the small number of bargaining unit members who might
+be affected if the Township’s LBO were adopted by the panel. Even if one were to assume that
+all seven employees worked until age 52 and further assume that they enrolled in the highest cost
+health care (BC/BS PPO Family Coverage) (cost to Township $2,354 monthly) the total maximum
+savings would be $451,968. The unfunded liability would still exceed $21,000,000. This is a
+rather weak response to a large problem and there is no indication that the Township has any
+plan to increase the current zero percent OPEB funding.
+The Township’s argument ignores that during the last Act 312 the employer eliminated
+any future unfunded liabilities by putting new hires into a health savings account rather than
+employer-paid heath care at retirement. Some of what the Township seeks to do will already be
+accomplished by virtue of the bridging of the pension multiplier from 2.8% to a lower multiplier
+because it will now take longer to attain the maximum pension benefit.
+
+
+
+
+61
+
+
+Benefit reductions should not be extracted in such a way that not all bargaining unit
+members are equally affected. A portion of the $21 million accrued liability is attributable to work
+already performed by members of this bargaining unit prior to retirement. There is a debt owed to
+those who have already given consideration (years of service) to receive promised retiree health
+care when it was promised. Speculation that a bargaining unit member retiring after 25 years
+might be able to find another job cannot serve as the rationale to relieve the Township of the
+obligation derived from that promise. Township Supervisor Reaume admitted that its proposal
+could have overwhelming consequences.
+Q: Okay. So the scenario we just described, Captain Phillips could have worked
+for this Township five years beyond when he could’ve collected a pension. He
+worked until age 50. He worked for this Township for 30 years risking his life
+every single day and have a massive coronary, a serious medical problem, and
+you’re telling me under the Township’s proposal, he would be forced to retire at
+that point and would have no retiree healthcare paid by the Township, right?
+A: In that case, yes.
+The proposal is particularly distasteful from the Union’s perspective when one considers the
+requirements for elected officials to obtain Township-paid retiree health insurance benefits.
+Eligibility requires either service for five full terms as a full-time elected official, or a minimum of
+25 years of full-time employment in the Township including at least two consecutive terms as a
+full-time elected official.
+
+This service requirement permits elected officials serving five full
+
+consecutive terms to receive retiree health care after only 20 years of service.
+DISCUSSION ON RETIREE HEALTH INSURANCE ELIGIBILITY
+The panel recognizes the importance of this issue to both parties. To put it mildly it has
+been hotly contested and the advocates have advanced well-reasoned arguments in support of
+their respective positions. The panel has attempted to sort out those arguments, as is required
+by the statute and expected by the parties, in a logical and dispassionate manner.
+The panel has given significant weight to the POAM Dispatchers/PSAs collective
+bargaining agreement signed by the parties last month concerning this issue as well as the
+pension issues. This is an Act 312 eligible group and the requirement to attain age 55 in order to
+qualify for retiree health care substantiates that the Township intends to make this a high priority
+
+
+
+
+62
+
+
+in upcoming negotiations with the POAM-Patrol and COAM. This has already been said but it
+bears repeating. The panel must make comparisons cautiously because bargaining units are not
+identical, nor are their negotiations. What one bargaining unit might gain or not gain depends on
+circumstances that may be peculiar to that unit and these circumstances cannot be automatically
+transferred to another group. For instance, suppose that all 13 members of this bargaining unit
+th
+
+were in the same category as the 6 who will be 52 or older on their 25 anniversary. Since newly
+hired firefighters have health savings accounts one would presume the Union would accede to
+the demand because it would not adversely affect anyone.
+
+TABLE 15 indicates the same
+
+information for the POAM Dispatchers/PSAs bargaining unit contained in TABLE 14.
+
+TABLE 15 – EFFECT OF AGE 52 REQUIREMENT ON POAM DISPATCHERS
+
+EMPLOYEE
+
+CURRENT
+AGE
+
+CURRENT YEARS
+OF SERVICE
+
+YEARS TO
+PENSION
+ELIGIBILITY
+
+ADDITIONAL YEARS
+REQUIRED TO REACH
+AGE 55
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+29
+33
+32
+42
+48
+60
+42
+59
+60
+
+6
+9
+8
+13
+15
+14
+12
+12
+6
+
+19
+16
+17
+12
+10
+11
+13
+13
+19
+
+7
+6
+6
+1
+0
+0
+0
+0
+0
+
+As TABLE 15 indicates, 54% of the IAFF bargaining unit would be required to work beyond their
+th
+
+25 anniversary compared to 44% (33% if the one year is disregarded) of the members in the
+POAM Dispatchers/PSAs bargaining unit. The panel does not wish to be misunderstood. This
+settlement weighs in favor of the Township. At the same time the significance is somewhat
+diminished because the concession had no effect on the majority of represented employees.
+The panel has not minimized or ignored the Union’s protestations that changing the rules
+after most of the game has been played puts the IAFF in a “least-favored nation status.” Nor has
+it overlooked the argument that it has already done its share to address the Township’s
+underfunding dilemma by losing retiree health care for new hires.
+
+
+
+
+63
+
+
+The principal defect in the Township’s proposal is that it lacks proportionality. It would be
+a somewhat more reasonable demand if health care insurance were discontinued for the period
+until the employee reached 52. This is not to say that a more modest proposal would pass
+muster. But it would be considerably less harsh than the permanent forfeiture of health care
+benefits because a quarter century ago the Fire Department made the decision to hire a youthful
+applicant.
+The panel finds that the Township’s proposal has another significant drawback.
+
+A
+
+markdown like this one requires strong justification and must be supported by substantially more
+than the Township’s acknowledgment that a consequence of pay-as-you-go funding of health
+care is OPEB underfunding. The burden is to convince the panel that adoption of the proposal
+will appreciably advance progress toward a solution.
+
+It is correct that the seven affected
+
+employees would have a choice: retire and forego health care, or defer retirement for a few more
+years (few defined as 7, 5, 4, 3 or 2 years) and retire with health care benefits. The Township will
+achieve actual savings that will help to reduce the underfunding only if employees choose the first
+option.
+
+12
+
+The panel concludes that it is unlikely that the choice will be to retire without health
+
+insurance meaning that the contemplated savings are most likely largely illusory.
+Based upon the record evidence and the criteria established by Section 9 of Act
+312, a majority of the panel finds that the Union’s demand concerning imposing an age
+requirement for eligibility for retiree health care insurance more closely corresponds to
+the applicable Section 9 factors.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12
+   The panel has not overlooked that an employee’s decision to work beyond 25 years until his
+nd
+
+52 birthday would mean that the Township would not need to hire a new employee to fill the
+vacated position. That would result in a savings. However, the Township’s stated justification for
+this proposal is that it is needed to “take care of what’s called the legacy costs or the unfunded
+liabilities for health care.” The panel’s understanding of the rationale is that retiree health care
+would be eliminated in order to address OPEB under-funding. If the actual objective is to achieve
+savings by postponing retirement that should be the stated objective, not OPEB under-funding.
+
+
+
+
+
+64
+
+
+Pension Issues
+There are four pension issues that the panel must decide.
+Pension Plan for New Hires (Union Issue): The Union proposes that newly hired
+employees participate in a defined benefit plan. The current collective bargaining agreement
+provides that new hires will participate in a defined contribution plan.
+
+The John Hancock
+
+Insurance Company administers the defined contribution plan. The Township contributes 15% of
+base pay and the employee contributes 5% of base pay. The plan proposed by the Union would
+create a second MERS defined benefit pension division for newly hired employees linked to the
+current pension plan for bargaining unit members with benefits and contributions requirements
+identical to the current division, except that the multiplier in the new division would be 2.0%. The
+Township’s last offer of settlement is to maintain the status quo.
+Pension Contribution (Union and Employer Issue):
+
+The Union proposes that
+
+employee contributions be limited to the first 10% of the annual actuarially established
+contribution requirement, and that the Township be responsible for any amount in excess of 10%.
+The Township’s proposal is that the annual actuarially established contribution requirement be
+equally split.
+Pension Multiplier/FAC Determination (Employer Issue): The Township proposes to
+bridge the multiplier in the current defined benefit plan from 2.8% to 2.0%. The Union’s last offer
+of settlement is to bridge the multiplier from 2.8% to 2.5%. Both parties have proposed that the
+dollar amount of the pension earned as of the date the reduction is implemented be computed on
+current average final compensation and frozen.
+Pension Amortization Period (Employer Issue): The Township proposes to have the
+amortization period for the defined benefit pension plan set at 15%. The Union’s last offer of
+settlement is that the amortization period should be established by MERS as the fiduciary of the
+fund.
+
+13
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+13
+   In determining the required contribution amount MERS takes into account the “normal cost” as
+well as any “actuarial accrued liabilities.” Normal cost is defined as the cost of benefits accruing
+on the basis of current service. It is the percentage-of-pay contribution required each year
+
+
+
+
+65
+
+
+Background
+In 2005 the parties agreed to establish a defined benefit pension plan administered by
+the Municipal Employees Retirement System (MERS).
+
+MERS is a statutorily created public
+
+agency that is an instrumentality of participating municipalities and is governed by a nine-member
+board. A representative from a township currently serves on the board. The plan provided a
+14
+
+2.8% multiplier with a maximum pension benefit of 80%,
+
+retirement eligibility at 25 years of
+
+service with no minimum age requirement, average final compensation based on the last 3 years
+of service, and vesting after 10 years.
+
+The contribution formula was set at 2% employee
+
+contribution, followed by a 13.5% employer contribution, followed by a 5% employee contribution,
+followed by a contribution by the employer for any remaining balance. Stated differently, the
+employee contribution was originally capped at 7% and the employer’s contribution was
+uncapped.
+In an Act 312 arbitration award dated May 6, 2012, the panel accepted the Township’s
+last offer of settlement on two pension issues.
+
+First, the panel directed that newly hired
+
+employees participate in a defined contribution plan. Second, the panel changed the existing
+contribution requirement making the Township responsible for the first 13.5% and employees
+responsible for any amount over 13.5%. Because no new employees will be enrolled in the
+defined benefit plan MERS classifies it as a closed plan.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+needed to pay the cost of earned benefits during the retiree’s projected lifetime. Actuarial
+accrued liability is defined by MERS as the amount that would have been accumulated on
+st
+December 31 of each year if contributions sufficient to meet the normal costs had been made
+each year in the past, benefit provisions had always conformed to current benefit provisions, and
+actual past experience had always conformed to actuarial assumptions. The amortization period
+concerns the period of time the actuarial accrued liability is to be paid off and can be analogized
+to paying off a home mortgage.
+
+
+
+14
+   With a 2.8% multiplier an employee retiring at 25 years of service would receive a pension
+
+benefit that is 70% of final average compensation (FAC).
+would require 28.8 years of service.
+
+
+
+
+
+
+66
+
+
+The maximum benefit of 80% of FAC
+
+In a series of correspondence MERS advised the Township that longstanding board
+15
+
+policy prohibited an employer cap in a closed plan.
+
+MERS General Counsel Thomas Petroni
+
+testified at the hearing and explained that because they did not reach a mutually satisfactory
+resolution of the issue MERS began to “flat bill” the Township for its contribution. Ordinarily
+MERS forwards an invoice to the Township that breaks down the amount owed by the employer
+and the employee. A flat bill specifies only the total amount owed and leaves it to the Township
+to compute the amount individual employees must pay. Although on its face simple, Mr. Petroni
+indicated it is not as easy to compute the correct employee contribution as it looks.
+Daniel Phillips has been a member of the Plymouth Township Fire Department for over
+21 years and has held the rank of Captain for six years. He serves as the president of the
+bargaining unit and was the Union’s principal witness on the pension issues. He testified that the
+pension deduction for the first four months of 2013 was 11.32% but that it increased to 31% in
+April and went down to 0% in December. He received a refund in December of $252.56. He
+claimed that employees received no indication of how the amount of the refund was calculated.
+The overall annualized contribution rate in 2013 was 16.8%. Captain Phillips maintained that his
+members have bills and mortgage obligations and they cannot meet their financial obligations
+with unpredictable erratic paychecks even if incorrect deductions are eventually refunded. So far
+in 2014 his deductions were approximately 20% and that he expects the confusion about the
+correct pension deduction to continue because MERS insists on flat-billing the Township. He
+stated that the Union made an email request on January 10, 2014 for an explanation of how
+deductions are computed but he had not received a response as of the date of his testimony
+(January 28, 2014).
+Throughout the proceeding the Union has strongly urged the panel not to overlook or
+minimize that in negotiations the Union agreed to a “frozen bridge” rather than a “termination
+bridge.”
+
+The difference between the two is indeed significant.
+
+Assume that a hypothetical
+
+firefighter has a 3% multiplier and through negotiations it is reduced to a 2% multiplier. He will
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+15
+   The panel has been advised by both parties that it should not consider the ongoing dispute
+between MERS and the Township concerning the implementation of the previous Act 312 award
+and that admonition has been scrupulously followed.
+
+
+
+
+
+67
+
+
+retire when he attains 25 years of service.
+
+The change occurs when he has 12.5 years of
+
+service. In a termination bridge he would receive credit for 12.5 years at 3% and 12.5 years at
+2% and the pension benefit would be computed by applying that sum (62.5%) to the average final
+compensation at termination. Any salary increases in the next dozen years would increase the
+amount of the pension. In contrast, in a frozen bridge the credit for the fist 12.5 years (37.5%) is
+computed based on the compensation as of the bridge date and frozen. This has been spelled
+out in some detail because the panel concurs with the Union’s position that it should be given
+credit for agreeing to a frozen rather than termination bridge. MERS determined that the frozen
+bridge reduces the unfunded accrued liability in the pension system by $1,058,243, a 34%
+reduction. This goes a long way to meaningfully reduce legacy costs.
+
+PENSION FOR NEW HIRES
+UNION’S POSITION CONCERNING PENSION FOR NEW HIRES
+At the time of the hearing there were no bargaining unit members in the defined
+contribution plan because there had not been any new hires since the last Act 312 proceeding.
+The members on layoff status who have recently been recalled are in the defined benefit plan.
+The Township recently hired new firefighters who are participating in the defined contribution
+plan.
+None of the external comparables have defined contribution plans. Likewise, none of the
+Township’s public safety bargaining units have had their employees forced into a defined
+contribution plan.
+
+Because of the nature of their profession firefighters need the greater
+
+protection afforded by defined benefit plans. Arbitrator Benjamin Kerner explained one reason:
+Although expensive, the current Defined Benefit model has solid benefits for the
+employee as well as the Employer. It provides for duty-disability and non-duty
+disability occurrences in a way that cannot be matched by any Defined
+Contribution plan. That may possibly be regarded as a necessary part of
+providing pension benefits for this high-risk group. In terms of benefits to the City,
+there is no doubt that there is a positive moral factor associated with having a
+16
+well-protected work force. (Emphasis in original).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+16
+  City of Birmingham and I.A.F.F. Local 911, MERC Case No. D07 C-059 (8/11/09).
+
+
+
+
+68
+
+
+If the Union’s proposal were adopted MERS would create a second division that is linked
+to the current division for purposes of funding.
+
+New employees could not be in the current
+
+division because their defined benefit pension benefit would be computed on a 2.0% multiplier
+and it is impermissible to have persons with different benefit levels in the same division.
+Township and employee contributions for those in the new division would be pooled with
+contributions in the current division.
+
+Under MERS rules a division that is closed to new
+
+employees is considered an open division if it is linked with a division that is not closed to new
+employees. The Union points out that this would eliminate the accelerated funding (by shortening
+the amortization period) required under MERS rules for a closed fund and would bring an end to
+the problematical flat billing.
+The actuarial report shows that the 10% employee contribution by all employees would
+over-fund the plan in the first year meaning that the Township would not be required to make any
+contribution. Adoption of the Union’s proposal would also save the Township the 15% of base
+pay that it would otherwise pay into the defined contribution plan. The Township’s contribution
+could remain at zero in future years if the plan stays fully funded.
+TOWNSHIP’S POSITION CONCERNING PENSION FOR NEW HIRES
+The Township seeks to maintain the status quo. The 2012 Act 312 award balanced the
+Township’s need to stop the bleeding in terms of unfunded pension liabilities with its desire to
+continue to provide lucrative pension benefits to new employees. Reversing course would impair
+the Township’s efforts to keep on track for a sustainable financial future. It is imperative for the
+Township to have the certainty that a defined contribution plan provides.
+The Township’s defined contribution plan contains an extremely generous employer
+contribution and is identical to the plan received by many of the internal comparables, including
+Teamsters, TPOAM, and non-represented employees. The Township convinced the prior panel
+that the defined benefit plan was not working as anticipated. This included the problem of MERS
+using a longer amortization schedule that contradicted the Township’s understanding when the
+new plan was under consideration.
+
+
+
+
+69
+
+
+A defined contribution plan has several advantages. New employees are immediately
+vested in a defined contribution plan but would not be fully vested under the Union’s proposal for
+five years. Employees can transfer money despite not reaching retirement age and can pass on
+the money earned in the plan to heirs. Captain Phillips conceded that reopening the plan would
+mean “guys below you will be paying for the guys who are leaving before them.”
+The panel must consider all of the ramifications that could flow from opening the defined
+benefit plan to new employees. Municipalities are judged by the state according to criteria in the
+Economic Vitality Incentive Program (EVIP) and one of the requirements is an explanation
+concerning a township’s plan to move employees to a defined contribution plan. In addition,
+communities that do not partially or fully close defined benefit plans are statutorily prohibited from
+issuing bonds to shore up underfunded plans. The Township would be in the “ineligible” category
+if the panel adopts the Union’s proposal.
+The argument that adoption of the Union’s proposal is good for the Township because no
+contribution would be required for the first year is nonsensical. In 2005 the required contribution
+was 11.7% and in seven years it doubled to 22.11%.
+
+As other Act 312 arbitrators have
+
+recognized by their nature defined benefit plans are unpredictable and volatile. At least seven
+Act 312 panels (citations provided) have rejected union attempts to switch from a defined
+contribution plan to a defined benefit plan and the Township was unable to find any Act 312
+award to the contrary.
+DISCUSSION CONCERNING PENSION FOR NEW HIRES
+The Union has understandably emphasized the disruptive effect on household finances
+caused by erratic deductions. It is unnecessary to grant this demand to correct that problem.
+The Township has reminded the panel that it is not writing on a clean slate. The Union
+has good reasons to prefer a defined benefit plan.
+
+However, all of those reasons were
+
+considered two years ago and the panel came to the same conclusion as other Act 312 panels: a
+defined contribution plan appropriately balances what taxpayers can afford and public employees’
+expectation to receive a reasonable retirement benefit.
+
+
+
+
+70
+
+
+The panel concludes that on this issue greater weight should be placed on internal rather
+than external comparables.
+
+The Union has suggested that this bargaining unit should be
+
+compared to other Act 312 eligible units because the other bargaining units negotiate with the
+handicap of knowing that an employer can unilaterally impose its offer after fact-finding. The
+panel is convinced that the Township intends to do all that it can to implement a defined
+contribution plan for the remaining police department employees when the moratorium on
+bargaining pension issues expires on December 31, 2014. It would be unrealistic to think that
+reopening the defined contribution plan for firefighters would not become a focal issue in those
+and future negotiations.
+The Township’s already persuasive position was further strengthened by the POAMDispatchers/PSAs settlement signed by the parties on May 29, 2014. This is an Act 312 eligible
+unit. The agreement provides that newly hired employees will be in a defined contribution plan
+that is identical to the plan for newly hired employees in this bargaining unit.
+Based upon the record evidence and the criteria established by Section 9 of Act
+312, a majority of the panel finds that the Township’s demand concerning the pension plan
+for newly hired employees more closely corresponds to the applicable Section 9 factors.
+
+PENSION CONTRIBUTION
+TOWNSHIP’S POSITION ON PENSION CONTRIBUTION AMOUNT
+The Union’s arguments that its pension demands should be granted because of the
+variances in paychecks should not be credited. The problem was caused by MERS flat billing the
+Township for the total contribution amount. Flat billing will discontinue if the Township’s proposal
+is adopted. MERS decided to flat bill because the employer’s contribution was capped. The
+50/50 split proposed by the Township is clearly not an employer cap.
+
+The panel should
+
+absolutely reject the testimony by MERS General Counsel Thomas Petroni that a 50/50 split is
+the same thing as an employer cap. A cap means that there is a fixed maximum amount and that
+does not describe the Township’s proposal. More importantly, though, the decision of whether
+MERS will accept the Township’s proposal is not for the panel to decide.
+
+
+
+
+71
+
+
+The Township has proposed a fair distribution of the costs. If costs go up the parties
+share equally and if costs go down they equally benefit. This is a significant improvement for
+employees than the plan now in effect. This reasonable proposal is not enough for the Union.
+The Township’s proposal as applied to the current payment to MERS would break down to a
+manageable 12% contribution by the Township and the bargaining unit member.
+The panel should adopt the Township’s proposal because it is a major concession that
+addresses a huge unfunded liability and at the same time maintains a very lucrative pension plan.
+UNION’S POSITION ON PENSION CONTRIBUTION AMOUNT
+Section 9(1)(c) of the statute requires the consideration of stipulations of the parties and
+Section 9(1)(l) requires the consideration of other factors that are normally taken into
+consideration in collective bargaining. The stipulated agreement to freeze earned pension benefit
+as of the bridge date reduces the unfunded accrued liability in the pension plan by $1,058,243: a
+full 34% reduction. The decision to offer such a valuable concession was not made lightly and
+should not be overlooked in the panel’s deliberations on whether to accept the Township’s
+invitation to diminish pension benefits still further.
+The Union agrees with MERS General Counsel Petroni who testified that in defined
+benefit plans “the ultimate risk is on the Employer, not the employee.” He also testified that in his
+opinion a 50/50 split is no different than an employer cap and that the defined benefit plan
+proposed by the Township would not be allowed under MERS rules. He explained that a 50/50
+split would be allowed if the Union’s proposal concerning new hires were granted because the
+currently closed division would be linked with an open division. If the panel grants the Township’s
+demand last year’s unacceptable fluctuations will continue unabated and this alone is a sufficient
+reason to deny the Township’s demand.
+DISCUSSION ON PENSION CONTRIBUTION AMOUNT
+All of the points raised in the comprehensive post-hearing briefs have been considered.
+It seems more efficient to state at the outset what the panel’s award on this issue is not based on.
+While it is commonly understood that defined contribution plans are advantageous to public
+employers it may be less commonly understood that in the short term closing a defined benefit
+
+
+
+
+72
+
+
+plan increases costs. The panel need not enter the debate on whether taxpayers or employees
+should shoulder the greater load of that transitional financial burden.
+
+As already stated, the
+
+panel has given no thought to which side is right in the controversy between MERS and the
+Township because that is a task for others. What MERS might do, or might be ordered to do,
+with this award has not been factored into the panel’s analysis. In that regard the panel agrees
+with the Township that it should not assume that the MERS board would accept Mr. Petroni’s
+opinion that a 50/50 split is functionally equivalent to a prohibited employer cap in a closed plan.
+The panel has been persuaded to adopt the Union’s last offer of settlement for three main
+reasons.
+A bridged benefit that reduces the multiplier from 2.8% to 2.5% for future service is
+unquestionably a significant concession.
+
+One that freezes earned credits rather than using the
+
+average final compensation in effect when the employee retires is as significant. That alone has
+reduced the level of unfunded accrued liability by approximately one-third and any expectation to
+achieve more than that in one term of a contract is in the panel’s view unmerited.
+Second, the corresponding provision in the newly negotiated POAM-Dispatcher/PSAs
+collective bargaining agreement states: “Effective May 13, 2014, unit members shall pay the initial
+10.0% of payroll as defined by MERS (excludes bonuses, sick time payouts and benefit opt outs).
+The Employer shall then be responsible for funding any actuarially determined costs that exceed
+10.0% of payroll.” That contract has incorporated -- by mutual agreement -- the proposal that the
+Township contests here.
+Third, the panel concludes that a 50/50 split is an unsustainable funding mechanism.
+This was demonstrated by the uncontradicted testimony of William Koss, a well-credentialed
+Senior Consulting Actuary who testified under subpoena. Mr. Koss is an employee of The Tegrit
+Group that provides actuarial services to MERS. He explained that if there is a 50/50 between
+the employer and employees in a closed division the amount that each employee must pay
+increases when an employee retires and stops contributing. A person unschooled in actuary
+science would put it this way. Imagine a pie divided into two parts – the left side signifying the
+Township’s half of an annual payment obligation and the right side signifying the employees’
+
+
+
+
+73
+
+
+obligation. This year the right side would be cut into 13 pieces. As employees retire and are not
+replaced the pieces on the employees’ side become larger and larger. When all but the last
+couple firefighters have retired their contribution must match the entire Township contribution.
+That could not managed even if 100% of their paychecks were sent to MERS. It was suggested
+during cross-examination that this “absurd scenario” is improbable because it assumes no future
+changes as the result of collective bargaining or interest arbitration. The panel does not envision
+its role to make decisions on the assumption that shortcomings will be eventually remedied.
+Based upon the record evidence and the criteria established by Section 9 of Act
+312, a majority of the panel finds that the Union’s demand concerning pension
+contributions more closely corresponds to the applicable Section 9 factors.
+
+PENSION MULTIPLIER
+TOWNSHIP’S POSITION ON PENSION MULTIPLIER
+When the defined benefit plan is compared to the pension plans in the external
+comparables it is clear that this is a very favorable plan. Two of the comparables, Harrison
+Township (70%) and Redford Township (75%) are never able to reach the 80% level available to
+IAFF members. Plymouth Township is the only department that has a 2.8% multiplier throughout
+an employee’s career. Independence Township and Northville Township have a 2.5% multiplier
+throughout an employee’s career. Canton Township and Northville Township had a 2.8%
+multiplier but ultimately reduced the multiplier in a bridged plan similar to the one being proposed
+here. Harrison Township employees have a 2.8% multiplier for the first 20 years of service,
+reduced to a 1.8% multiplier for the next 5 years and reduced even further after 25 years of
+service. Redford Township has a 2.8% multiplier for the first 25 years but it is reduced to 1.0%
+for each year of service after 25. West Bloomfield Township has a complicated pension plan that
+guarantees an employee the equivalent of a 2.75% multiplier that is reduced when the employee
+is eligible for social security.
+
+Two comparables have minimum age requirements: West
+
+Bloomfield Township (age 52) and Independence Township (age 55).
+
+
+
+
+74
+
+
+UNION’S POSITION ON PENSION MULTIPLIER
+The Union reasserts the significance of the $1,058,248 savings from it voluntarily
+agreeing to the frozen bridged benefit. If the Union wins its demand bargaining unit members will
+lose .3% from the current multiplier. By proposing that employees lose .8% the Township seeks
+to eviscerate pension benefits.
+The defined benefit plan allows for members to retire after reaching age 60 with at least
+10 years of service, or at any age with 25 years of service. The maximum payable benefit is 80%
+of FAC at the time of separation from service. At a 2.8 multiplier, members who retire after 25
+years receive an annual pension benefit of 70% of FAC. They would need to work slightly more
+than 28 years to reach the benefit level of 80%. The Union’s proposal of a 2.5% multiplier yields
+62.5% of FAC after 25 years and members would need to work 32 years to reach the maximum
+benefit. If the multiplier were dropped to 2.0% the benefit after 25 years would be 50% and to
+reach 80% a firefighter would have to work 40 years.
+DISCUSSION ON PENSION MULTIPLIER
+The parties have provided the panel with voluminous information on all of the pension
+issues, including this one. All of that has been carefully studied. In the panel’s view all the
+statistical data is dwarfed by one fact. The Township recently agreed that dispatchers are to
+retain the 2.8% multiplier until at least 2017.
+
+This cannot be rationally squared with the
+
+opposition to a 2.5% multiplier or insistence on a 2.0% multiplier for firefighters. A recurrent
+argument throughout this proceeding is that the Township does not want members of this
+bargaining unit being treated differently from other Township employees. The panel agrees.
+Dispatchers undeniably perform a vital public safety service and the safety of the public depends
+on their skill and judgment in life-threatening circumstances. As important as that work is it is
+inconceivable that anyone would seriously contend that they perform a function that merits
+pension benefits superior to the benefits of those they dispatch.
+Based upon the record evidence and the criteria established by Section 9 of Act
+312, a majority of the panel finds that the Union’s demand concerning the pension
+multiplier more closely corresponds to the applicable Section 9 factors.
+
+
+
+
+75
+
+
+PENSION AMORTIZATION PERIOD
+DISCUSSION ON PENSION AMORTIZATION SCHEDULE
+The witness on this issue explained that the reason for the Union’s opposition to the
+proposed 15-year amortization schedule is that it would put an inordinate cost on employees. The
+panel finds no reason to reject the Township’s amortization proposal.
+Based upon the record evidence and the criteria established by Section 9 of Act
+312, a majority of the panel finds that the Township’s proposal concerning the pension
+amortization more closely corresponds to the applicable Section 9 factors.
+
+Wages (Township & Union Issue)
+The Township and the Union have both proposed a 2% wage increase in each of the first
+two years of the agreement. The panel must resolve the disagreement concerning wages during
+the third year. The Township proposes a 2% increase in the third year. The Union proposes a
+3% increase in the third year.
+Because more recent information was unavailable for some of the comparable agencies,
+The Union made comparisons as of July 1, 2012.
+
+TABLE 16 shows base wages for a
+
+Firefighter/Medic at top pay.
+TABLE 16 -- FIREFIGHTER/MEDIC TOP PAY AS OF 7/1/12
+TOWNSHIP
+CANTON TOWNSHIP
+REDFORD TOWNSHIP
+HARRISON TOWNSHIP
+WEST BLOOMFIELD TOWNSHIP
+NORTHVILLE TOWNSHIP
+PLYMOUTH TOWNSHIP
+INDEPENDENCE TOWNSHIP
+
+BASE WAGE
+$72,952
+$67,958
+$66,290
+$64,309
+$64,088
+$60,531
+$59,020
+
+RANK
+1
+2
+3
+4
+5
+6
+7
+
+When base pay alone is considered, Plymouth Township is $5,239 below the average wage of
+$65,770. But as shown in TABLE 17 Plymouth Township has the last ranking when pension
+
+
+
+
+76
+
+
+contribution and health insurance contribution are deducted from the base pay rate. Plymouth
+Township is $11,813 below the average of the comparables.
+
+TABLE 17 -- FIREFIGHTER/MEDIC “EFFECTIVE WAGE” AS OF 7/1/12
+TOWNSHIP
+
+EFFECTIVE
+WAGE
+
+RANK
+
+CANTON TOWNSHIP
+REDFORD TOWNSHIP
+NORTHVILLE TOWNSHIP
+HARRISON TOWNSHIP
+WEST BLOOMFIELD TOWNSHIP
+INDEPENDENCE TOWNSHIP
+PLYMOUTH TOWNSHIP
+
+$68,575
+$66,774
+$62,484
+$61,988
+$60,772
+$61,988
+$50,599
+
+1
+2
+3
+4
+5
+6
+7
+
+UNION’S POSITION ON WAGES
+Generally, in Act 312 arbitration cases the wage issue is central to the litigation as the
+primary component of overall compensation. In the instant case, however, the wage issue has
+taken a back seat to retirement-related issues.
+The Township’s rationale for the disparity between the LBOs is that bargaining unit
+members took a 5% wage reduction in the last agreement for a shorter time than other Township
+employees. This is an inappropriate conclusion since this bargaining unit was subjected to far
+deeper concessions in other areas and the concessions imposed by the last Act 312 panel more
+than made up for the shorter duration of the wage concession. The Township’s insistence on
+extracting a perceived balance due is punitive because the Township as much concedes that the
+economic pressures that led to the last concessions have mostly subsided.
+TOWNSHIP’S POSITION ON WAGES
+A 2% wage increase in the third year of the contract is justified because other bargaining
+units took wage concessions for a longer period. The Teamsters took a 7% wage concessions
+that lasted 3 years and 6 days. The TPOAM had a wage concession of 10% in 2010 and 5% in
+2011 and 2012 (length of concession 2 years, 11 months).
+
+The COAM, POAM-
+
+Dispatchers/PSAs, and POAM-Patrol took 5% concessions for approximately 18 months. The
+IAFF took a 5% wage concession for 9 months, 13 days. Elected officials took a 10% wage cut
+
+
+
+
+77
+
+
+for three years starting in 2009.
+
+Ms. Ciccone conceded on cross-examination that wage
+
+increases in Plymouth Township are outpacing increases in the comparable communities.
+DISCUSSION CONCERNING WAGES
+The panel’s discussion of this issue does not follow the customary format. The panel has
+elected not to reiterate both sides’ comprehensive arguments and supporting data. That is not
+because the information has not been thoroughly considered. The opposite is true. The panel
+cannot lose sight of the cumulative effect of individually considered issues. The panel concludes
+after considering the award in its totality that granting the Union’s last offer of settlement on
+wages is not supported.
+Based upon the record evidence and the criteria established by Section 9 of Act
+312, a majority of the panel finds that the Township’s demand on the wage rate for the
+third year of the agreement more closely corresponds to the applicable Section 9 factors.
+
+Retiree Life Insurance (Township Issue)
+For active bargaining unit members the Township maintains a term life insurance policy
+with a double indemnity provision at 1.5 annual base salary rounded to the nearest $5,000 with a
+maximum benefit of $50,000 that is reduced beginning at age 65 by specified percentages.
+Retirees receive a $2,000 life insurance benefit. The Township seeks to eliminate retiree life
+insurance and the Union’s last best offer is to maintain the status quo.
+TABLE 18 -- RETIREE LIFE INSURANCE
+DEPARTMENT
+Canton Township
+Harrison Township
+Independence Township
+Northville Township
+Redford Township
+West Bloomfield Township
+
+INSURANCE
+$1,000 policy
+$15,000 policy
+Not provided
+Not provided
+$2,000 policy until age 65
+Not provided
+
+Retiree life insurance coverage was eliminated in 2010 for the POAM–Dispatchers/PSAs
+unit and in 2013 for the COAM and POAM/Police units.
+received retiree life insurance.
+
+
+
+
+78
+
+
+Other Township employees never
+
+TOWNSHIP POSITION ON RETIREE LIFE INSURANCE
+Of the external comparables three do not provide retiree life insurance and Redford
+Township provides the $2,000 policy only until age 65.
+
+Only one comparable – Harrison
+
+Township – provides retiree life insurance for the life of the retiree in an amount greater than that
+currently provided in Plymouth Township. There is simply no justification for continuing a benefit
+for firefighters when it has been eliminated for all other public safety employees in the Township.
+UNION POSITION ON RETIREE LIFE INSURANCE
+The panel is reminded that, with only 13 active members in the bargaining unit, the total
+expenditure by the Township for this benefit will be only $26,000 paid out in $2,000 increments
+until the last currently active firefighter passes away, somewhere in the distant future.
+
+The
+
+elimination of retiree life insurance speaks volumes as to the Township’s value for the loyal
+service provided by its public safety employees.
+DISCUSSION ON RETIREE LIFE INSURANCE
+It is correct that $2,000 is a small sum that is insufficient to cover burial expenses and the
+panel is not in a position to question the Union’s judgment that its elimination will be perceived as
+an act of ingratitude.
+
+However, the reality is that the Township continues to face financial
+
+challenges and it cannot continue to do everything it used to do. In a number of issues the
+panel’s recognition of differences in the fire service weighed in the Union’s favor but that is not
+the case with regard to this issue. The panel has not been persuaded that this benefit, modest as
+it may be, should exist in this bargaining unit and none other.
+Based upon the record evidence and the criteria established by Section 9 of Act
+312, a majority of the panel finds that the Township’s demand on retiree life insurance
+more closely corresponds to the applicable Section 9 factors.
+
+Recall Rights (Township Issue)
+Article 3(G) affords the Township the right “to assign and layoff employees subject to Act
+78 (Act 78 applies to full-time employees only) and this Collective Bargaining Agreement.”
+
+
+
+
+79
+
+
+However, Act 78 does not contain any limitation on the period an employee can be on layoff
+status before losing the right to be recalled. The Township proposes adding a new article to limit
+recall rights to two years. The Union proposes a three-year period with the additional proviso that
+an employee who has been laid off for more than years is not disqualified from seeking a position
+as a new employee with the Township. Five out of six of the comparable townships have no
+contractual time limit on recall rights and the one that does (Independence Township) limits time
+on layoff to three continuous years.
+TOWNSHIP’S POSITION ON RECALL RIGHTS
+The two-year period proposed by the Township is reasonable and fair. There is nothing
+in its proposal that would prohibit a person from applying as a new hire after recall rights are lost.
+UNION’S POSITION ON RECALL RIGHTS
+Both parties have attempted to be “reasonable” in crafting their last offers of settlement.
+The Union’s willingness to limit recall rights is a significant concession.
+
+The single external
+
+comparable unit that has a limitation, Independence Township, allows laid off firefighters three
+years before losing recall rights.
+
+No other Township employees labor under any restriction or
+
+limitation to recall after layoff.
+DISCUSSION ON RECALL RIGHTS
+Sadly the days when people chose to become firefighters and police officers because
+those professions offered guaranteed steady employment have long passed. The Township’s
+goal of filling a gap in Act 78 is accomplished by either proposal. The Township has not identified
+any anticipated problem with a three-year period or explained why after three years it makes
+business sense to replace an experienced firefighter with an inexperienced new employee. The
+external comparables do not support the Township’s position and no other laid-off Township
+employees lose recall rights based on the length of layoff.
+Based upon the record evidence and the criteria established by Section 9 of Act
+312, a majority of the panel finds that the Union’s demand concerning recall rights more
+closely corresponds to the applicable Section 9 factors.
+
+
+
+
+80
+
+
+The chairperson would like to express his appreciation to a·ll of the participants. The
+quality of the presentations and the thoroughness of the post-hearing briefs were extraordinary.
+The panel members aided the chairperson immeasurably by the cogency of their input.
+
+ORDER OF THE PANEL
+A majority of the Panel votes to adopt the last offer of settlement on each issue as set
+forth at the conclusion of each issue.
+
+Date
+
+Micheal J. Falvo, Chairperson
+
+Eliza eth A.!,Y ung,
+
+player Delegate
+
+Except as noted -below, I concur in all awards in favor of the Township.
+Except as noted below, I dissent in all awards in favor of the Union.
+I concur in the panel's award on Health and Fitness.
+
+ifuahiel Phillips, Uion Delegate
+
+Date
+
+Except as noted below, I concur in all awards in favor of the Union.
+Except as noted below, I dissent in all awards in favor of the Township.
+I concur in the panel's award on Health and Fitness.
+
+81
+
+•
+
+
+
+
+82

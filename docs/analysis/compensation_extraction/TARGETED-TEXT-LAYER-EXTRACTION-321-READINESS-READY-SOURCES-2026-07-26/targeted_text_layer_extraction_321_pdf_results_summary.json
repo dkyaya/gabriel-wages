@@ -1,0 +1,11 @@
+{
+  "extracted_character_count": 29748527,
+  "extracted_text_artifact_count": 289,
+  "ocr_runs": 0,
+  "page_count_metadata_total": 15648,
+  "pdf_render_runs": 0,
+  "pdf_result_rows": 289,
+  "status_counts": {
+    "extracted_ok": 289
+  }
+}

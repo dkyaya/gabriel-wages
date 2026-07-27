@@ -756,6 +756,9 @@ export function VerificationPipeline({
           <p className="eyebrow">Manual calibration</p>
           <h3>
             {textTableCalibrationStatus.calibration_phase ===
+            "targeted_text_layer_extraction_321_completed_evidence_extraction_ready"
+              ? "Targeted local text-layer extraction complete; bounded evidence-span extraction review is ready"
+              : textTableCalibrationStatus.calibration_phase ===
             "targeted_pdf_text_layer_readiness_387_completed_text_extraction_ready"
               ? "Targeted PDF/text-layer readiness complete; bounded local extraction is ready"
               : textTableCalibrationStatus.calibration_phase ===
@@ -912,6 +915,24 @@ export function VerificationPipeline({
         </div>
         <p>
           {textTableCalibrationStatus.calibration_phase ===
+          "targeted_text_layer_extraction_321_completed_evidence_extraction_ready" ? (
+            <>
+              The bounded local extraction processed{" "}
+              {formatNumber(
+                textTableCalibrationStatus.targeted_text_layer_extraction_queue_count,
+              )}
+              {" "}readiness-approved files: {formatNumber(
+                textTableCalibrationStatus.targeted_text_layer_extraction_pdf_count,
+              )}{" "}PDFs and {formatNumber(
+                textTableCalibrationStatus.targeted_text_layer_extraction_html_count,
+              )}{" "}HTML artifacts. All {formatNumber(
+                textTableCalibrationStatus.targeted_text_layer_extraction_status_counts?.extracted_ok || 0,
+              )}{" "}produced task-local machine-readable text. No URL, download,
+              OCR, rendering, model call, evidence rating, ingestion, or
+              codification occurred. Exact evidence-span review requires a
+              separate authorization; global analysis readiness remains closed.
+            </>
+          ) : textTableCalibrationStatus.calibration_phase ===
           "targeted_pdf_text_layer_readiness_387_completed_text_extraction_ready" ? (
             <>
               The local-only readiness review reconciled{" "}

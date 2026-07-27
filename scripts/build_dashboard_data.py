@@ -1167,6 +1167,23 @@ TARGETED_PDF_TEXT_LAYER_READINESS_387_INVARIANTS_PATH = (
     TARGETED_PDF_TEXT_LAYER_READINESS_387_DIR
     / "targeted_pdf_text_layer_readiness_387_invariant_checks.json"
 )
+TARGETED_TEXT_LAYER_EXTRACTION_321_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26"
+)
+TARGETED_TEXT_LAYER_EXTRACTION_321_DECISION_PATH = (
+    TARGETED_TEXT_LAYER_EXTRACTION_321_DIR
+    / "targeted_text_layer_extraction_321_decision.json"
+)
+TARGETED_TEXT_LAYER_EXTRACTION_321_RESULTS_SUMMARY_PATH = (
+    TARGETED_TEXT_LAYER_EXTRACTION_321_DIR
+    / "targeted_text_layer_extraction_321_results_summary.json"
+)
+TARGETED_TEXT_LAYER_EXTRACTION_321_INVARIANTS_PATH = (
+    TARGETED_TEXT_LAYER_EXTRACTION_321_DIR
+    / "targeted_text_layer_extraction_321_invariant_checks.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -3390,6 +3407,88 @@ def targeted_pdf_text_layer_readiness_387_status() -> tuple[bool, dict[str, Any]
     return True, decision
 
 
+def targeted_text_layer_extraction_321_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize only the complete local-only 321-file text extraction package."""
+    required = (
+        TARGETED_TEXT_LAYER_EXTRACTION_321_DECISION_PATH,
+        TARGETED_TEXT_LAYER_EXTRACTION_321_RESULTS_SUMMARY_PATH,
+        TARGETED_TEXT_LAYER_EXTRACTION_321_INVARIANTS_PATH,
+        TARGETED_TEXT_LAYER_EXTRACTION_321_DIR / "targeted_text_layer_extraction_321_lock.json",
+        TARGETED_TEXT_LAYER_EXTRACTION_321_DIR / "targeted_text_layer_extraction_321_results.csv",
+        TARGETED_TEXT_LAYER_EXTRACTION_321_DIR / "targeted_text_layer_extraction_321_pdf_results.csv",
+        TARGETED_TEXT_LAYER_EXTRACTION_321_DIR / "targeted_text_layer_extraction_321_html_results.csv",
+        TARGETED_TEXT_LAYER_EXTRACTION_321_DIR / "extracted_text_manifest.csv",
+        TARGETED_TEXT_LAYER_EXTRACTION_321_DIR / "targeted_text_layer_extraction_321_evidence_extraction_candidate_manifest.csv",
+        TARGETED_TEXT_LAYER_EXTRACTION_321_DIR / "targeted_text_layer_extraction_321_preserved_readiness_exclusions.csv",
+        TARGETED_TEXT_LAYER_EXTRACTION_321_DIR / "next_targeted_evidence_extraction_prompt.md",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    decision = read_json(TARGETED_TEXT_LAYER_EXTRACTION_321_DECISION_PATH)
+    summary = read_json(TARGETED_TEXT_LAYER_EXTRACTION_321_RESULTS_SUMMARY_PATH)
+    invariants = read_json(TARGETED_TEXT_LAYER_EXTRACTION_321_INVARIANTS_PATH)
+    results = read_csv(TARGETED_TEXT_LAYER_EXTRACTION_321_DIR / "targeted_text_layer_extraction_321_results.csv")
+    pdf_rows = read_csv(TARGETED_TEXT_LAYER_EXTRACTION_321_DIR / "targeted_text_layer_extraction_321_pdf_results.csv")
+    html_rows = read_csv(TARGETED_TEXT_LAYER_EXTRACTION_321_DIR / "targeted_text_layer_extraction_321_html_results.csv")
+    artifacts = read_csv(TARGETED_TEXT_LAYER_EXTRACTION_321_DIR / "extracted_text_manifest.csv")
+    candidates = read_csv(TARGETED_TEXT_LAYER_EXTRACTION_321_DIR / "targeted_text_layer_extraction_321_evidence_extraction_candidate_manifest.csv")
+    exclusions = read_csv(TARGETED_TEXT_LAYER_EXTRACTION_321_DIR / "targeted_text_layer_extraction_321_preserved_readiness_exclusions.csv")
+    controlled = {
+        "extracted_ok", "empty_or_too_short", "low_text_density",
+        "suspected_bad_text_layer", "html_noisy_or_shell", "extraction_error",
+    }
+    counts = decision.get("extraction_status_counts", {})
+    artifact_root = (TARGETED_TEXT_LAYER_EXTRACTION_321_DIR / "extracted_text").resolve()
+    if not (
+        decision.get("task_id") == "TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26"
+        and decision.get("decision") == "targeted_text_layer_extraction_321_completed_evidence_extraction_ready"
+        and decision.get("completion_status") == "completed_bounded_local_text_layer_extraction"
+        and decision.get("extraction_queue_count") == 321
+        and decision.get("pdf_extraction_count") == 289
+        and decision.get("html_extraction_count") == 32
+        and sum(int(value) for value in counts.values()) == 321
+        and decision.get("evidence_extraction_candidate_count") == 321
+        and decision.get("evidence_extraction_review_ready_next") is True
+        and decision.get("repair_needed") is False
+        and decision.get("tier_c_verification_recommended_next") is False
+        and decision.get("url_opens") == 0
+        and decision.get("downloads") == 0
+        and decision.get("ocr_runs") == 0
+        and decision.get("pdf_render_runs") == 0
+        and decision.get("model_api_calls") == 0
+        and decision.get("rating_runs") == 0
+        and decision.get("ingestion_runs") == 0
+        and decision.get("codification_runs") == 0
+        and decision.get("durable_ledger_merges") == 0
+        and decision.get("global_analysis_readiness") is False
+        and summary.get("result_rows") == 321
+        and summary.get("pdf_rows") == 289
+        and summary.get("html_rows") == 32
+        and len(results) == 321 and len(pdf_rows) == 289 and len(html_rows) == 32
+        and len(artifacts) == 321 and len(candidates) == 321 and len(exclusions) == 108
+        and all(row.get("extraction_status") in controlled for row in results)
+        and all(row.get("readiness_status") == "parse_text_layer_later" for row in pdf_rows)
+        and all(row.get("readiness_status") == "html_text_later" for row in html_rows)
+        and all(row.get("extraction_status") == "extracted_ok" for row in candidates)
+        and all(row.get("rating_status") == "not_rated" for row in results)
+        and all(row.get("ingestion_status") == "not_ingested" for row in results)
+        and all(row.get("codification_status") == "not_codified" for row in results)
+        and all(row.get("causal_status") == "not_causal_evidence" for row in results)
+        and all(row.get("global_analysis_readiness") == "false" for row in results)
+        and all(
+            (ROOT / row.get("extracted_text_path", "")).is_file()
+            and (ROOT / row.get("extracted_text_path", "")).resolve().is_relative_to(artifact_root)
+            for row in artifacts
+        )
+        and invariants.get("all_invariants_passed") is True
+        and invariants.get("preserved_exclusions_outside_queue") is True
+        and invariants.get("no_url_download_ocr_render_model_rating_ingestion_or_codification") is True
+        and invariants.get("global_analysis_readiness_false") is True
+    ):
+        raise ValueError("targeted 321-file text-layer extraction package fails dashboard gates")
+    return True, decision
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -4148,6 +4247,10 @@ def build_analysis_readiness(
         targeted_pdf_text_layer_readiness_387_completed,
         targeted_pdf_text_layer_readiness_387_decision,
     ) = targeted_pdf_text_layer_readiness_387_status()
+    (
+        targeted_text_layer_extraction_321_completed,
+        targeted_text_layer_extraction_321_decision,
+    ) = targeted_text_layer_extraction_321_status()
     if scale_1000_targeted_qa_completed and (
         scale_1000_targeted_qa_decision.get("qa_pass") is not True
         or scale_1000_targeted_qa_decision.get(
@@ -4194,6 +4297,9 @@ def build_analysis_readiness(
     return {
         "metadata": metadata,
         "overall_status": (
+            "targeted_text_layer_extraction_321_completed_evidence_extraction_ready_global_analysis_closed"
+            if targeted_text_layer_extraction_321_completed
+            else
             "targeted_pdf_text_layer_readiness_387_completed_text_extraction_ready_global_analysis_closed"
             if targeted_pdf_text_layer_readiness_387_completed
             else
@@ -4975,6 +5081,27 @@ def build_analysis_readiness(
                 "targeted_pdf_text_layer_repair_needed": (
                     bool(targeted_pdf_text_layer_readiness_387_decision.get("repair_needed", False))
                     if targeted_pdf_text_layer_readiness_387_completed else False
+                ),
+                "targeted_text_layer_extraction_completed": targeted_text_layer_extraction_321_completed,
+                "targeted_text_layer_extraction_decision": (
+                    targeted_text_layer_extraction_321_decision.get("decision")
+                    if targeted_text_layer_extraction_321_completed else None
+                ),
+                "targeted_text_layer_extraction_queue_count": (
+                    int(targeted_text_layer_extraction_321_decision.get("extraction_queue_count", 0))
+                    if targeted_text_layer_extraction_321_completed else 0
+                ),
+                "targeted_text_layer_extraction_status_counts": (
+                    targeted_text_layer_extraction_321_decision.get("extraction_status_counts", {})
+                    if targeted_text_layer_extraction_321_completed else {}
+                ),
+                "targeted_evidence_extraction_review_ready_next": (
+                    bool(targeted_text_layer_extraction_321_decision.get("evidence_extraction_review_ready_next", False))
+                    if targeted_text_layer_extraction_321_completed else False
+                ),
+                "targeted_text_layer_extraction_repair_needed": (
+                    bool(targeted_text_layer_extraction_321_decision.get("repair_needed", False))
+                    if targeted_text_layer_extraction_321_completed else False
                 ),
                 "gabriel_claim_rating_global_analysis_readiness": False,
                 "limited_qualitative_usage_registry_review_global_analysis_readiness": False,
@@ -8911,9 +9038,16 @@ def build_text_table_calibration_status_summary(
             targeted_pdf_text_layer_readiness_387_completed,
             targeted_pdf_text_layer_readiness_387_decision,
         ) = targeted_pdf_text_layer_readiness_387_status()
+        (
+            targeted_text_layer_extraction_321_completed,
+            targeted_text_layer_extraction_321_decision,
+        ) = targeted_text_layer_extraction_321_status()
         return {
             **metadata,
             "calibration_phase": (
+                "targeted_text_layer_extraction_321_completed_evidence_extraction_ready"
+                if targeted_text_layer_extraction_321_completed
+                else
                 "targeted_pdf_text_layer_readiness_387_completed_text_extraction_ready"
                 if targeted_pdf_text_layer_readiness_387_completed
                 else
@@ -10262,6 +10396,39 @@ def build_text_table_calibration_status_summary(
             "targeted_pdf_text_layer_tier_c_recommended_next": (
                 bool(targeted_pdf_text_layer_readiness_387_decision.get("tier_c_verification_recommended_next", False))
                 if targeted_pdf_text_layer_readiness_387_completed else False
+            ),
+            "targeted_text_layer_extraction_completed": targeted_text_layer_extraction_321_completed,
+            "targeted_text_layer_extraction_decision": (
+                targeted_text_layer_extraction_321_decision.get("decision")
+                if targeted_text_layer_extraction_321_completed else None
+            ),
+            "targeted_text_layer_extraction_path": (
+                relative(TARGETED_TEXT_LAYER_EXTRACTION_321_DIR)
+                if targeted_text_layer_extraction_321_completed else None
+            ),
+            "targeted_text_layer_extraction_queue_count": (
+                int(targeted_text_layer_extraction_321_decision.get("extraction_queue_count", 0))
+                if targeted_text_layer_extraction_321_completed else 0
+            ),
+            "targeted_text_layer_extraction_pdf_count": (
+                int(targeted_text_layer_extraction_321_decision.get("pdf_extraction_count", 0))
+                if targeted_text_layer_extraction_321_completed else 0
+            ),
+            "targeted_text_layer_extraction_html_count": (
+                int(targeted_text_layer_extraction_321_decision.get("html_extraction_count", 0))
+                if targeted_text_layer_extraction_321_completed else 0
+            ),
+            "targeted_text_layer_extraction_status_counts": (
+                targeted_text_layer_extraction_321_decision.get("extraction_status_counts", {})
+                if targeted_text_layer_extraction_321_completed else {}
+            ),
+            "targeted_evidence_extraction_review_ready_next": (
+                bool(targeted_text_layer_extraction_321_decision.get("evidence_extraction_review_ready_next", False))
+                if targeted_text_layer_extraction_321_completed else False
+            ),
+            "targeted_text_layer_extraction_repair_needed": (
+                bool(targeted_text_layer_extraction_321_decision.get("repair_needed", False))
+                if targeted_text_layer_extraction_321_completed else False
             ),
             "gabriel_claim_rating_global_analysis_readiness": False,
             "limited_qualitative_usage_registry_review_global_analysis_readiness": False,

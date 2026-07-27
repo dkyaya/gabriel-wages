@@ -1,0 +1,42 @@
+{
+  "by_mechanism": {
+    "fiscal_constraint_signal": {
+      "empty_or_too_short_count": 0,
+      "extracted_ok_count": 23,
+      "extraction_error_count": 0,
+      "extraction_queue_count": 23,
+      "html_noisy_or_shell_count": 0,
+      "low_text_density_count": 0,
+      "suspected_bad_text_layer_count": 0
+    },
+    "market_or_comparability_pressure": {
+      "empty_or_too_short_count": 0,
+      "extracted_ok_count": 104,
+      "extraction_error_count": 0,
+      "extraction_queue_count": 104,
+      "html_noisy_or_shell_count": 0,
+      "low_text_density_count": 0,
+      "suspected_bad_text_layer_count": 0
+    },
+    "non_safety_constraint_signal": {
+      "empty_or_too_short_count": 0,
+      "extracted_ok_count": 88,
+      "extraction_error_count": 0,
+      "extraction_queue_count": 88,
+      "html_noisy_or_shell_count": 0,
+      "low_text_density_count": 0,
+      "suspected_bad_text_layer_count": 0
+    },
+    "strike_or_no_strike_constraint": {
+      "empty_or_too_short_count": 0,
+      "extracted_ok_count": 106,
+      "extraction_error_count": 0,
+      "extraction_queue_count": 106,
+      "html_noisy_or_shell_count": 0,
+      "low_text_density_count": 0,
+      "suspected_bad_text_layer_count": 0
+    }
+  },
+  "coverage_boundary": "Extraction counts are not mechanism prevalence, wage effects, or causal findings.",
+  "mechanism_count": 4
+}

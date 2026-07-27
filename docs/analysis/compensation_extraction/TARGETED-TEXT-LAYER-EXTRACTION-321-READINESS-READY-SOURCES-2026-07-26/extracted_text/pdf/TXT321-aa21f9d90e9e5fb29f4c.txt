@@ -1,0 +1,1201 @@
+Date: 11/18/2025
+
+Request For Proposal:
+Classification and Compensation Study
+City of Independence
+331 1st Street E
+Independence, IA 50644
+Due: 11/20/2025 at 4:00pm.
+
+Technical Proposal Submitted By:
+AutoSolve, Inc
+46 Thatcham Drive
+Saint Augustine, Florida 32092
+
+AutoSolve, Inc.
+
+1
+
+Table of Contents
+COVER LETTER................................................................................................................................................4
+BACKGROUND .................................................................................................................................................5
+CLASSIFICATION AND COMPENSATION EXPERTS WITH PUBLIC SECTOR FOCUS ................................................... 5
+CORE VALUES.......................................................................................................................................................... 5
+SAMPLE OF RECENT RELEVANT PROJECTS............................................................................................................ 6
+CONTACT INFORMATION PROJECT LEADERSHIP ...................................................................................7
+PROJECT LEADERSHIP ............................................................................................................................................ 7
+PROJECT TEAM ....................................................................................................................................................... 8
+EXECUTIVE SUMMARY ................................................................................................................................. 10
+COMMUNICATION AND INTERACTION ...................................................................................................... 11
+STAKEHOLDER ENGAGEMENT ............................................................................................................................... 11
+STUDY GOALS, OBJECTIVES, SCOPE....................................................................................................... 11
+OBJECTIVE ............................................................................................................................................................. 11
+SCOPE OF WORK ................................................................................................................................................... 12
+PEERS FOR THE CITY OF INDEPENDENCE ............................................................................................................. 13
+STUDY METHODOLOGY ............................................................................................................................... 14
+STUDY METHODOLOGY BREAKDOWN ..................................................................................................... 15
+STUDY INITIATION / KICK OFF ................................................................................................................................ 15
+CURRENT COMPENSATION AND CLASSIFICATION EVALUATION ........................................................................... 15
+CLASSIFICATION EVALUATION - EMPLOYEE ENGAGEMENT - INTERNAL EQUITY .................................................. 16
+COMPENSATION EVALUATION – SALARY SURVEY - EXTERNAL EQUITY .............................................................. 17
+BENEFITS SURVEY - EXTERNAL COMPETITION ..................................................................................................... 17
+CLASSIFICATION FRAMEWORK .............................................................................................................................. 18
+EMPLOYEE PAY PLAN MANAGEMENT SYSTEM ..................................................................................................... 18
+FINAL REPORT, SUMMARY REPORT, SOFTWARE SYSTEM, SYSTEM TRAINING, PRESENT FINDINGS ................. 19
+COMPENSATION SYSTEM POST STUDY SUPPORT ............................................................................... 19
+STUDY AVAILABILITY AND TIMELINE ....................................................................................................... 20
+TIMELINE ................................................................................................................................................................ 20
+REFERENCES ................................................................................................................................................. 21
+REF 1: CITY OF AMERICUS, GEORGIA – CLASSIFICATION AND COMPENSATION STUDY .................................... 21
+REF 2: CITY OF NEW PRAGUE, MINNESOTA - CLASSIFICATION AND COMPENSATION STUDY ............................ 21
+REF 3: TOWN OF ROLESVILLE, NORTH CAROLINA – CLASSIFICATION AND COMPENSATION STUDY ................. 21
+REF 4: ATHENS-CLARKE COUNTY, GEORGIA – FIRE DEPARTMENT CLASSIFICATION AND COMPENSATION
+STUDY .................................................................................................................................................................... 21
+REF 5: BRUNSWICK COUNTY, VIGINIA – CLASSIFICATION AND COMPENSATION STUDY .................................... 21
+REF 6: CITY OF RINCON, GEORGIA – CLASSIFICATION AND COMPENSATION STUDY ........................................ 21
+EXHIBIT A – CITY OF INDEPENDENCE – PROPOSAL SUBMITTAL FORM .......................................... 22
+EXHIBIT B – CITY OF INDEPENDENCE – REFERENCE SHEET.............................................................. 23
+
+AutoSolve, Inc.
+
+2
+
+EXHIBIT C – CITY OF INDEPENDENCE – ACKNOWLEDGEMENT OF ADDENDUM AND RFP TERMS
+........................................................................................................................................................................... 24
+
+AutoSolve, Inc.
+
+3
+
+Cover Letter
+November 18, 2025
+
+Matthew R. Schmitz, City Manager
+Classification and Compensation Study
+City of Independence
+331 1st Street E,
+Independence, IA 50644
+Phone: 319-334-2780 Email: mschmitz@independenceia.gov
+
+Re: Classification and Compensation Study
+
+Dear Matthew,
+Thank you for the opportunity to submit a proposal to develop a Classification and Compensation Study
+for the City of Independence. The proposed study will provide City of Independence with an equitable
+and competitive classification and compensation system for approximately 114 employees and 55
+classifications. Based on the information provided, AutoSolve will complete the study within 4 months of
+the start date and the target completion date is 4/24/2026.
+AutoSolve, Inc. (AutoSolve) is a Human Resources Consulting firm providing services to private and
+public agencies for more than 30 years. We pride ourselves and attribute our successes to our team’s
+ability to listen, collaborate, and communicate effectively with clients. We will work effectively with your
+team to develop a custom pay plan that is both internally equitable and externally competitive.
+All work will be performed by AutoSolve employees. Key resources will be dedicated to the City of
+Independence study until all work has been completed. We look forward to partnering with the City of
+Independence. This proposal is valid for ninety (90) days from the date of submission.
+Thank you for your time and consideration,
+
+Jeff Turner, President
+AutoSolve, Inc.
+Authorized representative
+321-945-8762 | jeff@autosolveinc.com
+
+AutoSolve, Inc.
+
+4
+
+Background
+AutoSolve, Inc. (AutoSolve) is a strategic Human Resources consulting firm headquartered in Saint
+Augustine, Florida. The firm specializes in business strategy for human resource management,
+classification and compensation studies, organizational design, business process re-engineering, and
+strategic planning.
+
+1,000 Clients + 30 Years Experience
+Municipalities – County Governments – Higher Education Institutions – K-12 School
+Districts
+Classification and Compensation Experts with Public Sector Focus
+For over 30 years, AutoSolve has been providing value through dedication, entrepreneurial spirit, and
+professionalism to over 1,000 public and private sector clients. AutoSolve provides tailored made
+solutions to meet the ever-changing needs of our clients. AutoSolve has been serving local governments
+and other public sector organizations since its inception.
+AutoSolve understands that state and local government organizations operate in a complex environment
+shaped by fiscal, regulatory, and operational hurdles not commonly found in other industries. AutoSolve
+provides expertise in organizational design and compensation structure that addresses our client’s
+individual needs. AutoSolve’s methodology, proprietary technologies, and expertise allows for a precise
+and targeted approached to compensation and classification analysis, review and recommendations.
+Core Values
+We work hard be a trusted business partner with all clients.
+Our core values guide the way AutoSolve makes decisions and conducts business. Employees exemplify
+core values in their work with clients and in their personal lives. The values illustrated below drive the way
+we live and work.
+PASSION
+Drive to achieve our goals.
+INTEGRITY
+Do the right thing.
+PROFESSIONALISM
+Bring value, quality, skill, credibility, and customer service.
+RESPECT
+Treating others how you want to be treated.
+
+AutoSolve, Inc.
+
+5
+
+Sample of Recent Relevant Projects
+The following is a sample list of recent relevant classification and compensation projects.
+
+Sample of Classification and
+Compensation Projects
+
+State
+
+Employees
+
+Classification /
+Job Titles
+
+City of North Miami Beach
+
+FL
+
+294
+
+60
+
+Leon County Clerks of the Circuit Court
+
+FL
+
+124
+
+57
+
+Orange County
+
+FL
+
+2,841
+
+260
+
+Athens-Clarke County (Fire Dept)
+
+GA
+
+174
+
+9
+
+City of Americus
+
+GA
+
+153
+
+77
+
+City of Fayetteville
+
+GA
+
+180
+
+85
+
+City of Rincon
+
+GA
+
+117
+
+53
+
+Madison County
+
+GA
+
+459
+
+98
+
+Fayette County Public Schools
+
+KY
+
+3,504
+
+230
+
+City of Hagerstown
+
+MD
+
+125
+
+48
+
+City of New Prague
+
+MN
+
+57
+
+38
+
+Kansas City Public Schools
+
+MO
+
+2,500
+
+359
+
+Liberty Public Schools
+
+MO
+
+993
+
+127
+
+Raytown C-2 School District
+
+MO
+
+637
+
+130
+
+Town of Rolesville
+
+NC
+
+120
+
+44
+
+City of Boulder City
+
+NV
+
+1,520
+
+160
+
+Carbon County
+
+PA
+
+386
+
+198
+
+Florence School District 3
+
+SC
+
+495
+
+89
+
+Lex-Rich District 5
+
+SC
+
+964
+
+137
+
+Rock Hill Schools
+
+SC
+
+2,400
+
+254
+
+Bedford County
+
+VA
+
+169
+
+81
+
+Brunswick County
+
+VA
+
+229
+
+80
+
+Charlottesville City School District
+
+VA
+
+1,000
+
+182
+
+Dinwiddie County
+
+VA
+
+470
+
+162
+
+Goochland County
+
+VA
+
+296
+
+163
+
+Harrisonburg City Public Schools
+
+VA
+
+960
+
+226
+
+School District of Beloit
+
+WI
+
+758
+
+218
+
+AutoSolve, Inc.
+
+6
+
+Contact Information Project Leadership
+Company – Florida S Corporation: AutoSolve, Inc.
+Date of Incorporation: 11/4/1993
+FEIN: 59-3212545
+Primary Contact: Jeff Turner
+Phone: 321-945-8762 Email: jeff@autosolveinc.com
+Address: 46 Thatcham Drive, Saint Augustine, Florida 32092
+Website: https://autosolveinc.com/
+Contract Relationships: All work will be performed by AutoSolve employees.
+E-Verify #: 2613061
+AutoSolve is a Florida Corporation providing services for over 30 years. AutoSolve is in good standing,
+financially stable, and has no past or pending litigation.
+AutoSolve is insured with Hartford Insurance company
+Workers’ Compensation:
+Commercial General Liability:
+Professional Liability (Errors & Omissions):
+Automobile Insurance:
+General Aggregate:
+
+Statutory Limits
+$2,000,000 per occurrence
+$1,000,000 per occurrence
+$2,000,000 per occurrence
+$4,000.000
+
+Project Leadership
+Jeff Turner, PMP, BS Computer Science – Project Manager
+Jeff Turner, PMP founded AutoSolve, Inc in 1993. Jeff is a strategy
+leader who has worked in the management consulting field for the past
+30 years, delivering value driven results to over 1,000 public and
+private sector clients. Jeff provides sound strategic insight to
+AutoSolve’s consulting practices. He has developed highly successful
+management solutions and methodologies targeted at executive
+leaders and public sector organizations to build value with a focus in
+human resource management, classification and compensation studies
+organizational design, business process reengineering, policy design,
+strategic planning, and succession planning.
+
+PMI Certifications | PMI NC Piedmont Triad
+
+SHRM Home - The Voice of All Things Work
+
+AutoSolve, Inc.
+
+Jeff specializes in developing and delivering Human Resource
+solutions and will serve as the main contact and Project Manager for
+the classification and compensations study.
+Jeff holds a Bachelor of Science in Computer Science from the
+University of Southern Maine.
+Jeff earned his Project Management Professional (PMP) Certification
+from the Project Management Institute in 2002. Jeff earned his Agile
+Project Management SAFe RTE Certification from Scaled Agile Inc.
+Jeff is a Society for HR Management Professional (SHRM).
+
+7
+
+Project Team
+Alex Turner, MS Finance – Senior Compensation Consultant
+Alex Turner has 6 years of experience in studying public sector labor
+markets, and micro and macroeconomic events. Through his experience
+Alex has provided classification and compensation studies, market
+research summaries, staffing studies, performance reviews and gender and
+race audits to over 70 different local governments, K-12 public school
+districts, and higher education institutions across the country. He has
+extensive experience in analyzing, developing, and updating compensation
+and classification plans, and policies for organizations. Alex’s expertise
+includes data analytics, financial modeling and forecasting, strategic
+planning, and management reviews.
+Alex will provide quantitative analysis on the classification and
+compensation study. Alex has been instrumental in improving the overall
+delivery of the classification and compensation study processes. He has
+updated the survey data collecting techniques, classification compensation
+data model, implementation options model and the pay plan
+recommendation strategy.
+Alex holds a Master of Science in Finance along with a Bachelor of Science
+in Finance and Minor in Economics from Florida State University.
+
+Sidney Turner, MS English – Senior Consultant
+Sidney Turner has over 7 years’ experience in conducting research,
+organizational design, and education. Sidney has developed and
+implemented multi-faceted long-term strategies designed to achieve
+organizational goals for high education institutions. Sidney’s expertise
+includes research and evaluation, efficiency reviews, survey and
+polling, survey analysis, risk analysis, and technical communication.
+Sidney has created frameworks for briefing sessions, focus groups and
+surveys to gain employee acceptance though effective communication.
+Sidney is our employee engagement expert.
+Sidney will provide the qualitative analysis on the classification and
+compensation study. Sidney has improved the effectiveness of survey
+execution process to elicit a higher response rate from employees.
+Her approach to survey analysis allows for a clear understanding of
+the organization culture and the resulting summary recommendations
+provide actionable feedback.
+Sidney holds a Master’s in Rhetoric and Composition, and a Bachelor
+of Science in Political Science and Literature from Florida State
+University. Sidney is a PhD. Candidate at Syracuse University.
+
+AutoSolve, Inc.
+
+8
+
+Chris Young, BS Information Technology - Systems Analyst
+Chris Young has 7 years of systems analyst experience. Chris
+maintains AutoSolve’s secure cloud survey platform providing a quality
+customer centric experience for the organization survey and the
+individual employee survey. Chris expertise includes data analysis and
+management, survey and polling, and survey analysis.
+Chris is AutoSolve’s full stack software engineer who has improved the
+survey process by developing the AutoSolve survey secure cloud
+platform. The survey platform has provided AutoSolve with the ability
+to customize the survey to each of our clients’ specific needs allowing
+for quality data collection.
+Chris holds a Bachelor of Science in Information Technology and
+Minor in English from Florida State University.
+
+AutoSolve, Inc.
+
+9
+
+Executive Summary
+At its core, the aim of a classification and compensation study is to align your people strategy with your
+business strategy. The AutoSolve team recognizes the importance of optimizing your workforce for today
+while proactively planning for future resource needs. To achieve this, AutoSolve approaches classification
+and compensation studies as a two-pronged process.
+First, we perform an in-depth analysis of your organization’s current classification and compensation
+structure, focusing on the pay relationships and hierarchy between each classification. Our analysis of
+your organization’s current and future planned classifications allows us to organize and recommend
+appropriate updates to your classification system. This phase of the study is an opportunity to define
+pathways for employee growth, eliminate unnecessary classifications, and ensure alignment with
+business needs. AutoSolve is committed to delivering a streamlined and effective classification system
+that will serve your organization for years. Classification job descriptions will be updated and reviewed to
+ensure they are legally compliant following the Fair Labor Standards Act (FLSA) and the Americans with
+Disabilities Act (ADA) requirements. We will also ensure the job descriptions are internally aligned,
+accurately illustrating the classification’s current responsibilities, duties, and qualifications
+Employee engagement is a key focus of this study. The organizational survey functions as a tool to
+collect qualitative data and insights about the organization, management, culture and work environment.
+The primary objective of the survey is to gather feedback directly from employees to share with the
+management team. This feedback reflects employee sentiment, including both praise and suggestions for
+improving the workplace environment. AutoSolve delivers a report outlining the core takeaways from the
+survey analysis, organized into 3 categories: “Workplace Culture,” “Infrastructure,” and “Relationships
+with Leadership.” Informed by employee responses, we also include “Opportunities for Improvement,”
+which highlight specific material changes and goals that could positively impact the organization’s culture
+and employee experiences.
+Second, we perform market research to collect relevant comparable salary data from your regional
+operating market to accurately assess your external pay competitiveness. The selection of peer agencies
+is a critical step in the study process. We collaborate with you to identify appropriate peers and will
+receive approval before proceeding with the compensation survey.
+Deliverables
+We will create a well-organized pay plan system that fits your organization’s objectives and budget while
+being viewed internally equitable and externally competitive.
+Our commitment to you
+Throughout the study, AutoSolve emphasizes transparency and provides the necessary level of detail to
+inspire confidence in the accuracy of the evaluation and its outcomes. Our proposed timeline includes
+weekly project team status update meetings, with the flexibility to schedule additional meetings as
+needed. These meetings serve as a space to ensure transparency throughout the duration of the study.
+Furthermore, they are crucial to AutoSolve’s collaborative and interactive approach, which enhances the
+study results and your organization’s experience.
+The AutoSolve team understands that every organization is different and has their own unique goals and
+concerns. As such, we strive to provide a tailored made pay plan system addressing your organization’s
+individual wants and needs. The following objectives and methodology outlined in this document serve as
+a road map of the classification and compensation study.
+
+AutoSolve, Inc.
+
+10
+
+Communication and Interaction
+AutoSolve schedules weekly status meetings for the duration of the study. AutoSolve also provides a
+detailed work plan that is updated weekly, keeping all stakeholders informed on where we are during
+each phase of the study. These steps ensure that the study results are accepted and trusted by all levels
+within the organization. Our collaborative approach ensures a greater understanding of the organization’s
+current needs leading to exceptional study experience with results that are impartial and fair.
+Stakeholder Engagement
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+Initial study kickoff meeting to review the process and tasks to be performed by the study.
+Weekly touchpoint meetings to discuss the project and review the work plan.
+Jointly agree on comparable agencies to be surveyed.
+Schedule as needed meetings with management and department heads to discuss additional
+project details.
+Review each section results as they are completed throughout the study.
+Classification review.
+Pay plan review.
+Stakeholder input on compensation philosophy.
+Implementation review.
+
+Study Goals, Objectives, Scope
+The goal of the study is to address changes in operations and staffing over the past several years, which
+may have affected the type, scope, and level of work being performed.
+The study will address and resolve recruitment, retention, and compression issues.
+• Recruitment becomes difficult when compensation is not competitive or equitable and it is
+challenging to attract and retain qualified candidates.
+• Compression arises when hiring new employees at the same or higher salary than existing
+employees, creating wage compression. Compression can also occur when equitable pay
+increase is not provided across the organization.
+• Employee Engagement improves when employees are compensated fairly, they will engage and
+be committed to their job and organization.
+Objective
+•
+•
+•
+•
+•
+•
+
+Attract and retain qualified employees.
+Ensure positions performing similar work with essentially the same level of complexity,
+responsibility, knowledge, skills, and abilities are classified together.
+Provide salaries commensurate with assigned duties.
+Clearly outline promotional opportunities and provide recognizable compensation growth.
+Provide justifiable pay differential between classes.
+Maintain a competitive position with comparable government entities.
+
+AutoSolve, Inc.
+
+11
+
+Scope of Work
+•
+
+Conduct a classification, compensation and benefit study for approximately 114 employees, and
+approximately 55 classifications / job titles.
+The study will include all the City's operational departments, including Administration, Building &
+Code Enforcement, Fire, Police, Public Library, Parks & Recreation, Streets, Utilities
+(Water/Wastewater), and the Municipal Airport.
+Project Initiation and Orientation
+• Kick-off and Planning
+• Document Review
+• Communication Plan
+Classification and Job Analysis
+• Job Analysis Process
+• Job Description Development
+• Classification Plan
+Compensation and Benefits Analysis
+• Compensation Philosophy and Market Identification
+• Market Survey and Analysis
+• Pay Plan Development
+Final Reporting and Implementation
+• Fiscal Impact and Implementation
+• Final Report and Job Descriptions
+• Presentation and Training
+
+AutoSolve, Inc.
+
+12
+
+Peers for the City of Independence
+AutoSolve is very familiar with the local government agencies in this region. The following is a sample list
+of potential peers for this compensation and classification study. We will collaboratively determine the
+peer list, consisting of 10 to 20 comparable organizations for surveying.
+
+Sample of Relevant Peers
+
+State
+
+Population
+
+Distance (Miles)
+
+City of Independence
+
+IA
+
+6,149
+
+0.0
+
+Buchanan County
+
+IA
+
+20,714
+
+1.7
+
+City of Cedar Falls
+
+IA
+
+40,746
+
+33.2
+
+City of Cedar Rapids
+
+IA
+
+136,429
+
+39.1
+
+City of Evansdale
+
+IA
+
+4,530
+
+22.5
+
+City of Manchester
+
+IA
+
+5,335
+
+23.1
+
+City of Oelwein
+
+IA
+
+5,665
+
+15.0
+
+City of Waterloo
+
+IA
+
+67,314
+
+25.4
+
+Delaware County
+
+IA
+
+17,488
+
+24.2
+
+Fayette County
+
+IA
+
+19,294
+
+35.6
+
+AutoSolve, Inc.
+
+13
+
+Study Methodology
+
+Study Initiation
+Kick Off
+
+Current Compensation and Classification Evaluation
+
+Classification Evaluation Internal Equity
+
+Compensation Evaluation External Competition
+
+Anonymous Organizational Survey
+
+Salary Survey
+
+Position Description Questionnaire (PDQ)
+
+Benefits Survey
+
+Updated Job Descriptions
+
+Classification Framework
+
+Employee Pay Plan Management System
+
+Final Report, Software System, and System Training
+
+AutoSolve, Inc.
+
+14
+
+Study Methodology Breakdown
+The following breaks down each step of AutoSolve’s methodology in performing a compensation and
+classification study.
+
+Study Initiation / Kick Off
+Planning Discussion
+The study kickoff meeting sends the signal to all stakeholders that the project has started. We will take
+this opportunity to provide team introductions, align on key objectives and establish working relationships.
+Tasks
+• Meet with organization’s project team (human resources, associations, unions, and/or key
+leadership staff) to validate and finalize scope of service, methodology, timetable, and other key
+deliverables.
+• Review work plan methodology for the study.
+• Collect current pay plan data including but not limited to employee classifications, employee
+compensations, employee tenure details; job descriptions; organizational charts; collective
+bargaining agreements; policy handbook, benefit offerings; etc.
+• Review and validate communication plan.
+• If needed, additional orientation and briefing sessions will be scheduled to present the project
+objectives and to address questions/concerns.
+Deliverable: Work plan detailing tasks and timeline.
+
+Current Compensation and Classification Evaluation
+Current Compensation Review – Pay Compression Analysis
+A key foundational step to this study is AutoSolve’s review of the organization’s current classification and
+compensation system. This review allows AutoSolve to make observations and provide best practice
+recommendations that lead to a clear and concise pay plan.
+Tasks
+• Analyze the organization’s work force based on classification, tenure, pay grade, and current
+annual/hourly salary.
+• Analyze the number of classifications utilized.
+• Analyze how an employee fits within their current pay grade. Quartile analysis based on
+employee’s current salary with respect to their assigned salary range and relative to their tenure
+within the organization.
+• Analyze pay compression relative to an employee’s current salary and their calculated hire year
+salary.
+• Analyze pay compression relative to an employee’s salary and their supervisor’s salary.
+• Meet with the organization’s project team to discuss the pay plan/philosophy.
+• Identify current issues affecting the compensation system that will be corrected by AutoSolve.
+• Provide recommendations to better align client pay plan system to current best practices.
+Deliverable: Report outlining and illustrating the current workforce classification system and pay plan.
+The report will also provide recommendations to align the organization’s pay plan system with current
+best practices.
+
+AutoSolve, Inc.
+
+15
+
+Classification Evaluation - Employee Engagement - Internal Equity
+Employee Engagement – Survey - Position Description Questionnaire - Updated Job Descriptions
+We foster employee engagement by conducting an organizational survey and position description
+questionnaire (PDQ) to gather employee feedback. We provide employees an electronic version of our
+survey and PDQ via a survey link.
+The anonymous organizational survey helps us to understand the employee sentiment within the
+organization putting forth questions that will provide insight on an organization’s culture.
+The position description questionnaire (PDQ) identifies current job responsibilities, duties, education
+level, required certification, etc. for each classification involved within the study. The PDQ is the basis for
+performing job audits, correct compression, conducting our internal hierarchical framework, and updating
+job descriptions.
+Both survey and PDQ are conducted in our secure cloud survey software platform providing a quality
+customer centric experience. We will conduct employee focus group and department head interviews as
+needed.
+Tasks
+• Meet with the organization’s project team to review and schedule the organizational survey and
+position descriptions questionnaire (PDQ).
+• Provide survey and PDQ link to all employees in the study.
+• Employees complete online organization survey and PDQ.
+• Summarize results from organization survey and analyze the PDQ data.
+• Meet with the management team to determine classifications with retention, hiring, and/or
+compression issues.
+• Ensure position descriptions are in full compliance with all applicable federal, state, local statutes,
+and regulations, including the FLSA and Americans with Disabilities Act (ADA).
+• Update job descriptions utilizing the findings from the PDQ survey and recommendations form the
+organization’s project team.
+• Review updated job descriptions with the organization’s project team and make revisions. Provide
+final job descriptions in word format after the completing revisions.
+Deliverable: Report summarizing the organizational survey results. Updated job descriptions.
+
+AutoSolve, Inc.
+
+16
+
+Compensation Evaluation – Salary Survey - External Equity
+Data Collection – Market Research Compensation
+Collecting relevant market data in your organization’s operating market is key to creating an externally
+competitive compensation system. All data collected is adjusted for cost of living provided by the Council
+for Community and Economic Research database, ensuring an “apples to apples” comparison.
+Along with market data collected from 10-20 peer organizations, AutoSolve will utilize data from the
+Economic Research Institute (ERI) private sector salary databases. This database provides access to
+private sector and public sector pay ranges for over 46,000 classifications across 10,000 plus locations
+globally. This database allows us to compare your organization’s classifications and pay ranges against
+identical classifications and pay ranges found in the private sector and public sector to ensure accuracy of
+solicited market data.
+Tasks
+• Meet with the organization’s project team to identify and reach a consensus on a list of relevant
+peer organizations to be used in the external salary survey. (10-15 peer organizations similar in
+size)
+• Meet with the organization’s project team to strategically create a list of positions to survey with
+appropriate descriptions for peer organizations to provide the correct comparative salary ranges.
+• Conduct external salary survey by collecting agreed upon peers’ salary range data on
+strategically selected positions.
+• Aggregate and analyze external market survey findings to assess the organization’s current
+compensation system competitiveness within its peer market.
+• Utilize The Council of Community and Economic Research’s database to adjust for cost of living.
+• Utilize private sector salary data from the Economic Research Institute (ERI).
+• Present market data aggregate findings to the organization’s project team.
+Deliverable: Report summary of market survey findings, comparing the organization’s current salary
+ranges to the surveyed market peers, and highlighting the relative market competitiveness of each
+surveyed classifications’ minimum, midpoint, and maximum salary range point.
+
+Benefits Survey - External Competition
+Data Collection – Market Research Benefits
+We will conduct an external custom benefits survey based on the agreed upon peer group collecting
+health insurance, retirement, paid time off and other supplemental benefits data. The benefit survey will
+provide us with an understanding of the external competitive markets for fringe benefit offerings.
+Tasks
+• Utilize the same relevant peers from the salary survey.
+• Conduct external benefits survey by collecting agreed upon market peers’ benefit data.
+Deliverable: Report summarizing benefits survey findings.
+
+AutoSolve, Inc.
+
+17
+
+Classification Framework
+Job Classification Categorization
+We utilize data from the position description questionnaire (PDQ), and external salary survey to create a
+corrected classification hierarchy based on updated classification data. AutoSolve’s point factor job
+evaluation methodology provides a means to establish the classification / job title hierarchy. The
+classification hierarchy list is utilized in creating the proposed pay plan aligning pay with hierarchy
+eliminating pay compression.
+Tasks
+• Analyze findings and recommendations classification review and the compensation reviews.
+• Provide recommendations to update classification placement, addition and deletion.
+• Meet with organization’s project team to present initial classification grading to receive feedback
+and make revisions.
+Deliverable: Report containing a list of all classifications and agreed upon grade / placement within the
+organization.
+
+Employee Pay Plan Management System
+External Market Analysis – Pay Structures – Implementation Analysis
+Based on findings and observations from the study and the organization’s pay plan philosophy, AutoSolve
+will propose a compensation and classification system that meets the organization’s goals and needs.
+We will ensure the pay plan aligns with current industry best practices and your budget constraints.
+AutoSolve will recommend and discuss multiple pay plan options to determine the most effective range
+within the organization’s operating market. AutoSolve will recommend and discuss multiple
+implementation options to determine salary increases for the organization’s current employees. The
+system will ensure usability of the recommended pay plan system for the next two years.
+Tasks
+• Analyze salary survey data to develop externally competitive salary range and step-plan
+recommendations for each job classification.
+• Provide recommendations for multiple salary structures to accommodate specialized labor
+markets.
+• Prepare a recommended pay plan and salary range assignment separating employees by
+department and job function.
+• Develop recommended strategies for setting hiring rates for new and promoted employees.
+• Provide seven or more implementation cost options for the new recommended pay plan system.
+• Meet with the organization’s project team to present initial system and receive feedback on
+revising the newly recommended pay scales.
+• Review all implementation options and select the option or options that best fit the needs of the
+organization.
+• Provide a custom employee pay plan software management system. The employee pay plan
+management system will be a workable excel file that incorporates the organizations selected
+implementation option and the multiple recommended pay plans. The new system outlines the
+estimated cost to move all employees based upon the chosen implementation option, and the
+client's ability to add new hires and/or move employees up/down in their pay plan.
+Deliverable: New pay plan management system.
+
+AutoSolve, Inc.
+
+18
+
+Final Report, Summary Report, Software System, System Training, Present Findings
+Study Deliverables
+We will prepare a final report to include all aspects of the classification and compensation study. This
+report will be accompanied by a summary report that pulls key highlights, findings, and the results from
+the study. We will also provide a propriety custom employee pay plan software management system. This
+system represents the proposed compensation and classification system derived from the conducted
+study. The pay plan management system outlines the estimated cost to move all employees into the
+proposed compensation system based upon the chosen implementation option and pay plan
+competitiveness. The management system allows the organization to add and remove employees, adjust
+classification assigned grades and to estimate employee increases after the implementation is complete.
+The system is designed for continual pay plan management.
+Tasks
+•
+•
+•
+•
+
+Prepare a final report illustrating project findings and recommendations.
+Prepare summary report consisting of key findings and recommendations.
+Provide a custom employee pay plan software management system.
+Prepare an in-depth manual and training materials for maintenance of the recommended
+classification and compensation pay plan management system.
+• Present findings and recommendations at a public meeting of the organization’s stakeholders at
+an agreed upon date either in person or virtually.
+Deliverable: Final report, Summary Report, Pay Plan Management System, Maintenance/Training
+materials.
+
+Compensation System Post Study Support
+Ongoing Classification and Job Description Support
+AutoSolve is committed to providing the highest-quality product and service. At the completion of each
+study, we provide a complimentary six (6) months of consultation and support. We also offer paid support
+packages.
+Year One (1) – Support Package / Optional Maintenance
+• First six months support offered at no charge.
+• Optional second six months prepaid support.
+• New classifications and placing them in the proper grade relative to the operating market and
+internal hierarchy.
+• Re-grading current classifications on an as needed basis.
+• Writing job or updating job descriptions on an as needed basis.
+• Ad hoc labor market research in client’s operating market on a as needed basis.
+Year Two (2) – Support Package / Optional Maintenance
+• New classifications and placing them in the proper grade relative to the operating market and
+internal hierarchy.
+• Re-grading current classifications on an as needed basis.
+• Writing job or updating job descriptions on an as needed basis.
+• Ad hoc labor market research in client’s operating market on a as needed basis.
+• Market survey to analyze how the new salary ranges fall competitively within the client’s operating
+market after one year of implementation.
+
+AutoSolve, Inc.
+
+19
+
+Study Availability and Timeline
+Firm Availability
+AutoSolve maintains the following hours of operation:
+• Monday through Friday: 8:00 a.m. to 5:00 p.m. Eastern Daylight Time.
+• Our assigned personnel will be available throughout the term of the contract.
+• Workplace location is virtual.
+• Communications will be conducted through virtual meetings, phone calls, and email.
+• AutoSolve will support Central Daylight Time standard business hours.
+Assumptions
+•
+•
+•
+
+Client will provide requested data in a timely manner.
+Client employees will perform internal survey and PDQ in a timely manner.
+Peers will provide requested market data in a timely manner.
+
+Timeline
+Timeline estimated at 14 working weeks for each study.
+• Study timeline
+City of Independence, IA 1/19/2026 to 4/24/2026
+• Our timeline is flexible and will adjust deliverable dates, taking into consideration national
+holidays and vacation schedules.
+• AutoSolve is prepared to start the compensation study within 2 weeks after official notice of
+award.
+City of Independence, IA 1/19/2026 to 4/24/2026
+Timeline & Milestones
+
+January
+
+February
+
+March
+
+April
+
+Study Initiation
+Kick Off
+Project Management (14 weeks)
+Current Pay Plan Evaluation (3 weeks)
+Classification Evaluation (8 weeks)
+Compensation Evaluation (8 weeks)
+Classification Framework / Compensation Management System
+with Implementation Options (3 weeks)
+Final Report, System Training (3 weeks)
+Complimentary Support - (6 months)
+Green - Kick Off
+Purple - Working Weeks
+Black - Holiday Week
+
+AutoSolve, Inc.
+
+20
+
+References
+REF 1: City of Americus, Georgia – Classification and Compensation Study
+Contact: Ola Terrell-Jordan, Human Resources Director
+Email: oterrell-jordan@americusga.gov Phone: (229) 924-4411 ext. 248
+Services Provided: 2024 – Council Approved / Implementation Completed
+- Completed a comprehensive classification and compensation study for the City of Americus,
+Georgia, consisting of 153 employees and 77 classifications.
+REF 2: City of New Prague, Minnesota - Classification and Compensation Study
+Contact: Robin Pikal, Finance Director
+Email: rpikal@ci.new-prague.mn.us
+Phone: (952) 758-4401
+Services Provided: 2025 – Council Pending / Implementation Pending – January 2026
+- Completed comprehensive classification and compensation study for City of New Prague,
+Minnesota, consisting of 57 employees and 38 classifications.
+REF 3: Town of Rolesville, North Carolina – Classification and Compensation Study
+Contact: Lisa Alston, Human Resources Director
+Email: lisa.alston@rockymountnc.gov Phone: (252) 972-1190
+Services Provided: 2024 – Council Approved / Implementation Completed
+- Completed a comprehensive classification and compensation study for Town of Rolesville, North
+Carolina, consisting of 120 employees and 44 classifications.
+REF 4: Athens-Clarke County, Georgia – Fire Department Classification and Compensation Study
+Contact: Sara Ivy, Assistant Human Resources Director
+Email: sara.ivy@accgov.com Phone: (706) 400-6368
+Services Provided: 2025 – Council Pending / Implementation Pending – January 2026
+- Completed a fire department comprehensive classification and compensation study for AthensClarke County, Georgia, consisting of 174 employees and 9 classifications.
+REF 5: Brunswick County, Viginia – Classification and Compensation Study
+Contact: Jennifer Carter, Finance Director
+Email: jcarter@brunswickco.com Phone: (434) 848-3107
+Services Provided: 2025 – Council Pending / Implementation Pending – January 2026
+- Completed comprehensive classification and compensation study for Brunswick County, Virginia,
+consisting of 229 employees and 80 classifications.
+REF 6: City of Rincon, Georgia – Classification and Compensation Study
+Contact: Tiffany Herbert, Human Resources
+Email: therbert@rinconga.gov Phone: (912) 826-5745 ext. 102
+Services Provided: 2024 - Council Approved / Implementation Completed
+- Completed a comprehensive classification and compensation study for the City of Rincon,
+Georgia, consisting of 117 employees and 53 classifications.
+
+AutoSolve, Inc.
+
+21
+
+Exhibit A – City of Independence – Proposal Submittal Form
+
+Appendix C: Proposal Submittal Form
+Instructions: This form should be completed and submitted with your proposal
+package. Its purpose is to ensure all required components are included and to
+provide key information in a standardized format.
+
+Section 1: Proposing Firm Information
+Official Firm Name:
+
+AutoSolve, Inc
+
+Mailing Address:
+
+46 Thatcham Drive,
+Saint Augustine, FL 32092
+
+Website:
+
+https://autosolveinc.com/
+
+Year Firm Established:
+
+1993
+
+Office Location Performing the Work:
+
+46 Thatcham Drive,
+Saint Augustine, FL 32092
+
+Primary Contact Person:
+
+Jeff Turner
+
+Title:
+
+President
+
+Phone:
+
+321-945-8762
+
+Email:
+
+jeff@autosolveinc.com
+
+Section 2: Proposal Submission Checklist
+Use this checklist to verify that all required elements are included in your proposal
+submission.
+[ ] One (1) unbound original, five (5) bound copies, and one (1) electronic
+copy (USB flash drive) of the technical proposal.
+● [ ] One (1) sealed envelope containing the Cost Proposal
+, clearly marked on
+●
+
+13 | P a g e
+
+AutoSolve, Inc.
+
+22
+
+Exhibit B – City of Independence – Reference Sheet
+
+Reference 1:
+Client Name:
+Contact Person & Title:
+Phone:
+Email:
+Brief Description of Project:
+
+City of Americus, Georgia
+Ola Terrell-Jordan, Human Resources Director
+
+(229) 924-4411 ext. 248
+oterrell-jordan@americusga.gov
+Completed a comprehensive classification and compensation study
+consisting of 153 employees and 77 classifications.
+
+Reference 2:
+Client Name:
+Contact Person & Title:
+Phone:
+Email:
+Brief Description of Project:
+
+City of New Prague, Minnesota
+Robin Pikal, Finance Director
+(952) 758-4401
+
+rpikal@ci.new-prague.mn.us
+Completed comprehensive classification and compensation study
+consisting of 57 employees and 38 classifications.
+
+Reference 3:
+Client Name:
+
+Town of Rolesville, North Carolina
+
+Contact Person & Title:
+
+Lisa Alston, Human Resources Director
+
+Phone:
+Email:
+Brief Description of Project:
+
+(252) 972-1190
+
+lisa.alston@rockymountnc.gov
+Completed a comprehensive classification and compensation study
+consisting of 120 employees and 44 classifications.
+
+15 | P a g e
+
+AutoSolve, Inc.
+
+23
+
+Exhibit C – City of Independence – Acknowledgement of
+Addendum and RFP Terms
+
+AutoSolve, Inc.
+
+24

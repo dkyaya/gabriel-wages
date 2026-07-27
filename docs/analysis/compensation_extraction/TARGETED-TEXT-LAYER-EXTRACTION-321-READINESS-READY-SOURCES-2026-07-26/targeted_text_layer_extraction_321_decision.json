@@ -1,0 +1,53 @@
+{
+  "codification_runs": 0,
+  "completion_status": "completed_bounded_local_text_layer_extraction",
+  "decision": "targeted_text_layer_extraction_321_completed_evidence_extraction_ready",
+  "downloads": 0,
+  "durable_ledger_merges": 0,
+  "evidence_extraction_candidate_count": 321,
+  "evidence_extraction_review_ready_next": true,
+  "extraction_queue_count": 321,
+  "extraction_status_counts": {
+    "extracted_ok": 321
+  },
+  "extraction_status_counts_by_lane": {
+    "lane_1": {
+      "extracted_ok": 88
+    },
+    "lane_2": {
+      "extracted_ok": 106
+    },
+    "lane_3": {
+      "extracted_ok": 23
+    },
+    "lane_4": {
+      "extracted_ok": 104
+    }
+  },
+  "extraction_status_counts_by_mechanism": {
+    "fiscal_constraint_signal": {
+      "extracted_ok": 23
+    },
+    "market_or_comparability_pressure": {
+      "extracted_ok": 104
+    },
+    "non_safety_constraint_signal": {
+      "extracted_ok": 88
+    },
+    "strike_or_no_strike_constraint": {
+      "extracted_ok": 106
+    }
+  },
+  "global_analysis_readiness": false,
+  "html_extraction_count": 32,
+  "ingestion_runs": 0,
+  "model_api_calls": 0,
+  "ocr_runs": 0,
+  "pdf_extraction_count": 289,
+  "pdf_render_runs": 0,
+  "rating_runs": 0,
+  "repair_needed": false,
+  "task_id": "TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26",
+  "tier_c_verification_recommended_next": false,
+  "url_opens": 0
+}

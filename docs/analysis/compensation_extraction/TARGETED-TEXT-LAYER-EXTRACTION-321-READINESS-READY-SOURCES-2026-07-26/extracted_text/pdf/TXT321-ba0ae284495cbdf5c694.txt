@@ -1,0 +1,3292 @@
+S-MA-21-083
+#791
+
+FEDERAL MEDIATION AND CONCILIATION SERVICE
+BEFORE INTEREST ARBITRATOR CARY MORGEN
+
+______________________________________________________________________________
+In the Matter of an
+Interest Arbitration between
+Illinois Fraternal Order of Police
+Labor Council Full-Time Police Officers
+Below the Rank of Sergeant
+and
+The Village of Broadview
+
+)
+)
+)
+)
+)
+)
+)
+)
+
+FMCS No. 220216-03476
+
+INTEREST ARBITRATION OPINION AND AWARD
+A Hearing was held on December 7, 2022, in Broadview, Illinois, before Interest Arbitrator Cary
+Morgen, having been jointly selected by the Parties, Village of Broadview (“the Employer,” or “the
+Village”) and Illinois Fraternal Order of Police Labor Council (“the Union”).
+The Village was represented by its co-counsels Kevin Camden, CAMDEN LAW OFFICE, and
+Brian Miller, DEL GADO LAW GROUP, LLC, and testifying for the Village were LeTisa Jones and Chief
+Thomas Mills. The Union was represented by its counsel, Jeff Burke, and testifying for the Union was
+Bruce Wisniewski. The Parties gave their presentations primarily in narrative fashion. Both Parties were
+afforded full opportunity to provide rebuttal testimony as well as to examine and cross-examine witnesses.
+A 90-page transcript of the proceedings was prepared. Both Parties filed Post-Hearing Briefs which were
+exchanged through the Arbitrator on February 1, 2023, at which time the record was closed.
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 2 of 54
+
+TABLE OF CONTENTS
+I.
+
+THE PARTIES’ STIPULATIONS AND ISSUES IN DISPUTE.................................................... 3
+
+II.
+
+RELEVANT CURRENT CONTRACT PROVISIONS .................................................................. 4
+
+III.
+
+RELEVANT STATUTORY LANGUAGE..................................................................................... 5
+
+IV.
+
+BACKGROUND AND BARGAINING HISTORY ....................................................................... 6
+
+V.
+
+FINAL OFFERS PRESENTED DECEMBER 7, 2022 ................................................................... 7
+
+VI.
+
+TENTATIVE AGREEMENT .......................................................................................................... 8
+
+VII.
+
+EXTERNAL COMPARABLES ...................................................................................................... 8
+A. Union’s Position ........................................................................................................................ 8
+B. Village’s Position ...................................................................................................................... 9
+
+VIII.
+
+INTERNAL COMPARABLES ..................................................................................................... 10
+A. Union’s Position ...................................................................................................................... 10
+B. Village’s Position .................................................................................................................... 10
+
+IX.
+
+PRESENTATIONS OF THE PARTIES ....................................................................................... 11
+A. The Union ................................................................................................................................ 11
+B. The Village .............................................................................................................................. 17
+
+X.
+
+DISCUSSION AND FINDINGS ................................................................................................... 22
+A. Introduction ............................................................................................................................. 22
+B. Analysis of Each Open Issue Based on the Relevant Section 14(h) Factors and
+Award ...................................................................................................................................... 23
+1. Wages................................................................................................................................... 23
+2. Health Insurance .................................................................................................................. 40
+3. Clothing, Maintenance and Special Equipment Allowance ................................................ 45
+4. New Section 31.7 Health Emergencies ................................................................................ 50
+
+XI.
+
+AWARD ........................................................................................................................................ 53
+A. Wages ...................................................................................................................................... 53
+B. Health Insurance ...................................................................................................................... 53
+C. Clothing, Maintenance and Special Equipment Allowance .................................................... 54
+D. Addition of a New Section 31.7 Health Emergencies ............................................................. 54
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 3 of 54
+
+I.
+
+THE PARTIES’ STIPULATIONS AND ISSUES IN DISPUTE
+The pertinent stipulations are as follows:
+
+1.
+Arbitrator’s Authority. The Arbitrator in the above captioned matter shall be Cary
+Morgen. The procedural prerequisites for convening the arbitration hearing have been met, and the
+Arbitrator had jurisdiction and authority to rule on those mandatory subjects of bargaining brought to him
+by the Illinois Labor Relations Act and the laws of the state of Illinois, including retroactively to May 1,
+2020. The Parties have each voluntarily waived their right to appoint a panel member.
+* * *
+5.
+Final Offers. Final offers for interest arbitration shall be exchanged and submitted to the
+Arbitrator at the hearing prior to the hearing formally commencing. Once exchanged, the final offers may
+not be altered in any manner, unless the Parties mutually agree, reach agreement on an issue, or a party
+withdraws the offer for the status quo language.
+6.
+Issues in Dispute. The following are the only issues between the Parties and subject to this
+interest arbitration hearing with an indication as to the moving party, and whether the issue is economic or
+noneconomic in nature. The Parties reserve the right to subtract from, but not add to, the list.
+(a)
+
+(b)
+
+Economic Issues
+(1)
+
+Annual wage increases (Both)
+
+(2)
+
+Uniform and Equipment Annual Dollar Amount (Union)
+
+(3)
+
+Cost of Vaccines/Testing (Union)
+
+(4)
+
+Health Insurance Contributions by Employees (Employer)
+
+Non-Economic Issues
+(1)
+
+Provision of Receipts for Uniform Spending (Employer)
+
+7.
+Evidence. The parties [sic] agree that the following information shall be jointly submitted
+to the Arbitrator on or before the convening of the hearing on November 15, 2022:1
+(a)
+
+The Parties’ final offers. (Jt. Ex. 1, 2).
+
+(b)
+
+These Stipulations of the Parties (Jt. Ex. 3); and
+
+(c)
+
+All Tentative Agreements (Jt. Ex. 4).
+
+(d)
+
+Materials and testimony offered as evidence of the parties’ [sic] bargaining history
+shall not include the Parties’ “off -the-record” proposals.
+* * *
+
+10.
+The Award. The Arbitrator shall base his findings and decision upon the applicable factors
+set forth in Section 14(h) of the Illinois Labor Relations Act. The Arbitrator shall issue his award within
+sixty (60) days, unless additional time is requested by the Arbitrator. The Arbitrator shall retain jurisdiction
+1
+
+November 15, 2022, was a preliminary working meeting with the Arbitrator. The evidentiary hearing was
+rescheduled to December 7, 2022.
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 4 of 54
+
+and authority to resolve any disputes over the incorporation of his award into the Parties’ new collective
+bargaining agreement.
+11.
+Continued Bargaining. Nothing contained herein shall be construed to prevent
+negotiations and settlement of the terms of the contract at any time, including prior to, during, or subsequent
+to the arbitration hearing.
+12.
+Duration.
+The Parties agree that the contract will be four (4) years in duration
+effective May 1, 2020, and terminating April 30, 2024.
+
+II.
+
+RELEVANT CURRENT CONTRACT PROVISIONS
+ARTICLE XXIV INSURANCE
+* * *
+
+Section 24.5 Employee Contribution
+There will be 24 pay periods per year. Officer contributions shall be deducted on a pre-tax basis and shall
+be as follows; Officers shall pay 12.5% pf the premium for the health and dental plan in which they are
+enrolled (HMO, PPO etc.): [sic] however, the Officer’s premium contribution shall be capped at four
+hundred ($400.00) per month.
+* * *
+ARTICLE XXIX – UNIFORM ALLOWANCE AND CLOTHING ISSUE
+* * *
+Section 29.2
+
+Clothing, Maintenance and Special Equipment
+* * *
+
+For all bargaining unit Officers, the Employer shall afford the sum of seven hundred thirty dollars ($730.00)
+per calendar year for the purchase and maintenance of clothing and special equipment. This annual
+allowance shall be made available to the Officers on or before May 1st of each year this Agreement is in
+effect. Newly hired employees shall receive clothing allowance on a pro-rated basis for the first year.
+* * *
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 5 of 54
+
+ARTICLE XXX – WAGES
+Section 30.1
+
+Base Salary
+
+The base salary schedule for the fiscal year 5/1/2016 through 5/2019 shall be as follows:
+BASE
+
+5/1/2019
+2.25%
+
+$ 60,535.87
+$ 75,516.38
+$ 79,626.54
+$ 83,754.58
+$ 87,873.67
+
+$ 61,897.92
+$ 77,215.49
+$ 81,418.13
+$ 85,639.05
+$ 89,850.82
+
+(Un. Ex. 3(i))
+
+III.
+
+RELEVANT STATUTORY LANGUAGE
+The Illinois Public Labor Relations Act
+* * *
+
+Section 14.
+
+Security Employee, Peace Officer and Fire Fighter Disputes.
+* * *
+
+(g)
+At or before the conclusion of the hearing held pursuant to subsection (d), the arbitration panel
+shall identify the economic issues in dispute…The determination of the arbitration
+panel as to the
+issues in dispute and as to which of these issues are economic shall be conclusive….As
+to
+each
+economic issue, the arbitration panel shall adopt the last offer of settlement which,in the opinion of the
+arbitration panel, more nearly complies with the applicable factors prescribed in subsection (h)…
+(h)
+Where there is no agreement between the parties, or where there is an agreement but the parties
+have begun negotiations or discussions looking to a new agreement or amendment of the existing
+agreement, and wage rates or other conditions of employment under the proposed new or amended
+agreement are in dispute, the arbitration panel shall base its findings, opinions and order upon the following
+factors, if applicable:
+(1)
+
+The lawful authority of the employer.
+
+(2)
+
+Stipulations of the parties.
+
+(3)
+
+The interests and welfare of the public and the financial ability of the unit of
+government to meet those costs.
+
+(4)
+
+Comparison of the wages, hours and conditions of employment of the employees
+involved in the arbitration proceeding with the wages, hours and conditions of
+employment of other employees performing similar services and with other
+employees generally:
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 6 of 54
+
+(A)
+
+In public employment in comparable communities.
+
+(B)
+
+In private employment in comparable communities.
+
+(5)
+
+The average consumer price for goods and services, commonly known as
+the cost of living.
+
+(6)
+
+The overall compensation presently received by the employees, including
+direct wage compensation, vacations, holidays, and other excused time,
+insurance and pensions, medical and hospital benefits, the continuity and
+stability of employment and all other benefits received.
+
+(7)
+
+Changes in any of the foregoing circumstances during the pendency of the
+arbitration proceedings.
+
+(8)
+
+Such other factors, not confined to the foregoing, which are normally or
+traditionally taken into consideration in the determination of wages, hours
+and conditions of employment through voluntary collective bargaining,
+mediation, fact-finding, arbitration or otherwise between the parties, in the
+public service or in private employment.
+
+(5 ILCS 315/14)
+
+IV.
+
+BACKGROUND AND BARGAINING HISTORY
+The Village of Broadview has approximately 8,000 residents. The Union has represented its Police
+
+Officers below the rank of Sergeant since 1986; there are currently 14 members in the Bargaining Unit.
+Police sergeants are represented by a different union. The Parties have had three prior interest arbitrations:
+2000 and 2006 with Arbitrator Cox, and 2015 with Arbitrator Fletcher. In 2000, the sole issue was
+residency. Prior to the current interest arbitration the Parties held five negotiation sessions between July 8,
+and September 30, 2021, and mediation sessions on December 30, 2021, and October 24, 2022. (Un. Ex. 7,
+12, p. 4; Tr. 8, 13, 50)
+
+(Intentionally Left Blank)
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 7 of 54
+
+V.
+
+FINAL OFFERS PRESENTED DECEMBER 7, 2022
+
+ISSUE
+Article XXX, Section 30.1
+Base Salary
+
+Article XXIV Insurance,
+Section 24.5 Employee
+Contribution
+
+UNION OFFER
+
+VILLAGE OFFER
+
+Delete the existing salary schedule
+and replace it with a table reflecting
+the following wage increases:
+May 1, 2020 -- 2.5%
+May 1, 2021 -- 3.0%
+May 1, 2022 -- 3.25%
+May 1, 2023 -- 3.25%
+
+May 1, 2020 -- 0.0%
+May 1, 2021 -- 2.0%
+May 1, 2022 -- 2.0%
+May 1, 2023 -- 2.0%
+
+Total Increase -- 1 2 . 0 %
+
+Total Increase -- 6.0%
+
+Status Quo
+
+The percentage contribution officers shall
+pay of the premium for the health and dental
+plan in which they are enrolled (HMO, PPO,
+etc.) shall be set as follows:
+
+(There will be no change in the
+percentage of employee premium
+contribution.)
+
+May 1, 2020 – 12.5%
+May 1, 2021 – 14%
+May 1, 2022 – 14%
+May 1, 2023 – 15%
+Article XXIX, Section 29.2
+Clothing, Maintenance, and
+Special Equipment Allowance
+
+Article XXXI – General
+Provisions
+New Section 31.7
+Health Emergencies
+
+Increase annual clothing allowance
+from the Village to $900.00.
+
+Status Quo.
+(The dollar amount from the Village will
+remain at $730.00.)
+
+Status Quo.
+
+Add New Language:
+
+(There will be no new additional
+language.)
+
+“Officers can purchase uniforms wherever
+officer chooses.”
+
+Add New Language:
+
+“Officers must produce receipts for uniform
+purchases.”
+Status Quo.
+
+“The Employer will pay the
+employees’ out-of-pocket costs for
+vaccinations and/or disease testing it
+mandates.”
+
+(There will be no new Section 31.7.)
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 8 of 54
+
+VI.
+
+TENTATIVE AGREEMENT
+The Parties reached a Tentative Agreement on other issues, and it is incorporated into this Award.
+
+(Jt. Ex. 4; Un. Ex. 8)
+
+VII.
+
+EXTERNAL COMPARABLES
+A.
+
+Union’s Position
+
+The Union proposed the following comparable communities, which the Parties had agreed upon in
+both the 2007 and 2015 interest arbitrations (referred hereinafter as the “historical comparables”):
+•
+•
+•
+•
+•
+•
+•
+
+Countryside
+Hillside
+Lyons
+North Riverside
+Northlake
+River Grove
+Schiller Park
+
+The Union has identified three additional communities for this Arbitration:
+•
+•
+•
+
+Harwood Heights
+Stickney
+Summit
+
+The Union disputes the Village’s proposed removal of Lyons and Countryside, which has the
+highest paid officers among the comparables, and the addition of Bellwood, which has a population more
+than twice the size of the Village and the lowest starting pay rate of any of the comparables. The Village’s
+methodology is based almost exclusively upon revenues, whereas the Union’s is based on identifying
+facially neutral, “traditional factors”: Equalized Assessed Valuation (“EAV”), General Fund Balance,
+Public Safety Expenditures, Median Household Income, Median Home Value, Police Department Size, and
+Index of Crimes. (Un. Ex. 12, p. 25; Tr. 17-20)
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 9 of 54
+
+B.
+
+Village’s Position
+
+The Village rejects the Union’s contention that the comparables agreed to in 2015 for Arbitrator
+Fletcher also apply in 2022. The Union’s comparables do not account for the impact of COVID, the
+decreasing revenue for Illinois Municipalities, and the lack of data to make an accurate comparison. The
+Union’s proposed comparable pool includes one of the wealthiest communities in North America: Oak
+Brook, Illinois, two DuPage County communities: Willowbrook and Clarendon Hills, and three west
+suburban Cook County municipalities with significant high sales tax revenues: Countryside, Northlake, and
+North Riverside, and then adds to the 2015 stipulated comparables: Harwood Heights, Stickney, and
+Summit.
+Instead, the Village proposes a set of comparables based upon its financial and budgetary
+conditions:
+•
+•
+•
+•
+•
+•
+
+Bellwood
+Hillside
+Northlake
+North Riverside
+River Grove
+Schiller Park
+
+The Village emphasizes that it is not a Home Rule community and thus does not have revenuegenerating opportunities as do other communities. It has an EAV for 2020 of about $315 million, with a
+budget between $16 and $17 million. Its comparables all have about a $300 million in total equalized
+assessed property valuation and their budgets are basically between $15 to $20 million. Although Bellwood
+is about double the size of Broadview, with a population of 18,879, Bellwood has a lower EAV with a
+budget of $16.4 million.2 Wage increases for Police contracts of the comparables average 2.5 to 3 percent.
+
+In her testimony, Village Administrator LeTisa Jones stated the Bellwood’s budget was $16.4 million. However, in
+its Brief, the Village states that Bellwood’s budget is $48 million in revenue and $28 million in expenditures. In the
+analysis I consider the $16.4 amount. (Er. Brief, p. 9, footnote 2)
+2
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 10 of 54
+
+The Village claims that other Union comparables are outliers because they have substantially higher
+budgets, such as River Grove.3 (Tr. 50-52, 60)
+
+VIII.
+
+INTERNAL COMPARABLES
+A.
+
+Union’s Position
+
+The internal comparables, Sergeants and Firefighters—both of which are represented by different
+unions—are not useful. The Sergeants’ contract expired April 30, 2020, and is currently before another
+Interest Arbitrator. The wage increases for Patrol Officers and Firefighters have historically not identically
+matched. In their respective FY 2017-2019 contracts, although both units received a 2.25% increase in 2018
+and 2019, in 2017 Police Officers received 2.25%, whereas Firefighters received 2.0%.
+B.
+
+Village’s Position
+
+The internal comparability factor is more important than the external. Since 2010, Police and
+Firefighters contracts have been comparable on wage increases even though the Firefighters are represented
+by a different union. According to Village Administrator LeTisa Jones, they asked the Firefighters to take
+a zero percent (0%) increase for 2020 and a one percent (1%) increase thereafter until the Village knew
+how much property tax revenue it would be receiving and the impact of the pandemic on the budget. The
+Village neither agrees nor disagrees with the Union’s claim that the Firefighters’ wage package was in
+exchange for an inaugural minimum staffing provision. The Police and Firefighters have also been in
+lockstep on percentage contribution for insurance costs with the exception of year 2011. Therefore, the
+Village’s final offer on insurance contribution is exactly the same as what the Firefighters agreed to. (Tr.
+54, 60)
+Jones said that the Village also wanted to ensure that both departments not only had adequate
+healthcare benefits for individual members and their families but also provided new hires with coverage as
+
+3
+
+The testimony from Village Administrator LeTisa Jones regarding the exclusion of River Grove conflicts with the
+Village’s Brief which includes River Grove in its list of comparable communities. (Er. Brief, p. 9; Tr. 51-52, 60)
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 11 of 54
+
+soon as they start work. Previously, new hires had to wait 30 to 60 days before receiving healthcare benefits.
+Jones also noted that the Village makes the maximum pension payments for its Police and Fire departments.
+(Tr. 53-54, 56, 61)
+
+IX.
+
+PRESENTATIONS OF THE PARTIES
+A.
+
+The Union
+1.
+
+Wages
+
+The Union’s final offer for annual across-the-board raises is as follows:
+May 1, 2020 -- 2.5%
+May 1, 2021 -- 3.0%
+May 1, 2022 -- 3.25%
+May 1, 2023 -- 3.25%
+TOTAL
+12.0%
+
+Under the current salary structure, Officers are hired at an annual base salary of $61,897.92 and
+progress in five years to the top salary level: $89,850.82. The only salary increases after reaching the top
+level are longevity raises: 0.25% after 15 years, 0.50% after 20 years, and 0.75% after 25 years. After five
+years’ service there is little incentive for Police Officers to remain with the Village; Officer retention is a
+significant problem. Since October 2021, seven officers, all of whom were hired between 2009 and 2018,
+left the Village to work at other police agencies. Officers realize that when they reach seven or eight years
+of service, they will continue to be paid substantially less than their counterparts at other local agencies
+until they either leave or retire. Only four of the current members were hired between 2002 and 2013. Of
+the other ten officers, one was hired in 2019, one in 2020, four in 2021, and four in 2022. Thus 71% of the
+current force has three years or less service. The Union’s wage proposal serves the public interest by
+keeping the members’ wages on pace with neighboring comparable communities in order to retain
+experienced Officers. Conversely, the Village’s wage proposal will only exacerbate the problem. (Un. Ex.
+12, p. 23)
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 12 of 54
+
+In the table that follows, the current salary rates are compared with the 10 external communities
+proposed by the Union along with the average of those 10 communities. At the first-year salary of
+$61,897.92, Broadview ranks 5th out of 11; at the fifth-year top salary of $89,850.82, Broadview ranks 4th
+out of 11. However, at 10 years Broadview slips to 7th out of 11, at years 15 and 20 Broadview ranks 9th
+out of 11, and finally at 25 years 8th out of 11.
+
+2020 Annual Salaries Comparison
+
+(Un Ex. 12, p. 26)
+Under the Union’s wage proposal, the rankings of its members in comparison to its comparables
+would be as follows:
+
+(Intentionally Left Blank)
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 13 of 54
+
+CONTRACT
+YEAR and
+Percent
+Increase
+2020 (0%)
+Current
+2020 (2.5%)
+
+1-4
+YEARS
+
+5-9
+YEARS
+
+10-14
+YEARS
+
+15-19
+YEARS
+
+20-24
+YEARS
+
+25+
+YEARS
+
+5th of 11
+
+4th of 11
+
+7th of 11
+
+9th of 11
+
+9th of 11
+
+8th of 11
+
+4th of 11
+
+4th of 11
+
+6th of 11
+
+7th of 11
+
+8th of 11
+
+8th of 11
+
+2021 (3.0%)
+
+4th of 9
+
+3rd of 9
+
+5th of 9
+
+6th of 9
+
+7th of 9
+
+7th of 9
+
+2022 (3.25%)
+
+4th of 8
+
+2nd of 8
+
+4th of 8
+
+4th of 8
+
+6th of 8
+
+6th of 8
+
+2023 (3.25%)
+
+3rd of 6
+
+2nd of 6
+
+3rd of 6
+
+3rd of 6
+
+4th of 6
+
+4th of 6
+
+(Un. Ex. 12, pp. 31-34)
+The Union argues further that wage freezes, as the Village proposes for year 2020-2021, are currently nonexistent in Police bargaining units.
+Turning to the internal comparables, there is no evidence that the Police and Fire units have a
+history of lockstep bargaining. Significantly, in return for giving the Village a 0% wage increase in 2020,
+the Firefighters’ received a coveted and expensive commitment: minimum staffing. The Union projects
+that maintaining a minimum staffing level of five persons per shift with one three-member Engine Company
+and a two-person ALS ambulance will cost $100,000 per year if it requires hiring only one firefighter,
+which substantially exceeds the Union’s wage proposal as I discuss in more detail later.
+Next, the Union considers the cost of living most crucial. Because the first three years of the
+Contract have elapsed, increases in the annual cost of living increases are known. The first year, May 2020
+– May 2021, the cost of living increased by 5.6%, more than twice the Union’s proposed 2.5%; the Village’s
+proposed 0% increase is unsupportable. The second year, May 2021 – May 2022, the cost of living rose
+8.8%, almost three times the Union’s proposed 3.0% increase; the Village’s proposed 2% increase simply
+cannot be supported. The third year, May 2022 – May 2023, the cost of living increased 1.4% from May to
+September 2022; the Philadelphia Federal Reserve revised its annualized forecast to 6.7% up from 4.5%.
+The Union’s proposed 3.25% increase for the third year is considerably below the forecast. The Village’s
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 14 of 54
+
+proposed 2% increase is once again unsupportable. The Union asserts that its proposed 3.25% increase for
+year four, May 2023 – May 2024, will still be substantially below the cost of living. (Un. Ex. 12, pp. 2930)
+The evidence shows that the Village is financially stable, and it has not claimed an inability to pay
+the Union’s proposed wage increases. The Village is required to file audited financial statements annually
+with the State Comptroller. However, the most recent Annual Financial Report filed is from FY 2019-2020
+and was prepared during the 2020 COVID-19 shutdown, presenting a distorted view of the Village’s
+financial picture. The only other data the Village provided is its proposed budget for FY 2021 through FY
+2023, which anticipated revenues for FY 2021 and FY 2022 as $16,587,664 and $16,583,664, respectively.
+Based upon the average annual salary of the 14-member bargaining unit, a 1% increase would cost
+$850, and roll up to about $1,000 including payroll taxes and pension costs. The Union estimates the total
+cost of a 2.5% first-year wage increase to be $32,500, which is less than two- tenths of one percent of the
+General Fund revenues for 2020. In comparison to the Village’s proposal of 2% for years two, three and
+four, no more than 1.25% separates the Parties’ proposals in each year, which amounts to an added cost of
+about $17,500, less than one-tenth of one percent for the Village’s revenues each year.
+The Village’s budget shows a slight increase in expenses each year from FY 2021 through FY
+2023, but revenues continue to exceed expenses. For instance, in the year ending 2021, revenues exceed
+expenses by $1,156, 960, and yet it demands a 0% wage increase. For the years ending 2022 and 2023, it
+projects revenues to exceed expenses by $674,833 and $634,086, respectively. The Village cannot support
+a case for the inability to pay.
+The Union’s wage proposal is much closer to the known data and supported by the record than is
+the Village’s proposal. Therefore, the Arbitrator should adopt the Union’s proposal.
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 15 of 54
+
+2.
+
+Health Insurance
+
+The Union proposes the status quo. Currently, a member’s contribution toward the health insurance
+premium is 12.5%. Not only is there is no evidence in the record as to the cost of monthly premiums, but
+there is also no evidence establishing that the Bargaining Unit members have their health insurance through
+the Village. Although arbitrators have increased the percentage contribution paid by employees, it occurs
+only when the increase is supported by the evidence, which the Village has not provided. Therefore, the
+Arbitrator should adopt the Union’s proposal to maintain the status quo on the health insurance premium.
+3.
+
+Uniform Allowance
+
+The Union proposes to increase the annual allowance for the purchase and maintenance of clothing
+and special equipment to $900.00 from the current $730.00, in all four years of the Contract. Although the
+Union accepts the Village’s non-economic proposal that Officers may purchase uniforms wherever they
+choose, it rejects the proposed requirement that officers produce receipts for uniform purchases.
+The dollar amount of the annual allowance ($730.00) has not changed since May 1, 2012. Since
+May 2020, the cost of living for Midwest urban consumers has risen about 29%, yet the Union proposes an
+annual increase of only 23% for the Contract’s four-year duration. The BLS’s own inflation calculator 4
+shows the purchasing power of $730 on 2012 took $942.77 in December 2022:
+
+(Intentionally Left Blank)
+
+https://www.bls.gov/data/inflation_calculator.htm. The CPI inflation calculator uses the “All Urban Consumers”
+(CPI-U) U.S. city average series for all items, not seasonally adjusted.
+4
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 16 of 54
+
+In addition, the Village had a hybrid Quartermaster/uniform allowance system until March 2, 2022,
+when Chief Mills informed Bargaining Unit members that he was immediately terminating the
+Quartermaster system and leaving only the $730.00 annual allowance. Officers in the comparable
+communities have either a hybrid quartermaster/uniform allowance system or provide a substantially
+greater flat allowance.
+The Union considers the Village’s non-economic proposal requiring officers to provide receipts for
+uniform purchases a breakthrough proposal. As such, the Arbitrator should apply the established
+“breakthrough” standard, which requires proof that the current system does not work or creates operational
+hardships for the party proposing the change and the opposite party resisting the change. The Village had
+not provided proof that the old system was broken and was suffering operational hardship that required
+relief. Requiring Officers to provide uniform purchase receipts will serve no purpose other than make the
+current system more cumbersome.
+Therefore, the Arbitrator should adopt the Union’s modest proposal because the current allowance
+has not kept up with the cost of living, it lags behind the external comparables, and it partially compensates
+for the Village terminating the Quartermaster system.
+
+(Intentionally Left Blank)
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 17 of 54
+
+4.
+
+New -- Section 31.7 Health Emergencies
+
+The Union proposes adding to Article XXX - General, a new provision “Section 31.7 Health
+Emergencies” that states, “The Employer will pay for the employees’ out-of-pocket costs for vaccinations
+and/or disease testing it mandates.”
+Because of the pandemic health crisis, the Village established policies and directives which
+required Police Officers to get frequent tests for COVID which at the time were convenient and free. (Un.
+Ex. 9(a-c)) That changed when the free testing facility near Police Headquarters closed, and Officers had
+to travel farther on their own time to find another free testing facility. The Union acknowledges the Village
+has since rescinded the policies and directives, but argues that in the event it reinstitutes the same or similar
+vaccine and/or testing policies, it should be mandated to pay any out-of-pocket costs incurred by Officers
+to comply.
+Also, the Union insists that since October 12, 2021, it has persistently attempted to get the Village
+to bargain over the policy. It was not until the mediation session on October 24, 2022, with the FMCS when
+the Union tendered a written proposal to which the Village did not respond. Because the Village chose not
+to deal with the matter at Contract negotiations, it is appropriate that it now deal with them through Interest
+Arbitration.
+Therefore, the Union believes its proposal for the addition of “Section 31.7 Health Emergencies”
+is reasonable and should be adopted by the Arbitrator.
+B.
+
+The Village
+1.
+
+Wages
+
+The Village’s final offer is for across-the-board raises as follows:
+May 1, 2020 -- 0.0%
+May 1, 2021 -- 2.0%
+May 1, 2022 -- 2.0%
+May 1, 2023 -- 2.0%
+TOTAL
+6.0%
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 18 of 54
+
+Because it is not a Home Rule community, the Village does not have the ability to levy additional
+taxes or fees; thus its income is primarily property tax revenue and a minimal amount of sales tax revenue,
+totaling approximately $4 million per year. Since 2020, when the pandemic began, the budget has remained
+almost flat with only minor increases in year-over-year expenditures between $15.5 to $16 million and a
+total budget of about $16.5 million per year.5 The Village received approximately $1.5 million in American
+Rescue Plan Act (ARPA) federal funding for COVID relief which was spent exclusively for Police and Fire
+overtime. It is fiscally conservative and is preserving its resources by not paying exorbitant salaries and
+avoiding large spending increases so as to not overtax its residents. It emphasizes that its sound fiscal
+management resulted in no adverse effects on employment during the pandemic; its sound fiscal
+management is further demonstrated through its negotiations with the Firefighters and is comparable with
+other local communities. Any attempt to compare other communities’ contracts with higher wage increases
+entered into before the pandemic ignores the economic reality that the health crises cast upon the Village
+and the stress involved in providing continued services to its citizens. (Tr. 46-47, 51, 54-56, 59)
+The Village acknowledges the trending economic data with respect to wages and recognizes that
+wages have to be higher. Nonetheless, it dismisses the Union’s claim that it needs to increase salaries at the
+higher seniority levels to retain employes and instead insists that the Union’s proposal will not achieve that
+goal. Citing several popular press news sources, the Village argues that recruitment and retention in law
+enforcement is a nationwide problem caused by a myriad of factors other than just wages. Therefore, the
+Village does not consider a simple across-the-board wage increase will address the Union’s perceived
+inequity beyond seniority year five. The Union’s proposal will only serve to keep Broadview wages
+significantly higher to start. Instead, the Union could have made a proposal on longevity pay.
+
+5
+
+As of the December 7, 2022, Hearing, the only audited financial data provided was for FY 2019-2020, the FY 20202021 audit was not yet completed. (Tr. 48)
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 19 of 54
+
+In contrast, the Village’s proposal maintains its position among the Union’s list of comparable
+communities. The wage increases in comparable communities are similar and range from 2% to 3.25% in
+any given year. The average increase—for those which a date is available and do not have open contracts—
+in 2021 is only 2.06%, while River Grove and Summit have 1.75% and 1.0% raises, respectively, which is
+less than the 2.0% the Village proposes. In 2022, the average raise drops to 2.03%. In 2023, the average of
+the six settled contracts is 2.96%; in 2024, the average of the three settled contracts is 3.08%. Thus, the
+total average increase across all comparable communities is only 2.8%.
+The Village considers the internal comparables—its Police and Fire Departments—the dispositive
+factor. Since at least 2010 the Firefighters and Police wage increases have been consistent with the Police
+always being slightly higher:
+Year
+
+Patrol Officers
+
+Sergeants
+
+Fire Department
+
+2010
+
+2
+
+0
+
+0
+
+2011
+
+2.5
+
+2
+
+1.5
+
+2012
+
+2.25
+
+2.5
+
+2
+
+2013
+
+2.25
+
+2.25
+
+2
+
+2014
+
+2.25
+
+2.25
+
+2
+
+2015
+
+2.25
+
+2.25
+
+2
+
+2016
+
+2
+
+2.25
+
+2
+
+2017
+
+2.25
+
+2.25
+
+2
+
+2018
+
+2.25
+
+2.25
+
+2.25
+
+2019
+
+2.25
+
+2.25
+
+2.25
+
+2020
+
+TBD
+
+TBD
+
+0
+
+2021
+
+TBD
+
+TBD
+
+1
+
+2022
+
+TBD
+
+TBD
+
+1
+
+2023
+
+TBD
+
+TBD
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 20 of 54
+
+Only twice in thirteen years has any Bargaining Unit received an increase above 2.25%, and that occurred
+for Patrol Officers in 2011 and for Sergeants in 2012, as highlighted above. Therefore, there is strong
+precedent for the Village’s proposed 0%, 2%, 2%, and 2% wage increases.
+The Village next turns to the rate of inflation. Although it acknowledges that since 2020 the cost
+of living has increased, it contends that in this Interest Arbitration inflation is being viewed retrospectively,
+and that 2021 and 2022 are outliers in relation to raises in 2018 and 2019. The Village is not a Private Sector
+employer that can simply pass along increases to the costs of its products or services. As previously noted,
+because it is not a Home Rule municipality, the Village cannot levy additional fees and/or taxes to
+compensate for an almost 7% cost of living increase in year 2021. While the first-year increase of the
+Contract is lower than the CPI, with the exception of 2022, overall the Village’s wage proposal is consistent
+with CPI increases. (Tr. 57-59) The Federal Reserve’s significant interest rate increases are slowly bringing
+down inflation, and the Philadelphia Federal Reserve Survey of Professional Forecasters forecasts inflation
+from 2022 to 2031 at the rate of 2.9%.
+Given the conservative nature of Interest Arbitration, no award has been issued where wage
+increases exceeded the CPI. The Union’s wage proposal would result in wages outpacing the CPI for the
+first three years of the Contract. To award higher wages than would be bargained for may ultimately harm
+the Village citizenry. Therefore, for all the foregoing reasons, the Village believes its wage proposal is more
+reasonable and should be adopted.
+2.
+
+Health Insurance
+
+Since 2010, the Police and Fire Departments have been almost entirely in lockstep with the
+percentage rate of health insurance contributions. The Firefighters negotiated employee premium
+contributions at 12.5%, 14%, 14%, and 15% for years 2020 through 2023, respectively. The Village
+contends the increases were not something Firefighters gave up in exchange for minimum staffing. Because
+of the historical parity in insurance contributions, it would be unfair for the Police to benefit from the
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 21 of 54
+
+sacrifices made by the Firefighters. Therefore, the Arbitrator should adopt the Village’s proposal to
+maintain parity in insurance premium contributions among its Bargaining Units.
+3.
+
+Uniform Allowance
+
+The purpose of the uniform allowance is to enable Officers to keep their equipment in good repair,
+not to keep up with other communities. When Chief Mills took command of the Police Department, he
+replaced the hybrid quartermaster/allowance system with a flat uniform allowance to promote fiscal
+accountability and transparency. The Village rejects the Union’s proposed increase to $900.00 and proposes
+instead that the status quo remain. The Union has not argued that the current uniform allowance was
+insufficient to meet the demands of its members. In addition, the Village considers its proposal that Officers
+provide receipts for their uniform expenditures is reasonable. The Union’s rejection of the request shows
+they view the allowance merely as compensation and for which the Officers should not be held accountable.
+Chief Mills said that requiring Officers to provide purchase receipts will enable the Village to determine
+the actual cost of the Contract’s uniform provision.
+4.
+
+New -- Section 31.7 Health Emergencies
+
+After the Village implemented its policy, rules, and procedures in response to COVID-19 testing
+and vaccinations in October 2021, the Union requested to bargain over the matter in October and November
+2021. In March 2022, the Village changed its labor counsel. Between March and October 2022 the Parties
+had numerous conversations and met several times to bargain over the successor Contract, yet the Union
+never raised the issue. It was not until the October 24, 2022, mediation session that the Union first submitted
+a written proposal. Because the Parties have not bargained over this economic issue and presented
+alternative language, it would be prejudicial to both Parties for the Arbitrator to decide the issue at this time.
+Therefore, the Village urges the Arbitrator reject the Union’s proposal.
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 22 of 54
+
+X.
+
+DISCUSSION AND FINDINGS
+A.
+
+Introduction
+
+Because the issues of wages, health insurance premiums, annual uniform allowance, and a proposed
+addition of a new provision regarding testing and vaccines are all economic, my statutory obligation under
+Section 14(g) is to “adopt the last offer of settlement which…more nearly complies with the applicable
+factors prescribed in subsection (h).” The Act does not require that all factors be addressed, nor does it rank
+these factors in terms of their significance; it is my duty to determine which factors bear most heavily in
+this particular dispute. See, City of Decatur and IAFF, Local 505, S-MA-86-29 (Eglit, 1986) p. 3. The noneconomic issue whether Officers must provide the Village with receipts of items purchased or maintained
+using uniform allowance monies, is left for my discretion.6
+The Parties have not given me authority to set Officers’ salaries at rates different from the final
+offers, thus I am precluded by statute from fashioning a salary of my choosing. Instead, I must choose
+whichever proposal I find most equitable given the totality of circumstances. Arbitrator McAlpin noted that
+the term “most equitable” is used because, in Interest Arbitration, equity does not lie exclusively with one
+side or the other. See City of Effingham and ILFOP Labor Council, S-MA-07-151 (McAlpin, 2009) p.16;
+see also U of I Champaign and ILFOP Labor Council, S-MA-10-76 (McAlpin, 2010) p. 15., and Village
+of Oakbrook and Illinois Fraternal Order of Police Labor Council, S-MA-09-017 p. 14 (McAlpin, 2011)
+(“In and interest Arbitration the Arbitrator must determine not what the Parties would have agreed to, but
+what they should have agreed to.”) (Emphasis added.)
+I find this case similar to what Arbitrator Marvin Hill recently faced in Eastern Illinois University
+and IL FOP Labor Council, S-MA-23-303 (Hill, 2022). In EIU, the Union’s final offer was a 13.5%
+increase over four-years (2022-2025) based primarily on the external comparables and the cost-of-living
+
+6
+
+Because the Union has agreed with the proposed language allowing Officers to purchase uniforms wherever they
+choose, that non-economic proposal is adopted.
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 23 of 54
+
+factors. Conversely, the University’s final offer was 5.75% over the four-year duration, but without a wage
+freeze in the first year as the Village proposes here. Arbitrator Hill opens his analysis referencing the
+Statute’s restriction to adopt one of the party’s final offers, and he laments that it is “especially unfortunate
+in this case, under the statute there is not Solomon-like “splitting of the child.” Later, he begins his
+conclusion stating, “This case engenders a Draconian choice,” one on the low and the other on the high side
+for the first year.” Similar to EIU, the Union here proposes a four-year increase that is substantially larger
+than what the Village offers. (Although in EIU the union’s wage proposal was more than double that of the
+employer.) I note that when these same Parties went before Arbitrator Fletcher in 2015, the difference
+between their proposals was only one-and-one-quarter percentage points with a three-year contract term,
+whereas here the proposals are six percentage points apart with a four-year contract term.
+B.
+
+Analysis of Each Open Issue Based on the Relevant Section 14(h) Factors 7 and Award
+1.
+
+Wages
+
+The Union has proposed wage increases as follows:
+May 1, 2020 -- 2.5%
+May 1, 2021 -- 3.0%
+May 1, 2022 -- 3.25%
+May 1, 2023 -- 3.25%
+Total
+12.0%
+The Employer has proposed wage increases as follows:
+May 1, 2020 -- 0.0%
+May 1, 2021 -- 2.0%
+May 1, 2022 -- 2.0%
+May 1, 2023 -- 2.0%
+Total
+6.0%
+
+7
+
+While I have reviewed each issue in relation to all eight statutory factors, I only discuss those herein that I considered
+most relevant and merited the most weight. Also, statutory factors 14(h)(1) and (2) have already been addressed by
+virtue of the parties’ pre-hearing stipulations cited earlier.
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 24 of 54
+
+(h)(3) The interest and welfare of the public and the financial ability of the unit of
+government to meet those costs.
+The Village has not used the phrase “inability to pay” in response to the Union’s proposal. The
+Village, nonetheless, does insist that it has “always maintained a consistent, conservative approach to its
+finances” and has repeatedly emphasized the fact that because it is not a Home Rule government, its ability
+to increase revenues is restricted. Further, the Village asserts that its fiscal conservatism enabled it to avert
+any employee layoffs during the COVID-19 health crisis. Overall tax revenues have remained mostly flat.
+Total collections were $16.587 million in 2020, $16.583 million in 2021, and $16.878 million in 2022. The
+Village asserts that is has given its department budgets “incremental increases” for inflationary costs
+without large new program expenditures or initiatives:
+GENERAL FUND
+
+Total Revenues
+
+Total
+Expenditures
+Revenues
+Over
+Expenditures
+
+2019-2020
+Actual 8
+
+2020-2021
+Budgeted 9
+
+2021-2022
+Budgeted
+
+2022-2023
+Budgeted
+
+$15,309,134
+Variance
+($430,966)
+$15,436,248
+Variance
+$96,140
+($334,826)
+
+$16,587,664
+
+$16,583,664
+
+$16,878,348
+
+Percent
+Change
+20202023
+1.8%
+
+$15,430,704
+
+$15,908,831
+
+$16,244,261
+
+5.3%
+
+$1,156,960
+
+$1,068,937
+
+$1,163,610
+
+0.57%
+
+The proposed 2020-2021 Police Department budget is $6,551,559. Without contradiction the Union
+estimates the total cost of its wage proposal for the 14-member Bargaining Unit—including roll-up for
+payroll taxes and pension—for the first year of the Contract to be about $32,500. Thus, for year 2020-2021
+the increase to the Police Department budget would be about 0.50% while the increase to the overall General
+
+Source: Village of Broadview independent auditor’s report pp. 80-87.
+Source: Village presentation December 7, 2022, slides 5-7. See also, “Proposed Budget For May 1, 2022 Through
+April 30, 2023,” pp. 2, 9.
+8
+9
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 25 of 54
+
+Fund expenditures budgeted would be about 0.21%. There is insufficient evidence in the record as to what
+hardship or harm would result to the Village citizenry from such increase to General Fund expenditures,
+nor is there any evidence that suggests adverse consequences to Village employees, including Police.
+Further, neither party provided an estimate of the total cost of the Union’s wage proposal over the entire
+four-year period and its impact on the budget.
+A key argument of the Union is the positive effect its wage proposal would have on the interest and
+welfare to the public by proactively addressing the excessive turnover among Patrol Officers. Since October
+2021, seven Officers, all of whom were hired between 2009 and 2018, left the Village to work at other
+police agencies. Of the fourteen-member Bargaining Unit, as of December 5, 2022, ten members (71%)
+had less than five years’ service, and of those ten, 40% percent had less than one year. Of the four Officers
+with more than five years’ service, only one had more than ten years.
+The Village responds that the difficulty it has recruiting and retaining officers is a problem plaguing
+law enforcement agencies throughout the country, and that the solutions are more complex and mutidimensional than a simple across-the-board wage increase such as the Union proposes. I note, however, the
+Union testified without rebuttal that the Officers who resigned from the Village did so to work at other
+police agencies; there is no evidence showing that the Officers who resigned left the profession altogether.
+To follow is an analysis of the Union’s wage proposal illustrating how it affects rankings with the complete
+list of comparables, as well as its percentile ranking:10
+
+10
+
+At this juncture I would be remiss not to acknowledge what Arbitrator Fletcher said to the Parties in his 2015 Award
+where he sites his 2014 decision in City of Wheaton and IAFF, Local 3706, S-MA-12-278, p. 23, (“Where the
+employees rank in any particular benefit among the comparables, both internal and external, is immaterial as a general
+rule. Absent a demonstrated need for some degree of ‘catch up’ with the comparables group the Arbitrator’s focus
+should be on ensuring that the employees keep pace with the group. Put another way, the focus is not so much on the
+current value of the benefits that other in the comparable communities receive as it is on whether that value has
+changed.”) Arbitrator Fletcher goes on to say, “The Arbitrator does not suggest that he will not take into account
+evidence of an existing wage gap between a particular group of employees and their counterparts in the external
+communities unless proof of a need for a ‘catch up’ in wages is shown, even in a close case. However, the weight that
+he will give to such evidence is minimized where it is not accompanied by evidence that the gap in wages had grown.”
+A key distinguishing fact in the instance case from the 2015 Interest Arbitration is the issue of severe turnover, vis-àvis the ranking of more senior officers against comparable communities, was not as problematic as in 2022 and thus
+not discussed by Arbitrator Fletcher.
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 26 of 54
+
+CONTRACT YEAR and
+Percent Increase
+
+5-9
+YEARS
+
+10-14
+YEARS
+
+15-19
+YEARS
+
+20-24
+YEARS
+
+25+
+YEARS
+
+2020 (0%)
+Baseline
+2020 (2.5%)
+Year 1
+2021 (3.0%)
+Year 2
+2022 (3.25%)
+Year 3
+
+1-4 YEARS
+(Percentile
+Ranking)
+5th of 11
+(55%)
+4th of 11
+(64%)
+4th of 9
+(56%)
+4th of 8
+(50%)
+
+4th of 11
+(64%)
+4th of 11
+(64%)
+3rd of 9
+(67%)
+2nd of 8
+(75%)
+
+7th of 11
+(36%)
+6th of 11
+(45%)
+5th of 9
+(44%)
+4th of 8
+(50%)
+
+9th of 11
+(18%)
+7th of 11
+(36%)
+6th of 9
+(33%)
+4th of 8
+(50%)
+
+9th of 11
+(18%)
+8th of 11
+(27%)
+7th of 9
+(22%)
+6th of 8
+(25%)
+
+8th of 11
+(27%)
+8th of 11
+(27%)
+7th of 9
+(22%)
+6th of 8
+(25%)
+
+2023 (3.25%)
+Year 4
+
+3rd of 6
+(50%)
+
+2nd of 6
+(67%)
+
+3rd of 6
+(50%)
+
+3rd of 6
+(50%)
+
+4th of 6
+(33%)
+
+4th of 6
+(33%)
+
+Comparing the rankings based upon the wage schedule in the current Contract against the rankings
+under the Union’s proposal, I find significant that most of the time the change in ranking is modest. The
+notable exceptions are officers with 5 to 9 years’ service who currently are at the 64th percentile would rise
+to the 75th percentile in 2022, and officers with 15 to 19 years who currently are down at the 18th percentile
+would rise to the 50th percentile in 2023. There are four instances when the percentile ranking drops slightly
+from the baseline, those being Officers with 1 to 4 years in 2022 and 2023, and Officers with 25 or more
+years in 2021 and 2022. In general, while the Union’s proposal gives the greatest boost in rankings to
+Officers with 15 to 24 years of service, the boost never puts them beyond the 50th percentile among the
+comparables with settled contracts. I find that maintaining a ranking at the 50th percentile to be a reasonable
+outcome.
+While I agree with the Village that it is speculative as to whether across-the-board raises for officers
+as the union proposes would have a positive impact on turnover, I do not consider that dispositive. Although
+both Parties’ make logical and cogent arguments supported by well-established arbitral doctrine, I find
+factor (h)(3) on balance slightly favors the Union’s proposal.
+
+(Intentionally Left Blank)
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 27 of 54
+
+(h)(4) Comparables.
+a.
+
+External Comparables
+
+As noted earlier in Section VII, the Parties do not agree on a single group of comparables. It is well
+established that if the parties cannot reach agreement as to the basis of comparison, it is the arbitrator’s
+responsibility to make that determination from the facts and circumstances of the case. How Arbitration
+Works, 8th ed. 22-38 (Bloomberg BNA. 2016). Therefore, for the sake of completeness, I evaluate the wage
+parties’ proposals against the external comparables using four distinct groupings. The first analysis
+combines both the Union’s and Village’s proposed comparables for this Interest Arbitration. The second
+analysis uses only the Village’s proposed list. The third analysis is based on what Arbitrators Cox and
+Fletcher used in 2007 and 2015, respectively, and I refer to as the “Historical” comparable. Last, I compare
+the proposals only with the two municipalities that are also not Home Rule, given the significance the
+Village has placed on that characteristic. I then provide a summary in which I compare all four groupings
+together.
+
+(Intentionally Left Blank)
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 28 of 54
+
+1. Union and Village Comparables Combined
+MUNICIPALITY 11
+
+11
+
+Home Rule? (Y/N)
+
+2020-2021
+
+2021-2022
+
+2022-2023
+
+2023-2024
+
+Bellwood
+(Y)
+Contract year runs January 1 to
+December 31
+Countryside
+(Y)
+Harwood Heights
+(Y)
+Hillside
+(Y)
+Lyons
+(N)
+Contract year runs January 1 to
+December 31
+Northlake
+(Y)
+Contract year runs January 1 to
+December 31
+North Riverside
+(N)
+River Grove
+(Y)
+Contract runs May 1, 2020 to
+December 31, 2024
+Schiller Park
+(Y)
+Stickney
+(Y)
+Summit
+(Y)
+Contract year runs January 1 to
+December 31
+Average 12
+
+NA
+
+NA
+
+3.25%
+
+3.25%
+
+2.59%
+
+Union Proposal
+(+/- Ave)
+Village Proposal
+(+/- Ave)
+
+2.5%
+(-0.09%)
+0%
+(-2.59%)
+
+2.75%
+
+2.75%
+
+3.5%
+
+3.0%
+1/12/24-12/31/24
+3.0%
+
+2.25%
+
+2.25%
+
+2.25%
+
+---
+
+2.0%
+
+3.0%
+
+---
+
+---
+
+2.0%
+
+2.5%
+
+2.5%
+
+2.5%
+
+3.25%
+
+---
+
+---
+
+---
+
+2.5%
+
+3.25%
+
+3.5%
+
+3.25%
+
+3.6%
+
+1.75%
+
+2.75%
+
+3.0%
+
+2.0%
+
+2.5%
+
+3.0%
+
+---
+
+2.5%
+
+2.5%
+
+2.5%
+
+3.0%
+
+3.0%
+
+1.0%
+
+2.5%
+
+3.0%
+
+2.39%
+
+2.86%
+
+3.25%
+1/1/24-12/31/24
+3.0%
+
+3.0%
+(+0.61%)
+2.0%
+(-0.39%)
+
+3.25%
+(+0.39%)
+2.0%
+(-0.86%)
+
+3.25%
+(+0.25%)
+2.0%
+(-1.0%)
+
+Hereinafter, all contract dates are from May 1 through April 30 unless noted otherwise.
+Hereinafter, calculations are based on May 1 through April 30 contract year. However, calculations for Bellwood
+and Summit use the percentage increase from 2023 and do not adjust for the change in wage rates for the four-month
+period January 1 through April 30, 2024.
+12
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 29 of 54
+
+Summary:
+Comparables - Four Year Total of (Average) Percentage Increases: 10.84%
+Comparables - Average of Annual Percentage Increases: 2.71%
+Union Four Year Total: 12% Average Per Year: 3.0%
+Village Four Year Total: 6.0% Average Per Year: 1.5%
+Union - Percent Difference from Comparables: Total: +2.84% Average Per Year: +0.29%
+Village - Percent Difference from Comparables: Total: -4.84% Average Per Year: -1.21%
+
+(Intentionally Left Blank)
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 30 of 54
+
+2.
+
+Only Comparables Proposed by the Village:
+
+MUNICIPALITY
+Home Rule? (Y/N)
+
+2020-2021
+
+2021-2022
+
+2022-2023
+
+2023-2024
+
+Bellwood
+(Y)
+
+NA
+
+NA
+
+3.25%
+1/1/2212/31/22
+
+3.25%
+1/1/2312/31/23
+
+2.0%
+
+3.0%
+
+---
+
+3.0%
+1/12/2412/31/24
+---
+
+3.25%
+
+---
+
+---
+
+---
+
+2.5%
+
+3.25%
+
+3.5%
+
+3.25%
+
+3.6%
+
+1.75%
+
+2.75%
+
+3.0%
+
+2.0%
+
+2.5%
+
+3.0%
+
+---
+
+2.67%
+
+2.63%
+
+3.23%
+
+3.17%
+
+Union Proposal
+(+/- Ave)
+
+2.5%
+(-0.17%)
+
+3.0%
+(+0.37%)
+
+3.25%
+(+0.02%)
+
+3.25%
+(+0.08%)
+
+Village Proposal
+(+/- Ave)
+
+0%
+(-2.59%)
+
+2.0%
+(-0.63%)
+
+2.0%
+(-1.23%)
+
+2.0%
+(-1.7%)
+
+Hillside
+(Y)
+Northlake
+(Y)
+North Riverside
+(N)
+River Grove
+(Y)
+Schiller Park
+(Y)
+Average
+
+Summary:
+Comparables - Four Year Total of (Average) Percentage Increases: 11.70%
+Comparables - Average of Annual Percentage Increases: 2.93%
+Union Four Year Total: 12% Average Per Year: 3.0%
+Village Four Year Total: 6.0% Average Per Year: 1.5%
+Union - Percent Difference from Comparables: Total: +0.30% Average Per Year: +0.07%
+Village - Percent Difference from Comparables: Total: -5.70% Average Per Year: -1.43%
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 31 of 54
+
+3.
+
+Historical Comparables from the Parties’ 2007 and 2015 Interest
+Arbitrations:
+
+MUNICIPALITY
+Home Rule? (Y/N)
+
+2020-2021
+
+2021-2022
+
+2022-2023
+
+2023-2024
+
+Countryside
+(Y)
+Hillside
+(Y)
+Lyons
+(N)
+Northlake
+(Y)
+North Riverside
+(N)
+River Grove
+(Y)
+Schiller Park
+(Y)
+Average
+
+2.75%
+
+2.75%
+
+3.5%
+
+3.0%
+
+2.0%
+
+3.0%
+
+---
+
+---
+
+2.0%
+
+2.5%
+
+2.5%
+
+2.5%
+
+3.25%
+
+---
+
+---
+
+---
+
+2.5%
+
+3.25%
+
+3.5%
+
+3.25%
+
+3.6%
+
+1.75%
+
+2.75%
+
+3.0%
+
+2.0%
+
+2.5%
+
+3.0%
+
+---
+
+2.59%
+
+2.63%
+
+3.05%
+
+2.93%
+
+Union Proposal
+(+/- Ave)
+Village Proposal
+(+/- Ave)
+
+2.5%
+(-0.09%)
+0%
+(-2.59%)
+
+3.0%
+(+0.37%)
+2.0%
+(-0.63%)
+
+3.25%
+(+0.20%)
+2.0%
+(-1.05%)
+
+3.25%
+(+0.32%)
+2.0%
+(-0.93%)
+
+Summary:
+Comparables - Four Year Total of (Average) Percentage Increases: 11.20%
+Comparables - Average of Annual Percentage Increases: 2.8%
+Union Four Year Total: 12% Average Per Year: 3.0%
+Village Four Year Total: 6.0% Average Per Year: 1.5%
+Union – Percent Difference from Comparables: Total: +0.80% Average Per Year: +0.2%
+Village – Percent Difference from Comparables: Total: -5.20% Average Per Year: -1.30%
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 32 of 54
+
+4.
+
+Municipalities that Do Not Have Home Rule:
+
+MUNICIPALITY
+
+2020-2021
+
+2021-2022
+
+2022-2023
+
+2023-2024
+
+Lyons
+
+2.0%
+
+2.5%
+
+2.5%
+
+2.5%
+
+North Riverside
+
+2.5%
+
+3.25%
+
+3.5%
+
+3.25%
+
+Average
+
+2.25%
+
+2.88%
+
+3.00%
+
+2.88%
+
+Union Proposal
+(+/- Ave)
+Village Proposal
+(+/- Ave)
+
+2.5%
+(+0.25%)
+0%
+(-2.25%)
+
+3.0%
+(+0.12%)
+2.0%
+(-0.88%)
+
+3.25%
+(+0.25%)
+2.0%
+(-1.0%)
+
+3.25%
+(+0.37%)
+2.0%
+(-1.88%)
+
+Summary:
+Comparables - Four Year Total of (Average) Percentage Increases: 11.01%
+Comparables - Average of Annual Percentage Increases: 2.75%
+Union Four Year Total: 12% Average Per Year: 3.0%
+Village Four Year Total: 6.0% Average Per Year: 1.5%
+Union – Percent Difference from Comparables: Total: +0.99% Average Per Year: +0.25%
+Village – Percent Difference from Comparables: Total: -5.01% Average Per Year: -1.25%
+
+(Intentionally Left Blank)
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 33 of 54
+
+The analysis of the four comparables groupings above can be summarized as follows:
+COMPARABLE LIST
+UTILZED
+Union & Village Combined
+Village Only
+“Historical”
+(used in 2007 and 2015)
+No Home Rule Municipalities
+Overall Average
+Union Proposal
+(+/- Ave)
+Village Proposal
+(+/- Ave)
+
+AVERAGE TOTAL
+4-YEAR INCREASE
+10.840%
+11.70%
+11.20%
+
+AVERAGE INCREASE PER
+YEAR
+2.71%
+2.93%
+2.80%
+
+11.01%
+11.19%
+12.00%
+(+0.81%)
+6.00%
+(-5.19%)
+
+2.75%
+2.80%
+3.00%
+(+0.20%)
+2.0%
+(-0.80%)
+
+I recognize that there is less data available as you look out to the third and fourth years because
+there are more open contracts. Nonetheless, as the above analysis shows, no matter whether you use the
+Union and Village’s external comparables in combination, the Village’s comparables alone, the historical
+comparables from prior Interest Arbitrations, or isolate the two communities that also do not have Home
+Rule, the Union’s wage proposal is proportionately closer to the average of the external comparables, albeit
+slightly above, than the Village’s wage proposal which is farther below the average.
+After careful review of the data from the perspective of all four comparables groupings, I find the
+external component of factor (h)(4) favors the Union’s proposal.
+b.
+
+Internal Comparables
+
+The importance of internal comparables is long-held arbitral doctrine, as Arbitrator Bierig opined
+in Village of Oak Lawn:
+I note that internal comparables are a significant factor when reviewing public safety units.
+Interest Arbitrators place emphasis on the internal comparability factor:
+An internal pattern satisfies the statutory aim of duplicating, as nearly as
+possible, what the results of voluntary settlement would have been.
+Further, sound labor relations policy dictates adherence to internal patters,
+since breaking a pattern through the arbitration process will tend to
+discourage voluntary settlements and lead to dissension within the
+workforce. In short, there is a very strong presumption in favor of an offer
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 34 of 54
+
+which is consistent with the settlements reached through bargaining with
+other City units.
+City of Marshfield, Decision No. 25298-A, p.15 (Nielsen, 1988).
+Village of Oak Lawn and Oak Lawn Professional Firefighters Assoc., Local 3405, IAFF, S-MA-16015, p. 59-60 (Bierig, 2017),
+
+Here, the Village places great emphasis on the historic relationship between the Police (both the
+Patrol Officers and Sergeants Bargaining Units) and Fire Departments, not only in terms of wage increase,
+but also in terms of employee health insurance contributions (the latter I address infra). For the current
+Interest Arbitration the Sergeants contract is open, so the only internal comparison is the instant Union and
+Fire Department. This is in stark contrast to 2015 when the comparability between Patrol Officers and
+Sergeants was a key factor for Arbitrator Fletcher. The historical wage relationship between Patrol Officers
+and Fire in the record is as follows:
+Year
+
+Patrol Officers
+
+Fire Department
+
+2010-2011
+
+2
+
+0
+
+2011-2012
+
+2.5
+
+1.5
+
+2012-2013
+
+2.25
+
+2
+
+2013-2014
+
+2.25
+
+2
+
+2014-2015
+
+2.25
+
+2
+
+2015-2015
+
+2.25
+
+2
+
+2016-2017
+
+2
+
+2
+
+2017-2018
+
+2.25
+
+2
+
+2018-2019
+
+2.25
+
+2.25
+
+2019-2020
+
+2.25
+
+2.25
+
+2020-2021
+
+0
+
+2021-2022
+
+1
+
+2022-2023
+
+1
+
+2023-2024
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 35 of 54
+
+With the exception of years 2010 and 2011 highlighted above, Patrol Officers’ raises have not been
+more than 0.25% above the Fire Department, and in years 2016, 2018, and 2019 they were identical. On
+the surface the data strongly favors the internal comparable and the Village’s position.
+However, the very strong presumption in favor of an offer which is consistent with the settlements
+reached through bargaining with other City units, established by Arbitrator Nielsen in 1988, becomes
+questionable should one of the parties negotiate substantive change to their contract which has direct or
+indirect ramifications to its internal comparable. In this instance the Village and Fire Department negotiated
+an inaugural minimum staffing provision in the current three-year contract (2020-2022).
+The new Section 26.11 Minimum Shift Staffing provision states as follows:
+The parties agree that a sufficient number of personnel shall be assigned
+to each shift for the health and safety of the public and bargaining unit
+member. To that end, here shall always be a minimum of five (5)
+bargaining unit members assigned to each shift. The Village shall maintain
+at all times one (1) three-member Engine Company, and one (1) twomember ALS ambulance. When the daily staffing is at or above seven (7)
+line personnel, as long as the Engine is sufficiently staffed with three (3)
+members and one Officer (Captain or Lieutenant), one member can staff
+another apparatus as needed and respond appropriately.
+
+In the public sector I find that minimum staffing is a critical element for Firefighters, and such
+language is often a staple in Firefighter contracts. The Union estimated the total annual cost to the Village
+will be $100,000, even if it only requires adding one firefighter. The Union makes a logical and compelling
+argument that this coveted provision, which had not existed in the Village’s contract prior to 2020, was
+worth the quid pro quo to concede (or propose) a 0%, 1%, 1% three-year wage increase package. The
+Village neither denied nor conceded that minimum staffing was the quid pro quo for the Firefighters to
+have a wage freeze in 2020, followed by successive 1% wage increases in 2021 and 2022.
+Because the Union’s cost estimation of $100,000 per year for Firefighter minimum staffing stands
+uncontested, I find this provision to be substantive change sufficient to break the presumption of
+comparability between the Patrol Officers’ and Firefighters’ annual wage increases. The presumption of
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 36 of 54
+
+comparability is further contradicted by the Village’s proposed May 1, 2022, through April 30, 2023,
+budget:
+Personal [sic]
+Services Line
+Item
+5156 Firefighters
+5140 Patrolmen
+
+Budget FY21
+
+Budget FY22
+
+Budget FY23
+
+Percent Change
+FY21-FY23
+
+$1,403,423
+$1,818,841
+
+$1,461,235
+$1,861,254
+
+$1,594,021
+$1,701,255
+
++ 13.6%
+- 6.5%
+
+The data shows the Village budgeted a significant increase in Firefighters’ personnel expense yet
+reduced the budget for Patrolmen over the comparable three-year period. When the circumstances are
+viewed in totality, I find the Union’s argument that the 0%, 1%, 1% wage package negotiated into the
+Firefighters’ contract was the quid pro to secure an inaugural minimum staffing provision plausible,
+reasonable, and compelling. In contrast, the Village’s assertion that the wage concessions had nothing to
+do with the new minimum staffing language but was simply a product of the Village and Firefighters’ union
+working together in order to get through the financial uncertainty of pandemic due to the pandemic is
+unconvincing.
+After careful review of the data, I find that the internal comparable component favors the Union’s
+wage proposal. The historical pattern of comparability in wage increases between the Firefighters and Patrol
+Officers has been disrupted by a substantive change in the current Firefighters contract with direct and
+indirect implications for Patrolmen. The presumption of consistency between internal comparable units is
+not applicable in this contract cycle. Thus, both the external and internal components of factor (h)(4) favor
+the Union’s wage proposal.
+(h)(5) The Cost of Living.
+It is not surprising that the Union and Village differ on what the rate of inflation has been as well
+as the overall weight to give it. I note this difference of opinion stems from which CPI-U (all urban
+consumers) index is used for analysis, and how the annual percentage change in the rate of inflation is
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 37 of 54
+
+calculated.13 The Village uses the CPI-U Midwest index, whereas the Union uses the CPI-U (national) U.S.
+City Average urban index. Coincidentally, neither uses the CPI-U for Chicago-Naperville-Elgin, IL-IN-WI
+index, which in this instance yields the most conservative percentage changes. The Village argues that to
+adopt the Union’s wage proposal would result in wages that outpace inflation in the first three years of the
+Contract with no prospective offset. As the historical data below shows, between contract years 20102011 and 2019-2020 (the one-year predecessor Agreement to this interest arbitration), on only two
+
+YEAR
+(Percent Increase)
+
+CPI-U 14
+All Urban Consumers
+U.S. City Average
+
+CPI-U
+All Urban Consumers
+Midwest
+
+CPI-U
+All Urban Consumers
+Chicago-NapervilleElgin, IL-IN-WI
+
+2010-2011 (2.0%)
+2011-2012 (2.5%)
+2012-2013 (2.25%)
+2013-2014 (2.25%)
+2014-2015 (2.25%)
+2015-2016 (2.25%)
+2016-2017 (2.0%)
+2017-2018 (2.25%)
+2018-2019 (2.25%)
+2019-2020 (2.25%)
+2020-2021
+2021-2022
+2022- Jan. 2023 15
+2023-2024
+
+3.8%
+1.8%
+1.2%
+1.8%
+- 0.5%
+0.6%
+1.8%
+2.4%
+1.6%
+0.1%
+4.1%
+7.4%
+2.4%
+-----
+
+3.4%
+1.6%
+1.3%
+1.4%
+- 1.2%
+0.4%
+1.4%
+1.8%
+1.0%
+- 0.7%
+4.6%
+7.2%
+1.7%
+-----
+
+2.7%
+1.1%
+1.0%
+1.9%
+- 0.8%
+0.3%
+1.7%
+1.9%
+0.3%
+- 0.6%
+3.6%
+6.2%
+1.0%
+-----
+
+13
+
+For a thorough analysis of the Bureau of Labor Statistics CPI data and its application in Interest Arbitration, see
+Village of Lansing and IL FOP, S-MA-12-214, footnote 27 at pp. 18-19 (Benn, 2014). Calculations are based on May
+1 through April 30 contract year. Therefore, calculations for Bellwood and Summit use the percentage increase from
+2023 and do not adjust for the change in wage rates for the four-month period January 1 through April 30, 2024.
+14
+To calculate the percentage change in each CPI index, I followed the methodology Arbitrator Benn employed in
+Village of Lansing, which provides a more accurate annual percentage change. Thus, rather than simply comparing
+April-to-April or May-to-May percentages (which the BLS website can automatically calculate), Arbitrator Benn
+calculated the CPI change based on the contract year itself. In Village of Lansing, the contract years were the same as
+the Parties here: May 1 to April 30, next year. Therefore, expressed as a formula, if the index value for May 1 is “x”,
+and the index value of April 30 of the following year is “y,” under Arbitrator Benn’s method, annual percentage CPI
+change for the contract year is ((y - x) / x) * 100 = z %.
+15
+As of this writing, there is no published BLS index data beyond January 2023.
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 38 of 54
+
+occasions (highlighted contract years 2010-2011 and 2017-2018) has the wage increase been below the
+national inflation rate for the same period.
+The following table compares the Parties’ final offers against the known and most recent forecast
+percentage rates of inflation for each of the three CPI-U indexes mentioned above:
+5/21-4/22
+Actual
+7.4%
+
+5/22-1/23
+Actual 16
+2.4%
+
+5/23-4/24
+Forecast 17
+2.9%
+
+Total
+
+Ave/Year
+
+U.S. City
+
+5/20-4/21
+Actual
+4.1%
+
+16.8%
+
+4.2%
+
+(Midwest)
+
+(4.6%)
+
+(7.2%)
+
+(1.7%)
+
+2.9%
+
+(16.4%)
+
+(4.1%)
+
+[Chicagoland]
+
+[3.6%]
+
+[6.2%]
+
+[1.0%]
+
+2.9%
+
+[13.7%]
+
+[3.4%]
+
+Union Final
+Offer
+Δ with CPI
+
+2.5%
+
+3.0%
+
+3.25%
+
+3.25%
+
+12.0%
+
+3.0%
+
+-1.6%
+
+-4.4%
+
++0.85%
+
++0.4%
+
+-4.9%
+
+-1.23%
+
+(-2.1%)
+
+(-4.2%)
+
+(+0.9%)
+
+(+0.4%)
+
+(-5.0%)
+
+(-1.25%)
+
+[-1.1]
+
+[- 3.2%]
+
+[+ 2.25%]
+
+[+ 0.4%]
+
+[- 1.65]
+
+[-0.4%]
+
+Village Final
+Offer
+
+0.0%
+
+2.0%
+
+2.0%
+
+2.0%
+
+6.0%
+
+1.5%
+
+Δ with CPI
+
+-4.1%
+
+-5.4%
+
+-0.4%
+
+-0.9%
+
+-10.8%
+
+-0.48%
+
+(-4.6%)
+
+(-5.2%)
+
+(+0.3%)
+
+(- 0.9%)
+
+(-10.4%)
+
+(-2.6%)
+
+[- 3.6%]
+
+[- 4.2%]
+
+[+1.0%]
+
+[- 0.9%]
+
+[- 7.7%]
+
+[-1.9%]
+
+Arbitrator Bierig has observed that since 2008 Illinois arbitrators have recognized the significance
+of cost-of-living data in wage analysis for purposes of Interest Arbitration. See Village of Oak Lawn and
+Oak Lawn Professional Firefighters Assoc., Local 3405, IAFF, S-MA-16-015, 16-0131, p.61 (Bierig,
+2017). It is generally accepted by arbitrators that when both parties’ proposals exceed the CPI, the offer
+
+16
+
+Id., footnote 16.
+
+The 2023-2024 contract year CPI forecast is an average of the Philadelphia Federal Reserve Survey’s
+most recent forecast (published February 10, 2023) for the year 2023 plus its first quarter 2024 forecast.
+Calculation: (3.1 + 2.6)/2 = 2.9. See First Quarter 2023 Survey of Professional Forecasters (philadelphiafed.org).
+17
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 39 of 54
+
+closest to the CPI should carry the day. Id., p. 62, citing City of Burbank, S-MA-97-56, pp. 9-11 (Goldstein,
+1998); see also County of McHenry and ILFOP Labor Council, S-MA-11-004, p. 131 (Benn, 2012).
+In this instance, however, the Union’s proposal exceeds the CPI-U prospectively in the third and
+fourth years, and by varying amounts depending on which of the three indexes is used as a basis. Even the
+Village’s proposal in year three exceeds the CPI-U depending on the index used. However, when the
+proposals are viewed in totality over the entire four years, neither the Union’s nor the Village’s proposal
+exceeds the known and forecasted rates of inflation, even when the proposals are held up against the
+Chicagoland index—which as mentioned is the most conservative of the three and the one neither Party
+used in its analysis. What cannot be disputed is that regardless of the index, the Union’s proposal is closer
+to the CPI-U over the four-year duration than is the Village’s proposal.
+Last, as previously explained, because the Parties’ proposed four-year Agreement would end April
+30, 2024, I relied upon the CPI forecast by the often-cited Philadelphia Federal Reserve Survey of
+Professional Forecasters to fill in the gap. See, e.g., City of Mt. Vernon and ILFOP Labor Council, S-MA16-198 (Nielsen, 2017) p.13; County of Cook/Cook County Sheriff and ILFOP Labor Council, L-MA-13003 (Reynolds, 2015) p. 20; City of Rock Island and ILFOP Labor Council – Command Officers, S-MA11-183 (Benn, 2013) p.15 at footnote 29. As of February 10, 2023, the Philadelphia Federal Reserve Survey
+revised its 2023 Headline CPI forecast down to 3.1 from its prior forecast 3.4. Notably its long-range annual
+average forecast for the period 2022 through 2026 remains at 3.75. The Village argues that the more
+appropriate long-term annual average forecast is the Survey’s 2022-2031 10-year forecast which as of
+February 10, 2023, is 2.95%. However, the 10-year time frame logically smooths out the curve and is less
+sensitive to the fluctuations during the period May 1, 2020, through April 30, 2024, when the new Contract
+would be in effect. Also, the farther out in time the forecast is made, the less reliable it becomes as a
+forecasting tool. Therefore, I find the 2022-2026 long-range forecast more applicable in this instance.
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 40 of 54
+
+In this case, with the exception of the remaining portion of Contract Year 3 and all of Year 4, the
+economic landscape is known and in the rear-view mirror. Given the analysis above, I find that factor (h)(5)
+on balance favors the Union’s final offer.
+(h)(6) Overall compensation.
+Because one of the issues before me concerns the percentage contribution to the Village’s health
+insurance premium by Bargaining Unit member, I address this subject later. However, with regard to its
+impact on the issue of evaluating the two wage proposals, I find factor (h)(6) is, on balance, neutral.
+(h)(7) Changes during the pendency of the arbitration proceedings.
+This factor was not determinative.
+(h)(8) Other factors normally or traditionally taken into consideration.
+This factor was not determinative.
+Award on the Issue of Wages – Section 30.1 Base Salary
+As noted earlier because this is an economic issue, I am required by statute to adopt either the
+Union’s or the Village’s final offer and cannot craft an award of my own, which I might find to be the most
+appropriate given the evidence in its totality. Nonetheless, I find that the analysis of the relevant Section
+14(h) factors on balance favors the Union’s wage proposal which I adopt.
+2.
+
+Health Insurance
+
+The Union has proposed the status quo and that there be no change to the current percentage of
+contribution by employees as follows:
+May 1, 2020 -- 12.5%
+May 1, 2021 -- 12.5%
+May 1, 2022 -- 12.5%
+May 1, 2023 -- 12.5%
+The Employer has proposed increases to the following percentage contributions:
+May 1, 2020 -- 12.5%
+May 1, 2021 -- 14.0%
+May 1, 2022 -- 14.0%
+May 1, 2023 -- 15.0%
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 41 of 54
+
+(h)(3) The interest and welfare of the public and the financial ability of the unit of
+government to meet those costs.
+Because the analysis of the wage proposals applies to the proposal on health insurance contribution,
+I do not repeat it here. Based on the totality of the evidence, factor (h)(3) by itself favors neither the Union’s
+nor the Village’s proposal.
+(h)(4) Comparables
+a.
+
+External
+
+The table that follows shows what percentage contribution police officers in comparable
+communities pay toward health insurance premiums:
+
+(Intentionally Left Blank)
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 42 of 54
+
+MUNICIPALITY18
+
+Contract
+Period
+2022-2024
+
+Percent Contribution
+
+Harwood Heights
+
+2019-2022
+2022-2025
+2020-2023
+
+15%
+15%
+15%
+
+Hillside
+
+2019-2022
+
+Not Percentage Based
+
+Lyons
+
+2019-2023
+
+Northlake
+
+2017-2020
+
+North Riverside
+
+2016
+2017
+2018
+2019-2021
+2022
+2023
+2020-2024
+
+15% PPO
+10% HMO
+15%
+With any increase not to
+exceed $350/Month
+single or $500/month
+dependent
+13.25%
+14%
+14.75%
+15%
+16%
+17%
+Not Percentage Based
+
+Bellwood
+Countryside
+
+River Grove
+Schiller Park
+
+Stickney
+Summit
+Broadview
+(Village’s Proposal)
+
+2020
+2021
+2022
+2018-2022
+2022-2024
+2017-2020
+2021-2024
+2020-2021
+2021-2022
+2022-2023
+2023-2024
+
+10%
+
+10% PPO - 0% HMO
+11% PPO - 0% HMO
+12% PPO - 0% HMO
+
+15% Maximum
+15% Maximum
+10%
+10%
+12.5%
+14.0%
+14.0%
+15.0%
+
+The evidence shows that of the eleven communities only Hillside and River Grove do not calculate
+employee contributions to health insurance premium using a fixed percentage. Of the nine that use a
+
+18
+
+For completeness, I use the Combined comparables grouping explained earlier.
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 43 of 54
+
+percentage basis contribution, only Bellwood, Schiller Park, and Summit Police Officers pay premiums less
+than 15%. Thus, six of the nine communities which use a percentage-based contribution method (67%),
+currently pay 15%. In the case of North Riverside, the Police Officers currently pay 16%, which will
+increase to 17% on May 1, 2023.
+Earlier, I gave considerable weight to the comparable communities in the analysis of the Parties’
+proposal on wages. I would be inconsistent by not giving them the same weight now on the issue of health
+insurance premium contribution. The Union’s arguments that (1) there was a lack of financial information
+about health insurance costs in the Village’s presentation, and (2) the Village offered no proof of how many
+Bargaining Unit members use the Village’s plan for their health insurance, are unpersuasive. The Union
+cannot cite the external comparables to support its wage proposal and ignore them when they support the
+Village’s health insurance contribution proposal.
+b.
+
+Internal
+
+The Village’s principal argument turns on the historical parity between its Police and Fire
+Departments. With the exception of 2011 and 2014, each Bargaining Unit member has contributed the same
+premium percentage. From 2015 through 2019, the premium contribution has held at 12.5%. In the
+Firefighters’ new three-year contract, the rate increased to 14% on May 1, 2020, and then to 15% on May
+1, 2022, and continues through to its expiration on April 30, 2023. The Union contends that the increased
+insurance rates and the wage increases are all part of the quid pro quo to get minimum staffing. The Union
+further asserts that not only has the Village provided no data on the cost of its health insurance to justify
+the proposed increase, but it has also not shown that Bargaining Unit members have, in fact, opted into the
+Village’s health insurance.
+I note that although the budget year ending April 30, 2020, shows a negative variance for the Police
+Department employee health care benefit plan, the Village provides no explanation. Also, there was no
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 44 of 54
+
+testimony or evidence presented on the Village’s recent health care benefit claims experience and its impact
+on the premium. Therefore, I find the internal component of the comparables neutral.
+Although the internal comparable is neutral, the fact remains that two-thirds of the comparable
+communities have premium contribution rates at or above what the Village has proposed. Therefore, I find
+factor (h)(4) on balance favors the Village’s proposal.
+(h)(5) The Cost of Living
+The same cost of living analysis that I applied to the issue of wages equally applies to the percentage
+contribution for health insurance premiums. As noted, the Village proposes the status quo (12.5%) for the
+first year of the new Contract followed by an increase to 14% for years two and three. Beginning year four,
+the Village proposes an increase to 15%. However, the percentage premium contribution rate is partially
+offset by the increase in wages which I have adopted. Therefore, I find factor (h)(5) neutral.
+(h)(6) Overall compensation
+Because the health insurance benefit is part of the members’ overall compensation, no separate
+analysis is needed for this factor.
+(h)(7) Changes during the pendency of the arbitration proceedings.
+This factor was not determinative.
+(h)(8) Other factors normally or traditionally taken into consideration.
+This factor was not determinative.
+Award on the Issue of Health Insurance – Section 24.5 Employee Contribution
+Based on the analysis, the relevant Section 14(h) factors on balance favor the Village’s proposal
+which I adopt.
+
+(Intentionally Left Blank)
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 45 of 54
+
+3.
+
+Clothing, Maintenance, and Special Equipment Allowance (Section 29.2)
+
+The Union’s proposals are as follows:
+Economic
+•
+
+Increase the annual allowance for the purchase and maintenance of clothing and special
+equipment to nine hundred dollars ($900.00) from the previous seven hundred thirty dollars
+($730.00).
+Non-Economic
+
+•
+
+The Union does not object to the Village’s proposal to include language that allows an
+officer to purchase uniforms wherever the officer chooses.
+
+•
+
+The Union proposes the status quo and objects to the Village’s proposal that the Officer
+must produce receipts for uniforms purchased.
+
+The Village’s proposals are as follows:
+Economic
+•
+
+Maintain the status quo on the annual uniform allowance at $730.00.
+Non-Economic
+
+•
+
+Insert new language into Section 29.2 what states the following:
+▪
+
+“An Officer may purchases uniforms wherever the Officer chooses.”
+
+▪
+
+“Officers must produce receipts for uniform purchases.”
+
+(The two non-economic proposals will be addressed separately.)
+(h)(3) The interest and welfare of the public and the financial ability of the unit of
+government to meet those costs.
+Since at least 1999, the Parties’ Contract has provided an annual allowance for the purchase and
+maintenance of clothing and special equipment. Since May 1, 2012, the allowance has remained at $730.00.
+In February 2013, the then Chief of Police supplemented the uniform allowance with a Quartermaster
+system where the Village provided required uniforms and equipment and replaced them when they become
+unserviceable at no cost to the officer.
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 46 of 54
+
+This hybrid Quartermaster/uniform allowance system remained unchanged until the Village
+appointed a new Chief of Police, Thomas Mills, who cancelled the Quartermaster system as of March 4,
+2022, and left the contractual $730.00 uniform allowance intact. Chief Mills testified that he took that action
+in order to promote fiscal accountability and transparency. Chief Mills said further that he believes the
+current $730.00 allowance, standing alone, is sufficient to meet the officers’ needs, but he provided no
+supporting evidence. In addition, Chief Mills said that the proposed new language requiring Officers to
+provide purchase receipts will enable the Department to analyze data to determine the actual cost of the
+Contract’s uniform provision. There was no testimony or documentary evidence presented as to what the
+Quartermaster system had cost the Village.
+The difference between the Parties’ proposals is $170.00 per Officer. Considering that there are 14
+members in the Bargaining Unit, this amounts to a marginal annual cost increase of $2,380 which is de
+minimis. Given that the Quartermaster system has been eliminated, I find an allowance of $900.00 per year
+reasonable. Therefore, I find factor (h)(3) on balance favors the Union’s proposal.
+(h)(4) Comparables
+Because there is no internal comparable data, the analysis focuses on the external communities. A
+summary of the known data as of this writing is as follows:
+
+(Intentionally Left Blank)
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 47 of 54
+
+MUNICIPALITY19
+
+Contract
+Period
+2022-2024
+
+Flat $950/year + $850 every five years for bullet-proof vest
+
+Harwood Heights
+
+2019-2022
+2022-2025
+2020-2023
+
+Quartermaster System plus $200/year for “leather equipment,
+footwear, and weapons”
+Flat $900/year
+
+Hillside
+
+2019-2022
+
+Quartermaster System only
+
+Lyons
+
+2019-2023
+
+Northlake
+
+2017-2020
+
+Quartermaster System plus $200/year for equipment and
+maintenance
+Flat $850/year with replacement at no charge if damaged in
+the line of duty subject to Chief of Police’s approval
+
+North Riverside
+
+River Grove
+
+2016
+2017
+2018
+2019-2021
+2022
+2023
+2020-2024
+
+Schiller Park
+
+2020-2023
+
+Stickney
+
+2018-2024
+
+Summit
+
+2017-2020
+
+Bellwood
+Countryside
+
+2021-2024
+
+Uniform Allowance
+
+All years: Flat $1,100/year, with no-cost repair/replacement if
+in normal course of employment, subject to approval
+
+Flat $1,800/year
+Flat $875/year + $250 for NIPAS and $100 for specialty
+assignments
+Flat $800/year with no-cost replacement under specified
+conditions
+Voucher system up to $1,050 for purchase subject to review;
+payment made to vendor after approval of purchase
+requisition. May carryover up to $200 following year.
+Flat $1,050 with no qualifying language
+
+Of the eleven comparable communities, the Village ranks last with the elimination of the
+Quartermaster system. The Village’s current $730.00 flat allowance comes closest to Stickney which has
+a flat $800.00 allowance, but provides for conditional no-cost replacement. In contrast, the instant Contract
+has no replacement language. The next community closest to the Village’s current allowance is Schiller
+Park which provides a flat $875.00 annually, but it also gives an extra $250 or $100 for specific
+
+19
+
+Id., footnote 18.
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 48 of 54
+
+assignments. Of the three communities that use a Quartermaster system—County, Hillside, and Lyons—
+only Lyons does not provide a $200.00 supplement.
+Therefore, based on the evidence, I find factor (h)(4) on balance favors the Union’s proposal.
+(h)(5) The Cost of Living
+The same analysis of the cost of living used for the issue of wages also applies equally to the
+uniform allowance. Based on the BLS Inflation Calculator, between May 2012 and April 2020, when the
+predecessor Contract expired, the buying power of the $730.00 allowance was $814 in April 2021, $848 in
+April 2022, and $950 in January 2023, which is the most current data published by the BLS.
+Therefore, I find factor (h)(5) on balance favors the Union’s proposal.
+(h)(6) Overall compensation
+Because the uniform allowance is part of the members’ overall compensation, it is the issue itself
+and thus addressed in the Award.
+(h)(7) Changes during the pendency of the arbitration proceedings.
+This factor was not determinative.
+(h)(8) Other factors normally or traditionally taken into consideration.
+This factor was not determinative.
+Award on the Issue of the Amount of Annual Uniform Allowance (Economic)
+and Additional Language (Non-Economic)
+Based on the analysis and given that the Department had discontinued the Quartermaster system,
+the Section 14(h) factors favor the Union’s proposal which I adopt.
+Language Additions to Section 29.2 (Non-Economic Proposal)
+The Village has proposed the following sentences be added to Section 29.2 :
+▪
+
+“An Officer may purchases uniforms wherever the Officer chooses.”
+
+▪
+
+“Officers must produce receipts for uniform purchases.”
+
+As previously noted, the Union has no objection to the first sentence and, therefore, it is adopted.
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 49 of 54
+
+Regarding its proposal to require officers to produce receipts for uniform purchases, the Village
+considers this reasonable. Further, the Village contends that the Union’s rejection of the proposal shows it
+views the allowance merely as compensation for which the Officers should not be held accountable.
+In contrast, the Union characterizes a requirement to have officers provide receipts for uniform
+purchases as a “breakthrough” proposal, and as such argues that the Arbitrator should apply the established
+standard which requires proof that the current system does not work or was creating operational hardships
+for the party proposing the change and the opposite party was resisting the change. It adds that the Village
+had not provided proof that the old system was broken and that it was suffering operational hardship that
+required relief. It also suggests that requiring officers to provide uniform purchase receipts will only serve
+to make the current system more cumbersome.
+Arbitrator Bierig has held that when a proposal at interest arbitration concerns a relatively minor
+change in the status quo it requires a lower burden of proof. Conversely, where the requested change
+seeks to create an entirely new or a significant change in a benefit or procedure, Arbitrators apply a
+higher standard, the breakthrough analysis, before the Section 14(h) factors are considered. It is well
+known that the party seeking to change an existing provision bears the burden of proving a need for the
+change. See The Village of Lake Bluff and The Illinois Fraternal Order of Police Labor Council, S-MA16-123, p. 36 (Bierig, 2018).
+I have reviewed the record and find that the Village’s proposal that Officers must produce receipts
+for a uniform purchase is a minor change. Thus, it requires a lower burden of proof that the change is
+justified and does not rise to a level that requires me to apply the seminal three-pronged test established in
+Will County Board and Sherriff of Will County, S-MA-88-09, p. 52 (Nathan, 1988). Nevertheless, despite
+the lower burden of proof I find the Village has not met its burden. Chief Mills testified that the purpose is
+to increase transparency, accountability, and to enable the Village to perform data analysis to determine the
+cost of the Contract’s uniform provision. However, the Village presented no evidence to show there had
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 50 of 54
+
+been any problems with the administration of the uniform allowance thus far to warrant any change to the
+process.
+Therefore, I adopt the Union’s proposal to retain the status quo and to not include any new language
+requiring officers to provide the Village with receipts for uniform purchases.
+4.
+
+New Section 31.7 Health Emergencies (Economic)
+
+The Union’s proposal is to create a new Section 31.7 Health Emergencies in Article XXXI to read
+as follows:
+“The Employer will pay the employees’ out-of-pocket costs for vaccinations and/or
+disease testing it mandates.”
+The Village proposes the status quo remain and that there be no new provision.
+During the COVID-19 pandemic emergency, the Village implemented policies and procedures
+which included mandatory vaccinations and testing. In October 2021, the Union contacted the Village’s
+then-outside counsel/chief negotiator to demand effects bargaining over the mandatory vaccine and testing
+policy. This occurred while the Parties were engaged in bargaining for a successor Contract. The Union
+and Village negotiators exchanged several emails between October 12, 2021, and November 5, 2021, in
+which the Union repeatedly demanded bargaining.
+In March 2022, the Village changed outside counsel and a new chief negotiator took over. The
+record does not show any further communication between the Parties about the policy until September 2,
+2022, when the Union sent a letter to Chief Mills stating it had requested the former outside counsel to
+engage in effects bargaining over the vaccine policy but that she ignored the Union’s efforts to schedule
+negotiating sessions. The letter went on to point out the City of Chicago had made changes in its testing
+policy in response to the CDC’s revised guidelines. The Union requested the Village discontinue its policy
+and asked the Chief to schedule a meeting. The record contains no response from Chief Mills nor any further
+correspondence from the Union on this subject.
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 51 of 54
+
+On October 24, 2022, the Parties held its last mediation session with an FMCS mediator prior to
+Interest Arbitration. Although the Village in the meantime had rescinded its COVID-19 vaccine and testing
+policy, the Union presented its proposal to add Section 31.7 in the event the COVID-19 or similar policy
+was reinstated. The Union acknowledges that prior to October 24, 2022, it had not submitted a written
+proposal to the Village. The Union further acknowledges that it did not file a ULP over the implementation
+of the COVID-19 policies and procedures.
+The Village argues that the from the time new outside counsel took over the negotiations in March
+2022 until the October 24, 2022, mediation session the Union never raised the issue. Therefore, the Village
+asserts that because the Parties have not exchanged proposals and negotiated alternative language before
+reaching impasse, it would be inappropriate for the Arbitrator to decide this economic issue.
+Because the Union has proposed a new section be added to the Contract, and given that the intent
+of the language is for the Village to absorb in essence any costs an officer may incur to comply with a
+prospective mandatory vaccine and testing policy, I find the Union’s proposal warrants breakthrough
+analysis pursuant to Will County Board and Sherriff of Will County, S-MA-88-09, p.52 (Nathan, 1988). In
+Village of Glenwood, Arbitrator Feuille observed that Arbitrator Nathan applied the following threepronged test to decide whether “the party seeking the change to demonstrate, at minimum, proposing a
+change in the status quo has met its burden of proof:
+As other arbitrators have held, for a party in an interest arbitration proceeding to
+prevail on a demand to change the status quo in its CBA, that moving party must
+demonstrate “compelling need [for the change] and evidence of a quid pro quo, .
+. . [and] evidence of repeated good faith attempts at the bargaining table to
+secure agreement from the other side. . . Only after the moving party is able to
+carry the burden of compelling need, quid pro quo, and exhaustive, good faith
+bargaining, should external and internal comparability and other Section 14 factors
+be examined by an arbitrator” (Village of Broadview and Fraternal Order of Police,
+ILRB No. S-MA-06-145, James Cox, 2007, cited in City of Danville and
+Policemen’s Benevolent and Protective Association, Unit #11, ILRB No. S-MA09-238, at 82, Marvin Hill, 2010).
+Village of Glenwood and the Metropolitan Alliance of Police, Chapter 612, pp. 37-38, SMA-11-185 (Feuille, 2014) (Emphasis added.)
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 52 of 54
+
+Here, the Parties have not bargained to impasses. The matter is not ripe to apply a breakthrough
+analysis let alone evaluate the proposal under the statutory factors. Although the Union argues that the
+Village has avoided its demand to bargain by simply ignoring the matter since October 2021, it also
+acknowledges that it had not submitted a written proposal to the Village prior to October 24, 2022. In
+addition, the Union has not disputed the Village’s claim that from the time its new outside counsel took
+over as chief negotiator in March 2022, it has not raised the issue until the final mediation session held on
+October 24, 2022.
+Therefore, I am remanding the Union’s proposal to add a new Section 31.7 Health Emergencies
+back to the Parties for discussion. With the Parties’ permission I retain jurisdiction in the event they reach
+an impasse after good faith bargaining and will decide the matter.
+
+(Intentionally Left Blank)
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 53 of 54
+
+XI.
+
+AWARD
+For the reasons set forth in this Opinion and Award, I find the following, along with all tentative
+
+agreements previously reached by the Parties and as stipulated, shall be incorporated into the Parties’
+successor Collective Bargaining Agreement, effective, May 1, 2020, to April 30, 2024:
+A.
+
+Wages (Article XXX, Section 30.1 Base Salary)
+
+The Union’s final offer is adopted. The percentage wage increases shall be set as follows:
+
+Wage Schedule for
+May 1, 2020 – April 30, 2024
+Contract
+Date
+May 1, 2020
+May 1, 2021
+May 1, 2022
+
+Percentage Increase
+2.50%
+3.00%
+3.25%
+
+May 1, 2023
+TOTAL INCREASE
+
+B.
+
+3.25%
+12.00%
+
+Health Insurance (Article XXIV, Section 24.5 Employee Contribution)
+
+The Village’s final offer is adopted. The percentage contribution officers shall pay of the
+premium for the health and dental plan in which they are enrolled (HMO, PPO, etc.) shall be set as
+follows:
+Health Insurance Premium
+Percentage Contribution Schedule
+for
+May 1, 2020 – April 30, 2024
+Contract
+Date
+May 1, 2020
+May 1, 2021
+May 1, 2022
+May 1, 2023
+
+Percentage
+Contribution
+12.5%
+14.0%
+14.0%
+15.0%
+
+Illinois FOP Labor Council
+and
+Village of Broadview
+FMCS No. 220216-03476
+Page 54 of 54
+
+C.
+
+D.
+
+Annual Uniform Allowance (Article XXIX, Sect. 29.2 Clothing, Maintenance and
+Special Equipment)
+1.
+
+The Union’s final offer to raise the annual allowance for all bargaining unit
+Officers for the purchase and maintenance of clothing and special equipment to
+nine hundred dollars ($900.00) for the entire Contract period, May 1, 2020, to April
+30, 2024, is adopted.
+
+2.
+
+The Village’s proposal to insert into Section 29.2 a sentence that states, “Officers
+may purchase informs whenever the Officer Chooses” is adopted.
+
+3.
+
+The Village’s proposal to insert into Section 29.2 a sentence that states, “Officers
+must produce receipts for uniform purchases” is rejected and the Union’s proposal
+that the status quo remain is adopted.
+
+Addition of a New Section 31.7 Health Emergencies
+
+The Union’s proposal to add a new Section 31.7 Health Emergencies into Article XXXI General
+Provisions that states, “The Employer shall pay the employees’ out-of-pocket costs for vaccinations and/or
+disease testing it mandates” is remanded back to the Parties for good faith bargaining. With the Parties’
+permission I retain jurisdiction in the event they reach an impasse after good faith bargaining and will
+decide the matter.
+
+/s/ Cary Morgen
+Cary Morgen, Arbitrator
+Issued: March 19, 2023
+Chicago, Illinois

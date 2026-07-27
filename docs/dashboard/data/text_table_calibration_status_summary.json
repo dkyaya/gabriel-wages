@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-27T02:11:02Z",
+  "generated_at": "2026-07-27T02:30:18Z",
   "data_vintage": "2026-07-23",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -80,7 +80,7 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "calibration_phase": "targeted_pdf_text_layer_readiness_387_completed_text_extraction_ready",
+  "calibration_phase": "targeted_text_layer_extraction_321_completed_evidence_extraction_ready",
   "latest_calibration_id": "TEXT-TABLE-CALIBRATION-SUBSET1-150-2026-07-24",
   "latest_calibration_review_id": "TEXT-TABLE-CALIBRATION-SUBSET1-REFINED-REVIEW2-2026-07-24",
   "latest_adjudication_prep_id": "TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24",
@@ -443,6 +443,17 @@
   "targeted_bounded_text_layer_extraction_ready_next": true,
   "targeted_pdf_text_layer_repair_needed": false,
   "targeted_pdf_text_layer_tier_c_recommended_next": false,
+  "targeted_text_layer_extraction_completed": true,
+  "targeted_text_layer_extraction_decision": "targeted_text_layer_extraction_321_completed_evidence_extraction_ready",
+  "targeted_text_layer_extraction_path": "docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26",
+  "targeted_text_layer_extraction_queue_count": 321,
+  "targeted_text_layer_extraction_pdf_count": 289,
+  "targeted_text_layer_extraction_html_count": 32,
+  "targeted_text_layer_extraction_status_counts": {
+    "extracted_ok": 321
+  },
+  "targeted_evidence_extraction_review_ready_next": true,
+  "targeted_text_layer_extraction_repair_needed": false,
   "gabriel_claim_rating_global_analysis_readiness": false,
   "limited_qualitative_usage_registry_review_global_analysis_readiness": false,
   "limited_qualitative_usage_layer_acceptance_global_analysis_readiness": false,

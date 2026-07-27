@@ -1,0 +1,15 @@
+{
+  "all_invariants_passed": true,
+  "artifact_paths_hashes_sizes_valid": true,
+  "controlled_statuses_only": true,
+  "downstream_statuses_closed": true,
+  "global_analysis_readiness_false": true,
+  "locked_queue_exactly_321": true,
+  "no_durable_ledger_merge": true,
+  "no_url_download_ocr_render_model_rating_ingestion_or_codification": true,
+  "only_readiness_approved_rows_entered": true,
+  "partial_outputs_cannot_masquerade_as_complete": true,
+  "pdf_html_counts_exactly_289_32": true,
+  "pdf_html_lanes_separate": true,
+  "preserved_exclusions_outside_queue": true
+}

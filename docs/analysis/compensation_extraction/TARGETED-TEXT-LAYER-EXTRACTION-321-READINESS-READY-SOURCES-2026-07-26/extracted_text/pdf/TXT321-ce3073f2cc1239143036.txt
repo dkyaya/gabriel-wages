@@ -1,0 +1,458 @@
+LAW ENFORCEMENT AGREEMENT
+This Law Enforcement Agreement (“Agreement”) is dated ______________________, 20_____ (“Effective Date”) by and between
+LexisNexis Coplogic Solutions Inc., with its principal place of business at 1000 Alderman Drive, Alpharetta, Georgia 30005 (“Provider”),
+and Moberly Police Department , with its principal place of operations at 300 North Clark Street Moberly Missouri 65270 (“Agency”).
+Provider and Agency may be referred to herein individually as a “Party” and collectively referred to as “Parties”.
+1.
+
+SCOPE.
+Provider as part of its business has developed several comprehensive products and services for law enforcement. Subject to the
+terms and conditions of this Agreement, Agency desires to order and Provider agrees to provide the various products and services
+contained herein (collectively referred to as the “Services”) as described in an applicable order to this Agreement (“Order”). The
+Parties acknowledge Agency is a law enforcement entity with responsibility for the documentation, retention, and management
+of information and reporting related to vehicle accidents, citations, and incidents occurring within its jurisdiction (as used within
+this Agreement, each documented event is a “Report”). “Report” shall also include any associated or supplemental information
+provided with the Report including Agency name, images and upload date, as applicable. The Parties further acknowledge that
+Provider acts on behalf of Agency to the extent it assists in carrying out Agency’s obligations to provide the public access to vehicle
+accident reports and Provider shall provide such access in accordance with the Federal Driver’s Privacy Protection Act, (18 U.S.C.
+§ 2721 et seq.).
+
+2.
+
+LICENSE AND RESTRICTIONS.
+2.1. License Grant and License Restrictions. Upon execution of an applicable Order, Provider hereby grants to Agency a
+restricted, limited, revocable license to use the Services only as set forth in this Agreement and any applicable Order, and
+for no other purposes, subject to the restrictions and limitations set forth below:
+(a) Agency shall not use the Services for marketing or commercial solicitation purposes, resell, or broker the Services
+to any third-party or otherwise use the Services for any personal (non-law enforcement) purposes; and
+(b) Agency shall not access or use Services from outside the United States without Provider’s prior written approval;
+and
+(c) Agency shall not use the Services to create a competing product, provide data processing services to third parties,
+resell, or broker the Services to any third-party, or otherwise use the Services for any personal (non-law
+enforcement) purposes; and
+(d) Agency’s use of the Services hereunder will not knowingly violate any agreements to which Agency is bound; and
+(e) Agency shall not harvest, post, transmit, copy, modify, create derivative works from, tamper, distribute the
+Services, or in any way circumvent the navigational structure of the Services, including to upload or transmit any
+computer viruses, Trojan Horses, worms or anything else designed to interfere with, interrupt or disrupt the
+normal operating procedures of Services; and
+(f) Agency may not use the Services to store or transmit infringing, libellous, or otherwise unlawful or tortious
+material, or to store or transmit material in violation of third-party privacy rights or otherwise infringe on the
+rights of others; and
+(g) Agency shall not reveal any user accounts or passwords for the Services to any third parties (third parties shall
+not include Agency’s employees who have a need to know such information); and
+(h) Except as specifically set forth in an Order, Agency shall not permit any third party (third parties shall not include
+Agency’s employees who have a need to know such information) to view or use the Services, even if such third
+party is under contract to provide services to Agency; and
+(i) Agency shall comply with all laws, regulations, and rules which govern the use of the Services.
+
+Confidential – Law Enforcement Agreement (Q3.23.V3)
+
+Page 1 of 9
+
+2.2. Other Restrictions. In addition Provider may, at any time, impose restrictions and/or prohibitions on the Agency’s use of
+the Services, or certain data or no longer offer certain functionalities or features that may be the result of a modification in
+Provider policy, a modification of third-party agreements, a modification in industry standards, a Security Event (defined
+below), a change in law or regulation, or the interpretation thereof, and/or an order from a Court, regulator, tribunal or
+other authority that has jurisdiction over Agency or Provider. Upon written notification by Provider of such restrictions,
+Agency agrees to comply with such restrictions or, in the event that Agency is unable to comply, it shall notify Provider in
+writing of its inability to comply within ten (10) days after receipt of Provider’s written notification. In that event, either
+Party may immediately terminate this Agreement by providing written notice thereof to the other Party without such
+termination constituting a breach of this Agreement. Provider shall be Agency’s designated preferred provider of such
+Services as are mutually agreed to and defined hereunder, related to the handling of Agency’s Reports.
+2.3. Violation of License Terms and / or Restrictions. Agency agrees that, if Provider determines or reasonably suspects that: (i)
+Agency is violating any license terms, restrictions, or other material provision of the Agreement; or (ii) Agency has
+experienced a Security Event (as herein defined), Provider may, at its sole option, take immediate action up to and including,
+without further obligation or liability of any kind, terminating Agency’s account and the license to use the Services.
+3.
+
+SUPPORT AND MAINTENANCE.
+3.1. Ongoing Maintenance. Provider will, from time-to-time issue and/or provide maintenance including bug fixes,
+enhancements, new features, or new functionality that are generally made available to customers along with any
+corresponding changes to documentation (“Maintenance”). Maintenance does not include work to custom code,
+customized configurations, or to unauthorized modifications of the Services. Any Provider assistance beyond standard
+Maintenance will be billed at Provider’s then current pricing schedule, as agreed upon in advance by the Parties.
+Additionally, upon Agency’s written notice of new or revised legislation, statutes, or ordinances requiring any Services to
+be updated, Provider shall update or modify the Services or particular form consistent with such new regulation within a
+reasonable time.
+3.2. Support Services. Provider will provide ongoing support services for problems, queries or requests for assistance
+(“Support”) provided that all requests for Support must be made to Provider Monday through Friday from 8:00 AM ET to
+8:00 PM ET at 1-888-949-3835. Provider will also provide after-hours Support including the ability to leave a message and
+receive a call back the following business day or sooner, if critical. In order to provide Support, Agency will provide all
+information reasonably required by Provider to identify the issue, including: an Agency point of contact (familiar with the
+Services and issue), description of issue, screenshots, the impact, and assist in Provider’s efforts to reproduce the problem
+(as applicable). Provider will work to resolve problem with reasonable promptness for issues that are application or Services
+related (Provider is not responsible for resolving issues caused by Agency hardware). The Agency agrees to provide Provider
+with data transfers, as requested, remote access to the Services system, and with sufficient test time on the Agency's
+computer system to duplicate the problem, to certify that the problem is with the Services, and to certify that the problem
+has been corrected. If the problem cannot readily be resolved, Provider will attempt to identify a work around. Upon
+resolution of any issue, Provider shall notify the Agency of such resolution via email. The Parties agree that Provider is not
+obligated to ensure that its Services are compatible with outdated (exceeding 4 years from date of initial release) hardware,
+computer operating services or database engines.
+3.3. On Site Support. In response to written Agency requests for Provider to provide on-site routine non-emergency support,
+Provider shall produce a written estimate of the time required to provide the requested support and state any
+requirements, such as the presence of Agency staff or other resources or materials. Any on-site support provided by
+Provider shall only be invoiced by Provider or paid by Agency if the problem arose due to something other than a defect in
+the Services. The Agency shall reimburse Provider at the rate of two thousand five hundred ($2,500.00) dollars per day for
+each Provider employee who provides any on-site support. This daily fee includes all Provider travel time and expenses.
+
+4.
+
+FEES.
+4.1. Fees due to Provider. Any fees due to Provider for Services hereunder shall be specified in an Order (“Fees”). For any Order
+where Fees are specified, Provider will issue an invoice to Agency pursuant to the terms in the Order. Invoices shall be paid
+in full by Agency within thirty (30) days from invoice date. Provider may increase or decrease the Fee following the Initial
+Term (as defined in an applicable Order) by providing Agency no less than sixty (60) days written notice prior to the effective
+date of such pricing change. To the extent an interface or other technological development is required (outside of the
+
+Confidential – Law Enforcement Agreement (Q3.23.V3)
+
+Page 2 of 9
+
+Service Features defined in the Order(s)) to enable an Agency designated third party (i.e., RMS Vendor) to receive Reports
+from Provider at Agency’s request or to enable Provider to intake Agency Data, such cost shall not be borne by Provider.
+4.1.1. Disputes. In the event Agency has a good faith dispute on all or a portion of an unpaid invoice (“Dispute”), Agency
+shall notify Provider in writing and follow the procedures set forth herein. In the event of a Dispute, Agency shall
+promptly, but in no case more than thirty (30) days from receipt of the invoice, notify Provider in writing pursuant
+to the notice provisions of this Agreement (“Dispute Notice”). Agency shall identify in writing the specific cause of
+the Dispute, the amount in dispute, and reasonable documentation supporting the Dispute. Invoices not disputed
+within ninety (90) days of the invoice date will be deemed valid and may not later be disputed. The Parties agree to
+use best efforts to resolve all Disputes promptly and in good faith. However, in the event the Parties are not able to
+resolve a Dispute within sixty (60) days from Provider’s receipt of a Dispute Notice, Provider shall have the right to
+terminate this Agreement (including all Services) or the right to discontinue the applicable Service immediately,
+without such action constituting a breach or incurring any liability herein. All Fees not properly disputed or paid shall
+accrue interest at the rate of eighteen percent (18%) per annum. All Fees are calculated for payment made via ACH,
+Wire, or Agency check. Agency agrees that Fees exclude taxes (if applicable) or other cost incurred by Agency’s RMS
+Vendor or other third parties and agrees such costs shall be passed on to Agency. Provider shall not be required to
+enter into a third-party relationship to obtain payment for the Service provided to Agency; however, should Provider
+elect to do so, Provider reserves the right to charge Agency additional fees for such accommodation.
+4.2. Fees due to Agency. Using the process as herein defined, on behalf of Agency, Provider will collect and remit to Agency a
+fee for all Reports (“Agency Fee”) purchased from the eCommerce portal set forth on the applicable Order, including but
+not limited to fees for purchases of Reports from that eCommerce portal by an Affiliate. On a monthly basis, Provider will
+electronically transfer to Agency’s designated account, the total amount of applicable Agency Fee collected by Provider
+during the previous month. Provider will make available a monthly report to Agency identifying the number of Reports
+provided on its behalf via the LexisNexis® Command Center (“Command Center”) administration portal and/or its successor.
+4.2.1. No Agency Fee will be paid with respect to the following:
+(a) When an Affiliate of Provider has paid an Agency Fee to acquire a Report for an Authorized Requestor (as defined
+in Section 5.2 of this Agreement), including Reports purchased before the applicable Order Effective Date, and
+such Affiliate later resells that Report from its inventory of previously purchased Reports to another Authorized
+Requestor; or
+(b) When one or more components of a Report (e.g., VIN number), rather than the Report in its entirety, is provided
+by Provider to an Authorized Requestor or an Affiliate of Provider; or
+(c) When a Report is acquired by an Affiliate of Provider from a source other than the eCommerce portal set forth
+on the applicable Order; or
+(d) When a fee is not charged to an Authorized Requestor for the Report.
+Nothing in this Agreement shall require Provider or its Affiliate to pay an Agency Fee to the Agency when an Authorized
+Requestor provides a Report and/or specific data extracted from the Report to a third party after the Authorized Requestor
+has purchased such Report from the Affiliate’s inventory of previously purchased Reports. Agency acknowledges that all
+reports requested by Agency Requestors shall be provided free of charge.
+4.3. Fees retained by Provider. Where permitted by law, Provider will charge a convenience fee for each Report provided to an
+Authorized Requestor (“Convenience Fee”) which shall be retained by Provider. The Convenience Fee shall be established
+by Provider at its discretion, but in no event shall it exceed the amount Provider may legally charge an Authorized Requestor.
+4.4. Product Enhancements. Should Agency request enhancements to Services outside of the standard Service Features set
+forth in a specific Order, Provider will provide Agency with a scope document, as part of the Change Control Process,
+reflecting the requested enhancement(s), cost, and schedule to complete such enhancement. Where Agency executes such
+scope document, the scope document shall comply with the terms and conditions set forth in this Agreement.
+5.
+
+CONTRIBUTION/DISTRIBUTION.
+5.1. Agency acknowledges and agrees that Provider has compiled certain databases of person data, vehicle data, and/or incident
+data contributed from other law enforcement agencies (“Participating Agencies”) accessing certain of the Services. Agency
+
+Confidential – Law Enforcement Agreement (Q3.23.V3)
+
+Page 3 of 9
+
+further acknowledges and agrees that such contribution data (a) is available only to Participating Agencies that have
+authorized the contribution and distribution of their data via such databases and (b) may be used solely for investigative
+and/or law enforcement purposes and for no other purpose whatsoever.
+5.2. For Services that contemplate the sale of Reports, as more specifically described in an Order, Provider shall distribute
+Reports and/or specific data extracted from the Report to individuals or legal entities (“Authorized Requestors”) and other
+authorized law enforcement entities (“Agency Requestors”) in accordance with applicable laws, regulations, and/or an
+order from a court, regulator, tribunal or other authority that has jurisdiction over Agency or Provider. Nothing in this
+Agreement shall prohibit Provider’s Affiliates (defined in Section 15.1, “Affiliates” below) from purchasing Reports from the
+ecommerce portal set forth in the Order, or from distributing previously purchased Reports and/or specific data extracted
+from the Report to Authorized Requestors or Agency Requestors in accordance with the terms of the Order and applicable
+laws, regulations, and/or an order from a court, regulator, tribunal or other authority that has jurisdiction over Agency or
+Provider. Nothing in this Agreement shall prohibit Affiliates from acquiring Reports from a source other than the ecommerce
+portal set forth in the Order.
+6.
+
+TERMS AND TERMINATION.
+6.1. Term. This Agreement shall commence upon the Effective Date and shall continue until terminated in accordance with this
+Agreement. Each Order shall set forth the specified term for the particular Service.
+6.2. Termination.
+6.2.1. Either Party may terminate this Agreement or any Order for cause if the other Party breaches a material obligation
+under the terms of this Agreement and fails to cure such breach within thirty (30) days of receiving written notice
+thereof from the non-breaching Party, provided, however, that if such material breach is of a nature that it cannot
+be cured, immediate termination shall be allowed. Failure to pay by either Party shall be considered a material
+default.
+6.2.2. Either Party may elect to terminate this Agreement or any Order by providing written notice to the other of such
+intent, at least ninety (90) days prior to the end of the applicable Order term.
+6.2.3. Provider may, upon six (6) months written notice to Agency, terminate any Service that will no longer be supported
+or offered by Provider. Provider will make reasonable efforts to transition Agency to a similar Service, if available.
+Further, Provider may at any time cease to provide Agency access to any portions of features of the Services thereof
+which Provider is no longer legally or contractually permitted to provide.
+6.3. Effect of Termination. Upon termination of this Agreement, each Party shall be liable for payment to the other Party of all
+amounts due and payable for Services provided through the effective date of such termination. Upon receipt of Agency’s
+written request after termination, Provider shall provide Agency with access to Reports provided by Agency under this
+Agreement and/or data provided through provision of the Services by Agency under an applicable Order so Agency may
+download and/or copy such information. Provider shall not be obligated to delete from its databases (or from other storage
+media) and/or return to Agency, Reports already provided to Provider by Agency, and shall be permitted to continue to
+maintain and distribute the Reports already in its possession to Authorized Requestors in compliance with applicable laws,
+regulations, and/or an order from a court, regulator, tribunal or other authority that has jurisdiction over Agency or
+Provider.
+
+7.
+
+RELEVANT LAWS.
+Each Party shall comply with all applicable federal, state, and local laws and regulations related to its performance hereunder,
+including:
+7.1. Driver’s Privacy Protection Act. Agency acknowledges that certain Services provided under this Agreement may include the
+provision of certain personal information data obtained from state Departments of Motor Vehicles (“DMV Data”) and that
+such DMV Data may be governed by the Federal Driver’s Privacy Protection Act, (18 U.S.C. § 2721 et seq.) and related state
+laws (“DPPA”), and that Agency is required to comply with the DPPA, as applicable. Agency acknowledges and agrees that
+it may be required to certify its permissible use of DPPA or DMV Data at the time it requests information in connection with
+certain Services and will recertify upon request by Provider.
+
+Confidential – Law Enforcement Agreement (Q3.23.V3)
+
+Page 4 of 9
+
+7.2. Fair Credit Reporting Act. The Services provided pursuant to this Agreement are not provided by “consumer reporting
+agencies” as that term is defined in the Fair Credit Reporting Act (15 U.S.C. § 1681, et seq.) (“FCRA”) and do not constitute
+“consumer reports” as that term is defined in the FCRA. Agency certifies that it will not use any of the information it receives
+through the Services in whole or in part as a factor in determining eligibility for credit, insurance, or employment or for any
+other eligibility purpose that would qualify the information in as a consumer report.
+7.3. Protected Health Information. Unless otherwise contemplated by an applicable Business Associate Agreement executed
+by the Parties, Agency will not provide Provider with any Protected Health Information (as that term is defined in 45 C.F.R.
+Sec. 160.103) or with Electronic Health Records or Patient Health Records (as those terms are defined in 42 U.S.C. Sec.
+17921(5), and 42 U.S.C. Sec. 17921(11), respectively) or with information from such records without the execution of a
+separate agreement between the Parties.
+7.4. Social Security Numbers. Social Security Numbers may be available hereunder as part of Reports and/or related data
+provided from certain states. However, Agency shall not provide Social Security Numbers to Provider under any
+circumstances under this Agreement. Should Agency require more information on Social Security Numbers or its obligations
+in relation thereto, Agency should contact Provider Agency Service at 1-866-215-2771 for assistance.
+7.5. Privacy Principles. Agency shall comply with the “Provider Data Privacy Principles” available at
+http://www.lexisnexis.com/privacy/data-privacy-principles.aspx, as updated from time to time. Provider shall notify
+Agency in writing in the event that material changes are made to the Provider Data Privacy Principles.
+7.6. Security. Agency agrees to protect against the misuse and/or unauthorized access of the Services provided to Agency in
+accordance with this Agreement and as set forth in Exhibit A, attached hereto.
+8.
+
+CONFIDENTIAL INFORMATION AND INTELLECTUAL PROPERTY OWNERSHIP.
+8.1. Definition. “Confidential Information” means all non-public information provided by the disclosing Party to the receiving
+Party hereunder, including, without limitation, all information related to technical, financial, strategies and related
+information, business information, computer programs, algorithms, know-how, processes, databases, systems, ideas,
+inventions (whether patentable or not), schematics, Trade Secrets (as defined by applicable law) and other information
+(whether written or oral). Confidential Information does not include Reports and information related thereto. Confidential
+Information does not include information that was, at the time of the disclosure: (a) or becomes (through no improper
+action or inaction by the recipient) generally known to the public; (b) lawfully disclosed to recipient by a third-party and
+received in good faith and without any duty of confidentiality by the recipient or the third-party; (c) in recipient’s possession
+or known to it prior to receipt from discloser; or (d) independently developed by recipient; provided in each case that such
+forgoing information was not delivered to or obtained by recipient as a result of any breach of this Agreement.
+8.2. Treatment of Confidential Information. Each Party agrees to protect the Confidential Information with the same degree of
+care it uses to protect its own confidential information of a similar nature, but not less than a reasonable standard of care
+and not to use the other Party’s Confidential Information other than as necessary to perform its obligations or as permitted
+under this Agreement. A Party shall not remove or destroy any proprietary or confidential legends or markings placed upon
+or contained within any Confidential Information.
+8.3. Intellectual Property Ownership. Each Party retains all right, title, and interest under applicable contractual, copyright and
+related laws to their respective Confidential Information, including the right to use such information for all purposes
+permissible by applicable laws, rules, and regulations. Provider retains all rights (other than the limited license granted
+herein), title, interest, ownership and all intellectual property rights in the Services including any improvements or
+modifications thereto, and Agency shall use such information consistent with such right, title and interest and notify
+Provider of any threatened or actual infringement thereof. Agency shall not remove or obscure any copyright or other
+notices from the Services or materials provided hereunder.
+8.4. Exception for Subpoenas and Court Orders. A Party may disclose Confidential Information solely to the extent required by
+subpoena, court order, the freedom of information act for the state which is applicable to the Agency (“FOIA”), or other
+governmental authority, provided that the receiving Party provides the disclosing Party prompt written notice of such
+subpoena, court order, FOIA request or other governmental authority so as to allow the disclosing Party an opportunity to
+obtain a protective order to prohibit or limit such disclosure at its sole cost and expense. Confidential Information disclosed
+pursuant to subpoena, court order, FOIA request or other governmental authority shall otherwise remain subject to the
+terms applicable to Confidential Information.
+
+Confidential – Law Enforcement Agreement (Q3.23.V3)
+
+Page 5 of 9
+
+8.5. Duration. Each Party’s obligations with respect to Confidential Information shall continue for the term of this Agreement
+and for a period of five (5) years after termination of this Agreement, provided however, that with respect to Trade Secrets,
+each Party’s obligations shall continue for so long as such Confidential Information continues to constitute a Trade Secret.
+8.6. Return of Confidential Information. Upon the written request of a Party (and except as otherwise specifically set forth in an
+applicable Order), each Party shall return or destroy (and certify such destruction in a signed writing) any of the other Party’s
+Confidential Information unless retention of such information is required by law, regulations, and/or an order from a court,
+regulator, tribunal or other authority that has jurisdiction over Agency or Provider.
+8.7. Injunctive Relief. In the event of a breach or a threatened breach of the confidentiality or privacy provisions of this
+Agreement, the non-breaching Party may have no adequate remedy in monetary damages and, accordingly, may seek an
+injunction against the breaching Party.
+8.8. Other. During the term of this Agreement and subject to approval by Agency, Agency agrees to serve as a reference for the
+Services, which may include (i) reference calls with mutually acceptable prospects; (ii) a published “success story” describing
+the partnership with Provider; (iii) the use of Agency’s name in Provider marketing activities; or (iv) a favorable reference
+of Provider to an industry analyst or at an industry conference.
+9.
+
+PROVIDER AUDIT RIGHTS.
+Agency understands and agrees that, in order to ensure Agency’s compliance with the Agreement, as well as with applicable laws,
+regulations and rules, Provider’s obligations under its contracts with its data providers, and Provider’s internal policies, Provider
+may conduct periodic reviews of Agency’s use of the Services and may, upon reasonable notice, audit Agency’s records, processes
+and procedures related to Agency’s use, storage and disposal of the Services and information received therefrom. Agency agrees
+to cooperate fully with any and all audits and to respond to any such audit inquiry within ten (10) business days, unless an
+expedited response is required. Violations discovered in any review and/or audit by Provider will be subject to immediate action
+including, but not limited to, invoicing for any applicable fees (if Services are based on number of users and Agency’s use exceeds
+licenses granted), suspension or termination of the license to use the Services, legal action, and/or referral to federal or state
+regulatory agencies.
+
+10. REPRESENTATIONS AND WARRANTIES.
+Agency represents and warrants to Provider that Agency is fully authorized to disclose Reports, information, and related data or
+images to Provider in accordance with this Agreement and to grant Provider the rights to provide the Services as described herein.
+Where redaction of Reports is required prior to provision to Provider, Agency represents and warrants it will redact applicable
+Reports consistent with all laws and regulations. In performing their respective obligations under this Agreement, each Party
+agrees to use any data and provide any Services, in strict conformance with applicable laws, regulations, and/or an order from a
+court, regulator, tribunal or other authority that has jurisdiction over Agency or Provider and consistent with the terms of this
+Agreement.
+11. LIMITATION OF WARRANTY.
+FOR PURPOSES OF THIS SECTION, “PROVIDER” INCLUDES PROVIDER AND ITS AFFILIATES, SUBSIDIARIES, PARENT COMPANIES,
+AND DATA PROVIDERS. THE SERVICES PROVIDED BY PROVIDER ARE PROVIDED "AS IS" AND WITHOUT ANY WARRANTY, EXPRESS,
+IMPLIED, OR OTHERWISE, REGARDING ITS ACCURACY OR PERFORMANCE INCLUDING WITHOUT LIMITATION ANY IMPLIED
+WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE, SUITABILITY, ORIGINALITY, OR OTHERWISE, OF ANY
+SERVICES, SYSTEMS, EQUIPMENT OR MATERIALS PROVIDED HEREUNDER.
+12. LIMITATION OF LIABILITY.
+To the extent permitted by applicable law, Provider’s entire liability for any claims(s) resulting from its acts or omissions, including,
+but not limited to negligence claims under this Agreement shall not exceed the total amount of Fees actually received by Provider
+from Agency (excluding pass through or out of pocket expenses) for the specific Services from which liability arises during the
+twelve (12) month period immediately preceding the event first giving rise to such liability, and if not yet in the twelfth (12th)
+month of this Agreement, for the period leading up to such event. To the extent the relevant Services are made available at no
+cost to Agency, then in no event shall Provider’s liability to Agency under this Agreement exceed one hundred dollars ($100.00)
+in the aggregate. This limitation of liability will not apply to any claims, actions, damages, liabilities or fines relating to or arising
+
+Confidential – Law Enforcement Agreement (Q3.23.V3)
+
+Page 6 of 9
+
+from Provider’s gross negligence or willful misconduct. In no event shall Provider be liable for any indirect, special, incidental, or
+consequential damages in connection with this Agreement or the performance or failure to perform hereunder, even if advised
+of the possibility of such damages.
+13. FORCE MAJEURE.
+Neither Party will be liable for any delay or failure to perform its obligations hereunder due to causes beyond its reasonable
+control, including but not limited to natural disaster, pandemic, casualty, act of God or public enemy, riot, terrorism, or
+governmental act; provided, however, that such Party will not have contributed in any way to such event. If the delay or failure
+continues beyond thirty (30) calendar days, either Party may terminate this Agreement or any impacted Order with no further
+liability, except that Agency will be obligated to pay Provider for the Services provided under this Agreement prior to the effective
+date of such termination.
+14. NOTICES.
+All notices, requests, demands or other communications under this Agreement shall be in writing to the address set forth in the
+opening paragraph and shall be deemed to have been duly given: (i) on the date of service if served personally on the Party to
+whom notice is to be given; (ii) on the day after delivery to a commercial or postal overnight carrier service; or (iii) on the fifth day
+after mailing, if mailed to the Party to whom such notice is to be given, by first class mail, registered or certified, postage prepaid
+and properly addressed. Any Party hereto may change its address for the purpose of this section by giving the other Party timely,
+written notice of its new address in the manner set forth above.
+15. MISCELLANEOUS.
+15.1. Affiliates. For purposes of this Agreement, “Affiliate” means any corporation, firm, partnership or other entity that directly
+or indirectly controls, or is controlled by, or is under common control with Provider. Affiliates shall not be bound by the
+terms and conditions of this Agreement with respect to the provision of their applicable Services hereunder and nothing in
+this Agreement shall prevent or limit Affiliates from offering previously purchased Reports or data extracted from Reports
+for sale.
+15.2. Independent Contractor/No Agency. Each Party acknowledges that it has no authority to bind or otherwise obligate the
+other Party.
+15.3. Assignment. Neither Party shall assign this Agreement in whole or in part without the prior written consent of the other
+Party, and any such attempted assignment contrary to the foregoing shall be void. Notwithstanding the foregoing, an
+assignment by operation of law, as a result of a merger or consolidation of a Party, does not require the consent of the
+other Party. This Agreement will be binding upon the Parties’ respective successors and assigns.
+15.4. Headings, Interpretation, and Severability. The headings in this Agreement are inserted for reference only and are not
+intended to affect the meaning or interpretation of this Agreement. The language of this Agreement shall not be construed
+against either Party. If any provision of this Agreement shall be held to be invalid, illegal, or unenforceable, the validity,
+legality, or enforceability of the remaining provisions shall not in any way be affected or impaired thereby.
+15.5. Waiver; Remedies Non-Exclusive. No failure or delay on the part of any Party in exercising any right or remedy provided in
+this Agreement will operate as a waiver thereof. Unless otherwise provided herein, any remedy will be cumulative to any
+other right or remedy available at law or in equity.
+15.6. Survival. Sections 2-4, 7-12, and 14 shall survive the termination or rescission of this Agreement.
+15.7. Provider Shared Facilities. Provider may utilize facilities located outside the United States to provide support or the Services
+under this Agreement, and if such centers are utilized, they shall be under the control of Provider and subject to all Provider
+policies that govern data access, protection and transport in the United States.
+15.8. Entire Agreement. This Agreement represents the entire Agreement of the Parties and supersedes all previous and
+contemporaneous communications or agreements regarding the subject matter hereto. Agency by its signature below
+hereby certifies that Agency agrees to be bound by the terms and conditions of this Agreement including those terms and
+conditions posted on web pages specifically set forth herein or contained with any software provided under this Agreement,
+as may be updated from time to time. Any additional terms or conditions contained in purchase orders or other forms are
+expressly rejected by Provider and shall not be binding. Acceptance or non-rejection of purchase orders or other forms
+Confidential – Law Enforcement Agreement (Q3.23.V3)
+
+Page 7 of 9
+
+containing such terms; Provider’s continuation of providing Products or Services; or any other inaction by Provider shall not
+constitute Provider’s consent to or acceptance of any additional or different terms from that stated in this Agreement. This
+Agreement may only be modified by a written document signed by both Parties.
+15.9. Governing Law. This Agreement shall be governed by and construed in accordance with the state or federal law(s) applicable
+to such Agency, irrespective of conflicts of law principles.
+IN WITNESS WHEREOF, the Parties have caused this Agreement to be executed by their respective authorized representatives as of
+the Effective Date.
+Agency: Moberly Police Department
+
+Provider: LexisNexis Coplogic Solutions Inc.
+
+Signature: ______________________________
+
+Signature: ______________________________
+
+Print Name: _____________________________
+
+Print Name: ____ William S. Madison________
+_________________________
+Title: ______ Executive Vice President________
+_____________________________
+Date: ___________________________________
+
+Title: ___________________________________
+Date: ___________________________________
+
+Confidential – Law Enforcement Agreement (Q3.23.V3)
+
+Page 8 of 9
+
+EXHIBIT A - SECURITY AND NOTIFICATION REQUIREMENTS
+
+1.
+
+Data Protection. Agency shall take appropriate measures to protect against the misuse and unauthorized access through or to
+Agency’s (i) credentials (“Account IDs”) used to access the Services; or (ii) corresponding passwords, whether by Agency or any
+third party; or (iii) the Services and/or information derived therefrom. Agency shall manage identification, use, and access control
+to all Account IDs in an appropriately secure manner and shall promptly deactivate any Account IDs when no longer needed or
+where access presents a security risk. Agency shall implement its own appropriate program for Account ID management and shall
+use commercially reasonable efforts to follow the policies and procedures for account maintenance as may be communicated to
+Agency by Provider from time to time in writing.
+
+2.
+
+Agency’s Information Security Program. Agency shall implement and document appropriate policies and procedures covering the
+administrative, physical and technical safeguards in place and relevant to the access, use, storage, destruction, and control of
+information which are measured against objective standards and controls (“Agency’s Information Security Program”). Agency’s
+Information Security Program shall: (1) account for known and reasonably anticipated threats and Agency shall monitor for new
+threats on an ongoing basis; and (2) meet or exceed industry best practices. Agency will promptly remediate any deficiencies
+identified in Agency’s Information Security Program. Agency shall not allow the transfer of any personally identifiable information
+received from Provider across any national borders outside the United States without the prior written consent of Provider.
+
+3.
+
+Agency Security Event. In the event Agency learns or has reason to believe that Account IDs, the Services, or any information
+related thereto have been misused, disclosed, or accessed in an unauthorized manner or by an unauthorized person (an “Agency
+Security Event”) Agency shall:
+(a) provide immediate written notice to:
+(i) the Information Security and Compliance Organization at 1000 Alderman Drive, Alpharetta, Georgia 30005; or
+(ii) via email to (security.investigations@lexisnexis.com); or
+(iii) by phone at (1-888-872-5375) with a written notification to follow within twenty-four (24) hours; and
+(b) promptly investigate the situation; and
+(c) obtain written consent from Provider, not to be unreasonably withheld, prior to disclosing Provider or the Services
+to any third party in connection with the Agency Security Event; and
+(d) if required by law, or in Provider’ discretion, Agency shall:
+(i) notify the individuals whose information was disclosed that an Agency Security Event has occurred; and
+(ii) be responsible for all legal and regulatory obligations including any associated costs which may arise in
+connection with the Agency Security Event; and
+(e) remain solely liable for all costs and claims that may arise from the Agency Security Event, including, but not limited
+to: litigation (including attorney’s fees); reimbursement sought by individuals (including costs for credit monitoring
+and other losses alleged to be in connection with such Agency Security Event); and
+(f) provide all proposed third party notification materials to Provider for review and approval prior to distribution.
+In the event of an Agency Security Event, Provider may, in its sole discretion, take immediate action, including suspension or
+termination of Agency’s account, without further obligation or liability of any kind.
+
+Confidential – Law Enforcement Agreement (Q3.23.V3)
+
+Page 9 of 9

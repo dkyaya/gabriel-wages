@@ -1,0 +1,19 @@
+{
+  "allowed_next_stage": "separately_authorized_evidence_span_extraction_review",
+  "by_lane": {
+    "lane_1": 88,
+    "lane_2": 106,
+    "lane_3": 23,
+    "lane_4": 104
+  },
+  "by_mechanism": {
+    "fiscal_constraint_signal": 23,
+    "market_or_comparability_pressure": 104,
+    "non_safety_constraint_signal": 88,
+    "strike_or_no_strike_constraint": 106
+  },
+  "candidate_count": 321,
+  "causal_ready": false,
+  "global_analysis_readiness": false,
+  "rating_ready": false
+}

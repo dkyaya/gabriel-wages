@@ -1,0 +1,5 @@
+target_mechanism_family,extraction_queue_count,extracted_ok_count,empty_or_too_short_count,low_text_density_count,suspected_bad_text_layer_count,html_noisy_or_shell_count,extraction_error_count
+fiscal_constraint_signal,23,23,0,0,0,0,0
+market_or_comparability_pressure,104,104,0,0,0,0,0
+non_safety_constraint_signal,88,88,0,0,0,0,0
+strike_or_no_strike_constraint,106,106,0,0,0,0,0

@@ -1,0 +1,7 @@
+{
+  "city_cycle_unit_groups": 314,
+  "coverage_boundary": "Extraction outputs do not update durable city coverage.",
+  "distinct_city_state_pairs": 246,
+  "groups_with_extracted_ok_text": 314,
+  "groups_without_extracted_ok_text": 0
+}

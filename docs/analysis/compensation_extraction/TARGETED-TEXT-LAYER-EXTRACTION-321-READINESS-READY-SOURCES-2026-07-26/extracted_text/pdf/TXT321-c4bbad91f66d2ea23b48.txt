@@ -1,0 +1,1845 @@
+NOLENSVILLE, TENNESSEE
+Fire Services Study
+
+September 2012
+Dennis Wolf, Fire Management Consultant
+The University of Tennessee, Institute for Public Service
+Municipal Technical Advisory Service
+
+Table of Contents
+Table of Contents .......................................................................................................... 1
+List of Tables ................................................................................................................. 2
+List of Figures ................................................................................................................ 2
+Introduction and Scope of Work ..................................................................................... 3
+Background – How We Got To Where We Are .............................................................. 3
+The Importance of the ISO Rating .................................................................................. 5
+Is Town Entitled To See Any Fire Department Records? ............................................... 7
+How Many Fire Stations Does Nolensville Need? .......................................................... 8
+How Many Ladder or Service Companies Does Nolensville Need? ............................. 11
+Minimum Firefighter Response for a Low-Risk Structure Fire ...................................... 11
+Fire Department Staffing for a Town Operated Fire Department .................................. 12
+Assembling an Effective Firefighting Force .................................................................. 13
+Providing Needed Pump Capacity ............................................................................... 13
+Anticipated Costs for Starting a Fire Department ......................................................... 14
+Options Available to the Town of Nolensville ............................................................... 15
+Option 1 – Provide Full Fire Service ......................................................................... 16
+Option 2 – Provide Initial Response Fire Service ...................................................... 16
+Option 3 – Contract for Fire Service ......................................................................... 16
+Transitioning to a Paid Fire Department ....................................................................... 17
+Community Growth ................................................................................................... 19
+Community Expectations .......................................................................................... 19
+Missed Calls ............................................................................................................. 19
+Extended Response Times ...................................................................................... 20
+Reduced Firefighter Response ................................................................................. 20
+Desire for Non-Emergency Services......................................................................... 20
+Value of Services Received ...................................................................................... 20
+Recommendations ....................................................................................................... 21
+Appendix A – Estimated Travel Times and Total Response Time in Minutes ............... 22
+Appendix B – Letter from MTAS Attorney Sid Hemsley on Open Records Law............ 23
+Appendix C – Budget Category Explanations............................................................... 32
+References .................................................................................................................. 35
+
+The University of Tennessee Municipal Technical Advisory Service
+
+1
+
+Table of Contents - continued
+List of Tables
+Table 1 – NFPA Recommended Minimum Response for House Fire ........................... 12
+Table 2 – Town of Nolensville Estimated Fire Department Budget ............................... 14
+Table 3 – Calls for Service in Nolensville ..................................................................... 19
+
+List of Figures
+Figure 1 – Public Protection Classification (ISO Rating) in the US ................................. 6
+Figure 2 – Public Protection Classification (ISO Rating) in Tennessee .......................... 6
+Figure 3 – Town Limits and 1½ Mile Service Area for NVFD Fire Hall ........................... 8
+Figure 4 – Time versus Products of Combustion.......................................................... 11
+Figure 5 – Urban Growth Boundary and 1½ Mile Service Area for NVFD Fire Hall ...... 18
+
+The University of Tennessee Municipal Technical Advisory Service
+
+2
+
+Introduction and Scope of Work
+Nolensville needs fire protection, and there are several ways to provide this fire
+protection: establish a municipal fire department that is either fully paid, a combination
+paid/volunteer department, or a fully volunteer department; contract for fire service; or
+do both. No matter which option the town chooses, firefighting costs money. ISO
+states that, “A community’s investment in fire mitigation is a proven and reliable
+predictor of future fire losses.” Nolensville has already made a significant investment in
+community fire mitigation through the adoption of the sprinkler ordinance. The sprinkler
+ordinance helps limit fire risk, which means the community may continue to contract for
+fire service from the Nolensville Volunteer Fire Department for a longer period until the
+town desires to increase the level of fire suppression response. Increasing the level of
+fire suppression response service would include starting a municipal fire department.
+This report can identify some trigger points for increasing the level of fire service, but
+there is no formula that says, “Now is the time.” The decision is unique to every
+community and includes factors such as desired response times, growth, increased life
+risk (schools, daycares, hotels, assisted care facilities, etc.), increased commercial risk,
+and the desire to maintain or improve the ISO rating.
+The town’s other investment in fire mitigation is the annual payment to the Nolensville
+Volunteer Fire Department (NVFD). The NVFD uses these funds to operate the fire
+department and provide for capital improvements. This payment has increased
+significantly over the years, and there is a question as to whether the town is paying too
+much for fire protection, and whether the town needs to start a municipal fire
+department.
+The Town of Nolensville asked MTAS to look at this issue and make a report to the Fire
+Committee. The study’s purpose is to answer two questions:
+1. What options are available to the Town of Nolensville regarding the provision of
+fire protection, emergency medical response, and related emergency services for
+the town?
+2. Can MTAS provide a recommendation for a fire protection plan for the Town of
+Nolensville at build-out?
+A written request from the town authorized MTAS to conduct an official study.
+Background – How We Got To Where We Are
+The Town of Nolensville was originally incorporated in 1838, but the town did not have a
+fire department. In January 1953, fire destroyed five buildings and damaged three
+others before three fire departments brought the fires under control. In December 1968,
+a major fire destroyed three buildings and required firefighters and equipment from
+Franklin, Nashville, Smyrna, Lavergne, College Grove, and Brentwood to extinguish the
+fire. Both major fires were fought with water from Mill Creek, as the town did not have
+fire hydrants. The Jaycees, realizing that something needed to be done to protect the
+
+The University of Tennessee Municipal Technical Advisory Service
+
+3
+
+community from another conflagration, founded The Nolensville Volunteer Fire
+Department in 1973 with twenty members. The first engine was a 1969 Ford F-700
+chassis with a John Beam Hi-Pressure Fog Unit. The engine was housed in a private
+garage until fire department members built the first fire hall in 1974. The department
+added a 1948 Buffalo fire engine and a 1953 American LaFrance fire engine to the
+roster. The department purchased land at 7347 Nolensville Road to construct a fire
+hall, and the county offered to build the hall but could not build on private land, so the
+department donated the land to the county. In 1991, the county built a shell building to
+house the fire apparatus, essentially a large garage. The members of the fire
+department built walls, offices, storerooms, bathrooms, sleeping quarters, and a training
+classroom and transformed the garage into a true fire hall. The department has grown
+to thirty-two active members and added apparatus. In addition to fire protection, the
+department provides emergency medical (EMS) first responder service, rescue service,
+and hazardous materials (Hazmat) response. It is an understatement to say that the
+firefighters have a lot of sweat equity in the fire department.
+The area of Nolensville was settled in 1797 and the Town of Nolensville was originally
+charted in 1838, but there was not much growth and development. As the area grew,
+the community realized the need for a more modern government and the Town of
+Nolensville was re-chartered in 1996. It was natural that the fire service the NVFD was
+providing before the town re-chartered would continue, as the town did not have the
+financial resources to start a separate fire department.
+The Nolensville Volunteer Fire Department is an established and respected fire
+department, is recognized by the state under TCA § 68-102-108, and is the only
+volunteer fire department in Williamson County to achieve an ISO rating of 5/9. In
+addition to serving Nolensville, the department serves a large portion of Williamson
+County. The fire department provides firefighting, emergency medical response (EMS)
+at the basic life support (BLS) level, hazardous materials response (Hazmat), and
+rescue services. According to Kevin Lauer of CTAS, of the 732 fire departments in the
+State of Tennessee, the majority of fire departments are not-for-profit volunteer
+departments similar to NVFD.
+Nolensville incorporated under a Mayor-Aldermanic charter that is silent on the details
+of fire protection, simply requiring that the town have a “plan of services” that includes
+“fire protection,” which provides the town with flexibility in how it provides fire protection.
+However, case law establishes the power of a town to have a fire department or to
+provide fire services to its residents is one of the police powers inherent in a
+municipality without specific mention in its charter. Section 7-209 of Nolensville’s Code
+of Ordinances identifies the fire chief as the chief of the Nolensville Volunteer Fire
+Department. Through a written agreement with the NVFD, it is obvious that the town’s
+current plan of services recognizes the NVFD as the agency providing fire protection in
+the town and the NVFD fire chief as the person responsible for enforcing fire codes and
+ordinances. In most cities, this makes the fire department, even a volunteer fire
+department funded by the town, a department or division of the town, and the members
+of the fire department are considered town employees. MTAS recommends that a fire
+
+The University of Tennessee Municipal Technical Advisory Service
+
+4
+
+department answer to the elected representatives or the city manager or city
+administrator, depending upon the local charter and ordinances, and that the fire
+department submit an annual budget request. The NVFD, however, is an independent
+501(c)(3) organization receiving funding from Nolensville residents through their
+Williamson County property taxes, Town of Nolensville property taxes, the town’s
+adequate facilities tax on new construction, and private donations.
+The fact that the NVFD is not a department of the town has caused occasional strained
+relations between the leaders of the fire department and the town. Part of this may be
+the natural assumption that all fire departments are units of government and therefore
+subject to the level of transparency expected of government. The NVFD’s request for
+funds has escalated over the past years at a rate that has alarmed town officials. The
+natural questions the town asks are such questions as, “are we getting a good deal on
+fire protection?” and “what is the money being used for?” To this end, town officials
+have requested to see the fire department’s records and budgets and the fire
+department has been reluctant to provide that information, which contributes to the
+strained relations. Even though the relations are, at times, strained, no one has ever
+faulted the quality of the service or the dedication of the members of the fire
+department. Even as a 501(c)(3), however, the fire department may have to provide
+more information to the town, and this is discussed later in this report.
+The Importance of the ISO Rating
+This information is intended to assist the Fire Committee and the town in their
+understanding of the complexities of providing fire protection, to assist in the
+prioritization of community needs, and to assist in the decision-making process.
+The Insurance Services Office, Inc., also known as ISO, is a for-profit corporation that
+works for insurance companies to evaluate the capability of a community to suppress
+fires. ISO rates a community on a scale of 1 through 10. An ISO rating of 1 is the best
+(only 0.13% of the fire departments in the county have a Class 1 rating). An ISO rating
+of 10 is equivalent to not having any fire protection. Nolensville has been rated a Class
+5. ISO rates a community based upon three major categories: communication (10% of
+the rating), fire department (50% of the rating), and water supply (40% of the rating).
+The Class 5 rating is very good (see Figures 1 and 2), as just seventeen percent of all
+fire departments in Tennessee have a Class 5 ISO rating, and just 128 fire departments
+out of over 732 have a better ISO rating. The Class 5 rating means the NVFD is doing
+the right things to provide good service, and because of this Nolensville residents pay
+competitive rates for property insurance. The Class 9 rating applies to areas within five
+road miles of the fire station but more than 1,000 feet from a fire hydrant. Areas further
+than five road miles from a fire station receive a Class 10 rating. All portions of the
+Town of Nolensville are within the Class 5 rating area.
+
+The University of Tennessee Municipal Technical Advisory Service
+
+5
+
+Public Protection Classification in US
+13,409
+
+14,000
+
+Number of Communities
+
+12,000
+10,000
+
+8,089
+
+8,000
+
+8,890
+5,986
+
+6,000
+
+4,613
+
+4,000
+
+3,038
+
+2,015
+
+2,000
+62
+
+0
+
+1,637
+
+585
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+Public Protection Classification
+
+Figure 1 – Public Protection Classification (ISO Rating) in the US
+
+Public Protection Classification in TN
+350
+
+Number of Communities
+
+300
+
+319
+
+250
+200
+178
+
+150
+
+199
+141
+
+100
+85
+
+50
+0
+
+0
+
+5
+
+38
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+49
+
+1
+
+8
+
+8B
+
+6
+9
+
+10
+
+Public Protection Classification
+
+Figure 2 – Public Protection Classification (ISO Rating) in Tennessee
+
+The University of Tennessee Municipal Technical Advisory Service
+
+6
+
+Is Town Entitled To See Any Fire Department Records?
+Under the agreement, the NVFD must provide the town with a monthly report of the
+number and types of service calls made within the boundaries of the Town of
+Nolensville. The NVFD must provide the town a copy of its annual financial audit within
+30 days after the receipt of audit by the Department. The NVFD should provide these
+reports regularly and without being asked.
+As a recognized fire department in Tennessee, the NVFD is required by TCA § 68-102108 to report to TFIRS. With the exception of any information that could violate the
+Health Insurance Portability and Accountability Act (HIPAA), and information that could
+jeopardize an active fire investigation, TFIRS records are public records, so the NVFD
+should provide copies of fire reports or other information found on TFIRS reports, if so
+requested.
+As mentioned above, even though the NVFD is a non-for-profit 501(c)(3), the town is
+entitled to see the NVFD records. In a letter dated April 18, 2011 (see Appendix B), Sid
+Hemsley, an MTAS attorney, opined from a Tennessee Supreme Court case (Memphis
+Publishing Company v. Cherokee Children & Family Services, 87 S.W3d 67 (Tenn.
+2002)) that the NVFD meets the definition of a governmental entity as a “functional
+equivalent of a governmental agency” and that its records are subject to the open
+records law. The following paragraph is quoted from Mr. Hemsley’s letter.
+The records of the Nolensville Volunteer Fire Department, notwithstanding
+the fact that in theory it is a non-governmental, nonprofit organization that
+purports to be an "independent contractor" with respect to the City of
+Nolensville, are public records subject to inspection by any citizen of
+Tennessee. That result derives from a recent Tennessee Supreme Court
+case that adopted the "functional equivalent to a governmental agency"
+doctrine. Under that doctrine, the fire department is the "functional
+equivalent to a government agency"-a government fire department. The
+fire department's financial records are also open to the city under
+Tennessee Code Annotated,§ 6-54-111, and under the contract between
+the city and the fire department in which the fire department agrees to
+provide fire services to the city.
+MTAS recommends that the NVFD provide the information the Town of Nolensville
+requests. MTAS acknowledges, and the town should understand, that most volunteer
+fire departments have a keen sense of autonomy and ownership born from the intense
+personal involvement in organizing, building, and maintaining a department that serves
+the community, and may desire to maintain as much control over their department as
+possible. Likewise, the Town of Nolensville desires to provide excellent services for its
+residents in accordance with the good business and accounting practices expected of
+local government. These two interests are compatible once each side understands
+what the other side’s interests are. From our meetings with town and fire department
+personnel individually, and the fire committee jointly, it is obvious that both parties need
+
+The University of Tennessee Municipal Technical Advisory Service
+
+7
+
+to strengthen their relationship through mutual education and understanding of the
+others business practices and build trust based on this understanding.
+How Many Fire Stations Does Nolensville Need?
+The answer to this question is based upon the size of the Town of Nolensville and not
+on the size of the service area of the NVFD. The map in Figure 3 shows the current
+town limits and the location of the NVFD fire hall. The blue line represents the town
+limits, and the red line illustrates the ISO defined 1½-mile service area.
+
+Figure 3 – Town Limits and 1½ Mile Service Area for NVFD Fire Hall
+
+The University of Tennessee Municipal Technical Advisory Service
+
+8
+
+To answer the question of how many fire stations Nolensville needs now, one can look
+at several sources for guidance. The first is the Insurance Services Office (ISO) Fire
+Suppression Rating Schedule. Section 560 of the schedule covers distribution of
+companies and states: “The built-upon area of the city should have a first-due engine
+company within 1½-miles and a ladder-service company within 2½-miles.”
+Using an “as the crow flies” radius of 1½-miles to draw a circle does not adequately
+represent the geographical area that a single fire station can cover. Studies have
+shown that a polygon better represents the ISO required response area, and that the
+average size of the polygon is 4.5 square miles. Two caveats: the polygon model
+assumes the even distribution of resources throughout the area, which is generally not
+the case, and the formula does not allow for geographical barriers, such as rivers and
+railroads, but the formula is useful as a reference. Based upon the 9.5 square miles
+within the town limits, a travel distance of 1½-miles, and assuming all engine companies
+are evenly distributed (which they are not) Nolensville needs 2.11 fire stations right now
+for adequate coverage.
+One can use the polygon model to determine the number of needed ladder trucks or
+service companies based upon ISO’s maximum travel distance of 2½-miles for a ladder
+or service company. The average size of a polygon for a ladder or service company is
+12.3 square miles. Based upon a 9.5 square mile service area, a travel distance of 2½miles, and assuming all ladder or service companies are evenly distributed (which they
+are not) Nolensville needs one ladder or service company right now.
+The ISO standard for distribution is 1½-miles for an engine and 2½-miles for a truck
+company, but ISO will extend a community’s fire protection rating as far as five miles
+from a fire station provided there is adequate water available for fire protection. Based
+on the five-mile distance, Nolensville would need one fire station. There is a caveat for
+basing fire protection on this five-mile distance, and that is the risks associated with
+extended response times. Travel time, measured as the time from when the fire
+department resource starts to roll until it arrives on the scene, is just one component of
+response time (see Appendix A). At 1½-miles, the travel time for a fire engine is
+approximately 3:12 (time expressed as minutes: seconds). At five miles, the travel time
+is approximately 9:09. The response time, which includes ring time, call answering, call
+processing, turnout, and travel time, is much longer. Thus, a total response time of six
+or seven minutes for stations based on 1½-mile distribution increases to twelve or
+thirteen minutes (or longer if call processing and turnout times exceed NFPA
+recommendations) based on five-mile distribution. As stated earlier in this report, the
+level of fire protection provided in a community is a local decision, but MTAS does not
+recommend basing community fire protection on this maximum five-mile distance.
+The second resource is the National Fire Protection Association (NFPA). NFPA
+addresses the number of fire stations needed in an indirect way based on minimum
+response times. NFPA Standard 1710 Section 5.2.4.1.1 allows a 240 second (4
+minute) travel time for the first arriving engine company. Using an empirical model
+called the piece-wise linear travel time function, based upon studies done by the Rand
+
+The University of Tennessee Municipal Technical Advisory Service
+
+9
+
+Institute estimating the average response speed of fire apparatus at 35 mph, one can
+determine that the distance a fire engine can travel in 4 minutes is approximately 1.97
+miles. A polygon based on a 1.97 mile travel distance covers on average 7.3 square
+miles. Based upon a 9.5 square mile service area, a travel-time-calculated travel
+distance of 1.97 miles, and assuming all engine companies are evenly distributed
+(which they are not) Nolensville needs 1.3 fire stations right now. However, the town is
+not evenly distributed, and strip annexation has extended the corporate limits far
+beyond what the existing NVFD station can cover adequately.
+The previous two examples are based upon time and distance to be covered. A third
+resource is the ISO Fire Suppression Rating Schedule’s determination of needed
+engine companies based upon the community’s basic (needed) fire flow. Section 510 of
+the schedule requires one engine company for a basic fire flow of 500 to 1,000 gpm,
+two engine companies for a basic fire flow of 1,250 to 2,500 gpm, and three engine
+companies for a basic fire flow of 3,000 to 3,500 gpm. Basic fire flow is calculated by
+determining the needed fire flow for all non-sprinklered properties in the community, and
+then the fifth highest is considered the basic fire flow for the community. For
+Nolensville, that is 2,500 gallons-per-minute. A strong commercial and residential
+sprinkler ordinance can limit significantly community risk, as ISO does not consider
+properties protected by automatic sprinkler systems when determining the basic fire
+flow, and sprinklered properties reduce the fire risk in the community. Nolensville has
+adopted model codes that require fire sprinklers in residences, which is visionary and
+commendable, and Nolensville should consider adopting a more restrictive sprinkler
+ordinance for commercial properties to reduce fire risk to the community. For example,
+an ordinance requiring a sprinkler system for all commercial properties that exceed
+5,000 square feet would reduce community risk and limit fire growth.
+Finally, city leaders must consider the phenomenon known as flashover. As a fire
+grows in size, it gives off temperatures that heat other objects in the vicinity of the fire.
+At some point in the time-temperature curve, all of the objects in the fire room reach
+their ignition temperature and ignite. The entire room bursts into flames, and the
+temperature rises to a point where no person can survive, including firefighters. This is
+called flashover. The NFPA Fire Protection Handbook states: “During flashover,
+however, the temperature rises very sharply to such a level that survival of persons still
+in the room at that stage becomes unlikely. Thus the time interval between the start of
+the fire and the occurrence of flashover is a major factor in the time that is available for
+safe evacuation of the fire area.” The development of fire conditions to reach the point
+of flashover is a function of temperature rise over time. Therefore, a sufficient number
+of fire stations strategically located to provide quick response times can reduce the
+incidence of flashover, thus saving lives and property. As shown in the graph in Figure
+4, flashover can occur within 9 to 11 minutes of the start of a fire. Locating fire stations
+to provide a total response time of six to seven minutes is advantageous, as firefighters
+need time after arrival to setup, lay fire hose, and gain access to the seat of the fire
+before they can actually begin to search for trapped occupants or extinguish the fire.
+This is where the five-mile distribution of fire stations proves to be inadequate.
+
+The University of Tennessee Municipal Technical Advisory Service
+
+10
+
+Figure 4 – Time versus Products of Combustion
+How Many Ladder or Service Companies Does Nolensville Need?
+A community needs a ladder company when it has at least five buildings that are three
+stories or more than thirty-five feet in height, or five or more buildings with a needed fire
+flow greater than 3,500 gpm, or a combination of five buildings meeting these criteria.
+Nolensville does not have enough buildings to require a ladder truck under ISO
+requirements. ISO states that if a ladder company is not needed, a service company is
+then required. A service company carries the same tools and equipment as a ladder
+company, but does not have the aerial ladder. As mentioned previously, based on
+ISO’s requirements for distribution, according to the polygon model, Nolensville needs
+one service company. The NVFD maintains an apparatus that provides service as a
+service company.
+Minimum Firefighter Response for a Low-Risk Structure Fire
+Firefighting is a dangerous and labor-intensive operation, and the discussion on the
+number of firefighters needed to fight a fire continues, but there are guidelines one can
+use to make an informed decision on the number of firefighters needed to fight a
+structure fire. Back in 1966, NFPA Standard 197, A Training Standard on Initial Fire
+Attack, stated, “The desirable number of men normally required to respond with the
+
+The University of Tennessee Municipal Technical Advisory Service
+
+11
+
+apparatus to give this level of performance with properly manned hose streams and
+equipment would be approximately fifteen plus the chief.” NFPA Standard 1410
+replaced NFPA Standard 197 in 1979, but the idea of a minimum of fifteen firefighters
+plus an incident commander as a valid minimum number of personnel for the initial
+alarm has withstood the test of time. Since then, various agencies have conducted
+many studies over the years regarding the number of firefighters needed to extinguish a
+fire, and there is consensus among NFPA, ISO, and the International City Management
+Association (ICMA) that a low-risk structure fire requires between fourteen to nineteen
+firefighters for effective operations. A single-family dwelling is an example of a low-risk
+structure fire. For example, ISO gives full staffing credit for a response of nineteen
+personnel. NFPA recommends a minimum of fourteen as shown in Table 1.
+Initial full-alarm structure fire assignment per NFPA 1710, § 5.2.4.2.2
+Minimum
+Sub-section Function
+Number
+(1)
+Incident command
+1
+(2)
+Water supply/pump operator
+1
+(3)
+Two hand lines with 2 firefighters each
+4
+(4)
+Hand line support, 1 for each hand line
+2
+(5)
+Search and rescue
+2
+(6)
+Ventilation
+2
+(7)
+Aerial device operator (only if aerial used)
+1
+(8)
+Rapid Intervention Team (RIT)
+2
+Total
+14 or 15*
+* If an aerial device is used
+Table 1 – NFPA Recommended Minimum Response for House Fire
+The response level described above is for a residential structure fire of a house of about
+2,000 square feet with no basement or exposures. NFPA 1710 Section 5.2.4.2.3 says
+that higher risk occupancies (schools, hospitals, apartments, commercial properties,
+etc.) require more resources, which means more apparatus and personnel. Local
+leaders must decide on a level of fire protection for their community, balancing the cost
+of providing the service against the lives and property at risk. To make this decision, it
+is important for the leaders to understand minimum response recommendations. This
+report acknowledges that Nolensville does not have the financial resources to hire
+enough paid personnel to provide that level of response to a structure fire. The use of
+automatic aid and mutual aid can provide a sufficient number of trained firefighters but
+this method takes more time to assemble an effective firefighting team of fourteen to
+fifteen personnel.
+Fire Department Staffing for a Town Operated Fire Department
+If Nolensville wants to start a paid fire department, providing minimum adequate staffing
+is critical for firefighter safety and to provide interior fire attack capability. OSHA
+1910.134(g)(4), commonly called the “2-in/2-out rule,” requires that a minimum of two
+
+The University of Tennessee Municipal Technical Advisory Service
+
+12
+
+properly trained and equipped firefighters be outside of the IDLH (Immediately
+Dangerous to Life and Health) atmosphere, which is what the smoke filled interior of a
+structure fire is, before two firefighters can make entry into an IDLH atmosphere. This is
+a minimum requirement, as effective and safe (as possible) firefighting requires
+considerably more than four firefighters. To enable interior firefighting operations to
+begin as quickly as possible, Nolensville should have a minimum of four firefighters onduty (paid) 24/7. A second option would be to have two firefighters on-duty (paid) 24/7
+with volunteer response that was timely. A third option would be to have an allvolunteer fire department. No interior firefighting operations can take place until a
+minimum of four firefighters are on the fire scene. The paid-staffing fire department
+option provides an improved service level in response time over the current service
+level. The drawbacks of the combination paid/volunteer and all-volunteer options are
+the uncertainty of the level of volunteer response during daytime hours, and the fact that
+the Town of Nolensville would be competing with the NVFD for volunteer firefighters
+from the same pool of potential volunteers. Therefore, MTAS recommends that
+Nolensville consider the paid option with four firefighters on-duty 24/7.
+Assembling an Effective Firefighting Force
+As mentioned above, Nolensville does not have the financial resources to provide for
+enough paid firefighters to meet the minimum response level of fourteen firefighters
+recommended by NFPA. NFPA 1710 § 5.2.1.2 allows for automatic aid and mutual aid
+to bring additional firefighters from other departments to the scene to provide sufficient
+staffing to fight the fire. Therefore, the most cost effective way for Nolensville to
+establish a municipal fire department is to hire enough personnel to provide a minimum
+on-duty strength of four firefighters 24/7 and enter into an automatic aid agreement with
+the NVFD. By providing a minimum of four on-duty personnel, the town avoids placing
+firefighters in a situation where they may be forced to make entry into an IDLH
+atmosphere with an insufficient number of personnel on the scene to comply with OSHA
+requirements. By using automatic aid, the town will assemble an effective firefighting
+force to improve fire protection.
+Providing Needed Pump Capacity
+Automatic aid is essential for providing the needed pump capacity on the scene. As
+mentioned above, Nolensville’s basic fire flow is 2,500 gpm. For full ISO credit, the
+town needs to have enough fire engines on the scene to provide a total pump capacity
+of at least 2,500 gpm. A single fire engine is not capable of providing sufficient pump
+capacity, so the town needs automatic aid to provide the minimum pump capacity
+needed.
+
+The University of Tennessee Municipal Technical Advisory Service
+
+13
+
+Anticipated Costs for Starting a Fire Department
+The town owns no fire department assets, which means the town must fund the startup
+and operating costs. To minimize the fiscal impact, the town could opt to build and
+equip the fire department in one fiscal year and open and staff the fire department in the
+following fiscal year. These costs are significant, as shown in Table 2.
+Category
+1st Year 2nd Year 3rd Year 4th Year 5th Year
+Exempt Salaries
+0
+0
+0
+0
+0
+Non-Exempt Wages
+429,000
+439,725
+450,718 461,986
+473,536
+Overtime Wages
+17,160
+17,589
+18,029
+18,479
+18,941
+Holiday Pay
+19,305
+19,788
+20,282
+20,789
+21,309
+Benefits
+175,890
+180,287
+184,794 189,414
+194,150
+Training/Education
+12,000
+6,000
+6,000
+6,000
+6,000
+Dues and Subscriptions
+300
+300
+300
+300
+300
+Meetings and Travel
+3,000
+3,000
+3,000
+3,000
+3,000
+Electricity and Gas
+14,000
+14,280
+14,566
+14,857
+15,154
+Water and Sewer
+700
+714
+728
+743
+758
+Telephone Expense
+1,400
+1,400
+1,400
+1,400
+1,400
+Prof. Svcs. - Physicals
+2,400
+0
+2,400
+0
+2,400
+Prof. Svcs. - NVFD
+Equipment Maintenance
+500
+500
+500
+500
+500
+Building Maintenance
+3,000
+3,000
+3,000
+3,000
+3,000
+Radio Maintenance
+500
+500
+500
+500
+500
+Office Supplies
+800
+800
+800
+800
+800
+Medical Supplies
+2,500
+2,500
+2,500
+2,500
+2,500
+Chemical Supplies
+1,500
+750
+750
+750
+750
+Uniforms and Clothing
+9,600
+6,000
+6,000
+6,000
+6,000
+Turnouts/PPE
+30,000
+1,000
+1,000
+3,500
+3,500
+Petroleum Products
+4,800
+4,896
+4,994
+5,094
+5,196
+Small Tools
+800
+800
+800
+800
+800
+Vehicle Maintenance
+8,000
+8,160
+8,323
+8,490
+8,659
+Insurance
+30,000
+30,000
+30,000
+30,000
+30,000
+Other Expenses
+500
+500
+500
+500
+500
+Fire Station - Land
+350,000
+0
+0
+0
+0
+Fire Station - Design & Con
+1,320,000
+0
+0
+0
+0
+Fire Station - FF&E
+125,000
+0
+0
+0
+0
+Firefighting Equipment
+100,000
+0
+0
+0
+0
+Vehicles
+400,000
+0
+0
+0
+0
+TOTAL
+2,942,655
+742,489
+761,885 779,402
+799,653
+Table 2 – Town of Nolensville Estimated Fire Department Budget
+
+The University of Tennessee Municipal Technical Advisory Service
+
+14
+
+The estimated budget was built using average salaries competitive with the local
+market, and by examining the operating budgets of other fire departments. Appendix C
+contains the narrative explanations of the items funded by each line item. The first year
+estimate includes the entire cost of the fire station, fire engine, and required equipment
+for the engine. These costs could be less depending upon whether the town already
+owns suitable land, and the construction materials used for the fire station, but the
+budget is a good estimate to work with. The town can spread the capital costs over
+several years by using bonds, loans, or other long-term funding options.
+The estimated costs for land and the fire engine (acknowledging that fire apparatus
+must be replaced at some point, so the town should provide an apparatus replacement
+fund, which is not included in the operating budget) total $2,175,000 of the estimated
+$2,942,655 first-year expense. This leaves an estimated operating amount of $767,655
+for the first year. The estimated average annual operating cost over the five-year
+projection period is $770,217, which is an estimated per capita cost of $131.41. This
+does not include the cost of professional services with the NVFD. Fire departments
+must comply with state and federal laws, for example fit testing for wearing respirators
+and air quality testing for the breathing air compressor. In addition, the fire department
+needs a way to refill air cylinders, and a breathing air compressor is over $30,000. The
+NVFD is an established fire department with the resources to provide these services.
+MTAS believes that it would be less expensive for the town to contract for these
+services with the NVFD. Since it is not possible to know what the NVFD might charge
+for these services, the line item is blank as an unknown cost. If the town elected to
+provide these services, then the budget estimate could be revised to include the cost of
+a breathing air compressor and fit testing device.
+One of the questions asked was whether the town is paying too much for fire protection.
+MTAS does not have cost comparison data for volunteer fire departments, so it is not
+possible to make an “apples-to-apples” cost comparison. MTAS does have data from
+the Tennessee Municipal Benchmarking Project (TMBP). This project surveys ten cities
+for many performance measures, including the cost for fire service per capita. The
+cities surveyed are larger than Nolensville and have paid fire departments, but the data
+is useful for comparing the per capita cost of a paid fire department. The smallest city in
+the TMBP, Athens, has a population of 13,458 and a per capita cost of $119.50, so the
+estimated per capita cost for a town operated fire department of $131.41 is higher. For
+FY13, the town’s payment to the NVFD is $113,850, or $19.43 per capita, which is less
+than the cost of providing a municipal fire department.
+Options Available to the Town of Nolensville
+One of the questions asked was what options are available to the Town of Nolensville
+regarding the provision of fire protection, emergency medical response, and related
+emergency services for the town, and there are several options available.
+
+The University of Tennessee Municipal Technical Advisory Service
+
+15
+
+Option 1 – Provide Full Fire Service
+Create a fully self-sufficient fire department funded and staffed by the Town of
+Nolensville. The viability of a combination paid/volunteer department, or fully volunteer
+department, is doubtful, so a paid department is the best option. This option gives the
+town the greatest control over the delivery of fire services. The town would need two
+fire stations, two engines, a service company, a rescue unit, and forty-two personnel,
+which is enough personnel to place fourteen firefighters on the scene of a structure fire.
+Capital, startup, and first year operating costs are estimated at $6,991,410. The annual
+operating cost estimate is $2,641,410, or $450.68 per capita. The town cannot afford to
+fund a fully self-sufficient fire department, and MTAS does not recommend this option.
+Option 2 – Provide Initial Response Fire Service
+Create a fire department funded and staffed by the Town of Nolensville with one town
+owned fire station and sufficient personnel to maintain a minimum daily staffing level of
+four firefighters. This option gives the town more control over the delivery of fire
+services and recognizes that the town will use automatic aid and mutual aid to place an
+effective firefighting force and the required pump capacity on the scene of a structure
+fire. This option allows the town to transition from receiving all fire services from the
+NVFD to assuming responsibility for the initial response while maintaining a partnership
+with the NVFD. As the town grows, the town expands the fire department as needed
+with the long-term goal of assuming responsibility for all fire services. Capital, startup,
+and first year operating costs are estimated at $2,942,655. The annual operating costs
+estimate is $770,217, or $131.41 per capita.
+Option 3 – Contract for Fire Service
+Continue to contract with the NVFD for fire services. In meeting with representatives
+from the town and the NVFD, everyone has acknowledged that the service provided by
+the NVFD is very good. The town enjoys fire insurance premiums based on the NVFD’s
+Class 5 ISO rating, which is in the top third of all fire departments in Tennessee. The
+per capita cost (currently $19.43) is significantly less than what the town would pay for
+fire services under options 1 and 2.
+MTAS recommends option 3, contract service, with the following recommendations.
+1. The town should form a standing fire committee to review the monthly response
+and service summary reports, maintain a good working relationship between the
+town and the NVFD, and educate town leaders on the cost and science of
+providing fire protection.
+2. The NVFD should provide to the town the information the town believes is
+necessary to understand the cost of providing fire services. Town leaders spend
+taxpayer funds responsibly, and they desire to be fully informed when making
+decisions. Information provided by the NVFD will illustrate the cost and
+complexity of providing good fire protection.
+
+The University of Tennessee Municipal Technical Advisory Service
+
+16
+
+3. The NVFD should prepare an annual contract service proposal and submit the
+proposal to the fire committee before the end of February of each year for review,
+to give the town adequate time to include the cost of fire services in the town’s
+budget development process. The fire committee should review the proposal,
+discuss and resolve any issues with the NVFD, and then make a
+recommendation to the town on whether to accept or reject the proposal.
+4. Revise the contract to eliminate any provisions where the town purchases fire
+apparatus or pays for improvements for the NVFD. The town should contract for
+fires services through a request for proposal process, identifying the service
+levels desired, the same as the town would do for other contract services.
+5. The town should develop a strategic plan for fire services with the intent of
+establishing a municipal fire department at some future date. The plan should
+identify potential locations for fire stations, estimated costs, and a funding
+method. The plan should outline the level of service desired and how that
+service will be provided.
+Transitioning to a Paid Fire Department
+The second question asked MTAS to provide a recommendation for a fire protection
+plan for the Town of Nolensville at build-out. The answer is that the town needs to
+develop a strategic plan for fire services. It is highly probable that at some point in the
+future the town will establish a municipal fire department. Exactly when that needs to
+occur is unknown and difficult to predict. The easiest answer is to say transition when
+the community’s expectations are not being met, and the strategic plan defines those
+expectations. There are some trigger points the town can use to help make this
+decision based upon the community’s fire protection goals identified in a strategic plan.
+The plan should state the desired service level for the community. This service level
+can be identified in several ways, such as a desired ISO rating, desired response time,
+or desired number of firefighters on the scene of a structure fire. The plan should
+identify the services the town will provide. While fire response is assumed, does the
+town want to provide emergency medical response, and if so, at what level: first
+responder, basic EMT, or advanced life support? Does the town wish to provide vehicle
+extrication, hazardous materials response, and/or technical rescue services such as
+confined space, high angle, or trench rescue? The plan should identify potential
+locations for fire stations along with estimated costs for land, buildings, and furniture,
+fixtures, and equipment (FF&E). The plan should identify the cost for fire apparatus and
+equipment, and a funding method. The plan should identify desired performance
+measures, outline the level of service desired, and state how that service will be
+provided.
+Nolensville should plan for at least three fire stations. The map in Figure 5 shows
+Nolensville’s urban growth boundary. The blue line represents the urban growth
+boundary, and the red line illustrates the ISO defined 1½-mile service area of the NVFD
+fire station. Depending upon where the fire stations are located, it appears that the
+
+The University of Tennessee Municipal Technical Advisory Service
+
+17
+
+town could achieve basic coverage with two stations, but three stations would provide
+the best response time and provide sufficient companies for commercial response.
+The exact size in square miles of the urban growth boundary was not available, but this
+report is using an estimate of twenty-five square miles. Based on the NFPA
+recommended maximum travel time of 240 seconds (about 1.97 miles), an area of
+twenty-five square miles requires 3.42 fire stations.
+
+Figure 5 – Urban Growth Boundary and 1½ Mile Service Area for NVFD Fire Hall
+
+The University of Tennessee Municipal Technical Advisory Service
+
+18
+
+Community Growth – The need for emergency services is constant, but the demand
+for emergency services grows. More residents, more visitors, more homes, and more
+businesses increase the demand for emergency services. The Williamson County Land
+Use plan noted that Nolensville is a town “showing increased potential for high growth.”
+Currently, the demand for fire services is low, as shown in Table 3, which means there
+is time for Nolensville to plan and budget for increasing and improving fire services as
+the community grows.
+In looking at Table 3, the call volume (demand) increased by 37.12%. Fires increased
+by 14.29%, and the number of other emergencies decreased by 11.84%. The largest
+increase in service demand was for emergency medical calls, which increased by
+68.94%. This indicates that Nolensville needs to include a plan for providing EMS
+response in its strategic plan.
+2010
+2011
+Type Incident
+Number
+Percent
+Number
+Percent
+Structure Fire
+6
+2.62%
+6
+1.91%
+Vehicle Fire
+2
+0.87%
+2
+0.64%
+Other Fire
+13
+5.68%
+16
+5.10%
+Medical Calls
+114
+49.78%
+193
+61.46%
+Vehicle Accidents
+18
+7.86%
+30
+9.55%
+Other Rescues
+13
+5.68%
+15
+4.78%
+Hazmat
+4
+1.75%
+2
+0.64%
+Investigations
+11
+4.80%
+10
+3.18%
+Alarms
+36
+15.72%
+29
+9.24%
+Other
+12
+5.24%
+11
+3.50%
+TOTAL
+229 100.00%
+314
+100.00%
+Table 3 – Calls for Service in Nolensville
+Community Expectations – Growth will mean that people will move to Nolensville from
+other places. Nashville is the largest city nearby, and people who move from Nashville
+or other areas where they have been receiving urban level emergency services may
+expect the same level of emergency services in Nolensville. The larger the community,
+the higher the level of service people expect.
+Missed Calls – The current demand for services is within the capabilities of the NVFD,
+but there will come a time when the NVFD, simply because of the nature of any
+volunteer fire department, will not be able to respond to a call in a timely manner. The
+town should monitor indicators such as response time, the number of firefighters
+responding, the number of fire apparatus responding, and the number of minutes it
+takes to assemble an effective firefighting force (at least fourteen firefighters, the
+required pump capacity on the scene, the ability to generate adequate fire flow) to help
+determine if the desired community services levels are there.
+
+The University of Tennessee Municipal Technical Advisory Service
+
+19
+
+Extended Response Times – The regular failure of response apparatus to turnout
+(respond from) of the fire station in a timely manner endangers the community.
+Seconds saved are minutes earned, and response time is a critical factor for positive
+outcomes on fires and for decreased morbidity and mortality on medical emergencies.
+The town should monitor the turnout time of the initial response unit and the time to
+arrival of the complete first alarm assignment as performance indicators, as well as an
+increased reliance on mutual aid to meet desired response levels.
+Reduced Firefighter Response – The NVFD is a volunteer department, which means
+the firefighters work full-time jobs and have other commitments that take them out of the
+community or delay their responses in the community. Active lifestyles may reduce the
+number of hours a firefighter can devote to the fire department, or prevent others from
+serving. Recruitment, retention, and turnover are continuing issues for every volunteer
+fire department. Apparatus responding with fewer than the required number of
+firefighters needed compromises the safety of citizens and the firefighters. The town
+should monitor the membership level of the NVFD and the number of firefighters
+responding on calls as indicators.
+Desire for Non-Emergency Services – The NVFD provides fire and emergency
+medical response services, but there may come a time when the community desires the
+provision of non-emergency services. Examples include public education programs, fire
+prevention programs, fire code inspections of commercial properties, and fire and arson
+investigation.
+Value of Services Received – The NVFD provides very good fire and emergency
+service for the town at a reasonable cost. As with any business, the cost of supplies,
+utilities, insurance, and other items increases, which means the business (the NVFD)
+must charge more for its services. As long as the cost of the contract service is less
+than what it would cost the town to provide the service, the return on investment is
+positive as long as the quality of service and the ISO rating meets the community’s
+expectations. At some point, the cost of contract service will approach what it would
+cost the town to provide the service, or the quality of the service may decrease. At that
+point, the town should evaluate the return on the investment in contract service.
+
+The University of Tennessee Municipal Technical Advisory Service
+
+20
+
+Recommendations
+1. The Town of Nolensville enjoys a Class 5 ISO rating through the Nolensville
+Volunteer Fire Department. The Class 5 rating places the town in the top 30% of
+communities in Tennessee in terms of fire protection. Because of the Class 5
+rating, residents and business owners enjoy lower insurance rates where the
+Class 5 rating applies. The service provided by the NVFD is very good. The
+cost for the town to start a fire department is considerably higher than the cost for
+contract service. MTAS recommends that the town continue to contract with the
+Nolensville Volunteer Fire Department for fire services while developing a
+strategic plan to establish a municipal fire department at some future date.
+2. Adopt a response time standard for the community. Nolensville is a perpetual
+organization that will outlast current leaders, and this study looks towards build
+out, which is 20-plus years in the future. Once adopted, the response time
+standard will serve as a planning guide for future leaders. This study
+recommends a response time standard of 6:35 (six minutes, 35 seconds) for
+90% of all responses, which is based upon recommendations found in NFPA
+Standard 1710, Standard for the Organization and Deployment of Fire
+Suppression Operations. The 6:35 breaks down as follows: ring time – 15
+seconds, call processing time – 60 seconds, firefighter turnout time – 80
+seconds, travel time – 240 seconds. Using this standard, planners would look for
+fire station locations to maintain a 4 minute travel time to as much of the area to
+be protected as possible.
+3. Adopt a sprinkler ordinance for all new commercial construction. When
+determining the basic fire flow for a community, ISO does not consider properties
+protected by a code complaint automatic sprinkler system. In a sprinklered
+building, the amount of time between the occurrence of a fire and reopening for
+business can be as little as a few hours or days versus months, years or even
+never rebuilding for a non-sprinklered building.
+4. Maintain the residential sprinkler ordinance. Tennessee’s fire mortality rate for
+civilians has been among the highest in the nation. During 2002-2010, the period
+for the Tennessee Fire Mortality Study, the national fire mortality rate declined,
+but the rate in Tennessee increased. Residential structure fires account for
+about three-fourths of all civilian fire deaths in the state. Residential sprinklers
+save money and lives and are a good investment in a home, and Nolensville is
+commended for being pro-active in community safety.
+5. Develop a strategic plan for fire services. The plan should state the desired
+service level for the community, identify potential locations for fire stations along
+with estimated costs for land, buildings, and furniture, fixtures, and equipment
+(FF&E), identify the cost for fire apparatus and equipment, and a funding method,
+and identify desired performance measures, outline the level of service desired,
+and state how that service will be provided.
+6. Work to have Nolensville’s development requirements extended into the urban
+growth boundary. Nolensville’s ordinances do no good if the land in the urban
+growth boundary is developed to a lesser standard, and Nolensville inherits the
+increased risk upon annexation.
+
+The University of Tennessee Municipal Technical Advisory Service
+
+21
+
+Appendix A – Estimated Travel Times and Total Response Time in Minutes
+Distance To
+Travel in
+Miles
+
+Estimated
+Travel Time
+
+Ring Time
+
+Call
+Processing
+Time
+
+Fire Dept.
+Turnout
+Time
+
+Total
+Response
+Time
+
+0.25
+0.38
+0.50
+0.75
+1.00
+1.25
+1.50
+1.75
+2.00
+2.25
+2.50
+2.75
+3.00
+3.25
+3.50
+3.75
+4.00
+4.25
+4.50
+4.75
+5.00
+5.25
+5.50
+5.75
+6.00
+6.25
+6.50
+6.75
+7.00
+
+1.08
+1.30
+1.50
+1.93
+2.35
+2.78
+3.20
+3.63
+4.05
+4.48
+4.90
+5.33
+5.75
+6.18
+6.60
+7.03
+7.45
+7.88
+8.30
+8.73
+9.15
+9.58
+10.00
+10.43
+10.85
+11.28
+11.70
+12.13
+12.55
+
+0.25
+0.25
+0.25
+0.25
+0.25
+0.25
+0.25
+0.25
+0.25
+0.25
+0.25
+0.25
+0.25
+0.25
+0.25
+0.25
+0.25
+0.25
+0.25
+0.25
+0.25
+0.25
+0.25
+0.25
+0.25
+0.25
+0.25
+0.25
+0.25
+
+1.00
+1.00
+1.00
+1.00
+1.00
+1.00
+1.00
+1.00
+1.00
+1.00
+1.00
+1.00
+1.00
+1.00
+1.00
+1.00
+1.00
+1.00
+1.00
+1.00
+1.00
+1.00
+1.00
+1.00
+1.00
+1.00
+1.00
+1.00
+1.00
+
+1.33
+1.33
+1.33
+1.33
+1.33
+1.33
+1.33
+1.33
+1.33
+1.33
+1.33
+1.33
+1.33
+1.33
+1.33
+1.33
+1.33
+1.33
+1.33
+1.33
+1.33
+1.33
+1.33
+1.33
+1.33
+1.33
+1.33
+1.33
+1.33
+
+3.66
+3.88
+4.08
+4.51
+4.93
+5.36
+5.78
+6.21
+6.63
+7.06
+7.48
+7.91
+8.33
+8.76
+9.18
+9.61
+10.03
+10.46
+10.88
+11.31
+11.73
+12.16
+12.58
+13.01
+13.43
+13.86
+14.28
+14.71
+15.13
+
+Notes:
+• Travel time was calculated using the Rand formula of T = 1.7(D) to estimate travel
+time, where T is time and D is the distance to be covered expressed in miles.
+• The 15-second ring time, 60-second call processing time, and 80-second turnout
+time are based on recommendations found in NFPA Standard 1710.
+• Minutes expressed as decimal minutes: to compute seconds, multiply the decimal
+number by 60. For example, 3.66 decimal minutes equals 3:40 (3 minutes, forty
+seconds).
+
+The University of Tennessee Municipal Technical Advisory Service
+
+22
+
+Appendix B – Letter from MTAS Attorney Sid Hemsley on Open Records Law
+April 18, 2011
+Mayor Jimmy Alexander
+City of Nolensville
+705 Stonebrook Blvd.
+Nolensville, Tennessee 37135
+Dear Mayor Alexander:
+Questions and Answers
+You have three questions arising from the fire study done for the City of Nolensville by
+Mr. Gary West, the former MTAS Fire Consultant:
+1. Does the city have legal authority to provide financial support for the operation of
+the Nolensville Volunteer Fire Department, presumably including contracting for
+fire service from that department?
+2. Is the city obligated to provide any level of fire services to the city and the
+residents of the city?
+3. Are the records of the Nolensville Volunteer Fire Department subject to
+Tennessee’s Open Records Law?
+The answer to Question 1 is yes. The basis of that authority is the general law mayoraldermanic charter under which the city is established. In addition, it probably has the
+inherent authority to provide fire service to its residents, including by contract. To that
+end, the city has a contract with the Nolensville Volunteer Fire Department to provide
+the city fire service. It also makes a “charitable contribution to the fire department under
+the authority of Tennessee Code Annotated, § 6-54-111.
+The answer to Question 2 is that the fire department is contractually liable to provide fire
+service inside the city. In addition, the fire department is covered by the Tennessee
+Governmental Tort Liability Act, under which it is exempt from liability for its
+discretionary functions, but is liable for the negligence of its employees in performing its
+non-discretionary duties, including some aspects of how it responds to and fights fires.
+The answer to Question 3 is yes. The records of the Nolensville Volunteer Fire
+Department, notwithstanding the fact that in theory it is a non-governmental, nonprofit
+organization that purports to be an “independent contractor” with respect to the City of
+Nolensville, are public records subject to inspection by any citizen of Tennessee. That
+result derives from a recent Tennessee Supreme Court case that adopted the
+“functional equivalent to a governmental agency” doctrine. Under that doctrine, the fire
+department is the “functional equivalent to a government agency”–a government fire
+
+The University of Tennessee Municipal Technical Advisory Service
+
+23
+
+department. The fire department’s financial records are also open to the city under
+Tennessee Code Annotated, § 6-54-111, and under the contract between the city and
+the fire department in which the fire department agrees to provide fire services to the
+city.
+Analysis of Questions and Answers
+Analysis of Question 1
+The City of Nolensville is chartered under the general law mayor-aldermanic charter,
+codified at Tennessee Code Annotated, § 6-1-101 et seq. Nothing in that charter
+expressly mentions any authority for a city established under that charter to have a fire
+department or provide fire services. But the power of a city to have a fire department or
+to provide fire services to its residents is undoubtedly one of the police powers inherent
+in a municipality without specific mention in its charter. [Penn-Dixie Cement
+Corporation v. City of Kingsport, 225 S.W.2d 270 (Tenn. 1949).]
+Penn-Dixie Cement Corporation is a reflection of Dillon’s Rule, which still lives on in
+Tennessee. Under Dillon’s Rule:
+It is a general and undisputed proposition of law that a municipal corporation possess
+and can exercise the following powers and no others: First, those granted in express
+words; second, those necessarily or fairly implied in or incident to the powers expressly
+granted; and third, those essential to the accomplishment of the declared objects and
+purposes of the corporation–not simply convenient, but indispensable. Any fair,
+reasonable, substantial doubt concerning the existence of power is resolved by the
+courts against the corporation and the power is denied. [Merriman v. Moody’s Executor,
+25 Iowa 163, 170 (1868)]. [Emphasis is mine.]
+Section 6-2-201(13) of the general law mayor-aldermanic charter provides that among
+the powers of municipalities established under that charter is the power to:
+Make contracts with any person, firm, association or corporation for public utilities and
+public services to be furnished the municipality and those in the municipality. The
+power to make contracts embraces the power to make exclusive contracts. When an
+exclusive contract is entered into, it shall be exclusive against any other person, firm, or
+corporation. These contracts may be entered into for a period of twenty-five (25) years
+or less, but no longer....
+Even if it were not true that the provision of fire service by a municipality is inherent in
+municipal corporations, under its charter power to make contracts with persons, firms
+and corporations, the City of Nolensville would still have the power to make such
+contracts for the provision of fire service. If there were any doubt that Section 6-20201(13) could be read that way, it was declared in Southern Contractors v. Loudon
+County Board of Education, 58 S.W.3d 706 (Tenn. 2001) that while Dillon’s Rule is still
+the law in Tennessee, it is only a rule of statutory construction, and that where the
+
+The University of Tennessee Municipal Technical Advisory Service
+
+24
+
+General Assembly has granted local governments “comprehensive governmental
+powers...without either enumerating the powers or expressly limiting the scope of that
+authority,” that general provision “will be liberally construed.” [At 713] The court cited
+three examples of the General Assembly’s grant of such comprehensive general
+powers. One of those was § 6-2-201(32) of the general law mayor-aldermanic charter
+in which provides that:
+Every municipality incorporated under this charter may [h]ave and exercise all powers
+that now or hereafter it would be competent for this charter specifically to enumerate, as
+fully and completely as though these powers were specifically enumerated.
+Under that provision of Nolensville’s City Charter, then, § 6-2-201(13) is liberally
+construed and would certainly allow the city to contract with the Nolensville Volunteer
+Fire Department for fire service, as a “public service.”
+In addition, in Gray v. City of East Ridge, 641 S.W.2d 204 (Tenn. 1982), under Section
+2 of the city’s charter, “[s]aid city shall have power by ordinance of its governing
+authority within said City, ... to provide for the organization, and regulation of a police
+and a fire department.” [At 206] That charter provision, declared the Court, was enough
+to allow the city to grant a franchise to the East Ridge Fire Department, which was a
+subscription fire service, and that such fire service satisfied the requirement in Section 2
+of the city’s charter. In that case, the owner of an apartment complex, a unit of which
+was destroyed by fire, was denied the right to recover his damages because he had
+failed to subscribe for fire services from the East Ridge Fire Department.
+Section 6-2-201(13) of the general law mayor-aldermanic charter, which we have
+already considered above, also authorizes the city to grant “exclusive contracts” for city
+services which authority undoubtedly contemplates the granting of exclusive franchises
+for fire services.
+I have not been asked to pass upon the validity of the contract between the city and the
+fire department for latter to provide to the former fire services, nor the validity of the
+“charitable contribution” the city makes to the fire department under Resolution 06-09. I
+assume that both are valid agreements. In fact, I have no reason to argue otherwise.
+However, I will briefly outline those agreements below because they are pertinent to the
+analysis of all three questions.
+The City of Nolensville has a contract, last executed July 23, 1993, for the Nolensville
+Volunteer Fire Department, to provide fire service “to all areas and locations within the
+municipal boundary of Nolensville, Tennessee.” Under that contract, the Nolensville
+Volunteer Fire Department purports to be “organized pursuant to the authority of T.C.A.
+7-38-101 et seq., which permits individuals to form private Departments for firefighting
+purposes.” That contract provides for the payment by the City of Nolensville of $32,000
+a year to the Nolensville Fire Department. However, it is my understanding that the city
+appropriates approximately $90,000 a year to that fire department, which includes, but
+is not limited to, payments toward the cost of an addition to the fire department’s
+
+The University of Tennessee Municipal Technical Advisory Service
+
+25
+
+building inside the city. The city’s payments for the addition to the fire department’s
+building are being made under Resolution 06-09 adopted on what appears to be
+September 7, 2006, in which the city agreed to finance 50% of the cost of the
+construction of an addition to the Nolensville Fire Department, which is expected to cost
+$441,000.
+The statutory authority for Resolution 06-09 is Tennessee Code Annotated, § 6-54-111,
+which authorizes municipalities to make contributions to “nonprofit charitable
+organizations,” and to nonprofit civic organizations. The Nolensville Volunteer Fire
+Department was chartered in1977 by the Tennessee Secretary of State as a “Non-Profit
+Corporation.” [Tennessee Secretary of State’s website.], even though it was originally
+established under Tennessee Code Annotated, § 7-38-101. Under Tennessee Code
+Annotated, § 7-38-101:
+Any number of persons, residents within a municipality, may form themselves into a
+company for the purpose of extinguishing fires, by having their names and objective
+recorded in the register’s office of the county.
+That statute is the product of an 1831 act that has changed little since then. As far as I
+can determine, there are no cases interpreting that statute. It is clear that fire
+companies organized under that statute are “private fire companies,” [although the word
+“private” never appeared in the heading of that statute until recent times]. They have
+the right to “make rules and regulations for their government, to impose fines for
+nonattendance or other delinquencies,” [Tennessee Code Annotated, § 7-38-102], and
+to “procure fire engines, buckets, hooks and ladders ... and may hold property, real and
+personal, for its purposes....” [Tennessee Code Annotated, § 7-38-104]. It is not clear
+whether that statute contemplated that fire companies could be profit and nonprofit
+companies. Whatever the case there, given the history of fire service in America, most
+of them were probably volunteer companies, although some of them may have provided
+service on a subscription basis. In any event, because the Nolensville Volunteer Fire
+Department was incorporated as a nonprofit public benefit corporation in 1977,
+presumably it meets the definition of “charitable organization” contained in Tennessee
+Code Annotated, § 6-54-111.
+Analysis of Question 2
+The contract between the City of Nolensville and the Nolensville Volunteer Fire
+Department obligates the latter “to provide firefighting services to all areas and locations
+within the municipal boundaries of Nolensville, Tennessee,” which under the contract
+includes a wide variety of firefighting and fire safety services. [Paragraph 3] The city
+has also agreed in that contract “not to compete by establishing or by funding a
+municipal fire department so long as the Department is fulfilling its responsibility under
+this agreement.” [Paragraph 7]
+The city has a contractual expectation that the fire department will provide the city fire
+services during the term of the contract, and the failure of the fire department to perform
+
+The University of Tennessee Municipal Technical Advisory Service
+
+26
+
+that service would be actionable on the part of the city. Of course, the fire department
+has a contractual expectation that the city will live up to its obligations under the
+contract.
+But the fire department is also liable under the Tennessee Governmental Tort Liability
+Act (TGTLA) to perform fire services commensurate with that Act. The contract
+provides that “The express intent of both these parties is that the Department will be an
+independent contractor.” But Tennessee Code Annotated, § 29-20-102(3) defines
+“Governmental entity” as:
+any political subdivision of the state of Tennessee, including, but not limited to, any
+municipality, metropolitan government, county, utility district, school distinct, nonprofit
+volunteer fire department receiving funds appropriated by a county legislative body or a
+legislative body of a municipality.
+The same statute, subsection (2) defines “Employee” as:
+Means and includes any official (whether elected or appointed), officer, employee or
+servant ... or any officer, employee or servant thereof, of a governmental entity, ... and,
+further including regular members or voluntary or auxiliary firefighting, police or
+emergency assistance organizations.
+Tennessee Code Annotated, § 29-20-107(a) provides that “Any person who is not an
+elected or appointed official or a member of a board agency or commission shall not be
+considered an employee of a governmental entity for purposes of this chapter unless
+the court specifically finds that all of the following elements exist:”.... [There follows a
+list of requirements that a member of a volunteer fire department could not meet].
+Subsection (c) of the same statute provides that, “No governmental entity may extend
+the immunity granted by its chapter to independent contractors, or other persons or
+entities by contract, agreement or other means....” But Subsection (d) of that statute
+declares that “A regular member of a voluntary or auxiliary firefighting, police, or
+emergency assistance organization of a governmental entity shall be considered to be
+an employee of that governmental entity for purposes of this chapter without regard to
+the elements set forth in subsection (a).”
+As we saw above, the definition of “governmental entity” in Tennessee Code Annotated,
+§ 29-20-102(3)(A) includes a “nonprofit volunteer fire department receiving funds
+appropriated by a...legislative body of a municipality....” Those definitions contained in
+the TGTLA do not distinguish between volunteer fire departments that are municipal
+agencies and volunteer fire departments that are so-called “independent contractors.”
+Under that Act, fire departments are not liable for discretionary duties. In Harper v. City
+of Milan, 825 S.W.2d 92 (Tenn. Ct. App. 1992), the City of Milan had a rural fire service
+contract with the Harpers to respond to structural fires within 3-1/2 miles from the city
+limits, under certain requirements, which the Harpers met. The city responded to a fire
+at the Harper’s home with a pick-up truck equipped with a 250 gallon tank. The Harpers
+
+The University of Tennessee Municipal Technical Advisory Service
+
+27
+
+argued that action was inadequate both under the TGTLA and under their contract with
+the city.
+As to the TGTLA claim, the Court held that
+Determining the amount and type of equipment to deploy in response to a particular call
+is one such discretionary decision....The Harpers do not raise an issue of fact regarding
+the proficiency or skill of the firemen. Any injury to the Harpers that may have resulted
+from the alleged negligence of the City of Milan in responding to the Harper’s fire arose
+out of the exercise or performance of a discretionary function.... [At 95]
+But not all decisions of a fire department are discretionary, declared the Court. It
+pointed to the earlier case of Gordon v. City of Henderson, 766 S.W.2d 784 (Tenn.
+1989), in which four persons died in a fire. The plaintiff alleged the city was negligent
+for (1) the city’s “firemen being absent from their regular duty station, had to be located
+by the Henderson Police Department”; (2) the “response time of the firemen was at
+least fifteen minutes when the proper response time considering the location of the fire
+and the fire house should be less than five minutes”; (3) “some of the firemen
+responding to the fire ‘had the smell of liquor on their breath and were unable to
+respond as trained and professional firemen’”; and (4) “the firemen incorrectly placed
+their equipment in operation.” [At 94] The Court declared that, “we find it difficult to
+characterize the apparent intoxication of firemen as a ‘discretionary function,’ nor,
+without an explanation by defendants, the absence of firemen from their duty station
+and the resultant undue delay in response time.” [At 95]
+That case led the Harper v. City of Milan Court to declare that, “The courts have held
+that it is not a question of the exercise of discretion when it is a matter involving the
+proficiency of the department.” [At 95] But “The Harpers do not allege any delay in the
+response by the City of Milan nor that the firemen did not act in a skillful manner....The
+Harpers do not allege any lack of proficiency on the part of the City of Milan,” said the
+court. [At 95]
+As to their contractual claim, the Court, pointing to the contract between the City of
+Milan and the Harpers, held that “the Harpers have clearly stated a cause of action for a
+breach of contract.” [at 96] But the Court also dismissed that claim, reasoning that:
+There is no dispute that the City of Milan did respond to the call regarding the Harpers’
+fire. The contract makes no promise or guarantee as to the adequacy of the response
+made by the City of Milan. The only promise made by the City of Milan to the Harpers is
+that the City could respond to their call and there is no evidence in the record that there
+was any breach of that promise. [At 96]
+Under those cases, the Nolensville Volunteer Fire Department has both a contractual
+obligation to respond to fires within the City of Nolensville, and under the TGTLA is
+liable for negligence in performing its non-discretionary duties, one of which is to
+respond to fires in a manner that does not reflect a negligent response.
+
+The University of Tennessee Municipal Technical Advisory Service
+
+28
+
+Analysis of Question 3
+It appears that this question is settled by the Tennessee Supreme Court’s application of
+the Open Records Law in the case of Memphis Publishing Company v. Cherokee
+Children & Family Services, 87 S.W.3d 67 (Tenn. 2002). In that case, the Court
+considered the history of the privatization of governmental functions through
+independent contractors and non-profit government benefit agencies and other nongovernmental entities, and adopted a “functional equivalent of a governmental agency”
+test for determining whether the records of such agencies and contractors was subject
+to Tennessee’s Open Records Law. In holding that the records of the Cherokee
+Children & Family Services, a non-profit public benefit corporation, were open records
+the Court declared that:
+Our review of authority from other jurisdictions persuades us that the functional
+equivalency approach described above provides a superior means for applying public
+records laws to private entities which perform “contracted out” governmental services.
+As the facts of these cases demonstrate, private entities that perform public services on
+behalf of a government often do so as independent contractors. Nevertheless, the
+public’s fundamental right to scrutinize the performance of public services and the
+expenditure of public funds should not be subverted by government or by private entity
+merely because public duties have been delegated to an independent contractor.
+When a private entity’s relationship with the government is so extensive that the entity
+serves as the functional equivalent of a governmental agency, the accountability
+created by public oversight should be preserved. [At 79]
+In applying the “functional equivalency” test against the character and functions of the
+Cherokee Children & Family Services, the Court reasoned that:
+- Child care services for indigent families, and supervising child care placement under
+TDHS guidelines, were “undeniably public in nature.”
+- “Cherokee’s involvement in providing these services was extensive, with all of its
+employees performing services under contracts with TDHS.”
+- Under its charter, Cherokee’s business activities were dedicated exclusively to the
+services of TDHS contracts. For that reason, “all of its records relate to state business.”
+- Over ninety-nine percent of Cherokee’s operations came from state funds.
+- [“A] significant level of governmental control” over Cherokee was exercised by TDHS.
+[79-80]
+The Court also declared that:
+While it is true that (1) Cherokee was privately incorporated rather than created by the
+legislature; (2) the contracts disavowed any agency relationship between Cherokee and
+
+The University of Tennessee Municipal Technical Advisory Service
+
+29
+
+the State; and (3) the parties asserted that the State incurred no tort liability for
+Cherokee’s activities, these considerations are outweighed by the other factors listed
+above. Accordingly, we conclude that Cherokee served as the functional equivalent of a
+governmental agency, and so we hold that the records in Cherokee’s possession are
+subject to the public access pursuant to the terms of the Tennessee Public Records
+Act.... [At 80]
+While the fit of the Nolensville Volunteer Fire Department with Cherokee is not exact, it
+is not required to be exact under the “functional equivalent” test; the fit is far more than
+close enough. A large part of the fire department’s operations, if not all of them, are
+“public in nature.” Undoubtedly, all or most of the personnel in the fire department, be
+they volunteer or paid personnel, are dedicated to performing fire services under
+contracts with the City of Nolensville, and with the county. While I do not know how
+much funding the fire department receives from the county, it receives at least $90,000
+a year from the city, including payments towards the charitable contribution the city
+made to the fire department under Tennessee Code Annotated, § 6-54-111. It is also
+my understanding that the fire department has received various grants from public
+agencies and entities for its firefighting functions. The fire department also falls under
+the definition of a “governmental entity,” and its volunteer firefighters under the definition
+of “governmental employees,” under the TGTLA, and both receive extensive immunities
+thereunder. A significant amount of government control is exercised over the fire
+department’s firefighting functions, including the requirement of state recognition under
+Tennessee Code Annotated, § 68-102-108(c), and Chapter 0780-2-20 issued by the
+Tennessee Department of Commerce and Insurance, Division of Fire Prevention.
+Control is also exercised by the City of Nolensville under its contract with the fire
+department (and perhaps similarly, by the county).
+But the Nolensville Fire Department also has broad governmental powers under the
+contract between the city and the fire department. Under Paragraph 6 of the contract,
+“Any ordinance adopted by the Town for fire protection or fire prevention will be adhered
+to by the Department. The Department will also be authorized to enforce all such
+ordinances or Town regulations.” [Emphasis is mine.] It is difficult to find stronger
+evidence of the “functional equivalency” of a governmental agency than that close link
+between the city and the fire department that allows the fire department to enforce the
+city’s ordinances.
+Neither the fire department’s status as a non-profit organization, nor the fact that the city
+and the fire department characterize the fire department as an “independent contractor”
+in their contract for fire service to the city, lift the fire department over the “functional
+equivalent” test. It seems abundantly clear that under all the facts and circumstances
+the Nolensville Volunteer Fire Department is the “functional equivalent” to a
+government.
+In addition, Paragraph 4 of the 2003 contract between the City of Nolensville and the
+Nolensville Volunteer Fire Department provides that:
+
+The University of Tennessee Municipal Technical Advisory Service
+
+30
+
+The Nolensville Volunteer Fire department will provide to the Town a copy of their
+proposed budget on an annual basis in time to allow the Town to consider this
+information in constructing the Town’s budget. The Nolensville Volunteer Fire
+department will provide the Town with a quarterly revenues and expense statement and
+an annual revenues and expense statement at the end of the Nolensville Volunteer Fire
+department’s fiscal year...
+That is an “open records” contractual agreement on the part of the Nolensville Volunteer
+Fire Department toward the City of Nolensville. The above language in paragraph 4 is
+not restricted to the revenues and expenses related only to the City of Nolensville, but
+the fire department’s total budget.
+But even if that were not so, the City of Nolensville’s Resolution 06-09, in which it gives
+to the Nolensville Volunteer Fire Department 50% of $441,000 under Tennessee Code
+Annotated, § 6-54-111 brings it entirely under that statute, including subsection (c),
+which provides that:
+Any nonprofit organization that desires financial assistance from a municipality shall file
+with the city clerk a copy of an annual report of its business affairs and transactions,
+which includes, but is not limited to, a copy of an annual audit, a description of the
+programs that serve the municipality and the proposed use of the municipal assistance.
+Such report will be open for public inspection during regular business hours of the city
+clerk’s office.
+That provision appears to include a general annual report and audit, not ones related
+only to the nonprofit organization’s business affairs with the city.
+However, the most important entrance to the fire department’s records is not through
+the provisions in the contract between the city and the fire department nor the
+disclosure requirements in Tennessee Code Annotated, § 6-54-111, but Tennessee’s
+Open Records Law, found at Tennessee Code Annotated, § 10-7-501 et seq. which
+generally opens to public inspection most records of all local governments, during their
+business hours, which, under the “functional equivalent” test includes the Nolensville
+Volunteer Fire Department.
+Sincerely,
+
+Sidney D. Hemsley
+Senior Law Consultant
+
+The University of Tennessee Municipal Technical Advisory Service
+
+31
+
+Appendix C – Budget Category Explanations
+Exempt Salaries: Salaries for exempt employees. No exempt salary is shown, as the
+recommendation is that the police chief serve as the initial fire chief through a
+reclassification to the position of public safety director.
+Non-Exempt Wages: Wages for non-exempt (hourly) employees. The budget
+projection includes an annual wage increase of 2.5%. The wages projected are based
+on the following pay rates, which are suggested to remain competitive based on a
+salary survey for area fire departments: firefighter, $33,000; driver, $36,000; fire
+lieutenant, $41,000.
+Overtime Wages: Wages for non-exempt employees working extra duty hours. The
+amount estimated is 4% of the total for non-exempt wages. Overtime use covers FLSA
+overtime for a 56-hour workweek, backfill for personnel off on sick leave, vacation,
+training, or other absence, and callback of off-duty personnel for large fires, other
+incidents, or other reasons, such as increased staffing from projected severe weather
+emergencies.
+Holiday Pay: Wages for non-exempt employees working on scheduled holidays. Since
+firefighters must work 24/7, this pay compensates firefighters for working on holidays.
+Estimated at 4.5% of the total amount of non-exempt wages.
+Benefits: The cost of providing benefits including group health insurance, retirement,
+OPEB (other post-employment benefits), and Worker’s Compensation. Estimated at
+41% of the total of exempt salaries and non-exempt wages.
+Training/Education: Funds for training fire personnel. Estimated at $1,000 per
+firefighter for the initial year to provide for rookie school and to purchase training
+manuals for the fire department library. Training costs include maintaining emergency
+medical care licenses. Training costs are estimated at $500 per firefighter for future
+years.
+Dues and Subscriptions: Funds for the fire chief to be a member of the Tennessee Fire
+Chiefs Association and for subscriptions to fire service publications including Fire Chief,
+Firehouse, and Fire Engineering.
+Meetings and Travel: Funds for the fire chief to attend the meetings of the Tennessee
+Fire Chiefs Association and for firefighters to attend classes at the Tennessee Fire and
+Codes Academy.
+Electricity and Gas: Funds for the gas and electricity used at the fire station.
+Water and Sewer: Funds for the water and sewer used at the fire station.
+Telephone Expense: Funds for business rate local and long distance telephone service.
+
+The University of Tennessee Municipal Technical Advisory Service
+
+32
+
+Prof. Svcs. – Physicals: Funds for physical examinations for all firefighters, estimated at
+$200 per physical. Physicals should be repeated at least every other year.
+Prof. Svcs. – NVFD: Funds for contracting for services with the NVFD for the refilling of
+SCBA air cylinders and the annual fit testing of firefighters. Contracting for this service
+is considerably less expensive than purchasing a breathing air compressor and the
+equipment to do the annual fit testing required by OSHA. This item is blank because
+while this report recognizes the need for these services the cost of these services
+should be negotiated at the local level.
+Equipment Maintenance: Funds for the repair and maintenance of small hand tools,
+nozzles, hose, and other firefighting equipment.
+Building Maintenance: Funds for the repair and maintenance of the fire station, which
+includes consumables and cleaning supplies, and grounds maintenance, including the
+mowing of the grass.
+Radio Maintenance: Funds for the repair and maintenance of mobile radios, portable
+radios, and pagers for firefighters, and purchase of rechargeable batteries.
+Office Supplies: Funds for office type supplies including pens, paper, maps,
+photocopying, postage, etc.
+Medical Supplies: Funds for emergency medical supplies, such as bandages, splints,
+and oxygen, used in providing emergency medical care on first responder calls.
+Chemical Supplies: Funds for firefighting chemicals such as AFFF firefighting foam and
+the refilling of dry chemical and carbon dioxide fire extinguishers.
+Uniforms and Clothing: Funds for uniforms for firefighters. Estimated at $800 for the
+first year so fire personnel can purchase a winter coat, and at $500 annually for the
+replacement of worn uniform items.
+Turnouts/PPE: Funds for the purchase of turnouts (protective firefighting clothing).
+Each set of turnouts costs approximately $2,500. Turnouts have a life of about six
+years, so the town should establish a turnout replacement program. The cost of
+outfitting 12 firefighters is included in the first year. $1,000 is included in years two and
+three to replace items that are prone to wearing out. The cost to replace one set of
+turnouts and funds for wear and tear are included in years four and five to begin the
+turnout gear replacement program.
+Petroleum Products: Funds for the purchase of diesel fuel and oil for fire apparatus.
+Small Tools: Funds for the replacement of small tools and equipment that cannot be
+repaired due to damage or loss.
+
+The University of Tennessee Municipal Technical Advisory Service
+
+33
+
+Vehicle Maintenance: Funds for the maintenance and repair of fire department
+apparatus and vehicles.
+Insurance: Funds for insurance premiums for coverage of the fire station and fire
+department vehicles.
+Other Expenses: Funds for miscellaneous and “petty cash” expenses not otherwise
+anticipated that occur during the budget year not covered in another line item.
+Fire Tools and Equipment: Funds for the purchase of the tools, hose, nozzles, SCBA,
+and other items required to equip a new fire engine.
+Vehicles: Funds for the purchase of a fire engine.
+
+The University of Tennessee Municipal Technical Advisory Service
+
+34
+
+References
+Ahrens, Marty. (2009). Vacant Building Fires. Boston, MA: National Fire Protection
+Association.
+College Station Fire Department. (2000). Fire Protection Master Plan. College Station,
+TX: College Station Fire Department.
+City-Data.com. Nolensville Economy and Business Data. http://www.city-data.com/
+business/econ-Nolensville-Tennessee.html.
+Compton, Dennis and John Granito, eds. (2002). Managing Fire and Rescue Services
+(2nd ed). Washington, DC: The International City/County Management Association
+(ICMA).
+Cote, Arthur, Grant, Casey, Hall, John, Solomon, Robert (Eds.). (2008). Fire Protection
+Handbook, 20th Edition. Quincy, MA: National Fire Protection Association (NFPA).
+Folz, David H., Shults, Chris, Meyers, Mike, Adams-O’Brien, Frances, Festa, Leah,
+West, Gary L. (2011). An Analysis of Civilian Residential Fire Deaths in Tennessee,
+2002 - 2010.
+Hunt, James W. (2010). Making the Case. Fire Chief. pp. 32-42.
+Insurance Services Office. (2003). Fire Protection Rating Schedule (edition 02-03).
+Jersey City, NJ: Insurance Services Office (ISO).
+National Fire Protection Association. (2010). NFPA 1710, Standard for the
+Organization and Deployment of Fire Suppression Operations, Emergency Medical
+Operations, and Special Operations to the Public by Career Fire Departments. Boston,
+MA: National Fire Protection Association.
+University of Tennessee. MTAS 2009-2010 Training for Municipal Officials in
+Tennessee. Knoxville, TN: The University of Tennessee.
+US Census Bureau Quick Facts.
+http://quickfacts.census.gov/qfd/states/47/4716540.html
+Wikipedia. Nolensville, Tennessee information.
+http://en.wikipedia.org/wiki/Nolensville,_Tennessee.
+
+The University of Tennessee Municipal Technical Advisory Service
+
+35

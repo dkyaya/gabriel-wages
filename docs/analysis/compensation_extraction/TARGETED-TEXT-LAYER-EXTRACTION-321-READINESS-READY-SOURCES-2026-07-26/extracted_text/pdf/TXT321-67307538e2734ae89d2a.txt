@@ -1,0 +1,371 @@
+[Cite as Anderson Twp. Bd. of Trustees v. Anderson Twp. Professional Firefighters Assn., Laff Local
+3111, 2019-Ohio-2302.]
+
+IN THE COURT OF APPEALS
+FIRST APPELLATE DISTRICT OF OHIO
+HAMILTON COUNTY, OHIO
+
+BOARD OF TRUSTEES OF
+ANDERSON TOWNSHIP, OHIO,
+Plaintiff-Appellant,
+vs.
+ANDERSON TOWNSHIP
+PROFESSIONAL FIREFIGHTERS
+ASSOCIATION, IAFF LOCAL 3111,
+Defendant-Appellee.
+
+:
+:
+
+APPEAL NO. C-180371
+TRIAL NO. A-1800918
+O P I N I O N.
+
+:
+:
+:
+:
+
+Civil Appeal From: Hamilton County Court of Common Pleas
+Judgment Appealed From Is: Affirmed
+Date of Judgment Entry on Appeal: June 12, 2019
+
+Frost Brown Todd, LLC, and Thomas B. Allen, for Plaintiff-Appellant,
+Lazarus & Lewis, LLC, and Kimberly A. Rutowski, for Defendant-Appellee.
+
+OHIO FIRST DISTRICT COURT OF APPEALS
+
+MYERS, Presiding Judge.
+
+{¶1}
+
+Plaintiff-appellant the Board of Trustees of Anderson Township
+
+(“Board”), appeals the trial court’s judgment denying its motion to vacate an
+arbitration award in favor of defendant-appellee the Anderson Township
+Professional Firefighters Association, IAFF Local 3111 (“Union”).
+
+Because the
+
+arbitration award drew its essence from the parties’ collective-bargaining agreement
+(“CBA”), we affirm the trial court’s judgment.
+Factual and Procedural Background
+
+{¶2}
+
+Pursuant to the terms of the CBA, Union member Lieutenant William
+
+Tillett received notice that disciplinary proceedings were being initiated against him
+because he had surrendered his fire-inspection certification. A conduct conference
+was held on May 1, 2017. Tillett received notice on May 4, 2017, that his conduct
+would result in disciplinary action, specifically a demotion from the rank of
+Lieutenant to the rank of Firefighter 6, effective May 6, 2017. Tillett requested a
+reconsideration meeting pursuant to Article 8.3(E) of the CBA. The reconsideration
+meeting was held on May 10, 2017, and, approximately one week later, Tillett
+received notice that his demotion, which had taken effect on May 6, was upheld.
+Tillett appealed to both the Township Administrator and the Board, but his
+demotion was upheld at all levels.
+
+{¶3}
+
+The Union filed a grievance on behalf of Tillett, arguing that the
+
+Board’s implementation of his demotion prior to the exhaustion of his appellate
+remedies violated the CBA and disregarded the parties’ long-standing past practice of
+not imposing discipline until the appeals process was completed. The grievance was
+denied, and the Union filed for arbitration.
+
+2
+
+OHIO FIRST DISTRICT COURT OF APPEALS
+
+{¶4}
+
+At the arbitration hearing, the Board argued that the CBA allowed it to
+
+impose discipline effective immediately, and that because the CBA was not
+ambiguous, the arbitrator could not rely on the parties’ past practice to interpret the
+agreement. It further argued that the Union could not successfully prove a past
+practice, and that a zipper clause in the CBA prohibited any party from relying on a
+past practice. But the Union contended that Article 8 of the CBA was ambiguous
+regarding when imposed discipline should be implemented, and that the parties’ past
+practice of delaying the implementation of imposed discipline until after the appeals
+process was concluded should resolve the ambiguity.
+
+{¶5}
+
+At the arbitration hearing, Tillett testified that he served as president
+
+of the Union for approximately 18 years, and that in his tenure as president, absent
+an employee’s decision not to appeal, discipline had never been implemented before
+all appeals were completed.
+
+Tillett discussed five specific instances in which
+
+discipline imposed on Union members was not implemented until the appeals
+process was concluded. Three of these occurred prior to the date of the current CBA.
+But two of these instances occurred after the effective date of the current CBA.
+
+{¶6}
+
+Ken Lovins, who was president of the Union during Tillett’s
+
+disciplinary proceedings and arbitration hearing, testified that in his 20-year history
+with the Anderson Township Fire Department, he was unaware of discipline ever
+being implemented before all appeals were exhausted.
+
+Township Administrator
+
+Vicky Earhart likewise testified that, to her knowledge, discipline had never been
+implemented prior to the appeals process concluding.
+
+{¶7}
+
+The arbitrator sustained the Union’s grievance. Construing the CBA,
+
+the arbitrator determined that the CBA language allowing for the imposition of
+discipline was clear and unambiguous, but that the CBA had a gap and was silent as
+to when the imposed discipline could be implemented.
+
+The arbitrator further
+
+determined that the parties’ conduct, both before and after the controlling CBA took
+
+3
+
+OHIO FIRST DISTRICT COURT OF APPEALS
+
+effect, required postponing the implementation of discipline until after the appeals
+process was completed.
+
+{¶8}
+
+The Board filed a motion to vacate the arbitrator’s award in the court
+
+of common pleas. The trial court found that sufficient ambiguity existed in Article
+8.3 of the CBA to preclude a finding that the arbitrator’s decision directly conflicted
+with any express language in the CBA.
+
+The trial court further found that the
+
+arbitrator’s award drew its essence from the CBA, and it denied the Board’s motion
+to vacate.
+Standard of Review
+
+{¶9}
+
+Pursuant to R.C. 2711.10, an arbitrator’s award may only be vacated in
+
+very limited circumstances, including, as relevant to this appeal, where “[t]he
+arbitrators exceeded their powers, or so imperfectly executed them that a mutual,
+final, and definite award upon the subject matter submitted was not made.” R.C.
+2711.10(D).
+
+{¶10} An arbitrator’s authority is limited to that granted to the arbitrator
+under the terms of the parties’ agreement, and an arbitrator exceeds that authority
+where her award does not draw its essence from the agreement. H.C. Nutting Co. v.
+Midland Atlantic Dev. Co., LLC, 2013-Ohio-5511, 5 N.E.3d 125, ¶ 13 (1st Dist.).
+
+{¶11} An award draws its essence from the parties’ agreement where “there
+is a rational nexus between the agreement and the award, and where the award is not
+arbitrary, capricious, or unlawful.”
+
+Princeton City School Dist. Bd. of Edn. v.
+
+Princeton Assn. of Classroom Educators, 1st Dist. Hamilton No. C-120469, 2013Ohio-667, ¶ 12, quoting Mahoning Cty. Bd. of Mental Retardation and Dev.
+Disabilities v. Mahoning Cty. TMR Edn. Assn., 22 Ohio St.3d 80, 84, 488 N.E.2d
+872 (1986). But an arbitrator’s award departs from the essence of the agreement
+where “(1) the award conflicts with the express terms of the agreement, and/or (2)
+the award is without rational support or cannot be rationally derived from the terms
+4
+
+OHIO FIRST DISTRICT COURT OF APPEALS
+
+of the agreement.” Ohio Office of Collective Bargaining v. Ohio Civ. Serv. Emps.
+Assn., Local 11, AFSCME, AFL-CIO, 59 Ohio St.3d 177, 572 N.E.2d 71 (1991),
+syllabus.
+
+{¶12} Deference must be given to the arbitrator’s decision. “[T]he arbitrator
+is the final judge of both the law and the facts, and a court may not substitute its
+judgment for that of the arbitrator. * * * Judicial deference in arbitration cases is
+based on a recognition that the parties have agreed to have their dispute settled by an
+arbitrator rather than the courts and ‘to accept the arbitrator’s view of the facts and
+the meaning of the contract regardless of the outcome of the arbitration.’ ” Portage
+Cty. Bd. of Dev. Disabilities v. Portage Cty. Educators’ Assn. for Dev. Disabilities,
+2017-Ohio-888, 86 N.E.3d 580, ¶ 11 (11th Dist.), quoting Arrow Uniform Rental, LP
+v. K & D Group, Inc., 11th Dist. Lake No. 2010-L-152, 2011-Ohio-6203, ¶ 35-36.
+
+{¶13} While we must accept any findings of fact that are not clearly
+erroneous, we conduct a de novo review of the trial court’s decision to determine
+whether any of the grounds in R.C. 2711.10 exist to support vacating the arbitrator’s
+award. Portage Cty. Bd. of Dev. Disabilities v. Portage Cty. Educators’ Assn. for
+Dev. Disabilities, 153 Ohio St.3d 219, 2018-Ohio-1590, 103 N.E.3d 804, syllabus.
+Arbitrator’s Award Must be Upheld
+
+{¶14} In a single assignment of error, the Board argues that the trial court
+erred by denying its motion to vacate the arbitrator’s decision.
+
+It specifically
+
+contends that the arbitrator exceeded her powers by adding an exhaustion
+requirement to the language of the CBA; that the award departed from the essence of
+the CBA because the arbitrator failed to discuss sections 4.1, 4.2, 4.3, and 4.5 of the
+CBA; and that the award conflicted with express terms of the CBA.
+
+{¶15} Article 8 of the CBA provides for discipline of employees and sets forth
+the detailed procedure to be followed when imposing discipline.
+
+Article 8.3(A)
+
+provides that an employee shall be notified in writing that she or he is being accused
+5
+
+OHIO FIRST DISTRICT COURT OF APPEALS
+
+of conduct for which formal discipline is contemplated. Article 8.3(B) provides that
+the Chief or the Chief’s designee must conduct a conference, at which time the
+charges will be stated to the employee and the employee will have a chance to offer
+an explanation, defense, or mitigating circumstances. Article 8.3(C) provides that at
+the conclusion of the conference, the Chief or the Chief’s designee shall “1. Dismiss
+the allegations as unfounded without record; 2. Impose discipline of record; [or] 3.
+Continue the conference in progress for a period not to exceed seventy-two (72)
+hours.” Articles 8.3(D) and (E) outline the procedure for appealing any imposed
+discipline.
+
+{¶16} Article 6 concerns the grievance procedure and provides for
+arbitration. It sets forth the powers of the arbitrator, stating that the she or he “shall
+not have power to add to, subtract from, or modify this Agreement, but shall only
+have authority to interpret and apply the terms of this Agreement.”
+
+{¶17} And Article 4 of the CBA sets forth various management rights,
+including:
+4.1 The Employer retains the right to manage, direct, and supervise
+the work force as it sees fit except to the extent that such rights are
+specifically and expressly modified by the terms of this Agreement.
+4.2
+
+The Employer retains all rights, authority, and powers of an
+
+Employer except as specifically and expressly modified herein.
+4.3 The Employer is free to implement changes in policy or operation
+during the term of this Agreement so long as such changes do not alter
+any of the terms specifically agreed upon herein.
+*
+
+*
+
+*
+
+4.5 Any matters not specifically covered by this Agreement shall be
+considered to be within the discretion of the Employer and shall be
+subject to all applicable laws or resolutions now existing or hereinafter
+adopted. * * * This agreement represents all of the Employees’ rights,
+6
+
+OHIO FIRST DISTRICT COURT OF APPEALS
+
+privileges and benefits granted by the Employer. Unless specifically
+and expressly set forth in this Agreement, all past practices and
+benefits previously granted are not in effect.
+
+{¶18} Following our review of the record, we find that the arbitrator’s award
+involves interpretation of the CBA, draws its essence from the CBA, and does not
+conflict with any express terms of the CBA.
+
+{¶19} In sustaining the Union’s grievance and concluding that the Board
+could not impose discipline until all appellate remedies had been exhausted, the
+arbitrator interpreted the CBA, as she was authorized to do pursuant to Article 6. In
+interpreting the CBA, the arbitrator determined that Article 8.3(C) allowed discipline
+to be imposed, but was silent as to when any imposed discipline could be
+implemented.
+
+In her award, the arbitrator seemingly distinguished situations
+
+involving a silent contract and those involving an ambiguous contract before
+determining that the parties’ conduct is relevant to filling any gap created by a
+contract that is silent on an issue. But here, we find this to be a distinction without a
+difference. Regardless of whether a contractual provision is considered ambiguous
+or silent, arbitrators can look to the conduct of the parties to see how they have
+interpreted the agreement. See St. Mary’s v. Auglaize Cty. Bd. of Commrs., 115 Ohio
+St.3d 387, 2007-Ohio-5026, 875 N.E.2d 561, ¶ 39, quoting Natl. City Bank of
+Cleveland v. Citizens Bldg. Co. of Cleveland, 48 Ohio Law Abs. 325, 335, 74 N.E.2d
+273 (8th Dist.1947) (“Where a dispute arises relating to an agreement under which
+the parties have been operating for some considerable period of time, the conduct of
+the parties may be examined in order to determine the construction which they
+themselves have placed upon the contract * * *.”); William Powell Co. v. Onebeacon
+Ins. Co., 2016-Ohio-8124, 75 N.E.3d 909, ¶ 33 (1st Dist.) (the parties’ postcontract
+formation conduct is relevant to determine their intent when a contract is
+ambiguous); Money Station, Inc. v. Electronic Payment Serv., Inc., 136 Ohio App.3d
+65, 71, 735 N.E.2d 966 (1st Dist.1999) (when a court finds a contractual provision to
+7
+
+OHIO FIRST DISTRICT COURT OF APPEALS
+
+be ambiguous, it may look to extrinsic evidence to determine the parties’ intent,
+including any acts by the parties that demonstrate their interpretation of the
+contract). It was thus appropriate for the arbitrator to consider the conduct of the
+parties after the effective date of the current CBA to determine how they interpreted
+the contract and the timing of the implementation of imposed discipline.
+
+{¶20} Contrary to the Board’s argument, the arbitrator’s consideration of the
+parties’ conduct did not expressly conflict with the zipper clause in Article 4.5, which
+provided that “all past practices and benefits previously granted are not in effect.” In
+determining that the township could not impose discipline until the appeals process
+was completed, the arbitrator was not enforcing any past practice; rather, she was
+looking to the parties’ current conduct following the effective date of the current CBA
+to determine how they interpreted the contract. This she is permitted to do. And in
+two instances in which discipline was imposed under the terms of the current CBA,
+the discipline was not implemented until either all appeals were exhausted or the
+employee elected not to appeal any further.
+
+{¶21}
+
+We find no error in the arbitrator’s failure to discuss sections 4.1, 4.2,
+
+4.3, and 4.5 of the CBA.
+
+These provisions do not directly concern disciplinary
+
+procedures or the implementation of discipline, and are not in conflict with the
+arbitrator’s award. Moreover, these provisions provide generally that the township
+retains the right to supervise its workforce as it sees fit, unless the rights of the
+employer to manage, direct, or supervise the employees are specifically and expressly
+modified by the CBA. The right to discipline an employee is specifically addressed,
+even though the timing of the implementation is ambiguous. And, these provisions
+do not prohibit an arbitrator from interpreting the CBA to resolve an ambiguity.
+Further, there is no requirement that an arbitrator discuss every provision that she
+considered in determining an award.
+
+{¶22} The Board argues that if it is required to delay the implementation of
+discipline until the appeals process is completed, an employee could remain on the
+8
+
+OHIO FIRST DISTRICT COURT OF APPEALS
+
+job committing acts that negatively impact the safety of the community. But the
+Board has alternative avenues available to handle such a situation, other than the
+immediate implementation of discipline. Article 8.2 of the CBA specifically defines
+discipline to be “written reprimand, suspension without pay, demotion to lower
+classification, loss of vacation, or dismissal.”
+
+Not included as discipline is a
+
+suspension with pay. Thus, if an employee posed a risk to the public, the township
+could suspend that employee with pay pending discipline.
+
+{¶23} Here, the arbitrator’s award did not conflict with the express terms of
+the CBA, and it drew its essence from that agreement, as there was a rational nexus
+between the agreement and the award and the award was not arbitrary, capricious,
+or unlawful. Consequently, we hold that the trial court did not err in denying the
+Board’s motion to vacate.
+
+{¶24} The Board’s assignment of error is overruled, and the judgment of the
+trial court is affirmed.
+Judgment affirmed.
+
+BERGERON and CROUSE, JJ., concur.
+
+Please note:
+The court has recorded its own entry on the date of the release of this opinion.
+
+9

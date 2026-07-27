@@ -1,0 +1,2001 @@
+St. Clair County Prevailing Wage Rates posted on 8/16/2021
+Overtime
+Trade Title
+
+Rg
+
+Type
+
+C Base
+
+Foreman M-F
+
+Sa
+
+Su
+
+Hol
+
+H/W
+
+Pension Vac
+
+Trng Other
+Ins
+
+ASBESTOS ABT-GEN
+
+All
+
+BLD
+
+33.14
+
+33.64
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+8.55
+
+16.90
+
+0.00
+
+0.80
+
+ASBESTOS ABT-MEC
+
+All
+
+BLD
+
+32.60
+
+33.60
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+9.70
+
+6.25
+
+0.00
+
+0.50
+
+BOILERMAKER
+
+All
+
+BLD
+
+39.75
+
+43.25
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+7.07
+
+25.26
+
+0.00
+
+1.06
+
+BRICK MASON
+
+All
+
+BLD
+
+34.38
+
+36.44
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+9.50
+
+14.35
+
+0.00
+
+0.88
+
+CARPENTER
+
+All
+
+ALL
+
+41.36
+
+42.86
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+7.95
+
+10.30
+
+0.00
+
+0.65
+
+CEMENT MASON
+
+All
+
+ALL
+
+36.00
+
+37.00
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+10.25
+
+16.25
+
+0.00
+
+0.50
+
+CERAMIC TILE FINISHER
+
+All
+
+BLD
+
+27.16
+
+27.16
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+8.35
+
+8.00
+
+0.00
+
+0.82
+
+ELECTRIC PWR EQMT OP
+
+All
+
+ALL
+
+49.22
+
+59.33
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+6.95
+
+13.79
+
+0.00
+
+0.49
+
+ELECTRIC PWR GRNDMAN
+
+All
+
+ALL
+
+36.74
+
+59.33
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+5.19
+
+10.29
+
+0.00
+
+0.37
+
+ELECTRIC PWR LINEMAN
+
+All
+
+ALL
+
+56.59
+
+59.33
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+7.99
+
+15.85
+
+0.00
+
+0.57
+
+ELECTRIC PWR TRK DRV
+
+All
+
+ALL
+
+40.17
+
+59.33
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+5.67
+
+11.25
+
+0.00
+
+0.40
+
+ELECTRICIAN
+
+All
+
+ALL
+
+43.04
+
+45.62
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+7.99
+
+12.94
+
+0.00
+
+1.19
+
+ELECTRONIC SYSTEM TECH
+
+All
+
+BLD
+
+35.27
+
+37.27
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+4.00
+
+11.07
+
+0.00
+
+0.40
+
+ELEVATOR CONSTRUCTOR
+
+All
+
+BLD
+
+53.46
+
+60.14
+
+2.0
+
+2.0
+
+2.0
+
+2.0
+
+15.87
+
+19.31
+
+4.28
+
+0.64
+
+FLOOR LAYER
+
+All
+
+BLD
+
+36.08
+
+36.83
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+7.95
+
+10.30
+
+0.00
+
+0.65
+
+GLAZIER
+
+All
+
+BLD
+
+35.88
+
+2.0
+
+2.0
+
+2.0
+
+2.0
+
+7.51
+
+15.48
+
+4.12
+
+1.26
+
+HEAT/FROST INSULATOR
+
+All
+
+BLD
+
+40.18
+
+41.18
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+11.04
+
+13.25
+
+0.00
+
+0.85
+
+IRON WORKER
+
+All
+
+ALL
+
+35.50
+
+37.50
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+10.46
+
+17.75
+
+0.00
+
+0.42
+
+LABORER
+
+N
+
+ALL
+
+32.64
+
+33.14
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+8.55
+
+16.90
+
+0.00
+
+0.80
+
+LABORER
+
+S
+
+ALL
+
+30.40
+
+30.90
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+7.73
+
+19.96
+
+0.00
+
+0.80
+
+MACHINIST
+
+All
+
+BLD
+
+50.68
+
+53.18
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+8.93
+
+8.95
+
+1.85
+
+1.47
+
+MARBLE FINISHER
+
+All
+
+BLD
+
+27.16
+
+27.16
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+8.35
+
+8.00
+
+0.00
+
+0.82
+
+MARBLE MASON
+
+All
+
+BLD
+
+32.66
+
+32.66
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+8.35
+
+9.20
+
+0.00
+
+0.91
+
+MILLWRIGHT
+
+All
+
+ALL
+
+41.36
+
+42.86
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+7.95
+
+10.30
+
+0.00
+
+0.65
+
+OPERATING ENGINEER
+
+All
+
+BLD
+
+1
+
+39.85
+
+42.85
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+13.55
+
+18.65
+
+0.00
+
+1.25
+
+OPERATING ENGINEER
+
+All
+
+BLD
+
+2
+
+38.72
+
+42.85
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+13.55
+
+18.65
+
+0.00
+
+1.25
+
+OPERATING ENGINEER
+
+All
+
+BLD
+
+3
+
+34.24
+
+42.85
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+13.55
+
+18.65
+
+0.00
+
+1.25
+
+OPERATING ENGINEER
+
+All
+
+BLD
+
+4
+
+34.30
+
+42.85
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+13.55
+
+18.65
+
+0.00
+
+1.25
+
+OPERATING ENGINEER
+
+All
+
+BLD
+
+5
+
+33.97
+
+42.85
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+13.55
+
+18.65
+
+0.00
+
+1.25
+
+OPERATING ENGINEER
+
+All
+
+BLD
+
+6
+
+42.40
+
+42.85
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+13.55
+
+18.65
+
+0.00
+
+1.25
+
+OPERATING ENGINEER
+
+All
+
+BLD
+
+7
+
+42.70
+
+42.85
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+13.55
+
+18.65
+
+0.00
+
+1.25
+
+2.58
+
+OPERATING ENGINEER
+
+All
+
+BLD
+
+8
+
+42.98
+
+42.85
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+13.55
+
+18.65
+
+0.00
+
+1.25
+
+OPERATING ENGINEER
+
+All
+
+BLD
+
+9
+
+40.85
+
+42.85
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+13.55
+
+18.65
+
+0.00
+
+1.25
+
+OPERATING ENGINEER
+
+All
+
+HWY
+
+1
+
+38.35
+
+41.35
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+13.55
+
+18.65
+
+0.00
+
+1.25
+
+OPERATING ENGINEER
+
+All
+
+HWY
+
+2
+
+37.22
+
+41.35
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+13.55
+
+18.65
+
+0.00
+
+1.25
+
+OPERATING ENGINEER
+
+All
+
+HWY
+
+3
+
+32.74
+
+41.35
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+13.55
+
+18.65
+
+0.00
+
+1.25
+
+OPERATING ENGINEER
+
+All
+
+HWY
+
+4
+
+32.80
+
+41.35
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+13.55
+
+18.65
+
+0.00
+
+1.25
+
+OPERATING ENGINEER
+
+All
+
+HWY
+
+5
+
+32.47
+
+41.35
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+13.55
+
+18.65
+
+0.00
+
+1.25
+
+OPERATING ENGINEER
+
+All
+
+HWY
+
+6
+
+40.90
+
+41.35
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+13.55
+
+18.65
+
+0.00
+
+1.25
+
+OPERATING ENGINEER
+
+All
+
+HWY
+
+7
+
+41.20
+
+41.35
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+13.55
+
+18.65
+
+0.00
+
+1.25
+
+OPERATING ENGINEER
+
+All
+
+HWY
+
+8
+
+41.48
+
+41.35
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+13.55
+
+18.65
+
+0.00
+
+1.25
+
+OPERATING ENGINEER
+
+All
+
+HWY
+
+9
+
+39.35
+
+41.35
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+13.55
+
+18.65
+
+0.00
+
+1.25
+
+PAINTER
+
+All
+
+BLD
+
+31.95
+
+33.45
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+6.45
+
+12.42
+
+0.00
+
+0.70
+
+PAINTER
+
+All
+
+HWY
+
+33.15
+
+34.65
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+6.45
+
+12.42
+
+0.00
+
+0.70
+
+PAINTER OVER 30 FT.
+
+All
+
+BLD
+
+32.95
+
+34.45
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+6.45
+
+12.42
+
+0.00
+
+0.70
+
+PAINTER PWR EQMT
+
+All
+
+BLD
+
+32.95
+
+34.45
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+6.45
+
+12.42
+
+0.00
+
+0.70
+
+PAINTER PWR EQMT
+
+All
+
+HWY
+
+34.15
+
+35.65
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+6.45
+
+12.42
+
+0.00
+
+0.70
+
+PILEDRIVER
+
+All
+
+ALL
+
+41.36
+
+42.86
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+7.95
+
+10.30
+
+0.00
+
+0.65
+
+PIPEFITTER
+
+NW BLD
+
+41.00
+
+45.00
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+8.54
+
+10.55
+
+0.00
+
+1.55
+
+PIPEFITTER
+
+SE
+
+BLD
+
+41.65
+
+44.15
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+10.60
+
+6.55
+
+0.00
+
+1.25
+
+PLASTERER
+
+All
+
+BLD
+
+34.50
+
+36.00
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+10.25
+
+11.00
+
+0.00
+
+0.50
+
+PLUMBER
+
+NW BLD
+
+40.00
+
+42.50
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+8.20
+
+8.40
+
+0.00
+
+1.20
+
+PLUMBER
+
+SE
+
+BLD
+
+41.65
+
+44.15
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+10.60
+
+6.55
+
+0.00
+
+1.25
+
+ROOFER
+
+All
+
+BLD
+
+34.65
+
+36.65
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+9.25
+
+9.55
+
+0.00
+
+0.46
+
+SHEETMETAL WORKER
+
+All
+
+ALL
+
+37.54
+
+39.04
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+10.75
+
+9.50
+
+2.25
+
+0.71
+
+SPRINKLER FITTER
+
+All
+
+BLD
+
+45.78
+
+49.53
+
+2.0
+
+2.0
+
+2.0
+
+2.0
+
+9.95
+
+14.75
+
+0.00
+
+1.10
+
+TERRAZZO FINISHER
+
+All
+
+BLD
+
+27.16
+
+27.16
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+8.35
+
+8.00
+
+0.00
+
+0.82
+
+TERRAZZO MASON
+
+All
+
+BLD
+
+32.66
+
+32.66
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+8.35
+
+9.20
+
+0.00
+
+0.91
+
+TRUCK DRIVER
+
+All
+
+ALL
+
+1
+
+39.96
+
+44.32
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+14.02
+
+7.14
+
+0.00
+
+0.25
+
+TRUCK DRIVER
+
+All
+
+ALL
+
+2
+
+40.54
+
+44.32
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+14.02
+
+7.14
+
+0.00
+
+0.25
+
+TRUCK DRIVER
+
+All
+
+ALL
+
+3
+
+40.86
+
+44.32
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+14.02
+
+7.14
+
+0.00
+
+0.25
+
+TRUCK DRIVER
+
+All
+
+ALL
+
+4
+
+41.21
+
+44.32
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+14.02
+
+7.14
+
+0.00
+
+0.25
+
+TRUCK DRIVER
+
+All
+
+ALL
+
+5
+
+42.32
+
+44.32
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+14.02
+
+7.14
+
+0.00
+
+0.25
+
+TRUCK DRIVER
+
+All
+
+O&C
+
+1
+
+31.97
+
+35.46
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+14.02
+
+7.14
+
+0.00
+
+0.25
+
+TRUCK DRIVER
+
+All
+
+O&C
+
+2
+
+32.43
+
+35.46
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+14.02
+
+7.14
+
+0.00
+
+0.25
+
+TRUCK DRIVER
+
+All
+
+O&C
+
+3
+
+32.69
+
+35.46
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+14.02
+
+7.14
+
+0.00
+
+0.25
+
+TRUCK DRIVER
+
+All
+
+O&C
+
+4
+
+32.97
+
+35.46
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+14.02
+
+7.14
+
+0.00
+
+0.25
+
+1.80
+
+TRUCK DRIVER
+
+All
+
+O&C
+
+5
+
+33.86
+
+35.46
+
+1.5
+
+1.5
+
+2.0
+
+2.0
+
+14.02
+
+7.14
+
+0.00
+
+0.25
+
+Legend
+Rg Region
+Type Trade Type - All,Highway,Building,Floating,Oil & Chip,Rivers
+C Class
+Base Base Wage Rate
+OT M-F Unless otherwise noted, OT pay is required for any hour greater than 8 worked each day, Mon through Fri. The number
+listed is the multiple of the base wage.
+OT Sa Overtime pay required for every hour worked on Saturdays
+OT Su Overtime pay required for every hour worked on Sundays
+OT Hol Overtime pay required for every hour worked on Holidays
+H/W Health/Welfare benefit
+Vac Vacation
+Trng Training
+Other Ins Employer hourly cost for any other type(s) of insurance provided for benefit of worker.
+Explanations ST. CLAIR COUNTY
+LABORERS (NORTH) - The area bounded by Route 159 to a point south of Fairview Heights and west-southwest to Route 3 at
+Monroe County line.
+PLUMBERS & PIPEFITTERS (SOUTHEAST) - That part of the county bordered by Rt. 50 on the North and West including Belleville.
+PLUMBERS (NORTHWEST) - Towns of Aloraton, Brooklyn, Cahokia, Caseyville, Centreville, Dupo, East Carondelet, E. St. Louis,
+Fairview Heights, French Village, National City, O'Fallon, Sauget, and Washington Park.
+The following list is considered as those days for which holiday rates of wages for work performed apply: New Years Day,
+Memorial Day, Fourth of July, Labor Day, Thanksgiving Day, Christmas Day and Veterans Day in some classifications/counties.
+Generally, any of these holidays which fall on a Sunday is celebrated on the following Monday. This then makes work performed
+on that Monday payable at the appropriate overtime rate for holiday pay. Common practice in a given local may alter certain
+days of celebration. If in doubt, please check with IDOL.
+Oil and chip resealing (O&C) means the application of road oils and liquid asphalt to coat an existing road surface, followed by
+application of aggregate chips or gravel to coated surface, and subsequent rolling of material to seal the surface.
+EXPLANATION OF CLASSES
+ASBESTOS - GENERAL - removal of asbestos material/mold and hazardous materials from any place in a building, including
+mechanical systems where those mechanical systems are to be removed. This includes the removal of asbestos materials/mold
+and hazardous materials from ductwork or pipes in a building when the building is to be demolished at the time or at some close
+future date.
+ASBESTOS - MECHANICAL - removal of asbestos material from mechanical systems, such as pipes, ducts, and boilers, where the
+mechanical systems are to remain.
+CERAMIC TILE FINISHER AND MARBLE FINISHER
+The handling, at the building site, of all sand, cement, tile, marble or stone and all other materials that may be used and installed
+by [a] tile layer or marble mason. In addition, the grouting, cleaning, sealing, and mixing on the job site, and all other work as
+
+required in assisting the setter. The term "Ceramic" is used for naming the classification only and is in no way a limitation of the
+product handled. Ceramic takes into consideration most hard tiles.
+ELECTRONIC SYSTEMS TECHNICIAN
+Installation, service and maintenance of low-voltage systems which utilizes the transmission and/or transference of voice, sound,
+vision, or digital for commercial, education, security and entertainment purposes for the following: TV monitoring and
+surveillance, background/foreground music, intercom and telephone interconnect, field programming, inventory control systems,
+microwave transmission, multi-media, multiplex, radio page, school, intercom and sound burglar alarms and low voltage master
+clock systems.
+Excluded from this classification are energy management systems, life safety systems, supervisory controls and data acquisition
+systems not intrinsic with the above listed systems, fire alarm systems, nurse call systems and raceways exceeding fifteen feet in
+length.
+OPERATING ENGINEER - BUILDING
+GROUP I. Cranes, Dragline, Shovels, Skimmer Scoops, Clamshells or Derrick Boats, Pile Drivers, Crane-Type Backhoes, Asphalt
+Plant Operators, Concrete Plant Operators, Dredges, Asphalt Spreading Machines, All Locomotives, Cable Ways or Tower
+Machines, Hoists, Hydraulic Backhoes, Ditching Machines or Backfiller, Cherrypickers, Overhead Cranes, Roller - Steam or Gas,
+Concrete Pavers, Excavators, Concrete Breakers, Concrete Pumps, Bulk Cement Plants, Cement Pumps, Derrick-Type Drills, Boat
+Operators, Motor Graders or Pushcats, Scoops or Tournapulls, Bulldozers, Endloaders or Fork Lifts, Power Blade or Elevating
+Graders, Winch Cats, Boom or Winch Trucks or Boom Tractors, Pipe Wrapping or Painting Machines, Asphalt Plant Engineer,
+Journeyman Lubricating Engineer, Drills (other than Derrick Type), Mud Jacks, or Well Drilling Machines, Boring Machines or Track
+Jacks, Mixers, Conveyors (Two), Air Compressors (Two), Water Pumps regardless of size (Two), Welding Machines (Two), Siphons
+or Jets (Two), Winch Heads or Apparatuses (Two), Light Plants (Two), All Tractors regardless of size (straight tractor only), Fireman
+on Stationary Boilers, Automatic Elevators, Form Grading Machines, Finishing Machines, Power Sub-Grader or Ribbon Machines,
+Longitudinal Floats, Distributor Operators on Trucks, Winch Heads or Apparatuses (One), Mobil Track air and heaters (two to five),
+Heavy Equipment Greaser, Relief Operator, Assistant Master Mechanic and Heavy Duty Mechanic, self-propelled concrete saws of
+all types and sizes with their attachments, gob-hoppers, excavators all sizes, the repair and greasing of all diesel hammers, the
+operation and set-up of bidwells, water blasters of all sizes and their clutches, hydraulic jacks where used for hoisting, operation
+of log skidders, iceolators used on and off of pipeline, condor cranes, bow boats, survey boats, bobcats and all their attachments,
+skid steer loaders and all their attachments, creter cranes, batch plants, operator (all sizes), self propelled roto mills, operation of
+conveyor systems of any size and any configuration, operation, repair and service of all vibratory hammers, all power pacs and
+their controls regardless of location, curtains or brush burning machines, stump cutter machines, Nail launchers when mounted
+on a machine or self-propelled, operation of con-cover machines, and all Operators except those listed below).
+GROUP II. Assistant Operators.
+GROUP III. Air Compressors (One), Water Pumps, regardless of Size (One), Waterblasters (one), Welding Machine (One), Mixers
+(One Bag), Conveyor (One), Siphon or Jet (One), Light Plant (One), Heater (One), Immobile Track Air (One), and Self Propelled
+Walk-Behind Rollers.
+GROUP IV. Asphalt Spreader Oilers, Fireman on Whirlies and Heavy Equipment Oilers, Truck Cranes, Dredges, Monigans, Large
+Cranes - (Over 65-ton rated capacity) Concrete Plant Oiler, Blacktop Plant Oiler, and Creter Crane Oiler (when required).
+GROUP V. Oiler.
+GROUP VI. Operators on equipment with Booms,including jibs, 100 feet and over, and less than 150 feet long.
+GROUP VII. Operators on equipment with Booms, including jibs, 150 feet and over, and less than 200 feet long.
+
+GROUP VIII. Operators on Equipment with Booms, including jibs, 200 feet and over; Tower Cranes; and Whirlie Cranes.
+GROUP IX. Master Mechanic
+OPERATING ENGINEERS - Highway
+GROUP I. Cranes, Dragline, Shovels, Skimmer Scoops, Clamshells or Derrick Boats, Pile Drivers, Crane-Type Backhoes, Asphalt
+Plant Operators, Concrete Plant Operators, Dredges, Asphalt Spreading Machines, All Locomotives, Cable Ways or Tower
+Machines, Hoists, Hydraulic Backhoes, Ditching Machines or Backfiller, Cherrypickers, Overhead Cranes, Roller - Steam or Gas,
+Concrete Pavers, Excavators, Concrete Breakers, Concrete Pumps, Bulk Cement Plants, Cement Pumps, Derrick-Type Drills, Boat
+Operators, Motor Graders or Pushcats, Scoops or Tournapulls, Bulldozers, Endloaders or Fork Lifts, Power Blade or Elevating
+Graders, Winch Cats, Boom or Winch Trucks or Boom Tractors, Pipe Wrapping or Painting Machines, Asphalt Plant Engineer,
+Journeyman Lubricating Engineer, Drills (other than Derrick Type), Mud Jacks, Well Drilling Machines, Boring Machines, Track
+Jacks, Mixers, Conveyors (Two), Air Compressors (Two), Water Pumps regardless of size (Two), Welding Machines (Two), Siphons
+or Jets (Two), Winch Heads or Apparatuses (Two), Light Plants (Two), All Tractors regardless of size (straight tractor only), Fireman
+on Stationary Boilers, Automatic Elevators, Form Grading Machines, Finishing Machines, Power Sub-Grader or Ribbon Machines,
+Longitudinal Floats, Distributor Operators on Trucks, Winch Heads or Apparatuses (One), Mobil Track air and heaters (two to five),
+Heavy Equipment Greaser, Relief Operator, Assistant Master Mechanic and Heavy Duty Mechanic, self-propelled concrete saws of
+all types and sizes with their attachments, gob-hoppers, excavators all sizes, the repair and greasing of all diesel hammers, the
+operation and set-up of bidwells, water blasters of all sizes and their clutches, hydraulic jacks where used for hoisting, operation
+of log skidders, iceolators used on and off of pipeline, condor cranes, bow boats, survey boats, bobcats and all their attachments,
+skid steer loaders and all their attachments, creter cranes, batch plants, operator (all sizes), self propelled roto mills, operation of
+conveyor systems of any size and any configuration, operation, repair and service of all vibratory hammers, all power pacs and
+their controls regardless of location, curtains or brush burning machines, stump cutter machines, Nail launchers when mounted
+on a machine or self-propelled, operation of con-cover machines, and all Operators (except those listed below).
+GROUP II. Assistant Operators.
+GROUP III. Air Compressors (One), Water Pumps, regardless of Size (One), Waterblasters (one), Welding Machine (One), Mixers
+(One Bag), Conveyor (One), Siphon or Jet (One), Light Plant (One), Heater (One), Immobile Track Air (One), and Self Propelled
+Walk-Behind Rollers.
+GROUP IV. Asphalt Spreader Oilers, Fireman on Whirlies and Heavy Equipment Oilers, Truck Cranes, Dredges, Monigans, Large
+Cranes - (Over 65-ton rated capacity) Concrete Plant Oiler, Blacktop Plant Oiler, and Creter Crane Oiler (when required).
+GROUP V. Oiler.
+GROUP VI. Operators on equipment with Booms, including jibs, 100 feet and over, and less than 150 feet long.
+GROUP VII. Operators on equipment with Booms, including jibs, 150 feet and over, and less than 200 feet long.
+GROUP VIII. Operators on Equipment with Booms, including jibs, 200 feet and over; Tower Cranes; and Whirlie Cranes.
+GROUP IX. Mechanic
+TRUCK DRIVER - BUILDING, HEAVY AND HIGHWAY CONSTRUCTION Class 1. Drivers on 2 axle trucks hauling less than 9 ton. Air
+compressor and welding machines and brooms, including those pulled by separate units, truck driver helpers, warehouse
+employees, mechanic helpers, greasers and tiremen, pickup trucks when hauling materials, tools, or workers to and from and onthe-job site, and fork lifts up to 6,000 lb. capacity.
+Class 2. Two or three axle trucks hauling more than 9 ton but hauling less than 16 ton. A-frame winch trucks, hydrolift trucks,
+
+vactor trucks or similar equipment when used for transportation purposes. Fork lifts over 6,000 lb. capacity, winch trucks, four
+axle combination units, and ticket writers.
+Class 3. Two, three or four axle trucks hauling 16 ton or more. Drivers on water pulls, articulated dump trucks, mechanics and
+working forepersons, and dispatchers. Five axle or more combination units.
+Class 4. Low Boy and Oil Distributors.
+Class 5. Drivers who require special protective clothing while employed on hazardous waste work. TRUCK DRIVER - OIL AND
+CHIP RESEALING ONLY.
+This shall encompass laborers, workers and mechanics who drive contractor or subcontractor owned, leased, or hired pickup,
+dump, service, or oil distributor trucks. The work includes transporting materials and equipment (including but not limited to,
+oils, aggregate supplies, parts, machinery and tools) to or from the job site; distributing oil or liquid asphalt and aggregate; stock
+piling material when in connection with the actual oil and chip contract. The Truck Driver (Oil & Chip Resealing) wage
+classification does not include supplier delivered materials.
+TERRAZZO FINISHER
+The handling of all materials used for Mosaic and Terrazzo work including preparing, mixing by hand, by mixing machine or
+transporting of pre-mixed materials and distributing with shovel, rake, hoe, or pail, all kinds of concrete foundations necessary for
+Mosaic and Terrazzo work, all cement terrazzo, magnesite terrazzo, Do-O-Tex terrazzo, epoxy matrix ter-razzo, exposed
+aggregate, rustic or rough washed for exterior or interior of buildings placed either by machine or by hand, and any other kind of
+mixture of plastics composed of chips or granules when mixed with cement, rubber, neoprene, vinyl, magnesium chloride or any
+other resinous or chemical substances used for seamless flooring systems, and all other building materials, all similar materials
+and all precast terrazzo work on jobs, all scratch coat used for Mosaic and Terrazzo work and sub-bed, tar paper and wire mesh
+(2x2 etc.) or lath. The rubbing, grinding, cleaning and finishing of same either by hand or by machine or by terrazzo resurfacing
+equipment on new or existing floors. When necessary finishers shall be allowed to assist the mechanics to spread sand bed, lay
+tarpaper and wire mesh (2x2 etc.) or lath. The finishing of cement floors where additional aggregate of stone is added by
+spreading or sprinkling on top of the finished base, and troweled or rolled into the finish and then the surface is ground by
+grinding machines.
+Other Classifications of Work:
+For definitions of classifications not otherwise set out, the Department generally has on file such definitions which are available. If
+a task to be performed is not subject to one of the classifications of pay set out, the Department will upon being contacted state
+which neighboring county has such a classification and provide such rate, such rate being deemed to exist by reference in this
+document. If no neighboring county rate applies to the task, the Department shall undertake a special determination, such
+special determination being then deemed to have existed under this determination. If a project requires these, or any
+classification not listed, please contact IDOL at 217-782-1710 for wage rates or clarifications.
+LANDSCAPING
+Landscaping work falls under the existing classifications for laborer, operating engineer and truck driver. The work performed by
+landscape plantsman and landscape laborer is covered by the existing classification of laborer. The work performed by
+landscape operators (regardless of equipment used or its size) is covered by the classifications of operating engineer. The work
+performed by landscape truck drivers (regardless of size of truck driven) is covered by the classifications of truck driver.

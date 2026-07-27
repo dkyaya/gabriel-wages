@@ -1,0 +1,2754 @@
+ILLINOIS STATE LABOR RELATIONS BOARD
+INTEREST ARBITRATION
+__________________________
+In the Matter of the Arbitration
+
+Before
+
+between
+
+HARVEY A. NATHAN,
+Sole Arbitrator
+
+VILLAGE OF LIBERTYVILLE, IL.
+AND
+LIBERTYVILLE PROFESSIONAL
+FIREFIGHTERS ASSOCIATION,
+INTERNATIONAL ASSOCIATION
+OF FIRE FIGHTERS, LOCAL 3892
+Hearing Held:
+
+ISLRB No. S-MA-03-215
+
+April 26, June 28, July 22, 2004 (Mediation Sessions)
+September 30, October 1, November 4, 17, 30,
+December 1,2004,
+January14, 17, 18, 26,
+February 23, 2005, March 7, 2005 (Executive Session)
+
+Final Offers Exchanged:
+
+March 2, 2005
+
+Briefs Exchanged:
+
+July 29, 2005
+
+For the Employer:
+
+Terrence T. Creamer
+Kyle B. Johansen
+Franczek Sullivan P.C.
+
+For the Union:
+
+O P I N I O N
+
+J. Dale Berry,
+Cornfield and Feldman
+A N D
+1
+
+A W A R D
+
+TABLE OF CONTENTS
+I. Introduction
+
+Page 3
+
+II. Statutory Requirements
+
+6
+
+III. The Issues
+
+7
+
+IV. Discussion of the Issues
+
+10
+
+A. Economic Issues
+
+10
+
+1. Wages
+
+10
+
+2. Pay Day
+
+17
+
+3. Assignment of Overtime Work
+
+19
+
+4. Hireback
+
+33
+
+5. Layoff and Recall
+
+43
+
+6. Personal Leave Days
+
+48
+
+7. Retroactivity
+
+52
+
+B. Non-Economic Issues
+1. Duties
+
+55
+
+2. Assignments and Transfers
+
+59
+
+3. Duty Trades
+
+64
+
+4. Residency
+
+73
+
+5. Promotion Re-opener
+
+76
+
+Award
+
+79
+? 2?
+
+I. INTRODUCTION
+
+This is an interest arbitration proceeding held pursuant to Section 14 of the Illinois
+Public Labor Relations Act (5 ILL 315/14), hereinafter referred to as the "Act," and the Rules
+and Regulations of the Illinois Labor Relations Board ("Board"). The parties are Village of
+Libertyville, IL (“Employer" or “Village”) and International Association of Fire Fighters, Local
+3892 (“Union”).
+The Village of Libertyville is a nine square mile non-home rule municipality located in
+Lake County, approximately 37 miles north of downtown Chicago. It has a population of
+almost 21,000 and was incorporated in 1882. Its governing organization consists of a Village
+president and six Trustees. A Village Administrator and Assistant Administrator oversee the
+day-to-day operations. The Village employs 183 people within several departments, most of
+which are unorganized (unrepresented by a labor organization). The police department is
+represented by Lodge 33 of the Illinois Fraternal Order of Police. The fire department is the
+other organized department.
+The Village maintains three fire stations, one of which is located within the
+Libertyville Township Fire Protection District in Lake Bluff, Illinois (“FPD”).1 The Village
+provides fire fighting and ambulance services to the FPD pursuant to a long-standing
+contractual arrangement. The system is integrated so that all stations service the two
+1
+
+The FPD was organized to provide fire protection services to unincorporated areas of
+? 3?
+
+jurisdictions and employees assigned to one station may be temporarily assigned to one of the
+other stations. However, nine firefighters, most of the employees assigned to station 3, are
+actually supplied by an independent contractor, Paramedic Services of Illinois (“PSI”).2 In
+other words, the Fire Protection District functions merely as a taxing conduit because it
+contracts with the Village to provide the services the FPD was created for, and the Village
+then contracts out most of that work to a private company. The commanding officer for
+station 3, the FPD station, is a paid-on-call “lieutenant”moonlighting from his regular job as
+an assistant chief of another municipality.
+The fire department employs one chief, four assistant chiefs, eight lieutenants, and 19
+firefighter/paramedics as regular employees. The department also utilizes a number of paidon-call (“POC”) employees as a regular part of the workforce (in addition to the nine PSI
+firefighters.)3 The department’
+s budget for 2004-2005 was approximately $4.4 million, of
+which nearly $2 million was funded through the Village’
+s agreement with the FPD.4
+The Union was certified as the bargaining agent for all regularly employed
+Libertyville Township which includes portions of the Abbott Laboratories complex.
+The PSI firefighters are not hired pursuant to the merit procedures established by the
+Libertyville Police and Fire Commission, which otherwise sets the standards and administers the
+hiring of regular firefighters.
+2
+
+As with the PSI personnel, POC firefighters have not gone through the employment process
+administered by the Fire and Police Commission although they otherwise meet the minimum
+requirements for certification by the State of Illinois.
+3
+
+The Village does not make an inability to pay argument in this case. The Village has, and
+the arbitrator so finds, the resources to pay any of the proposals in this arbitration.
+4
+
+? 4?
+
+firefighter/paramedics on March 8, 1999, following a difficult organizational campaign marked
+by many inappropriate comments from management and the settlement of an unfair labor
+practice complaint.5 Following certification the parties engaged in extensive collective
+bargaining over a two year period which ended with an interest arbitration proceeding before
+Arbitrator Robert Perkovich. During the pendency of that arbitration the parties reached a
+settlement and their first contract was signed on July 10, 2001. During the term of that
+agreement, which expired on April 30, 2003, the parties experienced numerous grievances,
+several of which went to arbitration, and a high turnover of employees.6
+The parties began negotiations for their second agreement on March 6, 2003. They
+had several bargaining sessions including some before a federal mediator. The arbitrator was
+notified of his appointment to this case on December 23, 2003. Thereafter three mediation
+
+The Village argues that misconduct which occurred several years ago during the
+organizational campaign is ancient history and should not be a consideration in this case.
+Unfortunately, the evidence of record indicates continuing hostility toward those firefighters who
+actively supported the Union and an atmosphere of harassment and tension in the workplace which
+are, to this observer, clearly related to the issues in this case. The briefs by both sides address the
+issues in terms of the personalities and the operational difficulties caused by these personalities. It is
+disingenuous for the Village to argue on the one hand that the difficulties surrounding the Union’
+s
+emergence are stale and on the other hand focus as it does on the personalities of the Union
+leadership and the troubles they have fostered. Each arbitration case must be considered within the
+context of the unique relationship which the parties have created. Will County Board/Sheriff of Will
+County and AFSCME Council 31, Local 2961, S-MA-88-09 (Nathan, 1988). In this case the
+bargaining history, including hostility between the parties emanating from the Union’
+s organization is
+a critical factor. Village of Oak Park and International Association of Fire Fighters, Local No. 95, S-MA03-104 (Dichter, 2004).
+5
+
+The department has had an almost 100% turnover since the Union was certified, mostly
+through resignations.
+6
+
+? 5?
+
+sessions were held and a number of outstanding issues were resolved. The arbitration hearing
+was formally convened on September 30, 2004.7
+The parties further agreed that for the purposes of this arbitration the comparable
+communities pursuant to Sec. 14(h)(4) of the Act are:
+Bensenville
+Buffalo Grove
+Gurnee
+Lake Zurich
+Morton Grove
+
+Northbrook
+Rolling Meadows
+St. Charles
+Villa Park
+Wheeling
+
+II. STATUTORY REQUIREMENTS
+Section 14(h) of the Act provides that the arbitration panel shall base its
+findings, opinions and order upon the following factors, as applicable:
+"(1) The lawful authority of the employer.
+"(2) Stipulations of the parties.
+"(3) The interests and welfare of the public and the financial ability of the unit of
+government to meet those costs.
+"(4) Comparison of the wages, hours and conditions of employment of the employees
+involved in the arbitration proceeding with the wages, hours and conditions of
+employment of other employees performing similar services and with other employees
+generally:
+"(A) In public employment in comparable communities.
+"(B) In private employment in comparable communities.
+
+At the commencement of the hearing the parties stipulated to several ground rules,
+including: waiver of the 15 day rule for the commencement of the hearing (Sec. 1230.90(a) of the
+Board’
+s Rules and Regulations), waiver of a tripartite panel pursuant to Sec.14(p) of the Act,
+agreement that the procedural pre-requisites for the convening of the hearing have been met, and
+that the arbitrator has jurisdiction and authority to rule on those mandatory subjects of bargaining
+submitted to it as authorized by the Act.
+7
+
+? 6?
+
+"(5) The average consumer prices for goods and services, commonly known as the cost
+of living,
+"(6) The overall compensation presently received by the employees, including direct
+wage compensation, vacations, holidays and other excused time, insurance and
+pensions, medical and hospitalization benefits, and the continuity and stability of
+employment and all other benefits received.
+"(7) Changes in any of the foregoing circumstances during the pendency of the
+arbitration proceedings.
+"(8) Such other factors not confined to the foregoing, which are normally or
+traditionally taken into consideration in the determination of wages, hours and
+conditions of employment through voluntary collective bargaining, mediation, fact
+finding arbitration, or otherwise between the parties, in the public service or private
+employment."
+
+III. THE ISSUES
+At the conclusion of the hearing the parties agreed that the term of the Agreement
+under consideration would be five (5) years, from May 1, 2003 through April 30, 2008. Prior
+to the submission of briefs the Union accepted the Village’
+s final offer for insurance coverage.
+Those two issues are no longer before the arbitrator.
+There are 12 issues before the arbitrator. The parties are in agreement that seven
+issues are economic and four are non-economic. They disagree as to the last issue, that of
+“duty trades.” Section 14(g) of the Act provides that the arbitrator shall determine which
+issues are economic and that determination shall be final. As to economic issues the
+arbitrator is bound to select the final offer which in the opinion of the arbitrator mostly nearly
+complies with the statutory factors set forth in Section 14 (h) of the Act. As to noneconomic issues “the arbitrator may either select the final offer of a party, or he may formulate
+? 7?
+
+a unique offer, building on the two advanced.”Illinois Association of Firefighters, IAFF Local
+717, 333 Ill. App. 3d 364, 374 (1st Dist. 2003), enforcing, No. S-MA-98-230 (Berman, 1999).8
+A “duty trade”is an exchange of shift assignments between firefighters. It is allowed
+within organized fire departments generally, universally accepted by the comparable
+jurisdictions and has been permitted in Libertyville. The terms of the Agreement addressing
+duty trades relate to the procedure for effectuating them. It is a cost neutral benefit to
+employees. A higher paid employee might substitute for a lower paid employee but the
+reverse is true at the other end of the exchange. In this case the Union is seeking to
+streamline the procedure for duty trades and to allow trades within trades, i.e., allowing an
+employee on a trade to trade with a third employee. The Village argues that duty trades are
+an “economic”issue because if an employee on a trade is absent the department might have
+to “hire back”another employee with special qualifications, and this would have an economic
+impact.
+The Village’
+s argument is inapt because the essence of the proposal is cost neutral.
+Absences might occur at any time and under any circumstances. If the Village’
+s argument
+were correct then any condition of employment might be turned into an economic one by an
+
+As stated by Arbitrator Berman in the Cicero case, “I am not bound by the factors that
+govern ‘
+economic interest arbitration,’but to the extent that these factors are appropriate, I shall
+consider them.”S-MA-98-230 (Berman 1999).
+8
+
+? 8?
+
+intervening absence. For example, residency, an admittedly non-economic issue, could be
+arguably construed as an economic issue if the Village were required to hire back employees
+during inclement weather when scheduled firefighters were unable to get to work due to the
+distance they had to travel. The economic impact is the result of an unrelated intervening
+circumstance and not to the procedure itself under consideration. Accordingly, the issue of
+duty trades will be examined as a non-economic issue.
+In summary form, the twelve issues in arbitration are as follows:
+Economic
+
+7. Retroactivity: Should retroactivity be
+applied to employees who have left
+the bargaining unit prior to the date
+of the arbitration award.
+
+1. Wages: Schedule increase and new step.
+2. Payday: When earned overtime and
+premium pay should be disbursed.
+3. Assignment of Overtime: Whether
+bargaining unit employees should
+be given preference for overtime
+assignments.
+4. Hireback (overtime): Equalization of
+hireback opportunities among fulltime officers and full-time
+firefighters.
+5. Layoff: Preference for regular full-time
+firefighters over temporary, parttime or outside contractor
+employees.
+6. Personal leave days: How many personal
+leave days should there be
+
+? 9?
+
+Non-Economic
+
+3. Residency: Should boundaries be
+expanded to least restrictive
+standard applied to other Village
+employees.
+
+1. Duties: Should full-time bargaining unit
+employees have preference over
+outside personnel in the assignment
+of
+driver/engineer
+and
+officer/paramedic in charge.
+
+4. Duty Trades: Should the procedures for
+trades among comparably qualified
+employees be expanded.
+
+2. Assignments and Transfers: Should shift
+vacancies and specialized job
+assignments vacancies be posted for
+bidding.
+
+5. Re-opener: Under what conditions
+should the Agreement be reopened
+to negotiate the subject of
+promotions.
+
+IV. DISCUSSION OF THE ISSUES
+A. Economic Issues
+1. Wages:
+Village Proposal
+
+Union Proposal
+Effective 5/1/03, increase all steps 3.25%
+
+Effective 5/1/03, increase all steps 3.00%
+
+Effective 5/1/04, create a Step 8 at 5% above
+Step 7. Increase all steps by 3.25%
+
+Effective 5/1/04, increase all steps 3.00%
+Effective 5/1/05, increase all steps 3.00%
+
+Effective 5/1/05, increase all steps by 3.25%
+Effective 5/1/06, increase all steps 3.25%
+Effective 5/1/06, increase all steps by 3.25%
+Effective 5/1/07, increase all steps 3.25%
+Effective 5/1/07, increase all steps by 3.25%
+Effective 11/1/07, increase all steps by .25%
+
+Union Schedule
+Date
+
+5/1/05
+5/1/04
+
+5/1/03
+
+11/1/07
+
+Start
+
+5/1/07
+5/1/06
+
+48,979
+47,437
+
+$45,944
+? 10?
+
+52,345
+52,214
+
+50,571
+
+Aft 1 yr Aft 2 yr Aft 3 yr Aft 4 yr Aft 5 yr Aft 6 yr Aft 7 yr Aft 8 yr
+$48,241 $50,677 $53,178 $55,845 $58,640 $61,561 $64,639
+49,809
+
+52,314
+
+54,906
+
+57,660
+
+60,545
+
+63,562
+
+66,739 $70,076
+
+51,428
+
+54,014
+
+56,691
+
+59,634
+
+62,512
+
+65,627
+
+68,908
+
+72,354
+
+53,009
+
+55,770
+
+58,533
+
+61,469
+
+64,544
+
+67,760
+
+71,148
+
+74,705
+
+54,825
+
+57,582
+
+60,435
+
+63,467
+
+66,642
+
+69,962
+
+73,460
+
+77,133
+
+54,962
+
+57,726
+
+60,586
+
+63,625
+
+66,808
+
+70,137
+
+73,644
+
+77,325
+
+Village Schedule
+Date
+
+Start
+
+Aft 1 yr
+
+Aft 2 yrs Aft 3 yrs Aft 4 yrs Aft 5 yrs Aft 6 yrs Aft 7 yrs
+
+5/1/03
+
+$45,833
+
+$48,125
+
+$50,544
+
+$53,049
+
+$55,710
+
+$58,497
+
+$61,412
+
+$64,482
+
+5/1/04
+
+47,208
+
+49,569
+
+52,060
+
+54,641
+
+57,381
+
+60,252
+
+63,254
+
+66,417
+
+5/1/05
+
+48,624
+
+51,056
+
+53,622
+
+56,280
+
+59,102
+
+62,060
+
+65,152
+
+68,410
+
+5/1/06
+
+50,204
+
+52,715
+
+55,365
+
+58,109
+
+61,023
+
+64,076
+
+67,269
+
+70,633
+
+5/1/07
+
+51,836
+
+54,429
+
+57,164
+
+59,997
+
+63,006
+
+66,158
+
+69,455
+
+72,929
+
+In the parties’first agreement, for the period of 5/1/99 through 4/30/03, the following
+salary adjustments were made:
+
+? 11?
+
+Eff 5/1/99
+
+Eff 5/1/00
+
+Eff 5/1/01
+
+Eff 5/1/02
+
+3.5%
+
+3.5%
+
+3.25%
+
+3.25%
+
+plus add’
+l step
+at 2.5%
+
+increase in new
+step of 2.5%
+
+Eff 11/1/02
+.25%
+
+This history can be compared to the current proposals with these charts:
+Village Proposal
+Eff 5/1/03
+
+Eff 5/1/04
+
+Eff 5/1/05
+
+Eff 5/1/06
+
+Eff 5/1/07
+
+3.00%
+
+3.00%
+
+3.00%
+
+3.25%
+
+3.25%
+
+Eff 11/1/07
+
+Union Proposal
+3.25%
+
+3.25%
+
+3.25%
+
+3.25%
+
+3.25%
+
+.25%
+
+plus add’
+l step
+at 5.0%
+As can be seen from the above charts, the Union’
+s proposal for wages is closer to the
+parties’practice than is the Village’
+s This includes the new step inasmuch as a new step was
+also negotiated in the last agreement.9 The Village’
+s 3.00% increase for the first 3 years of the
+contract is below the historic adjustments.10
+
+The Village has offered inadequate
+
+If it is slighter smaller in percentage increases than it was in the first contract this is offset by
+the earlier implementation of the additional step.
+9
+
+The Village’
+s offer of 3% for the first 3 years instead of a more traditional 3.25% or 3.50%
+results in a nearly 1% differential in wages over the life of the Agreement without regard to the new
+step. If the new step is considered as a necessary factor to maintain the differential with lieutenants,
+just as it did under the last agreement, the difference between the two proposals becomes striking by
+the end of the Agreement. To justify the 3% with this history the Village should demonstrate some
+compelling need.
+10
+
+? 12?
+
+explanations for the disparity, which include such generalities as: There has been a revenue
+stagnation, the economy is weak and that there is a cap on its taxing ability. It has offered
+some evidence that the Village has trimmed off some discretionary spending from the budget
+and that it has not filled one vacancy in the firefighter ranks. However, the employees in this
+case have not received a wage increase for more than two years and the Village has therefore
+had the use of their money during this time. Additionally, real estate values have greatly
+increased in the past several years and this will translate into greater tax revenue.
+Significantly, the Village does not make an inability to pay argument. Indeed its recent
+purchase of expensive fire fighting equipment (the “quint”) and its large increase in
+lieutenant salaries indicate that where the money goes are matters of choice and not
+economy. While it is never a function of an arbitrator to pass judgment on how a municipal
+employer spends its money, how it does so affects the probity of the employer’
+s argument that
+granting the Union’
+s wage demands will create hardships.11
+
+In this case the Village’
+s
+
+substantial wage increase to lieutenants undercuts it claim of limited revenues.
+The arbitrator has considered the lower wage increases for unionized police officers.
+These are not persuasive because the police wages are unsettled for a substantial portion of this
+Agreement’
+s term and in the last negotiations the police union obtained a very favorable adjustment
+in work schedules. Pay practices for unrepresented employees are irrelevant because they cover
+numerous classifications and pay grades and, of course, these employees have little say in the setting
+of the pay scales. The arbitrator’
+s impression is that the Village’
+s proposal of 3% for the first three
+years of the Agreement is more related to its desire for internal parity with the vast number of
+unrepresented employees than with the merits of the firefighter/paramedics salary schedule standing
+alone. While this is understandable, comparisons with unrepresented employees, who have little say
+in their collective salary levels, is not probative in determining what is appropriate for a small unit of
+represented sworn employees.
+11
+
+? 13?
+
+In 2002 or 2003, after the execution of its first collective bargaining agreement for
+firefighter/paramedics, the Village adjusted its pay structure for fire department lieutenants
+and effective in 2003 their salaries went up 9.6%. This affected the traditional differential
+between firefighter/paramedics and lieutenants which had been just below 16%.12
+
+The
+
+Union’
+s proposal for an additional step adjusts the salary schedule to reflect the historic
+differentiation just as the additional step added in 2001 remedied a distortion when the
+lieutenants schedule was greatly enriched in 2000. Assuming the lieutenants stay on course
+and do not have their salaries greatly enriched as in 2000 and 2003 beyond the 3.25% basic
+increase proposed for the firefighter/paramedics, the rank differential will become 16.67% in
+2005 and remain at that level for the remainder of the Agreement. In contrast, the Village’
+s
+wage proposal would create a disparity between firefighter/paramedics and lieutenants at
+more than 23%.13
+Work in a fire department is a team effort unlike in any other unit of public employees.
+Whether it be emergency medical responses or fire suppression, lieutenants work side by side
+The Village argues that there was no historical differential between the two ranks.
+However, firefighters were on step 14 of the Village’
+s pay plan and lieutenants were on step 17. After
+the advent of collective bargaining lieutenants were put on step 18. As will be discussed below, rank
+differential has been an important ingredient in wage negotiations in fire departments because of the
+close working relationship between the two ranks.
+12
+
+While the arbitrator is not suggesting that lieutenants do not deserve the increase they
+received, if these are times requiring economic restraint the sharp increase for lieutenants seems
+contradictory. There was no competitive pressure to increase lieutenants’pay this severely.
+Additionally, the increase coming as it did soon after the implementation of the first contract with
+the rank and file, coupled with the troubled birth of the unionization of the firefighter/paramedics,
+implies a connection between unionization and the wage increase for the non-unit lieutenants.
+13
+
+? 14?
+
+with firefighter/paramedics and the success of their endeavors as well as their mutual safety is
+dependent on teamwork and cooperation. It is important to avoid creating conflicts between
+these ranks which an artificial disparity in wages would exacerbate. Unfortunately, as will be
+discussed below, too much of that has occurred in this fire department and maintaining a
+disparity as created by the Village’
+s proposal is not in the public interest.14
+Other arbitrators have commented on the significance of rank differential. In City of
+Aurora and Local 99, IAFF, FMCS Case No. 91-00965 (Dilts, 1991), the arbitrator
+commented that a comparison of fire management personnel with bargaining unit employees
+was “the most valid”internal comparison for the determination of appropriate wages for the
+bargaining unit employees. City of Aurora at p.9.15 In Village of Oak Park, S-MA-91-16
+(Gundermann, 1992), the arbitrator took special note of the wage disparity between
+firefighters and non-bargaining unit lieutenants. In that case the employer gave an outsized
+increase to lieutenants in response to an earlier award which narrowed the gap between
+lieutenants and firefighters to a more traditional level.
+
+In response to Oak Park’
+s
+
+Stated another way: The record in this case amply demonstrates a divisive and unseemly
+hostility between the department’
+s management and the firefighters who support the Union. The
+selection of the Union’
+s proposal for wage increases in this case is not the result of this conflict,
+notwithstanding the Union’
+s strained argument that compensation should somehow track the work
+environment. Rather, the arbitrator approaches this problem from another direction and reaches the
+decision that the Village’
+s final offer with no step increase is unacceptable because it would aggravate
+the existing personnel conflicts. For a discussion of the effects of conflict between the ranks, see
+Village of Oak Park and IAFF Local 95, S-MA-03-104 (Dichter, 2004). In this way the arbitrator
+concludes that the Village’
+s proposal for wages is not in the public interest.
+14
+
+15
+
+Cf. City of Elgin and Local 439, IAFF, [no case number given], (Fleischli, 1992).
+? 15?
+
+reinstatement of that disparity Arbitrator Gundermann awarded the union its proposed wage
+increase which included an additional step designed to address the disparity.
+The thrust of these cases leads this arbitrator to conclude that when confronted with
+competing offers an important consideration is which one best preserves a traditional wage
+differential between firefighters and lieutenants. In this case the Village’
+s 3.00% offer for the
+first three years and no increased steps over the five year period of the Agreement certainly
+does not do so.
+With regard to external comparables, one can look at the statistics and find something
+for each side. From some perspectives it can reasonably be argued that Libertyville
+firefighter/paramedics are well-paid compared to the average for firefighters among the
+comparable municipalities. But it is also true that the annual work schedule in Libertyville
+has more hours than average, which dilutes the value of the annual salary.16
+What the arbitrator finds particularly relevant is that in 2003 only one comparable
+community settled for a wage increase of 3.00 %, as proposed by the Village in this case.
+Every other comparable community managed to increase wages from 3.25% to 5.00%. These
+communities are all within a reasonable proximity of Libertyville and subject to the same
+economic pressures as this Village.17 For 2004, the increases among the comparables was
+
+For a good comparison of total compensation among the comparable communities, see
+Union Exhibit 11 which shows that Libertyville firefighter/paramedics rank 5th of 11 in career base
+pay, 9th of 11 in total cash compensation.
+16
+
+17
+
+Perhaps more importantly, these are the communities the parties stipulated as appropriate
+? 16?
+
+similar, although Morton Grove and Villa Park also had 3.00% increases. With all but two of
+the comparable communities now having settled wages for 2004, the average is still above
+3.50%, measurably higher than Libertyville’
+s offer of 3.00%.18 For 2005, seven of the ten
+comparables have resolved their firefighter wage schedules and the average wage increase is
+3.86%. The point here is not that Libertyville is somehow bound to meet the average, but,
+rather, that when most municipalities of similar size and geography as Libertyville find that
+they can manage more than 3.00%, Libertyville’
+s argument about difficult economic times,
+loses persuasiveness.
+Finally, the arbitrator notes that the overall compensation received by these employees
+is within the range of the comparables and does not warrant some special wage adjustment as
+an offsetting factor. Likewise, the arbitrator notes that the Union has indicated a willingness
+to work with the Village on changes in medical insurance. In sum, the arbitrator has
+reviewed the facts of record against the statutory criteria, particularly the interests and
+welfare of the public, comparability, revenue sources, the cost of living, overall compensation
+and the parties limited bargaining history and has concluded that the Union’
+s proposal on
+wages most nearly complies with the factors established in the statute.
+
+for comparison purposes.
+18
+
+This does not include Bensenville’
+s offer of 4.00%.
+
+? 17?
+
+2. Pay Day
+The issue here is the scope of the word “pay”in contract language that says,
+Employees shall be paid on the 5th and 20th of each month.
+Payment received on the 5th day of the month represents pay
+earned during the last half of the preceding month; i.e., from the
+16th to the end of the month. Payment on the 20th day of the
+month represents pay earned during the first 15 days of the
+month. (Emphasis added)
+Employees traditionally have received overtime earnings once a month. Evidence
+from the Village indicates that at the end of each 27 day cycle (for firefighter employees) a
+clerical employee computes the overtime earned and it is thereafter paid. When the abovequoted language was negotiated for the first collective bargaining agreement the Union was
+under the impression that overtime would now be paid bi-monthly. There were some
+discussions about this (the Union claims many discussions) at labor-management meetings
+but no changes in the practice were made. No grievance was filed. In collective bargaining
+for the new Agreement, now in arbitration, the Union proposed that the following language
+be added:
+Pay for the purpose of this Section shall be construed to include
+all pay earned (e.g., overtime, premium pay, etc.).
+The Union appears to argue that the merits of its proposal are self-evident, that
+overtime earnings are part of “pay”and employees should receive all of this “pay”twice a
+month. The Union argues that the Village’
+s position on this issue only demonstrates its
+“indifference to the interests of firefighters.”
+? 18?
+
+The Village argues that this is not a matter for collective bargaining because the
+essential nature of the dispute is the meaning of the word “pay,”and that is for the grievance
+procedure (citing Village of Algonquin and Metropolitan Alliance of Police, S-MA-95-85
+(Benn, 1996).) The Village is incorrect in this regard. The Union has every right to avoid a
+grievance arbitration by simply seeking to re-write, or clarify, the language in dispute. The
+parties’ultimate rights are at the bargaining table. In a sense, grievance arbitration is only a
+way station pending the next round of negotiations.
+There are many problems with the Union’
+s position in this case. First, it ignores the
+Village’
+s evidence that tallying overtime twice a month would be burdensome. It offered no
+evidence to rebut this. In fact, the Union offered barely any evidence at all in support of its
+proposal. As the moving party to change existing contract language it had the obligation of
+proving to the arbitrator that a change must be made. While there is certainly nothing
+inappropriate in wanting to be paid all elements of wages twice a month, there is nothing
+inherently appropriate in it either. Given the long practice of paying overtime earnings once
+a month the Union had an obligation of showing a need for the change. In this regard, the
+Union has not shown any hardship, but only that a small portion of earned income is being
+delayed every other pay day. At most this is an inconvenience. If the arbitrator is to balance
+the interests of the Village in maintaining its practice against the interests of the
+firefighter/paramedics in receiving a small portion of their earnings a little sooner, the Union
+must show something in line with the statutory criteria of Section 14 of the Act. It has not
+? 19?
+
+met this burden and its request for this change in language is denied.
+3. Assignment of Overtime Work
+This issue concerns a conflict between bargaining unit employees and regular parttime employees who are not part of the bargaining unit but who do the same work as
+bargaining unit firefighter/paramedics and work side by side with them. Prior to 1969, the
+Village employed no full-time fire fighting employees. It operated with only part-time officers
+and firefighters who were neither sworn nor enjoyed civil service protections.. In the years
+that followed, the Village hired regular full-time firefighters utilizing a police and fire
+commission, and a full-time Chief. Other officer positions were filled by part-timers who
+directed and supervised the work of the regular firefighter employees. Over time, and with
+the organization of the regular workforce by the Union, the Village employed fewer nonsworn part-time officers and they were replaced by sworn officers who were regular full-time
+employees.19 However, the Village has continued to maintain a regular workforce of parttime non-sworn firefighters. These supplemental employees have become a part of the
+routine and are regularly used on weekends, holidays and 12 hour weekday evenings shifts.
+They also respond to emergencies as needed.20
+
+19
+
+Currently there is one paid-on-call lieutenant and two paid-on-call training officers.
+
+The Village sometimes refers to these employees as “sleepers,”meaning that they are at
+the fire stations during evening and night hours. In this regard, the Village suggests that their
+primary tasks are lounging around and sleeping at the fire houses at night. It contrasts this with
+periods of time during daylight hours when fire employees have tasks and are otherwise engaged in
+20
+
+? 20?
+
+Part-time, non-sworn, personnel have basic fire fighter skills. They are licensed
+firefighters in that they have taken the necessary training to be certified at the level of
+Firefighter II. Some of these employees have other certifications including that of paramedic,
+apparatus engineer, and the like. They also participate in regular training programs
+conducted by the Village.21 These part-time employees, who the Village officially identifies as
+“paid-on-call”employees, most frequently work from 7:00 p.m. until 7:00 a.m at the fire
+stations covering temporary vacancies caused by absences, vacations, sick leave, etc. of
+regular full-time employees. However, unlike traditional paid-on-call firefighters in Illinois
+who are called in to respond to particular emergencies such as traditional volunteers, but for
+pay, these part-time employees have regular schedules, or at least a regular expectation of
+employment. Their work schedules can be planned well in advance and slotted in for night
+assignments based upon the known complement and schedules of the regular employees. In
+this case, the Village is working below its budgeted capacity for full-time regular employees
+and can do so because of the availability of the non-union part-timers. The Village readily
+admits that it does so to save money, and it believes that it has a duty to its constituency to
+save money in this way.
+non-emergency work. This description is misleading because firefighters are paid to be responders
+and their ability to sleep has nothing to do with their duties as employees. Firefighters are not piece
+workers. They are emergency public safety employees and they sleep in fire houses in order to
+facilitate their ability to respond.
+The Village argues that these part-time employees have adequate training. It does not
+argue that they are as well trained as sworn firefighters.
+21
+
+? 21?
+
+The pay for this 12 hour shift is $75.00 as opposed to the more than the $300.00 cost
+for a regular employee. The Village claims that these part-timers are fully qualified and that
+their employment saves the Village several hundred thousand dollars a year. As a result of
+this part-time labor force regular employees do not enjoy the overtime they would otherwise
+have. While this issue is generated by the Union’
+s concern about the professionalism of these
+unsworn employees, it is also triggered by the Union’
+s desire to enhance the earnings of
+bargaining unit firefighters who lose overtime opportunities as a result of the use of these
+paid-on-call employees.
+Nonetheless, and contrary to the Village’
+s well-crafted argument, there is more to this
+issue than merely who gets a bigger piece of the pie. There are concerns about the ability of
+two groups of employees with competing interests working side by side in a profession which
+demands precise teamwork to save lives and property. The major difference in the
+employment status of these two groups of firefighters is that regular full-time employees are
+sworn officers with civil service status appointed and employed under the auspices of the
+Libertyville Fire and Police Commission.22 Part-time employees, on the other hand, are “at
+will”employees. They have no civil service protections. They may be hired based upon
+
+The Illinois Municipal Code, 65 ILSC §§5/10-2.4-1,et.seq. provides that non-home rule
+municipalities (such as Libertyville) shall have a fire and police commission which shall appoint fulltime fire department employees of that municipality from eligibility lists under its control. The
+eligibility roster is determined by an open competitive examination. The terms of the termination of
+employment process are likewise under the control of the commission and require a due process
+protocol.
+22
+
+? 22?
+
+personal relationships and may be terminated at the whim of the Fire Chief. Their loyalties
+are inherently different from those with civil service protection and there is a built-in risk of
+conflict with regular employees whose tenure is protected by a collective bargaining
+agreement and the due process standards of the fire and police commission.23
+There have been conflicts between regular employees and the part-time employees. In
+one case the Village’
+s only female fire fighter quit her employment because of a dispute with a
+part-time employee who took control of an emergency medical call. There is also some
+evidence, albeit limited, that part-time employees have been seen making procedural errors.
+There is no evidence that any actual harm occurred to any member of the public because of
+these errors. But there is evidence of tension between management and the Union leadership
+arising out of the competition between what has emerged as competing groups for overtime
+and job assignments. The record in this case is replete with incidents of conflict because of
+management’
+s assignment of non-bargaining union personnel to work on teams of regular
+full-time employees. It is impossible to quantify damage done to the efficiency of the
+department because of this conflict but the presence of different workforces working side-by-
+
+Although Illinois law provides firefighters with a property interest in their jobs, this interest
+is limited to full time firefighters. 65 ILCS 5/10-2.1-26 In Toronyi v. Barrington Unit School
+District 220, Barrington Countryside Fire Protection District, et.al., US DIST LEXIS 3065, (N.D. Ill.
+2005)(Pallmeyer, J., Case No. 03 C 3949) a paid-on-call firefighter was summarily discharged
+because of his wife’
+s public statements about certain practices in Barrington schools. The U.S.
+District Court found that a paid-on-call firefighter has no state law protecting his employment and
+has no right to procedural due process prior to his termination. Toronyi at pp. 8-9, referring to Kyle
+v. City of Oak Forest, 637 F. Supp 980, 989 (N.D. Ill 1986).
+23
+
+? 23?
+
+side in Libertyville permeates this entire case and also gives rise to two other issues in
+arbitration, Layoff and Recall, and Duties (shift assignments).
+The existence of two units of certified firefighters in one department is unique among
+the comparables. Four other fire departments, in Bensenville, Gurnee, Northbrook and St.
+Charles, have paid-on-call personnel in addition to full-time members, but in each of these
+four municipalities their role is limited. There is certainly nothing like this existing in the
+Village’
+s other bargaining unit, the police department.
+The effect of the Union’
+s proposal for the distribution of overtime is that the part-time
+employees would be limited to a supplemental presence and not continue as the Village’
+s
+second fire protection and medical response force, working nights in a status equal to that of
+regular employees. In order to accomplish this the Union proposes that the language of the
+former agreement addressing the assignment of overtime work be modified so that overtime
+assignments are offered first to regular full-time employees. The Union’
+s theory is that by
+requiring the Village to offer overtime to regular employees when there are absences the need
+for paid-on-call employees will be reduced. The Union offers no calculations as to the
+financial impact of this proposal and, of course, can only speculate as to whether this will
+prompt the Village to hire additional regular full time employees from the Commission’
+s
+eligibility list. The proposed language reads as follows (new language in bold face):
+Section 7. Assignment of Overtime Work
+The fire chief or his designee(s) shall have the right to require
+overtime work and firefighters may not refuse overtime assignments.
+? 24?
+
+Whenever practicable, overtime will be scheduled on a voluntary
+basis, except for emergency situations, or except where qualified
+volunteers are not readily available. It is the objective of the Village
+to keep mandatory overtime schedule at a minimum consistent with
+the need of the Village to provide proper fire protection..
+Whenever overtime assignments become available, they shall be
+first offered as described in Article X, Section 10 to full time
+sworn members of the bargaining unit in preference to nonbargaining unit employees.
+In the event the overtime assignment is not accepted by a bargaining
+unit employee, it may be offered to a qualified non-bargaining
+unit employee.
+
+The Union argues that the ability to substitute part-time employees for sworn
+personnel has allowed the Fire Department to operate without a full complement of
+employees. According to the Union, two shifts (of the three) regularly run short one
+firefighter. The Village does not disagree. It maintains that this is intentional because of the
+cost savings involved in using part-time employees not covered by the collective bargaining
+agreement. The Union argues that in using part-time employees as a portion of a regular
+work force the Village has side-stepped the statutory scheme for the employment of sworn
+personnel.24 Cf. City of Markham v. IBT Local 726, 299 Ill. App. 3d 615 (1st Dist., 1998), a
+police case dealing with discipline and the local fire and police commission . The Union also
+relies upon People ex rel. Gasparas v. Village of Justice, 88 Ill. App. 2d 227 (1st Dist. 1967)
+This is borne out by the statistic that there are less sworn firefighters per officer in this fire
+department than in any of the comparable departments. There are twice as many firefighters on
+average in the comparable departments. While it can be argued that this only shows that the
+department is top heavy, it is more likely that the number of officers per sworn firefighter is a
+reflection of the impact of the part-time non-sworn firefighters.
+24
+
+? 25?
+
+where the court held that the fire and police commission had the exclusive right to hire both
+full-time and part-time police officers.25
+The gist of these cases is that it is unlawful, or at least improper, for a non-home rule
+municipality to hire police officers outside the ambit of the local fire and police commissions,
+and these commissions have exclusive jurisdiction over the tenure of police employees. There
+is no such case law for firefighters and given the common use of paid-on-call firefighters, this
+arbitrator finds it unlikely to be forbidden. (The Village argues that the Municipal Code is
+different for fire and police departments in this regard.) The arbitrator must therefore reject
+the Union’
+s argument that the employment of part-time paid-on-call employees is outside the
+Village’
+s authority. (See §14(h) of the Act.) Whether a municipality can systematically avoid
+the use of a fire and police commission’
+s eligibility roster by the continual hiring of paid-oncall employees, or create a shadow workforce as has occurred in Libertyville, is a matter best
+left to the courts.
+What is clear, however, is that such part-time employees have no rights and no
+protections. They are beholden to management on a day to day basis and their interests are
+necessarily different from those of regular sworn permanent employees.
+
+In Village of
+
+See also, Young v. Board of Trustees of the Police Pension Fund of the Village of Worth,
+57 Ill. App. 3d 6789 (1st Dist., 1978) where an employee was denied a pension because she had not
+been properly appointed by the fire and police commission.
+25
+
+? 26?
+
+Westchester and Illinois Firefighters Alliance, Council 1, S-MA-89-93 (!989), Arbitrator
+Herbert Berman rejected a proposal for the contracting out of paramedic services. He found
+that subcontracting work normally performed by firefighters “might subvert the interests of
+bargaining unit employees and the Union.”Slip opinion p. 27. Arbitrator Berman pointed
+out that the commingling of separate units of employees with separate standards of
+employment :
+increases the possibility of rift and imperils discipline - a result
+inconsistent with the ‘
+interests and welfare of the public’
+. ***
+Firefighting requires mutual trust, respect and teamwork; and
+the use of contract firefighter/paramedics ‘
+paid at ... substandard
+wages’and not subject to the same standards of employment as
+bargaining unit firefighters would do little to improve
+teamwork.”
+Village of Westchester, at p. 28.26
+Likewise, in Bloomingdale Fire Protection District No.1 and Bloomingdale
+Professional Fire Fighters Association Local 3272, S-MA-92-231(Nathan,1994) this
+arbitrator rejected the employer’
+s subcontracting proposal and selected the Union’
+s work
+preservation proposal. In Bloomingdale the employer had a long history of using paid-on-call
+employees. In fact, the district began with a chief and a paid-on-call staff. The issue of
+subcontracting arose several years later when the District planned on building a second fire
+Arbitrator Berman cited Allis Chalmers Mfg. Co., 39 LA 1213, 1219 (Smith 1962) for
+support on the risks of commingling and Uniroyal, Inc., 76 LA 1049, 1052 (Nolan 1981) for the
+proposition that subcontracting should not be allowed where the result is “the weakening of the
+bargaining unit or important parts of it.” Arbitrator Berman also expressed concern that the
+employment of non-unit employees to perform bargaining unit work in a fire department raised the
+likelihood of a diminution of employment opportunities for sworn personnel.
+26
+
+? 27?
+
+station. The fire chief demonstrated that the labor costs would be decreased if paramedic
+employees of an outside contractor were mixed in with regular sworn employees. The
+existing collective bargaining agreement specifically allowed for subcontracting in its
+management rights clause but it had not been utilized beyond the employment of paid-on-call
+(part-time) employees to supplement the regular force as needed. Nonetheless, the employer
+argued that it was wholly inappropriate for the arbitrator to take away a right the employer
+already had.
+The evidence in that case indicated that employees of outside contractors were
+generally less experienced than regular sworn employees and frequently used the contracting
+work as a stepping stone to regular employment in a fire department or fire protection district.
+There was also evidence that in other locations there was friction between the outside
+employees and the sworn regular employees. Based on that record this arbitrator granted the
+union’
+s work preservation proposal because the employer’
+s plan to use full-time employees of
+an outside paramedic service would circumvent the fire and police commission and that was
+contrary to Illinois public policy. The opinion reads:
+The Fire Protection Act requires that fire protection districts
+with more than fifteen employees must establish a commission to
+perform the hiring functions through competitive examination
+and other standards. The purpose of extending civil service
+protections *** is the establishment of a merit system for the
+appointment of sworn personnel. Employment cannot be based
+on favoritism, politics or some other non-objective standard.
+The present employees of the District work there because they
+have earned the right to do so. This is the public policy of the
+? 28?
+
+State of Illinois. The District’
+s proposal would enable it to
+circumvent civil service protections by delegating the hiring
+process to an outside entity. Outside contractors are not
+covered by the Fire Protection District Act, nor by any
+regulatory statute of its type. Except for *** a certain level of
+certification, the public is left unprotected from the harm civil
+service was designed to avoid.
+Of course, in the present case the issue involves part-time employees, not full-time
+paramedics as in Bloomingdale. But the principle is the same. These part-time paid-on-call
+employees are being used as substitutes for sworn employees on a regular basis. They are not
+supplementing the regular employees, called in during emergencies, but are regularly
+scheduled for12 hour shifts. They were selected not because they have passed a rigorous
+qualification process but only because they met the Chief’
+s approval, had at least minimum
+qualifications and were willing to work for $75.00 for a 12 hour shift. In the short run this
+might appear to be a good deal for the public. After all, should not elected officials
+scrupulously control the public larder? But supply and demand economic theories can be
+short-sighted when it comes to public safety. The public deserves the paramedics selected on
+merit by its fire commission, not just the ones who are willing to work for $6.25 an hour.
+The Village argues that there is no evidence that anyone has been harmed by the use
+of non-sworn fire personnel. In the sense that there is no evidence that anyone has been
+physically damaged as a direct result of using paid-on-call employees, it would seem that the
+argument has facial merit. But there is certainly evidence of conflict within the force and the
+obvious implication that efficiency has been affected. The Village is also correct that without
+? 29?
+
+evidence of harm there is no basis for the arbitrator to tamper with an established operation..
+As this arbitrator has stated many times, interest arbitration is a conservative process and
+arbitrators should tread carefully when considering the alteration of negotiated systems. Will
+County/Sheriff of Will County and AFSCME Council 31, Local 2961, S-MA-88-09 (Nathan,
+1988). Arbitration cannot be used a shortcut or as a substitute for hard bargaining.
+However, the concept of “harm”is not limited to whether any member of the public suffered
+greater damage as a result of the use of paid-on-call firefighters than would have occurred
+without them. Harm, in the context of whether there is a reason to change negotiated
+language, refers to a broader sense of impairment which includes efficiency, morale, skills and
+risk. The public need not wait until a resident dies because competing paramedics could not
+agree on who was in charge. It is sufficient that there is an identifiable risk that such a thing
+might occur.
+Additionally, the arbitral restraints expressed in Will County and the many cases
+which followed it should not be read in a vacuum. After all, the statute anticipates that
+arbitrators will make changes. The statute sets out the standards to be followed in making
+these changes. There are cases where the parties are at such a deep impasse that it is
+apparent that bargaining alone will not achieve agreement. In lieu of concerted activity such
+as a withholding of services, the law in Illinois is that interest arbitration will resolve the
+dispute. There are cases where the parties are so deeply entrenched in their bargaining
+positions and the levels of enmity are so pronounced that the award of an arbitrator on the
+? 30?
+
+actual merits of the respective proposals is required. This is such a case.
+Initially, there is no long bargaining history in Libertyville with which the arbitrator is
+tampering. Organizing which began in 1998 was brought to completion in an atmosphere of
+an unfair labor practice complaint against the Village which settlement included back pay for
+a firefighter who was terminated. The parties’first contract took years to negotiate and was
+settled during the course of an interest arbitration.
+
+The present case has involved this
+
+arbitrator for more than a year an a half and involved three formal mediation sessions, eleven
+days of hearing (more than 3000 pages of transcript and boxes of exhibits) and an executive
+session with the parties’leadership in a final attempt at settlement. The record is replete with
+instances of unfair discipline or threats of discipline. In one instance a Union leader was
+threatened with discipline because he closed the door to the dishwasher with his foot. The
+Assistant Chief involved in that incident had previously engaged in the same conduct. He is
+now the new Chief of the Fire Department. In other instances simple inquiries regarding
+assignments were construed as challenges to authority. The Union President’
+s testimony,
+which the arbitrator credits despite the Village’
+s attempt to depict him as a troublemaker, was
+that he feels as if he has a target on his back.
+Significantly, the change in the rank of firefighter has been unprecedented in this
+arbitrator’
+s experience. Since 1999 the turnover among firefighters has been nearly 80%.
+Fifteen unit employees have left the Department, most by resignation. In comparison, the
+average turnover during the same period among the comparable departments was less than
+? 31?
+
+5%. The great majority of this turnover in Libertyville occurred after the first collective
+bargaining agreement was signed in 2001. It was not simply a reaction to the Union’
+s
+organizing efforts.27
+
+It is a reasonable assumption that high turnover is not in the public
+
+interest because it affects teamwork and efficiency. The operation of this department, more so
+than in any other, depends on teamwork. Fire suppression, rescues and emergency medical
+care are performed by teams. Teams consisting of employees with competing employment
+interests are inherently less effective than those which share a commonality of employment
+interests. The unusual turnover is certainly evidence that professional firefighters will not
+work under these conditions when they are not present in neighboring departments.28
+The work of fire departments is dangerous. Employees engaged in fire suppression risk
+their lives continually. Employees must work together and gain experience with each other’
+s
+strengths and weakness to reach the peak of efficiency. There is simply no room for the type
+of internal conflict which the record in this case reflects.
+The Village recognizes the importance of having the best qualified employee on the
+job. In response to the Union’
+s proposal on another issue, that of hireback (for overtime
+work), where the Union wants less work for lieutenants and more work for firefighters, the
+Sarah Christie, the firefighter who resigned because of a conflict with a non-sworn
+employee, did so in October 2003.
+27
+
+While it might be argued that employees are more likely to change employers because of
+economic benefits, the discussion of comparable wages earlier in this Award establishes that the wage
+rates are competitive. Based on the testimony of the firefighters themselves the problem in
+Libertyville is working conditions.
+28
+
+? 32?
+
+Village argues that if a lieutenant is available for lieutenant’
+s work he should be called back in
+preference to a firefighter being called back in an “acting up”capacity. The Village’
+s
+argument is based upon safety and the public interest, that a lieutenant is better trained to do
+lieutenant’
+s work. This is precisely the Union’
+s argument regarding paid-on-call firefighters
+being used instead of sworn officers who achieved their position based upon competitive
+training. With regard to hirebacks the Village argues that anything less than the best
+available personnel “would compromise the safety of the public.”29 This is likewise true with
+paid-on-call employees working in place of available sworn full-time firefighters.
+There is a compelling need for a change in the way in which overtime is assigned to
+paid-on-call rather than regular sworn employees. The present system has caused friction in
+the ranks, has contributed to massive turnover and has resulted in a compromise with public
+safety. Libertyville is an outstanding community. Its citizens should not have to go to bed at
+night with protection by part-time irregulars selected for their jobs on a non-competitive
+basis. Primarily, however, action must be taken to alleviate a system of competing work
+forces. This compelling need requires that the arbitrator select the Union’
+s final offer for the
+assignment of overtime. Accord, University of Illinois at Chicago and Illinois Fraternal Order
+of Police Labor Council, S-MA-96-240 (Briggs, 1998); Village of Lombard and Lombard
+Professional Firefighters Association, Local 3009, IAFF, S-MA-97-199 (Briggs, 1999).30
+
+29
+
+Village’
+s Brief at p. 70.
+
+30
+
+The Village relies heavily on this arbitrator’
+s award in Will County. In that case it was
+? 33?
+
+4. Hireback
+The prior issue, involving Article X, Section 7 - Assignment of Overtime, concerned
+the distribution of overtime work to employees who were not sworn firefighters qualified by
+the Libertyville Fire and Police Commission. The next issue addresses the distribution of
+
+said that in assessing non-economic issues the arbitrator is an extension of the bargaining process.
+The process should not yield results which the parties themselves would never have agreed to. The
+arbitrator should not “embark upon new ground and create some innovative procedural or benefit
+scheme *** [but] the arbitration award must be a natural extension of where the parties were at
+impasse.”supra, slip opinion p. 49. But the issue here under discussion is an economic issue involving
+a fundamental economic term of employment, namely, overtime. With economic issues the
+arbitrator is bound by the final offers. The arbitrator cannot go off on a frolic as is possible in noneconomic issues where the arbitrator can impose his/her own language scheme on the parties. The
+caveats expressed in Will County are less applicable to most economic issues where the arbitrator
+may only choose one party’
+s offer or the other. Moreover, in this case the matter under discussion is
+not some creative escapade by the arbitrator. The preference of offering overtime to bargaining unit
+members first before offering to non-bargaining employees is a staple of collective bargaining
+agreements. There is nothing adventurous in deciding that the use of paid-on-call employees as
+substitutes for sworn firefighters is simply not working. As will be seen in the discussion of the next
+issue, arbitrators also have to move cautiously where an issue is deemed “economic”but the issues are
+really contract procedure.
+
+? 34?
+
+overtime opportunities (called “hireback”) between firefighters and lieutenants (also not
+members of the bargaining unit). This section has had a complex and difficult history.
+Before collective bargaining, scheduled hirebacks were rotated among firefighters and
+lieutenants regardless of rank. There was one list and the names on it rotated. For
+unscheduled hirebacks the department utilized a less structured system which favored those
+employees with the best records for responding to the hireback requests. According to the
+Village, prior to collective bargaining the interests of the Department in getting a suitable
+replacement were balanced with giving employees the overtime they wanted. Equal
+distribution was not a concern. Collective bargaining for the first agreement stalemated on
+this issue and went to arbitration. After the hearing, the interest arbitrator for that contract,
+Robert Perkovich, remanded the matter back to the parties for further negotiations.
+According to the Union it eventually agreed that the old system was acceptable with one
+basic change. Under the old system a lieutenant had equal access to firefighter hireback
+opportunities. The Union wanted to change this so that firefighters would have the first
+option for such openings (“blue shirt for blue shirt”). Eventually the parties agreed to
+language and the matter was settled.
+Sometime after the new language went into effect the Union began to suspect that
+lieutenants were being favored in the assignment of overtime. A grievance was filed and
+shortly thereafter when the Chief produced lists which did not include the data for
+lieutenants at all, the Union filed a second grievance. The Village maintained that the new
+? 35?
+
+emphasis on giving firefighter hireback opportunities first to other firefighters had the effect
+of pushing the lieutenants onto their own list, and the distribution of hireback opportunities
+for those employees were of no concern to the Union because lieutenants were not part of the
+bargaining unit. As the Village interpreted the new language it could decide that a hireback
+opportunity was one for a lieutenant and therefore that opportunity was never available to
+firefighters.
+
+One side effect of this was that the percentage of hirebacks assigned to
+
+lieutenants increased substantially. According to the Union this was a deliberate attempt by
+the Chief to deny overtime opportunities to the now unionized firefighters. But it could also
+be argued that the amount of all hirebacks was reduced and, of those remaining, more went to
+lieutenants because there was a core of hireback vacancies which stayed the same and could
+only be filled by other lieutenants. In other words, the increase in lieutenant utilization for
+hirebacks was a result of the severe cutback in hirebacks generally and, the Village argues,
+had nothing to do with the operation of the new language at all.
+The two grievances on hirebacks went before Arbitrator Perkovich, this time sitting as
+a grievance arbitrator. As styled by Arbitrator Perkovich, the relevant issues were (1)
+whether the Village violated the Agreement by the manner in which it distributed overtime
+and (2) whether the Village violated the Agreement by supplying the Union an overtime
+utilization list without information about lieutenants? Arbitrator Perkovich stated the
+relevant language at issue was:
+Firefighters will be first offered positions vacated by firefighters.
+? 36?
+
+In the event that no firefighter is available..., then the position
+may be offered to an officer, however when a firefighter is
+scheduled to fill an officer’
+s position it shall be in accordance
+with Article IX.
+Arbitrator Perkovich found that the language in question addressed only hireback
+positions created by the absence of firefighters, that nothing in any part of Section 10
+required the use of a firefighter to fill a lieutenant’
+s position (although the language allows for
+such an assignment at the Chief’
+s discretion) and the bargaining history did not support the
+Union’
+s argument that overtime had been equalized between officers and firefighters.
+The Union in this arbitration argues that Arbitrator Perkovich was wrong. It
+recognizes that it is bound by his award and therefore seeks to amend the language so that
+there can be no question that firefighters shall be eligible to fill any vacancy as a hireback
+including one acting lieutenant vacancy per shift. It also seeks language which states that
+officers cannot displace a firefighter from a scheduled hireback nor cause the reassignment of
+an acting lieutenant to cover for another absent firefighter. Its proposal requires that there be
+a single seniority list of firefighters and lieutenants and that offers for scheduled hirebacks be
+based upon that list. It also seeks to equalize overtime opportunities among firefighters and
+lieutenants. It vigorously insists that after the issuance of the Perkovich grievance award
+firefighter hirebacks greatly diminished and that the lieutenants now get more than twice as
+many hireback opportunities as the firefighters even though there are three times as many
+firefighters as there are lieutenants. It argues that the parties never intended this result.
+
+? 37?
+
+The Village argues that the Union’
+s proposal would cause a major change in the way
+overtime is distributed. It argues that there is no basis under the Act to make such a change
+and none of the comparables have a system such as that proposed by the Union. The Village
+argues that the Union freely negotiated the language it now wants to change and that
+Arbitrator Perkovich’
+s grievance award proves that the Union knew exactly what it had
+negotiated for the first agreement. The Village argues that imposition of firefighters to fill
+lieutenant vacancies would deny the Village the use of the most qualified officers for the
+positions. It argues that the Union does not understand the statistics and that hirebacks have
+been decreased across the board. The only reason why there are proportionately more
+opportunities for lieutenants is because there are less of them to fill more slots caused by the
+greater amount of time off lieutenants get because of their seniority. The Village also argues
+that substituting firefighters for lieutenants saves almost no money because only the most
+senior firefighters are qualified to be acting lieutenants and these senior employees’wages are
+similar to that of the average lieutenant’
+s salary.
+The Village proposes to maintain the current language. The Union seeks several
+changes in the language. Its proposal is as follows:31
+
+The text of Article X, Section 10 is quite lengthy. It has four parts: the procedure for
+scheduled hirebacks, the composition of the scheduled overtime assignment reports, the procedure
+for non-scheduled hirebacks, and the composition of the non-scheduled overtime assignment reports.
+The Union proposes essentially the same language changes in the non-scheduled hirebacks as with
+the scheduled hirebacks. In the interest of space limitations, only the scheduled hireback procedure
+and its assignment reports will be set out here. The proposed new language will be in bold face.
+31
+
+? 38?
+
+Section 10 Hireback
+A. Scheduled Hireback
+Scheduled hireback occurs when the Department is provided advance
+notice that a position will need to be filled. A full-time employee
+shall be offered scheduled hireback duty consistent with current
+practice and within budgetary constraints. When an employee is
+offered a scheduled hireback duty, such offers shall be distributed to
+employees as follows:
+1. Firefighters will be first offered positions vacated by
+firefighters. The vacancy to be filled by the scheduled hireback
+shall be based on the posted regularly scheduled shift assignments
+(including one Acting Lieutenant assignment per shift). In the
+event that no firefighter is available for a scheduled hireback position,
+then the position may be offered to an officer but an officer shall not
+be called in to displace a firefighter from the scheduled hireback
+nor shall the firefighter assigned in the acting capacity be
+reassigned to cover for another absent firefighter. Officers may be
+first offered positions vacated by an officer, however when a firefighter
+is scheduled to fill an officer’
+s position it shall be in accordance with
+Article IX.
+2. The offer shall be made based upon a list arranged
+according to seniority, wherein initially the most senior member will
+be called first and so on down the list until a qualified hireback is
+found (i.e. firefighter or lieutenant).
+3. When a second or later hireback is needed, the list will
+again be employed from where the last hireback was made and any
+member who has not yet taken a hireback will be asked to work the
+next hireback if they are qualified to do so.
+4. After everyone on the list has accepted a hireback, or when
+the last person on the seniority list refuses a hireback, calls shall again
+commence from the top of the list.
+5. If no hirebacks can be scheduled after all members have
+been contacted, a forced hireback via reverse seniority may be
+employed from those members not on the shift on which the hireback
+is scheduled. If a member has already worked a forced hireback, the
+next least senior member shall be forced back, and this process shall
+? 39?
+
+continue until all members are forced back before returning to the
+initial member.
+B. Scheduled Overtime Assignment Reports
+Within fifteen (15) days after the completion of any month, the
+Employer shall provide to the Union President (or designee) a
+photocopy of the scheduled hireback list used dating the preceding
+month. In addition, the Union on request shall be provided with
+copies of the monthly shift schedule and monthly hireback
+schedule. The objective of this procedure is to equalize overtime
+assignment opportunities as evenly as possible among full time
+officers and full time firefighters. If after complaint, the posting
+discloses inequities, the affected employee(s) shall be placed in the
+appropriate position on the list in the subsequent cycle. When
+necessary to ensure equalized overtime opportunities among
+members (i.e. officers and firefighters), the procedures of Article
+IX shall be utilized.
+C. Non-Scheduled Hireback
+***
+1. ***
+2. ***
+3. ***
+4. ***
+D. Non-Scheduled Overtime Assignment Report
+***
+
+As a result of this arbitrator’
+s award on the prior issue, granting preference to
+bargaining unit employees “whenever overtime assignments become available,” sworn
+firefighters will no longer be competing with paid-on-call selectees and the Village will be
+assured of having the most qualified professional firefighters responding to its emergency
+calls. The present issue, involving Article X, Section 10 - Hireback, is so closely related to
+the last issue as to be intertwined with it. Thus, the new language in Article X, Section 7,
+? 40?
+
+refers to the Section 10 for its description of the procedure for offering overtime. The new
+language of Section 7 states:
+“Whenever overtime assignments become available, they shall
+be first offered as described in Article X, Section 10 to full time
+sworn members of the bargaining unit in preference to nonbargaining unit employees.”
+This award of overtime priority for full-time firefighters has a major impact on the
+construction of Section 10 which addresses the distribution of overtime between bargaining
+unit firefighters and officers. The significance here is that, unlike in nine of the ten
+comparable fire departments, officers in Libertyville are not part of the bargaining unit. Thus,
+as a result of the new language in Article X, Section 7, lieutenants as non-bargaining unit
+members cannot be assigned bargaining unit work unless and until it is refused by members of
+the bargaining unit. This is the plain meaning Article X, Section 7, and is the arbitrator’
+s
+intent.32
+As discussed earlier, the primary change in the language of Section 7 is to insure that
+the employees endorsed as firefighters by the Fire and Police Commission on objective and
+competitive bases will be doing the traditional work of their profession. Paid-on-call selectees
+cannot integrated with sworn professional personnel. It is this arbitrator’
+s conclusion that for
+similar reasons a separation of overtime opportunities between lieutenants and firefighters is
+just as important. For this employer under the circumstances of continuing conflict among
+To the extent that Article X, Section 10, refers to “current practice”that shall mean the
+current practice as established in the new agreement with the new language.
+32
+
+? 41?
+
+management and members of the bargaining unit, the public interest demands nothing less.
+There have been the incidents of conflict between the Union president, Pat Neal, and senior
+officers, particularly former Chief Zamor and Assistant Chief Richard Carani (now Chief).
+There have been threats of discipline in response to Neil’
+s active pursuit of a fair distribution
+of overtime. Neal testified that problems with overtime distribution has been a contributing
+factor in the large turnover of firefighters. Employees genuinely believe that the former Fire
+Chief manipulated the language of Article X, Section 10 to deprive firefighters of a fair share
+of overtime hirebacks.
+Secondly, assigning firefighters to perform firefighter work rather than assigning this
+work to officers is a more cost effect use of Village resources. When a hireback opportunity
+arises due to the absence of a firefighter there is no economic justification for assigning a
+higher paid lieutenant to perform lower paid work. The Village’
+s juxtaposition of certain high
+paid senior firefighters against junior lieutenants in order to argue that the difference in costs
+is de minimus is not an accurate reflection of the disparity of wages which exists between
+lieutenants and firefighters. (See the discussion regarding the issue of wages, earlier in this
+Award.) There is no basis for highly paid lieutenants to be performing lower rated firefighter
+work. Considering the conflicts between lieutenants and firefighters which result from the
+intermingling, the restriction of overtime bargaining unit work to bargaining unit members as
+now provided in Section 7, will be beneficial in Section 10 as well.
+Additionally, the arbitrator notes that the Village’
+s own study of the comparable fire
+? 42?
+
+departments shows that the problems this Village has had with the distribution of overtime
+between firefighters and lieutenants does not occur in the other fire departments. While that
+is probably because almost all of them include lieutenants in the bargaining unit, the “take no
+prisoners”mentality by both sides in this Village requires that there be a jurisdictional bright
+line between the work of bargaining unit and non-bargaining unit employees.
+The language changes proposed by the Union are unnecessary and the benefits these
+proposals would grant firefighters for hirebacks of all kinds over that of lieutenants would only
+exacerbate the poor relations which already exist between the ranks. The Union’
+s solution of
+just giving more to the firefighters at the expense of the lieutenants will lead to more labor
+strife.
+While the distribution of overtime through hirebacks is of course an economic issue,
+the Union’
+s proposal represents the type of discrete language changes which, if they are to
+occur at all, should be achieved at the bargaining table. (Will County Sheriff, supra.) While
+the Union has certainly shown that there are problems with the current language, these are
+problems based upon the Union’
+s disagreement with Arbitrator Perkovich’
+s interpretation of
+the language, and not the language itself. But this is now a moot point because the changes
+made in Article X, Section 7, together with the old language of Section 10 will prohibit
+lieutenants from performing firefighter work, if such employees are available for the hirebacks,
+and preserve lieutenants’hirebacks for that rank without having to account to the Union.
+Of course, while firefighters have no contractual right to perform in an acting up
+? 43?
+
+capacity if management wants to fill all such opportunities with hireback firefighters, the
+Chief and designees retain the right to offer such acting up positions to qualified firefighters
+if, in management’
+s exclusive discretion, it is determined that such an assignment is
+appropriate. This approach will also settle the Union’
+s questionable claim that once a
+firefighter is assigned to act up as a lieutenant he cannot be reassigned to a bargaining unit
+position when another scheduled firefighter is unexpectedly absent. The Union offered no
+rational explanation as to why an overtime assignment cannot be changed or why a firefighter
+is somehow “entitled”to occasional lieutenant grade work. On the contrary, there is no
+better argument for firefighters performing officers’work than there is for paid-on-call
+firefighters to perform the work of Commission selected sworn personnel. Nonetheless, there
+are procedures in place for those occasions when management does decide to assign a
+firefighter to perform the work of an officer. Accordingly, the Village’
+s proposal of no change
+in the language shall prevail. This conclusion is supported by costs and other financial
+factors, the public interest in having the best qualified employees perform the necessary work,
+the public interest in achieving better labor stability, by comparability and bargaining history
+and by the Village’
+s lack of authority to undermine the Union’
+s jurisdiction and to threaten
+employees for engaging in protected activities.33
+
+The arbitrator is not suggesting that the Village has committed unfair labor practices by
+taking disciplinary action against Pat Neal for engaging in protected concerted activity. The
+arbitrator is suggesting that management’
+s frustration with Neal, as exhibited in testimony and from
+internal correspondence which is part of the record ( see, for example, Union Exhibits 49 and 50), is
+related to his vigorous protection of rights the Union believes the Agreement provides employees. A
+33
+
+? 44?
+
+5. Layoff and Recall
+In discussing the assignment of overtime work, Article X, Section 7, the parties
+addressed whether the Village could continue to employ paid-on-call non-sworn personnel to
+substitute for absent bargaining unit firefighters. Without question, this issue was seen by
+both sides as the sharing of overtime between two different units of employees. The Union’
+s
+proposal was to require that all overtime first must be offered to bargaining unit personnel.
+The arbitrator sustained the Union’
+s request with the understanding that because the
+Village’
+s “sleeper”program was actually a usurpation of overtime by lesser qualified employees
+the overtime restriction language would not allow paid-on-call employees to work before it
+was offered to sworn firefighters.
+In considering the next issue, hirebacks, the arbitrator concluded that henceforth
+officers could not be offered overtime in firefighter positions unless the work was first offered
+to bargaining unit employees. In other words, as a result of the bargaining unit requirements
+inserted in Section 7 of Article X, the language of Section 10 of that article likewise changed.
+Reasoning that bargaining unit work belonged to bargaining unit employees and that
+Union representative may speak up, even coarsely, in the privacy of the fire station while engaged in
+union activities. The para military demeanor expected in the pursuit of firefighter duties cannot be
+applied to the employees’living quarters where there is no threat to public safety and employees are
+engaged in protected activities. Even some incivility in such situations is not insubordination. That
+Neal gets on management’
+s nerves is no defense. Many of the problems giving rise to the issues in this
+case relate to management’
+s discomfort with employees exercising their rights under the Act. The
+Village’
+s continuing argument that the Union has not made a case for change is simply overwhelmed
+by the evidence of unnecessary discordance and the massive turnover of firefighters.
+? 45?
+
+lieutenants’work belonged to officers of that rank, the arbitrator accepted the Village’
+s
+proposal to keep the existing language. The arbitrator was critical of the Union’
+s proposal
+which would have given limited preference to firefighters for lieutenants’work. Again, the
+critical consideration was that the public interest mandated the best quality employee
+available to perform the important work of the fire department.
+The next issue, Article XI, Layoff and Recall, is another variation on the same theme.
+This issue concerns the use of yet another cadre of firefighters, those contracted from an
+independent supplier, to perform bargaining unit work. Since 1998 the Village has had a
+contract with Paramedic Services of Illinois (“PSI”) to provide trained firefighter/paramedics
+for Station 3, the facility located within the boundaries of the Libertyville Fire Protection
+District. (See discussion at pp.2 -3, above.) Sometime after the implementation of the
+parties’first bargaining agreement, the Village began to assign PSI employees to cover
+vacancies created by the absence of bargaining unit employees at the other fire stations. In
+this regard the PSI employees function in the same way as the paid-on-call employees
+discussed above. While the PSI employees might serve for entire 24 hour shifts whereas the
+paid-on-call employees only performed bargaining unit work at night, the principle is
+identical.
+The Union proposes a change in the language of Article XI, Layoff and Recall. The
+Union proposes that non-sworn employees, which would include the PSI employees, could
+not perform firefighter duties while sworn firefighters were on layoff. The Union expresses
+? 46?
+
+concern that with PSI employees now being used as substitutes for regular sworn firefighters
+in fire stations other than the FPD station, there is nothing in the contract to prevent the
+Village from laying off sworn employees and replacing them with PSI employees. The Village
+opposes any change in the language of Article XI. It argues that nothing in the record
+indicates that the Village ever laid off firefighters after it began the employment of a sworn
+fire protection workforce. There is no evidence that the Village plans to lay anyone off, let
+alone replace them with outside contractors.
+
+The Agreement does provide for
+
+subcontracting. The Union is not seeking a change in this management right.
+The Union’
+s proposal (with the language changes in bold face) reads as follows:
+Section 1. Layoff
+The Village, in its discretion, shall determine whether layoffs are
+necessary. If it is determined that layoffs are necessary, employees will
+be laid off in reverse seniority order, except that part-time, temporary,
+and probationary employee will shall be laid off before employees with
+seniority. In addition, no non-sworn person not appointed from a
+firefighter eligibility list established by the Libertyville Fire and
+Police Commission shall be assigned to perform firefighter and/or
+paramedic work when sworn full time employees are on layoff.
+Except in emergency, no layoff will occur without at least fifteen (15)
+calendar days notification to the Union. The Village agrees to
+consult the Union, upon request, and afford the Union an
+opportunity to propose alternatives to the layoff, though such
+consultation shall not be used to delay the layoff.
+
+The Union’
+s proposal is flawed because it has offered no evidence that the Village is
+planning a layoff of regular sworn employees to be replaced by outside contractors. For the
+arbitrator to engage in such a basic change in the Agreement there must be a strong showing
+of need in terms of the statutory factors. There is nothing in the record to support a
+? 47?
+
+restriction on layoffs. The Union does not cite one comparable fire department in support of
+this proposal. If the Union’
+s proposal is simply a backdoor attempt to keep the Village from
+staffing Station 3 with outside contractors it would be better served by making that proposal
+outright. But the Union appears to accept the presence of PSI employees at Station 3.
+On the other hand, if the Union’
+s real concern is the integration of PSI employees
+with the regular workforce, the Union has already succeeded in prohibiting non-bargaining
+unit persons from performing bargaining unit overtime. Thus, it is unquestioned that PSI
+employees are being shifted from Station 3 to Stations 1 and 2 in order to cover absences by
+regular firefighters. By maintaining less than the budgeted staff, the Village has caused an
+increase in uncovered firefighter time. It has previously avoided full employment of
+firefighters by utilizing paid-on-call employees to cover these vacancies or by using officers in
+hireback situations. The arbitrator’
+s acceptance of the change in language of Article X,
+Section 7, requiring all overtime to be offered first to bargaining unit firefighters, addresses
+this problem and can be applied likewise to the assignment of PSI employees to cover the
+absences of regular sworn firefighters.
+To recapitulate, the Union proposed eliminating paid-on-call employees from working
+half shifts to fill in for sworn firefighters. It did so by changing the language of the overtime
+article because the use of the paid-on-call employees dissipated overtime opportunities. The
+Village did not argue that the use of paid-on-call employees had nothing to do with overtime.
+It forthrightly acknowledged that the new restrictions on overtime would eliminate the
+? 48?
+
+sleeper program. The arbitrator agreed with the Union for numerous reasons in line with the
+statutory factors, not the least of which was that a community such as Libertyville should not
+go to bed at night relying on irregular part-timers who could not or would not pass the
+competitive entrance requirements of the Libertyville Fire and Police Commission.
+The positions that the paid-on-call employees were filling were vacancies that
+otherwise would be hireback opportunities for regular firefighters. That is obvious from the
+relationship between Section 7 and Section 10 of Article X. Accordingly, when the arbitrator
+examined Section 10 to assess the Union’
+s proposal to change this language he realized that
+much of what the Union was seeking had been accomplished with the restriction that
+vacancies which would be filled by vacancies which had to be offered to firefighters before it
+could be offered to lieutenants. The principle was the same. A department staffed by fire
+commission certified employees could not fill vacancies even temporarily with non-bargaining
+unit personnel. The choice for the Village is to simply eliminate the department and return
+to an all paid-on-call and volunteer staff. This conclusion by the arbitrator is reinforced by an
+abundant record of turmoil in the workplace and a questionable attitude toward the Union.
+The same principle carries over with the use of PSI outsiders to perform work which
+would otherwise be hireback opportunities for sworn firefighters. The Union concedes the
+use of PSI employees at Station 3. But with regard to Stations 1 and 2, temporary vacancies
+must be offered first to bargaining unit employees. This has nothing to do with layoffs. The
+Union’
+s concern on the record in this case is misplaced. The changes to the language of
+? 49?
+
+Article XI, Section 1, as proposed by the Union are denied and the arbitrator selects the
+Village’
+s proposal of maintaining the old language on layoffs.
+6. Personal Leave Days
+The next economic issue is the Union’
+s request for an additional two personal days.
+The Village’
+s proposal is to maintain the status quo. The wording of the Union’
+s proposal
+(with the proposed new language in bold face) is:
+
+Article XIX
+
+Section 3. Personal Leave Days
+
+Employees shall be entitled to receive three (3) duty shifts off without
+loss of pay as personal leave days. Effective May 1, 2006 employees
+shall be entitled to four (4) duty shifts off without loss of pay as
+personal days. Effective May 1, 2007 employees shall be entitled
+to five (5) duty shifts off without loss of pay as personal days.
+
+As with several of the other issues in this case this proposal comes with its own special
+bargaining history. The Village has provided personal days as a benefit for employees for
+many years. Prior to the organization of the bargaining unit, all Village employees, including
+those in the Fire Department, received three personal days in addition to their holidays.
+This did not include the Police, who were already organized and were receiving five personal
+days.
+In April, 2001, the Union and the Village were finalizing the workweek provisions for
+the first agreement. The bargain involved eliminating five of the eight scheduled holidays,
+the establishment of 6.75 Kelly Days per employee and the elimination of FLSA overtime
+? 50?
+
+with the scheduling of one Kelly Day every 18th shift. The net result was a decrease in the
+workweek from 56 to 53 hours. Unbeknownst to the Union, however, the Village had
+determined to increase the number of personal days for unrepresented employees from three
+to five. There was no loss of holidays. According to the Village, information about the
+increase in personal days for unrepresented employees had been given to department heads
+several weeks earlier. This information was not disclosed to the Union until after the
+agreement for the workweek had been signed off. The Union insists that had it known about
+this change in benefits for unrepresented employees, which left the Firefighters as the only
+group without five days of personal leave, the dynamics of bargaining would have changed
+with the possibility of a different agreement. The Union decided not to abandon the bargain
+but it did secure an understanding from the Village that this settlement did not establish a
+precedent for future negotiations and the Union could raise the personal days issue in
+bargaining for the next Agreement (as it has done). The Union argues that the Village
+intentionally withheld important information form the Union at the bargaining table and that
+should be a factor in support of its request for the additional two personal days in this case.
+The Village argues that it did nothing wrong and the Union still ended up with 6.75
+Kelly days with the loss of only 5 holidays.
+
+The Village argues that this schedule is a
+
+favorable one among the comparables. The Union argues that Kelly Days are not “days off”
+but merely a device to increase the hourly rate and eliminate FLSA overtime.
+In 2003 the Police negotiated a new collective bargaining agreement. Their mix of
+? 51?
+
+days off changed from 8 holidays and 5 personal days to 7 holidays and 6 personal days.
+Additionally, the workweek for police employees was reduced below the FLSA standard of
+42.75 hours per standard workweek to an average of 39.8 hours. While the day was
+lengthened from 8 hours to 8-1/2 hours (including a paid lunch) the number of reporting days
+decreased to 243.3 days per year, or 18 days less per year than in previous years.34 The Village
+argues that this schedule is considered experimental and will back on the bargaining table in
+the next Police negotiations. The Union argues that this leaves the Firefighters with the
+weakest work schedule of any unit of employees in the Village.
+Both parties argue that the comparable data favors their respective proposals. The
+Union relies on an examination of total compensation. That includes wages and fringe
+benefits. However, in order to consider this data valid the arbitrator needs to factor in the
+increases in wages and the additional overtime which are products of this Award. In so doing,
+Libertyville is competitive and does not need the additional two personal days to maintain its
+position among the comparable communities. The Village’
+s data focuses more on time off. It
+shows that the average number of personal days and holidays is a little more than 3, as against
+Libertyville’
+s 6, and while 6.75 Kelly Days is below the average, it is about in the middle
+against the other ten municipalities. In terms of vacation benefits, with or without holidays
+and personal days, Libertyville is above average for 1,5,10,15, 20 and 25 years of service.
+The Police workweek went from a 6/2, 6/3, 6/2, 6/3, 5/3 sequence of days of work to days
+off, to a 5/2, 5/3 sequence. The Union argues that under the law this is the most favorable work
+schedule for police employees while still considered as full-time employees.
+34
+
+? 52?
+
+Granting the Union’
+s proposal for two additional personal days would put Libertyville near
+the top. The conclusion must be that the comparable data does not support the Union’
+s
+proposal for two additional personal days.
+The arbitrator has carefully considered the Union’
+s argument for two additional
+personal days in light of the bargaining history. Its claim of unfairness is not persuasive
+because there is no nexus between the Village’
+s lack of candor and the ultimate result. While
+it is true that had the Union known that the Village had granted two additional personal days
+negotiations would have dragged on even longer, there is no certainty that the end result
+would have been the same. Indeed, given the breakthrough for Kelly Days as well as the
+additional step for senior firefighters the arbitrator is unconvinced that eventually the Village
+would have ceded those additional two personal days. At some point in the future there
+might be factors favoring the additional two days. But considering the economic package as a
+whole resulting from this Award, the Union has not demonstrated a need for the additional
+days in this agreement. The Village’
+s proposal, which includes deletion of the side letter
+preserving the Union’
+s bargaining rights on this issue, shall be granted.
+7. Retroactivity
+The parties agree to retroactivity for wages from May 1, 2003. The difference in their
+proposals is that the Village wants it to apply only to members of the bargaining unit
+employed as of the date of the Award. The proposals are as follows:
+ARTICLE XVII WAGES AND RATES OF PAY
+? 53?
+
+Section 5. Retroactivity
+Village
+
+Union
+
+The wage increases provided by this section
+shall be retroactive to May 1, 2003 on all
+hours compensated for all members of the
+bargaining unit employed as of the date the
+Arbitrator issues his award.
+
+The wage increases provided by this section
+shall be retroactive to May 1, 2003 on all
+hours compensated for all members of the
+bargaining unit employed on or after such
+effective date.
+
+The Village argues that only five employees have left the Fire Department during the
+period of retroactivity, one of whom was a probationary employee released for work
+performance issues. Of the remaining four, two resigned in 2003. The Village argues that by
+resigning their appointments as sworn firefighters the four employees abandoned their
+interest in retroactive payments. They are no longer stakeholders in the process. The Village
+also asserts that the delay in bringing these proceedings to a conclusion is attributable to the
+numerous proposals for change made by the Union.
+The Union argues that employees should be paid at the rates provided in the contract
+regardless of when they leave employment. If the parties agreed to a certain wage rate for
+2003, 2004 and 2005, employees who worked during that time should be paid those rates.
+That they no longer work for the Village is irrelevant to wages already earned. The Union
+also argues that the Village’
+s proposal sets a bad precedent because it penalizes employees
+who might be retiring. Failure to pay their wages retroactively affects their pensions because
+
+? 54?
+
+pensions are gauged on the basis of wages earned immediately before retirement.35
+The Union also argues that a number of arbitrators have selected full retroactivity
+when the issue was before them. The Union cites City of Rock Island and Rock Island
+Firefighters Union IAFF Local 26, S-MA-91-64 (Berman, 1992) where the arbitrator stated:
+I agree with the Employer that the city should be most
+concerned with people who have remained employed.
+Nevertheless, I cannot justify penalizing employees for the
+parties’delay or for the delay built into the system of collective
+bargaining and interest arbitration. Equally as important it is not
+in the public interest and welfare to encourage delay by
+permitting the employer to profit from turnover and employee
+attrition –factors largely beyond the control of both parties.
+This reasoning was adopted by Arbitrator Sinclair Kossoff in Village of Oakbrook and
+Teamsters Union Local No. 714, S-MA-96-242 (1998). Arbitrator Kossoff, relying on the
+awards of several other arbitrators, stated (slip opinion p. 30):
+It is difficult to rationalize withholding from someone payment
+for work performed or otherwise earned merely because he or she
+is no longer employed by the village. The signing of a contract is
+an acknowledgment that a fair rate of payment for the work
+performed in 1996 and 1997 was above what the village actually
+paid for that work. ***
+
+The Union argues that it is beneficial to the Village to allow employees to retire before a
+contract is settled knowing that they will get back pay up until their retirement. If employees could
+not rely upon retroactivity they would be required to continue working until the contract was
+resolved thereby depriving the Village of hiring a replacement at lower starting rates.
+35
+
+? 55?
+
+As pointed out by Arbitrator Kossoff, once the parties agree what the proper wage rate
+should have been for a year in the past, there is no reason to deprive employees who worked
+at that time from being paid the proper rate. Employees who left the Village’
+s employment in
+2004 were then being paid wages set for 2003. Based upon a long tradition of providing some
+modest increment each successive year these employees had the right to expect that the
+proper wages for the work performed would eventually catch up to them. Retroactivity is not
+a windfall. It is payment for services rendered. The delay in payment is simply a cost to be
+borne by employees as a byproduct of collective bargaining. That employees should not be
+paid eventually for the agreed upon value of their services would be unreasonable and
+contrary to public policy which favors collective bargaining.
+
+Accordingly, the Union’
+s
+
+proposal for retroactivity is selected.
+
+B. Non-economic Issues
+1. Duties
+Article III of the May, 1999 through April, 2003, collective bargaining agreement is a
+stand alone provision limiting duties to those that sworn employees have performed in the
+past and those reasonably related thereto. The article specifically prohibits the performance
+of electrical, plumbing or carpentry duties. The Union proposes to add a new sentence to
+this article giving sworn firefighters priority with respect to assignments of driver/engineer
+
+? 56?
+
+and officer/paramedic in charge.36 The Village opposes any change in the language. The
+proposal reads as follows (new language only):
+Full time bargaining unit employees shall have priority over
+non-sworn non-bargaining unit personnel with respect to
+shift assignments of Driver/Engineer, Officer/Paramedic in
+charge.
+The Union argues that this proposal comes about because of the friction which exists
+between regular sworn firefighters and non-sworn part-timers. There have been occasions
+when some of the part-time employees working side-by-side with sworn personnel have
+usurped or otherwise taken the more challenging positions of driver/engineer or paramedic-in
+charge. The Union argues that teamwork is essential for the successful fulfillment of an
+emergency call. Petty jealousies and competition between the two different workforces which
+comprise the Village’
+s response teams. The Union maintains that the sworn bargaining unit
+members are more competent and better trained. The Village disagrees, and as a result has
+disregarded the growing conflicts between the two different workforces.
+This issue is directly related to Issue 3, above, Hours of Work and Overtime, where
+regular full-time employees hired pursuant to the merit system of the Fire and Police
+Commission are competing with employees hired by direct appointment and working at the
+There is no official position or classification of driver/engineer in the this fire department
+and the Arbitrator does not interpret the Union’
+s proposal as a back door attempt to create one.
+There is a function of driver/engineer and the Union’
+s proposal seeks priority in the assignment of
+that function. The paramedic in charge is responsible for determining the proper protocols for
+treating a patient. According to the Village, the paramedic in charge has the final say on which
+protocol to use and is held accountable for the patient’
+s treatment.
+36
+
+? 57?
+
+pleasure of the Fire Chief. As has been stated above, patronage employees in a public safety
+profession such as police or fire are inherently less qualified as a class than those who
+achieved their positions based upon competitive procedures. While of course there are
+exceptions among individuals, and certainly there are exceedingly competent paid-on-call
+employees who cannot work a sworn position because of personal circumstances, the law in
+Illinois favors employment by objective standards. It is in that sense that the paid-on-call
+employees are inherently less qualified than full-time sworn personnel. It is not in the public
+interest to have a system where competing employees are bickering over who gets what
+assignment. Where life and property is involved the public deserves the best not simply those
+who sought and obtained the favor of the Chief.
+Addressing the job of paramedic-in-charge, Fire Chief Robert Zamor (now retired)
+testified that the Village participates in the Condell Hospital Health System which regulates
+the certification and licensing requirements for the Village’
+s paramedics and those of other
+surrounding communities who are participating members. According to Zamor, the Condell
+System has a rule, approved by the Illinois Department of Public Health, that requires that
+the paramedic with the most years of experience as a paramedic be in charge. The Village
+argues that if the arbitrator were to adopt the Union’
+s proposal the Village would not be able
+to participate in this multi-municipality health system.
+There are at least three reasons why the Village’
+s proposal is unpersuasive. First, the
+actual regulation described by Chief Zamor was not introduced. The arbitrator is uncertain if
+? 58?
+
+the Chief was giving his interpretation of the rule or exactly what form it appears. Where a
+party seeks to show that external law (in this case a sanctioned public health regulation)
+affects the arbitrator’
+s authority to fashion contract language the arbitrator needs the
+regulation itself to interpret. Second, the arbitrator has no understanding, and none was
+supplied, as to what the measurement is of length of service for the affected employees. Is it
+continuous service or simply the date of certification.? Does a firefighter/paramedic who
+works 48 hours on and 24 hours off have less service credits than a paid-on-call paramedic
+who works one or two evenings a week? Finally, where the Union has shown a need for a
+change in language, as it is has done with this issue, the change in language may simply mean
+that the Village cannot use paid-on-call paramedics working on the same assignment as
+regular sworn employees if the result is a violation of its labor contract. From the arbitrator’
+s
+perspective eliminating paid-on-call paramedics when regular sworn personnel are available is
+a benefit to the public and the Condell System.
+The Village also argues that the Union’
+s proposal on this issue is inappropriate
+because the Village also participates in the Mutual Aid Box Alarm System (“MABAS”)
+pursuant to an intergovernmental agreement with surrounding communities.
+
+This
+
+arrangement requires the Village to comply with certain protocols when it responds to calls in
+other communities. Among these is a requirement for Village personnel to respond to
+direction from local people, including persons of local rank or no rank at all. The Village
+argues that the Union’
+s proposal for priority in shift assignments could conflict with
+? 59?
+
+obligations. This is farfetched if not a “red herring.” The Union’
+s proposal relates to
+assignments within a unit of Village firefighters. It has nothing to do with the chain of
+command among different departments responding to the same call. The Union’
+s proposal
+addresses the ongoing conflict between merit system employees and those who obtained their
+positions in the Village other than through the Fire and Police Commission. It has nothing
+to do with intergovernmental mutual aid agreements.
+The Village also argues that the Union has not fulfilled the arbitrator’
+s prerequisites
+for a language change because it has not, among other things, shown that change could not
+be accomplished at the bargaining table. It argues that this issue was hardly bargained at all.
+At the core of the Village’
+s argument is its unwillingness to see that anything is wrong in the
+way its fire department is functioning. Yet, the arbitrator has found numerous problems with
+the operation of this fire department where:
+1. The same work is being performed by three different and competing units
+(regular sworn, regular part-time paid-on-call, and employees of a third party
+outside contractor).
+2. The three groups live and work side by side, freely moving from fire station
+to fire station, in effect competing for the same assignments.
+3. Each group works under different terms and conditions or employment.
+4. The line supervisors (e.g. the lieutenants) whose work is integrated with the
+firefighters are not in the bargaining unit, contrary to the comparables .
+This structure is at the core of this case. The parties have expended enormous
+resources in seeking resolution at the bargaining table of the problems associated with this
+? 60?
+
+structure. The parties have been unable to make progress on the source of these issues. The
+Village’
+s argument that the parties have not bargained hard enough is simply misplaced. The
+arbitrator was witness to and participated in (as a mediator) intense bargaining, observing first
+hand the futility in getting changes by either side on numerous issues. The arbitrator finds
+that the parties cannot and will not agree to changes in this tripartite workforce. Given the
+dysfunctional state of affairs which has caused unprecedented turnover, changes by the
+arbitrator under the standards set forth in the Act are appropriate . Accordingly, the Union’
+s
+proposal on Duties is selected by the arbitrator.
+
+2. Assignments and Transfers
+In their first agreement the parties negotiated a detailed provision for the posting and
+assignment of jobs within the Fire Department. It was primarily a procedural provision and
+left the final decision of who should fill the vacancy to the Chief exclusively. The Village
+proposes that this section has worked as it was intended and there is no reason to make any
+changes, and if any changes are to be made it should be at the bargaining table. The parties
+were able to negotiate the existing contract language and there is no reason to believe that if
+changes are necessary they could not also be made at the bargaining table.
+The Union proposes some alterations in the language so as to, in its opinion, bring the
+wording within the original intent. According to the Union, under the original language
+Chief Zamor applied the posting language only to shift vacancies. He did not post openings
+? 61?
+
+for the numerous special assignments which exist within the department. The Union does
+not object to application of the language to shift vacancies, and also seeks to clarify that. But
+the thrust of the Union’
+s proposal is a requirement that numerous special assignments which
+exist within the department, such as child safety seat installation, vehicle maintenance,
+assisting the training officer, etc. be posted. While there are requirements that these
+positions be filled on an objective basis the Chief has broad discretion in making his selection.
+The idea behind this proposal, the Union explains, is to require the notification of employees
+of all “jobs”so that everyone has an opportunity to express his interest.
+proposal (in bold face) together with the existing language reads as follows:
+ARTICLE VIII ASSIGNMENTS AND TRANSFERS
+A. In the event of a job or shift vacancy due to the promotion,
+demotion, retirement, resignation, discharge or demise of an
+employee, or the creation of a new position or job (current jobs
+are listed in paragraph B of this Article), which the Village decides
+to fill, such job vacancy shall be made available with the following
+provisions procedures:
+1. Positions shall be announced within ten (10) days of the
+occurrence of the event creating the vacancy by bulletin which
+shall be posted in a location accessible to all employees for a period of
+at least fifteen (15) days. Such positions shall be considered open for
+written bid for this fifteen (15) day period.
+2. Positions shall be filled from those employees submitting a bid for
+the position, on a seniority basis, where the skill experience and
+ability are determined by the Fire Chief or his designee to be equal.
+3. In the event a bid is not received for a posted position from an
+employee deemed by the Fire Chief or his designee to be qualified for
+the position, the Village may assign the least senior employee to the
+vacancy, provided the least senior employee has the requisite skill,
+? 62?
+
+The Union’
+s
+
+ability and experience as determined by the Fire chief or his designee
+to perform the work of the position. In the event the least senior
+employee is not qualified, the Village may fill the position regardless
+of seniority.
+4. Voluntary transfers between two employees within the same job
+classification may be granted b y the Fire Chief.
+5. Employees shall not be transferred for discriminatory reasons in
+violation of the No Discrimination Article of this Agreement.
+6. The Fire Chief/designee’
+s determinations under this Article shall
+not be overturned unless such determinations are found to be
+arbitrary and capricious.
+B. Current Jobs
+Public Education Responsibilities
+
+Miscellaneous Departmental Responsibilities
+
+1. Fire Extinguisher Classes
+1. Honor Guard
+2. Shift Inspections: Senior Inspectors
+2. Firehouse/NFIRS Data System
+3. Safety Always Matters (SAMS)
+3. Building Maintenance
+4. Child Safety Seat Installation
+4. Vehicle Maintenance
+5. Risk Watch (Accident Prevention Program) 5. Vehicle Specifications
+6. Community Emergency Response Team 6. Personal Protective Equipment (PPE)
+(CERT)
+7. Uniforms (New Quartermaster System)
+8. Assistant to Training Officer
+9. Assistant to Medical Officer
+
+While most of these positions were briefly discussed at the hearing, some of them were
+not. Nor was there much exploration, if any, of the qualifications and skills needed to
+perform these tasks, or how the requirement to post and bid would affect the performance of
+these duties by and with lieutenants. Some of these tasks are performed by lieutenants and
+there is no explanation in the record as to how formalizing these tasks as “jobs”would impact
+the Village’
+s assignment of some or all of the duties of these “jobs”to officers.
+There are insufficient details in the record with some of these items to adequately
+? 63?
+
+understand how they are really “jobs”that require a formal bidding process. There is a point
+where tasks are not “jobs”to which individual employees have vested interests or identifiable
+rights to them. Every task which is part of the regular duties of a firefighter cannot be
+identified as a “job”for which employees compete. It is not unreasonable for management to
+have discretion in assigning some tasks to one or more employees, to officers or to use a
+different system for these assignments than a “bid and award”system. Of course, the parties
+might negotiate otherwise, but the catch word here is “negotiate.” Nothing in the record
+indicates that this is an issue which is so stalemated that it requires disposition by an
+arbitrator. No other comparable fire department has required a contract provision such as
+this.
+The Union’
+s proposal might be seen as a response to some allegations that the Chief
+had favorite employees who appeared to get more of these special assignments than others. A
+grievance was filed but not pursued to arbitration.37 If the Union’
+s real complaint is an abuse
+
+On several occasions in its brief the Village argues that the pursuit of a grievance on a
+subject forecloses the Union from seeking a change at the bargaining table. Quite the contrary is
+true. Grievance arbitration and collective bargaining (which might end in interest arbitration) are
+separate ways to clarify contract language. That the Union chose not to pursue its grievance on this
+subject to arbitration does not affect its right to seek a more fundamental understanding at the
+bargaining table. Not every question of contract interpretation is appropriate for arbitration. There
+are issues of proof, of costs, of timeliness, of internal union considerations, all of which may affect the
+decision to take a grievance to arbitration. In this case there are dual concerns. First, the Union
+needs to establish whether the tasks at issue are really “jobs”as referred to in the contract language.
+Then it must demonstrate that the alleged favoritism by the Chief occurred and that it violated the
+contract. Given these multiple considerations the Union is perfectly justified in seeking a change at
+the bargaining table. The Village’
+s reliance on Village of Algonquin and Metropolitan Alliance of
+Police, S-MA-95-85 (Benn, 1996) is not apposite.
+37
+
+? 64?
+
+of discretion by the Chief, the proposed solution of making every one of these tasks a job
+open for bid might be seen as an overreaction or, colloquially speaking, taking a sledge
+hammer to the problem where a screw driver might be more efficient. The arbitrator has a
+sense that the Union’
+s approach to this issue is half-baked. It may be valid. Certainly
+favoritism which amounts to improper discrimination, if it occurred, is a real concern. But
+the Union must look to the bargaining table for the resolution. As the Village points out, the
+Union was able to negotiate the initial language which established the bidding process. It
+may be able to do so again. But at this juncture, this issue is not yet ready for arbitration.
+The Union proposal must also fail because there is not one comparable community
+that requires the posting and bidding of specialized responsibilities. Nor is there any evidence
+that there is a practice in any of these communities for the selection of specialized duties. In
+a nutshell, the Union’
+s proposal on this issue is inappropriate under the traditional standards
+for awarding a non-economic issue. See generally, Nathan, Arbitral Standards for Deciding
+Non-Economic Impasse Issues, 21 Ill Pub. Employee Rel. Report 1 (Winter, 2004).
+Accordingly, the Village’
+s proposal for this issue is selected.
+3. Duty Trades
+The ability of a firefighter to exchange an assigned shift with another employee of equal
+rank is a common working condition in fire departments. It is recognized as an exception to
+the Fair Labor Standards Act as long as it is a voluntary system approved by the employer. 29
+C.F.R. § 553.31 (2003)
+? 65?
+
+It is standard operating procedure in Libertyville and in the other comparable fire
+departments for the employee initiating the trade to complete a form giving the details of the
+trade which is then signed by both employees and submitted to management for approval.
+Although not clear from the contract language, the Union asserts that in almost all the
+comparable fire departments approval is by shift commanders and is routine. In Libertyville
+the Chief has been actively involved in the process and what is allegedly mundane in other
+jurisdictions is cumbersome here. According to the Union, the Chief’
+s personal involvement
+in what should be an unremarkable process has caused personality clashes and the appearance
+of an unnecessary exercise of power. The Village steadfastly denies the Union’
+s claim of
+arbitrary misuse of the procedure by the Chief, denies the Union’
+s anecdotal evidence
+regarding the practices in other jurisdictions and relies, instead, on the actual contract
+language in other fire department agreements, and argues that the Union has woefully failed
+to support its claim with any factual foundation showing a need for a change.
+The Union proposes several changes in the language. The Village proposes retaining
+the existing language. The Unions proposal, using bold type for new language and strike-outs
+for deleted language, is as follows:
+ARTICLE X HOURS OF WORK AND OVERTIME
+Section 13. Duty Trades
+In accordance with the Fair Labor Standards Act, an employee
+for his own convenience, may voluntarily have another bargaining
+unit employee of comparable qualifications in the same position
+substitute for him by performing work for all or part of the employee’
+s
+? 66?
+
+work shift, provided the substitution is requested one (1) duty day 24
+hours in advance (this requirement may be waived by the Chief of his
+designees in an emergency), leaves employees on the shift who are
+able to perform the duties of the assigned positions on the shift, and
+does not otherwise interfere with the operation of the Fire
+Department and is subject to approval by the Fire Chief or his
+designee. Requests that are in compliance with these criteria as of
+the date the request is made shall be approved. Employees may
+request approval of a trade with less than 24 hours notice prior to
+the start of the trade and such requests shall be made subject to
+approval at the discretion of the employee’
+s on duty Assistant
+Chief or Shift Commander whose decision shall be final and not
+subject to the grievance procedure. The approval of a trade shall
+not restrict a later trade (i.e., Kelly or Duty) that is otherwise in
+compliance with the criteria of this Section. All requests shall be
+in writing on a form approved by the Chief or his designee. See
+Appendix B. Shift trades must be completed within one year with a
+“pay back”date (unless “pay back”is not expected, and shall not
+result in overtime). Further, the Fire Chief of his designee on duty
+Assistant Chief or Shift Commander, at his discretion, may approve
+limited voluntary holdovers of less than one (1) hour as partial shift
+substitutions, at shorter notice than is otherwise required in this
+Section. Such approval will not be denied for arbitrary and capricious
+reasons. The hours worked by the substitute employee would
+otherwise be entitled to compensation. If a substitute employee works
+all or part of another employee’
+s scheduled work shift in accordance
+with this Section, then the hours worked by the substitute employee
+shall be counted as hours worked by the employee who was originally
+scheduled to work that shift.
+
+During the Union’
+s organizing campaign threats allegedly were made to employees
+that if the Union prevailed duty trades would become more difficult. Such alleged restrictions
+became part of the Union’
+s unfair labor practice charge and were part of the Complaint issued
+by the Labor Board against the Village. When that case was settled the Village specifically
+agreed that it would grant reasonable requests for short term duty trades.
+In negotiating their first contract the parties agreed to conventional language permitting duty
+? 67?
+
+trades requested at least one duty day in advance subject to approval by the Chief or his
+designee.38
+The record demonstrates that on some occasions individual firefighters have had
+difficulty in obtaining the Chief’
+s approval. On one occasion, a lieutenant acting as shift
+commander initialed a request form for Firefighter Kevin Fisher. The next day Fisher was
+called by Assistant Chief (now Chief) Carani and told that the form was improperly filled out.
+Fisher then called Assistant Chief Gromm who approved the request. Although now
+approved by two assistant chiefs and one lieutenant acting as an assistant chief the request
+was denied by the Chief because of form and Fisher was reprimanded for insubordination and
+absence without leave. On another occasion in August 2001, Union President Pat Neal was
+denied a duty trade because of unrelated conduct in a previous month. Chief Zamor
+eventually approved the request but warned Neal that his conduct generally could be the
+basis for the denial of unrelated duty trade requests. The Union points out that using duty
+trade denials as a form of discipline is a misuse of the system. The arbitrator agrees that duty
+trades are a qualified right for firefighters based upon the effect the trade will have on staffing.
+It should not be granted as a reward for good behavior or denied for (unrelated) bad
+behavior.39
+
+38
+
+The one duty day advance notice requirement can be waived in an emergency.
+
+The present language is constructed so that duty trades are for the convenience of the
+firefighters, provided that they do not interfere with the operational needs of the department. The
+approval of the Chief or his designees relates to a confirmation of the operational needs. It is not a
+39
+
+? 68?
+
+Firefighter Bill Bending testified that under the current system all duty trade requests
+have to be approved by the Chief. According to Bending this creates bureaucratic problems
+because the Chief is not always available and the requirement to get a request a full duty day
+in advance (72 hours) complicates the planning of these requests. According to Bending it
+would be much more efficient to have requests handled by the Assistant Chiefs without the
+additional step of securing the Chief’
+s approval. According to the Union, Assistant Chiefs
+are in a better position to know whether the employees involved in the exchange have equal
+qualifications. According to the Union, other fire departments use the more informal system
+as well as the Police Chief in Libertyville who does not require his officers to clear their
+individual duty trade requests with him.40
+Bending also testified the Union was seeking the right of a firefighter to make a trade
+after he has already scheduled a trade, or as it is called, a trade within a trade. Bending
+testified that in most situations this arises when employees have traded Kelly Days, that is
+they have traded days off. The reciprocation of the trade may not occur for several months.
+In the meantime, the employee who is working (because of the trade) what had been a
+discretionary benefit which may or may not be granted depending on the assessment of unrelated
+behavioral issues any more than a other routine work schedule benefits provided in Article X may be
+altered as a form of discipline. In other words, the Chief’
+s discretion is a discrete one addressing the
+needs of the shift’
+s structure.
+According to the Union only Bensenville requires approval by the Chief. While other
+contracts do not even cover the issue, a survey by the Union established that fire chiefs elsewhere do
+not get regularly involved in the process. The Village objected to the competency of this hearsay
+evidence but offered no evidence of its own on the subject of actual practices.
+40
+
+? 69?
+
+scheduled Kelly Day for him needs to take that day off for other reasons. Or, the employee
+scheduled off at a future date (the exchanged Kelly Day) might need to use that future Kelly
+Day for a different exchange because of intervening circumstances. He might, for example,
+need someone to cover another shift for him and would offer the exchanged Kelly Day as the
+reciprocating day off for the second trade. According to the Union, as long as the employees
+involved in these trades are of equal qualifications it should not matter to the department
+who is covering the shift. Employees of equal rank and qualifications, such as the ability to
+drive a truck, are fungible. Alternatively, the Union maintains, it was understood at the last
+negotiations that employees involved in a trade did not have to have identical qualifications
+as long as another employee of the shift was working and could perform the duties of the
+employee seeking the trade.41 The Union maintains that these internal schedule changes
+should be a matter of routine and not grist for the Chief to over-control the rank and file.
+The Village argues that the Union has failed to prove any legitimate need to change
+the duty trade language. Considering the facts of this case as a whole, this is incorrect. The
+record demonstrates a repeated abuse of power by the Fire Chief. Even if he eventually
+granted most requests, his personal involvement in every instance request complicated the
+
+The Village acknowledges that it has permitted “conditional duty trades”where the
+employee working as a result of a trade does not have all the qualifications of his trading partner but
+the fire station is otherwise staffed with an employee with the necessary qualifications.
+41
+
+? 70?
+
+process and was unnecessarily burdensome on employees. The difficulties with duty trades
+described by the Union’
+s witness do not occur in the Village’
+s police department or among
+the comparable neighboring fire departments. While the Village argues that the Union has
+not shown a single instance when a duty trade request has been denied because the Chief was
+not reachable, the process caused a waste of time and energy which might have been better
+directed to the mission of the department. The problem here is not that firefighters have
+been denied duty trades but that the procedure that had to be followed to secure them was
+onerous. As with other issues in this case, it is not that the Chief made bad judgments but
+that he imposed his will at every stage of the department’
+s operations unnecessarily
+complicating (as opposed to denying) the valid exercise of rights secured in the collective
+bargaining agreement. It is not the arbitrator’
+s function to pass judgment on a department
+head’
+s management style. But where that style interferes with the efficient use of benefits
+secured by the collective bargaining agreement, the arbitrator may change the language to
+better secure the negotiated benefits in those cases where the parties have been unable to do
+so by themselves. The burden of proof for making the change is always on the moving party.
+In this case the Union has carried that burden.
+The Village also argues that the Chief needs to approve every request so as to monitor
+the work of his subordinate officers. But, as the department head, the Fire Chief always has
+the authority to review the actions of his staff. That does not mean that he has to be
+involved in every decision as it occurs. There is a difference between managing the
+? 71?
+
+department and making every staffing decision first. The record demonstrates that this has
+been a cumbersome process and that there is a need for change.
+On the other hand, there is a question whether the difficulties will be better addressed
+with the Union’
+s proposed language changes or merely by the employment of a new Fire
+Chief, as has occurred. As a practical matter with an issue such as duty trades there is no
+such thing as a friction-free system if the spirit of cooperation is not present. The Union
+concedes this. It may not be so much that the existing language is flawed and needs
+correcting as it is that the departing Chief abused the language and made a routine
+administrative process into an ordeal. There is a need to be wary that in attempting to
+correct a problem based more on personalities than sentence structure the arbitrator not
+impose upon the Village a burden which hampers its ability to operate efficiently.42 Thus, for
+example, the Union’
+s request for systematizing, or making routine, duty trade requests with
+less than 24 hours notice is of some concern. Management ought to know who is going to
+staff each 24 hour duty rotation with enough notice that it can accommodate for emergencies
+or unanticipated absences. The Union’
+s language inhibits this and might even permit
+One of the reasons why the parties should make their own corrections is because the
+outsider can never be sure that his remedy does not cause more problems than he solved. Because of
+the nuances inherent in duty trades the parties are always in a better position to work out the details.
+In this case there appears to have been no recognition by the Village that there was any problem at
+all. The arbitrator respectfully disagrees with the Village’
+s argument that the only test is whether
+duties trades were actually denied. If the process is unnecessarily complicated it will have a chilling
+effect on the exercise of this negotiated benefit. Considering also the practices in other jurisdictions
+as well as the absence of any problems in the Village’
+s police department, the arbitrator concludes
+that his change in language is not an abuse of power or an imposition of his management style.
+42
+
+? 72?
+
+requests even after the shift has begun. While it is true that these requests can be denied, the
+establishment of a formal system with a 24 hour cut-off might encourage short requests and
+encumber shift commanders with unnecessary detail. While this might be allowed in an
+emergency, the present language allows for exceptions in such cases. Stated another way, in
+the absence of an emergency, firefighters should be able to plan their schedules so that duty
+trades are not necessary on short notice. In the ordinary course, a duty shift in advance is an
+adequate standard. That part of the Union’
+s request seeking a shorter notification period is
+denied.
+With regard to trades within trades, there is nothing in the existing language which
+bars this. It has simply been a restriction imposed by the Chief as an exercise of his authority.
+Yet, if the requests are timely and meet the qualification requirement applicable to any duty
+trade there is no reason why the present language should not have allowed this. Again, it is
+not so much that the contract needs to be changed but that the existing language be
+construed in a manner that satisfies the needs of both management and the employees.
+Unfortunately, should the arbitrator deny all changes in the language relating to trades within
+trades there may be an implication that the old process should continue. It appears to the
+arbitrator that trades within trades ought to be considered no differently than any other duty
+trade requests, and all of them should be with sufficient advance notice to insure proper
+management of the department except, of course, in emergencies.
+
+? 73?
+
+The following language is awarded (new language in bold type):43
+In accordance with the Fair Labor Standards Act, an employee for his
+own convenience, may voluntarily have another bargaining unit employee of
+comparable qualifications in the same position substitute for him by performing
+work for all or part of the employee’
+s work shift, provided the substitution is
+requested one (1) duty day in advance (this requirement may be waived by the
+Chief of his designees in an emergency), leaves employees on the shift who are
+able to perform the duties of the assigned positions on the shift, and does not
+otherwise interfere with the operation of the Fire Department and is subject to
+approval by the Fire Chief or his designee. Requests that are in compliance
+with these criteria as of the date the request is made shall be approved.
+The approval of a trade shall not restrict a later trade (i.e., Kelly or Duty)
+that is otherwise in compliance with the criteria of this Section. All
+requests shall be in writing on a form approved by the Chief or his designee.
+See Appendix B. Shift trades must be completed within one year with a “pay
+back”date (unless “pay back”is not expected, and shall not result in overtime).
+Further, the Fire Chief of his designee on duty Assistant Chief or Shift
+Commander, at his discretion, may approve limited holdovers of less than one
+(1) hour as partial shift substitutions, at shorter notice than is otherwise
+required in this Section. Such approval will not be denied for arbitrary and
+capricious reasons. The hours worked by the substitute employee would
+otherwise be entitled to compensation. If a substitute employee works all or
+part of another employee’
+s scheduled work shift in accordance with this
+Section, then the hours worked by the substitute employee shall be counted as
+hours worked by the employee who was originally scheduled to work that shift.
+4. Residency
+
+The Union has also proposed the addition of the word “voluntary”in that portion of the
+Section 13 relating to holdovers. The record is unclear why this language is necessary or as to what
+problems have arisen because that word did not appear in the old language. Based on this record the
+addition of this word is denied at this time.
+43
+
+? 74?
+
+The Union is proposing an amendment to the residency provisions in the Agreement.
+The existing language and the Union’
+s proposal (in bold face) are as follows:
+ARTICLE XXI
+
+RESIDENCY
+
+Bargaining unit employees shall reside within the following boundaries:
+northern boundary - south of the Wisconsin state line; southern boundary - north of
+Route 58 (Golf Road); eastern boundary - western shoreline of Lake Michigan; and
+western boundary - east of Route 31. The boundaries are further described on the
+map attached as Appendix D. Probationary employees shall have six (6) months
+after the completion of their probationary period to comply with the residency
+requirement. Employees who fail to comply with the residency requirement will be
+subject to disciplinary action up to and including termination. In the event the
+Village enforces less restrictive boundaries within the State of Illinois for any
+other Village employees, the boundaries shall be expanded to coincide with the
+least restrictive boundaries enforced for such other Village employees.
+Employees residing beyond a ten (10) mile radius from a center located at
+Cook Street and Milwaukee Avenue in Libertyville, Illinois shall not be issued paging
+devices and, subject to the Fire Chief’
+s discretion, may be contacted for emergency
+callback and non-scheduled hireback duty.
+Every employee covered by this Agreement shall have telephone service in
+their (sic) place of residence with the employee phone number and place of residence
+submitted to the Fire Chief within forty-eight (48) hours upon changing their place of
+residence or telephone number.
+
+Residency restrictions have been a traditional term and condition of employment in
+Libertyville. The residency restriction ensures that fire personnel are within a sufficient range
+to be summoned to work in the event of an emergency. In a sense it is in line with the same
+thinking that puts firefighters in fire stations for 24 hour shifts. The need to be ready and
+available at any time is central to the concept of a municipal fire department.
+From the early 1970s to the early 1990s fire department employees were required to
+live within five miles of the Village’
+s fire station. When the department expanded to two
+? 75?
+
+stations in the 1990s the residency restriction was broadened to ten miles from either station.
+In negotiating its first collective bargaining agreement the Union secured a significant
+expansion of the residency requirement. It now includes all of Lake County, the north and
+northwestern suburbs of Cook County and eastern parts of Kane and McHenry Counties.
+This expansion came as the result of hard bargaining and as part of a package resolving other
+outstanding issues. Non-bargaining unit fire personnel are subject to the old ten mile limit.
+The Union’
+s “me-too”proposal for a restriction no greater than the least restrictive
+requirement available to any other employee of the Village would eliminate the residency
+restrictions in their entirety because a great many Village employees have no restrictions at
+all. The Union argues that an essential part of the bargain for the restrictions negotiated in
+the earlier agreement was the provision limiting overtime callbacks to employees who
+remained within the old ten mile limit. But, the Union argues, this is no longer a meaningful
+element of the bargain because so much overtime has disappeared since the first agreement
+went into effect. In other words, the Village no longer has a true concern for the ability of
+firefighters to return to work because there are now very few occasions when overtime is ever
+required. To this, the arbitrator responds that other changes made in this Agreement should
+restore some overtime to firefighters. Changes in Article X will eliminate much of the
+competition with paid-on-call and other non-bargaining unit employees. Looking at the issue
+from the Village’
+s perspective, the increased overtime demands underscores the need to have
+
+? 76?
+
+firefighters living within a reasonable distance of the Village.44
+The Union also argues that residency restrictions are antiquated and have been
+rejected by other arbitrators as an offense to individual liberty. Town of Cicero and Illinois
+Association of Fire Fighters, IAFF Local 717, Case No. S-MA-09-230 (Berman, 1999). With
+all due respect to my colleague Berman, this arbitrator does not see residency as an issue of
+liberty any more than employment as a firefighter in Liberty is a right. More importantly, an
+arbitrator’
+s assessment of individual liberties is not a statutory factor for the determination of
+final offers in an impasse arbitration. Of more significance in this case is the Union’
+s failure
+to prove any legitimate need for a change in the language. There is no evidence of hardship,
+inequity or even inconvenience. Indeed, only two firefighters have moved from the old ten
+mile limit since July, 2001 when the first agreement was signed.
+Nor has there been any showing that comparability strongly supports the Union’
+s
+position. That some comparable municipalities have lenient residency requirements is not, in
+and of itself, persuasive. Nathan, Hard Choices, 20th Annual Illinois Public Sector Labor
+Relation Program, November 12, 2004. The Village’
+s proposal for no change in residency
+requirements is awarded.
+
+In any event, the Union’
+s proposal for this section of the contract does not address call
+back limitations, only the residency limitation itself.
+44
+
+? 77?
+
+5. Promotion Re-opener
+The parties have agreed to defer bargaining over the issue of the promotion of
+bargaining unit employees to the rank of Lieutenant pending the outcome of Case No. S-CA05-045 now before the Labor Board. The issue before the Labor Board is whether promotions
+to a non-bargaining unit position is a mandatory or a permissive subject for bargaining. As of
+the date of this Award there has been no written decision has been issued by the Labor Board.
+Sometime in the fall of 2003 the Union proposed that the parties’new Agreement
+contain standards for the promotion of bargaining unit employees to the rank of Lieutenant.
+This new provision would be in accordance with the terms of the Fire Department Promotion
+Act, 50 ILCS 742/1 et seq. (“FDPA”) which was enacted in August, 2003. In June, 2004 the
+Village filed a Petition for a Declaratory Ruling for a determination as to whether the Union’
+s
+proposal was a mandatory subject for bargaining under the Act. In September, 2004, Acting
+General Counsel Philip M. Kazanjian issued a Declaratory Ruling to the effect the Union’
+s
+proposal was not a mandatory subject of bargaining. One week later the Union filed an unfair
+labor practice charge alleging that the Village’
+s refusal to bargain about promotions pursuant
+to the FDPA was a violation of law. On April 4, 2005, Administrative Law Judge (“ALJ”)
+Lori N. Carrozza issued a Recommended Decision and Order finding that there was no
+unlawful refusal to bargain by the Village. A timely appeal was taken to the Labor Board.
+Subsequently the Board made an announcement that it would reverse the Decision of the
+
+? 78?
+
+ALJ and find that the Village did violate the Act by refusing to bargain over the issue of
+promotions pursuant to the FDPA. No written decision has yet been issued and no time
+period for an appeal to the Appellate Court has begun to run.
+The precise language of the parties’respective proposals on this issue are not critical.
+Circumstances have changed since the final offers were submitted. The essence of the
+Village’
+s proposal is that no bargaining will be required until there is: (1) a final nonappealable order from either the Labor Board or a court of competent jurisdiction stating that
+the subject of promotions is a mandatory subject of bargaining, or (2) an order by the Labor
+Board or a court of competent jurisdiction requiring bargaining pending the completion of the
+appellate process. If the parties reach an impasse in bargaining the parties shall submit final
+offers to the undersigned Arbitrator Harvey A. Nathan for his award.
+The essence of the Union’
+s proposal is that the Union can demand bargaining on the
+issue of promotions in the event that the Labor Board sustains the pending unfair labor
+practice complaint. Thereafter the parties shall have sixty (60) days, or such other period as
+the parties agree, to negotiate agreement on all mandatory subjects of bargaining in dispute.
+If agreement is reached it will become part of the new contract effective May 1, 2003. If the
+parties do not reach agreement within the applicable time period the outstanding issues shall
+be submitted to the undersigned for disposition pursuant to Section 14 of the Act.
+There are two critical differences in the respective proposals. The first is that under
+the Village’
+s proposal there would be no requirement to bargain until there is a final order
+? 79?
+
+from any court of competent jurisdiction. The second is that under the Union’
+s proposal
+bargaining would be limited to 60 days and thereafter the parties would be required to submit
+the outstanding issues to impasse arbitration.
+The parties have been in negotiations for a new Agreement since March, 2003. The
+arbitrator was appointed to his position in December, 2003, nearly two years ago. It is time
+for the parties to bring this matter to a conclusion. Further delays offend the purpose of the
+Act and are not in the public interest. Accordingly, the parties will be required to commence
+bargaining no later than thirty (30) days following the issuance of the Labor Board’
+s written
+decision finding a refusal to bargain by the Village. Thereafter the parties shall complete
+bargaining within sixty (60) days and if no agreement is reached within that time the parties
+shall submit final offers to the arbitrator within ten (10) after the expiration of the sixty (60)
+day period. Upon receipt of the final offers the arbitrator will set a date for one day of hearing
+to be held at Village Hall, Libertyville. The parties shall complete the hearing within that
+one day and submit written briefs ten (10) thereafter. If necessary in order to meet the ten
+(10) day deadline an expedited transcription of the report of proceedings shall be ordered.
+Upon receipt of the briefs, the arbitrator shall have thirty (30) days to issue his award.
+
+AWARD
+1. The Union’
+s proposal on wages is selected.
+? 80?
+
+2. The Employer’
+s proposal on Pay Day is selected.
+3. The Union’
+s proposal on Assignment of Overtime Work is selected.
+4. The Employer’
+s proposal on Hireback is selected.
+5. The Employer’
+s proposal on Layoff and Recall is selected.
+6. The Employer’
+s proposal on Personal Leave Days is selected.
+7. The Union’
+s proposal on Retroactivity is selected.
+8. The Union’
+s proposal on Duties is selected.
+9. The Employer’
+s proposal on Assignments and Transfers is selected.
+10. The new language for Duty Trades shall be as follows:
+In accordance with the Fair Labor Standards Act, an employee for his own convenience, may voluntarily
+have another bargaining unit employee of comparable qualifications in the same position substitute for him by
+performing work for all or part of the employee’
+s work shift, provided the substitution is requested one (1) duty
+day in advance (this requirement may be waived by the Chief of his designees in an emergency), leaves
+employees on the shift who are able to perform the duties of the assigned positions on the shift, and does not
+otherwise interfere with the operation of the Fire Department and is subject to approval by the Fire Chief or his
+designee. Requests that are in compliance with these criteria as of the date the request is made shall be
+approved. The approval of a trade shall not restrict a later trade (i.e., Kelly or Duty) that is otherwise in
+compliance with the criteria of this Section. All requests shall be in writing on a form approved by the Chief
+or his designee. See Appendix B. Shift trades must be completed within one year with a “pay back”date (unless
+“pay back”is not expected, and shall not result in overtime). Further, the Fire Chief of his designee on duty
+Assistant Chief or Shift Commander, at his discretion, may approve limited holdovers of less than one (1) hour
+as partial shift substitutions, at shorter notice than is otherwise required in this Section. Such approval will not
+be denied for arbitrary and capricious reasons. The hours worked by the substitute employee would otherwise be
+entitled to compensation. If a substitute employee works all or part of another employee’
+s scheduled work shift in
+accordance with this Section, then the hours worked by the substitute employee shall be counted as hours
+worked by the employee who was originally scheduled to work that shift.
+
+11. The Employer’
+s proposal on Residency is selected.
+12. The language for the Promotion Re-opener shall be:
+1. Bargaining on the issue of promotions shall begin no later than thirty (30) after the Labor
+
+? 81?
+
+Board’
+s written decision is issued.
+2. Bargaining shall be completed with sixty (60) days after its commencement.
+3. If no agreement has been reached the parties shall submit written final offers to Arbitrator
+Harvey A. Nathan no later than ten (10) days after the end of bargaining.
+4. Upon receipt of the final offers the arbitrator shall set a date for a one day hearing to be held
+at Village Hall, Libertyville.
+5. Upon completion of the one day of hearing the parties may submit written briefs to the
+arbitrator. If necessary in order to meet this ten (10) day deadline for briefs the parties shall
+order an expedited transcription of the stenographic report of proceedings.
+6. The arbitrator shall issue his award within thirty (30) days after the receipt of briefs.
+
+Respectfully submitted,
+HARVEY A. NATHAN
+November 5, 2005
+
+? 82?
